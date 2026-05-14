@@ -188,8 +188,8 @@ let D = [
     };
 var L = l(162097),
     w = l(70926),
-    U = l(240248),
-    V = l(375708),
+    V = l(240248),
+    U = l(375708),
     B = l(439519);
 let G = {
     name: "Balance Widget Menu",
@@ -200,11 +200,11 @@ let G = {
             className: B.tH,
             children: (0, s.jsx)(w.SS, {
                 className: B.oz,
-                ctaText: (0, U.uJ)(t) ? V.intl.string(V.t["J+vlIR"]) : t,
+                ctaText: (0, V.uJ)(t) ? U.intl.string(U.t["J+vlIR"]) : t,
                 ctaOnClick: N.tEg,
                 showNotificationBadge: a,
                 cardAlignment: n,
-                linkText: (0, U.uJ)(l) ? V.intl.string(V.t.XRdyjz) : l,
+                linkText: (0, V.uJ)(l) ? U.intl.string(U.t.XRdyjz) : l,
             }),
         });
     },
@@ -361,7 +361,7 @@ function eA(e) {
     if ("mock-error" === t) throw Error("Simulated error thrown inside a payment step");
     return "translation-key-error" === t
         ? (0, s.jsx)("div", {
-              children: V.intl.format(ej.default.cRB332, {
+              children: U.intl.format(ej.default.cRB332, {
                   avatar: (0, s.jsx)("div", { children: "Sample Avatar" }),
                   nickname: (0, s.jsx)("div", { children: "Sample Nickname" }),
                   username: (0, s.jsx)("div", { children: "Sample Username" }),
@@ -392,7 +392,7 @@ let eI = {
                     { balance: I, isFetching: R, error: k } = (0, ev.W)(),
                     { isSubmitting: M, responseMessage: D, redeemVirtualCurrency: O } = (0, ev.Q)(),
                     [L, w] = d.useState(N.dJq),
-                    [U, V] = d.useState(""),
+                    [V, U] = d.useState(""),
                     [G, W] = d.useState(N.dJq);
                 return (0, s.jsx)(p.f5, {
                     value: j,
@@ -687,8 +687,8 @@ let eI = {
                                                     label: "Application Id",
                                                     hideLabel: !0,
                                                     placeholder: "Application Id",
-                                                    value: U,
-                                                    onChange: V,
+                                                    value: V,
+                                                    onChange: U,
                                                 }),
                                                 (0, s.jsx)(ea.k, {
                                                     label: "SKU ID",
@@ -702,7 +702,7 @@ let eI = {
                                                     text: "Open Standard Payment Modal for SKU",
                                                     onClick: () =>
                                                         (0, eg.A)({
-                                                            applicationId: U,
+                                                            applicationId: V,
                                                             skuId: G,
                                                             analyticsLocations: j,
                                                             checkoutFlow: es.CL.PREMIUM_APPS_OTP_CHECKOUT,
@@ -888,23 +888,23 @@ let eD = () => ({
         {
             key: m.pn.REVIEW,
             renderStep: (e) => (0, s.jsx)(eR._M, { ...e }),
-            options: { useBreadcrumbLabel: () => V.intl.string(V.t.QBnNHq) },
+            options: { useBreadcrumbLabel: () => U.intl.string(U.t.QBnNHq) },
         },
         {
             key: m.pn.ADD_PAYMENT_STEPS,
             renderStep: (e) => (0, s.jsx)(k, { ...e, originStep: m.pn.REVIEW, text: "Add Payment Steps Placeholder" }),
-            options: { useBreadcrumbLabel: () => V.intl.string(V.t.QBnNHq) },
+            options: { useBreadcrumbLabel: () => U.intl.string(U.t.QBnNHq) },
         },
         {
             key: m.pn.CONFIRM,
             renderStep: (e) => (0, s.jsx)(k, { ...e, originStep: m.pn.REVIEW, text: "Confirm Step Placeholder" }),
-            options: { useBreadcrumbLabel: () => V.intl.string(V.t.QBnNHq) },
+            options: { useBreadcrumbLabel: () => U.intl.string(U.t.QBnNHq) },
         },
         {
             key: m.pn.PLAN_SELECT,
             renderStep: (e) => (0, s.jsx)(k, { ...e, originStep: m.pn.REVIEW, text: "Plan Select Step Placeholder" }),
             options: {
-                useBreadcrumbLabel: () => V.intl.string(V.t.QBnNHq),
+                useBreadcrumbLabel: () => U.intl.string(U.t.QBnNHq),
                 modalSizeGetter: (e) => {
                     let { isGift: t } = e;
                     return t ? "xl" : "md";
@@ -917,8 +917,8 @@ let eD = () => ({
         isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 },
         hideErrors: { label: "Hide Errors", type: "boolean", defaultValue: !0 },
     },
-    eU = eD(),
-    eV = {
+    eV = eD(),
+    eU = {
         name: "Collectibles Review Step",
         id: "collectibles-checkout-review-step",
         component: (e) => {
@@ -957,7 +957,7 @@ let eD = () => ({
                   });
         },
         controls: {
-            skuId: { label: "SKU ID", type: "select", options: eU.options, defaultValue: eU.defaultValue },
+            skuId: { label: "SKU ID", type: "select", options: eV.options, defaultValue: eV.defaultValue },
             ...ew,
         },
     },
@@ -1463,16 +1463,17 @@ let th = { name: "Expressive Progress", component: ta.A, id: "expressive-progres
                         i = d.useRef(null),
                         r = ts[t],
                         o = (0, tr.I)(r).standard,
-                        u = (
-                            V.intl.string(V.t.lG6a5x) +
+                        u = eC.VD[r].rarity,
+                        c = (
+                            U.intl.string(U.t.lG6a5x) +
                             " " +
-                            V.intl.string(eC.VD[r].nameUnformatted)
+                            U.intl.string(eC.VD[r].nameUnformatted)
                         ).toLocaleUpperCase(),
-                        c = {
+                        p = {
                             type: "dynamic",
                             component: tn.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
                             aspectRatio: "16/9",
-                            props: { src: o, alt: u, compact: !0 },
+                            props: { src: o, alt: c, compact: !0 },
                         };
                     return (0, s.jsxs)("div", {
                         children: [
@@ -1489,14 +1490,15 @@ let th = { name: "Expressive Progress", component: ta.A, id: "expressive-progres
                                         className: to.yU,
                                         children: (0, s.jsx)(ti.K, {
                                             targetElementRef: n,
-                                            title: u,
+                                            title: c,
                                             body: l,
-                                            graphic: c,
+                                            graphic: p,
+                                            rarity: u,
                                             variant: a,
                                             children: (0, s.jsx)(g.Anchor, {
                                                 href: "#",
                                                 ref: n,
-                                                "aria-label": V.intl.string(V.t["JEiq/c"]),
+                                                "aria-label": U.intl.string(U.t["JEiq/c"]),
                                                 children: (0, s.jsx)("img", {
                                                     alt: " ",
                                                     "aria-hidden": !0,
@@ -1510,14 +1512,15 @@ let th = { name: "Expressive Progress", component: ta.A, id: "expressive-progres
                                         className: to.yU,
                                         children: (0, s.jsx)(ti.K, {
                                             targetElementRef: i,
-                                            title: u,
+                                            title: c,
                                             body: l,
-                                            graphic: c,
+                                            graphic: p,
+                                            rarity: u,
                                             variant: a,
                                             children: (0, s.jsx)(g.Anchor, {
                                                 href: "#",
                                                 ref: i,
-                                                "aria-label": V.intl.string(V.t["JEiq/c"]),
+                                                "aria-label": U.intl.string(U.t["JEiq/c"]),
                                                 children: (0, s.jsx)("img", {
                                                     alt: " ",
                                                     "aria-hidden": !0,
@@ -1600,9 +1603,9 @@ let th = { name: "Expressive Progress", component: ta.A, id: "expressive-progres
                             if (null == f) return "";
                             let e = eC.VD[f];
                             return (
-                                V.intl.string(V.t.lG6a5x) +
+                                U.intl.string(U.t.lG6a5x) +
                                 " " +
-                                V.intl.string(e.nameUnformatted)
+                                U.intl.string(e.nameUnformatted)
                             ).toLocaleUpperCase();
                         }, [f]),
                         S = d.useMemo(() => {
@@ -1663,7 +1666,7 @@ let th = { name: "Expressive Progress", component: ta.A, id: "expressive-progres
                 },
                 id: "premium-tooltip",
                 controls: {
-                    title: { label: "Title", type: "text", defaultValue: V.intl.string(V.t.lG6a5x).toUpperCase() },
+                    title: { label: "Title", type: "text", defaultValue: U.intl.string(U.t.lG6a5x).toUpperCase() },
                     body: {
                         label: "Body",
                         type: "text",
@@ -2002,8 +2005,8 @@ let tD = [
         { id: "avatar", label: "Avatar", value: tN.HL.AVATAR },
         { id: "banner", label: "Banner", value: tN.HL.BANNER },
     ];
-var tU = l(652165);
-let tV = "1271174907081789524",
+var tV = l(652165);
+let tU = "1271174907081789524",
     tB = {
         name: "Orb Checkout Modals",
         id: "orb-checkout-modal",
@@ -2013,7 +2016,7 @@ let tV = "1271174907081789524",
                 className: B.YG,
                 children: (0, s.jsx)(H.$, {
                     onClick: () => {
-                        (0, tU.B4)({
+                        (0, tV.B4)({
                             skuId: t,
                             onComplete: (e) => {
                                 console.log(
@@ -2039,12 +2042,12 @@ let tV = "1271174907081789524",
                     { skuId: "1342211853484429445", skuName: "Orb Profile Badge" },
                     { skuId: "1427463138634109026", skuName: "Magic Mists (Deco)" },
                     { skuId: "1332505467980873728", skuName: "Pondering Portal (Deco)" },
-                    { skuId: tV, skuName: "Oni's Curse (Deco)" },
+                    { skuId: tU, skuName: "Oni's Curse (Deco)" },
                 ].map((e) => {
                     let { skuId: t, skuName: l } = e;
                     return { label: l, value: t };
                 }),
-                defaultValue: tV,
+                defaultValue: tU,
             },
         },
     };
@@ -2427,7 +2430,7 @@ var t2 = l(405139),
 function t4(e) {
     let t = d.useRef(null),
         l = {
-            paymentLabel: V.intl.string(V.t.ZURqX0),
+            paymentLabel: U.intl.string(U.t.ZURqX0),
             paymentRequestRef: t,
             onStripePaymentMethodReceived: () => {},
             onPaymentRequestFailure: () => {},
@@ -2448,7 +2451,7 @@ function t8(e) {
     return (0, s.jsx)(tM.e_, {
         footer: (0, s.jsx)(t6.Ay, {
             primaryCTA: t6.Ay.CTAType.CONTINUE,
-            primaryText: V.intl.string("applePay" === t ? V.t.WoXvJL : V.t.wnVVr0),
+            primaryText: U.intl.string("applePay" === t ? U.t.WoXvJL : U.t.wnVVr0),
             primaryDisabled: !a,
             onPrimary: () => void (null != l.current && l.current.show()),
             onBack: () => {},
@@ -3148,8 +3151,8 @@ let lR = new lE.A("PaymentElement.web.stories"),
         controls: { ...lD },
     };
 l(321073);
-var lU = l(735438),
-    lV = l(96337),
+var lV = l(735438),
+    lU = l(96337),
     lB = l(997101),
     lG = l(597770),
     lH = l(278416),
@@ -3266,7 +3269,7 @@ function lJ(e) {
     });
 }
 let lX = { "nitro-wheel": r.t, gift: lG.o, orbs: i.C },
-    lQ = lV.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
+    lQ = lU.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
     lZ = {
         name: "Modal: Unified Checkout Stateless Modal",
         id: "unified-checkout-stateless-modal",
@@ -3514,7 +3517,7 @@ let lX = { "nitro-wheel": r.t, gift: lG.o, orbs: i.C },
                                 value: i,
                                 options: n,
                                 onChange: r,
-                                onNew: lU.noop,
+                                onNew: lV.noop,
                                 disabled: t,
                                 error: l ? a : void 0,
                             }),
@@ -3729,7 +3732,7 @@ let l3 = ["Revenue Storybook", "Revenue Playground"],
             },
             { title: "Payment Elements", stories: [lL, lw, lO] },
             O,
-            { title: "Checkout Review Step", stories: [eV, eB] },
+            { title: "Checkout Review Step", stories: [eU, eB] },
             lb,
         ],
         tags: l3,
@@ -3749,9 +3752,9 @@ let l3 = ["Revenue Storybook", "Revenue Playground"],
                         component: (e) => {
                             let { ctaText: t, linkText: l, linkPreText: a } = e;
                             return (0, s.jsx)(L.b, {
-                                ctaText: (0, U.uJ)(t) ? V.intl.string(V.t.H57f41) : t,
-                                linkText: (0, U.uJ)(l) ? V.intl.string(V.t["7f4H7D"]) : l,
-                                linkPreText: (0, U.uJ)(a) ? void 0 : a,
+                                ctaText: (0, V.uJ)(t) ? U.intl.string(U.t.H57f41) : t,
+                                linkText: (0, V.uJ)(l) ? U.intl.string(U.t["7f4H7D"]) : l,
+                                linkPreText: (0, V.uJ)(a) ? void 0 : a,
                                 ctaOnClick: N.tEg,
                             });
                         },

@@ -20,7 +20,7 @@ let h = function () {
     let { initialBadgeId: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     (0, f.openModalLazy)(
         async () => {
-            let { default: t } = await Promise.all([n.e("13445"), n.e("68629")]).then(n.bind(n, 825076));
+            let { default: t } = await Promise.all([n.e("13445"), n.e("9778")]).then(n.bind(n, 890473));
             return (n) => (0, i.jsx)(t, { ...n, initialBadgeId: e });
         },
         { stackingBehavior: "stack" },
@@ -66,12 +66,13 @@ let R = (e) => {
         } = e,
         d = y.VD[t].nameUnformattedNitro,
         _ = O.intl.string(d).toLocaleUpperCase(),
-        f = (0, A.A)(t),
-        h = (0, I.I)(t).standard;
+        f = y.VD[t].rarity,
+        h = (0, A.A)(t),
+        p = (0, I.I)(t).standard;
     (0, r.useEffect)(() => {
-        g.m[g.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE](), (new Image().src = h);
-    }, [h]);
-    let p = (0, r.useCallback)(() => {
+        g.m[g.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE](), (new Image().src = p);
+    }, [p]);
+    let E = (0, r.useCallback)(() => {
         n?.(C.i.USER_DISMISS);
     }, [n]);
     if ("mini-tooltip" === e.mode)
@@ -81,12 +82,13 @@ let R = (e) => {
             title: _,
             body: e.body,
             variant: "nitro",
+            rarity: f,
             graphic: {
                 type: "dynamic",
                 component: g.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
                 aspectRatio: "16/9",
                 props: {
-                    src: h,
+                    src: p,
                     alt: _,
                     progressCircleText: o,
                     progressCirclePercent: l,
@@ -96,14 +98,14 @@ let R = (e) => {
             },
             children: s,
         });
-    let E = {
-        gradientColor: f,
+    let m = {
+        gradientColor: h,
         size: "lg",
         graphic: {
             type: "dynamic",
             component: g.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
             aspectRatio: "6/4",
-            props: { src: h, alt: _, progressCircleText: o, progressCirclePercent: l, progressCircleUrgency: u },
+            props: { src: p, alt: _, progressCircleText: o, progressCirclePercent: l, progressCircleUrgency: u },
         },
         title: _,
         body: e.body,
@@ -115,7 +117,7 @@ let R = (e) => {
               estimatedTooltipHeight: e.estimatedTooltipHeight ?? 300,
               delay: v.In,
               onShow: c,
-              ...E,
+              ...m,
               children: s,
           })
         : (0, i.jsxs)(i.Fragment, {
@@ -124,11 +126,11 @@ let R = (e) => {
                   (0, i.jsx)(S.A, {
                       targetElementRef: a,
                       shouldShow: !0,
-                      onRequestClose: p,
+                      onRequestClose: E,
                       align: "right",
                       position: "top",
                       caretConfig: { align: "center" },
-                      ...E,
+                      ...m,
                   }),
               ],
           });

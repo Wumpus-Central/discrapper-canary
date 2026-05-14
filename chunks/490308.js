@@ -18,12 +18,6 @@ d.exports = {
     tN: "uppercaseItalic__6db38",
     oA: "badgeDetails__6db38",
     sn: "rarityCard__6db38",
-    _l: "rarityTag__6db38",
-    v2: "rarityCommon__6db38",
-    G9: "rarityRare__6db38",
-    Lc: "rarityEpic__6db38",
-    RJ: "rarityLegendary__6db38",
-    qW: "rarityMythic__6db38",
     d9: "descriptionCard__6db38",
     ij: "descriptionText__6db38",
 };
