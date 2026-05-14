@@ -996,7 +996,7 @@ let tZ = s.forwardRef(function (e, t) {
             } = e,
             S = (0, d.Vd)(n),
             [N, y] = s.useState(!1),
-            C = m ?? ("string" == typeof c ? c : void 0);
+            C = "string" == typeof c && null == m ? c : m;
         return (0, r.jsxs)(K.c, {
             children: [
                 p ? (0, r.jsx)(W.A, { overlay: !0, hovered: N, selected: u }) : null,
