@@ -322,3 +322,32 @@
     margin-inline-start: var(--space-4);
     vertical-align: middle
 }
+
+.perServerNotice_b08638 {
+    background: var(--background-feedback-info);
+    border: 1px solid var(--icon-feedback-info);
+    border-radius: var(--radius-sm);
+    display: flex;
+    padding: var(--space-8)
+}
+
+.perServerNoticeDismissButton_b08638 {
+    align-items: center;
+    align-self: flex-start;
+    color: var(--icon-subtle);
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    height: 24px;
+    justify-content: center;
+    margin-block-start: -2px;
+    margin-inline-end: -2px;
+    margin-inline-start: auto;
+    transition: color 50ms ease-in;
+    width: 24px
+}
+
+.perServerNoticeDismissButton_b08638:hover {
+    color: var(--icon-strong);
+    transition: color .15s ease-out
+}
