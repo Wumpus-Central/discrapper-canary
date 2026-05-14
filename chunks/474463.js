@@ -29,7 +29,7 @@ var I = n(485845),
     b = n(361926),
     L = n(832384),
     R = n(113854),
-    k = n(375802),
+    k = n(207371),
     M = n(205184),
     P = n(773669),
     w = n(495544),
@@ -444,7 +444,7 @@ function eb(e) {
         P = (0, b.Vr)({ context: { type: "contextless" }, applicationId: t.id, botUserId: c?.id }),
         O = null != u && h && P,
         U = L && h,
-        G = (0, k.e)(t),
+        G = (0, k.x)(t),
         B = eT(t),
         F = (function (e) {
             let { canViewApp: t, isInstallable: n } = ey(e),
@@ -651,10 +651,9 @@ function eU(e) {
         I = g === eO.xy.CAN_LAUNCH,
         v = null != p && A?.compositeInstanceId === p,
         _ = null != n ? n : i.customId,
-        j = (0, k.e)(t),
-        N = [];
-    j
-        ? N.push({
+        j = [];
+    (0, k.x)(t)
+        ? j.push({
               label: ed.intl.string(ed.t.RscU7I),
               trackingArea: Z.kY.PLAY,
               onClick() {
@@ -662,7 +661,7 @@ function eU(e) {
               },
           })
         : (I &&
-              N.push({
+              j.push({
                   label:
                       null == p
                           ? ed.intl.string(ed.t.RscU7I)
@@ -685,17 +684,17 @@ function eU(e) {
               }),
           c &&
               !I &&
-              N.push({
+              j.push({
                   label: ed.intl.string(ed.t.JeK1Wg),
                   trackingArea: Z.kY.PLAY,
                   onClick() {
                       (0, S.Q)({ appId: t.id, botId: a, analyticsLocations: u, customId: _, referrerId: l });
                   },
               }));
-    let L = eT(t);
+    let N = eT(t);
     return (0, r.jsx)(ei, {
-        actions: N,
-        onClickContent: L,
+        actions: j,
+        onClickContent: N,
         header: t.name,
         iconSrc: V.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, bot: t.bot }),
         info: (0, r.jsx)("div", { children: i.description }),
@@ -7489,7 +7488,7 @@ function dZ(e) {
             [B, I, U, _, H],
         ),
         Y = !!d,
-        z = (0, k.e)(n),
+        z = (0, k.x)(n),
         { canJoin: W, remoteJoinPlatform: K } = (function (e) {
             let {
                 presenceActivity: t,

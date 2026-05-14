@@ -833,8 +833,8 @@ function e8(e) {
     );
 }
 var e4 = n(34188),
-    e3 = n(700623),
-    e7 = n(177953),
+    e7 = n(700623),
+    e3 = n(177953),
     e2 = n(825484),
     e5 = n(512950),
     e9 = n(900797),
@@ -890,7 +890,7 @@ function tr(e) {
     });
 }
 var to = n(361926),
-    tc = n(375802),
+    tc = n(207371),
     td = n(177640),
     tu = n(607470),
     tm = n(713804),
@@ -1106,7 +1106,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: ty.wi,
                             children: [
-                                (0, r.jsx)(e3.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e7.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1173,7 +1173,7 @@ function tR(e) {
     return (0, r.jsxs)("div", {
         className: ty.I8,
         children: [
-            (0, r.jsx)(e7.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, r.jsx)(e3.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             (0, r.jsx)(T.E, {
                 variant: "text-sm/semibold",
                 color: "interactive-text-default",
@@ -1189,10 +1189,9 @@ function tO(e) {
         d = c?.bot?.id,
         u = (function (e) {
             let { context: t, application: n, botUserId: l } = e,
-                i = (0, tc.e)(n),
-                s = (0, to.Vr)({ context: t, applicationId: n.id, botUserId: l }),
-                a = (0, td.A)("channel" === t.type ? t.channel : void 0);
-            return !i && s && null != l && !a;
+                i = (0, to.Vr)({ context: t, applicationId: n.id, botUserId: l }),
+                s = (0, td.A)("channel" === t.type ? t.channel : void 0);
+            return !(0, tc.x)(n) && i && null != l && !s;
         })({ context: t, application: n, botUserId: d }),
         { analyticsLocations: p } = (0, m.Ay)();
     return (o.useEffect(() => {
@@ -1395,13 +1394,13 @@ var tZ = n(111042),
     t1 = n(179771),
     t8 = n(824552),
     t4 = n(168186),
-    t3 = n(594061),
-    t7 = n(935208),
+    t7 = n(594061),
+    t3 = n(935208),
     t2 = n(630248),
     t5 = n(355097);
 function t9(e, t) {
     o.useEffect(() => {
-        t3.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t7.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t2.A], () => t2.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -1414,7 +1413,7 @@ function t9(e, t) {
         i = o.useMemo(() => t?.filter((t) => !e.some((e) => e.id === t.application.id)), [e, t]),
         s = o.useMemo(() => {
             i?.forEach((e) => {
-                let t = t7.default.extractTimestamp(e.id);
+                let t = t3.default.extractTimestamp(e.id);
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute();
@@ -1432,7 +1431,7 @@ function t9(e, t) {
     return o.useMemo(() => {
         let e, i;
         t?.forEach((t) => {
-            let n = t7.default.extractTimestamp(t.id);
+            let n = t3.default.extractTimestamp(t.id);
             (null == i || n > i) && ((e = t), (i = n));
         }),
             l.forEach((t) => {
@@ -1841,7 +1840,7 @@ function nw(e) {
                 o.useEffect(() => {
                     let e = eE().sortBy(Object.entries(n), (e) => {
                         let [t, n] = e;
-                        return -t7.default.extractTimestamp(n);
+                        return -t3.default.extractTimestamp(n);
                     });
                     i(
                         eE()
@@ -2113,11 +2112,11 @@ function n4(e, t) {
         i,
     ).slice(0, i);
 }
-function n3(e, t) {
+function n7(e, t) {
     let n = t2.A.getScoreWithoutLoadingLatest(e.id);
     return t2.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function n7(e, t) {
+function n3(e, t) {
     let n = (0, j.lq)(e),
         l = (0, j.lq)(t);
     return (0, g.RF)(n, l);
@@ -2545,7 +2544,7 @@ function ld(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n3, n7],
+                        sortComparers: [n7, n3],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
