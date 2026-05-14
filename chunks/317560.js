@@ -4,21 +4,20 @@ var l = n(627968),
 let a = "social-layer-storefront-product-details-modal",
     i = (e) => {
         let {
-            getSocialLayerStorefrontLink: t,
-            skuId: i,
-            applicationId: u,
-            isStorefront: o,
-            giftRecipient: s,
-            giftingOrigin: d,
-            analyticsLocations: c,
-            analyticsContext: A,
-            onClose: E,
+            skuId: t,
+            applicationId: i,
+            isStorefront: u,
+            giftRecipient: o,
+            giftingOrigin: s,
+            analyticsLocations: d,
+            analyticsContext: c,
+            onClose: A,
         } = e;
         (0, r.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("46438"),
-                    n.e("43522"),
+                    n.e("63915"),
                     n.e("44186"),
                     n.e("37813"),
                     n.e("89553"),
@@ -54,21 +53,20 @@ let a = "social-layer-storefront-product-details-modal",
                 return (n) =>
                     (0, l.jsx)(e, {
                         ...n,
-                        skuId: i,
-                        applicationId: u,
-                        isStorefront: o,
-                        analyticsLocations: c,
-                        analyticsContext: A,
-                        giftRecipient: s,
-                        giftingOrigin: d,
-                        getSocialLayerStorefrontLink: t,
+                        skuId: t,
+                        applicationId: i,
+                        isStorefront: u,
+                        analyticsLocations: d,
+                        analyticsContext: c,
+                        giftRecipient: o,
+                        giftingOrigin: s,
                     });
             },
             {
                 modalKey: a,
-                allowsNavigation: o,
+                allowsNavigation: u,
                 onCloseCallback: () => {
-                    E?.();
+                    A?.();
                 },
             },
         );
