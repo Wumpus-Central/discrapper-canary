@@ -89,11 +89,10 @@ function W(e) {
     let { quest: t, sourceQuestContent: r } = e;
     (0, o.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            n.e("75036"),
+            n.e("68490"),
             n.e("80797"),
-            n.e("67506"),
             n.e("86522"),
-            n.e("27349"),
+            n.e("81126"),
             n.e("26032"),
             n.e("94864"),
             n.e("76283"),
@@ -110,9 +109,8 @@ function W(e) {
             n.e("74844"),
             n.e("71934"),
             n.e("52196"),
-            n.e("11646"),
-            n.e("7053"),
-            n.e("2476"),
+            n.e("98571"),
+            n.e("78014"),
             n.e("86483"),
             n.e("32260"),
             n.e("98824"),

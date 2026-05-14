@@ -7115,7 +7115,7 @@ let ro = {
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_Fusion_v1.lottiejson": () =>
         a.e("92933").then(a.t.bind(a, 279172, 19)),
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_Pop_v1.lottiejson": () =>
-        a.e("5560").then(a.t.bind(a, 157745, 19)),
+        a.e("5560").then(a.t.bind(a, 824888, 19)),
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_PowerUp_v1.lottiejson": () =>
         a.e("63011").then(a.t.bind(a, 432302, 19)),
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_Puzzle_v1.lottiejson": () =>
@@ -7351,29 +7351,24 @@ let rh = {
         GuildContextMenu: async () => {
             let { default: e } = await Promise.all([
                     a.e("94864"),
-                    a.e("64179"),
-                    a.e("55567"),
+                    a.e("98571"),
                     a.e("65159"),
                     a.e("59786"),
                     a.e("58128"),
                     a.e("19543"),
-                    a.e("67506"),
-                    a.e("85531"),
-                    a.e("75036"),
-                    a.e("31457"),
-                    a.e("93329"),
+                    a.e("68490"),
+                    a.e("10889"),
+                    a.e("53689"),
                     a.e("87845"),
-                    a.e("42597"),
-                    a.e("18740"),
-                    a.e("12739"),
+                    a.e("51794"),
+                    a.e("4081"),
+                    a.e("87767"),
                     a.e("45970"),
                     a.e("56574"),
-                    a.e("28760"),
                     a.e("79785"),
                     a.e("98689"),
-                    a.e("54672"),
-                    a.e("36592"),
-                    a.e("65719"),
+                    a.e("4974"),
+                    a.e("80186"),
                     a.e("49681"),
                     a.e("96382"),
                     a.e("22687"),
@@ -7525,9 +7520,12 @@ let rh = {
             return () => (0, r.jsx)(e, { entry: s, requestId: "mock-request-123" });
         },
         AddQuestionsContextMenu: async () => {
-            let { AddQuestionsContextMenu: e } = await Promise.all([a.e("75036"), a.e("11810"), a.e("14656")]).then(
-                    a.bind(a, 892921),
-                ),
+            let { AddQuestionsContextMenu: e } = await Promise.all([
+                    a.e("87767"),
+                    a.e("53689"),
+                    a.e("11810"),
+                    a.e("14656"),
+                ]).then(a.bind(a, 892921)),
                 t = Object.values(a$.A.getGuilds())[0];
             return null == t
                 ? () => null
@@ -7577,7 +7575,7 @@ let rh = {
             return null == t ? () => null : () => (0, r.jsx)(e, { guildId: t.id, onClose: ru.Z_ });
         },
         MembersTableJoinTypeContextMenu: async () => {
-            let { default: e } = await Promise.all([a.e("12739"), a.e("71719"), a.e("14878"), a.e("66016")]).then(
+            let { default: e } = await Promise.all([a.e("4974"), a.e("71719"), a.e("14878"), a.e("66016")]).then(
                     a.bind(a, 316173),
                 ),
                 t = Object.values(a$.A.getGuilds())[0];
@@ -8358,11 +8356,11 @@ let rL = {
         return (t) => (0, r.jsx)(e, { ...t, guildId: "123456789012345678", startingChannelId: "987654321098765432" });
     },
     CameraPreviewModal: async () => {
-        let { default: e } = await Promise.all([a.e("42597"), a.e("10534")]).then(a.bind(a, 308229));
+        let { default: e } = await Promise.all([a.e("51794"), a.e("10534")]).then(a.bind(a, 308229));
         return (t) => (0, r.jsx)(e, { ...t, videoEnabled: !1, onEnable: () => console.log("Camera enabled") });
     },
     CameraPreviewModalWithVideo: async () => {
-        let { default: e } = await Promise.all([a.e("42597"), a.e("10534")]).then(a.bind(a, 308229));
+        let { default: e } = await Promise.all([a.e("51794"), a.e("10534")]).then(a.bind(a, 308229));
         return (t) => (0, r.jsx)(e, { ...t, videoEnabled: !0, onEnable: () => console.log("Camera enabled") });
     },
     ModeratorReportResolveConfirmModal: async () => {
@@ -8519,7 +8517,7 @@ let rL = {
         return (s.displayName = "ConsentCheckBoxModalContent"), (e) => (0, r.jsx)(s, { ...e });
     },
     GuildRaidLockdownFeedbackModal: async () => {
-        let { default: e } = await Promise.all([a.e("55567"), a.e("46313")]).then(a.bind(a, 336496));
+        let { default: e } = await Promise.all([a.e("87767"), a.e("46313")]).then(a.bind(a, 336496));
         return (t) =>
             (0, r.jsx)(e, {
                 ...t,
@@ -8729,7 +8727,7 @@ let rL = {
         return (t) => (0, r.jsx)(e, { ...t });
     },
     UserAgreementsModal: async () => {
-        let { default: e } = await Promise.all([a.e("37777"), a.e("82911"), a.e("22220")]).then(a.bind(a, 639719));
+        let { default: e } = await Promise.all([a.e("97217"), a.e("82911"), a.e("22220")]).then(a.bind(a, 639719));
         return (t) => (0, r.jsx)(e, { ...t });
     },
     DisableRiskyPermsModal: async () => {
@@ -8738,7 +8736,7 @@ let rL = {
         return null == t ? () => null : (a) => (0, r.jsx)(e, { ...a, guild: t });
     },
     OtherFriendRequestsModal: async () => {
-        let { default: e } = await Promise.all([a.e("2476"), a.e("27917"), a.e("73152"), a.e("25281")]).then(
+        let { default: e } = await Promise.all([a.e("48757"), a.e("27917"), a.e("73152"), a.e("25281")]).then(
             a.bind(a, 516259),
         );
         return (t) => (0, r.jsx)(e, { ...t });

@@ -14,14 +14,13 @@ function _(e, t) {
     (0, r.openModalLazy)(
         async () => {
             let { default: t } = await Promise.all([
-                n.e("55567"),
+                n.e("44629"),
                 n.e("94864"),
                 n.e("79093"),
                 n.e("28510"),
                 n.e("93010"),
-                n.e("19675"),
+                n.e("98571"),
                 n.e("86522"),
-                n.e("52620"),
                 n.e("18930"),
                 n.e("88941"),
                 n.e("61379"),
@@ -65,7 +64,7 @@ function p(e, t) {
     (0, r.openModalLazy)(async () => {
         let { default: r } = await Promise.all([
             n.e("86522"),
-            n.e("19675"),
+            n.e("98571"),
             n.e("11523"),
             n.e("58337"),
             n.e("97073"),

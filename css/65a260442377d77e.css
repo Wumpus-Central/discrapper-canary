@@ -1,0 +1,381 @@
+.imageWrapper__198b6 {
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 60px;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 60px;
+    z-index: 1
+}
+
+.image__198b6 {
+    height: 80%;
+    width: 80%;
+    z-index: 1
+}
+
+.cooldown__198b6 {
+    background-color: var(--blue-200)
+}
+
+.cooldownImage__198b6 {
+    height: 26px
+}
+
+.boostIconContainer__7402e {
+    border-radius: 100%;
+    box-shadow: var(--elevation-medium);
+    position: relative
+}
+
+.boostIcon__7402e {
+    height: 36px;
+    width: 36px
+}
+
+.boostIconCanceled__7402e {
+    display: block
+}
+
+.snowflake__7402e {
+    inset-inline-start: -16px;
+    position: absolute;
+    top: 2px;
+    z-index: 1
+}
+
+.guildContainer_f778dc {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    display: flex;
+    flex-direction: row;
+    padding: 30px 18px;
+    position: relative
+}
+
+.guildInfoContainer_f778dc {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 16px
+}
+
+.guildBoostStatsContainer_f778dc {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 6px
+}
+
+.separator_f778dc {
+    border-inline-end: 1px solid var(--text-muted);
+    height: 18px;
+    margin: 0 10px;
+    opacity: .5
+}
+
+.guildBoostBadge_f778dc {
+    color: var(--guild-boosting-pink);
+    height: 16px;
+    margin-inline-end: 6px;
+    width: 16px
+}
+
+.sparkle_f778dc {
+    color: var(--white);
+    position: absolute;
+    z-index: 1
+}
+
+.theme-light .sparkle_f778dc {
+    color: var(--guild-boosting-pink)
+}
+
+.sparkle1_f778dc {
+    bottom: 9px;
+    inset-inline-start: 0
+}
+
+.sparkle2_f778dc {
+    inset-inline-end: 9px;
+    top: -15px
+}
+
+.sparkle3_f778dc {
+    inset-inline-end: 0;
+    top: 24px
+}
+
+.sparkle4_f778dc {
+    inset-inline-end: -22px;
+    top: 28px
+}
+
+.sideSparkleContainer_f778dc {
+    background-image: radial-gradient(100% 100% at center, #fff 0, hsla(0, 0%, 100%, 0) 50%);
+    position: absolute;
+    width: 1px;
+    z-index: 1
+}
+
+.theme-light .sideSparkleContainer_f778dc {
+    background-image: radial-gradient(100% 100% at center, hsl(var(--guild-boosting-pink-hsl)/1) 0, hsl(var(--guild-boosting-pink-hsl)/0) 50%)
+}
+
+.sideSparkle_f778dc {
+    inset-inline-start: -8px
+}
+
+.container__4be27,
+.wrapper__4be27 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px
+}
+
+.container__4be27 {
+    gap: 12px
+}
+
+.appliedBoostContainer__4be27 {
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.guildContainer__4be27 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 18px
+}
+
+.guildInfoContainer__4be27 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 15px
+}
+
+.guildBoostStatsContainer__4be27 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 6px
+}
+
+.separator__4be27 {
+    border-inline-end: 1px solid var(--text-muted);
+    height: 18px;
+    margin: 0 10px
+}
+
+.guildBoostBadge__4be27 {
+    color: var(--guild-boosting-pink);
+    margin-inline-end: 6px
+}
+
+.boostContainer__4be27 {
+    background-color: var(--primary-800);
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px
+}
+
+.theme-light .boostContainer__4be27 {
+    background-color: var(--primary-200)
+}
+
+.boostInnerContainer__4be27 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 6px 0
+}
+
+.boostContainerSeparator__4be27 {
+    background-color: var(--primary-500);
+    height: 1px;
+    opacity: .48
+}
+
+.theme-light .boostContainerSeparator__4be27 {
+    opacity: .2
+}
+
+.cancel__4be27 {
+    color: var(--text-feedback-warning)
+}
+
+.boostDescriptionContainer__4be27 {
+    flex: 1;
+    margin: 0 10px;
+    position: relative
+}
+
+.boostDescriptionInnerContainer__4be27 {
+    position: absolute;
+    transform: translateY(-50%);
+    width: 100%
+}
+
+.boostSlotMenuIcon__4be27 {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: flex
+}
+
+.mainSeparator__4be27 {
+    background-color: var(--primary-500);
+    height: 1px;
+    opacity: .48
+}
+
+.theme-light .mainSeparator__4be27 {
+    opacity: .3
+}
+
+.wrapper_a2ba57 {
+    isolation: isolate;
+    position: relative
+}
+
+.gradient_a2ba57 {
+    background: center 15%/90% auto url(/assets/63ac51b66622ae3d.svg) no-repeat, linear-gradient(180deg, var(--premium-tier-0-header-gradient-2) 0, var(--premium-tier-0-header-gradient-3) 60%, var(--premium-tier-0-header-gradient-4) 120%);
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    padding: 76px 56px 36px;
+    position: relative;
+    z-index: 1
+}
+
+.guildBoostGemWrapper_a2ba57 {
+    background-color: var(--white);
+    border-radius: 34px;
+    box-shadow: var(--elevation-medium);
+    height: 68px;
+    overflow: hidden;
+    top: 0;
+    transform: translate(-50%, -25%);
+    width: 68px;
+    z-index: 2
+}
+
+.guildBoostGem_a2ba57,
+.guildBoostGemWrapper_a2ba57 {
+    inset-inline-start: 50%;
+    position: absolute
+}
+
+.guildBoostGem_a2ba57 {
+    height: 60px;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.heading_a2ba57 {
+    color: var(--text-strong);
+    position: relative;
+    text-align: center;
+    z-index: 2
+}
+
+.heading_a2ba57 p {
+    margin: 0
+}
+
+.wave_a2ba57 {
+    bottom: -96px;
+    fill: var(--background-base-low);
+    inset-inline-start: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1
+}
+
+.wrapper_f50859 {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+    padding: 30px 18px;
+    position: relative
+}
+
+.icon_f50859 {
+    border-radius: 100%;
+    height: 60px;
+    width: 60px
+}
+
+.info_f50859 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 16px
+}
+
+.wrapper__6b2f3 {
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    padding: 16px 18px
+}
+
+.copy__6b2f3,
+.wrapper__6b2f3 {
+    align-items: center;
+    display: flex
+}
+
+.cta__6b2f3 {
+    color: var(--text-link) !important;
+    display: inline;
+    height: auto;
+    margin-inline-start: 4px;
+    min-height: auto;
+    min-width: auto;
+    padding: 0
+}
+
+.boostIcon__6b2f3 {
+    color: var(--guild-boosting-pink);
+    height: 16px;
+    margin-inline-end: 4px;
+    width: 16px
+}
+
+.wrapper_de1b16 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 50px
+}
+
+.header_de1b16 {
+    margin-bottom: 20px;
+    margin-top: 30px
+}
+
+.recommendedServerCard_de1b16 {
+    border-radius: var(--radius-sm);
+    position: relative
+}
+
+.wrapper__5a3a3 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding: 0 70px;
+    text-align: center
+}
+
+.subtitle__5a3a3 {
+    margin-bottom: 6px
+}

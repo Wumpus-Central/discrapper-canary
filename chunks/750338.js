@@ -4,9 +4,9 @@ var s = a(627968),
     n = a(503698),
     i = a.n(n),
     o = a(735438),
-    l = a(269115),
-    c = a(508770),
-    d = a(821609),
+    d = a(269115),
+    l = a(508770),
+    c = a(821609),
     p = a(745396),
     m = a(534514),
     b = a(825484),
@@ -18,7 +18,7 @@ var s = a(627968),
     v = a(174459),
     E = a(676279),
     U = a(406860),
-    x = a(121),
+    x = a(280041),
     A = a(652215),
     M = a(693591),
     P = a(856556);
@@ -30,28 +30,28 @@ let S = (e) => {
             descriptionCta: S,
             previewImage: O,
             videoUrl: _,
-            shouldLoadVideo: T,
-            index: y,
+            shouldLoadVideo: y,
+            index: T,
             customVideoStyle: I,
             isReducedMotion: C,
             onClick: w,
             badgeText: N,
-            badgeVariant: L = "gradient",
-            size: j,
+            badgeVariant: j = "gradient",
+            size: L,
             backgroundVideoUrl: B,
-            previewImageStyle: V = x.Tb.CONTAINED,
-            actions: k,
+            previewImageStyle: k = x.Tb.CONTAINED,
+            actions: V,
             mediaRef: Y,
             boxArtContainerClassName: G,
         } = e,
         D = (0, E.TM)(),
         H = r.useRef(null),
-        W = r.useRef(0),
-        { sectionRef: F, handleVisibilityChange: X } = (0, U.A)({ boxType: t }),
+        F = r.useRef(0),
+        { sectionRef: W, handleVisibilityChange: X } = (0, U.A)({ boxType: t }),
         z = (0, h.A)("(min-width: 1140px)"),
-        K = V === x.Tb.OVERLAY && (j !== x.A0.LARGE || !z),
-        Q = j === x.A0.LARGE && z && V === x.Tb.OVERLAY,
-        Z = null != B && z && j === x.A0.LARGE,
+        K = k === x.Tb.OVERLAY && (L !== x.A0.LARGE || !z),
+        Q = L === x.A0.LARGE && z && k === x.Tb.OVERLAY,
+        Z = null != B && z && L === x.A0.LARGE,
         J = r.useMemo(
             () =>
                 (0, o.debounce)(() => {
@@ -60,25 +60,25 @@ let S = (e) => {
             [t],
         ),
         $ = () => {
-            null == H.current || C || ((H.current.currentTime = W.current), H.current.play()), C || Y?.current?.play();
+            null == H.current || C || ((H.current.currentTime = F.current), H.current.play()), C || Y?.current?.play();
         },
         q = () => {
-            null == H.current || C || ((W.current = H.current.currentTime), H.current.pause()),
+            null == H.current || C || ((F.current = H.current.currentTime), H.current.pause()),
                 C || Y?.current?.pause();
         },
-        ee = j === x.A0.LARGE ? "heading-xxl/bold" : "heading-xl/bold",
+        ee = L === x.A0.LARGE ? "heading-xxl/bold" : "heading-xl/bold",
         et = () => {
             let e = null != S && null != w,
-                t = null != k && k.length > 0;
+                t = null != V && V.length > 0;
             if (!e && !t) return null;
-            let a = e ? [{ variant: "secondary", onClick: w, text: S }] : k;
+            let a = e ? [{ variant: "secondary", onClick: w, text: S }] : V;
             return (0, s.jsx)("div", {
                 className: P.bentoBoxButton,
                 children: (0, s.jsx)(b.e, {
                     children: a?.map((e, t) => {
                         let { onClick: a, ...r } = e;
                         return (0, s.jsx)(
-                            d.$,
+                            c.$,
                             {
                                 ...r,
                                 onClick: (e) => {
@@ -93,13 +93,13 @@ let S = (e) => {
         },
         ea = () =>
             (0, s.jsxs)("div", {
-                className: i()(P.textBox, P[`${j}`], Q && P.overlayTextBox),
+                className: i()(P.textBox, P[`${L}`], Q && P.overlayTextBox),
                 children: [
                     (0, s.jsxs)("div", {
                         children: [
                             null == N
                                 ? null
-                                : "gradient" === L
+                                : "gradient" === j
                                   ? (0, s.jsx)("div", {
                                         className: P.badgeContainer,
                                         children: (0, s.jsx)("div", {
@@ -113,7 +113,7 @@ let S = (e) => {
                                     })
                                   : (0, s.jsx)("div", {
                                         className: P.badgeContainer,
-                                        children: (0, s.jsx)(c.E, { type: { text: N }, variant: L }),
+                                        children: (0, s.jsx)(l.E, { type: { text: N }, variant: j }),
                                     }),
                             (0, s.jsx)(m.D, { variant: ee, color: "text-strong", className: P.header, children: a }),
                         ],
@@ -129,7 +129,7 @@ let S = (e) => {
             }),
         es = () =>
             (0, s.jsx)("div", {
-                className: i()(P.boxArtContainer, P[`${j}`], G),
+                className: i()(P.boxArtContainer, P[`${L}`], G),
                 children:
                     null == _ && (0, p.O)(O) && "string" != typeof O
                         ? O
@@ -137,7 +137,7 @@ let S = (e) => {
                               R.A,
                               {
                                   playsInline: !0,
-                                  preload: T ? "auto" : "none",
+                                  preload: y ? "auto" : "none",
                                   muted: !0,
                                   poster: O,
                                   loop: !0,
@@ -148,18 +148,18 @@ let S = (e) => {
                               _,
                           ),
             }),
-        er = y % 2 != 0;
-    return (0, s.jsx)(l.L, {
-        innerRef: F,
+        er = T % 2 != 0;
+    return (0, s.jsx)(d.L, {
+        innerRef: W,
         onChange: X,
         threshold: 0.5,
         children: (0, s.jsxs)(f.h, {
-            ref: F,
+            ref: W,
             id: t,
             className: i()(
                 P.backgroundColor,
                 P.boxContainer,
-                P[`${j}`],
+                P[`${L}`],
                 P.gradientBackground,
                 K && P.overlayImageMode,
                 Q && P.overlayMode,
@@ -174,7 +174,7 @@ let S = (e) => {
                     (0, s.jsx)("div", {
                         className: P.backgroundVideoContainer,
                         children: (0, s.jsx)(g.A, {
-                            preload: T ? "auto" : "none",
+                            preload: y ? "auto" : "none",
                             className: P.backgroundVideo,
                             src: B,
                         }),
