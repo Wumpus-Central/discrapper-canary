@@ -2,19 +2,6 @@
     transform: translateY(1px) translateZ(0)
 }
 
-.listItemTooltip__91816,
-.listItemTooltipContent__91816 {
-    font-size: 16px;
-    font-weight: var(--font-weight-semibold);
-    line-height: 20px;
-    max-width: 196px;
-    word-wrap: break-word
-}
-
-.listItemTooltipContent__91816 {
-    color: var(--text-default)
-}
-
 .enable-forced-colors .listItemWrapper__91816 {
     background-color: ButtonFace;
     border: 1px solid CanvasText;

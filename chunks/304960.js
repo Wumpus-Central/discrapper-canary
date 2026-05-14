@@ -1758,7 +1758,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 543969, Version Hash: e528a1902d8ae253b578799a49638e57f4eff832`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 544056, Version Hash: f830bd2a5391db1c13249b1bcc9f815da54e664d`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -4966,6 +4966,9 @@ function aX(e) {
             }
         }, [t, s]);
     return (0, k.jsxs)(t3.D, {
+        role: "tab",
+        "aria-selected": s,
+        tabIndex: s ? 0 : -1,
         onClick: a,
         className: t2()(aZ.pc, { [aZ.wH]: s }),
         children: [
@@ -4984,6 +4987,7 @@ let aQ = function () {
             }),
             (0, k.jsx)("nav", {
                 className: aZ.C$,
+                role: "tablist",
                 children: a$.GLOBAL_DISCOVERY_TABS.map((e) => (0, k.jsx)(aX, { tab: e }, e)),
             }),
         ],
@@ -18402,7 +18406,7 @@ let Sb = "isHideDevBanner",
                     className: t2()(SR.Wz, SR.mr),
                     children: [
                         (0, k.jsx)(SO, { className: SR.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "543969" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "544056" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
