@@ -74,6 +74,7 @@
     display: inline-flex;
     line-height: 16px !important;
     padding: 0 4px;
+    position: relative;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
@@ -7090,10 +7091,6 @@ img.messageBadge__10651 {
 
 .reverseTrialContextMarginBottom__945b8 {
     margin-bottom: 8px
-}
-
-.errorText__38262 {
-    margin-top: var(--space-4)
 }
 
 .spinner__1d6c7 {

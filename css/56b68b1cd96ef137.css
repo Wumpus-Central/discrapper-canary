@@ -86,11 +86,11 @@
 }
 
 .badgeSlotIcon__6db38 {
-    height: 28px;
-    -o-object-fit: cover;
-    object-fit: cover;
+    height: 24px;
+    -o-object-fit: contain;
+    object-fit: contain;
     pointer-events: none;
-    width: 28px
+    width: 24px
 }
 
 .detailPanel__6db38 {
@@ -133,10 +133,13 @@
     gap: var(--space-4)
 }
 
+.badgeTitle__6db38,
 .uppercaseItalic__6db38 {
-    font-family: ABC Ginto Nord Discord, ABC Ginto Nord, sans-serif;
-    font-style: italic;
     text-transform: uppercase
+}
+
+.uppercaseItalic__6db38 {
+    font-style: italic
 }
 
 .badgeDetails__6db38 {
