@@ -4,14 +4,15 @@ var l = n(627968),
 let i = "social-layer-storefront-product-details-modal",
     a = (e) => {
         let {
-            skuId: t,
-            applicationId: a,
-            isStorefront: o,
-            giftRecipient: u,
-            giftingOrigin: s,
-            analyticsLocations: d,
-            analyticsContext: c,
-            onClose: A,
+            getSocialLayerStorefrontLink: t,
+            skuId: a,
+            applicationId: o,
+            isStorefront: u,
+            giftRecipient: s,
+            giftingOrigin: d,
+            analyticsLocations: c,
+            analyticsContext: A,
+            onClose: m,
         } = e;
         (0, r.openModalLazy)(
             async () => {
@@ -53,20 +54,21 @@ let i = "social-layer-storefront-product-details-modal",
                 return (n) =>
                     (0, l.jsx)(e, {
                         ...n,
-                        skuId: t,
-                        applicationId: a,
-                        isStorefront: o,
-                        analyticsLocations: d,
-                        analyticsContext: c,
-                        giftRecipient: u,
-                        giftingOrigin: s,
+                        skuId: a,
+                        applicationId: o,
+                        isStorefront: u,
+                        analyticsLocations: c,
+                        analyticsContext: A,
+                        giftRecipient: s,
+                        giftingOrigin: d,
+                        getSocialLayerStorefrontLink: t,
                     });
             },
             {
                 modalKey: i,
-                allowsNavigation: o,
+                allowsNavigation: u,
                 onCloseCallback: () => {
-                    A?.();
+                    m?.();
                 },
             },
         );

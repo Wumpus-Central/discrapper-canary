@@ -155,8 +155,9 @@ let a = "@me",
         APPLICATION_DIRECTORY_SEARCH: "/application-directory/search",
         FAMILY_CENTER: "/family-center",
         SERVER_SHOP: (e) => `/channels/${e}/shop`,
+        CHANNELS_GAME_SHOP_PREFIX: (e) => `/channels/${e}/game-shop`,
         CHANNELS_GAME_SHOP: (e, t, n, i) => {
-            let r = `/channels/${e}/game-shop`;
+            let r = _.CHANNELS_GAME_SHOP_PREFIX(e);
             return (r += `/${t ?? 0}`), null != n && ((r += `/${n}`), null != i && (r += `/${i}`)), r;
         },
         GAME_SHOP: (e, t, n) => {
@@ -167,7 +168,15 @@ let a = "@me",
         REPORT: "/report",
         REPORT_SECOND_LOOK: "/report-review",
         COLLECTIBLES_SHOP: "/shop",
-        COLLECTIBLES_SHOP_GAME_SHOP: (e) => `/shop?tab=${r.G2.GAME_SHOPS}&applicationId=${e}`,
+        COLLECTIBLES_SHOP_GAME_SHOP: (e, t, n, i) => {
+            let s = `/shop?tab=${r.G2.GAME_SHOPS}&applicationId=${e}`;
+            return (
+                null != t && (s += `&pageIndex=${t}`),
+                null != n && (s += `&skuId=${n}`),
+                null != i && (s += `&slug=${i}`),
+                s
+            );
+        },
         COLLECTIBLES_SHOP_WITH_TAB: (e) => `/shop?tab=${e}`,
         COLLECTIBLES_SHOP_COLLECTION_DETAIL: (e) => `/shop/collection/${e}`,
         COLLECTIBLES_SHOP_PRODUCT_DETAIL: (e) => `/shop/product/${e}`,
