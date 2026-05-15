@@ -189,7 +189,7 @@ var eS = n(71393),
     eD = n(927813),
     eL = n(45938),
     ew = n(975571),
-    eM = n(927578),
+    eM = n(428262),
     eP = n(935208),
     ex = n(292348),
     eU = n(157559),
@@ -1142,7 +1142,10 @@ ${s}`),
                                                 (0, g.KL)(u, ek.J.ACTIVITY_INVITE, l);
                                             else if (t === I.I.GUILD_PRODUCT);
                                             else if (t === I.I.SERVER_SHOP);
-                                            else if (t === I.I.SOCIAL_LAYER_STOREFRONT);
+                                            else if (
+                                                t === I.I.SOCIAL_LAYER_STOREFRONT ||
+                                                t === I.I.SOCIAL_LAYER_STOREFRONT_APP
+                                            );
                                             else if (t === I.I.QUESTS_EMBED) {
                                                 let e = (0, eh.L4)(r.u.QUESTS_EMBED);
                                                 (0, ef.av)({

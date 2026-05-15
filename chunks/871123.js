@@ -2,21 +2,21 @@
 n.d(t, {
     Cv: () => b,
     NE: () => O,
-    OY: () => w,
-    Ox: () => G,
-    Q6: () => M,
+    OY: () => M,
+    Ox: () => F,
+    Q6: () => P,
     Ri: () => S,
-    Ye: () => P,
+    Ye: () => x,
     bF: () => y,
     fq: () => D,
     jd: () => N,
     jz: () => v,
     mC: () => I,
-    nG: () => k,
+    nG: () => G,
     pV: () => A,
-    rG: () => U,
+    rG: () => k,
     sq: () => R,
-    wH: () => x,
+    wH: () => U,
     xf: () => L,
     y8: () => T,
     zf: () => C,
@@ -132,19 +132,25 @@ function L(e) {
             (0, _.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, A),
         );
 }
-function w(e, t) {
-    return `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${E.BVt.GAME_SHOP(e, t.id, t.slug)}`;
+function w(e, t, n) {
+    let { tab: i, applicationId: r } = (0, s.parse)(t);
+    return e.indexOf(E.BVt.COLLECTIBLES_SHOP) >= 0 && i === m.G2.GAME_SHOPS && r === n;
 }
 function M(e, t) {
-    return `${w(e, t)}
+    return w(location.pathname, location.search, t.applicationId)
+        ? `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${E.BVt.COLLECTIBLES_SHOP_GAME_SHOP(t.applicationId, void 0, t.id, t.slug)}`
+        : `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${E.BVt.GAME_SHOP(e, t.id, t.slug)}`;
+}
+function P(e, t) {
+    return `${M(e, t)}
 
 `;
 }
-function P(e) {
+function x(e) {
     let t = d.A.getGuild(e);
     return null != t && v(t);
 }
-function x(e, t, n) {
+function U(e, t, n) {
     return 0 === e.length
         ? { hasWishlist: !1, hasPopular: !1 }
         : {
@@ -166,17 +172,14 @@ function x(e, t, n) {
               }),
           };
 }
-function U(e, t, n, i) {
-    let { tab: r, applicationId: a } = (0, s.parse)(t);
-    return e.indexOf(E.BVt.COLLECTIBLES_SHOP) >= 0
-        ? r === m.G2.GAME_SHOPS && a === n
-        : null != i && e.indexOf((0, p.Ny)(i)) >= 0;
+function k(e, t, n, i) {
+    return w(e, t, n) || (null != i && e.indexOf((0, p.Ny)(i)) >= 0);
 }
-function k(e) {
+function G(e) {
     let t = (0, a.bG)([h.A], () => h.A.getGuildIdFromApplicationId(e)),
         n = (0, o.h)(e);
     return { guildId: t ?? n?.guildId, application: n };
 }
-function G(e) {
+function F(e) {
     return r().mapValues(e, (e) => ({ isEligible: e.is_eligible }));
 }
