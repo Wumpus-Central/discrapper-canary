@@ -3735,39 +3735,40 @@ class e8 extends m.A {
         if (this._voiceConnectionSuccessTracked || !this._connected || !this._hasCodecs) return;
         this._voiceConnectionSuccessTracked = !0;
         let t = z.A.shouldIncludePreferredRegion() ? z.A.getPreferredRegion() : null,
-            n = Y.Ay.getSettings(),
-            i = this._getAnalyticsProperties();
+            n = 1 === this._connectCount,
+            i = Y.Ay.getSettings(),
+            r = this._getAnalyticsProperties();
         q.default.track(eo.HAw.VOICE_CONNECTION_SUCCESS, {
-            ...i,
+            ...r,
             hostname: this.hostname,
             port: this.port,
             protocol: this.protocol,
             cloudflare_best_region: t,
-            connect_time: (0, A.tB)() - (1 === this._connectCount ? this._connectStartTime : this._createdTime),
+            connect_time: (0, A.tB)() - (n ? this._createdTime : this._connectStartTime),
             connect_count: this._connectCount,
             audio_subsystem: Y.Ay.getMediaEngine().getAudioSubsystem(),
             audio_layer: Y.Ay.getMediaEngine().getAudioLayer(),
-            automatic_audio_subsystem: n.automaticAudioSubsystem,
+            automatic_audio_subsystem: i.automaticAudioSubsystem,
             media_session_id: this.getMediaSessionId(),
             participant_type: this.getVoiceParticipantType(),
             join_voice_id: this.joinVoiceId,
             is_camera_enabled: Y.Ay.getMediaEngine().getVideoInputDeviceId() !== k.qe && e.context === k.x.DEFAULT,
             ...this.stateHistory.getVoiceConnectionSuccessStats(),
         });
-        let r = performance.now(),
-            s = (e, t) => (null == e || null == t ? null : e - t);
+        let s = performance.now(),
+            a = (e, t) => (null == e || null == t ? null : e - t);
         q.default.track(eo.HAw.VOICE_CONNECTION_TTC_COLLECTED, {
-            rtc_connection_id: i.rtc_connection_id,
+            rtc_connection_id: r.rtc_connection_id,
             time_1_creation_to_connect: this._connectStartTime - this._createdTime,
             time_2_media_engine_connect: this._mediaEngineConnectDuration,
             time_3_media_engine_create_native_connection: e.transportInfo?.createConnectionTime,
             time_4_media_engine_connect_to_socket: e.transportInfo?.connectTime,
-            time_5_scheduling_connected_callback: s(e.onConnectCallbackAt, e.transportInfo?.connectCallbackScheduledMs),
-            time_6_state_connected_to_end_measure: s(r, e.onConnectCallbackAt),
+            time_5_scheduling_connected_callback: a(e.onConnectCallbackAt, e.transportInfo?.connectCallbackScheduledMs),
+            time_6_state_connected_to_end_measure: a(s, e.onConnectCallbackAt),
             connect_count: this._connectCount,
-            rtc_connecting_native_connect: s(e.onConnectCallbackAt, e.beginInitializeAt),
-            rtc_connecting_native_codecs: s(e.onVideoCodecsCallbackAt, e.onConnectCallbackAt),
-            rtc_connecting_native_crypto_modes: s(e.onEncryptionModesCallbackAt, e.onVideoCodecsCallbackAt),
+            rtc_connecting_native_connect: a(e.onConnectCallbackAt, e.beginInitializeAt),
+            rtc_connecting_native_codecs: a(e.onVideoCodecsCallbackAt, e.onConnectCallbackAt),
+            rtc_connecting_native_crypto_modes: a(e.onEncryptionModesCallbackAt, e.onVideoCodecsCallbackAt),
         });
     }
     _handleSDP(e) {
