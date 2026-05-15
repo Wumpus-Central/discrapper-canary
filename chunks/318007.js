@@ -30,15 +30,20 @@ let h = (e) => {
                 (0, l.jsxs)("div", {
                     className: m.Os,
                     children: [
-                        null != a
-                            ? (0, l.jsx)(d.A, {
-                                  giftStyle: a,
-                                  defaultAnimationState: c.oA.ACTION,
-                                  idleAnimationState: c.oA.LOOP,
-                                  shouldAnimate: !0,
-                                  className: m.lY,
-                              })
-                            : (0, l.jsx)(r.y, { className: m.u1 }),
+                        (0, l.jsx)("div", {
+                            "aria-hidden": !0,
+                            style: { display: "contents" },
+                            children:
+                                null != a
+                                    ? (0, l.jsx)(d.A, {
+                                          giftStyle: a,
+                                          defaultAnimationState: c.oA.ACTION,
+                                          idleAnimationState: c.oA.LOOP,
+                                          shouldAnimate: !0,
+                                          className: m.lY,
+                                      })
+                                    : (0, l.jsx)(r.y, { className: m.u1 }),
+                        }),
                         P &&
                             (0, l.jsxs)("div", {
                                 className: i()(m.b7, m.Ow),
