@@ -1,0 +1,131 @@
+.inviteSettingsInviteRow__1de14 {
+    box-shadow: 0 1px 0 0 var(--border-subtle);
+    color: var(--text-default);
+    font-size: 16px;
+    height: 62px;
+    line-height: 20px;
+    position: relative
+}
+
+.header__1de14 {
+    padding-bottom: 40px
+}
+
+.actions__1de14 {
+    padding-bottom: 4px
+}
+
+.headerDivider__1de14 {
+    margin-bottom: 16px;
+    margin-top: 16px
+}
+
+.inviteSettingsInviteRow__1de14:focus-within .revokeInvite__1de14,
+.inviteSettingsInviteRow__1de14:hover .revokeInvite__1de14 {
+    opacity: 1
+}
+
+.text__1de14 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.inviteDisabledRow__1de14 {
+    opacity: .8
+}
+
+.inviteDisabledTip__1de14 {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.inviteDisabledContainer__1de14 {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.revokeInvite__1de14,
+.text__1de14 {
+    z-index: 2
+}
+
+.channelName__1de14 {
+    margin-inline-start: 26px
+}
+
+.countdownColumn__1de14 {
+    margin-inline-end: 0
+}
+
+.revokeInvite__1de14 {
+    inset-inline-end: -31px;
+    opacity: 0;
+    position: absolute;
+    top: -12px;
+    transition: opacity .1s ease
+}
+
+.inviteCode__1de14 {
+    font-family: var(--font-code);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+    white-space: nowrap
+}
+
+.inviteSourceContainer__1de14 {
+    max-width: 100%;
+    overflow: hidden
+}
+
+.linkedChannelJoinSource__1de14 {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.linkedChannelJoinSourceText__1de14 {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.countdown__1de14,
+.uses__1de14 {
+    font-family: var(--font-code)
+}
+
+.user__1de14 {
+    color: var(--text-strong);
+    display: flex
+}
+
+.discriminator__1de14 {
+    color: var(--text-default)
+}
+
+.avatar__1de14 {
+    display: flex;
+    flex-shrink: 0;
+    margin-inline-end: 12px
+}
+
+.bypass__1de14 {
+    align-items: center;
+    display: flex;
+    gap: 2px
+}
+
+.infoIcon__1de14 {
+    margin-inline-start: 4px
+}
+
+.marginBottom20__1de14 {
+    margin-bottom: 20px
+}
