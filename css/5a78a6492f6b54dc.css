@@ -1551,8 +1551,8 @@
 .controls__1feb0 {
     display: flex;
     gap: 8px;
-    height: 40px;
     justify-content: space-between;
+    min-height: 40px;
     padding: 20px 0 24px;
     position: relative
 }
@@ -1560,7 +1560,7 @@
 .controlsLeftSide__1feb0 {
     align-items: center;
     display: flex;
-    height: 100%
+    min-height: 100%
 }
 
 .controlsRightSide__1feb0 {
@@ -3447,13 +3447,10 @@
 
 .themeOption_f7cedc {
     align-items: center;
-    background: none;
-    border: none;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: var(--space-xs);
-    padding: 0;
     transition: opacity .2s
 }
 
