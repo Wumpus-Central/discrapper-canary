@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { default: () => a });
 var i = n(228366),
-    r = n(954571),
+    r = n(174459),
     s = n(652215);
 let a = {
     setDesktopType(e) {
@@ -31,6 +31,10 @@ let a = {
     setNotifyMessagesInSelectedChannel(e) {
         r.default.track(s.HAw.LOCAL_SETTINGS_UPDATED, { notify_messages_in_selected_channel: e }),
             i.h.dispatch({ type: "NOTIFICATIONS_SET_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL", notify: e });
+    },
+    setScreenDowntimeReminder(e) {
+        r.default.track(s.HAw.LOCAL_SETTINGS_UPDATED, { screen_downtime_reminder: e }),
+            i.h.dispatch({ type: "NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER", screenDowntimeReminder: e });
     },
     setPermissionsState(e, t) {
         r.default.track(s.HAw.ENABLE_NOTIFICATIONS, { enabled: e === s.kCE.ENABLED, source: t }),

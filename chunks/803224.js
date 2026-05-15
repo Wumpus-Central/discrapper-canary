@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(17928),
     r = n(228366),
     s = n(723702),
@@ -12,13 +12,14 @@ let o = {
         disableUnreadBadge: !1,
         taskbarFlash: !0,
         notifyMessagesInSelectedChannel: !1,
+        screenDowntimeReminder: !0,
     },
     l = o;
-function d(e) {
+function u(e) {
     let { desktopType: t } = e;
     l.desktopType = t;
 }
-class _ extends i.Ay.DeviceSettingsStore {
+class c extends i.Ay.DeviceSettingsStore {
     static displayName = "NotificationSettingsStore";
     static persistKey = "notifications";
     static migrations = [
@@ -61,12 +62,15 @@ class _ extends i.Ay.DeviceSettingsStore {
     get taskbarFlash() {
         return l.taskbarFlash;
     }
+    get screenDowntimeReminder() {
+        return l.screenDowntimeReminder;
+    }
     isSoundDisabled(e) {
         return l.disableAllSounds || -1 !== l.disabledSounds.indexOf(e);
     }
 }
-let u = new _(r.h, {
-    NOTIFICATIONS_SET_DESKTOP_TYPE: d,
+let d = new c(r.h, {
+    NOTIFICATIONS_SET_DESKTOP_TYPE: u,
     NOTIFICATIONS_SET_TTS_TYPE: function (e) {
         let { ttsType: t } = e;
         l.ttsType = t;
@@ -80,7 +84,7 @@ let u = new _(r.h, {
     },
     NOTIFICATIONS_SET_PERMISSION_STATE: function (e) {
         let { enabled: t } = e;
-        t === a.kCE.BLOCKED ? d({ desktopType: a.nRU.NEVER }) : t === a.kCE.ENABLED && d({ desktopType: a.nRU.ALL });
+        t === a.kCE.BLOCKED ? u({ desktopType: a.nRU.NEVER }) : t === a.kCE.ENABLED && u({ desktopType: a.nRU.ALL });
     },
     NOTIFICATIONS_SET_DISABLE_UNREAD_BADGE: function (e) {
         let { disableUnreadBadge: t } = e;
@@ -93,5 +97,9 @@ let u = new _(r.h, {
     NOTIFICATIONS_SET_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL: function (e) {
         let { notify: t } = e;
         l.notifyMessagesInSelectedChannel = t;
+    },
+    NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: function (e) {
+        let { screenDowntimeReminder: t } = e;
+        l.screenDowntimeReminder = t;
     },
 });

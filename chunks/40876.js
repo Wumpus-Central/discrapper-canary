@@ -826,7 +826,12 @@ let r = {
     },
     HavenManager: { actions: ["HAVEN_DISCONNECT"], inlineRequire: () => n(63446).A },
     RestrictedHoursManager: {
-        actions: ["POST_CONNECTION_OPEN", "CURRENT_USER_UPDATE", "LOGOUT"],
+        actions: [
+            "POST_CONNECTION_OPEN",
+            "CURRENT_USER_UPDATE",
+            "LOGOUT",
+            "NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER",
+        ],
         inlineRequire: () => n(425116).A,
         hasStoreChangeListeners: !0,
         neverLoadBeforeConnectionOpen: !0,

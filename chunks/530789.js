@@ -528,7 +528,7 @@ new eh(
               },
               RESTRICTED_HOURS_WARNING: function (e) {
                   let { title: t, subtitle: i } = e;
-                  if (e_()) return !1;
+                  if (e_() || !k.A.screenDowntimeReminder) return !1;
                   X.A.showNotification(
                       n(608598),
                       t,
