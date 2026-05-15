@@ -1,29 +1,31 @@
-t.d(l, { $l: () => L, Ev: () => O, M8: () => E, Pw: () => q, Te: () => I, lS: () => P });
+t.d(l, { $l: () => P, Ev: () => D, M8: () => L, Pw: () => A, Te: () => K, lS: () => z });
 var a = t(627968),
     n = t(64700),
     i = t(503698),
-    r = t.n(i),
-    s = t(887129),
-    o = t(837381),
-    u = t(172218),
-    c = t(452027),
-    d = t(862301),
-    b = t(315710),
-    h = t(689175),
-    p = t(691885),
-    f = t(922016),
-    m = t(900797),
-    x = t(847374),
-    g = t(939249),
-    v = t(834730),
-    j = t(863610),
-    y = t(789645),
-    S = t(628284),
-    C = t(765671),
-    w = t(194498),
-    N = t(375708),
-    k = t(384267);
-function O(e) {
+    s = t.n(i),
+    r = t(461771),
+    o = t(887129),
+    u = t(837381),
+    d = t(602034),
+    c = t(172218),
+    b = t(452027),
+    p = t(862301),
+    h = t(315710),
+    f = t(689175),
+    m = t(691885),
+    x = t(922016),
+    g = t(900797),
+    v = t(847374),
+    S = t(939249),
+    j = t(834730),
+    y = t(863610),
+    C = t(789645),
+    w = t(628284),
+    N = t(765671),
+    k = t(194498),
+    O = t(375708),
+    E = t(384267);
+function D(e) {
     let { value: l, onChange: t, onSelectInteraction: a, serialize: n = (e) => String(e) } = e;
     return {
         select: (e) => {
@@ -35,49 +37,49 @@ function O(e) {
         serialize: n,
     };
 }
-function E(e, l) {
+function L(e, l) {
     let t = new Set(l);
     return t.has(e) ? t.delete(e) : t.add(e), { newValues: t, updated: !0 };
 }
-function L(e, l) {
+function P(e, l) {
     return l.has(e) ? { newValues: new Set(), updated: !0 } : { newValues: new Set([e]), updated: !0 };
 }
-function P(e, l) {
+function z(e, l) {
     return l.has(e) ? { newValues: l, updated: !1 } : { newValues: new Set([e]), updated: !0 };
 }
-function D(e) {
+function M(e) {
     return e?.label;
 }
-function z(e) {
-    return e.map((e) => D(e)).join(", ");
+function I(e) {
+    return e.map((e) => M(e)).join(", ");
 }
-function M(e) {
+function R(e) {
     let {
             options: l,
-            placeholder: t = N.intl.string(N.t.XqMe3N),
+            placeholder: t = O.intl.string(O.t.XqMe3N),
             className: i,
-            isDisabled: s = !1,
+            isDisabled: r = !1,
             maxVisibleItems: o = 7,
-            autoFocus: b = !1,
-            popoutWidth: h,
-            clearable: p = !1,
-            size: S = "md",
-            variant: w = "filled",
-            onClose: O,
-            onOpen: E,
-            renderOptionLabel: L = D,
-            renderOptionValue: P = z,
-            popoutClassName: M,
-            popoutPosition: V = "bottom",
-            popoutLayerContext: I,
+            autoFocus: u = !1,
+            popoutWidth: d,
+            clearable: h = !1,
+            size: f = "md",
+            variant: m = "filled",
+            onClose: w,
+            onOpen: k,
+            renderOptionLabel: D = M,
+            renderOptionValue: L = I,
+            popoutClassName: P,
+            popoutPosition: z = "bottom",
+            popoutLayerContext: R,
             optionClassName: q,
             closeOnSelect: K,
             select: A,
             isSelected: F,
             serialize: T,
             clear: W,
-            hideIcon: G = !1,
-            isProcessing: $ = !1,
+            hideIcon: $ = !1,
+            isProcessing: G = !1,
             "aria-label": B,
             "aria-labelledby": H,
             label: U,
@@ -88,15 +90,15 @@ function M(e) {
             layout: J = "vertical",
         } = e,
         [Q, ee] = n.useState(!1),
-        { ref: el, width: et, height: ea } = (0, C.Ay)();
+        { ref: el, width: et, height: ea } = (0, N.Ay)();
     n.useLayoutEffect(() => {
-        s && ee(!1);
-    }, [s]);
+        r && ee(!1);
+    }, [r]);
     let en = n.useCallback(
             (e) => {
-                Q === e || s || (ee(e), e ? E?.() : O?.());
+                Q === e || r || (ee(e), e ? k?.() : w?.());
             },
-            [s, O, E, Q],
+            [r, w, k, Q],
         ),
         ei = n.useCallback(
             (e) => {
@@ -104,8 +106,8 @@ function M(e) {
             },
             [en, Q],
         ),
-        er = (0, u.K)(ei),
-        es = n.useCallback(
+        es = (0, c.K)(ei),
+        er = n.useCallback(
             (e) => {
                 A(e), K && el.current?.focus();
             },
@@ -120,12 +122,12 @@ function M(e) {
         eu = l.filter((e) => F(e.value));
     return (
         n.useLayoutEffect(() => {
-            b && el.current?.focus();
-        }, [b, el]),
-        (0, a.jsx)(f.Y, {
+            u && el.current?.focus();
+        }, [u, el]),
+        (0, a.jsx)(x.Y, {
             targetElementRef: el,
             spacing: 0,
-            animation: f.Y.Animation.NONE,
+            animation: x.Y.Animation.NONE,
             shouldShow: Q,
             onRequestOpen: () => {
                 en(!0);
@@ -135,30 +137,30 @@ function M(e) {
             },
             renderPopout: (e) => {
                 let { closePopout: t, position: n, updatePosition: i } = e;
-                return (0, a.jsx)(R, {
-                    className: M,
+                return (0, a.jsx)(V, {
+                    className: P,
                     closeOnSelect: K,
                     maxVisibleItems: o,
-                    width: "auto" === h ? void 0 : (h ?? et),
+                    width: "auto" === d ? void 0 : (d ?? et),
                     isSelected: F,
                     closePopout: t,
                     buttonHeight: ea ?? 0,
-                    onSelect: es,
+                    onSelect: er,
                     options: l,
                     serialize: T,
-                    renderOptionLabel: L,
+                    renderOptionLabel: D,
                     optionClassName: q,
                     updatePosition: i,
                     popoutPosition: n,
                 });
             },
-            position: V,
-            layerContext: I,
+            position: z,
+            layerContext: R,
             children: (e, l) => {
                 let { onClick: n, onKeyDown: o, ...u } = e,
-                    { isShown: b } = l,
-                    h = b ? m.t : x.a;
-                return (0, a.jsx)(c.D, {
+                    { isShown: d } = l,
+                    c = d ? g.t : v.a;
+                return (0, a.jsx)(b.D, {
                     label: U,
                     description: Y,
                     helperText: _,
@@ -166,22 +168,22 @@ function M(e) {
                     successMessage: Z,
                     layout: J,
                     children: (e) =>
-                        (0, a.jsxs)(d.F, {
-                            as: g.D,
+                        (0, a.jsxs)(p.F, {
+                            as: S.D,
                             tag: "div",
                             role: "button",
                             id: e?.controlId,
                             "aria-describedby": e?.describedById,
                             "aria-errormessage": e?.errorMessageId,
                             "aria-invalid": e?.errorMessageId != null,
-                            disabled: s,
-                            "aria-busy": $,
-                            "aria-disabled": s,
+                            disabled: r,
+                            "aria-busy": G,
+                            "aria-disabled": r,
                             fullWidth: "horizontal" === J,
                             innerRef: (e) => {
-                                (el.current = e), (er.current = e);
+                                (el.current = e), (es.current = e);
                             },
-                            onClick: s
+                            onClick: r
                                 ? void 0
                                 : (e) => {
                                       n(e), en(!Q);
@@ -189,42 +191,42 @@ function M(e) {
                             onKeyDown: (e) => {
                                 "ArrowDown" === e.key
                                     ? en(!0)
-                                    : "Escape" === e.key && b && (e.stopPropagation(), en(!1)),
+                                    : "Escape" === e.key && d && (e.stopPropagation(), en(!1)),
                                     o(e);
                             },
                             ...u,
-                            containerClassName: r()(k.kL, i),
-                            "data-size": S,
-                            "data-variant": w,
-                            className: k.Lt,
+                            containerClassName: s()(E.kL, i),
+                            "data-size": f,
+                            "data-variant": m,
+                            className: E.Lt,
                             "aria-haspopup": "listbox",
-                            "aria-expanded": b,
+                            "aria-expanded": d,
                             "aria-label": B,
                             "aria-labelledby": H,
                             children: [
                                 eu.length > 0
-                                    ? (0, a.jsx)(v.E, { className: k.Uq, variant: "text-md/medium", children: P(eu) })
-                                    : (0, a.jsx)("span", { className: k.qf, children: t }),
+                                    ? (0, a.jsx)(j.E, { className: E.Uq, variant: "text-md/medium", children: L(eu) })
+                                    : (0, a.jsx)("span", { className: E.qf, children: t }),
                                 (0, a.jsx)("div", {
-                                    className: k.Pt,
-                                    children: $
-                                        ? (0, a.jsx)(j.n, { dotRadius: 3.5, themed: !0 })
+                                    className: E.Pt,
+                                    children: G
+                                        ? (0, a.jsx)(y.n, { dotRadius: 3.5, themed: !0 })
                                         : (0, a.jsxs)(a.Fragment, {
                                               children: [
-                                                  p
-                                                      ? (0, a.jsx)(g.D, {
+                                                  h
+                                                      ? (0, a.jsx)(S.D, {
                                                             role: "button",
-                                                            "aria-disabled": s,
+                                                            "aria-disabled": r,
                                                             onClick: eo,
-                                                            "aria-label": N.intl.string(N.t.VkKicb),
-                                                            children: (0, a.jsx)(y.P, {
+                                                            "aria-label": O.intl.string(O.t.VkKicb),
+                                                            children: (0, a.jsx)(C.P, {
                                                                 size: "xs",
                                                                 color: "currentColor",
-                                                                className: k.IU,
+                                                                className: E.IU,
                                                             }),
                                                         })
                                                       : null,
-                                                  G ? null : (0, a.jsx)(h, { color: "currentColor", size: "sm" }),
+                                                  $ ? null : (0, a.jsx)(c, { color: "currentColor", size: "sm" }),
                                               ],
                                           }),
                                 }),
@@ -235,85 +237,116 @@ function M(e) {
         })
     );
 }
-function R(e) {
+function V(e) {
     let {
             className: l,
             onSelect: t,
             closePopout: i,
-            closeOnSelect: u = !0,
-            isSelected: c,
-            options: d,
-            width: p,
-            maxVisibleItems: f,
-            renderOptionLabel: m,
-            serialize: x,
-            optionClassName: g,
-            buttonHeight: v,
-            updatePosition: j,
-            popoutPosition: y,
+            closeOnSelect: c = !0,
+            isSelected: b,
+            options: p,
+            width: m,
+            maxVisibleItems: x,
+            renderOptionLabel: g,
+            serialize: v,
+            optionClassName: S,
+            buttonHeight: j,
+            updatePosition: y,
+            popoutPosition: C,
         } = e,
-        [S, C] = n.useState(0),
-        N = n.useRef(null),
-        O = n.useId(),
-        E = (0, s.Ay)({ id: O, async scrollToEnd() {}, async scrollToStart() {}, isEnabled: !0, wrap: !0 }),
-        L = n.useRef(null);
-    (0, b.t)(L),
+        [w, N] = n.useState(0),
+        O = n.useRef(null),
+        D = n.useId(),
+        L = (0, o.Ay)({ id: D, async scrollToEnd() {}, async scrollToStart() {}, isEnabled: !0, wrap: !0 }),
+        [P, z] = n.useState(null);
+    n.useEffect(
+        () =>
+            (0, r.e)(D, (e) => {
+                z(e);
+            }),
+        [D],
+    );
+    let M = n.useRef(null);
+    (0, h.t)(M),
         n.useLayoutEffect(() => {
-            L.current?.focus();
+            M.current?.focus();
         }, []),
         n.useEffect(() => {
-            v > 0 && j();
-        }, [v, j]),
-        (0, w.A)(j),
+            j > 0 && y();
+        }, [j, y]),
+        (0, k.A)(y),
         n.useLayoutEffect(() => {
-            let e = N.current?.getBoundingClientRect()?.height;
-            null != e && C(e);
-        }, [f, d.length]),
+            let e = O.current?.getBoundingClientRect()?.height;
+            null != e && N(e);
+        }, [x, p.length]),
         n.useEffect(() => {
-            j();
-        }, [j, S]);
-    let P = n.useCallback(
+            y();
+        }, [y, w]);
+    let I = n.useCallback(
             (e, l) => {
-                t(e), u && !l && i();
+                t(e), c && !l && i();
             },
-            [i, t, u],
+            [i, t, c],
         ),
-        D = n.useMemo(
+        R = n.useMemo(
             () =>
-                d.map((e, l) =>
+                p.map((e, l) =>
                     (0, a.jsx)(
-                        V,
+                        q,
                         {
-                            isSelected: c(e.value),
+                            isSelected: b(e.value),
                             value: e.value,
-                            label: m(e),
-                            onSelect: P,
-                            className: g,
+                            label: g(e),
+                            onSelect: I,
+                            className: S,
                             isDisabled: e.disabled,
                             preventCloseOnSelect: e.preventCloseOnSelect,
-                            serialize: x,
+                            serialize: v,
                         },
                         e.key ?? l,
                     ),
                 ),
-            [P, c, g, d, m, x],
+            [I, b, S, p, g, v],
         ),
-        z = d.length <= f ? h.zC : h.Ch;
-    return (0, a.jsx)(o.hD, {
-        navigator: E,
-        children: (0, a.jsx)(o.PR, {
+        V = n.useMemo(
+            () =>
+                p
+                    .slice(0, x)
+                    .map((e, l) =>
+                        (0, a.jsx)(
+                            q,
+                            {
+                                isSelected: b(e.value),
+                                value: e.value,
+                                label: g(e),
+                                onSelect: I,
+                                className: S,
+                                isDisabled: e.disabled,
+                                preventCloseOnSelect: e.preventCloseOnSelect,
+                                serialize: v,
+                                omitId: !0,
+                            },
+                            e.key ?? l,
+                        ),
+                    ),
+            [I, b, x, S, p, g, v],
+        ),
+        K = p.length <= x ? f.zC : f.Ch;
+    return (0, a.jsx)(u.hD, {
+        navigator: L,
+        children: (0, a.jsx)(u.PR, {
             children: (e) => {
-                let { ref: t, onKeyDown: n, ...s } = e;
+                let { ref: t, onKeyDown: n, ...r } = e;
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsx)(z, {
-                            className: r()(k.SW, l, { [k.O3]: "top" === y }),
-                            style: { width: p, maxHeight: S },
+                        (0, a.jsx)(K, {
+                            className: s()(E.SW, l, { [E.O3]: "top" === C }),
+                            style: { width: m, maxHeight: w },
                             ref: (e) => {
                                 let l = e?.getScrollerNode() ?? null;
-                                (t.current = l), (L.current = l);
+                                (t.current = l), (M.current = l);
                             },
-                            ...s,
+                            ...r,
                             onKeyDown: (e) => {
                                 if ("Escape" === e.key) {
                                     e.stopPropagation(), e.preventDefault(), i();
@@ -321,53 +354,56 @@ function R(e) {
                                 }
                                 n(e);
                             },
+                            "aria-activedescendant": null != P ? (0, d.t$)(D, P) : void 0,
                             role: "listbox",
-                            children: D,
+                            children: R,
                         }),
-                        (0, a.jsx)("div", { "aria-hidden": !0, ref: N, className: k.PG, children: D.slice(0, f) }),
+                        (0, a.jsx)("div", { "aria-hidden": !0, ref: O, className: E.PG, children: V }),
                     ],
                 });
             },
         }),
     });
 }
-function V(e) {
+function q(e) {
     let {
             className: l,
             value: t,
             label: n,
             onSelect: i,
-            isSelected: s,
-            isDisabled: u,
-            preventCloseOnSelect: c,
-            serialize: d,
+            isSelected: r,
+            isDisabled: o,
+            preventCloseOnSelect: d,
+            serialize: c,
+            omitId: b = !1,
         } = e,
-        b = (0, o.rm)(d(t));
-    return (0, a.jsxs)(g.D, {
+        p = (0, u.rm)(c(t));
+    return (0, a.jsxs)(S.D, {
         focusProps: { enabled: !1 },
-        className: r()(k.uK, l, { [k.IZ]: u }),
-        onClick: () => !u && i(t, c),
-        ...b,
-        "aria-selected": s,
-        "aria-disabled": u,
+        className: s()(E.uK, l, { [E.IZ]: o }),
+        onClick: () => !o && i(t, d),
+        ...p,
+        id: b ? void 0 : p["data-list-item-id"],
+        "aria-selected": r,
+        "aria-disabled": o,
         role: "option",
         children: [
             n,
-            s &&
-                (0, a.jsx)(S.y, {
+            r &&
+                (0, a.jsx)(w.y, {
                     size: "custom",
                     color: "currentColor",
                     secondaryColor: "white",
-                    className: k.Dt,
+                    className: E.Dt,
                     width: 20,
                     height: 20,
                 }),
         ],
     });
 }
-function I(e) {
-    let { renderLeading: l, renderTrailing: t, value: n, onChange: i, ...r } = e,
-        s = (function (e) {
+function K(e) {
+    let { renderLeading: l, renderTrailing: t, value: n, onChange: i, ...s } = e,
+        r = (function (e) {
             let { value: l, onChange: t, serialize: a = (e) => String(e) } = e;
             return { select: (e) => t(e), isSelected: (e) => e === l, clear: () => t(null), serialize: a };
         })({ value: n, onChange: i }),
@@ -375,21 +411,21 @@ function I(e) {
             id: o,
             options: u,
             autoFocus: d,
-            required: b,
-            isDisabled: h,
-            isProcessing: f,
-            clearable: m,
+            required: c,
+            isDisabled: p,
+            isProcessing: h,
+            clearable: f,
             closeOnSelect: x = !0,
             maxVisibleItems: g,
             "aria-label": v,
-            placeholder: j,
-            variant: y,
-            renderOptionLabel: S,
-        } = r,
-        { fieldProps: C } = (0, c.n)(r);
-    if ("text-only" !== y && null == S) {
+            placeholder: S,
+            variant: j,
+            renderOptionLabel: y,
+        } = s,
+        { fieldProps: C } = (0, b.n)(s);
+    if ("text-only" !== j && null == y) {
         let e = null == C.label && null != v;
-        return (0, a.jsx)(p.l, {
+        return (0, a.jsx)(m.l, {
             id: o,
             selectionMode: "single",
             onSelectionChange: (e) => {
@@ -397,77 +433,9 @@ function I(e) {
             },
             options: u,
             formatOption: (e) => {
-                let { key: a, value: n, label: i, disabled: r } = e;
-                return {
-                    id: a ?? s.serialize(n),
-                    value: n,
-                    label: i,
-                    disabled: r,
-                    leading: null != l ? l(e) : void 0,
-                    trailing: null != t ? t(e) : void 0,
-                };
-            },
-            value: n,
-            fullWidth: !0,
-            autoFocus: d,
-            required: b,
-            disabled: h,
-            loading: f,
-            clearable: m,
-            closeOnSelect: x,
-            maxOptionsVisible: g,
-            placeholder: j,
-            ...C,
-            label: e ? v : C.label,
-            hideLabel: !0 === C.hideLabel || e,
-        });
-    }
-    return (0, a.jsx)(M, {
-        ...r,
-        ...s,
-        renderOptionLabel:
-            S ??
-            (function () {
-                if (null != l || null != t)
-                    return (e) => (0, a.jsxs)("div", { className: k.G$, children: [l?.(e), e.label, t?.(e)] });
-            })(),
-    });
-}
-function q(e) {
-    let { renderLeading: l, renderTrailing: t, ...n } = e,
-        {
-            id: i,
-            serialize: r,
-            options: s,
-            select: o,
-            autoFocus: u,
-            required: d,
-            isDisabled: b,
-            isProcessing: h,
-            clearable: f,
-            closeOnSelect: m,
-            maxVisibleItems: x,
-            placeholder: g,
-            "aria-label": v,
-            variant: j,
-            isSelected: y,
-            renderOptionLabel: S,
-        } = n,
-        { fieldProps: C } = (0, c.n)(n);
-    if ("text-only" !== j && null == S) {
-        let e = null == C.label && null != v;
-        return (0, a.jsx)(p.l, {
-            id: i,
-            selectionMode: "single",
-            onSelectionChange: (e) => {
-                o(e);
-            },
-            value: s?.find((e) => y?.(e.value))?.value ?? void 0,
-            options: s,
-            formatOption: (e) => {
                 let { key: a, value: n, label: i, disabled: s } = e;
                 return {
-                    id: a ?? r(n),
+                    id: a ?? r.serialize(n),
                     value: n,
                     label: i,
                     disabled: s,
@@ -475,13 +443,81 @@ function q(e) {
                     trailing: null != t ? t(e) : void 0,
                 };
             },
+            value: n,
+            fullWidth: !0,
+            autoFocus: d,
+            required: c,
+            disabled: p,
+            loading: h,
+            clearable: f,
+            closeOnSelect: x,
+            maxOptionsVisible: g,
+            placeholder: S,
+            ...C,
+            label: e ? v : C.label,
+            hideLabel: !0 === C.hideLabel || e,
+        });
+    }
+    return (0, a.jsx)(R, {
+        ...s,
+        ...r,
+        renderOptionLabel:
+            y ??
+            (function () {
+                if (null != l || null != t)
+                    return (e) => (0, a.jsxs)("div", { className: E.G$, children: [l?.(e), e.label, t?.(e)] });
+            })(),
+    });
+}
+function A(e) {
+    let { renderLeading: l, renderTrailing: t, ...n } = e,
+        {
+            id: i,
+            serialize: s,
+            options: r,
+            select: o,
+            autoFocus: u,
+            required: d,
+            isDisabled: c,
+            isProcessing: p,
+            clearable: h,
+            closeOnSelect: f,
+            maxVisibleItems: x,
+            placeholder: g,
+            "aria-label": v,
+            variant: S,
+            isSelected: j,
+            renderOptionLabel: y,
+        } = n,
+        { fieldProps: C } = (0, b.n)(n);
+    if ("text-only" !== S && null == y) {
+        let e = null == C.label && null != v;
+        return (0, a.jsx)(m.l, {
+            id: i,
+            selectionMode: "single",
+            onSelectionChange: (e) => {
+                o(e);
+            },
+            value: r?.find((e) => j?.(e.value))?.value ?? void 0,
+            options: r,
+            formatOption: (e) => {
+                let { key: a, value: n, label: i, disabled: r } = e;
+                return {
+                    id: a ?? s(n),
+                    value: n,
+                    label: i,
+                    disabled: r,
+                    leading: null != l ? l(e) : void 0,
+                    trailing: null != t ? t(e) : void 0,
+                };
+            },
             fullWidth: !0,
             autoFocus: u,
             required: d,
-            disabled: b,
-            loading: h,
-            clearable: f,
-            closeOnSelect: m,
+            disabled: c,
+            loading: p,
+            clearable: h,
+            closeOnSelect: f,
             maxOptionsVisible: x,
             placeholder: g,
             ...C,
@@ -489,13 +525,13 @@ function q(e) {
             hideLabel: !0 === C.hideLabel || e,
         });
     }
-    return (0, a.jsx)(M, {
+    return (0, a.jsx)(R, {
         ...n,
         renderOptionLabel:
-            S ??
+            y ??
             (function () {
                 if (null != l || null != t)
-                    return (e) => (0, a.jsxs)("div", { className: k.G$, children: [l?.(e), e.label, t?.(e)] });
+                    return (e) => (0, a.jsxs)("div", { className: E.G$, children: [l?.(e), e.label, t?.(e)] });
             })(),
     });
 }
