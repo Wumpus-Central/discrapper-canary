@@ -136,17 +136,20 @@
     display: flex
 }
 
-.headerName__856b5 {
+.headerNameCell__856b5 {
     flex: 1 1 auto;
     margin-inline-start: 8px
 }
 
-.headerOption__856b5 {
+.headerOptionCell__856b5 {
     cursor: default;
     flex: 0 0 auto;
     text-align: center;
     width: 75px
 }
+
+.headerName__856b5,
+.headerOption__856b5 {}
 
 .removeOverride__856b5 {
     inset-inline-end: -12px;

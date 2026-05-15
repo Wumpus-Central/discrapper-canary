@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     YK: "spacing__856b5",
     bj: "largeSpacing__856b5",
     a: "lighten__856b5",
@@ -15,6 +15,8 @@ e.exports = {
     sr: "overrideHeader__856b5 lighten__856b5",
     wx: "header__856b5",
     n_: "channelNotificationHeaders__856b5",
+    $m: "headerNameCell__856b5",
+    Lv: "headerOptionCell__856b5",
     Bv: "headerName__856b5 header__856b5",
     BO: "headerOption__856b5 header__856b5",
     aT: "channelNameContainer__856b5",
