@@ -293,8 +293,9 @@ let eb = function (e) {
                                             }),
                                         }),
                                     }),
-                                children: () =>
+                                children: (e) =>
                                     (0, n.jsx)(ea.K, {
+                                        ...e,
                                         buttonRef: m,
                                         onClick: () => u(!c),
                                         "aria-label": em.intl.string(em.t.rNGQfD),
