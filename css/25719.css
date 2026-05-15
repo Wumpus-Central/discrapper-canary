@@ -688,17 +688,18 @@
 }
 
 .full-motion .tileButton__4e9aa {
-    transition: transform .1s ease, background-color 50ms ease-in
+    transition: transform .1s ease, background-color 50ms ease-in;
+    will-change: transform
 }
 
 .full-motion .tileButton__4e9aa:focus-visible,
 .full-motion .tileButton__4e9aa:hover {
-    transform: scaleX(calc(1 + 4/var(--custom-tile-width))) scaleY(calc(1 + 4/var(--custom-tile-height)));
+    transform: scale(calc(1 + 4/var(--custom-tile-width)));
     transition: transform .1s ease, background-color .15s ease-out
 }
 
 .full-motion .tileButton__4e9aa:active {
-    transform: scaleX(calc(1 - 4/var(--custom-tile-width))) scaleY(calc(1 - 4/var(--custom-tile-height)))
+    transform: scale(calc(1 - 4/var(--custom-tile-width)))
 }
 
 .disabled__4e9aa {
