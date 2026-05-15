@@ -123,6 +123,18 @@
     transform: translateY(3px)
 }
 
+.infoIconWrapper__50e4e {
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex
+}
+
+.infoIconWrapper__50e4e:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px
+}
+
 .header__50e4e {
     margin-bottom: 8px;
     margin-top: 20px

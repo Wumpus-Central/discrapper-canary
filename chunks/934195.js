@@ -4,6 +4,7 @@ e.exports = {
     ab: "headerCaption__50e4e",
     Zd: "form__50e4e",
     Kk: "icon__50e4e",
+    BP: "infoIconWrapper__50e4e",
     wx: "header__50e4e",
     nj: "checkboxOption__50e4e",
     r9: "disabled__50e4e",

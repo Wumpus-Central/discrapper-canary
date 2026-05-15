@@ -88,6 +88,18 @@
     transform: translateY(3px)
 }
 
+.infoIconWrapper_f0dcaf {
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex
+}
+
+.infoIconWrapper_f0dcaf:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px
+}
+
 .roleRow_f0dcaf {
     align-items: center;
     background: var(--interactive-background-selected);
