@@ -28,8 +28,8 @@ var i = n(627968),
     M = n(47167),
     O = n(713654),
     y = n(585510),
-    I = n(610136),
-    T = n(594061),
+    T = n(610136),
+    I = n(594061),
     k = n(95701),
     R = n(734057),
     w = n(769765),
@@ -207,7 +207,8 @@ class ee extends l.PureComponent {
         });
     }
     render() {
-        let { highlight: e } = this.state;
+        let { highlight: e } = this.state,
+            { channel: t } = this.props;
         return (0, i.jsxs)(J.Z, {
             ref: this.contentDomRef,
             outline: !0,
@@ -219,7 +220,11 @@ class ee extends l.PureComponent {
                 this.renderOptions(),
                 (0, i.jsx)("div", {
                     role: "cell",
-                    children: (0, i.jsx)(Q.A, { className: $.ZY, onClick: this.handleDelete }),
+                    children: (0, i.jsx)(Q.A, {
+                        "aria-label": X.intl.formatToPlainString(X.t.Gd4bTU, { name: (0, M.m1)(t, H.default, P.A) }),
+                        className: $.ZY,
+                        onClick: this.handleDelete,
+                    }),
                 }),
             ],
         });
@@ -555,14 +560,18 @@ function ex(e) {
             }),
             (0, i.jsx)("div", {
                 role: "cell",
-                children: (0, i.jsx)(Q.A, { onClick: () => (0, ed.Au)(t.guild_id, t.id), className: eg.DT }),
+                children: (0, i.jsx)(Q.A, {
+                    "aria-label": X.intl.formatToPlainString(X.t.Gd4bTU, { name: (0, M.m1)(t, H.default, P.A) }),
+                    onClick: () => (0, ed.Au)(t.guild_id, t.id),
+                    className: eg.DT,
+                }),
             }),
         ],
     });
 }
 function ej(e) {
     let { guildId: t } = e,
-        n = (0, u.bG)([I.A], () => I.A.getGuildAlertSettings()[t]);
+        n = (0, u.bG)([T.A], () => T.A.getGuildAlertSettings()[t]);
     return (0, i.jsxs)(j.B, {
         gap: 24,
         children: [
@@ -571,12 +580,12 @@ function ej(e) {
                 label: X.intl.string(X.t.u6dc5B),
                 description: X.intl.string(X.t.z8Td48),
                 onChange: (e) =>
-                    (0, T.TG)(
+                    (0, I.TG)(
                         t,
                         (t) => {
                             t.disableRaidAlertNag = !e;
                         },
-                        T.Sb.INFREQUENT_USER_ACTION,
+                        I.Sb.INFREQUENT_USER_ACTION,
                     ),
             }),
             (0, i.jsx)(N.d, {
@@ -584,12 +593,12 @@ function ej(e) {
                 label: X.intl.string(X.t.P8MG6q),
                 description: X.intl.string(X.t.PyxXs8),
                 onChange: (e) =>
-                    (0, T.TG)(
+                    (0, I.TG)(
                         t,
                         (t) => {
                             t.disableRaidAlertPush = !e;
                         },
-                        T.Sb.INFREQUENT_USER_ACTION,
+                        I.Sb.INFREQUENT_USER_ACTION,
                     ),
             }),
         ],
@@ -694,7 +703,7 @@ function eO(e) {
                 children: [
                     (0, i.jsxs)("div", {
                         className: eM.Vg,
-                        children: [(0, i.jsx)(ey, { unreadSetting: r }), (0, i.jsx)(eI, { notificationSetting: a })],
+                        children: [(0, i.jsx)(ey, { unreadSetting: r }), (0, i.jsx)(eT, { notificationSetting: a })],
                     }),
                     (0, i.jsxs)("div", {
                         className: eM.Vg,
@@ -879,7 +888,7 @@ function ey(e) {
         })
     );
 }
-function eI(e) {
+function eT(e) {
     return (0, i.jsxs)("div", {
         className: eM.G5,
         children: [
@@ -918,13 +927,13 @@ function eI(e) {
         ],
     });
 }
-var eT = n(476347);
+var eI = n(476347);
 function ek(e) {
     return (0, i.jsx)("div", {
-        className: eT.bV,
+        className: eI.bV,
         children: (0, i.jsx)(_.D, {
             variant: "text-xs/bold",
-            className: eT.l_,
+            className: eI.l_,
             color: "text-muted",
             children: e.title,
         }),
@@ -932,7 +941,7 @@ function ek(e) {
 }
 function eR(e) {
     return (0, i.jsx)("div", {
-        className: eT.yV,
+        className: eI.yV,
         children: (0, i.jsx)(E.E, { variant: "text-sm/normal", color: "text-subtle", children: e.description }),
     });
 }
@@ -941,7 +950,7 @@ function ew(e) {
         children: [
             null != e.title && (0, i.jsx)(ek, { title: e.title }),
             (0, i.jsx)("div", {
-                className: en()(eT.f5, { [eT.ou]: !0 !== e.noPadding, [eT._9]: !0 !== e.noContainer }),
+                className: en()(eI.f5, { [eI.ou]: !0 !== e.noPadding, [eI._9]: !0 !== e.noContainer }),
                 children: e.children,
             }),
         ],
@@ -1053,7 +1062,7 @@ function eY(e) {
 function eH(e) {
     let { guildId: t } = e,
         n = (0, y._g)(t),
-        l = (0, u.bG)([I.A], () => I.A.getGuildAlertSettings()[t]);
+        l = (0, u.bG)([T.A], () => T.A.getGuildAlertSettings()[t]);
     if (n)
         return (0, i.jsxs)("div", {
             className: $.YK,
@@ -1069,12 +1078,12 @@ function eH(e) {
                                 description: X.intl.string(X.t.z8Td48),
                                 checked: !l?.disableRaidAlertNag,
                                 onChange: (e) =>
-                                    (0, T.TG)(
+                                    (0, I.TG)(
                                         t,
                                         (t) => {
                                             t.disableRaidAlertNag = !e;
                                         },
-                                        T.Sb.INFREQUENT_USER_ACTION,
+                                        I.Sb.INFREQUENT_USER_ACTION,
                                     ),
                             }),
                             (0, i.jsx)(N.d, {
@@ -1082,12 +1091,12 @@ function eH(e) {
                                 description: X.intl.string(X.t.PyxXs8),
                                 checked: !l?.disableRaidAlertPush,
                                 onChange: (e) =>
-                                    (0, T.TG)(
+                                    (0, I.TG)(
                                         t,
                                         (t) => {
                                             t.disableRaidAlertPush = !e;
                                         },
-                                        T.Sb.INFREQUENT_USER_ACTION,
+                                        I.Sb.INFREQUENT_USER_ACTION,
                                     ),
                             }),
                         ],
