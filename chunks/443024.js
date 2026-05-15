@@ -1,5 +1,5 @@
-_.r(
-    (a.exports = {
+a.r(
+    (e.exports = {
         filenameContainer: "filenameContainer__41ea0",
         filename: "filename__41ea0",
         mediaContainer: "mediaContainer__41ea0",
@@ -32,5 +32,6 @@ _.r(
         actionBarIcon: "actionBarIcon__41ea0",
         action: "action__41ea0",
         clipOverlayHeader: "clipOverlayHeader__41ea0",
+        clipOverlayHeaderContent: "clipOverlayHeaderContent__41ea0",
     }),
 );

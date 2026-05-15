@@ -100,15 +100,16 @@ let L = function (e) {
             applicationId: r,
             title: s,
             guildId: _,
-            playerState: f = l.Q6.PAUSED,
-            isControlBarExpanded: h = !0,
-            isFullScreen: p = !1,
-            showTextContent: E = !0,
+            className: f,
+            playerState: h = l.Q6.PAUSED,
+            isControlBarExpanded: p = !0,
+            isFullScreen: E = !1,
+            showTextContent: I = !0,
         } = e,
-        I = (0, o.yK)([m.default], () => n.map((e) => m.default.getUser(e)).filter(A.Vq) ?? []),
-        T = null != t ? (0, g.Fe)(new Date(t)) : null;
+        T = (0, o.yK)([m.default], () => n.map((e) => m.default.getUser(e)).filter(A.Vq) ?? []),
+        S = null != t ? (0, g.Fe)(new Date(t)) : null;
     return (0, i.jsxs)("div", {
-        className: a()(N.oK, { [N.pd]: f === l.Q6.PLAYING && !h, [N.aS]: p }),
+        className: a()(N.oK, { [N.pd]: h === l.Q6.PLAYING && !p, [N.aS]: E }, f),
         children: [
             (0, i.jsx)("div", { className: N.Lu }),
             (0, i.jsxs)("div", {
@@ -125,7 +126,7 @@ let L = function (e) {
                                         text: b.intl.string(b.t["/fgfWh"]),
                                         children: (0, i.jsx)(c.x, { className: N.gr, size: "xs", color: "white" }),
                                     }),
-                                    E &&
+                                    I &&
                                         (0, i.jsx)(d.E, {
                                             className: N.DD,
                                             variant: "text-md/semibold",
@@ -134,28 +135,28 @@ let L = function (e) {
                                         }),
                                 ],
                             }),
-                            E &&
-                                (null != r || null != T) &&
+                            I &&
+                                (null != r || null != S) &&
                                 (0, i.jsxs)(d.E, {
                                     className: N.yu,
                                     variant: "text-sm/normal",
                                     color: "always-white",
                                     children: [
-                                        (0, i.jsx)(D, { applicationId: r, separator: null != T ? " \xb7 " : void 0 }),
-                                        T,
+                                        (0, i.jsx)(D, { applicationId: r, separator: null != S ? " \xb7 " : void 0 }),
+                                        S,
                                     ],
                                 }),
                         ],
                     }),
-                    I.length > 0 &&
+                    T.length > 0 &&
                         (0, i.jsxs)("div", {
                             className: N.HD,
                             role: "group",
                             "aria-label": b.intl.string(b.t.WTozwe),
                             children: [
-                                I.slice(0, 4).map((e) => (0, i.jsx)(y, { user: e, guildId: _ }, e.id)),
-                                I.length > 4 &&
-                                    (0, i.jsx)(R, { participants: I, maxVisibleParticipants: 4, guildId: _ }),
+                                T.slice(0, 4).map((e) => (0, i.jsx)(y, { user: e, guildId: _ }, e.id)),
+                                T.length > 4 &&
+                                    (0, i.jsx)(R, { participants: T, maxVisibleParticipants: 4, guildId: _ }),
                             ],
                         }),
                 ],

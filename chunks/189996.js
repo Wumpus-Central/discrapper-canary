@@ -2504,7 +2504,7 @@ let l_ = (e) => {
                     (0, tp.openModalLazy)(async () => {
                         let e = c.upload;
                         q()(null != e, "upload should not be null");
-                        let { default: l } = await Promise.resolve().then(n.bind(n, 427281));
+                        let { default: l } = await n.e("70698").then(n.bind(n, 427281));
                         return (n) =>
                             (0, i.jsx)(l, {
                                 ...n,

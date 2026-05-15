@@ -2188,12 +2188,6 @@
     width: 4px
 }
 
-.confettiCanvas__78e61 {
-    height: 100%;
-    position: absolute;
-    width: 100%
-}
-
 .overlay_f5504d {
     align-items: flex-end;
     bottom: 0;
@@ -2738,7 +2732,7 @@ h2.title_feb59c {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text

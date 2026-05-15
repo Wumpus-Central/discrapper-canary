@@ -1,54 +1,53 @@
-"use strict";
-n.d(t, { default: () => v }), n(323874), n(14289), n(35956);
-var l = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(189213),
-    o = n(331322),
-    c = n(292666),
-    u = n(150934),
-    d = n(608299),
-    h = n(565150),
-    m = n(408018),
-    p = n(31717),
-    f = n(723702),
-    g = n(19575),
-    _ = n(650583),
-    x = n(985018),
-    C = n(910162);
-function A(e) {
+s.d(t, { default: () => k }), s(323874), s(14289), s(35956);
+var i = s(627968),
+    n = s(64700),
+    a = s(503698),
+    l = s.n(a),
+    o = s(189213),
+    r = s(331322),
+    p = s(292666),
+    d = s(150934),
+    u = s(608299),
+    h = s(565150),
+    c = s(408018),
+    m = s(31717),
+    f = s(723702),
+    g = s(19575),
+    x = s(650583),
+    C = s(375708),
+    j = s(910162);
+function v(e) {
     let { file: t } = e,
-        [n, s] = i.useState();
+        [s, a] = n.useState();
     return (
-        i.useEffect(() => {
-            if (null == t) return void s(void 0);
+        n.useEffect(() => {
+            if (null == t) return void a(void 0);
             let e = URL.createObjectURL(t);
             return (
-                s(e),
+                a(e),
                 () => {
-                    s(void 0), URL.revokeObjectURL(e);
+                    a(void 0), URL.revokeObjectURL(e);
                 }
             );
         }, [t]),
-        (0, l.jsx)("img", { src: n, className: C.imageFilePreviewImg, "aria-hidden": !0, alt: "" })
+        (0, i.jsx)("img", { src: s, className: j.imageFilePreviewImg, "aria-hidden": !0, alt: "" })
     );
 }
-class E extends i.Component {
+class S extends n.Component {
     render() {
         return this.props.upload.item.platform !== h.xz.WEB
             ? null
             : this.props.upload.isImage
-              ? (0, l.jsx)(A, { file: this.props.upload.item.file })
-              : (0, l.jsx)("div", { className: a()(C.fileIcon, { [C[this.props.upload.classification ?? ""]]: !0 }) });
+              ? (0, i.jsx)(v, { file: this.props.upload.item.file })
+              : (0, i.jsx)("div", { className: l()(j.fileIcon, { [j[this.props.upload.classification ?? ""]]: !0 }) });
     }
 }
-class I extends i.Component {
+class b extends n.Component {
     constructor(e) {
         super(e);
-        const t = e.ignoreDraft ? "" : p.A.getDraft(this.props.channelId, e.draftType);
+        const t = e.ignoreDraft ? "" : m.A.getDraft(this.props.channelId, e.draftType);
         this.state = {
-            ...(0, m.ur)(t),
+            ...(0, c.ur)(t),
             textFocused: !0,
             hasSpoiler: e.upload?.spoiler ?? !1,
             filename: e.upload?.filename ?? "",
@@ -67,69 +66,69 @@ class I extends i.Component {
             this.setState({ filename: this.props.upload?.filename ?? "" });
     }
     cancelAll = () => {
-        d.A.clearAll(this.props.channelId, this.props.draftType), this.props.onClose();
+        u.A.clearAll(this.props.channelId, this.props.draftType), this.props.onClose();
     };
     cancel = () => {
         this.props.onClose();
     };
-    handleTextChange = (e, t, n) => {
-        this.setState({ textValue: t, richValue: n });
+    handleTextChange = (e, t, s) => {
+        this.setState({ textValue: t, richValue: s });
     };
     handleSubmit = () => {
-        let { upload: e, onClose: t, onSubmit: n } = this.props,
-            { filename: l, description: i, hasSpoiler: s } = this.state;
-        n({ upload: e, name: l, description: i, spoiler: s }), t();
+        let { upload: e, onClose: t, onSubmit: s } = this.props,
+            { filename: i, description: n, hasSpoiler: a } = this.state;
+        s({ upload: e, name: i, description: n, spoiler: a }), t();
     };
     render() {
-        let { upload: e, transitionState: t, disableSpoiler: n, onClose: i } = this.props,
-            { hasSpoiler: s } = this.state;
-        return (0, l.jsx)(r.Modal, {
+        let { upload: e, transitionState: t, disableSpoiler: s, onClose: n } = this.props,
+            { hasSpoiler: a } = this.state;
+        return (0, i.jsx)(o.Modal, {
             transitionState: t,
-            onClose: i,
-            title: x.intl.string(x.t.Y8ujqr),
+            onClose: n,
+            title: C.intl.string(C.t.Y8ujqr),
             actions: [
-                { variant: "secondary", text: x.intl.string(x.t["ETE/oC"]), onClick: this.cancel },
-                { variant: "primary", text: x.intl.string(x.t["TY+auE"]), onClick: this.handleSubmit },
+                { variant: "secondary", text: C.intl.string(C.t["ETE/oC"]), onClick: this.cancel },
+                { variant: "primary", text: C.intl.string(C.t["TY+auE"]), onClick: this.handleSubmit },
             ],
-            children: (0, l.jsxs)(o.B, {
+            children: (0, i.jsxs)(r.B, {
                 gap: 24,
                 children: [
-                    (0, l.jsxs)(o.B, {
+                    (0, i.jsxs)(r.B, {
                         gap: 16,
                         children: [
-                            (0, l.jsx)(E, { upload: e }),
-                            (0, l.jsx)(c.k, {
-                                label: x.intl.string(x.t.ILJuBq),
+                            (0, i.jsx)(S, { upload: e }),
+                            (0, i.jsx)(p.k, {
+                                label: C.intl.string(C.t.ILJuBq),
                                 value: this.state.filename,
                                 onChange: (e) => this.setState({ filename: e }),
                                 onKeyDown: (e) => {
-                                    e.key === _.dh.ENTER && (e.preventDefault(), this.handleSubmit());
+                                    e.key === x.dh.ENTER && (e.preventDefault(), this.handleSubmit());
                                 },
                             }),
                             e.isImage
-                                ? (0, l.jsx)(c.k, {
-                                      label: x.intl.string(x.t.eOB2eR),
-                                      placeholder: x.intl.string(x.t.RNH1jn),
+                                ? (0, i.jsx)(p.k, {
+                                      label: C.intl.string(C.t.eOB2eR),
+                                      placeholder: C.intl.string(C.t.RNH1jn),
                                       value: this.state.description,
                                       onChange: (e) => this.setState({ description: e }),
                                       onKeyDown: (e) => {
-                                          e.key === _.dh.ENTER && (e.preventDefault(), this.handleSubmit());
+                                          e.key === x.dh.ENTER && (e.preventDefault(), this.handleSubmit());
                                       },
                                   })
                                 : null,
                         ],
                     }),
-                    !0 !== n &&
-                        (0, l.jsx)(u.S, {
-                            checked: s,
+                    !0 !== s &&
+                        (0, i.jsx)(d.S, {
+                            checked: a,
                             onChange: (e) => this.setState({ hasSpoiler: e }),
-                            label: x.intl.string(x.t["gsI+xC"]),
+                            label: C.intl.string(C.t["gsI+xC"]),
                         }),
                 ],
             }),
         });
     }
 }
-function v(e) {
-    return e.upload.item.platform !== h.xz.WEB ? null : (0, l.jsx)(I, { ...e, file: e.upload.item.file });
+function k(e) {
+    return e.upload.item.platform !== h.xz.WEB ? null : (0, i.jsx)(b, { ...e, file: e.upload.item.file });
 }

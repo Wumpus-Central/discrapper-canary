@@ -546,17 +546,17 @@ function eJ(e) {
                                                         n.e("54266"),
                                                         n.e("5959"),
                                                         n.e("86028"),
-                                                        n.e("96527"),
+                                                        n.e("35769"),
                                                         n.e("95664"),
                                                         n.e("9432"),
                                                         n.e("80203"),
                                                         n.e("45650"),
-                                                        n.e("18556"),
+                                                        n.e("55030"),
                                                         n.e("31837"),
                                                         n.e("27660"),
                                                         n.e("85484"),
                                                         n.e("31135"),
-                                                        n.e("69177"),
+                                                        n.e("25677"),
                                                         n.e("40671"),
                                                         n.e("55990"),
                                                         n.e("8506"),
@@ -565,6 +565,7 @@ function eJ(e) {
                                                         n.e("333"),
                                                         n.e("74103"),
                                                         n.e("15615"),
+                                                        n.e("22995"),
                                                         n.e("79705"),
                                                         n.e("23924"),
                                                         n.e("42205"),
@@ -617,8 +618,8 @@ function eJ(e) {
                                                         n.e("89088"),
                                                         n.e("15186"),
                                                         n.e("52548"),
-                                                        n.e("77084"),
                                                         n.e("20287"),
+                                                        n.e("77084"),
                                                         n.e("80230"),
                                                         n.e("37687"),
                                                         n.e("48900"),
@@ -838,8 +839,8 @@ var e4 = n(34188),
     e2 = n(177953),
     e7 = n(825484),
     e9 = n(512950),
-    e6 = n(900797),
-    e5 = n(847374),
+    e5 = n(900797),
+    e6 = n(847374),
     te = n(10716),
     tt = n(702841),
     tn = n(150934),
@@ -1285,8 +1286,8 @@ function tM(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e6.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
-                              : (0, r.jsx)(e5.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
+                              ? (0, r.jsx)(e5.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              : (0, r.jsx)(e6.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,
@@ -1399,7 +1400,7 @@ var tZ = n(111042),
     t2 = n(935208),
     t7 = n(630248),
     t9 = n(355097);
-function t6(e, t) {
+function t5(e, t) {
     o.useEffect(() => {
         t3.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
@@ -1443,7 +1444,7 @@ function t6(e, t) {
         return [...s.filter((e) => e.id === a), ...s.filter((e) => e.id !== a)];
     }, [s, l, n, t]);
 }
-var t5 = n(546183),
+var t6 = n(546183),
     ne = n(228366);
 let nt = 10 * Y.A.Millis.MINUTE,
     nn = { lastUsedCommandId: null, lastUsedTimeMs: null };
@@ -2127,15 +2128,15 @@ function n7(e, t) {
 }
 n(827669);
 var n9 = n(562708),
-    n6 = n(139286),
-    n5 = n(520117);
+    n5 = n(139286),
+    n6 = n(520117);
 function le(e) {
     let { applicationId: t, commandId: n, searchResultsPosition: l, query: i } = e,
         s = (0, A.bG)([p.A], () => p.A.entrypoint());
     return {
-        trackSearchResultsItemImpressionRef: (0, n5.A)({
+        trackSearchResultsItemImpressionRef: (0, n6.A)({
             onVisible: () => {
-                (0, n6.x)({
+                (0, n5.x)({
                     type: n9.ImpressionTypes.VIEW,
                     name: n9.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                     properties: { application_id: t, command_id: n, search_results_position: l, query: i, source: s },
@@ -3032,13 +3033,13 @@ function lI(e) {
                             onlyActivityApps: l,
                             includeAuthorizedAppsAndFetch: i,
                         } = e,
-                        s = (0, A.bG)([t5.default], () => t5.default.getFetchState());
+                        s = (0, A.bG)([t6.default], () => t6.default.getFetchState());
                     o.useEffect(() => {
-                        i && s === t5.FetchState.NOT_FETCHED && t8.A.fetch();
+                        i && s === t6.FetchState.NOT_FETCHED && t8.A.fetch();
                     }, [i, s]);
-                    let a = (0, A.yK)([t5.default], () =>
+                    let a = (0, A.yK)([t6.default], () =>
                             i
-                                ? t5.default
+                                ? t6.default
                                       .getNewestTokens()
                                       .filter((e) => e.scopes.includes(t1.F.APPLICATIONS_COMMANDS))
                                 : [],
@@ -3049,7 +3050,7 @@ function lI(e) {
                             let e = [];
                             return c && e.push(ni.gq), e;
                         }, [c]),
-                        u = t6(r, a);
+                        u = t5(r, a);
                     return o.useMemo(
                         () =>
                             l
@@ -3224,7 +3225,7 @@ function ly(e) {
                         }, new Set()),
                     [i],
                 ),
-                r = t6(
+                r = t5(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})
