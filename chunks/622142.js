@@ -276,15 +276,19 @@ class $ extends r.PureComponent {
         null != t && t(e);
     };
     handleSelectItem = (e, t) => {
-        let { current: n } = this.props.searchBarRef;
         switch (e) {
             case G.dD.TRENDING_CATEGORY:
-                f.$P(t, G.dD.TRENDING_CATEGORY, !0), null != n && n.focus();
+                f.$P(t, G.dD.TRENDING_CATEGORY, !0);
                 break;
             case G.dD.TRENDING_GIFS:
                 f.Z4();
         }
-        this.setState({ resultType: e });
+        this.setState({ resultType: e }, () => {
+            if (e === G.dD.TRENDING_CATEGORY) {
+                let { current: e } = this.props.searchBarRef;
+                null != e && e.focus();
+            }
+        });
     };
     renderHeaderContent() {
         let { query: e, headingColor: t } = this.props,
