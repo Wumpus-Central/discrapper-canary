@@ -1762,7 +1762,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 545119, Version Hash: bda30dfc57b4d856ce7619781ad893e196611930`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 545134, Version Hash: b5cbaab5369f0fe620c5502f9ce9c055f02ad00f`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -8730,7 +8730,7 @@ let c0 = function (e) {
             { id: eL.m3P.ALL, show: u[eL.eA$.FRIEND] > 0, content: na.intl.string(na.t.PfjFjR), className: cQ.AS },
             {
                 id: eL.m3P.PENDING,
-                show: o.filter(eL.m3P.PENDING).length > 0,
+                show: u[eL.eA$.PENDING_INCOMING] > 0 || u[eL.eA$.PENDING_OUTGOING] > 0,
                 content: (0, k.jsxs)(k.Fragment, {
                     children: [na.intl.string(na.t.p6IHGE), s > 0 && (0, k.jsx)(oi.hV, { count: s, className: cQ.qS })],
                 }),
@@ -18317,7 +18317,7 @@ let Sv = "isHideDevBanner",
                     className: t2()(SC.Wz, SC.mr),
                     children: [
                         (0, k.jsx)(Sy, { className: SC.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "545119" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "545134" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
