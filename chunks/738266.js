@@ -81,7 +81,7 @@ function $(e) {
 var K = l(488926),
     ee = l(495273),
     et = l(353068),
-    el = l(197867),
+    el = l(650682),
     en = l(707554),
     ei = l(187322),
     es = l(847374);
@@ -696,12 +696,12 @@ function e4(e) {
     });
 }
 var e6 = l(661531),
-    e9 = l(862482),
-    e8 = l(359778),
+    e8 = l(862482),
+    e9 = l(359778),
     te = l(400725);
 let tt = (e) => {
     let { className: t, icon: l, noticeText: i, buttonText: s, onClick: r, canSync: o } = e;
-    return (0, n.jsx)(e8.Z, {
+    return (0, n.jsx)(e9.Z, {
         className: A()(t, te.N),
         children: (0, n.jsxs)(e7.A, {
             justify: e7.A.Justify.BETWEEN,
@@ -713,9 +713,9 @@ let tt = (e) => {
                     children: (0, n.jsx)(a.E, { variant: "text-md/normal", children: i }),
                 }),
                 o &&
-                    (0, n.jsx)(e9.$n, {
-                        size: e9.$n.Sizes.SMALL,
-                        color: e9.$n.Colors.PRIMARY,
+                    (0, n.jsx)(e8.$n, {
+                        size: e8.$n.Sizes.SMALL,
+                        color: e8.$n.Colors.PRIMARY,
                         onClick: r,
                         children: s,
                     }),
@@ -894,7 +894,7 @@ function ta(e) {
                                     onClick: function () {
                                         (0, y.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                l.e("93010"),
+                                                l.e("80203"),
                                                 l.e("11585"),
                                                 l.e("89916"),
                                                 l.e("20379"),
@@ -1013,7 +1013,7 @@ function tr(e) {
                                                 onClick: function () {
                                                     (0, y.openModalLazy)(async () => {
                                                         let { default: e } = await Promise.all([
-                                                            l.e("93010"),
+                                                            l.e("80203"),
                                                             l.e("89916"),
                                                             l.e("20379"),
                                                             l.e("19193"),
@@ -1351,13 +1351,13 @@ function t4(e) {
     });
 }
 var t6 = l(235640),
-    t9 = l(268761),
-    t8 = l(474078),
+    t8 = l(268761),
+    t9 = l(474078),
     le = l(783878),
     lt = l(980296);
 let ll = (e) => {
     let { autoArchiveDuration: t, onChange: l, isDisabled: i, helperText: s } = e,
-        a = (0, t9.Gk)();
+        a = (0, t8.Gk)();
     return (0, n.jsx)("div", {
         className: lt.gy,
         children: (0, n.jsx)(le.Z, {
@@ -1730,7 +1730,7 @@ let lf = {
                     defaultForumLayout: j,
                     defaultTagSetting: b,
                 } = e;
-                e.isThread() && 0 === (t = (0, t8.A)(t, !0)).length
+                e.isThread() && 0 === (t = (0, t9.A)(t, !0)).length
                     ? o.h.dispatch({
                           type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
                           errors: { name: eH.intl.string(eH.t.uXA573) },
@@ -2165,7 +2165,7 @@ class lE extends i.PureComponent {
                       page: eB.liQ.CHANNEL_SETTINGS,
                       children: (0, n.jsx)(ll, {
                           isDisabled: !s,
-                          autoArchiveDuration: (0, t9.Gl)(e, null),
+                          autoArchiveDuration: (0, t8.Gl)(e, null),
                           onChange: this.handleChangeDefaultAutoArchiveDuration,
                           helperText: e.isForumLikeChannel()
                               ? eH.intl.string(eH.t.fyXclY)
@@ -2364,20 +2364,21 @@ class lE extends i.PureComponent {
     }
     render() {
         let { channel: e, channelName: t, guild: l } = this.props;
-        return null == e || null == t || null == l
-            ? null
-            : (0, n.jsxs)(tk.n, {
-                  label: eH.intl.string(eH.t["/dp6yY"]),
-                  children: [
-                      this.renderChannelInfo(e, t),
-                      this.showVoiceSettings() ? (0, n.jsx)(L.c, { gap: 24 }) : null,
-                      this.renderVoiceBitrate(e, l),
-                      this.renderVideoQualityMode(e),
-                      this.renderUserLimit(e),
-                      this.renderRegionOverride(e),
-                      this.renderJuiceImage(e),
-                  ],
-              });
+        if (null == e || null == t || null == l) return null;
+        let i = "channel-settings-overview-heading";
+        return (0, n.jsxs)(tk.n, {
+            "aria-labelledby": i,
+            children: [
+                (0, n.jsx)(R.D, { id: i, variant: "text-lg/medium", children: eH.intl.string(eH.t["/dp6yY"]) }),
+                this.renderChannelInfo(e, t),
+                this.showVoiceSettings() ? (0, n.jsx)(L.c, { gap: 24 }) : null,
+                this.renderVoiceBitrate(e, l),
+                this.renderVideoQualityMode(e),
+                this.renderUserLimit(e),
+                this.renderRegionOverride(e),
+                this.renderJuiceImage(e),
+            ],
+        });
     }
     renderEmojiPicker = (e) => {
         let { closePopout: t } = e,
@@ -2403,7 +2404,7 @@ class lE extends i.PureComponent {
     handleChangeName = (e) => {
         let { channel: t } = this.props;
         if (null == t) return;
-        t.isThread() ? (e = (0, t8.A)(e, !1)) : eB.kvI.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, ls.an)(e));
+        t.isThread() ? (e = (0, t9.A)(e, !1)) : eB.kvI.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, ls.an)(e));
         let l = this.nameInputRef.current?.selectionStart ?? 0;
         (0, d.fy)({ name: e }),
             setTimeout(() => {
@@ -2413,7 +2414,7 @@ class lE extends i.PureComponent {
     handleBlurName = () => {
         let { channel: e, channelName: t } = this.props;
         if (e?.isThread() && null != t) {
-            let e = (0, t8.A)(t, !0);
+            let e = (0, t9.A)(t, !0);
             e !== t && (0, d.fy)({ name: e });
         }
     };
