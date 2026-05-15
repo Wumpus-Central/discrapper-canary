@@ -24,9 +24,14 @@ let o = (e) => {
         height: f,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, i.jsx)("path", {
+        children: (0, i.jsx)("rect", {
+            width: "16",
+            height: "16",
+            x: "12",
+            y: "1",
             fill: "string" == typeof l ? l : l.css,
-            d: "M11.26 2.86c.38-1.15 2-1.15 2.38 0l1.89 5.83h6.12c1.2 0 1.71 1.54.73 2.25l-4.95 3.6 1.9 5.82a1.25 1.25 0 0 1-1.93 1.4l-4.95-3.6-4.95 3.6c-.98.7-2.3-.25-1.92-1.4l1.89-5.82-4.95-3.6a1.25 1.25 0 0 1 .73-2.25h6.12l1.9-5.83Z",
+            rx: "2",
+            transform: "rotate(45 12 1)",
             className: u,
         }),
     });
