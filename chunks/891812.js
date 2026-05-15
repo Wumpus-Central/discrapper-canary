@@ -18622,6 +18622,7 @@ function hb(e) {
                                     onClick: () => {
                                         gY.A.createRole(t.id), l(cW.T$.DISPLAY);
                                     },
+                                    "aria-label": el.intl.string(el.t.AbxKtv),
                                     children: (0, A.jsx)(i3.j, {
                                         size: "custom",
                                         color: "currentColor",
