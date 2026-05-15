@@ -907,8 +907,8 @@ let e4 = (e) => {
         ],
     });
 };
-var e9 = l(113626);
-let e6 = (e) => {
+var e9 = l(891245);
+let e7 = (e) => {
     let { event: t } = e,
         l = (0, G.bG)([eZ.A], () => eZ.A.getGuild(t.guild_id));
     return null == l
@@ -941,7 +941,7 @@ let e6 = (e) => {
               ],
           });
 };
-var e7 = l(900772);
+var e6 = l(900772);
 let e5 = (e) => {
         let {
                 node: { header: t, subheader: l, button: i },
@@ -952,7 +952,7 @@ let e5 = (e) => {
             u = i?.type === "submit",
             o = a.useMemo(() => e_.A.reactParserFor({ ...e_.A.defaultRules, link: eA }), []);
         return (0, n.jsxs)("div", {
-            className: e7.N,
+            className: e6.N,
             children: [
                 d || null == t || "" === t
                     ? null
@@ -961,7 +961,7 @@ let e5 = (e) => {
                     ? (0, n.jsx)(P.E, {
                           variant: "text-md/normal",
                           color: "text-subtle",
-                          className: e7.m,
+                          className: e6.m,
                           children: o(l),
                       })
                     : null,
@@ -1258,7 +1258,7 @@ let tL = (e) => {
 };
 var tG = l(123292),
     tU = l(780964),
-    tP = l(858897),
+    tP = l(766075),
     tB = l(998436);
 function tV(e) {
     let { title: t, description: l, onButtonClick: i, trackSettingsUpsellsAction: s } = e,
@@ -1426,7 +1426,10 @@ let tZ = (e) => {
     let { element: t } = e;
     return t?.type !== "success"
         ? null
-        : (0, n.jsx)("div", { className: tJ.t, children: (0, n.jsx)(tq.M, { alt: "" }) });
+        : (0, n.jsx)("div", {
+              className: tJ.t,
+              children: (0, n.jsx)(tq.M, { alt: "", ariaHidden: !0, role: "presentation" }),
+          });
 };
 var tX = l(704786);
 function t0(e) {
@@ -1510,7 +1513,7 @@ function t8(e) {
 var t2 = l(778712),
     t4 = l(730134),
     t9 = l(896736);
-let t6 = (e) => {
+let t7 = (e) => {
     let { user: t } = e;
     return (0, n.jsxs)("div", {
         className: t9.kL,
@@ -1543,7 +1546,7 @@ let t6 = (e) => {
         ],
     });
 };
-var t7 = l(941127),
+var t6 = l(941127),
     t5 = l(287809),
     le = l(858331);
 let lt = (e) => {
@@ -1559,7 +1562,7 @@ let lt = (e) => {
                           variant: "heading-sm/semibold",
                           children: T.intl.string(T.t.SpsnDY),
                       }),
-                      (0, n.jsx)(t7.u, { widget: t, user: a, disableInteraction: !0 }),
+                      (0, n.jsx)(t6.u, { widget: t, user: a, disableInteraction: !0 }),
                   ],
               });
     },
@@ -1796,7 +1799,7 @@ let ls = (e) => {
                     null != la(t, "message_preview") &&
                         ("message" === l.name || "first_dm" === l.name || "report_to_mod_message" === l.name) &&
                         (0, n.jsx)(tj, { message: l.record }),
-                    null != la(t, "user_preview") && "user" === l.name ? (0, n.jsx)(t6, { user: l.record }) : null,
+                    null != la(t, "user_preview") && "user" === l.name ? (0, n.jsx)(t7, { user: l.record }) : null,
                     null != la(t, "widget_preview") && "widget" === l.name
                         ? (0, n.jsx)(lt, { widget: l.widget, userId: l.user_id })
                         : null,
@@ -1876,7 +1879,7 @@ let ls = (e) => {
                         (0, n.jsx)(tY, { stageInstance: l.record }),
                     null != la(t, "guild_scheduled_event_preview") &&
                         "guild_scheduled_event" === l.name &&
-                        (0, n.jsx)(e6, { event: l.record }),
+                        (0, n.jsx)(e7, { event: l.record }),
                     null != la(t, "guild_directory_entry_preview") &&
                         "guild_directory_entry" === l.name &&
                         (0, n.jsx)(e0, { entry: l.record }),
