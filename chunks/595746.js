@@ -38,15 +38,21 @@ let O = function (e) {
             shouldShowExpressiveModal: !0,
             classificationId: n,
         }),
-        l = y.useConfig({ location: "age_verification_methods" }).enabled,
-        [u, c] = r.useState(!1);
+        [l, u] = r.useState(!1);
     return (
         r.useEffect(() => {
-            l &&
-                Promise.resolve(!1).then((e) => {
-                    S.A.increment({ name: I.K.GOOGLE_WALLET_AVAILABILITY_CHECK, tags: [`available:${e}`] }), c(e);
-                });
-        }, [l]),
+            let e = !1;
+            return (
+                Promise.resolve(!1).then((t) => {
+                    !e &&
+                        (S.A.increment({ name: I.K.GOOGLE_WALLET_AVAILABILITY_CHECK, tags: [`available:${t}`] }),
+                        u(t && y.getConfig({ location: "age_verification_methods" }).enabled));
+                }),
+                () => {
+                    e = !0;
+                }
+            );
+        }, []),
         r.useEffect(() => {
             null == s && (0, g.DJ)();
         }, [s]),
@@ -69,7 +75,7 @@ let O = function (e) {
                             };
                         })
                         .filter((e) => null != e) ?? [];
-                if (l && u && null != i) {
+                if (l && null != i) {
                     let t = C.uv[C.VF.GOOGLE_WALLET];
                     if (null != t)
                         return [
@@ -87,7 +93,7 @@ let O = function (e) {
                         ];
                 }
                 return e;
-            }, [s, l, u, i, o]),
+            }, [s, l, i, o]),
             loading: a,
         }
     );
