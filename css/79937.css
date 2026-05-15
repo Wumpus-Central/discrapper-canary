@@ -2160,6 +2160,7 @@
     cursor: pointer
 }
 
+.clickableProgressBar_c3ab2b:focus-visible .progressBar_c3ab2b,
 .clickableProgressBar_c3ab2b:hover .progressBar_c3ab2b {
     background-color: var(--interactive-text-hover)
 }
@@ -2187,6 +2188,7 @@
     text-transform: uppercase
 }
 
+.backButton_c3ab2b:focus-visible,
 .backButton_c3ab2b:hover {
     text-decoration: underline
 }

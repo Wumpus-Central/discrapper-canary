@@ -3321,6 +3321,7 @@
     gap: 4px
 }
 
+.dismissAll__514d8:focus-visible .dismissAllText__514d8,
 .dismissAll__514d8:hover .dismissAllText__514d8 {
     text-decoration: underline
 }
