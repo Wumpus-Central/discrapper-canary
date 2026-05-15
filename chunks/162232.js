@@ -19,11 +19,12 @@ let u = o.Ay.getEnableHardwareAcceleration() ? r.Js : r.eu,
                 className: _,
                 animateOnHover: f = !1,
                 questPreviewRewardAssetUrl: h = null,
+                decorationName: p,
             } = e,
             {
-                avatarDecorationSrc: p,
-                avatarSrc: E,
-                eventHandlers: m,
+                avatarDecorationSrc: E,
+                avatarSrc: m,
+                eventHandlers: g,
             } = (0, a.A)({
                 userId: t.id,
                 guildId: n,
@@ -31,15 +32,23 @@ let u = o.Ay.getEnableHardwareAcceleration() ? r.Js : r.eu,
                 showPending: !0,
                 avatarDecorationOverride: r,
                 animateOnHover: f,
-            });
+            }),
+            A = (() => {
+                if (!d)
+                    return "string" == typeof p
+                        ? l.intl.formatToPlainString(l.t.Do2lxE, { a11y_text: p })
+                        : null === p
+                          ? l.intl.string(l.t["7hRBmC"])
+                          : l.intl.string(l.t.lqaIxI);
+            })();
         return (0, i.jsx)(u, {
-            avatarDecoration: p ?? h,
-            src: E,
+            avatarDecoration: E ?? h,
+            src: m,
             size: c,
             status: o,
-            "aria-label": d ? void 0 : l.intl.string(l.t.lqaIxI),
+            "aria-label": A,
             "aria-hidden": d,
             className: _,
-            ...m,
+            ...g,
         });
     };
