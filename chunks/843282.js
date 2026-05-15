@@ -1,4 +1,4 @@
-t.d(l, { $l: () => P, Ev: () => D, M8: () => L, Pw: () => A, Te: () => K, lS: () => z });
+t.d(l, { $l: () => P, Ev: () => D, M8: () => L, Pw: () => A, Te: () => K, lS: () => R });
 var a = t(627968),
     n = t(64700),
     i = t(503698),
@@ -44,16 +44,16 @@ function L(e, l) {
 function P(e, l) {
     return l.has(e) ? { newValues: new Set(), updated: !0 } : { newValues: new Set([e]), updated: !0 };
 }
-function z(e, l) {
+function R(e, l) {
     return l.has(e) ? { newValues: l, updated: !1 } : { newValues: new Set([e]), updated: !0 };
 }
-function M(e) {
+function z(e) {
     return e?.label;
 }
-function I(e) {
-    return e.map((e) => M(e)).join(", ");
+function M(e) {
+    return e.map((e) => z(e)).join(", ");
 }
-function R(e) {
+function I(e) {
     let {
             options: l,
             placeholder: t = O.intl.string(O.t.XqMe3N),
@@ -67,11 +67,11 @@ function R(e) {
             variant: m = "filled",
             onClose: w,
             onOpen: k,
-            renderOptionLabel: D = M,
-            renderOptionValue: L = I,
+            renderOptionLabel: D = z,
+            renderOptionValue: L = M,
             popoutClassName: P,
-            popoutPosition: z = "bottom",
-            popoutLayerContext: R,
+            popoutPosition: R = "bottom",
+            popoutLayerContext: I,
             optionClassName: q,
             closeOnSelect: K,
             select: A,
@@ -145,6 +145,7 @@ function R(e) {
                     isSelected: F,
                     closePopout: t,
                     buttonHeight: ea ?? 0,
+                    buttonRef: el,
                     onSelect: er,
                     options: l,
                     serialize: T,
@@ -154,8 +155,8 @@ function R(e) {
                     popoutPosition: n,
                 });
             },
-            position: z,
-            layerContext: R,
+            position: R,
+            layerContext: I,
             children: (e, l) => {
                 let { onClick: n, onKeyDown: o, ...u } = e,
                     { isShown: d } = l,
@@ -251,44 +252,45 @@ function V(e) {
             serialize: v,
             optionClassName: S,
             buttonHeight: j,
-            updatePosition: y,
-            popoutPosition: C,
+            buttonRef: y,
+            updatePosition: C,
+            popoutPosition: w,
         } = e,
-        [w, N] = n.useState(0),
-        O = n.useRef(null),
-        D = n.useId(),
-        L = (0, o.Ay)({ id: D, async scrollToEnd() {}, async scrollToStart() {}, isEnabled: !0, wrap: !0 }),
-        [P, z] = n.useState(null);
+        [N, O] = n.useState(0),
+        D = n.useRef(null),
+        L = n.useId(),
+        P = (0, o.Ay)({ id: L, async scrollToEnd() {}, async scrollToStart() {}, isEnabled: !0, wrap: !0 }),
+        [R, z] = n.useState(null);
     n.useEffect(
         () =>
-            (0, r.e)(D, (e) => {
+            (0, r.e)(L, (e) => {
                 z(e);
             }),
-        [D],
+        [L],
     );
     let M = n.useRef(null);
-    (0, h.t)(M),
+    (0, h.t)(M, { returnRef: y }),
         n.useLayoutEffect(() => {
             M.current?.focus();
         }, []),
         n.useEffect(() => {
-            j > 0 && y();
-        }, [j, y]),
-        (0, k.A)(y),
+            j > 0 && C();
+        }, [j, C]),
+        (0, k.A)(C),
         n.useLayoutEffect(() => {
-            let e = O.current?.getBoundingClientRect()?.height;
-            null != e && N(e);
+            let e = D.current?.getBoundingClientRect()?.height;
+            null != e && O(e);
         }, [x, p.length]),
         n.useEffect(() => {
-            y();
-        }, [y, w]);
+            C();
+        }, [C, N]);
     let I = n.useCallback(
             (e, l) => {
                 t(e), c && !l && i();
             },
             [i, t, c],
         ),
-        R = n.useMemo(
+        V = n.useMemo(
             () =>
                 p.map((e, l) =>
                     (0, a.jsx)(
@@ -308,7 +310,7 @@ function V(e) {
                 ),
             [I, b, S, p, g, v],
         ),
-        V = n.useMemo(
+        K = n.useMemo(
             () =>
                 p
                     .slice(0, x)
@@ -331,17 +333,17 @@ function V(e) {
                     ),
             [I, b, x, S, p, g, v],
         ),
-        K = p.length <= x ? f.zC : f.Ch;
+        A = p.length <= x ? f.zC : f.Ch;
     return (0, a.jsx)(u.hD, {
-        navigator: L,
+        navigator: P,
         children: (0, a.jsx)(u.PR, {
             children: (e) => {
                 let { ref: t, onKeyDown: n, ...r } = e;
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
-                        (0, a.jsx)(K, {
-                            className: s()(E.SW, l, { [E.O3]: "top" === C }),
-                            style: { width: m, maxHeight: w },
+                        (0, a.jsx)(A, {
+                            className: s()(E.SW, l, { [E.O3]: "top" === w }),
+                            style: { width: m, maxHeight: N },
                             ref: (e) => {
                                 let l = e?.getScrollerNode() ?? null;
                                 (t.current = l), (M.current = l);
@@ -354,11 +356,11 @@ function V(e) {
                                 }
                                 n(e);
                             },
-                            "aria-activedescendant": null != P ? (0, d.t$)(D, P) : void 0,
+                            "aria-activedescendant": null != R ? (0, d.t$)(L, R) : void 0,
                             role: "listbox",
-                            children: R,
+                            children: V,
                         }),
-                        (0, a.jsx)("div", { "aria-hidden": !0, ref: O, className: E.PG, children: V }),
+                        (0, a.jsx)("div", { "aria-hidden": !0, ref: D, className: E.PG, children: K }),
                     ],
                 });
             },
@@ -458,7 +460,7 @@ function K(e) {
             hideLabel: !0 === C.hideLabel || e,
         });
     }
-    return (0, a.jsx)(R, {
+    return (0, a.jsx)(I, {
         ...s,
         ...r,
         renderOptionLabel:
@@ -525,7 +527,7 @@ function A(e) {
             hideLabel: !0 === C.hideLabel || e,
         });
     }
-    return (0, a.jsx)(R, {
+    return (0, a.jsx)(I, {
         ...n,
         renderOptionLabel:
             y ??
