@@ -1,24 +1,25 @@
-l.d(t, { A: () => c });
+l.d(L, { A: () => H });
 var i = l(627968);
 l(64700);
-var s = l(187322),
-    a = l(946274),
-    n = l(985018),
-    r = l(980160);
-function c(e) {
-    let { icon: t, onChange: l } = e;
-    return (0, i.jsx)(s.vN, {
+var e = l(187322),
+    r = l(946274),
+    Z = l(375708),
+    M = l(980160);
+function H(C) {
+    let { icon: L, onChange: l } = C;
+    return (0, i.jsx)(e.vN, {
         within: !0,
         children: (0, i.jsxs)("div", {
-            className: r.z,
+            className: M.z,
             children: [
-                null != t
-                    ? (0, i.jsx)("img", { alt: "Your icon", className: r.k, src: t })
+                null != L
+                    ? (0, i.jsx)("img", { alt: "Your icon", className: M.k, src: L })
                     : (0, i.jsxs)("svg", {
                           width: "80",
                           height: "80",
                           viewBox: "0 0 80 80",
                           fill: "none",
+                          "aria-hidden": "true",
                           children: [
                               (0, i.jsx)("path", {
                                   fillRule: "evenodd",
@@ -45,7 +46,7 @@ function c(e) {
                               }),
                           ],
                       }),
-                (0, i.jsx)(a.Ay, { onChange: l, multiple: !1, tabIndex: 0, "aria-label": n.intl.string(n.t.DWB2YZ) }),
+                (0, i.jsx)(r.Ay, { onChange: l, multiple: !1, tabIndex: 0, "aria-label": Z.intl.string(Z.t.DWB2YZ) }),
             ],
         }),
     });
