@@ -3447,10 +3447,13 @@
 
 .themeOption_f7cedc {
     align-items: center;
+    background: none;
+    border: none;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: var(--space-xs);
+    padding: 0;
     transition: opacity .2s
 }
 
