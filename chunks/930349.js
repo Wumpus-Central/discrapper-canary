@@ -1,29 +1,29 @@
-a.d(l, { V: () => k, Y: () => A });
-var n = a(627968),
-    i = a(64700),
+a.d(l, { V: () => A, Y: () => k });
+var i = a(627968),
+    n = a(64700),
     r = a(503698),
     t = a.n(r),
     s = a(408278),
     d = a(241326),
     u = a(417270),
-    c = a(939249),
-    o = a(245604),
+    o = a(939249),
+    c = a(245604),
     v = a(661531),
     g = a(990078),
     h = a(713517),
     f = a(375708),
-    m = a(889536);
-function b() {
-    return (0, n.jsx)("div", { className: m.overlay });
+    b = a(889536);
+function m() {
+    return (0, i.jsx)("div", { className: b.overlay });
 }
 function p(e) {
-    let { onClick: l, type: a, accessibleLabel: i } = e,
+    let { onClick: l, type: a, accessibleLabel: n } = e,
         r = "remove" === a ? f.intl.string(f.t.N86XcP) : f.intl.string(f.t.wgIPss);
-    return (0, n.jsx)(g.m, {
+    return (0, i.jsx)(g.m, {
         text: r,
         ariaHidden: !0,
-        children: (0, n.jsx)(s.K, {
-            "aria-label": i,
+        children: (0, i.jsx)(s.K, {
+            "aria-label": n,
             icon: "remove" === a ? d.u : u.m,
             size: "sm",
             variant: "overlay-secondary",
@@ -31,11 +31,11 @@ function p(e) {
         }),
     });
 }
-let A = i.forwardRef(function (e, l) {
-    let { variant: a, disabled: i = !1, children: r } = e;
-    return (0, n.jsx)("div", { ref: l, className: t()(m.tile, m[a], { [m.disabled]: i }), children: r });
+let k = n.forwardRef(function (e, l) {
+    let { variant: a, disabled: n = !1, children: r } = e;
+    return (0, i.jsx)("div", { ref: l, className: t()(b.tile, b[a], { [b.disabled]: n }), children: r });
 });
-function k(e) {
+function A(e) {
     let {
             variant: l,
             onClick: a,
@@ -45,47 +45,57 @@ function k(e) {
             disabled: u = !1,
             dimContent: g = !1,
             buttonRef: f,
-            affordance: k,
+            affordance: A,
             ...C
         } = e,
-        I = "add" !== k ? k : void 0,
-        x = i.useRef(null),
+        I = "add" !== A ? A : void 0,
+        x = n.useRef(null),
         { isHoveringOrFocusing: y } = (0, h.A)(x),
-        j = y && !u;
-    return (0, n.jsxs)(A, {
+        j = y && !u,
+        w = n.useRef(null),
+        N = f ?? w;
+    return (0, i.jsxs)(k, {
         ref: x,
         variant: l,
         disabled: u,
         children: [
-            (0, n.jsxs)(c.D, {
-                innerRef: f,
-                className: m.tileButton,
+            (0, i.jsxs)(o.D, {
+                innerRef: N,
+                className: b.tileButton,
                 "aria-label": r,
                 onClick: u ? void 0 : a,
                 "aria-disabled": u,
                 tabIndex: u ? -1 : 0,
                 ...C,
                 children: [
-                    (0, n.jsx)("div", { className: t()(m.content, { [m.dimmed]: g }), children: s(j) }),
-                    d && !u && (0, n.jsx)(b, {}),
-                    "add" === k &&
-                        (0, n.jsx)("div", {
-                            className: t()(m.iconContainer, {
-                                [m.iconAlignCenter]: "square" === l || "full-height-bar" === l,
-                                [m.iconAlignRight]: "bar" === l,
+                    (0, i.jsx)("div", { className: t()(b.content, { [b.dimmed]: g }), children: s(j) }),
+                    d && !u && (0, i.jsx)(m, {}),
+                    "add" === A &&
+                        (0, i.jsx)("div", {
+                            className: t()(b.iconContainer, {
+                                [b.iconAlignCenter]: "square" === l || "full-height-bar" === l,
+                                [b.iconAlignRight]: "bar" === l,
                             }),
-                            children: (0, n.jsx)(o.U, {
+                            children: (0, i.jsx)(c.U, {
                                 size: "md",
                                 color: v.A.colors.ICON_STRONG,
                                 secondaryColor: v.A.colors.ICON_INVERT,
-                                className: m.overlayIcon,
+                                className: b.overlayIcon,
                             }),
                         }),
                 ],
             }),
             !u &&
                 null != I &&
-                (0, n.jsx)("div", { className: m.deleteButtonWrapper, children: (0, n.jsx)(p, { ...I }) }),
+                (0, i.jsx)("div", {
+                    className: b.deleteButtonWrapper,
+                    children: (0, i.jsx)(p, {
+                        ...I,
+                        onClick: () => {
+                            I?.onClick(), N.current?.focus();
+                        },
+                    }),
+                }),
         ],
     });
 }
