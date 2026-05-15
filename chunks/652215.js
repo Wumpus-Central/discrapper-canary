@@ -3685,6 +3685,7 @@ var rD =
         (ex.INVITE_RESOLVED = "resolve_invite"),
         (ex.INVITE_APP_INVOKED = "invite_app_invoked"),
         (ex.INVITE_APP_OPENED = "invite_app_opened"),
+        (ex.INVITE_ACCEPT_BUTTON_RENDERED = "invite_accept_button_rendered"),
         (ex.INVITE_LEARN_MORE = "invite_learn_more"),
         (ex.INVITE_FRIEND_MEMBERS_VIEWED = "invite_friend_members_viewed"),
         (ex.INVITE_LOGIN = "invite_login"),
