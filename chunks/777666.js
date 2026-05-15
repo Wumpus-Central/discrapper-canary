@@ -60,10 +60,13 @@ let d = (e) => {
             shape: u = l.ROUND,
             disableColor: c = !1,
             style: d,
+            "aria-label": _,
         } = e;
         return (0, i.jsx)("div", {
             className: s()(n, o.u3, u),
             style: { backgroundColor: c ? void 0 : r, ...d },
+            role: null != _ ? "img" : void 0,
+            "aria-label": _,
             children: (0, i.jsx)(t, { className: o.Kk, color: "currentColor" }),
         });
     },
