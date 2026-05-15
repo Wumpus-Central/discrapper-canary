@@ -665,6 +665,7 @@ let tg = (e) => {
                         className: g()(tu.n1, { [tu.lx]: n }),
                         style: { backgroundColor: t },
                         "aria-label": s,
+                        "aria-pressed": n,
                         onClick: () => {
                             r(`filter color ${s.toLowerCase()} ${!n ? "on" : "off"}`), a(l);
                         },
@@ -766,6 +767,8 @@ let tg = (e) => {
                             e4.D,
                             {
                                 className: g()(tu.w4, { [tu.C7]: s.has(i) }),
+                                "aria-label": n,
+                                "aria-pressed": s.has(i),
                                 onClick: () => {
                                     let e = s.has(i);
                                     t(`filter theme ${n.toLowerCase()} ${!e ? "on" : "off"}`), l(i);
