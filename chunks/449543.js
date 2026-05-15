@@ -52,12 +52,27 @@ let m = (e) => {
             M(N.current > S.current);
         },
         F = r.useCallback(() => {
+            let e;
             if (v.current) return null;
-            let e = j.current;
-            if (null == e) return null;
-            let t = Math.floor((y.current + e.clientWidth / 2) / (e.scrollWidth / e.childElementCount)),
-                n = Math.max(0, Math.min(e.childElementCount - 1, t));
-            return (O.current = n), n;
+            let t = j.current;
+            if (null == t || 0 === t.childElementCount) return null;
+            let n = y.current,
+                i = t.clientWidth,
+                r = t.scrollWidth - i;
+            if (n <= 0) e = 0;
+            else if (n >= r) e = t.childElementCount - 1;
+            else {
+                let r = n + i / 2,
+                    s = 0,
+                    a = 1 / 0;
+                for (let e = 0; e < t.children.length; e++) {
+                    let n = t.children[e],
+                        i = Math.abs(n.offsetLeft + n.offsetWidth / 2 - r);
+                    i < a && ((a = i), (s = e));
+                }
+                e = s;
+            }
+            return (O.current = e), e;
         }, []),
         V = r.useCallback(() => {
             let e = j.current;
