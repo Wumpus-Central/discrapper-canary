@@ -17762,9 +17762,9 @@ function x0(e) {
                                     children: (0, A.jsxs)("button", {
                                         type: "button",
                                         className: k()(xX.ZQ, { [xX.wH]: i === l, [xX.r9]: r(l) }),
-                                        disabled: r(l),
+                                        "aria-disabled": r(l),
                                         onClick: () => {
-                                            (0, gW.C5)(t.id, l);
+                                            r(l) || (0, gW.C5)(t.id, l);
                                         },
                                         children: [
                                             (0, A.jsx)(an.M, {
