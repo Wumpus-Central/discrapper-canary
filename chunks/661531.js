@@ -7731,14 +7731,6 @@ let { Themes: c } = u.zv,
                         return 0;
                     },
                 },
-                CHAT_INPUT_FLOATING_INLINE_FULL_GRADIENT_HEIGHT: {
-                    resolve(e) {
-                        let { enabledExperiments: t } = e;
-                        if (0 === t.length) return 0;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 20;
-                        return 0;
-                    },
-                },
                 CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
@@ -7755,11 +7747,11 @@ let { Themes: c } = u.zv,
                         return 0;
                     },
                 },
-                CHAT_INPUT_FLOATING_TYPING_GRADIENT_HEIGHT_REDUCED: {
+                CHAT_INPUT_FLOATING_TYPING_PADDING_TOP: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 0;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 8;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 20;
                         return 0;
                     },
                 },
