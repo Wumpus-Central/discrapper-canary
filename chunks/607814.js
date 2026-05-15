@@ -455,6 +455,8 @@ async function er() {
                 channel_id: u.channelId,
                 application_id: u.applicationId,
                 application_name: u.applicationName,
+                clip_uuid: u.id,
+                clip_event_timeline_size: u.timeline.length,
             });
     s && a.h.dispatch({ type: "CLIPS_SAVE_CLIP_CANDIDATE", clip: { ...u, pending: !0, filepath: d } });
     try {

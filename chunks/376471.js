@@ -1922,7 +1922,7 @@ function tk(e) {
                         (0, a.jsxs)("div", {
                             className: tN.OH,
                             children: [
-                                t.isTemporary && (0, a.jsx)(tf.O, { size: "xs", color: "currentColor" }),
+                                t.isTemporary && (0, a.jsx)(tf.O, { color: "white", size: "xs" }),
                                 (0, a.jsx)(er.E, {
                                     variant: "text-sm/semibold",
                                     color: "always-white",
@@ -2023,7 +2023,7 @@ var tS = l(687966),
     tD = l(123292),
     tT = l(292801),
     tO = l(780964),
-    tP = l(858897),
+    tP = l(766075),
     tU = l(532624),
     tG = l(350535),
     tz = l(311162);

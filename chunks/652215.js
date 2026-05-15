@@ -4565,6 +4565,7 @@ var rD =
         (ex.CLIPS_HARDWARE_CLASSIFICATION = "clips_hardware_classification"),
         (ex.CLIPS_ENABLED_TOGGLED = "clips_enabled_toggled"),
         (ex.CLIPS_SETTINGS_UPDATED = "clips_settings_updated"),
+        (ex.CLIP_TIMELINE_TRIMMED = "clip_timeline_trimmed"),
         (ex.STANDALONE_BILLING_FLOW_STARTED = "standalone_billing_flow_started"),
         (ex.MOBILE_OPEN_STANDALONE_MANAGE_SUBSCRIPTION_PAGE = "mobile_open_standalone_manage_subscription_page"),
         (ex.MOBILE_OPEN_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE = "mobile_open_standalone_guild_boost_checkout_page"),
