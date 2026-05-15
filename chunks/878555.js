@@ -99,10 +99,19 @@ function C() {
     return (0, i.jsx)("div", { "aria-hidden": "true", className: I.SC });
 }
 function v(e) {
-    let { user: t, usernameIcon: n, onClickUsername: r, pronouns: o, primaryGuild: u, trailing: d, onClose: f } = e,
-        h = null != o && o.length > 0,
-        p = _(t),
-        E = t.isProvisional
+    let {
+            user: t,
+            usernameIcon: n,
+            onClickUsername: r,
+            pronouns: o,
+            primaryGuild: u,
+            trailing: d,
+            onClose: f,
+            disableGuildProfile: h,
+        } = e,
+        p = null != o && o.length > 0,
+        E = _(t),
+        T = t.isProvisional
             ? null
             : (0, i.jsx)(c.A, {
                   user: t,
@@ -114,10 +123,10 @@ function v(e) {
                   hideBotTag: !0,
               });
     return (0, i.jsxs)("div", {
-        className: s()(I.AK, { [I.j6]: h, [I.w2]: null != p }),
+        className: s()(I.AK, { [I.j6]: p, [I.w2]: null != E }),
         children: [
-            null != E && null != r ? (0, i.jsx)(l.D, { onClick: r, className: I.vk, children: E }) : E,
-            h &&
+            null != T && null != r ? (0, i.jsx)(l.D, { onClick: r, className: I.vk, children: T }) : T,
+            p &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(C, {}),
@@ -130,7 +139,14 @@ function v(e) {
                         }),
                     ],
                 }),
-            (0, i.jsx)(m.Ay, { primaryGuild: u, userId: t.id, onClose: f, containerClassName: I.L4, className: I.Mp }),
+            (0, i.jsx)(m.Ay, {
+                primaryGuild: u,
+                userId: t.id,
+                onClose: f,
+                containerClassName: I.L4,
+                className: I.Mp,
+                disableGuildProfile: h,
+            }),
             d,
         ],
     });
@@ -150,6 +166,7 @@ function O(e) {
         primaryGuild: _,
         trailing: f,
         onClose: h,
+        disableGuildProfile: p,
     } = e;
     return (0, i.jsxs)("div", {
         className: r,
@@ -171,6 +188,7 @@ function O(e) {
                 onClickUsername: s,
                 onClose: h,
                 trailing: f,
+                disableGuildProfile: p,
             }),
         ],
     });

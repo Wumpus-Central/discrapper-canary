@@ -13,9 +13,9 @@ var l = a(627968),
     p = a(999291),
     h = a(101928),
     v = a(854627),
-    A = a(946356),
-    y = a(983495),
-    x = a(696451),
+    x = a(946356),
+    A = a(983495),
+    y = a(696451),
     P = a(919395),
     f = a(97808),
     j = a(133171),
@@ -61,10 +61,10 @@ function R(e) {
             className: p,
             disabledInputs: h,
             isTryItOut: v,
-            onUpsellClick: A,
+            onUpsellClick: x,
         } = e,
-        y = r.useRef(null),
-        { analyticsLocations: x, newestAnalyticsLocation: P } = (0, N.Ay)(),
+        A = r.useRef(null),
+        { analyticsLocations: y, newestAnalyticsLocation: P } = (0, N.Ay)(),
         f = (0, t.bG)([T.A], () => T.A.getStatus(i.id)),
         k = null == a || n?.canUsePremiumProfileCustomization || o,
         O = (0, l.jsx)(E, {
@@ -81,7 +81,7 @@ function R(e) {
         ? (0, l.jsx)("div", { className: z.my, children: O })
         : k
           ? (0, l.jsx)(C.Y, {
-                targetElementRef: y,
+                targetElementRef: A,
                 renderPopout: (e) => {
                     let { closePopout: i } = e;
                     return (0, l.jsx)(B, {
@@ -89,14 +89,14 @@ function R(e) {
                         onChangeAvatar: () =>
                             (0, V.XD)({ uploadType: _.HL.AVATAR, guildId: a?.id, analyticsSource: P, isTryItOut: v }),
                         onChangeAvatarDecoration: () => {
-                            (0, D.L)({ guild: null == a ? void 0 : a, analyticsLocations: x });
+                            (0, D.L)({ guild: null == a ? void 0 : a, analyticsLocations: y });
                         },
                     });
                 },
                 children: (e) =>
                     (0, l.jsxs)(b.D, {
                         ...e,
-                        innerRef: y,
+                        innerRef: A,
                         className: s()(z.my, z.vk),
                         children: [
                             O,
@@ -105,7 +105,7 @@ function R(e) {
                     }),
             })
           : (0, l.jsxs)(b.D, {
-                onClick: A,
+                onClick: x,
                 className: s()(z.my, z.vk),
                 children: [
                     O,
@@ -113,8 +113,8 @@ function R(e) {
                 ],
             });
 }
-var L = a(534514),
-    G = a(702211),
+var G = a(534514),
+    L = a(702211),
     F = a(915614),
     M = a(996988),
     Y = a(662177);
@@ -133,7 +133,7 @@ function Z(e) {
         { newestAnalyticsLocation: c } = (0, N.Ay)(),
         m = n || a?.canUsePremiumProfileCustomization || !1,
         g = m ? w.R : I.t,
-        p = (0, G.b)(m);
+        p = (0, L.b)(m);
     return (0, l.jsx)(F.A, {
         user: i,
         displayProfile: a,
@@ -153,7 +153,7 @@ function Z(e) {
                 className: Y.v,
                 children: [
                     (0, l.jsx)(g, { size: "xs", color: "white" }),
-                    (0, l.jsx)(L.D, {
+                    (0, l.jsx)(G.D, {
                         variant: "text-sm/medium",
                         color: "always-white",
                         children: m || p ? U.intl.string(U.t.N0bC3P) : U.intl.string(U.t.O1sT5v),
@@ -186,15 +186,14 @@ function K(e) {
             hideBioSection: h,
             shouldOpenBadgeTooltip: v,
         } = e,
-        A = (0, t.bG)([x.Ay], () => (null == r ? null : x.Ay.getMember(r.id, i.id))),
-        y = (0, t.bG)([J.A], () => J.A.hidePersonalInformation),
+        x = (0, t.bG)([y.Ay], () => (null == r ? null : y.Ay.getMember(r.id, i.id))),
+        A = (0, t.bG)([J.A], () => J.A.hidePersonalInformation),
         P = a?.getPreviewBio(o),
         f = u ?? a?.pronouns,
-        j = (0, V.eh)({ pendingNickname: s, pendingGlobalName: d, user: i, guildMember: A }),
+        j = (0, V.eh)({ pendingNickname: s, pendingGlobalName: d, user: i, guildMember: x }),
         b = (0, H.gS)(p);
     return (0, l.jsxs)("div", {
         className: $.rf,
-        inert: !0,
         children: [
             (0, l.jsx)(Q.Ay, {
                 user: i,
@@ -202,25 +201,32 @@ function K(e) {
                 displayName: j,
                 pendingDisplayNameStyles: g,
                 usernameIcon: (() => {
-                    if (null != A) {
-                        if (null !== n && (null != A.avatar || null != n))
+                    if (null != x) {
+                        if (null !== n && (null != x.avatar || null != n))
                             return (0, l.jsx)(X.A, { user: i, nickname: j });
                     }
                 })(),
                 pronouns: f,
                 primaryGuild: b,
-                trailing: (0, l.jsx)(q.A, {
-                    displayProfile: a,
-                    themeType: M.d.POPOUT,
-                    pendingLegacyUsernameDisabled: c,
-                    pendingBadges: m,
-                    shouldOpenBadgeTooltip: v,
+                disableGuildProfile: !0,
+                trailing: (0, l.jsx)("div", {
+                    inert: !0,
+                    children: (0, l.jsx)(q.A, {
+                        displayProfile: a,
+                        themeType: M.d.POPOUT,
+                        pendingLegacyUsernameDisabled: c,
+                        pendingBadges: m,
+                        shouldOpenBadgeTooltip: v,
+                    }),
                 }),
             }),
             !h &&
                 null != P &&
                 "" !== P &&
-                (0, l.jsx)(W.A, { user: i, bio: P, hidePersonalInformation: y, viewFullBioDisabled: !0 }),
+                (0, l.jsx)("div", {
+                    inert: !0,
+                    children: (0, l.jsx)(W.A, { user: i, bio: P, hidePersonalInformation: A, viewFullBioDisabled: !0 }),
+                }),
         ],
     });
 }
@@ -267,8 +273,8 @@ function en(e) {
             avatarClassName: _,
             containerClassName: z,
             isTryItOut: E = !1,
-            disabledInputs: L = !1,
-            hideCustomStatus: G = !1,
+            disabledInputs: G = !1,
+            hideCustomStatus: L = !1,
             hideBioSection: F = !1,
             hideMessageInput: Y = !0,
             hideProfileFrame: H = !1,
@@ -278,7 +284,7 @@ function en(e) {
             interactive: X = !0,
         } = e,
         J = (0, p.Ay)(i.id, a?.id),
-        $ = (0, t.bG)([x.Ay], () => (null != a ? x.Ay.getMember(a.id, i.id) : null)),
+        $ = (0, t.bG)([y.Ay], () => (null != a ? y.Ay.getMember(a.id, i.id) : null)),
         ee = (0, P.lw)({
             pendingValue: w,
             userValue: i?.avatarDecoration,
@@ -310,7 +316,7 @@ function en(e) {
         ed = (0, c.A)(et?.skuId, "UserProfilePreview"),
         eo = (0, g.A)(et?.skuId),
         { theme: eu, primaryColor: ec } = (0, h.A)({ user: i, displayProfile: J, pendingThemeColors: T, isPreview: r }),
-        em = (0, l.jsxs)(A.A, {
+        em = (0, l.jsxs)(x.A, {
             user: i,
             displayProfile: J,
             themeType: M.d.POPOUT,
@@ -329,7 +335,7 @@ function en(e) {
                             pendingBanner: f,
                             pendingAccentColor: j,
                             isTryItOut: E,
-                            disabledInputs: L,
+                            disabledInputs: G,
                             onUpsellClick: () => n?.({ object: el.ZSU.EDIT_PROFILE_BANNER }),
                         }),
                         (0, l.jsx)(R, {
@@ -342,11 +348,11 @@ function en(e) {
                             previewTheme: eu,
                             previewPrimaryColor: ec,
                             className: _,
-                            disabledInputs: L,
+                            disabledInputs: G,
                             isTryItOut: E,
                             onUpsellClick: () => n?.({ object: el.ZSU.AVATAR }),
                         }),
-                        !G && (0, l.jsx)(y.A, { user: i, themeType: M.d.POPOUT, disableToolbar: L }),
+                        !L && (0, l.jsx)(A.A, { user: i, themeType: M.d.POPOUT, disableToolbar: G }),
                     ],
                 }),
                 (0, l.jsx)(K, {
