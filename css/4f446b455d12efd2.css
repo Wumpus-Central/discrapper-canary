@@ -1,0 +1,193 @@
+.channelHeader__06fb5 {
+    align-items: center;
+    border-bottom: var(--border-subtle) 1px;
+    border-style: solid;
+    display: flex;
+    gap: 6px;
+    padding: 12px
+}
+
+.icon__06fb5 {
+    border-radius: 6px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    height: 24px;
+    width: 24px
+}
+
+.dmIcon__06fb5 {
+    background: var(--background-base-lowest);
+    justify-content: center;
+    padding: 6px
+}
+
+.channelNameSection__06fb5,
+.dmIcon__06fb5 {
+    align-items: center;
+    display: flex
+}
+
+.channelNameSection__06fb5 {
+    flex-grow: 1;
+    overflow: hidden
+}
+
+.channelTypeIcon__06fb5 {
+    margin-inline-end: 4px
+}
+
+.emptyContainer__4a7f0 {
+    box-sizing: border-box;
+    height: 480px;
+    padding: 16px
+}
+
+.emptyContainer__4a7f0,
+.emptyInner__4a7f0 {
+    display: flex;
+    flex-direction: column
+}
+
+.emptyInner__4a7f0 {
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 0 40px;
+    pointer-events: none;
+    text-align: center
+}
+
+.image__4a7f0 {
+    margin-bottom: 24px;
+    width: 140px
+}
+
+.header__4a7f0 {
+    margin-bottom: 8px
+}
+
+.upsellButton__4a7f0 {
+    background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color);
+    background-clip: padding-box;
+    border-radius: 3px;
+    flex-shrink: 0;
+    margin-inline-start: auto
+}
+
+.upsellContainer__4a7f0 {
+    align-items: center;
+    background: var(--background-base-lowest);
+    border-radius: 4px;
+    display: flex;
+    padding: 12px
+}
+
+.upsellText__4a7f0 {
+    margin-inline-start: 8px
+}
+
+.container_ea9851 {
+    background: var(--background-base-lowest);
+    flex-grow: 1;
+    gap: 6px;
+    padding: 12px
+}
+
+.container_ea9851,
+.icon_ea9851 {
+    align-items: center;
+    display: flex
+}
+
+.icon_ea9851 {
+    background: var(--background-base-lower);
+    border-radius: 6px;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+.popoutContainer__4ad69 {
+    background-color: var(--background-surface-high);
+    border-radius: 8px;
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+    max-width: 507px;
+    min-width: 480px;
+    overflow: hidden;
+    position: relative;
+    width: 35vw;
+    z-index: 0
+}
+
+.messagesScroller__4ad69 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px
+}
+
+.message__4ad69 {
+    margin: 12px 0;
+    overflow: hidden
+}
+
+.messageContainer__4ad69 {
+    background: var(--background-surface-higher);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+    transition: box-shadow .1s ease-in-out
+}
+
+.messageContainer__4ad69:focus-within,
+.messageContainer__4ad69:hover {
+    box-shadow: var(--shadow-high)
+}
+
+.messageContainer__4ad69:focus-within .hoverBar__4ad69,
+.messageContainer__4ad69:hover .hoverBar__4ad69 {
+    opacity: 1
+}
+
+.clickableMessageBackground__4ad69 {
+    inset-inline: 0;
+    bottom: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0
+}
+
+.deletedMessage__4ad69 {
+    flex-direction: row;
+    gap: 6px;
+    padding: 12px
+}
+
+.deleteIcon__4ad69,
+.deletedMessage__4ad69 {
+    align-items: center;
+    display: flex
+}
+
+.deleteIcon__4ad69 {
+    background: var(--background-base-lowest);
+    border-radius: 6px;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+.hoverBar__4ad69 {
+    inset-inline-end: 6px;
+    opacity: 0;
+    position: absolute;
+    top: 6px
+}

@@ -1830,8 +1830,8 @@ function n1(e) {
               onClick: () => {
                   (0, eK.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
-                          n.e("55771"),
-                          n.e("4554"),
+                          n.e("29690"),
+                          n.e("79924"),
                           n.e("60361"),
                           n.e("54266"),
                           n.e("99430"),

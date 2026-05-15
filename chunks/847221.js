@@ -24,11 +24,11 @@ var N = i(375708),
 function S(e) {
     let { channel: t } = e,
         [s, S] = l.useState(!1),
-        j = l.useRef(null),
-        C = l.useRef(null);
+        C = l.useRef(null),
+        j = l.useRef(null);
     l.useEffect(
         () => () => {
-            clearTimeout(C.current);
+            clearTimeout(j.current);
         },
         [],
     );
@@ -45,8 +45,9 @@ function S(e) {
                     (0, g.L3)(e, async () => {
                         let { default: e } = await Promise.all([
                             i.e("80203"),
-                            i.e("79937"),
-                            i.e("25719"),
+                            i.e("685"),
+                            i.e("12697"),
+                            i.e("74389"),
                             i.e("26132"),
                             i.e("46652"),
                             i.e("93190"),
@@ -94,15 +95,15 @@ function S(e) {
                     });
         },
         V = () => {
-            clearTimeout(C.current), (C.current = setTimeout(() => S(!0), 100));
+            clearTimeout(j.current), (j.current = setTimeout(() => S(!0), 100));
         },
         R = () => {
-            clearTimeout(C.current), (C.current = setTimeout(() => S(!1), 100));
+            clearTimeout(j.current), (j.current = setTimeout(() => S(!1), 100));
         };
     return null == y
         ? null
         : (0, n.jsx)(d.Y, {
-              targetElementRef: j,
+              targetElementRef: C,
               position: "right",
               shouldShow: s,
               onRequestOpen: V,
@@ -114,7 +115,7 @@ function S(e) {
               children: (e) => {
                   let { onClick: i, ...l } = e;
                   return (0, n.jsxs)(u.D, {
-                      innerRef: j,
+                      innerRef: C,
                       className: _.nM,
                       "aria-haspopup": "dialog",
                       onClick: V,

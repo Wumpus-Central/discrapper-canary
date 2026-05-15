@@ -7159,7 +7159,12 @@ class db extends f.PureComponent {
                           className: d_.z8,
                           children: [
                               (0, p.jsx)(V.E, { variant: "text-sm/normal", children: g.intl.string(g.t.aRHpAB) }),
-                              (0, p.jsx)("div", { className: d_.Sv, children: g.intl.string(g.t.o9bOIl) }),
+                              (0, p.jsx)(V.E, {
+                                  variant: "text-sm/normal",
+                                  color: "text-subtle",
+                                  className: d_.Sv,
+                                  children: g.intl.string(g.t.o9bOIl),
+                              }),
                           ],
                       })
                     : null,
