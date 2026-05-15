@@ -183,7 +183,7 @@ n.r(U),
         DoorExitIcon: () => aa.o,
         DoubleCheckmarkIcon: () => fp.i,
         DoubleChevronSmallLeftIcon: () => fE,
-        DoubleChevronSmallRightIcon: () => fm,
+        DoubleChevronSmallRightIcon: () => fm.V,
         DownloadIcon: () => s_.s,
         DpadIcon: () => fg.L,
         DragIcon: () => fA.W,
@@ -1762,7 +1762,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 545341, Version Hash: 3bec2f94be56a6e096663764cab0e399aef0987e`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 545348, Version Hash: 36e2b4b61c37f9985500e53aa47da28bc09a772b`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -10250,72 +10250,40 @@ var fd = n(347306),
     fh = n(808666),
     fp = n(143838);
 let fE = (e) => {
-        let {
-                size: t = "md",
-                width: n,
-                height: i,
-                color: r = r9.A.colors.INTERACTIVE_ICON_DEFAULT,
-                colorClass: s = "",
-                ...a
-            } = e,
-            o = (0, da.J)(t),
-            l = o?.width ?? n,
-            u = o?.height ?? i;
-        return (0, k.jsxs)("svg", {
-            ...(0, ds.A)(a),
-            xmlns: "http://www.w3.org/2000/svg",
-            width: l,
-            height: u,
-            fill: "none",
-            viewBox: "0 0 24 24",
-            children: [
-                (0, k.jsx)("path", {
-                    fill: "string" == typeof r ? r : r.css,
-                    d: "M12.7 5.3a1 1 0 0 1 0 1.4L7.42 12l5.3 5.3a1 1 0 0 1-1.42 1.4l-6-6a1 1 0 0 1 0-1.4l6-6a1 1 0 0 1 1.42 0Z",
-                    className: s,
-                }),
-                (0, k.jsx)("path", {
-                    fill: "string" == typeof r ? r : r.css,
-                    d: "M18.7 5.3a1 1 0 0 1 0 1.4L13.42 12l5.3 5.3a1 1 0 0 1-1.42 1.4l-6-6a1 1 0 0 1 0-1.4l6-6a1 1 0 0 1 1.42 0Z",
-                    className: s,
-                }),
-            ],
-        });
-    },
-    fm = (e) => {
-        let {
-                size: t = "md",
-                width: n,
-                height: i,
-                color: r = r9.A.colors.INTERACTIVE_ICON_DEFAULT,
-                colorClass: s = "",
-                ...a
-            } = e,
-            o = (0, da.J)(t),
-            l = o?.width ?? n,
-            u = o?.height ?? i;
-        return (0, k.jsxs)("svg", {
-            ...(0, ds.A)(a),
-            xmlns: "http://www.w3.org/2000/svg",
-            width: l,
-            height: u,
-            fill: "none",
-            viewBox: "0 0 24 24",
-            children: [
-                (0, k.jsx)("path", {
-                    fill: "string" == typeof r ? r : r.css,
-                    d: "M11.3 5.3a1 1 0 0 0 0 1.4l5.29 5.3-5.3 5.3a1 1 0 0 0 1.42 1.4l6-6a1 1 0 0 0 0-1.4l-6-6a1 1 0 0 0-1.42 0Z",
-                    className: s,
-                }),
-                (0, k.jsx)("path", {
-                    fill: "string" == typeof r ? r : r.css,
-                    d: "M5.3 5.3a1 1 0 0 0 0 1.4l5.29 5.3-5.3 5.3a1 1 0 1 0 1.42 1.4l6-6a1 1 0 0 0 0-1.4l-6-6a1 1 0 0 0-1.42 0Z",
-                    className: s,
-                }),
-            ],
-        });
-    };
-var fg = n(111219),
+    let {
+            size: t = "md",
+            width: n,
+            height: i,
+            color: r = r9.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: s = "",
+            ...a
+        } = e,
+        o = (0, da.J)(t),
+        l = o?.width ?? n,
+        u = o?.height ?? i;
+    return (0, k.jsxs)("svg", {
+        ...(0, ds.A)(a),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: l,
+        height: u,
+        fill: "none",
+        viewBox: "0 0 24 24",
+        children: [
+            (0, k.jsx)("path", {
+                fill: "string" == typeof r ? r : r.css,
+                d: "M12.7 5.3a1 1 0 0 1 0 1.4L7.42 12l5.3 5.3a1 1 0 0 1-1.42 1.4l-6-6a1 1 0 0 1 0-1.4l6-6a1 1 0 0 1 1.42 0Z",
+                className: s,
+            }),
+            (0, k.jsx)("path", {
+                fill: "string" == typeof r ? r : r.css,
+                d: "M18.7 5.3a1 1 0 0 1 0 1.4L13.42 12l5.3 5.3a1 1 0 0 1-1.42 1.4l-6-6a1 1 0 0 1 0-1.4l6-6a1 1 0 0 1 1.42 0Z",
+                className: s,
+            }),
+        ],
+    });
+};
+var fm = n(890377),
+    fg = n(111219),
     fA = n(772838),
     fI = n(601198);
 let fT = (e) => {
@@ -18317,7 +18285,7 @@ let Sv = "isHideDevBanner",
                     className: t2()(SC.Wz, SC.mr),
                     children: [
                         (0, k.jsx)(Sy, { className: SC.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "545341" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "545348" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -36052,7 +36020,7 @@ let xr = (0, ny.Fe)({
             n.e("56750"),
             n.e("27774"),
             n.e("31599"),
-            n.e("40142"),
+            n.e("54134"),
             n.e("93016"),
             n.e("13085"),
             n.e("90797"),

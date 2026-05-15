@@ -211,13 +211,17 @@
 }
 
 .header_b08638 {
-    align-items: center;
     border-bottom: 1px solid var(--border-subtle);
-    display: flex;
     flex-direction: row-reverse;
     padding-block: var(--space-4);
     padding-inline-end: var(--space-4);
     padding-inline-start: var(--space-8)
+}
+
+.collapseButton_b08638,
+.header_b08638 {
+    align-items: center;
+    display: flex
 }
 
 .collapseButton_b08638 {
@@ -225,7 +229,7 @@
     cursor: pointer;
     flex-shrink: 0;
     height: 40px;
-    position: relative;
+    justify-content: center;
     transition: color 50ms ease-in;
     width: 40px
 }
@@ -234,20 +238,6 @@
 .collapseButton_b08638:hover {
     color: var(--icon-strong);
     transition: color .15s ease-out
-}
-
-.collapseButton_b08638>:first-child,
-.collapseButton_b08638>:last-child {
-    inset: var(--space-8);
-    position: absolute
-}
-
-.collapseButton_b08638>:first-child {
-    translate: -4px 0
-}
-
-.collapseButton_b08638>:last-child {
-    translate: 1px 0
 }
 
 .guildProfileUpsell_b08638 {
