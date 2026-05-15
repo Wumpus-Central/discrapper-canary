@@ -4497,12 +4497,24 @@ button.inner__02fc8:disabled {
     margin-top: 16px
 }
 
-.featuredText__7dd5e,
-.infoIcon__7dd5e {
+.featuredText__7dd5e {
     color: var(--text-strong)
 }
 
+.infoIconWrapper__7dd5e {
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex
+}
+
+.infoIconWrapper__7dd5e:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px
+}
+
 .infoIcon__7dd5e {
+    color: var(--text-strong);
     transform: translateY(3px)
 }
 
