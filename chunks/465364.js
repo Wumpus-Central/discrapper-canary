@@ -87,7 +87,7 @@ function _(e) {
                             n = null != e.target ? (0, i.ts)(e.target) : null;
                         return !(t && null != n && !T);
                     })),
-                    t.embeds.length > 0 &&
+                    (f ?? t).embeds.length > 0 &&
                         ((I = e),
                         (h = n ? m(I) : "paragraph" === I[0].type && I[0].content instanceof Array && m(I[0].content))),
                     d &&
