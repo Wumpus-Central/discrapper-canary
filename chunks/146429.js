@@ -907,7 +907,7 @@ var eK = n(495544),
     e_ = n(287809),
     eO = n(152056),
     eB = n(780964),
-    eL = n(91725),
+    eL = n(755322),
     eP = n(980707),
     eD = n(477782),
     eF = n(349288),
@@ -927,8 +927,8 @@ var eK = n(495544),
 function e0() {
     let e = (0, eQ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "544838",
-        l = "002652a3197da6f1c62bbf4539c49b4cba7d7f18".substring(0, 7),
+        n = "545172",
+        l = "b4a90ed6867fe13e371763eef84571652439d1a3".substring(0, 7),
         s = e$.A?.app.getVersion(),
         i = e$.A?.app.getBuildNumber(),
         u = e$.A?.app.getAppArch(),
@@ -1039,7 +1039,7 @@ function e7(e) {
         }),
     });
 }
-function e9() {
+function e2() {
     let e = l.useRef(null);
     return (0, r.jsxs)("div", {
         children: [
@@ -1096,12 +1096,12 @@ function e9() {
         ],
     });
 }
-var e2 = n(402651),
+var e9 = n(402651),
     e5 = n(669067),
     e3 = n(830543),
     e8 = n(466745);
-let e4 = new Set([eB.X.PROFILE_PANEL, eB.X.SUBSCRIPTIONS_PANEL, eB.X.FAMILY_CENTER_PANEL, eB.X.POGGERMODE_PANEL]),
-    e6 = new Map([
+let e6 = new Set([eB.X.PROFILE_PANEL, eB.X.SUBSCRIPTIONS_PANEL, eB.X.FAMILY_CENTER_PANEL, eB.X.POGGERMODE_PANEL]),
+    e4 = new Map([
         [eB.X.CONNECTIONS_PANEL, s.ImpressionNames.USER_SETTINGS_CONNECTIONS],
         [eB.X.SESSIONS_PANEL, s.ImpressionNames.USER_SETTINGS_SESSIONS],
     ]);
@@ -1119,7 +1119,7 @@ function te(e) {
         return (
             eK.default.addChangeListener(e),
             () => {
-                eK.default.removeChangeListener(e), e2.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
+                eK.default.removeChangeListener(e), e9.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
             }
         );
     }, []),
@@ -1129,17 +1129,17 @@ function te(e) {
               partialRoot: eL.D,
               searchBar: tt,
               emptyState: tn,
-              sidebarFooter: e9,
+              sidebarFooter: e2,
               onViewChange: (e) => {
-                  e4.has(e) || (0, e5._)(e);
-                  let t = e6.get(e);
+                  e6.has(e) || (0, e5._)(e);
+                  let t = e4.get(e);
                   null != t &&
                       (0, o.x)({
                           type: s.ImpressionTypes.PANE,
                           name: t,
-                          properties: { source: e2.A.getField("source") },
+                          properties: { source: e9.A.getField("source") },
                       }),
-                      e2.A.setState({ source: void 0 });
+                      e9.A.setState({ source: void 0 });
               },
               target: t,
               defaultTarget: eB.X.ACCOUNT_PANEL,
