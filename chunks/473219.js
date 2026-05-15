@@ -1,13 +1,13 @@
 a.d(l, { A: () => g });
-var n = a(627968),
-    i = a(64700),
+var i = a(627968),
+    n = a(64700),
     r = a(688810),
     t = a(344346),
     s = a(637193),
     d = a(919395),
     u = a(84540),
-    c = a(930349),
-    o = a(375708),
+    o = a(930349),
+    c = a(375708),
     v = a(535592);
 function g(e) {
     let { user: l, guildId: a, disabled: g } = e,
@@ -26,24 +26,25 @@ function g(e) {
                 ? {
                       onClick: () => (0, u.p)({ guildId: a ?? void 0, nameplate: null }),
                       type: I ? "reset" : "remove",
-                      accessibleLabel: o.intl.string(I ? o.t.neYqhR : o.t["9zwziY"]),
+                      accessibleLabel: c.intl.string(I ? c.t.neYqhR : c.t["9zwziY"]),
                   }
                 : void 0,
-        w = i.useCallback(() => {
+        w = n.useCallback(() => {
             (0, s.p)({ analyticsLocations: h, guildId: a ?? void 0, stackingBehavior: "stack" });
         }, [h, a]);
-    return (0, n.jsx)(c.V, {
+    return (0, i.jsx)(o.V, {
         affordance: C ? "add" : j,
         variant: "bar",
         onClick: w,
-        accessibleLabel: o.intl.string(o.t.BwdeM1),
+        accessibleLabel: c.intl.string(c.t.BwdeM1),
+        "aria-haspopup": "dialog",
         disabled: g,
         dimContent: x,
         renderPreview: (e) =>
-            (0, n.jsx)("div", {
+            (0, i.jsx)("div", {
                 className: v.M,
                 "aria-hidden": !0,
-                children: (0, n.jsx)(t.A, {
+                children: (0, i.jsx)(t.A, {
                     user: l,
                     guildId: a ?? void 0,
                     nameplate: y,

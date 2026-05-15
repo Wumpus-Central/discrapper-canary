@@ -1,14 +1,14 @@
 a.d(l, { A: () => k });
-var n = a(627968);
+var i = a(627968);
 a(64700);
-var i = a(17928),
+var n = a(17928),
     r = a(778712),
     t = a(97808),
     s = a(688810),
     d = a(919395),
     u = a(252732),
-    c = a(101058),
-    o = a(696451),
+    o = a(101058),
+    c = a(696451),
     v = a(84540),
     g = a(836602),
     h = a(854627),
@@ -17,17 +17,17 @@ var i = a(17928),
     b = a(375708);
 let p = r._3.SIZE_72;
 function A(e) {
-    let { userId: l, guildId: a, avatarOverride: i, shouldAnimate: r } = e,
-        { avatarSrc: s } = (0, h.A)({ userId: l, guildId: a, avatarOverride: i, size: p, animateOnHover: !r });
-    return (0, n.jsx)(t.eu, { src: s, size: p, "aria-hidden": !0 });
+    let { userId: l, guildId: a, avatarOverride: n, shouldAnimate: r } = e,
+        { avatarSrc: s } = (0, h.A)({ userId: l, guildId: a, avatarOverride: n, size: p, animateOnHover: !r });
+    return (0, i.jsx)(t.eu, { src: s, size: p, "aria-hidden": !0 });
 }
 function k(e) {
     let { user: l, guildId: a, disabled: r } = e,
         { newestAnalyticsLocation: t } = (0, s.Ay)(),
         h = null != a,
-        p = (0, i.bG)([o.Ay], () => (null != a ? o.Ay.getMember(a, l.id) : null)),
-        k = (0, i.bG)([g.A], () => g.A.getPendingChanges(a ?? void 0).pendingAvatar),
-        C = (0, c.V7)({ userId: l.id, image: k }),
+        p = (0, n.bG)([c.Ay], () => (null != a ? c.Ay.getMember(a, l.id) : null)),
+        k = (0, n.bG)([g.A], () => g.A.getPendingChanges(a ?? void 0).pendingAvatar),
+        C = (0, o.V7)({ userId: l.id, image: k }),
         I = l.avatar,
         x = h ? p?.avatar : I,
         y = void 0 !== k,
@@ -43,14 +43,15 @@ function k(e) {
                   accessibleLabel: b.intl.string(w ? b.t.Y0mxy1 : b.t.twB3fz),
               }
             : void 0;
-    return (0, n.jsx)(f.V, {
+    return (0, i.jsx)(f.V, {
         affordance: j ? "add" : N,
         variant: "square",
         onClick: () =>
             (0, u.XD)({ uploadType: m.HL.AVATAR, analyticsSource: t, guildId: a ?? void 0, stackingBehavior: "stack" }),
         accessibleLabel: b.intl.string(b.t["4OynCD"]),
+        "aria-haspopup": "dialog",
         disabled: r,
         dimContent: j && w,
-        renderPreview: (e) => (0, n.jsx)(A, { userId: l.id, guildId: a, avatarOverride: C, shouldAnimate: e }),
+        renderPreview: (e) => (0, i.jsx)(A, { userId: l.id, guildId: a, avatarOverride: C, shouldAnimate: e }),
     });
 }
