@@ -1,151 +1,150 @@
-i.d(e, { A: () => $ });
+i.d(e, { A: () => X });
 var n = i(627968),
     s = i(64700),
     a = i(189213),
     r = i(815021),
     l = i(834730),
     c = i(192308),
-    o = i(289873),
-    u = i(935462),
-    d = i(231723),
-    m = i(507107),
-    f = i(73473),
-    x = i(617986),
-    g = i(731355),
-    C = i(366010),
-    h = i(534514),
+    o = i(935462),
+    u = i(289873),
+    d = i(507107),
+    m = i(73473),
+    f = i(617986),
+    x = i(731355),
+    g = i(366010),
+    C = i(534514),
     N = i(825484),
-    j = i(408278),
-    A = i(173936),
-    p = i(821609),
-    T = i(743368),
-    v = i(990078),
-    I = i(736653),
+    h = i(408278),
+    j = i(173936),
+    A = i(821609),
+    p = i(743368),
+    T = i(990078),
+    v = i(736653),
     _ = i(859387),
     y = i(590202),
-    E = i(971649),
-    O = i(651892),
-    R = i(901406),
-    L = i(814793),
-    k = i(241124),
-    D = i(918338),
-    M = i(371912),
-    b = i(17928),
-    P = i(793574),
-    W = i(532794),
-    w = i(976860),
-    q = i(287809),
-    S = i(975571),
-    H = i(474090),
+    I = i(971649),
+    E = i(651892),
+    O = i(901406),
+    R = i(814793),
+    L = i(241124),
+    M = i(918338),
+    b = i(371912),
+    k = i(17928),
+    D = i(793574),
+    P = i(532794),
+    W = i(976860),
+    w = i(287809),
+    q = i(975571),
+    S = i(474090),
     z = i(561844),
     G = i(190107),
-    Q = i(652215),
-    Y = i(788868),
-    V = i(375708),
-    F = i(237146),
-    K = i(818348),
-    U = i(970197);
-function Z(t) {
+    H = i(652215),
+    Q = i(788868),
+    Y = i(375708),
+    V = i(237146),
+    F = i(818348),
+    K = i(970197);
+function U(t) {
     let { quest: e, sourceQuestContent: i, onLoadComplete: a, preCtaClick: r } = t,
-        c = (0, I.Ay)(),
-        o = (0, C.M)(c) ? K.NJ.DARK : K.NJ.LIGHT,
-        u = (0, E.go)(),
-        d = (0, L.E0)(e.config),
+        c = (0, v.Ay)(),
+        o = (0, g.M)(c) ? F.NJ.DARK : F.NJ.LIGHT,
+        u = (0, I.go)(),
+        m = (0, R.E0)(e.config),
         f = async () => {
             await r?.(),
-                (0, R.pu)(e, {
-                    content: m.uF.REWARD_MODAL,
+                (0, O.pu)(e, {
+                    content: d.uF.REWARD_MODAL,
                     ctaContent: y.Cy.OPEN_GAME_LINK,
                     impressionId: u,
                     sourceQuestContent: i,
                 });
         },
-        x = s.useMemo(() => {
+        U = s.useMemo(() => {
             let t = e.config.ctaConfig?.subtitle;
             return null != t
                 ? t
-                : (0, L.pv)(e.config) !== g.Z.GAMEPLAY ||
+                : (0, R.pv)(e.config) !== x.Z.GAMEPLAY ||
                     e.config.features.includes(G.Li.NON_GAMING_PLAY_QUEST) ||
-                    (0, L.ui)(e)
-                  ? V.intl.string(V.t.y8Xf3k)
-                  : V.intl.string(V.t["wirwN+"]);
+                    (0, R.ui)(e)
+                  ? Y.intl.string(Y.t.y8Xf3k)
+                  : Y.intl.string(Y.t["wirwN+"]);
         }, [e]),
         Z = (function (t, e, i) {
             let n = t.config.features.some((t) => G.Tz.has(t)),
-                a = (0, b.bG)([q.default], () => q.default.getCurrentUser()),
+                a = (0, k.bG)([w.default], () => w.default.getCurrentUser()),
                 r = a?.hasPaidTier2Subscription(),
-                l = (0, H.ki)(a) && !a?.isPremiumWithFractionalPremiumOnly(),
+                l = (0, S.ki)(a) && !a?.isPremiumWithFractionalPremiumOnly(),
                 c = s.useCallback(async () => {
                     n &&
                         (r
                             ? ((0, z.Y5)({
                                   questId: t.id,
-                                  questContent: m.uF.REWARD_MODAL,
+                                  questContent: d.uF.REWARD_MODAL,
                                   questContentCTA: y.Cy.OPEN_NITRO_HOME,
                                   impressionId: e.impressionId,
                                   sourceQuestContent: e.sourceQuestContent,
                               }),
                               await i?.(),
-                              (0, w.pX)(Q.BVt.NITRO_HOME))
+                              (0, W.pX)(H.BVt.NITRO_HOME))
                             : ((0, z.Y5)({
                                   questId: t.id,
-                                  questContent: m.uF.REWARD_MODAL,
+                                  questContent: d.uF.REWARD_MODAL,
                                   questContentCTA: y.Cy.OPEN_NITRO_CHECKOUT,
                                   impressionId: e.impressionId,
                                   sourceQuestContent: e.sourceQuestContent,
                               }),
                               await i?.(),
-                              await (0, W.A)({
-                                  subscriptionTier: Y.pe.TIER_2,
-                                  analyticsLocations: [P.A.QUEST_REWARD_MODAL],
+                              await (0, P.A)({
+                                  subscriptionTier: Q.pe.TIER_2,
+                                  analyticsLocations: [D.A.QUEST_REWARD_MODAL],
                               })));
                 }, [n, r, t.id, e.impressionId, e.sourceQuestContent, i]);
             if (!n) return null;
             if (t.config.features.includes(G.Li.NITRO_2_POINT_0_CTA)) {
-                let t = S.A.getArticleURL(Q.MVz.NITRO_2_POINT_0);
+                let t = q.A.getArticleURL(H.MVz.NITRO_2_POINT_0);
                 return r
                     ? {
-                          title: V.intl.string(F.default.LIc2xy),
-                          subtitle: V.intl.format(F.default.gzazAe, { helpCenterLink: t }),
-                          ctaText: V.intl.string(F.default.HlVJm0),
+                          title: Y.intl.string(V.default.LIc2xy),
+                          subtitle: Y.intl.format(V.default.gzazAe, { helpCenterLink: t }),
+                          ctaText: Y.intl.string(V.default.HlVJm0),
                           ctaVariant: "primary",
                           onClickCta: c,
                       }
                     : l
                       ? {
-                            title: V.intl.string(F.default.HTsycG),
-                            subtitle: V.intl.format(F.default["3JKWU6"], { helpCenterLink: t }),
-                            ctaText: V.intl.string(F.default["2iX+XV"]),
+                            title: Y.intl.string(V.default.HTsycG),
+                            subtitle: Y.intl.format(V.default["3JKWU6"], { helpCenterLink: t }),
+                            ctaText: Y.intl.string(V.default["2iX+XV"]),
                             ctaVariant: "primary",
                             onClickCta: c,
                         }
                       : {
-                            title: V.intl.string(F.default.bOf5IH),
-                            subtitle: V.intl.format(F.default.SzOYGc, { helpCenterLink: t }),
-                            ctaText: V.intl.string(F.default["620Iwi"]),
+                            title: Y.intl.string(V.default.bOf5IH),
+                            subtitle: Y.intl.format(V.default.SzOYGc, { helpCenterLink: t }),
+                            ctaText: Y.intl.string(V.default["620Iwi"]),
                             ctaVariant: "primary",
                             onClickCta: c,
                         };
             }
             return null;
         })(e, { impressionId: u, sourceQuestContent: i }, r) ?? {
-            ctaText: (0, O.wr)(e),
+            ctaText: (0, E.wr)(e),
             ctaVariant: "primary",
             onClickCta: f,
-            title: V.intl.format(V.t.EAYZAr, { questName: e.config.messages.questName }),
-            subtitle: x,
+            title: Y.intl.format(Y.t.EAYZAr, { questName: e.config.messages.questName }),
+            subtitle: U,
             ctaIconPosition: "end",
         },
-        { isLoading: J } = (0, k.Gk)();
+        { isLoading: J } = (0, L.Gk)();
     s.useEffect(() => {
         J || a();
     }, [J, a]);
-    let X = (0, M.Lk)({
-        isShareable: d,
+    let B = (0, b.Lk)({
+        isShareable: m,
         questId: e.id,
         trackingCtx: s.useMemo(
             () => ({
-                content: m.uF.REWARD_MODAL,
+                content: d.uF.REWARD_MODAL,
                 ctaContent: y.Cy.REWARD_MODAL_COPY_LINK,
                 impressionId: u,
                 sourceQuestContent: i,
@@ -154,83 +153,83 @@ function Z(t) {
         ),
     });
     return (0, n.jsxs)("div", {
-        className: U.kL,
+        className: K.kL,
         children: [
-            (0, n.jsx)(k.Sn, {
+            (0, n.jsx)(L.Sn, {
                 id: "hero-display",
                 children: (t) =>
-                    (0, n.jsx)(D.A, {
+                    (0, n.jsx)(M.A, {
                         quest: e,
                         imageSize: { width: 908, height: 380 },
-                        containerClassName: U.WQ,
+                        containerClassName: K.WQ,
                         isInteracting: !0,
                         assetRef: t,
                     }),
             }),
             (0, n.jsx)("div", {
-                className: U.Lt,
-                children: (0, n.jsx)(k.Sn, {
+                className: K.Lt,
+                children: (0, n.jsx)(L.Sn, {
                     id: "partner-logotype",
                     children: (t) =>
                         (0, n.jsx)("img", {
                             ref: t,
-                            className: U.a$,
-                            alt: V.intl.formatToPlainString(V.t.rtm15P, { name: e.config.messages.gameTitle }),
+                            className: K.a$,
+                            alt: Y.intl.formatToPlainString(Y.t.rtm15P, { name: e.config.messages.gameTitle }),
                             src: (0, _.tW)(e, _.fY.LOGO_TYPE, o).url,
                         }),
                 }),
             }),
             (0, n.jsxs)("div", {
-                className: U.Th,
+                className: K.Th,
                 children: [
                     (0, n.jsxs)("div", {
-                        className: U.Ly,
+                        className: K.Ly,
                         children: [
-                            (0, n.jsx)(h.D, {
+                            (0, n.jsx)(C.D, {
                                 variant: "heading-md/semibold",
                                 color: "text-strong",
-                                className: U.fx,
+                                className: K.fx,
                                 children: Z.title,
                             }),
                             (0, n.jsx)(l.E, { variant: "text-sm/medium", color: "text-subtle", children: Z.subtitle }),
                         ],
                     }),
-                    (0, n.jsx)(k.Sn, {
+                    (0, n.jsx)(L.Sn, {
                         id: "partner-game-tile",
                         children: (t) =>
                             (0, n.jsx)("img", {
                                 ref: t,
-                                className: U.rw,
-                                alt: V.intl.formatToPlainString(V.t.rtm15P, { name: e.config.messages.gameTitle }),
+                                className: K.rw,
+                                alt: Y.intl.formatToPlainString(Y.t.rtm15P, { name: e.config.messages.gameTitle }),
                                 src: (0, _.tW)(e, _.fY.GAME_TILE, o).url,
                             }),
                     }),
                 ],
             }),
             (0, n.jsx)("div", {
-                className: U.tu,
+                className: K.tu,
                 children: (0, n.jsxs)(N.e, {
                     size: "sm",
                     direction: "horizontal",
                     fullWidth: !0,
                     fullWidthContainer: !0,
                     children: [
-                        d &&
-                            (0, n.jsx)(v.m, {
-                                text: V.intl.string(V.t.WmfZHZ),
-                                children: (0, n.jsx)(j.K, {
-                                    icon: A.q,
-                                    onClick: X,
-                                    "aria-label": V.intl.string(V.t.WmfZHZ),
+                        m &&
+                            (0, n.jsx)(T.m, {
+                                text: Y.intl.string(Y.t.WmfZHZ),
+                                children: (0, n.jsx)(h.K, {
+                                    icon: j.q,
+                                    onClick: B,
+                                    "aria-label": Y.intl.string(Y.t.WmfZHZ),
                                     variant: "secondary",
                                 }),
                             }),
-                        (0, n.jsx)(p.$, {
+                        (0, n.jsx)(A.$, {
                             variant: Z.ctaVariant,
                             text: Z.ctaText,
                             onClick: Z.onClickCta,
                             fullWidth: !0,
-                            icon: T.W,
+                            icon: p.W,
                             iconPosition: Z.ctaIconPosition,
                         }),
                     ],
@@ -239,86 +238,84 @@ function Z(t) {
         ],
     });
 }
-function J(t) {
+function Z(t) {
     let { quest: e, location: i } = t;
-    return (0, n.jsx)(k.jY, { source: i, questId: e.id, isPreview: e.preview, children: (0, n.jsx)(Z, { ...t }) });
+    return (0, n.jsx)(L.jY, { source: i, questId: e.id, isPreview: e.preview, children: (0, n.jsx)(U, { ...t }) });
 }
-var X = i(63639);
+var J = i(63639);
 function B(t) {
     let { onClose: e, transitionState: i } = t;
     return (0, n.jsx)(a.Modal, {
         size: "md",
-        title: V.intl.string(V.t.Hd3D8W),
-        actions: [{ variant: "primary", text: V.intl.string(V.t.cpT0Cq), onClick: e }],
+        title: Y.intl.string(Y.t.Hd3D8W),
+        actions: [{ variant: "primary", text: Y.intl.string(Y.t.cpT0Cq), onClick: e }],
         onClose: e,
         transitionState: i,
         children: (0, n.jsx)(l.E, {
             variant: "text-md/medium",
             color: "text-subtle",
-            children: V.intl.string(V.t.Ij97SL),
+            children: Y.intl.string(Y.t.Ij97SL),
         }),
     });
 }
-function $(t) {
+function X(t) {
     let {
             quest: e,
             sourceQuestContent: i,
             transitionState: a,
             onClose: l,
-            rewardContent: g,
-            isRewardContentLoading: C,
-            rewardContentHasError: h,
+            rewardContent: x,
+            isRewardContentLoading: g,
+            rewardContentHasError: C,
             location: N,
         } = t,
-        j = m.uF.REWARD_MODAL,
-        [A, p] = s.useState(!0),
-        T = e.config.features.some((t) => G.Tz.has(t)),
-        v = s.useCallback(async () => {
-            if (T) {
+        h = d.uF.REWARD_MODAL,
+        [j, A] = s.useState(!0),
+        p = e.config.features.some((t) => G.Tz.has(t)),
+        T = s.useCallback(async () => {
+            if (p) {
                 l(), (0, c.closeAllModals)();
                 return;
             }
-            (await (0, x.f7)(e.config.ctaConfig?.link)) && (l(), (0, c.closeAllModals)());
-        }, [e.config.ctaConfig?.link, l, T]);
-    if (h) return (0, n.jsx)(B, { onClose: l, transitionState: a });
-    let I = C || A;
-    return (0, n.jsx)(f.R, {
+            (await (0, f.f7)(e.config.ctaConfig?.link)) && (l(), (0, c.closeAllModals)());
+        }, [e.config.ctaConfig?.link, l, p]);
+    if (C) return (0, n.jsx)(B, { onClose: l, transitionState: a });
+    let v = g || j;
+    return (0, n.jsx)(m.R, {
         questOrQuests: e,
-        questContent: j,
+        questContent: h,
         sourceQuestContent: i,
         children: (t) =>
-            (0, n.jsxs)(n.Fragment, {
+            (0, n.jsxs)(o.EO, {
+                "data-migration-pending": !0,
+                transitionState: a,
+                size: o.rI.DYNAMIC,
+                className: J.yl,
+                "aria-label": v ? Y.intl.string(Y.t.ZTNur7) : void 0,
+                parentComponent: "QuestRewardModalBase",
                 children: [
-                    I ? (0, n.jsx)(o.y, { className: X.u1, type: o.y.Type.WANDERING_CUBES }) : null,
+                    (0, n.jsx)("div", {
+                        className: J.b,
+                        children: (0, n.jsx)(r.J, { size: "xs", variant: "overlay-secondary", onClick: l }),
+                    }),
+                    v ? (0, n.jsx)(u.y, { className: J.u1, type: u.y.Type.WANDERING_CUBES }) : null,
                     (0, n.jsx)("div", {
                         ref: t,
-                        style: { visibility: I ? "hidden" : "visible" },
-                        children: (0, n.jsxs)(u.EO, {
-                            "data-migration-pending": !0,
-                            transitionState: I ? d.ip.HIDDEN : a,
-                            size: u.rI.DYNAMIC,
-                            className: X.yl,
-                            parentComponent: "QuestRewardModalBase",
+                        className: J.BM,
+                        style: { visibility: v ? "hidden" : "visible" },
+                        children: (0, n.jsxs)("div", {
+                            className: J.jE,
                             children: [
+                                (0, n.jsx)("div", { className: J._H, children: x }),
                                 (0, n.jsx)("div", {
-                                    className: X.b,
-                                    children: (0, n.jsx)(r.J, { size: "xs", variant: "overlay-secondary", onClick: l }),
-                                }),
-                                (0, n.jsxs)("div", {
-                                    className: X.jE,
-                                    children: [
-                                        (0, n.jsx)("div", { className: X._H, children: g }),
-                                        (0, n.jsx)("div", {
-                                            className: X.xK,
-                                            children: (0, n.jsx)(J, {
-                                                quest: e,
-                                                sourceQuestContent: i,
-                                                onLoadComplete: () => p(!1),
-                                                preCtaClick: v,
-                                                location: N,
-                                            }),
-                                        }),
-                                    ],
+                                    className: J.xK,
+                                    children: (0, n.jsx)(Z, {
+                                        quest: e,
+                                        sourceQuestContent: i,
+                                        onLoadComplete: () => A(!1),
+                                        preCtaClick: T,
+                                        location: N,
+                                    }),
                                 }),
                             ],
                         }),
