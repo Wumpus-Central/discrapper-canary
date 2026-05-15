@@ -1,4 +1,4 @@
-a.d(t, { default: () => N }), a(323874), a(14289), a(35956);
+a.d(t, { default: () => S }), a(323874), a(14289), a(35956);
 var n = a(627968),
     i = a(64700),
     l = a(503698),
@@ -7,39 +7,40 @@ var n = a(627968),
     r = a(20742),
     p = a(373495),
     c = a(192308),
-    h = a(289873),
-    u = a(793574),
-    m = a(688810),
-    d = a(622142),
-    A = a(702211),
-    f = a(699576),
-    w = a(174459),
-    _ = a(925895),
-    g = a(652215);
-let $ = /^\/([a-zA-Z0-9-_]+\/[a-z0-9-%]+\.gif)$/,
-    y = /^\/(media\/(?:v1\.[a-zA-Z0-9=&_-]+\/)?[a-zA-Z0-9]+\/[a-zA-Z0-9_-]+\.(gif|webp|mp4))$/,
-    R = /^\/([a-zA-Z0-9/_-]+\.(gif|webp|webm|mp4|png))$/,
-    E = new Set(["media.tenor.com", "media.tenor.co", "c.tenor.com"]),
-    j = new Set(["static.klipy.com"]);
-var x = a(339984),
-    b = a(375708),
-    I = a(877774);
-function N(e) {
-    let { transitionState: t, onClose: l, onComplete: N, uploadType: S, showUpsellHeader: T, analyticsPage: L } = e,
-        [C, G] = i.useState(!1),
+    h = a(707554),
+    u = a(289873),
+    m = a(793574),
+    d = a(688810),
+    A = a(622142),
+    f = a(702211),
+    w = a(699576),
+    _ = a(174459),
+    g = a(925895),
+    $ = a(652215);
+let y = /^\/([a-zA-Z0-9-_]+\/[a-z0-9-%]+\.gif)$/,
+    R = /^\/(media\/(?:v1\.[a-zA-Z0-9=&_-]+\/)?[a-zA-Z0-9]+\/[a-zA-Z0-9_-]+\.(gif|webp|mp4))$/,
+    j = /^\/([a-zA-Z0-9/_-]+\.(gif|webp|webm|mp4|png))$/,
+    x = new Set(["media.tenor.com", "media.tenor.co", "c.tenor.com"]),
+    E = new Set(["static.klipy.com"]);
+var b = a(339984),
+    I = a(375708),
+    N = a(877774);
+function S(e) {
+    let { transitionState: t, onClose: l, onComplete: S, uploadType: T, showUpsellHeader: L, analyticsPage: C } = e,
+        [F, G] = i.useState(!1),
         P = (0, p.k)(),
-        { analyticsLocations: F } = (0, m.Ay)(u.A.GIF_PICKER);
-    async function k(e) {
+        { analyticsLocations: k } = (0, d.Ay)(m.A.GIF_PICKER);
+    async function H(e) {
         let t,
             { gifSrc: i } = e;
-        if (null == i || C) return;
+        if (null == i || F) return;
         G(!0);
         let o = (function (e) {
                 let t = new URL(`${window.location.protocol}${e}`),
                     { ASSET_ENDPOINT: a } = window.GLOBAL_ENV;
-                if (E.has(t.hostname)) {
-                    if (null == t.pathname.match($)) throw Error("Unexpected Tenor GIF path.");
-                    let e = `${g.Rsh.TENOR_ASSET_PATH}${t.pathname}`;
+                if (x.has(t.hostname)) {
+                    if (null == t.pathname.match(y)) throw Error("Unexpected Tenor GIF path.");
+                    let e = `${$.Rsh.TENOR_ASSET_PATH}${t.pathname}`;
                     return `${location.protocol}${a}${e}`;
                 }
                 if (
@@ -48,13 +49,13 @@ function N(e) {
                         return "giphy.com" === t || t.endsWith(".giphy.com");
                     })(t)
                 ) {
-                    if (null == t.pathname.match(y)) throw Error("Unexpected Giphy GIF path.");
-                    let e = `${g.Rsh.GIPHY_ASSET_PATH}${t.pathname}`;
+                    if (null == t.pathname.match(R)) throw Error("Unexpected Giphy GIF path.");
+                    let e = `${$.Rsh.GIPHY_ASSET_PATH}${t.pathname}`;
                     return `${location.protocol}${a}${e}`;
                 }
-                if (j.has(t.hostname)) {
-                    if (null == t.pathname.match(R)) throw Error("Unexpected Klipy GIF path.");
-                    let e = `${g.Rsh.KLIPY_ASSET_PATH}${t.pathname}`;
+                if (E.has(t.hostname)) {
+                    if (null == t.pathname.match(j)) throw Error("Unexpected Klipy GIF path.");
+                    let e = `${$.Rsh.KLIPY_ASSET_PATH}${t.pathname}`;
                     return `${location.protocol}${a}${e}`;
                 }
                 return `https://${t.hostname}${t.pathname}${t.search}`;
@@ -85,7 +86,7 @@ function N(e) {
             (0, c.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        a.e("43662"),
+                        a.e("53908"),
                         a.e("48804"),
                         a.e("50342"),
                         a.e("7406"),
@@ -97,9 +98,9 @@ function N(e) {
                         (0, n.jsx)(e, {
                             imageUri: o,
                             file: new File([r], u, { type: p }),
-                            onCrop: N,
-                            uploadType: S,
-                            showUpsellHeader: T,
+                            onCrop: S,
+                            uploadType: T,
+                            showUpsellHeader: L,
                             ...t,
                         });
                 },
@@ -107,45 +108,49 @@ function N(e) {
             );
     }
     i.useEffect(() => {
-        w.default.track(g.HAw.OPEN_MODAL, {
-            type: g.JJy.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-            location_stack: F,
-            location: { page: L },
+        _.default.track($.HAw.OPEN_MODAL, {
+            type: $.JJy.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+            location_stack: k,
+            location: { page: C },
         });
-    }, [F, L]);
-    let H = S === x.HL.AVATAR || S === x.HL.BANNER,
-        O = (0, A.b)(!H),
-        U = b.intl.string(b.t["xsC+/y"]);
-    return (0, n.jsx)(m.f5, {
-        value: F,
+    }, [k, C]);
+    let O = T === b.HL.AVATAR || T === b.HL.BANNER,
+        U = (0, f.b)(!O),
+        v = I.intl.string(I.t["xsC+/y"]);
+    return (0, n.jsx)(d.f5, {
+        value: k,
         children: (0, n.jsxs)(s.d, {
             onClose: l,
             transitionState: t,
-            "aria-label": U,
+            "aria-label": v,
             children: [
-                (0, n.jsx)(r.rQ, { title: U }),
-                T &&
-                    !O &&
-                    (0, n.jsx)("div", {
-                        className: I.It,
-                        children: (0, n.jsx)(_.A, {
-                            type: S,
-                            analyticsPage: L,
-                            analyticsSection: g.JJy.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-                            isGIF: !0,
-                        }),
-                    }),
-                (0, n.jsxs)("div", {
-                    className: I.SD,
+                (0, n.jsx)(r.rQ, { title: v }),
+                (0, n.jsxs)(h.F, {
                     children: [
-                        (0, n.jsx)(d.A, {
-                            className: o()(I.XC, { [I.bX]: C }),
-                            onSelectGIF: k,
-                            headingColor: "text-subtle",
-                            hideFavorites: !0,
+                        L &&
+                            !U &&
+                            (0, n.jsx)("div", {
+                                className: N.It,
+                                children: (0, n.jsx)(g.A, {
+                                    type: T,
+                                    analyticsPage: C,
+                                    analyticsSection: $.JJy.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+                                    isGIF: !0,
+                                }),
+                            }),
+                        (0, n.jsxs)("div", {
+                            className: N.SD,
+                            children: [
+                                (0, n.jsx)(A.A, {
+                                    className: o()(N.XC, { [N.bX]: F }),
+                                    onSelectGIF: H,
+                                    headingColor: "text-subtle",
+                                    hideFavorites: !0,
+                                }),
+                                F && (0, n.jsx)(u.y, { className: N.u1 }),
+                                L && U && (0, n.jsx)(w.A, { uploadType: T, showUpsell: !0, className: N.Kt }),
+                            ],
                         }),
-                        C && (0, n.jsx)(h.y, { className: I.u1 }),
-                        T && O && (0, n.jsx)(f.A, { uploadType: S, showUpsell: !0, className: I.Kt }),
                     ],
                 }),
             ],
