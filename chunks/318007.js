@@ -1,75 +1,60 @@
-n.d(t, { t: () => E });
-var l = n(627968),
-    a = n(64700),
-    i = n(503698),
-    r = n.n(i),
-    s = n(785007),
-    o = n(289873),
-    u = n(937008),
-    c = n(650588),
-    d = n(45938),
-    p = n(242874),
-    m = n(75825),
-    h = n(238017),
-    C = n(985018),
-    A = n(92814);
-let E = (e) => {
+n.d(t, { t: () => h });
+var l = n(627968);
+n(64700);
+var a = n(503698),
+    i = n.n(a),
+    r = n(289873),
+    s = n(937008),
+    o = n(650588),
+    u = n(45938),
+    c = n(242874),
+    d = n(75825),
+    p = n(238017),
+    m = n(92814);
+let h = (e) => {
     let { isShopGift: t } = e,
         {
             giftRecipient: n,
-            selectedGiftStyle: i,
-            emojiConfetti: E,
-            soundEffect: y,
-            setEmojiConfetti: P,
-            setSoundEffect: S,
-        } = (0, u.Pv)(),
-        [_] = a.useState(!1),
-        T = a.useRef(null),
-        { ref: f, ...N } = (0, s._u)({ orientation: "horizontal" }),
-        x = (0, d.lo)(n, t),
-        I = x === d.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        g = x !== d.tB.DEFAULT;
+            selectedGiftStyle: a,
+            emojiConfetti: h,
+            soundEffect: C,
+            setEmojiConfetti: A,
+            setSoundEffect: y,
+        } = (0, s.Pv)(),
+        E = (0, u.lo)(n, t),
+        P = E === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        S = E !== u.tB.DEFAULT;
     return (0, l.jsxs)("div", {
         children: [
-            g &&
+            S &&
                 (0, l.jsxs)("div", {
-                    className: A.Os,
+                    className: m.Os,
                     children: [
-                        null != i
-                            ? (0, l.jsx)(m.A, {
-                                  giftStyle: i,
-                                  defaultAnimationState: p.oA.ACTION,
-                                  idleAnimationState: p.oA.LOOP,
+                        null != a
+                            ? (0, l.jsx)(d.A, {
+                                  giftStyle: a,
+                                  defaultAnimationState: c.oA.ACTION,
+                                  idleAnimationState: c.oA.LOOP,
                                   shouldAnimate: !0,
-                                  className: A.lY,
+                                  className: m.lY,
                               })
-                            : (0, l.jsx)(o.y, { className: A.u1 }),
-                        I &&
+                            : (0, l.jsx)(r.y, { className: m.u1 }),
+                        P &&
                             (0, l.jsxs)("div", {
-                                className: r()(A.b7, A.Ow),
+                                className: i()(m.b7, m.Ow),
                                 children: [
-                                    (0, l.jsx)(c.A, {
-                                        sound: y,
+                                    (0, l.jsx)(o.A, {
+                                        sound: C,
                                         onSelect: (e) => {
-                                            null != S && S(null == e ? void 0 : e);
+                                            null != y && y(null == e ? void 0 : e);
                                         },
                                     }),
-                                    (0, l.jsx)(h.A, { setEmojiConfetti: P, emojiConfetti: null == E ? void 0 : E }),
+                                    (0, l.jsx)(p.A, { setEmojiConfetti: A, emojiConfetti: null == h ? void 0 : h }),
                                 ],
                             }),
                     ],
                 }),
-            (0, l.jsx)("div", {
-                tabIndex: null != i || _ ? void 0 : 0,
-                onFocus: (e) => {
-                    e.target === e.currentTarget && T.current?.focus();
-                },
-                className: A.Qh,
-                "aria-label": C.intl.string(C.t.v54NrN),
-                ref: f,
-                ...N,
-            }),
-            (0, l.jsx)("div", { className: A.__invalid_selectPlanDivider }),
+            (0, l.jsx)("div", { className: m.__invalid_selectPlanDivider }),
         ],
     });
 };
