@@ -28,7 +28,7 @@ let S = new l.A("GuildSettingsActionCreators"),
             await Promise.all([
                 n.e("25719"),
                 n.e("32824"),
-                n.e("22308"),
+                n.e("4554"),
                 n.e("55771"),
                 n.e("28951"),
                 n.e("60361"),
