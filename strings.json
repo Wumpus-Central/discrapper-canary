@@ -19127,6 +19127,7 @@
   "T1lMSl": "Allow requests to speak in these Stage channels. Stage moderators manually approve or deny each request.",
   "uzlYFE": "Allow requests to speak in this Stage channel. Stage moderators manually approve or deny each request.",
   "OLJAk3": "Search permissions",
+  "I+eHql": "{count, plural, =0 {No permissions found} one { permission found} other { permissions found} }",
   "3uI5CX": "Advanced Permissions",
   "rrh/W6": "Apps Permissions",
   "TS7Cnb": "Forum Channel Permissions",
