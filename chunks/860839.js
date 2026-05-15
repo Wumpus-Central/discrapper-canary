@@ -1,4 +1,4 @@
-r.d(t, { qu: () => ev, Nz: () => eA, pw: () => eE, ZP: () => eR, Lg: () => eI, nH: () => ef });
+r.d(t, { qu: () => eE, Nz: () => eA, pw: () => ev, ZP: () => eR, Lg: () => eI, nH: () => ef });
 var i,
     n = r(627968),
     a = r(64700),
@@ -18,16 +18,16 @@ var i,
     f = r(224016),
     j = r(217392),
     A = r(960851),
-    R = r(367319),
+    R = r(526292),
     _ = r(552736),
-    E = r(778712),
-    v = r(775602),
+    v = r(778712),
+    E = r(775602),
     P = r(937008),
     N = r(380619),
     C = r(298305),
     y = r(731113);
 function M() {
-    let e = (0, o.bG)([v.A], () => v.A.useReducedMotion),
+    let e = (0, o.bG)([E.A], () => E.A.useReducedMotion),
         { claimableRewards: t } = (0, P.Pv)(),
         r = (0, _.A)(),
         i = r?.planSelection;
@@ -55,7 +55,7 @@ function M() {
                 children: (0, n.jsx)(C.A, {
                     maxRewardImageSrc: i.getImageUrl(!0, e),
                     claimableRewards: t,
-                    size: E._3.SIZE_80,
+                    size: v._3.SIZE_80,
                 }),
             }),
         ],
@@ -75,7 +75,7 @@ var b = r(286320),
 function V() {
     let e = (0, b.b)().slice(0, 3),
         t = e[0],
-        { avatarSrc: r, eventHandlers: i } = (0, H.A)({ userId: t?.id, size: E._3.SIZE_24, animateOnHover: !0 }),
+        { avatarSrc: r, eventHandlers: i } = (0, H.A)({ userId: t?.id, size: v._3.SIZE_24, animateOnHover: !0 }),
         s = (e) => (null != e.globalName ? e.globalName : e.username),
         l = a.useMemo(
             () =>
@@ -95,7 +95,7 @@ function V() {
                       className: F.__invalid_icon,
                       src: r,
                       "aria-label": t.username,
-                      size: E._3.SIZE_24,
+                      size: v._3.SIZE_24,
                       ...i,
                   }),
                   (0, n.jsx)(d.E, { className: F.Qq, variant: "text-sm/normal", color: "always-white", children: l }),
@@ -111,7 +111,7 @@ var B = r(214947),
     Y = r(460905),
     q = r(183623),
     Q = r(861004),
-    $ = r(927578),
+    $ = r(428262),
     X = r(788868),
     ee = r(88001),
     et = r(466919);
@@ -333,6 +333,7 @@ function ej(e) {
                       className: ep.wp,
                       children: (0, n.jsx)(u._, {
                           src: "/assets/dc589b1488adf4e7.svg",
+                          alt: k.intl.string(k.t["02VBaY"]),
                           mediaLayoutType: ex.dG.RESPONSIVE,
                           width: 270,
                           height: 242,
@@ -443,35 +444,35 @@ function e_(e) {
             showPromotionalGiftBanner: T = !1,
         } = e,
         j = (0, o.bG)([I.A], () => I.A.getPremiumTypeSubscription()),
-        E = (0, o.bG)([h.default], () => h.default.getCurrentUser()),
-        v = (0, U.V)(),
-        P = v?.subscription_trial?.sku_id,
-        N = j?.hasActiveTrial ? E?.premiumType : null,
+        v = (0, o.bG)([h.default], () => h.default.getCurrentUser()),
+        E = (0, U.V)(),
+        P = E?.subscription_trial?.sku_id,
+        N = j?.hasActiveTrial ? v?.premiumType : null,
         C = (0, R.ar)(),
         y = (0, S.O)(),
         b = (0, R.k5)(),
         D = null != P || null != N ? X.Vk.PREMIUM_TRIAL : null != y || b ? X.Vk.PREMIUM_DISCOUNT : null,
         H = (0, A.cg)(),
-        k = !g && C,
-        F = (0, _.A)()?.planSelection,
-        V = F?.getBackgroundImageUrl?.(),
-        B = F?.getCardImageUrl?.(),
-        Z = (0, O._)(),
-        W = (0, c.q)((0, m.Ay)()),
-        J = W ? L.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE : L.at.PREMIUM_TIER_2_WHITE_FILL,
-        K = (0, L.rm)(b, N, y, v, P),
-        z = k && !W ? ep.on : void 0;
+        F = !g && C,
+        V = (0, _.A)()?.planSelection,
+        B = V?.getBackgroundImageUrl?.(),
+        Z = V?.getCardImageUrl?.(),
+        W = (0, O._)(),
+        J = (0, c.q)((0, m.Ay)()),
+        K = J ? L.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL_LIGHT_MODE : L.at.PREMIUM_TIER_2_WHITE_FILL,
+        z = (0, L.rm)(b, N, y, E, P),
+        Y = F && !J ? ep.on : void 0;
     return (0, n.jsxs)("div", {
-        className: l()(ep.Nr, ep.hA, s, { [ep.J5]: k, [ep.lr]: k, [ep.jx]: T, [ep.ud]: T && null != B }),
+        className: l()(ep.Nr, ep.hA, s, { [ep.J5]: F, [ep.lr]: F, [ep.jx]: T, [ep.ud]: T && null != Z }),
         children: [
-            T && null !== B && (0, n.jsx)("img", { className: ep.Cr, alt: "", src: B }),
-            T && null !== V && (0, n.jsx)("img", { className: ep.gx, alt: "", src: V }),
+            T && null !== Z && (0, n.jsx)("img", { className: ep.Cr, alt: "", src: Z }),
+            T && null !== B && (0, n.jsx)("img", { className: ep.gx, alt: "", src: B }),
             !g &&
-                null != K &&
+                null != z &&
                 (0, n.jsxs)(n.Fragment, {
                     children: [
-                        (0, n.jsx)(L.e4, { text: K, className: ep.LW, colorOptions: J }),
-                        (0, n.jsx)("div", { className: z }),
+                        (0, n.jsx)(L.e4, { text: z, className: ep.LW, colorOptions: K }),
+                        (0, n.jsx)("div", { className: Y }),
                     ],
                 }),
             t
@@ -479,6 +480,7 @@ function e_(e) {
                       className: ep.wp,
                       children: (0, n.jsx)(u._, {
                           src: "/assets/e958f5c07cd6f090.svg",
+                          alt: k.intl.string(k.t.XP8vWR),
                           mediaLayoutType: ex.dG.RESPONSIVE,
                           width: 270,
                           height: 242,
@@ -499,7 +501,7 @@ function e_(e) {
                                     children: (0, n.jsx)(d.E, {
                                         variant: "text-xs/bold",
                                         className: ep.zu,
-                                        children: Z,
+                                        children: W,
                                     }),
                                 }),
                             (0, n.jsx)(eg.A, {
@@ -523,13 +525,13 @@ function e_(e) {
         ],
     });
 }
-let eE = (e) => (t) => {
+let ev = (e) => (t) => {
     null != e && ("function" == typeof e ? e(t) : e.hasOwnProperty("current") && (e.current = t));
 };
-function ev(e) {
+function eE(e) {
     let { innerRef: t, className: r, tier0CTAButton: i, tier2CTAButton: a } = e,
         { analyticsLocations: s } = (0, x.Ay)(g.A.PREMIUM_MARKETING_TIER_CARD),
-        o = eE(t);
+        o = ev(t);
     return (0, n.jsx)(x.f5, {
         value: s,
         children: (0, n.jsxs)("div", {
