@@ -12343,6 +12343,8 @@
   "fgSHf8": "Event Sound Pack",
   "Ym2Ri6": "Home",
   "/l0Ezq": "Home Actions",
+  "OqlmU6": "New in $[!!{channelName}!!]({{channelHook}})",
+  "FgLb9n": "New in $[!!{channelName}!!]({{channelHook}}) and {count, plural, one { other channel} other { other channels} }",
   "vGclWm": "+ {count} more",
   "8sNvNn": "Hours",
   "DEn7nu": "Hello. Beep. Boop. If you wanna invite friends to this server, click the server name in the top left and select \"!!{invitePeople}!!\". Beep!",
