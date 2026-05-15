@@ -15603,11 +15603,14 @@ function gj() {
 function gN(e) {
     let { guildId: t, handleOnboardingToggle: n } = e,
         i = gd(t),
-        l = (0, L.bG)([n8.A], () => n8.A.getEnabled(t));
+        l = (0, L.bG)([n8.A], () => n8.A.getEnabled(t)),
+        s = l ? el.intl.string(el.t.MBdTCZ) : el.intl.string(el.t["Wslim+"]);
     return (0, A.jsx)("div", {
         className: gx.NQ,
+        role: "group",
+        "aria-label": s,
         children: (0, A.jsx)(V.d, {
-            label: l ? el.intl.string(el.t.MBdTCZ) : el.intl.string(el.t["Wslim+"]),
+            label: s,
             description: l ? el.intl.string(el.t.LokpLi) : el.intl.string(el.t.nBIyJp),
             checked: l,
             onChange: () => n(!1),
