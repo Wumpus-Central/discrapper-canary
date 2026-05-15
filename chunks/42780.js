@@ -1,4 +1,4 @@
-i.d(l, { Ay: () => h, CG: () => x, J$: () => m });
+i.d(l, { Ay: () => v, CG: () => h, J$: () => m });
 var t = i(627968);
 i(64700);
 var n = i(503698),
@@ -14,38 +14,39 @@ var n = i(503698),
     C = i(86376),
     E = i(649640),
     _ = i(339984),
-    N = i(890653);
+    N = i(375708),
+    g = i(890653);
 function m(e) {
     let { profile: l, className: i } = e,
         n = (0, E._3)(l);
     return null != n
-        ? (0, t.jsx)("div", { className: s()(i, N.vK), style: { background: n } })
-        : (0, t.jsx)(g, { profile: l, className: i });
+        ? (0, t.jsx)("div", { className: s()(i, g.vK), style: { background: n } })
+        : (0, t.jsx)(x, { profile: l, className: i });
 }
-function g(e) {
+function x(e) {
     let { profile: l, className: i } = e,
         n = (0, E.b2)(),
         a = (0, E.aG)({ profile: l, defaultColor: n.hex(), forceDefaultColor: null != l.brandColorPrimary }),
         r = l.brandColorPrimary ?? a;
-    return (0, t.jsx)("div", { className: s()(i, N.vK), style: { background: (0, E.n6)(r) } });
+    return (0, t.jsx)("div", { className: s()(i, g.vK), style: { background: (0, E.n6)(r) } });
 }
-function x(e) {
+function h(e) {
     let { profile: l, onIconChange: n } = e;
     return null == n
         ? (0, t.jsx)("div", {
-              className: N.H,
+              className: g.H,
               children: (0, t.jsx)(c.Ay, {
                   mask: c.hW.CLAN_ICON,
                   width: 70,
                   height: 70,
                   children: (0, t.jsx)("div", {
-                      className: N.R3,
+                      className: g.R3,
                       children: (0, t.jsx)(d.j, { guildId: l.id, guildName: l.name, guildIcon: l.icon, iconSize: 64 }),
                   }),
               }),
           })
         : (0, t.jsx)("div", {
-              className: N.H,
+              className: g.H,
               children: (0, t.jsx)(r.vN, {
                   within: !0,
                   children: (0, t.jsx)(c.Ay, {
@@ -53,13 +54,13 @@ function x(e) {
                       width: 70,
                       height: 70,
                       children: (0, t.jsxs)("div", {
-                          className: s()(N.R3, N.vk),
+                          className: s()(g.R3, g.vk),
                           children: [
                               (0, t.jsx)(d.j, { guildId: l.id, guildName: l.name, guildIcon: l.icon, iconSize: 64 }),
-                              (0, t.jsx)("div", { className: N.Lw }),
+                              (0, t.jsx)("div", { className: g.Lw }),
                               (0, t.jsx)(u.R, {
                                   size: "custom",
-                                  className: N.QY,
+                                  className: g.QY,
                                   width: 20,
                                   height: 20,
                                   color: "white",
@@ -106,6 +107,7 @@ function x(e) {
                                                   });
                                           }, {});
                                   },
+                                  "aria-label": N.intl.string(N.t.r3JdsT),
                               }),
                           ],
                       }),
@@ -113,7 +115,7 @@ function x(e) {
               }),
           });
 }
-function h(e) {
+function v(e) {
     let {
             profile: l,
             onIconChange: i,
@@ -127,13 +129,13 @@ function h(e) {
     return (
         null != r ? (o = r) : a || (o = (0, t.jsx)(A.A, { profile: l, onComplete: u })),
         (0, t.jsxs)("div", {
-            className: s()(N.kL, n),
+            className: s()(g.kL, n),
             children: [
                 (0, t.jsx)(m, { profile: l }),
-                (0, t.jsx)(x, { onIconChange: i, profile: l }),
+                (0, t.jsx)(h, { onIconChange: i, profile: l }),
                 (0, t.jsx)(C.A, { profile: l, disableGuildNameClick: c }),
                 (0, t.jsx)(I.P, { profile: l }),
-                null != o && (0, t.jsx)("div", { className: N.UD, children: o }),
+                null != o && (0, t.jsx)("div", { className: g.UD, children: o }),
             ],
         })
     );

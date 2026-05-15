@@ -14,6 +14,7 @@ e.exports = {
     AD: "featureIcon__7dd5e",
     Uh: "featureHeader__7dd5e",
     A3: "featuredText__7dd5e",
+    BP: "infoIconWrapper__7dd5e",
     G: "infoIcon__7dd5e",
     x6: "button__7dd5e",
 };

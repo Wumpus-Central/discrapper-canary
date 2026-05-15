@@ -120,7 +120,7 @@ function D(e) {
                               }),
                     ],
                 }),
-                (0, i.jsx)(_.A, { children: C.intl.format(C.t.qH8uFW, { count: D }) }),
+                (0, i.jsx)(_.A, { "aria-live": "polite", children: C.intl.format(C.t.qH8uFW, { count: D }) }),
                 O && !L
                     ? (0, i.jsx)(R, { className: b.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: D })
                     : null,

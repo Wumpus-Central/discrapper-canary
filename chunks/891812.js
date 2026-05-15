@@ -10279,11 +10279,16 @@ let cg = [
                                     infoHook: () =>
                                         (0, A.jsx)(tM.m, {
                                             text: el.intl.string(el.t.kPJlTh),
-                                            "aria-label": el.intl.string(el.t.kPJlTh),
-                                            children: (0, A.jsx)(lC.m, {
-                                                size: "xs",
-                                                color: "currentColor",
-                                                className: cu.G,
+                                            children: (0, A.jsx)("span", {
+                                                tabIndex: 0,
+                                                role: "img",
+                                                "aria-label": el.intl.string(el.t.kPJlTh),
+                                                className: cu.BP,
+                                                children: (0, A.jsx)(lC.m, {
+                                                    size: "xs",
+                                                    color: "currentColor",
+                                                    className: cu.G,
+                                                }),
                                             }),
                                         }),
                                     featureHook: (e, t) => (0, A.jsx)("strong", { className: cu.A3, children: e }, t),
@@ -17211,7 +17216,7 @@ function xh(e) {
             (0, A.jsxs)("div", {
                 className: xg.gn,
                 children: [
-                    (0, A.jsx)(G.E, {
+                    (0, A.jsx)(O.D, {
                         className: xg.Qw,
                         color: "text-strong",
                         variant: "text-md/semibold",
