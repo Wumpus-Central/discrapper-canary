@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => d, x: () => c });
-var r = n(575593),
-    i = n(384726),
+n.d(t, { A: () => c, x: () => d });
+var i = n(575593),
+    r = n(384726),
     s = n(696444),
     a = n(474012),
     o = n(931772),
     l = n(758836),
     u = n(652215);
-class d extends o.A {
+class c extends o.A {
     prices;
     type;
     premiumType;
@@ -20,6 +20,8 @@ class d extends o.A {
     variantGroupStoreListingId;
     googleSkuIds;
     eligibleOffers;
+    badgeOverride;
+    hideBadge;
     constructor(e) {
         super(e),
             (this.summary = e.summary),
@@ -33,30 +35,34 @@ class d extends o.A {
             (this.previewAssets = e.previewAssets),
             (this.googleSkuIds = e.googleSkuIds),
             (this.variants = e.variants),
-            (this.eligibleOffers = e.eligibleOffers);
+            (this.eligibleOffers = e.eligibleOffers),
+            (this.badgeOverride = e.badgeOverride),
+            (this.hideBadge = e.hideBadge);
     }
     static fromServer(e) {
         let {
             type: t,
             premium_type: n,
-            category_sku_id: r,
+            category_sku_id: i,
             prices: o,
             bundled_products: _,
             preview_assets: f,
-            variants: E,
-            ...h
+            variants: h,
+            badge_override: p,
+            hide_badge: E,
+            ...m
         } = e;
-        return new d({
-            ...super.fromServer(h),
+        return new c({
+            ...super.fromServer(m),
             type: t,
             premiumType: n === u.oA2 ? null : n,
-            categorySkuId: r,
+            categorySkuId: i,
             isCategoryReward: l.MS.some((e) => {
                 let { rewardSkuId: t } = e;
-                return t === h.sku_id;
+                return t === m.sku_id;
             }),
-            prices: (0, i.A)(o),
-            items: (0, a.K)(h.items),
+            prices: (0, r.A)(o),
+            items: (0, a.K)(m.items),
             bundledProducts: _?.map(s.A.fromServer),
             previewAssets:
                 null != f
@@ -67,9 +73,11 @@ class d extends o.A {
                           bgAnimated: f.bg_animated,
                       }
                     : void 0,
-            variants: E?.map(c.fromServer),
-            googleSkuIds: h.google_sku_ids,
-            eligibleOffers: h.eligible_offers,
+            variants: h?.map(d.fromServer),
+            googleSkuIds: m.google_sku_ids,
+            eligibleOffers: m.eligible_offers,
+            badgeOverride: p,
+            hideBadge: E,
         });
     }
     static fromStorefrontProductRecord(e) {
@@ -77,15 +85,15 @@ class d extends o.A {
         if (null == t) return;
         let n = t.tenantMetadata?.collectibles;
         if (null == n) return;
-        let i = e.skus.length > 1 ? r.R.VARIANTS_GROUP : n.type,
+        let r = e.skus.length > 1 ? i.R.VARIANTS_GROUP : n.type,
             { items: o, item: _ } = (0, a.T)(t) ?? {};
-        return new d({
+        return new c({
             storeListingId: t.id,
             skuId: t.id,
             name: e.name,
             summary: e.summary,
             styles: e.primaryCollectionStyles,
-            type: i,
+            type: r,
             premiumType: n.premiumType === u.oA2 ? null : n.premiumType,
             items: o ?? [_].filter((e) => null != e),
             categorySkuId: e.primaryCollectionId ?? n.categorySkuId ?? "",
@@ -95,27 +103,27 @@ class d extends o.A {
             }),
             prices: t.prices,
             variants:
-                i === r.R.VARIANTS_GROUP
+                r === i.R.VARIANTS_GROUP
                     ? e.skus
                           .map((n) => {
-                              let r = n.tenantMetadata?.collectibles;
-                              if (null == r) return null;
-                              let { items: i, item: s } = (0, a.T)(n) ?? {},
+                              let i = n.tenantMetadata?.collectibles;
+                              if (null == i) return null;
+                              let { items: r, item: s } = (0, a.T)(n) ?? {},
                                   [o] = n.selectedOptions;
-                              return new c({
+                              return new d({
                                   baseVariantName: e.name,
                                   baseVariantSkuId: t.id,
                                   variantLabel: o?.optionValue ?? "",
-                                  variantValue: r.optionSelectorDisplayValue ?? "",
+                                  variantValue: i.optionSelectorDisplayValue ?? "",
                                   storeListingId: n.id,
                                   skuId: n.id,
                                   name: n.name,
                                   summary: n.summary,
                                   styles: void 0,
-                                  type: r.type,
-                                  premiumType: r.premiumType === u.oA2 ? null : r.premiumType,
-                                  items: i ?? [s].filter((e) => null != e),
-                                  categorySkuId: e.primaryCollectionId ?? r.categorySkuId ?? "",
+                                  type: i.type,
+                                  premiumType: i.premiumType === u.oA2 ? null : i.premiumType,
+                                  items: r ?? [s].filter((e) => null != e),
+                                  categorySkuId: e.primaryCollectionId ?? i.categorySkuId ?? "",
                                   isCategoryReward: l.MS.some((e) => {
                                       let { rewardSkuId: t } = e;
                                       return t === n.id;
@@ -152,7 +160,7 @@ class d extends o.A {
         });
     }
 }
-class c extends d {
+class d extends c {
     baseVariantName;
     baseVariantSkuId;
     variantLabel;
@@ -165,13 +173,13 @@ class c extends d {
             (this.variantValue = e.variantValue);
     }
     static fromServer(e) {
-        let { base_variant_name: t, base_variant_sku_id: n, variant_label: r, variant_value: i, ...s } = e;
-        return new c({
+        let { base_variant_name: t, base_variant_sku_id: n, variant_label: i, variant_value: r, ...s } = e;
+        return new d({
             ...super.fromServer(s),
             baseVariantName: t,
             baseVariantSkuId: n,
-            variantLabel: r,
-            variantValue: i,
+            variantLabel: i,
+            variantValue: r,
         });
     }
 }
