@@ -47,22 +47,22 @@ let m = new s.A("useStripePaymentElementOptions"),
         let { onSetupError: t, elementsAppearanceOptions: n = {} } = e,
             [a, i] = l.useState(void 0),
             [s, C] = l.useState(null),
-            [A, E] = l.useState(!0),
-            [y, P] = l.useState([]),
+            [A, y] = l.useState(!0),
+            [E, P] = l.useState([]),
             S = l.useMemo(() => {
                 let e = ["card"],
-                    t = y.find((e) => e.payment_source_type === p.he.PAYPAL);
+                    t = E.find((e) => e.payment_source_type === p.he.PAYPAL);
                 return null != t && e.push(t.custom_payment_method_id), e;
-            }, [y]),
+            }, [E]),
             { customPaymentMethods: _, customPaymentMethodIdsToSourceTypes: T } = l.useMemo(
                 () => ({
-                    customPaymentMethods: (0, d.Dd)(y),
-                    customPaymentMethodIdsToSourceTypes: y.reduce(
+                    customPaymentMethods: (0, d.Dd)(E),
+                    customPaymentMethodIdsToSourceTypes: E.reduce(
                         (e, t) => ((e[t.custom_payment_method_id] = t.payment_source_type), e),
                         {},
                     ),
                 }),
-                [y],
+                [E],
             ),
             f = l.useCallback(async () => {
                 try {
@@ -74,33 +74,34 @@ let m = new s.A("useStripePaymentElementOptions"),
                         m.error("there was an error on setup for Payment Elements: ", e),
                         (0, o.pM)(e, { tags: { source: "payment_elements" } });
                 }
-                E(!1);
+                y(!1);
             }, [t]);
         (0, r.Ay)(() => {
             f();
         });
-        let { elementsAppearance: x, elementsAppearanceOptions: N } = h(n),
-            I = (0, u.PU)();
-        return {
-            setupError: s,
-            elementsOptions: l.useMemo(
+        let { elementsAppearance: I, elementsAppearanceOptions: N } = h(n),
+            x = (0, u.PU)(),
+            g = l.useMemo(
                 () =>
                     A
                         ? null
                         : {
                               clientSecret: a,
-                              appearance: x,
-                              locale: I,
+                              appearance: I,
+                              locale: x,
                               customPaymentMethods: _,
                               paymentMethodCreation: "manual",
                           },
-                [x, I, a, _, A],
+                [I, x, a, _, A],
             ),
-            setupIntentSecret: a,
-            customPaymentMethods: _,
-            customPaymentMethodIdsToSourceTypes: T,
-            paymentMethodOrder: S,
-            isLoading: A,
-            elementsAppearanceOptions: N,
-        };
+            v = {
+                setupError: s,
+                customPaymentMethods: _,
+                customPaymentMethodIdsToSourceTypes: T,
+                paymentMethodOrder: S,
+                elementsAppearanceOptions: N,
+            };
+        return null == a || null == g || A
+            ? { ...v, isLoading: !0, elementsOptions: g, setupIntentSecret: a }
+            : { ...v, isLoading: !1, elementsOptions: g, setupIntentSecret: a };
     };

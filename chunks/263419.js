@@ -3081,7 +3081,7 @@ let lR = new lE.A("PaymentElement.web.stories"),
                                       className: ly()(lI.o6, "joined-payment-address-elements" === o ? lI.fF : lI.u1),
                                       children: (0, s.jsxs)(lr.Elements, {
                                           stripe: d,
-                                          options: { ...p },
+                                          options: p,
                                           children: [
                                               "stripe-address-element" === o
                                                   ? (0, s.jsx)("div", {
@@ -3161,7 +3161,7 @@ var lV = l(735438),
     l$ = l(606267),
     lW = l(480642),
     lF = l(944355),
-    lz = l(460495),
+    lz = l(113214),
     lY = l(826469),
     lq = l(812745);
 let lK = {
