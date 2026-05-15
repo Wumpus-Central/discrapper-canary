@@ -189,8 +189,14 @@ let I = r.forwardRef(function (e, t) {
                 muted: f = !1,
                 level: h = 1,
                 ref: p,
+                role: E,
+                tabIndex: m,
+                "aria-label": g,
+                "aria-selected": I,
+                "aria-controls": T,
+                "aria-current": S,
             } = e,
-            E = (0, i.jsx)(c.F, {
+            N = (0, i.jsx)(c.F, {
                 forceLevel: h,
                 children: (0, i.jsx)(d.D, {
                     variant: "text-md/medium",
@@ -207,9 +213,26 @@ let I = r.forwardRef(function (e, t) {
                   onContextMenu: s,
                   onKeyDown: l,
                   className: a()(n, A.oB),
-                  children: E,
+                  role: E,
+                  tabIndex: m,
+                  "aria-label": g,
+                  "aria-selected": I,
+                  "aria-controls": T,
+                  "aria-current": S,
+                  children: N,
               })
-            : (0, i.jsx)("div", { ref: p, className: a()(n, A.oB), onContextMenu: s, onKeyDown: l, children: E });
+            : (0, i.jsx)("div", {
+                  ref: p,
+                  className: a()(n, A.oB),
+                  onContextMenu: s,
+                  onKeyDown: l,
+                  role: E,
+                  "aria-label": g,
+                  "aria-selected": I,
+                  "aria-controls": T,
+                  "aria-current": S,
+                  children: N,
+              });
     }),
     (N.Divider = S),
     (N.Caret = function (e) {

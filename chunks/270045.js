@@ -149,13 +149,17 @@ function k(e) {
                                 id: "display-disclosure",
                                 label: U.intl.string(U.t.GcsZKJ),
                                 action: () => {
-                                    (0, w.Zc)(e.quest, {
-                                        content: e.questContent,
-                                        position: e.questContentPosition,
-                                        ctaContent: C.Cy.CONTEXT_MENU_OPEN_DISCLOSURE,
-                                        impressionId: k,
-                                        sourceQuestContent: e.sourceQuestContent,
-                                    });
+                                    (0, w.Zc)(
+                                        e.quest,
+                                        {
+                                            content: e.questContent,
+                                            position: e.questContentPosition,
+                                            ctaContent: C.Cy.CONTEXT_MENU_OPEN_DISCLOSURE,
+                                            impressionId: k,
+                                            sourceQuestContent: e.sourceQuestContent,
+                                        },
+                                        e.returnRef,
+                                    );
                                 },
                             }),
                         n &&

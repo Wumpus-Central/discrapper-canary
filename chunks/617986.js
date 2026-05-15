@@ -309,7 +309,7 @@ function q(e, t, r) {
         return (n) => (0, i.jsx)(s, { ...n, quest: e, location: t, sourceQuestContent: r });
     });
 }
-function Z(e, t) {
+function Z(e, t, r) {
     (0, b.Y5)({
         questId: e.id,
         questContent: t.content,
@@ -318,10 +318,39 @@ function Z(e, t) {
         impressionId: t.impressionId,
         sourceQuestContent: t.sourceQuestContent,
     }),
-        (0, o.openModalLazy)(async () => {
-            let { default: r } = await Promise.all([n.e("99547"), n.e("78050"), n.e("132")]).then(n.bind(n, 348559));
-            return (n) => (0, i.jsx)(r, { ...n, questContent: t.content, quest: e });
-        });
+        (0, o.openModalLazy)(
+            async () => {
+                let { default: s } = await Promise.all([n.e("99547"), n.e("78050"), n.e("132")]).then(
+                    n.bind(n, 348559),
+                );
+                return (n) => (0, i.jsx)(s, { ...n, questContent: t.content, quest: e, returnRef: r });
+            },
+            {
+                onCloseCallback: () => {
+                    let e = r?.current;
+                    if (null == e) return;
+                    let t = 0,
+                        n = () => {
+                            let i;
+                            (t += 1),
+                                document.body.contains(e) &&
+                                    ((null != (i = document.activeElement) &&
+                                        document.body.contains(i) &&
+                                        null !=
+                                            i.closest(
+                                                '[data-mana-component="modal"], [role="dialog"][tabindex="-1"]',
+                                            )) ||
+                                        document.activeElement === e ||
+                                        e.focus(),
+                                    (null != document.querySelector('[data-mana-component="modal"]') ||
+                                        document.activeElement !== e) &&
+                                        t < 90 &&
+                                        requestAnimationFrame(n));
+                        };
+                    requestAnimationFrame(n);
+                },
+            },
+        );
 }
 function X(e) {
     let { fromContent: t, questId: n, forceDiscoveryQuestHomeRoute: i = !1 } = e;
@@ -359,7 +388,7 @@ function Q(e) {
 function J() {
     return Promise.all([
         n.e("54266"),
-        n.e("11040"),
+        n.e("52127"),
         n.e("42971"),
         n.e("48157"),
         n.e("57174"),

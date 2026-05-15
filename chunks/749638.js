@@ -1,154 +1,162 @@
-a.d(t, { n: () => b, S: () => j });
-var n,
-    l = a(627968),
-    i = a(64700),
-    s = a(503698),
-    r = a.n(s),
-    o = a(742589),
-    c = a(3666),
-    d = a(922016),
-    u = a(900797),
-    h = a(847374),
-    m = a(770178),
-    p = a(124589),
-    _ = a(488995),
-    g = a(985018),
-    x = a(744767);
-function A(e) {
-    let { id: t, label: a, selected: n, handleTransition: i, ...s } = e;
-    return (0, l.jsx)(o.A.Title, {
-        ...s,
-        onClick: () => i(t),
-        wrapperClassName: x.Vn,
-        className: r()(x.Mf, { [x.wH]: n }),
-        children: a,
+s.d(l, { n: () => S, S: () => g });
+var t,
+    r = s(627968),
+    a = s(64700),
+    n = s(503698),
+    i = s.n(n),
+    c = s(742589),
+    o = s(3666),
+    d = s(922016),
+    u = s(900797),
+    x = s(847374),
+    h = s(770178),
+    m = s(124589),
+    b = s(488995),
+    j = s(375708),
+    v = s(744767);
+function f(e) {
+    let { id: l, label: s, selected: t, handleTransition: a, ...n } = e;
+    return (0, r.jsx)(c.A.Title, {
+        ...n,
+        onClick: () => a(l),
+        wrapperClassName: v.Vn,
+        className: i()(v.Mf, { [v.wH]: t }),
+        role: "tab",
+        "aria-selected": t,
+        tabIndex: t ? 0 : -1,
+        children: s,
     });
 }
-function f(e) {
-    let { onTabSelect: t, tabs: a, selectedTab: n, selected: s } = e,
-        c = i.useRef(null);
-    return (0, l.jsx)(d.Y, {
-        targetElementRef: c,
+function p(e) {
+    let { onTabSelect: l, tabs: s, selectedTab: t, selected: n } = e,
+        o = a.useRef(null);
+    return (0, r.jsx)(d.Y, {
+        targetElementRef: o,
         renderPopout: (e) => {
-            let { closePopout: i } = e;
-            return (0, l.jsx)(p.A, { selectedTab: n, onClose: i, tabs: a, onTabSelect: t });
+            let { closePopout: a } = e;
+            return (0, r.jsx)(m.A, { selectedTab: t, onClose: a, tabs: s, onTabSelect: l });
         },
         position: "bottom",
         align: "left",
-        children: (e, t) => {
-            let { isShown: a } = t;
-            return (0, l.jsxs)(o.A.Title, {
+        children: (e, l) => {
+            let { isShown: s } = l;
+            return (0, r.jsxs)(c.A.Title, {
                 ...e,
-                ref: c,
-                wrapperClassName: x.Vn,
-                className: r()(x.Mf, x.OS, { [x.wH]: s }),
-                id: _.GlobalDiscoverySharedTabId.MORE,
-                "aria-label": g.intl.string(g.t["UKOtz+"]),
+                ref: o,
+                wrapperClassName: v.Vn,
+                className: i()(v.Mf, v.OS, { [v.wH]: n }),
+                id: b.GlobalDiscoverySharedTabId.MORE,
+                "aria-label": j.intl.string(j.t["UKOtz+"]),
+                role: "tab",
+                "aria-selected": n,
+                tabIndex: n ? 0 : -1,
                 children: [
-                    g.intl.string(g.t["UKOtz+"]),
-                    a ? (0, l.jsx)(u.t, { size: "xs" }) : (0, l.jsx)(h.a, { size: "xs" }),
+                    j.intl.string(j.t["UKOtz+"]),
+                    s ? (0, r.jsx)(u.t, { size: "xs" }) : (0, r.jsx)(x.a, { size: "xs" }),
                 ],
             });
         },
     });
 }
-function C(e) {
-    let { className: t, selectedTab: a, tabs: n, onTabSelect: s, onAvailableWidthChange: o } = e,
-        [d, u] = i.useState(0),
-        h = i.useRef(d),
+function A(e) {
+    let { className: l, selectedTab: s, tabs: t, onTabSelect: n, onAvailableWidthChange: c } = e,
+        [d, u] = a.useState(0),
+        x = a.useRef(d),
         {
-            lastVisibleIndex: p,
-            onItemLayout: _,
-            overflowItemsRef: g,
-            itemWidthsRef: C,
-        } = (0, c.Wv)({ items: n, itemGapPx: 24, maxLines: 1, containerWidth: d }),
-        v = i.useMemo(() => n.slice(0, p + 1), [p, n]),
-        b = i.useMemo(() => n.slice(p + 1), [p, n]),
-        j = i.useRef(null),
-        I = i.useCallback(
+            lastVisibleIndex: m,
+            onItemLayout: b,
+            overflowItemsRef: j,
+            itemWidthsRef: A,
+        } = (0, o.Wv)({ items: t, itemGapPx: 24, maxLines: 1, containerWidth: d }),
+        T = a.useMemo(() => t.slice(0, m + 1), [m, t]),
+        S = a.useMemo(() => t.slice(m + 1), [m, t]),
+        g = a.useRef(null),
+        N = a.useCallback(
             (e) => {
-                let t = e.contentRect.width;
-                if (null == t || h.current === t) return;
-                u(t), (h.current = t);
-                let a = t - C.current.reduce((e, t, a) => e + t + 24 * (0 !== a));
-                o?.(a);
+                let l = e.contentRect.width;
+                if (null == l || x.current === l) return;
+                u(l), (x.current = l);
+                let s = l - A.current.reduce((e, l, s) => e + l + 24 * (0 !== s));
+                c?.(s);
             },
-            [C, o],
+            [A, c],
         );
-    (0, m.g)(j, I);
-    let E = 0 !== d,
-        N = b.some((e) => e.id === a);
-    return (0, l.jsxs)("div", {
-        className: r()(x.kL, t),
-        ref: j,
+    (0, h.g)(g, N);
+    let C = 0 !== d,
+        w = S.some((e) => e.id === s);
+    return (0, r.jsxs)("div", {
+        className: i()(v.kL, l),
+        ref: g,
         children: [
-            (0, l.jsxs)("div", {
-                className: x.Kk,
+            (0, r.jsxs)("div", {
+                className: v.Kk,
+                "aria-hidden": !0,
                 children: [
-                    n.map((e, t) =>
-                        (0, l.jsx)(
-                            c.Ae,
+                    t.map((e, l) =>
+                        (0, r.jsx)(
+                            o.Ae,
                             {
-                                index: t,
-                                onItemLayout: _,
-                                children: (0, l.jsx)(
-                                    A,
-                                    { id: e.id, label: e.label, selected: a === e.id, handleTransition: s },
+                                index: l,
+                                onItemLayout: b,
+                                children: (0, r.jsx)(
+                                    f,
+                                    { id: e.id, label: e.label, selected: s === e.id, handleTransition: n },
                                     e.id,
                                 ),
                             },
                             e.id,
                         ),
                     ),
-                    (0, l.jsx)("div", {
-                        ref: g,
-                        children: (0, l.jsx)(f, { tabs: b, onTabSelect: s, selectedTab: a, selected: N }),
+                    (0, r.jsx)("div", {
+                        ref: j,
+                        children: (0, r.jsx)(p, { tabs: S, onTabSelect: n, selectedTab: s, selected: w }),
                     }),
                 ],
             }),
-            E &&
-                (0, l.jsxs)("div", {
-                    className: x.vR,
+            C &&
+                (0, r.jsxs)("div", {
+                    className: v.vR,
+                    role: "tablist",
                     children: [
-                        v.map((e) =>
-                            (0, l.jsx)(
-                                A,
-                                { id: e.id, label: e.label, selected: a === e.id, handleTransition: s },
+                        T.map((e) =>
+                            (0, r.jsx)(
+                                f,
+                                { id: e.id, label: e.label, selected: s === e.id, handleTransition: n },
                                 e.id,
                             ),
                         ),
-                        0 !== b.length ? (0, l.jsx)(f, { tabs: b, onTabSelect: s, selectedTab: a, selected: N }) : null,
+                        0 !== S.length ? (0, r.jsx)(p, { tabs: S, onTabSelect: n, selectedTab: s, selected: w }) : null,
                     ],
                 }),
         ],
     });
 }
-var v = a(670798),
-    b = (((n = {}).DEFAULT = "DEFAULT"), (n.SEARCH = "SEARCH"), n);
-function j(e) {
+var T = s(670798),
+    S = (((t = {}).DEFAULT = "DEFAULT"), (t.SEARCH = "SEARCH"), t);
+function g(e) {
     let {
-        selectedTabId: t,
-        handleTransition: a,
-        tabs: n,
-        state: i = "DEFAULT",
-        onAvailableWidthChange: s,
-        icon: c,
+        selectedTabId: l,
+        handleTransition: s,
+        tabs: t,
+        state: a = "DEFAULT",
+        onAvailableWidthChange: n,
+        icon: o,
         endContent: d,
         children: u,
     } = e;
-    return (0, l.jsxs)(o.A, {
-        className: v.jr,
+    return (0, r.jsxs)(c.A, {
+        className: T.jr,
         toolbar: d,
         hideSearch: !0,
         children: [
-            "DEFAULT" === i &&
-                (0, l.jsxs)(l.Fragment, {
+            "DEFAULT" === a &&
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, l.jsx)(c, { color: "currentColor", size: "md" }),
-                        (0, l.jsx)(C, { tabs: n, selectedTab: t, onTabSelect: a, onAvailableWidthChange: s }),
+                        (0, r.jsx)(o, { color: "currentColor", size: "md" }),
+                        (0, r.jsx)(A, { tabs: t, selectedTab: l, onTabSelect: s, onAvailableWidthChange: n }),
                     ],
                 }),
-            (0, l.jsx)("div", { className: r()(v.w4, { [v.cS]: "SEARCH" === i }), children: u }),
+            (0, r.jsx)("div", { className: i()(T.w4, { [T.cS]: "SEARCH" === a }), children: u }),
         ],
     });
 }

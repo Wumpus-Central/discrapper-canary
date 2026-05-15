@@ -32,8 +32,8 @@ var f = s(873174),
     q = s(820081),
     b = s(765671),
     L = s(736653),
-    k = s(814925),
-    R = s(178540),
+    R = s(814925),
+    k = s(178540),
     D = s(710969),
     M = s(814793),
     z = s(988436),
@@ -125,7 +125,7 @@ function Z(e) {
             onCtxMenuSelect: E,
             sourceQuestContent: f,
         } = e,
-        p = (0, R.O)((e) => e.getErrorHints(t.id)),
+        p = (0, k.O)((e) => e.getErrorHints(t.id)),
         A = p.length > 0 ? p : a,
         y = (0, m.IO)(t),
         T = (0, L.Ay)(),
@@ -147,7 +147,8 @@ function Z(e) {
                 });
         }, [y, t, f]),
         en = (0, v.bG)([o.A], () => o.A.getQuestHomeHero()),
-        ei = i.useMemo(() => l || (null != en && (0, M.I0)(en, t.id)), [l, en, t.id]);
+        ei = i.useMemo(() => l || (null != en && (0, M.I0)(en, t.id)), [l, en, t.id]),
+        ea = i.useRef(null);
     return (0, n.jsxs)("div", {
         className: X.kL,
         children: [
@@ -217,9 +218,11 @@ function Z(e) {
                                         shouldShowDisclosure: !0,
                                         showShareLink: !0,
                                         sourceQuestContent: f,
+                                        returnRef: ea,
                                         children: (e) =>
                                             (0, n.jsx)(_.D, {
                                                 ...e,
+                                                innerRef: ea,
                                                 className: X.iI,
                                                 "aria-label": B.intl.string(B.t.DEoVWZ),
                                                 children: (0, n.jsx)(Q.j, {
@@ -256,7 +259,7 @@ function Z(e) {
                                                 color: et,
                                                 children: B.intl.string(B.t.VAbKhK),
                                             }),
-                                            (0, n.jsx)(k.A, {
+                                            (0, n.jsx)(R.A, {
                                                 className: X.w$,
                                                 size: 16,
                                                 color: S.A.unsafe_rawColors.GREEN_360.css,
@@ -403,7 +406,7 @@ function eL(e) {
         ],
     });
 }
-function ek(e) {
+function eR(e) {
     let { quest: t, sourceQuestContent: s, formattedExpirationDate: i, primaryCtaButton: a } = e,
         { externalLinkCta: l, handleOpenExternalLink: r } = eb({ quest: t, sourceQuestContent: s }),
         o = B.intl.format(B.t["6p8BZx"], { expiryDate: i });
@@ -417,7 +420,7 @@ function ek(e) {
         ],
     });
 }
-function eR(e) {
+function ek(e) {
     var t;
     let s,
         a,
@@ -450,7 +453,7 @@ function eR(e) {
         q = (0, D.if)(l),
         b = !(0, D.Ic)(l),
         L = (0, u.In)(l),
-        k = (0, m.IO)(l),
+        R = (0, m.IO)(l),
         z = (0, m.K$)(l),
         P = (0, m.Cr)(l),
         U = (0, u.fc)(l),
@@ -460,7 +463,7 @@ function eR(e) {
         $ = V && !K && F.length > 1,
         G = eg.t.useConfig({ location: eI.rE.QUEST_HOME_DESKTOP }),
         X = (0, eT.Pd)(l),
-        Y = (0, R.O)((e) => e.clearErrorHints),
+        Y = (0, k.O)((e) => e.clearErrorHints),
         J = i.useCallback(
             (e) => {
                 W(e), e === eI.fO.DESKTOP && (j([]), Y(l.id));
@@ -474,7 +477,7 @@ function eR(e) {
             questContentPosition: E,
             questContentRowIndex: f,
             inGiftInventory: !0,
-            isVideoQuest: k,
+            isVideoQuest: R,
             inGameQuest: P,
             sourceQuestContent: v,
         }),
@@ -509,7 +512,7 @@ function eR(e) {
         ej = ed ? eu : eo,
         eO = (0, n.jsx)(eh.$, { variant: "secondary", text: ec, onClick: ej }),
         eA = (0, n.jsx)(eh.$, { variant: "secondary", text: ec, onClick: ej, fullWidth: !0 }),
-        eR = (0, n.jsx)(eh.$, { variant: "secondary", text: ec, onClick: eo }),
+        ek = (0, n.jsx)(eh.$, { variant: "secondary", text: ec, onClick: eo }),
         eD = null;
     return (G.enabled && X === eT.UA.EXPIRED_CLAIMABLE && G.enabledQuestStates.has(X)
         ? (eD = (0, n.jsx)("div", {
@@ -535,7 +538,7 @@ function eR(e) {
                 }),
             }))
           : G.enabled && (X === eT.UA.COMPLETED || X === eT.UA.CLAIMED) && G.enabledQuestStates.has(X)
-            ? (eD = k
+            ? (eD = R
                   ? (0, n.jsx)(eL, {
                         quest: l,
                         sourceQuestContent: v,
@@ -586,7 +589,7 @@ function eR(e) {
                           }),
                       }))
             : w
-              ? (eD = k
+              ? (eD = R
                     ? (0, n.jsx)(eL, { quest: l, sourceQuestContent: v, onClick: ee, text: Z })
                     : (0, M.vA)(l)
                       ? (0, n.jsxs)(em.e, {
@@ -627,7 +630,7 @@ function eR(e) {
                                         fullWidth: !0,
                                         wrap: !1,
                                         children: [
-                                            X === eT.UA.UNENROLLED ? eR : ed ? eO : null,
+                                            X === eT.UA.UNENROLLED ? ek : ed ? eO : null,
                                             (0, n.jsx)(eS.A, {
                                                 quest: l,
                                                 surface: eT.V3.QUEST_HOME_TILE_FOOTER,
@@ -685,7 +688,7 @@ function eR(e) {
                                             fullWidth: !0,
                                             wrap: !1,
                                             children: [
-                                                ed && (k || (0, M.vA)(l)) ? eO : null,
+                                                ed && (R || (0, M.vA)(l)) ? eO : null,
                                                 (0, n.jsx)(eS.A, {
                                                     quest: l,
                                                     surface: eT.V3.QUEST_HOME_TILE_FOOTER,
@@ -718,7 +721,7 @@ function eR(e) {
                                               children: [g.render(), B.intl.string(B.t.nPThNb)],
                                           }),
                                       })
-                                : k
+                                : R
                                   ? ed
                                       ? (0, n.jsx)("div", {
                                             className: e_.x6,
@@ -811,7 +814,7 @@ function eR(e) {
                                       fullWidth: !0,
                                       wrap: !1,
                                       children: [
-                                          eR,
+                                          ek,
                                           G.enabled &&
                                           X === eT.UA.UNENROLLED &&
                                           G.enabledQuestStates.has(eT.UA.UNENROLLED)
@@ -835,7 +838,7 @@ function eR(e) {
                               }))
                 : (eD =
                       G.enabled && X === eT.UA.EXPIRED && G.enabledQuestStates.has(X)
-                          ? (0, n.jsx)(ek, {
+                          ? (0, n.jsx)(eR, {
                                 quest: l,
                                 sourceQuestContent: v,
                                 formattedExpirationDate: y,
@@ -848,7 +851,7 @@ function eR(e) {
                                     analyticsCtxQuestContentRowIndex: f,
                                 }),
                             })
-                          : (0, n.jsx)(ek, { quest: l, sourceQuestContent: v, formattedExpirationDate: y })),
+                          : (0, n.jsx)(eR, { quest: l, sourceQuestContent: v, formattedExpirationDate: y })),
     null == eD)
         ? null
         : (0, n.jsxs)("div", {
@@ -918,8 +921,8 @@ function ez(e) {
         w = t.userStatus?.claimedAt != null,
         Q = (0, er.ks)(t.config),
         q = (0, er._Z)(t.config),
-        { completedRatio: L, completedRatioDisplay: k } = (0, u.O9)(t),
-        R = (0, ea.gj)(t, m, en.Ob.QuestHome, h),
+        { completedRatio: L, completedRatioDisplay: R } = (0, u.O9)(t),
+        k = (0, ea.gj)(t, m, en.Ob.QuestHome, h),
         M = i.useMemo(
             () =>
                 w && Q
@@ -968,14 +971,14 @@ function ez(e) {
             [v, w, N, t.id, q, Q],
         ),
         z = i.useMemo(() => {
-            if (null != R)
+            if (null != k)
                 return (0, n.jsx)(O.E, {
                     variant: "text-sm/medium",
                     color: "text-muted",
                     className: eD.h_,
-                    children: R,
+                    children: k,
                 });
-        }, [R]),
+        }, [k]),
         P = (0, r.bG)([es.A], () => es.A.useReducedMotion);
     return (0, n.jsxs)("div", {
         className: eD.kL,
@@ -1009,7 +1012,7 @@ function ez(e) {
                                               (0, n.jsx)(ec.A, {
                                                   size: 76,
                                                   percentComplete: L,
-                                                  overlayText: a && !(0, D.Ic)(t) ? k : void 0,
+                                                  overlayText: a && !(0, D.Ic)(t) ? R : void 0,
                                                   children: (0, n.jsx)(ed.A, {
                                                       quest: t,
                                                       questContent: s,
@@ -1073,7 +1076,7 @@ function ez(e) {
                         }),
                 ],
             }),
-            (0, n.jsx)(eR, {
+            (0, n.jsx)(ek, {
                 quest: t,
                 questContent: s,
                 contentPosition: o,
