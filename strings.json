@@ -4435,6 +4435,7 @@
   "O8k7O4": "Clear all",
   "xLNQnl": "Clear Attachments",
   "/Nz9rY": "Clear Build Override",
+  "7/UFPj": "Clear !!{fieldName}!!",
   "T3uOb2": "Clear Incoming",
   "jaXsA3": "This will clear {incomingRequestCount, plural, one { friend request} other { friend requests} } from the pending list. The {incomingRequestCount, plural, one {user} other { users} } will not be notified.",
   "Eq9seb": "Clear All",
