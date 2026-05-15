@@ -13,7 +13,6 @@ a.r(
         iconAlignCenter: "iconAlignCenter__4e9aa",
         iconAlignRight: "iconAlignRight__4e9aa",
         deleteButtonWrapper: "deleteButtonWrapper__4e9aa",
-        overlayIconBounceIn: "overlayIconBounceIn__4e9aa",
         overlayIcon: "overlayIcon__4e9aa",
     }),
 );
