@@ -1762,7 +1762,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 545580, Version Hash: 9da6d60a0d8ee69c54dc0d1ab4e73f4048433bb0`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 545607, Version Hash: 306756778b57d49fb2e8def9f15f92a04f3bf3b8`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -18297,7 +18297,7 @@ let Sv = "isHideDevBanner",
                     className: t2()(SC.Wz, SC.mr),
                     children: [
                         (0, k.jsx)(Sy, { className: SC.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "545580" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "545607" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -33333,10 +33333,7 @@ let Mg = new tb.A("Guilds"),
         putOne(e, t) {
             let n = e.members.find((e) => e.user.id === eW.default.getId()),
                 i = tx.A.getGuild(e.id);
-            if (null == e.properties && null == i)
-                return void eC.A.captureMessage(
-                    "AppDatabase Guilds.putOne skipped: partial payload without cached record",
-                );
+            if (null == e.properties && null == i) return;
             let r = ME.j_(e.id, e.roles, tP.A.getUnsafeMutableRoles(e.id)),
                 s = Mp.Me(Mp.Wj(e, i), ME.cH(r), null != n ? { userId: n.user.id, roles: n.roles } : null);
             this.put(s, t);
