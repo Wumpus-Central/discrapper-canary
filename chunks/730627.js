@@ -123,6 +123,7 @@ let eS = function () {
                             className: eN.Du,
                             onClick: () => c(e.theme),
                             "aria-label": em.intl.string(e.label),
+                            "aria-pressed": t === e.theme,
                             children: [
                                 (0, n.jsx)("div", {
                                     className: `${eN.WT} ${t === e.theme ? eN.TA : ""}`,
