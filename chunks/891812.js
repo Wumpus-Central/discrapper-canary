@@ -13431,6 +13431,8 @@ function mx(e) {
                       (0, A.jsx)(ey.D, {
                           className: mm.cS,
                           onClick: () => N(!1),
+                          "aria-expanded": !1,
+                          "aria-label": el.intl.formatToPlainString(el.t.yjS3zs, { index: l + 1 }),
                           children: (0, A.jsx)(sQ.A, { direction: sQ.A.Directions.DOWN, height: 16, width: 16 }),
                       }),
                       (0, A.jsx)(tM.m, {
@@ -13526,6 +13528,8 @@ function mx(e) {
                               (0, A.jsx)(ey.D, {
                                   className: mm.cS,
                                   onClick: () => N(!0),
+                                  "aria-expanded": !0,
+                                  "aria-label": el.intl.formatToPlainString(el.t.yjS3zs, { index: l + 1 }),
                                   children: (0, A.jsx)(sQ.A, { direction: sQ.A.Directions.UP, height: 16, width: 16 }),
                               }),
                               (0, A.jsx)(tM.m, {
@@ -13973,6 +13977,8 @@ function mv(e) {
                             (0, A.jsx)(ey.D, {
                                 className: mA.cS,
                                 onClick: () => d((e) => !e),
+                                "aria-expanded": !o,
+                                "aria-label": el.intl.string(el.t["4GSygh"]),
                                 children: (0, A.jsx)(sQ.A, {
                                     direction: o ? sQ.A.Directions.DOWN : sQ.A.Directions.UP,
                                     height: 16,
