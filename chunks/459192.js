@@ -33,27 +33,28 @@ function m(e) {
             anchorRef: R,
             positionKey: b,
             ariaHidden: D = !1,
-            ...L
+            lineClamp: L,
+            ...w
         } = e,
-        [w, M] = r.useState(null);
+        [M, P] = r.useState(null);
     r.useLayoutEffect(() => {
-        null != R && M(R.current);
+        null != R && P(R.current);
     }, [R]);
-    let P = r.useCallback(
+    let x = r.useCallback(
             (e) => {
-                null == R && M(e), (0, f.cZ)(O, e);
+                null == R && P(e), (0, f.cZ)(O, e);
             },
             [O, R],
         ),
         {
-            tooltipId: x,
-            isVisible: U,
-            targetElementRef: k,
-            trigger: G,
-        } = (0, p.D)({ children: t, targetElementRef: P, asContainer: I, containerTag: T, ariaHidden: D, ...L }),
-        F = null != n && ("string" != typeof n || "" !== n),
-        V = null != m && !r.isValidElement(m),
-        B = r.useMemo(
+            tooltipId: U,
+            isVisible: k,
+            targetElementRef: G,
+            trigger: F,
+        } = (0, p.D)({ children: t, targetElementRef: x, asContainer: I, containerTag: T, ariaHidden: D, ...w }),
+        V = null != n && ("string" != typeof n || "" !== n),
+        B = null != m && !r.isValidElement(m),
+        H = r.useMemo(
             () =>
                 (0, i.jsxs)("div", {
                     className: a()(E.jk, { [E.eb]: null == m, [E.Sx]: "lg" === A }),
@@ -62,52 +63,53 @@ function m(e) {
                             (0, i.jsx)("div", {
                                 className: E.s,
                                 style: { width: g },
-                                children: V ? (0, i.jsx)(l.v, { ...m }) : m,
+                                children: B ? (0, i.jsx)(l.v, { ...m }) : m,
                             }),
                         (0, i.jsxs)("div", {
                             className: E.P_,
                             children: [
-                                F && (0, i.jsx)(u.E, { variant: "text-sm/medium", children: n }),
+                                V && (0, i.jsx)(u.E, { variant: "text-sm/medium", children: n }),
                                 (0, i.jsx)(u.E, {
                                     variant: "text-sm/normal",
-                                    color: F ? "text-subtle" : "text-default",
+                                    color: V ? "text-subtle" : "text-default",
+                                    lineClamp: L,
                                     children: s,
                                 }),
                             ],
                         }),
                     ],
                 }),
-            [m, g, A, n, s, F, V],
+            [m, g, A, n, s, V, B, L],
         ),
-        H = b ?? `${(0, f.Xj)(n ?? "")}|${(0, f.Xj)(s)}`,
-        j = (0, h.j)({ shouldShow: U });
+        j = b ?? `${(0, f.Xj)(n ?? "")}|${(0, f.Xj)(s)}`,
+        Y = (0, h.j)({ shouldShow: k });
     if (!I && !r.isValidElement(t)) return null;
-    let Y = j((e, t) =>
+    let W = Y((e, t) =>
         t
             ? (0, i.jsx)(_.Bc, {
                   isRichTooltip: !0,
                   richTooltipPadding: A,
                   children: (0, i.jsx)(d.R, {
-                      isVisible: U,
+                      isVisible: k,
                       isRendered: !0,
-                      targetElementRef: k,
-                      targetElement: w,
+                      targetElementRef: G,
+                      targetElement: M,
                       anchorRef: R,
-                      id: x,
-                      content: B,
+                      id: U,
+                      content: H,
                       position: S,
                       align: N,
                       spacing: y,
                       caretConfig: C,
                       layerContext: v ?? c.uY,
                       animationStyle: e,
-                      positionKey: H,
+                      positionKey: j,
                       "data-mana-component": "rich-tooltip",
                   }),
               })
             : null,
     );
     return (0, i.jsxs)(i.Fragment, {
-        children: [G, D || null == B ? null : (0, i.jsx)(o.A, { id: x, children: B }), Y],
+        children: [F, D || null == H ? null : (0, i.jsx)(o.A, { id: U, children: H }), W],
     });
 }
