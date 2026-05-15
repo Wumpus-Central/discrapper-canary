@@ -1,4 +1,4 @@
-e.exports = {
+d.exports = {
     kL: "container_b962dc",
     uC: "guildSidebar_b962dc",
     yl: "modal_b962dc",
@@ -15,7 +15,6 @@ e.exports = {
     RC: "submitButton_b962dc",
     kz: "formItem_b962dc",
     rb: "resendButtonContainer_b962dc",
-    lm: "notice_b962dc",
     BU: "disclaimerFooter_b962dc",
     P5: "guildProfile_b962dc",
     nL: "sidebarGradientOverlay_b962dc",
