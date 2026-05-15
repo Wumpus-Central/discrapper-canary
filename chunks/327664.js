@@ -659,6 +659,7 @@ let tg = (e) => {
             {
                 text: s,
                 asContainer: !0,
+                ariaHidden: !0,
                 children: (0, c.jsx)(
                     e4.D,
                     {
