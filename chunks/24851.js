@@ -1,4 +1,4 @@
-i.d(s, { default: () => f });
+i.d(s, { default: () => j });
 var e = i(627968),
     n = i(64700),
     a = i(554146),
@@ -14,42 +14,52 @@ var e = i(627968),
     N = i(49999),
     u = i(375708),
     E = i(321513);
-function f(t) {
+function j(t) {
     let { onClose: s, ...i } = t,
-        f = (0, x.z$)("CollectiblesAnnouncementModal"),
+        j = (0, x.z$)("CollectiblesAnnouncementModal"),
         {
-            leftTitle: j,
-            leftBody: p,
+            leftTitle: p,
+            leftBody: f,
             rightTitle: C,
             rightBody: b,
         } = (function (t) {
-            let { showGiftingMarketing: s, showEaPremiumMarketing: i, showEaNonPremiumMarketing: e } = t;
-            if (i || e)
-                return {
-                    leftTitle: u.intl.string(u.t.oSiQEt),
-                    leftBody: u.intl.string(u.t.fWKc6Q),
-                    rightTitle: u.intl.string(u.t.zwMF7A),
-                    rightBody: u.intl.string(u.t.L4n9Yt),
-                };
-            let n = u.intl.string(u.t["jTr73/"]),
-                a = u.intl.string(u.t.o2XCyN);
-            return s
+            let { showGiftingMarketing: s, showEaPremiumMarketing: i, showEaNonPremiumMarketing: e } = t,
+                n = u.intl.string(u.t.zOtryQ),
+                a = u.intl.string(u.t.azn85l);
+            return i
                 ? {
                       leftTitle: n,
                       leftBody: a,
-                      rightTitle: u.intl.string(u.t.Ky01Mq),
-                      rightBody: u.intl.string(u.t.VgVDbe),
+                      rightTitle: u.intl.string(u.t.oSP2mU),
+                      rightBody: u.intl.string(u.t["wEIT/w"]),
                   }
-                : {
-                      leftTitle: n,
-                      leftBody: a,
-                      rightTitle: u.intl.string(u.t["47kRjL"]),
-                      rightBody: u.intl.string(u.t.GcXi4M),
-                  };
-        })(f),
-        v = f.showEaPremiumMarketing || f.showEaNonPremiumMarketing,
-        L = v ? u.intl.string(u.t.ssAHoO) : u.intl.string(u.t.mxLBpg),
-        M = v ? u.intl.string(u.t["+bjgSs"]) : u.intl.string(u.t["v72/pr"]),
+                : e
+                  ? {
+                        leftTitle: n,
+                        leftBody: a,
+                        rightTitle: u.intl.string(u.t["y/uSeV"]),
+                        rightBody: u.intl.string(u.t.in6xhQ),
+                    }
+                  : s
+                    ? {
+                          leftTitle: n,
+                          leftBody: a,
+                          rightTitle: u.intl.string(u.t.Ky01Mq),
+                          rightBody: u.intl.string(u.t.VgVDbe),
+                      }
+                    : {
+                          leftTitle: n,
+                          leftBody: a,
+                          rightTitle: u.intl.string(u.t["47kRjL"]),
+                          rightBody: u.intl.string(u.t.GcXi4M),
+                      };
+        })(j),
+        v = u.intl.string(u.t.W3MtdV),
+        M = j.showEaPremiumMarketing
+            ? u.intl.string(u.t.RlBdFl)
+            : j.showEaNonPremiumMarketing
+              ? u.intl.string(u.t.NZe65e)
+              : u.intl.string(u.t["v72/pr"]),
         S = n.useRef(!1);
     n.useEffect(
         () => () => {
@@ -57,7 +67,7 @@ function f(t) {
         },
         [],
     );
-    let A = n.useCallback(async () => {
+    let L = n.useCallback(async () => {
             (S.current = !0),
                 (0, g.Dr)(a.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, { dismissAction: N.i.USER_DISMISS }),
                 await s();
@@ -70,7 +80,7 @@ function f(t) {
         }, [s]);
     return (0, e.jsx)(o.d, {
         ...i,
-        onClose: A,
+        onClose: L,
         size: "lg",
         children: (0, e.jsxs)("div", {
             className: E.Qs,
@@ -82,7 +92,7 @@ function f(t) {
                             "url(https://cdn.discordapp.com/assets/content/c8e00daa39097d8c1b17f84ed0b64006632781f037ee256bb2daf5f46cd927d9.png)",
                     },
                 }),
-                (0, e.jsx)("div", { className: E.b, children: (0, e.jsx)(r.J, { onClick: A }) }),
+                (0, e.jsx)("div", { className: E.b, children: (0, e.jsx)(r.J, { onClick: L }) }),
                 (0, e.jsxs)("div", {
                     className: E.rf,
                     children: [
@@ -93,7 +103,7 @@ function f(t) {
                                     variant: "display-md",
                                     color: "text-strong",
                                     className: E.DD,
-                                    children: L,
+                                    children: v,
                                 }),
                                 (0, e.jsx)(l.E, { variant: "text-sm/medium", color: "text-muted", children: M }),
                             ],
@@ -115,12 +125,12 @@ function f(t) {
                                                 (0, e.jsx)(c.D, {
                                                     variant: "heading-md/bold",
                                                     color: "text-strong",
-                                                    children: j,
+                                                    children: p,
                                                 }),
                                                 (0, e.jsx)(l.E, {
                                                     variant: "text-sm/medium",
                                                     color: "text-muted",
-                                                    children: p,
+                                                    children: f,
                                                 }),
                                             ],
                                         }),
