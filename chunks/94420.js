@@ -9,11 +9,12 @@ function l(e) {
     return o()(e, t);
 }
 function u(e) {
-    let { contextMetadata: t, order: n } = e;
+    let { checkoutInitParameters: t, contextMetadata: n, order: a, initialPaymentSourceId: o } = e;
     return (0, r.h)(
         (e) => ({
-            contextMetadata: t,
-            order: n,
+            checkoutInitParameters: t,
+            contextMetadata: n,
+            order: a,
             setOrder: (t) => e({ order: t }),
             selectedSkuId: void 0,
             selectedPlanId: void 0,
@@ -34,6 +35,8 @@ function u(e) {
             setEntitlementsGranted: (t) => e({ entitlementsGranted: t }),
             hasAcceptedTerms: !1,
             setHasAcceptedTerms: (t) => e({ hasAcceptedTerms: t }),
+            paymentSourceId: o,
+            setPaymentSourceId: (t) => e({ paymentSourceId: t ?? null }),
             purchaseState: s.h.WAITING,
             setPurchaseState: (t) => e({ purchaseState: t }),
             appliedUserDiscounts: [],

@@ -2,14 +2,14 @@ n.d(t, { f: () => c, k: () => d });
 var l = n(627968),
     a = n(64700),
     i = n(546605),
-    r = n(935899),
+    r = n(426398),
     s = n(900730),
-    o = n(834252),
+    o = n(94420),
     u = n(209143);
 function c() {
     let e = (0, i.vg)("StatefulCheckoutStoreRelocationNotice"),
-        { paymentSourceId: t } = (0, o.P5)(),
-        n = (0, r.D)(),
+        t = (0, o.t4)((e) => e.paymentSourceId),
+        n = (0, r.kc)(),
         {
             relocationCountry: u,
             relocationCurrencyCode: c,
@@ -40,7 +40,7 @@ function c() {
 function d(e) {
     let { location: t, paymentSourceId: n } = e,
         a = (0, i.vg)(t),
-        o = (0, r.D)(),
+        o = (0, r.kc)(),
         c = a ? (o.find((e) => e.id === n) ?? null) : null;
     return c?.relocationCountry == null
         ? null

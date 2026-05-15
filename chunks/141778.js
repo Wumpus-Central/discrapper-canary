@@ -1,4 +1,4 @@
-n.d(t, { getApplicationPaymentSteps: () => z });
+n.d(t, { getApplicationPaymentSteps: () => $ });
 var i = n(627968),
     l = n(64700),
     r = n(166532),
@@ -259,13 +259,14 @@ function M(e) {
 var O = n(284009),
     H = n.n(O),
     L = n(304072),
-    G = n(666646),
-    W = n(558620),
-    Y = n(427858),
-    Z = n(566980),
-    Q = n(871084),
-    V = n(367160);
-function X(e) {
+    G = n(426398),
+    W = n(666646),
+    Y = n(558620),
+    Z = n(427858),
+    Q = n(566980),
+    V = n(871084),
+    X = n(367160);
+function z(e) {
     let {
             backButtonEligible: t,
             prevStep: n,
@@ -289,20 +290,20 @@ function X(e) {
             purchaseError: e.purchaseError,
             setUpdatedSubscription: e.setUpdatedSubscription,
         })),
+        { paymentSources: g } = (0, G.jm)(),
         {
-            activeSubscription: g,
-            currencies: j,
-            paymentSources: A,
+            activeSubscription: j,
+            currencies: A,
             priceOptions: C,
             setCurrency: y,
             subscriptionMetadataRequest: N,
         } = (0, E.P5)(),
-        I = (0, W.A)(),
+        I = (0, Y.A)(),
         T = (0, c.S3)();
     H()(null != I, "Expected plan to be selected");
     let _ = l.useRef(null),
         [R, B] = (0, L.A)(!1, 500),
-        w = (0, G.mx)(),
+        w = (0, W.mx)(),
         U = (0, u.bg)(T?.flags ?? 0);
     l.useEffect(() => {
         null != S && null != _.current && _.current.scrollIntoView({ behavior: "smooth" });
@@ -317,24 +318,24 @@ function X(e) {
         M = l.useCallback(() => {
             a(r.pn.ADD_PAYMENT_STEPS);
         }, [a]);
-    return f === Z.h.PURCHASING
+    return f === Q.h.PURCHASING
         ? (0, i.jsx)(P.A, {})
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(v.dZ, {
                       children:
-                          null == g
-                              ? (0, i.jsx)(V._, {
+                          null == j
+                              ? (0, i.jsx)(X._, {
                                     selectedPlanId: I.id,
                                     planGroup: s,
-                                    paymentSources: A,
+                                    paymentSources: g,
                                     priceOptions: C,
                                     handlePaymentSourceAdd: M,
                                     metadata: U ? void 0 : N,
                                 })
-                              : (0, i.jsx)(Y.A, {
-                                    premiumSubscription: g,
-                                    paymentSources: A,
+                              : (0, i.jsx)(Z.A, {
+                                    premiumSubscription: j,
+                                    paymentSources: g,
                                     priceOptions: C,
                                     handlePaymentSourceAdd: M,
                                     planId: I.id,
@@ -342,7 +343,7 @@ function X(e) {
                                     legalTermsNodeRef: D,
                                     hasLegalTermsFlash: R,
                                     planGroup: s,
-                                    currencies: j,
+                                    currencies: A,
                                     onCurrencyChange: (e) => y(e),
                                     hasOpenInvoice: null != o,
                                     purchaseState: f,
@@ -351,8 +352,8 @@ function X(e) {
                                 }),
                   }),
                   (0, i.jsx)(v.UX, {
-                      children: (0, i.jsx)(Q.A, {
-                          premiumSubscription: g ?? null,
+                      children: (0, i.jsx)(V.A, {
+                          premiumSubscription: j ?? null,
                           onBack: () => null != n && a(n),
                           onNext: F,
                           legalTermsNodeRef: D,
@@ -372,7 +373,7 @@ function X(e) {
               ],
           });
 }
-function z(e) {
+function $(e) {
     let { guildId: t, showBenefitsFirst: n } = e;
     return [
         {
@@ -394,7 +395,7 @@ function z(e) {
         {
             key: r.pn.REVIEW,
             renderStep: (e) =>
-                (0, i.jsx)(X, { backButtonEligible: !!n || void 0, prevStep: n ? r.pn.BENEFITS : void 0, ...e }),
+                (0, i.jsx)(z, { backButtonEligible: !!n || void 0, prevStep: n ? r.pn.BENEFITS : void 0, ...e }),
             options: { renderHeader: !0, useBreadcrumbLabel: () => S.intl.string(S.t.QBnNHq) },
         },
         { key: r.pn.CONFIRM, renderStep: (e) => (0, i.jsx)(R, { showBenefits: !n, ...e }) },
