@@ -248,7 +248,7 @@ class J extends r.PureComponent {
                 return (0, g.L3)(e, async () => {
                     let { default: e } = await Promise.all([
                         n.e("32824"),
-                        n.e("4554"),
+                        n.e("22308"),
                         n.e("28951"),
                         n.e("60361"),
                         n.e("80203"),
@@ -288,7 +288,7 @@ class J extends r.PureComponent {
                         n.e("2661"),
                         n.e("49909"),
                         n.e("87845"),
-                        n.e("11040"),
+                        n.e("52127"),
                         n.e("45970"),
                         n.e("5007"),
                         n.e("56574"),

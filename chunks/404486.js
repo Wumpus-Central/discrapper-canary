@@ -7352,7 +7352,7 @@ let rh = {
         GuildContextMenu: async () => {
             let { default: e } = await Promise.all([
                     a.e("28951"),
-                    a.e("4554"),
+                    a.e("22308"),
                     a.e("89923"),
                     a.e("55771"),
                     a.e("25719"),
@@ -8762,7 +8762,7 @@ let rL = {
     },
     NewUserOnboarding: async () => {
         let { default: e } = await Promise.all([
-            a.e("4554"),
+            a.e("22308"),
             a.e("13754"),
             a.e("16138"),
             a.e("19580"),
