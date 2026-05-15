@@ -79,6 +79,7 @@ let O = function (e) {
                     let t = C.uv[C.VF.GOOGLE_WALLET];
                     if (null != t)
                         return [
+                            ...e,
                             {
                                 id: C.VF.GOOGLE_WALLET,
                                 title: v.intl.string(t.title),
@@ -89,7 +90,6 @@ let O = function (e) {
                                         i();
                                 },
                             },
-                            ...e,
                         ];
                 }
                 return e;
