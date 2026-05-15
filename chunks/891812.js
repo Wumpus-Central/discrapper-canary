@@ -13396,18 +13396,22 @@ function mx(e) {
         T = (0, ie.G4)(t.id, Array.from(u), [n]).length - u.size,
         b = R.useRef(null),
         y = R.useRef(l);
-    return (R.useEffect(() => {
+    R.useEffect(() => {
         y.current = l;
     }),
-    R.useLayoutEffect(() => {
-        setTimeout(() => {
-            0 !== y.current || i || b.current?.focus();
-        }, 0);
-    }, [i]),
-    j)
+        R.useLayoutEffect(() => {
+            setTimeout(() => {
+                0 !== y.current || i || b.current?.focus();
+            }, 0);
+        }, [i]);
+    let D = `onboarding-question-${n.id}-label`,
+        O = el.intl.formatToPlainString(el.t.yjS3zs, { index: l + 1 });
+    return j
         ? (0, A.jsx)(sS.vN, {
               children: (0, A.jsxs)("div", {
                   tabIndex: 0,
+                  role: "group",
+                  "aria-labelledby": D,
                   onFocus: () => I(!0),
                   onBlur: () => I(!1),
                   onMouseLeave: () => I(!1),
@@ -13423,6 +13427,7 @@ function mx(e) {
                           children: (0, A.jsx)(rw.W, { size: "xs", color: "currentColor", className: mm.co }),
                       }),
                       (0, A.jsx)(G.E, {
+                          id: D,
                           variant: "text-xs/semibold",
                           color: "text-muted",
                           children: el.intl.format(el.t.yjS3zs, { index: l + 1 }),
@@ -13455,6 +13460,8 @@ function mx(e) {
         : (0, A.jsx)(sS.vN, {
               children: (0, A.jsxs)("div", {
                   tabIndex: 0,
+                  role: "group",
+                  "aria-label": O,
                   onFocus: () => I(!0),
                   onBlur: () => I(!1),
                   className: k()(mm.kL, { [mm.A]: null != g && l < g, [mm.Ze]: null != g && l > g, [mm.tW]: f }),
