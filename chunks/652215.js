@@ -3315,11 +3315,11 @@ var i2 =
         ep),
     i5 =
         (((eE = {}).APPLICATION = "Application"),
+        (eE.SPOTIFY = "Spotify"),
+        (eE.STREAM = "Stream"),
         (eE.SERVER_INVITE = "Server Invite"),
         (eE.GDM_INVITE = "GDM Invite"),
         (eE.FRIEND_INVITE = "Friend Invite"),
-        (eE.SPOTIFY = "Spotify"),
-        (eE.STREAM = "Stream"),
         eE),
     i7 = (((em = {}).DIRECT_MESSAGE = "Direct Message"), (em.SMS = "SMS"), (em.EMAIL = "Email"), em),
     i8 =
