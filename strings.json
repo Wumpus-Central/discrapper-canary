@@ -16111,6 +16111,7 @@
   "MV4DPe": "Download access denied - Discord requires storage access to download files.",
   "X+8Z7L": "Microphone access denied - Discord requires audio access to connect to a call.",
   "D4p9TR": "Permission Overrides",
+  "KgPfJx": "!!{permissionName}!!, !!{action}!!",
   "RzDfSk": "Allow",
   "6639O5": "Deny",
   "ujC3ZS": "Passthrough",

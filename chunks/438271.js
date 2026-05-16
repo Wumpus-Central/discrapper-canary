@@ -1,41 +1,42 @@
-n.d(t, { A: () => k });
+n.d(t, { A: () => w });
 var i,
     l = n(627968),
     s = n(64700),
     a = n(136722),
     r = n(990078),
     o = n(428678),
-    d = n(243721),
-    c = n(404778),
+    c = n(243721),
+    d = n(404778),
     u = n(331322),
     m = n(834730),
     g = n(270003),
     h = n(225419),
     x = n(503698),
-    p = n.n(x),
-    A = n(785007),
-    b = n(789645),
-    f = n(933832),
-    _ = n(88187),
-    j = n(939249),
-    N = n(985018),
-    v = n(384808),
-    E = (((i = {}).DENY = "DENY"), (i.PASSTHROUGH = "PASSTHROUGH"), (i.ALLOW = "ALLOW"), i);
-let C = Object.keys(E);
+    A = n.n(x),
+    p = n(785007),
+    f = n(789645),
+    b = n(933832),
+    j = n(88187),
+    N = n(939249),
+    E = n(375708),
+    C = n(384808),
+    v = (((i = {}).DENY = "DENY"), (i.PASSTHROUGH = "PASSTHROUGH"), (i.ALLOW = "ALLOW"), i);
+let T = Object.keys(v);
 function I(e) {
-    let { value: t = "PASSTHROUGH", onChange: n, labelledBy: i, disabled: s = !1, id: a } = e,
-        { ref: r, ...o } = (0, A._u)({ orientation: "horizontal", isDisabled: s, labelledBy: i });
+    let { value: t = "PASSTHROUGH", onChange: n, labelledBy: i, disabled: s = !1, id: a, permissionName: r } = e,
+        { ref: o, ...c } = (0, p._u)({ orientation: "horizontal", isDisabled: s, labelledBy: i });
     return (0, l.jsx)("div", {
-        className: p()(v.Os, { [v.r9]: s }),
-        ref: r,
+        className: A()(C.Os, { [C.r9]: s }),
+        ref: o,
         id: a,
-        ...o,
-        children: C.map((e) =>
+        ...c,
+        children: T.map((e) =>
             (0, l.jsx)(
-                T,
+                S,
                 {
                     type: e,
                     isSelected: t === e,
+                    permissionName: r,
                     onSelect: (e) => {
                         t === e || s || n(e);
                     },
@@ -45,47 +46,56 @@ function I(e) {
         ),
     });
 }
-function T(e) {
+function S(e) {
     let t,
         n,
         i,
-        { type: s, onSelect: a, isSelected: r } = e;
+        { type: s, onSelect: a, isSelected: r, permissionName: o } = e;
     switch (s) {
         case "DENY":
-            (i = N.intl.string(N.t["6639O5"])), (t = b.P), (n = v.Xg);
+            (i = E.intl.string(E.t["6639O5"])), (t = f.P), (n = C.Xg);
             break;
         case "ALLOW":
-            (i = N.intl.string(N.t.RzDfSk)), (t = f.A), (n = v.cw);
+            (i = E.intl.string(E.t.RzDfSk)), (t = b.A), (n = C.cw);
             break;
         default:
-            (i = N.intl.string(N.t.ujC3ZS)), (t = _.F), (n = v.le);
+            (i = E.intl.string(E.t.ujC3ZS)), (t = j.F), (n = C.le);
     }
-    let o = (0, A.Gx)({ isSelected: r, label: i });
-    return (0, l.jsx)(j.D, {
-        className: p()(v.AS, n, { [v.wH]: r }),
+    let c = null != o ? E.intl.formatToPlainString(E.t.KgPfJx, { permissionName: o, action: i }) : i,
+        d = (0, p.Gx)({ isSelected: r, label: c });
+    return (0, l.jsx)(N.D, {
+        className: A()(C.AS, n, { [C.wH]: r }),
         onClick: () => a(s),
-        ...o,
+        ...d,
         children: (0, l.jsx)(t, { color: "currentColor", size: "xs" }),
     });
 }
-I.Types = E;
-var S = n(452027);
-function y(e) {
-    let { value: t, onChange: n, disabled: i, ...s } = e;
-    return (0, l.jsx)(S.D, {
-        ...s,
+I.Types = v;
+var y = n(452027);
+function O(e) {
+    let { value: t, onChange: n, disabled: i, permissionName: s, ...a } = e;
+    return (0, l.jsx)(y.D, {
+        ...a,
         disabled: i,
         layout: "horizontal",
-        children: (e) => (0, l.jsx)(I, { value: t, onChange: n, disabled: i, id: e.controlId }),
+        children: (e) =>
+            (0, l.jsx)(I, {
+                value: t,
+                onChange: n,
+                disabled: i,
+                id: e.controlId,
+                labelledBy: e.labelId,
+                permissionName: s,
+            }),
     });
 }
-I.Types, (y.Types = I.Types);
-var w = n(492289);
-class O extends s.PureComponent {
+I.Types, (O.Types = I.Types);
+var k = n(492289);
+class L extends s.PureComponent {
     getOverwriteValue(e) {
         let { allow: t, deny: n } = this.props;
         if (null == t || null == n) throw Error("PermissionsForm.getOverwriteValue: Invalid allow or deny props");
-        return a.zy(t, e) ? E.ALLOW : a.zy(n, e) ? E.DENY : E.PASSTHROUGH;
+        return a.zy(t, e) ? v.ALLOW : a.zy(n, e) ? v.DENY : v.PASSTHROUGH;
     }
     getPermissionValue(e, t) {
         return a.zy(t, e);
@@ -99,7 +109,7 @@ class O extends s.PureComponent {
             text: e,
             position: "top",
             children: (0, l.jsx)("span", {
-                children: (0, l.jsx)(o.K, { size: "sm", color: "currentColor", className: w.Kk }),
+                children: (0, l.jsx)(o.K, { size: "sm", color: "currentColor", className: k.Kk }),
             }),
         });
     }
@@ -107,29 +117,30 @@ class O extends s.PureComponent {
         let { title: n, description: i, flag: s } = e,
             { permissions: a, locked: r, permissionRender: g } = this.props,
             x = g?.(s),
-            p = !!(r || x),
-            A = "string" == typeof x && "" !== x ? o.K : void 0,
-            b =
+            A = !!(r || x),
+            p = "string" == typeof x && "" !== x ? o.K : void 0,
+            f =
                 null == a
                     ? (0, l.jsx)(
-                          y,
+                          O,
                           {
                               label: n,
+                              permissionName: n,
                               description: (0, h.Nk)(i),
-                              icon: A,
-                              disabled: p,
+                              icon: p,
+                              disabled: A,
                               value: this.getOverwriteValue(s),
                               onChange: (e) => this.handleChange(s, e),
                           },
                           String(s),
                       )
                     : (0, l.jsx)(
-                          d.d,
+                          c.d,
                           {
                               label: n,
                               description: (0, h.Nk)(i),
-                              icon: A,
-                              disabled: p,
+                              icon: p,
+                              disabled: A,
                               checked: this.getPermissionValue(s, a),
                               onChange: (e) => this.handleChange(s, e),
                           },
@@ -137,11 +148,11 @@ class O extends s.PureComponent {
                       );
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                t > 0 && (0, l.jsx)(c.c, {}),
+                t > 0 && (0, l.jsx)(d.c, {}),
                 (0, l.jsxs)(u.B, {
                     gap: 8,
                     children: [
-                        b,
+                        f,
                         "string" == typeof x &&
                             "" !== x &&
                             (0, l.jsx)(m.E, {
@@ -166,4 +177,4 @@ class O extends s.PureComponent {
         });
     }
 }
-let k = O;
+let w = L;
