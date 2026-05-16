@@ -1142,6 +1142,22 @@ function t4(e) {
     }
     return (0, i.jsx)(p.vN, {
         children: (0, i.jsx)("button", {
+            "aria-label": (function (e) {
+                switch (e) {
+                    case "bold":
+                        return R.intl.string(R.t.XI2CUr);
+                    case "italics":
+                        return R.intl.string(R.t.a96YKu);
+                    case "underline":
+                        return R.intl.string(R.t.PdIYwI);
+                    case "strikethrough":
+                        return R.intl.string(R.t["63uDvE"]);
+                    case "inlineCode":
+                        return R.intl.string(R.t.iBerkZ);
+                    case "spoiler":
+                        return R.intl.string(R.t["F+x38C"]);
+                }
+            })(n),
             "aria-pressed": s,
             className: t2.x6,
             onClick: () => {
@@ -1157,6 +1173,9 @@ function t5(e) {
         a = null != s && t1.AS.isType(s[0], t);
     return (0, i.jsx)(p.vN, {
         children: (0, i.jsx)("button", {
+            "aria-label": (function (e) {
+                if ("blockQuote" === e) return R.intl.string(R.t.svB7eY);
+            })(t),
             "aria-pressed": a,
             className: t2.x6,
             onClick: () => {
@@ -1244,8 +1263,8 @@ function ni(e, t, s, a, o) {
                                 n.e("85970"),
                                 n.e("79924"),
                                 n.e("49681"),
-                                n.e("76602"),
                                 n.e("34530"),
+                                n.e("76602"),
                                 n.e("28229"),
                                 n.e("21921"),
                                 n.e("39970"),
