@@ -10176,6 +10176,8 @@
   "x8AlTm": "Remove Icon",
   "l7Ig5Z": "Add up to 5 traits to show off your server’s interests and personality.",
   "S6JNrh": "Traits",
+  "29e6xo": "Add emoji for trait !!{index}!!",
+  "7WLVEB": "Trait !!{index}!!",
   "J1YOV6": "When enabled, only server members can view profile content. Non-members won't be able to see this content unless they have an invite.",
   "R8jY9g": "Discoverable servers cannot have their content hidden. You can change this setting in $[Access]({{accessLink}})",
   "fjHWen": "Private Profile",

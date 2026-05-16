@@ -26255,9 +26255,9 @@ function f$(e) {
 var f0 = n(946964);
 let f1 = { label: "" };
 function f2(e) {
-    let { emoji: t, disabled: n, handleSelectEmoji: i } = e,
-        l = R.useRef(null),
-        s = R.useMemo(
+    let { emoji: t, disabled: n, ariaLabel: i, handleSelectEmoji: l } = e,
+        s = R.useRef(null),
+        r = R.useMemo(
             () =>
                 null == t || null == t.name
                     ? null
@@ -26268,21 +26268,28 @@ function f2(e) {
             [t],
         );
     return n
-        ? (0, A.jsx)(rj.A, { tabIndex: -1, active: !1, renderButtonContents: s })
+        ? (0, A.jsx)(rj.A, { "aria-label": i, tabIndex: -1, active: !1, renderButtonContents: r })
         : (0, A.jsx)(rh.Y, {
-              targetElementRef: l,
+              targetElementRef: s,
               position: "bottom",
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, A.jsx)(rN.A, {
                       closePopout: t,
-                      onSelectEmoji: i(t),
+                      onSelectEmoji: l(t),
                       pickerIntention: rG.EmojiIntention.GUILD_PROFILE,
                   });
               },
               children: (e, t) => {
                   let { isShown: n } = t;
-                  return (0, A.jsx)(rj.A, { ...e, ref: l, tabIndex: 0, active: n, renderButtonContents: s });
+                  return (0, A.jsx)(rj.A, {
+                      ...e,
+                      "aria-label": i,
+                      ref: s,
+                      tabIndex: 0,
+                      active: n,
+                      renderButtonContents: r,
+                  });
               },
           });
 }
@@ -26305,15 +26312,22 @@ function f3(e) {
             [t, i, l],
         ),
         d = R.useMemo(() => n.emoji, [n.emoji]),
-        c = (null != n.label && n.label.length > 0) || null != n.emoji;
+        c = (null != n.label && n.label.length > 0) || null != n.emoji,
+        u = i + 1,
+        m = el.intl.formatToPlainString(el.t["7WLVEB"], { index: u }),
+        g = el.intl.formatToPlainString(el.t["29e6xo"], { index: u });
     return (0, A.jsx)("div", {
         className: f0.II,
         children: (0, A.jsx)(nz.k, {
+            "aria-label": m,
             disabled: s,
             value: n.label,
             onChange: o,
             maxLength: 24,
-            leading: { type: "emoji", button: (0, A.jsx)(f2, { emoji: d, disabled: s, handleSelectEmoji: a }) },
+            leading: {
+                type: "emoji",
+                button: (0, A.jsx)(f2, { emoji: d, disabled: s, ariaLabel: g, handleSelectEmoji: a }),
+            },
             clearable: { show: c },
             onClear: r,
         }),
