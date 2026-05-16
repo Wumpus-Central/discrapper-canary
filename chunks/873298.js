@@ -1897,6 +1897,7 @@ class eV extends D.G {
             { no: 20, name: "enable_gdm_all_reaction_notifications", kind: "message", T: () => L._t },
             { no: 21, name: "enable_friend_gaming_activity_notifications", kind: "message", T: () => L._t },
             { no: 22, name: "enable_upcoming_server_event_notifications", kind: "message", T: () => L._t },
+            { no: 23, name: "enable_screen_downtime_schedule_notifications", kind: "message", T: () => L._t },
         ]);
     }
     create(e) {
@@ -2055,6 +2056,14 @@ class eV extends D.G {
                         r.enableUpcomingServerEventNotifications,
                     );
                     break;
+                case 23:
+                    r.enableScreenDowntimeScheduleNotifications = L._t.internalBinaryRead(
+                        e,
+                        e.uint32(),
+                        n,
+                        r.enableScreenDowntimeScheduleNotifications,
+                    );
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -2154,6 +2163,14 @@ class eV extends D.G {
                     .internalBinaryWrite(
                         e.enableUpcomingServerEventNotifications,
                         t.tag(22, O.O0.LengthDelimited).fork(),
+                        n,
+                    )
+                    .join(),
+            e.enableScreenDowntimeScheduleNotifications &&
+                L._t
+                    .internalBinaryWrite(
+                        e.enableScreenDowntimeScheduleNotifications,
+                        t.tag(23, O.O0.LengthDelimited).fork(),
                         n,
                     )
                     .join();
