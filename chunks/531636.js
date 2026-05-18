@@ -56,18 +56,18 @@ function N(e) {
             lineClamp: a,
             imagePosition: l = "right",
         } = e,
-        { resolveFieldValue: u } = ea();
+        { resolveFieldValue: u, numberFormat: c } = ea();
     if (null == t) return r ? (0, o.jsx)(T, { variant: n, className: s }) : null;
-    let c = u(t.fields.text, [E.STRING]),
-        d = u(t.fields.label, [E.STRING]),
-        h = u(t.fields.icon, [E.MEDIA]),
-        p =
-            null != h
+    let d = u(t.fields.text, [E.STRING, E.NUMBER]),
+        h = u(t.fields.label, [E.STRING, E.NUMBER]),
+        p = u(t.fields.icon, [E.MEDIA]),
+        m =
+            null != p
                 ? (0, o.jsx)("img", {
                       alt: "",
-                      src: h.media.url,
-                      width: h.media.width,
-                      height: h.media.height,
+                      src: p.media.url,
+                      width: p.media.width,
+                      height: p.media.height,
                       className: S.K,
                   })
                 : null;
@@ -76,17 +76,25 @@ function N(e) {
         gap: 0,
         className: s,
         children:
-            null == c && null == d
+            null == d && null == h
                 ? (0, o.jsx)(T, { variant: n })
                 : (0, o.jsxs)(f.E, {
                       variant: n,
                       color: i,
                       lineClamp: a,
                       children: [
-                          null != p && "left" === l ? (0, o.jsxs)(o.Fragment, { children: [p, " "] }) : null,
-                          null != d && "" !== d.value && `${d.value}: `,
-                          null != c && "" !== c.value ? c.value : "\u2013",
-                          null != p && "right" === l ? (0, o.jsxs)(o.Fragment, { children: [" ", p] }) : null,
+                          null != m && "left" === l ? (0, o.jsxs)(o.Fragment, { children: [m, " "] }) : null,
+                          null == h || "" === h.value
+                              ? null
+                              : "number" == typeof h.value
+                                ? `${c.format(h.value)}: `
+                                : `${h.value}: `,
+                          null == d || "" === d.value
+                              ? "\u2013"
+                              : "number" == typeof d.value
+                                ? c.format(d.value)
+                                : d.value,
+                          null != m && "right" === l ? (0, o.jsxs)(o.Fragment, { children: [" ", m] }) : null,
                       ],
                   }),
     });
