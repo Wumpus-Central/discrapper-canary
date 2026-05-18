@@ -1,84 +1,91 @@
-n.d(t, { A: () => x });
-var i = n(627968);
-n(64700);
-var a = n(17928);
-if (/^(14256|21552)$/.test(n.j)) var l = n(534514);
-if (/^(14256|21552)$/.test(n.j)) var r = n(939249);
-if (/^(14256|21552)$/.test(n.j)) var s = n(834730);
-var o = n(302959),
-    d = n(765379),
-    c = n(35903),
-    u = n(506326),
-    p = n(409626),
-    m = n(692969),
-    h = n(78871),
-    g = n(287809),
-    A = n(804630),
-    f = n(145225);
-function v(e) {
-    let { resolvedActivity: t, presenceActivity: n, showHeader: a = !0 } = e,
-        o = (0, m.A)({
+l.d(t, { A: () => g });
+var i = l(627968);
+l(64700);
+var s = l(17928);
+if (/^(14256|21552)$/.test(l.j)) var n = l(534514);
+if (/^(14256|21552)$/.test(l.j)) var a = l(939249);
+if (/^(14256|21552)$/.test(l.j)) var d = l(834730);
+var r = l(302959),
+    c = l(765379),
+    o = l(35903),
+    p = l(506326),
+    u = l(409626),
+    m = l(692969),
+    A = l(78871),
+    h = l(287809),
+    x = l(804630),
+    v = l(145225);
+function j(e) {
+    let { resolvedActivity: t, presenceActivity: l, showHeader: s = !0 } = e,
+        r = (0, m.A)({
             location: "UserActivityRow",
             applicationId: t.applicationId,
-            source: p.Ob.UserProfile,
+            source: u.Ob.UserProfile,
             sourceUserId: t.userId,
             trackEntryPointImpression: !0,
         }),
-        c = null != n && !(0, d.A)(n) && null != n.party,
-        g = null != t.state && t.state.length > 0 && !c;
+        o = null != l && !(0, c.A)(l) && null != l.party,
+        h = null != t.state && t.state.length > 0 && !o;
     return (0, i.jsxs)("div", {
-        className: f.ec,
+        className: v.ec,
         children: [
-            a
+            s
                 ? (0, i.jsx)("div", {
-                      className: f.N1,
-                      children: (0, i.jsx)(l.D, {
+                      className: v.N1,
+                      children: (0, i.jsx)(n.D, {
                           variant: "text-xs/medium",
                           color: "text-muted",
-                          children: (0, A._Q)(t.type),
+                          children: (0, x._Q)(t.type),
                       }),
                   })
                 : null,
             (0, i.jsxs)("div", {
-                className: f.Wh,
+                className: v.Wh,
                 children: [
-                    (0, i.jsx)(A.Tf, { resolvedActivity: t }),
+                    null != r
+                        ? (0, i.jsx)(a.D, {
+                              className: v.XA,
+                              onClick: r,
+                              "aria-label": t.name,
+                              children: (0, i.jsx)(x.Tf, { resolvedActivity: t }),
+                          })
+                        : (0, i.jsx)(x.Tf, { resolvedActivity: t }),
                     (0, i.jsx)("div", {
-                        className: f.wt,
-                        children: (0, i.jsxs)(r.D, {
-                            className: null != o ? f.wv : void 0,
-                            onClick: o,
+                        className: v.wt,
+                        children: (0, i.jsxs)(a.D, {
+                            className: null != r ? v.wv : void 0,
+                            onClick: r,
                             children: [
-                                (0, i.jsx)(l.D, {
+                                (0, i.jsx)(n.D, {
                                     variant: "heading-sm/medium",
                                     color: "text-strong",
-                                    className: f.DD,
+                                    className: v.DD,
                                     lineClamp: 1,
                                     children: t.name,
                                 }),
                                 null != t.details
-                                    ? (0, i.jsx)(s.E, {
+                                    ? (0, i.jsx)(d.E, {
                                           variant: "text-xs/normal",
                                           color: "text-muted",
                                           lineClamp: 1,
                                           children: t.details,
                                       })
                                     : null,
-                                g
-                                    ? (0, i.jsx)(s.E, {
+                                h
+                                    ? (0, i.jsx)(d.E, {
                                           variant: "text-xs/normal",
                                           color: "text-muted",
                                           lineClamp: 1,
                                           children: t.state,
                                       })
                                     : null,
-                                null != n
-                                    ? (0, i.jsxs)(u.mG, {
-                                          location: u.N5.VOICE_USER_POPOUT,
+                                null != l
+                                    ? (0, i.jsxs)(p.mG, {
+                                          location: p.N5.VOICE_USER_POPOUT,
                                           children: [
-                                              (0, i.jsx)(h.QA, { activity: n }),
-                                              (0, i.jsx)(h.cy, { activity: n }),
-                                              (0, i.jsx)(h.Rq, { activity: n }),
+                                              (0, i.jsx)(A.QA, { activity: l }),
+                                              (0, i.jsx)(A.cy, { activity: l }),
+                                              (0, i.jsx)(A.Rq, { activity: l }),
                                           ],
                                       })
                                     : null,
@@ -90,35 +97,35 @@ function v(e) {
         ],
     });
 }
-let x = /^(14256|21552)$/.test(n.j)
+let g = /^(14256|21552)$/.test(l.j)
     ? function (e) {
           let {
                   channel: t,
-                  presenceActivity: n,
-                  userId: l,
-                  embeddedApp: r,
-                  applicationStream: s,
-                  onAction: d,
-                  showHeader: u = !0,
+                  presenceActivity: l,
+                  userId: n,
+                  embeddedApp: a,
+                  applicationStream: d,
+                  onAction: c,
+                  showHeader: p = !0,
               } = e,
-              p = (0, a.bG)([g.default], () => (null != l ? g.default.getUser(l) : null), [l]);
-          if (null == p) return null;
-          let m = (0, A.Gf)(p.id, n, r);
+              u = (0, s.bG)([h.default], () => (null != n ? h.default.getUser(n) : null), [n]);
+          if (null == u) return null;
+          let m = (0, x.Gf)(u.id, l, a);
           return (0, i.jsxs)("div", {
               children: [
                   m.isSpotify
-                      ? (0, i.jsx)(A.vP, { resolvedActivity: m, showHeader: u })
-                      : (0, i.jsx)(v, { resolvedActivity: m, presenceActivity: n, showHeader: u }),
-                  (0, i.jsx)(c.A, {
-                      type: null != s ? o.M.STREAM_PREVIEW : o.M.VOICE_CHANNEL,
-                      activity: n,
-                      embeddedActivity: r?.embeddedActivity,
-                      applicationStream: s,
-                      user: p,
+                      ? (0, i.jsx)(x.vP, { resolvedActivity: m, showHeader: p })
+                      : (0, i.jsx)(j, { resolvedActivity: m, presenceActivity: l, showHeader: p }),
+                  (0, i.jsx)(o.A, {
+                      type: null != d ? r.M.STREAM_PREVIEW : r.M.VOICE_CHANNEL,
+                      activity: l,
+                      embeddedActivity: a?.embeddedActivity,
+                      applicationStream: d,
+                      user: u,
                       guildId: t.guild_id,
                       channelId: t.id,
                       buttonVariant: "primary",
-                      onAction: d,
+                      onAction: c,
                   }),
               ],
           });

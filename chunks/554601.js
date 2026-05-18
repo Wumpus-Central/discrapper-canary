@@ -541,7 +541,7 @@ function eJ(e) {
                                             action: () => {
                                                 (0, eO.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        n.e("34524"),
+                                                        n.e("53869"),
                                                         n.e("54266"),
                                                         n.e("26105"),
                                                         n.e("86028"),
@@ -549,19 +549,18 @@ function eJ(e) {
                                                         n.e("35769"),
                                                         n.e("80203"),
                                                         n.e("45650"),
-                                                        n.e("32109"),
+                                                        n.e("5766"),
                                                         n.e("31837"),
                                                         n.e("27660"),
-                                                        n.e("33982"),
+                                                        n.e("97954"),
                                                         n.e("85484"),
-                                                        n.e("27402"),
+                                                        n.e("13074"),
                                                         n.e("25677"),
-                                                        n.e("46831"),
+                                                        n.e("79936"),
                                                         n.e("55990"),
-                                                        n.e("86023"),
-                                                        n.e("35911"),
-                                                        n.e("68432"),
-                                                        n.e("27039"),
+                                                        n.e("5034"),
+                                                        n.e("22955"),
+                                                        n.e("22995"),
                                                         n.e("79705"),
                                                         n.e("23924"),
                                                         n.e("42205"),
@@ -582,7 +581,7 @@ function eJ(e) {
                                                         n.e("19551"),
                                                         n.e("84569"),
                                                         n.e("6338"),
-                                                        n.e("50689"),
+                                                        n.e("96811"),
                                                         n.e("7743"),
                                                         n.e("45959"),
                                                         n.e("60658"),
@@ -623,7 +622,7 @@ function eJ(e) {
                                                         n.e("63645"),
                                                         n.e("71234"),
                                                         n.e("5636"),
-                                                        n.e("86230"),
+                                                        n.e("87196"),
                                                         n.e("834"),
                                                         n.e("60177"),
                                                         n.e("21570"),
@@ -831,8 +830,8 @@ function e8(e) {
         })
     );
 }
-var e2 = n(34188),
-    e4 = n(700623),
+var e4 = n(34188),
+    e2 = n(700623),
     e3 = n(177953),
     e7 = n(825484),
     e9 = n(512950),
@@ -1092,7 +1091,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: ty.wi,
                             children: [
-                                (0, r.jsx)(e2.U, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e4.U, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1105,7 +1104,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: ty.wi,
                             children: [
-                                (0, r.jsx)(e4.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e2.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1392,14 +1391,14 @@ var tZ = n(111042),
     t0 = n(403362),
     t1 = n(179771),
     t8 = n(824552),
-    t2 = n(168186),
-    t4 = n(594061),
+    t4 = n(168186),
+    t2 = n(594061),
     t3 = n(935208),
     t7 = n(630248),
     t9 = n(355097);
 function t6(e, t) {
     o.useEffect(() => {
-        t4.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t2.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t7.A], () => t7.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -1416,7 +1415,7 @@ function t6(e, t) {
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute();
-            let e = i?.map((e) => (0, t2.bq)(e.application, !0)) ?? [],
+            let e = i?.map((e) => (0, t4.bq)(e.application, !0)) ?? [],
                 t = [...l];
             return (
                 t.push(...e),
@@ -2061,7 +2060,7 @@ var nK = n(984516),
     n0 = n(994369),
     n1 = n(240591),
     n8 = n(727331);
-function n2(e, t) {
+function n4(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
         s = ((n = e), (l = t.filterPredicates ?? []), n.filter((e) => l.every((t) => t(e))));
@@ -2111,7 +2110,7 @@ function n2(e, t) {
         i,
     ).slice(0, i);
 }
-function n4(e, t) {
+function n2(e, t) {
     let n = t7.A.getScoreWithoutLoadingLatest(e.id);
     return t7.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
@@ -2359,7 +2358,7 @@ function ld(e) {
                     var e, i, a, r, o, d, u;
                     let m, p, h, A, f;
                     if (!s) return [];
-                    return n2(c, {
+                    return n4(c, {
                         limit: l,
                         filterPredicates: [
                             ((m = (0, n1.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
@@ -2496,7 +2495,7 @@ function ld(e) {
                                     }),
                             );
                     } else a && (u = m);
-                    return n2(u, {
+                    return n4(u, {
                         limit: i,
                         filterPredicates: [
                             ((d = (0, n1.Bh)("channel" === t.type ? t.channel : void 0, [
@@ -2543,7 +2542,7 @@ function ld(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n4, n3],
+                        sortComparers: [n2, n3],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,

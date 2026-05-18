@@ -9,9 +9,7 @@ function a(e, t) {
             switch (t.type) {
                 case r.o9.LEVEL: {
                     let { default: i } = await Promise.all([
-                        n.e("46279"),
-                        n.e("36723"),
-                        n.e("67567"),
+                        n.e("56790"),
                         n.e("31203"),
                         n.e("22455"),
                         n.e("48317"),
@@ -26,8 +24,8 @@ function a(e, t) {
                     let { default: i } = await Promise.all([
                         n.e("41181"),
                         n.e("34354"),
-                        n.e("46279"),
-                        n.e("35912"),
+                        n.e("61175"),
+                        n.e("56790"),
                         n.e("3930"),
                         n.e("3663"),
                         n.e("42749"),

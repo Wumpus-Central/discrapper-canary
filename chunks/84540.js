@@ -1,60 +1,66 @@
 "use strict";
-n.d(t, { p: () => o });
+n.d(t, { p: () => l });
 var i = n(228366),
-    r = n(696451),
-    s = n(287809),
-    a = n(841595);
-let o = (e) => {
+    r = n(685073),
+    s = n(696451),
+    a = n(287809),
+    o = n(841595);
+let l = (e) => {
     let { guildId: t, ...n } = e,
-        o = s.default.getCurrentUser();
-    if (null == o) return;
-    let l = null == t ? a.A.getUserProfile(o.id) : a.A.getGuildMemberProfile(o.id, t),
-        u = null != t ? r.Ay.getMember(t, o.id) : null,
-        c = {};
-    "globalName" in n &&
-        (n.globalName === o.globalName || ("" === n.globalName && null === o.globalName)
-            ? (c.pendingGlobalName = void 0)
-            : (c.pendingGlobalName = n.globalName)),
+        l = a.default.getCurrentUser();
+    if (null == l) return;
+    let u = null == t ? o.A.getUserProfile(l.id) : o.A.getGuildMemberProfile(l.id, t),
+        c = null != t ? s.Ay.getMember(t, l.id) : null,
+        d = {};
+    if (
+        ("globalName" in n &&
+            (n.globalName === l.globalName || ("" === n.globalName && null === l.globalName)
+                ? (d.pendingGlobalName = void 0)
+                : (d.pendingGlobalName = n.globalName)),
         "nickname" in n &&
-            (n.nickname === u?.nick || ("" === n.nickname && u?.nick === null)
-                ? (c.pendingNickname = void 0)
-                : (c.pendingNickname = n.nickname)),
-        "displayNameStyles" in n && (c.pendingDisplayNameStyles = n.displayNameStyles),
+            (n.nickname === c?.nick || ("" === n.nickname && c?.nick === null)
+                ? (d.pendingNickname = void 0)
+                : (d.pendingNickname = n.nickname)),
+        "displayNameStyles" in n && (d.pendingDisplayNameStyles = n.displayNameStyles),
         "pronouns" in n &&
-            (n.pronouns === l?.pronouns ? (c.pendingPronouns = void 0) : (c.pendingPronouns = n.pronouns)),
+            (n.pronouns === u?.pronouns ? (d.pendingPronouns = void 0) : (d.pendingPronouns = n.pronouns)),
         "avatar" in n &&
-            ((null != t && n.avatar?.imageUri === u?.avatar) || (null == t && n.avatar?.imageUri === o.avatar)
-                ? (c.pendingAvatar = void 0)
-                : (c.pendingAvatar = n.avatar)),
+            ((null != t && n.avatar?.imageUri === c?.avatar) || (null == t && n.avatar?.imageUri === l.avatar)
+                ? (d.pendingAvatar = void 0)
+                : (d.pendingAvatar = n.avatar)),
         "avatarDecoration" in n &&
-            ((null != t && n.avatarDecoration?.skuId === u?.avatarDecoration?.skuId) ||
-            (null == t && n.avatarDecoration?.skuId === o.avatarDecoration?.skuId)
-                ? (c.pendingAvatarDecoration = void 0)
-                : (c.pendingAvatarDecoration = n.avatarDecoration)),
+            ((null != t && n.avatarDecoration?.skuId === c?.avatarDecoration?.skuId) ||
+            (null == t && n.avatarDecoration?.skuId === l.avatarDecoration?.skuId)
+                ? (d.pendingAvatarDecoration = void 0)
+                : (d.pendingAvatarDecoration = n.avatarDecoration)),
         "nameplate" in n &&
-            ((null != t && n.nameplate?.skuId === u?.collectibles?.nameplate?.skuId) ||
-            (null == t && n.nameplate?.skuId === o.collectibles?.nameplate?.skuId)
-                ? (c.pendingNameplate = void 0)
-                : (c.pendingNameplate = n.nameplate)),
+            ((null != t && n.nameplate?.skuId === c?.collectibles?.nameplate?.skuId) ||
+            (null == t && n.nameplate?.skuId === l.collectibles?.nameplate?.skuId)
+                ? (d.pendingNameplate = void 0)
+                : (d.pendingNameplate = n.nameplate)),
         "profileEffect" in n &&
-            (n.profileEffect?.skuId === l?.profileEffect?.skuId
-                ? (c.pendingProfileEffect = void 0)
-                : (c.pendingProfileEffect = n.profileEffect)),
+            (n.profileEffect?.skuId === u?.profileEffect?.skuId
+                ? (d.pendingProfileEffect = void 0)
+                : (d.pendingProfileEffect = n.profileEffect)),
         "profileFrame" in n &&
-            (n.profileFrame?.skuId === l?.profileFrame?.skuId
-                ? (c.pendingProfileFrame = void 0)
-                : (c.pendingProfileFrame = n.profileFrame)),
+            (n.profileFrame?.skuId === u?.profileFrame?.skuId
+                ? (d.pendingProfileFrame = void 0)
+                : (d.pendingProfileFrame = n.profileFrame)),
         "banner" in n &&
-            ((null != t && n.banner === u?.banner) || (null == t && n.banner === o.banner)
-                ? ((c.pendingBanner = void 0), (c.pendingBannerOriginalMd5 = void 0))
-                : ((c.pendingBanner = n.banner), (c.pendingBannerOriginalMd5 = n.bannerOriginalMd5 ?? null))),
-        "accentColor" in n && (c.pendingAccentColor = n.accentColor),
+            ((null != t && n.banner === c?.banner) || (null == t && n.banner === l.banner)
+                ? ((d.pendingBanner = void 0), (d.pendingBannerOriginalMd5 = void 0))
+                : ((d.pendingBanner = n.banner), (d.pendingBannerOriginalMd5 = n.bannerOriginalMd5 ?? null))),
+        "accentColor" in n && (d.pendingAccentColor = n.accentColor),
         "themeColors" in n &&
-            ((n.themeColors?.[0] == null || n.themeColors?.[1] == null) && l?.themeColors == null
-                ? (c.pendingThemeColors = void 0)
-                : (c.pendingThemeColors = n.themeColors)),
-        "bio" in n && (n.bio === l?.bio ? (c.pendingBio = void 0) : (c.pendingBio = n.bio)),
-        "primaryGuildId" in n && (c.pendingPrimaryGuildId = n.primaryGuildId),
-        "legacyUsernameDisabled" in n && (c.pendingLegacyUsernameDisabled = n.legacyUsernameDisabled),
-        i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", guildId: t, ...c });
+            ((n.themeColors?.[0] == null || n.themeColors?.[1] == null) && u?.themeColors == null
+                ? (d.pendingThemeColors = void 0)
+                : (d.pendingThemeColors = n.themeColors)),
+        "bio" in n && (n.bio === u?.bio ? (d.pendingBio = void 0) : (d.pendingBio = n.bio)),
+        "primaryGuildId" in n)
+    ) {
+        let e = (0, r.Zo)(l.primaryGuild).guildId ?? null;
+        n.primaryGuildId === e ? (d.pendingPrimaryGuildId = void 0) : (d.pendingPrimaryGuildId = n.primaryGuildId);
+    }
+    "legacyUsernameDisabled" in n && (d.pendingLegacyUsernameDisabled = n.legacyUsernameDisabled),
+        i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", guildId: t, ...d });
 };

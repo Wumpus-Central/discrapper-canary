@@ -1,0 +1,18 @@
+.mainLoginContainer__86e92 {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1
+}
+
+.card__86e92 {
+    background-color: var(--modal-background);
+    box-shadow: none;
+    display: flex;
+    width: 100%
+}
+
+.buttonsContainer__86e92 {
+    display: flex;
+    justify-content: space-between
+}
