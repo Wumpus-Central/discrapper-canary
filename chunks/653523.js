@@ -1,86 +1,88 @@
 "use strict";
-n.d(t, { H$: () => C, MX: () => y, S4: () => R, zy: () => O }), n(801541);
+n.d(t, { H$: () => y, MX: () => O, S4: () => C, zy: () => v }), n(801541);
 var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(889137),
     l = n(17928),
-    d = n(661531),
-    _ = n(990078),
-    u = n(462887),
-    c = n(785007),
-    E = n(628284),
+    u = n(661531),
+    c = n(990078),
+    d = n(462887),
+    _ = n(785007),
+    f = n(628284),
     h = n(939249),
-    m = n(194261),
-    f = n(43990),
-    g = n(663417),
-    p = n(363195),
+    p = n(194261),
+    E = n(43990),
+    m = n(663417),
+    g = n(363195),
     A = n(644235),
     I = n(385803),
     T = n(652215),
-    S = n(985018),
+    S = n(375708),
     N = n(180764);
-function C() {
+function y() {
     return (0, i.jsx)("div", {
         className: N.BO,
-        children: (0, i.jsx)(E.y, {
+        children: (0, i.jsx)(f.y, {
             size: "md",
             color: "currentColor",
             className: N.AU,
             colorClass: N.AI,
-            secondaryColor: d.A.unsafe_rawColors.WHITE.css,
+            secondaryColor: u.A.unsafe_rawColors.WHITE.css,
         }),
     });
 }
-function R(e) {
+function C(e) {
     let {
             size: t = I.ni.SIZE_60,
             name: n,
             className: s,
             style: o,
             onSelect: l,
-            isSelected: d = !1,
-            tabIndex: u,
-            children: E,
-            showBadge: f,
-            showLockedBadge: g,
-            showSelectionCircle: p = !1,
+            isSelected: u = !1,
+            tabIndex: d,
+            children: f,
+            showBadge: E,
+            showLockedBadge: m,
+            showSelectionCircle: g = !1,
             disabled: A = !1,
+            ariaDescribedBy: S,
         } = e,
-        S = (0, c.Gx)({ label: n, isSelected: d }),
-        R = r.useMemo(() => ({ "--custom-theme-selection-size": `${t}px` }), [t]);
-    return (0, i.jsx)(_.m, {
+        C = (0, _.Gx)({ label: n, isSelected: u }),
+        v = r.useMemo(() => ({ "--custom-theme-selection-size": `${t}px` }), [t]);
+    return (0, i.jsx)(c.m, {
         __unsupportedReactNodeAsText: n,
         children: (0, i.jsxs)("div", {
             className: N.RH,
-            style: R,
+            style: v,
             children: [
                 (0, i.jsx)(h.D, {
-                    ...S,
+                    ...C,
                     "aria-disabled": A,
-                    tabIndex: u ?? S.tabIndex,
-                    className: a()(N.yM, { [N.wH]: d }, s),
+                    "aria-describedby": S,
+                    tabIndex: d ?? C.tabIndex,
+                    className: a()(N.yM, { [N.wH]: u }, s),
                     style: o,
-                    onClick: d ? T.tEg : l,
-                    children: E,
+                    onClick: u ? T.tEg : l,
+                    children: f,
                 }),
-                (d || p) && (0, i.jsx)(C, {}),
-                !d && f && (0, i.jsx)("div", { className: N.g3 }),
-                g &&
+                (u || g) && (0, i.jsx)(y, {}),
+                !u && E && (0, i.jsx)("div", { className: N.g3 }),
+                m &&
                     (0, i.jsx)("div", {
                         className: N.RK,
-                        children: (0, i.jsx)(m.X, { className: N.AA, color: "currentColor" }),
+                        children: (0, i.jsx)(p.X, { className: N.AA, color: "currentColor" }),
                     }),
             ],
         }),
     });
 }
-function O(e) {
-    let { theme: t, isSelected: n, onSelect: r, size: s, tabIndex: d } = e,
-        _ = (0, l.bG)([p.A], () => p.A.systemTheme),
-        u = p.A.themePreferenceForSystemTheme(_),
-        c = (0, o.YW)({ theme: t, themePreferenceForSystemTheme: u })
+function v(e) {
+    let { theme: t, isSelected: n, onSelect: r, size: s, tabIndex: u } = e,
+        c = (0, l.bG)([g.A], () => g.A.systemTheme),
+        d = g.A.themePreferenceForSystemTheme(c),
+        _ = (0, o.YW)({ theme: t, themePreferenceForSystemTheme: d })
             .with({ theme: "system", themePreferenceForSystemTheme: T.NJ8.LIGHT }, () => N.mT)
             .with({ theme: "system", themePreferenceForSystemTheme: T.NJ8.DARK }, () => N.eQ)
             .with({ theme: "system", themePreferenceForSystemTheme: T.NJ8.DARKER }, () => N.xl)
@@ -90,29 +92,29 @@ function O(e) {
             .with({ theme: T.NJ8.DARKER }, () => N.xl)
             .with({ theme: T.NJ8.MIDNIGHT }, () => N.k$)
             .otherwise(() => N.eQ),
-        E = (0, o.YW)(t)
+        f = (0, o.YW)(t)
             .with(T.NJ8.LIGHT, () => S.intl.string(S.t.K2sFfo))
             .with(T.NJ8.DARK, () => S.intl.string(S.t.SMPT1k))
             .with(T.NJ8.DARKER, () => S.intl.string(S.t.b8Cei3))
             .with(T.NJ8.MIDNIGHT, () => S.intl.string(S.t.Do4ZJx))
             .with("system", () => S.intl.string(S.t["7rOU6j"]))
             .exhaustive();
-    return (0, i.jsx)(R, {
+    return (0, i.jsx)(C, {
         size: s,
         onSelect: r,
         isSelected: n,
-        name: E,
-        tabIndex: d,
-        className: a()(N.r0, c),
+        name: f,
+        tabIndex: u,
+        className: a()(N.r0, _),
         children:
             "system" === t &&
             (0, i.jsx)("div", {
                 className: N.P0,
-                children: (0, i.jsx)(f.N, { theme: u, children: (e) => (0, i.jsx)(g.f, { className: e }) }),
+                children: (0, i.jsx)(E.N, { theme: d, children: (e) => (0, i.jsx)(m.f, { className: e }) }),
             }),
     });
 }
-function y(e) {
+function O(e) {
     let {
             size: t,
             preset: n,
@@ -120,21 +122,23 @@ function y(e) {
             disabled: s,
             tabIndex: o,
             onSelect: l,
-            showBadge: d,
-            showLockedBadge: _,
+            showBadge: u,
+            showLockedBadge: c,
+            ariaDescribedBy: _,
         } = e,
-        { colors: c, angle: E, theme: h } = n,
-        m = (0, A.FK)({ colors: c, angle: E });
-    return (0, i.jsx)(R, {
+        { colors: f, angle: h, theme: p } = n,
+        E = (0, A.FK)({ colors: f, angle: h });
+    return (0, i.jsx)(C, {
         size: t,
         onSelect: s ? void 0 : l,
         isSelected: r,
         name: n.getName(),
-        className: a()([s ? N.r9 : null, (0, u.M)(h) ? N.Xu : N.VO]),
-        style: { background: `var(--background-gradient), ${m}` },
+        className: a()([s ? N.r9 : null, (0, d.M)(p) ? N.Xu : N.VO]),
+        style: { background: `var(--background-gradient), ${E}` },
         tabIndex: o,
-        showBadge: d,
-        showLockedBadge: _,
+        showBadge: u,
+        showLockedBadge: c,
         disabled: s,
+        ariaDescribedBy: _,
     });
 }
