@@ -104,6 +104,24 @@
     position: relative
 }
 
+.detailPanel__6db38:has(.descriptionCardExtras__6db38) {
+    gap: var(--space-4);
+    padding-block-start: var(--space-24)
+}
+
+.detailPanel__6db38:has(.descriptionCardExtras__6db38) .badgeGraphic__6db38 {
+    height: 72px;
+    margin-bottom: var(--space-4)
+}
+
+.detailPanel__6db38:has(.descriptionCardExtras__6db38) .badgeInfo__6db38 {
+    gap: var(--space-8)
+}
+
+.detailPanel__6db38:has(.descriptionCardExtras__6db38) .badgeDetails__6db38 {
+    gap: var(--space-8)
+}
+
 .closeButton__6db38 {
     inset-block-start: var(--space-16);
     inset-inline-end: var(--space-16);
@@ -143,13 +161,19 @@
 }
 
 .badgeDetails__6db38 {
-    display: flex;
-    flex-direction: column;
     gap: 12px;
     width: 100%
 }
 
+.badgeDetails__6db38,
 .rarityCard__6db38 {
+    display: flex;
+    flex-direction: column
+}
+
+.rarityCard__6db38 {
+    align-items: center;
+    background: var(--background-mod-muted);
     border-radius: var(--radius-xl);
     gap: var(--space-4);
     height: 54px;
@@ -158,17 +182,18 @@
     padding-inline: var(--space-16)
 }
 
-.descriptionCard__6db38,
-.rarityCard__6db38 {
-    align-items: center;
-    background: var(--background-mod-muted);
-    display: flex;
-    flex-direction: column
+.detailPanel__6db38:has(.descriptionCardExtras__6db38) .rarityCard__6db38 {
+    box-sizing: border-box;
+    padding-block: var(--space-8)
 }
 
 .descriptionCard__6db38 {
+    align-items: center;
+    background: var(--background-mod-muted);
     border-radius: 12px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     gap: var(--space-16);
     padding: var(--space-16) var(--space-24);
     width: 100%
@@ -176,4 +201,66 @@
 
 .descriptionText__6db38 {
     text-align: center
+}
+
+.descriptionCard__6db38:has(.descriptionCardExtras__6db38) {
+    gap: var(--space-8);
+    padding-block: var(--space-12)
+}
+
+.descriptionCardExtras__6db38 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    width: 100%
+}
+
+.descriptionDivider__6db38 {
+    background: var(--border-subtle);
+    height: 1px;
+    width: 100%
+}
+
+.nitroTierUnlockDescription__6db38 {
+    width: 100%
+}
+
+.nitroTierGrid__6db38 {
+    box-sizing: border-box;
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%
+}
+
+.nitroTierItem__6db38 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+    padding: var(--space-4) var(--space-8)
+}
+
+.nitroTierItemLocked__6db38 .nitroTierIcon__6db38 {
+    opacity: .4
+}
+
+.nitroTierIcon__6db38 {
+    height: 20px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 20px
+}
+
+.nitroTierText__6db38 {
+    line-height: 16px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    text-align: center;
+    width: 100%
 }
