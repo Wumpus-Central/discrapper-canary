@@ -9568,10 +9568,6 @@
     --mobile-chat-input-send-button-width: 40px
 }
 
-.guild-item-spacing {
-    --mobile-guild-bar-item-margin: 6px
-}
-
 .refresh-fast-follow-avatars.density-compact {
     --guildbar-avatar-size: 40px;
     --guildbar-folder-size: 48px
