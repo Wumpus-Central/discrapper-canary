@@ -1428,19 +1428,17 @@ function nE() {
             }, [i, l, a, d, r, c, n, _, f, e]);
         })(e),
         { shouldShowBonusOrbsUX: y, multiplier: C } = (0, t3.lk)(nu.rE.NITRO_HOME_MARKETING),
-        v = (0, D.l)("useWhatsNewPerkCards"),
-        { isEligible: O, programReward: R } = (0, I.F)({ location: "useWhatsNewPerkCards" }),
-        b = O && null != R && null != R.reward_amount && R.reward_amount > 0;
+        { isEligible: v, programReward: O } = (0, I.F)({ location: "useWhatsNewPerkCards" }),
+        R = v && null != O && null != O.reward_amount && O.reward_amount > 0;
     return (0, s.useMemo)(() => {
         let e = [
                 c ? null : a,
                 c ? null : l,
-                b
+                R
                     ? {
                           id: V.NITRO_ORBS_REWARDS_CARD_ID,
                           title: $.intl.string(t8.default.hx5AFp),
-                          description: $.intl.format(t8.default.wq3CF2, { orbsCount: R.reward_amount }),
-                          pillText: v ? $.intl.string($.t.y2b7CA) : $.intl.string($.t.oW0eUd),
+                          description: $.intl.format(t8.default.wq3CF2, { orbsCount: O.reward_amount }),
                           primaryAsset: "/assets/8f530451dce1ccc0.svg",
                           primaryAssetClassName: o()(nd.lH, nd.yK),
                           footerContent: (0, r.jsx)(ne, {}),
@@ -1525,7 +1523,7 @@ function nE() {
             n = (e = e.filter((e) => null != e))[0].featured,
             s = n ? 5 : 6;
         return e.splice(+!!n, 0, S), e.length > s && e.splice(s, e.length - s), e;
-    }, [v, S, b, R, i, y, C, h, g, m, T, f, t, a, l, c]);
+    }, [S, R, O, i, y, C, h, g, m, T, f, t, a, l, c]);
 }
 var nm = n(355097),
     ng = n(64514),
