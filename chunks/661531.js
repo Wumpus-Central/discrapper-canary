@@ -7739,6 +7739,14 @@ let { Themes: c } = u.zv,
                         return 0;
                     },
                 },
+                CHAT_INPUT_FLOATING_OFFSET_MINIMUM: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 0;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 16;
+                        return 0;
+                    },
+                },
                 CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
@@ -7831,14 +7839,6 @@ let { Themes: c } = u.zv,
                                     return 40;
                             }
                         return 40;
-                    },
-                },
-                CHAT_INPUT_SPACE_BOTTOM: {
-                    resolve(e) {
-                        let { enabledExperiments: t } = e;
-                        if (0 === t.length) return 0;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 34;
-                        return 0;
                     },
                 },
                 COACHMARK_BODY_WIDTH: {
