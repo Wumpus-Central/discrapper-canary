@@ -4,7 +4,7 @@ l.r(t),
         virtualCurrencyCollection: () => l8,
         playgroundConfig: () => l5,
         identityCollection: () => l7,
-        RevenuePlaygroundCollectionId: () => l6,
+        RevenuePlaygroundCollectionId: () => l3,
         paymentsCollection: () => l4,
     });
 var a,
@@ -1163,7 +1163,7 @@ function e1() {
 function e2() {
     return (0, s.jsx)("div", { style: { width: "60%", height: "60%", borderRadius: "50%", background: "red" } });
 }
-let e6 = {
+let e3 = {
         label: "Variant",
         type: "select",
         defaultValue: "square",
@@ -1172,7 +1172,7 @@ let e6 = {
             { label: "Bar", value: "bar" },
         ],
     },
-    e3 = {
+    e6 = {
         title: "Editable Tile Button",
         stories: [
             {
@@ -1201,7 +1201,7 @@ let e6 = {
                 },
                 id: "add-tile-button",
                 controls: {
-                    variant: e6,
+                    variant: e3,
                     accessibleLabel: { label: "Aria Label", type: "text", defaultValue: "Avatar image" },
                 },
             },
@@ -1231,7 +1231,7 @@ let e6 = {
                 },
                 id: "edit-tile-button",
                 controls: {
-                    variant: e6,
+                    variant: e3,
                     showOverlayOnHover: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
                     accessibleLabel: { label: "Aria Label", type: "text", defaultValue: "Avatar image" },
                 },
@@ -1271,7 +1271,7 @@ let e6 = {
                 },
                 id: "deletable-edit-tile-button",
                 controls: {
-                    variant: e6,
+                    variant: e3,
                     showOverlayOnHover: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
                     accessibleLabel: { label: "Aria Label", type: "text", defaultValue: "Avatar image" },
                     deleteType: {
@@ -1301,11 +1301,10 @@ var te = l(99696),
     tt = l(534514),
     tl = l(599147),
     ta = l(808411),
-    tn = l(116833),
-    ti = l(716574),
-    tr = l(425713),
-    to = l(367266);
-let ts = {
+    tn = l(716574),
+    ti = l(425713),
+    tr = l(367266);
+let to = {
     bronze: eC.Ac.PREMIUM_TENURE_1_MONTH,
     silver: eC.Ac.PREMIUM_TENURE_3_MONTH,
     gold: eC.Ac.PREMIUM_TENURE_6_MONTH,
@@ -1315,48 +1314,49 @@ let ts = {
     ruby: eC.Ac.PREMIUM_TENURE_60_MONTH,
     opal: eC.Ac.PREMIUM_TENURE_72_MONTH,
 };
-var td = l(661531),
+var ts = l(661531),
+    td = l(116833),
     tu = l(720879);
 let tc = {
     bronze: {
         type: "custom",
-        start: td.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_BRONZE_START,
-        end: td.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_BRONZE_END,
+        start: ts.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_BRONZE_START,
+        end: ts.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_BRONZE_END,
     },
     silver: {
         type: "custom",
-        start: td.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_SILVER_START,
-        end: td.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_SILVER_END,
+        start: ts.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_SILVER_START,
+        end: ts.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_SILVER_END,
     },
     gold: {
         type: "custom",
-        start: td.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_GOLD_START,
-        end: td.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_GOLD_END,
+        start: ts.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_GOLD_START,
+        end: ts.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_GOLD_END,
     },
     platinum: {
         type: "custom",
-        start: td.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_PLATINUM_START,
-        end: td.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_PLATINUM_END,
+        start: ts.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_PLATINUM_START,
+        end: ts.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_PLATINUM_END,
     },
     diamond: {
         type: "custom",
-        start: td.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_START,
-        end: td.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_END,
+        start: ts.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_START,
+        end: ts.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_END,
     },
     emerald: {
         type: "custom",
-        start: td.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_EMERALD_START,
-        end: td.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_EMERALD_END,
+        start: ts.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_EMERALD_START,
+        end: ts.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_EMERALD_END,
     },
     ruby: {
         type: "custom",
-        start: td.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_RUBY_START,
-        end: td.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_RUBY_END,
+        start: ts.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_RUBY_START,
+        end: ts.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_RUBY_END,
     },
     opal: {
         type: "custom",
-        start: td.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_OPAL_START,
-        end: td.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_OPAL_END,
+        start: ts.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_OPAL_START,
+        end: ts.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_OPAL_END,
     },
 };
 var tp = l(624716),
@@ -1463,20 +1463,14 @@ let th = { name: "Expressive Progress", component: ta.A, id: "expressive-progres
                     let { badgeId: t, earnedOnText: l, variant: a } = e,
                         n = d.useRef(null),
                         i = d.useRef(null),
-                        r = ts[t],
-                        o = (0, tr.I)(r).standard,
+                        r = to[t],
+                        o = (0, ti.I)(r).standard,
                         u = eC.VD[r].rarity,
                         c = (
                             U.intl.string(U.t.lG6a5x) +
                             " " +
                             U.intl.string(eC.VD[r].nameUnformatted)
-                        ).toLocaleUpperCase(),
-                        p = {
-                            type: "dynamic",
-                            component: tn.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
-                            aspectRatio: "16/9",
-                            props: { src: o, alt: c, compact: !0 },
-                        };
+                        ).toLocaleUpperCase();
                     return (0, s.jsxs)("div", {
                         children: [
                             (0, s.jsx)(y.E, {
@@ -1486,15 +1480,16 @@ let th = { name: "Expressive Progress", component: ta.A, id: "expressive-progres
                                     'Hover or focus a badge to see the mini tooltip. Renders as `role="tooltip"` \u2014 title and body are announced via `aria-describedby` injected on the trigger by MiniPremiumTooltip.',
                             }),
                             (0, s.jsxs)("div", {
-                                className: to.k3,
+                                className: tr.k3,
                                 children: [
                                     (0, s.jsx)("span", {
-                                        className: to.yU,
-                                        children: (0, s.jsx)(ti.K, {
+                                        className: tr.yU,
+                                        children: (0, s.jsx)(tn.K, {
                                             targetElementRef: n,
                                             title: c,
                                             body: l,
-                                            graphic: p,
+                                            badgeImage: o,
+                                            badgeName: c,
                                             rarity: u,
                                             variant: a,
                                             children: (0, s.jsx)(g.Anchor, {
@@ -1505,18 +1500,19 @@ let th = { name: "Expressive Progress", component: ta.A, id: "expressive-progres
                                                     alt: " ",
                                                     "aria-hidden": !0,
                                                     src: o,
-                                                    className: to.Jv,
+                                                    className: tr.Jv,
                                                 }),
                                             }),
                                         }),
                                     }),
                                     (0, s.jsx)("span", {
-                                        className: to.yU,
-                                        children: (0, s.jsx)(ti.K, {
+                                        className: tr.yU,
+                                        children: (0, s.jsx)(tn.K, {
                                             targetElementRef: i,
                                             title: c,
                                             body: l,
-                                            graphic: p,
+                                            badgeImage: o,
+                                            badgeName: c,
                                             rarity: u,
                                             variant: a,
                                             children: (0, s.jsx)(g.Anchor, {
@@ -1527,7 +1523,7 @@ let th = { name: "Expressive Progress", component: ta.A, id: "expressive-progres
                                                     alt: " ",
                                                     "aria-hidden": !0,
                                                     src: o,
-                                                    className: to.Jv,
+                                                    className: tr.Jv,
                                                 }),
                                             }),
                                         }),
@@ -1600,7 +1596,7 @@ let th = { name: "Expressive Progress", component: ta.A, id: "expressive-progres
                                 })[i],
                             [i],
                         ),
-                        v = null != f ? (0, tr.I)(f).standard : null,
+                        v = null != f ? (0, ti.I)(f).standard : null,
                         E = d.useMemo(() => {
                             if (null == f) return "";
                             let e = eC.VD[f];
@@ -1617,7 +1613,7 @@ let th = { name: "Expressive Progress", component: ta.A, id: "expressive-progres
                                 : {};
                             return {
                                 type: "dynamic",
-                                component: tn.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
+                                component: td.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
                                 aspectRatio: "6/4",
                                 props: { src: v, alt: E, ...e },
                             };
@@ -2427,8 +2423,8 @@ Error: ${t}`);
     });
 }
 var t2 = l(405139),
-    t6 = l(19311),
-    t3 = l(869177);
+    t3 = l(19311),
+    t6 = l(869177);
 function t4(e) {
     let t = d.useRef(null),
         l = {
@@ -2441,7 +2437,7 @@ function t4(e) {
             loadingComponent: (0, s.jsx)(ei.y, { style: { marginTop: 16 }, type: ei.t.PULSING_ELLIPSIS }),
         };
     return e.renderStepBody
-        ? (0, s.jsx)(t3.V, { ...l, ...e })
+        ? (0, s.jsx)(t6.V, { ...l, ...e })
         : "applePay" === e.paymentRequestWallet
           ? (0, s.jsx)(t2.Mv, { ...l, ...e })
           : (0, s.jsx)(t2.dP, { ...l, ...e });
@@ -2451,8 +2447,8 @@ function t8(e) {
         l = d.useRef(null),
         [a, n] = d.useState(!1);
     return (0, s.jsx)(tM.e_, {
-        footer: (0, s.jsx)(t6.Ay, {
-            primaryCTA: t6.Ay.CTAType.CONTINUE,
+        footer: (0, s.jsx)(t3.Ay, {
+            primaryCTA: t3.Ay.CTAType.CONTINUE,
             primaryText: U.intl.string("applePay" === t ? U.t.WoXvJL : U.t.wnVVr0),
             primaryDisabled: !a,
             onPrimary: () => void (null != l.current && l.current.show()),
@@ -3662,13 +3658,13 @@ let lX = { "nitro-wheel": r.t, gift: lG.o, orbs: i.C },
             },
         ],
     };
-var l6 =
+var l3 =
     (((a = {}).PAYMENTS = "payments"),
     (a.VIRTUAL_CURRENCY = "virtual-currency"),
     (a.NITRO = "nitro"),
     (a.IDENTITY = "identity"),
     a);
-let l3 = ["Revenue Storybook", "Revenue Playground"],
+let l6 = ["Revenue Storybook", "Revenue Playground"],
     l4 = {
         id: "payments",
         name: "Payments",
@@ -3737,7 +3733,7 @@ let l3 = ["Revenue Storybook", "Revenue Playground"],
             { title: "Checkout Review Step", stories: [eU, eB] },
             lb,
         ],
-        tags: l3,
+        tags: l6,
         IconComponent: n.d,
     },
     l8 = {
@@ -3796,7 +3792,7 @@ let l3 = ["Revenue Storybook", "Revenue Playground"],
                 ],
             },
         ],
-        tags: l3,
+        tags: l6,
         IconComponent: i.C,
     },
     l9 = {
@@ -4185,14 +4181,14 @@ let l3 = ["Revenue Storybook", "Revenue Playground"],
             },
             { title: "Clips", stories: [eZ] },
         ],
-        tags: l3,
+        tags: l6,
         IconComponent: r.t,
     },
     l7 = {
         id: "identity",
         name: "Identity",
         groups: [
-            e3,
+            e6,
             {
                 title: "Editable Tile Button Examples",
                 stories: [
@@ -4283,7 +4279,7 @@ let l3 = ["Revenue Storybook", "Revenue Playground"],
                 ],
             },
         ],
-        tags: l3,
+        tags: l6,
         IconComponent: o.n,
     },
     l5 = { playgroundBaseUrl: "revenue", collections: [l4, l8, l9, l7] };

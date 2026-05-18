@@ -1,31 +1,3 @@
-.container__12f17 {
-    border: .5px solid var(--white);
-    border-radius: var(--radius-sm);
-    display: inline-block;
-    margin-bottom: 4px;
-    padding: 0 6px
-}
-
-.darkText__12f17 {
-    border-color: var(--black);
-    color: var(--black)
-}
-
-.lightText__12f17 {
-    border-color: var(--white);
-    color: var(--white)
-}
-
-.theme-dark .badge_dd79c2 {
-    background-color: var(--white);
-    color: var(--black)
-}
-
-.theme-light .badge_dd79c2 {
-    background-color: var(--black);
-    color: var(--white)
-}
-
 .striked_e77b99 {
     opacity: .7;
     text-decoration: line-through

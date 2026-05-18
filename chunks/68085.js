@@ -75,7 +75,10 @@ let R = (e) => {
     let E = (0, r.useCallback)(() => {
         n?.(C.i.USER_DISMISS);
     }, [n]);
-    if ("mini-tooltip" === e.mode)
+    if ("mini-tooltip" === e.mode) {
+        let t = (function (e, t, n) {
+            if (null != e && null != t && null != n) return { text: e, percent: t, urgency: n };
+        })(o, l, u);
         return (0, i.jsx)(T.A, {
             targetElementRef: a,
             onShow: c,
@@ -83,21 +86,12 @@ let R = (e) => {
             body: e.body,
             variant: "nitro",
             rarity: f,
-            graphic: {
-                type: "dynamic",
-                component: g.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
-                aspectRatio: "16/9",
-                props: {
-                    src: p,
-                    alt: _,
-                    progressCircleText: o,
-                    progressCirclePercent: l,
-                    progressCircleUrgency: u,
-                    compact: !0,
-                },
-            },
+            badgeImage: p,
+            badgeName: _,
+            progressCircle: t,
             children: s,
         });
+    }
     let m = {
         gradientColor: h,
         size: "lg",

@@ -12,8 +12,7 @@ let o = "display-name-styles-modal",
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("93110"),
-                    n.e("74389"),
-                    n.e("14743"),
+                    n.e("4882"),
                     n.e("80203"),
                     n.e("54266"),
                     n.e("74103"),

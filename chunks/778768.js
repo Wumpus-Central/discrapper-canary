@@ -21,8 +21,8 @@ var n = i(627968),
     N = i(376728),
     _ = i(774300),
     S = i(566903),
-    j = i(714114),
-    C = i(864436),
+    C = i(714114),
+    j = i(864436),
     y = i(835072),
     T = i(793574),
     b = i(688810),
@@ -68,7 +68,7 @@ function $(e) {
         d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, m.openModalLazy)(async () => {
                 let { default: l } = await Promise.all([
-                    i.e("49909"),
+                    i.e("4882"),
                     i.e("59957"),
                     i.e("28136"),
                     i.e("16084"),
@@ -151,7 +151,7 @@ function Z(e) {
             let e = J.find((e) => e.type !== I.$pd.CUSTOM_STATUS && e.type !== I.$pd.HANG_STATUS);
             return { activityStatusText: (0, S.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, y.f)(e) };
         }, [J]),
-        { voiceChannel: ee } = (0, j.A)({ userId: i.id }),
+        { voiceChannel: ee } = (0, C.A)({ userId: i.id }),
         et = (0, G.Ay)(ee),
         ei = (0, p.S3)(I.clD.ONLINE),
         en = "success" === g || "sending" === g,
@@ -233,7 +233,7 @@ function Z(e) {
                                 eh
                                     ? (0, n.jsx)(k.A, { size: "custom", color: ei, channel: ee, className: B.RI })
                                     : null != Q
-                                      ? (0, n.jsx)(C.A, { icon: Q, className: B.RI })
+                                      ? (0, n.jsx)(j.A, { icon: Q, className: B.RI })
                                       : null,
                                 (0, n.jsx)(h.E, {
                                     variant: "text-xs/medium",

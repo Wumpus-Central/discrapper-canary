@@ -1312,7 +1312,7 @@ class nB extends r.PureComponent {
         let { guild: e } = this.props;
         (0, _.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
-                n.e("74389"),
+                n.e("4882"),
                 n.e("59957"),
                 n.e("28136"),
                 n.e("16084"),
@@ -1645,7 +1645,7 @@ class il extends r.PureComponent {
                     n.e("28643"),
                     n.e("47459"),
                     n.e("40671"),
-                    n.e("74389"),
+                    n.e("4882"),
                     n.e("97444"),
                     n.e("49579"),
                     n.e("41069"),

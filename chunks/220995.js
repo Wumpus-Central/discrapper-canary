@@ -21,8 +21,8 @@ var n = i(627968),
     N = i(139286),
     _ = i(713517),
     S = i(71393),
-    j = i(576705),
-    C = i(174459),
+    C = i(576705),
+    j = i(174459),
     y = i(778768),
     T = i(652215);
 i(281405);
@@ -44,7 +44,7 @@ function R(e) {
         type: d.ImpressionTypes.VIEW,
         properties: { voice_channel_id: t.id, voice_guild_id: t.guild_id, location_stack: H },
     });
-    let F = (0, u.bG)([j.A], () => j.A.can(T.xBc.CREATE_INSTANT_INVITE, t), [t]),
+    let F = (0, u.bG)([C.A], () => C.A.can(T.xBc.CREATE_INSTANT_INVITE, t), [t]),
         z = (0, u.bG)([S.A], () => S.A.getGuild(t.guild_id)),
         [Y, B] = l.useState(!1),
         K = l.useRef(null),
@@ -55,7 +55,7 @@ function R(e) {
         X = l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
-                C.default.track(T.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
+                j.default.track(T.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
                     reason: e,
                     channel_id: t.id,
                     guild_id: t.guild_id,
@@ -70,7 +70,7 @@ function R(e) {
             null != z &&
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        i.e("49909"),
+                        i.e("4882"),
                         i.e("59957"),
                         i.e("28136"),
                         i.e("16084"),

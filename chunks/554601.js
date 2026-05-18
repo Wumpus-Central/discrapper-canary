@@ -560,7 +560,7 @@ function eJ(e) {
                                                         n.e("40671"),
                                                         n.e("55990"),
                                                         n.e("8506"),
-                                                        n.e("74389"),
+                                                        n.e("4882"),
                                                         n.e("47459"),
                                                         n.e("333"),
                                                         n.e("74103"),
@@ -635,6 +635,7 @@ function eJ(e) {
                                                         n.e("26728"),
                                                         n.e("1354"),
                                                         n.e("20282"),
+                                                        n.e("54282"),
                                                         n.e("23276"),
                                                         n.e("78412"),
                                                         n.e("63213"),
@@ -838,8 +839,8 @@ var e4 = n(34188),
     e3 = n(700623),
     e2 = n(177953),
     e7 = n(825484),
-    e9 = n(512950),
-    e5 = n(900797),
+    e5 = n(512950),
+    e9 = n(900797),
     e6 = n(847374),
     te = n(10716),
     tt = n(702841),
@@ -1221,9 +1222,9 @@ function tO(e) {
                   ],
               })
             : s && !i && (0, j.Ag)(n)
-              ? (0, r.jsx)(e9.p, {
+              ? (0, r.jsx)(e5.p, {
                     className: ty.ai,
-                    messageType: e9.Y.WARNING,
+                    messageType: e5.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1286,7 +1287,7 @@ function tM(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e5.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              ? (0, r.jsx)(e9.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
                               : (0, r.jsx)(e6.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
@@ -1399,10 +1400,10 @@ var tZ = n(111042),
     t3 = n(594061),
     t2 = n(935208),
     t7 = n(630248),
-    t9 = n(355097);
-function t5(e, t) {
+    t5 = n(355097);
+function t9(e, t) {
     o.useEffect(() => {
-        t3.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t3.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t7.A], () => t7.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -2127,8 +2128,8 @@ function n7(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
-var n9 = n(562708),
-    n5 = n(139286),
+var n5 = n(562708),
+    n9 = n(139286),
     n6 = n(520117);
 function le(e) {
     let { applicationId: t, commandId: n, searchResultsPosition: l, query: i } = e,
@@ -2136,9 +2137,9 @@ function le(e) {
     return {
         trackSearchResultsItemImpressionRef: (0, n6.A)({
             onVisible: () => {
-                (0, n5.x)({
-                    type: n9.ImpressionTypes.VIEW,
-                    name: n9.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
+                (0, n9.x)({
+                    type: n5.ImpressionTypes.VIEW,
+                    name: n5.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                     properties: { application_id: t, command_id: n, search_results_position: l, query: i, source: s },
                 });
             },
@@ -3050,7 +3051,7 @@ function lI(e) {
                             let e = [];
                             return c && e.push(ni.gq), e;
                         }, [c]),
-                        u = t5(r, a);
+                        u = t9(r, a);
                     return o.useMemo(
                         () =>
                             l
@@ -3225,7 +3226,7 @@ function ly(e) {
                         }, new Set()),
                     [i],
                 ),
-                r = t5(
+                r = t9(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})
