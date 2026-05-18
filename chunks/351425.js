@@ -913,7 +913,8 @@ function tu(e) {
                 } = (0, i.cf)([e6.Ay], () => {
                     let t = e6.Ay.getMember(e.guildId, e.userId);
                     return {
-                        username: e6.Ay.getNick(e.guildId, e.userId) ?? e.user?.username,
+                        username:
+                            e6.Ay.getNick(e.guildId, e.userId) ?? e.user?.username ?? k.intl.string(k.t["30mdIx"]),
                         roleColor: t?.colorString ?? null,
                         roleColorStrings: t?.colorStrings ?? null,
                     };
