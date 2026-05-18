@@ -7797,7 +7797,7 @@ let rL = {
         return (t) => (0, r.jsx)(e, { ...t, entryPoint: a2.q1.DEV_TOOLS_AGE_VERIFICATION_RETRY_MODAL });
     },
     ExistingUserAgeGatePrompt: async () => {
-        let { default: e } = await Promise.all([a.e("20969"), a.e("82758"), a.e("80022"), a.e("10136")]).then(
+        let { default: e } = await Promise.all([a.e("25226"), a.e("82758"), a.e("80022"), a.e("10136")]).then(
             a.bind(a, 776971),
         );
         return (t) => (0, r.jsx)(e, { ...t, source: rM.w_.NSFW_SERVER });
@@ -7808,13 +7808,34 @@ let rL = {
     },
     NewUserAgeGate: async () => {
         let { default: e } = await Promise.all([
-            a.e("20969"),
-            a.e("19623"),
+            a.e("25226"),
             a.e("82758"),
+            a.e("19623"),
             a.e("80022"),
             a.e("1143"),
         ]).then(a.bind(a, 284778));
         return (t) => (0, r.jsx)(e, { ...t });
+    },
+    NUFModal: async () => {
+        let { default: e } = await Promise.all([
+            a.e("79924"),
+            a.e("25226"),
+            a.e("59405"),
+            a.e("19580"),
+            a.e("97804"),
+            a.e("56856"),
+            a.e("82758"),
+            a.e("99574"),
+            a.e("80022"),
+            a.e("50475"),
+            a.e("93265"),
+            a.e("58118"),
+        ]).then(a.bind(a, 111185));
+        return (t) => (0, r.jsx)(e, { ...t, onSlideChange: () => {} });
+    },
+    ClaimAccountModal: async () => {
+        let { default: e } = await Promise.all([a.e("40933"), a.e("19623"), a.e("21007")]).then(a.bind(a, 888363));
+        return (t) => (0, r.jsx)(e, { claimRequired: !0, ...t });
     },
     AutomatedUnderageAppealModal: async () => {
         let { default: e } = await Promise.all([a.e("51194"), a.e("9018")]).then(a.bind(a, 244321));
@@ -8763,17 +8784,18 @@ let rL = {
     NewUserOnboarding: async () => {
         let { default: e } = await Promise.all([
             a.e("79924"),
-            a.e("13754"),
+            a.e("25226"),
+            a.e("7850"),
             a.e("16138"),
             a.e("19580"),
             a.e("97804"),
-            a.e("19623"),
             a.e("56856"),
+            a.e("19623"),
             a.e("82721"),
             a.e("99574"),
             a.e("57794"),
-            a.e("19183"),
-        ]).then(a.bind(a, 923314));
+            a.e("29574"),
+        ]).then(a.bind(a, 655045));
         return (t) => (0, r.jsx)(e, { ...t });
     },
 };

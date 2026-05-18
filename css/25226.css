@@ -126,110 +126,121 @@
     }
 }
 
-.header__991a0 {
-    position: relative;
-    text-align: center
+.container_b0f4cc {
+    display: flex;
+    flex-direction: column
 }
 
-.title__991a0 {
+.title_b0f4cc {
+    color: var(--interactive-text-default);
     font-weight: var(--font-weight-bold);
     margin-bottom: 8px;
-    margin-top: 24px
+    text-transform: uppercase
 }
 
-.closeButton__991a0 {
-    inset-inline-end: 12px;
-    position: absolute;
-    top: 12px
+.inputs_b0f4cc {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    width: 100%
 }
 
-.inputForm__991a0 {
-    margin-bottom: 16px
+.day_b0f4cc {
+    width: 30%
 }
 
-.formTitle__991a0 {
-    color: var(--interactive-text-default);
-    margin-bottom: 8px
+.month_b0f4cc {
+    width: 35%
 }
 
-.formTitle__991a0.error__991a0 {
+.year_b0f4cc {
+    width: 30%
+}
+
+.errors_b0f4cc {
     color: var(--text-feedback-critical)
 }
 
-.examplesForm__991a0 {
-    margin-bottom: 16px
+.checkbox_d332d2 {
+    margin-inline-end: 8px
 }
 
-.sampleLinks__991a0 {
-    padding: var(--space-8) 0
+.errorMessage_d332d2 {
+    color: var(--text-feedback-critical)
 }
 
-.sampleLink__991a0 {
-    background-color: var(--background-mod-muted);
-    border: 1px solid var(--border-muted);
-    border-radius: var(--radius-xs);
+.createAccountTemplateHeader_d332d2 {
     color: var(--text-strong);
-    display: inline-block;
-    font-size: 14px;
-    line-height: 18px;
-    margin: var(--space-4);
-    padding: var(--space-4)
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold)
 }
 
-.footer__991a0 {
-    justify-content: space-between
+.authBlock_d332d2 {
+    margin-top: 32px
 }
 
-.rowTextContainer__991a0 {
-    margin: 38px auto 16px;
-    text-align: center
+.horizontalAuthBox_d332d2 {
+    width: 960px
 }
 
-.rowContainer__991a0 {
-    align-items: center;
-    background-color: var(--background-base-lower);
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
+.flex_d332d2 {
+    flex: 1 1 auto
+}
+
+.divider_d332d2 {
+    background-color: var(--border-subtle);
+    height: 1px;
     margin-bottom: 16px;
-    padding: 12px;
-    text-align: start
+    margin-top: 16px;
+    width: 100%
 }
 
-.rowContainer__991a0:hover {
-    background-color: var(--interactive-background-hover)
+.goBackButton_d332d2 {
+    margin-bottom: 16px;
+    padding-inline-start: 0
 }
 
-.keyboard-mode .rowContainer__991a0:focus {
-    background-color: var(--interactive-background-selected)
+.goBackButton_d332d2 .content_d332d2 {
+    align-items: center;
+    display: flex
 }
 
-.rowContainer__991a0:active {
-    background-color: var(--interactive-background-active)
+.goBackButton_d332d2 .caret_d332d2 {
+    margin-block: 0 1px;
+    margin-inline: 0 4px
 }
 
-.rowIcon__991a0 {
-    margin-inline-end: 12px
+.messageNegative_d332d2 {
+    color: var(--text-feedback-critical)
 }
 
-.rowText__991a0 {
-    overflow: hidden;
-    text-overflow: ellipsis
+.messagePositive_d332d2 {
+    color: var(--text-feedback-positive)
 }
 
-.rowArrow__991a0 {
-    margin-inline: auto 16px
+.inviteBirthdayInput_d332d2 {
+    margin-bottom: 32px;
+    margin-top: 20px
 }
 
-.container__024d4 {
+.consentBox_d332d2 {
+    margin-bottom: 8px;
+    margin-top: 8px
+}
+
+.consentSubText_d332d2 {
+    color: var(--text-subtle);
+    font-size: 14px;
+    line-height: 18px
+}
+
+.centeredButtonContainer_d332d2 {
     display: flex;
-    flex-direction: column;
-    max-height: 580px;
-    width: var(--modal-width-small)
+    justify-content: center;
+    width: 100%
 }
 
-@media (max-width:440px) {
-    .container__024d4 {
-        width: 100%
-    }
+.birthdayInput_d332d2 {
+    margin-bottom: 20px;
+    margin-top: 20px
 }

@@ -1762,7 +1762,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 545960, Version Hash: 9f1e41f469490d877220eec6577dd8f759ef4e15`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 545962, Version Hash: 1da638060c656da5976d5dddfd6c2c01ca674c7b`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -2209,7 +2209,7 @@ class n3 extends nK.A {
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("35769"),
-                    n.e("20969"),
+                    n.e("25226"),
                     n.e("28367"),
                     n.e("82758"),
                     n.e("57641"),
@@ -4410,7 +4410,6 @@ let s3 = (0, rs.Fe)({
                 n.e("5871"),
                 n.e("27462"),
                 n.e("22455"),
-                n.e("94161"),
                 n.e("68031"),
                 n.e("50068"),
                 n.e("97162"),
@@ -4421,6 +4420,7 @@ let s3 = (0, rs.Fe)({
                 n.e("81398"),
                 n.e("4374"),
                 n.e("86546"),
+                n.e("94161"),
                 n.e("70587"),
                 n.e("84704"),
                 n.e("2199"),
@@ -18301,7 +18301,7 @@ let Sv = "isHideDevBanner",
                     className: t2()(SC.Wz, SC.mr),
                     children: [
                         (0, k.jsx)(Sy, { className: SC.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "545960" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "545962" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -21690,7 +21690,7 @@ let yU = () => (0, k.jsx)("div", { className: yb.wG, children: (0, k.jsx)(rn.y, 
                 n.e("9482"),
                 n.e("10615"),
                 n.e("74103"),
-                n.e("7850"),
+                n.e("85469"),
                 n.e("76602"),
                 n.e("82263"),
                 n.e("95602"),
@@ -25910,8 +25910,6 @@ class Rl extends nK.A {
             let e = tx.A.getGuild(a);
             null != e && (0, O7.Qd)(e) && ((s = !0), (0, Re.Fy)(e.id));
         }
-        let o = () => 0 === Rn.A.totalGuilds && !ek.isPlatformEmbedded,
-            l = nQ.xq();
         (e = [
             {
                 key: "Unified NUF Modal",
@@ -25922,19 +25920,19 @@ class Rl extends nK.A {
                             async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("79924"),
-                                    n.e("13754"),
+                                    n.e("25226"),
+                                    n.e("7850"),
                                     n.e("16138"),
                                     n.e("74678"),
                                     n.e("19580"),
-                                    n.e("94161"),
                                     n.e("97804"),
                                     n.e("56856"),
                                     n.e("82721"),
                                     n.e("16799"),
                                     n.e("99574"),
                                     n.e("57794"),
-                                    n.e("19183"),
-                                ]).then(n.bind(n, 923314));
+                                    n.e("29574"),
+                                ]).then(n.bind(n, 655045));
                                 return (t) => (0, k.jsx)(e, { ...t });
                             },
                             { onCloseRequest: eL.tEg, onCloseCallback: e, modalKey: r },
@@ -25974,9 +25972,8 @@ class Rl extends nK.A {
                         async () => {
                             let { default: e } = await Promise.all([
                                 n.e("79924"),
-                                n.e("13754"),
+                                n.e("25226"),
                                 n.e("35769"),
-                                n.e("20969"),
                                 n.e("59405"),
                                 n.e("28367"),
                                 n.e("74678"),
@@ -25993,9 +25990,9 @@ class Rl extends nK.A {
                         { onCloseRequest: eL.tEg, onCloseCallback: e, modalKey: r },
                     );
                 },
-                predicate: () => o() && !0,
+                predicate: () => 0 === Rn.A.totalGuilds && !ek.isPlatformEmbedded,
             },
-            { key: "New User Age Gate", open: O4.v, predicate: () => l && !o() && !0 },
+            { key: "New User Age Gate", open: O4.v, predicate: () => nQ.xq() && !0 },
             {
                 key: "Claim Account Modal",
                 open: (e) => O4.R(ek.isPlatformEmbedded, e),
@@ -35857,7 +35854,6 @@ let xr = (0, ny.Fe)({
             n.e("27462"),
             n.e("22455"),
             n.e("60816"),
-            n.e("94161"),
             n.e("3168"),
             n.e("68031"),
             n.e("98254"),
@@ -35882,6 +35878,7 @@ let xr = (0, ny.Fe)({
             n.e("81398"),
             n.e("4374"),
             n.e("86546"),
+            n.e("94161"),
             n.e("7548"),
             n.e("70587"),
             n.e("39735"),
@@ -37208,8 +37205,7 @@ let UO = (0, rs.Fe)({
                 n.e("16946"),
                 n.e("19248"),
                 n.e("6866"),
-                n.e("20969"),
-                n.e("84027"),
+                n.e("25226"),
                 n.e("9432"),
                 n.e("60361"),
                 n.e("99430"),
@@ -37341,8 +37337,8 @@ let UO = (0, rs.Fe)({
                 n.e("80007"),
                 n.e("73122"),
                 n.e("8979"),
-                n.e("15275"),
                 n.e("19580"),
+                n.e("15275"),
                 n.e("91643"),
                 n.e("4736"),
                 n.e("49345"),
@@ -37354,8 +37350,8 @@ let UO = (0, rs.Fe)({
                 n.e("48370"),
                 n.e("5871"),
                 n.e("74821"),
-                n.e("19623"),
                 n.e("82758"),
+                n.e("19623"),
                 n.e("82721"),
                 n.e("90213"),
                 n.e("14334"),
@@ -37380,6 +37376,7 @@ let UO = (0, rs.Fe)({
                 n.e("79582"),
                 n.e("37475"),
                 n.e("17321"),
+                n.e("93265"),
                 n.e("86142"),
             ]).then(n.bind(n, 5268)),
         webpackId: 5268,
