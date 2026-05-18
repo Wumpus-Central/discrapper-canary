@@ -6,7 +6,7 @@ var i = n(627968),
     a = n.n(s),
     o = n(735438),
     l = n.n(o),
-    u = n(785651),
+    u = n(873174),
     c = n(621466),
     d = n(452027),
     _ = n(187322),
@@ -278,15 +278,15 @@ class A extends r.PureComponent {
         let { left: f, width: h } = _.getBoundingClientRect(),
             p = (d - f) / h;
         if (o) {
-            let { nextClosestMarkerIndex: e } = u.reduce(
+            let { nextClosestMarkerIndex: n } = u.reduce(
                 (e, t, n) => {
                     let i = Math.abs(t / 100 - p);
                     return i <= e.smallestDelta ? { smallestDelta: i, nextClosestMarkerIndex: n } : e;
                 },
                 { smallestDelta: 1, nextClosestMarkerIndex: -1 },
             );
-            if (-1 === e) return;
-            (t = l[e]), this.setState({ closestMarkerIndex: e, value: t, newClosestIndex: null });
+            if (-1 === n) return;
+            (t = l[n]), this.handleMouseDown(e), this.setState({ closestMarkerIndex: n, value: t, newClosestIndex: n });
         } else (t = r + (i - r) * p), this.setState({ value: t, dragStartValue: t }), this.handleMouseDown(e);
         null != a && a(t), null != s && s(t);
     };
