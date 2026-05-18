@@ -1,6 +1,7 @@
-_.exports = {
+e.exports = {
     my: "avatar__49508",
     yF: "divider__49508",
+    Ke: "channelStatusTooltipAnchor__49508",
     WH: "channelStatusClickable__49508",
     Gh: "channelStatus__49508",
     BI: "hoverable__49508",

@@ -1956,6 +1956,10 @@ html .tabBadge_e6b769 {
     background: var(--primary-700)
 }
 
+.channelStatusTooltipAnchor__49508 {
+    align-self: flex-start
+}
+
 .channelStatusClickable__49508 {
     align-items: center;
     color: var(--channel-icon);

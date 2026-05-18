@@ -113,40 +113,43 @@ function W(e) {
         W = t.isGuildVoice() && A && null != G && G.length > 0,
         Y = (0, D.Ay)(t),
         K = W
-            ? (0, i.jsx)(r.m, {
-                  asContainer: !0,
-                  text: k.intl.string(k.t.Mgpxiw),
-                  delay: 500,
-                  position: "bottom",
-                  shouldShow: Y,
-                  children: (0, i.jsxs)(d.D, {
-                      className: a()(H.WH, { [H.BI]: Y }),
-                      onClick: Y
-                          ? function () {
-                                (0, h.openModalLazy)(
-                                    async () => {
-                                        let { default: e } = await Promise.resolve().then(n.bind(n, 136523));
-                                        return (n) => (0, i.jsx)(e, { channel: t, ...n });
-                                    },
-                                    { modalKey: V.m },
-                                );
-                            }
-                          : void 0,
-                      children: [
-                          (0, i.jsx)(c.E, {
-                              variant: "text-xs/normal",
-                              className: a()(H.Gh, F.PT, { [H.BI]: Y }),
-                              children: S.A.parseVoiceChannelStatus(G, !0, { channelId: t.id }),
-                          }),
-                          Y &&
-                              (0, i.jsx)(u.R, {
-                                  size: "custom",
-                                  color: "currentColor",
-                                  className: a()(H.rD, H.BI),
-                                  width: 14,
-                                  height: 14,
+            ? (0, i.jsx)("div", {
+                  className: H.Ke,
+                  children: (0, i.jsx)(r.m, {
+                      asContainer: !0,
+                      text: k.intl.string(k.t.Mgpxiw),
+                      delay: 500,
+                      position: "bottom",
+                      shouldShow: Y,
+                      children: (0, i.jsxs)(d.D, {
+                          className: a()(H.WH, { [H.BI]: Y }),
+                          onClick: Y
+                              ? function () {
+                                    (0, h.openModalLazy)(
+                                        async () => {
+                                            let { default: e } = await Promise.resolve().then(n.bind(n, 136523));
+                                            return (n) => (0, i.jsx)(e, { channel: t, ...n });
+                                        },
+                                        { modalKey: V.m },
+                                    );
+                                }
+                              : void 0,
+                          children: [
+                              (0, i.jsx)(c.E, {
+                                  variant: "text-xs/normal",
+                                  className: a()(H.Gh, F.PT, { [H.BI]: Y }),
+                                  children: S.A.parseVoiceChannelStatus(G, !0, { channelId: t.id }),
                               }),
-                      ],
+                              Y &&
+                                  (0, i.jsx)(u.R, {
+                                      size: "custom",
+                                      color: "currentColor",
+                                      className: a()(H.rD, H.BI),
+                                      width: 14,
+                                      height: 14,
+                                  }),
+                          ],
+                      }),
                   }),
               })
             : null,
