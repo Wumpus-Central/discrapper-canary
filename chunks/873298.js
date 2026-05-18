@@ -1898,6 +1898,7 @@ class eV extends D.G {
             { no: 21, name: "enable_friend_gaming_activity_notifications", kind: "message", T: () => L._t },
             { no: 22, name: "enable_upcoming_server_event_notifications", kind: "message", T: () => L._t },
             { no: 23, name: "enable_screen_downtime_schedule_notifications", kind: "message", T: () => L._t },
+            { no: 24, name: "notify_friends_on_profile_update", kind: "message", T: () => L._t },
         ]);
     }
     create(e) {
@@ -2064,6 +2065,14 @@ class eV extends D.G {
                         r.enableScreenDowntimeScheduleNotifications,
                     );
                     break;
+                case 24:
+                    r.notifyFriendsOnProfileUpdate = L._t.internalBinaryRead(
+                        e,
+                        e.uint32(),
+                        n,
+                        r.notifyFriendsOnProfileUpdate,
+                    );
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -2173,6 +2182,10 @@ class eV extends D.G {
                         t.tag(23, O.O0.LengthDelimited).fork(),
                         n,
                     )
+                    .join(),
+            e.notifyFriendsOnProfileUpdate &&
+                L._t
+                    .internalBinaryWrite(e.notifyFriendsOnProfileUpdate, t.tag(24, O.O0.LengthDelimited).fork(), n)
                     .join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? O.f$.onWrite : i)(this.typeName, e, t), t;
