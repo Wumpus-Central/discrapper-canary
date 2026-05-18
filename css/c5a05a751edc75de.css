@@ -1,0 +1,21 @@
+.partialOwnStateContainer__0d2da {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    opacity: .5
+}
+
+.partiallyOwnedDisclaimer__0d2da {
+    margin-inline-start: -8px
+}
+
+.iconWrapper__0d2da {
+    margin-top: 2px
+}
+
+.infoIcon__0d2da {
+    color: var(--interactive-text-active);
+    height: 16px;
+    width: 16px
+}
