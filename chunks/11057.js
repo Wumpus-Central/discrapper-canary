@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"q5M7HV":["Ne\u0161to drugo"],"zRKbpz":["Server"],"UzRF+8":["Dru\u0161tveni"],"NGdNZb":["Direktne poruke"],"zJlwvV":["Discordove sistemske poruke"],"40TIqW":["Obavijesti o doga\u0111aju"],"HibKoy":["Obavijesti na forumu"],"NxgGZA":["Zahtjevi za prijateljstvom"],"9EDo+/":["Gaming"],"IUH/Oe":["Dolazni pozivi"],"4qWUAO":["Poruke"],"n0Wp6j":["Propu\u0161tene poruke"],"T+79Eo":["Ne\u0161to drugo"],"kIrLfg":["Druge obavijesti na serveru"],"MOjygY":["Ankete"],"wv4QHR":["Obavijesti o reakcijama"],"S5cB9e":["U stvarnom vremenu"],"4n388K":["Obavijesti na pozornici"],"VeBD1N":["Glas povezan"]}',
+);

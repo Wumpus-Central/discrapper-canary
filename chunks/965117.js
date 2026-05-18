@@ -1,0 +1,3 @@
+i.exports = JSON.parse(
+    '{"q5M7HV":["Di\u011Fer"],"zRKbpz":["Sunucu"],"UzRF+8":["Sosyal Medya"],"NGdNZb":["Direkt mesajlar"],"zJlwvV":["Discord sistem mesajlar\u0131"],"40TIqW":["Etkinlik bildirimleri"],"HibKoy":["Forum bildirimleri"],"vcrTV5":["Arkada\u015F Etkinli\u011Fi"],"NxgGZA":["Arkada\u015Fl\u0131k istekleri"],"9EDo+/":["Oyun"],"IUH/Oe":["Gelen aramalar"],"4qWUAO":["Mesajlar"],"n0Wp6j":["A\xe7\u0131lmam\u0131\u015F Mesajlar"],"T+79Eo":["Di\u011Fer"],"kIrLfg":["Di\u011Fer sunucu bildirimleri"],"MOjygY":["Anketler"],"wv4QHR":["Tepki Bildirimleri"],"S5cB9e":["Ger\xe7ek zamanl\u0131"],"4n388K":["Sahne bildirimleri"],"Iy9grw":["Sesli ve Yay\u0131nda Etkinlik"],"VeBD1N":["Ses ba\u011Flant\u0131l\u0131"]}',
+);

@@ -13,6 +13,5 @@ e.exports = {
     qJ: "eventHeader__243fe",
     rN: "activityHeader__243fe",
     C3: "eventHeaderUsername__243fe",
-    CS: "eventHeaderLabel__243fe",
     gE: "eventTime__243fe",
 };

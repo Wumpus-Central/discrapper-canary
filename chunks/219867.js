@@ -1,0 +1,3 @@
+i.exports = JSON.parse(
+    '{"q5M7HV":["Kita"],"zRKbpz":["Serveris"],"UzRF+8":["Bendravimas"],"NGdNZb":["Asmenin\u0117s \u017Einut\u0117s"],"zJlwvV":["Discord sistemos \u017Einut\u0117s"],"40TIqW":["Rengini\u0173 prane\u0161imai"],"HibKoy":["Forumo prane\u0161imai"],"NxgGZA":["Pra\u0161ymai draugauti"],"9EDo+/":["\u017Daidimas"],"IUH/Oe":["Gaunami skambu\u010Diai"],"4qWUAO":["\u017Dinut\u0117s"],"n0Wp6j":["Praleistos \u017Einut\u0117s"],"T+79Eo":["Kita"],"kIrLfg":["Kiti serveri\u0173 prane\u0161imai"],"MOjygY":["Apklausos"],"wv4QHR":["Prane\u0161imai apie reakcijas"],"S5cB9e":["Realiuoju laiku"],"4n388K":["Scenos prane\u0161imai"],"VeBD1N":["Prisijungta prie balso ry\u0161io"]}',
+);

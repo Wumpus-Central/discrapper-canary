@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"q5M7HV":["Outro"],"zRKbpz":["Servidor"],"UzRF+8":["Social"],"NGdNZb":["Mensagens diretas"],"zJlwvV":["Mensagens de sistema do Discord"],"40TIqW":["Notifica\xe7\xf5es de evento"],"HibKoy":["Notifica\xe7\xf5es de f\xf3runs"],"vcrTV5":["Atividade dos amigos"],"NxgGZA":["Pedidos de amizade"],"9EDo+/":["Jogos"],"IUH/Oe":["Chamadas recebidas"],"4qWUAO":["Mensagens"],"n0Wp6j":["Mensagens perdidas"],"T+79Eo":["Outro"],"kIrLfg":["Outras notifica\xe7\xf5es do servidor"],"MOjygY":["Enquetes"],"wv4QHR":["Notifica\xe7\xf5es de rea\xe7\xe3o"],"S5cB9e":["Tempo real"],"4n388K":["Notifica\xe7\xf5es de palco"],"Iy9grw":["Voz e atividades ao vivo"],"VeBD1N":["Voz conectada"]}',
+);

@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"q5M7HV":["Altceva"],"zRKbpz":["Server"],"UzRF+8":["Socializare"],"NGdNZb":["Mesaje directe"],"zJlwvV":["Mesaje de sistem Discord"],"40TIqW":["Notific\u0103ri evenimente"],"HibKoy":["Notific\u0103ri forum"],"NxgGZA":["Cereri de prietenie"],"9EDo+/":["Gaming"],"IUH/Oe":["Apeluri \xeen intrare"],"4qWUAO":["Mesaje"],"n0Wp6j":["Mesaje ratate"],"T+79Eo":["Altceva"],"kIrLfg":["Alte notific\u0103ri de server"],"MOjygY":["Sondaje"],"wv4QHR":["Notific\u0103ri pentru reac\u021Bii"],"S5cB9e":["\xcen timp real"],"4n388K":["Notific\u0103ri podium"],"VeBD1N":["Voce conectat\u0103"]}',
+);

@@ -19,29 +19,29 @@ var n = i(627968),
     f = i(562153),
     E = i(850457);
 i(281405);
-var N = i(375708),
-    _ = i(601884);
+var _ = i(375708),
+    N = i(601884);
 function S(e) {
     let { channel: t } = e,
         [s, S] = l.useState(!1),
         C = l.useRef(null),
-        j = l.useRef(null);
+        y = l.useRef(null);
     l.useEffect(
         () => () => {
-            clearTimeout(j.current);
+            clearTimeout(y.current);
         },
         [],
     );
-    let y = (0, r.bG)([x.A, v.default], () => {
+    let j = (0, r.bG)([x.A, v.default], () => {
             let e = x.A.getLastLeftUserId(t.id);
             return null != e ? v.default.getUser(e) : null;
         }, [t.id]),
-        T = f.Ay.useName(t.guild_id, t.id, y),
-        b = (0, p.A)({ userId: y?.id, guildId: t.guild_id }),
+        T = f.Ay.useName(t.guild_id, t.id, j),
+        b = (0, p.A)({ userId: j?.id, guildId: t.guild_id }),
         O = (0, I.a)({ displayNameStyles: b }),
         G = (e) => {
             e.preventDefault(),
-                null != y &&
+                null != j &&
                     (0, g.L3)(e, async () => {
                         let { default: e } = await Promise.all([
                             i.e("80203"),
@@ -90,16 +90,16 @@ function S(e) {
                             i.e("17334"),
                             i.e("84841"),
                         ]).then(i.bind(i, 107632));
-                        return (i) => (0, n.jsx)(e, { ...i, user: y, guildId: t.guild_id, channel: t });
+                        return (i) => (0, n.jsx)(e, { ...i, user: j, guildId: t.guild_id, channel: t });
                     });
         },
         V = () => {
-            clearTimeout(j.current), (j.current = setTimeout(() => S(!0), 100));
+            clearTimeout(y.current), (y.current = setTimeout(() => S(!0), 100));
         },
         R = () => {
-            clearTimeout(j.current), (j.current = setTimeout(() => S(!1), 100));
+            clearTimeout(y.current), (y.current = setTimeout(() => S(!1), 100));
         };
-    return null == y
+    return null == j
         ? null
         : (0, n.jsx)(d.Y, {
               targetElementRef: C,
@@ -115,7 +115,7 @@ function S(e) {
                   let { onClick: i, ...l } = e;
                   return (0, n.jsxs)(u.D, {
                       innerRef: C,
-                      className: _.nM,
+                      className: N.nM,
                       "aria-haspopup": "dialog",
                       onClick: V,
                       onContextMenu: G,
@@ -123,40 +123,29 @@ function S(e) {
                       onMouseLeave: R,
                       children: [
                           (0, n.jsxs)("div", {
-                              className: _.R3,
+                              className: N.R3,
                               children: [
                                   (0, n.jsx)(c.eu, {
-                                      src: y.getAvatarURL(t.guild_id, 24),
+                                      src: j.getAvatarURL(t.guild_id, 24),
                                       size: o._3.SIZE_24,
                                       "aria-hidden": !0,
                                       status: m.clD.INVISIBLE,
                                       statusColor: "currentColor",
                                   }),
-                                  (0, n.jsx)(h.O, { className: _.SM }),
+                                  (0, n.jsx)(h.O, { className: N.SM }),
                               ],
                           }),
                           (0, n.jsx)(A.E, {
                               variant: "text-sm/normal",
-                              className: _.Pf,
-                              children: N.intl.format(N.t.TlVwqn, {
+                              className: N.Pf,
+                              children: _.intl.format(_.t.TlVwqn, {
                                   user: T,
                                   userHook: (e, t) =>
                                       (0, n.jsx)(
                                           A.E,
                                           {
                                               variant: "text-sm/semibold",
-                                              className: a()(_.Xh, O),
-                                              color: "text-muted",
-                                              children: e,
-                                          },
-                                          t,
-                                      ),
-                                  labelHook: (e, t) =>
-                                      (0, n.jsx)(
-                                          A.E,
-                                          {
-                                              variant: "text-sm/normal",
-                                              className: _.cp,
+                                              className: a()(N.Xh, O),
                                               color: "text-muted",
                                               children: e,
                                           },

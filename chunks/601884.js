@@ -4,5 +4,4 @@ e.exports = {
     SM: "clockBadge__70e41",
     Pf: "label__70e41",
     Xh: "username__70e41",
-    cp: "wasHere__70e41",
 };
