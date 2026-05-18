@@ -193,7 +193,7 @@ class T extends r.EventEmitter {
         this.activeConnections++;
         let t = new I(e, "json", () => {
                 this.activeConnections--,
-                    h.info(`Socket Close: ${t.id} (active: ${this.activeConnections})`),
+                    h.info(`Socket Close: ${t.id} ${t.clientId ?? "unknown"} (active: ${this.activeConnections})`),
                     t.abortController.abort(),
                     this.emit("disconnect", t);
             }),
@@ -215,7 +215,7 @@ class T extends r.EventEmitter {
             e.once("handshake", () => {
                 clearTimeout(n);
                 let i = t.clientId;
-                h.info(`Socket Opened: ${t.id} (active: ${this.activeConnections})`),
+                h.info(`Socket Opened: ${t.id} ${i ?? "unknown"} (active: ${this.activeConnections})`),
                     e.on("error", (e) => h.error(`Socket Error: ${e.message}`)),
                     (0, d.j7)(t, null, i)
                         .then(() => {
