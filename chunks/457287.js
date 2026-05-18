@@ -1,16 +1,16 @@
 n.d(t, { f: () => i, A: () => s });
-var a = n(627968);
+var r = n(627968);
 n(64700);
-var r = n(691885),
-    l = n(985018);
+var a = n(691885),
+    l = n(375708);
 function i(e) {
-    let { currencies: t, className: n, children: r } = e;
-    return t.length < 2 ? null : (0, a.jsx)("div", { className: n, children: r });
+    let { currencies: t, className: n, children: a } = e;
+    return t.length < 2 ? null : (0, r.jsx)("div", { className: n, children: a });
 }
 let s = function (e) {
-    let { label: t, currencies: n, onChange: i, selectedCurrency: s, disabled: o = !1 } = e;
+    let { label: t, currencies: n, onChange: i, selectedCurrency: s, disabled: u = !1 } = e;
     if (n.length < 2 || null == s) return null;
-    let c = n.map((e, t) => ({
+    let o = n.map((e, t) => ({
         id: t.toString(),
         value: e,
         label: `${e.toUpperCase()} - ${(function (e) {
@@ -33,8 +33,8 @@ let s = function (e) {
                     return l.intl.string(l.t.GTI3B6);
                 case "cop":
                     return l.intl.string(l.t["/FnP7L"]);
-                case "clr":
-                    return l.intl.string(l.t["BK/Van"]);
+                case "clp":
+                    return l.intl.string(l.t["TPV/a1"]);
                 case "jpy":
                     return l.intl.string(l.t.QKSoIh);
                 case "idr":
@@ -65,19 +65,25 @@ let s = function (e) {
                     return l.intl.string(l.t["uhxR+U"]);
                 case "gbp":
                     return l.intl.string(l.t.RKkD0b);
+                case "cad":
+                    return l.intl.string(l.t.efDdLA);
+                case "rub":
+                    return l.intl.string(l.t.dYiAdi);
+                case "nok":
+                    return l.intl.string(l.t["+SUW8y"]);
                 default:
                     return "";
             }
         })(e)}`,
     }));
-    return (0, a.jsx)(r.l, {
+    return (0, r.jsx)(a.l, {
         selectionMode: "single",
         label: t,
         value: s,
-        options: c,
+        options: o,
         onSelectionChange: (e) => {
             null != e && i(e);
         },
-        disabled: o,
+        disabled: u,
     });
 };
