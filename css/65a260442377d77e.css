@@ -1,3 +1,30 @@
+.imageWrapper__198b6 {
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 60px;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 60px;
+    z-index: 1
+}
+
+.image__198b6 {
+    height: 80%;
+    width: 80%;
+    z-index: 1
+}
+
+.cooldown__198b6 {
+    background-color: var(--blue-200)
+}
+
+.cooldownImage__198b6 {
+    height: 26px
+}
+
 .boostIconContainer__7402e {
     border-radius: 100%;
     box-shadow: var(--elevation-medium);
