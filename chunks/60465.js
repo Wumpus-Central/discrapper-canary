@@ -10,7 +10,7 @@ function l(e) {
 }
 let u = {
     openGameProfileModal: function (e) {
-        let { gameId: t, gameProfileModalChecks: r, source: o, sourceUserId: l, appContext: u, forceV2: c } = e;
+        let { gameId: t, gameProfileModalChecks: r, source: o, sourceUserId: l, appContext: u } = e;
         s()(
             r.shouldOpenGameProfile,
             "Passed a false value for [gameProfileModalChecks]. Are you using the useShouldOpenGameProfile hook correctly?",
@@ -22,7 +22,7 @@ let u = {
             (0, a.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        n.e("48157"),
+                        n.e("79384"),
                         n.e("54266"),
                         n.e("41181"),
                         n.e("99830"),
@@ -39,6 +39,7 @@ let u = {
                         n.e("13498"),
                         n.e("32993"),
                         n.e("80203"),
+                        n.e("75271"),
                         n.e("33367"),
                         n.e("4211"),
                         n.e("71934"),
@@ -65,8 +66,8 @@ let u = {
                         n.e("79705"),
                         n.e("33957"),
                         n.e("94193"),
-                        n.e("73840"),
-                        n.e("56540"),
+                        n.e("30656"),
+                        n.e("44910"),
                         n.e("23924"),
                         n.e("42205"),
                         n.e("71091"),
@@ -287,17 +288,15 @@ let u = {
                         n.e("7406"),
                         n.e("32737"),
                         n.e("55033"),
-                        n.e("29624"),
                         n.e("21041"),
                         n.e("37937"),
                         n.e("86454"),
                         n.e("38672"),
-                        n.e("91715"),
+                        n.e("57850"),
                         n.e("83295"),
-                        n.e("62629"),
-                    ]).then(n.bind(n, 976526));
-                    return (n) =>
-                        (0, i.jsx)(e, { gameId: t, source: o, sourceUserId: l, ...n, appContext: u, forceV2: c });
+                        n.e("99215"),
+                    ]).then(n.bind(n, 980385));
+                    return (n) => (0, i.jsx)(e, { gameId: t, source: o, sourceUserId: l, ...n, appContext: u });
                 },
                 { contextKey: null != u ? (0, a.modalContextFromAppContext)(u) : void 0 },
             );
@@ -307,7 +306,7 @@ let u = {
         l(t),
             (0, a.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("48157"),
+                    n.e("79384"),
                     n.e("54266"),
                     n.e("41181"),
                     n.e("99830"),
@@ -324,6 +323,7 @@ let u = {
                     n.e("13498"),
                     n.e("32993"),
                     n.e("80203"),
+                    n.e("75271"),
                     n.e("33367"),
                     n.e("4211"),
                     n.e("71934"),
@@ -350,8 +350,8 @@ let u = {
                     n.e("79705"),
                     n.e("33957"),
                     n.e("94193"),
-                    n.e("73840"),
-                    n.e("56540"),
+                    n.e("30656"),
+                    n.e("44910"),
                     n.e("23924"),
                     n.e("42205"),
                     n.e("71091"),
@@ -572,15 +572,14 @@ let u = {
                     n.e("7406"),
                     n.e("32737"),
                     n.e("55033"),
-                    n.e("29624"),
                     n.e("21041"),
                     n.e("37937"),
                     n.e("86454"),
                     n.e("38672"),
-                    n.e("91715"),
+                    n.e("57850"),
                     n.e("83295"),
-                    n.e("62629"),
-                ]).then(n.bind(n, 976526));
+                    n.e("99215"),
+                ]).then(n.bind(n, 980385));
                 return (n) => (0, i.jsx)(e, { gameId: t, source: r, initialScrollOffset: s, ...n });
             });
     },

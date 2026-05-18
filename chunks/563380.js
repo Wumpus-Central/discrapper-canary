@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => G });
+n.r(e), n.d(e, { default: () => G });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
@@ -11,8 +11,8 @@ var i = n(627968),
     h = n(807072),
     m = n(834730),
     x = n(821609),
-    f = n(707554),
-    p = n(17928),
+    p = n(707554),
+    f = n(17928),
     g = n(761508),
     A = n(824552),
     v = n(933958),
@@ -28,12 +28,12 @@ var i = n(627968),
     E = n(46225),
     _ = n(487431),
     R = n(942370),
-    V = n(311350),
-    C = n(375708),
+    C = n(311350),
+    V = n(375708),
     w = n(564741);
 function G() {
-    let e = (0, W.h)(N.A.testModeApplicationId),
-        { analyticsLocations: t } = (0, O.Ay)(b.A.SDK_DEBUG_TOOLS),
+    let t = (0, W.h)(N.A.testModeApplicationId),
+        { analyticsLocations: e } = (0, O.Ay)(b.A.SDK_DEBUG_TOOLS),
         n = (0, L.fy)().metadata,
         a = l.useRef(!1),
         {
@@ -43,23 +43,23 @@ function G() {
             chosenFlow: B,
             connectionApp: I,
             debug: { isSubscribedToAuthorizeRequest: F, oauth2Token: K, hasConnectionEntrypointUrl: M, validFlows: z },
-        } = (0, E.RD)(e, { debug: !0 }),
-        T = (0, p.bG)([y.A], () => null != e && y.A.isConnected(e.id)),
-        J = (0, p.bG)([v.Ay], () => v.Ay.getSelfEmbeddedActivities()),
-        P = e?.id ?? "",
-        U = (0, k.A)({ applicationId: P, source: D.Ob.DevTools, trackEntryPointImpression: !1, forceV2: !0 });
+        } = (0, E.RD)(t, { debug: !0 }),
+        T = (0, f.bG)([y.A], () => null != t && y.A.isConnected(t.id)),
+        J = (0, f.bG)([v.Ay], () => v.Ay.getSelfEmbeddedActivities()),
+        P = t?.id ?? "",
+        U = (0, k.A)({ applicationId: P, source: D.Ob.DevTools, trackEntryPointImpression: !1 });
     l.useEffect(() => {
         n?.shouldAutoOpenGameProfile !== !0 || null == U || a.current || ((a.current = !0), U());
     }, [n, U]);
     let $ = "authorization_debug",
-        H = [{ id: "authorization_debug", name: C.intl.string(V.default.vR0zs6) }];
+        H = [{ id: "authorization_debug", name: V.intl.string(C.default.vR0zs6) }];
     return (0, i.jsx)("div", {
         "data-app-right-panel": !0,
         className: w.nE,
-        children: (0, i.jsx)(f.F, {
+        children: (0, i.jsx)(p.F, {
             children:
-                null != e
-                    ? (r()(null != e, "Application should be defined when rendering the test mode panel"),
+                null != t
+                    ? (r()(null != t, "Application should be defined when rendering the test mode panel"),
                       (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsxs)("div", {
@@ -69,7 +69,7 @@ function G() {
                                           className: w.if,
                                           children: (0, i.jsx)(o.D, {
                                               variant: "heading-lg/extrabold",
-                                              children: C.intl.format(V.default.KoK4J9, { appName: e.name }),
+                                              children: V.intl.format(C.default.KoK4J9, { appName: t.name }),
                                           }),
                                       }),
                                       (0, i.jsx)(u.K, {
@@ -90,40 +90,40 @@ function G() {
                                           orientation: "horizontal",
                                           type: "top",
                                           look: "brand",
-                                          children: H.map((e) =>
+                                          children: H.map((t) =>
                                               (0, i.jsx)(
                                                   g.V.Item,
                                                   {
-                                                      className: s()(w.Mf, { [w.wH]: e.id === $ }),
-                                                      id: e.id,
-                                                      "aria-label": e.name,
-                                                      children: e.name,
+                                                      className: s()(w.Mf, { [w.wH]: t.id === $ }),
+                                                      id: t.id,
+                                                      "aria-label": t.name,
+                                                      children: t.name,
                                                   },
-                                                  e.id,
+                                                  t.id,
                                               ),
                                           ),
                                       }),
                                       (0, i.jsx)(m.E, {
                                           variant: "text-md/medium",
                                           color: "text-subtle",
-                                          children: C.intl.string(V.default["no+FQS"]),
+                                          children: V.intl.string(C.default["no+FQS"]),
                                       }),
                                       (0, i.jsx)(_.VT, {
                                           overallStatus: F ? _.nW.OVERALL_GOOD : T ? _.nW.WARN : _.nW.OVERALL_BAD,
-                                          name: C.intl.string(V.default.AGLx00),
+                                          name: V.intl.string(C.default.AGLx00),
                                           steps: [
                                               {
                                                   status: T ? _.nW.GOOD : _.nW.BAD,
-                                                  text: C.intl.string(V.default.kxF9br),
-                                                  description: T ? null : C.intl.string(V.default.PFxxJa),
+                                                  text: V.intl.string(C.default.kxF9br),
+                                                  description: T ? null : V.intl.string(C.default.PFxxJa),
                                                   learnMoreLink: T
                                                       ? null
                                                       : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                                               },
                                               {
                                                   status: F ? _.nW.GOOD : T ? _.nW.WARN : _.nW.BAD,
-                                                  text: C.intl.string(V.default.S94dzs),
-                                                  description: F || !T ? null : C.intl.string(V.default.aTULMB),
+                                                  text: V.intl.string(C.default.S94dzs),
+                                                  description: F || !T ? null : V.intl.string(C.default.aTULMB),
                                                   learnMoreLink:
                                                       F || !T
                                                           ? null
@@ -134,13 +134,13 @@ function G() {
                                       }),
                                       (0, i.jsx)(_.VT, {
                                           overallStatus: M ? _.nW.OVERALL_GOOD : _.nW.OVERALL_BAD,
-                                          name: C.intl.string(V.default.K3ObrU),
+                                          name: V.intl.string(C.default.K3ObrU),
                                           steps: [
                                               {
                                                   status: M ? _.nW.GOOD : _.nW.BAD,
-                                                  text: C.intl.string(V.default["8a7IrV"]),
+                                                  text: V.intl.string(C.default["8a7IrV"]),
                                                   description: M
-                                                      ? C.intl.formatToPlainString(V.default["9iLeL2"], {
+                                                      ? V.intl.formatToPlainString(C.default["9iLeL2"], {
                                                             url: I?.connectionEntrypointUrl,
                                                         })
                                                       : null,
@@ -155,19 +155,19 @@ function G() {
                                   children: [
                                       (0, i.jsx)(_.Sy, {
                                           status: G ? _.nW.OVERALL_GOOD : _.nW.OVERALL_BAD,
-                                          text: C.intl.string(C.t["Vu/zmQ"]),
+                                          text: V.intl.string(V.t["Vu/zmQ"]),
                                       }),
                                       0 === z.length &&
                                           (0, i.jsx)(m.E, {
                                               style: { minWidth: 0, overflow: "hidden" },
                                               variant: "text-md/medium",
-                                              children: C.intl.string(V.default.eg0mNa),
+                                              children: V.intl.string(C.default.eg0mNa),
                                           }),
                                       (0, i.jsx)(x.$, {
                                           variant: "secondary",
                                           disabled: !d || G,
-                                          onClick: () => S({ analyticsLocations: t }),
-                                          text: C.intl.string(V.default.w0pN4R),
+                                          onClick: () => S({ analyticsLocations: e }),
+                                          text: V.intl.string(C.default.w0pN4R),
                                           fullWidth: !0,
                                       }),
                                       null != K &&
@@ -175,22 +175,22 @@ function G() {
                                               variant: "secondary",
                                               onClick: () => {
                                                   A.A.delete(K.id);
-                                                  let t = J.get(e.id);
-                                                  null != t &&
+                                                  let e = J.get(t.id);
+                                                  null != e &&
                                                       j.A.leaveActivity({
-                                                          location: t.location,
-                                                          applicationId: e.id,
+                                                          location: e.location,
+                                                          applicationId: t.id,
                                                           showFeedback: !1,
                                                       });
                                               },
-                                              text: C.intl.string(V.default.tkIymA),
+                                              text: V.intl.string(C.default.tkIymA),
                                               fullWidth: !0,
                                           }),
                                       (0, i.jsx)(x.$, {
                                           variant: "secondary",
                                           onClick: U ?? void 0,
                                           disabled: null == U,
-                                          text: C.intl.string(V.default.cCvdJy),
+                                          text: V.intl.string(C.default.cCvdJy),
                                           fullWidth: !0,
                                       }),
                                   ],
@@ -205,7 +205,7 @@ function G() {
                                       className: w.if,
                                       children: (0, i.jsx)(o.D, {
                                           variant: "heading-lg/extrabold",
-                                          children: C.intl.format(V.default.KoK4J9, { appName: "" }),
+                                          children: V.intl.format(C.default.KoK4J9, { appName: "" }),
                                       }),
                                   }),
                               }),

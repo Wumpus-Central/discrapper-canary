@@ -1,11 +1,12 @@
 "use strict";
 n.d(t, { A: () => l });
-var r = n(155718),
-    i = n(315069),
-    s = n(611010),
-    a = n(486020),
-    o = n(898736);
-class l extends i.A {
+var i = n(155718),
+    r = n(315069),
+    s = n(395671),
+    a = n(486020);
+n(64700);
+var o = n(403362);
+class l extends r.A {
     id;
     name;
     description;
@@ -42,7 +43,7 @@ class l extends i.A {
         return this.id;
     }
     getOfficialApplicationId() {
-        return this.linkedApplications?.find((e) => e.type === r.Mh.OFFICIAL)?.id;
+        return this.linkedApplications?.find((e) => e.type === i.Mh.OFFICIAL)?.id;
     }
     constructor(e) {
         super(),
@@ -121,7 +122,15 @@ class l extends i.A {
               : (this.media.cover_url ?? null);
     }
     getArtworkURLs() {
-        return null == this.media ? [] : (0, o.L)(this.id, this.media.artwork_hashes, this.media.artwork_urls);
+        var e, t, n;
+        return null == this.media
+            ? []
+            : ((e = this.id),
+              (t = this.media.artwork_hashes),
+              (n = this.media.artwork_urls),
+              null != t
+                  ? t.map((t) => a.Ay.getGameAssetURL({ id: e, hash: t, keepAspectRatio: !0 })).filter(o.Vq)
+                  : (n ?? []));
     }
     getCompanyByRole(e) {
         return this.companies?.filter((t) => t.roles.includes(e)) ?? [];
