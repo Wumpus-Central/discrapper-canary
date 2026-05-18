@@ -1,0 +1,121 @@
+.trigger__5d51e {
+    align-items: center;
+    border-bottom: 2px solid var(--border-focus);
+    box-sizing: border-box;
+    color: var(--text-default);
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    gap: var(--space-8);
+    height: 100%;
+    padding-top: 2px
+}
+
+.logo__5d51e {
+    border-radius: var(--radius-xs);
+    flex-shrink: 0;
+    height: 24px;
+    min-width: 24px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 24px
+}
+
+.placeholder__5d51e {
+    opacity: .5;
+    pointer-events: none
+}
+
+.placeholder__5d51e .logo__5d51e {
+    background-color: var(--background-mod-subtle)
+}
+
+@media (max-width:948px) {
+    .logo__5d51e {
+        display: none
+    }
+}
+
+.headerContainer__57bc9 {
+    background: var(--background-base-lower);
+    padding-bottom: 0;
+    padding-inline-end: var(--space-12);
+    padding-top: 0;
+    position: sticky;
+    top: 0
+}
+
+.shopHomeButton__57bc9 {
+    align-items: center;
+    color: var(--text-default);
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center
+}
+
+.divider__57bc9 {
+    align-self: center;
+    background-color: var(--border-strong);
+    flex-shrink: 0;
+    height: 32px;
+    width: 1px
+}
+
+.divider__57bc9,
+.dropdown__57bc9 {
+    margin-inline-start: var(--space-24)
+}
+
+.titles__57bc9 {
+    flex-direction: row;
+    gap: var(--space-24);
+    margin-inline-start: var(--space-24)
+}
+
+.titleWrapper__57bc9,
+.titles__57bc9 {
+    align-items: center;
+    display: flex;
+    height: 100%
+}
+
+.titleWrapper__57bc9 {
+    justify-content: center
+}
+
+.pageTitleContainer__57bc9 {
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 100%
+}
+
+.pageTitleContainer__57bc9:hover {
+    border-bottom: 2px solid var(--brand-500);
+    padding-top: 2px
+}
+
+.pageTitleContainer__57bc9.selectedPageIndicator__57bc9 {
+    border-bottom: 2px solid var(--icon-strong);
+    padding-top: 2px
+}
+
+.iconButton__57bc9 {
+    align-items: center;
+    background-color: var(--control-secondary-background-default);
+    border: 1px solid var(--control-secondary-border-default);
+    border-radius: var(--radius-sm);
+    color: var(--control-secondary-text-default);
+    cursor: pointer;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    transition: background-color .1s ease;
+    width: 32px
+}
+
+.iconButton__57bc9:active,
+.iconButton__57bc9:hover {
+    background-color: var(--control-secondary-background-hover)
+}

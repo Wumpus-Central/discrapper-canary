@@ -4,7 +4,7 @@ l.r(t),
         virtualCurrencyCollection: () => l8,
         playgroundConfig: () => l5,
         identityCollection: () => l7,
-        RevenuePlaygroundCollectionId: () => l3,
+        RevenuePlaygroundCollectionId: () => l6,
         paymentsCollection: () => l4,
     });
 var a,
@@ -1163,7 +1163,7 @@ function e1() {
 function e2() {
     return (0, s.jsx)("div", { style: { width: "60%", height: "60%", borderRadius: "50%", background: "red" } });
 }
-let e3 = {
+let e6 = {
         label: "Variant",
         type: "select",
         defaultValue: "square",
@@ -1172,7 +1172,7 @@ let e3 = {
             { label: "Bar", value: "bar" },
         ],
     },
-    e6 = {
+    e3 = {
         title: "Editable Tile Button",
         stories: [
             {
@@ -1201,7 +1201,7 @@ let e3 = {
                 },
                 id: "add-tile-button",
                 controls: {
-                    variant: e3,
+                    variant: e6,
                     accessibleLabel: { label: "Aria Label", type: "text", defaultValue: "Avatar image" },
                 },
             },
@@ -1231,7 +1231,7 @@ let e3 = {
                 },
                 id: "edit-tile-button",
                 controls: {
-                    variant: e3,
+                    variant: e6,
                     showOverlayOnHover: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
                     accessibleLabel: { label: "Aria Label", type: "text", defaultValue: "Avatar image" },
                 },
@@ -1271,7 +1271,7 @@ let e3 = {
                 },
                 id: "deletable-edit-tile-button",
                 controls: {
-                    variant: e3,
+                    variant: e6,
                     showOverlayOnHover: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
                     accessibleLabel: { label: "Aria Label", type: "text", defaultValue: "Avatar image" },
                     deleteType: {
@@ -2423,8 +2423,8 @@ Error: ${t}`);
     });
 }
 var t2 = l(405139),
-    t3 = l(19311),
-    t6 = l(869177);
+    t6 = l(19311),
+    t3 = l(869177);
 function t4(e) {
     let t = d.useRef(null),
         l = {
@@ -2437,7 +2437,7 @@ function t4(e) {
             loadingComponent: (0, s.jsx)(ei.y, { style: { marginTop: 16 }, type: ei.t.PULSING_ELLIPSIS }),
         };
     return e.renderStepBody
-        ? (0, s.jsx)(t6.V, { ...l, ...e })
+        ? (0, s.jsx)(t3.V, { ...l, ...e })
         : "applePay" === e.paymentRequestWallet
           ? (0, s.jsx)(t2.Mv, { ...l, ...e })
           : (0, s.jsx)(t2.dP, { ...l, ...e });
@@ -2447,8 +2447,8 @@ function t8(e) {
         l = d.useRef(null),
         [a, n] = d.useState(!1);
     return (0, s.jsx)(tM.e_, {
-        footer: (0, s.jsx)(t3.Ay, {
-            primaryCTA: t3.Ay.CTAType.CONTINUE,
+        footer: (0, s.jsx)(t6.Ay, {
+            primaryCTA: t6.Ay.CTAType.CONTINUE,
             primaryText: U.intl.string("applePay" === t ? U.t.WoXvJL : U.t.wnVVr0),
             primaryDisabled: !a,
             onPrimary: () => void (null != l.current && l.current.show()),
@@ -3658,13 +3658,13 @@ let lX = { "nitro-wheel": r.t, gift: lG.o, orbs: i.C },
             },
         ],
     };
-var l3 =
+var l6 =
     (((a = {}).PAYMENTS = "payments"),
     (a.VIRTUAL_CURRENCY = "virtual-currency"),
     (a.NITRO = "nitro"),
     (a.IDENTITY = "identity"),
     a);
-let l6 = ["Revenue Storybook", "Revenue Playground"],
+let l3 = ["Revenue Storybook", "Revenue Playground"],
     l4 = {
         id: "payments",
         name: "Payments",
@@ -3733,7 +3733,7 @@ let l6 = ["Revenue Storybook", "Revenue Playground"],
             { title: "Checkout Review Step", stories: [eU, eB] },
             lb,
         ],
-        tags: l6,
+        tags: l3,
         IconComponent: n.d,
     },
     l8 = {
@@ -3792,7 +3792,7 @@ let l6 = ["Revenue Storybook", "Revenue Playground"],
                 ],
             },
         ],
-        tags: l6,
+        tags: l3,
         IconComponent: i.C,
     },
     l9 = {
@@ -4020,7 +4020,7 @@ let l6 = ["Revenue Storybook", "Revenue Playground"],
                                 n = d.useCallback(() => {
                                     null != a &&
                                         (0, er.openModalLazy)(async () => {
-                                            let { default: t } = await Promise.all([l.e("93513"), l.e("1530")]).then(
+                                            let { default: t } = await Promise.all([l.e("93513"), l.e("79149")]).then(
                                                 l.bind(l, 688796),
                                             );
                                             return (l) => (0, s.jsx)(t, { uploadType: e, ...l });
@@ -4181,14 +4181,14 @@ let l6 = ["Revenue Storybook", "Revenue Playground"],
             },
             { title: "Clips", stories: [eZ] },
         ],
-        tags: l6,
+        tags: l3,
         IconComponent: r.t,
     },
     l7 = {
         id: "identity",
         name: "Identity",
         groups: [
-            e6,
+            e3,
             {
                 title: "Editable Tile Button Examples",
                 stories: [
@@ -4279,7 +4279,7 @@ let l6 = ["Revenue Storybook", "Revenue Playground"],
                 ],
             },
         ],
-        tags: l6,
+        tags: l3,
         IconComponent: o.n,
     },
     l5 = { playgroundBaseUrl: "revenue", collections: [l4, l8, l9, l7] };

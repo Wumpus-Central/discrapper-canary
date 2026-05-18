@@ -541,27 +541,27 @@ function eJ(e) {
                                             action: () => {
                                                 (0, eO.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        n.e("14350"),
+                                                        n.e("34524"),
                                                         n.e("54266"),
-                                                        n.e("5959"),
+                                                        n.e("26105"),
                                                         n.e("86028"),
+                                                        n.e("99830"),
                                                         n.e("35769"),
-                                                        n.e("95664"),
                                                         n.e("80203"),
                                                         n.e("45650"),
-                                                        n.e("55030"),
+                                                        n.e("32109"),
                                                         n.e("31837"),
                                                         n.e("27660"),
+                                                        n.e("33982"),
                                                         n.e("85484"),
-                                                        n.e("31135"),
-                                                        n.e("1861"),
+                                                        n.e("27402"),
                                                         n.e("25677"),
-                                                        n.e("40671"),
+                                                        n.e("46831"),
                                                         n.e("55990"),
-                                                        n.e("85360"),
-                                                        n.e("97292"),
-                                                        n.e("74103"),
-                                                        n.e("22995"),
+                                                        n.e("86023"),
+                                                        n.e("35911"),
+                                                        n.e("68432"),
+                                                        n.e("27039"),
                                                         n.e("79705"),
                                                         n.e("23924"),
                                                         n.e("42205"),
@@ -831,13 +831,13 @@ function e8(e) {
         })
     );
 }
-var e4 = n(34188),
-    e2 = n(700623),
+var e2 = n(34188),
+    e4 = n(700623),
     e3 = n(177953),
     e7 = n(825484),
     e9 = n(512950),
-    e5 = n(900797),
-    e6 = n(847374),
+    e6 = n(900797),
+    e5 = n(847374),
     te = n(10716),
     tt = n(702841),
     tn = n(150934),
@@ -1092,7 +1092,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: ty.wi,
                             children: [
-                                (0, r.jsx)(e4.U, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e2.U, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1105,7 +1105,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: ty.wi,
                             children: [
-                                (0, r.jsx)(e2.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e4.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1283,8 +1283,8 @@ function tM(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e5.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
-                              : (0, r.jsx)(e6.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
+                              ? (0, r.jsx)(e6.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              : (0, r.jsx)(e5.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,
@@ -1392,14 +1392,14 @@ var tZ = n(111042),
     t0 = n(403362),
     t1 = n(179771),
     t8 = n(824552),
-    t4 = n(168186),
-    t2 = n(594061),
+    t2 = n(168186),
+    t4 = n(594061),
     t3 = n(935208),
     t7 = n(630248),
     t9 = n(355097);
-function t5(e, t) {
+function t6(e, t) {
     o.useEffect(() => {
-        t2.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t4.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t7.A], () => t7.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -1416,7 +1416,7 @@ function t5(e, t) {
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute();
-            let e = i?.map((e) => (0, t4.bq)(e.application, !0)) ?? [],
+            let e = i?.map((e) => (0, t2.bq)(e.application, !0)) ?? [],
                 t = [...l];
             return (
                 t.push(...e),
@@ -1441,7 +1441,7 @@ function t5(e, t) {
         return [...s.filter((e) => e.id === a), ...s.filter((e) => e.id !== a)];
     }, [s, l, n, t]);
 }
-var t6 = n(546183),
+var t5 = n(546183),
     ne = n(228366);
 let nt = 10 * Y.A.Millis.MINUTE,
     nn = { lastUsedCommandId: null, lastUsedTimeMs: null };
@@ -2061,7 +2061,7 @@ var nK = n(984516),
     n0 = n(994369),
     n1 = n(240591),
     n8 = n(727331);
-function n4(e, t) {
+function n2(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
         s = ((n = e), (l = t.filterPredicates ?? []), n.filter((e) => l.every((t) => t(e))));
@@ -2111,7 +2111,7 @@ function n4(e, t) {
         i,
     ).slice(0, i);
 }
-function n2(e, t) {
+function n4(e, t) {
     let n = t7.A.getScoreWithoutLoadingLatest(e.id);
     return t7.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
@@ -2125,15 +2125,15 @@ function n7(e, t) {
 }
 n(827669);
 var n9 = n(562708),
-    n5 = n(139286),
-    n6 = n(520117);
+    n6 = n(139286),
+    n5 = n(520117);
 function le(e) {
     let { applicationId: t, commandId: n, searchResultsPosition: l, query: i } = e,
         s = (0, A.bG)([p.A], () => p.A.entrypoint());
     return {
-        trackSearchResultsItemImpressionRef: (0, n6.A)({
+        trackSearchResultsItemImpressionRef: (0, n5.A)({
             onVisible: () => {
-                (0, n5.x)({
+                (0, n6.x)({
                     type: n9.ImpressionTypes.VIEW,
                     name: n9.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                     properties: { application_id: t, command_id: n, search_results_position: l, query: i, source: s },
@@ -2359,7 +2359,7 @@ function ld(e) {
                     var e, i, a, r, o, d, u;
                     let m, p, h, A, f;
                     if (!s) return [];
-                    return n4(c, {
+                    return n2(c, {
                         limit: l,
                         filterPredicates: [
                             ((m = (0, n1.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
@@ -2496,7 +2496,7 @@ function ld(e) {
                                     }),
                             );
                     } else a && (u = m);
-                    return n4(u, {
+                    return n2(u, {
                         limit: i,
                         filterPredicates: [
                             ((d = (0, n1.Bh)("channel" === t.type ? t.channel : void 0, [
@@ -2543,7 +2543,7 @@ function ld(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n2, n3],
+                        sortComparers: [n4, n3],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -3030,13 +3030,13 @@ function lI(e) {
                             onlyActivityApps: l,
                             includeAuthorizedAppsAndFetch: i,
                         } = e,
-                        s = (0, A.bG)([t6.default], () => t6.default.getFetchState());
+                        s = (0, A.bG)([t5.default], () => t5.default.getFetchState());
                     o.useEffect(() => {
-                        i && s === t6.FetchState.NOT_FETCHED && t8.A.fetch();
+                        i && s === t5.FetchState.NOT_FETCHED && t8.A.fetch();
                     }, [i, s]);
-                    let a = (0, A.yK)([t6.default], () =>
+                    let a = (0, A.yK)([t5.default], () =>
                             i
-                                ? t6.default
+                                ? t5.default
                                       .getNewestTokens()
                                       .filter((e) => e.scopes.includes(t1.F.APPLICATIONS_COMMANDS))
                                 : [],
@@ -3047,7 +3047,7 @@ function lI(e) {
                             let e = [];
                             return c && e.push(ni.gq), e;
                         }, [c]),
-                        u = t5(r, a);
+                        u = t6(r, a);
                     return o.useMemo(
                         () =>
                             l
@@ -3222,7 +3222,7 @@ function ly(e) {
                         }, new Set()),
                     [i],
                 ),
-                r = t5(
+                r = t6(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})

@@ -1,4 +1,4 @@
-t.d(n, { A: () => nn });
+t.d(n, { A: () => ne });
 var r = t(627968),
     l = t(64700),
     s = t(963935),
@@ -587,7 +587,7 @@ let ex = l.memo(function (e) {
             (j.current = "user"), y(), d(e);
         },
         animate: a,
-        children: s.map((e) => (0, r.jsx)(nn, { node: e }, e.key)),
+        children: s.map((e) => (0, r.jsx)(ne, { node: e }, e.key)),
     });
 });
 var ej = t(885574),
@@ -720,7 +720,7 @@ function eE(e) {
     return (0, r.jsxs)(x.B, {
         direction: "horizontal",
         align: "center",
-        gap: 16,
+        gap: 24,
         padding: { bottom: "lg" },
         children: [
             (0, r.jsxs)(x.B, {
@@ -745,9 +745,8 @@ function eE(e) {
     });
 }
 var ek = t(683071),
-    eN = t(964486),
-    eT = t(562248);
-function eS(e) {
+    eN = t(964486);
+function eT(e) {
     let { button: n } = e,
         [t, s] = l.useState(!1),
         i = n.useText(),
@@ -761,7 +760,7 @@ function eS(e) {
         };
     return (0, r.jsx)(p.$, { variant: "secondary", text: i, onClick: a, loading: t, disabled: t });
 }
-function eC(e) {
+function eS(e) {
     let { notice: n } = e,
         { noticeType: t, useTitle: l, useText: s, button: i } = n,
         a = l?.(),
@@ -784,29 +783,29 @@ function eC(e) {
             align: "center",
             justify: "space-between",
             gap: "xs",
-            children: [c, null != i && (0, r.jsx)(eS, { button: i })],
+            children: [c, null != i && (0, r.jsx)(eT, { button: i })],
         }),
     });
 }
-function eA(e) {
+function eC(e) {
     let { notice: n } = e,
         { notice: t } = n;
     return (0, r.jsx)(t, {});
 }
-function eI(e) {
+function eA(e) {
     let { notice: n } = e;
     switch (n.type) {
         case g.lT.INLINE_NOTICE:
-            return (0, r.jsx)(eC, { notice: n });
+            return (0, r.jsx)(eS, { notice: n });
         case g.lT.STRONGLY_DISCOURAGED_CUSTOM:
-            return (0, r.jsx)(eA, { notice: n });
+            return (0, r.jsx)(eC, { notice: n });
     }
 }
-function eO(e) {
+function eI(e) {
     let { notice: n } = e;
-    return (0, r.jsx)("div", { className: eT.l, children: (0, r.jsx)(eI, { notice: n }) });
+    return (0, r.jsx)(eA, { notice: n });
 }
-let eR = l.memo(function (e) {
+let eO = l.memo(function (e) {
     let { node: n } = e,
         {
             useTitle: t,
@@ -834,30 +833,30 @@ let eR = l.memo(function (e) {
             (0, r.jsxs)(x.B, {
                 gap: "xs",
                 children: [
-                    null != j && (0, r.jsx)(eO, { notice: j }),
-                    i.map((e) => (0, r.jsx)(nn, { node: e }, e.key)),
+                    null != j && (0, r.jsx)(eI, { notice: j }),
+                    i.map((e) => (0, r.jsx)(ne, { node: e }, e.key)),
                 ],
             }),
         ],
     });
 });
-var eB = t(140735),
-    eL = t(681310);
-function ew(e) {
+var eR = t(140735),
+    eB = t(681310);
+function eL(e) {
     let { title: n, subtitle: t, isHiddenVisually: l } = e;
     return null == n || "" === n
         ? null
         : l
-          ? (0, r.jsx)(eB.A, { tag: "legend", children: n })
+          ? (0, r.jsx)(eR.A, { tag: "legend", children: n })
           : (0, r.jsx)(m.E, {
                 tag: "legend",
                 variant: "text-md/semibold",
                 color: "text-strong",
-                className: a()(eL.D, { [eL.h]: null != t && "" !== t }),
+                className: a()(eB.D, { [eB.h]: null != t && "" !== t }),
                 children: n,
             });
 }
-let eD = l.memo(function (e) {
+let ew = l.memo(function (e) {
     let { node: n } = e,
         { useTitle: t, useSubtitle: s, layout: i, variant: a = "default", isTitleHiddenVisually: o } = n,
         c = t(),
@@ -876,20 +875,20 @@ let eD = l.memo(function (e) {
     return (0, r.jsxs)("fieldset", {
         "aria-describedby": h ? d : void 0,
         children: [
-            (0, r.jsx)(ew, { title: c, subtitle: u, isHiddenVisually: o }),
+            (0, r.jsx)(eL, { title: c, subtitle: u, isHiddenVisually: o }),
             h ? (0, r.jsx)(m.E, { variant: "text-sm/normal", color: "text-default", id: d, children: u }) : null,
             (0, r.jsx)(x.B, {
                 gap: f,
                 padding: { top: j && !o ? 16 : 0 },
-                children: i.map((e) => (0, r.jsx)(nn, { node: e }, e.key)),
+                children: i.map((e) => (0, r.jsx)(ne, { node: e }, e.key)),
             }),
         ],
     });
 });
-var e_ = t(404778),
-    eP = t(375708),
-    eF = t(339102);
-function eZ(e) {
+var eD = t(404778),
+    e_ = t(375708),
+    eP = t(339102);
+function eF(e) {
     let n,
         { node: t } = e,
         [s, i] = l.useState(!1),
@@ -900,8 +899,8 @@ function eZ(e) {
             c?.(s, j.length) ??
             ((n = j.length),
             s
-                ? eP.intl.formatToPlainString(eP.t["3SHL+d"], { count: n })
-                : eP.intl.formatToPlainString(eP.t["8JRFyZ"], { count: n })),
+                ? e_.intl.formatToPlainString(e_.t["3SHL+d"], { count: n })
+                : e_.intl.formatToPlainString(e_.t["8JRFyZ"], { count: n })),
         m = u?.();
     return (0, r.jsxs)(x.B, {
         gap: 8,
@@ -909,15 +908,15 @@ function eZ(e) {
             d.map((e, n) =>
                 (0, r.jsxs)(
                     l.Fragment,
-                    { children: [(0, r.jsx)(nn, { node: e }), n !== d.length - 1 && (0, r.jsx)(e_.c, {})] },
+                    { children: [(0, r.jsx)(ne, { node: e }), n !== d.length - 1 && (0, r.jsx)(eD.c, {})] },
                     e.key,
                 ),
             ),
             j.length > 0 &&
                 (0, r.jsxs)("div", {
-                    className: eF.CT,
+                    className: eP.CT,
                     children: [
-                        (0, r.jsx)(e_.c, { className: eF.mn }),
+                        (0, r.jsx)(eD.c, { className: eP.mn }),
                         (0, r.jsx)(eu, {
                             title: h,
                             collapsedSubtitle: m,
@@ -930,8 +929,8 @@ function eZ(e) {
                                         l.Fragment,
                                         {
                                             children: [
-                                                (0, r.jsx)(nn, { node: e }),
-                                                n !== j.length - 1 && (0, r.jsx)(e_.c, {}),
+                                                (0, r.jsx)(ne, { node: e }),
+                                                n !== j.length - 1 && (0, r.jsx)(eD.c, {}),
                                             ],
                                         },
                                         e.key,
@@ -944,21 +943,21 @@ function eZ(e) {
         ],
     });
 }
-function eG(e) {
+function eZ(e) {
     let { decoration: n } = e;
     if (n.type === g.Xy.ICON)
         return (0, r.jsx)(I.A, { Icon: n.icon, color: n.color, backgroundColor: n.backgroundColor });
 }
-function eM(e) {
+function eG(e) {
     let { decoration: n } = e,
         t = n.useText();
     return null == t ? null : (0, r.jsx)(m.E, { variant: "text-md/medium", children: t });
 }
-function eU(e) {
+function eM(e) {
     let { decoration: n } = e;
-    if (n.type === g.xn.TEXT) return (0, r.jsx)(eM, { decoration: n });
+    if (n.type === g.xn.TEXT) return (0, r.jsx)(eG, { decoration: n });
 }
-function eV(e) {
+function eU(e) {
     let { node: n } = e,
         { useTitle: t, useSubtitle: l, useLeadingDecoration: s, useTrailingDecoration: i } = n,
         a = t?.(),
@@ -975,34 +974,34 @@ function eV(e) {
               role: "link",
               "aria-label": h,
               title: m,
-              leadingElement: null != c ? (0, r.jsx)(eG, { decoration: c }) : null,
+              leadingElement: null != c ? (0, r.jsx)(eZ, { decoration: c }) : null,
               description: o,
               trailingElement: (0, r.jsxs)(x.B, {
                   direction: "horizontal",
                   align: "center",
                   justify: "end",
                   gap: "sm",
-                  children: [null != u && (0, r.jsx)(eU, { decoration: u }), (0, r.jsx)(C.u, {})],
+                  children: [null != u && (0, r.jsx)(eM, { decoration: u }), (0, r.jsx)(C.u, {})],
               }),
               onClick: () => A.A.navigate(d),
           });
 }
-var eK = t(17928),
-    ez = t(868285),
-    e$ = t(871682),
-    eq = t(689175),
-    eW = t(707554),
-    eX = t(761508),
-    eY = t(823092),
-    eH = t(397274),
-    eQ = t(707182);
-function eJ(e) {
+var eV = t(17928),
+    eK = t(868285),
+    ez = t(871682),
+    e$ = t(689175),
+    eq = t(707554),
+    eW = t(761508),
+    eX = t(823092),
+    eY = t(397274),
+    eH = t(707182);
+function eQ(e) {
     let { notice: n, children: t } = e,
-        { showNotice: s, handleStoreUpdate: i } = (0, eY.L_)(),
+        { showNotice: s, handleStoreUpdate: i } = (0, eX.L_)(),
         a = n?.stores;
     l.useEffect(() => {
         if (null != a) {
-            let e = new eK.ru(a, () => {
+            let e = new eV.ru(a, () => {
                 i(a);
             });
             return (
@@ -1017,58 +1016,58 @@ function eJ(e) {
     let o = l.useMemo(() => {
         if (null == n || !s) return null;
         let { element: e } = n;
-        return (0, r.jsx)(e$.F, { className: eQ.lm, children: (0, r.jsx)(e, {}) });
+        return (0, r.jsx)(ez.F, { className: eH.lm, children: (0, r.jsx)(e, {}) });
     }, [n, s]);
-    return (0, r.jsxs)(r.Fragment, { children: [t, (0, r.jsx)(ez.F, { component: "div", children: o })] });
+    return (0, r.jsxs)(r.Fragment, { children: [t, (0, r.jsx)(eK.F, { component: "div", children: o })] });
 }
-function e0(e) {
+function eJ(e) {
     let { decoration: n } = e,
         t = n.component;
     return (0, r.jsx)("div", {
-        className: a()(eQ.oK, { [eQ.qf]: n.sticky }),
+        className: a()(eH.oK, { [eH.qf]: n.sticky }),
         "data-settings-panel-sticky-decoration": n.sticky || void 0,
         children: (0, r.jsx)(t, {}),
     });
 }
-function e1(e) {
+function e0(e) {
     let { notice: n, children: t, useObscuredNotice: s } = e,
         i = l.useRef(null),
         a = s?.();
     return null != a
         ? (0, r.jsx)(a, {})
-        : (0, r.jsx)(eJ, {
+        : (0, r.jsx)(eQ, {
               notice: n,
-              children: (0, r.jsxs)(eq.Gt, {
-                  className: eQ.XG,
+              children: (0, r.jsxs)(e$.Gt, {
+                  className: eH.XG,
                   ref: (e) => {
-                      eH.A.setPanelScrollerRef(e);
+                      eY.A.setPanelScrollerRef(e);
                   },
                   children: [
                       (0, r.jsx)("div", {
-                          className: eQ.nd,
+                          className: eH.nd,
                           ref: i,
                           children: (0, r.jsx)(eo.xp, { containerRef: i, children: t }),
                       }),
-                      (0, r.jsx)("div", { className: eQ.iS, "data-panel-bottom": !0 }),
+                      (0, r.jsx)("div", { className: eH.iS, "data-panel-bottom": !0 }),
                   ],
               }),
           });
 }
-function e6(e) {
+function e1(e) {
     let { layout: n, decoration: t } = e;
     return (0, r.jsxs)("div", {
-        className: eQ.LZ,
+        className: eH.LZ,
         children: [
-            null != t && (0, r.jsx)(e0, { decoration: t }),
-            (0, r.jsx)(eW.F, {
+            null != t && (0, r.jsx)(eJ, { decoration: t }),
+            (0, r.jsx)(eq.F, {
                 forceLevel: 2,
                 children: n.map((e, t) =>
                     (0, r.jsxs)(
                         l.Fragment,
                         {
                             children: [
-                                (0, r.jsx)(nn, { node: e }),
-                                t !== n.length - 1 && (0, r.jsx)(e_.c, { className: eQ.yF }),
+                                (0, r.jsx)(ne, { node: e }),
+                                t !== n.length - 1 && (0, r.jsx)(eD.c, { className: eH.yF }),
                             ],
                         },
                         e.key,
@@ -1078,7 +1077,7 @@ function e6(e) {
         ],
     });
 }
-function e8(e) {
+function e6(e) {
     let { panelKey: n, layout: t, notice: s, decoration: i, useObscuredNotice: a } = e,
         o =
             c.A.useState((e) => {
@@ -1093,13 +1092,13 @@ function e8(e) {
     }, [t, n]);
     let u = t.find((e) => e.key === o) ?? t[0];
     return (0, r.jsxs)(
-        e1,
+        e0,
         {
             notice: s,
             useObscuredNotice: a,
             children: [
-                (0, r.jsx)(eX.V, {
-                    className: eQ.$H,
+                (0, r.jsx)(eW.V, {
+                    className: eH.$H,
                     selectedItem: o,
                     onItemSelect: (e) => {
                         A.A.navigate(e, {
@@ -1114,28 +1113,28 @@ function e8(e) {
                     look: "brand",
                     children: t.map((e) => {
                         let { key: n, getTitle: t } = e;
-                        return (0, r.jsx)(eX.V.Item, { id: n, children: t() }, n);
+                        return (0, r.jsx)(eW.V.Item, { id: n, children: t() }, n);
                     }),
                 }),
-                (0, r.jsx)(eX.V.Panel, { id: o, children: (0, r.jsx)(e6, { layout: u.layout, decoration: i }) }),
+                (0, r.jsx)(eW.V.Panel, { id: o, children: (0, r.jsx)(e1, { layout: u.layout, decoration: i }) }),
             ],
         },
         n,
     );
 }
-function e3(e) {
+function e8(e) {
     let { panelKey: n, notice: t, decoration: l, layout: s, useObscuredNotice: i } = e;
     return (0, r.jsx)(
-        e1,
-        { notice: t, useObscuredNotice: i, children: (0, r.jsx)(e6, { layout: s, decoration: l }) },
+        e0,
+        { notice: t, useObscuredNotice: i, children: (0, r.jsx)(e1, { layout: s, decoration: l }) },
         n,
     );
 }
-function e5(e) {
+function e3(e) {
     let { node: n } = e,
         { layout: t } = n;
     if ((0, s.zY)(t))
-        return (0, r.jsx)(e8, {
+        return (0, r.jsx)(e6, {
             panelKey: n.key,
             notice: n.notice,
             decoration: n.decoration,
@@ -1143,7 +1142,7 @@ function e5(e) {
             layout: t,
         });
     if ((0, s.Iu)(t))
-        return (0, r.jsx)(e3, {
+        return (0, r.jsx)(e8, {
             panelKey: n.key,
             notice: n.notice,
             decoration: n.decoration,
@@ -1152,8 +1151,8 @@ function e5(e) {
         });
     throw Error("Panels must have a list of categories or a list of tabs");
 }
-var e2 = t(722899);
-function e7(e) {
+var e5 = t(722899);
+function e2(e) {
     let { node: n } = e;
     return (0, r.jsxs)(x.B, {
         gap: 8,
@@ -1162,19 +1161,19 @@ function e7(e) {
             (0, r.jsx)(B.D, {
                 variant: "heading-md/semibold",
                 color: "text-muted",
-                className: e2.D,
-                children: eP.intl.string(eP.t.rPREPG),
+                className: e5.D,
+                children: e_.intl.string(e_.t.rPREPG),
             }),
-            n.layout.map((e) => (0, r.jsx)(nn, { node: e }, e.key)),
+            n.layout.map((e) => (0, r.jsx)(ne, { node: e }, e.key)),
         ],
     });
 }
-var e9 = t(626396);
-let e4 = l.memo(function (e) {
+var e7 = t(626396);
+let e9 = l.memo(function (e) {
     let { node: n } = e;
-    return (0, r.jsx)("div", { className: e9.l, children: n.layout.map((e) => (0, r.jsx)(nn, { node: e }, e.key)) });
+    return (0, r.jsx)("div", { className: e7.l, children: n.layout.map((e) => (0, r.jsx)(ne, { node: e }, e.key)) });
 });
-function ne(e) {
+function e4(e) {
     var n;
     let { node: t } = e;
     switch (
@@ -1193,19 +1192,19 @@ function ne(e) {
         case s.Z6.TAB_ITEM:
             throw Error(`${t.type} nodes should never be rendered directly`);
         case s.Z6.PANEL:
-            return (0, r.jsx)(e5, { node: t });
+            return (0, r.jsx)(e3, { node: t });
         case s.Z6.LIST:
-            return (0, r.jsx)(eZ, { node: t });
+            return (0, r.jsx)(eF, { node: t });
         case s.Z6.FIELD_SET:
-            return (0, r.jsx)(eD, { node: t });
+            return (0, r.jsx)(ew, { node: t });
         case s.Z6.RELATED:
-            return (0, r.jsx)(e7, { node: t });
+            return (0, r.jsx)(e2, { node: t });
         case s.Z6.CATEGORY:
-            return (0, r.jsx)(eR, { node: t });
+            return (0, r.jsx)(eO, { node: t });
         case s.Z6.ACCORDION:
             return (0, r.jsx)(ex, { node: t });
         case s.Z6.SPLIT:
-            return (0, r.jsx)(e4, { node: t });
+            return (0, r.jsx)(e9, { node: t });
         case s.Z6.TOGGLE:
             return (0, r.jsx)(en, { node: t });
         case s.Z6.STATIC:
@@ -1221,14 +1220,14 @@ function ne(e) {
         case s.Z6.NAVIGATOR:
             return (0, r.jsx)(V, { node: t });
         case s.Z6.NESTED_PANEL_NAVIGATOR:
-            return (0, r.jsx)(eV, { node: t });
+            return (0, r.jsx)(eU, { node: t });
         case s.Z6.CUSTOM:
             return (0, r.jsx)(h, { children: (0, r.jsx)(t.Component, {}) });
     }
 }
-function nn(e) {
+function ne(e) {
     let { node: n } = e;
     return n.type === s.Z6.PANEL
-        ? (0, r.jsx)(ne, { node: n })
-        : (0, r.jsx)(d, { node: n, children: (0, r.jsx)(ne, { node: n }) });
+        ? (0, r.jsx)(e4, { node: n })
+        : (0, r.jsx)(d, { node: n, children: (0, r.jsx)(e4, { node: n }) });
 }
