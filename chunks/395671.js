@@ -178,6 +178,7 @@ class E extends p {
             })),
             deepLinkUri: e.deeplink_uri,
             applicationAccountLinkBenefitConfig: e.application_account_link_benefit_config,
+            parentId: e.parent_id,
         });
     }
     constructor(e) {
@@ -218,7 +219,8 @@ class E extends p {
                 })) ?? e.linkedGames),
             (this.deepLinkUri = e.deepLinkUri ?? e.deeplink_uri),
             (this.applicationAccountLinkBenefitConfig =
-                e.applicationAccountLinkBenefitConfig ?? e.application_account_link_benefit_config);
+                e.applicationAccountLinkBenefitConfig ?? e.application_account_link_benefit_config),
+            (this.parentId = e.parentId ?? e.parent_id);
     }
     getCanonicalGameId() {
         return this.type === _.S7.GAME
@@ -277,6 +279,7 @@ class E extends p {
             applicationAccountLinkBenefitConfig:
                 e.applicationAccountLinkBenefitConfig ?? this.applicationAccountLinkBenefitConfig,
             contentClassification: e.contentClassification ?? this.contentClassification,
+            parentId: e.parentId ?? this.parentId,
         });
     }
     getMaxParticipants() {
