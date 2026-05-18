@@ -449,8 +449,8 @@ function e1(e) {
         i = (0, eX.hz)(t, n);
     return { user: l, voiceState: t, nick: n, comparator: i };
 }
-var e3 = n(787541),
-    e2 = n(79858),
+var e2 = n(787541),
+    e3 = n(79858),
     e9 = n(591346),
     e5 = n(769022),
     e7 = n(334885),
@@ -1010,7 +1010,7 @@ let t0 = tY(
             }),
         });
     }),
-    t3 = r.memo(function (e) {
+    t2 = r.memo(function (e) {
         let { category: t } = e,
             n = (0, u.bG)([tJ.A], () => tJ.A.isVoiceCategoryCollapsed(t.guild.id)),
             l = r.useCallback(() => {
@@ -1030,7 +1030,7 @@ let t0 = tY(
             }),
         });
     }),
-    t2 = r.memo(function (e) {
+    t3 = r.memo(function (e) {
         let { category: t, channel: n } = e,
             l = (0, u.bG)([tJ.A], () => tJ.A.isVoiceCategoryCollapsed(t.guild.id));
         return l || null == n || n.record.type === F.rbe.GUILD_CATEGORY
@@ -1096,7 +1096,7 @@ let t4 = r.memo(function (e) {
             if (null == e || e.isEmpty()) return null;
             let n = l.getChannelFromSectionRow(t, 0)?.channel;
             return (0, s.jsxs)(r.Fragment, {
-                children: [(0, s.jsx)("div", { className: t8.ts }), (0, s.jsx)(t2, { category: e, channel: n })],
+                children: [(0, s.jsx)("div", { className: t8.ts }), (0, s.jsx)(t3, { category: e, channel: n })],
             });
         }
         case tt.TF: {
@@ -1155,7 +1155,7 @@ function ns(e, t, n) {
 let nr = r.memo(function (e) {
         let { guildChannels: t, guildChannelsVersion: n } = e,
             l = r.useMemo(() => t.getCategoryFromSection(t.voiceChannelsSectionNumber), [t, n]);
-        return null == l ? null : (0, s.jsx)(t3, { category: l });
+        return null == l ? null : (0, s.jsx)(t2, { category: l });
     }),
     na = r.memo(function (e) {
         let {
@@ -1294,7 +1294,7 @@ function nx(e) {
                         );
                         (0, $.openModalLazy)(async () => {
                             let { default: l } = await Promise.all([
-                                n.e("4882"),
+                                n.e("97292"),
                                 n.e("59957"),
                                 n.e("28136"),
                                 n.e("16084"),
@@ -1748,12 +1748,12 @@ let n1 = r.memo(function (e) {
         ],
     });
 });
-var n3 = n(514179);
-function n2(e) {
+var n2 = n(514179);
+function n3(e) {
     let { guild: t, selected: l } = e;
     return (0, s.jsx)(H.G, {
         id: `subscriptions-${t.id}`,
-        renderIcon: (e) => (0, s.jsx)(n3.A, { className: e }),
+        renderIcon: (e) => (0, s.jsx)(n2.A, { className: e }),
         text: K.intl.string(K.t["KzCF/6"]),
         selected: l,
         onClick: () => {
@@ -2264,14 +2264,14 @@ var lK = n(824865),
     lQ = n(685399),
     l0 = n(475889),
     l1 = n(85451),
-    l3 = n(435470),
-    l2 = n(35275),
+    l2 = n(435470),
+    l3 = n(35275),
     l9 = n(75879);
 function l5(e) {
     let { locked: t } = e;
     return (0, s.jsx)("div", {
         className: ef()(ed.Xs, l9.U),
-        children: (0, s.jsx)(l2.A, {
+        children: (0, s.jsx)(l3.A, {
             className: ed.gE,
             color: t ? h.A.colors.CREATOR_REVENUE_LOCKED_CHANNEL_ICON.css : void 0,
         }),
@@ -2346,7 +2346,7 @@ function it(e) {
             );
         })({ channel: t, locked: C, video: (x || _) && null == E, selected: n }),
         I = (0, u.bG)([l7.A], () => l7.A.getNewThreadCount(t.guild_id, t.id)),
-        b = (0, l3.ed)(t.guild_id, t.id),
+        b = (0, l2.ed)(t.guild_id, t.id),
         G = (0, u.bG)([tg.A], () => tg.A.getGuild(t.guild_id)?.features.has(F.GuildFeatures.COMMUNITY) ?? !1);
     if (ld(m)) return (0, s.jsx)(lp, { mentionsCount: m, isMentionLowImportance: p });
     if (o) return (0, s.jsx)(l5, { locked: d });
@@ -2785,10 +2785,9 @@ function iv(e) {
                                     ? (0, lz.iN)(t.id)
                                     : (0, $.openModalLazy)(async () => {
                                           let { default: e } = await Promise.all([
-                                              n.e("30108"),
+                                              n.e("87212"),
                                               n.e("74103"),
                                               n.e("40671"),
-                                              n.e("56402"),
                                               n.e("76602"),
                                               n.e("28229"),
                                               n.e("39970"),
@@ -3111,9 +3110,10 @@ class iz extends nS {
             null != l &&
                 (0, eT.L3)(e, async () => {
                     let { default: e } = await Promise.all([
-                        n.e("4882"),
+                        n.e("97292"),
                         n.e("80203"),
                         n.e("685"),
+                        n.e("94881"),
                         n.e("26132"),
                         n.e("46652"),
                         n.e("93190"),
@@ -3393,8 +3393,8 @@ var iq = n(900797),
 let iQ = { mode: "hidden", mentionCount: 0, targetChannelId: null },
     i0 = { topBar: iQ, bottomBar: iQ },
     i1 = {},
-    i3 = {};
-function i2(e) {
+    i2 = {};
+function i3(e) {
     let t = eq.A.getChannel(e);
     return (
         !(null == t || null == t.getGuildId() || t.isGuildVocal()) &&
@@ -3421,7 +3421,7 @@ function i5(e) {
 }
 function i7(e) {
     let { guildChannels: t } = tn.A.getGuildWithoutChangingGuildActionRows(e),
-        n = t.getChannels(i3[e] ?? []);
+        n = t.getChannels(i2[e] ?? []);
     if (null == n || 0 === n.length) return !1;
     let l = null,
         i = null,
@@ -3436,7 +3436,7 @@ function i7(e) {
     for (let e = 0; e < g.length; e++) {
         let t = g[e];
         if (
-            ((i2(t.id) || o().some(t.threadIds, i2)) && (d = !1),
+            ((i3(t.id) || o().some(t.threadIds, i3)) && (d = !1),
             (i9(t.id) || o().some(t.threadIds, i9)) && (a = !1),
             h.includes(t.id) && (c = !0),
             !d && !a && c)
@@ -3450,7 +3450,7 @@ function i7(e) {
     if (d || a)
         for (let e = A.length - 1; e >= 0; e--) {
             let t = A[e];
-            (i2(t.id) || o().some(t.threadIds, i2)) && (null == i && (i = t.id), (f = !0)),
+            (i3(t.id) || o().some(t.threadIds, i3)) && (null == i && (i = t.id), (f = !0)),
                 (i9(t.id) || o().some(t.threadIds, i9)) &&
                     (null == l && (l = t.id),
                     (p += nY.Ay.getMentionCount(t.id)),
@@ -3460,7 +3460,7 @@ function i7(e) {
         for (let e = 0; e < m.length; e++) {
             let t = m[e];
             if (!d && !a) break;
-            (i2(t.id) || o().some(t.threadIds, i2)) && (null == r && (r = t.id), (E = !0)),
+            (i3(t.id) || o().some(t.threadIds, i3)) && (null == r && (r = t.id), (E = !0)),
                 (i9(t.id) || o().some(t.threadIds, i9)) &&
                     (null == s && (s = t.id),
                     (C += nY.Ay.getMentionCount(t.id)),
@@ -3531,8 +3531,8 @@ let si = new sl(eU.h, {
             null != l &&
             !!l.features.has(F.GuildFeatures.COMMUNITY) &&
             null != n &&
-            !o().isEqual(i3[t], n) &&
-            ((i3[t] = n), i7(t))
+            !o().isEqual(i2[t], n) &&
+            ((i2[t] = n), i7(t))
         );
     },
     BULK_ACK: function (e) {
@@ -3739,8 +3739,7 @@ function sm(e) {
     async function o() {
         await (0, $.openModalLazy)(async () => {
             let { default: e } = await Promise.all([
-                n.e("73953"),
-                n.e("39666"),
+                n.e("14350"),
                 n.e("47626"),
                 n.e("56373"),
                 n.e("70644"),
@@ -4736,7 +4735,7 @@ class sq extends r.PureComponent {
                     );
                 case tN.n.GUILD_ROLE_SUBSCRIPTIONS:
                     return (0, s.jsx)(
-                        n2,
+                        n3,
                         { guild: l, selected: a === es.VV.ROLE_SUBSCRIPTIONS },
                         tN.n.GUILD_ROLE_SUBSCRIPTIONS,
                     );
@@ -5013,14 +5012,14 @@ class sq extends r.PureComponent {
         });
     }
     testShouldSkipTutorial = () => {
-        if (!e2.A.shouldShow("voice-conversations")) return;
+        if (!e3.A.shouldShow("voice-conversations")) return;
         let { guildChannels: e } = this.props,
             t = e.getFirstVoiceChannel();
-        if (null == t) return void e3.X8("voice-conversations");
+        if (null == t) return void e2.X8("voice-conversations");
         let n = this._list;
         if (null != n)
             for (let { section: e, row: l } of this.getSectionRowsFromChannel(t.id))
-                n.isItemVisible(e, l) || e3.X8("voice-conversations");
+                n.isItemVisible(e, l) || e2.X8("voice-conversations");
     };
     render() {
         let { guildChannels: e, guildChannelsVersion: t, showNewUnreadsBar: n } = this.props;

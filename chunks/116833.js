@@ -67,12 +67,12 @@ let a = {
         4: () => Promise.all([n.e("44651"), n.e("68708"), n.e("49111")]).then(n.bind(n, 297930)),
         5: () => Promise.all([n.e("5959"), n.e("58038"), n.e("62507")]).then(n.bind(n, 839238)),
         6: () => Promise.all([n.e("31837"), n.e("47256"), n.e("59880"), n.e("58529")]).then(n.bind(n, 275256)),
-        7: () => Promise.all([n.e("47459"), n.e("58407")]).then(n.bind(n, 939034)),
-        8: () => Promise.all([n.e("4882"), n.e("54282")]).then(n.bind(n, 140049)),
+        7: () => Promise.all([n.e("76944"), n.e("58407")]).then(n.bind(n, 939034)),
+        8: () => Promise.all([n.e("97292"), n.e("54282")]).then(n.bind(n, 140049)),
         9: () =>
             Promise.all([
                 n.e("54266"),
-                n.e("42971"),
+                n.e("47648"),
                 n.e("99818"),
                 n.e("25693"),
                 n.e("53930"),

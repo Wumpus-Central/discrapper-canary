@@ -8,5 +8,12 @@ e.exports = {
     E6: "footerSupportedPlatformIconsContainer__403f1",
     F2: "footerSupportedPlatformIconContainer__403f1",
     kB: "footerSupportedPlatformText__403f1",
-    Lf: "inlineApplicationText__403f1",
+    Xy: "compactEmbed__403f1",
+    xn: "compactHeader__403f1",
+    fi: "compactContent__403f1",
+    V$: "compactIcon__403f1",
+    Cr: "compactInfo__403f1",
+    Qi: "compactAppName__403f1",
+    Jl: "compactExpired__403f1",
+    cp: "blockedEmbed__403f1",
 };

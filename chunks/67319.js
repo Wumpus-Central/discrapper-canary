@@ -126,7 +126,7 @@ let eI = l.memo(function (e) {
             C = (e) => {
                 (0, ei.L3)(e, async () => {
                     let { default: e } = await Promise.all([
-                        n.e("4882"),
+                        n.e("94881"),
                         n.e("26132"),
                         n.e("46652"),
                         n.e("93190"),
@@ -455,7 +455,7 @@ function e6(e) {
         ],
     });
 }
-function e4(e) {
+function e7(e) {
     let { className: t, numRequestToSpeak: n } = e,
         l = n > 0;
     return (0, i.jsxs)("div", {
@@ -466,7 +466,7 @@ function e4(e) {
         ],
     });
 }
-function e7(e) {
+function e4(e) {
     let {
             toggleRequestToSpeakSidebar: t,
             showRequestToSpeakSidebar: n,
@@ -482,7 +482,7 @@ function e7(e) {
         onClick: c,
         label: n ? ex.intl.string(ex.t.gKGz7A) : ex.intl.string(ex.t.ImQ4dW),
         className: s,
-        iconComponent: () => (0, i.jsx)(e4, { numRequestToSpeak: a, className: s }),
+        iconComponent: () => (0, i.jsx)(e7, { numRequestToSpeak: a, className: s }),
         ...o,
     });
 }
@@ -513,7 +513,7 @@ function tn(e) {
             !l && d
                 ? (0, i.jsx)("div", {
                       className: a()(tt.x6, { [tt.vc]: c }),
-                      children: (0, i.jsx)(e7, {
+                      children: (0, i.jsx)(e4, {
                           toggleRequestToSpeakSidebar: () => {
                               c && eY.A.updateChatOpen(t.id, !1), (0, j.X)(r, j.O.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n();
                           },
@@ -806,7 +806,7 @@ let tE = l.memo(function (e) {
                         e,
                         async () => {
                             let { default: e } = await Promise.all([
-                                n.e("4882"),
+                                n.e("94881"),
                                 n.e("26132"),
                                 n.e("46652"),
                                 n.e("93190"),
@@ -1107,7 +1107,7 @@ let tF = 16 / 9,
                             t,
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("4882"),
+                                    n.e("94881"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
@@ -1208,7 +1208,7 @@ function t6(e) {
                 e,
                 async () => {
                     let { default: e } = await Promise.all([
-                        n.e("4882"),
+                        n.e("94881"),
                         n.e("26132"),
                         n.e("46652"),
                         n.e("93190"),
@@ -1280,7 +1280,7 @@ function t6(e) {
             }),
     });
 }
-function t4(e) {
+function t7(e) {
     let { speakers: t, channel: n } = e;
     return (0, i.jsx)(t1.A, {
         className: t5.z,
@@ -1291,7 +1291,7 @@ function t4(e) {
         renderMoreUsers: (e, t, n) => (0, i.jsx)("div", { className: a()(t5.$U, t), children: e }, n),
     });
 }
-var t7 = n(947790);
+var t4 = n(947790);
 let t3 = l.memo(function (e) {
     let {
         label: t,
@@ -1305,15 +1305,15 @@ let t3 = l.memo(function (e) {
     } = e;
     return (0, i.jsxs)(Q.D, {
         onClick: l,
-        className: a()(t7.kL, s),
+        className: a()(t4.kL, s),
         children: [
             null == o
-                ? (0, i.jsx)(eF.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: t7.Vo })
-                : (0, i.jsx)(eH.c, { size: "custom", color: "currentColor", width: 20, height: 20, className: t7.Vo }),
+                ? (0, i.jsx)(eF.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: t4.Vo })
+                : (0, i.jsx)(eH.c, { size: "custom", color: "currentColor", width: 20, height: 20, className: t4.Vo }),
             (0, i.jsxs)($.E, {
                 color: "text-strong",
                 variant: "text-md/semibold",
-                className: t7.Qq,
+                className: t4.Qq,
                 children: [t, " \u2014 ", n],
             }),
             r &&
@@ -1321,14 +1321,14 @@ let t3 = l.memo(function (e) {
                 null != o &&
                 o.length > 0 &&
                 (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(t4, { channel: c, speakers: o }), d && (0, i.jsx)(tJ.Ay, {})],
+                    children: [(0, i.jsx)(t7, { channel: c, speakers: o }), d && (0, i.jsx)(tJ.Ay, {})],
                 }),
             (0, i.jsx)(t$.a, {
                 size: "custom",
                 color: "currentColor",
                 width: 20,
                 height: 20,
-                className: a()(t7.mw, { [t7.VU]: r }),
+                className: a()(t4.mw, { [t4.VU]: r }),
             }),
         ],
     });
@@ -2005,10 +2005,10 @@ function n2(e) {
 }
 var n5 = n(104171),
     n6 = n(81466),
-    n4 = n(823508);
-function n7(e) {
+    n7 = n(823508);
+function n4(e) {
     let { className: t, guildId: l } = e,
-        s = (0, n4.A)();
+        s = (0, n7.A)();
     return (0, i.jsx)(nS.A, {
         className: t,
         icon: (0, i.jsx)(n6.C, { size: "custom", color: "currentColor", height: 20, width: 20 }),
@@ -2018,11 +2018,11 @@ function n7(e) {
         onClick: function () {
             (0, d.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("39666"),
+                    n.e("14350"),
                     n.e("79924"),
                     n.e("43908"),
                     n.e("19675"),
-                    n.e("4882"),
+                    n.e("97292"),
                     n.e("59957"),
                     n.e("28136"),
                     n.e("16084"),
@@ -2137,7 +2137,7 @@ function it(e) {
                     }),
                     d ? null : (0, i.jsx)(nf.A, { channelId: t.id, showDismiss: !1 }),
                     s ? (0, i.jsx)(nT, { className: n3.fN, channel: t }) : null,
-                    c ? (0, i.jsx)(n7, { className: n3.fN, guildId: r }) : null,
+                    c ? (0, i.jsx)(n4, { className: n3.fN, guildId: r }) : null,
                     s ? (0, i.jsx)(n8, { className: a()({ [n3.fN]: !0 }), onClick: n }) : null,
                     (0, i.jsx)(ie, { channel: t }),
                 ],
