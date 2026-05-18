@@ -303,7 +303,7 @@ function ec(e) {
         (0, r.jsx)(W.Provider, {
             value: { location: n, ...t },
             children: (0, r.jsx)("div", {
-                className: o()(H.cV, { [H.u3]: 0 === n, [H.BQ]: (0, P.S1)(n, [1, 2]), [H.DY]: 3 === n }, s),
+                className: o()(H.cV, { [H.u3]: 0 === n, [H.BQ]: (0, P.S1)(n, [1, 2, 10]), [H.DY]: 3 === n }, s),
                 children: i,
             }),
         })
