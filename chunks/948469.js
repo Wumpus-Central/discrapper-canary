@@ -6227,7 +6227,7 @@ function ox(e) {
             },
             [p],
         ),
-        { analyticsLocations: f } = (0, C.Ay)(E.A.INVITE_EMBED),
+        { analyticsLocations: f } = (0, C.Ay)(E.A.INVITE_EMBED, E.A.VOICE_CHANNEL_LIST_INVITE_EMBED),
         I = (0, n3._U)(t.code, n.id),
         v = d.some((e) => e.voiceState.selfStream);
     (0, tx.A)({
