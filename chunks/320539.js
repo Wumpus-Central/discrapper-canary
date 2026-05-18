@@ -2,8 +2,8 @@ i.d(s, { default: () => j });
 var e = i(627968),
     n = i(64700),
     a = i(554146),
-    r = i(815021),
-    c = i(534514),
+    c = i(815021),
+    r = i(534514),
     l = i(834730),
     d = i(821609),
     o = i(224640),
@@ -18,10 +18,10 @@ function j(t) {
     let { onClose: s, ...i } = t,
         j = (0, x.z$)("CollectiblesAnnouncementModal"),
         {
-            leftTitle: p,
+            leftTitle: b,
             leftBody: f,
-            rightTitle: C,
-            rightBody: b,
+            rightTitle: p,
+            rightBody: C,
         } = (function (t) {
             let { showGiftingMarketing: s, showEaPremiumMarketing: i, showEaNonPremiumMarketing: e } = t,
                 n = u.intl.string(u.t.zOtryQ),
@@ -89,17 +89,17 @@ function j(t) {
                     className: E.Tp,
                     style: {
                         backgroundImage:
-                            "url(https://cdn.discordapp.com/assets/content/c8e00daa39097d8c1b17f84ed0b64006632781f037ee256bb2daf5f46cd927d9.png)",
+                            "url(https://cdn.discordapp.com/assets/content/11291cccd863aec5bdb14c12e39a1a819efd0f35e936df7a7f378e5ae7163ba1.jpg)",
                     },
                 }),
-                (0, e.jsx)("div", { className: E.b, children: (0, e.jsx)(r.J, { onClick: L }) }),
+                (0, e.jsx)("div", { className: E.b, children: (0, e.jsx)(c.J, { onClick: L }) }),
                 (0, e.jsxs)("div", {
                     className: E.rf,
                     children: [
                         (0, e.jsxs)("div", {
                             className: E.gn,
                             children: [
-                                (0, e.jsx)(c.D, {
+                                (0, e.jsx)(r.D, {
                                     variant: "display-md",
                                     color: "text-strong",
                                     className: E.DD,
@@ -115,17 +115,17 @@ function j(t) {
                                     className: E.Nr,
                                     children: [
                                         (0, e.jsx)("img", {
-                                            src: "https://cdn.discordapp.com/assets/content/5a34dac591a5f2ead61786f6ebecec5838e63fab95d43648700ae55fb71a75f8.png",
+                                            src: "https://cdn.discordapp.com/assets/content/2bb166dbf77210787f33f8dc4edae14c3b9662a615c8e7f7b694e96e6875702f.png",
                                             alt: "",
                                             className: E.wP,
                                         }),
                                         (0, e.jsxs)("div", {
                                             className: E.Mo,
                                             children: [
-                                                (0, e.jsx)(c.D, {
+                                                (0, e.jsx)(r.D, {
                                                     variant: "heading-md/bold",
                                                     color: "text-strong",
-                                                    children: p,
+                                                    children: b,
                                                 }),
                                                 (0, e.jsx)(l.E, {
                                                     variant: "text-sm/medium",
@@ -140,22 +140,22 @@ function j(t) {
                                     className: E.Nr,
                                     children: [
                                         (0, e.jsx)("img", {
-                                            src: "https://cdn.discordapp.com/assets/content/ee655ef94ac877346a238640f34ee5e2ee41284b7b5b0c64e1f29301ac97ddd7.png",
+                                            src: "https://cdn.discordapp.com/assets/content/ac2f61afc0a4de0533067bef49b716c95e9b05bba9ec10ffa634c5ed9662a533.png",
                                             alt: "",
                                             className: E.wP,
                                         }),
                                         (0, e.jsxs)("div", {
                                             className: E.Mo,
                                             children: [
-                                                (0, e.jsx)(c.D, {
+                                                (0, e.jsx)(r.D, {
                                                     variant: "heading-md/bold",
                                                     color: "text-strong",
-                                                    children: C,
+                                                    children: p,
                                                 }),
                                                 (0, e.jsx)(l.E, {
                                                     variant: "text-sm/medium",
                                                     color: "text-muted",
-                                                    children: b,
+                                                    children: C,
                                                 }),
                                             ],
                                         }),

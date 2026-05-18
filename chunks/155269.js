@@ -1762,7 +1762,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 545922, Version Hash: 22e8b4967d3a7570879ee4a3e0d6a953f7bc2409`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 545960, Version Hash: 9f1e41f469490d877220eec6577dd8f759ef4e15`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -18301,7 +18301,7 @@ let Sv = "isHideDevBanner",
                     className: t2()(SC.Wz, SC.mr),
                     children: [
                         (0, k.jsx)(Sy, { className: SC.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "545922" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "545960" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -24829,7 +24829,7 @@ class vE extends nK.A {
             try {
                 await (0, nC.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("80178"), n.e("13328")]).then(n.bind(n, 24851));
+                        let { default: e } = await Promise.all([n.e("80178"), n.e("58120")]).then(n.bind(n, 320539));
                         return (t) => (0, k.jsx)(e, { ...t });
                     },
                     { modalKey: vh },
