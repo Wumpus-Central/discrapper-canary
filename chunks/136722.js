@@ -1,25 +1,26 @@
 "use strict";
 n.d(t, {
-    B8: () => h,
+    B8: () => p,
     H0: () => l,
     TF: () => T,
     WQ: () => I,
     X8: () => A,
-    aI: () => p,
-    iu: () => d,
+    aI: () => E,
+    iu: () => c,
     jB: () => S,
     kg: () => m,
-    pG: () => y,
+    pG: () => N,
     pb: () => _,
+    vI: () => y,
     zy: () => g,
 });
-var r = n(824120),
-    i = n.n(r);
+var i = n(824120),
+    r = n.n(i);
 function s(e) {
     let t = [];
     for (let n = 0; n < e.length; n++) {
-        let r = Number(e[n]);
-        for (let e = 0; r || e < t.length; e++) (r += 10 * (t[e] || 0)), (t[e] = r % 16), (r = (r - t[e]) / 16);
+        let i = Number(e[n]);
+        for (let e = 0; i || e < t.length; e++) (i += 10 * (t[e] || 0)), (t[e] = i % 16), (i = (i - t[e]) / 16);
     }
     return t;
 }
@@ -34,10 +35,10 @@ class a {
                 for (let e = 0; e < 4; e++)
                     n[3 - e] = (function (e, t) {
                         let n = 0;
-                        for (let r = 0; r < 4; r++) {
-                            let i = e[t + r];
-                            if (void 0 === i) break;
-                            n += i * 16 ** r;
+                        for (let i = 0; i < 4; i++) {
+                            let r = e[t + i];
+                            if (void 0 === r) break;
+                            n += r * 16 ** i;
                         }
                         return n;
                     })(t, 4 * e);
@@ -49,20 +50,20 @@ class a {
     static fromBit(e) {
         let t = [, , , ,],
             n = Math.floor(e / 16);
-        for (let r = 0; r < 4; r++) t[3 - r] = r === n ? 1 << (e - 16 * n) : 0;
+        for (let i = 0; i < 4; i++) t[3 - i] = i === n ? 1 << (e - 16 * n) : 0;
         return new a(t);
     }
     static asUintN(e, t) {
         let { parts: n } = t,
-            r = 0,
-            i = 0;
-        for (; i < e && i < 16 * n.length; ) {
-            let t = Math.min(e - i, 16),
+            i = 0,
+            r = 0;
+        for (; r < e && r < 16 * n.length; ) {
+            let t = Math.min(e - r, 16),
                 s = (1 << t) - 1,
-                a = n.length - Math.floor(i / 16) - 1;
-            (r |= (n[a] & s) << i), (i += t);
+                a = n.length - Math.floor(r / 16) - 1;
+            (i |= (n[a] & s) << r), (r += t);
         }
-        return r;
+        return i;
     }
     constructor(e, t) {
         (this.parts = e), (this.str = t);
@@ -91,10 +92,10 @@ class a {
         let e = Array(16);
         return (
             this.parts.forEach((t, n) => {
-                let r = s(t.toString());
-                for (let t = 0; t < 4; t++) e[t + 4 * n] = r[3 - t] || 0;
+                let i = s(t.toString());
+                for (let t = 0; t < 4; t++) e[t + 4 * n] = i[3 - t] || 0;
             }),
-            (this.str = i().fromArray(e, 16).toString())
+            (this.str = r().fromArray(e, 16).toString())
         );
     }
     toJSON() {
@@ -121,7 +122,7 @@ let l = o
               return e instanceof a;
           },
     u = {},
-    d = o
+    c = o
         ? function (e) {
               return BigInt(e);
           }
@@ -130,50 +131,50 @@ let l = o
                   ? e
                   : ("number" == typeof e && (e = e.toString()), null != u[e] || (u[e] = a.fromString(e)), u[e]);
           },
-    c = d(0),
+    d = c(0),
     _ = o
         ? function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d;
               return e & t;
           }
         : function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d;
               return e.and(t);
           },
     f = o
         ? function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d;
               return e | t;
           }
         : function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d;
               return e.or(t);
-          },
-    E = o
-        ? function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c;
-              return e ^ t;
-          }
-        : function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c;
-              return e.xor(t);
           },
     h = o
         ? function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d;
+              return e ^ t;
+          }
+        : function () {
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d;
+              return e.xor(t);
+          },
+    p = o
+        ? function () {
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d;
               return ~e;
           }
         : function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d;
               return e.not();
           },
-    p = o
+    E = o
         ? function (e, t) {
               return e === t;
           }
@@ -182,21 +183,21 @@ let l = o
           };
 function m() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    let r = t[0];
-    for (let e = 1; e < t.length; e++) r = f(r, t[e]);
-    return r;
+    let i = t[0];
+    for (let e = 1; e < t.length; e++) i = f(i, t[e]);
+    return i;
 }
 function g(e, t) {
-    return p(_(e, t), t);
+    return E(_(e, t), t);
 }
 function A(e, t) {
-    return !p(_(e, t), c);
+    return !E(_(e, t), d);
 }
 function I(e, t) {
-    return t === c ? e : f(e, t);
+    return t === d ? e : f(e, t);
 }
 function T(e, t) {
-    return t === c ? e : E(e, _(e, t));
+    return t === d ? e : h(e, _(e, t));
 }
 let S = o
         ? function (e) {
@@ -205,10 +206,13 @@ let S = o
         : function (e) {
               return a.fromBit(e);
           },
-    y = o
+    N = o
         ? function (e, t) {
               return Number(BigInt.asUintN(e, t));
           }
         : function (e, t) {
               return a.asUintN(e, t);
           };
+function y(e) {
+    return S(e);
+}

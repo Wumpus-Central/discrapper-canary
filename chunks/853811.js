@@ -1,9 +1,8 @@
 "use strict";
-n.d(t, { U1: () => h, fS: () => c }), n(321073);
+n.d(t, { U1: () => h, fS: () => _ }), n(321073);
 var i,
     r,
-    s,
-    a =
+    s =
         (((i = {})[(i.NO_CLASSIFICATION = 0)] = "NO_CLASSIFICATION"),
         (i[(i.MANUAL_CLASSIFICATION = 1)] = "MANUAL_CLASSIFICATION"),
         (i[(i.AUTOMATED_CLASSIFICATION = 2)] = "AUTOMATED_CLASSIFICATION"),
@@ -11,66 +10,72 @@ var i,
         (i[(i.AGENCY_CLASSIFICATION_PEGI = 4)] = "AGENCY_CLASSIFICATION_PEGI"),
         (i[(i.DISCORD_CLASSIFICATION = 5)] = "DISCORD_CLASSIFICATION"),
         i),
-    o = n(381438);
-let l = { ALL: new Set([1, 2, 3, 4, 5, 6]), IS_ADULT_ONLY: new Set([5]) },
-    d = { ALL: new Set([1, 2, 3, 4, 5]), IS_ADULT_ONLY: new Set([]) };
-var _ =
-        (((r = {})[(r.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED = 1)] =
-            "EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED"),
-        (r[(r.SEXUALLY_SUGGESTIVE_IMAGERY = 2)] = "SEXUALLY_SUGGESTIVE_IMAGERY"),
-        (r[(r.SEXUALLY_SUGGESTIVE_TEXT = 4)] = "SEXUALLY_SUGGESTIVE_TEXT"),
-        (r[(r.SEXUALLY_EXPLICIT_IMAGERY = 8)] = "SEXUALLY_EXPLICIT_IMAGERY"),
-        (r[(r.SEXUALLY_EXPLICIT_TEXT = 16)] = "SEXUALLY_EXPLICIT_TEXT"),
-        (r[(r.NUDITY = 32)] = "NUDITY"),
-        (r[(r.DATING = 64)] = "DATING"),
-        (r[(r.REGULATED_GOODS_USAGE = 128)] = "REGULATED_GOODS_USAGE"),
-        (r[(r.REGULATED_GOODS_DEPICTION = 256)] = "REGULATED_GOODS_DEPICTION"),
-        (r[(r.VIOLENCE_DOMESTIC_SIMULATED = 512)] = "VIOLENCE_DOMESTIC_SIMULATED"),
-        (r[(r.VIOLENCE_ANIMALS = 1024)] = "VIOLENCE_ANIMALS"),
-        (r[(r.VIOLENCE_FANTASY = 2048)] = "VIOLENCE_FANTASY"),
-        (r[(r.VIOLENCE_GRAPHIC = 4096)] = "VIOLENCE_GRAPHIC"),
-        (r[(r.SELF_HARM_DEPICTION = 8192)] = "SELF_HARM_DEPICTION"),
-        (r[(r.SELF_HARM_REFERENCE = 16384)] = "SELF_HARM_REFERENCE"),
-        (r[(r.GAMBLING_REAL = 32768)] = "GAMBLING_REAL"),
-        (r[(r.GAMBLING_SIMULATED = 65536)] = "GAMBLING_SIMULATED"),
-        (r[(r.PROFANITY_MILD = 131072)] = "PROFANITY_MILD"),
-        (r[(r.PROFANITY_SEVERE = 262144)] = "PROFANITY_SEVERE"),
-        (r[(r.SLURS = 524288)] = "SLURS"),
-        (r[(r.DANGEROUS_PHYSICALLY_HARMFUL = 1048576)] = "DANGEROUS_PHYSICALLY_HARMFUL"),
-        (r[(r.DANGEROUS_MENTALLY_HARMFUL = 2097152)] = "DANGEROUS_MENTALLY_HARMFUL"),
-        (r[(r.TRAGEDY_SIMULATED_HISTORICAL = 4194304)] = "TRAGEDY_SIMULATED_HISTORICAL"),
-        (r[(r.TRAGEDY_SIMULATED_NATURAL_DISASTER = 8388608)] = "TRAGEDY_SIMULATED_NATURAL_DISASTER"),
-        (r[(r.TRAGEDY_REAL_MILITARY_CONFLICT = 0x1000000)] = "TRAGEDY_REAL_MILITARY_CONFLICT"),
-        r),
-    u = n(665260),
-    c = (((s = {}).FULL = "full"), (s.MINIMAL = "minimal"), s);
-let E = { source: a.NO_CLASSIFICATION, status: o.Y.EVERYONE };
+    a = n(381438);
+let o = { ALL: new Set([1, 2, 3, 4, 5, 6]), IS_ADULT_ONLY: new Set([5]) },
+    l = { ALL: new Set([1, 2, 3, 4, 5]), IS_ADULT_ONLY: new Set([]) };
+var u = n(136722);
+let c = Object.freeze({
+        EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED: u.vI(0),
+        SEXUALLY_SUGGESTIVE_IMAGERY: u.vI(1),
+        SEXUALLY_SUGGESTIVE_TEXT: u.vI(2),
+        SEXUALLY_EXPLICIT_IMAGERY: u.vI(3),
+        SEXUALLY_EXPLICIT_TEXT: u.vI(4),
+        NUDITY: u.vI(5),
+        DATING: u.vI(6),
+        REGULATED_GOODS_USAGE: u.vI(7),
+        REGULATED_GOODS_DEPICTION: u.vI(8),
+        VIOLENCE_DOMESTIC_SIMULATED: u.vI(9),
+        VIOLENCE_ANIMALS: u.vI(10),
+        VIOLENCE_FANTASY: u.vI(11),
+        VIOLENCE_GRAPHIC: u.vI(12),
+        SELF_HARM_DEPICTION: u.vI(13),
+        SELF_HARM_REFERENCE: u.vI(14),
+        GAMBLING_REAL: u.vI(15),
+        GAMBLING_SIMULATED: u.vI(16),
+        PROFANITY_MILD: u.vI(17),
+        PROFANITY_SEVERE: u.vI(18),
+        SLURS: u.vI(19),
+        DANGEROUS_PHYSICALLY_HARMFUL: u.vI(20),
+        DANGEROUS_MENTALLY_HARMFUL: u.vI(21),
+        TRAGEDY_SIMULATED_HISTORICAL: u.vI(22),
+        TRAGEDY_SIMULATED_NATURAL_DISASTER: u.vI(23),
+        TRAGEDY_REAL_MILITARY_CONFLICT: u.vI(24),
+    }),
+    d = Object.freeze({
+        RESTRICTED_TO_ADULT: u.kg(
+            c.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED,
+            c.SEXUALLY_EXPLICIT_IMAGERY,
+            c.SEXUALLY_EXPLICIT_TEXT,
+        ),
+    });
+var _ = (((r = {}).FULL = "full"), (r.MINIMAL = "minimal"), r);
+let f = { source: s.NO_CLASSIFICATION, status: a.Y.EVERYONE };
 function h(e) {
     return (function (e) {
         var t, n;
         let i, r;
-        if (null == e) return E;
-        let s = [],
-            { type: _, data: u } = e;
+        if (null == e) return f;
+        let u = [],
+            { type: c, data: d } = e;
         return (
-            "minimal" === _
-                ? null != u.discord_classifications && s.push(m(a.DISCORD_CLASSIFICATION, u.discord_classifications))
-                : null != u.manual_classifications
-                  ? s.push(m(a.MANUAL_CLASSIFICATION, u.manual_classifications))
-                  : null != u.automated_classifications &&
-                    s.push(m(a.AUTOMATED_CLASSIFICATION, u.automated_classifications)),
-            null != u.agency_ratings &&
-                (null != u.agency_ratings.esrb &&
-                    s.push(
-                        ((t = u.agency_ratings.esrb),
-                        (i = l.IS_ADULT_ONLY.has(t.rating) ? o.Y.ADULT : o.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_ESRB, status: i }),
+            "minimal" === c
+                ? null != d.discord_classifications && u.push(p(s.DISCORD_CLASSIFICATION, d.discord_classifications))
+                : null != d.manual_classifications
+                  ? u.push(p(s.MANUAL_CLASSIFICATION, d.manual_classifications))
+                  : null != d.automated_classifications &&
+                    u.push(p(s.AUTOMATED_CLASSIFICATION, d.automated_classifications)),
+            null != d.agency_ratings &&
+                (null != d.agency_ratings.esrb &&
+                    u.push(
+                        ((t = d.agency_ratings.esrb),
+                        (i = o.IS_ADULT_ONLY.has(t.rating) ? a.Y.ADULT : a.Y.EVERYONE),
+                        { source: s.AGENCY_CLASSIFICATION_ESRB, status: i }),
                     ),
-                null != u.agency_ratings.pegi &&
-                    s.push(
-                        ((n = u.agency_ratings.pegi),
-                        (r = d.IS_ADULT_ONLY.has(n.rating) ? o.Y.ADULT : o.Y.EVERYONE),
-                        { source: a.AGENCY_CLASSIFICATION_PEGI, status: r }),
+                null != d.agency_ratings.pegi &&
+                    u.push(
+                        ((n = d.agency_ratings.pegi),
+                        (r = l.IS_ADULT_ONLY.has(n.rating) ? a.Y.ADULT : a.Y.EVERYONE),
+                        { source: s.AGENCY_CLASSIFICATION_PEGI, status: r }),
                     )),
             (function (e) {
                 let t = null;
@@ -80,15 +85,16 @@ function h(e) {
                         t = r;
                         continue;
                     }
-                    (n = r.status), (i = t.status), o.R.indexOf(n) - o.R.indexOf(i) > 0 && (t = r);
+                    (n = r.status), (i = t.status), a.R.indexOf(n) - a.R.indexOf(i) > 0 && (t = r);
                 }
-                return t ?? E;
-            })(s)
+                return t ?? f;
+            })(u)
         );
     })(e).status;
 }
-function m(e, t) {
-    return u.Lt(t, _.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED)
-        ? { source: e, status: o.Y.ADULT }
-        : { source: e, status: u.br(t, 25) ? o.Y.ADULT : o.Y.EVERYONE };
+function p(e, t) {
+    let n = u.iu(t);
+    return u.zy(n, c.EMERGENCY_ONLY_USE_IF_YOU_HAVE_TO_FORCE_MARK_AGE_RESTRICTED)
+        ? { source: e, status: a.Y.ADULT }
+        : { source: e, status: u.X8(n, d.RESTRICTED_TO_ADULT) ? a.Y.ADULT : a.Y.EVERYONE };
 }
