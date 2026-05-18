@@ -1,18 +1,19 @@
 "use strict";
 n.d(t, {
-    m8: () => p,
-    n6: () => S,
+    m8: () => E,
+    OO: () => p,
+    n6: () => N,
     Iq: () => _,
+    Ig: () => g,
     jS: () => f,
-    Ig: () => m,
-    ev: () => N,
-    r4: () => A,
+    ev: () => y,
     Ym: () => h,
+    r4: () => I,
+    rI: () => A,
     uK: () => d,
-    rI: () => g,
-    lk: () => T,
-    sy: () => E,
-    A8: () => y,
+    lk: () => S,
+    sy: () => m,
+    A8: () => C,
 });
 var i,
     r,
@@ -51,47 +52,53 @@ let d = (0, o.mj)({
         variations: { 1: { enabled: !0, showSkipButton: !0 }, 2: { enabled: !0, showSkipButton: !1 } },
     }),
     p = (0, o.mj)({
+        name: "2026-05-app-store-overlay-feature-gate",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 1: { enabled: !0 } },
+    }),
+    E = (0, o.mj)({
         name: "2026-03-quest-reload-video-on-obscured",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
-var E =
+var m =
     (((r = {})[(r.DEFAULT = 0)] = "DEFAULT"),
     (r[(r.AUTO_ENABLE_CAPTIONS = 1)] = "AUTO_ENABLE_CAPTIONS"),
     (r[(r.AUTO_UNMUTE = 2)] = "AUTO_UNMUTE"),
     r);
-let m = (0, o.mj)({
+let g = (0, o.mj)({
         name: "2026-03-muted-video-quest-new-defaults",
         kind: "user",
         defaultConfig: { enabled: !1, variant: 0 },
         variations: { 0: { enabled: !1, variant: 0 }, 1: { enabled: !0, variant: 1 }, 2: { enabled: !0, variant: 2 } },
     }),
-    g = (0, o.mj)({
+    A = (0, o.mj)({
         name: "2026-03-get-decision-hero-ads",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    A = (0, o.mj)({
+    I = (0, o.mj)({
         name: "2025-03-quests-premium-rewards-holdout",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    I = (0, o.mj)({
+    T = (0, o.mj)({
         name: "2026-04-quests-premium-orb-multiplier-marketing",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
-function T(e) {
-    let { enabled: t } = I.useConfig({ location: e }),
+function S(e) {
+    let { enabled: t } = T.useConfig({ location: e }),
         n = (function (e) {
             let { location: t } = e,
                 n = (0, a.bG)([l.default], () => l.default.getCurrentUser()),
                 i = null != n && n.isStaff(),
-                r = A.useConfig({ location: t });
+                r = I.useConfig({ location: t });
             return !i && !1 === r.enabled;
         })({ location: e }),
         i = (0, u.z)();
@@ -106,7 +113,7 @@ function T(e) {
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-let S = (0, o.mj)({
+let N = (0, o.mj)({
     name: "2026-04-composed-quest-player",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -124,13 +131,13 @@ let S = (0, o.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
-let N = (0, o.mj)({
+let y = (0, o.mj)({
         name: "2026-04-quest-heartbeat-executable-fingerprint",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    y = (0, o.mj)({
+    C = (0, o.mj)({
         name: "2026-05-quest-home-new-layout",
         kind: "user",
         defaultConfig: { enabled: !1 },
