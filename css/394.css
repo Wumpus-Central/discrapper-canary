@@ -1,3 +1,11 @@
+.icon_a1c007 {
+    height: 1lh;
+    -o-object-fit: contain;
+    object-fit: contain;
+    vertical-align: bottom;
+    width: 1lh
+}
+
 .root_b1a15e {
     height: .8lh;
     padding-block: .1lh;
@@ -11,18 +19,21 @@
     width: 100%
 }
 
-.icon_eba32a {
-    display: inline-block;
-    height: 1lh;
-    -o-object-fit: cover;
-    object-fit: cover;
-    vertical-align: bottom;
-    width: 1lh
+.container_eba32a {
+    align-items: center;
+    display: flex;
+    gap: 2px;
+    min-width: 0
 }
 
 .root__4063d {
     align-items: center;
     display: flex;
+    min-width: 0
+}
+
+.text__4063d {
+    flex-shrink: 1;
     min-width: 0
 }
 
@@ -246,11 +257,13 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
+    min-width: 0;
     width: 100%
 }
 
 .textContent_ad132e {
     display: flex;
+    gap: 2px;
     justify-content: space-between
 }
 
@@ -268,15 +281,23 @@
     width: var(--custom-progress)
 }
 
-.value__4a231 {
-    display: inline
+.progressText_ad132e {
+    max-width: 12ch
 }
 
-.icon__4a231 {
-    display: inline-block;
-    -o-object-fit: cover;
-    object-fit: cover;
-    vertical-align: bottom
+.textLeft_ad132e {
+    flex-grow: 1;
+    min-width: 0
+}
+
+.container__4a231 {
+    min-width: 0
+}
+
+.value__4a231 {
+    align-items: center;
+    display: flex;
+    gap: 2px
 }
 
 .statsGrid_a0dddb {
@@ -300,6 +321,7 @@
     flex-direction: column;
     gap: 2px;
     justify-content: center;
+    min-width: 0;
     overflow: hidden;
     padding-block: var(--space-32)
 }
@@ -354,7 +376,8 @@
     display: flex;
     flex-direction: column;
     grid-column: 1;
-    grid-row: 2
+    grid-row: 2;
+    min-width: 0
 }
 
 .imageSkeleton__01fb0 {

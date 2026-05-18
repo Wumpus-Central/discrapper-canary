@@ -5,4 +5,6 @@ e.exports = {
     P_: "textContent_ad132e",
     L$: "progressContainer_ad132e",
     qB: "progress_ad132e",
+    l_: "progressText_ad132e",
+    n_: "textLeft_ad132e",
 };
