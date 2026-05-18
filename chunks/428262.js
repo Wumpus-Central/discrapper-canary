@@ -1627,7 +1627,7 @@ let tk = Object.freeze({
     },
     canUseCollectibles: tv,
     canUseMonthlyOrbs: function (e) {
-        return (0, O.Nh)(e?.perks, d.bb.MONTHLY_ORBS);
+        return !1;
     },
     canUseShopDiscounts: function (e) {
         let { getIsCrepeEnabled: t } = n(968671);

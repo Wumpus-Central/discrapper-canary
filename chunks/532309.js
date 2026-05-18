@@ -9,10 +9,9 @@ var i,
     u = n(287809),
     c = n(927813),
     d = n(636592),
-    _ = n(26508),
+    _ = n(51935),
     f =
         (((i = {}).NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD = "NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD"),
-        (i.MISSING_NECESSARY_PREMIUM_STATUS = "MISSING_NECESSARY_PREMIUM_STATUS"),
         (i.CACHE_SHOULD_NOT_FETCH = "CACHE_SHOULD_NOT_FETCH"),
         i);
 let h = new (class {
@@ -134,18 +133,13 @@ class E extends o.Ay.PersistedStore {
         return null != h.getValue();
     }
     isReady() {
-        return (
-            !this.isFetching() &&
-            (this.hasCachedValue() || !(0, _.g_)("ProgramRewardsStore") || this.isError() || !(0, _.mY)())
-        );
+        return !this.isFetching() && (this.hasCachedValue() || !(0, _.CZ)("ProgramRewardsStore") || this.isError());
     }
     shouldFetch() {
-        return (0, _.g_)("ProgramRewardsStore.shouldFetch")
-            ? (0, _.mY)()
-                ? h.shouldFetch()
-                    ? { shouldFetch: !0 }
-                    : { shouldFetch: !1, reason: "CACHE_SHOULD_NOT_FETCH" }
-                : { shouldFetch: !1, reason: "MISSING_NECESSARY_PREMIUM_STATUS" }
+        return (0, _.CZ)("ProgramRewardsStore.shouldFetch")
+            ? h.shouldFetch()
+                ? { shouldFetch: !0 }
+                : { shouldFetch: !1, reason: "CACHE_SHOULD_NOT_FETCH" }
             : { shouldFetch: !1, reason: "NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD" };
     }
     isError() {
@@ -164,7 +158,7 @@ class E extends o.Ay.PersistedStore {
         let e = this.getState(),
             t = e.cache?.value ?? [],
             n = {};
-        for (let [e, i] of t) n[e === d.W.NITRO ? "NITRO" : String(e)] = i;
+        for (let [e, i] of t) n[d.W[e] ?? String(e)] = i;
         return {
             status: this.getStatus(),
             isFetching: this.isFetching(),
@@ -187,7 +181,7 @@ class E extends o.Ay.PersistedStore {
                 : {
                       programRewards: Object.entries(t).map((e) => {
                           let [t, n] = e;
-                          return { ...n, reward_program: "NITRO" === t ? d.W.NITRO : Number(t) };
+                          return { ...n, reward_program: d.W[t] ?? Number(t) };
                       }),
                   };
         },

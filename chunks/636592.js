@@ -2,7 +2,7 @@
 n.d(t, { L: () => a, W: () => s });
 var i,
     r,
-    s = (((i = {})[(i.NITRO = 0)] = "NITRO"), i),
+    s = (((i = {})[(i.NITRO = 0)] = "NITRO"), (i[(i.XBOX = 1)] = "XBOX"), i),
     a =
         (((r = {}).ACTIVE = "active"),
         (r.PAYMENT_PROCESSING = "payment_processing"),
