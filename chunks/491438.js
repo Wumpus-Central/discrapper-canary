@@ -23,93 +23,106 @@ var n = r(627968),
     T = r(298072),
     R = r(623373),
     j = r(652215),
-    y = r(66455),
-    v = r(562708),
+    v = r(66455),
+    y = r(562708),
     P = r(172218),
     b = r(139286),
-    L = r(536572),
-    N = r(17928),
-    O = r(403581),
+    O = r(536572),
+    L = r(17928),
+    N = r(403581),
     S = r(777666),
-    H = r(287809),
-    V = r(428262),
-    B = r(590180),
+    V = r(287809),
+    B = r(428262),
+    H = r(590180),
     D = r(993408),
     U = r(13875),
-    M = r(466459),
-    W = r(561769),
+    W = r(466459),
+    M = r(561769),
     F = r(525723),
     w = r(57020),
     G = r(375708),
     z = r(512514);
 let Y = (e) => {
-        let { product: t, badgeOverride: r, skipLimitedTimeCheck: i, className: s, prioritizedCurrency: a } = e,
-            { isPurchased: u, isPartiallyOwnedBundle: o } = (0, M.h)(t),
-            d = (0, D.G0)(t),
-            p = (0, N.bG)([B.A], () => B.A.getCategoryForProduct(t.skuId)),
-            k = p?.unpublishedAt != null ? (0, D.WU)(p.unpublishedAt) : null,
-            C = (0, N.bG)([H.default], () => H.default.getCurrentUser()),
-            m = V.Ay.canUseShopDiscounts(C),
-            I = (0, F.V_)(t),
-            { isOrbExclusive: x } = (0, w.F)({
+        let {
                 product: t,
-                hasShopDiscount: m,
-                prioritizedCurrency: a,
-                hasDiscountOffer: null != I,
+                badgeOverride: r,
+                productBadgeOverride: i,
+                skipLimitedTimeCheck: s,
+                className: a,
+                prioritizedCurrency: u,
+            } = e,
+            { isPurchased: o, isPartiallyOwnedBundle: d } = (0, W.h)(t),
+            p = (0, D.G0)(t),
+            k = (0, L.bG)([H.A], () => H.A.getCategoryForProduct(t.skuId)),
+            C = k?.unpublishedAt != null ? (0, D.WU)(k.unpublishedAt) : null,
+            m = (0, L.bG)([V.default], () => V.default.getCurrentUser()),
+            I = B.Ay.canUseShopDiscounts(m),
+            x = (0, F.V_)(t),
+            { isOrbExclusive: A } = (0, w.F)({
+                product: t,
+                hasShopDiscount: I,
+                prioritizedCurrency: u,
+                hasDiscountOffer: null != x,
             }),
-            A = (0, U.Do)("ProductCardBadgeInner") && t.type === c.R.PROFILE_FRAME,
-            g = r;
+            g = (0, U.Do)("ProductCardBadgeInner") && t.type === c.R.PROFILE_FRAME,
+            _ = r;
         if (
-            (null == g &&
-                (!i && (0, D.HF)(p?.unpublishedAt)
-                    ? (g = W.AW.LIMITED_TIME)
-                    : !o && !u && (0, D.aT)(t.skuId)
-                      ? (g = W.AW.NEW)
-                      : x
-                        ? (g = W.AW.ORBS_EXCLUSIVE)
-                        : A
-                          ? (g = W.AW.EARLY_ACCESS)
-                          : d && (g = W.AW.NITRO_EXCLUSIVE)),
-            null == g || g === W.AW.NONE)
+            (null == _ &&
+                (g
+                    ? (_ = M.AW.EARLY_ACCESS)
+                    : null != i
+                      ? (_ = M.AW.BADGE_OVERRIDE)
+                      : !s && (0, D.HF)(k?.unpublishedAt)
+                        ? (_ = M.AW.LIMITED_TIME)
+                        : !d && !o && (0, D.aT)(t.skuId)
+                          ? (_ = M.AW.NEW)
+                          : A
+                            ? (_ = M.AW.ORBS_EXCLUSIVE)
+                            : p && (_ = M.AW.NITRO_EXCLUSIVE)),
+            null == _ || _ === M.AW.NONE)
         )
             return null;
-        if (g === W.AW.EARLY_ACCESS)
+        if (_ === M.AW.EARLY_ACCESS)
             return (0, n.jsx)("span", {
                 role: "img",
                 "aria-label": G.intl.string(G.t["1m6qcO"]),
-                className: l()(s, z.$),
-                children: (0, n.jsx)(O.t, { size: "sm", color: "currentColor" }),
+                className: l()(a, z.$),
+                children: (0, n.jsx)(N.t, { size: "sm", color: "currentColor" }),
             });
-        let _ = null;
-        switch (g) {
-            case W.AW.LIMITED_TIME:
-                _ =
-                    null != k
-                        ? k > 1
-                            ? G.intl.formatToPlainString(G.t.Io7ozn, { days: k })
+        let E = null;
+        switch (_) {
+            case M.AW.LIMITED_TIME:
+                E =
+                    null != C
+                        ? C > 1
+                            ? G.intl.formatToPlainString(G.t.Io7ozn, { days: C })
                             : G.intl.string(G.t.Bc13HF)
                         : G.intl.string(G.t["h/uBCR"]);
                 break;
-            case W.AW.NEW:
-                _ = G.intl.string(G.t.y2b7CA);
+            case M.AW.NEW:
+                E = G.intl.string(G.t.y2b7CA);
                 break;
-            case W.AW.NITRO_EXCLUSIVE:
-                _ = G.intl.string(G.t.X3Ekj8);
+            case M.AW.NITRO_EXCLUSIVE:
+                E = G.intl.string(G.t.X3Ekj8);
                 break;
-            case W.AW.ORBS_EXCLUSIVE:
-                _ = G.intl.string(G.t["0TmQRG"]);
+            case M.AW.ORBS_EXCLUSIVE:
+                E = G.intl.string(G.t["0TmQRG"]);
+                break;
+            case M.AW.BADGE_OVERRIDE:
+                E = i;
         }
-        return (0, n.jsx)(S.Lp, { text: _, disableColor: !0, className: l()(s, z.s) });
+        return (0, n.jsx)(S.Lp, { text: E, disableColor: !0, className: l()(a, z.s) });
     },
     Q = (e) => {
         let { skuId: t, badgeOverride: r, className: i, prioritizedCurrency: s, skipLimitedTimeCheck: l } = e,
-            a = (0, W.Vm)(t),
+            a = (0, M.Vm)(t),
             u = (0, T.Q)(a);
-        if (null == a) return null;
+        if (null == a || a.hideBadge) return null;
         let c = (0, R.rb)(a, u);
         return (0, n.jsx)(Y, {
             product: c,
             badgeOverride: r,
+            productBadgeOverride: a.badgeOverride,
             skipLimitedTimeCheck: l,
             className: i,
             prioritizedCurrency: s,
@@ -118,8 +131,8 @@ let Y = (e) => {
 var q = r(834730);
 let K = (e) => {
     let { skuId: t, className: r } = e,
-        i = (0, W.Vm)(t),
-        s = (0, L.VG)(i),
+        i = (0, M.Vm)(t),
+        s = (0, O.VG)(i),
         { enabled: l } = (0, _.P)("ProductCardName"),
         a = l && null != i && i.type === c.R.BUNDLE && i.items.length > 0;
     return (0, n.jsx)(q.E, {
@@ -148,7 +161,7 @@ let el = (e) => {
     ea = (e) => {
         let { product: t, isCardHovered: r } = e,
             i = (0, R.YW)(t),
-            { isPurchased: s, isPartiallyOwnedBundle: a } = (0, M.h)(t),
+            { isPurchased: s, isPartiallyOwnedBundle: a } = (0, W.h)(t),
             { enabled: u } = (0, _.P)("ProductCardPreview"),
             o = i === c.R.PROFILE_EFFECT || i === c.R.PROFILE_FRAME || (i === c.R.BUNDLE && u);
         return (0, n.jsxs)(n.Fragment, {
@@ -166,7 +179,7 @@ let el = (e) => {
         let r,
             i,
             { product: s, isCardHovered: l } = e,
-            a = (0, N.bG)([H.default], () => H.default.getCurrentUser()),
+            a = (0, L.bG)([V.default], () => V.default.getCurrentUser()),
             u = (0, R.YW)(s),
             o =
                 ((r = (0, T.Q)(s)),
@@ -206,7 +219,7 @@ let el = (e) => {
     },
     eo = (e) => {
         let { skuId: t, isCardHovered: r, overrideVariantIndex: i } = e,
-            s = (0, W.Vm)(t),
+            s = (0, M.Vm)(t),
             l = (0, T.Q)(s);
         if (null == s) return null;
         let a = (0, R.rb)(s, i ?? l);
@@ -218,13 +231,13 @@ var ed = r(702841),
     eC = r(380836);
 let em = (e) => {
         let { product: t, prioritizedCurrency: r } = e,
-            s = (0, ed.bG)([H.default], () => H.default.getCurrentUser()),
-            l = V.Ay.canUseCollectibles(s),
+            s = (0, ed.bG)([V.default], () => V.default.getCurrentUser()),
+            l = B.Ay.canUseCollectibles(s),
             a = (0, D.xM)(s),
             u = (0, U.Do)("ProductCardPriceInner") && t.type === c.R.PROFILE_FRAME,
             o = null != a || u,
             { isDisabled: d } = (0, ep.I)(t.skuId),
-            { isPurchased: p, isPartiallyOwnedBundle: k } = (0, M.h)(t),
+            { isPurchased: p, isPartiallyOwnedBundle: k } = (0, W.h)(t),
             C = (0, D.G0)(t),
             m = (0, D.tt)(t),
             I = i.useMemo(() => (0, D.fT)(t, o), [t, o]),
@@ -285,7 +298,7 @@ let em = (e) => {
     },
     eI = (e) => {
         let { skuId: t, prioritizedCurrency: r } = e,
-            i = (0, W.Vm)(t),
+            i = (0, M.Vm)(t),
             s = (0, T.Q)(i);
         if (null == i) return null;
         let l = (0, R.rb)(i, s);
@@ -301,13 +314,13 @@ var ex = r(821609),
     eT = r(4227),
     eR = r(640634),
     ej = r(450481),
-    ey = r(395068),
-    ev = r(766172),
+    ev = r(395068),
+    ey = r(766172),
     eP = r(61750),
     eb = r(758836),
-    eL = r(788868),
-    eN = r(40577);
-let eO = (e) => {
+    eO = r(788868),
+    eL = r(40577);
+let eN = (e) => {
         let {
                 product: t,
                 cardRef: r,
@@ -329,7 +342,7 @@ let eO = (e) => {
                 e.stopPropagation(),
                     o?.(eb.sH.BUY_WITH_FIAT),
                     (0, eA.A)({
-                        skuId: (0, ev.Y)({ product: t, selectedVariantIndex: l }),
+                        skuId: (0, ey.Y)({ product: t, selectedVariantIndex: l }),
                         returnRef: r,
                         analyticsLocations: s,
                     });
@@ -341,7 +354,7 @@ let eO = (e) => {
     eS = (e) => {
         let { text: t, onTrackClick: r } = e;
         return (0, n.jsx)(eg.A, {
-            subscriptionTier: eL.pe.TIER_2,
+            subscriptionTier: eO.pe.TIER_2,
             fullWidth: !0,
             buttonTextOverride: t ?? G.intl.string(G.t.sEAnVH),
             onClick: (e) => {
@@ -349,7 +362,7 @@ let eO = (e) => {
             },
         });
     },
-    eH = (e) => {
+    eV = (e) => {
         let { handlePreviewButtonClick: t, text: r, onTrackClick: i } = e;
         return (0, n.jsx)(ex.$, {
             variant: "primary",
@@ -360,7 +373,7 @@ let eO = (e) => {
             fullWidth: !0,
         });
     },
-    eV = (e) => {
+    eB = (e) => {
         let { handleUseNow: t, isApplying: r, text: i, onTrackClick: s } = e;
         return (0, n.jsx)(ex.$, {
             variant: "primary",
@@ -372,7 +385,7 @@ let eO = (e) => {
             fullWidth: !0,
         });
     },
-    eB = (e) => {
+    eH = (e) => {
         let { skuId: t, onClick: r, text: i } = e;
         return (0, n.jsx)(ex.$, {
             variant: "primary",
@@ -429,14 +442,14 @@ let eO = (e) => {
                 l ??
                 G.intl.format(c ? G.t.JC15qj : G.t.lOtBOI, {
                     orbPrice: r[0].amount,
-                    orbIconHook: () => (0, n.jsx)(eE.A, { className: eN.f }),
+                    orbIconHook: () => (0, n.jsx)(eE.A, { className: eL.f }),
                 }),
             onClick: (e) => {
                 e.stopPropagation(),
                     a?.("claim with orbs button"),
                     u?.(eb.sH.BUY_WITH_ORBS),
                     (0, eh.B4)({
-                        skuId: (0, ev.Y)({ product: t, selectedVariantIndex: s }),
+                        skuId: (0, ey.Y)({ product: t, selectedVariantIndex: s }),
                         onComplete: (e) => {
                             (0, ef.gB)(),
                                 (0, eP.A)({
@@ -453,7 +466,7 @@ let eO = (e) => {
             fullWidth: !0,
         });
     },
-    eM = (e) => {
+    eW = (e) => {
         let { handlePreviewButtonClick: t, text: r, onTrackClick: i } = e;
         return (0, n.jsx)(ex.$, {
             variant: "primary",
@@ -464,7 +477,7 @@ let eO = (e) => {
             fullWidth: !0,
         });
     },
-    eW = (e) => {
+    eM = (e) => {
         let {
                 product: t,
                 cardRef: r,
@@ -475,11 +488,11 @@ let eO = (e) => {
                 onClickAnalytics: u,
                 onTrackClick: c,
             } = e,
-            o = (0, ey.A)({ location: "ProductCardPrimaryCTAInner", product: t }),
-            d = (0, ed.bG)([H.default], () => H.default.getCurrentUser()),
-            p = (0, e_.L)(eL.PremiumTypes.TIER_2),
-            k = V.Ay.canUseShopDiscounts(d),
-            { isPurchased: C, isPartiallyOwnedBundle: x } = (0, M.h)(t),
+            o = (0, ev.A)({ location: "ProductCardPrimaryCTAInner", product: t }),
+            d = (0, ed.bG)([V.default], () => V.default.getCurrentUser()),
+            p = (0, e_.L)(eO.PremiumTypes.TIER_2),
+            k = B.Ay.canUseShopDiscounts(d),
+            { isPurchased: C, isPartiallyOwnedBundle: x } = (0, W.h)(t),
             A = (0, D.G0)(t),
             g = (0, D.tt)(t),
             { isDisabled: _ } = (0, ep.I)(t.skuId),
@@ -490,30 +503,30 @@ let eO = (e) => {
                 shouldCheckoutWithOrbs: T,
                 hasSufficientOrbs: R,
                 checkoutEligiblePrices: j,
-                isOrbExclusive: y,
+                isOrbExclusive: v,
             } = (0, w.F)({ product: t, hasShopDiscount: k, prioritizedCurrency: a, hasDiscountOffer: f }),
-            { analyticsLocations: v } = (0, I.Ay)(m.A.COLLECTIBLES_SHOP_CARD),
-            P = (0, W.ql)(t, m.A.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON, u),
-            [b, L] = (0, ed.yK)([eT.A], () => [
+            { analyticsLocations: y } = (0, I.Ay)(m.A.COLLECTIBLES_SHOP_CARD),
+            P = (0, M.ql)(t, m.A.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON, u),
+            [b, O] = (0, ed.yK)([eT.A], () => [
                 eT.A.isClaiming === t.skuId,
                 null != eT.A.isClaiming && eT.A.isClaiming !== t.skuId,
             ]),
-            { handleUseNow: N, isApplying: O } = (0, ej.p)({ product: t });
-        if (null != s) return (0, n.jsx)(eB, { onClick: s, skuId: t.skuId, text: l });
+            { handleUseNow: L, isApplying: N } = (0, ej.p)({ product: t });
+        if (null != s) return (0, n.jsx)(eH, { onClick: s, skuId: t.skuId, text: l });
         if (A && !p && !g) return (0, n.jsx)(eS, { text: l, onTrackClick: c });
-        if (!E || _) return (0, n.jsx)(eH, { handlePreviewButtonClick: P, text: l, onTrackClick: c });
-        if (C) return (0, n.jsx)(eV, { handleUseNow: N, isApplying: O, text: l, onTrackClick: c });
+        if (!E || _) return (0, n.jsx)(eV, { handlePreviewButtonClick: P, text: l, onTrackClick: c });
+        if (C) return (0, n.jsx)(eB, { handleUseNow: L, isApplying: N, text: l, onTrackClick: c });
         if (o)
             return (0, n.jsx)(I.f5, {
-                value: [...v, m.A.PROFILE_FRAMES_EA_MARKETING],
+                value: [...y, m.A.PROFILE_FRAMES_EA_MARKETING],
                 children: (0, n.jsx)(eS, { text: G.intl.string(G.t.IvmZVF), onTrackClick: c }),
             });
         if (A)
             return (0, n.jsx)(eD, {
                 product: t,
-                isClaimPremiumProductDisabled: L,
+                isClaimPremiumProductDisabled: O,
                 isClaiming: b,
-                analyticsLocations: v,
+                analyticsLocations: y,
                 text: l,
                 onClickAnalytics: u,
                 onTrackClick: c,
@@ -522,22 +535,22 @@ let eO = (e) => {
             return (0, n.jsx)(eU, {
                 product: t,
                 checkoutEligiblePrices: j,
-                analyticsLocations: v,
+                analyticsLocations: y,
                 selectedVariantIndex: i,
                 text: l,
                 onClickAnalytics: u,
                 onTrackClick: c,
             });
         if (T && !R)
-            if (j.length > 1) return (0, n.jsx)(eM, { handlePreviewButtonClick: P, text: l, onTrackClick: c });
-            else return (0, n.jsx)(eH, { handlePreviewButtonClick: P, text: l, onTrackClick: c });
-        return y
-            ? (0, n.jsx)(eH, { handlePreviewButtonClick: P, text: l, onTrackClick: c })
-            : (0, n.jsx)(eO, {
+            if (j.length > 1) return (0, n.jsx)(eW, { handlePreviewButtonClick: P, text: l, onTrackClick: c });
+            else return (0, n.jsx)(eV, { handlePreviewButtonClick: P, text: l, onTrackClick: c });
+        return v
+            ? (0, n.jsx)(eV, { handlePreviewButtonClick: P, text: l, onTrackClick: c })
+            : (0, n.jsx)(eN, {
                   product: t,
                   cardRef: r,
                   hasShopDiscount: k,
-                  analyticsLocations: v,
+                  analyticsLocations: y,
                   selectedVariantIndex: i,
                   hasDiscountOffer: f,
                   discountOfferAmount: h,
@@ -555,11 +568,11 @@ let eO = (e) => {
                 onClickAnalytics: a,
                 onTrackClick: u,
             } = e,
-            c = (0, W.Vm)(t),
+            c = (0, M.Vm)(t),
             o = (0, T.Q)(c);
         if (null == c) return null;
         let d = (0, R.rb)(c, o);
-        return (0, n.jsx)(eW, {
+        return (0, n.jsx)(eM, {
             product: d,
             cardRef: r,
             selectedVariantIndex: o,
@@ -589,7 +602,7 @@ let eQ = (e) => {
             d = o?.tab,
             p = (0, A.uM)(),
             k = (0, eY.X)(t, a),
-            C = (0, W.ql)(t, m.A.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON, u);
+            C = (0, M.ql)(t, m.A.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON, u);
         return null != s || null != l
             ? (0, n.jsx)(ew.K, {
                   variant: "primary",
@@ -623,7 +636,7 @@ let eQ = (e) => {
                 onClickAnalytics: a,
                 onTrackClick: u,
             } = e,
-            c = (0, W.Vm)(t),
+            c = (0, M.Vm)(t),
             o = (0, T.Q)(c);
         if (null == c) return null;
         let d = (0, R.rb)(c, o);
@@ -653,7 +666,7 @@ let eZ = (e) => {
     },
     eJ = (e) => {
         let { skuId: t, isCardHovered: r, onTrackClick: i } = e,
-            s = (0, W.Vm)(t),
+            s = (0, M.Vm)(t),
             l = (0, T.Q)(s);
         return null == s
             ? null
@@ -670,15 +683,15 @@ let e7 = i.memo(function (e) {
                 hidePrice: o,
                 hidePrimaryCTA: C,
                 hideSecondaryCTA: E,
-                badgeOverride: N,
-                skipLimitedTimeCheck: O,
+                badgeOverride: L,
+                skipLimitedTimeCheck: N,
                 onClickCard: S,
-                onClickPrimaryCTA: H,
-                onClickSecondaryCTA: V,
-                onMouseEnter: B,
+                onClickPrimaryCTA: V,
+                onClickSecondaryCTA: B,
+                onMouseEnter: H,
                 onMouseLeave: D,
                 onFocus: U,
-                onBlur: M,
+                onBlur: W,
                 primaryCTAText: F,
                 secondaryCTAIcon: w,
                 productNameClassName: G,
@@ -689,13 +702,13 @@ let e7 = i.memo(function (e) {
                 hideStaticBundleBackgroundAsset: $,
             } = e,
             { previewingVariantIndex: Z, handleEntering: J, handleLeaving: ee } = (0, e0.f)(t),
-            et = (0, W.gZ)() ?? q,
+            et = (0, M.gZ)() ?? q,
             { enabled: er } = (0, _.P)("ProductCard"),
             en = (0, g.Mk)(),
             ei = en?.tab,
             es = (0, A.uM)(),
-            el = i.useMemo(() => (0, W.UU)(t, ei, es), [t, ei, es]),
-            ea = (0, L.s7)(t),
+            el = i.useMemo(() => (0, M.UU)(t, ei, es), [t, ei, es]),
+            ea = (0, O.s7)(t),
             eu = i.useId(),
             ec = i.useRef(null),
             { isHoveringOrFocusing: ed } = (0, x.A)(ec),
@@ -713,8 +726,8 @@ let e7 = i.memo(function (e) {
                         let n = (0, R.B1)(e);
                         (0, b.x)(
                             {
-                                name: v.ImpressionNames.SHOP_CARD,
-                                type: v.ImpressionTypes.VIEW,
+                                name: y.ImpressionNames.SHOP_CARD,
+                                type: y.ImpressionTypes.VIEW,
                                 properties: {
                                     sku_id: n ? (e.variants[a.current]?.skuId ?? e.skuId) : e.skuId,
                                     card_id: t?.cardId,
@@ -749,7 +762,7 @@ let e7 = i.memo(function (e) {
             })(t),
             ek = (0, u.A)(ec, ep),
             { handleCardVisibilityChange: eC } = (0, h.Z)(t.skuId, ei === eb.G2.CATALOG ? "full" : ei),
-            em = (0, W.ql)(t, m.A.COLLECTIBLES_SHOP_CARD, el),
+            em = (0, M.ql)(t, m.A.COLLECTIBLES_SHOP_CARD, el),
             { analyticsLocations: ex } = (0, I.Ay)(),
             eA = (function (e) {
                 let { product: t, analyticsLocations: r } = e,
@@ -781,10 +794,10 @@ let e7 = i.memo(function (e) {
                 { analyticsLocations: n } = (0, I.Ay)(),
                 s = (0, T.Q)(t),
                 l = i.useRef(!1),
-                a = (0, y.A)(r),
-                u = (0, y.A)(t),
-                c = (0, y.A)(s),
-                o = (0, y.A)(n);
+                a = (0, v.A)(r),
+                u = (0, v.A)(t),
+                c = (0, v.A)(s),
+                o = (0, v.A)(n);
             i.useEffect(() => {
                 if (!e) {
                     l.current = !1;
@@ -815,8 +828,8 @@ let e7 = i.memo(function (e) {
             eT = t.type === c.R.BUNDLE && er && !$,
             eR = !C || !E,
             ej = !(o && s) || eh,
-            ey = ej || eR,
-            ev = eR || eh;
+            ev = ej || eR,
+            ey = eR || eh;
         return (0, n.jsx)(d.L, {
             innerRef: ec,
             onChange: eC,
@@ -828,8 +841,8 @@ let e7 = i.memo(function (e) {
                 "aria-describedby": eu,
                 className: l()(Y, e1.ty, { [e1.yo]: ed }),
                 onFocus: () => U?.(t.skuId),
-                onBlur: () => M?.(t.skuId),
-                onMouseEnter: () => B?.(t.skuId),
+                onBlur: () => W?.(t.skuId),
+                onMouseEnter: () => H?.(t.skuId),
                 onMouseLeave: () => D?.(t.skuId),
                 children: (0, n.jsxs)("div", {
                     id: eu,
@@ -840,7 +853,7 @@ let e7 = i.memo(function (e) {
                             t.previewAssets?.bgStatic != null &&
                             (0, n.jsx)("img", { className: e1.vD, src: t.previewAssets.bgStatic, alt: "" }),
                         (0, n.jsx)("div", {
-                            className: l()(e1.Dq, { [e1.$r]: !s || ej || ev, [e1.T9]: eE }),
+                            className: l()(e1.Dq, { [e1.$r]: !s || ej || ey, [e1.T9]: eE }),
                             children: (0, n.jsx)(eo, { skuId: t.skuId, isCardHovered: ed, overrideVariantIndex: Z }),
                         }),
                         (0, n.jsxs)("div", {
@@ -848,15 +861,15 @@ let e7 = i.memo(function (e) {
                             children: [
                                 (0, n.jsx)(Q, {
                                     skuId: t.skuId,
-                                    badgeOverride: N,
+                                    badgeOverride: L,
                                     className: z,
                                     prioritizedCurrency: et,
-                                    skipLimitedTimeCheck: O,
+                                    skipLimitedTimeCheck: N,
                                 }),
                                 !r && (0, n.jsx)(eJ, { skuId: t.skuId, isCardHovered: ed, onTrackClick: eA }),
                             ],
                         }),
-                        ey &&
+                        ev &&
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
                                     (0, n.jsx)("div", { className: l()(e1.wY, { [e1.KY]: eE }) }),
@@ -909,7 +922,7 @@ let e7 = i.memo(function (e) {
                                                                 (0, n.jsx)(eF, {
                                                                     skuId: t.skuId,
                                                                     cardRef: ec,
-                                                                    onClick: H,
+                                                                    onClick: V,
                                                                     text: F,
                                                                     prioritizedCurrency: et,
                                                                     onClickAnalytics: el,
@@ -919,7 +932,7 @@ let e7 = i.memo(function (e) {
                                                                 (0, n.jsx)(eq, {
                                                                     skuId: t.skuId,
                                                                     cardRef: ec,
-                                                                    onClick: V,
+                                                                    onClick: B,
                                                                     icon: w,
                                                                     prioritizedCurrency: et,
                                                                     onClickAnalytics: el,
@@ -939,7 +952,7 @@ let e7 = i.memo(function (e) {
     }),
     e8 = (e) => {
         let { skuId: t, ...r } = e,
-            i = (0, W.Vm)(t),
+            i = (0, M.Vm)(t),
             s = (0, C.A)(() => ({ cardId: (0, a.A)() })),
             l = (0, E.c)("product_card");
         return null != i && (t !== o.j.PREMIUM_TIER_2_1_DAY || l)
