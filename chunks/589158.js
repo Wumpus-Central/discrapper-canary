@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { b: () => J, A: () => eo });
+n.d(t, { A: () => ea });
 var i,
     r = n(627968),
     s = n(64700),
@@ -95,8 +95,8 @@ var H = n(967144),
     Z = n(31408),
     X = n(375708),
     Q = n(28371);
-let J = (0, K.xI)(u.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
-    ee = s.memo(function (e) {
+(0, K.xI)(u.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
+let J = s.memo(function (e) {
         let { isOwner: t, lostPermissionTooltipText: n, ownerTooltipText: i } = e;
         return null != t && t && null == n
             ? (0, r.jsx)(l.m, {
@@ -110,7 +110,7 @@ let J = (0, K.xI)(u.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
               })
             : null;
     }),
-    et = s.memo(function (e) {
+    ee = s.memo(function (e) {
         let { premiumSince: t, onClickPremiumGuildIcon: n } = e;
         return null == t
             ? null
@@ -124,13 +124,13 @@ let J = (0, K.xI)(u.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                   }),
               });
     }),
-    en = s.memo(function (e) {
+    et = s.memo(function (e) {
         let { user: t } = e;
         if (null == t || !t.bot) return null;
         let n = q.nu.BOT;
         return (0, r.jsx)(S.A, { className: Q.AO, type: n, verified: t.isVerifiedBot() });
     }),
-    ei = s.memo(function (e) {
+    en = s.memo(function (e) {
         let {
             user: t,
             isOwner: n,
@@ -141,13 +141,13 @@ let J = (0, K.xI)(u.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
         } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(en, { user: t }),
-                (0, r.jsx)(ee, { isOwner: n, lostPermissionTooltipText: i, ownerTooltipText: s }),
-                (0, r.jsx)(et, { premiumSince: a, onClickPremiumGuildIcon: o }),
+                (0, r.jsx)(et, { user: t }),
+                (0, r.jsx)(J, { isOwner: n, lostPermissionTooltipText: i, ownerTooltipText: s }),
+                (0, r.jsx)(ee, { premiumSince: a, onClickPremiumGuildIcon: o }),
             ],
         });
     }),
-    er = s.memo(function (e) {
+    ei = s.memo(function (e) {
         let {
                 colorRoleName: t,
                 colorString: n,
@@ -190,7 +190,7 @@ let J = (0, K.xI)(u.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             ],
         });
     }),
-    es = s.memo(function (e) {
+    er = s.memo(function (e) {
         let {
                 user: t,
                 shouldAnimateStatus: n,
@@ -235,7 +235,7 @@ let J = (0, K.xI)(u.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
             })
         );
     }),
-    ea = s.memo(function (e) {
+    es = s.memo(function (e) {
         let {
                 hideSubtext: t,
                 hideTooltip: n = !1,
@@ -277,7 +277,7 @@ let J = (0, K.xI)(u.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                   hideTooltip: n,
               });
     }),
-    eo = s.memo(function (e) {
+    ea = s.memo(function (e) {
         let {
                 selected: t = !1,
                 colorString: n,
@@ -319,7 +319,7 @@ let J = (0, K.xI)(u.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                 ref: ee,
             } = e,
             et = h?.id,
-            en = z.Ay.useName(h),
+            ea = z.Ay.useName(h),
             eo = s.useRef(null),
             el = ee ?? eo,
             [eu, ec] = s.useState(!1),
@@ -359,14 +359,14 @@ let J = (0, K.xI)(u.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                     null == ey
                         ? null
                         : (0, r.jsx)(Y.A, {
-                              name: f ?? en,
+                              name: f ?? ea,
                               quest: ey,
                               memberListItemRef: el,
                               applicationStream: A,
                               ...e,
                               closePopout: () => eN(!0),
                           }),
-                [ey, el, A, f, en],
+                [ey, el, A, f, ea],
             );
         return null == h
             ? (0, r.jsx)(O, { avatarSize: E._3.SIZE_32, className: Q.qf })
@@ -397,10 +397,10 @@ let J = (0, K.xI)(u.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                               null == d
                                   ? (0, r.jsx)("span", {
                                         className: Q.Xh,
-                                        children: (0, r.jsx)(er, {
+                                        children: (0, r.jsx)(ei, {
                                             colorRoleName: a,
                                             colorString: n ?? null,
-                                            name: f ?? en,
+                                            name: f ?? ea,
                                             colorStrings: eT,
                                             hideClanTag: w,
                                             user: h,
@@ -412,10 +412,10 @@ let J = (0, K.xI)(u.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                         text: d,
                                         children: (0, r.jsx)("span", {
                                             className: o()(Q.Xh, Q.oj),
-                                            children: (0, r.jsx)(er, {
+                                            children: (0, r.jsx)(ei, {
                                                 colorRoleName: a,
                                                 colorString: n ?? null,
-                                                name: f ?? en,
+                                                name: f ?? ea,
                                                 colorStrings: eT,
                                                 hideClanTag: w,
                                                 user: h,
@@ -424,7 +424,7 @@ let J = (0, K.xI)(u.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                             }),
                                         }),
                                     }),
-                          avatar: (0, r.jsx)(es, {
+                          avatar: (0, r.jsx)(er, {
                               user: h,
                               shouldAnimateStatus: S,
                               activities: g,
@@ -440,7 +440,7 @@ let J = (0, K.xI)(u.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                               currentUser: p,
                           }),
                           nameplate: L,
-                          subText: (0, r.jsx)(ea, {
+                          subText: (0, r.jsx)(es, {
                               hideSubtext: M,
                               activities: g,
                               status: T,
@@ -452,7 +452,7 @@ let J = (0, K.xI)(u.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                               quest: ey,
                               hideTooltip: P,
                           }),
-                          decorators: (0, r.jsx)(ei, {
+                          decorators: (0, r.jsx)(en, {
                               user: h,
                               isOwner: u,
                               lostPermissionTooltipText: d,
