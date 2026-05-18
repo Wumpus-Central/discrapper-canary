@@ -1,22 +1,24 @@
 "use strict";
-n.d(t, { B9: () => c, Et: () => u, _z: () => d });
+n.d(t, { B9: () => _, Et: () => c, MA: () => u, _z: () => f });
 var i,
-    r = n(441574),
-    s = n(968671),
-    a = n(349871),
-    o = n(428262),
-    l = n(646917),
-    u = (((i = {}).NITRO = "nitro"), (i.CREPE = "crepe"), i);
-function c(e) {
-    return e !== l.M.UPSELL && e !== l.M.INELIGIBLE;
+    r,
+    s = n(441574),
+    a = n(968671),
+    o = n(349871),
+    l = n(428262),
+    u = (((i = {}).UPSELL = "UPSELL"), (i.NITRO = "NITRO"), (i.CREPE = "CREPE"), (i.INELIGIBLE = "INELIGIBLE"), i),
+    c = (((r = {}).NITRO = "nitro"), (r.CREPE = "crepe"), r);
+let d = ["CREPE", "NITRO"];
+function _(e) {
+    return d.includes(e);
 }
-function d(e) {
-    if (!o.Ay.canUseMoreQuestOrbs(e)) return null;
-    if (o.Ay.canUseQuestOrbMultiplier(e)) return "nitro";
-    let t = (0, a.kQ)(e?.perks, r.bb.MORE_QUEST_ORBS);
-    return t?.includes(r.g$.SOURCE_NITRO)
+function f(e) {
+    if (!l.Ay.canUseMoreQuestOrbs(e)) return null;
+    if (l.Ay.canUseQuestOrbMultiplier(e)) return "nitro";
+    let t = (0, o.kQ)(e?.perks, s.bb.MORE_QUEST_ORBS);
+    return t?.includes(s.g$.SOURCE_NITRO)
         ? "nitro"
-        : (0, s.getIsCrepeEnabled)("getQuestOrbMultiplierSource") && t?.includes(r.g$.SOURCE_THIRDPARTY_CROISSANT)
+        : (0, a.getIsCrepeEnabled)("getQuestOrbMultiplierSource") && t?.includes(s.g$.SOURCE_THIRDPARTY_CROISSANT)
           ? "crepe"
           : null;
 }

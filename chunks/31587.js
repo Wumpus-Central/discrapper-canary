@@ -101,12 +101,12 @@ n(590202);
 var W = n(971649),
     K = n(651892),
     z = n(639214),
-    $ = n(901406),
-    q = n(801365),
-    Z = n(792620),
-    X = n(814793),
-    Q = n(753386),
-    J = n(646917),
+    $ = n(576761),
+    q = n(901406),
+    Z = n(801365),
+    X = n(792620),
+    Q = n(814793),
+    J = n(753386),
     ee = n(190107),
     et = n(788868),
     en = n(375708);
@@ -155,8 +155,8 @@ function er(e, t, n) {
         f = eJ(t, d);
     if (a) {
         let { questHomeHero: i } = n,
-            r = null != i && (0, X.I0)(i, e.id),
-            s = null != i && (0, X.I0)(i, t.id);
+            r = null != i && (0, Q.I0)(i, e.id),
+            s = null != i && (0, Q.I0)(i, t.id);
         if (r || s) {
             if (r && s) {
                 let n = i?.questIds;
@@ -200,9 +200,9 @@ function eo(e, t, n) {
 function el(e, t) {
     switch (t) {
         case ee.Pc.VIDEO:
-            return (0, Z.vv)(e);
+            return (0, X.vv)(e);
         case ee.Pc.PLAY:
-            return (0, Z.t)({ quest: e }) || (0, Z.fE)({ quest: e }) || (0, Z.vl)(e) || (0, Z.g5)(e) || (0, Z.Cr)(e);
+            return (0, X.t)({ quest: e }) || (0, X.fE)({ quest: e }) || (0, X.vl)(e) || (0, X.g5)(e) || (0, X.Cr)(e);
         default:
             return !1;
     }
@@ -210,11 +210,11 @@ function el(e, t) {
 function eu(e, t) {
     switch (t) {
         case ee.BQ.VIRTUAL_CURRENCY:
-            return (0, q.ks)(e.config);
+            return (0, Z.ks)(e.config);
         case ee.BQ.COLLECTIBLE:
-            return (0, q.tU)(e.config);
+            return (0, Z.tU)(e.config);
         case ee.BQ.IN_GAME:
-            return (0, q.HG)(e.config) || (0, q.r7)(e.config);
+            return (0, Z.HG)(e.config) || (0, Z.r7)(e.config);
         default:
             return !1;
     }
@@ -373,9 +373,9 @@ function em() {
 }
 function eg(e, t) {
     let n = eI(e),
-        i = (0, q.ks)(e.config),
-        r = (0, q.KK)(e.config),
-        s = t !== J.M.INELIGIBLE;
+        i = (0, Z.ks)(e.config),
+        r = (0, Z.KK)(e.config),
+        s = t !== $.MA.INELIGIBLE;
     return !n && i && r && s;
 }
 function eA(e) {
@@ -398,7 +398,7 @@ function eT(e, t, n) {
         a = (0, p.bG)([V.A], () => null != e && V.A.isQuestExpired(e.id), [e]);
     if (null == e || r || a || s === n) return !1;
     let o = e.userStatus?.claimedAt != null,
-        l = (0, X.Ll)(t, i);
+        l = (0, Q.Ll)(t, i);
     return !o || !!l;
 }
 function eS(e) {
@@ -412,14 +412,14 @@ function eN(e) {
     return a.useCallback(() => {
         t.id === ee.Fw
             ? window.open(b.A.getArticleURL(k.MVz.VIRTUAL_CURRENCY_LEARN_MORE))
-            : (0, $.pu)(t, { content: n, ctaContent: i, impressionId: s, sourceQuestContent: r });
+            : (0, q.pu)(t, { content: n, ctaContent: i, impressionId: s, sourceQuestContent: r });
     }, [t, n, i, s, r]);
 }
 function ey(e) {
     return (0, p.bG)([V.A], () => V.A.isProgressingOnDesktop(e.id));
 }
 function eC(e) {
-    return a.useMemo(() => (0, Z.YL)(e), [e]);
+    return a.useMemo(() => (0, X.YL)(e), [e]);
 }
 function ev(e) {
     let t,
@@ -427,11 +427,11 @@ function ev(e) {
         i = eC(e),
         r =
             ((t = (0, p.bG)([V.A], () => V.A.getOptimisticProgress(e.id, c.n.WATCH_VIDEO))),
-            a.useMemo(() => (0, Q.J$)(e), [e, t]));
+            a.useMemo(() => (0, J.J$)(e), [e, t]));
     return n || i || r;
 }
 let eO = (e) => {
-    let t = a.useCallback(() => (0, Z.Yh)(e), [e]),
+    let t = a.useCallback(() => (0, X.Yh)(e), [e]),
         [n, i] = a.useState(t()),
         r = a.useCallback(() => i(t()), [t]),
         s = ev(e);
@@ -455,13 +455,13 @@ let eO = (e) => {
     );
 };
 function eR(e) {
-    return a.useMemo(() => (0, Z.JC)(e), [e]);
+    return a.useMemo(() => (0, X.JC)(e), [e]);
 }
 function eb(e) {
     let t = a.useMemo(() => {
         let t = new Set();
         for (let n of e) {
-            let e = (0, Z.F9)(n);
+            let e = (0, X.F9)(n);
             null != e && t.add(e);
         }
         return Array.from(t);
@@ -472,7 +472,7 @@ function eD(e) {
     let t = (0, p.bG)([V.A], () => V.A.quests),
         n = eb(Array.from(t.values())),
         i = a.useMemo(() => {
-            let n = (0, X.$e)(t, ee.zO);
+            let n = (0, Q.$e)(t, ee.zO);
             return (0, z.BM)(n, e);
         }, [e, t, n]);
     return eI(i) ? null : i;
@@ -539,7 +539,7 @@ let eM = (e) => {
             { xboxAndPlaystationAccounts: n } = ew(),
             i = ev(t),
             r = 0 === n.length;
-        return (0, Z.g5)(t) && r && !i;
+        return (0, X.g5)(t) && r && !i;
     },
     ex = () => {
         let { xboxAccounts: e, playstationAccounts: t } = ew(),
@@ -580,7 +580,7 @@ function eF(e, t) {
     let [i, r] =
             ((n = e.id),
             [(0, p.bG)([V.A], () => V.A.selectedTaskPlatform(n)), a.useCallback((e) => (0, F.lx)(n, e), [n])]),
-        s = a.useMemo(() => (0, $.UR)(e), [e]),
+        s = a.useMemo(() => (0, q.UR)(e), [e]),
         o = s.includes(ee.fO.DESKTOP),
         u = s.includes(ee.fO.CONSOLE),
         d = ey(e),
@@ -647,7 +647,7 @@ function eV(e) {
         o = c.o.DESKTOP.has(n.taskType) && n.percentComplete > 0,
         l = 0 === n.percentComplete,
         u = s && !a && !r && null == t && (o || (l && i === x.X0.DESKTOP)),
-        d = (0, w.isWeb)() && u && !(0, $.W1)(e),
+        d = (0, w.isWeb)() && u && !(0, q.W1)(e),
         _ = (0, w.isMac)() && n.taskType === c.n.STREAM_ON_DESKTOP && u,
         f = [];
     return _ && f.push(en.intl.string(en.t.MFGxFM)), d && f.push(en.intl.string(en.t.BV6xDm)), f;
@@ -681,30 +681,30 @@ function ej(e, t) {
     }, [i, t, n]);
 }
 function eY(e) {
-    let t = (0, q.mq)(e),
-        n = (0, q.k5)(e),
-        i = (0, q.$5)(e),
-        r = (0, q.Y7)(e),
-        s = (0, q.JX)(e),
-        a = (0, p.bG)([C.default], () => C.default.getCurrentUser()),
-        o = (0, M.TW)(a, et.PremiumTypes.TIER_2);
-    if (null == n) return en.intl.formatToPlainString(en.t.l9uXL8, { decorationName: t });
-    let l = en.intl.formatToPlainString(en.t.o97tNn, { rewardName: t }),
-        u = en.intl.formatToPlainString(en.t.PkyRZo, { rewardName: t, expirationDate: i }),
-        c = en.intl.formatToPlainString(en.t.ie4YK0, { rewardName: t, duration: n }),
-        d = en.intl.formatToPlainString(en.t.yCpc0U, { duration: n, rewardName: t });
-    return s
-        ? r
+    let t = (0, p.bG)([C.default], () => C.default.getCurrentUser()),
+        n = (0, Z.mq)(e, t),
+        i = (0, Z.k5)(e),
+        r = (0, Z.$5)(e),
+        s = (0, Z.Y7)(e),
+        a = (0, Z.JX)(e),
+        o = (0, M.TW)(t, et.PremiumTypes.TIER_2);
+    if (null == i) return en.intl.formatToPlainString(en.t.l9uXL8, { decorationName: n });
+    let l = en.intl.formatToPlainString(en.t.o97tNn, { rewardName: n }),
+        u = en.intl.formatToPlainString(en.t.PkyRZo, { rewardName: n, expirationDate: r }),
+        c = en.intl.formatToPlainString(en.t.ie4YK0, { rewardName: n, duration: i }),
+        d = en.intl.formatToPlainString(en.t.yCpc0U, { duration: i, rewardName: n });
+    return a
+        ? s
             ? o
                 ? l
                 : c
             : o
               ? u
               : d
-        : en.intl.formatToPlainString(en.t.tTlItm, { duration: n, decorationName: t });
+        : en.intl.formatToPlainString(en.t.tTlItm, { duration: i, decorationName: n });
 }
 function eW(e) {
-    let t = (0, Z.TP)(e);
+    let t = (0, X.TP)(e);
     return { launchInGameActivity: (0, m.A)({ applicationId: t }) };
 }
 let eK = () => (0, p.yK)([V.A], () => [...V.A.quests.values()]).some((e) => e.preview),

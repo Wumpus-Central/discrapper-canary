@@ -1,25 +1,25 @@
 "use strict";
 n.d(t, {
-    f: () => O,
-    r7: () => R,
-    ks: () => T,
-    $5: () => p,
-    sn: () => b,
-    mH: () => k,
-    cg: () => M,
+    f: () => R,
+    r7: () => O,
+    wo: () => M,
+    $5: () => I,
+    sn: () => w,
+    mH: () => U,
+    cg: () => k,
     Y7: () => L,
-    kr: () => U,
-    HG: () => C,
-    KK: () => S,
+    kr: () => G,
+    HG: () => v,
+    KK: () => y,
     JX: () => D,
-    tU: () => N,
-    k5: () => A,
-    nj: () => g,
-    $s: () => x,
-    _Z: () => y,
-    mq: () => P,
-    K9: () => I,
-    zB: () => v,
+    tU: () => C,
+    k5: () => T,
+    nj: () => A,
+    $s: () => F,
+    _Z: () => b,
+    mq: () => x,
+    K9: () => S,
+    ks: () => N,
 });
 var i,
     r,
@@ -32,24 +32,26 @@ var i,
         r),
     l = n(440703);
 n(590180);
-var d = n(507107),
-    _ = n(58703),
-    u = n(927813),
-    c = n(927578),
-    E = n(985018),
-    h = n(651892),
-    m = n(710969);
-let f = new Set([o.PREMIUM_EXTENSION, o.PREMIUM_PERMANENT]);
-function g(e) {
+var u = n(507107),
+    c = n(646917),
+    d = n(58703),
+    _ = n(927813),
+    f = n(428262),
+    h = n(375708),
+    p = n(651892),
+    E = n(710969),
+    m = n(576761);
+let g = new Set([o.PREMIUM_EXTENSION, o.PREMIUM_PERMANENT]);
+function A(e) {
     let t = e.rewardsConfig.rewards.find((e) => e.type === l.l.COLLECTIBLE);
     return t?.type === l.l.COLLECTIBLE ? t : null;
 }
-function p(e) {
-    let t = g(e);
-    return null != t && "expiresAtPremium" in t && null != t.expiresAtPremium ? (0, m.ZG)(t.expiresAtPremium) : null;
+function I(e) {
+    let t = A(e);
+    return null != t && "expiresAtPremium" in t && null != t.expiresAtPremium ? (0, E.ZG)(t.expiresAtPremium) : null;
 }
-function A(e) {
-    let t = g(e);
+function T(e) {
+    let t = A(e);
     if (null == t || !("expiresAt" in t) || null == t.expiresAt) return null;
     let n = new Date(e.expiresAt),
         i = new Date(t.expiresAt),
@@ -57,86 +59,93 @@ function A(e) {
         a = Math.floor(r / 30) + +(r % 30 >= 25);
     if (a >= 12) {
         let e = Math.floor(a / 12);
-        return E.intl.formatToPlainString(E.t.PClsrw, { years: e });
+        return h.intl.formatToPlainString(h.t.PClsrw, { years: e });
     }
     {
-        if (a > 0) return E.intl.formatToPlainString(E.t.kridzK, { months: a });
+        if (a > 0) return h.intl.formatToPlainString(h.t.kridzK, { months: a });
         let e = (0, s.A)(i, n);
-        if (!(e >= 7)) return E.intl.formatToPlainString(E.t["k2UNz+"], { days: e });
+        if (!(e >= 7)) return h.intl.formatToPlainString(h.t["k2UNz+"], { days: e });
         {
             let t = Math.ceil(e / 7);
-            return E.intl.formatToPlainString(E.t.EmoBD2, { weeks: t });
+            return h.intl.formatToPlainString(h.t.EmoBD2, { weeks: t });
         }
     }
 }
-function I(e) {
+function S(e) {
     return e.rewardsConfig.rewards.some((e) => e.type === l.l.FRACTIONAL_PREMIUM);
 }
-function T(e) {
+function N(e) {
     return e.rewardsConfig.rewards.some((e) => e.type === l.l.VIRTUAL_CURRENCY);
 }
-function S(e) {
+function y(e) {
     let t = e.rewardsConfig.rewards.find((e) => e.type === l.l.VIRTUAL_CURRENCY),
         n = t?.premiumOrbQuantity;
     return null != n && n > 0;
 }
-function N(e) {
-    return null != g(e);
-}
 function C(e) {
+    return null != A(e);
+}
+function v(e) {
     return e.rewardsConfig.rewards.some((e) => e.type === l.l.IN_GAME);
 }
-function R(e) {
+function O(e) {
     return e.rewardsConfig.rewards.some((e) => e.type === l.l.REWARD_CODE);
 }
-function O(e) {
+function R(e) {
     return e.rewardsConfig.rewards.find((e) => e.type === l.l.IN_GAME) ?? null;
 }
-function y(e) {
+function b(e) {
     let t = e.rewardsConfig.rewards.find((e) => e.type === l.l.VIRTUAL_CURRENCY);
     return t?.orbQuantity;
 }
-function v(e) {
-    let t = e.rewardsConfig.rewards.find((e) => e.type === l.l.VIRTUAL_CURRENCY);
-    if (t?.type === l.l.VIRTUAL_CURRENCY) return t.premiumOrbQuantity;
-}
 function D(e) {
-    let t = g(e)?.expirationMode;
-    return null != t && f.has(t);
+    let t = A(e)?.expirationMode;
+    return null != t && g.has(t);
 }
 function L(e) {
-    return D(e) && g(e)?.expirationMode === o.PREMIUM_PERMANENT;
+    return D(e) && A(e)?.expirationMode === o.PREMIUM_PERMANENT;
 }
-function b(e) {
+function w(e) {
     let t = e.userStatus?.claimedTier ?? 0;
     return "rewardsConfig" in e.config ? e.config.rewardsConfig.rewards[t] : e.config.rewards[t];
 }
-function w(e, t) {
-    if (I(e)) {
+function M(e, t) {
+    let n = e.rewardsConfig.rewards.find((e) => e.type === l.l.VIRTUAL_CURRENCY);
+    if (null == n) return null;
+    if (null == t) return n.orbQuantity;
+    let i = (0, c.m)(t);
+    return y(e) && (0, m.B9)(i) ? (n.premiumOrbQuantity ?? n.orbQuantity) : n.orbQuantity;
+}
+function P(e, t, n) {
+    if (S(e)) {
         let t = e.rewardsConfig.rewards
                 .filter((e) => e.type === l.l.FRACTIONAL_PREMIUM)
                 .flatMap((e) => Array(e.quantity).fill(e.skuId)),
-            n = (0, c.iv)(t),
-            i = { days: E.t.fYmirx, hours: E.t["C3RO+g"], minutes: E.t.r77oHc },
-            r = (0, _.Tf)(0, n * u.A.Millis.HOUR);
-        return E.intl.formatToPlainString(E.t["4SqnVD"], { time: (0, _.uN)(r, i) });
+            n = (0, f.iv)(t),
+            i = { days: h.t.fYmirx, hours: h.t["C3RO+g"], minutes: h.t.r77oHc },
+            r = (0, d.Tf)(0, n * _.A.Millis.HOUR);
+        return h.intl.formatToPlainString(h.t["4SqnVD"], { time: (0, d.uN)(r, i) });
     }
-    let n = (0, h.xv)(e);
-    return t ? n.messages.nameWithArticle : n.messages.name;
+    if (N(e)) {
+        let n;
+        return (n = M(e, t) ?? b(e) ?? 0), h.intl.formatToPlainString(h.t["nLXlh+"], { orbAmount: n });
+    }
+    let i = (0, p.xv)(e);
+    return n ? i.messages.nameWithArticle : i.messages.name;
 }
-function P(e) {
-    return w(e, !1);
+function x(e, t) {
+    return P(e, t, !1);
+}
+function U(e, t) {
+    return P(e, t, !0);
 }
 function k(e) {
-    return w(e, !0);
-}
-function M(e) {
     let { quest: t, idx: n } = e;
     if (null == n) return null;
     let i = t.config.rewardsConfig.rewards[n];
     return i.type === l.l.REWARD_CODE ? i : null;
 }
-function U(e) {
+function G(e) {
     let {
             quest: { config: t },
         } = e,
@@ -145,7 +154,7 @@ function U(e) {
         n.assignmentMethod === a.TIERED && n.rewards.length > 0 && n.rewards.every((e) => e.type === l.l.REWARD_CODE)
     );
 }
-function x(e) {
+function F(e) {
     let t = e.rewardsConfig.platforms;
-    return t.length > 0 ? t[0] : d.pY.CROSS_PLATFORM;
+    return t.length > 0 ? t[0] : u.pY.CROSS_PLATFORM;
 }
