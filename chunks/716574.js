@@ -1,89 +1,90 @@
 "use strict";
-n.d(t, { A: () => S, K: () => T });
+n.d(t, { A: () => N, K: () => S });
 var i = n(627968);
 n(64700);
 var r = n(503698),
     s = n.n(r),
-    a = n(140735),
-    o = n(237140),
-    l = n(112317),
-    u = n(348275),
-    c = n(505679),
-    d = n(521754),
-    _ = n(353795),
-    f = n(331322),
-    h = n(508770),
-    p = n(534514),
-    E = n(834730),
-    m = n(731454),
-    g = n(750506),
-    A = n(518477),
-    I = n(128845);
-function T(e) {
+    a = n(536001),
+    o = n(140735),
+    l = n(237140),
+    u = n(112317),
+    c = n(348275),
+    d = n(505679),
+    _ = n(521754),
+    f = n(353795),
+    h = n(331322),
+    p = n(508770),
+    E = n(534514),
+    m = n(834730),
+    g = n(731454),
+    A = n(750506),
+    I = n(518477),
+    T = n(128845);
+function S(e) {
     let {
             children: t,
             title: n,
             body: r,
-            variant: T = "default",
-            graphic: S,
-            rarity: N,
-            targetElementRef: y,
-            onShow: C,
-            position: v = "top",
+            variant: S = "default",
+            graphic: N,
+            rarity: y,
+            targetElementRef: C,
+            onShow: v,
+            position: O = "top",
         } = e,
         {
-            tooltipId: O,
-            isVisible: R,
-            targetElementRef: b,
-            trigger: D,
-        } = (0, d.D)({ children: t, targetElementRef: y, delay: A.In, onTooltipShow: C }),
-        L = (0, m.V)(N),
-        w = (0, i.jsxs)("div", {
-            className: I.Qs,
+            tooltipId: R,
+            isVisible: b,
+            targetElementRef: D,
+            trigger: L,
+        } = (0, _.D)({ children: t, targetElementRef: C, delay: I.In, onTooltipShow: v }),
+        w = y === a.x.COMMON ? null : (0, g.V)(y),
+        M = (0, i.jsxs)("div", {
+            className: T.Qs,
             "data-mana-component": "mini-premium-tooltip",
             children: [
                 (0, i.jsx)("div", {
-                    className: I.fA,
+                    className: T.fA,
                     "aria-hidden": !0,
-                    children: (0, i.jsx)(_.v, { ...S, aspectRatio: S.aspectRatio ?? "16/9" }),
+                    children: (0, i.jsx)(f.v, { ...N, aspectRatio: N.aspectRatio ?? "16/9" }),
                 }),
-                (0, i.jsxs)(f.B, {
+                (0, i.jsxs)(h.B, {
                     gap: 12,
                     align: "center",
-                    className: I.i8,
+                    className: T.i8,
                     children: [
-                        null != L && (0, i.jsx)(h.E, { ...L }),
-                        (0, i.jsx)(p.D, {
+                        null != w && (0, i.jsx)(p.E, { ...w }),
+                        (0, i.jsx)(E.D, {
                             variant: "display-sm",
                             color: "text-strong",
-                            className: s()(I.DD, { [I.x$]: "nitro" === T }),
+                            className: s()(T.DD, { [T.x$]: "nitro" === S }),
                             children: n,
                         }),
                     ],
                 }),
                 null != r &&
-                    (0, i.jsx)(E.E, { variant: "text-sm/medium", color: "text-subtle", className: I.rf, children: r }),
+                    (0, i.jsx)(m.E, { variant: "text-sm/medium", color: "text-subtle", className: T.rf, children: r }),
             ],
         }),
-        M = null != r ? `${n}. ${r}` : n,
-        P = (0, c.j)({ shouldShow: R })((e, t) =>
+        P = null != r ? `${n}. ${r}` : n,
+        x = (0, d.j)({ shouldShow: b })((e, t) =>
             t
-                ? (0, i.jsx)(l.Bc, {
+                ? (0, i.jsx)(u.Bc, {
                       isRichTooltip: !0,
-                      children: (0, i.jsx)(o.R, {
-                          isVisible: R,
+                      children: (0, i.jsx)(l.R, {
+                          isVisible: b,
                           isRendered: !0,
-                          targetElementRef: b,
-                          content: w,
-                          position: v,
+                          targetElementRef: D,
+                          content: M,
+                          position: O,
                           align: "center",
-                          layerContext: g.uY,
+                          layerContext: A.uY,
                           animationStyle: e,
-                          positionKey: (0, u.Xj)(n),
+                          positionKey: (0, c.Xj)(n),
                       }),
                   })
                 : null,
         );
-    return (0, i.jsxs)(i.Fragment, { children: [D, (0, i.jsx)(a.A, { id: O, children: M }), P] });
+    return (0, i.jsxs)(i.Fragment, { children: [L, (0, i.jsx)(o.A, { id: R, children: P }), x] });
 }
-let S = T;
+let N = S;
