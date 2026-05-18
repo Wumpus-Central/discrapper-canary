@@ -25,7 +25,7 @@ function _(e, t, n) {
         __OVERLAY__ || e !== l.eAD.FAILED ? e === l.eAD.LOADING && d(i, t, null != r ? 15e3 : 12e4) : d(i, t, 12e4);
 }
 function f(e) {
-    return _(l.eAD.COMPLETE, l.xL.JOIN, e);
+    return ("ACTIVITY_JOIN" !== e.type || null == e.parentApplicationId) && _(l.eAD.COMPLETE, l.xL.JOIN, e);
 }
 function h() {
     let e = Object.entries(u)
