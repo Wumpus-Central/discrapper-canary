@@ -1,262 +1,288 @@
-i.d(e, { A: () => J });
-var n = i(627968),
-    s = i(64700),
-    a = i(189213),
-    l = i(815021),
-    r = i(834730),
-    c = i(192308),
-    o = i(935462),
-    u = i(289873),
-    d = i(507107),
-    m = i(73473),
-    f = i(617986),
-    x = i(731355),
-    g = i(366010),
-    C = i(534514),
-    N = i(825484),
-    h = i(408278),
-    A = i(173936),
-    T = i(821609),
-    p = i(743368),
-    j = i(990078),
-    _ = i(736653),
-    E = i(859387),
-    I = i(590202),
-    y = i(971649),
-    v = i(651892),
-    R = i(901406),
-    L = i(814793),
-    O = i(241124),
-    M = i(918338),
-    b = i(371912),
-    k = i(17928),
-    P = i(793574),
-    D = i(532794),
-    W = i(976860),
-    w = i(287809),
-    S = i(975571),
-    V = i(474090),
-    q = i(561844),
-    z = i(190107),
-    H = i(652215),
-    Q = i(788868),
-    U = i(375708),
-    Y = i(237146),
-    G = i(818348),
-    F = i(970197);
-function K(t) {
-    let { quest: e, sourceQuestContent: i, onLoadComplete: a, preCtaClick: l } = t,
-        c = (0, _.Ay)(),
-        o = (0, g.M)(c) ? G.NJ.DARK : G.NJ.LIGHT,
-        u = (0, y.go)(),
-        m = (0, L.E0)(e.config),
-        f = async () => {
+e.d(i, { A: () => J });
+var n = e(627968),
+    a = e(64700),
+    s = e(189213),
+    l = e(815021),
+    r = e(834730),
+    c = e(192308),
+    u = e(935462),
+    o = e(289873),
+    d = e(507107),
+    f = e(73473),
+    m = e(617986),
+    g = e(731355),
+    x = e(366010),
+    C = e(534514),
+    N = e(825484),
+    A = e(408278),
+    T = e(173936),
+    h = e(821609),
+    _ = e(743368),
+    p = e(990078),
+    j = e(736653),
+    R = e(859387),
+    I = e(590202),
+    y = e(971649),
+    E = e(651892),
+    v = e(901406),
+    O = e(814793),
+    L = e(241124),
+    b = e(918338),
+    M = e(371912),
+    k = e(17928),
+    P = e(793574),
+    S = e(532794),
+    V = e(976860),
+    D = e(287809),
+    Q = e(975571),
+    W = e(474090),
+    w = e(561844),
+    U = e(190107),
+    q = e(652215),
+    z = e(788868),
+    H = e(375708),
+    Y = e(237146),
+    G = e(818348),
+    X = e(970197);
+function F(t) {
+    let { quest: i, sourceQuestContent: e, onLoadComplete: s, preCtaClick: l } = t,
+        c = (0, j.Ay)(),
+        u = (0, x.M)(c) ? G.NJ.DARK : G.NJ.LIGHT,
+        o = (0, y.go)(),
+        f = (0, O.E0)(i.config),
+        m = async () => {
             await l?.(),
-                (0, R.pu)(e, {
+                (0, v.pu)(i, {
                     content: d.uF.REWARD_MODAL,
                     ctaContent: I.Cy.OPEN_GAME_LINK,
-                    impressionId: u,
-                    sourceQuestContent: i,
+                    impressionId: o,
+                    sourceQuestContent: e,
                 });
         },
-        K = s.useMemo(() => {
-            let t = e.config.ctaConfig?.subtitle;
+        F = a.useMemo(() => {
+            let t = i.config.ctaConfig?.subtitle;
             return null != t
                 ? t
-                : (0, L.pv)(e.config) !== x.Z.GAMEPLAY ||
-                    e.config.features.includes(z.Li.NON_GAMING_PLAY_QUEST) ||
-                    (0, L.ui)(e)
-                  ? U.intl.string(U.t.y8Xf3k)
-                  : U.intl.string(U.t["wirwN+"]);
-        }, [e]),
-        Z = (function (t, e, i) {
-            let n = t.config.features.some((t) => z.Tz.has(t)),
-                a = (0, k.bG)([w.default], () => w.default.getCurrentUser()),
-                l = a?.hasPaidTier2Subscription(),
-                r = (0, V.ki)(a) && !a?.isPremiumWithFractionalPremiumOnly(),
-                c = s.useCallback(async () => {
+                : (0, O.pv)(i.config) !== g.Z.GAMEPLAY ||
+                    i.config.features.includes(U.Li.NON_GAMING_PLAY_QUEST) ||
+                    (0, O.ui)(i)
+                  ? H.intl.string(H.t.y8Xf3k)
+                  : H.intl.string(H.t["wirwN+"]);
+        }, [i]),
+        K = (function (t, i, e) {
+            let n = t.config.features.some((t) => U.Tz.has(t)),
+                s = (0, k.bG)([D.default], () => D.default.getCurrentUser()),
+                l = s?.hasPaidTier2Subscription(),
+                r = (0, W.ki)(s) && !s?.isPremiumWithFractionalPremiumOnly(),
+                c = a.useCallback(async () => {
                     n &&
                         (l
-                            ? ((0, q.Y5)({
+                            ? ((0, w.Y5)({
                                   questId: t.id,
                                   questContent: d.uF.REWARD_MODAL,
                                   questContentCTA: I.Cy.OPEN_NITRO_HOME,
-                                  impressionId: e.impressionId,
-                                  sourceQuestContent: e.sourceQuestContent,
+                                  impressionId: i.impressionId,
+                                  sourceQuestContent: i.sourceQuestContent,
                               }),
-                              await i?.(),
-                              (0, W.pX)(H.BVt.NITRO_HOME))
-                            : ((0, q.Y5)({
+                              await e?.(),
+                              (0, V.pX)(q.BVt.NITRO_HOME))
+                            : ((0, w.Y5)({
                                   questId: t.id,
                                   questContent: d.uF.REWARD_MODAL,
                                   questContentCTA: I.Cy.OPEN_NITRO_CHECKOUT,
-                                  impressionId: e.impressionId,
-                                  sourceQuestContent: e.sourceQuestContent,
+                                  impressionId: i.impressionId,
+                                  sourceQuestContent: i.sourceQuestContent,
                               }),
-                              await i?.(),
-                              await (0, D.A)({
-                                  subscriptionTier: Q.pe.TIER_2,
+                              await e?.(),
+                              await (0, S.A)({
+                                  subscriptionTier: z.pe.TIER_2,
                                   analyticsLocations: [P.A.QUEST_REWARD_MODAL],
                               })));
-                }, [n, l, t.id, e.impressionId, e.sourceQuestContent, i]);
+                }, [n, l, t.id, i.impressionId, i.sourceQuestContent, e]);
             if (!n) return null;
-            if (t.config.features.includes(z.Li.NITRO_2_POINT_0_CTA)) {
-                let t = S.A.getArticleURL(H.MVz.NITRO_2_POINT_0);
+            if (t.config.features.includes(U.Li.NITRO_2_POINT_0_CTA)) {
+                let t = Q.A.getArticleURL(q.MVz.NITRO_2_POINT_0);
                 return l
                     ? {
-                          title: U.intl.string(Y.default.LIc2xy),
-                          subtitle: U.intl.format(Y.default.gzazAe, { helpCenterLink: t }),
-                          ctaText: U.intl.string(Y.default.HlVJm0),
+                          title: H.intl.string(Y.default.LIc2xy),
+                          subtitle: H.intl.format(Y.default.gzazAe, { helpCenterLink: t }),
+                          ctaText: H.intl.string(Y.default.HlVJm0),
                           ctaVariant: "primary",
                           onClickCta: c,
                       }
                     : r
                       ? {
-                            title: U.intl.string(Y.default.HTsycG),
-                            subtitle: U.intl.format(Y.default["3JKWU6"], { helpCenterLink: t }),
-                            ctaText: U.intl.string(Y.default["2iX+XV"]),
+                            title: H.intl.string(Y.default.HTsycG),
+                            subtitle: H.intl.format(Y.default["3JKWU6"], { helpCenterLink: t }),
+                            ctaText: H.intl.string(Y.default["2iX+XV"]),
                             ctaVariant: "primary",
                             onClickCta: c,
                         }
                       : {
-                            title: U.intl.string(Y.default.bOf5IH),
-                            subtitle: U.intl.format(Y.default.SzOYGc, { helpCenterLink: t }),
-                            ctaText: U.intl.string(Y.default["620Iwi"]),
+                            title: H.intl.string(Y.default.bOf5IH),
+                            subtitle: H.intl.format(Y.default.SzOYGc, { helpCenterLink: t }),
+                            ctaText: H.intl.string(Y.default["620Iwi"]),
                             ctaVariant: "primary",
                             onClickCta: c,
                         };
             }
-            if (t.config.features.includes(z.Li.ORBS_MULTIPLIER_QUEST)) {
-                let t = S.A.getArticleURL(H.MVz.VIRTUAL_CURRENCY_LEARN_MORE);
+            if (t.config.features.includes(U.Li.ORBS_MULTIPLIER_QUEST)) {
+                let t = Q.A.getArticleURL(q.MVz.VIRTUAL_CURRENCY_LEARN_MORE);
                 return l
                     ? {
-                          title: U.intl.string(Y.default["QP/6xR"]),
-                          subtitle: U.intl.format(Y.default.zPnFYf, { helpCenterLink: t }),
-                          ctaText: U.intl.string(Y.default.TNS24d),
+                          title: H.intl.string(Y.default["QP/6xR"]),
+                          subtitle: H.intl.format(Y.default.zPnFYf, { helpCenterLink: t }),
+                          ctaText: H.intl.string(Y.default.TNS24d),
                           ctaVariant: "primary",
                           onClickCta: c,
                       }
                     : r
                       ? {
-                            title: U.intl.string(Y.default.CFfUkp),
-                            subtitle: U.intl.format(Y.default["02smVH"], { helpCenterLink: t }),
-                            ctaText: U.intl.string(Y.default["2iX+XV"]),
+                            title: H.intl.string(Y.default.CFfUkp),
+                            subtitle: H.intl.format(Y.default["02smVH"], { helpCenterLink: t }),
+                            ctaText: H.intl.string(Y.default["2iX+XV"]),
                             ctaVariant: "primary",
                             onClickCta: c,
                         }
                       : {
-                            title: U.intl.string(Y.default.CFfUkp),
-                            subtitle: U.intl.format(Y.default["02smVH"], { helpCenterLink: t }),
-                            ctaText: U.intl.string(Y.default["620Iwi"]),
+                            title: H.intl.string(Y.default.CFfUkp),
+                            subtitle: H.intl.format(Y.default["02smVH"], { helpCenterLink: t }),
+                            ctaText: H.intl.string(Y.default["620Iwi"]),
+                            ctaVariant: "primary",
+                            onClickCta: c,
+                        };
+            }
+            if (t.config.features.includes(U.Li.XBOX_GAME_PASS_QUEST)) {
+                let t = Q.A.getArticleURL(q.MVz.NITRO_2_POINT_0);
+                return l
+                    ? {
+                          title: H.intl.string(Y.default["4zROKG"]),
+                          subtitle: H.intl.format(Y.default.v9AaV4, { helpCenterLink: t }),
+                          ctaText: H.intl.string(Y.default["/AUOfc"]),
+                          ctaVariant: "primary",
+                          onClickCta: c,
+                      }
+                    : r
+                      ? {
+                            title: H.intl.string(Y.default.Q15RXC),
+                            subtitle: H.intl.format(Y.default["zUjL+R"], { helpCenterLink: t }),
+                            ctaText: H.intl.string(Y.default["+ADjaQ"]),
+                            ctaVariant: "primary",
+                            onClickCta: c,
+                        }
+                      : {
+                            title: H.intl.string(Y.default.Q15RXC),
+                            subtitle: H.intl.format(Y.default.dHQQvk, { helpCenterLink: t }),
+                            ctaText: H.intl.string(Y.default.qI5XnY),
                             ctaVariant: "primary",
                             onClickCta: c,
                         };
             }
             return null;
-        })(e, { impressionId: u, sourceQuestContent: i }, l) ?? {
-            ctaText: (0, v.wr)(e),
+        })(i, { impressionId: o, sourceQuestContent: e }, l) ?? {
+            ctaText: (0, E.wr)(i),
             ctaVariant: "primary",
-            onClickCta: f,
-            title: U.intl.format(U.t.EAYZAr, { questName: e.config.messages.questName }),
-            subtitle: K,
+            onClickCta: m,
+            title: H.intl.format(H.t.EAYZAr, { questName: i.config.messages.questName }),
+            subtitle: F,
             ctaIconPosition: "end",
         },
-        { isLoading: X } = (0, O.Gk)();
-    s.useEffect(() => {
-        X || a();
-    }, [X, a]);
-    let B = (0, b.Lk)({
-        isShareable: m,
-        questId: e.id,
-        trackingCtx: s.useMemo(
+        { isLoading: Z } = (0, L.Gk)();
+    a.useEffect(() => {
+        Z || s();
+    }, [Z, s]);
+    let B = (0, M.Lk)({
+        isShareable: f,
+        questId: i.id,
+        trackingCtx: a.useMemo(
             () => ({
                 content: d.uF.REWARD_MODAL,
                 ctaContent: I.Cy.REWARD_MODAL_COPY_LINK,
-                impressionId: u,
-                sourceQuestContent: i,
+                impressionId: o,
+                sourceQuestContent: e,
             }),
-            [u, i],
+            [o, e],
         ),
     });
     return (0, n.jsxs)("div", {
-        className: F.kL,
+        className: X.kL,
         children: [
-            (0, n.jsx)(O.Sn, {
+            (0, n.jsx)(L.Sn, {
                 id: "hero-display",
                 children: (t) =>
-                    (0, n.jsx)(M.A, {
-                        quest: e,
+                    (0, n.jsx)(b.A, {
+                        quest: i,
                         imageSize: { width: 908, height: 380 },
-                        containerClassName: F.WQ,
+                        containerClassName: X.WQ,
                         isInteracting: !0,
                         assetRef: t,
                     }),
             }),
             (0, n.jsx)("div", {
-                className: F.Lt,
-                children: (0, n.jsx)(O.Sn, {
+                className: X.Lt,
+                children: (0, n.jsx)(L.Sn, {
                     id: "partner-logotype",
                     children: (t) =>
                         (0, n.jsx)("img", {
                             ref: t,
-                            className: F.a$,
-                            alt: U.intl.formatToPlainString(U.t.rtm15P, { name: e.config.messages.gameTitle }),
-                            src: (0, E.tW)(e, E.fY.LOGO_TYPE, o).url,
+                            className: X.a$,
+                            alt: H.intl.formatToPlainString(H.t.rtm15P, { name: i.config.messages.gameTitle }),
+                            src: (0, R.tW)(i, R.fY.LOGO_TYPE, u).url,
                         }),
                 }),
             }),
             (0, n.jsxs)("div", {
-                className: F.Th,
+                className: X.Th,
                 children: [
                     (0, n.jsxs)("div", {
-                        className: F.Ly,
+                        className: X.Ly,
                         children: [
                             (0, n.jsx)(C.D, {
                                 variant: "heading-md/semibold",
                                 color: "text-strong",
-                                className: F.fx,
-                                children: Z.title,
+                                className: X.fx,
+                                children: K.title,
                             }),
-                            (0, n.jsx)(r.E, { variant: "text-sm/medium", color: "text-subtle", children: Z.subtitle }),
+                            (0, n.jsx)(r.E, { variant: "text-sm/medium", color: "text-subtle", children: K.subtitle }),
                         ],
                     }),
-                    (0, n.jsx)(O.Sn, {
+                    (0, n.jsx)(L.Sn, {
                         id: "partner-game-tile",
                         children: (t) =>
                             (0, n.jsx)("img", {
                                 ref: t,
-                                className: F.rw,
-                                alt: U.intl.formatToPlainString(U.t.rtm15P, { name: e.config.messages.gameTitle }),
-                                src: (0, E.tW)(e, E.fY.GAME_TILE, o).url,
+                                className: X.rw,
+                                alt: H.intl.formatToPlainString(H.t.rtm15P, { name: i.config.messages.gameTitle }),
+                                src: (0, R.tW)(i, R.fY.GAME_TILE, u).url,
                             }),
                     }),
                 ],
             }),
             (0, n.jsx)("div", {
-                className: F.tu,
+                className: X.tu,
                 children: (0, n.jsxs)(N.e, {
                     size: "sm",
                     direction: "horizontal",
                     fullWidth: !0,
                     fullWidthContainer: !0,
                     children: [
-                        m &&
-                            (0, n.jsx)(j.m, {
-                                text: U.intl.string(U.t.WmfZHZ),
-                                children: (0, n.jsx)(h.K, {
-                                    icon: A.q,
+                        f &&
+                            (0, n.jsx)(p.m, {
+                                text: H.intl.string(H.t.WmfZHZ),
+                                children: (0, n.jsx)(A.K, {
+                                    icon: T.q,
                                     onClick: B,
-                                    "aria-label": U.intl.string(U.t.WmfZHZ),
+                                    "aria-label": H.intl.string(H.t.WmfZHZ),
                                     variant: "secondary",
                                 }),
                             }),
-                        (0, n.jsx)(T.$, {
-                            variant: Z.ctaVariant,
-                            text: Z.ctaText,
-                            onClick: Z.onClickCta,
+                        (0, n.jsx)(h.$, {
+                            variant: K.ctaVariant,
+                            text: K.ctaText,
+                            onClick: K.onClickCta,
                             fullWidth: !0,
-                            icon: p.W,
-                            iconPosition: Z.ctaIconPosition,
+                            icon: _.W,
+                            iconPosition: K.ctaIconPosition,
                         }),
                     ],
                 }),
@@ -264,82 +290,82 @@ function K(t) {
         ],
     });
 }
-function Z(t) {
-    let { quest: e, location: i } = t;
-    return (0, n.jsx)(O.jY, { source: i, questId: e.id, isPreview: e.preview, children: (0, n.jsx)(K, { ...t }) });
+function K(t) {
+    let { quest: i, location: e } = t;
+    return (0, n.jsx)(L.jY, { source: e, questId: i.id, isPreview: i.preview, children: (0, n.jsx)(F, { ...t }) });
 }
-var X = i(63639);
+var Z = e(63639);
 function B(t) {
-    let { onClose: e, transitionState: i } = t;
-    return (0, n.jsx)(a.Modal, {
+    let { onClose: i, transitionState: e } = t;
+    return (0, n.jsx)(s.Modal, {
         size: "md",
-        title: U.intl.string(U.t.Hd3D8W),
-        actions: [{ variant: "primary", text: U.intl.string(U.t.cpT0Cq), onClick: e }],
-        onClose: e,
-        transitionState: i,
+        title: H.intl.string(H.t.Hd3D8W),
+        actions: [{ variant: "primary", text: H.intl.string(H.t.cpT0Cq), onClick: i }],
+        onClose: i,
+        transitionState: e,
         children: (0, n.jsx)(r.E, {
             variant: "text-md/medium",
             color: "text-subtle",
-            children: U.intl.string(U.t.Ij97SL),
+            children: H.intl.string(H.t.Ij97SL),
         }),
     });
 }
 function J(t) {
     let {
-            quest: e,
-            sourceQuestContent: i,
-            transitionState: a,
+            quest: i,
+            sourceQuestContent: e,
+            transitionState: s,
             onClose: r,
-            rewardContent: x,
-            isRewardContentLoading: g,
+            rewardContent: g,
+            isRewardContentLoading: x,
             rewardContentHasError: C,
             location: N,
         } = t,
-        h = d.uF.REWARD_MODAL,
-        [A, T] = s.useState(!0),
-        p = e.config.features.some((t) => z.Tz.has(t)),
-        j = s.useCallback(async () => {
-            if (p) {
+        A = d.uF.REWARD_MODAL,
+        [T, h] = a.useState(!0),
+        _ = i.config.features.some((t) => U.Tz.has(t)),
+        p = a.useCallback(async () => {
+            if (_) {
                 r(), (0, c.closeAllModals)();
                 return;
             }
-            (await (0, f.f7)(e.config.ctaConfig?.link)) && (r(), (0, c.closeAllModals)());
-        }, [e.config.ctaConfig?.link, r, p]);
-    if (C) return (0, n.jsx)(B, { onClose: r, transitionState: a });
-    let _ = g || A;
-    return (0, n.jsx)(m.R, {
-        questOrQuests: e,
-        questContent: h,
-        sourceQuestContent: i,
+            (await (0, m.f7)(i.config.ctaConfig?.link)) && (r(), (0, c.closeAllModals)());
+        }, [i.config.ctaConfig?.link, r, _]);
+    if (C) return (0, n.jsx)(B, { onClose: r, transitionState: s });
+    let j = x || T;
+    return (0, n.jsx)(f.R, {
+        questOrQuests: i,
+        questContent: A,
+        sourceQuestContent: e,
         children: (t) =>
-            (0, n.jsxs)(o.EO, {
+            (0, n.jsxs)(u.EO, {
                 "data-migration-pending": !0,
-                transitionState: a,
-                size: o.rI.DYNAMIC,
-                className: X.yl,
-                "aria-label": _ ? U.intl.string(U.t.ZTNur7) : void 0,
+                transitionState: s,
+                size: u.rI.DYNAMIC,
+                className: Z.yl,
+                "aria-label": j ? H.intl.string(H.t.ZTNur7) : void 0,
                 parentComponent: "QuestRewardModalBase",
                 children: [
                     (0, n.jsx)("div", {
-                        className: X.b,
+                        className: Z.b,
                         children: (0, n.jsx)(l.J, { size: "xs", variant: "overlay-secondary", onClick: r }),
                     }),
-                    _ ? (0, n.jsx)(u.y, { className: X.u1, type: u.y.Type.WANDERING_CUBES }) : null,
+                    j ? (0, n.jsx)(o.y, { className: Z.u1, type: o.y.Type.WANDERING_CUBES }) : null,
                     (0, n.jsx)("div", {
                         ref: t,
-                        className: X.BM,
-                        style: { visibility: _ ? "hidden" : "visible" },
+                        className: Z.BM,
+                        style: { visibility: j ? "hidden" : "visible" },
                         children: (0, n.jsxs)("div", {
-                            className: X.jE,
+                            className: Z.jE,
                             children: [
-                                (0, n.jsx)("div", { className: X._H, children: x }),
+                                (0, n.jsx)("div", { className: Z._H, children: g }),
                                 (0, n.jsx)("div", {
-                                    className: X.xK,
-                                    children: (0, n.jsx)(Z, {
-                                        quest: e,
-                                        sourceQuestContent: i,
-                                        onLoadComplete: () => T(!1),
-                                        preCtaClick: j,
+                                    className: Z.xK,
+                                    children: (0, n.jsx)(K, {
+                                        quest: i,
+                                        sourceQuestContent: e,
+                                        onLoadComplete: () => h(!1),
+                                        preCtaClick: p,
                                         location: N,
                                     }),
                                 }),
