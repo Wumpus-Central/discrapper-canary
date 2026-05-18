@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => n_ }), n(321073);
+n.d(t, { A: () => nf }), n(321073);
 var i,
     r = n(627968),
     s = n(64700),
@@ -459,91 +459,100 @@ class eP extends _.Ay.PersistedStore {
     }
 }
 let ex = new eP(g.h, {
-    LOGOUT: function () {
-        eM = { ...ew };
-    },
-    GAME_UPSELL_DISMISS: function (e) {
-        let { applicationId: t, dismissedAt: n, dismissibleContent: i } = e,
-            r = eM.gameUpsellsDismissal[i]?.[t],
-            s = null != r ? r.timesDismissed + 1 : 1;
-        eM = {
-            gameUpsellsDismissal: {
-                ...eM.gameUpsellsDismissal,
-                [i]: { ...eM.gameUpsellsDismissal[i], [t]: { dismissedAt: n, timesDismissed: s } },
-            },
-        };
-    },
-});
-var eU = n(279250),
-    ek = n(880144),
-    eG = n(277680),
-    eF = n(118277),
-    eV = n(905552),
-    eB = n(95035),
-    eH = n(716965),
-    ej = n(567249),
-    eY = n(929921),
-    eW = n(650338),
-    eK = n(753070),
-    ez = n(194368);
-function e$(e) {
+        LOGOUT: function () {
+            eM = { ...ew };
+        },
+        GAME_UPSELL_DISMISS: function (e) {
+            let { applicationIds: t, dismissedAt: n, dismissibleContent: i } = e;
+            if (0 === t.length) return !1;
+            let r = {
+                ...eM,
+                gameUpsellsDismissal: { ...eM.gameUpsellsDismissal, [i]: { ...eM.gameUpsellsDismissal[i] } },
+            };
+            for (let e of t) {
+                let t = eM.gameUpsellsDismissal[i]?.[e],
+                    s = null != t ? t.timesDismissed + 1 : 1;
+                r.gameUpsellsDismissal[i][e] = { dismissedAt: n, timesDismissed: s };
+            }
+            eM = r;
+        },
+    }),
+    eU = {
+        globalCooldownMs: 864e5,
+        perGameInitialCooldownMs: 864e5,
+        perGameCooldownBackoffBase: 2,
+        perGameMaxCooldownMs: 24192e5,
+    };
+var ek = n(279250),
+    eG = n(880144),
+    eF = n(277680),
+    eV = n(118277),
+    eB = n(905552),
+    eH = n(95035),
+    ej = n(716965),
+    eY = n(567249),
+    eW = n(929921),
+    eK = n(650338),
+    ez = n(753070),
+    e$ = n(194368);
+function eq(e) {
     let { className: t, color: n, ...i } = e;
-    return (0, r.jsx)(k.E, { className: o()({ [ez.Q]: null == n }, t), color: n, ...i });
+    return (0, r.jsx)(k.E, { className: o()({ [e$.Q]: null == n }, t), color: n, ...i });
 }
-var eq = n(95701),
-    eZ = n(616356),
-    eX = n(495544),
-    eQ = n(734057),
-    eJ = n(184989),
-    e0 = n(71393),
-    e1 = n(235058),
-    e2 = n(576705),
-    e3 = n(290863),
-    e6 = n(994500),
-    e4 = n(309010),
-    e5 = n(287809),
-    e7 = n(157257),
-    e8 = n(975571),
-    e9 = n(723702);
-let te = (0, el.mj)({
+var eZ = n(95701),
+    eX = n(616356),
+    eQ = n(495544),
+    eJ = n(734057),
+    e0 = n(184989),
+    e1 = n(71393),
+    e2 = n(761853),
+    e3 = n(576705),
+    e6 = n(290863),
+    e4 = n(994500),
+    e5 = n(309010),
+    e7 = n(287809),
+    e8 = n(157257),
+    e9 = n(975571),
+    te = n(723702);
+let tt = (0, el.mj)({
     name: "2025-11-rtc-panel-entry-point-new-copy",
     kind: "user",
     defaultConfig: { altTitle: !1, altBody: !1, altCta: !1 },
     variations: { 0: { altTitle: !1, altBody: !1, altCta: !1 }, 1: { altTitle: !0, altBody: !1, altCta: !0 } },
 });
-var tt = n(994314),
-    tn = n(485599),
-    ti = n(141628),
-    tr = n(192308),
-    ts = n(959988),
-    ta = n(183623),
-    to = n(241541),
-    tl = n(70688),
-    tu = n(687966),
-    tc = n(34188),
-    td = n(942857),
-    t_ = n(55730),
-    tf = n(869003),
-    th = n(521588),
-    tp = n(702841),
-    tE = n(475358),
-    tm = n(176781),
-    tg = n(442433),
-    tA = n(42473),
-    tI = n(186111),
-    tT = n(532624),
-    tS = n(350535),
-    tN = n(274372),
-    ty = n(572164),
-    tC = n(607814),
-    tv = n(646693);
-function tO(e) {
-    (0, tg.L3)(e, async () => {
+var tn = n(994314),
+    ti = n(485599),
+    tr = n(141628),
+    ts = n(192308),
+    ta = n(959988),
+    to = n(183623),
+    tl = n(241541),
+    tu = n(70688),
+    tc = n(687966),
+    td = n(34188),
+    t_ = n(942857),
+    tf = n(55730),
+    th = n(869003),
+    tp = n(521588),
+    tE = n(702841),
+    tm = n(475358),
+    tg = n(176781),
+    tA = n(442433),
+    tI = n(42473),
+    tT = n(186111),
+    tS = n(532624),
+    tN = n(350535),
+    ty = n(274372),
+    tC = n(572164),
+    tv = n(607814),
+    tO = n(646693);
+function tR(e) {
+    (0, tA.L3)(e, async () => {
         let { default: e } = await n.e("40638").then(n.bind(n, 562733));
         return (t) => (0, r.jsx)(e, { ...t });
     });
 }
-let tR = (e) => {
+let tb = (e) => {
         let { keybindString: t, targetElementRef: n } = e,
             [i, a] = s.useState(!1),
             o = s.useCallback(() => a(!1), []);
@@ -555,8 +564,8 @@ let tR = (e) => {
                 keybind: t,
                 keybindHook: () =>
                     (0, r.jsx)("span", {
-                        className: tv.E,
-                        children: (0, r.jsx)(tE.e, { className: tv.d, shortcut: t }),
+                        className: tO.E,
+                        children: (0, r.jsx)(tm.e, { className: tO.d, shortcut: t }),
                     }),
             }),
             body: $.intl.format($.t.DWeRm1, { keybindHook: () => t, keybind: t }),
@@ -565,50 +574,50 @@ let tR = (e) => {
             onRequestClose: o,
         });
     },
-    tb = () => {
+    tD = () => {
         let e = s.useRef(null),
             { parentAnalyticsLocation: t } = (0, ea.Ay)(),
-            n = (0, tp.bG)([tI.A], () => tI.A.hasLayers()),
-            i = (0, ty.Et)(),
-            a = (0, tp.bG)([tN.A], () => tN.A.getIsAtMaxSaveClipOperations()),
-            o = (0, tp.bG)([tT.Ay], () => tT.Ay.getKeybindForAction(U.hCu.SAVE_CLIP));
+            n = (0, tE.bG)([tT.A], () => tT.A.hasLayers()),
+            i = (0, tC.Et)(),
+            a = (0, tE.bG)([ty.A], () => ty.A.getIsAtMaxSaveClipOperations()),
+            o = (0, tE.bG)([tS.Ay], () => tS.Ay.getKeybindForAction(U.hCu.SAVE_CLIP));
         if (!i || null == o || n) return null;
-        let l = tS.dI(o.shortcut, !0);
+        let l = tN.dI(o.shortcut, !0);
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(tR, { keybindString: l, targetElementRef: e }),
-                (0, r.jsx)(tA.A, {
+                (0, r.jsx)(tb, { keybindString: l, targetElementRef: e }),
+                (0, r.jsx)(tI.A, {
                     ref: e,
                     disabled: a,
                     tooltipText:
                         null != o
-                            ? $.intl.formatToPlainString($.t.HIMcv1, { hotkey: tS.dI(o?.shortcut, !0) })
+                            ? $.intl.formatToPlainString($.t.HIMcv1, { hotkey: tN.dI(o?.shortcut, !0) })
                             : $.intl.string($.t.s52pju),
                     onClick: () => {
-                        (0, tC.l0)(), (0, ep.X)(t, ep.O.CLIP);
+                        (0, tv.l0)(), (0, ep.X)(t, ep.O.CLIP);
                     },
-                    onContextMenu: tO,
-                    icon: tm.x,
+                    onContextMenu: tR,
+                    icon: tg.x,
                 }),
             ],
         });
     };
-var tD = n(338771),
-    tL = n(212637),
-    tw = n(397400),
-    tM = n(488803);
-let tP = (0, el.mj)({
+var tL = n(338771),
+    tw = n(212637),
+    tM = n(397400),
+    tP = n(488803);
+let tx = (0, el.mj)({
     name: "2026-02-gsh-game-detection-upsell",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var tx = n(823748),
-    tU = n(522055),
-    tk = n(576709);
-function tG(e) {
+var tU = n(823748),
+    tk = n(522055),
+    tG = n(576709);
+function tF(e) {
     let { title: t, body: n, ctaText: i, runningGameId: s, targetElementRef: a, onClick: o, onClose: l } = e,
-        u = (0, _.bG)([tU.A], () => null != s && tU.A.getGlobalCatalogGame(s)?.can_market === !0, [s]);
+        u = (0, _.bG)([tk.A], () => null != s && tk.A.getGlobalCatalogGame(s)?.can_market === !0, [s]);
     return (0, r.jsx)(p.A, {
         size: "lg",
         title: t,
@@ -633,31 +642,31 @@ function tG(e) {
         onRequestClose: l,
     });
 }
-function tF(e) {
-    let { gameName: t, ...n } = e;
-    return (0, r.jsx)(tG, {
-        title: $.intl.formatToPlainString(tk.default.lKzVNu, { gameName: t }),
-        body: $.intl.string(tk.default.qqjm8O),
-        ctaText: $.intl.string(tk.default["eJg+Zm"]),
-        ...n,
-    });
-}
 function tV(e) {
     let { gameName: t, ...n } = e;
-    return (0, r.jsx)(tG, {
-        title: $.intl.formatToPlainString(tk.default.lwwiHE, { gameName: t }),
-        body: $.intl.string(tk.default.B33GXN),
-        ctaText: $.intl.string(tk.default["968/QC"]),
+    return (0, r.jsx)(tF, {
+        title: $.intl.formatToPlainString(tG.default.lKzVNu, { gameName: t }),
+        body: $.intl.string(tG.default.qqjm8O),
+        ctaText: $.intl.string(tG.default["eJg+Zm"]),
         ...n,
     });
 }
-var tB = n(453774),
-    tH = n(44724),
-    tj = n(84764),
-    tY = n(153488),
-    tW = n(942370),
-    tK = n(610861);
-function tz(e, t, n) {
+function tB(e) {
+    let { gameName: t, ...n } = e;
+    return (0, r.jsx)(tF, {
+        title: $.intl.formatToPlainString(tG.default.lwwiHE, { gameName: t }),
+        body: $.intl.string(tG.default.B33GXN),
+        ctaText: $.intl.string(tG.default["968/QC"]),
+        ...n,
+    });
+}
+var tH = n(453774),
+    tj = n(44724),
+    tY = n(84764),
+    tW = n(153488),
+    tK = n(942370),
+    tz = n(610861);
+function t$(e, t, n) {
     return (
         null != e &&
         (null != n
@@ -665,10 +674,10 @@ function tz(e, t, n) {
             : null != t &&
               (t.application_id === e.id || e.linkedGames?.some((e) => e.id === t.application_id)) &&
               t.type === U.$pd.PLAYING &&
-              (0, t_.A)(t, U.jUm.JOIN))
+              (0, tf.A)(t, U.jUm.JOIN))
     );
 }
-let t$ = s.memo(function (e) {
+let tq = s.memo(function (e) {
         let {
                 stream: t,
                 canGoLive: i,
@@ -690,13 +699,13 @@ let t$ = s.memo(function (e) {
                 connectionApp: v,
             } = e,
             { parentAnalyticsLocation: O, analyticsLocations: R } = (0, ea.Ay)(),
-            b = (0, tB.A)(m?.id),
-            D = tz(m, E, f),
-            { enabled: L } = tP.useConfig({ location: "activity-panel" }),
-            w = (0, tx.Bp)("activity-panel"),
-            M = (0, tM.C$)(a ?? void 0, "activity-panel"),
-            x = (0, _.bG)([tY.A], () => tY.A.hasConsented(U.YAq.PERSONALIZATION)),
-            k = (0, tx.TF)(d?.id, { shouldFetch: w || M }),
+            b = (0, tH.A)(m?.id),
+            D = t$(m, E, f),
+            { enabled: L } = tx.useConfig({ location: "activity-panel" }),
+            w = (0, tU.Bp)("activity-panel"),
+            M = (0, tP.C$)(a ?? void 0, "activity-panel"),
+            x = (0, _.bG)([tW.A], () => tW.A.hasConsented(U.YAq.PERSONALIZATION)),
+            k = (0, tU.TF)(d?.id, { shouldFetch: w || M }),
             G = L && x && k,
             F = G && w,
             V = G && M,
@@ -718,7 +727,7 @@ let t$ = s.memo(function (e) {
             H = s.useCallback(
                 (e, t) => () => {
                     (0, ep.X)(O, ep.O.LEAVE_ACTIVITY),
-                        tf.A.leaveActivity({ location: t, applicationId: e, showFeedback: !0 });
+                        th.A.leaveActivity({ location: t, applicationId: e, showFeedback: !0 });
                 },
                 [O],
             ),
@@ -729,12 +738,12 @@ let t$ = s.memo(function (e) {
                 [O],
             ),
             Y = s.useCallback(() => {
-                (0, tD.A)(t);
+                (0, tL.A)(t);
             }, [t]),
             W = s.useCallback(() => {
-                (0, tr.openModalLazy)(async () => {
+                (0, ts.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("95840"),
+                        n.e("80203"),
                         n.e("17918"),
                         n.e("76171"),
                         n.e("86672"),
@@ -749,15 +758,15 @@ let t$ = s.memo(function (e) {
                         (0, r.jsx)(e, {
                             ...t,
                             sourcePID: d?.pid,
-                            selectSource: null != e4.A.getVoiceChannelId(),
+                            selectSource: null != e5.A.getVoiceChannelId(),
                             analyticsLocations: R,
                         });
                 });
             }, [d, R]),
             K = m?.name ?? d?.name ?? "",
             z = s.useCallback(() => {
-                (0, tw.pK)({ gameApplicationId: d?.id, buttonVariant: "admin" }),
-                    (0, tr.openModalLazy)(async () => {
+                (0, tM.pK)({ gameApplicationId: d?.id, buttonVariant: "admin" }),
+                    (0, ts.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([n.e("42209"), n.e("37084"), n.e("74132")]).then(
                             n.bind(n, 279871),
                         );
@@ -766,8 +775,8 @@ let t$ = s.memo(function (e) {
             }, [K, d?.id]),
             q = s.useCallback(() => {
                 u()(null != a, "Received null guildId"),
-                    (0, tw.pK)({ gameApplicationId: d?.id, buttonVariant: "member" }),
-                    (0, tL.A)({ analyticsLocations: R, analyticsLocation: g.location, guildId: a });
+                    (0, tM.pK)({ gameApplicationId: d?.id, buttonVariant: "member" }),
+                    (0, tw.A)({ analyticsLocations: R, analyticsLocation: g.location, guildId: a });
             }, [a, R, g.location, d?.id]),
             Z = s.useRef(null),
             [X, Q] = s.useState(!1);
@@ -783,15 +792,15 @@ let t$ = s.memo(function (e) {
         let J =
                 b?.guildId == null || null == m
                     ? null
-                    : (0, r.jsx)(tX, { guildId: b.guildId, applicationId: b.id, applicationName: b.name }),
+                    : (0, r.jsx)(tQ, { guildId: b.guildId, applicationId: b.id, applicationName: b.name }),
             ee = F
-                ? (0, r.jsx)(tZ, {
-                      tooltipText: $.intl.formatToPlainString(tk.default.YhnUVO, { gameName: K }),
+                ? (0, r.jsx)(tX, {
+                      tooltipText: $.intl.formatToPlainString(tG.default.YhnUVO, { gameName: K }),
                       onClick: z,
-                      onViewed: () => (0, tw.ET)({ gameApplicationId: d?.id, buttonVariant: "admin" }),
+                      onViewed: () => (0, tM.ET)({ gameApplicationId: d?.id, buttonVariant: "admin" }),
                       renderCoachmark: (e) => {
                           let { targetElementRef: t, markAsDismissed: n, markBadgeAsDismissed: i } = e;
-                          return (0, r.jsx)(tF, {
+                          return (0, r.jsx)(tV, {
                               gameName: K,
                               runningGameId: d?.id,
                               targetElementRef: t,
@@ -803,13 +812,13 @@ let t$ = s.memo(function (e) {
                       },
                   })
                 : V
-                  ? (0, r.jsx)(tZ, {
-                        tooltipText: $.intl.formatToPlainString(tk.default.lwwiHE, { gameName: K }),
+                  ? (0, r.jsx)(tX, {
+                        tooltipText: $.intl.formatToPlainString(tG.default.lwwiHE, { gameName: K }),
                         onClick: q,
-                        onViewed: () => (0, tw.ET)({ gameApplicationId: d?.id, buttonVariant: "member" }),
+                        onViewed: () => (0, tM.ET)({ gameApplicationId: d?.id, buttonVariant: "member" }),
                         renderCoachmark: (e) => {
                             let { targetElementRef: t, markAsDismissed: n, markBadgeAsDismissed: i } = e;
-                            return (0, r.jsx)(tV, {
+                            return (0, r.jsx)(tB, {
                                 gameName: K,
                                 runningGameId: d?.id,
                                 targetElementRef: t,
@@ -831,56 +840,56 @@ let t$ = s.memo(function (e) {
                           (t = () => {
                               Y(), (0, ep.X)(O, ep.O.STREAM, !1);
                           }),
-                          (n = ts.G),
+                          (n = ta.G),
                           (s = $.intl.string($.t.S5anIc)))
                         : c
                           ? ((e = !1),
                             (t = () => {
                                 W(), (0, ep.X)(O, ep.O.STREAM, !0);
                             }),
-                            (n = ta.F),
+                            (n = to.F),
                             (s =
                                 null != d
                                     ? $.intl.formatToPlainString($.t.AB5gTy, { game: d.name })
                                     : $.intl.string($.t.FeUKeA)))
                           : ((e = !0),
                             (t = null),
-                            (n = ta.F),
-                            null != l && (0, eq.gV)(l.type) && (s = $.intl.string($.t.uQn9B8))),
+                            (n = to.F),
+                            null != l && (0, eZ.gV)(l.type) && (s = $.intl.string($.t.uQn9B8))),
                     (0, r.jsx)("div", {
-                        className: tK.IF,
-                        children: (0, r.jsx)(tA.A, { tooltipText: s, disabled: e, onClick: t, icon: n }),
+                        className: tz.IF,
+                        children: (0, r.jsx)(tI.A, { tooltipText: s, disabled: e, onClick: t, icon: n }),
                     })
                 );
             })(),
             en =
                 D && null == f
-                    ? (0, r.jsx)(tA.A, { ref: I, tooltipText: $.intl.string($.t["hC/Zey"]), onClick: B, icon: to.D })
+                    ? (0, r.jsx)(tI.A, { ref: I, tooltipText: $.intl.string($.t["hC/Zey"]), onClick: B, icon: tl.D })
                     : null,
             ei =
                 null == f
                     ? null
-                    : (0, r.jsx)(tA.A, {
+                    : (0, r.jsx)(tI.A, {
                           tooltipText: $.intl.string($.t["R/FK4A"]),
                           onClick: H(f.applicationId, f.location),
-                          icon: tl.o,
+                          icon: tu.o,
                       }),
             es =
                 null == h
                     ? null
-                    : (0, r.jsx)(tA.A, {
+                    : (0, r.jsx)(tI.A, {
                           tooltipText: $.intl.string($.t["R/FK4A"]),
                           onClick: j(h.applicationId),
-                          icon: tl.o,
+                          icon: tu.o,
                       }),
-            eo = null == t ? null : (0, r.jsx)(tb, {}),
+            eo = null == t ? null : (0, r.jsx)(tD, {}),
             el =
                 !N || y
                     ? null
-                    : (0, r.jsx)(tq, {
+                    : (0, r.jsx)(tZ, {
                           runningGame: d,
                           startAuthorization: () => {
-                              S({ analyticsLocations: R }) === tW._M.RPC &&
+                              S({ analyticsLocations: R }) === tK._M.RPC &&
                                   (Q(!0),
                                   null != Z.current && clearTimeout(Z.current),
                                   (Z.current = setTimeout(() => {
@@ -907,11 +916,11 @@ let t$ = s.memo(function (e) {
                       });
         return null == et && null == en && null == ei && null == es && null == el && null == J && null == ee
             ? null
-            : (0, r.jsxs)("div", { className: tK.o1, children: [J ?? el ?? en, ee, et, ei ?? es ?? eo, eu] });
+            : (0, r.jsxs)("div", { className: tz.o1, children: [J ?? el ?? en, ee, et, ei ?? es ?? eo, eu] });
     }),
-    tq = s.forwardRef(function (e, t) {
+    tZ = s.forwardRef(function (e, t) {
         let { runningGame: n, startAuthorization: i, connectionApp: s } = e;
-        return (0, r.jsx)(tA.A, {
+        return (0, r.jsx)(tI.A, {
             ref: t,
             onClick: () => {
                 P.default.track(U.HAw.ACTIVITY_PANEL_BUTTON_CLICKED, {
@@ -921,18 +930,18 @@ let t$ = s.memo(function (e) {
                 }),
                     i();
             },
-            icon: ti.A,
+            icon: tr.A,
             tooltipText: $.intl.string($.t.sbdnpw),
         });
     });
-function tZ(e) {
+function tX(e) {
     let { tooltipText: t, onClick: n, onViewed: i, renderCoachmark: a } = e,
         o = s.useRef(null),
         l = s.useRef(!1);
     s.useEffect(() => {
         l.current || ((l.current = !0), i());
     }, [i]);
-    let u = (0, td.A)(),
+    let u = (0, t_.A)(),
         { isQuestBarEmpty: c, hasLoadedQuestBar: d } = (0, D.c9)(),
         [_, h] = (0, eg.kn)(!u && c && d ? [f.M.GAME_DETECTION_CREATE_GAME_SERVER_COACHMARK] : [], void 0, !0),
         [p, E] = (0, eg.kn)([f.M.GAME_SERVER_GAME_DETECTION_UPSELL_NEW_BADGE], void 0, !0),
@@ -942,19 +951,19 @@ function tZ(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: tK.IF,
+                className: tz.IF,
                 children: [
-                    (0, r.jsx)("div", { className: tK.uD, children: (0, r.jsx)("div", { className: tK.Z9 }) }),
-                    (0, r.jsx)(tA.A, { ref: o, tooltipText: t, onClick: m, icon: tu._ }),
+                    (0, r.jsx)("div", { className: tz.uD, children: (0, r.jsx)("div", { className: tz.Z9 }) }),
+                    (0, r.jsx)(tI.A, { ref: o, tooltipText: t, onClick: m, icon: tc._ }),
                     p === f.M.GAME_SERVER_GAME_DETECTION_UPSELL_NEW_BADGE &&
-                        (0, r.jsx)(th.a, { top: 2, right: 2, alert: !0 }),
+                        (0, r.jsx)(tp.a, { top: 2, right: 2, alert: !0 }),
                 ],
             }),
             null != _ && a({ targetElementRef: o, markAsDismissed: h, markBadgeAsDismissed: E }),
         ],
     });
 }
-function tX(e) {
+function tQ(e) {
     let { applicationId: t, guildId: n, applicationName: i } = e,
         a = s.useRef(null);
     s.useEffect(() => {
@@ -962,10 +971,10 @@ function tX(e) {
     }, [t]);
     let [o, l] = (0, eg.kn)([f.M.GAME_SHOP_RTC_POPOVER], er.m.ACCOUNT_NAME_ZONE, !0),
         u = s.useCallback(() => {
-            (0, tH.X)({ guildId: n });
+            (0, tj.X)({ guildId: n });
         }, [n]),
         c = s.useCallback(() => {
-            (0, tH.default)({ guildId: n }), l(er.i.USER_DISMISS);
+            (0, tj.default)({ guildId: n }), l(er.i.USER_DISMISS);
         }, [n, l]),
         d = s.useCallback(() => {
             P.default.track(U.HAw.RTC_GAME_SHOP_BUTTON_CLICKED, { application_id: t }), c();
@@ -975,15 +984,15 @@ function tX(e) {
         }, [l]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(tA.A, {
+            (0, r.jsx)(tI.A, {
                 tooltipText: $.intl.string($.t.vyaWs7),
                 onClick: d,
                 onMouseDown: u,
-                icon: tc.U,
+                icon: td.U,
                 ref: a,
             }),
             o === f.M.GAME_SHOP_RTC_POPOVER
-                ? (0, r.jsx)(tj.A, {
+                ? (0, r.jsx)(tY.A, {
                       onActionClick: c,
                       onRequestClose: _,
                       targetElementRef: a,
@@ -997,45 +1006,45 @@ function tX(e) {
         ],
     });
 }
-var tQ = n(428689),
-    tJ = n(673294);
-function t0(e) {
+var tJ = n(428689),
+    t0 = n(673294);
+function t1(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(E.D, {
-        className: tJ.kL,
+        className: t0.kL,
         onClick: t,
         children: (0, r.jsx)(k.E, {
-            className: tJ.P_,
+            className: t0.P_,
             variant: "text-xs/medium",
             color: "text-subtle",
             children: $.intl.string($.t.jfrLLb),
         }),
     });
 }
-function t1(e) {
+function t2(e) {
     let { onClick: t } = e,
         n = L.tz.useSetting(),
         i = (0, _.bG)([M.A], () => M.A.getStatus());
-    return __OVERLAY__ || (n && i !== U.clD.INVISIBLE) ? null : (0, r.jsx)(t0, { onClick: t });
+    return __OVERLAY__ || (n && i !== U.clD.INVISIBLE) ? null : (0, r.jsx)(t1, { onClick: t });
 }
-var t2 = n(409626),
-    t3 = n(692969),
-    t6 = n(379414);
-function t4(e) {
+var t3 = n(409626),
+    t6 = n(692969),
+    t4 = n(379414);
+function t5(e) {
     let { name: t, applicationId: n } = e,
-        i = (0, t3.A)({
+        i = (0, t6.A)({
             location: "ActivityPanelGameCard",
             applicationId: n,
-            source: t2.Ob.RtcPanel,
+            source: t3.Ob.RtcPanel,
             trackEntryPointImpression: !0,
         });
     return (0, r.jsx)(E.D, {
         onClick: i,
-        className: o()(null != i && t6.On),
-        children: (0, r.jsx)(tn.A, { className: t6.mO, children: t }),
+        className: o()(null != i && t4.On),
+        children: (0, r.jsx)(ti.A, { className: t4.mO, children: t }),
     });
 }
-function t5(e) {
+function t7(e) {
     let t,
         n,
         {
@@ -1061,13 +1070,13 @@ function t5(e) {
             });
         }, [t, n]),
         (0, r.jsxs)("div", {
-            className: t6.cm,
+            className: t4.cm,
             children: [
                 (0, r.jsxs)("div", {
-                    className: t6.f9,
+                    className: t4.f9,
                     children: [
-                        (0, r.jsx)(eL.A, { className: t6.Gt, game: a, pid: o?.pid, ref: d }),
-                        i ? (0, r.jsx)(tQ.n, { size: "md", color: "currentColor", className: t6.it }) : null,
+                        (0, r.jsx)(eL.A, { className: t4.Gt, game: a, pid: o?.pid, ref: d }),
+                        i ? (0, r.jsx)(tJ.n, { size: "md", color: "currentColor", className: t4.it }) : null,
                     ],
                 }),
                 (0, r.jsx)(es, {
@@ -1076,11 +1085,11 @@ function t5(e) {
                     setIsForceShowSharingPopout: c,
                     hidePopout: !h,
                     children: (0, r.jsxs)("div", {
-                        className: t6.pq,
+                        className: t4.pq,
                         children: [
-                            null != p ? (0, r.jsx)(t4, { name: p, applicationId: a?.id }) : null,
+                            null != p ? (0, r.jsx)(t5, { name: p, applicationId: a?.id }) : null,
                             h
-                                ? (0, r.jsx)(t1, { onClick: l })
+                                ? (0, r.jsx)(t2, { onClick: l })
                                 : (0, r.jsx)(k.E, {
                                       variant: "text-xs/medium",
                                       color: "text-subtle",
@@ -1093,9 +1102,9 @@ function t5(e) {
         })
     );
 }
-var t7 = n(5867),
-    t8 = n(165610);
-let t9 = {
+var t8 = n(5867),
+    t9 = n(165610);
+let ne = {
     "356942674672091136": "398627612299362304",
     "1402418491272986635": "302094807046684672",
     "1402418571715543120": "187363008610041857",
@@ -1122,11 +1131,11 @@ let t9 = {
     "1121201675240210523": "884849473329692723",
     "1402418594532298837": "560127830160048128",
 };
-var ne = n(911070),
-    nt = n(490696),
-    nn = n(268920),
-    ni = n(633217);
-function nr(e) {
+var nt = n(911070),
+    nn = n(490696),
+    ni = n(268920),
+    nr = n(633217);
+function ns(e) {
     let t,
         n,
         {
@@ -1139,7 +1148,7 @@ function nr(e) {
             analyticsLocations: d,
             accountLinkButtonRef: _,
         } = e,
-        f = te.useConfig({ location: "ActivityPanelGameCard" }),
+        f = tt.useConfig({ location: "ActivityPanelGameCard" }),
         E = (0, ec.useRiotSocialSDKMigrationDefaultBody)({ location: "ActivityPanelGameCard" }),
         m = a ? o : i,
         g = null == m;
@@ -1162,7 +1171,7 @@ function nr(e) {
     let A = $.intl.formatToPlainString(f.altTitle ? $.t.hUbQT2 : $.t["lo6H6+"], { gameName: m.name }),
         I = $.intl.string(E ?? (f.altBody ? $.t["JKqu+4"] : $.t.qYAzOp)),
         T = $.intl.string(f.altCta ? $.t.jynBQ5 : $.t.lw71Nf);
-    a && (T = $.intl.string(ne.default["2cOIOr"]));
+    a && (T = $.intl.string(nt.default["2cOIOr"]));
     let S = [
         {
             text: T,
@@ -1174,8 +1183,8 @@ function nr(e) {
     return (
         a &&
             ((t = "beta"),
-            (A = $.intl.formatToPlainString(ne.default.dPuaZE, { applicationName: m.name })),
-            (I = $.intl.string(ne.default.jR3bbS)),
+            (A = $.intl.formatToPlainString(nt.default.dPuaZE, { applicationName: m.name })),
+            (I = $.intl.string(nt.default.jR3bbS)),
             (n = {
                 text: $.intl.string($.t.hvVgAZ),
                 link: "https://www.riotgames.com/integrating-with-discord",
@@ -1202,7 +1211,7 @@ function nr(e) {
         })
     );
 }
-function ns(e) {
+function na(e) {
     let t,
         { incentivizedAccountLinkingRewarded: n, markAsDismissed: i, accountLinkUpsellTargetRef: s } = e,
         a = $.intl.string($.t.MxAlrB),
@@ -1211,15 +1220,15 @@ function ns(e) {
             {
                 text: $.intl.string($.t.aRIFWD),
                 onClick: () => {
-                    i(er.i.TAKE_ACTION), window.open(e8.A.getArticleURL(U.MVz.IN_GAME_FEATURES), "_blank");
+                    i(er.i.TAKE_ACTION), window.open(e9.A.getArticleURL(U.MVz.IN_GAME_FEATURES), "_blank");
                 },
             },
         ];
     return (
         n &&
-            ((a = $.intl.string(ne.default.ublzTG)),
-            (o = $.intl.string(ne.default.JgM2xu)),
-            (t = { type: "video", src: ni.A, fallbackImageSrc: nn.A, aspectRatio: "2/1", loop: !0 })),
+            ((a = $.intl.string(nt.default.ublzTG)),
+            (o = $.intl.string(nt.default.JgM2xu)),
+            (t = { type: "video", src: nr.A, fallbackImageSrc: ni.A, aspectRatio: "2/1", loop: !0 })),
         (0, r.jsx)(p.A, {
             graphic: t,
             title: a,
@@ -1234,7 +1243,7 @@ function ns(e) {
         })
     );
 }
-function na(e) {
+function no(e) {
     let {
         activity: t,
         game: n,
@@ -1274,7 +1283,7 @@ function na(e) {
         ],
     });
 }
-function no(e) {
+function nl(e) {
     let {
             popover: t,
             dismissPopover: n,
@@ -1297,7 +1306,7 @@ function no(e) {
             let { connectionApp: t } = e,
                 n = (0, ec.useIsRiotSocialSDKMigrationEnabled)({ location: "ActivityPanelGameCard" }),
                 { data: i } = (0, e_.YY)(t?.parentId ?? t?.id);
-            return { isEligible: n && null != t && tW.YJ.has(t.id), displayedApp: i };
+            return { isEligible: n && null != t && tK.YJ.has(t.id), displayedApp: i };
         })({ connectionApp: a }),
         { rewarded: S } = (function (e) {
             let { isEligible: t, hasAlreadyLinked: n, didStartAuthorization: i, application: r } = e,
@@ -1307,7 +1316,7 @@ function no(e) {
                     if (!t || !n || !i || a || null == r) return;
                     let e = !1;
                     return (
-                        (0, eH.RI)({
+                        (0, ej.RI)({
                             applicationId: r.id,
                             onSuccess: () => {
                                 e || o(!0);
@@ -1324,7 +1333,7 @@ function no(e) {
         })({ isEligible: I, hasAlreadyLinked: c, didStartAuthorization: d, application: a });
     switch (t) {
         case 0:
-            return (0, r.jsx)(nr, {
+            return (0, r.jsx)(ns, {
                 application: i,
                 connectionApp: a,
                 isEligibleForIncentivizedAccountLinking: I,
@@ -1335,13 +1344,13 @@ function no(e) {
                 accountLinkButtonRef: p,
             });
         case 1:
-            return (0, r.jsx)(ns, {
+            return (0, r.jsx)(na, {
                 incentivizedAccountLinkingRewarded: S,
                 markAsDismissed: n,
                 accountLinkUpsellTargetRef: f,
             });
         case 2:
-            return (0, r.jsx)(na, {
+            return (0, r.jsx)(no, {
                 activity: o,
                 game: l,
                 markAsDismissed: n,
@@ -1364,11 +1373,11 @@ function no(e) {
             return null;
     }
 }
-let nl = (0, S.A)(function (e) {
+let nu = (0, S.A)(function (e) {
     let { message: t } = e;
-    return (0, r.jsx)(tt.A, { children: t });
+    return (0, r.jsx)(tn.A, { children: t });
 });
-function nu(e) {
+function nc(e) {
     let t,
         {
             application: n,
@@ -1391,52 +1400,52 @@ function nu(e) {
             u()(null != s, "Channel cannot be null during navigation click"),
                 T.A.channelListScrollTo(s.guild_id ?? U.ME, s.id),
                 !f &&
-                    ((0, eq.gV)(s.type) &&
+                    ((0, eZ.gV)(s.type) &&
                         I.A.selectParticipant(
                             s.id,
                             (0, eh.Qt)({ applicationId: i.applicationId, instanceId: i.compositeInstanceId }),
                         ),
-                    (0, eq.pQ)(s.type) && (0, v.gk)(t7.Gd.PANEL));
+                    (0, eZ.pQ)(s.type) && (0, v.gk)(t8.Gd.PANEL));
         },
         m = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(eL.A, { className: nt.Gt, game: n, size: eL.M.SMALL, ref: d }),
+                (0, r.jsx)(eL.A, { className: nn.Gt, game: n, size: eL.M.SMALL, ref: d }),
                 (0, r.jsx)(es, {
                     popoutTargetRef: _,
                     isForceShowSharingPopout: l,
                     setIsForceShowSharingPopout: c,
                     children: (0, r.jsxs)("div", {
-                        className: nt.pq,
+                        className: nn.pq,
                         children: [
-                            (0, r.jsx)(eB.A, {
+                            (0, r.jsx)(eH.A, {
                                 href: t,
                                 onClick: () => {
                                     E(), f && g.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
                                 },
-                                children: (0, r.jsx)(tn.A, { className: nt._W, children: n.name }),
+                                children: (0, r.jsx)(ti.A, { className: nn._W, children: n.name }),
                             }),
-                            null != s && (0, eq.pQ)(s.type)
-                                ? (0, r.jsx)(eB.A, {
+                            null != s && (0, eZ.pQ)(s.type)
+                                ? (0, r.jsx)(eH.A, {
                                       href: t,
                                       onClick: E,
-                                      children: (0, r.jsx)(tt.A, { className: nt.Ix, children: p }),
+                                      children: (0, r.jsx)(tn.A, { className: nn.Ix, children: p }),
                                   })
-                                : (0, r.jsx)(nl, { timestamps: h }),
+                                : (0, r.jsx)(nu, { timestamps: h }),
                         ],
                     }),
                 }),
             ],
         });
-    return (0, r.jsx)("div", { className: nt.cm, children: m });
+    return (0, r.jsx)("div", { className: nn.cm, children: m });
 }
-function nc(e) {
+function nd(e) {
     let { frame: t, application: n, accountLinkUpsellTargetRef: i, isActivityPopoutOpen: a } = e,
         o = s.useMemo(() => ({ start: t.connectedSince }), [t.connectedSince]),
         l = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(eL.A, { className: nt.Gt, game: n, size: eL.M.SMALL, ref: i }),
+                (0, r.jsx)(eL.A, { className: nn.Gt, game: n, size: eL.M.SMALL, ref: i }),
                 (0, r.jsxs)("div", {
-                    className: nt.pq,
+                    className: nn.pq,
                     children: [
                         (0, r.jsx)(E.D, {
                             onClick: () => {
@@ -1444,40 +1453,40 @@ function nc(e) {
                                     ? g.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" })
                                     : eA.A.updateFrameLayoutMode({
                                           applicationId: t.applicationId,
-                                          layoutMode: t8.y.FOCUSED,
+                                          layoutMode: t9.y.FOCUSED,
                                       });
                             },
                             onMouseDown: (e) => {
                                 e.stopPropagation();
                             },
-                            className: nt.rB,
-                            children: (0, r.jsx)(tn.A, { className: nt._W, children: n.name }),
+                            className: nn.rB,
+                            children: (0, r.jsx)(ti.A, { className: nn._W, children: n.name }),
                         }),
-                        (0, r.jsx)(nl, { timestamps: o }),
+                        (0, r.jsx)(nu, { timestamps: o }),
                     ],
                 }),
             ],
         });
-    return (0, r.jsx)("div", { className: nt.cm, children: l });
+    return (0, r.jsx)("div", { className: nn.cm, children: l });
 }
-function nd(e) {
+function n_(e) {
     let { streamMetadata: t, accountLinkUpsellTargetRef: n, streamQualityIndicator: i } = e,
-        { title: s, sanitizedTitle: a } = (0, eG.A)(t);
+        { title: s, sanitizedTitle: a } = (0, eF.A)(t);
     return (0, r.jsxs)("div", {
-        className: nt.cm,
+        className: nn.cm,
         ref: n,
         children: [
-            (0, r.jsx)(eF.A, { title: a, icon: t?.sourceIcon }),
+            (0, r.jsx)(eV.A, { title: a, icon: t?.sourceIcon }),
             (0, r.jsxs)("div", {
-                className: nt.pq,
+                className: nn.pq,
                 children: [
-                    (0, r.jsx)(tn.A, { children: s }),
+                    (0, r.jsx)(ti.A, { children: s }),
                     null != i &&
                         (0, r.jsxs)("div", {
-                            className: nt.qi,
+                            className: nn.qi,
                             children: [
                                 (0, r.jsx)(m.t, { size: "xxs", color: em.k0.PREMIUM_TIER_2 }),
-                                (0, r.jsx)(e$, { className: nt.s, variant: "text-xxs/semibold", children: i }),
+                                (0, r.jsx)(eq, { className: nn.s, variant: "text-xxs/semibold", children: i }),
                             ],
                         }),
                 ],
@@ -1485,13 +1494,13 @@ function nd(e) {
         ],
     });
 }
-let n_ = (0, N.A)(function (e) {
+let nf = (0, N.A)(function (e) {
     let { guildId: t, analyticsContext: n, className: i } = e,
         a = s.useRef(null),
         l = s.useRef(null),
         u = s.useRef(null),
-        c = (0, _.bG)([eX.default], () => eX.default.getId()),
-        h = (0, _.bG)([ey.Ay, e7.A], () => (0, eV.A)(ey.Ay, e7.A)),
+        c = (0, _.bG)([eQ.default], () => eQ.default.getId()),
+        h = (0, _.bG)([ey.Ay, e8.A], () => (0, eB.A)(ey.Ay, e8.A)),
         { allowAccountLinkingUpsellPostGameClose: p } = eu.useConfig({ location: "ActivityPanelGameCard" }),
         { enabled: E } = eN.useConfig({ location: "ActivityPanelGameCard" }),
         { previouslyRunningGame: m, isWithinThreshold: A } = (function (e) {
@@ -1515,14 +1524,14 @@ let n_ = (0, N.A)(function (e) {
             let a = n - r.endedAt;
             return { previouslyRunningGame: r, isWithinThreshold: t && a < eD };
         })({ enabled: p || E }),
-        I = (0, _.bG)([e4.A, eQ.A], () => eQ.A.getChannel(e4.A.getVoiceChannelId())),
+        I = (0, _.bG)([e5.A, eJ.A], () => eJ.A.getChannel(e5.A.getVoiceChannelId())),
         T = (0, _.bG)([O.Ay], () => O.Ay.getConnectedActivityChannelId()),
-        S = (0, _.bG)([eQ.A], () => eQ.A.getChannel(T)),
-        N = (0, _.bG)([e0.A], () => e0.A.getGuild(S?.guild_id)),
-        [C, v] = (0, _.yK)([eZ.A], () => [eZ.A.getCurrentUserActiveStream(), eZ.A.getStreamerActiveStreamMetadata()]),
+        S = (0, _.bG)([eJ.A], () => eJ.A.getChannel(T)),
+        N = (0, _.bG)([e1.A], () => e1.A.getGuild(S?.guild_id)),
+        [C, v] = (0, _.yK)([eX.A], () => [eX.A.getCurrentUserActiveStream(), eX.A.getStreamerActiveStreamMetadata()]),
         R = (0, _.bG)([O.Ay], () => O.Ay.getCurrentEmbeddedActivity()),
         b = (0, _.bG)([eI.A], () => eI.A.getConnectedFrame()),
-        L = (0, _.bG)([e0.A, e2.A], () => null == I || eU.vz(I, e0.A, e2.A, !1)),
+        L = (0, _.bG)([e1.A, e3.A], () => null == I || ek.vz(I, e1.A, e3.A, !1)),
         [w] = (0, ef.A)([
             (function () {
                 if (null != v && null != v.id) return v.id;
@@ -1534,23 +1543,23 @@ let n_ = (0, N.A)(function (e) {
         ]),
         M =
             ((0, _.bG)([O.Ay], () => O.Ay.getCurrentEmbeddedActivity()),
-            (0, _.bG)([e1.Ay], () => (0, ek.A)(e1.Ay) && (0, e9.isWindows)()) || !1),
-        x = (0, _.bG)([e3.A], () => (null != c ? e3.A.findActivity(c, (e) => e.type === U.$pd.PLAYING) : null)),
+            (0, _.bG)([e2.Ay], () => (0, eG.A)(e2.Ay) && (0, te.isWindows)()) || !1),
+        x = (0, _.bG)([e6.A], () => (null != c ? e6.A.findActivity(c, (e) => e.type === U.$pd.PLAYING) : null)),
         k = null != C && C.ownerId === c && C.state !== U.XYD.ENDED,
-        G = (0, _.bG)([e5.default, e6.A], () => (null != S ? (0, eE.m1)(S, e5.default, e6.A) : void 0)),
+        G = (0, _.bG)([e7.default, e4.A], () => (null != S ? (0, eE.m1)(S, e7.default, e4.A) : void 0)),
         F = (function () {
-            let { resolution: e, fps: t } = (0, _.cf)([eY.A], () => eY.A.getState());
-            if (e !== eK.on.RESOLUTION_720 || t === eK.kn.FPS_60) return `${(0, eK.zr)(e)} ${(0, eW.Bs)(t)}`;
+            let { resolution: e, fps: t } = (0, _.cf)([eW.A], () => eW.A.getState());
+            if (e !== ez.on.RESOLUTION_720 || t === ez.kn.FPS_60) return `${(0, ez.zr)(e)} ${(0, eK.Bs)(t)}`;
         })(),
         [V, B] = s.useState(!1),
-        H = (0, _.bG)([ej.A], () => ej.A.getWindowOpen(U.MLl.ACTIVITY_POPOUT)),
+        H = (0, _.bG)([eY.A], () => eY.A.getWindowOpen(U.MLl.ACTIVITY_POPOUT)),
         { parentAnalyticsLocation: j, analyticsLocations: Y } = (0, ea.Ay)(),
         {
             hasAlreadyLinked: W,
             canStartAuthorization: K,
             connectionApp: z,
             startAuthorization: $,
-        } = (0, ed.RD)(w, { allowedFlows: [tW._M.RPC, tW._M.WEB] }),
+        } = (0, ed.RD)(w, { allowedFlows: [tK._M.RPC, tK._M.WEB] }),
         [q, Z] = s.useState(null),
         X = null != q,
         Q = s.useCallback(
@@ -1571,9 +1580,9 @@ let n_ = (0, N.A)(function (e) {
         }),
         et = s.useMemo(() => {
             let e = h?.id ?? m?.id;
-            return null != e ? t9[e] : void 0;
+            return null != e ? ne[e] : void 0;
         }, [h?.id, m?.id]),
-        en = (0, _.bG)([eJ.A], () => null != et && eJ.A.isMember(et), [et]),
+        en = (0, _.bG)([e0.A], () => null != et && e0.A.isMember(et), [et]),
         ei = E && null != et && !en && (null != h || A) ? et : void 0,
         [es, eo] = (function (e) {
             let {
@@ -1597,38 +1606,96 @@ let n_ = (0, N.A)(function (e) {
                             dismissibleContent: i,
                             dismissibleContentGroupName: r,
                             bypassAutoDismiss: a = !1,
+                            cooldownConfig: o,
                         } = e,
-                        o = (0, _.bG)([ex], () => (null != t ? ex.getGameUpsellDismissal(t.id, i) : null)),
-                        [l, u] = (0, s.useState)(!1);
-                    (0, s.useEffect)(() => {
-                        let e =
-                                null != o
-                                    ? o.dismissedAt + Math.min(864e5 * Math.pow(2, o.timesDismissed - 1), 24192e5)
-                                    : 0,
-                            t = 0,
-                            n = () => {
-                                u(Date.now() >= e);
-                                let i = Math.min(e - Date.now(), U.mnr);
-                                i > 0 && (t = setTimeout(n, i));
-                            };
-                        return n(), () => clearTimeout(t);
-                    }, [o]);
-                    let c = !n && null != t && l,
-                        [d, f] = (0, eg.Wl)(c ? i : null, { cooldownDurationMs: 864e5 }, r, a);
-                    return {
-                        shouldShow: d === i,
-                        markAsDismissed: (e) => {
-                            if (null != t) {
-                                var n;
-                                (n = t.id),
+                        { eligibleToShow: l, markAsDismissed: u } = (function (e) {
+                            let {
+                                    applications: t,
+                                    disabled: n = !1,
+                                    dismissibleContent: i,
+                                    dismissibleContentGroupName: r,
+                                    bypassAutoDismiss: a = !1,
+                                    cooldownConfig: o,
+                                } = e,
+                                l = (0, _.yK)([ex], () => t.map((e) => ex.getGameUpsellDismissal(e.id, i))),
+                                [u, c] = (0, s.useState)(() => new Set());
+                            (0, s.useEffect)(() => {
+                                let e = t.map((e, t) => {
+                                        var n;
+                                        return {
+                                            id: e.id,
+                                            nextTime:
+                                                ((n = l[t]),
+                                                null == n
+                                                    ? 0
+                                                    : n.dismissedAt +
+                                                      Math.min(
+                                                          o.perGameInitialCooldownMs *
+                                                              Math.pow(
+                                                                  o.perGameCooldownBackoffBase,
+                                                                  n.timesDismissed - 1,
+                                                              ),
+                                                          o.perGameMaxCooldownMs,
+                                                      )),
+                                        };
+                                    }),
+                                    n = 0,
+                                    i = () => {
+                                        let t = Date.now();
+                                        c(
+                                            new Set(
+                                                e
+                                                    .filter((e) => {
+                                                        let { nextTime: n } = e;
+                                                        return t >= n;
+                                                    })
+                                                    .map((e) => {
+                                                        let { id: t } = e;
+                                                        return t;
+                                                    }),
+                                            ),
+                                        );
+                                        let r = e
+                                            .map((e) => {
+                                                let { nextTime: t } = e;
+                                                return t;
+                                            })
+                                            .filter((e) => e > t);
+                                        r.length > 0 && (n = setTimeout(i, Math.min(Math.min(...r) - t, U.mnr)));
+                                    };
+                                return i(), () => clearTimeout(n);
+                            }, [t, l, o]);
+                            let d = n ? [] : t.filter((e) => u.has(e.id)).map((e) => e.id),
+                                [f, h] = (0, eg.Wl)(
+                                    d.length > 0 ? i : null,
+                                    { cooldownDurationMs: o.globalCooldownMs },
+                                    r,
+                                    a,
+                                );
+                            return {
+                                eligibleToShow: f === i ? d : [],
+                                markAsDismissed: (e, t) => {
                                     g.h.dispatch({
                                         type: "GAME_UPSELL_DISMISS",
-                                        applicationId: n,
+                                        applicationIds: e,
                                         dismissedAt: Date.now(),
                                         dismissibleContent: i,
                                     }),
-                                    f(e);
-                            }
+                                        h(t);
+                                },
+                            };
+                        })({
+                            applications: (0, s.useMemo)(() => (null != t ? [t] : []), [t]),
+                            disabled: n,
+                            dismissibleContent: i,
+                            dismissibleContentGroupName: r,
+                            bypassAutoDismiss: a,
+                            cooldownConfig: o,
+                        });
+                    return {
+                        shouldShow: l.length > 0,
+                        markAsDismissed: (e) => {
+                            null != t && u([t.id], e);
                         },
                     };
                 })({
@@ -1637,13 +1704,14 @@ let n_ = (0, N.A)(function (e) {
                     dismissibleContent: f.M.GAME_ACCOUNT_LINK_RECURRING_UPSELL,
                     dismissibleContentGroupName: er.m.ACCOUNT_NAME_ZONE,
                     bypassAutoDismiss: !0,
+                    cooldownConfig: eU,
                 }),
                 I = !p && null != r && l,
                 T = s.useMemo(() => {
                     if (p || m) return [];
                     let e = [];
                     return (
-                        l && u && tz(t, n, i) && null == i && e.push(f.M.ACCOUNT_LINK_INVITE_FRIENDS),
+                        l && u && t$(t, n, i) && null == i && e.push(f.M.ACCOUNT_LINK_INVITE_FRIENDS),
                         null != c && t?.id != null && t?.name != null && e.push(f.M.JOIN_GAME_COMMUNITY_RTC_CTA),
                         e
                     );
@@ -1681,7 +1749,7 @@ let n_ = (0, N.A)(function (e) {
         ec = s.useCallback(
             (e, t, n) => {
                 let { isGameRunning: i } = n;
-                return (0, r.jsx)(t5, {
+                return (0, r.jsx)(t7, {
                     isStreaming: k,
                     application: e,
                     game: t,
@@ -1699,8 +1767,8 @@ let n_ = (0, N.A)(function (e) {
             () =>
                 null != h && (M || K) && (!k || v?.pid != null)
                     ? ec(w, h, { isGameRunning: !0 })
-                    : null != R && null != w && tz(w, x, R)
-                      ? (0, r.jsx)(nu, {
+                    : null != R && null != w && t$(w, x, R)
+                      ? (0, r.jsx)(nc, {
                             application: w,
                             embeddedActivity: R,
                             channel: S,
@@ -1718,14 +1786,14 @@ let n_ = (0, N.A)(function (e) {
                               let { application: t, frame: n } = e;
                               return null != t && null != n && n.applicationId === t.id;
                           })({ application: w, frame: b })
-                        ? (0, r.jsx)(nc, {
+                        ? (0, r.jsx)(nd, {
                               application: w,
                               accountLinkUpsellTargetRef: l,
                               frame: b,
                               isActivityPopoutOpen: H,
                           })
                         : k
-                          ? (0, r.jsx)(nd, {
+                          ? (0, r.jsx)(n_, {
                                 streamMetadata: v,
                                 accountLinkUpsellTargetRef: l,
                                 streamQualityIndicator: F,
@@ -1738,13 +1806,13 @@ let n_ = (0, N.A)(function (e) {
     return null == e_
         ? null
         : (0, r.jsx)("div", {
-              className: o()(nt.nd, i),
+              className: o()(nn.nd, i),
               ref: a,
               children: (0, r.jsxs)("div", {
-                  className: nt.rf,
+                  className: nn.rf,
                   children: [
                       e_,
-                      (0, r.jsx)(t$, {
+                      (0, r.jsx)(tq, {
                           stream: C,
                           canGoLive: M,
                           guildId: t,
@@ -1764,7 +1832,7 @@ let n_ = (0, N.A)(function (e) {
                           hasAlreadyLinked: W,
                           connectionApp: z,
                       }),
-                      (0, r.jsx)(no, {
+                      (0, r.jsx)(nl, {
                           popover: es,
                           dismissPopover: eo,
                           application: w,
