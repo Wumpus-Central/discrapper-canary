@@ -30,7 +30,7 @@ function u(e, t) {
         r = l(t),
         s =
             ((n = o.getConfig({ location: t }).enabled),
-            (i = a.getCurrentConfig({ guildId: e, location: t }, { autoTrackExposure: !1 }).enabled),
+            (i = a.getCurrentConfig({ guildId: e ?? void 0, location: t }, { autoTrackExposure: !1 }).enabled),
             n || i);
     return r || s;
 }

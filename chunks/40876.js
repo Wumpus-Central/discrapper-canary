@@ -855,11 +855,12 @@ let r = {
     ConversationsFetchManager: {
         actions: [
             "CHANNEL_SELECT",
-            "LOAD_MESSAGES_SUCCESS",
-            "UPDATE_VISIBLE_MESSAGES",
-            "CONVERSATIONS_FETCH_SUCCESS",
             "CHANNEL_DELETE",
+            "CONVERSATIONS_FETCH_SUCCESS",
+            "LOAD_MESSAGES_SUCCESS",
             "LOGOUT",
+            "POST_CONNECTION_OPEN",
+            "UPDATE_VISIBLE_MESSAGES",
         ],
         inlineRequire: () => n(185522).A,
         neverLoadBeforeConnectionOpen: !0,
