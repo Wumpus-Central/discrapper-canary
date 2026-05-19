@@ -7538,14 +7538,7 @@ let { Themes: c } = u.zv,
                 SIZE_XXS: { resolve: () => 12 },
             },
             mobile: {
-                CARD_DEFAULT_RADIUS: {
-                    resolve(e) {
-                        let { enabledExperiments: t } = e;
-                        if (0 === t.length) return 16;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 8;
-                        return 16;
-                    },
-                },
+                CARD_DEFAULT_RADIUS: { resolve: () => 16 },
                 CHANNEL_DETAILS_NAV_BUTTONS_GAP: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
@@ -7971,6 +7964,14 @@ let { Themes: c } = u.zv,
                         return 28;
                     },
                 },
+                GIFTING_SETTINGS_PADDING_HORIZONTAL: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 0;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 16;
+                        return 0;
+                    },
+                },
                 GROUP_AVATAR_SIZE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
@@ -8350,6 +8351,14 @@ let { Themes: c } = u.zv,
                     },
                 },
                 TABLE_ROW_ICON_SIZE: { resolve: () => 32 },
+                TABLE_ROW_LABEL_TEXT_STYLE: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return "text-md/semibold";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-md/medium";
+                        return "text-md/semibold";
+                    },
+                },
                 TABLE_ROW_PADDING: { resolve: () => 12 },
                 TAB_BAR_UNREAD_BADGE_SIZE: {
                     resolve(e) {
