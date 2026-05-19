@@ -151,13 +151,13 @@
     gap: var(--space-4)
 }
 
-.badgeTitle__6db38,
-.uppercaseItalic__6db38 {
+.badgeTitle__6db38 {
     text-transform: uppercase
 }
 
 .uppercaseItalic__6db38 {
-    font-style: italic
+    font-style: italic;
+    white-space: nowrap
 }
 
 .badgeDetails__6db38 {
