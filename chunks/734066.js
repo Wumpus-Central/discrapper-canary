@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { BW: () => p, J: () => m, L_: () => c, Pm: () => d, Vr: () => E, cx: () => h, sw: () => _ });
+n.d(t, { BW: () => p, J: () => E, L_: () => c, Pm: () => d, cx: () => h, sw: () => _ });
 var i = n(17928),
     r = n(945810),
-    s = n(235058),
+    s = n(761853),
     a = n(287809),
     o = n(428262),
     l = n(915618),
@@ -14,31 +14,12 @@ let c = (0, r.mj)({
         enableClips: !1,
         ignorePlatformRestriction: !1,
         enableScreenshotKeybind: !1,
-        enableVoiceOnlyClips: !1,
         enableAdvancedSignals: !1,
     },
     variations: {
-        1: {
-            enableClips: !0,
-            ignorePlatformRestriction: !1,
-            enableScreenshotKeybind: !1,
-            enableVoiceOnlyClips: !1,
-            enableAdvancedSignals: !1,
-        },
-        2: {
-            enableClips: !0,
-            ignorePlatformRestriction: !0,
-            enableScreenshotKeybind: !1,
-            enableVoiceOnlyClips: !0,
-            enableAdvancedSignals: !0,
-        },
-        3: {
-            enableClips: !0,
-            ignorePlatformRestriction: !0,
-            enableScreenshotKeybind: !1,
-            enableVoiceOnlyClips: !1,
-            enableAdvancedSignals: !1,
-        },
+        1: { enableClips: !0, ignorePlatformRestriction: !1, enableScreenshotKeybind: !1, enableAdvancedSignals: !1 },
+        2: { enableClips: !0, ignorePlatformRestriction: !0, enableScreenshotKeybind: !1, enableAdvancedSignals: !0 },
+        3: { enableClips: !0, ignorePlatformRestriction: !0, enableScreenshotKeybind: !1, enableAdvancedSignals: !1 },
     },
 });
 function d() {
@@ -65,10 +46,6 @@ function p() {
     return e;
 }
 function E() {
-    let { enableVoiceOnlyClips: e } = c.getConfig({ location: "areVoiceOnlyClipsEnabled" });
-    return e;
-}
-function m() {
     let { enableAdvancedSignals: e } = c.getConfig({ location: "areAdvancedSignalsEnabled" });
     return e;
 }

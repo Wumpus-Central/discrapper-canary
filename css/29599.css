@@ -277,6 +277,14 @@
     opacity: 1
 }
 
+.active_f42222 {
+    background-color: var(--control-secondary-background-hover)
+}
+
+.activeIcon_f42222 {
+    color: var(--text-link)
+}
+
 .scroller__68617 {
     margin-inline: -3px -7px;
     max-height: 132px;

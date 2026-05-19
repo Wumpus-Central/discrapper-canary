@@ -3476,9 +3476,18 @@ img.messageBadge__10651 {
     width: 100%
 }
 
-.divider__13517,
-.heading__13517,
+.heading__13517 {
+    margin-bottom: 16px
+}
+
 .row__13517 {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px
+}
+
+.divider__13517 {
     margin-bottom: 16px
 }
 
@@ -7095,12 +7104,6 @@ img.messageBadge__10651 {
 
 .spinner__1d6c7 {
     margin: 32px
-}
-
-.confettiCanvas__6c43c {
-    height: 100%;
-    position: absolute;
-    width: 100%
 }
 
 .animationContainer__884d1,
