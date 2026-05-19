@@ -1,4 +1,4 @@
-e.d(a, { default: () => O }), e(321073);
+e.d(a, { default: () => M }), e(321073);
 var n = e(627968),
     s = e(64700),
     i = e(224640),
@@ -8,40 +8,38 @@ var n = e(627968),
     o = e(17928),
     d = e(192308),
     m = e(761508),
-    g = e(821609),
-    u = e(509434),
-    x = e(71393),
-    h = e(576705),
-    v = e(853742),
-    j = e(834730),
-    N = e(534514),
-    p = e(534890),
-    f = e(782603),
-    S = e(375708);
-let C = "/assets/8b9e0ddc76afa526.png",
-    P = "/assets/16b25e0cf166698d.png",
-    b = "/assets/6011f35d14cdcf7f.png",
-    y = "/assets/52a68ae4cbfadd1b.png";
-var k = e(414438);
-function I(t) {
+    g = e(71393),
+    u = e(576705),
+    x = e(853742),
+    h = e(834730),
+    v = e(534514),
+    j = e(534890),
+    N = e(782603),
+    p = e(375708);
+let f = "/assets/8b9e0ddc76afa526.png",
+    S = "/assets/16b25e0cf166698d.png",
+    C = "/assets/6011f35d14cdcf7f.png",
+    P = "/assets/52a68ae4cbfadd1b.png";
+var b = e(414438);
+function y(t) {
     let { user: a, tagId: e, title: s, messageCount: i, reactionCount: r, activeAgo: l, tags: c, attachment: o } = t,
         { name: d, avatarSrc: m } = a;
     return (0, n.jsxs)("div", {
-        className: k.bE,
+        className: b.bE,
         children: [
             (0, n.jsxs)("div", {
                 children: [
                     (0, n.jsxs)("div", {
-                        className: k.mG,
+                        className: b.mG,
                         children: [
-                            (0, n.jsxs)(j.E, {
+                            (0, n.jsxs)(h.E, {
                                 color: "text-strong",
                                 variant: "text-xs/medium",
-                                className: k.mG,
+                                className: b.mG,
                                 children: [
                                     (0, n.jsx)("img", {
                                         src: m,
-                                        alt: S.intl.string(S.t.lqaIxI),
+                                        alt: p.intl.string(p.t.lqaIxI),
                                         width: 16,
                                         height: 16,
                                     }),
@@ -51,45 +49,45 @@ function I(t) {
                             null != e &&
                                 (0, n.jsxs)(n.Fragment, {
                                     children: [
-                                        (0, n.jsx)("span", { className: k.xE, children: "\u2022" }),
-                                        (0, n.jsx)(j.E, {
+                                        (0, n.jsx)("span", { className: b.xE, children: "\u2022" }),
+                                        (0, n.jsx)(h.E, {
                                             color: "text-strong",
                                             variant: "text-xxs/medium",
-                                            className: k.qo,
+                                            className: b.qo,
                                             children: c[e],
                                         }),
                                     ],
                                 }),
                         ],
                     }),
-                    (0, n.jsx)(N.D, {
+                    (0, n.jsx)(v.D, {
                         color: "text-strong",
                         variant: "heading-md/semibold",
-                        className: k.W0,
+                        className: b.W0,
                         children: s,
                     }),
                     (0, n.jsxs)("div", {
-                        className: k.mG,
+                        className: b.mG,
                         children: [
-                            (0, n.jsxs)(j.E, {
+                            (0, n.jsxs)(h.E, {
                                 color: "text-default",
                                 variant: "text-xs/medium",
-                                className: k.Hu,
-                                children: [(0, n.jsx)(p.o, { size: "xs", color: "currentColor", className: k.Kk }), i],
+                                className: b.Hu,
+                                children: [(0, n.jsx)(j.o, { size: "xs", color: "currentColor", className: b.Kk }), i],
                             }),
                             r > 0 &&
                                 (0, n.jsxs)(n.Fragment, {
                                     children: [
-                                        (0, n.jsx)("span", { className: k.xE, children: "\u2022" }),
-                                        (0, n.jsxs)(j.E, {
+                                        (0, n.jsx)("span", { className: b.xE, children: "\u2022" }),
+                                        (0, n.jsxs)(h.E, {
                                             color: "text-default",
                                             variant: "text-xs/medium",
-                                            className: k.Hu,
+                                            className: b.Hu,
                                             children: [
                                                 (0, n.jsx)("span", {
                                                     role: "img",
-                                                    "aria-label": S.intl.string(S.t.gHp0C4),
-                                                    className: k.Kk,
+                                                    "aria-label": p.intl.string(p.t.gHp0C4),
+                                                    className: b.Kk,
                                                     children: "\u2764\uFE0F",
                                                 }),
                                                 r,
@@ -97,8 +95,8 @@ function I(t) {
                                         }),
                                     ],
                                 }),
-                            (0, n.jsx)("span", { className: k.xE, children: "\u2022" }),
-                            (0, n.jsx)(j.E, { color: "text-default", variant: "text-xs/medium", children: l }),
+                            (0, n.jsx)("span", { className: b.xE, children: "\u2022" }),
+                            (0, n.jsx)(h.E, { color: "text-default", variant: "text-xs/medium", children: l }),
                         ],
                     }),
                 ],
@@ -106,84 +104,84 @@ function I(t) {
             null != o &&
                 (0, n.jsx)("img", {
                     src: o,
-                    alt: S.intl.formatToPlainString(S.t.MJHFt9, { name: s }),
-                    className: k.oh,
+                    alt: p.intl.formatToPlainString(p.t.MJHFt9, { name: s }),
+                    className: b.oh,
                 }),
         ],
     });
 }
-function A(t) {
+function I(t) {
     let { author: a, content: e } = t,
         { name: s, isOP: i, avatarSrc: r } = a;
     return (0, n.jsxs)("div", {
-        className: k.iU,
+        className: b.iU,
         children: [
-            (0, n.jsx)("img", { src: r, alt: S.intl.string(S.t.lqaIxI), width: 40, height: 40 }),
+            (0, n.jsx)("img", { src: r, alt: p.intl.string(p.t.lqaIxI), width: 40, height: 40 }),
             (0, n.jsxs)("div", {
                 children: [
                     (0, n.jsxs)("div", {
-                        className: k.mG,
+                        className: b.mG,
                         children: [
-                            (0, n.jsx)(j.E, { color: "text-strong", variant: "text-sm/semibold", children: s }),
-                            i && (0, n.jsx)("span", { className: k.aj, children: S.intl.string(S.t.fyE8sH) }),
+                            (0, n.jsx)(h.E, { color: "text-strong", variant: "text-sm/semibold", children: s }),
+                            i && (0, n.jsx)("span", { className: b.aj, children: p.intl.string(p.t.fyE8sH) }),
                         ],
                     }),
-                    (0, n.jsx)(j.E, { color: "text-default", variant: "text-sm/normal", children: e }),
+                    (0, n.jsx)(h.E, { color: "text-default", variant: "text-sm/normal", children: e }),
                 ],
             }),
         ],
     });
 }
-function E(t) {
+function k(t) {
     let { title: a, messages: e, maxHeight: s } = t;
     return (0, n.jsx)("div", {
-        className: k.i1,
+        className: b.i1,
         style: { maxHeight: s },
         "aria-hidden": !0,
         children: (0, n.jsxs)("div", {
-            className: k.VH,
+            className: b.VH,
             children: [
-                (0, n.jsx)(p.o, { size: "md", color: "currentColor", className: k.DD }),
-                (0, n.jsx)(N.D, { color: "text-strong", variant: "heading-lg/semibold", className: k.wx, children: a }),
+                (0, n.jsx)(j.o, { size: "md", color: "currentColor", className: b.DD }),
+                (0, n.jsx)(v.D, { color: "text-strong", variant: "heading-lg/semibold", className: b.wx, children: a }),
                 (0, n.jsx)("div", {
-                    className: k.zC,
+                    className: b.zC,
                     children: e.map((t, a) =>
                         (0, n.jsxs)(n.Fragment, {
                             children: [
-                                (0, n.jsx)(A, { ...t }, a),
+                                (0, n.jsx)(I, { ...t }, a),
                                 0 === a &&
                                     (0, n.jsxs)("div", {
                                         children: [
-                                            (0, n.jsx)("hr", { className: k.lL }),
+                                            (0, n.jsx)("hr", { className: b.lL }),
                                             (0, n.jsxs)("div", {
-                                                className: k.KY,
+                                                className: b.KY,
                                                 children: [
-                                                    (0, n.jsxs)(j.E, {
+                                                    (0, n.jsxs)(h.E, {
                                                         color: "text-brand",
                                                         variant: "text-xs/medium",
-                                                        className: k.QJ,
+                                                        className: b.QJ,
                                                         children: [
                                                             (0, n.jsx)("span", {
                                                                 role: "img",
-                                                                "aria-label": S.intl.string(S.t.gHp0C4),
-                                                                className: k.Kk,
+                                                                "aria-label": p.intl.string(p.t.gHp0C4),
+                                                                className: b.Kk,
                                                                 children: "\u2764\uFE0F",
                                                             }),
                                                             "17",
                                                         ],
                                                     }),
-                                                    (0, n.jsxs)(j.E, {
+                                                    (0, n.jsxs)(h.E, {
                                                         color: "text-muted",
                                                         variant: "text-xs/medium",
-                                                        className: k.CQ,
+                                                        className: b.CQ,
                                                         children: [
-                                                            (0, n.jsx)(f.X, { size: "xs", color: "currentColor" }),
-                                                            S.intl.string(S.t["3aOv+h"]),
+                                                            (0, n.jsx)(N.X, { size: "xs", color: "currentColor" }),
+                                                            p.intl.string(p.t["3aOv+h"]),
                                                         ],
                                                     }),
                                                 ],
                                             }),
-                                            (0, n.jsx)("hr", { className: k.N }),
+                                            (0, n.jsx)("hr", { className: b.N }),
                                         ],
                                     }),
                             ],
@@ -191,18 +189,18 @@ function E(t) {
                     ),
                 }),
                 (0, n.jsx)("div", {
-                    className: k.RW,
-                    children: (0, n.jsx)(j.E, {
+                    className: b.RW,
+                    children: (0, n.jsx)(h.E, {
                         color: "text-muted",
                         variant: "text-sm/normal",
-                        children: S.intl.string(S.t.YzpScd),
+                        children: p.intl.string(p.t.YzpScd),
                     }),
                 }),
             ],
         }),
     });
 }
-function T(t) {
+function A(t) {
     let { id: a } = t,
         [e, i] = s.useState(0),
         r = s.useRef(null),
@@ -213,160 +211,160 @@ function T(t) {
             ariaLabel: d,
         } = [
             {
-                tags: [S.intl.string(S.t["/XjSo3"]), S.intl.string(S.t["Af/56e"]), S.intl.string(S.t.LNsW0L)],
+                tags: [p.intl.string(p.t["/XjSo3"]), p.intl.string(p.t["Af/56e"]), p.intl.string(p.t.LNsW0L)],
                 posts: [
                     {
-                        user: { name: "pocketman", avatarSrc: P },
+                        user: { name: "pocketman", avatarSrc: S },
                         tagId: 2,
-                        title: S.intl.string(S.t.g1hPkw),
+                        title: p.intl.string(p.t.g1hPkw),
                         messageCount: 8,
                         reactionCount: 0,
-                        activeAgo: S.intl.formatToPlainString(S.t.N9M4N1, { count: 10 }),
+                        activeAgo: p.intl.formatToPlainString(p.t.N9M4N1, { count: 10 }),
                         attachment: "/assets/ff7fd9a90d702a25.png",
                     },
                     {
-                        user: { name: "skaterdood12", avatarSrc: C },
+                        user: { name: "skaterdood12", avatarSrc: f },
                         tagId: 1,
-                        title: S.intl.string(S.t["5GM0TY"]),
+                        title: p.intl.string(p.t["5GM0TY"]),
                         messageCount: 17,
                         reactionCount: 11,
-                        activeAgo: S.intl.formatToPlainString(S.t.N9M4N1, { count: 24 }),
+                        activeAgo: p.intl.formatToPlainString(p.t.N9M4N1, { count: 24 }),
                     },
                     {
-                        user: { name: "ladydaisy", avatarSrc: b },
+                        user: { name: "ladydaisy", avatarSrc: C },
                         tagId: 2,
-                        title: S.intl.string(S.t["2LpQS8"]),
+                        title: p.intl.string(p.t["2LpQS8"]),
                         messageCount: 18,
                         reactionCount: 15,
-                        activeAgo: S.intl.formatToPlainString(S.t.N9M4N1, { count: 40 }),
+                        activeAgo: p.intl.formatToPlainString(p.t.N9M4N1, { count: 40 }),
                     },
                     {
-                        user: { name: "kittyx", avatarSrc: y },
+                        user: { name: "kittyx", avatarSrc: P },
                         tagId: 0,
-                        title: S.intl.string(S.t.gFI7Lw),
+                        title: p.intl.string(p.t.gFI7Lw),
                         messageCount: 2,
                         reactionCount: 0,
-                        activeAgo: S.intl.formatToPlainString(S.t.p0KedC, { count: 1 }),
+                        activeAgo: p.intl.formatToPlainString(p.t.p0KedC, { count: 1 }),
                         attachment: "/assets/0d303ee5beec2287.png",
                     },
                 ],
                 postPreview: {
-                    title: S.intl.string(S.t["5GM0TY"]),
+                    title: p.intl.string(p.t["5GM0TY"]),
                     messages: [
                         {
-                            author: { name: "skaterdood12", avatarSrc: C, isOP: !0 },
-                            content: S.intl.string(S.t.zEDYfk),
+                            author: { name: "skaterdood12", avatarSrc: f, isOP: !0 },
+                            content: p.intl.string(p.t.zEDYfk),
                         },
                         {
-                            author: { name: "pocketman", avatarSrc: P, isOP: !1 },
-                            content: S.intl.string(S.t["+XGMDs"]),
+                            author: { name: "pocketman", avatarSrc: S, isOP: !1 },
+                            content: p.intl.string(p.t["+XGMDs"]),
                         },
-                        { author: { name: "ladydaisy", avatarSrc: b, isOP: !1 }, content: S.intl.string(S.t.z0qmHN) },
+                        { author: { name: "ladydaisy", avatarSrc: C, isOP: !1 }, content: p.intl.string(p.t.z0qmHN) },
                     ],
                 },
-                ariaLabel: S.intl.string(S.t.TDOyPg),
+                ariaLabel: p.intl.string(p.t.TDOyPg),
             },
             {
-                tags: [S.intl.string(S.t.ogyxel), S.intl.string(S.t.S97ZXx), S.intl.string(S.t.d6GdP4)],
+                tags: [p.intl.string(p.t.ogyxel), p.intl.string(p.t.S97ZXx), p.intl.string(p.t.d6GdP4)],
                 posts: [
                     {
-                        user: { name: "ladydaisy", avatarSrc: b },
+                        user: { name: "ladydaisy", avatarSrc: C },
                         tagId: 0,
-                        title: S.intl.string(S.t.aOyKZ9),
+                        title: p.intl.string(p.t.aOyKZ9),
                         messageCount: 8,
                         reactionCount: 11,
-                        activeAgo: S.intl.formatToPlainString(S.t.N9M4N1, { count: 10 }),
+                        activeAgo: p.intl.formatToPlainString(p.t.N9M4N1, { count: 10 }),
                         attachment: "/assets/633923dbe21cc7ec.png",
                     },
                     {
-                        user: { name: "pocketman", avatarSrc: P },
+                        user: { name: "pocketman", avatarSrc: S },
                         tagId: 1,
-                        title: S.intl.string(S.t.EQIrvX),
+                        title: p.intl.string(p.t.EQIrvX),
                         messageCount: 24,
                         reactionCount: 0,
-                        activeAgo: S.intl.formatToPlainString(S.t.N9M4N1, { count: 24 }),
+                        activeAgo: p.intl.formatToPlainString(p.t.N9M4N1, { count: 24 }),
                     },
                     {
-                        user: { name: "skaterdood12", avatarSrc: C },
+                        user: { name: "skaterdood12", avatarSrc: f },
                         tagId: 1,
-                        title: S.intl.string(S.t.f9n6Ue),
+                        title: p.intl.string(p.t.f9n6Ue),
                         messageCount: 15,
                         reactionCount: 17,
-                        activeAgo: S.intl.formatToPlainString(S.t.N9M4N1, { count: 40 }),
+                        activeAgo: p.intl.formatToPlainString(p.t.N9M4N1, { count: 40 }),
                     },
                     {
-                        user: { name: "kittyx", avatarSrc: y },
+                        user: { name: "kittyx", avatarSrc: P },
                         tagId: 2,
-                        title: S.intl.string(S.t.lCjd1A),
+                        title: p.intl.string(p.t.lCjd1A),
                         messageCount: 2,
                         reactionCount: 0,
-                        activeAgo: S.intl.formatToPlainString(S.t.p0KedC, { count: 1 }),
+                        activeAgo: p.intl.formatToPlainString(p.t.p0KedC, { count: 1 }),
                         attachment: "/assets/6ba34d72a17034a2.png",
                     },
                 ],
                 postPreview: {
-                    title: S.intl.string(S.t.f9n6Ue),
+                    title: p.intl.string(p.t.f9n6Ue),
                     messages: [
                         {
-                            author: { name: "skaterdood12", avatarSrc: C, isOP: !0 },
-                            content: S.intl.string(S.t.VeQaUn),
+                            author: { name: "skaterdood12", avatarSrc: f, isOP: !0 },
+                            content: p.intl.string(p.t.VeQaUn),
                         },
-                        { author: { name: "pocketman", avatarSrc: P, isOP: !1 }, content: S.intl.string(S.t.lwjElH) },
-                        { author: { name: "ladydaisy", avatarSrc: b, isOP: !1 }, content: S.intl.string(S.t.RNqQmI) },
+                        { author: { name: "pocketman", avatarSrc: S, isOP: !1 }, content: p.intl.string(p.t.lwjElH) },
+                        { author: { name: "ladydaisy", avatarSrc: C, isOP: !1 }, content: p.intl.string(p.t.RNqQmI) },
                     ],
                 },
-                ariaLabel: S.intl.string(S.t.iLeWrd),
+                ariaLabel: p.intl.string(p.t.iLeWrd),
             },
             {
-                tags: [S.intl.string(S.t["5jLvfc"]), S.intl.string(S.t.lRgWdQ), S.intl.string(S.t.Hy4EP0)],
+                tags: [p.intl.string(p.t["5jLvfc"]), p.intl.string(p.t.lRgWdQ), p.intl.string(p.t.Hy4EP0)],
                 posts: [
                     {
-                        user: { name: "skaterdood12", avatarSrc: C },
+                        user: { name: "skaterdood12", avatarSrc: f },
                         tagId: null,
-                        title: S.intl.string(S.t.to6uUe),
+                        title: p.intl.string(p.t.to6uUe),
                         messageCount: 11,
                         reactionCount: 17,
-                        activeAgo: S.intl.formatToPlainString(S.t.N9M4N1, { count: 10 }),
+                        activeAgo: p.intl.formatToPlainString(p.t.N9M4N1, { count: 10 }),
                         attachment: "/assets/625651f82bbdecd8.png",
                     },
                     {
-                        user: { name: "pocketman", avatarSrc: P },
+                        user: { name: "pocketman", avatarSrc: S },
                         tagId: 1,
-                        title: S.intl.string(S.t.dsQXOj),
+                        title: p.intl.string(p.t.dsQXOj),
                         messageCount: 24,
                         reactionCount: 0,
-                        activeAgo: S.intl.formatToPlainString(S.t.N9M4N1, { count: 24 }),
+                        activeAgo: p.intl.formatToPlainString(p.t.N9M4N1, { count: 24 }),
                     },
                     {
-                        user: { name: "ladydaisy", avatarSrc: b },
+                        user: { name: "ladydaisy", avatarSrc: C },
                         tagId: 0,
-                        title: S.intl.string(S.t["XL/bba"]),
+                        title: p.intl.string(p.t["XL/bba"]),
                         messageCount: 18,
                         reactionCount: 15,
-                        activeAgo: S.intl.formatToPlainString(S.t.N9M4N1, { count: 40 }),
+                        activeAgo: p.intl.formatToPlainString(p.t.N9M4N1, { count: 40 }),
                     },
                     {
-                        user: { name: "kittyx", avatarSrc: y },
+                        user: { name: "kittyx", avatarSrc: P },
                         tagId: null,
-                        title: S.intl.string(S.t.XSYHP3),
+                        title: p.intl.string(p.t.XSYHP3),
                         messageCount: 2,
                         reactionCount: 0,
-                        activeAgo: S.intl.formatToPlainString(S.t.p0KedC, { count: 1 }),
+                        activeAgo: p.intl.formatToPlainString(p.t.p0KedC, { count: 1 }),
                         attachment: "/assets/e6ef93adc3b9eff4.png",
                     },
                 ],
                 postPreview: {
-                    title: S.intl.string(S.t.to6uUe),
+                    title: p.intl.string(p.t.to6uUe),
                     messages: [
                         {
-                            author: { name: "skaterdood12", avatarSrc: C, isOP: !0 },
-                            content: S.intl.string(S.t["6DyhGl"]),
+                            author: { name: "skaterdood12", avatarSrc: f, isOP: !0 },
+                            content: p.intl.string(p.t["6DyhGl"]),
                         },
-                        { author: { name: "pocketman", avatarSrc: P, isOP: !1 }, content: S.intl.string(S.t.BLiuYI) },
-                        { author: { name: "ladydaisy", avatarSrc: b, isOP: !1 }, content: S.intl.string(S.t.PYLKhH) },
+                        { author: { name: "pocketman", avatarSrc: S, isOP: !1 }, content: p.intl.string(p.t.BLiuYI) },
+                        { author: { name: "ladydaisy", avatarSrc: C, isOP: !1 }, content: p.intl.string(p.t.PYLKhH) },
                     ],
                 },
-                ariaLabel: S.intl.string(S.t.kEMWrG),
+                ariaLabel: p.intl.string(p.t.kEMWrG),
             },
         ][a];
     return (
@@ -377,65 +375,64 @@ function T(t) {
             0 === e && r?.current?.clientHeight != null && i(r.current.clientHeight - 40);
         }, [e]),
         (0, n.jsxs)("div", {
-            className: k.kL,
+            className: b.kL,
             role: "image",
             "aria-label": d,
             children: [
                 (0, n.jsxs)("div", {
                     ref: r,
-                    className: k.T,
+                    className: b.T,
                     "aria-hidden": !0,
                     children: [
                         (0, n.jsx)("div", {
-                            className: k._A,
+                            className: b._A,
                             children: l.map((t, a) =>
                                 (0, n.jsx)(
-                                    j.E,
-                                    { color: "text-strong", variant: "text-xs/medium", className: k.Tc, children: t },
+                                    h.E,
+                                    { color: "text-strong", variant: "text-xs/medium", className: b.Tc, children: t },
                                     a,
                                 ),
                             ),
                         }),
                         (0, n.jsx)("div", {
-                            className: k.Yl,
-                            children: c.map((t, a) => (0, n.jsx)(I, { ...t, tags: l }, a)),
+                            className: b.Yl,
+                            children: c.map((t, a) => (0, n.jsx)(y, { ...t, tags: l }, a)),
                         }),
                     ],
                 }),
-                (0, n.jsx)(E, { ...o, maxHeight: e }),
+                (0, n.jsx)(k, { ...o, maxHeight: e }),
             ],
         })
     );
 }
-var H = e(253913),
-    M = e(652215),
-    L = e(49999),
-    G = e(789051);
-function O(t) {
-    let { guildId: a, shouldUpsellCreation: j, transitionState: N, onClose: p } = t,
-        f = (0, o.bG)([x.A], () => x.A.getGuild(a), [a]),
-        C = (0, o.bG)([h.A], () => h.A.can(M.xBc.MANAGE_CHANNELS, f)),
-        P = [
-            { id: 0, name: S.intl.string(S.t.HTA517) },
-            { id: 1, name: S.intl.string(S.t["IHjjY/"]) },
-            { id: 2, name: S.intl.string(S.t.x3drh1) },
+var E = e(652215),
+    T = e(49999),
+    H = e(789051);
+function M(t) {
+    let { guildId: a, shouldUpsellCreation: h, transitionState: v, onClose: j } = t,
+        N = (0, o.bG)([g.A], () => g.A.getGuild(a), [a]),
+        f = (0, o.bG)([u.A], () => u.A.can(E.xBc.MANAGE_CHANNELS, N)),
+        S = [
+            { id: 0, name: p.intl.string(p.t.HTA517) },
+            { id: 1, name: p.intl.string(p.t["IHjjY/"]) },
+            { id: 2, name: p.intl.string(p.t.x3drh1) },
         ],
-        [b, y] = s.useState(0),
-        k = [
+        [C, P] = s.useState(0),
+        b = [
             {
-                variant: j ? "secondary" : "primary",
-                text: j ? S.intl.string(S.t.TulDPl) : S.intl.string(S.t["NX+WJN"]),
-                onClick: () => p(L.i.SECONDARY),
+                variant: h ? "secondary" : "primary",
+                text: h ? p.intl.string(p.t.TulDPl) : p.intl.string(p.t["NX+WJN"]),
+                onClick: () => j(T.i.SECONDARY),
             },
         ];
-    j &&
-        k.push({
+    h &&
+        b.push({
             variant: "primary",
-            text: S.intl.string(S.t["1X8SK/"]),
+            text: p.intl.string(p.t["1X8SK/"]),
             onClick: () => {
                 (0, d.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
-                        e.e("94513"),
+                        e.e("15686"),
                         e.e("11585"),
                         e.e("3589"),
                         e.e("89916"),
@@ -450,50 +447,37 @@ function O(t) {
                     return (e) =>
                         (0, n.jsx)(t, {
                             ...e,
-                            channelType: M.rbe.GUILD_FORUM,
+                            channelType: E.rbe.GUILD_FORUM,
                             guildId: a,
-                            prefillChannelName: j ? S.intl.string(S.t["5z1Xat"]) : void 0,
+                            prefillChannelName: h ? p.intl.string(p.t["5z1Xat"]) : void 0,
                         });
                 }),
-                    p(L.i.PRIMARY);
+                    j(T.i.PRIMARY);
             },
         });
-    let I = S.intl.string(S.t["6S6WCQ"]);
+    let y = p.intl.string(p.t["6S6WCQ"]);
     return (0, n.jsxs)(i.d, {
-        transitionState: N,
+        transitionState: v,
         size: "xxl",
-        onClose: async () => await p(),
-        "aria-label": I,
+        onClose: async () => await j(),
+        "aria-label": y,
         children: [
-            (0, n.jsx)(r.rQ, { title: I, subtitle: S.intl.string(S.t.I2BA8K) }),
+            (0, n.jsx)(r.rQ, { title: y, subtitle: p.intl.string(p.t.I2BA8K) }),
             (0, n.jsxs)(l.c, {
                 children: [
                     (0, n.jsx)(m.V, {
-                        selectedItem: b,
+                        selectedItem: C,
                         type: "top",
                         onItemSelect: (t) => {
-                            y(t), (0, v.Bd)({ forumDemoId: t });
+                            P(t), (0, x.Bd)({ forumDemoId: t });
                         },
-                        className: G._,
-                        children: P.map((t, a) => (0, n.jsx)(m.V.Item, { id: a, children: t.name }, a)),
+                        className: H._,
+                        children: S.map((t, a) => (0, n.jsx)(m.V.Item, { id: a, children: t.name }, a)),
                     }),
-                    (0, n.jsx)(T, { id: b }),
+                    (0, n.jsx)(A, { id: C }),
                 ],
             }),
-            C &&
-                (0, n.jsx)(c.H, {
-                    leading: (0, n.jsx)(g.$, {
-                        variant: "secondary",
-                        text: S.intl.string(S.t.hvVgAZ),
-                        icon: u.I,
-                        iconPosition: "end",
-                        role: "link",
-                        onClick: () => {
-                            open(H.X_);
-                        },
-                    }),
-                    actions: k,
-                }),
+            f && (0, n.jsx)(c.H, { actions: b }),
         ],
     });
 }

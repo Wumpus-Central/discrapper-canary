@@ -4491,7 +4491,6 @@ var rD =
         (ex.FORUM_CHANNEL_ENABLE_PREVIEW_CLICKED = "forum_channel_enable_preview_clicked"),
         (ex.FORUM_UPSELL_MODAL_CLICKED = "forum_upsell_modal_clicked"),
         (ex.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_CLICKED = "forum_add_media_to_original_post_clicked"),
-        (ex.FORUM_CHANNEL_HELPER_CARD_CLICKED = "forum_channel_helper_card_clicked"),
         (ex.FORUM_CHANNEL_MEDIA_UPLOADER_CLICKED = "forum_channel_media_uploader_clicked"),
         (ex.FORUM_CHANNEL_SEARCHED = "forum_channel_searched"),
         (ex.FORUM_CHANNEL_SEARCH_CLEARED = "forum_channel_search_cleared"),

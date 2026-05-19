@@ -547,11 +547,9 @@ class eV extends l.PureComponent {
                             {
                                 onClick: () =>
                                     (0, M.openModalLazy)(async () => {
-                                        let { default: e } = await Promise.all([
-                                            n.e("43051"),
-                                            n.e("61268"),
-                                            n.e("90052"),
-                                        ]).then(n.bind(n, 653682));
+                                        let { default: e } = await Promise.all([n.e("43051"), n.e("90052")]).then(
+                                            n.bind(n, 653682),
+                                        );
                                         return (t) => (0, i.jsx)(e, { ...t, guildId: l });
                                     }),
                                 children: e,

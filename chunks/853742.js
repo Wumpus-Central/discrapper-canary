@@ -2,12 +2,11 @@
 n.d(t, {
     Bd: () => D,
     Cd: () => v,
-    El: () => P,
+    El: () => M,
     Lj: () => S,
-    Md: () => w,
     Ml: () => C,
-    OG: () => G,
-    Q_: () => x,
+    OG: () => k,
+    Q_: () => P,
     Sc: () => p,
     UA: () => m,
     Z_: () => h,
@@ -21,10 +20,10 @@ n.d(t, {
     jr: () => g,
     pO: () => N,
     py: () => T,
-    rH: () => U,
-    ri: () => M,
+    rH: () => x,
+    ri: () => w,
     sB: () => A,
-    zd: () => k,
+    zd: () => U,
 });
 var i = n(95561),
     r = n(332456),
@@ -200,20 +199,16 @@ function L(e) {
     i.Ay.trackWithMetadata(f.HAw.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_CLICKED, { added: t });
 }
 function w(e) {
-    let { readGuideCta: t } = e;
-    i.Ay.trackWithMetadata(f.HAw.FORUM_CHANNEL_HELPER_CARD_CLICKED, { read_guide_cta: t });
-}
-function M(e) {
     let { isMobile: t } = e;
     i.Ay.trackWithMetadata(f.HAw.FORUM_CHANNEL_MEDIA_UPLOADER_CLICKED, { is_mobile: t });
 }
-function P() {
+function M() {
     i.Ay.trackWithMetadata(f.HAw.FORUM_CHANNEL_ENABLE_AUTOMOD_CLICKED);
 }
-function x() {
+function P() {
     i.Ay.trackWithMetadata(f.HAw.FORUM_CHANNEL_ENABLE_PREVIEW_CLICKED);
 }
-function U(e) {
+function x(e) {
     i.Ay.trackWithMetadata(f.HAw.CHANNEL_OPENED, {
         ...(0, i.H$)(e.guild_id),
         ...(0, i.dI)(e),
@@ -224,13 +219,13 @@ function U(e) {
     }),
         (0, s.A)({ channelId: e.id });
 }
-function k() {
+function U() {
     i.Ay.trackWithMetadata(f.HAw.OPEN_MODAL, {
         type: "Forum Channel Upsell Modal",
         location: { section: f.JJy.CHANNEL_WELCOME_CTA },
     });
 }
-function G(e) {
+function k(e) {
     let { guildId: t, channelId: n } = e;
     i.Ay.trackWithMetadata(f.HAw.THREAD_CREATION_STARTED, {
         ...(0, r.C)(a.A.getChannel(n)),
