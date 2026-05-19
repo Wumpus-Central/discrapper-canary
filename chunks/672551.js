@@ -14,7 +14,7 @@ var l = s(627968),
     C = s(818486);
 let g = (0, d.Fe)({
     createPromise: () =>
-        Promise.all([s.e("8802"), s.e("116"), s.e("3930"), s.e("3663"), s.e("66147")]).then(s.bind(s, 48736)),
+        Promise.all([s.e("8802"), s.e("51960"), s.e("3930"), s.e("3663"), s.e("66147")]).then(s.bind(s, 48736)),
     webpackId: 48736,
 });
 class x extends a.PureComponent {

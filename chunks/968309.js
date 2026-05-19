@@ -60,9 +60,12 @@ function u(e) {
               }))
             : _ === l.fg2.DOMAIN
               ? (0, r.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("116"), n.e("97893"), n.e("37687"), n.e("94048")]).then(
-                        n.bind(n, 110819),
-                    );
+                    let { default: e } = await Promise.all([
+                        n.e("51960"),
+                        n.e("97893"),
+                        n.e("37687"),
+                        n.e("94048"),
+                    ]).then(n.bind(n, 110819));
                     return (t) => (0, i.jsx)(e, { analyticsLocation: [f ?? "unknown"], ...t });
                 })
               : s.A.get(_)?.isFederated === !0
