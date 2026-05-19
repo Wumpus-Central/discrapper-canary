@@ -1,4 +1,4 @@
-l.r(t), l.d(t, { default: () => tg });
+l.r(t), l.d(t, { default: () => tm });
 var s = l(627968),
     n = l(64700),
     r = l(562708),
@@ -129,8 +129,8 @@ let X = { guildTagsBadgePacks: [z.tv, z.OJ, z.Ht, z.jF] },
         return e;
     }, {}),
     Q = [D.o9.LEVEL, D.o9.PERK];
-var q = l(182859),
-    Z = l(210273),
+var Z = l(182859),
+    q = l(210273),
     Y = l(998418),
     ee = l(722523),
     et = l(172218),
@@ -273,7 +273,7 @@ function eA(e) {
             if (null == e) return [];
             let t = e.tier === em.TVA.TIER_3 ? e.perks.slice(0, -1) : e.perks;
             return t?.map((e, t) => {
-                let n = (0, Z.X)(e.perkIcon);
+                let n = (0, q.X)(e.perkIcon);
                 return (0, s.jsxs)(
                     "div",
                     {
@@ -690,7 +690,7 @@ function eJ(e) {
                   !1,
                   p.shouldShow && (0, s.jsx)(eT, { markAsDismissed: p.markAsDismissed }),
                   d &&
-                      (0, s.jsx)(q.A, {
+                      (0, s.jsx)(Z.A, {
                           guildId: t,
                           analyticsLocation: {
                               page: em.liQ.GUILD_POWERUPS_OVERVIEW,
@@ -794,8 +794,8 @@ function eH(e) {
         });
 }
 var eQ = l(97808),
-    eq = l(778712),
-    eZ = l(463930),
+    eZ = l(778712),
+    eq = l(463930),
     eY = l(730134),
     e0 = l(509536),
     e1 = l(319756),
@@ -820,7 +820,7 @@ function te(e) {
             avatarDecorationSrc: p,
             avatarSrc: m,
             eventHandlers: x,
-        } = (0, e5.A)({ userId: r?.id, guildId: t, size: eq._3.SIZE_40, animateOnHover: !d });
+        } = (0, e5.A)({ userId: r?.id, guildId: t, size: eZ._3.SIZE_40, animateOnHover: !d });
     return null == l || null == o || null == r
         ? null
         : (0, s.jsxs)("div", {
@@ -857,11 +857,11 @@ function te(e) {
                               user: r,
                               src: m,
                               avatarDecoration: p,
-                              size: eq._3.SIZE_40,
+                              size: eZ._3.SIZE_40,
                               "aria-hidden": !0,
                               animate: !0,
                           }),
-                          username: (0, s.jsx)(eZ.g, {
+                          username: (0, s.jsx)(eq.g, {
                               variant: "text-md/semibold",
                               name: e9.Ay.getName(t, null, r),
                               colorString: n.colorString,
@@ -890,14 +890,13 @@ function te(e) {
           });
 }
 var tt = l(820739),
-    tl = l(80682),
-    ts = l(860071),
-    tn = l(935208),
-    tr = l(323472),
-    ti = l(606049),
-    ta = l(967144),
-    to = l(168642);
-function tu(e) {
+    tl = l(860071),
+    ts = l(935208),
+    tn = l(323472),
+    tr = l(606049),
+    ti = l(967144),
+    ta = l(168642);
+function to(e) {
     let { boost: t } = e,
         {
             timestamp: l,
@@ -905,7 +904,7 @@ function tu(e) {
             roleColor: r,
             roleColorStrings: a,
         } = (function (e) {
-            let t = new Date(tn.default.extractTimestamp(e.id)),
+            let t = new Date(ts.default.extractTimestamp(e.id)),
                 {
                     username: l,
                     roleColor: s,
@@ -921,13 +920,13 @@ function tu(e) {
                 }, [e]);
             return { timestamp: t, username: l, roleColor: s, roleColorStrings: n };
         })(t),
-        o = (0, ta.gn)(t.guildId, t.userId, a ?? null);
+        o = (0, ti.gn)(t.guildId, t.userId, a ?? null);
     return (0, s.jsxs)("div", {
-        className: to.og,
+        className: ta.og,
         children: [
-            (0, s.jsx)(A._, { className: to.Kk, color: "currentColor", size: "sm" }),
+            (0, s.jsx)(A._, { className: ta.Kk, color: "currentColor", size: "sm" }),
             (0, s.jsx)("span", {
-                className: to.x$,
+                className: ta.x$,
                 children: (0, s.jsxs)(v.E, {
                     tag: "span",
                     variant: "text-md/medium",
@@ -938,8 +937,8 @@ function tu(e) {
                             shouldShow: !0,
                             asContainer: !0,
                             delay: 1e3,
-                            children: (0, s.jsx)(eZ.g, {
-                                className: to.IP,
+                            children: (0, s.jsx)(eq.g, {
+                                className: ta.IP,
                                 variant: "text-md/semibold",
                                 name: n,
                                 colorString: r ?? null,
@@ -950,15 +949,15 @@ function tu(e) {
                     ],
                 }),
             }),
-            (0, s.jsx)(ti.A, { timestamp: l, timestampFormat: "L", className: to.vE }),
+            (0, s.jsx)(tr.A, { timestamp: l, timestampFormat: "L", className: ta.vE }),
         ],
     });
 }
-var td = l(639796);
-function tc(e) {
+var tu = l(639796);
+function td(e) {
     let { guildId: t } = e,
         l = (function (e) {
-            let t = (0, tr.H)("GuildPowerupsRecentActivity"),
+            let t = (0, tn.H)("GuildPowerupsRecentActivity"),
                 l = (0, i.yK)([eM.A], () => eM.A.getAppliedGuildBoostsForGuild(e) ?? [], [e]),
                 [s] = n.useState(() => Date.now()),
                 r = n.useMemo(
@@ -976,10 +975,10 @@ function tc(e) {
                                     boost: e,
                                     phase: l,
                                     sortKey: (function (e, t) {
-                                        let l = e.endsAt?.getTime() ?? tn.default.extractTimestamp(e.id);
+                                        let l = e.endsAt?.getTime() ?? ts.default.extractTimestamp(e.id);
                                         switch (t) {
                                             case "gave":
-                                                return tn.default.extractTimestamp(e.id);
+                                                return ts.default.extractTimestamp(e.id);
                                             case "expiring":
                                                 return l - 2592e5;
                                             case "expired":
@@ -1003,20 +1002,15 @@ function tc(e) {
                     );
                 }, [e, r]);
             n.useEffect(() => {
-                a.length > 0 && a.forEach((t) => ts.A.requestMember(e, t));
+                a.length > 0 && a.forEach((t) => tl.A.requestMember(e, t));
             }, [e, a]);
-            let o = n.useMemo(() => {
-                let t = a.slice(0, tl.JM / 2);
-                return t.length > 0 ? { [e]: t } : {};
-            }, [e, a]);
-            (0, tl.Eq)(o, "GuildPowerupsRecentActivity");
-            let u = (0, i.bG)([c.A], () => c.A.getGuild(e)?.premiumSubscriberCount),
-                d = n.useMemo(() => l.filter((e) => !e.ended).length, [l]),
-                p = (0, i.bG)([eM.A], () => null != eM.A.getLastFetchedAtForGuild(e), [e]);
+            let o = (0, i.bG)([c.A], () => c.A.getGuild(e)?.premiumSubscriberCount),
+                u = n.useMemo(() => l.filter((e) => !e.ended).length, [l]),
+                d = (0, i.bG)([eM.A], () => null != eM.A.getLastFetchedAtForGuild(e), [e]);
             return (
                 n.useEffect(() => {
-                    (u !== d || (t && !p)) && (0, tt.VU)(e, { includeEnded: t });
-                }, [e, u, d, t, p]),
+                    (o !== u || (t && !d)) && (0, tt.VU)(e, { includeEnded: t });
+                }, [e, o, u, t, d]),
                 r
             );
         })(t);
@@ -1025,24 +1019,24 @@ function tc(e) {
         : (0, s.jsxs)(s.Fragment, {
               children: [
                   (0, s.jsx)(E.D, {
-                      className: td.w,
+                      className: tu.w,
                       variant: "eyebrow",
                       color: "text-subtle",
                       children: k.intl.string(k.t.yM9Krm),
                   }),
                   (0, s.jsx)(h.Ip, {
-                      className: td.k,
+                      className: tu.k,
                       fade: !0,
                       children: l.map((e, t) => {
                           let { boost: l } = e;
-                          return (0, s.jsx)(tu, { boost: l }, `boost-activity-${t}`);
+                          return (0, s.jsx)(to, { boost: l }, `boost-activity-${t}`);
                       }),
                   }),
               ],
           });
 }
-var tp = l(502525);
-function tm(e) {
+var tc = l(502525);
+function tp(e) {
     let t,
         r,
         { guildId: a, powerupListingId: o } = e;
@@ -1167,10 +1161,10 @@ function tm(e) {
     c?.powerupCatalog == null)
         ? null
         : (0, s.jsxs)("div", {
-              className: tp.kL,
+              className: tc.kL,
               children: [
                   (0, s.jsxs)(S.A, {
-                      className: tp.KE,
+                      className: tc.KE,
                       hideSearch: !0,
                       toolbar: (0, s.jsx)("div", {}),
                       children: [
@@ -1179,10 +1173,10 @@ function tm(e) {
                       ],
                   }),
                   (0, s.jsxs)("div", {
-                      className: tp.hQ,
+                      className: tc.hQ,
                       children: [
                           (0, s.jsx)(h.Ip, {
-                              className: tp.DO,
+                              className: tc.DO,
                               children: P.map((e) => {
                                   let { type: t, listings: l } = e,
                                       { title: n, description: r } = (function (e) {
@@ -1203,10 +1197,10 @@ function tm(e) {
                                   return (0, s.jsxs)(
                                       "div",
                                       {
-                                          className: tp.lt,
+                                          className: tc.lt,
                                           children: [
                                               (0, s.jsxs)("div", {
-                                                  className: tp.kn,
+                                                  className: tc.kn,
                                                   children: [
                                                       (0, s.jsx)(E.D, {
                                                           color: "text-strong",
@@ -1222,7 +1216,7 @@ function tm(e) {
                                               }),
                                               (0, s.jsx)(i, {
                                                   orientation: "horizontal",
-                                                  className: g()(tp.qJ, tp.kn, { [tp.dU]: t === D.o9.LEVEL }),
+                                                  className: g()(tc.qJ, tc.kn, { [tc.dU]: t === D.o9.LEVEL }),
                                                   fade: !0,
                                                   children: l.map((e, t) => {
                                                       switch (e.type) {
@@ -1265,14 +1259,14 @@ function tm(e) {
                               }),
                           }),
                           (0, s.jsxs)("div", {
-                              className: tp.so,
+                              className: tc.so,
                               children: [
                                   m
                                       ? (0, s.jsx)(eH, { guildId: a })
                                       : (0, s.jsxs)("div", {
-                                            className: tp.CG,
+                                            className: tc.CG,
                                             children: [
-                                                (0, s.jsx)(q.A, {
+                                                (0, s.jsx)(Z.A, {
                                                     guildId: a,
                                                     variant: "member",
                                                     analyticsLocation: {
@@ -1284,7 +1278,7 @@ function tm(e) {
                                                 (0, s.jsx)(te, { guildId: a }),
                                             ],
                                         }),
-                                  (0, s.jsx)(tc, { guildId: a }),
+                                  (0, s.jsx)(td, { guildId: a }),
                               ],
                           }),
                       ],
@@ -1292,7 +1286,7 @@ function tm(e) {
               ],
           });
 }
-function tg(e) {
+function tm(e) {
     let { guildId: t, powerupListingId: l } = e,
         n = (0, i.bG)([c.A], () => c.A.getGuild(t)),
         m = (0, i.bG)([u.A], () => u.A.hasLoadedExperiments),
@@ -1310,5 +1304,5 @@ function tg(e) {
     ),
     f)
         ? null
-        : (0, s.jsx)(tm, { guildId: t, powerupListingId: l });
+        : (0, s.jsx)(tp, { guildId: t, powerupListingId: l });
 }
