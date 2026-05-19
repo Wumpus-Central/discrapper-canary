@@ -1,20 +1,20 @@
 n.d(t, { A: () => h });
 var o = n(627968);
 n(64700);
-var a = n(192308),
-    l = n(228366),
+var l = n(192308),
+    a = n(228366),
     p = n(391048),
     s = n(636099),
-    i = n(622207),
+    i = n(663288),
     d = n(859040),
     r = n(287809),
-    C = n(166532);
-let u = new Set([C.pn.REVIEW, C.pn.CONFIRM, C.pn.GIFT_CUSTOMIZATION]);
+    u = n(166532);
+let C = new Set([u.pn.REVIEW, u.pn.CONFIRM, u.pn.GIFT_CUSTOMIZATION]);
 function h(e) {
     let t,
         {
             discoverySessionId: i,
-            skuId: C,
+            skuId: u,
             analyticsLocations: h,
             analyticsObject: M,
             isGift: m = !1,
@@ -24,45 +24,44 @@ function h(e) {
             onClose: T,
             onComplete: g,
         } = e,
-        w = !1,
-        y = m ? "gift-payment-modal" : "payment-modal",
-        E = r.default.getCurrentUser();
-    E?.verified
-        ? (l.h.wait(() => {
-              l.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
+        w = m ? "gift-payment-modal" : "payment-modal",
+        y = r.default.getCurrentUser();
+    y?.verified
+        ? (a.h.wait(() => {
+              a.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
           }),
           c({
               discoverySessionId: i,
-              skuId: C,
+              skuId: u,
               analyticsLocations: h,
               analyticsObject: M,
               onStepChange: (e) => {
                   t = e;
               },
-              modalKey: y,
+              modalKey: w,
               isGift: m,
               giftMessage: O,
               giftingOrigin: f,
               giftRecipient: k,
               onClose: T,
-              onCloseCallback: () => {
-                  (0, p.ET)(), (0, s.z)(), T?.(w), w && (0, d.gB)();
+              onCloseCallback: (e) => {
+                  (0, p.ET)(), (0, s.z)(), e && (0, d.gB)();
               },
               onCloseRequest: () => {
-                  null != t && u.has(t) && (0, a.closeModal)(y);
+                  null != t && C.has(t) && (0, l.closeModal)(w);
               },
               onComplete: () => {
-                  (w = !0), g?.();
+                  null != g && g();
               },
           }))
-        : (0, a.openModalLazy)(async () => {
+        : (0, l.openModalLazy)(async () => {
               let { default: e } = await Promise.all([n.e("54681"), n.e("74913"), n.e("12206"), n.e("90406")]).then(
                   n.bind(n, 661925),
               );
               return (t) => {
-                  let { onClose: n, ...a } = t;
+                  let { onClose: n, ...l } = t;
                   return (0, o.jsx)(e, {
-                      ...a,
+                      ...l,
                       onClose: () => {
                           n(), T?.(!1);
                       },
@@ -75,14 +74,14 @@ let c = (e) => {
         discoverySessionId: t,
         skuId: n,
         analyticsLocations: o,
-        analyticsObject: a,
-        onStepChange: l,
+        analyticsObject: l,
+        onStepChange: a,
         modalKey: p,
         isGift: s = !1,
         giftMessage: d,
         giftingOrigin: r,
-        giftRecipient: C,
-        onClose: u,
+        giftRecipient: u,
+        onClose: C,
         onCloseCallback: h,
         onCloseRequest: c,
         onComplete: M,
@@ -91,11 +90,11 @@ let c = (e) => {
         discoverySessionId: t,
         skuId: n,
         analyticsLocations: o,
-        analyticsObject: a,
-        giftContextProps: { isGift: s, giftMessage: d, giftingOrigin: r, giftRecipient: C },
-        onClose: u,
+        analyticsObject: l,
+        giftContextProps: { isGift: s, giftMessage: d, giftingOrigin: r, giftRecipient: u },
+        onClose: C,
         onComplete: M,
-        additionalOptions: { onStepChange: l },
+        additionalOptions: { onStepChange: a },
         openModalOptions: { modalKey: p, onCloseCallback: h, onCloseRequest: c },
     });
 };
