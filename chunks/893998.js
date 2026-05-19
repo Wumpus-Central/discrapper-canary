@@ -6,6 +6,7 @@ class r {
     body;
     categoryStoreListingId;
     bannerTextColor;
+    bannerBodyTextColor;
     disableCta;
     bannerURL;
     bannerAnimatedURL;
@@ -20,6 +21,7 @@ class r {
             (this.body = e.body),
             (this.categoryStoreListingId = e.category_store_listing_id),
             (this.bannerTextColor = e.banner_text_color),
+            (this.bannerBodyTextColor = e.banner_body_text_color),
             (this.disableCta = e.disable_cta),
             (this.bannerURL = e.wide_banner_url),
             (this.bannerAnimatedURL = e.wide_banner_animated_url),

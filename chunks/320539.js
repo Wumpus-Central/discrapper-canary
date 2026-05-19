@@ -2,8 +2,8 @@ i.d(s, { default: () => j });
 var e = i(627968),
     n = i(64700),
     a = i(554146),
-    c = i(815021),
-    r = i(534514),
+    r = i(815021),
+    c = i(534514),
     l = i(834730),
     d = i(821609),
     o = i(224640),
@@ -21,7 +21,7 @@ function j(t) {
             leftTitle: b,
             leftBody: f,
             rightTitle: p,
-            rightBody: C,
+            rightBody: v,
         } = (function (t) {
             let { showGiftingMarketing: s, showEaPremiumMarketing: i, showEaNonPremiumMarketing: e } = t,
                 n = u.intl.string(u.t.zOtryQ),
@@ -54,7 +54,7 @@ function j(t) {
                           rightBody: u.intl.string(u.t.GcXi4M),
                       };
         })(j),
-        v = u.intl.string(u.t.W3MtdV),
+        C = u.intl.string(u.t.W3MtdV),
         M = j.showEaPremiumMarketing
             ? u.intl.string(u.t.RlBdFl)
             : j.showEaNonPremiumMarketing
@@ -67,12 +67,12 @@ function j(t) {
         },
         [],
     );
-    let L = n.useCallback(async () => {
+    let y = n.useCallback(async () => {
             (S.current = !0),
                 (0, g.Dr)(a.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, { dismissAction: N.i.USER_DISMISS }),
                 await s();
         }, [s]),
-        T = n.useCallback(async () => {
+        L = n.useCallback(async () => {
             (S.current = !0),
                 (0, g.Dr)(a.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, { dismissAction: N.i.TAKE_ACTION }),
                 (0, h.Cz)({ analyticsLocations: [], analyticsSource: m.A.COLLECTIBLES_SHOP }),
@@ -80,7 +80,7 @@ function j(t) {
         }, [s]);
     return (0, e.jsx)(o.d, {
         ...i,
-        onClose: L,
+        onClose: y,
         size: "lg",
         children: (0, e.jsxs)("div", {
             className: E.Qs,
@@ -92,18 +92,21 @@ function j(t) {
                             "url(https://cdn.discordapp.com/assets/content/11291cccd863aec5bdb14c12e39a1a819efd0f35e936df7a7f378e5ae7163ba1.jpg)",
                     },
                 }),
-                (0, e.jsx)("div", { className: E.b, children: (0, e.jsx)(c.J, { onClick: L }) }),
+                (0, e.jsx)("div", {
+                    className: E.b,
+                    children: (0, e.jsx)(r.J, { onClick: y, variant: "overlay-secondary" }),
+                }),
                 (0, e.jsxs)("div", {
                     className: E.rf,
                     children: [
                         (0, e.jsxs)("div", {
                             className: E.gn,
                             children: [
-                                (0, e.jsx)(r.D, {
+                                (0, e.jsx)(c.D, {
                                     variant: "display-md",
                                     color: "text-strong",
                                     className: E.DD,
-                                    children: v,
+                                    children: C,
                                 }),
                                 (0, e.jsx)(l.E, { variant: "text-sm/medium", color: "text-muted", children: M }),
                             ],
@@ -122,7 +125,7 @@ function j(t) {
                                         (0, e.jsxs)("div", {
                                             className: E.Mo,
                                             children: [
-                                                (0, e.jsx)(r.D, {
+                                                (0, e.jsx)(c.D, {
                                                     variant: "heading-md/bold",
                                                     color: "text-strong",
                                                     children: b,
@@ -147,7 +150,7 @@ function j(t) {
                                         (0, e.jsxs)("div", {
                                             className: E.Mo,
                                             children: [
-                                                (0, e.jsx)(r.D, {
+                                                (0, e.jsx)(c.D, {
                                                     variant: "heading-md/bold",
                                                     color: "text-strong",
                                                     children: p,
@@ -155,7 +158,7 @@ function j(t) {
                                                 (0, e.jsx)(l.E, {
                                                     variant: "text-sm/medium",
                                                     color: "text-muted",
-                                                    children: C,
+                                                    children: v,
                                                 }),
                                             ],
                                         }),
@@ -168,7 +171,7 @@ function j(t) {
                             children: (0, e.jsx)(d.$, {
                                 variant: "primary",
                                 text: u.intl.string(u.t.c7U9yf),
-                                onClick: T,
+                                onClick: L,
                                 fullWidth: !0,
                             }),
                         }),
