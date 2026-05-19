@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { HF: () => f, f8: () => h, zF: () => E, c: () => _ });
+n.d(t, { HF: () => f, f8: () => h, c: () => _ });
 var i = n(945810),
     r = n(17928),
     s = n(228366);
@@ -62,10 +62,4 @@ let h = (0, i.mj)({
         kind: "user",
         defaultConfig: { icymiDesktopEnabled: !1 },
         variations: { 1: { icymiDesktopEnabled: !0 } },
-    }),
-    E = (0, i.mj)({
-        name: "2026-03-icymi-sunset-banner",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
     });
