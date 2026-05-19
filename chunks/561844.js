@@ -79,7 +79,7 @@ function y(e) {
         shouldExtendSession: a = !1,
         sourceQuestContent: o,
     } = e;
-    S(i, { ...T(t, o, n, a), ...r }, s, !1);
+    S(i, { ...{ ...T(t, o, n, a), traffic_metadata_sealed: (0, p.Gp)(o, void 0, t) ?? null }, ...r }, s, !1);
 }
 async function C(e, t) {
     return { adUser: await (0, s.N)((0, g.jO)(e)), adMetadataSealed: (0, p.L4)(e, t) };
@@ -165,7 +165,6 @@ async function R(e) {
                 impressionId: o,
                 adCreativeId: t,
             })),
-            traffic_metadata_sealed: (0, p.Gp)(i, void 0, t) ?? null,
         },
         trackGuildAndChannelMetadata: l,
         shouldExtendSession: (0, p.xn)(i),
