@@ -1558,7 +1558,8 @@ html .tabBadge_e6b769 {
 }
 
 .username_ec58fe {
-    font-weight: var(--font-weight-semibold)
+    font-weight: var(--font-weight-semibold);
+    min-width: 0
 }
 
 .popoutWrapper_d6b206 {
