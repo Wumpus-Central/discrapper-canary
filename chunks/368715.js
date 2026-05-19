@@ -278,15 +278,33 @@ let x = function (e) {
               });
     },
     k = function (e) {
-        let { quest: t, size: n } = e,
-            s = (0, p.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" });
-        return (0, i.jsx)(r.$, {
-            variant: "secondary",
-            disabled: !0,
-            fullWidth: !0,
-            size: n,
-            text: o.intl.format(o.t["6p8BZx"], { expiryDate: s }),
-        });
+        let {
+                quest: t,
+                surface: n,
+                size: s,
+                analyticsCtxQuestContent: a,
+                analyticsCtxSourceQuestContent: c,
+                analyticsCtxQuestContentPosition: d,
+                analyticsCtxQuestContentRowIndex: _,
+            } = e,
+            f = (0, p.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" }),
+            h = t.userStatus?.claimedAt != null;
+        return n === u.V3.QUEST_HOME_TILE_FOOTER && h
+            ? (0, i.jsx)(l, {
+                  quest: t,
+                  size: s,
+                  analyticsCtxQuestContent: a,
+                  analyticsCtxSourceQuestContent: c,
+                  analyticsCtxQuestContentPosition: d,
+                  analyticsCtxQuestContentRowIndex: _,
+              })
+            : (0, i.jsx)(r.$, {
+                  variant: "secondary",
+                  disabled: !0,
+                  fullWidth: !0,
+                  size: s,
+                  text: o.intl.format(o.t["6p8BZx"], { expiryDate: f }),
+              });
     },
     G = function (e) {
         let {
@@ -485,7 +503,15 @@ let B = function (e) {
                     analyticsCtxQuestContentRowIndex: f,
                 });
             case u.UA.EXPIRED:
-                return (0, i.jsx)(k, { quest: t, size: h });
+                return (0, i.jsx)(k, {
+                    quest: t,
+                    surface: n,
+                    size: h,
+                    analyticsCtxQuestContent: a,
+                    analyticsCtxSourceQuestContent: c,
+                    analyticsCtxQuestContentPosition: d,
+                    analyticsCtxQuestContentRowIndex: f,
+                });
             default:
                 return (0, i.jsx)(r.$, { variant: "primary", fullWidth: !0, size: h, text: o.intl.string(o.t.P84bAD) });
         }
