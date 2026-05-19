@@ -4775,6 +4775,7 @@ var rD =
         (ex.IN_APP_NOTIFICATION_CREATED = "in_app_notification_created"),
         (ex.IN_APP_NOTIFICATION_LONG_PRESSED = "in_app_notification_long_pressed"),
         (ex.IN_APP_NOTIFICATION_ACCESSORY_CLICKED = "in_app_notification_accessory_clicked"),
+        (ex.IN_APP_NOTIFICATION_EXPANDED = "in_app_notification_expanded"),
         (ex.PASSPORT_CHALLENGE_VIEWED = "passport_challenge_viewed"),
         (ex.PASSPORT_CHALLENGE_STARTED = "passport_challenge_started"),
         (ex.PASSPORT_CHALLENGE_FINISHED = "passport_challenge_finished"),
