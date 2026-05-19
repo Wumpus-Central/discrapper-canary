@@ -52,31 +52,19 @@
 }
 
 .tabContent__354ec {
-    align-items: center;
-    display: flex;
     height: 100%
 }
 
-.tabWithChevron__354ec,
-.tabWithDisclosure__354ec {
+.tabContent__354ec,
+.tabWithChevron__354ec {
     align-items: center;
-    display: flex;
+    display: flex
+}
+
+.tabWithChevron__354ec {
     gap: 4px
 }
 
-.tabWithDisclosure__354ec {
-    height: 100%
-}
-
-.disclosure__354ec {
-    align-items: center;
-    color: inherit;
-    height: 100%;
-    justify-content: center;
-    padding: 0 2px
-}
-
-.disclosure__354ec,
 .more__354ec {
     cursor: pointer;
     display: flex

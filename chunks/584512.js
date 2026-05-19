@@ -5,8 +5,6 @@ e.exports = {
     Mf: "tab__354ec",
     Lj: "tabContent__354ec",
     hP: "tabWithChevron__354ec",
-    Jg: "tabWithDisclosure__354ec",
-    AD: "disclosure__354ec",
     OS: "more__354ec",
     nt: "tabWithIcon__354ec",
     Ad: "newBadge__354ec",
