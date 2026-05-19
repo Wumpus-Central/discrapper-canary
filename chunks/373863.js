@@ -278,7 +278,7 @@ function x(e) {
             muxContentMetadata: ei,
             hideFullScreenBtn: !F,
             hideSkipButtons: !0,
-            compactDurationTime: !0,
+            compactTimeDisplay: !0,
             autoHideVolumeSlider: !0,
             hidePlaybackSpeedBtn: !0,
         }),

@@ -4560,6 +4560,7 @@
 }
 
 .durationTimeWrapper_b824c5 {
+    cursor: pointer;
     flex: 0 0 auto;
     height: 16px;
     margin-inline-start: 3px
@@ -4569,7 +4570,10 @@
 .durationTimeSeparator_b824c5 {
     color: var(--white);
     display: inline;
-    text-align: center
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
 }
 
 .durationTimeDisplay_b824c5 {
