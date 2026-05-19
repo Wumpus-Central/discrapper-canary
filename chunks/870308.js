@@ -19,6 +19,20 @@ let h = () => {
         E =
             null != n
                 ? ((e, t) => {
+                      if (t?.type === s.G.BADGE)
+                          return {
+                              type: _.FF.BADGE,
+                              badgeIcon: t.badgeIcon,
+                              badgeText: t.badgeText,
+                              entrypointBackgroundStyle: t.refTargetBackground?.style,
+                              entryPointBackgroundAssets: {
+                                  srcDark: e.buttonBGRestingDark,
+                                  srcLight: e.buttonBGRestingLight,
+                                  srcDarkHovered: e.buttonBGHoverDark,
+                                  srcLightHovered: e.buttonBGHoverLight,
+                              },
+                              showHoverGradient: t.showHoverGradient,
+                          };
                       if (t?.type === s.G.COACHMARK) {
                           let e = t.refTargetBackground;
                           return {

@@ -293,11 +293,28 @@ var D = n(488430);
 class L {
     dismissibleContent;
     version;
+    refTargetBackground;
+    badgeIcon;
+    badgeText;
+    showHoverGradient;
     constructor(e) {
-        (this.type = D.G.BADGE), (this.dismissibleContent = e.dismissibleContent), (this.version = e.version);
+        (this.type = D.G.BADGE),
+            (this.dismissibleContent = e.dismissibleContent),
+            (this.version = e.version),
+            (this.refTargetBackground = e.refTargetBackground),
+            (this.badgeIcon = e.badgeIcon),
+            (this.badgeText = e.badgeText),
+            (this.showHoverGradient = e.showHoverGradient);
     }
     static fromServer(e) {
-        return new L({ ...e, dismissibleContent: e.dismissible_content });
+        return new L({
+            ...e,
+            dismissibleContent: e.dismissible_content,
+            refTargetBackground: e.ref_target_background,
+            badgeIcon: e.badge_icon,
+            badgeText: e.badge_text,
+            showHoverGradient: e.show_hover_gradient,
+        });
     }
 }
 class w {
