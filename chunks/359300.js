@@ -1893,21 +1893,21 @@ var eK = a(693321),
     e7 = a(862301),
     e5 = a(760345);
 function e8(e) {
-    let { value: l, onChange: a, minValue: o, maxValue: i, placeholderValue: n, ...s } = e,
-        { i18n: r } = (0, eB.G9)(),
-        { fieldProps: d } = (0, L.n)(s),
-        { disabled: u, errorMessage: c, required: b = !1 } = d,
-        p = { hasError: null != c && "" !== c },
+    let { value: l, onChange: a, minValue: o, maxValue: i, placeholderValue: n, granularity: s = "day", ...r } = e,
+        { i18n: d } = (0, eB.G9)(),
+        { fieldProps: u } = (0, L.n)(r),
+        { disabled: c, errorMessage: b, required: p = !1 } = u,
+        m = { hasError: null != b && "" !== b },
         {
-            refs: m,
-            floatingStyles: x,
-            isOpen: h,
-            setIsOpen: v,
-            context: g,
-            getFloatingProps: f,
-            getReferenceProps: V,
+            refs: x,
+            floatingStyles: h,
+            isOpen: v,
+            setIsOpen: g,
+            context: f,
+            getFloatingProps: V,
+            getReferenceProps: C,
         } = (0, e3.u)({ matchReferenceWidth: !1, placement: "bottom-start" }),
-        { isMounted: C, styles: j } = (0, e4.DL)(g, {
+        { isMounted: j, styles: S } = (0, e4.DL)(f, {
             common: (e) => {
                 let { side: l } = e;
                 return { transformOrigin: `${"top" === l ? "bottom" : "top"} center` };
@@ -1915,17 +1915,17 @@ function e8(e) {
             initial: { opacity: 0.5, transform: "scaleY(0.96)" },
             duration: 100,
         }),
-        S = (e) => {
-            a?.(e), v(!1);
+        k = (e) => {
+            a?.(e), g(!1);
         };
     return (0, t.jsx)(L.D, {
-        ...d,
+        ...u,
         children: (e) =>
             (0, t.jsx)(e7.F, {
-                className: e5.LF,
-                validation: p,
-                ref: m.setReference,
-                ...V(),
+                className: "minute" === s ? e5.XF : e5.LF,
+                validation: m,
+                ref: x.setReference,
+                ...C(),
                 children: (0, t.jsxs)(eQ.lr, {
                     id: e.controlId,
                     "aria-labelledby": e.labelId,
@@ -1933,13 +1933,13 @@ function e8(e) {
                     "aria-invalid": null != e.errorMessageId,
                     "aria-errormessage": e.errorMessageId,
                     value: l,
-                    onChange: S,
-                    isDisabled: u,
-                    isRequired: b,
+                    onChange: k,
+                    isDisabled: c,
+                    isRequired: p,
                     minValue: o,
                     maxValue: i,
                     placeholderValue: n,
-                    granularity: "day",
+                    granularity: s,
                     "data-mana-component": "date-picker",
                     className: e5.Nz,
                     children: [
@@ -1955,32 +1955,32 @@ function e8(e) {
                                 }),
                                 (0, t.jsx)(e1.$, {
                                     className: e5.B7,
-                                    onClick: () => v(!h),
-                                    "aria-label": r.DATE_INPUT_OPEN_CALENDAR_LABEL,
+                                    onClick: () => g(!v),
+                                    "aria-label": d.DATE_INPUT_OPEN_CALENDAR_LABEL,
                                     children: (0, t.jsx)(e6.C, { size: "sm", color: "currentColor" }),
                                 }),
                             ],
                         }),
-                        h &&
-                            C &&
+                        v &&
+                            j &&
                             (0, t.jsx)("div", {
-                                ...f(),
-                                ref: m.setFloating,
-                                style: x,
+                                ...V(),
+                                ref: x.setFloating,
+                                style: h,
                                 className: e5.oO,
                                 children: (0, t.jsx)(eK.n1, {
                                     contain: !0,
                                     restoreFocus: !0,
                                     children: (0, t.jsx)(e2.lG, {
-                                        "aria-label": r.DATE_INPUT_OPEN_CALENDAR_LABEL,
-                                        style: j,
+                                        "aria-label": d.DATE_INPUT_OPEN_CALENDAR_LABEL,
+                                        style: S,
                                         className: e5.r3,
                                         children: (0, t.jsx)(e$, {
                                             value: l,
-                                            onChange: S,
+                                            onChange: k,
                                             minValue: o,
                                             maxValue: i,
-                                            disabled: u,
+                                            disabled: c,
                                         }),
                                     }),
                                 }),
@@ -2172,22 +2172,23 @@ function lt(e) {
             startName: s,
             endName: r,
             fullWidth: d = !1,
-            ...u
+            granularity: u = "day",
+            ...c
         } = e,
-        { i18n: c } = (0, eB.G9)(),
-        { fieldProps: b } = (0, L.n)(u),
-        { disabled: p, errorMessage: m, required: x = !1 } = b,
-        h = { hasError: null != m && "" !== m },
+        { i18n: b } = (0, eB.G9)(),
+        { fieldProps: p } = (0, L.n)(c),
+        { disabled: m, errorMessage: x, required: h = !1 } = p,
+        v = { hasError: null != x && "" !== x },
         {
-            refs: v,
-            floatingStyles: g,
-            isOpen: f,
-            setIsOpen: V,
-            context: C,
-            getFloatingProps: j,
-            getReferenceProps: S,
+            refs: g,
+            floatingStyles: f,
+            isOpen: V,
+            setIsOpen: C,
+            context: j,
+            getFloatingProps: S,
+            getReferenceProps: k,
         } = (0, e3.u)({ matchReferenceWidth: !1, placement: "bottom-start" }),
-        { isMounted: k, styles: w } = (0, e4.DL)(C, {
+        { isMounted: w, styles: T } = (0, e4.DL)(j, {
             common: (e) => {
                 let { side: l } = e;
                 return { transformOrigin: `${"top" === l ? "bottom" : "top"} center` };
@@ -2195,17 +2196,17 @@ function lt(e) {
             initial: { opacity: 0.5, transform: "scaleY(0.96)" },
             duration: 100,
         }),
-        T = (e) => {
-            a(e), e?.start != null && e?.end != null && V(!1);
+        M = (e) => {
+            a(e), e?.start != null && e?.end != null && C(!1);
         };
     return (0, t.jsx)(L.D, {
-        ...b,
+        ...p,
         children: (e) =>
             (0, t.jsx)(e7.F, {
-                className: d ? e5.e2 : e5.qX,
-                validation: h,
-                ref: v.setReference,
-                ...S(),
+                className: d ? e5.e2 : "minute" === u ? e5.oU : e5.qX,
+                validation: v,
+                ref: g.setReference,
+                ...k(),
                 children: (0, t.jsxs)(eQ.Ur, {
                     id: e.controlId,
                     "aria-labelledby": e.labelId,
@@ -2213,13 +2214,13 @@ function lt(e) {
                     "aria-invalid": null != e.errorMessageId,
                     "aria-errormessage": e.errorMessageId,
                     value: l,
-                    onChange: T,
-                    isDisabled: p,
-                    isRequired: x,
+                    onChange: M,
+                    isDisabled: m,
+                    isRequired: h,
                     minValue: o,
                     maxValue: i,
                     placeholderValue: n,
-                    granularity: "day",
+                    granularity: u,
                     startName: s,
                     endName: r,
                     "data-mana-component": "date-range-picker",
@@ -2247,32 +2248,32 @@ function lt(e) {
                                 }),
                                 (0, t.jsx)(e1.$, {
                                     className: e5.B7,
-                                    onClick: () => V(!f),
-                                    "aria-label": c.DATE_INPUT_OPEN_CALENDAR_LABEL,
+                                    onClick: () => C(!V),
+                                    "aria-label": b.DATE_INPUT_OPEN_CALENDAR_LABEL,
                                     children: (0, t.jsx)(e6.C, { size: "sm", color: "currentColor" }),
                                 }),
                             ],
                         }),
-                        f &&
-                            k &&
+                        V &&
+                            w &&
                             (0, t.jsx)("div", {
-                                ...j(),
-                                ref: v.setFloating,
-                                style: g,
+                                ...S(),
+                                ref: g.setFloating,
+                                style: f,
                                 className: e5.oO,
                                 children: (0, t.jsx)(eK.n1, {
                                     contain: !0,
                                     restoreFocus: !0,
                                     children: (0, t.jsx)(e2.lG, {
-                                        "aria-label": c.DATE_INPUT_OPEN_CALENDAR_LABEL,
-                                        style: w,
+                                        "aria-label": b.DATE_INPUT_OPEN_CALENDAR_LABEL,
+                                        style: T,
                                         className: e5.r3,
                                         children: (0, t.jsx)(la, {
                                             value: l,
-                                            onChange: T,
+                                            onChange: M,
                                             minValue: o,
                                             maxValue: i,
-                                            isDisabled: p,
+                                            isDisabled: m,
                                             visibleMonths: 2,
                                         }),
                                     }),

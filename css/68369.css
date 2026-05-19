@@ -3453,8 +3453,16 @@
     padding-right: var(--space-4)
 }
 
+.inputFieldMinute__085ad {
+    max-width: 320px
+}
+
 .inputFieldRange__085ad {
     max-width: 360px
+}
+
+.inputFieldRangeMinute__085ad {
+    max-width: 680px
 }
 
 .inputFieldFullWidth__085ad {
