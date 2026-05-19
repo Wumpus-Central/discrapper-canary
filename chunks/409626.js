@@ -82,6 +82,7 @@ var i,
         (r.CallTile = "call_tile"),
         (r.InAppBrowserReturn = "in_app_browser_return"),
         (r.Deeplink = "deeplink"),
+        (r.DmHeaderActivity = "dm_header_activity"),
         r),
     f = (((s = {}).FullProfile = "full_profile"), (s.MiniProfile = "mini_profile"), s);
 let h = () => (0, a.A)(),
