@@ -32,6 +32,8 @@ e.exports = {
     Ue: "durationTimeDisplay_b824c5",
     zO: "durationTimeSeparator_b824c5",
     MQ: "volumeSlider_b824c5",
+    qp: "playbackSpeedPopout_b824c5",
+    xl: "playbackSpeedHeading_b824c5",
     hA: "contentHeaderGameInfo_b824c5",
     iM: "accentOnHover_b824c5",
     BG: "transcriptOverlay_b824c5",

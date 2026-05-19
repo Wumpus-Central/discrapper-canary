@@ -124,7 +124,7 @@ var w = n(696016),
     M = n(581874);
 let P = (0, u.Fe)({
     createPromise: () =>
-        Promise.all([n.e("39012"), n.e("57174"), n.e("84971"), n.e("30920"), n.e("78010"), n.e("91652")]).then(
+        Promise.all([n.e("84541"), n.e("57174"), n.e("84971"), n.e("30920"), n.e("78010"), n.e("91652")]).then(
             n.bind(n, 664111),
         ),
     webpackId: 664111,
@@ -280,6 +280,7 @@ function x(e) {
             hideSkipButtons: !0,
             compactDurationTime: !0,
             autoHideVolumeSlider: !0,
+            hidePlaybackSpeedBtn: !0,
         }),
     });
 }
