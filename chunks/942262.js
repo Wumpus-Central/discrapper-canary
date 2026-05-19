@@ -762,8 +762,8 @@ function e2(e) {
           });
 }
 var e3 = l(922985),
-    e5 = l(842503);
-let e6 = function (e) {
+    e6 = l(842503);
+let e5 = function (e) {
     let { loadId: t } = e,
         l = x.A.useField("categoryId"),
         r = (0, i.bG)([eB.A], () => eB.A.getCategoryName(l)),
@@ -781,7 +781,7 @@ let e6 = function (e) {
     return (0, s.jsxs)("div", {
         className: e3.kL,
         children: [
-            (0, s.jsx)("img", { alt: "", src: e5, className: e3.Sl }),
+            (0, s.jsx)("img", { alt: "", src: e6, className: e3.Sl }),
             (0, s.jsx)(g.D, { variant: "heading-xl/semibold", className: e3.wx, children: c }),
             (0, s.jsx)(K.E, { variant: "text-md/normal", color: "text-default", children: o }),
         ],
@@ -922,7 +922,7 @@ function ta(e) {
                                             className: e8.eW,
                                             children: [(0, s.jsx)(e2, { loadId: t }), (0, s.jsx)(e7, { loadId: t })],
                                         }),
-                                    g && (0, s.jsx)(e6, { loadId: t }),
+                                    g && (0, s.jsx)(e5, { loadId: t }),
                                 ],
                             },
                             a,
@@ -1241,7 +1241,7 @@ function tn() {
         })
     );
 }
-var tc = l(83175),
+var tc = l(629258),
     to = l(726845),
     td = l(285395),
     tu = l(649445);

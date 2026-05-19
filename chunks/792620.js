@@ -1,28 +1,30 @@
 "use strict";
 n.d(t, {
     Cr: () => T,
-    F9: () => u,
+    F9: () => d,
+    GL: () => v,
     IO: () => N,
-    JC: () => G,
-    K$: () => C,
-    Ov: () => g,
-    TP: () => E,
-    Xi: () => U,
+    JC: () => F,
+    K$: () => R,
+    Ki: () => O,
+    Ov: () => m,
+    TP: () => f,
+    Xi: () => k,
     YL: () => L,
-    Yh: () => M,
-    _3: () => _,
+    Yh: () => G,
+    _3: () => u,
     a2: () => h,
-    fE: () => f,
-    g5: () => y,
-    hL: () => v,
-    pU: () => d,
-    t: () => m,
+    fE: () => E,
+    g5: () => b,
+    hL: () => w,
+    pU: () => c,
+    t: () => p,
     uD: () => S,
-    vS: () => c,
-    vl: () => A,
-    vv: () => R,
-    xZ: () => I,
-    xm: () => x,
+    vS: () => _,
+    vl: () => g,
+    vv: () => C,
+    xZ: () => A,
+    xm: () => V,
 });
 var i = n(735438),
     r = n(412703),
@@ -39,23 +41,23 @@ function l(e, t) {
     }
     return n.size > 0 ? Array.from(n) : void 0;
 }
-function _(e) {
+function u(e) {
     if (null == e) return;
     let t = Object.keys(e.config.taskConfigV2.tasks);
     return l(e, t);
 }
-function d(e) {
+function c(e) {
     return l(e, [r.n.PLAY_ON_DESKTOP]);
 }
-function u(e) {
+function d(e) {
     let t = l(e, [r.n.PLAY_ON_XBOX, r.n.PLAY_ON_PLAYSTATION]);
     return t?.[0];
 }
-function c(e) {
+function _(e) {
     let t = l(e, [r.n.PLAY_ACTIVITY]);
     return t?.[0];
 }
-function E(e) {
+function f(e) {
     let t = l(e, [r.n.PLAY_ACTIVITY, r.n.ACHIEVEMENT_IN_ACTIVITY]);
     return t?.[0];
 }
@@ -63,33 +65,41 @@ function h(e) {
     let t = l(e, [r.n.STREAM_ON_DESKTOP]);
     return t?.[0];
 }
-function m(e) {
+function p(e) {
     let { quest: t } = e;
     return null != t.config.taskConfigV2.tasks[r.n.PLAY_ON_DESKTOP];
 }
-function f(e) {
+function E(e) {
     let { quest: t } = e;
     return null != t.config.taskConfigV2.tasks[r.n.STREAM_ON_DESKTOP];
 }
-function g(e) {
+function m(e) {
     return null != e.config.taskConfigV2.tasks[r.n.ACHIEVEMENT_IN_ACTIVITY];
 }
-function A(e) {
+function g(e) {
     return null != e.config.taskConfigV2.tasks[r.n.PLAY_ACTIVITY];
 }
-function I(e) {
-    return null != e && m({ quest: e });
+function A(e) {
+    return null != e && p({ quest: e });
 }
-let p = (e) => (t) => e.some((e) => null != t.config.taskConfigV2.tasks[e]);
+let I = (e) => (t) => e.some((e) => null != t.config.taskConfigV2.tasks[e]);
 function T(e) {
     return Array.from(r.o.IN_GAME).some((t) => null != e.config.taskConfigV2.tasks[t]);
 }
-let S = p([r.n.PLAY_ON_XBOX, r.n.PLAY_ON_PLAYSTATION]),
-    N = p([r.n.WATCH_VIDEO]),
-    O = p([r.n.WATCH_VIDEO_ON_MOBILE]),
-    R = p([r.n.WATCH_VIDEO, r.n.WATCH_VIDEO_ON_MOBILE]),
-    C = (e) => O(e) && !N(e);
-function y(e) {
+let S = I([r.n.PLAY_ON_XBOX, r.n.PLAY_ON_PLAYSTATION]),
+    N = I([r.n.WATCH_VIDEO]),
+    y = I([r.n.WATCH_VIDEO_ON_MOBILE]),
+    C = I([r.n.WATCH_VIDEO, r.n.WATCH_VIDEO_ON_MOBILE]),
+    v = I([
+        r.n.PLAY_ON_DESKTOP,
+        r.n.STREAM_ON_DESKTOP,
+        r.n.PLAY_ON_PLAYSTATION,
+        r.n.PLAY_ON_XBOX,
+        r.n.ACHIEVEMENT_IN_GAME,
+    ]),
+    O = I([r.n.ACHIEVEMENT_IN_ACTIVITY, r.n.PLAY_ACTIVITY]),
+    R = (e) => y(e) && !N(e);
+function b(e) {
     return S(e);
 }
 let D = (e, t) => {
@@ -101,21 +111,21 @@ let D = (e, t) => {
 function L(e) {
     return null != e.userStatus && (D(e.userStatus, r.n.PLAY_ON_XBOX) || D(e.userStatus, r.n.PLAY_ON_PLAYSTATION));
 }
-function v(e) {
+function w(e) {
     return new Set(Object.keys(e.config.taskConfigV2.tasks));
 }
-function w(e) {
+function M(e) {
     return e?.type === r.n.PLAY_ON_DESKTOP;
 }
 let P = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
-    b = (e) => {
+    x = (e) => {
         let { quest: t, taskType: n, includeTaskTypes: a = r.o.ALL } = e,
             l = t.config.taskConfigV2,
-            _ = n ?? Object.values(l.tasks).filter((e) => a.has(e.type))[0]?.type,
-            d = l.tasks[_] ?? l.tasks[r.n.STREAM_ON_DESKTOP];
-        if (null == d) throw Error(`No task with type ${n} found for quest ${t.id}!`);
-        let u = d.target,
-            c = ((e, t) => {
+            u = n ?? Object.values(l.tasks).filter((e) => a.has(e.type))[0]?.type,
+            c = l.tasks[u] ?? l.tasks[r.n.STREAM_ON_DESKTOP];
+        if (null == c) throw Error(`No task with type ${n} found for quest ${t.id}!`);
+        let d = c.target,
+            _ = ((e, t) => {
                 let n = t.target;
                 if (e.userStatus?.completedAt != null) return n;
                 let r = Math.min(
@@ -123,7 +133,7 @@ let P = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
                     ((e, t) => {
                         let n = e.userStatus?.progress?.[t.type],
                             r = n?.value ?? e.userStatus?.streamProgressSeconds ?? 0;
-                        if (R(e)) {
+                        if (C(e)) {
                             let n = o.A.getOptimisticProgress(e.id, t.type);
                             return null == n || n < r ? r : n;
                         }
@@ -139,25 +149,25 @@ let P = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
                     })(e, t),
                 );
                 return Math.max((0, i.floor)(r, 2), 0);
-            })(t, d),
-            E = Object.values(l.tasks).find(w),
-            h = E?.applications?.map((e) => e.id);
+            })(t, c),
+            f = Object.values(l.tasks).find(M),
+            h = f?.applications?.map((e) => e.id);
         return {
-            progressSeconds: c,
-            targetSeconds: u,
-            targetMinutes: Math.ceil(u / s.A.Seconds.MINUTE),
-            percentComplete: P(u, c),
-            taskType: _,
+            progressSeconds: _,
+            targetSeconds: d,
+            targetMinutes: Math.ceil(d / s.A.Seconds.MINUTE),
+            percentComplete: P(d, _),
+            taskType: u,
             applications: h,
         };
     },
-    k = (e) => (r.o.ALL.has(e) ? e : null);
-function U(e) {
+    U = (e) => (r.o.ALL.has(e) ? e : null);
+function k(e) {
     let t = e.taskConfigV2.tasks[r.n.WATCH_VIDEO],
         n = e.taskConfigV2.tasks[r.n.WATCH_VIDEO_ON_MOBILE];
     return null != t && null != n ? t : (n ?? t ?? null);
 }
-let M = (e, t) =>
+let G = (e, t) =>
     T(e)
         ? {
               progressSeconds: 0,
@@ -186,19 +196,19 @@ let M = (e, t) =>
                                 : 1;
                     })
                     .filter(a.Vq)) {
-                    let i = k(e.eventName);
-                    if (null != i && n?.has(i)) return b({ quest: t, taskType: i, includeTaskTypes: n });
+                    let i = U(e.eventName);
+                    if (null != i && n?.has(i)) return x({ quest: t, taskType: i, includeTaskTypes: n });
                 }
-                return b({ quest: t, includeTaskTypes: n });
+                return x({ quest: t, includeTaskTypes: n });
             })({ quest: e, includeTaskTypes: t ?? (L(e) ? r.o.CONSOLE : r.o.ALL) })
-          : R(e)
-            ? b({ quest: e, taskType: U(e.config)?.type })
-            : I(e)
-              ? b({ quest: e, taskType: r.n.PLAY_ON_DESKTOP })
-              : A(e)
-                ? b({ quest: e, taskType: r.n.PLAY_ACTIVITY })
-                : b({ quest: e, taskType: r.n.STREAM_ON_DESKTOP });
-function G(e) {
+          : C(e)
+            ? x({ quest: e, taskType: k(e.config)?.type })
+            : A(e)
+              ? x({ quest: e, taskType: r.n.PLAY_ON_DESKTOP })
+              : g(e)
+                ? x({ quest: e, taskType: r.n.PLAY_ACTIVITY })
+                : x({ quest: e, taskType: r.n.STREAM_ON_DESKTOP });
+function F(e) {
     let t,
         n,
         i,
@@ -217,7 +227,7 @@ function G(e) {
         percentComplete: o,
     };
 }
-function x(e) {
+function V(e) {
     var t, n, i;
     let r = {
         minutes: Math.max(0, Math.floor((t = e.targetSeconds - e.progressSeconds) / 60)),

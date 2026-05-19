@@ -2477,7 +2477,7 @@
 .badge_d5a27a {
     -webkit-backdrop-filter: blur(22px);
     backdrop-filter: blur(22px);
-    background-color: rgba(0, 0, 0, .05);
+    background-color: var(--control-overlay-secondary-background-default);
     border-radius: var(--radius-lg);
     gap: var(--space-4);
     padding: var(--space-4) var(--space-8);
