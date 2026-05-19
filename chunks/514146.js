@@ -5,6 +5,7 @@ t.r(
         headerText: "headerText__2ef49",
         headerTextNormal: "headerTextNormal__2ef49 headerText__2ef49 ellipsis__2ef49",
         headerTextEmptyBody: "headerTextEmptyBody__2ef49 headerText__2ef49",
+        headerPlatformIcon: "headerPlatformIcon__2ef49",
         body: "body__2ef49",
         bodyAlignCenter: "bodyAlignCenter__2ef49 body__2ef49",
         bodyNormal: "bodyNormal__2ef49 body__2ef49",

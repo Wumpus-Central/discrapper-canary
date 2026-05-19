@@ -17,7 +17,7 @@ function a(e) {
     (0, r.openModalLazy)(
         async () => {
             let { ApplicationCommandShareModal: e } = await Promise.all([
-                n.e("66570"),
+                n.e("84541"),
                 n.e("11377"),
                 n.e("26105"),
                 n.e("46461"),
@@ -29,12 +29,12 @@ function a(e) {
                 n.e("76542"),
                 n.e("35310"),
                 n.e("85484"),
-                n.e("77266"),
-                n.e("20706"),
+                n.e("116"),
+                n.e("98214"),
                 n.e("36407"),
                 n.e("69134"),
                 n.e("79705"),
-                n.e("68369"),
+                n.e("73589"),
                 n.e("24949"),
                 n.e("55658"),
                 n.e("24092"),

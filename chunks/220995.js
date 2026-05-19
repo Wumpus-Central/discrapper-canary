@@ -18,12 +18,12 @@ var n = i(627968),
     v = i(964486),
     f = i(793574),
     E = i(688810),
-    N = i(139286),
-    _ = i(713517),
+    _ = i(139286),
+    N = i(713517),
     S = i(71393),
     C = i(576705),
-    j = i(174459),
-    y = i(778768),
+    y = i(174459),
+    j = i(778768),
     T = i(652215);
 i(281405);
 var b = i(375708),
@@ -39,7 +39,7 @@ function R(e) {
         w = l.useRef(null),
         [M, L] = l.useState(0),
         { analyticsLocations: H } = (0, E.Ay)(f.A.VOICE_INVITE_SUGGESTIONS);
-    (0, N.A)({
+    (0, _.A)({
         name: d.ImpressionNames.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT,
         type: d.ImpressionTypes.VIEW,
         properties: { voice_channel_id: t.id, voice_guild_id: t.guild_id, location_stack: H },
@@ -48,14 +48,14 @@ function R(e) {
         z = (0, u.bG)([S.A], () => S.A.getGuild(t.guild_id)),
         [Y, B] = l.useState(!1),
         K = l.useRef(null),
-        { isHoveringOrFocusing: q } = (0, _.A)(F ? R : K),
+        { isHoveringOrFocusing: q } = (0, N.A)(F ? R : K),
         [W, $] = l.useState(!1),
-        { isFocusing: Z } = (0, _.A)(k),
+        { isFocusing: Z } = (0, N.A)(k),
         J = q || W,
         X = l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
-                j.default.track(T.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
+                y.default.track(T.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
                     reason: e,
                     channel_id: t.id,
                     guild_id: t.guild_id,
@@ -70,7 +70,7 @@ function R(e) {
             null != z &&
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        i.e("97292"),
+                        i.e("116"),
                         i.e("59957"),
                         i.e("28136"),
                         i.e("16084"),
@@ -135,7 +135,7 @@ function R(e) {
               align: "top",
               spacing: 17,
               popoutKey: "voice-invite-suggestions-button",
-              renderPopout: (e) => (0, n.jsx)(y.w, { channel: t, onHoverOrFocus: $, ...e }),
+              renderPopout: (e) => (0, n.jsx)(j.w, { channel: t, onHoverOrFocus: $, ...e }),
               onRequestOpen: es,
               onRequestClose: ea,
               children: (e) => {

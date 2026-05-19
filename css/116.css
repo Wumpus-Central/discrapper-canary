@@ -4607,7 +4607,11 @@ span.clanTag__07f91.isOverlay__07f91 {
 }
 
 .headerText__2ef49 {
+    align-items: center;
+    display: flex;
     font-weight: var(--font-weight-bold);
+    gap: 4px;
+    overflow: hidden;
     text-transform: uppercase
 }
 
@@ -4618,6 +4622,12 @@ span.clanTag__07f91.isOverlay__07f91 {
 .headerTextNormal__2ef49 {}
 
 .headerTextEmptyBody__2ef49 {}
+
+.headerPlatformIcon__2ef49 {
+    flex-shrink: 0;
+    height: 12px;
+    width: 12px
+}
 
 .body__2ef49 {
     display: flex
@@ -6148,20 +6158,6 @@ span.clanTag__07f91.isOverlay__07f91 {
     height: 100%;
     position: relative;
     width: 100%
-}
-
-.heading_b12e66 {
-    margin-bottom: 16px
-}
-
-.cannon_b12e66 {
-    height: 130vh;
-    inset-inline-start: 0;
-    pointer-events: none;
-    position: absolute;
-    top: -30vh;
-    width: 100vw;
-    z-index: 1
 }
 
 .previewContainer__597b5 {

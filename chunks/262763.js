@@ -80,7 +80,7 @@ let I = {
                       async () => {
                           let { default: r } = await Promise.all([
                               n.e("11377"),
-                              n.e("8802"),
+                              n.e("95507"),
                               n.e("21537"),
                               n.e("18943"),
                               n.e("42234"),

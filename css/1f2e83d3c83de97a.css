@@ -1,3 +1,14 @@
+.bannerImage__282ea,
+.colorSwatch__282ea {
+    height: 100%;
+    width: 100%
+}
+
+.bannerImage__282ea {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
 .displayNamePreview__2818b {
     display: flex;
     justify-content: center;

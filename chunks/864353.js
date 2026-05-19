@@ -230,7 +230,7 @@ function e_(e) {
                         (0, G.openModalLazy)(
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("8802"),
+                                    n.e("95507"),
                                     n.e("44616"),
                                     n.e("96680"),
                                     n.e("85579"),
@@ -584,8 +584,8 @@ var e0 = n(337092),
     e6 = n(69494),
     e2 = n(534479),
     e8 = n(340034),
-    e3 = n(50956),
-    e7 = n(71867),
+    e7 = n(50956),
+    e3 = n(71867),
     e5 = n(249872);
 function e9(e) {
     let { handleStepChange: t, initialPlanId: n, planGroup: r, subscriptionTier: s, trialId: a, handleClose: u } = e,
@@ -658,12 +658,12 @@ function e9(e) {
             : (0, l.jsx)(e0.$p, { ...ee });
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(e3.Z, { giftMessage: b }),
+            (0, l.jsx)(e7.Z, { giftMessage: b }),
             !(R && (0, q.Ik)(C)) && (0, l.jsx)(e6.A, { isEligibleForTrial: _ }),
             (0, l.jsxs)(Z.dZ, {
                 children: [
                     !J && X && (0, l.jsx)("hr", { className: e5.T4 }),
-                    (0, l.jsx)(e7.P, { className: e5.ZB, planSkuId: F?.skuId, referralTrialOfferId: h }),
+                    (0, l.jsx)(e3.P, { className: e5.ZB, planSkuId: F?.skuId, referralTrialOfferId: h }),
                     (0, l.jsx)(eE.A, {}),
                     Q ? (0, l.jsx)(ez.w, { type: "critical", children: Y }) : et,
                     X &&
