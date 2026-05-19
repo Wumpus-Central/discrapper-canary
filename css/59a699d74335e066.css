@@ -1,0 +1,245 @@
+.container__93e55 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.messageContainer__93e55 {
+    background-color: var(--background-mod-muted);
+    border-color: var(--border-subtle);
+    border-radius: var(--radius-sm);
+    border-style: solid;
+    border-width: 1px;
+    padding: var(--space-12)
+}
+
+.ercContainer__93e55 {
+    overflow: visible;
+    padding: var(--space-12) 0;
+    pointer-events: none;
+    position: relative
+}
+
+.learnMore__7b2a3 {
+    cursor: pointer
+}
+
+.container_ae4343 {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.container__89401 {
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    position: relative
+}
+
+.container__89401,
+.demo__89401 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.demo__89401 {
+    width: 381px
+}
+
+.baseUrl__89401 {
+    opacity: .5
+}
+
+.vanityCode__89401 {
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.previewCard__89401 {
+    align-items: flex-start;
+    background: var(--background-mod-muted);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding: var(--space-12)
+}
+
+.avatar__89401 {
+    align-items: center;
+    background: var(--border-muted);
+    border-radius: 20px;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
+
+.previewCardMessage__89401 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.previewCardUrl__89401 {
+    display: flex
+}
+
+.disclaimer__89401 {
+    bottom: 40px;
+    font-style: italic;
+    inset-inline-start: 0;
+    margin-top: unset;
+    position: absolute;
+    text-align: center;
+    width: 100%
+}
+
+.skeleton__89401 {
+    background: var(--background-mod-subtle);
+    border-radius: 8px
+}
+
+.messageHeaderSkeleton__89401 {
+    align-items: center;
+    display: flex;
+    gap: 2px
+}
+
+.usernameSkeleton__89401 {
+    background: var(--background-mod-normal);
+    height: 12px;
+    width: 71px
+}
+
+.timestampSkeleton__89401 {
+    height: 12px;
+    width: 40px
+}
+
+.messageEmbed__89401 {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 8px;
+    padding: 8px;
+    width: 292px
+}
+
+.messageEmbed__89401,
+.messageEmbedHeaderSkeleton__89401 {
+    align-self: stretch;
+    display: flex;
+    flex-shrink: 0
+}
+
+.messageEmbedHeaderSkeleton__89401 {
+    height: 15px
+}
+
+.messageEmbedContent__89401 {
+    align-items: flex-start;
+    display: flex;
+    gap: 8px
+}
+
+.messageEmbedContentIconSkeleton__89401 {
+    height: 24px;
+    width: 24px
+}
+
+.messageEmbedContentLines__89401 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 190px
+}
+
+.messageEmbedContenPrimaryLineSkeleton__89401 {
+    align-self: stretch;
+    height: 6px
+}
+
+.messageEmbedContentSecondaryLineSkeleton__89401 {
+    height: 5px;
+    width: 94px
+}
+
+.messageEmbedContentActionSkeleton__89401 {
+    height: 24px;
+    width: 59px
+}
+
+.close__61aee {
+    inset-inline-end: var(--space-16);
+    position: absolute;
+    top: var(--space-16)
+}
+
+.modal__61aee,
+.modalContentContainer__61aee {
+    margin: 0;
+    overflow: hidden
+}
+
+.modalContentContainer__61aee {
+    display: flex;
+    height: 600px;
+    max-width: 850px;
+    min-width: 480px;
+    padding: 0 !important
+}
+
+.sidebar__61aee {
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.contentContainer__61aee {
+    padding: var(--space-32)
+}
+
+.description__61aee {
+    margin-top: var(--space-4)
+}
+
+.cooldownInfo__61aee {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    margin-top: var(--space-8)
+}
+
+.footer__61aee {
+    margin-top: var(--space-24)
+}
+
+.powerupImageContainer__61aee {
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center
+}
+
+.powerupImage__61aee {
+    max-width: 350px
+}
+
+.exampleImage__61aee {
+    align-items: center;
+    background: var(--background-base-lowest);
+    display: flex;
+    flex: 0 0 500px;
+    justify-content: center
+}
+
+.error__61aee {
+    margin-top: var(--space-16)
+}

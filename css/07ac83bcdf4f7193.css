@@ -1,0 +1,12 @@
+.container_aa69cc {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+    padding: var(--space-12) 0
+}
+
+.content_aa69cc,
+.tabBar_aa69cc {
+    padding: 0 var(--space-12)
+}

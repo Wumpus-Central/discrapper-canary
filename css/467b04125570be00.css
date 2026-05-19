@@ -1,0 +1,93 @@
+.container__710ee {
+    flex-direction: column;
+    min-height: 300px
+}
+
+.circle__710ee,
+.container__710ee {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.circle__710ee {
+    background-color: var(--background-base-lowest);
+    border-radius: 50%;
+    height: 64px;
+    width: 64px
+}
+
+.icon__710ee {
+    color: var(--interactive-text-active)
+}
+
+.title__710ee {
+    margin: 32px 0 8px
+}
+
+.roleTip__710ee,
+.subtitle__710ee {
+    text-align: center
+}
+
+.roleTip__710ee {
+    margin-top: 4px
+}
+
+.header_d0b769 {
+    align-items: center;
+    background-color: unset;
+    box-shadow: none;
+    display: flex;
+    padding-bottom: 8px
+}
+
+.content_d0b769 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 16px;
+    padding-top: 8px
+}
+
+.icon_d0b769 {
+    color: var(--icon-muted);
+    inset-inline-end: var(--space-24);
+    margin-inline-end: 8px
+}
+
+.divider_d0b769 {
+    color: var(--border-subtle);
+    margin: 0 16px
+}
+
+.iconButton_d0b769 {
+    inset-inline-end: 16px;
+    position: absolute
+}
+
+.iconButton_d0b769 .icon_d0b769 {
+    margin: 0
+}
+
+.iconButton_d0b769:hover {
+    cursor: pointer
+}
+
+.iconButton_d0b769:hover .icon_d0b769 {
+    color: var(--interactive-text-active)
+}
+
+.enable-forced-colors .iconButton_d0b769 {
+    background-color: ButtonFace;
+    border: 1px solid ButtonFace
+}
+
+.enable-forced-colors .iconButton_d0b769 .icon_d0b769 {
+    color: ButtonText
+}
+
+.enable-forced-colors .iconButton_d0b769:focus,
+.enable-forced-colors .iconButton_d0b769:hover {
+    border-color: ButtonText
+}

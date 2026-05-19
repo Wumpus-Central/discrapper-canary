@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { default: () => a, getIsCrepeEnabled: () => s, useIsCrepeEnabled: () => r });
+n.d(t, { GM: () => r, f0: () => s });
 let i = (0, n(945810).mj)({
     name: "2026-03-crepe",
     kind: "user",
@@ -14,4 +14,3 @@ function s(e) {
     let { enabled: t } = i.getConfig({ location: e });
     return t;
 }
-let a = i;

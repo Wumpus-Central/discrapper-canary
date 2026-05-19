@@ -18,7 +18,7 @@ function f(e) {
     let t = (0, o.kQ)(e?.perks, s.bb.MORE_QUEST_ORBS);
     return t?.includes(s.g$.SOURCE_NITRO)
         ? "nitro"
-        : (0, a.getIsCrepeEnabled)("getQuestOrbMultiplierSource") && t?.includes(s.g$.SOURCE_THIRDPARTY_CROISSANT)
+        : (0, a.f0)("getQuestOrbMultiplierSource") && t?.includes(s.g$.SOURCE_THIRDPARTY_CROISSANT)
           ? "crepe"
           : null;
 }

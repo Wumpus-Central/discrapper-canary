@@ -7,4 +7,7 @@ e.exports = {
     DD: "title__53455",
     wm: "logo__53455",
     lO: "cta__53455",
+    yF: "divider__53455",
+    F4: "perksSection__53455",
+    qr: "footer__53455",
 };

@@ -1,0 +1,82 @@
+.title__750de {
+    flex: 1;
+    margin-bottom: 0
+}
+
+.searchBar__750de {
+    margin-top: 20px
+}
+
+.connectionsContainer__750de {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 8px;
+    margin-top: 16px;
+    margin-inline-end: -8px
+}
+
+.accountBtn__750de {
+    margin-inline-end: 8px;
+    margin-bottom: 8px
+}
+
+.accountBtn__750de:last-child {
+    margin-inline-end: 0
+}
+
+.accountBtnInner__750de {
+    background-color: var(--background-base-lower);
+    border: none
+}
+
+.accountBtnInner__750de:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.applicationsHeader__750de {
+    margin-top: 16px
+}
+
+.applicationsContainer__750de {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-inline-end: -8px;
+    margin-bottom: 16px;
+    margin-top: 12px
+}
+
+.application__750de {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    width: 184px
+}
+
+.application__750de:hover {
+    background-color: var(--background-mod-normal);
+    cursor: pointer
+}
+
+.applicationIcon__750de {
+    height: 32px;
+    min-width: 32px;
+    width: 32px
+}
+
+.applicationNameContainer__750de {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    overflow: hidden
+}
+
+.applicationNameText__750de {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}

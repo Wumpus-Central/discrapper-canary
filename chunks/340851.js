@@ -18,12 +18,12 @@ var n = i(627968),
     v = i(643501),
     f = i(916641),
     E = i(652896),
-    N = i(279250),
-    _ = i(346846),
+    _ = i(279250),
+    N = i(346846),
     S = i(342296),
     C = i(481947),
-    j = i(495544),
-    y = i(71393),
+    y = i(495544),
+    j = i(71393),
     T = i(576705),
     b = i(287809),
     O = i(977997),
@@ -108,17 +108,17 @@ let w = (0, g.J)(function (e) {
         [],
     );
     let ep = () => {
-            if (!W || !(0, N.eo)(d, O.A, y.A, T.A, v.default)[0]) return;
+            if (!W || !(0, _.eo)(d, O.A, j.A, T.A, v.default)[0]) return;
             let e = { streamType: R.U4.GUILD, ownerId: s.id, channelId: d.id, guildId: d.guild_id };
-            j.default.getId() !== s.id && h.default.selectVoiceChannel(d.id),
-                $ ? ((0, _.A)(e), o.A.selectParticipant(e.channelId, (0, E._z)(e))) : (0, A.Nl)(e),
+            y.default.getId() !== s.id && h.default.selectVoiceChannel(d.id),
+                $ ? ((0, N.A)(e), o.A.selectParticipant(e.channelId, (0, E._z)(e))) : (0, A.Nl)(e),
                 Q?.(s.id);
         },
         eI = (e) => {
             (0, m.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    i.e("80203"),
-                    i.e("685"),
+                    i.e("15686"),
+                    i.e("23531"),
                     i.e("94881"),
                     i.e("26132"),
                     i.e("46652"),

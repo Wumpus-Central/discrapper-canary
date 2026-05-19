@@ -1,0 +1,29 @@
+.confirmation__9baa5 {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    max-width: 394px;
+    padding-bottom: 16px;
+    text-align: center;
+    width: 100%
+}
+
+.confirmationHeader__9baa5 {
+    margin-bottom: 8px
+}
+
+.skuImage__9baa5 {
+    aspect-ratio: 1;
+    margin-bottom: 24px;
+    width: 150px
+}
+
+.rewardNotice__9baa5 {
+    margin-top: var(--space-12)
+}
+
+.buttonContainer__9baa5 {
+    margin-top: var(--space-24);
+    width: 100%
+}

@@ -1,0 +1,120 @@
+.modal__4331e {
+    background: radial-gradient(181.07% 122.33% at -20.89% -23.8%, rgba(5, 75, 22, .4) 0, transparent 100%), var(--background-base-lower);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: calc(var(--custom-modal-padding-bottom, var(--space-16))*-1);
+    margin-top: calc(var(--custom-modal-padding-top, var(--space-24))*-1);
+    overflow: hidden;
+    padding: var(--space-24)
+}
+
+.header__4331e {
+    justify-content: space-between
+}
+
+.header__4331e,
+.logoRow__4331e {
+    align-items: center;
+    display: flex
+}
+
+.xboxLogo__4331e {
+    height: 16px;
+    width: auto
+}
+
+.logoSeparator__4331e {
+    margin-inline-end: var(--space-8);
+    margin-inline-start: var(--space-8)
+}
+
+.subtitle__4331e {
+    margin-top: var(--space-8);
+    width: 330px
+}
+
+.perkList__4331e {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--space-16)
+}
+
+.perkCard__4331e {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    display: flex;
+    margin-top: var(--space-8);
+    min-height: 120px;
+    padding: var(--space-20) var(--space-16)
+}
+
+.perkContent__4331e {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding-block: var(--space-20);
+    padding-inline-end: var(--space-24);
+    width: 256px
+}
+
+.perkIcon__4331e,
+.perkTitleRow__4331e {
+    align-items: center;
+    display: flex
+}
+
+.perkIcon__4331e {
+    margin-inline-end: var(--space-6)
+}
+
+.perkDescription__4331e {
+    margin-top: var(--space-4)
+}
+
+.progressBar__4331e {
+    margin-top: var(--space-12)
+}
+
+.perkThumbnail__4331e {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-shrink: 0;
+    height: 120px;
+    justify-content: center;
+    margin-inline-start: var(--space-20);
+    overflow: hidden;
+    width: 120px
+}
+
+.perkThumbnailImage__4331e {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.orbsMultiplierThumbnailImage__4331e {
+    height: 55px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100px
+}
+
+.shopDiscountThumbnailImage__4331e {
+    height: 70px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%
+}
+
+.footer__4331e {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-16)
+}

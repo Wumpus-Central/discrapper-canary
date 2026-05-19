@@ -1,0 +1,280 @@
+.container_cd2add {
+    align-items: center;
+    background: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: row;
+    padding: 24px 12px
+}
+
+.textContainer_cd2add {
+    margin: 0 12px
+}
+
+.headerText_cd2add {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.newBadge_cd2add {
+    margin-inline-end: 8px
+}
+
+.banner__41de9 {
+    filter: saturate(var(--saturation-factor, 1));
+    height: 180px;
+    margin-top: -32px;
+    width: 180px
+}
+
+.connectionsContainer__41de9 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+    padding: var(--space-8) 0
+}
+
+.accountButtonInner__41de9 {
+    background-color: var(--control-secondary-background-default);
+    border: 1px solid var(--control-secondary-border-default)
+}
+
+.accountButtonInner__41de9:hover {
+    background-color: var(--control-secondary-background-hover);
+    border-color: var(--control-secondary-border-hover)
+}
+
+.accountAddWrapper__41de9 {
+    position: relative
+}
+
+.accountAddInner__41de9 {
+    align-items: center;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    border-radius: var(--radius-sm);
+    color: var(--control-secondary-icon-default);
+    display: flex;
+    height: 44px;
+    justify-content: center;
+    width: 44px
+}
+
+.accountAddInner__41de9:hover {
+    background-color: var(--control-secondary-background-hover);
+    border-color: var(--control-secondary-border-hover);
+    cursor: pointer
+}
+
+.accountAddInner__41de9:disabled {
+    opacity: .5;
+    pointer-events: none
+}
+
+.connectionList__41de9 {
+    display: grid;
+    grid-gap: 24px
+}
+
+.connection__41de9 {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-20);
+    padding: var(--space-16);
+    width: 100%
+}
+
+.connectionHeader__41de9 {
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    position: relative
+}
+
+.connectionHeader__41de9 .connectionAccountValue__41de9 {
+    color: var(--text-strong);
+    margin-inline-start: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.connectionAccountLabelContainer__41de9 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.connectionAccountLabelVerified__41de9 {
+    height: 16px;
+    margin-inline-start: 4px;
+    width: 20px
+}
+
+.connectionAccountLabel__41de9 {
+    margin-inline-start: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.connectionIcon__41de9 {
+    -webkit-user-drag: none;
+    height: 32px;
+    width: 32px
+}
+
+.applicationConnectionIcon__41de9 {
+    border-radius: 32px
+}
+
+.connectionOptions__41de9 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-20)
+}
+
+.integrationsWrapper__41de9 {
+    padding: 20px
+}
+
+.integrationsWrapper__41de9 a {
+    color: var(--text-default)
+}
+
+.integrationWrapper__41de9 {
+    background: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    margin-top: 8px;
+    padding: 16px
+}
+
+.integration__41de9 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between
+}
+
+.integration__41de9 .guildIcon__41de9 {
+    margin-inline-end: 8px
+}
+
+.integrationError__41de9 {
+    display: flex;
+    justify-content: center
+}
+
+.integrationInner__41de9 {
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.integrationInner__41de9 .channelLink__41de9 {
+    color: var(--text-default);
+    font-size: 12px
+}
+
+.connectionDelete__41de9 {
+    align-self: center;
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    margin: 0 8px
+}
+
+.connectionDelete__41de9:hover {
+    color: var(--interactive-text-hover)
+}
+
+.integrationRevoked__41de9 {
+    font-weight: var(--font-weight-semibold)
+}
+
+.integrationRevoked__41de9 a {
+    color: var(--text-link)
+}
+
+.metadataContainer__41de9 {
+    align-content: flex-start;
+    background-color: var(--background-mod-muted);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: row;
+    padding: var(--space-8)
+}
+
+.metadataItem__41de9 {
+    align-self: center;
+    margin-top: 0 !important
+}
+
+.metadataRefreshButton__41de9 {
+    align-self: center;
+    margin-inline-start: auto
+}
+
+.enable-forced-colors .connection__41de9 {
+    border: 1px solid CanvasText
+}
+
+.enable-forced-colors .connectionHeader__41de9 {
+    border-bottom: 1px solid CanvasText
+}
+
+.enable-forced-colors .connectionDelete__41de9 {
+    background-color: ButtonFace;
+    border: 1px solid ButtonFace;
+    color: ButtonText
+}
+
+.enable-forced-colors .connectionDelete__41de9:focus,
+.enable-forced-colors .connectionDelete__41de9:hover {
+    border-color: ButtonText
+}
+
+.connectedAccountVanityMetadataCreatedAt__41de9 {
+    align-items: center;
+    display: flex
+}
+
+.connectionMetadataUpsellTag__41de9 {
+    align-self: center;
+    padding: 0 6px
+}
+
+.connectionMetadataUpsellDescription__41de9 {
+    align-self: center;
+    padding: 0 4px
+}
+
+.sparkleContainer__41de9 {
+    margin-inline-end: 8px;
+    position: relative
+}
+
+.sparkleTop__41de9 {
+    inset-inline-start: -6px;
+    top: -8px
+}
+
+.sparkleBottom__41de9,
+.sparkleTop__41de9 {
+    position: absolute;
+    z-index: 2
+}
+
+.sparkleBottom__41de9 {
+    bottom: -6px;
+    inset-inline-end: -4px
+}
+
+.infoBox__41de9 {
+    margin-top: 16px
+}

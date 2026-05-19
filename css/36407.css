@@ -1,0 +1,22 @@
+.row_e4172d {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%
+}
+
+.baseAvatar__6738d {
+    display: inline-block;
+    vertical-align: top
+}
+
+.largeAvatar__6738d {
+    line-height: 24px;
+    margin-inline-end: 8px
+}
+
+.miniAvatar__6738d {
+    line-height: 18px;
+    margin-inline-end: 4px;
+    margin-top: 1px
+}

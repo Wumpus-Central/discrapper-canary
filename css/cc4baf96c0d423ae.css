@@ -1,0 +1,92 @@
+.buttonsContainer__89253 {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.removeButton__89253 {
+    margin-inline-start: 4px
+}
+
+.buttonHighlighted__89253 {
+    background: linear-gradient(95.07deg, var(--premium-tier-2-purple-for-gradients) 0, var(--premium-tier-2-purple-for-gradients-2) 49.96%, var(--premium-tier-2-pink-for-gradients) 95.93%)
+}
+
+.overrideButtonsContainer__89253 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px
+}
+
+.buttonsContainer__28d5e {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.removeButton__28d5e {
+    margin-inline-start: 4px
+}
+
+.buttonHighlighted__28d5e {
+    background: linear-gradient(95.07deg, var(--premium-tier-2-purple-for-gradients) 0, var(--premium-tier-2-purple-for-gradients-2) 49.96%, var(--premium-tier-2-pink-for-gradients) 95.93%)
+}
+
+.newBadge__28d5e {
+    margin-inline-start: 4px
+}
+
+.buttonsContainer__4962e {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px
+}
+
+.section__25879 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px
+}
+
+.newBadge__25879 {
+    margin-inline-start: 8px
+}
+
+.buttonsContainer_ffefd9 {
+    display: flex
+}
+
+.removeButton_ffefd9 {
+    margin-inline-start: 4px
+}
+
+.buttonHighlighted_ffefd9 {
+    background: linear-gradient(95.07deg, var(--premium-tier-2-purple-for-gradients) 0, var(--premium-tier-2-purple-for-gradients-2) 49.96%, var(--premium-tier-2-pink-for-gradients) 95.93%)
+}
+
+.buttonsContainer_fd47ae {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.removeButton_fd47ae {
+    margin-inline-start: 4px
+}
+
+.buttonHighlighted_fd47ae {
+    background: linear-gradient(95.07deg, var(--premium-tier-2-purple-for-gradients) 0, var(--premium-tier-2-purple-for-gradients-2) 49.96%, var(--premium-tier-2-pink-for-gradients) 95.93%)
+}
+
+.newBadge_fd47ae {
+    align-items: center;
+    margin-inline-start: 2px
+}
+
+.buttonsContainer__1811e {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.newBadge__1811e,
+.removeButton__1811e {
+    margin-inline-start: 4px
+}

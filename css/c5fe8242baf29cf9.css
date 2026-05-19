@@ -1,0 +1,5 @@
+.forumPost__02068 {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    pointer-events: none
+}

@@ -1,0 +1,23 @@
+.paymentElementStoryContainer__1f918 {
+    display: flex;
+    flex-direction: row;
+    gap: 12px
+}
+
+.paymentElementStepModalBody__1f918 {
+    background-color: var(--modal-background);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    max-width: 480px;
+    min-height: 750px;
+    padding: var(--space-24);
+    width: 480px
+}
+
+.fullLengthPaymentElementStepModalBody__1f918 {
+    min-height: 900px
+}
+
+.paymentElementContainer__1f918 {
+    margin: 8px
+}

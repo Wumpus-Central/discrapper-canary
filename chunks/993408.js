@@ -63,7 +63,7 @@ function S(e) {
     let t = (0, l.kQ)(e?.perks, a.bb.SHOP_DISCOUNTS);
     return t?.includes(a.g$.SOURCE_NITRO)
         ? "nitro"
-        : (0, o.getIsCrepeEnabled)("getShopDiscountSource") && t?.includes(a.g$.SOURCE_THIRDPARTY_CROISSANT)
+        : (0, o.f0)("getShopDiscountSource") && t?.includes(a.g$.SOURCE_THIRDPARTY_CROISSANT)
           ? "thirdparty"
           : null;
 }
