@@ -1,0 +1,61 @@
+r.d(t, {
+    ES: () => n,
+    kf: () => _,
+    oQ: () => v,
+    p7: () => d,
+    qz: () => o,
+    sM: () => l,
+    up: () => g,
+    yH: () => I,
+    yr: () => y,
+});
+var a = r(406935),
+    c = r(52133),
+    s = r(885386),
+    i = r(408418),
+    p = r(750714),
+    u = r(652215);
+let d = (0, i.r)("textAndImages", "explicitContentSettings", s.Iv, s.Vv, { comparator: c.A }),
+    l = (0, i.r)(
+        "textAndImages",
+        "explicitContentFilter",
+        (e) => e?.value ?? p.Je.NON_FRIENDS,
+        (e) => a.ZQ.create({ value: e }),
+    ),
+    v = (0, i.r)("textAndImages", "goreContentSettings", s.NF, s._8, { comparator: c.A }),
+    n = (0, i.r)(
+        "privacy",
+        "defaultMessageRequestRestricted",
+        (e) => e?.value,
+        (e) => a._t.create({ value: e }),
+    ),
+    o = (0, i.r)(
+        "privacy",
+        "defaultGuildsRestricted",
+        (e) => e ?? !1,
+        (e) => e,
+    ),
+    y = (0, i.r)(
+        "privacy",
+        "defaultGuildsRestrictedV2",
+        (e) => e?.value,
+        (e) => a._t.create({ value: e }),
+    ),
+    g = (0, i.r)(
+        "privacy",
+        "friendSourceFlags",
+        (e) => e?.value ?? u.yKI,
+        (e) => a.ZQ.create({ value: e }),
+    ),
+    _ = (0, i.r)(
+        "privacy",
+        "dropsOptedOut",
+        (e) => e?.value ?? !1,
+        (e) => a._t.create({ value: e }),
+    ),
+    I = (0, i.r)(
+        "privacy",
+        "quests3PDataOptedOut",
+        (e) => e?.value ?? !1,
+        (e) => a._t.create({ value: e }),
+    );
