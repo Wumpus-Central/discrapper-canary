@@ -25,9 +25,10 @@
 }
 
 .previewCard_ee133f {
-    border-radius: var(--space-4);
+    background-color: var(--background-base-low);
+    border-radius: var(--space-4) var(--space-4) 0 0;
     box-shadow: var(--shadow-low);
-    height: 120px;
+    height: 88px;
     left: 50%;
     overflow: hidden;
     position: absolute;
