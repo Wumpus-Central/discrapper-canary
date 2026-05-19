@@ -24629,6 +24629,8 @@
   "5h8p5P": "{count, plural, one {!!{platforms}!! is not supported.} other {!!{platforms}!! are not supported.} }",
   "vyAtfo": "Connect your !!{applicationName}!! and Discord accounts to accept this gift. !!{platforms_info}!!",
   "yqAKVO": "Account connected to !!{applicationName}!!. Claim your gift below. !!{platforms_info}!!",
+  "Ufm9XX": "By clicking \"!!{buyButtonLabel}!!\", you agree to the [Paid Service Terms](Paid Service Terms). **Buying an item from the !!{applicationName}!! Game Shop means you’re buying a limited license to use this item in the listed game.** This purchase is non-refundable. This item will be delivered by the developer directly in-game.",
+  "N6cvS+": "By clicking \"!!{buyButtonLabel}!!\", you agree to the [Paid Service Terms](Paid Service Terms). **Buying an item from the !!{applicationName}!! Game Shop means you’re buying a limited license to use this item in the listed game.** This purchase is non-refundable. This item will be delivered by the developer directly in-game. !!{platforms_info}!!",
   "Q0dHYO": "Account link required for redemption. !!{platforms_info}!!",
   "3ah/a2": "**Buying an item from the !!{applicationName}!! Game Shop means you’re buying a limited license to use this item in the listed game.** This purchase is non-refundable. This item will be delivered by the developer directly in-game. !!{platforms_info}!!",
   "fO4b1C": "Connect your !!{applicationName}!! and Discord accounts to accept this purchase. !!{platforms_info}!!",

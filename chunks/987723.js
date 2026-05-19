@@ -13,6 +13,7 @@ function f(t) {
     let { location: n } = t;
     return e.getConfig({ location: n }).enabled;
 }
+i(652215);
 var u = i(430825);
 let d = { [l.DESKTOP]: "PC", [l.XBOX]: "Xbox", [l.PLAYSTATION]: "PlayStation" },
     s = [l.PLAYSTATION];
