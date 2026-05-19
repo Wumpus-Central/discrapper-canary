@@ -6843,28 +6843,27 @@ function oG(e) {
                     break;
                 default:
                     if ((0, ak.G4)(c)) {
-                        if (null != c.channel && (0, aP.OY)(c.channel).isGuildVoice()) {
-                            if (
-                                null != c.guild &&
-                                aU({ location: "InviteEmbed.isStreamInvite", guildId: c.guild.id }).enabled &&
-                                g
-                            ) {
-                                E = (0, a.jsx)(of, {
-                                    onTransitionToInviteChannel: x,
-                                    onAcceptInstantInvite: f,
-                                    invite: c,
-                                    message: n,
-                                });
-                                break;
-                            }
-                            E = (0, a.jsx)(oU, {
-                                onTransitionToInviteChannel: x,
-                                onAcceptInstantInvite: f,
-                                guild: m,
-                                invite: c,
-                                message: n,
-                            });
-                            break;
+                        if (null != c.channel && (0, aP.OY)(c.channel).isGuildVoice() && null != c.guild) {
+                            let e = aU({ location: "InviteEmbed.isStreamInvite", guildId: c.guild.id });
+                            if (g)
+                                if (e.enabled) {
+                                    E = (0, a.jsx)(of, {
+                                        onTransitionToInviteChannel: x,
+                                        onAcceptInstantInvite: f,
+                                        invite: c,
+                                        message: n,
+                                    });
+                                    break;
+                                } else {
+                                    E = (0, a.jsx)(oU, {
+                                        onTransitionToInviteChannel: x,
+                                        onAcceptInstantInvite: f,
+                                        guild: m,
+                                        invite: c,
+                                        message: n,
+                                    });
+                                    break;
+                                }
                         }
                         E = (0, a.jsx)(oa, {
                             onTransitionToInviteChannel: x,
@@ -6891,28 +6890,27 @@ function oG(e) {
                         E = (0, a.jsx)(aY, { invite: c, getAcceptInviteContext: i, message: n });
                         break;
                     }
-                    if (null != c.channel && (0, aP.OY)(c.channel).isGuildVoice()) {
-                        if (
-                            null != c.guild &&
-                            aU({ location: "InviteEmbed.isGuildVoice", guildId: c.guild.id }).enabled &&
-                            g
-                        ) {
-                            E = (0, a.jsx)(of, {
-                                onTransitionToInviteChannel: x,
-                                onAcceptInstantInvite: f,
-                                invite: c,
-                                message: n,
-                            });
-                            break;
-                        }
-                        E = (0, a.jsx)(oU, {
-                            onTransitionToInviteChannel: x,
-                            onAcceptInstantInvite: f,
-                            guild: m,
-                            invite: c,
-                            message: n,
-                        });
-                        break;
+                    if (null != c.channel && (0, aP.OY)(c.channel).isGuildVoice() && null != c.guild) {
+                        let e = aU({ location: "InviteEmbed.isGuildVoice", guildId: c.guild.id });
+                        if (g)
+                            if (e.enabled) {
+                                E = (0, a.jsx)(of, {
+                                    onTransitionToInviteChannel: x,
+                                    onAcceptInstantInvite: f,
+                                    invite: c,
+                                    message: n,
+                                });
+                                break;
+                            } else {
+                                E = (0, a.jsx)(oU, {
+                                    onTransitionToInviteChannel: x,
+                                    onAcceptInstantInvite: f,
+                                    guild: m,
+                                    invite: c,
+                                    message: n,
+                                });
+                                break;
+                            }
                     }
                     (0, ab.v)(c) &&
                         (E = (0, a.jsx)(on, {
