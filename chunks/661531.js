@@ -7578,6 +7578,14 @@ let { Themes: c } = u.zv,
                         return 12;
                     },
                 },
+                CHANNEL_LIST_SUBTITLE_TEXT_STYLE: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return "text-xs/medium";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-sm/medium";
+                        return "text-xs/medium";
+                    },
+                },
                 CHANNEL_LIST_TITLE_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
