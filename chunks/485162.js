@@ -10,17 +10,17 @@ var i,
     c = n(710195),
     d = n(952818),
     _ = n(569926),
-    f = n(616356),
-    h = n(186111),
-    p = n(235058),
-    E = n(19575),
-    m = n(459838),
-    g = n(439372),
-    A = n(77729),
-    I = n(652896),
-    T = n(967347),
-    S = n(885386),
-    N = n(495544),
+    f = n(652896),
+    h = n(616356),
+    p = n(495544),
+    E = n(186111),
+    m = n(761853),
+    g = n(19575),
+    A = n(459838),
+    I = n(439372),
+    T = n(77729),
+    S = n(967347),
+    N = n(885386),
     y = n(763827),
     C = n(116956),
     v = n(174459),
@@ -33,7 +33,7 @@ var i,
     M = n(696016),
     P = n(652215),
     x = n(325278);
-class U extends g.A {
+class U extends I.A {
     actions = {
         POST_CONNECTION_OPEN: (e) => this.handlePostConnectionOpen(),
         RTC_CONNECTION_FLAGS: (e) => this.handleRTCConnectionFlags(e),
@@ -42,6 +42,8 @@ class U extends g.A {
         CLIPS_SETTINGS_UPDATE: (e) => this.applyNativeClipsSettings(e),
         CLIPS_ALLOW_VOICE_RECORDING_UPDATE: () => this.handleClipsAllowVoiceRecordingUpdate(),
         STREAM_START: () => this.applyNativeClipsSettings(),
+        STREAM_DELETE: (e) => this.handleStreamEnded(e),
+        STREAM_CLOSE: (e) => this.handleStreamEnded(e),
         RUNNING_GAME_TOGGLE_DETECTION: (e) => this.handleClipsInitOnToggleDetection(e),
         RUNNING_GAMES_CHANGE: (e) => this.handleClipsInitOnGamesChange(e),
         CLIPS_RESTART: () => this.fireClipsInitEvent(),
@@ -51,13 +53,13 @@ class U extends g.A {
     handleRTCConnectionState(e) {
         let { context: t, state: n, streamKey: i } = e;
         if (!(0, R.Pm)() || n !== P.S7L.RTC_CONNECTED) return;
-        let r = N.default.getId();
-        if (t === m.x.DEFAULT) {
+        let r = p.default.getId();
+        if (t === A.x.DEFAULT) {
             this.applyUserVoiceRecording(r), this.applyUserSoundboardRecording(r);
             return;
         }
-        if (t === m.x.STREAM && null != i) {
-            let { ownerId: e } = (0, I.Iy)(i);
+        if (t === A.x.STREAM && null != i) {
+            let { ownerId: e } = (0, f.Iy)(i);
             if (e !== r) return;
             let t = C.A.getRTCConnection(i);
             if (null == t) return;
@@ -66,7 +68,7 @@ class U extends g.A {
     }
     handleRTCUsersUpdate(e) {
         let { userIds: t, context: n } = e;
-        n === m.x.DEFAULT &&
+        n === A.x.DEFAULT &&
             t.forEach((e) => {
                 this.applyUserVoiceRecording(e), this.applyUserSoundboardRecording(e);
             });
@@ -75,7 +77,7 @@ class U extends g.A {
         let { userId: t, channelId: n, guildId: i } = e;
         this.maybeShowClipsWarning(t), this.applyUserVoiceRecording(t), this.applyUserSoundboardRecording(t);
         let r = C.A.getRTCConnection(
-            I._z({ streamType: null != i ? x.U4.GUILD : x.U4.CALL, ownerId: t, channelId: n, guildId: i }),
+            f._z({ streamType: null != i ? x.U4.GUILD : x.U4.CALL, ownerId: t, channelId: n, guildId: i }),
         );
         null != r && this.applyStreamRecording(t, r);
     }
@@ -87,16 +89,16 @@ class U extends g.A {
         let t = y.A.getChannelId();
         null == t ||
             b.A.getClipsWarningShown(t) ||
-            e === N.default.getId() ||
+            e === p.default.getId() ||
             !b.A.isClipsEnabledForUser(e) ||
-            (S.Q$.getSetting() &&
+            (N.Q$.getSetting() &&
                 (o.h.dispatch({ type: "CLIPS_SHOW_CALL_WARNING", channelId: t }), this.showClipsToast()));
     }
     handleClipsAllowVoiceRecordingUpdate() {
         y.A.getUserIds()?.forEach((e) => this.maybeShowClipsWarning(e));
     }
     handlePostConnectionOpen() {
-        !(0, L.A)(p.Ay) ||
+        !(0, L.A)(m.Ay) ||
             (this.applyNativeClipsSettings(),
             (0, R.Pm)() &&
                 (this.loadClipsFromStorage(),
@@ -110,23 +112,23 @@ class U extends g.A {
     loadClipsFromStorage() {}
     handleRTCConnectionVideo(e) {
         let { userId: t, context: n, channelId: i, guildId: r } = e;
-        if (n !== m.x.STREAM || !(0, L.A)(p.Ay)) return;
+        if (n !== A.x.STREAM || !(0, L.A)(m.Ay)) return;
         let s = C.A.getRTCConnection(
-            I._z({ streamType: null != r ? x.U4.GUILD : x.U4.CALL, ownerId: t, channelId: i, guildId: r }),
+            f._z({ streamType: null != r ? x.U4.GUILD : x.U4.CALL, ownerId: t, channelId: i, guildId: r }),
         );
         null != s && this.applyStreamRecording(t, s);
     }
     async classifyHardwareAndTrack() {
         try {
             let { gpuModels: e, classification: t } = await (async () => {
-                let e = await (0, T.w)();
+                let e = await (0, S.w)();
                 if (e?.gpus != null) {
                     let t = e.gpus.map((e) => e.brand).filter((e) => null != e && "" !== e),
                         n = this.classifyHardware(t);
                     return { gpuModels: t, classification: n };
                 }
                 {
-                    let e = (await A.A.processUtils.getSystemInfo()).gpus.map((e) => {
+                    let e = (await T.A.processUtils.getSystemInfo()).gpus.map((e) => {
                             let { model: t } = e;
                             return t;
                         }),
@@ -153,26 +155,26 @@ class U extends g.A {
             return t ? D.k9.MEETS_AUTO_ENABLE : n ? D.k9.MEETS_MINIMUM : D.k9.BELOW_MINIMUM;
         }
         return (0, O.isMac)()
-            ? "arm64" === A.A.app.getAppArch()
+            ? "arm64" === T.A.app.getAppArch()
                 ? D.k9.MEETS_AUTO_ENABLE
                 : D.k9.MEETS_MINIMUM
             : D.k9.UNKNOWN;
     }
     applyUserVoiceRecording(e) {
-        if (!(0, L.A)(p.Ay)) return;
+        if (!(0, L.A)(m.Ay)) return;
         let t = y.A.getRTCConnection();
         if (null == t) return;
-        if (e === N.default.getId()) return void t.setClipRecordUser(e, "audio", (0, w.TD)());
+        if (e === p.default.getId()) return void t.setClipRecordUser(e, "audio", (0, w.TD)());
         let n = b.A.isVoiceRecordingAllowedForUser(e);
         t.setClipRecordUser(e, "audio", n);
     }
     applyUserSoundboardRecording(e) {
-        if (!(0, L.A)(p.Ay)) return;
+        if (!(0, L.A)(m.Ay)) return;
         let t = y.A.getRTCConnection();
         null != t && t.setClipRecordUser(e, "soundboard", (0, w.TD)());
     }
     applyStreamRecording(e, t) {
-        if ((0, L.A)(p.Ay) && N.default.getId() === e) {
+        if ((0, L.A)(m.Ay) && p.default.getId() === e) {
             let n = (0, w.TD)();
             t.setClipRecordUser(e, "audio", n), t.setClipRecordUser(e, "video", n);
             return;
@@ -206,7 +208,7 @@ class j {
             (0, w.TD)() && (H.info("Clips enabled on startup, prefetching assets"), this.maybePrefetchAssets()));
     }
     stop() {
-        E.Ay.stopClipsDownloads(),
+        g.Ay.stopClipsDownloads(),
             this.activeDownloads.clear(),
             (this.started = !1),
             H.info("Clips asset manager stopped");
@@ -236,7 +238,7 @@ class j {
                     (this.state.catalogLastFetchTime = new Date()),
                     (this.state.catalogFetchFailed = !1);
                 let t = Object.values(e.assets).map((e) => e.fileName);
-                await E.Ay.cleanupUnusedClipsFiles(t), H.info("Clips asset catalog refreshed");
+                await g.Ay.cleanupUnusedClipsFiles(t), H.info("Clips asset catalog refreshed");
             } catch (e) {
                 H.warn(`Failed to refresh clips asset catalog: ${e.message}`), (this.state.catalogFetchFailed = !0);
             } finally {
@@ -250,12 +252,12 @@ class j {
         return H.info("Loaded clips asset catalog with assets:", Object.keys(e.assets)), e;
     }
     async scanAssetState(e) {
-        if (!E.Ay.canCheckClipsFilesExist()) return;
+        if (!g.Ay.canCheckClipsFilesExist()) return;
         let t = Object.entries(e.assets).map((e) => {
             let [t, n] = e;
             return { id: t, fileName: n.fileName };
         });
-        for (let { id: e, exists: n } of await E.Ay.checkClipsFilesExist(t))
+        for (let { id: e, exists: n } of await g.Ay.checkClipsFilesExist(t))
             this.state.assetState[e] = { status: n ? V.DOWNLOADED : V.MISSING };
     }
     async prefetchAssets() {
@@ -281,7 +283,7 @@ class j {
         if (r?.status === V.DOWNLOADING)
             return Promise.reject(Error("Clips asset is downloading but not in active downloads map"));
         this.state.assetState[n] = { status: V.DOWNLOADING, downloadedBytes: 0 };
-        let a = E.Ay.downloadClipsFile(t, i, (e) => {
+        let a = g.Ay.downloadClipsFile(t, i, (e) => {
             let { downloadedBytes: t, totalBytes: i } = e;
             this.state.assetState[n] = { ...this.state.assetState[n], downloadedBytes: t, totalBytes: i };
         })
@@ -315,7 +317,7 @@ function X() {
         n = q !== e,
         i = Z !== t;
     if (!n && !i) return;
-    let r = p.Ay.getMediaEngine();
+    let r = m.Ay.getMediaEngine();
     n && r.setClipsV3Enabled(e),
         i && r.setClipsV3MLEnabled(t),
         M.nx.info(`clips v3 runtime flags pushed: v3=${e} (was ${q}), ml=${t} (was ${Z})`),
@@ -340,7 +342,7 @@ class Q extends U {
         !e ||
             !b.A.canShowReminders() ||
             u.fy.getState().activePanel === u.HP.CLIPS_REMINDER ||
-            h.A.hasLayers() ||
+            E.A.hasLayers() ||
             (0, r.hasAnyModalOpen)() ||
             (0, u.nf)(u.HP.CLIPS_REMINDER);
     }
@@ -353,8 +355,8 @@ class Q extends U {
         });
     }
     applyNativeClipsSettings(e) {
-        if (!(0, L.A)(p.Ay)) return;
-        let t = p.Ay.getMediaEngine(),
+        if (!(0, L.A)(m.Ay)) return;
+        let t = m.Ay.getMediaEngine(),
             n = () => {
                 let n = b.A.getSettings(),
                     i = (0, w.TD)();
@@ -378,10 +380,10 @@ class Q extends U {
                         ? $
                         : ($ = (async () => {
                               try {
-                                  X(), await E.Ay.ensureModule("discord_clips");
-                                  let e = E.Ay.requireModule("discord_clips").getModulePath(),
-                                      t = p.Ay.getMediaEngine(),
-                                      n = E.Ay.getClipsDataDirSync();
+                                  X(), await g.Ay.ensureModule("discord_clips");
+                                  let e = g.Ay.requireModule("discord_clips").getModulePath(),
+                                      t = m.Ay.getMediaEngine(),
+                                      n = g.Ay.getClipsDataDirSync();
                                   t.setClipsDataPath(n),
                                       t.setClipsModulePath(e),
                                       (z = !0),
@@ -407,8 +409,13 @@ class Q extends U {
     prefetchRichPresenceData(e) {
         _.I.fetchMany([e]), l.YY.fetchMany([e]);
     }
+    handleStreamEnded(e) {
+        if (!(0, G.qi)()) return;
+        let { ownerId: t } = (0, f.Iy)(e.streamKey);
+        t === p.default.getId() && this.fireClipsInitEvent();
+    }
     fireClipsInitEvent() {
-        if (!(0, w.TD)() || null != f.A.getCurrentUserActiveStream()) return;
+        if (!(0, w.TD)() || null != h.A.getCurrentUserActiveStream()) return;
         let e = d.Ay.getVisibleGame();
         if (e?.pid == null || e?.windowHandle == null || null == e.name || "" === e.name) return;
         let t = b.A.getSettings();

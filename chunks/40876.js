@@ -10,7 +10,7 @@ let r = {
             "AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE",
             "MEDIA_ENGINE_RESET_SETTINGS",
         ],
-        inlineRequire: () => n(447216).A,
+        inlineRequire: () => n(386741).A,
     },
     AutoUpdateManager: {
         actions: ["POST_CONNECTION_OPEN", "AUTO_UPDATER_QUIT_AND_INSTALL"],
@@ -544,6 +544,8 @@ let r = {
             "CLIPS_SETTINGS_UPDATE",
             "CLIPS_INIT_FAILURE",
             "STREAM_START",
+            "STREAM_DELETE",
+            "STREAM_CLOSE",
             "RUNNING_GAME_TOGGLE_DETECTION",
             "RUNNING_GAMES_CHANGE",
             "CLIPS_RESTART",
