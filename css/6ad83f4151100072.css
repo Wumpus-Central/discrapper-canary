@@ -3,12 +3,12 @@
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-md);
     display: flex;
+    flex: 0 1 auto;
     gap: 4px;
-    grid-column: 4;
-    grid-row: 1;
     justify-content: space-between;
+    margin-inline-start: auto;
+    min-width: 0;
     padding: 3px;
-    place-self: self-end;
     z-index: 1
 }
 
@@ -45,18 +45,24 @@
 
 .topBar__6088c {
     align-items: center;
-    display: grid;
+    gap: 12px;
     grid-column: 1/span 5;
     grid-row: 1;
-    grid-template-columns: subgrid;
-    grid-template-rows: 1fr;
-    place-self: flex-end
+    padding-inline-end: 52px
+}
+
+.author__6088c,
+.topBar__6088c {
+    display: flex;
+    min-width: 0
 }
 
 .author__6088c {
-    display: flex;
+    flex: 0 1 auto;
     flex-direction: column;
     justify-content: center;
+    margin-inline-end: auto;
+    max-width: 184px;
     pointer-events: none;
     z-index: 1
 }
@@ -74,9 +80,7 @@
 }
 
 .authorAvatar__6088c {
-    grid-column: 1;
-    grid-row: 1;
-    place-self: self-end
+    flex: 0 0 auto
 }
 
 .timestamp__6088c {
@@ -90,10 +94,10 @@
 }
 
 .closeButton__6088c {
-    align-self: self-end;
-    grid-column: 5;
-    grid-row: 1;
-    z-index: 1
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    position: absolute;
+    z-index: 2
 }
 
 .carouselModal_d3a6f0 {
@@ -102,10 +106,11 @@
     bottom: 0;
     display: grid;
     gap: 12px;
-    grid-template-columns: 40px 184px 1fr 184px 40px;
+    grid-template-columns: 40px minmax(0, 184px) minmax(0, 1fr) minmax(0, 184px) 40px;
     grid-template-rows: 40px 1fr 40px;
     position: absolute;
     top: 0;
     inset-inline: 0;
-    margin: 36px 24px
+    margin: 36px 24px;
+    width: auto
 }
