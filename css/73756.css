@@ -6605,6 +6605,12 @@ a-rp {
     gap: 4px
 }
 
+.list__20827 {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 6px
+}
+
 :where(.section_be87fd) {
     color: var(--text-default);
     gap: 4px
@@ -7295,8 +7301,4 @@ a-rp {
 
 .finePrint_df7724 {
     line-height: 1.4
-}
-
-.browser__9a792 {
-    overflow: hidden
 }

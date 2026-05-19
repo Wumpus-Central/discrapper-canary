@@ -1,5 +1,7 @@
 e.exports = {
     kL: "container__9bfb9",
+    V: "connectionList__9bfb9",
+    qG: "addConnectionButton__9bfb9",
     FI: "connection__9bfb9",
     Hd: "connectionInfo__9bfb9",
     k_: "platformIconContainer__9bfb9",
