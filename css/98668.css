@@ -1050,37 +1050,19 @@ span.clanTag__5d473 {
     margin-inline-end: auto
 }
 
-.pill_b5b7aa,
-.pills_b5b7aa {
+.pills_b5b7aa,
+.utilButtonWrapper_b5b7aa {
     align-items: center;
     display: flex
 }
 
-.pill_b5b7aa {
-    background-color: var(--white);
-    border-radius: var(--radius-round);
-    box-shadow: var(--shadow-low);
-    padding: 2px 8px
-}
-
-.pillBrand_b5b7aa {
-    background: var(--brand-500)
-}
-
-.eyebrowText_b5b7aa {
-    font-size: 12px;
-    font-weight: 700
-}
-
 .utilButtonWrapper_b5b7aa {
-    align-items: center;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     background-color: hsl(var(--primary-700-hsl)/.48);
     border-radius: 50%;
     box-shadow: var(--shadow-medium);
     cursor: pointer;
-    display: flex;
     height: 24px;
     justify-content: center;
     justify-self: flex-end;

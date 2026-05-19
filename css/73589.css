@@ -3208,8 +3208,10 @@
 }
 
 .shelfCard_c676ef {
+    border: 1px solid var(--border-subtle);
     border-radius: var(--radius-xl);
     box-sizing: border-box;
+    cursor: pointer;
     flex-shrink: 0;
     height: 355px;
     overflow: clip;
@@ -3267,30 +3269,13 @@
 }
 
 .shelfCardQuest_c676ef {
+    align-items: center;
     background-color: var(--background-base-low);
+    display: flex;
     flex-direction: column;
     gap: var(--space-8);
     padding: var(--space-16);
     position: relative
-}
-
-.shelfCardQuest_c676ef,
-.shelfCardQuestLogo_c676ef {
-    align-items: center;
-    border: 1px solid var(--border-subtle);
-    display: flex
-}
-
-.shelfCardQuestLogo_c676ef {
-    align-self: flex-start;
-    background-color: var(--background-surface-high);
-    border-radius: var(--radius-md);
-    box-sizing: border-box;
-    height: 55px;
-    justify-content: center;
-    overflow: hidden;
-    padding: var(--space-4);
-    width: 55px
 }
 
 .shelfCardQuestDetails_c676ef {
@@ -3299,18 +3284,11 @@
 }
 
 .progressWrapper_c676ef {
-    align-items: flex-end;
+    align-items: center;
     display: flex;
     flex-grow: 1;
     justify-content: center;
     will-change: transform
-}
-
-.gameTile_c676ef {
-    height: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
-    width: 100%
 }
 
 .rewardName_c676ef {

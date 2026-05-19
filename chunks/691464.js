@@ -7,10 +7,8 @@ e.exports = {
     Wq: "shelfCardIntroVideo_c676ef",
     hn: "introCardCta_c676ef",
     $R: "shelfCardQuest_c676ef",
-    aP: "shelfCardQuestLogo_c676ef",
     tw: "shelfCardQuestDetails_c676ef",
     Tr: "progressWrapper_c676ef",
-    rC: "gameTile_c676ef",
     Ht: "rewardName_c676ef",
     um: "viewQuestCta_c676ef",
 };
