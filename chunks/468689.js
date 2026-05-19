@@ -1,26 +1,28 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => v });
 var i = n(562708),
     r = n(765178),
     s = n(636537),
     a = n(228366),
     o = n(398590),
-    l = n(626584),
-    u = n(568185),
-    c = n(529942),
-    d = n(164956),
-    _ = n(857071),
-    f = n(976860),
-    h = n(138298),
-    p = n(495544),
-    E = n(696451),
-    m = n(71393),
-    g = n(499785),
-    A = n(555337),
-    I = n(652215),
-    T = n(375708);
-let S = new l.A("GuildSettingsActionCreators"),
-    N = {
+    l = n(77257),
+    u = n(61310),
+    c = n(626584),
+    d = n(568185),
+    _ = n(529942),
+    f = n(164956),
+    h = n(857071),
+    p = n(976860),
+    E = n(138298),
+    m = n(495544),
+    g = n(696451),
+    A = n(71393),
+    I = n(499785),
+    T = n(555337),
+    S = n(652215),
+    N = n(375708);
+let y = new c.A("GuildSettingsActionCreators"),
+    C = {
         init(e, t, n, i) {
             a.h.dispatch({ type: "GUILD_SETTINGS_INIT", guildId: e, section: t, subsection: i, location: n });
         },
@@ -32,7 +34,7 @@ let S = new l.A("GuildSettingsActionCreators"),
                 n.e("28149"),
                 n.e("41181"),
                 n.e("60361"),
-                n.e("80203"),
+                n.e("15686"),
                 n.e("9023"),
                 n.e("68369"),
                 n.e("685"),
@@ -173,7 +175,6 @@ let S = new l.A("GuildSettingsActionCreators"),
                 n.e("43437"),
                 n.e("82263"),
                 n.e("40258"),
-                n.e("18441"),
                 n.e("66495"),
                 n.e("76640"),
                 n.e("88342"),
@@ -202,8 +203,8 @@ let S = new l.A("GuildSettingsActionCreators"),
                 n.e("4369"),
                 n.e("53930"),
                 n.e("46270"),
-                n.e("23353"),
                 n.e("86949"),
+                n.e("23353"),
                 n.e("6949"),
                 n.e("50015"),
                 n.e("86814"),
@@ -604,12 +605,12 @@ let S = new l.A("GuildSettingsActionCreators"),
                 n.e("15046"),
                 n.e("98700"),
             ]).then(n.bind(n, 422559)),
-                m.A.getGuild(e)?.features.has(I.GuildFeatures.COMMUNITY) &&
-                    (t === I.BEX.GUILD_AUTOMOD && ((t = I.BEX.SAFETY), (r = I.nd0.SAFETY_AUTOMOD)),
-                    t === I.BEX.MEMBER_VERIFICATION && ((t = I.BEX.SAFETY), (r = I.nd0.SAFETY_DM_AND_SPAM_PROTECTION))),
-                N.init(e, t, i, r),
-                h.A.closeGuildSidebar(e),
-                (0, o.id)(I.zgK.GUILD_SETTINGS);
+                A.A.getGuild(e)?.features.has(S.GuildFeatures.COMMUNITY) &&
+                    (t === S.BEX.GUILD_AUTOMOD && ((t = S.BEX.SAFETY), (r = S.nd0.SAFETY_AUTOMOD)),
+                    t === S.BEX.MEMBER_VERIFICATION && ((t = S.BEX.SAFETY), (r = S.nd0.SAFETY_DM_AND_SPAM_PROTECTION))),
+                C.init(e, t, i, r),
+                E.A.closeGuildSidebar(e),
+                (0, o.id)(S.zgK.GUILD_SETTINGS);
         },
         close() {
             a.h.dispatch({ type: "GUILD_SETTINGS_CLOSE" });
@@ -618,11 +619,11 @@ let S = new l.A("GuildSettingsActionCreators"),
             a.h.dispatch({ type: "GUILD_SETTINGS_SAVE_ROUTE_STACK", state: e });
         },
         setSection(e, t) {
-            let n = A.A.getGuildId();
+            let n = T.A.getGuildId();
             null != n &&
-                (m.A.getGuild(n)?.features.has(I.GuildFeatures.COMMUNITY) &&
-                    (e === I.BEX.GUILD_AUTOMOD && ((e = I.BEX.SAFETY), (t = I.nd0.SAFETY_AUTOMOD)),
-                    e === I.BEX.MEMBER_VERIFICATION && ((e = I.BEX.SAFETY), (t = I.nd0.SAFETY_DM_AND_SPAM_PROTECTION))),
+                (A.A.getGuild(n)?.features.has(S.GuildFeatures.COMMUNITY) &&
+                    (e === S.BEX.GUILD_AUTOMOD && ((e = S.BEX.SAFETY), (t = S.nd0.SAFETY_AUTOMOD)),
+                    e === S.BEX.MEMBER_VERIFICATION && ((e = S.BEX.SAFETY), (t = S.nd0.SAFETY_DM_AND_SPAM_PROTECTION))),
                 a.h.dispatch({ type: "GUILD_SETTINGS_SET_SECTION", section: e, subsection: t }));
         },
         setSearchQuery(e) {
@@ -631,7 +632,7 @@ let S = new l.A("GuildSettingsActionCreators"),
         selectRole: (e, t) => a.h.dispatch({ type: "GUILD_SETTINGS_ROLE_SELECT", roleId: e, searchQuery: t }),
         updateEmbed: (e, t, n) =>
             s.Bo.patch({
-                url: I.Rsh.GUILD_WIDGET(e),
+                url: S.Rsh.GUILD_WIDGET(e),
                 body: { enabled: t, channel_id: n },
                 oldFormErrors: !0,
                 rejectWithError: !0,
@@ -646,16 +647,16 @@ let S = new l.A("GuildSettingsActionCreators"),
         updateMFALevel(e) {
             let { guildId: t, level: n } = e;
             return s.Bo.post({
-                url: I.Rsh.GUILD_MFA(t),
+                url: S.Rsh.GUILD_MFA(t),
                 body: { level: n },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }).then((e) => a.h.dispatch({ type: "GUILD_SETTINGS_SET_MFA_SUCCESS", level: e.body.level }));
         },
         updateIcon(e, t) {
-            s.Bo.patch({ url: I.Rsh.GUILD(e), body: { icon: t }, oldFormErrors: !0, rejectWithError: !1 }).then(
+            s.Bo.patch({ url: S.Rsh.GUILD(e), body: { icon: t }, oldFormErrors: !0, rejectWithError: !1 }).then(
                 () => {
-                    a.h.dispatch({ type: "GUILD_SETTINGS_UPDATE", icon: t }), u.A.checkGuildTemplateDirty(e);
+                    a.h.dispatch({ type: "GUILD_SETTINGS_UPDATE", icon: t }), d.A.checkGuildTemplateDirty(e);
                 },
                 (e) => a.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_FAILURE", errors: e.body }),
             );
@@ -667,7 +668,7 @@ let S = new l.A("GuildSettingsActionCreators"),
             let { safetyAlertsChannelId: t, profile: n, ...i } = e,
                 r = { ...i };
             null != n && (r.profile = { ...(r.profile ?? {}), ...n }),
-                null != A.A.getGuildId() && null != t && (r.safetyAlertsChannelId = t),
+                null != T.A.getGuildId() && null != t && (r.safetyAlertsChannelId = t),
                 a.h.dispatch({ type: "GUILD_SETTINGS_UPDATE", ...r });
         },
         updateGuildProfile(e, t) {
@@ -679,92 +680,98 @@ let S = new l.A("GuildSettingsActionCreators"),
                     description: i,
                     icon: r,
                     splash: o,
-                    banner: l,
-                    homeHeader: c,
-                    afkChannelId: d,
-                    afkTimeout: _,
-                    systemChannelId: f,
-                    verificationLevel: h,
-                    defaultMessageNotifications: p,
-                    explicitContentFilter: E,
-                    features: m,
-                    systemChannelFlags: g,
-                    preferredLocale: A,
-                    rulesChannelId: T,
-                    safetyAlertsChannelId: N,
-                    ownerConfiguredContentLevel: y,
-                    discoverySplash: C,
-                    publicUpdatesChannelId: v,
-                    premiumProgressBarEnabled: O,
-                    profile: R,
-                    moderatorReportingEnabled: b,
-                    officialMessageColor: D,
-                    verificationRoleId: L,
+                    banner: c,
+                    homeHeader: _,
+                    afkChannelId: f,
+                    afkTimeout: h,
+                    systemChannelId: p,
+                    verificationLevel: E,
+                    defaultMessageNotifications: m,
+                    explicitContentFilter: g,
+                    features: A,
+                    systemChannelFlags: I,
+                    preferredLocale: N,
+                    rulesChannelId: C,
+                    safetyAlertsChannelId: v,
+                    ownerConfiguredContentLevel: O,
+                    discoverySplash: R,
+                    publicUpdatesChannelId: b,
+                    premiumProgressBarEnabled: D,
+                    profile: L,
+                    moderatorReportingEnabled: w,
+                    officialMessageColor: M,
+                    verificationRoleId: P,
                 } = t,
-                w = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                M = {
+                x = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                U = {
                     name: n,
                     description: i,
                     icon: r,
                     splash: o,
-                    banner: l,
-                    home_header: c,
-                    features: m,
-                    preferred_locale: A,
-                    afk_channel_id: d,
-                    afk_timeout: _,
-                    system_channel_id: f,
-                    verification_level: h,
-                    default_message_notifications: p,
-                    explicit_content_filter: E,
-                    system_channel_flags: g,
-                    rules_channel_id: T,
-                    owner_configured_content_level: y,
-                    discovery_splash: C,
-                    public_updates_channel_id: v,
-                    safety_alerts_channel_id: N,
-                    ...(null != O ? { premium_progress_bar_enabled: O } : null),
-                    profile: null != R ? { tag: R.tag } : R,
-                    moderator_reporting_enabled: b,
-                    official_message_color: D,
-                    verification_role_id: L,
+                    banner: c,
+                    home_header: _,
+                    features: A,
+                    preferred_locale: N,
+                    afk_channel_id: f,
+                    afk_timeout: h,
+                    system_channel_id: p,
+                    verification_level: E,
+                    default_message_notifications: m,
+                    explicit_content_filter: g,
+                    system_channel_flags: I,
+                    rules_channel_id: C,
+                    owner_configured_content_level: O,
+                    discovery_splash: R,
+                    public_updates_channel_id: b,
+                    safety_alerts_channel_id: v,
+                    ...(null != D ? { premium_progress_bar_enabled: D } : null),
+                    profile: null != L ? { tag: L.tag } : L,
+                    moderator_reporting_enabled: w,
+                    official_message_color: M,
+                    verification_role_id: P,
                 };
-            return (
-                a.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT" }),
-                s.Bo.patch({
-                    url: I.Rsh.GUILD(e),
-                    query: { for_discovery: w.isForDiscovery },
-                    body: M,
-                    oldFormErrors: !0,
-                    rejectWithError: !1,
-                }).then(
-                    (t) => {
-                        a.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_SUCCESS", guild: t.body }),
-                            u.A.checkGuildTemplateDirty(e);
-                    },
-                    (e) => {
-                        if (
-                            (a.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_FAILURE", errors: e.body }),
-                            S.error("Failed to save guild settings", { errors: e.body }),
-                            w.throwErr)
-                        )
-                            throw e.body;
-                    },
-                )
+            a.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
+            let k = T.A.getPendingOriginalMd5s(),
+                G = l.A.buildHeadersForMd5({
+                    [u.f.GUILD_ICON]: k.icon,
+                    [u.f.GUILD_BANNER]: k.banner,
+                    [u.f.GUILD_INVITE_SPLASH]: k.splash,
+                    [u.f.GUILD_DISCOVERY_SPLASH]: k.discoverySplash,
+                });
+            return s.Bo.patch({
+                url: S.Rsh.GUILD(e),
+                query: { for_discovery: x.isForDiscovery },
+                body: U,
+                headers: G,
+                oldFormErrors: !0,
+                rejectWithError: !1,
+            }).then(
+                (t) => {
+                    a.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_SUCCESS", guild: t.body }),
+                        d.A.checkGuildTemplateDirty(e);
+                },
+                (e) => {
+                    if (
+                        (a.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_FAILURE", errors: e.body }),
+                        y.error("Failed to save guild settings", { errors: e.body }),
+                        x.throwErr)
+                    )
+                        throw e.body;
+                },
             );
         },
         updateGuildModeration: (e, t) =>
             s.Bo.patch({
-                url: I.Rsh.GUILD(e),
+                url: S.Rsh.GUILD(e),
                 body: { verification_level: t.verificationLevel, explicit_content_filter: t.explicitContentFilter },
                 oldFormErrors: !0,
                 rejectWithError: !1,
-            }).then((t) => (u.A.checkGuildTemplateDirty(e), t)),
+            }).then((t) => (d.A.checkGuildTemplateDirty(e), t)),
         transferOwnership(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
                 r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            return g.A.patch({
-                url: I.Rsh.GUILD(e),
+            return I.A.patch({
+                url: S.Rsh.GUILD(e),
                 body: { owner_id: t, code: r },
                 oldFormErrors: !0,
                 trackedActionData: {
@@ -776,8 +783,8 @@ let S = new l.A("GuildSettingsActionCreators"),
         },
         sendTransferOwnershipPincode(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            return g.A.put({
-                url: I.Rsh.GUILD_PINCODE(e),
+            return I.A.put({
+                url: S.Rsh.GUILD_PINCODE(e),
                 oldFormErrors: !0,
                 trackedActionData: {
                     event: i.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE,
@@ -787,28 +794,28 @@ let S = new l.A("GuildSettingsActionCreators"),
             });
         },
         deleteGuild: (e) =>
-            s.Bo.post({ url: I.Rsh.GUILD_DELETE(e), oldFormErrors: !0, rejectWithError: !1 }).then(() => {
-                N.close();
+            s.Bo.post({ url: S.Rsh.GUILD_DELETE(e), oldFormErrors: !0, rejectWithError: !1 }).then(() => {
+                C.close();
             }),
         async leaveGuild(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                n = _.A.isLurking(e);
+                n = h.A.isLurking(e);
             await s.Bo.del({
-                url: I.Rsh.GUILD_LEAVE(e),
-                body: { lurking: n || E.Ay.isCurrentUserGuest(e) },
+                url: S.Rsh.GUILD_LEAVE(e),
+                body: { lurking: n || g.Ay.isCurrentUserGuest(e) },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }).then(() => {
-                r.O.announce(T.intl.string(T.t["7iPyVW"]));
+                r.O.announce(N.intl.string(N.t["7iPyVW"]));
             }),
-                N.close(),
-                t && n && (0, f.pX)(I.BVt.GUILD_DISCOVERY);
+                C.close(),
+                t && n && (0, p.pX)(S.BVt.GUILD_DISCOVERY);
         },
         async updateMemberRoles(e, t, n, i, r) {
-            d.A.isFullServerPreview(e) && t === p.default.getId()
-                ? (0, c.ID)(e, n)
+            f.A.isFullServerPreview(e) && t === m.default.getId()
+                ? (0, _.ID)(e, n)
                 : (await s.Bo.patch({
-                      url: I.Rsh.GUILD_MEMBER(e, t),
+                      url: S.Rsh.GUILD_MEMBER(e, t),
                       body: { roles: n },
                       oldFormErrors: !0,
                       rejectWithError: !1,
@@ -819,43 +826,43 @@ let S = new l.A("GuildSettingsActionCreators"),
                   ));
         },
         bulkAddMemberRoles: (e, t, n) =>
-            s.Bo.patch({ url: I.Rsh.GUILD_ROLE_MEMBERS(e, t), body: { member_ids: n }, rejectWithError: !1 }).then(
+            s.Bo.patch({ url: S.Rsh.GUILD_ROLE_MEMBERS(e, t), body: { member_ids: n }, rejectWithError: !1 }).then(
                 (n) => {
                     a.h.dispatch({ type: "GUILD_ROLE_MEMBER_BULK_ADD", guildId: e, roleId: t, added: n.body });
                 },
             ),
         enableIntegration: (e, t, n) =>
             s.Bo.post({
-                url: I.Rsh.GUILD_INTEGRATIONS(e),
+                url: S.Rsh.GUILD_INTEGRATIONS(e),
                 body: { type: t, id: n },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }),
         disableIntegration: (e, t) =>
-            s.Bo.del({ url: I.Rsh.GUILD_INTEGRATION(e, t), oldFormErrors: !0, rejectWithError: !1 }),
+            s.Bo.del({ url: S.Rsh.GUILD_INTEGRATION(e, t), oldFormErrors: !0, rejectWithError: !1 }),
         updateIntegration: (e, t, n, i, r) =>
             s.Bo.patch({
-                url: I.Rsh.GUILD_INTEGRATION(e, t),
+                url: S.Rsh.GUILD_INTEGRATION(e, t),
                 body: { expire_behavior: n, expire_grace_period: i, enable_emoticons: r },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }),
         syncIntegration(e, t) {
-            s.Bo.post({ url: I.Rsh.GUILD_INTEGRATION_SYNC(e, t), oldFormErrors: !0, rejectWithError: !1 });
+            s.Bo.post({ url: S.Rsh.GUILD_INTEGRATION_SYNC(e, t), oldFormErrors: !0, rejectWithError: !1 });
         },
         async migratePinPermission(e) {
-            await s.Bo.post({ url: I.Rsh.GUILD_MIGRATE_PIN_PERMISSION(e), rejectWithError: !0 }).then(() =>
+            await s.Bo.post({ url: S.Rsh.GUILD_MIGRATE_PIN_PERMISSION(e), rejectWithError: !0 }).then(() =>
                 a.h.dispatch({ type: "GUILD_SETTINGS_PIN_PERMISSION_MIGRATED", guildId: e }),
             );
         },
         async migrateSlowmodePermission(e) {
-            await s.Bo.post({ url: I.Rsh.GUILD_MIGRATE_SLOWMODE_PERMISSION(e), rejectWithError: !0 }).then(() =>
+            await s.Bo.post({ url: S.Rsh.GUILD_MIGRATE_SLOWMODE_PERMISSION(e), rejectWithError: !0 }).then(() =>
                 a.h.dispatch({ type: "GUILD_SETTINGS_SLOWMODE_PERMISSION_MIGRATED", guildId: e }),
             );
         },
         async migratePermissions(e, t) {
             let { migratePin: n, migrateSlowmode: i } = t;
-            n && (await N.migratePinPermission(e)), i && (await N.migrateSlowmodePermission(e));
+            n && (await C.migratePinPermission(e)), i && (await C.migrateSlowmodePermission(e));
         },
     },
-    y = N;
+    v = C;
