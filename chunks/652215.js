@@ -5262,6 +5262,7 @@ var rD =
         (ex.FAVORITES_GUILD_SETTING_TOGGLED = "favorites_guild_setting_toggled"),
         (ex.FAVORITES_GUILD_UPSELL_MODAL_OPENED = "favorites_guild_upsell_modal_opened"),
         (ex.FAVORITES_GUILD_ADD_MODAL_OPENED = "favorites_guild_add_modal_opened"),
+        (ex.FRIEND_REQUEST_NOTE_VIEWED = "friend_request_note_viewed"),
         ex),
     rw = (((eU = {}).CANARY = "canary"), (eU.PTB = "ptb"), (eU.STABLE = "stable"), eU),
     rM =
