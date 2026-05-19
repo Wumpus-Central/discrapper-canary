@@ -41,35 +41,14 @@ function a(e) {
 }
 let o = {
     [i.$.PREMIUM_TENURE]: {
-        description: () => r.intl.string(r.t.SuO1X2),
         ctaLabel: () => r.intl.string(r.t.LEgsyS),
         ctaAction: "nitro_home",
         ctaVariant: "secondary",
     },
-    [i.$.GUILD_BOOSTER]: {
-        description: () => r.intl.string(r.t.gV7733),
-        ctaLabel: () => r.intl.string(r.t.HKJcgE),
-        ctaAction: "boost",
-        ctaVariant: "secondary",
-    },
-    [i.$.QUEST_COMPLETED]: {
-        description: () => r.intl.string(r.t["G+gbgO"]),
-        ctaLabel: () => r.intl.string(r.t.FQHRUK),
-        ctaAction: "quests",
-        ctaVariant: "secondary",
-    },
-    [i.$.ORB_PROFILE]: {
-        description: () => r.intl.string(r.t.tN6Sgx),
-        ctaLabel: () => r.intl.string(r.t.wTVyFK),
-        ctaAction: "orbs",
-        ctaVariant: "expressive",
-    },
-    [i.$.GIFTING]: {
-        description: () => r.intl.string(r.t["PECB/R"]),
-        ctaLabel: () => r.intl.string(r.t.hdouKj),
-        ctaAction: "gifting",
-        ctaVariant: "secondary",
-    },
+    [i.$.GUILD_BOOSTER]: { ctaLabel: () => r.intl.string(r.t.HKJcgE), ctaAction: "boost", ctaVariant: "secondary" },
+    [i.$.QUEST_COMPLETED]: { ctaLabel: () => r.intl.string(r.t.FQHRUK), ctaAction: "quests", ctaVariant: "secondary" },
+    [i.$.ORB_PROFILE]: { ctaLabel: () => r.intl.string(r.t.wTVyFK), ctaAction: "orbs", ctaVariant: "expressive" },
+    [i.$.GIFTING]: { ctaLabel: () => r.intl.string(r.t.hdouKj), ctaAction: "gifting", ctaVariant: "secondary" },
 };
 function l(e) {
     return o[e];

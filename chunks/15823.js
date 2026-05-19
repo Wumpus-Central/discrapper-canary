@@ -234,9 +234,8 @@ function et(e) {
                                                 let { default: e } = await Promise.all([
                                                     t.e("84541"),
                                                     t.e("25812"),
-                                                    t.e("95507"),
+                                                    t.e("25539"),
                                                     t.e("24949"),
-                                                    t.e("19675"),
                                                     t.e("79093"),
                                                     t.e("28510"),
                                                     t.e("116"),

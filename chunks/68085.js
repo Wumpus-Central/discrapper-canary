@@ -17,11 +17,15 @@ let _ = (0, n(945810).mj)({
 });
 var f = n(192308);
 let h = function () {
-    let { initialBadgeId: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+    let {
+        initialBadgeId: e,
+        targetUserId: t,
+        targetUsername: r,
+    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     (0, f.openModalLazy)(
         async () => {
-            let { default: t } = await Promise.all([n.e("13445"), n.e("9778")]).then(n.bind(n, 890473));
-            return (n) => (0, i.jsx)(t, { ...n, initialBadgeId: e });
+            let { default: s } = await Promise.all([n.e("13445"), n.e("73366")]).then(n.bind(n, 914256));
+            return (n) => (0, i.jsx)(s, { ...n, initialBadgeId: e, targetUserId: t, targetUsername: r });
         },
         { stackingBehavior: "stack" },
     );
@@ -303,12 +307,18 @@ function el(e) {
                     className: a()(eo.q, s),
                 }),
                 K = null != g && g(e.id),
-                z = {
+                q = {
                     onClick: (t) => {
                         D({ action: "PRESS_BADGE" }), (0, Q.R9)({ badge: e.id, analyticsLocations: C, ...b });
                         let i = e.id.startsWith("staff") && !_;
                         if (P && !i) {
-                            t.preventDefault(), h({ initialBadgeId: (0, er.P3)(e.id) });
+                            t.preventDefault();
+                            let n = f?.userId != null ? z.default.getUser(f.userId) : null;
+                            h({
+                                initialBadgeId: (0, er.P3)(e.id),
+                                targetUserId: f?.userId,
+                                targetUsername: n?.globalName ?? n?.username,
+                            });
                             return;
                         }
                         if (n) {
@@ -360,7 +370,7 @@ function el(e) {
                     style: { filter: A && null != r ? `drop-shadow(0 0 5px ${r.glowColor})` : void 0 },
                 };
             if (j) {
-                let n = P ? { ...z, "aria-label": O.intl.string(O.t["JEiq/c"]) } : z,
+                let n = P ? { ...q, "aria-label": O.intl.string(O.t["JEiq/c"]) } : q,
                     r = (0, i.jsx)(l.Anchor, { ...n, ref: I, children: Y });
                 return (0, i.jsx)(
                     "div",
@@ -396,7 +406,7 @@ function el(e) {
                 );
             }
             if (n) {
-                let n = (0, i.jsx)(l.Anchor, { ...z, ref: T, children: Y });
+                let n = (0, i.jsx)(l.Anchor, { ...q, ref: T, children: Y });
                 return (0, i.jsx)(
                     W,
                     {
@@ -410,7 +420,7 @@ function el(e) {
                 );
             }
             if (y) {
-                let n = (0, i.jsx)(l.Anchor, { ...z, ref: S, children: Y });
+                let n = (0, i.jsx)(l.Anchor, { ...q, ref: S, children: Y });
                 return (0, i.jsx)(
                     m,
                     { targetElementRef: S, delay: v.In, forceOpen: K, badgeDescription: e.description, children: n },
@@ -418,7 +428,7 @@ function el(e) {
                 );
             }
             if (B && f?.premiumGuildSince != null && M) {
-                let n = (0, i.jsx)(l.Anchor, { ...z, ref: N, children: Y });
+                let n = (0, i.jsx)(l.Anchor, { ...q, ref: N, children: Y });
                 return (0, i.jsx)(
                     en,
                     {
@@ -431,8 +441,8 @@ function el(e) {
                     `${e.id}-${t}`,
                 );
             }
-            let q = (0, i.jsx)(l.Anchor, { ...z, children: Y }),
-                X = ((e) => {
+            let X = (0, i.jsx)(l.Anchor, { ...q, children: Y }),
+                J = ((e) => {
                     let { badge: t, tieredTenureBadge: n } = e;
                     return void 0 !== n && t.id !== ea
                         ? (0, i.jsx)(x, { profileBadge: t, tenureBadge: n })
@@ -440,7 +450,7 @@ function el(e) {
                 })({ badge: e, tieredTenureBadge: d && e.id !== ea ? r : void 0 });
             return (0, i.jsx)(
                 o.m,
-                { __unsupportedReactNodeAsText: X, forceOpen: K, delay: v.In, ariaHidden: !0, children: q },
+                { __unsupportedReactNodeAsText: J, forceOpen: K, delay: v.In, ariaHidden: !0, children: X },
                 `${e.id}-${t}`,
             );
         }),

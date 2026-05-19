@@ -1,34 +1,3 @@
-.raisedHandIcon__15cd2 {
-    color: var(--interactive-text-default);
-    margin-inline-start: -4px;
-    min-width: 32px;
-    position: relative;
-    width: auto
-}
-
-.raisedHandIcon__15cd2 svg {
-    flex-shrink: 0
-}
-
-.raisedHandIcon__15cd2:hover {
-    color: var(--white)
-}
-
-.raisedHandCount__15cd2 {
-    background: var(--background-feedback-notification);
-    border-radius: 999px;
-    bottom: -3px;
-    box-sizing: border-box;
-    color: var(--white);
-    flex-shrink: 0;
-    height: 16px;
-    inset-inline-start: 50%;
-    min-width: 16px;
-    padding: 0 4px;
-    position: absolute;
-    width: auto
-}
-
 .participants__4783a {
     color: var(--interactive-text-default);
     padding-inline: 0
