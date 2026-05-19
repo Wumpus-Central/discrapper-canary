@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { Eu: () => g, IO: () => m, y7: () => E });
+n.d(t, { Eu: () => g, IO: () => m, T1: () => p, y7: () => E });
 var i = n(64700),
     r = n(17928),
     s = n(228366),
     a = n(287809),
     o = n(354670),
-    l = n(927578),
+    l = n(428262),
     u = n(89366),
     c = n(881489),
     d = n(264779),
@@ -43,9 +43,8 @@ function E() {
                 _.Ay.fetchClaimedOutboundPromotionCodes();
             });
         }, []);
-    let S = {};
-    for (let { code: e, promotion: t } of I) S[t.id] = e;
-    let N = p(n, E, m, S),
+    let S = i.useMemo(() => (0, d.eN)(I), [I]),
+        N = p(n, E, m, S),
         y = i.useMemo(() => {
             let e = new Set(
                 N.map((e) => {

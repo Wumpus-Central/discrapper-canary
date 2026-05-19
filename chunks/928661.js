@@ -1,10 +1,10 @@
 e.exports = {
-    sW: "marginContainer_f5f9ed",
+    N1: "headerContainer_f5f9ed",
+    DE: "promotions_f5f9ed",
     Yj: "gradientContainer_f5f9ed",
     uo: "promoHeaderContainer_f5f9ed",
     Qw: "promoDescription_f5f9ed",
     aA: "promoNitroButton_f5f9ed",
-    uI: "skuCard_f5f9ed",
     p$: "emptyState_f5f9ed",
     ks: "emptyStateHeader_f5f9ed",
     WO: "emptyStateSubtext_f5f9ed",

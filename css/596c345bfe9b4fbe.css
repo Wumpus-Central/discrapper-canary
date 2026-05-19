@@ -227,8 +227,14 @@
     background: var(--background-base-lower)
 }
 
-.marginContainer_f5f9ed {
+.headerContainer_f5f9ed {
     margin-top: 20px
+}
+
+.promotions_f5f9ed {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md)
 }
 
 .gradientContainer_f5f9ed {
@@ -247,10 +253,6 @@
 
 .promoNitroButton_f5f9ed {
     margin-inline-start: auto
-}
-
-.skuCard_f5f9ed {
-    margin-top: 24px
 }
 
 .emptyState_f5f9ed {
@@ -273,9 +275,10 @@
 }
 
 .emptyStateImage_f5f9ed {
-    height: 202px;
-    margin-top: 120px;
-    width: 404px
+    aspect-ratio: 2/1;
+    background-size: contain;
+    margin-top: 48px;
+    width: 360px
 }
 
 .loading_f5f9ed {
@@ -423,11 +426,11 @@
 }
 
 .theme-dark .emptyStateImage_f5f9ed {
-    background: url(/assets/b584f76d3ff86700.svg)
+    background-image: url(/assets/b584f76d3ff86700.svg)
 }
 
 .theme-light .emptyStateImage_f5f9ed {
-    background: url(/assets/28fe27f3657e23ee.svg)
+    background-image: url(/assets/28fe27f3657e23ee.svg)
 }
 
 .premiumIcon_f5f9ed {
