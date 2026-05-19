@@ -1,19 +1,20 @@
 "use strict";
 n.d(t, {
-    m8: () => E,
-    OO: () => p,
     n6: () => N,
     Iq: () => _,
     Ig: () => g,
     jS: () => f,
-    ev: () => y,
     Ym: () => h,
-    r4: () => I,
     rI: () => A,
+    m8: () => E,
+    A8: () => C,
+    OO: () => p,
+    r4: () => I,
+    ev: () => y,
+    aD: () => v,
     uK: () => d,
     lk: () => S,
     sy: () => m,
-    A8: () => C,
 });
 var i,
     r,
@@ -139,6 +140,12 @@ let y = (0, o.mj)({
     }),
     C = (0, o.mj)({
         name: "2026-05-quest-home-new-layout",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+    }),
+    v = (0, o.mj)({
+        name: "2026-05-quest-home-tile-redesign",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
