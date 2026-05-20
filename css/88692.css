@@ -517,35 +517,61 @@
     white-space: nowrap
 }
 
+.iconDefaultBackground_da8ac7 {
+    background: var(--background-mod-subtle)
+}
+
 .icon_da8ac7 {
-    align-items: center;
     align-self: flex-start;
     aspect-ratio: 1/1;
-    background: var(--background-mod-subtle);
     border-radius: var(--radius-md);
-    display: flex;
     height: 64px;
-    justify-content: center;
     overflow: clip;
     position: relative;
     width: 64px
 }
 
-.icon_da8ac7 .expressiveGradient_da8ac7,
+.icon_da8ac7,
+.icon_da8ac7 .expressiveGradient_da8ac7 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.icon_da8ac7 .expressiveGradient_da8ac7 {
+    inset: 0;
+    position: absolute
+}
+
+.icon_da8ac7 .nitroGradient_da8ac7 {
+    display: grid;
+    place-items: center
+}
+
+.icon_da8ac7 .nitroGradientLayer_da8ac7 {
+    grid-area: 1/1
+}
+
 .icon_da8ac7 .nitroCredit_da8ac7 {
     align-items: center;
+    background: linear-gradient(322deg, #e978e6 6.26%, #2f3ebb 79.77%);
     display: flex;
     inset: 0;
     justify-content: center;
     position: absolute
 }
 
-.icon_da8ac7 .nitroCredit_da8ac7 {
-    background: linear-gradient(322deg, #e978e6 6.26%, #2f3ebb 79.77%)
-}
-
 .icon_da8ac7 .nitroCredit_da8ac7 svg {
     filter: drop-shadow(0 4px 10px var(--shadow-low-hover))
+}
+
+.icon_da8ac7 .nitroBasic_da8ac7 {
+    align-items: center;
+    background: var(--background-mod-normal);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    position: absolute
 }
 
 .bundleMiniStaticPreview_da8ac7 {
@@ -2947,39 +2973,6 @@
 
 .ctaIcon_f7398d {
     flex-shrink: 0
-}
-
-.cardImage__3f7b1 {
-    aspect-ratio: 1;
-    margin-bottom: var(--space-8);
-    margin-top: var(--space-8);
-    max-width: 140px;
-    width: 100%
-}
-
-.dynamicGraphicWrapper__3f7b1 {
-    align-items: center;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    position: relative;
-    width: 100%
-}
-
-.withOverlay__3f7b1 {
-    transform: scale(.75)
-}
-
-.overlayImage__3f7b1 {
-    height: 100%;
-    inset-inline-start: 0;
-    -o-object-fit: contain;
-    object-fit: contain;
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 2
 }
 
 @keyframes pulse__7135b {
