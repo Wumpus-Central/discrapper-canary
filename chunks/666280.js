@@ -17,8 +17,6 @@ e.exports = {
     qG: "fadeIn_cb32c7",
     cG: "disableFadeIn_cb32c7",
     YN: "bannerUpperRightContainer_cb32c7",
-    Ag: "promotedLabelWrapperBanner_cb32c7",
-    nb: "promotedLabelWrapperNonBanner_cb32c7",
     TD: "appDetailsContainer_cb32c7",
     eV: "appDetails_cb32c7",
     mD: "appDetailsHeaderContainer_cb32c7",
