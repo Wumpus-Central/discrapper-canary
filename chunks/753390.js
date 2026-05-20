@@ -53,14 +53,14 @@ var i = n(989349),
     r = n.n(i),
     s = n(636537),
     a = n(228366),
-    o = n(845584),
+    o = n(913122),
     l = n(136857),
     u = n(202613),
     c = n(615405),
     d = n(166403),
     _ = n(174459),
     f = n(739508),
-    h = n(927578),
+    h = n(428262),
     p = n(107351),
     E = n(342393),
     m = n(284009),
@@ -821,7 +821,6 @@ function eg(e, t) {
     );
 }
 async function eA(e, t, n, i, r, u, c) {
-    if (null != t.paymentSource && null == t.currency) throw Error("Currency must be specified with payment source");
     a.h.dispatch({ type: "BILLING_SUBSCRIPTION_UPDATE_START" });
     try {
         let o = {
@@ -883,8 +882,8 @@ function eT(e, t, n, i, r, s) {
 function eS(e, t, n, i, r) {
     return eA(e, { currency: t }, { amount: 0, currency: t.toLowerCase() }, n, i, r);
 }
-function eN(e, t, n, i, r, s) {
-    return eA(e, { paymentSource: t, currency: n }, { amount: 0, currency: n.toLowerCase() }, i, r, s);
+function eN(e, t, n, i, r) {
+    return eA(e, { paymentSource: t }, { amount: 0, currency: n.currency }, n, i, r);
 }
 function ey() {
     a.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_UPDATE_CLEAR_ERROR" });

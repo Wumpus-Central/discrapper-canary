@@ -42,12 +42,17 @@ function L(e) {
         [M, V] = (0, u.yK)([N.A], () => [N.A.paymentSources, N.A.hasFetchedPaymentSources]),
         k = (0, p.Y)((0, b.MP)(t)),
         { analyticsLocations: w } = (0, S.Ay)(),
-        F = s.useMemo(() => Object.values(M).filter((e) => !e.invalid), [M]),
+        F = s.useMemo(() => {
+            let e = P.checkoutContext;
+            if (null == e) return Object.values(M).filter((e) => !e.invalid);
+            let t = new Set(e.payment_sources.filter((e) => e.enabled).map((e) => e.id));
+            return Object.values(M).filter((e) => !e.invalid && t.has(e.id));
+        }, [M, P.checkoutContext]),
         [B, z] = s.useState(!1),
         [Y, X] = s.useState(t.currency),
         H = async (e, i, n) => {
             if (null == t) throw Error("missing subscription and paymentSource");
-            null == e ? await h.r6(t, i, n, w, L) : await h.uK(t, e, i, n, w, L), z(!1), X(i);
+            null == e ? await h.r6(t, i, n, w, L) : await h.uK(t, e, n, w, L), z(!1), X(i);
         },
         K = async (e, i, n) => {
             z(!0);
@@ -55,7 +60,7 @@ function L(e) {
                     subscriptionId: t.id,
                     paymentSourceId: e?.id,
                     renewal: !0,
-                    currency: i,
+                    currency: null != e ? void 0 : i,
                     analyticsLocations: w,
                     analyticsLocation: L,
                 }),
@@ -64,29 +69,23 @@ function L(e) {
                 ? await D(
                       s,
                       () => {
-                          n(e, i, l);
+                          n(e, s.currency, l);
                       },
                       () => {
                           z(!1);
                       },
                   )
-                : n(e, i, l);
+                : n(e, s.currency, l);
         },
         W = (e) => {
-            let i = _.A.get(t.planIdForCurrencies);
-            o()(null != e, "paymentSource not specified for change"), o()(null != i, "Unable to fetch plan");
-            let n = (0, I._w)(i.id, e.id, !1);
-            return n.length > 0 ? n[0] : j.Yri.USD;
-        },
-        Z = (e) => {
             (0, I.c_)(e.id, (0, b.MP)(t)).then(() => {
-                K(e, W(e), H);
+                K(e, void 0, H);
             }),
                 "function" == typeof i && i(e.id);
         },
-        q = () => {
+        Z = () => {
             (0, d.openModalLazy)(
-                async () => (e) => (0, n.jsx)(E.default, { ...e, onAddPaymentSource: Z, analyticsLocation: L }),
+                async () => (e) => (0, n.jsx)(E.default, { ...e, onAddPaymentSource: W, analyticsLocation: L }),
                 {
                     onCloseCallback: () => {
                         (0, A.ET)();
@@ -113,16 +112,17 @@ function L(e) {
         return (0, n.jsx)(c.$, {
             fullWidth: !0,
             variant: l ? "primary" : "secondary",
-            onClick: q,
+            onClick: Z,
             text: y.intl.string(y.t.CpOiEO),
         });
     {
         let e,
             i = _.A.get(t.planIdForCurrencies);
         o()(null != i, "Unable to fetch plan");
-        let s = (0, I._w)(i, t.paymentSourceId, !1),
-            l = null != t.paymentSourceId ? F.find((e) => e.id === t.paymentSourceId) : null,
-            u = l?.type === j.hes.TDS_WALLET;
+        let s = null != P.checkoutContext ? P.checkoutContext.allowed_currencies : null,
+            l = null != s && s.length > 0 ? s : (0, I._w)(i, t.paymentSourceId, !1),
+            u = null != t.paymentSourceId ? F.find((e) => e.id === t.paymentSourceId) : null,
+            d = u?.type === j.hes.TDS_WALLET;
         return (0, n.jsxs)(n.Fragment, {
             children: [
                 ((e = t.paymentSourceId),
@@ -133,23 +133,23 @@ function L(e) {
                     hidePersonalInformation: U,
                     selectedPaymentSourceId: e,
                     onChange: (e) => {
-                        null != e && K(e, W(e), H);
+                        null != e && K(e, void 0, H);
                     },
-                    onPaymentSourceAdd: q,
+                    onPaymentSourceAdd: Z,
                     dropdownLoading: B,
                     disabled: G,
                     paymentGatewayRestrictions: t.eligiblePaymentGateways,
                 })),
-                null == t.paymentSourceId || u
+                null == t.paymentSourceId || d
                     ? null
                     : (0, n.jsx)(x.f, {
-                          currencies: s,
+                          currencies: l,
                           children: (0, n.jsx)("div", {
                               className: r()(O.Gl, R.Uu, R.Hu),
                               children: (0, n.jsx)(x.A, {
                                   label: y.intl.string(y.t["0YjaXf"]),
                                   selectedCurrency: Y,
-                                  currencies: s,
+                                  currencies: l,
                                   onChange: (e) => {
                                       K(void 0, e, H);
                                   },
