@@ -2528,23 +2528,56 @@
     flex-direction: row;
     gap: var(--space-8);
     margin-bottom: var(--space-8);
-    padding-inline-start: var(--space-16)
+    min-width: 0;
+    padding: 0 var(--space-16)
+}
+
+.textContainer_e3f38d {
+    flex: 1;
+    min-width: 0
 }
 
 .rewardTileContainer_e3f38d {
-    flex-shrink: 0
+    border-radius: var(--radius-xl);
+    flex-shrink: 0;
+    overflow: hidden
+}
+
+.questRewardTileWrapper_e3f38d {
+    height: 100%;
+    position: relative;
+    width: 100%
 }
 
 .orbsBalanceIcon_e3f38d {
-    height: 14px;
     margin-inline-end: 3px;
     position: relative;
-    top: 1px
+    top: 2px
 }
 
 .gameTitle_e3f38d {
-    line-height: 1.35;
-    margin-bottom: 2px
+    margin-bottom: 1px
+}
+
+.questRewardTileOverlay_e3f38d {
+    align-items: center;
+    background: rgba(0, 0, 0, .8);
+    display: flex;
+    height: 100%;
+    inset-inline-start: 0;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.questRewardTileCompletedIcon_e3f38d {
+    color: #7bc270;
+    opacity: .7
+}
+
+.questRewardTileExpiredIcon_e3f38d {
+    color: #9d9ea5
 }
 
 .footerDescription__44846 {
