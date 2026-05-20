@@ -1,31 +1,31 @@
-e.d(l, { A: () => s });
-var n = e(997101),
-    a = e(17928),
-    r = e(287809),
-    i = e(295405);
+t.d(e, { A: () => s });
+var n = t(997101),
+    a = t(17928),
+    r = t(287809),
+    u = t(295405);
 function s() {
     let {
-            storeCountryData: t,
-            savedPostalCode: l,
-            savedCountry: e,
-        } = (0, a.cf)([i.A, r.default], () => {
-            let t = i.A.defaultPaymentSource;
+            storeCountryData: l,
+            savedPostalCode: e,
+            savedCountry: t,
+        } = (0, a.cf)([u.A, r.default], () => {
+            let l = u.A.defaultPaymentSource;
             return {
                 storeCountryData: r.default.getCurrentUser()?.storeCountry ?? null,
-                savedPostalCode: t?.billingAddress.postalCode ?? null,
-                savedCountry: t?.billingAddress.country ?? null,
+                savedPostalCode: l?.billingAddress.postalCode ?? null,
+                savedCountry: l?.billingAddress.country ?? null,
             };
         }),
-        s = t?.country ?? null,
-        u = t?.setAt != null,
-        o = null,
-        d = !1;
+        s = l?.country ?? null,
+        i = l?.setAt != null,
+        d = null,
+        o = !1;
     return (
-        null != s && u
-            ? ((o = s), (d = n.M.EU_COUNTRIES.has(s)))
-            : null != e
-              ? ((o = e), (d = n.M.EU_COUNTRIES.has(e)))
-              : null != s && ((o = s), (d = n.M.EU_COUNTRIES.has(s))),
-        { isEU: d, displayCountry: o, storeCountryData: t, savedPostalCode: l, savedCountry: e }
+        null != s && i
+            ? ((d = s), (o = n.M.EURO_CURRENCY_COUNTRIES.has(s)))
+            : null != t
+              ? ((d = t), (o = n.M.EURO_CURRENCY_COUNTRIES.has(t)))
+              : null != s && ((d = s), (o = n.M.EURO_CURRENCY_COUNTRIES.has(s))),
+        { isEU: o, displayCountry: d, storeCountryData: l, savedPostalCode: e, savedCountry: t }
     );
 }
