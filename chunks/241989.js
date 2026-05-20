@@ -1,123 +1,126 @@
-l.d(t, { DH: () => w, JW: () => M, WH: () => B, a6: () => L, f7: () => k, jw: () => R, oo: () => D });
+l.d(t, { DH: () => R, JW: () => G, WH: () => H, a6: () => O, f7: () => S, jw: () => D, oo: () => U });
 var n = l(627968),
-    a = l(64700),
-    r = l(503698),
-    s = l.n(r),
+    s = l(64700),
+    a = l(503698),
+    r = l.n(a),
     i = l(575593),
     c = l(17928),
+    d = l(661531),
+    u = l(851974),
     o = l(990078),
-    d = l(834730),
-    u = l(778712),
-    m = l(315629),
-    x = l(403581),
-    h = l(104510),
-    g = l(323384),
-    v = l(966327),
+    m = l(834730),
+    x = l(778712),
+    h = l(315629),
+    C = l(403581),
+    v = l(104510),
+    p = l(323384),
+    g = l(966327),
     j = l(14702),
-    p = l(575926),
-    f = l(548118),
+    f = l(575926),
+    L = l(548118),
     N = l(319820),
-    b = l(328968),
-    E = l(403362),
+    E = l(328968),
+    b = l(403362),
     T = l(371794),
-    y = l(427262),
-    A = l(652215),
-    C = l(788868),
+    A = l(427262),
+    y = l(652215),
+    _ = l(788868),
     I = l(327105),
-    S = l(985018),
-    _ = l(617956);
-function k(e) {
+    w = l(375708),
+    M = l(617956);
+function S(e) {
     let {
             header: t,
             headerIconSrc: l,
-            headerIconComponent: r,
+            headerIconComponent: a,
             bottomSubText: i,
             label: c,
-            description: u,
-            graphic: m,
+            description: d,
+            graphic: u,
             price: x,
             PriceIcon: h,
-            priceTooltip: g,
+            priceTooltip: C,
             priceSubText: v,
-            priceSubTextHasStrikethrough: j = !0,
-            target: p,
+            priceSubTextHasStrikethrough: p = !0,
+            omitDefaultIconBackground: g,
+            target: j,
             className: f,
         } = e,
-        N = (0, n.jsx)(P, { target: p }),
-        b = a.useMemo(() => {
-            let e = (0, n.jsxs)(d.E, {
+        L = (0, n.jsx)(k, { target: j }),
+        N = s.useMemo(() => {
+            let e = (0, n.jsxs)(m.E, {
                 variant: "text-md/medium",
                 color: "text-default",
-                className: _.nw,
+                className: M.nw,
                 children: [null != h && (0, n.jsx)(h, { size: "xs" }), x],
             });
-            return null != g
-                ? (0, n.jsx)(o.m, { text: g, asContainer: !0, position: "top", align: "center", children: e })
+            return null != C
+                ? (0, n.jsx)(o.m, { text: C, asContainer: !0, position: "top", align: "center", children: e })
                 : e;
-        }, [h, x, g]),
-        E = a.useMemo(
+        }, [h, x, C]),
+        E = s.useMemo(
             () =>
-                null != r
-                    ? (0, n.jsx)("span", { className: _.nr, children: r })
+                null != a
+                    ? (0, n.jsx)("span", { className: M.nr, children: a })
                     : null != l
-                      ? (0, n.jsx)("img", { alt: "", src: l, className: _.nr })
+                      ? (0, n.jsx)("img", { alt: "", src: l, className: M.nr })
                       : null,
-            [l, r],
+            [l, a],
         );
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)("div", {
-                className: s()(_.kL, f),
+                className: r()(M.kL, f),
                 children: [
-                    null != m && (0, n.jsx)("div", { className: _.Kk, children: m }),
+                    null != u && (0, n.jsx)("div", { className: r()(M.Kk, { [M.H9]: !g }), children: u }),
                     (0, n.jsxs)("div", {
-                        className: _.Qs,
+                        className: M.Qs,
                         children: [
                             null != t &&
-                                (0, n.jsxs)(d.E, {
+                                (0, n.jsxs)(m.E, {
                                     variant: "text-sm/semibold",
                                     color: "text-muted",
                                     lineClamp: 2,
-                                    className: _.wx,
+                                    className: M.wx,
                                     children: [E, t],
                                 }),
                             (0, n.jsxs)("div", {
-                                className: _.zH,
+                                className: M.zH,
                                 children: [
                                     (0, n.jsxs)("div", {
-                                        className: _.Qq,
+                                        className: M.Qq,
                                         children: [
-                                            (0, n.jsx)(d.E, {
+                                            (0, n.jsx)(m.E, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
                                                 lineClamp: 2,
                                                 children: c,
                                             }),
-                                            null != u &&
-                                                (0, n.jsx)(d.E, {
+                                            null != d &&
+                                                (0, n.jsx)(m.E, {
                                                     variant: "text-sm/normal",
                                                     color: "text-muted",
                                                     lineClamp: 2,
-                                                    children: u,
+                                                    children: d,
                                                 }),
-                                            null != N &&
-                                                (0, n.jsx)(d.E, {
+                                            null != L &&
+                                                (0, n.jsx)(m.E, {
                                                     variant: "text-sm/normal",
                                                     color: "text-muted",
                                                     lineClamp: 1,
-                                                    children: N,
+                                                    children: L,
                                                 }),
                                         ],
                                     }),
                                     (0, n.jsxs)("div", {
-                                        className: _.p6,
+                                        className: M.p6,
                                         children: [
-                                            b,
+                                            N,
                                             null != v &&
-                                                (0, n.jsx)(d.E, {
-                                                    variant: j ? "text-xs/medium" : "text-sm/normal",
+                                                (0, n.jsx)(m.E, {
+                                                    variant: p ? "text-xs/medium" : "text-sm/normal",
                                                     color: "text-muted",
-                                                    className: s()(_.Jb, { [_.Nc]: j }),
+                                                    className: r()(M.Jb, { [M.Nc]: p }),
                                                     children: v,
                                                 }),
                                         ],
@@ -129,101 +132,113 @@ function k(e) {
                 ],
             }),
             null != i &&
-                (0, n.jsx)(d.E, { variant: "text-sm/medium", color: "text-muted", className: _.dx, children: i }),
+                (0, n.jsx)(m.E, { variant: "text-sm/medium", color: "text-muted", className: M.dx, children: i }),
         ],
     });
 }
-function P(e) {
+function k(e) {
     let { target: t } = e;
     switch (t?.type) {
         case "gift":
-            return S.intl.format(I.default["2PiTTi"], {
-                username: y.Ay.getUserTag(t.user),
-                nickname: y.Ay.getName(t.user),
-                avatar: (0, n.jsx)(v.A, { user: t.user, size: u._3.SIZE_16, className: _.RG }),
+            return w.intl.format(I.default["2PiTTi"], {
+                username: A.Ay.getUserTag(t.user),
+                nickname: A.Ay.getName(t.user),
+                avatar: (0, n.jsx)(g.A, { user: t.user, size: x._3.SIZE_16, className: M.RG }),
             });
         case "guildSubscription":
-            return S.intl.format(I.default.mXvZt2, {
+            return w.intl.format(I.default.mXvZt2, {
                 guildName: t.guild.name,
-                icon: (0, n.jsx)(f.Ay, { guild: t.guild, size: f.Ay.Sizes.SMOL, className: _.RG }),
+                icon: (0, n.jsx)(L.Ay, { guild: t.guild, size: L.Ay.Sizes.SMOL, className: M.RG }),
             });
         case "boost":
-            return S.intl.format(I.default["8imbq5"], {
+            return w.intl.format(I.default["8imbq5"], {
                 guildName: t.guild.name,
                 guildIcon: () =>
-                    (0, n.jsx)(f.Ay, { guild: t.guild, size: f.Ay.Sizes.SMOL, className: _.RG, active: !0 }),
+                    (0, n.jsx)(L.Ay, { guild: t.guild, size: L.Ay.Sizes.SMOL, className: M.RG, active: !0 }),
             });
         case void 0:
             return null;
         default:
-            (0, E.xb)(t);
+            (0, b.xb)(t);
     }
 }
-function G(e) {
+function P(e) {
     let { color: t, Icon: l } = e;
-    return (0, n.jsx)(m.h, {
+    return (0, n.jsx)(h.h, {
         color: t,
-        className: _.nC,
+        className: M.nC,
         children: (0, n.jsx)(l, { size: "lg", color: "var(--icon-strong)" }),
     });
 }
-function M() {
-    return (0, n.jsx)(G, { color: "nitro-pink", Icon: x.t });
-}
-function w() {
-    return (0, n.jsx)(G, { color: "nitro-green", Icon: x.t });
-}
-function L() {
-    return (0, n.jsx)(G, { color: "pink", Icon: h._ });
+function G() {
+    return (0, n.jsxs)("div", {
+        className: M.vc,
+        children: [
+            (0, n.jsx)("div", {
+                className: M.Ad,
+                children: (0, n.jsx)(u.d, { alt: "Nitro Icon background", ariaHidden: !0, width: 64, height: 64 }),
+            }),
+            (0, n.jsx)(C.t, { size: "lg", color: d.A.unsafe_rawColors.NEUTRAL_1, className: M.Ad }),
+        ],
+    });
 }
 function R() {
-    return (0, n.jsx)(g.k, { size: "lg", color: "var(--icon-muted)" });
+    return (0, n.jsx)("div", {
+        className: M.Ty,
+        children: (0, n.jsx)(C.t, { size: "lg", color: d.A.colors.ICON_DEFAULT }),
+    });
+}
+function O() {
+    return (0, n.jsx)(P, { color: "pink", Icon: v._ });
 }
 function D() {
-    return (0, n.jsx)("div", { className: _.CX, children: (0, n.jsx)(x.t, { size: "lg", color: "var(--neutral-1)" }) });
+    return (0, n.jsx)(p.k, { size: "lg", color: "var(--icon-muted)" });
 }
-let O = {
-    [A.EZt.APPLICATION]: { preferredAssetType: "headerBackground" },
-    [A.EZt.GUILD_ROLE]: { preferredAssetType: "thumbnail" },
-    [A.EZt.GUILD_PRODUCT]: { preferredAssetType: "thumbnail" },
+function U() {
+    return (0, n.jsx)("div", { className: M.CX, children: (0, n.jsx)(C.t, { size: "lg", color: "var(--neutral-1)" }) });
+}
+let V = {
+    [y.EZt.APPLICATION]: { preferredAssetType: "headerBackground" },
+    [y.EZt.GUILD_ROLE]: { preferredAssetType: "thumbnail" },
+    [y.EZt.GUILD_PRODUCT]: { preferredAssetType: "thumbnail" },
 };
-function $(e) {
-    let { skuId: t, productLine: l, applicationId: r, storeListing: s } = e,
-        i = (0, c.bG)([b.A], () => s ?? b.A.getForSKU(t), [s, t]),
-        o = O[l].preferredAssetType,
-        d = a.useMemo(
+function B(e) {
+    let { skuId: t, productLine: l, applicationId: a, storeListing: r } = e,
+        i = (0, c.bG)([E.A], () => r ?? E.A.getForSKU(t), [r, t]),
+        d = V[l].preferredAssetType,
+        u = s.useMemo(
             () =>
                 null == i
                     ? null
-                    : "headerBackground" === o
+                    : "headerBackground" === d
                       ? (i.headerBackground ?? i.thumbnail)
                       : (i.thumbnail ?? i.headerBackground),
-            [o, i],
+            [d, i],
         );
-    return null != d
-        ? (0, n.jsx)("img", { src: (0, T.YE)(r, d, 64), alt: "", className: _.gw })
-        : l === A.EZt.APPLICATION
-          ? (0, n.jsx)(R, {})
-          : l === A.EZt.GUILD_ROLE
-            ? (0, n.jsx)(p.h, { width: 48, height: 48 })
+    return null != u
+        ? (0, n.jsx)("img", { src: (0, T.YE)(a, u, 64), alt: "", className: M.gw })
+        : l === y.EZt.APPLICATION
+          ? (0, n.jsx)(D, {})
+          : l === y.EZt.GUILD_ROLE
+            ? (0, n.jsx)(f.h, { width: 48, height: 48 })
             : null;
 }
-function B(e) {
-    let { sku: t, premiumType: l, product: a, storeListing: r } = e;
-    return l === C.PremiumTypes.TIER_0
-        ? (0, n.jsx)(w, {})
-        : l === C.PremiumTypes.TIER_2
-          ? (0, n.jsx)(M, {})
-          : a?.type === i.R.BUNDLE
-            ? (0, n.jsx)(j.a, { product: a, staticPreviewClassName: _.C0 })
+function H(e) {
+    let { sku: t, premiumType: l, product: s, storeListing: a } = e;
+    return l === _.PremiumTypes.TIER_0
+        ? (0, n.jsx)(R, {})
+        : l === _.PremiumTypes.TIER_2
+          ? (0, n.jsx)(G, {})
+          : s?.type === i.R.BUNDLE
+            ? (0, n.jsx)(j.a, { product: s, staticPreviewClassName: M.C0 })
             : null == t
               ? null
-              : t.productLine in O
-                ? (0, n.jsx)($, {
+              : t.productLine in V
+                ? (0, n.jsx)(B, {
                       skuId: t.id,
                       productLine: t.productLine,
                       applicationId: t.applicationId,
-                      storeListing: r,
+                      storeListing: a,
                   })
-                : (0, n.jsx)(N.r$, { sku: t, slayerProductPreviewClassName: _.gw });
+                : (0, n.jsx)(N.r$, { sku: t, slayerProductPreviewClassName: M.gw });
 }

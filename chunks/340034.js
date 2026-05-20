@@ -11,7 +11,7 @@ var l = n(627968),
     p = n(94420),
     m = n(881489),
     h = n(531506),
-    C = n(337092),
+    C = n(361597),
     A = n(692440),
     y = n(367921),
     E = n(299301),
@@ -21,8 +21,8 @@ var l = n(627968),
     T = n(652215),
     f = n(788868),
     I = n(375708),
-    N = n(327105),
-    x = n(299279);
+    x = n(327105),
+    N = n(299279);
 let g = (e) => {
         let {
                 invoiceSummaryTypeWithPreview: t,
@@ -43,7 +43,7 @@ let g = (e) => {
                       subscriptionTrial: a,
                   }).lineItems;
         let c = (0, o.lp)(s, { manualLineItems: u, includeTaxLineItem: !0 });
-        return (0, l.jsx)(d.Vm, { label: I.intl.string(N.default.eoXh7B), lineItems: c, currency: s.currency });
+        return (0, l.jsx)(d.Vm, { label: I.intl.string(x.default.eoXh7B), lineItems: c, currency: s.currency });
     },
     v = (e) => {
         let {
@@ -72,7 +72,7 @@ let g = (e) => {
                 shouldShowUpdatedPaymentModal: S,
                 userTrialOffer: T,
                 trialPeriodCopy: I,
-                isEligibleForTrial: N,
+                isEligibleForTrial: x,
                 isEligibleForBOGOPromotion: g,
                 premiumSubscriptionPlan: v,
                 skuId: M,
@@ -85,8 +85,8 @@ let g = (e) => {
                 };
             }, [v, g, M]),
             R = a.useMemo(
-                () => (d && N ? (0, C.Ct)(T, { subscriptionPeriodEnd: s, trialPeriodCopy: I }) : p),
-                [d, N, T, s, I, p],
+                () => (d && x ? (0, C.Ct)(T, { subscriptionPeriodEnd: s, trialPeriodCopy: I }) : p),
+                [d, x, T, s, I, p],
             ),
             {
                 selectPlan: L,
@@ -95,19 +95,18 @@ let g = (e) => {
                 priceOptions: w,
                 isGift: U,
                 isEligibleForDiscount: k,
-                shouldUseCalculatedDiscount: Y,
-                discountOffer: G,
-                discountAmountOff: F,
+                discountOffer: Y,
+                discountAmountOff: G,
             } = (0, C.Rx)(m),
-            B = a.useMemo(() => (r.length > 0 ? f.hd[r[0]].premiumType : void 0), [r]),
-            W = a.useCallback(
+            F = a.useMemo(() => (r.length > 0 ? f.hd[r[0]].premiumType : void 0), [r]),
+            B = a.useCallback(
                 (e) => {
                     L(e.value);
                 },
                 [L],
             ),
-            V = a.useMemo(() => {
-                let e = null != G && G.discount.userUsageLimitInterval === f.Ff.MONTH;
+            W = a.useMemo(() => {
+                let e = null != Y && Y.discount.userUsageLimitInterval === f.Ff.MONTH;
                 return r.map((t) => {
                     let { isCurrentPlan: n, disabled: l } = (0, C.cD)(O, t),
                         a = (0, _.Rs)(O, {
@@ -118,13 +117,12 @@ let g = (e) => {
                             userLocale: D,
                             showPlanStatusSubText: o,
                             isInPlanSelectStep: d,
-                            discountOffer: G,
-                            discountAmountOff: F,
+                            discountOffer: Y,
+                            discountAmountOff: G,
                             isMonthlyDiscountOffer: e,
                             priceOptions: w,
                             isGift: U,
-                            shouldUseCalculatedDiscount: Y,
-                            isEligibleForTrial: N,
+                            isEligibleForTrial: x,
                             isEligibleForBOGOPromotion: g,
                         });
                     return {
@@ -136,8 +134,8 @@ let g = (e) => {
                         isDisabled: a.isDisabled || u,
                     };
                 });
-            }, [u, o, r, D, k, G, F, w, U, Y, N, g, O, d]);
-        return null == B
+            }, [u, o, r, D, k, Y, G, w, U, x, g, O, d]);
+        return null == F
             ? null
             : (0, l.jsxs)(l.Fragment, {
                   children: [
@@ -145,15 +143,15 @@ let g = (e) => {
                           (0, l.jsx)(i.E, {
                               variant: "text-md/medium",
                               color: "text-subtle",
-                              className: x.S,
+                              className: N.S,
                               children: j,
                           }),
                       (0, l.jsx)(c.me, {
-                          headingComponent: (0, l.jsx)(c.ec, { size: "sm", color: "text-strong", premiumType: B }),
+                          headingComponent: (0, l.jsx)(c.ec, { size: "sm", color: "text-strong", premiumType: F }),
                           headingSubText: R,
-                          planRadioOptions: V,
+                          planRadioOptions: W,
                           value: h?.id ?? "",
-                          onChange: W,
+                          onChange: B,
                       }),
                       d
                           ? (0, C.LR)({
@@ -164,7 +162,7 @@ let g = (e) => {
                                 shouldShowUpdatedPaymentModal: S,
                                 showTotal: d,
                                 shouldShowTotalInSubscriptionFlow: P,
-                                previewTotalSectionClassName: x.$,
+                                previewTotalSectionClassName: N.$,
                             })
                           : null,
                   ],
@@ -205,8 +203,8 @@ function b(e) {
             hideLegalContent: f,
             isInvoiceBilledImmediately: I = !0,
         } = e,
-        { immediateDelivery: N } = (0, S.U)(),
-        { discountOffer: x } = (0, P.P5)(),
+        { immediateDelivery: x } = (0, S.U)(),
+        { discountOffer: N } = (0, P.P5)(),
         g = (0, p.t4)((e) => e.paymentSourceId),
         { checkoutPaymentSources: v } = (0, u.t)(),
         M = (0, s.vg)("PremiumUnifiedCheckoutLegal");
@@ -214,7 +212,7 @@ function b(e) {
     let { invoicePreview: b } = d,
         j = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? b,
         R = j.invoiceItems.find((e) => e.subscriptionPlanId === a.id),
-        L = null != R ? (0, _.Re)(R, x).amount : j.subtotal;
+        L = null != R ? (0, _.Re)(R, N).amount : j.subtotal;
     if (f) return null;
     let O = M && null != g && v?.some((e) => e.id === g && null != e.relocationCountry),
         D = {
@@ -244,6 +242,6 @@ function b(e) {
     return (0, l.jsx)(c._P, {
         variant: { type: i ? c.I0.GiftNitro : n ? c.I0.SubscriptionTrial : c.I0.Subscription, ...D },
         paymentSourceType: r,
-        immediateDelivery: N,
+        immediateDelivery: x,
     });
 }

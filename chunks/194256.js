@@ -21,8 +21,8 @@ var l = n(627968),
     T = n(318254),
     f = n(821891),
     I = n(953689),
-    N = n(10716),
-    x = n(46225),
+    x = n(10716),
+    N = n(46225),
     g = n(20015),
     v = n(364995),
     M = n(426398),
@@ -90,7 +90,7 @@ let J = (e) => e.name,
                 upperInlineNoticeProps: f,
                 footerInlineNoticeProps: I,
             } = e,
-            { product: N, isSocialLayerGameItem: x } = (0, q.AO)({ sku: n }),
+            { product: x, isSocialLayerGameItem: N } = (0, q.AO)({ sku: n }),
             { unifiedInvoiceSummaryProps: g, priceText: v } = a.useMemo(
                 () =>
                     ((e) => {
@@ -165,8 +165,8 @@ let J = (e) => e.name,
                                 target: null != o ? { type: "gift", user: o } : void 0,
                             }
                         );
-                    })({ sku: n, product: N, application: t, isSocialLayerGameItem: x, giftRecipient: _ }),
-                [n, N, t, x, _],
+                    })({ sku: n, product: x, application: t, isSocialLayerGameItem: N, giftRecipient: _ }),
+                [n, x, t, N, _],
             ),
             [j, R] = a.useMemo(
                 () => [K.intl.string(z.default.Zxav97), null != i ? (0, E.$g)(i.total, i.currency) : void 0],
@@ -186,9 +186,17 @@ let J = (e) => e.name,
             }, [i, S]),
             { setCheckoutHeaderConfigs: O, checkoutHeaderConfigs: D } = (0, c.ck)();
         return (
-            a.useEffect(() => {
-                null != L && null == D.headerBadgeText && O({ ...D, headerBadgeText: K.intl.string(z.default.Fjpyfj) });
-            }, [L, O, D]),
+            a.useEffect(
+                () => (
+                    null != L &&
+                        null == D.headerBadgeText &&
+                        O({ ...D, headerBadgeText: K.intl.string(z.default.Fjpyfj) }),
+                    () => {
+                        O({ ...D, headerBadgeText: void 0 });
+                    }
+                ),
+                [L, O, D],
+            ),
             (0, l.jsx)(d.T, {
                 shouldShowGlobalNotices: !0,
                 purchaseItemContent: (0, l.jsx)(m.f7, { ...b, price: v }),
@@ -243,7 +251,7 @@ function et(e) {
                 E = (0, b.gU)(),
                 { isGift: P, giftRecipient: T } = (0, k.Pv)(),
                 F = P && (0, U.Ik)(T),
-                { fetched: B, hasAlreadyLinked: W } = (0, x.RD)(d);
+                { fetched: B, hasAlreadyLinked: W } = (0, N.RD)(d);
             S()(null != i, "Expected selectedSkuId");
             let q = E[i],
                 z = q?.eligiblePaymentGateways;
@@ -260,7 +268,7 @@ function et(e) {
                     () => ({
                         testModeWarning: $ ? K.intl.string(K.t.OvMyMd) : null,
                         devShelfError:
-                            (0, g.n)(d, V.gfo.EMBEDDED) && h === N.$.ERROR ? K.intl.string(K.t.tAmECt) : null,
+                            (0, g.n)(d, V.gfo.EMBEDDED) && h === x.$.ERROR ? K.intl.string(K.t.tAmECt) : null,
                         socialLayerGameItemDisclaimer:
                             en && B && !W && !P ? (0, D.k3)(d, { location: "OneTimePurchaseReviewState" }) : null,
                     }),

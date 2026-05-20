@@ -31,8 +31,8 @@ var l = n(627968),
     T = n(509536),
     f = n(663066),
     I = n(976860),
-    N = n(859040),
-    x = n(652215),
+    x = n(859040),
+    N = n(652215),
     g = n(375708),
     v = n(456508);
 let M = (e) => {
@@ -40,8 +40,8 @@ let M = (e) => {
         { analyticsLocations: n } = (0, _.Ay)(),
         a = () => {
             t(),
-                (0, I.pX)(x.BVt.COLLECTIBLES_SHOP),
-                (0, N.Cz)({ analyticsSource: S.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
+                (0, I.pX)(N.BVt.COLLECTIBLES_SHOP),
+                (0, x.Cz)({ analyticsSource: S.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
                 (0, P.jH)(),
                 (0, f.dF)(T.Zt);
         };
@@ -72,14 +72,9 @@ var b = n(937008),
     k = n(428262),
     Y = n(580630),
     G = n(960851),
-    F = n(881489);
-let B = (0, n(945810).mj)({
-    name: "2026-03-calculated-annual-discount-percent",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
-});
-var W = n(380619),
+    F = n(881489),
+    B = n(906023),
+    W = n(380619),
     V = n(477421),
     H = n(422936),
     K = n(735164),
@@ -178,11 +173,11 @@ let ea = () => {
                 selectedGiftStyle: T,
                 customGiftMessage: f,
                 setCustomGiftMessage: I,
-                claimableRewards: N,
-                setSelectedGiftingPromotionReward: x,
+                claimableRewards: x,
+                setSelectedGiftingPromotionReward: N,
             } = (0, b.Pv)(),
             g = (0, m.A)(),
-            v = (0, W.kz)(g, S && (0, w.Ik)(_), N),
+            v = (0, W.kz)(g, S && (0, w.Ik)(_), x),
             M = (0, O.tA)({ giftRecipient: _, isGift: S });
         r()(void 0 !== p, "should not be undefined");
         let [R, L] = (0, s.yK)([D.A], () => [null != p ? D.A.get(p.planId) : null, null != t ? D.A.get(t) : null]),
@@ -211,8 +206,8 @@ let ea = () => {
             }
         }, [z, S, l, R, B]),
             a.useEffect(() => {
-                v && null != N && N.length > 0 && x(N[0]);
-            }, [N, x, v]);
+                v && null != x && x.length > 0 && N(x[0]);
+            }, [x, N, v]);
         let { ref: $, ...J } = (0, o._u)(),
             X = F?.id != null ? (0, k.y8)(F.id, !1, S, H) : void 0,
             { ipCountryCode: et } = (0, V.A)(),
@@ -356,7 +351,7 @@ let ea = () => {
             c = (0, s.bG)([L.default], () => L.default.locale),
             { isGift: d, giftRecipient: p } = (0, b.Pv)(),
             m = d && (0, w.Ik)(p),
-            { enabled: h } = B.getConfig({ location: "PremiumSwitchPlanSelectOption" });
+            { enabled: h } = B.A.getConfig({ location: "PremiumSwitchPlanSelectOption" });
         return {
             isPrepaid: t,
             selectPlan: l,
@@ -447,7 +442,7 @@ let ea = () => {
                     s &&
                     (0, l.jsx)(p.A, {
                         message: g.intl.format(g.t.Om31w8, {
-                            documentationLink: U.A.getArticleURL(x.MVz.LOCALIZED_PRICING),
+                            documentationLink: U.A.getArticleURL(N.MVz.LOCALIZED_PRICING),
                         }),
                     }),
             ],
@@ -479,8 +474,8 @@ function eh(e) {
             customGiftMessage: T,
             setCustomGiftMessage: f,
             selectedGiftStyle: I,
-            discountOffer: N,
-            isPlansEligibleForDiscount: x,
+            discountOffer: x,
+            isPlansEligibleForDiscount: N,
             discountedPlanRegularPrice: v,
             hasSeenCollectiblesInSkuSelect: M,
             userTrialOffer: b,
@@ -510,7 +505,7 @@ function eh(e) {
                 thePriceOptions: P,
                 shouldShowUpdatedPaymentModal: j,
                 isEligibleForTrial: S,
-                isPlansEligibleForDiscount: x,
+                isPlansEligibleForDiscount: N,
                 discountAmountOff: L,
             }),
         { showFractionalPremiumBanner: K, fractionalPremiumInfo: Z } = (0, R._V)({
@@ -568,14 +563,14 @@ function eh(e) {
                                   (0, l.jsx)("hr", { className: et.RA }),
                               ],
                           })
-                        : x && null != L && null != v && n === Q.gD.PREMIUM_MONTH_TIER_2
+                        : N && null != L && null != v && n === Q.gD.PREMIUM_MONTH_TIER_2
                           ? (0, l.jsxs)("div", {
                                 children: [
                                     (0, l.jsx)(d.E, {
                                         variant: "text-sm/normal",
                                         className: et.Tz,
                                         children: g.intl.format(g.t["nG7g/E"], {
-                                            numMonths: N?.discount.userUsageLimit ?? "",
+                                            numMonths: x?.discount.userUsageLimit ?? "",
                                             discountedPrice: (0, Y.$g)(v.amount - L, v.currency),
                                             regularPrice: (0, Y.$g)(v.amount, v.currency),
                                         }),
