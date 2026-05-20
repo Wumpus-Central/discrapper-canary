@@ -2390,9 +2390,9 @@ screen and (max-width:485px) {
 }
 
 .containerHeaderV2__0ea1a {
-    inset-inline-end: var(--space-16);
     position: absolute;
     top: var(--space-12);
+    inset-inline: var(--space-16);
     z-index: 9999
 }
 
@@ -2409,6 +2409,10 @@ screen and (max-width:485px) {
 .headerTitle__0ea1a.clickable__0ea1a:focus-within,
 .headerTitle__0ea1a.clickable__0ea1a:hover {
     text-decoration: underline
+}
+
+.v2__0ea1a .headerTitle__0ea1a {
+    height: var(--custom-widget-header-height)
 }
 
 .appIcon__0ea1a {
@@ -4681,11 +4685,6 @@ screen and (max-width:485px) {
     margin-top: 10px
 }
 
-.buttonContainer__9ce99 {
-    position: absolute;
-    z-index: 10
-}
-
 .imgContainer__8f9ad {
     --__thumbnail-size: 85px;
     border-radius: var(--radius-sm);
@@ -6449,11 +6448,6 @@ screen and (max-width:485px) {
     align-self: stretch;
     display: flex;
     justify-content: flex-start
-}
-
-.tile__9d662 {
-    height: 100%;
-    width: 100%
 }
 
 .counter__90981 {
