@@ -1,0 +1,15 @@
+.cardContainer__8833c {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fill, 332px);
+    margin-inline: auto
+}
+
+.card__8833c:hover .cardContent__8833c,
+.selectedCard__8833c {
+    background: hsla(0, 0%, 100%, .01);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 0 12px 3px hsla(0, 0%, 100%, .12);
+    outline: 1.5px solid var(--interactive-text-default);
+    transform: scale(.97)
+}

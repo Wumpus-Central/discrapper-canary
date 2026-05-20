@@ -1,54 +1,56 @@
-o.d(t, { B4: () => n, o6: () => h });
-var p = o(192308),
-    a = o(228366),
-    d = o(622207);
+o.d(t, { B4: () => c, o6: () => h });
+var a = o(192308),
+    p = o(228366),
+    d = o(210561);
 let s = "orb-checkout-payment-modal-key",
-    h = () => (0, p.useHasModalOpen)(s),
-    n = (e) => {
+    h = () => (0, a.useHasModalOpen)(s),
+    c = (e) => {
         let {
                 skuId: t,
                 onComplete: o,
-                analyticsLocations: p = [],
-                analyticsSourceLocation: a,
+                analyticsLocations: a = [],
+                analyticsSourceLocation: p,
                 discoverySessionId: d,
                 applicationId: s,
                 onCloseCallback: h,
             } = e,
-            n = !1;
-        return c({
+            c = !1;
+        return l({
             discoverySessionId: d,
             skuId: t,
             onComplete: (e) => {
-                n || o(e), (n = !0);
+                c || o(e), (c = !0);
             },
             applicationId: s,
-            analyticsLocations: p,
-            analyticsSourceLocation: a,
+            analyticsLocations: a,
+            analyticsSourceLocation: p,
             onCloseCallback: h,
         });
     },
-    c = (e) => {
+    l = (e) => {
         let {
             discoverySessionId: t,
             skuId: o,
-            onComplete: p,
+            onComplete: a,
             analyticsLocations: h = [],
-            analyticsSourceLocation: n,
-            applicationId: c,
-            onCloseCallback: l,
+            analyticsSourceLocation: c,
+            applicationId: l,
+            onCloseCallback: n,
         } = e;
         return (
-            a.h.wait(() => {
-                a.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
+            p.h.wait(() => {
+                p.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
             }),
-            (0, d.Tt)().openCheckoutModal({
-                discoverySessionId: t,
-                skuId: o,
-                applicationId: c,
-                analyticsLocations: h,
-                analyticsSourceLocation: n,
-                onComplete: p,
-                openModalOptions: { onCloseCallback: l, modalKey: s },
-            })
+            d.oE[d.CL.ORB_CHECKOUT]
+                .get()
+                .openCheckoutModal({
+                    discoverySessionId: t,
+                    skuId: o,
+                    applicationId: l,
+                    analyticsLocations: h,
+                    analyticsSourceLocation: c,
+                    onComplete: a,
+                    modalAPIOptions: { onCloseCallback: n, modalKey: s },
+                })
         );
     };

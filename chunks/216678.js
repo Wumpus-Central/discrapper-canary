@@ -5,7 +5,7 @@ var n = i(835245),
     o = i(192308),
     l = i(391048),
     s = i(636099),
-    c = i(663288),
+    c = i(210561),
     d = i(742810),
     u = i(174459),
     r = i(427262),
@@ -13,7 +13,7 @@ var n = i(835245),
 function C(t) {
     if ((0, r.Gn)())
         return (function (t) {
-            let a = (0, c.oT[c.CL.PREMIUM_APPS_OTP_CHECKOUT])(),
+            let a = c.oE[c.CL.PREMIUM_APPS_OTP_CHECKOUT].get(),
                 {
                     applicationId: i,
                     skuId: e,
@@ -25,7 +25,7 @@ function C(t) {
                     isGift: p = !1,
                 } = t;
             return a.openCheckoutModal({
-                openModalOptions: {
+                modalAPIOptions: {
                     modalKey: "premium-apps-otp-checkout-modal",
                     contextKey: r,
                     onCloseCallback() {
@@ -49,8 +49,8 @@ function C(t) {
             analyticsLocations: f,
             analyticsLocationObject: k,
             contextKey: h,
-            isGift: y = !1,
-            checkoutFlow: P,
+            isGift: P = !1,
+            checkoutFlow: y,
         } = t,
         E = !1,
         S = (0, n.A)();
@@ -66,14 +66,14 @@ function C(t) {
                     skuId: C,
                     analyticsLocations: f,
                     analyticsLocationObject: k,
-                    isGift: y,
+                    isGift: P,
                     onClose: (t) => {
                         n(), _?.(t);
                     },
                     onComplete: (t) => {
                         (E = !0), I?.(t);
                     },
-                    checkoutFlow: P,
+                    checkoutFlow: y,
                 });
             };
         },
@@ -81,17 +81,17 @@ function C(t) {
             contextKey: h,
             onCloseCallback: () => {
                 if (!E) {
-                    let t = (0, d.q1)({ location: "StandardOneTimePaymentModal", unifiedCheckoutFlow: P });
+                    let t = (0, d.q1)({ location: "StandardOneTimePaymentModal", unifiedCheckoutFlow: y });
                     u.default.track(p.HAw.PAYMENT_FLOW_CANCELED, {
                         load_id: S,
                         payment_type: p.frM[p.VVm.ONE_TIME],
                         location: k,
-                        is_gift: y,
+                        is_gift: P,
                         sku_id: C,
                         application_id: a,
                         location_stack: f,
                         checkout_design: t ? d.rS.UNIFIED : d.rS.LEGACY,
-                        checkout_flow: P,
+                        checkout_flow: y,
                     });
                 }
                 (0, l.ET)(), (0, s.z)(), _?.(E);

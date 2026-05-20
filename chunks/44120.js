@@ -5,53 +5,53 @@ var l = n(192308),
     a = n(228366),
     p = n(391048),
     s = n(636099),
-    i = n(663288),
-    d = n(859040),
-    r = n(287809),
-    u = n(166532);
-let C = new Set([u.pn.REVIEW, u.pn.CONFIRM, u.pn.GIFT_CUSTOMIZATION]);
+    C = n(210561),
+    i = n(859040),
+    d = n(287809),
+    r = n(166532);
+let u = new Set([r.pn.REVIEW, r.pn.CONFIRM, r.pn.GIFT_CUSTOMIZATION]);
 function h(e) {
     let t,
         {
-            discoverySessionId: i,
-            skuId: u,
+            discoverySessionId: C,
+            skuId: r,
             analyticsLocations: h,
-            analyticsObject: M,
-            isGift: m = !1,
-            giftMessage: O,
-            giftingOrigin: f,
-            giftRecipient: k,
+            analyticsObject: E,
+            isGift: O = !1,
+            giftMessage: m,
+            giftingOrigin: I,
+            giftRecipient: M,
             onClose: T,
-            onComplete: g,
+            onComplete: f,
         } = e,
-        w = m ? "gift-payment-modal" : "payment-modal",
-        y = r.default.getCurrentUser();
-    y?.verified
+        g = O ? "gift-payment-modal" : "payment-modal",
+        k = d.default.getCurrentUser();
+    k?.verified
         ? (a.h.wait(() => {
               a.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
           }),
           c({
-              discoverySessionId: i,
-              skuId: u,
+              discoverySessionId: C,
+              skuId: r,
               analyticsLocations: h,
-              analyticsObject: M,
+              analyticsObject: E,
               onStepChange: (e) => {
                   t = e;
               },
-              modalKey: w,
-              isGift: m,
-              giftMessage: O,
-              giftingOrigin: f,
-              giftRecipient: k,
+              modalKey: g,
+              isGift: O,
+              giftMessage: m,
+              giftingOrigin: I,
+              giftRecipient: M,
               onClose: T,
               onCloseCallback: (e) => {
-                  (0, p.ET)(), (0, s.z)(), e && (0, d.gB)();
+                  (0, p.ET)(), (0, s.z)(), e && (0, i.gB)();
               },
               onCloseRequest: () => {
-                  null != t && C.has(t) && (0, l.closeModal)(w);
+                  null != t && u.has(t) && (0, l.closeModal)(g);
               },
               onComplete: () => {
-                  null != g && g();
+                  null != f && f();
               },
           }))
         : (0, l.openModalLazy)(async () => {
@@ -78,23 +78,25 @@ let c = (e) => {
         onStepChange: a,
         modalKey: p,
         isGift: s = !1,
-        giftMessage: d,
-        giftingOrigin: r,
-        giftRecipient: u,
-        onClose: C,
+        giftMessage: i,
+        giftingOrigin: d,
+        giftRecipient: r,
+        onClose: u,
         onCloseCallback: h,
         onCloseRequest: c,
-        onComplete: M,
+        onComplete: E,
     } = e;
-    return (0, i.Tx)().openCheckoutModal({
-        discoverySessionId: t,
-        skuId: n,
-        analyticsLocations: o,
-        analyticsObject: l,
-        giftContextProps: { isGift: s, giftMessage: d, giftingOrigin: r, giftRecipient: u },
-        onClose: C,
-        onComplete: M,
-        additionalOptions: { onStepChange: a },
-        openModalOptions: { modalKey: p, onCloseCallback: h, onCloseRequest: c },
-    });
+    return C.oE[C.CL.COLLECTIBLES_CHECKOUT]
+        .get()
+        .openCheckoutModal({
+            discoverySessionId: t,
+            skuId: n,
+            analyticsLocations: o,
+            analyticsObject: l,
+            giftContextProps: { isGift: s, giftMessage: i, giftingOrigin: d, giftRecipient: r },
+            onClose: u,
+            onComplete: E,
+            additionalOptions: { onStepChange: a },
+            modalAPIOptions: { modalKey: p, onCloseCallback: h, onCloseRequest: c },
+        });
 };
