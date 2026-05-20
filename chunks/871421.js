@@ -107,7 +107,8 @@ class S extends s.A {
     pendingCandidateDiscards = new Set();
     decisionSignals = A();
     sessionEndTimeout = new r.Ep();
-    currentSessionGamePid = null;
+    currentSessionGameKey = null;
+    pendingSessionGameKey = null;
     constructor() {
         super(), (this.timeline = new _(d.A.getSettings().clipsLength));
     }
@@ -117,7 +118,7 @@ class S extends s.A {
         SPEAKING: (e) => this.handleSpeaking(e),
         GUILD_SOUNDBOARD_SOUND_PLAY_START: (e) => this.handleSoundboardPlayStart(e),
         GUILD_SOUNDBOARD_SOUND_PLAY_END: (e) => this.handleSoundboardPlayEnd(e),
-        RUNNING_GAMES_CHANGE: (e) => this.handleRunningGamesChange(e),
+        RUNNING_GAMES_CHANGE: () => this.handleRunningGamesChange(),
         CLIPS_SAVE_CLIP: (e) => this.handleLateCandidateSave(e),
         VOICE_CHANNEL_SELECT: () => this.clear(),
         CLIPS_SETTINGS_UPDATE: () => this.handleSettingsUpdate(),
@@ -230,7 +231,8 @@ class S extends s.A {
     }
     clear() {
         this.sessionEndTimeout.stop(),
-            (this.currentSessionGamePid = null),
+            (this.currentSessionGameKey = null),
+            (this.pendingSessionGameKey = null),
             this.processClipCandidates(),
             this.unscheduleClip(),
             (this.lastClipTimestamp = 0),
@@ -255,16 +257,29 @@ class S extends s.A {
                     );
             });
     }
-    handleRunningGamesChange(e) {
-        let t = e.games[0]?.pid ?? null;
-        if (t === this.currentSessionGamePid) return void this.sessionEndTimeout.stop();
-        if (null === this.currentSessionGamePid) {
-            this.currentSessionGamePid = t;
+    handleRunningGamesChange() {
+        let e = l.Ay.getVisibleGame(),
+            t = null != e ? (0, l.Es)(e) : null;
+        if (null === this.currentSessionGameKey) {
+            this.currentSessionGameKey = t;
             return;
         }
-        this.sessionEndTimeout.start(1e4, () => {
-            this.processClipCandidates(), (this.currentSessionGamePid = l.Ay.getVisibleGame()?.pid ?? null);
-        });
+        if (t === this.currentSessionGameKey) {
+            this.sessionEndTimeout.stop(), (this.pendingSessionGameKey = null);
+            return;
+        }
+        if (null === t) {
+            this.sessionEndTimeout.stop(),
+                this.processClipCandidates(),
+                (this.currentSessionGameKey = null),
+                (this.pendingSessionGameKey = null);
+            return;
+        }
+        this.pendingSessionGameKey !== t &&
+            ((this.pendingSessionGameKey = t),
+            this.sessionEndTimeout.start(1e4, () => {
+                this.processClipCandidates(), (this.currentSessionGameKey = t), (this.pendingSessionGameKey = null);
+            }));
     }
     async debugStashDeciderData() {
         if (d.A.getPendingClipCandidates().length > 0)
