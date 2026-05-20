@@ -23,7 +23,7 @@ var i = t(627968),
     A = t(160946),
     N = t(606267),
     b = t(545075),
-    C = t(622207),
+    C = t(663288),
     j = t(981036),
     v = t(725836),
     T = t(364995),
@@ -135,7 +135,7 @@ var ew = t(773669),
     e0 = t(818348),
     e1 = t(327105),
     e3 = t(7921);
-function e2(e) {
+function e8(e) {
     let {
             paymentSourceType: n,
             premiumSubscriptionPlan: t,
@@ -163,7 +163,7 @@ function e2(e) {
 function e6(e) {
     return eD.intl.format(eD.t.IeaYqg, { endDate: e });
 }
-function e8(e) {
+function e2(e) {
     let { text: n, className: t } = e;
     return (0, i.jsxs)("div", {
         className: t,
@@ -394,7 +394,7 @@ function e7(e) {
             paymentSources: t,
             paymentSourceId: p,
         }),
-        T = (0, i.jsx)(e2, { ...v }),
+        T = (0, i.jsx)(e8, { ...v }),
         L = (function (e) {
             let {
                     premiumSubscription: n,
@@ -857,11 +857,11 @@ function nu(e) {
                 W = "HR" === V && G.currency === e0.Yr.EUR,
                 H =
                     k && null != c
-                        ? (0, i.jsx)(e8, { text: e6(c.currentPeriodEnd) })
+                        ? (0, i.jsx)(e2, { text: e6(c.currentPeriodEnd) })
                         : (0, i.jsx)("div", { className: ep()(e3.hA, e3.G3), children: eD.intl.string(eD.t.jNY1FO) }),
                 z =
                     k && null != c
-                        ? (0, i.jsx)(e8, { text: e6(c.currentPeriodEnd), className: e3.jk })
+                        ? (0, i.jsx)(e2, { text: e6(c.currentPeriodEnd), className: e3.jk })
                         : (0, i.jsx)("div", { className: ne._X, children: eD.intl.string(eD.t.jNY1FO) }),
                 $ = B.showExistingSlotNotice
                     ? (0, i.jsx)(na, { existingAvailableSlots: p, canceledCount: F, premiumSubscription: c })
@@ -1206,8 +1206,8 @@ function nb(e) {
             () => (null != eP && ev && eZ ? (0, W.v)(eP, eK) : [{ planId: eX.gD.PREMIUM_MONTH_GUILD, quantity: eK }]),
             [eP, ev, eK, eZ],
         ),
-        e2 = l.useMemo(() => (0, Y.A)(), []),
-        [e6, e8] = (0, P.A)(() => [e2 ?? (0, a.A)(), Date.now()]),
+        e8 = l.useMemo(() => (0, Y.A)(), []),
+        [e6, e2] = (0, P.A)(() => [e8 ?? (0, a.A)(), Date.now()]),
         { analyticsLocations: e4 } = (0, f.Ay)(d, I.A.GUILD_BOOST_PURCHASE_MODAL),
         e5 = l.useMemo(
             () =>
@@ -1247,16 +1247,16 @@ function nb(e) {
                     from_step: null != n ? n : nt,
                     to_step: e === k.pn.ADD_PAYMENT_STEPS ? k.pn.PAYMENT_TYPE : e,
                     step_duration_ms: t - nl,
-                    flow_duration_ms: t - e8,
+                    flow_duration_ms: t - e2,
                     guild_id: ep,
                     application_id: e_,
                 });
             },
-            [eG, nn, nt, nl, e8, ep, e_],
+            [eG, nn, nt, nl, e2, ep, e_],
         ),
         nr = {
             baseAnalyticsData: nn,
-            flowStartTime: e8,
+            flowStartTime: e2,
             guildId: ep,
             handleStepChange: ns,
             onSubscribeComplete: em,
@@ -1368,7 +1368,7 @@ function nb(e) {
                 from_step: n,
                 to_step: t,
                 step_duration_ms: i - nl,
-                flow_duration_ms: i - e8,
+                flow_duration_ms: i - e2,
                 guild_id: ep,
             });
         },
@@ -1528,7 +1528,7 @@ function nb(e) {
                             if (
                                 (et.default.track(e9.HAw.PAYMENT_FLOW_COMPLETED, {
                                     ...nn,
-                                    duration_ms: Date.now() - e8,
+                                    duration_ms: Date.now() - e2,
                                     guild_id: ep,
                                     application_id: e_,
                                 }),
@@ -1570,7 +1570,7 @@ function nb(e) {
                                     payment_gateway:
                                         null != e ? (e.type === e9.hes.CARD ? e9.kM_.STRIPE : e9.kM_.BRAINTREE) : null,
                                     payment_source_id: ew,
-                                    duration_ms: Date.now() - e8,
+                                    duration_ms: Date.now() - e2,
                                 });
                         } finally {
                             nD || ek(!1);
@@ -1579,7 +1579,7 @@ function nb(e) {
                     (d = {
                         text: eD.intl.string(eD.t.eUEeCt),
                         loading: eY,
-                        disabled: !ex || null != eA || eJ,
+                        disabled: null == ew || !ex || null != eA || eJ,
                         onClick: m,
                         variant: "active",
                     }),

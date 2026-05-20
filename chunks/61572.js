@@ -165,7 +165,10 @@ let A = (e) => {
                 paymentSourceId: e.paymentSourceId,
             })),
             { setPaymentSourceId: i, paymentSourceId: r } = a.useMemo(
-                () => ({ setPaymentSourceId: e.setPaymentSourceId ?? t, paymentSourceId: e.paymentSourceId ?? n }),
+                () => ({
+                    setPaymentSourceId: void 0 !== e.setPaymentSourceId ? e.setPaymentSourceId : t,
+                    paymentSourceId: void 0 !== e.paymentSourceId ? e.paymentSourceId : n,
+                }),
                 [e.setPaymentSourceId, e.paymentSourceId, t, n],
             );
         return (0, l.jsx)(A, { ...e, setPaymentSourceId: i, paymentSourceId: r });
