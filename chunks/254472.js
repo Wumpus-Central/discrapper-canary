@@ -241,30 +241,32 @@ function eV(e) {
         eh = (0, f.bG)([Q.A], () => Q.A.getChannel(ef)),
         ep = (0, q.A)((e) => e.guildId),
         eE = (0, es.ai)(ep),
-        { badge: em, unread: eg } = (0, f.cf)([ea.A, Q.A, el.default, eo.A, eu.A, ec.Ay, ed.Ay], () =>
-            et.default.keys(P).reduce(
-                (e, t) => {
-                    let n = Q.A.getChannel(t),
-                        i = n?.getGuildId(),
-                        r = ec.Ay.getMentionCount(t);
+        { badge: em, unread: eg } = (0, f.cf)([ea.A, Q.A, el.default, eo.A, eu.A, ec.Ay, ed.Ay], () => {
+            let e = et.default.keys(P),
+                t = new Set();
+            return e.reduce(
+                (e, n) => {
+                    let i = Q.A.getChannel(n),
+                        r = i?.getGuildId(),
+                        s = ec.Ay.getMentionCount(n);
                     if (
-                        ((e.badge = e.badge + r),
-                        (e.unread = e.unread || (ec.Ay.hasUnread(t) && el.default.shouldCountChannelUnread(n, r))),
-                        null != i)
+                        (t.has(n) || (t.add(n), (e.badge = e.badge + s)),
+                        (e.unread = e.unread || (ec.Ay.hasUnread(n) && el.default.shouldCountChannelUnread(i, s))),
+                        null != r)
                     ) {
-                        let n = ea.A.getActiveJoinedRelevantThreadsForParent(i, t);
-                        for (let t in n) {
-                            let n = ec.Ay.getMentionCount(t);
-                            e.badge += n;
-                            let i = Q.A.getChannel(t);
-                            e.unread = e.unread || (ec.Ay.hasUnread(t) && el.default.shouldCountChannelUnread(i, n));
+                        let i = ea.A.getActiveJoinedRelevantThreadsForParent(r, n);
+                        for (let n in i) {
+                            let i = ec.Ay.getMentionCount(n);
+                            t.has(n) || (t.add(n), (e.badge += i));
+                            let r = Q.A.getChannel(n);
+                            e.unread = e.unread || (ec.Ay.hasUnread(n) && el.default.shouldCountChannelUnread(r, i));
                         }
                     }
                     return e;
                 },
                 { badge: 0, unread: !1 },
-            ),
-        ),
+            );
+        }),
         eA =
             ((i = null != (t = (0, f.bG)([J.A], () => J.A.getVoiceChannelId())) && null != P[t]),
             (a = (0, f.bG)([X.A], () => {
