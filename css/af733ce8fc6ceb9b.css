@@ -210,8 +210,15 @@
     justify-content: space-between
 }
 
-.descriptionText__6db38 {
+.descriptionTextGroup__6db38 {
+    display: flex;
     flex: 1;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.descriptionText__6db38,
+.legacyLabel__6db38 {
     text-align: start
 }
 

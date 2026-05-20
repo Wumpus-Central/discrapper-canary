@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Om: () => d, P3: () => u, hJ: () => _ });
+n.d(t, { Om: () => f, P3: () => u, hJ: () => h, ie: () => d });
 var i = n(70283),
     r = n(976860),
     s = n(652215),
@@ -42,7 +42,11 @@ let l = {
 function u(e) {
     return l[e];
 }
-let c = {
+let c = new Set(Object.values(l));
+function d(e) {
+    return c.has(e);
+}
+let _ = {
     [i.$.PREMIUM_TENURE]: {
         ctaLabel: (e) => {
             let { owned: t } = e;
@@ -70,7 +74,7 @@ let c = {
         ctaVariant: () => "secondary",
     },
 };
-function d(e) {
-    return c[e];
+function f(e) {
+    return _[e];
 }
-let _ = "badge-details";
+let h = "badge-details";
