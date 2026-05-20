@@ -67,6 +67,23 @@
     text-decoration: underline
 }
 
+.stickyMessage__451f5 {
+    background-color: var(--background-base-low);
+    display: flex;
+    flex-direction: column;
+    max-height: 50%
+}
+
+.scroller__451f5 {
+    padding: var(--space-16) 0
+}
+
+.divider__451f5 {
+    background-color: var(--border-subtle);
+    height: 6px;
+    width: 100%
+}
+
 .containerExpanded__7ff28 {
     align-items: center;
     display: flex;
