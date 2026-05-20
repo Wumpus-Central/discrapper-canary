@@ -1,28 +1,28 @@
 t.d(r, { Q: () => w });
 var n = t(64700),
     o = t(636537),
-    i = t(136857),
-    a = t(626584);
+    a = t(136857),
+    l = t(626584);
 t(739508);
-var l = t(652215);
+var i = t(652215);
 async function s(e) {
     let { orderId: r, expectedRevision: t, loadId: n } = e;
     try {
         let e = {};
         null != t && (e.expected_revision = t);
-        let i = await o.Bo.post({
-            url: l.Rsh.ORDER_SIGN(r),
+        let a = await o.Bo.post({
+            url: i.Rsh.ORDER_SIGN(r),
             body: e,
             context: null != n && "" !== n ? { load_id: n } : void 0,
             rejectWithError: !1,
         });
-        if (null == i.body) throw Error("Invalid sign order response");
-        return i.body;
+        if (null == a.body) throw Error("Invalid sign order response");
+        return a.body;
     } catch (e) {
         throw e;
     }
 }
-new a.A("OrderActionCreators");
+new l.A("OrderActionCreators");
 var u = t(786953),
     d = t(310829),
     c = t(211287),
@@ -30,10 +30,10 @@ var u = t(786953),
     f = t(375708);
 function w(e) {
     let [r, t] = (0, n.useState)(""),
-        [a, w] = (0, n.useState)([]),
+        [l, w] = (0, n.useState)([]),
         [m, g] = (0, n.useState)(null),
-        [E, p] = (0, n.useState)(!1),
-        { enabled: b } = c.A.useConfig({ location: "orb_checkout_modal" }),
+        [E, b] = (0, n.useState)(!1),
+        { enabled: p } = c.A.useConfig({ location: "orb_checkout_modal" }),
         y = e?.order ?? null,
         I = (0, n.useCallback)(async (e, r) => {
             let t = r ?? (0, d.P)(e);
@@ -41,7 +41,7 @@ function w(e) {
                 return (
                     (
                         await o.Bo.get({
-                            url: l.Rsh.ENTITLEMENTS_FOR_APPLICATION(t),
+                            url: i.Rsh.ENTITLEMENTS_FOR_APPLICATION(t),
                             query: { sku_ids: e, exclude_consumed: !0 },
                             rejectWithError: !1,
                         })
@@ -54,18 +54,18 @@ function w(e) {
         R = (0, n.useCallback)(
             async (e, r, t) => {
                 if (null == y) {
-                    g(new i.Ay("Order not created yet")), p(!1);
+                    g(new a.Ay("Order not created yet")), b(!1);
                     return;
                 }
-                p(!0), g(null);
+                b(!0), g(null);
                 try {
-                    let n = await s({ orderId: y.id, expectedRevision: y.revision, loadId: r });
+                    let n = await s({ orderId: y.id, loadId: r });
                     if (n.status !== h.Re.SIGNED) {
                         if (n.errors && n.errors.length > 0) {
                             let e = n.errors;
                             if (e.includes(2e3)) {
-                                let e = new i.Ay("Insufficient balance");
-                                throw ((e.code = i.tG.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE), e);
+                                let e = new a.Ay("Insufficient balance");
+                                throw ((e.code = a.tG.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE), e);
                             }
                             let r = `Order signing failed with errors: ${e.join(", ")}`;
                             throw Error(r);
@@ -74,15 +74,15 @@ function w(e) {
                         throw Error(`Unexpected order status: ${n.status}`);
                     }
                     let o = (0, d.P)(e),
-                        a = await I(e, o);
-                    if (0 === a.length) {
+                        l = await I(e, o);
+                    if (0 === l.length) {
                         await new Promise((e) => setTimeout(e, 500));
                         let r = await I(e, o);
                         if (0 === r.length) throw Error("No entitlements found after order signing");
-                        w(r), p(!1), t?.(r);
-                    } else w(a), p(!1), t?.(a);
+                        w(r), b(!1), t?.(r);
+                    } else w(l), b(!1), t?.(l);
                 } catch (e) {
-                    g(e instanceof i.Ay ? e : new i.Ay(e)), p(!1);
+                    g(e instanceof a.Ay ? e : new a.Ay(e)), b(!1);
                 }
             },
             [y, I],
@@ -93,38 +93,38 @@ function w(e) {
                     skuId: e,
                     loadId: r,
                     onRedeemStart: () => {
-                        p(!0), g(null);
+                        b(!0), g(null);
                     },
                     onRedeemSucceed: (e) => {
-                        w(e), p(!1), t?.(e);
+                        w(e), b(!1), t?.(e);
                     },
                     onRedeemFail: (e) => {
-                        g(e), p(!1);
+                        g(e), b(!1);
                     },
                 }),
             [],
         ),
         A = (0, n.useCallback)(
             (e, r, t) => {
-                b ? R(e, r, t) : _(e, r, t);
+                p ? R(e, r, t) : _(e, r, t);
             },
-            [b, R, _],
+            [p, R, _],
         );
     return (
         (0, n.useEffect)(() => {
             if (null != m) return void t(f.intl.format(f.t["7gHWrd"], { amount: "1 orb", errorMessage: m.message }));
-            if (null != a && a.length > 0) {
-                let e = a.map((e) => e.sku?.name);
+            if (null != l && l.length > 0) {
+                let e = l.map((e) => e.sku?.name);
                 t(
                     f.intl.format(f.t.JxNFav, {
                         amountDescription: "1 orb",
-                        redeemedItemDescription: `${1 === e.length ? "SKU" : "SKUs"}: ${e.join(", ")}. Entitlement ${1 === a.length ? "ID" : "IDs"}: ${a.map((e) => e.id).join(", ")}`,
+                        redeemedItemDescription: `${1 === e.length ? "SKU" : "SKUs"}: ${e.join(", ")}. Entitlement ${1 === l.length ? "ID" : "IDs"}: ${l.map((e) => e.id).join(", ")}`,
                     }),
                 );
                 return;
             }
             t("");
-        }, [a, m]),
-        { entitlements: a, error: m, isSubmitting: E, responseMessage: r, redeemVirtualCurrency: A }
+        }, [l, m]),
+        { entitlements: l, error: m, isSubmitting: E, responseMessage: r, redeemVirtualCurrency: A }
     );
 }
