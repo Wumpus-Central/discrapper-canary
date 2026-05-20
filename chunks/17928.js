@@ -251,11 +251,12 @@ var g = n(879378),
 n(142703);
 class T {
     listeners = new Set();
+    conditionalListeners = new Set();
     add = (e) => {
         this.listeners.add(e);
     };
     remove = (e) => {
-        this.listeners.delete(e);
+        this.listeners.delete(e), this.conditionalListeners.delete(e);
     };
     addConditional = (() => {
         var e = this;
@@ -265,9 +266,12 @@ class T {
             let i = () => {
                 !1 === t() && e.remove(i);
             };
-            e.add(i);
+            e.add(i), e.conditionalListeners.add(i);
         };
     })();
+    removeAllConditional = () => {
+        this.conditionalListeners.forEach((e) => this.listeners.delete(e)), this.conditionalListeners.clear();
+    };
     has(e) {
         return this.listeners.has(e);
     }
@@ -303,6 +307,11 @@ class C {
     }
     static getAll() {
         return S;
+    }
+    static removeAllConditionalListeners() {
+        S.forEach((e) => {
+            e._changeCallbacks.removeAllConditional();
+        });
     }
     constructor(e, t, n) {
         (this._dispatcher = e),
@@ -381,8 +390,9 @@ class C {
         c.A.markChanged(this);
     }
     addChangeListener = this._changeCallbacks.add;
-    addConditionalChangeListener = this._changeCallbacks.addConditional;
     removeChangeListener = this._changeCallbacks.remove;
+    addConditionalChangeListener = this._changeCallbacks.addConditional;
+    removeAllConditionalChangeListeners = this._changeCallbacks.removeAllConditional;
     addReactChangeListener = this._reactChangeCallbacks.add;
     removeReactChangeListener = this._reactChangeCallbacks.remove;
     getDispatchToken() {
