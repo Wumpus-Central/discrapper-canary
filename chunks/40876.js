@@ -21,11 +21,6 @@ let r = {
         inlineRequire: () => n(401979).A,
         hasStoreChangeListeners: !0,
     },
-    RSPatchExperimentManager: {
-        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
-        inlineRequire: () => n(740535).A,
-        hasStoreChangeListeners: !0,
-    },
     AgeVerificationManager: {
         actions: ["POST_CONNECTION_OPEN", "CURRENT_USER_UPDATE", "MESSAGE_CREATE"],
         inlineRequire: () => n(722855).A,
@@ -553,7 +548,7 @@ let r = {
             "CLIPS_SAVE_CLIP",
             "CLIPS_PROMOTE_CLIP_CANDIDATE",
         ],
-        inlineRequire: () => n(485162).A,
+        inlineRequire: () => n(971918).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     ClipDecisionEngineManager: {
