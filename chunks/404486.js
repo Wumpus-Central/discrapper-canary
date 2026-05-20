@@ -7271,10 +7271,10 @@ let rm = {
                     a.e("18217"),
                     a.e("23005"),
                     a.e("25812"),
-                    a.e("77377"),
-                    a.e("12169"),
+                    a.e("87845"),
+                    a.e("45317"),
                     a.e("10859"),
-                    a.e("8941"),
+                    a.e("45073"),
                     a.e("61175"),
                     a.e("1472"),
                     a.e("70534"),
@@ -8670,14 +8670,14 @@ let rM = {
         return null == t ? () => null : (a) => (0, r.jsx)(e, { ...a, guild: t });
     },
     OtherFriendRequestsModal: async () => {
-        let { default: e } = await Promise.all([a.e("8941"), a.e("27917"), a.e("73152"), a.e("25281")]).then(
+        let { default: e } = await Promise.all([a.e("45073"), a.e("27917"), a.e("73152"), a.e("25281")]).then(
             a.bind(a, 516259),
         );
         return (t) => (0, r.jsx)(e, { ...t });
     },
     AcceptInviteModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("8941"),
+            a.e("45073"),
             a.e("57303"),
             a.e("74275"),
             a.e("91643"),

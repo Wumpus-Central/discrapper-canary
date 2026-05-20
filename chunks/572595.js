@@ -28,7 +28,7 @@ let s = "collectibles shop product details modal",
         (0, n.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    r.e("20706"),
+                    r.e("98214"),
                     r.e("99961"),
                     r.e("8692"),
                     r.e("11377"),
@@ -48,7 +48,7 @@ let s = "collectibles shop product details modal",
                     r.e("39111"),
                     r.e("96867"),
                     r.e("59204"),
-                    r.e("8941"),
+                    r.e("45073"),
                     r.e("57303"),
                     r.e("63897"),
                     r.e("67172"),

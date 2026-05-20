@@ -6,40 +6,38 @@ var i = a(627968),
     s = a(637193),
     d = a(919395),
     u = a(84540),
-    o = a(930349),
-    c = a(375708),
+    c = a(930349),
+    o = a(375708),
     v = a(535592);
 function g(e) {
     let { user: l, guildId: a, disabled: g } = e,
-        { analyticsLocations: h } = (0, r.Ay)(),
-        f = null != a,
-        { guildNameplate: m, pendingNameplate: b } = (0, d.rv)(l, a ?? void 0),
-        p = l.collectibles?.nameplate,
-        A = f ? m : p,
-        k = void 0 !== b,
-        C = null === b || (!k && null == A),
-        I = f && null != p,
-        x = C && I,
-        y = (0, d.lw)({ pendingValue: b, userValue: p, guildValue: m, guildId: a ?? void 0 }),
-        j =
-            null != y && (k ? null != b : null != A)
+        { analyticsLocations: f } = (0, r.Ay)(),
+        h = null != a,
+        { guildNameplate: b, pendingNameplate: p } = (0, d.rv)(l, a ?? void 0),
+        m = l.collectibles?.nameplate,
+        k = h ? b : m,
+        A = void 0 !== p,
+        I = null === p || (!A && null == k),
+        C = h && null != m,
+        x = (0, d.lw)({ pendingValue: p, userValue: m, guildValue: b, guildId: a ?? void 0 }),
+        y =
+            null != x && (A ? null != p : null != k)
                 ? {
                       onClick: () => (0, u.p)({ guildId: a ?? void 0, nameplate: null }),
-                      type: I ? "reset" : "remove",
-                      accessibleLabel: c.intl.string(I ? c.t.neYqhR : c.t["9zwziY"]),
+                      type: C ? "reset" : "remove",
+                      accessibleLabel: o.intl.string(C ? o.t.neYqhR : o.t["9zwziY"]),
                   }
                 : void 0,
-        w = n.useCallback(() => {
-            (0, s.p)({ analyticsLocations: h, guildId: a ?? void 0, stackingBehavior: "stack" });
-        }, [h, a]);
-    return (0, i.jsx)(o.V, {
-        affordance: C ? "add" : j,
+        j = n.useCallback(() => {
+            (0, s.p)({ analyticsLocations: f, guildId: a ?? void 0, stackingBehavior: "stack" });
+        }, [f, a]);
+    return (0, i.jsx)(c.V, {
+        affordance: I && !C ? "add" : y,
         variant: "bar",
-        onClick: w,
-        accessibleLabel: c.intl.string(c.t.BwdeM1),
+        onClick: j,
+        accessibleLabel: o.intl.string(o.t.BwdeM1),
         "aria-haspopup": "dialog",
         disabled: g,
-        dimContent: x,
         renderPreview: (e) =>
             (0, i.jsx)("div", {
                 className: v.M,
@@ -47,8 +45,8 @@ function g(e) {
                 children: (0, i.jsx)(t.A, {
                     user: l,
                     guildId: a ?? void 0,
-                    nameplate: y,
-                    showPlaceholderUser: C || !e,
+                    nameplate: x,
+                    showPlaceholderUser: I || !e,
                     isHighlighted: e,
                 }),
             }),
