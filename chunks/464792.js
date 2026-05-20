@@ -196,7 +196,7 @@ function j(e) {
                     .e("31445")
                     .then(n.bind(n, 44724))
                     .then((e) => {
-                        let { default: n } = e;
+                        let { navigateToSocialLayerStorefrontWithGuildPreview: n } = e;
                         n({ guildId: i, skuId: t });
                     }),
                 !0

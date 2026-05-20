@@ -10,10 +10,10 @@ var t = s(627968),
     u = s(793574),
     g = s(688810),
     p = s(976860),
-    x = s(530868),
-    _ = s(561794),
-    I = s(495544),
-    f = s(696451),
+    _ = s(530868),
+    x = s(561794),
+    f = s(495544),
+    I = s(696451),
     h = s(71393),
     A = s(67480),
     E = s(449054),
@@ -31,19 +31,19 @@ var t = s(627968),
     y = s(834730),
     O = s(554146),
     T = s(417098),
-    H = s(853735),
-    D = s(131607),
-    G = s(945942),
+    G = s(853735),
+    H = s(131607),
+    D = s(945942),
     P = s(652215),
     w = s(49999),
     Y = s(375708),
     B = s(922674);
 function U(e) {
     let { location: l } = e,
-        { shouldRender: s, limitedOfferTimeLeft: n } = (0, G.A)({ location: l }),
-        [a, i] = (0, D.RF)(
+        { shouldRender: s, limitedOfferTimeLeft: n } = (0, D.A)({ location: l }),
+        [a, i] = (0, H.RF)(
             s ? O.M.GAME_SHOP_ORBS_REWARD_BANNER : null,
-            (0, H.c)(O.M.GAME_SHOP_ORBS_REWARD_BANNER),
+            (0, G.c)(O.M.GAME_SHOP_ORBS_REWARD_BANNER),
             void 0,
             !0,
         ),
@@ -118,7 +118,7 @@ function V(e) {
 }
 var Z = s(371794),
     J = s(500102);
-function z(e) {
+function X(e) {
     let { applicationId: l, backgroundImageAssetId: s } = e,
         n = null != s ? (0, Z.YE)(l, s, 1024, S.pV) : null;
     return (0, t.jsx)("div", {
@@ -126,13 +126,13 @@ function z(e) {
         children: null != n ? (0, t.jsx)("div", { className: J.i, style: { backgroundImage: `url(${n})` } }) : null,
     });
 }
-var K = s(198647);
-function X(e) {
+var z = s(198647);
+function K(e) {
     let { skuIds: l, variant: s = $.s.SMALL, analyticsLocations: n } = e;
     return null == l || 0 === l.length
         ? null
         : (0, t.jsx)("div", {
-              className: i()(K.kL, K.$2, { [K.Wc]: s === $.s.MEDIUM }),
+              className: i()(z.kL, z.$2, { [z.Wc]: s === $.s.MEDIUM }),
               children: l.map((e, l) =>
                   (0, t.jsx)($.A, { positionInSection: l, skuId: e, variant: s, analyticsLocations: n }, `${e}-${l}`),
               ),
@@ -158,7 +158,7 @@ function Q(e) {
                               className: q.G,
                               children: s,
                           }),
-                      (0, t.jsx)(X, { skuIds: a, variant: i }),
+                      (0, t.jsx)(K, { skuIds: a, variant: i }),
                   ],
               }),
           });
@@ -222,7 +222,7 @@ function et(e) {
                     }
                 }, [s, d, u]),
             }),
-        [x, _] = n.useMemo(() => {
+        [_, x] = n.useMemo(() => {
             if (i?.skuIds == null || 0 === i.skuIds.length) return [[], []];
             let e = Math.round(o ?? 0);
             return i?.leaderboard == null || null == e || e < 564
@@ -233,7 +233,7 @@ function et(e) {
                       : [i.skuIds.slice(0, 1), i.skuIds.slice(1)]
                   : [i.skuIds.slice(0, 2), i.skuIds.slice(2)];
         }, [i, o]),
-        I = 1 === x.length && null != o && o >= 834;
+        f = 1 === _.length && null != o && o >= 834;
     return (n.useEffect(() => {
         let { sessionId: e, guildId: l, pageIndex: s, pageTitle: t, isUserGuildMember: n, pageHasLeaderboard: a } = c;
         C.default.track(P.HAw.SLAYER_STOREFRONT_PAGE_VIEWED, {
@@ -257,22 +257,22 @@ function et(e) {
                       ref: r,
                       className: es.k,
                       children: [
-                          (0, t.jsx)(z, {
+                          (0, t.jsx)(X, {
                               applicationId: a,
                               backgroundImageAssetId: i.leaderboard?.backgroundImageAssetId,
                           }),
                           (0, t.jsx)(V, {
                               analyticsSectionId: "leaderboard",
                               leaderboard: i.leaderboard,
-                              skuId: I ? x[0] : void 0,
+                              skuId: f ? _[0] : void 0,
                               analyticsLocations: d,
                           }),
                           (0, t.jsx)(Q, {
                               analyticsSectionId: "featured-top-section",
-                              skuIds: I ? void 0 : x,
+                              skuIds: f ? void 0 : _,
                               variant: $.s.MEDIUM,
                           }),
-                          (0, t.jsx)(Q, { analyticsSectionId: "non-featured-top-section", skuIds: _ }),
+                          (0, t.jsx)(Q, { analyticsSectionId: "non-featured-top-section", skuIds: x }),
                           i.sections?.map((e, l) =>
                               (0, t.jsx)(
                                   Q,
@@ -298,14 +298,17 @@ function ea(e) {
     n.useEffect(() => {
         d.current = r;
     }, [r]);
-    let g = i?.id;
+    let g = n.useCallback(() => {
+            null != c && (0, p.bG)(c(0));
+        }, [c]),
+        _ = i?.id;
     return (
         n.useEffect(() => {
-            if (null != g)
+            if (null != _)
                 return (
                     (0, N.R)({
-                        getSocialLayerStorefrontLink: c,
-                        skuId: g,
+                        customNavigateToSocialLayerStorefront: g,
+                        skuId: _,
                         applicationId: l.applicationId,
                         isStorefront: !0,
                         analyticsLocations: [u.A.SOCIAL_LAYER_STOREFRONT],
@@ -319,7 +322,7 @@ function ea(e) {
                         (0, N.j)();
                     }
                 );
-        }, [s, a, g, l.applicationId, c]),
+        }, [s, a, _, l.applicationId, c, g]),
         (0, t.jsxs)("div", {
             className: en.k,
             children: [o?.(a, l), (0, t.jsx)(et, { applicationId: l.applicationId, page: l.pages[a] })],
@@ -330,10 +333,7 @@ function ei(e) {
     let { match: l } = e,
         { guildId: s, gameShopPageIndex: a, gameShopSkuId: i } = l.params,
         r = n.useCallback((e, l, t) => P.BVt.CHANNELS_GAME_SHOP(s, e ?? 0, l, t), [s]),
-        o = n.useCallback(
-            (e, l) => (null == s ? null : (0, t.jsx)(v.A, { guildId: s, storefront: l, selectedPageIndex: e })),
-            [s],
-        );
+        o = n.useCallback((e, l) => (null == s ? null : (0, t.jsx)(v.A, { storefront: l, selectedPageIndex: e })), [s]);
     return (0, t.jsx)(er, {
         guildId: s,
         skuId: i,
@@ -346,11 +346,11 @@ function er(e) {
     let { guildId: l, skuId: s, pageIndex: a = 0, renderHeader: p, getSocialLayerStorefrontLink: S } = e,
         { analyticsLocations: N } = (0, g.Ay)(u.A.SOCIAL_LAYER_STOREFRONT),
         v = (0, R.A)({ guildId: l }),
-        b = (0, o.bG)([I.default], () => I.default.getSessionId(), []),
+        b = (0, o.bG)([f.default], () => f.default.getSessionId(), []),
         L = (0, o.bG)([A.A], () => A.A.get(s), [s]);
-    (0, _.pE)(), (0, x.x)({ applicationId: v?.storefront?.applicationId, location: "SocialLayerStorefront" });
+    (0, x.pE)(), (0, _.x)({ applicationId: v?.storefront?.applicationId, location: "SocialLayerStorefront" });
     let C = (0, d.A)((0, r.A)()),
-        M = (0, o.bG)([f.Ay, I.default], () => f.Ay.isMember(l, I.default.getId())),
+        M = (0, o.bG)([I.Ay, f.default], () => I.Ay.isMember(l, f.default.getId())),
         y = n.useMemo(
             () =>
                 null == a || isNaN(a) || (null != v && null != v.storefront && a >= v.storefront.pages.length) ? 0 : a,
@@ -358,7 +358,7 @@ function er(e) {
         ),
         O = v?.storefront?.pages[y]?.title ?? null,
         T = v?.storefront?.pages[y]?.leaderboard != null,
-        H = n.useMemo(
+        G = n.useMemo(
             () => ({
                 sessionId: C,
                 guildId: l,
@@ -383,7 +383,7 @@ function er(e) {
                   renderHeader: p,
                   getSocialLayerStorefrontLink: S,
                   children: (0, t.jsx)(j.E9, {
-                      newValue: H,
+                      newValue: G,
                       children: (0, t.jsx)(ea, {
                           storefront: v.storefront,
                           guildId: l,

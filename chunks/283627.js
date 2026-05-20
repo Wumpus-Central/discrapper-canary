@@ -20,9 +20,9 @@ var n = t(627968),
     v = t(935462),
     A = t(358618),
     _ = t(983851),
-    k = t(972213),
-    E = t(262427),
-    N = t(964486),
+    E = t(972213),
+    N = t(262427),
+    k = t(964486),
     S = t(736653),
     I = t(793574),
     T = t(688810),
@@ -296,11 +296,11 @@ function ev(e) {
 }
 var eA = t(775602),
     e_ = t(175671),
-    ek = t(619517),
-    eE = t(34337),
-    eN = t(172079);
-let eS = (e) => (0, eE.$o)({ ...e, className: eN.tN, mediaPlayerClassName: eN.yf }),
-    eI = (e) => (0, n.jsx)(ek.Ay, { ...e });
+    eE = t(619517),
+    eN = t(34337),
+    ek = t(172079);
+let eS = (e) => (0, eN.$o)({ ...e, className: ek.tN, mediaPlayerClassName: ek.yf }),
+    eI = (e) => (0, n.jsx)(eE.Ay, { ...e });
 function eT(e) {
     let { item: l, isMuted: t, className: a, alt: i = "" } = e,
         o = (function (e) {
@@ -327,11 +327,11 @@ function eT(e) {
     };
     return "video" === l.type
         ? (0, n.jsx)("div", {
-              className: a ?? eN.kL,
+              className: a ?? ek.kL,
               children: (0, n.jsx)(
                   "div",
                   {
-                      className: `${eN.h4} ${eN.nR}`,
+                      className: `${ek.h4} ${ek.nR}`,
                       style: C,
                       children: (0, n.jsx)(
                           e_.rr,
@@ -344,13 +344,13 @@ function eT(e) {
                               maxHeight: 560,
                               maxWidth: 747,
                               playable: !0,
-                              className: eN.Ki,
+                              className: ek.Ki,
                               volume: 1,
                               autoMute: t,
                               autoPlay: !0,
                               renderVideoComponent: eS,
                               renderImageComponent: eI,
-                              renderLinkComponent: eE.bU,
+                              renderLinkComponent: eN.bU,
                           },
                           `${l.src}-${t ? "muted" : "unmuted"}`,
                       ),
@@ -359,13 +359,13 @@ function eT(e) {
               ),
           })
         : (0, n.jsx)("div", {
-              className: a ?? eN.kL,
+              className: a ?? ek.kL,
               children: (0, n.jsxs)("div", {
-                  className: eN.h4,
+                  className: ek.h4,
                   style: C,
                   children: [
-                      (0, n.jsx)("img", { src: l.src, alt: i, className: eN.Sl }, l.src),
-                      null != d && !u && (0, n.jsx)("img", { src: d, alt: "", className: eN.Ve, onAnimationEnd: b }, d),
+                      (0, n.jsx)("img", { src: l.src, alt: i, className: ek.Sl }, l.src),
+                      null != d && !u && (0, n.jsx)("img", { src: d, alt: "", className: ek.Ve, onAnimationEnd: b }, d),
                   ],
               }),
           });
@@ -435,7 +435,7 @@ function eP(e) {
             giftingOrigin: i,
             trackPDPClick: o,
             analyticsLocations: u,
-            getSocialLayerStorefrontLink: h,
+            customNavigateToSocialLayerStorefront: h,
         } = e,
         b = l.id,
         f = (0, c.bG)([G.A], () => G.A.getNormalizedSKUEligibility(b), [b]),
@@ -456,9 +456,7 @@ function eP(e) {
         }, [t]),
         A = s.useCallback(() => {
             null != t &&
-                (o(ey.Jq.VISIT_SHOP),
-                (0, d.closeAllModals)(),
-                (0, Z.default)({ getSocialLayerStorefrontLink: h, guildId: t }));
+                (o(ey.Jq.VISIT_SHOP), (0, d.closeAllModals)(), null != h ? h() : (0, Z.default)({ guildId: t }));
         }, [t, o, h]),
         _ = s.useCallback(() => {
             o(ey.Jq.GIFT_BUTTON),
@@ -468,20 +466,20 @@ function eP(e) {
                     { analyticsLocations: [...u, I.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_GIFT_BUTTON] },
                 );
         }, [l, o, r, i, u]),
-        k = (0, R.h)(l.applicationId),
-        E = s.useMemo(() => [...u, I.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_PURCHASE_BUTTON], [u]),
-        N = s.useCallback(() => {
-            null != k &&
+        E = (0, R.h)(l.applicationId),
+        N = s.useMemo(() => [...u, I.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_PURCHASE_BUTTON], [u]),
+        k = s.useCallback(() => {
+            null != E &&
                 (o(ey.Jq.BUY_WITH_ORBS_BUTTON),
                 (0, M.B4)({
                     skuId: l.id,
                     applicationId: l.applicationId,
                     onComplete: () => {
-                        (0, et.j)(), (0, el.n)({ sku: l, application: k, analyticsLocations: E });
+                        (0, et.j)(), (0, el.n)({ sku: l, application: E, analyticsLocations: N });
                     },
-                    analyticsLocations: E,
+                    analyticsLocations: N,
                 }));
-        }, [l, k, E, o]);
+        }, [l, E, N, o]);
     return (0, n.jsxs)("div", {
         className: eU.NC,
         children: [
@@ -526,7 +524,7 @@ function eP(e) {
                     text: K.intl.string(K.t["2QW9nR"]),
                     fullWidth: !0,
                 }),
-            f && (0, n.jsx)(ev, { sku: l, location: "product_details_modal", analyticsLocations: E, onCheckout: N }),
+            f && (0, n.jsx)(ev, { sku: l, location: "product_details_modal", analyticsLocations: N, onCheckout: k }),
         ],
     });
 }
@@ -559,7 +557,7 @@ function eH(e) {
 }
 function eY(e) {
     let {
-            getSocialLayerStorefrontLink: l,
+            customNavigateToSocialLayerStorefront: l,
             transitionState: t,
             returnRef: a,
             skuId: r,
@@ -577,7 +575,7 @@ function eY(e) {
     s.useEffect(() => {
         null != j && null != r && (0, q.iR)(j, r);
     }, [j, r]);
-    let E = (0, en.A)({ guildId: j }),
+    let N = (0, en.A)({ guildId: j }),
         I = (0, c.bG)([G.A], () => G.A.getSkuAssets()),
         R = (0, c.bG)([B.A], () => B.A.isFetchingForSKU(r)),
         y = (0, f.M)((0, S.Ay)()),
@@ -599,7 +597,7 @@ function eY(e) {
         ea = W.length > 1,
         eo = W.some((e) => "video" === e.type);
     (0, P.pE)(),
-        (0, N.Ay)(() => {
+        (0, k.Ay)(() => {
             H.default.track(eL.HAw.OPEN_MODAL, { location_stack: C, type: eO.Nh, sku_id: r, application_id: i }),
                 (0, q.Xw)();
         });
@@ -645,7 +643,7 @@ function eY(e) {
         eh = Q(),
         eb = M?.tenantMetadata?.socialLayer;
     if (null == M || null == eb) return R ? (0, n.jsx)(p.y, {}) : null;
-    let eC = E?.storefront,
+    let eC = N?.storefront,
         ej = eC?.logoAssetId != null ? (0, Y.YE)(eC.applicationId, eC.logoAssetId, 256) : null,
         eg = eC?.lightThemeLogoAssetId != null ? (0, Y.YE)(eC.applicationId, eC.lightThemeLogoAssetId, 256) : null,
         ef = null;
@@ -728,7 +726,7 @@ function eY(e) {
                                             giftingOrigin: d?.id !== g ? m : void 0,
                                             trackPDPClick: ec,
                                             analyticsLocations: C,
-                                            getSocialLayerStorefrontLink: l,
+                                            customNavigateToSocialLayerStorefront: l,
                                         }),
                                     ],
                                 }),
@@ -766,7 +764,7 @@ function eY(e) {
                                         (0, n.jsx)(eB, {
                                             onClick: b,
                                             ariaLabel: K.intl.string(K.t.cpT0Cq),
-                                            children: (0, n.jsx)(k.d, { size: "refresh_sm", color: "currentColor" }),
+                                            children: (0, n.jsx)(E.d, { size: "refresh_sm", color: "currentColor" }),
                                         }),
                                     ],
                                 }),
@@ -801,8 +799,8 @@ var eq = t(615300),
     ez = t(452282),
     eW = t(625494),
     eV = t(55607);
-let eX = (e) => (0, eE.$o)({ ...e, className: eV.tN, mediaPlayerClassName: eV.yf }),
-    eK = (e) => (0, n.jsx)(ek.Ay, { ...e });
+let eX = (e) => (0, eN.$o)({ ...e, className: eV.tN, mediaPlayerClassName: eV.yf }),
+    eK = (e) => (0, n.jsx)(eE.Ay, { ...e });
 function eQ(e) {
     let l = "videoThumbnailSrc" in e ? e.videoThumbnailSrc : e.src,
         [t, n] = (0, y.rh)(l, "#000000"),
@@ -834,7 +832,7 @@ function eZ(e) {
                 autoPlay: r,
                 renderVideoComponent: eX,
                 renderImageComponent: eK,
-                renderLinkComponent: eE.bU,
+                renderLinkComponent: eN.bU,
             },
             i ? "player-muted" : "player-unmuted",
         ),
@@ -878,8 +876,8 @@ let e1 = (0, eG.A)((e) => {
         [g, f] = (0, s.useState)(!0),
         [p, v] = (0, s.useState)(!1),
         [A, _] = (0, s.useState)(!1),
-        [k, E] = (0, s.useState)(!1),
-        [N, S] = (0, s.useState)(!1),
+        [E, N] = (0, s.useState)(!1),
+        [k, S] = (0, s.useState)(!1),
         I = (0, s.useCallback)(
             (e, t) => {
                 let n = l[e]?.backgroundSrc,
@@ -928,10 +926,10 @@ let e1 = (0, eG.A)((e) => {
         }, [A, R]),
         D = (0, s.useCallback)((e) => {
             let l = C.current;
-            e < l ? E(!0) : e > l && S(!0);
+            e < l ? N(!0) : e > l && S(!0);
         }, []),
         M = (0, s.useCallback)(() => {
-            E(!1), S(!1);
+            N(!1), S(!1);
         }, []),
         P = (0, s.useCallback)(
             (e, l, t) =>
@@ -991,11 +989,11 @@ let e1 = (0, eG.A)((e) => {
                       className: eV.HY,
                       children: [
                           e,
-                          (0, n.jsx)(eJ.Q8, { onClick: O, className: o()(eV.UE, { [eV.h_]: k }) }),
-                          (0, n.jsx)(eJ.Oj, { onClick: y, className: o()(eV.UE, { [eV.h_]: N }) }),
+                          (0, n.jsx)(eJ.Q8, { onClick: O, className: o()(eV.UE, { [eV.h_]: E }) }),
+                          (0, n.jsx)(eJ.Oj, { onClick: y, className: o()(eV.UE, { [eV.h_]: k }) }),
                       ],
                   });
-        }, [l, w, h, g, O, y, k, N]),
+        }, [l, w, h, g, O, y, E, k]),
         H = (0, s.useCallback)(
             (e, l) => {
                 let t = h === l;
@@ -1131,16 +1129,16 @@ function e2(e) {
             giftingOrigin: i,
             trackPDPClick: o,
             analyticsLocations: g,
-            getSocialLayerStorefrontLink: f,
+            customNavigateToSocialLayerStorefront: f,
         } = e,
         p = l?.id,
         v = (0, c.bG)([G.A], () => (null != p ? G.A.getNormalizedSKUEligibility(p) : void 0), [p]),
         A = Q(),
         _ = z({ location: "product_details_modal" }),
-        k = (0, L.JL)({ sku: l });
+        E = (0, L.JL)({ sku: l });
     (0, D.W)({ disableFetch: !_ });
-    let E = (0, R.h)(l?.applicationId),
-        N = s.useCallback(() => {
+    let N = (0, R.h)(l?.applicationId),
+        k = s.useCallback(() => {
             null != l &&
                 null != t &&
                 (o(ey.Jq.BUY_BUTTON),
@@ -1158,9 +1156,7 @@ function e2(e) {
         }, [t]),
         T = s.useCallback(() => {
             null != t &&
-                (o(ey.Jq.VISIT_SHOP),
-                (0, d.closeAllModals)(),
-                (0, Z.default)({ getSocialLayerStorefrontLink: f, guildId: t }));
+                (o(ey.Jq.VISIT_SHOP), (0, d.closeAllModals)(), null != f ? f() : (0, Z.default)({ guildId: t }));
         }, [t, o, f]),
         y = s.useCallback(() => {
             null != l &&
@@ -1172,18 +1168,18 @@ function e2(e) {
                 ));
         }, [l, o, r, i, g]),
         O = s.useCallback(() => {
-            if (null == l || null == E || !_) return;
+            if (null == l || null == N || !_) return;
             o(ey.Jq.BUY_WITH_ORBS_BUTTON);
             let e = [...g, I.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_PURCHASE_BUTTON];
             (0, M.B4)({
                 skuId: l.id,
                 applicationId: l.applicationId,
                 onComplete: () => {
-                    (0, et.j)(), (0, el.n)({ sku: l, application: E, analyticsLocations: e });
+                    (0, et.j)(), (0, el.n)({ sku: l, application: N, analyticsLocations: e });
                 },
                 analyticsLocations: e,
             });
-        }, [l, o, g, E, _]);
+        }, [l, o, g, N, _]);
     return null == l
         ? null
         : (0, n.jsxs)("div", {
@@ -1222,19 +1218,19 @@ function e2(e) {
                           v &&
                               (0, n.jsx)(x.$, {
                                   variant: "primary",
-                                  onClick: N,
+                                  onClick: k,
                                   text: K.intl.string(K.t.boqtTA),
                                   fullWidth: !0,
                               }),
                           _ &&
                               v &&
-                              null != k &&
+                              null != E &&
                               (0, n.jsx)(x.$, {
                                   icon: h.C,
                                   variant: "secondary",
                                   onClick: O,
                                   text: K.intl.format(K.t.lOtBOI, {
-                                      orbPrice: k.amount,
+                                      orbPrice: E.amount,
                                       orbIconHook: () =>
                                           (0, n.jsx)(h.C, { size: "xs", color: "currentColor" }, "orbs-icon"),
                                   }),
@@ -1323,11 +1319,11 @@ function le(e) {
             analyticsLocations: x,
             analyticsContext: h,
             onClose: b,
-            getSocialLayerStorefrontLink: C,
+            customNavigateToSocialLayerStorefront: C,
         } = e,
         { analyticsLocations: j } = (0, T.Ay)(x ?? []),
         { guildId: g } = (0, F.nG)(i),
-        E = (0, c.bG)([w.default], () => w.default.getId());
+        N = (0, c.bG)([w.default], () => w.default.getId());
     s.useEffect(() => {
         null != g && null != a && (0, q.iR)(g, a);
     }, [g, a]);
@@ -1348,7 +1344,7 @@ function le(e) {
             return null != t && "#000000" !== n ? i : void 0;
         })(i, z);
     (0, P.pE)(),
-        (0, N.Ay)(() => {
+        (0, k.Ay)(() => {
             H.default.track(eL.HAw.OPEN_MODAL, { location_stack: j, type: eO.Nh, sku_id: a, application_id: i }),
                 (0, q.Xw)();
         });
@@ -1414,11 +1410,11 @@ function le(e) {
                                 sku: J,
                                 guildId: g,
                                 shouldShowShopLink: !u,
-                                giftRecipient: d?.id !== E ? d : void 0,
-                                giftingOrigin: d?.id !== E ? m : void 0,
+                                giftRecipient: d?.id !== N ? d : void 0,
+                                giftingOrigin: d?.id !== N ? m : void 0,
                                 trackPDPClick: X,
                                 analyticsLocations: j,
-                                getSocialLayerStorefrontLink: C,
+                                customNavigateToSocialLayerStorefront: C,
                             }),
                         ],
                     }),
@@ -1460,7 +1456,7 @@ function le(e) {
                                     (0, n.jsx)(e6, {
                                         onClick: b,
                                         ariaLabel: K.intl.string(K.t.cpT0Cq),
-                                        children: (0, n.jsx)(k.d, { size: "refresh_sm", color: "currentColor" }),
+                                        children: (0, n.jsx)(E.d, { size: "refresh_sm", color: "currentColor" }),
                                     }),
                                 ],
                             }),
@@ -1473,7 +1469,7 @@ function le(e) {
 }
 function ll(e) {
     let { timeRemaining: l, text: t } = e;
-    return (0, n.jsx)(E.A, {
+    return (0, n.jsx)(N.A, {
         className: e4.qw,
         Icon: h.C,
         children: (0, n.jsxs)("div", {
