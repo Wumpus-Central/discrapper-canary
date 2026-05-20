@@ -20,20 +20,20 @@ var l = n(627968),
     S = n(855687),
     _ = n(143413),
     I = n(495544),
-    T = n(734057),
-    y = n(808728),
-    N = n(498642),
-    j = n(71393),
+    y = n(734057),
+    N = n(808728),
+    j = n(498642),
+    T = n(71393),
     b = n(186111),
-    M = n(232835),
-    v = n(576705),
+    v = n(232835),
+    M = n(576705),
     R = n(935208),
     D = n(652215),
     L = n(468689),
     P = n(794967),
     k = n(595818),
-    G = n(287809),
-    O = n(147925),
+    O = n(287809),
+    G = n(147925),
     U = n(625494),
     w = n(975571),
     F = n(723702),
@@ -62,7 +62,7 @@ function z(e) {
                 }),
                 o
                     ? (0, l.jsx)(h.A, { size: "md", color: "currentColor", className: a()(K.AI, { [K.i0]: m }) })
-                    : (0, l.jsx)(O.A, { className: K.UE, direction: O.A.Directions.RIGHT }),
+                    : (0, l.jsx)(G.A, { className: K.UE, direction: G.A.Directions.RIGHT }),
             ],
         })
     );
@@ -74,7 +74,7 @@ function W(e) {
         h,
         f,
         E,
-        O,
+        G,
         W,
         $,
         q,
@@ -82,7 +82,7 @@ function W(e) {
         Z,
         Y,
         { channel: X } = e,
-        Q = (0, o.bG)([j.A], () => (null != X ? j.A.getGuild(X.getGuildId()) : null), [X]),
+        Q = (0, o.bG)([T.A], () => (null != X ? T.A.getGuild(X.getGuildId()) : null), [X]),
         ee = null != Q && R.default.extractTimestamp(Q.id) < Date.now() - D.NOr,
         et = (0, o.bG)([I.default], () => Q?.ownerId === I.default.getId(), [Q]),
         {
@@ -90,18 +90,18 @@ function W(e) {
             canManageGuild: el,
             canMessage: ei,
         } = (0, o.cf)(
-            [v.A],
+            [M.A],
             () => ({
-                canInvite: (0, S.K)(v.A, Q, X),
-                canManageGuild: null != Q && v.A.can(D.xBc.MANAGE_GUILD, Q),
-                canMessage: null != X && v.A.can(D.xBc.SEND_MESSAGES, X),
-                canCreateChannel: null != Q && v.A.can(D.xBc.MANAGE_CHANNELS, Q),
+                canInvite: (0, S.K)(M.A, Q, X),
+                canManageGuild: null != Q && M.A.can(D.xBc.MANAGE_GUILD, Q),
+                canMessage: null != X && M.A.can(D.xBc.SEND_MESSAGES, X),
+                canCreateChannel: null != Q && M.A.can(D.xBc.MANAGE_CHANNELS, Q),
             }),
             [Q, X],
         ),
         es = (0, o.bG)(
-            [G.default],
-            () => G.default.getCurrentUser()?.desktop === !0 || G.default.getCurrentUser()?.mobile === !0,
+            [O.default],
+            () => O.default.getCurrentUser()?.desktop === !0 || O.default.getCurrentUser()?.mobile === !0,
         ),
         {
             guildPopulated: ea,
@@ -109,36 +109,36 @@ function W(e) {
             guildPersonalized: eo,
         } = {
             guildPopulated:
-                ((s = (0, o.bG)([T.A], () => T.A.getChannel(Q?.systemChannelId))),
-                (d = (0, o.yK)([M.A], () => (null != s ? M.A.getMessages(s.id).toArray() : []))),
-                (0, o.bG)([N.A], () => {
-                    let e = N.A.getMemberCount(Q?.id) ?? 0,
+                ((s = (0, o.bG)([y.A], () => y.A.getChannel(Q?.systemChannelId))),
+                (d = (0, o.yK)([v.A], () => (null != s ? v.A.getMessages(s.id).toArray() : []))),
+                (0, o.bG)([j.A], () => {
+                    let e = j.A.getMemberCount(Q?.id) ?? 0,
                         t = d.some((e) => e.type === D.lAJ.USER_JOIN);
                     return e > 1 || t;
                 }, [Q, d])),
             guildMessaged:
-                ((h = (0, o.bG)([T.A], () => (null != Q ? T.A.getMutableBasicGuildChannelsForGuild(Q.id) : null))),
+                ((h = (0, o.bG)([y.A], () => (null != Q ? y.A.getMutableBasicGuildChannelsForGuild(Q.id) : null))),
                 (t = i.useMemo(() => (null == h ? [] : x().values(h)), [h])),
                 (f = (0, o.bG)([I.default], () => I.default.getId())),
-                (0, o.bG)([M.A], () =>
+                (0, o.bG)([v.A], () =>
                     x().some(t, (e) => {
-                        let t = M.A.getMessages(e.id).toArray();
+                        let t = v.A.getMessages(e.id).toArray();
                         return x().some(t, (e) => e.author.id === f && !(0, _.A)(e));
                     }),
                 )),
             guildPersonalized:
                 ((E = (0, o.bG)([b.A], () => b.A.hasLayers())),
-                (O = (0, o.bG)([j.A], () => j.A.getGuild(Q?.id))),
-                O?.icon != null && !E),
-            guildChannelCreated: (0, o.bG)([y.Ay], () => {
-                let e = y.Ay.getChannels(Q?.id),
-                    t = e[y.vM];
+                (G = (0, o.bG)([T.A], () => T.A.getGuild(Q?.id))),
+                G?.icon != null && !E),
+            guildChannelCreated: (0, o.bG)([N.Ay], () => {
+                let e = N.Ay.getChannels(Q?.id),
+                    t = e[N.vM];
                 function n(e) {
                     return (
                         null != Q && R.default.extractTimestamp(e.channel.id) - R.default.extractTimestamp(Q.id) > 500
                     );
                 }
-                return e[y.I6].some(n) || t.some(n);
+                return e[N.I6].some(n) || t.some(n);
             }, [Q]),
         },
         {
@@ -155,7 +155,7 @@ function W(e) {
                 null != Q &&
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("51960"),
+                            n.e("1318"),
                             n.e("59957"),
                             n.e("28136"),
                             n.e("16084"),
