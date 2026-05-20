@@ -26147,10 +26147,11 @@ function fq(e) {
 var fJ = n(695291);
 function fZ(e) {
     let { profile: t, handleIconChange: i, canManageGuild: l } = e,
-        s = R.useCallback(() => {
-            i(null);
+        [s, r] = R.useState(null),
+        a = R.useCallback(() => {
+            r(null), i(null);
         }, [i]),
-        r = R.useCallback(
+        o = R.useCallback(
             (e, t) => {
                 let l = Eo.A.fromBlob(Ed.f.GUILD_ICON, t);
                 (0, S.openModalLazy)(async () => {
@@ -26172,15 +26173,18 @@ function fZ(e) {
                             imageUri: e,
                             file: t,
                             onCrop: async (e) => {
-                                let { imageUri: t } = e;
-                                i(t, await l.getOriginalMd5());
+                                let { imageUri: n } = e,
+                                    s = await l.getOriginalMd5();
+                                r(t.name), i(n, s);
                             },
                             ...n,
                         });
                 }, {});
             },
             [i],
-        );
+        ),
+        d = el.intl.string(el.t.r3JdsT),
+        c = null == s ? d : el.intl.formatToPlainString(el.t["bg+LTO"], { filename: s });
     return (0, A.jsxs)("div", {
         className: fJ.Uo,
         children: [
@@ -26189,14 +26193,8 @@ function fZ(e) {
                 children: (0, A.jsxs)("div", {
                     className: fJ.UD,
                     children: [
-                        (0, A.jsx)(eg.$, {
-                            tabIndex: -1,
-                            size: "sm",
-                            variant: "primary",
-                            disabled: !l,
-                            text: el.intl.string(el.t.r3JdsT),
-                        }),
-                        (0, A.jsx)(cH.Ay, { tabIndex: 0, onChange: r, disabled: !l }),
+                        (0, A.jsx)(eg.$, { tabIndex: -1, size: "sm", variant: "primary", disabled: !l, text: d }),
+                        (0, A.jsx)(cH.Ay, { tabIndex: 0, onChange: o, disabled: !l, "aria-label": c }),
                     ],
                 }),
             }),
@@ -26205,7 +26203,7 @@ function fZ(e) {
                       variant: "critical-secondary",
                       size: "sm",
                       text: el.intl.string(el.t.x8AlTm),
-                      onClick: s,
+                      onClick: a,
                       disabled: !l,
                   })
                 : null,
