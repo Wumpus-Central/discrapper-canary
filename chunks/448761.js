@@ -69,6 +69,7 @@ var i,
         (i[(i.VOICE_SESSION = 65)] = "VOICE_SESSION"),
         (i[(i.GUILD_BOOST_UPSELL = 66)] = "GUILD_BOOST_UPSELL"),
         (i[(i.FRIEND_REQUEST_ACCEPTED = 67)] = "FRIEND_REQUEST_ACCEPTED"),
+        (i[(i.MEDIA_MENTION_MESSAGE = 68)] = "MEDIA_MENTION_MESSAGE"),
         i);
 let s = {
     UNDELETABLE: new Set([1, 2, 3, 4, 5, 21, 35, 56, 57, 64]),
