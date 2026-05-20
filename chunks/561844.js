@@ -72,14 +72,20 @@ function N(e) {
 function y(e) {
     let {
         adContentId: t,
-        adCreativeType: n,
-        event: i,
-        properties: r,
-        trackGuildAndChannelMetadata: s,
-        shouldExtendSession: a = !1,
-        sourceQuestContent: o,
+        relatedQuestId: n,
+        adCreativeType: i,
+        event: r,
+        properties: s,
+        trackGuildAndChannelMetadata: a,
+        shouldExtendSession: o = !1,
+        sourceQuestContent: l,
     } = e;
-    S(i, { ...{ ...T(t, o, n, a), traffic_metadata_sealed: (0, p.Gp)(o, void 0, t) ?? null }, ...r }, s, !1);
+    S(
+        r,
+        { ...{ ...T(t, l, i, o), traffic_metadata_sealed: (0, p.Gp)(l, void 0, t) ?? null }, ...s, quest_id: n },
+        a,
+        !1,
+    );
 }
 async function C(e, t) {
     return { adUser: await (0, s.N)((0, g.jO)(e)), adMetadataSealed: (0, p.L4)(e, t) };
@@ -143,32 +149,32 @@ async function O(e) {
 async function R(e) {
     let {
         adContentId: t,
-        adCreativeType: n,
-        questContent: i,
-        questContentCTA: r,
-        questContentPosition: s,
-        questContentRowIndex: a,
-        impressionId: o,
-        trackGuildAndChannelMetadata: l,
-        sourceQuestContent: u,
+        relatedQuestId: n,
+        adCreativeType: i,
+        questContent: r,
+        questContentCTA: s,
+        questContentPosition: a,
+        questContentRowIndex: o,
+        impressionId: l,
+        trackGuildAndChannelMetadata: u,
+        sourceQuestContent: c,
     } = e;
     y({
         adContentId: t,
-        adCreativeType: n,
+        relatedQuestId: n,
+        adCreativeType: i,
         event: A.HAw.QUEST_CONTENT_CLICKED,
-        properties: {
-            ...(await v({
-                questContent: i,
-                questContentPosition: s,
-                questContentRowIndex: a,
-                questContentCTA: r,
-                impressionId: o,
-                adCreativeId: t,
-            })),
-        },
-        trackGuildAndChannelMetadata: l,
-        shouldExtendSession: (0, p.xn)(i),
-        sourceQuestContent: u,
+        properties: await v({
+            questContent: r,
+            questContentPosition: a,
+            questContentRowIndex: o,
+            questContentCTA: s,
+            impressionId: l,
+            adCreativeId: t,
+        }),
+        trackGuildAndChannelMetadata: u,
+        shouldExtendSession: (0, p.xn)(r),
+        sourceQuestContent: c,
     });
 }
 function b(e) {
