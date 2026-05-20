@@ -45,24 +45,25 @@ var i,
     u = n(859387);
 function c(e) {
     var t, n;
+    let i = e.creative_content;
     return {
-        id: e.id,
-        labelTitle: e.label_title,
-        labelSubtitle: e.label_subtitle,
-        heroImage: (0, u.dv)(e.hero_image),
-        heroVideo: (0, u.dv)(e.hero_video),
-        sponsorImage: (0, u.dv)(e.sponsor_image),
+        id: i.id,
+        labelTitle: i.label_title,
+        labelSubtitle: i.label_subtitle,
+        heroImage: (0, u.dv)(i.hero_image),
+        heroVideo: (0, u.dv)(i.hero_video),
+        sponsorImage: (0, u.dv)(i.sponsor_image),
         cta: {
-            url: (t = e.cta).url,
+            url: (t = i.cta).url,
             buttonLabel: t.button_label,
             android: null != t.android ? { androidAppId: t.android.android_app_id } : void 0,
             ios: null != t.ios ? { iosAppId: t.ios.ios_app_id } : void 0,
         },
-        questIds: e.quest_ids,
+        questIds: i.quest_ids,
         questHomeEntrypoint:
-            null != e.quest_home_entrypoint
+            null != i.quest_home_entrypoint
                 ? {
-                      linearGradient: (n = e.quest_home_entrypoint).linear_gradient,
+                      linearGradient: (n = i.quest_home_entrypoint).linear_gradient,
                       radialGradient: n.radial_gradient,
                       image: (0, u.dv)(n.image),
                       tooltipImage: (0, u.dv)(n.tooltip_image),
@@ -70,8 +71,10 @@ function c(e) {
                       tooltipSubtitle: n.tooltip_subtitle,
                   }
                 : void 0,
-        shelfImage: (0, u.dv)(e.shelf_image),
-        shelfVideo: (0, u.dv)(e.shelf_video),
+        shelfImage: (0, u.dv)(i.shelf_image),
+        shelfVideo: (0, u.dv)(i.shelf_video),
+        startsAt: e.starts_at,
+        endsAt: e.ends_at,
     };
 }
 var d = n(881615),
@@ -710,7 +713,7 @@ async function eA() {
             u = l.decisions?.[0] ?? null,
             f = u?.creative ?? null,
             h = null;
-        null != f && f.creative_type === s.p.QUEST_HOME_HERO && (h = c(f.creative_content)),
+        null != f && f.creative_type === s.p.QUEST_HOME_HERO && (h = c(f)),
             o.h.dispatch({
                 type: "QUESTS_FETCH_QUEST_HOME_HERO_DECISION_SUCCESS",
                 questHomeHero: h,
@@ -748,7 +751,7 @@ async function eI(e) {
             l = r.decisions?.[0] ?? null,
             u = l?.creative ?? null,
             d = null;
-        null != u && u.creative_type === s.p.QUEST_HOME_HERO && (d = c(u.creative_content)),
+        null != u && u.creative_type === s.p.QUEST_HOME_HERO && (d = c(u)),
             o.h.dispatch({
                 type: "QUESTS_FETCH_QUEST_HOME_HERO_DECISION_SUCCESS",
                 questHomeHero: d,

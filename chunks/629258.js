@@ -571,8 +571,8 @@ let e0 = function (e) {
             ],
         });
     };
-var e8 = s(497275);
-function e2(e) {
+var e2 = s(497275);
+function e8(e) {
     let { children: t, selectedSections: s = [], onSectionSelect: n, controls: a } = e,
         i = [
             { value: "quest_bar", label: em.intl.string(em.t.rjVPdM) },
@@ -585,17 +585,17 @@ function e2(e) {
         o = 0 === s.length || s.length === i.length,
         c = r.useMemo(() => (o ? "all" : 1 === s.length ? s[0] : "all"), [s, o]);
     return (0, l.jsx)(eO.Ip, {
-        className: e8.kL,
+        className: e2.kL,
         orientation: "auto",
         children: (0, l.jsxs)("div", {
-            className: e8.qE,
+            className: e2.qE,
             children: [
                 (0, l.jsx)(f.D, {
                     variant: "heading-xl/semibold",
                     color: "text-strong",
                     children: em.intl.string(em.t.BDUDau),
                 }),
-                (0, l.jsx)("div", { className: e8.pf, children: a }),
+                (0, l.jsx)("div", { className: e2.pf, children: a }),
                 (0, l.jsxs)(eT.V, {
                     type: "top",
                     look: "brand",
@@ -608,7 +608,7 @@ function e2(e) {
                         i.map((e) => (0, l.jsx)(eT.V.Item, { id: e.value, children: e.label }, e.value)),
                     ],
                 }),
-                (0, l.jsx)("div", { className: e8.tZ, children: (0, l.jsx)("div", { className: e8.Qs, children: t }) }),
+                (0, l.jsx)("div", { className: e2.tZ, children: (0, l.jsx)("div", { className: e2.Qs, children: t }) }),
             ],
         }),
     });
@@ -658,7 +658,7 @@ let e6 = function (e) {
             );
         }, [s]);
     let [c, u] = r.useState([]);
-    return (0, l.jsx)(e2, {
+    return (0, l.jsx)(e8, {
         controls: (0, l.jsx)(eA, {
             questId: s,
             setQuestId: n,
@@ -1308,8 +1308,8 @@ let t0 = r.forwardRef(function (e, t) {
             });
 });
 var t1 = s(458518),
-    t8 = s(65990);
-let t2 = [],
+    t2 = s(65990);
+let t8 = [],
     t7 = X.L1.SORT,
     t6 = X.L1.FILTER,
     t3 = r.forwardRef(function (e, t) {
@@ -1351,7 +1351,7 @@ let t2 = [],
                             .map((e) => (0, tG.WQ)(e))
                             .filter(e5.Vq);
                         return t.length > 0 ? t : null;
-                    })(u.get(t6)) ?? t2,
+                    })(u.get(t6)) ?? t8,
                 [u],
             ),
             x = r.useCallback(
@@ -1386,7 +1386,7 @@ let t2 = [],
                 r.useMemo(() => ({ sortMethod: m, filters: h }), [m, h]),
             ),
             C = r.useCallback(() => {
-                E(t2);
+                E(t8);
             }, [E]),
             _ = r.useRef(null),
             S = r.useRef(null),
@@ -1423,13 +1423,13 @@ let t2 = [],
             (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsxs)("div", {
-                        className: t8.Mj,
+                        className: t2.Mj,
                         children: [
                             (0, l.jsx)(f.D, { variant: "heading-lg/medium", children: em.intl.string(em.t.giYD00) }),
                             (0, l.jsxs)("div", {
-                                className: t8.Nf,
+                                className: t2.Nf,
                                 children: [
-                                    (0, l.jsx)(td, { onChange: x, optionClassName: t8.Uq, selectedSortMethod: m }),
+                                    (0, l.jsx)(td, { onChange: x, optionClassName: t2.Uq, selectedSortMethod: m }),
                                     (0, l.jsx)(to, { onChange: E, selectedFilters: h }),
                                 ],
                             }),
@@ -1860,7 +1860,7 @@ let sQ = 4 * tE.A.Millis.SECOND,
                         isFetchingCurrentQuests: n,
                         hasFetched: l,
                     } = (0, X.Qh)(X.NC.ALL, { sortMethod: tG.kL.SUGGESTED, filters: [] }),
-                    a = (0, d.bG)([en.A], () => en.A.getQuestHomeHero()),
+                    a = (0, X.T2)(),
                     i = (0, d.bG)([en.A], () => en.A.isFetchingQuestHomeHero()),
                     o = r.useRef([]),
                     c = r.useMemo(
@@ -2097,8 +2097,8 @@ var sY = s(194526),
     sX = s(508770),
     s0 = s(406810),
     s1 = s(628284),
-    s8 = s(65154),
-    s2 = s(496431),
+    s2 = s(65154),
+    s8 = s(496431),
     s7 = s(975807),
     s6 = s(58703),
     s3 = s(18437),
@@ -2199,7 +2199,7 @@ function ne(e) {
 function nt(e) {
     let { heroId: t, quest: s, onQuestCtaClick: n, contentPosition: a } = e,
         o = r.useMemo(() => new Date(s.config.expiresAt), [s.config.expiresAt]),
-        { days: c, hours: u, minutes: m, seconds: h } = (0, s2.A)(o, tE.A.Millis.MINUTE),
+        { days: c, hours: u, minutes: m, seconds: h } = (0, s8.A)(o, tE.A.Millis.MINUTE),
         x = r.useMemo(
             () =>
                 (0, s6.uN)(
@@ -2337,7 +2337,7 @@ function nt(e) {
                                     fullWidth: !1,
                                     children: [
                                         (0, tL.pv)(s.config) === sJ.Z.VIDEO
-                                            ? (0, l.jsx)(s8.S, { size: "xs", color: ex.A.colors.ICON_MUTED.css })
+                                            ? (0, l.jsx)(s2.S, { size: "xs", color: ex.A.colors.ICON_MUTED.css })
                                             : (0, l.jsx)(tb._, { size: "xs", color: ex.A.colors.ICON_MUTED.css }),
                                         (0, l.jsx)(j.E, {
                                             variant: "text-sm/normal",

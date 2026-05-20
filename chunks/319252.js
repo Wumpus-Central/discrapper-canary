@@ -439,5 +439,7 @@ function N(e) {
                       : void 0,
               shelfImage: n.shelf?.intro_asset_image != null ? (0, a.dv)(n.shelf.intro_asset_image.url) : void 0,
               shelfVideo: n.shelf?.intro_asset_video != null ? (0, a.dv)(n.shelf.intro_asset_video.url) : void 0,
+              startsAt: n.starts_at,
+              endsAt: n.expires_at,
           };
 }

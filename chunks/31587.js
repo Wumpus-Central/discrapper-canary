@@ -1,14 +1,15 @@
 "use strict";
 n.d(t, {
-    I3: () => eO,
+    Du: () => eL,
     O9: () => ek,
+    I3: () => eO,
     Vn: () => eC,
     Wj: () => ew,
     mL: () => ei,
     Yl: () => eI,
     Nb: () => e$,
     pT: () => ez,
-    UH: () => e1,
+    UH: () => e2,
     $P: () => eZ,
     YW: () => eb,
     zW: () => eY,
@@ -31,17 +32,17 @@ n.d(t, {
     mn: () => ed,
     C5: () => eV,
     sb: () => eK,
-    lg: () => e0,
+    lg: () => e1,
     Qo: () => eG,
     In: () => eU,
     H6: () => eB,
     a5: () => eH,
     F3: () => ex,
     L1: () => eh,
-    oH: () => eR,
     do: () => eS,
+    oH: () => eR,
     S5: () => eT,
-    Du: () => eL,
+    T2: () => e0,
 }),
     n(321073),
     n(801541);
@@ -747,16 +748,28 @@ function eJ(e) {
         return n.length <= 1 ? { shelfQuests: [], isShelfEnabled: !1 } : { shelfQuests: n, isShelfEnabled: !0 };
     }, [t, e.questIds]);
 }
-function e0(e) {
+function e0() {
+    let e = (0, p.bG)([V.A], () => V.A.getQuestHomeHero()),
+        [t, n] = a.useState(() => Date.now()),
+        i = null != e ? Date.parse(e.endsAt) : null,
+        r = null != e;
+    return (a.useEffect(() => {
+        if (!r) return;
+        let e = setInterval(() => n(Date.now()), 3e4);
+        return () => clearInterval(e);
+    }, [r]),
+    null == e || null == i || Number.isNaN(i) || t >= i)
+        ? null
+        : e;
+}
+function e1(e) {
     let { enabled: t } = B.rI.useConfig({ location: "useFetchQuestHomeHero" }),
         [n, i] = a.useState(!0),
         [r, s] = a.useState(!0),
         [o, l] = a.useState(!1),
         [u, c] = a.useState(!1),
-        { isFetching: d, questHomeHero: _ } = (0, p.cf)([V.A], () => ({
-            isFetching: V.A.isFetchingQuestHomeHero(),
-            questHomeHero: V.A.getQuestHomeHero(),
-        }));
+        d = (0, p.bG)([V.A], () => V.A.isFetchingQuestHomeHero()),
+        _ = e0();
     return (
         a.useEffect(() => {
             !(async function () {
@@ -785,7 +798,7 @@ function e0(e) {
         { questHomeHero: o || u ? null : _, isLoading: n || d || r }
     );
 }
-function e1(e) {
+function e2(e) {
     let t = S.H1.useSetting(),
         n = e.userStatus?.enrolledAt != null;
     return a.useCallback(() => {
