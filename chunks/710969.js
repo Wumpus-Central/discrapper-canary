@@ -1,22 +1,23 @@
 "use strict";
 n.d(t, {
-    Gp: () => O,
-    HN: () => T,
-    Ic: () => E,
-    Kc: () => C,
-    L4: () => v,
+    Gp: () => R,
+    HN: () => S,
+    Ic: () => m,
+    Kc: () => v,
+    L4: () => O,
     Oh: () => _,
-    RF: () => b,
-    ZG: () => A,
+    RF: () => D,
+    ZG: () => I,
     gO: () => p,
-    if: () => m,
-    r$: () => D,
-    t6: () => I,
-    v1: () => g,
-    vZ: () => R,
+    if: () => g,
+    kd: () => E,
+    r$: () => L,
+    t6: () => T,
+    v1: () => A,
+    vZ: () => b,
     vc: () => f,
     vy: () => h,
-    xn: () => S,
+    xn: () => N,
 });
 var i = n(665260),
     r = n(773669),
@@ -47,15 +48,18 @@ function p(e, t) {
     return (0, i.Lt)(e.dismissedQuestContent, c.TY[n]);
 }
 function E(e) {
-    return new Date(e.config.expiresAt).valueOf() <= Date.now();
+    return new Date(e.expiresAt).valueOf() <= Date.now();
 }
 function m(e) {
-    if (!E(e)) return !1;
+    return E(e.config);
+}
+function g(e) {
+    if (!m(e)) return !1;
     let t = Date.now() - 2592e6,
         n = new Date(e.config.expiresAt).valueOf();
     return null != e.config.expiresAt && !(n <= t);
 }
-function g(e) {
+function A(e) {
     let t = null,
         n = Date.now();
     for (let i of e) {
@@ -64,17 +68,17 @@ function g(e) {
     }
     return t;
 }
-function A(e) {
+function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { dateStyle: "short" };
     return null == e ? "" : new Date(e).toLocaleDateString(r.default.locale, t);
 }
-function I(e, t, n) {
+function T(e, t, n) {
     let i = t.get(n);
     if (null == i) return;
     let r = e.get(i.quest.id);
-    if (null != r && !E(r)) return r;
+    if (null != r && !m(r)) return r;
 }
-function T(e) {
+function S(e) {
     return {
         [l.uF.QUEST_BAR]: l.yW.DESKTOP_ACCOUNT_PANEL_AREA,
         [l.uF.QUEST_BAR_V2]: l.yW.DESKTOP_ACCOUNT_PANEL_AREA,
@@ -84,11 +88,11 @@ function T(e) {
         [l.uF.QUEST_HOME_MOBILE_CAROUSEL]: l.yW.QUEST_HOME_MOBILE_CAROUSEL,
     }[e];
 }
-function S(e) {
-    let t = T(e);
+function N(e) {
+    let t = S(e);
     return null != t && c.J6.has(t);
 }
-function N(e) {
+function y(e) {
     return {
         questId: e.questId,
         adCreativeId: e.adCreativeId,
@@ -98,17 +102,17 @@ function N(e) {
         trafficMetadataSealed: e.trafficMetadataSealed,
     };
 }
-function y(e, t) {
+function C(e, t) {
     let n = (function (e, t) {
         if (e !== l.yW.QUEST_HOME_MOBILE_CAROUSEL || null == t) return null;
         let n = a.A.getAdDecisionByPlacementAndAdCreativeId(e, t);
-        return null != n ? N(n) : null;
+        return null != n ? y(n) : null;
     })(e, t);
     if (null != n) return n;
     let { enableNewRequestBehavior: i } = u.A.getConfig({ location: "getQuestDeliveryDataForPlacement" }),
         r = o.A.questAdDecisionByPlacement.get(e);
-    if (e === l.yW.QUEST_HOME_BANNER_DESKTOP && null != r) return N(r);
-    if (i) return null == r ? null : N(r);
+    if (e === l.yW.QUEST_HOME_BANNER_DESKTOP && null != r) return y(r);
+    if (i) return null == r ? null : y(r);
     {
         let t = o.A.questToDeliverForPlacement.get(e);
         return null == t
@@ -123,20 +127,20 @@ function y(e, t) {
               };
     }
 }
-function C(e, t) {
-    let n = T(t);
+function v(e, t) {
+    let n = S(t);
     if (null == n) return c.K3;
-    let { adDecisionData: i, questId: r, adCreativeId: s } = y(n, e) ?? {};
+    let { adDecisionData: i, questId: r, adCreativeId: s } = C(n, e) ?? {};
     return null == i ? c.K3 : r === e || s === e || i.ad_id === e ? i : c.K3;
 }
-function v(e, t) {
-    let n = T(e);
-    if (null != n) return y(n, t)?.metadataSealed;
+function O(e, t) {
+    let n = S(e);
+    if (null != n) return C(n, t)?.metadataSealed;
 }
-function O(e, t, n) {
-    let i = T(e);
+function R(e, t, n) {
+    let i = S(e);
     if (null != i) {
-        let { trafficMetadataSealed: e, questId: r } = y(i, n) ?? {};
+        let { trafficMetadataSealed: e, questId: r } = C(i, n) ?? {};
         if (null != e && (null != n || r === t)) return e;
     }
     if (null != t) {
@@ -144,13 +148,13 @@ function O(e, t, n) {
         return e?.trafficMetadataSealed;
     }
 }
-function R(e, t) {
-    let n = T(e);
-    if (null != n) return y(n, t)?.adContext;
-}
 function b(e, t) {
+    let n = S(e);
+    if (null != n) return C(n, t)?.adContext;
+}
+function D(e, t) {
     s.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });
 }
-function D() {
+function L() {
     return window.location.pathname.startsWith(d.BVt.QUEST_HOME_DEPRECATED);
 }

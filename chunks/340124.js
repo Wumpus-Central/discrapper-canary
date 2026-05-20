@@ -1,5 +1,6 @@
 "use strict";
 n.d(t, {
+    sB: () => ey,
     WM: () => Z,
     lx: () => ea,
     N1: () => $,
@@ -26,10 +27,10 @@ n.d(t, {
     qV: () => eN,
     HA: () => eo,
     Yf: () => eg,
-    Ov: () => z,
-    QG: () => eu,
     Am: () => eA,
+    QG: () => eu,
     Zb: () => eT,
+    Ov: () => z,
     dQ: () => eE,
     Gt: () => er,
 }),
@@ -42,7 +43,7 @@ var i,
     a = n(636537),
     o = n(228366),
     l = n(181658),
-    u = n(859387);
+    u = n(551875);
 function c(e) {
     var t, n;
     let i = e.creative_content;
@@ -786,4 +787,7 @@ function eS(e, t) {
 }
 function eN(e, t) {
     o.h.dispatch({ type: "AD_CONTENT_MARK_UNSEEN", adCreativeType: e, contentIds: t });
+}
+function ey(e) {
+    o.h.dispatch({ type: "QUESTS_MARK_DISCOVERED", questId: e });
 }
