@@ -2194,14 +2194,18 @@ class er extends l.A {
     getDesktopSource() {
         return Promise.reject(Error("NO_STREAM"));
     }
-    getScreenPreviews(e, t) {
-        return new Promise((n) => {
-            null != (0, b.lE)().getScreenPreviews
-                ? (0, b.lE)().getScreenPreviews(e, t, (e) => {
-                      n(e.map((e, t) => ({ ...e, name: "Screen " + (t + 1) })));
-                  })
-                : n([]);
-        });
+    getScreenPreviews(e, t, n) {
+        let i = (0, b.lE)();
+        return (
+            null != i.setPreviewsUseWgc && i.setPreviewsUseWgc(n),
+            new Promise((n) => {
+                null != (0, b.lE)().getScreenPreviews
+                    ? (0, b.lE)().getScreenPreviews(e, t, (e) => {
+                          n(e.map((e, t) => ({ ...e, name: "Screen " + (t + 1) })));
+                      })
+                    : n([]);
+            })
+        );
     }
     setClipsModulePath(e) {
         (0, b.lE)().setClipsModulePath?.(e);
@@ -2312,17 +2316,22 @@ class er extends l.A {
                   n.exportClip(e, t, (e) => i(new Blob([e])), r);
               });
     }
-    getWindowPreviews(e, t) {
-        return new Promise((n) => {
-            null != (0, b.lE)().getWindowPreviews
-                ? (0, b.lE)().getWindowPreviews(e, t, (e) => {
-                      n(e);
-                  })
-                : n([]);
-        });
+    getWindowPreviews(e, t, n) {
+        let i = (0, b.lE)();
+        return (
+            null != i.setPreviewsUseWgc && i.setPreviewsUseWgc(n),
+            new Promise((n) => {
+                null != (0, b.lE)().getWindowPreviews
+                    ? (0, b.lE)().getWindowPreviews(e, t, (e) => {
+                          n(e);
+                      })
+                    : n([]);
+            })
+        );
     }
-    async getSingleWindowPreview(e, t, n) {
-        if (null != (0, b.lE)().getSingleWindowPreview) {
+    async getSingleWindowPreview(e, t, n, i) {
+        let r = (0, b.lE)();
+        if ((null != r.setPreviewsUseWgc && r.setPreviewsUseWgc(i), null != (0, b.lE)().getSingleWindowPreview)) {
             let i = await (0, b.lE)().getSingleWindowPreview(e, t, n);
             return i.length > 0 ? i[0] : null;
         }

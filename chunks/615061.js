@@ -3112,13 +3112,13 @@ class tr extends g.A {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         return (await this.desktopInputPool.acquire(e, t)).id;
     }
-    getScreenPreviews(e, t) {
+    getScreenPreviews(e, t, n) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
-    getWindowPreviews(e, t) {
+    getWindowPreviews(e, t, n) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
-    getSingleWindowPreview(e, t, n) {
+    getSingleWindowPreview(e, t, n, i) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
     setClipsModulePath(e) {}

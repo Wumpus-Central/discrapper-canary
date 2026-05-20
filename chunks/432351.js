@@ -72,13 +72,13 @@ class l extends i.A {
     getDesktopSource() {
         return Promise.reject(Error("NO_STREAM"));
     }
-    getScreenPreviews(e, t) {
+    getScreenPreviews(e, t, n) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
-    getWindowPreviews(e, t) {
+    getWindowPreviews(e, t, n) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
-    getSingleWindowPreview(e, t, n) {
+    getSingleWindowPreview(e, t, n, i) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
     setClipsModulePath(e) {}
