@@ -18,11 +18,11 @@ var t = a(627968),
     N = a(688810),
     g = a(859040),
     v = a(792656),
-    w = a(914410),
-    A = a(961250),
-    C = a(532309),
-    _ = a(440005),
-    k = a(49132),
+    k = a(914410),
+    w = a(961250),
+    A = a(532309),
+    C = a(440005),
+    _ = a(49132),
     O = a(555837),
     y = a(788868),
     I = a(594387),
@@ -61,21 +61,21 @@ function z(e) {
 function D(e) {
     let { transitionState: s, onClose: a } = e,
         { analyticsLocations: c } = (0, N.Ay)(),
-        { programReward: x, totalDays: D } = (0, o.cf)([C.A], () => ({
-            programReward: C.A.getRewardForProgram(_.W.XBOX),
-            totalDays: C.A.getTotalDaysInDuration(_.W.XBOX),
+        { programReward: x, totalDays: D } = (0, o.cf)([A.A], () => ({
+            programReward: A.A.getRewardForProgram(C.W.XBOX),
+            totalDays: A.A.getTotalDaysInDuration(C.W.XBOX),
         })),
-        R = (0, k.J8)(x),
-        E = (0, O.G)();
+        R = (0, _.J8)(x),
+        E = (0, O.G)({ location: "xboxPerksModal" });
     l.useEffect(() => {
-        E && (R ? (0, A.uM)() : (0, A.Ay)());
+        E && (R ? (0, w.uM)() : (0, w.Ay)());
     }, [R, E]);
-    let G = x?.reward_amount ?? 250,
-        M = D ?? 30,
+    let M = x?.reward_amount ?? 250,
+        G = D ?? 30,
         K =
             x?.next_reward_date != null
-                ? Math.min(M, Math.max(0, (0, d.default)(new Date(x.next_reward_date), new Date())))
-                : M;
+                ? Math.min(G, Math.max(0, (0, d.default)(new Date(x.next_reward_date), new Date())))
+                : G;
     return (0, t.jsx)(r.d, {
         transitionState: s,
         onClose: a,
@@ -124,16 +124,16 @@ function D(e) {
                                 (0, t.jsx)(z, {
                                     icon: (0, t.jsx)(p.C, { size: "sm", color: m.A.colors.ICON_STRONG }),
                                     title: S.intl.string(I.default["+tdDeK"]),
-                                    description: S.intl.format(I.default.ZYc6Hv, { orbAmount: G, days: K }),
+                                    description: S.intl.format(I.default.ZYc6Hv, { orbAmount: M, days: K }),
                                     footer:
                                         null != x
                                             ? (0, t.jsx)("div", {
                                                   className: T.hr,
-                                                  children: (0, t.jsx)(w.Ay, {
-                                                      variant: w.qP.BLUE,
-                                                      weight: w.fh.MEDIUM,
-                                                      progress: M - K,
-                                                      maximum: M,
+                                                  children: (0, t.jsx)(k.Ay, {
+                                                      variant: k.qP.BLUE,
+                                                      weight: k.fh.MEDIUM,
+                                                      progress: G - K,
+                                                      maximum: G,
                                                       glowing: !1,
                                                   }),
                                               })
