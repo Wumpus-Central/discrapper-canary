@@ -20,8 +20,8 @@ let E = new Map(),
     I = null,
     T = new Map(),
     S = new Map(),
-    N = new Set(),
-    y = 0;
+    N = 0,
+    y = new Set();
 function C(e) {
     let { type: t, channelId: n, messageId: i, userId: r, emoji: s, reactionType: l } = e,
         u = E.get(n);
@@ -107,14 +107,13 @@ class R extends i.Ay.Store {
         return null == t ? null : (E.get(e)?.conversationMetadataById.get(t)?.color ?? null);
     }
     getHydratedMessages(e, t) {
-        let n = E.get(e)?.conversationMetadataById.get(t)?.hydratedMessages;
-        return null != n && n.length > 0 ? n : null;
+        return E.get(e)?.conversationMetadataById.get(t)?.hydratedMessages ?? null;
     }
     getHydratedMessageById(e, t) {
         return E.get(e)?.messageMetadataByMessageId.get(t)?.message ?? null;
     }
     isConversationFetchPending(e) {
-        return N.has(e);
+        return y.has(e);
     }
     getSelectionSeq(e) {
         return S.get(e) ?? 0;
@@ -123,11 +122,11 @@ class R extends i.Ay.Store {
 let b = new R(r.h, {
     CONVERSATION_FETCH_START: function (e) {
         let { conversationId: t } = e;
-        N.add(t);
+        y.add(t);
     },
     CONVERSATION_FETCH_SUCCESS: function (e) {
         let { channelId: t, conversationId: n, conversation: i, messages: r } = e;
-        N.delete(n);
+        y.delete(n);
         let a = E.get(t);
         if (null == a) return;
         let o = a.conversationMetadataById.get(n);
@@ -143,7 +142,7 @@ let b = new R(r.h, {
     },
     CONVERSATION_FETCH_FAILURE: function (e) {
         let { conversationId: t } = e;
-        N.delete(t);
+        y.delete(t);
     },
     CONVERSATIONS_FETCH_START: function (e) {
         let { channelId: t } = e;
@@ -188,7 +187,7 @@ let b = new R(r.h, {
                     s = new Map();
                 for (let e of t) {
                     let t = n?.conversationMetadataById.get(e.id),
-                        i = t?.color ?? p.J[y++ % p.J.length];
+                        i = t?.color ?? p.J[N++ % p.J.length];
                     r.set(e.id, { conversation: e, color: i, hydratedMessages: t?.hydratedMessages ?? null });
                     let a = null;
                     if (null != e.moderation)
@@ -332,6 +331,6 @@ let b = new R(r.h, {
         return i;
     },
     LOGOUT: function () {
-        E.clear(), m.clear(), g.clear(), A.clear(), N.clear(), T.clear(), S.clear(), (I = null), (y = 0);
+        E.clear(), m.clear(), g.clear(), A.clear(), y.clear(), T.clear(), S.clear(), (I = null), (N = 0);
     },
 });

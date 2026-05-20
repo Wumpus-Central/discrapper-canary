@@ -1091,9 +1091,13 @@ function nT(e) {
         r = (0, A.bG)([nC.A], () => nC.A.isPendingFetch(n.id), [n.id]),
         d = (0, A.bG)([nI.A], () => nI.A.isHighlightingEnabled(), []),
         o = (0, A.bG)([nC.A], () => nC.A.getScrollToConversation(n.id), [n.id]),
-        c = s.useCallback((e) => {
-            (0, nb.xI)(e.channelId, e.id);
-        }, []);
+        c = s.useCallback(
+            (e) => {
+                let t = n.getGuildId();
+                null != t && (0, nb.xI)(n.id, t, e.id);
+            },
+            [n],
+        );
     return (0, i.jsxs)("aside", {
         "aria-label": "Conversations",
         className: nE.zr,
@@ -1121,9 +1125,10 @@ function nT(e) {
                             children: (0, i.jsx)(ns.D, {
                                 className: nE.Qf,
                                 onClick: function () {
-                                    if (0 === t.length || r) return;
-                                    let e = t[0].conversation;
-                                    (0, nb.WF)({ channelId: n.id, before: e.startMessageId });
+                                    let e = n.getGuildId();
+                                    if (null == e || 0 === t.length || r) return;
+                                    let l = t[0].conversation;
+                                    (0, nb.WF)({ channelId: n.id, guildId: e, before: l.startMessageId });
                                 },
                                 children: (0, i.jsx)(y.E, {
                                     variant: "text-sm/medium",
@@ -1158,9 +1163,10 @@ function nT(e) {
                             children: (0, i.jsx)(ns.D, {
                                 className: nE.Qf,
                                 onClick: function () {
-                                    if (0 === t.length || r) return;
-                                    let e = t[t.length - 1].conversation;
-                                    (0, nb.WF)({ channelId: n.id, after: e.endMessageId });
+                                    let e = n.getGuildId();
+                                    if (null == e || 0 === t.length || r) return;
+                                    let l = t[t.length - 1].conversation;
+                                    (0, nb.WF)({ channelId: n.id, guildId: e, after: l.endMessageId });
                                 },
                                 children: (0, i.jsx)(y.E, {
                                     variant: "text-sm/medium",
@@ -4727,7 +4733,7 @@ let rw = () => (0, i.jsx)("div", { className: rU.wG, children: (0, i.jsx)(x.y, {
             t.e("76542"),
             t.e("28793"),
             t.e("38552"),
-            t.e("48962"),
+            t.e("8692"),
             t.e("57303"),
             t.e("15686"),
             t.e("11491"),

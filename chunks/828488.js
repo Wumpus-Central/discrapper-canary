@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { LX: () => s, W$: () => a, ac: () => c, fw: () => l, uJ: () => u });
+n.d(t, { LX: () => s, Lw: () => _, W$: () => a, ac: () => c, fw: () => l, sV: () => d, uJ: () => u });
 var i = n(945810),
     r = n(880006);
 let s = (0, i.mj)({
@@ -27,13 +27,26 @@ function l(e) {
 function u(e, t) {
     let n,
         i,
-        r = l(t),
-        s =
+        r,
+        s = l(t),
+        u =
             ((n = o.getConfig({ location: t }).enabled),
-            (i = a.getCurrentConfig({ guildId: e ?? void 0, location: t }, { autoTrackExposure: !1 }).enabled),
-            n || i);
-    return r || s;
+            (i = l(t)),
+            (r = a.getCurrentConfig({ guildId: e ?? void 0, location: t }, { autoTrackExposure: !1 }).enabled),
+            i || (r && n));
+    return s || u;
 }
 function c(e) {
     return s.useConfig({ location: e }).enabled;
+}
+function d(e, t) {
+    let n = o.useConfig({ location: t }).enabled,
+        i = c(t),
+        r = a.useExperiment({ guildId: e ?? void 0, location: t }, { autoTrackExposure: !1 }).enabled;
+    return i || (r && n);
+}
+function _(e, t) {
+    let n = c(t),
+        i = d(e, t);
+    return n || i;
 }

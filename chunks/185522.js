@@ -19,9 +19,10 @@ class c extends i.A {
                 t = s.A.getGuildId();
             null == e ||
                 null == t ||
+                !(0, o.uJ)(t, "connection_open") ||
                 u.A.isPendingFetch(e) ||
                 u.A.hasChannelData(e) ||
-                ((0, o.uJ)(t, "channel_select") && (0, l.WF)({ channelId: e, limit: 25 }));
+                (0, l.WF)({ channelId: e, guildId: t, limit: 25 });
         },
         CHANNEL_SELECT: (e) => {
             let { channelId: t, guildId: n, messageId: i } = e;
@@ -30,10 +31,14 @@ class c extends i.A {
                 (this.visibleBottomMessageId = null),
                 null == t ||
                     null == n ||
+                    !(0, o.uJ)(n, "channel_select") ||
                     u.A.isPendingFetch(t) ||
                     u.A.hasChannelData(t) ||
-                    ((0, o.uJ)(n, "channel_select") &&
-                        (0, l.WF)(null != i ? { channelId: t, around: i, limit: 25 } : { channelId: t, limit: 25 }));
+                    (0, l.WF)(
+                        null != i
+                            ? { channelId: t, guildId: n, around: i, limit: 25 }
+                            : { channelId: t, guildId: n, limit: 25 },
+                    );
         },
         LOAD_MESSAGES_SUCCESS: (e) => {
             let { channelId: t, jump: n } = e;
@@ -55,7 +60,7 @@ class c extends i.A {
             )
                 return;
             if (this.needsPostJumpRefetch) {
-                (this.needsPostJumpRefetch = !1), (0, l.WF)({ channelId: i, around: t, limit: 25 });
+                (this.needsPostJumpRefetch = !1), (0, l.WF)({ channelId: i, guildId: a, around: t, limit: 25 });
                 return;
             }
             let _ = this.lastFetchByChannel.get(i) ?? 0,
@@ -63,10 +68,10 @@ class c extends i.A {
             if (f < 2e3) return;
             let { above: h, below: p } = this.countBuffer(i, t, n);
             h < 5 && u.A.hasMoreConversations(i, "before")
-                ? (0, l.WF)({ channelId: i, before: t, limit: 25 })
+                ? (0, l.WF)({ channelId: i, guildId: a, before: t, limit: 25 })
                 : p < 5 && null != n && u.A.hasMoreConversations(i, "after")
-                  ? (0, l.WF)({ channelId: i, after: n, limit: 25 })
-                  : f > 6e4 && (0, l.WF)({ channelId: i, around: t, limit: 25, isStaleRefresh: !0 });
+                  ? (0, l.WF)({ channelId: i, guildId: a, after: n, limit: 25 })
+                  : f > 6e4 && (0, l.WF)({ channelId: i, guildId: a, around: t, limit: 25, isStaleRefresh: !0 });
         },
         CONVERSATIONS_FETCH_SUCCESS: (e) => {
             let { channelId: t } = e;

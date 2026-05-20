@@ -39,8 +39,8 @@ let M = {
 var D = n(646911),
     T = n(174459),
     v = n(691540),
-    C = n(857250),
-    G = n(97483),
+    G = n(857250),
+    C = n(97483),
     L = n(834730),
     O = n(231483),
     N = n(627794),
@@ -104,8 +104,8 @@ var ed = n(290136),
     eT = n(843626),
     ev = n(427209);
 n(938796);
-var eC = n(665260),
-    eG = n(563119),
+var eG = n(665260),
+    eC = n(563119),
     eL = n(581925),
     eO = n(521427),
     eN = n(20883),
@@ -200,8 +200,8 @@ var tA = n(534890),
     tD = n(734057),
     tT = n(71393),
     tv = n(87221),
-    tC = n(930125),
-    tG = n(282108),
+    tG = n(930125),
+    tC = n(282108),
     tL = n(32880),
     tO = n(803316),
     tN = n(123917),
@@ -517,9 +517,9 @@ function tk(e) {
                                 let r = a ?? (0, I.getAvailableLocales)().find((e) => e.value === s)?.name ?? s;
                                 tg.has(e.id) || tg.set(e.id, e.content),
                                     (0, v.P0)(
-                                        (0, C.o)(
+                                        (0, G.o)(
                                             I.intl.formatToPlainString(I.t.Znl8Z8, { targetLanguage: r }),
-                                            G.Ck.AI,
+                                            C.Ck.AI,
                                         ),
                                     );
                                 try {
@@ -535,9 +535,9 @@ function tk(e) {
                                             message: { id: e.id, channel_id: e.channel_id, content: t.body.content },
                                         }),
                                         (0, v.P0)(
-                                            (0, C.o)(
+                                            (0, G.o)(
                                                 I.intl.formatToPlainString(I.t.FtVUqm, { targetLanguage: r }),
-                                                G.Ck.SUCCESS,
+                                                C.Ck.SUCCESS,
                                             ),
                                         ));
                                 } finally {
@@ -609,7 +609,7 @@ function tk(e) {
         ny = (0, eR.A)(tW, t$),
         nh =
             ((V = (0, eO.Vc)(t$.guild_id, t$, "MessageContextMenu")),
-            (J = (0, eC.Lt)(tW.flags, F.pr7.IS_GUILD_OFFICIAL)),
+            (J = (0, eG.Lt)(tW.flags, F.pr7.IS_GUILD_OFFICIAL)),
             V
                 ? J
                     ? (0, l.jsx)(r.Dr, {
@@ -618,7 +618,7 @@ function tk(e) {
                               eI.A.patchMessageGuildOfficial(t$.id, tW.id, !1);
                           },
                           label: I.intl.string(I.t["2km5Gf"]),
-                          leadingAccessory: { type: "icon", icon: eG.$ },
+                          leadingAccessory: { type: "icon", icon: eC.$ },
                       })
                     : (0, l.jsx)(r.Dr, {
                           id: "guild-official-set",
@@ -665,8 +665,9 @@ function tk(e) {
             ((eo = (0, tf.ac)("message_context_menu")),
             (ew = (0, S.bG)([ty.A], () => ty.A.getConversationForMessage(t$.id, tW.id) ?? null, [t$.id, tW.id])),
             (tU = a.useCallback(() => {
-                null != ew && (tm.A.openConversationsSection(), (0, tp.xI)(t$.id, ew));
-            }, [t$.id, ew])),
+                let e = t$.getGuildId();
+                null != e && null != ew && (tm.A.openConversationsSection(), (0, tp.xI)(t$.id, e, ew));
+            }, [t$, ew])),
             eo && null != ew
                 ? (0, l.jsx)(r.Dr, {
                       id: "view-conversation",
@@ -784,7 +785,7 @@ function tk(e) {
                 ],
             });
         })(tW),
-        nC = (function (e, t) {
+        nG = (function (e, t) {
             let { reducedMotion: n } = a.useContext(Z.C),
                 i = (0, et.Id)(t),
                 s = (0, S.bG)([ei.A], () => ei.A.can(F.xBc.MANAGE_MESSAGES, t) && i, [t, i]),
@@ -837,7 +838,7 @@ function tk(e) {
                       ),
                   });
         })(tW, t$),
-        nG =
+        nC =
             ((tB = (0, et.Id)(t$)),
             !(0, S.bG)([ei.A], () => ei.A.can(F.xBc.MANAGE_MESSAGES, t$) && tB, [t$, tB]) ||
             null == tW.reactions ||
@@ -953,8 +954,8 @@ function tk(e) {
                     await s(n, y),
                         p(n),
                         null != o
-                            ? (0, v.P0)((0, C.o)(I.intl.string(I.t.wH6L0r), G.Ck.FAILURE))
-                            : (0, v.P0)((0, C.o)(I.intl.string(I.t["0rdYm2"]), G.Ck.SUCCESS));
+                            ? (0, v.P0)((0, G.o)(I.intl.string(I.t.wH6L0r), C.Ck.FAILURE))
+                            : (0, v.P0)((0, G.o)(I.intl.string(I.t["0rdYm2"]), C.Ck.SUCCESS));
                 },
                 j = (0, l.jsx)(r.Dr, { id: "automod-rules-loading", label: I.intl.string(I.t.ZTNur7) });
             return (
@@ -1028,8 +1029,8 @@ function tk(e) {
             originalContentType: tY?.originalContentType,
         }),
         nP =
-            ((tz = (0, tG.Fg)(tW)),
-            (tK = null != tY && (0, tG.qo)({ type: tC.D.GenericMedia, media: tY }, tz)),
+            ((tz = (0, tC.Fg)(tW)),
+            (tK = null != tY && (0, tC.qo)({ type: tG.D.GenericMedia, media: tY }, tz)),
             null != tY && tK
                 ? (0, l.jsx)(
                       r.Dr,
@@ -1054,7 +1055,7 @@ function tk(e) {
                       "report-image-false-positive",
                   )
                 : null),
-        nB = (0, eC.Lt)(tW.flags, F.pr7.IS_VOICE_MESSAGE)
+        nB = (0, eG.Lt)(tW.flags, F.pr7.IS_VOICE_MESSAGE)
             ? (0, l.jsx)(r.Dr, {
                   id: "save-voice-message-audio",
                   label: I.intl.string(I.t.vbAEaA),
@@ -1160,7 +1161,7 @@ function tk(e) {
             (0, l.jsxs)(r.rX, { children: ["" === tQ ? nr : null, nd, nD] }),
             (0, l.jsxs)(r.rX, { children: [nu, ng, nA, nm] }),
             (0, l.jsxs)(r.rX, { children: [nf, np, ny, nh, nE, n_, nS, nx, nb, nj, nI, nM, nT, nv] }),
-            (0, l.jsxs)(r.rX, { children: [nC, nG, nL, t6 && nO, t6 && nN, nR] }),
+            (0, l.jsxs)(r.rX, { children: [nG, nC, nL, t6 && nO, t6 && nN, nR] }),
             ns
                 ? (0, l.jsxs)(l.Fragment, { children: [nz, nK, null == nq && (0, l.jsx)(r.rX, { children: nF })] })
                 : (0, l.jsxs)(l.Fragment, { children: [nK, (0, l.jsx)(r.rX, { children: nF }), nz] }),
