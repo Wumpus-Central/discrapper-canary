@@ -252,7 +252,7 @@ class S extends s.A {
                     (0, g.yd)(
                         e.type === f.Gy.MANUAL ? "manual" : "auto",
                         [...this.timeline.read()],
-                        { signal: e, timestamp: Date.now(), emotionHistory: [] },
+                        { signal: e, timestamp: Date.now() },
                         n,
                     );
             });

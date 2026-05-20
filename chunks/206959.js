@@ -2221,12 +2221,6 @@ class er extends l.A {
     setClipBufferLength(e) {
         (0, b.lE)().setClipBufferLength?.(e);
     }
-    setClipsMLPipelineEnabled(e) {
-        (0, b.lE)().setClipsMLPipelineEnabled?.(e);
-    }
-    setClipsMLPipelineTypeEnabled(e, t) {
-        (0, b.lE)().setClipsMLPipelineTypeEnabled?.(e, t);
-    }
     saveClip(e, t) {
         let n = (0, b.lE)();
         return null == n.setClipBufferLength || null == n.saveClip

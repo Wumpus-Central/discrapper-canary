@@ -3127,8 +3127,6 @@ class tr extends g.A {
     setClipsV3MLEnabled(e) {}
     setClipsUIActive(e) {}
     setClipBufferLength(e) {}
-    setClipsMLPipelineEnabled(e) {}
-    setClipsMLPipelineTypeEnabled(e, t) {}
     saveClip(e, t) {
         return Promise.reject(Error("UNSUPPORTED"));
     }

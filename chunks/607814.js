@@ -1,35 +1,33 @@
 "use strict";
 n.d(t, {
-    pM: () => eI,
-    yT: () => es,
-    h$: () => ee,
-    MI: () => ea,
-    Fb: () => e_,
-    VO: () => ep,
-    GS: () => J,
-    fd: () => Z,
-    Ts: () => eT,
-    e6: () => em,
-    H1: () => eE,
-    jA: () => eu,
-    yd: () => er,
-    l0: () => eN,
-    Of: () => ey,
     Su: () => ec,
-    yO: () => q,
-    $N: () => eS,
+    yT: () => es,
+    $N: () => eI,
     YK: () => ed,
+    yO: () => q,
     eQ: () => $,
+    h$: () => ee,
     PW: () => eg,
-    Cr: () => eC,
-    w7: () => ev,
+    Cr: () => eN,
+    MI: () => ea,
+    w7: () => ey,
+    Fb: () => e_,
     K7: () => ef,
     HU: () => Q,
+    VO: () => ep,
     Mt: () => X,
-    dR: () => eA,
+    GS: () => J,
+    fd: () => Z,
+    Ts: () => eA,
+    e6: () => em,
     oH: () => eh,
-    Yy: () => eo,
+    jA: () => eu,
+    yd: () => er,
+    l0: () => eT,
+    H1: () => eE,
     XK: () => el,
+    Yy: () => eo,
+    Of: () => eS,
 }),
     n(321073);
 var i = n(636537),
@@ -245,17 +243,6 @@ async function j(e) {
                                   currentThreshold: t.number(),
                                   effectivePressure: t.number(),
                                   timestamp: t.number(),
-                                  emotionHistory: t
-                                      .array()
-                                      .items(
-                                          t
-                                              .object()
-                                              .keys({
-                                                  timestamp: t.number(),
-                                                  userId: t.string(),
-                                                  emotions: t.object().unknown(),
-                                              }),
-                                      ),
                                   signal: t.object().required(),
                               }),
                           timeline: t
@@ -279,6 +266,7 @@ async function j(e) {
             delete e.eventTimelineReferenceTimestamp,
             delete e.autoclipData,
             delete e.emotionHistory,
+            null != e.decision && delete e.decision.emotionHistory,
             t.assert(e, i),
             null == e.version && (e.version = 0),
             B.slice(e.version).reduce((e, t) => t(e), e)
@@ -685,37 +673,21 @@ function eg(e) {
         settings: { clipSignals: { ...v.A.getSettings().clipSignals, ...e } },
     });
 }
-function eA(e) {
-    let t = I.Ay.getMediaEngine().setClipsMLPipelineTypeEnabled;
-    null != t &&
-        (t("emotion_classifier", e.emotionClassifier),
-        t("wake_word_detector", e.wakeWordDetector),
-        t("yell_detector", e.yellDetector),
-        t("whisper_transcription", e.whisperTranscription),
-        t("laughter_shouting", e.laughterDetector)),
-        a.h.dispatch({
-            type: "CLIPS_SETTINGS_UPDATE",
-            settings: { mlPipelinesEnabled: { ...v.A.getSettings().mlPipelinesEnabled, ...e } },
-        });
-}
-function eI(e) {
-    a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { autoClipPhrases: e } });
-}
-function eT(e, t) {
+function eA(e, t) {
     a.h.dispatch({ type: "CLIPS_SIGNAL_CREATED", signal: e, timestamp: t });
 }
-function eS(e) {
+function eI(e) {
     a.h.dispatch({ type: "CLIPS_ML_DETECTION", detections: e });
 }
-function eN() {
-    eT({ type: O.Gy.MANUAL });
+function eT() {
+    eA({ type: O.Gy.MANUAL });
 }
-function ey(e) {
+function eS(e) {
     a.h.dispatch({ type: "CLIPS_SNOOZE_REMINDERS", until: Date.now() + e });
 }
-function eC() {
+function eN() {
     a.h.dispatch({ type: "CLIPS_CLEAR_REMINDER_SNOOZE" });
 }
-async function ev(e) {
+async function ey(e) {
     await eo(e, { isTemporary: !1 });
 }

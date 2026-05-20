@@ -42,14 +42,6 @@ let p = "default",
         viewerConnectivity: _.on.ALL,
         maxAutoClips: _.T2,
         clipSignals: { enableDistributedSignals: !0, enablePhraseSignals: !0, enableGameSignals: !0 },
-        mlPipelinesEnabled: {
-            emotionClassifier: !0,
-            wakeWordDetector: !1,
-            yellDetector: !0,
-            whisperTranscription: !0,
-            laughterDetector: !0,
-        },
-        autoClipPhrases: ["clip that", "clip it", "clip clip"],
     },
     P = {
         clipsSettings: M,
@@ -96,7 +88,7 @@ class k extends r.Ay.DeviceSettingsStore {
         (e) => ({ ...e, clipsSettings: { ...e.clipsSettings, decoupledClipsEnabled: M.decoupledClipsEnabled } }),
         (e) => ({ ...e, hardwareClassificationForDecoupled: e.hardwareClassificationForDecoupled ?? null }),
         (e) => {
-            let t = n(235058).Ay.getHardwareEncoding();
+            let t = n(761853).Ay.getHardwareEncoding();
             return {
                 ...e,
                 clipsSettings: {
@@ -139,18 +131,9 @@ class k extends r.Ay.DeviceSettingsStore {
                 ...e.clipsSettings,
                 maxAutoClips: e.clipsSettings.maxAutoClips ?? M.maxAutoClips,
                 clipSignals: e.clipsSettings.clipSignals ?? M.clipSignals,
-                mlPipelinesEnabled: e.clipsSettings.mlPipelinesEnabled ?? M.mlPipelinesEnabled,
-                autoClipPhrases: e.clipsSettings.autoClipPhrases ?? M.autoClipPhrases,
             },
         }),
-        (e) => ({
-            ...e,
-            clipsSettings: {
-                ...e.clipsSettings,
-                autoClipPhrases:
-                    0 === e.clipsSettings.autoClipPhrases.length ? M.autoClipPhrases : e.clipsSettings.autoClipPhrases,
-            },
-        }),
+        (e) => ({ ...e, clipsSettings: { ...e.clipsSettings } }),
         (e) => ({ ...e, remindersDismissedUntil: e.remindersDismissedUntil ?? null }),
     ];
     initialize(e) {
