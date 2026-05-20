@@ -1,0 +1,246 @@
+.header_b917ac {
+    overflow: hidden;
+    padding: 24px 24px 0
+}
+
+.closeButton_b917ac {
+    inset-inline-end: 14px;
+    position: absolute;
+    top: 12px
+}
+
+.title_b917ac {
+    font-weight: var(--font-weight-bold);
+    text-align: center
+}
+
+.footer_b917ac {
+    align-items: center;
+    justify-content: space-between
+}
+
+.subtitle_b917ac {
+    margin-top: 8px;
+    text-align: center
+}
+
+.createGuild_b917ac {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    gap: var(--space-16);
+    margin: 16px 0
+}
+
+.uploadIcon_b917ac {
+    color: var(--interactive-text-default);
+    display: flex;
+    justify-content: center;
+    padding-top: 4px
+}
+
+.nameInput_b917ac {
+    margin-top: 24px
+}
+
+.descriptionInput_b917ac {
+    margin-top: 16px
+}
+
+.guidelines_b917ac {
+    margin-top: 8px;
+    padding-bottom: 4px
+}
+
+.creationIntentCheckbox_b917ac {
+    margin-top: 18px
+}
+
+.creationIntentText_b917ac {
+    color: var(--interactive-text-default)
+}
+
+.formItemSpaced_b917ac {
+    margin-top: 16px
+}
+
+.header_c04f35 {
+    flex-grow: 0;
+    overflow: hidden;
+    padding-block: var(--modal-vertical-padding) var(--space-8);
+    padding-inline: var(--modal-horizontal-padding) var(--modal-horizontal-padding)
+}
+
+.closeButton_c04f35 {
+    inset-inline-end: calc(var(--modal-horizontal-padding) - var(--space-8));
+    position: absolute;
+    top: 12px;
+    z-index: 1000
+}
+
+.templatesList_c04f35 {
+    height: 330px;
+    margin-top: 24px;
+    padding-block: var(--space-8) var(--space-8);
+    padding-inline: var(--modal-horizontal-padding) var(--space-8)
+}
+
+.title_c04f35 {
+    font-weight: var(--font-weight-bold)
+}
+
+.subtitle_c04f35,
+.title_c04f35 {
+    text-align: center
+}
+
+.subtitle_c04f35 {
+    margin-top: 8px
+}
+
+.optionHeader_c04f35 {
+    margin-bottom: 8px;
+    margin-top: 16px;
+    text-transform: uppercase
+}
+
+.footer_c04f35 {
+    align-items: center;
+    flex-direction: column
+}
+
+.footerTitle_c04f35 {
+    margin-bottom: 8px
+}
+
+.footerButton_c04f35 {
+    align-self: stretch
+}
+
+@media (max-width:485px) {
+    .footer_c04f35 {
+        bottom: 0;
+        box-sizing: border-box;
+        position: fixed;
+        width: 100%
+    }
+}
+
+.container_b0f4cc {
+    display: flex;
+    flex-direction: column
+}
+
+.title_b0f4cc {
+    color: var(--interactive-text-default);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 8px;
+    text-transform: uppercase
+}
+
+.inputs_b0f4cc {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    width: 100%
+}
+
+.day_b0f4cc {
+    width: 30%
+}
+
+.month_b0f4cc {
+    width: 35%
+}
+
+.year_b0f4cc {
+    width: 30%
+}
+
+.errors_b0f4cc {
+    color: var(--text-feedback-critical)
+}
+
+.checkbox_d332d2 {
+    margin-inline-end: 8px
+}
+
+.errorMessage_d332d2 {
+    color: var(--text-feedback-critical)
+}
+
+.createAccountTemplateHeader_d332d2 {
+    color: var(--text-strong);
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold)
+}
+
+.authBlock_d332d2 {
+    margin-top: 32px
+}
+
+.horizontalAuthBox_d332d2 {
+    width: 960px
+}
+
+.flex_d332d2 {
+    flex: 1 1 auto
+}
+
+.divider_d332d2 {
+    background-color: var(--border-subtle);
+    height: 1px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    width: 100%
+}
+
+.goBackButton_d332d2 {
+    margin-bottom: 16px;
+    padding-inline-start: 0
+}
+
+.goBackButton_d332d2 .content_d332d2 {
+    align-items: center;
+    display: flex
+}
+
+.goBackButton_d332d2 .caret_d332d2 {
+    margin-block: 0 1px;
+    margin-inline: 0 4px
+}
+
+.messageNegative_d332d2 {
+    color: var(--text-feedback-critical)
+}
+
+.messagePositive_d332d2 {
+    color: var(--text-feedback-positive)
+}
+
+.inviteBirthdayInput_d332d2 {
+    margin-bottom: 32px;
+    margin-top: 20px
+}
+
+.consentBox_d332d2 {
+    margin-bottom: 8px;
+    margin-top: 8px
+}
+
+.consentSubText_d332d2 {
+    color: var(--text-subtle);
+    font-size: 14px;
+    line-height: 18px
+}
+
+.centeredButtonContainer_d332d2 {
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.birthdayInput_d332d2 {
+    margin-bottom: 20px;
+    margin-top: 20px
+}

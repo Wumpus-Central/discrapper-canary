@@ -1,0 +1,50 @@
+.badge__6ba43 {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: inline-block;
+    height: 1rem;
+    -o-object-fit: contain;
+    object-fit: contain;
+    overflow: hidden;
+    position: relative;
+    text-indent: 0;
+    top: .1875rem;
+    vertical-align: top;
+    width: 1rem
+}
+
+.popoutContainer__8641f {
+    padding: var(--custom-message-helpers-popout-padding-width)
+}
+
+.mainContent__8641f {
+    align-items: start;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px
+}
+
+.roleIconContainer__8641f {
+    margin-inline-end: var(--custom-message-helpers-popout-padding-width);
+    width: 40px
+}
+
+.roleName__8641f {
+    margin-bottom: 4px
+}
+
+.truncatingText__8641f {
+    min-width: 0
+}
+
+.ctaButtonContent__8641f {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.boosterBadge__8641f {
+    height: 14px;
+    margin-inline-end: 3px;
+    width: 14px
+}

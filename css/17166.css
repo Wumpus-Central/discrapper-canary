@@ -1,0 +1,217 @@
+.container__8f41e {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    display: flex;
+    justify-content: space-between;
+    min-width: 0;
+    padding-block: var(--space-8);
+    padding-inline-end: var(--space-8);
+    padding-inline-start: var(--space-4)
+}
+
+.container__8f41e.hoverBackground__8f41e:hover {
+    background: var(--background-mod-muted)
+}
+
+.userInfoContainer__8f41e {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    min-width: 0;
+    overflow: hidden
+}
+
+.userInfoContainer__8f41e.faded__8f41e {
+    opacity: .5
+}
+
+.avatar__8f41e {
+    flex-shrink: 0;
+    margin-inline-end: var(--space-12)
+}
+
+.username__8f41e {
+    flex-shrink: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.separator__8f41e {
+    margin-inline-end: var(--space-4);
+    margin-inline-start: var(--space-4)
+}
+
+.label__8f41e {
+    flex-shrink: 0;
+    white-space: nowrap
+}
+
+.userIconCircle__8f41e {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border-radius: 50%;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+.textButtonContainer__8f41e {
+    margin-inline-start: var(--space-12)
+}
+
+.logoHeader_f1578d {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 23.643px;
+    text-transform: uppercase
+}
+
+.container_f1578d {
+    background: var(--background-surface-high);
+    border-radius: var(--radius-sm);
+    padding: var(--space-4) var(--space-24) 0;
+    width: 100%
+}
+
+.header_f1578d {
+    align-items: center;
+    border-bottom: 1px solid var(--border-muted);
+    display: flex
+}
+
+.headerTitle_f1578d {
+    height: 16px
+}
+
+.contentGrid_f1578d {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 320px
+}
+
+.contentGrid_f1578d>* {
+    min-width: 0
+}
+
+.descriptionAndButtonContainer_f1578d {
+    align-items: flex-start;
+    border-inline-end: 1px solid var(--border-muted);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline-end: var(--space-32);
+    padding-bottom: var(--space-24);
+    padding-top: var(--space-24)
+}
+
+.descriptionContainer_f1578d {
+    margin-bottom: var(--space-10)
+}
+
+.buttonContainer_f1578d {
+    margin-top: var(--space-12)
+}
+
+.usersListHeader_f1578d,
+.usersListHeaderContainer_f1578d {
+    margin-bottom: 10px
+}
+
+.usersListHeader_f1578d {
+    padding: var(--space-12) var(--space-4) 0
+}
+
+.button_f1578d {
+    margin-top: var(--space-12)
+}
+
+.premiumGroupIcon_f1578d {
+    color: var(--text-strong)
+}
+
+.churnDiscountBanner__32fe3 {
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 16px 24px 24px;
+    position: relative
+}
+
+.churnDiscountBannerContent__32fe3 {
+    display: flex;
+    flex-direction: row
+}
+
+.churnDiscountBannerDetails__32fe3 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    max-width: 420px;
+    padding-inline-end: 12px
+}
+
+.churnDiscountBannerBackground__32fe3 {
+    background-color: var(--background-base-lowest);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md)
+}
+
+.selectPlanDivider__32fe3 {
+    background-color: var(--border-subtle);
+    height: 1px;
+    margin: 8px 0 16px
+}
+
+.headerLabel__32fe3 {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 4px
+}
+
+.headerGradient__32fe3 {
+    border-radius: var(--radius-md);
+    margin: -1px;
+    margin-top: calc(var(--custom-modal-padding-top)*-1 - 1px);
+    padding: 1px;
+    padding-top: calc(var(--custom-modal-padding-top) + 1px)
+}
+
+.churnDiscountBannerImage__32fe3 {
+    margin-inline-start: auto;
+    max-height: 140px;
+    max-width: 250px
+}
+
+.activeSubButtons__32fe3 {
+    display: flex;
+    gap: 8px
+}
+
+.churnDiscountBannerButton__32fe3 {
+    margin-top: 12px;
+    position: relative
+}
+
+.churnDiscountPill__32fe3 {
+    margin-inline-start: 8px;
+    position: relative
+}
+
+.churnDiscountBannerExpiryDate__32fe3 {
+    justify-content: flex-end;
+    margin-inline-start: auto;
+    position: relative
+}
+
+.churnDiscountBannerWordMark__32fe3 {
+    color: var(--text-strong);
+    width: 67px
+}

@@ -1,0 +1,110 @@
+.serverNickname__7bf69 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.separator__7bf69 {
+    background-color: var(--border-subtle);
+    height: 1px
+}
+
+.container_fa285e {
+    width: 100%
+}
+
+.guildBadge_fa285e {
+    flex-shrink: 0;
+    height: 25px;
+    margin-inline-end: 6px;
+    position: relative;
+    width: 25px
+}
+
+.appIcon_fa285e {
+    display: inline-block
+}
+
+.appIconSize_fa285e {
+    height: 100px;
+    width: 100px
+}
+
+@media (max-height:720px) {
+
+    .appIcon_fa285e,
+    .avatar_fa285e,
+    .guildIcon_fa285e {
+        height: 64px;
+        width: 64px
+    }
+}
+
+.inviteResolvingGuildName_fa285e {
+    margin-top: 8px
+}
+
+.inviteResolvingGuildName_fa285e,
+.title_fa285e {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.title_fa285e {
+    color: var(--text-strong);
+    font-weight: var(--font-weight-semibold)
+}
+
+.directInviteSubTitle_fa285e {
+    margin-top: 4px
+}
+
+.guildContainer_fa285e {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.appIn_fa285e {
+    margin: 4px 0
+}
+
+.appGuildName_fa285e {
+    margin-inline-start: 8px
+}
+
+.icon_fa285e {
+    margin-inline-end: 8px
+}
+
+.rolesList_fa285e {
+    margin-bottom: 0;
+    padding: 0 16px
+}
+
+.rolesList_fa285e>div:last-child {
+    justify-content: center
+}
+
+.transitionGroup__6ba63 {
+    overflow: hidden;
+    position: relative
+}
+
+.measurement__6ba63 {
+    overflow: hidden
+}
+
+.measurementFill__6ba63 {
+    flex: 0 0 auto;
+    width: 100%
+}
+
+.measurementFillStatic__6ba63 {
+    height: 100%
+}
+
+.animatedNode__6ba63 {
+    width: 100%
+}
