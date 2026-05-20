@@ -393,6 +393,7 @@ let q = function (e) {
                           planId: ec,
                           subscription: t,
                           renewalInvoicePreview: s,
+                          renewalInvoiceWithEntitlementsPreview: r,
                           hasDiscountApplied: et,
                           activeDiscountInfo: ei,
                           hasFractionalPremiumWithSub: J,
