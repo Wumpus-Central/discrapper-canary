@@ -316,7 +316,7 @@ async function H() {
             null != (e = n.error) &&
             "setup_intent_unexpected_state" === e.code &&
             null != e.setup_intent &&
-            "succeeded" === e.setup_intent.status &&
+            ("succeeded" === e.setup_intent.status || "canceled" === e.setup_intent.status) &&
             o !== b.he.PAYMENT_REQUEST
         ) {
             let { client_secret: e } = await (0, R.w)();
