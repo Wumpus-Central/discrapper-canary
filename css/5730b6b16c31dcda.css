@@ -10,33 +10,42 @@
     margin-inline-start: 0
 }
 
-.icon_df65b5 {
-    color: var(--guild-boosting-pink)
+.timestamp_df65b5 {
+    color: var(--text-subtle);
+    opacity: .5
 }
 
-.timestamp_df65b5 {
+.timestamp_df65b5,
+.timestampLegacy_df65b5 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0
+}
+
+.timestampLegacy_df65b5 {
     color: var(--text-muted);
     font-size: 12px;
     font-weight: 500
 }
 
-.boostMessage_df65b5,
-.timestamp_df65b5 {
-    align-items: center;
-    display: flex
-}
-
 .boostMessage_df65b5 {
+    align-items: center;
+    display: flex;
     flex: 1;
     flex-direction: row;
     gap: var(--space-4);
-    justify-content: flex-start
+    justify-content: flex-start;
+    min-width: 0
 }
 
 .boostMessageUser_df65b5 {
-    margin-inline-end: var(--space-4);
-    max-width: 170px;
-    min-width: auto
+    min-width: 0;
+    overflow: hidden
+}
+
+.boostMessageText_df65b5 {
+    flex-shrink: 0;
+    white-space: nowrap
 }
 
 .header__2281b {
