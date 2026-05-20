@@ -10,5 +10,4 @@ e.exports = {
     p$: "emptyState_ab4223",
     qO: "emptyDescription_ab4223",
     CZ: "emptyProtip_ab4223",
-    pi: "emptyActions_ab4223",
 };

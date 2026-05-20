@@ -115,12 +115,15 @@ function y(e, t) {
     return (0, o.bG)([p.A], () => null != e && p.A.hasSkuId(e, t));
 }
 function C(e) {
-    let { isGift: t, giftRecipient: n, isSocialLayerStorefrontEnabled: i = !0 } = e,
-        r = (0, l.A)({ userId: n?.id }),
+    let { isGift: t, giftRecipient: n, isSocialLayerStorefrontEnabled: i = !0 } = e;
+    s.useEffect(() => {
+        n?.id != null && (0, d.A)(n.id);
+    }, [n?.id]);
+    let r = (0, l.A)({ userId: n?.id }),
         a = (0, o.bG)([c.A], () => (n?.id == null ? null : c.A.getFirstWishlistId(n.id))),
         { wishlist: u } = N({ wishlistId: null != a && t && null != n ? a : null, userId: n?.id }),
-        d = s.useMemo(() => u?.items.filter((e) => !0 !== e.isOwned) ?? [], [u]);
-    return s.useMemo(() => !0 === t && null != n && (d.length > 0 || (i && r.length > 0)), [t, n, d, r, i]);
+        _ = s.useMemo(() => u?.items.filter((e) => !0 !== e.isOwned) ?? [], [u]);
+    return s.useMemo(() => !0 === t && null != n && (_.length > 0 || (i && r.length > 0)), [t, n, _, r, i]);
 }
 function v() {
     return (function (e) {

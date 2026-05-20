@@ -285,7 +285,7 @@ var eL = n(285406),
     eJ = n(468689),
     e0 = n(375708),
     e1 = n(330766);
-function e3(e) {
+function e6(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e,
         s = (0, e$.bG)([X.A, eI.default], () => {
             let e = eI.default.getCurrentUser(),
@@ -318,10 +318,10 @@ function e3(e) {
         })
     );
 }
-var e6 = n(338854);
+var e3 = n(338854);
 function e5(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e;
-    return (0, l.jsx)(e6.H, {
+    return (0, l.jsx)(e3.H, {
         targetElementRef: i,
         title: e0.intl.string(e0.t.gCgirr),
         body: e0.intl.string(e0.t.fLMZFw),
@@ -459,7 +459,7 @@ let tn = r.memo(function (e) {
                 }
                 case u.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
                     return (0, l.jsx)(tt, {
-                        renderPopout: (e) => (0, l.jsx)(e3, { guildId: n.id, markAsDismissed: a, targetElementRef: e }),
+                        renderPopout: (e) => (0, l.jsx)(e6, { guildId: n.id, markAsDismissed: a, targetElementRef: e }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
@@ -749,8 +749,8 @@ var tX = n(503698),
     tJ = n(713654),
     t0 = n(976860),
     t1 = n(790535),
-    t3 = n(110618),
-    t6 = n(495544),
+    t6 = n(110618),
+    t3 = n(495544),
     t5 = n(309010),
     t8 = n(312006),
     t2 = n(403362),
@@ -1051,8 +1051,8 @@ function n_(e) {
         u = (0, d.bG)([f.A], () => f.A.can(H.xBc.CONNECT, n)),
         c =
             ((t = n.id),
-            (0, d.bG)([t6.default, t5.A, t8.Ay], () => {
-                let e = t6.default.getId();
+            (0, d.bG)([t3.default, t5.A, t8.Ay], () => {
+                let e = t3.default.getId();
                 return t5.A.getVoiceChannelId() === t ? t8.Ay.getPermissionsForUser(e, t) : null;
             }, [t])),
         A = e0.intl.string(e0.t.VJlc0S);
@@ -1083,7 +1083,7 @@ function n_(e) {
                                     color: "none",
                                     variant: "text-xs/normal",
                                     className: nr.c8,
-                                    children: (0, t3.c)(a, o, n?.id, i.length),
+                                    children: (0, t6.c)(a, o, n?.id, i.length),
                                 }),
                             ],
                         })
@@ -1134,7 +1134,7 @@ function nI(e) {
         onClick: function () {
             (0, _.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("15686"),
+                    n.e("8516"),
                     n.e("97804"),
                     n.e("7265"),
                     n.e("97641"),
@@ -1428,8 +1428,8 @@ let nQ = new n$(N.h),
         { type: H.n5X.GAME_CLAIM, dismissibleContentType: u.M.GAME_CLAIM_COACHMARK },
     ],
     n1 = n0.map((e) => e.store).filter(t2.Vq),
-    n3 = new Set([u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, u.M.CHANNEL_NOTICE_GUILD_BANNER]);
-function n6(e) {
+    n6 = new Set([u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, u.M.CHANNEL_NOTICE_GUILD_BANNER]);
+function n3(e) {
     e.stopPropagation();
 }
 let n5 = [];
@@ -1468,7 +1468,7 @@ function n8(e) {
                     : n0
                           .filter((e) => {
                               let { dismissibleContentType: t, store: n } = e;
-                              return !0 === n?.channelNoticePredicate(A, E) && !n3.has(t);
+                              return !0 === n?.channelNoticePredicate(A, E) && !n6.has(t);
                           })
                           .map((e) => e.dismissibleContentType),
             [A, E, I],
@@ -1500,7 +1500,7 @@ function n8(e) {
                     return null;
             }
         })();
-    return null == O ? null : (0, l.jsx)("div", { onContextMenu: n6, children: O });
+    return null == O ? null : (0, l.jsx)("div", { onContextMenu: n3, children: O });
 }
 let n2 = (e) => {
     let { guild: t } = e;
@@ -1609,18 +1609,17 @@ class il extends r.PureComponent {
             if ((0, el.ai)(t.id)) return void this.props.onFavoriteGuildContextMenu(e);
             (0, I.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    n.e("61572"),
+                    n.e("69511"),
                     n.e("63897"),
                     n.e("25539"),
                     n.e("60361"),
-                    n.e("15686"),
-                    n.e("73589"),
+                    n.e("8516"),
+                    n.e("56927"),
                     n.e("84541"),
                     n.e("78220"),
                     n.e("57303"),
                     n.e("11377"),
-                    n.e("37520"),
-                    n.e("35310"),
+                    n.e("18217"),
                     n.e("8802"),
                     n.e("20706"),
                     n.e("99961"),
@@ -1643,12 +1642,13 @@ class il extends r.PureComponent {
                     n.e("24949"),
                     n.e("33957"),
                     n.e("59204"),
-                    n.e("24972"),
-                    n.e("28793"),
+                    n.e("96867"),
+                    n.e("8941"),
                     n.e("60389"),
                     n.e("23005"),
                     n.e("25812"),
-                    n.e("87845"),
+                    n.e("77377"),
+                    n.e("12169"),
                     n.e("23531"),
                     n.e("10859"),
                     n.e("61175"),
@@ -2255,8 +2255,8 @@ function ir(e) {
     n7.A.useConfig({ guildId: L, location: "guild_sidebar" });
     let e0 = (0, ef.C$)(L, "GuildSidebar"),
         e1 = (0, d.bG)([X.A], () => X.A.getGuild(L)?.features.has(H.GuildFeatures.GAME_SERVERS) ?? !1, [L]),
-        e3 = e0 && !e1 && !1 === eJ,
-        e6 = (0, eG.J)("GuildSidebar"),
+        e6 = e0 && !e1 && !1 === eJ,
+        e3 = (0, eG.J)("GuildSidebar"),
         e5 = (0, ex.S)(L, "GuildSidebar"),
         e8 = e0 && !e1 && e5 && !1 === eJ,
         e2 = (0, eH.A)(),
@@ -2269,11 +2269,11 @@ function ir(e) {
         eT && tt.push(u.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
         eM && tt.push(u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
         !1 === eJ && tt.push(u.M.GUILD_POWERUP_PERKS_COACHMARK),
-        e3 && tt.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
+        e6 && tt.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
         e8 && tt.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
         eq && tt.push(u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
     let [tn, ti] = (0, ei.kn)(tt, eE.m.GUILD_HEADER_TOOLTIPS),
-        [ts, tl] = (0, eD.vB)(e6 && e0 && !1 === eJ && !(0, el.ai)(L), eE.m.GUILD_HEADER_TOOLTIPS),
+        [ts, tl] = (0, eD.vB)(e3 && e0 && !1 === eJ && !(0, el.ai)(L), eE.m.GUILD_HEADER_TOOLTIPS),
         [tr, ta] = (0, ei.D8)(
             e9 ? u.M.BOOST_TO_UNLOCK_COACHMARK : null,
             L,

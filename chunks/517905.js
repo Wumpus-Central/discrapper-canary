@@ -7,7 +7,7 @@ var r = n(292036),
 let a = (0, n(268218).Fe)({
     createPromise: () =>
         Promise.all([
-            n.e("28793"),
+            n.e("8941"),
             n.e("98398"),
             n.e("11377"),
             n.e("24199"),
