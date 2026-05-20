@@ -266,50 +266,45 @@ function W() {
     let t,
         n,
         i,
-        s,
-        { enableNewRequestBehavior: o } = A.A.useConfig({ location: "useQuestBarQuest" }),
-        l =
+        { enableNewRequestBehavior: s } = A.A.useConfig({ location: "useQuestBarQuest" }),
+        o =
             ((e = g.yW.DESKTOP_ACCOUNT_PANEL_AREA),
             (t = (0, r.useRef)(null)),
-            (n = (0, a.bG)([m.A], () => m.A.questDeliveryOverride)),
-            (i = (0, a.bG)([m.A], () => m.A.questAdDecisionByPlacement.get(e) ?? null)),
-            (s = (0, a.bG)([m.A], () => (i?.questId != null ? (m.A.quests.get(i.questId) ?? null) : null))),
+            (n = (0, a.bG)([m.A], () => m.A.questAdDecisionByPlacement.get(e) ?? null)),
+            (i = (0, a.bG)([m.A], () => (n?.questId != null ? (m.A.quests.get(n.questId) ?? null) : null))),
             ((0, r.useEffect)(() => {
-                if ((null != t.current && clearInterval(t.current), null != n)) return;
-                b(i, e, "questBar-open"),
+                null != t.current && clearInterval(t.current),
+                    b(n, e, "questBar-open"),
                     (t.current = setInterval(() => {
                         b(m.A.questAdDecisionByPlacement.get(e) ?? null, e, "questBar-interval");
                     }, R));
-                let r = t.current;
+                let i = t.current;
                 return () => {
-                    null != r && clearInterval(r);
+                    null != i && clearInterval(i);
                 };
-            }, [i, e, n]),
-            null != n)
-                ? n
-                : null == s || (0, O.Ic)(s)
-                  ? null
-                  : s),
+            }, [n, e]),
+            null == i || (0, O.Ic)(i))
+                ? null
+                : i),
+        l = (0, a.bG)([m.A], () => m.A.getQuestPreviewOverride(g.uF.QUEST_BAR_V2), []),
         u = (0, a.bG)(
             [m.A],
-            () =>
-                m.A.questDeliveryOverride ??
-                (0, O.t6)(m.A.quests, m.A.questToDeliverForPlacement, g.yW.DESKTOP_ACCOUNT_PANEL_AREA) ??
-                null,
+            () => (0, O.t6)(m.A.quests, m.A.questToDeliverForPlacement, g.yW.DESKTOP_ACCOUNT_PANEL_AREA) ?? null,
         );
-    return o ? l : u;
+    return l ?? (s ? o : u);
 }
 function K(e) {
     let { quest: t } = e,
         n = (0, T.s)(),
         i = (0, I.LS)(t),
         { premiumSubscription: r } = (0, a.cf)([p.A], () => ({ premiumSubscription: p.A.getPremiumSubscription() })),
-        s = (0, a.bG)([m.A], () => null != m.A.questDeliveryOverride);
+        s = (0, a.bG)([m.A], () => null != m.A.getQuestPreviewOverride(g.uF.QUEST_BAR_V2), []);
     if (null == t) return { isQuestBarVisible: !1, reason: "quest_is_null" };
+    if (s) return { isQuestBarVisible: !0, reason: "quest_bar_visible" };
     if ((0, w.K9)(t.config) && r?.isPurchasedExternally)
         return { isQuestBarVisible: !1, reason: "premium_subscription_is_purchased_externally" };
     let o = t.userStatus?.claimedAt != null,
-        l = !s && null != t.userStatus && (0, O.gO)(t.userStatus, g.uF.QUEST_BAR);
+        l = null != t.userStatus && (0, O.gO)(t.userStatus, g.uF.QUEST_BAR);
     return o
         ? { isQuestBarVisible: !1, reason: "quest_claimed" }
         : i

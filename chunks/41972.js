@@ -1763,7 +1763,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 547992, Version Hash: 5b4e0ad2355013c987db764f3bd8e0a595366de4`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 548057, Version Hash: 467626ebed1ac440a1797ac0994514ef6b51457d`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -5891,19 +5891,19 @@ let lU = (e) => {
     });
 var lk = n(812808);
 function lG(e) {
-    let { party: t, onChannelContextMenu: n, quest: i } = e,
-        r = (0, lk.G)(),
-        { voiceChannels: s, currentActivities: a, partiedMembers: o, applicationStreams: l, guildContext: u } = t,
-        c = (0, oC.sb)(i),
-        d = [],
-        _ = (e) => {
-            let { length: t } = d;
-            d.push(e);
+    let { party: t, onChannelContextMenu: n, quest: i, hasStaffQuestActivityPanelOverride: r } = e,
+        s = (0, lk.G)(),
+        { voiceChannels: a, currentActivities: o, partiedMembers: l, applicationStreams: u, guildContext: c } = t,
+        d = (0, oC.sb)(i),
+        _ = [],
+        f = (e) => {
+            let { length: t } = _;
+            _.push(e);
         };
-    for (let { activity: e } of (s.length > 0 &&
-        s.forEach((e) => {
+    for (let { activity: e } of (a.length > 0 &&
+        a.forEach((e) => {
             let { members: t, channel: i, guild: r } = e;
-            _(
+            f(
                 (0, k.jsx)(
                     lU.VoiceSection,
                     {
@@ -5924,20 +5924,20 @@ function lG(e) {
         if (null != e) {
             let t = oV.Fm(e);
             if (null != t) {
-                _(t);
+                f(t);
                 break;
             }
         }
     return (
-        l.length > 0 &&
-            r &&
-            l.forEach((e) => {
+        u.length > 0 &&
+            s &&
+            u.forEach((e) => {
                 let { stream: t, streamUser: n, activity: i } = e;
-                _(
+                f(
                     (0, k.jsx)(
                         lU.ApplicationStreamingSection,
                         {
-                            guildId: u?.id,
+                            guildId: c?.id,
                             user: n,
                             activity: i,
                             applicationStream: t,
@@ -5949,29 +5949,29 @@ function lG(e) {
                     ),
                 );
             }),
-        a.forEach((e, t) => {
-            let { activity: n, application: r, playingMembers: l, activityUser: d } = e;
+        o.forEach((e, t) => {
+            let { activity: n, application: s, playingMembers: u, activityUser: _ } = e;
             if (null == n || null == n.type) return null;
             if (n.type === eL.$pd.PLAYING) {
                 let e =
-                    null != r
+                    null != s
                         ? (0, k.jsx)(
                               lU.GameSection,
                               {
-                                  application: r,
-                                  partySize: { knownSize: l.length, unknownSize: 0, totalSize: l.length },
-                                  members: l,
+                                  application: s,
+                                  partySize: { knownSize: u.length, unknownSize: 0, totalSize: u.length },
+                                  members: u,
                                   activity: n,
                               },
                               `game-${n.session_id ?? t}-${n.application_id ?? t}`,
                           )
                         : null;
-                if (a.length > 1 && !(0, oP.A)(n) && null != e) _(e);
+                if (o.length > 1 && !(0, oP.A)(n) && null != e) f(e);
                 else if ((0, ox.A)(n)) {
-                    let e = new Set(l.map((e) => e.id)),
-                        t = s.find((e) => null != e)?.channel;
+                    let e = new Set(u.map((e) => e.id)),
+                        t = a.find((e) => null != e)?.channel;
                     null != t &&
-                        _(
+                        f(
                             (0, k.jsx)(
                                 lU.EmbeddedActivitySection,
                                 { activity: n, participants: e, channel: t, guildId: t.guild_id },
@@ -5980,56 +5980,58 @@ function lG(e) {
                         );
                 } else
                     null == e || (0, oP.A)(n) || null != n.assets
-                        ? _(
+                        ? f(
                               (0, k.jsx)(
                                   lU.RichPresenceSection,
-                                  { activity: n, getAssetImage: oF.uD, user: d },
-                                  `rich-presence-${n.session_id ?? t}-${d.id}`,
+                                  { activity: n, getAssetImage: oF.uD, user: _ },
+                                  `rich-presence-${n.session_id ?? t}-${_.id}`,
                               ),
                           )
-                        : _(e);
+                        : f(e);
             } else if ((0, ok.A)(n)) {
-                let e = s.length > 0 && s[0].members.length > 1,
-                    i = l.length > 1;
-                _(
+                let e = a.length > 0 && a[0].members.length > 1,
+                    i = u.length > 1;
+                f(
                     (0, k.jsx)(
                         lU.TwitchSection,
-                        { guildId: u?.id, activity: n, user: e || i ? d : null, getAssetImage: oF.uD },
+                        { guildId: c?.id, activity: n, user: e || i ? _ : null, getAssetImage: oF.uD },
                         `streaming-${n.session_id ?? t}`,
                     ),
                 );
             } else
                 n.type === eL.$pd.LISTENING &&
                     ((0, oU.A)(n)
-                        ? _(
+                        ? f(
                               (0, k.jsx)(
                                   lU.SpotifySection,
                                   {
                                       activity: n,
-                                      isSolo: 1 === o.length,
-                                      partySize: { knownSize: l.length, unknownSize: 0, totalSize: l.length },
+                                      isSolo: 1 === l.length,
+                                      partySize: { knownSize: u.length, unknownSize: 0, totalSize: u.length },
                                       getAssetImage: oF.uD,
-                                      members: l,
+                                      members: u,
                                   },
-                                  `spotify-${n.session_id ?? t}-${d.id}`,
+                                  `spotify-${n.session_id ?? t}-${_.id}`,
                               ),
                           )
                         : (null != n.assets || (0, oP.A)(n)) &&
-                          _(
+                          f(
                               (0, k.jsx)(
                                   lU.RichPresenceSection,
-                                  { activity: n, getAssetImage: oF.uD, user: d },
-                                  `rich-presence-${n.session_id ?? t}-${d.id}`,
+                                  { activity: n, getAssetImage: oF.uD, user: _ },
+                                  `rich-presence-${n.session_id ?? t}-${_.id}`,
                               ),
                           ));
-            c &&
+            !0 !== r &&
                 null != i &&
-                null != r &&
+                null != s &&
+                d &&
                 (0, oO.zS)(n, i) &&
                 (null == i.userStatus || !(0, ov.gO)(i.userStatus, oy.uF.ACTIVITY_PANEL)) &&
-                _((0, k.jsx)(oG.A, { quest: i }, `quest-${i.id}-${n.session_id ?? t}`));
+                f((0, k.jsx)(oG.A, { quest: i }, `quest-${i.id}-${n.session_id ?? t}`));
         }),
-        d.length > 0 ? (0, k.jsx)(lU.Body, { children: d }) : null
+        !0 === r && null != i && f((0, k.jsx)(oG.A, { quest: i }, `quest-override-${i.id}`)),
+        _.length > 0 ? (0, k.jsx)(lU.Body, { children: _ }) : null
     );
 }
 var lF = n(61330);
@@ -6712,33 +6714,44 @@ var ud = n(442433),
 let uh = 15 * n5.A.Millis.MINUTE,
     up =
         ((f = function (e) {
-            let { party: t, onUserContextMenu: n, onChannelContextMenu: i, quest: r } = e,
-                s = e8.useRef(null),
-                a = (0, k.jsx)(lV, { party: t, onUserContextMenu: n }),
-                o = (0, k.jsx)(lG, { party: t, onChannelContextMenu: i, quest: r }),
-                { partiedMembers: l, applicationStreams: u, currentActivities: c, voiceChannels: d } = t,
-                _ = l.length,
+            let {
+                    party: t,
+                    onUserContextMenu: n,
+                    onChannelContextMenu: i,
+                    quest: r,
+                    hasStaffQuestActivityPanelOverride: s,
+                } = e,
+                a = e8.useRef(null),
+                o = (0, k.jsx)(lV, { party: t, onUserContextMenu: n }),
+                l = (0, k.jsx)(lG, {
+                    party: t,
+                    onChannelContextMenu: i,
+                    quest: r,
+                    hasStaffQuestActivityPanelOverride: s,
+                }),
+                { partiedMembers: u, applicationStreams: c, currentActivities: d, voiceChannels: _ } = t,
                 f = u.length,
                 h = c.length,
-                p = d.length > 0,
-                E = e8.useCallback(() => {
-                    let e = c
+                p = d.length,
+                E = _.length > 0,
+                m = e8.useCallback(() => {
+                    let e = d
                         .filter(
                             (e) => e.application?.name != null && (0, ew.isGameApplicationType)(e.application?.type),
                         )
                         .map((e) => e.application.name);
                     ew.default.track(eL.HAw.NOW_PLAYING_CARD_HOVERED, {
-                        num_users: _,
-                        num_streams: f,
-                        num_activities: h,
-                        in_voice_channel: p,
+                        num_users: f,
+                        num_streams: h,
+                        num_activities: p,
+                        in_voice_channel: E,
                         games_detected: e,
                     });
-                }, [_, f, h, p, c]),
-                m = e8.useMemo(() => oT()(E, uh), [E]);
-            return null != a || null != o
+                }, [f, h, p, E, d]),
+                g = e8.useMemo(() => oT()(m, uh), [m]);
+            return null != o || null != l
                 ? (0, k.jsx)(so.Y, {
-                      targetElementRef: s,
+                      targetElementRef: a,
                       position: "left",
                       renderPopout: (e) => {
                           let { closePopout: n } = e;
@@ -6749,12 +6762,12 @@ let uh = 15 * n5.A.Millis.MINUTE,
                           let { isShown: n } = t;
                           return (0, k.jsx)(lU, {
                               ...e,
-                              ref: s,
-                              onMouseEnter: m,
+                              ref: a,
+                              onMouseEnter: g,
                               "aria-haspopup": "menu",
                               className: uf.MP,
                               active: n,
-                              children: (0, k.jsxs)("div", { children: [a, o] }),
+                              children: (0, k.jsxs)("div", { children: [o, l] }),
                           });
                       },
                   })
@@ -7226,13 +7239,22 @@ function um() {
             }
             return e;
         }, [l, o, s]),
-        _ = null;
+        _ = (0, e6.bG)([oN.A], () => oN.A.getQuestPreviewOverride(oy.uF.ACTIVITY_PANEL), []),
+        f = null;
     return t
-        ? (_ =
+        ? (f =
               e.length > 0
-                  ? e.map((e) => {
-                        let { party: t } = e;
-                        return (0, k.jsx)(up, { party: t, quest: d.get(t.id) }, t.id);
+                  ? e.map((e, t) => {
+                        let { party: n } = e;
+                        return (0, k.jsx)(
+                            up,
+                            {
+                                party: n,
+                                quest: null != _ && 0 === t ? _ : d.get(n.id),
+                                hasStaffQuestActivityPanelOverride: null != _ && 0 === t,
+                            },
+                            n.id,
+                        );
                     })
                   : (0, k.jsxs)("div", {
                         className: uf.aM,
@@ -18373,7 +18395,7 @@ let SN = "isHideDevBanner",
                     className: t2()(SS.Wz, SS.mr),
                     children: [
                         (0, k.jsx)(ST, { className: SS.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "547992" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "548057" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -22167,8 +22189,8 @@ let yk = () => (0, k.jsx)("div", { className: yD.wG, children: (0, k.jsx)(rn.y, 
                 n.e("30003"),
                 n.e("33546"),
                 n.e("5468"),
-            ]).then(n.bind(n, 629258)),
-        webpackId: 629258,
+            ]).then(n.bind(n, 979414)),
+        webpackId: 979414,
         name: "QuestHomePage",
         renderLoader: ra.g4,
     }),
@@ -31150,8 +31172,8 @@ let L_ = {
                                         n.e("44727"),
                                         n.e("6565"),
                                         n.e("14304"),
-                                        n.e("82001"),
-                                    ]).then(n.bind(n, 266536));
+                                        n.e("76229"),
+                                    ]).then(n.bind(n, 477156));
                                     return (t) => (0, k.jsx)(e, { ...t, analyticsLocations: [ii.A.RPC] });
                                 }));
             },

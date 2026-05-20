@@ -44,7 +44,7 @@ function J() {
         (I = new Map()),
         (T = new Map()),
         (S = new Map()),
-        (N = null),
+        (N = new Map()),
         (y = new Map()),
         (A = new Set()),
         (C = new Map()),
@@ -132,8 +132,9 @@ class ea extends P.Ay.Store {
     isFetchingQuestToDeliverByPlacement(e) {
         return s?.get(e) ?? !1;
     }
-    get questDeliveryOverride() {
-        return u.get(N ?? "");
+    getQuestPreviewOverride(e) {
+        let t = N.get(e);
+        return null == t ? void 0 : u.get(t);
     }
     get questToDeliverForPlacement() {
         return C;
@@ -433,7 +434,11 @@ let eo = new ea(x.h, {
         QUESTS_DISMISS_CONTENT_BEGIN: function (e) {
             let { questId: t } = e,
                 n = new Set(m);
-            n.add(t), (m = n), N === t && (N = null);
+            n.add(t), (m = n);
+            let i = new Map(N),
+                r = !1;
+            for (let [e, n] of i) n === t && (i.delete(e), (r = !0));
+            r && (N = i);
         },
         QUESTS_DISMISS_CONTENT_SUCCESS: function (e) {
             let { dismissedQuestUserStatus: t } = e;
@@ -477,9 +482,10 @@ let eo = new ea(x.h, {
                 O.get(t.questId) !== e && (O = new Map(O).set(t.questId, e));
             }
         },
-        QUESTS_DELIVERY_OVERRIDE: function (e) {
-            let { questId: t } = e;
-            N = N === t ? null : t;
+        QUESTS_PREVIEW_OVERRIDE: function (e) {
+            let { placement: t, questId: n } = e,
+                i = new Map(N);
+            i.get(t) === n ? i.delete(t) : i.set(t, n), (N = i);
         },
         QUESTS_SELECT_TASK_PLATFORM: function (e) {
             let { questId: t, platform: n } = e;

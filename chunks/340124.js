@@ -19,9 +19,9 @@ n.d(t, {
     Oy: () => X,
     Gn: () => el,
     uI: () => ef,
+    L4: () => es,
     zh: () => eS,
     R2: () => q,
-    d6: () => es,
     g5: () => ee,
     vD: () => W,
     qV: () => eN,
@@ -486,8 +486,8 @@ async function er(e) {
         o.h.dispatch({ type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: new l.A(t), questId: e });
     }
 }
-function es(e) {
-    o.h.dispatch({ type: "QUESTS_DELIVERY_OVERRIDE", questId: e });
+function es(e, t) {
+    o.h.dispatch({ type: "QUESTS_PREVIEW_OVERRIDE", placement: e, questId: t });
 }
 function ea(e, t) {
     o.h.dispatch({ type: "QUESTS_SELECT_TASK_PLATFORM", questId: e, platform: t });

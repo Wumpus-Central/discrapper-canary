@@ -22,10 +22,10 @@ n.d(t, {
     FA: () => ej,
     LS: () => eA,
     RR: () => eM,
+    Ns: () => eX,
     Iq: () => eE,
     Qh: () => ep,
     t9: () => eJ,
-    nv: () => eX,
     XD: () => eq,
     ZP: () => eg,
     UX: () => eP,
@@ -80,7 +80,7 @@ var I = n(27620),
     w = n(723702),
     M = n(428262);
 n(323874), n(14289), n(35956), n(636537), n(228366), n(181658);
-var P = n(859387);
+var P = n(551875);
 n(107195), n(881615), n(234396), n(265704);
 var x = n(507107),
     U = n(710969),
@@ -466,7 +466,7 @@ function eD(e) {
             handleProgress: (t) => (0, F.Yb)(e, t),
             handleResetStatusClick: () => (0, F.UZ)(e),
             handleResetDismissibilityClick: () => (0, F.Gt)(e),
-            handleOverrideDeliveryClick: () => (0, F.d6)(e),
+            handleOverridePreviewClick: (t) => (0, F.L4)(t, e),
             handleResetHasBeenSeenClick: () => (0, F.qV)(u.p.QUEST, [e]),
         }),
         [e],
