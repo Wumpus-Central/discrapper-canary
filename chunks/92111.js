@@ -1,8 +1,11 @@
 "use strict";
-n.d(t, { Om: () => l, P3: () => a, hJ: () => u });
+n.d(t, { Om: () => d, P3: () => u, hJ: () => _ });
 var i = n(70283),
-    r = n(375708);
-let s = {
+    r = n(976860),
+    s = n(652215),
+    a = n(758836),
+    o = n(375708);
+let l = {
     premium: i.$.PREMIUM_TENURE,
     premium_tenure_1_month_v2: i.$.PREMIUM_TENURE,
     premium_tenure_3_month_v2: i.$.PREMIUM_TENURE,
@@ -36,21 +39,38 @@ let s = {
     april_fools_2026: i.$.APRIL_FOOLS_2026,
     orb_profile_badge: i.$.ORB_PROFILE,
 };
-function a(e) {
-    return s[e];
+function u(e) {
+    return l[e];
 }
-let o = {
+let c = {
     [i.$.PREMIUM_TENURE]: {
-        ctaLabel: () => r.intl.string(r.t.LEgsyS),
-        ctaAction: "nitro_home",
-        ctaVariant: "secondary",
+        ctaLabel: (e) => {
+            let { owned: t } = e;
+            return t ? o.intl.string(o.t.xGjjkd) : o.intl.string(o.t.BTxm69);
+        },
+        ctaAction: () => (0, r.pX)(s.BVt.NITRO_HOME),
+        ctaVariant: (e) => {
+            let { owned: t } = e;
+            return t ? "secondary" : "expressive";
+        },
     },
-    [i.$.GUILD_BOOSTER]: { ctaLabel: () => r.intl.string(r.t.HKJcgE), ctaAction: "boost", ctaVariant: "secondary" },
-    [i.$.QUEST_COMPLETED]: { ctaLabel: () => r.intl.string(r.t.FQHRUK), ctaAction: "quests", ctaVariant: "secondary" },
-    [i.$.ORB_PROFILE]: { ctaLabel: () => r.intl.string(r.t.wTVyFK), ctaAction: "orbs", ctaVariant: "expressive" },
-    [i.$.GIFTING]: { ctaLabel: () => r.intl.string(r.t.hdouKj), ctaAction: "gifting", ctaVariant: "secondary" },
+    [i.$.GUILD_BOOSTER]: {
+        ctaLabel: () => o.intl.string(o.t["6LHsjg"]),
+        ctaAction: () =>
+            window.open(
+                "https://support.discord.com/hc/en-us/articles/360028038352-Server-Boosting-FAQ#h_01HGX7DJ33YD3AP7K0E0GYSMYM",
+                "_blank",
+                "noopener,noreferrer",
+            ),
+        ctaVariant: () => "secondary",
+    },
+    [i.$.ORB_PROFILE]: {
+        ctaLabel: () => o.intl.string(o.t["0TmQRG"]),
+        ctaAction: () => (0, r.pX)(s.BVt.COLLECTIBLES_SHOP_WITH_TAB(a.G2.ORBS)),
+        ctaVariant: () => "secondary",
+    },
 };
-function l(e) {
-    return o[e];
+function d(e) {
+    return c[e];
 }
-let u = "badge-details";
+let _ = "badge-details";
