@@ -42,6 +42,10 @@ let m = () => {
                 return { duration: 1, percentage: 20, discountId: t };
             case p.CW:
                 return { duration: 1, percentage: 25, discountId: t };
+            case p.UX:
+                return { duration: 12, percentage: 20, discountId: t };
+            case p.RG:
+                return { duration: 12, percentage: 30, discountId: t };
             case p.V2:
                 return { duration: 1, percentage: 40, discountId: t };
             default:

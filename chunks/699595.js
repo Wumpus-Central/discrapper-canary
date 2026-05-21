@@ -7,17 +7,14 @@ let r = (e) => {
                 let { discountInvoicePreview: t } = e;
                 return t;
             }),
-            n = l.useMemo(
-                () =>
-                    ((e, t) => {
-                        if (null == e) return null;
-                        let n = e.invoiceItems.find((e) => e.subscriptionPlanId === t);
-                        if (null == n) return null;
-                        let l = n.discounts.find((e) => e.type === a.iS.SUBSCRIPTION_PLAN);
-                        return null != l ? l.amount : null;
-                    })(t, e),
-                [t, e],
-            );
+            n = l.useMemo(() => {
+                if (null == e) return null;
+                if (null == t) return null;
+                let n = t.invoiceItems.find((t) => t.subscriptionPlanId === e);
+                if (null == n) return null;
+                let l = n.discounts.find((e) => e.type === a.iS.SUBSCRIPTION_PLAN);
+                return null != l ? l.amount : null;
+            }, [t, e]);
         return { discountInvoicePreview: t, discountAmountOff: n };
     },
     s = (e, t) => {
