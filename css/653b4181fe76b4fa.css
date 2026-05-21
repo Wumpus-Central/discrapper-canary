@@ -170,6 +170,105 @@
     width: 20%
 }
 
+.panel__3932d {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0
+}
+
+.tabBar__3932d {
+    background: var(--background-base-lower);
+    border-bottom: 1px solid var(--background-base-lowest);
+    display: flex;
+    flex-shrink: 0
+}
+
+.tabItem__3932d {
+    border-bottom: 2px solid transparent;
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    padding: 6px 12px;
+    white-space: nowrap
+}
+
+.tabItem__3932d:hover {
+    border-bottom-color: var(--brand-500)
+}
+
+.tabItemSelected__3932d {
+    border-bottom-color: var(--control-brand-foreground)
+}
+
+.tabItemSelected__3932d:hover {
+    border-bottom-color: var(--control-brand-foreground)
+}
+
+.tabContent__3932d {
+    flex: 1;
+    gap: var(--space-16);
+    min-height: 0;
+    overflow-y: auto;
+    padding: 12px
+}
+
+.section__3932d,
+.tabContent__3932d {
+    display: flex;
+    flex-direction: column
+}
+
+.section__3932d {
+    gap: var(--space-8)
+}
+
+.gamesSection__3932d {
+    flex-grow: 1
+}
+
+.card__3932d {
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    flex-direction: column;
+    padding: var(--space-12)
+}
+
+.card__3932d,
+.cardHeader__3932d {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.cardHeader__3932d {
+    align-items: center
+}
+
+.appIcon__3932d {
+    border-radius: var(--radius-xs);
+    flex-shrink: 0;
+    height: 32px;
+    width: 32px
+}
+
+.appInfo__3932d {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
+}
+
+.callLogHeader__3932d {
+    align-items: center;
+    display: flex;
+    justify-content: space-between
+}
+
+.eligible__3932d {
+    color: var(--text-feedback-positive)
+}
+
 .content_ad8b04 {
     align-items: stretch;
     display: flex;
