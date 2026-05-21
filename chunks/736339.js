@@ -114,9 +114,9 @@ function N(e) {
               })
             : (0, p.$g)(D.amount, D.currency);
     return (0, n.jsxs)(o.D, {
-        role: T ? "menuitem" : "radio",
+        role: "radio",
         "aria-checked": C,
-        tabIndex: T || C ? 0 : -1,
+        tabIndex: C ? 0 : -1,
         focusProps: { offset: { left: -4, right: -4, top: 0, bottom: 0 } },
         onClick: z,
         className: a()(f.G_, { [f.vW]: T && C, [f.Gb]: T }),
