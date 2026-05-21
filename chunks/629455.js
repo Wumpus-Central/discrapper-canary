@@ -383,39 +383,6 @@ function P(e) {
                             i,
                         );
             })({ quest: t, taskDetails: n, withoutMarkdown: a, questContent: i, rewardNameWithArticle: k });
-        else if ((0, T.I6)(t) && null != r)
-            return (function (e) {
-                let {
-                        quest: t,
-                        thirdPartyTaskDetails: n,
-                        withoutMarkdown: i,
-                        hasNitro: r,
-                        collectibleRewardDuration: s,
-                        rewardNameWithArticle: a,
-                    } = e,
-                    o = (0, I.JX)(t.config),
-                    l = (0, I.Y7)(t.config);
-                return b(
-                    r && o
-                        ? l
-                            ? null != s
-                                ? O.t.NdXW5c
-                                : O.t["8066TK"]
-                            : O.t["6FOKAX"]
-                        : o || null != s
-                          ? O.t["IACEB/"]
-                          : O.t.thO6iA,
-                    { objective: n.description, duration: s, questReward: a },
-                    i,
-                );
-            })({
-                quest: t,
-                thirdPartyTaskDetails: r,
-                withoutMarkdown: a,
-                hasNitro: N,
-                collectibleRewardDuration: P,
-                rewardNameWithArticle: k,
-            });
         return null != r
             ? r.description
             : (function (e) {
@@ -475,7 +442,8 @@ function P(e) {
 }
 function x(e, t, n, i, r, s) {
     let a = (0, N.fc)(e),
-        o = P({
+        o = (0, T.JC)(e),
+        l = P({
             quest: e,
             taskDetails: a,
             location: n,
@@ -484,9 +452,15 @@ function x(e, t, n, i, r, s) {
             popoutTargetElementRef: s,
             gameProfileSource: r,
         }),
-        l = e.userStatus?.claimedAt != null,
-        u = (0, N.S5)(e.userStatus?.claimedAt);
-    return l ? O.intl.formatToPlainString(O.t.lOVr0O, { claimDate: u }) : o;
+        u = e.userStatus?.claimedAt != null,
+        c = (0, N.S5)(e.userStatus?.claimedAt);
+    return u
+        ? O.intl.formatToPlainString(O.t.lOVr0O, { claimDate: c })
+        : null != o
+          ? o.description
+          : null != l
+            ? l
+            : null;
 }
 function U(e) {
     let {

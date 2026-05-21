@@ -9,7 +9,6 @@ e.exports = {
     cJ: "stepIndicator_a99139",
     $P: "stepIconWrapper_a99139",
     HP: "stepWrapperComplete_a99139",
-    fS: "stepWrapperCurrent_a99139",
     UK: "stepConnector_a99139",
     ap: "stepIcon_a99139",
 };
