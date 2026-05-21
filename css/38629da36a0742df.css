@@ -1,6 +1,5 @@
 .trigger__5d51e {
     align-items: center;
-    border-bottom: 2px solid var(--icon-strong);
     box-sizing: border-box;
     color: var(--text-default);
     cursor: pointer;
@@ -8,8 +7,12 @@
     flex-direction: row;
     flex-shrink: 0;
     gap: var(--space-8);
-    height: 100%;
-    padding-top: 2px
+    height: 100%
+}
+
+.trigger__5d51e:hover {
+    border-bottom: 1px solid var(--brand-500);
+    padding-top: 1px
 }
 
 .logo__5d51e {
@@ -92,13 +95,13 @@
 }
 
 .pageTitleContainer__57bc9:hover {
-    border-bottom: 2px solid var(--brand-500);
-    padding-top: 2px
+    border-bottom: 1px solid var(--brand-500);
+    padding-top: 1px
 }
 
 .pageTitleContainer__57bc9.selectedPageIndicator__57bc9 {
-    border-bottom: 2px solid var(--icon-strong);
-    padding-top: 2px
+    border-bottom: 1px solid var(--icon-strong);
+    padding-top: 1px
 }
 
 .iconButton__57bc9 {
