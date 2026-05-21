@@ -21,6 +21,7 @@
 
 .directoryPanel__6db38 {
     background: var(--background-surface-high);
+    border-inline-end: 1px solid var(--border-muted);
     flex: 0 0 320px;
     overflow: hidden
 }
@@ -265,11 +266,10 @@
 }
 
 .directoryFooter__6db38 {
-    background: var(--background-surface-higher);
     border-block-start: 1px solid var(--border-subtle);
     display: flex;
     flex-shrink: 0;
-    padding: var(--space-12) var(--space-24)
+    padding: var(--space-16)
 }
 
 .badgeOwnership__6db38 {
