@@ -20,7 +20,7 @@ var n = e(627968),
     _ = e(743368),
     p = e(990078),
     j = e(736653),
-    R = e(859387),
+    R = e(551875),
     I = e(590202),
     y = e(971649),
     E = e(651892),
@@ -212,7 +212,7 @@ function F(t) {
                 children: (t) =>
                     (0, n.jsx)(b.A, {
                         quest: i,
-                        imageSize: { width: 908, height: 380 },
+                        imageSize: { width: U.i$ * U.K, height: U.ls * U.K },
                         containerClassName: X.WQ,
                         isInteracting: !0,
                         assetRef: t,

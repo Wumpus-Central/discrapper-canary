@@ -17,8 +17,8 @@ var i = n(627968),
     C = n(283973),
     f = n(834730),
     E = n(789645),
-    y = n(964486),
-    N = n(648027),
+    N = n(964486),
+    y = n(648027),
     j = n(855446),
     v = n(793574),
     I = n(688810),
@@ -105,7 +105,8 @@ function V(e) {
         (0, m.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("44710"),
+                    n.e("50669"),
+                    n.e("41884"),
                     n.e("59957"),
                     n.e("28136"),
                     n.e("16084"),
@@ -159,13 +160,13 @@ function V(e) {
 }
 function B(e) {
     let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: c } = e;
-    (0, y.Ay)(() => {
+    (0, N.Ay)(() => {
         P.default.track(b.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity suggestion",
             n_participants: c,
         });
     });
-    let u = (0, N.A)({ guildId: n.id }).slice(0, 3),
+    let u = (0, y.A)({ guildId: n.id }).slice(0, 3),
         { analyticsLocations: h } = (0, I.Ay)(v.A.VC_TILE_ACTIVITY_SUGGESTION),
         p = l.useMemo(() => ({ channel: t, type: "channel" }), [t]);
     return (0, i.jsx)(I.f5, {

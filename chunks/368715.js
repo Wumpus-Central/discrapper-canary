@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => H });
+n.d(t, { A: () => K });
 var i = n(627968),
     r = n(821609),
     s = n(801365),
@@ -104,16 +104,19 @@ let T = function (e) {
         : (0, i.jsx)(r.$, { size: l, variant: "primary", onClick: c, text: _, icon: d, fullWidth: !0 });
 };
 var S = n(64700),
-    N = n(862482),
-    y = n(775602),
-    C = n(178540),
-    v = n(507107),
-    O = n(18437),
-    R = n(971649),
-    b = n(901406),
-    D = n(862611),
-    L = n(263752);
-function w(e) {
+    N = n(141628),
+    y = n(862482),
+    C = n(775602),
+    v = n(178540),
+    O = n(507107),
+    R = n(946080),
+    b = n(18437),
+    D = n(971649),
+    L = n(651892),
+    w = n(901406),
+    M = n(862611),
+    P = n(263752);
+function x(e) {
     let {
             quest: t,
             analyticsCtxQuestContent: n,
@@ -121,10 +124,10 @@ function w(e) {
             analyticsCtxQuestContentPosition: s,
             analyticsCtxQuestContentRowIndex: l,
         } = e,
-        u = (0, O.Ut)(),
-        d = (0, c.bG)([y.A], () => y.A.useReducedMotion),
+        u = (0, b.Ut)(),
+        d = (0, c.bG)([C.A], () => C.A.useReducedMotion),
         _ = (0, a.Xf)({ useReducedMotion: d }),
-        f = (0, C.O)((e) => e.setErrorHints),
+        f = (0, v.O)((e) => e.setErrorHints),
         { startingConsoleQuest: h, startConsoleQuest: m } = (0, p.Wj)({
             questId: t.id,
             beforeRequest: () => {
@@ -142,16 +145,16 @@ function w(e) {
                 _.stopAnimation(), f(t.id, e);
             },
         });
-    return (0, i.jsx)(N.$n, {
+    return (0, i.jsx)(y.$n, {
         "data-migration-pending": !0,
-        color: N.XD.PRIMARY,
+        color: y.XD.PRIMARY,
         onClick: m,
         disabled: h,
-        className: L.x,
-        children: (0, i.jsxs)("div", { className: L.t, children: [_.render(), o.intl.string(o.t.nPThNb)] }),
+        className: P.x,
+        children: (0, i.jsxs)("div", { className: P.t, children: [_.render(), o.intl.string(o.t.nPThNb)] }),
     });
 }
-function M(e) {
+function U(e) {
     let {
             quest: t,
             surface: n,
@@ -162,11 +165,11 @@ function M(e) {
             size: d,
         } = e,
         _ = (0, p.RR)({ quest: t }),
-        f = (0, R.vU)()?.getId(),
+        f = (0, D.vU)()?.getId(),
         h = (0, p.Vn)(t),
         m = (0, p.fc)(t),
         [g, A, I] = (0, p.Qo)(t, m);
-    return h || g === v.X0.DESKTOP
+    return h || g === O.X0.DESKTOP
         ? (0, i.jsx)(r.$, {
               variant: "secondary",
               size: d,
@@ -179,7 +182,7 @@ function M(e) {
                 size: d,
                 variant: "secondary",
                 onClick: () => {
-                    (0, b.se)(
+                    (0, w.se)(
                         { quest: t },
                         {
                             content: s,
@@ -194,7 +197,7 @@ function M(e) {
                 text: o.intl.string(o.t.Cfye4v),
                 fullWidth: !0,
             })
-          : (0, i.jsx)(w, {
+          : (0, i.jsx)(x, {
                 quest: t,
                 analyticsCtxQuestContent: s,
                 analyticsCtxSourceQuestContent: a,
@@ -202,10 +205,65 @@ function M(e) {
                 analyticsCtxQuestContentRowIndex: c,
             });
 }
-function P(e) {
+function k(e) {
+    let {
+            quest: t,
+            surface: n,
+            analyticsCtxQuestContent: s,
+            analyticsCtxSourceQuestContent: a,
+            analyticsCtxQuestContentPosition: l,
+            analyticsCtxQuestContentRowIndex: c,
+            size: d,
+        } = e,
+        { hasAlreadyLinked: _ } = (0, R.U)(t),
+        f = (0, D.go)(),
+        h = (0, b.Ut)();
+    return !0 === _
+        ? n === u.V3.QUEST_BAR_FOOTER
+            ? (0, i.jsx)(r.$, {
+                  size: d,
+                  fullWidth: !0,
+                  variant: "secondary",
+                  text: (0, L.wr)(t),
+                  onClick: () =>
+                      (0, w.pu)(t, {
+                          content: s,
+                          ctaContent: E.Cy.OPEN_GAME_LINK,
+                          position: l,
+                          impressionId: f,
+                          sourceQuestContent: a,
+                      }),
+              })
+            : (0, i.jsx)(r.$, {
+                  size: d,
+                  fullWidth: !0,
+                  variant: "primary",
+                  text: o.intl.string(o.t.wEDusB),
+                  onClick: () => (0, A._x)({ quest: t, sourceQuestContent: a }),
+              })
+        : (0, i.jsx)(r.$, {
+              size: d,
+              fullWidth: !0,
+              variant: "primary",
+              icon: N.A,
+              text: o.intl.string(o.t.sbdnpw),
+              onClick: () => {
+                  h({
+                      questId: t.id,
+                      questContent: s,
+                      questContentCTA: E.Cy.OPEN_ACCOUNT_LINK_MODAL,
+                      questContentPosition: l,
+                      questContentRowIndex: c,
+                      sourceQuestContent: a,
+                  }),
+                      (0, A._x)({ quest: t, sourceQuestContent: a });
+              },
+          });
+}
+function G(e) {
     let { quest: t, analyticsCtxSourceQuestContent: n, size: s, parentContainerRef: a } = e,
         { applications: l } = (0, p.fc)(t);
-    return (0, i.jsx)(D.A, {
+    return (0, i.jsx)(M.A, {
         quest: t,
         sourceQuestContent: n,
         applications: l ?? [],
@@ -214,7 +272,7 @@ function P(e) {
             (0, i.jsx)(r.$, { variant: "secondary", fullWidth: !0, size: s, text: o.intl.string(o.t["93PTEs"]), ...e }),
     });
 }
-let x = function (e) {
+let F = function (e) {
         let {
                 quest: t,
                 surface: n,
@@ -225,8 +283,18 @@ let x = function (e) {
                 size: d,
             } = e,
             _ = S.useRef(null);
+        if ((0, f.I6)(t))
+            return (0, i.jsx)(k, {
+                quest: t,
+                surface: n,
+                analyticsCtxQuestContent: s,
+                analyticsCtxSourceQuestContent: a,
+                analyticsCtxQuestContentPosition: l,
+                analyticsCtxQuestContentRowIndex: c,
+                size: d,
+            });
         if ((0, f.g5)(t) && n === u.V3.QUEST_HOME_TILE_FOOTER)
-            return (0, i.jsx)(M, {
+            return (0, i.jsx)(U, {
                 quest: t,
                 surface: n,
                 size: d,
@@ -238,7 +306,7 @@ let x = function (e) {
         if ((0, m.ui)(t) && n === u.V3.QUEST_BAR_FOOTER)
             return (0, i.jsx)("div", {
                 ref: _,
-                children: (0, i.jsx)(P, {
+                children: (0, i.jsx)(G, {
                     quest: t,
                     analyticsCtxSourceQuestContent: a,
                     size: d,
@@ -248,7 +316,7 @@ let x = function (e) {
         let h = o.intl.string(o.t["9KoPyB"]);
         return (0, i.jsx)(r.$, { size: d, variant: "secondary", disabled: !0, text: h, fullWidth: !0 });
     },
-    U = function (e) {
+    V = function (e) {
         let {
             quest: t,
             taskType: n,
@@ -259,8 +327,8 @@ let x = function (e) {
             analyticsCtxQuestContentRowIndex: l,
             size: u,
         } = e;
-        return (0, f.t)({ quest: t }) || (0, f.g5)(t)
-            ? (0, i.jsx)(x, {
+        return (0, f.t)({ quest: t }) || (0, f.g5)(t) || (0, f.I6)(t)
+            ? (0, i.jsx)(F, {
                   quest: t,
                   surface: r,
                   size: u,
@@ -277,7 +345,7 @@ let x = function (e) {
                   analyticsCtxSourceQuestContent: a,
               });
     },
-    k = function (e) {
+    B = function (e) {
         let {
                 quest: t,
                 surface: n,
@@ -306,7 +374,7 @@ let x = function (e) {
                   text: o.intl.format(o.t["6p8BZx"], { expiryDate: f }),
               });
     },
-    G = function (e) {
+    H = function (e) {
         let {
             quest: t,
             taskType: n,
@@ -325,7 +393,7 @@ let x = function (e) {
                   text: o.intl.string(o.t["9KoPyB"]),
                   fullWidth: !0,
               })
-            : (0, i.jsx)(U, {
+            : (0, i.jsx)(V, {
                   quest: t,
                   taskType: n,
                   surface: s,
@@ -336,8 +404,8 @@ let x = function (e) {
                   size: _,
               });
     };
-var F = n(340124);
-function V(e) {
+var j = n(340124);
+function Y(e) {
     switch (e) {
         case h.n.ACHIEVEMENT_IN_ACTIVITY:
         case h.n.PLAY_ACTIVITY:
@@ -347,7 +415,7 @@ function V(e) {
             return E.Cy.ACCEPT_QUEST;
     }
 }
-let B = function (e) {
+let W = function (e) {
         var t;
         let {
                 quest: n,
@@ -361,7 +429,7 @@ let B = function (e) {
             } = e,
             g = {
                 questContent: u,
-                questContentCTA: V(s),
+                questContentCTA: Y(s),
                 sourceQuestContent: _,
                 questContentPosition: E,
                 questContentRowIndex: m,
@@ -407,13 +475,13 @@ let B = function (e) {
                               questContent: g.questContent,
                               questContentCTA: g.questContentCTA,
                               sourceQuestContent: g.sourceQuestContent,
-                              sourceQuestContentCTA: V(s),
+                              sourceQuestContentCTA: Y(s),
                               questContentPosition: g.questContentPosition,
                               questContentRowIndex: g.questContentRowIndex,
                           });
                       }
                     : async () => {
-                          await (0, F.Oy)(n.id, {
+                          await (0, j.Oy)(n.id, {
                               questContent: g.questContent,
                               questContentCTA: g.questContentCTA,
                               sourceQuestContent: g.sourceQuestContent,
@@ -434,7 +502,7 @@ let B = function (e) {
             fullWidth: !0,
         });
     },
-    H = function (e) {
+    K = function (e) {
         let {
                 quest: t,
                 surface: n,
@@ -451,7 +519,7 @@ let B = function (e) {
         let E = Object.values(t.config.taskConfigV2.tasks)[0];
         switch (p) {
             case u.UA.UNENROLLED:
-                return (0, i.jsx)(B, {
+                return (0, i.jsx)(W, {
                     quest: t,
                     taskType: E.type,
                     size: h,
@@ -462,7 +530,7 @@ let B = function (e) {
                     analyticsCtxQuestContentRowIndex: f,
                 });
             case u.UA.ENROLLED:
-                return (0, i.jsx)(U, {
+                return (0, i.jsx)(V, {
                     quest: t,
                     taskType: E.type,
                     size: h,
@@ -473,7 +541,7 @@ let B = function (e) {
                     surface: n,
                 });
             case u.UA.INCOMPLETE:
-                return (0, i.jsx)(G, {
+                return (0, i.jsx)(H, {
                     quest: t,
                     taskType: E.type,
                     size: h,
@@ -503,7 +571,7 @@ let B = function (e) {
                     analyticsCtxQuestContentRowIndex: f,
                 });
             case u.UA.EXPIRED:
-                return (0, i.jsx)(k, {
+                return (0, i.jsx)(B, {
                     quest: t,
                     surface: n,
                     size: h,

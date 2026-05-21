@@ -9,7 +9,7 @@ function a(e, t) {
             switch (t.type) {
                 case r.o9.LEVEL: {
                     let { default: i } = await Promise.all([
-                        n.e("96652"),
+                        n.e("9296"),
                         n.e("36723"),
                         n.e("84529"),
                         n.e("16229"),
@@ -25,9 +25,9 @@ function a(e, t) {
                 }
                 case r.o9.PERK: {
                     let { default: i } = await Promise.all([
-                        n.e("21503"),
-                        n.e("96821"),
-                        n.e("96652"),
+                        n.e("98045"),
+                        n.e("41884"),
+                        n.e("9296"),
                         n.e("35912"),
                         n.e("3930"),
                         n.e("3663"),

@@ -1,0 +1,19 @@
+.background__7778d {
+    bottom: 0;
+    inset-inline-end: 0;
+    opacity: 1;
+    pointer-events: none;
+    position: fixed;
+    transition: opacity .4s ease;
+    width: auto
+}
+
+.content__7778d {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    width: 100vw
+}
