@@ -42,6 +42,7 @@ let p = "default",
         viewerConnectivity: _.on.ALL,
         maxAutoClips: _.T2,
         clipSignals: { enableDistributedSignals: !0, enablePhraseSignals: !0, enableGameSignals: !0 },
+        debugTooltipsEnabled: !1,
     },
     P = {
         clipsSettings: M,

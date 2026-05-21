@@ -53,7 +53,8 @@ Object.freeze({ SECOND: 1, MINUTE: 60, HOUR: 3600, DAY: 86400, WEEK: 604800, DAY
     (a[(a.MINUTES_2 = 2 * u.MINUTE)] = "MINUTES_2"),
     u.SECOND;
 let c = new d("Clips");
-u.DAY,
+u.SECOND,
+    u.DAY,
     self.addEventListener("message", async (e) => {
         let t,
             {

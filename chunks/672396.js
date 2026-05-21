@@ -27,6 +27,12 @@ function l(e) {
             return 2;
         case "Clips Reminder Notification":
         case "Clips Notification":
+        case "Clips Debug Features Enabled":
+        case "Clips Debug Auto Signal":
+        case "Clips Debug Save Success":
+        case "Clips Debug Save Error":
+        case "Clips Debug Save No Op":
+        case "Clips Debug Save Timeout":
             return 4;
         default:
             return 5;
@@ -52,6 +58,12 @@ var u =
         (s.OverlayCrashed = "Overlay Crashed"),
         (s.ClipsReminderNotification = "Clips Reminder Notification"),
         (s.ClipsNotification = "Clips Notification"),
+        (s.ClipsDebugFeaturesEnabled = "Clips Debug Features Enabled"),
+        (s.ClipsDebugAutoSignal = "Clips Debug Auto Signal"),
+        (s.ClipsDebugSaveSuccess = "Clips Debug Save Success"),
+        (s.ClipsDebugSaveError = "Clips Debug Save Error"),
+        (s.ClipsDebugSaveNoOp = "Clips Debug Save No Op"),
+        (s.ClipsDebugSaveTimeout = "Clips Debug Save Timeout"),
         (s.SendGameInvitesNotification = "Send Game Invites Notification"),
         (s.NowPlayingNotification = "Now Playing Notification"),
         (s.RequestToStream = "Request To Stream"),
