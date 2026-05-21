@@ -228,6 +228,7 @@ class E extends p {
             : (this.linkedGames?.find((e) => e.application?.type === _.S7.GAME)?.id ?? null);
     }
     mergeFromApplicationUpdate(e) {
+        var t, n;
         return new E({
             id: e.id ?? this.id,
             name: e.name ?? this.name,
@@ -274,7 +275,20 @@ class E extends p {
             isDiscoverable: e.isDiscoverable ?? this.isDiscoverable,
             directoryEntry: e.directoryEntry ?? this.directoryEntry,
             categories: e.categories ?? this.categories,
-            linkedGames: e.linkedGames ?? this.linkedGames,
+            linkedGames:
+                ((t = e.linkedGames),
+                (n = this.linkedGames),
+                null == t
+                    ? n
+                    : null == n
+                      ? t
+                      : t.map((e) => {
+                            if (null != e.application) return e;
+                            {
+                                let t = n.find((t) => t.id === e.id);
+                                return t?.application != null ? { ...e, application: t.application } : e;
+                            }
+                        })),
             deepLinkUri: e.deepLinkUri ?? this.deepLinkUri,
             applicationAccountLinkBenefitConfig:
                 e.applicationAccountLinkBenefitConfig ?? this.applicationAccountLinkBenefitConfig,
