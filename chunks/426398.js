@@ -16,7 +16,7 @@ let u = (e) => {
     } = e;
     if (!t && n?.paymentSourceId != null) return n.paymentSourceId;
     if (null != s && s.length > 0) {
-        if (null != i && s.includes(r[i].paymentGateway)) return i;
+        if (null != i && i in r && s.includes(r[i].paymentGateway)) return i;
         for (let e in r) {
             let t = r[e];
             if (s.includes(t.paymentGateway)) return e;

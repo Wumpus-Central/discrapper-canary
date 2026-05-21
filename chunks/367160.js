@@ -4,8 +4,8 @@ var l = n(627968),
     i = n(403581),
     r = n(262427),
     s = n(854354),
-    o = n(725836),
-    u = n(717925),
+    o = n(717925),
+    u = n(214891),
     c = n(669510),
     d = n(234419),
     p = n(361597),
@@ -77,24 +77,19 @@ let v = (e) => {
             isGift: Y,
         }),
         eu = a.useMemo(() => null != D && null != D.discount && null != W && (0, m.Ro)(W, D.discount.id), [D, W]),
-        { setCheckoutHeaderConfigs: ec } = (0, o.ck)(),
-        ed = Y && V.interval === x.WT.YEAR && (0, A.xq)(V.id),
-        ep = (0, A.L_)({ planId: V.id, isGift: !0, priceOptions: U, subscriptionPlan: V });
+        { setHeaderBadgeText: ec, unsetHeaderBadgeText: ed } = (0, u.v)(),
+        ep = Y && V.interval === x.WT.YEAR && (0, A.xq)(V.id),
+        em = (0, A.L_)({ planId: V.id, isGift: !0, priceOptions: U, subscriptionPlan: V });
     a.useEffect(
         () => (
-            null != ep &&
-                ed &&
-                ec((e) => ({
-                    ...e,
-                    headerBadgeText: N.intl.formatToPlainString(g.default["Mi5BH/"], { percentOff: ep }),
-                })),
+            null != em && ep && ec(N.intl.formatToPlainString(g.default["Mi5BH/"], { percentOff: em })),
             () => {
-                ec((e) => ({ ...e, headerBadgeText: void 0 }));
+                ed();
             }
         ),
-        [ep, ec, ed],
+        [em, ec, ed, ep],
     );
-    let em = a.useMemo(() => {
+    let eh = a.useMemo(() => {
             if (null != F && F.type === C.N$.PREMIUM_WITH_TRIAL && null != es)
                 return (0, l.jsx)(r.J, {
                     gradientColor: "nitro-pink",
@@ -113,18 +108,18 @@ let v = (e) => {
                         }),
                     });
             }
-            return ed && null != ep
+            return ep && null != em
                 ? (0, l.jsx)(r.J, {
                       gradientColor: "nitro-pink",
                       Icon: i.t,
-                      text: N.intl.format(g.default["7sYIBL"], { savingsPercent: ep }),
+                      text: N.intl.format(g.default["7sYIBL"], { savingsPercent: em }),
                   })
                 : null;
-        }, [es, eu, D, er, F, ep, ed]),
-        eh = (0, I.G)(V.id),
-        eC = a.useMemo(() => (eh ? (0, l.jsx)(_.a, {}) : null), [eh]),
-        eA = a.useMemo(() => (null != em ? em : null != eC ? eC : null), [em, eC]),
-        ey = a.useMemo(() => {
+        }, [es, eu, D, er, F, em, ep]),
+        eC = (0, I.G)(V.id),
+        eA = a.useMemo(() => (eC ? (0, l.jsx)(_.a, {}) : null), [eC]),
+        ey = a.useMemo(() => (null != eh ? eh : null != eA ? eA : null), [eh, eA]),
+        eE = a.useMemo(() => {
             let e = [];
             return (
                 null != en && e.push({ type: "info", message: en, key: "payment-source-optional-warning" }),
@@ -142,50 +137,50 @@ let v = (e) => {
                 e.length > 0 ? e : null
             );
         }, [en, eo, Q, O, ei, B, et]),
-        eE = (0, A.l6)(U, null != F ? F.invoicePreview?.checkoutContext?.available_plans : void 0),
-        eP = {
+        eP = (0, A.l6)(U, null != F ? F.invoicePreview?.checkoutContext?.available_plans : void 0),
+        eS = {
             shouldShowGlobalNotices: !0,
-            upperInlineNoticeProps: ey,
+            upperInlineNoticeProps: eE,
             planSelectContent: Z
                 ? (0, l.jsx)(S.XH, {
                       disabled: L.disabled,
                       selectedPlanId: n,
-                      priceOptions: eE,
+                      priceOptions: eP,
                       planOptions: K,
                       subscriptionPeriodEnd: B,
                   })
                 : void 0,
             paymentSelectContent: el,
-            promotionalNoticeContent: eA,
+            promotionalNoticeContent: ey,
         };
-    if (null == F) return (0, l.jsx)(u.T, { ...eP, legalContent: null });
-    if (F.type === C.N$.LOADING) return (0, l.jsx)(u.E, {});
-    let eS = null != ea ? ea.subscription_trial : void 0,
-        e_ =
+    if (null == F) return (0, l.jsx)(o.T, { ...eS, legalContent: null });
+    if (F.type === C.N$.LOADING) return (0, l.jsx)(o.E, {});
+    let e_ = null != ea ? ea.subscription_trial : void 0,
+        eT =
             F.type === C.N$.PREMIUM_WITH_TRIAL
                 ? null
                 : (0, l.jsx)(S.W9, {
                       invoiceSummaryTypeWithPreview: F,
                       subscriptionPlan: V,
                       isPrepaidPaymentSource: H,
-                      subscriptionTrial: eS,
+                      subscriptionTrial: e_,
                       isCustomGift: q,
                   }),
-        eT = null;
+        ef = null;
     if (
         !H &&
         (C.IJ.has(F.type) || F.type === C.N$.PREMIUM_WITH_TRIAL) &&
         "renewalInvoicePreview" in F &&
         null != F.renewalInvoicePreview
     ) {
-        let e = (0, f.Gj)(F.invoicePreview, F.renewalInvoicePreview, eS, {
+        let e = (0, f.Gj)(F.invoicePreview, F.renewalInvoicePreview, e_, {
             discountOffer: D,
             isSubscriptionUpdate: null != X,
             fractionalPremiumInfo: Q,
         });
-        eT = (0, l.jsx)(c._, { ...e });
+        ef = (0, l.jsx)(c._, { ...e });
     }
-    let ef = Z
+    let eI = Z
             ? void 0
             : (0, l.jsx)(T._, {
                   type: F.type,
@@ -197,7 +192,7 @@ let v = (e) => {
                   isPremiumGroupPurchase: et,
                   guildId: k,
               }),
-        eI = (0, l.jsx)(S.PI, {
+        ex = (0, l.jsx)(S.PI, {
             planGroup: b,
             activeSubscription: X,
             isTrial: M,
@@ -208,17 +203,17 @@ let v = (e) => {
             invoiceSummaryTypeWithPreview: F,
             fractionalPremiumInfo: Q,
         }),
-        ex =
+        eN =
             F.type === C.N$.PREMIUM_WITH_TRIAL
                 ? (0, f.ib)(F.invoicePreview.currency)
                 : (0, s.kw)({ subscriptionInvoiceRecord: F.invoicePreview });
-    return (0, l.jsx)(u.T, {
-        ...eP,
-        purchaseItemContent: ef,
-        subscriptionDetailsContent: eT,
-        invoiceSummaryContent: e_,
-        legalContent: eI,
-        invoiceTotalDueValue: ex,
+    return (0, l.jsx)(o.T, {
+        ...eS,
+        purchaseItemContent: eI,
+        subscriptionDetailsContent: ef,
+        invoiceSummaryContent: eT,
+        legalContent: ex,
+        invoiceTotalDueValue: eN,
         invoiceTotalDueLabel: Y ? N.intl.string(g.default.Zxav97) : N.intl.string(g.default.R0cZsM),
     });
 };

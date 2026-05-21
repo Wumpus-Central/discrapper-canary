@@ -6,8 +6,8 @@ var l = n(627968),
     s = n(278416),
     o = n(262427),
     u = n(61572),
-    c = n(725836),
-    d = n(717925),
+    c = n(717925),
+    d = n(214891),
     p = n(848584),
     m = n(241989),
     h = n(993408),
@@ -184,20 +184,18 @@ let J = (e) => e.name,
                 })(i, { isGift: S });
                 return null != e ? (0, l.jsx)(o.J, { ...e }) : null;
             }, [i, S]),
-            { setCheckoutHeaderConfigs: O, checkoutHeaderConfigs: D } = (0, c.ck)();
+            { setHeaderBadgeText: O, unsetHeaderBadgeText: D } = (0, d.v)();
         return (
             a.useEffect(
                 () => (
-                    null != L &&
-                        null == D.headerBadgeText &&
-                        O({ ...D, headerBadgeText: K.intl.string(z.default.Fjpyfj) }),
+                    null != L && O(K.intl.string(z.default.Fjpyfj)),
                     () => {
-                        O({ ...D, headerBadgeText: void 0 });
+                        D();
                     }
                 ),
                 [L, O, D],
             ),
-            (0, l.jsx)(d.T, {
+            (0, l.jsx)(c.T, {
                 shouldShowGlobalNotices: !0,
                 purchaseItemContent: (0, l.jsx)(m.f7, { ...b, price: v }),
                 invoiceSummaryContent: M,
@@ -217,7 +215,7 @@ function et(e) {
             sku: r,
             application: s,
             invoicePreview: o,
-            isGift: c,
+            isGift: d,
             eligiblePaymentGateways: p,
             purchaseTermsAndLegalContent: m,
             isStepLoading: h,
@@ -353,11 +351,11 @@ function et(e) {
             );
         }, [A.socialLayerGameItemDisclaimer]);
     return h
-        ? (0, l.jsx)(d.E, {})
+        ? (0, l.jsx)(c.E, {})
         : (0, l.jsx)(ee, {
               application: s,
               giftRecipient: C,
-              isGift: c,
+              isGift: d,
               sku: r,
               invoicePreview: o,
               paymentSelectContent: P,
