@@ -894,7 +894,7 @@ function ta(e) {
                                     onClick: function () {
                                         (0, y.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                l.e("29092"),
+                                                l.e("96607"),
                                                 l.e("11585"),
                                                 l.e("89916"),
                                                 l.e("20379"),
@@ -1013,7 +1013,7 @@ function tr(e) {
                                                 onClick: function () {
                                                     (0, y.openModalLazy)(async () => {
                                                         let { default: e } = await Promise.all([
-                                                            l.e("29092"),
+                                                            l.e("96607"),
                                                             l.e("89916"),
                                                             l.e("20379"),
                                                             l.e("19193"),
@@ -2264,7 +2264,7 @@ class lE extends i.PureComponent {
             onValueChange: this.handleChangeBitrate,
             onValueRender: this.renderBitrate,
             onMarkerRender: this.renderBitrate,
-            markers: [eB.hcd, eB.gp3, i],
+            markers: [...new Set([eB.hcd, eB.gp3, i])],
             minValue: eB.hcd,
             maxValue: i,
             keyboardStep: eB.l2F,
