@@ -15,7 +15,7 @@ var i,
     f = n(84540),
     x = n(287809),
     C = n(174459),
-    I = n(927578),
+    I = n(428262),
     A = n(859040),
     j = n(993408),
     E = n(821701),
@@ -82,10 +82,10 @@ var T = n(503698),
     w = n(939249),
     O = n(428678),
     D = n(834730),
-    F = n(34188),
-    G = n(92008),
-    H = n(203632),
-    z = n(181774),
+    z = n(34188),
+    F = n(92008),
+    G = n(203632),
+    H = n(181774),
     L = n(483968),
     J = n(942426);
 n(321073);
@@ -113,7 +113,7 @@ let Z = () => 80,
             c = (0, J.A)(t),
             o = r.useRef(null),
             { accessibilityLabel: d, thumbnailPreviewSrc: p, title: m } = c ?? {},
-            g = r.useMemo(() => (0, z.Rc)(p), [p]);
+            g = r.useMemo(() => (0, H.Rc)(p), [p]);
         return (0, s.jsxs)(q, {
             innerRef: n ?? o,
             isSelected: l,
@@ -174,7 +174,7 @@ let Z = () => 80,
             p = I.Ay.canUseCollectibles(t);
         return (0, s.jsx)("section", {
             className: Q.uW,
-            children: (0, s.jsx)(G.f, {
+            children: (0, s.jsx)(F.f, {
                 fade: !0,
                 itemGutter: 12,
                 sectionGutter: 16,
@@ -214,7 +214,7 @@ let Z = () => 80,
                                 style: r,
                                 onSelect: u,
                                 children: [
-                                    (0, s.jsx)(F.U, {
+                                    (0, s.jsx)(z.U, {
                                         size: "custom",
                                         width: 23,
                                         height: 23,
@@ -230,7 +230,7 @@ let Z = () => 80,
                             },
                             c,
                         );
-                    if ((0, H.C3)(h)) {
+                    if ((0, G.C3)(h)) {
                         let e = i?.skuId === h.skuId;
                         return (0, s.jsx)(
                             ee,
@@ -404,33 +404,34 @@ function el(e) {
 }
 function ea(e) {
     let { transitionState: t, analyticsLocations: n, initialSelectedEffect: i, guild: a, onClose: c } = e,
-        { isFetching: m, categories: g, purchases: f } = (0, v.Ay)(),
-        I = (0, l.bG)([x.default], () => x.default.getCurrentUser()),
-        { analyticsLocations: A } = (0, p.Ay)(n, d.A.EDIT_PROFILE_EFFECT_MODAL),
-        j = (0, h.N2)({ user: I, guildId: a?.id });
+        { categories: m, purchases: g, isFetchingCategories: f, isFetchingPurchases: I } = (0, v.Ay)(),
+        A = f || (I && 0 === g.size),
+        j = (0, l.bG)([x.default], () => x.default.getCurrentUser()),
+        { analyticsLocations: E } = (0, p.Ay)(n, d.A.EDIT_PROFILE_EFFECT_MODAL),
+        k = (0, h.N2)({ user: j, guildId: a?.id });
     return (
         r.useEffect(() => {
-            C.default.track(en.HAw.OPEN_MODAL, { type: en.JJy.PROFILE_EFFECT_CUSTOMIZATION, location_stack: A });
-        }, [A]),
+            C.default.track(en.HAw.OPEN_MODAL, { type: en.JJy.PROFILE_EFFECT_CUSTOMIZATION, location_stack: E });
+        }, [E]),
         (0, s.jsx)(p.f5, {
-            value: A,
+            value: E,
             children: (0, s.jsx)(u.EO, {
                 transitionState: t,
                 className: es.yl,
-                size: m ? u.rI.DYNAMIC : u.rI.MEDIUM,
+                size: A ? u.rI.DYNAMIC : u.rI.MEDIUM,
                 parentComponent: "ProfileEffectModal",
                 "data-migration-pending": !0,
-                children: m
+                children: A
                     ? (0, s.jsx)(o.y, { className: es.u1, type: o.y.Type.SPINNING_CIRCLE })
                     : (0, s.jsx)(el, {
-                          user: I,
+                          user: j,
                           guild: a,
-                          categories: g,
-                          purchases: f,
+                          categories: m,
+                          purchases: g,
                           initialSelectedProfileEffect: i,
-                          currentSavedEffect: j,
+                          currentSavedEffect: k,
                           onClose: c,
-                          analyticsLocations: A,
+                          analyticsLocations: E,
                       }),
             }),
         })

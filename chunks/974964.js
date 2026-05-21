@@ -15,7 +15,7 @@ var n,
     x = i(84540),
     I = i(287809),
     A = i(174459),
-    f = i(927578),
+    f = i(428262),
     C = i(859040),
     j = i(993408),
     k = i(821701),
@@ -94,7 +94,7 @@ var J = i(702841),
     V = (((n = {}).PURCHASE = "purchase"), (n.PREMIUM_PURCHASE = "premium_purchase"), (n.PREVIEW = "preview"), n);
 let W = { skuId: "None" },
     $ = { skuId: "Shop" };
-var Z = i(887792),
+var Z = i(665411),
     Y = i(900183);
 let q = () => 80,
     Q = (e) => {
@@ -393,32 +393,33 @@ function el(e) {
 }
 function ea(e) {
     let { transitionState: t, analyticsLocations: i, guild: n, onClose: a, initialSelectedProfileFrame: o } = e,
-        { isFetching: m, categories: g, purchases: x } = (0, y.Ay)(),
-        f = (0, l.bG)([I.default], () => I.default.getCurrentUser()),
-        { analyticsLocations: C } = (0, p.Ay)(i, c.A.EDIT_PROFILE_FRAME_MODAL),
-        j = (0, h.Xf)({ user: f, guildId: n?.id });
+        { categories: m, purchases: g, isFetchingCategories: x, isFetchingPurchases: f } = (0, y.Ay)(),
+        C = x || (f && 0 === g.size),
+        j = (0, l.bG)([I.default], () => I.default.getCurrentUser()),
+        { analyticsLocations: k } = (0, p.Ay)(i, c.A.EDIT_PROFILE_FRAME_MODAL),
+        P = (0, h.Xf)({ user: j, guildId: n?.id });
     return (
         r.useEffect(() => {
-            A.default.track(ei.HAw.OPEN_MODAL, { type: ei.JJy.PROFILE_FRAME_CUSTOMIZATION, location_stack: C });
-        }, [C]),
+            A.default.track(ei.HAw.OPEN_MODAL, { type: ei.JJy.PROFILE_FRAME_CUSTOMIZATION, location_stack: k });
+        }, [k]),
         (0, s.jsx)(p.f5, {
-            value: C,
+            value: k,
             children: (0, s.jsx)(u.EO, {
                 transitionState: t,
                 className: es.yl,
-                size: m ? u.rI.DYNAMIC : u.rI.MEDIUM,
+                size: C ? u.rI.DYNAMIC : u.rI.MEDIUM,
                 parentComponent: "ProfileFrameModal",
                 "data-migration-pending": !0,
-                children: m
+                children: C
                     ? (0, s.jsx)(d.y, { className: es.u1, type: d.y.Type.SPINNING_CIRCLE })
                     : (0, s.jsx)(el, {
-                          user: f,
+                          user: j,
                           guild: n,
-                          categories: g,
-                          purchases: x,
-                          currentSavedFrame: j,
+                          categories: m,
+                          purchases: g,
+                          currentSavedFrame: P,
                           onClose: a,
-                          analyticsLocations: C,
+                          analyticsLocations: k,
                           initialSelectedProfileFrame: o,
                       }),
             }),
