@@ -98,7 +98,7 @@ function A() {
     return { audioModelDataPerUser: {} };
 }
 var I = n(696016);
-let T = 0.5;
+let T = 0.55;
 class S extends s.A {
     timeline;
     scheduledClipTimeout = new r.Ep();
@@ -277,7 +277,7 @@ class S extends s.A {
         }
         this.pendingSessionGameKey !== t &&
             ((this.pendingSessionGameKey = t),
-            this.sessionEndTimeout.start(1e4, () => {
+            this.sessionEndTimeout.start(3e4, () => {
                 this.processClipCandidates(), (this.currentSessionGameKey = t), (this.pendingSessionGameKey = null);
             }));
     }

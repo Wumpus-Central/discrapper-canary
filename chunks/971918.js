@@ -196,6 +196,11 @@ var V = n(626584),
     B = (((i = {}).MISSING = "missing"), (i.DOWNLOADED = "downloaded"), (i.DOWNLOADING = "downloading"), i);
 let H = [
         [
+            "laughter_screaming_krispy_21_may",
+            "onnx",
+            "308042d0bfa4a0280afccfb341da722448d826968652e0f6fc2cfdf303276522",
+        ],
+        [
             "laughter_screaming_old_spliced_2s",
             "onnx",
             "dce8aec92bae18f32afb08a94bdac1d72f02d7d5589e8ad75c57c2e4228e104b",
