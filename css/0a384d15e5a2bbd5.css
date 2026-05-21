@@ -1,11 +1,13 @@
 .container__3c20e {
+    align-self: stretch;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 12px;
     height: 100%;
     overflow-y: auto;
-    padding: 16px
+    padding: 16px;
+    width: 100%
 }
 
 .pageTitle__3c20e {
@@ -165,16 +167,19 @@
 
 .cardGroup__3c20e {
     align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
     gap: 16px
 }
 
-.cardGroup__3c20e,
-.gcLegend__3c20e {
-    display: flex;
-    flex-wrap: wrap
+.cardGroup__3c20e>* {
+    flex: 1 1 0;
+    min-width: 240px
 }
 
 .gcLegend__3c20e {
+    display: flex;
+    flex-wrap: wrap;
     gap: 8px 14px;
     margin-top: 2px
 }

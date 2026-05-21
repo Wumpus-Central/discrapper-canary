@@ -189,8 +189,7 @@
 
 .wrapper__83b1d:focus-within .actions__83b1d,
 .wrapper__83b1d:hover .actions__83b1d {
-    opacity: 1;
-    visibility: visible
+    opacity: 1
 }
 
 .content__83b1d {
@@ -240,8 +239,7 @@
     inset-inline-end: 8px;
     opacity: 0;
     position: absolute;
-    transition: opacity .25s, visibility .25s;
-    visibility: hidden;
+    transition: opacity .25s;
     z-index: 1
 }
 

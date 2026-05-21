@@ -1,62 +1,121 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => c }), n(134528), n(947204);
 var i = n(627968),
     r = n(64700),
     s = n(546738),
     a = n(661531),
     o = n(602853);
-function l(e) {
-    let t = (0, r.useRef)(null),
-        [n, l] = (0, r.useState)(null),
-        [u] = (0, r.useState)(() => new s.TimelineDataSeries()),
-        c = (0, o.r)(a.A.colors.BACKGROUND_BASE_LOW).hsl(),
-        d = (0, o.r)(a.A.colors.TEXT_DEFAULT).hsl(),
-        _ = (0, o.r)(a.A.colors.BACKGROUND_MOD_MUTED).hsl(),
-        f = (0, o.r)(a.A.unsafe_rawColors.BRAND_500).hsl(),
-        h = e.windowMs;
-    (0, r.useEffect)(() => {
-        let n = t.current;
-        if (null == n) return;
-        (n.width = e.width), (n.height = e.height);
-        let i = new s.TimelineGraphView(n, window.devicePixelRatio ?? 1);
-        (i.backgroundColor = c),
-            (i.textColor = d),
-            (i.gridColor = _),
-            (i.timeOptions = { timeStyle: "short" }),
-            (i.fontFamily = "gg sans"),
-            (i.fontSize = 11),
-            null != h && i.setScale(h / n.width),
-            u.setColor(f),
-            i.addDataSeries(u),
-            i.updateEndDate(),
-            l(i);
-    }, [t, c, f, _, d, u, h, e.width, e.height]);
-    let p = e.converter,
-        E = null != p ? e.dataPoints.map((e) => ({ ...e, value: p(e.value) })) : e.dataPoints;
-    u.setPoints(E),
-        n?.updateEndDate(),
-        n?.repaint(),
-        (0, r.useLayoutEffect)(() => {
-            if (null == e.markers || 0 === e.markers.length || null == e.windowMs || null == t.current) return;
-            let n = t.current,
-                i = n.getContext("2d");
-            if (null == i) return;
-            let r = Date.now(),
-                s = window.devicePixelRatio ?? 1,
-                a = n.height - Math.ceil(11 * s) - 4;
-            for (let t of ((i.lineWidth = s), e.markers)) {
-                let s = r - t.time;
-                if (s < 0 || s > e.windowMs) continue;
-                let o = n.width * (1 - s / e.windowMs);
-                i.save(),
-                    (i.strokeStyle = t.color),
-                    i.beginPath(),
-                    i.moveTo(o, 0),
-                    i.lineTo(o, a),
-                    i.stroke(),
-                    i.restore();
+let l = 1e3 / 30;
+class u {
+    getSource;
+    getConverter;
+    color = "#000";
+    constructor(e, t) {
+        (this.getSource = e), (this.getConverter = t);
+    }
+    setColor(e) {
+        this.color = e;
+    }
+    getColor() {
+        return this.color;
+    }
+    isVisible() {
+        return !0;
+    }
+    getValues(e, t, n) {
+        let i = this.getSource(),
+            r = this.getConverter(),
+            s = i.length,
+            a = Array(n),
+            o = 0,
+            l = 0;
+        if (s >= 2) {
+            let t = i.at(0),
+                n = i.at(1);
+            if (null != t && null != n) {
+                let i = n.time - t.time;
+                i > 0 && t.time - e < 1.5 * i && (l = null != r ? r(t.value) : t.value);
             }
-        });
+        }
+        let u = e;
+        for (let e = 0; e < n; e++) {
+            for (; o < s; ) {
+                let e = i.at(o);
+                if (null == e) {
+                    o++;
+                    continue;
+                }
+                if (e.time >= u) break;
+                (l = null != r ? r(e.value) : e.value), o++;
+            }
+            (a[e] = l), (u += t);
+        }
+        return a;
+    }
+}
+function c(e) {
+    let t = (0, r.useRef)(null),
+        [n, c] = (0, r.useState)(null),
+        d = (0, o.r)(a.A.colors.BACKGROUND_BASE_LOW).hsl(),
+        _ = (0, o.r)(a.A.colors.TEXT_DEFAULT).hsl(),
+        f = (0, o.r)(a.A.colors.BACKGROUND_MOD_MUTED).hsl(),
+        h = (0, o.r)(a.A.unsafe_rawColors.BRAND_500).hsl(),
+        p = e.windowMs,
+        E = (0, r.useRef)(e);
+    (0, r.useEffect)(() => {
+        E.current = e;
+    }),
+        (0, r.useEffect)(() => {
+            let n = t.current;
+            if (null == n) return;
+            (n.width = e.width), (n.height = e.height);
+            let i = new s.TimelineGraphView(n, window.devicePixelRatio ?? 1);
+            (i.backgroundColor = d),
+                (i.textColor = _),
+                (i.gridColor = f),
+                (i.timeOptions = { timeStyle: "short" }),
+                (i.fontFamily = "gg sans"),
+                (i.fontSize = 11),
+                null != p && i.setScale(p / n.width);
+            let r = new u(
+                () => E.current.dataPoints,
+                () => E.current.converter,
+            );
+            r.setColor(h), i.addDataSeries(r), i.updateEndDate(), c(i);
+        }, [t, d, h, f, _, p, e.width, e.height]),
+        (0, r.useEffect)(() => {
+            if (null == n) return;
+            let e = 0,
+                i = 0,
+                r = (s) => {
+                    if (((e = requestAnimationFrame(r)), s - i < l)) return;
+                    (i = s), n.updateEndDate(), n.repaint();
+                    let a = E.current,
+                        o = a.markers,
+                        u = a.windowMs;
+                    if (null != o && o.length > 0 && null != u && null != t.current) {
+                        let e = t.current,
+                            n = e.getContext("2d");
+                        if (null == n) return;
+                        let i = Date.now(),
+                            r = window.devicePixelRatio ?? 1,
+                            s = e.height - Math.ceil(11 * r) - 4;
+                        for (let t of ((n.lineWidth = r), o)) {
+                            let r = i - t.time;
+                            if (r < 0 || r > u) continue;
+                            let a = e.width * (1 - r / u);
+                            n.save(),
+                                (n.strokeStyle = t.color),
+                                n.beginPath(),
+                                n.moveTo(a, 0),
+                                n.lineTo(a, s),
+                                n.stroke(),
+                                n.restore();
+                        }
+                    }
+                };
+            return (e = requestAnimationFrame(r)), () => cancelAnimationFrame(e);
+        }, [n]);
     let m = { width: e.width, height: e.height };
     return (0, i.jsx)("canvas", { style: m, width: e.width, height: e.height, ref: t }, "canvas");
 }
