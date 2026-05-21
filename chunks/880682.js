@@ -987,9 +987,9 @@ function ek(e) {
         u = r.useRef(null),
         { showModal: c } = eP({ channel: t, subscribeToGlobalHotkey: o });
     return (0, i.jsx)(p.$, {
+        variant: "primary",
         ...l,
         onClick: c,
-        variant: "primary",
         buttonRef: u,
         text: s,
         "aria-label": s,

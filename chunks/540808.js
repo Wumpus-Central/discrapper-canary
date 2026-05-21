@@ -9,6 +9,7 @@ e.exports = {
     iy: "membersGroupName_c8ffbb",
     ML: "hiddenMembers_c8ffbb",
     k1: "memberGroupsPlaceholder_c8ffbb",
+    Uf: "inviteToGroupButton_c8ffbb",
     UT: "roleIcon_c8ffbb",
     Ij: "fullWidth_c8ffbb",
 };
