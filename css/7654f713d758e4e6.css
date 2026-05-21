@@ -44,6 +44,13 @@
     gap: var(--space-8)
 }
 
+.directoryTitleUsername__6db38 {
+    align-items: center;
+    display: inline-flex;
+    gap: var(--space-8);
+    vertical-align: middle
+}
+
 .directoryContent__6db38 {
     display: flex;
     flex: 1;

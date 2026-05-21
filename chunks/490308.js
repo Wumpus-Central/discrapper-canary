@@ -5,6 +5,7 @@ d.exports = {
     ws: "directoryPanel__6db38",
     NG: "directoryHeader__6db38",
     kc: "directoryTitleRow__6db38",
+    _p: "directoryTitleUsername__6db38",
     hG: "directoryContent__6db38",
     zE: "badgeSection__6db38",
     yq: "badgeGrid__6db38",
