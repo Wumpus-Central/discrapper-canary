@@ -897,12 +897,13 @@ var eU = n(889137),
     e6 = n(18437),
     e4 = n(780964),
     e5 = n(766075),
-    e7 = n(540037);
-function e8(e) {
+    e7 = n(52093),
+    e8 = n(540037);
+function e9(e) {
     let { text: t, quest: n, sourceQuestContent: r } = e,
         s = (0, e6.Ut)();
     return (0, i.jsx)(y.D, {
-        className: e7.Z0,
+        className: e8.Z0,
         onClick: () => {
             s({
                 questId: n.id,
@@ -915,22 +916,18 @@ function e8(e) {
         children: (0, i.jsx)(C.E, { "aria-label": t, color: "none", variant: "text-xxs/normal", children: t }),
     });
 }
-function e9(e) {
+function te(e) {
     let { xboxAndPlaystationAccounts: t, quest: n, sourceQuestContent: r } = e;
     return t.length > 0
-        ? (0, i.jsx)(e8, { text: X.intl.string(X.t["qiS+xj"]), quest: n, sourceQuestContent: r })
+        ? (0, i.jsx)(e9, { text: X.intl.string(X.t["qiS+xj"]), quest: n, sourceQuestContent: r })
         : null;
 }
-function te(e) {
+function tt(e) {
     return (0, i.jsxs)(i.Fragment, {
-        children: [
-            (0, i.jsx)(C.E, { color: "text-muted", variant: "text-xs/medium", children: X.intl.string(X.t.EJFSvD) }),
-            (0, i.jsx)(e9, { ...e }),
-        ],
+        children: [(0, i.jsx)(e7.L5, { children: X.intl.string(X.t.EJFSvD) }), (0, i.jsx)(te, { ...e })],
     });
 }
-var tt = n(52093),
-    tn = n(256023);
+var tn = n(256023);
 function ti(e) {
     return (0, i.jsx)(C.E, { className: tn.eW, color: "text-muted", variant: "text-xxs/normal", children: e.children });
 }
@@ -1057,12 +1054,12 @@ let ts = function (e) {
                     steps: [
                         {
                             renderContent: () =>
-                                (0, i.jsx)(te, { ...a, quest: t, sourceQuestContent: p.uF.QUEST_BAR_V2 }),
+                                (0, i.jsx)(tt, { ...a, quest: t, sourceQuestContent: p.uF.QUEST_BAR_V2 }),
                             isComplete: e || r || l,
                         },
                         {
                             renderContent: () =>
-                                (0, i.jsx)(tt.L5, {
+                                (0, i.jsx)(e7.L5, {
                                     children: (0, ec.ui)(t)
                                         ? X.intl.string(X.t["5tXqFe"])
                                         : X.intl.formatToPlainString(X.t["+8JB6Y"], { gameTitle: s }),
@@ -1071,7 +1068,7 @@ let ts = function (e) {
                         },
                         {
                             renderContent: () =>
-                                (0, i.jsx)(tt.L5, {
+                                (0, i.jsx)(e7.L5, {
                                     children: X.intl.formatToPlainString(X.t.HhfrYS, { numMinutes: n.targetMinutes }),
                                 }),
                             isComplete: l,
@@ -1082,7 +1079,7 @@ let ts = function (e) {
                     isQuestComplete: l,
                 };
             }, [a, o.length, t, n.targetMinutes]);
-        return (0, i.jsx)(tt.Ay, {
+        return (0, i.jsx)(e7.Ay, {
             heading: X.intl.string(X.t.UPWlJu),
             steps: u,
             children: c && !d && !_ && (0, i.jsx)(tr, { useReducedMotion: s, quest: t }),

@@ -2563,13 +2563,6 @@
     color: ButtonText
 }
 
-.error__6e36d {
-    color: var(--text-feedback-critical);
-    font-size: 14px;
-    font-weight: var(--font-weight-medium);
-    margin-top: 4px
-}
-
 .value__96f95 {
     width: 48px
 }
@@ -4476,6 +4469,14 @@
     background-color: var(--brand-500)
 }
 
+.stepWrapperCurrent_a99139 .stepIconWrapper_a99139 {
+    border-color: var(--icon-overlay-light)
+}
+
+.theme-light .stepWrapperCurrent_a99139 .stepIconWrapper_a99139 {
+    border-color: var(--icon-overlay-dark)
+}
+
 .stepConnector_a99139 {
     background-color: var(--interactive-background-selected);
     flex: 1 1 auto;
@@ -4484,9 +4485,9 @@
 }
 
 .stepWrapperComplete_a99139 .stepConnector_a99139:before {
-    background-color: var(--white);
+    background-color: var(--icon-overlay-light);
     bottom: 0;
-    box-shadow: 0 0 6px var(--opacity-white-80);
+    box-shadow: 0 0 5px hsla(0, 0%, 100%, .5);
     content: "";
     inset-inline: 0;
     position: absolute;
@@ -4494,8 +4495,7 @@
 }
 
 .theme-light .stepWrapperComplete_a99139 .stepConnector_a99139:before {
-    background-color: hsl(var(--brand-500-hsl)/.6);
-    box-shadow: 0 0 6px hsl(var(--brand-500-hsl)/.4)
+    background-color: var(--icon-overlay-dark)
 }
 
 .stepIcon_a99139 {
@@ -6621,10 +6621,6 @@
     to {
         opacity: 0
     }
-}
-
-.errorText__38262 {
-    margin-top: var(--space-4)
 }
 
 .formContent__30f2d {

@@ -1,60 +1,71 @@
 "use strict";
-n.d(t, { Ay: () => f, L5: () => _ });
-var i = n(627968);
-n(64700);
-var r = n(503698),
-    s = n.n(r);
+n.d(t, { Ay: () => p, L5: () => h });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s);
 n(17928);
-var a = n(947641),
-    o = n(661531),
-    l = n(834730),
-    u = n(534514);
+var o = n(947641),
+    l = n(661531),
+    u = n(834730),
+    c = n(534514);
 n(287809), n(838077), n(801365), n(375708);
-var c = n(629436);
-function d(e) {
-    let { children: t, isComplete: n, hasNextStep: r } = e;
+var d = n(629436);
+let _ = r.createContext({ isCurrent: !1 });
+function f(e) {
+    let { children: t, isComplete: n, isCurrent: r, hasNextStep: s } = e;
     return (0, i.jsxs)("li", {
-        className: s()(c.gY, { [c.HP]: n }, { [c.h4]: r }),
+        className: a()(d.gY, { [d.HP]: n }, { [d.fS]: r }, { [d.h4]: s }),
         children: [
             (0, i.jsxs)("div", {
-                className: c.cJ,
+                className: d.cJ,
                 children: [
                     (0, i.jsx)("div", {
-                        className: c.$P,
-                        children: n && (0, i.jsx)(a.r, { className: c.ap, color: o.A.colors.WHITE }),
+                        className: d.$P,
+                        children: n && (0, i.jsx)(o.r, { className: d.ap, color: l.A.colors.WHITE }),
                     }),
-                    r && (0, i.jsx)("div", { className: c.UK }),
+                    s && (0, i.jsx)("div", { className: d.UK }),
                 ],
             }),
-            (0, i.jsx)("div", { className: c.M7, children: t }),
+            (0, i.jsx)("div", {
+                className: d.M7,
+                children: (0, i.jsx)(_.Provider, { value: { isCurrent: r }, children: t }),
+            }),
         ],
     });
 }
-function _(e) {
-    let { children: t } = e;
-    return (0, i.jsx)(l.E, { color: "text-muted", variant: "text-xs/medium", children: t });
+function h(e) {
+    let { children: t } = e,
+        { isCurrent: n } = r.useContext(_);
+    return (0, i.jsx)(u.E, { color: n ? "text-default" : "text-muted", variant: "text-xs/medium", children: t });
 }
-let f = function (e) {
-    let { children: t, heading: n, steps: r } = e;
+let p = function (e) {
+    let { children: t, heading: n, steps: r } = e,
+        s = r.findIndex((e) => !e.isComplete);
     return (0, i.jsxs)("div", {
-        className: c.iE,
+        className: d.iE,
         children: [
             (0, i.jsx)("div", {
-                className: c.Mj,
-                children: (0, i.jsx)(u.D, {
-                    className: c.R_,
+                className: d.Mj,
+                children: (0, i.jsx)(c.D, {
+                    className: d.R_,
                     color: "text-strong",
                     variant: "text-xs/semibold",
                     children: n,
                 }),
             }),
             (0, i.jsx)("div", {
-                className: c.lp,
+                className: d.lp,
                 children: (0, i.jsx)("ul", {
                     children: r.map((e, t) =>
                         (0, i.jsx)(
-                            d,
-                            { isComplete: e.isComplete, hasNextStep: t < r.length - 1, children: e.renderContent() },
+                            f,
+                            {
+                                isComplete: e.isComplete,
+                                isCurrent: t === s,
+                                hasNextStep: t < r.length - 1,
+                                children: e.renderContent(),
+                            },
                             t,
                         ),
                     ),

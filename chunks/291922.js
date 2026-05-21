@@ -916,45 +916,46 @@ function tP(t) {
             rowIndex: c,
             isVisibleInViewport: d,
             onReceiveErrorHints: x,
-            sourceQuestContent: m,
-            questNameHeadingId: C,
+            sourceQuestContent: C,
+            questNameHeadingId: h,
         } = t,
-        h = i.useRef(null),
-        j = (0, ta.z)(),
-        E = (0, u.SD)(e, j),
-        v = j === tl.MA.NITRO && E,
-        N = (0, r.bG)([tn.default], () => tn.default.getCurrentUser()),
-        O = (0, tr.mq)(e.config, N),
-        A = (0, tr.mH)(e.config, N),
-        p = e.userStatus?.enrolledAt != null,
-        { ref: T, scrollHeight: S } = (0, L.wR)(),
-        I = null != S && S > 104,
-        { onAssetLoadComplete: _ } = i.useContext(W.M),
-        { expansionSpring: w } = (0, g.z)({ expansionSpring: +!!a, config: { ...V.N, clamp: !0 } }),
-        Q = e.userStatus?.completedAt != null,
-        q = e.userStatus?.claimedAt != null,
-        b = (0, tr.ks)(e.config),
-        R = e.userStatus?.orbQuantityClaimed ?? (0, tr._Z)(e.config),
-        k = (0, tr.wo)(e.config, N),
-        { completedRatio: M, completedRatioDisplay: U } = (0, u.O9)(e),
-        P = (0, ti.A9)(e, m, t_.rE.QUEST_HOME_DESKTOP, s, te.Ob.QuestHome, h),
-        z = i.useMemo(
+        j = i.useRef(null),
+        E = (0, ta.z)(),
+        v = (0, u.SD)(e, E),
+        N = E === tl.MA.NITRO && v,
+        O = (0, r.bG)([tn.default], () => tn.default.getCurrentUser()),
+        A = (0, tr.mq)(e.config, O),
+        p = (0, tr.mH)(e.config, O),
+        T = e.userStatus?.enrolledAt != null,
+        { ref: S, scrollHeight: I } = (0, L.wR)(),
+        _ = null != I && I > 104,
+        { onAssetLoadComplete: w } = i.useContext(W.M),
+        { expansionSpring: Q } = (0, g.z)({ expansionSpring: +!!a, config: { ...V.N, clamp: !0 } }),
+        q = e.userStatus?.completedAt != null,
+        b = e.userStatus?.claimedAt != null,
+        R = (0, tr.ks)(e.config),
+        k = e.userStatus?.orbQuantityClaimed ?? (0, tr._Z)(e.config),
+        M = (0, tr.wo)(e.config, O),
+        U = (0, m.I6)(e),
+        { completedRatio: P, completedRatioDisplay: z } = (0, u.O9)(e, U),
+        F = (0, ti.A9)(e, C, t_.rE.QUEST_HOME_DESKTOP, s, te.Ob.QuestHome, j),
+        $ = i.useMemo(
             () =>
-                q && b
+                b && R
                     ? (0, n.jsxs)(
                           tz,
                           {
                               questId: e.id,
                               children: [
                                   (0, n.jsx)(ts.A, { shouldUseThemeColor: !0, className: tM.Kq, customSize: 14 }),
-                                  G.intl.format(G.t["nLXlh+"], { orbAmount: R ?? 0 }),
+                                  G.intl.format(G.t["nLXlh+"], { orbAmount: k ?? 0 }),
                               ],
                           },
                           e.id,
                       )
-                    : q
-                      ? (0, n.jsx)(tz, { questId: e.id, children: O })
-                      : b
+                    : b
+                      ? (0, n.jsx)(tz, { questId: e.id, children: A })
+                      : R
                         ? G.intl.format(G.t["0IUT4Y"], {
                               rewardWithArticleHook: () =>
                                   (0, n.jsxs)(
@@ -967,34 +968,34 @@ function tP(t) {
                                                   className: tM.Kq,
                                                   customSize: 14,
                                               }),
-                                              G.intl.format(G.t["nLXlh+"], { orbAmount: k ?? 0 }),
+                                              G.intl.format(G.t["nLXlh+"], { orbAmount: M ?? 0 }),
                                           ],
                                       },
                                       e.id,
                                   ),
                           })
                         : G.intl.format(G.t["0IUT4Y"], {
-                              rewardWithArticleHook: () => (0, n.jsx)(tz, { questId: e.id, children: A }, e.id),
+                              rewardWithArticleHook: () => (0, n.jsx)(tz, { questId: e.id, children: p }, e.id),
                           }),
-            [O, q, A, e.id, k, R, b],
+            [A, b, p, e.id, M, k, R],
         ),
-        F = i.useMemo(() => {
-            if (null != P)
+        B = i.useMemo(() => {
+            if (null != F)
                 return (0, n.jsx)(y.E, {
                     variant: "text-sm/medium",
                     color: "text-muted",
                     className: tM.h_,
-                    children: P,
+                    children: F,
                 });
-        }, [P]),
-        $ = (0, r.bG)([tt.A], () => tt.A.useReducedMotion);
+        }, [F]),
+        X = (0, r.bG)([tt.A], () => tt.A.useReducedMotion);
     return (0, n.jsxs)("div", {
         className: tM.kL,
-        ref: h,
+        ref: j,
         children: [
-            (0, n.jsx)(to.A, { visible: v, glow: !0 }),
+            (0, n.jsx)(to.A, { visible: N, glow: !0 }),
             (0, n.jsxs)(f.animated.div, {
-                style: { maxHeight: w.to([0, 1], [104, (S ?? 0) + 12]) },
+                style: { maxHeight: Q.to([0, 1], [104, (I ?? 0) + 12]) },
                 className: tM.z,
                 children: [
                     (0, n.jsx)("div", {
@@ -1004,31 +1005,31 @@ function tP(t) {
                             width: 80,
                             height: 80,
                             children: [
-                                !q && Q && (0, n.jsx)("div", { className: tM.Nz }),
-                                p
+                                !b && q && (0, n.jsx)("div", { className: tM.Nz }),
+                                T
                                     ? (0, n.jsxs)("div", {
                                           className: tM.Tr,
                                           children: [
-                                              Q &&
+                                              q &&
                                                   (0, n.jsx)(J.a, {
                                                       importData: tU,
                                                       className: tM.t_,
                                                       loop: !1,
                                                       autoplay: !1,
-                                                      shouldAnimate: !$,
+                                                      shouldAnimate: !X,
                                                   }),
                                               (0, n.jsx)(tc.A, {
                                                   size: 76,
-                                                  percentComplete: M,
-                                                  overlayText: a && !(0, D.Ic)(e) ? U : void 0,
+                                                  percentComplete: P,
+                                                  overlayText: a && !(0, D.Ic)(e) ? z : void 0,
                                                   children: (0, n.jsx)(td.A, {
                                                       quest: e,
                                                       questContent: s,
                                                       autoplay: a,
-                                                      onLoadComplete: _,
+                                                      onLoadComplete: w,
                                                       lazyLoad: !0,
                                                       fullWidth: !0,
-                                                      sourceQuestContent: m,
+                                                      sourceQuestContent: C,
                                                   }),
                                               }),
                                           ],
@@ -1038,25 +1039,25 @@ function tP(t) {
                                           autoplay: a,
                                           questContent: s,
                                           className: tM.eB,
-                                          onLoadComplete: _,
+                                          onLoadComplete: w,
                                           lazyLoad: !0,
-                                          sourceQuestContent: m,
+                                          sourceQuestContent: C,
                                       }),
                             ],
                         }),
                     }),
                     (0, n.jsxs)("div", {
-                        ref: T,
-                        className: l()(tM.FS, { [tM.wq]: !I }),
+                        ref: S,
+                        className: l()(tM.FS, { [tM.wq]: !_ }),
                         children: [
                             (0, n.jsx)(Z.D, {
-                                id: C,
+                                id: h,
                                 variant: "eyebrow",
                                 color: "text-brand",
                                 className: tM.G$,
                                 children: G.intl.format(G.t.EAYZAr, { questName: e.config.messages.questName }),
                             }),
-                            E
+                            v
                                 ? (0, n.jsxs)("div", {
                                       className: tM.xv,
                                       children: [
@@ -1064,23 +1065,23 @@ function tP(t) {
                                               variant: "text-md/semibold",
                                               color: "text-strong",
                                               className: tM.wx,
-                                              children: z,
+                                              children: $,
                                           }),
-                                          (0, n.jsx)(tu.e, { questId: e.id, orbMultiplierEligibility: j }),
+                                          (0, n.jsx)(tu.e, { questId: e.id, orbMultiplierEligibility: E }),
                                       ],
                                   })
                                 : (0, n.jsx)(y.E, {
                                       variant: "text-md/semibold",
                                       color: "text-strong",
                                       className: tM.wx,
-                                      children: z,
+                                      children: $,
                                   }),
-                            F,
+                            B,
                         ],
                     }),
-                    I &&
+                    _ &&
                         (0, n.jsx)(f.animated.div, {
-                            style: { opacity: (0, H.a)(w.to([0, 1], [1, 0])) },
+                            style: { opacity: (0, H.a)(Q.to([0, 1], [1, 0])) },
                             className: tM.hS,
                         }),
                 ],
@@ -1091,7 +1092,7 @@ function tP(t) {
                 contentPosition: o,
                 rowIndex: c,
                 onReceiveErrorHints: x,
-                sourceQuestContent: m,
+                sourceQuestContent: C,
             }),
         ],
     });
