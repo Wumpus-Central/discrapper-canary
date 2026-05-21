@@ -1,17 +1,23 @@
 "use strict";
-n.d(t, { A: () => d, K: () => u }), n(321073);
+n.d(t, { A: () => h, K: () => d }), n(321073);
 var i,
     r = n(635377),
     s = n.n(r),
-    a = n(439372),
-    o = n(174459),
-    l = n(652215),
-    u =
+    a = n(562708),
+    o = n(439372),
+    l = n(793574),
+    u = n(174459),
+    c = n(652215),
+    d =
         (((i = {}).ANNOUNCEMENT = "announcement"),
         (i.APP_EMBED = "app_embed"),
         (i.OFFICIAL_MESSAGE = "official_message"),
+        (i.VOICE_INVITE_EMBED = "voice_invite_embed"),
         i);
-class c extends a.A {
+function _(e) {
+    return "voice_invite_embed" === e.type ? `${e.messageId}-${e.inviteCode}-${e.type}` : `${e.messageId}-${e.type}`;
+}
+class f extends o.A {
     currentlyVisibleMessageTimers = {};
     viewsInCurrentChannel = new Set();
     recentViewTimes = new (s())({ max: 500, maxAge: 6e4 });
@@ -19,35 +25,34 @@ class c extends a.A {
     batchTimerId = null;
     actions = { CHANNEL_SELECT: () => this.handleChannelSelect() };
     handleMessageBecameVisible(e) {
-        let { type: t, messageId: n } = e,
-            i = `${n}-${t}`;
-        if (null != this.currentlyVisibleMessageTimers[i] || this.viewsInCurrentChannel.has(i)) return;
-        let r = this.recentViewTimes.get(i);
-        if (null != r && Date.now() - r < 6e4) return;
-        let s = setTimeout(() => {
-            delete this.currentlyVisibleMessageTimers[i],
-                this.viewsInCurrentChannel.add(i),
-                this.recentViewTimes.set(i, Date.now()),
+        let t = _(e);
+        if (null != this.currentlyVisibleMessageTimers[t] || this.viewsInCurrentChannel.has(t)) return;
+        let n = this.recentViewTimes.get(t);
+        if (null != n && Date.now() - n < 6e4) return;
+        let i = setTimeout(() => {
+            delete this.currentlyVisibleMessageTimers[t],
+                this.viewsInCurrentChannel.add(t),
+                this.recentViewTimes.set(t, Date.now()),
                 this.bufferViewTrack(e);
         }, 1e3);
-        this.currentlyVisibleMessageTimers[i] = s;
+        this.currentlyVisibleMessageTimers[t] = i;
     }
-    handleMessageLostVisibility(e, t) {
-        let n = `${e}-${t}`,
-            i = this.currentlyVisibleMessageTimers[n];
-        null != i && (clearTimeout(i), delete this.currentlyVisibleMessageTimers[n]);
+    handleMessageLostVisibility(e, t, n) {
+        let i = null != n ? `${e}-${n}-${t}` : `${e}-${t}`,
+            r = this.currentlyVisibleMessageTimers[i];
+        null != r && (clearTimeout(r), delete this.currentlyVisibleMessageTimers[i]);
     }
     handleMessageListVisibilityChange(e, t) {
         for (let t of e) this.handleMessageBecameVisible(t);
         let n = Object.keys(this.currentlyVisibleMessageTimers);
         if (n.length > 0) {
-            let i = new Set(e.map((e) => `${e.messageId}-${e.type}`));
-            for (let e of n)
-                if (e.endsWith(`-${t}`) && !i.has(e)) {
-                    let n = e.slice(0, e.lastIndexOf("-"));
-                    this.handleMessageLostVisibility(n, t);
-                }
+            let i = new Set(e.map(_));
+            for (let e of n) e.endsWith(`-${t}`) && !i.has(e) && this.clearTimer(e);
         }
+    }
+    clearTimer(e) {
+        let t = this.currentlyVisibleMessageTimers[e];
+        null != t && (clearTimeout(t), delete this.currentlyVisibleMessageTimers[e]);
     }
     handleChannelSelect() {
         for (let e of Object.values(this.currentlyVisibleMessageTimers)) clearTimeout(e);
@@ -58,7 +63,7 @@ class c extends a.A {
             let t = (function (e) {
                 if ("announcement" === e.type)
                     return {
-                        event: l.HAw.ANNOUNCEMENT_MESSAGE_VIEWED,
+                        event: c.HAw.ANNOUNCEMENT_MESSAGE_VIEWED,
                         properties: {
                             message_id: e.messageId,
                             channel_id: e.channelId,
@@ -69,7 +74,7 @@ class c extends a.A {
                     };
                 if ("app_embed" === e.type)
                     return {
-                        event: l.HAw.APP_EMBED_VIEWED,
+                        event: c.HAw.APP_EMBED_VIEWED,
                         properties: {
                             application_id: e.applicationId,
                             link_type: e.linkType,
@@ -80,12 +85,27 @@ class c extends a.A {
                     };
                 if ("official_message" === e.type)
                     return {
-                        event: l.HAw.OFFICIAL_MESSAGE_VIEWED,
+                        event: c.HAw.OFFICIAL_MESSAGE_VIEWED,
                         properties: { message_id: e.messageId, channel_id: e.channelId, guild_id: e.guildId },
+                    };
+                if ("voice_invite_embed" === e.type)
+                    return {
+                        event: a.ImpressionNames.VOICE_INVITE_EMBED,
+                        properties: {
+                            impression_type: a.ImpressionTypes.VIEW,
+                            invite_code: e.inviteCode,
+                            invite_guild_id: e.inviteGuildId,
+                            invite_channel_id: e.inviteChannelId,
+                            invite_instance_id: e.inviteInstanceId,
+                            has_active_stream: e.hasActiveStream,
+                            location_stack: e.treatmentRendered
+                                ? [l.A.INVITE_EMBED, l.A.VOICE_CHANNEL_LIST_INVITE_EMBED]
+                                : [l.A.INVITE_EMBED],
+                        },
                     };
                 throw Error("Invalid message type for message view tracking");
             })(e);
-            o.default.track(t.event, t.properties);
+            u.default.track(t.event, t.properties);
         }
         (this.batchBuffer = []),
             null != this.batchTimerId && (clearTimeout(this.batchTimerId), (this.batchTimerId = null));
@@ -96,4 +116,4 @@ class c extends a.A {
             null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), 2e3));
     }
 }
-let d = new c();
+let h = new f();
