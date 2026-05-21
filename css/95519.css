@@ -161,31 +161,6 @@
     width: 34px
 }
 
-.link_d9ba3e {
-    border-radius: inherit;
-    display: block;
-    width: -moz-fit-content;
-    width: fit-content
-}
-
-.link_d9ba3e:hover {
-    text-decoration-color: var(--text-default)
-}
-
-.icon_a1c007 {
-    height: 1lh;
-    -o-object-fit: contain;
-    object-fit: contain;
-    vertical-align: bottom;
-    width: 1lh
-}
-
-:where(.contentImage__42bf5) {
-    border-radius: var(--radius-xs);
-    -o-object-fit: contain;
-    object-fit: contain
-}
-
 .fontCode__230d2 {
     font-family: var(--font-code)
 }
@@ -246,6 +221,23 @@
     height: 1lh;
     vertical-align: bottom;
     width: 1lh
+}
+
+.link_d9ba3e {
+    border-radius: inherit;
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.link_d9ba3e:hover {
+    text-decoration-color: var(--text-default)
+}
+
+:where(.contentImage__42bf5) {
+    border-radius: var(--radius-xs);
+    -o-object-fit: contain;
+    object-fit: contain
 }
 
 .container__0f2e8 {
@@ -723,24 +715,6 @@ img.thumbnail__0f2e8 {
 .divider__23eb0 {
     background-color: var(--user-profile-border);
     height: 1px
-}
-
-.cloudPlaySection__33ecd {
-    align-items: center;
-    display: flex;
-    gap: 16px;
-    justify-content: space-between
-}
-
-.cloudPlaySectionTextContainer__33ecd {
-    align-items: center;
-    display: flex;
-    gap: 8px
-}
-
-.cloudPlayDivider__33ecd {
-    margin: 4px 0;
-    width: 100%
 }
 
 .loadingSpinner__5b1b2 {
@@ -1649,6 +1623,7 @@ img.thumbnail__0f2e8 {
     flex-direction: column;
     inset: 0;
     justify-content: space-between;
+    overflow: hidden;
     position: absolute
 }
 
@@ -1659,11 +1634,29 @@ img.thumbnail__0f2e8 {
 }
 
 .swatchButton_f11c9b {
+    --custom-swatch-size: 32px;
     border-radius: var(--radius-sm);
     cursor: pointer;
-    height: var(--space-32);
+    height: var(--custom-swatch-size);
     justify-content: center;
-    width: var(--space-32)
+    position: relative;
+    width: var(--custom-swatch-size)
+}
+
+.swatchButton_f11c9b:before {
+    content: "";
+    inset-inline: calc((var(--custom-swatch-size) - var(--custom-tile-width)*1px)/2);
+    position: absolute
+}
+
+.swatchButton_f11c9b:first-child:before {
+    inset-block-end: -18px;
+    inset-block-start: 0
+}
+
+.swatchButton_f11c9b:last-child:before {
+    inset-block-end: 0;
+    inset-block-start: -18px
 }
 
 .swatchInner_f11c9b {
@@ -7028,10 +7021,4 @@ img.thumbnail__0f2e8 {
 
 .supportHeader_d9914b {
     margin-bottom: 4px
-}
-
-.confettiCanvas__6c43c {
-    height: 100%;
-    position: absolute;
-    width: 100%
 }

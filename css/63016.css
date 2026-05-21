@@ -1,3 +1,11 @@
+.icon_a1c007 {
+    height: 1lh;
+    -o-object-fit: contain;
+    object-fit: contain;
+    vertical-align: bottom;
+    width: 1lh
+}
+
 .root_b1a15e {
     height: .8lh;
     padding-block: .1lh;

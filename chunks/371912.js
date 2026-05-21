@@ -300,11 +300,11 @@ function K(e) {
         { premiumSubscription: r } = (0, a.cf)([p.A], () => ({ premiumSubscription: p.A.getPremiumSubscription() })),
         s = (0, a.bG)([m.A], () => null != m.A.getQuestPreviewOverride(g.uF.QUEST_BAR_V2), []);
     if (null == t) return { isQuestBarVisible: !1, reason: "quest_is_null" };
-    if (s) return { isQuestBarVisible: !0, reason: "quest_bar_visible" };
+    let o = t.userStatus?.claimedAt != null;
+    if (s && !o) return { isQuestBarVisible: !0, reason: "quest_bar_visible" };
     if ((0, w.K9)(t.config) && r?.isPurchasedExternally)
         return { isQuestBarVisible: !1, reason: "premium_subscription_is_purchased_externally" };
-    let o = t.userStatus?.claimedAt != null,
-        l = null != t.userStatus && (0, O.gO)(t.userStatus, g.uF.QUEST_BAR);
+    let l = null != t.userStatus && (0, O.gO)(t.userStatus, g.uF.QUEST_BAR);
     return o
         ? { isQuestBarVisible: !1, reason: "quest_claimed" }
         : i

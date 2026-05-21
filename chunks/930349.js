@@ -1,8 +1,8 @@
-a.d(l, { V: () => A, Y: () => k });
+a.d(l, { V: () => k, Y: () => m });
 var i = a(627968),
     n = a(64700),
-    r = a(503698),
-    t = a.n(r),
+    t = a(503698),
+    r = a.n(t),
     s = a(408278),
     d = a(241326),
     u = a(417270),
@@ -10,97 +10,98 @@ var i = a(627968),
     o = a(245604),
     v = a(661531),
     g = a(990078),
-    f = a(713517),
-    h = a(375708),
+    h = a(713517),
+    f = a(375708),
     b = a(889536);
 function p() {
     return (0, i.jsx)("div", { className: b.overlay });
 }
-function m(e) {
-    let { onClick: l, type: a, accessibleLabel: n } = e,
-        r = "remove" === a ? h.intl.string(h.t.N86XcP) : h.intl.string(h.t.wgIPss);
-    return (0, i.jsx)(g.m, {
-        text: r,
-        ariaHidden: !0,
-        children: (0, i.jsx)(s.K, {
-            "aria-label": n,
-            icon: "remove" === a ? d.u : u.m,
-            size: "sm",
-            variant: "overlay-secondary",
-            onClick: l,
-        }),
-    });
-}
-let k = n.forwardRef(function (e, l) {
-    let { variant: a, disabled: n = !1, isInteracting: r = !1, children: s } = e;
-    return (0, i.jsx)("div", {
+let m = n.forwardRef(function (e, l) {
+    let { variant: a, disabled: n = !1, isInteracting: t = !1, children: c, deleteButton: o } = e,
+        v = o?.type === "remove" ? f.intl.string(f.t.N86XcP) : f.intl.string(f.t.wgIPss);
+    return (0, i.jsxs)("div", {
         ref: l,
-        className: t()(b.tile, b[a], { [b.disabled]: n, [b.isInteracting]: r }),
-        children: s,
+        className: r()(b.tile, b[a], { [b.disabled]: n, [b.isInteracting]: t }),
+        children: [
+            c,
+            !n &&
+                null != o &&
+                (0, i.jsx)("div", {
+                    className: r()(b.deleteButtonWrapper, { [b.resetButton]: "reset" === o.type }),
+                    children: (0, i.jsx)(g.m, {
+                        text: v,
+                        ariaHidden: !0,
+                        children: (0, i.jsx)(s.K, {
+                            "aria-label": o.accessibleLabel,
+                            icon: "remove" === o.type ? d.u : u.m,
+                            size: "sm",
+                            variant: "overlay-secondary",
+                            onClick: o.onClick,
+                        }),
+                    }),
+                }),
+        ],
     });
 });
-function A(e) {
+function k(e) {
     let {
             variant: l,
             onClick: a,
-            accessibleLabel: r,
+            accessibleLabel: t,
             accessibleValue: s,
             renderPreview: d,
             showOverlayOnHover: u = !1,
             disabled: g = !1,
-            buttonRef: A,
-            affordance: I,
-            ...C
+            buttonRef: k,
+            affordance: A,
+            ...I
         } = e,
-        x = "add" !== I ? I : void 0,
-        y = n.useRef(null),
-        { isHoveringOrFocusing: j } = (0, f.A)(y),
-        w = j && !g,
-        N = n.useRef(null),
-        P = A ?? N;
-    return (0, i.jsxs)(k, {
-        ref: y,
+        y = "add" === A,
+        C = n.useRef(null),
+        { isHoveringOrFocusing: x } = (0, h.A)(C),
+        j = x && !g,
+        w = n.useRef(null),
+        N = k ?? w,
+        P =
+            null != A && "add" !== A
+                ? {
+                      ...A,
+                      onClick: () => {
+                          A.onClick(), N.current?.focus();
+                      },
+                  }
+                : void 0;
+    return (0, i.jsx)(m, {
+        ref: C,
         variant: l,
         disabled: g,
-        isInteracting: w,
-        children: [
-            (0, i.jsxs)(c.D, {
-                innerRef: P,
-                className: b.tileButton,
-                "aria-label": null != s ? h.intl.formatToPlainString(h.t["E+mIJ+"], { label: r, value: s }) : r,
-                onClick: g ? void 0 : a,
-                "aria-disabled": g,
-                tabIndex: g ? -1 : 0,
-                ...C,
-                children: [
-                    (0, i.jsx)("div", { className: b.content, children: d(w) }),
-                    u && !g && (0, i.jsx)(p, {}),
-                    "add" === I &&
-                        (0, i.jsx)("div", {
-                            className: t()(b.iconContainer, {
-                                [b.iconAlignCenter]: "square" === l || "full-height-bar" === l,
-                                [b.iconAlignRight]: "bar" === l,
-                            }),
-                            children: (0, i.jsx)(o.U, {
-                                size: "md",
-                                color: v.A.colors.ICON_STRONG,
-                                secondaryColor: v.A.colors.ICON_INVERT,
-                                className: b.overlayIcon,
-                            }),
+        isInteracting: j,
+        deleteButton: P,
+        children: (0, i.jsxs)(c.D, {
+            innerRef: N,
+            className: b.tileButton,
+            "aria-label": null != s ? f.intl.formatToPlainString(f.t["E+mIJ+"], { label: t, value: s }) : t,
+            onClick: g ? void 0 : a,
+            "aria-disabled": g,
+            tabIndex: g ? -1 : 0,
+            ...I,
+            children: [
+                (0, i.jsx)("div", { className: b.content, children: d(j) }),
+                u && !g && (0, i.jsx)(p, {}),
+                y &&
+                    (0, i.jsx)("div", {
+                        className: r()(b.iconContainer, {
+                            [b.iconAlignCenter]: "square" === l || "full-height-bar" === l,
+                            [b.iconAlignRight]: "bar" === l,
                         }),
-                ],
-            }),
-            !g &&
-                null != x &&
-                (0, i.jsx)("div", {
-                    className: t()(b.deleteButtonWrapper, { [b.resetButton]: "reset" === x.type }),
-                    children: (0, i.jsx)(m, {
-                        ...x,
-                        onClick: () => {
-                            x?.onClick(), P.current?.focus();
-                        },
+                        children: (0, i.jsx)(o.U, {
+                            size: "md",
+                            color: v.A.colors.ICON_STRONG,
+                            secondaryColor: v.A.colors.ICON_INVERT,
+                            className: b.overlayIcon,
+                        }),
                     }),
-                }),
-        ],
+            ],
+        }),
     });
 }
