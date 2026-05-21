@@ -1,19 +1,18 @@
 "use strict";
 n.d(t, {
     m8: () => h,
+    n6: () => A,
     OO: () => f,
-    n6: () => I,
+    jS: () => d,
     Iq: () => c,
     Ig: () => E,
-    jS: () => d,
-    ev: () => T,
+    ev: () => I,
     Ym: () => _,
-    aD: () => N,
-    rI: () => m,
+    aD: () => S,
     uK: () => u,
-    lk: () => A,
+    lk: () => g,
     sy: () => p,
-    A8: () => S,
+    A8: () => T,
 });
 var i,
     r,
@@ -73,19 +72,13 @@ let E = (0, a.mj)({
         variations: { 0: { enabled: !1, variant: 0 }, 1: { enabled: !0, variant: 1 }, 2: { enabled: !0, variant: 2 } },
     }),
     m = (0, a.mj)({
-        name: "2026-03-get-decision-hero-ads",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
-    }),
-    g = (0, a.mj)({
         name: "2026-04-quests-premium-orb-multiplier-marketing",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
-function A(e) {
-    let { enabled: t } = g.useConfig({ location: e }),
+function g(e) {
+    let { enabled: t } = m.useConfig({ location: e }),
         n = (0, o.z)();
     return {
         shouldShowBonusOrbsUX: n !== l.MA.INELIGIBLE && n !== l.MA.CREPE && t,
@@ -98,7 +91,7 @@ function A(e) {
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-let I = (0, a.mj)({
+let A = (0, a.mj)({
     name: "2026-04-composed-quest-player",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -116,19 +109,19 @@ let I = (0, a.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
-let T = (0, a.mj)({
+let I = (0, a.mj)({
         name: "2026-04-quest-heartbeat-executable-fingerprint",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    S = (0, a.mj)({
+    T = (0, a.mj)({
         name: "2026-05-quest-home-new-layout",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    N = (0, a.mj)({
+    S = (0, a.mj)({
         name: "2026-05-quest-home-tile-redesign",
         kind: "user",
         defaultConfig: { enabled: !1 },

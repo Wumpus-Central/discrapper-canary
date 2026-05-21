@@ -1,21 +1,10 @@
 "use strict";
-n.d(t, {
-    tp: () => p,
-    Yn: () => h,
-    _g: () => m,
-    rO: () => E,
-    Rd: () => I,
-    Dv: () => S,
-    s2: () => f,
-    S: () => A,
-    oc: () => N,
-}),
+n.d(t, { tp: () => h, Yn: () => f, _g: () => E, rO: () => p, Rd: () => A, Dv: () => T, s2: () => _, S: () => g }),
     n(801541);
 var i = n(889137),
     r = n(440703),
-    s = n(507107),
-    a = n(859387);
-function o(e) {
+    s = n(507107);
+function a(e) {
     let t = {};
     for (let n of Object.keys(e)) {
         let i = parseInt(n);
@@ -23,7 +12,7 @@ function o(e) {
     }
     return t;
 }
-let l = (e) => {
+let o = (e) => {
     switch (e.type) {
         case r.l.REWARD_CODE:
             return {
@@ -32,7 +21,7 @@ let l = (e) => {
                 asset: e.asset,
                 assetVideo: e.asset_video,
                 messages: {
-                    redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
+                    redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
                     name: e.messages.name,
                     nameWithArticle: e.messages.name_with_article,
                 },
@@ -46,7 +35,7 @@ let l = (e) => {
                 asset: e.asset,
                 assetVideo: e.asset_video,
                 messages: {
-                    redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
+                    redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
                     name: e.messages.name,
                     nameWithArticle: e.messages.name_with_article,
                 },
@@ -59,7 +48,7 @@ let l = (e) => {
                 type: r.l.VIRTUAL_CURRENCY,
                 skuId: e.sku_id,
                 messages: {
-                    redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
+                    redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
                     name: e.messages.name,
                     nameWithArticle: e.messages.name_with_article,
                 },
@@ -74,7 +63,7 @@ let l = (e) => {
                 assetVideo: e.asset_video,
                 quantity: e.quantity,
                 messages: {
-                    redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
+                    redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
                     name: e.messages.name,
                     nameWithArticle: e.messages.name_with_article,
                 },
@@ -86,16 +75,16 @@ let l = (e) => {
                 asset: e.asset,
                 assetVideo: e.asset_video,
                 messages: {
-                    redemptionInstructionsByPlatform: o(e.messages.redemption_instructions_by_platform),
+                    redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
                     name: e.messages.name,
                     nameWithArticle: e.messages.name_with_article,
                 },
             };
     }
 };
-var u = n(412703),
-    c = n(668824);
-function d(e) {
+var l = n(412703),
+    u = n(668824);
+function c(e) {
     return {
         url: e.url,
         width: e.width,
@@ -105,7 +94,7 @@ function d(e) {
         transcript: e.transcript,
     };
 }
-function _(e) {
+function d(e) {
     if (null != e)
         return {
             name: e.name,
@@ -115,7 +104,7 @@ function _(e) {
             logotypeDark: e.logotype_dark,
         };
 }
-function f(e) {
+function _(e) {
     try {
         return (0, i.YW)(e.config)
             .with({ config_version: 2 }, () => !0)
@@ -124,7 +113,7 @@ function f(e) {
         return console.error(`Unknown config version '${e?.config?.config_version}'`, t), !1;
     }
 }
-function h(e) {
+function f(e) {
     return (0, i.YW)(e)
         .with({ config_version: 2 }, (e) => {
             var t;
@@ -165,65 +154,65 @@ function h(e) {
                                     ((e) => {
                                         var t, n;
                                         switch (e.type) {
-                                            case u.n.WATCH_VIDEO:
+                                            case l.n.WATCH_VIDEO:
                                                 let i;
                                                 return {
-                                                    type: u.n.WATCH_VIDEO,
+                                                    type: l.n.WATCH_VIDEO,
                                                     target: e.target,
                                                     assets:
-                                                        ((i = { video: d((t = e.assets).video) }),
-                                                        null != t.video_low_res && (i.videoLowRes = d(t.video_low_res)),
-                                                        null != t.video_hls && (i.videoHls = d(t.video_hls)),
+                                                        ((i = { video: c((t = e.assets).video) }),
+                                                        null != t.video_low_res && (i.videoLowRes = c(t.video_low_res)),
+                                                        null != t.video_hls && (i.videoHls = c(t.video_hls)),
                                                         i),
                                                     messages: { videoTitle: e.messages.video_title },
                                                 };
-                                            case u.n.WATCH_VIDEO_ON_MOBILE:
+                                            case l.n.WATCH_VIDEO_ON_MOBILE:
                                                 let r;
                                                 return {
-                                                    type: u.n.WATCH_VIDEO_ON_MOBILE,
+                                                    type: l.n.WATCH_VIDEO_ON_MOBILE,
                                                     target: e.target,
                                                     assets:
-                                                        ((r = { video: d((n = e.assets).video) }),
-                                                        null != n.video_low_res && (r.videoLowRes = d(n.video_low_res)),
-                                                        null != n.video_hls && (r.videoHls = d(n.video_hls)),
+                                                        ((r = { video: c((n = e.assets).video) }),
+                                                        null != n.video_low_res && (r.videoLowRes = c(n.video_low_res)),
+                                                        null != n.video_hls && (r.videoHls = c(n.video_hls)),
                                                         r),
                                                     messages: { videoTitle: e.messages.video_title },
                                                 };
-                                            case u.n.PLAY_ON_DESKTOP:
+                                            case l.n.PLAY_ON_DESKTOP:
                                                 return {
-                                                    type: u.n.PLAY_ON_DESKTOP,
+                                                    type: l.n.PLAY_ON_DESKTOP,
                                                     target: e.target,
                                                     applications: e.applications,
                                                 };
-                                            case u.n.STREAM_ON_DESKTOP:
+                                            case l.n.STREAM_ON_DESKTOP:
                                                 return {
-                                                    type: u.n.STREAM_ON_DESKTOP,
+                                                    type: l.n.STREAM_ON_DESKTOP,
                                                     target: e.target,
                                                     applications: e.applications,
                                                 };
-                                            case u.n.PLAY_ACTIVITY:
+                                            case l.n.PLAY_ACTIVITY:
                                                 return {
-                                                    type: u.n.PLAY_ACTIVITY,
+                                                    type: l.n.PLAY_ACTIVITY,
                                                     target: e.target,
                                                     applications: e.applications,
                                                 };
-                                            case u.n.PLAY_ON_XBOX:
+                                            case l.n.PLAY_ON_XBOX:
                                                 return {
-                                                    type: u.n.PLAY_ON_XBOX,
-                                                    target: e.target,
-                                                    externalIds: e.external_ids,
-                                                    applications: e.applications,
-                                                };
-                                            case u.n.PLAY_ON_PLAYSTATION:
-                                                return {
-                                                    type: u.n.PLAY_ON_PLAYSTATION,
+                                                    type: l.n.PLAY_ON_XBOX,
                                                     target: e.target,
                                                     externalIds: e.external_ids,
                                                     applications: e.applications,
                                                 };
-                                            case u.n.ACHIEVEMENT_IN_GAME:
+                                            case l.n.PLAY_ON_PLAYSTATION:
                                                 return {
-                                                    type: u.n.ACHIEVEMENT_IN_GAME,
+                                                    type: l.n.PLAY_ON_PLAYSTATION,
+                                                    target: e.target,
+                                                    externalIds: e.external_ids,
+                                                    applications: e.applications,
+                                                };
+                                            case l.n.ACHIEVEMENT_IN_GAME:
+                                                return {
+                                                    type: l.n.ACHIEVEMENT_IN_GAME,
                                                     target: e.target,
                                                     eventName: e.event_name,
                                                     messages: {
@@ -233,9 +222,9 @@ function h(e) {
                                                     applications: e.applications,
                                                     accountLinkInstructions: e.account_link_instructions,
                                                 };
-                                            case u.n.ACHIEVEMENT_IN_ACTIVITY:
+                                            case l.n.ACHIEVEMENT_IN_ACTIVITY:
                                                 return {
-                                                    type: u.n.ACHIEVEMENT_IN_ACTIVITY,
+                                                    type: l.n.ACHIEVEMENT_IN_ACTIVITY,
                                                     target: e.target,
                                                     eventName: e.event_name,
                                                     messages: {
@@ -256,16 +245,16 @@ function h(e) {
                             });
                         return { tasks: Object.fromEntries(t), joinOperator: e.join_operator };
                     } catch (e) {
-                        return { tasks: {}, joinOperator: c.K.OR };
+                        return { tasks: {}, joinOperator: u.K.OR };
                     }
                 })(e.task_config_v2),
                 rewardsConfig: {
                     assignmentMethod: (n = e.rewards_config).assignment_method,
-                    rewards: n.rewards.map(l),
+                    rewards: n.rewards.map(o),
                     rewardsExpireAt: n.rewards_expire_at,
                     platforms: n.platforms,
                 },
-                cosponsorMetadata: _(e.cosponsor_metadata),
+                cosponsorMetadata: d(e.cosponsor_metadata),
                 sharePolicy: e.share_policy,
                 ctaConfig: {
                     android: null != (t = e.cta_config).android ? { androidAppId: t.android.android_app_id } : void 0,
@@ -278,7 +267,7 @@ function h(e) {
         })
         .exhaustive();
 }
-function p(e) {
+function h(e) {
     return {
         userId: e.user_id,
         questId: e.quest_id,
@@ -307,20 +296,20 @@ function p(e) {
         })(e.progress),
     };
 }
-function E(e) {
+function p(e) {
     return {
         id: e.id,
         preview: e.preview,
-        config: h(e.config),
-        userStatus: null == e.user_status ? null : p(e.user_status),
+        config: f(e.config),
+        userStatus: null == e.user_status ? null : h(e.user_status),
         targetedContent: e.targeted_content,
         trafficMetadataSealed: e.traffic_metadata_sealed,
     };
 }
-function m(e) {
+function E(e) {
     return { id: e.id, replacementId: e.replacement_id };
 }
-function g(e) {
+function m(e) {
     return e.type === r.l.VIRTUAL_CURRENCY
         ? {
               skuId: e.sku_id,
@@ -340,7 +329,7 @@ function g(e) {
               collectibleProduct: e.collectible_product,
           };
 }
-function A(e) {
+function g(e) {
     var t;
     return {
         id: e.id,
@@ -367,13 +356,13 @@ function A(e) {
                 gameTileDark: t.assets.game_tile_dark,
             },
             colors: { primary: t.colors.primary, secondary: t.colors.secondary },
-            rewards: t.rewards.map(g),
-            cosponsorMetadata: _(t.cosponsor_metadata),
+            rewards: t.rewards.map(m),
+            cosponsorMetadata: d(t.cosponsor_metadata),
         },
-        userStatus: null == e.user_status ? null : p(e.user_status),
+        userStatus: null == e.user_status ? null : h(e.user_status),
     };
 }
-function I(e) {
+function A(e) {
     return {
         userId: e.user_id,
         questId: e.quest_id,
@@ -383,7 +372,7 @@ function I(e) {
         tier: e.tier ?? null,
     };
 }
-function T(e) {
+function I(e) {
     return {
         skuId: e.sku_id,
         tenantMetadata: (function (e) {
@@ -393,53 +382,12 @@ function T(e) {
                 case r.l.IN_GAME:
                     return { questRewards: { reward: { tag: t.reward.tag } } };
                 case r.l.REWARD_CODE:
-                    return { questRewards: { reward: { tag: t.reward.tag, rewardCode: I(t.reward.reward_code) } } };
+                    return { questRewards: { reward: { tag: t.reward.tag, rewardCode: A(t.reward.reward_code) } } };
             }
         })(e.tenant_metadata),
         consumed: e.consumed,
     };
 }
-function S(e) {
-    return { claimedAt: e.claimed_at, items: e.entitlements.map(T), errors: e.errors };
-}
-function N(e) {
-    var t;
-    if (1 !== e.version || !(s.gh.QUEST_HOME_BANNER in e.placements)) return null;
-    let n = e.placements[s.gh.QUEST_HOME_BANNER];
-    return null == n
-        ? null
-        : {
-              id: n.campaign_id,
-              labelTitle: n.label_title,
-              labelSubtitle: n.label_subtitle,
-              heroImage: (0, a.dv)(n.asset_hero_image.url),
-              heroVideo: null != n.asset_hero_video ? (0, a.dv)(n.asset_hero_video.url) : void 0,
-              sponsorImage: (0, a.dv)(n.asset_sponsor_image.url),
-              cta: { url: n.cta_sponsor_url.url, buttonLabel: n.cta_sponsor_url.title },
-              questIds: n.shelf?.quest_ids ?? n.cta_quests.map((e) => e.quest_id),
-              questHomeEntrypoint:
-                  null != n.quest_home_entrypoint
-                      ? {
-                            linearGradient:
-                                null != (t = n.quest_home_entrypoint).linear_gradient_start &&
-                                null != t.linear_gradient_end
-                                    ? { start: t.linear_gradient_start, end: t.linear_gradient_end }
-                                    : void 0,
-                            radialGradient:
-                                null != t.radial_gradient_start && null != t.radial_gradient_end
-                                    ? { start: t.radial_gradient_start, end: t.radial_gradient_end }
-                                    : void 0,
-                            image:
-                                null != t.entrypoint_asset_image_url ? (0, a.dv)(t.entrypoint_asset_image_url) : void 0,
-                            tooltipImage:
-                                null != t.tooltip_asset_image_url ? (0, a.dv)(t.tooltip_asset_image_url) : void 0,
-                            tooltipTitle: t.tooltip_title,
-                            tooltipSubtitle: t.tooltip_subtitle,
-                        }
-                      : void 0,
-              shelfImage: n.shelf?.intro_asset_image != null ? (0, a.dv)(n.shelf.intro_asset_image.url) : void 0,
-              shelfVideo: n.shelf?.intro_asset_video != null ? (0, a.dv)(n.shelf.intro_asset_video.url) : void 0,
-              startsAt: n.starts_at,
-              endsAt: n.expires_at,
-          };
+function T(e) {
+    return { claimedAt: e.claimed_at, items: e.entitlements.map(I), errors: e.errors };
 }

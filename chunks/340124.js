@@ -1,12 +1,12 @@
 "use strict";
 n.d(t, {
-    sB: () => ey,
+    sB: () => eN,
     WM: () => Z,
     lx: () => ea,
     N1: () => $,
     xB: () => ep,
     Yb: () => en,
-    IV: () => eI,
+    IV: () => eA,
     Oq: () => Q,
     r8: () => ec,
     lk: () => et,
@@ -20,17 +20,16 @@ n.d(t, {
     Gn: () => el,
     uI: () => ef,
     L4: () => es,
-    zh: () => eS,
+    zh: () => eT,
     R2: () => q,
     g5: () => ee,
     vD: () => W,
-    qV: () => eN,
+    qV: () => eS,
     HA: () => eo,
     Yf: () => eg,
-    Am: () => eA,
-    QG: () => eu,
-    Zb: () => eT,
     Ov: () => z,
+    QG: () => eu,
+    Zb: () => eI,
     dQ: () => eE,
     Gt: () => er,
 }),
@@ -680,30 +679,12 @@ async function eE(e) {
 }
 let em = 5 * T.A.Millis.MINUTE;
 async function eg() {
-    if (w.A.isFetchingQuestHomeHero()) return;
-    let e = w.A.getLastFetchedQuestHomeHero();
-    if (!(null != e && Date.now() - e <= em)) {
-        o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN" });
-        try {
-            let e = [k.gh.QUEST_HOME_BANNER],
-                t = await a.Bo.get({
-                    url: O.Rsh.QUEST_PLACEMENT,
-                    query: { placements: e, platform: k.vg.WEB },
-                    rejectWithError: !1,
-                });
-            o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS", questHomeHero: (0, H.oc)(t.body) });
-        } catch (e) {
-            throw (o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: new l.A(e) }), e);
-        }
-    }
-}
-async function eA() {
     let e = k.yW.QUEST_HOME_BANNER_DESKTOP;
     if (w.A.isFetchingQuestToDeliverByPlacement(e)) return;
     let t = w.A.getLastFetchedQuestHomeHero();
     if (null != t && Date.now() - t <= em) return;
     let n = Date.now();
-    o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_DECISION_BEGIN", placement: e });
+    o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: e });
     try {
         let t = await (0, _.Ht)(),
             i = await (0, d.sN)(),
@@ -716,7 +697,7 @@ async function eA() {
             h = null;
         null != f && f.creative_type === s.p.QUEST_HOME_HERO && (h = c(f)),
             o.h.dispatch({
-                type: "QUESTS_FETCH_QUEST_HOME_HERO_DECISION_SUCCESS",
+                type: "QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS",
                 questHomeHero: h,
                 adDecisionData: {
                     ad_id: u?.ad_identifiers?.ad_id,
@@ -735,16 +716,13 @@ async function eA() {
                 fetchedAt: n,
             });
     } catch (t) {
-        throw (
-            (o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_DECISION_FAILURE", error: new l.A(t), placement: e }),
-            t)
-        );
+        throw (o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: new l.A(t), placement: e }), t);
     }
 }
-async function eI(e) {
+async function eA(e) {
     let t = k.yW.QUEST_HOME_BANNER_DESKTOP,
         n = Date.now();
-    o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_DECISION_BEGIN", placement: t });
+    o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: t });
     try {
         let i = new URLSearchParams();
         i.append("ad_creative_ids", e);
@@ -754,7 +732,7 @@ async function eI(e) {
             d = null;
         null != u && u.creative_type === s.p.QUEST_HOME_HERO && (d = c(u)),
             o.h.dispatch({
-                type: "QUESTS_FETCH_QUEST_HOME_HERO_DECISION_SUCCESS",
+                type: "QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS",
                 questHomeHero: d,
                 adDecisionData: {
                     ad_id: l?.ad_identifiers?.ad_id,
@@ -773,21 +751,18 @@ async function eI(e) {
                 fetchedAt: n,
             });
     } catch (e) {
-        throw (
-            (o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_DECISION_FAILURE", error: new l.A(e), placement: t }),
-            e)
-        );
+        throw (o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: new l.A(e), placement: t }), e);
     }
 }
-function eT(e) {
+function eI(e) {
     o.h.dispatch({ type: "UNENROLLED_ACTIVITY_QUEST_DISMISS", questId: e });
 }
-function eS(e, t) {
+function eT(e, t) {
     o.h.dispatch({ type: "AD_CONTENT_MARK_SEEN", adCreativeType: e, contentIds: t });
 }
-function eN(e, t) {
+function eS(e, t) {
     o.h.dispatch({ type: "AD_CONTENT_MARK_UNSEEN", adCreativeType: e, contentIds: t });
 }
-function ey(e) {
+function eN(e) {
     o.h.dispatch({ type: "QUESTS_MARK_DISCOVERED", questId: e });
 }

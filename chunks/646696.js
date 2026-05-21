@@ -66,8 +66,7 @@ class T extends i.A {
             let t = e + Math.floor(Math.random() * m);
             this.initialQuestHomeHeroFetchTimerId = window.setTimeout(() => {
                 try {
-                    let { enabled: e } = d.rI.getConfig({ location: "QuestFetchManager" });
-                    e ? (0, l.Am)() : (0, l.Yf)();
+                    (0, l.Yf)();
                 } catch (e) {}
             }, t);
         }

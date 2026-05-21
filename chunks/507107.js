@@ -1,23 +1,11 @@
 "use strict";
-n.d(t, {
-    Yg: () => f,
-    pY: () => _,
-    gh: () => g,
-    uF: () => u.u,
-    X0: () => m,
-    tb: () => E,
-    xv: () => h,
-    yW: () => c,
-    vg: () => p,
-});
+n.d(t, { Yg: () => h, uF: () => u.u, X0: () => f, tb: () => d, pY: () => l, xv: () => _, yW: () => c });
 var i,
     r,
     s,
     a,
     o,
-    l,
-    d,
-    _ =
+    l =
         (((i = {})[(i.CROSS_PLATFORM = 0)] = "CROSS_PLATFORM"),
         (i[(i.XBOX = 1)] = "XBOX"),
         (i[(i.PLAYSTATION = 2)] = "PLAYSTATION"),
@@ -32,21 +20,12 @@ var i,
         (r[(r.QUEST_HOME_BANNER_DESKTOP = 3)] = "QUEST_HOME_BANNER_DESKTOP"),
         (r[(r.QUEST_HOME_MOBILE_CAROUSEL = 4)] = "QUEST_HOME_MOBILE_CAROUSEL"),
         r);
-let E = new Set(Object.values(_).filter((e) => "number" == typeof e));
-var h = (((s = {}).GENERIC = "generic"), (s.RATE_LIMITED = "rate_limited"), s),
-    m = (((a = {}).DESKTOP = "desktop"), (a.CONSOLE = "console"), (a.SELECT = "select"), a),
-    f =
+let d = new Set(Object.values(l).filter((e) => "number" == typeof e));
+var _ = (((s = {}).GENERIC = "generic"), (s.RATE_LIMITED = "rate_limited"), s),
+    f = (((a = {}).DESKTOP = "desktop"), (a.CONSOLE = "console"), (a.SELECT = "select"), a),
+    h =
         (((o = {}).PAUSE_BUTTON = "PAUSE_BUTTON"),
         (o.LOST_FOCUS = "LOST_FOCUS"),
         (o.MODAL_CLOSED = "MODAL_CLOSED"),
         (o.ANOTHER_MODAL_OPENED = "ANOTHER_MODAL_OPENED"),
-        o),
-    g = (((l = {}).QUEST_HOME_BANNER = "quest_home_banner"), l),
-    p =
-        (((d = {}).IOS = "ios"),
-        (d.ANDROID = "android"),
-        (d.DESKTOP = "desktop"),
-        (d.WEB = "web"),
-        (d.WEB_MOBILE = "web_mobile"),
-        (d.WEB_TABLET = "web_tablet"),
-        d);
+        o);
