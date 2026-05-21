@@ -1,70 +1,83 @@
-t.r(s), t.d(s, { default: () => w });
-var n = t(627968),
-    a = t(64700),
-    l = t(979186),
-    r = t(17928),
-    i = t(229659),
-    c = t(287809),
-    d = t(723702),
-    o = t(321034),
-    u = t(832213),
-    m = t(19575),
-    h = t(938800);
+n.r(s), n.d(s, { default: () => w });
+var t = n(627968),
+    a = n(64700),
+    l = n(979186),
+    r = n(17928),
+    i = n(229659),
+    c = n(287809),
+    d = n(723702),
+    o = n(321034),
+    u = n(832213),
+    m = n(19575),
+    h = n(938800);
 let p = [u.M.Renderer, u.M.Main, u.M.GPU, u.M.Utility, u.M.Crashpad, u.M.Unknown];
 function x(e, s) {
-    let t = [...e, { value: s, time: Date.now() }];
-    return t.length > 120 && t.shift(), t;
+    let n = [...e, { value: s, time: Date.now() }];
+    return n.length > 120 && n.shift(), n;
 }
 function j(e) {
     return `${e.toFixed(1)}%`;
 }
-function f(e) {
+function N(e) {
     return (e.wss_priv_kb ?? e.wss_kb ?? 0) / 1024;
 }
-function N(e) {
-    let { title: s, value: t, points: a, children: l } = e;
-    return (0, n.jsxs)("div", {
+function f(e) {
+    let { title: s, value: n, points: a, children: l } = e;
+    return (0, t.jsxs)("div", {
         className: h.uW,
         children: [
-            (0, n.jsxs)("div", {
+            (0, t.jsxs)("div", {
                 className: h.wx,
                 children: [
-                    (0, n.jsx)("span", { className: h.DD, children: s }),
-                    (0, n.jsx)("span", { className: h.Uq, children: t }),
+                    (0, t.jsx)("span", { className: h.DD, children: s }),
+                    (0, t.jsx)("span", { className: h.Uq, children: n }),
                 ],
             }),
-            (0, n.jsx)(i.A, { dataPoints: a, width: 320, height: 80, windowMs: 12e4 }),
+            (0, t.jsx)(i.A, { dataPoints: a, width: 320, height: 80, windowMs: 12e4 }),
             l,
         ],
     });
 }
 function v() {
     let e = (0, r.bG)([c.default], () => c.default.getCurrentUser()?.isStaff() ?? !1),
-        [s, t] = a.useState([]),
+        [s, n] = a.useState([]),
         [l, u] = a.useState([]),
         [v, w] = a.useState([]),
         [g, M] = a.useState({}),
         [b, y] = a.useState(null),
-        [_, k] = a.useState(null),
-        [P, U] = a.useState(null),
-        [S, A] = a.useState([]),
+        [_, P] = a.useState(null),
+        [U, k] = a.useState(null),
+        [A, S] = a.useState([]),
         C = a.useRef(null),
-        [$, D] = a.useState(320);
+        [D, F] = a.useState(320);
     if (
         (a.useEffect(() => {
             let e = C.current;
             if (null == e) return;
-            let s = new ResizeObserver((e) => {
-                let [s] = e;
-                D(Math.floor(s.contentRect.width));
-            });
-            return s.observe(e), () => s.disconnect();
+            let s = null,
+                n = 0,
+                t = new ResizeObserver((e) => {
+                    let [t] = e,
+                        a = Math.max(320, Math.min(4096, Math.floor(t.contentRect.width)));
+                    a === n ||
+                        ((n = a),
+                        null == s &&
+                            (s = requestAnimationFrame(() => {
+                                (s = null), F(n);
+                            })));
+                });
+            return (
+                t.observe(e),
+                () => {
+                    null != s && cancelAnimationFrame(s), t.disconnect();
+                }
+            );
         }, []),
         a.useEffect(() => {
             let e = !1,
                 s = window.DiscordNative?.gcEvents?.addGCListener?.((s) => {
-                    let { timestamp: t, kind: n } = s;
-                    e || A((e) => [...e.filter((e) => e.time > t - 12e4), { time: t, kind: n }]);
+                    let { timestamp: n, kind: t } = s;
+                    e || S((e) => [...e.filter((e) => e.time > n - 12e4), { time: n, kind: t }]);
                 });
             return (
                 !(function s() {
@@ -72,35 +85,35 @@ function v() {
                     if ((0, d.isWindows)() && d.isPlatformEmbedded) {
                         let s = window.DiscordNative?.process?.pid;
                         if (null != s && !isNaN(s)) {
-                            let n = performance.now();
+                            let t = performance.now();
                             m.Ay.GetSystemGpuStats(s)
                                 .then((s) => {
                                     e ||
-                                        (y(performance.now() - n),
-                                        t(s),
+                                        (y(performance.now() - t),
+                                        n(s),
                                         u((e) =>
-                                            s.map((s, t) => ({
-                                                gpu: x(e[t]?.gpu ?? [], s.utilization_percent),
-                                                vram: x(e[t]?.vram ?? [], s.memory_bytes / 1048576),
+                                            s.map((s, n) => ({
+                                                gpu: x(e[n]?.gpu ?? [], s.utilization_percent),
+                                                vram: x(e[n]?.vram ?? [], s.memory_bytes / 1048576),
                                             })),
                                         ));
                                 })
                                 .catch(() => {});
                         }
                     }
-                    let n = performance.now(),
+                    let t = performance.now(),
                         a = o.A.getCurrentCPUUsagePercent() ?? 0;
-                    k(performance.now() - n);
+                    P(performance.now() - t);
                     let l = performance.now(),
                         r = o.A.getMemoryUsageElectronProcessTypeDetails();
-                    U(performance.now() - l),
+                    k(performance.now() - l),
                         w((e) => x(e, a)),
                         null != r &&
                             M((e) => {
                                 let s = {};
-                                for (let t of Object.keys(r)) {
-                                    let n = r[t];
-                                    null != n && (s[t] = x(e[t] ?? [], f(n)));
+                                for (let n of Object.keys(r)) {
+                                    let t = r[n];
+                                    null != t && (s[n] = x(e[n] ?? [], N(t)));
                                 }
                                 return s;
                             }),
@@ -114,13 +127,13 @@ function v() {
         !e)
     )
         return null;
-    let G = o.A.getCurrentCPUUsagePercent() ?? 0,
-        T = o.A.getMemoryUsageElectronProcessTypeDetails() ?? {},
-        E = p.reduce((e, s) => {
-            let t = T[s];
-            return null != t ? e + f(t) : e;
+    let $ = o.A.getCurrentCPUUsagePercent() ?? 0,
+        G = o.A.getMemoryUsageElectronProcessTypeDetails() ?? {},
+        T = p.reduce((e, s) => {
+            let n = G[s];
+            return null != n ? e + N(n) : e;
         }, 0);
-    function F(e) {
+    function E(e) {
         return null != e ? `${e.toFixed(1)}ms` : "";
     }
     function z(e) {
@@ -132,60 +145,61 @@ function v() {
                 ? "rgba(150, 150, 150, 0.6)"
                 : "rgba(250, 168, 26, 0.75)";
     }
-    let R = S.map((e) => ({ time: e.time, color: z(e.kind) }));
-    return (0, n.jsxs)("div", {
+    let W = A.map((e) => ({ time: e.time, color: z(e.kind) }));
+    return (0, t.jsxs)("div", {
         className: h.kL,
         children: [
+            (0, t.jsx)("h1", { className: h.W, children: "Performance" }),
             (0, d.isWindows)() &&
                 d.isPlatformEmbedded &&
                 s.length > 0 &&
-                (0, n.jsxs)("div", {
+                (0, t.jsxs)("div", {
                     className: h.yT,
                     children: [
-                        (0, n.jsxs)("div", {
+                        (0, t.jsxs)("div", {
                             className: h.x_,
                             children: [
-                                (0, n.jsx)("span", { className: h.AM, children: "GPU" }),
-                                (0, n.jsx)("span", { className: h.rh, children: F(b) }),
+                                (0, t.jsx)("span", { className: h.AM, children: "GPU" }),
+                                (0, t.jsx)("span", { className: h.rh, children: E(b) }),
                             ],
                         }),
-                        (0, n.jsx)("div", {
+                        (0, t.jsx)("div", {
                             className: h.FH,
                             children: s.map((e, s) => {
-                                var t;
+                                var n;
                                 let a = l[s];
-                                return (0, n.jsxs)(
+                                return (0, t.jsxs)(
                                     "div",
                                     {
                                         className: h.mJ,
                                         children: [
-                                            (0, n.jsx)("span", { className: h.Xk, children: e.adapter_name }),
-                                            (0, n.jsx)(N, {
+                                            (0, t.jsx)("span", { className: h.Xk, children: e.adapter_name }),
+                                            (0, t.jsx)(f, {
                                                 title: "Utilization",
                                                 value: j(e.utilization_percent),
                                                 points: a?.gpu ?? [],
                                             }),
-                                            (0, n.jsx)(N, {
+                                            (0, t.jsx)(f, {
                                                 title: "VRAM",
-                                                value: ((t = e.memory_bytes), `${(t / 1048576).toFixed(0)} MB`),
+                                                value: ((n = e.memory_bytes), `${(n / 1048576).toFixed(0)} MB`),
                                                 points: a?.vram ?? [],
                                             }),
                                             (e.engines?.length ?? 0) > 0 &&
-                                                (0, n.jsx)("div", {
+                                                (0, t.jsx)("div", {
                                                     className: h.sP,
                                                     children: e.engines
                                                         .slice(0, 6)
                                                         .map((e) =>
-                                                            (0, n.jsxs)(
+                                                            (0, t.jsxs)(
                                                                 "div",
                                                                 {
                                                                     className: h.Ln,
                                                                     children: [
-                                                                        (0, n.jsx)("span", {
+                                                                        (0, t.jsx)("span", {
                                                                             className: h.nY,
                                                                             children: e.engine_type,
                                                                         }),
-                                                                        (0, n.jsx)("span", {
+                                                                        (0, t.jsx)("span", {
                                                                             className: h.qS,
                                                                             children: j(e.utilization_percent),
                                                                         }),
@@ -203,69 +217,80 @@ function v() {
                         }),
                     ],
                 }),
-            (0, n.jsxs)("div", {
+            (0, t.jsxs)("div", {
                 ref: C,
                 className: h.yT,
                 children: [
-                    (0, n.jsxs)("div", {
+                    (0, t.jsxs)("div", {
                         className: h.x_,
                         children: [
-                            (0, n.jsx)("span", { className: h.AM, children: "CPU" }),
-                            (0, n.jsx)("span", { className: h.rh, children: F(_) }),
+                            (0, t.jsx)("span", { className: h.AM, children: "CPU" }),
+                            (0, t.jsx)("span", { className: h.rh, children: E(_) }),
                         ],
                     }),
-                    (0, n.jsx)("span", { className: h.Uq, children: j(G) }),
-                    (0, n.jsx)(i.A, { dataPoints: v, width: $, height: 80, windowMs: 12e4, markers: R }),
-                    (0, n.jsx)("div", {
-                        className: h.KP,
+                    (0, t.jsxs)("div", {
+                        className: h.uW,
                         children: [
-                            { color: z(2), label: "Major GC" },
-                            { color: z(4), label: "Incremental" },
-                            { color: z(1), label: "Minor GC" },
-                        ].map((e) => {
-                            let { color: s, label: t } = e;
-                            return (0, n.jsxs)(
-                                "div",
-                                {
-                                    className: h.$d,
-                                    children: [
-                                        (0, n.jsx)("div", { className: h.AW, style: { background: s } }),
-                                        (0, n.jsx)("span", { className: h.IF, children: t }),
-                                    ],
-                                },
-                                t,
-                            );
-                        }),
+                            (0, t.jsxs)("div", {
+                                className: h.wx,
+                                children: [
+                                    (0, t.jsx)("span", { className: h.DD, children: "Utilization" }),
+                                    (0, t.jsx)("span", { className: h.Uq, children: j($) }),
+                                ],
+                            }),
+                            (0, t.jsx)(i.A, { dataPoints: v, width: D, height: 80, windowMs: 12e4, markers: W }),
+                            (0, t.jsx)("div", {
+                                className: h.KP,
+                                children: [
+                                    { color: z(2), label: "Major GC" },
+                                    { color: z(4), label: "Incremental" },
+                                    { color: z(1), label: "Minor GC" },
+                                ].map((e) => {
+                                    let { color: s, label: n } = e;
+                                    return (0, t.jsxs)(
+                                        "div",
+                                        {
+                                            className: h.$d,
+                                            children: [
+                                                (0, t.jsx)("div", { className: h.AW, style: { background: s } }),
+                                                (0, t.jsx)("span", { className: h.IF, children: n }),
+                                            ],
+                                        },
+                                        n,
+                                    );
+                                }),
+                            }),
+                        ],
                     }),
                 ],
             }),
-            (0, n.jsxs)("div", {
+            (0, t.jsxs)("div", {
                 className: h.yT,
                 children: [
-                    (0, n.jsxs)("div", {
+                    (0, t.jsxs)("div", {
                         className: h.x_,
                         children: [
-                            (0, n.jsx)("span", { className: h.AM, children: "Memory" }),
-                            (0, n.jsx)("span", { className: h.rh, children: F(P) }),
+                            (0, t.jsx)("span", { className: h.AM, children: "Memory" }),
+                            (0, t.jsx)("span", { className: h.rh, children: E(U) }),
                         ],
                     }),
-                    (0, n.jsxs)("div", {
+                    (0, t.jsxs)("div", {
                         className: h.V$,
                         children: [
-                            (0, n.jsx)("span", { className: h.j5, children: "Total" }),
-                            (0, n.jsx)("span", { className: h.om, children: `${E.toFixed(0)} MB` }),
+                            (0, t.jsx)("span", { className: h.j5, children: "Total" }),
+                            (0, t.jsx)("span", { className: h.om, children: `${T.toFixed(0)} MB` }),
                         ],
                     }),
-                    (0, n.jsx)("div", {
+                    (0, t.jsx)("div", {
                         className: h.kK,
                         children: p.map((e) => {
                             let s = g[e];
                             if (null == s || 0 === s.length) return null;
-                            let t = T[e],
-                                a = null != t ? f(t) : 0,
-                                l = t?.wss_priv_kb != null;
-                            return (0, n.jsx)(
-                                N,
+                            let n = G[e],
+                                a = null != n ? N(n) : 0,
+                                l = n?.wss_priv_kb != null;
+                            return (0, t.jsx)(
+                                f,
                                 { title: `${e}${l ? " (private)" : ""}`, value: `${a.toFixed(0)} MB`, points: s },
                                 e,
                             );
@@ -278,5 +303,5 @@ function v() {
 }
 function w(e) {
     let { windowKey: s } = e;
-    return (0, n.jsx)(l.A, { withTitleBar: !0, windowKey: s, title: "Discord Stats", children: (0, n.jsx)(v, {}) });
+    return (0, t.jsx)(l.A, { withTitleBar: !0, windowKey: s, title: "Discord Stats", children: (0, t.jsx)(v, {}) });
 }

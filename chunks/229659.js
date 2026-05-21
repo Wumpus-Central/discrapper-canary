@@ -2,7 +2,7 @@
 n.d(t, { A: () => l });
 var i = n(627968),
     r = n(64700),
-    s = n(205459),
+    s = n(546738),
     a = n(661531),
     o = n(602853);
 function l(e) {
@@ -15,21 +15,22 @@ function l(e) {
         f = (0, o.r)(a.A.unsafe_rawColors.BRAND_500).hsl(),
         h = e.windowMs;
     (0, r.useEffect)(() => {
-        let e = t.current;
-        if (null == e) return;
-        let n = new s.TimelineGraphView(e, window.devicePixelRatio ?? 1);
-        (n.backgroundColor = c),
-            (n.textColor = d),
-            (n.gridColor = _),
-            (n.timeOptions = { timeStyle: "short" }),
-            (n.fontFamily = "gg sans"),
-            (n.fontSize = 11),
-            null != h && n.setScale(h / e.width),
+        let n = t.current;
+        if (null == n) return;
+        (n.width = e.width), (n.height = e.height);
+        let i = new s.TimelineGraphView(n, window.devicePixelRatio ?? 1);
+        (i.backgroundColor = c),
+            (i.textColor = d),
+            (i.gridColor = _),
+            (i.timeOptions = { timeStyle: "short" }),
+            (i.fontFamily = "gg sans"),
+            (i.fontSize = 11),
+            null != h && i.setScale(h / n.width),
             u.setColor(f),
-            n.addDataSeries(u),
-            n.updateEndDate(),
-            l(n);
-    }, [t, c, f, _, d, u, h, e.width]);
+            i.addDataSeries(u),
+            i.updateEndDate(),
+            l(i);
+    }, [t, c, f, _, d, u, h, e.width, e.height]);
     let p = e.converter,
         E = null != p ? e.dataPoints.map((e) => ({ ...e, value: p(e.value) })) : e.dataPoints;
     u.setPoints(E),
@@ -40,16 +41,18 @@ function l(e) {
             let n = t.current,
                 i = n.getContext("2d");
             if (null == i) return;
-            let r = Date.now();
-            for (let t of ((i.lineWidth = window.devicePixelRatio ?? 1), e.markers)) {
+            let r = Date.now(),
+                s = window.devicePixelRatio ?? 1,
+                a = n.height - Math.ceil(11 * s) - 4;
+            for (let t of ((i.lineWidth = s), e.markers)) {
                 let s = r - t.time;
                 if (s < 0 || s > e.windowMs) continue;
-                let a = n.width * (1 - s / e.windowMs);
+                let o = n.width * (1 - s / e.windowMs);
                 i.save(),
                     (i.strokeStyle = t.color),
                     i.beginPath(),
-                    i.moveTo(a, 0),
-                    i.lineTo(a, n.height),
+                    i.moveTo(o, 0),
+                    i.lineTo(o, a),
                     i.stroke(),
                     i.restore();
             }

@@ -1,5 +1,6 @@
 e.exports = {
     kL: "container__3c20e",
+    W: "pageTitle__3c20e",
     yT: "sectionCard__3c20e",
     uW: "section__3c20e",
     wx: "header__3c20e",

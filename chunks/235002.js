@@ -79,7 +79,7 @@ e.exports = (function () {
                         (n.lineWidth = this.devicePixelRatio),
                         n.strokeRect(1, 1, e - 1, t - 1),
                         this.graph_ &&
-                            (this.graph_.layout(e, t, this.fontSize, r, this.scale_),
+                            (this.graph_.layout(e, t, this.fontSize * this.devicePixelRatio, r, this.scale_),
                             this.graph_.drawTicks(n),
                             this.graph_.drawLines(n),
                             this.graph_.drawLabels(n)),
