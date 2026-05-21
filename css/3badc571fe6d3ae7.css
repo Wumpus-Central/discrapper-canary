@@ -113,6 +113,17 @@
     padding: var(--space-8)
 }
 
+.container__1d87d {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-8);
+    justify-content: center;
+    min-height: 0;
+    padding: var(--space-16)
+}
+
 .container_cfc01a {
     flex: 1;
     min-width: 0;
@@ -138,6 +149,14 @@
 .selectButton_cfc01a:hover {
     background-color: var(--background-mod-subtle);
     transition: background-color .15s ease-out
+}
+
+.disabled_cfc01a {
+    cursor: not-allowed
+}
+
+.disabled_cfc01a:hover {
+    background-color: transparent
 }
 
 .guildIcon_cfc01a {
