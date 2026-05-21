@@ -61,6 +61,7 @@ function N(e) {
                     game_id: l.config.application.id,
                     game_name: l.config.application.name,
                     application_ids: (0, E._3)(l) ?? [],
+                    quest_status: (0, g.NI)(l),
                     ...T(l.id, o, r.p.QUEST, a),
                 },
                 ...i,
@@ -71,21 +72,35 @@ function N(e) {
 }
 function y(e) {
     let {
-        adContentId: t,
-        relatedQuestId: n,
-        adCreativeType: i,
-        event: r,
-        properties: s,
-        trackGuildAndChannelMetadata: a,
-        shouldExtendSession: o = !1,
-        sourceQuestContent: l,
-    } = e;
-    S(
-        r,
-        { ...{ ...T(t, l, i, o), traffic_metadata_sealed: (0, p.Gp)(l, void 0, t) ?? null }, ...s, quest_id: n },
-        a,
-        !1,
-    );
+            adContentId: t,
+            relatedQuestId: n,
+            adCreativeType: i,
+            event: r,
+            properties: s,
+            trackGuildAndChannelMetadata: a,
+            shouldExtendSession: o = !1,
+            sourceQuestContent: l,
+        } = e,
+        u = {
+            ...(function (e) {
+                let {
+                        adContentId: t,
+                        adCreativeType: n,
+                        sourceQuestContent: i,
+                        shouldExtendSession: r,
+                        relatedQuestId: s,
+                    } = e,
+                    a = null != s ? h.A.getQuest(s) : null;
+                return {
+                    ...T(t, i, n, r),
+                    traffic_metadata_sealed: (0, p.Gp)(i, void 0, t) ?? null,
+                    quest_id: s ?? null,
+                    quest_status: null != a ? (0, g.NI)(a) : null,
+                };
+            })({ adContentId: t, adCreativeType: i, sourceQuestContent: l, shouldExtendSession: o, relatedQuestId: n }),
+            ...s,
+        };
+    S(r, u, a, !1);
 }
 async function C(e, t) {
     return { adUser: await (0, s.N)((0, g.jO)(e)), adMetadataSealed: (0, p.L4)(e, t) };
@@ -124,8 +139,7 @@ async function O(e) {
             trackGuildAndChannelMetadata: l,
             sourceQuestContent: u,
         } = e,
-        c = h.A.getQuest(t),
-        d = (0, p.Gp)(n, t);
+        c = (0, p.Gp)(n, t);
     N({
         questId: t,
         event: A.HAw.QUEST_CONTENT_CLICKED,
@@ -138,8 +152,7 @@ async function O(e) {
                 impressionId: a,
                 clickId: o,
             })),
-            quest_status: null != c ? (0, g.NI)(c) : null,
-            traffic_metadata_sealed: d ?? null,
+            traffic_metadata_sealed: c ?? null,
         },
         trackGuildAndChannelMetadata: l,
         shouldExtendSession: (0, p.xn)(n),

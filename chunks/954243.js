@@ -176,7 +176,7 @@ class L {
                         event: b.HAw.QUEST_CONTENT_VIEWED,
                         properties: {
                             ...n,
-                            ...this.commonProperties(o),
+                            ...this.commonProperties(),
                             metadata_sealed: r ?? null,
                             traffic_metadata_sealed: (0, E.Gp)(this.questContent, o?.id) ?? null,
                         },
@@ -226,7 +226,7 @@ class L {
                                 ...i,
                                 questId: s,
                                 event: b.HAw.QUEST_CONTENT_VIEW_TIME,
-                                properties: { ...r, ...e.commonProperties(a) },
+                                properties: { ...r, ...e.commonProperties() },
                             });
                     } else {
                         let s = e.entity.adContentIds[o];
@@ -247,10 +247,9 @@ class L {
             e.lastBeatTime = Date.now();
         };
     })();
-    commonProperties = (e) => ({
+    commonProperties = () => ({
         impression_id: this.id,
         is_quest_enrollment_blocked: this.isQuestEnrollmentBlocked,
-        quest_status: null == e ? void 0 : (0, A.NI)(e),
         ...(0, A.fF)(this.questContent, this.questContentPosition, this.questContentRowIndex),
     });
     clone = (e) => {
@@ -299,7 +298,7 @@ class L {
                         properties: {
                             ...t,
                             metadata_sealed: r ?? null,
-                            ...this.commonProperties(s),
+                            ...this.commonProperties(),
                             traffic_metadata_sealed: (0, E.Gp)(this.questContent, s?.id) ?? null,
                         },
                     });
