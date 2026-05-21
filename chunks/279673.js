@@ -1,21 +1,21 @@
-i.d(n, { default: () => l });
+i.d(n, { default: () => o });
 var e = i(627968),
     s = i(64700),
     r = i(732159),
-    o = i(817281),
-    a = i(985018);
-function l(t) {
-    let { onSubmit: n, onClose: i, ...l } = t,
+    a = i(817281),
+    l = i(375708);
+function o(t) {
+    let { onSubmit: n, onClose: i, ...o } = t,
         [c, d] = s.useState(!1);
     return (0, e.jsx)(r.ConfirmModal, {
-        title: a.intl.string(a.t.HlAPoq),
-        subtitle: a.intl.string(a.t.Jz3oqA),
+        title: l.intl.string(l.t.HlAPoq),
+        subtitle: l.intl.string(l.t["cRW4D/"]),
         variant: "active",
-        confirmText: a.intl.string(a.t.rimG2R),
-        cancelText: a.intl.string(a.t["ETE/oC"]),
+        confirmText: l.intl.string(l.t.rimG2R),
+        cancelText: l.intl.string(l.t["ETE/oC"]),
         onConfirm: n,
-        onClose: () => (c && o.Ay.updatedUnsyncedSettings({ disableCallUserConfirmationPrompt: !0 }), i()),
-        checkboxProps: { checked: c, onChange: (t) => d(t), label: a.intl.string(a.t["JdIQ/Y"]) },
-        ...l,
+        onClose: () => (c && a.Ay.updatedUnsyncedSettings({ disableCallUserConfirmationPrompt: !0 }), i()),
+        checkboxProps: { checked: c, onChange: (t) => d(t), label: l.intl.string(l.t["JdIQ/Y"]) },
+        ...o,
     });
 }
