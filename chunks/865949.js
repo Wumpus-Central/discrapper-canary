@@ -332,63 +332,65 @@ function ea(e) {
 function ei(e) {
     let { match: l } = e,
         { guildId: s, gameShopPageIndex: a, gameShopSkuId: i } = l.params,
-        r = n.useCallback((e, l, t) => P.BVt.CHANNELS_GAME_SHOP(s, e ?? 0, l, t), [s]),
-        o = n.useCallback((e, l) => (null == s ? null : (0, t.jsx)(v.A, { storefront: l, selectedPageIndex: e })), [s]);
-    return (0, t.jsx)(er, {
-        guildId: s,
-        skuId: i,
-        pageIndex: null != a ? parseInt(a, 10) : void 0,
-        renderHeader: o,
-        getSocialLayerStorefrontLink: r,
-    });
+        r = (0, o.bG)([f.default], () => f.default.getSessionId(), []),
+        c = n.useCallback((e, l, t) => P.BVt.CHANNELS_GAME_SHOP(s, e ?? 0, l, t), [s]),
+        d = n.useCallback((e, l) => (null == s ? null : (0, t.jsx)(v.A, { storefront: l, selectedPageIndex: e })), [s]);
+    return (
+        n.useEffect(() => {
+            null == s || null == r || (null == h.A.getGuild(s) && (0, E.Z2)(s, {}, { shouldNavigate: !1 }));
+        }, [s, r]),
+        (0, t.jsx)(er, {
+            guildId: s,
+            skuId: i,
+            pageIndex: null != a ? parseInt(a, 10) : void 0,
+            renderHeader: d,
+            getSocialLayerStorefrontLink: c,
+        })
+    );
 }
 function er(e) {
-    let { guildId: l, skuId: s, pageIndex: a = 0, renderHeader: p, getSocialLayerStorefrontLink: S } = e,
-        { analyticsLocations: N } = (0, g.Ay)(u.A.SOCIAL_LAYER_STOREFRONT),
-        v = (0, R.A)({ guildId: l }),
-        b = (0, o.bG)([f.default], () => f.default.getSessionId(), []),
-        L = (0, o.bG)([A.A], () => A.A.get(s), [s]);
-    (0, x.pE)(), (0, _.x)({ applicationId: v?.storefront?.applicationId, location: "SocialLayerStorefront" });
-    let C = (0, d.A)((0, r.A)()),
-        M = (0, o.bG)([I.Ay, f.default], () => I.Ay.isMember(l, f.default.getId())),
-        y = n.useMemo(
+    let { guildId: l, skuId: s, pageIndex: a = 0, renderHeader: p, getSocialLayerStorefrontLink: h } = e,
+        { analyticsLocations: E } = (0, g.Ay)(u.A.SOCIAL_LAYER_STOREFRONT),
+        S = (0, R.A)({ guildId: l }),
+        N = (0, o.bG)([A.A], () => A.A.get(s), [s]);
+    (0, x.pE)(), (0, _.x)({ applicationId: S?.storefront?.applicationId, location: "SocialLayerStorefront" });
+    let v = (0, d.A)((0, r.A)()),
+        b = (0, o.bG)([I.Ay, f.default], () => I.Ay.isMember(l, f.default.getId())),
+        L = n.useMemo(
             () =>
-                null == a || isNaN(a) || (null != v && null != v.storefront && a >= v.storefront.pages.length) ? 0 : a,
-            [a, v],
+                null == a || isNaN(a) || (null != S && null != S.storefront && a >= S.storefront.pages.length) ? 0 : a,
+            [a, S],
         ),
-        O = v?.storefront?.pages[y]?.title ?? null,
-        T = v?.storefront?.pages[y]?.leaderboard != null,
-        G = n.useMemo(
+        C = S?.storefront?.pages[L]?.title ?? null,
+        M = S?.storefront?.pages[L]?.leaderboard != null,
+        y = n.useMemo(
             () => ({
-                sessionId: C,
+                sessionId: v,
                 guildId: l,
-                pageIndex: y,
-                pageTitle: O,
-                isUserGuildMember: M,
-                pageHasLeaderboard: T,
+                pageIndex: L,
+                pageTitle: C,
+                isUserGuildMember: b,
+                pageHasLeaderboard: M,
             }),
-            [C, l, y, O, M, T],
+            [v, l, L, C, b, M],
         );
     return (n.useEffect(() => {
-        null != l && (0, m.SP)(l, y, null != s ? s : null);
-    }, [l, y, s]),
-    n.useEffect(() => {
-        null == l || null == b || (null == h.A.getGuild(l) && (0, E.Z2)(l, {}, { shouldNavigate: !1 }));
-    }, [l, b]),
-    null == l || v?.storefront == null)
+        null != l && (0, m.SP)(l, L, null != s ? s : null);
+    }, [l, L, s]),
+    null == l || S?.storefront == null)
         ? (0, t.jsx)("div", { className: i()(en.u, en.k), children: (0, t.jsx)(c.y, {}) })
         : (0, t.jsx)(g.f5, {
-              value: N,
+              value: E,
               children: (0, t.jsx)(k.J, {
                   renderHeader: p,
-                  getSocialLayerStorefrontLink: S,
+                  getSocialLayerStorefrontLink: h,
                   children: (0, t.jsx)(j.E9, {
-                      newValue: G,
+                      newValue: y,
                       children: (0, t.jsx)(ea, {
-                          storefront: v.storefront,
+                          storefront: S.storefront,
                           guildId: l,
-                          selectedPageIndex: y,
-                          selectedSku: L,
+                          selectedPageIndex: L,
+                          selectedSku: N,
                       }),
                   }),
               }),
