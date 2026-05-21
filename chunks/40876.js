@@ -269,6 +269,7 @@ let r = {
         hasStoreChangeListeners: !0,
         loadRightBeforeConnectionOpen: !0,
     },
+    MessageQueueManager: { actions: ["LOGOUT"], inlineRequire: () => n(766942).A },
     MessageSessionMetadataManager: {
         actions: ["MESSAGE_UPDATE", "MESSAGE_CREATE"],
         inlineRequire: () => n(753189).A,

@@ -91,6 +91,12 @@ class O extends A.A {
         }
         return this.queue.push(...n), this.logger.log("Cancel pending send requests", t.length), t;
     }
+    clear() {
+        this.requests.values().forEach((e) => e.abort()),
+            this.requests.clear(),
+            this.analyticsTimeouts.keys().forEach((e) => this.cancelQueueMetricTimers(e)),
+            super.clear();
+    }
     startQueueMetricTimers(e) {
         let t = v.map((e) =>
             setTimeout(() => {
