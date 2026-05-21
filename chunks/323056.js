@@ -4976,7 +4976,12 @@ let al = function () {
     ar = (0, o.E2)(d.X.CUSTOM_KEYBINDS_SETTING, {
         useSearchTerms: () => [m.intl.string(m.t["069nVT"])],
         Component: function () {
-            return n9.Av ? (0, f.jsx)(al, {}) : null;
+            return n9.Av
+                ? (0, f.jsx)(al, {})
+                : (0, f.jsx)(O.w, {
+                      type: "info",
+                      children: m.intl.format(m.t.mPi3F3, { downloadLink: Q.X7G.DOWNLOAD }),
+                  });
         },
     }),
     aa = (0, o.E2)(d.X.DEFAULT_KEYBINDS_SETTING, {
@@ -4998,12 +5003,19 @@ let al = function () {
         initialize: () => (tR.A.enableAll(!1), () => tR.A.enableAll(!0)),
         useInlineNotice: function () {
             return n9.Av
-                ? { type: e_.lT.STRONGLY_DISCOURAGED_CUSTOM, notice: () => (0, f.jsx)(lR, { sourcePage: "keybinds" }) }
-                : {
-                      type: e_.lT.INLINE_NOTICE,
-                      noticeType: "info",
-                      useText: () => m.intl.format(m.t.mPi3F3, { downloadLink: Q.X7G.DOWNLOAD }),
-                  };
+                ? {
+                      type: e_.lT.STRONGLY_DISCOURAGED_CUSTOM,
+                      notice: () =>
+                          (0, f.jsxs)(L.B, {
+                              direction: "vertical",
+                              gap: "md",
+                              children: [
+                                  (0, f.jsx)(O.w, { type: "info", children: m.intl.string(m.t["5pkmHa"]) }),
+                                  (0, f.jsx)(lR, { sourcePage: "keybinds" }),
+                              ],
+                          }),
+                  }
+                : null;
         },
         useHeaderDecoration: () =>
             n9.Av
