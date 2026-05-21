@@ -285,8 +285,8 @@ async function eD(e, t, n) {
     }
 }
 var eL = n(967347),
-    ew = n(879172),
-    eM = n(617617),
+    ew = n(617617),
+    eM = n(125325),
     eP = n(499156),
     ex = n(353835),
     eU = n(927813),
@@ -301,7 +301,7 @@ var eL = n(967347),
     eW = n(117549),
     eK = n(765682),
     ez = n(355097),
-    e$ = n(509381),
+    e$ = n(621380),
     eq = n(731854),
     eZ = n(375708);
 let eX = new p.A("MediaEngineStore"),
@@ -617,7 +617,7 @@ function t7() {
                 {
                     cameraDescription: {
                         videoDeviceGuid: t.cameraSource.videoDeviceGuid,
-                        audioDeviceGuid: t.cameraSource.audioDeviceGuid,
+                        audioDeviceGuid: !1 === t.cameraSource.sound ? "" : t.cameraSource.audioDeviceGuid,
                     },
                     quality: e,
                 },
@@ -789,14 +789,14 @@ function nm(e) {
 }
 function ng() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        t = eM.A.settings.audioContextSettings ?? { user: {}, stream: {} };
+        t = ew.A.settings.audioContextSettings ?? { user: {}, stream: {} };
     for (let n of Object.keys(t)) {
         let i = n === ez.W.USER ? eq.x.DEFAULT : eq.x.STREAM,
             r = i === eq.x.STREAM ? eq.Cn : eq.Hz,
             s = t[n] ?? {},
             { localMutes: a, localVolumes: o } = t3(i);
         for (let [e, t] of Object.entries(s))
-            null == (0, ew.tM)(i, e) &&
+            null == (0, eM.tM)(i, e) &&
                 (t.muted ? (a[e] = !0) : delete a[e],
                 t.volume !== r ? (o[e] = t.volume) : delete o[e],
                 te.eachConnection((n) => {
@@ -1321,7 +1321,7 @@ class nb extends v.Ay.Store {
                 [eq.O5.DESKTOP_CAPTURE]: te.supports(eq.O5.DESKTOP_CAPTURE),
                 [eq.O5.HYBRID_VIDEO]: te.supports(eq.O5.HYBRID_VIDEO),
             }),
-            this.waitFor(eF.default, eV.A, eB.A, eH.A, x.A, V.A, ej.A, H.Ay, eM.A, eY.default, eW.A);
+            this.waitFor(eF.default, eV.A, eB.A, eH.A, x.A, V.A, ej.A, H.Ay, ew.A, eY.default, eW.A);
     }
     supports(e) {
         return te.supports(e);
@@ -2167,12 +2167,12 @@ function nD(e) {
                 });
         } else if (t?.cameraSettings != null) {
             let e = t.context ?? eq.x.DEFAULT,
-                { videoDeviceGuid: n, audioDeviceGuid: i } = t.cameraSettings,
-                r = e === eq.x.STREAM && tE,
-                s = t.qualityOptions ?? { resolution: 720, frameRate: 30 };
-            t7(r, {
-                cameraSource: { videoDeviceGuid: n, audioDeviceGuid: i },
-                quality: { resolution: s.resolution, frameRate: s.frameRate },
+                { videoDeviceGuid: n, audioDeviceGuid: i, sound: r } = t.cameraSettings,
+                s = e === eq.x.STREAM && tE,
+                a = t.qualityOptions ?? { resolution: 720, frameRate: 30 };
+            t7(s, {
+                cameraSource: { videoDeviceGuid: n, audioDeviceGuid: i, sound: r },
+                quality: { resolution: a.resolution, frameRate: a.frameRate },
             });
         } else t7(tE, null);
     },

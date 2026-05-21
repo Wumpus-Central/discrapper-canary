@@ -8,7 +8,7 @@ var i = n(941426),
     l = n(929921),
     u = n(616356),
     c = n(71393),
-    d = n(235058),
+    d = n(761853),
     _ = n(116956),
     f = n(287809),
     h = n(927813),
@@ -62,6 +62,7 @@ class T extends a.A {
                 O.cameraSettings = {
                     videoDeviceGuid: n.cameraSource.videoDeviceGuid,
                     audioDeviceGuid: n.cameraSource.audioDeviceGuid,
+                    sound: i.soundshareEnabled,
                 };
             }
             t.autoQualityChange(), s.A.setGoLiveSource(O);

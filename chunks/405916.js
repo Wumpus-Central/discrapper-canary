@@ -66,6 +66,7 @@ function D(e) {
                                       (e.cameraSettings = {
                                           videoDeviceGuid: _.cameraSource.videoDeviceGuid,
                                           audioDeviceGuid: _.cameraSource.audioDeviceGuid,
+                                          sound: d,
                                       }),
                                     u.A.setGoLiveSource(e);
                             }
@@ -75,7 +76,7 @@ function D(e) {
                                 (0, m.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([
-                                            n.e("85096"),
+                                            n.e("99958"),
                                             n.e("62680"),
                                             n.e("87306"),
                                             n.e("41043"),
