@@ -322,7 +322,7 @@
     -moz-column-gap: var(--space-4);
     column-gap: var(--space-4);
     display: grid;
-    grid-template-columns: 6fr 5fr;
+    grid-template-columns: 1fr 1fr;
     padding: var(--space-12) var(--space-16) 0 var(--space-16)
 }
 
@@ -372,6 +372,7 @@
     flex-direction: column;
     grid-column: 1;
     grid-row: 2;
+    justify-content: center;
     min-width: 0
 }
 
