@@ -18,6 +18,7 @@ n.d(t, {
     fE: () => m,
     g5: () => L,
     hL: () => P,
+    lG: () => H,
     pU: () => c,
     t: () => E,
     uD: () => y,
@@ -26,7 +27,7 @@ n.d(t, {
     vv: () => O,
     xZ: () => T,
     xc: () => f,
-    xm: () => H,
+    xm: () => j,
 });
 var i = n(735438),
     r = n(412703),
@@ -237,10 +238,14 @@ function B(e) {
     };
 }
 function H(e) {
-    var t, n, i;
-    let r = {
+    var t;
+    return {
         minutes: Math.max(0, Math.floor((t = e.targetSeconds - e.progressSeconds) / 60)),
         seconds: Math.max(0, Math.floor(t % 60)),
     };
-    return (n = r.minutes), (i = r.seconds), `${String(n).padStart(2, "0")}:${String(i).padStart(2, "0")}`;
+}
+function j(e) {
+    var t, n;
+    let i = H(e);
+    return (t = i.minutes), (n = i.seconds), `${String(t).padStart(2, "0")}:${String(n).padStart(2, "0")}`;
 }

@@ -238,7 +238,7 @@ function k(e) {
                   size: d,
                   fullWidth: !0,
                   variant: "primary",
-                  text: o.intl.string(o.t.wEDusB),
+                  text: o.intl.string(o.t.QA20X3),
                   onClick: () => (0, A._x)({ quest: t, sourceQuestContent: a }),
               })
         : (0, i.jsx)(r.$, {
@@ -427,17 +427,17 @@ let W = function (e) {
                 analyticsCtxQuestContentPosition: E,
                 analyticsCtxQuestContentRowIndex: m,
             } = e,
-            g = {
+            T = {
                 questContent: u,
                 questContentCTA: Y(s),
                 sourceQuestContent: _,
                 questContentPosition: E,
                 questContentRowIndex: m,
             },
-            T = n.id,
-            { isEnrolling: S } = (0, c.cf)([d.A], () => ({ isEnrolling: d.A.isEnrolling(T) }), [T]),
-            N = (0, A.Oz)(n),
-            y = (function (e, t) {
+            S = n.id,
+            { isEnrolling: N } = (0, c.cf)([d.A], () => ({ isEnrolling: d.A.isEnrolling(S) }), [S]),
+            y = (0, A.Oz)(n),
+            C = (function (e, t) {
                 let { launchInGameActivity: n } = (0, p.zW)(t);
                 if ((0, f.K$)(t))
                     return () => {
@@ -453,11 +453,11 @@ let W = function (e) {
                         return null;
                 }
             })(s, n),
-            C = (function (e, t) {
+            v = (function (e, t) {
                 let { features: n } = t.config;
                 switch (e) {
                     case h.n.WATCH_VIDEO:
-                        return o.intl.formatToPlainString(o.t.GNsKiW, { remainTime: (0, f.xm)((0, f.Yh)(t)) });
+                        return (0, g.WM)((0, f.Yh)(t));
                     case h.n.ACHIEVEMENT_IN_ACTIVITY:
                         return o.intl.string(o.t.CkUzLd);
                     case h.n.PLAY_ACTIVITY:
@@ -467,38 +467,38 @@ let W = function (e) {
                         return o.intl.string(o.t.kUQLMJ);
                 }
             })(s, n),
-            v =
-                ((t = y ?? void 0),
+            O =
+                ((t = C ?? void 0),
                 s === h.n.WATCH_VIDEO
                     ? async () => {
                           await (0, A.e0)(n, {
-                              questContent: g.questContent,
-                              questContentCTA: g.questContentCTA,
-                              sourceQuestContent: g.sourceQuestContent,
+                              questContent: T.questContent,
+                              questContentCTA: T.questContentCTA,
+                              sourceQuestContent: T.sourceQuestContent,
                               sourceQuestContentCTA: Y(s),
-                              questContentPosition: g.questContentPosition,
-                              questContentRowIndex: g.questContentRowIndex,
+                              questContentPosition: T.questContentPosition,
+                              questContentRowIndex: T.questContentRowIndex,
                           });
                       }
                     : async () => {
                           await (0, j.Oy)(n.id, {
-                              questContent: g.questContent,
-                              questContentCTA: g.questContentCTA,
-                              sourceQuestContent: g.sourceQuestContent,
-                              questContentPosition: g.questContentPosition,
-                              questContentRowIndex: g.questContentRowIndex,
+                              questContent: T.questContent,
+                              questContentCTA: T.questContentCTA,
+                              sourceQuestContent: T.sourceQuestContent,
+                              questContentPosition: T.questContentPosition,
+                              questContentRowIndex: T.questContentRowIndex,
                           }),
                               t?.();
                       });
         return (0, i.jsx)(r.$, {
             size: a,
-            loading: S,
+            loading: N,
             variant: "primary",
             onClick: () => {
-                l?.(), v();
+                l?.(), O();
             },
-            text: C,
-            icon: N,
+            text: v,
+            icon: y,
             fullWidth: !0,
         });
     },

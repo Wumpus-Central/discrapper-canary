@@ -1,0 +1,167 @@
+.searchIndexAnimation__8a209 {
+    height: 280px;
+    position: relative;
+    width: 320px
+}
+
+.searchIndexBackground__8a209,
+.searchIndexForeground__8a209 {
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.background__8a209,
+.magnifyingGlass__8a209,
+.mask__8a209 {
+    transform-origin: center
+}
+
+.mask__8a209 {
+    height: 80px;
+    width: 80px
+}
+
+.images-light .searchIndexBackground__8a209 {
+    background-image: url(/assets/e409bdbc405200da.svg)
+}
+
+.images-dark .searchIndexBackground__8a209 {
+    background-image: url(/assets/436b5a86429f186a.svg)
+}
+
+.noResultsContainer__9c6d0 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    min-height: 300px;
+    padding: 36px;
+    width: 100%
+}
+
+.nagivateBackContainer__786f4 {
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    margin: 2px 0;
+    padding-block: 6px;
+    padding-inline: 7px 8px
+}
+
+.nagivateBackContainer__786f4:hover {
+    background-color: var(--brand-560);
+    color: var(--white)
+}
+
+.calendarContainer__786f4 {
+    max-width: 500px
+}
+
+.calendar__786f4 {
+    margin-bottom: -2px;
+    margin-top: 2px
+}
+
+.otherDatesContainer__786f4 {
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    margin: 2px 0;
+    padding: 6px 8px
+}
+
+.otherDatesContainer__786f4.focused__786f4 {
+    background-color: var(--brand-600)
+}
+
+.leftContainer__786f4 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.otherDateLabel__786f4 {
+    color: var(--interactive-text-default)
+}
+
+.otherDateLabel__786f4.focused__786f4 {
+    color: var(--white)
+}
+
+.radioSelection__786f4 {
+    color: var(--control-brand-foreground)
+}
+
+.inviteCodeOptionContainer_c2c6a6 {
+    color: var(--white);
+    display: flex;
+    gap: 8px
+}
+
+.labelWithIconContainer_c2c6a6 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: auto
+}
+
+.icon_c2c6a6 {
+    margin-inline-end: 4px
+}
+
+.radioSelection_c2c6a6 {
+    color: var(--control-brand-foreground)
+}
+
+.blankIcon_c2c6a6 {
+    margin-inline-end: 4px;
+    width: 16px
+}
+
+.customLabelContainer_c2c6a6 {
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    margin: 2px 0;
+    padding-block: 6px;
+    padding-inline: 7px 8px
+}
+
+.customLabelContainer_c2c6a6:hover {
+    background-color: var(--brand-560);
+    color: var(--interactive-text-hover)
+}
+
+.customLabelContainer_c2c6a6:hover .radioSelection_c2c6a6 {
+    color: var(--interactive-text-hover)
+}
+
+.labelText_c2c6a6 {
+    color: var(--text-default)
+}
+
+.labelText_c2c6a6.focused_c2c6a6 {
+    color: var(--white)
+}
+
+.selectedOption_c2c6a6 {
+    margin-top: 4px
+}
+
+.containerWithRightCaret_c2c6a6 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}

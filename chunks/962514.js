@@ -22,9 +22,9 @@ var i = n(284009),
     _ = n(834942),
     j = n(232835),
     N = n(522602),
-    y = n(627968);
+    T = n(627968);
 n(64700);
-var T = n(192308),
+var y = n(192308),
     S = n(636537),
     b = n(652215);
 async function L(e) {
@@ -79,11 +79,9 @@ function O(e) {
     let a = l ?? String(r.poll.answers[0].answer_id);
     !(function (e) {
         let { message: t, initialAnswerId: i } = e;
-        (0, T.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("97292"), n.e("40183"), n.e("78195"), n.e("19794")]).then(
-                n.bind(n, 716936),
-            );
-            return (n) => (0, y.jsx)(e, { ...n, message: t, initialAnswerId: i });
+        (0, y.openModalLazy)(async () => {
+            let { default: e } = await Promise.all([n.e("32576"), n.e("78195"), n.e("19794")]).then(n.bind(n, 716936));
+            return (n) => (0, T.jsx)(e, { ...n, message: t, initialAnswerId: i });
         });
     })({ message: r, initialAnswerId: a });
 }
