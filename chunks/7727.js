@@ -1,3 +1,3 @@
 a.exports = JSON.parse(
-    '{"HLYa5G":["St\xe4ng"],"xZzxfK":["Valfri"],"OSgZpc":["Annat"],"xrEgG0":["Tack f\xf6r din feedback!"]}',
+    '{"HLYa5G":["St\xe4ng"],"xZzxfK":["Valfri"],"qQ/xHO":["Ber\xe4tta mer"],"Lp/NZo":["V\xe4lj alla som st\xe4mmer in"],"C3suOL":["Vad var problemet?"],"NUVZB6":["Sv\xe5rt att anv\xe4nda"],"dRzDTy":["Ol\xe4mpligt"],"omVRS3":["Missvisande titel"],"ZAJcv4":["Saknade meddelanden"],"HcSKAh":["Inte anv\xe4ndbart"],"1cHvxU":["Irrelevant"],"OSgZpc":["Annan"],"wb6DmY":["F\xf6r r\xf6rigt"],"kAFQd3":["F\xf6r gammalt"],"boNboC":["Skicka feedback"],"xrEgG0":["Tack f\xf6r din feedback!"],"tbhdqW":["Gillade inte"],"sBwxOY":["Gillade"],"pDD8E1":["D\xf6lj konversation"],"o+pmGy":["Visa konversation"]}',
 );

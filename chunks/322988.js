@@ -1,3 +1,3 @@
-r.exports = JSON.parse(
-    '{"HLYa5G":["Cerrar"],"xZzxfK":["Opcional"],"OSgZpc":["Otro"],"xrEgG0":["\xa1Gracias por tus comentarios!"]}',
+a.exports = JSON.parse(
+    '{"HLYa5G":["Cerrar"],"xZzxfK":["Opcional"],"qQ/xHO":["Cu\xe9ntanos m\xe1s"],"Lp/NZo":["Selecciona todas las opciones que correspondan"],"C3suOL":["\xbfCu\xe1l era el problema?"],"NUVZB6":["Es dif\xedcil de usar"],"dRzDTy":["Respuesta inapropiada"],"omVRS3":["T\xedtulo enga\xf1oso"],"ZAJcv4":["Mensajes faltantes"],"HcSKAh":["No es \xfatil"],"1cHvxU":["Fuera de tema"],"OSgZpc":["Otro"],"wb6DmY":["Demasiado saturado"],"kAFQd3":["Muy antiguo"],"boNboC":["Env\xeda tus comentarios"],"xrEgG0":["\xa1Gracias por tus comentarios!"],"tbhdqW":["No me gusta"],"sBwxOY":["Me gusta"],"pDD8E1":["Ocultar conversaci\xf3n"],"o+pmGy":["Mostrar conversaci\xf3n"]}',
 );

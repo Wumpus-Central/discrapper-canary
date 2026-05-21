@@ -1,3 +1,3 @@
 e.exports = JSON.parse(
-    '{"HLYa5G":["Sluiten"],"xZzxfK":["Optioneel"],"OSgZpc":["Overig"],"xrEgG0":["Bedankt voor je feedback!"]}',
+    '{"HLYa5G":["Sluiten"],"xZzxfK":["Optioneel"],"qQ/xHO":["Geef extra informatie"],"Lp/NZo":["Selecteer alles wat van toepassing is"],"C3suOL":["Wat was het probleem?"],"NUVZB6":["Moeilijk in het gebruik"],"dRzDTy":["Ongepast"],"omVRS3":["Misleidende titel"],"ZAJcv4":["Ontbrekende berichten"],"HcSKAh":["Niet nuttig"],"1cHvxU":["Offtopic"],"OSgZpc":["Overig"],"wb6DmY":["Te rommelig"],"kAFQd3":["Te oud"],"boNboC":["Feedback versturen"],"xrEgG0":["Bedankt voor je feedback!"],"tbhdqW":["Afgekeurd"],"sBwxOY":["Goedgekeurd"],"pDD8E1":["Gesprek verbergen"],"o+pmGy":["Gesprek tonen"]}',
 );
