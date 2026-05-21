@@ -1,26 +1,28 @@
 "use strict";
-n.d(t, { LS: () => h, LW: () => d, Om: () => c, Uk: () => a, bM: () => u });
-var l = n(499867),
-    i = n(265690),
+n.d(t, { LS: () => _, LW: () => d, Om: () => u, Uk: () => a, bM: () => c });
+var i = n(499867),
+    r = n(265690),
     s = n(121894);
 let a = -1,
-    r = Object.freeze({
+    o = Object.freeze({
         inspectedExpressionPosition: { rowIndex: 0, columnIndex: 0 },
         hasInteracted: !1,
         activeCategoryIndex: 0,
         searchPlaceholder: null,
         bottomPosition: null,
+        analyticsId: null,
     });
-function o() {
-    let e = (0, i.h)()((0, l.eh)((e) => r));
+function l() {
+    let e = (0, r.h)()((0, i.eh)((e) => o)),
+        t = () => e.getState();
     return {
         useStore: e,
-        getState: () => e.getState(),
+        getState: t,
         subscribe: (t, n) => e.subscribe(t, n),
-        setInspectedExpressionPosition: (t, n, l) => {
+        setInspectedExpressionPosition: (t, n, i) => {
             (0, s.r)(() =>
                 e.setState({
-                    inspectedExpressionPosition: { rowIndex: n, columnIndex: t, source: l },
+                    inspectedExpressionPosition: { rowIndex: n, columnIndex: t, source: i },
                     hasInteracted: !0,
                 }),
             );
@@ -32,14 +34,18 @@ function o() {
             (0, s.r)(() => e.setState({ searchPlaceholder: t }));
         },
         resetStoreState: () => {
-            (0, s.r)(() => e.setState(r));
+            (0, s.r)(() => e.setState(o));
         },
         setBottomPosition: (t) => {
             (0, s.r)(() => e.setState({ bottomPosition: t }));
         },
+        setAnalyticsId: (t) => {
+            (0, s.r)(() => e.setState({ analyticsId: t }));
+        },
+        getAnalyticsId: () => t().analyticsId,
     };
 }
-let c = o(),
-    u = o(),
-    d = o(),
-    h = o();
+let u = l(),
+    c = l(),
+    d = l(),
+    _ = l();
