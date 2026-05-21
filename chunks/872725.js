@@ -1,15 +1,16 @@
-l.d(t, { A: () => _ });
-var i = l(627968),
-    r = l(64700),
-    a = l(503698),
-    s = l.n(a),
-    n = l(524007),
-    o = l(844222),
-    d = l(594639),
-    c = l(105596),
-    u = l(359778),
-    m = l(544888);
-let h = {
+"use strict";
+n.d(t, { A: () => p });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(524007),
+    l = n(844222),
+    u = n(594639),
+    c = n(105596),
+    d = n(359778),
+    _ = n(544888);
+let f = {
         HoverLightmode: { posy: "number", posx: "number" },
         BaseGlow: {},
         ButtonFillLightmode: {},
@@ -17,57 +18,57 @@ let h = {
         BaseGlowRemapped: {},
         ButtonFillDarkmode: {},
     },
-    C = {},
-    _ = (e) => {
+    h = {},
+    p = (e) => {
         let {
                 children: t,
-                id: l,
-                tabIndex: a,
-                className: _,
-                cardClassName: p,
-                cardStyle: g = C,
-                cardType: E,
-                artboard: x = "BaseGlowRemapped",
-                fit: f = "layout",
-                glowing: A = !1,
-                glowAmount: R = 8,
+                id: n,
+                tabIndex: s,
+                className: p,
+                cardClassName: E,
+                cardStyle: m = h,
+                cardType: g,
+                artboard: A = "BaseGlowRemapped",
+                fit: I = "layout",
+                glowing: T = !1,
+                glowAmount: S = 8,
                 blurAmount: N = 30,
-                hueRotate: I = 0,
-                isReducedMotion: S,
-                onMouseEnter: j,
+                hueRotate: y = 0,
+                isReducedMotion: C,
+                onMouseEnter: v,
             } = e,
-            v = r.useRef(null),
-            P = r.useRef(null),
-            { status: D, buffer: T } = (0, c.CE)(A ? n.A : null),
-            O = r.useContext(o.C),
-            y = S ?? O.reducedMotion.enabled,
-            b = {
-                "--custom-glow-amount": `${R}px`,
+            O = r.useRef(null),
+            R = r.useRef(null),
+            { status: b, buffer: D } = (0, c.CE)(T ? o.A : null),
+            L = r.useContext(l.C),
+            w = C ?? L.reducedMotion.enabled,
+            M = {
+                "--custom-glow-amount": `${S}px`,
                 "--custom-blur-amount": `${N}px`,
-                "--custom-hue-rotate": `${I}deg`,
-                "--custom-glow-opacity": +(0 !== R),
+                "--custom-hue-rotate": `${y}deg`,
+                "--custom-glow-opacity": +(0 !== S),
             };
         return (0, i.jsxs)("div", {
-            id: l,
-            ref: v,
-            tabIndex: a,
-            className: s()(m.k, _),
-            style: b,
-            onMouseEnter: j,
+            id: n,
+            ref: O,
+            tabIndex: s,
+            className: a()(_.k, p),
+            style: M,
+            onMouseEnter: v,
             children: [
-                A &&
-                    D !== c.BW.Loading &&
-                    (0, i.jsx)(d.w, {
-                        buffer: T,
-                        artboard: x,
-                        artboardProperties: h,
-                        eventTargetRef: v,
-                        className: m.Q,
-                        ref: P,
-                        fit: f,
-                        withReducedMotion: y ? "halt" : "play",
+                T &&
+                    b !== c.BW.Loading &&
+                    (0, i.jsx)(u.w, {
+                        buffer: D,
+                        artboard: A,
+                        artboardProperties: f,
+                        eventTargetRef: O,
+                        className: _.Q,
+                        ref: R,
+                        fit: I,
+                        withReducedMotion: w ? "halt" : "play",
                     }),
-                (0, i.jsx)(u.Z, { type: E ?? u.s.CUSTOM, className: p, style: g, children: t }),
+                (0, i.jsx)(d.Z, { type: g ?? d.s.CUSTOM, className: E, style: m, children: t }),
             ],
         });
     };

@@ -1,176 +1,177 @@
-t.d(s, { $: () => z, A: () => U });
-var i = t(627968),
-    n = t(64700),
-    a = t(503698),
-    r = t.n(a),
-    l = t(890856),
-    c = t(140735),
-    u = t(707554),
-    d = t(17928),
-    o = t(97808),
-    h = t(587895),
-    x = t(713517),
-    m = t(575593),
-    j = t(38021),
-    g = t(844222),
-    p = t(583094),
-    E = t(661531),
-    f = t(775602),
-    v = t(139136),
-    A = t(474012),
-    I = t(929283),
-    N = t(245068),
-    C = t(761365),
-    T = t(366523),
-    R = t(403362),
-    L = t(652215),
-    _ = t(778712),
-    b = t(997990);
-function k(e) {
-    let { sku: s, isFocused: t, user: a } = e,
-        r = n.useMemo(() => (0, A.T)(s), [s]);
-    if (null == r) return null;
-    if ("bundle" === r.type)
+"use strict";
+n.d(t, { $: () => V, A: () => B });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(890856),
+    l = n(140735),
+    u = n(707554),
+    c = n(17928),
+    d = n(97808),
+    _ = n(587895),
+    f = n(713517),
+    h = n(575593),
+    p = n(38021),
+    E = n(844222),
+    m = n(583094),
+    g = n(661531),
+    A = n(775602),
+    I = n(139136),
+    T = n(474012),
+    S = n(929283),
+    N = n(245068),
+    y = n(761365),
+    C = n(366523),
+    v = n(403362),
+    O = n(652215),
+    R = n(778712),
+    b = n(997990);
+function D(e) {
+    let { sku: t, isFocused: n, user: s } = e,
+        a = r.useMemo(() => (0, T.T)(t), [t]);
+    if (null == a) return null;
+    if ("bundle" === a.type)
         return (0, i.jsx)("div", {
             className: b.hT,
-            children: (0, i.jsx)(N.X, { product: r, isHighlighted: t, user: a }),
+            children: (0, i.jsx)(N.X, { product: a, isHighlighted: n, user: s }),
         });
-    switch (r.item.type) {
-        case m.R.AVATAR_DECORATION:
-            return (0, i.jsx)(I.i, { user: a, avatarSize: _._3.SIZE_80, item: r.item, isHighlighted: t });
-        case m.R.PROFILE_EFFECT:
+    switch (a.item.type) {
+        case h.R.AVATAR_DECORATION:
+            return (0, i.jsx)(S.i, { user: s, avatarSize: R._3.SIZE_80, item: a.item, isHighlighted: n });
+        case h.R.PROFILE_EFFECT:
             return (0, i.jsx)("div", {
                 className: b.xC,
-                children: (0, i.jsx)(v.A, {
-                    skuId: r.item.skuId,
-                    isHighlighted: t,
+                children: (0, i.jsx)(I.A, {
+                    skuId: a.item.skuId,
+                    isHighlighted: n,
                     removeSetHeight: !0,
                     hideBackground: !0,
                 }),
             });
-        case m.R.NAMEPLATE:
+        case h.R.NAMEPLATE:
             return (0, i.jsx)("div", {
                 className: b.M4,
                 children: (0, i.jsx)("div", {
                     className: b.N1,
-                    children: (0, i.jsx)(C.A, { user: a, nameplate: r.item, isHighlighted: t, size: "small" }),
+                    children: (0, i.jsx)(y.A, { user: s, nameplate: a.item, isHighlighted: n, size: "small" }),
                 }),
             });
         default:
             return null;
     }
 }
-function S(e) {
-    let { sku: s, isFocused: t } = e;
-    return (0, i.jsx)(T.e, {
+function L(e) {
+    let { sku: t, isFocused: n } = e;
+    return (0, i.jsx)(C.e, {
         shape: "custom",
-        containerClassName: r()(b.JS, t && b.P3),
+        containerClassName: a()(b.JS, n && b.P3),
         backgroundImageClassName: b.m1,
         foregroundImageClassName: b.aF,
-        sku: s,
+        sku: t,
     });
 }
-function M(e) {
-    let { eventTargetRef: s, assetClassName: t, disableHover: a } = e,
-        l = (0, d.bG)([f.A], () => f.A.useReducedMotion),
-        { theme: c, saturation: u } = (0, j.wR)(),
-        { highContrastModeEnabled: o } = n.useContext(g.C),
-        [h, x, m, v] = E.A.colors.TEXT_DEFAULT.resolve({ theme: c, saturation: u, highContrastModeEnabled: o }).rgba();
+function w(e) {
+    let { eventTargetRef: t, assetClassName: n, disableHover: s } = e,
+        o = (0, c.bG)([A.A], () => A.A.useReducedMotion),
+        { theme: l, saturation: u } = (0, p.wR)(),
+        { highContrastModeEnabled: d } = r.useContext(E.C),
+        [_, f, h, I] = g.A.colors.TEXT_DEFAULT.resolve({ theme: l, saturation: u, highContrastModeEnabled: d }).rgba();
     return (0, i.jsx)("div", {
         className: b.yv,
-        children: (0, i.jsx)(p.u, {
-            className: r()(b.MO, t),
-            dataBinding: { reducedMotion: a || l, logoColor: { r: h, g: x, b: m, a: v } },
-            eventTargetRef: s,
+        children: (0, i.jsx)(m.u, {
+            className: a()(b.MO, n),
+            dataBinding: { reducedMotion: s || o, logoColor: { r: _, g: f, b: h, a: I } },
+            eventTargetRef: t,
             fit: "contain",
         }),
     });
 }
-function O(e) {
-    let { sku: s, isFocused: t, user: n, eventTargetRef: a, assetClassName: r, disableHover: l } = e;
-    switch (s.productLine) {
-        case L.EZt.COLLECTIBLES:
-            return (0, i.jsx)(k, { sku: s, isFocused: t, user: n });
-        case L.EZt.SOCIAL_LAYER_GAME_ITEM:
-            return (0, i.jsx)(S, { sku: s, isFocused: t });
-        case L.EZt.APPLICATION:
-        case L.EZt.BOOST:
-        case L.EZt.GUILD_ROLE:
+function M(e) {
+    let { sku: t, isFocused: n, user: r, eventTargetRef: s, assetClassName: a, disableHover: o } = e;
+    switch (t.productLine) {
+        case O.EZt.COLLECTIBLES:
+            return (0, i.jsx)(D, { sku: t, isFocused: n, user: r });
+        case O.EZt.SOCIAL_LAYER_GAME_ITEM:
+            return (0, i.jsx)(L, { sku: t, isFocused: n });
+        case O.EZt.APPLICATION:
+        case O.EZt.BOOST:
+        case O.EZt.GUILD_ROLE:
             return null;
-        case L.EZt.PREMIUM:
-            return (0, i.jsx)(M, { eventTargetRef: a, assetClassName: r, disableHover: l });
-        case L.EZt.GUILD_PRODUCT:
+        case O.EZt.PREMIUM:
+            return (0, i.jsx)(w, { eventTargetRef: s, assetClassName: a, disableHover: o });
+        case O.EZt.GUILD_PRODUCT:
             return null;
         default:
-            (0, R.xb)(s.productLine);
+            (0, v.xb)(t.productLine);
     }
 }
-var Z = t(661492),
-    y = t(627001),
-    F = t(375708),
-    P = t(213494),
-    H = t(476324);
-function w(e) {
+var P = n(661492),
+    x = n(627001),
+    U = n(375708),
+    k = n(213494),
+    G = n(476324);
+function F(e) {
     return { width: e.size, height: e.size };
 }
-function z(e) {
-    let { spec: s, cardStyle: t } = e;
+function V(e) {
+    let { spec: t, cardStyle: n } = e;
     return (0, i.jsx)("div", {
-        className: r()(P.Nr, t),
-        style: w(s),
+        className: a()(k.Nr, n),
+        style: F(t),
         children: (0, i.jsx)("div", {
-            className: P.ho,
-            children: (0, i.jsx)(o.eu, { src: H, size: _._3.SIZE_80, "aria-label": F.intl.string(F.t.lqaIxI) }),
+            className: k.ho,
+            children: (0, i.jsx)(d.eu, { src: G, size: R._3.SIZE_80, "aria-label": U.intl.string(U.t.lqaIxI) }),
         }),
     });
 }
-function U(e) {
+function B(e) {
     let {
-            sku: s,
-            user: t,
-            spec: a,
-            children: o,
-            cardStyle: m,
-            skuPreviewStyle: j,
-            skuAssetClassName: g,
-            disableHoverOrFocus: p,
-            disableRiveHover: E,
-            onHoverOrFocusChange: f,
-            onClick: v,
-            "aria-label": A,
+            sku: t,
+            user: n,
+            spec: s,
+            children: d,
+            cardStyle: h,
+            skuPreviewStyle: p,
+            skuAssetClassName: E,
+            disableHoverOrFocus: m,
+            disableRiveHover: g,
+            onHoverOrFocusChange: A,
+            onClick: I,
+            "aria-label": T,
         } = e,
-        I = n.useRef(null),
-        { isHoveringOrFocusing: N } = (0, x.A)(I),
-        C = n.useRef(f),
-        T = (0, d.bG)([h.A], () => h.A.getApplication(s.applicationId));
+        S = r.useRef(null),
+        { isHoveringOrFocusing: N } = (0, f.A)(S),
+        y = r.useRef(A),
+        C = (0, c.bG)([_.A], () => _.A.getApplication(t.applicationId));
     return (
-        n.useEffect(() => {
-            C.current = f;
-        }, [f]),
-        n.useEffect(() => {
-            C.current?.(N);
+        r.useEffect(() => {
+            y.current = A;
+        }, [A]),
+        r.useEffect(() => {
+            y.current?.(N);
         }, [N]),
-        (0, i.jsxs)(l.s, {
-            ref: I,
-            className: r()(P.Nr, m),
-            onClick: v,
-            "aria-label": A,
-            style: w(a),
+        (0, i.jsxs)(o.s, {
+            ref: S,
+            className: a()(k.Nr, h),
+            onClick: I,
+            "aria-label": T,
+            style: F(s),
             children: [
-                (0, i.jsx)(c.A, { children: (0, i.jsx)(u.H, { children: (0, Z.TC)(s) }) }),
+                (0, i.jsx)(l.A, { children: (0, i.jsx)(u.H, { children: (0, P.TC)(t) }) }),
                 (0, i.jsx)("div", {
-                    className: r()(P.ev, j),
-                    children: (0, i.jsx)(O, {
-                        sku: s,
-                        isFocused: !p && N,
-                        user: t,
-                        eventTargetRef: E ? void 0 : I,
-                        assetClassName: g,
-                        disableHover: E,
+                    className: a()(k.ev, p),
+                    children: (0, i.jsx)(M, {
+                        sku: t,
+                        isFocused: !m && N,
+                        user: n,
+                        eventTargetRef: g ? void 0 : S,
+                        assetClassName: E,
+                        disableHover: g,
                     }),
                 }),
-                (0, i.jsx)(y.P, { spec: a, application: T }),
-                o,
+                (0, i.jsx)(x.P, { spec: s, application: C }),
+                d,
             ],
         })
     );

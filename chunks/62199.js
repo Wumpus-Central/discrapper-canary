@@ -1,24 +1,25 @@
-a.d(t, { A: () => u });
-var r = a(64700),
-    n = a(17928),
-    l = a(252732),
-    o = a(101058),
-    i = a(696451),
-    s = a(352413),
-    c = a(45837);
-function u(e) {
-    let { user: t, guildId: a, size: u, showPending: p = !1, animateOnHover: d = !1, avatarOverride: _ } = e,
-        { onMouseEnter: A, onMouseLeave: v, shouldAnimate: g } = (0, c.A)(d),
-        { pendingAvatar: f } = (0, s.A)({ guildId: null === a ? void 0 : a }),
-        m = p && null != t ? (0, o.V7)({ userId: t.id, image: f, canAnimate: g, size: u }) : void 0,
-        E = void 0 !== _ ? _ : m,
-        b = (0, n.bG)([i.Ay], () => (null != a && null != t ? i.Ay.getMember(a, t.id) : null));
+"use strict";
+n.d(t, { A: () => c });
+var i = n(64700),
+    r = n(17928),
+    s = n(252732),
+    a = n(101058),
+    o = n(696451),
+    l = n(352413),
+    u = n(45837);
+function c(e) {
+    let { user: t, guildId: n, size: c, showPending: d = !1, animateOnHover: _ = !1, avatarOverride: f } = e,
+        { onMouseEnter: h, onMouseLeave: p, shouldAnimate: E } = (0, u.A)(_),
+        { pendingAvatar: m } = (0, l.A)({ guildId: null === n ? void 0 : n }),
+        g = d && null != t ? (0, a.V7)({ userId: t.id, image: m, canAnimate: E, size: c }) : void 0,
+        A = void 0 !== f ? f : g,
+        I = (0, r.bG)([o.Ay], () => (null != n && null != t ? o.Ay.getMember(n, t.id) : null));
     return {
-        avatarSrc: r.useMemo(
-            () => (null != t ? (0, l.sv)(E, b, t, { canAnimate: g, size: u }) : void 0),
-            [E, b, t, g, u],
+        avatarSrc: i.useMemo(
+            () => (null != t ? (0, s.sv)(A, I, t, { canAnimate: E, size: c }) : void 0),
+            [A, I, t, E, c],
         ),
-        isAvatarAnimating: g,
-        eventHandlers: { onMouseEnter: A, onMouseLeave: v },
+        isAvatarAnimating: E,
+        eventHandlers: { onMouseEnter: h, onMouseLeave: p },
     };
 }

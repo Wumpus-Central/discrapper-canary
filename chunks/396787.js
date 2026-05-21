@@ -1,17 +1,18 @@
-n.d(t, { F5: () => h, XA: () => _, jv: () => m });
-var a = n(627968);
+"use strict";
+n.d(t, { F5: () => _, XA: () => h, jv: () => f });
+var i = n(627968);
 n(64700);
-var l = n(653922),
-    i = n(192308),
-    s = n(157559),
+var r = n(653922),
+    s = n(192308),
+    a = n(157559),
     o = n(308528),
-    c = n(793574),
-    r = n(576470),
-    d = n(339984),
-    u = n(375708);
-let h = (e, t) =>
-        (0, i.openModalLazy)(async () => {
-            let { default: l } = await Promise.all([
+    l = n(793574),
+    u = n(576470),
+    c = n(339984),
+    d = n(375708);
+let _ = (e, t) =>
+        (0, s.openModalLazy)(async () => {
+            let { default: r } = await Promise.all([
                 n.e("25812"),
                 n.e("43662"),
                 n.e("50985"),
@@ -26,32 +27,32 @@ let h = (e, t) =>
                 n.e("60987"),
             ]).then(n.bind(n, 902550));
             return (n) =>
-                (0, a.jsx)(l, {
+                (0, i.jsx)(r, {
                     maxFileSizeBytes: 8388608,
                     onComplete: e,
-                    uploadType: d.HL.AVATAR,
+                    uploadType: c.HL.AVATAR,
                     showUpsellHeader: !1,
-                    modalTitle: u.intl.string(u.t["6yrpFR"]),
-                    analyticsLocation: c.A.GROUP_DM_ICON_EDITOR,
+                    modalTitle: d.intl.string(d.t["6yrpFR"]),
+                    analyticsLocation: l.A.GROUP_DM_ICON_EDITOR,
                     analyticsLocations: t,
                     allowRecentAvatarsSelection: !1,
                     ...n,
                 });
         }),
-    m = (e, t) => {
-        h(
+    f = (e, t) => {
+        _(
             (n) => {
-                o.A.setIcon(e, n.imageUri, t).catch(_);
+                o.A.setIcon(e, n.imageUri, t).catch(h);
             },
             [t],
         );
     },
-    _ = (e) => {
+    h = (e) => {
         if (e?.body?.retry_after != null) {
-            let t = (0, l.A)(new Date(), e.body.retry_after);
-            s.A.show({
-                title: u.intl.string(u.t.Whhv4w),
-                body: u.intl.format(u.t.VIJkAy, { duration: (0, a.jsx)(r.A, { showUnits: !0, deadline: t }) }),
+            let t = (0, r.A)(new Date(), e.body.retry_after);
+            a.A.show({
+                title: d.intl.string(d.t.Whhv4w),
+                body: d.intl.format(d.t.VIJkAy, { duration: (0, i.jsx)(u.A, { showUnits: !0, deadline: t }) }),
             });
         }
     };

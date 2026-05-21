@@ -1,88 +1,89 @@
-s.d(t, { y: () => m });
-var a = s(627968),
-    n = s(64700),
-    r = s(503698),
-    l = s.n(r),
-    i = s(289873);
-s(323874), s(14289), s(35956);
-var d = s(835245);
-let u = new Worker(new URL("/assets/" + s.u("14250"), s.b));
-var c = s(652215),
-    o = s(503117);
-function m(e) {
+"use strict";
+n.d(t, { y: () => _ });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(289873);
+n(323874), n(14289), n(35956);
+var l = n(835245);
+let u = new Worker(new URL("/assets/" + n.u("14250"), n.b));
+var c = n(652215),
+    d = n(503117);
+function _(e) {
     let {
             readyState: t,
-            aspectRatio: s,
-            placeholder: r,
-            placeholderVersion: m,
-            placeholderStyle: v,
+            aspectRatio: n,
+            placeholder: s,
+            placeholderVersion: _,
+            placeholderStyle: f,
             children: h,
             disableSpinner: p = !1,
         } = e,
-        w = t === c.Rv1.LOADING,
-        [N] = n.useState(w),
-        [f, k] = n.useState(!1),
-        [E] = n.useState(() => Date.now()),
-        L = (function (e, t, s) {
-            let a = s && 1 === t && null != e,
-                [r, l] = n.useState(void 0);
+        E = t === c.Rv1.LOADING,
+        [m] = r.useState(E),
+        [g, A] = r.useState(!1),
+        [I] = r.useState(() => Date.now()),
+        T = (function (e, t, n) {
+            let i = n && 1 === t && null != e,
+                [s, a] = r.useState(void 0);
             return (
-                n.useEffect(() => {
+                r.useEffect(() => {
                     let t = !1;
                     return (
-                        a &&
+                        i &&
                             new Promise((t) => {
-                                let s = (0, d.A)(),
-                                    a = (e) => {
+                                let n = (0, l.A)(),
+                                    i = (e) => {
                                         let {
-                                            data: { id: n, png: r },
+                                            data: { id: r, png: s },
                                         } = e;
-                                        s === n && (t(r), u.removeEventListener("message", a));
+                                        n === r && (t(s), u.removeEventListener("message", i));
                                     };
-                                u.addEventListener("message", a), u.postMessage({ id: s, placeholderData: e });
+                                u.addEventListener("message", i), u.postMessage({ id: n, placeholderData: e });
                             }).then((e) => {
-                                t || l(e);
+                                t || a(e);
                             }),
                         () => {
                             t = !0;
                         }
                     );
-                }, [e, a]),
-                r
+                }, [e, i]),
+                s
             );
-        })(r, m, N),
-        R = t === c.Rv1.READY && Date.now() - E < 200;
+        })(s, _, m),
+        S = t === c.Rv1.READY && Date.now() - I < 200;
     return (
-        n.useEffect(() => {
+        r.useEffect(() => {
             if (p) return;
             let e = setTimeout(() => {
-                k(!0);
+                A(!0);
             }, 2e3);
             return () => {
                 clearTimeout(e);
             };
-        }, [p, N]),
-        (0, a.jsxs)("div", {
-            className: o.bX,
-            style: { aspectRatio: s },
+        }, [p, m]),
+        (0, i.jsxs)("div", {
+            className: d.bX,
+            style: { aspectRatio: n },
             children: [
                 h,
-                null != L &&
-                    (0, a.jsx)("img", {
-                        style: v,
-                        className: l()(o.bc, { [o.t5]: w, [o.Jh]: !w, [o.zg]: R }),
-                        src: L,
+                null != T &&
+                    (0, i.jsx)("img", {
+                        style: f,
+                        className: a()(d.bc, { [d.t5]: E, [d.Jh]: !E, [d.zg]: S }),
+                        src: T,
                         alt: "",
                     }),
                 p
                     ? null
-                    : (0, a.jsx)("div", {
-                          "aria-hidden": !(w && f),
-                          className: l()(o.oM, { [o.__]: w && f }),
-                          children: (0, a.jsx)(i.y, {
-                              type: i.t.SPINNING_CIRCLE_SIMPLE,
-                              animated: w && f,
-                              className: o.Xd,
+                    : (0, i.jsx)("div", {
+                          "aria-hidden": !(E && g),
+                          className: a()(d.oM, { [d.__]: E && g }),
+                          children: (0, i.jsx)(o.y, {
+                              type: o.t.SPINNING_CIRCLE_SIMPLE,
+                              animated: E && g,
+                              className: d.Xd,
                           }),
                       }),
             ],

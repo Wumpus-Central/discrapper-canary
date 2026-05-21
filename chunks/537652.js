@@ -1,17 +1,18 @@
-r.d(t, { A: () => a });
-var s = r(627968);
-r(64700);
-var n = r(503698),
-    l = r.n(n),
-    i = r(34879);
-let a = (e) => {
-    let { message: t, className: r, noResultsImageURL: n, forceLightTheme: a, suggestions: o } = e,
-        u = null != n ? { backgroundImage: `url(${n})` } : {};
-    return (0, s.jsx)("div", {
-        className: l()({ [i.VC]: a }, r),
-        children: (0, s.jsxs)("div", {
-            className: i.iE,
-            children: [(0, s.jsx)("div", { className: i.Gg, style: u }), (0, s.jsx)("div", { children: t }), o],
+"use strict";
+n.d(t, { A: () => o });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(34879);
+let o = (e) => {
+    let { message: t, className: n, noResultsImageURL: r, forceLightTheme: o, suggestions: l } = e,
+        u = null != r ? { backgroundImage: `url(${r})` } : {};
+    return (0, i.jsx)("div", {
+        className: s()({ [a.VC]: o }, n),
+        children: (0, i.jsxs)("div", {
+            className: a.iE,
+            children: [(0, i.jsx)("div", { className: a.Gg, style: u }), (0, i.jsx)("div", { children: t }), l],
         }),
     });
 };

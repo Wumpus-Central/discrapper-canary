@@ -1,40 +1,41 @@
-n.d(t, { C: () => r });
-var s = n(627968);
+"use strict";
+n.d(t, { C: () => o });
+var i = n(627968);
 n(64700);
-var l = n(661531),
-    i = n(996682),
+var r = n(661531),
+    s = n(996682),
     a = n(27989);
-let r = (e) => {
+let o = (e) => {
     let {
             size: t = "md",
             width: n,
-            height: r,
-            color: o = l.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: c = "",
-            ...u
+            height: o,
+            color: l = r.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: u = "",
+            ...c
         } = e,
         d = (0, a.J)(t),
-        h = d?.width ?? n,
-        m = d?.height ?? r;
-    return (0, s.jsxs)("svg", {
-        ...(0, i.A)(u),
+        _ = d?.width ?? n,
+        f = d?.height ?? o;
+    return (0, i.jsxs)("svg", {
+        ...(0, s.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: h,
-        height: m,
+        width: _,
+        height: f,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
-            (0, s.jsx)("path", {
-                fill: "string" == typeof o ? o : o.css,
+            (0, i.jsx)("path", {
+                fill: "string" == typeof l ? l : l.css,
                 fillRule: "evenodd",
                 d: "M6.94 12.1h-.83a.62.62 0 0 0-.62.63v3.04a.62.62 0 0 0 .62.63h2.7a.62.62 0 0 0 .62-.63v-3.05a.62.62 0 0 0-.62-.62h-.86V8.79h10.18a3.83 3.83 0 1 1 0 7.65h-1.45a5.32 5.32 0 0 1-1.02 1.73c-.44.44-.93.82-1.45 1.15a.45.45 0 0 0-.2.4 1.6 1.6 0 0 1-1.6 1.6H7.58a1.6 1.6 0 0 1-1.61-1.6.45.45 0 0 0-.2-.4 8.02 8.02 0 0 1-1.46-1.15C2.99 16.84 2.18 12.84 2 10.45A1.56 1.56 0 0 1 3.57 8.8h3.37v3.31Zm11.01-1.31a24.9 24.9 0 0 1-.63 3.65h.81a1.83 1.83 0 1 0 0-3.65h-.18Z",
                 clipRule: "evenodd",
-                className: c,
+                className: u,
             }),
-            (0, s.jsx)("path", {
-                fill: "string" == typeof o ? o : o.css,
+            (0, i.jsx)("path", {
+                fill: "string" == typeof l ? l : l.css,
                 d: "M13.88 2.5a1.03 1.03 0 0 1 1.06.98 2.86 2.86 0 0 1-1.58 2.5.64.64 0 0 0-.26.8 1 1 0 0 1-.96 1.31.98.98 0 0 1-.93-.64 2.65 2.65 0 0 1 1.11-3.18c.58-.36.62-.71.62-.73a.98.98 0 0 1 .94-1.03ZM11.07 0a1.03 1.03 0 0 1 1.06.97 2.86 2.86 0 0 1-1.58 2.5.64.64 0 0 0-.26.79 1 1 0 0 1-.94 1.34 1 1 0 0 1-.94-.66 2.65 2.65 0 0 1 1.1-3.18c.58-.35.62-.7.62-.73A.98.98 0 0 1 10.7.1a.98.98 0 0 1 .38-.09Z",
-                className: c,
+                className: u,
             }),
         ],
     });

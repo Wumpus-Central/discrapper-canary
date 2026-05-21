@@ -1,128 +1,129 @@
-l.r(t), l.d(t, { default: () => T });
-var n = l(627968),
-    s = l(64700),
-    i = l(503698),
-    r = l.n(i),
-    a = l(481613),
-    o = l.n(a),
-    c = l(607399),
-    d = l(247775),
-    u = l(17928),
-    m = l(821609),
-    p = l(138017),
-    x = l(715482),
-    f = l(224640),
-    g = l(20742),
-    j = l(430993),
-    h = l(364840),
-    v = l(980707),
-    y = l(477782),
-    A = l(922016),
-    b = l(534514),
-    K = l(834730),
-    N = l(315982),
-    k = l(160394),
-    w = l(495544),
-    C = l(287809),
-    O = l(174459),
-    S = l(53505),
-    D = l(652215),
-    E = l(375708),
-    M = l(982085);
-let W = [
-        { getOs: () => E.intl.string(E.t.NK5ySJ), icon: M.Bt, url: () => (0, S.oW)("osx", !1), platformKey: 0 },
-        { getOs: () => E.intl.string(E.t.OvKGE6), icon: M.KF, url: () => (0, S.oW)("win", !1), platformKey: 1 },
+"use strict";
+n.r(t), n.d(t, { default: () => G });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(481613),
+    l = n.n(o),
+    u = n(607399),
+    c = n(247775),
+    d = n(17928),
+    _ = n(821609),
+    f = n(138017),
+    h = n(715482),
+    p = n(224640),
+    E = n(20742),
+    m = n(430993),
+    g = n(364840),
+    A = n(980707),
+    I = n(477782),
+    T = n(922016),
+    S = n(534514),
+    N = n(834730),
+    y = n(315982),
+    C = n(160394),
+    v = n(495544),
+    O = n(287809),
+    R = n(174459),
+    b = n(53505),
+    D = n(652215),
+    L = n(375708),
+    w = n(982085);
+let M = [
+        { getOs: () => L.intl.string(L.t.NK5ySJ), icon: w.Bt, url: () => (0, b.oW)("osx", !1), platformKey: 0 },
+        { getOs: () => L.intl.string(L.t.OvKGE6), icon: w.KF, url: () => (0, b.oW)("win", !1), platformKey: 1 },
         {
-            getOs: () => E.intl.string(E.t.dJB4PN),
-            icon: M.pS,
+            getOs: () => L.intl.string(L.t.dJB4PN),
+            icon: w.pS,
             url: [
-                { url: () => (0, S.oW)("linux", !1, "deb"), getText: () => E.intl.string(E.t.Sodsus) },
-                { url: () => (0, S.oW)("linux", !1, "tar.gz"), getText: () => E.intl.string(E.t.G3U6IV) },
+                { url: () => (0, b.oW)("linux", !1, "deb"), getText: () => L.intl.string(L.t.Sodsus) },
+                { url: () => (0, b.oW)("linux", !1, "tar.gz"), getText: () => L.intl.string(L.t.G3U6IV) },
             ],
             platformKey: 2,
         },
     ],
-    F = [
-        { getOs: () => E.intl.string(E.t.wCVyNT), icon: M.s4, url: () => D.AMi.IOS, platformKey: 3 },
-        { getOs: () => E.intl.string(E.t.wuQpJD), icon: M.yA, url: () => D.AMi.ANDROID, platformKey: 4 },
+    P = [
+        { getOs: () => L.intl.string(L.t.wCVyNT), icon: w.s4, url: () => D.AMi.IOS, platformKey: 3 },
+        { getOs: () => L.intl.string(L.t.wuQpJD), icon: w.yA, url: () => D.AMi.ANDROID, platformKey: 4 },
     ],
-    R = { getOs: () => E.intl.string(E.t.OPUqI3), icon: M.yX, url: () => D.AMi.META_QUEST, platformKey: 5 },
-    _ = (e) => {
-        let { os: t, url: l, onClick: i } = e,
-            r = s.useRef(null),
-            [a, o] = s.useState(!1),
-            c = s.useCallback(
+    x = { getOs: () => L.intl.string(L.t.OPUqI3), icon: w.yX, url: () => D.AMi.META_QUEST, platformKey: 5 },
+    U = (e) => {
+        let { os: t, url: n, onClick: s } = e,
+            a = r.useRef(null),
+            [o, l] = r.useState(!1),
+            u = r.useCallback(
                 (e) => {
-                    let { closePopout: s } = e;
-                    return Array.isArray(l)
-                        ? (0, n.jsx)(v.W, {
+                    let { closePopout: r } = e;
+                    return Array.isArray(n)
+                        ? (0, i.jsx)(A.W, {
                               "data-menu-migrated": !0,
                               navId: "download-app-menu",
-                              "aria-label": E.intl.string(E.t["+1H47t"]),
-                              onClose: s,
+                              "aria-label": L.intl.string(L.t["+1H47t"]),
+                              onClose: r,
                               onSelect: void 0,
-                              children: l.map((e) =>
-                                  (0, n.jsx)(
-                                      y.Dr,
-                                      { id: e.url(), label: e.getText(), action: () => i(t, e.url()) },
+                              children: n.map((e) =>
+                                  (0, i.jsx)(
+                                      I.Dr,
+                                      { id: e.url(), label: e.getText(), action: () => s(t, e.url()) },
                                       e.url(),
                                   ),
                               ),
                           })
                         : null;
                 },
-                [t, l, i],
+                [t, n, s],
             );
-        return Array.isArray(l)
-            ? (0, n.jsx)(A.Y, {
-                  renderPopout: c,
-                  targetElementRef: r,
+        return Array.isArray(n)
+            ? (0, i.jsx)(T.Y, {
+                  renderPopout: u,
+                  targetElementRef: a,
                   align: "left",
                   position: "bottom",
-                  onRequestOpen: () => o(!0),
-                  onRequestClose: () => o(!1),
+                  onRequestOpen: () => l(!0),
+                  onRequestClose: () => l(!1),
                   children: (e) =>
-                      (0, n.jsx)(m.$, {
+                      (0, i.jsx)(_.$, {
                           ...e,
-                          buttonRef: r,
-                          text: E.intl.string(E.t["1WjMbC"]),
+                          buttonRef: a,
+                          text: L.intl.string(L.t["1WjMbC"]),
                           variant: "primary",
                           size: "sm",
                           fullWidth: !0,
-                          icon: a ? p.j : x.g,
+                          icon: o ? f.j : h.g,
                           iconPosition: "end",
                       }),
               })
-            : (0, n.jsx)(m.$, {
-                  text: E.intl.string(E.t["1WjMbC"]),
-                  onClick: () => i(t, l()),
+            : (0, i.jsx)(_.$, {
+                  text: L.intl.string(L.t["1WjMbC"]),
+                  onClick: () => s(t, n()),
                   variant: "primary",
                   size: "sm",
                   fullWidth: !0,
                   role: "link",
               });
     },
-    P = (e) => {
-        let { platform: t, onClick: l, onMouseEnter: s, isActive: i } = e,
-            { getOs: a, icon: o, url: c, platformKey: d } = t,
-            u = a(),
-            m = r()(M.Kk, o);
-        return (0, n.jsx)("li", {
-            className: r()(M.iD, { [M.vu]: i }),
-            onMouseEnter: () => s(d),
-            children: (0, n.jsxs)("div", {
-                className: M.FG,
+    k = (e) => {
+        let { platform: t, onClick: n, onMouseEnter: r, isActive: s } = e,
+            { getOs: o, icon: l, url: u, platformKey: c } = t,
+            d = o(),
+            _ = a()(w.Kk, l);
+        return (0, i.jsx)("li", {
+            className: a()(w.iD, { [w.vu]: s }),
+            onMouseEnter: () => r(c),
+            children: (0, i.jsxs)("div", {
+                className: w.FG,
                 children: [
-                    (0, n.jsxs)("div", {
-                        className: M.aA,
-                        children: [(0, n.jsx)("div", { className: m }), (0, n.jsx)("div", { className: r()(M.vu, m) })],
+                    (0, i.jsxs)("div", {
+                        className: w.aA,
+                        children: [(0, i.jsx)("div", { className: _ }), (0, i.jsx)("div", { className: a()(w.vu, _) })],
                     }),
-                    (0, n.jsxs)("div", {
+                    (0, i.jsxs)("div", {
                         children: [
-                            (0, n.jsx)(b.D, { className: M.$r, variant: "heading-lg/semibold", children: u }),
-                            (0, n.jsx)("div", {
-                                className: M.l6,
-                                children: (0, n.jsx)(_, { os: u, url: c, onClick: l }),
+                            (0, i.jsx)(S.D, { className: w.$r, variant: "heading-lg/semibold", children: d }),
+                            (0, i.jsx)("div", {
+                                className: w.l6,
+                                children: (0, i.jsx)(U, { os: d, url: u, onClick: n }),
                             }),
                         ],
                     }),
@@ -130,15 +131,15 @@ let W = [
             }),
         });
     };
-function T(e) {
-    let { source: t, onClose: l, transitionState: i } = e,
-        a = (0, u.bG)([C.default], () => C.default.getCurrentUser()),
-        m = (0, u.bG)([w.default], () => w.default.getFingerprint()),
-        p = null == a || a.isClaimed(),
-        { enabled: x } = k.A.useConfig({ location: "DownloadAppsModal" }),
-        [v, y] = s.useState(
+function G(e) {
+    let { source: t, onClose: n, transitionState: s } = e,
+        o = (0, d.bG)([O.default], () => O.default.getCurrentUser()),
+        _ = (0, d.bG)([v.default], () => v.default.getFingerprint()),
+        f = null == o || o.isClaimed(),
+        { enabled: h } = C.A.useConfig({ location: "DownloadAppsModal" }),
+        [A, I] = r.useState(
             (function () {
-                switch (o().os?.family) {
+                switch (l().os?.family) {
                     case "OS X":
                         return 0;
                     case "Windows":
@@ -159,96 +160,96 @@ function T(e) {
                 }
             })(),
         );
-    function A(e, n) {
-        (null != d.getToken() || null != m) &&
-            O.default.track(D.HAw.DOWNLOAD_APP, {
+    function T(e, i) {
+        (null != c.getToken() || null != _) &&
+            R.default.track(D.HAw.DOWNLOAD_APP, {
                 platform: e,
                 ptb: !1,
                 released: !0,
-                has_e_mail: p,
+                has_e_mail: f,
                 referring_location: t,
                 qr_code: !1,
             }),
-            p ? window.open(n, "_blank") : (l(), N.R());
+            f ? window.open(i, "_blank") : (n(), y.R());
     }
-    function S(e) {
-        y(e);
+    function b(e) {
+        I(e);
     }
     return (
-        s.useEffect(() => {
-            O.default.track(D.HAw.OPEN_MODAL, { type: "Download App", source: { location: t } });
+        r.useEffect(() => {
+            R.default.track(D.HAw.OPEN_MODAL, { type: "Download App", source: { location: t } });
         }, [t]),
-        (0, n.jsxs)(f.d, {
-            size: !c.Fr && x ? "lg" : "md",
-            onClose: l,
-            transitionState: i,
-            "aria-label": E.intl.string(E.t["BK8LK+"]),
+        (0, i.jsxs)(p.d, {
+            size: !u.Fr && h ? "lg" : "md",
+            onClose: n,
+            transitionState: s,
+            "aria-label": L.intl.string(L.t["BK8LK+"]),
             children: [
-                (0, n.jsx)(g.rQ, { title: E.intl.string(E.t["BK8LK+"]) }),
-                (0, n.jsx)(j.c, {
-                    children: (0, n.jsxs)("div", {
-                        className: M.kL,
+                (0, i.jsx)(E.rQ, { title: L.intl.string(L.t["BK8LK+"]) }),
+                (0, i.jsx)(m.c, {
+                    children: (0, i.jsxs)("div", {
+                        className: w.kL,
                         children: [
-                            !c.Fr &&
-                                (0, n.jsxs)("div", {
-                                    className: M.Fp,
+                            !u.Fr &&
+                                (0, i.jsxs)("div", {
+                                    className: w.Fp,
                                     children: [
-                                        (0, n.jsx)(b.D, {
+                                        (0, i.jsx)(S.D, {
                                             variant: "heading-md/normal",
                                             color: "text-subtle",
-                                            className: M.wx,
-                                            children: E.intl.string(E.t["0KK0bP"]),
+                                            className: w.wx,
+                                            children: L.intl.string(L.t["0KK0bP"]),
                                         }),
-                                        (0, n.jsxs)("ul", {
-                                            className: r()(M.Bn, M.Fw),
+                                        (0, i.jsxs)("ul", {
+                                            className: a()(w.Bn, w.Fw),
                                             children: [
-                                                W.map((e) =>
-                                                    (0, n.jsx)(
-                                                        P,
+                                                M.map((e) =>
+                                                    (0, i.jsx)(
+                                                        k,
                                                         {
-                                                            isActive: v === e.platformKey,
+                                                            isActive: A === e.platformKey,
                                                             platform: e,
-                                                            onClick: A,
-                                                            onMouseEnter: S,
+                                                            onClick: T,
+                                                            onMouseEnter: b,
                                                         },
                                                         e.platformKey,
                                                     ),
                                                 ),
-                                                x &&
-                                                    (0, n.jsx)(
-                                                        P,
+                                                h &&
+                                                    (0, i.jsx)(
+                                                        k,
                                                         {
-                                                            isActive: v === R.platformKey,
-                                                            platform: R,
-                                                            onClick: A,
-                                                            onMouseEnter: S,
+                                                            isActive: A === x.platformKey,
+                                                            platform: x,
+                                                            onClick: T,
+                                                            onMouseEnter: b,
                                                         },
-                                                        R.platformKey,
+                                                        x.platformKey,
                                                     ),
                                             ],
                                         }),
                                     ],
                                 }),
-                            (0, n.jsxs)("div", {
-                                className: M.Fp,
+                            (0, i.jsxs)("div", {
+                                className: w.Fp,
                                 children: [
-                                    !c.Fr &&
-                                        (0, n.jsx)(b.D, {
+                                    !u.Fr &&
+                                        (0, i.jsx)(S.D, {
                                             variant: "heading-md/normal",
                                             color: "text-subtle",
-                                            className: M.wx,
-                                            children: E.intl.string(E.t.RdSNWa),
+                                            className: w.wx,
+                                            children: L.intl.string(L.t.RdSNWa),
                                         }),
-                                    (0, n.jsx)("ul", {
-                                        className: r()(M.Bn, M.f$),
-                                        children: F.map((e) =>
-                                            (0, n.jsx)(
-                                                P,
+                                    (0, i.jsx)("ul", {
+                                        className: a()(w.Bn, w.f$),
+                                        children: P.map((e) =>
+                                            (0, i.jsx)(
+                                                k,
                                                 {
-                                                    isActive: v === e.platformKey,
+                                                    isActive: A === e.platformKey,
                                                     platform: e,
-                                                    onClick: A,
-                                                    onMouseEnter: S,
+                                                    onClick: T,
+                                                    onMouseEnter: b,
                                                 },
                                                 e.platformKey,
                                             ),
@@ -259,10 +260,10 @@ function T(e) {
                         ],
                     }),
                 }),
-                (0, n.jsx)(h.j, {
-                    children: (0, n.jsx)(K.E, {
+                (0, i.jsx)(g.j, {
+                    children: (0, i.jsx)(N.E, {
                         variant: "text-sm/normal",
-                        children: E.intl.format(E.t["RJS+1P"], {}),
+                        children: L.intl.format(L.t["RJS+1P"], {}),
                     }),
                 }),
             ],

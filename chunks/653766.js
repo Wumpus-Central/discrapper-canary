@@ -1,36 +1,37 @@
-n.d(t, { e: () => a });
+"use strict";
+n.d(t, { e: () => o });
 var i = n(627968);
 n(64700);
-var l = n(661531),
+var r = n(661531),
     s = n(996682),
-    r = n(27989);
-let a = (e) => {
+    a = n(27989);
+let o = (e) => {
     let {
             size: t = "md",
             width: n,
-            height: a,
-            color: o = l.A.colors.INTERACTIVE_ICON_DEFAULT,
+            height: o,
+            color: l = r.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: u = "",
-            ...d
+            ...c
         } = e,
-        c = (0, r.J)(t),
-        h = c?.width ?? n,
-        g = c?.height ?? a;
+        d = (0, a.J)(t),
+        _ = d?.width ?? n,
+        f = d?.height ?? o;
     return (0, i.jsxs)("svg", {
-        ...(0, s.A)(d),
+        ...(0, s.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: h,
-        height: g,
+        width: _,
+        height: f,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
             (0, i.jsx)("path", {
-                fill: "string" == typeof o ? o : o.css,
+                fill: "string" == typeof l ? l : l.css,
                 d: "M2 3a1 1 0 0 1 1-1c6.92 0 12.97 3.7 16.3 9.22.22.37-.15.86-.6.9-.2.02-.4.06-.6.12a.58.58 0 0 1-.67-.22C14.43 7.2 9.1 4 3 4a1 1 0 0 1-1-1ZM15.48 15.15a.5.5 0 0 0 .02-.47A14 14 0 0 0 3 7a1 1 0 0 0 0 2 12 12 0 0 1 10.95 7.09c.18.39.74.44.96.07l.57-1.01ZM2 13a1 1 0 0 1 1-1 9 9 0 0 1 9 9 1 1 0 1 1-2 0 7 7 0 0 0-7-7 1 1 0 0 1-1-1ZM2 17.83c0-.46.37-.83.83-.83C5.13 17 7 18.87 7 21.17c0 .46-.37.83-.83.83H3a1 1 0 0 1-1-1v-3.17Z",
                 className: u,
             }),
             (0, i.jsx)("path", {
-                fill: "string" == typeof o ? o : o.css,
+                fill: "string" == typeof l ? l : l.css,
                 fillRule: "evenodd",
                 d: "M18.09 14.63c.4-.7 1.43-.7 1.82 0l3.96 6.9c.38.66-.12 1.47-.91 1.47h-7.92c-.79 0-1.3-.81-.91-1.48l3.96-6.9Zm.46 1.87h.9c.3 0 .52.26.5.55l-.22 2.02c-.01.16-.17.26-.33.23a1.93 1.93 0 0 0-.8 0c-.16.03-.32-.07-.33-.23l-.21-2.02a.5.5 0 0 1 .5-.55ZM19 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z",
                 clipRule: "evenodd",

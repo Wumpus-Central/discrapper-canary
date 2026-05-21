@@ -1,58 +1,59 @@
-o.d(t, { A: () => j });
-var e = o(627968);
-o(64700);
-var i = o(503698),
-    s = o.n(i),
-    l = o(17928),
-    n = o(661531),
-    a = o(462887),
-    u = o(306471),
-    c = o(478016),
-    d = o(565787),
-    E = o(332837),
-    _ = o(998445),
-    C = o(834730),
-    f = o(781696),
-    A = o(939249),
-    I = o(404374),
-    p = o(509536),
-    h = o(814925),
-    g = o(363195),
-    m = o(696451),
-    N = o(287809),
-    R = o(816166),
-    T = o(953727);
-function D(r) {
-    let { width: t = 10, height: o = 10, color: i = "currentColor", ...s } = r;
-    return (0, e.jsxs)("svg", {
-        ...(0, T.A)(s),
+"use strict";
+n.d(t, { A: () => U });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(17928),
+    o = n(661531),
+    l = n(462887),
+    u = n(306471),
+    c = n(478016),
+    d = n(565787),
+    _ = n(332837),
+    f = n(998445),
+    h = n(834730),
+    p = n(781696),
+    E = n(939249),
+    m = n(404374),
+    g = n(509536),
+    A = n(814925),
+    I = n(363195),
+    T = n(696451),
+    S = n(287809),
+    N = n(816166),
+    y = n(953727);
+function C(e) {
+    let { width: t = 10, height: n = 10, color: r = "currentColor", ...s } = e;
+    return (0, i.jsxs)("svg", {
+        ...(0, y.A)(s),
         width: t,
-        height: o,
+        height: n,
         viewBox: "0 0 17 22",
-        fill: i,
+        fill: r,
         xmlns: "http://www.w3.org/2000/svg",
         children: [
-            (0, e.jsxs)("g", {
+            (0, i.jsxs)("g", {
                 filter: "url(#filter0_d_1296_1706)",
                 children: [
-                    (0, e.jsx)("path", {
+                    (0, i.jsx)("path", {
                         opacity: "0.55",
                         d: "M8.49999 3.7998L4.85999 7.4398V12.5598L8.49999 16.1998L12.14 12.5598V7.4398L8.49999 3.7998ZM10.32 11.7998L8.49999 13.6265L6.67999 11.8065V8.19314L8.49999 6.37314L10.32 8.19314V11.7998Z",
                         fill: "white",
                     }),
-                    (0, e.jsx)("path", {
+                    (0, i.jsx)("path", {
                         opacity: "0.8",
                         d: "M6.67999 8.19354V11.8069L8.49999 13.6269L10.32 11.8069V8.19354L8.49999 6.37354L6.67999 8.19354Z",
                         fill: "white",
                     }),
-                    (0, e.jsx)("path", {
+                    (0, i.jsx)("path", {
                         d: "M8.5 3.7998V6.37314L10.32 8.19314L12.14 7.4398L8.5 3.7998Z",
                         fill: "white",
                     }),
                 ],
             }),
-            (0, e.jsx)("defs", {
-                children: (0, e.jsxs)("filter", {
+            (0, i.jsx)("defs", {
+                children: (0, i.jsxs)("filter", {
                     id: "filter0_d_1296_1706",
                     x: "-3.5",
                     y: "-1",
@@ -61,25 +62,25 @@ function D(r) {
                     filterUnits: "userSpaceOnUse",
                     colorInterpolationFilters: "sRGB",
                     children: [
-                        (0, e.jsx)("feFlood", { floodOpacity: "0", result: "BackgroundImageFix" }),
-                        (0, e.jsx)("feColorMatrix", {
+                        (0, i.jsx)("feFlood", { floodOpacity: "0", result: "BackgroundImageFix" }),
+                        (0, i.jsx)("feColorMatrix", {
                             in: "SourceAlpha",
                             type: "matrix",
                             values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0",
                             result: "hardAlpha",
                         }),
-                        (0, e.jsx)("feOffset", { dy: "1" }),
-                        (0, e.jsx)("feGaussianBlur", { stdDeviation: "2" }),
-                        (0, e.jsx)("feColorMatrix", {
+                        (0, i.jsx)("feOffset", { dy: "1" }),
+                        (0, i.jsx)("feGaussianBlur", { stdDeviation: "2" }),
+                        (0, i.jsx)("feColorMatrix", {
                             type: "matrix",
                             values: "0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.14 0",
                         }),
-                        (0, e.jsx)("feBlend", {
+                        (0, i.jsx)("feBlend", {
                             mode: "normal",
                             in2: "BackgroundImageFix",
                             result: "effect1_dropShadow_1296_1706",
                         }),
-                        (0, e.jsx)("feBlend", {
+                        (0, i.jsx)("feBlend", {
                             mode: "normal",
                             in: "SourceGraphic",
                             in2: "effect1_dropShadow_1296_1706",
@@ -91,122 +92,122 @@ function D(r) {
         ],
     });
 }
-var w = o(473145),
-    x = o(426983),
-    L = o(176128),
-    b = o(375708);
-function O(r, t) {
-    let o =
-        t === L.qo.PUBLIC
+var v = n(473145),
+    O = n(426983),
+    R = n(176128),
+    b = n(375708);
+function D(e, t) {
+    let n =
+        t === R.qo.PUBLIC
             ? b.intl.string(b.t.op2cJ6)
-            : t === L.qo.APPLY_TO_JOIN
+            : t === R.qo.APPLY_TO_JOIN
               ? b.intl.string(b.t.YwZfbt)
               : b.intl.string(b.t.TME4LJ);
-    switch (r) {
-        case x._.STAFF:
+    switch (e) {
+        case O._.STAFF:
             return {
                 tooltipTitle: b.intl.string(b.t.lMrv96),
                 tooltipSubtitle: b.intl.string(b.t.lMrv96),
                 tooltipDescription: b.intl.string(b.t.lMrv96),
             };
-        case x._.VERIFIED:
+        case O._.VERIFIED:
             return {
                 tooltipTitle: b.intl.string(b.t.K7iRig),
                 tooltipSubtitle: b.intl.string(b.t.iCehw9),
-                tooltipDescription: o,
+                tooltipDescription: n,
             };
-        case x._.PARTNERED:
+        case O._.PARTNERED:
             return {
                 tooltipTitle: b.intl.string(b.t.K7iRig),
                 tooltipSubtitle: b.intl.string(b.t.hfYfEE),
-                tooltipDescription: o,
+                tooltipDescription: n,
             };
-        case x._.VERIFIED_AND_PARTNERED:
+        case O._.VERIFIED_AND_PARTNERED:
             return {
                 tooltipTitle: b.intl.string(b.t.K7iRig),
                 tooltipSubtitle: b.intl.string(b.t["TX+iFC"]),
-                tooltipDescription: o,
+                tooltipDescription: n,
             };
-        case x._.COMMUNITY:
-            return { tooltipTitle: b.intl.string(b.t.K7iRig), tooltipDescription: o };
-        case x._.DISCOVERABLE:
+        case O._.COMMUNITY:
+            return { tooltipTitle: b.intl.string(b.t.K7iRig), tooltipDescription: n };
+        case O._.DISCOVERABLE:
             return { tooltipTitle: b.intl.string(b.t.K7iRig), tooltipDescription: b.intl.string(b.t.op2cJ6) };
         default:
             return { tooltipTitle: b.intl.string(b.t["iZRkC/"]) };
     }
 }
-var M = o(652215),
-    v = o(40544);
-let F = {
-    [x._.STAFF]: {
+var L = n(652215),
+    w = n(40544);
+let M = {
+    [O._.STAFF]: {
         IconComponent: u.V,
-        foregroundDarkColor: n.A.unsafe_rawColors.WHITE.css,
-        foregroundLightColor: n.A.unsafe_rawColors.WHITE.css,
-        backgroundDarkColor: n.A.unsafe_rawColors.GREEN_360.css,
-        backgroundLightColor: n.A.unsafe_rawColors.GREEN_360.css,
+        foregroundDarkColor: o.A.unsafe_rawColors.WHITE.css,
+        foregroundLightColor: o.A.unsafe_rawColors.WHITE.css,
+        backgroundDarkColor: o.A.unsafe_rawColors.GREEN_360.css,
+        backgroundLightColor: o.A.unsafe_rawColors.GREEN_360.css,
     },
-    [x._.VERIFIED_AND_PARTNERED]: {
+    [O._.VERIFIED_AND_PARTNERED]: {
         IconComponent: c.U,
-        foregroundDarkColor: n.A.unsafe_rawColors.WHITE.css,
-        foregroundLightColor: n.A.unsafe_rawColors.WHITE.css,
-        backgroundDarkColor: n.A.unsafe_rawColors.GREEN_360.css,
-        backgroundLightColor: n.A.unsafe_rawColors.GREEN_360.css,
+        foregroundDarkColor: o.A.unsafe_rawColors.WHITE.css,
+        foregroundLightColor: o.A.unsafe_rawColors.WHITE.css,
+        backgroundDarkColor: o.A.unsafe_rawColors.GREEN_360.css,
+        backgroundLightColor: o.A.unsafe_rawColors.GREEN_360.css,
     },
-    [x._.VERIFIED]: {
+    [O._.VERIFIED]: {
         IconComponent: c.U,
-        foregroundDarkColor: n.A.unsafe_rawColors.WHITE.css,
-        foregroundLightColor: n.A.unsafe_rawColors.WHITE.css,
-        backgroundDarkColor: n.A.unsafe_rawColors.GREEN_360.css,
-        backgroundLightColor: n.A.unsafe_rawColors.GREEN_360.css,
+        foregroundDarkColor: o.A.unsafe_rawColors.WHITE.css,
+        foregroundLightColor: o.A.unsafe_rawColors.WHITE.css,
+        backgroundDarkColor: o.A.unsafe_rawColors.GREEN_360.css,
+        backgroundLightColor: o.A.unsafe_rawColors.GREEN_360.css,
     },
-    [x._.PARTNERED]: {
-        IconComponent: (0, d.k)(R.A),
-        foregroundDarkColor: n.A.unsafe_rawColors.WHITE.css,
-        foregroundLightColor: n.A.unsafe_rawColors.WHITE.css,
-        backgroundDarkColor: n.A.unsafe_rawColors.BRAND_500.css,
-        backgroundLightColor: n.A.unsafe_rawColors.BRAND_500.css,
+    [O._.PARTNERED]: {
+        IconComponent: (0, d.k)(N.A),
+        foregroundDarkColor: o.A.unsafe_rawColors.WHITE.css,
+        foregroundLightColor: o.A.unsafe_rawColors.WHITE.css,
+        backgroundDarkColor: o.A.unsafe_rawColors.BRAND_500.css,
+        backgroundLightColor: o.A.unsafe_rawColors.BRAND_500.css,
     },
-    [x._.COMMUNITY]: {
-        IconComponent: E.f,
-        foregroundDarkColor: n.A.unsafe_rawColors.PRIMARY_500.css,
-        foregroundLightColor: n.A.unsafe_rawColors.WHITE.css,
-        backgroundDarkColor: n.A.unsafe_rawColors.WHITE.css,
-        backgroundLightColor: n.A.unsafe_rawColors.PRIMARY_500.css,
-        premiumBackgroundColor: I.k0.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
-        premiumForegroundColor: n.A.unsafe_rawColors.WHITE.css,
+    [O._.COMMUNITY]: {
+        IconComponent: _.f,
+        foregroundDarkColor: o.A.unsafe_rawColors.PRIMARY_500.css,
+        foregroundLightColor: o.A.unsafe_rawColors.WHITE.css,
+        backgroundDarkColor: o.A.unsafe_rawColors.WHITE.css,
+        backgroundLightColor: o.A.unsafe_rawColors.PRIMARY_500.css,
+        premiumBackgroundColor: m.k0.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
+        premiumForegroundColor: o.A.unsafe_rawColors.WHITE.css,
         sizeAdjustment: 2,
     },
-    [x._.DISCOVERABLE]: {
-        IconComponent: _.L,
-        foregroundDarkColor: n.A.unsafe_rawColors.PRIMARY_500.css,
-        foregroundLightColor: n.A.unsafe_rawColors.WHITE.css,
-        backgroundDarkColor: n.A.unsafe_rawColors.WHITE.css,
-        backgroundLightColor: n.A.unsafe_rawColors.PRIMARY_500.css,
-        premiumBackgroundColor: I.k0.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
-        premiumForegroundColor: n.A.unsafe_rawColors.WHITE.css,
+    [O._.DISCOVERABLE]: {
+        IconComponent: f.L,
+        foregroundDarkColor: o.A.unsafe_rawColors.PRIMARY_500.css,
+        foregroundLightColor: o.A.unsafe_rawColors.WHITE.css,
+        backgroundDarkColor: o.A.unsafe_rawColors.WHITE.css,
+        backgroundLightColor: o.A.unsafe_rawColors.PRIMARY_500.css,
+        premiumBackgroundColor: m.k0.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
+        premiumForegroundColor: o.A.unsafe_rawColors.WHITE.css,
         sizeAdjustment: 2,
     },
-    [x._.NONE]: {},
+    [O._.NONE]: {},
 };
-function k(r) {
-    let { guildTraits: t } = r;
-    return (0, e.jsxs)("div", {
-        className: v.V8,
+function P(e) {
+    let { guildTraits: t } = e;
+    return (0, i.jsxs)("div", {
+        className: w.V8,
         children: [
-            (0, e.jsxs)("div", {
-                className: s()(v.f, v.N5),
+            (0, i.jsxs)("div", {
+                className: s()(w.f, w.N5),
                 children: [
-                    (0, e.jsx)(D, { width: 18, height: 18, className: v.F8 }),
-                    (0, e.jsx)(C.E, {
+                    (0, i.jsx)(C, { width: 18, height: 18, className: w.F8 }),
+                    (0, i.jsx)(h.E, {
                         variant: "text-xs/semibold",
                         color: "always-white",
-                        children: w.gb(t.premiumTier),
+                        children: v.gb(t.premiumTier),
                     }),
                 ],
             }),
-            (0, e.jsx)("div", {
-                className: v.f,
-                children: (0, e.jsx)(C.E, {
+            (0, i.jsx)("div", {
+                className: w.f,
+                children: (0, i.jsx)(h.E, {
                     variant: "text-xs/semibold",
                     color: "always-white",
                     children: b.intl.format(b.t["dR/SVH"], { count: t.premiumSubscriberCount }),
@@ -215,96 +216,96 @@ function k(r) {
         ],
     });
 }
-function V(r) {
-    let { badgeType: t, guildTraits: o } = r,
-        { tooltipTitle: i, tooltipSubtitle: s, tooltipDescription: l } = O(t, o.visibility);
-    return (0, e.jsxs)(e.Fragment, {
+function x(e) {
+    let { badgeType: t, guildTraits: n } = e,
+        { tooltipTitle: r, tooltipSubtitle: s, tooltipDescription: a } = D(t, n.visibility);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, e.jsxs)("div", {
-                className: v.Rf,
+            (0, i.jsxs)("div", {
+                className: w.Rf,
                 children: [
-                    (0, e.jsx)(C.E, { color: "interactive-text-active", variant: "text-xs/bold", children: i }),
-                    null != s ? (0, e.jsx)(C.E, { color: "text-muted", variant: "text-xs/medium", children: s }) : null,
-                    null != l ? (0, e.jsx)(C.E, { color: "text-muted", variant: "text-xs/medium", children: l }) : null,
+                    (0, i.jsx)(h.E, { color: "interactive-text-active", variant: "text-xs/bold", children: r }),
+                    null != s ? (0, i.jsx)(h.E, { color: "text-muted", variant: "text-xs/medium", children: s }) : null,
+                    null != a ? (0, i.jsx)(h.E, { color: "text-muted", variant: "text-xs/medium", children: a }) : null,
                 ],
             }),
-            o.premium ? (0, e.jsx)(k, { guildTraits: o }) : null,
+            n.premium ? (0, i.jsx)(P, { guildTraits: n }) : null,
         ],
     });
 }
-function j(r) {
+function U(e) {
     let t,
-        o,
+        n,
         {
-            guild: i,
-            tooltipColor: s = f.ST.Colors.BRAND,
-            tooltipPosition: n,
+            guild: r,
+            tooltipColor: s = p.ST.Colors.BRAND,
+            tooltipPosition: o,
             className: u,
             flowerStarClassName: c,
             iconClassName: d,
-            badgeStrokeColor: E,
-            badgeColor: _,
-            disableBoostClick: C,
-            "aria-label": I,
-            ...R
-        } = r,
-        T = R.size ?? 18,
-        D = (0, l.bG)([N.default, m.Ay], () => {
-            let r = N.default.getCurrentUser();
-            return m.Ay.isMember(i?.id, r?.id);
+            badgeStrokeColor: _,
+            badgeColor: f,
+            disableBoostClick: h,
+            "aria-label": m,
+            ...N
+        } = e,
+        y = N.size ?? 18,
+        C = (0, a.bG)([S.default, T.Ay], () => {
+            let e = S.default.getCurrentUser();
+            return T.Ay.isMember(r?.id, e?.id);
         }),
-        w = (0, l.bG)([g.A], () => g.A.theme),
-        b = (0, L.Jp)(i),
-        k = (0, x.K)(b),
-        j = b.premium && D && !C,
-        P = (r) => {
-            j &&
-                (r.stopPropagation(),
-                r.preventDefault(),
-                (0, p.K4)({ guildId: i.id, location: { section: M.JJy.GUILD_HEADER, object: M.ZSU.BOOST_GEM_ICON } }));
+        v = (0, a.bG)([I.A], () => I.A.theme),
+        b = (0, R.Jp)(r),
+        P = (0, O.K)(b),
+        U = b.premium && C && !h,
+        k = (e) => {
+            U &&
+                (e.stopPropagation(),
+                e.preventDefault(),
+                (0, g.K4)({ guildId: r.id, location: { section: L.JJy.GUILD_HEADER, object: L.ZSU.BOOST_GEM_ICON } }));
         };
-    if (k === x._.NONE) return null;
+    if (P === O._.NONE) return null;
     let {
-        IconComponent: S,
-        backgroundDarkColor: B,
-        backgroundLightColor: G,
-        foregroundDarkColor: U,
-        foregroundLightColor: Y,
-        premiumBackgroundColor: y,
-        premiumForegroundColor: H,
+        IconComponent: G,
+        backgroundDarkColor: F,
+        backgroundLightColor: V,
+        foregroundDarkColor: B,
+        foregroundLightColor: H,
+        premiumBackgroundColor: j,
+        premiumForegroundColor: Y,
         sizeAdjustment: W,
-    } = F[k];
-    if (null == S) return null;
-    b.premium && ((t = H), (o = y));
-    let J = (0, a.M)(w) ? U : Y,
-        K = (0, a.M)(w) ? B : G;
-    (t = t ?? J), (o = o ?? K);
-    let Z = Math.floor(0.75 * T) - (W ?? 0),
-        { tooltipTitle: z, tooltipSubtitle: q } = O(k, b.visibility),
-        X = I ?? (null != q ? q : z);
-    return (0, e.jsx)(f.ST, {
+    } = M[P];
+    if (null == G) return null;
+    b.premium && ((t = Y), (n = j));
+    let K = (0, l.M)(v) ? B : H,
+        z = (0, l.M)(v) ? F : V;
+    (t = t ?? K), (n = n ?? z);
+    let $ = Math.floor(0.75 * y) - (W ?? 0),
+        { tooltipTitle: q, tooltipSubtitle: Z } = D(P, b.visibility),
+        X = m ?? (null != Z ? Z : q);
+    return (0, i.jsx)(p.ST, {
         color: s,
-        position: n,
+        position: o,
         "aria-label": !1,
-        text: (0, e.jsx)(V, { badgeType: k, guildTraits: b }),
-        tooltipContentClassName: v.Hj,
-        children: (r) =>
-            (0, e.jsx)(A.D, {
+        text: (0, i.jsx)(x, { badgeType: P, guildTraits: b }),
+        tooltipContentClassName: w.Hj,
+        children: (e) =>
+            (0, i.jsx)(E.D, {
                 "aria-label": X,
-                onClick: P,
+                onClick: k,
                 tabIndex: 0,
-                children: (0, e.jsx)(h.A, {
-                    ...r,
+                children: (0, i.jsx)(A.A, {
+                    ...e,
                     className: u,
                     flowerStarClassName: c,
                     allowFullSizedIcon: !0,
-                    color: o ?? _,
-                    stroke: E,
-                    size: T,
-                    children: (0, e.jsx)(S, {
+                    color: n ?? f,
+                    stroke: _,
+                    size: y,
+                    children: (0, i.jsx)(G, {
                         size: "custom",
-                        width: Z,
-                        height: Z,
+                        width: $,
+                        height: $,
                         className: d,
                         color: t ?? "currentColor",
                     }),

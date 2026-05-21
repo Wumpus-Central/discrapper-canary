@@ -1,55 +1,56 @@
-l.d(t, { A: () => c });
-var r = l(627968),
-    n = l(64700),
-    i = l(807081),
-    a = l(9578),
-    s = l(380610),
-    d = l(435954),
-    o = l(123917);
-function u(e) {
-    return null != e.target && (0, o.m)(e.target, null != e.title && "" !== e.title ? e.title : (0, i.$)(e.content));
-}
+"use strict";
+n.d(t, { A: () => d });
+var i = n(627968),
+    r = n(64700),
+    s = n(807081),
+    a = n(9578),
+    o = n(380610),
+    l = n(435954),
+    u = n(123917);
 function c(e) {
+    return null != e.target && (0, u.m)(e.target, null != e.title && "" !== e.title ? e.title : (0, s.$)(e.content));
+}
+function d(e) {
     return {
-        react(t, l, c) {
-            if (e.enableBuildOverrides && (0, s.vS)(t.target))
-                return (0, r.jsx)(n.Fragment, { children: (0, r.jsx)(d.A, { url: t.target }, t.target) }, c.key);
-            let v = l(t.content, c),
-                C = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, i.$)(t.content),
+        react(t, n, d) {
+            if (e.enableBuildOverrides && (0, o.vS)(t.target))
+                return (0, i.jsx)(r.Fragment, { children: (0, i.jsx)(l.A, { url: t.target }, t.target) }, d.key);
+            let _ = n(t.content, d),
+                f = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, s.$)(t.content),
                 h = e?.mustConfirmExternalLink
                     ? (e) => (
                           e?.stopPropagation(),
                           e?.preventDefault(),
-                          (0, o.h)({
+                          (0, u.h)({
                               href: t.target,
                               shouldConfirm: !0,
-                              messageId: c.messageId,
-                              channelId: c.channelId,
+                              messageId: d.messageId,
+                              channelId: d.channelId,
                           }),
                           null
                       )
                     : void 0;
-            if (c.previewLinkTarget && !u(t)) {
+            if (d.previewLinkTarget && !c(t)) {
                 let e = `
 
 (${t.target})`;
-                C.length + e.length > 1024 && ((e = "..." + e), (C = (C = C.substr(0, 1024 - e.length)).trimEnd())),
-                    (C += e);
+                f.length + e.length > 1024 && ((e = "..." + e), (f = (f = f.substr(0, 1024 - e.length)).trimEnd())),
+                    (f += e);
             }
-            return c.noStyleAndInteraction
-                ? (0, r.jsx)("span", { title: C, children: v }, c.key)
-                : (0, r.jsx)(
+            return d.noStyleAndInteraction
+                ? (0, i.jsx)("span", { title: f, children: _ }, d.key)
+                : (0, i.jsx)(
                       a.A,
                       {
-                          title: C,
+                          title: f,
                           href: t.target,
-                          trusted: () => u(t),
+                          trusted: () => c(t),
                           onClick: h,
-                          messageId: c.messageId,
-                          channelId: c.channelId,
-                          children: v,
+                          messageId: d.messageId,
+                          channelId: d.channelId,
+                          children: _,
                       },
-                      c.key,
+                      d.key,
                   );
         },
     };

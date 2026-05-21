@@ -1,76 +1,77 @@
+"use strict";
 n.d(t, {
-    HJ: () => E,
-    Hb: () => _,
-    Hg: () => c,
-    Jk: () => h,
-    XS: () => y,
-    YT: () => S,
-    cw: () => s,
-    k0: () => f,
-    kF: () => d,
-    y5: () => A,
+    HJ: () => c,
+    Hb: () => f,
+    Hg: () => u,
+    Jk: () => m,
+    XS: () => g,
+    YT: () => E,
+    cw: () => d,
+    k0: () => h,
+    kF: () => _,
+    y5: () => p,
 });
-var r = n(95561),
-    i = n(47675),
-    a = n(734057),
-    o = n(174459),
-    l = n(652215);
+var i = n(95561),
+    r = n(47675),
+    s = n(734057),
+    a = n(174459),
+    o = n(652215);
+function l(e) {
+    return s.A.getChannel(e)?.guild_id;
+}
 function u(e) {
-    return a.A.getChannel(e)?.guild_id;
+    let { channelId: t, selectedTab: n } = e;
+    i.Ay.trackWithMetadata(o.HAw.RTC_PANEL_VIEWED, { channel_id: t, guild_id: l(t), selected_tab: n });
 }
 function c(e) {
-    let { channelId: t, selectedTab: n } = e;
-    r.Ay.trackWithMetadata(l.HAw.RTC_PANEL_VIEWED, { channel_id: t, guild_id: u(t), selected_tab: n });
-}
-function E(e) {
     let { channelId: t, userId: n } = e;
-    r.Ay.trackWithMetadata(l.HAw.E2EE_USER_VERIFICATION_VIEWED, {
+    i.Ay.trackWithMetadata(o.HAw.E2EE_USER_VERIFICATION_VIEWED, {
         channel_id: t,
-        guild_id: u(t),
-        ...(0, i.UI)({ userId: n }),
-    });
-}
-function s(e) {
-    let { channelId: t, userId: n, analyticsLocation: a } = e;
-    r.Ay.trackWithMetadata(l.HAw.E2EE_USER_VERIFIED, {
-        channel_id: t,
-        guild_id: u(t),
-        location: a,
-        ...(0, i.UI)({ userId: n }),
+        guild_id: l(t),
+        ...(0, r.UI)({ userId: n }),
     });
 }
 function d(e) {
-    let { channelId: t, userId: n, keyVersion: a, reason: o } = e;
-    r.Ay.trackWithMetadata(l.HAw.E2EE_USER_VERIFICATION_FAILED, {
+    let { channelId: t, userId: n, analyticsLocation: s } = e;
+    i.Ay.trackWithMetadata(o.HAw.E2EE_USER_VERIFIED, {
         channel_id: t,
-        guild_id: u(t),
-        failure_reason: o,
-        key_version: `${a}`,
-        ...(0, i.UI)({ userId: n }),
+        guild_id: l(t),
+        location: s,
+        ...(0, r.UI)({ userId: n }),
     });
 }
 function _(e) {
-    let { channelId: t, userId: n } = e;
-    r.Ay.trackWithMetadata(l.HAw.E2EE_USER_VERIFICATION_CODE_COPIED, {
+    let { channelId: t, userId: n, keyVersion: s, reason: a } = e;
+    i.Ay.trackWithMetadata(o.HAw.E2EE_USER_VERIFICATION_FAILED, {
         channel_id: t,
-        guild_id: u(t),
-        ...(0, i.UI)({ userId: n }),
+        guild_id: l(t),
+        failure_reason: a,
+        key_version: `${s}`,
+        ...(0, r.UI)({ userId: n }),
     });
 }
 function f(e) {
+    let { channelId: t, userId: n } = e;
+    i.Ay.trackWithMetadata(o.HAw.E2EE_USER_VERIFICATION_CODE_COPIED, {
+        channel_id: t,
+        guild_id: l(t),
+        ...(0, r.UI)({ userId: n }),
+    });
+}
+function h(e) {
     let { channelId: t } = e;
-    r.Ay.trackWithMetadata(l.HAw.E2EE_CALL_VERIFICATION_CODE_COPIED, { channel_id: t, guild_id: u(t) });
+    i.Ay.trackWithMetadata(o.HAw.E2EE_CALL_VERIFICATION_CODE_COPIED, { channel_id: t, guild_id: l(t) });
 }
-function A(e) {
+function p(e) {
     let { channelId: t } = e;
-    r.Ay.trackWithMetadata(l.HAw.E2EE_STREAM_VERIFICATION_CODE_COPIED, { channel_id: t, guild_id: u(t) });
+    i.Ay.trackWithMetadata(o.HAw.E2EE_STREAM_VERIFICATION_CODE_COPIED, { channel_id: t, guild_id: l(t) });
 }
-function S() {
-    o.default.track(l.HAw.E2EE_SETTINGS_USER_DELETE);
+function E() {
+    a.default.track(o.HAw.E2EE_SETTINGS_USER_DELETE);
 }
-function h() {
-    o.default.track(l.HAw.E2EE_SETTINGS_DEVICE_DELETE);
+function m() {
+    a.default.track(o.HAw.E2EE_SETTINGS_DEVICE_DELETE);
 }
-function y(e) {
-    o.default.track(l.HAw.E2EE_PUBLIC_KEY_MISMATCH, { key_version: `${e}` });
+function g(e) {
+    a.default.track(o.HAw.E2EE_PUBLIC_KEY_MISMATCH, { key_version: `${e}` });
 }

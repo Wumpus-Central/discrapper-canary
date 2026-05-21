@@ -1,27 +1,28 @@
-n.d(t, { A: () => A }), n(667532);
+"use strict";
+n.d(t, { A: () => p }), n(667532);
 var i = n(17928),
-    l = n(228366),
+    r = n(228366),
     s = n(95701),
-    r = n(734057),
-    a = n(696451),
-    o = n(71393);
+    a = n(734057),
+    o = n(696451),
+    l = n(71393);
 let u = [],
-    d = new Set(),
-    c = [],
-    h = new Set();
-function g(e) {
+    c = new Set(),
+    d = [],
+    _ = new Set();
+function f(e) {
     let { channelId: t, history: n, historySet: i } = e;
     if (i.has(t)) {
         let e = n.filter((e) => e !== t);
         return e.unshift(t), { didChange: !0, history: e, historySet: new Set([...e]) };
     }
-    let l = [t, ...n],
+    let r = [t, ...n],
         s = new Set(i);
-    return (s.add(t), l.length > 10)
-        ? ((l.length = 10), { didChange: !0, history: l, historySet: new Set([...l]) })
-        : { didChange: !0, history: l, historySet: s };
+    return (s.add(t), r.length > 10)
+        ? ((r.length = 10), { didChange: !0, history: r, historySet: new Set([...r]) })
+        : { didChange: !0, history: r, historySet: s };
 }
-class f extends i.Ay.PersistedStore {
+class h extends i.Ay.PersistedStore {
     static displayName = "RecentVoiceChannelStore";
     static persistKey = "RecentVoiceChannelStore";
     static migrations = [
@@ -34,38 +35,38 @@ class f extends i.Ay.PersistedStore {
                   },
     ];
     initialize(e) {
-        this.waitFor(a.Ay, o.A, r.A),
+        this.waitFor(o.Ay, l.A, a.A),
             (u = e?.voiceChannelHistory ?? []),
-            (c = e?.textChannelHistory ?? []),
-            (d = new Set([...u])),
-            (h = new Set([...c]));
+            (d = e?.textChannelHistory ?? []),
+            (c = new Set([...u])),
+            (_ = new Set([...d]));
     }
     getState() {
-        return { voiceChannelHistory: u, textChannelHistory: c };
+        return { voiceChannelHistory: u, textChannelHistory: d };
     }
     getVoiceChannelHistory() {
         return u;
     }
     getTextChannelHistory() {
-        return c;
+        return d;
     }
 }
-let A = new f(l.h, {
+let p = new h(r.h, {
     POST_CONNECTION_OPEN: function () {
-        (d = new Set([...u])), (h = new Set([...c]));
+        (c = new Set([...u])), (_ = new Set([...d]));
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        if (null == t || !r.A.getChannel(t)?.isVocal()) return !1;
-        let n = g({ channelId: t, history: u, historySet: d });
-        return (u = n.history), (d = n.historySet), n.didChange;
+        if (null == t || !a.A.getChannel(t)?.isVocal()) return !1;
+        let n = f({ channelId: t, history: u, historySet: c });
+        return (u = n.history), (c = n.historySet), n.didChange;
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
         if (null == t) return !1;
-        let n = r.A.getChannel(t);
+        let n = a.A.getChannel(t);
         if (null == n || n.isVocal() || n.isPrivate() || !(0, s.ke)(n.type)) return !1;
-        let i = g({ channelId: t, history: c, historySet: h });
-        return (c = i.history), (h = i.historySet), i.didChange;
+        let i = f({ channelId: t, history: d, historySet: _ });
+        return (d = i.history), (_ = i.historySet), i.didChange;
     },
 });

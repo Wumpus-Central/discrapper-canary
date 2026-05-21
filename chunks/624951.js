@@ -1,51 +1,52 @@
-e.d(n, { A: () => N });
-var i = e(627968),
-    l = e(554146),
-    a = e(661531),
-    r = e(777666),
-    s = e(834730),
-    o = e(737393),
-    c = e(793574),
-    u = e(688810),
-    d = e(627363),
-    A = e(131607),
-    x = e(308335),
-    p = e(21241),
-    f = e(939496),
-    _ = e(985629),
-    m = e(996988),
-    T = e(375708),
-    E = e(104728);
-function N(t) {
-    let { applicationId: n, onAction: e, onClose: N, activity: g } = t,
-        { analyticsLocations: C } = (0, u.Ay)(c.A.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
-        { data: I } = (0, d.YY)(n),
-        y = (0, o.J)(I),
-        { themeType: S } = (0, f.E)(),
-        j = S === m.d.MODAL || S === m.d.MODAL_V2,
-        O = (0, x.o)(g?.application_id ?? n),
-        h = y && j && null != I && !O,
-        P = h ? [l.M.CLOUD_PLAY_NEW_BADGE] : [],
-        [v] = (0, A.kn)(P);
-    return h
+"use strict";
+n.d(t, { A: () => I });
+var i = n(627968),
+    r = n(554146),
+    s = n(661531),
+    a = n(777666),
+    o = n(834730),
+    l = n(737393),
+    u = n(793574),
+    c = n(688810),
+    d = n(627363),
+    _ = n(131607),
+    f = n(308335),
+    h = n(21241),
+    p = n(939496),
+    E = n(985629),
+    m = n(996988),
+    g = n(375708),
+    A = n(104728);
+function I(e) {
+    let { applicationId: t, onAction: n, onClose: I, activity: T } = e,
+        { analyticsLocations: S } = (0, c.Ay)(u.A.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
+        { data: N } = (0, d.YY)(t),
+        y = (0, l.J)(N),
+        { themeType: C } = (0, p.E)(),
+        v = C === m.d.MODAL || C === m.d.MODAL_V2,
+        O = (0, f.o)(T?.application_id ?? t),
+        R = y && v && null != N && !O,
+        b = R ? [r.M.CLOUD_PLAY_NEW_BADGE] : [],
+        [D] = (0, _.kn)(b);
+    return R
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(p.A, { className: E.Xl }),
+                  (0, i.jsx)(h.A, { className: A.Xl }),
                   (0, i.jsxs)("div", {
-                      className: E.DK,
+                      className: A.DK,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: E.tJ,
+                              className: A.tJ,
                               children: [
-                                  v === l.M.CLOUD_PLAY_NEW_BADGE &&
-                                      (0, i.jsx)(r.Lp, {
-                                          text: T.intl.string(T.t.y2b7CA),
-                                          color: a.A.colors.BACKGROUND_BRAND.css,
+                                  D === r.M.CLOUD_PLAY_NEW_BADGE &&
+                                      (0, i.jsx)(a.Lp, {
+                                          text: g.intl.string(g.t.y2b7CA),
+                                          color: s.A.colors.BACKGROUND_BRAND.css,
                                       }),
-                                  (0, i.jsx)(s.E, { variant: "text-xs/medium", children: T.intl.string(T.t.IQjdmV) }),
+                                  (0, i.jsx)(o.E, { variant: "text-xs/medium", children: g.intl.string(g.t.IQjdmV) }),
                               ],
                           }),
-                          (0, i.jsx)(_.A, { application: I, onAction: e, onClose: N, analyticsLocations: C }),
+                          (0, i.jsx)(E.A, { application: N, onAction: n, onClose: I, analyticsLocations: S }),
                       ],
                   }),
               ],

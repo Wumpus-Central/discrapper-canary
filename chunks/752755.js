@@ -1,44 +1,45 @@
-n.d(e, { A: () => c, e: () => o });
-var s,
-    i = n(17928),
-    a = n(228366),
-    o =
-        (((s = {})[(s.NOT_FETCHED = 0)] = "NOT_FETCHED"),
-        (s[(s.FETCHING = 1)] = "FETCHING"),
-        (s[(s.FETCHED = 2)] = "FETCHED"),
-        (s[(s.FAILED = 3)] = "FAILED"),
-        s);
-let l = {},
-    r = {};
-class u extends i.Ay.Store {
+"use strict";
+n.d(t, { A: () => c, e: () => a });
+var i,
+    r = n(17928),
+    s = n(228366),
+    a =
+        (((i = {})[(i.NOT_FETCHED = 0)] = "NOT_FETCHED"),
+        (i[(i.FETCHING = 1)] = "FETCHING"),
+        (i[(i.FETCHED = 2)] = "FETCHED"),
+        (i[(i.FAILED = 3)] = "FAILED"),
+        i);
+let o = {},
+    l = {};
+class u extends r.Ay.Store {
     static displayName = "MediaPostEmbedStore";
-    getMediaPostEmbed(t) {
-        if (null != t) return l[t];
+    getMediaPostEmbed(e) {
+        if (null != e) return o[e];
     }
-    getEmbedFetchState(t) {
-        return r[t] ?? 0;
+    getEmbedFetchState(e) {
+        return l[e] ?? 0;
     }
     getMediaPostEmbeds() {
-        return l;
+        return o;
     }
 }
-let c = new u(a.h, {
+let c = new u(s.h, {
     CONNECTION_OPEN: function () {
-        (l = {}), (r = {});
+        (o = {}), (l = {});
     },
-    MEDIA_POST_EMBED_FETCH: function (t) {
-        let { threadId: e } = t;
-        r[e] = 1;
+    MEDIA_POST_EMBED_FETCH: function (e) {
+        let { threadId: t } = e;
+        l[t] = 1;
     },
-    MEDIA_POST_EMBED_FETCH_SUCCESS: function (t) {
-        let { threadId: e, mediaPostEmbed: n } = t;
-        (l = { ...l, [e]: n }), (r[e] = 2);
+    MEDIA_POST_EMBED_FETCH_SUCCESS: function (e) {
+        let { threadId: t, mediaPostEmbed: n } = e;
+        (o = { ...o, [t]: n }), (l[t] = 2);
     },
-    MEDIA_POST_EMBED_FETCH_FAILURE: function (t) {
-        let { threadId: e } = t;
-        r[e] = 3;
+    MEDIA_POST_EMBED_FETCH_FAILURE: function (e) {
+        let { threadId: t } = e;
+        l[t] = 3;
     },
-    LOGOUT: function (t) {
-        t.isSwitchingAccount || ((l = {}), (r = {}));
+    LOGOUT: function (e) {
+        e.isSwitchingAccount || ((o = {}), (l = {}));
     },
 });

@@ -1,32 +1,33 @@
-l.d(t, { A: () => h });
-var n,
-    i = l(627968);
-l(64700);
-var r = l(503698),
-    a = l.n(r),
-    o = l(607399),
-    s = l(939249),
-    c = l(285796),
-    d = l(789645),
-    u = l(375708),
-    T = l(589753),
-    E = (((n = E || {}).DEFAULT = ""), (n.BOLD = "Bold"), (n.SOLID = "Solid"), n);
+"use strict";
+n.d(t, { A: () => h });
+var i,
+    r = n(627968);
+n(64700);
+var s = n(503698),
+    a = n.n(s),
+    o = n(607399),
+    l = n(939249),
+    u = n(285796),
+    c = n(789645),
+    d = n(375708),
+    _ = n(589753),
+    f = (((i = f || {}).DEFAULT = ""), (i.BOLD = "Bold"), (i.SOLID = "Solid"), i);
 function h(e) {
-    let { closeAction: t, variant: l = "", keybind: n, className: r } = e;
-    return (0, i.jsxs)("div", {
-        className: a()(T.kL, r),
+    let { closeAction: t, variant: n = "", keybind: i, className: s } = e;
+    return (0, r.jsxs)("div", {
+        className: a()(_.kL, s),
         children: [
-            (0, i.jsx)(s.D, {
-                className: a()(T.b, { [T.EH]: "Bold" === l, [T.O3]: "Solid" === l }),
+            (0, r.jsx)(l.D, {
+                className: a()(_.b, { [_.EH]: "Bold" === n, [_.O3]: "Solid" === n }),
                 onClick: t,
-                "aria-label": u.intl.string(u.t.cpT0Cq),
+                "aria-label": d.intl.string(d.t.cpT0Cq),
                 children:
-                    "Solid" === l
-                        ? (0, i.jsx)(c.a, { size: "md", color: "currentColor", "aria-hidden": !0 })
-                        : (0, i.jsx)(d.P, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
+                    "Solid" === n
+                        ? (0, r.jsx)(u.a, { size: "md", color: "currentColor", "aria-hidden": !0 })
+                        : (0, r.jsx)(c.P, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
             }),
-            o.Fr ? null : (0, i.jsx)("div", { className: T.P, "aria-hidden": !0, children: n }),
+            o.Fr ? null : (0, r.jsx)("div", { className: _.P, "aria-hidden": !0, children: i }),
         ],
     });
 }
-h.Variants = E;
+h.Variants = f;

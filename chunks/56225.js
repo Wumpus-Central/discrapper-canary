@@ -1,30 +1,31 @@
-l.d(t, { Cf: () => B, wx: () => H });
-var i = l(627968),
-    r = l(64700),
-    a = l(834730),
-    s = l(366010),
-    n = l(947641),
-    o = l(408278),
-    d = l(624479),
-    c = l(821609),
-    u = l(695366),
-    m = l(194261),
-    h = l(534514),
-    C = l(17928),
-    _ = l(661531),
-    p = l(144165),
-    g = l(31502),
-    E = l(914410),
-    x = l(363195),
-    f = l(174459),
-    A = l(58703),
-    R = l(975571),
-    N = l(38405),
-    I = l(398523),
-    S = l(881373),
-    j = l(264779),
-    v = l(852218);
-let P = () =>
+"use strict";
+n.d(t, { Cf: () => k, wx: () => H });
+var i = n(627968),
+    r = n(64700),
+    s = n(834730),
+    a = n(366010),
+    o = n(947641),
+    l = n(408278),
+    u = n(624479),
+    c = n(821609),
+    d = n(695366),
+    _ = n(194261),
+    f = n(534514),
+    h = n(17928),
+    p = n(661531),
+    E = n(144165),
+    m = n(31502),
+    g = n(914410),
+    A = n(363195),
+    I = n(174459),
+    T = n(58703),
+    S = n(975571),
+    N = n(38405),
+    y = n(398523),
+    C = n(881373),
+    v = n(264779),
+    O = n(852218);
+let R = () =>
         (0, i.jsxs)("svg", {
             width: "20",
             height: "20",
@@ -72,7 +73,7 @@ let P = () =>
                 }),
             ],
         }),
-    D = () =>
+    b = () =>
         (0, i.jsxs)("svg", {
             width: "20",
             height: "20",
@@ -120,7 +121,7 @@ let P = () =>
                 }),
             ],
         }),
-    T = () =>
+    D = () =>
         (0, i.jsxs)("svg", {
             width: "20",
             height: "20",
@@ -153,7 +154,7 @@ let P = () =>
                 }),
             ],
         }),
-    O = () =>
+    L = () =>
         (0, i.jsxs)("svg", {
             width: "20",
             height: "20",
@@ -186,61 +187,61 @@ let P = () =>
                 }),
             ],
         });
-var y = l(652215),
-    b = l(962995),
-    L = l(375708),
-    w = l(75662),
-    M = l(208556);
-function B() {
-    let e = (0, g.Q)("getRecurringPromotionPartnerAttributes");
+var w = n(652215),
+    M = n(962995),
+    P = n(375708),
+    x = n(75662),
+    U = n(208556);
+function k() {
+    let e = (0, m.Q)("getRecurringPromotionPartnerAttributes");
     return {
-        [v.XY]: {
-            title: e ? b.default.PF1aT5 : b.default.LsJ9hj,
-            titleParams: e ? { discountPercentage: S.aW } : { discountPercent: S.aW },
-            body: e ? b.default.KoKwMn : b.default.Yl5ww1,
-            bodyWithExpiration: b.default["6KjkUa"],
+        [O.XY]: {
+            title: e ? M.default.PF1aT5 : M.default.LsJ9hj,
+            titleParams: e ? { discountPercentage: C.aW } : { discountPercent: C.aW },
+            body: e ? M.default.KoKwMn : M.default.Yl5ww1,
+            bodyWithExpiration: M.default["6KjkUa"],
             redemptionURL: "https://www.logitech.com/",
             logos: {
                 dark: (0, i.jsx)(r.Fragment, {}, "logitech-logo-dark"),
                 light: (0, i.jsx)(r.Fragment, {}, "logitech-logo-light"),
             },
-            asset: M.A,
+            asset: U.A,
         },
-        [v.KS]: {
-            title: e ? L.t.p7BkHh : L.t.sfGgOG,
-            titleParams: e ? { discountPercentage: I.H7 } : void 0,
-            body: e ? L.t.nmvvaN : L.t.igiSKe,
-            bodyWithExpiration: L.t.w8CXUl,
+        [O.KS]: {
+            title: e ? P.t.p7BkHh : P.t.sfGgOG,
+            titleParams: e ? { discountPercentage: y.H7 } : void 0,
+            body: e ? P.t.nmvvaN : P.t.igiSKe,
+            bodyWithExpiration: P.t.w8CXUl,
             redemptionURL: "https://steelseries.com/",
-            logos: { dark: (0, i.jsx)(P, {}), light: (0, i.jsx)(D, {}) },
+            logos: { dark: (0, i.jsx)(R, {}), light: (0, i.jsx)(b, {}) },
             asset: "https://cdn.discordapp.com/assets/content/c23a186569a2e8606d206cd4b5cc7f4ee8f880c844bc0debd5fd3400400ff7bc.png",
         },
-        [v.Cs]: {
-            title: e ? L.t.QEJnti : L.t["9N8obd"],
-            titleParams: e ? { discountPercentage: I.F0 } : void 0,
-            body: e ? L.t.eT5vm0 : L.t["34g+Z3"],
-            bodyWithExpiration: L.t.rqmpXc,
+        [O.Cs]: {
+            title: e ? P.t.QEJnti : P.t["9N8obd"],
+            titleParams: e ? { discountPercentage: y.F0 } : void 0,
+            body: e ? P.t.eT5vm0 : P.t["34g+Z3"],
+            bodyWithExpiration: P.t.rqmpXc,
             redemptionURL: "https://www.kontrolfreek.com/",
-            logos: { dark: (0, i.jsx)(T, {}), light: (0, i.jsx)(O, {}) },
+            logos: { dark: (0, i.jsx)(D, {}), light: (0, i.jsx)(L, {}) },
             asset: "https://cdn.discordapp.com/assets/content/6706fc54c35e86999d3537dcc3ef8bfe91f25db6a141b4b6e5b451ebc5cae86b.png",
         },
     };
 }
-let U = () => {
-        let e = (0, A.N5)(),
-            t = (0, A.P6)();
+let G = () => {
+        let e = (0, T.N5)(),
+            t = (0, T.P6)();
         return (0, i.jsxs)("div", {
-            className: `${w.G9} ${w.sQ}`,
+            className: `${x.G9} ${x.sQ}`,
             children: [
-                (0, i.jsx)(a.E, {
+                (0, i.jsx)(s.E, {
                     variant: "text-sm/normal",
                     color: "text-muted",
-                    className: w.kT,
-                    children: L.intl.format(b.default["65EEvD"], { days: t }),
+                    className: x.kT,
+                    children: P.intl.format(M.default["65EEvD"], { days: t }),
                 }),
-                (0, i.jsx)(E.Ay, {
+                (0, i.jsx)(g.Ay, {
                     progress: e,
-                    variant: E.qP.UNSET,
+                    variant: g.qP.UNSET,
                     override: { default: { gradientStart: "var(--illo-blue-70)", gradientEnd: "var(--illo-blue-10)" } },
                 }),
             ],
@@ -248,61 +249,61 @@ let U = () => {
     },
     F = (e) => {
         let { children: t } = e;
-        return (0, i.jsx)("div", { className: w.oP, children: (0, i.jsx)("div", { className: w.t0, children: t }) });
+        return (0, i.jsx)("div", { className: x.oP, children: (0, i.jsx)("div", { className: x.t0, children: t }) });
     },
-    k = (e) => {
-        let { recurrence: t, analyticsLocations: l = [] } = e,
-            s = (0, i.jsx)(n.r, { color: _.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
-            u = (0, i.jsx)("span", {
-                className: w.nP,
-                children: (0, i.jsx)(o.K, {
-                    icon: d.T,
+    V = (e) => {
+        let { recurrence: t, analyticsLocations: n = [] } = e,
+            a = (0, i.jsx)(o.r, { color: p.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
+            d = (0, i.jsx)("span", {
+                className: x.nP,
+                children: (0, i.jsx)(l.K, {
+                    icon: u.T,
                     size: "sm",
                     variant: "icon-only",
                     "aria-label": "",
                     onClick: () => {
                         navigator.clipboard.writeText(t.code),
-                            h(s),
-                            f.default.track(y.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                            f(a),
+                            I.default.track(w.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                                 partner: t.partnerId,
                                 cta_type: "copy code",
                                 promotion: t.outboundTitle,
                                 promotion_id: t.id,
-                                location_stack: l,
+                                location_stack: n,
                             });
                     },
                 }),
             }),
-            [m, h] = r.useState(() => u);
+            [_, f] = r.useState(() => d);
         if (null != t.code)
             return (0, i.jsx)("div", {
-                className: w.oP,
+                className: x.oP,
                 children: (0, i.jsxs)("div", {
-                    className: w.t0,
+                    className: x.t0,
                     children: [
                         (0, i.jsx)("div", {
-                            className: w.cD,
-                            children: (0, i.jsx)(a.E, {
+                            className: x.cD,
+                            children: (0, i.jsx)(s.E, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
                                 children: t.code,
                             }),
                         }),
-                        m,
+                        _,
                         (0, i.jsx)(c.$, {
                             variant: "secondary",
                             size: "sm",
-                            text: L.intl.formatToPlainString(L.t.DF68t7, { redemptionURL: t.redemptionURL }),
+                            text: P.intl.formatToPlainString(P.t.DF68t7, { redemptionURL: t.redemptionURL }),
                             onClick: () => {
                                 window.open(t.redemptionURL, "_blank"),
-                                    f.default.track(y.HAw.RECURRING_PROMOTION_CLAIMED),
-                                    f.default.track(y.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                                    I.default.track(w.HAw.RECURRING_PROMOTION_CLAIMED),
+                                    I.default.track(w.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                                         partner: t.partnerId,
                                         cta_type: "visit store",
                                         promotion: t.outboundTitle,
                                         promotion_id: t.id,
                                         url: t.redemptionURL,
-                                        location_stack: l,
+                                        location_stack: n,
                                     });
                             },
                         }),
@@ -310,47 +311,47 @@ let U = () => {
                 }),
             });
     },
-    G = (e) => {
+    B = (e) => {
         let {
             recurrence: t,
-            canBeClaimed: l,
+            canBeClaimed: n,
             hasClaimError: r,
-            setCode: a,
-            setHasClaimError: s,
-            className: n,
-            analyticsLocations: o = [],
+            setCode: s,
+            setHasClaimError: a,
+            className: o,
+            analyticsLocations: l = [],
         } = e;
-        return l
+        return n
             ? r
                 ? (0, i.jsx)("div", {
-                      className: n,
+                      className: o,
                       children: (0, i.jsx)(c.$, {
-                          icon: u.E,
+                          icon: d.E,
                           variant: "critical-secondary",
                           size: "sm",
                           disabled: !0,
-                          text: L.intl.string(L.t["8LKchl"]),
+                          text: P.intl.string(P.t["8LKchl"]),
                       }),
                   })
                 : (0, i.jsx)("div", {
-                      className: n,
+                      className: o,
                       children: (0, i.jsx)(c.$, {
-                          icon: m.X,
+                          icon: _.X,
                           variant: "secondary",
                           size: "sm",
-                          text: L.intl.string(L.t.vwASIl),
+                          text: P.intl.string(P.t.vwASIl),
                           onClick: () => {
-                              (0, j.kd)({
+                              (0, v.kd)({
                                   promotionId: t.id,
                                   promotionTitle: t.outboundTitle,
                                   partnerId: t.partnerId,
-                                  analyticsLocations: o,
+                                  analyticsLocations: l,
                               })
                                   .then((e) => {
-                                      a(e.code);
+                                      s(e.code);
                                   })
                                   .catch((e) => {
-                                      s(!0), N.A.captureException(e);
+                                      a(!0), N.A.captureException(e);
                                   });
                           },
                       }),
@@ -359,75 +360,75 @@ let U = () => {
     },
     H = (e) => {
         var t;
-        let l,
-            a,
+        let n,
+            s,
             {
-                recurrence: n,
-                titleClassName: o,
-                showPartnerLogo: d = !1,
+                recurrence: o,
+                titleClassName: l,
+                showPartnerLogo: u = !1,
                 showPartnerImage: c = !1,
-                titleVariant: u = "primary",
-                displayCTAInDedicatedFooter: m = !1,
-                analyticsLocations: _ = [],
+                titleVariant: d = "primary",
+                displayCTAInDedicatedFooter: _ = !1,
+                analyticsLocations: p = [],
             } = e,
-            [g, E] = r.useState(n.code),
-            [f, A] = r.useState(!1),
+            [m, g] = r.useState(o.code),
+            [I, T] = r.useState(!1),
             N =
-                ((t = n.partnerId),
-                (l = (0, C.bG)([x.A], () => (0, s.M)(x.A.theme))),
-                null == (a = B()[t]) ? null : l ? a.logos.dark : a.logos.light),
-            I = null == g;
+                ((t = o.partnerId),
+                (n = (0, h.bG)([A.A], () => (0, a.M)(A.A.theme))),
+                null == (s = k()[t]) ? null : n ? s.logos.dark : s.logos.light),
+            y = null == m;
         return (0, i.jsxs)("div", {
-            className: w.lA,
+            className: x.lA,
             children: [
                 (0, i.jsxs)("div", {
-                    className: w.LV,
+                    className: x.LV,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: w.JN,
+                            className: x.JN,
                             children: [
-                                d && N,
+                                u && N,
                                 (0, i.jsxs)("div", {
-                                    className: null != o ? `${w.yO} ${o}` : w.yO,
+                                    className: null != l ? `${x.yO} ${l}` : x.yO,
                                     children: [
-                                        (0, i.jsx)(h.D, {
-                                            variant: "secondary" === u ? "heading-md/semibold" : "heading-lg/semibold",
+                                        (0, i.jsx)(f.D, {
+                                            variant: "secondary" === d ? "heading-md/semibold" : "heading-lg/semibold",
                                             color: "text-strong",
-                                            children: n.title,
+                                            children: o.title,
                                         }),
-                                        (0, i.jsx)(h.D, {
+                                        (0, i.jsx)(f.D, {
                                             variant: "heading-sm/medium",
                                             color: "text-subtle",
-                                            children: f
-                                                ? L.intl.format(L.t.i2EuFO, {
-                                                      helpdeskArticle: R.A.getArticleURL(y.MVz.RECURRING_PROMOTION),
+                                            children: I
+                                                ? P.intl.format(P.t.i2EuFO, {
+                                                      helpdeskArticle: S.A.getArticleURL(w.MVz.RECURRING_PROMOTION),
                                                   })
-                                                : I
-                                                  ? n.body
-                                                  : null != n.bodyWithExpiration
-                                                    ? L.intl.format(n.bodyWithExpiration, { date: n.endDate })
-                                                    : n.body,
+                                                : y
+                                                  ? o.body
+                                                  : null != o.bodyWithExpiration
+                                                    ? P.intl.format(o.bodyWithExpiration, { date: o.endDate })
+                                                    : o.body,
                                         }),
                                     ],
                                 }),
-                                !m &&
-                                    (0, i.jsx)(G, {
-                                        recurrence: n,
-                                        canBeClaimed: I,
-                                        hasClaimError: f,
-                                        setCode: E,
-                                        setHasClaimError: A,
-                                        analyticsLocations: _,
+                                !_ &&
+                                    (0, i.jsx)(B, {
+                                        recurrence: o,
+                                        canBeClaimed: y,
+                                        hasClaimError: I,
+                                        setCode: g,
+                                        setHasClaimError: T,
+                                        analyticsLocations: p,
                                     }),
                             ],
                         }),
                         c &&
                             (0, i.jsx)("div", {
-                                className: w.R4,
-                                children: (0, i.jsx)(p._, {
-                                    src: n.asset ?? "",
-                                    className: w.Ys,
-                                    imageClassName: n.partnerId === v.XY ? w.Cy : void 0,
+                                className: x.R4,
+                                children: (0, i.jsx)(E._, {
+                                    src: o.asset ?? "",
+                                    className: x.Ys,
+                                    imageClassName: o.partnerId === O.XY ? x.Cy : void 0,
                                     width: 100,
                                     height: 100,
                                     zoomable: !1,
@@ -435,19 +436,19 @@ let U = () => {
                             }),
                     ],
                 }),
-                m && (0, i.jsx)(U, {}),
-                null != g && (0, i.jsx)(k, { recurrence: { ...n, code: g }, analyticsLocations: _ }),
-                m &&
-                    null == g &&
+                _ && (0, i.jsx)(G, {}),
+                null != m && (0, i.jsx)(V, { recurrence: { ...o, code: m }, analyticsLocations: p }),
+                _ &&
+                    null == m &&
                     (0, i.jsx)(F, {
-                        children: (0, i.jsx)(G, {
-                            recurrence: n,
-                            canBeClaimed: I,
-                            hasClaimError: f,
-                            setCode: E,
-                            setHasClaimError: A,
-                            className: w.qx,
-                            analyticsLocations: _,
+                        children: (0, i.jsx)(B, {
+                            recurrence: o,
+                            canBeClaimed: y,
+                            hasClaimError: I,
+                            setCode: g,
+                            setHasClaimError: T,
+                            className: x.qx,
+                            analyticsLocations: p,
                         }),
                     }),
             ],

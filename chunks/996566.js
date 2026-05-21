@@ -1,19 +1,20 @@
-r.d(t, { IE: () => u, km: () => c, rM: () => o });
-var s = r(64700),
-    n = r(735438),
-    l = r.n(n),
-    i = r(683973);
-let a = {};
-function o() {
-    let e = (0, i.k)();
-    return e.favoriteGifs?.gifs ?? a;
+"use strict";
+n.d(t, { IE: () => u, km: () => c, rM: () => l });
+var i = n(64700),
+    r = n(735438),
+    s = n.n(r),
+    a = n(683973);
+let o = {};
+function l() {
+    let e = (0, a.k)();
+    return e.favoriteGifs?.gifs ?? o;
 }
 function u(e) {
-    let t = o();
-    return s.useMemo(
+    let t = l();
+    return i.useMemo(
         () =>
-            l()(t)
-                .map((t, r) => ({ ...t, url: r, src: e?.(t.src, r) ?? t.src }))
+            s()(t)
+                .map((t, n) => ({ ...t, url: n, src: e?.(t.src, n) ?? t.src }))
                 .sortBy("order")
                 .reverse()
                 .value(),
@@ -21,5 +22,5 @@ function u(e) {
     );
 }
 function c(e) {
-    return null != o()[e];
+    return null != l()[e];
 }

@@ -1,10 +1,11 @@
-n.d(t, { A: () => l });
+"use strict";
+n.d(t, { A: () => s });
 var i = n(64700);
 let r = Symbol();
-function l(e, t, n) {
-    let l,
-        u,
-        o = ((l = (0, i.useRef)(!1)), (u = (0, i.useRef)(null)), l.current || ((l.current = !0), (u.current = e())), u),
-        c = (0, i.useRef)(r);
-    return c.current === r ? (c.current = t) : n(c.current, t) || ((o.current = e()), (c.current = t)), o.current;
+function s(e, t, n) {
+    let s,
+        a,
+        o = ((s = (0, i.useRef)(!1)), (a = (0, i.useRef)(null)), s.current || ((s.current = !0), (a.current = e())), a),
+        l = (0, i.useRef)(r);
+    return l.current === r ? (l.current = t) : n(l.current, t) || ((o.current = e()), (l.current = t)), o.current;
 }

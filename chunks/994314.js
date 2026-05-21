@@ -1,11 +1,12 @@
-n.d(t, { A: () => o });
-var s = n(627968);
+"use strict";
+n.d(t, { A: () => l });
+var i = n(627968);
 n(64700);
-var l = n(503698),
-    i = n.n(l),
+var r = n(503698),
+    s = n.n(r),
     a = n(834730),
-    r = n(390041);
-function o(e) {
+    o = n(390041);
+function l(e) {
     let { children: t, className: n } = e;
-    return (0, s.jsx)(a.E, { color: "none", className: i()(r.W, n), variant: "text-xs/medium", children: t });
+    return (0, i.jsx)(a.E, { color: "none", className: s()(o.W, n), variant: "text-xs/medium", children: t });
 }

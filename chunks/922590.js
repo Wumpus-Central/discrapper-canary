@@ -1,9 +1,10 @@
-n.d(t, { KL: () => h, f1: () => p, fi: () => u });
+"use strict";
+n.d(t, { KL: () => c, f1: () => l, fi: () => u });
 var i = n(17928),
     r = n(996439),
     s = n(800828),
-    o = n(652215);
-function a(e, t) {
+    a = n(652215);
+function o(e, t) {
     let [n] = (0, i.bG)(
         [s.A],
         () => [s.A.getGameRelationshipsForUserByType(e, t), s.A.getGameRelationshipsVersion()],
@@ -12,13 +13,13 @@ function a(e, t) {
     );
     return n;
 }
-function p(e) {
-    return a(e, o.eA$.FRIEND);
+function l(e) {
+    return o(e, a.eA$.FRIEND);
 }
 function u(e) {
-    return a(e, o.eA$.PENDING_INCOMING);
+    return o(e, a.eA$.PENDING_INCOMING);
 }
-function h(e, t) {
+function c(e, t) {
     let [n] = (0, i.bG)(
         [s.A],
         () => {
