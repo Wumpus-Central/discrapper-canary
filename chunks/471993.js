@@ -15,8 +15,8 @@ function f(e, t, f) {
     if (d.isPlatformEmbedded)
         (0, r.openModalLazy)(async () => {
             let { default: e } = await Promise.all([
-                n.e("8516"),
-                n.e("11377"),
+                n.e("29092"),
+                n.e("13427"),
                 n.e("17918"),
                 n.e("207"),
                 n.e("76171"),
@@ -36,10 +36,10 @@ function f(e, t, f) {
                 n.e("25241"),
                 n.e("6565"),
                 n.e("14304"),
-                n.e("82001"),
+                n.e("76229"),
                 n.e("91782"),
                 n.e("90088"),
-            ]).then(n.bind(n, 266536));
+            ]).then(n.bind(n, 477156));
             return (t) => (0, i.jsx)(e, { ...t, analyticsLocations: f });
         });
     else {

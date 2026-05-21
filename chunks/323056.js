@@ -90,7 +90,7 @@ let b = (0, o.Qx)(d.X.ACTIVITY_PRIVACY_PER_GUILD_DEFAULT_SETTING, {
             if (null == s) return;
             let l = (0, I.Xc)(e);
             (0, C.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([i.e("92164"), i.e("5980"), i.e("62041"), i.e("41996")]).then(
+                let { default: e } = await Promise.all([i.e("92164"), i.e("36281"), i.e("62041"), i.e("41996")]).then(
                     i.bind(i, 32167),
                 );
                 return (t) =>
@@ -18309,7 +18309,7 @@ var Ni = i(297413),
     Nn = i(50268),
     Ns = i(922301),
     Nl = i(262),
-    Nr = i(68085),
+    Nr = i(654613),
     Na = i(915614),
     No = i(246839);
 let Nu = st.Ay.getEnableHardwareAcceleration() ? iH.Js : iH.eu;
@@ -20854,7 +20854,7 @@ let Ix = {
                 (0, C.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
                         i.e("92164"),
-                        i.e("5980"),
+                        i.e("36281"),
                         i.e("62041"),
                         i.e("63786"),
                     ]).then(i.bind(i, 413201));

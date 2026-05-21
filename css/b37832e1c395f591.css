@@ -1,0 +1,135 @@
+.container_f50ddc {
+    padding: var(--space-16)
+}
+
+.heading_f50ddc {
+    margin-bottom: 16px
+}
+
+.subheading_f50ddc {
+    margin-bottom: 8px
+}
+
+.componentPreviews_f50ddc {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px
+}
+
+.componentPreviewWrapper_f50ddc {
+    border-width: 0
+}
+
+.componentPreviewWrapperBordered_f50ddc {
+    border-width: 1px;
+    padding: 24px
+}
+
+.componentPreview_f50ddc {
+    isolation: isolate;
+    position: relative
+}
+
+.questBarPreviewWrapper_f50ddc {
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    place-content: flex-end
+}
+
+.questBarPreview_f50ddc,
+.questBarPreviewWrapper_f50ddc {
+    position: relative;
+    width: 362px
+}
+
+.questChannelCallHeaderPreview_f50ddc>div {
+    margin: 0;
+    position: absolute;
+    top: 0
+}
+
+.toggleSwitch_f50ddc {
+    align-items: center;
+    padding: 0 16px
+}
+
+.fields_f50ddc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+    margin-bottom: 24px
+}
+
+.fullWidthField_f50ddc {
+    grid-column: 1/-1
+}
+
+.fieldsVertical_f50ddc {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: 100%
+}
+
+.swatchContainer_f50ddc {
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    height: 48px;
+    place-content: center;
+    place-items: center;
+    width: 48px
+}
+
+.swatchIcon_f50ddc {
+    color: var(--white);
+    opacity: .5;
+    transition: opacity .125s
+}
+
+.swatchContainer_f50ddc:hover .swatchIcon_f50ddc {
+    opacity: .75
+}
+
+.errorBoundary_f50ddc {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: var(--space-16);
+    place-content: center;
+    place-items: center
+}
+
+.errorBoundaryIcon_f50ddc {
+    color: var(--text-strong);
+    height: 24px;
+    width: 24px
+}
+
+.headingWithTooltip_f50ddc {
+    display: flex;
+    gap: 4px;
+    place-items: center
+}
+
+.errorMessageWrapper_f50ddc {
+    background-color: var(--background-base-lower) !important;
+    margin-top: 12px;
+    padding: 12px
+}
+
+.errorMessage_f50ddc {
+    color: var(--text-default);
+    text-align: start;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text
+}
+
+.questTile_f50ddc {
+    max-width: 450px
+}
+
+.wideField_f50ddc {
+    grid-column: span 2
+}

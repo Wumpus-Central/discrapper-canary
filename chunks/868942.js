@@ -238,12 +238,13 @@ let q = function (e) {
             (0, d.openModalLazy)(async () => {
                 let { PremiumBrandRefreshSubscriptionCancellationModal: s } = await Promise.all([
                     i.e("34218"),
-                    i.e("8516"),
+                    i.e("21503"),
+                    i.e("88781"),
                     i.e("16581"),
                     i.e("9045"),
                     i.e("84820"),
                     i.e("94161"),
-                    i.e("35432"),
+                    i.e("13051"),
                     i.e("80347"),
                     i.e("80166"),
                 ]).then(i.bind(i, 293061));
@@ -282,7 +283,7 @@ let q = function (e) {
                             async () => {
                                 let { PremiumResubscribeModal: e } = await Promise.all([
                                     i.e("23309"),
-                                    i.e("8516"),
+                                    i.e("88781"),
                                     i.e("92443"),
                                     i.e("9045"),
                                     i.e("94161"),

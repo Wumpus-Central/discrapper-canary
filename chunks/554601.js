@@ -541,27 +541,30 @@ function eJ(e) {
                                             action: () => {
                                                 (0, eO.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        n.e("81857"),
-                                                        n.e("41816"),
+                                                        n.e("82507"),
+                                                        n.e("19788"),
+                                                        n.e("13427"),
                                                         n.e("5959"),
                                                         n.e("46461"),
-                                                        n.e("59121"),
-                                                        n.e("76090"),
-                                                        n.e("12289"),
-                                                        n.e("8516"),
+                                                        n.e("99453"),
+                                                        n.e("79297"),
+                                                        n.e("29092"),
                                                         n.e("45650"),
-                                                        n.e("88692"),
+                                                        n.e("26963"),
+                                                        n.e("51402"),
                                                         n.e("27660"),
+                                                        n.e("22387"),
                                                         n.e("85484"),
-                                                        n.e("98848"),
-                                                        n.e("5067"),
-                                                        n.e("19397"),
-                                                        n.e("18320"),
-                                                        n.e("64422"),
-                                                        n.e("55990"),
-                                                        n.e("6432"),
-                                                        n.e("36407"),
-                                                        n.e("69134"),
+                                                        n.e("96833"),
+                                                        n.e("25822"),
+                                                        n.e("88781"),
+                                                        n.e("89001"),
+                                                        n.e("90928"),
+                                                        n.e("88348"),
+                                                        n.e("7066"),
+                                                        n.e("53694"),
+                                                        n.e("96652"),
+                                                        n.e("69977"),
                                                         n.e("79705"),
                                                         n.e("23924"),
                                                         n.e("42205"),
@@ -833,8 +836,8 @@ function e8(e) {
         })
     );
 }
-var e4 = n(34188),
-    e2 = n(700623),
+var e2 = n(34188),
+    e4 = n(700623),
     e7 = n(177953),
     e3 = n(825484),
     e9 = n(512950),
@@ -1094,7 +1097,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: tv.wi,
                             children: [
-                                (0, r.jsx)(e4.U, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e2.U, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1107,7 +1110,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: tv.wi,
                             children: [
-                                (0, r.jsx)(e2.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e4.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1394,14 +1397,14 @@ var tZ = n(111042),
     t0 = n(403362),
     t1 = n(179771),
     t8 = n(824552),
-    t4 = n(168186),
-    t2 = n(594061),
+    t2 = n(168186),
+    t4 = n(594061),
     t7 = n(935208),
     t3 = n(630248),
     t9 = n(355097);
 function t6(e, t) {
     o.useEffect(() => {
-        t2.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t4.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t3.A], () => t3.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -1418,7 +1421,7 @@ function t6(e, t) {
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute();
-            let e = i?.map((e) => (0, t4.bq)(e.application, !0)) ?? [],
+            let e = i?.map((e) => (0, t2.bq)(e.application, !0)) ?? [],
                 t = [...l];
             return (
                 t.push(...e),
@@ -2055,8 +2058,8 @@ var nZ = n(984516),
     n0 = n(485845),
     n1 = n(994369),
     n8 = n(240591),
-    n4 = n(727331);
-function n2(e, t) {
+    n2 = n(727331);
+function n4(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
         s = ((n = e), (l = t.filterPredicates ?? []), n.filter((e) => l.every((t) => t(e))));
@@ -2354,7 +2357,7 @@ function lu(e) {
                     var e, i, a, r, o, d, u;
                     let m, p, h, A, f;
                     if (!s) return [];
-                    return n2(c, {
+                    return n4(c, {
                         limit: l,
                         filterPredicates: [
                             ((m = (0, n8.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
@@ -2367,8 +2370,8 @@ function lu(e) {
                                             isGuildInstalled: r,
                                             isUserInstalled: o,
                                         } = (0, g.Sx)(t, e.applicationId),
-                                        c = n?.guild_id != null ? n4.we(a?.permissions, n.guild_id, l, i, s) : null,
-                                        d = n?.guild_id != null ? n4._W(a?.permissions, n, n.guild_id) : null;
+                                        c = n?.guild_id != null ? n2.we(a?.permissions, n.guild_id, l, i, s) : null,
+                                        d = n?.guild_id != null ? n2._W(a?.permissions, n, n.guild_id) : null;
                                     p[e.applicationId] = {
                                         descriptor: a,
                                         applicationAllowedForUser: c,
@@ -2385,13 +2388,13 @@ function lu(e) {
                                     isUserInstalled: d,
                                 } = p[e.applicationId];
                                 return (
-                                    n4.zl(e, m, {
+                                    n2.zl(e, m, {
                                         applicationAllowedForUser: o,
                                         applicationAllowedForChannel: r,
                                         commandBotId: a?.botId,
                                         isGuildInstalled: c,
                                         isUserInstalled: d,
-                                    }) === n4.CA.ALLOWED
+                                    }) === n2.CA.ALLOWED
                                 );
                             }),
                         ],
@@ -2491,7 +2494,7 @@ function lu(e) {
                                     }),
                             );
                     } else a && (u = m);
-                    return n2(u, {
+                    return n4(u, {
                         limit: i,
                         filterPredicates: [
                             ((d = (0, n8.Bh)("channel" === t.type ? t.channel : void 0, [
@@ -2506,20 +2509,20 @@ function lu(e) {
                                         isGuildInstalled: o,
                                         isUserInstalled: c,
                                     } = (0, g.Sx)(t, e.id),
-                                    u = n?.guild_id != null ? n4.we(a?.permissions, n.guild_id, l, i, s) : null,
-                                    m = n?.guild_id != null ? n4._W(a?.permissions, n, n.guild_id) : null;
+                                    u = n?.guild_id != null ? n2.we(a?.permissions, n.guild_id, l, i, s) : null,
+                                    m = n?.guild_id != null ? n2._W(a?.permissions, n, n.guild_id) : null;
                                 return (
                                     null == r ||
                                     !(r.length > 0) ||
                                     r.some(
                                         (e) =>
-                                            n4.zl(e, d, {
+                                            n2.zl(e, d, {
                                                 applicationAllowedForUser: u,
                                                 applicationAllowedForChannel: m,
                                                 commandBotId: a?.botId,
                                                 isGuildInstalled: o,
                                                 isUserInstalled: c,
-                                            }) === n4.CA.ALLOWED,
+                                            }) === n2.CA.ALLOWED,
                                     )
                                 );
                             }),

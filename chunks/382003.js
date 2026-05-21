@@ -221,9 +221,8 @@ function X(e) {
             (0, a.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        s.e("25812"),
-                        s.e("81857"),
-                        s.e("43662"),
+                        s.e("22407"),
+                        s.e("99453"),
                         s.e("50985"),
                         s.e("63232"),
                         s.e("62680"),
@@ -407,8 +406,7 @@ function es(e) {
                       onUpsellClick: () => {
                           (0, a.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([
-                                  s.e("19397"),
-                                  s.e("67485"),
+                                  s.e("99453"),
                                   s.e("2125"),
                                   s.e("62680"),
                                   s.e("87306"),

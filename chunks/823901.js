@@ -1,4 +1,4 @@
-i.d(e, { H: () => h, y: () => C });
+i.d(e, { H: () => T, y: () => h });
 var n = i(627968),
     l = i(64700),
     a = i(17928),
@@ -10,17 +10,17 @@ var n = i(627968),
     d = i(279250),
     A = i(880144),
     f = i(560595),
-    y = i(929921),
-    p = i(734057),
-    m = i(71393),
-    I = i(761853),
-    E = i(576705),
-    g = i(309010),
-    _ = i(287809),
-    N = i(652215),
-    S = i(753070),
-    T = i(375708);
-function C(t) {
+    p = i(929921),
+    y = i(734057),
+    g = i(71393),
+    m = i(761853),
+    I = i(576705),
+    E = i(309010),
+    S = i(287809),
+    _ = i(652215),
+    N = i(753070),
+    C = i(375708);
+function h(t) {
     let {
             pid: e,
             analyticsLocation: i,
@@ -29,27 +29,27 @@ function C(t) {
             onOneClickGoLive: s,
             appContext: o,
         } = t,
-        u = (0, a.bG)([g.A], () => g.A.getVoiceChannelId()),
-        c = (0, a.bG)([p.A], () => p.A.getChannel(u), [u]),
-        f = (0, a.bG)([_.default], () => _.default.getCurrentUser()),
-        y = (0, a.bG)([I.Ay], () => (0, A.A)(I.Ay)),
-        N = (0, a.bG)([m.A, E.A], () => null != c && (0, d.vz)(c, m.A, E.A));
+        u = (0, a.bG)([E.A], () => E.A.getVoiceChannelId()),
+        c = (0, a.bG)([y.A], () => y.A.getChannel(u), [u]),
+        f = (0, a.bG)([S.default], () => S.default.getCurrentUser()),
+        p = (0, a.bG)([m.Ay], () => (0, A.A)(m.Ay)),
+        _ = (0, a.bG)([g.A, I.A], () => null != c && (0, d.vz)(c, g.A, I.A));
     return l.useCallback(async () => {
         await v({
             pid: e,
             voiceChannelId: u,
             user: f,
-            canGoLive: y,
-            canStream: N,
+            canGoLive: p,
+            canStream: _,
             analyticsLocation: i,
             allowOneClickGoLive: n,
             onBeforeShowModal: r,
             onOneClickGoLive: s,
             appContext: o,
         });
-    }, [e, u, f, y, N, i, n, r, s, o]);
+    }, [e, u, f, p, _, i, n, r, s, o]);
 }
-async function h(t) {
+async function T(t) {
     let {
             pid: e,
             analyticsLocation: i,
@@ -58,11 +58,11 @@ async function h(t) {
             onOneClickGoLive: a,
             appContext: r,
         } = t,
-        s = g.A.getVoiceChannelId(),
-        o = p.A.getChannel(s),
-        u = _.default.getCurrentUser(),
-        c = null != o && (0, d.vz)(o, m.A, E.A),
-        f = (0, A.A)(I.Ay);
+        s = E.A.getVoiceChannelId(),
+        o = y.A.getChannel(s),
+        u = S.default.getCurrentUser(),
+        c = null != o && (0, d.vz)(o, g.A, I.A),
+        f = (0, A.A)(m.Ay);
     await v({
         pid: e,
         voiceChannelId: s,
@@ -83,28 +83,28 @@ async function v(t) {
         user: a,
         canGoLive: d,
         canStream: A,
-        allowOneClickGoLive: p,
-        onBeforeShowModal: m,
-        onOneClickGoLive: I,
-        appContext: E,
+        allowOneClickGoLive: y,
+        onBeforeShowModal: g,
+        onOneClickGoLive: m,
+        appContext: I,
     } = t;
     if (d && A) {
-        if (p && null !== l) {
-            let t = y.A.getState().preset;
-            if (t === S.jQ.PRESET_DOCUMENTS) {
+        if (y && null !== l) {
+            let t = p.A.getState().preset;
+            if (t === N.jQ.PRESET_DOCUMENTS) {
                 let { allowAutoQuality: e } = (0, c.eO)({ location: "overlay _goLive" });
-                t = e ? S.jQ.PRESET_AUTO : S.jQ.PRESET_VIDEO;
+                t = e ? N.jQ.PRESET_AUTO : N.jQ.PRESET_VIDEO;
             }
             let [i] = await (0, f.A)(e, { preset: t });
-            if (i) return void I?.();
+            if (i) return void m?.();
         }
         if (null == a)
-            return void (0, r.P0)((0, s.o)(T.intl.string(T.t.OKnWyb), o.Ck.FAILURE, { appContext: N.BRT.OVERLAY }));
-        m?.(),
+            return void (0, r.P0)((0, s.o)(C.intl.string(C.t.OKnWyb), o.Ck.FAILURE, { appContext: _.BRT.OVERLAY }));
+        g?.(),
             (0, u.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([
-                        i.e("8516"),
+                        i.e("29092"),
                         i.e("17918"),
                         i.e("76171"),
                         i.e("38601"),
@@ -115,13 +115,13 @@ async function v(t) {
                         i.e("25241"),
                         i.e("6565"),
                         i.e("14304"),
-                        i.e("82001"),
+                        i.e("76229"),
                         i.e("91782"),
                         i.e("90088"),
-                    ]).then(i.bind(i, 266536));
+                    ]).then(i.bind(i, 477156));
                     return (i) => (0, n.jsx)(t, { ...i, sourcePID: e, selectSource: !1 });
                 },
-                { contextKey: null != E ? (0, u.modalContextFromAppContext)(E) : void 0 },
+                { contextKey: null != I ? (0, u.modalContextFromAppContext)(I) : void 0 },
             );
     }
 }

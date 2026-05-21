@@ -3,8 +3,8 @@ n.d(t, { A: () => i });
 let i = {
     openCreateGuildModal: (e) => {
         Promise.all([
-            n.e("63897"),
-            n.e("8516"),
+            n.e("88781"),
+            n.e("29092"),
             n.e("66234"),
             n.e("7850"),
             n.e("88941"),
@@ -29,8 +29,8 @@ let i = {
     },
     updateCreateGuildModal: (e) => {
         Promise.all([
-            n.e("63897"),
-            n.e("8516"),
+            n.e("88781"),
+            n.e("29092"),
             n.e("66234"),
             n.e("7850"),
             n.e("88941"),
