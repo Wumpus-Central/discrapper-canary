@@ -273,6 +273,22 @@ function j(e) {
         let e = { navigationReplace: !1, openChannel: !0 };
         return null != x && (e.search = x), null != V && (e.hash = V), (t) => (t?.preventDefault(), (0, N.A)(w, e), !0);
     }
+    if (j && w?.startsWith("/users/")) {
+        let e = w.match(/^\/users\/(\d+)/);
+        if (null != e) {
+            let t = e[1];
+            return (e) => (
+                e?.preventDefault(),
+                Promise.resolve()
+                    .then(n.bind(n, 975732))
+                    .then((e) => {
+                        let { openUserProfileModal: n } = e;
+                        n({ userId: t, sourceAnalyticsLocations: s });
+                    }),
+                !0
+            );
+        }
+    }
     if (null != w && j) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: i } = n(887909),
             r = t(e);
