@@ -24588,6 +24588,7 @@
   "Q2RQka": "Gift a friend, get a badge",
   "WZ4cXA": "All Gifting Badges",
   "qvx9E4": "Gifted !!{count}!!x",
+  "iIpfQe": "!!{count}!!/{threshold, plural, one { gift} other { gifts} }",
   "SIHRfH": "{giftsRemaining, plural, one { gift} other { gifts} } away from !!{nextTier}!!!",
   "0+xfd9": "{giftsRemaining, plural, one { gift} other { gifts} } away from the !!{nextTier}!! Badge!",
   "XTX3OO": "Give {count, plural, one { gift} other { gifts} } to unlock the !!{nextTier}!! badge next!",
