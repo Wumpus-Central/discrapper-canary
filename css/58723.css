@@ -788,6 +788,10 @@
     border: 1px solid ButtonText
 }
 
+.notEditable_fb1442 {
+    --custom-username-color: var(--text-muted)
+}
+
 .container__47fbb:before {
     border-radius: var(--radius-round);
     content: "";
@@ -1255,6 +1259,10 @@
 
 .profileAppConnections__9c3be {
     margin-top: 4px
+}
+
+.memberSinceText__9c3be {
+    color: var(--text-muted)
 }
 
 .root_b92f52 {
@@ -2134,6 +2142,41 @@ screen and (max-width:485px) {
     flex: 0 0 auto;
     height: 36px;
     width: 130px
+}
+
+.content__89631 {
+    gap: 24px;
+    justify-content: center;
+    max-width: 408px;
+    min-width: 408px;
+    padding: 24px;
+    text-align: center
+}
+
+.content__89631,
+.innerContent__89631 {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.innerContent__89631 {
+    gap: 8px
+}
+
+@media (max-width:485px) {
+    .content__89631 {
+        min-width: unset
+    }
+}
+
+.footerButton__89631 {
+    align-self: stretch
+}
+
+.artwork__89631 {
+    height: auto;
+    width: 80%
 }
 
 .image__5901e {
@@ -5946,12 +5989,6 @@ screen and (max-width:485px) {
     top: var(--space-8)
 }
 
-.riveHoverTarget__438ba {
-    height: 100%;
-    pointer-events: auto;
-    width: 100%
-}
-
 .displayNameStylesSection_e60bc0 {
     margin-top: var(--space-24)
 }
@@ -6300,34 +6337,6 @@ div.profileThemedContainer__656be {
 
 .container__71cd5 {
     margin-top: 16px
-}
-
-.container_bd5bb4 {
-    align-items: center;
-    background-color: var(--background-base-lowest);
-    border-top: 1px solid var(--border-subtle);
-    display: flex;
-    gap: 8px;
-    padding: 12px 16px
-}
-
-.icons_bd5bb4 {
-    display: flex;
-    flex: 1;
-    gap: 16px;
-    justify-content: flex-end
-}
-
-.iconContainer_bd5bb4 {
-    cursor: pointer
-}
-
-.icon_bd5bb4 {
-    color: var(--interactive-text-default)
-}
-
-.icon_bd5bb4:hover {
-    color: var(--interactive-text-hover)
 }
 
 .wrapper_fce7ca {
