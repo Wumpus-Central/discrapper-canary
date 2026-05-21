@@ -93,15 +93,12 @@
     margin-inline: auto 16px
 }
 
-.container__024d4 {
-    display: flex;
-    flex-direction: column;
-    max-height: 580px;
-    width: var(--modal-width-small)
+.modal__024d4 {
+    justify-content: center;
+    max-width: var(--modal-width-small);
+    width: 100%
 }
 
-@media (max-width:440px) {
-    .container__024d4 {
-        width: 100%
-    }
+.slideWrapper__024d4 {
+    max-height: calc(100vh - 48px)
 }
