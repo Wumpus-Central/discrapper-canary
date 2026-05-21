@@ -1,5 +1,4 @@
-"use strict";
-n.d(t, { W: () => o, t: () => l });
+n.d(t, { W: () => l, t: () => o });
 var i = n(627968),
     r = n(64700),
     s = n(121894);
@@ -86,11 +85,11 @@ class a {
         this.observer?.disconnect(), this.registeredNodes.clear(), this.visibleComponents.clear();
     }
 }
-let o = r.createContext({
+let l = r.createContext({
     manager: new a(!0),
     useThoughtfullyAnimated: () => ({ animate: !0, registerRef: () => {} }),
 });
-function l(e) {
+function o(e) {
     let { children: t } = e,
         [n] = r.useState(() => {
             let e = new a();
@@ -110,5 +109,5 @@ function l(e) {
                 },
             };
         });
-    return r.useEffect(() => () => n.manager.cleanUp(), [n.manager]), (0, i.jsx)(o.Provider, { value: n, children: t });
+    return r.useEffect(() => () => n.manager.cleanUp(), [n.manager]), (0, i.jsx)(l.Provider, { value: n, children: t });
 }

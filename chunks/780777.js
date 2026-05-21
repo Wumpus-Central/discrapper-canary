@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { A: () => o });
-var i = n(627968),
-    r = n(64700);
-class s extends r.Component {
+i.d(t, { A: () => r });
+var n = i(627968),
+    a = i(64700);
+class s extends a.Component {
     _input = null;
     static defaultProps = { multiple: !1, disabled: !1, tabIndex: 0 };
     activateUploadDialogue = () => {
@@ -18,13 +17,13 @@ class s extends r.Component {
         e.currentTarget.value = null;
     };
     render() {
-        let { disabled: e, tabIndex: t, className: n, name: r, "aria-label": s, "aria-hidden": a, id: o } = this.props,
-            l = "";
+        let { disabled: e, tabIndex: t, className: i, name: a, "aria-label": s, "aria-hidden": l, id: r } = this.props,
+            o = "";
         return (
             this.props.filters &&
-                (l = this.props.filters.map((e) => e.extensions.map((e) => `.${e}`).join(",")).join(",")),
-            (0, i.jsx)("input", {
-                id: o,
+                (o = this.props.filters.map((e) => e.extensions.map((e) => `.${e}`).join(",")).join(",")),
+            (0, n.jsx)("input", {
+                id: r,
                 style: {
                     position: "absolute",
                     top: 0,
@@ -35,7 +34,7 @@ class s extends r.Component {
                     cursor: e ? "not-allowed" : "pointer",
                     fontSize: 0,
                 },
-                className: n || "file-input",
+                className: i || "file-input",
                 disabled: e,
                 type: "file",
                 tabIndex: t,
@@ -43,10 +42,10 @@ class s extends r.Component {
                 onChange: this.props.onChange,
                 onClick: this.props.onClick,
                 multiple: this.props.multiple,
-                accept: l,
-                name: r,
+                accept: o,
+                name: a,
                 "aria-label": s,
-                "aria-hidden": a || void 0,
+                "aria-hidden": l || void 0,
                 ref: (e) => {
                     this._input = e;
                 },
@@ -55,8 +54,8 @@ class s extends r.Component {
         );
     }
 }
-class a extends r.Component {
-    _ref = r.createRef();
+class l extends a.Component {
+    _ref = a.createRef();
     constructor(e) {
         super(e), (this.setRef = this.setRef.bind(this));
     }
@@ -67,7 +66,7 @@ class a extends r.Component {
         this._ref = e;
     }
     render() {
-        return (0, i.jsx)(s, { ref: this.setRef, ...this.props });
+        return (0, n.jsx)(s, { ref: this.setRef, ...this.props });
     }
 }
-let o = a;
+let r = l;

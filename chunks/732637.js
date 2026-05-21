@@ -1,65 +1,64 @@
-"use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => I });
 var i = n(627968),
-    r = n(64700),
+    l = n(64700),
     s = n(17928),
-    a = n(228366),
-    o = n(31728),
-    l = n(869146),
+    r = n(228366),
+    a = n(31728),
+    o = n(869146),
     u = n(625494),
-    c = n(933958),
-    d = n(969151),
-    _ = n(108959),
-    f = n(902439),
-    h = n(5867),
-    p = n(652215);
+    d = n(933958),
+    c = n(969151),
+    h = n(108959),
+    g = n(902439),
+    f = n(5867),
+    A = n(652215);
 let E = (e, t) => {
-    a.h.wait(() => {
-        (0, o.I_)(e, t);
+    r.h.wait(() => {
+        (0, a.I_)(e, t);
     });
 };
-function m(e) {
+function I(e) {
     let t,
-        { embedId: n, className: a, style: o } = e,
-        m = (0, s.bG)([l.A], () => l.A.getWindow(p.MLl.CHANNEL_CALL_POPOUT)),
-        g = (0, f.A)(),
-        A = (0, s.bG)([c.Ay], () => c.Ay.getActivityPanelMode());
-    t = null == g || (0, _.A)((0, d.H)(g.location)) || A !== h.Gd.PANEL ? (m?.window ?? window) : window;
-    let I = r.useRef(null),
-        T = r.useMemo(() => {
+        { embedId: n, className: r, style: a } = e,
+        I = (0, s.bG)([o.A], () => o.A.getWindow(A.MLl.CHANNEL_CALL_POPOUT)),
+        m = (0, g.A)(),
+        S = (0, s.bG)([d.Ay], () => d.Ay.getActivityPanelMode());
+    t = null == m || (0, h.A)((0, c.H)(m.location)) || S !== f.Gd.PANEL ? (I?.window ?? window) : window;
+    let p = l.useRef(null),
+        C = l.useMemo(() => {
             let e = null;
             return () => {
                 null == e &&
                     (e = t.requestAnimationFrame(() => {
-                        E(n, I.current?.getBoundingClientRect() ?? null), (e = null);
+                        E(n, p.current?.getBoundingClientRect() ?? null), (e = null);
                     }));
             };
         }, [n, t]);
     return (
-        r.useEffect(
+        l.useEffect(
             () => (
-                t.addEventListener("resize", T),
-                u._.subscribe(p.jej.REMEASURE_TARGET, T),
+                t.addEventListener("resize", C),
+                u._.subscribe(A.jej.REMEASURE_TARGET, C),
                 () => {
-                    t.removeEventListener("resize", T), u._.unsubscribe(p.jej.REMEASURE_TARGET, T);
+                    t.removeEventListener("resize", C), u._.unsubscribe(A.jej.REMEASURE_TARGET, C);
                 }
             ),
-            [T, t],
+            [C, t],
         ),
-        r.useLayoutEffect(() => {
-            let e = I.current;
+        l.useLayoutEffect(() => {
+            let e = p.current;
             if (null == e) return;
             let t = e.ownerDocument.defaultView;
             if (null == t) return;
-            T();
-            let i = new t.ResizeObserver(T);
+            C();
+            let i = new t.ResizeObserver(C);
             return (
                 i.observe(e),
                 () => {
                     i.disconnect(), E(n, null);
                 }
             );
-        }, [n, T]),
-        (0, i.jsx)("div", { ref: I, style: o, className: a })
+        }, [n, C]),
+        (0, i.jsx)("div", { ref: p, style: a, className: r })
     );
 }

@@ -1,8 +1,7 @@
-"use strict";
-n.d(t, { Q: () => a, f: () => s });
+n.d(t, { Q: () => a, f: () => l });
 var i = n(64700),
-    r = n(785651);
-let s = (0, i.createContext)({
+    r = n(873174);
+let l = (0, i.createContext)({
     scale: new r.SpringValue(1),
     x: new r.SpringValue(0),
     y: new r.SpringValue(0),
@@ -12,5 +11,5 @@ let s = (0, i.createContext)({
     setZoomed() {},
 });
 function a() {
-    return (0, i.useContext)(s);
+    return (0, i.useContext)(l);
 }

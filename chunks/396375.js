@@ -1,44 +1,43 @@
-"use strict";
-n.d(t, { A: () => d });
-var i = n(627968);
-n(64700);
-var r = n(462887),
-    s = n(862482),
-    a = n(736653),
-    o = n(234419),
-    l = n(725807),
-    u = n(145310),
-    c = n(943386);
-let d = (e) => {
+r.d(e, { A: () => T });
+var s = r(627968);
+r(64700);
+var _ = r(462887),
+    a = r(862482),
+    c = r(736653),
+    i = r(234419),
+    E = r(725807),
+    M = r(145310),
+    n = r(943386);
+let T = (t) => {
     let {
-            textOptions: t,
-            subscriptionTier: n,
-            hasActivePromotion: d = !1,
-            isPersistentCTA: _ = !1,
-            useShorterCTA: f = !1,
-            showGradient: h,
-            confirmationFooter: p,
-            color: E,
-            ...m
-        } = e,
-        g = (0, a.Ay)(),
-        { buttonText: A, marketingSubscriptionTierSkuId: I } = (0, u.s)({
-            hasActivePromotion: d,
-            subscriptionTier: n,
-            useShorterCTA: f,
-            isPersistentCTA: _,
+            textOptions: e,
+            subscriptionTier: r,
+            hasActivePromotion: T = !1,
+            isPersistentCTA: o = !1,
+            useShorterCTA: N = !1,
+            showGradient: R,
+            confirmationFooter: U,
+            color: l,
+            ...A
+        } = t,
+        u = (0, c.Ay)(),
+        { buttonText: d, marketingSubscriptionTierSkuId: O } = (0, M.s)({
+            hasActivePromotion: T,
+            subscriptionTier: r,
+            useShorterCTA: N,
+            isPersistentCTA: o,
         }),
-        T = (0, o.V)(),
-        S = T?.subscription_trial,
-        N = null != S && I === S.sku_id,
-        y = E ?? ((0, r.M)(g) ? s.XD.BRAND_INVERTED : s.XD.BRAND);
-    return (0, i.jsx)(l.A, {
-        color: y,
-        textOptions: { textOverride: A, textClassName: N ? c.A : void 0, ...t },
+        p = (0, i.V)(),
+        P = p?.subscription_trial,
+        h = null != P && O === P.sku_id,
+        H = l ?? ((0, _.M)(u) ? a.XD.BRAND_INVERTED : a.XD.BRAND);
+    return (0, s.jsx)(E.A, {
+        color: H,
+        textOptions: { textOverride: d, textClassName: h ? n.A : void 0, ...e },
         onlyShineOnHover: !0,
-        subscriptionTier: I,
-        showGradient: h,
-        confirmationFooter: p,
-        ...m,
+        subscriptionTier: O,
+        showGradient: R,
+        confirmationFooter: U,
+        ...A,
     });
 };

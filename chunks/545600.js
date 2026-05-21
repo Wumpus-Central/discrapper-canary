@@ -1,85 +1,84 @@
-"use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => _ });
 var i = n(17928),
-    r = n(228366),
-    s = n(777376),
-    a = n(983060),
-    o = n(788868);
-let l = null,
-    u = s.Px.NOT_FETCHED,
-    c = null;
-function d() {
-    u === s.Px.NOT_FETCHED && (u = s.Px.FETCHED);
+    l = n(228366),
+    r = n(777376),
+    s = n(983060),
+    a = n(788868);
+let c = null,
+    o = r.Px.NOT_FETCHED,
+    d = null;
+function u() {
+    o === r.Px.NOT_FETCHED && (o = r.Px.FETCHED);
 }
-function _(e) {
-    if (e.entitlement.sku_id !== a.X8) return !1;
-    let t = (0, a.MM)(e.entitlement);
-    (l = null == t ? null : { perk: s.n9.XGPP, state: t, entitlement_id: e.entitlement.id, redirect: null }), d();
+function E(e) {
+    if (e.entitlement.sku_id !== s.X8) return !1;
+    let t = (0, s.MM)(e.entitlement);
+    (c = null == t ? null : { perk: r.n9.XGPP, state: t, entitlement_id: e.entitlement.id, redirect: null }), u();
 }
-class f extends i.Ay.Store {
+class A extends i.Ay.Store {
     static displayName = "CroissantActivationStore";
     getActivationStatus() {
-        return l;
-    }
-    getRequestState() {
-        return u;
-    }
-    getLastFetchTime() {
         return c;
     }
+    getRequestState() {
+        return o;
+    }
+    getLastFetchTime() {
+        return d;
+    }
 }
-let h = new f(r.h, {
+let _ = new A(l.h, {
     CROISSANT_ACTIVATION_FETCH_START: function () {
-        u = s.Px.FETCHING;
+        o = r.Px.FETCHING;
     },
     CROISSANT_ACTIVATION_FETCH_SUCCESS: function (e) {
         let { activationStatus: t } = e;
-        (l = t), (u = s.Px.FETCHED), (c = Date.now());
+        (c = t), (o = r.Px.FETCHED), (d = Date.now());
     },
     CROISSANT_ACTIVATION_FETCH_FAILURE: function () {
-        u = s.Px.FETCHED;
+        o = r.Px.FETCHED;
     },
     CROISSANT_CANCELLATION_START: function () {
-        u = s.Px.CANCELLING;
+        o = r.Px.CANCELLING;
     },
     CROISSANT_CANCELLATION_SUCCESS: function () {
-        (l = {
-            perk: l?.perk ?? s.n9.XGPP,
-            state: s.gR.CANCELLATION_PENDING,
-            entitlement_id: l?.entitlement_id ?? null,
+        (c = {
+            perk: c?.perk ?? r.n9.XGPP,
+            state: r.gR.CANCELLATION_PENDING,
+            entitlement_id: c?.entitlement_id ?? null,
             redirect: null,
         }),
-            (u = s.Px.FETCHED),
-            (c = null);
+            (o = r.Px.FETCHED),
+            (d = null);
     },
     CROISSANT_CANCELLATION_FAILURE: function () {
-        u = s.Px.FETCHED;
+        o = r.Px.FETCHED;
     },
     CROISSANT_ACTIVATION_RESET: function () {
-        (l = null), (u = s.Px.FETCHED), (c = null);
+        (c = null), (o = r.Px.FETCHED), (d = null);
     },
-    ENTITLEMENT_CREATE: _,
-    ENTITLEMENT_UPDATE: _,
+    ENTITLEMENT_CREATE: E,
+    ENTITLEMENT_UPDATE: E,
     ENTITLEMENT_DELETE: function (e) {
-        if (e.entitlement.sku_id !== a.X8) return !1;
-        (l = null), (c = null), d();
+        if (e.entitlement.sku_id !== s.X8) return !1;
+        (c = null), (d = null), u();
     },
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: function (e) {
-        if (e.applicationId !== o.tv || 0 === e.entitlements.length) return !1;
+        if (e.applicationId !== a.tv || 0 === e.entitlements.length) return !1;
         let t = null;
         for (let n of e.entitlements) {
-            if (n.sku_id !== a.X8) continue;
-            let e = (0, a.MM)(n);
-            if (e === s.gR.ACTIVATED) {
-                (l = { perk: s.n9.XGPP, state: s.gR.ACTIVATED, entitlement_id: n.id, redirect: null }), d();
+            if (n.sku_id !== s.X8) continue;
+            let e = (0, s.MM)(n);
+            if (e === r.gR.ACTIVATED) {
+                (c = { perk: r.n9.XGPP, state: r.gR.ACTIVATED, entitlement_id: n.id, redirect: null }), u();
                 return;
             }
-            e === s.gR.CANCELLATION_PENDING && (t = n.id);
+            e === r.gR.CANCELLATION_PENDING && (t = n.id);
         }
         if (null == t) return !1;
-        (l = { perk: s.n9.XGPP, state: s.gR.CANCELLATION_PENDING, entitlement_id: t, redirect: null }), d();
+        (c = { perk: r.n9.XGPP, state: r.gR.CANCELLATION_PENDING, entitlement_id: t, redirect: null }), u();
     },
     LOGOUT: function () {
-        (l = null), (u = s.Px.NOT_FETCHED), (c = null);
+        (c = null), (o = r.Px.NOT_FETCHED), (d = null);
     },
 });

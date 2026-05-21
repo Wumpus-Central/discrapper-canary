@@ -1,19 +1,18 @@
-"use strict";
-n.d(t, { $: () => s, A: () => a });
-var i = n(32731),
-    r = n(520606);
-let s = (e) => e instanceof a;
-class a extends r.A {
+i.d(e, { $: () => s, A: () => n });
+var r = i(32731),
+    l = i(520606);
+let s = (t) => t instanceof n;
+class n extends l.A {
     sku;
-    constructor(e) {
-        super(e), (this.skuProductLine = e.sku.productLine), (this.sku = e.sku);
+    constructor(t) {
+        super(t), (this.skuProductLine = t.sku.productLine), (this.sku = t.sku);
     }
-    static fromServer(e) {
-        let t = i.A.createFromServer(e.sku);
-        if (null == t) throw Error("SKU not found");
-        return new a({ ...e, sku: t });
+    static fromServer(t) {
+        let e = r.A.createFromServer(t.sku);
+        if (null == e) throw Error("SKU not found");
+        return new n({ ...t, sku: e });
     }
-    static fromSKU(e) {
-        return null == e ? null : new a({ sku_id: e.id, sku_product_line: e.productLine, sku_name: e.name, sku: e });
+    static fromSKU(t) {
+        return null == t ? null : new n({ sku_id: t.id, sku_product_line: t.productLine, sku_name: t.name, sku: t });
     }
 }

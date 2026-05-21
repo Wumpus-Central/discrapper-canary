@@ -1,35 +1,34 @@
-"use strict";
-n.d(t, { A: () => u });
-var i = n(627968),
-    r = n(64700),
-    s = n(770178),
-    a = n(765548);
-let o = { width: "100%", height: "100%", display: "flex" },
-    l = { width: "100%", height: "100%", flex: 1 };
+r.d(t, { A: () => u });
+var s = r(627968),
+    n = r(64700),
+    l = r(770178),
+    i = r(765548);
+let a = { width: "100%", height: "100%", display: "flex" },
+    o = { width: "100%", height: "100%", flex: 1 };
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return r.forwardRef(function (n, u) {
-        let [c, d] = r.useState({ width: 0, height: 0 }),
-            _ = (0, a.A)((e) => {
+    return n.forwardRef(function (r, u) {
+        let [c, d] = n.useState({ width: 0, height: 0 }),
+            h = (0, i.A)((e) => {
                 if (null != e) {
-                    let { width: t, height: n } = e;
-                    d({ width: t, height: n });
+                    let { width: t, height: r } = e;
+                    d({ width: t, height: r });
                 }
             }),
-            f = (0, a.A)((e) => {
-                _(e.contentRect);
+            m = (0, i.A)((e) => {
+                h(e.contentRect);
             }),
-            h = (0, s.w)(f, [], t);
+            p = (0, l.w)(m, [], t);
         return (
-            r.useImperativeHandle(u, () => ({
+            n.useImperativeHandle(u, () => ({
                 triggerResize: () => {
-                    _(h.current?.getBoundingClientRect());
+                    h(p.current?.getBoundingClientRect());
                 },
             })),
-            (0, i.jsx)("div", {
-                ref: h,
-                style: o,
-                children: (0, i.jsx)(e, { ...n, width: c.width, height: c.height, style: l }),
+            (0, s.jsx)("div", {
+                ref: p,
+                style: a,
+                children: (0, s.jsx)(e, { ...r, width: c.width, height: c.height, style: o }),
             })
         );
     });

@@ -1,70 +1,69 @@
-"use strict";
-n.d(t, { A: () => y, D: () => C });
+n.d(t, { A: () => g, D: () => h });
 var i = n(627968);
 n(64700);
-var r = n(503698),
-    s = n.n(r),
-    a = n(284009),
-    o = n.n(a),
-    l = n(17928),
-    u = n(554146),
-    c = n(417098),
-    d = n(736653),
-    _ = n(573648),
-    f = n(619006),
-    h = n(145643),
-    p = n(826673),
-    E = n(468689),
-    m = n(773669),
-    g = n(967198),
-    A = n(942370),
-    I = n(652215),
-    T = n(452832),
+var l = n(503698),
+    r = n.n(l),
+    s = n(284009),
+    a = n.n(s),
+    c = n(17928),
+    o = n(554146);
+if (21552 == n.j) var d = n(417098);
+var u = n(736653),
+    E = n(573648),
+    A = n(619006),
+    _ = n(145643),
+    T = n(826673),
+    I = n(468689),
+    N = n(773669),
+    R = n(967198),
+    m = n(942370),
+    C = n(652215),
+    p = n(230451),
     S = n(375708),
-    N = n(448759);
-function y(e) {
+    O = n(448759);
+function g(e) {
     let { markAsDismissed: t } = e,
-        n = g.A.getGuildId(),
-        r = (0, d.DP)(),
-        a = (0, l.bG)([m.default], () => m.default.locale);
-    o()(n, "Guild Id must be defined");
-    let f = _.A.get(I.fg2.RIOT_GAMES),
-        h = A.af.toLocaleDateString(a, { month: "long", day: "numeric", year: "numeric" });
-    return (0, i.jsxs)(c.$T, {
-        color: c.Hv.WARNING,
+        n = R.A.getGuildId(),
+        l = (0, u.DP)(),
+        s = (0, c.bG)([N.default], () => N.default.locale);
+    a()(n, "Guild Id must be defined");
+    let A = E.A.get(C.fg2.RIOT_GAMES),
+        _ = m.af.toLocaleDateString(s, { month: "long", day: "numeric", year: "numeric" });
+    return (0, i.jsxs)(d.$T, {
+        color: d.Hv.WARNING,
         children: [
-            (0, i.jsx)(c.PM, {
-                onClick: () => (0, p.Dr)(u.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE),
-                noticeType: I.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
+            (0, i.jsx)(d.PM, {
+                onClick: () => (0, T.Dr)(o.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE),
+                noticeType: C.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
             }),
             (0, i.jsx)("img", {
-                src: "light" === r ? f.icon.blackSVG : f.icon.whiteSVG,
-                alt: S.intl.string(T.default["1S6oAo"]),
-                className: s()(N.tV, N._R),
+                src: "light" === l ? A.icon.blackSVG : A.icon.whiteSVG,
+                alt: S.intl.string(p.default["1S6oAo"]),
+                className: r()(O.tV, O._R),
             }),
-            S.intl.format(T.default.kb0maj, { date: h }),
-            (0, i.jsx)(c.Z_, {
+            S.intl.format(p.default.kb0maj, { date: _ }),
+            (0, i.jsx)(d.Z_, {
                 onClick: () => {
-                    t(), E.A.open(n, I.BEX.ROLES);
+                    t(), I.A.open(n, C.BEX.ROLES);
                 },
-                noticeType: I.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
-                className: N.HE,
-                children: S.intl.string(T.default.spsZYI),
+                noticeType: C.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
+                className: O.HE,
+                children: S.intl.string(p.default.spsZYI),
             }),
-            (0, i.jsx)(c.zr, { onClick: () => t(), className: N.wX, children: S.intl.string(T.default["MVB/Ab"]) }),
+            (0, i.jsx)(d.zr, { onClick: () => t(), className: O.wX, children: S.intl.string(p.default["MVB/Ab"]) }),
         ],
     });
 }
-function C(e) {
+function h(e) {
     e.forEach((e) => {
-        null == h.A.getGuildRoleConnectionsConfiguration(e.id) && (0, f.os)(e.guildId, e.id);
+        null == _.A.getGuildRoleConnectionsConfiguration(e.id) && (0, A.os)(e.guildId, e.id);
     });
-    let t = e.map((e) => h.A.getGuildRoleConnectionsConfiguration(e.id));
+    let t = e.map((e) => _.A.getGuildRoleConnectionsConfiguration(e.id));
     return (
         null != t &&
         t.some((e) =>
             e?.some((e) =>
-                e.some((e) => e.connectionType === I.fg2.RIOT_GAMES || e.connectionType === I.fg2.LEAGUE_OF_LEGENDS),
+                e.some((e) => e.connectionType === C.fg2.RIOT_GAMES || e.connectionType === C.fg2.LEAGUE_OF_LEGENDS),
             ),
         )
     );

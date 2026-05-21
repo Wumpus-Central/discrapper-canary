@@ -1,60 +1,59 @@
-"use strict";
-n.d(t, { x: () => g });
+n.d(t, { x: () => R });
 var i = n(627968);
 n(64700);
-var r = n(562708),
-    s = n(877624),
-    a = n(403581),
-    o = n(534514),
-    l = n(834730),
-    u = n(232582),
-    c = n(821609),
-    d = n(349288),
-    _ = n(212245),
-    f = n(688810),
-    h = n(139286),
-    p = n(498470),
-    E = n(637706),
-    m = n(975841);
-let g = (e) => {
+var l = n(562708),
+    r = n(877624),
+    s = n(403581),
+    a = n(534514),
+    c = n(834730),
+    o = n(232582),
+    d = n(821609),
+    u = n(349288),
+    E = n(212245),
+    A = n(688810),
+    _ = n(139286),
+    T = n(498470),
+    I = n(637706),
+    N = n(975841);
+let R = (e) => {
     let { componentId: t, promotionBannerMarketingComponentFields: n } = e,
-        { analyticsLocations: g } = (0, f.Ay)(),
-        A = (0, _.p)();
-    (0, h.A)({
-        type: r.ImpressionTypes.VIEW,
-        name: r.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-        properties: { component_type: s.C.MARKETING_PAGE_BANNER, component_id: t },
+        { analyticsLocations: R } = (0, A.Ay)(),
+        m = (0, E.p)();
+    (0, _.A)({
+        type: l.ImpressionTypes.VIEW,
+        name: l.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+        properties: { component_type: r.C.MARKETING_PAGE_BANNER, component_id: t },
     });
-    let I = (0, p.h)({
-            buttonAction: n.button?.buttonAction ?? u.dz.OPEN_TIER_2_PAYMENT_MODAL,
+    let C = (0, T.h)({
+            buttonAction: n.button?.buttonAction ?? o.dz.OPEN_TIER_2_PAYMENT_MODAL,
             deeplinkSection: n.button?.deeplinkSection,
-            analyticsLocations: g,
-            analyticsLocation: A.location,
+            analyticsLocations: R,
+            analyticsLocation: m.location,
         }),
-        T = (0, E.a)(n.body),
-        S = (0, E.C)(n.helpArticle, n.helpArticleId);
+        p = (0, I.a)(n.body),
+        S = (0, I.C)(n.helpArticle, n.helpArticleId);
     return (0, i.jsxs)("div", {
-        className: m.kL,
+        className: N.kL,
         children: [
             (0, i.jsx)("div", {
-                className: m.LY,
-                children: (0, i.jsx)("img", { src: n.assetUrl, className: m.ot, alt: "" }),
+                className: N.LY,
+                children: (0, i.jsx)("img", { src: n.assetUrl, className: N.ot, alt: "" }),
             }),
             (0, i.jsxs)("div", {
-                className: m.IH,
+                className: N.IH,
                 children: [
-                    (0, i.jsx)(o.D, { variant: "heading-md/semibold", color: "text-strong", children: n.header }),
-                    (0, i.jsxs)(l.E, {
+                    (0, i.jsx)(a.D, { variant: "heading-md/semibold", color: "text-strong", children: n.header }),
+                    (0, i.jsxs)(c.E, {
                         variant: "text-md/medium",
                         color: "text-subtle",
-                        className: m.tb,
+                        className: N.tb,
                         children: [
-                            T,
+                            p,
                             null != S &&
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
                                         "\xa0",
-                                        (0, i.jsx)(d.Anchor, { className: m.$T, href: S.url, children: S.linkText }),
+                                        (0, i.jsx)(u.Anchor, { className: N.$T, href: S.url, children: S.linkText }),
                                     ],
                                 }),
                         ],
@@ -63,13 +62,13 @@ let g = (e) => {
             }),
             null != n.button &&
                 (0, i.jsx)("div", {
-                    className: m.UD,
-                    children: (0, i.jsx)(c.$, {
+                    className: N.UD,
+                    children: (0, i.jsx)(d.$, {
                         variant: "expressive",
                         size: "md",
-                        onClick: I,
+                        onClick: C,
                         text: n.button.copy,
-                        icon: a.t,
+                        icon: s.t,
                     }),
                 }),
         ],

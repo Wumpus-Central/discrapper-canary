@@ -1,56 +1,55 @@
-"use strict";
-n.d(t, { A: () => f });
-var i = n(64700),
-    r = n(17928),
-    s = n(919395),
-    a = n(696451),
-    o = n(486020),
-    l = n(775602),
-    u = n(531685),
-    c = n(940622),
-    d = n(601255),
-    _ = n(476324);
-let f = (e) => {
-    let { user: t, guildId: n, size: f, avatarDecorationOverride: h, onlyAnimateOnHoverOrFocus: p = !1 } = e,
-        [E, m] = i.useState(!1),
-        { canAnimate: g } = ((e, t) => {
-            let n = (0, r.bG)([l.A], () => l.A.useReducedMotion),
-                s = (0, r.bG)([u.A], () => u.A.isFocused()),
-                [a, o] = i.useState(!1),
-                c = i.useRef(null);
+a.d(t, { A: () => _ });
+var r = a(64700),
+    n = a(17928),
+    l = a(919395),
+    o = a(696451),
+    i = a(486020),
+    s = a(775602),
+    c = a(531685),
+    u = a(940622),
+    p = a(601255),
+    d = a(476324);
+let _ = (e) => {
+    let { user: t, guildId: a, size: _, avatarDecorationOverride: A, onlyAnimateOnHoverOrFocus: v = !1 } = e,
+        [g, f] = r.useState(!1),
+        { canAnimate: m } = ((e, t) => {
+            let a = (0, n.bG)([s.A], () => s.A.useReducedMotion),
+                l = (0, n.bG)([c.A], () => c.A.isFocused()),
+                [o, i] = r.useState(!1),
+                u = r.useRef(null);
             return (
-                i.useEffect(() => {
-                    null !== c.current && (clearTimeout(c.current), (c.current = null));
-                    let i = s && (e || (!n && !t));
-                    i && n
-                        ? (c.current = window.setTimeout(() => {
-                              o(!0);
+                r.useEffect(() => {
+                    null !== u.current && (clearTimeout(u.current), (u.current = null));
+                    let r = l && (e || (!a && !t));
+                    r && a
+                        ? (u.current = window.setTimeout(() => {
+                              i(!0);
                           }, 1e3))
-                        : o(i);
-                }, [s, e, n, t]),
-                i.useEffect(
+                        : i(r);
+                }, [l, e, a, t]),
+                r.useEffect(
                     () => () => {
-                        null !== c.current && (clearTimeout(c.current), (c.current = null));
+                        null !== u.current && (clearTimeout(u.current), (u.current = null));
                     },
                     [],
                 ),
-                { canAnimate: a }
+                { canAnimate: o }
             );
-        })(E, p),
-        A = (0, r.bG)([a.Ay], () => (null != n && null != t ? a.Ay.getMember(n, t.id) : null)),
-        I = (0, d.A)((0, s.lw)({ userValue: t?.avatarDecoration, guildValue: A?.avatarDecoration, guildId: n })),
-        T = (0, c.VU)(),
-        S = i.useMemo(
+        })(g, v),
+        E = (0, n.bG)([o.Ay], () => (null != a && null != t ? o.Ay.getMember(a, t.id) : null)),
+        b = (0, p.A)((0, l.lw)({ userValue: t?.avatarDecoration, guildValue: E?.avatarDecoration, guildId: a })),
+        R = (0, u.VU)(),
+        O = r.useMemo(
             () =>
-                null != T && "" !== T
-                    ? T
-                    : (0, o.F_)({ avatarDecoration: void 0 !== h ? h : I, canAnimate: g, size: f }),
-            [T, h, I, g, f],
+                null != R && "" !== R
+                    ? R
+                    : (0, i.F_)({ avatarDecoration: void 0 !== A ? A : b, canAnimate: m, size: _ }),
+            [R, A, b, m, _],
         );
     return {
-        avatarPlaceholderSrc: _,
-        avatarDecorationSrc: S,
-        isAvatarDecorationAnimating: g,
-        eventHandlers: { onMouseEnter: i.useCallback(() => m(!0), []), onMouseLeave: i.useCallback(() => m(!1), []) },
+        avatarPlaceholderSrc: d,
+        avatarDecorationSrc: O,
+        isAvatarDecorationAnimating: m,
+        eventHandlers: { onMouseEnter: r.useCallback(() => f(!0), []), onMouseLeave: r.useCallback(() => f(!1), []) },
     };
 };

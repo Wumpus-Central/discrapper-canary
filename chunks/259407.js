@@ -1,66 +1,65 @@
-"use strict";
-n.d(t, { Ay: () => p, mt: () => h });
-var i,
-    r = n(627968),
-    s = n(64700),
-    a = n(998218),
-    o = n(652215),
-    l = n(472840);
+t.d(l, { Ay: () => g, mt: () => p });
+var r,
+    s = t(627968),
+    i = t(64700),
+    n = t(998218),
+    a = t(652215),
+    o = t(472840);
 let u = "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts";
-function c(e, t) {
-    let n = a.A.toURLSafe(e ?? "");
-    if (null === n) return "";
-    if (null == t) return n.toString();
-    for (let e in t) {
-        let i = t[e];
-        null != i && n.searchParams.set(e, i);
+function d(e, l) {
+    let t = n.A.toURLSafe(e ?? "");
+    if (null === t) return "";
+    if (null == l) return t.toString();
+    for (let e in l) {
+        let r = l[e];
+        null != r && t.searchParams.set(e, r);
     }
-    return n.toString();
+    return t.toString();
 }
-function d(e) {
-    let { src: t, autoMute: n, ...i } = e,
-        a = s.useRef(null),
-        o = s.useCallback(
+function h(e) {
+    let { src: l, autoMute: t, ...r } = e,
+        n = i.useRef(null),
+        a = i.useCallback(
             (e) => {
                 e.data["x-tiktok-player"] &&
                     "https://www.tiktok.com" === e.origin &&
                     "onPlayerReady" === e.data.type &&
-                    (n && a.current?.contentWindow?.postMessage({ type: "mute", "x-tiktok-player": !0 }, e.origin),
-                    a.current?.contentWindow?.postMessage({ type: "play", "x-tiktok-player": !0 }, e.origin));
+                    (t && n.current?.contentWindow?.postMessage({ type: "mute", "x-tiktok-player": !0 }, e.origin),
+                    n.current?.contentWindow?.postMessage({ type: "play", "x-tiktok-player": !0 }, e.origin));
             },
-            [n],
+            [t],
         );
-    s.useEffect(() => (window.addEventListener("message", o), () => window.removeEventListener("message", o)), [o]);
-    let l = c(t, { utm_source: "discord.gg" });
-    return (0, r.jsx)(f, { src: l, ref: a, ...i });
+    i.useEffect(() => (window.addEventListener("message", a), () => window.removeEventListener("message", a)), [a]);
+    let o = d(l, { utm_source: "discord.gg" });
+    return (0, s.jsx)(m, { src: o, ref: n, ...r });
 }
-function _(e) {
-    let { src: t, autoMute: n, ...i } = e,
-        s = c(t, { autoplay: "1", auto_play: "1", mute: n ? "1" : void 0, pageType: o.NzX });
-    return (0, r.jsx)(f, { src: s, ...i });
+function c(e) {
+    let { src: l, autoMute: t, ...r } = e,
+        i = d(l, { autoplay: "1", auto_play: "1", mute: t ? "1" : void 0, pageType: a.NzX });
+    return (0, s.jsx)(m, { src: i, ...r });
 }
-let f = s.forwardRef(function (e, t) {
-    let { allowFullScreen: n, ...i } = e,
-        s = n ? `${u} allow-fullscreen` : u;
-    return (0, r.jsx)("iframe", {
-        ref: t,
-        className: l.Qu,
-        allow: n ? "autoplay; fullscreen" : "autoplay",
+let m = i.forwardRef(function (e, l) {
+    let { allowFullScreen: t, ...r } = e,
+        i = t ? `${u} allow-fullscreen` : u;
+    return (0, s.jsx)("iframe", {
+        ref: l,
+        className: o.Qu,
+        allow: t ? "autoplay; fullscreen" : "autoplay",
         frameBorder: 0,
         scrolling: "no",
-        sandbox: s,
-        allowFullScreen: n,
-        ...i,
+        sandbox: i,
+        allowFullScreen: t,
+        ...r,
     });
 });
-var h = (((i = {}).YOUTUBE = "YouTube"), (i.TIKTOK = "TikTok"), i);
-function p(e) {
+var p = (((r = {}).YOUTUBE = "YouTube"), (r.TIKTOK = "TikTok"), r);
+function g(e) {
     switch (e.provider) {
         case "YouTube":
-            return (0, r.jsx)(_, { ...e });
+            return (0, s.jsx)(c, { ...e });
         case "TikTok":
-            return (0, r.jsx)(d, { ...e });
+            return (0, s.jsx)(h, { ...e });
         default:
-            return (0, r.jsx)(f, { ...e });
+            return (0, s.jsx)(m, { ...e });
     }
 }

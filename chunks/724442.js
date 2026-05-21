@@ -1,5 +1,4 @@
-"use strict";
+n.d(t, { A: () => i });
 function i(e) {
     return e.current;
 }
-n.d(t, { A: () => i });

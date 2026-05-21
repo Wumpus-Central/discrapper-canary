@@ -1,23 +1,22 @@
-"use strict";
-n.d(t, { $: () => a });
-var i = n(145310),
-    r = n(938973),
-    s = n(788868);
-let a = (e) => {
+r.d(i, { $: () => s });
+var n = r(145310),
+    e = r(938973),
+    l = r(788868);
+let s = (t) => {
     let {
-            subscriptionTier: t = null,
-            hasActivePromotion: n = !1,
-            useShorterCTA: a = !1,
-            isPersistentCTA: o = !1,
-            buttonTextOverride: l,
-            ...u
-        } = e,
-        { buttonText: c, marketingSubscriptionTierSkuId: d } = (0, i.s)({
-            subscriptionTier: t,
-            hasActivePromotion: n,
-            useShorterCTA: a,
-            isPersistentCTA: o,
+            subscriptionTier: i = null,
+            hasActivePromotion: r = !1,
+            useShorterCTA: s = !1,
+            isPersistentCTA: u = !1,
+            buttonTextOverride: a,
+            ...o
+        } = t,
+        { buttonText: p, marketingSubscriptionTierSkuId: T } = (0, n.s)({
+            subscriptionTier: i,
+            hasActivePromotion: r,
+            useShorterCTA: s,
+            isPersistentCTA: u,
         }),
-        { subscribeButtonProps: _ } = (0, r.B)({ ...u, subscriptionTier: d, buttonTextOverride: l ?? c });
-    return { subscribeButtonProps: _, subscriptionTier: d === s.pe.NONE ? null : d };
+        { subscribeButtonProps: c } = (0, e.B)({ ...o, subscriptionTier: T, buttonTextOverride: a ?? p });
+    return { subscribeButtonProps: c, subscriptionTier: T === l.pe.NONE ? null : T };
 };

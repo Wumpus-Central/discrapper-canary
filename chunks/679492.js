@@ -1,66 +1,65 @@
-"use strict";
-n.d(t, { Hl: () => c, NR: () => _, Pq: () => f, fC: () => d });
+n.d(e, { Hl: () => d, NR: () => S, Pq: () => A, fC: () => c });
 var i = n(627968),
-    r = n(64700),
-    s = n(284009),
-    a = n.n(s),
-    o = n(451988),
-    l = n(8925);
-let u = r.createContext(void 0);
-function c(e) {
-    let { value: t, children: n } = e;
-    return (0, i.jsx)(u.Provider, { value: t, children: n });
+    l = n(64700),
+    a = n(284009),
+    s = n.n(a),
+    r = n(451988),
+    u = n(8925);
+let o = l.createContext(void 0);
+function d(t) {
+    let { value: e, children: n } = t;
+    return (0, i.jsx)(o.Provider, { value: e, children: n });
 }
-function d() {
-    let [e, t] = r.useState(null),
-        [n, i] = r.useState(null),
-        [s, a] = r.useState(null),
-        [u, c] = r.useState(r.createRef()),
-        d = r.useCallback((e) => {
-            t(e.interactionType), i(e.interactionSource), a(e.interactionSourceId);
+function c() {
+    let [t, e] = l.useState(null),
+        [n, i] = l.useState(null),
+        [a, s] = l.useState(null),
+        [o, d] = l.useState(l.createRef()),
+        c = l.useCallback((t) => {
+            e(t.interactionType), i(t.interactionSource), s(t.interactionSourceId);
         }, []),
-        _ = r.useCallback((e) => {
-            c(e);
+        S = l.useCallback((t) => {
+            d(t);
         }, []),
-        f = r.useCallback(() => {
-            d({ interactionType: null, interactionSource: null, interactionSourceId: null });
-        }, [d]),
-        [h, p] = r.useState(!1),
-        [E, m] = r.useState(null),
-        [g] = r.useState(new o.Ep()),
-        A = r.useCallback(
-            (e) => {
-                m(e), p(!0), null === e ? g.stop() : g.start(l.ME, () => p(!1));
+        A = l.useCallback(() => {
+            c({ interactionType: null, interactionSource: null, interactionSourceId: null });
+        }, [c]),
+        [T, g] = l.useState(!1),
+        [h, C] = l.useState(null),
+        [f] = l.useState(new r.Ep()),
+        x = l.useCallback(
+            (t) => {
+                C(t), g(!0), null === t ? f.stop() : f.start(u.ME, () => g(!1));
             },
-            [g],
+            [f],
         );
     return (
-        r.useEffect(() => {
-            g.stop();
-        }, [g]),
-        r.useMemo(
+        l.useEffect(() => {
+            f.stop();
+        }, [f]),
+        l.useMemo(
             () => ({
-                interactionType: e,
+                interactionType: t,
                 interactionSource: n,
-                interactionSourceId: s,
-                onInteraction: d,
-                setInteractionToast: A,
-                resetInteraction: f,
-                showInteractionToast: h,
-                interactionTypeSent: E,
-                interactionPopoutTargetRef: u,
-                onInteractionPopoutTargetRefChange: _,
+                interactionSourceId: a,
+                onInteraction: c,
+                setInteractionToast: x,
+                resetInteraction: A,
+                showInteractionToast: T,
+                interactionTypeSent: h,
+                interactionPopoutTargetRef: o,
+                onInteractionPopoutTargetRefChange: S,
             }),
-            [d, A, n, s, h, e, E, f, u, _],
+            [c, x, n, a, T, t, h, A, o, S],
         )
     );
 }
-function _() {
-    return r.useContext(u);
+function S() {
+    return l.useContext(o);
 }
-function f() {
-    let e = _();
+function A() {
+    let t = S();
     return (
-        a()(null != e, "must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider"), e
+        s()(null != t, "must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider"), t
     );
 }
