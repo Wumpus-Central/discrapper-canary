@@ -53,10 +53,6 @@ let _ = {
             return t ? o.intl.string(o.t.xGjjkd) : o.intl.string(o.t.BTxm69);
         },
         ctaAction: () => (0, r.pX)(s.BVt.NITRO_HOME),
-        ctaVariant: (e) => {
-            let { owned: t } = e;
-            return t ? "secondary" : "expressive";
-        },
     },
     [i.$.GUILD_BOOSTER]: {
         ctaLabel: () => o.intl.string(o.t["6LHsjg"]),
@@ -66,12 +62,10 @@ let _ = {
                 "_blank",
                 "noopener,noreferrer",
             ),
-        ctaVariant: () => "secondary",
     },
     [i.$.ORB_PROFILE]: {
-        ctaLabel: () => o.intl.string(o.t["0TmQRG"]),
+        ctaLabel: () => o.intl.string(o.t.C2rTrm),
         ctaAction: () => (0, r.pX)(s.BVt.COLLECTIBLES_SHOP_WITH_TAB(a.G2.ORBS)),
-        ctaVariant: () => "secondary",
     },
 };
 function f(e) {

@@ -37,8 +37,8 @@ function F(e, t, n) {
 var U = n(92111),
     k = n(778712),
     P = n(375708),
-    V = n(490308);
-function D(e) {
+    D = n(490308);
+function V(e) {
     return `badge-tab-${e}`;
 }
 function G(e) {
@@ -51,23 +51,23 @@ function z(e) {
     return (0, l.jsx)(S.D, {
         ...s,
         role: "tab",
-        id: D(t.badge_id),
+        id: V(t.badge_id),
         "aria-label": t.name,
         "aria-selected": n,
         "aria-controls": n ? U.hJ : void 0,
-        className: g()(V.oL, n && V.xO),
+        className: g()(D.oL, n && D.xO),
         onFocus: s.onFocus,
         onClick: i,
         children:
             null != t.simple_icon_url &&
-            (0, l.jsx)("img", { src: t.simple_icon_url, alt: "", "aria-hidden": !0, className: V.pW }),
+            (0, l.jsx)("img", { src: t.simple_icon_url, alt: "", "aria-hidden": !0, className: D.pW }),
     });
 }
 function $(e) {
     let { label: t, navId: n, badges: i, selectedBadgeId: a, onSelectBadge: s } = e,
         r = (0, I.A)(n, E.Gl.HORIZONTAL);
     return (0, l.jsxs)("div", {
-        className: V.zE,
+        className: D.zE,
         children: [
             "heading" === t.type &&
                 (0, l.jsx)(p.D, { id: t.id, variant: "heading-sm/medium", color: "text-default", children: t.text }),
@@ -81,7 +81,7 @@ function $(e) {
                             role: "tablist",
                             "aria-labelledby": "heading" === t.type ? t.id : void 0,
                             "aria-label": "aria" === t.type ? t.text : void 0,
-                            className: V.yq,
+                            className: D.yq,
                             children: i.map((e, t) =>
                                 (0, l.jsx)(
                                     z,
@@ -123,7 +123,7 @@ function L(e) {
         _ =
             null != b && v && null != x
                 ? (0, l.jsxs)("span", {
-                      className: V._p,
+                      className: D._p,
                       children: [(0, l.jsx)(j.eu, { src: x, size: k._3.SIZE_24, "aria-hidden": !0 }), b],
                   })
                 : b,
@@ -131,13 +131,13 @@ function L(e) {
         w = r && null != d ? P.intl.string(P.t["75s2Rq"]) : P.intl.string(P.t["62xU4E"]),
         y = r && null != d ? P.intl.formatToPlainString(P.t.BCjSZy, { username: d }) : P.intl.string(P.t.UqnlQF);
     return (0, l.jsx)("div", {
-        className: V.ws,
+        className: D.ws,
         children: (0, l.jsxs)(T.F, {
             component: (0, l.jsxs)("div", {
-                className: V.NG,
+                className: D.NG,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: V.kc,
+                        className: D.kc,
                         children: [
                             !v && null != x && (0, l.jsx)(j.eu, { src: x, size: k._3.SIZE_24, "aria-hidden": !0 }),
                             (0, l.jsx)(p.D, { variant: "heading-lg/semibold", color: "text-strong", children: f }),
@@ -148,7 +148,7 @@ function L(e) {
             }),
             children: [
                 (0, l.jsxs)("div", {
-                    className: V.hG,
+                    className: D.hG,
                     children: [
                         g.length > 0 &&
                             (0, l.jsx)($, {
@@ -175,7 +175,7 @@ function L(e) {
                 }),
                 r &&
                     (0, l.jsx)("div", {
-                        className: V.HO,
+                        className: D.HO,
                         children: (0, l.jsx)(N.$, {
                             variant: "secondary",
                             size: "sm",
@@ -209,9 +209,9 @@ function Z(e) {
         m = s && null != r ? P.intl.formatToPlainString(P.t.KyTwIh, { username: r }) : P.intl.string(P.t.crwYbF);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(h.E, { id: o, variant: "text-xs/medium", color: "text-subtle", className: V.Hm, children: m }),
+            (0, l.jsx)(h.E, { id: o, variant: "text-xs/medium", color: "text-subtle", className: D.Hm, children: m }),
             (0, l.jsx)("ul", {
-                className: V.by,
+                className: D.by,
                 "aria-labelledby": o,
                 children: H.sp.map((e) => {
                     let t = H.VD[e],
@@ -220,10 +220,10 @@ function Z(e) {
                     return (0, l.jsxs)(
                         "li",
                         {
-                            className: a ? V.Oe : `${V.Oe} ${V.Kv}`,
+                            className: a ? D.Oe : `${D.Oe} ${D.Kv}`,
                             children: [
                                 (0, l.jsx)("img", {
-                                    className: V.Qm,
+                                    className: D.Qm,
                                     src: (0, C.I)(e).standard,
                                     alt: "",
                                     "aria-hidden": !0,
@@ -231,7 +231,7 @@ function Z(e) {
                                 (0, l.jsxs)(h.E, {
                                     variant: "text-xxs/medium",
                                     color: a ? "text-default" : "text-muted",
-                                    className: V.Ou,
+                                    className: D.Ou,
                                     children: [
                                         P.intl.string(t.nameUnformatted),
                                         (0, l.jsx)("br", {}),
@@ -287,17 +287,17 @@ function q(e) {
     let u = a && c,
         m = !a && d && null != s;
     return (0, l.jsxs)("div", {
-        className: V.bn,
+        className: D.bn,
         children: [
             null != r && (0, l.jsx)(j.eu, { src: r, size: k._3.SIZE_16, "aria-hidden": !0 }),
-            (0, l.jsx)(h.E, { variant: "text-xs/medium", color: "text-subtle", className: V.CT, children: t }),
+            (0, l.jsx)(h.E, { variant: "text-xs/medium", color: "text-subtle", className: D.CT, children: t }),
             (u || m) &&
                 (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)(h.E, {
                             variant: "text-xs/medium",
                             color: "text-subtle",
-                            className: V.CT,
+                            className: D.CT,
                             "aria-hidden": !0,
                             children: "\xb7",
                         }),
@@ -365,22 +365,22 @@ function J(e) {
     return (0, l.jsx)("div", {
         id: U.hJ,
         role: "tabpanel",
-        "aria-labelledby": D(t.badge_id),
-        className: V.SV,
+        "aria-labelledby": V(t.badge_id),
+        className: D.SV,
         children: (0, l.jsxs)(_.d_, {
-            className: V.C9,
+            className: D.C9,
             children: [
-                null != T && (0, l.jsx)("img", { className: V.y2, src: T, alt: "", "aria-hidden": !0 }),
+                null != T && (0, l.jsx)("img", { className: D.y2, src: T, alt: "", "aria-hidden": !0 }),
                 (0, l.jsxs)("div", {
-                    className: V.OU,
+                    className: D.OU,
                     children: [
                         (0, l.jsxs)("div", {
-                            className: V.cQ,
+                            className: D.cQ,
                             children: [
                                 (0, l.jsx)(p.D, {
                                     variant: "display-sm",
                                     color: "text-strong",
-                                    className: g()(V._r, k && V.tN),
+                                    className: g()(D._r, k && D.tN),
                                     children: $,
                                 }),
                                 (0, l.jsx)(q, {
@@ -396,11 +396,11 @@ function J(e) {
                             ],
                         }),
                         (0, l.jsxs)("div", {
-                            className: V.oA,
+                            className: D.oA,
                             children: [
                                 null != I &&
                                     (0, l.jsxs)("div", {
-                                        className: V.sn,
+                                        className: D.sn,
                                         children: [
                                             (0, l.jsx)(f.E, { ...I }),
                                             (0, l.jsx)(h.E, {
@@ -412,33 +412,33 @@ function J(e) {
                                     }),
                                 ("" !== L || null != O) &&
                                     (0, l.jsxs)("div", {
-                                        className: V.d9,
+                                        className: D.d9,
                                         children: [
                                             (0, l.jsxs)("div", {
-                                                className: V.E4,
+                                                className: D.E4,
                                                 children: [
                                                     (0, l.jsxs)("div", {
-                                                        className: V.jv,
+                                                        className: D.jv,
                                                         children: [
                                                             J &&
                                                                 (0, l.jsx)(h.E, {
                                                                     variant: "text-xs/medium",
                                                                     color: "text-subtle",
-                                                                    className: V.c$,
+                                                                    className: D.c$,
                                                                     children: P.intl.string(P.t["/Gmn3f"]),
                                                                 }),
                                                             "" !== L &&
                                                                 (0, l.jsx)(h.E, {
                                                                     variant: "text-sm/medium",
                                                                     color: "text-default",
-                                                                    className: V.ij,
+                                                                    className: D.ij,
                                                                     children: L,
                                                                 }),
                                                         ],
                                                     }),
                                                     null != O &&
                                                         (0, l.jsx)(N.$, {
-                                                            variant: O.ctaVariant({ owned: m }),
+                                                            variant: m ? "secondary" : k ? "expressive" : "primary",
                                                             size: "sm",
                                                             onClick: H,
                                                             text: O.ctaLabel({ owned: m }),
@@ -447,7 +447,7 @@ function J(e) {
                                             }),
                                             k &&
                                                 (0, l.jsxs)("div", {
-                                                    className: V.cJ,
+                                                    className: D.cJ,
                                                     children: [
                                                         (0, l.jsx)(w.c, {}),
                                                         (0, l.jsx)(Z, {
@@ -511,15 +511,15 @@ function Y(e) {
         transitionState: t,
         size: s.rI.DYNAMIC,
         hideShadow: !0,
-        className: V.CR,
+        className: D.CR,
         children: (0, l.jsxs)(s.$m, {
             "data-migration-pending": !0,
             scrollbarType: "none",
-            className: V.jE,
+            className: D.jE,
             children: [
-                (0, l.jsx)("div", { className: V.b, children: (0, l.jsx)(r.J, { onClick: F, size: "sm" }) }),
+                (0, l.jsx)("div", { className: D.b, children: (0, l.jsx)(r.J, { onClick: F, size: "sm" }) }),
                 S
-                    ? (0, l.jsx)("div", { className: V.Lq, children: (0, l.jsx)(d.y, {}) })
+                    ? (0, l.jsx)("div", { className: D.Lq, children: (0, l.jsx)(d.y, {}) })
                     : (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsx)(L, {
