@@ -2258,6 +2258,7 @@ var eX = n(335871),
         (a[(a.ADS_BUDGET_AB = 5)] = "ADS_BUDGET_AB"),
         (a[(a.AV_WORKER = 6)] = "AV_WORKER"),
         (a[(a.SEO = 7)] = "SEO"),
+        (a[(a.MARKETING = 8)] = "MARKETING"),
         a),
     e0 = (((o = {})[(o.ENABLED = 0)] = "ENABLED"), (o[(o.DISABLED = 1)] = "DISABLED"), o),
     e1 =
