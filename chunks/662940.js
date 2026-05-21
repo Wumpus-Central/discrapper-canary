@@ -1,0 +1,89 @@
+"use strict";
+n.d(t, { C0: () => _, CK: () => p, Dd: () => h, UK: () => c, pv: () => d, vj: () => f });
+var i,
+    r = n(927813),
+    s = n(792620),
+    a = n(814793),
+    o = n(79545),
+    l = n(190107),
+    u = n(375708),
+    c =
+        (((i = {})[(i.PLAY = 0)] = "PLAY"),
+        (i[(i.WATCH = 1)] = "WATCH"),
+        (i[(i.ACTIVITY = 2)] = "ACTIVITY"),
+        (i[(i.INSTANT_PLAY = 3)] = "INSTANT_PLAY"),
+        (i[(i.ARENA = 4)] = "ARENA"),
+        i);
+function d(e) {
+    return (0, s.GL)(e)
+        ? 4 * !!(0, a.ui)(e)
+        : (0, s.vv)(e)
+          ? 1
+          : (0, s.Ki)(e)
+            ? e.config.features.includes(l.Li.CLOUD_GAMING_ACTIVITY)
+                ? 3
+                : 2
+            : 0;
+}
+function _(e) {
+    switch (d(e)) {
+        case 0:
+            return u.intl.string(u.t.U7cCLU);
+        case 1:
+            return u.intl.string(u.t.kfks9Y);
+        case 2:
+            return u.intl.string(u.t.U0sDwa);
+        case 3:
+            return u.intl.string(u.t.V5Qt9D);
+        case 4:
+            return u.intl.string(u.t.P1uOM8);
+    }
+}
+function f(e) {
+    switch (d(e)) {
+        case 3:
+            return u.intl.string(u.t.C2kQR8);
+        case 1:
+            return u.intl.string(u.t.PMVy7M);
+        case 2:
+            return u.intl.string(u.t.RPSnmI);
+        default:
+            return u.intl.string(u.t.cfY4PE);
+    }
+}
+function h(e, t) {
+    let n = new Date(e.startsAt).getTime(),
+        i = Date.now(),
+        s = n <= i && i - n < r.A.Millis.DAY;
+    switch (t) {
+        case o.UA.UNENROLLED:
+            if (s) return u.intl.string(u.t.X6ziWN);
+            return null;
+        case o.UA.COMPLETED:
+        case o.UA.EXPIRED_CLAIMABLE:
+            return u.intl.string(u.t.Zq6s9k);
+        case o.UA.CLAIMED:
+            return u.intl.string(u.t.uOGFB6);
+        case o.UA.EXPIRED:
+            return u.intl.string(u.t["zX/gnV"]);
+        default:
+            return null;
+    }
+}
+function p(e, t, n) {
+    switch (e) {
+        case o.UA.UNENROLLED:
+        case o.UA.ENROLLED:
+        case o.UA.INCOMPLETE:
+            if (null != n) {
+                if (e === o.UA.UNENROLLED) return String(n.target);
+                return `${n.progress}/${n.target}`;
+            }
+            return (0, s.xm)(t);
+        case o.UA.COMPLETED:
+        case o.UA.CLAIMED:
+        case o.UA.EXPIRED:
+        case o.UA.EXPIRED_CLAIMABLE:
+            return null;
+    }
+}

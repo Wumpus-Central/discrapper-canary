@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Pd: () => l, UA: () => o, V3: () => u });
+n.d(t, { AJ: () => c, Pd: () => l, UA: () => o, V3: () => u });
 var i,
     r,
     s = n(31587),
@@ -26,4 +26,8 @@ var u =
     (r[(r.QUEST_EMBED = 3)] = "QUEST_EMBED"),
     (r[(r.ACTIVITY_PANEL = 4)] = "ACTIVITY_PANEL"),
     (r[(r.VOICE_CALL_HEADER = 5)] = "VOICE_CALL_HEADER"),
+    (r[(r.QUEST_HOME_TILE_V2_FOOTER = 6)] = "QUEST_HOME_TILE_V2_FOOTER"),
     r);
+function c(e, t) {
+    return 6 === e ? "overlay-primary" : t;
+}
