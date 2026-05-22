@@ -112,6 +112,7 @@
     box-sizing: border-box;
     display: flex;
     flex: 1;
+    min-width: 0;
     overflow: hidden;
     padding-inline-start: var(--custom-modal-v2-gutter)
 }

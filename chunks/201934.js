@@ -20,8 +20,8 @@ let g = (0, i(945810).mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var M = i(854627),
-    C = i(939496),
+var C = i(854627),
+    M = i(939496),
     j = i(652215),
     p = i(996988),
     I = i(921519);
@@ -29,7 +29,7 @@ let b = l._3.SIZE_40,
     N = x.Ay.getEnableHardwareAcceleration();
 function _(e) {
     let { user: s, status: l, guildId: x, channelId: _, onSelect: k } = e,
-        { theme: E, themeType: y } = (0, C.E)(),
+        { theme: E, themeType: y } = (0, M.E)(),
         F = a.useMemo(() => s.isNonUserBot() || (0, h.c)(s, _), [s, _]),
         { activities: S, isMobileOnline: w } = (0, n.cf)([v.A], () => ({
             activities: v.A.getActivities(s.id),
@@ -45,7 +45,7 @@ function _(e) {
             avatarSrc: P,
             avatarDecorationSrc: z,
             eventHandlers: R,
-        } = (0, M.A)({ userId: s.id, guildId: x, size: b, animateOnHover: !0 }),
+        } = (0, C.A)({ userId: s.id, guildId: x, size: b, animateOnHover: !0 }),
         H = N && U ? r.Js : r.eu;
     return (0, t.jsxs)(o.D, {
         ...(U ? R : {}),
@@ -55,7 +55,7 @@ function _(e) {
         onContextMenu: (e) => {
             (0, u.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    i.e("96167"),
+                    i.e("21986"),
                     i.e("26132"),
                     i.e("46652"),
                     i.e("93190"),
@@ -96,7 +96,7 @@ function _(e) {
             (0, t.jsxs)("div", {
                 className: I.zH,
                 children: [
-                    (0, t.jsx)(c.A, { user: s, className: I.Tc, discriminatorClass: I.D2 }),
+                    (0, t.jsx)(c.A, { user: s, className: I.Tc, usernameClass: I.QC, discriminatorClass: I.D2 }),
                     (0, t.jsx)(A.A, { user: s, activities: S, applicationStream: D, voiceChannel: L }),
                 ],
             }),

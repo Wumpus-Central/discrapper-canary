@@ -3490,7 +3490,8 @@ a-rp {
 
 .profileContentOuter__9c3be {
     height: var(--custom-modal-v2-height);
-    min-height: var(--custom-modal-v2-min-height)
+    min-height: var(--custom-modal-v2-min-height);
+    min-width: 0
 }
 
 @media (min-width:929px) {
@@ -6722,26 +6723,6 @@ div.profileThemedContainer__656be {
     height: 100%;
     pointer-events: auto;
     width: 100%
-}
-
-.container__4db43 {
-    display: grid;
-    gap: var(--space-12);
-    grid-template-columns: 1fr 1fr
-}
-
-.perk__4db43 {
-    align-items: center;
-    display: flex
-}
-
-.icon__4db43 {
-    height: 20px;
-    width: 20px
-}
-
-.text__4db43 {
-    margin-inline-start: var(--space-4)
 }
 
 .profileCustomizationSection__44061 {

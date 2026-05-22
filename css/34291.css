@@ -3018,19 +3018,21 @@
 
 .details__89036 {
     display: flex;
-    flex-direction: column
-}
-
-.details__89036,
-.tag__89036 {
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
     overflow: hidden
 }
 
 .tag__89036 {
     font-size: 16px;
-    line-height: 20px;
-    text-overflow: ellipsis;
-    white-space: nowrap
+    line-height: 20px
+}
+
+.displayName__89036 {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 
 .discriminator__89036 {
@@ -3067,7 +3069,8 @@
 }
 
 .details__0a95c {
-    flex: 1 1 auto
+    flex: 1 1 auto;
+    min-width: 0
 }
 
 .details__0a95c,
@@ -5975,10 +5978,6 @@
 .stacked__19ceb {
     align-items: flex-start;
     flex-direction: column
-}
-
-.errorText__38262 {
-    margin-top: var(--space-4)
 }
 
 .badge__323f7 {
