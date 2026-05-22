@@ -3019,6 +3019,10 @@
     margin-top: 16px
 }
 
+.giftRedemptionLink__9aa63 {
+    margin-top: var(--space-8)
+}
+
 .previewTotalSectionContainer_b41cc5 {
     margin-top: var(--space-16)
 }
@@ -3072,10 +3076,6 @@
     flex-direction: column;
     justify-content: center;
     min-height: 200px
-}
-
-.giftRedemptionLink_bb5449 {
-    margin-top: var(--space-8)
 }
 
 .spinnerColor_bb5449 {
