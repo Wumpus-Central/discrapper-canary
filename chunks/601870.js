@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Zy: "authedAppV2__92059",
     ie: "headerV2__92059",
     TK: "headerText__92059",
@@ -25,4 +25,5 @@ e.exports = {
     qr: "footer__92059",
     hU: "deauthorizeButton__92059",
     Rd: "headingCard__92059",
+    p$: "emptyState__92059",
 };

@@ -25,4 +25,5 @@ e.exports = {
     M4: "connectedAccountVanityMetadataCreatedAt__41de9",
     Z3: "connectionMetadataUpsellTag__41de9",
     vt: "connectionMetadataUpsellDescription__41de9",
+    p$: "emptyState__41de9",
 };

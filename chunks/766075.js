@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { USER_SETTINGS_MODAL_KEY: () => f, openUserSettings: () => h });
+n.r(t), n.d(t, { USER_SETTINGS_MODAL_KEY: () => p, openUserSettings: () => E });
 var i = n(627968),
     r = n(192308),
     s = n(231723),
@@ -7,24 +7,29 @@ var i = n(627968),
     o = n(790284),
     l = n(272053),
     u = n(495544),
-    c = n(843010),
-    d = n(402651),
-    _ = n(355097);
-let f = "USER_SETTINGS_MODAL_MODAL_KEY";
-async function h(e) {
+    c = n(780964),
+    d = n(358776),
+    _ = n(843010),
+    f = n(402651),
+    h = n(355097);
+let p = "USER_SETTINGS_MODAL_MODAL_KEY";
+async function E(e) {
     let {
             path: t,
-            stackingBehavior: h = "replaceAll",
-            searchParams: p,
-            analyticsLocations: E,
+            stackingBehavior: E = "replaceAll",
+            searchParams: m,
+            analyticsLocations: g,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        m = arguments.length > 2 ? arguments[2] : void 0;
+        A = arguments.length > 2 ? arguments[2] : void 0;
     if (u.default.isAuthenticated()) {
         if (
-            (null != t && t === _.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS && o.A.setState({ subsection: _.nR }),
-            d.A.setState({ source: p?.source, analyticsLocations: E ?? [] }),
+            ((0, d.Bv)("openUserSettings") &&
+                (e === c.X.CONNECTIONS_PANEL && (e = c.X.CONNECTIONS_CATEGORY),
+                e === c.X.AUTHORIZED_APPS_PANEL && (e = c.X.AUTHORIZED_APPS_CATEGORY)),
+            null != t && t === h.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS && o.A.setState({ subsection: h.nR }),
+            f.A.setState({ source: m?.source, analyticsLocations: g ?? [] }),
             a.h.dispatch({ type: "USER_SETTINGS_MODAL_OPEN" }),
-            (0, c.f)())
+            (0, _.f)())
         ) {
             if (null == e) return;
             l.A.navigate(e);
@@ -757,7 +762,6 @@ async function h(e) {
                         n.e("37479"),
                         n.e("2552"),
                         n.e("34936"),
-                        n.e("33314"),
                         n.e("89588"),
                         n.e("91589"),
                         n.e("67685"),
@@ -765,6 +769,7 @@ async function h(e) {
                         n.e("37715"),
                         n.e("44790"),
                         n.e("12755"),
+                        n.e("87641"),
                         n.e("44264"),
                         n.e("58272"),
                         n.e("74913"),
@@ -777,7 +782,7 @@ async function h(e) {
                         n.e("31828"),
                         n.e("71790"),
                         n.e("81754"),
-                        n.e("81118"),
+                        n.e("98027"),
                         n.e("19148"),
                         n.e("33049"),
                         n.e("96232"),
@@ -822,15 +827,15 @@ async function h(e) {
                     return (n) => (0, i.jsx)(t, { ...n, target: e });
                 },
                 {
-                    modalKey: f,
-                    stackingBehavior: h,
+                    modalKey: p,
+                    stackingBehavior: E,
                     stackNextByDefault: !0,
                     contextKey: s.SY,
                     onCloseRequest: () => {
-                        null != l.A.closeWithValidation ? l.A.closeWithValidation() : (0, r.closeModal)(f, s.SY);
+                        null != l.A.closeWithValidation ? l.A.closeWithValidation() : (0, r.closeModal)(p, s.SY);
                     },
                 },
             );
-        m?.();
+        A?.();
     }
 }

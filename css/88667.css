@@ -203,6 +203,10 @@
     padding: var(--space-20)
 }
 
+.emptyState__92059 {
+    min-height: 200px
+}
+
 .loadingWrapper__5a143 {
     align-items: center;
     border-radius: 2px;
