@@ -116,8 +116,6 @@ function q(e) {
                                 er(),
                                     (0, w.L3)(e, async () => {
                                         let { default: e } = await Promise.all([
-                                            l.e("66900"),
-                                            l.e("98793"),
                                             l.e("18489"),
                                             l.e("69006"),
                                             l.e("20342"),

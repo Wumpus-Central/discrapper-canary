@@ -10,6 +10,7 @@ e.exports = {
     aB: "disablePointersWhileSorting__5e434",
     Qs: "content__5e434",
     iz: "activityPanel__5e434",
+    $j: "quickBar__5e434",
     wG: "loader__5e434",
     tq: "sidebarResizeHandle__5e434",
     MY: "page__5e434",

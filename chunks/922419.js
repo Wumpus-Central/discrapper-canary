@@ -85,8 +85,7 @@ function eu(e) {
         D()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, f.openModalLazy)(async () => {
                 let { default: n } = await Promise.all([
-                    i.e("57325"),
-                    i.e("41884"),
+                    i.e("91157"),
                     i.e("59957"),
                     i.e("28136"),
                     i.e("16084"),
@@ -337,8 +336,7 @@ function eg(e) {
             null != D &&
                 (0, f.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        i.e("57325"),
-                        i.e("41884"),
+                        i.e("91157"),
                         i.e("59957"),
                         i.e("28136"),
                         i.e("16084"),
@@ -527,11 +525,12 @@ function eM(e) {
                 null != u &&
                     (0, eO.L3)(e, async () => {
                         let { default: e } = await Promise.all([
-                            i.e("26439"),
-                            i.e("98053"),
+                            i.e("32033"),
+                            i.e("59611"),
                             i.e("50671"),
                             i.e("88667"),
-                            i.e("21986"),
+                            i.e("12697"),
+                            i.e("56921"),
                             i.e("26132"),
                             i.e("46652"),
                             i.e("93190"),
@@ -666,10 +665,10 @@ let e2 = (e) =>
 var e1 = i(685399),
     e6 = i(960076),
     e3 = i(323073),
-    e7 = i(85451),
-    e9 = i(268218),
-    e8 = i(834757),
-    e5 = i(566668),
+    e9 = i(85451),
+    e7 = i(268218),
+    e5 = i(834757),
+    e8 = i(566668),
     e4 = i(832163),
     te = i(565688),
     tt = i(533562),
@@ -690,37 +689,30 @@ let tn = (0, i(600975).C)({
 });
 var ts = i(699976),
     ta = i(415679);
-let tr = (0, e9.Fe)({
+let tr = (0, e7.Fe)({
     createPromise: () =>
         Promise.all([
-            i.e("26439"),
-            i.e("51402"),
-            i.e("38123"),
-            i.e("48898"),
-            i.e("95369"),
-            i.e("84682"),
-            i.e("88228"),
-            i.e("26105"),
-            i.e("46461"),
-            i.e("97477"),
-            i.e("43147"),
-            i.e("31841"),
-            i.e("98053"),
+            i.e("32033"),
+            i.e("35402"),
+            i.e("56795"),
+            i.e("24685"),
+            i.e("56921"),
+            i.e("89833"),
+            i.e("77083"),
+            i.e("63106"),
+            i.e("15931"),
+            i.e("60221"),
+            i.e("35316"),
+            i.e("427"),
             i.e("45650"),
-            i.e("26963"),
-            i.e("24010"),
+            i.e("27660"),
             i.e("85484"),
-            i.e("9140"),
-            i.e("619"),
-            i.e("57325"),
-            i.e("38376"),
-            i.e("31460"),
-            i.e("21986"),
-            i.e("73679"),
-            i.e("30866"),
-            i.e("4418"),
-            i.e("27755"),
-            i.e("69977"),
+            i.e("50890"),
+            i.e("23658"),
+            i.e("55990"),
+            i.e("59611"),
+            i.e("13533"),
+            i.e("7066"),
             i.e("79705"),
             i.e("69279"),
             i.e("23924"),
@@ -779,7 +771,7 @@ let tr = (0, e9.Fe)({
             i.e("63645"),
             i.e("71234"),
             i.e("27773"),
-            i.e("83255"),
+            i.e("5636"),
             i.e("87196"),
             i.e("834"),
             i.e("60177"),
@@ -818,9 +810,9 @@ let tr = (0, e9.Fe)({
             i.e("49013"),
             i.e("42324"),
             i.e("93461"),
-            i.e("18489"),
             i.e("46430"),
             i.e("90779"),
+            i.e("18489"),
             i.e("39808"),
             i.e("9763"),
             i.e("20667"),
@@ -882,7 +874,7 @@ function to(e) {
                 className: ta.Qq,
                 children: [
                     (0, l.jsx)(E.E, { variant: "text-sm/medium", lineClamp: 1, children: c }),
-                    null != p && (0, l.jsx)(e7.z, { textColor: "text-feedback-positive", entry: { start: p } }),
+                    null != p && (0, l.jsx)(e9.z, { textColor: "text-feedback-positive", entry: { start: p } }),
                 ],
             }),
         ],
@@ -902,7 +894,7 @@ function td(e) {
         ),
         [g, x] = (0, r.yK)([eT.A, V.A, k.A, eY.default], () => (0, eK.eo)(s, eT.A, V.A, k.A, eY.default)),
         I = (0, r.bG)([ej.default], () => ej.default.getId()),
-        v = (0, r.bG)([el.A], () => (0, e8.nr)(h, el.A), [h]),
+        v = (0, r.bG)([el.A], () => (0, e5.nr)(h, el.A), [h]),
         f = (0, e3.r9)() && (0, e3.UK)(s.id),
         N =
             ((t = (0, e1.Ay)(s)),
@@ -947,7 +939,7 @@ function td(e) {
     let O = (0, l.jsxs)(l.Fragment, {
         children: [
             _ &&
-                (0, l.jsx)(e5.P, {
+                (0, l.jsx)(e8.P, {
                     stream: h,
                     activeStream: p,
                     streamActivity: v,
@@ -1085,11 +1077,12 @@ let tp = (0, eW.J)(function (e) {
         J = (e) => {
             (0, eO.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    i.e("26439"),
-                    i.e("98053"),
+                    i.e("32033"),
+                    i.e("59611"),
                     i.e("50671"),
                     i.e("88667"),
-                    i.e("21986"),
+                    i.e("12697"),
+                    i.e("56921"),
                     i.e("26132"),
                     i.e("46652"),
                     i.e("93190"),

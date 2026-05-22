@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { HP: () => o, Jp: () => u, fy: () => _, nf: () => d, xv: () => l });
+n.d(t, { HP: () => o, Jp: () => d, fy: () => u, nf: () => c, xv: () => l });
 var i,
     r,
     s = n(353640),
@@ -9,21 +9,20 @@ var i,
         (i.APP_ICON = "APP_ICON"),
         (i.CUSTOM_THEME = "CUSTOM_THEME"),
         (i.APPLICATION_TEST_MODE_DEBUG = "APPLICATION_TEST_MODE_DEBUG"),
-        (i.CLIPS_REMINDER = "CLIPS_REMINDER"),
         i),
     l =
         (((r = {}).CLIENT_THEMES_EDITOR = "CLIENT_THEMES_EDITOR"),
         (r.SETTING = "SETTING"),
         (r.SHARE_MESSAGE = "SHARE_MESSAGE"),
         r);
-let _ = (0, s.v)(() => ({ activePanel: null, metadata: null }));
-function d(e, t) {
+let u = (0, s.v)(() => ({ activePanel: null, metadata: null }));
+function c(e, t) {
     (0, a.r)(() => {
-        _.setState({ activePanel: e, metadata: t ?? null });
+        u.setState({ activePanel: e, metadata: t ?? null });
     });
 }
-function u() {
+function d() {
     (0, a.r)(() => {
-        _.setState({ activePanel: null, metadata: null });
+        u.setState({ activePanel: null, metadata: null });
     });
 }

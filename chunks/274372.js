@@ -53,7 +53,6 @@ let p = "default",
         hasClips: !1,
         hasTakenDecoupledClip: !1,
         clipsEducationState: { dismissedAt: null, numberOfGamesLaunchedSinceDismissal: 0, numberOfTimesDismissed: 0 },
-        remindersDismissedUntil: null,
     };
 async function x() {
     if (P.clipsSettings.storageLocation !== p || null == a.A || null == a.A.app) return;
@@ -135,7 +134,6 @@ class k extends r.Ay.DeviceSettingsStore {
             },
         }),
         (e) => ({ ...e, clipsSettings: { ...e.clipsSettings } }),
-        (e) => ({ ...e, remindersDismissedUntil: e.remindersDismissedUntil ?? null }),
     ];
     initialize(e) {
         null != e && (P = e), x(), this.waitFor(o.Ay);
@@ -217,10 +215,7 @@ class k extends r.Ay.DeviceSettingsStore {
         return P.hasTakenDecoupledClip;
     }
     canShowReminders() {
-        return (
-            !!P.clipsSettings.remindersEnabled &&
-            (null == P.remindersDismissedUntil || Date.now() >= P.remindersDismissedUntil)
-        );
+        return P.clipsSettings.remindersEnabled;
     }
     getNewClipIds() {
         return P.newClipIds;
@@ -426,13 +421,6 @@ let G = new k(s.h, {
         CLIPS_SET_EXPORTING: function (e) {
             let { clipIds: t } = e;
             b = t ?? [];
-        },
-        CLIPS_SNOOZE_REMINDERS: function (e) {
-            let { until: t } = e;
-            P = { ...P, remindersDismissedUntil: t };
-        },
-        CLIPS_CLEAR_REMINDER_SNOOZE: function () {
-            P = { ...P, remindersDismissedUntil: null };
         },
         MESSAGE_CREATE: function (e) {
             return U(e.channelId, e.message.attachments ?? [], e.message.author?.id);

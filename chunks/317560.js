@@ -1,35 +1,40 @@
-n.d(t, { R: () => i, j: () => o });
+n.d(t, { R: () => i, j: () => s });
 var l = n(627968),
-    r = n(192308);
-let a = "social-layer-storefront-product-details-modal",
+    a = n(192308);
+let r = "social-layer-storefront-product-details-modal",
     i = (e) => {
         let {
             customNavigateToSocialLayerStorefront: t,
             skuId: i,
-            applicationId: o,
+            applicationId: s,
             isStorefront: u,
-            giftRecipient: s,
+            giftRecipient: o,
             giftingOrigin: d,
             analyticsLocations: c,
             analyticsContext: A,
-            onClose: E,
+            onClose: m,
         } = e;
-        (0, r.openModalLazy)(
+        (0, a.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("46438"),
-                    n.e("44657"),
-                    n.e("94925"),
-                    n.e("20124"),
-                    n.e("38376"),
+                    n.e("15931"),
+                    n.e("13533"),
+                    n.e("89833"),
+                    n.e("68495"),
+                    n.e("23658"),
                     n.e("89553"),
+                    n.e("56921"),
+                    n.e("29020"),
+                    n.e("94573"),
                     n.e("9233"),
                     n.e("86814"),
                     n.e("52617"),
                     n.e("37021"),
                     n.e("18024"),
                     n.e("69747"),
-                    n.e("16916"),
+                    n.e("3131"),
+                    n.e("47177"),
                     n.e("27272"),
                     n.e("36149"),
                     n.e("51778"),
@@ -54,24 +59,24 @@ let a = "social-layer-storefront-product-details-modal",
                     (0, l.jsx)(e, {
                         ...n,
                         skuId: i,
-                        applicationId: o,
+                        applicationId: s,
                         isStorefront: u,
                         analyticsLocations: c,
                         analyticsContext: A,
-                        giftRecipient: s,
+                        giftRecipient: o,
                         giftingOrigin: d,
                         customNavigateToSocialLayerStorefront: t,
                     });
             },
             {
-                modalKey: a,
+                modalKey: r,
                 allowsNavigation: u,
                 onCloseCallback: () => {
-                    E?.();
+                    m?.();
                 },
             },
         );
     };
-function o() {
-    (0, r.hasModalOpen)(a) && (0, r.closeModal)(a);
+function s() {
+    (0, a.hasModalOpen)(r) && (0, a.closeModal)(r);
 }

@@ -55,7 +55,9 @@ class c extends r.PureComponent {
         this._isMounted && n(e, t);
     };
     handleFileError = async () => {
-        let { openUploadError: e } = await Promise.resolve().then(n.bind(n, 494921));
+        let { openUploadError: e } = await Promise.all([n.e("54048"), n.e("699"), n.e("99666")]).then(
+            n.bind(n, 494921),
+        );
         e({ title: o.intl.string(o.t["0egKg3"]), help: o.intl.string(o.t["7PnXqu"]) });
     };
     render() {

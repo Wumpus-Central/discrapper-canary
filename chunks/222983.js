@@ -79,8 +79,8 @@ function W(e) {
         q,
         $,
         J,
-        Z,
         Y,
+        Z,
         { channel: X } = e,
         Q = (0, o.bG)([T.A], () => (null != X ? T.A.getGuild(X.getGuildId()) : null), [X]),
         ee = null != Q && R.default.extractTimestamp(Q.id) < Date.now() - D.NOr,
@@ -155,8 +155,7 @@ function W(e) {
                 null != Q &&
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("57325"),
-                            n.e("76664"),
+                            n.e("91157"),
                             n.e("59957"),
                             n.e("28136"),
                             n.e("16084"),
@@ -195,7 +194,7 @@ function W(e) {
                     action: B.AG.DOWNLOAD,
                 }),
                     (0, m.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("18477"), n.e("44602"), n.e("25280")]).then(
+                        let { default: e } = await Promise.all([n.e("81013"), n.e("44602"), n.e("25280")]).then(
                             n.bind(n, 987482),
                         );
                         return (t) => (0, l.jsx)(e, { source: D.JJy.CHANNEL_WELCOME_CTA, ...t });
@@ -221,32 +220,32 @@ function W(e) {
         eg = !(es || ea || er || eo),
         { titleAnimatedStyle: ep, opacities: eA } =
             ((J = (0, A.A)(() => new r.A.Value(0))),
-            (Z = (0, A.A)(() => new r.A.Value(0))),
-            (Y = (0, A.A)(() => [new r.A.Value(0), new r.A.Value(0), new r.A.Value(0), new r.A.Value(0)])),
+            (Y = (0, A.A)(() => new r.A.Value(0))),
+            (Z = (0, A.A)(() => [new r.A.Value(0), new r.A.Value(0), new r.A.Value(0), new r.A.Value(0)])),
             i.useEffect(() => {
                 r.A.stagger(300, [
                     r.A.parallel([
-                        r.A.timing(Z, { toValue: 1, duration: 450 }),
+                        r.A.timing(Y, { toValue: 1, duration: 450 }),
                         r.A.timing(J, { toValue: 1, duration: 450 }),
                     ]),
                     r.A.stagger(100, [
-                        r.A.timing(Y[0], { toValue: 1, duration: 300 }),
-                        r.A.timing(Y[1], { toValue: 1, duration: 300 }),
-                        r.A.timing(Y[2], { toValue: 1, duration: 300 }),
-                        r.A.timing(Y[3], { toValue: 1, duration: 300 }),
+                        r.A.timing(Z[0], { toValue: 1, duration: 300 }),
+                        r.A.timing(Z[1], { toValue: 1, duration: 300 }),
+                        r.A.timing(Z[2], { toValue: 1, duration: 300 }),
+                        r.A.timing(Z[3], { toValue: 1, duration: 300 }),
                     ]),
                 ]).start();
-            }, [Z, J, Y]),
+            }, [Y, J, Z]),
             {
                 titleAnimatedStyle: eg
                     ? {
                           transform: [
                               { translateY: J.interpolate({ inputRange: [0, 1], outputRange: ["-20px", "0px"] }) },
                           ],
-                          opacity: Z,
+                          opacity: Y,
                       }
                     : {},
-                opacities: Y,
+                opacities: Z,
             }),
         [ef, eC] = i.useState([]),
         ex = ef.length > 0;

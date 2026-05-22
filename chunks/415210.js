@@ -12,7 +12,7 @@ var l,
     m = n(475743),
     g = n(147087),
     p = n(734066),
-    A = n(150616),
+    A = n(138082),
     f = n(274372),
     C = n(572164),
     x = n(710315),
@@ -117,8 +117,8 @@ var L = n(352527),
     q = n(767089),
     $ = n(554146),
     J = n(477782),
-    Z = n(177953),
-    Y = n(950305),
+    Y = n(177953),
+    Z = n(950305),
     X = n(980707),
     Q = n(308368),
     ee = n(688810),
@@ -396,8 +396,8 @@ function eb(e) {
                                                   {
                                                       id: "summarize_thread_for_everyone",
                                                       label: M.intl.string(M.t.eCzSdd),
-                                                      iconLeft: Z.n,
-                                                      leadingAccessory: { type: "icon", icon: Z.n },
+                                                      iconLeft: Y.n,
+                                                      leadingAccessory: { type: "icon", icon: Y.n },
                                                       action: () => el.A.summarizeThread(t, !1),
                                                   },
                                                   "summarize_thread_for_everyone",
@@ -407,8 +407,8 @@ function eb(e) {
                                                   {
                                                       id: "summarize_thread_for_me",
                                                       label: M.intl.string(M.t["HOe+Hq"]),
-                                                      iconLeft: Y.n,
-                                                      leadingAccessory: { type: "icon", icon: Y.n },
+                                                      iconLeft: Z.n,
+                                                      leadingAccessory: { type: "icon", icon: Z.n },
                                                       action: () => el.A.summarizeThread(t),
                                                   },
                                                   "summarize_thread_for_me",
@@ -442,9 +442,9 @@ let eD = s.memo(function (e) {
             () => (l.type === ej.rbe.DM ? y.filter((e) => !F.A.getParty(e.party?.id)?.has(l.getRecipientId())) : y),
             [y, l],
         ),
-        { enableReminderSidebar: J } = A.Z.useConfig({ location: "ClipsButton" }),
-        { topBarButton: Z } = x.$.useConfig({ location: "ChannelAttachButton" }),
-        { onShareClick: Y } = (0, L.A)(l.id),
+        { topBarButton: J } = x.$.useConfig({ location: "ChannelAttachButton" }),
+        { enableQuickBar: Y } = A.h.useConfig({ location: "ChannelAttachButton" }),
+        { onShareClick: Z } = (0, L.A)(l.id),
         X = (0, o.bG)([f.A], () => f.A.getSettings().remindersEnabled),
         Q = (0, c.useModalsStore)((e) => (0, c.hasModalOpenSelector)(e, eM.nm)),
         ee = (0, o.bG)([H.A], () => H.A.hasLayers()),
@@ -458,26 +458,27 @@ let eD = s.memo(function (e) {
         (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("79384"),
-                    n.e("71104"),
-                    n.e("7817"),
-                    n.e("26439"),
-                    n.e("40502"),
+                    n.e("84792"),
+                    n.e("93735"),
+                    n.e("427"),
+                    n.e("88623"),
+                    n.e("39943"),
                     n.e("83952"),
                     n.e("30920"),
                     n.e("81202"),
                     n.e("1962"),
+                    n.e("1922"),
                     n.e("88990"),
                     n.e("37715"),
+                    n.e("74049"),
                     n.e("80559"),
                     n.e("95008"),
-                    n.e("74049"),
                     n.e("86745"),
-                    n.e("89597"),
                     n.e("20342"),
-                    n.e("99419"),
-                ]).then(n.bind(n, 445398));
-                return (t) => (0, i.jsx)(e, { ...t, channelId: l.id, onClipClick: (e) => Y({ clips: [e] }) });
+                    n.e("93996"),
+                    n.e("81012"),
+                ]).then(n.bind(n, 125063));
+                return (t) => (0, i.jsx)(e, { ...t, channelId: l.id, onClipClick: (e) => Z({ clips: [e] }) });
             },
             { modalKey: eM.nm },
         ),
@@ -489,8 +490,8 @@ let eD = s.memo(function (e) {
         X &&
         R &&
         !Q &&
-        !Z &&
         !J &&
+        !Y &&
         !ee &&
         el("recentClips"),
         s.useEffect(() => {

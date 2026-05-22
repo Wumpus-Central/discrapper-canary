@@ -430,7 +430,7 @@ function eR(e) {
                       onContextMenu: function (e, n) {
                           (0, o.L3)(e, async () => {
                               let { default: e } = await Promise.all([
-                                  l.e("96167"),
+                                  l.e("56921"),
                                   l.e("26132"),
                                   l.e("46652"),
                                   l.e("93190"),
@@ -525,7 +525,7 @@ let eU = (e) => {
             (e) => {
                 null != H &&
                     (0, o.L3)(e, async () => {
-                        let { default: e } = await Promise.all([l.e("95340"), l.e("9277")]).then(l.bind(l, 928625));
+                        let { default: e } = await Promise.all([l.e("95340"), l.e("31658")]).then(l.bind(l, 928625));
                         return (n) => (0, t.jsx)(e, { ...n, imageUrl: H });
                     });
             },

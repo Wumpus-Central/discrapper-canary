@@ -124,15 +124,9 @@ var w = n(696016),
     M = n(581874);
 let P = (0, u.Fe)({
     createPromise: () =>
-        Promise.all([
-            n.e("8451"),
-            n.e("3302"),
-            n.e("57174"),
-            n.e("84971"),
-            n.e("30920"),
-            n.e("78010"),
-            n.e("91652"),
-        ]).then(n.bind(n, 664111)),
+        Promise.all([n.e("95705"), n.e("57174"), n.e("84971"), n.e("30920"), n.e("78010"), n.e("91652")]).then(
+            n.bind(n, 664111),
+        ),
     webpackId: 664111,
     name: "DiscordVideoPlayer",
     renderLoader: () => (0, i.jsx)("div", { className: M.Lq }),

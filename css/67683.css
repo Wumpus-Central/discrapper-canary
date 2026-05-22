@@ -399,6 +399,33 @@
     width: 14px
 }
 
+.clipKeybindHint__8c6c2 {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    line-height: 16px;
+    margin-top: 2px
+}
+
+.clipKeyCombo__8c6c2 {
+    font-size: 10px;
+    height: 16px;
+    line-height: 10px
+}
+
+.clipKeyComboKey__8c6c2.clipKeyComboKey__8c6c2 {
+    border-radius: 3px;
+    height: 16px;
+    min-height: 16px;
+    min-width: 16px;
+    padding: 1px 4px 2px
+}
+
+.clipKeyComboKey__8c6c2.clipKeyComboKey__8c6c2 svg {
+    height: 8px;
+    width: 8px
+}
+
 .panel__5dec7 {
     background-color: var(--background-surface-high);
     border-bottom: 1px solid var(--border-muted);

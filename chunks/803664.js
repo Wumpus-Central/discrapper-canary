@@ -18,12 +18,12 @@ function f(t) {
             appContext: v,
             setLoading: g,
         } = t,
-        { id: h, username: I, bot: b } = e,
-        m = (0, d.bG)([c.default], () => c.default.getCurrentUser()?.id === h, [h]),
+        { id: h, username: m, bot: I } = e,
+        b = (0, d.bG)([c.default], () => c.default.getCurrentUser()?.id === h, [h]),
         T = (0, o.D)(h),
         [p, y] = (0, d.yK)([s.A], () => [s.A.isFriend(h), s.A.isBlocked(h)], [h]),
         [E, _] = l.useState(!1);
-    return b || m
+    return I || b
         ? null
         : p
           ? (0, i.jsx)(a.Dr, {
@@ -32,11 +32,13 @@ function f(t) {
                 action: function () {
                     (0, r.openModalLazy)(
                         async () => {
-                            let { ConfirmModal: t } = await n.e("4823").then(n.bind(n, 158954));
+                            let { ConfirmModal: t } = await Promise.all([n.e("54048"), n.e("4823")]).then(
+                                n.bind(n, 158954),
+                            );
                             return (e) =>
                                 (0, i.jsx)(t, {
-                                    title: A.intl.formatToPlainString(A.t.fPLvZd, { name: I }),
-                                    subtitle: A.intl.format(A.t.l5FFq6, { name: I }),
+                                    title: A.intl.formatToPlainString(A.t.fPLvZd, { name: m }),
+                                    subtitle: A.intl.format(A.t.l5FFq6, { name: m }),
                                     confirmText: A.intl.string(A.t.cvSt1J),
                                     cancelText: A.intl.string(A.t["ETE/oC"]),
                                     onConfirm: () => {
