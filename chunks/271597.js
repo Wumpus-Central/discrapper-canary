@@ -17,9 +17,9 @@ let o = function () {
                     n.e("84792"),
                     n.e("93735"),
                     n.e("427"),
-                    n.e("35402"),
+                    n.e("60836"),
                     n.e("88623"),
-                    n.e("39943"),
+                    n.e("34524"),
                     n.e("75842"),
                     n.e("83952"),
                     n.e("39894"),
@@ -30,8 +30,8 @@ let o = function () {
                     n.e("74049"),
                     n.e("86745"),
                     n.e("20342"),
-                    n.e("93996"),
-                ]).then(n.bind(n, 125063));
+                    n.e("24507"),
+                ]).then(n.bind(n, 92502));
                 return (n) => (0, i.jsx)(t, { initialEditingClipId: e, ...n });
             },
             { modalKey: a.nm },
