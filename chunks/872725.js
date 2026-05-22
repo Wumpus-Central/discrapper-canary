@@ -36,13 +36,14 @@ let f = {
                 hueRotate: y = 0,
                 isReducedMotion: C,
                 onMouseEnter: v,
+                onFocus: O,
             } = e,
-            O = r.useRef(null),
             R = r.useRef(null),
-            { status: b, buffer: D } = (0, c.CE)(T ? o.A : null),
-            L = r.useContext(l.C),
-            w = C ?? L.reducedMotion.enabled,
-            M = {
+            b = r.useRef(null),
+            { status: D, buffer: L } = (0, c.CE)(T ? o.A : null),
+            w = r.useContext(l.C),
+            M = C ?? w.reducedMotion.enabled,
+            P = {
                 "--custom-glow-amount": `${S}px`,
                 "--custom-blur-amount": `${N}px`,
                 "--custom-hue-rotate": `${y}deg`,
@@ -50,23 +51,24 @@ let f = {
             };
         return (0, i.jsxs)("div", {
             id: n,
-            ref: O,
+            ref: R,
             tabIndex: s,
             className: a()(_.k, p),
-            style: M,
+            style: P,
             onMouseEnter: v,
+            onFocus: O,
             children: [
                 T &&
-                    b !== c.BW.Loading &&
+                    D !== c.BW.Loading &&
                     (0, i.jsx)(u.w, {
-                        buffer: D,
+                        buffer: L,
                         artboard: A,
                         artboardProperties: f,
-                        eventTargetRef: O,
+                        eventTargetRef: R,
                         className: _.Q,
-                        ref: R,
+                        ref: b,
                         fit: I,
-                        withReducedMotion: w ? "halt" : "play",
+                        withReducedMotion: M ? "halt" : "play",
                     }),
                 (0, i.jsx)(d.Z, { type: g ?? d.s.CUSTOM, className: E, style: m, children: t }),
             ],

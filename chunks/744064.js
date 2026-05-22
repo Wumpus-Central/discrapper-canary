@@ -54,13 +54,14 @@ let b = (e) => {
             blurTint: Z,
             footerContent: X,
             analyticsOptions: Q,
+            onFocus: J,
         } = e,
-        J = (0, g.DP)(),
-        { fractionalState: ee } = (0, I.A)(),
-        et = { name: t };
-    Q?.thirdPartyPartner != null && (et.third_party_partner = Q.thirdPartyPartner),
-        (0, A.A)({ type: l.ImpressionTypes.VIEW, name: l.ImpressionNames.PERK_DISCOVERABILITY_CARD, properties: et });
-    let en = r.useMemo(
+        ee = (0, g.DP)(),
+        { fractionalState: et } = (0, I.A)(),
+        en = { name: t };
+    Q?.thirdPartyPartner != null && (en.third_party_partner = Q.thirdPartyPartner),
+        (0, A.A)({ type: l.ImpressionTypes.VIEW, name: l.ImpressionNames.PERK_DISCOVERABILITY_CARD, properties: en });
+    let ei = r.useMemo(
             () =>
                 (0, o.debounce)(() => {
                     S.default.track(v.HAw.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
@@ -70,7 +71,7 @@ let b = (e) => {
                 }, 800),
             [Q?.thirdPartyPartner, n],
         ),
-        ei = r.useCallback(() => {
+        er = r.useCallback(() => {
             null != H &&
                 (H(),
                 S.default.track(v.HAw.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
@@ -78,24 +79,25 @@ let b = (e) => {
                     function_name: (0, o.snakeCase)(H.name),
                 }));
         }, [H, n]),
-        er = j && ee === C.xc.FP_ONLY,
-        es = !(0, o.isEmpty)(P),
-        ea = es && (0, d.q)(J),
-        eo = (0, _.r)(f.A.colors.BACKGROUND_BASE_LOW).hex(),
-        el = er || !(0, o.isEmpty)(G);
+        es = j && et === C.xc.FP_ONLY,
+        ea = !(0, o.isEmpty)(P),
+        eo = ea && (0, d.q)(ee),
+        el = (0, _.r)(f.A.colors.BACKGROUND_BASE_LOW).hex(),
+        eu = es || !(0, o.isEmpty)(G);
     return (0, i.jsx)(u.N, {
-        theme: ea ? v.NJ8.DARKER : void 0,
+        theme: eo ? v.NJ8.DARKER : void 0,
         children: (e) =>
             (0, i.jsxs)(N.A, {
                 id: t,
                 tabIndex: q,
-                onMouseEnter: en,
+                onMouseEnter: ei,
+                onFocus: J,
                 cardType: h.s.PRIMARY,
                 glowing: Y,
                 hueRotate: 25,
-                glowAmount: (0, d.M)(J) ? 2 : 8,
+                glowAmount: (0, d.M)(ee) ? 2 : 8,
                 blurAmount: 10,
-                className: a()(R.Ui, $, { [R.Tn]: es }),
+                className: a()(R.Ui, $, { [R.Tn]: ea }),
                 cardClassName: a()(R.Nr, e, z, { [R.j8]: K }),
                 cardStyle: {
                     backgroundImage: null != P ? `url(${P})` : void 0,
@@ -129,13 +131,13 @@ let b = (e) => {
                         children: [
                             (0, i.jsx)("div", {
                                 className: R.u_,
-                                style: { "--custom-tint-color": Z ?? eo },
+                                style: { "--custom-tint-color": Z ?? el },
                                 "aria-hidden": !0,
                             }),
                             (0, i.jsxs)("div", {
                                 className: R.P_,
                                 children: [
-                                    er &&
+                                    es &&
                                         (0, i.jsxs)("div", {
                                             className: R.d_,
                                             children: [
@@ -190,25 +192,25 @@ let b = (e) => {
                                             }),
                                         }),
                                     null != X && (0, i.jsx)("div", { className: R.Gv, children: X }),
-                                    el && (0, i.jsx)("div", { className: R.Cj }),
+                                    eu && (0, i.jsx)("div", { className: R.Cj }),
                                 ],
                             }),
-                            el &&
+                            eu &&
                                 (0, i.jsxs)("div", {
                                     className: R.yk,
                                     children: [
-                                        er &&
+                                        es &&
                                             (0, i.jsx)(y.A, {
                                                 fullWidth: !0,
                                                 defaultTextOverride: O.intl.string(O.t.sEAnVH),
                                             }),
-                                        !er &&
+                                        !es &&
                                             (0, i.jsx)(c.$, {
                                                 icon: U,
                                                 iconPosition: k,
                                                 text: G,
-                                                variant: F ?? (!es && (0, d.q)(J) ? "primary" : "overlay-primary"),
-                                                onClick: ei,
+                                                variant: F ?? (!ea && (0, d.q)(ee) ? "primary" : "overlay-primary"),
+                                                onClick: er,
                                                 disabled: V,
                                                 loading: B,
                                             }),

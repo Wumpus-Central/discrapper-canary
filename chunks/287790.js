@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => nD, WU: () => nb, x6: () => nR }), n(321073), n(323874), n(14289), n(35956);
+n.d(t, { Ay: () => nL, WU: () => nD, x6: () => nb }), n(321073), n(323874), n(14289), n(35956);
 var i,
     r = n(627968),
     s = n(64700),
@@ -877,11 +877,11 @@ let tE = (e) => {
                                                               n.e("27252"),
                                                               n.e("48307"),
                                                               n.e("51402"),
-                                                              n.e("19543"),
+                                                              n.e("42888"),
                                                               n.e("85484"),
                                                               n.e("55351"),
                                                               n.e("46461"),
-                                                              n.e("69236"),
+                                                              n.e("80677"),
                                                               n.e("16581"),
                                                               n.e("23924"),
                                                               n.e("42205"),
@@ -1042,11 +1042,11 @@ let tC = function (e) {
                                 n.e("27252"),
                                 n.e("48307"),
                                 n.e("51402"),
-                                n.e("19543"),
+                                n.e("42888"),
                                 n.e("85484"),
                                 n.e("55351"),
                                 n.e("46461"),
-                                n.e("69236"),
+                                n.e("80677"),
                                 n.e("16581"),
                                 n.e("23924"),
                                 n.e("42205"),
@@ -1549,7 +1549,10 @@ let nT = [
     { id: "vip", label: () => $.intl.string($.t.DjEAcv) },
 ];
 var nS = n(758495);
-function nN(e) {
+let nN = (e) => {
+    e.stopPropagation();
+};
+function ny(e) {
     let { glowingPerkId: t = null } = e,
         n = (function () {
             let e = (0, tY.DP)(),
@@ -1753,7 +1756,11 @@ function nN(e) {
                     className: nS.jG,
                     children: l.map((e) => {
                         if (null != e)
-                            return (0, r.jsx)(Q.S, { ...e, glowing: t === e.id, containerClassName: nS.Ui }, e.id);
+                            return (0, r.jsx)(
+                                Q.S,
+                                { ...e, glowing: t === e.id, containerClassName: nS.Ui, onFocus: nN },
+                                e.id,
+                            );
                     }),
                 },
                 a,
@@ -1761,7 +1768,7 @@ function nN(e) {
         ],
     });
 }
-function ny(e) {
+function nC(e) {
     let { glowingPerkId: t = null } = e,
         n = nE();
     return (0, r.jsx)(ei, {
@@ -1780,12 +1787,12 @@ function ny(e) {
         }),
     });
 }
-var nC = n(994763),
-    nv = n(946062),
-    nO = n(79119);
-let nR = "section",
-    nb = "perk",
-    nD = (e) => {
+var nv = n(994763),
+    nO = n(946062),
+    nR = n(79119);
+let nb = "section",
+    nD = "perk",
+    nL = (e) => {
         let { userId: t } = e,
             n = (0, C.ds)(),
             i = (0, l.zy)();
@@ -1812,15 +1819,15 @@ let nR = "section",
                 scrollInline: k,
             } = s.useMemo(() => {
                 let e = new URLSearchParams(i.search),
-                    t = e.get(nb),
-                    n = e.get(nR);
+                    t = e.get(nD),
+                    n = e.get(nb);
                 return null != t
                     ? { scrollTargetId: t, glowingPerkId: t, scrollBlock: "center", scrollInline: "center" }
                     : null != n
                       ? { scrollTargetId: n, glowingSectionId: n, scrollBlock: "start" }
                       : {};
             }, [i.search]);
-        (0, nC.z)(M ?? "", null != M, U, k);
+        (0, nv.z)(M ?? "", null != M, U, k);
         let [G, F] = s.useState(!1),
             V = (0, v.p)(),
             B = s.useRef(null),
@@ -1832,12 +1839,12 @@ let nR = "section",
             [X, Q] = s.useState(!1);
         return null != (0, u.bG)([T.A], () => (null != t ? T.A.getUserProfile(t) : null)) && (L || null != w)
             ? (0, r.jsxs)(_.Gt, {
-                  className: nv.xW,
+                  className: nO.xW,
                   ref: a,
                   children: [
                       (0, r.jsx)(f.h, {
                           color: "nitro-pink",
-                          className: o()(nv.kL, nv.Gd),
+                          className: o()(nO.kL, nO.Gd),
                           offsetBottom: n ? 0.55 : 0.8,
                           children: (0, r.jsxs)(E.f5, {
                               value: Z,
@@ -1849,20 +1856,20 @@ let nR = "section",
                                       active: !0,
                                       children: (0, r.jsx)(tI, {
                                           buttonVisibilityRef: B,
-                                          className: nv.v1,
+                                          className: nO.v1,
                                           userDiscountOffer: V,
                                           discountedPrice: z,
                                       }),
                                   }),
                                   (0, r.jsx)(eh, { glowingSectionId: P }),
+                                  (0, r.jsx)(nC, { glowingPerkId: x }),
                                   (0, r.jsx)(ny, { glowingPerkId: x }),
-                                  (0, r.jsx)(nN, { glowingPerkId: x }),
                                   (0, r.jsx)(em, {
-                                      className: nv.Zy,
+                                      className: nO.Zy,
                                       location: p.A.PREMIUM_MARKETING_GIFT_SECTION,
                                       analyticsLocation: { page: W.liQ.NITRO_HOME, section: W.JJy.GIFT_BANNER },
                                   }),
-                                  (0, r.jsx)("div", { className: nv.hz }),
+                                  (0, r.jsx)("div", { className: nO.hz }),
                                   (0, r.jsx)(c.L, {
                                       innerRef: b,
                                       onChange: (e) => {
@@ -1873,11 +1880,11 @@ let nR = "section",
                                               }),
                                               Q(!0));
                                       },
-                                      children: (0, r.jsx)("div", { ref: b, className: nv._Z }),
+                                      children: (0, r.jsx)("div", { ref: b, className: nO._Z }),
                                   }),
                                   (0, r.jsx)("img", {
-                                      src: nO,
-                                      className: nv.Kw,
+                                      src: nR,
+                                      className: nO.Kw,
                                       width: 112,
                                       height: 85,
                                       alt: $.intl.string($.t.X4IxWL),
@@ -1895,5 +1902,5 @@ let nR = "section",
                           }),
                   ],
               })
-            : (0, r.jsx)("div", { className: o()(nv.kL, nv.Lq), children: (0, r.jsx)(d.y, {}) });
+            : (0, r.jsx)("div", { className: o()(nO.kL, nO.Lq), children: (0, r.jsx)(d.y, {}) });
     };
