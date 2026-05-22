@@ -4000,6 +4000,7 @@ var rD =
         (ex.GIFT_CARD_REDEMPTION_FAILED = "gift_card_redemption_failed"),
         (ex.IMPRESSION_GIFT_CARD_REDEMPTION_SUCCEEDED_MODAL = "impression_gift_card_redemption_succeeded_modal"),
         (ex.GIFT_CARD_REDEMPTION_SUCCEEDED_MODAL_CTA_CLICKED = "gift_card_redemption_succeeded_modal_cta_clicked"),
+        (ex.GIFT_CARD_WALLET_CONSUMED = "gift_card_wallet_consumed"),
         (ex.ORBS_ENTRYPOINT_CLICKED = "orbs_entrypoint_clicked"),
         (ex.PAYMENT_SOURCE_CREATION_FAILED = "payment_source_creation_failed"),
         (ex.PREMIUM_UPGRADE_STARTED = "premium_upgrade_started"),
