@@ -1,0 +1,22 @@
+l.d(t, { C: () => n, I: () => i });
+var a,
+    n =
+        (((a = {}).ADD_TO_LIBRARY = "add_to_library"),
+        (a.SHARE = "share"),
+        (a.EDIT = "edit"),
+        (a.FAVORITE = "favorite"),
+        (a.EXPORT_TO_SOUNDBOARD = "export_to_soundboard"),
+        (a.COPY_TO_CLIPBOARD = "copy_to_clipboard"),
+        (a.EXPORT_TO_FILE = "export_to_file"),
+        (a.DELETE = "delete"),
+        a);
+let i = new Set([
+    "add_to_library",
+    "share",
+    "edit",
+    "favorite",
+    "export_to_soundboard",
+    "copy_to_clipboard",
+    "export_to_file",
+    "delete",
+]);

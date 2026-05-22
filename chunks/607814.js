@@ -695,14 +695,26 @@ async function eE(e, t) {
         (await o.A.clips.deleteClip(e), a.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: t, filepath: e }));
 }
 async function em(e) {
-    let t = I.Ay.getMediaEngine(),
-        { filepath: n, ...i } = e;
-    await eu(e.id, i);
-    let r = await t.exportClip(
-        e.filepath,
-        e.editMetadata ?? { start: 0, end: e.length / 1e3, applicationAudio: !0, voiceAudio: !0, soundboardAudio: !0 },
-    );
-    return e.type === O.nQ.SCREENSHOT ? r : K(r);
+    try {
+        eg([e.id]);
+        let t = I.Ay.getMediaEngine(),
+            { filepath: n, ...i } = e;
+        await eu(e.id, i);
+        let r = await t.exportClip(
+            e.filepath,
+            e.editMetadata ?? {
+                start: 0,
+                end: e.length / 1e3,
+                applicationAudio: !0,
+                voiceAudio: !0,
+                soundboardAudio: !0,
+            },
+        );
+        if (e.type === O.nQ.SCREENSHOT) return r;
+        return K(r);
+    } finally {
+        eg(null);
+    }
 }
 function eg(e) {
     a.h.dispatch({ type: "CLIPS_SET_EXPORTING", clipIds: e });

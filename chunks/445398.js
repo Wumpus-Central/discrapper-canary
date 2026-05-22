@@ -21,14 +21,14 @@ var i = l(627968),
     A = l(556316),
     b = l(309777),
     E = l(429364),
-    N = l(280483),
-    I = l(794905);
+    N = l(352527),
+    I = l(280483);
 l(321073);
 var w = l(562708),
     L = l(834730),
     k = l(289873),
-    S = l(139286),
-    D = l(962125),
+    D = l(139286),
+    S = l(962125),
     M = l(989349),
     R = l.n(M),
     P = l(66455),
@@ -77,8 +77,8 @@ let em = function (e) {
         I = t.type === es.nQ.SCREENSHOT,
         w = (0, X.Ay)(m),
         k = "" === t.applicationName && null != w && "" !== w ? w : t.applicationName,
-        S = (0, el.Fe)(new Date(t.createdAt)),
-        D = s.useMemo(() => {
+        D = (0, el.Fe)(new Date(t.createdAt)),
+        S = s.useMemo(() => {
             let e = [];
             return (
                 t.type === es.nQ.VOICE_CLIP
@@ -127,18 +127,15 @@ let em = function (e) {
                         let { default: e } = await Promise.all([
                             l.e("66900"),
                             l.e("98793"),
-                            l.e("73500"),
                             l.e("18489"),
-                            l.e("36926"),
                             l.e("69006"),
-                            l.e("80628"),
-                        ]).then(l.bind(l, 183903));
+                            l.e("70229"),
+                        ]).then(l.bind(l, 875796));
                         return (l) =>
                             (0, i.jsx)(e, {
                                 ...l,
                                 clips: s,
                                 actionsDisabled: n,
-                                showShareAndEdit: !0,
                                 onShare: () => {
                                     et.default.track(ed.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "share" });
                                 },
@@ -196,13 +193,13 @@ let em = function (e) {
                                     className: eu.xD,
                                     color: "text-subtle",
                                     variant: "text-sm/normal",
-                                    children: D,
+                                    children: S,
                                 }),
                                 (0, i.jsx)(L.E, {
                                     className: eu.xD,
                                     color: "text-subtle",
                                     variant: "text-sm/normal",
-                                    children: S,
+                                    children: D,
                                 }),
                             ],
                         }),
@@ -445,24 +442,24 @@ var ev = l(702841),
     ew = l(572164),
     eL = l(953932),
     ek = l(311162);
-function eS(e) {
+function eD(e) {
     let { header: t, description: l } = e;
     return (0, i.jsxs)("div", {
         className: ek.Nr,
         children: [t, (0, i.jsx)(L.E, { color: "text-default", variant: "text-sm/medium", children: l })],
     });
 }
-function eD() {
+function eS() {
     let e = (0, ev.bG)([eN.Ay], () => eN.Ay.getKeybindForAction(ed.hCu.SAVE_CLIP)),
         t = null != e ? eI.dI(e.shortcut, !0) : null;
     return (0, i.jsxs)("div", {
         className: ek.kR,
         children: [
-            (0, i.jsx)(eS, {
+            (0, i.jsx)(eD, {
                 header: (0, i.jsx)(ej._, { size: "refresh_sm", color: Y.A.colors.ICON_DEFAULT }),
                 description: eo.intl.string(ec.default["4K56sP"]),
             }),
-            (0, i.jsx)(eS, {
+            (0, i.jsx)(eD, {
                 header: null != t ? (0, i.jsx)(eC.e, { shortcut: t }) : null,
                 description:
                     null != t
@@ -484,7 +481,7 @@ function eD() {
                           })
                         : eo.intl.string(ec.default.HOUDUm),
             }),
-            (0, i.jsx)(eS, {
+            (0, i.jsx)(eD, {
                 header: (0, i.jsx)(eA.t, { size: "refresh_sm", color: Y.A.colors.ICON_DEFAULT }),
                 description: eo.intl.string(ec.default.DLzdl7),
             }),
@@ -512,7 +509,7 @@ function eM(e) {
                         children: eo.intl.string(ec.default.xkY5xS),
                     }),
                 !l && (0, i.jsx)("div", { className: ek.SO, children: (0, i.jsx)(eL.A, {}) }),
-                l && !t && (0, i.jsx)(eD, {}),
+                l && !t && (0, i.jsx)(eS, {}),
             ],
         }),
     });
@@ -531,7 +528,7 @@ function eO(e) {
         p = (0, r.bG)([C.A], () => C.A.getSettings().storageLocation),
         h = (0, r.yK)([C.A], () => C.A.getNewClipIds()),
         x = (0, r.bG)([C.A], () => C.A.getExportingClipIds().length > 0);
-    (0, S.A)(
+    (0, D.A)(
         {
             type: w.ImpressionTypes.MODAL,
             name: w.ImpressionNames.CLIP_GALLERY_VIEWED,
@@ -673,7 +670,7 @@ function eO(e) {
     return d || 0 !== g.length
         ? d
             ? (0, i.jsx)("div", { className: eR.dc, children: (0, i.jsx)(k.y, {}) })
-            : (0, i.jsx)(D.A, {
+            : (0, i.jsx)(S.A, {
                   listPadding: e_,
                   renderRow: N,
                   renderSectionHeader: M,
@@ -812,14 +809,14 @@ function e3(e) {
             [f, E],
         ),
         k = n.size > 0 || null != a || null != r || null != d,
-        S = s.useMemo(() => {
+        D = s.useMemo(() => {
             if (0 !== n.size)
                 return g
                     .filter((e) => n.has(e.userId))
                     .map((e) => e.name)
                     .join(", ");
         }, [n, g]),
-        D = s.useMemo(() => {
+        S = s.useMemo(() => {
             if (null == r) return;
             let e = v.find((e) => e.guildId === r);
             return e?.name;
@@ -841,7 +838,7 @@ function e3(e) {
                         (0, i.jsxs)(eW.Dr, {
                             id: "participants",
                             label: eo.intl.string(eo.t.YQ6dJg),
-                            subtext: S,
+                            subtext: D,
                             children: [
                                 g.length > 20 &&
                                     (0, i.jsx)(eW.aK, {
@@ -869,7 +866,7 @@ function e3(e) {
                         (0, i.jsxs)(eW.Dr, {
                             id: "servers",
                             label: eo.intl.string(eo.t["5qyruI"]),
-                            subtext: D,
+                            subtext: S,
                             children: [
                                 v.length > 20 &&
                                     (0, i.jsx)(eW.aK, {
@@ -1002,8 +999,8 @@ function e3(e) {
         ],
     });
 }
-var e1 = l(174726);
-let e6 = s.memo(function (e) {
+var e7 = l(174726);
+let e1 = s.memo(function (e) {
         let { allClips: t } = e,
             { query: l, setQuery: n } = e2(),
             a = (0, ev.bG)([eN.Ay], () => eN.Ay.getKeybindForAction(ed.hCu.SAVE_CLIP)),
@@ -1021,24 +1018,24 @@ let e6 = s.memo(function (e) {
             u = null != a ? eI.dI(a.shortcut, !0) : null,
             h = s.useRef(null);
         return (0, i.jsxs)("div", {
-            className: e1.aN,
+            className: e7.aN,
             children: [
                 (0, i.jsxs)("div", {
-                    className: e1.Nr,
+                    className: e7.Nr,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: e1.Pe,
+                            className: e7.Pe,
                             children: [
                                 (0, i.jsx)(m.D, {
                                     variant: "heading-lg/semibold",
                                     color: "text-strong",
                                     children: eo.intl.string(eo.t.z2jK6X),
                                 }),
-                                null != u && (0, i.jsx)(eC.e, { className: e1.P, shortcut: u }),
+                                null != u && (0, i.jsx)(eC.e, { className: e7.P, shortcut: u }),
                             ],
                         }),
                         (0, i.jsxs)("div", {
-                            className: e1.$s,
+                            className: e7.$s,
                             children: [
                                 (0, i.jsx)(d.m, {
                                     text: eo.intl.string(eo.t.X7yRDm),
@@ -1086,7 +1083,7 @@ let e6 = s.memo(function (e) {
                     ],
                 }),
                 (0, i.jsx)("div", {
-                    className: e1.MT,
+                    className: e7.MT,
                     children: (0, i.jsx)(eH.I, {
                         placeholder: eo.intl.string(eo.t["5h0QOP"]),
                         query: l,
@@ -1098,26 +1095,26 @@ let e6 = s.memo(function (e) {
             ],
         });
     }),
-    e7 = s.memo(function (e) {
+    e6 = s.memo(function (e) {
         let { name: t, count: l, icon: s, isSelected: n, onClick: r } = e;
         return (0, i.jsxs)(eY.D, {
-            className: a()(e1.MV, { [e1.wH]: n }),
+            className: a()(e7.MV, { [e7.wH]: n }),
             onClick: r,
             children: [
                 (0, i.jsxs)("div", {
-                    className: e1.tk,
+                    className: e7.tk,
                     children: [
                         s,
                         (0, i.jsx)(L.E, {
                             variant: "text-md/medium",
                             color: "currentColor",
-                            className: e1.mO,
+                            className: e7.mO,
                             children: t,
                         }),
                     ],
                 }),
                 (0, i.jsx)("div", {
-                    className: e1.z2,
+                    className: e7.z2,
                     children: (0, i.jsx)(L.E, { variant: "text-xs/semibold", color: "currentColor", children: l }),
                 }),
             ],
@@ -1133,25 +1130,25 @@ function e5(e) {
         p = s.useCallback(() => d("favorites"), [d]),
         h = s.useMemo(() => new Map(o.map((e) => [e?.id, e])), [o]);
     return (0, i.jsxs)("div", {
-        className: e1.pz,
+        className: e7.pz,
         children: [
-            (0, i.jsx)(e6, { allClips: a }),
+            (0, i.jsx)(e1, { allClips: a }),
             (0, i.jsxs)("div", {
-                className: e1.wp,
+                className: e7.wp,
                 children: [
                     (0, i.jsx)("div", {
-                        className: e1.om,
+                        className: e7.om,
                         children: (0, i.jsxs)("div", {
-                            className: e1.Ep,
+                            className: e7.Ep,
                             children: [
-                                (0, i.jsx)(e7, {
+                                (0, i.jsx)(e6, {
                                     name: eo.intl.string(eo.t.dPVrEv),
                                     count: l.length,
                                     icon: (0, i.jsx)(H.x, {}),
                                     isSelected: null === r,
                                     onClick: u,
                                 }),
-                                (0, i.jsx)(e7, {
+                                (0, i.jsx)(e6, {
                                     name: eo.intl.string(eo.t["9rlCk1"]),
                                     count: n.length,
                                     icon: (0, i.jsx)(U.G, {}),
@@ -1163,21 +1160,21 @@ function e5(e) {
                     }),
                     t.length > 0 &&
                         (0, i.jsxs)(eQ.Ip, {
-                            className: e1.om,
+                            className: e7.om,
                             fade: !0,
                             children: [
                                 (0, i.jsx)(m.D, {
                                     variant: "heading-sm/medium",
                                     color: "text-muted",
-                                    className: e1.a9,
+                                    className: e7.a9,
                                     children: eo.intl.string(eo.t.URyqtP),
                                 }),
                                 (0, i.jsx)("div", {
-                                    className: e1.Ep,
+                                    className: e7.Ep,
                                     children: t.map((e) => {
                                         let { name: t, count: l, applicationId: s } = e;
                                         return (0, i.jsx)(
-                                            e7,
+                                            e6,
                                             {
                                                 name: t,
                                                 count: l,
@@ -1214,8 +1211,8 @@ function te(e) {
     let t,
         n,
         w,
-        { channelId: L, onClose: k, onClipClick: S, transitionState: D, initialEditingClipId: M, ...P } = e;
-    (0, N.A)();
+        { channelId: L, onClose: k, onClipClick: D, transitionState: S, initialEditingClipId: M, ...P } = e;
+    (0, I.A)();
     let { analyticsLocations: _ } = (0, j.Ay)(v.A.CLIPS_GALLERY),
         [T, G] = s.useState(new Set()),
         {
@@ -1286,7 +1283,7 @@ function te(e) {
                 favoriteClips: a,
             };
         }, [t, n, w])),
-        { onShareClick: K } = (0, I.A)(L),
+        { onShareClick: K } = (0, N.A)(L),
         H = (0, r.bG)([C.A], () => C.A.getExportingClipIds().length > 0),
         [Y, Q] = s.useState(null != M ? "editing" : "gallery"),
         [$, V] = s.useState(M ?? null),
@@ -1380,7 +1377,7 @@ function te(e) {
             value: em,
             children: (0, i.jsx)(c.N, {
                 onClose: k,
-                transitionState: D,
+                transitionState: S,
                 ...P,
                 children: (0, i.jsxs)("div", {
                     className: e8.jT,
@@ -1447,7 +1444,7 @@ function te(e) {
                                             channelId: L,
                                             filteredClips: et,
                                             totalClipCount: F.length,
-                                            onClipClick: S,
+                                            onClipClick: D,
                                         }),
                                     ],
                                 }),

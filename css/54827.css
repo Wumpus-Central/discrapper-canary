@@ -1621,28 +1621,6 @@
     padding: 0 var(--space-16)
 }
 
-.headerContent__54978 {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    gap: var(--space-12);
-    min-width: 0
-}
-
-.headerTitle__54978 {
-    flex: 1;
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
-}
-
-.headerButtons__54978 {
-    align-items: center;
-    display: flex;
-    gap: var(--space-8)
-}
-
 .clipFormFooter__54978,
 .clipFormSection__54978 {
     padding: var(--space-16)
