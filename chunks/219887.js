@@ -1,8 +1,8 @@
 i.d(t, { A: () => E });
 var n = i(627968),
     s = i(64700),
-    l = i(834730),
-    r = i(111159),
+    l = i(37766),
+    r = i(834730),
     a = i(109936),
     o = i(235986),
     u = i(812745),
@@ -84,7 +84,7 @@ class E extends s.PureComponent {
     }
     renderDescription() {
         let { paymentSource: e, descriptionClassName: t } = this.props;
-        return (0, n.jsx)(l.E, { className: t, variant: "text-md/semibold", children: this.getLabel(e) });
+        return (0, n.jsx)(r.E, { className: t, variant: "text-md/semibold", children: this.getLabel(e) });
     }
     renderSubText() {
         let { paymentSource: e, locale: t } = this.props,
@@ -105,9 +105,7 @@ class E extends s.PureComponent {
     }
     renderIcon() {
         let { paymentSource: e } = this.props;
-        return e instanceof d.LQ
-            ? (0, n.jsx)("div", { className: h.k7, children: (0, n.jsx)(r.p, { size: "xs", color: "currentColor" }) })
-            : (0, n.jsx)(u.Ay, { type: this.typeString });
+        return e instanceof d.LQ ? (0, n.jsx)(l._, { size: "lg" }) : (0, n.jsx)(u.Ay, { type: this.typeString });
     }
     render() {
         let {
@@ -115,13 +113,13 @@ class E extends s.PureComponent {
                 paymentSource: t,
                 showSubtext: i,
                 isForSubscription: s,
-                showPaymentSourceIcon: r,
+                showPaymentSourceIcon: l,
                 showLabels: a,
             } = this.props,
             u = this.renderSubText();
         return (0, n.jsxs)(o.A, {
             children: [
-                r && this.renderIcon(),
+                l && this.renderIcon(),
                 (0, n.jsxs)(o.A, {
                     direction: o.A.Direction.VERTICAL,
                     className: h.Wi,
@@ -140,7 +138,7 @@ class E extends s.PureComponent {
                             ],
                         }),
                         i && null != u
-                            ? (0, n.jsx)(l.E, {
+                            ? (0, n.jsx)(r.E, {
                                   variant: "text-sm/normal",
                                   color: "text-subtle",
                                   className: h.Sv,

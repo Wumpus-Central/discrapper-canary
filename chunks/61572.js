@@ -1,4 +1,4 @@
-n.d(t, { N: () => E, n: () => y });
+n.d(t, { N: () => P, n: () => E });
 var l = n(627968),
     a = n(64700),
     i = n(17928),
@@ -11,8 +11,9 @@ var l = n(627968),
     p = n(944355),
     m = n(165272),
     h = n(94420),
-    C = n(375708);
-let A = (e) => {
+    C = n(327105),
+    A = n(375708);
+let y = (e) => {
         let {
                 label: t,
                 additionalPaymentSourceDropdownProps: n,
@@ -20,19 +21,19 @@ let A = (e) => {
                 setPaymentSourceId: o,
                 location: m,
                 onPaymentSourceAdd: h,
-                paymentSourceId: A,
+                paymentSourceId: C,
                 subscriptionPaymentSourceId: y,
                 hideCurrencySelect: E,
                 renderCustomPaymentSourceSelectorContent: P,
                 resolveGiftCardCheckboxProps: S,
-                resolveDisabledState: _,
+                resolveDisabledState: f,
             } = e,
             {
-                giftCardsEnabled: T,
-                giftCardCheckboxProps: f,
+                giftCardsEnabled: _,
+                giftCardCheckboxProps: T,
                 walletCoversSubtotal: I,
-                basePaymentSourceDropdownProps: N,
-                isSubscriptionPaidByWallet: x,
+                basePaymentSourceDropdownProps: x,
+                isSubscriptionPaidByWallet: N,
                 hidePersonalInformation: g,
             } = ((e) => {
                 let { paymentSourceId: t, setPaymentSourceId: n, location: l, subscriptionPaymentSourceId: r } = e,
@@ -75,36 +76,36 @@ let A = (e) => {
                     isSubscriptionPaidByWallet: E,
                     hidePersonalInformation: S,
                 };
-            })({ paymentSourceId: A, setPaymentSourceId: o, location: m, subscriptionPaymentSourceId: y }),
+            })({ paymentSourceId: C, setPaymentSourceId: o, location: m, subscriptionPaymentSourceId: y }),
             { priceOptions: v, currencies: M, displayCurrency: b, setCurrency: j } = (0, u.P5)(),
-            R = a.useMemo(() => (null != _ ? _(r, { isSubscriptionPaidByWallet: x }) : (r ?? !1)), [r, x, _]),
+            R = a.useMemo(() => (null != f ? f(r, { isSubscriptionPaidByWallet: N }) : (r ?? !1)), [r, N, f]),
             L = a.useMemo(() => {
                 if (null != P)
                     return P({
-                        isSubscriptionPaidByWallet: x,
-                        selectedSource: N.paymentSources.find((e) => e.id === N.selectedPaymentSourceId),
+                        isSubscriptionPaidByWallet: N,
+                        selectedSource: x.paymentSources.find((e) => e.id === x.selectedPaymentSourceId),
                         hidePersonalInformation: g,
                     });
-            }, [P, x, N, g]),
+            }, [P, N, x, g]),
             O = a.useMemo(() => {
                 if (!E)
                     return {
-                        label: C.intl.string(C.t["/AAR02"]),
+                        label: A.intl.string(A.t["/AAR02"]),
                         selectedCurrency: v.currency ?? b,
                         currencies: M,
                         onChange: j,
                         disabled: R,
                     };
             }, [E, v.currency, b, M, j, R]),
-            D = a.useMemo(() => ({ ...N, ...n, onPaymentSourceAdd: h }), [N, h, n]),
+            D = a.useMemo(() => ({ ...x, ...n, onPaymentSourceAdd: h }), [x, h, n]),
             w = a.useMemo(
-                () => (null != S ? S(f, { isSubscriptionPaidByWallet: x, selectorDisabled: R }) : f),
-                [f, S, x, R],
+                () => (null != S ? S(T, { isSubscriptionPaidByWallet: N, selectorDisabled: R }) : T),
+                [T, S, N, R],
             ),
             U = null != w && !0 === w.locked;
         return (0, l.jsx)(p.nL, {
             label: t,
-            giftCardsEnabled: T,
+            giftCardsEnabled: _,
             giftCardCheckboxProps: w,
             paymentSourceDropdownProps: D,
             showCheckboxAboveDropdown: (I || U) && !R,
@@ -113,12 +114,15 @@ let A = (e) => {
             customSelectorContent: L,
         });
     },
-    y = (e) => {
+    E = (e) => {
         let { premiumSubscriptionPaymentSourceId: t, ...n } = e,
             { disableSourceChangeTooltipText: i, hasLockedPaymentSource: s } = a.useMemo(
                 () =>
                     null != t
-                        ? { hasLockedPaymentSource: !0, disableSourceChangeTooltipText: C.intl.string(C.t.XiuuV9) }
+                        ? {
+                              hasLockedPaymentSource: !0,
+                              disableSourceChangeTooltipText: A.intl.string(C.default.UdSuwf),
+                          }
                         : { hasLockedPaymentSource: !1, disableSourceChangeTooltipText: void 0 },
                 [t],
             ),
@@ -151,7 +155,7 @@ let A = (e) => {
                 },
                 [s, i],
             );
-        return (0, l.jsx)(E, {
+        return (0, l.jsx)(P, {
             ...n,
             resolveGiftCardCheckboxProps: u,
             resolveDisabledState: c,
@@ -159,7 +163,7 @@ let A = (e) => {
             subscriptionPaymentSourceId: t,
         });
     },
-    E = (e) => {
+    P = (e) => {
         let { setPaymentSourceId: t, paymentSourceId: n } = (0, h.t4)((e) => ({
                 setPaymentSourceId: e.setPaymentSourceId,
                 paymentSourceId: e.paymentSourceId,
@@ -171,5 +175,5 @@ let A = (e) => {
                 }),
                 [e.setPaymentSourceId, e.paymentSourceId, t, n],
             );
-        return (0, l.jsx)(A, { ...e, setPaymentSourceId: i, paymentSourceId: r });
+        return (0, l.jsx)(y, { ...e, setPaymentSourceId: i, paymentSourceId: r });
     };
