@@ -452,7 +452,7 @@ function eb(e) {
             });
         });
     return (
-        r.useLayoutEffect(tl, [k, tl]),
+        r.useLayoutEffect(tl, [k, s, tl]),
         (0, h.g)(eO, tl),
         (0, i.jsx)(d.tG, {
             id: t.id,
