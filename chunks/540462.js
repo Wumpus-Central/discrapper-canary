@@ -17,8 +17,8 @@ var i = n(627968),
     C = n(97483),
     f = n(38021),
     E = n(228366),
-    y = n(367513),
-    N = n(442433),
+    N = n(367513),
+    y = n(442433),
     j = n(730852),
     v = n(401843),
     I = n(817281),
@@ -71,8 +71,8 @@ var i = n(627968),
     eC = n(576705),
     ef = n(309010),
     eE = n(287809),
-    ey = n(977997),
-    eN = n(174459),
+    eN = n(977997),
+    ey = n(174459),
     ej = n(871237),
     ev = n(625494),
     eI = n(723702),
@@ -160,7 +160,7 @@ class eY extends l.PureComponent {
     componentDidMount() {
         let { channel: e, layout: t } = this.props;
         this.currentDocument.addEventListener(e_.Wb, this.handleFullScreenChange),
-            eN.default.track(eB.HAw.VIDEO_LAYOUT_TOGGLED, {
+            ey.default.track(eB.HAw.VIDEO_LAYOUT_TOGGLED, {
                 video_layout: this.inPopout ? "popout" : t,
                 ...(0, D.QS)(e.id),
             });
@@ -262,7 +262,7 @@ class eY extends l.PureComponent {
     handleChangeLayout = (e) => {
         let { channel: t, appContext: n, layout: i } = this.props;
         i !== e &&
-            (y.A.updateLayout(t.id, e, n),
+            (N.A.updateLayout(t.id, e, n),
             e === eB.DUB.FULL_SCREEN && t.isPrivate() && ev._.dispatch(eB.jej.TEXTAREA_BLUR));
     };
     handleDisconnect = () => {
@@ -294,7 +294,7 @@ class eY extends l.PureComponent {
             case eV.lp.HIDDEN_STREAM:
             case eV.lp.STREAM:
                 this.trackCallTileContextMenuImpression(e, eV.qs.STREAM),
-                    (0, N.L3)(
+                    (0, y.L3)(
                         t,
                         async () => {
                             let { default: t } = await Promise.all([
@@ -339,25 +339,24 @@ class eY extends l.PureComponent {
                         );
                     switch (s.type) {
                         case eB.rbe.DM:
-                            return (0, N.L3)(
+                            return (0, y.L3)(
                                 t,
                                 async () => {
                                     let { default: t } = await Promise.all([
-                                        n.e("97292"),
-                                        n.e("94881"),
+                                        n.e("96167"),
                                         n.e("26132"),
                                         n.e("46652"),
                                         n.e("93190"),
-                                        n.e("8757"),
                                         n.e("91763"),
+                                        n.e("8757"),
                                         n.e("89673"),
                                         n.e("85968"),
                                         n.e("60195"),
                                         n.e("29787"),
                                         n.e("97558"),
                                         n.e("94000"),
-                                        n.e("91994"),
                                         n.e("38730"),
+                                        n.e("91994"),
                                         n.e("76665"),
                                         n.e("76273"),
                                         n.e("34971"),
@@ -393,12 +392,11 @@ class eY extends l.PureComponent {
                                 d,
                             );
                         case eB.rbe.GROUP_DM:
-                            return (0, N.L3)(
+                            return (0, y.L3)(
                                 t,
                                 async () => {
                                     let { default: t } = await Promise.all([
-                                        n.e("97292"),
-                                        n.e("94881"),
+                                        n.e("96167"),
                                         n.e("26132"),
                                         n.e("46652"),
                                         n.e("93190"),
@@ -444,11 +442,11 @@ class eY extends l.PureComponent {
                             let a = s.getGuildId();
                             return (
                                 o()(null != a, "GuildID null for guild voice channel"),
-                                (0, N.L3)(
+                                (0, y.L3)(
                                     t,
                                     async () => {
                                         let { default: t } = await Promise.all([
-                                            n.e("94881"),
+                                            n.e("96167"),
                                             n.e("26132"),
                                             n.e("46652"),
                                             n.e("93190"),
@@ -505,13 +503,13 @@ class eY extends l.PureComponent {
     handleSelectParticipant = (e, t) => {
         let { channel: n, selectedParticipant: i, allActiveStreams: l, inCall: a, mode: s } = this.props;
         (0, eV.Ay)(e) &&
-            (0, z.eo)(n, ey.A, eg.A, eC.A, H.default)[0] &&
+            (0, z.eo)(n, eN.A, eg.A, eC.A, H.default)[0] &&
             (j.default.selectVoiceChannel(n.id),
             0 === l.filter((t) => (0, G._z)(t) === e.id && t.state !== eB.XYD.ENDED).length &&
                 (0, v.A9)((0, G.Iy)(e.id), { forceMultiple: t.shiftKey })),
             a &&
                 s === eB._Of.VIDEO &&
-                (i?.id === e.id ? y.A.selectParticipant(n.id, null) : y.A.selectParticipant(n.id, e.id));
+                (i?.id === e.id ? N.A.selectParticipant(n.id, null) : N.A.selectParticipant(n.id, e.id));
     };
     handleOpenPopout = () => {
         let { channel: e, connectedEmbeddedActivity: t } = this.props,
@@ -688,7 +686,7 @@ class eY extends l.PureComponent {
             C = p === eB.DUB.MINIMUM,
             f = C || p === eB.DUB.NORMAL,
             E = l && s === eB._Of.VIDEO,
-            y = (x?.length ?? 0) > 0 && u.isPrivate();
+            N = (x?.length ?? 0) > 0 && u.isPrivate();
         return (
             (this._lastIdleProps = e),
             (0, i.jsx)(ea.A, {
@@ -720,7 +718,7 @@ class eY extends l.PureComponent {
                               mode: s,
                               onSelectParticipant: this.handleSelectParticipant,
                               onContextMenuParticipant: this.handleContextMenu,
-                              showParticipants: r && (!f || y),
+                              showParticipants: r && (!f || N),
                               popoutType: t,
                               awaitingRemoteSessionInfo: A,
                               callContainerDimensions: g,
@@ -794,8 +792,8 @@ let eK = function (e) {
         { width: h = 0, height: p = 0, ref: m } = (0, _.Ay)(),
         { ref: A } = (0, _.Ay)(),
         E = (0, K.Us)(),
-        N = (0, F.A)(),
-        j = (0, d.bG)([ef.A], () => (N?.channelId ?? ef.A.getVoiceChannelId()) === t.id),
+        y = (0, F.A)(),
+        j = (0, d.bG)([ef.A], () => (y?.channelId ?? ef.A.getVoiceChannelId()) === t.id),
         {
             participants: v,
             filteredParticipants: S,
@@ -875,7 +873,7 @@ let eK = function (e) {
         eh &&
             j &&
             null == eS.A.getAllChatOpen()[t.id] &&
-            (o <= 0 || y.A.updateChatOpen(t.id, !0, "auto open screen width"));
+            (o <= 0 || N.A.updateChatOpen(t.id, !0, "auto open screen width"));
     }, [eh, ec, o, t.id, j]);
     let { theme: ex } = (0, f.wR)();
     return (0, i.jsx)(U.f5, {

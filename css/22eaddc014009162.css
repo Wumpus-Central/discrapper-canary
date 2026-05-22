@@ -1,0 +1,12 @@
+.smallCardItem__02912 {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    overflow: hidden;
+    width: 246px
+}
+
+.storeLinksContainer__4177a {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}

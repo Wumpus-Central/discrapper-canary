@@ -20,9 +20,9 @@ var l = n(627968),
     S = n(855687),
     _ = n(143413),
     I = n(495544),
-    y = n(734057),
-    N = n(808728),
-    j = n(498642),
+    N = n(734057),
+    j = n(808728),
+    y = n(498642),
     T = n(71393),
     b = n(186111),
     v = n(232835),
@@ -109,15 +109,15 @@ function W(e) {
             guildPersonalized: eo,
         } = {
             guildPopulated:
-                ((s = (0, o.bG)([y.A], () => y.A.getChannel(Q?.systemChannelId))),
+                ((s = (0, o.bG)([N.A], () => N.A.getChannel(Q?.systemChannelId))),
                 (d = (0, o.yK)([v.A], () => (null != s ? v.A.getMessages(s.id).toArray() : []))),
-                (0, o.bG)([j.A], () => {
-                    let e = j.A.getMemberCount(Q?.id) ?? 0,
+                (0, o.bG)([y.A], () => {
+                    let e = y.A.getMemberCount(Q?.id) ?? 0,
                         t = d.some((e) => e.type === D.lAJ.USER_JOIN);
                     return e > 1 || t;
                 }, [Q, d])),
             guildMessaged:
-                ((h = (0, o.bG)([y.A], () => (null != Q ? y.A.getMutableBasicGuildChannelsForGuild(Q.id) : null))),
+                ((h = (0, o.bG)([N.A], () => (null != Q ? N.A.getMutableBasicGuildChannelsForGuild(Q.id) : null))),
                 (t = i.useMemo(() => (null == h ? [] : x().values(h)), [h])),
                 (f = (0, o.bG)([I.default], () => I.default.getId())),
                 (0, o.bG)([v.A], () =>
@@ -130,15 +130,15 @@ function W(e) {
                 ((E = (0, o.bG)([b.A], () => b.A.hasLayers())),
                 (G = (0, o.bG)([T.A], () => T.A.getGuild(Q?.id))),
                 G?.icon != null && !E),
-            guildChannelCreated: (0, o.bG)([N.Ay], () => {
-                let e = N.Ay.getChannels(Q?.id),
-                    t = e[N.vM];
+            guildChannelCreated: (0, o.bG)([j.Ay], () => {
+                let e = j.Ay.getChannels(Q?.id),
+                    t = e[j.vM];
                 function n(e) {
                     return (
                         null != Q && R.default.extractTimestamp(e.channel.id) - R.default.extractTimestamp(Q.id) > 500
                     );
                 }
-                return e[N.I6].some(n) || t.some(n);
+                return e[j.I6].some(n) || t.some(n);
             }, [Q]),
         },
         {
@@ -155,11 +155,10 @@ function W(e) {
                 null != Q &&
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("47416"),
+                            n.e("54827"),
                             n.e("59957"),
                             n.e("28136"),
                             n.e("16084"),
-                            n.e("87317"),
                             n.e("22547"),
                         ]).then(n.bind(n, 1310));
                         return (t) =>

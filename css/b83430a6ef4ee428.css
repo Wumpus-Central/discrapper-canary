@@ -1,0 +1,14 @@
+.forumPost__7d15e {
+    background-color: var(--background-base-low);
+    border-radius: 8px;
+    margin: 0 0 16px
+}
+
+.forumPost__7d15e:hover {
+    box-shadow: none;
+    transform: none
+}
+
+.container__7d15e .forumPost__7d15e:last-of-type {
+    margin-bottom: 0
+}

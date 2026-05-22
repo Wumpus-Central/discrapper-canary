@@ -1,0 +1,79 @@
+.error__6e36d {
+    color: var(--text-feedback-critical);
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    margin-top: 4px
+}
+
+.splash__15293 {
+    background-position: 50%;
+    background-size: cover;
+    filter: grayscale(100%);
+    height: 120px;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    -webkit-mask: linear-gradient(#000, transparent);
+    mask: linear-gradient(#000, transparent);
+    opacity: .1
+}
+
+.gameIcon__15293 {
+    margin-inline-end: 20px
+}
+
+.gameName__15293 {
+    flex-grow: 1;
+    font-size: 16px
+}
+
+.gameName__15293,
+.installSize__15293 {
+    font-weight: var(--font-weight-semibold)
+}
+
+.installSize__15293 {
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 5px 8px;
+    white-space: nowrap
+}
+
+.divider__15293 {
+    height: 1px;
+    margin: 20px 0
+}
+
+.selector__15293 {
+    margin-bottom: 20px
+}
+
+.installButton__15293 {
+    align-items: center;
+    display: flex
+}
+
+.premiumIcon__15293 {
+    margin-inline-end: 4px
+}
+
+.terms__15293 {
+    margin-bottom: 20px
+}
+
+.theme-dark .gameName__15293 {
+    color: var(--primary-200)
+}
+
+.theme-dark .installSize__15293 {
+    background-color: var(--primary-500);
+    color: var(--primary-100)
+}
+
+.theme-dark .divider__15293 {
+    background-color: hsl(var(--primary-630-hsl)/.6)
+}
+
+.theme-dark .premiumTerms__15293 {
+    color: var(--primary-200)
+}
