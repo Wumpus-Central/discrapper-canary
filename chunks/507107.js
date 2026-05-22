@@ -28,4 +28,5 @@ var _ = (((s = {}).GENERIC = "generic"), (s.RATE_LIMITED = "rate_limited"), s),
         (o.LOST_FOCUS = "LOST_FOCUS"),
         (o.MODAL_CLOSED = "MODAL_CLOSED"),
         (o.ANOTHER_MODAL_OPENED = "ANOTHER_MODAL_OPENED"),
+        (o.PICTURE_IN_PICTURE = "PICTURE_IN_PICTURE"),
         o);

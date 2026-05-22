@@ -7,6 +7,7 @@ n.d(t, {
     lx: () => u.lx,
     Yr: () => E,
     KP: () => u.KP,
+    C1: () => S.A,
     pK: () => u.pK,
     _4: () => d,
     O7: () => _.O7,
@@ -15,7 +16,7 @@ n.d(t, {
     Ft: () => r.default,
     Kb: () => u.Kb,
     KI: () => c,
-    rB: () => S.rB,
+    rB: () => p.rB,
     zj: () => u.zj,
     bq: () => _.bq,
     Ce: () => f.C,
@@ -111,12 +112,12 @@ function E(e) {
                     h.current(), c(!1);
             }
         }, []),
-        x = (0, o.useCallback)((e) => {
+        I = (0, o.useCallback)((e) => {
             E(!0);
         }, []);
     return {
         handlePlayerStateChange: D,
-        handleLoadEnd: x,
+        handleLoadEnd: I,
         handleFirstFrame: (0, o.useCallback)((e) => {
             f(!0);
         }, []),
@@ -128,5 +129,6 @@ function E(e) {
 var m = n(23590),
     f = n(984212),
     _ = n(739416),
-    S = n(61491);
+    S = n(920228),
+    p = n(61491);
 n(645577);

@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { KB: () => p, Q6: () => d, SB: () => _, TJ: () => f, h$: () => c, n4: () => h, oA: () => E });
-var r,
-    i,
+n.d(t, { KB: () => E, Q6: () => c, SB: () => _, TJ: () => f, h$: () => d, n4: () => p, oA: () => h });
+var i,
+    r,
     s,
     a,
     o,
     l,
     u,
-    d = (((r = {}).PLAYING = "playing"), (r.PAUSED = "paused"), (r.ENDED = "ended"), r),
-    c = (((i = {}).LOADING = "loading"), (i.BUFFERING = "buffering"), (i.READY = "ready"), i),
+    c = (((i = {}).PLAYING = "playing"), (i.PAUSED = "paused"), (i.ENDED = "ended"), i),
+    d = (((r = {}).LOADING = "loading"), (r.BUFFERING = "buffering"), (r.READY = "ready"), r),
     _ =
         (((s = {}).ERROR = "ERROR"),
         (s.SOURCE_ERROR = "SOURCE_ERROR"),
@@ -32,13 +32,14 @@ var r,
         (a.FULLSCREEN = "f"),
         (a.MUTE = "m"),
         a),
-    E = (((o = {}).MD = "md"), (o.LG = "lg"), o),
-    h = (((l = {}).MD = "md"), (l.LG = "lg"), l),
-    p =
+    h = (((o = {}).MD = "md"), (o.LG = "lg"), o),
+    p = (((l = {}).MD = "md"), (l.LG = "lg"), l),
+    E =
         (((u = {}).VISIBILITY = "visibility"),
         (u.FOCUS = "focus"),
         (u.USER = "user"),
         (u.SEEK = "seek"),
         (u.PLAYBACK_COMPLETE = "playback_complete"),
         (u.BUFFERING_RECOVERY = "buffering_recovery"),
+        (u.PICTURE_IN_PICTURE = "picture_in_picture"),
         u);
