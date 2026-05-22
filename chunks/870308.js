@@ -41,6 +41,7 @@ let h = () => {
                               body: () => t.body,
                               assetDark: t.assetDark,
                               assetLight: t.assetLight,
+                              buttonLabel: t.buttonLabel,
                               badgeIcon: t.badgeIcon,
                               badgeText: t.badgeText,
                               entrypointBackgroundStyle: e?.style,

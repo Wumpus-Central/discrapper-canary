@@ -346,6 +346,7 @@ class M {
     refTargetBackground;
     badgeIcon;
     badgeText;
+    buttonLabel;
     constructor(e) {
         (this.type = D.G.COACHMARK),
             (this.title = e.title),
@@ -355,7 +356,8 @@ class M {
             (this.version = e.version),
             (this.refTargetBackground = e.refTargetBackground),
             (this.badgeIcon = e.badgeIcon),
-            (this.badgeText = e.badgeText);
+            (this.badgeText = e.badgeText),
+            (this.buttonLabel = e.buttonLabel);
     }
     static fromServer(e) {
         return new M({
@@ -365,6 +367,7 @@ class M {
             refTargetBackground: e.ref_target_background,
             badgeIcon: e.badge_icon,
             badgeText: e.badge_text,
+            buttonLabel: e.button_label,
         });
     }
 }

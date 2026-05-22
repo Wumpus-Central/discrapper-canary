@@ -1763,7 +1763,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 549115, Version Hash: ffdd438c0bd4271f6c62726a52d44f05c4c8821f`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 549143, Version Hash: dbdd3d191e4ebd81b92155088b7ff78699d322e3`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -16247,15 +16247,16 @@ let AU = (e) => {
         (0, k.jsx)(rW.A, {
             targetElementRef: n,
             position: "right",
+            alignmentStrategy: "edge",
             align: "top",
-            size: "md",
+            size: "lg",
             caretConfig: { align: "start" },
             title: t.title(),
             body: t.body(),
             graphic: { type: "image", src: o },
             actions: [
                 {
-                    text: na.intl.string(na.t.fYfGgK),
+                    text: t.buttonLabel ?? na.intl.string(na.t.fYfGgK),
                     variant: "primary",
                     onClick: () => {
                         r?.(),
@@ -16559,7 +16560,6 @@ let Aj = (e) => {
                 children: [
                     (0, k.jsxs)(AW, {
                         ...i,
-                        onClick: () => n(rE.i.TAKE_ACTION),
                         listItemRef: r,
                         children: [
                             (0, k.jsx)(A$, {
@@ -18399,7 +18399,7 @@ let SN = "isHideDevBanner",
                     className: t2()(SS.Wz, SS.mr),
                     children: [
                         (0, k.jsx)(ST, { className: SS.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "549115" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "549143" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
