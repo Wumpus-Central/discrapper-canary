@@ -1,0 +1,404 @@
+.previewContainer__74a6a {
+    background-color: var(--background-base-lower);
+    border-end-end-radius: 8px;
+    border-end-start-radius: 8px;
+    padding: 16px
+}
+
+.icon__74a6a {
+    align-self: center;
+    background-color: var(--background-base-lowest);
+    border-radius: var(--radius-lg);
+    margin: 16px
+}
+
+.welcomeHeader__74a6a {
+    display: flex;
+    flex-direction: column;
+    text-align: center
+}
+
+.welcomeTitle__74a6a {
+    color: var(--text-default);
+    margin-bottom: 8px
+}
+
+.welcomeTitle__74a6a strong {
+    color: var(--text-strong)
+}
+
+.welcomeChannels__74a6a {
+    display: flex;
+    flex-direction: column
+}
+
+.headerGuildBadge__74a6a {
+    display: inline-block;
+    margin-block: 0;
+    margin-inline: 2px 4px
+}
+
+.flowerStar__74a6a {
+    display: block
+}
+
+.descriptionWrapper__74a6a {
+    margin: 0 auto;
+    max-width: 440px;
+    width: 100%
+}
+
+.divider__74a6a {
+    margin: 32px 0
+}
+
+.addChannelButton__74a6a {
+    align-self: flex-start;
+    margin-top: 16px
+}
+
+.addChannelSubtext__74a6a {
+    margin-bottom: 8px
+}
+
+.welcomeChannel__74a6a {
+    align-items: center;
+    background-color: var(--background-base-low);
+    border-radius: var(--radius-xs);
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    padding: 12px 16px
+}
+
+.dragging__74a6a {
+    opacity: .5
+}
+
+.channelTitleIcon__74a6a {
+    color: var(--text-default);
+    margin-inline-end: 2px;
+    vertical-align: middle
+}
+
+.channelIcon__74a6a {
+    color: var(--channel-icon)
+}
+
+.warningIcon__74a6a {
+    border-radius: var(--radius-xs)
+}
+
+.channelDescriptionWrapper__74a6a {
+    flex: 1;
+    margin: 0 16px
+}
+
+.notice__74a6a {
+    background-color: rgba(250, 166, 26, .1);
+    border: 1px solid var(--status-warning);
+    border-radius: var(--radius-sm);
+    color: var(--text-default);
+    margin: 0 0 16px;
+    padding: 16px
+}
+
+.noticeIcon__74a6a {
+    display: inline-block;
+    margin-inline-end: 4px
+}
+
+.theme-dark .channelWarning__74a6a,
+.theme-dark .warningIcon__74a6a {
+    color: var(--text-feedback-warning)
+}
+
+.theme-light .warningIcon__74a6a {
+    color: var(--icon-feedback-critical)
+}
+
+.theme-light .channelWarning__74a6a {
+    color: var(--text-feedback-critical)
+}
+
+.enable-forced-colors .welcomeChannel__74a6a {
+    border: 1px solid CanvasText
+}
+
+.container_d71b96 {
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 16px
+}
+
+.headerBar_d71b96 {
+    cursor: pointer;
+    display: flex
+}
+
+.headerText_d71b96 {
+    align-self: center;
+    flex: 1 1 auto
+}
+
+.headerCaret_d71b96 {
+    color: var(--interactive-text-default);
+    flex: 0 0 auto;
+    margin-inline-start: 8px
+}
+
+.categoryTitle_d71b96 {
+    margin-top: 16px
+}
+
+.button_d71b96 {
+    margin: 15px auto 0
+}
+
+.row_d71b96 {
+    align-items: center;
+    display: flex;
+    margin-top: 16px
+}
+
+.rowText_d71b96 {
+    flex: 1 1 auto
+}
+
+.rowIcon_d71b96 {
+    flex: 0 0 auto;
+    margin-inline-start: 8px
+}
+
+.rowIconChecked_d71b96 {
+    color: var(--brand-500);
+    height: 24px;
+    width: 24px
+}
+
+.rowIconEmpty_d71b96 {
+    border: 2px solid var(--border-subtle);
+    border-radius: 50%;
+    height: 20px;
+    margin-top: 2px;
+    margin-inline-end: 2px;
+    margin-bottom: 2px;
+    width: 20px
+}
+
+.divider_d71b96 {
+    margin-top: 16px
+}
+
+.progressBarOuter_d71b96 {
+    background: var(--background-mod-normal);
+    border-radius: 2px;
+    height: 4px;
+    margin-top: 16px;
+    overflow: hidden;
+    width: 100%
+}
+
+.progressBarInner_d71b96 {
+    background: var(--brand-500);
+    height: 100%
+}
+
+.settingsColumn_bbb935 {
+    max-width: var(--custom-guild-settings-discovery-landing-page-max-width-tab)
+}
+
+.settingsContainer_bbb935 {}
+
+.settingsScroller_bbb935 {}
+
+.settingsContent_bbb935 {
+    margin-inline-end: 55px
+}
+
+.container_bbb935 {
+    align-items: flex-start;
+    display: flex
+}
+
+.mainContent_bbb935 {
+    display: flex;
+    flex-basis: var(--custom-guild-settings-discovery-landing-page-settings-max-width);
+    flex-direction: column;
+    flex-grow: 0.45;
+    gap: var(--space-24)
+}
+
+.betaTag_bbb935 {
+    display: inline-block
+}
+
+.twoColumnFormSection_bbb935 {
+    display: flex;
+    justify-content: space-between
+}
+
+.checklist_bbb935 {
+    background-color: var(--background-base-low);
+    flex-basis: 248px;
+    flex-grow: 0;
+    margin-inline-start: 40px;
+    position: sticky;
+    top: 16px
+}
+
+.textArea_bbb935 {
+    height: 240px
+}
+
+.socialLinksContainer_bbb935 {
+    -moz-column-gap: var(--space-8);
+    column-gap: var(--space-8);
+    display: grid;
+    grid-template-columns: 175px 1fr;
+    margin-bottom: 16px
+}
+
+.validationButtonMin_bbb935 {
+    inset-inline-start: 323px;
+    position: relative;
+    top: 10px
+}
+
+.validationButtonMax_bbb935 {
+    inset-inline-start: 362px;
+    position: relative;
+    top: 10px
+}
+
+.deleteButtonMin_bbb935 {
+    inset-inline-start: 336px;
+    position: relative;
+    top: 7px
+}
+
+.deleteButtonMax_bbb935 {
+    inset-inline-start: 377px;
+    position: relative;
+    top: 7px
+}
+
+.deleteButtonHiddenMin_bbb935 {
+    inset-inline-start: 336px;
+    opacity: 0;
+    position: relative;
+    top: 7px
+}
+
+.deleteButtonHiddenMax_bbb935 {
+    inset-inline-start: 377px;
+    opacity: 0;
+    position: relative;
+    top: 7px
+}
+
+.socialLinksDropdownMin_bbb935 {
+    height: 40px;
+    margin-inline-end: 5px;
+    width: 175px
+}
+
+.socialLinksDropdownMax_bbb935 {
+    height: 40px;
+    margin-inline-end: 5px;
+    width: 264px
+}
+
+.socialLinksMin_bbb935 {
+    inset-inline-start: 231px;
+    position: absolute;
+    width: 339px
+}
+
+.socialLinksMax_bbb935 {
+    inset-inline-start: 319px;
+    position: absolute;
+    width: 380px
+}
+
+.reasonToJoin_bbb935 {
+    border: 1px;
+    width: 100%
+}
+
+.reasonEditButton_bbb935 {
+    margin-inline-start: auto
+}
+
+.formColumnLeft_bbb935 {
+    margin-inline-end: 8px;
+    width: 50%
+}
+
+.formColumnRight_bbb935 {
+    margin-inline-start: 8px;
+    width: 50%
+}
+
+.noDividerFormSection_bbb935 {
+    margin-top: 32px
+}
+
+.formTitle_bbb935 {
+    font-size: 12px;
+    margin-bottom: 8px
+}
+
+.formDescription_bbb935 {
+    margin-bottom: 16px;
+    margin-inline-end: 16px;
+    max-width: 328px
+}
+
+.switchDescription_bbb935 {
+    margin-inline-end: 16px;
+    margin-top: -15px
+}
+
+.description_bbb935,
+.tabMainDescription_bbb935 {
+    margin: 8px 0 16px
+}
+
+.formSelect_bbb935 {
+    flex-basis: 50%;
+    margin-inline-start: 16px
+}
+
+.divider_bbb935 {
+    margin: 32px 0
+}
+
+.guildCard_bbb935 {
+    flex: 0 0 auto;
+    min-height: 256px
+}
+
+.viewPageButton_bbb935 {
+    margin-top: 16px
+}
+
+.imageUploaderInnerSquare_bbb935 {
+    background-size: cover;
+    border-radius: var(--radius-xs);
+    height: 163px;
+    width: 279px
+}
+
+.error_bbb935 {
+    margin-top: 8px
+}
+
+.images-light .imageUploaderInnerSquare_bbb935 {
+    background-image: url(/assets/90bd7fcad4aab8ed.svg)
+}
+
+.images-dark .imageUploaderInnerSquare_bbb935 {
+    background-image: url(/assets/b00e3f0a7090b61f.svg)
+}

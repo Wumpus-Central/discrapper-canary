@@ -1093,8 +1093,7 @@ function nT(e) {
         o = (0, A.bG)([nC.A], () => nC.A.getScrollToConversation(n.id), [n.id]),
         c = s.useCallback(
             (e) => {
-                let t = n.getGuildId();
-                null != t && (0, nb.xI)(n.id, t, e.id);
+                (0, nb.xI)(n.id, n.guild_id, e.id);
             },
             [n],
         );
@@ -1125,10 +1124,9 @@ function nT(e) {
                             children: (0, i.jsx)(ns.D, {
                                 className: nE.Qf,
                                 onClick: function () {
-                                    let e = n.getGuildId();
-                                    if (null == e || 0 === t.length || r) return;
-                                    let l = t[0].conversation;
-                                    (0, nb.WF)({ channelId: n.id, guildId: e, before: l.startMessageId });
+                                    if (0 === t.length || r) return;
+                                    let e = t[0].conversation;
+                                    (0, nb.WF)({ channelId: n.id, guildId: n.guild_id, before: e.startMessageId });
                                 },
                                 children: (0, i.jsx)(y.E, {
                                     variant: "text-sm/medium",
@@ -1163,10 +1161,9 @@ function nT(e) {
                             children: (0, i.jsx)(ns.D, {
                                 className: nE.Qf,
                                 onClick: function () {
-                                    let e = n.getGuildId();
-                                    if (null == e || 0 === t.length || r) return;
-                                    let l = t[t.length - 1].conversation;
-                                    (0, nb.WF)({ channelId: n.id, guildId: e, after: l.endMessageId });
+                                    if (0 === t.length || r) return;
+                                    let e = t[t.length - 1].conversation;
+                                    (0, nb.WF)({ channelId: n.id, guildId: n.guild_id, after: e.endMessageId });
                                 },
                                 children: (0, i.jsx)(y.E, {
                                     variant: "text-sm/medium",
@@ -1195,7 +1192,7 @@ let nU = (e) => {
         a = s.useCallback(() => {
             (0, m.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    t.e("81702"),
+                    t.e("93412"),
                     t.e("59957"),
                     t.e("28136"),
                     t.e("16084"),
@@ -1763,7 +1760,7 @@ let to = (e) => {
                     ? () => {
                           (0, m.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([
-                                  t.e("12647"),
+                                  t.e("40930"),
                                   t.e("66234"),
                                   t.e("72891"),
                                   t.e("54046"),
@@ -4737,9 +4734,9 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
     rB = (0, nS.Fe)({
         createPromise: () =>
             Promise.all([
-                t.e("69236"),
-                t.e("64801"),
-                t.e("93011"),
+                t.e("27646"),
+                t.e("51703"),
+                t.e("94419"),
                 t.e("49681"),
                 t.e("21044"),
                 t.e("33097"),
@@ -4755,15 +4752,15 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
     }),
     rV = () =>
         Promise.all([
-            t.e("94234"),
-            t.e("12647"),
+            t.e("7468"),
+            t.e("40930"),
             t.e("4981"),
             t.e("21913"),
             t.e("84682"),
             t.e("27252"),
             t.e("74748"),
-            t.e("45773"),
-            t.e("69236"),
+            t.e("93412"),
+            t.e("80677"),
             t.e("24914"),
             t.e("68201"),
             t.e("792"),
@@ -4794,17 +4791,17 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
     rW = (0, nS.Fe)({ createPromise: rV, webpackId: 540462, name: "ChannelCall", renderLoader: rH }),
     rY = () =>
         Promise.all([
-            t.e("69236"),
-            t.e("81702"),
-            t.e("12647"),
+            t.e("80677"),
+            t.e("93412"),
+            t.e("40930"),
             t.e("4981"),
             t.e("21913"),
             t.e("84682"),
             t.e("27252"),
             t.e("74748"),
-            t.e("45773"),
             t.e("85222"),
-            t.e("94234"),
+            t.e("7468"),
+            t.e("2146"),
             t.e("68201"),
             t.e("792"),
             t.e("92822"),
@@ -4839,11 +4836,11 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
     rK = (0, nS.Fe)({
         createPromise: () =>
             Promise.all([
-                t.e("93011"),
+                t.e("27646"),
                 t.e("11394"),
                 t.e("4974"),
                 t.e("58406"),
-                t.e("45773"),
+                t.e("93412"),
                 t.e("63982"),
                 t.e("49681"),
                 t.e("38939"),
@@ -4863,10 +4860,9 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
     rq = (0, nS.Fe)({
         createPromise: () =>
             Promise.all([
-                t.e("45773"),
-                t.e("14520"),
+                t.e("93412"),
+                t.e("7468"),
                 t.e("58406"),
-                t.e("81702"),
                 t.e("56574"),
                 t.e("49681"),
                 t.e("28136"),

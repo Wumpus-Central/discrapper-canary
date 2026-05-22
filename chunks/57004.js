@@ -1,5 +1,6 @@
 e.exports = {
     Zt: "previewWindow__776c3",
+    CU: "previewWindowFocused__776c3",
     MM: "previewAvatar__776c3",
     QS: "previewMessage__776c3",
     gp: "previewContent__776c3",

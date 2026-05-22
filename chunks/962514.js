@@ -35,7 +35,7 @@ async function L(e) {
         throw new g.LG(e);
     }
 }
-async function R(e) {
+async function k(e) {
     let { channelId: t, messageId: n } = e;
     try {
         await S.Bo.post({ url: b.Rsh.POLL_EXPIRE(t, n), rejectWithError: !1 });
@@ -43,7 +43,7 @@ async function R(e) {
         throw new g.LG(e);
     }
 }
-var k = n(862780),
+var R = n(862780),
     M = n(555034),
     P = n(375708);
 function w(e, t) {
@@ -80,14 +80,16 @@ function O(e) {
     !(function (e) {
         let { message: t, initialAnswerId: i } = e;
         (0, y.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("32576"), n.e("78195"), n.e("19794")]).then(n.bind(n, 716936));
+            let { default: e } = await Promise.all([n.e("50671"), n.e("40183"), n.e("78195"), n.e("19794")]).then(
+                n.bind(n, 716936),
+            );
             return (n) => (0, T.jsx)(e, { ...n, message: t, initialAnswerId: i });
         });
     })({ message: r, initialAnswerId: a });
 }
 function U(e) {
     let { channelId: t, messageId: n, isEditing: i } = e;
-    (0, k.A2)(t, n, (e) => ({
+    (0, R.A2)(t, n, (e) => ({
         channelId: t,
         selectedAnswerIds: new Set(),
         submitting: !1,
@@ -134,12 +136,12 @@ async function B(e) {
         return void D({ guildId: i.guild_id, title: P.intl.string(P.t.Qic1FD), body: P.intl.string(P.t["5sHHoy"]) });
     if (!_.A.canChatInGuild(i.guild_id))
         return void u.A.show({ title: P.intl.string(P.t.p245wu), body: P.intl.string(P.t["U/uodt"]) });
-    let s = (0, k.xt)(t, n);
+    let s = (0, R.xt)(t, n);
     l()(null != s, "Must not be able to vote without existing state!");
     let r = G({ channelId: t, messageId: n });
     try {
         let e = [...s.selectedAnswerIds.values()];
-        (0, k.A2)(
+        (0, R.A2)(
             t,
             n,
             (e) => (
@@ -149,7 +151,7 @@ async function B(e) {
         ),
             await V({ channelId: t, messageId: n, answerIds: e }),
             await L({ channelId: t, messageId: n, answerIds: e }),
-            (0, k.A2)(t, n, () => void 0),
+            (0, R.A2)(t, n, () => void 0),
             d.O.announce(0 === e.length ? P.intl.string(P.t["xcvy+3"]) : P.intl.string(P.t.o20GSo));
     } catch (e) {
         u.A.show({
@@ -157,7 +159,7 @@ async function B(e) {
             body: e.getAnyErrorMessage?.() ?? e.message ?? P.intl.string(P.t.eAn6z2),
         }),
             await V({ channelId: t, messageId: n, answerIds: r }),
-            (0, k.A2)(t, n, (e) => {
+            (0, R.A2)(t, n, (e) => {
                 if (null != e) return { ...e, submitting: !1, editing: !1 };
             });
     }
@@ -168,7 +170,7 @@ async function H(e) {
     if (null != i)
         return A.A.isLurking(i.guild_id)
             ? void D({ guildId: i.guild_id, title: P.intl.string(P.t.B9QnBp), body: P.intl.string(P.t.BVZCTn) })
-            : ((0, k.A2)(t, n, (e) => ({
+            : ((0, R.A2)(t, n, (e) => ({
                   channelId: t,
                   selectedAnswerIds: new Set(),
                   submitting: !1,
@@ -192,7 +194,7 @@ async function F(e) {
         case "showVotes":
             !(function (e) {
                 let { channelId: t, messageId: n } = e;
-                (0, k.A2)(t, n, (e) => {
+                (0, R.A2)(t, n, (e) => {
                     let i = null == e || !e.showResults,
                         l = j.A.getMessage(t, n),
                         s = null != l ? l.reactions.reduce((e, t) => e + (t.count_details?.vote ?? 0), 0) : 0;
@@ -239,7 +241,7 @@ let Y = {
             { tapShouldOpenVotersModal: a } = (0, M.j8)(r) ?? {};
         if (!0 === a) return void O({ channelId: i, messageId: s, answerId: t });
         let o = r.poll?.allow_multiselect;
-        (0, k.A2)(i, s, (e) => {
+        (0, R.A2)(i, s, (e) => {
             if (null == e) {
                 let e = new Set([t]),
                     {
@@ -319,6 +321,6 @@ let Y = {
     endPollEarly: async function (e) {
         let { channelId: t, messageId: n } = e;
         (await u.A.confirm({ title: P.intl.string(P.t["+rfkTK"]), body: P.intl.string(P.t.H2I1gL) })) &&
-            (await R({ channelId: t, messageId: n }));
+            (await k({ channelId: t, messageId: n }));
     },
 };

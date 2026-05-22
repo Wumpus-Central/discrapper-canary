@@ -11,4 +11,5 @@ e.exports = {
     KZ: "topicItemMuted__2b8d3",
     iF: "topicLine__2b8d3",
     iN: "topicLineInner__2b8d3",
+    v7: "topicJumpedContainerFocused__2b8d3",
 };

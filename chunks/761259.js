@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { xI: () => f, ik: () => h, Eg: () => _, WF: () => d });
+n.d(t, { oq: () => p, ik: () => E, xI: () => f, WF: () => d, Eg: () => _, P7: () => h });
 var i = n(636537),
     r = n(228366),
     s = n(720149),
@@ -81,7 +81,7 @@ function u(e) {
                       : null,
           };
 }
-n(705448);
+n(575279);
 var c = n(652215);
 function d(e) {
     let { channelId: t, guildId: n, limit: s = 25, before: l, after: d, around: _, isStaleRefresh: f } = e;
@@ -114,12 +114,18 @@ function _() {
     r.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 }
 function f(e, t, n) {
-    r.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: n }), h(e, t, n);
+    r.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: n }), E(e, t, n);
     let i = l.A.getConversationMetadata(e, n);
     i?.conversation.startMessageId != null &&
         s.A.jumpToMessage({ channelId: e, messageId: i.conversation.startMessageId, flash: !1 });
 }
-async function h(e, t, n) {
+function h(e, t) {
+    r.h.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId: e, conversationId: t });
+}
+function p(e, t, n) {
+    r.h.dispatch({ type: "SET_CONVERSATION_FEEDBACK_RATING", channelId: e, conversationId: t, rating: n });
+}
+async function E(e, t, n) {
     if ((0, o.uJ)(t, "fetch_conversation") && l.A.getConversationMetadata(e, n)?.hydratedMessages == null) {
         r.h.dispatch({ type: "CONVERSATION_FETCH_START", channelId: e, conversationId: n });
         try {
