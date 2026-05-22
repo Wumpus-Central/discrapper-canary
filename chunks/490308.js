@@ -16,6 +16,7 @@ e.exports = {
     C9: "detailScroller__6db38",
     b: "closeButton__6db38",
     y2: "badgeGraphic__6db38",
+    hu: "badgeGraphicAnimated__6db38",
     OU: "badgeInfo__6db38",
     cQ: "badgeIdentity__6db38",
     _r: "badgeTitle__6db38",

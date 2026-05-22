@@ -50,16 +50,19 @@ function N(e) {
         A = u?.name,
         I = _ ? S.intl.string(S.t.Ipxkog) : (l?.name ?? s),
         N = null != A ? `${I} ${A}` : I,
-        C = (d ? void 0 : l?.complex_icon_animated_url) ?? l?.complex_icon_static_url ?? l?.simple_icon_url ?? a;
-    if (f) return (0, i.jsx)(y, { userId: r, title: N, badgeImage: C, rarity: l?.rarity, children: t });
-    let v = null != c ? S.intl.formatToPlainString(S.t["0aEh2a"], { date: new Date(c) }) : void 0;
+        C = d ? void 0 : l?.complex_icon_animated_url,
+        v = C ?? l?.complex_icon_static_url ?? l?.simple_icon_url ?? a,
+        O = null != C && v === C;
+    if (f) return (0, i.jsx)(y, { userId: r, title: N, badgeImage: v, rarity: l?.rarity, children: t });
+    let R = null != c ? S.intl.formatToPlainString(S.t["0aEh2a"], { date: new Date(c) }) : void 0;
     return (0, i.jsx)(g.A, {
         title: N,
-        body: v,
-        badgeImage: C,
+        body: R,
+        badgeImage: v,
         badgeName: N,
         rarity: l?.rarity,
         variant: _ ? "nitro" : "default",
+        isAnimated: O,
         children: t,
     });
 }

@@ -137,10 +137,18 @@
 .badgeGraphic__6db38 {
     flex-shrink: 0;
     height: 100px;
-    margin-bottom: var(--space-16);
+    margin-block-end: var(--space-16);
     max-width: 100%;
     -o-object-fit: contain;
-    object-fit: contain
+    object-fit: contain;
+    width: 100px
+}
+
+.badgeGraphicAnimated__6db38 {
+    margin-block-end: var(--space-32);
+    position: relative;
+    transform: scale(1.75);
+    z-index: 0
 }
 
 .badgeInfo__6db38 {
@@ -156,7 +164,9 @@
 
 .badgeIdentity__6db38 {
     align-items: center;
-    gap: var(--space-8)
+    gap: var(--space-8);
+    position: relative;
+    z-index: 1
 }
 
 .badgeTitle__6db38 {

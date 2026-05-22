@@ -103,8 +103,16 @@
     margin: var(--space-16) auto 0
 }
 
+.graphicAnimated__45458 {
+    position: relative;
+    transform: scale(1.4);
+    z-index: 0
+}
+
 .titleGroup__45458 {
-    margin-top: var(--space-16)
+    margin-top: var(--space-16);
+    position: relative;
+    z-index: 1
 }
 
 .title__45458 {

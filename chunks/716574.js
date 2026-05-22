@@ -30,23 +30,25 @@ function S(e) {
             badgeName: y,
             progressCircle: C,
             rarity: v,
-            targetElementRef: O,
-            onShow: R,
-            position: b = "top",
+            isAnimated: O = !1,
+            targetElementRef: R,
+            onShow: b,
+            position: D = "top",
         } = e,
+        L = O && null == C,
         {
-            tooltipId: D,
-            isVisible: L,
-            targetElementRef: w,
-            trigger: M,
-        } = (0, _.D)({ children: t, targetElementRef: O, delay: I.In, onTooltipShow: R }),
-        P = v === a.x.COMMON ? null : (0, m.V)(v),
-        x = (0, i.jsxs)("div", {
+            tooltipId: w,
+            isVisible: M,
+            targetElementRef: P,
+            trigger: x,
+        } = (0, _.D)({ children: t, targetElementRef: R, delay: I.In, onTooltipShow: b }),
+        U = v === a.x.COMMON ? null : (0, m.V)(v),
+        k = (0, i.jsxs)("div", {
             className: T.Qs,
             "data-mana-component": "mini-premium-tooltip",
             children: [
                 (0, i.jsx)("div", {
-                    className: T.fA,
+                    className: s()(T.fA, { [T.qJ]: L }),
                     "aria-hidden": !0,
                     children: (0, i.jsx)(A.BadgeImageWithProgressCircle, {
                         src: N,
@@ -62,7 +64,7 @@ function S(e) {
                     align: "center",
                     className: T.i8,
                     children: [
-                        null != P && (0, i.jsx)(h.E, { ...P }),
+                        null != U && (0, i.jsx)(h.E, { ...U }),
                         (0, i.jsx)(p.D, {
                             variant: "display-sm",
                             color: "text-strong",
@@ -75,17 +77,17 @@ function S(e) {
                     (0, i.jsx)(E.E, { variant: "text-sm/medium", color: "text-subtle", className: T.rf, children: r }),
             ],
         }),
-        U = null != r ? `${n}. ${r}` : n,
-        k = (0, d.j)({ shouldShow: L })((e, t) =>
+        G = null != r ? `${n}. ${r}` : n,
+        F = (0, d.j)({ shouldShow: M })((e, t) =>
             t
                 ? (0, i.jsx)(u.Bc, {
                       isRichTooltip: !0,
                       children: (0, i.jsx)(l.R, {
-                          isVisible: L,
+                          isVisible: M,
                           isRendered: !0,
-                          targetElementRef: w,
-                          content: x,
-                          position: b,
+                          targetElementRef: P,
+                          content: k,
+                          position: D,
                           align: "center",
                           layerContext: g.uY,
                           animationStyle: e,
@@ -94,6 +96,6 @@ function S(e) {
                   })
                 : null,
         );
-    return (0, i.jsxs)(i.Fragment, { children: [M, (0, i.jsx)(o.A, { id: D, children: U }), k] });
+    return (0, i.jsxs)(i.Fragment, { children: [x, (0, i.jsx)(o.A, { id: w, children: G }), F] });
 }
 let N = S;
