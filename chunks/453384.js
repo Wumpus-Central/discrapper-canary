@@ -80,7 +80,7 @@ let h = r.forwardRef((e, t) => {
                         stroke: R,
                     }),
                     (0, i.jsx)("circle", {
-                        className: f.qB,
+                        className: a()(f.qB, { [f.ee]: g }),
                         strokeWidth: A,
                         strokeLinecap: g ? "round" : void 0,
                         fill: "transparent",

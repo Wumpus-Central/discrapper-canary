@@ -49,6 +49,10 @@
     transition: stroke-dashoffset .35s
 }
 
+.progressAltGlow__146e2 {
+    filter: drop-shadow(0 0 8.3px rgba(34, 255, 132, .33)) drop-shadow(0 0 2.7px rgba(93, 255, 164, .42))
+}
+
 .inner__146e2 {
     align-items: center;
     border-radius: 50%;

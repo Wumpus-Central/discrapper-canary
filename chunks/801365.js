@@ -2,24 +2,26 @@
 n.d(t, {
     f: () => R,
     r7: () => O,
-    wo: () => M,
+    wo: () => x,
+    ks: () => N,
     $5: () => I,
     sn: () => w,
-    mH: () => U,
-    cg: () => k,
+    mH: () => G,
+    cg: () => F,
     Y7: () => L,
-    kr: () => G,
+    kr: () => V,
     HG: () => v,
     KK: () => y,
     JX: () => D,
     tU: () => C,
     k5: () => T,
     nj: () => A,
-    $s: () => F,
+    $s: () => B,
     _Z: () => b,
-    mq: () => x,
+    l0: () => P,
+    mq: () => k,
+    b: () => M,
     K9: () => S,
-    ks: () => N,
 });
 var i,
     r,
@@ -109,14 +111,26 @@ function w(e) {
     let t = e.userStatus?.claimedTier ?? 0;
     return "rewardsConfig" in e.config ? e.config.rewardsConfig.rewards[t] : e.config.rewards[t];
 }
-function M(e, t) {
+function M(e) {
+    let t = e.rewardsConfig.rewards.find((e) => e.type === l.l.VIRTUAL_CURRENCY);
+    if (t?.type !== l.l.VIRTUAL_CURRENCY) return null;
+    let { premiumOrbQuantity: n, orbQuantity: i } = t;
+    return null == n || 0 === i ? null : Math.round((n / i) * 100) / 100;
+}
+function P(e, t) {
+    if (null == t) return 1;
+    let n = M(e) ?? 1,
+        i = (0, c.m)(t);
+    return y(e) && (0, m.B9)(i) ? n : 1;
+}
+function x(e, t) {
     let n = e.rewardsConfig.rewards.find((e) => e.type === l.l.VIRTUAL_CURRENCY);
     if (null == n) return null;
     if (null == t) return n.orbQuantity;
     let i = (0, c.m)(t);
     return y(e) && (0, m.B9)(i) ? (n.premiumOrbQuantity ?? n.orbQuantity) : n.orbQuantity;
 }
-function P(e, t, n) {
+function U(e, t, n) {
     if (S(e)) {
         let t = e.rewardsConfig.rewards
                 .filter((e) => e.type === l.l.FRACTIONAL_PREMIUM)
@@ -128,24 +142,24 @@ function P(e, t, n) {
     }
     if (N(e)) {
         let n;
-        return (n = M(e, t) ?? b(e) ?? 0), h.intl.formatToPlainString(h.t["nLXlh+"], { orbAmount: n });
+        return (n = x(e, t) ?? b(e) ?? 0), h.intl.formatToPlainString(h.t["nLXlh+"], { orbAmount: n });
     }
     let i = (0, p.xv)(e);
     return n ? i.messages.nameWithArticle : i.messages.name;
 }
-function x(e, t) {
-    return P(e, t, !1);
+function k(e, t) {
+    return U(e, t, !1);
 }
-function U(e, t) {
-    return P(e, t, !0);
+function G(e, t) {
+    return U(e, t, !0);
 }
-function k(e) {
+function F(e) {
     let { quest: t, idx: n } = e;
     if (null == n) return null;
     let i = t.config.rewardsConfig.rewards[n];
     return i.type === l.l.REWARD_CODE ? i : null;
 }
-function G(e) {
+function V(e) {
     let {
             quest: { config: t },
         } = e,
@@ -154,7 +168,7 @@ function G(e) {
         n.assignmentMethod === a.TIERED && n.rewards.length > 0 && n.rewards.every((e) => e.type === l.l.REWARD_CODE)
     );
 }
-function F(e) {
+function B(e) {
     let t = e.rewardsConfig.platforms;
     return t.length > 0 ? t[0] : u.pY.CROSS_PLATFORM;
 }

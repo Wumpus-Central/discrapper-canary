@@ -54,7 +54,7 @@ function f(e) {
 function h(e, t) {
     let n = new Date(e.startsAt).getTime(),
         i = Date.now(),
-        s = n <= i && i - n < r.A.Millis.DAY;
+        s = n <= i && i - n < 2 * r.A.Millis.DAY;
     switch (t) {
         case o.UA.UNENROLLED:
             if (s) return u.intl.string(u.t.X6ziWN);
