@@ -1944,10 +1944,11 @@ class eT extends S.G {
         super("discord_protos.users.v1.AprilFools2026Badge", [
             { no: 1, name: "common", kind: "message", T: () => eI },
             { no: 2, name: "level", kind: "scalar", T: 5 },
+            { no: 3, name: "combat_class", kind: "scalar", T: 9 },
         ]);
     }
     create(e) {
-        let t = { level: 0 };
+        let t = { level: 0, combatClass: "" };
         return (
             globalThis.Object.defineProperty(t, T.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, I.x)(this, t, e),
@@ -1966,6 +1967,9 @@ class eT extends S.G {
                 case 2:
                     r.level = e.int32();
                     break;
+                case 3:
+                    r.combatClass = e.string();
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -1978,7 +1982,8 @@ class eT extends S.G {
     }
     internalBinaryWrite(e, t, n) {
         e.common && eI.internalBinaryWrite(e.common, t.tag(1, A.O0.LengthDelimited).fork(), n).join(),
-            0 !== e.level && t.tag(2, A.O0.Varint).int32(e.level);
+            0 !== e.level && t.tag(2, A.O0.Varint).int32(e.level),
+            "" !== e.combatClass && t.tag(3, A.O0.LengthDelimited).string(e.combatClass);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? A.f$.onWrite : i)(this.typeName, e, t), t;
     }
