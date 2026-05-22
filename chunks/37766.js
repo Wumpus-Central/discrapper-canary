@@ -1,18 +1,19 @@
-l.d(t, { _: () => n });
-var i = l(627968);
-l(64700);
-var r = l(996682),
-    c = l(27989);
-let n = (e) => {
-    let { size: t = "md", width: l, height: n, ...a } = e,
-        s = (0, c.J)(t),
-        h = s?.width ?? l,
-        d = s?.height ?? n;
+"use strict";
+n.d(t, { _: () => a });
+var i = n(627968);
+n(64700);
+var r = n(996682),
+    s = n(27989);
+let a = (e) => {
+    let { size: t = "md", width: n, height: a, ...o } = e,
+        l = (0, s.J)(t),
+        u = l?.width ?? n,
+        c = l?.height ?? a;
     return (0, i.jsxs)("svg", {
-        ...(0, r.A)(a),
+        ...(0, r.A)(o),
         xmlns: "http://www.w3.org/2000/svg",
-        width: h,
-        height: d,
+        width: u,
+        height: c,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
