@@ -40,8 +40,8 @@ let O = {
     },
 };
 var h = n(64700),
-    I = n(20742),
-    S = n(688810),
+    S = n(20742),
+    I = n(688810),
     g = n(937008),
     x = n(834252),
     f = n(503698),
@@ -190,8 +190,8 @@ var $ = n(17928),
     eA = n(203632),
     eO = n(892118),
     eh = n(536572),
-    eI = n(14702),
-    eS = n(219103),
+    eS = n(14702),
+    eI = n(219103),
     eg = n(525723),
     ex = n(780651);
 function ef(e) {
@@ -205,7 +205,7 @@ function ef(e) {
         } = e,
         { giftRecipient: o, giftRecipientError: u } = (0, g.Pv)(),
         c = (0, $.bG)([em.default], () => em.default.getCurrentUser()),
-        d = e_.Ay.canUseCollectibles(c),
+        d = e_.Ay.canUseShopDiscounts(c),
         C = (0, eC.Ay)(o?.id),
         p = h.useRef(null),
         [m, _] = h.useState(!1),
@@ -214,8 +214,8 @@ function ef(e) {
         A = (0, eg.V_)(T);
     if (null == T || 0 === T.items.length) return null;
     let [O] = T.items,
-        I = (0, eh.VG)(T),
-        S = null != o && o.id !== c?.id && T.type !== ei.R.BUNDLE && O.type !== ei.R.NAMEPLATE && !a;
+        S = (0, eh.VG)(T),
+        I = null != o && o.id !== c?.id && T.type !== ei.R.BUNDLE && O.type !== ei.R.NAMEPLATE && !a;
     return (0, i.jsxs)("div", {
         className: r,
         children: [
@@ -224,7 +224,7 @@ function ef(e) {
                 children: (0, i.jsx)(er.D, {
                     label: q.intl.string(q.t.PpoJzt),
                     children:
-                        S &&
+                        I &&
                         (0, i.jsx)(
                             es.Y,
                             {
@@ -275,11 +275,11 @@ function ef(e) {
                     (0, i.jsxs)("div", {
                         className: ex.Ug,
                         children: [
-                            (0, i.jsx)(eI.O, { product: T }),
+                            (0, i.jsx)(eS.O, { product: T }),
                             (0, i.jsxs)("div", {
                                 className: ex.JZ,
                                 children: [
-                                    (0, i.jsx)(eu.E, { variant: "text-md/semibold", children: I }),
+                                    (0, i.jsx)(eu.E, { variant: "text-md/semibold", children: S }),
                                     (0, i.jsx)(ec.D, {
                                         variant: "heading-sm/medium",
                                         color: "text-default",
@@ -298,7 +298,7 @@ function ef(e) {
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(eS.x, {
+                            (0, i.jsx)(eI.x, {
                                 priceAmount: n,
                                 priceCurrency: l,
                                 discount: E,
@@ -331,7 +331,7 @@ var eP = n(734925),
     eL = n(353791);
 function eM(e) {
     let { handleClose: t, selectedSkuId: n } = e,
-        { analyticsLocations: l } = (0, S.Ay)(_.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
+        { analyticsLocations: l } = (0, I.Ay)(_.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
     return (0, i.jsx)(ee.Q, {
         text: q.intl.string(q.t.J82mpK),
         onClick: function () {
@@ -353,7 +353,7 @@ let eF = (0, h.createContext)({
     }),
     eb = (e) => {
         let { hideConfirmStepConfetti: t, confettiCanvas: n } = (0, h.useContext)(eF),
-            { analyticsLocations: l } = (0, S.Ay)();
+            { analyticsLocations: l } = (0, I.Ay)();
         return (0, i.jsx)(J, { analyticsLocations: l, hideConfetti: t, confettiCanvas: n, ...e });
     },
     eD = {
@@ -364,7 +364,7 @@ let eF = (0, h.createContext)({
     ew = (e) => {
         let { step: t } = e,
             n = eD[t];
-        return null == n ? null : (0, i.jsx)(I.rQ, { title: n(), titleTextVariant: "heading-lg/semibold" });
+        return null == n ? null : (0, i.jsx)(S.rQ, { title: n(), titleTextVariant: "heading-lg/semibold" });
     },
     eH = {
         CHECKOUT_FLOW: l.C.COLLECTIBLES_CHECKOUT,
@@ -550,7 +550,7 @@ let eF = (0, h.createContext)({
                         setCustomConfettiVisible: d,
                     }),
                     O = null != l ? l.onStepChange : void 0,
-                    I = (0, h.useMemo)(
+                    S = (0, h.useMemo)(
                         () => ({
                             skuId: T,
                             onClose: E,
@@ -581,7 +581,7 @@ let eF = (0, h.createContext)({
                             excludeSubscriptionPlansBySKU: !0,
                             children: (0, i.jsx)(eF.Provider, {
                                 value: _,
-                                children: (0, i.jsx)(t0.g, { customPaymentModalProps: I, children: r }),
+                                children: (0, i.jsx)(t0.g, { customPaymentModalProps: S, children: r }),
                             }),
                         }),
                     ],
@@ -620,7 +620,7 @@ var eB = n(429913),
     e$ = n(208733);
 function e0(e) {
     let { handleClose: t } = e,
-        { analyticsLocations: n } = (0, S.Ay)(),
+        { analyticsLocations: n } = (0, I.Ay)(),
         { selectedSkuId: l, entitlementsGranted: r } = (0, H.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             entitlementsGranted: e.entitlementsGranted,
@@ -679,14 +679,14 @@ function e0(e) {
 }
 n(801541);
 var e2 = n(889137),
-    e7 = n(735438),
-    e8 = n.n(e7),
+    e8 = n(735438),
+    e7 = n.n(e8),
     e1 = n(742158),
     e6 = n(683071),
     e3 = n(313961),
     e4 = n(765441),
-    e9 = n(238017),
-    e5 = n(650588),
+    e5 = n(238017),
+    e9 = n(650588),
     te = n(723090),
     tt = n(763827),
     tn = n(403362),
@@ -747,7 +747,7 @@ let tp = {
                         E = (0, H.t4)((e) => e.selectedSkuId),
                         { application: A } = (0, x.P5)(),
                         O = (0, $.bG)([em.default], () => em.default.getCurrentUser()),
-                        I =
+                        S =
                             ((t = O?.id),
                             (n = (0, e4.A)()),
                             (l = (function (e) {
@@ -778,19 +778,19 @@ let tp = {
                             (r = (0, $.yK)([em.default], () => T?.map(em.default.getUser).filter(tn.Vq) ?? [], [T])),
                             h.useMemo(
                                 () =>
-                                    e8().uniqWith(
+                                    e7().uniqWith(
                                         [...(null != c ? [c] : []), ...r, ...l, ...n],
                                         (e, t) => e.id === t.id,
                                     ),
                                 [c, r, l, n],
                             )),
-                        S = (0, $.bG)([eW.A], () => (null != E ? eW.A.get(E) : null), [E]),
+                        I = (0, $.bG)([eW.A], () => (null != E ? eW.A.get(E) : null), [E]),
                         { normalPrice: f, discountedPrice: P } = (0, te.CD)({
-                            sku: S,
+                            sku: I,
                             priceSetAssignmentPurchaseType: ek.lid.GIFT,
                         }),
-                        N = (0, tl.fq)(S),
-                        y = (0, tl.xf)(S),
+                        N = (0, tl.fq)(I),
+                        y = (0, tl.xf)(I),
                         v = (function (e) {
                             let { shouldFetchIfMissing: t } =
                                     arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -805,7 +805,7 @@ let tp = {
                                 }, [s, e, t, n]),
                                 n ? s : null
                             );
-                        })(S, { shouldFetchIfMissing: !0 }),
+                        })(I, { shouldFetchIfMissing: !0 }),
                         j = async (e, t) => {},
                         R = (e) => {
                             null != m && m(null == e ? void 0 : e);
@@ -819,14 +819,14 @@ let tp = {
                                             containerClassName: td.T3,
                                             cardImage: N,
                                             cardBackgroundImage: y,
-                                            altText: S?.name ?? "",
+                                            altText: I?.name ?? "",
                                             shape: "square",
                                         }),
                                     (0, i.jsxs)("div", {
                                         className: td._T,
                                         children: [
-                                            (0, i.jsx)(e5.A, { sound: C, onSelect: R }),
-                                            (0, i.jsx)(e9.A, {
+                                            (0, i.jsx)(e9.A, { sound: C, onSelect: R }),
+                                            (0, i.jsx)(e5.A, {
                                                 setEmojiConfetti: p,
                                                 emojiConfetti: null == d ? void 0 : d,
                                             }),
@@ -835,7 +835,7 @@ let tp = {
                                 ],
                             }),
                         L = () => {
-                            let e = S?.orbsReward;
+                            let e = I?.orbsReward;
                             return (0, i.jsxs)("div", {
                                 className: td.Tc,
                                 children: [
@@ -844,7 +844,7 @@ let tp = {
                                         : (0, i.jsx)(eP.A, {
                                               selectedSkuId: E,
                                               validateSelectedGift: j,
-                                              recipients: I,
+                                              recipients: S,
                                           }),
                                     (0, i.jsx)(ey.A, {
                                         onTextChange: (e) => u?.(e),
@@ -854,7 +854,7 @@ let tp = {
                                         className: td.iX,
                                         innerClassName: td.pt,
                                     }),
-                                    null == S
+                                    null == I
                                         ? null
                                         : (0, i.jsxs)("div", {
                                               className: td.AN,
@@ -869,13 +869,13 @@ let tp = {
                                                           (0, i.jsx)("div", {
                                                               className: td.Xb,
                                                               children:
-                                                                  null != S &&
+                                                                  null != I &&
                                                                   null != N &&
                                                                   (0, i.jsx)(eJ.A, {
                                                                       containerClassName: td.Iy,
                                                                       cardImage: N,
                                                                       cardBackgroundImage: y,
-                                                                      altText: S.name,
+                                                                      altText: I.name,
                                                                       shape: "square",
                                                                   }),
                                                           }),
@@ -885,7 +885,7 @@ let tp = {
                                                                   null != A && (0, i.jsx)(ts.Q, { application: A }),
                                                                   (0, i.jsx)(eu.E, {
                                                                       variant: "text-sm/semibold",
-                                                                      children: S.name,
+                                                                      children: I.name,
                                                                   }),
                                                               ],
                                                           }),
@@ -897,8 +897,8 @@ let tp = {
                                                   }),
                                               ],
                                           }),
-                                    null != S &&
-                                        (0, tl.Ri)(S) &&
+                                    null != I &&
+                                        (0, tl.Ri)(I) &&
                                         (0, i.jsx)(e6.w, { type: "info", children: q.intl.string(q.t.lORYb6) }),
                                     null != e &&
                                         e > 0 &&
@@ -906,7 +906,7 @@ let tp = {
                                             Icon: ez.C,
                                             text: q.intl.format(q.t["ZV+aS9"], { orbCount: e }),
                                         }),
-                                    null != v && null != S && (0, i.jsx)(tC, { handleClose: a, sku: S, guild: v }),
+                                    null != v && null != I && (0, i.jsx)(tC, { handleClose: a, sku: I, guild: v }),
                                 ],
                             });
                         };
@@ -982,7 +982,7 @@ let tp = {
                 .with(a.pn.AWAITING_PURCHASE_TOKEN_AUTH, () => q.intl.string(q.t.lDbi6H))
                 .with(a.pn.CONFIRM, () => "")
                 .otherwise(() => null);
-        return null == n ? null : (0, i.jsx)(I.rQ, { title: n, titleTextVariant: "heading-lg/semibold" });
+        return null == n ? null : (0, i.jsx)(S.rQ, { title: n, titleTextVariant: "heading-lg/semibold" });
     },
 };
 var tm = n(717925),
@@ -992,9 +992,9 @@ var tm = n(717925),
     tA = n(908419),
     tO = n(623373),
     th = n(739508),
-    tI = n(902130);
+    tS = n(902130);
 (0, r.A)();
-var tS = n(136857),
+var tI = n(136857),
     tg = n(566980),
     tx = n(855104),
     tf = n(120700),
@@ -1093,7 +1093,7 @@ let tG = (0, h.createContext)({
                                         analyticsSourceLocation: r,
                                         handleStepChange: s,
                                     } = e,
-                                    { analyticsLocations: o } = (0, S.Ay)(),
+                                    { analyticsLocations: o } = (0, I.Ay)(),
                                     { selectedSkuId: u, setPurchaseState: c } = (0, H.t4)((e) => ({
                                         selectedSkuId: e.selectedSkuId,
                                         setPurchaseState: e.setPurchaseState,
@@ -1221,9 +1221,9 @@ let tG = (0, h.createContext)({
                                         () =>
                                             null == l
                                                 ? null
-                                                : l.code === tS.tG.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE
+                                                : l.code === tI.tG.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE
                                                   ? q.intl.string(q.t.keFvXM)
-                                                  : l.code === tS.tG.ALREADY_PURCHASED
+                                                  : l.code === tI.tG.ALREADY_PURCHASED
                                                     ? q.intl.string(q.t.m371Mx)
                                                     : q.intl.string(q.t.fqJZ11),
                                         [l],
@@ -1244,7 +1244,7 @@ let tG = (0, h.createContext)({
                             A = (0, $.bG)([eW.A], () => eW.A.get(t), [t]),
                             O = (0, tE.u)(A?.applicationId),
                             {
-                                disabled: I,
+                                disabled: S,
                                 tooltipText: g,
                                 text: f,
                             } = ((e) => {
@@ -1261,8 +1261,8 @@ let tG = (0, h.createContext)({
                                 return { disabled: i, tooltipText: r, text: tw() };
                             })({ orbBalance: C, orbPriceAmount: d, isInTestMode: O }),
                             P = (0, h.useMemo)(
-                                () => ({ onClick: _, loading: r, text: f, disabled: I, tooltipText: g }),
-                                [_, r, f, I, g],
+                                () => ({ onClick: _, loading: r, text: f, disabled: S, tooltipText: g }),
+                                [_, r, f, S, g],
                             ),
                             N = T ? q.intl.format(q.t.fsOXXO, {}) : null,
                             y = O ? q.intl.string(q.t.OvMyMd) : null;
@@ -1344,7 +1344,7 @@ let tG = (0, h.createContext)({
                                 redeemVirtualCurrency: c,
                                 isSubmitting: d,
                                 error: C,
-                            } = (0, tI.Q)({ skuId: t, loadId: n, order: i }),
+                            } = (0, tS.Q)({ skuId: t, loadId: n, order: i }),
                             p = (0, h.useCallback)(
                                 (e) => {
                                     c(t, n, (n) => {
@@ -1612,10 +1612,10 @@ class tq {
             } = e,
             O = { current: (0, r.A)() },
             h = { current: null },
-            I = (e) => {
+            S = (e) => {
                 (O.current = e.id), (h.current = e);
             },
-            { modalKey: S } = t,
+            { modalKey: I } = t,
             g = this.generateRenderHeader(),
             x = m ?? this.getApplicationIdFor1PShopSKU(c),
             f = !!(null != a && a.isGift),
@@ -1638,7 +1638,7 @@ class tq {
                         skuId: c,
                         tenantParams: A ?? {},
                         loadId: O.current,
-                        onOrderCreated: I,
+                        onOrderCreated: S,
                         discoverySessionId: p,
                         applicationId: x,
                         analyticsLocations: T,
@@ -1652,7 +1652,7 @@ class tq {
             {
                 ...t,
                 onCloseRequest: () => {
-                    null != t.onCloseRequest && t.onCloseRequest(P, O.current), (0, s.closeModal)(S);
+                    null != t.onCloseRequest && t.onCloseRequest(P, O.current), (0, s.closeModal)(I);
                 },
                 onCloseCallback: () => {
                     P ||
@@ -1671,7 +1671,7 @@ class tq {
                         null != t.onCloseCallback && t.onCloseCallback(P),
                         null != u && u(P, c);
                 },
-                modalKey: S,
+                modalKey: I,
             },
         );
     }
@@ -1711,8 +1711,8 @@ let t$ = (e) => {
 };
 var t0 = n(551892);
 let t2 = null,
-    t7 = null,
     t8 = null,
+    t7 = null,
     t1 = null,
     t6 = null,
     t3 = {
@@ -1723,12 +1723,12 @@ let t2 = null,
         },
         [l.C.COLLECTIBLES_CHECKOUT]: {
             get: function () {
-                return null == t7 && (t7 = new tq({ checkoutFlow: l.C.COLLECTIBLES_CHECKOUT })), t7;
+                return null == t8 && (t8 = new tq({ checkoutFlow: l.C.COLLECTIBLES_CHECKOUT })), t8;
             },
         },
         [l.C.SLAYER_STOREFRONT_CHECKOUT]: {
             get: function () {
-                return null == t8 && (t8 = new tq({ checkoutFlow: l.C.SLAYER_STOREFRONT_CHECKOUT })), t8;
+                return null == t7 && (t7 = new tq({ checkoutFlow: l.C.SLAYER_STOREFRONT_CHECKOUT })), t7;
             },
         },
         [l.C.PREMIUM_APPS_OTP_CHECKOUT]: {
