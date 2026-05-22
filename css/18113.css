@@ -2800,6 +2800,7 @@ screen and (max-width:485px) {
 }
 
 .profileHeader__9c3be {
+    border-radius: inherit;
     flex-shrink: 0;
     min-height: calc(var(--custom-user-profile-banner-height) + var(--custom-user-profile-avatar-size)/2 + 20px)
 }
