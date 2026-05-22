@@ -33,14 +33,14 @@ function N(e) {
             currentTier: u,
             obtainedAt: c,
         } = (0, E.cf)(
-            [h.A],
+            [h.Ay],
             () =>
                 null == o || null == r
                     ? { badgeData: void 0, currentTier: void 0, obtainedAt: void 0 }
                     : {
-                          badgeData: h.A.getBadgeById(o, r),
-                          currentTier: h.A.getCurrentTier(o, r),
-                          obtainedAt: h.A.getObtainedAt(o, r),
+                          badgeData: h.Ay.getBadgeById(o, r),
+                          currentTier: h.Ay.getCurrentTier(o, r),
+                          obtainedAt: h.Ay.getObtainedAt(o, r),
                       },
             [o, r],
         ),
@@ -349,7 +349,7 @@ function em(e) {
             return f.useConfig({ location: t }).enabled;
         })({ location: "UserProfileBadgeList" });
     r.useEffect(() => {
-        U && p?.userId != null && !h.A.hasCatalogFor(p.userId) && (0, _.R)(p.userId);
+        U && p?.userId != null && !h.Ay.hasCatalogFor(p.userId) && (0, _.R)(p.userId);
     }, [U, p?.userId]);
     let F = (0, ed.AP)(w?.id ?? null),
         V = (0, ec.A)(F).some((e) => e.id === Z.A.ORB_PROFILE_BADGE);

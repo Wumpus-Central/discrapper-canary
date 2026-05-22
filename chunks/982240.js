@@ -1,11 +1,14 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { Ay: () => c, H5: () => a });
 var i = n(17928),
     r = n(228366),
     s = n(287809);
-let a = new Map(),
-    o = new Set();
-class l extends i.Ay.Store {
+function a(e) {
+    if (null != e) return (null != e.current_tier ? e.tier_obtained_at?.[e.current_tier] : void 0) ?? e.obtained_at;
+}
+let o = new Map(),
+    l = new Set();
+class u extends i.Ay.Store {
     initialize() {
         this.waitFor(s.default);
     }
@@ -13,15 +16,15 @@ class l extends i.Ay.Store {
     getBadges(e) {
         let t = e ?? s.default.getCurrentUser()?.id;
         if (null == t) return [];
-        let n = a.get(t);
+        let n = o.get(t);
         return null != n ? Array.from(n.values()) : [];
     }
     hasCatalogFor(e) {
-        return o.has(e);
+        return l.has(e);
     }
     getBadgeById(e, t) {
         let n = t ?? s.default.getCurrentUser()?.id;
-        return null != n ? a.get(n)?.get(e) : void 0;
+        return null != n ? o.get(n)?.get(e) : void 0;
     }
     getSingleRequirementProgress(e, t) {
         let n = this.getBadgeById(e, t)?.progress;
@@ -32,7 +35,7 @@ class l extends i.Ay.Store {
         if (n?.current_tier != null) return n.tiers.find((e) => e.key === n.current_tier);
     }
     getObtainedAt(e, t) {
-        return this.getCurrentTier(e, t)?.obtained_at ?? this.getBadgeById(e, t)?.obtained_at;
+        return a(this.getBadgeById(e, t));
     }
     getNextTier(e, t) {
         let n = this.getBadgeById(e, t);
@@ -44,19 +47,19 @@ class l extends i.Ay.Store {
         return null == n || null == i ? 0 : Math.max(0, (n?.requirements[0]?.threshold ?? 0) - i.current);
     }
 }
-let u = new l(r.h, {
+let c = new u(r.h, {
     BADGE_DIRECTORY_FETCH_SUCCESS: function (e) {
         let { userId: t, badges: n } = e,
-            i = new Map(a);
-        i.set(t, new Map(n.map((e) => [e.badge_id, e]))), (a = i), (o = new Set(o).add(t));
+            i = new Map(o);
+        i.set(t, new Map(n.map((e) => [e.badge_id, e]))), (o = i), (l = new Set(l).add(t));
     },
     BADGE_FETCH_SUCCESS: function (e) {
         let { userId: t, badge: n } = e,
-            i = new Map(a),
+            i = new Map(o),
             r = new Map(i.get(t) ?? new Map());
-        r.set(n.badge_id, n), i.set(t, r), (a = i);
+        r.set(n.badge_id, n), i.set(t, r), (o = i);
     },
     LOGOUT: function () {
-        (a = new Map()), (o = new Set());
+        (o = new Map()), (l = new Set());
     },
 });
