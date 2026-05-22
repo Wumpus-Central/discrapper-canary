@@ -1,10 +1,11 @@
 "use strict";
-n.d(t, { h: () => m, A: () => f });
+n.d(t, { h: () => E, A: () => m });
 var i = n(284009),
     r = n.n(i),
     s = n(315069),
-    a = n(367888);
-class o extends s.A {
+    a = n(981088),
+    o = n(367888);
+class l extends s.A {
     userId;
     subscriptionId;
     oldCurrency;
@@ -15,7 +16,7 @@ class o extends s.A {
     expectedChargeTime;
     priceChangeId;
     static createFromServer(e) {
-        return new o({
+        return new l({
             userId: e.user_id,
             subscriptionId: e.subscription_id,
             oldCurrency: e.old_currency,
@@ -52,16 +53,16 @@ class o extends s.A {
         return this.expectedChargeTime > new Date().toISOString();
     }
 }
-var l = n(723702),
-    d = n(474090),
-    _ = n(570221),
-    u = n(652215),
-    c = n(601107),
-    E = n(788868);
-function h(e) {
+var u = n(723702),
+    c = n(474090),
+    d = n(570221),
+    _ = n(652215),
+    f = n(601107),
+    h = n(788868);
+function p(e) {
     return { id: e.id, planId: e.plan_id, quantity: e.quantity };
 }
-class m extends s.A {
+class E extends s.A {
     id;
     type;
     items;
@@ -91,7 +92,7 @@ class m extends s.A {
     eligiblePaymentGateways;
     priceChange;
     static createFromServer(e) {
-        return new m({
+        return new E({
             id: e.id,
             type: e.type,
             createdAt: new Date(e.created_at),
@@ -105,11 +106,11 @@ class m extends s.A {
             paymentGatewaySubscriptionId: e.payment_gateway_subscription_id,
             trialId: e.trial_id,
             trialEndsAt: null != e.trial_ends_at ? new Date(e.trial_ends_at) : null,
-            items: e.items.map(h),
+            items: e.items.map(p),
             renewalMutations:
                 null != e.renewal_mutations
                     ? {
-                          items: e.renewal_mutations.items.map(h),
+                          items: e.renewal_mutations.items.map(p),
                           paymentGatewayPlanId: e.renewal_mutations.payment_gateway_plan_id,
                       }
                     : null,
@@ -121,9 +122,9 @@ class m extends s.A {
             useStorekitResubscribe: e.use_storekit_resubscribe,
             price: e.price,
             userId: e.user_id,
-            ...(null != e.latest_invoice ? { latestInvoice: _.A.createInvoiceFromServer(e.latest_invoice) } : {}),
+            ...(null != e.latest_invoice ? { latestInvoice: d.A.createInvoiceFromServer(e.latest_invoice) } : {}),
             eligiblePaymentGateways: e.eligible_payment_gateways ?? null,
-            priceChange: null != e.price_change ? o.createFromServer(e.price_change) : null,
+            priceChange: null != e.price_change ? l.createFromServer(e.price_change) : null,
         });
     }
     constructor(e) {
@@ -157,11 +158,11 @@ class m extends s.A {
         const t = this.renewalMutations;
         let n = e.items[0].planId,
             i = null;
-        if (e.type === u.rzx.PREMIUM) {
-            const r = E.hd[e.items[0].planId],
+        if (e.type === _.rzx.PREMIUM) {
+            const r = h.hd[e.items[0].planId],
                 s = r.interval,
-                o = r.intervalCount;
-            (n = (0, a.a9)(e.items, s, o)), null != t && (i = (0, a.a9)(t.items, s, o));
+                a = r.intervalCount;
+            (n = (0, o.a9)(e.items, s, a)), null != t && (i = (0, o.a9)(t.items, s, a));
         } else null != t && t.items.length > 0 && (i = t.items[0].planId);
         (this.planId = n),
             (this.additionalPlans = e.items.filter((e) => e.planId !== n)),
@@ -171,10 +172,10 @@ class m extends s.A {
         return this.items.find((t) => e.includes(t.planId))?.planId;
     }
     get isPremium() {
-        return this.type === u.rzx.PREMIUM;
+        return this.type === _.rzx.PREMIUM;
     }
     get isACOM() {
-        return this.paymentGateway === u.kM_.APPLE_ADVANCED_COMMERCE;
+        return this.paymentGateway === _.kM_.APPLE_ADVANCED_COMMERCE;
     }
     get planIdForCurrencies() {
         let e;
@@ -187,28 +188,28 @@ class m extends s.A {
         );
     }
     get planIdFromItems() {
-        return this.getCurrentSubscriptionPlanIdForGroup(Object.values(E.gD));
+        return this.getCurrentSubscriptionPlanIdForGroup(Object.values(h.gD));
     }
     get premiumPlanIdFromItems() {
-        return this.getCurrentSubscriptionPlanIdForGroup([...E.JM]);
+        return this.getCurrentSubscriptionPlanIdForGroup([...h.JM]);
     }
     get isPurchasedViaDesktop() {
         return null == this.paymentGateway;
     }
     get isPurchasedViaAppleGeneric() {
-        return this.paymentGateway === u.kM_.APPLE_PARTNER || this.isACOM;
+        return this.paymentGateway === _.kM_.APPLE_PARTNER || this.isACOM;
     }
     get isPurchasedViaApple() {
-        return this.paymentGateway === u.kM_.APPLE || this.isACOM;
+        return this.paymentGateway === _.kM_.APPLE || this.isACOM;
     }
     get isPurchasedViaGoogle() {
-        return this.paymentGateway === u.kM_.GOOGLE;
+        return this.paymentGateway === _.kM_.GOOGLE;
     }
     get isPurchasedExternally() {
         return this.isPurchasedViaApple || this.isPurchasedViaGoogle;
     }
     get isOnPlatformMatchingExternalPaymentGateway() {
-        return (this.isPurchasedViaApple && (0, l.isIOS)()) || (this.isPurchasedViaGoogle && (0, l.isAndroid)());
+        return (this.isPurchasedViaApple && (0, u.isIOS)()) || (this.isPurchasedViaGoogle && (0, a.xv)());
     }
     get hasExternalPlanChange() {
         return (
@@ -218,44 +219,44 @@ class m extends s.A {
         );
     }
     get hasPremiumNitroMonthly() {
-        return null != this.items.find((e) => e.planId === E.gD.PREMIUM_MONTH_TIER_2);
+        return null != this.items.find((e) => e.planId === h.gD.PREMIUM_MONTH_TIER_2);
     }
     get isBoostOnly() {
-        return this.items.every((e) => [E.gD.PREMIUM_MONTH_GUILD, E.gD.PREMIUM_YEAR_GUILD].includes(e.planId));
+        return this.items.every((e) => [h.gD.PREMIUM_MONTH_GUILD, h.gD.PREMIUM_YEAR_GUILD].includes(e.planId));
     }
     get isPausedOrPausePending() {
-        return u.Uyk.ALL_PAUSE.has(this.status);
+        return _.Uyk.ALL_PAUSE.has(this.status);
     }
     get isPaused() {
-        return this.status === u.Dmq.PAUSED;
+        return this.status === _.Dmq.PAUSED;
     }
     get isPausedForFractionalPremium() {
-        return this.status === u.Dmq.PAUSED && this.pauseReason === c.qf.FRACTIONAL_PREMIUM;
+        return this.status === _.Dmq.PAUSED && this.pauseReason === f.qf.FRACTIONAL_PREMIUM;
     }
     get isPausedAllowsUpdatesButNotResume() {
-        return this.status === u.Dmq.PAUSED && c.FZ.CAN_MAKE_SUBSCRIPTION_UPDATES.has(this.pauseReason);
+        return this.status === _.Dmq.PAUSED && f.FZ.CAN_MAKE_SUBSCRIPTION_UPDATES.has(this.pauseReason);
     }
     get isPausedAllowsResumeButNotUpdates() {
         return (
-            this.status === u.Dmq.PAUSED &&
-            (null === this.pauseReason || !c.FZ.CAN_MAKE_SUBSCRIPTION_UPDATES.has(this.pauseReason))
+            this.status === _.Dmq.PAUSED &&
+            (null === this.pauseReason || !f.FZ.CAN_MAKE_SUBSCRIPTION_UPDATES.has(this.pauseReason))
         );
     }
     get isEnded() {
-        return this.status === u.Dmq.ENDED;
+        return this.status === _.Dmq.ENDED;
     }
     get endedAt() {
-        return this.status !== u.Dmq.ENDED
+        return this.status !== _.Dmq.ENDED
             ? null
             : this.metadata?.ended_at != null
               ? new Date(this.metadata.ended_at)
               : this.currentPeriodEnd;
     }
     get isActive() {
-        return this.status === u.Dmq.ACTIVE;
+        return this.status === _.Dmq.ACTIVE;
     }
     get statusAllowsPerks() {
-        return u.Uyk.ALLOW_PERKS.has(this.status);
+        return _.Uyk.ALLOW_PERKS.has(this.status);
     }
     get hasActiveTrial() {
         return null != this.trialId && null != this.trialEndsAt && new Date() < this.trialEndsAt;
@@ -264,19 +265,19 @@ class m extends s.A {
         return this.streakStartedAt ?? this.createdAt;
     }
     get hasAnyPremiumNitro() {
-        return this.items.some((e) => E.JM.has(e.planId));
+        return this.items.some((e) => h.JM.has(e.planId));
     }
     get hasAnyPremiumGroup() {
-        return this.items.some((e) => e.planId === E.gD.PREMIUM_GROUP_MONTH);
+        return this.items.some((e) => e.planId === h.gD.PREMIUM_GROUP_MONTH);
     }
     hasPremiumAtLeast(e) {
         return (
             !!this.isPremium &&
             this.items.some((t) => {
-                let n = E.hd[t.planId];
-                return (0, d.CC)(n.premiumType, e);
+                let n = h.hd[t.planId];
+                return (0, c.CC)(n.premiumType, e);
             })
         );
     }
 }
-let f = m;
+let m = E;
