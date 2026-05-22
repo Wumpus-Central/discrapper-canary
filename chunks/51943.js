@@ -1,4 +1,4 @@
-i.d(s, { A: () => C });
+i.d(s, { A: () => M });
 var t = i(627968);
 i(64700);
 var a = i(661531),
@@ -16,11 +16,11 @@ var a = i(661531),
     v = i(518477),
     x = i(996988),
     g = i(341934);
-let M = (0, r.FT)(r._3.SIZE_16);
-function C(e) {
-    let { user: s, guild: C, nick: j, onSelect: p } = e,
+let C = (0, r.FT)(r._3.SIZE_16);
+function M(e) {
+    let { user: s, guild: M, nick: j, onSelect: p } = e,
         { theme: I, themeType: b } = (0, m.E)(),
-        N = s.hasAvatarForGuild(C.id);
+        N = s.hasAvatarForGuild(M.id);
     return (0, t.jsxs)(o.D, {
         focusProps: b === x.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
         className: g.nM,
@@ -31,9 +31,9 @@ function C(e) {
                     i.e("7104"),
                     i.e("62555"),
                     i.e("26738"),
-                    i.e("38376"),
+                    i.e("34291"),
                     i.e("26439"),
-                    i.e("57325"),
+                    i.e("37182"),
                     i.e("26273"),
                     i.e("50671"),
                     i.e("78220"),
@@ -373,7 +373,6 @@ function C(e) {
                     i.e("9793"),
                     i.e("61309"),
                     i.e("20524"),
-                    i.e("70284"),
                     i.e("94529"),
                     i.e("70272"),
                     i.e("15799"),
@@ -406,15 +405,15 @@ function C(e) {
                     i.e("15046"),
                     i.e("65011"),
                 ]).then(i.bind(i, 860417));
-                return (s) => (0, t.jsx)(e, { ...s, guild: C });
+                return (s) => (0, t.jsx)(e, { ...s, guild: M });
             });
         },
         children: [
             (0, t.jsx)(A.Ay, {
                 tabIndex: -1,
-                guild: C,
+                guild: M,
                 showBadge: !0,
-                className: null != C.icon ? g.Kk : g.lN,
+                className: null != M.icon ? g.Kk : g.lN,
                 badgeStrokeColor: (0, l.M)(I) ? a.A.unsafe_rawColors.PRIMARY_600.css : a.A.unsafe_rawColors.WHITE.css,
                 badgeTooltipColor: d.oM.PRIMARY,
                 badgeTooltipDelay: v.In,
@@ -424,13 +423,13 @@ function C(e) {
             (0, t.jsxs)("div", {
                 className: g.zH,
                 children: [
-                    (0, t.jsx)("div", { className: g.UU, children: C.name }),
+                    (0, t.jsx)("div", { className: g.UU, children: M.name }),
                     N &&
                         (0, t.jsxs)("div", {
                             className: g.C9,
                             children: [
                                 (0, t.jsx)(u.eu, {
-                                    src: s.getAvatarURL(C.id, M),
+                                    src: s.getAvatarURL(M.id, C),
                                     size: r._3.SIZE_16,
                                     className: g.my,
                                     "aria-hidden": !0,
@@ -439,7 +438,7 @@ function C(e) {
                                     variant: "text-xs/medium",
                                     children: (0, t.jsx)(n.A, {
                                         delay: v.In,
-                                        children: j ?? h.Ay.getName(C.id, void 0, s),
+                                        children: j ?? h.Ay.getName(M.id, void 0, s),
                                     }),
                                 }),
                             ],
