@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { O1: () => o, oU: () => E, wt: () => c });
-var l,
-    i,
+n.d(t, { O1: () => l, oU: () => S, wt: () => u });
+var i,
+    r,
     s = n(607399),
     a = n(31717),
-    r = n(307731),
-    o = (((l = {})[(l.TOOLTIP = 0)] = "TOOLTIP"), (l[(l.STATIC = 1)] = "STATIC"), (l[(l.NONE = 2)] = "NONE"), l),
-    c = (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"), (i[(i.INLINE = 1)] = "INLINE"), (i[(i.FLUSH = 2)] = "FLUSH"), i);
-let u = {
+    o = n(307731),
+    l = (((i = {})[(i.TOOLTIP = 0)] = "TOOLTIP"), (i[(i.STATIC = 1)] = "STATIC"), (i[(i.NONE = 2)] = "NONE"), i),
+    u = (((r = {})[(r.DEFAULT = 0)] = "DEFAULT"), (r[(r.INLINE = 1)] = "INLINE"), (r[(r.FLUSH = 2)] = "FLUSH"), r);
+let c = {
         analyticsName: "normal",
         attachments: !0,
         autocomplete: { addReactionShortcut: !0, forceChatLayer: !0, reactions: !0 },
@@ -61,7 +61,7 @@ let u = {
         showSlowmodeIndicator: !0,
         showTypingIndicator: !0,
     },
-    h = {
+    _ = {
         analyticsName: "sidebar",
         attachments: !0,
         autocomplete: { addReactionShortcut: !0 },
@@ -88,7 +88,7 @@ let u = {
         showSlowmodeIndicator: !0,
         showTypingIndicator: !0,
     },
-    m = {
+    f = {
         analyticsName: "edit",
         drafts: { type: a.C.ChannelMessage },
         emojis: { button: !0 },
@@ -100,7 +100,7 @@ let u = {
         autocomplete: { alwaysUseLayer: !0, small: !0 },
         showCharacterCount: !0,
     },
-    p = {
+    h = {
         analyticsName: "forum",
         drafts: { type: a.C.ChannelMessage },
         emojis: { button: !0 },
@@ -112,7 +112,7 @@ let u = {
         showSlowmodeIndicator: !0,
         showTypingIndicator: !0,
     },
-    f = {
+    p = {
         analyticsName: "voice_channel_status",
         drafts: { type: a.C.ChannelMessage },
         emojis: { button: !0 },
@@ -124,7 +124,7 @@ let u = {
         showCharacterCount: !0,
         layout: 1,
     },
-    g = {
+    E = {
         analyticsName: "thread_creation",
         attachments: !0,
         drafts: { type: a.C.FirstThreadMessage },
@@ -140,8 +140,8 @@ let u = {
         hideAttachmentArea: !0,
         upsellLongMessages: { iconOnly: !0 },
     },
-    _ = {
-        ...u,
+    m = {
+        ...c,
         analyticsName: "create_announcement_post",
         stickers: { allowSending: !1 },
         gifts: {},
@@ -150,7 +150,20 @@ let u = {
         disableAutoFocus: !0,
         permissions: { requireSendMessages: !0 },
     },
-    x = {
+    g = {
+        analyticsName: "create_game_invite_post_description",
+        autocomplete: { alwaysUseLayer: !0, small: !0 },
+        drafts: { type: a.C.FirstThreadMessage },
+        users: { allowMentioning: !0 },
+        permissions: { requireSendMessages: !0 },
+        submit: { useDisabledStylesOnSubmit: !0, disableEnterToSubmit: !0 },
+        disableAutoFocus: !0,
+        uploadLongMessages: !0,
+        showSlowmodeIndicator: !0,
+        showCharacterCount: !0,
+        layout: 1,
+    },
+    A = {
         analyticsName: "create_forum_post",
         attachments: !0,
         drafts: { type: a.C.FirstThreadMessage },
@@ -166,7 +179,7 @@ let u = {
         showSlowmodeIndicator: !0,
         layout: 2,
     },
-    C = {
+    I = {
         analyticsName: "create_poll",
         attachments: !0,
         drafts: { type: a.C.ChannelMessage },
@@ -175,7 +188,7 @@ let u = {
         permissions: { requireSendMessages: !0 },
         submit: { useDisabledStylesOnSubmit: !0, disableEnterToSubmit: !0 },
     },
-    A = {
+    T = {
         analyticsName: "user_profile",
         drafts: { type: a.C.ChannelMessage },
         emojis: { button: !0 },
@@ -186,8 +199,8 @@ let u = {
         toolbarType: 2,
         layout: 1,
     },
-    E = {
-        NORMAL: u,
+    S = {
+        NORMAL: c,
         OVERLAY: d,
         OVERLAY_INLINE_REPLY: {
             analyticsName: "overlay_inline_reply",
@@ -200,12 +213,12 @@ let u = {
             hideAccessoryBar: !0,
             layout: 1,
         },
-        SIDEBAR: h,
-        EDIT: m,
-        FORM: p,
-        VOICE_CHANNEL_STATUS: f,
-        THREAD_CREATION: g,
-        USER_PROFILE: A,
+        SIDEBAR: _,
+        EDIT: f,
+        FORM: h,
+        VOICE_CHANNEL_STATUS: p,
+        THREAD_CREATION: E,
+        USER_PROFILE: T,
         USER_PROFILE_REPLY: {
             analyticsName: "user_profile_reply",
             drafts: { type: a.C.ChannelMessage },
@@ -243,9 +256,10 @@ let u = {
             disableAutoFocus: !0,
             hideAccessoryBar: !0,
         },
-        CREATE_FORUM_POST: x,
-        CREATE_ANNOUNCEMENT_POST: _,
-        CREATE_POLL: C,
+        CREATE_FORUM_POST: A,
+        CREATE_GAME_INVITE_POST_DESCRIPTION: g,
+        CREATE_ANNOUNCEMENT_POST: m,
+        CREATE_POLL: I,
         FORUM_CHANNEL_GUIDELINES: {
             analyticsName: "forum_channel_guidelines",
             drafts: { type: a.C.ChannelMessage },
@@ -264,7 +278,7 @@ let u = {
             showCharacterCount: !0,
             toolbarType: 1,
             markdown: { disableCodeBlocks: !0, disableBlockQuotes: !0, disableInlineCode: !0 },
-            expressionPicker: { onlyEmojis: !0, emojiIntention: r.EmojiIntention.NO_CUSTOM_EMOJI },
+            expressionPicker: { onlyEmojis: !0, emojiIntention: o.EmojiIntention.NO_CUSTOM_EMOJI },
         },
         ATOMIC_REACTOR_REPLY_INPUT: {
             analyticsName: "atomic_reator_reply_input",

@@ -85,7 +85,7 @@ function eu(e) {
         D()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, f.openModalLazy)(async () => {
                 let { default: n } = await Promise.all([
-                    i.e("1086"),
+                    i.e("64290"),
                     i.e("59957"),
                     i.e("28136"),
                     i.e("16084"),
@@ -336,7 +336,7 @@ function eg(e) {
             null != D &&
                 (0, f.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        i.e("1086"),
+                        i.e("64290"),
                         i.e("59957"),
                         i.e("28136"),
                         i.e("16084"),
@@ -525,11 +525,11 @@ function eM(e) {
                 null != u &&
                     (0, eO.L3)(e, async () => {
                         let { default: e } = await Promise.all([
-                            i.e("60193"),
-                            i.e("45799"),
+                            i.e("26439"),
+                            i.e("30402"),
                             i.e("50671"),
-                            i.e("47141"),
-                            i.e("53859"),
+                            i.e("88667"),
+                            i.e("89326"),
                             i.e("26132"),
                             i.e("46652"),
                             i.e("93190"),
@@ -661,11 +661,11 @@ let e2 = (e) =>
     ([w.$pd.PLAYING, w.$pd.WATCHING].includes(e.type) &&
         [e.name, e.application_id, e.assets, e.state, e.details, e.party].some((e) => null != e)) ||
     e.type === w.$pd.LISTENING;
-var e1 = i(685399),
-    e6 = i(960076),
+var e6 = i(685399),
+    e1 = i(960076),
     e3 = i(323073),
-    e9 = i(85451),
-    e7 = i(268218),
+    e7 = i(85451),
+    e9 = i(268218),
     e5 = i(834757),
     e8 = i(566668),
     e4 = i(832163),
@@ -688,33 +688,33 @@ let tn = (0, i(600975).C)({
 });
 var ts = i(699976),
     ta = i(415679);
-let tr = (0, e7.Fe)({
+let tr = (0, e9.Fe)({
     createPromise: () =>
         Promise.all([
-            i.e("60193"),
+            i.e("26439"),
             i.e("51402"),
             i.e("38123"),
             i.e("27252"),
             i.e("84682"),
             i.e("88453"),
-            i.e("55351"),
+            i.e("26105"),
             i.e("46461"),
             i.e("58682"),
             i.e("43147"),
-            i.e("85252"),
+            i.e("21657"),
             i.e("35316"),
             i.e("45650"),
             i.e("48307"),
             i.e("26963"),
-            i.e("42888"),
+            i.e("71541"),
             i.e("85484"),
-            i.e("1086"),
+            i.e("64290"),
             i.e("89001"),
             i.e("32136"),
-            i.e("53859"),
+            i.e("89326"),
             i.e("7066"),
             i.e("25336"),
-            i.e("45799"),
+            i.e("22773"),
             i.e("69977"),
             i.e("79705"),
             i.e("69279"),
@@ -774,7 +774,7 @@ let tr = (0, e7.Fe)({
             i.e("63645"),
             i.e("71234"),
             i.e("27773"),
-            i.e("5636"),
+            i.e("83255"),
             i.e("87196"),
             i.e("834"),
             i.e("60177"),
@@ -869,7 +869,7 @@ function to(e) {
                 size: z._3.SIZE_32,
                 "aria-label": c,
                 avatarDecoration: o,
-                status: (0, e6.A)(A) ? w.clD.STREAMING : u === w.clD.OFFLINE ? void 0 : u,
+                status: (0, e1.A)(A) ? w.clD.STREAMING : u === w.clD.OFFLINE ? void 0 : u,
                 isMobile: m,
                 className: ta.my,
             }),
@@ -877,7 +877,7 @@ function to(e) {
                 className: ta.Qq,
                 children: [
                     (0, l.jsx)(E.E, { variant: "text-sm/medium", lineClamp: 1, children: c }),
-                    null != p && (0, l.jsx)(e9.z, { textColor: "text-feedback-positive", entry: { start: p } }),
+                    null != p && (0, l.jsx)(e7.z, { textColor: "text-feedback-positive", entry: { start: p } }),
                 ],
             }),
         ],
@@ -900,9 +900,9 @@ function td(e) {
         v = (0, r.bG)([el.A], () => (0, e5.nr)(h, el.A), [h]),
         f = (0, e3.r9)() && (0, e3.UK)(s.id),
         N =
-            ((t = (0, e1.Ay)(s)),
+            ((t = (0, e6.Ay)(s)),
             (i = n.useMemo(() => t.filter((e) => e.embeddedActivity.userIds.has(c.id)), [t, c.id])),
-            [...(0, e1.Rz)(i).values()]),
+            [...(0, e6.Rz)(i).values()]),
         y = (0, tt.W)(),
         S = (0, te.m)({ location: "voice_channel_activities" }),
         j = (0, r.bG)([e4.A], () => e4.A.getDetectableIdsToApplicationIds()),
@@ -1080,11 +1080,11 @@ let tp = (0, eW.J)(function (e) {
         J = (e) => {
             (0, eO.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    i.e("60193"),
-                    i.e("45799"),
+                    i.e("26439"),
+                    i.e("30402"),
                     i.e("50671"),
-                    i.e("47141"),
-                    i.e("53859"),
+                    i.e("88667"),
+                    i.e("89326"),
                     i.e("26132"),
                     i.e("46652"),
                     i.e("93190"),

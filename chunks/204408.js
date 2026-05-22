@@ -712,10 +712,11 @@ let t$ = s.memo(function (e) {
             W = s.useCallback(() => {
                 (0, tr.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("96607"),
+                        n.e("26439"),
                         n.e("17918"),
                         n.e("76171"),
-                        n.e("86672"),
+                        n.e("6353"),
+                        n.e("5302"),
                         n.e("38601"),
                         n.e("36946"),
                         n.e("44727"),

@@ -100,7 +100,7 @@ var tu = i(387755),
     th = i(334738),
     tT = i(481484),
     tv = i(258585),
-    tO = i(560595),
+    tO = i(72432),
     tb = i(929921),
     tL = i(753070),
     tx = i(783198),
@@ -196,14 +196,14 @@ var tQ = i(554146),
     t1 = i(263577),
     t2 = i(826673),
     t7 = i(308726),
-    t8 = i(823901),
-    t9 = i(360469),
-    t5 = i(70617),
-    t3 = i(881732);
+    t9 = i(823901),
+    t8 = i(360469),
+    t3 = i(70617),
+    t5 = i(881732);
 function t6(t) {
     let { game: e } = t,
         i = (0, t0.h)(e.id);
-    return null == i ? null : (0, $.jsx)(t1.V, { src: i.getIconURL(t9.iu.LARGE), size: 40 });
+    return null == i ? null : (0, $.jsx)(t1.V, { src: i.getIconURL(t8.iu.LARGE), size: 40 });
 }
 let t4 = 5 * k.A.Millis.SECOND,
     et = 8 * k.A.Millis.SECOND,
@@ -611,7 +611,7 @@ let eS = new eE(s.h, {
                                     i = () => {
                                         l("one-click-go-live");
                                     };
-                                (0, t8.H)({
+                                (0, t9.H)({
                                     pid: w.A.getTargetPID(),
                                     analyticsLocation: z.ThZ.OVERLAY_NUDGE,
                                     allowOneClickGoLive: !0,
@@ -638,7 +638,7 @@ let eS = new eE(s.h, {
                                     gamingId: t?.altId ?? t?.id,
                                     maxUserShowCount: 5,
                                     variant: "default",
-                                    className: t3.kL,
+                                    className: t5.kL,
                                 }));
                 }
             let r = (0, t2.k8)(tQ.M.OVERLAY_OOP_WELCOME_NUX),
@@ -647,7 +647,7 @@ let eS = new eE(s.h, {
                 icon:
                     null != t
                         ? (0, $.jsx)(t6, { game: t })
-                        : (0, $.jsx)("img", { src: i(513653), className: t5.Kk, alt: "" }),
+                        : (0, $.jsx)("img", { src: i(513653), className: t3.Kk, alt: "" }),
                 title: s,
                 hint: () => (0, tX.sI)((0, Y.Jn)(), J.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 }),
                 ...a,

@@ -1,4 +1,4 @@
-t.d(n, { A: () => p, N: () => j });
+t.d(n, { Ay: () => p, NV: () => j, Se: () => f });
 var l = t(64700),
     i = t(942381),
     s = t(465532),
@@ -10,8 +10,8 @@ var l = t(64700),
     u = t(451909),
     h = t(31717),
     A = t(522602),
-    m = t(659617),
-    g = t(381941),
+    g = t(659617),
+    m = t(381941),
     x = t(375708);
 function p(e) {
     let {
@@ -26,7 +26,7 @@ function p(e) {
         j = l.useCallback((e, n, t, l) => {
             a.A.sendMessage(e.id, u.Ay.parse(e, t), void 0, {
                 eagerDispatch: !1,
-                location: g.Hx.THREAD_CREATION,
+                location: m.Hx.THREAD_CREATION,
                 stickerIds: l,
                 attachmentsToUpload: n,
                 onAttachmentUploadError: (l, i, a, o) => {
@@ -42,7 +42,7 @@ function p(e) {
                 },
             });
         }, []);
-    return (0, m.r$)({
+    return (0, g.r$)({
         parentChannel: n,
         parentMessageId: t,
         threadSettings: i,
@@ -64,5 +64,5 @@ function j(e) {
             let { name: n, appliedTags: t } = e;
             return { name: n, appliedTags: t };
         }, i.x);
-    return (0, m.w0)({ parentChannel: n, name: t, appliedTags: l, upload: f });
+    return (0, g.w0)({ parentChannel: n, name: t, appliedTags: l, upload: f });
 }
