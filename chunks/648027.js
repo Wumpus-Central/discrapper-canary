@@ -1,21 +1,21 @@
-i.d(t, { A: () => b }), i(321073);
+i.d(t, { A: () => g }), i(321073);
 var l = i(64700),
     n = i(17928),
     a = i(10716),
-    s = i(429913),
-    r = i(287809),
-    o = i(147964),
-    d = i(403362),
-    p = i(723702),
-    c = i(933958),
-    u = i(847381),
-    f = i(155718),
+    r = i(429913),
+    s = i(457408),
+    o = i(287809),
+    d = i(147964),
+    p = i(403362),
+    c = i(723702),
+    u = i(933958),
+    f = i(847381),
+    A = i(155718),
     m = i(594061),
-    A = i(360469);
-function b(e) {
+    b = i(360469);
+function g(e) {
     var t;
     let i,
-        b,
         g,
         _,
         h,
@@ -23,45 +23,50 @@ function b(e) {
         v,
         E,
         C,
+        w,
         { guildId: I, enableFilter: N = !1 } = e,
         { filter: k } = (0, n.cf)([a.A], () => ({ filter: a.A.getFilter() })),
-        w =
-            ((i = (0, n.bG)([r.default], r.default.getCurrentUser)),
-            (b = (0, n.yK)([c.Ay], () => c.Ay.getShelfActivities(I))),
-            (g = (0, n.bG)([o.A], () => o.A.testModeEmbeddedApplicationId)),
-            (_ = b.map((e) => e.application_id)),
-            (h = null != g ? [g, ..._] : _),
-            (y = (0, s.A)(h)),
-            (v = l.useMemo(() => y.filter(d.Vq), [y])),
-            (E = l.useMemo(
-                () =>
-                    null != g && v.length > 0 && v[0].id === g && null != v[0].embeddedActivityConfig
-                        ? [{ activity: v[0].embeddedActivityConfig, application: v[0] }]
-                        : [],
-                [v, g],
-            )),
+        x =
+            ((i = (0, n.bG)([o.default], o.default.getCurrentUser)),
+            (g = (0, n.yK)([u.Ay], () => u.Ay.getShelfActivities(I))),
+            (_ = (0, n.bG)([d.A], () => d.A.testModeEmbeddedApplicationId)),
+            (h = g.map((e) => e.application_id)),
+            (y = null != _ ? [_, ...h] : h),
+            (v = (0, r.A)(y)),
+            (E = l.useMemo(() => v.filter(p.Vq), [v])),
             (C = l.useMemo(
                 () =>
-                    b
+                    null != _ && E.length > 0 && E[0].id === _ && null != E[0].embeddedActivityConfig
+                        ? [{ activity: E[0].embeddedActivityConfig, application: E[0] }]
+                        : [],
+                [E, _],
+            )),
+            (w = l.useMemo(
+                () =>
+                    g
                         .map((e) => {
-                            let t = v.find((t) => t.id === e.application_id);
+                            let t = E.find((t) => t.id === e.application_id);
                             return null == t ? null : { activity: e, application: t };
                         })
-                        .filter(d.Vq),
-                [b, v],
+                        .filter(p.Vq),
+                [g, E],
             )),
             (t = l.useMemo(
                 () =>
-                    [...E, ...C]
+                    [...C, ...w]
                         .filter((e) => {
                             let { activity: t } = e;
-                            return (t.supported_platforms ?? []).includes((0, u.A)((0, p.getOS)()));
+                            return (t.supported_platforms ?? []).includes((0, f.A)((0, c.getOS)()));
                         })
                         .filter((e) => {
                             let { activity: t } = e;
                             return !t.requires_age_gate || i?.nsfwAllowed === !0 || i?.nsfwAllowed == null;
+                        })
+                        .filter((e) => {
+                            let { application: t } = e;
+                            return !(i?.nsfwAllowed === !1 && (0, s.A)(t.id));
                         }),
-                [i?.nsfwAllowed, C, E],
+                [i?.nsfwAllowed, w, C],
             )),
             m.bW.loadIfNecessary(),
             l.useMemo(() => {
@@ -70,11 +75,11 @@ function b(e) {
                     n,
                     a = [];
                 t.forEach((e) => a.push(e.application.id));
-                let s = [...a];
+                let r = [...a];
                 return (
-                    s.sort((e, t) => (a.findIndex((t) => t === e) < a.findIndex((e) => e === t) ? -1 : 1)),
+                    r.sort((e, t) => (a.findIndex((t) => t === e) < a.findIndex((e) => e === t) ? -1 : 1)),
                     (e = t),
-                    (i = s),
+                    (i = r),
                     (l = [...e]),
                     (n = 0),
                     i.forEach((e) => {
@@ -90,9 +95,9 @@ function b(e) {
                             let [t] = e,
                                 i =
                                     t.application.embeddedActivityConfig?.client_platform_config[
-                                        (0, u.A)((0, p.getOS)())
+                                        (0, f.A)((0, c.getOS)())
                                     ]?.label_type;
-                            return null != i && (i === f.Hr.NEW || i === f.Hr.UPDATED);
+                            return null != i && (i === A.Hr.NEW || i === A.Hr.UPDATED);
                         })
                         .forEach((e) => {
                             let [t, i] = e,
@@ -109,7 +114,7 @@ function b(e) {
                     l
                 );
             }, [t])),
-        x = (() => {
+        M = (() => {
             let { isEnabled: e, lastUsedObject: t } = (0, n.cf)(
                     [a.A],
                     () => ({ isEnabled: a.A.getIsEnabled(), lastUsedObject: a.A.getLastUsedObject() }),
@@ -122,7 +127,7 @@ function b(e) {
                         ? i
                               .map((e) => ({
                                   application: e,
-                                  activity: { ...A.Gl, ...e.embeddedActivityConfig, application_id: e.id },
+                                  activity: { ...b.Gl, ...e.embeddedActivityConfig, application_id: e.id },
                               }))
                               .sort((e, i) => {
                                   let l = t[e.application.id],
@@ -137,9 +142,9 @@ function b(e) {
         function e(e) {
             return !!(!N || "" === k || e.application.name.toLowerCase().includes(k.toLowerCase()));
         }
-        let t = [...x].filter(e),
+        let t = [...M].filter(e),
             i = new Set(t.map((e) => e.application.id));
-        for (let l of w) !i.has(l.application.id) && e(l) && t.push(l);
+        for (let l of x) !i.has(l.application.id) && e(l) && t.push(l);
         return t;
-    }, [x, N, k, w]);
+    }, [M, N, k, x]);
 }
