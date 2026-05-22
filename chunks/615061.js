@@ -3139,6 +3139,12 @@ class tr extends g.A {
     exportClip(e, t) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
+    hasExportClipToFile() {
+        return !1;
+    }
+    exportClipToFile(e, t, n) {
+        return Promise.reject(Error("UNSUPPORTED"));
+    }
     saveScreenshot(e, t, n, i, r) {
         return Promise.reject(Error("UNSUPPORTED"));
     }

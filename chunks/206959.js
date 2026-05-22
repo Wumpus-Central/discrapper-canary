@@ -2316,6 +2316,25 @@ class er extends l.A {
                   n.exportClip(e, t, (e) => i(new Blob([e])), r);
               });
     }
+    hasExportClipToFile() {
+        return null != (0, b.lE)().exportClipToFile;
+    }
+    exportClipToFile(e, t, n) {
+        let i = (0, b.lE)().exportClipToFile;
+        return null == i
+            ? Promise.reject("unsupported")
+            : new Promise((r, s) => {
+                  i(
+                      e,
+                      t,
+                      n,
+                      (e) => {
+                          "string" != typeof e ? s("unsupported: native exportClipToFile returned non-string") : r(e);
+                      },
+                      s,
+                  );
+              });
+    }
     getWindowPreviews(e, t, n) {
         let i = (0, b.lE)();
         return (
