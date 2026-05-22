@@ -1763,7 +1763,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 549817, Version Hash: c2b95f4fd7fba3c6cfd90182dc43d4af0bd8a791`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 549853, Version Hash: f2e5dc02bf92691e119b0a4e0676e811808d6c50`,
 ),
     eC.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -18362,7 +18362,7 @@ let SN = "isHideDevBanner",
                     className: t2()(SS.Wz, SS.mr),
                     children: [
                         (0, k.jsx)(ST, { className: SS.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "549817" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "549853" }),
                         (0, k.jsx)(r, {}),
                     ],
                 })
@@ -32975,6 +32975,22 @@ let wQ = [
                     null != e.emojiReactionFrecency && w$.Q8.mergePartial(t, e.emojiReactionFrecency),
                     (e.emojiReactionFrecency = t),
                     (n = !0);
+            }
+            return n;
+        },
+        cleanup() {},
+    },
+    {
+        version: 11,
+        run(e) {
+            if (null == e.favoriteGifs || null == e.favoriteGifs.gifs) return !1;
+            let t = /\.(webp|avif|gif)(\?|$)/i,
+                n = !1;
+            for (let i in e.favoriteGifs.gifs) {
+                let r = e.favoriteGifs.gifs[i];
+                null != r &&
+                    (r.src.startsWith("//") && ((r.src = `https:${r.src}`), (n = !0)),
+                    r.format !== w$.TL.IMAGE && t.test(r.src) && ((r.format = w$.TL.IMAGE), (n = !0)));
             }
             return n;
         },
