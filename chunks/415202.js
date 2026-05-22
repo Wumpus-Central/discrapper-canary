@@ -1,14 +1,15 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => f });
 var i = n(439372),
     r = n(927813),
     s = n(961250),
     a = n(532309),
-    o = n(636592),
-    l = n(51935);
-let u = 5 * r.A.Millis.MINUTE,
-    c = 30 * r.A.Millis.SECOND;
-class d extends i.A {
+    o = n(440005),
+    l = n(49132),
+    u = n(25827);
+let c = 5 * r.A.Millis.MINUTE,
+    d = 30 * r.A.Millis.SECOND;
+class _ extends i.A {
     intervalId;
     newSubscriptionTimeoutId;
     virtualCurrencyUpdateTimeoutId;
@@ -25,20 +26,20 @@ class d extends i.A {
         ENTITLEMENT_DELETE: (e) => this._handleCrepeEntitlementChange(e),
     };
     _handleCrepeEntitlementChange(e) {
-        "1478888214021410877" === e.entitlement.sku_id && (0, s.uM)();
+        e.entitlement.sku_id === u.S && (0, s.uM)();
     }
     _handleVirtualCurrencyUpdate() {
         null != this.virtualCurrencyUpdateTimeoutId && clearTimeout(this.virtualCurrencyUpdateTimeoutId),
             (this.virtualCurrencyUpdateTimeoutId = setTimeout(() => {
                 (0, s.uM)(), (this.virtualCurrencyUpdateTimeoutId = void 0);
-            }, c));
+            }, d));
     }
     _handleNewSubscription() {
         (0, s.uM)(),
             null != this.newSubscriptionTimeoutId && clearTimeout(this.newSubscriptionTimeoutId),
             (this.newSubscriptionTimeoutId = setTimeout(() => {
                 (0, s.uM)(), (this.newSubscriptionTimeoutId = void 0);
-            }, u));
+            }, c));
     }
     _initializeProgramRewards() {
         if (!(0, l.CC)("ProgramRewardsManager")) return;
@@ -57,4 +58,4 @@ class d extends i.A {
                 (clearTimeout(this.virtualCurrencyUpdateTimeoutId), (this.virtualCurrencyUpdateTimeoutId = void 0));
     }
 }
-let _ = new d();
+let f = new _();

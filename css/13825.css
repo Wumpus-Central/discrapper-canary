@@ -2511,6 +2511,10 @@
     text-align: start
 }
 
+.notice__5a95d {
+    margin-bottom: var(--space-16)
+}
+
 .container__65536 {
     align-items: center;
     background: var(--background-surface-highest);
@@ -5425,6 +5429,12 @@
     color: var(--text-feedback-info)
 }
 
+.confettiCanvas__78e61 {
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
 .noticeContainer_bd1d96 {
     padding: 12px
 }
@@ -6720,16 +6730,6 @@
 
 .enableAnimationOverlayVisible_f8824b {
     opacity: 1
-}
-
-.videoPaused_afb275 {
-    align-items: center;
-    display: flex;
-    justify-content: start
-}
-
-.warningCircle_afb275 {
-    margin-inline-end: 4px
 }
 
 .poggermodeIcon_bd9912 {
