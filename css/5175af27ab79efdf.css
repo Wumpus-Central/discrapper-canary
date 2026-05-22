@@ -135,6 +135,7 @@
 }
 
 .badgeGraphic__6db38 {
+    flex-shrink: 0;
     height: 100px;
     margin-bottom: var(--space-16);
     max-width: 100%;
@@ -226,52 +227,6 @@
     width: 100%
 }
 
-.nitroTierUnlockDescription__6db38 {
-    width: 100%
-}
-
-.nitroTierGrid__6db38 {
-    box-sizing: border-box;
-    -moz-column-gap: var(--space-8);
-    column-gap: var(--space-8);
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    row-gap: var(--space-4);
-    width: 100%
-}
-
-.nitroTierItem__6db38 {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
-    min-width: 0;
-    padding: var(--space-8)
-}
-
-.nitroTierItemLocked__6db38 .nitroTierIcon__6db38 {
-    opacity: .4
-}
-
-.nitroTierIcon__6db38 {
-    height: 24px;
-    -o-object-fit: contain;
-    object-fit: contain;
-    width: 24px
-}
-
-.nitroTierText__6db38 {
-    min-width: 48px;
-    overflow-wrap: anywhere;
-    text-align: center;
-    width: 100%
-}
-
 .directoryFooter__6db38 {
     border-block-start: 1px solid var(--border-subtle);
     display: flex;
@@ -289,4 +244,59 @@
 
 .badgeOwnershipText__6db38 {
     line-height: 1
+}
+
+.tierTimelineDescription_bf9073 {
+    width: 100%
+}
+
+.tierTimelineGrid_bf9073 {
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.tierTimelineGrid_bf9073,
+.tierTimelineRow_bf9073 {
+    display: flex;
+    min-width: 0;
+    width: 100%
+}
+
+.tierTimelineRow_bf9073 {
+    gap: var(--space-8);
+    justify-content: center
+}
+
+.tierTimelineItem_bf9073 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0;
+    padding: var(--space-8)
+}
+
+.tierTimelineGridCompact_bf9073 .tierTimelineItem_bf9073 {
+    padding-inline: var(--space-4)
+}
+
+.tierTimelineItemLocked_bf9073 .tierTimelineIcon_bf9073 {
+    opacity: .4
+}
+
+.tierTimelineIcon_bf9073 {
+    height: 24px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 24px
+}
+
+.tierTimelineText_bf9073 {
+    min-width: 48px;
+    overflow-wrap: anywhere;
+    text-align: center;
+    width: 100%
 }

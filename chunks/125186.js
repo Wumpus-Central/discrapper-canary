@@ -86,7 +86,7 @@ let v = function () {
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     (0, C.openModalLazy)(
         async () => {
-            let { default: s } = await Promise.all([n.e("13445"), n.e("62762")]).then(n.bind(n, 235121));
+            let { default: s } = await Promise.all([n.e("53502"), n.e("9473")]).then(n.bind(n, 613752));
             return (n) => (0, i.jsx)(s, { ...n, initialBadgeId: e, targetUserId: t, targetUsername: r });
         },
         { stackingBehavior: "stack" },
