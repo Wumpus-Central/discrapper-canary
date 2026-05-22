@@ -1,11 +1,13 @@
 "use strict";
-n.d(t, { Om: () => f, P3: () => u, hJ: () => h, ie: () => d });
+n.d(t, { Om: () => p, P3: () => d, hJ: () => E, ie: () => f });
 var i = n(70283),
     r = n(976860),
-    s = n(652215),
-    a = n(758836),
-    o = n(375708);
-let l = {
+    s = n(780964),
+    a = n(766075),
+    o = n(652215),
+    l = n(758836),
+    u = n(375708);
+let c = {
     premium: i.$.PREMIUM_TENURE,
     premium_tenure_1_month_v2: i.$.PREMIUM_TENURE,
     premium_tenure_3_month_v2: i.$.PREMIUM_TENURE,
@@ -39,36 +41,31 @@ let l = {
     april_fools_2026: i.$.APRIL_FOOLS_2026,
     orb_profile_badge: i.$.ORB_PROFILE,
 };
-function u(e) {
-    return l[e];
-}
-let c = new Set(Object.values(l));
 function d(e) {
-    return c.has(e);
+    return c[e];
 }
-let _ = {
+let _ = new Set(Object.values(c));
+function f(e) {
+    return _.has(e);
+}
+let h = {
     [i.$.PREMIUM_TENURE]: {
         ctaLabel: (e) => {
             let { owned: t } = e;
-            return t ? o.intl.string(o.t.xGjjkd) : o.intl.string(o.t.BTxm69);
+            return t ? u.intl.string(u.t.xGjjkd) : u.intl.string(u.t.BTxm69);
         },
-        ctaAction: () => (0, r.pX)(s.BVt.NITRO_HOME),
+        ctaAction: () => (0, r.pX)(o.BVt.NITRO_HOME),
     },
     [i.$.GUILD_BOOSTER]: {
-        ctaLabel: () => o.intl.string(o.t["6LHsjg"]),
-        ctaAction: () =>
-            window.open(
-                "https://support.discord.com/hc/en-us/articles/360028038352-Server-Boosting-FAQ#h_01HGX7DJ33YD3AP7K0E0GYSMYM",
-                "_blank",
-                "noopener,noreferrer",
-            ),
+        ctaLabel: () => u.intl.string(u.t["6LHsjg"]),
+        ctaAction: () => (0, a.openUserSettings)(s.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
     },
     [i.$.ORB_PROFILE]: {
-        ctaLabel: () => o.intl.string(o.t.C2rTrm),
-        ctaAction: () => (0, r.pX)(s.BVt.COLLECTIBLES_SHOP_WITH_TAB(a.G2.ORBS)),
+        ctaLabel: () => u.intl.string(u.t.C2rTrm),
+        ctaAction: () => (0, r.pX)(o.BVt.COLLECTIBLES_SHOP_WITH_TAB(l.G2.ORBS)),
     },
 };
-function f(e) {
-    return _[e];
+function p(e) {
+    return h[e];
 }
-let h = "badge-details";
+let E = "badge-details";
