@@ -2587,7 +2587,7 @@ function it(e) {
               useReducedMotion: a,
           });
 }
-var il = t(880682),
+var il = t(810711),
     ii = t(765178),
     is = t(231483),
     ia = t(544231),
@@ -5033,9 +5033,7 @@ class rX extends s.PureComponent {
         o()(null != e, "Missing channel in Channel.renderHeaderToolbar");
         let d = [];
         if (e.isSystemDM()) return d;
-        let c =
-            (e.type === er.rbe.DM || e.type === er.rbe.GROUP_DM) &&
-            lb.A.getConfig({ location: "PrivateChannelRecipientsInviteModal" }).enabled;
+        let c = (e.type === er.rbe.DM || e.type === er.rbe.GROUP_DM) && (0, lb.G)();
         switch (e.type) {
             case er.rbe.GUILD_STAGE_VOICE:
             case er.rbe.GUILD_VOICE:

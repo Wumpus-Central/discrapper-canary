@@ -6,19 +6,19 @@ var i = n(636537),
     a = n(883600),
     o = n(343328),
     l = n(568185),
-    d = n(250953),
-    _ = n(700241),
-    u = n(976860),
-    c = n(378570),
-    E = n(95701),
+    u = n(250953),
+    c = n(700241),
+    d = n(976860),
+    _ = n(378570),
+    f = n(95701),
     h = n(734057),
-    m = n(222823),
-    f = n(954571),
-    g = n(371794),
-    p = n(387755),
-    A = n(956793),
+    p = n(222823),
+    E = n(174459),
+    m = n(371794),
+    g = n(387755),
+    A = n(730852),
     I = n(652215),
-    T = n(985018);
+    T = n(375708);
 let S = {
     async openPrivateChannel(e) {
         let {
@@ -30,13 +30,13 @@ let S = {
                 navigateToChannel: o = !0,
             } = e,
             l = this._getRecipients(t),
-            d = (e) => {
-                n && p.A.call(e.id, r, !0, e.isDM() ? e.getRecipientId() : null);
+            u = (e) => {
+                n && g.A.call(e.id, r, !0, e.isDM() ? e.getRecipientId() : null);
             };
         if (1 === l.length) {
             let [e] = l,
                 t = this._openCachedDMChannel(e, a, o);
-            if (null != t) return d(t), Promise.resolve(t.id);
+            if (null != t) return u(t), Promise.resolve(t.id);
         }
         try {
             let e = await i.Bo.post({
@@ -50,11 +50,27 @@ let S = {
             if (o) {
                 a?.();
                 let t = this._openPrivateChannel(e.body);
-                d(t);
+                u(t);
             }
             return e.body.id;
         } catch (e) {
-            throw (e?.body?.code === I.t02.QUARANTINED && (0, _.default)(), e);
+            throw (e?.body?.code === I.t02.QUARANTINED && (0, c.default)(), e);
+        }
+    },
+    async createGroupDmShell(e) {
+        let { recipientId: t, location: n, onBeforeTransition: r, navigateToChannel: s = !0 } = e;
+        try {
+            let e = await i.Bo.post({
+                url: I.Rsh.USER_GROUP_DM_SHELL,
+                body: { recipient_id: t },
+                context: { location: n },
+                oldFormErrors: !0,
+                retries: 3,
+                rejectWithError: !1,
+            });
+            return s && (r?.(), this._openPrivateChannel(e.body)), e.body.id;
+        } catch (e) {
+            throw (e?.body?.code === I.t02.QUARANTINED && (0, c.default)(), e);
         }
     },
     _openCachedDMChannel(e, t) {
@@ -65,8 +81,8 @@ let S = {
             ? null
             : (n &&
                   (t?.(),
-                  null != (0, d.Y)()
-                      ? (0, c.iN)(r.id, { navigationReplace: !0 })
+                  null != (0, u.Y)()
+                      ? (0, _.iN)(r.id, { navigationReplace: !0 })
                       : A.default.selectPrivateChannel(r.id)),
               r);
     },
@@ -78,7 +94,7 @@ let S = {
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }),
-            r = (0, E.UE)(n.body);
+            r = (0, f.UE)(n.body);
         return s.h.dispatch({ type: "CHANNEL_CREATE", channel: r }), r.id;
     },
     async getOrEnsurePrivateChannel(e) {
@@ -87,15 +103,15 @@ let S = {
     },
     async getDMChannel(e) {
         let t = await i.Bo.get({ url: I.Rsh.DM_CHANNEL(e), rejectWithError: !0 }),
-            n = (0, E.UE)(t.body);
+            n = (0, f.UE)(t.body);
         return s.h.dispatch({ type: "CHANNEL_CREATE", channel: n }), n.id;
     },
     _getRecipients: (e) => (null != e ? (Array.isArray(e) ? e : [e]) : []),
     _openPrivateChannel(e) {
-        let t = (0, E.UE)(e);
+        let t = (0, f.UE)(e);
         return (
             s.h.dispatch({ type: "CHANNEL_CREATE", channel: t }),
-            null != (0, d.Y)() ? (0, c.iN)(t.id, { navigationReplace: !0 }) : A.default.selectPrivateChannel(t.id),
+            null != (0, u.Y)() ? (0, _.iN)(t.id, { navigationReplace: !0 }) : A.default.selectPrivateChannel(t.id),
             t
         );
     },
@@ -104,16 +120,16 @@ let S = {
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         return (
             (0, o.A)(e) &&
-                f.default.track(I.HAw.CHANGE_LOG_DM_REMOVED, {
+                E.default.track(I.HAw.CHANGE_LOG_DM_REMOVED, {
                     last_changelog_id: a.A.latestChangelogId(),
-                    unread_count: m.Ay.getUnreadCount(e),
+                    unread_count: p.Ay.getUnreadCount(e),
                 }),
             s.h.dispatch({
                 type: "CHANNEL_DELETE",
                 channel: { id: e, guild_id: void 0, parent_id: void 0 },
                 silent: n,
             }),
-            t && !__OVERLAY__ && (0, u.pX)(I.BVt.FRIENDS),
+            t && !__OVERLAY__ && (0, d.pX)(I.BVt.FRIENDS),
             i.Bo.del({ url: I.Rsh.CHANNEL(e), query: { silent: n }, oldFormErrors: !0, rejectWithError: !1 })
                 .then(() => {
                     r.O.announce(T.intl.string(T.t.nRbucl));
@@ -177,7 +193,7 @@ let S = {
                 new_icon_set: null != t,
                 location: n,
             };
-        f.default.track(I.HAw.CHANNEL_ICON_EDIT_PROGRESSED, { ...s, status: "initiated" });
+        E.default.track(I.HAw.CHANNEL_ICON_EDIT_PROGRESSED, { ...s, status: "initiated" });
         try {
             let n = await i.Bo.patch({
                 url: I.Rsh.CHANNEL(e),
@@ -186,12 +202,12 @@ let S = {
                 rejectWithError: !0,
                 failImmediatelyWhenRateLimited: !0,
             });
-            f.default.track(I.HAw.CHANNEL_ICON_EDIT_PROGRESSED, { ...s, status: "success" });
+            E.default.track(I.HAw.CHANNEL_ICON_EDIT_PROGRESSED, { ...s, status: "success" });
             let a = r?.getGuildId();
             return null == a || r?.isThread() || l.A.checkGuildTemplateDirty(a), n;
         } catch (e) {
             throw (
-                (f.default.track(I.HAw.CHANNEL_ICON_EDIT_PROGRESSED, {
+                (E.default.track(I.HAw.CHANNEL_ICON_EDIT_PROGRESSED, {
                     ...s,
                     status: "failed",
                     is_rate_limited: e?.body?.retry_after != null,
@@ -212,7 +228,7 @@ let S = {
                 new_icon_set: null != a,
                 location: n,
             };
-        r && f.default.track(I.HAw.CHANNEL_ICON_EDIT_PROGRESSED, { ...o, status: "initiated" });
+        r && E.default.track(I.HAw.CHANNEL_ICON_EDIT_PROGRESSED, { ...o, status: "initiated" });
         try {
             let a = await i.Bo.patch({
                     context: { location: n },
@@ -221,16 +237,16 @@ let S = {
                     oldFormErrors: !0,
                     rejectWithError: !0,
                 }),
-                d = s?.getGuildId();
+                u = s?.getGuildId();
             return (
-                null == d || s?.isThread() || l.A.checkGuildTemplateDirty(d),
-                r && f.default.track(I.HAw.CHANNEL_ICON_EDIT_PROGRESSED, { ...o, status: "success" }),
+                null == u || s?.isThread() || l.A.checkGuildTemplateDirty(u),
+                r && E.default.track(I.HAw.CHANNEL_ICON_EDIT_PROGRESSED, { ...o, status: "success" }),
                 a
             );
         } catch (e) {
             throw (
                 (r &&
-                    f.default.track(I.HAw.CHANNEL_ICON_EDIT_PROGRESSED, {
+                    E.default.track(I.HAw.CHANNEL_ICON_EDIT_PROGRESSED, {
                         ...o,
                         status: "failed",
                         is_rate_limited: e?.body?.retry_after != null,
@@ -246,7 +262,7 @@ let S = {
     },
     fetchChannelStoreListing(e, t) {
         let n = null != t ? I.Rsh.CHANNEL_STORE_LISTING_SKU(e, t) : I.Rsh.CHANNEL_STORE_LISTING(e);
-        return (0, g.aP)(n).then((t) => {
+        return (0, m.aP)(n).then((t) => {
             s.h.dispatch({ type: "STORE_LISTING_FETCH_SUCCESS", channelId: e, storeListing: t.body });
         });
     },

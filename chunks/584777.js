@@ -58,6 +58,7 @@ function w() {
                         ...n,
                         ...u.A.getUserAffinities()
                             .map((e) => e.otherUserId)
+                            .filter((t) => t !== e?.id)
                             .filter((e) => !A.A.isBlockedOrIgnored(e))
                             .filter((e) => !A.A.isFriend(e))
                             .filter((e) => b.has(e)),
@@ -145,6 +146,7 @@ function U(e) {
         r = i ? new Set(g.A.getGuildIds()) : null,
         s = [];
     for (let { id: e, comparator: a } of t) {
+        if (null != n && e === n.id) continue;
         let t = I.default.getUser(e);
         if (null == t || t.isProvisional || (t.bot && !(t.isStaff() && n?.isStaff()))) continue;
         let o = { user: t, comparator: a };

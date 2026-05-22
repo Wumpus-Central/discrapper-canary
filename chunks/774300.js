@@ -1,39 +1,40 @@
-t.d(n, { A: () => g, F: () => c });
-var e,
-    l = t(308528),
-    s = t(720149),
-    d = t(626584),
-    r = t(734057),
-    a = t(927813),
-    u = t(513391);
-let A = +a.A.Millis.SECOND + 10;
-var c = (((e = {})[(e.GROUP_DM = 0)] = "GROUP_DM"), (e[(e.USER = 1)] = "USER"), (e[(e.CHANNEL = 2)] = "CHANNEL"), e);
-class o extends u.A {
+"use strict";
+n.d(t, { A: () => f, F: () => d });
+var i,
+    r = n(308528),
+    s = n(720149),
+    a = n(626584),
+    o = n(734057),
+    l = n(927813),
+    u = n(513391);
+let c = +l.A.Millis.SECOND + 10;
+var d = (((i = {})[(i.GROUP_DM = 0)] = "GROUP_DM"), (i[(i.USER = 1)] = "USER"), (i[(i.CHANNEL = 2)] = "CHANNEL"), i);
+class _ extends u.A {
     constructor() {
-        super(new d.A("InviteQueue"), A);
+        super(new a.A("InviteQueue"), c);
     }
-    _sendInvite(i, n, t, e, l) {
-        s.A.sendInvite(i.id, n, t, e).then(
-            () => l(null, !0),
-            () => l(null, !1),
+    _sendInvite(e, t, n, i, r) {
+        s.A.sendInvite(e.id, t, n, i).then(
+            () => r(null, !0),
+            () => r(null, !1),
         );
     }
-    drain(i, n) {
-        let { location: t, inviteAnalyticsMetadata: e } = i;
-        switch (i.type) {
+    drain(e, t) {
+        let { location: n, inviteAnalyticsMetadata: i } = e;
+        switch (e.type) {
             case 0:
             case 2:
-                this._sendInvite(i.channel, i.inviteKey, t, e, n);
+                this._sendInvite(e.channel, e.inviteKey, n, i, t);
                 break;
             case 1:
-                l.A.ensurePrivateChannel(i.user.id).then(
-                    (l) => {
-                        let s = r.A.getChannel(l);
-                        null != s && this._sendInvite(s, i.inviteKey, t, e, n);
+                r.A.ensurePrivateChannel(e.user.id).then(
+                    (r) => {
+                        let s = o.A.getChannel(r);
+                        null != s && this._sendInvite(s, e.inviteKey, n, i, t);
                     },
-                    () => n(null, !1),
+                    () => t(null, !1),
                 );
         }
     }
 }
-let g = new o();
+let f = new _();

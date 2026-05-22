@@ -13141,6 +13141,7 @@
   "AWLVgR": "Send Link",
   "PuLLzP": "Invite Sent",
   "sVwWdV": "Invite Sent!",
+  "gztrTs": "{inviteCount, plural, =1 {Invite sent to !!{username1}!!} =2 {Invite sent to !!{username1}!! and !!{username2}!!} other {Invite sent to !!{username1}!!, !!{username2}!!, and {remaining, plural, one { other} other { others} }} }",
   "99ISmn": "!!{maxAge}!!, !!{maxUses}!!",
   "dqPWMN": "Expires in !!{maxAge}!!, !!{maxUses}!!",
   "Z5Vt52": "!!{maxAge}!!, or !!{maxUses}!!",
