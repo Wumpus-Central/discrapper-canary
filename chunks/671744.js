@@ -65,7 +65,7 @@ function _(e) {
     return d()(e, t);
 }
 function f(e) {
-    let { checkoutInitParameters: t, contextMetadata: n, order: s, initialPaymentSourceId: a } = e;
+    let { checkoutInitParameters: t, contextMetadata: n, order: s, initialPaymentSourceId: a, initialCurrency: o } = e;
     return (0, r.h)(
         (e) => ({
             checkoutInitParameters: t,
@@ -94,6 +94,10 @@ function f(e) {
             setHasAcceptedTerms: (t) => e({ hasAcceptedTerms: t }),
             paymentSourceId: a,
             setPaymentSourceId: (t) => e({ paymentSourceId: t ?? null }),
+            checkoutPriceOptions: { paymentSourceId: a ?? void 0, currency: o, loaded: !1 },
+            setCheckoutPriceOptions: (t) => e((e) => ({ checkoutPriceOptions: { ...e.checkoutPriceOptions, ...t } })),
+            setCheckoutCurrency: (t) =>
+                e((e) => ({ checkoutPriceOptions: { ...e.checkoutPriceOptions, currency: t } })),
             purchaseState: u.h.WAITING,
             setPurchaseState: (t) => e({ purchaseState: t }),
             appliedUserDiscounts: [],

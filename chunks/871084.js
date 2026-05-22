@@ -194,13 +194,14 @@ function F(e) {
         } = e,
         {
             selectedSkuId: z,
-            invoicePreview: $,
-            setHasAcceptedTerms: J,
+            invoicePreview: J,
+            setHasAcceptedTerms: $,
             setPurchaseState: X,
             contextMetadata: Q,
             paymentSourceId: ee,
             setPurchaseError: et,
             order: en,
+            priceOptions: el,
         } = (0, E.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             invoicePreview: e.checkoutInvoicePreview,
@@ -210,9 +211,10 @@ function F(e) {
             contextMetadata: e.contextMetadata,
             order: e.order,
             paymentSourceId: e.paymentSourceId,
+            priceOptions: e.checkoutPriceOptions,
         })),
-        { paymentSources: el } = (0, h.jm)(),
-        { priceOptions: ea, purchaseType: ei, referralCode: er } = (0, v.P5)(),
+        { paymentSources: ea } = (0, h.jm)(),
+        { purchaseType: ei, referralCode: er } = (0, v.P5)(),
         es = (0, C.A)(),
         eo = (0, A.gU)(),
         {
@@ -238,11 +240,11 @@ function F(e) {
             (eE.sound_id = em?.soundId));
     let eP = es?.id,
         { analyticsLocations: eS } = (0, p.Ay)(),
-        ef = (0, U.W)(el, ee),
+        ef = (0, U.W)(ea, ee),
         [e_, eT] = a.useState(!1),
         [eI, ex] = a.useState(!1),
         { hasEntitlements: eN } = (0, _.X)(eP, eu),
-        eg = (0, N.J$)(ea.paymentSourceId),
+        eg = (0, N.J$)(el.paymentSourceId),
         ev = (0, S.l)(),
         eM = null;
     ei === L.VVm.ONE_TIME &&
@@ -251,19 +253,19 @@ function F(e) {
         o()(null != eM, "SKU must exist and be fetched."));
     let eb = a.useCallback(() => {
             X(w.h.PURCHASING),
-                J(!0),
+                $(!0),
                 eT(!0),
                 c.h.wait(d.ET),
                 et(null),
                 I.default.track(L.HAw.PAYMENT_FLOW_COMPLETED, {
                     ...j,
-                    subtotal: $?.subtotal,
-                    tax: $?.tax,
-                    expected_amount: $?.total,
-                    expected_currency: $?.currency,
+                    subtotal: J?.subtotal,
+                    tax: J?.tax,
+                    expected_amount: J?.total,
+                    expected_currency: J?.currency,
                     duration_ms: Date.now() - R,
                 });
-        }, [X, J, et, j, R, $]),
+        }, [X, $, et, j, R, J]),
         ej = a.useCallback(
             (e) => {
                 X(w.h.FAIL),
@@ -301,7 +303,7 @@ function F(e) {
                 subscriptionPlan: es,
                 planGroup: F,
                 trialId: O,
-                priceOptions: ea,
+                priceOptions: el,
                 paymentSource: ef,
                 isPrepaidPaymentPastDue: ev,
                 openInvoiceId: W,
@@ -313,7 +315,7 @@ function F(e) {
                 referralCode: er,
                 loadId: Q.loadId,
                 giftInfoOptions: eE,
-                invoicePreview: $,
+                invoicePreview: J,
                 order: en,
             });
         },

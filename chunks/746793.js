@@ -1,87 +1,88 @@
-t.d(i, { default: () => en });
+t.d(i, { default: () => es });
 var n = t(627968),
     s = t(64700),
     l = t(935462),
     a = t(331322),
     r = t(534514),
-    c = t(937008),
-    o = t(834252),
-    d = t(532794),
-    u = t(413074),
-    m = t(672525),
-    h = t(503698),
-    g = t.n(h),
-    p = t(791282),
-    I = t.n(p),
-    j = t(835245),
-    x = t(172218),
-    f = t(17928),
-    S = t(834730),
-    N = t(123292),
-    A = t(140735),
-    _ = t(192308),
-    L = t(43990),
-    C = t(444927),
-    O = t(793574),
-    T = t(688810),
-    v = t(871123),
-    w = t(84511),
-    y = t(999291),
-    b = t(101928),
-    k = t(920601),
-    M = t(975732),
-    R = t(299679),
-    E = t(561794),
-    W = t(862772),
-    P = t(310209),
-    H = t(944841),
-    D = t(734057),
-    G = t(309010),
-    B = t(174459),
-    F = t(427262),
-    U = t(375708);
-U.intl.string(U.t["7lZ31J"]), U.intl.string(U.t.pWG4ze), U.intl.string(U.t.SK5rmi), U.intl.string(U.t.BCi1gT);
-var Q = t(652215),
-    V = t(518477),
-    z = t(308549);
-function X(e) {
+    c = t(671744),
+    o = t(937008),
+    d = t(834252),
+    u = t(532794),
+    m = t(413074),
+    h = t(672525),
+    g = t(503698),
+    p = t.n(g),
+    I = t(791282),
+    j = t.n(I),
+    x = t(835245),
+    f = t(172218),
+    S = t(17928),
+    N = t(834730),
+    A = t(123292),
+    _ = t(140735),
+    L = t(192308),
+    C = t(43990),
+    O = t(444927),
+    T = t(793574),
+    v = t(688810),
+    w = t(871123),
+    y = t(84511),
+    b = t(999291),
+    k = t(101928),
+    M = t(920601),
+    R = t(975732),
+    E = t(299679),
+    W = t(561794),
+    P = t(862772),
+    H = t(310209),
+    D = t(944841),
+    G = t(734057),
+    B = t(309010),
+    F = t(174459),
+    U = t(427262),
+    Q = t(375708);
+Q.intl.string(Q.t["7lZ31J"]), Q.intl.string(Q.t.pWG4ze), Q.intl.string(Q.t.SK5rmi), Q.intl.string(Q.t.BCi1gT);
+var V = t(652215),
+    z = t(518477),
+    X = t(308549);
+function Y(e) {
     let { title: i, subtitle: t, showViewAll: s, themeClass: l, onOpenWishlist: a } = e;
     return (0, n.jsxs)("div", {
-        className: g()(z.$R, l),
+        className: p()(X.$R, l),
         children: [
             (0, n.jsxs)("div", {
-                className: z.hy,
+                className: X.hy,
                 children: [
                     (0, n.jsx)(r.D, { variant: "heading-lg/bold", children: i }),
-                    null != t && (0, n.jsx)(S.E, { variant: "text-sm/medium", children: t }),
+                    null != t && (0, n.jsx)(N.E, { variant: "text-sm/medium", children: t }),
                 ],
             }),
             s &&
                 (0, n.jsx)("div", {
-                    className: z.Rb,
-                    children: (0, n.jsx)(N.Q, {
+                    className: X.Rb,
+                    children: (0, n.jsx)(A.Q, {
                         variant: "secondary",
                         textVariant: "text-xs/normal",
-                        text: U.intl.string(U.t.y6PSA3),
+                        text: Q.intl.string(Q.t.y6PSA3),
                         onClick: a,
                     }),
                 }),
         ],
     });
 }
-function Y(e) {
+function $(e) {
     let { wishlistInDmLength: i } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(A.A, { children: U.intl.string(U.t.pfChQr) }),
+            (0, n.jsx)(_.A, { children: Q.intl.string(Q.t.pfChQr) }),
             (0, n.jsx)("div", {
-                className: g()(z.Md, z.e6),
-                children: Array.from({ length: i }, (e, i) => (0, n.jsx)(H.O, {}, `placeholder-${i}`)),
+                className: p()(X.Md, X.e6),
+                children: Array.from({ length: i }, (e, i) => (0, n.jsx)(D.O, {}, `placeholder-${i}`)),
             }),
         ],
     });
 }
-function $(e) {
+function J(e) {
     let {
             items: i,
             giftRecipient: t,
@@ -91,12 +92,12 @@ function $(e) {
             analyticsLocations: c,
             includedSources: o,
         } = e,
-        d = (0, f.bG)([G.A, D.A], () => D.A.getChannel(G.A.getChannelId())),
+        d = (0, S.bG)([B.A, G.A], () => G.A.getChannel(B.A.getChannelId())),
         u = s.useCallback(() => {
-            r?.(), (0, _.closeAllModals)();
+            r?.(), (0, L.closeAllModals)();
         }, [r]);
     return (0, n.jsx)("ul", {
-        className: g()(z.Md, z.e6),
+        className: p()(X.Md, X.e6),
         children: i.map((e, i) => {
             let { sku: s, source: r } = e;
             return null == s
@@ -104,15 +105,15 @@ function $(e) {
                 : (0, n.jsx)(
                       "li",
                       {
-                          className: z.XI,
-                          children: (0, n.jsx)(R.dB, {
+                          className: X.XI,
+                          children: (0, n.jsx)(E.dB, {
                               newValue: {
                                   positionInSection: i,
                                   skuId: s.id,
-                                  itemSource: r === E.uS.WISHLIST ? "organic" : "recommendation",
+                                  itemSource: r === W.uS.WISHLIST ? "organic" : "recommendation",
                                   productLine: s.productLine,
                               },
-                              children: (0, n.jsx)(H.A, {
+                              children: (0, n.jsx)(D.A, {
                                   sku: s,
                                   wishlistId: l,
                                   source: r,
@@ -131,7 +132,7 @@ function $(e) {
         }),
     });
 }
-function J(e) {
+function K(e) {
     let {
             giftRecipient: i,
             onWishlistItemClick: t,
@@ -142,21 +143,21 @@ function J(e) {
             defaultWishlistId: o,
             footerNotice: d,
         } = e,
-        { analyticsLocations: u } = (0, T.Ay)(O.A.WISHLIST_BANNER),
-        m = (0, C.A)(() => (0, j.A)()),
-        { theme: h, primaryColor: p, secondaryColor: I } = (0, b.A)({ user: i, displayProfile: l }),
-        { profileThemeStyle: f, profileThemeClassName: S } = (0, k.A)({
+        { analyticsLocations: u } = (0, v.Ay)(T.A.WISHLIST_BANNER),
+        m = (0, O.A)(() => (0, x.A)()),
+        { theme: h, primaryColor: g, secondaryColor: I } = (0, k.A)({ user: i, displayProfile: l }),
+        { profileThemeStyle: j, profileThemeClassName: S } = (0, M.A)({
             theme: h,
             themeType: null,
-            primaryColor: p,
+            primaryColor: g,
             secondaryColor: I,
         }),
         N = s.useCallback(() => {
-            (0, M.openUserProfileModal)({ userId: i.id, tabSection: V.RP.WISHLIST });
+            (0, R.openUserProfileModal)({ userId: i.id, tabSection: z.RP.WISHLIST });
         }, [i.id]),
         A = s.useMemo(() => "loading" === c, [c]),
-        _ = F.Ay.getName(i),
-        w = (function (e) {
+        _ = U.Ay.getName(i),
+        L = (function (e) {
             let { totalUnownedWishlistItemCount: i, wishlistInDmLength: t, displayItems: n, recipientName: l } = e,
                 a = (0, s.useMemo)(
                     () =>
@@ -169,7 +170,7 @@ function J(e) {
                                   : n.length > 0 &&
                                       n.every((e) => {
                                           let { sku: i, source: t } = e;
-                                          return t === E.uS.POPULAR && (0, v.bF)(i);
+                                          return t === W.uS.POPULAR && (0, w.bF)(i);
                                       })
                                     ? "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY"
                                     : "SHOP_ONLY";
@@ -179,17 +180,17 @@ function J(e) {
             return (0, s.useMemo)(() => {
                 switch (a) {
                     case "FULL_WISHLIST":
-                        return { title: U.intl.formatToPlainString(U.t["YcL/Vr"], { username: l }), showIcons: !1 };
+                        return { title: Q.intl.formatToPlainString(Q.t["YcL/Vr"], { username: l }), showIcons: !1 };
                     case "MIXED":
-                        return { title: U.intl.formatToPlainString(U.t.dIDKgi, { username: l }), showIcons: !0 };
+                        return { title: Q.intl.formatToPlainString(Q.t.dIDKgi, { username: l }), showIcons: !0 };
                     default:
-                        return { title: U.intl.string(U.t.BCi1gT), showIcons: !1 };
+                        return { title: Q.intl.string(Q.t.BCi1gT), showIcons: !1 };
                 }
             }, [a, l]);
-        })({ totalUnownedWishlistItemCount: a, wishlistInDmLength: E.pl, displayItems: r, recipientName: _ }),
+        })({ totalUnownedWishlistItemCount: a, wishlistInDmLength: W.pl, displayItems: r, recipientName: _ }),
         y = l?.getBannerURL({ canAnimate: !1, size: 713 }),
-        W = a > E.pl,
-        P = s.useMemo(() => (W ? r.slice(0, E.pl) : r), [r, W]),
+        b = a > W.pl,
+        P = s.useMemo(() => (b ? r.slice(0, W.pl) : r), [r, b]),
         [H, D] = s.useState(!1),
         G = s.useCallback(
             (e) => {
@@ -198,7 +199,7 @@ function J(e) {
                         let { sku: i } = e;
                         return i.id;
                     });
-                    B.default.track(Q.HAw.IMPRESSION_GIFT_OPTION_WISHLIST_BANNER_VIEWED, {
+                    F.default.track(V.HAw.IMPRESSION_GIFT_OPTION_WISHLIST_BANNER_VIEWED, {
                         gift_recipient_id: i.id,
                         sku_ids: e,
                         location_stack: u,
@@ -216,7 +217,7 @@ function J(e) {
             },
             [A, r, i.id, u],
         ),
-        J = (0, x.K)(G, void 0, !A && !H),
+        B = (0, f.K)(G, void 0, !A && !H),
         K = s.useMemo(
             () =>
                 new Set(
@@ -230,22 +231,22 @@ function J(e) {
     return "error" === c
         ? null
         : (0, n.jsx)("div", {
-              className: z.v8,
+              className: X.v8,
               children: (0, n.jsxs)("div", {
-                  ref: J,
-                  className: g()(z.A1, S),
-                  style: f,
+                  ref: B,
+                  className: p()(X.A1, S),
+                  style: j,
                   children: [
-                      null != y && (0, n.jsx)("div", { className: z.iL, style: { backgroundImage: `url(${y})` } }),
-                      (0, n.jsx)(L.N, {
+                      null != y && (0, n.jsx)("div", { className: X.iL, style: { backgroundImage: `url(${y})` } }),
+                      (0, n.jsx)(C.N, {
                           disableAdaptiveTheme: !0,
                           children: (e) =>
                               (0, n.jsxs)(n.Fragment, {
                                   children: [
-                                      (0, n.jsx)(X, {
-                                          title: w.title,
-                                          subtitle: w.subtitle,
-                                          showViewAll: a > E.pl,
+                                      (0, n.jsx)(Y, {
+                                          title: L.title,
+                                          subtitle: L.subtitle,
+                                          showViewAll: a > W.pl,
                                           themeClass: e,
                                           onOpenWishlist: N,
                                       }),
@@ -253,8 +254,8 @@ function J(e) {
                                           className: e,
                                           children:
                                               A || 0 === r.length
-                                                  ? (0, n.jsx)(Y, { wishlistInDmLength: E.pl })
-                                                  : (0, n.jsx)(R.dB, {
+                                                  ? (0, n.jsx)($, { wishlistInDmLength: W.pl })
+                                                  : (0, n.jsx)(E.dB, {
                                                         newValue: {
                                                             impressionSessionId: m,
                                                             surface: "dm_gifting_banner",
@@ -262,7 +263,7 @@ function J(e) {
                                                             wishlistId: o,
                                                             analyticsLocations: u,
                                                         },
-                                                        children: (0, n.jsx)($, {
+                                                        children: (0, n.jsx)(J, {
                                                             items: P,
                                                             giftRecipient: i,
                                                             defaultWishlistId: o,
@@ -283,21 +284,21 @@ function J(e) {
               }),
           });
 }
-function K(e) {
+function Z(e) {
     let { giftRecipient: i, onWishlistItemClick: t } = e,
-        l = (0, y.Ay)(i?.id),
+        l = (0, b.Ay)(i?.id),
         {
             wishlistAndRecommendations: a,
             totalUnownedWishlistItemCount: r,
             skusToUserAndReason: c,
             status: o,
             defaultWishlistId: d,
-        } = (0, W.rg)({ userId: i.id, numItems: E.pl, source: E.B5.USER_PROFILE }),
+        } = (0, P.rg)({ userId: i.id, numItems: W.pl, source: W.B5.USER_PROFILE }),
         u = s.useMemo(
             () =>
-                I()(
+                j()(
                     a.map((e) => {
-                        let t = null != c[e.id] && c[e.id][i.id] === P.j.WISHLIST ? E.uS.WISHLIST : E.uS.POPULAR;
+                        let t = null != c[e.id] && c[e.id][i.id] === H.j.WISHLIST ? W.uS.WISHLIST : W.uS.POPULAR;
                         return null != e ? { sku: e, source: t } : null;
                     }),
                 ),
@@ -307,11 +308,11 @@ function K(e) {
             () =>
                 u.some((e) => {
                     let { sku: i } = e;
-                    return (0, v.bF)(i);
+                    return (0, w.bF)(i);
                 }),
             [u],
         );
-    return (0, n.jsx)(J, {
+    return (0, n.jsx)(K, {
         giftRecipient: i,
         onWishlistItemClick: t,
         displayProfile: l,
@@ -320,102 +321,102 @@ function K(e) {
         displayItems: u,
         defaultWishlistId: d,
         footerNotice: m
-            ? (0, n.jsx)(w.A, { location: "dm_gift_modal_wishlist_new_recommendations", className: z.jG })
+            ? (0, n.jsx)(y.A, { location: "dm_gift_modal_wishlist_new_recommendations", className: X.jG })
             : null,
     });
 }
-var Z = t(788868),
-    q = t(595151);
-let ee = function (e) {
+var q = t(788868),
+    ee = t(595151);
+let ei = function (e) {
     let { onSelectSku: i, priceOptions: t, giftRecipient: s, onWishlistItemClick: l } = e,
-        { claimableRewards: a } = (0, c.Pv)(),
+        { claimableRewards: a } = (0, o.Pv)(),
         r = null != a && a.length > 0;
     return (0, n.jsxs)("div", {
-        className: q.H,
+        className: ee.H,
         children: [
             (0, n.jsxs)("div", {
-                className: q.u,
+                className: ee.u,
                 children: [
-                    (0, n.jsx)(m.D3, {
-                        onClick: () => i(Z.pe.TIER_2),
+                    (0, n.jsx)(h.D3, {
+                        onClick: () => i(q.pe.TIER_2),
                         isGift: !0,
                         priceOptions: t,
                         showPromotionalGiftBanner: r,
                     }),
-                    (0, n.jsx)(m.Ls, {
-                        onClick: () => i(Z.pe.TIER_0),
+                    (0, n.jsx)(h.Ls, {
+                        onClick: () => i(q.pe.TIER_0),
                         isGift: !0,
                         priceOptions: t,
                         removeTopMargin: !0,
                     }),
                 ],
             }),
-            (0, n.jsx)(u.A, {}),
-            (0, n.jsx)(K, { giftRecipient: s, onWishlistItemClick: l }),
+            (0, n.jsx)(m.A, {}),
+            (0, n.jsx)(Z, { giftRecipient: s, onWishlistItemClick: l }),
         ],
     });
 };
-var ei = t(116550);
-function et(e) {
+var et = t(116550);
+function en(e) {
     let {
             giftRecipient: i,
             onClose: t,
-            transitionState: c,
-            analyticsLocations: u,
+            transitionState: o,
+            analyticsLocations: d,
             analyticsLocation: m,
             analyticsObject: h,
             giftMessage: g,
         } = e,
-        { priceOptions: p } = (0, o.P5)(),
+        p = (0, c.t4)((e) => e.checkoutPriceOptions),
         I = s.useCallback(
             (e) => {
-                (0, d.A)({
+                (0, u.A)({
                     isGift: !0,
                     giftRecipient: i,
                     subscriptionTier: e,
-                    giftingOrigin: Z.vQ.DM_CHANNEL,
-                    analyticsLocations: u ?? [],
+                    giftingOrigin: q.vQ.DM_CHANNEL,
+                    analyticsLocations: d ?? [],
                     analyticsLocation: m,
                     analyticsObject: h ?? {
-                        page: Q.liQ.DM_CHANNEL,
-                        section: Q.JJy.CHANNEL_TEXT_AREA,
-                        object: Q.ZSU.BUTTON_ICON,
-                        objectType: Q.AnalyticsObjectTypes.GIFT,
+                        page: V.liQ.DM_CHANNEL,
+                        section: V.JJy.CHANNEL_TEXT_AREA,
+                        object: V.ZSU.BUTTON_ICON,
+                        objectType: V.AnalyticsObjectTypes.GIFT,
                     },
                     giftMessage: g,
                 }),
                     t();
             },
-            [i, u, m, h, g, t],
+            [i, d, m, h, g, t],
         );
     return (0, n.jsxs)(l.EO, {
-        transitionState: c,
+        transitionState: o,
         size: l.rI.DYNAMIC,
-        className: ei.jT,
+        className: et.jT,
         parentComponent: "GiftOptionSelectModal",
         "data-migration-pending": !0,
         children: [
             (0, n.jsx)(l.rQ, {
-                className: ei.Hc,
+                className: et.Hc,
                 "data-migration-pending": !0,
                 children: (0, n.jsxs)(a.B, {
                     direction: "horizontal",
                     justify: "space-between",
                     children: [
-                        (0, n.jsx)(r.D, { variant: "heading-md/semibold", children: U.intl.string(U.t["wg/30i"]) }),
+                        (0, n.jsx)(r.D, { variant: "heading-md/semibold", children: Q.intl.string(Q.t["wg/30i"]) }),
                         (0, n.jsx)(l.s_, { onClick: t, "data-migration-pending": !0 }),
                     ],
                 }),
             }),
             (0, n.jsx)(l.$m, {
-                className: ei.S3,
+                className: et.S3,
                 "data-migration-pending": !0,
-                children: (0, n.jsx)(ee, { onSelectSku: I, giftRecipient: i, priceOptions: p, onWishlistItemClick: t }),
+                children: (0, n.jsx)(ei, { onSelectSku: I, giftRecipient: i, priceOptions: p, onWishlistItemClick: t }),
             }),
         ],
     });
 }
-function en(e) {
+function es(e) {
     let {
         giftRecipient: i,
         onClose: t,
@@ -423,25 +424,25 @@ function en(e) {
         analyticsLocations: l,
         analyticsLocation: a,
         analyticsObject: r,
-        giftMessage: d,
+        giftMessage: c,
     } = e;
-    return (0, n.jsx)(o.PaymentContextProvider, {
+    return (0, n.jsx)(d.PaymentContextProvider, {
         activeSubscription: null,
         stepConfigs: [],
-        skuIDs: Z.T7,
+        skuIDs: q.T7,
         isGift: !0,
-        children: (0, n.jsx)(c.dX, {
+        children: (0, n.jsx)(o.dX, {
             isGift: !0,
             giftRecipient: i,
-            giftingOrigin: Z.vQ.DM_CHANNEL,
-            children: (0, n.jsx)(et, {
+            giftingOrigin: q.vQ.DM_CHANNEL,
+            children: (0, n.jsx)(en, {
                 giftRecipient: i,
                 onClose: t,
                 transitionState: s,
                 analyticsLocations: l,
                 analyticsLocation: a,
                 analyticsObject: r,
-                giftMessage: d,
+                giftMessage: c,
             }),
         }),
     });
