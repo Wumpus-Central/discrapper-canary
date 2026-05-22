@@ -594,5 +594,7 @@ var i,
         (i.CROISSANT_PREMIUM_HERO_CARD = "xgpp hero card"),
         (i.CROISSANT_PREMIUM_PERK_CARD = "xgpp perk card"),
         (i.CROISSANT_REWARD_MODAL = "xgpp reward modal"),
+        (i.XBOX_PERKS_CONNECTION_FOOTER = "xbox perks connection footer"),
+        (i.XBOX_PERKS_MODAL = "xbox perks modal"),
         i);
 let s = r;
