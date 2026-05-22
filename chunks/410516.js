@@ -14,7 +14,19 @@ var i = n(17928),
     h = n(422936),
     p = n(788868);
 function E(e, t) {
-    return null != e && new Set(e.discount?.planIds.map((e) => p.hd[e].skuId)).has(t);
+    return (
+        null != e &&
+        (null == e.discount || null == e.discount.planIds
+            ? (_.A.captureMessage(
+                  "Unexpected discountOffer payload in discountOfferHasTier: discount offer has no discount or plan ids",
+                  {
+                      tags: { app_context: "billing", billing_context: "discount_offer" },
+                      extra: { userDiscountOfferId: e.id, discountId: e.discountId, discountOffer: e },
+                  },
+              ),
+              !1)
+            : new Set(e.discount.planIds.map((e) => p.hd[e].skuId)).has(t))
+    );
 }
 function m(e) {
     if (null == e) return;
