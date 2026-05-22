@@ -2,7 +2,7 @@ n.d(t, { A: () => r, J: () => a });
 var i = n(627968);
 n(64700);
 var l = n(21878),
-    s = n(149603);
+    s = n(16601);
 function r(e) {
     let {
         channelMessageProps: { message: t, channel: n, compact: r = !1 },

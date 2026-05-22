@@ -1,0 +1,15 @@
+e.exports = {
+    Zt: "previewWindow__776c3",
+    MM: "previewAvatar__776c3",
+    QS: "previewMessage__776c3",
+    gp: "previewContent__776c3",
+    yl: "previewHeader__776c3",
+    eU: "previewContentMask__776c3",
+    z0: "previewRealMessages__776c3",
+    Rq: "previewSkeletons__776c3",
+    uA: "previewSkelRow__776c3",
+    h: "previewSkelAvatar__776c3",
+    zw: "previewSkelName__776c3",
+    P4: "previewSkelText__776c3",
+    jE: "previewSkelLines__776c3",
+};

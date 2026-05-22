@@ -33,7 +33,7 @@ var i = n(835245),
     E = n(652215),
     m = n(375708);
 function g(e) {
-    let t = (0, h.t)({ quest: e }) || (0, h.fE)({ quest: e }) || (0, h.I6)(e),
+    let t = (0, h.t)({ quest: e }) || (0, h.fE)({ quest: e }),
         n = (0, h.uD)(e),
         i = [];
     return t && i.push(p.fO.DESKTOP), n && i.push(p.fO.CONSOLE), i;

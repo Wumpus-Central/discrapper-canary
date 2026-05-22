@@ -471,65 +471,55 @@ function U(e) {
             popoutTargetElementRef: o,
             onGameSheetOpened: u,
             onGameSheetClosed: c,
-            hasAlreadyLinked: d,
-            onClickGameTitle: f,
         } = e,
-        h = t.config.rewardsConfig.rewardsExpireAt,
-        p = (0, N.S5)(h),
-        E = (0, N.fc)(t),
-        m = (0, N.I3)(t),
-        g = (0, r.bG)([l.default], () => l.default.getCurrentUser()),
-        C = t.userStatus?.completedAt != null,
-        v = t.userStatus?.enrolledAt != null,
-        R = E.percentComplete > 0,
-        b = (0, N.Vn)(t),
-        D = P({
+        d = t.config.rewardsConfig.rewardsExpireAt,
+        f = (0, N.S5)(d),
+        h = (0, N.fc)(t),
+        p = (0, N.I3)(t),
+        E = (0, r.bG)([l.default], () => l.default.getCurrentUser()),
+        m = t.userStatus?.completedAt != null,
+        g = t.userStatus?.enrolledAt != null,
+        C = h.percentComplete > 0,
+        v = (0, N.Vn)(t),
+        R = P({
             quest: t,
             location: y.rE.QUESTS_BAR,
             questContent: _.uF.QUEST_BAR_V2,
-            taskDetails: E,
+            taskDetails: h,
             sourceQuestContent: i,
             popoutTargetElementRef: o,
             onGameSheetOpened: u,
             onGameSheetClosed: c,
             gameProfileSource: s.Ob.QuestBar,
         }),
-        L = null != m ? m.percentComplete : E.percentComplete;
-    if (C) return O.intl.formatToPlainString(O.t.APddvF, { expirationDate: p });
-    if ((0, T.I6)(t) && !1 === d) return O.intl.string(O.t.mAdqf7);
+        b = null != p ? p.percentComplete : h.percentComplete;
+    if (m) return O.intl.formatToPlainString(O.t.APddvF, { expirationDate: f });
     if (n) {
-        if ((0, T.I6)(t) && !0 === d && null != f)
-            return O.intl.format(O.t.X8hBDz, { gameTitle: t.config.messages.gameTitle, onClickGameTitle: f });
-        if (a !== _.X0.SELECT && (0, S.ui)(t) && v && !R) {
-            let e = (0, I.mH)(t.config, g);
-            return O.intl.format(O.t["1votF6"], { rewardNameWithArticle: e, targetMinutes: E.targetMinutes });
+        if (a !== _.X0.SELECT && (0, S.ui)(t) && g && !C) {
+            let e = (0, I.mH)(t.config, E);
+            return O.intl.format(O.t["1votF6"], { rewardNameWithArticle: e, targetMinutes: h.targetMinutes });
         }
-        return D;
+        return R;
     }
-    return (0, T.vv)(t)
-        ? O.intl.string(O.t["o+e9yh"])
-        : L > 0
-          ? (0, T.I6)(t) && !0 === d
-              ? O.intl.string(O.t.JkyCIO)
-              : b
-                ? (0, A.YT)({ quest: t, taskDetails: E, thirdPartyTaskDetails: m ?? void 0 })
-                : O.intl.string(O.t.mOrpXG)
-          : O.intl.string(O.t.S6UUc5);
+    if ((0, T.vv)(t)) return O.intl.string(O.t["o+e9yh"]);
+    if (b > 0)
+        if (!v) return O.intl.string(O.t.mOrpXG);
+        else return (0, A.YT)({ quest: t, taskDetails: h, thirdPartyTaskDetails: p ?? void 0 });
+    return O.intl.string(O.t.S6UUc5);
 }
-function k(e, t) {
-    let n = (0, r.bG)([o.default], () => o.default.locale),
-        i = (0, N.fc)(e),
-        [s] = (0, N.Qo)(e, i),
-        a = (0, N.I3)(e),
-        l = e.userStatus?.completedAt != null,
-        u = null != a ? a.percentComplete : i.percentComplete;
-    if (l) return O.intl.string(O.t["ij5E/5"]);
-    if ((0, T.I6)(e) && !1 === t) return O.intl.string(O.t.s9r2a1);
-    if (e.userStatus?.enrolledAt != null && u > 0) {
-        let e = (0, c.l9)(n, u, { roundingMode: "floor" });
+function k(e) {
+    let t = (0, r.bG)([o.default], () => o.default.locale),
+        n = (0, N.fc)(e),
+        [i] = (0, N.Qo)(e, n),
+        s = (0, N.I3)(e),
+        a = e.userStatus?.completedAt != null,
+        l = null != s ? s.percentComplete : n.percentComplete;
+    if (a) return O.intl.string(O.t["ij5E/5"]);
+    if (e.userStatus?.enrolledAt != null && l > 0) {
+        let e = (0, c.l9)(t, l, { roundingMode: "floor" });
         return O.intl.formatToPlainString(O.t.lVZaXD, { percent: e });
     }
-    return s === _.X0.SELECT
+    return i === _.X0.SELECT
         ? O.intl.string(O.t.EMrUHQ)
         : (0, T.g5)(e)
           ? O.intl.string(O.t.mOrpXG)
