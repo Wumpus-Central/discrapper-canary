@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => v, Ke: () => x, Ro: () => I, X1: () => g });
+n.d(t, { Ay: () => v, Ke: () => N, Ro: () => I, X1: () => g });
 var l = n(627968);
 n(64700);
 var a = n(284009),
@@ -13,14 +13,14 @@ var a = n(284009),
     m = n(364995),
     h = n(426398),
     C = n(558620),
-    A = n(94420),
+    A = n(671744),
     y = n(834252),
     E = n(428262),
     P = n(615396),
     S = n(652215),
-    _ = n(818348),
-    T = n(375708),
-    f = n(327105);
+    f = n(818348),
+    _ = n(375708),
+    T = n(327105);
 function I(e) {
     let {
         purchaseType: t,
@@ -34,28 +34,28 @@ function I(e) {
         hasPaymentSources: c,
         willRelocateStoreCountry: d,
     } = e;
-    if (null === u && c) return T.intl.string(T.t.CpOiEO);
-    if (d) return T.intl.string(f.default["7r4HPu"]);
-    if (t === _.VV.ONE_TIME) return r ? T.intl.string(T.t.ouo4FK) : T.intl.string(T.t.ExD0Ng);
+    if (null === u && c) return _.intl.string(_.t.CpOiEO);
+    if (d) return _.intl.string(T.default["7r4HPu"]);
+    if (t === f.VV.ONE_TIME) return r ? _.intl.string(_.t.ouo4FK) : _.intl.string(_.t.ExD0Ng);
     if ((i()(null != n, "Subscription plan must be selected to render PaymentModalReviewButton"), a === S.EZt.BOOST))
-        return T.intl.string(T.t.eUEeCt);
-    if (r) return T.intl.string(T.t.ouo4FK);
+        return _.intl.string(_.t.eUEeCt);
+    if (r) return _.intl.string(_.t.ouo4FK);
     if ((0, E.ys)(n.id))
         return o
-            ? T.intl.string(T.t.cRCCJ3)
+            ? _.intl.string(_.t.cRCCJ3)
             : null != l
               ? l.isPausedAllowsResumeButNotUpdates
-                  ? T.intl.string(T.t.zpi5pg)
+                  ? _.intl.string(_.t.zpi5pg)
                   : (0, P.Ge)(l, n.id, s)
-                    ? T.intl.string(T.t.IJI7yk)
-                    : T.intl.string(T.t.VPuTc5)
+                    ? _.intl.string(_.t.IJI7yk)
+                    : _.intl.string(_.t.VPuTc5)
               : (0, E.ff)(null, n);
-    return T.intl.string(T.t.YScQSF);
+    return _.intl.string(_.t.YScQSF);
 }
-function N(e, t) {
+function x(e, t) {
     null != e.current && (e.current.scrollIntoView({ behavior: "smooth" }), t());
 }
-let x = (e) => {
+let N = (e) => {
         let { premiumSubscription: t, isGift: n, planGroup: l, isPrepaid: a } = e,
             { checkoutPaymentSources: i } = (0, m.t)(),
             { hasAcceptedTerms: r, paymentSourceId: s } = (0, A.t4)((e) => ({
@@ -65,11 +65,11 @@ let x = (e) => {
             { hasPaymentSources: o } = (0, h.jm)(),
             { application: u, purchaseType: d, activeSubscription: E, devShelfFetchState: P } = (0, y.P5)(),
             S = (0, C.A)(),
-            _ =
+            f =
                 (0, p.vg)("PaymentModalReviewButton") &&
                 null != s &&
                 i.some((e) => e.id === s && null != e.relocationCountry),
-            T = I({
+            _ = I({
                 purchaseType: d,
                 plan: S,
                 premiumSubscription: t,
@@ -78,12 +78,12 @@ let x = (e) => {
                 isPrepaidPaymentSource: a,
                 paymentSourceId: s,
                 hasPaymentSources: o,
-                willRelocateStoreCountry: _,
+                willRelocateStoreCountry: f,
             }),
-            { analyticsLocations: f } = (0, c.Ay)();
+            { analyticsLocations: T } = (0, c.Ay)();
         return {
-            buttonLabel: T,
-            analyticsLocations: f,
+            buttonLabel: _,
+            analyticsLocations: T,
             hasAcceptedTerms: r,
             application: u,
             paymentSourceId: s,
@@ -105,20 +105,20 @@ let x = (e) => {
                 flashLegalTerms: h,
                 isSubmitting: C,
             } = e,
-            { buttonLabel: A, hasAcceptedTerms: y, application: E, devShelfFetchState: P, hasPaymentSources: _ } = t;
+            { buttonLabel: A, hasAcceptedTerms: y, application: E, devShelfFetchState: P, hasPaymentSources: f } = t;
         if (null != n || null != a || i) return { variant: "active", text: A, disabled: !0 };
-        if (r && _)
+        if (r && f)
             return {
                 text: A,
-                tooltipText: T.intl.string(T.t.L7jbQV),
+                tooltipText: _.intl.string(_.t.L7jbQV),
                 variant: "primary",
                 type: "submit",
                 dataTestId: "submitButton",
                 onClick: o,
             };
-        if (r && !_)
+        if (r && !f)
             return {
-                tooltipText: T.intl.string(T.t.L7jbQV),
+                tooltipText: _.intl.string(_.t.L7jbQV),
                 variant: "active",
                 text: A,
                 type: "submit",
@@ -127,7 +127,7 @@ let x = (e) => {
             };
         if ((0, d.n)(E, S.gfo.EMBEDDED) && P === u.$.LOADING)
             return {
-                tooltipText: T.intl.string(T.t.cjA5tj),
+                tooltipText: _.intl.string(_.t.cjA5tj),
                 variant: "active",
                 text: A,
                 type: "submit",
@@ -138,7 +138,7 @@ let x = (e) => {
             return {
                 variant: "expressive",
                 text: A,
-                onClick: y ? p : () => N(m, h),
+                onClick: y ? p : () => x(m, h),
                 loading: C,
                 iconPosition: "start",
                 icon: () => (0, l.jsx)(s.t, { color: "currentColor" }),
@@ -146,11 +146,11 @@ let x = (e) => {
             };
         else if (!y)
             return {
-                tooltipText: T.intl.string(T.t.XdvBLS),
+                tooltipText: _.intl.string(_.t.XdvBLS),
                 variant: "active",
                 text: A,
                 type: "submit",
-                onClick: () => N(m, h),
+                onClick: () => x(m, h),
                 dataTestId: "submitButton",
             };
         else return { variant: "active", text: A, dataTestId: "purchase", onClick: p, loading: C };
@@ -166,7 +166,7 @@ function v(e) {
             activeSubscription: m,
             devShelfFetchState: h,
             hasPaymentSources: C,
-        } = x({ premiumSubscription: t, isGift: n, planGroup: a, isPrepaid: i }),
+        } = N({ premiumSubscription: t, isGift: n, planGroup: a, isPrepaid: i }),
         {
             tooltipText: A,
             dataTestId: y,

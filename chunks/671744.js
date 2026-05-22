@@ -1,0 +1,110 @@
+"use strict";
+n.d(t, { y$: () => f, t4: () => _, Ni: () => c });
+var i = n(942381),
+    r = n(265690),
+    s = n(315069),
+    a = n(570221);
+class o extends s.A {
+    paymentGateway;
+    paymentSourceId;
+    invoicePreview;
+    static createFromOrder(e) {
+        let t = e.billing_facet;
+        return null == t
+            ? null
+            : new o({
+                  paymentGateway: t.payment_gateway,
+                  paymentSourceId: t.payment_source_id ?? null,
+                  invoicePreview: a.Y.createInvoiceFromOrder(e),
+              });
+    }
+    constructor(e) {
+        super(),
+            (this.paymentGateway = e.paymentGateway),
+            (this.paymentSourceId = e.paymentSourceId ?? null),
+            (this.invoicePreview = e.invoicePreview ?? null);
+    }
+}
+class l extends s.A {
+    id;
+    status;
+    revision;
+    orderLineItems;
+    billingFacetRecord;
+    giftingFacet;
+    createdAt;
+    static createFromServer(e) {
+        return new l({
+            id: e.id,
+            status: e.status,
+            revision: e.revision,
+            orderLineItems: e.order_line_items,
+            billingFacetRecord: o.createFromOrder(e),
+            giftingFacet: e.gifting_facet ?? null,
+            createdAt: e.created_at,
+        });
+    }
+    constructor(e) {
+        super(),
+            (this.id = e.id),
+            (this.status = e.status),
+            (this.revision = e.revision),
+            (this.orderLineItems = e.orderLineItems ?? []),
+            (this.billingFacetRecord = e.billingFacetRecord ?? null),
+            (this.giftingFacet = e.giftingFacet ?? null),
+            (this.createdAt = e.createdAt);
+    }
+    getInvoicePreview() {
+        return null == this.billingFacetRecord ? null : this.billingFacetRecord.invoicePreview;
+    }
+}
+var u = n(566980);
+let [c, d] = (0, n(786300).A)();
+function _(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
+    return d()(e, t);
+}
+function f(e) {
+    let { checkoutInitParameters: t, contextMetadata: n, order: s, initialPaymentSourceId: a } = e;
+    return (0, r.h)(
+        (e) => ({
+            checkoutInitParameters: t,
+            contextMetadata: n,
+            order: s,
+            orderRecord: null != s ? l.createFromServer(s) : null,
+            setOrder: (t) => e({ order: t, orderRecord: l.createFromServer(t) }),
+            selectedSkuId: void 0,
+            selectedPlanId: void 0,
+            setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0 }),
+            setSelectedPlanId: (t) => e({ selectedPlanId: t ?? void 0 }),
+            checkoutInvoicePreview: null,
+            setCheckoutInvoicePreview: (t, n) =>
+                e({ checkoutInvoicePreview: t ?? null, checkoutInvoiceError: n ?? null }),
+            discountInvoicePreview: null,
+            setDiscountInvoicePreview: (t) => {
+                e({ discountInvoicePreview: t ?? null });
+            },
+            renewalInvoicePreview: null,
+            setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),
+            checkoutInvoiceError: null,
+            renewalInvoiceError: null,
+            entitlementsGranted: [],
+            setEntitlementsGranted: (t) => e({ entitlementsGranted: t }),
+            hasAcceptedTerms: !1,
+            setHasAcceptedTerms: (t) => e({ hasAcceptedTerms: t }),
+            paymentSourceId: a,
+            setPaymentSourceId: (t) => e({ paymentSourceId: t ?? null }),
+            purchaseState: u.h.WAITING,
+            setPurchaseState: (t) => e({ purchaseState: t }),
+            appliedUserDiscounts: [],
+            setAppliedUserDiscounts: (t) => e({ appliedUserDiscounts: t }),
+            purchaseError: null,
+            setPurchaseError: (t) => e({ purchaseError: t ?? null }),
+            updatedSubscription: null,
+            setUpdatedSubscription: (t) => e({ updatedSubscription: t }),
+            readySlideId: null,
+            setReadySlideId: (t) => e({ readySlideId: t ?? null }),
+        }),
+        i.x,
+    );
+}

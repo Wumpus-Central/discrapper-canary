@@ -2,7 +2,7 @@ n.d(t, { Hu: () => o, S3: () => s, gU: () => a });
 var l = n(702841),
     r = n(834252),
     u = n(67480),
-    i = n(94420);
+    i = n(671744);
 function a() {
     let { defaultFetchableSkuIds: e } = (0, r.P5)();
     return (0, l.cf)([u.A], () => {

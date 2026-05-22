@@ -1,14 +1,50 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a, Y: () => s });
 var i = n(315069),
     r = n(874638);
 class s extends i.A {
-    id;
-    invoiceItems;
     total;
     subtotal;
     currency;
     tax;
+    invoiceItems;
+    static createInvoiceFromOrder(e) {
+        let t = e.billing_facet,
+            n = null != t ? t.invoice_preview : null;
+        if (null == n) return null;
+        let i = n.line_items
+            .map((t) => {
+                let i = e.order_line_items.find((e) => e.id === t.ref_order_line_item_id);
+                return null == i
+                    ? null
+                    : {
+                          skuId: i.sku_id,
+                          unitPrice: { amount: t.unit_price, currency: n.currency },
+                          quantity: t.quantity,
+                      };
+            })
+            .filter((e) => null != e);
+        return new s({ total: n.total, subtotal: n.subtotal, tax: n.tax, currency: n.currency, invoiceItems: i });
+    }
+    constructor(e) {
+        super(),
+            (this.total = e.total),
+            (this.subtotal = e.subtotal),
+            (this.tax = e.tax),
+            (this.currency = e.currency),
+            (this.invoiceItems = e.invoiceItems ?? []);
+    }
+    getInvoicePreviewLineItemForSku(e) {
+        return this.invoiceItems.find((t) => t.skuId === e) ?? null;
+    }
+    getInvoicePreviewLineItemUnitPriceForSku(e) {
+        let t = this.getInvoicePreviewLineItemForSku(e);
+        return null == t || null == t.unitPrice ? null : t.unitPrice.amount;
+    }
+}
+class a extends s {
+    id;
+    invoiceItems;
     taxInclusive;
     subscriptionPeriodStart;
     subscriptionPeriodEnd;
@@ -16,7 +52,7 @@ class s extends i.A {
     orbsReward;
     checkoutContext;
     static createInvoiceFromServer(e) {
-        return new s({
+        return new a({
             id: e.id,
             invoiceItems: e.invoice_items?.map(r.c),
             total: e.total,
@@ -32,7 +68,7 @@ class s extends i.A {
         });
     }
     static createFromOTPPreview(e) {
-        return new s({
+        return new a({
             id: "",
             invoiceItems: e.invoice_items?.map(r.c),
             total: e.amount,
@@ -47,13 +83,9 @@ class s extends i.A {
         });
     }
     constructor(e) {
-        super(),
+        super(e),
             (this.id = e.id),
             (this.invoiceItems = e.invoiceItems ?? []),
-            (this.total = e.total),
-            (this.subtotal = e.subtotal),
-            (this.currency = e.currency),
-            (this.tax = e.tax),
             (this.taxInclusive = e.taxInclusive),
             (this.subscriptionPeriodStart = e.subscriptionPeriodStart),
             (this.subscriptionPeriodEnd = e.subscriptionPeriodEnd),

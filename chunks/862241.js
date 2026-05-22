@@ -17,15 +17,15 @@ var l = n(627968),
     E = n(921925),
     P = n(506120),
     S = n(800471),
-    _ = n(216641),
-    T = n(380619),
-    f = n(45938),
+    f = n(216641),
+    _ = n(380619),
+    T = n(45938),
     I = n(742810),
     x = n(364995),
     N = n(426398),
     g = n(666646),
     v = n(558620),
-    M = n(94420),
+    M = n(671744),
     b = n(818348);
 function j(e) {
     let {
@@ -82,7 +82,7 @@ function j(e) {
                 { checkoutPaymentSources: r, hasInvoiceOrderContextLoaded: s } = (0, x.t)(),
                 o = (0, g.sw)(),
                 { isGift: p } = (0, c.Pv)(),
-                m = (0, _.W)(t, e),
+                m = (0, f.W)(t, e),
                 h = a.useMemo(() => {
                     if (null == e) return !1;
                     if (!s) return !0;
@@ -117,24 +117,24 @@ function j(e) {
         ),
         eC = a.useRef(null),
         eA = (0, g.mx)(),
-        ey = ea && (0, f.Ik)(er),
+        ey = ea && (0, T.Ik)(er),
         eE = null == U && null == k && $ === b.VV.SUBSCRIPTION,
         eP = (0, S.vT)({ isTrial: ee, isGift: ea, selectedSkuId: F, startedPaymentFlowWithPaymentSources: J.current }),
         eS = ea && $ === b.VV.ONE_TIME,
-        e_ = eS || (eP ? eE && z : z),
-        eT = (0, T.px)(en, ea, es),
-        ef = a.useCallback(
+        ef = eS || (eP ? eE && z : z),
+        e_ = (0, _.px)(en, ea, es),
+        eT = a.useCallback(
             () =>
                 (q(void 0), eP)
                     ? void i(p.pn.SKU_SELECT)
                     : Q
                       ? void i(p.pn.ADD_PAYMENT_STEPS)
-                      : eT
+                      : e_
                         ? void i(p.pn.SELECT_FREE_SKU)
                         : eS
                           ? i(p.pn.GIFT_CUSTOMIZATION)
                           : i(p.pn.PLAN_SELECT),
-            [q, i, eP, eS, eT, Q],
+            [q, i, eP, eS, e_, Q],
         ),
         eI = ed;
     X && (eI = !0);
@@ -159,7 +159,7 @@ function j(e) {
         eM = (0, l.jsx)(h.A, {
             premiumSubscription: Z ?? null,
             invoiceError: eA,
-            onBack: ef,
+            onBack: eT,
             onNext: eh,
             legalTermsNodeRef: eC,
             flashLegalTerms: () => ec(!0),
@@ -168,7 +168,7 @@ function j(e) {
             openInvoiceId: L,
             flowStartTime: V.startTime,
             isTrial: ee,
-            backButtonEligible: e_,
+            backButtonEligible: ef,
             metadata: em,
             disablePurchase: eI,
             onPaymentSourceAdd: ex,
@@ -227,15 +227,15 @@ let k = (e) => {
         {
             selectedPlanId: P,
             selectedSkuId: S,
-            purchaseState: _,
-            setHasAcceptedTerms: T,
+            purchaseState: f,
+            setHasAcceptedTerms: _,
         } = (0, M.t4)((e) => ({
             selectedPlanId: e.selectedPlanId,
             selectedSkuId: e.selectedSkuId,
             purchaseState: e.purchaseState,
             setHasAcceptedTerms: e.setHasAcceptedTerms,
         })),
-        { isGift: f } = (0, c.Pv)(),
+        { isGift: T } = (0, c.Pv)(),
         { paymentSources: I } = (0, N.jm)(),
         {
             hasFetchedSubscriptionPlans: x,
@@ -258,13 +258,13 @@ let k = (e) => {
             paymentSources: I,
             handlePaymentSourceAdd: p,
             planGroup: s,
-            setHasAcceptedTerms: T,
+            setHasAcceptedTerms: _,
             legalTermsNodeRef: u,
             hasLegalTermsFlash: o,
             handleClose: i,
         },
         W = E.id;
-    if (null == b || f) {
+    if (null == b || T) {
         let e = {
             ...B,
             selectedPlanId: W,
@@ -282,7 +282,7 @@ let k = (e) => {
             ...B,
             currencies: j,
             onCurrencyChange: Y,
-            purchaseState: _,
+            purchaseState: f,
             premiumSubscription: b,
             planId: W,
             hasOpenInvoice: null != n,

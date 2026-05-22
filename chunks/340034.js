@@ -8,7 +8,7 @@ var l = n(627968),
     u = n(364995),
     c = n(944355),
     d = n(848584),
-    p = n(94420),
+    p = n(671744),
     m = n(881489),
     h = n(531506),
     C = n(361597),
@@ -17,9 +17,9 @@ var l = n(627968),
     E = n(299301),
     P = n(834252),
     S = n(908419),
-    _ = n(888751),
-    T = n(652215),
-    f = n(788868),
+    f = n(888751),
+    _ = n(652215),
+    T = n(788868),
     I = n(375708),
     x = n(327105),
     N = n(299279);
@@ -35,8 +35,8 @@ let g = (e) => {
             u = [];
         u =
             t.type === E.N$.PREMIUM_GIFT
-                ? (0, _.fk)(s, { isCustomGift: r, isPrepaidPaymentSource: i, subscriptionPlan: n })
-                : (0, _.IY)(s, {
+                ? (0, f.fk)(s, { isCustomGift: r, isPrepaidPaymentSource: i, subscriptionPlan: n })
+                : (0, f.IY)(s, {
                       isPrepaidPaymentSource: i,
                       invoiceSummaryType: t.type,
                       subscriptionPlan: n,
@@ -70,7 +70,7 @@ let g = (e) => {
                 shouldShowHRKEuroWarning: E,
                 shouldShowTotalInSubscriptionFlow: P,
                 shouldShowUpdatedPaymentModal: S,
-                userTrialOffer: T,
+                userTrialOffer: _,
                 trialPeriodCopy: I,
                 isEligibleForTrial: x,
                 isEligibleForBOGOPromotion: g,
@@ -85,8 +85,8 @@ let g = (e) => {
                 };
             }, [v, g, M]),
             R = a.useMemo(
-                () => (d && x ? (0, C.Ct)(T, { subscriptionPeriodEnd: s, trialPeriodCopy: I }) : p),
-                [d, x, T, s, I, p],
+                () => (d && x ? (0, C.Ct)(_, { subscriptionPeriodEnd: s, trialPeriodCopy: I }) : p),
+                [d, x, _, s, I, p],
             ),
             {
                 selectPlan: L,
@@ -98,7 +98,7 @@ let g = (e) => {
                 discountOffer: Y,
                 discountAmountOff: G,
             } = (0, C.Rx)(m),
-            F = a.useMemo(() => (r.length > 0 ? f.hd[r[0]].premiumType : void 0), [r]),
+            F = a.useMemo(() => (r.length > 0 ? T.hd[r[0]].premiumType : void 0), [r]),
             B = a.useCallback(
                 (e) => {
                     L(e.value);
@@ -106,10 +106,10 @@ let g = (e) => {
                 [L],
             ),
             W = a.useMemo(() => {
-                let e = null != Y && Y.discount.userUsageLimitInterval === f.Ff.MONTH;
+                let e = null != Y && Y.discount.userUsageLimitInterval === T.Ff.MONTH;
                 return r.map((t) => {
                     let { isCurrentPlan: n, disabled: l } = (0, C.cD)(O, t),
-                        a = (0, _.Rs)(O, {
+                        a = (0, f.Rs)(O, {
                             planId: t,
                             isEligibleForDiscount: k,
                             isCurrentPlan: n,
@@ -200,7 +200,7 @@ function b(e) {
             isPrepaidPaymentSource: m = !1,
             overrideRenewalDate: h,
             fractionalPremiumInfo: C,
-            hideLegalContent: f,
+            hideLegalContent: T,
             isInvoiceBilledImmediately: I = !0,
         } = e,
         { immediateDelivery: x } = (0, S.U)(),
@@ -212,13 +212,13 @@ function b(e) {
     let { invoicePreview: b } = d,
         j = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? b,
         R = j.invoiceItems.find((e) => e.subscriptionPlanId === a.id),
-        L = null != R ? (0, _.Re)(R, N).amount : j.subtotal;
-    if (f) return null;
+        L = null != R ? (0, f.Re)(R, N).amount : j.subtotal;
+    if (T) return null;
     let O = M && null != g && v?.some((e) => e.id === g && null != e.relocationCountry),
         D = {
             purchaseButtonText: (0, y.Ro)({
-                productLine: T.EZt.PREMIUM,
-                purchaseType: T.VVm.SUBSCRIPTION,
+                productLine: _.EZt.PREMIUM,
+                purchaseType: _.VVm.SUBSCRIPTION,
                 plan: a,
                 premiumSubscription: o,
                 isGift: i,

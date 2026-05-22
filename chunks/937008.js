@@ -1,121 +1,121 @@
-n.d(t, { Mq: () => v, Pv: () => h, dX: () => A });
-var i = n(627968),
-    r = n(64700),
-    a = n(94420),
-    l = n(242874),
-    s = n(810498),
-    d = n(287809),
-    o = n(954571),
-    u = n(786300),
-    c = n(45938),
-    _ = n(652215),
-    f = n(788868),
-    m = n(985018);
-let g = f.o2.STANDARD_BOX,
-    p,
-    [b, h, x] = (0, u.A)();
-function A(e) {
+s.d(t, { Mq: () => k, Pv: () => p, dX: () => _ });
+var i = s(627968),
+    a = s(64700),
+    r = s(671744),
+    d = s(242874),
+    l = s(380619),
+    n = s(287809),
+    u = s(174459),
+    c = s(786300),
+    o = s(45938),
+    S = s(652215),
+    g = s(788868),
+    f = s(375708);
+let v = g.o2.STANDARD_BOX,
+    E,
+    [h, p, R] = (0, c.A)();
+function _(e) {
     let {
             isGift: t = !1,
-            giftRecipient: n,
-            giftMessage: u,
-            giftStyle: f,
-            giftingOrigin: h,
-            children: x,
-            additionalUserIds: A,
+            giftRecipient: s,
+            giftMessage: c,
+            giftStyle: g,
+            giftingOrigin: p,
+            children: R,
+            additionalUserIds: _,
         } = e,
-        C = (0, a.t4)((e) => e.selectedSkuId),
-        [v, S] = r.useState(n),
-        [I, E] = r.useState(),
-        [N, y] = r.useState(!1),
-        M = (0, c.Ik)(v),
-        j = p;
-    M && (j = null != f ? f : g);
-    let [T, P] = r.useState(j),
-        R = (0, s.JW)(),
-        L = null != R && R.length > 0,
-        [k, U] = r.useState(),
-        [O, D] = r.useState(
-            t && (0, c.lo)(v) === c.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == u ? m.intl.string(m.t.ZkOo1U) : u,
+        G = (0, r.t4)((e) => e.selectedSkuId),
+        [k, x] = a.useState(s),
+        [M, O] = a.useState(),
+        [A, C] = a.useState(!1),
+        w = (0, o.Ik)(k),
+        D = E;
+    w && (D = null != g ? g : v);
+    let [I, N] = a.useState(D),
+        P = (0, l.JW)(),
+        b = null != P && P.length > 0,
+        [T, U] = a.useState(),
+        [j, m] = a.useState(
+            t && (0, o.lo)(k) === o.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == c ? f.intl.string(f.t.ZkOo1U) : c,
         ),
-        [G, w] = r.useState(void 0),
-        [B, F] = r.useState(void 0),
-        W = (0, c.Vt)(C, t),
-        [z, H] = r.useState(!1),
-        [K, $] = r.useState(!1),
-        [Z, q] = r.useState(),
-        X = r.useCallback(
+        [B, y] = a.useState(void 0),
+        [J, V] = a.useState(void 0),
+        W = (0, o.Vt)(G, t),
+        [X, q] = a.useState(!1),
+        [F, H] = a.useState(!1),
+        [K, L] = a.useState(),
+        Z = a.useCallback(
             (e) => {
                 let { onSubscriptionConfirmation: t } = e;
                 return (
-                    $(!0),
-                    (0, l.UN)(v, W)
+                    H(!0),
+                    (0, d.UN)(k, W)
                         .then(() => {
-                            $(!1), t?.(), H(!0);
+                            H(!1), t?.(), q(!0);
                         })
                         .catch((e) => {
-                            $(!1), q(e), H(!0);
+                            H(!1), L(e), q(!0);
                         })
                 );
             },
-            [v, W, $, H, q],
+            [k, W, H, q, L],
         );
     return (
-        r.useEffect(() => {
-            if (L) {
-                let e = d.default.getCurrentUser();
-                o.default.track(_.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: e?.id, reward_sku_id: k });
+        a.useEffect(() => {
+            if (b) {
+                let e = n.default.getCurrentUser();
+                u.default.track(S.HAw.GIFT_PROMOTION_REWARD_SELECTED, { user_id: e?.id, reward_sku_id: T });
             }
-        }, [k, L]),
-        (0, i.jsx)(b.Provider, {
+        }, [T, b]),
+        (0, i.jsx)(h.Provider, {
             value: {
                 isGift: t,
                 giftCode: W,
-                giftMessage: u,
-                giftRecipient: v,
-                setGiftRecipient: S,
-                giftRecipientError: I,
-                setGiftRecipientError: E,
-                validatingGiftRecipient: N,
-                setValidatingGiftRecipient: y,
-                soundEffect: G,
-                setSoundEffect: w,
-                emojiConfetti: B,
-                setEmojiConfetti: F,
-                customGiftMessage: O,
-                setCustomGiftMessage: D,
-                selectedGiftStyle: T,
-                setSelectedGiftStyle: P,
-                sendGiftMessage: X,
-                hasSentMessage: z,
-                isSendingMessage: K,
-                giftMessageError: Z,
-                giftingOrigin: h,
-                claimableRewards: R,
-                selectedGiftingPromotionReward: k,
+                giftMessage: c,
+                giftRecipient: k,
+                setGiftRecipient: x,
+                giftRecipientError: M,
+                setGiftRecipientError: O,
+                validatingGiftRecipient: A,
+                setValidatingGiftRecipient: C,
+                soundEffect: B,
+                setSoundEffect: y,
+                emojiConfetti: J,
+                setEmojiConfetti: V,
+                customGiftMessage: j,
+                setCustomGiftMessage: m,
+                selectedGiftStyle: I,
+                setSelectedGiftStyle: N,
+                sendGiftMessage: Z,
+                hasSentMessage: X,
+                isSendingMessage: F,
+                giftMessageError: K,
+                giftingOrigin: p,
+                claimableRewards: P,
+                selectedGiftingPromotionReward: T,
                 setSelectedGiftingPromotionReward: U,
-                additionalUserIds: A,
+                additionalUserIds: _,
             },
-            children: x,
+            children: R,
         })
     );
 }
-let C = {
+let G = {
         isGift: !1,
-        setGiftRecipient: _.tEg,
-        setGiftRecipientError: _.tEg,
-        setValidatingGiftRecipient: _.tEg,
+        setGiftRecipient: S.tEg,
+        setGiftRecipientError: S.tEg,
+        setValidatingGiftRecipient: S.tEg,
         selectedGiftStyle: void 0,
-        setSelectedGiftStyle: _.tEg,
+        setSelectedGiftStyle: S.tEg,
         giftCode: null,
-        sendGiftMessage: _.tEg,
+        sendGiftMessage: S.tEg,
         hasSentMessage: !1,
         isSendingMessage: !1,
         giftMessageError: void 0,
         claimableRewards: void 0,
-        setSelectedGiftingPromotionReward: _.tEg,
+        setSelectedGiftingPromotionReward: S.tEg,
     },
-    v = (e) => {
+    k = (e) => {
         let { children: t } = e;
-        return (0, i.jsx)(b.Provider, { value: C, children: t });
+        return (0, i.jsx)(h.Provider, { value: G, children: t });
     };

@@ -17,9 +17,9 @@ var l = n(627968),
     E = n(580630),
     P = n(284009),
     S = n.n(P),
-    _ = n(997101),
-    T = n(318254),
-    f = n(821891),
+    f = n(997101),
+    _ = n(318254),
+    T = n(821891),
     I = n(953689),
     x = n(10716),
     N = n(46225),
@@ -27,7 +27,7 @@ var l = n(627968),
     v = n(364995),
     M = n(426398),
     b = n(427675),
-    j = n(94420),
+    j = n(671744),
     R = n(977445),
     L = n(778307),
     O = n(218075),
@@ -86,8 +86,8 @@ let J = (e) => e.name,
                 paymentSelectContent: u,
                 legalContent: P,
                 isGift: S,
-                giftRecipient: _,
-                upperInlineNoticeProps: f,
+                giftRecipient: f,
+                upperInlineNoticeProps: T,
                 footerInlineNoticeProps: I,
             } = e,
             { product: x, isSocialLayerGameItem: N } = (0, q.AO)({ sku: n }),
@@ -165,8 +165,8 @@ let J = (e) => e.name,
                                 target: null != o ? { type: "gift", user: o } : void 0,
                             }
                         );
-                    })({ sku: n, product: x, application: t, isSocialLayerGameItem: N, giftRecipient: _ }),
-                [n, x, t, N, _],
+                    })({ sku: n, product: x, application: t, isSocialLayerGameItem: N, giftRecipient: f }),
+                [n, x, t, N, f],
             ),
             [j, R] = a.useMemo(
                 () => [K.intl.string(z.default.Zxav97), null != i ? (0, E.$g)(i.total, i.currency) : void 0],
@@ -179,7 +179,7 @@ let J = (e) => e.name,
                     let l = e.orbsReward;
                     if (null != l && l > 0) {
                         let e = n ? K.t["ZV+aS9"] : K.t["0StwHe"];
-                        return { Icon: T.C, text: K.intl.format(e, { orbCount: l }) };
+                        return { Icon: _.C, text: K.intl.format(e, { orbCount: l }) };
                     }
                 })(i, { isGift: S });
                 return null != e ? (0, l.jsx)(o.J, { ...e }) : null;
@@ -202,7 +202,7 @@ let J = (e) => e.name,
                 paymentSelectContent: u,
                 legalContent: P,
                 promotionalNoticeContent: L,
-                upperInlineNoticeProps: f,
+                upperInlineNoticeProps: T,
                 footerInlineNoticeProps: I,
                 invoiceTotalDueLabel: j,
                 invoiceTotalDueValue: R,
@@ -247,15 +247,15 @@ function et(e) {
                 } = (0, Y.P5)(),
                 { checkoutPaymentSources: A, hasInvoiceOrderContextLoaded: y } = (0, v.t)(),
                 E = (0, b.gU)(),
-                { isGift: P, giftRecipient: T } = (0, k.Pv)(),
-                F = P && (0, U.Ik)(T),
+                { isGift: P, giftRecipient: _ } = (0, k.Pv)(),
+                F = P && (0, U.Ik)(_),
                 { fetched: B, hasAlreadyLinked: W } = (0, N.RD)(d);
             S()(null != i, "Expected selectedSkuId");
             let q = E[i],
                 z = q?.eligiblePaymentGateways;
             S()(null != q, "SKU must exist and be fetched."), S()(null != d, "Application must exist.");
             let $ = (0, R.u)(d.id),
-                J = _.M.EEA_COUNTRIES.has(w.A.ipCountryCodeWithFallback),
+                J = f.M.EEA_COUNTRIES.has(w.A.ipCountryCodeWithFallback),
                 X = s === G.h.PURCHASING || s === G.h.COMPLETED,
                 Q = A.find((e) => e.id === u) ?? null,
                 ee = null != Q ? Q.type : null,
@@ -288,7 +288,7 @@ function et(e) {
                                       finePrintClassname: Z.i,
                                       purchaseType: m,
                                       isGift: P,
-                                      finePrint: (0, l.jsx)(f.A, {
+                                      finePrint: (0, l.jsx)(T.A, {
                                           paymentSourceType: ee,
                                           isEmbeddedIAP: p,
                                           purchaseType: m,
@@ -305,7 +305,7 @@ function et(e) {
             return {
                 sku: q,
                 application: d,
-                giftRecipient: T,
+                giftRecipient: _,
                 isGift: P,
                 invoicePreview: o,
                 isEmbeddedIAP: p,
@@ -328,7 +328,7 @@ function et(e) {
             additionalPaymentSourceDropdownProps: E,
             disabled: y,
         }),
-        T = a.useMemo(() => {
+        _ = a.useMemo(() => {
             let e = [];
             return (
                 null != A.testModeWarning &&
@@ -360,7 +360,7 @@ function et(e) {
               invoicePreview: o,
               paymentSelectContent: P,
               legalContent: m,
-              upperInlineNoticeProps: T,
+              upperInlineNoticeProps: _,
               footerInlineNoticeProps: F,
           });
 }
