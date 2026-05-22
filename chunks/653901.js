@@ -2588,8 +2588,10 @@ function t2(e) {
             };
         })(l.id),
         et = (0, z.A)(l.id),
-        ei = C ? tz : eu.A,
-        er = C ? tV : eo.A;
+        ei = en.length > 0 || el.length > 0,
+        er = et.length > 0,
+        ea = C ? tz : eu.A,
+        es = C ? tV : eo.A;
     return (0, t.jsxs)("main", {
         className: a()(tZ.profile, null != G && tZ[G]),
         ref: T,
@@ -2598,7 +2600,7 @@ function t2(e) {
             (0, t.jsxs)("div", {
                 className: tZ.profileHeader,
                 children: [
-                    (0, t.jsx)(ei, {
+                    (0, t.jsx)(ea, {
                         user: l,
                         displayProfile: g,
                         guildId: r,
@@ -2607,7 +2609,7 @@ function t2(e) {
                         pendingBanner: j,
                     }),
                     (0, t.jsx)(ex.A, { userId: l.id, onClose: x, className: tZ.interactionToast }),
-                    (0, t.jsx)(er, {
+                    (0, t.jsx)(es, {
                         user: l,
                         displayProfile: g,
                         guildId: r,
@@ -2723,7 +2725,8 @@ function t2(e) {
                             headingVariant: "text-xs/medium",
                             headingColor: "currentColor",
                         }),
-                    (C || en.length > 0 || el.length > 0) &&
+                    !Z &&
+                        (C || ei) &&
                         (0, t.jsx)(nz.A, {
                             heading: eL.intl.string(eL.t["3fe7U5"]),
                             scrollTargetId: nH.bk.CONNECTIONS,
@@ -2735,7 +2738,8 @@ function t2(e) {
                                 className: tZ.profileAppConnections,
                             }),
                         }),
-                    et.length > 0 &&
+                    !Z &&
+                        er &&
                         (0, t.jsx)(nz.A, {
                             heading: eL.intl.string(eL.t.PHjkRE),
                             scrollTargetId: nH.bk.APPS,
