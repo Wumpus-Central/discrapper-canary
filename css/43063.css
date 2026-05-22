@@ -1,0 +1,52 @@
+.container__01290 {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    inset-inline-start: 32px;
+    padding: var(--space-8);
+    position: absolute;
+    top: 64px
+}
+
+.participantItem__01290 {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    opacity: .4;
+    position: relative;
+    transition: opacity .1s ease-in-out
+}
+
+.speaking__01290 {
+    opacity: .9
+}
+
+.speaking__01290 .avatar__01290 {
+    outline: 1px solid var(--green-300);
+    outline-offset: 2px
+}
+
+.avatar__01290 {
+    flex-shrink: 0
+}
+
+.username__01290 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 1;
+    gap: 8px;
+    height: 24px;
+    justify-content: center;
+    margin-inline-start: var(--space-4);
+    max-width: 100%;
+    opacity: .8;
+    overflow: hidden;
+    padding: var(--space-4) var(--space-8);
+    text-overflow: ellipsis;
+    white-space: nowrap
+}

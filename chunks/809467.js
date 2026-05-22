@@ -9,10 +9,12 @@ e.exports = {
     D0: "lockDivider_b08638",
     ZN: "lockDividerCircle_b08638",
     XG: "scroller_b08638",
+    uH: "withUpsellSafePadding_b08638",
     Os: "group_b08638",
     AM: "groupLabel_b08638",
     i_: "groupLabelHeading_b08638",
     l3: "groupLabelIcon_b08638",
     X6: "perServerNotice_b08638",
     TD: "perServerNoticeDismissButton_b08638",
+    HT: "floatingUpsellContainer_b08638",
 };
