@@ -161,10 +161,11 @@ class C extends m.G {
             { no: 27, name: "user_location", kind: "message", oneof: "filter", T: () => $ },
             { no: 28, name: "user_ip", kind: "message", oneof: "filter", T: () => Q },
             { no: 29, name: "installation_ids", kind: "message", oneof: "filter", T: () => eZ },
+            { no: 30, name: "negate", kind: "scalar", T: 8 },
         ]);
     }
     create(e) {
-        let t = { filter: { oneofKind: void 0 } };
+        let t = { filter: { oneofKind: void 0 }, negate: !1 };
         return (
             globalThis.Object.defineProperty(t, E.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, p.x)(this, t, e),
@@ -329,6 +330,9 @@ class C extends m.G {
                         installationIds: eZ.internalBinaryRead(e, e.uint32(), n, r.filter.installationIds),
                     };
                     break;
+                case 30:
+                    r.negate = e.bool();
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -399,7 +403,8 @@ class C extends m.G {
             "userIp" === e.filter.oneofKind &&
                 Q.internalBinaryWrite(e.filter.userIp, t.tag(28, h.O0.LengthDelimited).fork(), n).join(),
             "installationIds" === e.filter.oneofKind &&
-                eZ.internalBinaryWrite(e.filter.installationIds, t.tag(29, h.O0.LengthDelimited).fork(), n).join();
+                eZ.internalBinaryWrite(e.filter.installationIds, t.tag(29, h.O0.LengthDelimited).fork(), n).join(),
+            !1 !== e.negate && t.tag(30, h.O0.Varint).bool(e.negate);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? h.f$.onWrite : i)(this.typeName, e, t), t;
     }
