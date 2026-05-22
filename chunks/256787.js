@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, {
-    IL: () => c,
+    IL: () => _,
     Jq: () => h,
-    L0: () => u,
-    PN: () => g,
-    XQ: () => f,
-    Zm: () => E,
-    ef: () => m,
-    ki: () => d,
-    vf: () => I,
+    L0: () => d,
+    PN: () => m,
+    XQ: () => E,
+    Zm: () => f,
+    ef: () => p,
+    ki: () => c,
+    vf: () => g,
     zd: () => A,
 });
 var i = n(554146);
@@ -50,6 +50,7 @@ let r = [
         i.M.RIOT_CONNECTION_DEPRECATION,
         i.M.RIOT_CONNECTION_DEPRECATION_ADMIN,
         i.M.NOTIFICATION_NUDGE_POST_CALL_DISCONNECT,
+        i.M.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_BUTTON_NOTIFICATION,
     ],
     a = [
         i.M.GIFTING_PROMOTION_ICON,
@@ -83,33 +84,33 @@ let r = [
         i.M.FIRST_BOOSTER_UPSELL,
         i.M.MOBILE_ACCOUNT_LINKING_BANNER,
     ],
-    _ = [i.M.BOOST_TO_UNLOCK_COACHMARK, i.M.EXPIRING_POWERUP_COACHMARK, i.M.NOTIFICATION_NUDGE_GUILD_OPEN_PER_GUILD];
-function d(e) {
+    u = [i.M.BOOST_TO_UNLOCK_COACHMARK, i.M.EXPIRING_POWERUP_COACHMARK, i.M.NOTIFICATION_NUDGE_GUILD_OPEN_PER_GUILD];
+function c(e) {
     return s.includes(e);
 }
-function u(e) {
+function d(e) {
     return r.includes(e);
 }
-function c(e) {
+function _(e) {
     return a.includes(e);
 }
-function E(e) {
-    return d(e) || u(e) || c(e);
+function f(e) {
+    return c(e) || d(e) || _(e);
 }
 function h(e) {
-    return !E(e);
+    return !f(e);
 }
-function m(e) {
+function p(e) {
     return l.includes(e);
 }
-function f(e) {
-    return _.includes(e);
+function E(e) {
+    return u.includes(e);
 }
-function g(e) {
+function m(e) {
     return o.includes(e);
 }
-function I(e) {
-    return m(e) || f(e) || g(e);
+function g(e) {
+    return p(e) || E(e) || m(e);
 }
 let A = Object.keys(i.M)
     .map((e) => parseInt(e))
