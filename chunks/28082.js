@@ -800,6 +800,7 @@ let eb = l.forwardRef(function (e, t) {
             (0, s.jsx)(r.animated.div, {
                 ref: t,
                 "aria-hidden": d && h,
+                inert: (!!d && !!h) || void 0,
                 className: a()(n, ey.hR, { [ey.Ag]: d, [ey.s]: x }),
                 style: {
                     opacity: (0, U.a)(o.to({ range: [0, 1], output: [1, 0] })),
@@ -1556,6 +1557,7 @@ let ty = l.forwardRef(function (e, t) {
         E = c && d;
     return (0, s.jsxs)(r.animated.div, {
         "aria-hidden": !E,
+        inert: !E || void 0,
         className: a()(i, tA.Rh, { [tA.Yd]: E, [tA.iH]: C }),
         style: {
             transform: (0, r.to)(
