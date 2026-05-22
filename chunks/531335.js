@@ -35,13 +35,13 @@ let p = (e, n, l) => {
             action: () =>
                 (0, a.openModalLazy)(async () => {
                     let { default: r } = await Promise.all([
-                        t.e("47416"),
-                        t.e("24623"),
+                        t.e("1086"),
+                        t.e("30103"),
+                        t.e("87317"),
                         t.e("59957"),
                         t.e("28136"),
-                        t.e("16084"),
                         t.e("97073"),
-                        t.e("87317"),
+                        t.e("16084"),
                         t.e("22547"),
                     ]).then(t.bind(t, 1310));
                     return (t) => (0, i.jsx)(r, { ...t, guild: n, channel: l, source: e });

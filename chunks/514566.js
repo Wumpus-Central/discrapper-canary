@@ -12,6 +12,8 @@ e.exports = {
     FS: "primaryButton__39ec2",
     fO: "customButtons__39ec2",
     Ij: "fullWidth__39ec2",
+    Zu: "verticalStackedButtons__39ec2",
+    g6: "horizontalWrappingButtons__39ec2",
     jp: "badges__39ec2",
     OV: "clickableContainer__39ec2",
     mM: "clickableImage__39ec2",

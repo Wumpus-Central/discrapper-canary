@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => eZ });
+n.d(t, { A: () => eX });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -30,96 +30,102 @@ var i = n(627968),
     D = n(975732),
     L = n(939496),
     w = n(964195),
-    M = n(17928),
-    P = n(55730),
-    x = n(682261),
-    U = n(874546),
-    k = n(141639),
-    G = n(61330),
-    F = n(154483),
-    V = n(737393),
-    B = n(540185),
-    H = n(289173),
-    j = n(735321),
-    Y = n(999291),
-    W = n(993401),
-    K = n(495544),
-    z = n(760751),
-    $ = n(518477),
-    q = n(375708);
-function Z(e) {
+    M = n(17928);
+let P = (0, n(945810).mj)({
+    name: "2026-05-multi-button-play-cta",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+});
+var x = n(55730),
+    U = n(682261),
+    k = n(874546),
+    G = n(141639),
+    F = n(61330),
+    V = n(154483),
+    B = n(737393),
+    H = n(540185),
+    j = n(289173),
+    Y = n(735321),
+    W = n(999291),
+    K = n(993401),
+    z = n(495544),
+    $ = n(760751),
+    q = n(518477),
+    Z = n(375708);
+function X(e) {
     let { applicationId: t, onAction: n, onClose: s } = e,
-        a = (0, M.bG)([K.default], () => K.default.getId()),
-        o = (0, Y.Ay)(a, null),
-        l = (0, M.bG)([z.A], () => z.A.getDetectableGame(t)),
+        a = (0, M.bG)([z.default], () => z.default.getId()),
+        o = (0, W.Ay)(a, null),
+        l = (0, M.bG)([$.A], () => $.A.getDetectableGame(t)),
         u = r.useMemo(
             () =>
                 !(
                     null == l ||
                     o?.widgets?.some(
                         (e) =>
-                            e instanceof H.Yy &&
-                            e.type === B.x.CURRENT_GAMES &&
+                            e instanceof j.Yy &&
+                            e.type === H.x.CURRENT_GAMES &&
                             e.games?.some((e) => e.applicationId === t),
                     )
-                ) && (0, j.XX)(l),
+                ) && (0, Y.XX)(l),
             [t, o?.widgets, l],
         ),
         c = r.useCallback(
             (e) => {
                 e.stopPropagation(),
                     n?.({ action: "PRESS_ADD_TO_CURRENT_GAMES_WIDGET" }),
-                    (0, j.ew)({ widgetType: B.x.CURRENT_GAMES, game: { applicationId: t }, ignoreMaxGames: !0 }),
+                    (0, Y.ew)({ widgetType: H.x.CURRENT_GAMES, game: { applicationId: t }, ignoreMaxGames: !0 }),
                     (0, D.openUserProfileModal)({
                         userId: a,
-                        tabSection: $.RP.WIDGETS,
-                        scrollTarget: B.x.CURRENT_GAMES,
+                        tabSection: q.RP.WIDGETS,
+                        scrollTarget: H.x.CURRENT_GAMES,
                     }),
                     s?.();
             },
             [t, a, n, s],
         );
-    return u ? (0, i.jsx)(W.FD, { text: q.intl.string(q.t.BjYzmC), onClick: c, fullWidth: !0 }) : null;
+    return u ? (0, i.jsx)(K.FD, { text: Z.intl.string(Z.t.BjYzmC), onClick: c, fullWidth: !0 }) : null;
 }
-var X = n(601007),
-    Q = n(46225),
-    J = n(308335),
-    ee = n(790381),
-    et = n(266080),
-    en = n(729937),
-    ei = n(123917),
-    er = n(998218),
-    es = n(996988),
-    ea = n(514566);
-async function eo(e) {
+var Q = n(601007),
+    J = n(46225),
+    ee = n(308335),
+    et = n(790381),
+    en = n(266080),
+    ei = n(729937),
+    er = n(123917),
+    es = n(998218),
+    ea = n(996988),
+    eo = n(514566);
+async function el(e) {
     let { activity: t, user: n, index: i } = e;
     try {
-        let e = await (0, en.yb)(t, n.id);
+        let e = await (0, ei.yb)(t, n.id);
         if (e.button_urls.length <= i) return;
         let r = e.button_urls[i];
         if ("string" != typeof r) return;
-        let s = er.A.safeParseWithQuery(r);
+        let s = es.A.safeParseWithQuery(r);
         if (s?.protocol == null || s?.hostname == null) return;
-        (0, ei.h)({ href: er.A.format(s), trusted: !1 });
+        (0, er.h)({ href: es.A.format(s), trusted: !1 });
     } catch (e) {}
 }
-function el(e) {
+function eu(e) {
     let { user: t, activity: n, onAction: r } = e,
         { themeType: s } = (0, L.E)();
     if (n?.buttons == null || n.buttons.length < 1) return null;
     let a = (0, d.A)(n);
-    return s === es.d.MODAL_V2
+    return s === ea.d.MODAL_V2
         ? (0, i.jsx)("div", {
-              className: ea.fO,
+              className: eo.fO,
               children: n.buttons.map((e, s) =>
                   (0, i.jsx)(
-                      W.FD,
+                      K.FD,
                       {
-                          text: a ? q.intl.string(q.t.I6JG46) : e,
+                          text: a ? Z.intl.string(Z.t.I6JG46) : e,
                           onClick: (e) => {
                               e.stopPropagation(),
                                   r?.({ action: a ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON" }),
-                                  eo({ user: t, activity: n, index: s });
+                                  el({ user: t, activity: n, index: s });
                           },
                       },
                       s,
@@ -127,17 +133,17 @@ function el(e) {
               ),
           })
         : (0, i.jsx)("div", {
-              className: ea.fO,
+              className: eo.fO,
               children: n.buttons.map((e, s) =>
                   (0, i.jsx)(
-                      W.FD,
+                      K.FD,
                       {
-                          text: a ? q.intl.string(q.t.I6JG46) : e,
+                          text: a ? Z.intl.string(Z.t.I6JG46) : e,
                           fullWidth: !0,
                           onClick: (e) => {
                               e.stopPropagation(),
                                   r?.({ action: a ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON" }),
-                                  eo({ user: t, activity: n, index: s });
+                                  el({ user: t, activity: n, index: s });
                           },
                       },
                       s,
@@ -145,40 +151,40 @@ function el(e) {
               ),
           });
 }
-var eu = n(990078),
-    ec = n(323384),
-    ed = n(808666),
-    e_ = n(687966),
-    ef = n(780907),
-    eh = n(928550),
-    ep = n(102853),
-    eE = n(695311);
-function em(e) {
+var ec = n(990078),
+    ed = n(323384),
+    e_ = n(808666),
+    ef = n(687966),
+    eh = n(780907),
+    ep = n(928550),
+    eE = n(102853),
+    em = n(695311);
+function eg(e) {
     let { user: t, activity: n, onAction: r, onClose: s } = e,
         { themeType: a } = (0, L.E)(),
-        o = (0, eE.A)({ applicationId: n?.application_id, onClose: s }),
-        l = (0, ep.l)({ activity: n ?? void 0, embeddedActivity: void 0, user: t, onClose: s }),
-        u = (0, eh.d)(n?.application_id);
+        o = (0, em.A)({ applicationId: n?.application_id, onClose: s }),
+        l = (0, eE.l)({ activity: n ?? void 0, embeddedActivity: void 0, user: t, onClose: s }),
+        u = (0, ep.d)(n?.application_id);
     if (null == l && null != n && (0, _.A)(n))
-        return (0, i.jsx)(W.FD, {
-            icon: ec.k,
-            text: q.intl.string(q.t.RscU7I),
-            fullWidth: a !== es.d.MODAL_V2,
+        return (0, i.jsx)(K.FD, {
+            icon: ed.k,
+            text: Z.intl.string(Z.t.RscU7I),
+            fullWidth: a !== ea.d.MODAL_V2,
             onClick: (e) => {
                 e.stopPropagation(),
-                    null != u ? ef.Ay.launch({ applicationId: u }) : (r?.({ action: "PRESS_PLAY_BUTTON" }), o());
+                    null != u ? eh.Ay.launch({ applicationId: u }) : (r?.({ action: "PRESS_PLAY_BUTTON" }), o());
             },
         });
     if (null == l) return null;
     let { isJoining: c, handleJoinRequest: d, buttonCTA: f, tooltip: h, isEnabled: p, isEmbedded: E } = l,
-        m = a !== es.d.MODAL_V2;
+        m = a !== ea.d.MODAL_V2;
     return (0, i.jsx)("div", {
-        className: m ? ea.Ij : void 0,
-        children: (0, i.jsx)(eu.m, {
+        className: m ? eo.Ij : void 0,
+        children: (0, i.jsx)(ec.m, {
             text: h,
             asContainer: !p,
-            children: (0, i.jsx)(W.FD, {
-                icon: E ? ed.I : e_._,
+            children: (0, i.jsx)(K.FD, {
+                icon: E ? e_.I : ef._,
                 text: f,
                 disabled: !p,
                 loading: c,
@@ -190,174 +196,191 @@ function em(e) {
         }),
     });
 }
-var eg = n(141628);
-function eA(e) {
+var eA = n(141628);
+function eI(e) {
     let { startAuthorization: t, onAction: n } = e,
         { newestAnalyticsLocation: r } = (0, E.Ay)(),
         { themeType: s } = (0, L.E)(),
-        a = s === es.d.MODAL_V2;
-    return (0, i.jsx)(W.FD, {
-        icon: () => (0, i.jsx)(eg.A, {}),
-        text: q.intl.string(q.t.sbdnpw),
+        a = s === ea.d.MODAL_V2;
+    return (0, i.jsx)(K.FD, {
+        icon: () => (0, i.jsx)(eA.A, {}),
+        text: Z.intl.string(Z.t.sbdnpw),
         fullWidth: !a,
         onClick: (e) => {
             e.stopPropagation(), n?.({ action: "PRESS_CONNECT_ACCOUNT_BUTTON" }), t({ analyticsLocations: [r] });
         },
     });
 }
-var eI = n(626584),
-    eT = n(652215);
-function eS(e) {
+var eT = n(626584),
+    eS = n(652215);
+function eN(e) {
     let { user: t, activity: n, onAction: r } = e,
         { themeType: s } = (0, L.E)(),
-        a = s === es.d.MODAL_V2;
-    return (0, P.A)(n, eT.jUm.INSTANCE)
-        ? (0, i.jsx)(W.FD, {
-              text: q.intl.string(q.t.vwl1PK),
+        a = s === ea.d.MODAL_V2;
+    return (0, x.A)(n, eS.jUm.INSTANCE)
+        ? (0, i.jsx)(K.FD, {
+              text: Z.intl.string(Z.t.vwl1PK),
               fullWidth: !a,
               onClick: (e) => {
                   e.stopPropagation(),
                       r?.({ action: "PRESS_NOTIFY_BUTTON" }),
-                      new eI.A("UserActivityActions").log("notify", t.id, n);
+                      new eT.A("UserActivityActions").log("notify", t.id, n);
               },
           })
         : null;
 }
-var eN = n(573648),
-    ey = n(968309),
-    eC = n(30370);
-function ev(e) {
+var ey = n(573648),
+    eC = n(968309),
+    ev = n(30370);
+function eO(e) {
     let { platformType: t, icon: n, onAction: r } = e,
         { newestAnalyticsLocation: s } = (0, E.Ay)(),
         { themeType: a } = (0, L.E)(),
-        o = a === es.d.MODAL_V2;
-    return (0, M.bG)([eC.A], () => null != eC.A.getAccount(null, t))
+        o = a === ea.d.MODAL_V2;
+    return (0, M.bG)([ev.A], () => null != ev.A.getAccount(null, t))
         ? null
-        : (0, i.jsx)(W.FD, {
+        : (0, i.jsx)(K.FD, {
               icon: n,
-              text: q.intl.formatToPlainString(q.t.XWSHTb, { platform: eN.A.get(t).name }),
+              text: Z.intl.formatToPlainString(Z.t.XWSHTb, { platform: ey.A.get(t).name }),
               fullWidth: !o,
               onClick: (e) => {
                   e.stopPropagation();
-                  let n = t === eT.fg2.XBOX;
+                  let n = t === eS.fg2.XBOX;
                   r?.({ action: n ? "PRESS_CONNECT_XBOX_BUTTON" : "PRESS_CONNECT_PLAYSTATION_BUTTON" }),
-                      (0, ey.A)({ platformType: t, location: s });
+                      (0, eC.A)({ platformType: t, location: s });
               },
           });
 }
-var eO = n(378570),
-    eR = n(790535),
-    eb = n(233993),
-    eD = n(734057),
-    eL = n(576705),
-    ew = n(977997);
-function eM(e) {
+var eR = n(378570),
+    eb = n(790535),
+    eD = n(233993),
+    eL = n(734057),
+    ew = n(576705),
+    eM = n(977997);
+function eP(e) {
     let { activity: t, onAction: n, onClose: r } = e,
         { themeType: s } = (0, L.E)(),
-        a = s === es.d.MODAL_V2,
+        a = s === ea.d.MODAL_V2,
         { channelId: o, guildId: l } = (0, C.UW)(t) ?? {},
-        u = (0, M.bG)([ew.A], () => null != o && ew.A.isInChannel(o), [o]),
-        c = (0, M.bG)([eD.A], () => (null != o ? eD.A.getChannel(o) : null), [o]),
-        d = (0, M.bG)([eL.A], () => null != c && eL.A.can(eb.Gk, c), [c]);
+        u = (0, M.bG)([eM.A], () => null != o && eM.A.isInChannel(o), [o]),
+        c = (0, M.bG)([eL.A], () => (null != o ? eL.A.getChannel(o) : null), [o]),
+        d = (0, M.bG)([ew.A], () => null != c && ew.A.can(eD.Gk, c), [c]);
     return (0, C.Cy)(t) && d && null != l && null != o
-        ? (0, i.jsx)(W.FD, {
-              text: q.intl.string(q.t.ZYO5OK),
+        ? (0, i.jsx)(K.FD, {
+              text: Z.intl.string(Z.t.ZYO5OK),
               fullWidth: !a,
               disabled: u,
               onClick: (e) => {
                   e.stopPropagation(),
                       n?.({ action: "PRESS_STAGE_CHANNEL_LISTEN_BUTTON" }),
-                      eR.CH(l, o),
-                      (0, eO.iN)(o),
+                      eb.CH(l, o),
+                      (0, eR.iN)(o),
                       r?.();
               },
           })
         : null;
 }
-var eP = n(908289);
-function ex(e) {
+var ex = n(908289);
+function eU(e) {
     let { activity: t, onAction: n } = e,
         { themeType: r } = (0, L.E)(),
-        s = r === es.d.MODAL_V2,
-        a = (0, eP.A)(t);
+        s = r === ea.d.MODAL_V2,
+        a = (0, ex.A)(t);
     return (0, h.A)(t) && null != a
-        ? (0, i.jsx)(W.FD, {
-              text: q.intl.string(q.t.I6JG46),
+        ? (0, i.jsx)(K.FD, {
+              text: Z.intl.string(Z.t.I6JG46),
               fullWidth: !s,
               onClick: (e) => (e.stopPropagation(), n?.({ action: "PRESS_WATCH_BUTTON" }), window.open(a)),
           })
         : null;
 }
-var eU = n(985629);
-function ek(e) {
+var ek = n(985629);
+function eG(e) {
     let { user: t, activity: n, onAction: r, onClose: s, application: a, containerClassName: o } = e,
         { themeType: l } = (0, L.E)(),
-        u = (0, M.bG)([K.default], () => K.default.getId() === t.id),
-        c = (0, V.J)(a),
-        d = (0, J.o)(n?.application_id ?? a?.id) || (0, P.A)(n, eT.jUm.SUPPORTS_JOIN_URL),
+        u = (0, M.bG)([z.default], () => z.default.getId() === t.id),
+        c = (0, B.J)(a),
+        d = (0, ee.o)(n?.application_id ?? a?.id) || (0, x.A)(n, eS.jUm.SUPPORTS_JOIN_URL),
         { analyticsLocations: f } = (0, E.Ay)(p.A.USER_PROFILE_ACTIVITY_BUTTONS),
-        m = (0, F.A)("user_profile_activity_buttons", n?.application_id),
-        { fetched: g, canStartAuthorization: A, hasAlreadyLinked: I, startAuthorization: T } = (0, Q.RD)(a),
-        S = l === es.d.MODAL || l === es.d.MODAL_V2,
-        N = l === es.d.POPOUT,
-        y = (() => {
+        m = (0, V.A)("user_profile_activity_buttons", n?.application_id),
+        { enabled: g } = P.useConfig({ location: "user_profile_activity_buttons" }),
+        { fetched: A, canStartAuthorization: I, hasAlreadyLinked: T, startAuthorization: S } = (0, J.RD)(a),
+        N = l === ea.d.MODAL || l === ea.d.MODAL_V2,
+        y = l === ea.d.POPOUT,
+        v = l === ea.d.MODAL_V2 ? eo.g6 : eo.Zu,
+        O =
+            m.length > 0
+                ? (0, i.jsx)(Q.A, {
+                      distributorCTAConfigs: m,
+                      applicationId: n?.application_id ?? "",
+                      analyticsLocations: f,
+                      buttonVariant: "secondary",
+                      fullWidth: l !== ea.d.MODAL_V2,
+                      stopPropagation: !0,
+                      onAction: r,
+                      onClose: s,
+                  })
+                : null,
+        R = (() => {
             if (u)
-                return N && n?.type === eT.$pd.PLAYING && a?.id != null
-                    ? (0, i.jsx)(Z, { applicationId: a.id, onAction: r, onClose: s })
+                return y && n?.type === eS.$pd.PLAYING && a?.id != null
+                    ? (0, i.jsx)(X, { applicationId: a.id, onAction: r, onClose: s })
                     : null;
             if (n?.buttons != null && n?.buttons.length >= 1)
-                return (0, i.jsx)(el, { user: t, activity: n, onAction: r });
-            if (!d && c && null != a && !S)
-                return (0, i.jsx)(eU.A, { application: a, onAction: r, onClose: s, analyticsLocations: f });
-            if ((0, _.A)(n) || ((0, U.Ay)(n) && d))
-                return (0, i.jsx)(em, { user: t, activity: n, onAction: r, onClose: s });
-            if (g && A && !I) return (0, i.jsx)(eA, { startAuthorization: T, onAction: r });
-            if (m.length > 0)
-                return (0, i.jsx)(X.A, {
-                    distributorCTAConfigs: m,
-                    applicationId: n?.application_id ?? "",
-                    analyticsLocations: f,
-                    buttonVariant: "secondary",
-                    fullWidth: l !== es.d.MODAL_V2,
-                    stopPropagation: !0,
-                    onAction: r,
-                    onClose: s,
-                });
-            if (!(0, x.A)(n)) {
+                return null != O && g
+                    ? (0, i.jsxs)("div", {
+                          className: v,
+                          children: [(0, i.jsx)(eu, { user: t, activity: n, onAction: r }), O],
+                      })
+                    : (0, i.jsx)(eu, { user: t, activity: n, onAction: r });
+            if (!d && c && null != a && !N) {
+                let e = (0, i.jsx)(ek.A, { application: a, onAction: r, onClose: s, analyticsLocations: f });
+                return null != O && g ? (0, i.jsxs)("div", { className: v, children: [e, O] }) : e;
+            }
+            if ((0, _.A)(n) || ((0, k.Ay)(n) && d)) {
+                let e = (0, i.jsx)(eg, { user: t, activity: n, onAction: r, onClose: s });
+                return null != O && g ? (0, i.jsxs)("div", { className: v, children: [e, O] }) : e;
+            }
+            if (A && I && !T) {
+                let e = (0, i.jsx)(eI, { startAuthorization: S, onAction: r });
+                return null != O && g ? (0, i.jsxs)("div", { className: v, children: [e, O] }) : e;
+            }
+            if (null != O) return O;
+            if (!(0, U.A)(n)) {
+                if ((0, F.A)(n))
+                    return (0, i.jsx)(eO, { platformType: eS.fg2.XBOX, icon: () => (0, i.jsx)(en.A, {}), onAction: r });
                 if ((0, G.A)(n))
-                    return (0, i.jsx)(ev, { platformType: eT.fg2.XBOX, icon: () => (0, i.jsx)(et.A, {}), onAction: r });
-                if ((0, k.A)(n))
-                    return (0, i.jsx)(ev, {
-                        platformType: eT.fg2.PLAYSTATION,
-                        icon: () => (0, i.jsx)(ee.A, {}),
+                    return (0, i.jsx)(eO, {
+                        platformType: eS.fg2.PLAYSTATION,
+                        icon: () => (0, i.jsx)(et.A, {}),
                         onAction: r,
                     });
             }
             return (0, h.A)(n)
-                ? (0, i.jsx)(ex, { activity: n, onAction: r })
-                : (0, U.Ay)(n)
-                  ? (0, i.jsx)(em, { user: t, activity: n, onAction: r, onClose: s })
-                  : (0, P.A)(n, eT.jUm.INSTANCE)
-                    ? (0, i.jsx)(eS, { user: t, activity: n, onAction: r })
+                ? (0, i.jsx)(eU, { activity: n, onAction: r })
+                : (0, k.Ay)(n)
+                  ? (0, i.jsx)(eg, { user: t, activity: n, onAction: r, onClose: s })
+                  : (0, x.A)(n, eS.jUm.INSTANCE)
+                    ? (0, i.jsx)(eN, { user: t, activity: n, onAction: r })
                     : (0, C.Cy)(n)
-                      ? (0, i.jsx)(eM, { activity: n, onAction: r, onClose: s })
+                      ? (0, i.jsx)(eP, { activity: n, onAction: r, onClose: s })
                       : null;
         })();
-    return null == y ? null : (0, i.jsx)("div", { className: o, children: y });
+    return null == R ? null : (0, i.jsx)("div", { className: o, children: R });
 }
-var eG = n(282197),
-    eF = n(624951),
-    eV = n(584904),
-    eB = n(351638),
-    eH = n(531648),
-    ej = n(910607),
-    eY = n(753713),
-    eW = n(269587),
-    eK = n(409626),
-    ez = n(692969),
-    e$ = n(534465),
-    eq = n(360469);
-function eZ(e) {
+var eF = n(282197),
+    eV = n(624951),
+    eB = n(584904),
+    eH = n(351638),
+    ej = n(531648),
+    eY = n(910607),
+    eW = n(753713),
+    eK = n(269587),
+    ez = n(409626),
+    e$ = n(692969),
+    eq = n(534465),
+    eZ = n(360469);
+function eX(e) {
     let {
             user: t,
             currentUser: n,
@@ -379,23 +402,23 @@ function eZ(e) {
         W = (0, m.Ay)(P),
         K = (0, R.A)(r),
         z = null != K.text && "" !== K.text,
-        { largeImage: Z, smallImage: X } = (0, g.XN)(r, s),
+        { largeImage: $, smallImage: X } = (0, g.XN)(r, s),
         Q = (function (e) {
             let { location: t, user: n, currentUser: i, activity: r, application: s, entry: a, onClose: o } = e,
-                l = (0, ez.A)({
+                l = (0, e$.A)({
                     location: t,
-                    source: eK.Ob.UserProfile,
+                    source: ez.Ob.UserProfile,
                     trackEntryPointImpression: !0,
-                    ...(0, e$.UE)({ user: n, activity: r, entry: a }),
+                    ...(0, eq.UE)({ user: n, activity: r, entry: a }),
                 }),
-                u = (0, eE.A)({ applicationId: s?.id, onClose: o }),
+                u = (0, em.A)({ applicationId: s?.id, onClose: o }),
                 c = (0, _.A)(r);
             return c && null != s
                 ? u
                 : !c && (0, f.A)(r)
                   ? l
                   : (0, d.A)(r) && n.id !== i.id
-                    ? () => eo({ activity: r, user: n, index: 0 })
+                    ? () => el({ activity: r, user: n, index: 0 })
                     : void 0;
         })({
             location: "UserProfileActivityCard",
@@ -409,27 +432,27 @@ function eZ(e) {
         J = () =>
             (0, h.A)(r) && null != P
                 ? (0, i.jsxs)("div", {
-                      className: ea.FH,
+                      className: eo.FH,
                       children: [
-                          (0, i.jsx)(l.H, { size: "xxs", color: u.A.colors.TEXT_DEFAULT, className: ea.Ow }),
-                          (0, i.jsx)(eH.Q, { variant: "heading-sm/semibold", text: W, id: G }),
+                          (0, i.jsx)(l.H, { size: "xxs", color: u.A.colors.TEXT_DEFAULT, className: eo.Ow }),
+                          (0, i.jsx)(ej.Q, { variant: "heading-sm/semibold", text: W, id: G }),
                       ],
                   })
                 : (0, f.A)(r) || (0, C.Cy)(r)
-                  ? (0, i.jsx)(eH.Q, { variant: "heading-sm/semibold", text: r.name, id: G })
+                  ? (0, i.jsx)(ej.Q, { variant: "heading-sm/semibold", text: r.name, id: G })
                   : null != r.details
                     ? (0, i.jsx)(A.O, {
                           href: r.details_url,
-                          children: (0, i.jsx)(eH.Q, { variant: "heading-sm/semibold", text: r.details, id: G }),
+                          children: (0, i.jsx)(ej.Q, { variant: "heading-sm/semibold", text: r.details, id: G }),
                       })
-                    : (0, i.jsx)(eH.Q, { variant: "heading-sm/semibold", text: r.name, id: G }),
+                    : (0, i.jsx)(ej.Q, { variant: "heading-sm/semibold", text: r.name, id: G }),
         ee = () =>
-            r.type === eT.$pd.HANG_STATUS
+            r.type === eS.$pd.HANG_STATUS
                 ? null
                 : (0, h.A)(r) && null != M
-                  ? (0, i.jsx)(eH.A, {
+                  ? (0, i.jsx)(ej.A, {
                         variant: "text-xs/normal",
-                        text: q.intl.formatToPlainString(q.t["hq/Qze"], { guildName: M.name }),
+                        text: Z.intl.formatToPlainString(Z.t["hq/Qze"], { guildName: M.name }),
                         onClick: () => {
                             (0, y.u)(M.id), j({ action: "OPEN_VOICE_GUILD" }), U?.();
                         },
@@ -437,43 +460,43 @@ function eZ(e) {
                   : (0, f.A)(r)
                     ? (0, i.jsx)(A.O, {
                           href: r.details_url,
-                          children: (0, i.jsx)(eH.A, { variant: "text-xs/normal", text: r.details }),
+                          children: (0, i.jsx)(ej.A, { variant: "text-xs/normal", text: r.details }),
                       })
                     : (0, C.Cy)(r)
-                      ? (0, i.jsx)(eH.A, { variant: "text-xs/normal", text: r?.assets?.small_text })
+                      ? (0, i.jsx)(ej.A, { variant: "text-xs/normal", text: r?.assets?.small_text })
                       : (0, i.jsx)(A.O, {
                             href: r.state_url,
-                            children: (0, i.jsx)(eH.A, { variant: "text-xs/normal", text: r.state }),
+                            children: (0, i.jsx)(ej.A, { variant: "text-xs/normal", text: r.state }),
                         }),
         et = () => {
-            if (r.type === eT.$pd.WATCHING) return null;
+            if (r.type === eS.$pd.WATCHING) return null;
             if ((0, f.A)(r)) return en();
             if ((0, C.Cy)(r) && r.party?.size != null && r.party?.size.length >= 2) {
-                let e = q.intl.formatToPlainString(q.t["JC/3xw"], {
+                let e = Z.intl.formatToPlainString(Z.t["JC/3xw"], {
                     numSpeakers: r.party?.size[0],
                     numListeners: r.party?.size[1] - r.party?.size[0],
                 });
-                return (0, i.jsx)(eH.A, { variant: "text-xs/normal", text: e });
+                return (0, i.jsx)(ej.A, { variant: "text-xs/normal", text: e });
             }
             return r.assets?.large_text != null
                 ? (0, i.jsx)(A.O, {
                       href: r.assets?.large_url,
-                      children: (0, i.jsx)(eH.A, { text: r.assets?.large_text, variant: "text-xs/normal" }),
+                      children: (0, i.jsx)(ej.A, { text: r.assets?.large_text, variant: "text-xs/normal" }),
                   })
                 : null;
         },
         en = () =>
-            r.party?.size == null && r.application_id === eq.I4
+            r.party?.size == null && r.application_id === eZ.I4
                 ? (0, i.jsxs)("div", {
-                      className: ea.CI,
+                      className: eo.CI,
                       children: [
                           (0, i.jsx)(A.O, {
                               href: r.state_url,
-                              children: (0, i.jsx)(eH.A, { variant: "text-xs/normal", text: r.state }),
+                              children: (0, i.jsx)(ej.A, { variant: "text-xs/normal", text: r.state }),
                           }),
-                          (0, i.jsx)(eH.A, {
+                          (0, i.jsx)(ej.A, {
                               variant: "text-xs/normal",
-                              text: q.intl.formatToPlainString(q.t["u//9By"], {
+                              text: Z.intl.formatToPlainString(Z.t["u//9By"], {
                                   count: "0",
                                   max: s?.getMaxParticipants() ?? 0,
                               }),
@@ -482,18 +505,18 @@ function eZ(e) {
                   })
                 : (0, _.A)(r) && r.party?.size != null && r.party?.size.length >= 2
                   ? (0, i.jsxs)("div", {
-                        className: ea.CI,
+                        className: eo.CI,
                         children: [
                             (0, i.jsx)(A.O, {
                                 href: r.state_url,
-                                children: (0, i.jsx)(eH.A, { variant: "text-xs/normal", text: r.state }),
+                                children: (0, i.jsx)(ej.A, { variant: "text-xs/normal", text: r.state }),
                             }),
-                            (0, i.jsx)(eH.A, {
+                            (0, i.jsx)(ej.A, {
                                 variant: "text-xs/normal",
                                 text:
                                     0 === r.party.size[1]
-                                        ? q.intl.formatToPlainString(q.t.IM4J4e, { count: r.party.size[0] })
-                                        : q.intl.formatToPlainString(q.t["u//9By"], {
+                                        ? Z.intl.formatToPlainString(Z.t.IM4J4e, { count: r.party.size[0] })
+                                        : Z.intl.formatToPlainString(Z.t["u//9By"], {
                                               count: r.party.size[0],
                                               max: r.party.size[1],
                                           }),
@@ -503,12 +526,12 @@ function eZ(e) {
                   : null == r.party
                     ? (0, i.jsx)(A.O, {
                           href: r.state_url,
-                          children: (0, i.jsx)(eH.A, { variant: "text-xs/normal", text: r.state }),
+                          children: (0, i.jsx)(ej.A, { variant: "text-xs/normal", text: r.state }),
                       })
                     : null,
         ei = () =>
-            (0, i.jsx)(ek, {
-                containerClassName: ea.o1,
+            (0, i.jsx)(eG, {
+                containerClassName: eo.o1,
                 activity: r,
                 user: t,
                 onAction: j,
@@ -517,17 +540,17 @@ function eZ(e) {
             });
     return (0, i.jsx)(E.f5, {
         value: V,
-        children: (0, i.jsxs)(eV.A, {
+        children: (0, i.jsxs)(eB.A, {
             ref: Y,
-            className: a()(ea.Nr, x),
+            className: a()(eo.Nr, x),
             onAction: j,
             onClose: U,
             "aria-labelledby": z ? `${F} ${G}` : G,
             children: [
-                (0, i.jsx)(eB.A, {
+                (0, i.jsx)(eH.A, {
                     textId: F,
                     ...K,
-                    contextMenu: (0, i.jsx)(eW.A, {
+                    contextMenu: (0, i.jsx)(eK.A, {
                         display: "live",
                         user: t,
                         activity: r,
@@ -542,83 +565,83 @@ function eZ(e) {
                     children: (e) => {
                         let n, s;
                         return (0, i.jsxs)("div", {
-                            className: ea.rf,
+                            className: eo.rf,
                             ref: e,
                             children: [
                                 (0, i.jsxs)("div", {
-                                    className: ea.Qs,
+                                    className: eo.Qs,
                                     children: [
                                         !t.bot &&
                                             ((n = (0, d.A)(r) ? "crunchyroll" : "default"),
-                                            (s = B === es.d.MODAL_V2 ? I.w.SIZE_100 : I.w.SIZE_60),
+                                            (s = B === ea.d.MODAL_V2 ? I.w.SIZE_100 : I.w.SIZE_60),
                                             null == Q
                                                 ? (0, i.jsx)(I.d, {
-                                                      image: Z,
+                                                      image: $,
                                                       smallImage: X,
                                                       size: s,
                                                       aspectRatio: n,
-                                                      className: ea.Sl,
+                                                      className: eo.Sl,
                                                   })
                                                 : (0, i.jsx)(I.d, {
-                                                      image: Z,
+                                                      image: $,
                                                       smallImage: X,
                                                       size: s,
-                                                      className: ea.mM,
+                                                      className: eo.mM,
                                                       aspectRatio: n,
                                                       onClick: (e) => {
                                                           j({ action: "PRESS_IMAGE" }), Q(e);
                                                       },
                                                   })),
                                         (0, i.jsxs)("div", {
-                                            className: ea.zH,
+                                            className: eo.zH,
                                             children: [
                                                 null == Q
                                                     ? (0, i.jsxs)("div", { children: [J(), ee(), et()] })
                                                     : (0, i.jsxs)(c.D, {
-                                                          className: ea.sd,
+                                                          className: eo.sd,
                                                           onClick: (e) => {
                                                               j({ action: "PRESS_TEXT" }), Q(e);
                                                           },
                                                           children: [J(), ee(), et()],
                                                       }),
-                                                !t.bot && (0, i.jsx)(eG.A, { user: t, activity: r, className: ea.jp }),
+                                                !t.bot && (0, i.jsx)(eF.A, { user: t, activity: r, className: eo.jp }),
                                                 (() => {
                                                     if (!(0, b.A)(r)) return null;
                                                     let { start: e, end: t } = r.timestamps;
-                                                    return (0, i.jsx)(eY.A, { start: e, end: t });
+                                                    return (0, i.jsx)(eW.A, { start: e, end: t });
                                                 })(),
-                                                B === es.d.MODAL_V2 && ei(),
+                                                B === ea.d.MODAL_V2 && ei(),
                                             ],
                                         }),
-                                        B === es.d.MODAL && ei(),
+                                        B === ea.d.MODAL && ei(),
                                     ],
                                 }),
                                 null == M || null == P
                                     ? null
-                                    : (0, i.jsx)(ej.A, { user: t, guild: M, channel: P, onAction: j, onClose: U }),
+                                    : (0, i.jsx)(eY.A, { user: t, guild: M, channel: P, onAction: j, onClose: U }),
                             ],
                         });
                     },
                 }),
-                B !== es.d.MODAL &&
-                    B !== es.d.MODAL_V2 &&
+                B !== ea.d.MODAL &&
+                    B !== ea.d.MODAL_V2 &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             ei(),
                             (0, i.jsx)(w.A, {
-                                className: ea.AB,
+                                className: eo.AB,
                                 userId: t.id,
                                 activityApplication: s,
                                 onClickViewMore: (e) => {
                                     e.stopPropagation(),
                                         j({ action: "PRESS_APPLICATION_WIDGET_PREVIEW_VIEW_MORE" }),
                                         U?.(),
-                                        (0, D.openUserProfileModal)({ userId: t.id, tabSection: $.RP.WIDGETS });
+                                        (0, D.openUserProfileModal)({ userId: t.id, tabSection: q.RP.WIDGETS });
                                 },
                             }),
                         ],
                     }),
-                (0, i.jsx)(eF.A, { applicationId: s?.id, onAction: j, onClose: U, activity: r }),
+                (0, i.jsx)(eV.A, { applicationId: s?.id, onAction: j, onClose: U, activity: r }),
             ],
         }),
     });
