@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { A: () => nt }), n(321073), n(323874), n(14289), n(35956);
+n.d(t, { A: () => nr }), n(321073), n(323874), n(14289), n(35956);
 var r = n(627968),
     s = n(64700),
     a = n(503698),
@@ -276,151 +276,170 @@ var F = n(95561),
     Q = n(778712),
     J = n(939249),
     ee = n(545442),
-    et = n(565645),
-    en = n(730134),
-    ei = n(775602),
-    er = n(47167),
-    es = n(376943),
-    ea = n(465365),
-    eo = n(78390),
-    el = n(785562),
-    eu = n(332173),
-    ec = n(37632),
-    ed = n(967144);
+    et = n(922016),
+    en = n(565645),
+    ei = n(730134),
+    er = n(775602),
+    es = n(47167),
+    ea = n(545868),
+    eo = n(376943),
+    el = n(465365),
+    eu = n(78390),
+    ec = n(785562),
+    ed = n(332173),
+    e_ = n(37632),
+    ef = n(593284),
+    eh = n(967144);
 n(209932);
-var e_ = n(317525),
-    ef = n(994500),
-    eh = n(351906),
-    ep = n(287809),
-    eE = n(871237),
-    em = n(562153),
-    eg = n(427262),
-    eA = n(375708),
-    eI = n(178259);
-function eT(e) {
-    let { emoji: t } = e;
-    return (0, r.jsx)(X.m, {
-        text: t.name,
-        delay: 750,
-        position: "top",
-        children: (0, r.jsx)(et.A, { src: t.src, emojiName: t.name, animated: !1, surrogate: t.surrogate }),
-    });
-}
-function eS(e) {
-    let { emoji: t } = e;
-    return (0, r.jsx)(X.m, {
-        text: t.name,
-        delay: 750,
-        position: "top",
-        children: (0, r.jsx)(et.A, { emojiId: t.emojiId, emojiName: t.name, animated: t.animated }),
-    });
-}
-function eN(e) {
-    let { text: t } = e;
-    return (0, r.jsx)(eu.A, { children: t });
-}
+var ep = n(317525),
+    eE = n(994500),
+    em = n(351906),
+    eg = n(287809),
+    eA = n(871237),
+    eI = n(562153),
+    eT = n(427262),
+    eS = n(375708),
+    eN = n(178259);
 function ey(e) {
+    let { emoji: t } = e;
+    return (0, r.jsx)(X.m, {
+        text: t.name,
+        delay: 750,
+        position: "top",
+        children: (0, r.jsx)(en.A, { src: t.src, emojiName: t.name, animated: !1, surrogate: t.surrogate }),
+    });
+}
+function eC(e) {
+    let { emoji: t } = e;
+    return (0, r.jsx)(X.m, {
+        text: t.name,
+        delay: 750,
+        position: "top",
+        children: (0, r.jsx)(en.A, { emojiId: t.emojiId, emojiName: t.name, animated: t.animated }),
+    });
+}
+function ev(e) {
+    let { text: t } = e;
+    return (0, r.jsx)(ed.A, { children: t });
+}
+function eO(e) {
     let { id: t, guildId: n, channelId: i } = e,
-        s = (0, Z.bG)([ep.default], () => ep.default.getUser(t)),
-        a = (0, Z.bG)([eh.A], () => eh.A.hidePersonalInformation),
-        o = em.Ay.useName(n, i, s),
-        l = (0, r.jsx)(eu.A, { children: null == o ? `<@${t}>` : `@${o}` });
+        s = (0, Z.bG)([eg.default], () => eg.default.getUser(t)),
+        a = (0, Z.bG)([em.A], () => em.A.hidePersonalInformation),
+        o = eI.Ay.useName(n, i, s),
+        l = (0, r.jsx)(ed.A, { children: null == o ? `<@${t}>` : `@${o}` });
     if (null != s) {
         let e = a || s.hasUniqueUsername() ? null : `#${s.discriminator}`;
         return (0, r.jsx)(X.m, {
             __unsupportedReactNodeAsText: (0, r.jsxs)("div", {
-                className: eI.fX,
+                className: eN.fX,
                 children: [
-                    (0, r.jsx)(en.A, { user: s, animate: !0, size: Q._3.SIZE_16, className: eI.my }),
-                    eg.Ay.getUserTag(s, { mode: "username", identifiable: a ? "never" : "always" }),
-                    (0, r.jsx)("span", { className: eI.D2, children: e }),
+                    (0, r.jsx)(ei.A, { user: s, animate: !0, size: Q._3.SIZE_16, className: eN.my }),
+                    eT.Ay.getUserTag(s, { mode: "username", identifiable: a ? "never" : "always" }),
+                    (0, r.jsx)("span", { className: eN.D2, children: e }),
                 ],
             }),
             delay: 750,
             position: "top",
-            "aria-label": eg.Ay.getUserTag(s, { decoration: "never" }),
+            "aria-label": eT.Ay.getUserTag(s, { decoration: "never" }),
             asContainer: !0,
             children: (0, r.jsx)(J.D, { tag: "span", children: l }),
         });
     }
     return l;
 }
-function eC(e) {
-    let { id: t, guildId: n } = e,
-        i = (0, Z.bG)([e_.A], () => (null != n ? e_.A.getRole(n, t) : void 0)),
-        s = (0, Z.bG)([ei.A], () => ei.A.roleStyle),
-        a = (0, ed.X_)(n, i, i?.colorStrings);
-    if (null == i) return (0, r.jsxs)("span", { children: ["@", eA.intl.string(eA.t["YV4F/n"])] });
-    let o = null != i.color && 0 !== i.color,
-        l = "username" === s && o;
-    return (0, r.jsxs)(eu.A, {
-        color: l ? i.color : null,
-        roleColors: l ? a : null,
-        children: [
-            "dot" === s && (0, r.jsx)(ee.W, { color: i.colorString, colors: a, background: !1, tooltip: !1 }),
-            "@",
-            i.name,
-        ],
-    });
+function eR(e) {
+    let { id: t, guildId: n, channelId: i } = e,
+        a = (0, Z.bG)([ep.A], () => (null != n ? ep.A.getRole(n, t) : void 0)),
+        o = (0, Z.bG)([er.A], () => er.A.roleStyle),
+        l = (0, eh.X_)(n, a, a?.colorStrings),
+        u = s.useRef(null);
+    if (null == a) return (0, r.jsxs)("span", { children: ["@", eS.intl.string(eS.t["YV4F/n"])] });
+    let c = null != a.color && 0 !== a.color,
+        d = "dot" === o,
+        _ = "username" === o && c,
+        f = (e) =>
+            (0, r.jsxs)(ed.A, {
+                ref: u,
+                color: _ ? a.color : null,
+                roleColors: _ ? l : null,
+                ...e,
+                children: [
+                    d && (0, r.jsx)(ee.W, { color: a.colorString, colors: l, background: !1, tooltip: !1 }),
+                    "@",
+                    a.name,
+                ],
+            });
+    return null == n || null == i
+        ? f()
+        : (0, r.jsx)(et.Y, {
+              targetElementRef: u,
+              preload: async () => {
+                  await (0, ea.a)(n, t);
+              },
+              renderPopout: (e) => (0, r.jsx)(ef.Y, { guildId: n, channelId: i, roleId: t, popoutProps: e }),
+              position: "top",
+              children: f,
+          });
 }
-function ev(e) {
+function eb(e) {
     let { id: t } = e,
         n = (0, Z.bG)([C.A], () => C.A.getChannel(t)),
-        i = eA.intl.string(eA.t.zLZPmk).toLowerCase(),
+        i = eS.intl.string(eS.t.zLZPmk).toLowerCase(),
         s = "text",
         a = !0;
     return (null != n &&
-        ((i = (0, es.nc)(n) ? (0, er.m1)(n, ep.default, ef.A) : eA.intl.string(eA.t["/YzI63"])),
-        (s = (0, es.nc)(n) ? ((0, eE.QG)(n) ?? "text") : "locked"),
-        (a = (0, ea.Y)(n.type))),
+        ((i = (0, eo.nc)(n) ? (0, es.m1)(n, eg.default, eE.A) : eS.intl.string(eS.t["/YzI63"])),
+        (s = (0, eo.nc)(n) ? ((0, eA.QG)(n) ?? "text") : "locked"),
+        (a = (0, el.Y)(n.type))),
     a)
-        ? (0, r.jsx)(eu.A, { iconType: s, children: i })
+        ? (0, r.jsx)(ed.A, { iconType: s, children: i })
         : (0, r.jsx)("span", { children: "#" + i });
 }
-function eO(e) {
+function eD(e) {
     let { id: t, itemId: n, guildId: i } = e,
-        s = (0, eo.Q)(t),
-        a = (0, eo.f)(t, n, i);
-    return (0, r.jsxs)(eu.A, { iconType: t, children: [s, null != a && (0, r.jsx)(ec.A, {}), a] });
+        s = (0, eu.Q)(t),
+        a = (0, eu.f)(t, n, i);
+    return (0, r.jsxs)(ed.A, { iconType: t, children: [s, null != a && (0, r.jsx)(e_.A, {}), a] });
 }
-function eR(e) {
+function eL(e) {
     let { text: t, id: n } = e;
-    return (0, r.jsxs)(eu.A, { children: [t, "(", n, ")"] });
+    return (0, r.jsxs)(ed.A, { children: [t, "(", n, ")"] });
 }
-function eb(e) {
+function ew(e) {
     let { timestamp: t } = e;
-    return (0, r.jsx)(el.A, { node: t, className: "R" === t.format ? eI.gS : null });
+    return (0, r.jsx)(ec.A, { node: t, className: "R" === t.format ? eN.gS : null });
 }
-var eD = n(571898),
-    eL = n(494715),
-    ew = n(766184);
-let eM = {
-    strong: eD.bold,
-    em: eD.italics,
-    u: eD.underline,
-    s: eD.strikethrough,
-    inlineCode: eD.inlineCode,
-    link: eD.fakeLink,
-    url: eD.fakeLink,
-    autolink: eD.fakeLink,
-    silentPrefix: eD.fakeLink,
-    spoiler: o()(ew.ur, ew.F0, ew.kx, eD.spoiler),
-    staticRouteLink: eD.fakeLink,
-    syntaxBefore: eD.syntaxBefore,
-    syntaxAfter: eD.syntaxAfter,
-    codeBlockText: eD.codeBlockText,
-    codeBlockSyntax: eD.codeBlockSyntax,
-    codeBlockLang: eD.codeBlockLang,
-    subtext: eD.subtext,
+var eM = n(571898),
+    eP = n(494715),
+    ex = n(766184);
+let eU = {
+    strong: eM.bold,
+    em: eM.italics,
+    u: eM.underline,
+    s: eM.strikethrough,
+    inlineCode: eM.inlineCode,
+    link: eM.fakeLink,
+    url: eM.fakeLink,
+    autolink: eM.fakeLink,
+    silentPrefix: eM.fakeLink,
+    spoiler: o()(ex.ur, ex.F0, ex.kx, eM.spoiler),
+    staticRouteLink: eM.fakeLink,
+    syntaxBefore: eM.syntaxBefore,
+    syntaxAfter: eM.syntaxAfter,
+    codeBlockText: eM.codeBlockText,
+    codeBlockSyntax: eM.codeBlockSyntax,
+    codeBlockLang: eM.codeBlockLang,
+    subtext: eM.subtext,
 };
-var eP = n(992595);
-let ex = (e) => {
+var ek = n(992595);
+let eG = (e) => {
     let { className: t, attributes: n, children: i } = e,
-        s = o()(eL.S0, eL.Cj, t);
+        s = o()(eP.S0, eP.Cj, t);
     return (0, r.jsx)("span", { ...n, className: s, contentEditable: !1, children: i });
 };
-var eU = n(422404);
-class ek extends s.PureComponent {
+var eF = n(422404);
+class eV extends s.PureComponent {
     containerRef = s.createRef();
     state;
     constructor(e) {
@@ -470,7 +489,7 @@ class ek extends s.PureComponent {
                         })
                         .map((e) => {
                             let [t, n] = e;
-                            return !0 === n && t in eM ? eM[t] : null;
+                            return !0 === n && t in eU ? eU[t] : null;
                         })
                         .filter((e) => null != e)
                         .join(" ");
@@ -478,82 +497,82 @@ class ek extends s.PureComponent {
                     case "line":
                         if (a.codeBlockState?.isInCodeBlock)
                             return (0, r.jsx)("div", {
-                                className: eD.codeLine,
+                                className: eM.codeLine,
                                 spellCheck: null == a.codeBlockState || null == a.codeBlockState.lang,
                                 ...i,
                                 children: s,
                             });
                         return (0, r.jsx)("div", { ...i, children: s });
                     case "blockQuote": {
-                        let e = o()(eP.h, eP.MN);
+                        let e = o()(ek.h, ek.MN);
                         return (0, r.jsxs)("div", {
                             ...i,
                             className: e,
                             children: [
-                                (0, r.jsx)("span", { contentEditable: !1, className: eP.r }),
+                                (0, r.jsx)("span", { contentEditable: !1, className: ek.r }),
                                 (0, r.jsx)("blockquote", { children: s }),
                             ],
                         });
                     }
                     case "emoji":
-                        return (0, r.jsxs)(ex, {
+                        return (0, r.jsxs)(eG, {
                             attributes: i,
                             className: u,
-                            children: [(0, r.jsx)(eT, { emoji: a.emoji }), s],
+                            children: [(0, r.jsx)(ey, { emoji: a.emoji }), s],
                         });
                     case "customEmoji":
-                        return (0, r.jsxs)(ex, {
+                        return (0, r.jsxs)(eG, {
                             attributes: i,
                             className: u,
-                            children: [(0, r.jsx)(eS, { emoji: a.emoji }), s],
+                            children: [(0, r.jsx)(eC, { emoji: a.emoji }), s],
                         });
                     case "textMention":
-                        return (0, r.jsxs)(ex, {
+                        return (0, r.jsxs)(eG, {
                             attributes: i,
                             className: u,
-                            children: [(0, r.jsx)(eN, { text: a.name }), s],
+                            children: [(0, r.jsx)(ev, { text: a.name }), s],
                         });
                     case "userMention":
-                        return (0, r.jsxs)(ex, {
+                        return (0, r.jsxs)(eG, {
                             attributes: i,
                             className: u,
-                            children: [(0, r.jsx)(ey, { id: a.userId, channelId: n, guildId: t }), s],
+                            children: [(0, r.jsx)(eO, { id: a.userId, channelId: n, guildId: t }), s],
                         });
                     case "roleMention":
-                        return (0, r.jsxs)(ex, {
+                        return (0, r.jsxs)(eG, {
                             attributes: i,
                             className: u,
-                            children: [(0, r.jsx)(eC, { id: a.roleId, guildId: t }), s],
+                            children: [(0, r.jsx)(eR, { id: a.roleId, guildId: t, channelId: n }), s],
                         });
                     case "channelMention":
-                        return (0, r.jsxs)(ex, {
+                        return (0, r.jsxs)(eG, {
                             attributes: i,
                             className: u,
-                            children: [(0, r.jsx)(ev, { id: a.channelId }), s],
+                            children: [(0, r.jsx)(eb, { id: a.channelId }), s],
                         });
                     case "staticRouteLink":
-                        return (0, r.jsxs)(ex, {
+                        return (0, r.jsxs)(eG, {
                             attributes: i,
                             className: u,
-                            children: [(0, r.jsx)(eO, { id: a.id, itemId: a.itemId, guildId: t }), s],
+                            children: [(0, r.jsx)(eD, { id: a.id, itemId: a.itemId, guildId: t }), s],
                         });
                     case "soundboard":
-                        return (0, r.jsxs)(ex, {
+                        return (0, r.jsxs)(eG, {
                             attributes: i,
                             className: u,
                             children: [(0, r.jsx)(q.LF, { soundId: a.soundId }), s],
                         });
                     case "commandMention":
-                        return (0, r.jsxs)(ex, {
+                        return (0, r.jsxs)(eG, {
                             attributes: i,
                             className: u,
-                            children: [(0, r.jsx)(eR, { text: a.commandName, id: a.commandId }), s],
+                            children: [(0, r.jsx)(eL, { text: a.commandName, id: a.commandId }), s],
                         });
                     case "timestamp":
-                        return (0, r.jsxs)(ex, {
+                        return (0, r.jsxs)(eG, {
                             attributes: i,
                             className: u,
-                            children: [(0, r.jsx)(eb, { timestamp: a.parsed }), s],
+                            children: [(0, r.jsx)(ew, { timestamp: a.parsed }), s],
                         });
                     default:
                         return null;
@@ -588,18 +607,18 @@ class ek extends s.PureComponent {
                                             (("codeBlockLang" === t || "codeBlockSyntax" === t) && (u = !1),
                                             t.startsWith("before_") || t.startsWith("after_"))
                                         )
-                                            return [eD[t]];
-                                        if (t in eM) return [eM[t]];
+                                            return [eM[t]];
+                                        if (t in eU) return [eU[t]];
                                         throw Error(`Slate: Unknown decoration attribute: ${t}`);
                                     }
                                 })
                                 .filter((e) => null != e)
                                 .join(" ");
-                            n = o()(e, { [eD.syntaxOverride]: "||" === a.text || "\\" === a.text });
+                            n = o()(e, { [eM.syntaxOverride]: "||" === a.text || "\\" === a.text });
                         }
                     }
                     return (
-                        (n = o()(n, { [eL.BI]: "" === l.text })),
+                        (n = o()(n, { [eP.BI]: "" === l.text })),
                         (0, r.jsx)("span", { ...i, className: n, spellCheck: u, children: s })
                     );
                 })(t, e);
@@ -820,14 +839,14 @@ class ek extends s.PureComponent {
             className: n,
             children: [
                 this.state.showPlaceholder
-                    ? (0, r.jsx)("div", { className: o()(eU.q, t), "aria-hidden": !0, children: a })
+                    ? (0, r.jsx)("div", { className: o()(eF.q, t), "aria-hidden": !0, children: a })
                     : null,
                 (0, r.jsx)(j.A, {
                     editor: e,
                     value: [...this.state.initialValue],
                     children: (0, r.jsx)(j.Fo, {
                         ...g,
-                        className: o()(eP.PT, eU.E, t),
+                        className: o()(ek.PT, eF.E, t),
                         decorate: l,
                         renderElement: this.renderElement,
                         renderLeaf: this.renderLeaf,
@@ -851,8 +870,8 @@ class ek extends s.PureComponent {
         });
     }
 }
-var eG = n(323350);
-function eF(e, t, n, i) {
+var eB = n(323350);
+function eH(e, t, n, i) {
     let r = 0;
     for (let s = 0; s < n.length; s++) {
         let a = n[s];
@@ -868,41 +887,41 @@ function eF(e, t, n, i) {
     let s = n.length - 1;
     return { path: $.PW.child(t, s), offset: n[s]?.length ?? 0 };
 }
-let eV = new Set(["line", "blockQuote"]),
-    eB = [];
-var eH = n(143236),
-    ej = n(154283),
-    eY = n(264322),
-    eW = n(885386);
+let ej = new Set(["line", "blockQuote"]),
+    eY = [];
+var eW = n(143236),
+    eK = n(154283),
+    ez = n(264322),
+    e$ = n(885386);
 n(667532);
-var eK = n(485845),
-    ez = n(459016),
-    e$ = n(842209),
-    eq = n(392054),
-    eZ = n(168186),
-    eX = n(203779),
-    eQ = n(649671),
-    eJ = n(551483);
+var eq = n(485845),
+    eZ = n(459016),
+    eX = n(842209),
+    eQ = n(392054),
+    eJ = n(168186),
+    e0 = n(203779),
+    e1 = n(649671),
+    e2 = n(551483);
 n(827669);
-let e0 = new Set(["applicationCommandOption"]),
-    e1 = new Set([h.n4.ATTACHMENT]),
-    e2 = new Set(["line", "applicationCommand"]);
-function e3(e, t, n, i) {
+let e3 = new Set(["applicationCommandOption"]),
+    e6 = new Set([h.n4.ATTACHMENT]),
+    e4 = new Set(["line", "applicationCommand"]);
+function e5(e, t, n, i) {
     let [r] = $.VW.blocks(e)[0],
-        s = (i ? (0, eG.IQ)(r, { mode: "plain" }).trimEnd() : "")
+        s = (i ? (0, eB.IQ)(r, { mode: "plain" }).trimEnd() : "")
             .split("\n")
             .map((e) => ({ type: "line", children: [{ text: e }] })),
         a = [s.length - 1];
-    for (let [, t] of (z.b.insertNodes(e, s, { at: eJ.Xg }), $.VW.blocks(e).reverse()))
+    for (let [, t] of (z.b.insertNodes(e, s, { at: e2.Xg }), $.VW.blocks(e).reverse()))
         $.PW.isAfter(t, a) && z.b.removeNodes(e, { at: t, voids: !0 });
     null != n && w.Gf({ channelId: t, command: null, section: null });
 }
-function e6(e, t) {
+function e7(e, t) {
     if (
         null == t.options ||
         1 !== t.options.length ||
         !0 === t.options[0].required ||
-        e1.has(t.options[0].type) ||
+        e6.has(t.options[0].type) ||
         B.O7(e).length > 0 ||
         null == B.n$(e)
     )
@@ -910,8 +929,8 @@ function e6(e, t) {
     let n = $.VW.getFirstText(e);
     if (null == n) return !1;
     let i = t.options[0],
-        r = { path: eJ.fP, offset: t.displayName.length + 2 },
-        s = { path: eJ.fP, offset: n.text.length };
+        r = { path: e2.fP, offset: t.displayName.length + 2 },
+        s = { path: e2.fP, offset: n.text.length };
     return (
         !(!n.text.startsWith(`/${t.displayName} `.toLocaleLowerCase()) || $.Kh.equals(r, s)) &&
         (z.b.textToInline(
@@ -928,7 +947,7 @@ function e6(e, t) {
         !0)
     );
 }
-function e4(e) {
+function e8(e) {
     let {
         guildId: t,
         channelId: n,
@@ -954,7 +973,7 @@ function e4(e) {
                 hasValue: null != s && e.name in s,
                 isActive: e.name === r,
                 lastValidationResult: f
-                    ? (0, eX.J)({
+                    ? (0, e0.J)({
                           option: e,
                           content: s?.[e.name] ?? null,
                           guildId: t,
@@ -971,24 +990,24 @@ function e4(e) {
     }
     _ && w.H2(n, c);
 }
-function e5(e) {
+function e9(e) {
     let t = B.n$(e);
     if (null == t) return { command: null, commandText: null };
     let [n] = t,
         i = n.children[0];
     return $.l5.isText(i) ? { command: n.command, commandText: i.text } : { command: n.command, commandText: null };
 }
-function e7(e, t) {
+function te(e, t) {
     let n = B.O7(e)[0];
     t();
     let i = $.ZF.toPoint(e.selection);
     if (null == i || n === B.O7(e)[0]) return;
-    let { command: r, commandText: s } = e5(e);
+    let { command: r, commandText: s } = e9(e);
     !(null == r || null == s || s.endsWith(" ")) &&
-        $.Kh.equals(i, { path: eJ.fP, offset: r.displayName.length + 1 }) &&
+        $.Kh.equals(i, { path: e2.fP, offset: r.displayName.length + 1 }) &&
         z.b.insertText(e, " ");
 }
-function e8(e, t, n) {
+function tt(e, t, n) {
     let i = e.activeCommand?.options?.find((e) => e.name === n),
         r = e.initialValues[n];
     if (null == i || null == r) return null;
@@ -996,47 +1015,47 @@ function e8(e, t, n) {
     let s = r.value?.toString();
     return i.type === h.n4.CHANNEL || (i.type === h.n4.MENTIONABLE && null != C.A.getChannel(s))
         ? `<#${s}>	`
-        : i.type === h.n4.USER || (i.type === h.n4.MENTIONABLE && null != ep.default.getUser(s))
+        : i.type === h.n4.USER || (i.type === h.n4.MENTIONABLE && null != eg.default.getUser(s))
           ? `<@${s}>`
-          : i.type === h.n4.ROLE || (i.type === h.n4.MENTIONABLE && null != e_.A.getRole(t.guild_id, s ?? x.dJq))
+          : i.type === h.n4.ROLE || (i.type === h.n4.MENTIONABLE && null != ep.A.getRole(t.guild_id, s ?? x.dJq))
             ? `<@&${s}>`
             : s;
 }
-var e9 = n(635377),
-    te = n.n(e9),
-    tt = n(941426),
-    tn = n(730296);
-let ti = new Map(),
-    tr = new Map(),
-    ts = new Set();
-function ta(e) {
-    let t = ti.get(e);
+var tn = n(635377),
+    ti = n.n(tn),
+    tr = n(941426),
+    ts = n(730296);
+let ta = new Map(),
+    to = new Map(),
+    tl = new Set();
+function tu(e) {
+    let t = ta.get(e);
     if (null != t) return t;
-    if (!(e in tn.pb)) {
+    if (!(e in ts.pb)) {
         let t = Promise.resolve(null);
-        return ti.set(e, t), t;
+        return ta.set(e, t), t;
     }
     return (
-        (t = (null == i && (i = (0, tn.A)()), i)
-            .then((t) => t.loadGrammar(tn.pb[e]))
+        (t = (null == i && (i = (0, ts.A)()), i)
+            .then((t) => t.loadGrammar(ts.pb[e]))
             .then((t) => {
-                for (let n of (tr.set(e, t), ts)) n(e);
+                for (let n of (to.set(e, t), tl)) n(e);
                 return t;
             })),
-        ti.set(e, t),
+        ta.set(e, t),
         t
     );
 }
-var to = n(157941),
-    tl = n(768947),
-    tu = n(927813),
-    tc = n(618559);
-let td = new tt.Vy("withCodeBlocks"),
-    t_ = new Set(["line"]),
-    tf = /^[a-z0-9_+\-.#]+$/i,
-    th = null,
-    tp = null;
-function tE(e, t) {
+var tc = n(157941),
+    td = n(768947),
+    t_ = n(927813),
+    tf = n(618559);
+let th = new tr.Vy("withCodeBlocks"),
+    tp = new Set(["line"]),
+    tE = /^[a-z0-9_+\-.#]+$/i,
+    tm = null,
+    tg = null;
+function tA(e, t) {
     let n = (function (e, t) {
         let n = [],
             i = null;
@@ -1045,7 +1064,7 @@ function tE(e, t) {
                 let s = (function (e) {
                         let t,
                             [n, i] = e;
-                        if (!t_.has(n.type)) return [];
+                        if (!tp.has(n.type)) return [];
                         let r = [],
                             s = /\\|```/g;
                         for (let e = 0; e < n.children.length; e++) {
@@ -1072,7 +1091,7 @@ function tE(e, t) {
                     c = n && 0 === s.length,
                     d = i && 0 === s.length,
                     _ = (u ? s.slice(1) : s).length % 2 == 1,
-                    f = _ && (null == l || "" === l || null != l.match(tf)),
+                    f = _ && (null == l || "" === l || null != l.match(tE)),
                     h = f && null != l && "" !== l ? l.toLowerCase() : null;
                 return {
                     blockEntry: t,
@@ -1095,7 +1114,7 @@ function tE(e, t) {
                 n.push(i);
         return (
             (function (e, t) {
-                let n = to.L.getConfig({ location: "syntaxHighlightCodeBlocks" }).enabled,
+                let n = tc.L.getConfig({ location: "syntaxHighlightCodeBlocks" }).enabled,
                     i = [],
                     r = !1;
                 for (let s of e) {
@@ -1104,19 +1123,19 @@ function tE(e, t) {
                         (s.closesCodeBlock || a) &&
                         (r && a && !s.closesCodeBlock && i.push(s), (r = !1), i.length > 0)
                     ) {
-                        let e = i.map((e) => (0, eG.IQ)(e.blockEntry[0])).join("\n"),
+                        let e = i.map((e) => (0, eB.IQ)(e.blockEntry[0])).join("\n"),
                             r = i[0].lang;
                         if (null != r && n)
                             !(function (e, t, n, i) {
                                 let r = (function (e, t, n, i) {
                                     let r,
-                                        s = (0, tl.py)(t);
+                                        s = (0, td.py)(t);
                                     if (null == s) return null;
                                     let a = `${e}-${s}`,
-                                        o = tS.get(a);
+                                        o = tC.get(a);
                                     if (null != o && o.length === n) return o;
                                     for (let t of e.split("\n")) if (t.length > 1e3) return null;
-                                    let l = tr.has(s) ? (tr.get(s) ?? null) : (ta(s), null);
+                                    let l = to.has(s) ? (to.get(s) ?? null) : (tu(s), null);
                                     if (null == l) return i?.(s), null;
                                     let u = e.endsWith("\n")
                                             ? e
@@ -1141,9 +1160,9 @@ function tE(e, t) {
                                                     i = [],
                                                     r = 0,
                                                     s = 0;
-                                                for (tg.lastIndex = 0; null != (t = tg.exec(e)); ) {
+                                                for (tT.lastIndex = 0; null != (t = tT.exec(e)); ) {
                                                     let a = t.index + t[0].length,
-                                                        o = tN(e.substring(s, t.index)).length,
+                                                        o = tv(e.substring(s, t.index)).length,
                                                         l = i.filter((e) => null != e);
                                                     if (
                                                         (o > 0 &&
@@ -1152,12 +1171,12 @@ function tE(e, t) {
                                                         o > 0 && (r += o),
                                                         null != t[1])
                                                     ) {
-                                                        let e = tA.get(t[1]);
+                                                        let e = tS.get(t[1]);
                                                         i.push(e ?? null);
                                                     } else i.pop();
                                                     s = a;
                                                 }
-                                                let a = tN(e.substring(s)).length,
+                                                let a = tv(e.substring(s)).length,
                                                     o = i.filter((e) => null != e);
                                                 return (
                                                     a > 0 && o.length > 0 && n.push({ types: o, start: r, end: r + a }),
@@ -1165,22 +1184,22 @@ function tE(e, t) {
                                                 );
                                             })(d[e]),
                                         );
-                                    return tS.set(a, _), _;
+                                    return tC.set(a, _), _;
                                 })(e, t, n.length, i);
                                 if (null != r) for (let e = 0; e < n.length; e++) n[e].hljsTypes = r[e];
                                 else for (let e = 0; e < n.length; e++) n[e].hljsTypes = [];
                             })(e, r, i, t);
-                        else if (null == r || null == th || th.hasLanguage(r)) {
-                            if (null != r && null != th && th.hasLanguage(r)) {
+                        else if (null == r || null == tm || tm.hasLanguage(r)) {
+                            if (null != r && null != tm && tm.hasLanguage(r)) {
                                 let t = (function (e, t) {
-                                    if (null == th) return null;
+                                    if (null == tm) return null;
                                     let n = `${e}-${t}`,
-                                        i = tT.get(n);
+                                        i = ty.get(n);
                                     if (null != i) return i;
-                                    let r = th.highlight(t, e, !1);
+                                    let r = tm.highlight(t, e, !1);
                                     if (null == r || r.illegal) return null;
                                     let s = r.value.split("\n");
-                                    return tT.set(n, s), s;
+                                    return ty.set(n, s), s;
                                 })(e, r);
                                 if (null != t && t.length === i.length) {
                                     let e = [];
@@ -1195,7 +1214,7 @@ function tE(e, t) {
                                             a = [],
                                             o = 0,
                                             l = 0;
-                                        for (; null != (r = tm.exec(s)); ) {
+                                        for (; null != (r = tI.exec(s)); ) {
                                             let t = r.index + r[0].length,
                                                 n = r.index - l;
                                             r.index > l &&
@@ -1242,14 +1261,14 @@ function tE(e, t) {
         n.some((e) => null != e.lang)
     );
 }
-let tm = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
-    tg = /(?:<(a-[a-z]{1,2})>)|(?:<\/a-[a-z]{1,2}>)/g,
-    tA = new Map();
-for (let [e, t] of Object.entries(tc)) e.startsWith("a-") && null != t && tA.set(e, t);
-let tI = { max: 1 / 0, maxAge: +tu.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    tT = new (te())(tI),
-    tS = new (te())(tI);
-function tN(e) {
+let tI = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
+    tT = /(?:<(a-[a-z]{1,2})>)|(?:<\/a-[a-z]{1,2}>)/g,
+    tS = new Map();
+for (let [e, t] of Object.entries(tf)) e.startsWith("a-") && null != t && tS.set(e, t);
+let tN = { max: 1 / 0, maxAge: +t_.A.Millis.MINUTE, updateAgeOnGet: !0 },
+    ty = new (ti())(tN),
+    tC = new (ti())(tN);
+function tv(e) {
     return e
         .replace(/&amp;/g, "&")
         .replace(/&lt;/g, "<")
@@ -1257,10 +1276,10 @@ function tN(e) {
         .replace(/&quot;/g, '"')
         .replace(/&#x27;/g, "'");
 }
-function ty(e, t) {
+function tO(e, t) {
     let n = 0;
     for (let i of $.VW.nodes(e, {
-        at: { anchor: { path: eJ.fP, offset: 0 }, focus: t },
+        at: { anchor: { path: e2.fP, offset: 0 }, focus: t },
         mode: "lowest",
         match: (e) => $.l5.isText(e),
     })) {
@@ -1271,31 +1290,31 @@ function ty(e, t) {
     }
     return n % 2 != 0;
 }
-function tC(e) {
+function tR(e) {
     if (null == e.selection) return !1;
     let t = $.ZF.start(e.selection);
-    return ty(e, t);
+    return tO(e, t);
 }
-ts.add(() => {
-    tS.reset();
+tl.add(() => {
+    tC.reset();
 });
-let tv = new Set(["line", "blockQuote"]),
-    tO = ["applicationCommand"],
-    tR = ["timestampMentionInput"];
-function tb(e) {
+let tb = new Set(["line", "blockQuote"]),
+    tD = ["applicationCommand"],
+    tL = ["timestampMentionInput"];
+function tw(e) {
     let t = $.VW.getCurrentBlock(e),
         n = $.VW.getCurrentInline(e);
-    return null != t && !tO.includes(t[0].type) && !tR.includes(n?.[0]?.type);
+    return null != t && !tD.includes(t[0].type) && !tL.includes(n?.[0]?.type);
 }
-function tD(e) {
+function tM(e) {
     return { type: "other", mergeable: !1, createdAt: Date.now(), value: $.VW.richValue(e), selection: e.selection };
 }
-var tL = n(877413),
-    tw = n.n(tL),
-    tM = n(284009),
-    tP = n.n(tM),
-    tx = n(339871);
-function tU(e, t) {
+var tP = n(877413),
+    tx = n.n(tP),
+    tU = n(284009),
+    tk = n.n(tU),
+    tG = n(339871);
+function tF(e, t) {
     let { cmd: n = !1, ctrl: i = !1, alt: r = !1, shift: s = !1 } = t;
     return (
         (null == n || e.metaKey === n) &&
@@ -1304,7 +1323,7 @@ function tU(e, t) {
         (null == s || e.shiftKey === s)
     );
 }
-let tk = (e) => {
+let tV = (e) => {
         let t = $.VW.getCurrentBlock(e);
         if (null != t) {
             let n = $.VW.start(e, t[1]);
@@ -1312,7 +1331,7 @@ let tk = (e) => {
         }
         return !1;
     },
-    tG = (e) => {
+    tB = (e) => {
         let t = $.VW.getCurrentBlock(e);
         if (null != t) {
             let n = $.VW.end(e, t[1]);
@@ -1320,10 +1339,10 @@ let tk = (e) => {
         }
         return !1;
     };
-var tF = n(224868);
-let tV =
+var tH = n(224868);
+let tj =
         /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
-    tB = new Set([
+    tY = new Set([
         "emoji",
         "customEmoji",
         "textMention",
@@ -1334,30 +1353,30 @@ let tV =
         "soundboard",
         "timestamp",
     ]),
-    tH = new Set(["timestampMentionInput"]),
-    tj = new Set(["line", "blockQuote"]),
-    tY = new Set(["applicationCommandOption"]);
-function tW(e, t, n) {
+    tW = new Set(["timestampMentionInput"]),
+    tK = new Set(["line", "blockQuote"]),
+    tz = new Set(["applicationCommandOption"]);
+function t$(e, t, n) {
     let i = $.VW.areStylesDisabled(e);
     for (let r of $.VW.blocks(e))
-        if (tj.has(r[0].type)) i ? tz(e, r, !0, null) : tK(e, r, t, n);
+        if (tK.has(r[0].type)) i ? tZ(e, r, !0, null) : tq(e, r, t, n);
         else {
             let [s, a] = r;
             for (let r = s.children.length - 1; r >= 0; r--) {
                 let o = s.children[r];
-                if (!$.l5.isText(o) && tY.has(o.type)) {
+                if (!$.l5.isText(o) && tz.has(o.type)) {
                     let s = [o, $.PW.child(a, r)];
-                    i ? tz(e, s, !0, null) : tK(e, s, t, n);
+                    i ? tZ(e, s, !0, null) : tq(e, s, t, n);
                 }
             }
         }
 }
-function tK(e, t, n, i) {
+function tq(e, t, n, i) {
     let r = "line" === t[0].type && t[0].codeBlockState?.isInCodeBlock === !0,
         s = $.cv.markdown(t[0], n);
-    tz(e, t, r, s) && ((t = $.cv.updateElement(e, t)), (s = $.cv.markdown(t[0], n))),
+    tZ(e, t, r, s) && ((t = $.cv.updateElement(e, t)), (s = $.cv.markdown(t[0], n))),
         r ||
-            (t$(e, t, i, s) && ((t = $.cv.updateElement(e, t)), (s = $.cv.markdown(t[0], n))),
+            (tX(e, t, i, s) && ((t = $.cv.updateElement(e, t)), (s = $.cv.markdown(t[0], n))),
             (function (e, t, n, i, r) {
                 let [s, a] = t;
                 for (let o = s.children.length - 1; o >= 0; o--) {
@@ -1366,27 +1385,27 @@ function tK(e, t, n, i) {
                     if (!$.l5.isText(u)) continue;
                     let c = $.PW.child(a, o),
                         d = [];
-                    for (tV.lastIndex = 0; null != (l = tV.exec(u.text)); ) {
+                    for (tj.lastIndex = 0; null != (l = tj.exec(u.text)); ) {
                         if (0 !== l.index && null == u.text.charAt(l.index - 1).match(/(\t|\s)/)) {
-                            tV.lastIndex = l.index + 1;
+                            tj.lastIndex = l.index + 1;
                             continue;
                         }
-                        if (tq(e, a, { path: c, offset: l.index }, r)) continue;
-                        let s = (0, tF.p)(l[0], n, i);
-                        null != s && tZ(i, t[0], s)
+                        if (tQ(e, a, { path: c, offset: l.index }, r)) continue;
+                        let s = (0, tH.p)(l[0], n, i);
+                        null != s && tJ(i, t[0], s)
                             ? d.push({ index: l.index, length: l[0].length, node: s })
-                            : (tV.lastIndex = l.index + 1);
+                            : (tj.lastIndex = l.index + 1);
                     }
                     for (let t of d.reverse())
                         (function (e, t, n, i, r) {
                             let [s, a] = t,
                                 o = { path: a, offset: n },
                                 l = { path: a, offset: n + i };
-                            tP()(
+                            tk()(
                                 o.offset >= 0 && o.offset <= s.text.length,
                                 "Failed to find valid start position for raw mention replace",
                             ),
-                                tP()(
+                                tk()(
                                     l.offset >= 0 && l.offset <= s.text.length,
                                     "Failed to find valid end position for raw mention replace",
                                 ),
@@ -1395,7 +1414,7 @@ function tK(e, t, n, i) {
                 }
             })(e, t, n, i, s));
 }
-function tz(e, t, n, i) {
+function tZ(e, t, n, i) {
     let [r, s] = t,
         a = !1;
     for (let t = r.children.length - 1; t >= 0; t--) {
@@ -1416,18 +1435,18 @@ function tz(e, t, n, i) {
             }
             if (i) {
                 let i = $.PW.child(s, t + 1);
-                z.b.voidToText(e, (0, eG.IQ)(n, { mode: "plain", preventEmojiSurrogates: !0 }), i), (a = !0);
+                z.b.voidToText(e, (0, eB.IQ)(n, { mode: "plain", preventEmojiSurrogates: !0 }), i), (a = !0);
             }
         } else if ($.cv.isElement(o) && e.isVoid(o)) {
             let r = $.PW.child(s, t),
                 l = { path: $.PW.child(r, 0), offset: 0 };
-            (n || (null != i && tq(e, s, l, i))) &&
-                (z.b.voidToText(e, (0, eG.IQ)(o, { mode: "plain", preventEmojiSurrogates: !0 }), r), (a = !0));
+            (n || (null != i && tQ(e, s, l, i))) &&
+                (z.b.voidToText(e, (0, eB.IQ)(o, { mode: "plain", preventEmojiSurrogates: !0 }), r), (a = !0));
         }
     }
     return a;
 }
-function t$(e, t, n, i) {
+function tX(e, t, n, i) {
     let r = t[1],
         s = !1,
         a = [...i.entries].reverse();
@@ -1488,14 +1507,14 @@ function t$(e, t, n, i) {
             default:
                 continue;
         }
-        if (!tZ(n, t[0], l)) continue;
-        let d = eF(e, r, i.serializedChildren, u.start),
-            _ = eF(e, r, i.serializedChildren, u.start + u.text.length);
+        if (!tJ(n, t[0], l)) continue;
+        let d = eH(e, r, i.serializedChildren, u.start),
+            _ = eH(e, r, i.serializedChildren, u.start + u.text.length);
         z.b.textToVoid(e, l, { anchor: d, focus: _ }), (s = !0);
     }
     return s;
 }
-function tq(e, t, n, i) {
+function tQ(e, t, n, i) {
     let r = 0;
     for (let [i, s] of $.VW.nodes(e, { at: { anchor: $.VW.start(e, t), focus: n }, mode: "lowest" }))
         $.l5.isText(i) ? ($.PW.equals(s, n.path) ? (r += n.offset) : (r += i.text.length)) : (r += 1);
@@ -1507,7 +1526,7 @@ function tq(e, t, n, i) {
     }
     return !1;
 }
-function tZ(e, t, n) {
+function tJ(e, t, n) {
     if ("applicationCommandOption" !== t.type) return !0;
     switch (t.optionType) {
         case h.n4.CHANNEL:
@@ -1530,7 +1549,7 @@ function tZ(e, t, n) {
             return !1;
     }
 }
-function tX(e, t, n) {
+function t0(e, t, n) {
     let i = $.VW.getCurrentInline(e);
     if ("block" === t) return !0;
     let r = $.VW.getCurrentText(e);
@@ -1574,21 +1593,21 @@ function tX(e, t, n) {
         }
     return z.b.delete(e, { at: u, unit: t, reverse: n, select: !0 }), !0;
 }
-var tQ = n(527214);
-function tJ(e, t) {
+var t1 = n(527214);
+function t2(e, t) {
     let n = E.A.getActiveCommand(e.id),
         i = n?.options?.find((e) => e.name === t.optionName);
     return null != i && (i.type !== h.n4.STRING || i?.choices != null || i?.autocomplete);
 }
-function t0(e, t, n, i) {
+function t3(e, t, n, i) {
     let r = $.VW.areStylesDisabled(e) || null == n ? t : n;
     H.o.withSingleEntry(e, () => {
         z.b.insertText(e, i ? r + " " : r);
     });
 }
-var t1 = n(770178);
-let t2 = { enabled: !0, fireOnMount: !0, fireOnDepsChange: !0 };
-function t3(e) {
+var t6 = n(770178);
+let t4 = { enabled: !0, fireOnMount: !0, fireOnDepsChange: !0 };
+function t5(e) {
     try {
         return $.VW.toDOMNode(e, e);
     } catch (t) {
@@ -1596,8 +1615,8 @@ function t3(e) {
         return (e.stack = t.stack), W.A.captureException(e), null;
     }
 }
-var t6 = n(31717);
-let t4 = (e) => {
+var t7 = n(31717);
+let t8 = (e) => {
         let t,
             { channelId: n, element: i, attributes: a, children: l } = e,
             u = (0, j.f7)(),
@@ -1611,10 +1630,10 @@ let t4 = (e) => {
                 }),
                 [n, i.optionName],
             ),
-            p = (0, Z.bG)([g.A], () => g.A.getUpload(n, i.optionName, t6.C.SlashCommand), [n, i.optionName]),
+            p = (0, Z.bG)([g.A], () => g.A.getUpload(n, i.optionName, t7.C.SlashCommand), [n, i.optionName]),
             m = i.children[i.children.length - 1],
             A = null != m && $.l5.isText(m) && m.text.endsWith("\n"),
-            I = o()(eL.S0, eL.xP, { [eL.t$]: c && u, [eL.$2]: (!c || !u) && f }),
+            I = o()(eP.S0, eP.xP, { [eP.t$]: c && u, [eP.$2]: (!c || !u) && f }),
             T = s.useCallback(() => {
                 $.VW.isVoid(d, i) || z.b.selectCommandOption(d, i.optionName, !0);
             }, [d, i]);
@@ -1623,25 +1642,25 @@ let t4 = (e) => {
                 _ === h.n4.ATTACHMENT
                     ? p?.filename != null
                         ? (0, r.jsxs)("span", {
-                              className: o()(eL._K, eL.dU),
+                              className: o()(eP._K, eP.dU),
                               contentEditable: !1,
                               children: [p.filename, l],
                           })
                         : (0, r.jsxs)("span", {
-                              className: o()(eL._K, eL.ZI),
+                              className: o()(eP._K, eP.ZI),
                               contentEditable: !1,
-                              children: [eA.intl.string(eA.t.GRdFni), l],
+                              children: [eS.intl.string(eS.t.GRdFni), l],
                           })
                     : (0, r.jsxs)("span", {
-                          className: eL._K,
-                          children: [l, A ? (0, r.jsx)("span", { className: eL.Nx, contentEditable: !1 }) : null],
+                          className: eP._K,
+                          children: [l, A ? (0, r.jsx)("span", { className: eP.Nx, contentEditable: !1 }) : null],
                       })),
             (0, r.jsxs)("span", {
                 ...a,
                 className: I,
                 children: [
                     (0, r.jsxs)("span", {
-                        className: eL.gA,
+                        className: eP.gA,
                         contentEditable: !1,
                         onClick: T,
                         children: [i.optionDisplayName, "\u200B"],
@@ -1652,29 +1671,29 @@ let t4 = (e) => {
             })
         );
     },
-    t5 = (e) => {
+    t9 = (e) => {
         let { element: t, attributes: n, children: i } = e,
             s = (0, j.f7)(),
             a = (0, j.zL)(),
-            l = o()(eL.S0, eL.xP, eL.Bz, { [eL.t$]: a && s, [eL.$2]: t.error }),
+            l = o()(eP.S0, eP.xP, eP.Bz, { [eP.t$]: a && s, [eP.$2]: t.error }),
             u = t.children[t.children.length - 1],
             c = null != u && $.l5.isText(u) && u.text.endsWith("\n"),
             d = (0, r.jsxs)("span", {
-                className: eL._K,
-                children: [i, c ? (0, r.jsx)("span", { className: eL.Nx, contentEditable: !1 }) : null],
+                className: eP._K,
+                children: [i, c ? (0, r.jsx)("span", { className: eP.Nx, contentEditable: !1 }) : null],
             });
         return (0, r.jsxs)("span", {
             ...n,
             className: l,
             children: [
-                (0, r.jsxs)("span", { className: eL.gA, contentEditable: !1, children: ["@time", "\u200B"] }),
+                (0, r.jsxs)("span", { className: eP.gA, contentEditable: !1, children: ["@time", "\u200B"] }),
                 d,
                 (0, r.jsx)("span", { contentEditable: !1, children: "\u200B" }),
             ],
         });
     };
-var t7 = n(471910);
-let t8 = s.forwardRef(function (e, t) {
+var ne = n(471910);
+let nt = s.forwardRef(function (e, t) {
     let i,
         a,
         l,
@@ -1727,7 +1746,7 @@ let t8 = s.forwardRef(function (e, t) {
         eE = s.useRef(!0),
         em = s.useRef(!0),
         eg = T || y,
-        eI = s.useCallback(
+        eA = s.useCallback(
             (e, t, n) => {
                 let { value: i, selection: r } = n,
                     s = $.VW.richValue(e),
@@ -1736,11 +1755,11 @@ let t8 = s.forwardRef(function (e, t) {
                 if (void 0 !== i && i !== s) {
                     if (((e.children = i), "parent" === t && !e.previewMarkdown && e.chatInputType === S.oU.EDIT)) {
                         try {
-                            (e.previewMarkdown = !0), tW(e, p.guild_id, p.id);
+                            (e.previewMarkdown = !0), t$(e, p.guild_id, p.id);
                         } finally {
                             e.previewMarkdown = !1;
                         }
-                        tW(e, p.guild_id, p.id), (r = void 0);
+                        t$(e, p.guild_id, p.id), (r = void 0);
                     }
                     "undo" !== t && void 0 !== i && i !== s && H.o.insertEntry(e, "other", !1, s, a), (o = !0);
                 }
@@ -1759,7 +1778,7 @@ let t8 = s.forwardRef(function (e, t) {
                     (null != u &&
                         u[0].command.id !== E.A.getActiveCommand(p.id)?.id &&
                         H.o.withMergedEntry(e, () => {
-                            e3(e, p.id, null, !0);
+                            e5(e, p.id, null, !0);
                         }),
                     o)
                 )
@@ -1773,14 +1792,14 @@ let t8 = s.forwardRef(function (e, t) {
             },
             [p.id, p.guild_id, en],
         ),
-        eT = (function (e) {
+        eI = (function (e) {
             let t = s.useContext(Y.Ay),
-                i = eW.SI.useSetting(),
+                i = e$.SI.useSetting(),
                 [r] = s.useState(() => {
-                    let r = (0, ej.ie)();
+                    let r = (0, eK.ie)();
                     return (
                         (r.children = (0, N.x7)("")),
-                        (r.selection = { anchor: eJ.K, focus: eJ.K }),
+                        (r.selection = { anchor: e2.K, focus: e2.K }),
                         (function (e) {
                             var t, i;
                             let {
@@ -1802,7 +1821,7 @@ let t8 = s.forwardRef(function (e, t) {
                                 (m.windowContext = u),
                                 (m.previewMarkdown = c),
                                 (m.composition = null),
-                                (m.events = new eH.EventEmitter()),
+                                (m.events = new eW.EventEmitter()),
                                 (m.isMac = "MacIntel" === navigator.platform),
                                 (m.onChange = () => {
                                     m.events.emit("onChange"), g();
@@ -1862,7 +1881,7 @@ let t8 = s.forwardRef(function (e, t) {
                                         );
                                     })(m, !0 === d)).setFragmentData = (e) => {
                                     if (null != t.selection && !$.Kh.equals(t.selection.anchor, t.selection.focus)) {
-                                        let n = (0, eG.WO)($.VW.richValue(t), {
+                                        let n = (0, eB.WO)($.VW.richValue(t), {
                                             mode: "plain",
                                             range: t.selection,
                                             preventEmojiSurrogates: !0,
@@ -1878,9 +1897,9 @@ let t8 = s.forwardRef(function (e, t) {
                                     let n = e.getData("text/plain");
                                     if (0 === n.length) return !1;
                                     if (null != t.selection && $.ZF.isExpanded(t.selection)) {
-                                        let e = ej.KE.string(t, t.selection),
-                                            i = (0, tQ.W1)(n),
-                                            r = (0, tQ.W1)(e);
+                                        let e = eK.KE.string(t, t.selection),
+                                            i = (0, t1.W1)(n),
+                                            r = (0, t1.W1)(e);
                                         if (null != i && null == r) {
                                             let [e, n] = $.ZF.edges(t.selection);
                                             return (
@@ -1930,10 +1949,10 @@ let t8 = s.forwardRef(function (e, t) {
                                                 : s(t);
                                         }),
                                         (e.deleteBackward = (t) => {
-                                            tX(e, t, !0) || n(t);
+                                            t0(e, t, !0) || n(t);
                                         }),
                                         (e.deleteForward = (t) => {
-                                            tX(e, t, !1) || i(t);
+                                            t0(e, t, !1) || i(t);
                                         }),
                                         (e.deleteFragment = (t) => {
                                             if (null != e.selection && $.ZF.isExpanded(e.selection)) {
@@ -1990,8 +2009,8 @@ let t8 = s.forwardRef(function (e, t) {
                                                 n.types.includes("application/x-discord-interaction-data")
                                             ) {
                                                 let e = JSON.parse(n.getData("application/x-discord-interaction-data")),
-                                                    { commandKey: i, interactionOptions: r } = (0, eZ.Ez)(e),
-                                                    { application: s, command: a } = e$.EW(
+                                                    { commandKey: i, interactionOptions: r } = (0, eJ.Ez)(e),
+                                                    { application: s, command: a } = eX.EW(
                                                         { channel: t, type: "channel" },
                                                         i,
                                                     );
@@ -1999,7 +2018,7 @@ let t8 = s.forwardRef(function (e, t) {
                                                     let e =
                                                         null != s
                                                             ? {
-                                                                  type: eq.Hf.APPLICATION,
+                                                                  type: eQ.Hf.APPLICATION,
                                                                   id: s.id,
                                                                   icon: s.icon,
                                                                   name: s.bot?.username ?? s.name,
@@ -2011,9 +2030,9 @@ let t8 = s.forwardRef(function (e, t) {
                                                             channelId: t.id,
                                                             command: a,
                                                             section: e,
-                                                            location: eq.Oh.PASTE,
+                                                            location: eQ.Oh.PASTE,
                                                             initialValues: (0,
-                                                            ez.getInitialValuesFromInteractionOptions)(a, r ?? []),
+                                                            eZ.getInitialValuesFromInteractionOptions)(a, r ?? []),
                                                         }),
                                                         null
                                                     );
@@ -2021,18 +2040,18 @@ let t8 = s.forwardRef(function (e, t) {
                                             }
                                             return r(n);
                                         }),
-                                            (e.isInline = (e) => !!e0.has(e.type) || s(e)),
+                                            (e.isInline = (e) => !!e3.has(e.type) || s(e)),
                                             (e.isVoid = (e) =>
-                                                !!("applicationCommandOption" === e.type && e1.has(e.optionType)) ||
+                                                !!("applicationCommandOption" === e.type && e6.has(e.optionType)) ||
                                                 a(e)),
                                             (e.deleteBackward = (t) => {
-                                                e7(e, () => l(t));
+                                                te(e, () => l(t));
                                             }),
                                             (e.deleteForward = (t) => {
-                                                e7(e, () => u(t));
+                                                te(e, () => u(t));
                                             }),
                                             (e.deleteFragment = (t) => {
-                                                e7(e, () => c(t));
+                                                te(e, () => c(t));
                                             });
                                         let d = null,
                                             _ = null,
@@ -2043,7 +2062,7 @@ let t8 = s.forwardRef(function (e, t) {
                                             (e.onChange = () => {
                                                 if (null != t) {
                                                     let r = E.A.getState(t.id),
-                                                        s = e$.j8({ channel: t, type: "channel" });
+                                                        s = eX.j8({ channel: t, type: "channel" });
                                                     if (
                                                         $.VW.richValue(e) !== d ||
                                                         !$.Ot.equals(e.selection, _) ||
@@ -2062,21 +2081,21 @@ let t8 = s.forwardRef(function (e, t) {
                                                                         commandChanged: a,
                                                                         previousOptionValues: o,
                                                                     } = e,
-                                                                    { command: l, commandText: u } = e5(t),
+                                                                    { command: l, commandText: u } = e9(t),
                                                                     c = n.activeCommand;
                                                                 if (
                                                                     (!r &&
                                                                         c?.integration_types?.includes(
-                                                                            eK.b.GUILD_INSTALL,
+                                                                            eq.b.GUILD_INSTALL,
                                                                         )) ||
                                                                     (s &&
-                                                                        c?.inputType !== eq.y$.BUILT_IN_TEXT &&
-                                                                        c?.inputType !== eq.y$.BUILT_IN_INTEGRATION)
+                                                                        c?.inputType !== eQ.y$.BUILT_IN_TEXT &&
+                                                                        c?.inputType !== eQ.y$.BUILT_IN_INTEGRATION)
                                                                 )
-                                                                    return null != l && e3(t, i.id, c, !0), null;
+                                                                    return null != l && e5(t, i.id, c, !0), null;
                                                                 if (null != l) {
                                                                     if ($.VW.isEditorEmpty(t) || null == c)
-                                                                        return e3(t, i.id, c, !1), null;
+                                                                        return e5(t, i.id, c, !1), null;
                                                                     let e = `/${l.displayName}`;
                                                                     if (
                                                                         null == u ||
@@ -2085,7 +2104,7 @@ let t8 = s.forwardRef(function (e, t) {
                                                                             (u.length < e.length + 1 ||
                                                                                 " " !== u[e.length]))
                                                                     )
-                                                                        return e3(t, i.id, c, !0), null;
+                                                                        return e5(t, i.id, c, !0), null;
                                                                 } else {
                                                                     if (null != c && a) {
                                                                         let e = (function (e, t, n) {
@@ -2099,7 +2118,7 @@ let t8 = s.forwardRef(function (e, t) {
                                                                                         (s.options?.length ?? 0) > 0
                                                                                             ? B.pY(e, s)
                                                                                             : null,
-                                                                                    o = (0, eG.WO)($.VW.richValue(e), {
+                                                                                    o = (0, eB.WO)($.VW.richValue(e), {
                                                                                         mode: "raw",
                                                                                         range: {
                                                                                             anchor: $.VW.start(e, []),
@@ -2130,7 +2149,7 @@ let t8 = s.forwardRef(function (e, t) {
                                                                                         for (let i of a) {
                                                                                             e.add(i.name);
                                                                                             let r =
-                                                                                                    e8(n, t, i.name) ??
+                                                                                                    tt(n, t, i.name) ??
                                                                                                     i.text,
                                                                                                 s = {
                                                                                                     type: "applicationCommandOption",
@@ -2155,10 +2174,10 @@ let t8 = s.forwardRef(function (e, t) {
                                                                                         ) {
                                                                                             let e, r;
                                                                                             l.length > 0 &&
-                                                                                            !e1.has(i.type)
+                                                                                            !e6.has(i.type)
                                                                                                 ? ((e = l), (l = ""))
                                                                                                 : (e =
-                                                                                                      (r = e8(
+                                                                                                      (r = tt(
                                                                                                           n,
                                                                                                           t,
                                                                                                           i.name,
@@ -2198,10 +2217,10 @@ let t8 = s.forwardRef(function (e, t) {
                                                                                     for (let [, t] of (z.b.insertNodes(
                                                                                         e,
                                                                                         [p],
-                                                                                        { at: eJ.Xg },
+                                                                                        { at: e2.Xg },
                                                                                     ),
                                                                                     $.VW.blocks(e).reverse()))
-                                                                                        $.PW.isAfter(t, eJ.Xg) &&
+                                                                                        $.PW.isAfter(t, e2.Xg) &&
                                                                                             z.b.removeNodes(e, {
                                                                                                 at: t,
                                                                                                 voids: !0,
@@ -2225,13 +2244,13 @@ let t8 = s.forwardRef(function (e, t) {
                                                                                           : z.b.resetSelectionToEditorEnd(
                                                                                                 e,
                                                                                             ),
-                                                                                    null == h && e6(e, s),
+                                                                                    null == h && e7(e, s),
                                                                                     E
                                                                                 );
                                                                             })(t, i, n),
                                                                             r = B.SQ(t, c, i.id);
                                                                         return (
-                                                                            e4({
+                                                                            e8({
                                                                                 guildId: i.guild_id,
                                                                                 channelId: i.id,
                                                                                 command: c,
@@ -2255,12 +2274,12 @@ let t8 = s.forwardRef(function (e, t) {
                                                                         );
                                                                     let e = $.VW.richValue(t)[0],
                                                                         r = e.children[0];
-                                                                    if (e2.has(e.type) && $.l5.isText(r)) {
+                                                                    if (e4.has(e.type) && $.l5.isText(r)) {
                                                                         let e = (function (e, t) {
                                                                             if (!e.startsWith("/")) return null;
-                                                                            let n = (0, eQ.Yn)(t, e.substring(1));
+                                                                            let n = (0, e1.Yn)(t, e.substring(1));
                                                                             if (!n.hasSpaceTerminator) return null;
-                                                                            let { commands: i, sections: r } = e$.v7(
+                                                                            let { commands: i, sections: r } = eX.v7(
                                                                                 { channel: t, type: "channel" },
                                                                                 h.kc.CHAT,
                                                                                 n.text,
@@ -2271,7 +2290,7 @@ let t8 = s.forwardRef(function (e, t) {
                                                                                 o = i.filter(
                                                                                     (e) =>
                                                                                         e.inputType !==
-                                                                                            eq.y$.PLACEHOLDER &&
+                                                                                            eQ.y$.PLACEHOLDER &&
                                                                                         (e.displayName === s ||
                                                                                             e.displayName.startsWith(
                                                                                                 a,
@@ -2340,18 +2359,18 @@ let t8 = s.forwardRef(function (e, t) {
                                                                                 t.text !== i &&
                                                                                     z.b.textToText(e, i, {
                                                                                         anchor: {
-                                                                                            path: eJ.fP,
+                                                                                            path: e2.fP,
                                                                                             offset: 0,
                                                                                         },
                                                                                         focus: {
-                                                                                            path: eJ.fP,
+                                                                                            path: e2.fP,
                                                                                             offset: t.text.length,
                                                                                         },
                                                                                     });
                                                                             }),
                                                                             !0)
                                                                         );
-                                                                    })(t, c) && e6(t, c);
+                                                                    })(t, c) && e7(t, c);
                                                                     let e = B.SQ(t, c, i.id),
                                                                         n = $.VW.above(t, {
                                                                             match: (e) =>
@@ -2361,7 +2380,7 @@ let t8 = s.forwardRef(function (e, t) {
                                                                         }),
                                                                         r = n?.[0].optionName ?? null;
                                                                     return (
-                                                                        e4({
+                                                                        e8({
                                                                             guildId: i.guild_id,
                                                                             channelId: i.id,
                                                                             command: c,
@@ -2403,8 +2422,8 @@ let t8 = s.forwardRef(function (e, t) {
                                     })(m, a, !0 === o, !0 === l)),
                                 (m = (function (e, t, n) {
                                     let { isInline: i, isVoid: r, onChange: s } = e;
-                                    (e.isVoid = (e) => !!tB.has(e.type) || r(e)),
-                                        (e.isInline = (e) => !!(tB.has(e.type) || tH.has(e.type)) || i(e));
+                                    (e.isVoid = (e) => !!tY.has(e.type) || r(e)),
+                                        (e.isInline = (e) => !!(tY.has(e.type) || tW.has(e.type)) || i(e));
                                     let a = null,
                                         o = !0;
                                     return (
@@ -2412,7 +2431,7 @@ let t8 = s.forwardRef(function (e, t) {
                                             let i = $.VW.richValue(e);
                                             (i !== a || e.previewMarkdown !== o) &&
                                                 (H.o.withMergedEntry(e, () => {
-                                                    $.VW.withoutNormalizing(e, () => tW(e, t, n));
+                                                    $.VW.withoutNormalizing(e, () => t$(e, t, n));
                                                 }),
                                                 (a = i),
                                                 (o = e.previewMarkdown)),
@@ -2487,9 +2506,9 @@ let t8 = s.forwardRef(function (e, t) {
                                                                 let t = !1;
                                                                 for (let n of $.VW.blocks(e)) {
                                                                     let [i, r] = n;
-                                                                    if (!tv.has(i.type)) continue;
+                                                                    if (!tb.has(i.type)) continue;
                                                                     let s = { path: $.PW.child(r, 0), offset: 0 };
-                                                                    if (ty(e, s)) {
+                                                                    if (tO(e, s)) {
                                                                         "blockQuote" === i.type &&
                                                                             (z.b.setNodes(
                                                                                 e,
@@ -2545,7 +2564,7 @@ let t8 = s.forwardRef(function (e, t) {
                                             r = !1,
                                             s = !1,
                                             a = (e) => {
-                                                ta(e)
+                                                tu(e)
                                                     .then((e) => {
                                                         null != e && o();
                                                     })
@@ -2558,11 +2577,11 @@ let t8 = s.forwardRef(function (e, t) {
                                                         s = !1;
                                                         try {
                                                             H.o.withoutSaving(e, () => {
-                                                                $.VW.withoutNormalizing(e, () => tE(e, a));
+                                                                $.VW.withoutNormalizing(e, () => tA(e, a));
                                                             }),
                                                                 (i = $.VW.richValue(e));
                                                         } catch (e) {
-                                                            td.warn(
+                                                            th.warn(
                                                                 "error applying arborium highlighting to editor",
                                                                 e,
                                                             );
@@ -2574,24 +2593,24 @@ let t8 = s.forwardRef(function (e, t) {
                                                 $.VW.richValue(e) !== i &&
                                                     (H.o.withoutSaving(e, () => {
                                                         $.VW.withoutNormalizing(e, () => {
-                                                            tE(e, a) &&
-                                                                null == th &&
+                                                            tA(e, a) &&
+                                                                null == tm &&
                                                                 !r &&
                                                                 ((r = !0),
-                                                                (null == tp &&
-                                                                    (tp = Promise.all([n.e("57036"), n.e("75134")])
+                                                                (null == tg &&
+                                                                    (tg = Promise.all([n.e("57036"), n.e("75134")])
                                                                         .then(n.bind(n, 981776))
                                                                         .then((e) => {
-                                                                            th = e.default;
+                                                                            tm = e.default;
                                                                         })
                                                                         .catch((e) => {
-                                                                            throw ((tp = null), e);
+                                                                            throw ((tg = null), e);
                                                                         })),
-                                                                tp)
+                                                                tg)
                                                                     .then(() => {
                                                                         (i = null),
                                                                             H.o.withoutSaving(e, () => {
-                                                                                $.VW.withoutNormalizing(e, () => tE(e));
+                                                                                $.VW.withoutNormalizing(e, () => tA(e));
                                                                             }),
                                                                             (i = $.VW.richValue(e));
                                                                     })
@@ -2621,23 +2640,23 @@ let t8 = s.forwardRef(function (e, t) {
                                     let t = i.isMac;
                                     switch (e.which) {
                                         case x.Ks6.B:
-                                            if (!$.VW.isEditorEmpty(i) && tU(e, { ctrl: !t, cmd: t }))
-                                                return (0, tx.Px)(i, "bold"), !0;
+                                            if (!$.VW.isEditorEmpty(i) && tF(e, { ctrl: !t, cmd: t }))
+                                                return (0, tG.Px)(i, "bold"), !0;
                                             break;
                                         case x.Ks6.I:
-                                            if (!$.VW.isEditorEmpty(i) && tU(e, { ctrl: !t, cmd: t }))
-                                                return (0, tx.Px)(i, "italics"), !0;
+                                            if (!$.VW.isEditorEmpty(i) && tF(e, { ctrl: !t, cmd: t }))
+                                                return (0, tG.Px)(i, "italics"), !0;
                                             break;
                                         case x.Ks6.U:
-                                            if (!$.VW.isEditorEmpty(i) && tU(e, { ctrl: !t, cmd: t }))
-                                                return (0, tx.Px)(i, "underline"), !0;
+                                            if (!$.VW.isEditorEmpty(i) && tF(e, { ctrl: !t, cmd: t }))
+                                                return (0, tG.Px)(i, "underline"), !0;
                                             break;
                                         case x.Ks6.S:
-                                            if (!$.VW.isEditorEmpty(i) && tU(e, { ctrl: !t, cmd: t, shift: !0 }))
-                                                return (0, tx.Px)(i, "strikethrough"), !0;
+                                            if (!$.VW.isEditorEmpty(i) && tF(e, { ctrl: !t, cmd: t, shift: !0 }))
+                                                return (0, tG.Px)(i, "strikethrough"), !0;
                                             break;
                                         case x.Ks6.TAB:
-                                            if (null != i.selection && tU(e, { shift: null })) {
+                                            if (null != i.selection && tF(e, { shift: null })) {
                                                 let [t, n] = $.ZF.edges(i.selection),
                                                     r = $.VW.blocks(i).slice(t.path[0], n.path[0] + 1),
                                                     s = !0;
@@ -2692,12 +2711,12 @@ let t8 = s.forwardRef(function (e, t) {
                                         case x.Ks6.ARROW_LEFT:
                                         case x.Ks6.ARROW_RIGHT: {
                                             let n;
-                                            if (tU(e, { shift: null })) n = "character";
-                                            else if (tU(e, { ctrl: !t, alt: t, shift: null })) n = "word";
-                                            else if (t && tU(e, { cmd: !0, shift: null })) return !1;
+                                            if (tF(e, { shift: null })) n = "character";
+                                            else if (tF(e, { ctrl: !t, alt: t, shift: null })) n = "word";
+                                            else if (t && tF(e, { cmd: !0, shift: null })) return !1;
                                             else return !1;
                                             let r = i.children[i.selection?.focus?.path[0] ?? 0],
-                                                s = "rtl" === tw()($.AS.string(r)),
+                                                s = "rtl" === tx()($.AS.string(r)),
                                                 a = (e.which === x.Ks6.ARROW_LEFT) == !s;
                                             return (
                                                 z.b.keyboardMove(i, {
@@ -2709,31 +2728,31 @@ let t8 = s.forwardRef(function (e, t) {
                                             );
                                         }
                                         case x.Ks6.A:
-                                            if (t && tU(e, { ctrl: !0 }) && tk(i)) return !0;
+                                            if (t && tF(e, { ctrl: !0 }) && tV(i)) return !0;
                                             break;
                                         case x.Ks6.E:
-                                            if (t && tU(e, { ctrl: !0 }) && tG(i)) return !0;
+                                            if (t && tF(e, { ctrl: !0 }) && tB(i)) return !0;
                                             break;
                                         case x.Ks6.HOME:
-                                            if (tU(e, { shift: !1, ctrl: !1 }) && tk(i)) return !0;
+                                            if (tF(e, { shift: !1, ctrl: !1 }) && tV(i)) return !0;
                                             break;
                                         case x.Ks6.END:
-                                            if (tU(e, { shift: !1, ctrl: !1 }) && tG(i)) return !0;
+                                            if (tF(e, { shift: !1, ctrl: !1 }) && tB(i)) return !0;
                                             break;
                                         case x.Ks6.BACKSPACE:
                                         case x.Ks6.DELETE:
                                         case x.Ks6.K:
                                             let n = e.which === x.Ks6.BACKSPACE;
                                             if (
-                                                ((!t && e.which !== x.Ks6.K && tU(e, { ctrl: !0, shift: !0 })) ||
-                                                    (t && e.which !== x.Ks6.K && tU(e, { cmd: !0 })) ||
-                                                    (t && e.which === x.Ks6.K && tU(e, { ctrl: !0 }))) &&
+                                                ((!t && e.which !== x.Ks6.K && tF(e, { ctrl: !0, shift: !0 })) ||
+                                                    (t && e.which !== x.Ks6.K && tF(e, { cmd: !0 })) ||
+                                                    (t && e.which === x.Ks6.K && tF(e, { ctrl: !0 }))) &&
                                                 null != i.selection
                                             ) {
                                                 let [e, t] = $.ZF.edges(i.selection),
                                                     [r, s] = $.VW.node(i, [n ? e.path[0] : t.path[0]]);
                                                 if (
-                                                    (tP()(
+                                                    (tk()(
                                                         $.VW.isBlock(i, r),
                                                         "Top-most node of selection is not a block",
                                                     ),
@@ -2765,7 +2784,7 @@ let t8 = s.forwardRef(function (e, t) {
                                     (e.history = { index: 0, stack: [] }),
                                         (e.onChange = () => {
                                             let { history: t } = e;
-                                            0 === t.stack.length && ((t.stack = [tD(e)]), (t.index = 0)),
+                                            0 === t.stack.length && ((t.stack = [tM(e)]), (t.index = 0)),
                                                 null != e.selection && (H.o.currentEntry(e).selection = e.selection),
                                                 (d = null),
                                                 l();
@@ -2785,7 +2804,7 @@ let t8 = s.forwardRef(function (e, t) {
                                             n(t);
                                             let r = $.VW.richValue(e);
                                             r !== _ &&
-                                                (0 === i.stack.length && ((i.stack = [tD(e)]), (i.index = 0)),
+                                                (0 === i.stack.length && ((i.stack = [tM(e)]), (i.index = 0)),
                                                 H.o.isSaving(e) &&
                                                     ((function (e, t, n) {
                                                         var i, r;
@@ -2907,14 +2926,14 @@ let t8 = s.forwardRef(function (e, t) {
                                                             ;
                                                             null != i &&
                                                             null != (t = $.VW.getParentVoid(e, i)) &&
-                                                            !eJ.XR.includes(t[0].type);
+                                                            !e2.XR.includes(t[0].type);
                                                         )
                                                             (i = $.VW.before(e, i, { unit: "offset" })), (s = !0);
                                                         for (
                                                             ;
                                                             null != r &&
                                                             null != (n = $.VW.getParentVoid(e, r)) &&
-                                                            !eJ.XR.includes(n[0].type);
+                                                            !e2.XR.includes(n[0].type);
                                                         )
                                                             (r = $.VW.after(e, r, { unit: "offset" })), (s = !0);
                                                         s &&
@@ -2933,7 +2952,7 @@ let t8 = s.forwardRef(function (e, t) {
                                                 let { insertBreak: t, insertText: n } = e;
                                                 return (
                                                     (e.insertBreak = () => {
-                                                        tb(e) && t();
+                                                        tw(e) && t();
                                                     }),
                                                     (e.insertSoftBreak = () => {
                                                         e.insertBreak();
@@ -2942,7 +2961,7 @@ let t8 = s.forwardRef(function (e, t) {
                                                         if (0 > t.indexOf("\r") && 0 > t.indexOf("\n"))
                                                             return void n(t);
                                                         let i = t.split(/\r\n|\r|\n/);
-                                                        tb(e)
+                                                        tw(e)
                                                             ? H.o.withSingleEntry(e, () => {
                                                                   let t = !1;
                                                                   for (let r of i)
@@ -2973,9 +2992,9 @@ let t8 = s.forwardRef(function (e, t) {
                     let e = () => r.onChange();
                     return (
                         E.A.addChangeListener(e),
-                        eY.Ay.addChangeListener(e),
+                        ez.Ay.addChangeListener(e),
                         () => {
-                            E.A.removeChangeListener(e), eY.Ay.removeChangeListener(e);
+                            E.A.removeChangeListener(e), ez.Ay.removeChangeListener(e);
                         }
                     );
                 }, [r]),
@@ -2995,33 +3014,33 @@ let t8 = s.forwardRef(function (e, t) {
             onChangeEnd: s.useCallback(() => {
                 eE.current = !0;
             }, []),
-            updateState: eI,
+            updateState: eA,
         }),
-        eS = s.useCallback(
+        eT = s.useCallback(
             (e, t) => {
-                let n = B.SQ(eT, e, p.id),
+                let n = B.SQ(eI, e, p.id),
                     i = B.cd(e, p.guild_id, p.id, n, t);
                 return { values: n, results: i };
             },
-            [p.guild_id, p.id, eT],
+            [p.guild_id, p.id, eI],
         ),
         eN = s.useCallback(() => {
             let e,
-                t = $.VW.getNodesOfType(eT, ["timestampMentionInput"]),
+                t = $.VW.getNodesOfType(eI, ["timestampMentionInput"]),
                 n = null != t ? [...t] : null,
                 i = ee ? E.A.getActiveCommand(p.id) : null,
                 r = !1;
             if (null != i && null != i.options) {
-                let t = eS(i, !1);
+                let t = eT(i, !1);
                 e = t.values;
-                let n = B.O7(eT)
+                let n = B.O7(eI)
                     .filter((e) => !t.results[e].success)
                     .map((e) => (i.options ?? []).find((t) => t.name === e));
                 for (let e of i.options)
-                    !e.required || e.name in t.values || (z.b.insertCommandOption(eT, e), n.push(e));
+                    !e.required || e.name in t.values || (z.b.insertCommandOption(eI, e), n.push(e));
                 if (n.length > 0) {
                     let e = n[0];
-                    z.b.selectCommandOption(eT, e.name),
+                    z.b.selectCommandOption(eI, e.name),
                         (r = !0),
                         (0, F.zV)(x.HAw.APPLICATION_COMMAND_VALIDATION_FAILED, {
                             application_id: i?.applicationId,
@@ -3033,32 +3052,32 @@ let t8 = s.forwardRef(function (e, t) {
             }
             if (null != n)
                 for (let [e, t] of n)
-                    z.b.setNodes(eT, { error: !0 }, { at: t }), r || z.b.select(eT, $.VW.end(eT, t)), (r = !0);
+                    z.b.setNodes(eI, { error: !0 }, { at: t }), r || z.b.select(eI, $.VW.end(eI, t)), (r = !0);
             if (r) {
                 V._.dispatch(x.jej.SHAKE_APP, { duration: 200, intensity: 2 }), q?.();
                 return;
             }
-            K?.((0, eG.WO)($.VW.richValue(eT), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), i, e);
-        }, [p.id, eT, K, q, eS, ee]);
+            K?.((0, eB.WO)($.VW.richValue(eI), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), i, e);
+        }, [p.id, eI, K, q, eT, ee]);
     s.useImperativeHandle(
         t,
         () => ({
-            getSlateEditor: () => eT,
+            getSlateEditor: () => eI,
             submit(e) {
                 e?.preventDefault(), eN();
             },
             focus() {
-                $.VW.focus(eT);
+                $.VW.focus(eI);
             },
             blur() {
-                j.rL.blur(eT);
+                j.rL.blur(eI);
             },
             getCurrentWord() {
-                let e = eT.selection;
-                if (null == e || !$.Ot.isValid(eT, e) || $.ZF.isExpanded(e) || tC(eT))
+                let e = eI.selection;
+                if (null == e || !$.Ot.isValid(eI, e) || $.ZF.isExpanded(e) || tR(eI))
                     return { word: null, isAtStart: !1 };
-                let [t, n] = $.VW.node(eT, $.PW.parent(e.anchor.path)),
-                    [i, r] = $.VW.node(eT, e.anchor.path),
+                let [t, n] = $.VW.node(eI, $.PW.parent(e.anchor.path)),
+                    [i, r] = $.VW.node(eI, e.anchor.path),
                     s = e.anchor.offset;
                 if (!$.PW.hasPrevious(r) && $.l5.isText(i)) {
                     let e = i.text.substring(0, s);
@@ -3073,54 +3092,54 @@ let t8 = s.forwardRef(function (e, t) {
                             o = !0;
                             break;
                         }
-                        [i, r] = $.VW.node(eT, $.PW.previous(r));
+                        [i, r] = $.VW.node(eI, $.PW.previous(r));
                     }
                     if (!$.l5.isText(i)) break;
                     let e = i.text[s];
-                    if (eJ.ug.test(e)) break;
+                    if (e2.ug.test(e)) break;
                     a = e + a;
                 }
                 let l = a,
                     u = e.anchor.offset,
-                    [c] = $.VW.node(eT, e.anchor.path);
+                    [c] = $.VW.node(eI, e.anchor.path);
                 for (; $.l5.isText(c) && !(u >= c.text.length); ) {
                     let e = c.text[u];
-                    if (eJ.ug.test(e)) break;
+                    if (e2.ug.test(e)) break;
                     (l += e), u++;
                 }
                 return { word: a, fullWord: l, isAtStart: o && $.PW.isFirstEditorBlock(n) };
             },
-            getFirstText: () => $.VW.getFirstText(eT)?.text ?? "",
+            getFirstText: () => $.VW.getFirstText(eI)?.text ?? "",
             getCurrentCommandOption() {
-                let e = B.M3(eT);
+                let e = B.M3(eI);
                 return null == e ? null : e[0].optionName;
             },
             getCurrentCommandOptionValue() {
-                let e = B.M3(eT);
+                let e = B.M3(eI);
                 if (null == e) return [];
                 let t = E.A.getActiveCommand(p.id),
                     n = t?.options?.find((t) => t.name === e[0].optionName);
-                return null == n ? [] : B.FV(eT, n, e[0], p.id);
+                return null == n ? [] : B.FV(eI, n, e[0], p.id);
             },
             getCommandOptionValues() {
                 let e = E.A.getActiveCommand(p.id);
-                return null == e ? {} : B.SQ(eT, e, p.id);
+                return null == e ? {} : B.SQ(eI, e, p.id);
             },
             insertText(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                H.o.withSingleEntry(eT, () => {
-                    let i = B.M3(eT),
-                        r = null != i && tJ(p, i[0]);
+                H.o.withSingleEntry(eI, () => {
+                    let i = B.M3(eI),
+                        r = null != i && t2(p, i[0]);
                     if (
-                        (null != t && r && (z.b.removeInlineChildren(eT, i), (n = !1)), t0(eT, e, t, n), null != t && r)
+                        (null != t && r && (z.b.removeInlineChildren(eI, i), (n = !1)), t3(eI, e, t, n), null != t && r)
                     ) {
-                        let e = B.n$(eT);
-                        if (((i = $.cv.updateElement(eT, i)), null != e)) {
+                        let e = B.n$(eI);
+                        if (((i = $.cv.updateElement(eI, i)), null != e)) {
                             let t = $.cv.markdown(e[0], p.guild_id);
-                            t$(eT, i, p.id, t) && (i = $.cv.updateElement(eT, i));
+                            tX(eI, i, p.id, t) && (i = $.cv.updateElement(eI, i));
                         }
-                        B.ke(eT, p.guild_id, p.id, $.cv.updateElement(eT, i), !1), z.b.selectNextCommandOption(eT);
+                        B.ke(eI, p.guild_id, p.id, $.cv.updateElement(eI, i), !1), z.b.selectNextCommandOption(eI);
                     }
                 });
             },
@@ -3128,61 +3147,61 @@ let t8 = s.forwardRef(function (e, t) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                     { addSpace: n = !0, replaceFullWord: i = !1 } =
                         arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                H.o.withSingleEntry(eT, () => {
-                    let r = B.M3(eT),
-                        s = null != r && tJ(p, r[0]);
-                    if (s) z.b.removeInlineChildren(eT, r), (n = !1);
+                H.o.withSingleEntry(eI, () => {
+                    let r = B.M3(eI),
+                        s = null != r && t2(p, r[0]);
+                    if (s) z.b.removeInlineChildren(eI, r), (n = !1);
                     else {
                         let { word: e, fullWord: t } = this.getCurrentWord();
                         null != e &&
                             e.length > 0 &&
-                            z.b.delete(eT, { distance: e.length, unit: "character", reverse: !0 }),
+                            z.b.delete(eI, { distance: e.length, unit: "character", reverse: !0 }),
                             i &&
                                 null != e &&
                                 null != t &&
                                 t.length - e.length > 0 &&
-                                z.b.delete(eT, { distance: t.length - e.length, unit: "character" });
+                                z.b.delete(eI, { distance: t.length - e.length, unit: "character" });
                     }
-                    t0(eT, e, t, n), s && z.b.selectNextCommandOption(eT);
+                    t3(eI, e, t, n), s && z.b.selectNextCommandOption(eI);
                 });
             },
             insertInlineAutocompleteInput(e) {
-                H.o.withSingleEntry(eT, () => {
+                H.o.withSingleEntry(eI, () => {
                     let { word: t } = this.getCurrentWord();
-                    null != t && t.length > 0 && z.b.delete(eT, { distance: t.length, unit: "character", reverse: !0 }),
-                        z.b.insertNodes(eT, [{ type: e, children: [{ text: "" }] }]);
+                    null != t && t.length > 0 && z.b.delete(eI, { distance: t.length, unit: "character", reverse: !0 }),
+                        z.b.insertNodes(eI, [{ type: e, children: [{ text: "" }] }]);
                 });
             },
             replaceInlineAutocompleteInput(e, t, n) {
-                H.o.withSingleEntry(eT, () => {
-                    let i = $.VW.getSelectedParentOfType(eT, [e]);
-                    tP()(null != i, `Cannot replace inline input of type ${e} when none is selected`),
-                        z.b.removeNodes(eT, { at: i[1] }),
-                        t0(eT, t, n, !0);
+                H.o.withSingleEntry(eI, () => {
+                    let i = $.VW.getSelectedParentOfType(eI, [e]);
+                    tk()(null != i, `Cannot replace inline input of type ${e} when none is selected`),
+                        z.b.removeNodes(eI, { at: i[1] }),
+                        t3(eI, t, n, !0);
                 });
             },
             insertEmoji(e) {
                 let { emoji: t, addSpace: n = !1 } = e;
-                H.o.withSingleEntry(eT, () => {
+                H.o.withSingleEntry(eI, () => {
                     let e = t.animated ? "a" : "",
                         i = t.originalName ?? t.name ?? "";
-                    t0(eT, `:${t.name}:`, null != t.id ? `<${e}:${i.replace(/:/g, "")}:${t.id}>` : null, n);
+                    t3(eI, `:${t.name}:`, null != t.id ? `<${e}:${i.replace(/:/g, "")}:${t.id}>` : null, n);
                 });
             },
         }),
-        [eT, p, eN],
+        [eI, p, eN],
     ),
         (i = s.useRef(null)),
         (a = s.useRef(null)),
         (l = s.useRef(null)),
         s.useLayoutEffect(() => {
-            (a.current = t3(eT)),
+            (a.current = t5(eI)),
                 null == a.current &&
                     null == l.current &&
                     (l.current = setTimeout(() => {
-                        a.current = t3(eT);
+                        a.current = t5(eI);
                     }, 100));
-        }, [eT]),
+        }, [eI]),
         s.useEffect(() => {
             let e = l.current;
             return () => {
@@ -3195,13 +3214,13 @@ let t8 = s.forwardRef(function (e, t) {
             let t = e.offsetHeight;
             i.current !== t && (null != eh.current && (eh.current.style.height = `${t}px`), (i.current = t), D?.(t));
         }, [eh, D])),
-        (0, t1.g)(a, u, [u, eT, D], t2),
+        (0, t6.g)(a, u, [u, eI, D], t4),
         s.useLayoutEffect(() => {
-            let e = j.rL.findDocumentOrShadowRoot(eT).defaultView;
+            let e = j.rL.findDocumentOrShadowRoot(eI).defaultView;
             if (e?.ResizeObserver == null) return;
-            let t = t3(eT);
+            let t = t5(eI);
             null != t && ((i.current = t.offsetHeight), D?.(i.current));
-        }, [eh, eT, D]);
+        }, [eh, eI, D]);
     let { handleKeyDown: ey, handleKeyUp: eC } = (function (e) {
             let {
                 editor: t,
@@ -3227,16 +3246,16 @@ let t8 = s.forwardRef(function (e, t) {
                                 if (_(1)) return void e.preventDefault();
                                 break;
                             case x.Ks6.P:
-                                if (tU(e, { ctrl: !0 }) && _(-1)) return void e.preventDefault();
+                                if (tF(e, { ctrl: !0 }) && _(-1)) return void e.preventDefault();
                                 break;
                             case x.Ks6.N:
-                                if (tU(e, { ctrl: !0 }) && _(1)) return void e.preventDefault();
+                                if (tF(e, { ctrl: !0 }) && _(1)) return void e.preventDefault();
                                 break;
                             case x.Ks6.ESCAPE:
                                 d?.();
                                 break;
                             case x.Ks6.TAB:
-                                if (tU(e, {}) && o?.()) {
+                                if (tF(e, {}) && o?.()) {
                                     e.preventDefault(), e.stopPropagation();
                                     return;
                                 }
@@ -3250,7 +3269,7 @@ let t8 = s.forwardRef(function (e, t) {
                                 }
                                 break;
                             case x.Ks6.ENTER:
-                                if (tU(e, {}) && l?.(e)) {
+                                if (tF(e, {}) && l?.(e)) {
                                     e.preventDefault(), e.stopPropagation();
                                     return;
                                 }
@@ -3260,7 +3279,7 @@ let t8 = s.forwardRef(function (e, t) {
                             return;
                         }
                         e.key !== U.dh.ENTER ||
-                            ((e.altKey || e.shiftKey || (i && !e.ctrlKey) || tC(t)) && u) ||
+                            ((e.altKey || e.shiftKey || (i && !e.ctrlKey) || tR(t)) && u) ||
                             (e.preventDefault(), e.stopPropagation(), c()),
                             r?.(e);
                     },
@@ -3274,7 +3293,7 @@ let t8 = s.forwardRef(function (e, t) {
                 ),
             };
         })({
-            editor: eT,
+            editor: eI,
             channel: p,
             disableEnterToSubmit: ei,
             onKeyDown: P,
@@ -3302,9 +3321,9 @@ let t8 = s.forwardRef(function (e, t) {
                     c(t) ||
                         (t.preventDefault(),
                         t.stopPropagation(),
-                        null != t.clipboardData && (eT.insertData(t.clipboardData), $.VW.focus(eT)));
+                        null != t.clipboardData && (eI.insertData(t.clipboardData), $.VW.focus(eI)));
                 },
-                [eT, c],
+                [eI, c],
             )),
             { handlePaste: c, handleGlobalPaste: d }),
         eR = s.useCallback(
@@ -3315,26 +3334,26 @@ let t8 = s.forwardRef(function (e, t) {
         ),
         eb = s.useCallback(
             (e) => {
-                e !== ep.current ? em.current && R?.(null, (0, eG.WO)(e, { mode: "raw" }), e) : em.current && Z();
+                e !== ep.current ? em.current && R?.(null, (0, eB.WO)(e, { mode: "raw" }), e) : em.current && Z();
             },
             [Z, R],
         );
     s.useLayoutEffect(() => {
-        eE.current && ((ep.current = _), eI(eT, "parent", { value: _ }));
-    }, [eT, _, eI]),
+        eE.current && ((ep.current = _), eA(eI, "parent", { value: _ }));
+    }, [eI, _, eA]),
         s.useEffect(() => {
             let e = () => {
                 let e = E.A.getActiveCommand(p.id) ?? null;
-                null !== e && null != e.options && eS(e, !0);
+                null !== e && null != e.options && eT(e, !0);
             };
             return g.A.addChangeListener(e), () => g.A.removeChangeListener(e);
-        }, [p, eT, eS]);
+        }, [p, eI, eT]);
     let eD = s.useCallback(
             (e) => [
                 ...(function (e, t, n) {
                     if ($.VW.areStylesDisabled(e)) return [];
                     let [i, r] = t;
-                    if (1 !== r.length || !$.AS.isInTypes(i, eV)) return eB;
+                    if (1 !== r.length || !$.AS.isInTypes(i, ej)) return eY;
                     let { entries: s, serializedChildren: a } = $.cv.markdown(i, n, !0),
                         o = [];
                     for (let t = 0; t < s.length; t++) {
@@ -3342,7 +3361,7 @@ let t8 = s.forwardRef(function (e, t) {
                         if (n.attributes.length > 0 && n.text.length > 0) {
                             let i = s[t - 1],
                                 l = s[t + 1],
-                                u = { anchor: eF(e, r, a, n.start), focus: eF(e, r, a, n.start + n.text.length) },
+                                u = { anchor: eH(e, r, a, n.start), focus: eH(e, r, a, n.start + n.text.length) },
                                 c = $.VW.nodes(e, { at: u, mode: "lowest", voids: !1 }),
                                 d = {};
                             for (let e of n.attributes)
@@ -3359,7 +3378,7 @@ let t8 = s.forwardRef(function (e, t) {
                         }
                     }
                     return o;
-                })(eT, e, p.guild_id),
+                })(eI, e, p.guild_id),
                 ...(function (e, t) {
                     if ($.VW.areStylesDisabled(e)) return [];
                     let [n, i] = t,
@@ -3369,10 +3388,10 @@ let t8 = s.forwardRef(function (e, t) {
                     if (null == s || 0 === s.length || !a) return [];
                     for (let t of s) {
                         let s = n.children.map((e) => ($.l5.isText(e) ? e.text : null));
-                        r.push({ hljsTypes: t.types, anchor: eF(e, i, s, t.start), focus: eF(e, i, s, t.end) });
+                        r.push({ hljsTypes: t.types, anchor: eH(e, i, s, t.start), focus: eH(e, i, s, t.end) });
                     }
                     return r;
-                })(eT, e),
+                })(eI, e),
                 ...(function (e, t) {
                     if ($.VW.areStylesDisabled(e)) return [];
                     let [n, i] = t,
@@ -3389,11 +3408,11 @@ let t8 = s.forwardRef(function (e, t) {
                             }),
                         r
                     );
-                })(eT, e),
+                })(eI, e),
             ],
-            [eT, p],
+            [eI, p],
         ),
-        ew = s.useCallback(
+        eL = s.useCallback(
             (e) => {
                 let t = (function (e, t, n) {
                     let { attributes: i, children: s, element: a } = t;
@@ -3411,36 +3430,36 @@ let t8 = s.forwardRef(function (e, t) {
                                 let e;
                                 (e =
                                     u > 0
-                                        ? eA.intl.formatToPlainString(eA.t.BP8N0K, { count: l })
-                                        : eA.intl.formatToPlainString(eA.t.lziVC9, { count: l })),
+                                        ? eS.intl.formatToPlainString(eS.t.BP8N0K, { count: l })
+                                        : eS.intl.formatToPlainString(eS.t.lziVC9, { count: l })),
                                     (c["data-trailing-placeholder"] = e);
                             }
-                            return (0, r.jsx)("div", { className: eL.uB, ...i, ...c, children: s });
+                            return (0, r.jsx)("div", { className: eP.uB, ...i, ...c, children: s });
                         case "applicationCommandOption":
-                            return (0, r.jsx)(t4, { attributes: i, channelId: n, element: a, children: s });
+                            return (0, r.jsx)(t8, { attributes: i, channelId: n, element: a, children: s });
                         default:
                             return null;
                     }
-                })(eT, e, p.id);
+                })(eI, e, p.id);
                 return (
                     null == t &&
                         (t = (function (e) {
                             let { attributes: t, children: n, element: i } = e;
                             return "timestampMentionInput" === i.type
-                                ? (0, r.jsx)(t5, { attributes: t, element: i, children: n })
+                                ? (0, r.jsx)(t9, { attributes: t, element: i, children: n })
                                 : null;
                         })(e)),
                     t
                 );
             },
-            [p.id, eT],
+            [p.id, eI],
         ),
-        eM = s.useCallback(
+        ew = s.useCallback(
             (e) =>
                 (function (e) {
                     let { attributes: t, children: n, leaf: i, text: s } = e;
                     if (i.commandName) {
-                        let e = o()(eL.p6, { [eL.BI]: "" === s.text });
+                        let e = o()(eP.p6, { [eP.BI]: "" === s.text });
                         return (0, r.jsx)("span", { ...t, className: e, spellCheck: !1, children: n });
                     }
                     return null;
@@ -3452,13 +3471,13 @@ let t8 = s.forwardRef(function (e, t) {
             (0, r.jsx)(A.EG, { event: x.jej.GLOBAL_CLIPBOARD_PASTE, handler: eO }),
             (0, r.jsx)("div", {
                 ref: eh,
-                className: o()(m, t7.pC),
-                children: (0, r.jsx)(ek, {
+                className: o()(m, ne.pC),
+                children: (0, r.jsx)(eV, {
                     id: I,
-                    editor: eT,
+                    editor: eI,
                     channelId: p.id,
                     guildId: p.guild_id,
-                    className: o()(t7.gf, O),
+                    className: o()(ne.gf, O),
                     placeholder: C,
                     readOnly: eg,
                     spellCheck: J,
@@ -3472,8 +3491,8 @@ let t8 = s.forwardRef(function (e, t) {
                     onKeyDown: ey,
                     onKeyUp: eC,
                     decorate: eD,
-                    renderExtraElement: ew,
-                    renderExtraLeaf: eM,
+                    renderExtraElement: eL,
+                    renderExtraLeaf: ew,
                     "aria-owns": es,
                     "aria-haspopup": eo,
                     "aria-expanded": ea,
@@ -3489,12 +3508,12 @@ let t8 = s.forwardRef(function (e, t) {
         ],
     });
 });
-var t9 = n(266599);
+var nn = n(266599);
 new m.A("ChannelEditor.tsx");
-let ne = function () {
+let ni = function () {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
 };
-class nt extends s.Component {
+class nr extends s.Component {
     ref = s.createRef();
     _focusBlurQueue = Promise.resolve();
     _unsubscribe;
@@ -3526,7 +3545,7 @@ class nt extends s.Component {
     componentDidUpdate(e) {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             let e;
-            (e = this.props.useSlate ? this.props.textValue : (0, eG.WO)(this.props.richValue, { mode: "plain" })),
+            (e = this.props.useSlate ? this.props.textValue : (0, eB.WO)(this.props.richValue, { mode: "plain" })),
                 this.props.onChange?.(null, e, (0, N.x7)(e));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
@@ -3646,7 +3665,7 @@ class nt extends s.Component {
     saveCurrentTextThrottled = u().throttle(this.saveCurrentText.bind(this, !1), 500);
     getPlaceholder() {
         let { disabled: e, placeholder: t, isPreviewing: n, showValueWhenDisabled: i } = this.props;
-        return e && !n ? (i ? "" : eA.intl.string(eA.t.IYKTTc)) : t;
+        return e && !n ? (i ? "" : eS.intl.string(eS.t.IYKTTc)) : t;
     }
     handleEnter = (e) => this.props.onEnter?.(e);
     handleTab = () => this.props.onTab?.();
@@ -3682,7 +3701,7 @@ class nt extends s.Component {
             { submitting: b, popup: D } = this.state,
             L = {
                 channel: d,
-                className: o()(m, t9.Tg, { [t9.w5]: f, [t9.Rr]: n || b }),
+                className: o()(m, nn.Tg, { [nn.w5]: f, [nn.Rr]: n || b }),
                 id: g,
                 placeholder: this.getPlaceholder(),
                 required: I,
@@ -3704,10 +3723,10 @@ class nt extends s.Component {
                 onKeyDown: s,
                 onSubmit: l,
                 textAreaPaddingClassName: o()({
-                    [t9.H$]: _ === S.oU.CREATE_FORUM_POST,
-                    [t9.g_]: _ === S.oU.CUSTOM_GIFT,
-                    [t9.Yg]: _ === S.oU.USER_PROFILE,
-                    [t9.$$]: _ === S.oU.OVERLAY_INLINE_REPLY,
+                    [nn.H$]: _ === S.oU.CREATE_FORUM_POST,
+                    [nn.g_]: _ === S.oU.CUSTOM_GIFT,
+                    [nn.Yg]: _ === S.oU.USER_PROFILE,
+                    [nn.$$]: _ === S.oU.OVERLAY_INLINE_REPLY,
                 }),
                 spellcheckEnabled: h,
                 useNewSlashCommands: p,
@@ -3723,7 +3742,7 @@ class nt extends s.Component {
                 "aria-autocomplete": "list",
             },
             w = f
-                ? (0, r.jsx)(t8, {
+                ? (0, r.jsx)(nt, {
                       ref: this.ref,
                       ...L,
                       type: _,
@@ -3839,7 +3858,7 @@ class nt extends s.Component {
             }
             return { files: [], errors: a };
         })(e.clipboardData, l.uploadLongMessages ? (s ?? o) : null);
-        return (ne(
+        return (ni(
             "onPaste",
             [...e.clipboardData.items].map((e) => {
                 if ("file" !== e.kind) return { kind: e.kind, type: e.type };
@@ -3854,7 +3873,7 @@ class nt extends s.Component {
                   let { error: t } = e;
                   return "is_directory" === t;
               }) &&
-                  (0, f.openUploadError)({ title: eA.intl.string(eA.t.azO1Pe), help: eA.intl.string(eA.t["Koklr/"]) }),
+                  (0, f.openUploadError)({ title: eS.intl.string(eS.t.azO1Pe), help: eS.intl.string(eS.t["Koklr/"]) }),
               !1)
             : (e.preventDefault(),
               e.stopPropagation(),
