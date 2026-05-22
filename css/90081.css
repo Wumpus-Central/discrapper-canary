@@ -5942,7 +5942,7 @@
 .durationTimeWrapper_b824c5 {
     cursor: pointer;
     flex: 0 0 auto;
-    height: 16px;
+    height: 18px;
     margin-inline-start: 3px
 }
 
@@ -5950,14 +5950,11 @@
 .durationTimeSeparator_b824c5 {
     color: var(--white);
     display: inline;
+    font-family: Roboto, Helvetica Neue, Arial, sans-serif;
     text-align: center;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none
-}
-
-.durationTimeDisplay_b824c5 {
-    font-variant-numeric: tabular-nums
 }
 
 .durationTimeSeparator_b824c5 {
@@ -6573,10 +6570,13 @@
 }
 
 .timelineTooltip__68788 {
+    background-color: hsl(var(--black-500-hsl)/.25);
+    border-radius: 4px;
+    font-family: Roboto, Helvetica Neue, Arial, sans-serif;
+    padding: 2px 6px;
     pointer-events: none;
-    text-shadow: 0 0 2px var(--black);
-    top: 50%;
-    transform: translate(-50%, calc(-100% - 10px))
+    top: 0;
+    transform: translate(-50%, calc(-100% - 15px))
 }
 
 .playhead__68788,
