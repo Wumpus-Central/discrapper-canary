@@ -9,6 +9,7 @@ var a,
         (a.COPY_TO_CLIPBOARD = "copy_to_clipboard"),
         (a.EXPORT_TO_FILE = "export_to_file"),
         (a.DELETE = "delete"),
+        (a.SHOW_IN_FOLDER = "show_in_folder"),
         a);
 let i = new Set([
     "add_to_library",
@@ -19,4 +20,5 @@ let i = new Set([
     "copy_to_clipboard",
     "export_to_file",
     "delete",
+    "show_in_folder",
 ]);

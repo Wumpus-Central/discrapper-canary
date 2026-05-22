@@ -1,4 +1,4 @@
-t.d(n, { default: () => N });
+t.d(n, { default: () => K });
 var e = t(627968);
 t(64700);
 var l = t(980707),
@@ -17,40 +17,42 @@ var l = t(980707),
     A = t(241326),
     b = t(645655),
     x = t(549685),
-    E = t(32880),
-    _ = t(983069),
-    D = t(741394),
+    _ = t(32880),
+    D = t(983069),
+    E = t(741394),
     C = t(372684),
     j = t(439818),
     O = t(696016),
-    m = t(264572).Buffer,
-    w = t(17928),
+    w = t(264572).Buffer,
+    m = t(17928),
     R = t(7807),
-    T = t(931991),
-    Z = t(71393),
-    H = t(576705),
+    Z = t(931991),
+    H = t(71393),
+    T = t(576705),
     v = t(711014),
-    S = t(287809),
-    I = t(105009),
+    I = t(287809),
+    S = t(105009),
     F = t(505930),
     k = t(807072),
     B = t(405433),
     P = t(688810),
     X = t(274372),
     G = t(74847),
-    L = t(602902);
-function N(i) {
+    L = t(602902),
+    N = t(678708),
+    W = t(540999);
+function K(i) {
     let {
             clips: n,
             channelId: t,
-            onShare: N,
-            onEdit: W,
-            onBeforeDelete: K,
-            onAfterDelete: V,
-            actionsDisabled: M = !1,
-            displayConfiguration: U = o.I,
+            onShare: K,
+            onEdit: M,
+            onBeforeDelete: V,
+            onAfterDelete: U,
+            actionsDisabled: Y = !1,
+            displayConfiguration: Q = o.I,
         } = i,
-        Y = (function (i) {
+        q = (function (i) {
             let { clips: n, actionsDisabled: t = !1 } = i;
             return n.some((i) => !0 === i.isTemporary)
                 ? (0, e.jsx)(r.Dr, {
@@ -63,11 +65,11 @@ function N(i) {
                       },
                   })
                 : null;
-        })({ clips: n, actionsDisabled: M }),
-        Q = (function (i) {
+        })({ clips: n, actionsDisabled: Y }),
+        J = (function (i) {
             let { clips: n, channelId: t, onShare: l, actionsDisabled: o = !1 } = i,
                 { analyticsLocations: c } = (0, P.Ay)(),
-                u = (0, w.bG)([X.A], () => n.some((i) => X.A.isClipExporting(i.id)));
+                u = (0, m.bG)([X.A], () => n.some((i) => X.A.isClipExporting(i.id)));
             async function f() {
                 (0, a.Z_)();
                 let i = (0, G.t)(t);
@@ -87,8 +89,8 @@ function N(i) {
                 disabled: o && !u,
                 action: f,
             });
-        })({ clips: n, channelId: t, onShare: N, actionsDisabled: M }),
-        q = (function (i) {
+        })({ clips: n, channelId: t, onShare: K, actionsDisabled: Y }),
+        z = (function (i) {
             let { clips: n, onEdit: t, actionsDisabled: l = !1 } = i;
             return n.length > 1
                 ? null
@@ -101,8 +103,8 @@ function N(i) {
                           (0, a.Z_)(), t?.();
                       },
                   });
-        })({ clips: n, onEdit: W, actionsDisabled: M }),
-        J = (function (i) {
+        })({ clips: n, onEdit: M, actionsDisabled: Y }),
+        $ = (function (i) {
             let { clips: n, actionsDisabled: t = !1 } = i;
             return !0 === n[0].isFavorite
                 ? null
@@ -115,19 +117,19 @@ function N(i) {
                           (0, a.Z_)(), n.forEach((i) => (0, s.XK)(i));
                       },
                   });
-        })({ clips: n, actionsDisabled: M }),
-        z = (function (i) {
+        })({ clips: n, actionsDisabled: Y }),
+        ii = (function (i) {
             let { clips: n, channelId: t } = i,
-                l = (0, w.bG)([v.Ay, H.A, S.default, Z.A], () =>
+                l = (0, m.bG)([v.Ay, T.A, I.default, H.A], () =>
                     v.Ay.getFlattenedGuildIds().some((i) => {
-                        let n = Z.A.getGuild(i);
-                        return null != n && (0, T.ie)(n, H.A, S.default).canCreateExpressions;
+                        let n = H.A.getGuild(i);
+                        return null != n && (0, Z.ie)(n, T.A, I.default).canCreateExpressions;
                     }),
                 ),
                 o = n[0];
             if (n.length > 1 || !l || o.type === C.nQ.SCREENSHOT) return null;
             async function c() {
-                (0, a.Z_)(), await (0, I.n)(o, t);
+                (0, a.Z_)(), await (0, S.n)(o, t);
             }
             return (0, e.jsx)(r.Dr, {
                 id: "clips-export-soundboard",
@@ -136,7 +138,7 @@ function N(i) {
                 action: c,
             });
         })({ clips: n, channelId: t }),
-        $ = (function (i) {
+        it = (function (i) {
             let { clips: n } = i,
                 t = n[0];
             return n.length > 1 || null == g.A.clipboard.copyFile
@@ -152,7 +154,7 @@ function N(i) {
                       },
                   });
         })({ clips: n }),
-        ii = (function (i) {
+        ie = (function (i) {
             let { clips: n } = i,
                 t = n[0];
             if (n.length > 1) return null;
@@ -162,8 +164,8 @@ function N(i) {
                 try {
                     let i = await (0, s.VO)(t),
                         n = await i.arrayBuffer(),
-                        e = (0, j.A)((0, D.uk)(t.filepath));
-                    await g.A.fileManager.saveWithDialog(m.from(n), e);
+                        e = (0, j.A)((0, E.uk)(t.filepath));
+                    await g.A.fileManager.saveWithDialog(w.from(n), e);
                 } catch (i) {
                     O.nx.error("Error exporting clip to file", i);
                 } finally {
@@ -174,10 +176,10 @@ function N(i) {
                 (0, a.Z_)(), (0, s.H1)([t.id]);
                 try {
                     let i = await (0, s.VO)(t),
-                        n = await (0, _.R_)(i),
+                        n = await (0, D.R_)(i),
                         e = await n.arrayBuffer(),
-                        l = (0, j.A)((0, D.kh)(t.filepath)) + ".ogg";
-                    await g.A.fileManager.saveWithDialog(m.from(e), l);
+                        l = (0, j.A)((0, E.kh)(t.filepath)) + ".ogg";
+                    await g.A.fileManager.saveWithDialog(w.from(e), l);
                 } catch (i) {
                     O.nx.error("Error exporting clip to sound file", i);
                 } finally {
@@ -187,25 +189,25 @@ function N(i) {
             return (0, e.jsxs)(r.Dr, {
                 id: "clips-export-group",
                 label: d.intl.string(d.t["WH/V85"]),
-                leadingAccessory: { type: "icon", icon: E.s },
+                leadingAccessory: { type: "icon", icon: _.s },
                 children: [
                     (0, e.jsx)(r.Dr, {
                         id: "clips-export-file",
                         label: l ? d.intl.string(d.t.y5FgMk) : d.intl.string(d.t.sFgmNy),
-                        leadingAccessory: { type: "icon", icon: E.s },
+                        leadingAccessory: { type: "icon", icon: _.s },
                         action: o,
                     }),
                     !l &&
                         (0, e.jsx)(r.Dr, {
                             id: "clips-export-sound-file",
                             label: d.intl.string(d.t.db0NKG),
-                            leadingAccessory: { type: "icon", icon: E.s },
+                            leadingAccessory: { type: "icon", icon: _.s },
                             action: c,
                         }),
                 ],
             });
         })({ clips: n }),
-        it = (function (i) {
+        il = (function (i) {
             let { clips: n, actionsDisabled: t = !1 } = i;
             return !0 !== n[0].isFavorite
                 ? null
@@ -219,8 +221,8 @@ function N(i) {
                           (0, a.Z_)(), n.forEach((i) => (0, s.XK)(i));
                       },
                   });
-        })({ clips: n, actionsDisabled: M }),
-        ie = (function (i) {
+        })({ clips: n, actionsDisabled: Y }),
+        ir = (function (i) {
             let { clips: n, onBeforeDelete: t, onAfterDelete: l, actionsDisabled: o = !1 } = i;
             return (0, e.jsx)(r.Dr, {
                 id: "clips-delete",
@@ -232,15 +234,29 @@ function N(i) {
                     (0, a.Z_)(), (0, b.A)(i, { clips: n, onBeforeDelete: t, onAfterDelete: l });
                 },
             });
-        })({ clips: n, onBeforeDelete: K, onAfterDelete: V, actionsDisabled: M }),
-        il = U.has(o.C.ADD_TO_LIBRARY),
-        ir = U.has(o.C.SHARE),
-        ia = U.has(o.C.EDIT),
-        io = U.has(o.C.FAVORITE),
-        ic = U.has(o.C.EXPORT_TO_SOUNDBOARD),
-        is = U.has(o.C.COPY_TO_CLIPBOARD),
-        id = U.has(o.C.EXPORT_TO_FILE),
-        iu = U.has(o.C.DELETE);
+        })({ clips: n, onBeforeDelete: V, onAfterDelete: U, actionsDisabled: Y }),
+        ia = (function (i) {
+            let { clips: n } = i;
+            return (0, m.bG)([W.A], () => W.A.isDeveloper)
+                ? (0, e.jsx)(r.Dr, {
+                      leadingAccessory: { type: "icon", icon: N.s },
+                      id: "show-in-folder",
+                      label: "Show in Folder",
+                      action: function () {
+                          (0, a.Z_)(), g.A.fileManager.showItemInFolder(n[0].filepath);
+                      },
+                  })
+                : null;
+        })({ clips: n }),
+        io = Q.has(o.C.ADD_TO_LIBRARY),
+        ic = Q.has(o.C.SHARE),
+        is = Q.has(o.C.EDIT),
+        id = Q.has(o.C.FAVORITE),
+        iu = Q.has(o.C.EXPORT_TO_SOUNDBOARD),
+        ip = Q.has(o.C.COPY_TO_CLIPBOARD),
+        iy = Q.has(o.C.EXPORT_TO_FILE),
+        ig = Q.has(o.C.DELETE),
+        ih = Q.has(o.C.SHOW_IN_FOLDER);
     return (0, e.jsxs)(l.W, {
         "data-menu-migrated-auto": !0,
         navId: "clips-more-options",
@@ -248,9 +264,10 @@ function N(i) {
         onClose: a.Z_,
         onSelect: a.Z_,
         children: [
-            (0, e.jsxs)(r.rX, { children: [il && Y, ir && Q, ia && q] }),
-            (0, e.jsxs)(r.rX, { children: [io && J, ic && z, is && $, id && ii] }),
-            (0, e.jsxs)(r.rX, { children: [io && it, iu && ie] }),
+            (0, e.jsxs)(r.rX, { children: [io && q, ic && J, is && z] }),
+            (0, e.jsxs)(r.rX, { children: [id && $, iu && ii, ip && it, iy && ie] }),
+            (0, e.jsx)(r.rX, { children: ih && ia }),
+            (0, e.jsxs)(r.rX, { children: [id && il, ig && ir] }),
         ],
     });
 }
