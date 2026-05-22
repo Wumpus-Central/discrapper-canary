@@ -88,7 +88,7 @@ function S(e) {
                 padding: T,
                 children: [
                     null != t ? (0, i.jsx)(h.A, { onClick: t }) : null,
-                    (0, i.jsx)(p.p, { ...n, variant: s ?? "active" }),
+                    (0, i.jsx)(p.p, { ...n, variant: s ?? "active", autoFocus: !0 }),
                 ],
             }),
         ],
