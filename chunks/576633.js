@@ -10,5 +10,6 @@ e.exports = {
     kf: "perkIcon_ea1e6c",
     o1: "actions_ea1e6c",
     AJ: "learnMoreButton_ea1e6c",
+    lI: "ctaButton_ea1e6c",
     cy: "bannerWrapper_ea1e6c",
 };

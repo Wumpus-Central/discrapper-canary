@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     s = n(945810);
 let a = r.lazy(() =>
-        Promise.all([n.e("7468"), n.e("89281"), n.e("55184"), n.e("91081")])
+        Promise.all([n.e("57325"), n.e("89281"), n.e("55184"), n.e("91081")])
             .then(n.bind(n, 441136))
             .then((e) => ({ default: e.SyntaxHighlight })),
     ),

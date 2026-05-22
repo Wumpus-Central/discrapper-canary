@@ -1,0 +1,183 @@
+.clipItem__1d12e {
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: calc(var(--space-8)*-1);
+    padding: var(--space-8);
+    transition: background-color .1s ease
+}
+
+.clipItem__1d12e.disabled__1d12e {
+    cursor: wait
+}
+
+.clipItem__1d12e.focused__1d12e,
+.clipItem__1d12e:hover {
+    background-color: var(--background-mod-subtle);
+    filter: var(--shadow-low-hover-filter)
+}
+
+.clipItem__1d12e.focused__1d12e .clipHoverButtons__1d12e,
+.clipItem__1d12e:hover .clipHoverButtons__1d12e {
+    opacity: 1
+}
+
+.clipItem__1d12e.focused__1d12e .clipThumbOverlay__1d12e,
+.clipItem__1d12e:hover .clipThumbOverlay__1d12e {
+    opacity: 1
+}
+
+.clipItem__1d12e.selected__1d12e {
+    border: 2px solid var(--brand-500);
+    margin: calc(var(--space-6)*-1);
+    padding: var(--space-4)
+}
+
+.clipBadge__1d12e {
+    align-items: center;
+    background: var(--control-overlay-secondary-background-default);
+    border-radius: var(--radius-xs);
+    box-sizing: border-box;
+    height: 22px;
+    padding: 2px var(--space-4)
+}
+
+.clipBadge__1d12e,
+.clipBottomBadges__1d12e {
+    display: flex;
+    gap: var(--space-4)
+}
+
+.clipBottomBadges__1d12e {
+    bottom: var(--space-4);
+    inset-inline-end: var(--space-4);
+    position: absolute
+}
+
+.clipDurationEditIcon__1d12e {
+    color: var(--white);
+    height: 16px;
+    width: 16px
+}
+
+.clipThumb__1d12e {
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    height: 100%;
+    inset: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 100%
+}
+
+.clipThumbEmpty__1d12e {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.clipThumbContainer__1d12e {
+    aspect-ratio: 16/9;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-8);
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.clipProgressBar__1d12e {
+    background-color: rgba(0, 0, 0, .3);
+    bottom: 0;
+    height: 4px;
+    inset-inline: 0;
+    position: absolute;
+    z-index: 2
+}
+
+.clipProgressFill__1d12e {
+    background-color: var(--brand-500);
+    height: 100%
+}
+
+.clipThumbOverlay__1d12e {
+    background: linear-gradient(to bottom, var(--background-base-lower), transparent);
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .1s ease
+}
+
+.newBadge__1d12e {
+    inset-inline-start: var(--space-8)
+}
+
+.clipHoverButtons__1d12e,
+.newBadge__1d12e {
+    position: absolute;
+    top: var(--space-8)
+}
+
+.clipHoverButtons__1d12e {
+    display: flex;
+    gap: var(--space-4);
+    inset-inline: var(--space-8);
+    justify-content: flex-end;
+    opacity: 0;
+    transition: opacity .1s ease;
+    z-index: 1
+}
+
+.clipMetadata__1d12e {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--space-8);
+    width: 100%
+}
+
+.clipIcon__1d12e {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-shrink: 0;
+    height: 32px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 32px
+}
+
+.clipIconImage__1d12e {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.clipTextInfo__1d12e {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    min-width: 0
+}
+
+.clipSubtitle__1d12e,
+.clipTitle__1d12e {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.clipAvatars__1d12e {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0
+}

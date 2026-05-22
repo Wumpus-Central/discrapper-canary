@@ -1,4 +1,4 @@
-a.d(s, { default: () => T });
+a.d(s, { default: () => M });
 var t = a(627968),
     l = a(64700),
     c = a(503698),
@@ -12,41 +12,42 @@ var t = a(627968),
     u = a(834730),
     f = a(43990),
     h = a(111159),
-    p = a(318254),
-    j = a(577473),
-    b = a(278416),
-    N = a(688810),
-    g = a(859040),
-    v = a(792656),
-    A = a(914410),
-    _ = a(961250),
-    k = a(532309),
-    w = a(440005),
-    C = a(49132),
-    O = a(555837),
-    S = a(975571),
-    y = a(652215),
-    R = a(788868),
-    z = a(594387),
-    E = a(375708),
-    I = a(465388);
-function M(e) {
+    p = a(364522),
+    j = a(318254),
+    b = a(577473),
+    N = a(278416),
+    g = a(688810),
+    v = a(859040),
+    A = a(792656),
+    _ = a(914410),
+    k = a(961250),
+    w = a(532309),
+    C = a(440005),
+    O = a(49132),
+    S = a(555837),
+    y = a(975571),
+    R = a(652215),
+    z = a(788868),
+    E = a(594387),
+    I = a(375708),
+    T = a(465388);
+function D(e) {
     let { icon: s, title: a, description: l, footer: c, thumbnailSrc: r, thumbnailImageClassName: d } = e;
     return (0, t.jsxs)("div", {
-        className: I.nK,
+        className: T.nK,
         children: [
             (0, t.jsxs)("div", {
-                className: I.Yc,
+                className: T.Yc,
                 children: [
                     (0, t.jsxs)("div", {
-                        className: I.Jp,
+                        className: T.Jp,
                         children: [
-                            (0, t.jsx)("div", { className: I.kf, children: s }),
+                            (0, t.jsx)("div", { className: T.kf, children: s }),
                             (0, t.jsx)(x.D, { variant: "heading-lg/semibold", color: "text-strong", children: a }),
                         ],
                     }),
                     (0, t.jsx)("div", {
-                        className: I.jV,
+                        className: T.jV,
                         children: (0, t.jsx)(u.E, { variant: "text-sm/medium", color: "text-subtle", children: l }),
                     }),
                     c,
@@ -54,56 +55,54 @@ function M(e) {
             }),
             null != r &&
                 (0, t.jsx)("div", {
-                    className: I.t$,
-                    children: (0, t.jsx)("img", { className: i()(I.Q7, d), src: r, alt: "" }),
+                    className: T.t$,
+                    children: (0, t.jsx)("img", { className: i()(T.Q7, d), src: r, alt: "" }),
                 }),
         ],
     });
 }
-function T(e) {
+function M(e) {
     let { transitionState: s, onClose: a } = e,
-        { analyticsLocations: c } = (0, N.Ay)(),
-        { programReward: x, totalDays: T } = (0, o.cf)([k.A], () => ({
-            programReward: k.A.getRewardForProgram(w.W.XBOX),
-            totalDays: k.A.getTotalDaysInDuration(w.W.XBOX),
+        { analyticsLocations: c } = (0, g.Ay)(),
+        { programReward: x, totalDays: M } = (0, o.cf)([w.A], () => ({
+            programReward: w.A.getRewardForProgram(C.W.XBOX),
+            totalDays: w.A.getTotalDaysInDuration(C.W.XBOX),
         })),
-        D = (0, C.J8)(x),
-        G = (0, O.G)({ location: "xboxPerksModal" });
+        G = (0, O.J8)(x),
+        P = (0, S.G)({ location: "xboxPerksModal" });
     l.useEffect(() => {
-        G && (D ? (0, _.uM)() : (0, _.Ay)());
-    }, [D, G]);
-    let P = x?.reward_amount ?? 250,
-        X = T ?? 30,
-        K =
-            x?.next_reward_date != null
-                ? Math.min(X, Math.max(0, (0, r.default)(new Date(x.next_reward_date), new Date())))
-                : X;
+        P && (G ? (0, k.uM)() : (0, k.Ay)());
+    }, [G, P]);
+    let X = x?.reward_amount ?? 250,
+        K = M ?? 30,
+        L = x?.next_reward_date != null ? Math.max(0, (0, r.default)(new Date(x.next_reward_date), new Date())) : K,
+        W = L > K ? 0 : K - L;
     return (0, t.jsx)(d.d, {
         transitionState: s,
         onClose: a,
         size: "md",
-        "aria-label": E.intl.string(z.default.cRLw2a),
+        "aria-label": I.intl.string(E.default.cRLw2a),
         children: (0, t.jsx)(f.N, {
             theme: "dark",
             children: (e) =>
                 (0, t.jsxs)("div", {
-                    className: i()(e, I.yl),
+                    className: i()(e, T.yl),
                     children: [
                         (0, t.jsxs)("div", {
-                            className: I.wx,
+                            className: T.wx,
                             children: [
                                 (0, t.jsxs)("div", {
-                                    className: I.yp,
+                                    className: T.yp,
                                     children: [
                                         (0, t.jsx)("img", {
                                             src: "https://cdn.discordapp.com/assets/content/be9c8221486fa97b56c4cb1c1392cb39d07ebd5836fe23f068f39cccef49c16f.png",
-                                            className: I.Fn,
+                                            className: T.Fn,
                                             alt: "Xbox Game Pass",
                                         }),
                                         (0, t.jsx)(u.E, {
                                             variant: "text-sm/medium",
                                             color: "text-subtle",
-                                            className: I.NO,
+                                            className: T.NO,
                                             children: "x",
                                         }),
                                         (0, t.jsx)(h.p, { size: "sm", color: m.A.colors.ICON_STRONG }),
@@ -113,31 +112,31 @@ function T(e) {
                             ],
                         }),
                         (0, t.jsx)("div", {
-                            className: I.VA,
+                            className: T.VA,
                             children: (0, t.jsx)(u.E, {
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
-                                children: E.intl.format(z.default["70kyQr"], {
-                                    learnMoreLink: S.A.getArticleURL(y.MVz.XBOX_GAME_PASS_PERKS),
+                                children: I.intl.format(E.default["70kyQr"], {
+                                    learnMoreLink: y.A.getArticleURL(R.MVz.XBOX_GAME_PASS_PERKS),
                                 }),
                             }),
                         }),
-                        (0, t.jsxs)("div", {
-                            className: I.rN,
+                        (0, t.jsxs)(p.Ar, {
+                            className: T.rN,
                             children: [
-                                (0, t.jsx)(M, {
-                                    icon: (0, t.jsx)(p.C, { size: "sm", color: m.A.colors.ICON_STRONG }),
-                                    title: E.intl.string(z.default["+tdDeK"]),
-                                    description: E.intl.format(z.default.ZYc6Hv, { orbAmount: P, days: K }),
+                                (0, t.jsx)(D, {
+                                    icon: (0, t.jsx)(j.C, { size: "sm", color: m.A.colors.ICON_STRONG }),
+                                    title: I.intl.string(E.default["+tdDeK"]),
+                                    description: I.intl.format(E.default.ZYc6Hv, { orbAmount: X, days: L }),
                                     footer:
                                         null != x
                                             ? (0, t.jsx)("div", {
-                                                  className: I.hr,
-                                                  children: (0, t.jsx)(A.Ay, {
-                                                      variant: A.qP.BLUE,
-                                                      weight: A.fh.MEDIUM,
-                                                      progress: X - K,
-                                                      maximum: X,
+                                                  className: T.hr,
+                                                  children: (0, t.jsx)(_.Ay, {
+                                                      variant: _.qP.BLUE,
+                                                      weight: _.fh.MEDIUM,
+                                                      progress: W,
+                                                      maximum: K,
                                                       glowing: !1,
                                                   }),
                                               })
@@ -145,35 +144,35 @@ function T(e) {
                                     thumbnailSrc:
                                         "https://cdn.discordapp.com/assets/content/2733509d1c8c361c1a0125888c4a8c32d63471b71a304fe6aa37619f137d6d1a.png",
                                 }),
-                                (0, t.jsx)(M, {
-                                    icon: (0, t.jsx)(j.r, { size: "sm", color: m.A.colors.ICON_STRONG }),
-                                    title: E.intl.string(z.default["++kzl5"]),
-                                    description: E.intl.format(z.default.kc3Kvs, { multiplier: "1.2" }),
+                                (0, t.jsx)(D, {
+                                    icon: (0, t.jsx)(b.r, { size: "sm", color: m.A.colors.ICON_STRONG }),
+                                    title: I.intl.string(E.default["++kzl5"]),
+                                    description: I.intl.format(E.default.kc3Kvs, { multiplier: "1.2" }),
                                     thumbnailSrc:
                                         "https://cdn.discordapp.com/assets/content/023eccf9a31b5e91537568fd5cf492e2e86beb668c90ffd86b013a674ae61f99.png",
-                                    thumbnailImageClassName: I.$T,
+                                    thumbnailImageClassName: T.$T,
                                 }),
-                                (0, t.jsx)(M, {
-                                    icon: (0, t.jsx)(b.g, { size: "sm", color: m.A.colors.ICON_STRONG }),
-                                    title: E.intl.string(z.default["a+PtZt"]),
-                                    description: E.intl.format(z.default.WgkpKK, {
+                                (0, t.jsx)(D, {
+                                    icon: (0, t.jsx)(N.g, { size: "sm", color: m.A.colors.ICON_STRONG }),
+                                    title: I.intl.string(E.default["a+PtZt"]),
+                                    description: I.intl.format(E.default.WgkpKK, {
                                         onClick: () => {
-                                            (0, g.Cz)({ analyticsLocations: c, analyticsSource: "crepe glaze modal" }),
+                                            (0, v.Cz)({ analyticsLocations: c, analyticsSource: "crepe glaze modal" }),
                                                 a();
                                         },
                                     }),
                                     thumbnailSrc:
                                         "https://cdn.discordapp.com/assets/content/07b1bde7c3e4eab64c7d3419dd73ad737ab1f0730a1fa186d746e7880edd6209.png",
-                                    thumbnailImageClassName: I.Ly,
+                                    thumbnailImageClassName: T.Ly,
                                 }),
                             ],
                         }),
                         (0, t.jsx)("div", {
-                            className: I.qr,
-                            children: (0, t.jsx)(v.A, {
+                            className: T.qr,
+                            children: (0, t.jsx)(A.A, {
                                 fullWidth: !0,
-                                defaultTextOverride: E.intl.string(z.default["4CdlUW"]),
-                                subscriptionTier: R.pe.TIER_2,
+                                defaultTextOverride: I.intl.string(E.default["4CdlUW"]),
+                                subscriptionTier: z.pe.TIER_2,
                             }),
                         }),
                     ],

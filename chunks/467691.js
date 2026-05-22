@@ -56,10 +56,8 @@ let g = s().throttle(function (e, t) {
                         S !== c.A.getGuildId() && (0, h.i)(S, u.Ay.getDefaultChannel(S)?.id),
                         (0, a.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
-                                n.e("27252"),
-                                n.e("12529"),
+                                n.e("98193"),
                                 n.e("8909"),
-                                n.e("64290"),
                                 n.e("43513"),
                                 n.e("47626"),
                                 n.e("32756"),

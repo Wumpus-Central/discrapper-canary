@@ -1,26 +1,27 @@
-i.d(s, { A: () => B, o: () => g });
+i.d(s, { A: () => k, o: () => B });
 var a = i(627968);
 i(64700);
-var t = i(661531),
-    l = i(192308),
+var l = i(661531),
+    t = i(192308),
     n = i(821609),
     d = i(43990),
     r = i(834730),
     c = i(820081),
-    o = i(792656),
-    x = i(555837),
+    o = i(241524),
+    x = i(792656),
+    h = i(555837),
     m = i(674567),
     u = i(968671),
-    h = i(652215),
-    v = i(788868),
-    j = i(594387),
-    N = i(375708),
-    f = i(576633);
-let p = [j.default.HZz88k, j.default.Aau2G1, j.default["6Udfv9"]];
-function g() {
-    (0, l.openModalLazy)(async () => {
+    v = i(652215),
+    j = i(788868),
+    N = i(594387),
+    f = i(375708),
+    p = i(576633);
+let g = [N.default.HZz88k, N.default.Aau2G1, N.default["6Udfv9"]];
+function B() {
+    (0, t.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            i.e("45550"),
+            i.e("44657"),
             i.e("78845"),
             i.e("17225"),
             i.e("26780"),
@@ -32,80 +33,87 @@ function g() {
         return (s) => (0, a.jsx)(e, { ...s });
     });
 }
-function B(e) {
+function k(e) {
     let s,
         i,
-        l,
-        { partner: B } = e;
-    return ((s = (0, m.V)()),
-    (i = (0, u.GM)("connectionBottomBanner")),
-    (l = (0, x.G)({ location: "useShouldShowCrepeConnectionBottomBanner" })),
-    B === h.fg2.XBOX && i && s === m.s.NON_NITRO && l)
+        t,
+        { partner: k } = e,
+        A =
+            ((s = (0, m.V)()),
+            (i = (0, u.GM)("connectionBottomBanner")),
+            (t = (0, h.G)({ location: "useShouldShowCrepeConnectionBottomBanner" })),
+            k === v.fg2.XBOX && i && s === m.s.NON_NITRO && t),
+        C = (0, o.A)("(max-width: 485px)");
+    return A
         ? (0, a.jsx)("div", {
-              className: f.cy,
+              className: p.cy,
               children: (0, a.jsx)(d.N, {
                   theme: "dark",
                   children: (e) =>
                       (0, a.jsxs)("div", {
-                          className: `${e} ${f.vK}`,
+                          className: `${e} ${p.vK}`,
                           children: [
-                              (0, a.jsx)("div", { className: f.JS, children: (0, a.jsx)("div", { className: f.gm }) }),
-                              (0, a.jsx)("div", { className: f.Ge }),
+                              (0, a.jsx)("div", { className: p.JS, children: (0, a.jsx)("div", { className: p.gm }) }),
+                              (0, a.jsx)("div", { className: p.Ge }),
                               (0, a.jsxs)("div", {
-                                  className: f.Qs,
+                                  className: p.Qs,
                                   children: [
                                       (0, a.jsxs)("div", {
-                                          className: f.C,
+                                          className: p.C,
                                           children: [
                                               (0, a.jsx)(r.E, {
                                                   variant: "text-sm/semibold",
                                                   color: "text-default",
-                                                  children: N.intl.string(j.default.f1ygW4),
+                                                  children: f.intl.string(N.default.f1ygW4),
                                               }),
                                               (0, a.jsx)("div", {
-                                                  className: f.md,
-                                                  children: p.map((e) =>
+                                                  className: p.md,
+                                                  children: g.map((e) =>
                                                       (0, a.jsxs)(
                                                           "div",
                                                           {
-                                                              className: f.d_,
+                                                              className: p.d_,
                                                               children: [
                                                                   (0, a.jsx)("div", {
-                                                                      className: f.kf,
+                                                                      className: p.kf,
                                                                       children: (0, a.jsx)(c.B, {
                                                                           size: "xs",
-                                                                          color: t.A.colors.ICON_SUBTLE,
+                                                                          color: l.A.colors.ICON_SUBTLE,
                                                                       }),
                                                                   }),
                                                                   (0, a.jsx)(r.E, {
                                                                       variant: "text-xs/normal",
                                                                       color: "text-default",
-                                                                      children: N.intl.string(e),
+                                                                      children: f.intl.string(e),
                                                                   }),
                                                               ],
                                                           },
-                                                          N.intl.string(e),
+                                                          f.intl.string(e),
                                                       ),
                                                   ),
                                               }),
                                           ],
                                       }),
                                       (0, a.jsxs)("div", {
-                                          className: f.o1,
+                                          className: p.o1,
                                           children: [
                                               (0, a.jsx)("div", {
-                                                  className: f.AJ,
+                                                  className: p.AJ,
                                                   children: (0, a.jsx)(n.$, {
                                                       variant: "secondary",
                                                       size: "sm",
-                                                      text: N.intl.string(N.t.hvVgAZ),
-                                                      onClick: g,
+                                                      text: f.intl.string(f.t.hvVgAZ),
+                                                      onClick: B,
                                                   }),
                                               }),
-                                              (0, a.jsx)(o.A, {
-                                                  defaultTextOverride: N.intl.string(j.default.oBYFF3),
-                                                  size: "sm",
-                                                  subscriptionTier: v.pe.TIER_2,
+                                              (0, a.jsx)("div", {
+                                                  className: p.lI,
+                                                  children: (0, a.jsx)(x.A, {
+                                                      defaultTextOverride: f.intl.string(N.default.oBYFF3),
+                                                      size: "sm",
+                                                      fullWidth: C,
+                                                      subscriptionTier: j.pe.TIER_2,
+                                                  }),
                                               }),
                                           ],
                                       }),

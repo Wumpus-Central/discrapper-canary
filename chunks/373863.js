@@ -40,7 +40,7 @@ var I = n(661531),
     T = n(834730),
     S = n(734066),
     N = n(274372),
-    y = n(794905),
+    y = n(352527),
     C = n(996682),
     v = n(27989);
 function O(e) {
@@ -124,9 +124,15 @@ var w = n(696016),
     M = n(581874);
 let P = (0, u.Fe)({
     createPromise: () =>
-        Promise.all([n.e("95705"), n.e("57174"), n.e("84971"), n.e("30920"), n.e("78010"), n.e("91652")]).then(
-            n.bind(n, 664111),
-        ),
+        Promise.all([
+            n.e("8451"),
+            n.e("3302"),
+            n.e("57174"),
+            n.e("84971"),
+            n.e("30920"),
+            n.e("78010"),
+            n.e("91652"),
+        ]).then(n.bind(n, 664111)),
     webpackId: 664111,
     name: "DiscordVideoPlayer",
     renderLoader: () => (0, i.jsx)("div", { className: M.Lq }),
