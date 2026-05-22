@@ -25,8 +25,8 @@ let y = (e) => {
                 subscriptionPaymentSourceId: E,
                 hideCurrencySelect: P,
                 renderCustomPaymentSourceSelectorContent: S,
-                resolveGiftCardCheckboxProps: f,
-                resolveDisabledState: _,
+                resolveGiftCardCheckboxProps: _,
+                resolveDisabledState: f,
             } = e,
             {
                 giftCardsEnabled: T,
@@ -82,7 +82,7 @@ let y = (e) => {
                 setCurrency: e.setCheckoutCurrency,
             })),
             { dropdownCurrencies: j, displayCurrency: R } = (0, d.Jn)(),
-            L = a.useMemo(() => (null != _ ? _(r, { isSubscriptionPaidByWallet: g }) : (r ?? !1)), [r, g, _]),
+            L = a.useMemo(() => (null != f ? f(r, { isSubscriptionPaidByWallet: g }) : (r ?? !1)), [r, g, f]),
             O = a.useMemo(() => {
                 if (null != S)
                     return S({
@@ -103,8 +103,8 @@ let y = (e) => {
             }, [P, M.currency, R, j, b, L]),
             w = a.useMemo(() => ({ ...N, ...n, onPaymentSourceAdd: C }), [N, C, n]),
             U = a.useMemo(
-                () => (null != f ? f(I, { isSubscriptionPaidByWallet: g, selectorDisabled: L }) : I),
-                [I, f, g, L],
+                () => (null != _ ? _(I, { isSubscriptionPaidByWallet: g, selectorDisabled: L }) : I),
+                [I, _, g, L],
             ),
             k = null != U && !0 === U.locked;
         return (0, l.jsx)(p.nL, {
@@ -112,7 +112,7 @@ let y = (e) => {
             giftCardsEnabled: T,
             giftCardCheckboxProps: U,
             paymentSourceDropdownProps: w,
-            showCheckboxAboveDropdown: (x || k) && !L,
+            showCheckboxAboveDropdown: x || k,
             disabled: L,
             currencySelectProps: D,
             customSelectorContent: O,
