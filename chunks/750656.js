@@ -1,22 +1,32 @@
 "use strict";
-n.d(t, { Jl: () => o, Wf: () => l, rA: () => s, re: () => a });
-var r = n(508425),
-    i = n(559949);
-let a = [r.z.SOLID, r.z.GRADIENT, r.z.NEON, r.z.TOON, r.z.POP],
-    s = [
-        i.x.DEFAULT,
-        i.x.ZILLA_SLAB,
-        i.x.CHERRY_BOMB,
-        i.x.CHICLE,
-        i.x.MUSEO_MODERNO,
-        i.x.NEO_CASTEL,
-        i.x.PIXELIFY,
-        i.x.SINISTRE,
+n.d(t, { Jl: () => l, Wf: () => u, rA: () => a, re: () => s, sO: () => o });
+var i = n(508425),
+    r = n(559949);
+let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
+    a = [
+        r.x.DEFAULT,
+        r.x.ZILLA_SLAB,
+        r.x.CHERRY_BOMB,
+        r.x.CHICLE,
+        r.x.MUSEO_MODERNO,
+        r.x.NEO_CASTEL,
+        r.x.PIXELIFY,
+        r.x.SINISTRE,
     ],
-    o = [
+    o = new Map([
+        [r.x.SINISTRE, 19.85],
+        [r.x.NEO_CASTEL, 19.03],
+        [r.x.CHERRY_BOMB, 18.54],
+        [r.x.PIXELIFY, 14.42],
+        [r.x.CHICLE, 8.74],
+        [r.x.ZILLA_SLAB, 8.31],
+        [r.x.MUSEO_MODERNO, 6.82],
+        [r.x.DEFAULT, 4.29],
+    ]),
+    l = [
         1628845, 2417517, 1874155, 0xc32aff, 0xfc1965, 0xc6a615, 695675, 1027403, 747943, 0xa913e5, 0xda0149, 0xf93722,
     ],
-    l = [
+    u = [
         [2797222, 16762e3],
         [2535780, 9497343],
         [0xe45eff, 2522592],

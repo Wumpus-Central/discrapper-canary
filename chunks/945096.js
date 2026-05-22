@@ -24,13 +24,20 @@ function l(e) {
 }
 function u() {
     let e,
-        t = a.re[Math.floor(Math.random() * a.re.length)],
-        n = a.rA[Math.floor(Math.random() * a.rA.length)];
-    if (t === s.z.GRADIENT) {
+        t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+        n = a.re[Math.floor(Math.random() * a.re.length)],
+        i = t
+            ? (function () {
+                  let e = Math.random() * a.rA.reduce((e, t) => e + (a.sO.get(t) ?? 0), 0);
+                  for (let t of a.rA) if ((e -= a.sO.get(t) ?? 0) <= 0) return t;
+                  return a.rA[a.rA.length - 1];
+              })()
+            : a.rA[Math.floor(Math.random() * a.rA.length)];
+    if (n === s.z.GRADIENT) {
         let t = a.Wf[Math.floor(Math.random() * a.Wf.length)];
         e = [t.start, t.end];
     } else e = [a.Jl[Math.floor(Math.random() * a.Jl.length)]];
-    return { fontId: n, effectId: t, colors: e };
+    return { fontId: i, effectId: n, colors: e };
 }
 function c(e) {
     if (null == e) return !1;
