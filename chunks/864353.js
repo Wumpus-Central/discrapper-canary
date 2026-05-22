@@ -230,7 +230,7 @@ function e_(e) {
                         (0, G.openModalLazy)(
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("50671"),
+                                    n.e("5389"),
                                     n.e("44616"),
                                     n.e("96680"),
                                     n.e("85579"),
@@ -582,11 +582,11 @@ var e0 = n(410516),
     e1 = n(361597),
     e4 = n(975571),
     e6 = n(428262),
-    e7 = n(69494),
-    e8 = n(534479),
+    e8 = n(69494),
+    e7 = n(534479),
     e2 = n(340034),
-    e5 = n(50956),
-    e3 = n(71867),
+    e3 = n(50956),
+    e5 = n(71867),
     e9 = n(249872);
 function te(e) {
     let { handleStepChange: t, initialPlanId: n, planGroup: r, subscriptionTier: s, trialId: a, handleClose: u } = e,
@@ -655,7 +655,7 @@ function te(e) {
         }),
         [G, M?.id, r, K?.subscriptionPeriodEnd, D, u],
     );
-    if (J) return ee ? (0, l.jsx)(eK.E, { className: e9.QW }) : (0, l.jsx)(e8.A, {});
+    if (J) return ee ? (0, l.jsx)(eK.E, { className: e9.QW }) : (0, l.jsx)(e7.A, {});
     U()(null != R, "Step should be set"), U()(G.length > 0, "Premium plan options should be set");
     let en =
         ee && !C
@@ -663,12 +663,12 @@ function te(e) {
             : (0, l.jsx)(e1.$p, { ...et });
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(e5.Z, { giftMessage: k }),
-            !(C && (0, q.Ik)(b)) && (0, l.jsx)(e7.A, { isEligibleForTrial: _ }),
+            (0, l.jsx)(e3.Z, { giftMessage: k }),
+            !(C && (0, q.Ik)(b)) && (0, l.jsx)(e8.A, { isEligibleForTrial: _ }),
             (0, l.jsxs)(Z.dZ, {
                 children: [
                     !ee && Q && (0, l.jsx)("hr", { className: e9.T4 }),
-                    (0, l.jsx)(e3.P, { className: e9.ZB, planSkuId: H?.skuId, referralTrialOfferId: P }),
+                    (0, l.jsx)(e5.P, { className: e9.ZB, planSkuId: H?.skuId, referralTrialOfferId: P }),
                     (0, l.jsx)(eE.A, {}),
                     $ ? (0, l.jsx)(ez.w, { type: "critical", children: X }) : en,
                     Q &&

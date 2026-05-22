@@ -43,7 +43,8 @@ function T(e) {
                     e.stopPropagation(),
                         (0, N.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
-                                n.e("91157"),
+                                n.e("18113"),
+                                n.e("36723"),
                                 n.e("31203"),
                                 n.e("69149"),
                                 n.e("3345"),

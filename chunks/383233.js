@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { Ay: () => f, _c: () => _, go: () => d, vF: () => c }), n(938796), n(321073);
-var r = n(485845),
-    i = n(665260),
+n.d(t, { Ay: () => f, _c: () => _, go: () => c, vF: () => d }), n(938796), n(321073);
+var i = n(485845),
+    r = n(665260),
     s = n(315069),
     a = n(427930),
     o = n(505527),
     l = n(815807),
     u = n(652215);
-class d extends s.A {
+class c extends s.A {
     type;
     content;
     attachments;
@@ -36,20 +36,20 @@ class d extends s.A {
             (this.soundboardSounds = e.soundboard_sounds ?? e.soundboardSounds);
     }
     hasFlag(e) {
-        return (0, i.Lt)(this.flags, e);
+        return (0, r.Lt)(this.flags, e);
     }
 }
-class c extends s.A {
+class d extends s.A {
     message;
     moderatorReport;
     constructor(e) {
-        super(), (this.message = new d(e.message)), (this.moderatorReport = e.moderator_report ?? null);
+        super(), (this.message = new c(e.message)), (this.moderatorReport = e.moderator_report ?? null);
     }
 }
 function _(e) {
-    return (0, i.Lt)(e.flags, u.pr7.IS_COMPONENTS_V2);
+    return (0, r.Lt)(e.flags, u.pr7.IS_COMPONENTS_V2);
 }
-let f = class extends d {
+let f = class extends c {
     id;
     channel_id;
     author;
@@ -93,6 +93,7 @@ let f = class extends d {
     messageSnapshots;
     isUnsupported;
     changelogId;
+    mediaMention;
     colorString;
     nick;
     constructor(e) {
@@ -141,7 +142,8 @@ let f = class extends d {
             (this.boostingPrompt = e.boostingPrompt || null),
             (this.messageSnapshots = e.messageSnapshots || []),
             (this.isUnsupported = e.isUnsupported || !1),
-            (this.changelogId = e.changelog_id ?? (e.changelogId || null));
+            (this.changelogId = e.changelog_id ?? (e.changelogId || null)),
+            (this.mediaMention = e.media_mention ?? e.mediaMention ?? null);
     }
     isEdited() {
         return null != this.editedTimestamp;
@@ -163,22 +165,22 @@ let f = class extends d {
     addReaction(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-            r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.v.NORMAL,
-            i = -1,
+            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.v.NORMAL,
+            r = -1,
             s = this.reactions.map((s, a) => {
                 if ((0, l.i6)(s.emoji, e))
-                    if (((i = a), r === o.v.BURST)) {
+                    if (((r = a), i === o.v.BURST)) {
                         if (t && s.me_burst) return s;
                         let e = s.burst_count + 1,
-                            r = null != s.burst_colors && s.burst_colors.length > 0 ? s.burst_colors : n;
+                            i = null != s.burst_colors && s.burst_colors.length > 0 ? s.burst_colors : n;
                         s = {
                             ...s,
                             me_burst: !!t || s.me_burst,
                             burst_count: e,
                             count_details: { ...s.count_details, burst: e },
-                            burst_colors: r,
+                            burst_colors: i,
                         };
-                    } else if (r === o.v.VOTE) {
+                    } else if (i === o.v.VOTE) {
                         let e = s.count_details?.vote ?? 0,
                             n = t && s.me_vote ? e : e + 1;
                         s = { ...s, count_details: { ...s.count_details, vote: n }, me_vote: !!t || s.me_vote };
@@ -190,8 +192,8 @@ let f = class extends d {
                 return s;
             });
         return (
-            -1 === i &&
-                (r === o.v.BURST
+            -1 === r &&
+                (i === o.v.BURST
                     ? s.push({
                           emoji: e,
                           me: !1,
@@ -201,7 +203,7 @@ let f = class extends d {
                           burst_count: 1,
                           burst_colors: n,
                       })
-                    : r === o.v.VOTE
+                    : i === o.v.VOTE
                       ? s.push({
                             emoji: e,
                             me: !1,
@@ -226,41 +228,41 @@ let f = class extends d {
     }
     addReactionBatch(e, t) {
         return e.reduce((e, n) => {
-            let { users: r, emoji: i, reactionType: s } = n;
-            return r.reduce((e, n) => e.addReaction(i, n === t, [], s), e);
+            let { users: i, emoji: r, reactionType: s } = n;
+            return i.reduce((e, n) => e.addReaction(r, n === t, [], s), e);
         }, this);
     }
     removeReaction(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.v.NORMAL,
-            r = -1,
-            i = this.reactions.map((i, s) => {
-                if ((0, l.i6)(i.emoji, e)) {
+            i = -1,
+            r = this.reactions.map((r, s) => {
+                if ((0, l.i6)(r.emoji, e)) {
                     if (n === o.v.BURST) {
-                        let e = t && !i.me_burst ? i.burst_count : i.burst_count - 1;
-                        i = {
-                            ...i,
+                        let e = t && !r.me_burst ? r.burst_count : r.burst_count - 1;
+                        r = {
+                            ...r,
                             burst_count: e,
-                            me_burst: !t && i.me_burst,
-                            count_details: { ...i.count_details, burst: e },
+                            me_burst: !t && r.me_burst,
+                            count_details: { ...r.count_details, burst: e },
                         };
                     } else if (n === o.v.VOTE) {
-                        let e = i.count_details?.vote ?? 0,
-                            n = t && !i.me_vote ? e : e - 1;
-                        i = { ...i, count_details: { ...i.count_details, vote: n }, me_vote: !t && i.me_vote };
+                        let e = r.count_details?.vote ?? 0,
+                            n = t && !r.me_vote ? e : e - 1;
+                        r = { ...r, count_details: { ...r.count_details, vote: n }, me_vote: !t && r.me_vote };
                     } else {
-                        let e = t && !i.me ? i.count : i.count - 1;
-                        i = { ...i, count: e, me: !t && i.me, count_details: { ...i.count_details, normal: e } };
+                        let e = t && !r.me ? r.count : r.count - 1;
+                        r = { ...r, count: e, me: !t && r.me, count_details: { ...r.count_details, normal: e } };
                     }
-                    r = s;
+                    i = s;
                 }
-                return i;
+                return r;
             }),
-            { count: s, burst_count: a, count_details: u } = i[r] ?? {},
-            d = u?.normal ?? 0,
-            c = u?.burst ?? 0,
+            { count: s, burst_count: a, count_details: u } = r[i] ?? {},
+            c = u?.normal ?? 0,
+            d = u?.burst ?? 0,
             _ = u?.vote ?? 0;
-        return -1 !== r && s <= 0 && a <= 0 && d <= 0 && c <= 0 && _ <= 0 && i.splice(r, 1), this.set("reactions", i);
+        return -1 !== i && s <= 0 && a <= 0 && c <= 0 && d <= 0 && _ <= 0 && r.splice(i, 1), this.set("reactions", r);
     }
     removeReactionsForEmoji(e) {
         return this.set(
@@ -283,7 +285,7 @@ let f = class extends d {
     canDeleteOwnMessage(e) {
         if (this.author.id === e) return !0;
         let t = this.interactionMetadata?.authorizing_integration_owners ?? {};
-        return this.interactionMetadata?.user.id === e && 1 === Object.keys(t).length && r.b.USER_INSTALL in t;
+        return this.interactionMetadata?.user.id === e && 1 === Object.keys(t).length && i.b.USER_INSTALL in t;
     }
     toJS() {
         return {

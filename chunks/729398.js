@@ -444,7 +444,7 @@ function ek(e) {
                           v(eS.Ps.STAGE_INSTANCE),
                               (0, x.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
-                                      l.e("32033"),
+                                      l.e("51776"),
                                       l.e("11585"),
                                       l.e("3589"),
                                       l.e("89916"),
@@ -614,9 +614,8 @@ function eW(e) {
                 ? G(null)
                 : (0, x.openModalLazy)(async () => {
                       let { default: n } = await Promise.all([
-                          l.e("15931"),
-                          l.e("49845"),
-                          l.e("23658"),
+                          l.e("94908"),
+                          l.e("36029"),
                           l.e("63232"),
                           l.e("43437"),
                           l.e("58164"),
@@ -794,8 +793,8 @@ var eJ = l(789645),
     e8 = l(710358),
     e4 = l(958590),
     e3 = l(174459),
-    e5 = l(957565),
-    e2 = l(118888);
+    e2 = l(957565),
+    e5 = l(118888);
 let { INVITE_OPTIONS_7_DAYS: e6, INVITE_OPTIONS_UNLIMITED: te } = I.Ay;
 function tt(e) {
     let { onClose: t, event: l } = e,
@@ -815,46 +814,46 @@ function tt(e) {
         v = c?.maxAge ?? e6.value,
         E = c?.maxUses ?? te.value;
     return (0, i.jsxs)("div", {
-        className: e2.kL,
+        className: e5.kL,
         children: [
             (0, i.jsx)(A.D, {
                 onClick: t,
-                className: e2.VN,
+                className: e5.VN,
                 "aria-label": ec.intl.string(ec.t.cpT0Cq),
                 children: (0, i.jsx)(eJ.P, { size: "md", color: "currentColor" }),
             }),
             (0, i.jsx)(e8.A, {
                 children: (0, i.jsx)("div", {
-                    className: e2.zc,
+                    className: e5.zc,
                     children: (0, i.jsx)(e0.C, {
                         size: "custom",
                         color: "currentColor",
                         height: 30,
                         width: 30,
-                        className: e2.Kk,
+                        className: e5.Kk,
                     }),
                 }),
             }),
             (0, i.jsx)(K.D, {
                 variant: "heading-xl/semibold",
-                className: e2.wx,
+                className: e5.wx,
                 children: ec.intl.string(ec.t.UzNv7u),
             }),
             (0, i.jsx)(g.E, {
                 variant: "text-md/normal",
                 color: "text-default",
-                className: e2.rf,
+                className: e5.rf,
                 children: ec.intl.string(ec.t.UetJjH),
             }),
             (0, i.jsxs)("div", {
-                className: e2.EZ,
+                className: e5.EZ,
                 children: [
                     (0, i.jsx)(e9.I, {
                         value: m,
                         autoFocus: !1,
                         onCopy: (e) => {
                             if (h) return;
-                            (0, e5.C)(e);
+                            (0, e2.C)(e);
                             let t = (0, M.dy)(l.entity_type);
                             e3.default.track(eu.HAw.COPY_INSTANT_INVITE, {
                                 server: l.guild_id,
@@ -870,7 +869,7 @@ function tt(e) {
                         (0, i.jsx)(g.E, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            className: e2.x6,
+                            className: e5.x6,
                             children: (0, I.Be)(v, E),
                         }),
                 ],

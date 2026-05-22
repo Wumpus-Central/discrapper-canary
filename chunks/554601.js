@@ -541,23 +541,25 @@ function eJ(e) {
                                             action: () => {
                                                 (0, eO.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        n.e("427"),
-                                                        n.e("89833"),
-                                                        n.e("77083"),
-                                                        n.e("63106"),
-                                                        n.e("15931"),
-                                                        n.e("77334"),
-                                                        n.e("60836"),
+                                                        n.e("90081"),
+                                                        n.e("29761"),
+                                                        n.e("26105"),
+                                                        n.e("46461"),
+                                                        n.e("94908"),
+                                                        n.e("9225"),
                                                         n.e("35316"),
-                                                        n.e("32033"),
+                                                        n.e("51776"),
                                                         n.e("45650"),
-                                                        n.e("32248"),
-                                                        n.e("50890"),
-                                                        n.e("23658"),
+                                                        n.e("61097"),
+                                                        n.e("52887"),
+                                                        n.e("82647"),
+                                                        n.e("57016"),
+                                                        n.e("28743"),
+                                                        n.e("34053"),
+                                                        n.e("32264"),
                                                         n.e("55990"),
-                                                        n.e("59611"),
-                                                        n.e("13533"),
-                                                        n.e("7066"),
+                                                        n.e("66609"),
+                                                        n.e("77739"),
                                                         n.e("79705"),
                                                         n.e("23924"),
                                                         n.e("42205"),
@@ -618,6 +620,7 @@ function eJ(e) {
                                                         n.e("95093"),
                                                         n.e("63645"),
                                                         n.e("71234"),
+                                                        n.e("96137"),
                                                         n.e("5636"),
                                                         n.e("87196"),
                                                         n.e("834"),
@@ -829,10 +832,10 @@ function e8(e) {
         })
     );
 }
-var e3 = n(34188),
-    e4 = n(700623),
-    e7 = n(177953),
-    e2 = n(825484),
+var e4 = n(34188),
+    e7 = n(700623),
+    e2 = n(177953),
+    e3 = n(825484),
     e9 = n(512950),
     e6 = n(900797),
     e5 = n(847374),
@@ -1090,7 +1093,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: tv.wi,
                             children: [
-                                (0, r.jsx)(e3.U, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e4.U, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1103,7 +1106,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: tv.wi,
                             children: [
-                                (0, r.jsx)(e4.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e7.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1170,7 +1173,7 @@ function tR(e) {
     return (0, r.jsxs)("div", {
         className: tv.I8,
         children: [
-            (0, r.jsx)(e7.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, r.jsx)(e2.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             (0, r.jsx)(T.E, {
                 variant: "text-sm/semibold",
                 color: "interactive-text-default",
@@ -1206,7 +1209,7 @@ function tO(e) {
     }, [n, a, d, u]),
     (0, I.$B)(n) && (0, I.Ag)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e2.e, {
+            ? (0, r.jsxs)(e3.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tI, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1390,16 +1393,16 @@ var tZ = n(111042),
     t0 = n(403362),
     t1 = n(179771),
     t8 = n(824552),
-    t3 = n(168186),
-    t4 = n(594061),
-    t7 = n(935208),
-    t2 = n(630248),
+    t4 = n(168186),
+    t7 = n(594061),
+    t2 = n(935208),
+    t3 = n(630248),
     t9 = n(355097);
 function t6(e, t) {
     o.useEffect(() => {
-        t4.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t7.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let n = (0, A.bG)([t2.A], () => t2.A.getApplicationFrecencyWithoutLoadingLatest()),
+    let n = (0, A.bG)([t3.A], () => t3.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
             () =>
                 null == t || 0 === t.length
@@ -1410,11 +1413,11 @@ function t6(e, t) {
         i = o.useMemo(() => t?.filter((t) => !e.some((e) => e.id === t.application.id)), [e, t]),
         s = o.useMemo(() => {
             i?.forEach((e) => {
-                let t = t7.default.extractTimestamp(e.id);
+                let t = t2.default.extractTimestamp(e.id);
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute();
-            let e = i?.map((e) => (0, t3.bq)(e.application, !0)) ?? [],
+            let e = i?.map((e) => (0, t4.bq)(e.application, !0)) ?? [],
                 t = [...l];
             return (
                 t.push(...e),
@@ -1428,7 +1431,7 @@ function t6(e, t) {
     return o.useMemo(() => {
         let e, i;
         t?.forEach((t) => {
-            let n = t7.default.extractTimestamp(t.id);
+            let n = t2.default.extractTimestamp(t.id);
             (null == i || n > i) && ((e = t), (i = n));
         }),
             l.forEach((t) => {
@@ -1831,7 +1834,7 @@ function nV(e) {
                 o.useEffect(() => {
                     let e = eE().sortBy(Object.entries(n), (e) => {
                         let [t, n] = e;
-                        return -t7.default.extractTimestamp(n);
+                        return -t2.default.extractTimestamp(n);
                     });
                     i(
                         eE()
@@ -2051,9 +2054,9 @@ var nQ = n(984516),
     n0 = n(651753),
     n1 = n(485845),
     n8 = n(994369),
-    n3 = n(240591),
-    n4 = n(46477);
-function n7(e, t) {
+    n4 = n(240591),
+    n7 = n(46477);
+function n2(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
         s = ((n = e), (l = t.filterPredicates ?? []), n.filter((e) => l.every((t) => t(e))));
@@ -2103,9 +2106,9 @@ function n7(e, t) {
         i,
     ).slice(0, i);
 }
-function n2(e, t) {
-    let n = t2.A.getScoreWithoutLoadingLatest(e.id);
-    return t2.A.getScoreWithoutLoadingLatest(t.id) - n;
+function n3(e, t) {
+    let n = t3.A.getScoreWithoutLoadingLatest(e.id);
+    return t3.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
 function n9(e, t) {
     let n = (0, I.lq)(e),
@@ -2309,7 +2312,7 @@ function lm(e) {
                             includeNonEmbeddedApps: a,
                         } = e,
                         r = "channel" === t.type ? t.channel : void 0,
-                        c = (0, n3.MW)(r, [M.kc.CHAT]).hasBaseAccessPermissions,
+                        c = (0, n4.MW)(r, [M.kc.CHAT]).hasBaseAccessPermissions,
                         d = (0, g.SD)(t, c, i),
                         u = (0, g.A4)(c, i),
                         m = o.useCallback(
@@ -2351,10 +2354,10 @@ function lm(e) {
                     var e, i, a, r, o, d, u;
                     let m, p, h, A, f;
                     if (!s) return [];
-                    return n7(c, {
+                    return n2(c, {
                         limit: l,
                         filterPredicates: [
-                            ((m = (0, n3.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
+                            ((m = (0, n4.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
                             (p = {}),
                             (e) => {
                                 let { context: n, userId: l, roleIds: i, isImpersonating: s } = m;
@@ -2364,8 +2367,8 @@ function lm(e) {
                                             isGuildInstalled: r,
                                             isUserInstalled: o,
                                         } = (0, g.Sx)(t, e.applicationId),
-                                        c = n?.guild_id != null ? n4.we(a?.permissions, n.guild_id, l, i, s) : null,
-                                        d = n?.guild_id != null ? n4._W(a?.permissions, n, n.guild_id) : null;
+                                        c = n?.guild_id != null ? n7.we(a?.permissions, n.guild_id, l, i, s) : null,
+                                        d = n?.guild_id != null ? n7._W(a?.permissions, n, n.guild_id) : null;
                                     p[e.applicationId] = {
                                         descriptor: a,
                                         applicationAllowedForUser: c,
@@ -2382,13 +2385,13 @@ function lm(e) {
                                     isUserInstalled: d,
                                 } = p[e.applicationId];
                                 return (
-                                    n4.zl(e, m, {
+                                    n7.zl(e, m, {
                                         applicationAllowedForUser: o,
                                         applicationAllowedForChannel: r,
                                         commandBotId: a?.botId,
                                         isGuildInstalled: c,
                                         isUserInstalled: d,
-                                    }) === n4.CA.ALLOWED
+                                    }) === n7.CA.ALLOWED
                                 );
                             }),
                         ],
@@ -2488,10 +2491,10 @@ function lm(e) {
                                     }),
                             );
                     } else a && (u = m);
-                    return n7(u, {
+                    return n2(u, {
                         limit: i,
                         filterPredicates: [
-                            ((d = (0, n3.Bh)("channel" === t.type ? t.channel : void 0, [
+                            ((d = (0, n4.Bh)("channel" === t.type ? t.channel : void 0, [
                                 M.kc.CHAT,
                                 M.kc.PRIMARY_ENTRY_POINT,
                             ])),
@@ -2503,20 +2506,20 @@ function lm(e) {
                                         isGuildInstalled: o,
                                         isUserInstalled: c,
                                     } = (0, g.Sx)(t, e.id),
-                                    u = n?.guild_id != null ? n4.we(a?.permissions, n.guild_id, l, i, s) : null,
-                                    m = n?.guild_id != null ? n4._W(a?.permissions, n, n.guild_id) : null;
+                                    u = n?.guild_id != null ? n7.we(a?.permissions, n.guild_id, l, i, s) : null,
+                                    m = n?.guild_id != null ? n7._W(a?.permissions, n, n.guild_id) : null;
                                 return (
                                     null == r ||
                                     !(r.length > 0) ||
                                     r.some(
                                         (e) =>
-                                            n4.zl(e, d, {
+                                            n7.zl(e, d, {
                                                 applicationAllowedForUser: u,
                                                 applicationAllowedForChannel: m,
                                                 commandBotId: a?.botId,
                                                 isGuildInstalled: o,
                                                 isUserInstalled: c,
-                                            }) === n4.CA.ALLOWED,
+                                            }) === n7.CA.ALLOWED,
                                     )
                                 );
                             }),
@@ -2535,7 +2538,7 @@ function lm(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n2, n9],
+                        sortComparers: [n3, n9],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,

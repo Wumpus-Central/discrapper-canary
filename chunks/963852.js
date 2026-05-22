@@ -28,11 +28,12 @@ function d(e) {
             giftingPrompt: I,
             boostingPrompt: T,
             state: S,
+            mediaMention: N,
         } = e,
-        N = [];
+        y = [];
     if (d === u.lAJ.REPLY && (r()(null != _, "Replies must have a message reference"), null == f || f.replied_user)) {
         let e = s.A.getMessageByReference(_);
-        e?.state === s.a.LOADED && N.push(c(e.message.author));
+        e?.state === s.a.LOADED && y.push(c(e.message.author));
     }
     return (
         null == h && (h = o.default.getCurrentUser()),
@@ -47,7 +48,7 @@ function d(e) {
             attachments: [],
             embeds: [],
             pinned: !1,
-            mentions: N,
+            mentions: y,
             mention_channels: [],
             mention_roles: [],
             mention_everyone: !1,
@@ -63,6 +64,7 @@ function d(e) {
             changelog_id: A,
             gifting_prompt: I,
             boosting_prompt: T,
+            media_mention: N,
         }
     );
 }

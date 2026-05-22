@@ -2,7 +2,7 @@
 n.d(t, { Jx: () => a, Yf: () => r, vz: () => s });
 var i = n(228366);
 function r(e) {
-    let { message: t, channel: n, shouldMention: r, showMentionToggle: s, source: a } = e;
+    let { message: t, channel: n, shouldMention: r, showMentionToggle: s, source: a, mediaMention: o } = e;
     i.h.dispatch({
         type: "CREATE_PENDING_REPLY",
         message: t,
@@ -10,6 +10,7 @@ function r(e) {
         shouldMention: r,
         showMentionToggle: s,
         source: a,
+        mediaMention: o,
     });
 }
 function s(e, t) {

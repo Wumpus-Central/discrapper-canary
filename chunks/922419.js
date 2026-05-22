@@ -85,7 +85,7 @@ function eu(e) {
         D()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, f.openModalLazy)(async () => {
                 let { default: n } = await Promise.all([
-                    i.e("91157"),
+                    i.e("77739"),
                     i.e("59957"),
                     i.e("28136"),
                     i.e("16084"),
@@ -336,7 +336,7 @@ function eg(e) {
             null != D &&
                 (0, f.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        i.e("91157"),
+                        i.e("77739"),
                         i.e("59957"),
                         i.e("28136"),
                         i.e("16084"),
@@ -525,10 +525,9 @@ function eM(e) {
                 null != u &&
                     (0, eO.L3)(e, async () => {
                         let { default: e } = await Promise.all([
-                            i.e("32033"),
-                            i.e("59611"),
-                            i.e("50671"),
-                            i.e("88667"),
+                            i.e("51776"),
+                            i.e("52887"),
+                            i.e("94908"),
                             i.e("94881"),
                             i.e("26132"),
                             i.e("46652"),
@@ -663,9 +662,9 @@ let e2 = (e) =>
     e.type === w.$pd.LISTENING;
 var e1 = i(685399),
     e6 = i(960076),
-    e3 = i(323073),
-    e7 = i(85451),
-    e9 = i(268218),
+    e7 = i(323073),
+    e9 = i(85451),
+    e3 = i(268218),
     e5 = i(834757),
     e8 = i(566668),
     e4 = i(832163),
@@ -688,28 +687,30 @@ let tn = (0, i(600975).C)({
 });
 var ts = i(699976),
     ta = i(415679);
-let tr = (0, e9.Fe)({
+let tr = (0, e3.Fe)({
     createPromise: () =>
         Promise.all([
-            i.e("32033"),
-            i.e("60836"),
-            i.e("56795"),
-            i.e("24685"),
-            i.e("32248"),
-            i.e("89833"),
-            i.e("77083"),
-            i.e("63106"),
-            i.e("15931"),
-            i.e("77334"),
+            i.e("51776"),
+            i.e("61097"),
+            i.e("82647"),
+            i.e("29939"),
+            i.e("50128"),
+            i.e("29761"),
+            i.e("26105"),
+            i.e("46461"),
+            i.e("94908"),
+            i.e("9225"),
             i.e("35316"),
-            i.e("427"),
+            i.e("90081"),
             i.e("45650"),
-            i.e("50890"),
-            i.e("23658"),
+            i.e("52887"),
+            i.e("57016"),
+            i.e("28743"),
+            i.e("34053"),
+            i.e("32264"),
             i.e("55990"),
-            i.e("59611"),
-            i.e("13533"),
-            i.e("7066"),
+            i.e("66609"),
+            i.e("77739"),
             i.e("79705"),
             i.e("69279"),
             i.e("23924"),
@@ -768,6 +769,7 @@ let tr = (0, e9.Fe)({
             i.e("63645"),
             i.e("71234"),
             i.e("27773"),
+            i.e("96137"),
             i.e("5636"),
             i.e("87196"),
             i.e("834"),
@@ -871,7 +873,7 @@ function to(e) {
                 className: ta.Qq,
                 children: [
                     (0, l.jsx)(E.E, { variant: "text-sm/medium", lineClamp: 1, children: c }),
-                    null != p && (0, l.jsx)(e7.z, { textColor: "text-feedback-positive", entry: { start: p } }),
+                    null != p && (0, l.jsx)(e9.z, { textColor: "text-feedback-positive", entry: { start: p } }),
                 ],
             }),
         ],
@@ -892,7 +894,7 @@ function td(e) {
         [g, x] = (0, r.yK)([eT.A, V.A, k.A, eY.default], () => (0, eK.eo)(s, eT.A, V.A, k.A, eY.default)),
         I = (0, r.bG)([ej.default], () => ej.default.getId()),
         v = (0, r.bG)([el.A], () => (0, e5.nr)(h, el.A), [h]),
-        f = (0, e3.r9)() && (0, e3.UK)(s.id),
+        f = (0, e7.r9)() && (0, e7.UK)(s.id),
         N =
             ((t = (0, e1.Ay)(s)),
             (i = n.useMemo(() => t.filter((e) => e.embeddedActivity.userIds.has(c.id)), [t, c.id])),
@@ -1074,10 +1076,9 @@ let tp = (0, eW.J)(function (e) {
         J = (e) => {
             (0, eO.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    i.e("32033"),
-                    i.e("59611"),
-                    i.e("50671"),
-                    i.e("88667"),
+                    i.e("51776"),
+                    i.e("52887"),
+                    i.e("94908"),
                     i.e("94881"),
                     i.e("26132"),
                     i.e("46652"),
