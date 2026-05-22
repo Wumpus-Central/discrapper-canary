@@ -27,6 +27,17 @@
     margin-top: -8px
 }
 
+.hiddenFileInput__8dd4d {
+    display: none
+}
+
+.jsonTextArea__8dd4d {
+    font-family: var(--font-code);
+    font-size: 12px;
+    resize: vertical;
+    width: 100%
+}
+
 .hljs-ansi-control-sequence {
     display: none
 }
