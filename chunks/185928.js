@@ -32,13 +32,3 @@ let c = {
         [s.Sx.LIGHT]: a.NJ8.LIGHT,
         [s.Sx.MIDNIGHT]: a.NJ8.MIDNIGHT,
     };
-s.Sx.UNSET,
-    a.NJ8.DARKER,
-    s.Sx.DARK,
-    a.NJ8.DARK,
-    s.Sx.DARKER,
-    a.NJ8.DARKER,
-    s.Sx.LIGHT,
-    a.NJ8.LIGHT,
-    s.Sx.MIDNIGHT,
-    a.NJ8.MIDNIGHT;
