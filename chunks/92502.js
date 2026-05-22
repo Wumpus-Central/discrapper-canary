@@ -661,7 +661,7 @@ function ez(e) {
           ? (0, i.jsx)("img", { alt: "", src: t.thumbnail, className: eR.fT })
           : null != a
             ? (0, i.jsx)(K.A, {
-                  preload: "metadata",
+                  preload: "none",
                   poster: t.thumbnail,
                   muted: !0,
                   src: a,

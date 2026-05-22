@@ -2929,14 +2929,6 @@
     margin-bottom: var(--space-xs)
 }
 
-.title__3c320 {
-    padding-top: var(--space-xs)
-}
-
-.withSubtitle__3c320 {
-    padding-bottom: var(--space-xxs)
-}
-
 .root__2bf8a {
     align-items: flex-start;
     display: flex;
@@ -2947,7 +2939,10 @@
     bottom: 0;
     flex-direction: column;
     gap: var(--space-8);
-    justify-content: center
+    justify-content: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
 }
 
 .soundboardEmoji__2bf8a {

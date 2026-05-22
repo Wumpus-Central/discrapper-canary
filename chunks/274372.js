@@ -430,5 +430,8 @@ let G = new k(s.h, {
             for (let n of e.messages) t = t || U(e.channelId, n.attachments ?? [], n.author?.id);
             return t;
         },
+        LOGOUT: function () {
+            w.clear(), (v = null), (C = null), (O = {});
+        },
     }),
     F = G;

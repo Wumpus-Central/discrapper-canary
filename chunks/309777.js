@@ -106,7 +106,7 @@ function q(e) {
                             icon: em.isFavorite ? u.G : d.y,
                         }),
                         (0, a.jsx)(o.K, {
-                            onClick: (e) => (0, V.A)(e, { clips: [em] }),
+                            onClick: (e) => (0, V.A)(e, { clips: [em], onAfterDelete: q }),
                             variant: "icon-only",
                             "aria-label": J.intl.string(J.t.oyYWHE),
                             icon: m.u,
