@@ -1155,6 +1155,10 @@ screen and (max-width:485px) {
     height: 1px
 }
 
+.linkIcon_ebf183 {
+    display: inline-block
+}
+
 .lottieIconColors__5eb9b :not(defs *)[fill][fill-opacity] {
     fill: var(--__lottieIconColor, var(--interactive-text-default))
 }
@@ -2800,8 +2804,7 @@ screen and (max-width:485px) {
 
 .selectedPlan_b13085 {
     background-color: var(--background-surface-high);
-    outline: 2px solid var(--brand-500);
-    outline-color: var(--checkbox-border-default)
+    outline: 2px solid var(--brand-500)
 }
 
 .planOptionDisabled_b13085 {

@@ -27,8 +27,8 @@ var l = n(627968),
     E = n(939249),
     P = n(398590),
     S = n(793574),
-    f = n(688810),
-    _ = n(509536),
+    _ = n(688810),
+    f = n(509536),
     T = n(663066),
     I = n(976860),
     x = n(859040),
@@ -37,20 +37,20 @@ var l = n(627968),
     v = n(456508);
 let M = (e) => {
     let { onClose: t } = e,
-        { analyticsLocations: n } = (0, f.Ay)(),
+        { analyticsLocations: n } = (0, _.Ay)(),
         a = () => {
             t(),
                 (0, I.pX)(N.BVt.COLLECTIBLES_SHOP),
                 (0, x.Cz)({ analyticsSource: S.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
                 (0, P.jH)(),
-                (0, T.dF)(_.Zt);
+                (0, T.dF)(f.Zt);
         };
     return (0, l.jsxs)("div", {
         className: v.kL,
         children: [
             (0, l.jsx)("div", {
                 className: v.Wk,
-                children: (0, l.jsx)(A.U, { size: "custom", width: 20, height: 20, color: y.A.colors.WHITE }),
+                children: (0, l.jsx)(A.U, { size: "custom", width: 20, height: 20, color: y.A.colors.ICON_DEFAULT }),
             }),
             (0, l.jsx)(d.E, {
                 variant: "text-sm/normal",
@@ -169,8 +169,8 @@ let ei = () => {
             { activeSubscription: A, userTrialOffer: y, isEligibleForTrial: E, discountOffer: P } = (0, j.P5)(),
             S = (0, K.YJ)(P),
             {
-                isGift: f,
-                giftRecipient: _,
+                isGift: _,
+                giftRecipient: f,
                 selectedGiftStyle: T,
                 customGiftMessage: I,
                 setCustomGiftMessage: x,
@@ -178,8 +178,8 @@ let ei = () => {
                 setSelectedGiftingPromotionReward: g,
             } = (0, b.Pv)(),
             v = (0, m.A)(),
-            M = (0, W.kz)(v, f && (0, w.Ik)(_), N),
-            R = (0, O.tA)({ giftRecipient: _, isGift: f });
+            M = (0, W.kz)(v, _ && (0, w.Ik)(f), N),
+            R = (0, O.tA)({ giftRecipient: f, isGift: _ });
         r()(void 0 !== A, "should not be undefined");
         let [L, U] = (0, s.yK)([D.A], () => [null != A ? D.A.get(A.planId) : null, null != t ? D.A.get(t) : null]),
             Y = y?.subscription_trial,
@@ -195,27 +195,27 @@ let ei = () => {
         r()(null != Z, "Price option has to be set");
         let q = P?.discount?.planIds,
             z = null != P && l.some((e) => q?.includes(e)) && null != P.discount,
-            J = null != S && l.includes(S) ? (0, k.y8)(S, !1, f, Z) : void 0,
+            J = null != S && l.includes(S) ? (0, k.y8)(S, !1, _, Z) : void 0,
             $ = B?.id != null && l.includes(B.id);
         a.useEffect(() => {
             if (!$) {
-                let e = !f && null != S && l.includes(S) ? S : null;
-                if (null == L || f) H(e ?? l[0]);
+                let e = !_ && null != S && l.includes(S) ? S : null;
+                if (null == L || _) H(e ?? l[0]);
                 else if (null != L) {
                     let e = l.find((e) => e !== L.id);
                     null != e && H(e);
                 }
             }
-        }, [$, f, l, L, H, S]),
+        }, [$, _, l, L, H, S]),
             a.useEffect(() => {
                 M && null != N && N.length > 0 && g(N[0]);
             }, [N, g, M]);
         let { ref: X, ...Q } = (0, o._u)(),
-            ee = B?.id != null ? (0, k.y8)(B.id, !1, f, Z) : void 0,
+            ee = B?.id != null ? (0, k.y8)(B.id, !1, _, Z) : void 0,
             { ipCountryCode: en } = (0, V.A)(),
             el = "HR" === en && null != ee && ee.currency === et.Yr.EUR,
             ea = (0, k.J$)(Z.paymentSourceId),
-            er = !f && (z || (null != Y && E && null != i)),
+            er = !_ && (z || (null != Y && E && null != i)),
             { discountAmountOff: es } = (0, h.J)(S),
             { copy: eo } = ei();
         return {
@@ -234,8 +234,8 @@ let ei = () => {
             isPrepaid: ea,
             radioGroupRef: X,
             radioGroupProps: Q,
-            isGift: f,
-            giftRecipient: _,
+            isGift: _,
+            giftRecipient: f,
             customGiftMessage: I,
             setCustomGiftMessage: x,
             selectedGiftStyle: T,
@@ -475,8 +475,8 @@ function eC(e) {
             isGift: E,
             thePriceOptions: P,
             isEligibleForTrial: S,
-            giftRecipient: f,
-            customGiftMessage: _,
+            giftRecipient: _,
+            customGiftMessage: f,
             setCustomGiftMessage: T,
             selectedGiftStyle: I,
             discountOffer: x,
@@ -528,8 +528,8 @@ function eC(e) {
         });
     if (E)
         return (0, l.jsx)(eo, {
-            giftRecipient: f,
-            customGiftMessage: _,
+            giftRecipient: _,
+            customGiftMessage: f,
             setCustomGiftMessage: T,
             selectedGiftStyle: I,
             hasSeenCollectiblesInSkuSelect: b,
