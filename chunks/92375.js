@@ -4,17 +4,17 @@ t(64700);
 var r = t(17928),
     a = t(31502),
     n = t(287809),
-    l = t(927578),
+    l = t(428262),
     d = t(289873),
     c = t(189213),
     o = t(975571),
     u = t(792656),
-    m = t(597758),
+    m = t(962644),
     h = t(35587),
     x = t(194261),
     b = t(534514),
     p = t(144165),
-    f = t(985018),
+    f = t(375708),
     j = t(237146),
     v = t(75662);
 function N() {
@@ -61,22 +61,22 @@ function N() {
 }
 var g = t(593687),
     C = t(294219),
-    P = t(788868),
-    R = t(652215);
-function _(e) {
+    w = t(788868),
+    P = t(652215);
+function R(e) {
     let { transitionState: s, onClose: t, partnerIds: r } = e,
-        n = (0, C.G)(r),
+        n = (0, C.G)(r, { isLockedCardView: !0 }),
         { promotionsLoaded: l } = (0, h.y7)(),
         x = (0, a.l)("Premium3PRewardsLockedModal");
     if (!1 === l) return (0, i.jsx)(d.y, {});
-    let b = o.A.getArticleURL(R.MVz.NITRO_2_POINT_0),
+    let b = o.A.getArticleURL(P.MVz.NITRO_2_POINT_0),
         p = x ? N : null;
     return (0, i.jsxs)(c.Modal, {
         title: f.intl.string(f.t.NG1e6l),
         subtitle: f.intl.format(j.default.zS4GBR, { termsLink: b }),
         actions: [],
         preview: (0, i.jsx)(u.A, {
-            subscriptionTier: P.pe.TIER_2,
+            subscriptionTier: w.pe.TIER_2,
             fullWidth: !0,
             onClick: () => {
                 t();
@@ -90,14 +90,14 @@ function _(e) {
         children: [null != p && (0, i.jsx)(p, {}), (0, i.jsx)(g._, { partnerIds: n })],
     });
 }
-var w = t(382259);
+var _ = t(382259);
 function y(e) {
     let { transitionState: s, onClose: t, partnerIds: d } = e,
         c = (0, a.l)("NitroRewards3PRewardsModalEntry"),
         o = (0, r.bG)([n.default], () => n.default.getCurrentUser()),
-        u = !1 === l.Ay.isPremiumExactly(o, P.PremiumTypes.TIER_2),
+        u = !1 === l.Ay.isPremiumExactly(o, w.PremiumTypes.TIER_2),
         m = o?.isFractionalPremiumWithNoStandardSub();
     return (null == o || u || m) && c
-        ? (0, i.jsx)(_, { transitionState: s, onClose: t, partnerIds: d })
-        : (0, i.jsx)(w.w, { transitionState: s, onClose: t, partnerIds: d });
+        ? (0, i.jsx)(R, { transitionState: s, onClose: t, partnerIds: d })
+        : (0, i.jsx)(_.w, { transitionState: s, onClose: t, partnerIds: d });
 }

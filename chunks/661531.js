@@ -8194,6 +8194,14 @@ let { Themes: c } = u.zv,
                         return "text-xs/semibold";
                     },
                 },
+                MEDIA_KEYBOARD_SEND_VERTICAL_INSET: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 0;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 8;
+                        return 0;
+                    },
+                },
                 MESSAGES_HEADER_BUTTON_GAP: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;

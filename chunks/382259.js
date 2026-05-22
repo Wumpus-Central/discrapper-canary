@@ -99,14 +99,14 @@ let L = (e) => {
         let t,
             n,
             { transitionState: r, onClose: s, partnerIds: c } = e,
-            d = (0, O.G)(c),
-            { promotionsLoaded: f, claimedOutboundPromotionCodeMap: N } = (0, I.y7)(),
-            M = (0, u.yK)([T.A], () => T.A.outboundRecurringPromotions),
-            P = (0, u.bG)([_.default], () => _.default.getCurrentUser()),
-            x = !1 === E.Ay.isPremiumExactly(P, R.PremiumTypes.TIER_2),
-            U = P?.isFractionalPremiumWithNoStandardSub(),
-            k = null == P || x || U;
-        if (!1 === f) return (0, i.jsx)(o.y, {});
+            { promotionsLoaded: d, claimedOutboundPromotionCodeMap: f } = (0, I.y7)(),
+            N = (0, u.yK)([T.A], () => T.A.outboundRecurringPromotions),
+            M = (0, u.bG)([_.default], () => _.default.getCurrentUser()),
+            P = !1 === E.Ay.isPremiumExactly(M, R.PremiumTypes.TIER_2),
+            x = M?.isFractionalPremiumWithNoStandardSub(),
+            U = null == M || P || x,
+            k = (0, O.G)(c, { isLockedCardView: U });
+        if (!1 === d) return (0, i.jsx)(o.y, {});
         let G = ((e) => {
             let { promotions: t, codesByPromotion: n, partnerIds: i } = e,
                 r = {};
@@ -137,13 +137,13 @@ let L = (e) => {
                     }),
                 r
             );
-        })({ promotions: M, codesByPromotion: N, partnerIds: d });
+        })({ promotions: N, codesByPromotion: f, partnerIds: k });
         return (0, i.jsx)(l.Modal, {
             title: D.intl.string(D.t["7ioAjs"]),
             subtitle: D.intl.format(D.t.LOYRxB, { helpCenterLink: p.A.getArticleURL(b.MVz.RECURRING_PROMOTION) }),
             actions: [],
             preview: (() => {
-                if (!0 === k)
+                if (!0 === U)
                     return (0, i.jsx)(m.A, {
                         subscriptionTier: R.pe.TIER_2,
                         fullWidth: !0,
@@ -160,8 +160,8 @@ let L = (e) => {
             children:
                 ((t = (0, h.N5)()),
                 (n = (0, h.P6)()),
-                k
-                    ? (0, i.jsx)(S._, { partnerIds: d })
+                U
+                    ? (0, i.jsx)(S._, { partnerIds: k })
                     : (0, i.jsxs)("div", {
                           className: y.kL,
                           children: [

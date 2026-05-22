@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Cs: () => l, KS: () => o, XY: () => _, pt: () => a, qn: () => s });
+n.d(t, { CD: () => o, Cs: () => u, KS: () => l, XY: () => c, pt: () => a, qn: () => s });
 var i,
     r,
     s = (((i = {}).BLOCKLIST = "blocklist"), (i.ALLOWLIST = "allowlist"), i),
@@ -13,6 +13,11 @@ var i,
         (r[(r.GIFT_PROMOTION = 6)] = "GIFT_PROMOTION"),
         (r[(r.THIRD_PARTY_OUTBOUND_RECURRING = 7)] = "THIRD_PARTY_OUTBOUND_RECURRING"),
         r);
-let o = "steelseries",
-    l = "kontrolfreek",
-    _ = "logitech";
+let o = {
+        steelseries: { id: "steelseries", label: "SteelSeries" },
+        kontrolfreek: { id: "kontrolfreek", label: "KontrolFreek" },
+        logitech: { id: "logitech", label: "Logitech" },
+    },
+    l = "steelseries",
+    u = "kontrolfreek",
+    c = "logitech";

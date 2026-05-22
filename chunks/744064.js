@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { S: () => b });
+n.d(t, { S: () => D });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -7,212 +7,223 @@ var i = n(627968),
     o = n(735438),
     l = n(562708),
     u = n(43990),
-    c = n(821609),
-    d = n(462887),
-    _ = n(602853),
-    f = n(661531),
-    h = n(359778),
-    p = n(834730),
-    E = n(403581),
-    m = n(534514),
-    g = n(736653),
-    A = n(139286),
-    I = n(531260),
-    T = n(914410),
-    S = n(174459),
-    N = n(872725),
-    y = n(465794),
-    C = n(788868),
-    v = n(652215),
-    O = n(375708),
-    R = n(555599);
-let b = (e) => {
+    c = n(331322),
+    d = n(821609),
+    _ = n(462887),
+    f = n(602853),
+    h = n(661531),
+    p = n(359778),
+    E = n(834730),
+    m = n(403581),
+    g = n(534514),
+    A = n(736653),
+    I = n(139286),
+    T = n(531260),
+    S = n(914410),
+    N = n(174459),
+    y = n(872725),
+    C = n(465794),
+    v = n(788868),
+    O = n(652215),
+    R = n(375708),
+    b = n(555599);
+let D = (e) => {
     let {
             id: t,
             title: n,
             description: s,
-            caption: b,
-            pillText: L,
-            primaryAsset: w,
-            primaryAssetClassName: M,
-            backgroundAssetUrl: P,
-            progress: x,
-            ctaIcon: U,
-            ctaIconPosition: k,
-            ctaText: G,
-            ctaVariant: F,
-            ctaDisabled: V,
-            ctaLoading: B,
-            onCtaClick: H,
-            subscriptionRequired: j,
-            glowing: Y = !1,
-            progressGlowing: W = !1,
-            featured: K,
-            className: z,
-            containerClassName: $,
-            tabIndex: q = 0,
-            blurTint: Z,
-            footerContent: X,
-            analyticsOptions: Q,
-            onFocus: J,
+            descriptionNote: D,
+            caption: w,
+            pillText: M,
+            primaryAsset: P,
+            primaryAssetClassName: x,
+            backgroundAssetUrl: U,
+            progress: k,
+            ctaIcon: G,
+            ctaIconPosition: F,
+            ctaText: V,
+            ctaVariant: B,
+            ctaDisabled: H,
+            ctaLoading: j,
+            onCtaClick: Y,
+            subscriptionRequired: W,
+            glowing: K = !1,
+            progressGlowing: z = !1,
+            featured: $,
+            className: q,
+            containerClassName: Z,
+            tabIndex: X = 0,
+            blurTint: Q,
+            footerContent: J,
+            analyticsOptions: ee,
+            onFocus: et,
         } = e,
-        ee = (0, g.DP)(),
-        { fractionalState: et } = (0, I.A)(),
-        en = { name: t };
-    Q?.thirdPartyPartner != null && (en.third_party_partner = Q.thirdPartyPartner),
-        (0, A.A)({ type: l.ImpressionTypes.VIEW, name: l.ImpressionNames.PERK_DISCOVERABILITY_CARD, properties: en });
-    let ei = r.useMemo(
+        en = (0, A.DP)(),
+        { fractionalState: ei } = (0, T.A)(),
+        er = { name: t };
+    ee?.thirdPartyPartner != null && (er.third_party_partner = ee.thirdPartyPartner),
+        (0, I.A)({ type: l.ImpressionTypes.VIEW, name: l.ImpressionNames.PERK_DISCOVERABILITY_CARD, properties: er });
+    let es = r.useMemo(
             () =>
                 (0, o.debounce)(() => {
-                    S.default.track(v.HAw.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
+                    N.default.track(O.HAw.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                         card_type: (0, o.snakeCase)(n),
-                        partner: Q?.thirdPartyPartner ?? null,
+                        partner: ee?.thirdPartyPartner ?? null,
                     });
                 }, 800),
-            [Q?.thirdPartyPartner, n],
+            [ee?.thirdPartyPartner, n],
         ),
-        er = r.useCallback(() => {
-            null != H &&
-                (H(),
-                S.default.track(v.HAw.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
+        ea = r.useCallback(() => {
+            null != Y &&
+                (Y(),
+                N.default.track(O.HAw.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
                     card_type: (0, o.snakeCase)(n),
-                    function_name: (0, o.snakeCase)(H.name),
+                    function_name: (0, o.snakeCase)(Y.name),
                 }));
-        }, [H, n]),
-        es = j && et === C.xc.FP_ONLY,
-        ea = !(0, o.isEmpty)(P),
-        eo = ea && (0, d.q)(ee),
-        el = (0, _.r)(f.A.colors.BACKGROUND_BASE_LOW).hex(),
-        eu = es || !(0, o.isEmpty)(G);
+        }, [Y, n]),
+        eo = W && ei === v.xc.FP_ONLY,
+        el = !(0, o.isEmpty)(U),
+        eu = el && (0, _.q)(en),
+        ec = (0, f.r)(h.A.colors.BACKGROUND_BASE_LOW).hex(),
+        ed = eo || !(0, o.isEmpty)(V);
     return (0, i.jsx)(u.N, {
-        theme: eo ? v.NJ8.DARKER : void 0,
+        theme: eu ? O.NJ8.DARKER : void 0,
         children: (e) =>
-            (0, i.jsxs)(N.A, {
+            (0, i.jsxs)(y.A, {
                 id: t,
-                tabIndex: q,
-                onMouseEnter: ei,
-                onFocus: J,
-                cardType: h.s.PRIMARY,
-                glowing: Y,
+                tabIndex: X,
+                onMouseEnter: es,
+                onFocus: et,
+                cardType: p.s.PRIMARY,
+                glowing: K,
                 hueRotate: 25,
-                glowAmount: (0, d.M)(ee) ? 2 : 8,
+                glowAmount: (0, _.M)(en) ? 2 : 8,
                 blurAmount: 10,
-                className: a()(R.Ui, $, { [R.Tn]: ea }),
-                cardClassName: a()(R.Nr, e, z, { [R.j8]: K }),
+                className: a()(b.Ui, Z, { [b.Tn]: el }),
+                cardClassName: a()(b.Nr, e, q, { [b.j8]: $ }),
                 cardStyle: {
-                    backgroundImage: null != P ? `url(${P})` : void 0,
+                    backgroundImage: null != U ? `url(${U})` : void 0,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundOrigin: "padding-box",
                     backgroundClip: "padding-box",
                 },
                 children: [
-                    !(0, o.isEmpty)(L) &&
-                        (0, i.jsx)(p.E, {
+                    !(0, o.isEmpty)(M) &&
+                        (0, i.jsx)(E.E, {
                             variant: "text-xs/bold",
                             color: "badge-expressive-text-default",
-                            className: R.Io,
-                            children: L,
+                            className: b.Io,
+                            children: M,
                         }),
                     (0, i.jsxs)("div", {
-                        className: R.qh,
+                        className: b.qh,
                         children: [
-                            K &&
+                            $ &&
                                 (0, i.jsx)("div", {
-                                    className: R.gW,
+                                    className: b.gW,
                                     "aria-hidden": "true",
-                                    children: (0, i.jsx)(D, { asset: w, className: M }),
+                                    children: (0, i.jsx)(L, { asset: P, className: x }),
                                 }),
-                            (0, i.jsx)(D, { asset: w, className: M }),
+                            (0, i.jsx)(L, { asset: P, className: x }),
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: R.hQ,
+                        className: b.hQ,
                         children: [
                             (0, i.jsx)("div", {
-                                className: R.u_,
-                                style: { "--custom-tint-color": Z ?? el },
+                                className: b.u_,
+                                style: { "--custom-tint-color": Q ?? ec },
                                 "aria-hidden": !0,
                             }),
                             (0, i.jsxs)("div", {
-                                className: R.P_,
+                                className: b.P_,
                                 children: [
-                                    es &&
+                                    eo &&
                                         (0, i.jsxs)("div", {
-                                            className: R.d_,
+                                            className: b.d_,
                                             children: [
-                                                (0, i.jsx)(E.t, { size: "sm", color: f.A.colors.ICON_MUTED }),
-                                                (0, i.jsx)(p.E, {
+                                                (0, i.jsx)(m.t, { size: "sm", color: h.A.colors.ICON_MUTED }),
+                                                (0, i.jsx)(E.E, {
                                                     variant: "text-sm/normal",
                                                     color: "text-muted",
-                                                    children: O.intl.string(O.t.lHYDUu),
+                                                    children: R.intl.string(R.t.lHYDUu),
                                                 }),
                                             ],
                                         }),
-                                    !(0, o.isEmpty)(b) &&
+                                    !(0, o.isEmpty)(w) &&
                                         (0, i.jsx)("div", {
-                                            className: R.OU,
+                                            className: b.OU,
                                             children:
-                                                "string" == typeof b
-                                                    ? (0, i.jsx)(p.E, {
+                                                "string" == typeof w
+                                                    ? (0, i.jsx)(E.E, {
                                                           variant: "text-sm/normal",
                                                           color: "text-muted",
-                                                          children: b,
+                                                          children: w,
                                                       })
-                                                    : b,
+                                                    : w,
                                         }),
-                                    (0, i.jsx)(m.D, { variant: "heading-lg/semibold", children: n }),
+                                    (0, i.jsx)(g.D, { variant: "heading-lg/semibold", children: n }),
                                     !(0, o.isEmpty)(s) &&
                                         (0, i.jsxs)("div", {
-                                            className: R.Wi,
+                                            className: b.Wi,
                                             children: [
-                                                (0, i.jsx)(p.E, {
+                                                (0, i.jsx)(E.E, {
                                                     variant: "text-sm/normal",
                                                     color: "text-default",
-                                                    className: R.h_,
-                                                    children: s,
+                                                    className: b.h_,
+                                                    children: (0, o.isEmpty)(D)
+                                                        ? s
+                                                        : (0, i.jsxs)(c.B, {
+                                                              direction: "vertical",
+                                                              gap: 8,
+                                                              children: [
+                                                                  (0, i.jsx)("div", { children: s }),
+                                                                  (0, i.jsx)("div", { children: D }),
+                                                              ],
+                                                          }),
                                                 }),
-                                                (0, i.jsx)(p.E, {
+                                                (0, i.jsx)(E.E, {
                                                     variant: "text-sm/normal",
                                                     color: "text-default",
-                                                    className: R.XV,
+                                                    className: b.XV,
                                                     inert: !0,
                                                     children: s,
                                                 }),
                                             ],
                                         }),
-                                    null != x &&
+                                    null != k &&
                                         (0, i.jsx)("div", {
-                                            className: R.oU,
-                                            children: (0, i.jsx)(T.Ay, {
-                                                variant: T.qP.BLUE,
-                                                progress: (0, o.clamp)(x, 0, 1),
+                                            className: b.oU,
+                                            children: (0, i.jsx)(S.Ay, {
+                                                variant: S.qP.BLUE,
+                                                progress: (0, o.clamp)(k, 0, 1),
                                                 maximum: 1,
-                                                glowing: W,
+                                                glowing: z,
                                             }),
                                         }),
-                                    null != X && (0, i.jsx)("div", { className: R.Gv, children: X }),
-                                    eu && (0, i.jsx)("div", { className: R.Cj }),
+                                    null != J && (0, i.jsx)("div", { className: b.Gv, children: J }),
+                                    ed && (0, i.jsx)("div", { className: b.Cj }),
                                 ],
                             }),
-                            eu &&
+                            ed &&
                                 (0, i.jsxs)("div", {
-                                    className: R.yk,
+                                    className: b.yk,
                                     children: [
-                                        es &&
-                                            (0, i.jsx)(y.A, {
+                                        eo &&
+                                            (0, i.jsx)(C.A, {
                                                 fullWidth: !0,
-                                                defaultTextOverride: O.intl.string(O.t.sEAnVH),
+                                                defaultTextOverride: R.intl.string(R.t.sEAnVH),
                                             }),
-                                        !es &&
-                                            (0, i.jsx)(c.$, {
-                                                icon: U,
-                                                iconPosition: k,
-                                                text: G,
-                                                variant: F ?? (!ea && (0, d.q)(ee) ? "primary" : "overlay-primary"),
-                                                onClick: er,
-                                                disabled: V,
-                                                loading: B,
+                                        !eo &&
+                                            (0, i.jsx)(d.$, {
+                                                icon: G,
+                                                iconPosition: F,
+                                                text: V,
+                                                variant: B ?? (!el && (0, _.q)(en) ? "primary" : "overlay-primary"),
+                                                onClick: ea,
+                                                disabled: H,
+                                                loading: j,
                                             }),
                                     ],
                                 }),
@@ -222,11 +233,11 @@ let b = (e) => {
             }),
     });
 };
-function D(e) {
+function L(e) {
     let { asset: t, className: n } = e;
     return null == t || "" === t
         ? null
         : "string" == typeof t
-          ? (0, i.jsx)("img", { src: t, alt: "", className: a()(R.eq, n), draggable: "false" })
+          ? (0, i.jsx)("img", { src: t, alt: "", className: a()(b.eq, n), draggable: "false" })
           : t;
 }

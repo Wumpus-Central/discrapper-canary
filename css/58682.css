@@ -3360,7 +3360,7 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a .bottomControls_bfe55a {
 }
 
 .markdown_d285a6 {
-    font-size: 16px;
+    font-size: 1rem;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -3769,7 +3769,7 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a .bottomControls_bfe55a {
 .card__5b393.featured__5b393 .description__5b393,
 .cardContainer__5b393:focus-within .description__5b393,
 .cardContainer__5b393:hover .description__5b393 {
-    max-height: 4lh;
+    max-height: 5lh;
     opacity: 1
 }
 

@@ -128,15 +128,18 @@ let I = r.memo(function (e) {
             { tag: b, badge: D, guildId: L } = (0, p.Zo)(R);
         return (0, p.Wb)(n, s, R) && null != L
             ? g
-                ? (0, i.jsx)(y, {
-                      guildId: L,
-                      guildTag: b,
-                      guildBadge: D,
-                      className: a()(A.Zy, l),
-                      textVariant: c,
-                      textColor: E,
-                      badgeSize: m,
-                      inline: I,
+                ? (0, i.jsx)("span", {
+                      className: u,
+                      children: (0, i.jsx)(y, {
+                          guildId: L,
+                          guildTag: b,
+                          guildBadge: D,
+                          className: a()(A.Zy, l),
+                          textVariant: c,
+                          textColor: E,
+                          badgeSize: m,
+                          inline: I,
+                      }),
                   })
                 : (0, i.jsx)(d.w, {
                       theme: O,

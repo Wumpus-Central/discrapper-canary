@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Cf: () => k, wx: () => H });
+n.d(t, { Cf: () => F, wx: () => Y });
 var i = n(627968),
     r = n(64700),
     s = n(834730),
@@ -11,21 +11,23 @@ var i = n(627968),
     d = n(695366),
     _ = n(194261),
     f = n(534514),
-    h = n(17928),
-    p = n(661531),
-    E = n(144165),
-    m = n(31502),
-    g = n(914410),
-    A = n(363195),
-    I = n(174459),
-    T = n(58703),
-    S = n(975571),
-    N = n(38405),
-    y = n(398523),
-    C = n(881373),
-    v = n(264779),
-    O = n(852218);
-let R = () =>
+    h = n(331322),
+    p = n(17928),
+    E = n(661531),
+    m = n(144165),
+    g = n(31502),
+    A = n(914410),
+    I = n(363195),
+    T = n(174459),
+    S = n(58703),
+    N = n(975571),
+    y = n(38405),
+    C = n(149995),
+    v = n(398523),
+    O = n(881373),
+    R = n(264779),
+    b = n(852218);
+let D = () =>
         (0, i.jsxs)("svg", {
             width: "20",
             height: "20",
@@ -73,7 +75,7 @@ let R = () =>
                 }),
             ],
         }),
-    b = () =>
+    L = () =>
         (0, i.jsxs)("svg", {
             width: "20",
             height: "20",
@@ -121,7 +123,7 @@ let R = () =>
                 }),
             ],
         }),
-    D = () =>
+    w = () =>
         (0, i.jsxs)("svg", {
             width: "20",
             height: "20",
@@ -154,7 +156,7 @@ let R = () =>
                 }),
             ],
         }),
-    L = () =>
+    M = () =>
         (0, i.jsxs)("svg", {
             width: "20",
             height: "20",
@@ -187,75 +189,76 @@ let R = () =>
                 }),
             ],
         });
-var w = n(652215),
-    M = n(962995),
-    P = n(375708),
-    x = n(75662),
-    U = n(208556);
-function k() {
-    let e = (0, m.Q)("getRecurringPromotionPartnerAttributes");
+var P = n(652215),
+    x = n(962995),
+    U = n(375708),
+    k = n(75662),
+    G = n(208556);
+function F() {
+    let e = (0, g.Q)("getRecurringPromotionPartnerAttributes");
     return {
-        [O.XY]: {
-            title: e ? M.default.PF1aT5 : M.default.LsJ9hj,
-            titleParams: e ? { discountPercentage: C.aW } : { discountPercent: C.aW },
-            body: e ? M.default.KoKwMn : M.default.Yl5ww1,
-            bodyWithExpiration: M.default["6KjkUa"],
+        [b.XY]: {
+            title: e ? x.default.PF1aT5 : x.default.LsJ9hj,
+            titleParams: e ? { discountPercentage: O.aW } : { discountPercent: O.aW },
+            body: e ? x.default.KoKwMn : x.default.Yl5ww1,
+            bodyWithExpiration: x.default["6KjkUa"],
             redemptionURL: "https://www.logitech.com/",
             logos: {
                 dark: (0, i.jsx)(r.Fragment, {}, "logitech-logo-dark"),
                 light: (0, i.jsx)(r.Fragment, {}, "logitech-logo-light"),
             },
-            asset: U.A,
+            asset: G.A,
         },
-        [O.KS]: {
-            title: e ? P.t.p7BkHh : P.t.sfGgOG,
-            titleParams: e ? { discountPercentage: y.H7 } : void 0,
-            body: e ? P.t.nmvvaN : P.t.igiSKe,
-            bodyWithExpiration: P.t.w8CXUl,
+        [b.KS]: {
+            title: U.t.p7BkHh,
+            titleParams: { discountPercentage: (0, C.LR)("getRecurringPromotionPartnerAttributes") ? v.zG : v.H7 },
+            body: e ? U.t.nmvvaN : U.t.igiSKe,
+            bodyWithExpiration: U.t.w8CXUl,
             redemptionURL: "https://steelseries.com/",
-            logos: { dark: (0, i.jsx)(R, {}), light: (0, i.jsx)(b, {}) },
+            logos: { dark: (0, i.jsx)(D, {}), light: (0, i.jsx)(L, {}) },
             asset: "https://cdn.discordapp.com/assets/content/c23a186569a2e8606d206cd4b5cc7f4ee8f880c844bc0debd5fd3400400ff7bc.png",
         },
-        [O.Cs]: {
-            title: e ? P.t.QEJnti : P.t["9N8obd"],
-            titleParams: e ? { discountPercentage: y.F0 } : void 0,
-            body: e ? P.t.eT5vm0 : P.t["34g+Z3"],
-            bodyWithExpiration: P.t.rqmpXc,
+        [b.Cs]: {
+            title: e ? U.t.QEJnti : U.t["9N8obd"],
+            titleParams: e ? { discountPercentage: v.F0 } : void 0,
+            body: e ? U.t.eT5vm0 : U.t["34g+Z3"],
+            bodyWithExpiration: U.t.rqmpXc,
+            bodyNote: (0, C.Se)("getRecurringPromotionPartnerAttributes") ? U.t.vblnHk : void 0,
             redemptionURL: "https://www.kontrolfreek.com/",
-            logos: { dark: (0, i.jsx)(D, {}), light: (0, i.jsx)(L, {}) },
+            logos: { dark: (0, i.jsx)(w, {}), light: (0, i.jsx)(M, {}) },
             asset: "https://cdn.discordapp.com/assets/content/6706fc54c35e86999d3537dcc3ef8bfe91f25db6a141b4b6e5b451ebc5cae86b.png",
         },
     };
 }
-let G = () => {
-        let e = (0, T.N5)(),
-            t = (0, T.P6)();
+let V = () => {
+        let e = (0, S.N5)(),
+            t = (0, S.P6)();
         return (0, i.jsxs)("div", {
-            className: `${x.G9} ${x.sQ}`,
+            className: `${k.G9} ${k.sQ}`,
             children: [
                 (0, i.jsx)(s.E, {
                     variant: "text-sm/normal",
                     color: "text-muted",
-                    className: x.kT,
-                    children: P.intl.format(M.default["65EEvD"], { days: t }),
+                    className: k.kT,
+                    children: U.intl.format(x.default["65EEvD"], { days: t }),
                 }),
-                (0, i.jsx)(g.Ay, {
+                (0, i.jsx)(A.Ay, {
                     progress: e,
-                    variant: g.qP.UNSET,
+                    variant: A.qP.UNSET,
                     override: { default: { gradientStart: "var(--illo-blue-70)", gradientEnd: "var(--illo-blue-10)" } },
                 }),
             ],
         });
     },
-    F = (e) => {
+    B = (e) => {
         let { children: t } = e;
-        return (0, i.jsx)("div", { className: x.oP, children: (0, i.jsx)("div", { className: x.t0, children: t }) });
+        return (0, i.jsx)("div", { className: k.oP, children: (0, i.jsx)("div", { className: k.t0, children: t }) });
     },
-    V = (e) => {
+    H = (e) => {
         let { recurrence: t, analyticsLocations: n = [] } = e,
-            a = (0, i.jsx)(o.r, { color: p.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
+            a = (0, i.jsx)(o.r, { color: E.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
             d = (0, i.jsx)("span", {
-                className: x.nP,
+                className: k.nP,
                 children: (0, i.jsx)(l.K, {
                     icon: u.T,
                     size: "sm",
@@ -264,7 +267,7 @@ let G = () => {
                     onClick: () => {
                         navigator.clipboard.writeText(t.code),
                             f(a),
-                            I.default.track(w.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                            T.default.track(P.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                                 partner: t.partnerId,
                                 cta_type: "copy code",
                                 promotion: t.outboundTitle,
@@ -277,12 +280,12 @@ let G = () => {
             [_, f] = r.useState(() => d);
         if (null != t.code)
             return (0, i.jsx)("div", {
-                className: x.oP,
+                className: k.oP,
                 children: (0, i.jsxs)("div", {
-                    className: x.t0,
+                    className: k.t0,
                     children: [
                         (0, i.jsx)("div", {
-                            className: x.cD,
+                            className: k.cD,
                             children: (0, i.jsx)(s.E, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
@@ -293,11 +296,11 @@ let G = () => {
                         (0, i.jsx)(c.$, {
                             variant: "secondary",
                             size: "sm",
-                            text: P.intl.formatToPlainString(P.t.DF68t7, { redemptionURL: t.redemptionURL }),
+                            text: U.intl.formatToPlainString(U.t.DF68t7, { redemptionURL: t.redemptionURL }),
                             onClick: () => {
                                 window.open(t.redemptionURL, "_blank"),
-                                    I.default.track(w.HAw.RECURRING_PROMOTION_CLAIMED),
-                                    I.default.track(w.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                                    T.default.track(P.HAw.RECURRING_PROMOTION_CLAIMED),
+                                    T.default.track(P.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                                         partner: t.partnerId,
                                         cta_type: "visit store",
                                         promotion: t.outboundTitle,
@@ -311,7 +314,7 @@ let G = () => {
                 }),
             });
     },
-    B = (e) => {
+    j = (e) => {
         let {
             recurrence: t,
             canBeClaimed: n,
@@ -330,7 +333,7 @@ let G = () => {
                           variant: "critical-secondary",
                           size: "sm",
                           disabled: !0,
-                          text: P.intl.string(P.t["8LKchl"]),
+                          text: U.intl.string(U.t["8LKchl"]),
                       }),
                   })
                 : (0, i.jsx)("div", {
@@ -339,9 +342,9 @@ let G = () => {
                           icon: _.X,
                           variant: "secondary",
                           size: "sm",
-                          text: P.intl.string(P.t.vwASIl),
+                          text: U.intl.string(U.t.vwASIl),
                           onClick: () => {
-                              (0, v.kd)({
+                              (0, R.kd)({
                                   promotionId: t.id,
                                   promotionTitle: t.outboundTitle,
                                   partnerId: t.partnerId,
@@ -351,14 +354,14 @@ let G = () => {
                                       s(e.code);
                                   })
                                   .catch((e) => {
-                                      a(!0), N.A.captureException(e);
+                                      a(!0), y.A.captureException(e);
                                   });
                           },
                       }),
                   })
             : null;
     },
-    H = (e) => {
+    Y = (e) => {
         var t;
         let n,
             s,
@@ -369,66 +372,85 @@ let G = () => {
                 showPartnerImage: c = !1,
                 titleVariant: d = "primary",
                 displayCTAInDedicatedFooter: _ = !1,
-                analyticsLocations: p = [],
+                analyticsLocations: E = [],
             } = e,
-            [m, g] = r.useState(o.code),
-            [I, T] = r.useState(!1),
-            N =
+            [g, A] = r.useState(o.code),
+            [T, S] = r.useState(!1),
+            y =
                 ((t = o.partnerId),
-                (n = (0, h.bG)([A.A], () => (0, a.M)(A.A.theme))),
-                null == (s = k()[t]) ? null : n ? s.logos.dark : s.logos.light),
-            y = null == m;
+                (n = (0, p.bG)([I.A], () => (0, a.M)(I.A.theme))),
+                null == (s = F()[t]) ? null : n ? s.logos.dark : s.logos.light),
+            C = null == g;
         return (0, i.jsxs)("div", {
-            className: x.lA,
+            className: k.lA,
             children: [
                 (0, i.jsxs)("div", {
-                    className: x.LV,
+                    className: k.LV,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: x.JN,
+                            className: k.JN,
                             children: [
-                                u && N,
+                                u && y,
                                 (0, i.jsxs)("div", {
-                                    className: null != l ? `${x.yO} ${l}` : x.yO,
+                                    className: null != l ? `${k.yO} ${l}` : k.yO,
                                     children: [
                                         (0, i.jsx)(f.D, {
                                             variant: "secondary" === d ? "heading-md/semibold" : "heading-lg/semibold",
                                             color: "text-strong",
                                             children: o.title,
                                         }),
-                                        (0, i.jsx)(f.D, {
-                                            variant: "heading-sm/medium",
-                                            color: "text-subtle",
-                                            children: I
-                                                ? P.intl.format(P.t.i2EuFO, {
-                                                      helpdeskArticle: S.A.getArticleURL(w.MVz.RECURRING_PROMOTION),
-                                                  })
-                                                : y
-                                                  ? o.body
-                                                  : null != o.bodyWithExpiration
-                                                    ? P.intl.format(o.bodyWithExpiration, { date: o.endDate })
-                                                    : o.body,
+                                        (0, i.jsxs)(h.B, {
+                                            direction: "vertical",
+                                            gap: 8,
+                                            children: [
+                                                (0, i.jsx)(f.D, {
+                                                    variant: "heading-sm/medium",
+                                                    color: "text-subtle",
+                                                    children: T
+                                                        ? U.intl.format(U.t.i2EuFO, {
+                                                              helpdeskArticle: N.A.getArticleURL(
+                                                                  P.MVz.RECURRING_PROMOTION,
+                                                              ),
+                                                          })
+                                                        : C
+                                                          ? o.body
+                                                          : null != o.bodyWithExpiration
+                                                            ? U.intl.format(o.bodyWithExpiration, { date: o.endDate })
+                                                            : o.body,
+                                                }),
+                                                null != o.bodyNote &&
+                                                    (0, i.jsx)(f.D, {
+                                                        variant: "heading-sm/medium",
+                                                        color: "text-subtle",
+                                                        children: U.intl.format(o.bodyNote, {
+                                                            partnerName: b.CD[o.partnerId].label,
+                                                            helpdeskArticle: N.A.getArticleURL(
+                                                                P.MVz.RECURRING_PROMOTION,
+                                                            ),
+                                                        }),
+                                                    }),
+                                            ],
                                         }),
                                     ],
                                 }),
                                 !_ &&
-                                    (0, i.jsx)(B, {
+                                    (0, i.jsx)(j, {
                                         recurrence: o,
-                                        canBeClaimed: y,
-                                        hasClaimError: I,
-                                        setCode: g,
-                                        setHasClaimError: T,
-                                        analyticsLocations: p,
+                                        canBeClaimed: C,
+                                        hasClaimError: T,
+                                        setCode: A,
+                                        setHasClaimError: S,
+                                        analyticsLocations: E,
                                     }),
                             ],
                         }),
                         c &&
                             (0, i.jsx)("div", {
-                                className: x.R4,
-                                children: (0, i.jsx)(E._, {
+                                className: k.R4,
+                                children: (0, i.jsx)(m._, {
                                     src: o.asset ?? "",
-                                    className: x.Ys,
-                                    imageClassName: o.partnerId === O.XY ? x.Cy : void 0,
+                                    className: k.Ys,
+                                    imageClassName: o.partnerId === b.XY ? k.Cy : void 0,
                                     width: 100,
                                     height: 100,
                                     zoomable: !1,
@@ -436,19 +458,19 @@ let G = () => {
                             }),
                     ],
                 }),
-                _ && (0, i.jsx)(G, {}),
-                null != m && (0, i.jsx)(V, { recurrence: { ...o, code: m }, analyticsLocations: p }),
+                _ && (0, i.jsx)(V, {}),
+                null != g && (0, i.jsx)(H, { recurrence: { ...o, code: g }, analyticsLocations: E }),
                 _ &&
-                    null == m &&
-                    (0, i.jsx)(F, {
-                        children: (0, i.jsx)(B, {
+                    null == g &&
+                    (0, i.jsx)(B, {
+                        children: (0, i.jsx)(j, {
                             recurrence: o,
-                            canBeClaimed: y,
-                            hasClaimError: I,
-                            setCode: g,
-                            setHasClaimError: T,
-                            className: x.qx,
-                            analyticsLocations: p,
+                            canBeClaimed: C,
+                            hasClaimError: T,
+                            setCode: A,
+                            setHasClaimError: S,
+                            className: k.qx,
+                            analyticsLocations: E,
                         }),
                     }),
             ],
