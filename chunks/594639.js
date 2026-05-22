@@ -270,6 +270,15 @@ function p(e) {
             }
         }, [k, c]),
         r.useEffect(() => {
+            if (null == k || !b.reducedMotion.enabled) return;
+            let e = k.canvas;
+            if (null == e) return;
+            let t = new ResizeObserver(() => {
+                k.resizeDrawingSurfaceToCanvas();
+            });
+            return t.observe(e), () => t.disconnect();
+        }, [k, b.reducedMotion.enabled]),
+        r.useEffect(() => {
             null != k &&
                 null == P &&
                 null == R &&
