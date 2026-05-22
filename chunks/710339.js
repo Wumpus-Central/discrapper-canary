@@ -38,12 +38,12 @@ let E = (0, g.A)(
                             if (e?.id == null) return null;
                             (0, s.openModalLazy)(async () => {
                                 let { default: i } = await Promise.all([
-                                    n.e("54827"),
-                                    n.e("66655"),
+                                    n.e("7817"),
+                                    n.e("50671"),
                                     n.e("60909"),
-                                    n.e("23484"),
+                                    n.e("26439"),
                                     n.e("76846"),
-                                    n.e("42888"),
+                                    n.e("98053"),
                                     n.e("8555"),
                                     n.e("20287"),
                                     n.e("83952"),
@@ -51,9 +51,9 @@ let E = (0, g.A)(
                                     n.e("8979"),
                                     n.e("20643"),
                                     n.e("80559"),
+                                    n.e("69006"),
                                     n.e("98913"),
                                     n.e("74049"),
-                                    n.e("69006"),
                                     n.e("12811"),
                                 ]).then(n.bind(n, 191110));
                                 return (n) => (0, l.jsx)(i, { ...n, existingSound: t, guildId: e.id });

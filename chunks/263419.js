@@ -4,7 +4,7 @@ l.r(t),
         virtualCurrencyCollection: () => l8,
         playgroundConfig: () => l5,
         identityCollection: () => l7,
-        RevenuePlaygroundCollectionId: () => l6,
+        RevenuePlaygroundCollectionId: () => l3,
         paymentsCollection: () => l4,
     });
 var a,
@@ -305,7 +305,7 @@ var Y = l(488428),
     ei = l(289873),
     er = l(192308),
     eo = l(753390),
-    es = l(622207),
+    es = l(155506),
     ed = l(541689),
     eu = l(944304),
     ec = l(300233),
@@ -699,9 +699,9 @@ let eI = {
                                                 }),
                                                 (0, s.jsx)(H.$, {
                                                     variant: "primary",
-                                                    text: "Open Standard Payment Modal for SKU",
+                                                    text: "Open Premium Apps Payment Modal for SKU",
                                                     onClick: () =>
-                                                        (0, eg.A)({
+                                                        (0, eg.q)({
                                                             applicationId: w,
                                                             skuId: G,
                                                             analyticsLocations: j,
@@ -1163,7 +1163,7 @@ function e1() {
 function e2() {
     return (0, s.jsx)("div", { style: { width: "60%", height: "60%", borderRadius: "50%", background: "red" } });
 }
-let e6 = {
+let e3 = {
         label: "Variant",
         type: "select",
         defaultValue: "square",
@@ -1172,7 +1172,7 @@ let e6 = {
             { label: "Bar", value: "bar" },
         ],
     },
-    e3 = {
+    e6 = {
         title: "Editable Tile Button",
         stories: [
             {
@@ -1204,7 +1204,7 @@ let e6 = {
                 },
                 id: "add-tile-button",
                 controls: {
-                    variant: e6,
+                    variant: e3,
                     accessibleLabel: { label: "Accessible Label", type: "text", defaultValue: "Avatar image" },
                     accessibleValue: { label: "Accessible Value", type: "text", defaultValue: "" },
                 },
@@ -1238,7 +1238,7 @@ let e6 = {
                 },
                 id: "edit-tile-button",
                 controls: {
-                    variant: e6,
+                    variant: e3,
                     showOverlayOnHover: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
                     accessibleLabel: { label: "Accessible Label", type: "text", defaultValue: "Avatar image" },
                     accessibleValue: { label: "Accessible Value", type: "text", defaultValue: "" },
@@ -1283,7 +1283,7 @@ let e6 = {
                 },
                 id: "deletable-edit-tile-button",
                 controls: {
-                    variant: e6,
+                    variant: e3,
                     showOverlayOnHover: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
                     accessibleLabel: { label: "Accessible Label", type: "text", defaultValue: "Avatar image" },
                     accessibleValue: { label: "Accessible Value", type: "text", defaultValue: "" },
@@ -2436,8 +2436,8 @@ Error: ${t}`);
     });
 }
 var t2 = l(405139),
-    t6 = l(19311),
-    t3 = l(869177);
+    t3 = l(19311),
+    t6 = l(869177);
 function t4(e) {
     let t = d.useRef(null),
         l = {
@@ -2450,7 +2450,7 @@ function t4(e) {
             loadingComponent: (0, s.jsx)(ei.y, { style: { marginTop: 16 }, type: ei.t.PULSING_ELLIPSIS }),
         };
     return e.renderStepBody
-        ? (0, s.jsx)(t3.V, { ...l, ...e })
+        ? (0, s.jsx)(t6.V, { ...l, ...e })
         : "applePay" === e.paymentRequestWallet
           ? (0, s.jsx)(t2.Mv, { ...l, ...e })
           : (0, s.jsx)(t2.dP, { ...l, ...e });
@@ -2460,8 +2460,8 @@ function t8(e) {
         l = d.useRef(null),
         [a, n] = d.useState(!1);
     return (0, s.jsx)(tM.e_, {
-        footer: (0, s.jsx)(t6.Ay, {
-            primaryCTA: t6.Ay.CTAType.CONTINUE,
+        footer: (0, s.jsx)(t3.Ay, {
+            primaryCTA: t3.Ay.CTAType.CONTINUE,
             primaryText: U.intl.string("applePay" === t ? U.t.WoXvJL : U.t.wnVVr0),
             primaryDisabled: !a,
             onPrimary: () => void (null != l.current && l.current.show()),
@@ -3170,7 +3170,7 @@ var lw = l(735438),
     l$ = l(606267),
     lW = l(480642),
     lF = l(944355),
-    lz = l(113214),
+    lz = l(434325),
     lY = l(826469),
     lq = l(812745);
 let lK = {
@@ -3671,13 +3671,13 @@ let lX = { "nitro-wheel": r.t, gift: lG.o, orbs: i.C },
             },
         ],
     };
-var l6 =
+var l3 =
     (((a = {}).PAYMENTS = "payments"),
     (a.VIRTUAL_CURRENCY = "virtual-currency"),
     (a.NITRO = "nitro"),
     (a.IDENTITY = "identity"),
     a);
-let l3 = ["Revenue Storybook", "Revenue Playground"],
+let l6 = ["Revenue Storybook", "Revenue Playground"],
     l4 = {
         id: "payments",
         name: "Payments",
@@ -3746,7 +3746,7 @@ let l3 = ["Revenue Storybook", "Revenue Playground"],
             { title: "Checkout Review Step", stories: [eU, eB] },
             lh,
         ],
-        tags: l3,
+        tags: l6,
         IconComponent: n.d,
     },
     l8 = {
@@ -3805,7 +3805,7 @@ let l3 = ["Revenue Storybook", "Revenue Playground"],
                 ],
             },
         ],
-        tags: l3,
+        tags: l6,
         IconComponent: i.C,
     },
     l9 = {
@@ -4194,14 +4194,14 @@ let l3 = ["Revenue Storybook", "Revenue Playground"],
             },
             { title: "Clips", stories: [eZ] },
         ],
-        tags: l3,
+        tags: l6,
         IconComponent: r.t,
     },
     l7 = {
         id: "identity",
         name: "Identity",
         groups: [
-            e3,
+            e6,
             {
                 title: "Editable Tile Button Examples",
                 stories: [
@@ -4292,7 +4292,7 @@ let l3 = ["Revenue Storybook", "Revenue Playground"],
                 ],
             },
         ],
-        tags: l3,
+        tags: l6,
         IconComponent: o.n,
     },
     l5 = { playgroundBaseUrl: "revenue", collections: [l4, l8, l9, l7] };

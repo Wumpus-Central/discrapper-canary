@@ -1120,8 +1120,8 @@ var e0 = n(417098),
     e1 = n(55619),
     e2 = n(351906),
     e3 = n(377802),
-    e6 = n(348858),
-    e5 = n(523875),
+    e5 = n(348858),
+    e6 = n(523875),
     e4 = n(416696),
     e9 = n(621956),
     e8 = n(446080),
@@ -1219,7 +1219,7 @@ function tk(e) {
         { suppress: s, selfMute: l, mute: a } = (0, tS.A)(t),
         o = l || a || s,
         d = (0, tr.A)(l, a, s, !1),
-        { Component: u, play: h, events: m } = (0, e5.L)(o ? "unmute" : "mute");
+        { Component: u, play: h, events: m } = (0, e6.L)(o ? "unmute" : "mute");
     c.useEffect(() => () => h(), [h, o]);
     let g = tO(n),
         p = (e) => (t) => {
@@ -1285,7 +1285,7 @@ function tD(e) {
             Component: o,
             play: d,
             events: { onMouseEnter: u, onMouseLeave: h },
-        } = (0, e6.I)(a ? "undeafen" : "deafen"),
+        } = (0, e5.I)(a ? "undeafen" : "deafen"),
         m = l ? te.T : o;
     c.useEffect(() => () => d(), [a, d]);
     let g = () => {
@@ -1778,13 +1778,13 @@ var tQ = n(459192),
     t1 = n(782603),
     t2 = n(241541),
     t3 = n(320448),
-    t6 = n(661531),
-    t5 = n(446576),
+    t5 = n(661531),
+    t6 = n(446576),
     t4 = n(789645),
     t9 = n(387755),
     t8 = n(945830),
     t7 = n(461678),
-    ne = n(880682),
+    ne = n(810711),
     nt = n(95701),
     nn = n(543465),
     ni = n(914853),
@@ -1836,7 +1836,7 @@ let nh = c.memo(function (e) {
             mentionCount: o,
             isMentionLowImportance: d,
         });
-    if (null == i) return (0, r.jsx)(tX.o, { size: nc(l, "default"), color: t6.A.colors.INTERACTIVE_ICON_DEFAULT });
+    if (null == i) return (0, r.jsx)(tX.o, { size: nc(l, "default"), color: t5.A.colors.INTERACTIVE_ICON_DEFAULT });
     {
         if (null == t) return (0, r.jsx)(tg.Ay, { guild: i, size: nc(l, "guild"), active: !0, showTooltip: !1 });
         let e = 40 === l ? nd.Q.MEDIUM_40 : nd.Q.TINY_24;
@@ -2152,7 +2152,7 @@ function nj(e) {
                                           (0, r.jsx)(t3._, {
                                               className: nA.ln,
                                               size: "xs",
-                                              color: t6.A.colors.TEXT_MUTED,
+                                              color: t5.A.colors.TEXT_MUTED,
                                           }),
                                       ],
                                   })
@@ -2213,7 +2213,7 @@ function nj(e) {
                                   text: v,
                                   "aria-label": v,
                                   children: (0, r.jsx)(tJ.K, {
-                                      icon: t5.g,
+                                      icon: t6.g,
                                       "aria-label": v,
                                       size: "sm",
                                       variant: "icon-only",
@@ -2283,7 +2283,7 @@ let nz = c.memo(function (e) {
         a = null != i && t === i,
         d = (0, y.bG)([o.A], () => o.A.getSelectedChannelId() === t, [t]),
         u = (0, y.bG)([o.A], () => o.A.getVoiceChatMinimized()),
-        h = (0, nC.r)(t6.A.colors.ICON_STATUS_ONLINE),
+        h = (0, nC.r)(t5.A.colors.ICON_STATUS_ONLINE),
         g = (0, y.bG)([nb.A], () => !!a && !!(nb.A.isAnyoneElseSpeaking() || nb.A.isCurrentUserSpeaking()), [a]),
         [p, x] = c.useState(!1),
         { mentionCount: f, isMentionLowImportance: E } = (0, y.cf)(
@@ -2341,7 +2341,7 @@ let nz = c.memo(function (e) {
                             children: (0, r.jsx)(e, {
                                 className: nk.Yc,
                                 size: "sm",
-                                color: d ? t6.A.colors.WHITE : t6.A.colors.ICON_STATUS_ONLINE,
+                                color: d ? t5.A.colors.WHITE : t5.A.colors.ICON_STATUS_ONLINE,
                             }),
                         })
                     );
@@ -2379,7 +2379,7 @@ let nz = c.memo(function (e) {
                         if (t.isDM() && null != s)
                             return void (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("96167"),
+                                    n.e("21986"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
@@ -2433,7 +2433,7 @@ let nz = c.memo(function (e) {
                             if (null == i) return;
                             (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("94658"),
+                                    n.e("7104"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("38730"),
@@ -2481,7 +2481,7 @@ let nz = c.memo(function (e) {
         M = (() => {
             if (null == T || N) return null;
             let e = (0, tc.gU)(T, v);
-            return (e ??= tX.o), (0, r.jsx)(e, { size: "sm", color: t6.A.colors.INTERACTIVE_ICON_DEFAULT });
+            return (e ??= tX.o), (0, r.jsx)(e, { size: "sm", color: t5.A.colors.INTERACTIVE_ICON_DEFAULT });
         })();
     return null == T
         ? (0, r.jsx)("div", { className: nk.R })
@@ -2720,7 +2720,7 @@ let n1 = c.memo(function (e) {
                     (0, F.YX)(em.uss.VIDEO, { type: F.Z5.CAMERA, value: F.IP.SETTINGS_OPENED, userId: s?.id }),
                         (0, l.L3)(i, async () => {
                             let { default: e } = await Promise.all([
-                                n.e("96167"),
+                                n.e("21986"),
                                 n.e("26132"),
                                 n.e("46652"),
                                 n.e("93190"),
@@ -2833,7 +2833,7 @@ let n1 = c.memo(function (e) {
                 })
               : null;
     }),
-    n6 = (e) => {
+    n5 = (e) => {
         let { widget: t, computedSize: n, borderWidth: i, padding: s, containerSpecs: r } = e;
         if (!(0, e_.cv)(t)) return n;
         let l = "boolean" != typeof t.meta.horizontal || t.meta.horizontal,
@@ -2848,7 +2848,7 @@ let n1 = c.memo(function (e) {
             { maxWidth: 0.75 * r.maxX, maxHeight: 0.75 * r.maxY },
         );
     };
-function n5(e) {
+function n6(e) {
     let t = (0, y.bG)([P.A, D.A], () => D.A.getChannel(P.A.getVoiceChannelId())),
         n = 2 * e.padding + 2 * e.borderWidth,
         i = t?.id,
@@ -2902,7 +2902,7 @@ function n5(e) {
                         widgetLayoutSpecs: a,
                     } = r.current;
                     if (!((t && e.height > e.width) || (!t && e.width > e.height))) return;
-                    let { width: o, height: d } = n6({
+                    let { width: o, height: d } = n5({
                         ...a,
                         widget: l,
                         operation: ej.P.RESIZE_NORTH,
@@ -2982,7 +2982,7 @@ let iu = c.memo(function (e) {
             renderWidget(e) {
                 let { widget: t, locked: n, size: i, padding: s, borderWidth: l, showEmpty: a } = e;
                 return (0, e_.cv)(t)
-                    ? (0, r.jsx)(n5, {
+                    ? (0, r.jsx)(n6, {
                           id: t.id,
                           locked: n,
                           widget: t,
@@ -3015,7 +3015,7 @@ let iu = c.memo(function (e) {
                         (0, r.jsx)(n9.O0, { id: e.id, pinned: e.pinned }),
                     ],
                 }),
-            resizeValidation: n6,
+            resizeValidation: n5,
         },
         [em.uss.VOICE_V3]: {
             streamerModeLabel: () => eg.intl.string(eg.t.nFv3Gb),
