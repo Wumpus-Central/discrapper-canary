@@ -2311,7 +2311,7 @@ function nw(e) {
     },
     CLIPS_INIT: function (e) {
         let { sourceId: t, applicationName: n, quality: r } = e;
-        if (!(0, k.Ao)() || null == L.A) return !1;
+        if (!(0, k.Ao)() || null == L.A || (a?.desktopSource.id === t && a.quality === r)) return !1;
         null != a &&
             (te.setClipsSource(null),
             (0, E.isWindows)() &&
