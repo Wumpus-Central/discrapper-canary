@@ -1,75 +1,74 @@
-"use strict";
-n.d(t, { A: () => h, h: () => p });
-var i = n(627968),
+n.d(t, { A: () => p, h: () => _ });
+var a = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(353795),
-    l = n(312640),
-    u = n(208756),
-    c = n(798618),
-    d = n(916845),
-    _ = n(627330),
-    f = n(824078);
-function h(e) {
+    l = n(503698),
+    i = n.n(l),
+    s = n(353795),
+    o = n(312640),
+    c = n(208756),
+    d = n(798618),
+    u = n(916845),
+    m = n(627330),
+    h = n(824078);
+function p(e) {
     let {
             title: t,
             body: n,
-            badge: s,
-            graphic: h,
-            size: p = "md",
-            actions: E,
-            textLink: m,
-            gradientColor: g,
-            onRequestClose: A,
-            popoverRef: I,
-            position: T,
+            badge: l,
+            graphic: p,
+            size: _ = "md",
+            actions: g,
+            textLink: f,
+            gradientColor: E,
+            onRequestClose: x,
+            popoverRef: v,
+            position: b,
             caretConfig: S,
-            scrollBehavior: N,
-            ...y
+            scrollBehavior: I,
+            ...k
         } = e,
         C = r.useCallback(
             (e, t) => {
-                A?.(t);
+                x?.(t);
             },
-            [A],
+            [x],
         ),
-        v = r.useCallback(() => {
-            A?.("user:explicit");
-        }, [A]),
-        O = {
-            targetElementRef: y.targetElementRef,
-            shouldShow: y.shouldShow,
-            hasVideo: y.hasVideo,
-            position: T,
+        y = r.useCallback(() => {
+            x?.("user:explicit");
+        }, [x]),
+        M = {
+            targetElementRef: k.targetElementRef,
+            shouldShow: k.shouldShow,
+            hasVideo: k.hasVideo,
+            position: b,
             caretConfig: S,
             onRequestClose: C,
-            gradientColor: g,
-            scrollBehavior: N,
-            ...("edge" === y.alignmentStrategy
-                ? { alignmentStrategy: "edge", align: y.align }
+            gradientColor: E,
+            scrollBehavior: I,
+            ...("edge" === k.alignmentStrategy
+                ? { alignmentStrategy: "edge", align: k.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
-    return (0, i.jsx)(l.x, {
-        ...O,
-        children: (0, i.jsxs)("div", {
-            ref: I,
+    return (0, a.jsx)(o.x, {
+        ...M,
+        children: (0, a.jsxs)("div", {
+            ref: v,
             "data-mana-component": "popover",
             children: [
-                (0, i.jsx)(d.q, { onClick: v, variant: null != g ? "color-mix" : void 0 }),
-                null != h &&
-                    (0, i.jsx)("div", {
-                        className: a()(f.graphic, { [f[`graphic--${p}`]]: null != p }),
-                        children: (0, i.jsx)(o.v, {
-                            ...h,
-                            aspectRatio: h.aspectRatio ?? ("sm" === p ? "2/1" : "16/9"),
+                (0, a.jsx)(u.q, { onClick: y, variant: null != E ? "color-mix" : void 0 }),
+                null != p &&
+                    (0, a.jsx)("div", {
+                        className: i()(h.graphic, { [h[`graphic--${_}`]]: null != _ }),
+                        children: (0, a.jsx)(s.v, {
+                            ...p,
+                            aspectRatio: p.aspectRatio ?? ("sm" === _ ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, i.jsx)(_.D, { title: t, body: n, badge: s, textLink: m }),
-                null != E && E.length > 0 ? (0, i.jsx)(u.Z, { actions: E }) : null,
-                (0, i.jsx)(c.F, {}),
+                (0, a.jsx)(m.D, { title: t, body: n, badge: l, textLink: f }),
+                null != g && g.length > 0 ? (0, a.jsx)(c.Z, { actions: g }) : null,
+                (0, a.jsx)(d.F, {}),
             ],
         }),
     });
 }
-let p = h;
+let _ = 21552 == n.j ? p : null;

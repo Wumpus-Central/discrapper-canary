@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h, K: () => d }), n(321073);
+n.d(t, { A: () => p, K: () => _ }), n(321073);
 var i,
     r = n(635377),
     s = n.n(r),
@@ -7,17 +7,18 @@ var i,
     o = n(439372),
     l = n(793574),
     u = n(174459),
-    c = n(652215),
-    d =
+    c = n(403362),
+    d = n(652215),
+    _ =
         (((i = {}).ANNOUNCEMENT = "announcement"),
         (i.APP_EMBED = "app_embed"),
         (i.OFFICIAL_MESSAGE = "official_message"),
         (i.VOICE_INVITE_EMBED = "voice_invite_embed"),
         i);
-function _(e) {
+function f(e) {
     return "voice_invite_embed" === e.type ? `${e.messageId}-${e.inviteCode}-${e.type}` : `${e.messageId}-${e.type}`;
 }
-class f extends o.A {
+class h extends o.A {
     currentlyVisibleMessageTimers = {};
     viewsInCurrentChannel = new Set();
     recentViewTimes = new (s())({ max: 500, maxAge: 6e4 });
@@ -25,7 +26,7 @@ class f extends o.A {
     batchTimerId = null;
     actions = { CHANNEL_SELECT: () => this.handleChannelSelect() };
     handleMessageBecameVisible(e) {
-        let t = _(e);
+        let t = f(e);
         if (null != this.currentlyVisibleMessageTimers[t] || this.viewsInCurrentChannel.has(t)) return;
         let n = this.recentViewTimes.get(t);
         if (null != n && Date.now() - n < 6e4) return;
@@ -46,7 +47,7 @@ class f extends o.A {
         for (let t of e) this.handleMessageBecameVisible(t);
         let n = Object.keys(this.currentlyVisibleMessageTimers);
         if (n.length > 0) {
-            let i = new Set(e.map(_));
+            let i = new Set(e.map(f));
             for (let e of n) e.endsWith(`-${t}`) && !i.has(e) && this.clearTimer(e);
         }
     }
@@ -61,49 +62,52 @@ class f extends o.A {
     drainBuffer() {
         for (let e of this.batchBuffer) {
             let t = (function (e) {
-                if ("announcement" === e.type)
-                    return {
-                        event: c.HAw.ANNOUNCEMENT_MESSAGE_VIEWED,
-                        properties: {
-                            message_id: e.messageId,
-                            channel_id: e.channelId,
-                            guild_id: e.guildId,
-                            source_channel_id: e.sourceChannelId,
-                            source_guild_id: e.sourceGuildId,
-                        },
-                    };
-                if ("app_embed" === e.type)
-                    return {
-                        event: c.HAw.APP_EMBED_VIEWED,
-                        properties: {
-                            application_id: e.applicationId,
-                            link_type: e.linkType,
-                            message_id: e.messageId,
-                            channel_id: e.channelId,
-                            guild_id: e.guildId,
-                        },
-                    };
-                if ("official_message" === e.type)
-                    return {
-                        event: c.HAw.OFFICIAL_MESSAGE_VIEWED,
-                        properties: { message_id: e.messageId, channel_id: e.channelId, guild_id: e.guildId },
-                    };
-                if ("voice_invite_embed" === e.type)
-                    return {
-                        event: a.ImpressionNames.VOICE_INVITE_EMBED,
-                        properties: {
-                            impression_type: a.ImpressionTypes.VIEW,
-                            invite_code: e.inviteCode,
-                            invite_guild_id: e.inviteGuildId,
-                            invite_channel_id: e.inviteChannelId,
-                            invite_instance_id: e.inviteInstanceId,
-                            has_active_stream: e.hasActiveStream,
-                            location_stack: e.treatmentRendered
-                                ? [l.A.INVITE_EMBED, l.A.VOICE_CHANNEL_LIST_INVITE_EMBED]
-                                : [l.A.INVITE_EMBED],
-                        },
-                    };
-                throw Error("Invalid message type for message view tracking");
+                switch (e.type) {
+                    case "announcement":
+                        return {
+                            event: d.HAw.ANNOUNCEMENT_MESSAGE_VIEWED,
+                            properties: {
+                                message_id: e.messageId,
+                                channel_id: e.channelId,
+                                guild_id: e.guildId,
+                                source_channel_id: e.sourceChannelId,
+                                source_guild_id: e.sourceGuildId,
+                            },
+                        };
+                    case "app_embed":
+                        return {
+                            event: d.HAw.APP_EMBED_VIEWED,
+                            properties: {
+                                application_id: e.applicationId,
+                                link_type: e.linkType,
+                                message_id: e.messageId,
+                                channel_id: e.channelId,
+                                guild_id: e.guildId,
+                            },
+                        };
+                    case "official_message":
+                        return {
+                            event: d.HAw.OFFICIAL_MESSAGE_VIEWED,
+                            properties: { message_id: e.messageId, channel_id: e.channelId, guild_id: e.guildId },
+                        };
+                    case "voice_invite_embed":
+                        return {
+                            event: a.ImpressionNames.VOICE_INVITE_EMBED,
+                            properties: {
+                                impression_type: a.ImpressionTypes.VIEW,
+                                invite_code: e.inviteCode,
+                                invite_guild_id: e.inviteGuildId,
+                                invite_channel_id: e.inviteChannelId,
+                                invite_instance_id: e.inviteInstanceId,
+                                has_active_stream: e.hasActiveStream,
+                                location_stack: e.treatmentRendered
+                                    ? [l.A.INVITE_EMBED, l.A.VOICE_CHANNEL_LIST_INVITE_EMBED]
+                                    : [l.A.INVITE_EMBED],
+                            },
+                        };
+                    default:
+                        return (0, c.xb)(e);
+                }
             })(e);
             u.default.track(t.event, t.properties);
         }
@@ -116,4 +120,4 @@ class f extends o.A {
             null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), 2e3));
     }
 }
-let h = new f();
+let p = new h();
