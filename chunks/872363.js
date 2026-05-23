@@ -3,15 +3,15 @@ var s = a(627968),
     l = a(64700),
     r = a(503698),
     i = a.n(r),
-    n = a(123924),
+    n = a(873174),
     c = a(23339),
     o = a(17928),
     p = a(661531),
-    u = a(990078),
-    _ = a(319060),
-    d = a(192308),
-    m = a(939249),
-    E = a(403581),
+    d = a(990078),
+    u = a(319060),
+    _ = a(192308),
+    m = a(403581),
+    E = a(939249),
     A = a(777666),
     y = a(844222),
     I = a(866323),
@@ -20,107 +20,110 @@ var s = a(627968),
     T = a(688810),
     L = a(402216),
     O = a(287809),
-    S = a(954571),
-    h = a(927578),
+    h = a(174459),
+    S = a(428262),
     N = a(650338),
     f = a(821715),
     D = a(652215),
     U = a(788868),
-    C = a(985018),
+    C = a(375708),
     b = a(18238);
-let P = (0, c.xI)(_.A.LIVE_INDICATOR_BORDER_RADIUS),
-    k = { opacity: 0, transform: "translate3d(100%, 0, 0)" },
-    M = { opacity: 1, transform: "translate3d(0%, 0, 0)" },
-    j = { opacity: 0 },
+let j = (0, c.xI)(u.A.LIVE_INDICATOR_BORDER_RADIUS),
+    P = { opacity: 0, transform: "translate3d(100%, 0, 0)" },
+    k = { opacity: 1, transform: "translate3d(0%, 0, 0)" },
+    M = { opacity: 0 },
     v = { opacity: 1 },
-    V = { borderRadius: `${P}px ${P}px ${P}px ${P}px` },
-    w = { borderRadius: `0px ${P}px ${P}px 0px` },
-    g = { mass: 1, tension: 500, friction: 18, clamp: !0 },
+    V = { borderRadius: `${j}px ${j}px ${j}px ${j}px` },
+    g = { borderRadius: `0px ${j}px ${j}px 0px` },
+    w = { mass: 1, tension: 500, friction: 18, clamp: !0 },
     H = (e) => {
         let t,
             r,
             {
                 participant: n,
                 isUpsellEnabled: c,
-                shape: _,
+                shape: u,
                 size: y,
                 didTrackUpsellViewed: I,
                 setDidTrackUpsellViewed: R,
-                className: P,
-                premiumIndicator: k,
-                quality: M,
+                className: j,
+                premiumIndicator: P,
+                quality: k,
             } = e,
-            { analyticsLocations: j } = (0, T.Ay)(),
+            { analyticsLocations: M } = (0, T.Ay)(),
             v = null != (0, f.A)(n);
         try {
-            t = (0, N.HB)(M);
+            t = (0, N.HB)(k);
         } catch (e) {
             t = !1;
         }
         try {
-            r = (0, N.OI)(M);
+            r = (0, N.OI)(k);
         } catch (e) {
             r = !1;
         }
         let V = t || r,
-            { location: w } = (0, x.p)(),
-            g = (0, o.bG)([O.default], () => O.default.getCurrentUser()),
-            H = c && !h.Ay.isPremium(g, U.PremiumTypes.TIER_1) && !h.Ay.canStreamQuality(h.Ay.StreamQuality.MID, g),
+            { location: g } = (0, x.p)(),
+            w = (0, o.bG)([O.default], () => O.default.getCurrentUser()),
+            H = c && !S.Ay.isPremium(w, U.PremiumTypes.TIER_1) && !S.Ay.canStreamQuality(S.Ay.StreamQuality.MID, w),
             G = l.useCallback(() => {
                 H &&
                     V &&
-                    (0, d.openModalLazy)(async () => {
+                    (0, _.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([a.e("93475"), a.e("18630")]).then(a.bind(a, 826789));
-                        return (t) => (0, s.jsx)(e, { ...t, analyticsSource: w });
+                        return (t) => (0, s.jsx)(e, { ...t, analyticsSource: g });
                     });
-            }, [H, V, w]);
+            }, [H, V, g]);
         if (
             (l.useEffect(() => {
                 !I &&
                     V &&
-                    (S.default.track(D.HAw.PREMIUM_UPSELL_VIEWED, {
+                    (h.default.track(D.HAw.PREMIUM_UPSELL_VIEWED, {
                         type: U.e.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: r,
-                        location_stack: j,
+                        location_stack: M,
                     }),
                     R(!0));
-            }, [t, r, V, I, R, j]),
-            null == M)
+            }, [t, r, V, I, R, M]),
+            null == k)
         )
             return null;
-        let W = (0, s.jsx)(u.m, {
-            text: v ? C.intl.string(C.t.q8TiVt) : V ? C.intl.string(C.t.IHgpEn) : C.intl.string(C.t.vLb0VW),
-            position: "bottom",
-            children: (0, s.jsxs)(m.D, {
-                onClick: G,
-                className: i()(b.t5, y, L.u1[_], v ? b.Y5 : b.Lc, { [b.vk]: H && V }),
+        let W = H && V,
+            Y = i()(b.t5, y, L.u1[u], v ? b.Y5 : b.Lc, { [b.vk]: W }),
+            F = (0, s.jsxs)(s.Fragment, {
                 children: [
-                    V ? (0, s.jsx)(E.t, { size: "md", color: "currentColor", className: b.fY }) : null,
-                    (0, s.jsx)("span", { className: b.UD, children: (0, N.ME)(M.maxResolution) }),
-                    (0, s.jsx)("span", { children: (0, N.Bs)(M.maxFrameRate) }),
+                    V ? (0, s.jsx)(m.t, { size: "md", color: "currentColor", className: b.fY }) : null,
+                    (0, s.jsx)("span", { className: b.UD, children: (0, N.ME)(k.maxResolution) }),
+                    (0, s.jsx)("span", { children: (0, N.Bs)(k.maxFrameRate) }),
                 ],
             }),
-        });
+            $ = (0, s.jsx)(d.m, {
+                text: v ? C.intl.string(C.t.q8TiVt) : V ? C.intl.string(C.t.IHgpEn) : C.intl.string(C.t.vLb0VW),
+                position: "bottom",
+                children: W
+                    ? (0, s.jsx)(E.D, { onClick: G, className: Y, children: F })
+                    : (0, s.jsx)("span", { className: Y, children: F }),
+            });
         return (0, s.jsx)(A.Lp, {
-            text: W,
-            className: i()(P, b.AA, { [b.Dc]: V && k }),
+            text: $,
+            className: i()(j, b.AA, { [b.Dc]: V && P }),
             color: p.A.unsafe_rawColors.PRIMARY_500.css,
-            shape: L.u1[_],
+            shape: L.u1[u],
         });
     },
     G = (e) => {
         let { participant: t, showQuality: a, isUpsellEnabled: r = !0, size: c, className: o, premiumIndicator: p } = e,
-            [u, _] = l.useState(!1),
-            d = (0, N.N5)(t),
+            [d, u] = l.useState(!1),
+            _ = (0, N.N5)(t),
             { reducedMotion: m } = l.useContext(y.C),
-            E = a && null != d,
+            E = a && null != _,
             x = (0, I.p)(
                 E,
-                { enter: { from: m.enabled ? j : k, to: m.enabled ? v : M }, leave: m.enabled ? j : k, config: g },
+                { enter: { from: m.enabled ? M : P, to: m.enabled ? v : k }, leave: m.enabled ? M : P, config: w },
                 "animate-always",
             ),
-            T = (0, R.z)({ to: E ? w : V, config: g }, "animate-always");
+            T = (0, R.z)({ to: E ? g : V, config: w }, "animate-always");
         return ((e) => {
             let { className: a, popoutProps: l } = e;
             return (0, s.jsxs)("div", {
@@ -137,10 +140,10 @@ let P = (0, c.xI)(_.A.LIVE_INDICATOR_BORDER_RADIUS),
                                       size: c,
                                       shape: A.EG.ROUND_LEFT,
                                       isUpsellEnabled: r,
-                                      didTrackUpsellViewed: u,
-                                      setDidTrackUpsellViewed: _,
+                                      didTrackUpsellViewed: d,
+                                      setDidTrackUpsellViewed: u,
                                       premiumIndicator: p,
-                                      quality: d,
+                                      quality: _,
                                   }),
                               })
                             : null,
