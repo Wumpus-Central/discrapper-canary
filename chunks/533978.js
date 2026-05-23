@@ -15,7 +15,7 @@ var l = t(627968),
     E = t(674168),
     p = t(277192),
     g = t(173660),
-    x = t(235058),
+    x = t(761853),
     I = t(246356),
     f = t(204651),
     T = t(376086),
@@ -100,7 +100,7 @@ function _(e) {
                       ? v.intl.string(v.t["+YBKYI"])
                       : P
                         ? v.intl.string(v.t.X1lQli)
-                        : void 0,
+                        : v.intl.string(v.t["6EJvHt"]),
                 iconComponent: S,
                 disabled: G,
                 onContextMenu: F,

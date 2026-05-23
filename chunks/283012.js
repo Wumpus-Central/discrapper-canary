@@ -65,7 +65,7 @@ function y(e) {
         ? (0, s.jsx)(m.D, {
               onClick: x,
               "aria-label": k.intl.formatToPlainString(k.t.FXFkPg, {
-                  title: l,
+                  title: null != j ? `${l}, ${j}` : l,
                   status: r ? k.intl.string(k.t.g62IJl) : k.intl.string(k.t.DaELnU),
               }),
               children: N,
