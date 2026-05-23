@@ -244,11 +244,12 @@ function M(e) {
         (e.stopPropagation(), R)
             ? (0, u.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([
-                      n.e("34053"),
+                      n.e("96449"),
                       n.e("71104"),
-                      n.e("94908"),
+                      n.e("58466"),
                       n.e("51776"),
                       n.e("18113"),
+                      n.e("88623"),
                       n.e("34530"),
                       n.e("75842"),
                       n.e("20287"),
@@ -274,7 +275,7 @@ function M(e) {
                   return (n) => (0, i.jsx)(e, { ...n, channelId: t, clipId: S.id, onEdit: L });
               })
             : (0, u.openModalLazy)(async () => {
-                  let { default: e } = await Promise.all([n.e("16492"), n.e("70698")]).then(n.bind(n, 427281));
+                  let { default: e } = await Promise.all([n.e("73148"), n.e("70698")]).then(n.bind(n, 427281));
                   return (n) =>
                       (0, i.jsx)(e, {
                           ...n,
