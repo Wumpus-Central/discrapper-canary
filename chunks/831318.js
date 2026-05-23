@@ -37,7 +37,7 @@ let f = function (e) {
                   intervalCount: N?.subscription_trial?.interval_count,
               }))
             : null != y && (v = _.intl.formatToPlainString(_.t.bkQ4bH, { percent: y.discount.amount })));
-    let O = "beta" === A ? "beta" : null != N ? "free_trial" : A;
+    let O = null != N ? "free_trial" : A;
     return (0, i.jsx)(u.A, {
         subscriptionTier: I,
         children: (e) => {

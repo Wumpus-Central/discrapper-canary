@@ -102,8 +102,8 @@ function C() {
     return null != e && e.isStaff(), 524288e3;
 }
 function v(e) {
-    let { guildId: t, onClick: n, maxSize: i } = e,
-        r = (0, c.Xq)((i ?? S(t)) / 1024, { useKibibytes: !0 }),
-        s = (0, c.Xq)(f.f3 / 1024, { useKibibytes: !0 });
-    return h.intl.format(h.t.tRuxk9, { maxSize: r, premiumMaxSize: s, onClick: n });
+    let { guildId: t, onClick: n } = e,
+        i = (0, c.Xq)(S(t) / 1024, { useKibibytes: !0 }),
+        r = (0, c.Xq)(f.f3 / 1024, { useKibibytes: !0 });
+    return h.intl.format(h.t.tRuxk9, { maxSize: i, premiumMaxSize: r, onClick: n });
 }

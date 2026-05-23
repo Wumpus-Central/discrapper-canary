@@ -48,18 +48,15 @@ function N(e, t, n) {
         }),
             (0, a.openUploadError)({
                 title: S.intl.string(S.t["/tGlcj"]),
-                help: (0, g.WQ)(i, r, o.enabled ? l : void 0),
+                help: (0, g.WQ)(i, r),
                 showPremiumUpsell: !(0, m.YE)(i, T.PremiumTypes.TIER_2),
                 fileSize: p,
-                kestrelTreated: o.enabled,
-                effectiveMaxSize: o.enabled ? l : void 0,
             });
         return;
     }
     (0, a.openUploadError)({
         title: S.intl.string(S.t["/tGlcj"]),
         help: S.intl.formatToPlainString(S.t.tUOJdH, { maxSize: E.Hb(E.bB()) }),
-        kestrelTreated: o.enabled,
     });
 }
 async function y(e, t, n) {
