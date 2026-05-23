@@ -260,14 +260,17 @@
     margin-bottom: 12px
 }
 
-.statusContainer_b5010b,
-.withThumbnail_b5010b {
+.statusContainer_b5010b {
     display: flex;
-    flex-direction: row
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px
 }
 
 .withThumbnail_b5010b {
     align-items: flex-start;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between
 }
 

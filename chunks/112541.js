@@ -839,7 +839,12 @@ class eV extends s.PureComponent {
             className: n,
             children: [
                 this.state.showPlaceholder
-                    ? (0, r.jsx)("div", { className: o()(eF.q, t), "aria-hidden": !0, children: a })
+                    ? (0, r.jsx)("div", {
+                          className: o()(eF.q, t),
+                          "aria-hidden": !0,
+                          "data-slate-placeholder": "true",
+                          children: a,
+                      })
                     : null,
                 (0, r.jsx)(j.A, {
                     editor: e,

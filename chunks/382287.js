@@ -6,13 +6,13 @@ var i = n(565150),
     a = n(428262),
     o = n(788868),
     l = n(375708);
-function u(e, t) {
-    let n = s.Hb(s.o2(t));
+function u(e, t, n) {
+    let i = s.Hb(n ?? s.o2(t));
     return a.Ay.isPremium(e, o.PremiumTypes.TIER_2)
-        ? l.intl.formatToPlainString(l.t.fxEKdS, { maxSize: n })
+        ? l.intl.formatToPlainString(l.t.fxEKdS, { maxSize: i })
         : a.Ay.isPremium(e, o.PremiumTypes.TIER_1)
-          ? l.intl.formatToPlainString(l.t["Nr+LsZ"], { maxSize: n })
-          : l.intl.formatToPlainString(l.t.fxEKdS, { maxSize: n });
+          ? l.intl.formatToPlainString(l.t["Nr+LsZ"], { maxSize: i })
+          : l.intl.formatToPlainString(l.t.fxEKdS, { maxSize: i });
 }
 function c(e, t) {
     let n = (0, r.R8)({ location: "web.filesExceedUploadLimits" });

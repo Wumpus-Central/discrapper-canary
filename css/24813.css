@@ -801,6 +801,10 @@
     max-height: 80px
 }
 
+.textArea__08bd2 [data-slate-placeholder=true] {
+    color: var(--input-placeholder-text-default)
+}
+
 .error__08bd2 {
     margin-top: 8px
 }
@@ -7291,13 +7295,6 @@ div.profileThemedContainer__656be {
 .button__0f074.visible__0f074,
 .button__0f074:focus-visible {
     opacity: 1
-}
-
-.row_e4172d {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    width: 100%
 }
 
 .firefoxFixScrollFlex_efbae7 {
