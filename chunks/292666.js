@@ -1,173 +1,179 @@
 "use strict";
-n.d(t, { k: () => R, p: () => v });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { k: () => O, p: () => R });
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(834730),
-    l = n(219869),
-    u = n(866711),
+    o = n(612324),
+    l = n(834730),
+    u = n(219869),
+    c = n(528265),
     d = n(939249),
-    c = n(285796),
-    _ = n(452027),
-    f = n(862301),
-    E = n(187322),
-    h = n(15626),
-    p = n(827734),
-    m = n(504345),
-    g = n(990078),
-    A = n(823607),
-    I = n(511274),
-    T = n(985018),
-    S = n(311109);
+    _ = n(285796),
+    f = n(452027),
+    h = n(862301),
+    p = n(187322),
+    E = n(15626),
+    m = n(661531),
+    g = n(504345),
+    A = n(990078),
+    I = n(823607),
+    T = n(511274),
+    S = n(375708),
+    N = n(311109);
 function y(e, t) {
-    let n = i.useContext(m.cK);
+    let n = r.useContext(g.cK);
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             n.setHasValue?.((null != t && "" !== t) || (null != e && "" !== e)), n.setIsFocused?.(!1);
         }, []),
-        i.useEffect(() => {
+        r.useEffect(() => {
             null != e && "" !== e && n.setHasValue?.(!0);
         }, [n, e]),
         n
     );
 }
-function N(e) {
-    let { accessory: t, inputSize: n, disabled: i } = e;
+function C(e) {
+    let { accessory: t, inputSize: n, disabled: r } = e;
     if ("string" == typeof t)
-        return (0, r.jsx)(o.E, {
+        return (0, i.jsx)(l.E, {
             variant: "text-md/normal",
             color: "input-placeholder-text-default",
-            className: S.leadingText,
+            className: N.leadingText,
             children: t,
         });
     if ("icon" in t) {
         let { tooltip: e, ...s } = t,
-            a = (0, r.jsx)(l.T, { ...s, size: "md" === n ? "sm" : "xs", variant: "input-accessory" });
-        return null != e ? (0, r.jsx)(g.m, { asContainer: !0, text: e, shouldShow: !i, children: a }) : a;
+            a = (0, i.jsx)(u.T, { ...s, size: "md" === n ? "sm" : "xs", variant: "input-accessory" });
+        return null != e ? (0, i.jsx)(A.m, { asContainer: !0, text: e, shouldShow: !r, children: a }) : a;
     }
-    if ("button" in t) return (0, r.jsx)("div", { className: S.icon, children: t.button });
+    if ("button" in t) return (0, i.jsx)("div", { className: N.icon, children: t.button });
     if ("type" in t && "tags" === t.type) {
         let { type: e, ...n } = t;
-        return (0, r.jsx)(u.C, { ...n, layout: "inline" });
+        return (0, i.jsx)(c.C, { ...n, layout: "inline" });
     }
     return "type" in t && "image" === t.type
-        ? (0, r.jsx)("img", { "aria-hidden": !0, alt: "", src: t.src, className: S.image })
-        : (0, r.jsx)("div", {
-              className: S.icon,
-              children: (0, r.jsx)(t, { size: "md" === n ? "xs" : "xxs", color: p.A.colors.ICON_STRONG }),
+        ? (0, i.jsx)("img", { "aria-hidden": !0, alt: "", src: t.src, className: N.image })
+        : (0, i.jsx)("div", {
+              className: N.icon,
+              children: (0, i.jsx)(t, { size: "md" === n ? "xs" : "xxs", color: m.A.colors.ICON_STRONG }),
           });
 }
-function O(e) {
+function v(e) {
     let { inputSize: t, onClick: n } = e;
-    return (0, r.jsx)(d.D, {
-        className: S.clearButton,
+    return (0, i.jsx)(d.D, {
+        className: N.clearButton,
         onClick: n,
-        "aria-label": T.intl.string(T.t.VkKicb),
-        children: (0, r.jsx)(c.a, { size: "md" === t ? "xs" : "xxs", color: "currentColor" }),
+        "aria-label": S.intl.string(S.t.VkKicb),
+        children: (0, i.jsx)(_.a, { size: "md" === t ? "xs" : "xxs", color: "currentColor" }),
     });
 }
-function R(e) {
+function O(e) {
     let {
             disabled: t = !1,
             editable: n,
             inputRef: s,
-            focusProps: o,
-            name: l = "",
-            type: u = "text",
+            focusProps: l,
+            name: u = "",
+            type: c = "text",
             placeholder: d = "",
-            maxLength: c,
-            value: h,
-            defaultValue: p,
-            minLength: m,
-            error: g,
-            defaultDirty: T = !1,
-            leading: R,
-            trailing: C,
-            validateOn: b = "change",
-            size: D = "md",
-            fullWidth: L = !1,
-            clearable: w = !1,
-            showCharacterCount: M = !1,
-            ...P
+            maxLength: _,
+            value: E,
+            defaultValue: m,
+            minLength: g,
+            error: A,
+            defaultDirty: S = !1,
+            leading: O,
+            trailing: b,
+            validateOn: D = "change",
+            size: L = "md",
+            fullWidth: w = !1,
+            clearable: M = !1,
+            showCharacterCount: P = !1,
+            ...x
         } = e,
-        { fieldProps: U } = (0, _.n)(P),
-        k = (0, I.Y)({ validateOn: b, error: g, value: h, minLength: m, maxLength: c, defaultDirty: T }),
-        { setShouldValidate: x } = k,
-        G = y(h, p),
-        V = "object" == typeof R && "type" in R && "tags" === R.type,
-        F = i.useRef(null),
-        B = P.readOnly;
-    null == B && !1 === n && (B = !0);
-    let H = null;
-    ("boolean" == typeof w ? w && null != h && "" !== h && !B : w.show)
-        ? (H = (0, r.jsx)(O, {
-              inputSize: D,
+        { fieldProps: U } = (0, f.n)(x),
+        k = (0, T.Y)({ validateOn: D, error: A, value: E, minLength: g, maxLength: _, defaultDirty: S }),
+        { setShouldValidate: G } = k,
+        F = y(E, m),
+        V = "object" == typeof O && "type" in O && "tags" === O.type,
+        B = r.useRef(null),
+        H = (0, o.A)(B, s),
+        j = r.useRef(null),
+        Y = x.readOnly;
+    null == Y && !1 === n && (Y = !0);
+    let W = null;
+    ("boolean" == typeof M ? M && null != E && "" !== E && !Y : M.show)
+        ? (W = (0, i.jsx)(v, {
+              inputSize: L,
               onClick: (e) => {
-                  null != P.onClear ? P.onClear(e) : P.onChange?.("", l);
+                  null != x.onClear ? x.onClear(e) : x.onChange?.("", u),
+                      requestAnimationFrame(() => {
+                          B.current?.focus();
+                      });
               },
           }))
-        : null != C && (H = (0, r.jsx)(N, { accessory: C, inputSize: D }));
-    let Y = null;
-    null != R && (Y = (0, r.jsx)(N, { accessory: R, inputSize: D }));
-    let W = M ? (0, r.jsx)(A.n, { value: h, maxLength: c }) : null;
-    return (0, r.jsx)(_.D, {
+        : null != b && (W = (0, i.jsx)(C, { accessory: b, inputSize: L }));
+    let K = null;
+    null != O && (K = (0, i.jsx)(C, { accessory: O, inputSize: L }));
+    let z = P ? (0, i.jsx)(I.n, { value: E, maxLength: _ }) : null;
+    return (0, i.jsx)(f.D, {
         ...U,
         errorMessage: k.hasError ? (k.errorMessage ?? void 0) : void 0,
-        trailingAuxiliaryContent: W,
-        children: (0, r.jsxs)(f.F, {
-            ref: F,
+        trailingAuxiliaryContent: z,
+        children: (0, i.jsxs)(h.F, {
+            ref: j,
             disabled: t,
             validation: k,
-            fullWidth: L,
-            readOnly: B,
-            className: a()(S.container, S[D], {
-                [S.hasLeading]: null != Y,
-                [S.hasTrailing]: null != H,
-                [S.hasTags]: V,
+            fullWidth: w,
+            readOnly: Y,
+            className: a()(N.container, N[L], {
+                [N.hasLeading]: null != K,
+                [N.hasTrailing]: null != W,
+                [N.hasTags]: V,
             }),
             children: [
-                Y,
-                (0, r.jsx)(E.vN, {
-                    ringTarget: F,
-                    ...o,
-                    children: (0, r.jsx)(v, {
-                        name: l,
-                        className: S.input,
+                K,
+                (0, i.jsx)(p.vN, {
+                    ringTarget: j,
+                    ...l,
+                    children: (0, i.jsx)(R, {
+                        name: u,
+                        className: N.input,
                         disabled: t,
-                        readOnly: B,
+                        readOnly: Y,
                         "aria-required": U.required,
-                        type: u,
+                        type: c,
                         placeholder: d,
-                        maxLength: c,
-                        minLength: m,
-                        value: h,
-                        defaultValue: p,
+                        maxLength: _,
+                        minLength: g,
+                        value: E,
+                        defaultValue: m,
                         "data-mana-component": "text-input",
-                        ...P,
+                        ...x,
                         onChange: (e) => {
                             let t = e.currentTarget.value;
-                            P.onChange?.(t, l), x(!0), G.setHasValue?.("" !== t);
+                            x.onChange?.(t, u), G(!0), F.setHasValue?.("" !== t);
                         },
                         onBlur: (e) => {
-                            P.onBlur?.(e), G.setIsFocused?.(!1);
+                            x.onBlur?.(e), F.setIsFocused?.(!1);
                         },
                         onFocus: (e) => {
-                            P.onFocus?.(e), G.setIsFocused?.(!0);
+                            x.onFocus?.(e), F.setIsFocused?.(!0);
                         },
-                        ref: s,
+                        ref: H,
                     }),
                 }),
-                H,
+                W,
             ],
         }),
     });
 }
-function v(e) {
+function R(e) {
     let { value: t, defaultValue: n, "aria-labelledby": s, ...a } = e,
         o = y(t, n),
-        l = i.useContext(h._);
-    return (0, r.jsx)("input", {
+        l = r.useContext(E._);
+    return (0, i.jsx)("input", {
         ...a,
         value: t,
         defaultValue: n,
