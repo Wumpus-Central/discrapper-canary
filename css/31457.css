@@ -4253,24 +4253,17 @@ screen and (max-width:485px) {
     transform: translateZ(0)
 }
 
+.blur__40128 {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px)
+}
+
 .lightbox__40128 {
     background-color: var(--background-scrim-lightbox)
 }
 
 .pointerEventsNone__40128 {
     pointer-events: none
-}
-
-.backdrop__78332 {
-    position: fixed;
-    top: 0;
-    inset-inline: 0 var(--devtools-sidebar-width, 0);
-    bottom: 0;
-    transform: translateZ(0)
-}
-
-.backdrop__78332.withLayer__78332 {
-    pointer-events: all
 }
 
 .layer__529b0 {

@@ -189,7 +189,7 @@ let ed = {
     [T.IWg.VIBE_WITH_WUMPUS]: {
         binds: ["mod+alt+shift+w"],
         comboKeysBindGlobal: !0,
-        action: () => ((0, er.A)({ source: es.y.KEYBIND, onClose: S.closeAllModals }), !1),
+        action: () => ((0, er.A)({ source: es.y.KEYBIND }), !1),
     },
     [T.IWg.TOGGLE_MUTE]: Y.VT,
     [T.IWg.TOGGLE_DEAFEN]: Y.rR,

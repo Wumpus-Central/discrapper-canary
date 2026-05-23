@@ -1,31 +1,27 @@
 "use strict";
-n.d(t, { p: () => _, s: () => c });
-var r = n(627968);
+n.d(t, { p: () => c });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(356197),
+var r = n(503698),
+    s = n.n(r),
+    a = n(873174),
     o = n(866323),
-    l = n(892491),
-    u = n(150591),
-    d = n(75967);
+    l = n(150591),
+    u = n(75967);
 function c(e) {
-    return e !== l.F.TOP_RADIAL && e !== l.F.SUBTLE && e !== l.F.BLUR;
-}
-function _(e) {
     let {
         variant: t = "default",
         animationVariant: n = "default",
-        onClick: i,
-        isVisible: l,
-        disabled: c = !1,
+        onClick: r,
+        isVisible: c,
+        disabled: d = !1,
         disablePointerEvents: _ = !1,
     } = e;
     return (0, o.p)(
-        l,
+        c,
         {
             keys: (e) => (e ? "scrim" : "empty"),
-            config: u.hP,
+            config: l.hP,
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -33,11 +29,11 @@ function _(e) {
         "instant" === n ? "animate-never" : "animate-always",
     )((e, n) =>
         n
-            ? (0, r.jsx)(a.animated.div, {
+            ? (0, i.jsx)(a.animated.div, {
                   role: "none",
-                  className: s()(d.f5, { [d.Et]: "lightbox" === t, [d.RS]: _ }),
+                  className: s()(u.f5, { [u.Et]: "lightbox" === t, [u.Ge]: "experimental_blur" === t, [u.RS]: _ }),
                   style: e,
-                  onClick: c ? void 0 : i,
+                  onClick: d ? void 0 : r,
               })
             : null,
     );

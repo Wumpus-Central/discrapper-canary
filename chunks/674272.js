@@ -13,6 +13,6 @@ function a(e) {
             );
             return (n) => (0, i.jsx)(e, { ...n, source: t });
         },
-        { onCloseCallback: a, backdropStyle: s.F.BLUR },
+        { onCloseCallback: a, backdropStyle: s.F.BLUR, stackingBehavior: "stack" },
     );
 }
