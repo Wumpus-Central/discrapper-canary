@@ -154,6 +154,7 @@ function h(e) {
             style: null != P ? { "--custom-field-horizontal-control-width": P } : void 0,
             "data-disabled": l,
             "aria-describedby": x ? L : void 0,
+            "aria-required": (!!x && !!s) || void 0,
             disabled: x ? l : void 0,
             children: [
                 k,
