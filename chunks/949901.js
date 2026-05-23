@@ -13854,130 +13854,123 @@ function Tc() {
     let c = d ? "md" : "sm",
         g = "",
         A = null;
-    switch (r) {
-        case Ta.s.NITRO:
-            (g = m.intl.string(To.default["+QAvQz"])),
-                (A = (0, f.jsx)(eE.$, {
-                    variant: "overlay-primary",
-                    size: c,
-                    fullWidth: d,
-                    text: m.intl.string(To.default.CubeLC),
-                    onClick: () => {
-                        (0, C.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([i.e("16848"), i.e("77632")]).then(
-                                i.bind(i, 836291),
-                            );
-                            return (t) => (0, f.jsx)(e, { ...t, sourceAnalyticsLocations: o });
-                        });
-                    },
-                }));
-            break;
-        case Ta.s.NON_NITRO:
-        case Ta.s.FREE_FRACTIONAL_NITRO:
-            (g = m.intl.string(To.default.NwkRTZ)),
-                (A = (0, f.jsx)(sh.A, {
-                    defaultTextOverride: m.intl.string(To.default["0vY+ie"]),
-                    variantOverride: "overlay-primary",
-                    size: c,
-                    fullWidth: d,
-                    subscriptionTier: sf.pe.TIER_2,
-                }));
-            break;
-        default:
-            (0, t4.xb)(r);
-    }
-    return (0, f.jsxs)(nU.f5, {
-        value: o,
-        children: [
-            (0, f.jsxs)("div", {
-                className: Td.bV,
-                children: [
-                    (0, f.jsx)(eh.D, {
-                        variant: "heading-md/semibold",
-                        color: "text-strong",
-                        children: m.intl.string(m.t.NG1e6l),
-                    }),
-                    (0, f.jsx)(oZ.t, { size: "xs", color: "var(--icon-default)" }),
-                ],
-            }),
-            (0, f.jsx)(tJ.N, {
-                theme: "dark",
-                children: (e) =>
-                    (0, f.jsx)("div", {
-                        className: e,
-                        children: (0, f.jsxs)("div", {
-                            className: Td.Nr,
-                            children: [
-                                (0, f.jsxs)("div", {
-                                    className: Td.Tp,
-                                    children: [
-                                        (0, f.jsx)("div", {
-                                            className: Td.Qw,
-                                            style: {
-                                                backgroundImage: `url(${a ? "https://cdn.discordapp.com/assets/content/1858990b1e56c7d51e887008753104d4663d06c0e0e296d8fe0ea85c7e3e8341.png" : "https://cdn.discordapp.com/assets/content/7308e937fbd3074b9de0ebba1fa3571fa7b10a2b88f384b382f711bae99f40e6.png"})`,
-                                            },
-                                        }),
-                                        (0, f.jsx)("div", { className: Td.$h }),
-                                        (0, f.jsx)("div", { className: Td.Rv }),
-                                        (0, f.jsx)("div", { className: Td.Lw }),
-                                    ],
-                                }),
-                                (0, f.jsxs)("div", {
-                                    className: Td.Mn,
-                                    children: [
-                                        (0, f.jsxs)("div", {
-                                            className: Td.mY,
-                                            children: [
-                                                (0, f.jsx)("img", {
-                                                    className: Td.wm,
-                                                    src: "https://cdn.discordapp.com/assets/content/c5fab2b5d1155c4c9bc088b07f8563b6db8d2d08666357486efc5aea6e97fbea.png",
-                                                    alt: "Xbox Game Pass",
-                                                }),
-                                                (0, f.jsx)(k.E, {
-                                                    variant: "text-lg/semibold",
-                                                    color: "text-strong",
-                                                    className: Td.DD,
-                                                    children: g,
-                                                }),
-                                            ],
-                                        }),
-                                        (0, f.jsx)("div", { className: Td.lO, children: A }),
-                                    ],
-                                }),
-                                a &&
-                                    (0, f.jsxs)(f.Fragment, {
+    return (
+        r === Ta.s.NITRO
+            ? ((g = m.intl.string(To.default["+QAvQz"])),
+              (A = (0, f.jsx)(eE.$, {
+                  variant: "overlay-primary",
+                  size: c,
+                  fullWidth: d,
+                  text: m.intl.string(To.default.CubeLC),
+                  onClick: () => {
+                      (0, C.openModalLazy)(async () => {
+                          let { default: e } = await Promise.all([i.e("16848"), i.e("77632")]).then(i.bind(i, 836291));
+                          return (t) => (0, f.jsx)(e, { ...t, sourceAnalyticsLocations: o });
+                      });
+                  },
+              })))
+            : (r === Ta.s.NON_NITRO || r === Ta.s.FREE_FRACTIONAL_NITRO) &&
+              ((g = m.intl.string(To.default.NwkRTZ)),
+              (A = (0, f.jsx)(sh.A, {
+                  defaultTextOverride: m.intl.string(To.default["0vY+ie"]),
+                  variantOverride: "overlay-primary",
+                  size: c,
+                  fullWidth: d,
+                  subscriptionTier: sf.pe.TIER_2,
+              }))),
+        (0, f.jsxs)(nU.f5, {
+            value: o,
+            children: [
+                (0, f.jsxs)("div", {
+                    className: Td.bV,
+                    children: [
+                        (0, f.jsx)(eh.D, {
+                            variant: "heading-md/semibold",
+                            color: "text-strong",
+                            children: m.intl.string(m.t.NG1e6l),
+                        }),
+                        (0, f.jsx)(oZ.t, { size: "xs", color: "var(--icon-default)" }),
+                    ],
+                }),
+                (0, f.jsx)(tJ.N, {
+                    theme: "dark",
+                    children: (e) =>
+                        (0, f.jsx)("div", {
+                            className: e,
+                            children: (0, f.jsxs)("div", {
+                                className: Td.Nr,
+                                children: [
+                                    (0, f.jsxs)("div", {
+                                        className: Td.Tp,
                                         children: [
-                                            (0, f.jsx)("div", { className: Td.yF }),
+                                            (0, f.jsx)("div", {
+                                                className: Td.Qw,
+                                                style: {
+                                                    backgroundImage: `url(${a ? "https://cdn.discordapp.com/assets/content/1858990b1e56c7d51e887008753104d4663d06c0e0e296d8fe0ea85c7e3e8341.png" : "https://cdn.discordapp.com/assets/content/7308e937fbd3074b9de0ebba1fa3571fa7b10a2b88f384b382f711bae99f40e6.png"})`,
+                                                },
+                                            }),
+                                            (0, f.jsx)("div", { className: Td.$h }),
+                                            (0, f.jsx)("div", { className: Td.Rv }),
+                                            (0, f.jsx)("div", { className: Td.Lw }),
+                                        ],
+                                    }),
+                                    (0, f.jsxs)("div", {
+                                        className: Td.Mn,
+                                        children: [
                                             (0, f.jsxs)("div", {
-                                                className: Td.sQ,
+                                                className: Td.mY,
                                                 children: [
-                                                    (0, f.jsx)(dX.o, {
-                                                        size: d ? "md" : "sm",
-                                                        color: F.A.colors.ICON_STRONG,
+                                                    (0, f.jsx)("img", {
+                                                        className: Td.wm,
+                                                        src: "https://cdn.discordapp.com/assets/content/c5fab2b5d1155c4c9bc088b07f8563b6db8d2d08666357486efc5aea6e97fbea.png",
+                                                        alt: "Xbox Game Pass",
                                                     }),
                                                     (0, f.jsx)(k.E, {
-                                                        variant: "text-sm/normal",
-                                                        color: "text-default",
-                                                        children: m.intl.format(Tu.default.mXY4Rb, {
-                                                            onConnect: () => {
-                                                                u(Tn.Hx.CONNECT),
-                                                                    (0, E7.A)({
-                                                                        platformType: Q.fg2.XBOX,
-                                                                        location: "Connected Accounts Banner",
-                                                                    });
-                                                            },
-                                                        }),
+                                                        variant: "text-lg/semibold",
+                                                        color: "text-strong",
+                                                        className: Td.DD,
+                                                        children: g,
                                                     }),
                                                 ],
                                             }),
+                                            (0, f.jsx)("div", { className: Td.lO, children: A }),
                                         ],
                                     }),
-                            ],
+                                    a &&
+                                        (0, f.jsxs)(f.Fragment, {
+                                            children: [
+                                                (0, f.jsx)("div", { className: Td.yF }),
+                                                (0, f.jsxs)("div", {
+                                                    className: Td.sQ,
+                                                    children: [
+                                                        (0, f.jsx)(dX.o, {
+                                                            size: d ? "md" : "sm",
+                                                            color: F.A.colors.ICON_STRONG,
+                                                        }),
+                                                        (0, f.jsx)(k.E, {
+                                                            variant: "text-sm/normal",
+                                                            color: "text-default",
+                                                            children: m.intl.format(Tu.default.mXY4Rb, {
+                                                                onConnect: () => {
+                                                                    u(Tn.Hx.CONNECT),
+                                                                        (0, E7.A)({
+                                                                            platformType: Q.fg2.XBOX,
+                                                                            location: "Connected Accounts Banner",
+                                                                        });
+                                                                },
+                                                            }),
+                                                        }),
+                                                    ],
+                                                }),
+                                            ],
+                                        }),
+                                ],
+                            }),
                         }),
-                    }),
-            }),
-        ],
-    });
+                }),
+            ],
+        })
+    );
 }
 var Tg = i(201718),
     Tm = i(321078),
