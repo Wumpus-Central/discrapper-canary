@@ -14,7 +14,7 @@ var i = n(367513),
     h = n(287809),
     p = n(174459),
     E = n(453771),
-    m = n(927578),
+    m = n(428262),
     g = n(382287),
     A = n(652215),
     I = n(381941),
@@ -48,15 +48,18 @@ function N(e, t, n) {
         }),
             (0, a.openUploadError)({
                 title: S.intl.string(S.t["/tGlcj"]),
-                help: (0, g.WQ)(i, r),
+                help: (0, g.WQ)(i, r, o.enabled ? l : void 0),
                 showPremiumUpsell: !(0, m.YE)(i, T.PremiumTypes.TIER_2),
                 fileSize: p,
+                kestrelTreated: o.enabled,
+                effectiveMaxSize: o.enabled ? l : void 0,
             });
         return;
     }
     (0, a.openUploadError)({
         title: S.intl.string(S.t["/tGlcj"]),
         help: S.intl.formatToPlainString(S.t.tUOJdH, { maxSize: E.Hb(E.bB()) }),
+        kestrelTreated: o.enabled,
     });
 }
 async function y(e, t, n) {

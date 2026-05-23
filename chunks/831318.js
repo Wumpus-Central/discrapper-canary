@@ -4,11 +4,11 @@ var i = n(627968);
 n(64700);
 var r = n(403581),
     s = n(772707),
-    a = n(927578),
+    a = n(428262),
     o = n(422936),
     l = n(234419),
     u = n(783420),
-    c = n(511484),
+    c = n(410516),
     d = n(788868),
     _ = n(375708);
 let f = function (e) {
@@ -37,7 +37,7 @@ let f = function (e) {
                   intervalCount: N?.subscription_trial?.interval_count,
               }))
             : null != y && (v = _.intl.formatToPlainString(_.t.bkQ4bH, { percent: y.discount.amount })));
-    let O = null != N ? "free_trial" : A;
+    let O = "beta" === A ? "beta" : null != N ? "free_trial" : A;
     return (0, i.jsx)(u.A, {
         subscriptionTier: I,
         children: (e) => {
