@@ -1,41 +1,42 @@
 "use strict";
 n.d(t, {
-    $W: () => V,
-    $b: () => $,
-    Br: () => C,
-    Bs: () => es,
-    CE: () => ea,
+    $W: () => H,
+    $b: () => Z,
+    Br: () => O,
+    Bs: () => eo,
+    CE: () => el,
     D0: () => T,
-    G0: () => N,
-    HF: () => Z,
-    MG: () => K,
-    P_: () => P,
-    R8: () => v,
-    V6: () => ei,
-    WD: () => w,
-    WU: () => q,
-    Wj: () => j,
-    Zu: () => en,
-    aT: () => X,
-    aw: () => Q,
-    bf: () => er,
-    c7: () => et,
-    f6: () => k,
-    fT: () => L,
-    gA: () => y,
-    hU: () => z,
-    l8: () => O,
-    oj: () => J,
-    pA: () => ee,
-    ps: () => F,
-    rr: () => D,
-    sz: () => W,
-    tt: () => M,
-    wo: () => Y,
-    x9: () => G,
-    xM: () => S,
-    yt: () => b,
-    zd: () => B,
+    G0: () => C,
+    HF: () => Q,
+    MG: () => $,
+    P_: () => U,
+    R8: () => R,
+    V6: () => es,
+    WD: () => P,
+    WU: () => X,
+    Wj: () => W,
+    Zu: () => er,
+    aT: () => J,
+    aw: () => ee,
+    b_: () => N,
+    bf: () => ea,
+    c7: () => ei,
+    f6: () => F,
+    fT: () => M,
+    gA: () => v,
+    hU: () => q,
+    l8: () => b,
+    oj: () => et,
+    pA: () => en,
+    ps: () => B,
+    rr: () => w,
+    sz: () => z,
+    tt: () => x,
+    wo: () => K,
+    x9: () => V,
+    xM: () => y,
+    yt: () => L,
+    zd: () => j,
 }),
     n(321073);
 var i,
@@ -57,7 +58,11 @@ var i,
     A = n(652215),
     I = n(818348),
     T = (((i = {}).NITRO = "nitro"), (i.THIRDPARTY = "thirdparty"), i);
-function S(e) {
+let S = { nitro: "nitro", thirdparty: "xbox" };
+function N(e) {
+    return null != e ? S[e] : null;
+}
+function y(e) {
     if (!c.Ay.canUseShopDiscounts(e)) return null;
     if (c.Ay.canUseCollectibles(e)) return "nitro";
     let t = (0, l.kQ)(e?.perks, a.bb.SHOP_DISCOUNTS);
@@ -67,15 +72,15 @@ function S(e) {
           ? "thirdparty"
           : null;
 }
-let N = (e) => e?.premiumType != null,
-    y = (e) => e?.purchaseType === A.zF_.PREMIUM_PURCHASE,
-    C = (e, t, n) =>
-        b(e, n ? (t ? A.lid.MOBILE_PREMIUM_TIER_2 : A.lid.MOBILE) : t ? A.lid.PREMIUM_TIER_2 : A.lid.DEFAULT),
-    v = (e, t, n) => {
-        let i = C(e, t, n);
+let C = (e) => e?.premiumType != null,
+    v = (e) => e?.purchaseType === A.zF_.PREMIUM_PURCHASE,
+    O = (e, t, n) =>
+        L(e, n ? (t ? A.lid.MOBILE_PREMIUM_TIER_2 : A.lid.MOBILE) : t ? A.lid.PREMIUM_TIER_2 : A.lid.DEFAULT),
+    R = (e, t, n) => {
+        let i = O(e, t, n);
         return null == i ? "" : (0, d.$g)(i?.amount, i?.currency);
     },
-    O = (e) =>
+    b = (e) =>
         (0, u.isAndroid)() || (0, u.isIOS)()
             ? e
                 ? A.lid.MOBILE_PREMIUM_TIER_2
@@ -83,34 +88,34 @@ let N = (e) => e?.premiumType != null,
             : e
               ? A.lid.PREMIUM_TIER_2
               : A.lid.DEFAULT,
-    R = (e) => {
+    D = (e) => {
         let t = e.bundledProducts;
         if (null == t) return 0;
-        let n = O(!1);
+        let n = b(!1);
         return t.reduce((e, t) => {
-            let i = b(t, n);
+            let i = L(t, n);
             return e + (i?.amount ?? 0);
         }, 0);
     },
-    b = (e, t) => {
+    L = (e, t) => {
         let n = e.prices[t] ?? null;
         return null != n ? n.countryPrices?.prices?.[0] : null;
     },
-    D = { original: -1, discountPercentage: -1 },
-    L = (e, t) => {
-        if (null == e) return D;
-        let n = R(e);
-        if (n <= 0) return D;
-        let i = b(e, O(t));
-        return null == i ? D : { original: n, discountPercentage: Math.round(((n - i.amount) / n) * 100) };
+    w = { original: -1, discountPercentage: -1 },
+    M = (e, t) => {
+        if (null == e) return w;
+        let n = D(e);
+        if (n <= 0) return w;
+        let i = L(e, b(t));
+        return null == i ? w : { original: n, discountPercentage: Math.round(((n - i.amount) / n) * 100) };
     },
-    w = (e, t) => {
+    P = (e, t) => {
         let { hasShopDiscount: n, discount: i } = t,
-            r = b(e, A.lid.DEFAULT);
+            r = L(e, A.lid.DEFAULT);
         if (null == r) return null;
         if (r.amount <= 0) return { defaultPrice: r, showDefaultPriceOnly: !0 };
-        let s = b(e, A.lid.PREMIUM_TIER_2),
-            a = Q(e) && n ? { ...r, amount: i.original } : r,
+        let s = L(e, A.lid.PREMIUM_TIER_2),
+            a = ee(e) && n ? { ...r, amount: i.original } : r,
             o = n && null != s,
             l = o ? s : a;
         return {
@@ -123,8 +128,8 @@ let N = (e) => e?.premiumType != null,
             showDefaultPriceOnly: !1,
         };
     },
-    M = (e) => b(e, A.lid.DEFAULT)?.amount === 0,
-    P = (e, t) => {
+    x = (e) => L(e, A.lid.DEFAULT)?.amount === 0,
+    U = (e, t) => {
         let n = (0, r.flatMap)([...e.values()], "products");
         return (0, r.uniqBy)(
             t
@@ -146,7 +151,7 @@ let N = (e) => e?.premiumType != null,
             "storeListingId",
         );
     },
-    x = (e, t) => {
+    k = (e, t) => {
         if (t === s.R.AVATAR_DECORATION) {
             let t = (0, r.flatMap)([...e.values()], "items").filter(_.T);
             return (0, r.uniqBy)(t, "skuId");
@@ -165,8 +170,8 @@ let N = (e) => e?.premiumType != null,
         }
         return [];
     },
-    U = (e, t) => {
-        let n = P(e, !0);
+    G = (e, t) => {
+        let n = U(e, !0);
         if (t === s.R.AVATAR_DECORATION) {
             let e = (0, r.flatMap)(n, "items").filter(_.T);
             return (0, r.uniqBy)(e, "skuId");
@@ -185,40 +190,40 @@ let N = (e) => e?.premiumType != null,
         }
         return [];
     },
-    k = (e) => (null != e ? E.M.fromServer(e) : void 0),
-    G = (e) => x(e, s.R.AVATAR_DECORATION),
-    F = (e, t) => (0, r.uniqBy)([...G(e), ...U(t, s.R.AVATAR_DECORATION)], "skuId"),
-    V = (e) => x(e, s.R.NAMEPLATE),
-    B = (e, t) => (0, r.uniqBy)([...V(e), ...U(t, s.R.NAMEPLATE)], "skuId"),
-    H = (e) => x(e, s.R.PROFILE_EFFECT),
-    j = (e) => U(e, s.R.PROFILE_EFFECT),
-    Y = (e, t) => (0, r.uniqBy)([...H(e), ...j(t)], "skuId"),
-    W = (e, t) => {
-        let n = H(t),
-            i = j(e).filter((e) => {
+    F = (e) => (null != e ? E.M.fromServer(e) : void 0),
+    V = (e) => k(e, s.R.AVATAR_DECORATION),
+    B = (e, t) => (0, r.uniqBy)([...V(e), ...G(t, s.R.AVATAR_DECORATION)], "skuId"),
+    H = (e) => k(e, s.R.NAMEPLATE),
+    j = (e, t) => (0, r.uniqBy)([...H(e), ...G(t, s.R.NAMEPLATE)], "skuId"),
+    Y = (e) => k(e, s.R.PROFILE_EFFECT),
+    W = (e) => G(e, s.R.PROFILE_EFFECT),
+    K = (e, t) => (0, r.uniqBy)([...Y(e), ...W(t)], "skuId"),
+    z = (e, t) => {
+        let n = Y(t),
+            i = W(e).filter((e) => {
                 let { skuId: t } = e;
                 return !n.some((e) => e.skuId === t);
             });
         return { purchased: n, shopPreviews: i };
     },
-    K = (e, t) => (0, r.uniqBy)([...x(e, s.R.PROFILE_FRAME), ...U(t, s.R.PROFILE_FRAME)], "skuId"),
-    z = (e) => e.applicationId === A.FYj,
-    $ = (e) => 3.8 * e,
-    q = (e) => {
+    $ = (e, t) => (0, r.uniqBy)([...k(e, s.R.PROFILE_FRAME), ...G(t, s.R.PROFILE_FRAME)], "skuId"),
+    q = (e) => e.applicationId === A.FYj,
+    Z = (e) => 3.8 * e,
+    X = (e) => {
         let t = new Date(),
             n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
         return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / 864e5);
     },
-    Z = (e) => null != e && q(e) <= g.x3,
-    X = (e) => {
+    Q = (e) => null != e && X(e) <= g.x3,
+    J = (e) => {
         let t = g.Tq[e];
         return null != t && new Date().getTime() < t;
     },
-    Q = (e) => e?.type === s.R.BUNDLE,
-    J = (e) => {
+    ee = (e) => e?.type === s.R.BUNDLE,
+    et = (e) => {
         if (null != e) return e.type === s.R.BUNDLE ? s.R.BUNDLE : e.items?.[0]?.type;
     },
-    ee = (e) => {
+    en = (e) => {
         let { invoicePreview: t, selectedSkuId: n, skusById: i } = e,
             r = t?.invoiceItems?.[0]?.unitPrice,
             s = null != r ? { amount: r.amount, currency: r.currency } : void 0;
@@ -229,16 +234,16 @@ let N = (e) => e?.premiumType != null,
         return s;
     };
 I.Yr.KZT, I.Yr.NGN, I.Yr.EGP;
-let et = (e, t, n) => {
-        if (Q(e)) return R(e);
-        let i = b(e, t ? (n ? A.lid.MOBILE : A.lid.DEFAULT) : n ? A.lid.MOBILE_PREMIUM_TIER_2 : A.lid.PREMIUM_TIER_2);
+let ei = (e, t, n) => {
+        if (ee(e)) return D(e);
+        let i = L(e, t ? (n ? A.lid.MOBILE : A.lid.DEFAULT) : n ? A.lid.MOBILE_PREMIUM_TIER_2 : A.lid.PREMIUM_TIER_2);
         return i?.amount;
     },
-    en = (e) => {
+    er = (e) => {
         let { product: t, isPartiallyOwnedBundle: n, isPurchased: i } = e;
         return !n && !(g.Dp.ORB_PROFILE_BADGE === t?.skuId && i);
     },
-    ei = (e, t) => {
+    es = (e, t) => {
         switch (e) {
             case s.R.AVATAR_DECORATION:
                 return "avatar decoration";
@@ -260,13 +265,13 @@ let et = (e, t, n) => {
                 return "unknown";
         }
     },
-    er = (e, t, n) =>
+    ea = (e, t, n) =>
         e.sort((e, i) => {
-            let r = n ? (0, m.CW)({ product: e, hasShopDiscount: t }) : C(e, t, !1),
-                s = n ? (0, m.CW)({ product: i, hasShopDiscount: t }) : C(i, t, !1);
+            let r = n ? (0, m.CW)({ product: e, hasShopDiscount: t }) : O(e, t, !1),
+                s = n ? (0, m.CW)({ product: i, hasShopDiscount: t }) : O(i, t, !1);
             return (r?.amount ?? 0) - (s?.amount ?? 0);
         }),
-    es = (e, t) => {
+    eo = (e, t) => {
         if (0 === t.length || 0 === e.length) return e;
         let n = t.map((e) => e.discountId);
         return e.sort((e, t) => {
@@ -274,4 +279,4 @@ let et = (e, t, n) => {
             return (t.eligibleOffers?.some((e) => n.includes(e)) ?? !1) - i;
         });
     },
-    ea = (e) => e.filter((e) => !e.isCategoryReward);
+    el = (e) => e.filter((e) => !e.isCategoryReward);
