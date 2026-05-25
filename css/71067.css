@@ -4745,6 +4745,7 @@ svg.radioIcon_c1e9c4 {
 
 .container__9293f {
     color: var(--text-default);
+    container-type: inline-size;
     cursor: default;
     display: flex;
     flex: 0 0 auto;
@@ -4824,8 +4825,9 @@ svg.radioIcon_c1e9c4 {
 .toolbar__9293f {
     align-items: center;
     display: flex;
-    flex: 0 0 auto;
+    flex: 0 0.1 auto;
     gap: var(--space-xs);
+    max-width: 100%;
     min-width: 0;
     padding-inline-start: var(--space-xs)
 }

@@ -705,8 +705,8 @@ var eX = n(989349),
     e3 = n(851746),
     e7 = n(727949),
     e6 = n(664654),
-    e9 = n(212737),
-    e5 = n(465794),
+    e5 = n(212737),
+    e9 = n(465794),
     e4 = n(378135),
     e8 = n(788868),
     te = n(613444),
@@ -835,7 +835,7 @@ class tn extends a.Component {
             },
             t = (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(e5.A, {
+                    (0, l.jsx)(e9.A, {
                         subscriptionTier: e8.pe.TIER_2,
                         buttonTextOverride: R.intl.string(R.t.O0etsF),
                         size: "md",
@@ -864,8 +864,8 @@ class tn extends a.Component {
                         analyticsLocations: [],
                         startingScreen:
                             this.referralsSent.size === e6.Z
-                                ? e9.SelectFriendsModalScreens.REMINDER
-                                : e9.SelectFriendsModalScreens.SELECT_FRIENDS,
+                                ? e5.SelectFriendsModalScreens.REMINDER
+                                : e5.SelectFriendsModalScreens.SELECT_FRIENDS,
                     }),
                 text: R.intl.string(R.t.Lm2nFc),
             }),
@@ -1325,8 +1325,8 @@ function t6(e) {
         }),
     });
 }
-var t9 = n(291812),
-    t5 = n(862482),
+var t5 = n(291812),
+    t9 = n(862482),
     t4 = n(725807),
     t8 = n(335364);
 function ne(e) {
@@ -1362,7 +1362,7 @@ function ne(e) {
                         iconClassName: t8.PC,
                         subscriptionTier: e8.pe.TIER_2,
                         textOptions: { textOverride: R.intl.string(R.t.Y2WKTl) },
-                        size: t5.$n.Sizes.SMALL,
+                        size: t9.$n.Sizes.SMALL,
                         premiumModalAnalyticsLocation: { section: i, object: P.ZSU.MESSAGE },
                     }),
                 }),
@@ -1448,7 +1448,7 @@ function nj(e) {
         children: (0, l.jsx)(np.A, {
             ...d,
             className: eg()(nN.zC, { [nN.oE]: a }),
-            childrenMessageContent: (0, l.jsx)(t9.Ay, {
+            childrenMessageContent: (0, l.jsx)(t5.Ay, {
                 className: eg()(nN.__invalid_messageContent, { [nN.oE]: a }),
                 message: t,
                 content: i,
@@ -1900,12 +1900,12 @@ function n6(e) {
         case nK.W.ACTIVITY_ALERTS_ENABLED:
             return (0, l.jsx)(n4, { message: t, compact: n });
         case nK.W.INTERACTION_BLOCKED:
-            return (0, l.jsx)(n5, { compact: n });
-        default:
             return (0, l.jsx)(n9, { compact: n });
+        default:
+            return (0, l.jsx)(n5, { compact: n });
     }
 }
-function n9(e) {
+function n5(e) {
     let { compact: t } = e;
     return (0, l.jsx)(it, {
         compact: t,
@@ -1926,7 +1926,7 @@ function n9(e) {
         }),
     });
 }
-function n5(e) {
+function n9(e) {
     let { compact: t } = e;
     return (0, l.jsx)(it, {
         compact: t,
@@ -2904,7 +2904,7 @@ function i6(e) {
         children: r,
     });
 }
-function i9(e) {
+function i5(e) {
     let { message: t, compact: n, usernameHook: i } = e,
         s = (0, U.Ay)(t),
         a = i(s),
@@ -2918,7 +2918,7 @@ function i9(e) {
         children: r,
     });
 }
-function i5(e) {
+function i9(e) {
     let { message: t, compact: n, usernameHook: i } = e,
         s = (0, U.Ay)(t),
         a = i(s),
@@ -3745,7 +3745,8 @@ let s2 = Object.freeze({
                 c = a.useCallback(() => {
                     (0, d.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("70912"),
+                            n.e("57842"),
+                            n.e("85611"),
                             n.e("56402"),
                             n.e("51743"),
                             n.e("84042"),
@@ -3872,7 +3873,7 @@ let s2 = Object.freeze({
                 a = (0, c.bG)([eu.Ay], () => eu.Ay.getActiveEventByChannel(n.id), [n.id]);
             return (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(i9, { message: t, compact: i, usernameHook: s }),
+                    (0, l.jsx)(i5, { message: t, compact: i, usernameHook: s }),
                     null != a && a.name === t.content ? (0, l.jsx)(em.A, { code: `${n.guild_id}-${a.id}` }) : null,
                 ],
             });
@@ -3915,7 +3916,7 @@ let s2 = Object.freeze({
         [P.lAJ.STAGE_TOPIC]: function (e) {
             let { message: t, channel: n, compact: i } = e,
                 s = (0, I.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id });
-            return (0, l.jsx)(i5, { message: t, compact: i, usernameHook: s });
+            return (0, l.jsx)(i9, { message: t, compact: i, usernameHook: s });
         },
         [P.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: function (e) {
             let { message: t, channel: n, compact: i } = e,
@@ -4169,7 +4170,7 @@ let s2 = Object.freeze({
                 null
             );
         }
-        return (0, l.jsx)(t9.Ay, {
+        return (0, l.jsx)(t5.Ay, {
             message: t,
             content: (0, tH.Ay)(t).content,
             compact: i ?? !1,

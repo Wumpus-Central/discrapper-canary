@@ -1,21 +1,3 @@
-.colorPicker_cd4367 {
-    margin-top: var(--space-8)
-}
-
-.colorPickerContainer_cd4367 {
-    height: 50px;
-    max-width: 52px;
-    min-width: 52px
-}
-
-.gradientPicker_cd4367 {
-    width: 104px
-}
-
-.description_cd4367 {
-    margin-top: var(--space-8)
-}
-
 .selectorHeading_a1294d {
     align-items: center;
     display: flex;

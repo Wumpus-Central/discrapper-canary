@@ -488,7 +488,7 @@ function e0(e) {
 var e1 = t(141160);
 let e2 = eV.DN.SIZE_32,
     e3 = { [eZ.E8.NO_CHAT]: e1.Oo, [eZ.E8.RESIZABLE]: e1.Ig };
-function e7(e) {
+function e9(e) {
     let { maxHeight: n, connectedLocation: t, renderExternalHeader: l } = e,
         a = (0, eH.A)(),
         d = (0, A.yK)([eI.Ay], () => eI.Ay.getEmbeddedActivitiesForLocation(t), [t]),
@@ -695,7 +695,7 @@ function e7(e) {
             }),
     });
 }
-function e9(e) {
+function e7(e) {
     let { maxHeight: n, renderExternalHeader: t } = e,
         {
             connectedChannelId: l,
@@ -715,7 +715,7 @@ function e9(e) {
     let d = s?.applicationId;
     return a !== eZ.Gd.PANEL || null == d || r || null == l || null == s || (0, ev.A)(l)
         ? null
-        : (0, i.jsx)(e7, { maxHeight: n, connectedLocation: s.location, renderExternalHeader: t });
+        : (0, i.jsx)(e9, { maxHeight: n, connectedLocation: s.location, renderExternalHeader: t });
 }
 var e5 = t(90804),
     e4 = t(748975),
@@ -1192,7 +1192,7 @@ let nU = (e) => {
         a = s.useCallback(() => {
             (0, m.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    t.e("77739"),
+                    t.e("22321"),
                     t.e("59957"),
                     t.e("28136"),
                     t.e("16084"),
@@ -1254,7 +1254,7 @@ var nF = t(892547),
     n1 = t(860689),
     n2 = t(682557),
     n3 = t(253607);
-let n7 = s.memo(function (e) {
+let n9 = s.memo(function (e) {
     let { onClick: n } = e;
     return (0, i.jsxs)(ns.D, {
         onClick: n,
@@ -1270,7 +1270,7 @@ let n7 = s.memo(function (e) {
         ],
     });
 });
-function n9(e) {
+function n7(e) {
     let { entry: n } = e,
         [l, a] = s.useState(!1),
         d = s.useRef(null),
@@ -1441,7 +1441,7 @@ let n5 = s.memo(function (e) {
                         }),
                     ],
                 }),
-                (0, i.jsx)(n9, { entry: n }),
+                (0, i.jsx)(n7, { entry: n }),
             ],
         })
     );
@@ -1577,7 +1577,7 @@ let te = (e) => {
                                               className: n8.vY,
                                               children: [
                                                   e.entries.map((e) => (0, i.jsx)(n5, { entry: e }, e.guildId)),
-                                                  e.appendEndCard && null != l ? (0, i.jsx)(n7, { onClick: l }) : null,
+                                                  e.appendEndCard && null != l ? (0, i.jsx)(n9, { onClick: l }) : null,
                                               ],
                                           }),
                                       ],
@@ -1958,7 +1958,7 @@ function t2(e) {
     });
 }
 var t3 = t(747926);
-function t7(e) {
+function t9(e) {
     let { channel: n } = e,
         [t, l] = s.useState(!1),
         a = s.useRef(null);
@@ -1975,7 +1975,7 @@ function t7(e) {
         autoInvert: !1,
         onRequestClose: () => l(!1),
         renderPopout: function (e) {
-            return (0, i.jsx)(t9, { ...e, channel: n });
+            return (0, i.jsx)(t7, { ...e, channel: n });
         },
         children: (e, n) => {
             let { isShown: t } = n;
@@ -1991,7 +1991,7 @@ function t7(e) {
         },
     });
 }
-function t9(e) {
+function t7(e) {
     let { channel: n, closePopout: t, onSelect: l } = e,
         s = (0, tT.A)(n, "Sidebar Overflow"),
         a = (0, tR.A)(n),
@@ -2074,7 +2074,7 @@ function t5(e) {
             n.isForumPost() ? null : (0, i.jsx)(t2, { channel: n }),
             n.isModeratorReportChannel() ? (0, i.jsx)(tX, { channel: n }) : null,
             (0, i.jsx)(tF, { channel: n }),
-            (0, i.jsx)(t7, { channel: n }),
+            (0, i.jsx)(t9, { channel: n }),
             (0, i.jsx)(tg.Ay.Icon, {
                 icon: tE.P,
                 tooltip: Y.intl.string(Y.t.cpT0Cq),
@@ -2416,8 +2416,8 @@ var lz = t(742589),
     l1 = t(222692),
     l2 = t(442353),
     l3 = t(470710),
-    l7 = t(186111),
-    l9 = t(761853),
+    l9 = t(186111),
+    l7 = t(761853),
     l5 = t(994500),
     l4 = t(360469),
     l8 = t(49999),
@@ -2448,7 +2448,7 @@ class ie extends s.PureComponent {
         return (
             d
                 ? ((u = !0), (c = Y.intl.string(Y.t.izMR7o)))
-                : l9.Ay.supports(l6.O5.VIDEO)
+                : l7.Ay.supports(l6.O5.VIDEO)
                   ? s
                       ? ((c = Y.intl.string(Y.t.PHzjvX)), (u = !0))
                       : t && r === er._Of.VIDEO
@@ -2570,7 +2570,7 @@ function it(e) {
         m = (0, tY.Us)(),
         x = [],
         p = (0, lZ.A)(n.id),
-        f = (0, A.bG)([l7.A], () => l7.A.hasLayers());
+        f = (0, A.bG)([l9.A], () => l9.A.hasLayers());
     return (p && !f && x.push(g.M.ACTIVITY_GDM_CALL_TOOLTIP), t || h?.bot)
         ? null
         : (0, i.jsx)(ie, {
@@ -2602,7 +2602,7 @@ let ih = s.memo(function (e) {
         a = (0, id.S)(n.id),
         r = (0, io.e)(n.id),
         d = (0, m.useHasAnyModalOpen)(),
-        o = (0, A.bG)([l7.A], () => l7.A.hasLayers()),
+        o = (0, A.bG)([l9.A], () => l9.A.hasLayers()),
         c = s.useCallback(
             () => (a ? Y.intl.string(Y.t["16QyDv"]) : null != r ? Y.intl.string(Y.t.kCN9i0) : null),
             [a, r],
@@ -3019,8 +3019,8 @@ var iB = t(138298),
     i1 = t(579872),
     i2 = t(119031),
     i3 = t(408018),
-    i7 = t(201349),
-    i9 = t(822610),
+    i9 = t(201349),
+    i7 = t(822610),
     i5 = t(915089),
     i4 = t(314307),
     i8 = t(636922),
@@ -3481,9 +3481,9 @@ function sy(e) {
         f = sd(d, { content: t.textValue });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(i9.A, { channelId: n.id, type: sf, canAttachFiles: p }),
+            (0, i.jsx)(i7.A, { channelId: n.id, type: sf, canAttachFiles: p }),
             (0, i.jsx)("div", { className: sx.xN, children: (0, i.jsx)(iJ.U, { error: f }) }),
-            (0, i.jsx)(i7.Ay, {
+            (0, i.jsx)(i9.Ay, {
                 type: sf,
                 channel: n,
                 placeholder: Y.intl.string(Y.t.taZfIC),
@@ -3729,8 +3729,8 @@ var sw = t(210714),
     s1 = t(900179),
     s2 = t(946356),
     s3 = t(878555),
-    s7 = t(35241),
-    s9 = t(587168),
+    s9 = t(35241),
+    s7 = t(587168),
     s5 = t(744808);
 let s4 = (0, t(945810).mj)({
     kind: "user",
@@ -3799,7 +3799,7 @@ function ai(e) {
                 children: [
                     (0, i.jsxs)(ti.d_, {
                         children: [
-                            (0, i.jsx)(s9.A, { children: (0, i.jsx)(s7.A, { user: n }) }),
+                            (0, i.jsx)(s7.A, { children: (0, i.jsx)(s9.A, { user: n }) }),
                             (0, i.jsxs)("div", {
                                 className: at.wx,
                                 children: [
@@ -4188,8 +4188,8 @@ var aJ = t(123292),
     a1 = t(131607),
     a2 = t(84511),
     a3 = t(575593),
-    a7 = t(587895),
-    a9 = t(44120),
+    a9 = t(587895),
+    a7 = t(44120),
     a5 = t(532794),
     a4 = t(317560),
     a8 = t(533406),
@@ -4293,7 +4293,7 @@ function ru(e) {
 }
 function rh(e) {
     let { sku: n, wishlistOwner: t, analyticsLocations: l, ...a } = e,
-        r = (0, eb.bG)([a7.A], () => a7.A.getApplication(n.applicationId)),
+        r = (0, eb.bG)([a9.A], () => a9.A.getApplication(n.applicationId)),
         { analyticsLocations: d } = (0, M.Ay)(
             ...(l ?? []),
             O.A.SLAYER_STOREFRONT_BREADCRUMB_WISHLIST_ITEM_CARD_GIFT_BUTTON,
@@ -4332,7 +4332,7 @@ function rh(e) {
 function rA(e) {
     let { sku: n, wishlistOwner: t, analyticsLocations: l, ...a } = e,
         d = s.useCallback(() => {
-            (0, a9.A)({
+            (0, a7.A)({
                 skuId: n.id,
                 isGift: !0,
                 giftingOrigin: ra.vQ.USER_PROFILE_WISHLIST,
@@ -4560,7 +4560,7 @@ function rj(e) {
                         (0, i.jsxs)(ti.d_, {
                             className: null != p ? at.It : void 0,
                             children: [
-                                (0, i.jsxs)(s9.A, {
+                                (0, i.jsxs)(s7.A, {
                                     children: [
                                         (0, i.jsx)(aE.A, { user: n, themeType: an.d.SIDEBAR }),
                                         n.bot ? (0, i.jsx)(aC.A, { user: n }) : (0, i.jsx)(ay.yo, { user: n }),
@@ -4764,7 +4764,7 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
             t.e("18113"),
             t.e("7777"),
             t.e("58466"),
-            t.e("77739"),
+            t.e("22321"),
             t.e("68201"),
             t.e("792"),
             t.e("92822"),
@@ -4795,7 +4795,8 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
     rY = () =>
         Promise.all([
             t.e("58466"),
-            t.e("90081"),
+            t.e("22321"),
+            t.e("10611"),
             t.e("51776"),
             t.e("4981"),
             t.e("82647"),
@@ -4803,8 +4804,7 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
             t.e("29939"),
             t.e("74748"),
             t.e("18113"),
-            t.e("77739"),
-            t.e("85222"),
+            t.e("72041"),
             t.e("73148"),
             t.e("23481"),
             t.e("2146"),
@@ -4847,7 +4847,7 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
                 t.e("4974"),
                 t.e("36029"),
                 t.e("18113"),
-                t.e("77739"),
+                t.e("22321"),
                 t.e("63982"),
                 t.e("49681"),
                 t.e("38939"),
@@ -4870,7 +4870,7 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
                 t.e("18113"),
                 t.e("73148"),
                 t.e("36029"),
-                t.e("77739"),
+                t.e("22321"),
                 t.e("56574"),
                 t.e("49681"),
                 t.e("28136"),
@@ -5275,7 +5275,7 @@ class rX extends s.PureComponent {
             n = this.shouldRenderCall();
         if ((o()(null != e, "Missing channel in Channel.renderEmbeddedActivityPanel"), n)) return null;
         let t = this.props.height - 200;
-        return (0, i.jsx)(e9, { maxHeight: t, renderExternalHeader: this.renderHeaderBar });
+        return (0, i.jsx)(e7, { maxHeight: t, renderExternalHeader: this.renderHeaderBar });
     }
     renderChat() {
         let {

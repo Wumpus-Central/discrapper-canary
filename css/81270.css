@@ -1434,6 +1434,8 @@ html .tabBadge_e6b769 {
     font-weight: var(--font-weight-medium);
     height: 100%;
     line-height: 26px;
+    max-width: 100%;
+    min-width: 0;
     overflow: hidden;
     padding: 0 var(--space-4)
 }
@@ -1442,6 +1444,8 @@ html .tabBadge_e6b769 {
     border: none;
     border-radius: 2px;
     height: 28px;
+    max-width: 100%;
+    min-width: 0;
     overflow: hidden
 }
 
@@ -1466,6 +1470,8 @@ html .tabBadge_e6b769 {
 }
 
 .search_c322aa .DraftEditor-root .public-DraftEditor-content {
+    max-width: 100%;
+    min-width: 0;
     overflow-x: auto;
     overflow-y: hidden
 }
@@ -1493,7 +1499,7 @@ html .tabBadge_e6b769 {
     height: 32px;
     overflow: hidden;
     padding: 2px 0;
-    width: 244px
+    width: 100%
 }
 
 .searchBar_c322aa .icon_c322aa {
