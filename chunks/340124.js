@@ -316,11 +316,18 @@ async function $() {
     }
 }
 async function q(e) {
-    let { questId: t, streamKey: n, applicationId: i, terminal: s = !1, executableFingerprint: a } = e;
+    let {
+        questId: t,
+        streamKey: n,
+        applicationId: i,
+        terminal: s = !1,
+        executablePath: a,
+        executableFingerprint: u,
+    } = e;
     try {
         let e = await N.A.post({
             url: O.Rsh.QUESTS_HEARTBEAT(t),
-            body: { stream_key: n, application_id: i, terminal: s, executable_fingerprint: a },
+            body: { stream_key: n, application_id: i, terminal: s, executable_path: a, executable_fingerprint: u },
             trackedActionData: {
                 event: r.NetworkActionNames.QUEST_HEARTBEAT,
                 properties: {
