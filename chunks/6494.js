@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { A: () => r });
-let r = new (class {
+n.d(t, { A: () => i });
+let i = new (class {
     setActive(e) {
         return Promise.resolve();
     }
@@ -9,6 +9,7 @@ let r = new (class {
     setFocusedStream(e) {}
     setMirrored(e) {}
     setPipAspectRatio(e, t) {}
+    refreshPipUi() {}
     updateSourceTrackingView() {}
     addOnPipModeChangedListener(e) {}
     addOnPipModeWillChangeListener(e) {}
