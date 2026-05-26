@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => W });
+n.d(t, { A: () => q });
 var i = n(627968),
     r = n(821609),
     s = n(801365),
@@ -384,98 +384,111 @@ function j(e) {
             return d.Cy.ACCEPT_QUEST;
     }
 }
-let Y = function (e) {
-        var t;
-        let {
-                quest: n,
-                taskType: s,
-                size: o = "sm",
-                surface: d,
-                preClickCallback: f,
-                analyticsCtxQuestContent: g,
-                analyticsCtxSourceQuestContent: A,
-                analyticsCtxQuestContentPosition: I,
-                analyticsCtxQuestContentRowIndex: T,
-            } = e,
-            y = {
-                questContent: g,
-                questContentCTA: j(s),
-                sourceQuestContent: A,
-                questContentPosition: I,
-                questContentRowIndex: T,
-            },
-            C = n.id,
-            { isEnrolling: v } = (0, S.cf)([N.A], () => ({ isEnrolling: N.A.isEnrolling(C) }), [C]),
-            O = d === l.V3.QUEST_HOME_TILE_V2_FOOTER,
-            R = O ? void 0 : (0, p.Oz)(n),
-            b = (function (e, t) {
-                let { launchInGameActivity: n } = (0, c.zW)(t);
-                if ((0, _.K$)(t))
+function Y(e) {
+    var t;
+    let {
+            quest: n,
+            taskType: s,
+            size: o = "sm",
+            surface: d,
+            variant: f,
+            preClickCallback: g,
+            analyticsCtxQuestContent: A,
+            analyticsCtxSourceQuestContent: I,
+            analyticsCtxQuestContentPosition: T,
+            analyticsCtxQuestContentRowIndex: y,
+        } = e,
+        C = {
+            questContent: A,
+            questContentCTA: j(s),
+            sourceQuestContent: I,
+            questContentPosition: T,
+            questContentRowIndex: y,
+        },
+        v = n.id,
+        { isEnrolling: O } = (0, S.cf)([N.A], () => ({ isEnrolling: N.A.isEnrolling(v) }), [v]),
+        R = d === l.V3.QUEST_HOME_TILE_V2_FOOTER,
+        b = R ? void 0 : (0, p.Oz)(n),
+        D = (function (e, t) {
+            let { launchInGameActivity: n } = (0, c.zW)(t);
+            if ((0, _.K$)(t))
+                return () => {
+                    (0, p.Fy)(t);
+                };
+            switch (e) {
+                case u.n.ACHIEVEMENT_IN_ACTIVITY:
+                case u.n.PLAY_ACTIVITY:
                     return () => {
-                        (0, p.Fy)(t);
+                        n();
                     };
-                switch (e) {
-                    case u.n.ACHIEVEMENT_IN_ACTIVITY:
-                    case u.n.PLAY_ACTIVITY:
-                        return () => {
-                            n();
-                        };
-                    default:
-                        return null;
-                }
-            })(s, n),
-            D = O
-                ? (0, a.C0)(n)
-                : (function (e, t) {
-                      let { features: n } = t.config;
-                      switch (e) {
-                          case u.n.WATCH_VIDEO:
-                              return (0, h.WM)((0, _.Yh)(t));
-                          case u.n.ACHIEVEMENT_IN_ACTIVITY:
-                              return m.intl.string(m.t.CkUzLd);
-                          case u.n.PLAY_ACTIVITY:
-                              if (n.includes(E.Li.CLOUD_GAMING_ACTIVITY)) return m.intl.string(m.t["+qoymD"]);
-                              return m.intl.string(m.t.E4kW5O);
-                          default:
-                              return m.intl.string(m.t.kUQLMJ);
-                      }
-                  })(s, n),
-            L =
-                ((t = b ?? void 0),
-                s === u.n.WATCH_VIDEO
-                    ? async () => {
-                          await (0, p.e0)(n, {
-                              questContent: y.questContent,
-                              questContentCTA: y.questContentCTA,
-                              sourceQuestContent: y.sourceQuestContent,
-                              sourceQuestContentCTA: j(s),
-                              questContentPosition: y.questContentPosition,
-                              questContentRowIndex: y.questContentRowIndex,
-                          });
-                      }
-                    : async () => {
-                          await (0, H.Oy)(n.id, {
-                              questContent: y.questContent,
-                              questContentCTA: y.questContentCTA,
-                              sourceQuestContent: y.sourceQuestContent,
-                              questContentPosition: y.questContentPosition,
-                              questContentRowIndex: y.questContentRowIndex,
-                          }),
-                              t?.();
+                default:
+                    return null;
+            }
+        })(s, n),
+        L = R
+            ? (0, a.C0)(n)
+            : (function (e, t) {
+                  let { features: n } = t.config;
+                  switch (e) {
+                      case u.n.WATCH_VIDEO:
+                          return (0, h.WM)((0, _.Yh)(t));
+                      case u.n.ACHIEVEMENT_IN_ACTIVITY:
+                          return m.intl.string(m.t.CkUzLd);
+                      case u.n.PLAY_ACTIVITY:
+                          if (n.includes(E.Li.CLOUD_GAMING_ACTIVITY)) return m.intl.string(m.t["+qoymD"]);
+                          return m.intl.string(m.t.E4kW5O);
+                      default:
+                          return m.intl.string(m.t.kUQLMJ);
+                  }
+              })(s, n),
+        w =
+            ((t = D ?? void 0),
+            s === u.n.WATCH_VIDEO
+                ? async () => {
+                      await (0, p.e0)(n, {
+                          questContent: C.questContent,
+                          questContentCTA: C.questContentCTA,
+                          sourceQuestContent: C.sourceQuestContent,
+                          sourceQuestContentCTA: j(s),
+                          questContentPosition: C.questContentPosition,
+                          questContentRowIndex: C.questContentRowIndex,
                       });
-        return (0, i.jsx)(r.$, {
-            size: o,
-            loading: v,
-            variant: (0, l.AJ)(d, "primary"),
-            onClick: () => {
-                f?.(), L();
-            },
-            text: D,
-            icon: R,
-            fullWidth: !0,
-        });
+                  }
+                : async () => {
+                      await (0, H.Oy)(n.id, {
+                          questContent: C.questContent,
+                          questContentCTA: C.questContentCTA,
+                          sourceQuestContent: C.sourceQuestContent,
+                          questContentPosition: C.questContentPosition,
+                          questContentRowIndex: C.questContentRowIndex,
+                      }),
+                          t?.();
+                  });
+    return (0, i.jsx)(r.$, {
+        size: o,
+        loading: O,
+        variant: (0, l.AJ)(d, f),
+        onClick: () => {
+            g?.(), w();
+        },
+        text: L,
+        icon: b,
+        fullWidth: !0,
+    });
+}
+let W = function (e) {
+    return (0, i.jsx)(Y, { ...e, variant: "primary" });
+};
+var K = n(19238);
+let z = function (e) {
+        let { buttonVariant: t } = (0, K.A)(!0);
+        return (0, i.jsx)(Y, { ...e, surface: l.V3.QUEST_BAR_FOOTER, variant: t });
     },
-    W = function (e) {
+    $ = function (e) {
+        let { surface: t, ...n } = e;
+        return t === l.V3.QUEST_BAR_FOOTER ? (0, i.jsx)(z, { ...n }) : (0, i.jsx)(W, { ...n, surface: t });
+    },
+    q = function (e) {
         let {
                 quest: t,
                 surface: n,
@@ -497,7 +510,7 @@ let Y = function (e) {
         let f = Object.values(t.config.taskConfigV2.tasks)[0];
         switch (_) {
             case l.UA.UNENROLLED:
-                return (0, i.jsx)(Y, {
+                return (0, i.jsx)($, {
                     quest: t,
                     taskType: f.type,
                     size: d,
