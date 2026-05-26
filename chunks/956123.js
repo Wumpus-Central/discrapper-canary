@@ -1,4 +1,4 @@
-r.d(t, { G: () => ef }), r(321073);
+r.d(t, { G: () => eg }), r(321073);
 var l = r(627968),
     n = r(64700),
     s = r(696292),
@@ -79,16 +79,16 @@ let P = [
         [j.q.PROFILE_FRAME]: G.G2.PROFILE_FRAMES,
         [j.q.BUNDLE]: G.G2.BUNDLES,
     };
-function N(e, t) {
+function M(e, t) {
     if (e !== G.G2.CATALOG || 0 === t.size) return e;
     let r = t.values().next().value;
     return null == r ? e : (k[r] ?? e);
 }
-function M(e) {
+function N(e) {
     let { handleTransition: t, onClose: r, selectedTab: n, itemTypeFilters: s } = e,
         a = (0, _.yB)("CollectiblesIndexPageContextMenu"),
         o = (0, g.sk)("CollectiblesIndexPageContextMenu"),
-        i = N(n, s),
+        i = M(n, s),
         c = P.filter((e) => {
             let { tab: t } = e;
             return o || t !== G.G2.PROFILE_FRAMES;
@@ -128,7 +128,7 @@ var $ = r(7689),
     B = r(174459),
     H = r(440938),
     q = r(652215),
-    U = r(113960);
+    U = r(345832);
 function z(e) {
     let { handleTransition: t, selectedTab: r, isNarrow: s, hasText: i } = e,
         { searchQuery: c, onSetSearchQuery: d } = (0, A.v)(),
@@ -250,7 +250,7 @@ function er(e) {
         ),
     });
 }
-var el = r(584512);
+var el = r(113600);
 function en(e) {
     let { label: t, icon: r, showNewBadge: n } = e;
     return (0, l.jsxs)(W.E, {
@@ -503,16 +503,18 @@ function ec(e) {
         ],
     });
 }
-var eu = r(627363),
-    ed = r(587895),
-    eb = r(733391),
-    em = r(832163),
-    eS = r(44724),
-    ep = r(486020);
+var eu = r(812729),
+    ed = r.n(eu),
+    eb = r(627363),
+    em = r(587895),
+    eS = r(733391),
+    ep = r(832163),
+    eE = r(44724),
+    eh = r(486020);
 r(801416);
-var eE = r(518477),
-    eh = r(773743);
-function ef(e) {
+var ef = r(518477),
+    eC = r(478511);
+function eg(e) {
     let { selectedTab: t, handleTransition: r } = e,
         y = (0, a.bG)([C.default], () => C.default.getCurrentUser()),
         { enabled: T } = (0, h.Z)({ location: "collectibles_shop_header_bar" }),
@@ -534,59 +536,60 @@ function ef(e) {
             let { enabled: t } = e,
                 r = (0, H.uM)(),
                 l = (0, a.yK)(
-                    [em.A],
+                    [ep.A],
                     () =>
                         t
-                            ? (em.A.getConfig()?.storefronts ?? []).filter((e) => e.collectiblesShopNavigationEnabled)
+                            ? (ep.A.getConfig()?.storefronts ?? []).filter((e) => e.collectiblesShopNavigationEnabled)
                             : [],
                     [t],
                 );
             n.useEffect(() => {
-                t && (0, eb.Xw)();
+                t && (0, eS.Xw)();
             }, [t]),
                 n.useEffect(() => {
                     l.length > 0 &&
-                        eu.Ay.fetchApplications(
+                        eb.Ay.fetchApplications(
                             l.map((e) => e.applicationId),
                             !1,
                         );
                 }, [l]);
             let s = n.useCallback(
-                (e) => {
-                    B.default.track(q.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
-                        collectibles_shop_session_id: r?.sessionId,
-                        page_type: G.G2.GAME_SHOPS,
-                        page_category: r?.pageCategory,
-                        page_section: r?.pageSection,
-                        tile_type: "SOCIAL_LAYER_STOREFRONT_SHOP_TAB",
-                        cta_name: "go_to_game_shop",
-                    }),
-                        (0, eS.default)({ guildId: e }).catch(() => {});
-                },
-                [r],
-            );
-            return (0, a.bG)(
-                [ed.A],
-                () =>
-                    l.flatMap((e) => {
-                        let t = ed.A.getApplication(e.applicationId),
-                            r = t?.name;
-                        return null == r
-                            ? []
-                            : [
-                                  {
-                                      id: e.guildId,
-                                      label: r,
-                                      onSelect: () => s(e.guildId),
-                                      iconSrc:
-                                          t?.icon != null
-                                              ? ep.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, size: 32 })
-                                              : void 0,
-                                  },
-                              ];
-                    }),
-                [l, s],
-            );
+                    (e) => {
+                        B.default.track(q.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                            collectibles_shop_session_id: r?.sessionId,
+                            page_type: G.G2.GAME_SHOPS,
+                            page_category: r?.pageCategory,
+                            page_section: r?.pageSection,
+                            tile_type: "SOCIAL_LAYER_STOREFRONT_SHOP_TAB",
+                            cta_name: "go_to_game_shop",
+                        }),
+                            (0, eE.default)({ guildId: e }).catch(() => {});
+                    },
+                    [r],
+                ),
+                o = (0, a.bG)(
+                    [em.A],
+                    () =>
+                        l.flatMap((e) => {
+                            let t = em.A.getApplication(e.applicationId),
+                                r = t?.name;
+                            return null == r
+                                ? []
+                                : [
+                                      {
+                                          id: e.guildId,
+                                          label: r,
+                                          iconSrc:
+                                              t?.icon != null
+                                                  ? eh.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, size: 32 })
+                                                  : void 0,
+                                      },
+                                  ];
+                        }),
+                    [l],
+                    ed(),
+                );
+            return n.useMemo(() => o.map((e) => ({ ...e, onSelect: () => s(e.id) })), [o, s]);
         })({ enabled: I }),
         V = U.length > 0,
         W = n.useMemo(() => {
@@ -597,7 +600,7 @@ function ef(e) {
                     label: R.intl.string(R.t.Ah5sJo),
                     renderSubmenu: (e) => {
                         let { onClose: n } = e;
-                        return (0, l.jsx)(M, { handleTransition: r, onClose: n, selectedTab: t, itemTypeFilters: k });
+                        return (0, l.jsx)(N, { handleTransition: r, onClose: n, selectedTab: t, itemTypeFilters: k });
                     },
                     renderOverflowContent: (e) => {
                         let { onClose: n } = e;
@@ -609,7 +612,7 @@ function ef(e) {
                                     onTabSelect: s,
                                     onClose: a,
                                 } = e,
-                                o = N(t, r);
+                                o = M(t, r);
                             return P.filter((e) => {
                                 let { tab: t } = e;
                                 return n || t !== G.G2.PROFILE_FRAMES;
@@ -679,7 +682,7 @@ function ef(e) {
                 (0, m.navigateToQuestHome)({ fromContent: s.u.ORBS_BALANCE_MENU });
         }, [K]),
         Q = n.useCallback(() => {
-            y?.id != null && (0, p.openUserProfileModal)({ userId: y.id, tabSection: eE.RP.WISHLIST });
+            y?.id != null && (0, p.openUserProfileModal)({ userId: y.id, tabSection: ef.RP.WISHLIST });
         }, [y?.id]),
         J = n.useCallback(
             (e) => {
@@ -691,12 +694,12 @@ function ef(e) {
         ref: $,
         children: (0, l.jsxs)(b.A, {
             disableDoubleClick: !0,
-            className: eh.jr,
+            className: eC.jr,
             toolbar: (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsx)(z, { handleTransition: r, selectedTab: t, isNarrow: w, hasText: "" !== j }),
                     (0, l.jsx)(o.D, {
-                        className: eh.ij,
+                        className: eC.ij,
                         onClick: Q,
                         "aria-label": R.intl.string(R.t["7lZ31J"]),
                         children: (0, l.jsx)(i.C, { size: "xs", color: "currentColor" }),
@@ -713,7 +716,7 @@ function ef(e) {
             hideSearch: !0,
             children: [
                 (0, l.jsx)(o.D, {
-                    className: eh.sU,
+                    className: eC.sU,
                     onClick: () => r(G.G2.HOME),
                     "aria-label": R.intl.string(R.t["5upuqx"]),
                     children: (0, l.jsx)(c.U, { size: "md", color: u.A.colors.TEXT_DEFAULT }),
