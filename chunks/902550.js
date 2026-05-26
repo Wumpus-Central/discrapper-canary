@@ -13,7 +13,7 @@ var l = a(627968),
     g = a(140735),
     m = a(939249),
     f = a(391242),
-    x = a(373495),
+    x = a(638495),
     C = a(192308),
     E = a(793574),
     p = a(688810),
@@ -25,8 +25,8 @@ var l = a(627968),
     _ = a(241326),
     v = a(452027),
     F = a(289873),
-    b = a(287809),
-    S = a(101058),
+    S = a(287809),
+    b = a(101058),
     L = a(636537),
     w = a(765178),
     H = a(228366),
@@ -103,15 +103,15 @@ async function B(e) {
 }
 var q = a(778712),
     J = a(595535),
-    W = a(915710);
-function X(e) {
+    X = a(104126);
+function Z(e) {
     let { className: t, size: a = J.q } = e,
         n = (0, q.FT)(a);
     return (0, l.jsx)("svg", {
         width: n,
         height: n,
         viewBox: `0 0 ${n} ${n}`,
-        className: i()(W.R, t),
+        className: i()(X.R, t),
         "aria-hidden": !0,
         children: (0, l.jsx)("path", {
             fillRule: "evenodd",
@@ -120,13 +120,13 @@ function X(e) {
         }),
     });
 }
-var Z = a(656925),
-    K = a(339984),
-    $ = a(712839);
+var K = a(656925),
+    W = a(339984),
+    $ = a(376071);
 function Y(e) {
     let { avatar: t, index: a, onSelectRecentAvatar: r, onDeleteRecentAvatar: i, avatarButtonRef: s } = e,
         { id: o, storageHash: u, description: d = z.intl.string(z.t.lqaIxI) } = t,
-        { avatarSrc: A, eventHandlers: g } = (0, Z.A)({ avatarId: o, storageHash: u }),
+        { avatarSrc: A, eventHandlers: g } = (0, K.A)({ avatarId: o, storageHash: u }),
         { onMouseEnter: f, onMouseLeave: x } = g,
         C = n.useRef(null),
         E = d ?? u.substring(0, 6).toUpperCase(),
@@ -165,7 +165,7 @@ function Y(e) {
 }
 function Q(e) {
     let { avatars: t, onComplete: r, setFetchError: c, className: o } = e,
-        u = (0, s.bG)([b.default], () => b.default.getCurrentUser()),
+        u = (0, s.bG)([S.default], () => S.default.getCurrentUser()),
         d = n.useRef([]),
         h = n.useRef(null),
         A = n.useRef(t.length),
@@ -180,35 +180,28 @@ function Q(e) {
                 if (null == u || f) return;
                 E(!0), c(null);
                 let { id: t, storageHash: n, description: i } = e,
-                    s = (0, S.Xp)({
-                        userId: u.id,
-                        avatarId: t,
-                        storageHash: n,
-                        size: G.XAf,
-                        canAnimate: !0,
-                        allowWebp: !1,
-                    });
+                    s = (0, b.Xp)({ userId: u.id, avatarId: t, storageHash: n, size: G.XAf, canAnimate: !0 });
                 try {
                     let t = await fetch(s),
                         c = await t.blob(),
-                        { filename: o, type: u } = (0, S.yM)(n, i);
+                        { filename: o, type: u } = (0, b.yM)(n, i);
                     (0, C.openModalLazy)(
                         async () => {
                             let { default: t } = await Promise.all([
-                                a.e("32033"),
-                                a.e("89833"),
-                                a.e("23658"),
-                                a.e("15931"),
-                                a.e("49845"),
+                                a.e("48424"),
+                                a.e("32637"),
+                                a.e("92060"),
+                                a.e("69117"),
+                                a.e("71425"),
                                 a.e("24199"),
                                 a.e("88941"),
                                 a.e("43437"),
-                                a.e("43039"),
-                                a.e("48804"),
                                 a.e("88077"),
                                 a.e("18401"),
-                                a.e("55314"),
-                                a.e("89094"),
+                                a.e("43039"),
+                                a.e("48804"),
+                                a.e("83057"),
+                                a.e("50997"),
                                 a.e("29177"),
                                 a.e("32551"),
                                 a.e("57840"),
@@ -219,7 +212,7 @@ function Q(e) {
                                 a.e("45723"),
                                 a.e("70697"),
                                 a.e("18546"),
-                                a.e("38835"),
+                                a.e("61216"),
                                 a.e("58164"),
                                 a.e("71470"),
                                 a.e("37490"),
@@ -237,7 +230,7 @@ function Q(e) {
                                     file: new File([c], o, { type: u }),
                                     originalAsset: e,
                                     onCrop: r,
-                                    uploadType: K.HL.AVATAR,
+                                    uploadType: W.HL.AVATAR,
                                     showUpsellHeader: !0,
                                     ...a,
                                 });
@@ -260,7 +253,7 @@ function Q(e) {
                         ? B(r)
                         : (j(!0),
                           (0, C.openModalLazy)(async () => {
-                              let { default: e } = await Promise.all([a.e("42317"), a.e("26563")]).then(
+                              let { default: e } = await Promise.all([a.e("60845"), a.e("48944")]).then(
                                   a.bind(a, 555251),
                               );
                               return (t) => {
@@ -333,7 +326,7 @@ function Q(e) {
                                         z.intl.format(z.t["8W2HO3"], { numberOfEmptyAvatarSlots: N }),
                                     ],
                                 }),
-                                [...Array(N)].map((e, t) => (0, l.jsx)(X, { className: $.rZ }, t)),
+                                [...Array(N)].map((e, t) => (0, l.jsx)(Z, { className: $.rZ }, t)),
                             ],
                         }),
                 ],
@@ -380,11 +373,11 @@ var et = a(45837),
     ei = a(428262);
 function es(e, t) {
     let { isGIF: a } = t;
-    if (e === K.HL.GUILD_BANNER) return a ? G.GuildFeatures.ANIMATED_BANNER : G.GuildFeatures.BANNER;
+    if (e === W.HL.GUILD_BANNER) return a ? G.GuildFeatures.ANIMATED_BANNER : G.GuildFeatures.BANNER;
 }
 var ec = a(2553),
     eo = a(693591),
-    eu = a(294891);
+    eu = a(593195);
 let ed = [
     { gif: a(203736), png: a(775788) },
     { gif: a(640237), png: a(689006) },
@@ -458,7 +451,7 @@ function ef(e) {
             handleOpenImageEditingModal: c,
             handleFileSizeError: o,
         } = e,
-        u = a === K.HL.BANNER,
+        u = a === W.HL.BANNER,
         d = es(a, { isGIF: !1 }),
         m = eA({ guildFeature: d, guild: n });
     return (0, l.jsxs)(l.Fragment, {
@@ -494,7 +487,7 @@ function ef(e) {
 function ex(e) {
     let { uploadType: t, guild: a, handleOpenGIFPickerModal: n } = e,
         { shouldAnimate: r, onMouseEnter: i, onMouseLeave: s } = (0, et.A)(),
-        c = t === K.HL.AVATAR || t === K.HL.BANNER,
+        c = t === W.HL.AVATAR || t === W.HL.BANNER,
         o = es(t, { isGIF: !0 }),
         u = eA({ guildFeature: o, guild: a });
     return (0, l.jsxs)(l.Fragment, {
@@ -537,12 +530,12 @@ function eC(e) {
             uploadOptionTitle: _ = z.intl.string(z.t["MsUY/S"]),
             allowRecentAvatarsSelection: v = !0,
         } = e,
-        F = (0, s.bG)([b.default], () => b.default.getCurrentUser()),
-        S = (0, s.bG)([el.A], () => el.A.getGuildId()),
-        L = (0, s.bG)([ea.A], () => ea.A.getGuild(S)),
+        F = (0, s.bG)([S.default], () => S.default.getCurrentUser()),
+        b = (0, s.bG)([el.A], () => el.A.getGuildId()),
+        L = (0, s.bG)([ea.A], () => ea.A.getGuild(b)),
         w = (0, x.k)(),
-        H = d === K.HL.AVATAR || d === K.HL.BANNER,
-        I = !ei.Ay.canUseAnimatedAvatar(F) && d === K.HL.AVATAR,
+        H = d === W.HL.AVATAR || d === W.HL.BANNER,
+        I = !ei.Ay.canUseAnimatedAvatar(F) && d === W.HL.AVATAR,
         M = (0, N.b)(!H),
         { analyticsLocations: U } = (0, p.Ay)(f, E.A.SELECT_IMAGE_MODAL),
         k = n.useCallback(
@@ -558,20 +551,20 @@ function eC(e) {
                 (0, C.openModalLazy)(
                     async () => {
                         let { default: n } = await Promise.all([
-                            a.e("32033"),
-                            a.e("89833"),
-                            a.e("23658"),
-                            a.e("15931"),
-                            a.e("49845"),
+                            a.e("48424"),
+                            a.e("32637"),
+                            a.e("92060"),
+                            a.e("69117"),
+                            a.e("71425"),
                             a.e("24199"),
                             a.e("88941"),
                             a.e("43437"),
-                            a.e("43039"),
-                            a.e("48804"),
                             a.e("88077"),
                             a.e("18401"),
-                            a.e("55314"),
-                            a.e("89094"),
+                            a.e("43039"),
+                            a.e("48804"),
+                            a.e("83057"),
+                            a.e("50997"),
                             a.e("29177"),
                             a.e("32551"),
                             a.e("57840"),
@@ -582,7 +575,7 @@ function eC(e) {
                             a.e("45723"),
                             a.e("70697"),
                             a.e("18546"),
-                            a.e("38835"),
+                            a.e("61216"),
                             a.e("58164"),
                             a.e("71470"),
                             a.e("37490"),
@@ -617,20 +610,20 @@ function eC(e) {
             (0, C.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        a.e("89833"),
-                        a.e("71934"),
-                        a.e("32033"),
-                        a.e("23658"),
-                        a.e("15931"),
-                        a.e("49845"),
+                        a.e("32637"),
+                        a.e("64710"),
+                        a.e("48424"),
+                        a.e("92060"),
+                        a.e("69117"),
+                        a.e("71425"),
                         a.e("24199"),
                         a.e("88941"),
                         a.e("43437"),
-                        a.e("43039"),
                         a.e("88077"),
                         a.e("18401"),
-                        a.e("55314"),
-                        a.e("89094"),
+                        a.e("43039"),
+                        a.e("83057"),
+                        a.e("50997"),
                         a.e("29177"),
                         a.e("32551"),
                         a.e("57840"),
@@ -641,9 +634,9 @@ function eC(e) {
                         a.e("45723"),
                         a.e("70697"),
                         a.e("18546"),
-                        a.e("38835"),
-                        a.e("31825"),
+                        a.e("61216"),
                         a.e("70653"),
+                        a.e("31825"),
                         a.e("68647"),
                         a.e("58164"),
                         a.e("71470"),
@@ -681,7 +674,7 @@ function eC(e) {
             });
     }, [I, m, U, d]);
     let V = A && M,
-        B = v && d === K.HL.AVATAR;
+        B = v && d === W.HL.AVATAR;
     return (0, l.jsx)(o.Modal, {
         transitionState: t,
         onClose: r,

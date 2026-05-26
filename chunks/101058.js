@@ -9,17 +9,20 @@ var i = n(488428),
     u = n(375708);
 function c(e) {
     let { storageHash: t, canAnimate: n = !1, allowWebp: i = !0 } = e;
-    if (n && (0, s.VI)(t)) return "gif";
+    if (n && (0, s.VI)(t)) return i && s.QB ? "webp" : "gif";
     let { CDN_HOST: r } = window.GLOBAL_ENV;
     return null == r ? "jpg" : i && s.QB ? "webp" : "png";
 }
 function d(e) {
-    let { userId: t, avatarId: n, storageHash: s, canAnimate: a = !1, allowWebp: o = !0, size: u } = e,
-        { CDN_HOST: d } = window.GLOBAL_ENV,
-        _ = null != d ? `https://${d}` : location.protocol + window.GLOBAL_ENV.API_ENDPOINT,
-        f = c({ storageHash: s, canAnimate: a, allowWebp: o }),
-        h = `?${i.stringify({ size: (0, r.kr)(u * (0, r.mZ)()) })}`;
-    return `${_}${l.Rsh.ARCHIVED_AVATAR(t, n, s, f)}${h}`;
+    let { userId: t, avatarId: n, storageHash: a, canAnimate: o = !1, allowWebp: u = !0, size: d } = e,
+        { CDN_HOST: _ } = window.GLOBAL_ENV,
+        f = null != _ ? `https://${_}` : location.protocol + window.GLOBAL_ENV.API_ENDPOINT,
+        h = c({ storageHash: a, canAnimate: o, allowWebp: u }),
+        p = { size: (0, r.kr)(d * (0, r.mZ)()) };
+    return (
+        "webp" === h && o && (0, s.VI)(a) && (p.animated = !0),
+        `${f}${l.Rsh.ARCHIVED_AVATAR(t, n, a, h)}?${i.stringify(p)}`
+    );
 }
 function _(e) {
     let { filename: t, assetOrigin: n = o.E.NEW_ASSET } = e ?? {};
@@ -38,7 +41,7 @@ function _(e) {
     });
 }
 function f(e, t) {
-    let n = c({ storageHash: e, canAnimate: !0, allowWebp: !1 }),
+    let n = c({ storageHash: e, canAnimate: !0, allowWebp: s.QB }),
         i = null == t ? u.intl.string(u.t.lqaIxI) : t.split(",")[0];
     return {
         filename: `${i}.${n}`,
@@ -50,6 +53,8 @@ function f(e, t) {
                     return "image/png";
                 case "jpg":
                     return "image/jpeg";
+                case "webp":
+                    return "image/webp";
                 default:
                     (0, a.xb)(e);
             }
@@ -79,7 +84,6 @@ function p(e) {
                   storageHash: n.originalAsset.storageHash,
                   size: i,
                   canAnimate: r,
-                  allowWebp: !1,
               })
             : n.imageUri
         : n;
