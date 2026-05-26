@@ -8,7 +8,7 @@ var i = n(181370),
     l = n(576908),
     u = n(818348);
 let c = new a.Vy("ApexExperimentStore");
-(null == window.TextEncoder || null == window.TextDecoder) && n(283346);
+"u" > typeof window && (null == window.TextEncoder || null == window.TextDecoder) && n(283346);
 let d = [l.ni.User, l.ni.Installation],
     _ = { user: {}, guild: {}, installation: {} },
     f = {},
