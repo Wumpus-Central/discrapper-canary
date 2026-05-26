@@ -9136,6 +9136,7 @@
   "HrSDPF": "{number, plural, one {You can add 1 more friend.} other {You can add  more friends.} }",
   "barkEr": "{number, plural, one {You can add 1 more person.} other {You can add  more people.} }",
   "cjE7wH": "Existing Groups",
+  "iRntUl": "Couldn't send invites, please try again.",
   "FIHggl": "Add friends or server members to group DMs.",
   "xHuK72": "Non-friends in mutual servers will need to accept your invite before joining.",
   "kHyiXs": "To:",
