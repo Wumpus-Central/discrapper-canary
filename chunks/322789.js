@@ -1,96 +1,100 @@
 "use strict";
-n.d(t, { A: () => N, n: () => S });
-var l = n(627968),
-    i = n(64700),
+n.d(t, { A: () => O, n: () => v });
+var i = n(627968),
+    r = n(64700),
     s = n(696292),
     a = n(554146),
-    r = n(414499),
-    o = n(661531),
-    c = n(834730),
-    u = n(777666),
+    o = n(414499),
+    l = n(661531),
+    u = n(834730),
+    c = n(777666),
     d = n(737393),
-    h = n(627363),
-    m = n(932001),
-    p = n(932413),
-    f = n(975732),
-    g = n(964195),
-    _ = n(939341),
-    x = n(263577),
-    C = n(506326),
-    A = n(868065),
-    E = n(424994),
-    I = n(518477),
-    v = n(985018),
+    _ = n(627363),
+    f = n(131607),
+    h = n(932413),
+    p = n(975732),
+    E = n(964195),
+    m = n(939341),
+    g = n(263577),
+    A = n(506326),
+    I = n(868065),
+    T = n(424994),
+    S = n(518477),
+    N = n(375708),
     y = n(383374),
-    b = n(352760);
-let S = [C.iq, C.Zc, C.Xy, C.$X, C.tR, C.K7, C.fg, C.sp, C.MK],
-    N = i.memo((e) => {
+    C = n(352760);
+let v = [A.iq, A.Zc, A.Xy, A.$X, A.tR, A.K7, A.fg, A.sp, A.MK],
+    O = r.memo((e) => {
         let {
                 entry: t,
                 channel: n,
-                selected: i,
-                hovered: N,
-                isFirstApplicationOccurrence: j,
-                trackRankingItemInteraction: T,
+                selected: r,
+                hovered: O,
+                isFirstApplicationOccurrence: R,
+                trackRankingItemInteraction: b,
             } = e,
-            { largeImage: w } = (0, _.nO)({ entry: t, showCoverImage: !1 }),
-            { data: R } = (0, h.YY)(t.extra.application_id),
-            L = (0, d.J)(R) && j,
-            k = L ? [a.M.CLOUD_PLAY_NEW_BADGE] : [],
-            [O] = (0, m.kn)(k);
-        return (0, l.jsxs)(A.Zp, {
-            selected: i,
+            { largeImage: D } = (0, m.nO)({
+                entry: t,
+                showCoverImage: !1,
+                trackingSource: "memberlist_gaming_content_row",
+            }),
+            { data: L } = (0, _.YY)(t.extra.application_id),
+            w = (0, d.J)(L) && R,
+            M = w ? [a.M.CLOUD_PLAY_NEW_BADGE] : [],
+            [P] = (0, f.kn)(M);
+        return (0, i.jsxs)(I.Zp, {
+            selected: r,
             usesCardRows: !0,
             children: [
-                (0, l.jsx)(p.A, {
+                (0, i.jsx)(h.A, {
                     applicationId: t.extra.application_id,
                     questContent: s.u.MEMBERS_LIST_CARD,
                     children: (e) =>
-                        (0, l.jsxs)(A.dM, {
+                        (0, i.jsxs)(I.dM, {
                             ref: e,
                             children: [
-                                (0, l.jsxs)(A.UA, {
+                                (0, i.jsxs)(I.UA, {
                                     children: [
-                                        (0, l.jsx)(A.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
-                                        (0, l.jsx)(A.ZB, { children: t.extra.game_name }),
-                                        (0, l.jsx)(C.mG, {
-                                            location: C.N5.CARD,
-                                            children: S.map((e, n) => (0, l.jsx)(e, { entry: t, hovered: N }, n)),
+                                        (0, i.jsx)(I.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
+                                        (0, i.jsx)(I.ZB, { children: t.extra.game_name }),
+                                        (0, i.jsx)(A.mG, {
+                                            location: A.N5.CARD,
+                                            children: v.map((e, n) => (0, i.jsx)(e, { entry: t, hovered: O }, n)),
                                         }),
                                     ],
                                 }),
-                                (0, l.jsx)(x.V, {
-                                    alt: w?.text ?? w?.alt,
-                                    src: w?.src,
+                                (0, i.jsx)(g.V, {
+                                    alt: D?.text ?? D?.alt,
+                                    src: D?.src,
                                     size: 48,
-                                    className: b.xn,
-                                    showTooltip: w?.text != null,
+                                    className: C.xn,
+                                    showTooltip: D?.text != null,
                                 }),
                             ],
                         }),
                 }),
-                L &&
-                    (0, l.jsxs)(l.Fragment, {
+                w &&
+                    (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, l.jsx)(A.ik, {}),
-                            (0, l.jsxs)(A.dM, {
+                            (0, i.jsx)(I.ik, {}),
+                            (0, i.jsxs)(I.dM, {
                                 className: y.DK,
                                 children: [
-                                    (0, l.jsxs)("div", {
+                                    (0, i.jsxs)("div", {
                                         className: y.tJ,
                                         children: [
-                                            (0, l.jsx)(r.h, { color: o.A.colors.ICON_SUBTLE, size: "xxs" }),
-                                            (0, l.jsx)(c.E, {
+                                            (0, i.jsx)(o.h, { color: l.A.colors.ICON_SUBTLE, size: "xxs" }),
+                                            (0, i.jsx)(u.E, {
                                                 variant: "text-xs/normal",
                                                 color: "text-subtle",
-                                                children: v.intl.string(v.t["5HiF2i"]),
+                                                children: N.intl.string(N.t["5HiF2i"]),
                                             }),
                                         ],
                                     }),
-                                    O === a.M.CLOUD_PLAY_NEW_BADGE &&
-                                        (0, l.jsx)(u.Lp, {
-                                            text: v.intl.string(v.t.y2b7CA),
-                                            color: o.A.colors.BACKGROUND_BRAND.css,
+                                    P === a.M.CLOUD_PLAY_NEW_BADGE &&
+                                        (0, i.jsx)(c.Lp, {
+                                            text: N.intl.string(N.t.y2b7CA),
+                                            color: l.A.colors.BACKGROUND_BRAND.css,
                                         }),
                                 ],
                             }),
@@ -98,12 +102,12 @@ let S = [C.iq, C.Zc, C.Xy, C.$X, C.tR, C.K7, C.fg, C.sp, C.MK],
                     }),
                 "applicationWidgetPreview" in t &&
                     null != t.applicationWidgetPreview &&
-                    (0, l.jsx)(g.F, {
+                    (0, i.jsx)(E.F, {
                         ...t.applicationWidgetPreview,
                         className: y.AB,
                         onClickViewMore: () => {
-                            T(E.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),
-                                (0, f.openUserProfileModal)({ userId: t.author_id, tabSection: I.RP.WIDGETS });
+                            b(T.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),
+                                (0, p.openUserProfileModal)({ userId: t.author_id, tabSection: S.RP.WIDGETS });
                         },
                     }),
             ],

@@ -124,8 +124,8 @@ async function $(e) {
     }
 }
 var q = n(927813),
-    Z = n(935208),
-    X = n(140651);
+    X = n(935208),
+    Z = n(140651);
 let Q =
         "M20.97 4.06c0 .18.08.35.24.43.55.28.9.82 1.04 1.42.3 1.24.75 3.7.75 7.09v4.91a3.09 3.09 0 0 1-5.85 1.38l-1.76-3.51a1.09 1.09 0 0 0-1.23-.55c-.57.13-1.36.27-2.16.27s-1.6-.14-2.16-.27c-.49-.11-1 .1-1.23.55l-1.76 3.51A3.09 3.09 0 0 1 1 17.91V13c0-3.38.46-5.85.75-7.1.15-.6.49-1.13 1.04-1.4a.47.47 0 0 0 .24-.44c0-.7.48-1.32 1.2-1.47l2.93-.62c.5-.1 1 .06 1.36.4.35.34.78.71 1.28.68a42.4 42.4 0 0 1 4.4 0c.5.03.93-.34 1.28-.69.35-.33.86-.5 1.36-.39l2.94.62c.7.15 1.19.78 1.19 1.47ZM20 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM15.5 12a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM5 7a1 1 0 0 1 2 0v1h1a1 1 0 0 1 0 2H7v1a1 1 0 1 1-2 0v-1H4a1 1 0 1 1 0-2h1V7Z",
     J =
@@ -199,7 +199,7 @@ let ec = async (e) => {
                         canvas: e,
                         badges: ((e, t) => {
                             let n = [{ iconPath: Q, text: t }],
-                                i = Z.default.extractTimestamp(e.extra.application_id);
+                                i = X.default.extractTimestamp(e.extra.application_id);
                             if (
                                 (7 >= F()().diff(F()(i), "days") &&
                                     n.push({ iconPath: es, text: eu.intl.string(eu.t.vYuyWf) }),
@@ -400,8 +400,8 @@ let e$ = (e) => {
     );
 };
 var eq = n(47167),
-    eZ = n(262763),
-    eX = n(402216),
+    eX = n(262763),
+    eZ = n(402216),
     eQ = n(268218),
     eJ = n(826673),
     e0 = n(822123),
@@ -581,25 +581,25 @@ let tY = (0, eQ.Fe)({
             Promise.all([
                 n.e("51776"),
                 n.e("61097"),
-                n.e("82647"),
-                n.e("29939"),
+                n.e("40523"),
+                n.e("14102"),
                 n.e("50128"),
                 n.e("29761"),
                 n.e("26105"),
                 n.e("46461"),
-                n.e("94908"),
+                n.e("26705"),
                 n.e("9225"),
                 n.e("35316"),
-                n.e("90081"),
+                n.e("35128"),
                 n.e("45650"),
-                n.e("52887"),
+                n.e("34186"),
                 n.e("57016"),
                 n.e("28743"),
-                n.e("34053"),
+                n.e("35529"),
                 n.e("32264"),
                 n.e("55990"),
                 n.e("66609"),
-                n.e("77739"),
+                n.e("22321"),
                 n.e("79705"),
                 n.e("69279"),
                 n.e("23924"),
@@ -730,7 +730,7 @@ function tK(e) {
 }
 function tz(e) {
     let { children: t, backgroundImgSrc: n, className: r, style: s = {} } = e,
-        { primaryColor: a, secondaryColor: o } = (0, X.A)(n);
+        { primaryColor: a, secondaryColor: o } = (0, Z.A)(n);
     return (
         null != n && (s.background = `linear-gradient(45deg, ${a}, ${o})`),
         (0, i.jsx)(eA.N, {
@@ -867,7 +867,7 @@ function tq(e) {
                           hasRestrictedOrMutedVCParticipant: p,
                           children: (0, i.jsx)(I.$, {
                               onClick: () => {
-                                  eZ.A.handleVoiceConnect({
+                                  eX.A.handleVoiceConnect({
                                       channel: o,
                                       connected: h,
                                       needSubscriptionToAccess: c,
@@ -1036,7 +1036,7 @@ function tq(e) {
                     children: (0, i.jsxs)("div", {
                         className: tj.T7,
                         children: [
-                            (0, i.jsx)(tZ, { channel: l, onClickSuggestion: j }),
+                            (0, i.jsx)(tX, { channel: l, onClickSuggestion: j }),
                             (0, i.jsx)(e$, { onSelectEmoji: j }),
                         ],
                     }),
@@ -1101,7 +1101,7 @@ function tq(e) {
         ],
     });
 }
-let tZ = (e) => {
+let tX = (e) => {
     let { channel: t, onClickSuggestion: n } = e,
         [s, a] = r.useState(!1);
     r.useEffect(() => {
@@ -1142,7 +1142,7 @@ let tZ = (e) => {
         }),
     });
 };
-function tX(e) {
+function tZ(e) {
     let { channel: t, userDescription: n, entry: r, disableGameProfileLinks: s, onUserPopoutClosed: a } = e,
         o = t?.guild_id,
         { displayParticipants: l, participant1: c, participant2: d, numOtherParticipants: _ } = (0, P.A)(r, 3),
@@ -1208,7 +1208,7 @@ function tX(e) {
                     }),
                 ],
             }),
-            null != h && (0, i.jsx)(eX.Ay, { size: eX.Ay.Sizes.SMALL }),
+            null != h && (0, i.jsx)(eZ.Ay, { size: eZ.Ay.Sizes.SMALL }),
             null != f && (0, i.jsx)(tL.A, { user: f, channel: t, guildId: o, entry: r, disableGameProfileLinks: s }),
         ],
     });
@@ -1248,7 +1248,11 @@ function tJ(e) {
             },
             { onOpened: () => p?.(tV.PA.OPENED_GAME_PROFILE) },
         ),
-        { largeImage: S, smallImage: N } = (0, M.nO)({ entry: m, showCoverImage: f }),
+        { largeImage: S, smallImage: N } = (0, M.nO)({
+            entry: m,
+            showCoverImage: f,
+            trackingSource: "memberlist_content_popout",
+        }),
         y = (0, te.w)({ location: "content_inventory" }),
         C = (0, u.bG)([e9.A], () => e9.A.getDetectableIdsToApplicationIds()),
         v = g ? T : void 0,
@@ -1256,7 +1260,7 @@ function tJ(e) {
     return (0, i.jsxs)("div", {
         className: tj.au,
         children: [
-            (0, i.jsx)(tX, { disableGameProfileLinks: _, ...E, onUserPopoutClosed: h }),
+            (0, i.jsx)(tZ, { disableGameProfileLinks: _, ...E, onUserPopoutClosed: h }),
             (0, i.jsxs)(tz, {
                 backgroundImgSrc: S?.src,
                 children: [
@@ -1356,14 +1360,14 @@ function t0(e) {
         S = g ? T : void 0,
         { activity: N, activityApplication: y, fallbackApplication: C } = (0, ty.A)(m),
         { largeImage: v, smallImage: O } = (0, M.D8)(N, y ?? C),
-        { largeImage: R } = (0, M.nO)({ entry: m }),
+        { largeImage: R } = (0, M.nO)({ entry: m, trackingSource: "memberlist_streaming_content_popout" }),
         b = (0, te.w)({ location: "content_inventory" }),
         D = (0, u.bG)([e9.A], () => e9.A.getDetectableIdsToApplicationIds()),
         L = r.useContext(tW);
     return (0, i.jsxs)("div", {
         className: tj.au,
         children: [
-            (0, i.jsx)(tX, { ...h, onUserPopoutClosed: _ }),
+            (0, i.jsx)(tZ, { ...h, onUserPopoutClosed: _ }),
             (0, i.jsxs)(tz, {
                 backgroundImgSrc: R?.src,
                 className: tj.uR,
@@ -1453,9 +1457,13 @@ function t0(e) {
 var t1 = n(299846);
 let t2 = (e) => {
     let { channel: t, entry: n, onReaction: s, onVoiceChannelPreview: a, disableActivityProfileLinks: o } = e,
-        { largeImage: l } = (0, M.nO)({ entry: n, showCoverImage: !1 }),
+        { largeImage: l } = (0, M.nO)({
+            entry: n,
+            showCoverImage: !1,
+            trackingSource: "memberlist_activity_content_popout",
+        }),
         { user: c, details: d, activity: _, embeddedActivity: f } = (0, t1.u)(n),
-        { primaryColor: h, secondaryColor: p } = (0, X.A)(l?.src),
+        { primaryColor: h, secondaryColor: p } = (0, Z.A)(l?.src),
         E = (0, u.bG)([D.default], () => D.default.locale),
         { displayParticipants: m, participant1: g, participant2: U, numOtherParticipants: k } = (0, P.A)(n, 3),
         G = () => {
@@ -1632,7 +1640,7 @@ let nl = async (e) => {
                         canvas: e,
                         badges: ((e, t) => {
                             let n = [{ iconPath: Q, text: t }],
-                                i = Z.default.extractTimestamp(e.extra.application_id);
+                                i = X.default.extractTimestamp(e.extra.application_id);
                             if (
                                 (7 >= F()().diff(F()(i), "days") &&
                                     n.push({ iconPath: es, text: eu.intl.string(eu.t.vYuyWf) }),
@@ -1707,9 +1715,9 @@ let nf = [...t3.n, ed.Yq],
                 onUserPopoutClosed: l,
                 trackRankingItemInteraction: c,
             } = e,
-            { largeImage: d } = (0, M.nO)({ entry: n }),
+            { largeImage: d } = (0, M.nO)({ entry: n, trackingSource: "memberlist_gaming_content_popout" }),
             { user: _, details: f, appName: h, activity: p, embeddedActivity: E } = (0, t1.u)(n),
-            { primaryColor: m, secondaryColor: g } = (0, X.A)(d?.src),
+            { primaryColor: m, secondaryColor: g } = (0, Z.A)(d?.src),
             A = (0, u.bG)([D.default], () => D.default.locale),
             { streamPreviewUrl: I, stream: T } = (0, tC.A)(n),
             { displayParticipants: S, participant1: R, participant2: U, numOtherParticipants: k } = (0, P.A)(n, 3),
@@ -1818,7 +1826,7 @@ let nf = [...t3.n, ed.Yq],
                                     })
                                   : null,
                       }),
-            Z =
+            X =
                 !K && W
                     ? (0, i.jsx)(
                           nn,
@@ -1827,13 +1835,13 @@ let nf = [...t3.n, ed.Yq],
                       )
                     : null,
             Q = [
-                null == Z && ((0, N.A)(p, eY.jUm.JOIN) || (0, y.A)(p))
+                null == X && ((0, N.A)(p, eY.jUm.JOIN) || (0, y.A)(p))
                     ? (0, i.jsx)(v.A, { activity: p, user: _, variant: "primary", size: "md", icon: t4._ }, "join")
                     : null,
                 (0, t7.A)(p)
                     ? (0, i.jsx)(nr.A, { activity: p, size: "md", variant: "primary", icon: t5.b }, "watch")
                     : null,
-                Z,
+                X,
             ].filter(L.Vq);
         return (0, i.jsxs)(tK, {
             children: [
@@ -2009,9 +2017,9 @@ function nk(e) {
         n,
         s,
         { channel: a, entry: o, closePopout: l, onReaction: c, onVoiceChannelPreview: d } = e,
-        { largeImage: _ } = (0, M.nO)({ entry: o }),
+        { largeImage: _ } = (0, M.nO)({ entry: o, trackingSource: "memberlist_listened_session_content_popout" }),
         { activity: f, currentEntry: h, artist: p, title: E, user: m } = (0, nA.u7)(o),
-        { primaryColor: g, secondaryColor: A } = (0, X.A)(_?.src),
+        { primaryColor: g, secondaryColor: A } = (0, Z.A)(_?.src),
         T = nd(eY.fg2.SPOTIFY),
         S = (0, u.bG)(
             [ny.A, nR.default],
@@ -2129,7 +2137,7 @@ let nH = [ed.Y8],
     nj = [nG.j.WEEK],
     nY = r.memo((e) => {
         let { entry: t, channel: n, selected: r } = e,
-            { largeImage: s } = (0, M.nO)({ entry: t }),
+            { largeImage: s } = (0, M.nO)({ entry: t, trackingSource: "memberlist_top_artist_content_row" }),
             a = (0, x.TQ)(t);
         return null != a && (0, L.S1)(a, nj)
             ? (0, i.jsxs)(nV.Zp, {
@@ -2158,7 +2166,7 @@ let nK = (e) => {
         { parent_title: c, provider: d, image_url: _ } = a.extra.media,
         f = a.extra.artist.name,
         h = (0, u.bG)([E.default], () => E.default.getUser(a.author_id)),
-        { primaryColor: p, secondaryColor: m } = (0, X.A)(_),
+        { primaryColor: p, secondaryColor: m } = (0, Z.A)(_),
         g = (0, x.TQ)(a),
         A = r.useCallback(() => {
             var e, t, n;
@@ -2247,9 +2255,9 @@ let n$ = (e) => {
     let t,
         n,
         { channel: s, entry: a, disableGameProfileLinks: o, onReaction: l, onVoiceChannelPreview: u } = e,
-        { largeImage: c } = (0, M.nO)({ entry: a }),
+        { largeImage: c } = (0, M.nO)({ entry: a, trackingSource: "memberlist_top_game_content_popout" }),
         { user: d, details: _, appName: f } = (0, t1.u)(a),
-        { primaryColor: h, secondaryColor: p } = (0, X.A)(c?.src),
+        { primaryColor: h, secondaryColor: p } = (0, Z.A)(c?.src),
         E = (0, x.ty)(a),
         m = (0, x.TQ)(a),
         g = r.useCallback(
@@ -2320,8 +2328,8 @@ let n$ = (e) => {
     });
 };
 var nq = n(514243),
-    nZ = n(347306),
-    nX = n(123917),
+    nX = n(347306),
+    nZ = n(123917),
     nQ = n(998218);
 let nJ = async (e) => {
         let t,
@@ -2389,8 +2397,8 @@ let nJ = async (e) => {
             n,
             { channel: s, entry: a, onReaction: o, onVoiceChannelPreview: l } = e,
             c = (0, u.bG)([E.default], () => E.default.getUser(a.author_id)),
-            { largeImage: d } = (0, M.nO)({ entry: a }),
-            { primaryColor: _, secondaryColor: f } = (0, X.A)(d?.src),
+            { largeImage: d } = (0, M.nO)({ entry: a, trackingSource: "memberlist_watch_content_popout" }),
+            { primaryColor: _, secondaryColor: f } = (0, Z.A)(d?.src),
             h = (0, u.bG)([D.default], () => D.default.locale),
             p = nd(eY.fg2.CRUNCHYROLL),
             m = (0, x.kR)(a.extra.media_assets_large_text),
@@ -2432,7 +2440,7 @@ let nJ = async (e) => {
                 null != e &&
                     null != e.protocol &&
                     null != e.hostname &&
-                    (0, nX.h)({ href: nQ.A.format(e), trusted: !1 });
+                    (0, nZ.h)({ href: nQ.A.format(e), trusted: !1 });
             };
         return null == c
             ? null
@@ -2446,7 +2454,7 @@ let nJ = async (e) => {
                           subtitle: a.extra.media_subtitle,
                           headerIcons: (0, i.jsx)(n_.A, {
                               onClick: p,
-                              Icon: nZ.k,
+                              Icon: nX.k,
                               "aria-label": eu.intl.string(eu.t.jdJYXw),
                           }),
                           badges: (0, i.jsx)(ed.mG, {

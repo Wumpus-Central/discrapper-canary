@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => eX });
+n.d(t, { A: () => eZ });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -52,8 +52,8 @@ var x = n(55730),
     z = n(495544),
     $ = n(760751),
     q = n(518477),
-    Z = n(375708);
-function X(e) {
+    X = n(375708);
+function Z(e) {
     let { applicationId: t, onAction: n, onClose: s } = e,
         a = (0, M.bG)([z.default], () => z.default.getId()),
         o = (0, W.Ay)(a, null),
@@ -85,7 +85,7 @@ function X(e) {
             },
             [t, a, n, s],
         );
-    return u ? (0, i.jsx)(K.FD, { text: Z.intl.string(Z.t.BjYzmC), onClick: c, fullWidth: !0 }) : null;
+    return u ? (0, i.jsx)(K.FD, { text: X.intl.string(X.t.BjYzmC), onClick: c, fullWidth: !0 }) : null;
 }
 var Q = n(601007),
     J = n(46225),
@@ -121,7 +121,7 @@ function eu(e) {
                   (0, i.jsx)(
                       K.FD,
                       {
-                          text: a ? Z.intl.string(Z.t.I6JG46) : e,
+                          text: a ? X.intl.string(X.t.I6JG46) : e,
                           onClick: (e) => {
                               e.stopPropagation(),
                                   r?.({ action: a ? "PRESS_WATCH_ON_CRUNCHYROLL_BUTTON" : "PRESS_CUSTOM_BUTTON" }),
@@ -138,7 +138,7 @@ function eu(e) {
                   (0, i.jsx)(
                       K.FD,
                       {
-                          text: a ? Z.intl.string(Z.t.I6JG46) : e,
+                          text: a ? X.intl.string(X.t.I6JG46) : e,
                           fullWidth: !0,
                           onClick: (e) => {
                               e.stopPropagation(),
@@ -168,7 +168,7 @@ function eg(e) {
     if (null == l && null != n && (0, _.A)(n))
         return (0, i.jsx)(K.FD, {
             icon: ed.k,
-            text: Z.intl.string(Z.t.RscU7I),
+            text: X.intl.string(X.t.RscU7I),
             fullWidth: a !== ea.d.MODAL_V2,
             onClick: (e) => {
                 e.stopPropagation(),
@@ -204,7 +204,7 @@ function eI(e) {
         a = s === ea.d.MODAL_V2;
     return (0, i.jsx)(K.FD, {
         icon: () => (0, i.jsx)(eA.A, {}),
-        text: Z.intl.string(Z.t.sbdnpw),
+        text: X.intl.string(X.t.sbdnpw),
         fullWidth: !a,
         onClick: (e) => {
             e.stopPropagation(), n?.({ action: "PRESS_CONNECT_ACCOUNT_BUTTON" }), t({ analyticsLocations: [r] });
@@ -219,7 +219,7 @@ function eN(e) {
         a = s === ea.d.MODAL_V2;
     return (0, x.A)(n, eS.jUm.INSTANCE)
         ? (0, i.jsx)(K.FD, {
-              text: Z.intl.string(Z.t.vwl1PK),
+              text: X.intl.string(X.t.vwl1PK),
               fullWidth: !a,
               onClick: (e) => {
                   e.stopPropagation(),
@@ -241,7 +241,7 @@ function eO(e) {
         ? null
         : (0, i.jsx)(K.FD, {
               icon: n,
-              text: Z.intl.formatToPlainString(Z.t.XWSHTb, { platform: ey.A.get(t).name }),
+              text: X.intl.formatToPlainString(X.t.XWSHTb, { platform: ey.A.get(t).name }),
               fullWidth: !o,
               onClick: (e) => {
                   e.stopPropagation();
@@ -267,7 +267,7 @@ function eP(e) {
         d = (0, M.bG)([ew.A], () => null != c && ew.A.can(eD.Gk, c), [c]);
     return (0, C.Cy)(t) && d && null != l && null != o
         ? (0, i.jsx)(K.FD, {
-              text: Z.intl.string(Z.t.ZYO5OK),
+              text: X.intl.string(X.t.ZYO5OK),
               fullWidth: !a,
               disabled: u,
               onClick: (e) => {
@@ -288,7 +288,7 @@ function eU(e) {
         a = (0, ex.A)(t);
     return (0, h.A)(t) && null != a
         ? (0, i.jsx)(K.FD, {
-              text: Z.intl.string(Z.t.I6JG46),
+              text: X.intl.string(X.t.I6JG46),
               fullWidth: !s,
               onClick: (e) => (e.stopPropagation(), n?.({ action: "PRESS_WATCH_BUTTON" }), window.open(a)),
           })
@@ -324,7 +324,7 @@ function eG(e) {
         R = (() => {
             if (u)
                 return y && n?.type === eS.$pd.PLAYING && a?.id != null
-                    ? (0, i.jsx)(X, { applicationId: a.id, onAction: r, onClose: s })
+                    ? (0, i.jsx)(Z, { applicationId: a.id, onAction: r, onClose: s })
                     : null;
             if (n?.buttons != null && n?.buttons.length >= 1)
                 return null != O && g
@@ -379,8 +379,8 @@ var eF = n(282197),
     ez = n(409626),
     e$ = n(692969),
     eq = n(534465),
-    eZ = n(360469);
-function eX(e) {
+    eX = n(360469);
+function eZ(e) {
     let {
             user: t,
             currentUser: n,
@@ -402,7 +402,7 @@ function eX(e) {
         W = (0, m.Ay)(P),
         K = (0, R.A)(r),
         z = null != K.text && "" !== K.text,
-        { largeImage: $, smallImage: X } = (0, g.XN)(r, s),
+        { largeImage: $, smallImage: Z } = (0, g.XN)(r, s, "user_profile_activity_card"),
         Q = (function (e) {
             let { location: t, user: n, currentUser: i, activity: r, application: s, entry: a, onClose: o } = e,
                 l = (0, e$.A)({
@@ -452,7 +452,7 @@ function eX(e) {
                 : (0, h.A)(r) && null != M
                   ? (0, i.jsx)(ej.A, {
                         variant: "text-xs/normal",
-                        text: Z.intl.formatToPlainString(Z.t["hq/Qze"], { guildName: M.name }),
+                        text: X.intl.formatToPlainString(X.t["hq/Qze"], { guildName: M.name }),
                         onClick: () => {
                             (0, y.u)(M.id), j({ action: "OPEN_VOICE_GUILD" }), U?.();
                         },
@@ -472,7 +472,7 @@ function eX(e) {
             if (r.type === eS.$pd.WATCHING) return null;
             if ((0, f.A)(r)) return en();
             if ((0, C.Cy)(r) && r.party?.size != null && r.party?.size.length >= 2) {
-                let e = Z.intl.formatToPlainString(Z.t["JC/3xw"], {
+                let e = X.intl.formatToPlainString(X.t["JC/3xw"], {
                     numSpeakers: r.party?.size[0],
                     numListeners: r.party?.size[1] - r.party?.size[0],
                 });
@@ -486,7 +486,7 @@ function eX(e) {
                 : null;
         },
         en = () =>
-            r.party?.size == null && r.application_id === eZ.I4
+            r.party?.size == null && r.application_id === eX.I4
                 ? (0, i.jsxs)("div", {
                       className: eo.CI,
                       children: [
@@ -496,7 +496,7 @@ function eX(e) {
                           }),
                           (0, i.jsx)(ej.A, {
                               variant: "text-xs/normal",
-                              text: Z.intl.formatToPlainString(Z.t["u//9By"], {
+                              text: X.intl.formatToPlainString(X.t["u//9By"], {
                                   count: "0",
                                   max: s?.getMaxParticipants() ?? 0,
                               }),
@@ -515,8 +515,8 @@ function eX(e) {
                                 variant: "text-xs/normal",
                                 text:
                                     0 === r.party.size[1]
-                                        ? Z.intl.formatToPlainString(Z.t.IM4J4e, { count: r.party.size[0] })
-                                        : Z.intl.formatToPlainString(Z.t["u//9By"], {
+                                        ? X.intl.formatToPlainString(X.t.IM4J4e, { count: r.party.size[0] })
+                                        : X.intl.formatToPlainString(X.t["u//9By"], {
                                               count: r.party.size[0],
                                               max: r.party.size[1],
                                           }),
@@ -577,14 +577,14 @@ function eX(e) {
                                             null == Q
                                                 ? (0, i.jsx)(I.d, {
                                                       image: $,
-                                                      smallImage: X,
+                                                      smallImage: Z,
                                                       size: s,
                                                       aspectRatio: n,
                                                       className: eo.Sl,
                                                   })
                                                 : (0, i.jsx)(I.d, {
                                                       image: $,
-                                                      smallImage: X,
+                                                      smallImage: Z,
                                                       size: s,
                                                       className: eo.mM,
                                                       aspectRatio: n,

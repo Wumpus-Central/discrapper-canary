@@ -3887,6 +3887,7 @@ var rD =
         (ex.DISMISS_ALL_TUTORIALS = "dismiss_all_tutorials"),
         (ex.ACTIVITY_CARD_CLICKED = "activity_card_clicked"),
         (ex.ACTIVITY_CARDS_VIEWED = "activity_cards_viewed"),
+        (ex.ACTIVITY_DEFAULT_ICON_SHOWN = "activity_default_icon_shown"),
         (ex.INVITE_SENT = "invite_sent"),
         (ex.CONTACT_SELECTED = "contact_selected"),
         (ex.INSTANT_INVITE_OPTION_CLICKED = "instant_invite_option_clicked"),
