@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"XaJ3qC":["Collapse"],"pU5Dut":["Expand"],"HLYa5G":["Close"],"xZzxfK":["Optional"],"OSgZpc":["Other"],"xrEgG0":["Thanks for your feedback!"]}',
+e.exports = JSON.parse(
+    '{"XaJ3qC":["Collapse"],"pU5Dut":["Expand"],"HLYa5G":["Close"],"xZzxfK":["Optional"],"qQ/xHO":["Tell us more"],"Lp/NZo":["Select all that apply"],"C3suOL":["What was the problem?"],"NUVZB6":["Hard to use"],"dRzDTy":["Inappropriate"],"omVRS3":["Misleading title"],"ZAJcv4":["Missing messages"],"HcSKAh":["Not useful"],"1cHvxU":["Off-topic"],"OSgZpc":["Other"],"wb6DmY":["Too cluttered"],"kAFQd3":["Too old"],"boNboC":["Send feedback"],"xrEgG0":["Thanks for your feedback!"],"tbhdqW":["Disliked"],"sBwxOY":["Liked"],"pDD8E1":["Hide conversation"],"o+pmGy":["Show conversation"]}',
 );

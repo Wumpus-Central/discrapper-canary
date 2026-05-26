@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"XaJ3qC":["Becsuk\xe1s"],"pU5Dut":["Kibont\xe1s"],"HLYa5G":["Bez\xe1r\xe1s"],"xZzxfK":["Opcion\xe1lis"],"OSgZpc":["Egy\xe9b"],"xrEgG0":["K\xf6sz\xf6nj\xfck a visszajelz\xe9st!"]}',
+e.exports = JSON.parse(
+    '{"XaJ3qC":["Becsuk\xe1s"],"pU5Dut":["Kibont\xe1s"],"HLYa5G":["Bez\xe1r\xe1s"],"xZzxfK":["Opcion\xe1lis"],"qQ/xHO":["Fejtsd ki!"],"Lp/NZo":["V\xe1laszd ki az \xf6sszes megfelel\u0151 lehet\u0151s\xe9get"],"C3suOL":["Mi volt a probl\xe9ma?"],"NUVZB6":["Nehezen haszn\xe1lhat\xf3"],"dRzDTy":["Nem hely\xe9nval\xf3"],"omVRS3":["F\xe9lrevezet\u0151 c\xedm"],"ZAJcv4":["Hi\xe1nyz\xf3 \xfczenetek"],"HcSKAh":["Nem hasznos"],"1cHvxU":["Nem a t\xe9m\xe1hoz tartoz\xf3"],"OSgZpc":["Egy\xe9b"],"wb6DmY":["T\xfalzs\xfafolt"],"kAFQd3":["Idej\xe9tm\xfalt"],"boNboC":["Visszajelz\xe9s k\xfcld\xe9se"],"xrEgG0":["K\xf6sz\xf6nj\xfck a visszajelz\xe9st!"],"tbhdqW":["Nem tetszett"],"sBwxOY":["Tetszett"],"pDD8E1":["Besz\xe9lget\xe9s elrejt\xe9se"],"o+pmGy":["Besz\xe9lget\xe9s megjelen\xedt\xe9se"]}',
 );

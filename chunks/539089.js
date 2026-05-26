@@ -1,3 +1,3 @@
 a.exports = JSON.parse(
-    '{"XaJ3qC":["Skupi"],"pU5Dut":["Pro\u0161iri"],"HLYa5G":["Zatvori"],"xZzxfK":["Neobavezno"],"OSgZpc":["Ne\u0161to drugo"],"xrEgG0":["Hvala na informacijama!"]}',
+    '{"XaJ3qC":["Skupi"],"pU5Dut":["Pro\u0161iri"],"HLYa5G":["Zatvori"],"xZzxfK":["Neobavezno"],"qQ/xHO":["Reci nam vi\u0161e"],"Lp/NZo":["Odaberi sve koje vrijede"],"C3suOL":["U \u010Demu je bio problem?"],"NUVZB6":["Te\u0161ko se koristi"],"dRzDTy":["Neprikladno"],"omVRS3":["Obmanjuju\u0107i naslov"],"ZAJcv4":["Nedostaju poruke"],"HcSKAh":["Nije korisno"],"1cHvxU":["Nema veze s temom"],"OSgZpc":["Ostalo"],"wb6DmY":["Prenatrpano"],"kAFQd3":["Prestar"],"boNboC":["Po\u0161alji povratne informacije"],"xrEgG0":["Hvala na informacijama!"],"tbhdqW":["Izrazi nesvi\u0111anja"],"sBwxOY":["Izrazi svi\u0111anja"],"pDD8E1":["Sakrij razgovor"],"o+pmGy":["Prika\u017Ei razgovor"]}',
 );

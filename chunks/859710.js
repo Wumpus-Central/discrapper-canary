@@ -1,3 +1,3 @@
 a.exports = JSON.parse(
-    '{"XaJ3qC":["Kutista"],"pU5Dut":["Laajenna"],"HLYa5G":["Sulje"],"xZzxfK":["Valinnainen"],"OSgZpc":["Muu"],"xrEgG0":["Kiitos palautteesta!"]}',
+    '{"XaJ3qC":["Kutista"],"pU5Dut":["Laajenna"],"HLYa5G":["Sulje"],"xZzxfK":["Valinnainen"],"qQ/xHO":["Kerro meille tarkemmin"],"Lp/NZo":["Valitse kaikki sopivat"],"C3suOL":["Mik\xe4 ongelma oli?"],"NUVZB6":["K\xe4yt\xf6n vaikeus"],"dRzDTy":["Ep\xe4asiallinen"],"omVRS3":["Harhaanjohtava nimi"],"ZAJcv4":["Viestien puuttuminen"],"HcSKAh":["Ei hy\xf6dyllinen"],"1cHvxU":["Aiheen vierest\xe4"],"OSgZpc":["Muu"],"wb6DmY":["Liian sekava"],"kAFQd3":["Se on liian vanhaa"],"boNboC":["L\xe4het\xe4 palaute"],"xrEgG0":["Kiitos palautteesta!"],"tbhdqW":["Ei tyk\xe4tty"],"sBwxOY":["Tyk\xe4tty"],"pDD8E1":["Piilota keskustelu"],"o+pmGy":["N\xe4yt\xe4 keskustelu"]}',
 );

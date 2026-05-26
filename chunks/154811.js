@@ -1,3 +1,3 @@
 i.exports = JSON.parse(
-    '{"XaJ3qC":["Suskleisti"],"pU5Dut":["I\u0161skleisti"],"HLYa5G":["U\u017Edaryti"],"xZzxfK":["Neprivaloma"],"OSgZpc":["Kita"],"xrEgG0":["A\u010Di\u016B u\u017E atsiliepim\u0105!"]}',
+    '{"XaJ3qC":["Suskleisti"],"pU5Dut":["I\u0161skleisti"],"HLYa5G":["U\u017Edaryti"],"xZzxfK":["Neprivaloma"],"qQ/xHO":["Papasakok pla\u010Diau"],"Lp/NZo":["Pasirink visus tinkamus"],"C3suOL":["Su kokia problema susid\u016Brei?"],"NUVZB6":["Sunku naudoti"],"dRzDTy":["Nederamas"],"omVRS3":["Klaidinantis pavadinimas"],"ZAJcv4":["Tr\u016Bksta \u017Einu\u010Di\u0173"],"HcSKAh":["Nenaudinga"],"1cHvxU":["Ne \u012F tem\u0105"],"OSgZpc":["Kita"],"wb6DmY":["Perpildytas"],"kAFQd3":["Pasen\u0119s"],"boNboC":["Si\u0173sti atsiliepim\u0105"],"xrEgG0":["A\u010Di\u016B u\u017E atsiliepim\u0105!"],"tbhdqW":["Nepatinka"],"sBwxOY":["Patinka"],"pDD8E1":["Sl\u0117pti pokalb\u012F"],"o+pmGy":["Rodyti pokalb\u012F"]}',
 );
