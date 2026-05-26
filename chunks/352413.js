@@ -1,21 +1,20 @@
-"use strict";
-n.d(t, { A: () => c });
-var i = n(64700),
-    r = n(702841),
-    s = n(727170),
-    a = n(919395),
-    o = n(207803),
-    l = n(84540),
-    u = n(836602);
+t.d(r, { A: () => c });
+var a = t(64700),
+    n = t(702841),
+    l = t(727170),
+    i = t(919395),
+    o = t(207803),
+    s = t(84540),
+    u = t(836602);
 function c(e) {
-    let { isTryItOut: t, analyticsLocations: n, guildId: c } = e,
-        d = (0, s.A)(n),
+    let { isTryItOut: r, analyticsLocations: t, guildId: c } = e,
+        p = (0, l.A)(t),
         {
-            pendingAvatar: _,
+            pendingAvatar: d,
             pendingAvatarDecoration: f,
-            pendingErrors: h,
-        } = (0, r.cf)([u.A], () => {
-            if (t) {
+            pendingErrors: v,
+        } = (0, n.cf)([u.A], () => {
+            if (r) {
                 let e = u.A.getTryItOutChanges();
                 return {
                     pendingAvatar: e.tryItOutAvatar,
@@ -30,23 +29,23 @@ function c(e) {
                 pendingErrors: u.A.getErrors(c).avatarDecoration,
             };
         }),
-        p = (0, i.useCallback)(
+        m = (0, a.useCallback)(
             (e) => {
-                (0, l.p)({ guildId: c, avatar: e }), (0, a.WU)(null == e ? "remove" : "set");
+                (0, s.p)({ guildId: c, avatar: e }), (0, i.WU)(null == e ? "remove" : "set");
             },
             [c],
         ),
-        E = (0, i.useCallback)(
+        _ = (0, a.useCallback)(
             (e) => {
-                (0, l.p)({ guildId: c, avatarDecoration: e }), null != e && d(e);
+                (0, s.p)({ guildId: c, avatarDecoration: e }), null != e && p(e);
             },
-            [d, c],
+            [p, c],
         );
     return {
-        pendingAvatar: _,
+        pendingAvatar: d,
         pendingAvatarDecoration: f,
-        pendingErrors: h,
-        setPendingAvatar: t ? o.e$ : p,
-        setPendingAvatarDecoration: t ? o.Go : E,
+        pendingErrors: v,
+        setPendingAvatar: r ? o.e$ : m,
+        setPendingAvatarDecoration: r ? o.Go : _,
     };
 }

@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { A: () => h });
-var i,
-    r = n(627968);
-n(64700);
-var s = n(503698),
-    a = n.n(s),
-    o = n(607399),
-    l = n(939249),
-    u = n(285796),
-    c = n(789645),
-    d = n(375708),
-    _ = n(589753),
-    f = (((i = f || {}).DEFAULT = ""), (i.BOLD = "Bold"), (i.SOLID = "Solid"), i);
-function h(e) {
-    let { closeAction: t, variant: n = "", keybind: i, className: s } = e;
+t.d(l, { A: () => I });
+var n,
+    r = t(627968);
+t(64700);
+var s = t(503698),
+    i = t.n(s),
+    o = t(607399),
+    a = t(939249),
+    E = t(285796),
+    d = t(789645),
+    c = t(375708),
+    u = t(589753),
+    _ = (((n = _ || {}).DEFAULT = ""), (n.BOLD = "Bold"), (n.SOLID = "Solid"), n);
+function I(e) {
+    let { closeAction: l, variant: t = "", keybind: n, className: s } = e;
     return (0, r.jsxs)("div", {
-        className: a()(_.kL, s),
+        className: i()(u.kL, s),
         children: [
-            (0, r.jsx)(l.D, {
-                className: a()(_.b, { [_.EH]: "Bold" === n, [_.O3]: "Solid" === n }),
-                onClick: t,
-                "aria-label": d.intl.string(d.t.cpT0Cq),
+            (0, r.jsx)(a.D, {
+                className: i()(u.b, { [u.EH]: "Bold" === t, [u.O3]: "Solid" === t }),
+                onClick: l,
+                "aria-label": c.intl.string(c.t.cpT0Cq),
                 children:
-                    "Solid" === n
-                        ? (0, r.jsx)(u.a, { size: "md", color: "currentColor", "aria-hidden": !0 })
-                        : (0, r.jsx)(c.P, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
+                    "Solid" === t
+                        ? (0, r.jsx)(E.a, { size: "md", color: "currentColor", "aria-hidden": !0 })
+                        : (0, r.jsx)(d.P, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
             }),
-            o.Fr ? null : (0, r.jsx)("div", { className: _.P, "aria-hidden": !0, children: i }),
+            o.Fr ? null : (0, r.jsx)("div", { className: u.P, "aria-hidden": !0, children: n }),
         ],
     });
 }
-h.Variants = f;
+I.Variants = _;

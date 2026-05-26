@@ -1,123 +1,122 @@
-"use strict";
-n.d(t, { XD: () => p, sv: () => E, eh: () => m, sN: () => A, rM: () => g });
-var i = n(627968);
-n(64700);
-var r = n(317097),
-    s = n(192308);
-n(494921);
-var a = n(77257),
-    o = n(61310),
-    l = n(101058),
-    u = n(486020);
-n(453771);
-var c = n(427262),
-    d = n(228366),
-    _ = n(478644),
-    f = n(339984),
-    h = n(375708);
-function p(e) {
-    let { uploadType: t, guildId: r, analyticsSource: u, filters: c, isTryItOut: p = !1, stackingBehavior: E } = e,
-        m = (0, o.Y)(t, r),
+t.d(r, { XD: () => m, sv: () => _, eh: () => A, sN: () => b, rM: () => g });
+var a = t(627968);
+t(64700);
+var n = t(317097),
+    l = t(192308);
+t(494921);
+var i = t(77257),
+    o = t(61310),
+    s = t(101058),
+    u = t(486020);
+t(453771);
+var c = t(427262),
+    p = t(228366),
+    d = t(478644),
+    f = t(339984),
+    v = t(375708);
+function m(e) {
+    let { uploadType: r, guildId: n, analyticsSource: u, filters: c, isTryItOut: m = !1, stackingBehavior: _ } = e,
+        A = (0, o.Y)(r, n),
         g = null;
-    (0, s.openModalLazy)(
+    (0, l.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
-                n.e("59007"),
-                n.e("32264"),
-                n.e("36029"),
-                n.e("45558"),
-                n.e("63232"),
-                n.e("33902"),
-                n.e("99999"),
-                n.e("50015"),
-                n.e("1555"),
-                n.e("44695"),
-                n.e("31644"),
-                n.e("90244"),
-                n.e("29666"),
-                n.e("80436"),
-                n.e("93513"),
-                n.e("47011"),
-                n.e("79149"),
-                n.e("90017"),
-                n.e("99150"),
-                n.e("60987"),
-            ]).then(n.bind(n, 902550));
-            return (n) =>
-                (0, i.jsx)(e, {
+                t.e("69668"),
+                t.e("32264"),
+                t.e("36029"),
+                t.e("45558"),
+                t.e("63232"),
+                t.e("33902"),
+                t.e("99999"),
+                t.e("50015"),
+                t.e("1555"),
+                t.e("44695"),
+                t.e("31644"),
+                t.e("90244"),
+                t.e("29666"),
+                t.e("80436"),
+                t.e("93513"),
+                t.e("47011"),
+                t.e("79149"),
+                t.e("90017"),
+                t.e("99150"),
+                t.e("60987"),
+            ]).then(t.bind(t, 902550));
+            return (t) =>
+                (0, a.jsx)(e, {
                     filters: c,
-                    maxFileSizeBytes: _.j,
-                    imageSpecifications: t === f.HL.BANNER ? h.intl.string(h.t.IhzZlo) : void 0,
+                    maxFileSizeBytes: d.j,
+                    imageSpecifications: r === f.HL.BANNER ? v.intl.string(v.t.IhzZlo) : void 0,
                     onFileSelected: (e) => {
-                        g = null != m ? a.A.fromBlob(m, e) : null;
+                        g = null != A ? i.A.fromBlob(A, e) : null;
                     },
                     onComplete: async (e) => {
-                        let { assetOrigin: n, imageUri: i, file: s, originalAsset: o } = e;
-                        null == g && null != m && (g = a.A.fromBlob(m, s));
+                        let { assetOrigin: t, imageUri: a, file: l, originalAsset: o } = e;
+                        null == g && null != A && (g = i.A.fromBlob(A, l));
                         let c = (await g?.getOriginalMd5()) ?? null,
-                            _ = s.name.replace(/\.[^/.]+$/, ""),
-                            f = (0, l.Rh)({ filename: _, assetOrigin: n });
+                            d = l.name.replace(/\.[^/.]+$/, ""),
+                            f = (0, s.Rh)({ filename: d, assetOrigin: t });
                         !(function (e) {
                             let {
-                                image: t,
-                                file: n,
-                                uploadType: i,
-                                guildId: r,
-                                analyticsSource: s,
-                                isTryItOut: a = !1,
+                                image: r,
+                                file: t,
+                                uploadType: a,
+                                guildId: n,
+                                analyticsSource: l,
+                                isTryItOut: i = !1,
                             } = e;
-                            d.h.dispatch({
+                            p.h.dispatch({
                                 type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL",
-                                image: t,
-                                file: n,
-                                uploadType: i,
-                                guildId: r,
-                                analyticsSource: s,
-                                isTryItOut: a,
+                                image: r,
+                                file: t,
+                                uploadType: a,
+                                guildId: n,
+                                analyticsSource: l,
+                                isTryItOut: i,
                             });
                         })({
-                            image: (0, l.XB)({
-                                assetOrigin: n,
-                                imageUri: i,
+                            image: (0, s.XB)({
+                                assetOrigin: t,
+                                imageUri: a,
                                 description: f,
                                 originalAsset: o,
                                 originalMd5: c,
                             }),
-                            file: s,
-                            uploadType: t,
-                            guildId: r,
+                            file: l,
+                            uploadType: r,
+                            guildId: n,
                             analyticsSource: u,
-                            isTryItOut: p,
+                            isTryItOut: m,
                         });
                     },
-                    uploadType: t,
+                    uploadType: r,
                     showUpsellHeader: !0,
-                    ...n,
+                    ...t,
                 });
         },
-        { stackingBehavior: E },
+        { stackingBehavior: _ },
     );
 }
-function E(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+function _(e, r, t) {
+    let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (null != e) return e;
-    let { size: r = 80, canAnimate: s = !0 } = i,
-        a = null === e;
-    return a && null == t
-        ? u.Ay.getDefaultAvatarURL(n.id, n.discriminator)
-        : a || t?.avatar == null
-          ? n.getAvatarURL(void 0, r, s)
-          : n.getAvatarURL(t?.guildId, r, s);
-}
-function m(e) {
-    let { pendingNickname: t, pendingGlobalName: n, user: i, guildMember: r } = e,
-        s = "" === t ? null : (t ?? r?.nick),
-        a = "" === n ? i.username : n;
-    return s ?? a ?? c.Ay.getName(i);
-}
-function g(e, t, n) {
-    n(e ?? (null != t ? null : void 0));
+    let { size: n = 80, canAnimate: l = !0 } = a,
+        i = null === e;
+    return i && null == r
+        ? u.Ay.getDefaultAvatarURL(t.id, t.discriminator)
+        : i || r?.avatar == null
+          ? t.getAvatarURL(void 0, n, l)
+          : t.getAvatarURL(r?.guildId, n, l);
 }
 function A(e) {
-    return (null != e ? (0, r.OK)(e) : 1) > 0.25;
+    let { pendingNickname: r, pendingGlobalName: t, user: a, guildMember: n } = e,
+        l = "" === r ? null : (r ?? n?.nick),
+        i = "" === t ? a.username : t;
+    return l ?? i ?? c.Ay.getName(a);
+}
+function g(e, r, t) {
+    t(e ?? (null != r ? null : void 0));
+}
+function b(e) {
+    return (null != e ? (0, n.OK)(e) : 1) > 0.25;
 }

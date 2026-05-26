@@ -1,54 +1,53 @@
-"use strict";
-n.d(t, { F: () => c });
-var i = n(17928),
-    r = n(166403),
-    s = n(532309),
-    a = n(440005),
-    o = n(49132),
-    l = n(150092),
-    u = n(892227);
+i.d(t, { F: () => c });
+var r = i(17928),
+    l = i(166403),
+    a = i(532309),
+    s = i(440005),
+    n = i(49132),
+    o = i(150092),
+    d = i(892227);
 function c(e) {
     let t = e?.location ?? "useNitroProgramReward",
-        n = (0, o.DK)(a.W.NITRO, t),
+        i = (0, n.DK)(s.W.NITRO, t),
         {
             isReady: c,
-            programReward: d,
-            totalDays: _,
-        } = (0, i.cf)([s.A], () => ({
-            isReady: s.A.isReady(),
-            programReward: s.A.getRewardForProgram(a.W.NITRO),
-            totalDays: s.A.getTotalDaysInDuration(a.W.NITRO),
+            programReward: u,
+            totalDays: m,
+        } = (0, r.cf)([a.A], () => ({
+            isReady: a.A.isReady(),
+            programReward: a.A.getRewardForProgram(s.W.NITRO),
+            totalDays: a.A.getTotalDaysInDuration(s.W.NITRO),
         })),
-        f = (0, i.bG)([r.A], () => r.A.getPremiumTypeSubscription()?.isPurchasedExternally ?? !1),
-        h = (0, l.q)(),
+        h = (0, r.bG)([l.A], () => l.A.getPremiumTypeSubscription()?.isPurchasedExternally ?? !1),
+        C = (0, o.q)(),
         p = (function (e, t) {
             if (!t || null == e) return !1;
-            let n = e.next_reward_date,
-                i = e.program_current_state;
-            if (null == i) return !1;
-            if (null == n || "" === n) {
-                if (![a.L.PAYMENT_PROCESSING, a.L.PAYMENT_ERROR].includes(i)) return !1;
+            let i = e.next_reward_date,
+                r = e.program_current_state;
+            if (null == r) return !1;
+            if (null == i || "" === i) {
+                if (![s.L.PAYMENT_PROCESSING, s.L.PAYMENT_ERROR].includes(r)) return !1;
             } else {
-                let e = new Date(n).getTime();
+                let e = new Date(i).getTime();
                 if (Number.isNaN(e) || e < Date.now()) return !1;
             }
             return !0;
-        })(d, n),
-        E = (function (e, t, n) {
-            if (!n || null == e || null == t) return !1;
-            let i = e.next_reward_date;
-            if (null == i || "" === i) return !1;
-            let r = new Date(i).getTime();
-            return !(Number.isNaN(r) || r <= Date.now() || (0, u.default)(new Date(i), new Date()) > t);
-        })(d, _, n);
+        })(u, i),
+        _ = (function (e, t, i) {
+            if (!i || null == e || null == t) return !1;
+            let r = e.next_reward_date;
+            if (null == r || "" === r) return !1;
+            let l = new Date(r).getTime();
+            return !(Number.isNaN(l) || l <= Date.now() || (0, d.default)(new Date(r), new Date()) > t);
+        })(u, m, i);
     return {
-        isEligible: n,
+        isEligible: i,
         isReady: c,
         passesGeneralUIInvariant: p,
-        passesProgressBarInvariant: E,
-        programReward: d,
-        shouldFetch: h,
-        totalDays: _,
-        wouldBeEligibleForNitroOrbsButIsExternalSub: n && f,
+        passesProgressBarInvariant: _,
+        programReward: u,
+        shouldFetch: C,
+        totalDays: m,
+        wouldBeEligibleForNitroOrbsButIsExternalSub: i && h,
     };
 }

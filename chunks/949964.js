@@ -1,94 +1,93 @@
-"use strict";
-n.d(t, { c: () => S, A: () => N });
+n.d(t, { c: () => S, A: () => O });
 var i,
-    r = n(627968);
+    l = n(627968);
 n(64700);
-var s = n(503698),
-    a = n.n(s),
-    o = n(862482),
-    l = n(366010),
-    u = n(534514),
-    c = n(834730),
-    d = n(736653),
-    _ = n(793574),
-    f = n(688810);
-function h(e) {
-    let { analyticsLocations: t } = (0, f.Ay)(...e.newLocations);
-    return (0, r.jsx)(f.di.Provider, { value: t, children: e.children });
+var r = n(503698),
+    s = n.n(r),
+    a = n(862482),
+    c = n(366010),
+    o = n(534514),
+    d = n(834730),
+    u = n(736653),
+    E = n(793574),
+    A = n(688810);
+function _(e) {
+    let { analyticsLocations: t } = (0, A.Ay)(...e.newLocations);
+    return (0, l.jsx)(A.di.Provider, { value: t, children: e.children });
 }
-var p = n(975571),
-    E = n(960851),
-    m = n(396375),
-    g = n(788868),
-    A = n(652215),
-    I = n(375708),
-    T = n(74981),
+var T = n(975571),
+    I = n(960851),
+    N = n(396375),
+    R = n(788868),
+    m = n(652215),
+    C = n(375708),
+    p = n(74981),
     S =
         (((i = {}).SUBSCRIBER_HOME = "SUBSCRIBER_HOME"),
         (i.NITRO_SETTINGS = "SETTINGS"),
         (i.APPLICATION_NITRO_HOME = "APPLICATION_NITRO_HOME"),
         i);
-let N = function (e) {
+let O = function (e) {
     let { variant: t } = e,
-        n = (0, E.cg)(),
-        i = (0, d.Ay)(),
-        s = (0, l.M)(i) ? o.XD.BRAND_INVERTED : o.XD.BRAND;
+        n = (0, I.cg)(),
+        i = (0, u.Ay)(),
+        r = (0, c.M)(i) ? a.XD.BRAND_INVERTED : a.XD.BRAND;
     return n
         ? "APPLICATION_NITRO_HOME" === t
-            ? (0, r.jsx)(
+            ? (0, l.jsx)(
                   () =>
-                      (0, r.jsx)(h, {
-                          newLocations: [_.A.PREMIUM_MARKETING_PAGE_BANNER],
-                          children: (0, r.jsxs)("div", {
-                              className: T._G,
+                      (0, l.jsx)(_, {
+                          newLocations: [E.A.PREMIUM_MARKETING_PAGE_BANNER],
+                          children: (0, l.jsxs)("div", {
+                              className: p._G,
                               children: [
-                                  (0, r.jsx)("div", {
-                                      className: T.V2,
-                                      children: (0, r.jsx)("div", { className: T.N4 }),
+                                  (0, l.jsx)("div", {
+                                      className: p.V2,
+                                      children: (0, l.jsx)("div", { className: p.N4 }),
                                   }),
-                                  (0, r.jsx)("div", {
-                                      className: a()(T.Fg, T.cj),
-                                      children: (0, r.jsx)(c.E, {
+                                  (0, l.jsx)("div", {
+                                      className: s()(p.Fg, p.cj),
+                                      children: (0, l.jsx)(d.E, {
                                           variant: "eyebrow",
                                           color: "always-white",
-                                          children: I.intl.string(I.t.OS9KPu),
+                                          children: C.intl.string(C.t.OS9KPu),
                                       }),
                                   }),
-                                  (0, r.jsxs)("div", {
-                                      className: T.IH,
+                                  (0, l.jsxs)("div", {
+                                      className: p.IH,
                                       children: [
-                                          (0, r.jsx)(u.D, {
-                                              className: T.U_,
+                                          (0, l.jsx)(o.D, {
+                                              className: p.U_,
                                               variant: "heading-xxl/extrabold",
                                               color: "text-strong",
-                                              children: I.intl.string(I.t["+5UxML"]),
+                                              children: C.intl.string(C.t["+5UxML"]),
                                           }),
-                                          (0, r.jsx)(c.E, {
-                                              className: T._M,
+                                          (0, l.jsx)(d.E, {
+                                              className: p._M,
                                               variant: "text-md/medium",
                                               color: "text-subtle",
-                                              children: I.intl.format(I.t["lVOH/p"], {
-                                                  helpCenterLink: p.A.getArticleURL(A.MVz.SUMMER_BOGO_2025),
+                                              children: C.intl.format(C.t["lVOH/p"], {
+                                                  helpCenterLink: T.A.getArticleURL(m.MVz.SUMMER_BOGO_2025),
                                               }),
                                           }),
-                                          (0, r.jsx)(m.A, {
+                                          (0, l.jsx)(N.A, {
                                               textOptions: {
-                                                  textOverride: I.intl.string(I.t.J61px0),
-                                                  textClassName: T.cZ,
+                                                  textOverride: C.intl.string(C.t.J61px0),
+                                                  textClassName: p.cZ,
                                               },
-                                              subscriptionTier: g.pe.TIER_2,
+                                              subscriptionTier: R.pe.TIER_2,
                                               showIcon: !1,
-                                              className: T.xF,
-                                              color: s,
+                                              className: p.xF,
+                                              color: r,
                                           }),
                                       ],
                                   }),
-                                  (0, r.jsx)("div", {
-                                      className: T.ZS,
-                                      children: (0, r.jsx)("img", {
+                                  (0, l.jsx)("div", {
+                                      className: p.ZS,
+                                      children: (0, l.jsx)("img", {
                                           alt: "",
                                           src: "https://cdn.discordapp.com/assets/content/5ed4a5e53464f95f9a0a196a99b667b06b979eee4a7b7ede0442fa433c9833d0.png",
-                                          className: T.F$,
+                                          className: p.F$,
                                       }),
                                   }),
                               ],
@@ -97,56 +96,56 @@ let N = function (e) {
                   {},
               )
             : "SETTINGS" === t
-              ? (0, r.jsx)(
+              ? (0, l.jsx)(
                     () =>
-                        (0, r.jsx)(h, {
-                            newLocations: [_.A.PREMIUM_SETTINGS],
-                            children: (0, r.jsxs)("div", {
-                                className: T.O3,
+                        (0, l.jsx)(_, {
+                            newLocations: [E.A.PREMIUM_SETTINGS],
+                            children: (0, l.jsxs)("div", {
+                                className: p.O3,
                                 children: [
-                                    (0, r.jsx)("div", {
-                                        className: T.V9,
-                                        children: (0, r.jsx)("img", {
+                                    (0, l.jsx)("div", {
+                                        className: p.V9,
+                                        children: (0, l.jsx)("img", {
                                             alt: "",
                                             src: "https://cdn.discordapp.com/assets/content/c363ff378ffd04d0561977f632dc2e1e5ca4906c8850be095be53ea369cdf309.png",
-                                            className: T.$V,
+                                            className: p.$V,
                                         }),
                                     }),
-                                    (0, r.jsxs)("div", {
-                                        className: T.l$,
+                                    (0, l.jsxs)("div", {
+                                        className: p.l$,
                                         children: [
-                                            (0, r.jsx)(u.D, {
-                                                className: T.U_,
+                                            (0, l.jsx)(o.D, {
+                                                className: p.U_,
                                                 variant: "heading-lg/extrabold",
                                                 color: "text-strong",
-                                                children: I.intl.string(I.t["+5UxML"]),
+                                                children: C.intl.string(C.t["+5UxML"]),
                                             }),
-                                            (0, r.jsx)(c.E, {
-                                                className: T._M,
+                                            (0, l.jsx)(d.E, {
+                                                className: p._M,
                                                 variant: "text-sm/medium",
                                                 color: "text-subtle",
-                                                children: I.intl.format(I.t["lVOH/p"], {
-                                                    helpCenterLink: p.A.getArticleURL(A.MVz.SUMMER_BOGO_2025),
+                                                children: C.intl.format(C.t["lVOH/p"], {
+                                                    helpCenterLink: T.A.getArticleURL(m.MVz.SUMMER_BOGO_2025),
                                                 }),
                                             }),
-                                            (0, r.jsx)(m.A, {
+                                            (0, l.jsx)(N.A, {
                                                 textOptions: {
-                                                    textOverride: I.intl.string(I.t.J61px0),
-                                                    textClassName: T.cZ,
+                                                    textOverride: C.intl.string(C.t.J61px0),
+                                                    textClassName: p.cZ,
                                                 },
-                                                subscriptionTier: g.pe.TIER_2,
+                                                subscriptionTier: R.pe.TIER_2,
                                                 showIcon: !1,
-                                                className: T.xF,
-                                                color: s,
+                                                className: p.xF,
+                                                color: r,
                                             }),
                                         ],
                                     }),
-                                    (0, r.jsx)("div", {
-                                        className: T.m0,
-                                        children: (0, r.jsx)("img", {
+                                    (0, l.jsx)("div", {
+                                        className: p.m0,
+                                        children: (0, l.jsx)("img", {
                                             alt: "",
                                             src: "https://cdn.discordapp.com/assets/content/4135eb5d081957191871c8ca942b65dab5d2c7cc0aea71c6099dc470d4b648c8.png",
-                                            className: T.$V,
+                                            className: p.$V,
                                         }),
                                     }),
                                 ],
@@ -154,42 +153,42 @@ let N = function (e) {
                         }),
                     {},
                 )
-              : (0, r.jsx)(
+              : (0, l.jsx)(
                     () =>
-                        (0, r.jsxs)("div", {
-                            className: T.jo,
+                        (0, l.jsxs)("div", {
+                            className: p.jo,
                             children: [
-                                (0, r.jsx)("div", {
-                                    className: T.yk,
-                                    children: (0, r.jsx)("img", {
+                                (0, l.jsx)("div", {
+                                    className: p.yk,
+                                    children: (0, l.jsx)("img", {
                                         alt: "",
                                         src: "https://cdn.discordapp.com/assets/content/e575cd15e039114aa5d6e92f4466b42043e8c035b5c26785806ce1e497892c7b.png",
-                                        className: T.$V,
+                                        className: p.$V,
                                     }),
                                 }),
-                                (0, r.jsxs)("div", {
-                                    className: T.Ep,
+                                (0, l.jsxs)("div", {
+                                    className: p.Ep,
                                     children: [
-                                        (0, r.jsx)(u.D, {
-                                            className: T.U_,
+                                        (0, l.jsx)(o.D, {
+                                            className: p.U_,
                                             variant: "heading-md/extrabold",
                                             color: "text-strong",
-                                            children: I.intl.string(I.t["+5UxML"]),
+                                            children: C.intl.string(C.t["+5UxML"]),
                                         }),
-                                        (0, r.jsx)(c.E, {
-                                            className: T._M,
+                                        (0, l.jsx)(d.E, {
+                                            className: p._M,
                                             variant: "text-sm/medium",
                                             color: "text-subtle",
-                                            children: I.intl.format(I.t["lVOH/p"], {
-                                                helpCenterLink: p.A.getArticleURL(A.MVz.SUMMER_BOGO_2025),
+                                            children: C.intl.format(C.t["lVOH/p"], {
+                                                helpCenterLink: T.A.getArticleURL(m.MVz.SUMMER_BOGO_2025),
                                             }),
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)(m.A, {
-                                    subscriptionTier: g.pe.TIER_2,
+                                (0, l.jsx)(N.A, {
+                                    subscriptionTier: R.pe.TIER_2,
                                     showIcon: !0,
-                                    shinyButtonClassName: T.Xp,
+                                    shinyButtonClassName: p.Xp,
                                     hasActivePromotion: !0,
                                 }),
                             ],

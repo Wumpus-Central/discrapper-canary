@@ -1,54 +1,53 @@
-"use strict";
-n.d(t, { A: () => c });
-var i = n(627968);
-n(64700);
-var r = n(97808),
-    s = n(778712),
-    a = n(854627),
-    o = n(19575),
-    l = n(375708);
-let u = o.Ay.getEnableHardwareAcceleration() ? r.Js : r.eu,
-    c = (e) => {
+i.d(t, { A: () => c });
+var e = i(627968);
+i(64700);
+var r = i(97808),
+    n = i(778712),
+    s = i(854627),
+    l = i(19575),
+    d = i(375708);
+let u = l.Ay.getEnableHardwareAcceleration() ? r.Js : r.eu,
+    c = (a) => {
         let {
                 user: t,
-                guildId: n,
+                guildId: i,
                 avatarDecorationOverride: r,
-                status: o,
-                avatarSize: c = s._3.SIZE_120,
-                "aria-hidden": d = !1,
-                className: _,
-                animateOnHover: f = !1,
-                questPreviewRewardAssetUrl: h = null,
-                decorationName: p,
-            } = e,
+                status: l,
+                avatarSize: c = n._3.SIZE_120,
+                "aria-hidden": o = !1,
+                className: h,
+                animateOnHover: p = !1,
+                questPreviewRewardAssetUrl: g = null,
+                decorationName: _,
+            } = a,
             {
-                avatarDecorationSrc: E,
-                avatarSrc: m,
-                eventHandlers: g,
-            } = (0, a.A)({
+                avatarDecorationSrc: b,
+                avatarSrc: k,
+                eventHandlers: w,
+            } = (0, s.A)({
                 userId: t.id,
-                guildId: n,
+                guildId: i,
                 size: c,
                 showPending: !0,
                 avatarDecorationOverride: r,
-                animateOnHover: f,
+                animateOnHover: p,
             }),
-            A = (() => {
-                if (!d)
-                    return "string" == typeof p
-                        ? l.intl.formatToPlainString(l.t.Do2lxE, { a11y_text: p })
-                        : null === p
-                          ? l.intl.string(l.t["7hRBmC"])
-                          : l.intl.string(l.t.lqaIxI);
+            x = (() => {
+                if (!o)
+                    return "string" == typeof _
+                        ? d.intl.formatToPlainString(d.t.Do2lxE, { a11y_text: _ })
+                        : null === _
+                          ? d.intl.string(d.t["7hRBmC"])
+                          : d.intl.string(d.t.lqaIxI);
             })();
-        return (0, i.jsx)(u, {
-            avatarDecoration: E ?? h,
-            src: m,
+        return (0, e.jsx)(u, {
+            avatarDecoration: b ?? g,
+            src: k,
             size: c,
-            status: o,
-            "aria-label": A,
-            "aria-hidden": d,
-            className: _,
-            ...g,
+            status: l,
+            "aria-label": x,
+            "aria-hidden": o,
+            className: h,
+            ...w,
         });
     };

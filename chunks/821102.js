@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => I }), n(323874), n(14289), n(35956);
-var i = n(17928),
-    r = n(803805),
-    s = n(228366),
-    a = n(652215),
-    o = n(375708);
-let l = "webm",
-    u = !(function (e) {
+r.d(t, { A: () => _ }), r(323874), r(14289), r(35956);
+var s = r(17928),
+    n = r(803805),
+    l = r(228366),
+    i = r(652215),
+    a = r(375708);
+let o = "webm",
+    c = !(function (e) {
         switch (e) {
             case "fixed_height.mp4":
             case "fixed_height_small.mp4":
@@ -17,102 +16,102 @@ let l = "webm",
             case "mp4":
             case "tinymp4":
             case "nanomp4":
-            case l:
+            case o:
             case "tinywebm":
             case "nanowebm":
                 return !0;
             default:
                 return !1;
         }
-    })(l)
-        ? r.TL.IMAGE
-        : r.TL.VIDEO,
-    c = null,
+    })(o)
+        ? n.TL.IMAGE
+        : n.TL.VIDEO,
+    u = null,
     d = "",
-    _ = "",
-    f = [],
-    h = [],
+    h = "",
+    m = [],
     p = [],
-    E = [];
-function m(e) {
+    g = [],
+    f = [];
+function I(e) {
     return e.replace(/^https?:/, "");
 }
-function g(e) {
+function E(e) {
     try {
         let t = new URL(e).pathname.toLowerCase();
-        if (t.endsWith(".mp4") || t.endsWith(".webm")) return r.TL.VIDEO;
+        if (t.endsWith(".mp4") || t.endsWith(".webm")) return n.TL.VIDEO;
     } catch {}
-    return r.TL.IMAGE;
+    return n.TL.IMAGE;
 }
-class A extends i.Ay.Store {
+class R extends s.Ay.Store {
     static displayName = "GIFPickerViewStore";
     getAnalyticsID() {
-        return c;
+        return u;
     }
     getQuery() {
         return d;
     }
     getResultQuery() {
-        return _;
-    }
-    getResultItems() {
-        return f;
-    }
-    getTrendingCategories() {
         return h;
     }
-    getSelectedFormat() {
-        return l;
+    getResultItems() {
+        return m;
     }
-    getSuggestions() {
+    getTrendingCategories() {
         return p;
     }
+    getSelectedFormat() {
+        return o;
+    }
+    getSuggestions() {
+        return g;
+    }
     getTrendingSearchTerms() {
-        return E;
+        return f;
     }
 }
-let I = new A(s.h, {
+let _ = new R(l.h, {
     GIF_PICKER_INITIALIZE: function (e) {
-        c = e.analyticsID;
+        u = e.analyticsID;
     },
     GIF_PICKER_QUERY: function (e) {
-        "" === (d = e.query) && ((_ = ""), (f = []), (p = []));
+        "" === (d = e.query) && ((h = ""), (m = []), (g = []));
     },
     GIF_PICKER_QUERY_SUCCESS: function (e) {
-        if (null != e.query && d === _) return !1;
-        null != e.query && (_ = e.query),
-            (f = e.items.map((e) => {
-                let { width: t, height: n, src: i, gif_src: r, url: s, id: a } = e;
-                return { width: t, height: n, src: m(i), gifSrc: m(r), url: s, id: a, format: u };
+        if (null != e.query && d === h) return !1;
+        null != e.query && (h = e.query),
+            (m = e.items.map((e) => {
+                let { width: t, height: r, src: s, gif_src: n, url: l, id: i } = e;
+                return { width: t, height: r, src: I(s), gifSrc: I(n), url: l, id: i, format: c };
             }));
     },
     GIF_PICKER_QUERY_FAILURE: function (e) {
         let { query: t } = e;
         if (null == t) return !1;
-        (_ = t), (f = []);
+        (h = t), (m = []);
     },
     GIF_PICKER_TRENDING_FETCH_SUCCESS: function (e) {
         let t = e.trendingCategories;
-        h = [
+        p = [
             ...(null != e.trendingGIFPreview
                 ? [
                       {
-                          type: a.dD.TRENDING_GIFS,
-                          name: o.intl.string(o.t.H6zNFz),
-                          src: m(e.trendingGIFPreview.src),
-                          format: g(e.trendingGIFPreview.src),
+                          type: i.dD.TRENDING_GIFS,
+                          name: a.intl.string(a.t.H6zNFz),
+                          src: I(e.trendingGIFPreview.src),
+                          format: E(e.trendingGIFPreview.src),
                       },
                   ]
                 : []),
-            ...t.map((e) => ({ ...e, src: m(e.src), type: a.dD.TRENDING_CATEGORY, format: g(e.src) })),
+            ...t.map((e) => ({ ...e, src: I(e.src), type: i.dD.TRENDING_CATEGORY, format: E(e.src) })),
         ];
     },
     GIF_PICKER_SUGGESTIONS_SUCCESS: function (e) {
         let { items: t } = e;
-        p = t;
+        g = t;
     },
     GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: function (e) {
         let { items: t } = e;
-        E = t;
+        f = t;
     },
 });

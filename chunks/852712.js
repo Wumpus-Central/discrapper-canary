@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { _: () => s, d: () => a });
+n.d(t, { _: () => s, d: () => r });
 var i = n(621380);
-let r = [i.m.VOICE_ISOLATION, i.m.STUDIO, i.m.CUSTOM];
+let l = [i.m.VOICE_ISOLATION, i.m.STUDIO, i.m.CUSTOM];
 function s(e) {
     let { location: t } = e;
-    return { enabledInputProfiles: r };
+    return { enabledInputProfiles: l };
 }
-function a(e) {
+function r(e) {
     let { location: t } = e;
-    return { enabledInputProfiles: r };
+    return { enabledInputProfiles: l };
 }

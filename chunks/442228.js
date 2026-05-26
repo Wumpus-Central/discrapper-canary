@@ -1,58 +1,57 @@
-"use strict";
-n.d(t, { A: () => E });
-var i = n(627968),
+n.d(t, { A: () => S });
+var l = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(140735),
-    l = n(707554),
+    a = n(503698),
+    i = n.n(a),
+    s = n(140735),
+    o = n(707554),
     u = n(123292),
     c = n(688810),
     d = n(183555),
-    _ = n(975732),
-    f = n(308244),
-    h = n(375708),
-    p = n(851929);
-let E = r.memo(function (e) {
-    let { user: t, onClose: n, bio: s, hidePersonalInformation: E, viewFullBioDisabled: m = !1 } = e,
-        { context: g } = (0, d.NJ)(),
-        { analyticsLocations: A } = (0, c.Ay)(),
-        I = r.useId(),
-        [T, S] = r.useState(!1),
-        [N, y] = r.useState(!1),
+    f = n(975732),
+    h = n(308244),
+    A = n(375708),
+    m = n(851929);
+let S = r.memo(function (e) {
+    let { user: t, onClose: n, bio: a, hidePersonalInformation: S, viewFullBioDisabled: g = !1 } = e,
+        { context: x } = (0, d.NJ)(),
+        { analyticsLocations: T } = (0, c.Ay)(),
+        E = r.useId(),
+        [p, R] = r.useState(!1),
+        [v, y] = r.useState(!1),
         C = r.useRef(null);
-    return E || null == s || "" === s
+    return S || null == a || "" === a
         ? null
-        : (0, i.jsxs)("section", {
-              "aria-labelledby": I,
+        : (0, l.jsxs)("section", {
+              "aria-labelledby": E,
               children: [
-                  (0, i.jsx)(o.A, { children: (0, i.jsx)(l.H, { id: I, children: h.intl.string(h.t.ZzAR2Y) }) }),
-                  (0, i.jsx)("div", {
+                  (0, l.jsx)(s.A, { children: (0, l.jsx)(o.H, { id: E, children: A.intl.string(A.t.ZzAR2Y) }) }),
+                  (0, l.jsx)("div", {
                       ref: (e) => {
                           (C.current = e),
                               null == e ||
-                                  (S(!N && e.scrollHeight - e.clientHeight > 1),
+                                  (R(!v && e.scrollHeight - e.clientHeight > 1),
                                   e.getBoundingClientRect().height > 57.75 && y(!0));
                       },
-                      className: a()(p.mA, N && p.Em),
+                      className: i()(m.mA, v && m.Em),
                       onBlur: (e) => {
                           null == C.current || C.current.contains(e.relatedTarget) || (C.current.scrollTop = 0);
                       },
-                      children: (0, i.jsx)(f.A, { userBio: s, setLineClamp: !1, textColor: "text-strong" }),
+                      children: (0, l.jsx)(h.A, { userBio: a, setLineClamp: !1, textColor: "text-strong" }),
                   }),
-                  (T || N) &&
-                      (0, i.jsx)("div", {
-                          className: p.HV,
-                          children: (0, i.jsx)(u.Q, {
+                  (p || v) &&
+                      (0, l.jsx)("div", {
+                          className: m.HV,
+                          children: (0, l.jsx)(u.Q, {
                               textVariant: "text-xs/normal",
                               size: "sm",
                               variant: "secondary",
-                              text: h.intl.string(h.t.YDiPq8),
+                              text: A.intl.string(A.t.YDiPq8),
                               onClick: () => {
                                   n?.(),
-                                      (0, _.openUserProfileModal)({ ...g, userId: t.id, sourceAnalyticsLocations: A });
+                                      (0, f.openUserProfileModal)({ ...x, userId: t.id, sourceAnalyticsLocations: T });
                               },
-                              disabled: m,
+                              disabled: g,
                           }),
                       }),
               ],
