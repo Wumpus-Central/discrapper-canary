@@ -1126,12 +1126,18 @@
     }
 }
 
-@media screen and (max-height:550px),
-screen and (max-width:485px) {
+@media screen and (max-width:485px) {
     .animatedDiv_b97385 {
         max-height: 100%;
-        overflow-y: scroll;
+        overflow-y: auto;
         width: 100%
+    }
+}
+
+@media screen and (max-height:550px) {
+    .animatedDiv_b97385 {
+        max-height: 100%;
+        overflow-y: auto
     }
 }
 
