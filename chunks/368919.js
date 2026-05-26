@@ -21,7 +21,7 @@ var i = n(627968),
     T = n(945096);
 let S = "--custom-display-name-styles-main-color";
 var N = n(252545),
-    y = n(875358);
+    y = n(888094);
 let C = [l.x.CHERRY_BOMB, l.x.CHICLE],
     v = r.memo(function (e) {
         let {
@@ -117,19 +117,19 @@ let C = [l.x.CHERRY_BOMB, l.x.CHICLE],
                 switch (e) {
                     case o.z.GRADIENT:
                     case o.z.GLOW:
-                        return { effectClassName: y.D7 };
+                        return y.D7;
                     case o.z.NEON:
-                        return { effectClassName: y.lw, glowClassName: y._4 };
+                        return y.lw;
                     case o.z.TOON:
-                        return { effectClassName: y.lQ };
+                        return y.lQ;
                     case o.z.POP:
-                        return { effectClassName: y.uY };
+                        return y.uY;
                     case o.z.SOLID:
                     default:
-                        return { effectClassName: y.QJ };
+                        return y.QJ;
                 }
             })(x),
-            B = (0, i.jsxs)("div", {
+            B = (0, i.jsx)("div", {
                 className: a()(y.kL, L, p, {
                     [y.rD]: s !== I.G.PLAIN,
                     [y.CS]: s === I.G.ANIMATED && !w,
@@ -138,19 +138,11 @@ let C = [l.x.CHERRY_BOMB, l.x.CHICLE],
                     [y.Tn]: null != D,
                 }),
                 style: F,
-                children: [
-                    (0, i.jsx)("span", {
-                        "data-username-with-effects": U,
-                        className: a()(y.WH, V?.effectClassName, { [y._W]: b }),
-                        children: k,
-                    }),
-                    V?.glowClassName != null &&
-                        (0, i.jsx)("span", {
-                            className: a()(y.l1, y.WH, V.glowClassName),
-                            "aria-hidden": !0,
-                            children: U,
-                        }),
-                ],
+                children: (0, i.jsx)("span", {
+                    "data-username-with-effects": U,
+                    className: a()(y.WH, V, { [y._W]: b }),
+                    children: k,
+                }),
             });
         return null != D ? (0, i.jsxs)("div", { className: y.g8, children: [B, D] }) : B;
     });
