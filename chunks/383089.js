@@ -1,4 +1,4 @@
-n.d(i, { m: () => u });
+n.d(i, { m: () => h });
 var s = n(627968);
 n(64700);
 var e = n(224640),
@@ -9,55 +9,56 @@ var e = n(224640),
     d = n(834730),
     o = n(665711),
     x = n(41032),
-    j = n(375708),
-    m = n(376960);
-function u(t) {
+    j = n(188275),
+    m = n(375708),
+    u = n(692288);
+function h(t) {
     let {
         sku: i,
         application: n,
         primaryCTAButtonProps: r,
         transitionState: c,
         onClose: o,
-        hasAlreadyLinked: u,
-        canStartAuthorization: v,
-        bodyText: p,
-        title: N,
+        hasAlreadyLinked: h,
+        canStartAuthorization: p,
+        bodyText: N,
+        title: g,
     } = t;
     return (0, s.jsxs)(e.d, {
         transitionState: c,
         onClose: o,
-        "aria-label": N,
+        "aria-label": g,
         children: [
-            (0, s.jsx)(x.z, { sku: i, title: N }),
+            (0, s.jsx)(x.z, { sku: i, title: g }),
             (0, s.jsxs)(l.c, {
                 children: [
                     (0, s.jsxs)("div", {
-                        className: m.S3,
+                        className: u.S3,
                         children: [
                             (0, s.jsx)(d.E, {
                                 variant: "text-md/normal",
                                 color: "text-subtle",
-                                className: m.jJ,
-                                children: p,
+                                className: u.jJ,
+                                children: N,
                             }),
-                            (0, s.jsx)(h, { isConnected: u, application: n }),
+                            (0, s.jsx)(v, { isConnected: h, application: n }),
                         ],
                     }),
-                    !v &&
-                        !u &&
+                    !p &&
+                        !h &&
                         (0, s.jsx)(d.E, {
                             variant: "text-md/normal",
-                            className: m.tl,
+                            className: u.tl,
                             color: "text-feedback-warning",
-                            children: j.intl.string(j.t.GDL8wb),
+                            children: m.intl.string(m.t.GDL8wb),
                         }),
-                    !u &&
+                    !h &&
                         (0, s.jsx)("div", {
-                            className: m.ZT,
+                            className: u.ZT,
                             children: (0, s.jsx)(d.E, {
                                 variant: "text-xs/normal",
                                 color: "text-subtle",
-                                children: j.intl.formatToPlainString(j.t.TTj7ME, { numDays: 14 }),
+                                children: m.intl.formatToPlainString(m.t.TTj7ME, { numDays: j.tG }),
                             }),
                         }),
                 ],
@@ -66,31 +67,31 @@ function u(t) {
         ],
     });
 }
-function h(t) {
+function v(t) {
     let { isConnected: i, application: n } = t;
     return i
         ? (0, s.jsx)("div", {
-              className: m.II,
+              className: u.II,
               children: (0, s.jsxs)("div", {
-                  className: m.jf,
+                  className: u.jf,
                   children: [
                       (0, s.jsxs)("div", {
-                          className: m.iN,
+                          className: u.iN,
                           children: [
                               (0, s.jsx)("div", {
-                                  className: m.I8,
+                                  className: u.I8,
                                   children: (0, s.jsx)(c.U, { size: "xs", color: "currentColor" }),
                               }),
                               (0, s.jsx)(d.E, {
                                   variant: "text-md/normal",
-                                  className: m.qS,
+                                  className: u.qS,
                                   color: "text-subtle",
-                                  children: j.intl.string(j.t["LV+CXH"]),
+                                  children: m.intl.string(m.t["LV+CXH"]),
                               }),
                           ],
                       }),
                       (0, s.jsx)("div", {
-                          className: m.vA,
+                          className: u.vA,
                           children: (0, s.jsx)(o.W, { application: n, iconSize: 20 }),
                       }),
                   ],
@@ -98,6 +99,6 @@ function h(t) {
           })
         : (0, s.jsx)(r.w, {
               type: "warning",
-              children: (0, s.jsx)(d.E, { variant: "text-sm/medium", children: j.intl.string(j.t.Plv1Xk) }),
+              children: (0, s.jsx)(d.E, { variant: "text-sm/medium", children: m.intl.string(m.t.Plv1Xk) }),
           });
 }
