@@ -38,8 +38,8 @@ var c = l(17928),
     F = l(565645),
     Z = l(927813),
     H = l(375708),
-    V = l(544711),
-    B = l(839029);
+    V = l(780999),
+    B = l(861173);
 let J = 6 * Z.A.Millis.SECOND;
 function K(e) {
     let { emoji: t, guildId: l } = e,
@@ -262,7 +262,7 @@ var eo = l(830917),
     ev = l(424632),
     eE = l(902916),
     eN = l(818348),
-    eb = l(70038);
+    eb = l(482390);
 let eI = new p.A("ImageEditor"),
     eA = { width: 288, height: 288 },
     eS = r.forwardRef(function (e, t) {
@@ -580,7 +580,7 @@ let e_ = (e, t, l) => {
         s = Math.floor(i < 1 ? 128 * i : 128 / i);
     return { ...e, cropDimensions: a, resizeHeight: i < 1 ? s : 128, resizeWidth: i > 1 ? s : 128 };
 };
-var eC = l(976998);
+var eC = l(905702);
 let ey = new p.A("EmojiStudio"),
     ew = (e) => {
         var t;
@@ -902,7 +902,7 @@ let ey = new p.A("EmojiStudio"),
         let { src: t, alt: l } = e;
         return null == t || "" === t ? (0, n.jsx)("div", { className: eC.A3 }) : (0, n.jsx)("img", { src: t, alt: l });
     };
-var eR = l(387259);
+var eR = l(250747);
 let eD = (e) => {
     let { transitionState: t, guildId: l } = e,
         r = "userImage" in e ? e.userImage : void 0,

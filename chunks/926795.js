@@ -7,7 +7,7 @@ var l = n(627968),
     o = n(834730),
     u = n(349288),
     c = n(375708),
-    d = n(236540);
+    d = n(94204);
 let p = (e) => {
         let { className: t, isEmailResent: n, resendEmail: a } = e;
         return (0, l.jsx)("div", {
@@ -44,7 +44,7 @@ let p = (e) => {
     };
 var h = n(69494),
     C = n(482132),
-    A = n(411097);
+    A = n(599961);
 function y() {
     let [e, t] = a.useState(!1),
         n = async () => {

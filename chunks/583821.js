@@ -106,7 +106,7 @@ var el = t(345938),
     en = t(317560),
     ea = t(429635),
     es = t(533406),
-    er = t(106757);
+    er = t(964421);
 function ei(e) {
     let { mediaItems: l, labels: t, selectedIndex: a, onSelectIndex: s } = e;
     return l.length <= 1
@@ -160,8 +160,8 @@ var eo = t(263911),
     ej = t(287809),
     eg = t(49999),
     ef = t(788868),
-    ep = t(635297),
-    ev = t(999932);
+    ep = t(530066),
+    ev = t(942460);
 function eA(e) {
     let { sku: l, location: t, analyticsLocations: s, onCheckout: r } = e,
         i = (0, L.JL)({ sku: l }),
@@ -325,7 +325,7 @@ var e_ = t(775602),
     eE = t(175671),
     eN = t(619517),
     ek = t(34337),
-    eS = t(745903);
+    eS = t(172079);
 let eI = (e) => (0, ek.$o)({ ...e, className: eS.tN, mediaPlayerClassName: eS.yf }),
     eT = (e) => (0, n.jsx)(eN.Ay, { ...e });
 function eR(e) {
@@ -401,7 +401,7 @@ var ey = t(743693),
     eO = t(995393),
     eL = t(188275),
     eU = t(652215),
-    eD = t(793020);
+    eD = t(334588);
 function eM(e) {
     let { sku: l } = e;
     return null == l
@@ -828,7 +828,7 @@ var eG = t(615300),
     eJ = t(848752),
     ez = t(452282),
     eV = t(625494),
-    eX = t(457911);
+    eX = t(55607);
 let eK = (e) => (0, ek.$o)({ ...e, className: eX.tN, mediaPlayerClassName: eX.yf }),
     eQ = (e) => (0, n.jsx)(eN.Ay, { ...e });
 function eZ(e) {
@@ -888,7 +888,7 @@ function e1(e) {
               children: (0, n.jsx)("img", { alt: "", className: eX.tv, src: l.src, draggable: !1 }),
           });
 }
-let e3 = (0, e$.A)((e) => {
+let e4 = (0, e$.A)((e) => {
     let {
             items: l,
             className: t,
@@ -1095,7 +1095,7 @@ let e3 = (0, e$.A)((e) => {
         ],
     });
 });
-var e4 = t(894562);
+var e3 = t(199138);
 function e2(e) {
     let { sku: l } = e,
         { normalPrice: t, discountedPrice: a, discountPercent: s } = (0, L.CD)({ sku: l });
@@ -1103,10 +1103,10 @@ function e2(e) {
         ? null
         : null != s && null != a
           ? (0, n.jsxs)("div", {
-                className: e4.TS,
+                className: e3.TS,
                 children: [
                     (0, n.jsx)(u.D, {
-                        className: e4.of,
+                        className: e3.of,
                         variant: "heading-md/medium",
                         color: "text-muted",
                         lineClamp: 1,
@@ -1186,18 +1186,18 @@ function e7(e) {
     return null == l
         ? null
         : (0, n.jsxs)("div", {
-              className: e4.wt,
+              className: e3.wt,
               children: [
-                  l.exclusive && (0, n.jsx)("div", { className: e4.K3, children: (0, n.jsx)(eo.I, {}) }),
+                  l.exclusive && (0, n.jsx)("div", { className: e3.K3, children: (0, n.jsx)(eo.I, {}) }),
                   (0, n.jsxs)("div", {
-                      className: e4.AX,
+                      className: e3.AX,
                       children: [
                           (0, n.jsx)(u.D, { variant: "heading-xl/bold", color: "text-strong", children: l.name }),
                           (0, n.jsx)(m.E, { variant: "text-sm/medium", color: "text-subtle", children: l.description }),
                       ],
                   }),
                   (0, n.jsxs)("div", {
-                      className: e4.sj,
+                      className: e3.sj,
                       children: [
                           (0, n.jsx)(ec.V, {}),
                           (0, n.jsx)(e2, { sku: l }),
@@ -1210,7 +1210,7 @@ function e7(e) {
                       ],
                   }),
                   (0, n.jsxs)("div", {
-                      className: e4.NC,
+                      className: e3.NC,
                       children: [
                           !v &&
                               (0, n.jsx)(m.E, {
@@ -1284,23 +1284,23 @@ function e5(e) {
     }, [l, s, t]),
     0 === d.length)
         ? null
-        : (0, n.jsx)(e3, { className: e4.Dk, items: d, onItemChange: x, isMuted: i, onTrackClick: o });
+        : (0, n.jsx)(e4, { className: e3.Dk, items: d, onItemChange: x, isMuted: i, onTrackClick: o });
 }
 function e9(e) {
     let { selectedCarouselItem: l, applicationId: t } = e;
     if (null == l) return null;
     let a = null != l.labelIconAssetId ? (0, Y.YE)(t, l.labelIconAssetId) : null;
     return (0, n.jsxs)("div", {
-        className: e4.HI,
+        className: e3.HI,
         children: [
-            null != a && (0, n.jsx)("img", { className: e4.IX, src: a, alt: l.label }, a),
+            null != a && (0, n.jsx)("img", { className: e3.IX, src: a, alt: l.label }, a),
             (0, n.jsx)(m.E, { variant: "text-xs/medium", color: "text-strong", children: l.label }),
         ],
     });
 }
 function e6(e) {
     let { onClick: l, children: t, ariaLabel: a } = e;
-    return (0, n.jsx)(g.D, { onClick: l, className: e4.jU, "aria-label": a, role: "button", children: t });
+    return (0, n.jsx)(g.D, { onClick: l, className: e3.jU, "aria-label": a, role: "button", children: t });
 }
 function e8(e) {
     return !(function (e) {
@@ -1394,19 +1394,19 @@ function le(e) {
             transitionState: l,
             "hide-shadow": !0,
             parentComponent: "SocialLayerStorefrontProductDetailsModal",
-            className: e4.CR,
+            className: e3.CR,
             size: v.rI.DYNAMIC,
             returnRef: t,
             children: (0, n.jsxs)(v.$m, {
-                className: e4.jE,
+                className: e3.jE,
                 children: [
                     (0, n.jsxs)("div", {
-                        className: e4.op,
+                        className: e3.op,
                         style: { background: V },
                         children: [
                             (0, n.jsx)("div", {
-                                className: e4.r$,
-                                children: null != ea ? (0, n.jsx)("img", { className: e4.wm, src: ea, alt: "" }) : null,
+                                className: e3.r$,
+                                children: null != ea ? (0, n.jsx)("img", { className: e3.wm, src: ea, alt: "" }) : null,
                             }),
                             (0, n.jsx)(e9, { applicationId: i, selectedCarouselItem: J }),
                             (0, n.jsx)(e7, {
@@ -1422,7 +1422,7 @@ function le(e) {
                         ],
                     }),
                     (0, n.jsxs)("div", {
-                        className: e4.Cf,
+                        className: e3.Cf,
                         children: [
                             (0, n.jsx)(e5, {
                                 sku: W,
@@ -1433,13 +1433,13 @@ function le(e) {
                                 trackPDPClick: X,
                             }),
                             (0, n.jsxs)("div", {
-                                className: e4.V7,
+                                className: e3.V7,
                                 children: [
                                     null != W &&
                                         (0, n.jsx)(ey._, {
                                             sku: W,
                                             isCardHovered: !0,
-                                            className: o()(e4.jU, e4.ij),
+                                            className: o()(e3.jU, e3.ij),
                                             trackButtonClick: Z,
                                             variant: "overlay-secondary",
                                             location: "social_layer_storefront_product_details_modal",
@@ -1473,10 +1473,10 @@ function le(e) {
 function ll(e) {
     let { timeRemaining: l, text: t } = e;
     return (0, n.jsx)(N.A, {
-        className: e4.qw,
+        className: e3.qw,
         Icon: h.C,
         children: (0, n.jsxs)("div", {
-            className: e4.Yu,
+            className: e3.Yu,
             children: [
                 (0, n.jsxs)(m.E, {
                     variant: "text-xs/bold",
@@ -1484,7 +1484,7 @@ function ll(e) {
                     children: [K.intl.string(K.t.yYEZGi), null != l && ` (${l})`],
                 }),
                 (0, n.jsx)("div", {
-                    className: e4.fb,
+                    className: e3.fb,
                     children: (0, n.jsx)(m.E, { variant: "text-xs/medium", color: "currentColor", children: t }),
                 }),
             ],

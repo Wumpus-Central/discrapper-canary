@@ -58,9 +58,9 @@ var D = s(342952),
     el = s(403362),
     er = s(279250),
     en = s(652215),
-    ea = s(864204),
+    ea = s(710787),
     ec = s(375708),
-    eo = s(222391);
+    eo = s(617335);
 function ed(e) {
     let { result: t, onSelectChannel: s } = e,
         l = (0, u.bG)([ee.A], () => ee.A.getGuild(t.record.guild_id)),
@@ -382,7 +382,7 @@ function eG(e) {
 function eb() {
     return [l.useContext(eT), l.useContext(eL)];
 }
-var eD = s(596876);
+var eD = s(67788);
 function eP() {
     let [{ selectedSource: e }] = eb(),
         [t, s] = l.useState(null),
@@ -439,7 +439,7 @@ function eP() {
 var eF = s(534514),
     ek = s(66455),
     eZ = s(775602),
-    eH = s(617839);
+    eH = s(120559);
 let eB = l.memo(function (e) {
     let { className: t, animated: s = !1 } = e,
         r = l.useId();
@@ -1312,7 +1312,7 @@ let eB = l.memo(function (e) {
 });
 var eV = s(325278),
     eQ = s(818348),
-    eW = s(726714);
+    eW = s(538298);
 function ez(e) {
     let { id: t, text: s, icon: l, selected: r, onClick: a } = e;
     return (0, i.jsx)(P.D, {
@@ -1405,8 +1405,8 @@ var eX = s(843402),
     eJ = s(290805),
     eK = s(971276),
     e1 = s(639214),
-    e2 = s(82811);
-function e0(e, t, s, i) {
+    e0 = s(495163);
+function e2(e, t, s, i) {
     let l = (0, M.isWindows)() ? (0, G.A)(_.Ay, R.A) : null,
         r = _.Ay.getRunningGames(),
         n = s?.split(":")[1],
@@ -1424,7 +1424,7 @@ function e5(e) {
         ? (0, i.jsx)(p.k, { size: "xs" })
         : t.id.startsWith(d.fS.WINDOW)
           ? null != t.icon && "" !== t.icon
-              ? (0, i.jsx)("img", { src: t.icon, className: e2.pI, alt: "" })
+              ? (0, i.jsx)("img", { src: t.icon, className: e0.pI, alt: "" })
               : (0, i.jsx)(h.W, { size: "xs" })
           : (0, i.jsx)(x.n, { size: "xs" });
 }
@@ -1433,18 +1433,18 @@ function e3(e) {
         { url: a, name: c } = t;
     return (0, i.jsxs)(P.D, {
         onClick: () => l(t),
-        className: n()(e2.sP, { [e2.Lv]: s }),
+        className: n()(e0.sP, { [e0.Lv]: s }),
         children: [
             (0, i.jsx)("div", {
-                className: e2.ji,
+                className: e0.ji,
                 children: (0, i.jsxs)("div", {
-                    className: e2.KG,
+                    className: e0.KG,
                     children: [
-                        (0, i.jsx)("img", { src: a, className: e2.f5, alt: "" }),
+                        (0, i.jsx)("img", { src: a, className: e0.f5, alt: "" }),
                         (0, i.jsx)("div", {
-                            className: e2.qe,
+                            className: e0.qe,
                             children: (0, i.jsx)("div", {
-                                className: e2.K3,
+                                className: e0.K3,
                                 children: (0, i.jsx)(F.E, {
                                     variant: "text-sm/medium",
                                     color: "currentColor",
@@ -1456,10 +1456,10 @@ function e3(e) {
                 }),
             }),
             (0, i.jsxs)("div", {
-                className: e2.Uw,
+                className: e0.Uw,
                 children: [
                     (0, i.jsx)(e5, { source: t }),
-                    (0, i.jsx)(F.E, { variant: "text-sm/medium", className: e2.VZ, children: c }),
+                    (0, i.jsx)(F.E, { variant: "text-sm/medium", className: e0.VZ, children: c }),
                 ],
             }),
         ],
@@ -1503,7 +1503,7 @@ function e4(e) {
                 return null;
             }, [s, t, j, n]));
     l.useEffect(() => ((0, eX.a2)(), eX.e0), []);
-    let A = l.useMemo(() => [...n].sort((e, t) => e0(t, S?.source.id, p, v) - e0(e, S?.source.id, p, v)), [S, n, p, v]);
+    let A = l.useMemo(() => [...n].sort((e, t) => e2(t, S?.source.id, p, v) - e2(e, S?.source.id, p, v)), [S, n, p, v]);
     if (h) {
         if (!1 === m) {
             let e = !1;
@@ -1512,10 +1512,10 @@ function e4(e) {
                 e = !eJ.M || "0.0.0" === t || c().satisfies(t, "0.0.363");
             }
             return (0, i.jsxs)("div", {
-                className: e2.Ye,
+                className: e0.Ye,
                 children: [
                     (0, i.jsxs)(F.E, {
-                        className: e2.kc,
+                        className: e0.kc,
                         variant: "text-md/normal",
                         color: "text-feedback-critical",
                         children: [
@@ -1534,13 +1534,13 @@ function e4(e) {
                 ],
             });
         }
-        return (0, i.jsx)("div", { className: e2.Lq, children: (0, i.jsx)(eh.y, {}) });
+        return (0, i.jsx)("div", { className: e0.Lq, children: (0, i.jsx)(eh.y, {}) });
     }
     let y = [];
     return ((y = f === d.fS.WINDOW ? A : f === d.fS.SCREEN ? o : a), f === d.fS.CAMERA && 0 === y.length)
         ? (0, i.jsx)(e7, {})
         : (0, i.jsx)("div", {
-              className: e2.zr,
+              className: e0.zr,
               children: y.map((e) =>
                   (0, i.jsx)(
                       e3,
@@ -1557,19 +1557,19 @@ function e4(e) {
 }
 function e7() {
     return (0, i.jsxs)("div", {
-        className: e2.p$,
+        className: e0.p$,
         children: [
-            (0, i.jsx)(x.n, { size: "md", color: V.A.colors.ICON_MUTED, className: e2.Dw }),
+            (0, i.jsx)(x.n, { size: "md", color: V.A.colors.ICON_MUTED, className: e0.Dw }),
             (0, i.jsx)(F.E, {
                 variant: "text-lg/medium",
                 color: "text-strong",
-                className: e2.jU,
+                className: e0.jU,
                 children: ec.intl.string(ea.default["/z3YaZ"]),
             }),
             (0, i.jsx)(F.E, {
                 variant: "text-sm/medium",
                 color: "text-subtle",
-                className: e2.C3,
+                className: e0.C3,
                 children: ec.intl.string(ea.default.agwSGA),
             }),
             (0, i.jsx)(F.E, {
@@ -1588,7 +1588,7 @@ var e8 = s(505312),
     ti = s(270816),
     tl = s(498642),
     tr = s(309010),
-    tn = s(687583);
+    tn = s(366340);
 function ta(e) {
     switch (e) {
         case eO.jQ.PRESET_CUSTOM:
@@ -1622,7 +1622,7 @@ let tu = (e) => {
     let { analyticsLocation: t, onClose: l } = e;
     (0, td.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            s.e("92060"),
+            s.e("32264"),
             s.e("54048"),
             s.e("699"),
             s.e("62680"),
@@ -1652,7 +1652,7 @@ function th(e) {
     return (0, tf.Ay)(e, t, l);
 }
 var tx = s(731854),
-    tp = s(894269);
+    tp = s(396989);
 let tm = [
         {
             value: eO.jQ.PRESET_AUTO,
@@ -1891,7 +1891,7 @@ function tC(e) {
             }),
     });
 }
-var tA = s(570941);
+var tA = s(167338);
 function ty(e) {
     let { onClose: t } = e,
         { analyticsLocations: s } = (0, E.Ay)(y.A.GO_LIVE_MODAL_V2);
@@ -1918,7 +1918,7 @@ var tE = s(862482),
     tM = s(400669),
     tT = s(909536),
     tL = s(788868),
-    tU = s(531464);
+    tU = s(518728);
 function tG(e) {
     let { onClose: t } = e,
         { analyticsLocations: s } = (0, E.Ay)(y.A.GO_LIVE_MODAL_V2),
@@ -1988,7 +1988,7 @@ var tb = s(183623),
 function tH(e) {
     return e.hasOwnProperty("pid");
 }
-var tB = s(301727);
+var tB = s(860876);
 function tV() {
     return (0, i.jsx)("span", { className: tB.gO, children: "\u2022" });
 }
@@ -2115,7 +2115,7 @@ function tW() {
 var tz = s(451988);
 let tq = [d.fS.CAMERA],
     tX = [d.fS.SCREEN, d.fS.WINDOW, d.fS.CAMERA];
-var t$ = s(237385);
+var t$ = s(456713);
 function tY(e) {
     let { onClose: t, transitionState: s, sourcePID: r, analyticsLocations: a = [], selectSource: D = !0 } = e,
         P = (0, u.bG)([_.Ay], () => (null != r ? (_.Ay.getGameForPID(r) ?? void 0) : void 0)),

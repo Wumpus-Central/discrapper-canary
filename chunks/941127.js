@@ -89,7 +89,7 @@ var U = i(192308),
     F = i(821609),
     W = i(307301),
     H = i(773669),
-    B = i(392756);
+    B = i(79284);
 function V(e) {
     let { className: t } = e,
         s = ["en-US", "en-GB"].includes((0, r.bG)([H.default], () => H.default.locale))
@@ -100,7 +100,7 @@ function V(e) {
             c({ action: "PRESS_ADD_WIDGET" }),
                 (0, U.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([i.e("4402"), i.e("87591")]).then(i.bind(i, 333114));
+                        let { default: e } = await Promise.all([i.e("8978"), i.e("87591")]).then(i.bind(i, 333114));
                         return (t) => (0, n.jsx)(e, { ...t, trackUserProfileEditAction: c });
                     },
                     { stackingBehavior: "stack" },
@@ -128,7 +128,7 @@ var X = i(192),
     J = i(534514),
     Q = i(725386),
     Z = i(502944),
-    $ = i(190322);
+    $ = i(215538);
 function ee() {
     let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, L.NJ)(),
         i = l.useRef(!1),
@@ -170,7 +170,7 @@ function ee() {
         })
     );
 }
-var et = i(812868);
+var et = i(117444);
 function ei(e) {
     let { widget: t, ...i } = e;
     return t instanceof g.R

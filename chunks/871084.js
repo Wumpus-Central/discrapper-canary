@@ -143,7 +143,7 @@ async function U(e) {
 var k = n(566980),
     Y = n(216641),
     G = n(999784),
-    F = n(52402);
+    F = n(650098);
 let B = (e) => {
     let { showBackButton: t, onBackClick: n } = e,
         { premiumSubscription: i, isGift: r, planGroup: s, isPrepaid: o } = e,
@@ -196,8 +196,8 @@ function W(e) {
         } = e,
         {
             selectedSkuId: $,
-            invoicePreview: X,
-            setHasAcceptedTerms: Q,
+            invoicePreview: Q,
+            setHasAcceptedTerms: X,
             setPurchaseState: ee,
             contextMetadata: et,
             paymentSourceId: en,
@@ -258,21 +258,21 @@ function W(e) {
         o()(null != eO, "SKU must exist and be fetched."));
     let eD = a.useCallback(() => {
             ee(k.h.PURCHASING),
-                Q(!0),
+                X(!0),
                 ev(!0),
                 d.h.wait(p.ET),
                 el(null),
                 N.default.track(D.HAw.PAYMENT_FLOW_COMPLETED, {
                     ...L,
-                    subtotal: X?.subtotal,
-                    tax: X?.tax,
-                    expected_amount: X?.total,
-                    expected_currency: X?.currency,
+                    subtotal: Q?.subtotal,
+                    tax: Q?.tax,
+                    expected_amount: Q?.total,
+                    expected_currency: Q?.currency,
                     duration_ms: Date.now() - O,
                     gift_card_balance: ex,
                     gift_card_currency: eN,
                 });
-        }, [ee, Q, el, L, O, X, ex, eN]),
+        }, [ee, X, el, L, O, Q, ex, eN]),
         ew = a.useCallback(
             (e) => {
                 ee(k.h.FAIL),
@@ -324,7 +324,7 @@ function W(e) {
                 referralCode: eo,
                 loadId: et.loadId,
                 giftInfoOptions: eS,
-                invoicePreview: X,
+                invoicePreview: Q,
                 order: ea,
             });
         },

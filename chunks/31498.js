@@ -120,7 +120,7 @@ class h extends l.EventEmitter {
                 findCommandOptionAutocompleteType: o,
                 findMatchingAutocompleteType: d,
                 getOptions: h,
-            } = await Promise.all([n.e("3325"), n.e("50839"), n.e("82097")]).then(n.bind(n, 472392));
+            } = await Promise.all([n.e("84253"), n.e("73220"), n.e("82097")]).then(n.bind(n, 472392));
         if (null == this.props.editorRef.current) return;
         let m = h(this.props),
             p = this.props.editorRef.current.getSlateEditor();

@@ -31,8 +31,8 @@ var i = s(627968),
     w = s(652215);
 let L = new Map();
 var P = s(375708),
-    f = s(837719),
-    K = s(359823);
+    f = s(921815),
+    K = s(32271);
 let D = [
     R.UP.DISCOVERY,
     R.UP.VANITY_URL,

@@ -28,8 +28,8 @@ function j(e) {
         questContent: l.uF.NOT_SHAREABLE_QUEST_EMBED,
     });
 }
-var g = s(262514),
-    E = s(79815);
+var E = s(262514),
+    g = s(822663);
 function f(e) {
     let { questId: t } = e,
         {
@@ -40,12 +40,12 @@ function f(e) {
         m = i.useMemo(() => (0, r.vc)(t, s, u), [t, s, u]),
         f = i.useMemo(() => u.find((e) => e.id === t), [t, u]);
     return d
-        ? (0, n.jsx)(a.y, { className: E.u })
+        ? (0, n.jsx)(a.y, { className: g.u })
         : null == m
           ? null != f
               ? (0, n.jsx)(x, { questId: t })
               : (0, n.jsx)(h.l, { questId: t, reason: h.o.NOT_FOUND })
           : (0, c.E0)(m.config)
-            ? (0, n.jsx)(g.M, { quest: m, location: l.uF.QUESTS_EMBED, sourceQuestContent: l.uF.QUESTS_EMBED }, m.id)
+            ? (0, n.jsx)(E.M, { quest: m, location: l.uF.QUESTS_EMBED, sourceQuestContent: l.uF.QUESTS_EMBED }, m.id)
             : (0, n.jsx)(j, { questId: t });
 }

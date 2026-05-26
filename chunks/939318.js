@@ -23,7 +23,7 @@ var n = i(627968),
     y = i(373842),
     b = i(652215),
     T = i(375708),
-    C = i(106037);
+    C = i(804981);
 function N(e) {
     let { widgetType: t, widget: i, onAddGame: s, children: a, ...r } = e,
         o = l.useMemo(() => new Set(i.games.map((e) => e.applicationId)), [i.games]),
@@ -187,7 +187,7 @@ function G() {
     return e;
 }
 var _ = i(834730),
-    P = i(946661);
+    P = i(300517);
 function M(e) {
     let { widget: t } = e,
         i = (0, d.cv)(t.type),
@@ -204,7 +204,7 @@ function M(e) {
 var D = i(623280),
     U = i(823016),
     F = i(683071),
-    W = i(824307);
+    W = i(529523);
 function H(e) {
     let { widgetType: t, gameCount: i } = e,
         l = (0, d.cv)(t);
@@ -219,7 +219,7 @@ function H(e) {
               }),
           });
 }
-var B = i(551598);
+var B = i(635694);
 function V(e) {
     let { onClick: t, expanded: i } = e;
     return (0, n.jsx)(f.D, {
@@ -235,7 +235,7 @@ function V(e) {
 }
 var z = i(908683),
     Y = i(192),
-    X = i(522173);
+    X = i(714813);
 function q(e) {
     let { games: t, user: i, widgetType: l, ...s } = e,
         { registerItemRef: a, manageFocusOnDelete: r } = (0, U.r)();
@@ -324,7 +324,7 @@ function $(e) {
                 : (0, n.jsx)(M, { widget: i }),
     });
 }
-var J = i(199578);
+var J = i(281050);
 function Z(e) {
     let { games: t, renderGame: i } = e;
     return (0, n.jsx)("ul", {
@@ -343,8 +343,8 @@ var ee = i(503698),
     ed = i(858808),
     eo = i(390877),
     ec = i(617086),
-    eu = i(220084),
-    eg = i(476863);
+    eu = i(442356),
+    eg = i(163391);
 function em(e) {
     let { index: t, widgetType: i, game: s, coverImageUrl: a, gameName: r, children: o } = e,
         { manageFocusOnReorder: c } = (0, U.r)(),
@@ -501,7 +501,7 @@ var ef = i(990078),
     eS = i(789645),
     ev = i(534514),
     eE = i(915089),
-    ey = i(914341);
+    ey = i(5477);
 function eb(e) {
     let { applicationId: t, userId: i, onClick: l } = e,
         { coverImageUrl: s, gameName: r, isLoading: d } = (0, en.A)(t),
@@ -584,7 +584,7 @@ function eC(e) {
         );
     return (0, n.jsx)(eT, { games: s, onClick: c, ...i });
 }
-var eN = i(890596);
+var eN = i(465380);
 function ew(e) {
     let { widget: t, ...i } = e;
     switch (t.type) {

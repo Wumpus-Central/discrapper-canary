@@ -45,9 +45,9 @@ var a = l(627968),
     K = l(718812),
     Z = l(429364),
     W = l(696016),
-    X = l(788077),
+    X = l(16590),
     J = l(375708),
-    Y = l(330994);
+    Y = l(567282);
 let Q = $.I.difference(new Set([$.C.EXPORT_TO_SOUNDBOARD, $.C.FAVORITE, $.C.DELETE, $.C.SHARE, $.C.EDIT]));
 function q(e) {
     let { channelId: t, onEdit: $, onClose: q } = e,

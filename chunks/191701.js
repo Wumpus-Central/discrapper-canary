@@ -95,7 +95,7 @@ var tu = i(387755),
     tE = i(41984),
     tS = i(222506),
     t_ = i(145567),
-    tN = i(658194),
+    tN = i(774610),
     tC = i(308368),
     th = i(334738),
     tT = i(481484),
@@ -103,7 +103,7 @@ var tu = i(387755),
     tO = i(72432),
     tb = i(929921),
     tL = i(753070),
-    tx = i(244957),
+    tx = i(783198),
     tD = i(941971),
     tR = i(465364),
     tk = i(976860),
@@ -120,7 +120,7 @@ var tu = i(387755),
     tH = i(451909),
     tJ = i(135621),
     tB = i(381941),
-    tz = i(42387);
+    tz = i(267475);
 function t$(t) {
     let { id: e, replyToMessageId: i, channel: n, onSend: l } = t,
         a = (0, tJ.A)(),
@@ -186,7 +186,7 @@ function t$(t) {
     });
 }
 var tX = i(119191),
-    tW = i(21197);
+    tW = i(499214);
 let tq = (t) => {
     t && (0, tU.Ak)(R.cH, R.pD);
 };
@@ -196,23 +196,23 @@ var tQ = i(554146),
     t1 = i(263577),
     t2 = i(826673),
     t7 = i(308726),
-    t8 = i(823901),
-    t9 = i(360469),
-    t3 = i(12377),
-    t4 = i(167684);
-function t5(t) {
+    t9 = i(823901),
+    t8 = i(360469),
+    t3 = i(70617),
+    t5 = i(881732);
+function t6(t) {
     let { game: e } = t,
         i = (0, t0.h)(e.id);
-    return null == i ? null : (0, $.jsx)(t1.V, { src: i.getIconURL(t9.iu.LARGE), size: 40 });
+    return null == i ? null : (0, $.jsx)(t1.V, { src: i.getIconURL(t8.iu.LARGE), size: 40 });
 }
-let t6 = 5 * k.A.Millis.SECOND,
+let t4 = 5 * k.A.Millis.SECOND,
     et = 8 * k.A.Millis.SECOND,
     ee = 30 * k.A.Millis.SECOND,
     ei = 30 * k.A.Millis.SECOND,
     en = Object.freeze({
         timestamp: 0,
         priority: K.In.NORMAL,
-        duration: t6,
+        duration: t4,
         expirationExternallyManaged: !1,
         type: K.zb.GENERIC,
     }),
@@ -278,7 +278,7 @@ function eg(t, e) {
                     start() {
                         let l = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : e,
                             a = l ? z.yFH.TIMED_OUT : z.yFH.DISMISSED;
-                        -1 === n && (n = setTimeout(() => o.A.updateNotificationStatus(t, a), null != i ? i : t6));
+                        -1 === n && (n = setTimeout(() => o.A.updateNotificationStatus(t, a), null != i ? i : t4));
                     },
                     stop() {
                         clearTimeout(n), (n = -1);
@@ -611,7 +611,7 @@ let eS = new eE(s.h, {
                                     i = () => {
                                         l("one-click-go-live");
                                     };
-                                (0, t8.H)({
+                                (0, t9.H)({
                                     pid: w.A.getTargetPID(),
                                     analyticsLocation: z.ThZ.OVERLAY_NUDGE,
                                     allowOneClickGoLive: !0,
@@ -638,7 +638,7 @@ let eS = new eE(s.h, {
                                     gamingId: t?.altId ?? t?.id,
                                     maxUserShowCount: 5,
                                     variant: "default",
-                                    className: t4.kL,
+                                    className: t5.kL,
                                 }));
                 }
             let r = (0, t2.k8)(tQ.M.OVERLAY_OOP_WELCOME_NUX),
@@ -646,7 +646,7 @@ let eS = new eE(s.h, {
             return {
                 icon:
                     null != t
-                        ? (0, $.jsx)(t5, { game: t })
+                        ? (0, $.jsx)(t6, { game: t })
                         : (0, $.jsx)("img", { src: i(513653), className: t3.Kk, alt: "" }),
                 title: s,
                 hint: () => (0, tX.sI)((0, Y.Jn)(), J.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 }),

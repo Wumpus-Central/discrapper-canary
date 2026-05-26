@@ -12,7 +12,7 @@ var i = n(627968),
     _ = n(617986),
     f = n(652215),
     h = n(375708),
-    p = n(22009);
+    p = n(900601);
 function E(e) {
     let { onClick: t, questId: n, orbMultiplierEligibility: E } = e,
         m = (0, c.ZP)(n),

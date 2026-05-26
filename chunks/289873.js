@@ -7,7 +7,7 @@ var i,
     o = n.n(a),
     l = n(844222),
     u = n(460890),
-    c = n(49564),
+    c = n(165980),
     d =
         (((i = {}).WANDERING_CUBES = "wanderingCubes"),
         (i.CHASING_DOTS = "chasingDots"),

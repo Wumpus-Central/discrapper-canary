@@ -8,7 +8,7 @@ var t = s(627968),
     o = s(834730),
     d = s(736653),
     u = s(611371),
-    x = s(45923);
+    x = s(408291);
 function h(e) {
     let { title: l, betaTag: s, color: r = "text-strong" } = e;
     return (0, t.jsxs)(c.D, {

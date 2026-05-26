@@ -83,7 +83,7 @@ var i = t(627968),
     e_ = t(31408),
     eG = t(731854),
     eM = t(375708),
-    eU = t(24908);
+    eU = t(391308);
 let eD = [eO.lp.ACTIVITY],
     eR = s.memo((e) => {
         var l, t, n;
@@ -261,13 +261,13 @@ let eD = [eO.lp.ACTIVITY],
         let e0 = s.useRef(null),
             e1 = (0, o.bG)([eu.A], () => (p.type === eO.lp.USER ? eu.A.getVoiceVolume(p.id) : -1 / 0)),
             e7 = (0, H.v)({ isSpeaking: eR, voiceDb: e1, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
-            e8 = (0, eO.Ay)(p) ? m.k : eV ? A.n : h.E,
-            e5 = p.type === eO.lp.STREAM && M;
+            e5 = (0, eO.Ay)(p) ? m.k : eV ? A.n : h.E,
+            e8 = p.type === eO.lp.STREAM && M;
         return (0, i.jsx)(R.A, {
             section: eC.JJy.VOICE_CHANNEL_TILE,
             children: (0, i.jsx)(J.Ay, {
                 streamKey: p.id,
-                enableZoom: e5,
+                enableZoom: e8,
                 children: (0, i.jsx)("div", {
                     className: a()(eU.iE, { [eU.DF]: eP }, N),
                     style: T,
@@ -324,7 +324,7 @@ let eD = [eO.lp.ACTIVITY],
                                         O
                                             ? (0, i.jsx)("div", {
                                                   className: eU._Q,
-                                                  children: (0, i.jsx)(e8, {
+                                                  children: (0, i.jsx)(e5, {
                                                       size: "md",
                                                       color: "currentColor",
                                                       className: eU.Dt,

@@ -8,7 +8,7 @@ var i = n(64700),
     l = n(881756),
     u = n(568065),
     c = n(800007),
-    d = n(76660),
+    d = n(576709),
     _ = n(375708);
 let f =
     "https://cdn.discordapp.com/assets/content/2b844e74bd90a5e0ccb408b039a4915f295d8b9c192c823a4afc69c1fc3604a2.png";

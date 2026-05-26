@@ -7,7 +7,7 @@ var i = n(627968),
     o = n(349288),
     l = n(534514),
     u = n(834730),
-    c = n(77006);
+    c = n(824078);
 function d(e) {
     let { title: t, body: n, badge: r, className: a, textLink: d } = e,
         h = d?.external ?? !0;

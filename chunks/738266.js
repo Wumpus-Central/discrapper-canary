@@ -101,7 +101,7 @@ var ea = l(735438),
     ef = l(545442),
     eC = l(316710),
     ej = l(821589),
-    eb = l(262384);
+    eb = l(165808);
 let eN = { XSMALL: eb.xsmall, SMALL: eb.small, MEDIUM: eb.medium, LARGE: eb.large };
 class eE extends i.PureComponent {
     static Sizes = eN;
@@ -133,7 +133,7 @@ class eE extends i.PureComponent {
     }
 }
 var ev = l(967144),
-    ey = l(320011);
+    ey = l(660811);
 function eS(e) {
     let { role: t, guild: s } = e,
         [a, r] = i.useState(!1);
@@ -226,8 +226,8 @@ var eI = l(736653),
     eF = l(508573),
     ez = l.n(eF),
     eZ = l(66834),
-    eW = l(204594),
-    eY = l(729232);
+    eW = l(17586),
+    eY = l(329296);
 let eJ = s.Ay.connectStores([W.A, e_.A], () => {
     let e = e_.A.getChannel();
     return {
@@ -635,7 +635,7 @@ function e0() {
     let i = t[l];
     return (0, n.jsxs)(eR.Ay, { className: eW.kL, children: [(0, n.jsx)(eK, {}), (0, n.jsx)(eQ, { overwrite: i })] });
 }
-var e2 = l(369281);
+var e2 = l(311809);
 function e5() {
     let e = (0, s.bG)([W.A], () => W.A.advancedMode);
     return (0, n.jsxs)(n.Fragment, {
@@ -672,40 +672,40 @@ function e5() {
     });
 }
 var e1 = l(243721),
-    e3 = l(235986),
-    e7 = l(804215);
+    e7 = l(235986),
+    e3 = l(60727);
 function e4(e) {
     let { description: t, icon: l, id: i, label: s, onChange: r, value: o } = e;
     return (0, n.jsxs)("div", {
-        className: e7.U,
+        className: e3.U,
         children: [
-            (0, n.jsxs)(e3.A, {
-                justify: e3.A.Justify.BETWEEN,
-                align: e3.A.Align.CENTER,
+            (0, n.jsxs)(e7.A, {
+                justify: e7.A.Justify.BETWEEN,
+                align: e7.A.Align.CENTER,
                 children: [
                     l,
-                    (0, n.jsx)(e3.A.Child, {
+                    (0, n.jsx)(e7.A.Child, {
                         grow: 1,
                         children: (0, n.jsx)(a.E, { variant: "text-md/semibold", children: s }),
                     }),
                     null != r && null != o && (0, n.jsx)(e1.d, { id: i, checked: o, onChange: r }),
                 ],
             }),
-            (0, n.jsx)(a.E, { variant: "text-xs/normal", color: "text-default", className: e7.L, children: t }),
+            (0, n.jsx)(a.E, { variant: "text-xs/normal", color: "text-default", className: e3.L, children: t }),
         ],
     });
 }
 var e6 = l(661531),
-    e8 = l(862482),
-    e9 = l(359778),
-    te = l(665877);
+    e9 = l(862482),
+    e8 = l(359778),
+    te = l(400725);
 let tt = (e) => {
     let { className: t, icon: l, noticeText: i, buttonText: s, onClick: r, canSync: o } = e;
-    return (0, n.jsx)(e9.Z, {
+    return (0, n.jsx)(e8.Z, {
         className: A()(t, te.N),
-        children: (0, n.jsxs)(e3.A, {
-            justify: e3.A.Justify.BETWEEN,
-            align: e3.A.Align.CENTER,
+        children: (0, n.jsxs)(e7.A, {
+            justify: e7.A.Justify.BETWEEN,
+            align: e7.A.Align.CENTER,
             children: [
                 (0, n.jsx)(l, { width: 20, height: 20, size: "custom", color: e6.A.unsafe_rawColors.YELLOW_300.css }),
                 (0, n.jsx)("div", {
@@ -713,9 +713,9 @@ let tt = (e) => {
                     children: (0, n.jsx)(a.E, { variant: "text-md/normal", children: i }),
                 }),
                 o &&
-                    (0, n.jsx)(e8.$n, {
-                        size: e8.$n.Sizes.SMALL,
-                        color: e8.$n.Colors.PRIMARY,
+                    (0, n.jsx)(e9.$n, {
+                        size: e9.$n.Sizes.SMALL,
+                        color: e9.$n.Colors.PRIMARY,
                         onClick: r,
                         children: s,
                     }),
@@ -725,7 +725,7 @@ let tt = (e) => {
 };
 var tl = l(719366),
     tn = l(818348),
-    ti = l(413807);
+    ti = l(497903);
 function ts(e) {
     let { channel: t, roles: l, members: i, disabledReason: s, getRemoveTooltipHint: r } = e;
     return (0, n.jsx)(v.OZ, {
@@ -894,8 +894,8 @@ function ta(e) {
                                     onClick: function () {
                                         (0, y.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                l.e("38086"),
-                                                l.e("66373"),
+                                                l.e("92646"),
+                                                l.e("11585"),
                                                 l.e("89916"),
                                                 l.e("20379"),
                                                 l.e("19193"),
@@ -1013,7 +1013,7 @@ function tr(e) {
                                                 onClick: function () {
                                                     (0, y.openModalLazy)(async () => {
                                                         let { default: e } = await Promise.all([
-                                                            l.e("38086"),
+                                                            l.e("92646"),
                                                             l.e("89916"),
                                                             l.e("20379"),
                                                             l.e("19193"),
@@ -1237,9 +1237,9 @@ var tT = l(371444),
     t2 = l(599119),
     t5 = l(219504),
     t1 = l(706411),
-    t3 = l(376310);
+    t7 = l(376310);
 l(253913);
-var t7 = l(245567);
+var t3 = l(231935);
 function t4(e) {
     let { channel: t } = e,
         a = (0, s.bG)([X.A], () => X.A.can(eB.xBc.MANAGE_CHANNELS, t), [t]),
@@ -1250,7 +1250,7 @@ function t4(e) {
             a &&
                 !e &&
                 (0, y.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([l.e("50513"), l.e("47326")]).then(l.bind(l, 950989));
+                    let { default: e } = await Promise.all([l.e("2225"), l.e("47326")]).then(l.bind(l, 950989));
                     return (l) => (0, n.jsx)(e, { ...l, channelId: t.id, guildId: t.guild_id });
                 });
         }, [t, a]),
@@ -1260,7 +1260,7 @@ function t4(e) {
                 !a ||
                     u(e) ||
                     (0, y.openModalLazy)(async () => {
-                        let { default: i } = await Promise.all([l.e("50513"), l.e("47326")]).then(l.bind(l, 950989));
+                        let { default: i } = await Promise.all([l.e("2225"), l.e("47326")]).then(l.bind(l, 950989));
                         return (l) => (0, n.jsx)(i, { ...l, channelId: t.id, guildId: t.guild_id, tag: e });
                     });
             },
@@ -1274,7 +1274,7 @@ function t4(e) {
             (0, d.fy)({ availableTags: e });
         });
     return (0, n.jsxs)("div", {
-        className: t7._A,
+        className: t3._A,
         children: [
             o
                 ? t.availableTags.map((e) =>
@@ -1297,7 +1297,7 @@ function t4(e) {
             o
                 ? (0, n.jsx)(N.D, {
                       onClick: c,
-                      className: A()(t7.JE, { [t7.r9]: !a || r }),
+                      className: A()(t3.JE, { [t3.r9]: !a || r }),
                       children: (0, n.jsx)(t0.j, {
                           size: "custom",
                           "aria-label": eH.intl.string(eH.t["/jubeD"]),
@@ -1341,7 +1341,7 @@ function t6(e) {
             onDragReset: o,
         });
     return (0, n.jsx)("div", {
-        className: A()(t7.kL, { [t7.A]: null != h && c < h, [t7.Ze]: null != h && c > h }),
+        className: A()(t3.kL, { [t3.A]: null != h && c < h, [t3.Ze]: null != h && c > h }),
         ref: (e) => {
             u(g(e));
         },
@@ -1351,7 +1351,7 @@ function t6(e) {
             text: d,
             asContainer: !0,
             shouldShow: null != d,
-            children: (0, n.jsx)(t3.A, {
+            children: (0, n.jsx)(t7.A, {
                 tag: t,
                 disabled: !i,
                 ariaLabel: eH.intl.formatToPlainString(eH.t.jhSvB9, { name: t.name }),
@@ -1360,14 +1360,14 @@ function t6(e) {
         }),
     });
 }
-var t8 = l(235640),
-    t9 = l(268761),
+var t9 = l(235640),
+    t8 = l(268761),
     le = l(474078),
     lt = l(783878),
-    ll = l(101704);
+    ll = l(980296);
 let ln = (e) => {
     let { autoArchiveDuration: t, onChange: l, isDisabled: i, helperText: s } = e,
-        a = (0, t9.Gk)();
+        a = (0, t8.Gk)();
     return (0, n.jsx)("div", {
         className: ll.gy,
         children: (0, n.jsx)(lt.Z, {
@@ -1393,7 +1393,7 @@ let ld = (0, l(600975).C)({
     defaultConfig: { enabled: !1 },
     treatments: [{ id: 1, label: "Enable spoiler channel setting", config: { enabled: !0 } }],
 });
-var lc = l(373378);
+var lc = l(818050);
 function lu(e) {
     let { label: t, helperText: l, hideLabel: s, disabled: a, value: r, onChange: o } = e,
         [d, c] = i.useState(null),
@@ -1693,7 +1693,7 @@ function lm(e) {
 var lx = l(746080),
     lp = l(307731),
     lA = l(37411),
-    lf = l(867395);
+    lf = l(263107);
 let lC = {
         popoutLocation: {
             page: eB.liQ.CHANNEL_SETTINGS,
@@ -1979,7 +1979,7 @@ class lv extends i.PureComponent {
                                               ],
                                           }),
                                       }),
-                                      (0, n.jsx)(t8.A, { reactionEmoji: e.defaultReactionEmoji }),
+                                      (0, n.jsx)(t9.A, { reactionEmoji: e.defaultReactionEmoji }),
                                   ],
                               }),
                           }),
@@ -2175,7 +2175,7 @@ class lv extends i.PureComponent {
                       page: eB.liQ.CHANNEL_SETTINGS,
                       children: (0, n.jsx)(ln, {
                           isDisabled: !s,
-                          autoArchiveDuration: (0, t9.Gl)(e, null),
+                          autoArchiveDuration: (0, t8.Gl)(e, null),
                           onChange: this.handleChangeDefaultAutoArchiveDuration,
                           helperText: e.isForumLikeChannel()
                               ? eH.intl.string(eH.t.fyXclY)
@@ -2365,8 +2365,8 @@ class lv extends i.PureComponent {
                     : (0, eu.M)(i)
                       ? l(241306)
                       : l(16474)),
-            (0, n.jsx)(e3.A, {
-                justify: e3.A.Justify.CENTER,
+            (0, n.jsx)(e7.A, {
+                justify: e7.A.Justify.CENTER,
                 className: lc.o9,
                 children: (0, n.jsx)("img", { alt: "", width: 280, height: 165, src: t }),
             })
@@ -2582,7 +2582,7 @@ function ly() {
         showSpoilerChannelSetting: j,
     });
 }
-var lS = l(554412);
+var lS = l(181420);
 function lT(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         l = arguments.length > 2 ? arguments[2] : void 0;

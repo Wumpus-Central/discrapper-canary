@@ -3,7 +3,7 @@ var n = i(627968);
 i(64700);
 var s = i(834730),
     _ = i(375708),
-    a = i(442159);
+    a = i(39855);
 function u(t) {
     let { textColor: e = "text-muted" } = t;
     return (0, n.jsx)("div", {

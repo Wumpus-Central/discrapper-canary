@@ -5,7 +5,7 @@ var a = l(627968),
     s = l(939249),
     r = l(256905),
     o = l(372684),
-    c = l(819945);
+    c = l(878185);
 function u() {
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -68,8 +68,8 @@ function C() {
     );
 }
 var y = l(696016),
-    E = l(594731),
-    N = l(70585);
+    E = l(97451),
+    N = l(813433);
 function A(e, t) {
     let { applicationAudioEnabled: l, voiceAudioEnabled: a, soundboardAudioEnabled: n, isVoiceClip: i } = t;
     if (!i && l && a && n)
@@ -261,7 +261,7 @@ l(323874), l(14289), l(35956), l(393431), l(532706), l(42231), l(232424), l(9496
 var el = l(602853),
     ea = l(602674),
     en = l(335416),
-    ei = l(944939);
+    ei = l(664875);
 let es = new Map(),
     er = n.memo(function (e) {
         let { clipId: t, voiceAudioTracks: i, onMouseDown: s, className: r } = e,
@@ -351,8 +351,8 @@ function eo(e, t) {
     return t && (l /= y.iJ), l;
 }
 var ec = l(375708),
-    eu = l(639790),
-    ed = l(238559);
+    eu = l(445563),
+    ed = l(474847);
 function em(e) {
     let { eventType: t, importance: l, style: i, title: s, description: r } = e,
         c = n.useMemo(() => (0 === l ? 16 : 0.5 === l ? 20 : 1 === l ? 24 : 16), [l]),

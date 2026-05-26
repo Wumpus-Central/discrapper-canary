@@ -26,7 +26,7 @@ var l = n(627968),
     C = n(486020),
     S = n(690521),
     y = n(536283),
-    O = n(861440);
+    O = n(740032);
 let L = [];
 function _(e) {
     let { messageId: t, emoji: n, startPosition: a, targetPosition: r } = e,
@@ -146,7 +146,7 @@ var F = n(507545),
     ec = n(71393),
     ed = n(967198),
     em = n(375708),
-    eh = n(806899);
+    eh = n(658611);
 function eg(e) {
     let {
         emojiId: t,
@@ -286,7 +286,7 @@ function ep(e) {
 }
 var ef = n(191226),
     eA = n(788868),
-    eI = n(87889);
+    eI = n(307217);
 function ex(e) {
     let {
             emoji: t,
@@ -502,8 +502,8 @@ var ey = n(299072),
     eO = n(228366),
     eL = n(297494),
     e_ = n(60317),
-    eM = n(29430),
-    ek = n(88848);
+    eM = n(734646),
+    ek = n(15440);
 let ew = i.memo(function (e) {
     let { channelId: t, messageId: n, emoji: a, useChatFontScaling: r, color: o, count: s, emojiSize: u } = e,
         c = (0, m.bG)([eT.A], () => eT.A.getEffectForEmojiId(t, n, a)),
@@ -533,8 +533,8 @@ let ew = i.memo(function (e) {
         : (0, l.jsx)(ey.A, { className: (r ? ek : eM).effect, effect: d, onComplete: I, emojiSize: u });
 });
 var eP = n(652215),
-    eG = n(10585),
-    eV = n(471717);
+    eG = n(347353),
+    eV = n(866661);
 let eU = 12;
 function eD(e, t, n) {
     return (n === q.v.BURST && t) || (n === q.v.NORMAL && e);

@@ -26,7 +26,7 @@ var n = i(627968),
     C = i(518477),
     N = i(652215),
     w = i(375708),
-    R = i(82784);
+    R = i(381280);
 let O = "user-profile-save-reset-toolbar-label";
 function k(e) {
     let { className: t, guildId: i } = e,

@@ -137,7 +137,7 @@ function D(e, t) {
     }
 }
 var L = n(652215),
-    w = n(628192);
+    w = n(40544);
 let M = {
     [O._.STAFF]: {
         IconComponent: u.V,

@@ -44,9 +44,9 @@ var i,
     Y = n(185797),
     W = n(652215),
     K = n(788868),
-    z = n(151001),
+    z = n(237146),
     $ = n(375708),
-    q = n(823e3);
+    q = n(74776);
 function X(e) {
     let { openRewardModal: t } = e,
         n = (0, Y.F)();
@@ -116,7 +116,7 @@ function Z(e) {
     let { analyticsLocations: i } = (0, E.Ay)(p.A.CROISSANT_PREMIUM_HERO_CARD),
         a = s.useCallback(() => {
             (0, w.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("30480"), n.e("10622"), n.e("55251")]).then(
+                let { default: e } = await Promise.all([n.e("16848"), n.e("10622"), n.e("77632")]).then(
                     n.bind(n, 836291),
                 );
                 return (t) => (0, r.jsx)(e, { ...t, sourceAnalyticsLocations: i });
@@ -217,8 +217,8 @@ function ee(e) {
     let { analyticsLocations: t } = (0, E.Ay)(p.A.CROISSANT_PREMIUM_PERK_CARD);
     return (0, r.jsx)(E.f5, { value: t, children: (0, r.jsx)(J, { ...e }) });
 }
-var et = n(661871),
-    en = n(851777);
+var et = n(367791),
+    en = n(672193);
 function ei(e) {
     let { id: t, sectionClassName: n, heading: i, beforeGrid: s, grid: a, gridClassName: l } = e,
         u = en.Ui;
@@ -239,7 +239,7 @@ var er = n(975571),
     el = n(581921),
     eu = n(852218),
     ec = n(382259),
-    ed = n(778414);
+    ed = n(962995);
 function e_() {
     let { analyticsLocations: e } = (0, E.Ay)(p.A.PREMIUM_MARKETING_PERK_CARD),
         t = (0, eo.YS)({ location: "useWhatsNewPerkCards" }).functionalityEnabled,
@@ -308,7 +308,7 @@ function e_() {
         };
     }, [o, e, l, t, u, n, i, a]);
 }
-var ef = n(883010);
+var ef = n(102338);
 let eh = "xgpp";
 function ep(e) {
     let { glowingSectionId: t } = e,
@@ -337,7 +337,7 @@ function ep(e) {
     });
 }
 var eE = n(65470),
-    em = n(91301);
+    em = n(797221);
 let eg = (e) => {
     let { className: t, location: n, analyticsLocation: i } = e,
         { analyticsLocations: s } = (0, E.Ay)(n);
@@ -421,7 +421,7 @@ var eS = n(502572),
     eX = n(851746),
     eZ = n(664654),
     eQ = n(212737),
-    eJ = n(378900);
+    eJ = n(849812);
 let e0 = (e) => {
         let { user: t } = e,
             { avatarSrc: n, eventHandlers: i } = (0, ez.A)({ userId: t.id, size: ej._3.SIZE_24 });
@@ -542,7 +542,7 @@ let e0 = (e) => {
 var e4 = n(989349),
     e5 = n.n(e4),
     e7 = n(496431),
-    e8 = n(369617);
+    e8 = n(116689);
 let e9 = (e) => {
     let { expiresAt: t, className: n } = e,
         i = (0, e7.A)(e5()(t).toDate(), 1e3);
@@ -637,7 +637,7 @@ var te = n(473702),
     tt = n(702841),
     tn = n(652533),
     ti = n(20458),
-    tr = n(21588),
+    tr = n(447764),
     ts = n(180894);
 let ta = (e) => {
     let { containerVisibilityPercentage: t } = e,
@@ -676,7 +676,7 @@ let ta = (e) => {
     });
 };
 var to = n(707554),
-    tl = n(966423);
+    tl = n(218199);
 let tu = (e) => {
     let { className: t, color: n = "text-strong", responsive: i = !0, children: s } = e;
     return (0, r.jsx)(to.F, {
@@ -686,7 +686,7 @@ let tu = (e) => {
 };
 var tc = n(725807),
     td = n(774774),
-    t_ = n(164332);
+    t_ = n(975916);
 let tf = () => {
     let e = { section: W.JJy.REVERSE_TRIAL_BANNER };
     return (0, r.jsxs)("div", {
@@ -717,7 +717,7 @@ let tf = () => {
         ],
     });
 };
-var th = n(245807);
+var th = n(18671);
 let tp = () => {
     let e = (0, tt.bG)([eC.A], () => eC.A.useReducedMotion);
     return (0, r.jsx)(ti.A, {
@@ -733,7 +733,7 @@ let tp = () => {
         boltAssetClassName: th.vy,
     });
 };
-var tE = n(168880);
+var tE = n(97584);
 let tm = (e) => {
         let { fpEndsAt: t, className: n, buttonVisibilityRef: i } = e,
             s = (0, C.Zb)(t);
@@ -885,15 +885,15 @@ let tm = (e) => {
                                                   void (0, w.openModalLazy)(async () => {
                                                       let { PremiumBrandRefreshSubscriptionCancellationModal: t } =
                                                           await Promise.all([
-                                                              n.e("22634"),
-                                                              n.e("91494"),
-                                                              n.e("24769"),
-                                                              n.e("45768"),
-                                                              n.e("93814"),
-                                                              n.e("40965"),
-                                                              n.e("96413"),
-                                                              n.e("69117"),
-                                                              n.e("70405"),
+                                                              n.e("34218"),
+                                                              n.e("70750"),
+                                                              n.e("61097"),
+                                                              n.e("30272"),
+                                                              n.e("34186"),
+                                                              n.e("26105"),
+                                                              n.e("46461"),
+                                                              n.e("26705"),
+                                                              n.e("16581"),
                                                               n.e("23924"),
                                                               n.e("42205"),
                                                               n.e("71091"),
@@ -906,10 +906,10 @@ let tm = (e) => {
                                                               n.e("96643"),
                                                               n.e("94493"),
                                                               n.e("92789"),
-                                                              n.e("2773"),
+                                                              n.e("47834"),
                                                               n.e("74016"),
                                                               n.e("19551"),
-                                                              n.e("36845"),
+                                                              n.e("6338"),
                                                               n.e("3178"),
                                                               n.e("5636"),
                                                               n.e("87196"),
@@ -1003,7 +1003,7 @@ let tm = (e) => {
     };
 var tS = n(873174),
     tN = n(717421),
-    ty = n(842300),
+    ty = n(98812),
     tC = n(67423);
 let tv = function (e) {
     let { isVisible: t, premiumSubscription: i, churnDiscountOffer: s, discountedPrice: a } = e,
@@ -1047,15 +1047,15 @@ let tv = function (e) {
                     onClick: () =>
                         void (0, w.openModalLazy)(async () => {
                             let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
-                                n.e("22634"),
-                                n.e("91494"),
-                                n.e("24769"),
-                                n.e("45768"),
-                                n.e("93814"),
-                                n.e("40965"),
-                                n.e("96413"),
-                                n.e("69117"),
-                                n.e("70405"),
+                                n.e("34218"),
+                                n.e("70750"),
+                                n.e("61097"),
+                                n.e("30272"),
+                                n.e("34186"),
+                                n.e("26105"),
+                                n.e("46461"),
+                                n.e("26705"),
+                                n.e("16581"),
                                 n.e("23924"),
                                 n.e("42205"),
                                 n.e("71091"),
@@ -1068,10 +1068,10 @@ let tv = function (e) {
                                 n.e("96643"),
                                 n.e("94493"),
                                 n.e("92789"),
-                                n.e("2773"),
+                                n.e("47834"),
                                 n.e("74016"),
                                 n.e("19551"),
-                                n.e("36845"),
+                                n.e("6338"),
                                 n.e("3178"),
                                 n.e("5636"),
                                 n.e("87196"),
@@ -1262,8 +1262,8 @@ var tY = n(462887),
     t5 = n(892227),
     t7 = n(81466),
     t8 = n(318254),
-    t9 = n(587416),
-    ne = n(170463);
+    t9 = n(490285),
+    ne = n(875679);
 let nt = () => {
     let { passesGeneralUIInvariant: e, programReward: t } = (0, I.F)({ location: "NitroOrbsWhatsNewCardFooter" });
     if (!e || null == t) return null;
@@ -1326,13 +1326,13 @@ var nn = n(655752),
     ni = n(764231),
     nr = n(627380),
     ns = n(30084),
-    na = n(455873),
+    na = n(792641),
     no = n(714206),
     nl = n(88001),
     nu = n(758836),
     nc = n(190107),
-    nd = n(963458),
-    n_ = n(853903),
+    nd = n(466919),
+    n_ = n(555599),
     nf = n(817577);
 let nh =
         "https://cdn.discordapp.com/assets/content/0722a293c878afdc8718373a6436d7fa1f06014597d138d824d7bb5da55d3d7f.svg",
@@ -1556,7 +1556,7 @@ let nS = [
     { id: "upgrades", label: () => $.intl.string($.t.KC5q8v) },
     { id: "vip", label: () => $.intl.string($.t.DjEAcv) },
 ];
-var nN = n(533407);
+var nN = n(758495);
 let ny = (e) => {
     e.stopPropagation();
 };
@@ -1796,7 +1796,7 @@ function nv(e) {
     });
 }
 var nO = n(994763),
-    nR = n(177934),
+    nR = n(946062),
     nb = n(79119);
 let nD = "section",
     nL = "perk",

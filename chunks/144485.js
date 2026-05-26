@@ -10,7 +10,7 @@ var r = n(314116),
 let u = {
     openSecureFramesStreamVerification: function (e, t) {
         (0, s.openModalLazy)(async () => {
-            let r = (await Promise.all([n.e("40789"), n.e("8366"), n.e("91589"), n.e("46115")]).then(n.bind(n, 773262)))
+            let r = (await Promise.all([n.e("5389"), n.e("60142"), n.e("91589"), n.e("46115")]).then(n.bind(n, 773262)))
                 .default;
             return (n) => (0, i.jsx)(r, { streamKey: e, channelId: t, ...n });
         });
@@ -21,8 +21,8 @@ let u = {
                 async () => {
                     let r = (
                         await Promise.all([
-                            n.e("40789"),
-                            n.e("8366"),
+                            n.e("5389"),
+                            n.e("60142"),
                             n.e("91589"),
                             n.e("44264"),
                             n.e("25592"),

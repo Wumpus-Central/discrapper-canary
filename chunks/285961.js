@@ -42,7 +42,7 @@ var c = n(803805),
     C = n(327143),
     v = n(652215),
     O = n(375708),
-    R = n(52510);
+    R = n(931102);
 let b = [d.A.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, d.A.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"],
     D = Array.from({ length: 16 }).map((e, t) => ({ id: `${t}`, height: Math.floor(100 * Math.random()) + 120 }));
 function L(e) {

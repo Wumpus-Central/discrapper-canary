@@ -38,8 +38,8 @@ var l = n(503698),
     V = n(136523),
     B = n(806931),
     k = n(375708),
-    H = n(188628),
-    F = n(168147);
+    H = n(82644),
+    F = n(992595);
 function G(e) {
     let { user: t, channel: n, stream: l, color: a } = e,
         s = (0, L.A)(n, t, l);

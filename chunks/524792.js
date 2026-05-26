@@ -22,7 +22,7 @@ function m(t) {
     });
 }
 var p = a(375708),
-    j = a(389301);
+    j = a(94517);
 function x(t) {
     let { attachment: n, guildId: a, productId: e } = t;
     return (0, i.jsxs)("li", {

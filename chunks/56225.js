@@ -190,9 +190,9 @@ let D = () =>
             ],
         });
 var P = n(652215),
-    x = n(778414),
+    x = n(962995),
     U = n(375708),
-    k = n(738894),
+    k = n(75662),
     G = n(208556);
 function F() {
     let e = (0, g.Q)("getRecurringPromotionPartnerAttributes");

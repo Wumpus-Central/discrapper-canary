@@ -5,8 +5,8 @@ var l = i(503698),
     s = i.n(l),
     a = i(935462),
     r = i(375708),
-    c = i(779848),
-    o = i(867133);
+    c = i(76488),
+    o = i(889277);
 let u = (e) => {
     let { children: t, footer: i, className: l } = e;
     return (0, n.jsx)("div", {

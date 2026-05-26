@@ -14,7 +14,7 @@ var r = n(627968),
     h = n(650583),
     x = n(565164),
     v = n(873174),
-    E = n(19557);
+    E = n(6821);
 let b = l.memo(function (e) {
     let { playbackPxSpring: t, isDragging: n, dragX: l } = e;
     return (0, r.jsx)(v.animated.div, {

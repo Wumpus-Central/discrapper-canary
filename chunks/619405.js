@@ -17,7 +17,7 @@ var a = n(64700),
     h = n(878831),
     C = n(768349),
     S = n(375708),
-    E = n(378);
+    E = n(193018);
 function f(e) {
     let { applicationName: t, iconSrc: n, viewAction: l } = e,
         { primaryColor: r, secondaryColor: a } = (0, A.A)(n),
