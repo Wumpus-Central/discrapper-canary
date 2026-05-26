@@ -23,22 +23,31 @@ let f = {
             skuId: g,
             branchId: A,
             flags: I,
+            availableTags: T,
         } = e;
         s.h.dispatch({ type: "CREATE_CHANNEL_MODAL_SUBMIT", guildId: t, channelType: n });
-        let T = { type: n, name: f, permission_overwrites: h };
+        let S = { type: n, name: f, permission_overwrites: h };
         if (
-            (null != p && p !== d.gp3 && (T.bitrate = p),
-            null != E && E > 0 && (T.user_limit = E),
-            null != m && (T.parent_id = m),
-            null != I && (T.flags = I),
+            (null != p && p !== d.gp3 && (S.bitrate = p),
+            null != E && E > 0 && (S.user_limit = E),
+            null != m && (S.parent_id = m),
+            null != I && (S.flags = I),
+            null != T &&
+                T.length > 0 &&
+                (S.available_tags = T.map((e) => ({
+                    name: e.name,
+                    emoji_id: e.emojiId,
+                    emoji_name: e.emojiName,
+                    moderated: e.moderated,
+                }))),
             n === d.rbe.GUILD_STORE)
         ) {
             if (null == g) throw Error("Unexpected missing SKU");
-            (T.sku_id = g), (T.branch_id = A);
+            (S.sku_id = g), (S.branch_id = A);
         }
         return u.A.post({
             url: d.Rsh.GUILD_CHANNELS(t),
-            body: T,
+            body: S,
             oldFormErrors: !0,
             trackedActionData: {
                 event: i.NetworkActionNames.CHANNEL_CREATE,

@@ -5845,10 +5845,11 @@ var rw = n(869488);
 function rF(e) {
     let { message: t, compact: n, channel: l, id: i } = e,
         s = (0, iP.kt)(l),
-        a = (0, m.bG)([nl.A], () => nl.A.getGuild(l.guild_id)?.gameApplicationIds ?? [], [l.guild_id])[0],
-        { data: o } = (0, rI.YY)(a),
-        { analyticsLocations: c } = (0, s_.Ay)(iX.A.INVITE_EMBED),
-        d = (0, m.bG)([b.A], () => (null != a ? b.A.getApplicationActivity(t.author.id, a) : null), [t.author.id, a]);
+        a = s.some((e) => e.name === lV.Dg),
+        o = (0, m.bG)([nl.A], () => nl.A.getGuild(l.guild_id)?.gameApplicationIds ?? [], [l.guild_id])[0],
+        { data: c } = (0, rI.YY)(o),
+        { analyticsLocations: d } = (0, s_.Ay)(iX.A.INVITE_EMBED),
+        u = (0, m.bG)([b.A], () => (null != o ? b.A.getApplicationActivity(t.author.id, o) : null), [t.author.id, o]);
     return (0, r.jsxs)("div", {
         className: rw.TX,
         children: [
@@ -5874,16 +5875,16 @@ function rF(e) {
                                     className: rw.GA,
                                     children: s.map((e) => (0, r.jsx)(iG.A, { tag: e, size: iG.A.Sizes.MEDIUM }, e.id)),
                                 }),
-                            null != o &&
-                                null != d &&
+                            null != c &&
+                                null != u &&
                                 (0, r.jsx)("div", {
                                     className: rw.x,
                                     children: (0, r.jsx)(rU, {
-                                        application: o,
+                                        application: c,
                                         channel: l,
                                         message: t,
-                                        presenceActivity: d,
-                                        analyticsLocations: c,
+                                        presenceActivity: u,
+                                        analyticsLocations: d,
                                     }),
                                 }),
                             (0, r.jsx)("div", {
@@ -5899,8 +5900,13 @@ function rF(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)("div", { className: rw.b1 }),
-            (0, r.jsx)(rR, { className: rw.Lz, channel: l }),
+            !a &&
+                (0, r.jsxs)(r.Fragment, {
+                    children: [
+                        (0, r.jsx)("div", { className: rw.b1 }),
+                        (0, r.jsx)(rR, { className: rw.Lz, channel: l }),
+                    ],
+                }),
             (0, r.jsx)("div", { className: rw.ld }),
         ],
     });
@@ -6260,7 +6266,7 @@ let r0 = (0, u.animated)(S),
                             return null;
                         })(s, D ?? L ?? k),
                         G = s.isForumPost() && !b ? (0, r.jsx)(a9, { postId: s.id }) : null,
-                        { firstMessage: U } = (0, lV.n)(s, S),
+                        { firstMessage: U } = (0, lV.n5)(s, S),
                         F =
                             null != U
                                 ? (0, r.jsx)(
@@ -6824,7 +6830,7 @@ let r0 = (0, u.animated)(S),
                                 T.h.dispatch({ type: "PRESENCE_SUBSCRIPTIONS_ADD", subscription: e });
                     }, [l]);
                 })(l, e);
-                let A = (0, lV.Y)(e),
+                let A = (0, lV.YG)(e),
                     f = (0, O.sV)(e.guild_id, "message_stream"),
                     C = o.useMemo(
                         () =>

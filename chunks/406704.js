@@ -156,7 +156,7 @@ function G(e) {
         n = (0, a.bG)([p.A], () => p.A.can(g.xBc.CONNECT, e)),
         i = w(e),
         r = A.useExperiment({ guildId: e.guild_id, location: "e791ea_1" }, { autoTrackExposure: !1 }).enabled,
-        s = (0, u.Y)(e),
+        s = (0, u.YG)(e),
         l = (0, o.a9)() && (0, o.UK)(e.id);
     return !t && e.isVocalThread() && (r || s) && n && i && !l;
 }
