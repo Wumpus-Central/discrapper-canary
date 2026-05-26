@@ -1,3 +1,71 @@
+.container_f53c21 {
+    background-color: var(--background-mod-normal);
+    border-radius: 8px;
+    overflow: hidden
+}
+
+.emojiRow_f53c21 {
+    align-items: center;
+    background: var(--background-mod-normal);
+    display: flex;
+    padding: 16px;
+    position: relative
+}
+
+.emojiRow_f53c21+.emojiRow_f53c21:before {
+    background-color: var(--border-subtle);
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: -.5px;
+    inset-inline: 0;
+    margin-inline-start: 56px
+}
+
+.emojiImage_f53c21 {
+    height: 24px;
+    margin-inline-end: 16px;
+    width: 24px
+}
+
+.emojiAlias_f53c21:after,
+.emojiAlias_f53c21:before {
+    content: ":";
+    opacity: .3
+}
+
+.deleteButton_f53c21 {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    margin-block: 0;
+    margin-inline: auto 0;
+    opacity: 0
+}
+
+.emojiRow_f53c21:not(.disabled_f53c21) .deleteButton_f53c21:hover {
+    color: var(--interactive-text-hover)
+}
+
+.trashIcon_f53c21 {
+    height: 24px;
+    width: 24px
+}
+
+.emojiRow_f53c21:focus-within:not(.disabled_f53c21),
+.emojiRow_f53c21:hover:not(.disabled_f53c21) {
+    background-color: var(--background-base-lowest)
+}
+
+.emojiRow_f53c21:focus-within:not(.disabled_f53c21) .deleteButton_f53c21,
+.emojiRow_f53c21:hover:not(.disabled_f53c21) .deleteButton_f53c21 {
+    opacity: 1
+}
+
+.disabled_f53c21 {
+    cursor: not-allowed;
+    opacity: .5
+}
+
 .buttonsContainer__24d0d {
     display: flex;
     gap: 16px

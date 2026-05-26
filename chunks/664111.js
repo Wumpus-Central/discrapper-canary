@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => K }), n(321073);
+n.r(t), n.d(t, { default: () => G }), n(321073);
 var r = n(627968),
     l = n(64700),
     a = n(503698),
@@ -18,724 +18,731 @@ var r = n(627968),
     b = n(775602),
     g = n(607470),
     y = n(475815),
-    C = n(718499),
-    S = n(23590),
-    R = n(671897),
-    N = n(275664),
-    A = n(408121),
-    w = n(984212),
-    P = n(739416),
-    L = n(931853),
-    T = n(90721),
-    D = n(920228),
-    j = n(652215),
-    k = n(838541),
-    M = n(375708),
-    I = n(834926);
-let B = { tension: 250, friction: 5, clamp: !0 },
-    F = { visibility: "hidden" },
-    U = l.forwardRef(function (e, t) {
+    S = n(718499),
+    C = n(23590),
+    N = n(671897),
+    R = n(565164),
+    A = n(275664),
+    w = n(408121),
+    P = n(984212),
+    L = n(739416),
+    T = n(931853),
+    k = n(90721),
+    j = n(920228),
+    D = n(652215),
+    M = n(838541),
+    I = n(375708),
+    B = n(332206);
+let F = { tension: 250, friction: 5, clamp: !0 },
+    U = { visibility: "hidden" },
+    $ = l.forwardRef(function (e, t) {
         let {
                 parentTransitionState: n,
                 autoplay: a = !1,
                 orientation: c = "landscape",
-                videoUrlOverride: j,
-                src: M,
-                poster: U,
-                initialTimeSec: G = 0,
-                onProgressUpdate: K,
-                onEnded: O,
+                videoUrlOverride: D,
+                src: I,
+                poster: $,
+                initialTimeSec: O = 0,
+                onProgressUpdate: G,
+                onEnded: K,
                 onError: _,
                 maxSeekableTimeSec: Q,
-                captionTrackUrl: $,
-                transcriptText: Y,
-                renderEndScreen: z,
-                onPlayerStateChange: X,
-                onFullscreenChange: V,
-                onVolumeChange: H,
-                onMutedChange: W,
-                initialVolume: Z = 0.3,
-                initialMuted: J = !1,
-                onLoadStart: q,
-                onLoadEnd: ee,
-                onFirstFrame: et,
-                onBufferingStart: en,
-                onBufferingEnd: er,
-                onFocusChange: el,
-                onVisibilityChange: ea,
-                onSeek: ei,
-                renderOverlay: eu,
-                renderPersistentOverlay: es,
-                transcriptClassName: eo,
-                onHlsInstance: ec,
-                onClick: ed,
-                preload: em,
-                downloadUrl: ep,
-                downloadContentType: ef,
-                extraButtons: eh,
-                hideFullScreenBtn: ex = !1,
-                hideSkipButtons: ev,
-                compactTimeDisplay: eE = !1,
-                hidePlaybackSpeedBtn: eb = !1,
-                getPlaybackBlockedMessage: eg,
-                progressClassName: ey,
+                captionTrackUrl: Y,
+                transcriptText: z,
+                renderEndScreen: X,
+                onPlayerStateChange: V,
+                onFullscreenChange: H,
+                onVolumeChange: W,
+                onMutedChange: Z,
+                initialVolume: J = 0.3,
+                initialMuted: q = !1,
+                onLoadStart: ee,
+                onLoadEnd: et,
+                onFirstFrame: en,
+                onBufferingStart: er,
+                onBufferingEnd: el,
+                onFocusChange: ea,
+                onVisibilityChange: ei,
+                onSeek: eu,
+                renderOverlay: es,
+                renderPersistentOverlay: eo,
+                transcriptClassName: ec,
+                onHlsInstance: ed,
+                onClick: em,
+                preload: ep,
+                downloadUrl: ef,
+                downloadContentType: eh,
+                extraButtons: ex,
+                hideFullScreenBtn: ev = !1,
+                hideSkipButtons: eE,
+                compactTimeDisplay: eb = !1,
+                hidePlaybackSpeedBtn: eg = !1,
+                getPlaybackBlockedMessage: ey,
+                progressClassName: eS,
                 pauseOnLostVisibility: eC = !1,
-                persistTimeline: eS = !1,
+                persistTimeline: eN = !1,
                 persistPlayhead: eR = !0,
-                autoFocus: eN = !1,
-                autoHideVolumeSlider: eA = !1,
-                timelineIndicatorConfig: ew,
-                loadingSpinnerPosition: eP = "top-left",
-                crossOrigin: eL = "anonymous",
-                withVideoHalo: eT = !1,
-                objectFit: eD = "contain",
-                muxContentMetadata: ej,
-                awaitMuxReady: ek = !1,
+                autoFocus: eA = !1,
+                autoHideVolumeSlider: ew = !1,
+                timelineIndicatorConfig: eP,
+                scrubPreviewVttUrl: eL,
+                scrubPreviewImageUrl: eT,
+                loadingSpinnerPosition: ek = "top-left",
+                crossOrigin: ej = "anonymous",
+                withVideoHalo: eD = !1,
+                objectFit: eM = "contain",
+                muxContentMetadata: eI,
+                awaitMuxReady: eB = !1,
             } = e,
-            eM = j ?? M,
-            eI = eg ?? L.u,
-            { focused: eB, focusedChanged: eF } = (0, P.A7)(),
-            { visible: eU, visibleChanged: eG, targetRef: eK } = (0, P.O7)(),
-            [eO, e_] = l.useState(a ? o.Q6.PLAYING : o.Q6.PAUSED),
-            [eQ, e$] = l.useState(!1),
-            [eY, ez] = l.useState(!1),
-            [eX, eV] = l.useState(0),
-            [eH, eW] = l.useState(null),
-            eZ = l.useCallback((e) => {
-                eW(null), eV(e);
+            eF = D ?? I,
+            eU = ey ?? T.u,
+            e$ = l.useRef(null),
+            eO = (0, R.z5)(e$, eL, eT),
+            { focused: eG, focusedChanged: eK } = (0, L.A7)(),
+            { visible: e_, visibleChanged: eQ, targetRef: eY } = (0, L.O7)(),
+            [ez, eX] = l.useState(a ? o.Q6.PLAYING : o.Q6.PAUSED),
+            [eV, eH] = l.useState(!1),
+            [eW, eZ] = l.useState(!1),
+            [eJ, eq] = l.useState(0),
+            [e0, e1] = l.useState(null),
+            e6 = l.useCallback((e) => {
+                e1(null), eq(e);
             }, []),
-            [eJ, eq] = l.useState(!1),
-            e0 = l.useRef(null),
-            [e1, e6] = l.useState(o.h$.LOADING),
-            e2 = l.useRef(!1),
-            e4 = l.useRef(null),
-            [e9, e8] = l.useState([]),
-            [e7, e3] = l.useState(!1),
-            e5 = l.useRef(!1),
-            te = l.useRef(!1),
-            tt = l.useRef(!1),
-            tn = l.useRef(!1),
-            [tr, tl] = l.useState(!0),
-            ta = l.useRef(!0),
-            ti = l.useRef(null),
-            tu = l.useRef(null),
-            [ts, to] = l.useState(Z),
-            [tc, td] = l.useState(J),
-            [tm, tp] = l.useState(!1),
-            [tf, th] = l.useState(!1),
-            [tx, tv] = l.useState(!1),
-            tE = (0, s.bG)([b.A], () => b.A.useReducedMotion),
-            tb = (0, l.useRef)(null),
-            tg = (0, l.useRef)(null),
-            ty = (0, l.useRef)(null),
-            tC = l.useRef(!0),
-            [tS, tR] = l.useState(null),
-            tN = l.useCallback(() => tb.current?.currentTime ?? null, []);
-        (0, T.A)({ videoRef: tb, canvasRef: tg, enabled: eT && !tE, canvasWidth: 32, canvasHeight: 18 });
-        let tA = l.useCallback(
+            [e2, e4] = l.useState(!1),
+            e9 = l.useRef(null),
+            [e7, e8] = l.useState(o.h$.LOADING),
+            e3 = l.useRef(!1),
+            e5 = l.useRef(null),
+            [te, tt] = l.useState([]),
+            [tn, tr] = l.useState(!1),
+            tl = l.useRef(!1),
+            ta = l.useRef(!1),
+            ti = l.useRef(!1),
+            tu = l.useRef(!1),
+            [ts, to] = l.useState(!0),
+            tc = l.useRef(!0),
+            td = l.useRef(null),
+            tm = l.useRef(null),
+            [tp, tf] = l.useState(J),
+            [th, tx] = l.useState(q),
+            [tv, tE] = l.useState(!1),
+            [tb, tg] = l.useState(!1),
+            [ty, tS] = l.useState(!1),
+            tC = (0, s.bG)([b.A], () => b.A.useReducedMotion),
+            tN = (0, l.useRef)(null),
+            tR = (0, l.useRef)(null),
+            tA = (0, l.useRef)(null),
+            tw = l.useRef(!0),
+            [tP, tL] = l.useState(null),
+            tT = l.useCallback(() => tN.current?.currentTime ?? null, []);
+        (0, k.A)({ videoRef: tN, canvasRef: tR, enabled: eD && !tC, canvasWidth: 32, canvasHeight: 18 });
+        let tk = l.useCallback(
                 (e, t) => {
                     _?.(e, t);
                 },
                 [_],
             ),
-            { isHlsActive: tw, hlsRef: tP } = (0, C.Ay)(tb, {
-                src: eM,
-                initialTimeSec: G,
-                onError: tA,
-                onHlsInstance: ec,
-                crossOrigin: eL,
+            { isHlsActive: tj, hlsRef: tD } = (0, S.Ay)(tN, {
+                src: eF,
+                initialTimeSec: O,
+                onError: tk,
+                onHlsInstance: ed,
+                crossOrigin: ej,
             }),
-            { isReady: tL } = (0, S.A)({ videoRef: tb, hlsRef: tP, contentMetadata: ej, isHls: tw }),
-            tT = ek && !tL && !tw,
-            [tD, tj] = l.useState(null),
-            [tk, tM] = l.useState(0),
-            [tI, tB] = l.useState(!1),
-            tF = Q ?? tb.current?.duration ?? 0,
-            [tU, tG] = l.useState(o.oA.MD),
-            tK = { [o.oA.MD]: 56, [o.oA.LG]: 64 };
+            { isReady: tM } = (0, C.A)({ videoRef: tN, hlsRef: tD, contentMetadata: eI, isHls: tj }),
+            tI = eB && !tM && !tj,
+            [tB, tF] = l.useState(null),
+            [tU, t$] = l.useState(0),
+            [tO, tG] = l.useState(!1),
+            tK = Q ?? tN.current?.duration ?? 0,
+            [t_, tQ] = l.useState(o.oA.MD),
+            tY = { [o.oA.MD]: 56, [o.oA.LG]: 64 };
         (0, E.u5)(() => {
-            tC.current && (tC.current = !1);
+            tw.current && (tw.current = !1);
         });
-        let tO = l.useCallback(
+        let tz = l.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-                if (((tn.current = !0), e_(e), X?.(e, t), null != tb.current))
+                if (((tu.current = !0), eX(e), V?.(e, t), null != tN.current))
                     switch (e) {
                         case o.Q6.PLAYING:
-                            tR(null), tb.current.play();
+                            tL(null), tN.current.play();
                             break;
                         case o.Q6.PAUSED:
-                            (e5.current = !1), tb.current.pause(), (ta.current = !1);
+                            (tl.current = !1), tN.current.pause(), (tc.current = !1);
                             break;
                         case o.Q6.ENDED:
-                            tp(!1);
+                            tE(!1);
                     }
             },
-            [X],
+            [V],
         );
         l.useEffect(() => {
             if (!eC) return;
             let e = null != n && (n === d.ip.HIDDEN || n === d.ip.EXITING || n === d.ip.EXITED),
-                t = null != n && eG && !eU,
-                r = eF && !eB;
-            if ((e || t || r) && null != tb.current && eO === o.Q6.PLAYING) {
+                t = null != n && eQ && !e_,
+                r = eK && !eG;
+            if ((e || t || r) && null != tN.current && ez === o.Q6.PLAYING) {
                 let n = e || t ? o.KB.VISIBILITY : o.KB.FOCUS;
-                tR(n), tO(o.Q6.PAUSED, n);
+                tL(n), tz(o.Q6.PAUSED, n);
             }
-        }, [eC, n, eB, eF, eU, eG, eO, tO]),
-            (0, D.A)({
-                videoRef: tb,
+        }, [eC, n, eG, eK, e_, eQ, ez, tz]),
+            (0, j.A)({
+                videoRef: tN,
                 enabled: eC,
                 onPipPause: () => {
-                    tR(o.KB.PICTURE_IN_PICTURE), tO(o.Q6.PAUSED, o.KB.PICTURE_IN_PICTURE);
+                    tL(o.KB.PICTURE_IN_PICTURE), tz(o.Q6.PAUSED, o.KB.PICTURE_IN_PICTURE);
                 },
                 onHiddenPause: () => {
-                    tR(o.KB.FOCUS), tO(o.Q6.PAUSED, o.KB.FOCUS);
+                    tL(o.KB.FOCUS), tz(o.Q6.PAUSED, o.KB.FOCUS);
                 },
             }),
             l.useEffect(() => {
-                eF && el?.(eB, eO);
-            }, [eB, eF, eO, el]),
+                eK && ea?.(eG, ez);
+            }, [eG, eK, ez, ea]),
             l.useEffect(() => {
-                eG && ea?.(eU, eO);
-            }, [eU, eG, eO, ea]);
-        let [t_, tQ] = l.useState(!1),
-            t$ = l.useRef(null),
-            tY = l.useRef(0);
+                eQ && ei?.(e_, ez);
+            }, [e_, eQ, ez, ei]);
+        let [tX, tV] = l.useState(!1),
+            tH = l.useRef(null),
+            tW = l.useRef(0);
         l.useLayoutEffect(() => {
-            tY.current = performance.now();
+            tW.current = performance.now();
         }, []);
-        let tz = l.useCallback(() => {
-                null != t$.current && clearTimeout(t$.current),
-                    eO !== o.Q6.PLAYING ||
-                        (t$.current = setTimeout(
+        let tZ = l.useCallback(() => {
+                null != tH.current && clearTimeout(tH.current),
+                    ez !== o.Q6.PLAYING ||
+                        (tH.current = setTimeout(
                             () => {
-                                eO === o.Q6.PLAYING && tQ(!0);
+                                ez === o.Q6.PLAYING && tV(!0);
                             },
-                            Math.max(0, 3e3 - (performance.now() - tY.current)),
+                            Math.max(0, 3e3 - (performance.now() - tW.current)),
                         ));
-            }, [eO]),
-            tX = l.useCallback(() => {
-                tQ(!1), (tY.current = performance.now()), tz();
-            }, [tz]);
+            }, [ez]),
+            tJ = l.useCallback(() => {
+                tV(!1), (tW.current = performance.now()), tZ();
+            }, [tZ]);
         l.useEffect(() => {
-            if (eO !== o.Q6.PLAYING) {
-                tQ(!1), null != t$.current && clearTimeout(t$.current);
+            if (ez !== o.Q6.PLAYING) {
+                tV(!1), null != tH.current && clearTimeout(tH.current);
                 return;
             }
             return (
-                tz(),
+                tZ(),
                 () => {
-                    null != t$.current && clearTimeout(t$.current);
+                    null != tH.current && clearTimeout(tH.current);
                 }
             );
-        }, [eO, tz]),
+        }, [ez, tZ]),
             l.useEffect(
                 () => () => {
-                    null != e0.current && clearTimeout(e0.current);
+                    null != e9.current && clearTimeout(e9.current);
                 },
                 [],
             );
-        let tV = !t_ && (eY || eQ || eO === o.Q6.ENDED),
-            tH = l.useRef(V);
-        tH.current = V;
-        let tW = l.useCallback(() => {
-                let e = (0, y.qf)(tb.current?.parentNode, tb.current);
-                null == e || (0, y._U)(e) || (e.removeEventListener(y.Wb, tW), tv(!1), tH.current?.(!1), tG(o.oA.MD));
+        let tq = !tX && (eW || eV || ez === o.Q6.ENDED),
+            t0 = l.useRef(H);
+        t0.current = H;
+        let t1 = l.useCallback(() => {
+                let e = (0, y.qf)(tN.current?.parentNode, tN.current);
+                null == e || (0, y._U)(e) || (e.removeEventListener(y.Wb, t1), tS(!1), t0.current?.(!1), tQ(o.oA.MD));
             }, []),
-            tZ = () => {
-                null == tb.current ||
-                    (tq(Math.max((e4.current ?? tb.current.currentTime) - 10, 0)),
-                    eO === o.Q6.ENDED && tO(o.Q6.PAUSED, o.KB.SEEK));
+            t6 = () => {
+                null == tN.current ||
+                    (t4(Math.max((e5.current ?? tN.current.currentTime) - 10, 0)),
+                    ez === o.Q6.ENDED && tz(o.Q6.PAUSED, o.KB.SEEK));
             },
-            tJ = () => {
-                if (null == tb.current) return;
-                let e = Math.min((e4.current ?? tb.current.currentTime) + 10, tF);
-                tq(e), eO !== o.Q6.ENDED && e >= tb.current.duration && tO(o.Q6.ENDED, o.KB.SEEK);
+            t2 = () => {
+                if (null == tN.current) return;
+                let e = Math.min((e5.current ?? tN.current.currentTime) + 10, tK);
+                t4(e), ez !== o.Q6.ENDED && e >= tN.current.duration && tz(o.Q6.ENDED, o.KB.SEEK);
             };
         l.useEffect(() => {
-            let e = tb.current;
+            let e = tN.current;
             return () => {
                 let t = (0, y.qf)(e?.parentNode, e);
-                null != t && t.removeEventListener(y.Wb, tW);
+                null != t && t.removeEventListener(y.Wb, t1);
             };
-        }, [tW]);
-        let tq = l.useCallback(
+        }, [t1]);
+        let t4 = l.useCallback(
                 function (e) {
                     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                    if (null == tb.current) return;
-                    let n = tb.current.currentTime;
-                    (e4.current = e),
-                        eW((e / (tb.current.duration ?? 1)) * 100),
-                        eq(!0),
-                        null != e0.current && clearTimeout(e0.current),
-                        (e0.current = setTimeout(() => {
-                            eq(!1), (e0.current = null);
+                    if (null == tN.current) return;
+                    let n = tN.current.currentTime;
+                    (e5.current = e),
+                        e1((e / (tN.current.duration ?? 1)) * 100),
+                        e4(!0),
+                        null != e9.current && clearTimeout(e9.current),
+                        (e9.current = setTimeout(() => {
+                            e4(!1), (e9.current = null);
                         }, 100)),
-                        (e2.current = !0),
-                        (tb.current.currentTime = e),
-                        t && ei?.(n, e);
+                        (e3.current = !0),
+                        (tN.current.currentTime = e),
+                        t && eu?.(n, e);
                 },
-                [ei],
+                [eu],
             ),
-            t0 = () => {
-                if (null != tb.current)
-                    switch (eO) {
+            t9 = () => {
+                if (null != tN.current)
+                    switch (ez) {
                         case o.Q6.ENDED:
-                            tq(0), tO(o.Q6.PLAYING, o.KB.USER);
+                            t4(0), tz(o.Q6.PLAYING, o.KB.USER);
                             break;
                         case o.Q6.PLAYING:
-                            tR(o.KB.USER), tO(o.Q6.PAUSED, o.KB.USER);
+                            tL(o.KB.USER), tz(o.Q6.PAUSED, o.KB.USER);
                             break;
                         default:
-                            tO(o.Q6.PLAYING, o.KB.USER);
+                            tz(o.Q6.PLAYING, o.KB.USER);
                     }
             },
-            t1 = (e) => {
-                tj(e);
+            t7 = (e) => {
+                tF(e);
             },
-            t6 = (e) => {
-                tj((t) => (t?.id === e.id ? null : t));
+            t8 = (e) => {
+                tF((t) => (t?.id === e.id ? null : t));
             },
-            t2 = l.useCallback(() => {
-                if (null == tb.current || 0 === tb.current.textTracks.length) return;
-                let e = tb.current.textTracks[0];
+            t3 = l.useCallback(() => {
+                if (null == tN.current || 0 === tN.current.textTracks.length) return;
+                let e = tN.current.textTracks[0];
                 if (((e.mode = "hidden"), null != e.cues))
                     for (let t = 0; t < e.cues.length; t++) {
                         let n = e.cues[t];
-                        (0, w.C)(n) && ((n.id = `cue-${t}`), (n.onenter = () => t1(n)), (n.onexit = () => t6(n)));
+                        (0, P.C)(n) && ((n.id = `cue-${t}`), (n.onenter = () => t7(n)), (n.onexit = () => t8(n)));
                     }
             }, []);
         l.useEffect(() => {
-            if (null == ty.current) return;
-            let e = ty.current;
+            if (null == tA.current) return;
+            let e = tA.current;
             return (
-                e.addEventListener("load", t2),
+                e.addEventListener("load", t3),
                 () => {
-                    null != e && e.removeEventListener("load", t2);
+                    null != e && e.removeEventListener("load", t3);
                 }
             );
-        }, [t2]);
-        let t4 = (e) => {
-                if (null != tb.current) {
-                    if (e1 === o.h$.BUFFERING) {
-                        let e = null != tu.current ? performance.now() - tu.current : null;
-                        er?.(e);
-                    } else if (e1 === o.h$.LOADING) {
-                        let e = null != ti.current ? performance.now() - ti.current : null;
-                        ee?.(e);
+        }, [t3]);
+        let t5 = (e) => {
+                if (null != tN.current) {
+                    if (e7 === o.h$.BUFFERING) {
+                        let e = null != tm.current ? performance.now() - tm.current : null;
+                        el?.(e);
+                    } else if (e7 === o.h$.LOADING) {
+                        let e = null != td.current ? performance.now() - td.current : null;
+                        et?.(e);
                     }
-                    e6(o.h$.READY), eO === o.Q6.PLAYING && (e5.current || tO(o.Q6.PLAYING, o.KB.BUFFERING_RECOVERY));
+                    e8(o.h$.READY), ez === o.Q6.PLAYING && (tl.current || tz(o.Q6.PLAYING, o.KB.BUFFERING_RECOVERY));
                 }
             },
-            t9 = (e) => {
-                if ((tq(e), eO === o.Q6.ENDED && !te.current)) {
-                    let t = tb.current?.duration;
-                    (null == t || Number.isNaN(t) || e < t) && tO(o.Q6.PLAYING, o.KB.USER);
+            ne = (e) => {
+                if ((t4(e), ez === o.Q6.ENDED && !ta.current)) {
+                    let t = tN.current?.duration;
+                    (null == t || Number.isNaN(t) || e < t) && tz(o.Q6.PLAYING, o.KB.USER);
                 }
             },
-            [{ controlBarAnimSpring: t8 }, t7] = (0, m.z)(() => ({
+            [{ controlBarAnimSpring: nt }, nn] = (0, m.z)(() => ({
                 from: { controlBarAnimSpring: 0 },
-                config: B,
+                config: F,
                 onStart: () => {
-                    tl(!1);
+                    to(!1);
                 },
                 onRest: () => {
-                    tl(!0);
+                    to(!0);
                 },
             })),
-            t3 = (0, l.useRef)(null),
-            [{ captionHeightSpring: t5 }, ne] = (0, m.z)(() => ({ from: { captionHeightSpring: 0 }, config: B }));
+            nr = (0, l.useRef)(null),
+            [{ captionHeightSpring: nl }, na] = (0, m.z)(() => ({ from: { captionHeightSpring: 0 }, config: F }));
         l.useEffect(
             () => (
-                ne({ captionHeightSpring: tf && null != tD ? (t3.current?.clientHeight ?? 0) : 0, immediate: tE }),
+                na({ captionHeightSpring: tb && null != tB ? (nr.current?.clientHeight ?? 0) : 0, immediate: tC }),
                 () => {
-                    t5.stop();
+                    nl.stop();
                 }
             ),
-            [tf, ne, tE, tD, t5],
+            [tb, na, tC, tB, nl],
         ),
             l.useEffect(
                 () => (
-                    t7({ controlBarAnimSpring: tV || e7 ? 1 : 0, immediate: tE }),
+                    nn({ controlBarAnimSpring: tq || tn ? 1 : 0, immediate: tC }),
                     () => {
-                        t8.stop();
+                        nt.stop();
                     }
                 ),
-                [tV, t7, tE, e7, t8],
+                [tq, nn, tC, tn, nt],
             );
-        let nt = eO === o.Q6.ENDED && null != z,
-            nn = l.useCallback(
+        let ni = ez === o.Q6.ENDED && null != X,
+            nu = l.useCallback(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o.KB.USER;
-                    null != tb.current && (tq(0), tO(o.Q6.PLAYING, e));
+                    null != tN.current && (t4(0), tz(o.Q6.PLAYING, e));
                 },
-                [tq, tO],
+                [t4, tz],
             ),
-            nr = l.useRef(null),
-            nl = l.useCallback(
+            ns = l.useRef(null),
+            no = l.useCallback(
                 (e) => {
-                    tX(), nr.current?.(e.nativeEvent);
+                    tJ(), ns.current?.(e.nativeEvent);
                 },
-                [tX],
+                [tJ],
             );
         return (0, r.jsx)(p.D, {
-            className: I.W6,
-            "data-fullscreen": tx,
+            className: B.W6,
+            "data-fullscreen": ty,
             "data-testid": "discord-web-video-player-container",
             tabIndex: -1,
             onMouseEnter: () => {
-                e$(!0), tQ(!1), (tY.current = performance.now()), null != t$.current && clearTimeout(t$.current);
+                eH(!0), tV(!1), (tW.current = performance.now()), null != tH.current && clearTimeout(tH.current);
             },
             onMouseLeave: () => {
-                e$(!1), tQ(!1);
+                eH(!1), tV(!1);
             },
-            onMouseMove: tX,
+            onMouseMove: tJ,
             children: (0, r.jsxs)("div", {
-                className: i()(I.NS, { [I.DO]: "portrait" === c, [I.r7]: "landscape" === c }),
+                className: i()(B.NS, { [B.DO]: "portrait" === c, [B.r7]: "landscape" === c }),
                 tabIndex: -1,
-                onKeyDown: nl,
+                onKeyDown: no,
                 style: { "--custom-footer-horizontal-padding": "20px", "--custom-footer-bottom": "4px" },
                 children: [
-                    eT && !tE && (0, r.jsx)("canvas", { ref: tg, className: I.Xm }),
-                    nt && z?.({ replay: nn }),
+                    eD && !tC && (0, r.jsx)("canvas", { ref: tR, className: B.Xm }),
+                    ni && X?.({ replay: nu }),
                     (0, r.jsxs)(g.A, {
                         ref: (e) => {
-                            (tb.current = e),
-                                (eK.current = e),
+                            (tN.current = e),
+                                (eY.current = e),
                                 "function" == typeof t ? t(e) : null != t && (t.current = e);
                         },
                         autoPlay: a,
                         playsInline: !0,
-                        mediaLayoutType: tx ? k.dG.STATIC : k.dG.RESPONSIVE,
-                        className: i()({ [I.R]: nt, [I.IR]: !0, [I.FP]: "cover" === eD && !tx }),
+                        mediaLayoutType: ty ? M.dG.STATIC : M.dG.RESPONSIVE,
+                        className: i()({ [B.R]: ni, [B.IR]: !0, [B.FP]: "cover" === eM && !ty }),
                         controls: !1,
-                        poster: U,
-                        preload: em,
+                        poster: $,
+                        preload: ep,
                         disablePictureInPicture: !0,
                         "data-testid": "discord-web-video-player-video",
                         onTimeUpdate: (e) => {
-                            null != tb.current &&
-                                (K?.(tb.current.currentTime, tb.current.duration),
-                                e2.current || eZ((tb.current.currentTime / tb.current.duration) * 100));
+                            null != tN.current &&
+                                (G?.(tN.current.currentTime, tN.current.duration),
+                                e3.current || e6((tN.current.currentTime / tN.current.duration) * 100));
                         },
                         onEnded: (e) => {
-                            e6(o.h$.READY), O?.(), te.current || tO(o.Q6.ENDED, o.KB.PLAYBACK_COMPLETE);
+                            e8(o.h$.READY), K?.(), ta.current || tz(o.Q6.ENDED, o.KB.PLAYBACK_COMPLETE);
                         },
                         onLoadedData: (e) => {
-                            if (e1 === o.h$.LOADING) {
-                                let e = null != ti.current ? performance.now() - ti.current : null;
-                                ee?.(e), e6(o.h$.READY);
+                            if (e7 === o.h$.LOADING) {
+                                let e = null != td.current ? performance.now() - td.current : null;
+                                et?.(e), e8(o.h$.READY);
                             }
                         },
                         onLoadedMetadata: (e) => {
-                            if (null == tb.current) return;
-                            G > 0 && !tw && tq(G, !1), tc ? (tb.current.volume = 0) : (tb.current.volume = ts);
-                            let t = tb.current.duration;
-                            t > 0 && isFinite(t) && tM(t), tB(!0);
+                            if (null == tN.current) return;
+                            O > 0 && !tj && t4(O, !1), th ? (tN.current.volume = 0) : (tN.current.volume = tp);
+                            let t = tN.current.duration;
+                            t > 0 && isFinite(t) && t$(t), tG(!0);
                         },
                         onLoadStart: () => {
-                            (ti.current = performance.now()), q?.();
+                            (td.current = performance.now()), ee?.();
                         },
                         onPlaying: () => {
-                            ta.current && (et?.(performance.now()), (ta.current = !1));
+                            tc.current && (en?.(performance.now()), (tc.current = !1));
                         },
                         onWaiting: (e) => {
-                            (tu.current = performance.now()), en?.(), e6(o.h$.BUFFERING);
+                            (tm.current = performance.now()), er?.(), e8(o.h$.BUFFERING);
                         },
                         onProgress: (e) => {
-                            if (null == tb.current) return;
+                            if (null == tN.current) return;
                             let t = [];
-                            for (let e = 0; e < tb.current.buffered.length; e++) {
-                                let n = tb.current.buffered.start(e),
-                                    r = tb.current.buffered.end(e);
+                            for (let e = 0; e < tN.current.buffered.length; e++) {
+                                let n = tN.current.buffered.start(e),
+                                    r = tN.current.buffered.end(e);
                                 r - n < 1 ||
-                                    t.push({ start: n / tb.current.duration, size: (r - n) / tb.current.duration });
+                                    t.push({ start: n / tN.current.duration, size: (r - n) / tN.current.duration });
                             }
-                            e8(t);
+                            tt(t);
                         },
-                        onCanPlay: t4,
-                        onCanPlayThrough: t4,
+                        onCanPlay: t5,
+                        onCanPlayThrough: t5,
                         onSeeked: () => {
-                            (e2.current = !1),
-                                (e4.current = null),
-                                null != tb.current && eZ((tb.current.currentTime / tb.current.duration) * 100);
+                            (e3.current = !1),
+                                (e5.current = null),
+                                null != tN.current && e6((tN.current.currentTime / tN.current.duration) * 100);
                         },
-                        onAbort: () => tA(o.SB.ABORT),
-                        onError: () => tA(o.SB.ERROR),
-                        onEmptied: () => tA(o.SB.EMPTIED),
-                        onStalled: () => tA(o.SB.STALLED),
+                        onAbort: () => tk(o.SB.ABORT),
+                        onError: () => tk(o.SB.ERROR),
+                        onEmptied: () => tk(o.SB.EMPTIED),
+                        onStalled: () => tk(o.SB.STALLED),
                         onClick: (e) => {
-                            null != ed ? ed(e) : t0();
+                            null != em ? em(e) : t9();
                         },
-                        crossOrigin: eL ?? void 0,
+                        crossOrigin: ej ?? void 0,
                         children: [
-                            null != $ &&
+                            null != Y &&
                                 (0, r.jsx)("track", {
-                                    ref: ty,
-                                    src: $,
+                                    ref: tA,
+                                    src: Y,
                                     label: "English",
                                     kind: "captions",
                                     srcLang: "en",
                                     default: !0,
                                 }),
-                            !tw &&
-                                !tT &&
+                            null != eL && (0, r.jsx)("track", { ref: e$, src: eL, kind: "metadata" }),
+                            !tj &&
+                                !tI &&
                                 (0, r.jsx)("source", {
-                                    onError: () => tA(o.SB.SOURCE_ERROR),
-                                    src: eM,
+                                    onError: () => tk(o.SB.SOURCE_ERROR),
+                                    src: eF,
                                     type: "video/mp4",
                                 }),
                         ],
                     }),
-                    e1 !== o.h$.READY &&
-                        eO === o.Q6.PLAYING &&
-                        null != eM &&
+                    e7 !== o.h$.READY &&
+                        ez === o.Q6.PLAYING &&
+                        null != eF &&
                         (0, r.jsx)("span", {
-                            className: i()(I.S, { [I.F]: "center" === eP }),
+                            className: i()(B.S, { [B.F]: "center" === ek }),
                             "data-testid": "discord-web-video-player-loading-spinner",
                             children: (0, r.jsx)(f.y, { type: f.y.Type.WANDERING_CUBES }),
                         }),
-                    (0, r.jsx)(L.A, {
-                        message: eI({ hasVideoAsset: null != eM, playerState: eO, pauseReason: tS }),
-                        showOverlay: null == eM,
+                    (0, r.jsx)(T.A, {
+                        message: eU({ hasVideoAsset: null != eF, playerState: ez, pauseReason: tP }),
+                        showOverlay: null == eF,
                     }),
-                    null != eu &&
+                    null != es &&
                         (0, r.jsx)(u.animated.div, {
-                            className: I.MU,
+                            className: B.MU,
                             style: {
-                                opacity: (0, u.to)([t8.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`),
-                                visibility: (0, u.to)([t8.to({ range: [0, 1], output: [0, 1] })], (e) =>
+                                opacity: (0, u.to)([nt.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`),
+                                visibility: (0, u.to)([nt.to({ range: [0, 1], output: [0, 1] })], (e) =>
                                     e < 0.1 ? "hidden" : "visible",
                                 ),
-                                pointerEvents: (0, u.to)([t8.to({ range: [0, 1], output: [0, 1] })], (e) =>
+                                pointerEvents: (0, u.to)([nt.to({ range: [0, 1], output: [0, 1] })], (e) =>
                                     e < 0.3 ? "none" : "auto",
                                 ),
                             },
-                            children: eu(),
+                            children: es(),
                         }),
-                    tm &&
-                        eO !== o.Q6.ENDED &&
-                        null != Y &&
+                    tv &&
+                        ez !== o.Q6.ENDED &&
+                        null != z &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(p.D, {
                                     onClick: () => {
-                                        eO === o.Q6.PAUSED && tO(o.Q6.PLAYING, o.KB.USER), tp(!1);
+                                        ez === o.Q6.PAUSED && tz(o.Q6.PLAYING, o.KB.USER), tE(!1);
                                     },
                                     tabIndex: -1,
-                                    children: (0, r.jsx)("div", { className: I.BG }),
+                                    children: (0, r.jsx)("div", { className: B.BG }),
                                 }),
                                 (0, r.jsx)(u.animated.div, {
-                                    className: i()(I.xr, eo, { [I.MZ]: "portrait" === c }),
+                                    className: i()(B.xr, ec, { [B.MZ]: "portrait" === c }),
                                     "data-testid": "discord-web-video-player-transcript",
-                                    style: { marginBottom: (0, u.to)([t8, t5], (e, t) => `${e * tK[tU] + t}px`) },
-                                    children: (0, r.jsx)(A.X, {
-                                        text: Y,
+                                    style: { marginBottom: (0, u.to)([nt, nl], (e, t) => `${e * tY[t_] + t}px`) },
+                                    children: (0, r.jsx)(w.X, {
+                                        text: z,
                                         onClose: () => {
-                                            tp(!1);
+                                            tE(!1);
                                         },
                                     }),
                                 }),
                             ],
                         }),
                     (0, r.jsx)(u.animated.div, {
-                        className: I.Jp,
-                        style: { opacity: (0, u.to)([t8.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`) },
+                        className: B.Jp,
+                        style: { opacity: (0, u.to)([nt.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`) },
                     }),
                     (0, r.jsx)(
                         "div",
                         {
-                            className: i()(I.yf, {
-                                [I.ZH]: tn.current && eO === o.Q6.PLAYING,
-                                [I.v7]: tn.current && eO === o.Q6.PAUSED,
+                            className: i()(B.yf, {
+                                [B.ZH]: tu.current && ez === o.Q6.PLAYING,
+                                [B.v7]: tu.current && ez === o.Q6.PAUSED,
                             }),
                             style: { "--custom-play-pause-pop-ms": "1000ms" },
                             children:
-                                eO === o.Q6.PLAYING
-                                    ? (0, r.jsx)(h.u, { className: I.PK })
-                                    : (0, r.jsx)(x.E, { className: I.PK }),
+                                ez === o.Q6.PLAYING
+                                    ? (0, r.jsx)(h.u, { className: B.PK })
+                                    : (0, r.jsx)(x.E, { className: B.PK }),
                         },
-                        eO,
+                        ez,
                     ),
-                    tf &&
-                        null != tD &&
-                        !nt &&
+                    tb &&
+                        null != tB &&
+                        !ni &&
                         (0, r.jsx)(u.animated.div, {
-                            className: I.o$,
-                            ref: t3,
+                            className: B.o$,
+                            ref: nr,
                             "data-testid": "discord-web-video-player-captions",
                             style: {
                                 translateY: (0, u.to)(
-                                    [t8.to({ range: [0, 1], output: [-20, -tK[tU]] })],
+                                    [nt.to({ range: [0, 1], output: [-20, -tY[t_]] })],
                                     (e) => `${e}px`,
                                 ),
                             },
                             children: (0, r.jsx)(v.E, {
                                 variant: "text-lg/semibold",
                                 color: "always-white",
-                                className: I.qh,
-                                children: tD.text,
+                                className: B.qh,
+                                children: tB.text,
                             }),
                         }),
                     (0, r.jsxs)(u.animated.div, {
-                        className: I.r8,
-                        style: { height: (0, u.to)([t8.to({ range: [0, 1], output: [0, tK[tU]] })], (e) => `${e}px`) },
+                        className: B.r8,
+                        style: { height: (0, u.to)([nt.to({ range: [0, 1], output: [0, tY[t_]] })], (e) => `${e}px`) },
                         children: [
                             (0, r.jsx)(u.animated.div, {
                                 style: {
                                     transform: (0, u.to)(
-                                        [t8.to({ range: [1, 0], output: [0, 1] })],
+                                        [nt.to({ range: [1, 0], output: [0, 1] })],
                                         (e) => `translateY(-${20 * e}px)`,
                                     ),
                                 },
                                 children: (0, r.jsx)("div", {
-                                    style: tV || e7 || eS ? void 0 : F,
-                                    children: (0, r.jsx)(N.Ay, {
-                                        percent: null != eH ? eH : eX,
+                                    style: tq || tn || eN ? void 0 : U,
+                                    children: (0, r.jsx)(A.Ay, {
+                                        percent: null != e0 ? e0 : eJ,
                                         animate:
-                                            !0 !== tC.current && !eJ && eO === o.Q6.PLAYING && tI && e1 === o.h$.READY,
-                                        interactionEnabled: tr && tF > 0,
-                                        backgroundColor: tV || eS ? void 0 : "rgba(0, 0, 0, 0.0)",
-                                        playerState: eO,
-                                        preloadedBuffers: tV ? e9 : void 0,
-                                        durationSec: tk > 0 ? tk : +!tI,
-                                        isFullyVisible: tV && tr,
-                                        maxSeekableTime: null != Q && tF > 0 ? tF : void 0,
-                                        progressClassName: ey,
+                                            !0 !== tw.current && !e2 && ez === o.Q6.PLAYING && tO && e7 === o.h$.READY,
+                                        interactionEnabled: ts && tK > 0,
+                                        backgroundColor: tq || eN ? void 0 : "rgba(0, 0, 0, 0.0)",
+                                        playerState: ez,
+                                        preloadedBuffers: tq ? te : void 0,
+                                        durationSec: tU > 0 ? tU : +!tO,
+                                        isFullyVisible: tq && ts,
+                                        maxSeekableTime: null != Q && tK > 0 ? tK : void 0,
+                                        progressClassName: eS,
                                         persistPlayhead: eR,
-                                        onClick: t9,
-                                        onScrubBack: tZ,
-                                        onScrubForward: tJ,
+                                        onClick: ne,
+                                        onScrubBack: t6,
+                                        onScrubForward: t2,
                                         onDragStateChange: (e) => {
-                                            if (((te.current = e), e3(e), e))
-                                                (e5.current = eO === o.Q6.PLAYING),
-                                                    (tt.current = eO === o.Q6.ENDED),
-                                                    e5.current
-                                                        ? tb.current?.pause()
-                                                        : tt.current && tO(o.Q6.PAUSED, o.KB.SEEK);
+                                            if (((ta.current = e), tr(e), e))
+                                                (tl.current = ez === o.Q6.PLAYING),
+                                                    (ti.current = ez === o.Q6.ENDED),
+                                                    tl.current
+                                                        ? tN.current?.pause()
+                                                        : ti.current && tz(o.Q6.PAUSED, o.KB.SEEK);
                                             else {
-                                                let e = tb.current,
+                                                let e = tN.current,
                                                     t =
                                                         null != e &&
                                                         !Number.isNaN(e.duration) &&
                                                         e.currentTime >= e.duration;
-                                                e5.current
-                                                    ? ((e5.current = !1),
-                                                      t ? tO(o.Q6.ENDED, o.KB.PLAYBACK_COMPLETE) : e?.play())
-                                                    : tt.current
-                                                      ? ((tt.current = !1),
+                                                tl.current
+                                                    ? ((tl.current = !1),
+                                                      t ? tz(o.Q6.ENDED, o.KB.PLAYBACK_COMPLETE) : e?.play())
+                                                    : ti.current
+                                                      ? ((ti.current = !1),
                                                         t
-                                                            ? tO(o.Q6.ENDED, o.KB.PLAYBACK_COMPLETE)
-                                                            : tO(o.Q6.PLAYING, o.KB.USER))
-                                                      : t && tO(o.Q6.ENDED, o.KB.PLAYBACK_COMPLETE);
+                                                            ? tz(o.Q6.ENDED, o.KB.PLAYBACK_COMPLETE)
+                                                            : tz(o.Q6.PLAYING, o.KB.USER))
+                                                      : t && tz(o.Q6.ENDED, o.KB.PLAYBACK_COMPLETE);
                                             }
                                         },
-                                        indicatorConfig: ew,
-                                        onIndicatorSeek: t9,
-                                        getCurrentTimeSec: tN,
+                                        indicatorConfig: eP,
+                                        scrubPreviewCues: eO,
+                                        onIndicatorSeek: ne,
+                                        getCurrentTimeSec: tT,
                                         "data-testid": "discord-web-video-player-timeline",
                                     }),
                                 }),
                             }),
                             (0, r.jsx)(u.animated.div, {
-                                className: I.uN,
+                                className: B.uN,
                                 "data-testid": "discord-web-video-player-controls",
                                 style: {
                                     paddingTop: (0, u.to)(
-                                        [t8.to({ range: [0, 1], output: [0, 1] })],
+                                        [nt.to({ range: [0, 1], output: [0, 1] })],
                                         (e) => `${e * e * 20}px`,
                                     ),
                                     paddingBottom: (0, u.to)(
-                                        [t8.to({ range: [0, 1], output: [0, 1] })],
+                                        [nt.to({ range: [0, 1], output: [0, 1] })],
                                         (e) => `${e * e * 12}px`,
                                     ),
-                                    pointerEvents: (0, u.to)([t8.to({ range: [0, 1], output: [0, 1] })], (e) =>
+                                    pointerEvents: (0, u.to)([nt.to({ range: [0, 1], output: [0, 1] })], (e) =>
                                         e < 0.3 ? "none" : "auto",
                                     ),
                                 },
-                                onFocus: () => ez(!0),
-                                onBlur: () => ez(!1),
-                                children: (0, r.jsx)(R.A, {
-                                    videoRef: tb,
-                                    playerState: eO,
-                                    animSpring: t8,
-                                    visible: tV,
-                                    seekForwardEnabled: null == Q || (tb.current?.currentTime ?? 0) + 1 < tF,
-                                    hideCaptionBtn: null == $,
-                                    hideTranscriptBtn: null == Y,
-                                    hideFullScreenBtn: ex,
-                                    hidePlaybackSpeedBtn: eb,
-                                    hideSkipButtons: ev ?? "portrait" === c,
-                                    compactTimeDisplay: eE,
-                                    size: tU,
-                                    downloadUrl: ep,
-                                    downloadContentType: ef,
-                                    extraButtons: eh,
-                                    autoFocus: eN,
-                                    keyDownHandlerRef: nr,
-                                    volume: ts,
-                                    muted: tc,
-                                    transcriptEnabled: tm,
-                                    captionEnabled: tf,
-                                    fullScreenEnabled: tx,
-                                    handlePlaybackBtnClick: t0,
+                                onFocus: () => eZ(!0),
+                                onBlur: () => eZ(!1),
+                                children: (0, r.jsx)(N.A, {
+                                    videoRef: tN,
+                                    playerState: ez,
+                                    animSpring: nt,
+                                    visible: tq,
+                                    seekForwardEnabled: null == Q || (tN.current?.currentTime ?? 0) + 1 < tK,
+                                    hideCaptionBtn: null == Y,
+                                    hideTranscriptBtn: null == z,
+                                    hideFullScreenBtn: ev,
+                                    hidePlaybackSpeedBtn: eg,
+                                    hideSkipButtons: eE ?? "portrait" === c,
+                                    compactTimeDisplay: eb,
+                                    size: t_,
+                                    downloadUrl: ef,
+                                    downloadContentType: eh,
+                                    extraButtons: ex,
+                                    autoFocus: eA,
+                                    keyDownHandlerRef: ns,
+                                    volume: tp,
+                                    muted: th,
+                                    transcriptEnabled: tv,
+                                    captionEnabled: tb,
+                                    fullScreenEnabled: ty,
+                                    handlePlaybackBtnClick: t9,
                                     handleTranscriptBtnClick: () => {
-                                        tp(!tm);
+                                        tE(!tv);
                                     },
                                     handleCaptionBtnClick: () => {
-                                        th(!tf);
+                                        tg(!tb);
                                     },
                                     handleFullScreenBtnClick: () => {
-                                        let e = !tx,
-                                            t = (0, y.qf)(tb.current?.parentNode, tb.current);
+                                        let e = !ty,
+                                            t = (0, y.qf)(tN.current?.parentNode, tN.current);
                                         e && null != t
-                                            ? ((0, y.tl)(t), t.addEventListener(y.Wb, tW), V?.(!0), tG(o.oA.LG))
+                                            ? ((0, y.tl)(t), t.addEventListener(y.Wb, t1), H?.(!0), tQ(o.oA.LG))
                                             : e ||
                                               null == t ||
-                                              (t.removeEventListener(y.Wb, tW), V?.(!1), (0, y.sP)(t), tG(o.oA.MD)),
-                                            tv(e);
+                                              (t.removeEventListener(y.Wb, t1), H?.(!1), (0, y.sP)(t), tQ(o.oA.MD)),
+                                            tS(e);
                                     },
-                                    handleSeekBackBtnClick: tZ,
-                                    handleSeekForwardBtnClick: tJ,
-                                    autoHideVolumeSlider: eA,
-                                    handleControlBarPendingInteraction: e3,
+                                    handleSeekBackBtnClick: t6,
+                                    handleSeekForwardBtnClick: t2,
+                                    autoHideVolumeSlider: ew,
+                                    handleControlBarPendingInteraction: tr,
                                     onVolumeChange: (e) => {
-                                        to(e), H?.(e);
+                                        tf(e), W?.(e);
                                     },
                                     onMutedChange: (e) => {
-                                        td(e), W?.(e);
+                                        tx(e), Z?.(e);
                                     },
                                 }),
                             }),
                         ],
                     }),
-                    null != es &&
+                    null != eo &&
                         (0, r.jsx)("div", {
-                            className: I.MU,
-                            children: es({ playerState: eO, isControlBarExpanded: tV, videoRef: tb, isActive: !0 }),
+                            className: B.MU,
+                            children: eo({ playerState: ez, isControlBarExpanded: tq, videoRef: tN, isActive: !0 }),
                         }),
                 ],
             }),
         });
     });
-function G(e) {
+function O(e) {
     let { poster: t, posterPlaceholder: n, posterPlaceholderVersion: a, orientation: i, objectFit: u = "contain" } = e,
         [s, o] = l.useState(!1),
         d = l.useCallback(() => o(!0), []);
     return null == t
         ? null
         : (0, r.jsx)(c.y, {
-              readyState: s ? j.Rv1.READY : j.Rv1.LOADING,
+              readyState: s ? D.Rv1.READY : D.Rv1.LOADING,
               aspectRatio: "portrait" === i ? 9 / 16 : 16 / 9,
               placeholder: n,
               placeholderVersion: a ?? 1,
               placeholderStyle: { width: "100%", height: "100%", objectFit: "cover" },
               disableSpinner: !0,
-              children: (0, r.jsx)("img", { src: t, className: I.zH, style: { objectFit: u }, alt: "", onLoad: d }),
+              children: (0, r.jsx)("img", { src: t, className: B.zH, style: { objectFit: u }, alt: "", onLoad: d }),
           });
 }
-let K = l.forwardRef(function (e, t) {
+let G = l.forwardRef(function (e, t) {
     let { active: n = !0, onClick: a, ...u } = e,
         {
             autoplay: s,
@@ -748,42 +755,43 @@ let K = l.forwardRef(function (e, t) {
             objectFit: E,
         } = u,
         [b, g] = l.useState(!1),
-        y = l.useCallback(
+        y = n || b,
+        S = l.useCallback(
             (e) => {
                 null != a ? a(e) : g(!0);
             },
             [a],
         ),
         C = l.useRef(null);
-    return n || b
-        ? (0, r.jsx)(U, { ...u, onClick: a, autoplay: s || b, ref: t })
+    return y
+        ? (0, r.jsx)($, { ...u, onClick: a, autoplay: s || b, ref: t })
         : (0, r.jsx)(p.D, {
-              className: i()(I.W6, I.nZ),
+              className: i()(B.W6, B.nZ),
               "data-testid": "discord-web-video-player-container",
               tabIndex: 0,
-              onClick: y,
-              "aria-label": M.intl.string(M.t.RscU7I),
+              onClick: S,
+              "aria-label": I.intl.string(I.t.RscU7I),
               focusProps: { ringTarget: C },
               children: (0, r.jsxs)("div", {
-                  className: i()(I.NS, { [I.DO]: "portrait" === d, [I.r7]: "landscape" === d }),
+                  className: i()(B.NS, { [B.DO]: "portrait" === d, [B.r7]: "landscape" === d }),
                   children: [
-                      (0, r.jsx)(G, {
+                      (0, r.jsx)(O, {
                           poster: c,
                           posterPlaceholder: m,
                           posterPlaceholderVersion: f,
                           orientation: d,
                           objectFit: E,
                       }),
-                      null != x && (0, r.jsx)("div", { className: I.MU, children: x() }),
+                      null != x && (0, r.jsx)("div", { className: B.MU, children: x() }),
                       null != v &&
                           (0, r.jsx)("div", {
-                              className: I.MU,
+                              className: B.MU,
                               children: v({ playerState: o.Q6.PAUSED, isControlBarExpanded: !0, isActive: !1 }),
                           }),
                       (0, r.jsx)("div", {
-                          className: I.mF,
+                          className: B.mF,
                           ref: C,
-                          children: (0, r.jsx)(h.u, { size: "xs", color: "currentColor", className: I.z_ }),
+                          children: (0, r.jsx)(h.u, { size: "xs", color: "currentColor", className: B.z_ }),
                       }),
                   ],
               }),

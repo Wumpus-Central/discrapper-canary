@@ -34,7 +34,7 @@ function A(e) {
               onClick: () => {
                   (0, r.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
-                          t.e("3040"),
+                          t.e("45768"),
                           t.e("32637"),
                           t.e("40965"),
                           t.e("96413"),
