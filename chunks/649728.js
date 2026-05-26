@@ -2062,7 +2062,8 @@ var s2 = s(974064);
 let s8 = 4 * tE.A.Millis.SECOND,
     s7 = a.forwardRef(function (e, t) {
         let { deepLinkedQuestId: s, isLoadingQuestHomeHero: n, className: l } = e,
-            { sections: i, isFetchingCurrentQuests: c } = ((e) => {
+            { enabled: i } = X.aD.useConfig({ location: t2.rE.QUEST_HOME_DESKTOP }),
+            { sections: c, isFetchingCurrentQuests: u } = ((e) => {
                 let { isLoadingQuestHomeHero: t } = e,
                     {
                         quests: s,
@@ -2162,59 +2163,59 @@ let s8 = 4 * tE.A.Millis.SECOND,
                     isFetchingCurrentQuests: c,
                 };
             })({ isLoadingQuestHomeHero: n }),
-            [u, d] = a.useState(null),
-            [h, x] = a.useState(0),
-            [E, g] = a.useState(0),
-            f = a.useRef(null),
-            [{ highlightAnimationProgress: v }, C] = (0, tx.z)(() => ({
+            [d, h] = a.useState(null),
+            [x, E] = a.useState(0),
+            [g, f] = a.useState(0),
+            v = a.useRef(null),
+            [{ highlightAnimationProgress: C }, p] = (0, tx.z)(() => ({
                 highlightAnimationProgress: 1,
                 config: { duration: s8 },
             })),
-            p = a.useCallback(
+            _ = a.useCallback(
                 (e) => {
                     if (null == e) return !1;
                     let t = document.getElementById((0, eG.sT)(e));
                     return (
                         null != t &&
-                        !c &&
-                        (d(e),
-                        x((e) => e + 1),
+                        !u &&
+                        (h(e),
+                        E((e) => e + 1),
                         t.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" }),
-                        C({
+                        p({
                             from: { highlightAnimationProgress: 0 },
                             to: { highlightAnimationProgress: 1 },
                             reset: !0,
                             onRest: (e) => {
-                                e.cancelled || d(null);
+                                e.cancelled || h(null);
                             },
                         }),
                         !0)
                     );
                 },
-                [d, x, C, c],
+                [h, E, p, u],
             );
-        a.useImperativeHandle(t, () => ({ scrollToQuest: p }), [p]),
+        a.useImperativeHandle(t, () => ({ scrollToQuest: _ }), [_]),
             a.useLayoutEffect(() => {
                 if (null == s) {
-                    f.current = null;
+                    v.current = null;
                     return;
                 }
-                f.current !== s && ((0, en.sB)(s), p(s) && (f.current = s));
-            }, [s, p]);
-        let _ = a.useMemo(() => ({ targetQuestId: u, highlightCount: h, highlightAnimationProgress: v }), [u, h, v]),
-            S = a.useMemo(
+                v.current !== s && ((0, en.sB)(s), _(s) && (v.current = s));
+            }, [s, _]);
+        let S = a.useMemo(() => ({ targetQuestId: d, highlightCount: x, highlightAnimationProgress: C }), [d, x, C]),
+            N = a.useMemo(
                 () =>
-                    i.findIndex((e) => {
+                    c.findIndex((e) => {
                         let { identifier: t } = e;
                         return t === sB.FEATURED;
                     }),
-                [i],
+                [c],
             );
         return (0, r.jsx)(sM.Provider, {
-            value: _,
+            value: S,
             children: (0, r.jsx)("div", {
                 className: o()(s2.k, l),
-                children: i.map((e, t) => {
+                children: c.map((e, t) => {
                     let { identifier: s, questIds: n, title: l } = e;
                     return (0, r.jsxs)(
                         "div",
@@ -2222,11 +2223,11 @@ let s8 = 4 * tE.A.Millis.SECOND,
                             className: s2.p,
                             children: [
                                 (0, r.jsx)(j.D, { variant: "heading-lg/medium", children: eh.intl.string(l) }),
-                                s === sB.FEATURED
-                                    ? (0, r.jsx)(sy, { questIds: n, setMaxRowIndex: g })
+                                s === sB.FEATURED && i
+                                    ? (0, r.jsx)(sy, { questIds: n, setMaxRowIndex: f })
                                     : (0, r.jsx)(sG, {
                                           questIds: n,
-                                          rowIndex: t < S ? t : t + E,
+                                          rowIndex: t < N ? t : t + g,
                                           sectionIdentifier: s,
                                       }),
                             ],
