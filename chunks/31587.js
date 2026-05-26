@@ -25,7 +25,7 @@ n.d(t, {
     Ns: () => eq,
     Iq: () => eh,
     Qh: () => ef,
-    t9: () => eX,
+    t9: () => eZ,
     XD: () => ez,
     ZP: () => eE,
     UX: () => ew,
@@ -104,8 +104,8 @@ var j = n(971649),
     z = n(901406),
     $ = n(801365),
     q = n(792620),
-    Z = n(814793),
-    X = n(753386),
+    X = n(814793),
+    Z = n(753386),
     Q = n(190107),
     J = n(788868),
     ee = n(375708);
@@ -150,8 +150,8 @@ function en(e, t) {
         l = e.userStatus?.enrolledAt != null,
         u = t.userStatus?.enrolledAt != null,
         c = 20 * v.A.Millis.MINUTE,
-        d = eZ(e, c),
-        _ = eZ(t, c);
+        d = eX(e, c),
+        _ = eX(t, c);
     return s
         ? d !== _ && (d || _)
             ? d
@@ -335,8 +335,9 @@ function ef(e) {
             }, [s])),
         E = [];
     for (let t of "all" === e ? h : p) {
-        let e = f.get(t);
-        null != e && E.push(e);
+        let n = f.get(t),
+            i = null != n && "all" === e && l.removeExpiredQuests && (0, x.Ic)(n) && !(0, x.GR)(n.userStatus);
+        null == n || i || E.push(n);
     }
     return { quests: E, excludedQuests: c, isFetchingCurrentQuests: d, hasFetched: _ };
 }
@@ -374,7 +375,7 @@ function eg(e, t, n) {
         a = (0, h.bG)([F.A], () => null != e && F.A.isQuestExpired(e.id), [e]);
     if (null == e || r || a || s === n) return !1;
     let o = e.userStatus?.claimedAt != null,
-        l = (0, Z.Ll)(t, i);
+        l = (0, X.Ll)(t, i);
     return !o || !!l;
 }
 function eA(e) {
@@ -403,7 +404,7 @@ function eN(e) {
         i = eS(e),
         r =
             ((t = (0, h.bG)([F.A], () => F.A.getOptimisticProgress(e.id, c.n.WATCH_VIDEO))),
-            a.useMemo(() => (0, X.J$)(e), [e, t]));
+            a.useMemo(() => (0, Z.J$)(e), [e, t]));
     return n || i || r;
 }
 let ey = (e) => {
@@ -448,7 +449,7 @@ function eO(e) {
     let t = (0, h.bG)([F.A], () => F.A.quests),
         n = ev(Array.from(t.values())),
         i = a.useMemo(() => {
-            let n = (0, Z.$e)(t, Q.zO);
+            let n = (0, X.$e)(t, Q.zO);
             return (0, W.BM)(n, e);
         }, [e, t, n]);
     return em(i) ? null : i;
@@ -728,11 +729,11 @@ function e$(e) {
         }, [n, i]);
 }
 let eq = (e) => a.useMemo(() => y.default.getCurrentUser()?.isStaff() === !0, []) || e.preview,
-    eZ = (e, t) => {
+    eX = (e, t) => {
         let n = e.userStatus?.completedAt != null;
         return e.userStatus?.enrolledAt != null && !n && Date.now() - new Date(e.userStatus?.enrolledAt).getTime() > t;
     };
-function eX(e) {
+function eZ(e) {
     let t = (0, h.bG)([F.A], () => F.A.quests);
     return a.useMemo(() => {
         let n = (e.questIds ?? [])

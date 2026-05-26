@@ -11,6 +11,7 @@ n.d(t, {
     aD: () => S,
     uK: () => u,
     lk: () => g,
+    jm: () => N,
     sy: () => p,
     A8: () => T,
 });
@@ -123,6 +124,12 @@ let I = (0, a.mj)({
     }),
     S = (0, a.mj)({
         name: "2026-05-quest-home-tile-redesign",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+    }),
+    N = (0, a.mj)({
+        name: "2026-05-quest-home-remove-expired-quests",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },

@@ -1,23 +1,24 @@
 "use strict";
 n.d(t, {
-    Gp: () => R,
-    HN: () => S,
+    GR: () => I,
+    Gp: () => b,
+    HN: () => N,
     Ic: () => m,
-    Kc: () => v,
-    L4: () => O,
+    Kc: () => O,
+    L4: () => R,
     Oh: () => _,
-    RF: () => D,
-    ZG: () => I,
+    RF: () => L,
+    ZG: () => T,
     gO: () => p,
     if: () => g,
     kd: () => E,
-    r$: () => L,
-    t6: () => T,
+    r$: () => w,
+    t6: () => S,
     v1: () => A,
-    vZ: () => b,
+    vZ: () => D,
     vc: () => f,
     vy: () => h,
-    xn: () => N,
+    xn: () => y,
 });
 var i = n(665260),
     r = n(773669),
@@ -69,16 +70,19 @@ function A(e) {
     return t;
 }
 function I(e) {
+    return null != e && null != e.completedAt && null == e.claimedAt;
+}
+function T(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { dateStyle: "short" };
     return null == e ? "" : new Date(e).toLocaleDateString(r.default.locale, t);
 }
-function T(e, t, n) {
+function S(e, t, n) {
     let i = t.get(n);
     if (null == i) return;
     let r = e.get(i.quest.id);
     if (null != r && !m(r)) return r;
 }
-function S(e) {
+function N(e) {
     return {
         [l.uF.QUEST_BAR]: l.yW.DESKTOP_ACCOUNT_PANEL_AREA,
         [l.uF.QUEST_BAR_V2]: l.yW.DESKTOP_ACCOUNT_PANEL_AREA,
@@ -88,11 +92,11 @@ function S(e) {
         [l.uF.QUEST_HOME_MOBILE_CAROUSEL]: l.yW.QUEST_HOME_MOBILE_CAROUSEL,
     }[e];
 }
-function N(e) {
-    let t = S(e);
+function y(e) {
+    let t = N(e);
     return null != t && c.J6.has(t);
 }
-function y(e) {
+function C(e) {
     return {
         questId: e.questId,
         adCreativeId: e.adCreativeId,
@@ -102,17 +106,17 @@ function y(e) {
         trafficMetadataSealed: e.trafficMetadataSealed,
     };
 }
-function C(e, t) {
+function v(e, t) {
     let n = (function (e, t) {
         if (e !== l.yW.QUEST_HOME_MOBILE_CAROUSEL || null == t) return null;
         let n = a.A.getAdDecisionByPlacementAndAdCreativeId(e, t);
-        return null != n ? y(n) : null;
+        return null != n ? C(n) : null;
     })(e, t);
     if (null != n) return n;
     let { enableNewRequestBehavior: i } = u.A.getConfig({ location: "getQuestDeliveryDataForPlacement" }),
         r = o.A.questAdDecisionByPlacement.get(e);
-    if (e === l.yW.QUEST_HOME_BANNER_DESKTOP && null != r) return y(r);
-    if (i) return null == r ? null : y(r);
+    if (e === l.yW.QUEST_HOME_BANNER_DESKTOP && null != r) return C(r);
+    if (i) return null == r ? null : C(r);
     {
         let t = o.A.questToDeliverForPlacement.get(e);
         return null == t
@@ -127,20 +131,20 @@ function C(e, t) {
               };
     }
 }
-function v(e, t) {
-    let n = S(t);
+function O(e, t) {
+    let n = N(t);
     if (null == n) return c.K3;
-    let { adDecisionData: i, questId: r, adCreativeId: s } = C(n, e) ?? {};
+    let { adDecisionData: i, questId: r, adCreativeId: s } = v(n, e) ?? {};
     return null == i ? c.K3 : r === e || s === e || i.ad_id === e ? i : c.K3;
 }
-function O(e, t) {
-    let n = S(e);
-    if (null != n) return C(n, t)?.metadataSealed;
+function R(e, t) {
+    let n = N(e);
+    if (null != n) return v(n, t)?.metadataSealed;
 }
-function R(e, t, n) {
-    let i = S(e);
+function b(e, t, n) {
+    let i = N(e);
     if (null != i) {
-        let { trafficMetadataSealed: e, questId: r } = C(i, n) ?? {};
+        let { trafficMetadataSealed: e, questId: r } = v(i, n) ?? {};
         if (null != e && (null != n || r === t)) return e;
     }
     if (null != t) {
@@ -148,13 +152,13 @@ function R(e, t, n) {
         return e?.trafficMetadataSealed;
     }
 }
-function b(e, t) {
-    let n = S(e);
-    if (null != n) return C(n, t)?.adContext;
-}
 function D(e, t) {
+    let n = N(e);
+    if (null != n) return v(n, t)?.adContext;
+}
+function L(e, t) {
     s.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });
 }
-function L() {
+function w() {
     return window.location.pathname.startsWith(d.BVt.QUEST_HOME_DEPRECATED);
 }
