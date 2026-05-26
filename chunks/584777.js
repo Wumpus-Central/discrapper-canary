@@ -44,7 +44,7 @@ function w() {
             null != i && i.clearQuery(),
             (s = r),
             (e = I.default.getCurrentUser()),
-            (t = (0, l.G)()),
+            (t = (0, l.G)("PrivateChannelRecipientsInviteStore")),
             (n = [...A.A.getFriendIDs()]),
             e?.isStaff() &&
                 (n = Array.from(
@@ -83,7 +83,7 @@ function w() {
     }
     let a = I.default.getCurrentUser(),
         o = a?.isStaff() ?? !1,
-        _ = (0, l.G)();
+        _ = (0, l.G)("PrivateChannelRecipientsInviteStore");
     _ && d.A.requestMembers(null, N);
     let p = null != r ? r.recipients : [];
     return (
@@ -142,7 +142,7 @@ function U(e) {
     let { results: t } = e;
     if (!S || "" === N) return;
     let n = I.default.getCurrentUser(),
-        i = (0, l.G)(),
+        i = (0, l.G)("PrivateChannelRecipientsInviteStore"),
         r = i ? new Set(g.A.getGuildIds()) : null,
         s = [];
     for (let { id: e, comparator: a } of t) {
@@ -174,7 +174,7 @@ function V() {
     null != i && (i.destroy(), (i = null)), (b = new Set()), D();
 }
 function B() {
-    return !!S && !!(0, l.G)() && w();
+    return !!S && !!(0, l.G)("PrivateChannelRecipientsInviteStore") && w();
 }
 class H extends r.Ay.Store {
     static displayName = "PrivateChannelRecipientsInviteStore";
@@ -206,27 +206,32 @@ let j = new H(s.h, {
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t } = e;
-            if (!S || !(0, l.G)()) return !1;
+            if (!S || !(0, l.G)("PrivateChannelRecipientsInviteStore")) return !1;
             for (let e of t) for (let t of e.members) b.add(t.user.id);
             return !1;
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            if (!S || !(0, l.G)()) return !1;
+            if (!S || !(0, l.G)("PrivateChannelRecipientsInviteStore")) return !1;
             for (let e of t.members) b.add(e.user.id);
             return !1;
         },
         GUILD_MEMBER_ADD: function (e) {
             let { user: t } = e;
-            return !!S && !!(0, l.G)() && (b.add(t.id), !1);
+            return !!S && !!(0, l.G)("PrivateChannelRecipientsInviteStore") && (b.add(t.id), !1);
         },
         GUILD_MEMBER_REMOVE: function (e) {
             let { user: t } = e;
-            return !!S && !!(0, l.G)() && 0 === m.Ay.memberOf(t.id).length && (b.delete(t.id), !1);
+            return (
+                !!S &&
+                !!(0, l.G)("PrivateChannelRecipientsInviteStore") &&
+                0 === m.Ay.memberOf(t.id).length &&
+                (b.delete(t.id), !1)
+            );
         },
         GUILD_MEMBERS_CHUNK_BATCH: function (e) {
             let { chunks: t } = e;
-            if (!S || !(0, l.G)()) return !1;
+            if (!S || !(0, l.G)("PrivateChannelRecipientsInviteStore")) return !1;
             for (let e of t) for (let t of e.members) b.add(t.user.id);
             return !1;
         },
@@ -241,7 +246,7 @@ let j = new H(s.h, {
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
             (S = !0),
                 (function () {
-                    if (((b = new Set()), !(0, l.G)())) return;
+                    if (((b = new Set()), !(0, l.G)("PrivateChannelRecipientsInviteStore"))) return;
                     let e = m.Ay.getMutableAllGuildsAndMembers();
                     for (let t in e) for (let n in e[t]) b.add(n);
                 })(),

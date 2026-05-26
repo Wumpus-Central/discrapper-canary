@@ -5,6 +5,6 @@ let i = (0, n(240921).Ay)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-function l() {
-    return i.getConfig({ location: "PrivateChannelRecipientsInviteModal" }).enabled;
+function l(e) {
+    return i.getConfig({ location: e }).enabled;
 }

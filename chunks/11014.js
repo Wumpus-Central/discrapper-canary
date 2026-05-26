@@ -2931,7 +2931,7 @@ function iG(e) {
         en.default.track(er.HAw.MEMBER_LIST_VIEWED, { channel_id: n.id, channel_type: n.type, guild_id: n.guild_id });
     }, [n.guild_id, n.id, n.type]);
     let d = l && r.every((e) => e.user.isStaff()),
-        o = (0, lb.G)();
+        o = (0, lb.G)("PrivateChannelRecipients");
     return (0, i.jsx)(M.f5, {
         value: a,
         children: (0, i.jsx)("div", {
@@ -5040,7 +5040,7 @@ class rX extends s.PureComponent {
         o()(null != e, "Missing channel in Channel.renderHeaderToolbar");
         let d = [];
         if (e.isSystemDM()) return d;
-        let c = (e.type === er.rbe.DM || e.type === er.rbe.GROUP_DM) && (0, lb.G)();
+        let c = (e.type === er.rbe.DM || e.type === er.rbe.GROUP_DM) && (0, lb.G)("Channel");
         switch (e.type) {
             case er.rbe.GUILD_STAGE_VOICE:
             case er.rbe.GUILD_VOICE:

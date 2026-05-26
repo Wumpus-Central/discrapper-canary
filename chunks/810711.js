@@ -378,7 +378,7 @@ class eB extends r.PureComponent {
         return !eu.A.isFriend(n) && !t;
     }
     allowNonFriendRecipientPicker() {
-        return this.props.hasGuilds && (0, em.G)();
+        return this.props.hasGuilds && (0, em.G)("PrivateChannelRecipientsInvite");
     }
     createInvite() {
         let { channel: e } = this.props;
@@ -428,7 +428,7 @@ class eB extends r.PureComponent {
             ? q.intl.string(q.t.jD1qzM)
             : t.isDM() && e
               ? q.intl.string(q.t.IIOxgV)
-              : (0, em.G)()
+              : (0, em.G)("PrivateChannelRecipientsInvite")
                 ? q.intl.string(t.isMultiUserDM() ? q.t.FFxUQ0 : q.t["PWkO7+"])
                 : q.intl.string(t.isMultiUserDM() ? q.t.AQAPts : q.t.Xjlbvs);
     }
@@ -453,7 +453,7 @@ class eB extends r.PureComponent {
                 i = null != n ? n.username : "";
             return q.intl.format(q.t["eg+R9x"], { username: i });
         }
-        let n = (0, em.G)();
+        let n = (0, em.G)("PrivateChannelRecipientsInvite");
         if (null == e && n) return q.intl.format(q.t.t9mhPt, { number: this.getMaxParticipants() });
         let i = this.getRemaining();
         return i <= 0
@@ -486,7 +486,7 @@ class eB extends r.PureComponent {
     renderSearchBar() {
         let { query: e, hasFriends: t, selectedUsers: n } = this.props;
         if (((!t || this.isNotFriends()) && !this.allowNonFriendRecipientPicker()) || this.isPartyFull()) return null;
-        let r = (0, em.G)(),
+        let r = (0, em.G)("PrivateChannelRecipientsInvite"),
             s = [];
         n.forEach((e) => {
             let t = K.default.getUser(e);
@@ -562,7 +562,7 @@ class eB extends r.PureComponent {
                       sectionHeight: 0,
                       rowHeight: 32,
                       renderRow: () => {
-                          if ((0, em.G)()) {
+                          if ((0, em.G)("PrivateChannelRecipientsInvite")) {
                               let e = null != n && n.isMultiUserDM();
                               return (0, i.jsxs)("div", {
                                   className: eM.wV,
@@ -648,7 +648,7 @@ class eB extends r.PureComponent {
         let { channel: e, invite: t, hideInstantInvites: n } = this.props,
             { copied: r } = this.state;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return null;
-        let s = (0, em.G)(),
+        let s = (0, em.G)("PrivateChannelRecipientsInvite"),
             a = null != t ? (0, Z.A)(t.code) : "",
             o = a.length > 0;
         return (0, i.jsx)(T.D, {
@@ -845,7 +845,7 @@ class eB extends r.PureComponent {
                 name_is_set: "" !== this.state.newChannelName,
                 icon_is_set: null != this.state.previewIcon,
             });
-        let s = (0, em.G)(),
+        let s = (0, em.G)("PrivateChannelRecipientsInvite"),
             { channelRecipientIds: a, inviteLinkOnlyUserIds: o } =
                 s && e.length > 1 ? eU(e) : { channelRecipientIds: e, inviteLinkOnlyUserIds: [] };
         ek({ recipientIds: a, location: "New Group DM", useGroupDmShell: s && o.length > 0 })
@@ -855,7 +855,7 @@ class eB extends r.PureComponent {
             .catch(eG);
     };
     pushToExistingDM = (e, t) => {
-        let n = (0, em.G)(),
+        let n = (0, em.G)("PrivateChannelRecipientsInvite"),
             { channelRecipientIds: i, inviteLinkOnlyUserIds: r } = n
                 ? eU(t)
                 : { channelRecipientIds: t, inviteLinkOnlyUserIds: [] },
