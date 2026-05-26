@@ -1,0 +1,46 @@
+.infoHeader__4c2e9 {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0
+}
+
+.heading__4c2e9 {
+    margin-bottom: 4px
+}
+
+.earlyAccessBadge__4c2e9 {
+    margin-bottom: 8px
+}
+
+.disabledReason__4c2e9 {
+    margin-top: 8px;
+    opacity: .7
+}
+
+.learnMoreLink__4c2e9 {
+    margin-top: 4px
+}
+
+.sectionLabel__4c2e9 {
+    flex-shrink: 0;
+    padding-bottom: 2px;
+    padding-top: 24px
+}
+
+.variantScrollArea__4c2e9 {
+    flex: 1 1 0;
+    -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent);
+    mask-image: linear-gradient(180deg, #000 80%, transparent);
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: none
+}
+
+.variantScrollArea__4c2e9::-webkit-scrollbar {
+    height: 0;
+    width: 0
+}
+
+.no-webkit-scrollbar .variantScrollArea__4c2e9 {
+    scrollbar-width: none
+}

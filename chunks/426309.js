@@ -1616,7 +1616,7 @@ var tu = a(702841),
     tm = a(793574),
     th = a(590180),
     tx = a(4227),
-    tp = a(491438),
+    tp = a(828614),
     tg = a(61750),
     tv = a(328762);
 let tj = (e) => {
@@ -7517,21 +7517,21 @@ let rg = {
         GuildContextMenu: async () => {
             let { default: e } = await Promise.all([
                     a.e("33573"),
-                    a.e("47316"),
-                    a.e("74974"),
+                    a.e("57277"),
+                    a.e("63553"),
+                    a.e("23015"),
                     a.e("48845"),
                     a.e("67516"),
-                    a.e("37261"),
-                    a.e("32480"),
+                    a.e("88712"),
                     a.e("63153"),
                     a.e("87845"),
                     a.e("35636"),
                     a.e("93084"),
                     a.e("9546"),
                     a.e("47199"),
-                    a.e("3031"),
-                    a.e("1485"),
+                    a.e("25742"),
                     a.e("45970"),
+                    a.e("52257"),
                     a.e("56574"),
                     a.e("80776"),
                     a.e("20980"),
@@ -7642,7 +7642,7 @@ let rg = {
         },
         UserSettingsMenu: async () => {
             let { default: e } = await Promise.all([
-                a.e("30006"),
+                a.e("25742"),
                 a.e("26132"),
                 a.e("81202"),
                 a.e("43456"),
@@ -7688,7 +7688,7 @@ let rg = {
         },
         AddQuestionsContextMenu: async () => {
             let { AddQuestionsContextMenu: e } = await Promise.all([
-                    a.e("74974"),
+                    a.e("23015"),
                     a.e("63153"),
                     a.e("11810"),
                     a.e("14656"),
@@ -8600,7 +8600,7 @@ let rG = {
     ActivityShareMomentModal: async () => {
         let { default: e } = await Promise.all([
             a.e("46776"),
-            a.e("49589"),
+            a.e("44890"),
             a.e("22230"),
             a.e("36946"),
             a.e("92639"),

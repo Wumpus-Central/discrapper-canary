@@ -1,4 +1,5 @@
 e.exports = {
+    uF: "profileFrameContainer__0b5ea",
     ti: "profilePreviewContainer__0b5ea",
     Hm: "profileEffect__0b5ea",
     Zp: "profileEffectBackground__0b5ea",

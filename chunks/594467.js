@@ -12843,7 +12843,7 @@ let u$ = R.memo(function () {
                             c.isGuildVocal()
                                 ? (0, nF.L3)(e, async () => {
                                       let { default: e } = await Promise.all([
-                                          n.e("74974"),
+                                          n.e("23015"),
                                           n.e("26132"),
                                           n.e("46652"),
                                           n.e("93190"),
@@ -14345,7 +14345,7 @@ let mz = function (e) {
                         ? et.A.saveGuild(t.id, { homeHeader: null })
                         : (0, S.openModalLazy)(async () => {
                               let { default: l } = await Promise.all([
-                                  n.e("3031"),
+                                  n.e("25742"),
                                   n.e("63153"),
                                   n.e("93513"),
                                   n.e("79149"),
@@ -18127,7 +18127,7 @@ function hs(e) {
             (0, nF.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("9546"),
-                    n.e("74974"),
+                    n.e("23015"),
                     n.e("94881"),
                     n.e("26132"),
                     n.e("46652"),
@@ -26123,7 +26123,7 @@ function fJ(e) {
                 let l = Ed.A.fromBlob(Ec.f.GUILD_ICON, t);
                 (0, S.openModalLazy)(async () => {
                     let { default: s } = await Promise.all([
-                        n.e("3031"),
+                        n.e("25742"),
                         n.e("63153"),
                         n.e("93513"),
                         n.e("79149"),

@@ -1,0 +1,7 @@
+e.exports = {
+    h1: "avatarPreviewContainer__349b1",
+    sm: "pfxPreviewContainer__349b1",
+    ob: "profileFramePreviewContainer__349b1",
+    Dz: "nameplatePreviewContainer__349b1",
+    M4: "nameplatePreview__349b1",
+};

@@ -1,0 +1,21 @@
+.subscribeNow_f5ae75 {
+    cursor: pointer;
+    display: inline;
+    text-decoration: underline
+}
+
+.container_f284f6 {
+    align-items: center;
+    color: var(--text-default);
+    display: flex;
+    flex: 1;
+    margin-inline-end: 8px;
+    opacity: .7;
+    white-space: nowrap
+}
+
+.nitroIcon_f284f6 {
+    height: 16px;
+    margin-inline-end: 4px;
+    width: 16px
+}

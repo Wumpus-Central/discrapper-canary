@@ -615,7 +615,7 @@ function eW(e) {
                 : (0, x.openModalLazy)(async () => {
                       let { default: n } = await Promise.all([
                           l.e("57519"),
-                          l.e("3031"),
+                          l.e("25742"),
                           l.e("63153"),
                           l.e("63232"),
                           l.e("43437"),
@@ -792,8 +792,8 @@ var eJ = l(789645),
     e7 = l(279208),
     e9 = l(747007),
     e3 = l(710358),
-    e8 = l(958590),
-    e4 = l(174459),
+    e4 = l(958590),
+    e8 = l(174459),
     e5 = l(957565),
     e2 = l(118888);
 let { INVITE_OPTIONS_7_DAYS: e6, INVITE_OPTIONS_UNLIMITED: te } = I.Ay;
@@ -803,9 +803,9 @@ function tt(e) {
         r = (0, a.bG)([C.Ay], () => (null != n ? C.Ay.getDefaultChannel(n)?.id : null), [n]),
         s = (0, a.bG)([b.A], () => b.A.getGuild(n), [n]),
         { channel_id: d, id: u } = l ?? {},
-        c = (0, a.bG)([e8.A], () => {
+        c = (0, a.bG)([e4.A], () => {
             let e = d ?? r;
-            return null == e ? null : e8.A.getInvite(e);
+            return null == e ? null : e4.A.getInvite(e);
         }, [d, r]);
     if (null == l) return t(), null;
     let o = s?.vanityURLCode ?? c?.code,
@@ -856,7 +856,7 @@ function tt(e) {
                             if (h) return;
                             (0, e5.C)(e);
                             let t = (0, M.dy)(l.entity_type);
-                            e4.default.track(eu.HAw.COPY_INSTANT_INVITE, {
+                            e8.default.track(eu.HAw.COPY_INSTANT_INVITE, {
                                 server: l.guild_id,
                                 channel: d,
                                 channel_type: t,

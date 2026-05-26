@@ -1,0 +1,1 @@
+e.exports = { K: "next__2fd86", Y: "prev__2fd86" };
