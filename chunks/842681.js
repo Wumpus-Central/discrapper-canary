@@ -1,11 +1,7 @@
 e.exports = {
-    Kk: "icon__2a871",
-    v_: "iconOuter__2a871",
-    uU: "iconCheck__2a871",
-    Ss: "iconCross__2a871",
-    z8: "scope__2a871",
-    rv: "scopeInner__2a871",
-    nd: "panel__2a871",
-    l$: "panelInner__2a871",
-    uW: "section__2a871",
+    kL: "container_c2b141",
+    P: "keybind_c2b141",
+    b: "closeButton_c2b141",
+    O3: "closeButtonSolid_c2b141",
+    EH: "closeButtonBold_c2b141",
 };

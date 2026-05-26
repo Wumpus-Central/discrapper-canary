@@ -2,9 +2,9 @@ l.d(e, { default: () => j }), l(321073);
 var i = l(627968),
     n = l(64700),
     r = l(189213),
-    o = l(695366),
+    a = l(695366),
     s = l(17928),
-    a = l(843282),
+    o = l(843282),
     c = l(687966),
     d = l(834730),
     p = l(321471),
@@ -14,39 +14,39 @@ var i = l(627968),
     g = l(627363),
     I = l(587895),
     _ = l(240248),
-    f = l(555337),
-    S = l(636537),
+    S = l(555337),
+    L = l(636537),
     x = l(228366);
-let L = null,
-    C = null,
-    N = !1;
+let C = null,
+    N = null,
+    f = !1;
 class E extends s.Ay.Store {
     static displayName = "GuildSettingsOnboardingAllowedApplicationsStore";
     getAllowedApplicationIds(t) {
-        return L === t ? C : null;
+        return C === t ? N : null;
     }
     isFetching(t) {
-        return L === t && N;
+        return C === t && f;
     }
     hasCachedData(t) {
-        return L === t && null !== C;
+        return C === t && null !== N;
     }
 }
 let O = new E(x.h, {
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_START: function (t) {
         let { guildId: e } = t;
-        (L = e), (N = !0), (C = []);
+        (C = e), (f = !0), (N = []);
     },
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_SUCCESS: function (t) {
         let { guildId: e, applicationIds: l } = t;
-        L === e && ((C = l), (N = !1));
+        C === e && ((N = l), (f = !1));
     },
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_FAILURE: function (t) {
         let { guildId: e } = t;
-        L === e && ((C = []), (N = !1));
+        C === e && ((N = []), (f = !1));
     },
     GUILD_SETTINGS_CLOSE: function () {
-        (L = null), (C = null), (N = !1);
+        (C = null), (N = null), (f = !1);
     },
 });
 var T = l(652215);
@@ -63,7 +63,7 @@ async function m(t) {
         });
     x.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_START", guildId: t });
     try {
-        let e = await S.Bo.get({ url: T.Rsh.GUILD_ONBOARDING_ALLOWED_APPLICATIONS(t), rejectWithError: !1 });
+        let e = await L.Bo.get({ url: T.Rsh.GUILD_ONBOARDING_ALLOWED_APPLICATIONS(t), rejectWithError: !1 });
         if (e.ok && e.body?.application_ids) {
             let l = e.body.application_ids.map((t) => String(t));
             return (
@@ -89,17 +89,17 @@ async function m(t) {
 }
 var v = l(923121),
     G = l(539916),
-    y = l(985018),
-    D = l(886106);
+    y = l(375708),
+    D = l(62874);
 function j(t) {
-    let { transitionState: e, onClose: l, connection: S, index: x } = t,
-        L = (0, h.Ay)(),
-        C = null != S && null != x,
-        N = f.A.getGuildId(),
-        E = (0, s.bG)([O], () => O.getAllowedApplicationIds(N) ?? [], [N]);
+    let { transitionState: e, onClose: l, connection: L, index: x } = t,
+        C = (0, h.Ay)(),
+        N = null != L && null != x,
+        f = S.A.getGuildId(),
+        E = (0, s.bG)([O], () => O.getAllowedApplicationIds(f) ?? [], [f]);
     n.useEffect(() => {
-        null != N && m(N);
-    }, [N]),
+        null != f && m(f);
+    }, [f]),
         n.useEffect(() => {
             for (let t of E)
                 null != I.A.getApplication(t) || I.A.isFetchingApplication(t) || (0, g.TA)(t).catch(() => {});
@@ -112,13 +112,13 @@ function j(t) {
             }
             return t;
         }, [E]),
-        [j, b] = n.useState(() => (null != S ? (0, G.Sq)(S) : void 0)),
-        [P, F] = n.useState(S?.description ?? ""),
-        [R, U] = n.useState([]),
+        [j, b] = n.useState(() => (null != L ? (0, G.Sq)(L) : void 0)),
+        [P, F] = n.useState(L?.description ?? ""),
+        [U, R] = n.useState([]),
         w = n.useMemo(() => {
             let t = [];
             for (let e of A.A.filter((t) => t.enabled && !G.tb.has(t.type))) {
-                let l = "light" === L ? e.icon?.lightPNG : e.icon?.darkPNG;
+                let l = "light" === C ? e.icon?.lightPNG : e.icon?.darkPNG;
                 t.push({ label: e.name, value: `provider:${e.type}`, icon: l });
             }
             for (let e of T) t.push({ label: e.name, value: `app:${e.id}`, icon: e.getIconURL(128) });
@@ -127,11 +127,11 @@ function j(t) {
                     I.A.isFetchingApplication(e) &&
                     t.push({ label: "Loading...", value: `app:${e}`, icon: void 0 });
             return t.sort((t, e) => t.label.localeCompare(e.label)), t;
-        }, [T, E, L]),
+        }, [T, E, C]),
         k = n.useCallback(() => {
-            if (null == j || "" === j) return void U(["Please select a connection"]);
+            if (null == j || "" === j) return void R(["Please select a connection"]);
             let t = (0, G.vK)(j);
-            if (null == t) return void U(["Invalid connection selected"]);
+            if (null == t) return void R(["Invalid connection selected"]);
             let e = P.trim(),
                 i = {
                     connection_type: t.type,
@@ -140,8 +140,8 @@ function j(t) {
                     ...(null != t.providerId && { provider_id: t.providerId }),
                 },
                 n = (0, G.Ii)(i);
-            n.length > 0 ? U(n) : (C ? (0, v.yM)(x, i) : (0, v.sF)(i), l());
-        }, [j, P, C, x, l]),
+            n.length > 0 ? R(n) : (N ? (0, v.yM)(x, i) : (0, v.sF)(i), l());
+        }, [j, P, N, x, l]),
         B = n.useCallback(
             (t) =>
                 (0, i.jsxs)("div", {
@@ -172,16 +172,16 @@ function j(t) {
         }, []);
     return (0, i.jsx)(r.Modal, {
         transitionState: e,
-        title: C ? y.intl.string(y.t.yqegs1) : y.intl.string(y.t.B6qOe2),
+        title: N ? y.intl.string(y.t.yqegs1) : y.intl.string(y.t.B6qOe2),
         onClose: l,
         actions: [
             { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: l },
-            { variant: "primary", text: C ? y.intl.string(y.t["R3BPH+"]) : y.intl.string(y.t.qMOnJu), onClick: k },
+            { variant: "primary", text: N ? y.intl.string(y.t["R3BPH+"]) : y.intl.string(y.t.qMOnJu), onClick: k },
         ],
         children: (0, i.jsxs)("div", {
             className: D.Qs,
             children: [
-                !C &&
+                !N &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(d.E, {
@@ -191,10 +191,10 @@ function j(t) {
                             }),
                             (0, i.jsx)(p.e, {
                                 title: y.intl.string(y.t.joNLrt),
-                                children: (0, i.jsx)(a.Te, {
+                                children: (0, i.jsx)(o.Te, {
                                     value: j ?? "",
                                     onChange: (t) => {
-                                        b(t), U([]);
+                                        b(t), R([]);
                                     },
                                     options: w,
                                     placeholder: y.intl.string(y.t.Wq1LfI),
@@ -203,16 +203,16 @@ function j(t) {
                                     "data-migration-pending": !0,
                                 }),
                             }),
-                            R.length > 0 &&
+                            U.length > 0 &&
                                 (0, i.jsx)("div", {
                                     className: D.sO,
-                                    children: R.map((t, e) =>
+                                    children: U.map((t, e) =>
                                         (0, i.jsxs)(
                                             "div",
                                             {
                                                 className: D.Ff,
                                                 children: [
-                                                    (0, i.jsx)(o.E, { size: "sm", color: "currentColor" }),
+                                                    (0, i.jsx)(a.E, { size: "sm", color: "currentColor" }),
                                                     (0, i.jsx)(d.E, {
                                                         variant: "text-sm/normal",
                                                         color: "text-feedback-critical",

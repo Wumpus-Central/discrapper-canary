@@ -143,7 +143,7 @@ async function U(e) {
 var k = n(566980),
     Y = n(216641),
     G = n(999784),
-    F = n(650098);
+    F = n(52402);
 let B = (e) => {
     let { showBackButton: t, onBackClick: n } = e,
         { premiumSubscription: i, isGift: r, planGroup: s, isPrepaid: o } = e,

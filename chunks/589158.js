@@ -22,7 +22,7 @@ var i,
     S = n(394871),
     N = n(709066),
     y = n(235986),
-    C = n(310887),
+    C = n(974119),
     v = (((i = v || {}).SINGLE_AVATAR = "1"), (i.MULTIPLE_AVATAR = "2"), i);
 let O = { [m._3.SIZE_32]: C.dT, [m._3.SIZE_40]: C.Jb };
 class R extends s.Component {
@@ -92,11 +92,11 @@ var H = n(967144),
     z = n(854627),
     $ = n(240248),
     q = n(427262),
-    Z = n(652215),
-    X = n(705751),
+    X = n(652215),
+    Z = n(705751),
     Q = n(31408),
     J = n(375708),
-    ee = n(28371);
+    ee = n(661971);
 (0, $.xI)(c.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 let et = s.memo(function (e) {
         let { isOwner: t, lostPermissionTooltipText: n, ownerTooltipText: i } = e;
@@ -129,7 +129,7 @@ let et = s.memo(function (e) {
     ei = s.memo(function (e) {
         let { user: t } = e;
         if (null == t || !t.bot) return null;
-        let n = X.nu.BOT;
+        let n = Z.nu.BOT;
         return (0, r.jsx)(N.A, { className: ee.AO, type: n, verified: t.isVerifiedBot() });
     }),
     er = s.memo(function (e) {
@@ -208,9 +208,9 @@ let et = s.memo(function (e) {
                 typingRef: f,
                 currentUser: h,
             } = e,
-            p = s === Z.clD.OFFLINE,
+            p = s === X.clD.OFFLINE,
             g = n ? E.Js : E.eu,
-            I = (0, A.A)(i) ? Z.clD.STREAMING : s;
+            I = (0, A.A)(i) ? X.clD.STREAMING : s;
         return (
             (I = p ? void 0 : I),
             (0, r.jsxs)(r.Fragment, {
@@ -259,7 +259,7 @@ let et = s.memo(function (e) {
                     !(0, D.A)({
                         activity: i?.find((e) => {
                             let { type: t } = e;
-                            return t === Z.$pd.CUSTOM_STATUS;
+                            return t === X.$pd.CUSTOM_STATUS;
                         }),
                         user: u,
                         channel: c,
@@ -313,7 +313,7 @@ let et = s.memo(function (e) {
                 onClickPremiumGuildIcon: V,
                 "aria-controls": B,
                 "aria-expanded": $,
-                "aria-posinset": X,
+                "aria-posinset": Z,
                 "aria-setsize": Q,
                 id: J,
                 tabIndex: et,
@@ -389,7 +389,7 @@ let et = s.memo(function (e) {
                       (0, r.jsx)(b.A, {
                           ref: ed,
                           selected: t,
-                          className: o()(ee.Dc, L, { [ee.WK]: S === Z.clD.OFFLINE && !t, [ee.PJ]: ew }),
+                          className: o()(ee.Dc, L, { [ee.WK]: S === X.clD.OFFLINE && !t, [ee.PJ]: ew }),
                           innerClassName: ee.Hz,
                           onClick: G,
                           onKeyDown: k,
@@ -469,7 +469,7 @@ let et = s.memo(function (e) {
                           "aria-controls": B,
                           "aria-expanded": $,
                           "aria-setsize": Q,
-                          "aria-posinset": X,
+                          "aria-posinset": Z,
                           id: J,
                           tabIndex: et,
                           onFocus: ex,

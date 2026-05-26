@@ -1,4 +1,4 @@
-n.d(t, { M: () => j, X: () => _ });
+n.d(t, { M: () => _, X: () => j });
 var l = n(627968),
     i = n(64700),
     s = n(503698),
@@ -15,11 +15,11 @@ var l = n(627968),
     h = n(738250),
     A = n(830647),
     x = n(240248),
-    v = n(360469),
-    E = n(818348),
+    E = n(360469),
+    v = n(818348),
     C = n(375708),
-    I = n(391308);
-function _(e) {
+    I = n(24908);
+function j(e) {
     let { applicationId: t, hideApplicationName: n } = e,
         { gameId: i, gameRecord: s } = (0, h.A)({ applicationId: t }),
         r = (0, f.A)({
@@ -28,7 +28,7 @@ function _(e) {
             source: g.Ob.CallTile,
             trackEntryPointImpression: !0,
         }),
-        d = s?.getIconURL(v.iu.SMALL);
+        d = s?.getIconURL(E.iu.SMALL);
     if (null == r || null == s || (0, x.uJ)(d)) return null;
     let m = C.intl.string(C.t.ajHoOr);
     return (0, l.jsx)(o.m, {
@@ -47,13 +47,13 @@ function _(e) {
         }),
     });
 }
-function j(e) {
+function _(e) {
     let { userId: t, applicationId: n, channel: s, hideWhenInactive: u, idle: c } = e,
         [g, f] = i.useState(!1),
         h = i.useRef(null),
         x = i.useCallback(() => f(!0), []),
-        v = i.useCallback(() => f(!1), []),
-        _ = C.intl.string(C.t["wg/30i"]);
+        E = i.useCallback(() => f(!1), []),
+        j = C.intl.string(C.t["wg/30i"]);
     return (0, l.jsx)(r.Y, {
         targetElementRef: h,
         shouldShow: g,
@@ -61,17 +61,17 @@ function j(e) {
         position: "left",
         align: "bottom",
         spacing: 8,
-        onRequestClose: v,
+        onRequestClose: E,
         renderPopout: () =>
             (0, l.jsx)(d.N, {
-                theme: E.NJ.DARKER,
-                children: (e) => (0, l.jsx)(A.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: v }),
+                theme: v.NJ.DARKER,
+                children: (e) => (0, l.jsx)(A.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: E }),
             }),
         children: () =>
             (0, l.jsx)("div", {
                 ref: h,
                 children: (0, l.jsx)(o.m, {
-                    text: _,
+                    text: j,
                     shouldShow: !g && void 0,
                     children: (0, l.jsx)("div", {
                         className: a()(I.V7, { [I.kl]: u, [I.N7]: c }),
@@ -81,7 +81,7 @@ function j(e) {
                             onClick: (e) => {
                                 e.stopPropagation(), x();
                             },
-                            "aria-label": _,
+                            "aria-label": j,
                             icon: p.o,
                         }),
                     }),

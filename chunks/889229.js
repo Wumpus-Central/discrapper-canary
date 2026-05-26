@@ -1,38 +1,38 @@
-n.d(e, { A: () => c });
-var s = n(627968);
-n(64700);
-var i = n(503698),
-    l = n.n(i),
-    r = n(534514),
-    a = n(834730),
-    o = n(822030);
-function c(t) {
-    let { tips: e, className: n, headerText: i } = t;
-    return (0, s.jsxs)("div", {
-        className: l()(o.iB, n),
+e.d(a, { A: () => t });
+var i = e(627968);
+e(64700);
+var d = e(503698),
+    c = e.n(d),
+    l = e(534514),
+    n = e(834730),
+    r = e(74958);
+function t(s) {
+    let { tips: a, className: e, headerText: d } = s;
+    return (0, i.jsxs)("div", {
+        className: c()(r.iB, e),
         children: [
-            (0, s.jsx)("div", {
-                className: o.oO,
-                children: (0, s.jsx)(r.D, { variant: "heading-lg/bold", className: o.TK, children: i }),
+            (0, i.jsx)("div", {
+                className: r.oO,
+                children: (0, i.jsx)(l.D, { variant: "heading-lg/bold", className: r.TK, children: d }),
             }),
-            (0, s.jsx)("ul", {
-                className: o.T6,
-                children: e.map((t, e) =>
-                    (0, s.jsxs)(
+            (0, i.jsx)("ul", {
+                className: r.T6,
+                children: a.map((s, a) =>
+                    (0, i.jsxs)(
                         "li",
                         {
-                            className: o.eL,
+                            className: r.eL,
                             children: [
-                                (0, s.jsx)(r.D, {
+                                (0, i.jsx)(l.D, {
                                     variant: "heading-md/semibold",
                                     color: "text-brand",
-                                    className: o.VX,
-                                    children: e + 1,
+                                    className: r.VX,
+                                    children: a + 1,
                                 }),
-                                (0, s.jsx)(a.E, { variant: "text-sm/medium", children: t }),
+                                (0, i.jsx)(n.E, { variant: "text-sm/medium", children: s }),
                             ],
                         },
-                        `safety-tips-${e}`,
+                        `safety-tips-${a}`,
                     ),
                 ),
             }),

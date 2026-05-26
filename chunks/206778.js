@@ -98,8 +98,8 @@ var ee = l(123393),
     ea = l(427262),
     ed = l(652215),
     ec = l(743981),
-    eo = l(982186),
-    eu = l(637498);
+    eo = l(193962),
+    eu = l(579258);
 function ex(e) {
     let { icon: t, label: l, onClick: s, disabled: n } = e;
     return (0, i.jsxs)(D.D, {
@@ -511,10 +511,10 @@ var eT = l(989349),
     ep = l(442433),
     e_ = l(966327),
     eD = l(532197),
-    eG = l(831084),
-    eL = l(494213),
-    ey = l(301050),
-    eP = l(62255);
+    eG = l(477228),
+    eL = l(780165),
+    ey = l(358522),
+    eP = l(239023);
 function eB(e) {
     let t,
         l,
@@ -784,7 +784,7 @@ var eF = l(465917),
     eY = l(770178),
     eQ = l(765548),
     eZ = l(736653),
-    e0 = l(256177);
+    e0 = l(521329);
 let e7 = (e) => {
     let { tabs: t, selectedTab: l, onTabSelect: s, onClose: n } = e;
     return (0, i.jsx)(eW.W, {
@@ -857,7 +857,7 @@ function e5(e) {
         },
     });
 }
-function e6(e) {
+function e2(e) {
     let t,
         { guildId: l, currentTab: s, onTabSelect: r } = e,
         [a, c] = n.useState(0),
@@ -941,14 +941,14 @@ function e6(e) {
     );
 }
 var e8 = l(538409),
-    e4 = l(138298);
-function e2(e) {
+    e3 = l(138298);
+function e6(e) {
     let { guildId: t } = e,
         l = (0, d.bG)([C.A], () => C.A.getGuild(t)),
         { analyticsLocations: s } = (0, x.Ay)(u.A.MEMBER_SAFETY_PAGE),
         r = (0, d.bG)([I.Ay], () => I.Ay.getGuildSidebarState(t), [t]),
         a = n.useCallback(() => {
-            e4.A.closeGuildSidebar(t);
+            e3.A.closeGuildSidebar(t);
         }, [t]),
         c = null != r;
     return null != l && c && null != r
@@ -966,9 +966,9 @@ function e2(e) {
           })
         : null;
 }
-var e3 = l(856768),
-    e1 = l(785651),
-    e9 = l(702841),
+var e4 = l(856768),
+    e9 = l(873174),
+    e1 = l(702841),
     te = l(717421),
     tt = l(144073),
     tl = l(151781),
@@ -979,16 +979,16 @@ var e3 = l(856768),
 function ta(e) {
     let { guild: t } = e,
         l = (0, tt.Ms)(t.id),
-        s = (0, te.z)({ height: 3 * !!l, config: e1.config.stiff });
+        s = (0, te.z)({ height: 3 * !!l, config: e9.config.stiff });
     return (0, i.jsx)("div", {
         className: eL.NQ,
-        children: (0, i.jsx)(e1.animated.div, { className: eL.b0, style: s }),
+        children: (0, i.jsx)(e9.animated.div, { className: eL.b0, style: s }),
     });
 }
 function td(e) {
     let { guild: t, className: l, onPageChange: s, onMemberSelect: r } = e,
         d = t.id,
-        c = (0, e9.bG)([tl.A], () => tl.A.getEstimatedMemberSearchCountByGuildId(d), [d]),
+        c = (0, e1.bG)([tl.A], () => tl.A.getEstimatedMemberSearchCountByGuildId(d), [d]),
         u = (0, tt.Ms)(d),
         x = (0, tt.Wl)(d),
         m = n.useCallback(
@@ -1019,7 +1019,7 @@ function td(e) {
     });
 }
 var tc = l(746080),
-    to = l(964623);
+    to = l(362556);
 function tu(e) {
     let { guild: t, currentTab: l, onTabSelect: s } = e,
         n = (0, E.W)(t.id),
@@ -1036,7 +1036,7 @@ function tu(e) {
             children: [
                 (0, i.jsx)(T.A.Icon, { icon: c.n, "aria-hidden": !0 }),
                 (0, i.jsx)(T.A.Title, { children: a }),
-                n && (0, i.jsx)(e6, { guildId: t.id, currentTab: l, onTabSelect: s }),
+                n && (0, i.jsx)(e2, { guildId: t.id, currentTab: l, onTabSelect: s }),
             ],
         })
     );
@@ -1112,10 +1112,10 @@ function tx(e) {
                                           : (0, i.jsx)(eO, { guildId: c.id, currentTab: s }),
                               }),
                           }),
-                          (0, i.jsx)(e3.A, { guildId: c.id }),
+                          (0, i.jsx)(e4.A, { guildId: c.id }),
                       ],
                   }),
-                  D && (s === M.ALL_MEMBERS ? (0, i.jsx)(e2, { guildId: c.id }) : (0, i.jsx)(eN, { guildId: c.id })),
+                  D && (s === M.ALL_MEMBERS ? (0, i.jsx)(e6, { guildId: c.id }) : (0, i.jsx)(eN, { guildId: c.id })),
               ],
           })
         : null;

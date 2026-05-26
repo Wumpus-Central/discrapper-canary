@@ -3,10 +3,10 @@ n.d(t, { Ay: () => h, Ur: () => d, mk: () => u });
 var l = n(143236),
     i = n(721768),
     s = n(612394),
-    a = n(820066),
-    r = n(253932),
+    r = n(820066),
+    a = n(885386),
     o = n(38405),
-    c = n(374803);
+    c = n(597184);
 let u = ["timestampMentionInput"];
 function d() {
     return {
@@ -120,14 +120,14 @@ class h extends l.EventEmitter {
                 findCommandOptionAutocompleteType: o,
                 findMatchingAutocompleteType: d,
                 getOptions: h,
-            } = await Promise.all([n.e("84253"), n.e("73220"), n.e("82097")]).then(n.bind(n, 472392));
+            } = await Promise.all([n.e("3325"), n.e("50839"), n.e("82097")]).then(n.bind(n, 472392));
         if (null == this.props.editorRef.current) return;
         let m = h(this.props),
             p = this.props.editorRef.current.getSlateEditor();
         null != p &&
             (t =
-                null != (e = a.VW.getSelectedParentOfType(p, u))
-                    ? a.VW.getTextFromRange(p, a.VW.range(p, e[1]))
+                null != (e = r.VW.getSelectedParentOfType(p, u))
+                    ? r.VW.getTextFromRange(p, r.VW.range(p, e[1]))
                     : null);
         let f = d({
                 channel: this.props.channel,
@@ -143,24 +143,24 @@ class h extends l.EventEmitter {
             g = m.commands !== c.Ze.DISABLED ? o(this.props.activeCommandOption, this.props.currentWord) : null;
         if (null == f && null != g) f = g;
         else if (null == f || (null != g && f.type !== g.type)) return void this.clearQuery();
-        let { type: x, typeInfo: C, query: A } = f,
-            E = i || (l && (this.state.query?.queryText !== A || this.state.query?.typeInfo !== C)),
-            I = r.ML.getSetting();
+        let { type: x, typeInfo: A, query: C } = f,
+            E = i || (l && (this.state.query?.queryText !== C || this.state.query?.typeInfo !== A)),
+            I = a.ML.getSetting();
         m.allowStickers = m.allowStickers ? I : m.allowStickers;
-        let y = r.eK.getSetting();
+        let y = a.eK.getSetting();
         m.allowSoundmoji = m.allowSoundmoji ? y : m.allowSoundmoji;
-        let { results: v, metadata: S } = C.queryResults(this.props.channel, this.props.guild, A, m, E),
-            N = 0;
-        for (let e of Object.values(v)) Array.isArray(e) && (N += e.length);
-        let j = !0 === v.isLoading,
-            _ = this.shouldShow(N, j, C),
-            T = this.state.selectedIndex;
-        !_ || j ? (T = null) : null != T && T >= N && (T = N - 1),
-            _ && !this.state.isVisible && (0, s.uA)(x, this.props.channel, S),
+        let { results: S, metadata: v } = A.queryResults(this.props.channel, this.props.guild, C, m, E),
+            _ = 0;
+        for (let e of Object.values(S)) Array.isArray(e) && (_ += e.length);
+        let N = !0 === S.isLoading,
+            T = this.shouldShow(_, N, A),
+            j = this.state.selectedIndex;
+        !T || N ? (j = null) : null != j && j >= _ && (j = _ - 1),
+            T && !this.state.isVisible && (0, s.uA)(x, this.props.channel, v),
             this.setState({
-                query: { type: x, typeInfo: C, queryText: A, results: v, resultCount: N, options: m, isLoading: j },
-                isVisible: _,
-                selectedIndex: T,
+                query: { type: x, typeInfo: A, queryText: C, results: S, resultCount: _, options: m, isLoading: N },
+                isVisible: T,
+                selectedIndex: j,
                 hadInitialResults: !0,
                 isInitialAfterError: !0 !== this.state.hadInitialResults && (e?.[0].error ?? !1),
             });
@@ -170,10 +170,10 @@ class h extends l.EventEmitter {
     }
     selectResult(e, t, n) {
         if (!this.state.isVisible) return !1;
-        let { type: l, typeInfo: i, results: a, resultCount: r, options: o } = this.state.query;
-        if (e >= r) return !1;
+        let { type: l, typeInfo: i, results: r, resultCount: a, options: o } = this.state.query;
+        if (e >= a) return !1;
         let u = i.onSelect?.({
-            results: a,
+            results: r,
             index: e,
             type: t ? c.lg.SEND : c.lg.INSERT,
             options: o,

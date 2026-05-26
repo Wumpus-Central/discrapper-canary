@@ -47,9 +47,9 @@ var i = n(627968),
     z = n(353640),
     $ = n(121894);
 let q = Object.freeze({ showPremiumUpsell: !1 }),
-    Z = (0, z.v)((e) => q),
-    X = (e) => {
-        (0, $.r)(() => Z.setState({ showPremiumUpsell: e }));
+    X = (0, z.v)((e) => q),
+    Z = (e) => {
+        (0, $.r)(() => X.setState({ showPremiumUpsell: e }));
     };
 var Q = n(361670),
     J = n(891090),
@@ -68,7 +68,7 @@ var Q = n(361670),
     e_ = n(652215),
     ef = n(698279),
     eh = n(375708),
-    ep = n(950646);
+    ep = n(182518);
 let eE = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     em = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE),
     eg = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN),
@@ -304,8 +304,8 @@ function ew(e) {
                 }),
                 (0, f.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("5093"),
-                        n.e("62691"),
+                        n.e("98681"),
+                        n.e("20163"),
                         n.e("71202"),
                         n.e("53274"),
                     ]).then(n.bind(n, 397313));
@@ -317,7 +317,7 @@ function ew(e) {
 }
 var eM = n(823894),
     eP = n(788868),
-    ex = n(83148);
+    ex = n(456140);
 function eU(e) {
     let { className: t, onClose: n } = e;
     (0, R.XQ)();
@@ -382,8 +382,8 @@ var ek = n(404778),
     eK = n(931991),
     ez = n(473145),
     e$ = n(625633),
-    eq = n(832938);
-let eZ = (e) => {
+    eq = n(9706);
+let eX = (e) => {
     let { className: t, guildId: n, channel: s, shouldTrackUpsellViewed: o, setTrackedUpsellViewed: l } = e,
         { location: u } = (0, x.p)(),
         { analyticsLocations: c } = (0, k.Ay)(),
@@ -456,9 +456,9 @@ let eZ = (e) => {
               })
         : null;
 };
-var eX = n(307301),
+var eZ = n(307301),
     eQ = n(182922),
-    eJ = n(867981);
+    eJ = n(881613);
 let e0 = (0, K.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
     e1 = (0, K.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
     e2 = r.memo(function (e) {
@@ -494,7 +494,7 @@ let e0 = (0, K.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_B
                     ? (0, i.jsx)(ed.A, { isInteracting: !0, size: e0, sticker: s, disableAnimation: !0 })
                     : (0, i.jsx)("div", {
                           className: eJ.P,
-                          children: (0, i.jsx)(eX.j, { size: "md", color: "currentColor", className: eJ.K }),
+                          children: (0, i.jsx)(eZ.j, { size: "md", color: "currentColor", className: eJ.K }),
                       });
         return (0, i.jsx)(eQ.A, {
             graphicPrimary: l,
@@ -507,7 +507,7 @@ var e3 = n(140735),
     e6 = n(442433),
     e4 = n(304072),
     e5 = n(194261),
-    e7 = n(429631);
+    e7 = n(579583);
 let e8 = (e) => {
     let { size: t } = e;
     return (0, i.jsx)("div", {
@@ -516,7 +516,7 @@ let e8 = (e) => {
         children: (0, i.jsx)(e5.X, { size: "xxs", color: "currentColor", className: e7.I }),
     });
 };
-var e9 = n(584176);
+var e9 = n(882480);
 let te = r.memo(function (e) {
     let {
             isDisplayingIndividualStickers: t = !1,
@@ -585,11 +585,11 @@ let te = r.memo(function (e) {
                                         }),
                                         (0, f.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
-                                                n.e("34053"),
-                                                n.e("94908"),
-                                                n.e("60909"),
-                                                n.e("77739"),
-                                                n.e("31232"),
+                                                n.e("96217"),
+                                                n.e("69117"),
+                                                n.e("97421"),
+                                                n.e("17393"),
+                                                n.e("36288"),
                                                 n.e("8891"),
                                                 n.e("83952"),
                                                 n.e("66580"),
@@ -607,7 +607,7 @@ let te = r.memo(function (e) {
                                     !y && (0, i.jsx)("div", { className: e9.fw }),
                                     (0, i.jsx)("div", {
                                         className: e9.P0,
-                                        children: (0, i.jsx)(eX.j, {
+                                        children: (0, i.jsx)(eZ.j, {
                                             size: "md",
                                             color: "currentColor",
                                             className: e9.Kk,
@@ -684,7 +684,7 @@ let te = r.memo(function (e) {
         }),
     });
 });
-var tt = n(301938),
+var tt = n(554866),
     tn = n(911385);
 let ti = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     tr = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
@@ -793,7 +793,7 @@ let ti = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                     };
                                     if (null != o && !(0, Q.G7)(o, i, n)) {
                                         let e = (0, ec.Xw)(o);
-                                        (0, Q.W$)(o, i, n) === Q.Ux.SENDABLE_WITH_PREMIUM && X(!0),
+                                        (0, Q.W$)(o, i, n) === Q.Ux.SENDABLE_WITH_PREMIUM && Z(!0),
                                             e && Q.Ux.SENDABLE_WITH_BOOSTED_GUILD;
                                         return;
                                     }
@@ -984,7 +984,7 @@ let ti = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                             return n.type !== ee.Z2.EMPTY_GUILD_UPSELL || null != E || r
                                 ? null
                                 : (0, i.jsx)(
-                                      eZ,
+                                      eX,
                                       {
                                           className: tt.Ij,
                                           guildId: n.id,
@@ -1108,7 +1108,7 @@ let tS = (0, tT.mj)({
 });
 var tN = n(602034),
     ty = n(892547),
-    tC = n(337485);
+    tC = n(351117);
 let tv = r.forwardRef(function (e, t) {
     let { onKeyDown: n, stickersListRef: s, channel: a } = e,
         o = (0, R.ZO)(a),
@@ -1163,9 +1163,9 @@ var tO = n(768038),
     tR = n(789645),
     tb = n(964486),
     tD = n(428262),
-    tL = n(217653),
+    tL = n(922421),
     tw = n(939383);
-let tM = () => X(!1),
+let tM = () => Z(!1),
     tP = (e) => {
         let { onLearnMore: t } = e,
             { analyticsLocations: n } = (0, k.Ay)(U.A.PREMIUM_UPSELL);
@@ -1230,7 +1230,7 @@ let tM = () => X(!1),
             ],
         });
     };
-var tx = n(854138);
+var tx = n(2426);
 let tU = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     tk = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
     tG = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
@@ -1249,7 +1249,7 @@ let tU = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             p = r.useRef(null),
             E = r.useRef(null),
             m = r.useRef(null),
-            g = Z((e) => e.showPremiumUpsell),
+            g = X((e) => e.showPremiumUpsell),
             [A, I] = (0, F.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], w.x),
             T = r.useRef("");
         r.useImperativeHandle(t, () => ({ onPickerOpen: ep }));
@@ -1391,11 +1391,11 @@ let tU = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 W.default.track(e_.HAw.OPEN_MODAL, { type: e_.JJy.CREATE_STICKER_MODAL, location: c }),
                                     (0, f.openModalLazy)(async () => {
                                         let { default: t } = await Promise.all([
-                                            n.e("34053"),
-                                            n.e("94908"),
-                                            n.e("60909"),
-                                            n.e("77739"),
-                                            n.e("31232"),
+                                            n.e("96217"),
+                                            n.e("69117"),
+                                            n.e("97421"),
+                                            n.e("17393"),
+                                            n.e("36288"),
                                             n.e("8891"),
                                             n.e("83952"),
                                             n.e("66580"),
@@ -1411,7 +1411,7 @@ let tU = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                             case ee.op.STICKER: {
                                 if (null == e.sticker) break;
                                 let t = (0, Q.W$)(e.sticker, O, a);
-                                t === Q.Ux.SENDABLE ? q(e) : t === Q.Ux.SENDABLE_WITH_PREMIUM && X(!0);
+                                t === Q.Ux.SENDABLE ? q(e) : t === Q.Ux.SENDABLE_WITH_PREMIUM && Z(!0);
                             }
                         }
                     },
@@ -1513,13 +1513,13 @@ let tU = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
 var tz = n(742023),
     t$ = n(712687),
     tq = n(625494);
-let tZ = (0, tT.mj)({
+let tX = (0, tT.mj)({
     name: "2026-03-kaomoji-picker",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var tX = n(364522);
+var tZ = n(364522);
 let tQ = [
     {
         category: "wave",
@@ -1689,7 +1689,7 @@ let tQ = [
     },
 ];
 var tJ = n(732139),
-    t0 = n(235916);
+    t0 = n(733196);
 function t1(e) {
     let { onSelect: t } = e,
         [n, s] = r.useState(""),
@@ -1742,7 +1742,7 @@ function t1(e) {
                     "aria-label": eh.intl.string(eh.t["5h0QOP"]),
                 }),
             }),
-            (0, i.jsx)(tX.Ip, {
+            (0, i.jsx)(tZ.Ip, {
                 fade: !0,
                 className: t0.IA,
                 children:
@@ -1825,7 +1825,7 @@ function t2(e) {
 }
 var t3 = n(49999),
     t6 = n(307731),
-    t4 = n(645264);
+    t4 = n(877136);
 let t5 = 498 + tJ.as.MEDIUM,
     t7 = r.memo(function (e) {
         let { isActive: t, className: n, viewType: r, autoFocus: s = !1, "aria-controls": o, ...l } = e;
@@ -1927,9 +1927,9 @@ let t5 = 498 + tJ.as.MEDIUM,
             K = (0, F.RQ)((e) => e.activeView),
             z = (0, R.ZO)(w),
             { renderWindow: $, windowDispatch: q } = r.useContext(C.Ay),
-            Z = (0, d.bG)([b.A], () => !b.A.hasLoadedStickerPacks),
-            X = (0, v.tj)({ location: "expression_picker" }),
-            Q = tZ.useConfig({ location: "expression_picker" }).enabled,
+            X = (0, d.bG)([b.A], () => !b.A.hasLoadedStickerPacks),
+            Z = (0, v.tj)({ location: "expression_picker" }),
+            Q = tX.useConfig({ location: "expression_picker" }).enabled,
             J = (0, d.bG)([t$.A], () => t$.A.isOpen()),
             ee = null != G,
             et = (0, f.useIsModalAtTop)(G ?? ""),
@@ -1978,7 +1978,7 @@ let t5 = 498 + tJ.as.MEDIUM,
             );
         }, [K, ea, es, $, q]),
             (0, p.t)(V);
-        let [eo, el] = (0, T.kn)(X ? [_.M.SOUNDMOJI_BADGE] : [], void 0, !1),
+        let [eo, el] = (0, T.kn)(Z ? [_.M.SOUNDMOJI_BADGE] : [], void 0, !1),
             [eu, ec] = r.useState(!1);
         r.useEffect(() => {
             K === ef.kx.SOUNDBOARD && ec(!0);
@@ -2001,7 +2001,7 @@ let t5 = 498 + tJ.as.MEDIUM,
                     (K === ef.kx.EMOJI
                         ? H?.current?.onPickerOpen != null && (H?.current?.onPickerOpen(), (B.current = !0))
                         : K === ef.kx.STICKER
-                          ? H?.current?.onPickerOpen == null || Z || (H?.current?.onPickerOpen(), (B.current = !0))
+                          ? H?.current?.onPickerOpen == null || X || (H?.current?.onPickerOpen(), (B.current = !0))
                           : (I.Ay.trackWithMetadata(e_.HAw.EXPRESSION_PICKER_OPENED, {
                                 width: j.current.offsetWidth,
                                 tab: K,
@@ -2085,7 +2085,7 @@ let t5 = 498 + tJ.as.MEDIUM,
                                                                 eI,
                                                                 eT,
                                                                 eS,
-                                                                X &&
+                                                                Z &&
                                                                     eE &&
                                                                     (0, i.jsx)(t7, {
                                                                         id: tJ.N6,
@@ -2123,7 +2123,7 @@ let t5 = 498 + tJ.as.MEDIUM,
                                                   : null,
                                               K === ef.kx.STICKER && ei
                                                   ? (0, i.jsx)(tK, {
-                                                        isLoading: Z,
+                                                        isLoading: X,
                                                         channel: w,
                                                         containerWidth: Y,
                                                         onSelectSticker: h,

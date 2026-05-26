@@ -1,53 +1,53 @@
-e.d(a, { default: () => v });
-var s = e(627968);
-e(64700);
-var l = e(284009),
-    n = e.n(l),
-    i = e(189213),
-    c = e(17928),
-    o = e(32880),
-    r = e(871109),
-    d = e(59375),
-    h = e(821609),
-    u = e(882863);
-function f(t) {
-    let { guildId: a, productId: e, attachmentId: l, ...n } = t,
-        { isLoading: i, downloadAttachment: c } = (0, u.A)(a, e);
-    return (0, s.jsx)(h.$, {
-        ...n,
-        loading: i,
+a.d(n, { default: () => g });
+var i = a(627968);
+a(64700);
+var e = a(284009),
+    c = a.n(e),
+    d = a(189213),
+    l = a(17928),
+    s = a(32880),
+    u = a(871109),
+    o = a(59375),
+    r = a(821609),
+    h = a(882863);
+function m(t) {
+    let { guildId: n, productId: a, attachmentId: e, ...c } = t,
+        { isLoading: d, downloadAttachment: l } = (0, h.A)(n, a);
+    return (0, i.jsx)(r.$, {
+        ...c,
+        loading: d,
         onClick: function () {
-            c(l);
+            l(e);
         },
     });
 }
-var m = e(985018),
-    x = e(94517);
-function j(t) {
-    let { attachment: a, guildId: e, productId: l } = t;
-    return (0, s.jsxs)("li", {
-        className: x.k,
+var p = a(375708),
+    j = a(389301);
+function x(t) {
+    let { attachment: n, guildId: a, productId: e } = t;
+    return (0, i.jsxs)("li", {
+        className: j.k,
         children: [
-            (0, s.jsx)(d.A, { attachment: a }),
-            (0, s.jsx)(f, { className: x.i, icon: o.s, text: void 0, guildId: e, productId: l, attachmentId: a.id }),
+            (0, i.jsx)(o.A, { attachment: n }),
+            (0, i.jsx)(m, { className: j.i, icon: s.s, text: void 0, guildId: a, productId: e, attachmentId: n.id }),
         ],
     });
 }
-function v(t) {
-    let { guildId: a, productId: e, onClose: l, transitionState: o } = t,
-        d = (0, c.bG)([r.A], () => r.A.getGuildProduct(e));
-    n()(null != d, "guildProductListing cannot be null");
-    let h = d.attachments ?? [];
-    return (0, s.jsx)(i.Modal, {
+function g(t) {
+    let { guildId: n, productId: a, onClose: e, transitionState: s } = t,
+        o = (0, l.bG)([u.A], () => u.A.getGuildProduct(a));
+    c()(null != o, "guildProductListing cannot be null");
+    let r = o.attachments ?? [];
+    return (0, i.jsx)(d.Modal, {
         size: "md",
-        transitionState: o,
-        "aria-label": m.intl.string(m.t["3jaCac"]),
-        title: d.name,
-        subtitle: m.intl.format(m.t["6dOuaP"], { count: d.attachments_count }),
+        transitionState: s,
+        "aria-label": p.intl.string(p.t["3jaCac"]),
+        title: o.name,
+        subtitle: p.intl.format(p.t["6dOuaP"], { count: o.attachments_count }),
         actions: [],
-        onClose: l,
-        children: (0, s.jsx)("ul", {
-            children: h.map((t) => (0, s.jsx)(j, { guildId: a, productId: d.id, attachment: t }, t.id)),
+        onClose: e,
+        children: (0, i.jsx)("ul", {
+            children: r.map((t) => (0, i.jsx)(x, { guildId: n, productId: o.id, attachment: t }, t.id)),
         }),
     });
 }

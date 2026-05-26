@@ -1,26 +1,26 @@
 "use strict";
-n.d(t, { t: () => c, y: () => _ });
-var r,
-    i = n(627968),
+n.d(t, { t: () => d, y: () => _ });
+var i,
+    r = n(627968),
     s = n(64700),
     a = n(503698),
     o = n.n(a),
     l = n(844222),
     u = n(460890),
-    d = n(165980),
-    c =
-        (((r = {}).WANDERING_CUBES = "wanderingCubes"),
-        (r.CHASING_DOTS = "chasingDots"),
-        (r.PULSING_ELLIPSIS = "pulsingEllipsis"),
-        (r.SPINNING_CIRCLE = "spinningCircle"),
-        (r.SPINNING_CIRCLE_SIMPLE = "spinningCircleSimple"),
-        (r.LOW_MOTION = "lowMotion"),
-        r);
+    c = n(49564),
+    d =
+        (((i = {}).WANDERING_CUBES = "wanderingCubes"),
+        (i.CHASING_DOTS = "chasingDots"),
+        (i.PULSING_ELLIPSIS = "pulsingEllipsis"),
+        (i.SPINNING_CIRCLE = "spinningCircle"),
+        (i.SPINNING_CIRCLE_SIMPLE = "spinningCircleSimple"),
+        (i.LOW_MOTION = "lowMotion"),
+        i);
 function _(e) {
-    let { type: t = "wanderingCubes", animated: n = !0, className: r, itemClassName: a, ...c } = e,
+    let { type: t = "wanderingCubes", animated: n = !0, className: i, itemClassName: a, ...d } = e,
         { i18n: _ } = (0, u.G9)(),
         { reducedMotion: f } = s.useContext(l.C),
-        E = f.enabled
+        h = f.enabled
             ? (function (e) {
                   switch (e) {
                       case "wanderingCubes":
@@ -31,55 +31,55 @@ function _(e) {
                   }
               })(t)
             : t,
-        h = c["aria-label"] ?? _.SPINNER_LOADING_LABEL;
-    if ("spinningCircle" === E || "spinningCircleSimple" === E)
-        return (0, i.jsx)("div", {
-            className: o()(d.spinner, d[E], r, { [d.stopAnimation]: !n }),
+        p = d["aria-label"] ?? _.SPINNER_LOADING_LABEL;
+    if ("spinningCircle" === h || "spinningCircleSimple" === h)
+        return (0, r.jsx)("div", {
+            className: o()(c.spinner, c[h], i, { [c.stopAnimation]: !n }),
             role: "img",
-            ...c,
-            "aria-label": h,
-            children: (0, i.jsx)("div", {
-                className: d.spinningCircleInner,
-                children: (0, i.jsxs)("svg", {
-                    className: d.circular,
+            ...d,
+            "aria-label": p,
+            children: (0, r.jsx)("div", {
+                className: c.spinningCircleInner,
+                children: (0, r.jsxs)("svg", {
+                    className: c.circular,
                     viewBox: "25 25 50 50",
                     children: [
-                        "spinningCircle" === E &&
-                            (0, i.jsxs)(i.Fragment, {
+                        "spinningCircle" === h &&
+                            (0, r.jsxs)(r.Fragment, {
                                 children: [
-                                    (0, i.jsx)("circle", {
-                                        className: o()(d.path, d.path3, a),
+                                    (0, r.jsx)("circle", {
+                                        className: o()(c.path, c.path3, a),
                                         cx: "50",
                                         cy: "50",
                                         r: "20",
                                     }),
-                                    (0, i.jsx)("circle", {
-                                        className: o()(d.path, d.path2, a),
+                                    (0, r.jsx)("circle", {
+                                        className: o()(c.path, c.path2, a),
                                         cx: "50",
                                         cy: "50",
                                         r: "20",
                                     }),
                                 ],
                             }),
-                        (0, i.jsx)("circle", { className: o()(d.path, a), cx: "50", cy: "50", r: "20" }),
+                        (0, r.jsx)("circle", { className: o()(c.path, a), cx: "50", cy: "50", r: "20" }),
                     ],
                 }),
             }),
         });
-    let p = o()(d.item, a);
-    return (0, i.jsx)("span", {
-        className: o()(d.spinner, r, { [d.stopAnimation]: !n }),
+    let E = o()(c.item, a);
+    return (0, r.jsx)("span", {
+        className: o()(c.spinner, i, { [c.stopAnimation]: !n }),
         role: "img",
-        "aria-label": h,
-        ...c,
-        children: (0, i.jsxs)("span", {
-            className: o()(d.inner, d[E]),
+        "aria-label": p,
+        ...d,
+        children: (0, r.jsxs)("span", {
+            className: o()(c.inner, c[h]),
             children: [
-                (0, i.jsx)("span", { className: p }),
-                (0, i.jsx)("span", { className: p }),
-                "pulsingEllipsis" === E || "lowMotion" === E ? (0, i.jsx)("span", { className: p }) : null,
+                (0, r.jsx)("span", { className: E }),
+                (0, r.jsx)("span", { className: E }),
+                "pulsingEllipsis" === h || "lowMotion" === h ? (0, r.jsx)("span", { className: E }) : null,
             ],
         }),
     });
 }
-_.Type = c;
+_.Type = d;

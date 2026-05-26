@@ -39,7 +39,7 @@ var i = n(627968),
     F = n(818348),
     V = n(650583),
     B = n(375708),
-    H = n(435693);
+    H = n(541613);
 function j(e) {
     let {
             user: t,
@@ -137,8 +137,8 @@ var Y = n(478437),
     z = n(408018),
     $ = n(201349),
     q = n(95701),
-    Z = n(562153),
-    X = n(450262);
+    X = n(562153),
+    Z = n(556182);
 let Q = (0, q.createChannelRecord)({ id: "1", type: Y.r.DM });
 function J(e) {
     let {
@@ -217,18 +217,18 @@ ${t}`;
             } catch (e) {}
             p(k.AQ.REPLY);
         },
-        C = { [X.h5]: o === k.dS.STATUS, [X.my]: o === k.dS.AVATAR, [X.Eb]: o === k.dS.ACTIVITY };
+        C = { [Z.h5]: o === k.dS.STATUS, [Z.my]: o === k.dS.AVATAR, [Z.Eb]: o === k.dS.ACTIVITY };
     return (0, i.jsx)(W.l, {
         ref: S,
         onKeyDown: N,
         children: (0, i.jsx)("div", {
-            className: a()(X.kL, C, { [X.GE]: null != E }),
+            className: a()(Z.kL, C, { [Z.GE]: null != E }),
             children: (0, i.jsx)($.Ay, {
                 parentModalKey: c,
                 emojiPickerCloseOnModalOuterClick: !0,
-                className: X.hF,
-                innerClassName: X.rn,
-                editorClassName: X.EN,
+                className: Z.hF,
+                innerClassName: Z.rn,
+                editorClassName: Z.EN,
                 type: K.oU.USER_PROFILE_REPLY,
                 placeholder: B.intl.formatToPlainString(
                     ((e) => {
@@ -243,7 +243,7 @@ ${t}`;
                                 (0, w.xb)(e);
                         }
                     })(o),
-                    { username: Z.Ay.getName(n, s, t) },
+                    { username: X.Ay.getName(n, s, t) },
                 ),
                 channel: Q,
                 textValue: m,
@@ -318,7 +318,7 @@ var en = n(990078),
     er = n(241326),
     es = n(101555),
     ea = n(885386),
-    eo = n(242744);
+    eo = n(843192);
 function el(e) {
     let { isVisible: t, isExpandable: s, onCloseProfile: o } = e,
         { analyticsLocations: u } = (0, I.Ay)(),
@@ -349,11 +349,11 @@ function el(e) {
                                 return (0, c.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([
-                                            n.e("52887"),
-                                            n.e("25377"),
-                                            n.e("51776"),
-                                            n.e("4803"),
-                                            n.e("67251"),
+                                            n.e("93814"),
+                                            n.e("40197"),
+                                            n.e("48424"),
+                                            n.e("74923"),
+                                            n.e("63839"),
                                             n.e("28367"),
                                             n.e("20287"),
                                             n.e("80230"),
@@ -391,7 +391,7 @@ function el(e) {
         ],
     });
 }
-var eu = n(713305);
+var eu = n(629465);
 function ec(e) {
     let { children: t, className: n } = e;
     return (0, i.jsx)("div", {
@@ -436,11 +436,11 @@ let ed = r.forwardRef(function (e, t) {
                                 (0, c.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([
-                                            n.e("52887"),
-                                            n.e("25377"),
-                                            n.e("51776"),
-                                            n.e("4803"),
-                                            n.e("67251"),
+                                            n.e("93814"),
+                                            n.e("40197"),
+                                            n.e("48424"),
+                                            n.e("74923"),
+                                            n.e("63839"),
                                             n.e("28367"),
                                             n.e("20287"),
                                             n.e("80230"),
@@ -532,7 +532,7 @@ let ed = r.forwardRef(function (e, t) {
                     ? (0, i.jsx)(g.A, { emoji: n, animate: c, hideTooltip: !1, tooltipDelay: k.In, className: eu.H0 })
                     : null,
             q = null != s ? (0, i.jsx)(_.E, { variant: "text-sm/normal", className: eu.qS, children: s }) : null,
-            Z =
+            X =
                 void 0 !== A && null == n
                     ? (0, i.jsx)(_.E, {
                           variant: "text-sm/normal",
@@ -542,9 +542,9 @@ let ed = r.forwardRef(function (e, t) {
                           children: A ?? "",
                       })
                     : null,
-            X = null == q || "" === s ? Z : q,
-            Q = (0, i.jsxs)("div", { ref: b, className: eu.Qs, children: [$, X] }),
-            J = (0, i.jsxs)("div", { ref: D, className: a()(eu.Qs, eu.m2), children: [$, X] }),
+            Z = null == q || "" === s ? X : q,
+            Q = (0, i.jsxs)("div", { ref: b, className: eu.Qs, children: [$, Z] }),
+            J = (0, i.jsxs)("div", { ref: D, className: a()(eu.Qs, eu.m2), children: [$, Z] }),
             ee = (0, i.jsx)("div", {
                 ref: t,
                 className: eu.A7,
@@ -553,7 +553,7 @@ let ed = r.forwardRef(function (e, t) {
                     children: (0, i.jsxs)(o.animated.div, {
                         style: W,
                         className: a()(eu.Qs, { [eu.m2]: !U }),
-                        children: [$, X],
+                        children: [$, Z],
                     }),
                 }),
             }),

@@ -35,7 +35,7 @@ var E = n(562708),
     P = n(962125),
     x = n(428262),
     U = n(240864),
-    k = n(711548);
+    k = n(416316);
 let G = r.forwardRef(function (e, t) {
         let {
                 categories: n,
@@ -186,7 +186,7 @@ let G = r.forwardRef(function (e, t) {
 var V = n(942381),
     B = n(602034),
     H = n(892547),
-    j = n(387187);
+    j = n(90547);
 let Y = r.forwardRef(function (e, t) {
     let {
             store: n,
@@ -240,7 +240,7 @@ let Y = r.forwardRef(function (e, t) {
         })
     );
 });
-var W = n(456908);
+var W = n(645324);
 function K(e) {
     let {
             categories: t,
@@ -296,8 +296,8 @@ function K(e) {
             itemNodeMargin: R,
         }),
         {
-            getItemProps: Z,
-            getRowProps: X,
+            getItemProps: X,
+            getRowProps: Z,
             gridContainerProps: Q,
             handleGridContainerKeyDown: J,
             isUsingKeyboardNavigation: ee,
@@ -313,7 +313,7 @@ function K(e) {
             (e, t) =>
                 p(
                     j[e],
-                    X(e),
+                    Z(e),
                     {
                         isUsingKeyboardNavigation: ee.current,
                         gutterWidth: q,
@@ -321,10 +321,10 @@ function K(e) {
                         totalRowCount: K,
                         sectionIndex: t.sectionIndex,
                     },
-                    (t) => Z(e, t),
+                    (t) => X(e, t),
                     (t) => a.setInspectedExpressionPosition(t, e),
                 ),
-            [j, Z, X, q, ee, p, a, K],
+            [j, X, Z, q, ee, p, a, K],
         ),
         en = r.useCallback((e) => m?.(t[e], e), [t, m]),
         ei = r.useCallback((e) => g?.(t[e], e), [t, g]),
@@ -400,8 +400,8 @@ function K(e) {
 var z = n(89366),
     $ = n(319993),
     q = n(202639),
-    Z = n(414872),
-    X = n(400669),
+    X = n(414872),
+    Z = n(400669),
     Q = n(2181),
     J = n(523006),
     ee = n(885386),
@@ -444,7 +444,7 @@ var eN = n(837381),
     eO = n(652215),
     eR = n(698279),
     eb = n(375708),
-    eD = n(917419);
+    eD = n(930155);
 let eL = [8, 8, 8, 8];
 function ew(e) {
     let { icon: t, isSelected: n, onClick: r, listItemProps: s } = e;
@@ -558,8 +558,8 @@ var eU = n(554146),
     ez = n(532624),
     e$ = n(531685),
     eq = n(723702),
-    eZ = n(350535),
-    eX = n(319518);
+    eX = n(350535),
+    eZ = n(578078);
 function eQ(e) {
     let { soundboardSound: t, closePicker: r } = e,
         s = (0, d.RQ)((e) => e.searchQuery),
@@ -572,8 +572,8 @@ function eQ(e) {
         return (0, i.jsx)(eK.A, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
-                    ? (0, i.jsx)(ej.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: eX.Zg })
-                    : (0, i.jsx)(ek.x, { size: "md", color: "currentColor", className: eX.Zg }),
+                    ? (0, i.jsx)(ej.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: eZ.Zg })
+                    : (0, i.jsx)(ek.x, { size: "md", color: "currentColor", className: eZ.Zg }),
             graphicSecondary: null != o ? (0, i.jsx)(D.A, { guild: o, shouldAnimate: !l && u }) : null,
             titlePrimary: t.name,
             titleSecondary: o?.name,
@@ -583,8 +583,8 @@ function eQ(e) {
             r(),
                 (0, eG.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("3633"),
-                        n.e("72425"),
+                        n.e("54473"),
+                        n.e("60841"),
                         n.e("46327"),
                         n.e("12618"),
                     ]).then(n.bind(n, 29681));
@@ -595,19 +595,19 @@ function eQ(e) {
         E =
             null != c && (0, eq.isWindows)() && !h
                 ? eb.intl.format(eb.t.udMTth, {
-                      keybind: (0, eZ.dI)(c.shortcut, !0),
+                      keybind: (0, eX.dI)(c.shortcut, !0),
                       openSettingsHook: (e, t) => (0, i.jsx)(eF.Anchor, { onClick: f, children: e }, t),
                   })
                 : null;
     return null == E
         ? null
         : (0, i.jsxs)("div", {
-              className: eX.g,
+              className: eZ.g,
               children: [
-                  (0, i.jsx)(eV.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: eX.QW }),
-                  (0, i.jsx)(eB.E, { variant: "text-sm/medium", color: "text-default", className: eX.L5, children: E }),
+                  (0, i.jsx)(eV.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: eZ.QW }),
+                  (0, i.jsx)(eB.E, { variant: "text-sm/medium", color: "text-default", className: eZ.L5, children: E }),
                   (0, i.jsx)(T.D, {
-                      className: eX.b,
+                      className: eZ.b,
                       onClick: () => (0, eW.Dr)(eU.M.SOUNDBOARD_KEYBIND_TIP),
                       children: (0, i.jsx)(eH.P, { size: "xs", color: "currentColor" }),
                   }),
@@ -622,12 +622,12 @@ function e3(e) {
     e2.A.open(e, eO.BEX.SOUNDBOARD),
         (0, eG.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
-                n.e("34053"),
-                n.e("94908"),
-                n.e("60909"),
-                n.e("77739"),
-                n.e("76846"),
-                n.e("52887"),
+                n.e("96217"),
+                n.e("69117"),
+                n.e("97421"),
+                n.e("17393"),
+                n.e("81422"),
+                n.e("93814"),
                 n.e("8555"),
                 n.e("20287"),
                 n.e("83952"),
@@ -643,8 +643,8 @@ function e3(e) {
             return (n) => (0, i.jsx)(t, { ...n, guildId: e });
         });
 }
-var e6 = n(757718),
-    e4 = n(508387);
+var e6 = n(14870),
+    e4 = n(256611);
 function e5(e) {
     let { guild: t, focused: n, onSelectItem: r, ...s } = e,
         { canCreateExpressions: o } = (0, e_.nr)(t);
@@ -716,8 +716,8 @@ function e7(e) {
             });
     }
 }
-var e8 = n(965238);
-let e9 = 32 + Z.kg - 8,
+var e8 = n(728950);
+let e9 = 32 + X.kg - 8,
     te = {
         [eo.Cx.SEARCH]: u.A.SOUNDBOARD_SEARCH_RESULTS_SECTION,
         [eo.Cx.DEFAULTS]: u.A.SOUNDBOARD_DEFAULT_SOUNDS_SECTION,
@@ -731,7 +731,7 @@ function tn(e) {
     let { categoryInfo: t, collapsed: n, toggleCollapsed: r, isSectionNitroLocked: s, showNitroDivider: o } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            o && (0, i.jsx)(Z.Ay, { className: e8.yH }),
+            o && (0, i.jsx)(X.Ay, { className: e8.yH }),
             (0, i.jsx)("div", {
                 className: a()(e8.hd, { [e8.Jb]: s, [e8.VD]: s }),
                 children: (0, i.jsx)(T.D, {
@@ -825,7 +825,7 @@ function ts(e) {
         j = (0, m.bG)([er.A], () => er.A.getVoiceState(t, B?.id ?? eO.dJq)),
         Y = j?.selfDeaf || j?.mute || j?.suppress,
         W = (0, d.RQ)((e) => e.searchQuery),
-        Z = null != W && "" !== W,
+        X = null != W && "" !== W,
         es = (0, b.GV)(),
         em = (0, et.St)("soundboard_floating_upsell"),
         {
@@ -1000,7 +1000,7 @@ function ts(e) {
                 if (null != _ && f && r) _(e, n);
                 else if (!h && r && (0, el.Au)(s))
                     (0, el.Ak)(e, s?.id ?? eO.dJq, t, i),
-                        Z &&
+                        X &&
                             ea.default.track(eO.HAw.SEARCH_RESULT_SELECTED, {
                                 search_type: eO.I4_.SOUNDBOARD,
                                 channel_id: s?.id,
@@ -1012,7 +1012,7 @@ function ts(e) {
                     g && V(e);
                 }
             },
-            [h, B, s, g, Z, W, _, f],
+            [h, B, s, g, X, W, _, f],
         ),
         eY = r.useCallback(
             (e, t) => {
@@ -1088,14 +1088,14 @@ function ts(e) {
             return eb.intl.format(eb.t["tw/SSq"], { nitroTierName: e, onClick: ez });
         }, [ez]),
         eq = r.useCallback((e) => (eK(e, t) ? e9 : 32), [t, eK]),
-        eZ = r.useCallback(
+        eX = r.useCallback(
             (e) => {
                 let t = e === eM.length - 1;
                 return ek && t ? 70 : eU && e === eP ? 20 : 0;
             },
             [eM.length, eU, ek, eP],
         ),
-        eX = r.useCallback((e, t) => (0, i.jsx)("div", { children: t }, e), []),
+        eZ = r.useCallback((e, t) => (0, i.jsx)("div", { children: t }, e), []),
         eJ = r.useCallback(
             (e, n) => {
                 let r = `${e.key}`,
@@ -1192,7 +1192,7 @@ function ts(e) {
                           button: e5(),
                           buttonAnalyticsObject: { section: eO.JJy.SOUND_PICKER_FLOATING_UPSELL },
                           leadingAction: em
-                              ? (0, i.jsx)(X.l, {
+                              ? (0, i.jsx)(Z.l, {
                                     size: "sm",
                                     className: e8.ij,
                                     location: u.A.PREMIUM_WISHLIST_SOUNDBOARD_UPSELL,
@@ -1264,12 +1264,12 @@ function ts(e) {
                     renderRow: eW,
                     renderSectionHeader: eJ,
                     renderSectionFooter: e0,
-                    renderSection: eX,
+                    renderSection: eZ,
                     renderCategoryList: e4,
                     renderHeaderAccessories: e6,
                     rowHeight: 48,
                     sectionHeaderHeight: eq,
-                    sectionFooterHeight: eZ,
+                    sectionFooterHeight: eX,
                     itemNodeWidth: 150,
                     gridNavigatorId: es,
                     renderEmptySearchState: ti,
@@ -1282,7 +1282,7 @@ function ts(e) {
         })
     );
 }
-var ta = n(367720);
+var ta = n(740712);
 function to(e) {
     let {
             guildId: t,

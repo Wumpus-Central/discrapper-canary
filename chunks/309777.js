@@ -4,8 +4,8 @@ var a = l(627968),
     i = l(17928),
     s = l(342952),
     r = l(192308),
-    c = l(825484),
-    o = l(408278),
+    o = l(825484),
+    c = l(408278),
     u = l(27232),
     d = l(505930),
     m = l(241326),
@@ -31,8 +31,8 @@ var a = l(627968),
     O = l(145497),
     S = l(734057),
     M = l(540999),
-    D = l(71393),
-    _ = l(287809),
+    _ = l(71393),
+    D = l(287809),
     P = l(58703),
     U = l(403362),
     G = l(274372),
@@ -45,9 +45,9 @@ var a = l(627968),
     K = l(718812),
     Z = l(429364),
     W = l(696016),
-    X = l(16590),
+    X = l(788077),
     J = l(375708),
-    Y = l(567282);
+    Y = l(330994);
 let Q = $.I.difference(new Set([$.C.EXPORT_TO_SOUNDBOARD, $.C.FAVORITE, $.C.DELETE, $.C.SHARE, $.C.EDIT]));
 function q(e) {
     let { channelId: t, onEdit: $, onClose: q } = e,
@@ -60,8 +60,8 @@ function q(e) {
             soundboardAudioEnabled: ei,
             setSoundboardAudioEnabled: es,
             pause: er,
-            clipName: ec,
-            setClipName: eo,
+            clipName: eo,
+            setClipName: ec,
             isTemporary: eu,
             setIsTemporary: ed,
             clip: em,
@@ -76,8 +76,8 @@ function q(e) {
         eb = n.useCallback(async () => {
             await (0, B.w7)(em.id), ed(!1);
         }, [em.id, ed]),
-        eC = (0, i.yK)([_.default], () => em.users.map(_.default.getUser).filter(U.Vq)),
-        ey = (0, i.bG)([D.A], () => (null != em.guildId ? D.A.getGuild(em.guildId) : null)),
+        eC = (0, i.yK)([D.default], () => em.users.map(D.default.getUser).filter(U.Vq)),
+        ey = (0, i.bG)([_.A], () => (null != em.guildId ? _.A.getGuild(em.guildId) : null)),
         eE = (0, i.bG)([S.A], () => (null != em.channelId ? S.A.getChannel(em.channelId) : null)),
         eN = (0, T.Ay)(eE),
         eA = null != eE ? (0, L.gU)(eE, ey) : null;
@@ -89,7 +89,7 @@ function q(e) {
         children: [
             (0, a.jsx)("div", {
                 className: Y.eW,
-                children: (0, a.jsxs)(c.e, {
+                children: (0, a.jsxs)(o.e, {
                     wrap: !1,
                     size: "sm",
                     align: "center",
@@ -97,7 +97,7 @@ function q(e) {
                     direction: "horizontal",
                     fullWidth: !0,
                     children: [
-                        (0, a.jsx)(o.K, {
+                        (0, a.jsx)(c.K, {
                             onClick: () => (0, B.XK)(em),
                             variant: "icon-only",
                             "aria-label": em.isFavorite
@@ -105,13 +105,13 @@ function q(e) {
                                 : J.intl.string(X.default.IZsalP),
                             icon: em.isFavorite ? u.G : d.y,
                         }),
-                        (0, a.jsx)(o.K, {
+                        (0, a.jsx)(c.K, {
                             onClick: (e) => (0, V.A)(e, { clips: [em], onAfterDelete: q }),
                             variant: "icon-only",
                             "aria-label": J.intl.string(J.t.oyYWHE),
                             icon: m.u,
                         }),
-                        (0, a.jsx)(o.K, {
+                        (0, a.jsx)(c.K, {
                             onClick: function (e) {
                                 er(),
                                     (0, w.L3)(e, async () => {
@@ -119,8 +119,8 @@ function q(e) {
                                             l.e("18489"),
                                             l.e("69006"),
                                             l.e("20342"),
-                                            l.e("70229"),
-                                        ]).then(l.bind(l, 875796));
+                                            l.e("47105"),
+                                        ]).then(l.bind(l, 325624));
                                         return (l) =>
                                             (0, a.jsx)(e, {
                                                 ...l,
@@ -136,7 +136,7 @@ function q(e) {
                             icon: h.j,
                         }),
                         eg &&
-                            (0, a.jsx)(o.K, {
+                            (0, a.jsx)(c.K, {
                                 onClick: function () {
                                     (0, r.openModalLazy)(
                                         async () => {
@@ -150,7 +150,7 @@ function q(e) {
                                 variant: "icon-only",
                                 "aria-label": "Debug Info",
                             }),
-                        (0, a.jsx)(o.K, {
+                        (0, a.jsx)(c.K, {
                             onClick: q,
                             icon: p.d,
                             variant: "icon-only",
@@ -185,9 +185,9 @@ function q(e) {
                         (0, a.jsx)(y.k, {
                             label: J.intl.string(J.t.SJKc5n),
                             onChange: (e) => {
-                                "" === e ? eo(void 0) : eo(e);
+                                "" === e ? ec(void 0) : ec(e);
                             },
-                            value: ec,
+                            value: eo,
                             minLength: W.U_,
                             maxLength: W.mk,
                             placeholder: ej,
@@ -289,7 +289,7 @@ function q(e) {
             }),
             (0, a.jsx)("div", {
                 className: Y.G3,
-                children: (0, a.jsx)(c.e, {
+                children: (0, a.jsx)(o.e, {
                     direction: "vertical",
                     fullWidth: !0,
                     children: eh

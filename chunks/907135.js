@@ -41,7 +41,7 @@ function S() {
     if (null == e) throw Error("useSafetyFlowTask must be used within a SafetyFlowTaskContext Provider");
     return e;
 }
-var N = n(837451),
+var N = n(931642),
     y = n(375708),
     C =
         (((i = {})[(i.REFRESH_APP = -1)] = "REFRESH_APP"),
@@ -65,7 +65,7 @@ var R = (((r = {}).Empty = "empty"), (r.VerificationCode = "verification_code"),
     M = n(287809),
     P = n(430993),
     x = n(825484),
-    U = n(214437);
+    U = n(818725);
 let k = (e) => {
         let { actions: t, footerInput: n } = e;
         return 0 === t.length && null == n
@@ -83,7 +83,7 @@ let k = (e) => {
               });
     },
     G = { bottom: 40, left: 32, right: 32, top: 32 };
-var F = n(831067);
+var F = n(18075);
 let V = (e) => {
     let { children: t, actions: n, footerInput: i, title: r } = e;
     return (0, s.jsxs)(l.B, {
@@ -99,7 +99,7 @@ let V = (e) => {
         ],
     });
 };
-var B = n(242235);
+var B = n(430651);
 let H = {
         refresh_app: (e) => {
             let { onSubmit: t, disabled: n } = e,
@@ -185,7 +185,7 @@ let H = {
               });
     };
 var Y = n(754302),
-    W = n(721940);
+    W = n(910356);
 let K = {
         [C.EMAIL_VERIFICATION]: y.intl.string(N.default.HC4IiR),
         [C.REFRESH_APP]: y.intl.string(N.default.SzfxQ3),
@@ -241,8 +241,8 @@ let K = {
     };
 var $ = n(231723),
     q = n(818348),
-    Z = n(561452);
-let X = n(843020);
+    X = n(818604);
+let Z = n(843020);
 function Q(e) {
     let { task: t, handleSubmit: n, disabled: i } = e,
         [r, o] = a.useState(t),
@@ -304,9 +304,9 @@ let J = function (e) {
     });
     let M = a.useMemo(() => i?.task_type === C.AGE_VERIFICATION, [i]);
     return (0, s.jsxs)("div", {
-        className: Z.Tp,
+        className: X.Tp,
         children: [
-            (0, s.jsx)("img", { className: Z.xX, src: X, alt: "" }),
+            (0, s.jsx)("img", { className: X.xX, src: Z, alt: "" }),
             M
                 ? (0, s.jsx)(h.default, {
                       transitionState: t ?? $.ip.ENTERED,
@@ -318,22 +318,22 @@ let J = function (e) {
                       dismissable: !1,
                   })
                 : (0, s.jsx)("div", {
-                      className: Z.nA,
+                      className: X.nA,
                       children: E
                           ? (0, s.jsx)(o.y, { type: o.y.Type.SPINNING_CIRCLE })
                           : (0, s.jsx)("div", {
-                                className: Z.kL,
+                                className: X.kL,
                                 children: (0, s.jsxs)(l.B, {
                                     direction: "horizontal",
                                     justify: "start",
-                                    className: Z.rf,
+                                    className: X.rf,
                                     children: [
                                         null !== g &&
                                             (0, s.jsxs)(l.B, {
                                                 direction: "vertical",
                                                 justify: "space-between",
                                                 align: "center",
-                                                className: Z.Nj,
+                                                className: X.Nj,
                                                 padding: 16,
                                                 children: [
                                                     (0, s.jsxs)(l.B, {

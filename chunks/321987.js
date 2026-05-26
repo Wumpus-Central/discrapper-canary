@@ -15,7 +15,7 @@ var i = n(627968),
     p = n(540999),
     E = n(652215),
     m = n(375708),
-    g = n(966258);
+    g = n(42994);
 function A(e) {
     let { children: t, removeChildWrapper: n, wrapperClassName: r } = e;
     (0, h.HU)({ location: m.intl.string(m.t["3S2494"]) });

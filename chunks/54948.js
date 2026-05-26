@@ -20,7 +20,7 @@ var i = t(627968),
     y = t(241326),
     P = t(828208),
     w = t(375708),
-    R = t(637671);
+    R = t(952999);
 function b(e) {
     let { type: n } = e,
         t = l.useMemo(() => {
@@ -282,7 +282,7 @@ function I(e) {
                 0 === u
                     ? z(l, p, o)
                     : (0, a.openModalLazy)(async () => {
-                          let { default: e } = await Promise.all([t.e("9204"), t.e("81226")]).then(t.bind(t, 928529));
+                          let { default: e } = await Promise.all([t.e("29076"), t.e("81226")]).then(t.bind(t, 928529));
                           return (n) =>
                               (0, i.jsx)(e, {
                                   ...n,
@@ -315,8 +315,8 @@ function _(e, n, l) {
         case s.rX.TERMS:
             return (0, a.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    t.e("77739"),
-                    t.e("83013"),
+                    t.e("17393"),
+                    t.e("70245"),
                     t.e("90152"),
                     t.e("78618"),
                     t.e("32435"),
@@ -325,21 +325,21 @@ function _(e, n, l) {
             });
         case s.rX.PARAGRAPH:
             return (0, a.openModalLazy)(async () => {
-                let { ParagraphFormFieldModal: e } = await Promise.all([t.e("83013"), t.e("78618"), t.e("26510")]).then(
+                let { ParagraphFormFieldModal: e } = await Promise.all([t.e("70245"), t.e("78618"), t.e("26510")]).then(
                     t.bind(t, 542717),
                 );
                 return (t) => (0, i.jsx)(e, { ...t, field: void 0, onSave: n });
             });
         case s.rX.TEXT_INPUT:
             return (0, a.openModalLazy)(async () => {
-                let { TextInputFormFieldModal: e } = await Promise.all([t.e("83013"), t.e("78618"), t.e("26510")]).then(
+                let { TextInputFormFieldModal: e } = await Promise.all([t.e("70245"), t.e("78618"), t.e("26510")]).then(
                     t.bind(t, 542717),
                 );
                 return (t) => (0, i.jsx)(e, { ...t, field: void 0, onSave: n });
             });
         case s.rX.MULTIPLE_CHOICE:
             return (0, a.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([t.e("83013"), t.e("78618"), t.e("52981")]).then(
+                let { default: e } = await Promise.all([t.e("70245"), t.e("78618"), t.e("52981")]).then(
                     t.bind(t, 520660),
                 );
                 return (t) => (0, i.jsx)(e, { ...t, field: void 0, onSave: n });
@@ -351,8 +351,8 @@ function z(e, n, l) {
         case s.rX.TERMS:
             return (0, a.openModalLazy)(async () => {
                 let { default: r } = await Promise.all([
-                    t.e("77739"),
-                    t.e("83013"),
+                    t.e("17393"),
+                    t.e("70245"),
                     t.e("90152"),
                     t.e("78618"),
                     t.e("32435"),
@@ -361,21 +361,21 @@ function z(e, n, l) {
             });
         case s.rX.PARAGRAPH:
             return (0, a.openModalLazy)(async () => {
-                let { ParagraphFormFieldModal: l } = await Promise.all([t.e("83013"), t.e("78618"), t.e("26510")]).then(
+                let { ParagraphFormFieldModal: l } = await Promise.all([t.e("70245"), t.e("78618"), t.e("26510")]).then(
                     t.bind(t, 542717),
                 );
                 return (t) => (0, i.jsx)(l, { ...t, field: e, onSave: n });
             });
         case s.rX.TEXT_INPUT:
             return (0, a.openModalLazy)(async () => {
-                let { TextInputFormFieldModal: l } = await Promise.all([t.e("83013"), t.e("78618"), t.e("26510")]).then(
+                let { TextInputFormFieldModal: l } = await Promise.all([t.e("70245"), t.e("78618"), t.e("26510")]).then(
                     t.bind(t, 542717),
                 );
                 return (t) => (0, i.jsx)(l, { ...t, field: e, onSave: n });
             });
         case s.rX.MULTIPLE_CHOICE:
             return (0, a.openModalLazy)(async () => {
-                let { default: l } = await Promise.all([t.e("83013"), t.e("78618"), t.e("52981")]).then(
+                let { default: l } = await Promise.all([t.e("70245"), t.e("78618"), t.e("52981")]).then(
                     t.bind(t, 520660),
                 );
                 return (t) => (0, i.jsx)(l, { ...t, field: e, onSave: n });

@@ -56,8 +56,8 @@ var v = n(730852),
     z = n(532794),
     $ = n(745299),
     q = n(976860),
-    Z = n(780964),
-    X = n(718446),
+    X = n(780964),
+    Z = n(718446),
     Q = n(766075),
     J = n(879945),
     ee = n(174459),
@@ -67,7 +67,7 @@ var v = n(730852),
     er = n(788868),
     es = n(355097),
     ea = n(375708),
-    eo = n(448759);
+    eo = n(846775);
 let el = (e) => {
     let { dismissibleContent: t, noticeType: r } = e;
     return (0, i.jsx)(et.Ay, {
@@ -91,7 +91,7 @@ let el = (e) => {
                                 onClick: () => {
                                     (0, m.openModalLazy)(async () => {
                                         let { default: e } = await Promise.all([
-                                            n.e("81013"),
+                                            n.e("33353"),
                                             n.e("44602"),
                                             n.e("25280"),
                                         ]).then(n.bind(n, 987482));
@@ -165,7 +165,7 @@ let el = (e) => {
                                             { ticket: t, challenge: r } = await e();
                                         (0, m.openModalLazy)(async () => {
                                             let { RegisterWebAuthnCredentialModal: e } = await Promise.all([
-                                                n.e("10441"),
+                                                n.e("39541"),
                                                 n.e("4736"),
                                                 n.e("40114"),
                                                 n.e("19631"),
@@ -201,7 +201,7 @@ let el = (e) => {
                                         location_section: ei.JJy.NOTIFICATION_BAR,
                                         location_object: ei.ZSU.BUTTON_CTA,
                                     }),
-                                        (0, Q.openUserSettings)(Z.X.NITRO_PANEL);
+                                        (0, Q.openUserSettings)(X.X.NITRO_PANEL);
                                 },
                                 children: ea.intl.string(ea.t["8JC5e/"]),
                             }),
@@ -232,7 +232,7 @@ let el = (e) => {
                             (0, i.jsx)(h.Z_, {
                                 noticeType: r,
                                 onClick: () => {
-                                    s(en.i.UNKNOWN), (0, Q.openUserSettings)(Z.X.NITRO_PANEL);
+                                    s(en.i.UNKNOWN), (0, Q.openUserSettings)(X.X.NITRO_PANEL);
                                 },
                                 children: ea.intl.string(ea.t.pyYSiO),
                             }),
@@ -247,7 +247,7 @@ let el = (e) => {
                             (0, i.jsx)(h.Z_, {
                                 noticeType: r,
                                 onClick: () => {
-                                    (0, q.pX)((0, X.settingsPathToRoute)(es.od.ACCOUNT));
+                                    (0, q.pX)((0, Z.settingsPathToRoute)(es.od.ACCOUNT));
                                 },
                                 children: ea.intl.string(ea.t.Vm8akB),
                             }),
@@ -344,14 +344,14 @@ var ep = n(264779),
     eE = n(962644),
     em = n(287809),
     eg = n(428262),
-    eA = n(946319);
+    eA = n(376783);
 let eI = (e) => {
     let { dismissibleContent: t } = e,
         n = (0, ep.Cp)(),
         s = (0, c.bG)([em.default], () => !eg.Ay.isPremium(em.default.getCurrentUser())),
         a = r.useCallback(() => {
             ee.default.track(ei.HAw.OUTBOUND_PROMOTION_NOTICE_CLICKED),
-                (0, Q.openUserSettings)(Z.X.GIFT_PANEL),
+                (0, Q.openUserSettings)(X.X.GIFT_PANEL),
                 eE.Ay.dismissOutboundPromotionNotice();
         }, []);
     return null == n
@@ -403,7 +403,7 @@ var eT = n(587054),
     eM = n(834409),
     eP = n(903093),
     ex = n(746080),
-    eU = n(500928);
+    eU = n(903232);
 function ek(e) {
     let { onDismiss: t } = e,
         s = (0, c.bG)([eL.A], () => eL.A.getGuildId()),
@@ -423,8 +423,8 @@ function ek(e) {
                 : (0, m.openModalLazy)(async () => {
                       let e = { source: eM.Eo.NAGBAR, alertType: (0, eP.$5)(d) },
                           { default: t } = await Promise.all([
-                              n.e("72273"),
-                              n.e("77739"),
+                              n.e("87041"),
+                              n.e("17393"),
                               n.e("40258"),
                               n.e("73669"),
                               n.e("46313"),
@@ -522,8 +522,8 @@ function ez(e) {
 var e$ = n(202384),
     eq = n(51758);
 n(321073);
-var eZ = n(503698),
-    eX = n.n(eZ),
+var eX = n(503698),
+    eZ = n.n(eX),
     eQ = n(873263),
     eJ = n(314116),
     e0 = n(821609),
@@ -532,8 +532,8 @@ var eZ = n(503698),
     e3 = n(513461),
     e6 = n(709977),
     e4 = n(212455),
-    e5 = n(182430),
-    e7 = n(580537);
+    e5 = n(336414),
+    e7 = n(202873);
 let e8 = () => {
     let e = (0, c.bG)([eL.A], () => eL.A.getGuildId(), []),
         t = (0, c.bG)([eb.A], () => eb.A.getGuild(e), [e]),
@@ -565,7 +565,7 @@ let e8 = () => {
                 (u = ea.intl.string(ea.t["8RrsHr"])),
                 (d = () => {
                     (0, m.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("25099"), n.e("14382")]).then(n.bind(n, 463325));
+                        let { default: e } = await Promise.all([n.e("4399"), n.e("14382")]).then(n.bind(n, 463325));
                         return (n) => (0, i.jsx)(e, { guildId: t.id, ...n });
                     });
                 }),
@@ -579,7 +579,7 @@ let e8 = () => {
                 });
     }
     return (0, i.jsxs)("div", {
-        className: eX()(...f),
+        className: eZ()(...f),
         children: [
             (0, i.jsx)(_.E, { className: e5.wx, variant: "text-sm/normal", children: l }),
             (0, i.jsx)(e0.$, { variant: "overlay-primary", size: "sm", onClick: d, text: u }),
@@ -587,7 +587,7 @@ let e8 = () => {
     });
 };
 var e9 = n(477155),
-    te = n(22877);
+    te = n(830237);
 function tt(e) {
     let { buttonText: t, onGoBack: n, onDismiss: r, showCloseButton: s } = e;
     return (0, i.jsxs)(h.$T, {
@@ -603,7 +603,7 @@ var tn = n(468689),
     tr = n(862482),
     ts = n(66834),
     ta = n(449054),
-    to = n(484154);
+    to = n(741306);
 let tl = () => {
     let e = (0, c.bG)([eL.A], () => eL.A.getGuildId(), []),
         t = (0, c.bG)([eb.A], () => eb.A.getGuild(e), [e]),
@@ -618,13 +618,13 @@ let tl = () => {
         }
     };
     return (0, i.jsxs)("div", {
-        className: eX()(to.lm, e7.lm),
+        className: eZ()(to.lm, e7.lm),
         children: [
             (0, i.jsxs)(tr.$n, {
                 look: tr.$n.Looks.OUTLINED,
                 color: tr.$n.Colors.WHITE,
                 size: tr.$n.Sizes.NONE,
-                className: eX()(to.x6, to.aX),
+                className: eZ()(to.x6, to.aX),
                 innerClassName: to.gb,
                 onClick: () => {
                     (0, q.JK)().goBack();
@@ -654,8 +654,8 @@ var tu = n(801644),
     tf = n(367727),
     th = n(635995),
     tp = n(88001),
-    tE = n(466919),
-    tm = n(375043);
+    tE = n(963458),
+    tm = n(669827);
 function tg(e) {
     let { premiumSubscription: t } = e,
         s = t?.id,
@@ -675,7 +675,7 @@ function tg(e) {
                 }),
                 a(),
                 (0, m.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("44616"), n.e("85579")]).then(n.bind(n, 785606));
+                    let { default: e } = await Promise.all([n.e("5040"), n.e("85579")]).then(n.bind(n, 785606));
                     return (n) => (0, i.jsx)(e, { ...n, subscription: t });
                 }));
         }, [t, a]);
@@ -774,9 +774,9 @@ function tv() {
                       onClick: () => {
                           (0, m.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([
-                                  n.e("56030"),
+                                  n.e("70014"),
                                   n.e("18413"),
-                                  n.e("22255"),
+                                  n.e("59172"),
                                   n.e("55925"),
                                   n.e("85033"),
                                   n.e("26484"),
@@ -800,7 +800,7 @@ var tO = n(825484),
     tw = n(354583),
     tM = n(366098),
     tP = n(418208),
-    tx = n(992262);
+    tx = n(171846);
 function tU(e) {
     if (!e && (0, tP.Cf)())
         return void tR.A.showAgeVerificationGetStartedModal({ entryPoint: tb.q1.STAGE_CHANNEL_RAISE_HAND });
@@ -816,17 +816,17 @@ function tk(e) {
     return n > 0 && r > 0
         ? (0, i.jsx)("div", {
               className: tx.Z5,
-              children: (0, i.jsx)("div", { className: eX()(tx.qQ, tx.lN), children: ea.intl.string(ea.t.xlJRfv) }),
+              children: (0, i.jsx)("div", { className: eZ()(tx.qQ, tx.lN), children: ea.intl.string(ea.t.xlJRfv) }),
           })
         : n > 0
           ? (0, i.jsx)("div", {
                 className: tx.Z5,
-                children: (0, i.jsx)("div", { className: eX()(tx.qQ, tx.lN), children: ea.intl.string(ea.t.WYad9Z) }),
+                children: (0, i.jsx)("div", { className: eZ()(tx.qQ, tx.lN), children: ea.intl.string(ea.t.WYad9Z) }),
             })
           : r > 0
             ? (0, i.jsx)("div", {
                   className: tx.Z5,
-                  children: (0, i.jsx)("div", { className: eX()(tx.qQ, tx.lN), children: ea.intl.string(ea.t.eHq2OF) }),
+                  children: (0, i.jsx)("div", { className: eZ()(tx.qQ, tx.lN), children: ea.intl.string(ea.t.eHq2OF) }),
               })
             : null;
 }
@@ -888,7 +888,7 @@ function tj() {
             (0, i.jsx)(h.Z_, {
                 noticeType: ei.kqX.PTT_NO_KEYBIND_WARNING,
                 onClick: function () {
-                    (0, Q.openUserSettings)(Z.X.VOICE_PUSH_TO_TALK_KEYBIND_SETTING);
+                    (0, Q.openUserSettings)(X.X.VOICE_PUSH_TO_TALK_KEYBIND_SETTING);
                 },
                 children: ea.intl.string(ea.t["UgQN+9"]),
             }),
@@ -924,8 +924,8 @@ function tK(e) {
 var tz = n(761853),
     t$ = n(763827),
     tq = n(67480),
-    tZ = n(147964),
-    tX = n(177141),
+    tX = n(147964),
+    tZ = n(177141),
     tQ = n(975571),
     tJ = n(723702),
     t0 = n(325278),
@@ -1002,7 +1002,7 @@ function t7(e) {
                   (u = !0),
                   (n = (0, i.jsx)(h.zr, {
                       onClick: () => {
-                          (0, Q.openUserSettings)(Z.X.VOICE_AND_VIDEO_PANEL);
+                          (0, Q.openUserSettings)(X.X.VOICE_AND_VIDEO_PANEL);
                       },
                       children: ea.intl.string(ea.t.I6YlB4),
                   })))
@@ -1034,7 +1034,7 @@ function t8(e) {
 let t9 = r.memo(function () {
     let e = (0, c.bG)([em.default], () => em.default.getCurrentUser()),
         t = (0, c.bG)([eL.A], () => eL.A.getGuildId()),
-        s = (0, c.bG)([tX.Ay], () => tX.Ay.getNotice()),
+        s = (0, c.bG)([tZ.Ay], () => tZ.Ay.getNotice()),
         { analyticsLocations: a } = (0, x.Ay)(),
         l = (0, L.Ay)(),
         u = (0, eq.H)(t),
@@ -1068,10 +1068,10 @@ let t9 = r.memo(function () {
         null == s)
     )
         return null;
-    let f = null != s.type ? tX.Re[s.type] : null,
-        S = null != s.type ? tX.rV[s.type] : null,
-        y = null != s.type ? tX.f7[s.type] : null,
-        w = tX.pe[s.type];
+    let f = null != s.type ? tZ.Re[s.type] : null,
+        S = null != s.type ? tZ.rV[s.type] : null,
+        y = null != s.type ? tZ.f7[s.type] : null,
+        w = tZ.pe[s.type];
     if (null != f) return (0, i.jsx)(eT.$, { dismissibleContent: f, noticeType: s.type });
     if (null != S) return (0, i.jsx)(eh, { dismissibleContent: S });
     if (null != y) return (0, i.jsx)(eI, { dismissibleContent: y });
@@ -1227,7 +1227,7 @@ let t9 = r.memo(function () {
                     }),
                     ea.intl.string(ea.t.D8Cp76),
                     (0, i.jsx)(h.Z_, {
-                        onClick: () => (0, Q.openUserSettings)(Z.X.VOICE_AND_VIDEO_PANEL),
+                        onClick: () => (0, Q.openUserSettings)(X.X.VOICE_AND_VIDEO_PANEL),
                         noticeType: s.type,
                         children: ea.intl.string(ea.t.NiTd0e),
                     }),
@@ -1343,36 +1343,36 @@ let t9 = r.memo(function () {
             if (null == s.metadata) return null;
             let { skuId: K, applicationId: $ } = s.metadata,
                 q = tq.A.get(K),
-                X = U.A.getApplication($);
-            if (null == q || null == X) return null;
+                Z = U.A.getApplication($);
+            if (null == q || null == Z) return null;
             let J = { page: ei.liQ.IN_APP };
             return (0, i.jsxs)(h.$T, {
                 color: h.Hv.PREMIUM_TIER_1,
                 children: [
                     (0, i.jsx)(h.PM, { onClick: () => N(q.id), noticeType: ei.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK }),
                     (0, i.jsx)(E.t, { size: "md", color: "currentColor", className: eo.PC }),
-                    ea.intl.format(ea.t["g3MU/+"], { applicationName: X.name, skuName: q.name }),
+                    ea.intl.format(ea.t["g3MU/+"], { applicationName: Z.name, skuName: q.name }),
                     (0, i.jsx)(h.Z_, {
                         noticeType: ei.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK,
                         onClick: async () => {
                             try {
                                 let { openIAPPurchaseModal: e } = await Promise.all([
-                                    n.e("29761"),
-                                    n.e("26105"),
-                                    n.e("46461"),
-                                    n.e("94908"),
-                                    n.e("9225"),
-                                    n.e("35316"),
-                                    n.e("90081"),
-                                    n.e("51776"),
-                                    n.e("45650"),
-                                    n.e("61097"),
-                                    n.e("52887"),
-                                    n.e("82647"),
-                                    n.e("57016"),
-                                    n.e("28743"),
-                                    n.e("66609"),
-                                    n.e("79705"),
+                                    n.e("32637"),
+                                    n.e("40965"),
+                                    n.e("96413"),
+                                    n.e("69117"),
+                                    n.e("44549"),
+                                    n.e("31880"),
+                                    n.e("3040"),
+                                    n.e("48424"),
+                                    n.e("32106"),
+                                    n.e("24769"),
+                                    n.e("93814"),
+                                    n.e("92267"),
+                                    n.e("20248"),
+                                    n.e("46475"),
+                                    n.e("43902"),
+                                    n.e("67965"),
                                     n.e("23924"),
                                     n.e("42205"),
                                     n.e("71091"),
@@ -1387,16 +1387,16 @@ let t9 = r.memo(function () {
                                     n.e("96643"),
                                     n.e("94493"),
                                     n.e("92789"),
-                                    n.e("47834"),
+                                    n.e("2773"),
                                     n.e("74016"),
                                     n.e("19551"),
                                     n.e("84569"),
-                                    n.e("6338"),
+                                    n.e("36845"),
                                     n.e("3178"),
                                     n.e("7743"),
                                     n.e("45959"),
-                                    n.e("60658"),
-                                    n.e("8304"),
+                                    n.e("45587"),
+                                    n.e("95569"),
                                     n.e("18573"),
                                     n.e("55936"),
                                     n.e("31988"),
@@ -1417,7 +1417,7 @@ let t9 = r.memo(function () {
                                     n.e("6174"),
                                     n.e("91146"),
                                     n.e("46070"),
-                                    n.e("63645"),
+                                    n.e("86026"),
                                     n.e("5636"),
                                     n.e("87196"),
                                     n.e("834"),
@@ -1426,7 +1426,7 @@ let t9 = r.memo(function () {
                                     n.e("62075"),
                                 ]).then(n.bind(n, 4630));
                                 await e({
-                                    applicationId: X.id,
+                                    applicationId: Z.id,
                                     skuId: q.id,
                                     openPremiumPaymentModal: () => {
                                         (0, z.A)({
@@ -1524,7 +1524,7 @@ let t9 = r.memo(function () {
                         noticeType: ei.kqX.VIDEO_UNSUPPORTED_BROWSER,
                         onClick: () => {
                             (0, m.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([n.e("81013"), n.e("44602"), n.e("25280")]).then(
+                                let { default: e } = await Promise.all([n.e("33353"), n.e("44602"), n.e("25280")]).then(
                                     n.bind(n, 987482),
                                 );
                                 return (t) => (0, i.jsx)(e, { source: "Video unsupported browser", ...t });
@@ -1546,7 +1546,7 @@ let t9 = r.memo(function () {
                         noticeType: ei.kqX.DISPATCH_ERROR,
                         onClick: () =>
                             (0, m.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([n.e("91139"), n.e("88014")]).then(
+                                let { default: e } = await Promise.all([n.e("32899"), n.e("88014")]).then(
                                     n.bind(n, 627261),
                                 );
                                 return (t) => (0, i.jsx)(e, { ...t });
@@ -1579,7 +1579,7 @@ let t9 = r.memo(function () {
             });
         case ei.kqX.APPLICATION_TEST_MODE:
             if (null == s.metadata) return null;
-            if (null != tZ.A.testModeEmbeddedApplicationId)
+            if (null != tX.A.testModeEmbeddedApplicationId)
                 return (0, i.jsx)(h.$T, {
                     color: h.Hv.WARNING,
                     children: (0, i.jsxs)(G.A, {
@@ -1637,20 +1637,20 @@ let t9 = r.memo(function () {
                             t8(s.metadata?.premiumSubscription?.currentPeriodEnd),
                                 (0, m.openModalLazy)(async () => {
                                     let { default: e } = await Promise.all([
-                                        n.e("70750"),
-                                        n.e("26105"),
-                                        n.e("46461"),
-                                        n.e("94908"),
-                                        n.e("28743"),
-                                        n.e("5389"),
-                                        n.e("23309"),
-                                        n.e("51776"),
+                                        n.e("91494"),
+                                        n.e("40965"),
+                                        n.e("96413"),
+                                        n.e("69117"),
+                                        n.e("46475"),
+                                        n.e("40789"),
+                                        n.e("4197"),
+                                        n.e("48424"),
                                         n.e("10471"),
                                         n.e("35429"),
                                         n.e("11301"),
                                         n.e("96643"),
                                         n.e("94493"),
-                                        n.e("47834"),
+                                        n.e("2773"),
                                         n.e("19551"),
                                         n.e("5812"),
                                         n.e("25279"),
@@ -1693,7 +1693,7 @@ let t9 = r.memo(function () {
                     (0, i.jsx)(h.Z_, {
                         noticeType: ei.kqX.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
                         onClick: () => {
-                            t8(ed), (0, Q.openUserSettings)(Z.X.SUBSCRIPTIONS_PANEL);
+                            t8(ed), (0, Q.openUserSettings)(X.X.SUBSCRIPTIONS_PANEL);
                         },
                         children: ea.intl.string(ea.t.q8rxeS),
                     }),
@@ -1714,7 +1714,7 @@ let t9 = r.memo(function () {
                         noticeType: ei.kqX.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                         onClick: () => {
                             t8(s.metadata?.premiumSubscription?.currentPeriodEnd),
-                                (0, Q.openUserSettings)(Z.X.SUBSCRIPTIONS_PANEL);
+                                (0, Q.openUserSettings)(X.X.SUBSCRIPTIONS_PANEL);
                         },
                         children: ea.intl.string(ea.t["Zpd+Yq"]),
                     }),
@@ -1735,7 +1735,7 @@ let t9 = r.memo(function () {
                         noticeType: ei.kqX.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                         onClick: () => {
                             t8(s.metadata?.premiumSubscription?.currentPeriodEnd),
-                                (0, Q.openUserSettings)(Z.X.SUBSCRIPTIONS_PANEL);
+                                (0, Q.openUserSettings)(X.X.SUBSCRIPTIONS_PANEL);
                         },
                         children: ea.intl.string(ea.t.U5pKWA),
                     }),
@@ -1760,7 +1760,7 @@ let t9 = r.memo(function () {
                         noticeType: ei.kqX.PREMIUM_MISSING_PAYMENT,
                         onClick: () => {
                             t8(s.metadata?.premiumSubscription?.currentPeriodEnd),
-                                (0, Q.openUserSettings)(Z.X.SUBSCRIPTIONS_PANEL);
+                                (0, Q.openUserSettings)(X.X.SUBSCRIPTIONS_PANEL);
                         },
                         children:
                             P === er.PremiumTypes.TIER_1
@@ -1856,9 +1856,9 @@ let t9 = r.memo(function () {
                         onClick: () => {
                             (0, m.openModalLazy)(async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("56030"),
+                                    n.e("70014"),
                                     n.e("18413"),
-                                    n.e("22255"),
+                                    n.e("59172"),
                                     n.e("55925"),
                                     n.e("85033"),
                                     n.e("26484"),

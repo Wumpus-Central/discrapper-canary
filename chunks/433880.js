@@ -1,43 +1,43 @@
-n.d(t, { A: () => m }), n(321073);
-var i = n(627968),
-    l = n(64700),
-    r = n(17928),
-    a = n(477782),
+n.d(t, { A: () => f }), n(321073);
+var l = n(627968),
+    i = n(64700),
+    a = n(17928),
+    r = n(477782),
     o = n(429913),
-    d = n(137177),
-    s = n(994500),
-    u = n(287809),
-    c = n(652215),
-    A = n(30851);
-let f = [];
-function g(e) {
+    s = n(137177),
+    u = n(994500),
+    c = n(287809),
+    d = n(652215),
+    m = n(465731);
+let g = [];
+function p(e) {
     let { application: t } = e;
-    return (0, i.jsxs)("div", {
-        className: A.W,
-        children: [(0, i.jsx)(d.A, { game: t, size: d.M.XXSMALL }), (0, i.jsx)("span", { children: t.name })],
+    return (0, l.jsxs)("div", {
+        className: m.W,
+        children: [(0, l.jsx)(s.A, { game: t, size: s.M.XXSMALL }), (0, l.jsx)("span", { children: t.name })],
     });
 }
-function m(e) {
+function f(e) {
     let t,
-        { menuItemId: n, user: A, label: m, gameRelationships: h, onClick: p, color: x } = e,
-        { id: b, bot: I } = A,
-        C = (0, r.bG)([u.default], () => u.default.getCurrentUser()?.id === b) || I,
-        v = C ? f : h,
-        [E, y] = l.useState(!1),
-        T = l.useCallback(() => y(!0), []),
-        N = l.useMemo(
+        { menuItemId: n, user: m, label: f, gameRelationships: A, onClick: h, color: b } = e,
+        { id: x, bot: C } = m,
+        k = (0, a.bG)([c.default], () => c.default.getCurrentUser()?.id === x) || C,
+        M = k ? g : A,
+        [I, j] = i.useState(!1),
+        v = i.useCallback(() => j(!0), []),
+        L = i.useMemo(
             () =>
-                v.map((e) => {
+                M.map((e) => {
                     let { applicationId: t } = e;
                     return t;
                 }),
-            [v],
+            [M],
         ),
-        R = (0, r.bG)([s.A], () => s.A.getRelationshipType(b), [b]),
-        D = E || 1 === v.length,
-        U =
-            ((t = (0, o.A)(N, D)),
-            l.useMemo(() => {
+        F = (0, a.bG)([u.A], () => u.A.getRelationshipType(x), [x]),
+        R = I || 1 === M.length,
+        X =
+            ((t = (0, o.A)(L, R)),
+            i.useMemo(() => {
                 let e = new Map();
                 return (
                     t.forEach((t) => {
@@ -46,43 +46,43 @@ function m(e) {
                     e
                 );
             }, [t]));
-    if (C || 0 === v.length || R === c.eA$.FRIEND) return null;
-    if (1 === v.length) {
-        let { applicationId: e } = v[0],
-            t = U.get(e);
+    if (k || 0 === M.length || F === d.eA$.FRIEND) return null;
+    if (1 === M.length) {
+        let { applicationId: e } = M[0],
+            t = X.get(e);
         return null == t
             ? null
-            : (0, i.jsx)(a.Dr, {
-                  color: x,
+            : (0, l.jsx)(r.Dr, {
+                  color: b,
                   id: n,
-                  label: m,
-                  subtext: (0, i.jsx)(g, { application: t }),
-                  onFocus: T,
-                  action: () => p(t),
+                  label: f,
+                  subtext: (0, l.jsx)(p, { application: t }),
+                  onFocus: v,
+                  action: () => h(t),
               });
     }
-    let _ = [];
-    return (v.forEach((e) => {
+    let y = [];
+    return (M.forEach((e) => {
         let { applicationId: t } = e,
-            n = U.get(t);
+            n = X.get(t);
         if (null != n) {
             let e = n.getIconURL(16);
-            _.push(
-                (0, i.jsx)(
-                    a.Dr,
+            y.push(
+                (0, l.jsx)(
+                    r.Dr,
                     {
                         id: t,
                         label: n.name,
-                        icon: (0, i.jsx)(d.A, { game: n, size: d.M.XXSMALL }),
+                        icon: (0, l.jsx)(s.A, { game: n, size: s.M.XXSMALL }),
                         leadingAccessory: null != e ? { type: "image", src: e } : void 0,
-                        action: () => p(n),
+                        action: () => h(n),
                     },
                     t,
                 ),
             );
         }
     }),
-    0 === _.length)
+    0 === y.length)
         ? null
-        : (0, i.jsx)(a.Dr, { color: x, id: n, label: m, onFocus: T, children: _ });
+        : (0, l.jsx)(r.Dr, { color: b, id: n, label: f, onFocus: v, children: y });
 }

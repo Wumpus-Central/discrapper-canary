@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Gq: () => q, WE: () => $, qn: () => K, Ay: () => Z });
+n.d(t, { Gq: () => q, WE: () => $, qn: () => K, Ay: () => X });
 var i,
     r = n(627968),
     s = n(64700),
@@ -20,14 +20,14 @@ var i,
     I = n(967198),
     T = n(287809),
     S = n(824744),
-    N = n(927578),
-    y = n(704591),
+    N = n(428262),
+    y = n(926972),
     C = n(885386),
     v = n(862482),
     O = n(821609),
     R = n(66834),
     b = n(624793),
-    D = n(861626),
+    D = n(639245),
     L = n(34337),
     w = n(796774),
     M = n(807348),
@@ -45,7 +45,7 @@ var G = n(375708),
         i),
     V = n(788868),
     B = n(652215),
-    H = n(532340);
+    H = n(589812);
 function j(e) {
     let { discoverableGuildId: t, closePopout: n, buttonType: i } = e,
         a = s.useCallback(async () => {
@@ -199,7 +199,7 @@ function Y(e) {
               ],
           });
 }
-var W = n(757718);
+var W = n(14870);
 function K() {
     let { volume: e, onVolumeChange: t } = (function () {
         let [e, t] = s.useState(C.HO.getSetting());
@@ -328,7 +328,7 @@ function q(e) {
             }),
     });
 }
-function Z(e) {
+function X(e) {
     let { sound: t, channel: n, setTooltipShowing: i } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [

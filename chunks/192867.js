@@ -1,16 +1,16 @@
-n.d(t, { A: () => s });
-var l = n(627968);
-n(64700);
-var a = n(97808),
-    i = n(778712),
-    r = n(151900);
-function s(e) {
-    let { user: t, nickname: n } = e,
-        s = null != n;
-    return (0, l.jsx)(a.eu, {
-        src: t.getAvatarURL(void 0, s ? 16 : 24),
-        size: s ? i._3.SIZE_16 : i._3.SIZE_24,
-        className: s ? r.H : r.tM,
+e.d(s, { A: () => d });
+var i = e(627968);
+e(64700);
+var r = e(97808),
+    t = e(778712),
+    c = e(67804);
+function d(a) {
+    let { user: s, nickname: e } = a,
+        d = null != e;
+    return (0, i.jsx)(r.eu, {
+        src: s.getAvatarURL(void 0, d ? 16 : 24),
+        size: d ? t._3.SIZE_16 : t._3.SIZE_24,
+        className: d ? c.H : c.tM,
         "aria-hidden": !0,
     });
 }

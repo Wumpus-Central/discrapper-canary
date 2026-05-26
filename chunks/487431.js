@@ -1,89 +1,89 @@
-a.d(t, { Sy: () => _, VT: () => b, nW: () => v });
-var n,
-    l = a(627968),
-    i = a(834730),
-    s = a(123292),
-    r = a(628284),
-    o = a(285796),
-    d = a(478016),
-    c = a(738188),
-    u = a(789645),
-    m = a(827734),
-    h = a(975807),
-    p = a(311350),
-    x = a(985018),
-    g = a(90528),
-    v =
-        (((n = {})[(n.OVERALL_GOOD = 0)] = "OVERALL_GOOD"),
-        (n[(n.OVERALL_BAD = 1)] = "OVERALL_BAD"),
-        (n[(n.GOOD = 2)] = "GOOD"),
-        (n[(n.WARN = 3)] = "WARN"),
-        (n[(n.BAD = 4)] = "BAD"),
-        n);
-function b(e) {
-    let { overallStatus: t, name: a, steps: n, isChosen: s } = e;
-    return (0, l.jsxs)("div", {
-        className: g.Wk,
+e.d(t, { Sy: () => h, VT: () => C, nW: () => O });
+var r,
+    c = e(627968),
+    l = e(834730),
+    i = e(123292),
+    n = e(628284),
+    a = e(285796),
+    o = e(478016),
+    x = e(738188),
+    u = e(789645),
+    d = e(661531),
+    A = e(975807),
+    m = e(458899),
+    E = e(375708),
+    j = e(376480),
+    O =
+        (((r = {})[(r.OVERALL_GOOD = 0)] = "OVERALL_GOOD"),
+        (r[(r.OVERALL_BAD = 1)] = "OVERALL_BAD"),
+        (r[(r.GOOD = 2)] = "GOOD"),
+        (r[(r.WARN = 3)] = "WARN"),
+        (r[(r.BAD = 4)] = "BAD"),
+        r);
+function C(s) {
+    let { overallStatus: t, name: e, steps: r, isChosen: i } = s;
+    return (0, c.jsxs)("div", {
+        className: j.Wk,
         children: [
-            (0, l.jsx)(_, { status: t, text: a }),
-            n.map((e, t) => (0, l.jsx)(f, { ...e }, t)),
-            s &&
-                (0, l.jsx)("div", {
-                    className: g.MH,
-                    children: (0, l.jsx)(i.E, {
+            (0, c.jsx)(h, { status: t, text: e }),
+            r.map((s, t) => (0, c.jsx)(_, { ...s }, t)),
+            i &&
+                (0, c.jsx)("div", {
+                    className: j.MH,
+                    children: (0, c.jsx)(l.E, {
                         variant: "text-sm/medium",
                         color: "text-subtle",
-                        children: x.intl.string(p.default.OEkrCx),
+                        children: E.intl.string(m.default.OEkrCx),
                     }),
                 }),
         ],
     });
 }
-function _(e) {
-    let { text: t, status: a } = e;
-    return (0, l.jsxs)("div", {
-        className: g.Km,
+function h(s) {
+    let { text: t, status: e } = s;
+    return (0, c.jsxs)("div", {
+        className: j.Km,
         children: [
-            (0, l.jsx)(i.E, { variant: "text-md/semibold", color: "text-subtle", children: t }),
-            (0, l.jsx)(j, { status: a }),
+            (0, c.jsx)(l.E, { variant: "text-md/semibold", color: "text-subtle", children: t }),
+            (0, c.jsx)(I, { status: e }),
         ],
     });
 }
-function f(e) {
-    let { status: t, text: a, description: n, learnMoreLink: r } = e;
-    return (0, l.jsxs)("div", {
-        className: g.jf,
+function _(s) {
+    let { status: t, text: e, description: r, learnMoreLink: n } = s;
+    return (0, c.jsxs)("div", {
+        className: j.jf,
         children: [
-            (0, l.jsx)(j, { status: t }),
-            (0, l.jsxs)("div", {
-                className: g.bc,
+            (0, c.jsx)(I, { status: t }),
+            (0, c.jsxs)("div", {
+                className: j.bc,
                 children: [
-                    (0, l.jsx)(i.E, { variant: "text-md/medium", children: a }),
-                    null != n && (0, l.jsx)(i.E, { variant: "text-sm/medium", color: "text-subtle", children: n }),
-                    null != r &&
-                        (0, l.jsx)(s.Q, {
+                    (0, c.jsx)(l.E, { variant: "text-md/medium", children: e }),
+                    null != r && (0, c.jsx)(l.E, { variant: "text-sm/medium", color: "text-subtle", children: r }),
+                    null != n &&
+                        (0, c.jsx)(i.Q, {
                             textVariant: "text-sm/medium",
-                            text: x.intl.string(x.t.hvVgAZ),
-                            onClick: () => (0, h.A)(r),
+                            text: E.intl.string(E.t.hvVgAZ),
+                            onClick: () => (0, A.A)(n),
                         }),
                 ],
             }),
         ],
     });
 }
-function j(e) {
-    let { status: t } = e,
-        a = { size: "sm", className: g.I8 };
+function I(s) {
+    let { status: t } = s,
+        e = { size: "sm", className: j.I8 };
     switch (t) {
         case 0:
-            return (0, l.jsx)(r.y, { ...a, color: m.A.colors.ICON_FEEDBACK_POSITIVE });
+            return (0, c.jsx)(n.y, { ...e, color: d.A.colors.ICON_FEEDBACK_POSITIVE });
         case 1:
-            return (0, l.jsx)(o.a, { ...a, color: m.A.colors.ICON_FEEDBACK_CRITICAL });
+            return (0, c.jsx)(a.a, { ...e, color: d.A.colors.ICON_FEEDBACK_CRITICAL });
         case 2:
-            return (0, l.jsx)(d.U, { ...a, color: m.A.colors.ICON_FEEDBACK_POSITIVE });
+            return (0, c.jsx)(o.U, { ...e, color: d.A.colors.ICON_FEEDBACK_POSITIVE });
         case 3:
-            return (0, l.jsx)(c.i, { ...a, color: m.A.colors.ICON_FEEDBACK_WARNING });
+            return (0, c.jsx)(x.i, { ...e, color: d.A.colors.ICON_FEEDBACK_WARNING });
         case 4:
-            return (0, l.jsx)(u.P, { ...a, color: m.A.colors.ICON_FEEDBACK_CRITICAL });
+            return (0, c.jsx)(u.P, { ...e, color: d.A.colors.ICON_FEEDBACK_CRITICAL });
     }
 }

@@ -1,89 +1,89 @@
-s.d(t, { default: () => c });
-var n = s(627968),
-    l = s(64700),
-    a = s(189213),
-    o = s(359778),
-    i = s(834730),
-    r = s(292666),
-    d = s(985018),
-    h = s(786055);
-function u(e) {
+n.d(t, { default: () => c });
+var l = n(627968),
+    a = n(64700),
+    s = n(189213),
+    i = n(359778),
+    r = n(834730),
+    o = n(292666),
+    d = n(375708),
+    u = n(43207);
+function h(e) {
     let {
             title: t,
-            actionText: s,
-            children: u,
+            actionText: n,
+            children: h,
             transitionState: c,
             onClose: p,
-            handleSubmit: f,
-            onError: C,
-            skipErrorMsgAbortCode: g,
+            handleSubmit: b,
+            onError: g,
+            skipErrorMsgAbortCode: C,
             onPasswordChange: m,
-            variant: y = "primary",
+            variant: f = "primary",
         } = e,
-        [b, x] = l.useState(""),
-        [A, k] = l.useState(null),
-        [v, R] = l.useState(!1),
-        S = l.useCallback(async () => {
+        [y, x] = a.useState(""),
+        [v, A] = a.useState(null),
+        [S, k] = a.useState(!1),
+        j = a.useCallback(async () => {
             await p();
         }, [p]),
-        j =
-            l.Children.count(u) > 0
-                ? (0, n.jsx)(o.Z, {
-                      type: o.Z.Types.WARNING,
-                      className: h.Nr,
-                      children: (0, n.jsx)(i.E, { color: "currentColor", variant: "text-md/normal", children: u }),
+        P =
+            a.Children.count(h) > 0
+                ? (0, l.jsx)(i.Z, {
+                      type: i.Z.Types.WARNING,
+                      className: u.Nr,
+                      children: (0, l.jsx)(r.E, { color: "currentColor", variant: "text-md/normal", children: h }),
                   })
                 : null;
-    return (0, n.jsx)("form", {
+    return (0, l.jsx)("form", {
         onSubmit: (e) => {
             e.preventDefault(),
-                R(!0),
-                f(b)
+                k(!0),
+                b(y)
                     .then(
                         (e) => p(e ?? void 0),
                         (e) => {
                             let t;
                             null != e.body &&
-                                (C?.(e.body),
+                                (g?.(e.body),
                                 (t = e.body),
-                                (null == g || t?.code !== g) &&
+                                (null == C || t?.code !== C) &&
                                     (e.body.password
-                                        ? (k(e.body.password), R(!1))
-                                        : e.body.message && (k(e.body.message), R(!1))));
+                                        ? (A(e.body.password), k(!1))
+                                        : e.body.message && (A(e.body.message), k(!1))));
                         },
                     )
-                    .finally(() => R(!1));
+                    .finally(() => k(!1));
         },
-        children: (0, n.jsxs)(a.Modal, {
+        children: (0, l.jsxs)(s.Modal, {
             title: t,
             actions: [
-                { text: d.intl.string(d.t["ETE/oC"]), onClick: S, variant: "secondary" },
-                { text: s ?? d.intl.string(d.t["cY+Oob"]), type: "submit", variant: y, disabled: v || 0 === b.length },
+                { text: d.intl.string(d.t["ETE/oC"]), onClick: j, variant: "secondary" },
+                { text: n ?? d.intl.string(d.t["cY+Oob"]), type: "submit", variant: f, disabled: S || 0 === y.length },
             ],
-            onClose: S,
+            onClose: j,
             transitionState: c,
             children: [
-                j,
-                (0, n.jsxs)("div", {
-                    className: h.YK,
+                P,
+                (0, l.jsxs)("div", {
+                    className: u.YK,
                     children: [
-                        (0, n.jsx)(r.k, {
+                        (0, l.jsx)(o.k, {
                             type: "password",
                             label: d.intl.string(d.t["CIGa+7"]),
                             autoComplete: "current-password",
                             autoFocus: !0,
-                            value: b,
+                            value: y,
                             onChange: (e) => {
                                 m?.(e), x(e);
                             },
                             required: !0,
                         }),
-                        null != A && "" !== A
-                            ? (0, n.jsxs)(i.E, {
+                        null != v && "" !== v
+                            ? (0, l.jsxs)(r.E, {
                                   variant: "text-xs/normal",
                                   color: "text-feedback-critical",
-                                  className: h.z3,
-                                  children: [" ", A, " "],
+                                  className: u.z3,
+                                  children: [" ", v, " "],
                               })
                             : null,
                     ],
@@ -92,5 +92,5 @@ function u(e) {
         }),
     });
 }
-u.key = () => "password-confirm-modal";
-let c = u;
+h.key = () => "password-confirm-modal";
+let c = h;

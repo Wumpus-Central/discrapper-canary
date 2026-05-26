@@ -1,180 +1,180 @@
-a.d(t, { default: () => v, O: () => S });
-var n = a(627968),
-    r = a(64700),
-    s = a(512750),
-    i = a(834730),
-    l = a(189213),
-    o = a(150934),
-    c = a(503852),
-    d = a(17928),
-    u = a(386784),
-    m = a(498642),
-    f = a(317525),
-    b = a(71393),
-    k = a(853513),
-    p = a(985018),
-    _ = a(898190),
-    I = a(490557),
-    g = a(193157),
-    T = a(568065),
-    x = a(832952);
-function S(e) {
+l.d(e, { default: () => E, O: () => C });
+var a = l(627968),
+    i = l(64700),
+    n = l(512750),
+    r = l(834730),
+    s = l(189213),
+    o = l(150934),
+    c = l(503852),
+    d = l(17928),
+    u = l(386784),
+    m = l(498642),
+    b = l(317525),
+    k = l(71393),
+    f = l(645704),
+    x = l(375708),
+    g = l(898190),
+    p = l(490557),
+    h = l(193157),
+    j = l(568065),
+    v = l(9720);
+function C(t) {
     let {
-            size: t,
-            title: a,
-            body: s,
+            size: e,
+            title: l,
+            body: n,
             warningText: c,
             acknowledgementText: d,
             error: u,
             isLoading: m,
-            onDeactivate: f,
-            ...b
-        } = e,
-        [_, I] = r.useState(!1);
-    return (0, n.jsxs)(l.Modal, {
-        ...b,
-        size: t,
-        title: p.intl.formatToPlainString(k.default.iEBw1M, { perk: a }),
-        subtitle: p.intl.formatToPlainString(k.default["7o0K+2"], { perk: a }),
+            onDeactivate: b,
+            ...k
+        } = t,
+        [g, p] = i.useState(!1);
+    return (0, a.jsxs)(s.Modal, {
+        ...k,
+        size: e,
+        title: x.intl.formatToPlainString(f.default.iEBw1M, { perk: l }),
+        subtitle: x.intl.formatToPlainString(f.default["7o0K+2"], { perk: l }),
         actions: [
-            { variant: "secondary", text: p.intl.string(p.t["ETE/oC"]), onClick: b.onClose },
+            { variant: "secondary", text: x.intl.string(x.t["ETE/oC"]), onClick: k.onClose },
             {
                 variant: "critical-primary",
-                text: p.intl.string(k.default.PYPdl4),
+                text: x.intl.string(f.default.PYPdl4),
                 loading: m,
-                onClick: f,
-                disabled: null != d && !_,
+                onClick: b,
+                disabled: null != d && !g,
             },
         ],
         children: [
-            s,
-            (0, n.jsxs)("div", {
-                className: x.UW,
+            n,
+            (0, a.jsxs)("div", {
+                className: v.UW,
                 children: [
-                    (0, n.jsx)(i.E, {
+                    (0, a.jsx)(r.E, {
                         color: "text-feedback-critical",
                         variant: "eyebrow",
-                        children: p.intl.string(k.default.OVt5CC),
+                        children: x.intl.string(f.default.OVt5CC),
                     }),
-                    (0, n.jsx)(i.E, { className: x.i4, tag: "span", variant: "text-sm/medium", children: c }),
+                    (0, a.jsx)(r.E, { className: v.i4, tag: "span", variant: "text-sm/medium", children: c }),
                 ],
             }),
             null != u &&
-                (0, n.jsx)(i.E, {
-                    className: x.kc,
+                (0, a.jsx)(r.E, {
+                    className: v.kc,
                     color: "text-feedback-critical",
                     variant: "text-sm/semibold",
                     children: u,
                 }),
             null != d &&
-                (0, n.jsx)("div", {
-                    className: x.ud,
-                    children: (0, n.jsx)(o.S, { checked: _, onChange: I, label: d, labelType: "secondary" }),
+                (0, a.jsx)("div", {
+                    className: v.ud,
+                    children: (0, a.jsx)(o.S, { checked: g, onChange: p, label: d, labelType: "secondary" }),
                 }),
         ],
     });
 }
-function v(e) {
-    let { guildId: t, powerup: a, ...l } = e,
-        { onDeactivate: o, error: v, isLoading: E } = (0, _.A)(t, a),
-        { onClose: C } = l,
-        A = r.useCallback(
-            (e) => {
-                e.stopPropagation(),
+function E(t) {
+    let { guildId: e, powerup: l, ...s } = t,
+        { onDeactivate: o, error: E, isLoading: S } = (0, g.A)(e, l),
+        { onClose: y } = s,
+        A = i.useCallback(
+            (t) => {
+                t.stopPropagation(),
                     o().then(() => {
-                        C?.();
+                        y?.();
                     });
             },
-            [C, o],
+            [y, o],
         ),
-        h = (function (e, t) {
-            let a,
-                l,
+        T = (function (t, e) {
+            let l,
+                s,
                 o,
                 c,
-                { warningText: _, vanityUrlWarning: I } =
-                    ((a = (0, d.bG)([m.A], () => m.A.getMemberCount(e))),
-                    (l = (0, u.A)(e)),
-                    (o = (0, d.bG)([b.A], () => b.A.getGuild(e)?.vanityURLCode != null)),
+                { warningText: g, vanityUrlWarning: p } =
+                    ((l = (0, d.bG)([m.A], () => m.A.getMemberCount(t))),
+                    (s = (0, u.A)(t)),
+                    (o = (0, d.bG)([k.A], () => k.A.getGuild(t)?.vanityURLCode != null)),
                     (c = (0, d.bG)(
-                        [f.A],
+                        [b.A],
                         () =>
-                            t.skuId !== s.aN || null == l
+                            e.skuId !== n.aN || null == s
                                 ? 0
-                                : f.A.getSortedRoles(e).reduce(
-                                      (e, t) => (t.colorStrings?.secondaryColor == null ? e : e + (l[t.id] ?? 0)),
+                                : b.A.getSortedRoles(t).reduce(
+                                      (t, e) => (e.colorStrings?.secondaryColor == null ? t : t + (s[e.id] ?? 0)),
                                       0,
                                   ),
-                        [e, t.skuId, l],
+                        [t, e.skuId, s],
                     )),
-                    r.useMemo(() => {
-                        let e;
-                        switch (t.skuId) {
-                            case s.aN:
-                                e =
+                    i.useMemo(() => {
+                        let t;
+                        switch (e.skuId) {
+                            case n.aN:
+                                t =
                                     c > 0
-                                        ? p.intl.formatToPlainString(k.default["4jSvr1"], {
-                                              perk: t.title,
+                                        ? x.intl.formatToPlainString(f.default["4jSvr1"], {
+                                              perk: e.title,
                                               memberCount: c,
                                           })
-                                        : p.intl.formatToPlainString(k.default.cavtEo, { perk: t.title });
+                                        : x.intl.formatToPlainString(f.default.cavtEo, { perk: e.title });
                                 break;
-                            case s.FB:
-                                e = o ? p.intl.string(k.default.hN75yb) : p.intl.string(k.default.Du91Rb);
+                            case n.FB:
+                                t = o ? x.intl.string(f.default.hN75yb) : x.intl.string(f.default.Du91Rb);
                                 break;
-                            case s.OJ:
-                            case s.jF:
-                                e = p.intl.string(k.default.Vf2ZcR);
+                            case n.OJ:
+                            case n.jF:
+                                t = x.intl.string(f.default.Vf2ZcR);
                                 break;
                             default:
-                                e = p.intl.formatToPlainString(k.default["4jSvr1"], {
-                                    perk: t.title,
-                                    memberCount: a ?? 0,
+                                t = x.intl.formatToPlainString(f.default["4jSvr1"], {
+                                    perk: e.title,
+                                    memberCount: l ?? 0,
                                 });
                         }
-                        let n = null;
+                        let a = null;
                         return (
-                            o && t.skuId === s.YG && (n = p.intl.string(k.default.M4XL5n)),
-                            { warningText: e, vanityUrlWarning: n }
+                            o && e.skuId === n.YG && (a = x.intl.string(f.default.M4XL5n)),
+                            { warningText: t, vanityUrlWarning: a }
                         );
-                    }, [t, c, a, o]));
-            return r.useMemo(
+                    }, [e, c, l, o]));
+            return i.useMemo(
                 () =>
-                    t.skuId === s.FB
-                        ? (0, n.jsx)(i.E, { color: "text-feedback-critical", variant: "text-sm/semibold", children: _ })
-                        : null != I
-                          ? (0, n.jsxs)(n.Fragment, {
+                    e.skuId === n.FB
+                        ? (0, a.jsx)(r.E, { color: "text-feedback-critical", variant: "text-sm/semibold", children: g })
+                        : null != p
+                          ? (0, a.jsxs)(a.Fragment, {
                                 children: [
-                                    _,
-                                    (0, n.jsx)(i.E, {
+                                    g,
+                                    (0, a.jsx)(r.E, {
                                         color: "text-feedback-critical",
                                         variant: "text-sm/semibold",
-                                        children: I,
+                                        children: p,
                                     }),
                                 ],
                             })
-                          : _,
-                [t.skuId, _, I],
+                          : g,
+                [e.skuId, g, p],
             );
-        })(t, a);
+        })(e, l);
     return (
-        (0, c.Z)(t, a, c.q.DEACTIVATE),
-        (0, n.jsx)(S, {
-            size: a.type === T.o9.LEVEL ? "md" : "sm",
-            title: a.title,
+        (0, c.Z)(e, l, c.q.DEACTIVATE),
+        (0, a.jsx)(C, {
+            size: l.type === j.o9.LEVEL ? "md" : "sm",
+            title: l.title,
             body: (() => {
-                switch (a.type) {
-                    case T.o9.LEVEL:
-                        return (0, n.jsx)(g.A, { powerup: a });
-                    case T.o9.PERK:
-                        return (0, n.jsx)(I.l, { className: x.Sl, powerup: a });
+                switch (l.type) {
+                    case j.o9.LEVEL:
+                        return (0, a.jsx)(h.A, { powerup: l });
+                    case j.o9.PERK:
+                        return (0, a.jsx)(p.l, { className: v.Sl, powerup: l });
                 }
             })(),
-            warningText: h,
-            error: v,
-            isLoading: E,
+            warningText: T,
+            error: E,
+            isLoading: S,
             onDeactivate: A,
-            ...l,
+            ...s,
         })
     );
 }

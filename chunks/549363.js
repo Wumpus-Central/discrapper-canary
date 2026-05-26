@@ -1,4 +1,4 @@
-i.d(t, { A: () => e5 });
+i.d(t, { A: () => e7 });
 var n = i(627968),
     s = i(64700),
     l = i(503698),
@@ -13,15 +13,15 @@ var n = i(627968),
     A = i(834730),
     h = i(228366),
     E = i(661439),
-    x = i(73825),
-    T = i(928039),
+    T = i(73825),
+    x = i(928039),
     S = i(753390),
     p = i(235986),
     f = i(408278),
     N = i(921853),
     _ = i(320448),
     C = i(375708),
-    I = i(632787);
+    I = i(516883);
 let b = s.forwardRef(function (e, t) {
     let { currentPageIndex: i, numPages: s, onChangePage: l, children: r, showPageCount: a = !0, ...o } = e,
         u = i >= s - 1,
@@ -261,7 +261,7 @@ let eg = function (e, t) {
     });
 };
 var em = i(818348),
-    eA = i(12762);
+    eA = i(600410);
 async function eh(e) {
     try {
         return (
@@ -342,8 +342,8 @@ function eE(e) {
               })
             : null;
 }
-var ex = i(137177),
-    eT = i(250627),
+var eT = i(137177),
+    ex = i(250627),
     eS = i(871109),
     ep = i(571654),
     ef = i(411342),
@@ -419,7 +419,7 @@ let eQ = (e) => {
 };
 function eJ(e) {
     let { guildId: t, guildProductListingId: i } = e,
-        l = (0, eT.Qi)(t, i, { requireCurrentGuild: !1 }),
+        l = (0, ex.Qi)(t, i, { requireCurrentGuild: !1 }),
         r = (0, ep.z)(l),
         a = (0, d.bG)([eP.A], () => eP.A.getGuild(t)),
         o = l?.role_id != null && l?.attachments_count === 0 ? C.intl.string(C.t.H11qcT) : r,
@@ -442,7 +442,7 @@ function eJ(e) {
 }
 function e$(e) {
     let { guildId: t, guildProductListingId: i } = e,
-        s = (0, eT.Qi)(t, i, { requireCurrentGuild: !1 }),
+        s = (0, ex.Qi)(t, i, { requireCurrentGuild: !1 }),
         l = (0, d.bG)([eS.A], () => eS.A.getGuildProductFetchState(i) === eS.e.FETCHING),
         r = s?.role_id,
         a = (0, d.bG)([eD.A], () => (null != r ? eD.A.getRole(t, r) : void 0), [t, r]),
@@ -899,12 +899,12 @@ class e0 extends s.PureComponent {
                         ? i.push(C.intl.formatToPlainString(C.t["0wL/VI"], { tier: c?.name }))
                         : i.push(C.intl.string(C.t["9czSYu"])));
             (t = 0 !== i.length ? i.join(", ") : l.description),
-                (e = (0, n.jsx)(ex.A, {
+                (e = (0, n.jsx)(eT.A, {
                     className: eA.Sy,
                     guildClassName: eA.zA,
                     game: r,
                     guild: a,
-                    size: ex.M.XSMALL,
+                    size: eT.M.XSMALL,
                     skuId: s ?? c?.id,
                 }));
         } else if (null != c)
@@ -930,12 +930,12 @@ class e0 extends s.PureComponent {
                               color: "currentColor",
                               className: eA.sV,
                           })
-                        : (0, n.jsx)(ex.A, {
+                        : (0, n.jsx)(eT.A, {
                               className: eA.Sy,
                               guildClassName: eA.zA,
                               game: r,
                               guild: a,
-                              size: ex.M.XSMALL,
+                              size: eT.M.XSMALL,
                               skuId: c.id,
                           });
         else (e = (0, n.jsx)(et.t, { size: "md", color: "currentColor", className: eA.Sy })), (t = l.description);
@@ -1054,8 +1054,8 @@ function e1(e) {
     s.useEffect(() => {
         c && null != u && (0, eI.TA)(u);
     }, [u, c]);
-    let x = (0, d.bG)([eP.A], () => eP.A.getGuild(m?.guildId)),
-        T = a ? m : void 0,
+    let T = (0, d.bG)([eP.A], () => eP.A.getGuild(m?.guildId)),
+        x = a ? m : void 0,
         S = t.subscription,
         p = (0, d.bG)([B.A], () => (null != S && S.type !== P.rzx.PREMIUM ? B.A.get(S.items[0].planId) : null)),
         f = (0, d.bG)([eG.default], () => {
@@ -1065,9 +1065,9 @@ function e1(e) {
         { analyticsLocations: N } = (0, er.Ay)(el.A.BILLING_SETTINGS_BILLING);
     return (0, n.jsx)(e0, {
         applicationStatistics: g,
-        application: c ? E : T,
+        application: c ? E : x,
         analyticsLocations: N,
-        guild: x,
+        guild: T,
         stickerPack: null,
         paymentSources: A,
         locale: i,
@@ -1079,7 +1079,7 @@ function e1(e) {
         hasLinkedToApplication: h,
     });
 }
-var e2 = i(687788);
+var e2 = i(665644);
 function e3(e) {
     let { payments: t, locale: i, compactMode: l, numPages: a } = e,
         o = s.useRef(null),
@@ -1097,9 +1097,9 @@ function e3(e) {
             },
             [t, a, m],
         ),
-        x = (0, T.A)("billing-history", o);
+        T = (0, x.A)("billing-history", o);
     return (0, n.jsx)(u.hD, {
-        navigator: x,
+        navigator: T,
         children: (0, n.jsx)(u.PR, {
             children: (e) => {
                 let { ref: t, ...s } = e;
@@ -1210,7 +1210,7 @@ function e4(e) {
         i = e.subscription?.items[0].planId;
     return !(null == t || null == i || Object.values(G.pe).includes(t) || (0, Y.ys)(i));
 }
-function e5(e) {
+function e7(e) {
     let t = (0, d.bG)([F], () => F.getPayments()),
         i = (0, d.bG)([z.A], () => z.A.getPremiumTypeSubscription()),
         l = s.useMemo(
@@ -1239,7 +1239,7 @@ function e5(e) {
     s.useEffect(() => {
         o() ||
             h.h.wait(() => {
-                r.forEach((e) => (0, x.ur)(e, void 0, void 0, !0, void 0));
+                r.forEach((e) => (0, T.ur)(e, void 0, void 0, !0, void 0));
             });
     }, [o, r]);
     let c = (0, d.bG)([F], () => F.hasFetchedPayments);

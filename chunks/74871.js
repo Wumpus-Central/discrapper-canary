@@ -2,7 +2,7 @@ l.d(t, { A: () => i });
 var r = l(627968),
     n = l(498381),
     a = l(891167),
-    s = l(93610);
+    s = l(394666);
 let i = (e) => {
     let { bannerSrc: t, logoSrc: l, backgroundColor: i, href: c, children: d } = e;
     return (0, r.jsxs)("div", {

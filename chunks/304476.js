@@ -40,7 +40,7 @@ var C = n(115036),
 function R(e, t) {
     S.default.track(y.HAw.BROWSER_HANDOFF_SUCCEEDED, { authenticated: e, handoff_source: t });
 }
-class O extends b.A {
+class L extends b.A {
     _initialize() {
         g.h.subscribe("BROWSER_HANDOFF_END", this.handleEnd),
             g.h.subscribe("BROWSER_HANDOFF_FROM_APP", this.handleHandoff);
@@ -80,7 +80,7 @@ class O extends b.A {
             : (x.A.setFingerprint(null), (0, E.J0)());
     };
 }
-let L = new O();
+let O = new L();
 var k = n(854378),
     P = n(976860),
     G = n(210714),
@@ -94,8 +94,8 @@ var k = n(854378),
     W = n(499785),
     z = (((l = {}).START = "start"), (l.PASSWORD = "password"), (l.SUCCESS = "success"), (l.FAILED = "failed"), l),
     Q = n(375708),
-    H = n(244460),
-    K = n(818050);
+    H = n(501612),
+    K = n(373378);
 function q(e) {
     let { setOriginalEmail: t, setSlide: i, ready: l, token: s } = e,
         [r, c] = o.useState(!1),
@@ -464,7 +464,7 @@ var ef = n(628284),
     eE = n(148864),
     e_ = n(354948);
 n(53516);
-var ej = n(653307);
+var ej = n(489979);
 let eN = ["loopback-network", "local-network-access"];
 async function eT() {
     if ("u" < typeof navigator || null == navigator.permissions) return "unknown";
@@ -491,9 +491,9 @@ function eb(e) {
 }
 var ey = n(154672),
     eR = n(331322),
-    eO = n(534514),
-    eL = n(289873),
-    ek = n(794347);
+    eL = n(534514),
+    eO = n(289873),
+    ek = n(807979);
 function eP(e) {
     let { title: t, subtitle: n, buttonText: i, image: l, onButtonClick: s, loading: r } = e;
     return (0, a.jsx)(k.Ay, {
@@ -518,8 +518,8 @@ function eP(e) {
                                         className: ek.Sl,
                                         children: l,
                                     }),
-                                r && (0, a.jsx)(eL.y, { type: eL.y.Type.SPINNING_CIRCLE }),
-                                (0, a.jsx)(eO.D, { variant: "heading-xl/semibold", color: "text-strong", children: t }),
+                                r && (0, a.jsx)(eO.y, { type: eO.y.Type.SPINNING_CIRCLE }),
+                                (0, a.jsx)(eL.D, { variant: "heading-xl/semibold", color: "text-strong", children: t }),
                             ],
                         }),
                         null != n &&
@@ -573,7 +573,7 @@ var eX = n(842241),
     eZ = n(661531),
     e0 = n(359778),
     e1 = n(235986),
-    e2 = n(592743);
+    e2 = n(845671);
 function e3(e) {
     let { text: t, buttonCta: i, onClick: l } = e;
     return (0, a.jsxs)(a.Fragment, {
@@ -616,8 +616,8 @@ function e8(e) {
     return (0, a.jsx)(k.Ay, { theme: i, children: (0, a.jsx)(e3, { text: t, buttonCta: n, onClick: l }) });
 }
 var e7 = n(765671),
-    e4 = n(9994),
-    e6 = n(71393),
+    e6 = n(9994),
+    e4 = n(71393),
     e5 = n(299091),
     e9 = n(486020),
     te = n(403362),
@@ -628,7 +628,7 @@ var e7 = n(765671),
     ts = n(427262),
     tr = n(172799),
     ta = n(330936),
-    to = n(82210);
+    to = n(269218);
 let tc = (e) => {
         let t = { onlineCount: e.approximate_presence_count ?? 0, memberCount: e.approximate_member_count ?? 0 };
         return 0 === t.memberCount && 0 === t.memberCount ? null : t;
@@ -731,7 +731,7 @@ function tE(e) {
                             className: to.bo,
                             children: [
                                 (0, a.jsx)(k.$v, { guild: s, size: k.$v.Sizes.SMALL }),
-                                (0, a.jsx)(eO.D, {
+                                (0, a.jsx)(eL.D, {
                                     color: "text-strong",
                                     variant: "heading-xl/semibold",
                                     children: s.name,
@@ -771,7 +771,7 @@ var t_ = n(395671),
     tT = n(548118),
     tI = n(557582),
     tv = n(167630),
-    tC = n(367048);
+    tC = n(308808);
 function tS(e) {
     let { guildScheduledEvent: t, channel: n, onAcceptInvite: i, isSubmitting: l } = e;
     return (0, a.jsxs)("div", {
@@ -813,7 +813,7 @@ function tb(e) {
     return (0, a.jsxs)("div", {
         className: tC.kQ,
         children: [
-            (0, a.jsx)(eO.D, { className: tC.s7, variant: "text-sm/medium", children: Q.intl.string(Q.t.Eabu1z) }),
+            (0, a.jsx)(eL.D, { className: tC.s7, variant: "text-sm/medium", children: Q.intl.string(Q.t.Eabu1z) }),
             (0, a.jsxs)("div", {
                 className: tC.bo,
                 children: [
@@ -851,8 +851,8 @@ function ty(e) {
         ? (0, a.jsx)(tS, { guildScheduledEvent: s, channel: n, isSubmitting: i, onAcceptInvite: l })
         : null;
 }
-var tR = n(467661);
-function tO(e) {
+var tR = n(699533);
+function tL(e) {
     let { invite: t, onAcceptInvite: n, disableUser: i = !1 } = e;
     if (null == t) return null;
     let l = null != t.guild ? (0, em.DY)(t.guild) : null,
@@ -900,11 +900,11 @@ function tO(e) {
               ],
           });
 }
-var tL = n(473644),
+var tO = n(473644),
     tk = n(57930),
     tP = n(115703),
     tG = n(438842),
-    tD = n(888849);
+    tD = n(10257);
 function tV(e) {
     let { invite: t, guild: n, profile: i, onAcceptInvite: l } = e,
         { gamesToDisplay: s, lastGameToDisplay: r, remainingGames: o } = (0, tP.A)(i),
@@ -937,7 +937,7 @@ function tV(e) {
                                 direction: "vertical",
                                 gap: 16,
                                 children: [
-                                    (0, a.jsx)(tL.A, {
+                                    (0, a.jsx)(tO.A, {
                                         guild: n,
                                         invite: t,
                                         showGuildTag: !0,
@@ -991,7 +991,7 @@ function tM(e) {
     return t || n;
 }
 function tB() {
-    return (0, a.jsx)("div", { className: tD.$k, children: (0, a.jsx)(eL.y, {}) });
+    return (0, a.jsx)("div", { className: tD.$k, children: (0, a.jsx)(eO.y, {}) });
 }
 function tF(e) {
     let t = e?.state == null && e?.channel == null;
@@ -1054,7 +1054,7 @@ function tK(e) {
         { invite: n } = e,
         i = tF(n),
         { enabled: l } = tw.useConfig({ location: "AcceptInviteMobile" }),
-        s = null != n ? (0, e4.oO)(n) : null,
+        s = null != n ? (0, e6.oO)(n) : null,
         r = n?.guild != null ? (0, em.DY)(n.guild) : null,
         c = null != r && tM(s) && null != n && !tg(n),
         d = l && c;
@@ -1082,7 +1082,7 @@ function tK(e) {
             case 1:
                 t = d
                     ? (0, a.jsx)(tV, { invite: n, guild: r, profile: s, onAcceptInvite: e.onAcceptInvite })
-                    : (0, a.jsx)(tO, { ...e, invite: n });
+                    : (0, a.jsx)(tL, { ...e, invite: n });
                 break;
             case 2:
                 t = (0, a.jsx)(tW, { ...e, invite: n });
@@ -1098,7 +1098,7 @@ function tq(e) {
         { guild: i } = t ?? {},
         l = {},
         { enabled: s } = tw.useConfig({ location: "AcceptInviteMobile" }),
-        r = null != t ? (0, e4.oO)(t) : null,
+        r = null != t ? (0, e6.oO)(t) : null,
         o = null != i && tM(r) && null != t && !tg(t);
     if (i?.splash != null) {
         let e = e9.Ay.getGuildSplashURL({ id: i.id, splash: i.splash });
@@ -1124,7 +1124,7 @@ function tY(e) {
         role: l ?? "img",
     });
 }
-var t$ = n(611346),
+var t$ = n(790930),
     tJ = n(604880);
 function tZ(e) {
     let { token: t, hasError: n, errorReason: i } = e;
@@ -1137,7 +1137,7 @@ function tZ(e) {
                       className: t$.Qs,
                       children: [
                           (0, a.jsx)(tY, { alt: "" }),
-                          (0, a.jsx)(eO.D, {
+                          (0, a.jsx)(eL.D, {
                               variant: "heading-lg/semibold",
                               className: t$.ky,
                               children: Q.intl.string(Q.t.RtCSr1),
@@ -1168,7 +1168,7 @@ function tZ(e) {
                       className: t$.Qs,
                       children: [
                           (0, a.jsx)(tY, { alt: "" }),
-                          (0, a.jsx)(eO.D, {
+                          (0, a.jsx)(eL.D, {
                               variant: "heading-lg/semibold",
                               className: t$.ky,
                               children: Q.intl.string(Q.t["9h/0Rl"]),
@@ -1240,8 +1240,8 @@ var t2 = n(463347),
     t3 = n(189213),
     t8 = n(192308),
     t7 = n(347704),
-    t4 = n(803306),
-    t6 = n(17372),
+    t6 = n(803306),
+    t4 = n(17372),
     t5 = n(369053),
     t9 = n(975571),
     ne = n(928658);
@@ -1272,13 +1272,13 @@ function nn(e, t) {
                             i = !1;
                         }, 0);
                     let l = n?.token;
-                    e === t6.tY.MESSAGE
+                    e === t4.tY.MESSAGE
                         ? (0, ne.bM)(l, t)
-                        : e === t6.tY.USER
+                        : e === t4.tY.USER
                           ? (0, ne.nQ)(l, t)
-                          : e === t6.tY.GUILD
+                          : e === t4.tY.GUILD
                             ? (0, ne.V3)(l, t)
-                            : e === t6.tY.MEDIA_TAKEDOWN && (0, ne._Y)(l, t);
+                            : e === t4.tY.MEDIA_TAKEDOWN && (0, ne._Y)(l, t);
                 };
             (0, t8.openModalLazy)(
                 async () => {
@@ -1310,7 +1310,7 @@ function nn(e, t) {
                         onSuccess: s,
                         headerText: Q.intl.string(Q.t.ZLRYGU),
                         confirmButtonText: Q.intl.string(Q.t.PDTjLN),
-                        subtitle: e === t6.tY.MEDIA_TAKEDOWN ? Q.intl.string(Q.t.jt3z8f) : void 0,
+                        subtitle: e === t4.tY.MEDIA_TAKEDOWN ? Q.intl.string(Q.t.jt3z8f) : void 0,
                     });
             },
             { onCloseCallback: l, dismissable: !1 },
@@ -1319,8 +1319,8 @@ function nn(e, t) {
 }
 var ni = n(939249),
     nl = n(921853),
-    ns = n(750997);
-let nr = { [t6.tY.MESSAGE]: Q.t.fuqnBC, [t6.tY.USER]: Q.t.F4jrRW, [t6.tY.GUILD]: Q.t.gH3aMs },
+    ns = n(525909);
+let nr = { [t4.tY.MESSAGE]: Q.t.fuqnBC, [t4.tY.USER]: Q.t.F4jrRW, [t4.tY.GUILD]: Q.t.gH3aMs },
     na = (e) => {
         let { title: t, menuType: n, onReopen: i } = e,
             l = o.useCallback(() => {
@@ -1342,7 +1342,7 @@ let nr = { [t6.tY.MESSAGE]: Q.t.fuqnBC, [t6.tY.USER]: Q.t.F4jrRW, [t6.tY.GUILD]:
             children: (0, a.jsx)("div", {
                 className: ns.kL,
                 children: t.map((e) =>
-                    e === t6.tY.MEDIA_TAKEDOWN || null == nr[e]
+                    e === t4.tY.MEDIA_TAKEDOWN || null == nr[e]
                         ? null
                         : (0, a.jsx)(na, { title: Q.intl.string(nr[e]), menuType: e, onReopen: n }, e),
                 ),
@@ -1350,7 +1350,7 @@ let nr = { [t6.tY.MESSAGE]: Q.t.fuqnBC, [t6.tY.USER]: Q.t.F4jrRW, [t6.tY.GUILD]:
         });
     };
 var nc = n(881636),
-    nd = n(913951);
+    nd = n(316255);
 let nu = () => {
     let { goToStep: e } = (0, t7.n)(),
         t = o.useCallback(() => {
@@ -1408,7 +1408,7 @@ let nu = () => {
         ],
     });
 };
-var nm = n(229503);
+var nm = n(171263);
 let nh = () =>
     (0, a.jsxs)(eR.B, {
         gap: 24,
@@ -1484,7 +1484,7 @@ let nh = () =>
             }),
         ],
     });
-var ng = n(725925);
+var ng = n(128229);
 h.Ay.initialize();
 var nx = (((s = {}).SELECTION = "selection"), (s.DSA = "dsa"), (s.TIDA = "tida"), s);
 let nf = (e) => {
@@ -1509,7 +1509,7 @@ let nf = (e) => {
         o.useEffect(() => {
             u
                 ? (l(!0),
-                  t4
+                  t6
                       .rQ({ withAnalyticsToken: !0 })
                       .then(() => g())
                       .catch(() => l(!1)))
@@ -1520,8 +1520,8 @@ let nf = (e) => {
                     m || (await x.A.getLocationMetadata(), x.A.getExperiments());
                 })();
             }, [m]);
-        let f = s.filter((e) => e !== t6.tY.MEDIA_TAKEDOWN),
-            A = s.includes(t6.tY.MEDIA_TAKEDOWN),
+        let f = s.filter((e) => e !== t4.tY.MEDIA_TAKEDOWN),
+            A = s.includes(t4.tY.MEDIA_TAKEDOWN),
             p = f.length > 0,
             E = p && A,
             _ = i || !m;
@@ -1534,7 +1534,7 @@ let nf = (e) => {
             N = o.useCallback((e, t) => {
                 "selection" !== t && "selection" !== e ? d("selection") : d(e);
             }, []),
-            T = o.useMemo(() => nn(t6.tY.MEDIA_TAKEDOWN, j), [j]),
+            T = o.useMemo(() => nn(t4.tY.MEDIA_TAKEDOWN, j), [j]),
             I = c ?? (E ? "selection" : p ? "dsa" : "tida");
         if (_ || (!p && !A))
             return (0, a.jsx)(t3.Modal, {
@@ -1548,7 +1548,7 @@ let nf = (e) => {
                     align: "center",
                     justify: "center",
                     style: { minHeight: "200px" },
-                    children: (0, a.jsx)(eL.y, {}),
+                    children: (0, a.jsx)(eO.y, {}),
                 }),
             });
         if (!E) {
@@ -1639,10 +1639,10 @@ var nT = n(111956),
     nC = n(319060),
     nS = n(844222),
     nb = n(240248),
-    ny = n(115617);
+    ny = n(263905);
 let nR = (0, nb.xI)(nC.A.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
-    nO = { friction: 10, tension: 130 },
-    nL = function (e) {
+    nL = { friction: 10, tension: 130 },
+    nO = function (e) {
         return class extends o.Component {
             timeout;
             anim = new nv.A.Value(0);
@@ -1670,7 +1670,7 @@ let nR = (0, nb.xI)(nC.A.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
                 this.state.shouldAnimate ? this.animateTo(0, e) : e();
             }
             animateTo(e, t) {
-                nv.A.spring(this.anim, { toValue: e, ...nO }).start(t);
+                nv.A.spring(this.anim, { toValue: e, ...nL }).start(t);
             }
             getAnimatedStyle(e) {
                 return this.state.shouldAnimate
@@ -1778,7 +1778,7 @@ let nV = function (e) {
             });
     }
 };
-var nw = n(431144);
+var nw = n(723923);
 h.Ay.initialize();
 class nU extends o.PureComponent {
     static defaultProps = { transitionTo: (e) => n.g.location.assign(e) };
@@ -1884,7 +1884,7 @@ var nB = n(110782),
     n$ = n(97352),
     nJ = n(615396),
     nZ = n(788868),
-    n0 = n(402693);
+    n0 = n(539205);
 let n1 = h.Ay.connectStores([nQ.A, nK.A, n$.A, nY.default], (e) => {
     let { giftCode: t } = e,
         n = nQ.A.get(t.skuId),
@@ -1946,8 +1946,8 @@ let n1 = h.Ay.connectStores([nQ.A, nK.A, n$.A, nY.default], (e) => {
 var n2 = n(935399),
     n3 = n(475743),
     n8 = n(707554),
-    n7 = n(379154);
-function n4(e) {
+    n7 = n(902738);
+function n6(e) {
     let { loginStatus: t, authBoxClassName: n, onSubmit: i, onCancelAccountDeletion: l } = e,
         s = t === y.aUe.ACCOUNT_DISABLED,
         r = s ? Q.intl.string(Q.t["j3rC+U"]) : Q.intl.string(Q.t.ZFWofo),
@@ -1973,9 +1973,9 @@ function n4(e) {
         }),
     });
 }
-var n6 = n(504394),
+var n4 = n(504394),
     n5 = n(275538),
-    n9 = n(431870);
+    n9 = n(357777);
 function ie(e) {
     let { children: t, className: n, ...i } = e,
         l = t();
@@ -1992,7 +1992,7 @@ var it = n(895600),
     ii = n(506774),
     il = n(927813),
     is = n(104798),
-    ir = n(1959);
+    ir = n(14695);
 let ia = "mweb_handoff_nonce",
     io = "mweb_handoff_nonce_expiration",
     ic = +il.A.Millis.MINUTE,
@@ -2112,7 +2112,7 @@ let ia = "mweb_handoff_nonce",
 var ig = n(274303),
     ix = n(139286),
     iA = n(970573),
-    ip = n(364488);
+    ip = n(629640);
 function iE(e) {
     let { onDismiss: t } = e;
     return (
@@ -2161,7 +2161,7 @@ function i_(e) {
     return (0, a.jsxs)(k.Ay, {
         className: t,
         children: [
-            (0, a.jsx)(n6.M, {}),
+            (0, a.jsx)(n4.M, {}),
             (0, a.jsxs)(k.eB, {
                 className: K.QX,
                 children: [
@@ -2260,8 +2260,8 @@ function iT(e) {
             [x, l],
         ),
         { handoff_token: R } = (0, c.parse)(window.location.search),
-        O = u.Fr && u.KY && null != R,
-        L = null == g.email && null != g.password,
+        L = u.Fr && u.KY && null != R,
+        O = null == g.email && null != g.password,
         P = o.useRef(null),
         G = o.useRef(null),
         D = (0, n3.A)(g);
@@ -2271,7 +2271,7 @@ function iT(e) {
     }, [g, P, G, D]),
         (t =
             null != n
-                ? (0, a.jsx)("div", { className: K.S3, children: (0, a.jsx)(n6.A, { invite: n }) })
+                ? (0, a.jsx)("div", { className: K.S3, children: (0, a.jsx)(n4.A, { invite: n }) })
                 : null != l
                   ? (0, a.jsx)(n1, { giftCode: l })
                   : (0, a.jsxs)("div", {
@@ -2315,7 +2315,7 @@ function iT(e) {
                             autoCorrect: "off",
                             spellCheck: "false",
                             value: d,
-                            autoFocus: !L && !O && !r,
+                            autoFocus: !O && !L && !r,
                             required: !0,
                         }),
                         (0, a.jsx)(k.pd, {
@@ -2327,7 +2327,7 @@ function iT(e) {
                             setRef: G,
                             autoComplete: "current-password",
                             spellCheck: "false",
-                            autoFocus: L && !O && !r,
+                            autoFocus: O && !L && !r,
                             value: m,
                             required: !0,
                         }),
@@ -2408,7 +2408,7 @@ function iT(e) {
                       (0, a.jsx)(k.Ay, {
                           onSubmit: j,
                           tag: "form",
-                          className: w()(s, { [n7.M0]: O }),
+                          className: w()(s, { [n7.M0]: L }),
                           expanded: !0,
                           children: (0, a.jsxs)(eR.B, {
                               direction: "horizontal",
@@ -2423,7 +2423,7 @@ function iT(e) {
                               ],
                           }),
                       }),
-                      O && (0, a.jsx)(ih, {}),
+                      L && (0, a.jsx)(ih, {}),
                   ],
               });
 }
@@ -2462,8 +2462,8 @@ var iC = n(511815),
     ib = n(15552),
     iy = n(952116),
     iR = n(491509),
-    iO = n(913612),
-    iL = n(933924);
+    iL = n(913612),
+    iO = n(933924);
 let ik = (e) => n.g.location.assign(e);
 function iP(e) {
     let {
@@ -2477,7 +2477,7 @@ function iP(e) {
         loginSource: u,
         disableAutofocusOnDefaultForm: m,
     } = e;
-    (0, iO.K)();
+    (0, iL.K)();
     let g = (0, h.bG)([eK.default], () => eK.default.isAuthenticated()),
         f = (0, h.bG)([C.A], () => C.A.isHandoffAvailable()),
         A = (0, h.bG)([eK.default], () => eK.default.getLoginStatus()),
@@ -2490,8 +2490,8 @@ function iP(e) {
             password: I,
             phoneVerifyError: b,
             dismissedChooseAccount: R,
-            setDismissedChooseAccount: O,
-            errors: L,
+            setDismissedChooseAccount: L,
+            errors: O,
             conditionalMediationAbortController: D,
             loginSource: V,
             loginOrSSO: w,
@@ -2528,8 +2528,8 @@ function iP(e) {
                 [N, T] = o.useState(""),
                 [I, C] = o.useState(!1),
                 [S, b] = o.useState(null),
-                [R, O] = o.useState(!1),
-                [L] = o.useState(() => new AbortController()),
+                [R, L] = o.useState(!1),
+                [O] = o.useState(() => new AbortController()),
                 [k, P] = o.useState({});
             !h || l || s || g(!1);
             let G = o.useMemo(() => {
@@ -2567,13 +2567,13 @@ function iP(e) {
                     [V],
                 ),
                 M = o.useCallback(() => {
-                    L.abort("Login state reset"), P({}), x.A.loginReset();
-                }, [L]),
+                    O.abort("Login state reset"), P({}), x.A.loginReset();
+                }, [O]),
                 B = o.useCallback(
                     async function (e) {
                         let { undelete: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                         e?.preventDefault(),
-                            L.abort("Starting password login"),
+                            O.abort("Starting password login"),
                             F._.dispatch(y.jej.WAVE_EMPHASIZE),
                             P({});
                         try {
@@ -2589,7 +2589,7 @@ function iP(e) {
                             P((0, ib.p)(e));
                         }
                     },
-                    [L, _, p, N, I, G, D, t],
+                    [O, _, p, N, I, G, D, t],
                 ),
                 W = o.useCallback(
                     async (e) => {
@@ -2688,9 +2688,9 @@ function iP(e) {
                 password: N,
                 phoneVerifyError: S,
                 dismissedChooseAccount: R,
-                setDismissedChooseAccount: O,
+                setDismissedChooseAccount: L,
                 errors: k,
-                conditionalMediationAbortController: L,
+                conditionalMediationAbortController: O,
                 loginSource: G,
                 loginOrSSO: w,
                 handleLogin: B,
@@ -2733,7 +2733,7 @@ function iP(e) {
                 },
                 { flush: !0 },
             ),
-            g || (0, iL.a)({ abortController: D, loginSource: V, giftCodeSKUId: p }),
+            g || (0, iO.a)({ abortController: D, loginSource: V, giftCodeSKUId: p }),
             x.A.getLocationMetadata(),
             (0, G.d)("login");
     });
@@ -2745,7 +2745,7 @@ function iP(e) {
         }, [g, f, ee, N, j, D, w, l]),
         N || j)
     )
-        return (0, a.jsx)(k.Ay, { children: (0, a.jsx)(eL.y, {}) });
+        return (0, a.jsx)(k.Ay, { children: (0, a.jsx)(eO.y, {}) });
     if (f)
         return (0, a.jsxs)(k.Ay, {
             className: d,
@@ -2763,7 +2763,7 @@ function iP(e) {
             return (0, a.jsx)(iv, { loginSource: V, giftCodeSKUId: p });
         case y.aUe.ACCOUNT_SCHEDULED_FOR_DELETION:
         case y.aUe.ACCOUNT_DISABLED:
-            return (0, a.jsx)(n4, { loginStatus: A, authBoxClassName: d, onSubmit: q, onCancelAccountDeletion: X });
+            return (0, a.jsx)(n6, { loginStatus: A, authBoxClassName: d, onSubmit: q, onCancelAccountDeletion: X });
         case y.aUe.PHONE_IP_AUTHORIZATION:
             return (0, a.jsx)(k.Ay, {
                 tag: "form",
@@ -2799,10 +2799,10 @@ function iP(e) {
                 disableAutofocusOnDefaultForm: m,
                 login: T,
                 password: I,
-                errors: L,
+                errors: O,
                 loginSource: V,
                 dismissedChooseAccount: R,
-                setDismissedChooseAccount: O,
+                setDismissedChooseAccount: L,
                 conditionalMediationAbortController: D,
                 onLoginChange: J,
                 onPasswordChange: Z,
@@ -2834,7 +2834,7 @@ let iM = new iU(g.h, {
     },
 });
 var iB = n(509434),
-    iF = n(153801);
+    iF = n(741449);
 let iW = () =>
     (0, a.jsx)(k.Ay, {
         children: (0, a.jsxs)("div", {
@@ -2984,13 +2984,13 @@ function i7(e) {
         },
     );
 }
-var i4 = n(568385);
-function i6() {
+var i6 = n(568385);
+function i4() {
     let { required: e, checked: t } = (0, iZ.mZ)();
     return e
         ? (0, a.jsx)("div", {
               className: K.Ot,
-              children: (0, a.jsx)(i4.J, {
+              children: (0, a.jsx)(i6.J, {
                   label: Q.intl.string(Q.t["0p3R0+"]),
                   checked: t,
                   onChange: iZ.Bw,
@@ -3034,13 +3034,13 @@ function lt() {
         ]
     );
 }
-var ln = n(731286);
+var ln = n(420182);
 function li(e) {
     let { consent: t, consentRequired: n, onConsentChange: i } = e;
     return n
         ? (0, a.jsx)("div", {
               className: ln.IQ,
-              children: (0, a.jsx)(i4.J, {
+              children: (0, a.jsx)(i6.J, {
                   label: Q.intl.format(Q.t.qMDAP0, { termsURL: y.X7G.TERMS, privacyURL: y.X7G.PRIVACY }),
                   checked: t,
                   onChange: i,
@@ -3123,7 +3123,7 @@ function lo(e) {
         I = o.useRef(null),
         [v, C] = o.useState(t),
         [b, R] = o.useState(""),
-        [O, L] = o.useState(""),
+        [L, O] = o.useState(""),
         [P, G] = o.useState(""),
         [D, V] = o.useState(null),
         [B, W] = le(E),
@@ -3154,12 +3154,12 @@ function lo(e) {
     let eg = o.useCallback(async () => {
             let e = null != i ? i.skuId : null,
                 t = iZ.mZ.getState(),
-                r = (0, nb.uJ)(_) ? null : O === _;
+                r = (0, nb.uJ)(_) ? null : L === _;
             F._.dispatch(y.jej.WAVE_EMPHASIZE), H(!0), $({});
             try {
                 await i7({
                     email: v,
-                    username: O,
+                    username: L,
                     globalName: b,
                     consent: B,
                     password: P,
@@ -3176,18 +3176,18 @@ function lo(e) {
                 let e = (0, ib.W)(t);
                 $(e), s?.(e), "number" == typeof e.retry_after && X(e.retry_after);
             }
-        }, [i, l, n, v, s, d, _, O, b, P, D, B, X]),
+        }, [i, l, n, v, s, d, _, L, b, P, D, B, X]),
         ex = o.useCallback(
             (e) => {
                 if ((e?.preventDefault(), null == E)) return;
                 let t = !1;
                 0 === v.length && (es(Q.intl.string(Q.t.EkokLy)), (t = !0)),
-                    0 === O.length && (ea(Q.intl.string(Q.t.EkokLy)), (t = !0)),
+                    0 === L.length && (ea(Q.intl.string(Q.t.EkokLy)), (t = !0)),
                     0 === P.length && (ec(Q.intl.string(Q.t.EkokLy)), (t = !0)),
                     null == D && (em(Q.intl.string(Q.t.EkokLy)), (t = !0)),
                     t || eg();
             },
-            [v, O, P, D, E, eg],
+            [v, L, P, D, E, eg],
         ),
         ef = null;
     return (
@@ -3252,9 +3252,9 @@ function lo(e) {
                                 label: Q.intl.string(Q.t.TWzdWj),
                                 className: K.SX,
                                 name: "username",
-                                value: O,
+                                value: L,
                                 onChange: (e) => {
-                                    L(e.toLocaleLowerCase()), ea(0 === e.length ? Q.intl.string(Q.t.EkokLy) : null);
+                                    O(e.toLocaleLowerCase()), ea(0 === e.length ? Q.intl.string(Q.t.EkokLy) : null);
                                 },
                                 error: er ?? i9(ee),
                                 autoComplete: "off",
@@ -3264,12 +3264,12 @@ function lo(e) {
                                 onBlur: () => p("username"),
                             }),
                             (0, a.jsx)(la, {
-                                username: O,
+                                username: L,
                                 suggestion: _,
                                 globalName: b,
                                 isUsernameFocused: g,
                                 onClickSuggestion: () => {
-                                    N.current?.focus(), null != _ && _.length > 0 && L(_);
+                                    N.current?.focus(), null != _ && _.length > 0 && O(_);
                                 },
                             }),
                         ],
@@ -3302,7 +3302,7 @@ function lo(e) {
                         onFocus: A,
                         onBlur: p,
                     }),
-                    (0, a.jsx)(i6, {}),
+                    (0, a.jsx)(i4, {}),
                     (0, a.jsx)(li, { consent: B, consentRequired: E, onConsentChange: W }),
                     (0, a.jsx)(iz.m, {
                         text: !B && E ? Q.intl.string(Q.t.AY4IVA) : null,
@@ -3335,7 +3335,7 @@ function lo(e) {
 n(436317);
 var lc = n(292666),
     ld = n(713654),
-    lu = n(131165);
+    lu = n(425245);
 function lm(e) {
     let { channel: t } = e,
         n = (0, ld._U)(t.type);
@@ -3359,7 +3359,7 @@ function lh(e) {
     });
 }
 var lg = n(573435),
-    lx = n(831985);
+    lx = n(644977);
 let lf = (e) => {
     let { guild: t, onlineCount: n } = e;
     if (null == t) return null;
@@ -3367,7 +3367,7 @@ let lf = (e) => {
         { name: l, description: s } = i;
     return (0, a.jsxs)("div", {
         children: [
-            (0, a.jsx)(eO.D, {
+            (0, a.jsx)(eL.D, {
                 variant: "heading-md/normal",
                 color: "text-muted",
                 className: lx.CT,
@@ -3385,7 +3385,7 @@ let lf = (e) => {
                     (0, a.jsxs)("div", {
                         className: lx.OA,
                         children: [
-                            (0, a.jsx)(eO.D, { variant: "heading-sm/semibold", children: l }),
+                            (0, a.jsx)(eL.D, { variant: "heading-sm/semibold", children: l }),
                             (0, a.jsxs)("div", {
                                 className: lx.aH,
                                 children: [
@@ -3413,7 +3413,7 @@ function lA(e) {
     return (0, a.jsxs)(k.Ay, {
         className: t,
         children: [
-            (0, a.jsx)(n6.M, {}),
+            (0, a.jsx)(n4.M, {}),
             (0, a.jsxs)(k.eB, {
                 className: ln.y0,
                 children: [
@@ -3491,7 +3491,7 @@ function lE(e) {
     t =
         n?.guild_scheduled_event != null
             ? (0, a.jsx)(lh, { channel: n.channel, guildScheduledEvent: n.guild_scheduled_event })
-            : (0, a.jsx)("div", { className: K.S3, children: (0, a.jsx)(n6.A, { invite: n, inUnclaimedFlow: !0 }) });
+            : (0, a.jsx)("div", { className: K.S3, children: (0, a.jsx)(n4.A, { invite: n, inUnclaimedFlow: !0 }) });
     let [m, g] = o.useState(""),
         [x, f] = o.useState(null),
         [A, p] = le(c),
@@ -3502,8 +3502,8 @@ function lE(e) {
     o.useEffect(() => {
         null == x && u.current?.focus();
     }, [x, u]);
-    let [R, O] = o.useState(null),
-        [L, P] = o.useState(null),
+    let [R, L] = o.useState(null),
+        [O, P] = o.useState(null),
         G = o.useCallback(async () => {
             F._.dispatch(y.jej.WAVE_EMPHASIZE), _(!0), N({});
             try {
@@ -3522,11 +3522,11 @@ function lE(e) {
             (e) => {
                 if ((e?.preventDefault(), null === c)) return;
                 let t = !1;
-                0 === m.length && (O(Q.intl.string(Q.t.EkokLy)), (t = !0)),
+                0 === m.length && (L(Q.intl.string(Q.t.EkokLy)), (t = !0)),
                     null == x && (P(Q.intl.string(Q.t.EkokLy)), (t = !0)),
                     t || G();
             },
-            [m, x, c, G, O, P],
+            [m, x, c, G, L, P],
         );
     return n.state === y.elq.RESOLVING
         ? (0, a.jsx)(lA, { authBoxClassName: i, name: m, onNameChange: g })
@@ -3566,7 +3566,7 @@ function lE(e) {
                                           onChange: (e) => {
                                               f(e), null != e && P(null);
                                           },
-                                          error: L ?? i9(v),
+                                          error: O ?? i9(v),
                                           value: x,
                                       }),
                                       (0, a.jsx)(li, { consent: A, consentRequired: c, onConsentChange: p }),
@@ -3637,12 +3637,12 @@ function lT(e) {
             return null;
         })(n, l, s),
         R = null != s && (null != s.guild || null != s.channel),
-        O = null != s && null == s.guild && null == s.channel && null != s.inviter,
-        L = o.useCallback(() => {
+        L = null != s && null == s.guild && null == s.channel && null != s.inviter,
+        O = o.useCallback(() => {
             p && (null != u ? f(u) : f(eu.A.defaultRoute));
         }, [p, u, f]);
     (0, n2.Ay)(() => {
-        L(),
+        O(),
             S.default.track(
                 y.HAw.REGISTER_VIEWED,
                 {
@@ -3656,8 +3656,8 @@ function lT(e) {
             (0, G.d)("register");
     }),
         o.useEffect(() => {
-            p && !1 === C && ((0, l_.C)(lN.zY.ORGANIC_REGISTERED), L());
-        }, [p, C, L]);
+            p && !1 === C && ((0, l_.C)(lN.zY.ORGANIC_REGISTERED), O());
+        }, [p, C, O]);
     let D = lj.FULL;
     E || null != I.date_of_birth ? (D = lj.AGE_GATE) : R && (D = lj.INVITE),
         (0, ix.A)(
@@ -3699,9 +3699,9 @@ function lT(e) {
         : null != n
           ? (U = (0, a.jsx)(n1, { giftCode: n }))
           : null != s &&
-            O &&
+            L &&
             s.state === y.elq.RESOLVED &&
-            (U = (0, a.jsx)("div", { className: K.S3, children: (0, a.jsx)(n6.A, { invite: s, isRegister: !0 }) }));
+            (U = (0, a.jsx)("div", { className: K.S3, children: (0, a.jsx)(n4.A, { invite: s, isRegister: !0 }) }));
     let W = (0, a.jsx)(lo, {
         initialEmail: j.email ?? "",
         invite: s,
@@ -3771,7 +3771,7 @@ class lI extends o.PureComponent {
     }
     refreshUser = () => {
         this.setState({ fetchingUser: !0 }),
-            t4
+            t6
                 .rQ({ withAnalyticsToken: !0 })
                 .then((e) => this.setState({ currentUser: e, fetchingUser: !1 }))
                 .catch(() => this.setState({ fetchingUser: !1 }));
@@ -3989,13 +3989,13 @@ var lS = n(871194),
     lb = n(799365),
     ly = n(894778),
     lR = n(315290),
-    lO = n(396574),
-    lL = n(94654);
+    lL = n(396574),
+    lO = n(171390);
 h.Ay.initialize();
 class lk extends o.PureComponent {
     componentDidMount() {
         (0, G.d)("guildTemplate"),
-            lO.VP || eq.A.launch("discord://" + y.BVt.GUILD_TEMPLATE(this.props.code), () => void 0);
+            lL.VP || eq.A.launch("discord://" + y.BVt.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
         this.props.code !== e.code && eC.A.resolveGuildTemplate(this.props.code);
@@ -4005,7 +4005,7 @@ class lk extends o.PureComponent {
         t(e);
     };
     renderButton(e, t) {
-        return lO.VP
+        return lL.VP
             ? (0, a.jsx)("div", { className: K.eT, children: (0, a.jsx)(M.$, { text: e, fullWidth: !0, onClick: t }) })
             : (0, a.jsx)(k.KE, { className: K.eT });
     }
@@ -4033,7 +4033,7 @@ class lk extends o.PureComponent {
     renderAuthenticatedOrDownload() {
         let { guildTemplate: e } = this.props;
         return (eB()(null != e, "guild template must not be null"), e.state === ij.QB.RESOLVING)
-            ? (0, a.jsx)(k.Ay, { className: lL.sL, children: (0, a.jsx)(lb.A, { guildTemplate: e }) })
+            ? (0, a.jsx)(k.Ay, { className: lO.sL, children: (0, a.jsx)(lb.A, { guildTemplate: e }) })
             : (0, a.jsx)(lP, { guildTemplate: e });
     }
     renderContinue() {
@@ -4053,7 +4053,7 @@ class lk extends o.PureComponent {
             case ij.QB.RESOLVING:
                 return this.renderSpinner(Q.intl.string(Q.t["Z+hCVU"]));
             case ij.QB.RESOLVED:
-                if (n || !lO.VP) return this.renderAuthenticatedOrDownload();
+                if (n || !lL.VP) return this.renderAuthenticatedOrDownload();
                 if (this.props.login) return (0, a.jsx)(iP, { guildTemplate: e, transitionTo: i, location: l });
                 return (0, a.jsx)(lT, {
                     guildTemplate: e,
@@ -4077,19 +4077,19 @@ function lP(e) {
     ly.A.flowStep(lR.do.ORGANIC_GUILD_TEMPLATES, lR.jC.GUILD_CREATE);
     let l = (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)(k.hE, { className: lL.wx, children: Q.intl.string(Q.t.UNFvtM) }),
+            (0, a.jsx)(k.hE, { className: lO.wx, children: Q.intl.string(Q.t.UNFvtM) }),
             n,
             (0, a.jsx)("div", {
-                className: lL.Tf,
+                className: lO.Tf,
                 children: (0, a.jsx)(M.$, { text: Q.intl.string(Q.t.xr59t7), fullWidth: !0, onClick: i }),
             }),
         ],
     });
     return (0, a.jsx)(ie, {
-        className: lL.sL,
+        className: lO.sL,
         children: () => [
             (0, a.jsx)(it.A, { guildTemplate: t }, "template"),
-            (0, a.jsx)("div", { className: lL.KJ, children: l }, "contents"),
+            (0, a.jsx)("div", { className: lO.KJ, children: l }, "contents"),
         ],
     });
 }
@@ -4112,7 +4112,7 @@ function lD(e) {
         (0, G.d)("guild_template_mobile");
     }, []),
     null == n || n.state === ij.QB.RESOLVING)
-        ? (0, a.jsx)(k.Ay, { children: (0, a.jsx)(eL.y, {}) })
+        ? (0, a.jsx)(k.Ay, { children: (0, a.jsx)(eO.y, {}) })
         : n.state === ij.QB.RESOLVED
           ? (0, a.jsxs)(k.Ay, {
                 children: [
@@ -4147,7 +4147,7 @@ let lz = "register",
 function lH(e) {
     let { message: t, onClick: n, invite: i, className: l } = e,
         s = i?.guild_scheduled_event != null;
-    return lO.VP
+    return lL.VP
         ? (0, a.jsx)("div", {
               className: l ?? (s ? K.QX : K.eT),
               children: (0, a.jsx)(M.$, { text: t, onClick: n, variant: s ? "active" : "primary", fullWidth: !0 }),
@@ -4165,7 +4165,7 @@ function lK(e) {
                 children: [
                     null != r
                         ? (0, a.jsx)(lh, { channel: t.channel, guildScheduledEvent: r })
-                        : (0, a.jsx)(n6.A, { invite: t }),
+                        : (0, a.jsx)(n4.A, { invite: t }),
                     null != s &&
                         (0, a.jsx)("div", {
                             className: K.QX,
@@ -4202,8 +4202,8 @@ function lq(e) {
     let { invite: t, rpcConnected: n, onContinue: i } = e;
     return (0, a.jsxs)(k.Ay, {
         children: [
-            (0, a.jsx)(n6.A, { invite: t }),
-            lO.VP
+            (0, a.jsx)(n4.A, { invite: t }),
+            lL.VP
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
                           (0, a.jsx)("div", {
@@ -4296,8 +4296,8 @@ function l2(e) {
     n.g.location.assign(e);
 }
 h.Ay.initialize(), n(426620), h.Ay.initialize();
-let l3 = nL(iP),
-    l8 = nL(function (e) {
+let l3 = nO(iP),
+    l8 = nO(function (e) {
         let t = o.useCallback(
                 (t) => {
                     let n;
@@ -4332,10 +4332,10 @@ let l3 = nL(iP),
             }
         }),
         r || i === y.aUe.LOGGING_IN)
-            ? (0, a.jsx)(k.Ay, { children: (0, a.jsx)(eL.y, {}) })
+            ? (0, a.jsx)(k.Ay, { children: (0, a.jsx)(eO.y, {}) })
             : (0, a.jsx)(iP, { ...e, transitionTo: t });
     }),
-    l7 = nL(function (e) {
+    l7 = nO(function (e) {
         let { inviteKey: t, location: n, transitionTo: i, login: l } = e,
             s = (0, h.bG)([e5.A], () => e5.A.getInvite(t)),
             r = (0, h.bG)([nF.A], () => nF.A.getState(t)),
@@ -4384,7 +4384,7 @@ let l3 = nL(iP),
                         g.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: eK.default.getId() }),
                     S.default.track(y.HAw.INVITE_VIEWED, { invite_code: t }, { flush: !0 }),
                     (0, G.d)("invite"),
-                    lO.VP || eq.A.launch("discord://" + y.BVt.INVITE(t), () => void 0),
+                    lL.VP || eq.A.launch("discord://" + y.BVt.INVITE(t), () => void 0),
                     !l && u)
                 ) {
                     let { baseCode: e } = (0, eX.y$)(t);
@@ -4458,7 +4458,7 @@ let l3 = nL(iP),
                                               guild_id: t.guild?.id,
                                               channel_id: t.channel?.id,
                                               inviter_id: t.inviter?.id,
-                                              user_is_member: null != t.guild && null != e6.A.getGuild(t.guild.id),
+                                              user_is_member: null != t.guild && null != e4.A.getGuild(t.guild.id),
                                               size_total: t.approximate_member_count,
                                               invite_type: null != t.type ? tr.Xd[t.type] : void 0,
                                           },
@@ -4503,7 +4503,7 @@ let l3 = nL(iP),
                     lU.u.set(lF.B, s.code),
                     (0, a.jsx)(lq, { invite: s, rpcConnected: N, onContinue: () => i(y.BVt.APP) })
                 );
-            if (!c && lO.VP)
+            if (!c && lL.VP)
                 return f === lQ
                     ? (0, a.jsx)(iP, { invite: s, transitionTo: i, location: n })
                     : (0, a.jsx)(lT, {
@@ -4524,7 +4524,7 @@ let l3 = nL(iP),
             ? (0, a.jsx)(lK, { invite: s, inviteKey: t, handleAccept: _, handleDefaultTransition: j })
             : null;
     }),
-    l4 = nL(function (e) {
+    l6 = nO(function (e) {
         let t = {
             guildTemplate: (0, h.bG)([ev.A], () => ev.A.getGuildTemplate(e.code)),
             nativeAppState: (0, h.bG)([nF.A], () => nF.A.getState(e.code)),
@@ -4533,8 +4533,8 @@ let l3 = nL(iP),
         };
         return (0, a.jsx)(lk, { ...e, ...t });
     }),
-    l6 = nL(lv),
-    l5 = nL(function (e) {
+    l4 = nO(lv),
+    l5 = nO(function (e) {
         let { inviteKey: t, transitionTo: n } = e,
             i = (0, h.bG)([e5.A], () => e5.A.getInvite(t));
         return (
@@ -4558,7 +4558,7 @@ let l3 = nL(iP),
                                 channel_id: i?.channel?.id,
                                 inviter_id: i?.inviter?.id,
                                 invite_type: null != i && i?.type != null ? tr.Xd[i?.type] : void 0,
-                                user_is_member: null != i && null != i.guild && null != e6.A.getGuild(i.guild.id),
+                                user_is_member: null != i && null != i.guild && null != e4.A.getGuild(i.guild.id),
                                 size_total: i?.approximate_member_count,
                                 time_to_click_ms: Math.round(performance.now()),
                             },
@@ -4573,8 +4573,8 @@ let l3 = nL(iP),
             })
         );
     }),
-    l9 = nL(lT),
-    se = nL(function (e) {
+    l9 = nO(lT),
+    se = nO(function (e) {
         let { location: t, transitionTo: i = P.pX } = e,
             [l, s] = o.useState("submitting");
         function r() {
@@ -4621,7 +4621,7 @@ let l3 = nL(iP),
                     children: [(0, a.jsx)(k.CK, {}), (0, a.jsx)(k.hE, { children: Q.intl.string(Q.t["9exy+V"]) })],
                 });
     }),
-    st = nL(function (e) {
+    st = nO(function (e) {
         let { location: t } = e,
             [i, l] = o.useState("submitting");
         return (o.useEffect(() => {
@@ -4657,7 +4657,7 @@ let l3 = nL(iP),
                     children: [(0, a.jsx)(k.CK, {}), (0, a.jsx)(k.hE, { children: Q.intl.string(Q.t.T3vC7n) })],
                 });
     }),
-    sn = nL(function (e) {
+    sn = nO(function (e) {
         let { location: t, transitionTo: n = l2 } = e,
             [i, l] = o.useState("submitting"),
             s = o.useRef(void 0);
@@ -4702,7 +4702,7 @@ let l3 = nL(iP),
                     loading: !0,
                 });
     }),
-    si = nL(() => {
+    si = nO(() => {
         let [e, t] = o.useState(""),
             [i, l] = o.useState(""),
             [s, r] = o.useState(!1),
@@ -4784,10 +4784,10 @@ let l3 = nL(iP),
                   ],
               });
     }),
-    sl = nL(l0.A),
-    ss = nL(nM),
-    sr = nL(ex),
-    sa = nL(function (e) {
+    sl = nO(l0.A),
+    ss = nO(nM),
+    sr = nO(ex),
+    sa = nO(function (e) {
         let { location: t } = e,
             [n, i] = o.useState(!1),
             { verifySuccess: l, verifyErrors: s, redirectGuildId: r } = (0, h.bG)([eU], () => eU.getState());
@@ -4847,7 +4847,7 @@ let l3 = nL(iP),
                       loading: !0,
                   });
     }),
-    so = nL(function (e) {
+    so = nO(function (e) {
         let { match: t, location: n } = e,
             i = async (e, t) => {
                 await (0, nP.W)(t0.XK.CHANNEL, {
@@ -4859,7 +4859,7 @@ let l3 = nL(iP),
             };
         return (0, a.jsx)(nV, { match: t, location: n, attemptDeepLink: i });
     }),
-    sc = nL(function (e) {
+    sc = nO(function (e) {
         let { match: t, location: n } = e,
             i = async (e) => {
                 await (0, nP.W)(t0.XK.GAME_SHOP, {
@@ -4871,7 +4871,7 @@ let l3 = nL(iP),
             };
         return (0, a.jsx)(nV, { match: t, location: n, attemptDeepLink: i });
     }),
-    sd = nL(function (e) {
+    sd = nO(function (e) {
         let { match: t, location: n } = e,
             i = async (e, t) => {
                 await (0, nP.W)(t0.XK.PICK_GUILD_SETTINGS, {
@@ -4882,7 +4882,7 @@ let l3 = nL(iP),
             };
         return (0, a.jsx)(nV, { match: t, location: n, attemptDeepLink: i });
     }),
-    su = nL((e) => {
+    su = nO((e) => {
         let { location: t } = e,
             n = (0, h.bG)([eK.default], () => eK.default.isAuthenticated()),
             i = (0, h.bG)([eI.A], () => eI.A.hasLoadedExperiments),
@@ -4913,7 +4913,7 @@ let l3 = nL(iP),
             o.useEffect(() => {
                 n
                     ? (m(!0),
-                      t4
+                      t6
                           .rQ({ withAnalyticsToken: !0 })
                           .then(() => m(!1))
                           .catch(() => m(!1)))
@@ -4938,12 +4938,12 @@ let l3 = nL(iP),
             l &&
                 !u &&
                 (0, a.jsxs)(k.Ay, {
-                    children: [(0, a.jsx)(k.hE, { className: K.QB, children: c }), s && (0, a.jsx)(eL.y, {})],
+                    children: [(0, a.jsx)(k.hE, { className: K.QB, children: c }), s && (0, a.jsx)(eO.y, {})],
                 })
         );
     }),
-    sm = nL(et),
-    sh = nL(function (e) {
+    sm = nO(et),
+    sh = nO(function (e) {
         let { match: t, location: i } = e,
             l = (0, c.parse)(i.search).token,
             [s, r] = o.useState("loading"),
@@ -5095,7 +5095,7 @@ class sg extends o.PureComponent {
             t && this.resolveInvite(),
             this.resolveGiftCode(),
             this.resolveGuildTemplate(),
-            L.initialize(),
+            O.initialize(),
             (0, G.D)();
     }
     componentDidUpdate(e) {
@@ -5103,7 +5103,7 @@ class sg extends o.PureComponent {
             e.invite?.state !== this.props.invite?.state && this.maybeFetchApplicationSplash();
     }
     componentWillUnmount() {
-        L.terminate();
+        O.terminate();
     }
     maybeFetchApplicationSplash() {
         let { invite: e } = this.props;
@@ -5168,9 +5168,9 @@ class sg extends o.PureComponent {
                 }),
                 (0, a.jsx)(en.A, {
                     path: y.BVt.GIFT_CODE_LOGIN(":giftCode"),
-                    render: (e) => (0, a.jsx)(l6, { login: !0, ...e }),
+                    render: (e) => (0, a.jsx)(l4, { login: !0, ...e }),
                 }),
-                (0, a.jsx)(en.A, { path: y.BVt.GIFT_CODE(":giftCode"), render: (e) => (0, a.jsx)(l6, { ...e }) }),
+                (0, a.jsx)(en.A, { path: y.BVt.GIFT_CODE(":giftCode"), render: (e) => (0, a.jsx)(l4, { ...e }) }),
                 (0, a.jsx)(en.A, {
                     path: [y.BVt.INVITE_LOGIN(":inviteCode"), y.BVt.INVITE(":inviteCode")],
                     render: (e) => {
@@ -5213,7 +5213,7 @@ class sg extends o.PureComponent {
                         } = e;
                         return u.Fr || u.v1
                             ? (0, a.jsx)(lD, { code: t }, t)
-                            : (0, a.jsx)(l4, {
+                            : (0, a.jsx)(l6, {
                                   code: t,
                                   location: i,
                                   transitionTo: l,

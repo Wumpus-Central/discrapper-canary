@@ -3,7 +3,7 @@ var s = t(627968),
     i = t(64700),
     a = t(503698),
     l = t.n(a),
-    r = t(785651),
+    r = t(873174),
     o = t(17928),
     c = t(661531),
     d = t(990078),
@@ -40,7 +40,7 @@ let _ = (0, k.v)((e, n) => ({
 }));
 var D = t(331322),
     w = t(775602),
-    B = t(826733);
+    B = t(656557);
 function G(e) {
     let { withHeader: n = !0, size: t = 15 } = e,
         i = (0, o.bG)([w.A], () => w.A.useReducedMotion);
@@ -141,7 +141,7 @@ var eN = t(922016),
     eM = t(849077),
     eC = t(652215),
     eR = t(375708),
-    eL = t(285618);
+    eL = t(655794);
 let ek = {
     [eM.Th.MENTION]: [eM.kR.SETTINGS],
     [eM.Th.REPLY]: [eM.kR.SETTINGS],
@@ -329,7 +329,7 @@ function eB(e) {
 var eG = t(97808),
     eK = t(573435),
     ez = t(190460),
-    eX = t(282291);
+    eX = t(388275);
 function eY(e) {
     let {
             children: n,
@@ -851,7 +851,7 @@ let eJ = (0, i.memo)(
                               async () => {
                                   let { default: e } = await Promise.all([
                                       t.e("93336"),
-                                      t.e("26250"),
+                                      t.e("3869"),
                                       t.e("48118"),
                                   ]).then(t.bind(t, 594005));
                                   return (n) => (0, s.jsx)(e, { ...n, channel: u, message: r, isUnread: a });
@@ -868,11 +868,11 @@ var eq = t(735438),
     eQ = t.n(eq),
     e0 = t(837381),
     e1 = t(847374),
-    e2 = t(912592),
-    e3 = t(821609),
+    e3 = t(912592),
+    e2 = t(821609),
     e4 = t(475825),
-    e8 = t(928039),
-    e7 = t(625494);
+    e7 = t(928039),
+    e8 = t(625494);
 let e6 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !0, [eM.Ur.YESTERDAY]: !1, [eM.Ur.OLDER]: !1 },
     e9 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !1, [eM.Ur.YESTERDAY]: !1, [eM.Ur.OLDER]: !1 },
     e5 = (0, k.v)((e, n) => ({
@@ -893,8 +893,8 @@ let e6 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !0, [eM.Ur.YESTERDAY]: !1, [eM.Ur.
                     e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? e9 : e6 }));
         },
     }));
-var ne = t(756195),
-    nn = t(645875);
+var ne = t(405198),
+    nn = t(16051);
 function nt(e) {
     e.stopPropagation();
 }
@@ -933,7 +933,7 @@ function na() {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, s.jsx)(e2.K, {
+                        (0, s.jsx)(e3.K, {
                             size: "custom",
                             height: 40,
                             width: 40,
@@ -947,7 +947,7 @@ function na() {
                         }),
                     ],
                 }),
-                (0, s.jsx)(e3.$, {
+                (0, s.jsx)(e2.$, {
                     variant: "secondary",
                     onClick: () => (0, L.tZ)(e),
                     text: eR.intl.string(ne.default.klSpfs),
@@ -972,7 +972,7 @@ function nl(e) {
         x = (0, M.op)(),
         p = i.useRef(null),
         A = i.useRef(0),
-        N = (0, e8.A)(g, p),
+        N = (0, e7.A)(g, p),
         { entrypoint: f, notificationCenterVariant: j } = (0, b.X8)({ location: "NotificationsInboxSidebarList" }),
         {
             isLoading: I,
@@ -1002,10 +1002,10 @@ function nl(e) {
             p.current?.scrollPageDown({ animate: !0 });
         }
         return (
-            e7._.subscribe(eC.jej.SCROLL_PAGE_DOWN, n),
-            e7._.subscribe(eC.jej.SCROLL_PAGE_UP, e),
+            e8._.subscribe(eC.jej.SCROLL_PAGE_DOWN, n),
+            e8._.subscribe(eC.jej.SCROLL_PAGE_UP, e),
             () => {
-                e7._.unsubscribe(eC.jej.SCROLL_PAGE_DOWN, n), e7._.unsubscribe(eC.jej.SCROLL_PAGE_UP, e);
+                e8._.unsubscribe(eC.jej.SCROLL_PAGE_DOWN, n), e8._.unsubscribe(eC.jej.SCROLL_PAGE_UP, e);
             }
         );
     }, []);
@@ -1154,7 +1154,7 @@ function nl(e) {
         })
     );
 }
-var nr = t(873111);
+var nr = t(756695);
 let no = [],
     nc = {
         controller: new r.Controller({ value: 1, immediate: !0 }),

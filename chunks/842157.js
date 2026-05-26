@@ -40,7 +40,7 @@ var i = n(627968),
     V = n(652215),
     F = n(768349),
     Y = n(375708),
-    W = n(193018);
+    W = n(378);
 function H(e) {
     let { presenceActivity: t, remoteJoinPlatform: n, isGameLaunchable: r } = e,
         o = (0, M.z4)({ platforms: t?.supported_platforms, currentPlatform: V.yTV.DESKTOP, isGameLaunchable: r }),

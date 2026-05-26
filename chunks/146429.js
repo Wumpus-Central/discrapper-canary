@@ -60,7 +60,7 @@ let X = function (e) {
     }
 };
 var z = n(375708),
-    U = n(508891);
+    U = n(213659);
 function q(e) {
     let { node: t, isLast: n } = e,
         l = t.useTitle(),
@@ -114,7 +114,7 @@ function W(e) {
         }),
     });
 }
-var V = n(441562);
+var V = n(454298);
 function $(e) {
     let { icon: t, label: n, onClick: l } = e;
     return (0, r.jsx)(S.K, { onClick: l, icon: t, size: "sm", variant: "icon-only", "aria-label": n });
@@ -206,7 +206,7 @@ var ei = n(284009),
     ec = n(319354),
     ed = n(717421),
     eh = n(885386),
-    em = n(429566);
+    em = n(571902);
 function eg(e) {
     let { category: t, onClick: n, active: s, dismissibleBadge: i } = e,
         { useTitle: a, useSubnavLabel: u, key: o, usePersistentBadge: c } = t,
@@ -451,7 +451,7 @@ function ey(e) {
         })
     );
 }
-var ef = n(585635);
+var ef = n(598371);
 let ej = "refresh_sm";
 function ep(e) {
     let {
@@ -596,7 +596,7 @@ function ev(e) {
 }
 var eA = n(826673),
     eb = n(49999),
-    eS = n(443263);
+    eS = n(455999);
 function eN(e) {
     let { root: t, onClose: n, footer: s, emptyState: i, searchBar: a } = e,
         u = w.A.useField("showNavigationMobile"),
@@ -789,7 +789,7 @@ function eC(e) {
 }
 var eE = n(823092),
     ek = n(581298),
-    eI = n(910772);
+    eI = n(16756);
 function eM(e) {
     let {
             partialRoot: t,
@@ -907,7 +907,7 @@ var eK = n(495544),
     e_ = n(287809),
     eO = n(152056),
     eB = n(780964),
-    eL = n(755322),
+    eL = n(949901),
     eP = n(980707),
     eD = n(477782),
     eF = n(349288),
@@ -923,12 +923,12 @@ var eK = n(495544),
     eQ = n(915089),
     eY = n(206845),
     eZ = n(19575),
-    eJ = n(763224);
+    eJ = n(775960);
 function e0() {
     let e = (0, eQ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "545172",
-        l = "b4a90ed6867fe13e371763eef84571652439d1a3".substring(0, 7),
+        n = "550467",
+        l = "a038e23bd063488c7430ceecbd80716635fdd24e".substring(0, 7),
         s = e$.A?.app.getVersion(),
         i = e$.A?.app.getBuildNumber(),
         u = e$.A?.app.getAppArch(),
@@ -1013,7 +1013,7 @@ function e0() {
         })
     );
 }
-var e1 = n(779801);
+var e1 = n(792537);
 function e7(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(eP.W, {
@@ -1039,7 +1039,7 @@ function e7(e) {
         }),
     });
 }
-function e2() {
+function e9() {
     let e = l.useRef(null);
     return (0, r.jsxs)("div", {
         children: [
@@ -1096,10 +1096,10 @@ function e2() {
         ],
     });
 }
-var e9 = n(402651),
+var e2 = n(402651),
     e5 = n(669067),
     e3 = n(830543),
-    e8 = n(466745);
+    e8 = n(725305);
 let e6 = new Set([eB.X.PROFILE_PANEL, eB.X.SUBSCRIPTIONS_PANEL, eB.X.FAMILY_CENTER_PANEL, eB.X.POGGERMODE_PANEL]),
     e4 = new Map([
         [eB.X.CONNECTIONS_PANEL, s.ImpressionNames.USER_SETTINGS_CONNECTIONS],
@@ -1119,7 +1119,7 @@ function te(e) {
         return (
             eK.default.addChangeListener(e),
             () => {
-                eK.default.removeChangeListener(e), e9.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
+                eK.default.removeChangeListener(e), e2.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
             }
         );
     }, []),
@@ -1129,7 +1129,7 @@ function te(e) {
               partialRoot: eL.D,
               searchBar: tt,
               emptyState: tn,
-              sidebarFooter: e2,
+              sidebarFooter: e9,
               onViewChange: (e) => {
                   e6.has(e) || (0, e5._)(e);
                   let t = e4.get(e);
@@ -1137,9 +1137,9 @@ function te(e) {
                       (0, o.x)({
                           type: s.ImpressionTypes.PANE,
                           name: t,
-                          properties: { source: e9.A.getField("source") },
+                          properties: { source: e2.A.getField("source") },
                       }),
-                      e9.A.setState({ source: void 0 });
+                      e2.A.setState({ source: void 0 });
               },
               target: t,
               defaultTarget: eB.X.ACCOUNT_PANEL,

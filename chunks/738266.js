@@ -101,7 +101,7 @@ var ea = l(735438),
     ef = l(545442),
     eC = l(316710),
     ej = l(821589),
-    eb = l(165808);
+    eb = l(262384);
 let eN = { XSMALL: eb.xsmall, SMALL: eb.small, MEDIUM: eb.medium, LARGE: eb.large };
 class eE extends i.PureComponent {
     static Sizes = eN;
@@ -133,7 +133,7 @@ class eE extends i.PureComponent {
     }
 }
 var ev = l(967144),
-    ey = l(660811);
+    ey = l(320011);
 function eS(e) {
     let { role: t, guild: s } = e,
         [a, r] = i.useState(!1);
@@ -226,8 +226,8 @@ var eM = l(736653),
     eF = l(508573),
     ez = l.n(eF),
     eZ = l(66834),
-    eW = l(17586),
-    eY = l(329296);
+    eW = l(204594),
+    eY = l(729232);
 let eJ = s.Ay.connectStores([W.A, e_.A], () => {
     let e = e_.A.getChannel();
     return {
@@ -635,7 +635,7 @@ function e0() {
     let i = t[l];
     return (0, n.jsxs)(eR.Ay, { className: eW.kL, children: [(0, n.jsx)(eK, {}), (0, n.jsx)(eQ, { overwrite: i })] });
 }
-var e2 = l(311809);
+var e2 = l(369281);
 function e5() {
     let e = (0, s.bG)([W.A], () => W.A.advancedMode);
     return (0, n.jsxs)(n.Fragment, {
@@ -673,7 +673,7 @@ function e5() {
 }
 var e1 = l(243721),
     e7 = l(235986),
-    e3 = l(60727);
+    e3 = l(804215);
 function e4(e) {
     let { description: t, icon: l, id: i, label: s, onChange: r, value: o } = e;
     return (0, n.jsxs)("div", {
@@ -698,7 +698,7 @@ function e4(e) {
 var e6 = l(661531),
     e8 = l(862482),
     e9 = l(359778),
-    te = l(400725);
+    te = l(665877);
 let tt = (e) => {
     let { className: t, icon: l, noticeText: i, buttonText: s, onClick: r, canSync: o } = e;
     return (0, n.jsx)(e9.Z, {
@@ -725,7 +725,7 @@ let tt = (e) => {
 };
 var tl = l(719366),
     tn = l(818348),
-    ti = l(497903);
+    ti = l(413807);
 function ts(e) {
     let { channel: t, roles: l, members: i, disabledReason: s, getRemoveTooltipHint: r } = e;
     return (0, n.jsx)(v.OZ, {
@@ -894,8 +894,8 @@ function ta(e) {
                                     onClick: function () {
                                         (0, y.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                l.e("38376"),
-                                                l.e("11585"),
+                                                l.e("48424"),
+                                                l.e("66373"),
                                                 l.e("89916"),
                                                 l.e("20379"),
                                                 l.e("19193"),
@@ -1013,7 +1013,7 @@ function tr(e) {
                                                 onClick: function () {
                                                     (0, y.openModalLazy)(async () => {
                                                         let { default: e } = await Promise.all([
-                                                            l.e("38376"),
+                                                            l.e("48424"),
                                                             l.e("89916"),
                                                             l.e("20379"),
                                                             l.e("19193"),
@@ -1238,7 +1238,7 @@ var tT = l(371444),
     t5 = l(219504),
     t1 = l(376310);
 l(253913);
-var t7 = l(231935);
+var t7 = l(245567);
 function t3(e) {
     let { channel: t } = e,
         a = (0, s.bG)([X.A], () => X.A.can(eB.xBc.MANAGE_CHANNELS, t), [t]),
@@ -1249,7 +1249,7 @@ function t3(e) {
             a &&
                 !e &&
                 (0, y.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([l.e("2225"), l.e("47326")]).then(l.bind(l, 950989));
+                    let { default: e } = await Promise.all([l.e("50513"), l.e("47326")]).then(l.bind(l, 950989));
                     return (l) => (0, n.jsx)(e, { ...l, channelId: t.id, guildId: t.guild_id });
                 });
         }, [t, a]),
@@ -1257,7 +1257,7 @@ function t3(e) {
             (e) => {
                 a &&
                     (0, y.openModalLazy)(async () => {
-                        let { default: i } = await Promise.all([l.e("2225"), l.e("47326")]).then(l.bind(l, 950989));
+                        let { default: i } = await Promise.all([l.e("50513"), l.e("47326")]).then(l.bind(l, 950989));
                         return (l) => (0, n.jsx)(i, { ...l, channelId: t.id, guildId: t.guild_id, tag: e });
                     });
             },
@@ -1354,7 +1354,7 @@ var t6 = l(235640),
     t8 = l(268761),
     t9 = l(474078),
     le = l(783878),
-    lt = l(980296);
+    lt = l(101704);
 let ll = (e) => {
     let { autoArchiveDuration: t, onChange: l, isDisabled: i, helperText: s } = e,
         a = (0, t8.Gk)();
@@ -1383,7 +1383,7 @@ let lo = (0, l(600975).C)({
     defaultConfig: { enabled: !1 },
     treatments: [{ id: 1, label: "Enable spoiler channel setting", config: { enabled: !0 } }],
 });
-var ld = l(818050);
+var ld = l(373378);
 function lc(e) {
     let { label: t, helperText: l, hideLabel: s, disabled: a, value: r, onChange: o } = e,
         [d, c] = i.useState(null),
@@ -1683,7 +1683,7 @@ function lg(e) {
 var lm = l(746080),
     lx = l(307731),
     lp = l(37411),
-    lA = l(263107);
+    lA = l(867395);
 let lf = {
         popoutLocation: {
             page: eB.liQ.CHANNEL_SETTINGS,
@@ -2572,7 +2572,7 @@ function lv() {
         showSpoilerChannelSetting: j,
     });
 }
-var ly = l(181420);
+var ly = l(554412);
 function lS(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         l = arguments.length > 2 ? arguments[2] : void 0;

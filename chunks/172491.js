@@ -9,7 +9,7 @@ var l = n(627968),
     d = n(954376),
     c = n(503698),
     h = n.n(c),
-    g = n(943223);
+    g = n(756215);
 function m(e) {
     let {
             size: t,
@@ -23,15 +23,15 @@ function m(e) {
         } = e,
         c = null != n,
         m = i.useId(),
-        E = `${m}-lower_badge_masks`,
-        I = `${m}-shape_mask`,
+        I = `${m}-lower_badge_masks`,
+        E = `${m}-shape_mask`,
         A = `${m}-stroke_mask`,
         f = r?.width != null ? r.width : 16,
         p = r?.height != null ? r.height : 16,
         S = { width: t + 8, height: t + 8, x: -4, y: -4 },
         N = o
-            ? (0, l.jsx)("circle", { id: I, cx: t / 2, cy: t / 2, r: t / 2 })
-            : (0, l.jsx)("rect", { id: I, x: 0, y: 0, width: t, height: t, rx: 8, ry: 8 });
+            ? (0, l.jsx)("circle", { id: E, cx: t / 2, cy: t / 2, r: t / 2 })
+            : (0, l.jsx)("rect", { id: E, x: 0, y: 0, width: t, height: t, rx: 8, ry: 8 });
     return (0, l.jsxs)(
         "div",
         {
@@ -52,7 +52,7 @@ function m(e) {
                                 N,
                                 c
                                     ? (0, l.jsx)("rect", {
-                                          id: E,
+                                          id: I,
                                           x: t - (f + 4) + 2,
                                           y: t - (p + 4) + 2,
                                           width: f + 4,
@@ -71,8 +71,8 @@ function m(e) {
                             width: t,
                             height: t,
                             children: [
-                                (0, l.jsx)("use", { href: `#${I}`, fill: "white" }),
-                                c ? (0, l.jsx)("use", { href: `#${E}`, fill: "black" }) : null,
+                                (0, l.jsx)("use", { href: `#${E}`, fill: "white" }),
+                                c ? (0, l.jsx)("use", { href: `#${I}`, fill: "black" }) : null,
                             ],
                         }),
                         c
@@ -86,7 +86,7 @@ function m(e) {
                                           y: "-25%",
                                           fill: "white",
                                       }),
-                                      (0, l.jsx)("use", { href: `#${E}`, fill: "black" }),
+                                      (0, l.jsx)("use", { href: `#${I}`, fill: "black" }),
                                   ],
                               })
                             : null,
@@ -107,8 +107,8 @@ function m(e) {
         m,
     );
 }
-var E = n(652215),
-    I = n(25792);
+var I = n(652215),
+    E = n(284352);
 let A = i.memo(function (e) {
     let {
             channel: t,
@@ -159,13 +159,13 @@ let A = i.memo(function (e) {
                                     }
                                 })(g),
                                 isTyping: p,
-                                status: p ? E.clD.ONLINE : null,
+                                status: p ? I.clD.ONLINE : null,
                             })
                           : (0, l.jsx)(u.eu, {
                                 src: (0, o.Y)(t) ?? void 0,
                                 "aria-hidden": S,
                                 size: g,
-                                status: p ? E.clD.ONLINE : null,
+                                status: p ? I.clD.ONLINE : null,
                                 isTyping: p,
                             })
                       : (0, l.jsx)(u.eu, { src: void 0, "aria-hidden": S, size: g }),
@@ -182,6 +182,6 @@ let A = i.memo(function (e) {
                   "aria-hidden": !0,
               }),
               lowerBadgeSize: { width: (0, r.o6)(c) },
-              children: (0, l.jsx)("div", { className: I.R, children: x }),
+              children: (0, l.jsx)("div", { className: E.R, children: x }),
           });
 });

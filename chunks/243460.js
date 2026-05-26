@@ -1,108 +1,108 @@
-n.d(e, { A: () => E, u: () => x });
-var i = n(627968);
-n(64700);
-var a = n(862482),
-    r = n(935462),
-    s = n(534514),
-    l = n(834730);
+e.d(n, { A: () => G, u: () => I });
+var i = e(627968);
+e(64700);
+var a = e(862482),
+    r = e(935462),
+    l = e(534514),
+    s = e(834730);
 let d = "/assets/7f384b2c31f586cd.svg",
-    c = "/assets/2f0ebe181e1cce00.svg";
-var o = n(235986),
-    m = n(954571),
-    g = n(878314),
-    p = n(819638),
-    C = n(652215),
-    _ = n(985018),
-    L = n(394272);
-let u = 0.5 > Math.random();
-function x(t) {
-    let { onClose: e, onBack: n, onCreationIntentChosen: x, hasFooter: E = !0 } = t,
+    p = "/assets/2f0ebe181e1cce00.svg";
+var c = e(235986),
+    m = e(174459),
+    _ = e(878314),
+    g = e(819638),
+    o = e(652215),
+    E = e(375708),
+    C = e(97632);
+let T = 0.5 > Math.random();
+function I(t) {
+    let { onClose: n, onBack: e, onCreationIntentChosen: I, hasFooter: G = !0 } = t,
         b = (0, i.jsx)(a.$n, {
             "data-migration-pending": !0,
-            className: L.Gv,
+            className: C.Gv,
             look: a.$n.Looks.BLANK,
             size: a.$n.Sizes.MIN,
-            onClick: n,
-            children: _.intl.string(_.t["13/7kX"]),
+            onClick: e,
+            children: E.intl.string(E.t["13/7kX"]),
         });
-    function T(t) {
-        m.default.track(C.HAw.GUILD_CREATION_INTENT_SELECTED, {
+    function D(t) {
+        m.default.track(o.HAw.GUILD_CREATION_INTENT_SELECTED, {
             skipped: null == t,
-            is_community: t === p.IR.COMMUNITY,
+            is_community: t === g.IR.COMMUNITY,
         }),
-            x(t);
+            I(t);
     }
     return {
         content: (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(r.rQ, {
                     "data-migration-pending": !0,
-                    direction: o.A.Direction.VERTICAL,
-                    className: L.wx,
+                    direction: c.A.Direction.VERTICAL,
+                    className: C.wx,
                     separator: !1,
                     children: [
-                        (0, i.jsx)(s.D, {
-                            className: L.DD,
+                        (0, i.jsx)(l.D, {
+                            className: C.DD,
                             variant: "heading-xl/semibold",
-                            children: _.intl.string(_.t.f3MvGS),
+                            children: E.intl.string(E.t.f3MvGS),
                         }),
-                        (0, i.jsx)(l.E, {
-                            className: L.VA,
+                        (0, i.jsx)(s.E, {
+                            className: C.VA,
                             color: "text-default",
                             variant: "text-md/normal",
-                            children: _.intl.string(_.t.nOzc7w),
+                            children: E.intl.string(E.t.nOzc7w),
                         }),
-                        null != e && (0, i.jsx)(r.s_, { "data-migration-pending": !0, className: L.b, onClick: e }),
+                        null != n && (0, i.jsx)(r.s_, { "data-migration-pending": !0, className: C.b, onClick: n }),
                     ],
                 }),
                 (0, i.jsxs)(r.$m, {
                     "data-migration-pending": !0,
-                    className: L.f9,
+                    className: C.f9,
                     children: [
-                        u
+                        T
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(g.A, {
+                                      (0, i.jsx)(_.A, {
                                           icon: d,
-                                          message: _.intl.string(_.t.uE7zcu),
-                                          onClick: () => T(p.IR.FRIENDS),
+                                          message: E.intl.string(E.t.uE7zcu),
+                                          onClick: () => D(g.IR.FRIENDS),
                                       }),
-                                      (0, i.jsx)(g.A, {
-                                          icon: c,
-                                          message: _.intl.string(_.t.h9Q1lG),
-                                          onClick: () => T(p.IR.COMMUNITY),
+                                      (0, i.jsx)(_.A, {
+                                          icon: p,
+                                          message: E.intl.string(E.t.h9Q1lG),
+                                          onClick: () => D(g.IR.COMMUNITY),
                                       }),
                                   ],
                               })
                             : (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(g.A, {
-                                          icon: c,
-                                          message: _.intl.string(_.t.h9Q1lG),
-                                          onClick: () => T(p.IR.COMMUNITY),
+                                      (0, i.jsx)(_.A, {
+                                          icon: p,
+                                          message: E.intl.string(E.t.h9Q1lG),
+                                          onClick: () => D(g.IR.COMMUNITY),
                                       }),
-                                      (0, i.jsx)(g.A, {
+                                      (0, i.jsx)(_.A, {
                                           icon: d,
-                                          message: _.intl.string(_.t.uE7zcu),
-                                          onClick: () => T(p.IR.FRIENDS),
+                                          message: E.intl.string(E.t.uE7zcu),
+                                          onClick: () => D(g.IR.FRIENDS),
                                       }),
                                   ],
                               }),
-                        (0, i.jsx)(l.E, {
-                            className: L.iv,
+                        (0, i.jsx)(s.E, {
+                            className: C.iv,
                             color: "text-default",
                             variant: "text-sm/normal",
-                            children: _.intl.format(_.t["SMc+Gz"], { onSkip: () => T(null) }),
+                            children: E.intl.format(E.t["SMc+Gz"], { onSkip: () => D(null) }),
                         }),
                     ],
                 }),
-                E && (0, i.jsx)(r.jl, { "data-migration-pending": !0, justify: o.A.Justify.BETWEEN, children: b }),
+                G && (0, i.jsx)(r.jl, { "data-migration-pending": !0, justify: c.A.Justify.BETWEEN, children: b }),
             ],
         }),
         footer: b,
     };
 }
-function E(t) {
-    let { content: e } = x(t);
-    return e;
+function G(t) {
+    let { content: n } = I(t);
+    return n;
 }

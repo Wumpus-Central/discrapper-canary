@@ -17,7 +17,7 @@ var i = n(627968),
 let m = { mass: 1, tension: 800, friction: 32 },
     g = { mass: 1, tension: 1200, friction: 48 };
 var A = n(818348),
-    I = n(824078);
+    I = n(77006);
 let T = r.createContext(null),
     S = A.FX;
 function N(e) {
@@ -55,17 +55,17 @@ function N(e) {
     let q = r.useCallback((e) => {
             null != e && e !== B.current && ((B.current = e), V(e), $.current?.(e));
         }, []),
-        Z = r.useMemo(
+        X = r.useMemo(
             () => null == n.current || (n.current.closest("[data-layer]")?.getAttribute("data-layer") ?? "base") === z,
             [n, z],
         );
     r.useEffect(() => {
-        Z && s ? G(!0) : Z || G(!1);
-    }, [Z, s]),
+        X && s ? G(!0) : X || G(!1);
+    }, [X, s]),
         r.useEffect(() => {
             q(N);
         }, [N, q]);
-    let X = (function (e) {
+    let Z = (function (e) {
             let { shouldShow: t, caretPosition: n, onExitComplete: i } = e,
                 { reducedMotion: s } = r.useContext(p.C),
                 { config: a, ...o } = ((e, t) => {
@@ -171,7 +171,7 @@ function N(e) {
             return (
                 q(r),
                 s !== H.current && ((H.current = s), L?.(s)),
-                X((e, r) => {
+                Z((e, r) => {
                     if (!r) return null;
                     let d = (0, i.jsx)(l.l, {
                         ...c,

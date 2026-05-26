@@ -1,31 +1,31 @@
-n.r(t), n.d(t, { default: () => l });
-var i = n(627968);
-n(64700);
-var d = n(331322),
-    h = n(534514),
-    a = n(834730),
-    b = n(756195),
-    r = n(985018),
-    s = n(669150);
-function l() {
-    return (0, i.jsx)("div", {
-        className: s.iE,
-        children: (0, i.jsxs)(d.B, {
-            className: s.FS,
+t.r(s), t.d(s, { default: () => h });
+var r = t(627968);
+t(64700);
+var e = t(331322),
+    i = t(534514),
+    n = t(834730),
+    d = t(405198),
+    l = t(375708),
+    c = t(71454);
+function h() {
+    return (0, r.jsx)("div", {
+        className: c.iE,
+        children: (0, r.jsxs)(e.B, {
+            className: c.FS,
             gap: 16,
             padding: 32,
             children: [
-                (0, i.jsx)(h.D, {
+                (0, r.jsx)(i.D, {
                     variant: "heading-xxl/normal",
                     color: "text-strong",
-                    className: s.R_,
-                    children: r.intl.string(b.default["VAK+h9"]),
+                    className: c.R_,
+                    children: l.intl.string(d.default["VAK+h9"]),
                 }),
-                (0, i.jsx)(a.E, {
+                (0, r.jsx)(n.E, {
                     variant: "text-lg/normal",
                     color: "text-muted",
-                    className: s.Qq,
-                    children: r.intl.string(b.default.dcpdhC),
+                    className: c.Qq,
+                    children: l.intl.string(d.default.dcpdhC),
                 }),
             ],
         }),

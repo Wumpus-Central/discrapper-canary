@@ -31,7 +31,7 @@ let C = (0, n(945810).mj)({
 var v = n(652215),
     O = n(307731),
     R = n(381941),
-    b = n(909022);
+    b = n(683934);
 function D(e, t) {
     let n = t?.current?.currentTime;
     return null == n ? { attachment_id: e, timestamp: 0 } : { attachment_id: e, timestamp: Math.floor(1e3 * n) };
@@ -200,7 +200,7 @@ let H = new B(x.h, {
 });
 var j = n(7584);
 let Y = /^<(a)?:(\w+):(\d+)>$/;
-var W = n(933668);
+var W = n(227748);
 function K(e) {
     let { attachmentId: t, durationSeconds: n, isControlBarExpanded: r = !0 } = e,
         s = (0, o.bG)([H], () => H.getMentionsForAttachment(t), [t]),
@@ -250,12 +250,12 @@ function z(e) {
 }
 var $ = n(783384),
     q = n(194498),
-    Z = n(376595),
-    X = n(773503);
+    X = n(376595),
+    Z = n(773503);
 let Q = [];
 function J(e) {
     let { timeline: t, userIds: n, videoRef: s, guildId: a, channelId: o } = e,
-        l = r.useMemo(() => Z.H.fromAttachmentTimeline(t), [t]),
+        l = r.useMemo(() => X.H.fromAttachmentTimeline(t), [t]),
         [u, c] = r.useState({ speakingUserIds: [], activeSoundboards: [] });
     return (
         (0, q.A)(() => {
@@ -264,7 +264,7 @@ function J(e) {
             let t = 1e3 * e.currentTime;
             c(l.getEventsAtTimestamp(t));
         }),
-        (0, i.jsx)(X.A, {
+        (0, i.jsx)(Z.A, {
             speakingUserIds: u.speakingUserIds,
             activeSoundboards: Q,
             userIds: n,
@@ -324,9 +324,9 @@ function ea(e) {
         ],
     });
 }
-var eo = n(16590),
+var eo = n(788077),
     el = n(375708),
-    eu = n(310882);
+    eu = n(974114);
 function ec(e) {
     let { attachment: t, channelId: n, messageId: s, isControlBarExpanded: l, isPlayerActive: u } = e,
         { enableAdvancedSignals: c } = et.L_.useConfig({ location: "DistributedClipShareCTA" }),
@@ -357,10 +357,10 @@ function ec(e) {
           });
 }
 var ed = n(696016),
-    e_ = n(581874);
+    e_ = n(658610);
 let ef = (0, u.Fe)({
     createPromise: () =>
-        Promise.all([n.e("90081"), n.e("57174"), n.e("84971"), n.e("30920"), n.e("78010"), n.e("91652")]).then(
+        Promise.all([n.e("3040"), n.e("57174"), n.e("84971"), n.e("78179"), n.e("78010"), n.e("91652")]).then(
             n.bind(n, 664111),
         ),
     webpackId: 664111,
@@ -405,9 +405,9 @@ function eh(e) {
         H = (0, c.AE)({ src: n, width: Math.round(M * B), height: Math.round(P * B) }),
         [j, Y] = r.useState(!1),
         [W, z] = r.useState(!0),
-        [q, Z] = r.useState(0),
-        X = r.useCallback((e, t) => {
-            Number.isFinite(t) && t > 0 && Z((e) => (e === t ? e : t));
+        [q, X] = r.useState(0),
+        Z = r.useCallback((e, t) => {
+            Number.isFinite(t) && t > 0 && X((e) => (e === t ? e : t));
         }, []),
         Q = r.useMemo(() => t.clip_events_timeline?.some((e) => null != e.speaking) ?? !1, [t.clip_events_timeline]),
         ee = r.useMemo(() => {
@@ -518,7 +518,7 @@ function eh(e) {
             initialMuted: v,
             onVolumeChange: O,
             onMutedChange: R,
-            onProgressUpdate: X,
+            onProgressUpdate: Z,
             orientation: "landscape",
             loadingSpinnerPosition: "center",
             renderPersistentOverlay: er,

@@ -1,0 +1,15 @@
+_.exports = {
+    RV: "akaBadge__5149c",
+    uI: "subHeader__5149c",
+    H: "miniAvatar__5149c",
+    sD: "miniGuildIcon__5149c",
+    Dy: "akaTransfer__5149c",
+    v_: "guildTransfer__5149c",
+    J5: "guildName__5149c",
+    $R: "nickname__5149c",
+    YK: "spacing__5149c",
+    nS: "fromToWrapper__5149c spacing__5149c",
+    HT: "from__5149c",
+    to: "to__5149c",
+    rk: "roleSubscriptionText__5149c",
+};

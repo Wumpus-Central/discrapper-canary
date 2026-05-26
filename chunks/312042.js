@@ -1,6 +1,0 @@
-e.exports = {
-    N1: "headerContainer_f11d9e",
-    yF: "divider_f11d9e",
-    aZ: "switchItemTextContent_f11d9e",
-    hu: "setupContainer_f11d9e",
-};

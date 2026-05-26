@@ -4,11 +4,11 @@ var i = n(627968),
     r = n(342098),
     s = n(216678),
     a = n(97352),
-    o = n(166403),
-    u = n(67480),
+    u = n(166403),
+    o = n(67480),
     d = n(915043),
     c = n(163437),
-    A = n(490744),
+    A = n(897904),
     p = n(652215);
 async function I(t) {
     let {
@@ -17,16 +17,16 @@ async function I(t) {
             subscriptionGroupPlanIds: I,
             initialSubscribeForGuild: S,
             analyticsLocations: h,
-            analyticsLocation: m,
-            disableGuildSelector: g = !1,
+            analyticsLocation: f,
+            disableGuildSelector: m = !1,
         } = t,
-        { promise: x, resolve: f } = Promise.withResolvers();
-    if ((0, c.PJ)(s.flags) && !1 === g) {
+        { promise: g, resolve: x } = Promise.withResolvers();
+    if ((0, c.PJ)(s.flags) && !1 === m) {
         let { promise: t, resolve: e } = Promise.withResolvers();
         (0, l.openModalLazy)(
             async () => {
                 let { GuildSubscriptionSelectionModal: t } = await Promise.all([
-                    n.e("2373"),
+                    n.e("67525"),
                     n.e("8555"),
                     n.e("30476"),
                 ]).then(n.bind(n, 399143));
@@ -43,13 +43,13 @@ async function I(t) {
         ),
             (S = await t);
     }
-    let v = u.A.getParentSKU(s.id),
+    let v = o.A.getParentSKU(s.id),
         P = null;
     return (
         null != v &&
             ([P] = (0, d.wm)({
                 groupSku: v,
-                SubscriptionStore: o.A,
+                SubscriptionStore: u.A,
                 SubscriptionPlanStore: a.A,
                 mapSubscriptionItems: d.W_,
                 guildId: S,
@@ -64,15 +64,15 @@ async function I(t) {
             renderHeader: (t, e, n) => (0, i.jsx)(A.fs, { step: n, onClose: () => e(!1) }),
             analyticsSubscriptionType: p.rzx.APPLICATION,
             analyticsLocations: h,
-            analyticsLocation: m,
-            onComplete: f,
+            analyticsLocation: f,
+            onComplete: x,
             showBenefitsFirst: !1,
             forcesTransitionToGuild: !1,
         }),
-        x
+        g
     );
 }
 function S(t) {
     let { appId: e, skuId: n, analyticsLocations: i, checkoutFlow: l } = t;
-    (0, s.A)({ applicationId: e, skuId: n, analyticsLocations: i, checkoutFlow: l });
+    (0, s.q)({ applicationId: e, skuId: n, analyticsLocations: i, checkoutFlow: l });
 }

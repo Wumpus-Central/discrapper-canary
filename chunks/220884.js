@@ -11,15 +11,15 @@ var l = n(627968),
     h = n(676923),
     g = n(406595),
     m = n(810412),
-    E = n(509295),
-    I = n(652215),
-    A = n(499214),
-    f = n(985018);
+    I = n(509295),
+    E = n(652215),
+    A = n(21197),
+    f = n(375708);
 function p(e) {
     let {
             tab: t,
             targetId: n,
-            widgetType: p = I.uss.FRIENDS,
+            widgetType: p = E.uss.FRIENDS,
             showTooltip: S = !0,
             shouldStopPropagation: N = !0,
             className: x,
@@ -31,7 +31,7 @@ function p(e) {
                 (e) => {
                     l && (e?.preventDefault(), e?.stopPropagation());
                     let [i] = g.A.isFavorite(t, n);
-                    (0, E.k)({ tab: t, targetId: n, isFavorite: !i }),
+                    (0, I.k)({ tab: t, targetId: n, isFavorite: !i }),
                         (0, m.YX)(r, {
                             type: m.Z5.FAVORITE,
                             value: i ? m.IP.REMOVED_FROM_FAVORITES : m.IP.ADDED_TO_FAVORITES,

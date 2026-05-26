@@ -44,10 +44,10 @@ var i,
     Y = n(185797),
     W = n(652215),
     K = n(788868),
-    z = n(237146),
+    z = n(151001),
     $ = n(375708),
-    q = n(74776);
-function Z(e) {
+    q = n(823e3);
+function X(e) {
     let { openRewardModal: t } = e,
         n = (0, Y.F)();
     if (n.kind === Y.L.SUBSCRIBE)
@@ -106,7 +106,7 @@ function Z(e) {
         ],
     });
 }
-function X(e) {
+function Z(e) {
     let { glowing: t = !1 } = e;
     (0, G.A)({
         type: L.ImpressionTypes.VIEW,
@@ -116,7 +116,7 @@ function X(e) {
     let { analyticsLocations: i } = (0, E.Ay)(p.A.CROISSANT_PREMIUM_HERO_CARD),
         a = s.useCallback(() => {
             (0, w.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("16848"), n.e("10622"), n.e("77632")]).then(
+                let { default: e } = await Promise.all([n.e("30480"), n.e("10622"), n.e("55251")]).then(
                     n.bind(n, 836291),
                 );
                 return (t) => (0, r.jsx)(e, { ...t, sourceAnalyticsLocations: i });
@@ -169,7 +169,7 @@ function X(e) {
                                             className: q.h_,
                                             children: $.intl.string(z.default["+pTnsf"]),
                                         }),
-                                        (0, r.jsx)(Z, { openRewardModal: a }),
+                                        (0, r.jsx)(X, { openRewardModal: a }),
                                     ],
                                 }),
                             ],
@@ -217,8 +217,8 @@ function ee(e) {
     let { analyticsLocations: t } = (0, E.Ay)(p.A.CROISSANT_PREMIUM_PERK_CARD);
     return (0, r.jsx)(E.f5, { value: t, children: (0, r.jsx)(J, { ...e }) });
 }
-var et = n(367791),
-    en = n(672193);
+var et = n(661871),
+    en = n(851777);
 function ei(e) {
     let { id: t, sectionClassName: n, heading: i, beforeGrid: s, grid: a, gridClassName: l } = e,
         u = en.Ui;
@@ -239,7 +239,7 @@ var er = n(975571),
     el = n(581921),
     eu = n(852218),
     ec = n(382259),
-    ed = n(962995);
+    ed = n(778414);
 function e_() {
     let { analyticsLocations: e } = (0, E.Ay)(p.A.PREMIUM_MARKETING_PERK_CARD),
         t = (0, eo.YS)({ location: "useWhatsNewPerkCards" }).functionalityEnabled,
@@ -308,7 +308,7 @@ function e_() {
         };
     }, [o, e, l, t, u, n, i, a]);
 }
-var ef = n(102338);
+var ef = n(883010);
 let eh = "xgpp";
 function ep(e) {
     let { glowingSectionId: t } = e,
@@ -324,7 +324,7 @@ function ep(e) {
             className: o()(en.R_, et.U6),
             children: $.intl.string($.t.NG1e6l),
         }),
-        beforeGrid: (0, r.jsx)("div", { className: et.JE, children: (0, r.jsx)(X, { glowing: t === eh }) }),
+        beforeGrid: (0, r.jsx)("div", { className: et.JE, children: (0, r.jsx)(Z, { glowing: t === eh }) }),
         grid: a
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -337,7 +337,7 @@ function ep(e) {
     });
 }
 var eE = n(65470),
-    em = n(797221);
+    em = n(91301);
 let eg = (e) => {
     let { className: t, location: n, analyticsLocation: i } = e,
         { analyticsLocations: s } = (0, E.Ay)(n);
@@ -418,10 +418,10 @@ var eS = n(502572),
     ez = n(854627),
     e$ = n(427262),
     eq = n(326084),
-    eZ = n(851746),
-    eX = n(664654),
+    eX = n(851746),
+    eZ = n(664654),
     eQ = n(212737),
-    eJ = n(849812);
+    eJ = n(378900);
 let e0 = (e) => {
         let { user: t } = e,
             { avatarSrc: n, eventHandlers: i } = (0, ez.A)({ userId: t.id, size: ej._3.SIZE_24 });
@@ -441,7 +441,7 @@ let e0 = (e) => {
             className: eJ.L$,
             children: (() => {
                 let e = [];
-                for (let n = 0; n < eX.Z; n++)
+                for (let n = 0; n < eZ.Z; n++)
                     if (t?.[n] !== void 0) {
                         let i = (0, r.jsx)(e0, { user: t[n] }, t[n].id);
                         e.push(i);
@@ -461,7 +461,7 @@ let e0 = (e) => {
             background: eJ.cq,
             strokeSize: 0.8,
             ringColorOverrideClassName: eJ.e0,
-            overlayClassName: t === eX.Z ? eJ.ys : void 0,
+            overlayClassName: t === eZ.Z ? eJ.ys : void 0,
             children: (0, r.jsx)(eK._, {
                 src: "https://cdn.discordapp.com/assets/content/f55a25cc26b81c0d72e110bb7fd978e6aff78e847f53b34011ba4600be592975.svg",
                 height: 93,
@@ -472,11 +472,11 @@ let e0 = (e) => {
     },
     e6 = (e) => {
         let { className: t } = e,
-            { referralSentUsers: i } = (0, eX.J)(),
-            s = (0, u.bG)([eZ.A], () => eZ.A.getRecipientStatus()),
-            a = (0, u.bG)([eZ.A], () => eZ.A.getHasEligibleFriends()),
-            l = s.size === eX.Z && [...s.values()].every((e) => e === eq.aK.REDEEMED),
-            c = s.size === eX.Z;
+            { referralSentUsers: i } = (0, eZ.J)(),
+            s = (0, u.bG)([eX.A], () => eX.A.getRecipientStatus()),
+            a = (0, u.bG)([eX.A], () => eX.A.getHasEligibleFriends()),
+            l = s.size === eZ.Z && [...s.values()].every((e) => e === eq.aK.REDEEMED),
+            c = s.size === eZ.Z;
         return (0, r.jsxs)("div", {
             className: o()(eJ.kL, t),
             children: [
@@ -501,7 +501,7 @@ let e0 = (e) => {
                                             ? $.intl.format($.t["zWhX/Q"], {
                                                   helpdeskArticle: er.A.getArticleURL(W.MVz.REFERRAL_PROGRAM),
                                               })
-                                            : i.length === eX.Z
+                                            : i.length === eZ.Z
                                               ? !0 === l
                                                   ? $.intl.format($.t["1aEjsH"], {
                                                         helpdeskArticle: er.A.getArticleURL(W.MVz.REFERRAL_PROGRAM),
@@ -542,7 +542,7 @@ let e0 = (e) => {
 var e4 = n(989349),
     e5 = n.n(e4),
     e7 = n(496431),
-    e8 = n(116689);
+    e8 = n(369617);
 let e9 = (e) => {
     let { expiresAt: t, className: n } = e,
         i = (0, e7.A)(e5()(t).toDate(), 1e3);
@@ -637,7 +637,7 @@ var te = n(473702),
     tt = n(702841),
     tn = n(652533),
     ti = n(20458),
-    tr = n(447764),
+    tr = n(21588),
     ts = n(180894);
 let ta = (e) => {
     let { containerVisibilityPercentage: t } = e,
@@ -676,7 +676,7 @@ let ta = (e) => {
     });
 };
 var to = n(707554),
-    tl = n(218199);
+    tl = n(966423);
 let tu = (e) => {
     let { className: t, color: n = "text-strong", responsive: i = !0, children: s } = e;
     return (0, r.jsx)(to.F, {
@@ -686,7 +686,7 @@ let tu = (e) => {
 };
 var tc = n(725807),
     td = n(774774),
-    t_ = n(975916);
+    t_ = n(164332);
 let tf = () => {
     let e = { section: W.JJy.REVERSE_TRIAL_BANNER };
     return (0, r.jsxs)("div", {
@@ -717,7 +717,7 @@ let tf = () => {
         ],
     });
 };
-var th = n(18671);
+var th = n(245807);
 let tp = () => {
     let e = (0, tt.bG)([eC.A], () => eC.A.useReducedMotion);
     return (0, r.jsx)(ti.A, {
@@ -733,7 +733,7 @@ let tp = () => {
         boltAssetClassName: th.vy,
     });
 };
-var tE = n(97584);
+var tE = n(168880);
 let tm = (e) => {
         let { fpEndsAt: t, className: n, buttonVisibilityRef: i } = e,
             s = (0, C.Zb)(t);
@@ -885,15 +885,15 @@ let tm = (e) => {
                                                   void (0, w.openModalLazy)(async () => {
                                                       let { PremiumBrandRefreshSubscriptionCancellationModal: t } =
                                                           await Promise.all([
-                                                              n.e("34218"),
-                                                              n.e("70750"),
-                                                              n.e("61097"),
-                                                              n.e("90081"),
-                                                              n.e("52887"),
-                                                              n.e("26105"),
-                                                              n.e("46461"),
-                                                              n.e("94908"),
-                                                              n.e("16581"),
+                                                              n.e("22634"),
+                                                              n.e("91494"),
+                                                              n.e("24769"),
+                                                              n.e("3040"),
+                                                              n.e("93814"),
+                                                              n.e("40965"),
+                                                              n.e("96413"),
+                                                              n.e("69117"),
+                                                              n.e("70405"),
                                                               n.e("23924"),
                                                               n.e("42205"),
                                                               n.e("71091"),
@@ -906,10 +906,10 @@ let tm = (e) => {
                                                               n.e("96643"),
                                                               n.e("94493"),
                                                               n.e("92789"),
-                                                              n.e("47834"),
+                                                              n.e("2773"),
                                                               n.e("74016"),
                                                               n.e("19551"),
-                                                              n.e("6338"),
+                                                              n.e("36845"),
                                                               n.e("3178"),
                                                               n.e("5636"),
                                                               n.e("87196"),
@@ -1003,7 +1003,7 @@ let tm = (e) => {
     };
 var tS = n(873174),
     tN = n(717421),
-    ty = n(98812),
+    ty = n(842300),
     tC = n(67423);
 let tv = function (e) {
     let { isVisible: t, premiumSubscription: i, churnDiscountOffer: s, discountedPrice: a } = e,
@@ -1047,15 +1047,15 @@ let tv = function (e) {
                     onClick: () =>
                         void (0, w.openModalLazy)(async () => {
                             let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
-                                n.e("34218"),
-                                n.e("70750"),
-                                n.e("61097"),
-                                n.e("90081"),
-                                n.e("52887"),
-                                n.e("26105"),
-                                n.e("46461"),
-                                n.e("94908"),
-                                n.e("16581"),
+                                n.e("22634"),
+                                n.e("91494"),
+                                n.e("24769"),
+                                n.e("3040"),
+                                n.e("93814"),
+                                n.e("40965"),
+                                n.e("96413"),
+                                n.e("69117"),
+                                n.e("70405"),
                                 n.e("23924"),
                                 n.e("42205"),
                                 n.e("71091"),
@@ -1068,10 +1068,10 @@ let tv = function (e) {
                                 n.e("96643"),
                                 n.e("94493"),
                                 n.e("92789"),
-                                n.e("47834"),
+                                n.e("2773"),
                                 n.e("74016"),
                                 n.e("19551"),
-                                n.e("6338"),
+                                n.e("36845"),
                                 n.e("3178"),
                                 n.e("5636"),
                                 n.e("87196"),
@@ -1249,8 +1249,8 @@ var tY = n(462887),
     tz = n(206835),
     t$ = n(976860),
     tq = n(591179),
-    tZ = n(462463),
-    tX = n(878784),
+    tX = n(462463),
+    tZ = n(878784),
     tQ = n(425713),
     tJ = n(975807),
     t0 = n(562819),
@@ -1262,8 +1262,8 @@ var tY = n(462887),
     t5 = n(892227),
     t7 = n(81466),
     t8 = n(318254),
-    t9 = n(490285),
-    ne = n(875679);
+    t9 = n(587416),
+    ne = n(170463);
 let nt = () => {
     let { passesGeneralUIInvariant: e, programReward: t } = (0, I.F)({ location: "NitroOrbsWhatsNewCardFooter" });
     if (!e || null == t) return null;
@@ -1326,13 +1326,13 @@ var nn = n(655752),
     ni = n(764231),
     nr = n(627380),
     ns = n(30084),
-    na = n(792641),
+    na = n(455873),
     no = n(714206),
     nl = n(88001),
     nu = n(758836),
     nc = n(190107),
-    nd = n(466919),
-    n_ = n(555599),
+    nd = n(963458),
+    n_ = n(853903),
     nf = n(817577);
 let nh =
         "https://cdn.discordapp.com/assets/content/0722a293c878afdc8718373a6436d7fa1f06014597d138d824d7bb5da55d3d7f.svg",
@@ -1348,7 +1348,7 @@ function nm() {
         c = (0, D.l)("premium_subscriber_home_rewards"),
         d = (0, u.bG)([N.A], () => N.A.getPremiumTypeSubscription()),
         _ = d?.hasActiveTrial ?? !1,
-        f = (0, tZ.A)({ analyticsLocations: e }),
+        f = (0, tX.A)({ analyticsLocations: e }),
         h = (0, s.useCallback)(() => {
             (0, eb.openUserSettings)(eR.X.PROFILE_PANEL, { analyticsLocations: e }, () =>
                 (0, tK.L)({ analyticsLocations: e }),
@@ -1380,18 +1380,18 @@ function nm() {
         S = (function (e) {
             let { fractionalState: t } = (0, eO.A)(),
                 n = t === K.xc.FP_ONLY,
-                i = (0, tX.$F)(),
-                r = (0, tX.Xb)(),
-                a = i?.status === tX.Wo.UPCOMING || n,
+                i = (0, tZ.$F)(),
+                r = (0, tZ.Xb)(),
+                a = i?.status === tZ.Wo.UPCOMING || n,
                 l = (0, tQ.N)(i?.id),
                 c = (function () {
-                    let e = (0, tX.$F)(),
+                    let e = (0, tZ.$F)(),
                         t = (0, nn.P)(),
-                        n = (0, tX.Xb)();
+                        n = (0, tZ.Xb)();
                     if (null == e || null == t || null == n) return null;
                     let i = e5()(),
                         r = e5()(n),
-                        s = e.status === tX.Wo.UPCOMING ? 0 : e.tenureReqNumMonths,
+                        s = e.status === tZ.Wo.UPCOMING ? 0 : e.tenureReqNumMonths,
                         a = t.tenureReqNumMonths,
                         o = r.clone().add(s, "months"),
                         l = r.clone().add(a, "months").diff(o);
@@ -1406,7 +1406,7 @@ function nm() {
                 null == i
                     ? n && (t = (0, ni.T)(K.Ac.PREMIUM_TENURE_1_MONTH, 1) ?? void 0)
                     : (t =
-                          i.status === tX.Wo.UPCOMING
+                          i.status === tZ.Wo.UPCOMING
                               ? $.intl.formatToPlainString($.t.a1eKDi, { days: _?.days ?? 0 })
                               : ((function (e, t) {
                                     if (null != e && null != t) {
@@ -1556,7 +1556,7 @@ let nS = [
     { id: "upgrades", label: () => $.intl.string($.t.KC5q8v) },
     { id: "vip", label: () => $.intl.string($.t.DjEAcv) },
 ];
-var nN = n(758495);
+var nN = n(533407);
 let ny = (e) => {
     e.stopPropagation();
 };
@@ -1565,7 +1565,7 @@ function nC(e) {
         n = (function () {
             let e = (0, tW.DP)(),
                 t = (0, tq.X)("useFavoritesPerkCards"),
-                n = (0, tX.Lh)(),
+                n = (0, tZ.Lh)(),
                 i = (0, tQ.N)(n)?.standard ?? null,
                 { analyticsLocations: a } = (0, E.Ay)(p.A.PREMIUM_MARKETING_PERK_CARD),
                 o = (0, tz.A)({ scrollPosition: ng._F.TRY_IT_OUT, analyticsLocations: a }),
@@ -1584,7 +1584,7 @@ function nC(e) {
                 _ = (0, s.useCallback)(() => {
                     (0, eb.openUserSettings)(eR.X.SOUNDBOARD_CATEGORY, { analyticsLocations: a });
                 }, [a]),
-                f = (0, tZ.A)({ analyticsLocations: a }),
+                f = (0, tX.A)({ analyticsLocations: a }),
                 h = (0, s.useCallback)(() => {
                     (0, eb.openUserSettings)(eR.X.PROFILE_PANEL, { analyticsLocations: a }, () =>
                         (0, tK.L)({ analyticsLocations: a }),
@@ -1796,7 +1796,7 @@ function nv(e) {
     });
 }
 var nO = n(994763),
-    nR = n(946062),
+    nR = n(177934),
     nb = n(79119);
 let nD = "section",
     nL = "perk",
@@ -1843,8 +1843,8 @@ let nD = "section",
             Y = null != V && null != D && D.status === W.Dmq.CANCELED,
             z = (0, R.iU)(K.gD.PREMIUM_MONTH_TIER_2, V, D),
             q = !H && Y,
-            { analyticsLocations: Z } = (0, E.Ay)(p.A.PREMIUM_SUBSCRIBER_NITRO_HOME),
-            [X, Q] = s.useState(!1);
+            { analyticsLocations: X } = (0, E.Ay)(p.A.PREMIUM_SUBSCRIBER_NITRO_HOME),
+            [Z, Q] = s.useState(!1);
         return null != (0, u.bG)([T.A], () => (null != t ? T.A.getUserProfile(t) : null)) && (L || null != w)
             ? (0, r.jsxs)(_.Gt, {
                   className: nR.xW,
@@ -1855,7 +1855,7 @@ let nD = "section",
                           className: o()(nR.kL, nR.Gd),
                           offsetBottom: n ? 0.55 : 0.8,
                           children: (0, r.jsxs)(E.f5, {
-                              value: Z,
+                              value: X,
                               children: [
                                   (0, r.jsx)(c.L, {
                                       innerRef: B,
@@ -1882,9 +1882,9 @@ let nD = "section",
                                       innerRef: b,
                                       onChange: (e) => {
                                           e &&
-                                              !X &&
+                                              !Z &&
                                               (y.default.track(W.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                                                  location_stack: Z,
+                                                  location_stack: X,
                                               }),
                                               Q(!0));
                                       },

@@ -1,37 +1,37 @@
-i.d(e, { default: () => _ });
-var n = i(627968),
-    s = i(64700),
-    a = i(503698),
-    l = i.n(a),
-    o = i(189213),
-    c = i(834730),
-    d = i(46054),
-    r = i(203982),
-    p = i(652215),
-    u = i(985018),
-    h = i(80353),
-    x = i(992595);
-function _(t) {
-    let { channel: e, isFromComposer: i, transitionState: a, onClose: _ } = t;
+e.d(i, { default: () => C });
+var n = e(627968),
+    s = e(64700),
+    a = e(503698),
+    l = e.n(a),
+    d = e(189213),
+    c = e(834730),
+    o = e(46054),
+    r = e(625494),
+    u = e(652215),
+    h = e(375708),
+    p = e(312225),
+    x = e(168147);
+function C(t) {
+    let { channel: i, isFromComposer: e, transitionState: a, onClose: C } = t;
     return (
         s.useEffect(
             () => () => {
-                i && r._.dispatch(p.jej.FOCUS_COMPOSER_TITLE);
+                e && r._.dispatch(u.jej.FOCUS_COMPOSER_TITLE);
             },
-            [i],
+            [e],
         ),
-        (0, n.jsx)(o.Modal, {
+        (0, n.jsx)(d.Modal, {
             transitionState: a,
-            onClose: _,
-            title: u.intl.string(u.t["4d4T4l"]),
-            actions: [{ text: u.intl.string(u.t["NX+WJN"]), onClick: _ }],
+            onClose: C,
+            title: h.intl.string(h.t["4d4T4l"]),
+            actions: [{ text: h.intl.string(h.t["NX+WJN"]), onClick: C }],
             children: (0, n.jsx)(c.E, {
-                className: l()(h.Q, x.PT),
+                className: l()(p.Q, x.PT),
                 variant: "text-sm/normal",
                 color: "text-default",
                 children: (0, n.jsx)("div", {
-                    children: d.A.parseForumPostGuidelines(e.topic, !0, {
-                        channelId: e.id,
+                    children: o.A.parseForumPostGuidelines(i.topic, !0, {
+                        channelId: i.id,
                         allowHeading: !0,
                         allowList: !0,
                     }),

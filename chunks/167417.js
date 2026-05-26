@@ -1,34 +1,34 @@
-a.d(l, { $: () => c });
-var t = a(627968),
-    o = a(64700),
-    n = a(47948),
-    i = a(568385),
-    r = a(150934),
-    s = a(452027),
-    d = a(460890),
-    u = a(1172);
-function c(e) {
-    let { onChange: l, options: a, selectedValues: c, disabled: b = !1, ...p } = e,
-        m = o.useContext(d.VO),
-        h = m?.experiments?.enabledExperiments?.includes("mana-toggle-inputs");
-    return (0, t.jsx)(s.D, {
-        ...p,
+i.d(a, { $: () => u });
+var l = i(627968),
+    n = i(64700),
+    d = i(47948),
+    s = i(568385),
+    c = i(150934),
+    r = i(452027),
+    t = i(460890),
+    o = i(472276);
+function u(e) {
+    let { onChange: a, options: i, selectedValues: u, disabled: p = !1, ...h } = e,
+        b = n.useContext(t.VO),
+        g = b?.experiments?.enabledExperiments?.includes("mana-toggle-inputs");
+    return (0, l.jsx)(r.D, {
+        ...h,
         role: "group",
-        children: h
-            ? (0, t.jsx)(n.$Q, {
-                  className: u.O,
-                  value: c.map(String),
+        children: g
+            ? (0, l.jsx)(d.$Q, {
+                  className: o.O,
+                  value: u.map(String),
                   onChange: (e) => {
-                      l?.(e);
+                      a?.(e);
                   },
                   "data-mana-component": "checkbox-group",
-                  isDisabled: b,
-                  children: a.map((e) =>
-                      (0, t.jsx)(
-                          i.J,
+                  isDisabled: p,
+                  children: i.map((e) =>
+                      (0, l.jsx)(
+                          s.J,
                           {
-                              disabled: b || e.disabled,
-                              checked: c.includes(e.value),
+                              disabled: p || e.disabled,
+                              checked: u.includes(e.value),
                               label: e.label,
                               value: e.value,
                               description: e.description,
@@ -38,23 +38,23 @@ function c(e) {
                       ),
                   ),
               })
-            : (0, t.jsx)("div", {
-                  className: u.O,
-                  children: a.map((e) =>
-                      (0, t.jsx)(
+            : (0, l.jsx)("div", {
+                  className: o.O,
+                  children: i.map((e) =>
+                      (0, l.jsx)(
                           "div",
                           {
-                              className: u.I,
-                              children: (0, t.jsx)(r.K, {
-                                  disabled: b || e.disabled,
-                                  checked: c.includes(e.value),
+                              className: o.I,
+                              children: (0, l.jsx)(c.K, {
+                                  disabled: p || e.disabled,
+                                  checked: u.includes(e.value),
                                   label: e.label,
                                   description: e.description,
                                   leadingIcon: e.leadingIcon,
-                                  onChange: (a) => {
-                                      var t;
-                                      let o;
-                                      return (t = e.value), (o = a ? [...c, t] : c.filter((e) => e !== t)), void l?.(o);
+                                  onChange: (i) => {
+                                      var l;
+                                      let n;
+                                      return (l = e.value), (n = i ? [...u, l] : u.filter((e) => e !== l)), void a?.(n);
                                   },
                               }),
                           },

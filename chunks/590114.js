@@ -28,11 +28,11 @@ function C(t) {
 var R = i(186111),
     S = i(742077),
     P = i(268387),
-    j = i(715671),
+    j = i(113673),
     w = i(652215),
     _ = i(650583),
-    v = i(985018),
-    L = i(326112);
+    v = i(375708),
+    L = i(212064);
 class E extends l.Component {
     searchBarRef = l.createRef();
     state = { focused: !1 };
@@ -126,9 +126,9 @@ var D = i(657044),
     M = i(761508),
     B = i(742589),
     O = i(976860),
-    U = i(954571),
+    U = i(174459),
     k = i(144914),
-    V = i(256855);
+    V = i(659159);
 let G = (0, k.S)() || !1,
     H = l.memo(function (t) {
         let { currentRoute: e, renderToolbar: i } = t,
@@ -180,7 +180,7 @@ var K = i(451988),
     q = i(235986),
     $ = i(596719),
     Z = i(137177),
-    tt = i(290987),
+    tt = i(529433),
     te = i(674378),
     ti = i(240248),
     tn = i(565787),
@@ -323,7 +323,7 @@ let tm = y.Ay.connectStores([ta.A], (t) => {
     let { libraryApplication: e } = t;
     return { cloudSyncState: ta.A.getState(e.id, e.branchId) };
 })(tA);
-var tg = i(855189);
+var tg = i(108117);
 let tx = (0, ti.xI)(X.A.GAME_LIST_ROW_MIN_HEIGHT),
     tf = (0, ti.xI)(X.A.GAME_LIST_LINKED_TO_GLOW_DURATION),
     ty = Object.freeze({ [w.DpB.PLATFORM]: "Platform", [w.DpB.LAST_PLAYED]: "Last Played", [w.DpB.NAME]: "Name" }),
@@ -719,7 +719,7 @@ var tS = i(735438),
     tX = i(255438),
     tz = i(505806),
     tW = i(998304),
-    tY = i(936593);
+    tY = i(112145);
 class tJ extends l.PureComponent {
     dataChangedAt;
     fillColor;
@@ -804,7 +804,7 @@ class tJ extends l.PureComponent {
         });
     }
 }
-var tQ = i(743827);
+var tQ = i(447187);
 let tq = function (t) {
     let { title: e, className: i, color: l, animate: s, getHistoricalTotalBytes: a } = t;
     return (0, n.jsx)(tz.A, {
@@ -851,7 +851,7 @@ let tq = function (t) {
         },
     });
 };
-var t$ = i(692275);
+var t$ = i(990579);
 let tZ = (t) => {
         let { className: e, children: i, onContextMenu: l, item: s } = t;
         return (0, n.jsx)("div", { className: e, onContextMenu: (t) => l(t, s), children: i });
@@ -864,7 +864,7 @@ let tZ = (t) => {
             children: (0, n.jsx)(tj.K, { "aria-label": e, variant: "secondary", icon: l, onClick: i, size: "sm" }),
         });
     };
-function t5(t, e) {
+function t4(t, e) {
     switch (e) {
         case w.OQC.POST_INSTALL_SCRIPTS:
         case w.OQC.PLANNING:
@@ -875,7 +875,7 @@ function t5(t, e) {
             return (0, tX.Xq)(t, { useKibibytes: !0 });
     }
 }
-let t4 = {
+let t5 = {
     [w.WTw.INSTALLING]: {
         [tt.pJ.NONE]: (t, e, i, n) => v.intl.formatToPlainString(v.t.JfJt9d, { percent: t, progress: e, total: i }),
         [tt.pJ.SECONDS]: (t, e, i, n) =>
@@ -905,7 +905,7 @@ let t4 = {
     },
 };
 function t2(t, e, i, n, l) {
-    let s = t4[e],
+    let s = t5[e],
         a = null != s ? Object.keys(s) : [],
         { unit: r, time: o } = (0, tt.$l)(null != t ? t / 60 : null, a);
     if (null != s && null != r) {
@@ -914,10 +914,10 @@ function t2(t, e, i, n, l) {
     }
     return null;
 }
-function t6(t) {
+function t3(t) {
     let { type: e, stage: i, percent: n, progress: l, total: s, secondsRemaining: a } = t,
-        r = t5(s, i),
-        o = t5(l, i);
+        r = t4(s, i),
+        o = t4(l, i);
     switch (i) {
         case w.OQC.QUEUED:
             if (0 === l) return v.intl.string(v.t.RpfBqd);
@@ -942,7 +942,7 @@ function t6(t) {
     }
     throw Error("Invalid Dispatch stage");
 }
-class t3 extends l.PureComponent {
+class t6 extends l.PureComponent {
     get isFocused() {
         let { cellProps: t } = this.props;
         return null != t && t.isFocused;
@@ -997,8 +997,8 @@ class t3 extends l.PureComponent {
         if (null != i) {
             let { progress: n, total: l, stage: s } = i;
             if (null != n && null != l) {
-                let i = t5(l, s),
-                    a = t5(n, s),
+                let i = t4(l, s),
+                    a = t4(n, s),
                     r = Math.floor((e = te.uA(n, l)));
                 t =
                     s === w.OQC.PAUSING
@@ -1053,7 +1053,7 @@ class t3 extends l.PureComponent {
             c = te.uA(r ?? 0, s),
             d = (t[t.length - 1] / e) * 1e3,
             h = s - l,
-            u = t6({
+            u = t3({
                 type: a,
                 stage: n,
                 percent: Math.floor(o),
@@ -1079,7 +1079,7 @@ class t3 extends l.PureComponent {
             a = Math.floor(s);
         return this.renderBody({
             percent: s,
-            message: t6({ type: l, stage: n, percent: a, progress: i, total: e }),
+            message: t3({ type: l, stage: n, percent: a, progress: i, total: e }),
             foregroundColor: tw.A.unsafe_rawColors.BLUE_345.css,
         });
     }
@@ -1142,7 +1142,7 @@ let t7 = () => (0, n.jsx)(t1, { icon: tE.u, tooltip: v.intl.string(v.t.YGm6SZ), 
             cellClassName: t$.Ay,
             headerCellClassName: t$.VD,
             bodyCellClassName: t$.so,
-            render: (t, e) => (0, n.jsx)(t3, { item: t, cellProps: e }),
+            render: (t, e) => (0, n.jsx)(t6, { item: t, cellProps: e }),
         },
         {
             key: "actions",
@@ -1286,7 +1286,7 @@ let el = (0, tU.A)(
     }))((0, tO.A)(ei)),
 );
 var es = i(613057),
-    ea = i(20438);
+    ea = i(318742);
 class er extends l.PureComponent {
     _scrollerRef = l.createRef();
     _scrollToOnMount;
@@ -1350,7 +1350,7 @@ var eo = i(665260),
     ep = i(404778),
     eA = i(364522),
     em = i(59636),
-    eg = i(253932),
+    eg = i(885386),
     ex = i(314116),
     ef = i(834730),
     ey = i(821609),
@@ -1361,7 +1361,7 @@ var eo = i(665260),
     eR = i(452027),
     eS = i(466472),
     eP = i(29160),
-    ej = i(834911);
+    ej = i(940895);
 let ew = Math.ceil(2 * Math.PI * 20),
     e_ = (t) => {
         let e,
@@ -1406,8 +1406,8 @@ let ew = Math.ceil(2 * Math.PI * 20),
 var ev = i(775228),
     eL = i(723702),
     eE = i(19575),
-    eb = i(744832),
-    eD = i(818050);
+    eb = i(449600),
+    eD = i(373378);
 class eM extends l.PureComponent {
     state = { label: void 0, isDefault: null };
     handleStartEditing = () => {
@@ -1638,7 +1638,7 @@ let eO = y.Ay.connectStores([ev.A], () => ({
     installationPathsMetadata: ev.A.installationPathsMetadata,
     defaultInstallationPath: ev.A.defaultInstallationPath,
 }))(eB);
-var eU = i(869187);
+var eU = i(810947);
 function ek(t) {
     let { applicationViewItems: e, restoreApplication: i } = t;
     if (0 === e.length) return null;
@@ -1751,7 +1751,7 @@ function eG() {
     };
     return (0, n.jsx)(eV, { ...t });
 }
-var eH = i(536813);
+var eH = i(141101);
 function eK() {
     return (0, n.jsxs)(s.dO, {
         children: [

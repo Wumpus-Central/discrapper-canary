@@ -4,7 +4,7 @@ var r = t(627968),
     c = t(503698),
     i = t.n(c),
     n = t(872351),
-    o = t(590900);
+    o = t(73927);
 let a = { UP: "up", RIGHT: "right", DOWN: "down", LEFT: "left" },
     d = { [a.UP]: "", [a.RIGHT]: o.pG, [a.DOWN]: o.TR, [a.LEFT]: o.kb };
 class l extends p.PureComponent {

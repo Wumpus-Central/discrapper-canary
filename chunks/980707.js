@@ -113,7 +113,7 @@ function v(e) {
 }
 var O = n(477782),
     R = n(900283),
-    b = n(32271);
+    b = n(359823);
 function D() {
     let e = v("MenuSeparator");
     return (0, r.jsx)("div", {
@@ -347,8 +347,8 @@ function z(e) {
 }
 var $ = n(502939),
     q = n(623646),
-    Z = n(962125);
-function X(e) {
+    X = n(962125);
+function Z(e) {
     let { parentItem: t, isFocused: n, menuSubmenuProps: i, rows: a, rowHeight: o, onScroll: l, listClassName: u } = e,
         c = s.useRef(null),
         d = s.useRef(null),
@@ -371,7 +371,7 @@ function X(e) {
                     className: b.submenu,
                     ...E,
                     ref: _,
-                    children: (0, r.jsx)(Z.A, {
+                    children: (0, r.jsx)(X.A, {
                         ref: f,
                         className: u,
                         listPadding: [6, 0, 6, 8],
@@ -1195,7 +1195,7 @@ function e_(e) {
                                             ? null != o
                                                 ? c.push(
                                                       (0, r.jsx)(
-                                                          X,
+                                                          Z,
                                                           {
                                                               ...l.props,
                                                               parentItem: E,

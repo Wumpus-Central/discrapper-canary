@@ -1,62 +1,62 @@
-n.d(a, { default: () => m });
-var t = n(627968);
-n(64700);
-var i = n(503698),
-    c = n.n(i),
-    _ = n(224640),
-    r = n(696208),
-    o = n(573613),
-    s = n(534514),
-    l = n(270003),
-    d = n(915089),
-    f = n(225858),
-    x = n(895600),
-    h = n(985018),
-    p = n(31208);
-function m(e) {
-    let { transitionState: a, onClose: n, guildTemplate: i } = e,
-        { form: m, preview: u, handleSubmit: C } = (0, f.A)(i, !1),
-        v = (0, d.GV)();
-    return (0, t.jsxs)(_.d, {
+i.d(a, { default: () => m });
+var e = i(627968);
+i(64700);
+var n = i(503698),
+    l = i.n(n),
+    t = i(224640),
+    r = i(696208),
+    c = i(364522),
+    d = i(534514),
+    x = i(270003),
+    h = i(915089),
+    j = i(871194),
+    o = i(895600),
+    p = i(375708),
+    u = i(779432);
+function m(s) {
+    let { transitionState: a, onClose: i, guildTemplate: n } = s,
+        { form: m, preview: v, handleSubmit: C } = (0, j.A)(n, !1),
+        N = (0, h.GV)();
+    return (0, e.jsxs)(t.d, {
         transitionState: a,
-        onClose: n,
+        onClose: i,
         size: "xxl",
-        "aria-labelledby": v,
+        "aria-labelledby": N,
         children: [
-            (0, t.jsxs)("div", {
-                className: p.jT,
+            (0, e.jsxs)("div", {
+                className: u.jT,
                 children: [
-                    (0, t.jsx)("div", {
-                        className: c()(p.jx, p.Iz),
-                        children: (0, t.jsx)("div", {
-                            className: p.OQ,
-                            children: (0, t.jsx)(x.A, { guildTemplate: i, headerId: v }),
+                    (0, e.jsx)("div", {
+                        className: l()(u.jx, u.Iz),
+                        children: (0, e.jsx)("div", {
+                            className: u.OQ,
+                            children: (0, e.jsx)(o.A, { guildTemplate: n, headerId: N }),
                         }),
                     }),
-                    (0, t.jsx)("div", {
-                        className: c()(p.jx, p.gy),
-                        children: (0, t.jsxs)(o.Ip, {
-                            className: p.KJ,
+                    (0, e.jsx)("div", {
+                        className: l()(u.jx, u.gy),
+                        children: (0, e.jsxs)(c.Ip, {
+                            className: u.KJ,
                             children: [
-                                (0, t.jsx)(s.D, {
+                                (0, e.jsx)(d.D, {
                                     variant: "heading-xl/semibold",
-                                    className: p.wx,
-                                    children: h.intl.string(h.t.UNFvtM),
+                                    className: u.wx,
+                                    children: p.intl.string(p.t.UNFvtM),
                                 }),
-                                (0, t.jsxs)(l.n, { children: [m, u] }),
+                                (0, e.jsxs)(x.n, { children: [m, v] }),
                             ],
                         }),
                     }),
                 ],
             }),
-            (0, t.jsx)(r.H, {
+            (0, e.jsx)(r.H, {
                 actions: [
-                    { variant: "secondary", text: h.intl.string(h.t.cpT0Cq), onClick: n },
+                    { variant: "secondary", text: p.intl.string(p.t.cpT0Cq), onClick: i },
                     {
                         variant: "primary",
-                        text: h.intl.string(h.t.CumH4u),
+                        text: p.intl.string(p.t.CumH4u),
                         onClick: async () => {
-                            null != (await C()) && n();
+                            null != (await C()) && i();
                         },
                     },
                 ],

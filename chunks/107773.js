@@ -137,7 +137,7 @@ function D(e, t) {
     }
 }
 var L = n(652215),
-    w = n(40544);
+    w = n(628192);
 let M = {
     [O._.STAFF]: {
         IconComponent: u.V,
@@ -281,8 +281,8 @@ function U(e) {
         z = (0, l.M)(v) ? F : V;
     (t = t ?? K), (n = n ?? z);
     let $ = Math.floor(0.75 * y) - (W ?? 0),
-        { tooltipTitle: q, tooltipSubtitle: Z } = D(P, b.visibility),
-        X = m ?? (null != Z ? Z : q);
+        { tooltipTitle: q, tooltipSubtitle: X } = D(P, b.visibility),
+        Z = m ?? (null != X ? X : q);
     return (0, i.jsx)(p.ST, {
         color: s,
         position: o,
@@ -291,7 +291,7 @@ function U(e) {
         tooltipContentClassName: w.Hj,
         children: (e) =>
             (0, i.jsx)(E.D, {
-                "aria-label": X,
+                "aria-label": Z,
                 onClick: k,
                 tabIndex: 0,
                 children: (0, i.jsx)(A.A, {

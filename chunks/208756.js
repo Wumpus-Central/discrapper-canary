@@ -6,7 +6,7 @@ var r = n(503698),
     s = n.n(r),
     a = n(825484),
     o = n(821609),
-    l = n(824078);
+    l = n(77006);
 function u(e) {
     let { actions: t, className: n } = e;
     return (0, i.jsx)("div", {

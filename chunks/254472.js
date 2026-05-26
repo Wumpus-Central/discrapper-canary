@@ -80,7 +80,7 @@ var x = n(43105),
     eC = n(403362),
     ev = n(652215),
     eO = n(375708),
-    eR = n(621035);
+    eR = n(727019);
 function eb(e, t) {
     return 0 === t.length
         ? null
@@ -204,8 +204,8 @@ function ew(e) {
 var eM = n(97483),
     eP = n(49999),
     ex = n(788868),
-    eU = n(335993),
-    ek = n(959495),
+    eU = n(574004),
+    ek = n(901255),
     eG = n(988572);
 let eF = { analyticsSource: { page: ev.liQ.GUILD_CHANNEL, section: ev.JJy.CHANNEL_LIST, object: ev.ZSU.CHANNEL } };
 function eV(e) {
@@ -310,8 +310,8 @@ function eV(e) {
                           e &&
                               (0, g.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
-                                      n.e("46776"),
-                                      n.e("94494"),
+                                      n.e("82052"),
+                                      n.e("26366"),
                                       n.e("36946"),
                                       n.e("92639"),
                                       n.e("40963"),
@@ -699,10 +699,10 @@ class tO extends s.PureComponent {
         null != i
             ? (0, tu.L3)(e, async () => {
                   let { default: e } = await Promise.all([
-                      n.e("26705"),
-                      n.e("51776"),
-                      n.e("34186"),
-                      n.e("94881"),
+                      n.e("69117"),
+                      n.e("48424"),
+                      n.e("93814"),
+                      n.e("98273"),
                       n.e("26132"),
                       n.e("46652"),
                       n.e("93190"),
@@ -715,7 +715,7 @@ class tO extends s.PureComponent {
                       n.e("85968"),
                       n.e("60195"),
                       n.e("71210"),
-                      n.e("29787"),
+                      n.e("52168"),
                       n.e("88342"),
                       n.e("97558"),
                       n.e("94000"),
@@ -889,7 +889,7 @@ function tb() {
 }
 var tD = n(32880),
     tL = n(939249),
-    tw = n(547732);
+    tw = n(322644);
 function tM(e) {
     let {
             children: t,
@@ -915,7 +915,7 @@ function tM(e) {
         children: f,
     });
 }
-var tP = n(530787);
+var tP = n(194019);
 let tx = s.forwardRef(function (e, t) {
         let {
                 id: n,
@@ -1003,7 +1003,7 @@ var tG = n(245604),
     tK = n(295868),
     tz = n(66834),
     t$ = n(174459),
-    tq = n(787426);
+    tq = n(40354);
 function tX(e) {
     let t = s.useRef(null),
         n = e.map((e) => e[0]);
@@ -1125,7 +1125,7 @@ function t2(e) {
     });
 }
 var t3 = n(819638),
-    t6 = n(266062);
+    t6 = n(29774);
 let t4 = { origin: { x: -16, y: 0 }, targetWidth: 48, targetHeight: 48, offset: { x: 0, y: 0 } };
 function t5(e) {
     (0, tu.L3)(e, async () => {
@@ -1177,7 +1177,7 @@ function t7(e) {
 var t8 = n(565787),
     t9 = n(791606),
     ne = n(486020),
-    nt = n(962795);
+    nt = n(227947);
 function nn(e) {
     let [t, i] = s.useState(!1),
         a = (0, d.Vd)(`guild-${e.id}`);
@@ -1294,7 +1294,7 @@ var nN = n(531260),
     nL = n(674378),
     nw = n(394953),
     nM = n(235079),
-    nP = n(30186);
+    nP = n(403178);
 let nx = { origin: { x: -16, y: 0 }, targetWidth: 48, targetHeight: 48, offset: { x: 0, y: 0 } };
 function nU(e) {
     let { selected: t, user: n, badge: i, link: a, showProgressBadge: o } = e,
@@ -1407,7 +1407,7 @@ function nk() {
         })
     );
 }
-var nG = n(473201);
+var nG = n(236913);
 function nF(e) {
     let { fullWidth: t } = e;
     return (0, r.jsx)(K.c, { children: (0, r.jsx)("div", { className: o()(nG.t, { [nG.I]: t }) }) });
@@ -1416,7 +1416,7 @@ var nV = n(349288),
     nB = n(695366),
     nH = n(919638),
     nj = n(818348),
-    nY = n(585212);
+    nY = n(278332);
 function nW() {
     let e = (0, f.bG)([nH.A, ez.A], () => nH.A.unavailableGuilds.filter((e) => null == ez.A.getGuild(e)).length),
         t = (0, d.Vd)("unavailable-guilds-button");
@@ -1447,7 +1447,7 @@ var nK = n(312742),
     n0 = n(187322),
     n1 = n(140735),
     n2 = n(548118),
-    n3 = n(273923);
+    n3 = n(287555);
 function n6(e) {
     let { guildId: t, animate: n } = e,
         i = (0, f.bG)([ez.A], () => ez.A.getGuild(t), [t]),
@@ -1561,7 +1561,7 @@ function n5(e) {
     });
 }
 var n7 = n(573435),
-    n8 = n(643918);
+    n8 = n(16910);
 function n9(e) {
     let { className: t, isFolder: n } = e,
         i = (0, T.r)(m.A.modules.guildbar.AVATAR_SIZE);
@@ -1574,7 +1574,7 @@ function n9(e) {
     });
 }
 var ie = n(114329),
-    it = n(620370);
+    it = n(900434);
 let ii = (0, nQ.xI)(n$.A.FOLDER_ITEM_ANIMATION_DURATION),
     ir = (0, ta.animated)(A.B),
     is = s.memo(function (e) {
@@ -2241,56 +2241,56 @@ let ij = { analyticsSource: { page: ev.liQ.GUILD_CHANNEL, section: ev.JJy.CHANNE
 function iY(e, t) {
     (0, tu.L3)(e, async () => {
         let { default: e } = await Promise.all([
-            n.e("35529"),
-            n.e("40523"),
-            n.e("28149"),
-            n.e("32264"),
-            n.e("51776"),
-            n.e("72273"),
-            n.e("26705"),
-            n.e("35128"),
-            n.e("78220"),
-            n.e("28743"),
-            n.e("34186"),
-            n.e("70750"),
-            n.e("99961"),
-            n.e("31688"),
-            n.e("29761"),
-            n.e("26105"),
-            n.e("46461"),
-            n.e("9225"),
-            n.e("35316"),
-            n.e("45650"),
-            n.e("61097"),
-            n.e("57016"),
-            n.e("66609"),
-            n.e("79705"),
-            n.e("31967"),
-            n.e("83928"),
-            n.e("92702"),
-            n.e("53727"),
-            n.e("99406"),
-            n.e("76032"),
-            n.e("33957"),
-            n.e("59204"),
-            n.e("8728"),
-            n.e("57006"),
-            n.e("18113"),
-            n.e("25610"),
-            n.e("77891"),
-            n.e("93695"),
-            n.e("16492"),
-            n.e("22321"),
-            n.e("39033"),
-            n.e("36029"),
-            n.e("59007"),
-            n.e("87845"),
-            n.e("61175"),
-            n.e("5389"),
-            n.e("49937"),
-            n.e("56574"),
-            n.e("4974"),
-            n.e("80186"),
+            n.e("96217"),
+            n.e("92267"),
+            n.e("98873"),
+            n.e("92060"),
+            n.e("48424"),
+            n.e("87041"),
+            n.e("69117"),
+            n.e("3040"),
+            n.e("57760"),
+            n.e("46475"),
+            n.e("93814"),
+            n.e("91494"),
+            n.e("28262"),
+            n.e("47112"),
+            n.e("32637"),
+            n.e("40965"),
+            n.e("96413"),
+            n.e("44549"),
+            n.e("31880"),
+            n.e("32106"),
+            n.e("24769"),
+            n.e("20248"),
+            n.e("43902"),
+            n.e("67965"),
+            n.e("44363"),
+            n.e("41080"),
+            n.e("87486"),
+            n.e("43615"),
+            n.e("56394"),
+            n.e("88768"),
+            n.e("46493"),
+            n.e("75544"),
+            n.e("20071"),
+            n.e("41402"),
+            n.e("99013"),
+            n.e("5194"),
+            n.e("84403"),
+            n.e("67887"),
+            n.e("34796"),
+            n.e("17393"),
+            n.e("80165"),
+            n.e("71425"),
+            n.e("11839"),
+            n.e("32485"),
+            n.e("83475"),
+            n.e("40789"),
+            n.e("68218"),
+            n.e("75154"),
+            n.e("12002"),
+            n.e("16538"),
             n.e("23924"),
             n.e("42205"),
             n.e("71091"),
@@ -2312,16 +2312,16 @@ function iY(e, t) {
             n.e("96643"),
             n.e("94493"),
             n.e("92789"),
-            n.e("47834"),
+            n.e("2773"),
             n.e("74016"),
             n.e("19551"),
             n.e("84569"),
-            n.e("6338"),
+            n.e("36845"),
             n.e("3178"),
             n.e("7743"),
             n.e("45959"),
-            n.e("60658"),
-            n.e("8304"),
+            n.e("45587"),
+            n.e("95569"),
             n.e("18573"),
             n.e("55936"),
             n.e("31988"),
@@ -2366,7 +2366,7 @@ function iY(e, t) {
             n.e("17249"),
             n.e("88599"),
             n.e("75842"),
-            n.e("35027"),
+            n.e("54574"),
             n.e("53917"),
             n.e("62422"),
             n.e("50117"),
@@ -2374,7 +2374,7 @@ function iY(e, t) {
             n.e("89088"),
             n.e("71273"),
             n.e("36863"),
-            n.e("67861"),
+            n.e("80012"),
             n.e("1518"),
             n.e("15186"),
             n.e("9640"),
@@ -2401,7 +2401,7 @@ function iY(e, t) {
             n.e("45413"),
             n.e("44571"),
             n.e("90664"),
-            n.e("30788"),
+            n.e("63645"),
             n.e("32756"),
             n.e("64850"),
             n.e("70104"),
@@ -2419,7 +2419,7 @@ function iY(e, t) {
             n.e("8362"),
             n.e("41678"),
             n.e("72401"),
-            n.e("62875"),
+            n.e("56048"),
             n.e("4744"),
             n.e("2698"),
             n.e("5500"),
@@ -2452,7 +2452,7 @@ function iY(e, t) {
             n.e("15109"),
             n.e("99549"),
             n.e("29666"),
-            n.e("58273"),
+            n.e("80654"),
             n.e("41835"),
             n.e("20930"),
             n.e("74610"),
@@ -2505,7 +2505,7 @@ function iY(e, t) {
             n.e("91643"),
             n.e("63726"),
             n.e("71329"),
-            n.e("34409"),
+            n.e("72974"),
             n.e("56373"),
             n.e("83827"),
             n.e("42749"),
@@ -2782,7 +2782,7 @@ let iW = s.memo(function (e) {
         ],
     });
 });
-var iK = n(182240);
+var iK = n(435168);
 let iz = s.memo(function (e) {
     let { guildNode: t, lowerBadge: n } = e,
         i = t.id,
@@ -2873,7 +2873,7 @@ function i6(e) {
               route: ev.BVt.GUILD_MEMBER_VERIFICATION(n),
           });
 }
-var i4 = n(785439);
+var i4 = n(220319);
 function i5(e) {
     let { onActivate: t, children: n } = e,
         i = s.useRef(null),
@@ -3004,19 +3004,19 @@ function i8(e) {
         ? null
         : (0, r.jsx)(iW, { guildNode: n, guild: i, animatable: a, selected: o, draggable: !1, mediaState: l });
 }
-var i9 = n(803921);
+var i9 = n(397009);
 let re = (0, D.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("98594"),
-                n.e("26705"),
-                n.e("81154"),
-                n.e("66622"),
-                n.e("31967"),
-                n.e("40523"),
-                n.e("99961"),
-                n.e("7927"),
-                n.e("7580"),
+                n.e("47546"),
+                n.e("69117"),
+                n.e("34082"),
+                n.e("12766"),
+                n.e("44363"),
+                n.e("92267"),
+                n.e("28262"),
+                n.e("90943"),
+                n.e("34716"),
                 n.e("91763"),
                 n.e("76602"),
                 n.e("28229"),
@@ -3041,8 +3041,8 @@ let re = (0, D.Fe)({
                 n.e("65200"),
                 n.e("41348"),
                 n.e("53402"),
-                n.e("46240"),
-                n.e("81505"),
+                n.e("2179"),
+                n.e("3886"),
                 n.e("8066"),
                 n.e("96296"),
             ]).then(n.bind(n, 153571)),

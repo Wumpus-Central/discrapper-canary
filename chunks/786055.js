@@ -1,1 +1,15 @@
-e.exports = { Nr: "card__6aefd", YK: "spacing__6aefd", z3: "error__6aefd" };
+e.exports = {
+    kL: "container_f7398d",
+    U: "containerContents_f7398d",
+    In: "applicationIcon_f7398d",
+    p: "applicationWidget_f7398d",
+    wx: "header_f7398d",
+    aS: "wishlistItems3Wide_f7398d",
+    HV: "wishlistItems4Wide_f7398d",
+    Zp: "loadingApplicationWidgetPanel_f7398d",
+    kc: "loadingFeaturePanelRecomendations_f7398d",
+    Ij: "rewardOfferNotice_f7398d",
+    OQ: "ctaContainer_f7398d",
+    bC: "ctaFiller_f7398d",
+    Ku: "ctaIcon_f7398d",
+};

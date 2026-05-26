@@ -40,15 +40,15 @@ var i = n(627968),
     V = n(352018),
     B = n(616356),
     H = n(495544),
-    j = n(235058),
+    j = n(761853),
     Y = n(994500),
     W = n(287809),
     K = n(788318),
     z = n(803301),
     $ = n(531685),
     q = n(174459),
-    Z = n(562153),
-    X = n(427262),
+    X = n(562153),
+    Z = n(427262),
     Q = n(712577),
     J = n(566331),
     ee = n(768088),
@@ -58,8 +58,8 @@ var i = n(627968),
     er = n(222692),
     es = n(652215),
     ea = n(806931),
-    eo = n(82850),
-    el = n(604949);
+    eo = n(687906),
+    el = n(794005);
 class eu extends r.PureComponent {
     state = { screensharePopoutOpen: !1 };
     _ref = r.createRef();
@@ -213,7 +213,7 @@ class eu extends r.PureComponent {
     renderParticipantName() {
         let { channel: e, participantOnScreen: t } = this.props;
         if (t?.type === ea.lp.STREAM || t?.type === ea.lp.USER) {
-            let n = Z.Ay.getNickname(e.getGuildId(), e.id, t.user) ?? X.Ay.getName(t.user);
+            let n = X.Ay.getNickname(e.getGuildId(), e.id, t.user) ?? Z.Ay.getName(t.user);
             return (0, i.jsx)(d.E, {
                 variant: "text-md/normal",
                 color: "always-white",

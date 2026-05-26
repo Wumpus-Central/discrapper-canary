@@ -1,4 +1,4 @@
-n.d(t, { m: () => v, A: () => b });
+n.d(t, { m: () => S, A: () => b });
 var i = n(627968),
     l = n(64700),
     s = n(192308),
@@ -45,17 +45,17 @@ function I(e) {
             : null
     );
 }
-var C = n(99895);
-let v = "role_subscriptions_eligibility_modal";
-function S(e) {
+var C = n(499703);
+let S = "role_subscriptions_eligibility_modal";
+function v(e) {
     let { guild: t, eligibility: l, eligibilityLoading: o, eligibilityError: d, refreshEligibility: c } = e;
     return (0, i.jsx)(r.$, {
         variant: "expressive",
         onClick: function () {
             (0, s.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("79480"), n.e("19631"), n.e("18266")]).then(
-                        n.bind(n, 258118),
+                    let { default: e } = await Promise.all([n.e("50360"), n.e("19631"), n.e("18266")]).then(
+                        n.bind(n, 35737),
                     );
                     return (n) =>
                         (0, i.jsx)(e, {
@@ -67,7 +67,7 @@ function S(e) {
                             guildId: t.id,
                         });
                 },
-                { modalKey: v },
+                { modalKey: S },
             );
         },
         size: "md",
@@ -151,7 +151,7 @@ function T(e) {
         ? c
             ? (0, i.jsx)(I, { ...n })
             : (0, i.jsx)(_, { guild: t, checkboxText: d })
-        : (0, i.jsx)(S, {
+        : (0, i.jsx)(v, {
               guild: t,
               eligibility: a,
               eligibilityLoading: l,

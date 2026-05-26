@@ -1,0 +1,14 @@
+.title_efe2ea {
+    margin-bottom: 8px
+}
+
+.subtitle_efe2ea {
+    margin-bottom: 24px
+}
+
+.contentContainer_efe2ea {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 100%
+}

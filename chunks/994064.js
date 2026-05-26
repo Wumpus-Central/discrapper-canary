@@ -43,7 +43,7 @@ var C = n(174459),
     D = n(122641),
     L = n(692051),
     w = n(375708),
-    M = n(83699);
+    M = n(233651);
 function P(e) {
     let { onPlay: t, className: n, inactive: s } = e,
         o = r.useRef(null),
@@ -390,7 +390,7 @@ var B = n(990078),
     H = n(624479),
     j = n(789645),
     Y = n(957565),
-    W = n(239957);
+    W = n(345941);
 let K = "Close",
     z = "Copy to JSON",
     $ = "Copied!";
@@ -636,12 +636,12 @@ function q(e) {
         ],
     });
 }
-var Z = n(20504),
-    X = n(652215),
+var X = n(20504),
+    Z = n(652215),
     Q = n(838541),
     J = n(650583),
-    ee = n(277446),
-    et = n(653307);
+    ee = n(354182),
+    et = n(489979);
 let en = "-:--",
     ei = { friction: 14, tension: 200 },
     er = { VIDEO: "VIDEO", AUDIO: "AUDIO" },
@@ -762,7 +762,7 @@ class el extends r.Component {
                 }),
                 (0, i.jsx)("div", {
                     className: et.Uu,
-                    children: (0, i.jsx)(Z.A, {
+                    children: (0, i.jsx)(X.A, {
                         ref: this.setVolumeButtonRef,
                         muted: s,
                         value: h,
@@ -880,7 +880,7 @@ class e_ {
                 !1 === this.metadata.hasValidFrame &&
                 ((this.errorCode = 4),
                 (this.errorMessage = "No valid video frames detected - codec may be unsupported")),
-            C.default.track(X.HAw.MEDIA_PLAY_FINISHED, {
+            C.default.track(Z.HAw.MEDIA_PLAY_FINISHED, {
                 play_time_sec: this.playTimeSec,
                 play_wall_time_ms: this.playWallTimeMs,
                 first_play_waiting_ms: this.firstPlayWaitingMs,
@@ -1574,7 +1574,7 @@ class ef extends r.PureComponent {
                     this.renderMetadata(),
                     t === er.AUDIO ? this.renderAudio() : this.renderVideo(),
                     (0, i.jsx)(E.N, {
-                        theme: X.NJ8.MIDNIGHT,
+                        theme: Z.NJ8.MIDNIGHT,
                         children: (e) => (0, i.jsx)("div", { className: e, children: this.renderControls() }),
                     }),
                     t === er.VIDEO ? this.renderPlayPausePop() : null,

@@ -1,63 +1,63 @@
-n.d(t, { A: () => ea, u: () => en });
-var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(17928),
-    c = n(885574),
-    o = n(834730),
-    u = n(395332),
-    d = n(704824),
-    g = n(429913),
-    m = n(633075),
-    f = n(667049),
-    x = n(287809),
-    p = n(403362),
-    I = n(369374),
-    A = n(323082),
-    h = n(379848),
-    E = n(840387),
-    j = n(201718),
-    N = n(495544),
-    v = n(615405),
-    T = n(289173),
-    S = n(373842),
-    _ = n(600761),
-    C = n(605694),
-    O = n(990078),
-    k = n(657718),
-    R = n(789645),
-    b = n(478016),
-    D = n(183555),
-    L = n(735321),
-    P = n(606758),
-    G = n(518477),
-    w = n(49999),
-    y = n(985018);
+i.d(t, { A: () => ea, u: () => ei });
+var n = i(627968),
+    l = i(64700),
+    s = i(503698),
+    a = i.n(s),
+    r = i(17928),
+    c = i(885574),
+    o = i(834730),
+    u = i(457965),
+    d = i(704824),
+    m = i(429913),
+    g = i(633075),
+    f = i(667049),
+    x = i(287809),
+    I = i(403362),
+    p = i(369374),
+    h = i(753390),
+    A = i(379848),
+    E = i(840387),
+    j = i(201718),
+    N = i(495544),
+    v = i(615405),
+    T = i(289173),
+    S = i(373842),
+    _ = i(600761),
+    C = i(605694),
+    O = i(990078),
+    k = i(657718),
+    R = i(789645),
+    b = i(478016),
+    L = i(183555),
+    D = i(735321),
+    G = i(606758),
+    P = i(518477),
+    w = i(49999),
+    y = i(375708);
 function M(e) {
-    let { user: t, application: n, onDismiss: s } = e,
-        { trackUserProfileEditAction: a } = (0, D.NJ)(),
-        r = l.useMemo(() => new m.R({ applicationId: n.id }), [n.id]),
+    let { user: t, application: i, onDismiss: s } = e,
+        { trackUserProfileEditAction: a } = (0, L.NJ)(),
+        r = l.useMemo(() => new g.R({ applicationId: i.id }), [i.id]),
         c = l.useCallback(() => {
             null != r &&
-                ((0, L.Y5)(r),
+                ((0, D.Y5)(r),
                 a({ action: "WIDGET_ADDED", ...r.getProfileEditAnalyticsOptions() }),
-                (0, P.XA)(G.jM.WIDGET_ADDED));
+                (0, G.XA)(P.jM.WIDGET_ADDED));
         }, [r, a]);
-    return (0, i.jsx)(C.A, {
+    return (0, n.jsx)(C.A, {
         user: t,
         widget: r,
         subtle: !0,
-        cta: (0, i.jsx)(C.A.Cta, {
+        cta: (0, n.jsx)(C.A.Cta, {
             showSuggestedForYou: !0,
-            heading: y.intl.format(y.t.OIzLCy, { applicationName: n.name }),
-            content: y.intl.format(y.t.BQySru, { applicationName: n.name }),
-            buttons: (0, i.jsxs)(i.Fragment, {
+            heading: y.intl.format(y.t.OIzLCy, { applicationName: i.name }),
+            content: y.intl.format(y.t.BQySru, { applicationName: i.name }),
+            buttons: (0, n.jsxs)(n.Fragment, {
                 children: [
-                    (0, i.jsx)(O.m, {
+                    (0, n.jsx)(O.m, {
                         text: y.intl.string(y.t.WAI6xu),
                         ariaHidden: !0,
-                        children: (0, i.jsx)(k.S, {
+                        children: (0, n.jsx)(k.S, {
                             variant: "secondary",
                             size: "sm",
                             icon: R.P,
@@ -67,14 +67,14 @@ function M(e) {
                             },
                         }),
                     }),
-                    (0, i.jsx)(O.m, {
+                    (0, n.jsx)(O.m, {
                         text: y.intl.string(y.t["lBG2s/"]),
                         ariaHidden: !0,
-                        children: (0, i.jsx)(k.S, {
+                        children: (0, n.jsx)(k.S, {
                             variant: "primary",
                             size: "sm",
                             icon: b.U,
-                            "aria-label": y.intl.formatToPlainString(y.t.KfGahB, { applicationName: n.name }),
+                            "aria-label": y.intl.formatToPlainString(y.t.KfGahB, { applicationName: i.name }),
                             onClick: () => {
                                 s(w.i.TAKE_ACTION), c();
                             },
@@ -85,32 +85,32 @@ function M(e) {
         }),
     });
 }
-var U = n(192308),
-    F = n(821609),
-    W = n(307301),
-    H = n(773669),
-    X = n(79284);
-function B(e) {
+var U = i(192308),
+    F = i(821609),
+    W = i(307301),
+    H = i(773669),
+    B = i(392756);
+function V(e) {
     let { className: t } = e,
         s = ["en-US", "en-GB"].includes((0, r.bG)([H.default], () => H.default.locale))
             ? y.intl.string(y.t.OYlggR)
             : y.intl.string(y.t.Y55Tua),
-        { trackUserProfileEditAction: c } = (0, D.NJ)(),
+        { trackUserProfileEditAction: c } = (0, L.NJ)(),
         u = l.useCallback(() => {
             c({ action: "PRESS_ADD_WIDGET" }),
                 (0, U.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("8978"), n.e("87591")]).then(n.bind(n, 333114));
-                        return (t) => (0, i.jsx)(e, { ...t, trackUserProfileEditAction: c });
+                        let { default: e } = await Promise.all([i.e("4402"), i.e("87591")]).then(i.bind(i, 333114));
+                        return (t) => (0, n.jsx)(e, { ...t, trackUserProfileEditAction: c });
                     },
                     { stackingBehavior: "stack" },
                 );
         }, [c]);
-    return (0, i.jsxs)("div", {
-        className: a()(X.w, t),
+    return (0, n.jsxs)("div", {
+        className: a()(B.w, t),
         children: [
-            (0, i.jsx)(o.E, { variant: "text-xs/semibold", color: "text-subtle", children: s }),
-            (0, i.jsx)(F.$, {
+            (0, n.jsx)(o.E, { variant: "text-xs/semibold", color: "text-subtle", children: s }),
+            (0, n.jsx)(F.$, {
                 icon: W.j,
                 text: y.intl.string(y.t["lBG2s/"]),
                 size: "sm",
@@ -120,48 +120,48 @@ function B(e) {
         ],
     });
 }
-var V = n(192),
-    K = n(128988),
-    Y = n(939318),
-    z = n(982599),
-    q = n(515054),
-    J = n(534514),
-    Q = n(725386),
-    Z = n(502944),
-    $ = n(215538);
+var X = i(192),
+    z = i(128988),
+    K = i(939318),
+    Y = i(982599),
+    q = i(515054),
+    J = i(534514),
+    Q = i(725386),
+    Z = i(502944),
+    $ = i(190322);
 function ee() {
-    let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, D.NJ)(),
-        n = l.useRef(!1),
+    let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, L.NJ)(),
+        i = l.useRef(!1),
         s = (0, Q.A)({ location: "UserProfileModalV2WidgetsEmptyState" });
     return (
         l.useEffect(() => {
-            n.current || (e({ action: "VIEW_WIDGETS_EMPTY_STATE" }), (n.current = !0));
+            i.current || (e({ action: "VIEW_WIDGETS_EMPTY_STATE" }), (i.current = !0));
         }, [e]),
-        (0, i.jsxs)("div", {
+        (0, n.jsxs)("div", {
             className: $.Ie,
             children: [
-                (0, i.jsxs)("div", {
+                (0, n.jsxs)("div", {
                     className: $.FS,
                     children: [
-                        (0, i.jsx)(J.D, {
+                        (0, n.jsx)(J.D, {
                             variant: "heading-md/medium",
                             color: "text-strong",
                             children: y.intl.string(y.t["oqalC+"]),
                         }),
-                        (0, i.jsx)(o.E, {
+                        (0, n.jsx)(o.E, {
                             variant: "text-sm/normal",
                             color: "text-default",
                             children: y.intl.string(y.t.O9SQ1c),
                         }),
                     ],
                 }),
-                (0, i.jsx)("ul", {
+                (0, n.jsx)("ul", {
                     className: $.ZW,
                     "aria-label": y.intl.string(y.t["+EIBSA"]),
                     children: s.map((e) =>
-                        (0, i.jsx)(
+                        (0, n.jsx)(
                             "li",
-                            { children: (0, i.jsx)(Z.A, { widget: e, size: "small", trackUserProfileEditAction: t }) },
+                            { children: (0, n.jsx)(Z.A, { widget: e, size: "small", trackUserProfileEditAction: t }) },
                             e.getUniqueKey(),
                         ),
                     ),
@@ -170,21 +170,21 @@ function ee() {
         })
     );
 }
-var et = n(117444);
-function en(e) {
-    let { widget: t, ...n } = e;
-    return t instanceof m.R
-        ? (0, i.jsx)(C.A, { widget: t, ...n })
+var et = i(812868);
+function ei(e) {
+    let { widget: t, ...i } = e;
+    return t instanceof g.R
+        ? (0, n.jsx)(C.A, { widget: t, ...i })
         : (0, T.fu)(t)
-          ? (0, i.jsx)(Y.A, { widget: t, ...n })
+          ? (0, n.jsx)(K.A, { widget: t, ...i })
           : null;
 }
-function ei() {
-    return (0, i.jsxs)("div", {
+function en() {
+    return (0, n.jsxs)("div", {
         className: et.mJ,
         children: [
-            (0, i.jsx)(c.m, { size: "xs" }),
-            (0, i.jsx)(o.E, {
+            (0, n.jsx)(c.m, { size: "xs" }),
+            (0, n.jsx)(o.E, {
                 "aria-label": y.intl.string(y.t["7blcz6"]),
                 variant: "text-xs/normal",
                 color: "text-muted",
@@ -197,23 +197,23 @@ function el() {
     let {
         isLoading: e,
         suggestions: t,
-        currentUser: n,
+        currentUser: i,
     } = (function (e) {
-        let { enabled: t } = I.A.useConfig({ location: e.location }),
-            n = (0, r.bG)([x.default], () => x.default.getCurrentUser()),
-            i = (0, u.w$)({ location: e.location }),
-            s = l.useMemo(() => i?.filter((e) => e.isEligibleForSuggestions()), [i]),
+        let { enabled: t } = p.A.useConfig({ location: e.location }),
+            i = (0, r.bG)([x.default], () => x.default.getCurrentUser()),
+            n = (0, u.w$)({ location: e.location }),
+            s = l.useMemo(() => n?.filter((e) => e.isEligibleForSuggestions()), [n]),
             a = l.useMemo(() => s?.map((e) => e.applicationId) ?? [], [s]),
-            c = (0, g.A)(a),
-            { tokens: o, fetched: A } = (0, d.j)(a),
-            h = (0, f.A)(n?.id),
-            E = null == n || null == s || null == o || !A;
+            c = (0, m.A)(a),
+            { tokens: o, fetched: h } = (0, d.j)(a),
+            A = (0, f.A)(i?.id),
+            E = null == i || null == s || null == o || !h;
         return l.useMemo(
             () =>
                 E
                     ? { isLoading: E }
                     : t
-                      ? { isLoading: E, suggestions: [], currentUser: n }
+                      ? { isLoading: E, suggestions: [], currentUser: i }
                       : {
                             isLoading: E,
                             suggestions: s
@@ -221,84 +221,84 @@ function el() {
                                     let t = c.find((t) => t?.id === e.applicationId);
                                     return null == t ||
                                         null == o.find((t) => t.application.id === e.applicationId) ||
-                                        null != h.find((t) => t instanceof m.R && t.applicationId === e.applicationId)
+                                        null != A.find((t) => t instanceof g.R && t.applicationId === e.applicationId)
                                         ? null
                                         : { config: e, application: t, dismissibleContent: e.suggestedWidgetLinkedDc };
                                 })
-                                .filter(p.Vq),
-                            currentUser: n,
+                                .filter(I.Vq),
+                            currentUser: i,
                         },
-            [t, E, s, n, c, o, h],
+            [t, E, s, i, c, o, A],
         );
     })({ location: "ApplicationWidgetUpsell" });
-    return e || null == n
+    return e || null == i
         ? null
-        : (0, i.jsx)(h.Ay, {
+        : (0, n.jsx)(A.Ay, {
               contentTypes: t.map((e) => e.dismissibleContent),
               bypassAutoDismiss: !0,
               children: (e) => {
                   let { visibleContent: l, markAsDismissed: s } = e,
                       a = t.find((e) => e.dismissibleContent === l);
-                  return null == a ? null : (0, i.jsx)(M, { user: n, application: a.application, onDismiss: s });
+                  return null == a ? null : (0, n.jsx)(M, { user: i, application: a.application, onDismiss: s });
               },
           });
 }
 function es(e) {
-    let { user: t, guildId: n, channelId: s } = e,
+    let { user: t, guildId: i, channelId: s } = e,
         a = (0, f.A)(t.id),
         c = (0, r.bG)([N.default], () => N.default.getId() === t.id),
         o = (() => {
             let [e, t] = (0, r.yK)([v.A], () => [v.A.ipCountryCode, v.A.ipCountryCodeRequest]),
-                n = (0, E.Z)();
+                i = (0, E.Z)();
             return (
                 l.useEffect(() => {
-                    null == e && null == t && n && (0, A.xe)();
-                }, [e, t, n]),
-                "GB" === e && n
+                    null == e && null == t && i && (0, h.xe)();
+                }, [e, t, i]),
+                "GB" === e && i
             );
         })(),
         d = (0, u.QR)({ location: "UserProfileModalV2Widgets" }),
         x = 0 === a.length && c,
-        p = l.useMemo(() => a.filter(T.fu), [a]),
-        I = l.useMemo(() => a.filter((e) => e instanceof m.R), [a]);
-    (0, S.Y)(c, p),
+        I = l.useMemo(() => a.filter(T.fu), [a]),
+        p = l.useMemo(() => a.filter((e) => e instanceof g.R), [a]);
+    (0, S.Y)(c, I),
         ((e, t) => {
-            let n = l.useMemo(() => t.map((e) => e.applicationId), [t]);
-            (0, g.A)(n);
-            let { data: i, refetch: s } = (0, j.P)(e),
-                a = l.useRef(null !== i);
+            let i = l.useMemo(() => t.map((e) => e.applicationId), [t]);
+            (0, m.A)(i);
+            let { data: n, refetch: s } = (0, j.P)(e),
+                a = l.useRef(null !== n);
             l.useEffect(() => {
                 a.current && ((a.current = !1), s());
             }, [s]);
-        })(t.id, I);
-    let h = () =>
-        (0, i.jsxs)(i.Fragment, {
+        })(t.id, p);
+    let A = () =>
+        (0, n.jsxs)(n.Fragment, {
             children: [
                 c &&
-                    (0, i.jsxs)(i.Fragment, {
+                    (0, n.jsxs)(n.Fragment, {
                         children: [
-                            (0, i.jsx)(B, { className: et.cG }),
-                            o && (0, i.jsx)(ei, {}),
-                            d && (0, i.jsx)(el, {}),
+                            (0, n.jsx)(V, { className: et.cG }),
+                            o && (0, n.jsx)(en, {}),
+                            d && (0, n.jsx)(el, {}),
                         ],
                     }),
                 a.map((e, l) =>
-                    (0, i.jsx)(en, { widget: e, user: t, guildId: n, channelId: s, index: l }, e.getUniqueKey()),
+                    (0, n.jsx)(ei, { widget: e, user: t, guildId: i, channelId: s, index: l }, e.getUniqueKey()),
                 ),
             ],
         });
-    return x ? (0, i.jsx)(ee, {}) : c ? (0, i.jsx)(V.D, { children: h() }) : h();
+    return x ? (0, n.jsx)(ee, {}) : c ? (0, n.jsx)(X.D, { children: A() }) : A();
 }
 function ea(e) {
-    let { user: t, ...n } = e,
+    let { user: t, ...i } = e,
         s = l.useRef(null);
     (0, _.i)({ containerRef: s });
-    let r = (0, z.k)(t.id);
-    return (0, i.jsxs)(q.K, {
+    let r = (0, Y.k)(t.id);
+    return (0, n.jsxs)(q.K, {
         "data-scroller": !0,
         scrollerRef: s,
         className: a()(et.XG, { [et.az]: r }),
         fade: !0,
-        children: [(0, i.jsx)(K.A, { scrollerRef: s }), (0, i.jsx)(es, { user: t, ...n })],
+        children: [(0, n.jsx)(z.A, { scrollerRef: s }), (0, n.jsx)(es, { user: t, ...i })],
     });
 }

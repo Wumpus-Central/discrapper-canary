@@ -33,7 +33,7 @@ var i = n(627968),
     M = n(652215),
     P = n(788868),
     x = n(375708),
-    U = n(474236);
+    U = n(111868);
 let k = function (e) {
     let { className: t, closeLayer: n, guild: o, onCtaVisibilityChange: l } = e,
         u = r.useRef(null),
@@ -183,7 +183,7 @@ var G = n(232122),
     V = n(736653),
     B = n(303136),
     H = n(676279),
-    j = n(215895);
+    j = n(510679);
 function Y(e) {
     let { className: t } = e,
         n = (0, V.Ay)(),
@@ -217,23 +217,23 @@ var W = n(64051),
     z = n(724677),
     $ = n(210273),
     q = n(508155),
-    Z = n(853513),
-    X = n(111674);
+    X = n(645704),
+    Z = n(582778);
 function Q(e) {
     let { tier: t, isActive: n } = e,
         r = t === M.TVA.TIER_1,
         s = t === M.TVA.TIER_3,
         a = t === M.TVA.TIER_1 ? W.v : t === M.TVA.TIER_2 ? K.w : z.H;
     return (0, i.jsxs)("div", {
-        className: X.MY,
+        className: Z.MY,
         children: [
-            (0, i.jsx)("div", { className: g()(X.hr, { [X.ti]: n, [X.YO]: !n, [X.JQ]: r, [X.Uz]: s }) }),
+            (0, i.jsx)("div", { className: g()(Z.hr, { [Z.ti]: n, [Z.YO]: !n, [Z.JQ]: r, [Z.Uz]: s }) }),
             (0, i.jsx)("div", {
-                className: g()(X.Zj, {
-                    [X.jv]: n,
-                    [X.ip]: t === M.TVA.TIER_1,
-                    [X.p3]: t === M.TVA.TIER_2,
-                    [X.wF]: t === M.TVA.TIER_3,
+                className: g()(Z.Zj, {
+                    [Z.jv]: n,
+                    [Z.ip]: t === M.TVA.TIER_1,
+                    [Z.p3]: t === M.TVA.TIER_2,
+                    [Z.wF]: t === M.TVA.TIER_3,
                 }),
                 children: (0, i.jsx)(a, { alt: "", ariaHidden: !0, size: 24 }),
             }),
@@ -246,17 +246,17 @@ function J(e) {
         a = t.premiumTier >= r,
         o = M.M2T[r];
     return (0, i.jsxs)("div", {
-        className: g()(X.Nr, { [X.Bm]: a, [X.c]: !a }),
+        className: g()(Z.Nr, { [Z.Bm]: a, [Z.c]: !a }),
         children: [
             (0, i.jsx)(Q, { tier: r, isActive: a }),
             (0, i.jsxs)("div", {
-                className: X.zI,
+                className: Z.zI,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: X.$h,
+                        className: Z.$h,
                         children: [
                             (0, i.jsx)(A.D, {
-                                className: g()(X.JJ, { [X.eX]: !a }),
+                                className: g()(Z.JJ, { [Z.eX]: !a }),
                                 variant: "heading-xl/semibold",
                                 color: a ? "text-strong" : void 0,
                                 children: x.intl.string(
@@ -264,7 +264,7 @@ function J(e) {
                                 ),
                             }),
                             (0, i.jsxs)("div", {
-                                className: X.yC,
+                                className: Z.yC,
                                 children: [
                                     (0, i.jsx)(I._, { size: "xs", color: "currentColor" }),
                                     (0, i.jsx)(S.E, {
@@ -276,7 +276,7 @@ function J(e) {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: X.PJ,
+                        className: Z.PJ,
                         children: [
                             s.slice(0, 4).map((e, t) => {
                                 if (null != e.predicate && !e.predicate()) return null;
@@ -284,10 +284,10 @@ function J(e) {
                                 return (0, i.jsxs)(
                                     "div",
                                     {
-                                        className: g()(X.bK, { [X.o]: !a }),
+                                        className: g()(Z.bK, { [Z.o]: !a }),
                                         children: [
                                             (0, i.jsx)(n, {
-                                                className: X.kf,
+                                                className: Z.kf,
                                                 color: a ? "var(--text-default)" : "currentColor",
                                                 size: "sm",
                                             }),
@@ -302,9 +302,9 @@ function J(e) {
                                 );
                             }),
                             (0, i.jsx)(S.E, {
-                                className: X.wx,
+                                className: Z.wx,
                                 variant: "text-md/medium",
-                                children: x.intl.string(Z.default.nIj3LZ),
+                                children: x.intl.string(X.default.nIj3LZ),
                             }),
                         ],
                     }),
@@ -316,7 +316,7 @@ function J(e) {
 function ee(e) {
     let { guild: t, className: n } = e;
     return (0, i.jsx)("div", {
-        className: g()(X.iE, n),
+        className: g()(Z.iE, n),
         children: q.t.map((e) => (0, i.jsx)(J, { guild: t, definition: e }, e.tier)),
     });
 }
@@ -337,8 +337,8 @@ var et = n(873174),
     ep = n(975571),
     eE = n(800007),
     em = n(568065),
-    eg = n(576709),
-    eA = n(262880);
+    eg = n(76660),
+    eA = n(70240);
 function eI(e) {
     let {
             guildId: t,
@@ -542,12 +542,12 @@ let eS = new Map([[eE.W5, "+"]]),
                               (0, i.jsx)(A.D, {
                                   className: eA.R_,
                                   variant: "heading-xxl/semibold",
-                                  children: x.intl.string(Z.default.wjI18Q),
+                                  children: x.intl.string(X.default.wjI18Q),
                               }),
                               (0, i.jsx)(S.E, {
                                   className: eA.fV,
                                   variant: "text-md/medium",
-                                  children: x.intl.format(Z.default.S562fn, {
+                                  children: x.intl.format(X.default.S562fn, {
                                       helpDeskArticle: ep.A.getArticleURL(M.MVz.GUILD_BOOSTING_FAQ),
                                   }),
                               }),
@@ -577,7 +577,7 @@ var ey = n(527113),
     eC = n(862482),
     ev = n(187322),
     eO = n(944304),
-    eR = n(672350);
+    eR = n(130782);
 let eb = function (e) {
     let { closeLayer: t, guild: n, isVisible: s } = e,
         a = r.useRef(null),
@@ -622,13 +622,13 @@ let eb = function (e) {
 };
 var eD = n(192308),
     eL = n(65154),
-    ew = n(387772),
+    ew = n(303676),
     eM = n(519636);
 function eP(e) {
     let { guild: t, analyticsLocation: s, videoPlacement: a, sourceAnalyticsLocations: l } = e,
         u = r.useCallback(() => {
             (0, eD.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("6836"), n.e("85810")]).then(n.bind(n, 872233));
+                let { default: e } = await Promise.all([n.e("88340"), n.e("85810")]).then(n.bind(n, 872233));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,
@@ -642,7 +642,7 @@ function eP(e) {
     return (0, i.jsxs)(o.D, {
         className: ew.kL,
         onClick: u,
-        "aria-label": x.intl.string(Z.default["103aY+"]),
+        "aria-label": x.intl.string(X.default["103aY+"]),
         children: [
             (0, i.jsx)("img", { alt: "", className: ew.xn, src: eM.A }),
             (0, i.jsx)("div", { className: ew.Lw }),

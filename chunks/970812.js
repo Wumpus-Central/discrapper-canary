@@ -1,354 +1,354 @@
-n.d(t, { A: () => R });
-var a = n(627968),
-    i = n(64700),
-    r = n(503698),
-    o = n.n(r),
-    l = n(172218),
-    s = n(17928),
-    c = n(775602),
-    _ = n(763827),
-    u = n(531685),
-    d = n(25639),
-    b = n(63727);
-let m = "ease-in-out",
-    g = [8, 16, 11, 13, 6],
-    f = Array.from({ length: 5 }, (e, t) => t),
-    h = [2, 2, 5, 2, 2],
-    p = [3, 3, 10, 6, 3],
-    x = [3, 3, 7, 12, 6],
-    A = [3, 3, 5, 10, 16],
-    N = [3, 3, 8, 13, 7],
-    v = [4, 6, 12, 9, 6],
-    C = [6, 10, 9, 16, 8],
-    E = 6.67 / 8,
-    S =
+n.d(t, { A: () => I });
+var i = n(627968),
+    a = n(64700),
+    l = n(503698),
+    r = n.n(l),
+    s = n(172218),
+    u = n(17928),
+    o = n(775602),
+    c = n(763827),
+    d = n(531685),
+    g = n(25639),
+    h = n(668783);
+let f = "ease-in-out",
+    m = [8, 16, 11, 13, 6],
+    A = Array.from({ length: 5 }, (e, t) => t),
+    N = [2, 2, 5, 2, 2],
+    x = [3, 3, 10, 6, 3],
+    E = [3, 3, 7, 12, 6],
+    v = [3, 3, 5, 10, 16],
+    S = [3, 3, 8, 13, 7],
+    D = [4, 6, 12, 9, 6],
+    b = [6, 10, 9, 16, 8],
+    T = 6.67 / 8,
+    j =
         "M16.5 18H16a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-.5v-.5a2.5 2.5 0 0 0-5 0v.5Zm3.5 0v-.5a1 1 0 1 0-2 0v.5h2Z",
-    D = `translate(${12.33 - 15 * E}, ${1 - 15.5 * E}) scale(${E})`;
-function T(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g,
-        a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2,
-        i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 16;
-    for (let r = 0; r < 5; r++) {
-        let o = n[r],
-            l = I(-t, t);
-        e[r] = Math.max(a, Math.min(i, o + l));
+    y = `translate(${12.33 - 15 * T}, ${1 - 15.5 * T}) scale(${T})`;
+function M(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : m,
+        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2,
+        a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 16;
+    for (let l = 0; l < 5; l++) {
+        let r = n[l],
+            s = p(-t, t);
+        e[l] = Math.max(i, Math.min(a, r + s));
     }
     return e;
 }
-function I(e, t) {
+function p(e, t) {
     return Math.random() * (t - e) + e;
 }
-let w = {
-    [d.s.GENTLE_AMBIENT]: {
+let R = {
+    [g.s.GENTLE_AMBIENT]: {
         firstState: "burst",
-        transitionConfig: { durationMs: 180, timingFunction: m },
+        transitionConfig: { durationMs: 180, timingFunction: f },
         states: {
             burst: {
-                getHeights: (e) => T(e, 4),
-                getAnimationDelay: () => I(64, 128),
-                getStateDuration: () => I(3e3, 6e3),
+                getHeights: (e) => M(e, 4),
+                getAnimationDelay: () => p(64, 128),
+                getStateDuration: () => p(3e3, 6e3),
                 getNextState: () => "quiet",
             },
             quiet: {
-                getHeights: (e) => T(e, 3),
-                getAnimationDelay: () => I(64, 128),
-                getStateDuration: () => I(1e3, 3e3),
+                getHeights: (e) => M(e, 3),
+                getAnimationDelay: () => p(64, 128),
+                getStateDuration: () => p(1e3, 3e3),
                 getNextState: () => "burst",
             },
         },
     },
-    [d.s.GENTLE_AMBIENT_WITH_INTRO]: {
+    [g.s.GENTLE_AMBIENT_WITH_INTRO]: {
         firstState: "introSilent",
-        transitionConfig: { durationMs: 100, timingFunction: m },
+        transitionConfig: { durationMs: 100, timingFunction: f },
         states: {
             introSilent: {
                 getHeights: (e) =>
                     (function (e) {
                         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2,
                             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2;
-                        for (let a = 0; a < 5; a++) e[a] = n + I(0, t);
+                        for (let i = 0; i < 5; i++) e[i] = n + p(0, t);
                         return e;
                     })(e),
-                getAnimationDelay: () => I(64, 128),
-                getStateDuration: () => I(32, 64),
+                getAnimationDelay: () => p(64, 128),
+                getStateDuration: () => p(32, 64),
                 getNextState: () => "waveBuildCenter",
             },
             waveBuildCenter: {
-                getHeights: (e) => T(e, 3, h),
-                getAnimationDelay: () => I(64, 128),
-                getStateDuration: () => I(32, 64),
+                getHeights: (e) => M(e, 3, N),
+                getAnimationDelay: () => p(64, 128),
+                getStateDuration: () => p(32, 64),
                 getNextState: () => "waveBuildRight1",
             },
             waveBuildRight1: {
-                getHeights: (e) => T(e, 4, p, 1),
-                getAnimationDelay: () => I(64, 128),
-                getStateDuration: () => I(32, 64),
+                getHeights: (e) => M(e, 4, x, 1),
+                getAnimationDelay: () => p(64, 128),
+                getStateDuration: () => p(32, 64),
                 getNextState: () => "waveBuildRight2",
             },
             waveBuildRight2: {
-                getHeights: (e) => T(e, 4, x, 1),
-                getAnimationDelay: () => I(64, 128),
-                getStateDuration: () => I(32, 64),
+                getHeights: (e) => M(e, 4, E, 1),
+                getAnimationDelay: () => p(64, 128),
+                getStateDuration: () => p(32, 64),
                 getNextState: () => "wavePeakRight",
             },
             wavePeakRight: {
-                getHeights: (e) => T(e, 4, A, 1),
-                getAnimationDelay: () => I(64, 128),
-                getStateDuration: () => I(32, 64),
+                getHeights: (e) => M(e, 4, v, 1),
+                getAnimationDelay: () => p(64, 128),
+                getStateDuration: () => p(32, 64),
                 getNextState: () => "waveReturnLeft1",
             },
             waveReturnLeft1: {
-                getHeights: (e) => T(e, 5, N),
-                getAnimationDelay: () => I(64, 128),
-                getStateDuration: () => I(32, 64),
+                getHeights: (e) => M(e, 5, S),
+                getAnimationDelay: () => p(64, 128),
+                getStateDuration: () => p(32, 64),
                 getNextState: () => "waveReturnLeft2",
             },
             waveReturnLeft2: {
-                getHeights: (e) => T(e, 5, v),
-                getAnimationDelay: () => I(64, 128),
-                getStateDuration: () => I(32, 64),
+                getHeights: (e) => M(e, 5, D),
+                getAnimationDelay: () => p(64, 128),
+                getStateDuration: () => p(32, 64),
                 getNextState: () => "burst",
             },
             burst: {
-                getHeights: (e) => T(e, 4),
-                getAnimationDelay: () => I(64, 128),
-                getStateDuration: () => I(3e3, 6e3),
+                getHeights: (e) => M(e, 4),
+                getAnimationDelay: () => p(64, 128),
+                getStateDuration: () => p(3e3, 6e3),
                 getNextState: () => "quiet",
             },
             quiet: {
-                getHeights: (e) => T(e, 3),
-                getAnimationDelay: () => I(64, 128),
-                getStateDuration: () => I(1e3, 3e3),
+                getHeights: (e) => M(e, 3),
+                getAnimationDelay: () => p(64, 128),
+                getStateDuration: () => p(1e3, 3e3),
                 getNextState: () => "burst",
             },
         },
     },
-    [d.s.HIGH_CONTRAST]: {
+    [g.s.HIGH_CONTRAST]: {
         firstState: "burst",
-        transitionConfig: { durationMs: 120, timingFunction: m },
+        transitionConfig: { durationMs: 120, timingFunction: f },
         states: {
             burst: {
-                getHeights: (e) => T(e, 7, C),
-                getAnimationDelay: () => I(64, 128),
-                getStateDuration: () => I(3e3, 6e3),
+                getHeights: (e) => M(e, 7, b),
+                getAnimationDelay: () => p(64, 128),
+                getStateDuration: () => p(3e3, 6e3),
                 getNextState: () => "quiet",
             },
             quiet: {
-                getHeights: (e) => T(e, 4, C),
-                getAnimationDelay: () => I(64, 128),
-                getStateDuration: () => I(1e3, 3e3),
+                getHeights: (e) => M(e, 4, b),
+                getAnimationDelay: () => p(64, 128),
+                getStateDuration: () => p(1e3, 3e3),
                 getNextState: () => "burst",
             },
         },
     },
 };
-function k(e) {
-    let { iconSize: t = 20, locked: n = !1, maskId: i } = e;
+function C(e) {
+    let { iconSize: t = 20, locked: n = !1, maskId: a } = e;
     return n
-        ? (0, a.jsx)("defs", {
-              children: (0, a.jsxs)("mask", {
-                  id: i,
+        ? (0, i.jsx)("defs", {
+              children: (0, i.jsxs)("mask", {
+                  id: a,
                   children: [
-                      (0, a.jsx)("rect", { width: t, height: t, fill: "white" }),
-                      (0, a.jsx)("rect", { x: 11.33, y: 0, width: 8.67, height: 9.5, fill: "black", rx: 1 }),
+                      (0, i.jsx)("rect", { width: t, height: t, fill: "white" }),
+                      (0, i.jsx)("rect", { x: 11.33, y: 0, width: 8.67, height: 9.5, fill: "black", rx: 1 }),
                   ],
               }),
           })
         : null;
 }
-function M(e) {
+function w(e) {
     let t,
         n,
-        r,
+        l,
         {
-            color: c = "currentColor",
-            className: _,
-            animationStyle: m = d.s.GENTLE_AMBIENT,
-            iconSize: g = 20,
-            locked: h = !1,
+            color: o = "currentColor",
+            className: c,
+            animationStyle: f = g.s.GENTLE_AMBIENT,
+            iconSize: m = 20,
+            locked: N = !1,
         } = e,
-        p = i.useId(),
-        x = (0, s.bG)([u.A], () => u.A.isAppFocused()),
-        [A, N] = i.useState(!1),
-        v = i.useCallback((e) => {
-            N((t) => (t !== e ? e : t));
+        x = a.useId(),
+        E = (0, u.bG)([d.A], () => d.A.isAppFocused()),
+        [v, S] = a.useState(!1),
+        D = a.useCallback((e) => {
+            S((t) => (t !== e ? e : t));
         }, []),
-        C = (0, l.K)(v, 0.15),
-        E = i.useRef([, , , , ,].fill(0)),
-        T = w[m],
-        I = !x || !A,
-        M = (g - 18) / 2,
-        y = I ? 0 : T.transitionConfig.durationMs,
-        R = i.useRef(null),
-        j = i.useMemo(
+        b = (0, s.K)(D, 0.15),
+        T = a.useRef([, , , , ,].fill(0)),
+        M = R[f],
+        p = !E || !v,
+        w = (m - 18) / 2,
+        _ = p ? 0 : M.transitionConfig.durationMs,
+        I = a.useRef(null),
+        L = a.useMemo(
             () => ({
                 transitionProperty: "transform",
-                transitionDuration: `${y}ms`,
-                transitionTimingFunction: T.transitionConfig.timingFunction,
+                transitionDuration: `${_}ms`,
+                transitionTimingFunction: M.transitionConfig.timingFunction,
             }),
-            [T.transitionConfig.timingFunction, y],
+            [M.transitionConfig.timingFunction, _],
         ),
-        L = i.useMemo(() => ({ ...j, width: 2, height: 16, backgroundColor: c }), [j, c]),
-        G = i.useMemo(() => ({ left: M, top: (g - 16) / 2, width: 18, height: 16, columnGap: 2 }), [g, M, 18]),
-        B = i.useCallback(
+        U = a.useMemo(() => ({ ...L, width: 2, height: 16, backgroundColor: o }), [L, o]),
+        G = a.useMemo(() => ({ left: w, top: (m - 16) / 2, width: 18, height: 16, columnGap: 2 }), [m, w, 18]),
+        k = a.useCallback(
             (e) => {
-                let t = R.current;
+                let t = I.current;
                 if (null == t) return;
                 let n = t.children;
                 for (let t = 0; t < 5; t++) {
-                    let a = n.item(t);
-                    if (null == a) continue;
-                    let i = e[t],
-                        r = Math.max(2, Math.min(16, "number" == typeof i && Number.isFinite(i) ? i : 2)) / 16;
-                    a.style.transform = `scaleY(${r})`;
+                    let i = n.item(t);
+                    if (null == i) continue;
+                    let a = e[t],
+                        l = Math.max(2, Math.min(16, "number" == typeof a && Number.isFinite(a) ? a : 2)) / 16;
+                    i.style.transform = `scaleY(${l})`;
                 }
             },
-            [R],
+            [I],
         );
-    i.useLayoutEffect(() => {
-        I || B(T.states[T.firstState].getHeights(E.current));
-    }, [B, T, I]),
-        (t = i.useRef(T.firstState)),
-        (n = i.useRef(null)),
-        (r = !I),
-        i.useEffect(() => {
-            if (!r) return;
-            (t.current = T.firstState), (n.current = null);
+    a.useLayoutEffect(() => {
+        p || k(M.states[M.firstState].getHeights(T.current));
+    }, [k, M, p]),
+        (t = a.useRef(M.firstState)),
+        (n = a.useRef(null)),
+        (l = !p),
+        a.useEffect(() => {
+            if (!l) return;
+            (t.current = M.firstState), (n.current = null);
             let e = null,
-                a = !1;
+                i = !1;
             n.current = { now: Date.now(), stateEnterTime: Date.now(), stateEndTime: 0 };
-            let i = n.current,
-                o = (e) => {
-                    i.stateEnterTime = i.now;
+            let a = n.current,
+                r = (e) => {
+                    a.stateEnterTime = a.now;
                     let t = e.getStateDuration();
-                    i.stateEndTime = t > 0 ? i.now + t : 0;
+                    a.stateEndTime = t > 0 ? a.now + t : 0;
                 },
-                l = (t) => {
-                    s(),
-                        a ||
+                s = (t) => {
+                    u(),
+                        i ||
                             (e = setTimeout(
                                 () => {
-                                    (e = null), a || c();
+                                    (e = null), i || o();
                                 },
                                 Math.max(0, t),
                             ));
                 },
-                s = () => {
+                u = () => {
                     null != e && (clearTimeout(e), (e = null));
                 },
-                c = () => {
-                    if (a) return;
-                    (e = null), (i.now = Date.now());
+                o = () => {
+                    if (i) return;
+                    (e = null), (a.now = Date.now());
                     let n = t.current,
-                        r = T.states[n];
-                    if (null == r) {
-                        (t.current = T.firstState), l(0);
+                        l = M.states[n];
+                    if (null == l) {
+                        (t.current = M.firstState), s(0);
                         return;
                     }
                     try {
-                        let e = r.getHeights(E.current);
-                        B(e);
+                        let e = l.getHeights(T.current);
+                        k(e);
                     } catch (e) {
-                        a = !0;
+                        i = !0;
                         return;
                     }
-                    if (0 === i.stateEndTime || i.now >= i.stateEndTime) {
-                        let e = r.getNextState();
+                    if (0 === a.stateEndTime || a.now >= a.stateEndTime) {
+                        let e = l.getNextState();
                         t.current = e;
-                        let n = T.states[e];
-                        null != n && o(n);
+                        let n = M.states[e];
+                        null != n && r(n);
                     }
-                    l(r.getAnimationDelay());
+                    s(l.getAnimationDelay());
                 },
-                _ = T.states[t.current];
+                c = M.states[t.current];
             return (
-                null != _ && o(_),
-                l(0),
+                null != c && r(c),
+                s(0),
                 () => {
-                    (a = !0), s();
+                    (i = !0), u();
                 }
             );
-        }, [B, r, T, E]);
-    let U = h ? `url(#${p})` : void 0;
-    return (0, a.jsx)("span", {
-        ref: C,
-        className: o()(_, b.Aj),
-        children: (0, a.jsxs)("svg", {
-            width: g,
-            height: g,
-            viewBox: `0 0 ${g} ${g}`,
+        }, [k, l, M, T]);
+    let H = N ? `url(#${x})` : void 0;
+    return (0, i.jsx)("span", {
+        ref: b,
+        className: r()(c, h.Aj),
+        children: (0, i.jsxs)("svg", {
+            width: m,
+            height: m,
+            viewBox: `0 0 ${m} ${m}`,
             fill: "none",
             children: [
-                (0, a.jsx)(k, { iconSize: g, locked: h, maskId: p }),
-                (0, a.jsx)("g", {
-                    mask: U,
-                    children: (0, a.jsx)("foreignObject", {
+                (0, i.jsx)(C, { iconSize: m, locked: N, maskId: x }),
+                (0, i.jsx)("g", {
+                    mask: H,
+                    children: (0, i.jsx)("foreignObject", {
                         x: 0,
                         y: 0,
-                        width: g,
-                        height: g,
-                        children: (0, a.jsx)("div", {
-                            className: b.FH,
-                            children: (0, a.jsx)("div", {
-                                ref: R,
-                                className: b.Gb,
+                        width: m,
+                        height: m,
+                        children: (0, i.jsx)("div", {
+                            className: h.FH,
+                            children: (0, i.jsx)("div", {
+                                ref: I,
+                                className: h.Gb,
                                 style: G,
-                                children: f.map((e) => (0, a.jsx)("div", { className: b.M0, style: L }, e)),
+                                children: A.map((e) => (0, i.jsx)("div", { className: h.M0, style: U }, e)),
                             }),
                         }),
                     }),
                 }),
-                h && (0, a.jsx)("path", { d: S, transform: D, fill: c, fillRule: "evenodd", clipRule: "evenodd" }),
+                N && (0, i.jsx)("path", { d: j, transform: y, fill: o, fillRule: "evenodd", clipRule: "evenodd" }),
             ],
         }),
     });
 }
-function y(e) {
-    let { color: t = "currentColor", className: n, iconSize: r = 20, locked: o = !1 } = e,
-        l = i.useId(),
-        s = (r - 18) / 2,
-        c = o ? `url(#${l})` : void 0;
-    return (0, a.jsx)("span", {
+function _(e) {
+    let { color: t = "currentColor", className: n, iconSize: l = 20, locked: r = !1 } = e,
+        s = a.useId(),
+        u = (l - 18) / 2,
+        o = r ? `url(#${s})` : void 0;
+    return (0, i.jsx)("span", {
         className: n,
-        style: { display: "inline-flex", pointerEvents: "none", contain: "strict", width: r, height: r },
-        children: (0, a.jsxs)("svg", {
-            width: r,
-            height: r,
-            viewBox: `0 0 ${r} ${r}`,
+        style: { display: "inline-flex", pointerEvents: "none", contain: "strict", width: l, height: l },
+        children: (0, i.jsxs)("svg", {
+            width: l,
+            height: l,
+            viewBox: `0 0 ${l} ${l}`,
             fill: "none",
             children: [
-                (0, a.jsx)(k, { iconSize: r, locked: o, maskId: l }),
-                (0, a.jsx)("g", {
-                    mask: c,
-                    children: g.map((e, n) => {
-                        let i = (r - e) / 2;
-                        return (0, a.jsx)("rect", { x: s + 4 * n, y: i, width: 2, height: e, rx: 1, fill: t }, n);
+                (0, i.jsx)(C, { iconSize: l, locked: r, maskId: s }),
+                (0, i.jsx)("g", {
+                    mask: o,
+                    children: m.map((e, n) => {
+                        let a = (l - e) / 2;
+                        return (0, i.jsx)("rect", { x: u + 4 * n, y: a, width: 2, height: e, rx: 1, fill: t }, n);
                     }),
                 }),
-                o && (0, a.jsx)("path", { d: S, transform: D, fill: t, fillRule: "evenodd", clipRule: "evenodd" }),
+                r && (0, i.jsx)("path", { d: j, transform: y, fill: t, fillRule: "evenodd", clipRule: "evenodd" }),
             ],
         }),
     });
 }
-function R(e) {
+function I(e) {
     let {
             color: t = "currentColor",
             className: n,
-            iconSize: r = 20,
-            animationStyle: o = d.s.GENTLE_AMBIENT,
-            locked: l = !1,
+            iconSize: l = 20,
+            animationStyle: r = g.s.GENTLE_AMBIENT,
+            locked: s = !1,
         } = e,
-        u = (0, s.bG)([c.A], () => c.A.useReducedMotion),
-        b = (0, s.bG)([_.A], () => _.A.isConnected()),
-        [m, g] = i.useState(b);
-    return (i.useEffect(() => {
-        if (b) {
-            let e = setTimeout(() => g(!0), 800);
+        d = (0, u.bG)([o.A], () => o.A.useReducedMotion),
+        h = (0, u.bG)([c.A], () => c.A.isConnected()),
+        [f, m] = a.useState(h);
+    return (a.useEffect(() => {
+        if (h) {
+            let e = setTimeout(() => m(!0), 800);
             return () => clearTimeout(e);
         }
-        g(!1);
-    }, [b]),
-    u || m)
-        ? (0, a.jsx)(y, { color: t, className: n, iconSize: r, locked: l })
-        : (0, a.jsx)(M, { color: t, className: n, animationStyle: o, iconSize: r, locked: l });
+        m(!1);
+    }, [h]),
+    d || f)
+        ? (0, i.jsx)(_, { color: t, className: n, iconSize: l, locked: s })
+        : (0, i.jsx)(w, { color: t, className: n, animationStyle: r, iconSize: l, locked: s });
 }

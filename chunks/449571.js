@@ -33,9 +33,9 @@ var i = n(627968),
     M = n(5867),
     P = n(652215),
     x = n(806931),
-    U = n(970682),
-    k = n(27600),
-    G = n(604949);
+    U = n(157690),
+    k = n(429904),
+    G = n(794005);
 function F(e) {
     let { channel: t, isLoading: n } = e,
         [s, f] = r.useState(!1),
@@ -66,11 +66,11 @@ function F(e) {
             selectedParticipant: null != t ? m.A.getSelectedParticipant(t.id) : null,
             participantsOpen: null != t && m.A.getParticipantsOpen(t.id),
         })),
-        Z = j || null != K,
-        X = (0, b.A)(t?.id),
-        Q = X && $?.type !== x.lp.ACTIVITY,
-        J = !X && V === M.Gd.PIP,
-        ee = (!Z || (Z && (Q || J) && null == Y)) && !W,
+        X = j || null != K,
+        Z = (0, b.A)(t?.id),
+        Q = Z && $?.type !== x.lp.ACTIVITY,
+        J = !Z && V === M.Gd.PIP,
+        ee = (!X || (X && (Q || J) && null == Y)) && !W,
         et = ee && null != T.A.pipVideoWindow && null != T.A.pipActivityWindow;
     function en() {
         if (null != t) {

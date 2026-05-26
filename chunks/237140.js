@@ -4,13 +4,13 @@ var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(419354),
+    o = n(873174),
     l = n(508382),
-    d = n(83379),
-    _ = n(502939),
-    u = n(834730),
-    c = n(623646),
-    E = n(310855);
+    u = n(83379),
+    c = n(502939),
+    d = n(834730),
+    _ = n(623646),
+    f = n(74567);
 function h() {
     return (0, i.jsxs)("svg", {
         width: "16",
@@ -18,10 +18,10 @@ function h() {
         viewBox: "0 0 16 10",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
-        className: E.Rq,
+        className: f.Rq,
         children: [
             (0, i.jsx)("path", {
-                className: E.vb,
+                className: f.vb,
                 d: "M10.3426 7.0715C9.14163 8.57272 6.85837 8.57272 5.65739 7.0715L0 -0.000244141L16 -0.000244141L10.3426 7.0715Z",
             }),
             (0, i.jsx)("mask", {
@@ -34,40 +34,40 @@ function h() {
                 height: "10",
                 children: (0, i.jsx)("path", {
                     d: "M10.3426 7.0715C9.14163 8.57272 6.85837 8.57272 5.65739 7.0715L0 -0.000244141L16 -0.000244141L10.3426 7.0715Z",
-                    className: E.vb,
+                    className: f.vb,
                 }),
             }),
             (0, i.jsx)("g", {
                 mask: "url(#mask0_tooltip_caret)",
                 children: (0, i.jsx)("path", {
-                    className: E.UL,
+                    className: f.UL,
                     d: "M9.93457 6.84546C8.93433 8.06766 7.06567 8.06766 6.06543 6.84546L0.0546875 -0.500244L15.9453 -0.500244L9.93457 6.84546Z",
                 }),
             }),
         ],
     });
 }
-var m = n(112317),
-    f = n(736736);
-let g = (e, t, n) => {
+var p = n(112317),
+    E = n(916320);
+let m = (e, t, n) => {
     let i = (t ? (n ? 372 : 272) : 200) / 2 - 8;
     return Math.max(-i, Math.min(i, e));
 };
-function p(e) {
+function g(e) {
     let { caretConfig: t } = e,
         { position: n, align: r, customOffset: s } = t,
-        { isRichTooltip: o, richTooltipPadding: l } = (0, m.w6)(),
-        d = "lg" === l;
+        { isRichTooltip: o, richTooltipPadding: l } = (0, p.w6)(),
+        u = "lg" === l;
     if (null == n) return null;
-    let _ =
+    let c =
             "custom" === r && null != s
                 ? {
-                      "--custom-caret-offset-x": ["top", "bottom"].includes(n) ? `${g(s, o, d)}px` : "0px",
-                      "--custom-caret-offset-y": ["left", "right"].includes(n) ? `${g(s, o, d)}px` : "0px",
+                      "--custom-caret-offset-x": ["top", "bottom"].includes(n) ? `${m(s, o, u)}px` : "0px",
+                      "--custom-caret-offset-y": ["left", "right"].includes(n) ? `${m(s, o, u)}px` : "0px",
                   }
                 : void 0,
-        u = a()(f.caret, f[`caret--${n}`], f[`caret--${r}`]);
-    return (0, i.jsx)("div", { className: u, style: _, children: (0, i.jsx)(h, {}) });
+        d = a()(E.caret, E[`caret--${n}`], E[`caret--${r}`]);
+    return (0, i.jsx)("div", { className: d, style: c, children: (0, i.jsx)(h, {}) });
 }
 var A = n(348275);
 let I = ["left", "center", "right"],
@@ -78,77 +78,77 @@ function S(e) {
             isRendered: n = t,
             targetElementRef: s,
             targetElement: h,
-            anchorRef: f,
-            id: g,
+            anchorRef: E,
+            id: m,
             content: S,
             position: N = "top",
-            align: C = "center",
-            spacing: R = 11,
-            caretConfig: O,
-            layerContext: y,
-            animationStyle: v,
-            positionKey: D,
+            align: y = "center",
+            spacing: C = 11,
+            caretConfig: v,
+            layerContext: O,
+            animationStyle: R,
+            positionKey: b,
         } = e,
-        { isRichTooltip: L } = (0, m.w6)(),
-        b = (0, _.D)("Tooltip"),
-        [w, P] = r.useState(h?.ownerDocument);
+        { isRichTooltip: D } = (0, p.w6)(),
+        L = (0, c.D)("Tooltip"),
+        [w, M] = r.useState(h?.ownerDocument);
     r.useLayoutEffect(() => {
         var e, t;
-        P(((e = f?.current), (t = s.current), e?.ownerDocument ?? h?.ownerDocument ?? t?.ownerDocument));
-    }, [f, h, s]);
-    let k = r.useMemo(() => (("left" === N || "right" === N ? T : I).includes(C) ? C : "center"), [N, C]);
+        M(((e = E?.current), (t = s.current), e?.ownerDocument ?? h?.ownerDocument ?? t?.ownerDocument));
+    }, [E, h, s]);
+    let P = r.useMemo(() => (("left" === N || "right" === N ? T : I).includes(y) ? y : "center"), [N, y]);
     if (!n) return null;
-    let M = (e) => {
+    let x = (e) => {
         let { position: t, nudge: n } = e,
             r = t ?? N,
-            s = O?.align ?? (null != n && 0 !== n ? "custom" : "center"),
-            l = O?.customOffset ?? n ?? 0,
-            d = { position: O?.position ?? (0, A.l8)(r), align: s, customOffset: "custom" === s ? l : void 0 },
-            _ = (0, i.jsxs)("div", {
-                id: g,
-                className: a()(E.YL, { [E.mj]: L }),
+            s = v?.align ?? (null != n && 0 !== n ? "custom" : "center"),
+            l = v?.customOffset ?? n ?? 0,
+            u = { position: v?.position ?? (0, A.l8)(r), align: s, customOffset: "custom" === s ? l : void 0 },
+            c = (0, i.jsxs)("div", {
+                id: m,
+                className: a()(f.YL, { [f.mj]: D }),
                 role: "tooltip",
                 "data-position": r,
                 "data-mana-component": "tooltip",
                 children: [
-                    (0, i.jsx)(p, { caretConfig: d }),
+                    (0, i.jsx)(g, { caretConfig: u }),
                     (0, i.jsx)("div", {
-                        className: E.rv,
+                        className: f.rv,
                         children:
-                            "string" == typeof S ? (0, i.jsx)(u.E, { variant: "text-sm/medium", children: S }) : S,
+                            "string" == typeof S ? (0, i.jsx)(d.E, { variant: "text-sm/medium", children: S }) : S,
                     }),
                 ],
             });
-        return v ? (0, i.jsx)(o.animated.div, { style: v, children: _ }) : _;
+        return R ? (0, i.jsx)(o.animated.div, { style: R, children: c }) : c;
     };
-    if (b) {
-        let e = (0, l.Pv)(N, C),
+    if (L) {
+        let e = (0, l.Pv)(N, y),
             t = h ?? s.current;
         return (0, i.jsx)(l.Ow, {
-            className: E.BM,
+            className: f.BM,
             open: n,
-            spacing: R,
+            spacing: C,
             placement: e,
             reference: t,
             ownerDocument: w,
-            autoUpdate: null != D,
+            autoUpdate: null != b,
             renderLayer: (e) => {
                 let { placement: t, shift: n } = e,
                     i = -(n?.x ?? 0);
-                return M({ position: (0, l.$Y)(t), nudge: i });
+                return x({ position: (0, l.$Y)(t), nudge: i });
             },
             children: () => null,
         });
     }
-    let U = (0, i.jsx)(c.Q, {
-        targetRef: f ?? s,
+    let U = (0, i.jsx)(_.Q, {
+        targetRef: E ?? s,
         position: N,
-        align: k,
-        spacing: R,
-        positionKey: D,
+        align: P,
+        spacing: C,
+        positionKey: b,
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
-        children: M,
+        children: x,
     });
-    return null != y ? (0, i.jsx)(d.Wd, { layerContext: y, children: U }) : U;
+    return null != O ? (0, i.jsx)(u.Wd, { layerContext: O, children: U }) : U;
 }

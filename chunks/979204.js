@@ -15,7 +15,7 @@ var r = n(627968),
     S = n(646764);
 n(795068);
 var p = n(190107),
-    v = n(777555);
+    v = n(63507);
 let C = { duration: 250 },
     g = (e) => {
         let {
@@ -29,20 +29,20 @@ let C = { duration: 250 },
                 onMouseEnter: g,
                 onMouseLeave: A,
             } = e,
-            { label: h, targetSec: D, leftPx: x, rightPx: T, index: I } = n,
-            O = i.userStatus?.completedAt != null,
-            [b, R] = l.useState(!1),
-            L = x - 4,
-            k = t >= L ? Math.min(1, (t - L) / (T - L)) : 0,
-            N = 0 === I && !O,
+            { label: h, targetSec: D, leftPx: I, rightPx: T, index: x } = n,
+            R = i.userStatus?.completedAt != null,
+            [b, O] = l.useState(!1),
+            N = I - 4,
+            L = t >= N ? Math.min(1, (t - N) / (T - N)) : 0,
+            k = 0 === x && !R,
             { fill: P } = (0, s.z)({
-                fill: 100 * k,
+                fill: 100 * L,
                 config: C,
                 onRest: () => {
-                    k <= 0 && R(!1);
+                    L <= 0 && O(!1);
                 },
                 onStart: () => {
-                    R(!0);
+                    O(!0);
                 },
             }),
             y = (e) => e.stopPropagation(),
@@ -53,9 +53,9 @@ let C = { duration: 250 },
                       }
                     : void 0;
         return (0, r.jsxs)(d.animated.div, {
-            className: c()(v.ck, { [v.a]: N && b, [v.C9]: !N && b }),
+            className: c()(v.ck, { [v.a]: k && b, [v.C9]: !k && b }),
             style: {
-                left: a ? o.to((e) => x - e) : x,
+                left: a ? o.to((e) => I - e) : I,
                 "--custom-indicator-size": a ? o.to((e) => `${26 + 2 * e}px`) : "26px",
                 "--custom-indicator-fill": P.to((e) => e),
             },
@@ -115,10 +115,10 @@ function h(e) {
             [C],
         ),
         D = l.useMemo(() => [{ index: 0, timeSec: t, widthPx: 32, gapPx: 4, align: "end", clickable: d }], [t, d]),
-        x = l.useMemo(() => (m ? (0, u.mq)(c, E) : void 0), [c, m, E]),
+        I = l.useMemo(() => (m ? (0, u.mq)(c, E) : void 0), [c, m, E]),
         T = l.useCallback(
             (e, l, s) => {
-                let a = { leftPx: e.leftPx, rightPx: e.rightPx, targetSec: t, index: e.index, label: x };
+                let a = { leftPx: e.leftPx, rightPx: e.rightPx, targetSec: t, index: e.index, label: I };
                 return (0, r.jsx)(
                     g,
                     {
@@ -135,7 +135,7 @@ function h(e) {
                     `indicator-${e.index}`,
                 );
             },
-            [t, x, f, v, n, o, h],
+            [t, I, f, v, n, o, h],
         );
     if (m) return { indicators: D, animatingIndex: f, expansionSpring: v, hoverExpansionPx: 4, renderIndicator: T };
 }

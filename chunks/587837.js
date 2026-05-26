@@ -1,22 +1,22 @@
-n.d(t, { A: () => r });
-var i = n(627968),
-    l = n(64700),
-    a = n(761929),
-    s = n(5794);
-function r(e) {
-    let { resizableNode: t, onResize: n, onResizeEnd: r, minHeight: o, maxHeight: d } = e,
-        [c, u] = l.useState(null);
-    l.useEffect(() => {
-        u(t.current?.offsetHeight ?? null);
-    }, [t]);
-    let h = (0, a.A)({
+s.d(n, { A: () => a });
+var i = s(627968),
+    t = s(64700),
+    o = s(761929),
+    u = s(142306);
+function a(e) {
+    let { resizableNode: n, onResize: s, onResizeEnd: a, minHeight: l, maxHeight: r } = e,
+        [c, d] = t.useState(null);
+    t.useEffect(() => {
+        d(n.current?.offsetHeight ?? null);
+    }, [n]);
+    let m = (0, o.A)({
         initialElementDimension: c,
-        minDimension: o,
-        maxDimension: d,
-        resizableDomNodeRef: t,
-        onElementResize: n,
-        onElementResizeEnd: r,
-        orientation: a.R.VERTICAL_BOTTOM,
+        minDimension: l,
+        maxDimension: r,
+        resizableDomNodeRef: n,
+        onElementResize: s,
+        onElementResizeEnd: a,
+        orientation: o.R.VERTICAL_BOTTOM,
     });
-    return (0, i.jsx)("div", { onMouseDown: h, className: s.D });
+    return (0, i.jsx)("div", { onMouseDown: m, className: u.D });
 }

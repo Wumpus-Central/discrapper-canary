@@ -1,4 +1,4 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => y });
 var l = n(627968),
     a = n(64700),
     i = n(830382),
@@ -6,8 +6,8 @@ var l = n(627968),
     s = n(534514),
     o = n(834730),
     u = n(349288),
-    c = n(985018),
-    d = n(94204);
+    c = n(375708),
+    d = n(236540);
 let p = (e) => {
         let { className: t, isEmailResent: n, resendEmail: a } = e;
         return (0, l.jsx)("div", {
@@ -43,9 +43,9 @@ let p = (e) => {
         return (0, l.jsx)(r.H, { actions: e });
     };
 var h = n(69494),
-    A = n(482132),
-    C = n(599961);
-function _() {
+    C = n(482132),
+    A = n(411097);
+function y() {
     let [e, t] = a.useState(!1),
         n = async () => {
             t(!0), await (0, i.lo)();
@@ -53,8 +53,8 @@ function _() {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(h.A, {}),
-            (0, l.jsx)(A.dZ, { children: (0, l.jsx)(p, { className: C.r, isEmailResent: e, resendEmail: n }) }),
-            (0, l.jsx)(A.UX, { children: (0, l.jsx)(m, {}) }),
+            (0, l.jsx)(C.dZ, { children: (0, l.jsx)(p, { className: A.r, isEmailResent: e, resendEmail: n }) }),
+            (0, l.jsx)(C.UX, { children: (0, l.jsx)(m, {}) }),
         ],
     });
 }

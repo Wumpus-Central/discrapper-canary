@@ -4,10 +4,10 @@ t(64700);
 var r = t(503698),
     i = t.n(r),
     l = t(534514),
-    a = t(834730),
-    c = t(315629),
-    u = t(935462),
-    d = t(508770),
+    a = t(315629),
+    c = t(935462),
+    u = t(508770),
+    d = t(834730),
     L = t(742810),
     o = t(584160),
     C = t(834252),
@@ -15,15 +15,15 @@ var r = t(503698),
     h = t(615310),
     p = t(800471),
     x = t(147925),
-    g = t(89892);
-function E(e) {
+    g = t(276900);
+function T(e) {
     let { breadcrumb: n, isActiveBreadcrumb: t, isFinalBreadcrumb: r, separatorClassName: l } = e;
     return (0, s.jsxs)(
         "div",
         {
             className: i()(g.hj, { [g.jQ]: r }),
             children: [
-                (0, s.jsx)(a.E, {
+                (0, s.jsx)(d.E, {
                     variant: "text-sm/medium",
                     color: t ? "text-strong" : "text-muted",
                     children: n.label,
@@ -34,13 +34,13 @@ function E(e) {
         n.id,
     );
 }
-let T = function (e) {
+let E = function (e) {
     let { breadcrumbs: n, activeId: t, className: r, separatorClassName: l } = e;
     return (0, s.jsx)("div", {
         className: i()(g.jD, r),
         children: n.map((e, r) =>
             (0, s.jsx)(
-                E,
+                T,
                 {
                     breadcrumb: e,
                     isActiveBreadcrumb: e.id === t,
@@ -57,7 +57,7 @@ var S = t(422936),
     j = t(795269),
     f = t(788868),
     v = t(375708),
-    _ = t(503110);
+    _ = t(800134);
 let I = (e) => {
     let { discountAmount: n } = e,
         t = (0, N.V)(),
@@ -71,8 +71,8 @@ let I = (e) => {
     );
 };
 var P = t(88001),
-    R = t(955212),
-    A = t(967744),
+    R = t(212364),
+    A = t(268800),
     M = t(232266),
     y = t(243002),
     F = t(303930),
@@ -84,12 +84,12 @@ function D(e) {
             className: R.r9,
             children: (0, s.jsx)(l.D, { variant: "heading-md/bold", children: t }),
         });
-    let c = i.length > 1;
+    let a = i.length > 1;
     return (0, s.jsxs)("div", {
         className: R.go,
         children: [
-            (0, s.jsx)(a.E, { variant: "text-lg/semibold", children: t }),
-            c && (0, s.jsx)(T, { activeId: r, breadcrumbs: i }),
+            (0, s.jsx)(l.D, { variant: "text-lg/semibold", children: t }),
+            a && (0, s.jsx)(E, { activeId: r, breadcrumbs: i }),
         ],
     });
 }
@@ -112,8 +112,8 @@ let O = function (e) {
             upgradeToPremiumType: l,
             isEligibleForTrial: x = !1,
             showTrialBadge: g = !1,
-            showDiscountBadge: E = !1,
-            isPremiumGroupPurchase: T = !1,
+            showDiscountBadge: T = !1,
+            isPremiumGroupPurchase: E = !1,
             forceBrandRefreshHeader: N = !1,
         } = e,
         j = l === f.PremiumTypes.TIER_2,
@@ -131,7 +131,7 @@ let O = function (e) {
     });
     if (!N && 0 === U.length) return null;
     let z = (U = U.filter((e) => {
-            if (T && e.id === m.pn.PLAN_SELECT) return !1;
+            if (E && e.id === m.pn.PLAN_SELECT) return !1;
             let n = e.id !== m.pn.ADD_PAYMENT_STEPS,
                 t = e.id === m.pn.ADD_PAYMENT_STEPS && !O.current;
             return !x || n || t;
@@ -140,21 +140,21 @@ let O = function (e) {
         G = !(k && null != H && o.M.includes(H)) && null != W && null != H,
         V = _ && G && H === m.pn.REVIEW,
         q = j ? "nitro-pink" : "nitro-green",
-        J = T ? (0, P.DP)() : j ? v.intl.string(v.t.lG6a5x) : v.intl.string(v.t["t9uG/o"]),
+        J = E ? (0, P.DP)() : j ? v.intl.string(v.t.lG6a5x) : v.intl.string(v.t["t9uG/o"]),
         Q = R.kL,
         Z = i()(R.N1, A.headerGradient);
     return w
-        ? (0, s.jsx)("div", { className: Q, children: (0, s.jsx)(c.h, { color: q, className: Z }) })
+        ? (0, s.jsx)("div", { className: Q, children: (0, s.jsx)(a.h, { color: q, className: Z }) })
         : (0, s.jsxs)("div", {
               className: Q,
               children: [
-                  (0, s.jsxs)(c.h, {
+                  (0, s.jsxs)(a.h, {
                       color: q,
                       className: i()(Z, { [R.s1]: !G }),
                       children: [
                           (0, s.jsx)(B, { isTier2: j }),
                           !n &&
-                              (0, s.jsx)(u.s_, {
+                              (0, s.jsx)(c.s_, {
                                   "data-migration-pending": !0,
                                   hideOnFullscreen: t,
                                   onClick: r,
@@ -164,12 +164,12 @@ let O = function (e) {
                           (0, s.jsxs)("div", {
                               className: R.FS,
                               children: [
-                                  T &&
+                                  E &&
                                       (0, s.jsx)("div", {
                                           className: R.$N,
-                                          children: (0, s.jsx)(d.E, { type: "beta", variant: "expressive" }),
+                                          children: (0, s.jsx)(u.E, { type: "beta", variant: "expressive" }),
                                       }),
-                                  (0, s.jsx)(a.E, {
+                                  (0, s.jsx)(d.E, {
                                       variant: "display-md",
                                       color: "text-strong",
                                       className: R.cf,
@@ -179,7 +179,7 @@ let O = function (e) {
                           }),
                       ],
                   }),
-                  (g || E) && (0, s.jsx)(I, { discountAmount: y }),
+                  (g || T) && (0, s.jsx)(I, { discountAmount: y }),
                   G && (0, s.jsx)(D, { isOneStepCheckout: _, headerText: W, step: H, filteredBreadcrumbs: U }),
               ],
           });

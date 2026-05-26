@@ -1,67 +1,67 @@
-t.d(s, { default: () => b });
-var l = t(627968),
-    n = t(64700),
-    i = t(732159),
-    o = t(702841),
-    a = t(834730),
-    r = t(289873),
-    c = t(720149),
-    u = t(997509),
-    d = t(734057),
-    g = t(17928),
-    _ = t(857182),
-    h = t(560010);
-let F = +t(927813).A.Millis.HOUR;
-var S = t(652215),
-    m = t(985018),
-    C = t(893727);
-function b(e) {
-    let { channelId: s, messageId: t, transitionState: b, onClose: f } = e,
-        w = (0, o.bG)([d.A], () => d.A.getChannel(s)),
-        [p, A] = (function (e) {
-            let [s, t] = n.useState(!1),
-                l = (0, g.bG)([h.A], () => h.A.getFollowerStatsForChannel(e), [e]);
+n.d(l, { default: () => A });
+var i = n(627968),
+    e = n(64700),
+    s = n(732159),
+    a = n(702841),
+    r = n(834730),
+    o = n(289873),
+    u = n(720149),
+    c = n(468689),
+    d = n(734057),
+    h = n(17928),
+    m = n(857182),
+    g = n(560010);
+let f = +n(927813).A.Millis.HOUR;
+var p = n(652215),
+    C = n(375708),
+    x = n(42015);
+function A(t) {
+    let { channelId: l, messageId: n, transitionState: A, onClose: F } = t,
+        w = (0, a.bG)([d.A], () => d.A.getChannel(l)),
+        [j, v] = (function (t) {
+            let [l, n] = e.useState(!1),
+                i = (0, h.bG)([g.A], () => g.A.getFollowerStatsForChannel(t), [t]);
             return (
-                n.useEffect(() => {
-                    (null == l || Date.now() - l.lastFetched > F) && !s
-                        ? (t(!0), _.A.fetchChannelFollowerStats(e))
-                        : null != l && s && t(!1);
-                }, [e, l, s]),
-                [l, s]
+                e.useEffect(() => {
+                    (null == i || Date.now() - i.lastFetched > f) && !l
+                        ? (n(!0), m.A.fetchChannelFollowerStats(t))
+                        : null != i && l && n(!1);
+                }, [t, i, l]),
+                [i, l]
             );
-        })(s),
-        E = w?.guild_id;
-    return (0, l.jsx)(i.ConfirmModal, {
-        title: m.intl.string(m.t.aIz1oV),
-        confirmText: m.intl.string(m.t["cY+Oob"]),
-        onConfirm: () => c.A.crosspostMessage(s, t),
-        transitionState: b,
-        onClose: f,
+        })(l),
+        G = w?.guild_id;
+    return (0, i.jsx)(s.ConfirmModal, {
+        title: C.intl.string(C.t.aIz1oV),
+        confirmText: C.intl.string(C.t["cY+Oob"]),
+        onConfirm: () => u.A.crosspostMessage(l, n),
+        transitionState: A,
+        onClose: F,
         variant: "primary",
-        children: (0, l.jsx)(a.E, {
+        children: (0, i.jsx)(r.E, {
             variant: "text-md/normal",
-            className: C.YK,
-            children: A
-                ? (0, l.jsx)(r.y, {})
-                : null != p && null != p.guildsFollowing && p.guildsFollowing > 0
-                  ? (0, l.jsxs)(l.Fragment, {
+            className: x.YK,
+            children: v
+                ? (0, i.jsx)(o.y, {})
+                : null != j && null != j.guildsFollowing && j.guildsFollowing > 0
+                  ? (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, l.jsx)(a.E, {
-                                className: C.YK,
+                            (0, i.jsx)(r.E, {
+                                className: x.YK,
                                 variant: "text-sm/normal",
-                                children: m.intl.format(m.t.GCGrNP, { numGuildsFollowing: p.guildsFollowing }),
+                                children: C.intl.format(C.t.GCGrNP, { numGuildsFollowing: j.guildsFollowing }),
                             }),
-                            (0, l.jsx)(a.E, {
+                            (0, i.jsx)(r.E, {
                                 variant: "text-sm/normal",
-                                children: m.intl.format(m.t.IMhGZz, {
+                                children: C.intl.format(C.t.IMhGZz, {
                                     onClick: () => {
-                                        null != E && null != f && (f(), u.A.open(E, S.BEX.ANALYTICS));
+                                        null != G && null != F && (F(), c.A.open(G, p.BEX.ANALYTICS));
                                     },
                                 }),
                             }),
                         ],
                     })
-                  : m.intl.string(m.t["8FpqOs"]),
+                  : C.intl.string(C.t["8FpqOs"]),
         }),
     });
 }

@@ -41,9 +41,9 @@ var n = e(627968),
     q = e(652215),
     z = e(788868),
     H = e(375708),
-    Y = e(237146),
+    Y = e(151001),
     G = e(818348),
-    X = e(970197);
+    X = e(27669);
 function F(t) {
     let { quest: i, sourceQuestContent: e, onLoadComplete: s, preCtaClick: l } = t,
         c = (0, j.Ay)(),
@@ -294,7 +294,7 @@ function K(t) {
     let { quest: i, location: e } = t;
     return (0, n.jsx)(L.jY, { source: e, questId: i.id, isPreview: i.preview, children: (0, n.jsx)(F, { ...t }) });
 }
-var Z = e(63639);
+var Z = e(592727);
 function B(t) {
     let { onClose: i, transitionState: e } = t;
     return (0, n.jsx)(s.Modal, {

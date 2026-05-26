@@ -38,16 +38,16 @@ var i,
     U = s(224016),
     B = s(174459),
     F = s(975571),
-    H = s(927578),
+    H = s(428262),
     z = s(526292),
     V = s(881489),
-    W = s(380619),
-    K = s(22118),
+    K = s(380619),
+    W = s(22118),
     Y = s(807098),
     Z = s(374200),
     Q = s(103411),
-    X = s(190187),
-    J = s(990078),
+    J = s(190187),
+    X = s(990078),
     q = s(778712),
     $ = s(97808),
     ee = s(192308),
@@ -374,7 +374,7 @@ let ed = (e) => {
             ],
         });
     };
-var em = s(915588);
+var em = s(69572);
 let ex = "url(#gradient)",
     ep = (e) => {
         let {
@@ -505,7 +505,7 @@ let ex = "url(#gradient)",
             ],
         });
     };
-var eh = s(170236),
+var eh = s(388092),
     eg =
         (((i = {})[(i.NITRO_GEM = 0)] = "NITRO_GEM"),
         (i[(i.NITRO_LOGO = 1)] = "NITRO_LOGO"),
@@ -579,7 +579,7 @@ let ej = (e) => {
     };
 var eN = s(375708),
     eA = s(652215),
-    e_ = s(694354);
+    e_ = s(9682);
 let eC = (e) => {
         let { userRecord: t, placement: s } = e,
             { avatarSrc: i, eventHandlers: n } = (0, es.A)({ userId: t?.id, size: q._3.SIZE_32, animateOnHover: !0 }),
@@ -587,7 +587,7 @@ let eC = (e) => {
             r = a
                 ? (0, l.jsx)($.eu, { src: i, "aria-label": t.username, size: q._3.SIZE_32, ...n })
                 : (0, l.jsx)(N.D, { variant: "heading-md/semibold", className: e_.n5, children: s });
-        return (0, l.jsx)(J.m, {
+        return (0, l.jsx)(X.m, {
             text: eN.intl.string(eN.t.UnKHdo),
             shouldShow: !a,
             children: (0, l.jsx)("div", { className: e_.Lg, children: r }),
@@ -679,9 +679,9 @@ let eC = (e) => {
                                             }),
                                                 (0, ee.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        s.e("33023"),
-                                                        s.e("89746"),
-                                                    ]).then(s.bind(s, 426544));
+                                                        s.e("31987"),
+                                                        s.e("35432"),
+                                                    ]).then(s.bind(s, 121002));
                                                     return (s) => (0, l.jsx)(e, { ...s, sourceAnalyticsLocations: t });
                                                 });
                                         })({ analyticsLocations: d }),
@@ -720,7 +720,7 @@ var eR = s(194509),
     eS = s(860839),
     eP = s(788868),
     eD = s(88001),
-    eO = s(613741);
+    eO = s(735149);
 let eG = "to_premium_home_button",
     eL = "premium home page",
     ew = "gifting_button",
@@ -917,13 +917,13 @@ function eF(e) {
     let { className: t, config: s } = e,
         i = (0, Y.T)(s.asset),
         a = (0, Y.T)(s.backgroundAsset),
-        c = (0, W.gc)(a),
+        c = (0, K.gc)(a),
         o = n.useMemo(() => {
             let e = s.gradient;
             if (null != e && null != e.colors && !(e.colors.length < 2))
-                return (0, W.K5)({ gradient: e.colors, angle: e.angle }, { defaultAngle: 180 });
+                return (0, K.K5)({ gradient: e.colors, angle: e.angle }, { defaultAngle: 180 });
         }, [s.gradient]),
-        d = (0, W.x)(c, o),
+        d = (0, K.x)(c, o),
         u = { color: null != s.textColor && "" !== s.textColor ? s.textColor : "var(--always-white)" };
     return (0, l.jsxs)("div", {
         className: r()(eO.WR, t),
@@ -1007,7 +1007,7 @@ let ez = function () {
         }),
         j = !(d.Fr || d.v1) && null != h,
         f = n.useRef(null);
-    (0, X.i)();
+    (0, J.i)();
     let N = (0, Q.m)();
     n.useEffect(() => {
         C.h.wait(async () => {
@@ -1034,7 +1034,7 @@ let ez = function () {
                         (0, l.jsx)(eB, {}),
                         N && (0, l.jsx)(eI, {}),
                         !j && (0, l.jsx)(eH, {}),
-                        (0, l.jsx)(K.A, {
+                        (0, l.jsx)(W.A, {
                             hideCTAs: !0,
                             headingOverride: eN.intl.string(eN.t.dnVvQS),
                             hidePill: !L,

@@ -94,7 +94,7 @@ var F = n(935462),
     U = n(659746),
     _ = n(151595),
     w = n(771566),
-    N = n(20374);
+    N = n(306326);
 function D(t) {
     let { onClose: e } = t,
         n = (0, r.jsx)(h.E, { className: N.h, variant: "text-md/normal", children: P.intl.string(P.t.FCsTCk) });

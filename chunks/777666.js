@@ -5,7 +5,7 @@ n(64700);
 var r = n(503698),
     s = n.n(r),
     a = n(661531),
-    o = n(95361);
+    o = n(201345);
 let l = { ROUND: o.rS, ROUND_LEFT: o.Q2, ROUND_RIGHT: o.Hg, SQUARE: "" };
 function u(e) {
     return e < 10 ? 16 : e < 100 ? 22 : 30;

@@ -1,47 +1,47 @@
-n.d(t, { A: () => h });
-var i = n(627968);
-n(64700);
-var l = n(503698),
-    s = n.n(l),
-    r = n(990078),
-    a = n(104510),
-    o = n(827734),
-    d = n(534514),
-    c = n(939249),
-    u = n(473145),
-    m = n(985018),
-    g = n(460351);
-let h = (e) => {
-    let t,
+e.d(l, { A: () => x });
+var r = e(627968);
+e(64700);
+var n = e(503698),
+    a = e.n(n),
+    i = e(990078),
+    t = e(104510),
+    c = e(661531),
+    h = e(534514),
+    d = e(939249),
+    o = e(473145),
+    u = e(375708),
+    j = e(86335);
+let x = (s) => {
+    let l,
+        e,
         n,
-        l,
-        { guildFeature: h, guild: x, className: _, hideTooltip: p = !1, tooltipPosition: A = "left", onClick: E } = e,
-        f = x.features.has(h),
-        j = (0, u.Ys)(h);
-    return (f
-        ? (null != j && (l = m.intl.string(m.t.hUgjyP)),
-          (t = (0, i.jsxs)(i.Fragment, {
+        { guildFeature: x, guild: m, className: N, hideTooltip: _ = !1, tooltipPosition: p = "left", onClick: k } = s,
+        v = m.features.has(x),
+        g = (0, o.Ys)(x);
+    return (v
+        ? (null != g && (n = u.intl.string(u.t.hUgjyP)),
+          (l = (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, i.jsx)(a._, { color: o.A.unsafe_rawColors.GUILD_BOOSTING_PINK, className: g.RQ }),
-                  (0, i.jsx)(d.D, { variant: "eyebrow", className: g.h_, children: m.intl.string(m.t["0O+87i"]) }),
+                  (0, r.jsx)(t._, { color: c.A.unsafe_rawColors.GUILD_BOOSTING_PINK, className: j.RQ }),
+                  (0, r.jsx)(h.D, { variant: "eyebrow", className: j.h_, children: u.intl.string(u.t["0O+87i"]) }),
               ],
           })))
-        : (null != j && (l = m.intl.string(m.t.L2wYYj)),
-          (t = (0, i.jsxs)(i.Fragment, {
+        : (null != g && (n = u.intl.string(u.t.L2wYYj)),
+          (l = (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, i.jsx)(a._, { color: "currentColor", className: g.Kk }),
-                  (0, i.jsx)(d.D, { variant: "eyebrow", className: g.h_, children: null != j && (0, u.Qu)(j) }),
+                  (0, r.jsx)(t._, { color: "currentColor", className: j.Kk }),
+                  (0, r.jsx)(h.D, { variant: "eyebrow", className: j.h_, children: null != g && (0, o.Qu)(g) }),
               ],
           }))),
-    (n =
-        p || null == l
-            ? (0, i.jsx)("div", { className: s()(g.Jz, _), children: t })
-            : (0, i.jsx)(r.m, {
-                  position: A,
-                  text: l,
-                  children: (0, i.jsx)("div", { className: s()(g.Jz, _), children: t }),
+    (e =
+        _ || null == n
+            ? (0, r.jsx)("div", { className: a()(j.Jz, N), children: l })
+            : (0, r.jsx)(i.m, {
+                  position: p,
+                  text: n,
+                  children: (0, r.jsx)("div", { className: a()(j.Jz, N), children: l }),
               })),
-    null == E || f)
-        ? n
-        : (0, i.jsx)(c.D, { onClick: E, className: g.vk, children: n });
+    null == k || v)
+        ? e
+        : (0, r.jsx)(d.D, { onClick: k, className: j.vk, children: e });
 };

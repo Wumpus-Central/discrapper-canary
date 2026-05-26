@@ -1,40 +1,40 @@
 a.d(t, { default: () => u });
-var n = a(627968),
-    r = a(64700),
-    s = a(285899),
-    i = a(665171),
+var s = a(627968),
+    i = a(64700),
+    n = a(922545),
+    d = a(396748),
     l = a(225180),
-    o = a(576709),
-    c = a(985018),
-    d = a(388474);
+    c = a(76660),
+    r = a(375708),
+    o = a(242298);
 function u(e) {
     let { guildId: t, gameInstance: a, ...u } = e,
-        [m, f] = r.useState(!1),
-        [b, k] = r.useState(void 0),
-        p = (0, l.A)(a.gameId, "cover");
-    return (0, n.jsx)(s.O, {
+        [m, g] = i.useState(!1),
+        [h, p] = i.useState(void 0),
+        k = (0, l.A)(a.gameId, "cover");
+    return (0, s.jsx)(n.O, {
         size: "sm",
         title: a.name,
-        body: (0, n.jsx)("div", {
-            className: d.Z,
-            children: (0, n.jsx)("img", { alt: "", src: p ?? "", className: d.S }),
+        body: (0, s.jsx)("div", {
+            className: o.Z,
+            children: (0, s.jsx)("img", { alt: "", src: k ?? "", className: o.S }),
         }),
-        warningText: c.intl.string(o.default.ukbS3E),
-        acknowledgementText: c.intl.string(o.default.xjRtF9),
+        warningText: r.intl.string(c.default.ukbS3E),
+        acknowledgementText: r.intl.string(c.default.xjRtF9),
         isLoading: m,
-        error: b,
+        error: h,
         onDeactivate: () => {
-            k(void 0),
-                f(!0),
-                (0, i.e_)(t, a.planId, a.entitlementId)
+            p(void 0),
+                g(!0),
+                (0, d.e_)(t, a.planId, a.entitlementId)
                     .then(() => {
                         u.onClose();
                     })
                     .catch((e) => {
-                        k(e.body.message ?? e.message);
+                        p(e.body.message ?? e.message);
                     })
                     .finally(() => {
-                        f(!1);
+                        g(!1);
                     });
         },
         ...u,

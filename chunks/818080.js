@@ -53,9 +53,9 @@ var P = l(449543),
     V = l(140423),
     X = l(602902),
     q = l(665039),
-    W = l(16590),
+    W = l(788077),
     Z = l(375708),
-    J = l(296364);
+    J = l(698668);
 let ee = ["clowning around", "good times", "team vibes", "epic teamwork"];
 function et(e) {
     let { clip: t, moment: l, onEdit: s } = e,
@@ -273,7 +273,7 @@ function ed(e) {
         .sort((e, t) => t.createdAt - e.createdAt)
         .slice(0, t);
 }
-var ec = l(452143);
+var ec = l(509615);
 function eo(e) {
     let { onEdit: t } = e,
         l = (0, r.yK)([C.A], () => C.A.getClips()),
@@ -346,7 +346,7 @@ var eu = l(989349),
     eS = l(226421),
     eP = l(718812),
     eR = l(652215),
-    eT = l(798594);
+    eT = l(55746);
 let e_ = function (e) {
     let { clip: t, actionsDisabled: s, isNew: d, onEdit: c, onClick: o } = e,
         u = (0, r.yK)([Q.default], () => t.users.map((e) => Q.default.getUser(e)).filter(eD.Vq)),
@@ -719,7 +719,7 @@ var eK = l(702841),
     eq = l(350535),
     eW = l(572164),
     eZ = l(953932),
-    eJ = l(311162);
+    eJ = l(713466);
 function e0(e) {
     let { header: t, description: l } = e;
     return (0, i.jsxs)("div", {
@@ -766,7 +766,7 @@ function e2() {
         ],
     });
 }
-function e3(e) {
+function e7(e) {
     let { isEmptyBecauseQuery: t } = e,
         l = (0, eW.Et)();
     return (0, i.jsx)("div", {
@@ -792,11 +792,11 @@ function e3(e) {
         }),
     });
 }
-let e1 = 16 / 9;
-var e7 = l(792852),
-    e6 = l(352528);
-let e5 = [0, 16, 0, 16],
-    e8 = e5[1] + e5[3];
+let e3 = 16 / 9;
+var e1 = l(792852),
+    e6 = l(142883);
+let e8 = [0, 16, 0, 16],
+    e5 = e8[1] + e8[3];
 function e9(e) {
     let { filteredClips: t, totalClipCount: l, onClipClick: s, onEdit: n } = e,
         [d, c] = a.useState(!0),
@@ -805,7 +805,7 @@ function e9(e) {
         h = (0, r.yK)([C.A], () => C.A.getNewClipIds()),
         x = (0, r.bG)([C.A], () => C.A.getExportingClipIds().length > 0),
         g = (0, r.bG)([C.A], () => ed(C.A.getClips()).length > 0),
-        v = (0, e7.P)((e) => e.selectedGameId),
+        v = (0, e1.P)((e) => e.selectedGameId),
         { enableAutoClipsReview: f } = S.useConfig({ location: "ClipsGalleryContent" }),
         j = f && g && null == v;
     (0, M.A)(
@@ -859,7 +859,7 @@ function e9(e) {
             let i, a, s;
             return (
                 (e = t.length),
-                (i = Math.max(1, Math.floor(((l = A - e8) + 16) / 336))),
+                (i = Math.max(1, Math.floor(((l = A - e5) + 16) / 336))),
                 (a = Math.max(320, (l - 16 * (i - 1)) / i)),
                 (s = Math.ceil(e / i)),
                 { tileWidth: a, columns: i, rows: s }
@@ -877,7 +877,7 @@ function e9(e) {
     }, [p]);
     let I = a.useMemo(() => b.map((e) => Math.ceil(e.clips.length / E)), [b, E]),
         P = a.useMemo(() => I.reduce((e, t) => e + t, 0), [I]),
-        R = Math.floor(N / e1),
+        R = Math.floor(N / e3),
         T = a.useCallback(
             (e, t) => {
                 let { sectionIndex: l, sectionRowIndex: a } = t,
@@ -951,7 +951,7 @@ function e9(e) {
         ? d
             ? (0, i.jsx)("div", { className: e6.dc, children: (0, i.jsx)(L.y, {}) })
             : (0, i.jsx)(D.A, {
-                  listPadding: e5,
+                  listPadding: e8,
                   renderListHeader: j ? () => (0, i.jsx)(eo, { onEdit: n }) : void 0,
                   listHeaderHeight: 520 * !!j,
                   renderRow: T,
@@ -962,7 +962,7 @@ function e9(e) {
                   sectionHeaderHeight: _,
                   onResize: u,
               })
-        : (0, i.jsx)(e3, { isEmptyBecauseQuery: l > 0 });
+        : (0, i.jsx)(e7, { isEmptyBecauseQuery: l > 0 });
 }
 var e4 = l(922016),
     te = l(783977),
@@ -988,7 +988,7 @@ function tc(e) {
             setSelectedYear: p,
             setSortOrder: h,
             clearFilters: x,
-        } = (0, e7.P)(),
+        } = (0, e1.P)(),
         g = a.useMemo(
             () =>
                 (function (e) {
@@ -1249,12 +1249,12 @@ function tc(e) {
         ],
     });
 }
-var to = l(174726);
+var to = l(703814);
 let tu = a.memo(function (e) {
         let { allClips: t } = e,
-            { query: l, setQuery: s } = (0, e7.P)(),
+            { query: l, setQuery: s } = (0, e1.P)(),
             n = (0, eK.bG)([eX.Ay], () => eX.Ay.getKeybindForAction(eR.hCu.SAVE_CLIP)),
-            r = (0, e7.P)(
+            r = (0, e1.P)(
                 (e) =>
                     +(e.selectedUserIds.size > 0) +
                     +(null != e.selectedActivity) +
@@ -1372,8 +1372,8 @@ let tu = a.memo(function (e) {
     });
 function tp(e) {
     let { clipsByGame: t, filteredClips: l, favoriteClips: s, allClips: n } = e,
-        r = (0, e7.P)((e) => e.selectedGameId),
-        d = (0, e7.P)((e) => e.setSelectedGameId),
+        r = (0, e1.P)((e) => e.selectedGameId),
+        d = (0, e1.P)((e) => e.setSelectedGameId),
         c = a.useMemo(() => t.map((e) => e.applicationId), [t]),
         o = (0, K.A)(c),
         u = a.useCallback(() => d(null), [d]),
@@ -1444,7 +1444,7 @@ function tp(e) {
     });
 }
 var th = l(409067),
-    tx = l(847455);
+    tx = l(272863);
 let tg = a.createContext({
     selectedClipIds: new Set(),
     toggleClipSelection: () => {},
@@ -1466,7 +1466,7 @@ function tv(e) {
     (B.current = H), (a.useRef(K).current = K);
     let [Q, Y] = a.useState(null != L ? o.ip.ENTERED : o.ip.HIDDEN),
         V = a.useRef(null),
-        X = (0, e7.P)((e) => e.selectedGameId),
+        X = (0, e1.P)((e) => e.selectedGameId),
         q = a.useMemo(
             () => (null == X || "favorites" === X ? null : (R.find((e) => e.applicationId === X) ?? null)),
             [X, R],

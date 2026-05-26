@@ -51,7 +51,7 @@ function N(e) {
                 (e = { guildId: r, guildProductListingId: l.id, invoicePreview: a }),
                 (0, s.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
-                        n.e("89534"),
+                        n.e("56394"),
                         n.e("67837"),
                         n.e("35778"),
                         n.e("47812"),
@@ -71,8 +71,8 @@ var v = n(503698),
     R = n(789645),
     k = n(935462),
     L = n(303612),
-    M = n(916261),
-    U = n(575650);
+    M = n(58597),
+    U = n(948642);
 function F(e) {
     let { className: t, onClose: n } = e;
     return (0, i.jsx)(j.D, {
@@ -93,7 +93,7 @@ function b(e) {
         ],
     });
 }
-var w = n(196617);
+var w = n(270025);
 let D = {
     CHECKOUT_FLOW: l.C.GUILD_PRODUCT_CHECKOUT,
     CHECKOUT_STEPS: { [a.pn.REVIEW]: T._M },
@@ -127,7 +127,7 @@ var H = n(20742),
     Y = n(213530),
     Z = n(966971),
     z = n(758836),
-    X = n(483764);
+    X = n(589684);
 let q = { sliderBodyClassName: X.Bz },
     Q = (e) => {
         let { environment: t, setConfettiCanvas: n, customConfettiDisplayOptions: l, customConfettiVisible: r } = e;
@@ -264,7 +264,7 @@ var em = n(123292),
     eL = n(14702),
     eM = n(219103),
     eU = n(525723),
-    eF = n(780651);
+    eF = n(555563);
 function eb(e) {
     let {
             skuId: t,
@@ -455,7 +455,7 @@ var ez = n(871181),
     eq = n(285719),
     eQ = n(976860),
     eJ = n(652215),
-    e$ = n(353791);
+    e$ = n(269951);
 function e0(e) {
     let { handleClose: t, selectedSkuId: n } = e,
         { analyticsLocations: l } = (0, G.Ay)(_.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
@@ -478,22 +478,22 @@ let e1 = (0, I.createContext)({
         hideConfirmStepConfetti: !1,
         skuIDs: [],
     }),
-    e7 = (e) => {
+    e8 = (e) => {
         let { hideConfirmStepConfetti: t, confettiCanvas: n } = (0, I.useContext)(e1),
             { analyticsLocations: l } = (0, G.Ay)();
         return (0, i.jsx)(ep, { analyticsLocations: l, hideConfetti: t, confettiCanvas: n, ...e });
     },
-    e8 = {
+    e7 = {
         [a.pn.GIFT_CUSTOMIZATION]: () => ed.intl.string(ed.t["JCFN/y"]),
         [a.pn.AWAITING_PURCHASE_TOKEN_AUTH]: () => ed.intl.string(ed.t.lDbi6H),
         [a.pn.CONFIRM]: () => "",
     },
     e6 = (e) => {
         let { step: t } = e,
-            n = e8[t];
+            n = e7[t];
         return null == n ? null : (0, i.jsx)(H.rQ, { title: n(), titleTextVariant: "heading-lg/semibold" });
     },
-    e3 = {
+    e5 = {
         CHECKOUT_FLOW: l.C.COLLECTIBLES_CHECKOUT,
         CHECKOUT_STEPS: {
             [a.pn.GIFT_CUSTOMIZATION]: (e) => {
@@ -721,15 +721,15 @@ let e1 = (0, I.createContext)({
                 { isGift: n } = (0, K.Pv)();
             return n ? (0, i.jsx)(e6, { step: t }) : null;
         },
-        CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, i.jsx)(e7, { ...e }), options: q },
+        CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, i.jsx)(e8, { ...e }), options: q },
     };
-var e5 = n(696208),
+var e3 = n(696208),
     e4 = n(426398),
     e9 = n(683433),
     te = n(67480),
     tt = n(328968),
     tn = n(371794),
-    tl = n(565756);
+    tl = n(310844);
 function ti(e) {
     let { onStepChange: t, onBackClick: n, showBackButton: l = !1, disabled: r = !1, loading: s = !1 } = e,
         { hasPaymentSources: o } = (0, e4.jm)(),
@@ -740,7 +740,7 @@ function ti(e) {
             ],
             [t, u, r, s],
         );
-    return (0, i.jsx)(e5.H, { actions: c, leading: l ? (0, i.jsx)(e9.A, { onClick: n }) : void 0 });
+    return (0, i.jsx)(e3.H, { actions: c, leading: l ? (0, i.jsx)(e9.A, { onClick: n }) : void 0 });
 }
 a.pn.GIFT_CUSTOMIZATION;
 let tr = {
@@ -822,7 +822,7 @@ var ts = n(429913),
     td = n(510022),
     tC = n(317560),
     tp = n(366523),
-    tm = n(208733);
+    tm = n(578909);
 function t_(e) {
     let { handleClose: t } = e,
         { analyticsLocations: n } = (0, G.Ay)(),
@@ -900,7 +900,7 @@ var tT = n(889137),
     tj = n(587895),
     tR = n(71393),
     tk = n(806931),
-    tL = n(107610);
+    tL = n(809114);
 function tM(e) {
     let { handleClose: t, guild: n, sku: l } = e,
         r = I.useCallback(() => {
@@ -1205,15 +1205,15 @@ var tq = n(289873),
     t$ = n(120992),
     t0 = n(194256),
     t2 = n(319820),
-    t1 = n(327105),
-    t7 = n(200766);
-let t8 = (e) => {
+    t1 = n(982772),
+    t8 = n(625982);
+let t7 = (e) => {
         let { sku: t, orbPriceAmount: n } = e,
             { product: l, isSocialLayerGameItem: r } = (0, t2.AO)({ sku: t }),
             s = (0, t0.oO)(l);
         r ? (s = ed.intl.string(t1.default.qwSlCO)) : (0, tK.Ab)(l) && (s = ed.intl.string(ed.t["0TmQRG"]));
         let a = (0, t0.dL)(t),
-            o = (0, z.EZ)(t.id) ? tJ.m[t.id].render({ className: t7.$ }) : (0, i.jsx)(tQ.WH, { sku: t, product: l });
+            o = (0, z.EZ)(t.id) ? tJ.m[t.id].render({ className: t8.$ }) : (0, i.jsx)(tQ.WH, { sku: t, product: l });
         return (0, i.jsx)(tQ.f7, {
             label: a,
             description: s,
@@ -1228,16 +1228,16 @@ let t8 = (e) => {
         let l = (0, J.bG)([te.A], () => te.A.get(t), [t]);
         return null == l
             ? (0, i.jsx)(tq.y, { type: tq.y.Type.PULSING_ELLIPSIS })
-            : (0, i.jsx)(t8, { sku: l, orbPriceAmount: n });
+            : (0, i.jsx)(t7, { sku: l, orbPriceAmount: n });
     },
-    t3 = (e) => {
+    t5 = (e) => {
         let { orbBalance: t } = e;
         return (0, i.jsx)(tw.vW, { label: ed.intl.string(ed.t.y0WGqP), value: null != t ? `${t}` : "", Icon: tu.C });
     },
-    t5 = () => ed.intl.string(ed.t.wmcDyu);
+    t3 = () => ed.intl.string(ed.t.wmcDyu);
 function t4() {
     let { immediateDelivery: e } = (0, tH.U)(),
-        t = t5();
+        t = t3();
     return (0, i.jsx)(tw._P, {
         variant: { type: tw.I0.OrbsRedemption, purchaseButtonText: t },
         paymentSourceType: null,
@@ -1471,7 +1471,7 @@ let t9 = (0, I.createContext)({
                                                   : { disabled: !1, tooltipText: null },
                                         [n, t, l],
                                     );
-                                return { disabled: i, tooltipText: r, text: t5() };
+                                return { disabled: i, tooltipText: r, text: t3() };
                             })({ orbBalance: E, orbPriceAmount: c ? d : T, isInTestMode: x }),
                             v = (0, I.useMemo)(
                                 () => ({ onClick: A, loading: r, text: N, disabled: f, tooltipText: P }),
@@ -1497,7 +1497,7 @@ let t9 = (0, I.createContext)({
                                 return null;
                             }, [j, y, h]),
                             purchaseItemContent: (0, i.jsx)(t6, { skuId: t, orbPriceAmount: c ? C : T }),
-                            paymentSelectContent: (0, i.jsx)(t3, { orbBalance: E }),
+                            paymentMethodContent: (0, i.jsx)(t5, { orbBalance: E }),
                             legalContent: (0, i.jsx)(t4, {}),
                             primaryButtonProps: v,
                             invoiceSummaryContent: null,
@@ -1622,7 +1622,7 @@ let t9 = (0, I.createContext)({
             flowType: l.C.COLLECTIBLES_CHECKOUT,
             implemented: !0,
             purchaseType: eJ.VVm.ONE_TIME,
-            TENANT_CHECKOUT_FLOW_CONFIG: e3,
+            TENANT_CHECKOUT_FLOW_CONFIG: e5,
         },
         [l.C.SLAYER_STOREFRONT_CHECKOUT]: {
             implemented: !0,
@@ -1891,7 +1891,7 @@ class no {
 }
 n(584160);
 var nu = n(981036),
-    nc = n(367644);
+    nc = n(661724);
 let nd = (e) => {
     let {
             paymentModalStepProps: { handleStepChange: t },

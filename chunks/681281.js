@@ -18,8 +18,8 @@ var l = n(503698),
     C = n(47167),
     f = n(882840),
     E = n(713654),
-    y = n(137177),
-    N = n(508654),
+    N = n(137177),
+    y = n(508654),
     j = n(647090),
     v = n(961314),
     I = n(58736),
@@ -38,8 +38,8 @@ var l = n(503698),
     V = n(136523),
     B = n(806931),
     k = n(375708),
-    H = n(82644),
-    F = n(992595);
+    H = n(188628),
+    F = n(168147);
 function G(e) {
     let { user: t, channel: n, stream: l, color: a } = e,
         s = (0, L.A)(n, t, l);
@@ -61,7 +61,7 @@ function z(e) {
             shouldShowHeaderParticipants: s = !0,
             shouldShowCommerceStreamHeader: r = !1,
         } = e,
-        o = (0, N.Qs)(a.id),
+        o = (0, y.Qs)(a.id),
         d = null != o ? (0, j.G3)(o) : null,
         u = null != o;
     if (l?.type === B.lp.ACTIVITY)
@@ -69,7 +69,7 @@ function z(e) {
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(I.Ay.Divider, { className: H.yF }),
-                    (0, i.jsx)(y.A, { game: n, className: H.RI }),
+                    (0, i.jsx)(N.A, { game: n, className: H.RI }),
                     (0, i.jsx)(c.E, {
                         className: H.W$,
                         variant: "text-md/normal",
@@ -94,8 +94,8 @@ function z(e) {
     return (0, i.jsx)("div", { className: H.kL, children: t });
 }
 function W(e) {
-    let { channel: t, guild: l, appContext: o, inCall: A, isChatOpen: x, exitFullScreen: y } = e,
-        N = (0, b.B)({ location: "channel_call_header_toolbar" }),
+    let { channel: t, guild: l, appContext: o, inCall: A, isChatOpen: x, exitFullScreen: N } = e,
+        y = (0, b.B)({ location: "channel_call_header_toolbar" }),
         { focusedParticipant: j } = (0, s.cf)(
             [M.A],
             () => ({
@@ -169,9 +169,9 @@ function W(e) {
                     appContext: o,
                     inCall: A,
                     isChatOpen: x,
-                    exitFullScreen: y,
+                    exitFullScreen: N,
                     focusedApplication: L,
-                    shouldShowHeaderParticipants: N,
+                    shouldShowHeaderParticipants: y,
                 }),
                 children: [
                     (0, i.jsx)(I.Ay.Title, {
@@ -198,8 +198,8 @@ function W(e) {
                         focusedApplication: L,
                         focusedParticipant: j,
                         channel: t,
-                        shouldShowHeaderParticipants: !N,
-                        shouldShowCommerceStreamHeader: N,
+                        shouldShowHeaderParticipants: !y,
+                        shouldShowCommerceStreamHeader: y,
                     }),
                 ],
             }),

@@ -1,35 +1,35 @@
-n.d(t, { A: () => u });
-var i = n(627968);
-n(64700);
-var E = n(503698),
-    l = n.n(E),
-    a = n(695366),
-    s = n(696986),
-    r = n(834730),
-    o = n(821609),
-    c = n(785361);
-function u(e) {
-    let { message: t, error: n, onClick: E, submitting: u, className: _, ctaMessage: I } = e;
-    return (0, i.jsxs)("div", {
-        className: l()(c.kL, _),
+t.d(n, { A: () => d });
+var s = t(627968);
+t(64700);
+var i = t(503698),
+    a = t.n(i),
+    r = t(695366),
+    l = t(696986),
+    c = t(834730),
+    u = t(821609),
+    o = t(12497);
+function d(e) {
+    let { message: n, error: t, onClick: i, submitting: d, className: m, ctaMessage: h } = e;
+    return (0, s.jsxs)("div", {
+        className: a()(o.kL, m),
         children: [
-            (0, i.jsxs)("div", {
-                className: c.FS,
+            (0, s.jsxs)("div", {
+                className: o.FS,
                 children: [
-                    (0, i.jsx)(a.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: c.QW }),
-                    (0, i.jsx)(s.h, { size: 10, horizontal: !0 }),
-                    (0, i.jsxs)("div", {
+                    (0, s.jsx)(r.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: o.QW }),
+                    (0, s.jsx)(l.h, { size: 10, horizontal: !0 }),
+                    (0, s.jsxs)("div", {
                         children: [
-                            (0, i.jsx)(s.h, { size: 1 }),
-                            (0, i.jsx)(r.E, { className: c.pq, variant: "text-sm/normal", children: t }),
-                            null != n &&
-                                (0, i.jsx)(r.E, { className: l()(c.pq, c.z3), variant: "text-sm/normal", children: n }),
+                            (0, s.jsx)(l.h, { size: 1 }),
+                            (0, s.jsx)(c.E, { className: o.pq, variant: "text-sm/normal", children: n }),
+                            null != t &&
+                                (0, s.jsx)(c.E, { className: a()(o.pq, o.z3), variant: "text-sm/normal", children: t }),
                         ],
                     }),
                 ],
             }),
-            (0, i.jsx)(s.h, { size: 16, horizontal: !0 }),
-            (0, i.jsx)(o.$, { variant: "critical-secondary", size: "sm", onClick: E, text: I, loading: u }),
+            (0, s.jsx)(l.h, { size: 16, horizontal: !0 }),
+            (0, s.jsx)(u.$, { variant: "critical-secondary", size: "sm", onClick: i, text: h, loading: d }),
         ],
     });
 }

@@ -184,13 +184,13 @@ let k = (e) => {
 };
 var G = n(534514),
     F = n(834730),
-    V = n(775549);
+    V = n(833021);
 let B = (e) => {
     let { assetComponent: t, tooltipWordmarkComponent: n, children: r } = e;
     return (0, i.jsxs)("div", { className: V.R, children: [t, (0, i.jsx)("div", { className: V.A, children: n }), r] });
 };
 var H = n(224016),
-    j = n(74824);
+    j = n(597531);
 let Y = (e) => {
     let { profileBadge: t, tenureBadge: n } = e,
         r = (0, L.I)(n.id).standard;
@@ -213,10 +213,10 @@ var W = n(30084),
     z = n(590202),
     $ = n(976860),
     q = n(305003),
-    Z = n(312640),
-    X = n(798618),
+    X = n(312640),
+    Z = n(798618),
     Q = n(752079),
-    J = n(414690);
+    J = n(427426);
 function ee(e) {
     let { children: t, targetElementRef: n, delay: s, showSubtext: a, forceOpen: o } = e,
         [l, u] = r.useState(!1),
@@ -245,12 +245,12 @@ function ee(e) {
         onMouseLeave: h,
         children: [
             t,
-            (0, i.jsxs)(Z.x, {
+            (0, i.jsxs)(X.x, {
                 targetElementRef: n,
                 shouldShow: !!(l || o),
                 position: "top",
                 caretConfig: { align: "center" },
-                children: [(0, i.jsx)(et, { showSubtext: a }), (0, i.jsx)(X.F, {})],
+                children: [(0, i.jsx)(et, { showSubtext: a }), (0, i.jsx)(Z.F, {})],
             }),
         ],
     });
@@ -310,7 +310,7 @@ function ed(e) {
 var e_ = n(652215),
     ef = n(758836);
 let eh = "premium";
-var ep = n(992028);
+var ep = n(168796);
 function eE(e) {
     let {
             badges: t,

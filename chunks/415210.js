@@ -24,7 +24,7 @@ var l,
     v = n(403362),
     y = n(372684),
     T = n(226421),
-    N = n(732774);
+    N = n(230054);
 function b() {
     let e = (0, o.yK)([f.A], () => {
         let e = f.A.getLastClipsSession()?.newClipIds;
@@ -55,7 +55,7 @@ function b() {
     });
 }
 var M = n(375708),
-    R = n(280508);
+    R = n(537660);
 function D(e) {
     let { onOpenClips: t, lastClipsSession: n, closePopout: l } = e;
     return (s.useEffect(
@@ -192,7 +192,7 @@ function eb(e) {
         (0, et.Dr)($.M.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: ey.i.TAKE_ACTION }),
             (0, c.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("83644"), n.e("42322")]).then(n.bind(n, 143657));
+                    let { default: e } = await Promise.all([n.e("95380"), n.e("42322")]).then(n.bind(n, 143657));
                     return (n) => (0, i.jsx)(e, { ...n, channel: t });
                 },
                 { modalKey: eT.sm },
@@ -426,7 +426,7 @@ function eb(e) {
     );
 }
 var eM = n(696016),
-    eR = n(644268);
+    eR = n(69676);
 let eD = s.memo(function (e) {
     let { className: t, channel: l, draftType: a, editorTextContent: E, setValue: S, canOnlyUseTextCommands: _ } = e,
         I = (0, k.Us)(),
@@ -458,13 +458,13 @@ let eD = s.memo(function (e) {
         (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("96449"),
-                    n.e("71104"),
-                    n.e("88623"),
-                    n.e("47648"),
-                    n.e("58466"),
+                    n.e("96217"),
+                    n.e("94364"),
+                    n.e("85903"),
+                    n.e("92844"),
+                    n.e("69117"),
                     n.e("83952"),
-                    n.e("30920"),
+                    n.e("78179"),
                     n.e("81202"),
                     n.e("1962"),
                     n.e("1922"),

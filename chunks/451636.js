@@ -1,16 +1,16 @@
 n.d(t, { q: () => o });
-var r = n(627968),
+var l = n(627968),
     a = n(503698),
-    l = n.n(a),
+    r = n.n(a),
     i = n(457287),
     s = n(375708),
-    u = n(97803);
+    u = n(398859);
 let o = (e) => {
     let { className: t, currencies: n, onChange: a, selectedCurrency: o, ...c } = e;
-    return (0, r.jsx)(i.f, {
+    return (0, l.jsx)(i.f, {
         currencies: n,
-        className: l()(u.p, t),
-        children: (0, r.jsx)(i.A, {
+        className: r()(u.p, t),
+        children: (0, l.jsx)(i.A, {
             label: s.intl.string(s.t["/AAR02"]),
             selectedCurrency: o,
             currencies: n,

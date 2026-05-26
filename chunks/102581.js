@@ -90,7 +90,7 @@ var et =
     el = s(65470),
     en = s(792656),
     ea = s(652215),
-    er = s(870408);
+    er = s(298203);
 let ec = function (e) {
     let { isVisible: t, subscriptionTier: s, isEligibleForBogoPromotion: i } = e,
         n = (0, ei.z)({
@@ -122,7 +122,7 @@ var eo = s(534514),
     ed = s(702841),
     eu = s(652533),
     em = s(20458),
-    ex = s(80933),
+    ex = s(999461),
     ep = s(180894);
 let eh = () => {
     let e = (0, ed.bG)([F.A], () => F.A.useReducedMotion);
@@ -155,7 +155,7 @@ let eh = () => {
     });
 };
 var eg = s(375708),
-    ej = s(296725);
+    ej = s(901013);
 let ef = n.forwardRef((e, t) => {
     let { analyticsLocations: s } = (0, g.Ay)(h.A.PREMIUM_MARKETING_FOOTER_CTA);
     return (0, l.jsx)(g.f5, {
@@ -186,7 +186,7 @@ var eN = s(403581),
     eE = s(909536),
     ev = s(400669),
     eI = s(876587),
-    eR = s(503255);
+    eR = s(680023);
 let eT = (e) => {
     let { navBarSections: t, activeSectionId: s, isAnimationComplete: i } = e,
         a = {
@@ -261,8 +261,8 @@ var eb = s(31502),
     eL = s(985603),
     ew = s(983060),
     ek = s(788868),
-    eU = s(237146),
-    eB = s(56598);
+    eU = s(151001),
+    eB = s(869590);
 function eF() {
     let { sectionRef: e, handleVisibilityChange: t } = (0, eG.A)({ boxType: eL.XQ, thirdPartyPartner: eL.FZ }),
         s = [
@@ -378,7 +378,7 @@ function eF() {
 }
 var eH = s(750338),
     ez = s(280041),
-    eV = s(856556);
+    eV = s(506732);
 function eK(e) {
     let {
         className: t,
@@ -452,7 +452,7 @@ var eZ = s(877624),
     e1 = s(97808),
     e2 = s(854627),
     e3 = s(778712),
-    e5 = s(45861);
+    e5 = s(331813);
 function e8(e) {
     let { referrer: t } = e,
         { avatarSrc: s, eventHandlers: i } = (0, e2.A)({ userId: t?.id, size: e3._3.SIZE_24, animateOnHover: !0 });
@@ -478,11 +478,11 @@ function e8(e) {
     });
 }
 var e6 = s(579245),
-    e4 = s(175569),
-    e7 = s(369805);
+    e7 = s(175569),
+    e4 = s(369805);
 let e9 = () => {
-    let e = (0, e7.A)();
-    return null == e ? null : (0, l.jsx)(e4.A, { text: e });
+    let e = (0, e4.A)();
+    return null == e ? null : (0, l.jsx)(e7.A, { text: e });
 };
 var te = s(97352);
 function tt() {
@@ -542,7 +542,7 @@ let ti =
                   }),
               });
     };
-var tn = s(188393);
+var tn = s(512105);
 let ta = (e) => {
     let { containerVisibilityPercentage: t } = e,
         s = (0, ed.bG)([F.A], () => F.A.useReducedMotion),
@@ -573,7 +573,7 @@ let ta = (e) => {
         ],
     });
 };
-var tr = s(469408);
+var tr = s(214496);
 let tc = n.memo(
     n.forwardRef((e, t) => {
         let { className: s, subscriptionTier: i, isEligibleForBogoPromotion: n } = e,
@@ -682,10 +682,10 @@ var tg = s(773669),
     tN = s(881373),
     tA = s(84483),
     t_ = s(190107),
-    tC = s(962995),
-    tE = s(490285),
-    tv = s(864386),
-    tI = s(799642),
+    tC = s(778414),
+    tE = s(587416),
+    tv = s(745699),
+    tI = s(746458),
     tR = s(202600);
 let tT = (e) => {
         let { includes: t } = e;
@@ -1123,7 +1123,7 @@ let tT = (e) => {
         );
     };
 var tO = s(818348),
-    tG = s(808557);
+    tG = s(94509);
 let tL = () => {
     let e = (0, c.zy)();
     (0, C.P)(_.b);
@@ -1248,7 +1248,7 @@ var tw = s(462887),
     tV = s(695366),
     tK = s(780964),
     tW = s(766075),
-    tY = s(835968);
+    tY = s(238272);
 let tZ = (e) => {
     let t,
         s,
@@ -1292,7 +1292,7 @@ let tZ = (e) => {
         })
     );
 };
-var tQ = s(147935);
+var tQ = s(442015);
 let tJ = (e) => {
     let { lifted: t = !1 } = e;
     return (0, l.jsxs)("svg", {
@@ -1331,7 +1331,7 @@ let tJ = (e) => {
 var tX = s(900797),
     tq = s(847374),
     t$ = s(777666),
-    t0 = s(464769);
+    t0 = s(837761);
 function t1(e) {
     let { className: t } = e;
     return (0, l.jsx)(t$.Lp, { className: r()(t0.T, t), text: eg.intl.string(eg.t.EYxi0o) });
@@ -1341,12 +1341,12 @@ var t2 = s(904788),
     t5 = s(591179),
     t8 = s(255438),
     t6 = s(355097);
-let t4 = "/assets/5b4fec8511c3676a.svg",
-    t7 = "/assets/0838bda6ecd20d91.svg";
+let t7 = "/assets/5b4fec8511c3676a.svg",
+    t4 = "/assets/0838bda6ecd20d91.svg";
 var t9 = s(64514),
     se = s(121818);
 let st = (e, t, s) => ((0, tw.M)(e) ? t : s);
-var ss = s(446278);
+var ss = s(259270);
 let si = (e) => {
         let { isShowingAll: t, onClick: s } = e;
         return (0, l.jsxs)(eA.D, {
@@ -1497,19 +1497,19 @@ let si = (e) => {
                     stickers: {
                         title: eg.intl.string(eg.t["1c+xwT"]),
                         description: eg.intl.string(eg.t.hJG8ZN),
-                        imageSource: st(i, t7, t4),
+                        imageSource: st(i, t4, t7),
                         imageClassName: t.stickersImage,
                     },
                     stickersBurst: {
                         title: eg.intl.string(eg.t.tzdIwI),
                         description: eg.intl.string(eg.t.hJG8ZN),
-                        imageSource: st(i, t7, t4),
+                        imageSource: st(i, t4, t7),
                         imageClassName: t.stickersImage,
                     },
                     stickersPremiumPerk: {
                         title: eg.intl.string(eg.t.tzdIwI),
                         description: eg.intl.string(eg.t.hJG8ZN),
-                        imageSource: st(i, t7, t4),
+                        imageSource: st(i, t4, t7),
                         imageClassName: t.stickersImage,
                     },
                     streaming: {
@@ -1590,7 +1590,7 @@ let si = (e) => {
         });
     };
 var sa = s(194509),
-    sr = s(14238);
+    sr = s(618526);
 let sc = function (e) {
     let { isVisible: t, subscriptionTier: s, isApplicationHome: i, isEligibleForBogoPromotion: n } = e,
         a = (0, ei.z)({
@@ -1622,7 +1622,7 @@ let sc = function (e) {
     });
 };
 var so = s(89366),
-    sd = s(360101);
+    sd = s(762405);
 let su = (e) => {
         let {
                 inOfferExperience: t,
@@ -1720,8 +1720,8 @@ let sp = n.forwardRef((e, t) => {
     });
 });
 var sh = s(22118),
-    sg = s(111932),
-    sj = s(16939),
+    sg = s(406012),
+    sj = s(302891),
     sf = s(79119);
 let sN = (e) => {
         let { inOfferExperience: t } = e;
@@ -1893,7 +1893,7 @@ let sN = (e) => {
               ? (0, l.jsx)(tL, {})
               : null;
     };
-var sC = s(972119);
+var sC = s(78103);
 let sE = function (e) {
     let { entrypoint: t = ek.Mf.UserSettings } = e;
     (0, C.P)(_.b);

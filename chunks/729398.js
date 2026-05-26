@@ -17,7 +17,7 @@ var n,
     j = l.n(E),
     f = l(460890),
     A = l(939249),
-    N = l(252316);
+    N = l(505244);
 function y(e) {
     let { steps: t, stepIndex: l, onClick: n } = e,
         { i18n: r } = (0, f.G9)();
@@ -182,7 +182,7 @@ var em = l(734057),
     eN = l(825484),
     ey = l(450510),
     ep = l(421838),
-    eC = l(419836);
+    eC = l(197564);
 let eb = () =>
     (0, i.jsxs)(i.Fragment, {
         children: [
@@ -280,7 +280,7 @@ function eI(e) {
           });
 }
 var eS = l(988794),
-    eT = l(723074);
+    eT = l(950210);
 let eG = (e) => {
         let { guildId: t, channelType: l, channel: n, onSelectChannel: r, disabled: s, entityType: a } = e,
             d = l === eu.rbe.GUILD_STAGE_VOICE,
@@ -444,8 +444,8 @@ function ek(e) {
                           v(eS.Ps.STAGE_INSTANCE),
                               (0, x.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
-                                      l.e("51776"),
-                                      l.e("11585"),
+                                      l.e("48424"),
+                                      l.e("66373"),
                                       l.e("3589"),
                                       l.e("89916"),
                                       l.e("60773"),
@@ -472,7 +472,7 @@ var eD = l(713654),
     eP = l(857071),
     eM = l(691012),
     eV = l(779519),
-    eU = l(439437);
+    eU = l(323021);
 function ez(e) {
     var t;
     let { guildId: l, guildEvent: n, guildEventId: s, error: d, isSlideReady: u } = e,
@@ -573,7 +573,7 @@ var eO = l(260598),
     eX = l(918192),
     eq = l(979091),
     eY = l(339984),
-    eQ = l(910264);
+    eQ = l(687992);
 function eW(e) {
     let {
             guildEvent: t,
@@ -614,8 +614,8 @@ function eW(e) {
                 ? G(null)
                 : (0, x.openModalLazy)(async () => {
                       let { default: n } = await Promise.all([
-                          l.e("94908"),
-                          l.e("36029"),
+                          l.e("69117"),
+                          l.e("71425"),
                           l.e("63232"),
                           l.e("43437"),
                           l.e("58164"),
@@ -761,7 +761,7 @@ function eK(e) {
               children: t,
           });
 }
-var e$ = l(339184);
+var e$ = l(764400);
 function eZ(e) {
     let { isSlideReady: t, ...l } = e;
     return (0, i.jsxs)("div", {
@@ -790,11 +790,11 @@ var eJ = l(789645),
     e1 = l(842241),
     e7 = l(279208),
     e9 = l(747007),
-    e8 = l(710358),
-    e4 = l(958590),
-    e3 = l(174459),
-    e2 = l(957565),
-    e5 = l(118888);
+    e4 = l(710358),
+    e2 = l(958590),
+    e8 = l(174459),
+    e5 = l(957565),
+    e3 = l(2472);
 let { INVITE_OPTIONS_7_DAYS: e6, INVITE_OPTIONS_UNLIMITED: te } = I.Ay;
 function tt(e) {
     let { onClose: t, event: l } = e,
@@ -802,9 +802,9 @@ function tt(e) {
         r = (0, a.bG)([C.Ay], () => (null != n ? C.Ay.getDefaultChannel(n)?.id : null), [n]),
         s = (0, a.bG)([b.A], () => b.A.getGuild(n), [n]),
         { channel_id: d, id: u } = l ?? {},
-        c = (0, a.bG)([e4.A], () => {
+        c = (0, a.bG)([e2.A], () => {
             let e = d ?? r;
-            return null == e ? null : e4.A.getInvite(e);
+            return null == e ? null : e2.A.getInvite(e);
         }, [d, r]);
     if (null == l) return t(), null;
     let o = s?.vanityURLCode ?? c?.code,
@@ -814,48 +814,48 @@ function tt(e) {
         v = c?.maxAge ?? e6.value,
         E = c?.maxUses ?? te.value;
     return (0, i.jsxs)("div", {
-        className: e5.kL,
+        className: e3.kL,
         children: [
             (0, i.jsx)(A.D, {
                 onClick: t,
-                className: e5.VN,
+                className: e3.VN,
                 "aria-label": ec.intl.string(ec.t.cpT0Cq),
                 children: (0, i.jsx)(eJ.P, { size: "md", color: "currentColor" }),
             }),
-            (0, i.jsx)(e8.A, {
+            (0, i.jsx)(e4.A, {
                 children: (0, i.jsx)("div", {
-                    className: e5.zc,
+                    className: e3.zc,
                     children: (0, i.jsx)(e0.C, {
                         size: "custom",
                         color: "currentColor",
                         height: 30,
                         width: 30,
-                        className: e5.Kk,
+                        className: e3.Kk,
                     }),
                 }),
             }),
             (0, i.jsx)(K.D, {
                 variant: "heading-xl/semibold",
-                className: e5.wx,
+                className: e3.wx,
                 children: ec.intl.string(ec.t.UzNv7u),
             }),
             (0, i.jsx)(g.E, {
                 variant: "text-md/normal",
                 color: "text-default",
-                className: e5.rf,
+                className: e3.rf,
                 children: ec.intl.string(ec.t.UetJjH),
             }),
             (0, i.jsxs)("div", {
-                className: e5.EZ,
+                className: e3.EZ,
                 children: [
                     (0, i.jsx)(e9.I, {
                         value: m,
                         autoFocus: !1,
                         onCopy: (e) => {
                             if (h) return;
-                            (0, e2.C)(e);
+                            (0, e5.C)(e);
                             let t = (0, M.dy)(l.entity_type);
-                            e3.default.track(eu.HAw.COPY_INSTANT_INVITE, {
+                            e8.default.track(eu.HAw.COPY_INSTANT_INVITE, {
                                 server: l.guild_id,
                                 channel: d,
                                 channel_type: t,
@@ -869,7 +869,7 @@ function tt(e) {
                         (0, i.jsx)(g.E, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            className: e5.x6,
+                            className: e3.x6,
                             children: (0, I.Be)(v, E),
                         }),
                 ],
@@ -877,7 +877,7 @@ function tt(e) {
         ],
     });
 }
-var tl = l(486536);
+var tl = l(780616);
 let { INVITE_OPTIONS_7_DAYS: tn, INVITE_OPTIONS_UNLIMITED: ti } = I.Ay;
 var tr =
     (((n = tr || {})[(n.ENTITY = 0)] = "ENTITY"),

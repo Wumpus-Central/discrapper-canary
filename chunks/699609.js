@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { w: () => X, A: () => Z });
+n.d(t, { w: () => Z, A: () => X });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -40,7 +40,7 @@ var O = n(136722),
     F = n(209700),
     V = n(652215),
     B = n(375708),
-    H = n(59742);
+    H = n(239326);
 function j(e) {
     let { guildId: t } = e,
         n = (0, o.bG)([U.default], () => U.default.getCurrentUser()),
@@ -134,7 +134,7 @@ function Y(e) {
 var W = n(746080);
 n(500208);
 var K = n(2242),
-    z = n(595156);
+    z = n(875220);
 function $(e) {
     let { className: t, onClick: n, children: r, buttonRef: s } = e;
     return (0, i.jsx)(c.$n, {
@@ -152,7 +152,7 @@ function q(e) {
     let { onClick: t, className: n } = e;
     return (0, i.jsx)($, { onClick: t, className: n, children: B.intl.string(B.t.R9GHya) });
 }
-function Z() {
+function X() {
     let e = r.useRef(null),
         t = (0, o.bG)([T.A], () => T.A.getGuildId()),
         n = (0, o.bG)([I.A], () => I.A.getChannelId(t)),
@@ -258,12 +258,12 @@ function Z() {
         ],
     });
 }
-function X(e) {
+function Z(e) {
     let { guildId: t } = e;
     return (0, o.bG)([v.A], () => v.A.isViewingRoles(t))
         ? (0, i.jsx)("div", {
               className: a()(z.xd, { [z.KF]: (0, y.isWindows)(), [z.Xz]: (0, y.isMac)(), [z.pS]: (0, y.isLinux)() }),
-              children: (0, i.jsx)(Z, {}),
+              children: (0, i.jsx)(X, {}),
           })
         : null;
 }

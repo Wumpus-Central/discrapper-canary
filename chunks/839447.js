@@ -1,97 +1,97 @@
-t.d(n, { A: () => h }), t(321073);
-var l = t(627968),
-    i = t(64700),
-    a = t(827734),
-    r = t(444550),
-    o = t(777666),
-    s = t(834730),
-    c = t(565645),
-    u = t(985018),
-    d = t(65242);
+n.d(t, { A: () => h }), n(321073);
+var l = n(627968),
+    i = n(64700),
+    a = n(661531),
+    r = n(444550),
+    o = n(777666),
+    s = n(834730),
+    c = n(565645),
+    d = n(375708),
+    u = n(847194);
 function m(e) {
     return null != e && (null != e.id || null != e.name);
 }
 function h(e) {
-    let { options: n, value: t, onChange: h, canBeNew: p, memberCounts: A } = e,
+    let { options: t, value: n, onChange: h, canBeNew: p, memberCounts: x } = e,
         g = i.useMemo(() => {
             let e = new Map();
             return (
-                n.forEach((n) => {
-                    e.set(n.id, n);
+                t.forEach((t) => {
+                    e.set(t.id, t);
                 }),
                 e
             );
-        }, [n]),
-        x = i.useMemo(() => {
+        }, [t]),
+        A = i.useMemo(() => {
             let e = [];
             return (
-                n.forEach((n) => {
-                    e.push({ value: n.id, label: n.title, key: n.id });
+                t.forEach((t) => {
+                    e.push({ value: t.id, label: t.title, key: t.id });
                 }),
                 e
             );
-        }, [n]),
+        }, [t]),
         f = i.useCallback(
             (e) => {
                 if (null == e) return;
-                let n = g.get(e.value);
-                if (null != n && m(n.emoji))
+                let t = g.get(e.value);
+                if (null != t && m(t.emoji))
                     return (0, l.jsx)(c.A, {
-                        emojiId: n.emoji?.id,
-                        emojiName: n.emoji?.name,
-                        animated: n.emoji?.animated ?? !1,
+                        emojiId: t.emoji?.id,
+                        emojiName: t.emoji?.name,
+                        animated: t.emoji?.animated ?? !1,
                     });
             },
             [g],
         ),
         C = i.useCallback(
-            (e, n) => {
-                if (null == e || n.inPill) return;
-                let t = g.get(e.value);
-                if (null == t || !m(t.emoji)) return;
-                let i = null == A || null == t.roleIds ? 0 : Math.max(...t.roleIds.map((e) => A[e])),
-                    r = null != A && i > 0;
+            (e, t) => {
+                if (null == e || t.inPill) return;
+                let n = g.get(e.value);
+                if (null == n || !m(n.emoji)) return;
+                let i = null == x || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => x[e])),
+                    r = null != x && i > 0;
                 return (0, l.jsxs)("div", {
-                    className: d.ei,
+                    className: u.ei,
                     children: [
                         p &&
-                            t.isUnseen &&
+                            n.isUnseen &&
                             (0, l.jsx)(o.Lp, {
                                 color: a.A.unsafe_rawColors.BRAND_260.css,
-                                text: u.intl.string(u.t.y2b7CA),
-                                className: d.Ad,
+                                text: d.intl.string(d.t.y2b7CA),
+                                className: u.Ad,
                             }),
                         r &&
                             (0, l.jsx)("div", {
-                                className: d.Kl,
+                                className: u.Kl,
                                 "data-hover": !0,
                                 children: (0, l.jsx)(s.E, {
                                     variant: "text-xs/normal",
                                     color: "always-white",
-                                    children: u.intl.format(u.t.EgKsZA, { memberCount: i }),
+                                    children: d.intl.format(d.t.EgKsZA, { memberCount: i }),
                                 }),
                             }),
                     ],
                 });
             },
-            [p, A, g],
+            [p, x, g],
         ),
         j = i.useCallback(
             (e) => {
-                let n = [];
+                let t = [];
                 e.forEach((e) => {
-                    let t = g.get(e);
-                    null != t && n.push(t);
+                    let n = g.get(e);
+                    null != n && t.push(n);
                 }),
-                    h(n);
+                    h(t);
             },
             [h, g],
         );
     return (0, l.jsx)(r.p, {
         multi: !0,
-        options: x,
+        options: A,
         onChange: j,
-        value: t,
+        value: n,
         closeOnSelect: !1,
         renderOptionSuffix: C,
         renderOptionPrefix: f,

@@ -4,20 +4,20 @@ var a = l(627968),
     i = l(231723),
     s = l(939249),
     r = l(256905),
-    c = l(372684),
-    o = l(878185);
+    o = l(372684),
+    c = l(819945);
 function u() {
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)("div", { className: o.OC }),
+            (0, a.jsx)("div", { className: c.OC }),
             (0, a.jsx)("div", {
-                className: o.f4,
+                className: c.f4,
                 children: (0, a.jsxs)("div", {
-                    className: o.fL,
+                    className: c.fL,
                     children: [
-                        (0, a.jsx)("div", { className: o.u }),
-                        (0, a.jsx)("div", { className: o.ou }),
-                        (0, a.jsx)("div", { className: o.PH }),
+                        (0, a.jsx)("div", { className: c.u }),
+                        (0, a.jsx)("div", { className: c.ou }),
+                        (0, a.jsx)("div", { className: c.PH }),
                     ],
                 }),
             }),
@@ -39,24 +39,24 @@ function C() {
     let { subscribe: e, soundboardAudioEnabled: t, voiceAudioEnabled: l, clip: i } = (0, g.T)(),
         s = i.decision?.timestamp ?? 0,
         r = n.useMemo(() => new v.H(i.timeline ?? []), [i.timeline]),
-        c = s - i.length,
-        o = n.useCallback(
+        o = s - i.length,
+        c = n.useCallback(
             (e) => {
                 let t = 1e3 * m().round(e, 3);
-                return r.getEventsAtTimestamp(c + t);
+                return r.getEventsAtTimestamp(o + t);
             },
-            [r, c],
+            [r, o],
         ),
-        [u, d] = n.useState(() => o(0));
+        [u, d] = n.useState(() => c(0));
     return (
         n.useEffect(
             () =>
                 e({
                     onTimeUpdate: (e) => {
-                        d(o(e));
+                        d(c(e));
                     },
                 }),
-            [e, o],
+            [e, c],
         ),
         (0, a.jsx)(x.A, {
             speakingUserIds: l ? u.speakingUserIds : j,
@@ -68,8 +68,8 @@ function C() {
     );
 }
 var y = l(696016),
-    E = l(97451),
-    N = l(813433);
+    E = l(594731),
+    N = l(70585);
 function A(e, t) {
     let { applicationAudioEnabled: l, voiceAudioEnabled: a, soundboardAudioEnabled: n, isVoiceClip: i } = t;
     if (!i && l && a && n)
@@ -85,7 +85,7 @@ function k(e) {
             },
             [t, l],
         ),
-        c = n.useCallback(
+        o = n.useCallback(
             (e) => {
                 Object.values(e.currentTarget.audioTracks).forEach((e) => {
                     e.enabled = l === e.label;
@@ -100,7 +100,7 @@ function k(e) {
         muted: s,
         preload: "auto",
         className: N.R,
-        onLoadedMetadata: c,
+        onLoadedMetadata: o,
     });
 }
 let w = n.forwardRef(function (e, t) {
@@ -110,7 +110,7 @@ let w = n.forwardRef(function (e, t) {
             cropEnd: i,
             setVideoPlayerRef: s,
             videoURL: r,
-            audioURL: o,
+            audioURL: c,
             applicationAudioEnabled: u,
             voiceAudioEnabled: m,
             soundboardAudioEnabled: v,
@@ -155,10 +155,10 @@ let w = n.forwardRef(function (e, t) {
         M = n.useCallback(() => {
             j.current.main?.paused ? I() : O();
         }, [I, O]),
-        D = n.useCallback((e) => {
+        _ = n.useCallback((e) => {
             j.current.main = e;
         }, []),
-        _ = n.useCallback((e, t) => {
+        D = n.useCallback((e, t) => {
             j.current[t] = e;
         }, []);
     n.useImperativeHandle(t, () => {
@@ -169,21 +169,21 @@ let w = n.forwardRef(function (e, t) {
         S(l);
     }, [S, l]);
     if (null == r) return null;
-    let U = x.type === c.nQ.VOICE_CLIP;
+    let U = x.type === o.nQ.VOICE_CLIP;
     return (0, a.jsxs)("div", {
         className: E.DV,
         children: [
             U
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, a.jsx)("audio", { ref: D, src: r, muted: !0, preload: "auto" }),
+                          (0, a.jsx)("audio", { ref: _, src: r, muted: !0, preload: "auto" }),
                           (0, a.jsx)(p.A, { className: E.Ap }),
                       ],
                   })
                 : (0, a.jsx)(f.A, {
                       onClick: M,
                       className: E.Ap,
-                      ref: D,
+                      ref: _,
                       src: r,
                       muted: A(":all", {
                           applicationAudioEnabled: u,
@@ -197,7 +197,7 @@ let w = n.forwardRef(function (e, t) {
             (0, a.jsx)(C, {}),
             (0, a.jsx)("audio", {
                 id: "ClipsPlayerAudioTrack:application",
-                src: o ?? void 0,
+                src: c ?? void 0,
                 muted: A(":application", {
                     applicationAudioEnabled: u,
                     voiceAudioEnabled: m,
@@ -206,16 +206,16 @@ let w = n.forwardRef(function (e, t) {
                 }),
                 className: N.R,
                 preload: "auto",
-                ref: (e) => _(e, "main:application"),
+                ref: (e) => D(e, "main:application"),
                 onLoadedMetadata: L,
             }),
             w.map((e) =>
                 (0, a.jsx)(
                     k,
                     {
-                        setRef: _,
+                        setRef: D,
                         audioTrackLabel: e,
-                        src: o,
+                        src: c,
                         muted: A(e, {
                             applicationAudioEnabled: u,
                             voiceAudioEnabled: m,
@@ -236,8 +236,8 @@ var R = l(503698),
     O = l(990078),
     S = l(768622),
     M = l(661531),
-    D = l(27232),
-    _ = l(918715),
+    _ = l(27232),
+    D = l(918715),
     P = l(297152),
     U = l(369606),
     G = l(138134),
@@ -261,29 +261,29 @@ l(323874), l(14289), l(35956), l(393431), l(532706), l(42231), l(232424), l(9496
 var el = l(602853),
     ea = l(602674),
     en = l(335416),
-    ei = l(664875);
+    ei = l(944939);
 let es = new Map(),
     er = n.memo(function (e) {
         let { clipId: t, voiceAudioTracks: i, onMouseDown: s, className: r } = e,
-            c = n.useRef(null),
-            { ref: o, width: u, height: d } = (0, Q.Ay)(),
+            o = n.useRef(null),
+            { ref: c, width: u, height: d } = (0, Q.Ay)(),
             [m, h] = n.useState(null),
             f = (0, el.r)(M.A.colors.BACKGROUND_MOD_STRONG).hex();
         return (n.useEffect(
             () => (
-                (c.current = new Worker(new URL("/assets/" + l.u("33197"), l.b))),
+                (o.current = new Worker(new URL("/assets/" + l.u("33197"), l.b))),
                 () => {
-                    c.current?.terminate();
+                    o.current?.terminate();
                 }
             ),
             [],
         ),
         n.useEffect(() => {
-            if (0 === u || 0 === i.length || null == c.current) return;
+            if (0 === u || 0 === i.length || null == o.current) return;
             let e = `${t}-${i.map((e) => e.trackName).join(",")}-${u}`,
                 l = es.get(e);
             if (null != l) return void h(l.waveform);
-            let a = c.current,
+            let a = o.current,
                 n = !1,
                 s = (t) => {
                     if (n) return;
@@ -319,8 +319,8 @@ let es = new Map(),
             );
         }, [i, t, u]),
         n.useEffect(() => {
-            if (null == o.current || null == m || (u ?? 0) === 0 || (d ?? 0) === 0) return;
-            let e = o.current,
+            if (null == c.current || null == m || (u ?? 0) === 0 || (d ?? 0) === 0) return;
+            let e = c.current,
                 t = e.getContext("2d");
             if (null == t) return;
             let { width: l, height: a } = e,
@@ -332,56 +332,56 @@ let es = new Map(),
                     s = e * n + i;
                 t.fillRect(s, a, n - i, -l);
             }
-        }, [f, u, o, d, m]),
+        }, [f, u, c, d, m]),
         0 === i.length)
             ? null
             : (0, a.jsx)("div", {
                   className: T()(ei.k, r),
                   children: (0, a.jsx)("canvas", {
                       className: ei.s,
-                      ref: o,
+                      ref: c,
                       width: (u ?? 0) * 2,
                       height: (d ?? 0) * 2,
                       onMouseDown: s,
                   }),
               });
     });
-function ec(e, t) {
+function eo(e, t) {
     let l = e / y.YM;
     return t && (l /= y.iJ), l;
 }
-var eo = l(375708),
-    eu = l(445563),
-    ed = l(474847);
+var ec = l(375708),
+    eu = l(639790),
+    ed = l(238559);
 function em(e) {
     let { eventType: t, importance: l, style: i, title: s, description: r } = e,
-        o = n.useMemo(() => (0 === l ? 16 : 0.5 === l ? 20 : 1 === l ? 24 : 16), [l]),
+        c = n.useMemo(() => (0 === l ? 16 : 0.5 === l ? 20 : 1 === l ? 24 : 16), [l]),
         u = n.useMemo(() => {
             switch (t) {
-                case c.rb.KILL:
-                    return (0, a.jsx)(S.g, { size: "custom", width: o, height: o, color: M.A.colors.ICON_STRONG });
-                case c.rb.MULTIKILL:
-                    return (0, a.jsx)(D.G, { size: "custom", width: o, height: o, color: M.A.colors.ICON_STRONG });
-                case c.rb.DEATH:
-                    return (0, a.jsx)(_.V, { size: "custom", width: o, height: o, color: M.A.colors.ICON_STRONG });
-                case c.rb.ASSIST:
-                    return (0, a.jsx)(P.E, { size: "custom", width: o, height: o, color: M.A.colors.ICON_STRONG });
-                case c.rb.ITEM:
-                    return (0, a.jsx)(D.G, { size: "custom", width: o, height: o, color: M.A.colors.ICON_STRONG });
-                case c.rb.VICTORY:
-                    return (0, a.jsx)(U.O, { size: "custom", width: o, height: o, color: M.A.colors.ICON_STRONG });
-                case c.rb.DEFEAT:
-                    return (0, a.jsx)(G.i, { size: "custom", width: o, height: o, color: M.A.colors.ICON_STRONG });
-                case c.rb.LEVEL_UP:
-                    return (0, a.jsx)(z.T, { size: "custom", width: o, height: o, color: M.A.colors.ICON_STRONG });
-                case c.rb.TREASURE:
-                    return (0, a.jsx)(B.B, { size: "custom", width: o, height: o, color: M.A.colors.ICON_STRONG });
-                case c.rb.OBJECTIVE_KILL:
-                    return (0, a.jsx)($.w, { size: "custom", width: o, height: o, color: M.A.colors.ICON_STRONG });
+                case o.rb.KILL:
+                    return (0, a.jsx)(S.g, { size: "custom", width: c, height: c, color: M.A.colors.ICON_STRONG });
+                case o.rb.MULTIKILL:
+                    return (0, a.jsx)(_.G, { size: "custom", width: c, height: c, color: M.A.colors.ICON_STRONG });
+                case o.rb.DEATH:
+                    return (0, a.jsx)(D.V, { size: "custom", width: c, height: c, color: M.A.colors.ICON_STRONG });
+                case o.rb.ASSIST:
+                    return (0, a.jsx)(P.E, { size: "custom", width: c, height: c, color: M.A.colors.ICON_STRONG });
+                case o.rb.ITEM:
+                    return (0, a.jsx)(_.G, { size: "custom", width: c, height: c, color: M.A.colors.ICON_STRONG });
+                case o.rb.VICTORY:
+                    return (0, a.jsx)(U.O, { size: "custom", width: c, height: c, color: M.A.colors.ICON_STRONG });
+                case o.rb.DEFEAT:
+                    return (0, a.jsx)(G.i, { size: "custom", width: c, height: c, color: M.A.colors.ICON_STRONG });
+                case o.rb.LEVEL_UP:
+                    return (0, a.jsx)(z.T, { size: "custom", width: c, height: c, color: M.A.colors.ICON_STRONG });
+                case o.rb.TREASURE:
+                    return (0, a.jsx)(B.B, { size: "custom", width: c, height: c, color: M.A.colors.ICON_STRONG });
+                case o.rb.OBJECTIVE_KILL:
+                    return (0, a.jsx)($.w, { size: "custom", width: c, height: c, color: M.A.colors.ICON_STRONG });
                 default:
                     return null;
             }
-        }, [t, o]);
+        }, [t, c]);
     if (null == u) return null;
     let d = (0, a.jsx)("div", { className: ed.HS, style: i, children: u });
     return null != s || null != r
@@ -476,7 +476,7 @@ function ef(e) {
             () =>
                 null == t.timeline || t.decision?.timestamp == null
                     ? []
-                    : t.timeline.filter((e) => e.signal.type === c.Gy.GAME_EVENT),
+                    : t.timeline.filter((e) => e.signal.type === o.Gy.GAME_EVENT),
             [t.timeline, t.decision?.timestamp],
         ),
         s = n.useCallback(
@@ -512,7 +512,7 @@ function ep(e) {
             () =>
                 null == t.timeline || t.decision?.timestamp == null
                     ? []
-                    : t.timeline.filter((e) => e.signal.type === c.Gy.SOUNDBOARD && !0 === e.signal.playing),
+                    : t.timeline.filter((e) => e.signal.type === o.Gy.SOUNDBOARD && !0 === e.signal.playing),
             [t.timeline, t.decision?.timestamp],
         ),
         s = n.useCallback(
@@ -557,7 +557,7 @@ function ev(e) {
             () =>
                 null == t.timeline || t.decision?.timestamp == null
                     ? []
-                    : t.timeline.filter((e) => e.signal.type === c.Gy.PHRASE),
+                    : t.timeline.filter((e) => e.signal.type === o.Gy.PHRASE),
             [t.timeline, t.decision?.timestamp],
         ),
         s = n.useCallback(
@@ -576,7 +576,7 @@ function ev(e) {
                 : (0, a.jsx)(
                       I.u,
                       {
-                          title: eo.intl.string(eo.t.mIkeS2),
+                          title: ec.intl.string(ec.t.mIkeS2),
                           body: e.signal.text,
                           position: "top",
                           children: (0, a.jsx)("div", {
@@ -600,8 +600,8 @@ let ex = function (e) {
         {
             useCurrentTime: s,
             duration: r,
-            isPlaying: c,
-            cropStart: o,
+            isPlaying: o,
+            cropStart: c,
             cropEnd: u,
             cropDuration: m,
             setCropStart: h,
@@ -619,7 +619,7 @@ let ex = function (e) {
         I = n.useRef(null),
         O = n.useRef(null),
         [S, M] = n.useState(!1),
-        [D, _] = n.useState(null);
+        [_, D] = n.useState(null);
     n.useEffect(
         () =>
             j({
@@ -634,42 +634,42 @@ let ex = function (e) {
     n.useMemo(() => {
         z.width, z.height;
         let e = P.current;
-        null != e && _(e.getBoundingClientRect());
+        null != e && D(e.getBoundingClientRect());
     }, [z.width, z.height, U, P, i]);
     let B = n.useRef(null),
         $ = n.useRef({}),
         V = n.useCallback(
             (e, t) => {
                 if (null == r) return;
-                if (null == D) return null;
-                let l = (((0, d.clamp)(e, D.left, D.right) - D.left) / D.width) * r,
+                if (null == _) return null;
+                let l = (((0, d.clamp)(e, _.left, _.right) - _.left) / _.width) * r,
                     a = (0, d.clamp)(l, 0, r),
                     n = w;
-                null == n && t && ((n = a <= o ? "start" : a >= u ? "end" : "playhead"), c && (x(), M(!0)), R(n)),
-                    "start" === n ? h(a) : "end" === n ? p(a) : "playhead" === n && b((0, d.clamp)(a, o, u));
+                null == n && t && ((n = a <= c ? "start" : a >= u ? "end" : "playhead"), o && (x(), M(!0)), R(n)),
+                    "start" === n ? h(a) : "end" === n ? p(a) : "playhead" === n && b((0, d.clamp)(a, c, u));
             },
-            [r, D, w, o, u, c, x, h, p, b],
+            [r, _, w, c, u, o, x, h, p, b],
         ),
         Y = n.useCallback(
             (e) => {
                 if (null == r) return;
-                let t = ec(r, e.shiftKey),
+                let t = eo(r, e.shiftKey),
                     l = !1;
                 switch (e.key) {
                     case "ArrowLeft":
-                        (l = !0), h(o - t);
+                        (l = !0), h(c - t);
                         break;
                     case "ArrowRight":
-                        (l = !0), h(o + t);
+                        (l = !0), h(c + t);
                 }
                 l && (e.stopPropagation(), e.preventDefault());
             },
-            [r, h, o],
+            [r, h, c],
         ),
         q = n.useCallback(
             (e) => {
                 if (null == r) return;
-                let t = ec(r, e.shiftKey),
+                let t = eo(r, e.shiftKey),
                     l = !1;
                 switch (e.key) {
                     case "ArrowLeft":
@@ -723,9 +723,9 @@ let ex = function (e) {
                 (i.width = a), (i.height = G);
                 let s = i?.getContext("2d", { willReadFrequently: !0 });
                 if (null == s) return;
-                let c = $.current;
-                if (c[n]?.length === n) {
-                    for (let e = 0; e < n; e++) l.putImageData(c[n][e], a * e, 0);
+                let o = $.current;
+                if (o[n]?.length === n) {
+                    for (let e = 0; e < n; e++) l.putImageData(o[n][e], a * e, 0);
                     return;
                 }
                 for (let e = 0; e < n; e++)
@@ -733,24 +733,24 @@ let ex = function (e) {
                         (t.onseeked = () => {
                             l.drawImage(t, a * e, 0, a, G), s.drawImage(t, 0, 0, a, G);
                             let r = s.getImageData(0, 0, a, G);
-                            null == c[n] && (c[n] = []), (c[n][e] = r), i();
+                            null == o[n] && (o[n] = []), (o[n][e] = r), i();
                         }),
                             (t.currentTime = (a / U) * r * e);
                     });
             })();
         }, [U, G, P, r, B, A]);
-    let en = E - o,
+    let en = E - c,
         ei = n.useCallback(() => {
-            b(Math.max(o, E - 10));
-        }, [o, E, b]),
+            b(Math.max(c, E - 10));
+        }, [c, E, b]),
         es = n.useCallback(() => {
             b(Math.min(u, E + 10));
         }, [u, E, b]),
         em = n.useCallback(() => {
-            c ? x() : v();
-        }, [c, v, x]),
+            o ? x() : v();
+        }, [o, v, x]),
         ef = n.useCallback(() => k(!0), []),
-        ep = (o / r) * 100,
+        ep = (c / r) * 100,
         ev = (1 - (r - u) / r) * 100,
         ex = {
             background: `linear-gradient(to right, var(--black-500) ${ep}%, transparent ${ep}%, transparent ${ev}%, var(--black-500) ${ev}%)`,
@@ -788,20 +788,20 @@ let ex = function (e) {
                                     variant: "secondary",
                                     icon: K.q,
                                     onClick: ei,
-                                    "aria-label": eo.intl.string(eu.default["dRVF+Z"]),
+                                    "aria-label": ec.intl.string(eu.default["dRVF+Z"]),
                                 }),
                                 (0, a.jsx)(H.K, {
                                     size: "md",
-                                    icon: c ? W.E : Z.u,
+                                    icon: o ? W.E : Z.u,
                                     onClick: em,
-                                    "aria-label": eo.intl.string(c ? eo.t.ZcgDJX : eo.t.RscU7I),
+                                    "aria-label": ec.intl.string(o ? ec.t.ZcgDJX : ec.t.RscU7I),
                                 }),
                                 (0, a.jsx)(H.K, {
                                     size: "md",
                                     variant: "secondary",
                                     icon: X.i,
                                     onClick: es,
-                                    "aria-label": eo.intl.string(eu.default.yV2FLL),
+                                    "aria-label": ec.intl.string(eu.default.yV2FLL),
                                 }),
                             ],
                         }),
@@ -832,7 +832,7 @@ let ex = function (e) {
                             (0, a.jsxs)("div", {
                                 className: ed.Ws,
                                 style: {
-                                    left: null != r ? `${(o / r) * 100}%` : "0",
+                                    left: null != r ? `${(c / r) * 100}%` : "0",
                                     right: null != r ? `${((r - u) / r) * 100}%` : "0",
                                 },
                                 children: [
@@ -844,10 +844,10 @@ let ex = function (e) {
                                             role: "slider",
                                             tabIndex: 0,
                                             "aria-valuemin": 0,
-                                            "aria-valuenow": o,
-                                            "aria-valuetext": ej(o),
+                                            "aria-valuenow": c,
+                                            "aria-valuetext": ej(c),
                                             "aria-valuemax": u - y.zj,
-                                            "aria-label": eo.intl.string(eo.t["+BTvw8"]),
+                                            "aria-label": ec.intl.string(ec.t["+BTvw8"]),
                                             children: (0, a.jsx)("div", { className: ed.FV }),
                                         }),
                                     }),
@@ -858,11 +858,11 @@ let ex = function (e) {
                                             onKeyDown: q,
                                             role: "slider",
                                             tabIndex: 0,
-                                            "aria-valuemin": o + y.zj,
+                                            "aria-valuemin": c + y.zj,
                                             "aria-valuenow": u,
                                             "aria-valuetext": ej(u),
                                             "aria-valuemax": r,
-                                            "aria-label": eo.intl.string(eo.t.bBgBYo),
+                                            "aria-label": ec.intl.string(ec.t.bBgBYo),
                                             children: (0, a.jsx)("div", { className: ed.kn }),
                                         }),
                                     }),
@@ -884,14 +884,14 @@ function eg(e) {
 }
 function ej(e) {
     let t = Math.floor(e / 60),
-        l = eo.intl.formatToPlainString(eo.t.iXLF9W, { minutes: t }),
-        a = eo.intl.formatToPlainString(eo.t.geSp4K, { seconds: e % 60 });
+        l = ec.intl.formatToPlainString(ec.t.iXLF9W, { minutes: t }),
+        a = ec.intl.formatToPlainString(ec.t.geSp4K, { seconds: e % 60 });
     return `${l} ${a}`;
 }
 function eb(e) {
     let { transitionState: t } = e,
-        { cropStart: l, cropEnd: o, videoPlayerRef: d, videoURL: m, audioTracks: h, clip: f } = (0, g.T)(),
-        p = f.type === c.nQ.SCREENSHOT;
+        { cropStart: l, cropEnd: c, videoPlayerRef: d, videoURL: m, audioTracks: h, clip: f } = (0, g.T)(),
+        p = f.type === o.nQ.SCREENSHOT;
     n.useEffect(() => {
         if (!p) return document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e);
         function e(e) {
@@ -900,7 +900,7 @@ function eb(e) {
             if (null == t) return;
             let a = d.current?.videoElement;
             if (null == a) return;
-            let n = ec(a.duration, e.shiftKey),
+            let n = eo(a.duration, e.shiftKey),
                 i = !1;
             switch (e.key) {
                 case " ":
@@ -910,11 +910,11 @@ function eb(e) {
                     (i = !0), t.seek(Math.max(l, a.currentTime - n));
                     break;
                 case "ArrowRight":
-                    (i = !0), t.seek(Math.min(o, a.currentTime + n));
+                    (i = !0), t.seek(Math.min(c, a.currentTime + n));
             }
             i && (e.stopPropagation(), e.preventDefault());
         }
-    }, [d, p, f.type, l, o]);
+    }, [d, p, f.type, l, c]);
     let v = n.useMemo(() => h.filter((e) => e.trackName.includes(":voice")), [h]),
         x = n.useCallback(() => {
             (0, r.R)(

@@ -17,20 +17,20 @@ var s,
     O = n(821609),
     g = n(939249),
     m = n(780964),
-    h = n(858897),
+    h = n(766075),
     b = n(975571),
     j = n(544231),
     C = n(633387),
     L = n(503698),
     R = n.n(L),
-    p = n(169636);
+    p = n(290276);
 let I = function (t) {
     let { children: e, style: n } = t;
     return (0, i.jsx)(a.$m, { "data-migration-pending": !0, className: R()(p.j, n), children: e });
 };
 var F = n(652215),
     U = n(375708),
-    N = n(425020);
+    N = n(726076);
 let k = function (t) {
     let { onClose: e, channelId: n } = t,
         [s, r] = l.useState(!1),
@@ -87,7 +87,7 @@ var y = n(17928),
     K = n(674272),
     G = n(327337),
     V = n(431804),
-    q = n(94013);
+    q = n(106749);
 function X(t) {
     let { children: e } = t;
     return (0, i.jsx)("div", { className: q.mH, children: e });
@@ -291,7 +291,7 @@ let Q = function () {
     let t = (0, G.RU)();
     return (0, i.jsx)(I, { children: (0, i.jsx)($.A, { tips: t, headerText: U.intl.string(U.t["0QSL1C"]) }) });
 };
-var tt = n(837248),
+var tt = n(726592),
     te =
         (((s = {}).ACTIONS = "ACTIONS"),
         (s.SAFETY_TIPS = "SAFETY_TIPS"),

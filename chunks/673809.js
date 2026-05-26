@@ -4,7 +4,7 @@ var a = t(627968),
     i = t(64700),
     n = t(503698),
     r = t.n(n),
-    o = t(230109),
+    o = t(269115),
     c = t(247775),
     d = t(23339);
 function N(e, s) {
@@ -76,7 +76,7 @@ let p = (0, I.y)(k);
 var T = t(818348),
     m = t(396574),
     O = t(855522),
-    g = t(109236);
+    g = t(814004);
 let C = "Footer Navigation",
     x = { BLURPLE: "Blurple", PRIMARY: "Primary" },
     _ = (e) => {
@@ -368,7 +368,7 @@ class E extends i.PureComponent {
 t(321073);
 var v = t(323125),
     R = t(946015),
-    S = t(1947);
+    S = t(303003);
 class M extends i.PureComponent {
     render() {
         return (0, a.jsxs)(R.s, {
@@ -412,7 +412,7 @@ let L = {
     ICON_ARROW_DOWN: t(616327),
     ASSET_LOGO_DISCORD_SVG: t(511749),
 };
-var j = t(773977);
+var j = t(950745);
 class V extends i.PureComponent {
     state = { languages: O.A.getLanguages().filter((e) => e.enabled), current: O.A.getLocaleInfo(), isOpen: !1 };
     componentDidMount() {
@@ -489,7 +489,7 @@ class V extends i.PureComponent {
     }
 }
 var f = t(877227),
-    P = t(393163);
+    P = t(569931);
 let G = T.sE.MAIN_NAVIGATION_MENU;
 function b(e) {
     let { isOpen: s, dropdownLinks: t, TrackClick: l, avoidRouter: i, id: n, "aria-label": r } = e,
@@ -542,7 +542,7 @@ function b(e) {
         children: c,
     });
 }
-var D = t(552524);
+var D = t(565260);
 let U = T.sE.MAIN_NAVIGATION_MENU;
 function y(e) {
     let { TrackClick: s, title: t, links: l, onClose: n, onOpen: r, isOpen: o = !1, isMobile: c, avoidRouter: d } = e,
@@ -820,7 +820,7 @@ class B extends i.PureComponent {
         );
     }
 }
-var F = t(775684);
+var F = t(40836);
 let H = T.sE.MAIN_NAVIGATION_MENU;
 class W extends i.PureComponent {
     state = { isAppCompatible: !0 };
@@ -946,7 +946,7 @@ class W extends i.PureComponent {
     }
 }
 var Y = t(359459),
-    q = t(900610);
+    q = t(77378);
 let $ = T.sE.MAIN_NAVIGATION_MENU;
 function Z(e) {
     let {
@@ -1017,7 +1017,7 @@ function Z(e) {
         })
     );
 }
-var K = t(360292);
+var K = t(548708);
 let J = null;
 class Q extends i.PureComponent {
     constructor(e) {
@@ -1087,10 +1087,10 @@ let z = (0, I.y)(X);
 var ee = t(17928),
     es = t(817281),
     et = t(773669),
-    el = t(954571),
+    el = t(174459),
     ea = t(652215),
-    ei = t(985018),
-    en = t(212515);
+    ei = t(375708),
+    en = t(25507);
 class er extends i.Component {
     shouldScrollToTop(e) {
         let { location: s } = e;
