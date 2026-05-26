@@ -1,33 +1,32 @@
-n.d(e, { C0: () => d, CK: () => T, Dd: () => A, UK: () => c, pv: () => C, vj: () => E });
-var s,
-    i = n(927813),
-    a = n(792620),
-    l = n(814793),
-    r = n(79545),
-    o = n(190107),
+"use strict";
+n.d(t, { C0: () => _, CK: () => p, Dd: () => h, UK: () => c, pv: () => d, vj: () => f });
+var i,
+    r = n(927813),
+    s = n(792620),
+    a = n(814793),
+    o = n(79545),
+    l = n(190107),
     u = n(375708),
     c =
-        21552 == n.j
-            ? (((s = {})[(s.PLAY = 0)] = "PLAY"),
-              (s[(s.WATCH = 1)] = "WATCH"),
-              (s[(s.ACTIVITY = 2)] = "ACTIVITY"),
-              (s[(s.INSTANT_PLAY = 3)] = "INSTANT_PLAY"),
-              (s[(s.ARENA = 4)] = "ARENA"),
-              s)
-            : null;
-function C(t) {
-    return (0, a.GL)(t)
-        ? 4 * !!(0, l.ui)(t)
-        : (0, a.vv)(t)
+        (((i = {})[(i.PLAY = 0)] = "PLAY"),
+        (i[(i.WATCH = 1)] = "WATCH"),
+        (i[(i.ACTIVITY = 2)] = "ACTIVITY"),
+        (i[(i.INSTANT_PLAY = 3)] = "INSTANT_PLAY"),
+        (i[(i.ARENA = 4)] = "ARENA"),
+        i);
+function d(e) {
+    return (0, s.GL)(e)
+        ? 4 * !!(0, a.ui)(e)
+        : (0, s.vv)(e)
           ? 1
-          : (0, a.Ki)(t)
-            ? t.config.features.includes(o.Li.CLOUD_GAMING_ACTIVITY)
+          : (0, s.Ki)(e)
+            ? e.config.features.includes(l.Li.CLOUD_GAMING_ACTIVITY)
                 ? 3
                 : 2
             : 0;
 }
-function d(t) {
-    switch (C(t)) {
+function _(e) {
+    switch (d(e)) {
         case 0:
             return u.intl.string(u.t.U7cCLU);
         case 1:
@@ -40,8 +39,8 @@ function d(t) {
             return u.intl.string(u.t.P1uOM8);
     }
 }
-function E(t) {
-    switch (C(t)) {
+function f(e) {
+    switch (d(e)) {
         case 3:
             return u.intl.string(u.t.C2kQR8);
         case 1:
@@ -52,39 +51,39 @@ function E(t) {
             return u.intl.string(u.t.cfY4PE);
     }
 }
-function A(t, e) {
-    let n = new Date(t.startsAt).getTime(),
-        s = Date.now(),
-        a = n <= s && s - n < 2 * i.A.Millis.DAY;
-    switch (e) {
-        case r.UA.UNENROLLED:
-            if (a) return u.intl.string(u.t.X6ziWN);
+function h(e, t) {
+    let n = new Date(e.startsAt).getTime(),
+        i = Date.now(),
+        s = n <= i && i - n < 2 * r.A.Millis.DAY;
+    switch (t) {
+        case o.UA.UNENROLLED:
+            if (s) return u.intl.string(u.t.X6ziWN);
             return null;
-        case r.UA.COMPLETED:
-        case r.UA.EXPIRED_CLAIMABLE:
+        case o.UA.COMPLETED:
+        case o.UA.EXPIRED_CLAIMABLE:
             return u.intl.string(u.t.Zq6s9k);
-        case r.UA.CLAIMED:
+        case o.UA.CLAIMED:
             return u.intl.string(u.t.uOGFB6);
-        case r.UA.EXPIRED:
+        case o.UA.EXPIRED:
             return u.intl.string(u.t["zX/gnV"]);
         default:
             return null;
     }
 }
-function T(t, e, n) {
-    switch (t) {
-        case r.UA.UNENROLLED:
-        case r.UA.ENROLLED:
-        case r.UA.INCOMPLETE:
+function p(e, t, n) {
+    switch (e) {
+        case o.UA.UNENROLLED:
+        case o.UA.ENROLLED:
+        case o.UA.INCOMPLETE:
             if (null != n) {
-                if (t === r.UA.UNENROLLED) return String(n.target);
+                if (e === o.UA.UNENROLLED) return String(n.target);
                 return `${n.progress}/${n.target}`;
             }
-            return (0, a.xm)(e);
-        case r.UA.COMPLETED:
-        case r.UA.CLAIMED:
-        case r.UA.EXPIRED:
-        case r.UA.EXPIRED_CLAIMABLE:
+            return (0, s.xm)(t);
+        case o.UA.COMPLETED:
+        case o.UA.CLAIMED:
+        case o.UA.EXPIRED:
+        case o.UA.EXPIRED_CLAIMABLE:
             return null;
     }
 }

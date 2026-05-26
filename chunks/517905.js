@@ -1,9 +1,10 @@
-n.d(a, { A: () => i });
-var s = n(627968);
+"use strict";
+n.d(t, { A: () => o });
+var i = n(627968);
 n(64700);
-var t = n(292036),
-    l = n(922016);
-let r = (0, n(268218).Fe)({
+var r = n(292036),
+    s = n(922016);
+let a = (0, n(268218).Fe)({
     createPromise: () =>
         Promise.all([
             n.e("72283"),
@@ -55,23 +56,23 @@ let r = (0, n(268218).Fe)({
             n.e("70008"),
         ]).then(n.bind(n, 109026)),
     webpackId: 109026,
-    renderLoader: () => (0, s.jsx)(t.s, {}),
+    renderLoader: () => (0, i.jsx)(r.s, {}),
 });
-function i(e) {
-    let { guildId: a, name: n, position: t = "right", onClose: i, targetElementRef: o, ...d } = e;
-    return (0, s.jsx)(l.Y, {
-        targetElementRef: o,
-        position: t,
+function o(e) {
+    let { guildId: t, name: n, position: r = "right", onClose: o, targetElementRef: l, ...u } = e;
+    return (0, i.jsx)(s.Y, {
+        targetElementRef: l,
+        position: r,
         clickTrap: !0,
         renderPopout: (e) =>
-            (0, s.jsx)(r, {
+            (0, i.jsx)(a, {
                 ...e,
                 onClose: () => {
-                    e.closePopout(), i?.();
+                    e.closePopout(), o?.();
                 },
-                guildId: a,
+                guildId: t,
                 name: n,
             }),
-        ...d,
+        ...u,
     });
 }

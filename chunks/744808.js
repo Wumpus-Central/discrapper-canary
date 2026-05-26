@@ -1,71 +1,70 @@
-t.d(r, { A: () => A });
-var a = t(627968),
-    s = t(64700),
-    l = t(503698),
-    i = t.n(l),
-    n = t(43990),
-    o = t(17928),
-    u = t(363195),
-    d = t(746002),
-    c = t(219220),
-    m = t(940622),
-    h = t(282389),
-    p = t(325409);
-function f(e) {
-    let { skuId: r, layer: t, data: s } = e,
-        l = s?.src ?? (0, d.getCollectiblesItemAssetUrl)({ skuId: r, assetFormat: "static", assetId: t.id });
-    if (null == l) return null;
-    let n = i()(p.S_, {
-        [p.Wm]: "front" === t.order,
-        [p.aX]: "back" === t.order,
-        [p.Mn]: "top" === t.anchor,
-        [p.sQ]: "bottom" === t.anchor,
-        [p.gX]: "center" === t.anchor,
-        [p.no]: !0 === t.responsive,
+"use strict";
+n.d(t, { A: () => E });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(43990),
+    l = n(17928),
+    u = n(363195),
+    c = n(746002),
+    d = n(219220),
+    _ = n(940622),
+    f = n(282389),
+    h = n(325409);
+function p(e) {
+    let { skuId: t, layer: n, data: r } = e,
+        s = r?.src ?? (0, c.getCollectiblesItemAssetUrl)({ skuId: t, assetFormat: "static", assetId: n.id });
+    if (null == s) return null;
+    let o = a()(h.S_, {
+        [h.Wm]: "front" === n.order,
+        [h.aX]: "back" === n.order,
+        [h.Mn]: "top" === n.anchor,
+        [h.sQ]: "bottom" === n.anchor,
+        [h.gX]: "center" === n.anchor,
+        [h.no]: !0 === n.responsive,
     });
-    return "staple" === t.type
-        ? (0, a.jsx)("img", { src: l, alt: "", "aria-hidden": !0, className: i()(n, p.im) })
-        : "rail" === t.type
-          ? (0, a.jsx)("div", { role: "img", style: { backgroundImage: `url(${l})` }, className: i()(n, p.H$) })
-          : "border" === t.type
-            ? (0, a.jsx)("div", {
+    return "staple" === n.type
+        ? (0, i.jsx)("img", { src: s, alt: "", "aria-hidden": !0, className: a()(o, h.im) })
+        : "rail" === n.type
+          ? (0, i.jsx)("div", { role: "img", style: { backgroundImage: `url(${s})` }, className: a()(o, h.H$) })
+          : "border" === n.type
+            ? (0, i.jsx)("div", {
                   role: "img",
                   "aria-hidden": !0,
-                  className: i()(n, p.PQ),
-                  children: Array.from({ length: 5 }, (e, r) =>
-                      (0, a.jsx)("img", { src: l, alt: "", "aria-hidden": !0 }, r),
+                  className: a()(o, h.PQ),
+                  children: Array.from({ length: 5 }, (e, t) =>
+                      (0, i.jsx)("img", { src: s, alt: "", "aria-hidden": !0 }, t),
                   ),
               })
             : null;
 }
-function A(e) {
-    let { frame: r, className: t, filterLayer: l } = e,
-        d = (0, o.bG)([u.A], () => u.A.theme),
-        A = (0, h.A)(r.skuId),
-        b = (0, m.oM)(),
-        g = b?.layers ?? r.layers,
-        y = null == l ? g : g.filter(l),
-        k = y
-            .map((e) => {
-                let { id: r } = e;
-                return r;
-            })
-            .join("\0"),
-        j = s.useMemo(() => y, [g, k]),
-        { layerData: v } = (0, c.A)({ skuId: r.skuId, layers: null != b ? void 0 : j }),
-        x = b?.layerData ?? v;
-    return 0 === j.length
+function E(e) {
+    let { frame: t, className: n, filterLayer: s } = e,
+        c = (0, l.bG)([u.A], () => u.A.theme),
+        E = (0, f.A)(t.skuId),
+        m = (0, _.oM)(),
+        g = m?.layers ?? t.layers,
+        A = null == s ? g : g.filter(s),
+        I = A.map((e) => {
+            let { id: t } = e;
+            return t;
+        }).join("\0"),
+        T = r.useMemo(() => A, [g, I]),
+        { layerData: S } = (0, d.A)({ skuId: t.skuId, layers: null != m ? void 0 : T }),
+        N = m?.layerData ?? S;
+    return 0 === T.length
         ? null
-        : (0, a.jsx)(n.N, {
-              theme: d,
+        : (0, i.jsx)(o.N, {
+              theme: c,
               children: (e) =>
-                  (0, a.jsx)("div", {
-                      className: i()(p.uF, e, A, t),
-                      "aria-label": r.label,
+                  (0, i.jsx)("div", {
+                      className: a()(h.uF, e, E, n),
+                      "aria-label": t.label,
                       role: "img",
-                      children: (0, a.jsx)("div", {
-                          className: p.hH,
-                          children: j.map((e) => (0, a.jsx)(f, { skuId: r.skuId, layer: e, data: x[e.id] }, e.id)),
+                      children: (0, i.jsx)("div", {
+                          className: h.hH,
+                          children: T.map((e) => (0, i.jsx)(p, { skuId: t.skuId, layer: e, data: N[e.id] }, e.id)),
                       }),
                   }),
           });

@@ -1,19 +1,20 @@
-l.d(t, { R: () => d });
-var s = l(627968);
-l(64700);
-var r = l(192308);
-let d = (e) => {
-    let { clips: t, onBeforeDelete: d, onAfterDelete: n } = e;
+"use strict";
+n.d(t, { R: () => s });
+var i = n(627968);
+n(64700);
+var r = n(192308);
+let s = (e) => {
+    let { clips: t, onBeforeDelete: s, onAfterDelete: a } = e;
     (0, r.openModalLazy)(
         async () => {
-            let { default: e } = await l.e("13367").then(l.bind(l, 223818));
-            return (l) =>
-                (0, s.jsx)(e, {
+            let { default: e } = await n.e("13367").then(n.bind(n, 223818));
+            return (n) =>
+                (0, i.jsx)(e, {
                     clips: t,
-                    ...l,
-                    onBeforeDelete: d,
+                    ...n,
+                    onBeforeDelete: s,
                     onAfterDelete: async () => {
-                        await l.onClose(), n?.();
+                        await n.onClose(), a?.();
                     },
                 });
         },

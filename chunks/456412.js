@@ -1,34 +1,35 @@
-r.d(t, { A: () => c });
-var s = r(627968),
-    n = r(64700),
-    l = r(770178),
-    i = r(765548);
-let a = { width: "100%", height: "100%", display: "flex" },
-    o = { width: "100%", height: "100%", flex: 1 };
-function c(e) {
+"use strict";
+n.d(t, { A: () => u });
+var i = n(627968),
+    r = n(64700),
+    s = n(770178),
+    a = n(765548);
+let o = { width: "100%", height: "100%", display: "flex" },
+    l = { width: "100%", height: "100%", flex: 1 };
+function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return n.forwardRef(function (r, c) {
-        let [u, d] = n.useState({ width: 0, height: 0 }),
-            h = (0, i.A)((e) => {
+    return r.forwardRef(function (n, u) {
+        let [c, d] = r.useState({ width: 0, height: 0 }),
+            _ = (0, a.A)((e) => {
                 if (null != e) {
-                    let { width: t, height: r } = e;
-                    d({ width: t, height: r });
+                    let { width: t, height: n } = e;
+                    d({ width: t, height: n });
                 }
             }),
-            m = (0, i.A)((e) => {
-                h(e.contentRect);
+            f = (0, a.A)((e) => {
+                _(e.contentRect);
             }),
-            p = (0, l.w)(m, [], t);
+            h = (0, s.w)(f, [], t);
         return (
-            n.useImperativeHandle(c, () => ({
+            r.useImperativeHandle(u, () => ({
                 triggerResize: () => {
-                    h(p.current?.getBoundingClientRect());
+                    _(h.current?.getBoundingClientRect());
                 },
             })),
-            (0, s.jsx)("div", {
-                ref: p,
-                style: a,
-                children: (0, s.jsx)(e, { ...r, width: u.width, height: u.height, style: o }),
+            (0, i.jsx)("div", {
+                ref: h,
+                style: o,
+                children: (0, i.jsx)(e, { ...n, width: c.width, height: c.height, style: l }),
             })
         );
     });

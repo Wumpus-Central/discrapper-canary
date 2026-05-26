@@ -1,55 +1,56 @@
-r.d(i, { s: () => o });
-var n = r(428262),
-    e = r(422936),
-    l = r(234419),
-    s = r(410516),
-    u = r(788868),
-    a = r(375708);
-let o = (t) => {
-    var i;
-    let { subscriptionTier: r, hasActivePromotion: o = !1, useShorterCTA: p = !1, isPersistentCTA: T = !1 } = t,
-        c = (0, l.V)(),
-        v = c?.subscription_trial,
-        d = (0, e.O)(),
-        b = (0, s.U9)(d, u.pe.TIER_2) ? u.pe.TIER_2 : void 0,
-        _ = (0, n.tS)({ intervalType: v?.interval, intervalCount: v?.interval_count }),
-        k = r ?? c?.subscription_trial?.sku_id ?? b,
-        f = null != v && k === v.sku_id,
-        g = c?.trial_id === u.Dw;
+"use strict";
+n.d(t, { s: () => u });
+var i = n(428262),
+    r = n(422936),
+    s = n(234419),
+    a = n(410516),
+    o = n(788868),
+    l = n(375708);
+let u = (e) => {
+    var t;
+    let { subscriptionTier: n, hasActivePromotion: u = !1, useShorterCTA: c = !1, isPersistentCTA: d = !1 } = e,
+        _ = (0, s.V)(),
+        f = _?.subscription_trial,
+        h = (0, r.O)(),
+        p = (0, a.U9)(h, o.pe.TIER_2) ? o.pe.TIER_2 : void 0,
+        E = (0, i.tS)({ intervalType: f?.interval, intervalCount: f?.interval_count }),
+        m = n ?? _?.subscription_trial?.sku_id ?? p,
+        g = null != f && m === f.sku_id,
+        A = _?.trial_id === o.Dw;
     return {
-        buttonText: o
-            ? a.intl.string(a.t.J61px0)
-            : null != d
-              ? ((i = d.discount.amount),
-                p || T
-                    ? a.intl.string(a.t.fkPGat)
-                    : k === u.pe.TIER_2
-                      ? a.intl.formatToPlainString(a.t.bkQ4bH, { percent: i })
+        buttonText: u
+            ? l.intl.string(l.t.J61px0)
+            : null != h
+              ? ((t = h.discount.amount),
+                c || d
+                    ? l.intl.string(l.t.fkPGat)
+                    : m === o.pe.TIER_2
+                      ? l.intl.formatToPlainString(l.t.bkQ4bH, { percent: t })
                       : void 0)
-              : ((t) => {
+              : ((e) => {
                     let {
-                        showTrialCTA: i,
-                        subscriptionTier: r,
-                        trialDurationCopy: e,
-                        isPersistentCTA: l,
-                        shouldShowReferralTrialCopy: s,
-                        subscriptionTrial: o,
-                    } = t;
-                    return i && s
-                        ? a.intl.string(a.t.bXTClc)
-                        : i && (r === u.pe.TIER_2 || l)
-                          ? (0, n.FY)({ intervalType: o?.interval, intervalCount: o?.interval_count })
-                          : i
-                            ? a.intl.formatToPlainString(a.t.nTmm2v, { freeTrialText: e })
+                        showTrialCTA: t,
+                        subscriptionTier: n,
+                        trialDurationCopy: r,
+                        isPersistentCTA: s,
+                        shouldShowReferralTrialCopy: a,
+                        subscriptionTrial: u,
+                    } = e;
+                    return t && a
+                        ? l.intl.string(l.t.bXTClc)
+                        : t && (n === o.pe.TIER_2 || s)
+                          ? (0, i.FY)({ intervalType: u?.interval, intervalCount: u?.interval_count })
+                          : t
+                            ? l.intl.formatToPlainString(l.t.nTmm2v, { freeTrialText: r })
                             : void 0;
                 })({
-                    showTrialCTA: f,
-                    subscriptionTier: k,
-                    trialDurationCopy: _,
-                    isPersistentCTA: T,
-                    shouldShowReferralTrialCopy: g,
-                    subscriptionTrial: v,
+                    showTrialCTA: g,
+                    subscriptionTier: m,
+                    trialDurationCopy: E,
+                    isPersistentCTA: d,
+                    shouldShowReferralTrialCopy: A,
+                    subscriptionTrial: f,
                 }),
-        marketingSubscriptionTierSkuId: k,
+        marketingSubscriptionTierSkuId: m,
     };
 };

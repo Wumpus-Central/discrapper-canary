@@ -1,47 +1,48 @@
-n.d(t, { Rh: () => A, V7: () => d, XB: () => p, Xp: () => E, yM: () => g });
+"use strict";
+n.d(t, { Rh: () => _, V7: () => p, XB: () => h, Xp: () => d, yM: () => f });
 var i = n(488428),
     r = n(776231),
-    a = n(486020),
-    u = n(403362),
-    s = n(392107),
+    s = n(486020),
+    a = n(403362),
+    o = n(392107),
     l = n(652215),
-    o = n(375708);
+    u = n(375708);
 function c(e) {
     let { storageHash: t, canAnimate: n = !1, allowWebp: i = !0 } = e;
-    if (n && (0, a.VI)(t)) return i && a.QB ? "webp" : "gif";
+    if (n && (0, s.VI)(t)) return i && s.QB ? "webp" : "gif";
     let { CDN_HOST: r } = window.GLOBAL_ENV;
-    return null == r ? "jpg" : i && a.QB ? "webp" : "png";
+    return null == r ? "jpg" : i && s.QB ? "webp" : "png";
 }
-function E(e) {
-    let { userId: t, avatarId: n, storageHash: u, canAnimate: s = !1, allowWebp: o = !0, size: E } = e,
-        { CDN_HOST: A } = window.GLOBAL_ENV,
-        g = null != A ? `https://${A}` : location.protocol + window.GLOBAL_ENV.API_ENDPOINT,
-        p = c({ storageHash: u, canAnimate: s, allowWebp: o }),
-        d = { size: (0, r.kr)(E * (0, r.mZ)()) };
+function d(e) {
+    let { userId: t, avatarId: n, storageHash: a, canAnimate: o = !1, allowWebp: u = !0, size: d } = e,
+        { CDN_HOST: _ } = window.GLOBAL_ENV,
+        f = null != _ ? `https://${_}` : location.protocol + window.GLOBAL_ENV.API_ENDPOINT,
+        h = c({ storageHash: a, canAnimate: o, allowWebp: u }),
+        p = { size: (0, r.kr)(d * (0, r.mZ)()) };
     return (
-        "webp" === p && s && (0, a.VI)(u) && (d.animated = !0),
-        `${g}${l.Rsh.ARCHIVED_AVATAR(t, n, u, p)}?${i.stringify(d)}`
+        "webp" === h && o && (0, s.VI)(a) && (p.animated = !0),
+        `${f}${l.Rsh.ARCHIVED_AVATAR(t, n, a, h)}?${i.stringify(p)}`
     );
 }
-function A(e) {
-    let { filename: t, assetOrigin: n = s.E.NEW_ASSET } = e ?? {};
-    if (n === s.E.ARCHIVED_ASSET) return;
-    let i = t ?? o.intl.string(o.t.lqaIxI),
-        r = new Date().toLocaleString(o.intl.currentLocale, {
+function _(e) {
+    let { filename: t, assetOrigin: n = o.E.NEW_ASSET } = e ?? {};
+    if (n === o.E.ARCHIVED_ASSET) return;
+    let i = t ?? u.intl.string(u.t.lqaIxI),
+        r = new Date().toLocaleString(u.intl.currentLocale, {
             year: "numeric",
             day: "numeric",
             month: "long",
             hour: "numeric",
             minute: "numeric",
         });
-    return o.intl.formatToPlainString(n === s.E.EDITED_ARCHIVED_ASSET ? o.t.eC2sZi : o.t.DYil93, {
+    return u.intl.formatToPlainString(n === o.E.EDITED_ARCHIVED_ASSET ? u.t.eC2sZi : u.t.DYil93, {
         name: i,
         dateTime: r,
     });
 }
-function g(e, t) {
-    let n = c({ storageHash: e, canAnimate: !0, allowWebp: a.QB }),
-        i = null == t ? o.intl.string(o.t.lqaIxI) : t.split(",")[0];
+function f(e, t) {
+    let n = c({ storageHash: e, canAnimate: !0, allowWebp: s.QB }),
+        i = null == t ? u.intl.string(u.t.lqaIxI) : t.split(",")[0];
     return {
         filename: `${i}.${n}`,
         type: (function (e) {
@@ -55,29 +56,29 @@ function g(e, t) {
                 case "webp":
                     return "image/webp";
                 default:
-                    (0, u.xb)(e);
+                    (0, a.xb)(e);
             }
         })(n),
     };
 }
-function p(e) {
-    let { assetOrigin: t = s.E.NEW_ASSET, imageUri: n, description: i, originalAsset: r, originalMd5: a } = e;
+function h(e) {
+    let { assetOrigin: t = o.E.NEW_ASSET, imageUri: n, description: i, originalAsset: r, originalMd5: s } = e;
     switch (t) {
-        case s.E.NEW_ASSET:
-            return { assetOrigin: t, imageUri: n, description: i, originalMd5: a };
-        case s.E.EDITED_ARCHIVED_ASSET:
-            return { assetOrigin: t, imageUri: n, description: i, originalAsset: r, originalMd5: a };
-        case s.E.ARCHIVED_ASSET:
+        case o.E.NEW_ASSET:
+            return { assetOrigin: t, imageUri: n, description: i, originalMd5: s };
+        case o.E.EDITED_ARCHIVED_ASSET:
+            return { assetOrigin: t, imageUri: n, description: i, originalAsset: r, originalMd5: s };
+        case o.E.ARCHIVED_ASSET:
             return { assetOrigin: t, imageUri: n, originalAsset: r };
         default:
-            (0, u.xb)(t);
+            (0, a.xb)(t);
     }
 }
-function d(e) {
+function p(e) {
     let { userId: t, image: n, size: i = 80, canAnimate: r = !0 } = e;
     return null != n && "string" != typeof n
-        ? n.assetOrigin === s.E.ARCHIVED_ASSET
-            ? E({
+        ? n.assetOrigin === o.E.ARCHIVED_ASSET
+            ? d({
                   userId: t,
                   avatarId: n.originalAsset.id,
                   storageHash: n.originalAsset.storageHash,

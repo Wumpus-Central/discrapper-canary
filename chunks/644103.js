@@ -1,13 +1,14 @@
-n.d(t, { Y: () => s, v: () => i });
-let l = new Set();
-function s(e) {
+"use strict";
+n.d(t, { Y: () => r, v: () => s });
+let i = new Set();
+function r(e) {
     return (
-        l.add(e),
+        i.add(e),
         () => {
-            l.delete(e);
+            i.delete(e);
         }
     );
 }
-function i(e) {
-    if (0 !== l.size) for (let t of l) t(e);
+function s(e) {
+    if (0 !== i.size) for (let t of i) t(e);
 }

@@ -1,51 +1,52 @@
-l.d(t, { a: () => m, u: () => u }), l(321073);
-var i = l(64700),
-    a = l(91871),
-    s = l.n(a),
-    n = l(989349),
-    r = l.n(n),
-    d = l(17928),
-    c = l(274372),
-    o = l(792852);
-function u(e, t) {
+"use strict";
+n.d(t, { a: () => _, u: () => d }), n(321073);
+var i = n(64700),
+    r = n(91871),
+    s = n.n(r),
+    a = n(989349),
+    o = n.n(a),
+    l = n(17928),
+    u = n(274372),
+    c = n(792852);
+function d(e, t) {
     return "ascending" === t
         ? e.sort((e, t) => e.createdAt - t.createdAt)
         : "descending" === t
           ? e.sort((e, t) => t.createdAt - e.createdAt)
           : e;
 }
-function m() {
-    let e = (0, d.yK)([c.A], () => c.A.getClips()),
-        t = (0, d.bG)([c.A], () => c.A.getPendingClips()),
-        l = (0, o.P)();
+function _() {
+    let e = (0, l.yK)([u.A], () => u.A.getClips()),
+        t = (0, l.bG)([u.A], () => u.A.getPendingClips()),
+        n = (0, c.P)();
     return i.useMemo(() => {
         let i = [...t, ...e],
-            a = new Map(),
-            n = [];
+            r = new Map(),
+            a = [];
         for (let e of i) {
             let t = (function (e, t) {
                 if (t.selectedUserIds.size > 0 && !Array.from(t.selectedUserIds).every((t) => e.users.includes(t)))
                     return !1;
                 if ("" !== t.query.trim()) {
-                    let l = t.query.toLowerCase(),
-                        i = null != e.name && s()(l, e.name.toLowerCase()),
-                        a = s()(l, e.applicationName.toLowerCase()),
-                        n = e.activity?.state != null && s()(l, e.activity.state.toLowerCase()),
-                        r = e.activity?.details != null && s()(l, e.activity.details.toLowerCase());
-                    if (!i && !a && !n && !r) return !1;
+                    let n = t.query.toLowerCase(),
+                        i = null != e.name && s()(n, e.name.toLowerCase()),
+                        r = s()(n, e.applicationName.toLowerCase()),
+                        a = e.activity?.state != null && s()(n, e.activity.state.toLowerCase()),
+                        o = e.activity?.details != null && s()(n, e.activity.details.toLowerCase());
+                    if (!i && !r && !a && !o) return !1;
                 }
                 if (null !== t.selectedGuildId && e.guildId !== t.selectedGuildId) return !1;
                 if (null !== t.selectedActivity) {
-                    let l = e.activity?.state,
+                    let n = e.activity?.state,
                         i = e.activity?.details;
-                    if (l !== t.selectedActivity && i !== t.selectedActivity) return !1;
+                    if (n !== t.selectedActivity && i !== t.selectedActivity) return !1;
                 }
-                return (null === t.selectedYear || r()(e.createdAt).year() === t.selectedYear) && !0;
-            })(e, l);
-            if ((t && n.push(e), null == e.applicationId)) continue;
-            let i = a.get(e.applicationId);
+                return (null === t.selectedYear || o()(e.createdAt).year() === t.selectedYear) && !0;
+            })(e, n);
+            if ((t && a.push(e), null == e.applicationId)) continue;
+            let i = r.get(e.applicationId);
             null == i
-                ? a.set(e.applicationId, {
+                ? r.set(e.applicationId, {
                       clips: [e],
                       filteredClips: t ? [e] : [],
                       mostRecentClipCreatedAt: e.createdAt,
@@ -55,13 +56,13 @@ function m() {
                   t && i.filteredClips.push(e),
                   e.createdAt > i.mostRecentClipCreatedAt && (i.mostRecentClipCreatedAt = e.createdAt));
         }
-        let d = u(n, l.sortOrder),
-            c = u(
-                n.filter((e) => e.isFavorite),
-                l.sortOrder,
+        let l = d(a, n.sortOrder),
+            u = d(
+                a.filter((e) => e.isFavorite),
+                n.sortOrder,
             );
         return {
-            clipsByGame: Array.from(a.entries())
+            clipsByGame: Array.from(r.entries())
                 .map((e) => {
                     let [t, i] = e;
                     return {
@@ -69,13 +70,13 @@ function m() {
                         name: i.name,
                         count: i.filteredClips.length,
                         mostRecentClipCreatedAt: i.mostRecentClipCreatedAt,
-                        filteredClips: u(i.filteredClips, l.sortOrder),
+                        filteredClips: d(i.filteredClips, n.sortOrder),
                     };
                 })
                 .sort((e, t) => t.mostRecentClipCreatedAt - e.mostRecentClipCreatedAt),
             allClips: i,
-            filteredClips: d,
-            favoriteClips: c,
+            filteredClips: l,
+            favoriteClips: u,
         };
-    }, [e, t, l]);
+    }, [e, t, n]);
 }

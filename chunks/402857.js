@@ -1,186 +1,187 @@
-e.d(t, { A: () => Y });
-var l = e(627968),
-    n = e(64700),
-    s = e(17928),
-    a = e(765379),
-    d = e(90644),
-    o = e(587895),
-    r = e(429913),
-    c = e(734057),
-    A = e(71393),
-    u = e(977997),
-    h = e(157196),
-    x = e(503698),
-    g = e.n(x),
-    m = e(939249),
-    p = e(793574),
-    j = e(688810),
-    _ = e(939341),
-    C = e(623671),
-    v = e(365185),
-    N = e(915089),
-    f = e(172710),
-    O = e(92240),
-    E = e(257367),
-    I = e(160376),
-    S = e(939496),
-    y = e(282197),
-    L = e(584904),
-    D = e(351638),
-    V = e(531648),
-    b = e(753713),
-    T = e(990078),
-    M = e(835723),
-    P = e(55730),
-    w = e(353411),
-    G = e(879945),
-    U = e(993401),
-    k = e(652215),
-    F = e(996988),
-    R = e(375708),
-    z = e(514566);
-function H(i) {
-    let { user: t, activity: e, onAction: n } = i,
-        { themeType: s } = (0, S.E)(),
-        a = (0, w._B)(e, t),
-        o = (0, w.J$)(e, t);
-    if (!(0, d.A)(e) || (!(0, P.A)(e, k.jUm.PLAY) && !(0, P.A)(e, k.jUm.SYNC))) return null;
-    let r = (i) => {
-            i?.stopPropagation(), n?.({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" }), a.onClick();
+"use strict";
+n.d(t, { A: () => K });
+var i = n(627968),
+    r = n(64700),
+    s = n(17928),
+    a = n(765379),
+    o = n(90644),
+    l = n(587895),
+    u = n(429913),
+    c = n(734057),
+    d = n(71393),
+    _ = n(977997),
+    f = n(157196),
+    h = n(503698),
+    p = n.n(h),
+    E = n(939249),
+    m = n(793574),
+    g = n(688810),
+    A = n(939341),
+    I = n(623671),
+    T = n(365185),
+    S = n(915089),
+    N = n(172710),
+    y = n(92240),
+    C = n(257367),
+    v = n(160376),
+    O = n(939496),
+    R = n(282197),
+    b = n(584904),
+    D = n(351638),
+    L = n(531648),
+    w = n(753713),
+    M = n(990078),
+    P = n(835723),
+    x = n(55730),
+    U = n(353411),
+    k = n(879945),
+    G = n(993401),
+    F = n(652215),
+    V = n(996988),
+    B = n(375708),
+    H = n(514566);
+function j(e) {
+    let { user: t, activity: n, onAction: r } = e,
+        { themeType: s } = (0, O.E)(),
+        a = (0, U._B)(n, t),
+        l = (0, U.J$)(n, t);
+    if (!(0, o.A)(n) || (!(0, x.A)(n, F.jUm.PLAY) && !(0, x.A)(n, F.jUm.SYNC))) return null;
+    let u = (e) => {
+            e?.stopPropagation(), r?.({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" }), a.onClick();
         },
-        c = (i) => {
-            i.stopPropagation(), n?.({ action: "PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON" }), o.onClick();
+        c = (e) => {
+            e.stopPropagation(), r?.({ action: "PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON" }), l.onClick();
         };
-    return s === F.d.MODAL_V2
-        ? (0, l.jsxs)(l.Fragment, {
+    return s === V.d.MODAL_V2
+        ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, l.jsx)(T.m, {
-                      text: o.tooltip,
-                      children: (0, l.jsx)(U.FD, {
-                          text: o.label ?? R.intl.string(R.t.eU3inB),
+                  (0, i.jsx)(M.m, {
+                      text: l.tooltip,
+                      children: (0, i.jsx)(G.FD, {
+                          text: l.label ?? B.intl.string(B.t.eU3inB),
                           onClick: c,
-                          disabled: o.disabled,
-                          loading: o.loading,
+                          disabled: l.disabled,
+                          loading: l.loading,
                       }),
                   }),
-                  (0, l.jsx)(T.m, {
+                  (0, i.jsx)(M.m, {
                       text: a.tooltip,
-                      children: (0, l.jsx)(U.FD, {
-                          text: a.label ?? R.intl.string(R.t.rRffNz),
-                          onClick: r,
+                      children: (0, i.jsx)(G.FD, {
+                          text: a.label ?? B.intl.string(B.t.rRffNz),
+                          onClick: u,
                           disabled: a.disabled,
                           loading: a.loading,
                       }),
                   }),
               ],
           })
-        : (0, l.jsxs)(l.Fragment, {
+        : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, l.jsx)("div", {
-                      className: z.FS,
-                      children: (0, l.jsx)(T.m, {
+                  (0, i.jsx)("div", {
+                      className: H.FS,
+                      children: (0, i.jsx)(M.m, {
                           text: a.tooltip,
-                          children: (0, l.jsx)(U.FD, {
-                              icon: () => (0, l.jsx)(G.A, {}),
-                              text: a.label ?? R.intl.string(R.t.rRffNz),
-                              onClick: r,
+                          children: (0, i.jsx)(G.FD, {
+                              icon: () => (0, i.jsx)(k.A, {}),
+                              text: a.label ?? B.intl.string(B.t.rRffNz),
+                              onClick: u,
                               disabled: a.disabled,
                               loading: a.loading,
                               fullWidth: !0,
                           }),
                       }),
                   }),
-                  (0, l.jsx)(U.q3, {
-                      icon: M.J,
-                      tooltipText: o.tooltip ?? R.intl.string(R.t.eU3inB),
-                      "aria-label": o.label ?? R.intl.string(R.t.eU3inB),
-                      disabled: o.disabled,
-                      loading: o.loading,
+                  (0, i.jsx)(G.q3, {
+                      icon: P.J,
+                      tooltipText: l.tooltip ?? B.intl.string(B.t.eU3inB),
+                      "aria-label": l.label ?? B.intl.string(B.t.eU3inB),
+                      disabled: l.disabled,
+                      loading: l.loading,
                       onClick: c,
                   }),
               ],
           });
 }
-var B = e(269587);
-function Q(i) {
+var Y = n(269587);
+function W(e) {
     let t,
-        { user: e, currentUser: s, activity: a, className: o, onClose: r } = i,
-        c = (0, N.GV)(),
-        A = (0, N.GV)(),
-        { themeType: u } = (0, S.E)(),
-        h = (0, v.A)({ activity: a, user: e }),
-        x = (0, I.A)(a),
-        T = null != x.text && "" !== x.text,
-        { largeImage: M } = (0, _.XN)(a, void 0, "user_profile_spotify"),
-        { analyticsLocations: P } = (0, j.Ay)(p.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        w = (0, O.A)({ display: "live", user: e, activity: a, entry: h, analyticsLocations: P }),
-        G = (0, E.A)({ userId: e.id, onAction: w });
-    if (!(0, d.A)(a)) return null;
-    let U = () =>
-        e.id === s.id
+        { user: n, currentUser: s, activity: a, className: l, onClose: u } = e,
+        c = (0, S.GV)(),
+        d = (0, S.GV)(),
+        { themeType: _ } = (0, O.E)(),
+        f = (0, T.A)({ activity: a, user: n }),
+        h = (0, v.A)(a),
+        M = null != h.text && "" !== h.text,
+        { largeImage: P } = (0, A.XN)(a, void 0, "user_profile_spotify"),
+        { analyticsLocations: x } = (0, g.Ay)(m.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        U = (0, y.A)({ display: "live", user: n, activity: a, entry: f, analyticsLocations: x }),
+        k = (0, C.A)({ userId: n.id, onAction: U });
+    if (!(0, o.A)(a)) return null;
+    let G = () =>
+        n.id === s.id
             ? null
-            : (0, l.jsx)("div", { className: z.o1, children: (0, l.jsx)(H, { user: e, activity: a, onAction: w }) });
-    return (0, l.jsx)(j.f5, {
-        value: P,
-        children: (0, l.jsxs)(L.A, {
-            ref: G,
-            className: g()(z.Nr, o),
-            onAction: w,
-            onClose: r,
-            "aria-labelledby": T ? `${A} ${c}` : c,
+            : (0, i.jsx)("div", { className: H.o1, children: (0, i.jsx)(j, { user: n, activity: a, onAction: U }) });
+    return (0, i.jsx)(g.f5, {
+        value: x,
+        children: (0, i.jsxs)(b.A, {
+            ref: k,
+            className: p()(H.Nr, l),
+            onAction: U,
+            onClose: u,
+            "aria-labelledby": M ? `${d} ${c}` : c,
             children: [
-                (0, l.jsx)(D.A, {
-                    textId: A,
-                    ...x,
-                    contextMenu: (0, l.jsx)(B.A, { display: "live", user: e, activity: a, entry: h, onClose: r }),
+                (0, i.jsx)(D.A, {
+                    textId: d,
+                    ...h,
+                    contextMenu: (0, i.jsx)(Y.A, { display: "live", user: n, activity: a, entry: f, onClose: u }),
                 }),
-                (0, l.jsx)("div", {
-                    className: z.rf,
-                    children: (0, l.jsxs)("div", {
-                        className: z.Qs,
+                (0, i.jsx)("div", {
+                    className: H.rf,
+                    children: (0, i.jsxs)("div", {
+                        className: H.Qs,
                         children: [
-                            (0, l.jsx)(C.d, {
-                                image: M,
-                                size: u === F.d.MODAL_V2 ? C.w.SIZE_100 : C.w.SIZE_60,
-                                className: z.mM,
-                                onClick: (i) => {
-                                    i.stopPropagation(), w({ action: "OPEN_SPOTIFY_ALBUM" }), (0, f.QX)(a, e.id);
+                            (0, i.jsx)(I.d, {
+                                image: P,
+                                size: _ === V.d.MODAL_V2 ? I.w.SIZE_100 : I.w.SIZE_60,
+                                className: H.mM,
+                                onClick: (e) => {
+                                    e.stopPropagation(), U({ action: "OPEN_SPOTIFY_ALBUM" }), (0, N.QX)(a, n.id);
                                 },
                             }),
-                            (0, l.jsxs)("div", {
-                                className: z.zH,
+                            (0, i.jsxs)("div", {
+                                className: H.zH,
                                 children: [
-                                    (0, l.jsxs)("div", {
+                                    (0, i.jsxs)("div", {
                                         children: [
-                                            (0, l.jsx)(V.Q, {
+                                            (0, i.jsx)(L.Q, {
                                                 variant: "heading-sm/semibold",
                                                 text: a.details,
                                                 onClick: () => {
-                                                    w({ action: "OPEN_SPOTIFY_TRACK" }), (0, f.Mp)(a);
+                                                    U({ action: "OPEN_SPOTIFY_TRACK" }), (0, N.Mp)(a);
                                                 },
                                                 id: c,
                                             }),
                                             0 === (t = a.state?.split("; ") ?? []).length
                                                 ? null
                                                 : null == a.sync_id
-                                                  ? (0, l.jsx)(V.A, { variant: "text-xs/normal", text: t.join(", ") })
-                                                  : (0, l.jsx)(V.A, {
+                                                  ? (0, i.jsx)(L.A, { variant: "text-xs/normal", text: t.join(", ") })
+                                                  : (0, i.jsx)(L.A, {
                                                         variant: "text-xs/normal",
-                                                        text: t.map((i, s) =>
-                                                            (0, l.jsxs)(
-                                                                n.Fragment,
+                                                        text: t.map((e, s) =>
+                                                            (0, i.jsxs)(
+                                                                r.Fragment,
                                                                 {
                                                                     children: [
-                                                                        (0, l.jsx)(m.D, {
-                                                                            className: g()(z.sd, z.mG),
-                                                                            onClick: (i) => {
-                                                                                i.stopPropagation(),
-                                                                                    w({
+                                                                        (0, i.jsx)(E.D, {
+                                                                            className: p()(H.sd, H.mG),
+                                                                            onClick: (e) => {
+                                                                                e.stopPropagation(),
+                                                                                    U({
                                                                                         action: "OPEN_SPOTIFY_ARTIST",
                                                                                     }),
-                                                                                    (0, f.mN)(a, e.id, s);
+                                                                                    (0, N.mN)(a, n.id, s);
                                                                             },
-                                                                            children: i,
+                                                                            children: e,
                                                                         }),
                                                                         s < t.length - 1 ? ", " : "",
                                                                     ],
@@ -191,56 +192,56 @@ function Q(i) {
                                                     }),
                                         ],
                                     }),
-                                    (0, l.jsx)(y.A, { user: e, activity: a, className: z.jp }),
+                                    (0, i.jsx)(R.A, { user: n, activity: a, className: H.jp }),
                                     (() => {
-                                        let { timestamps: i } = a;
-                                        if (null == i) return null;
-                                        let { start: t, end: e } = i;
-                                        return null == t || null == e ? null : (0, l.jsx)(b.A, { start: t, end: e });
+                                        let { timestamps: e } = a;
+                                        if (null == e) return null;
+                                        let { start: t, end: n } = e;
+                                        return null == t || null == n ? null : (0, i.jsx)(w.A, { start: t, end: n });
                                     })(),
-                                    u === F.d.MODAL_V2 && U(),
+                                    _ === V.d.MODAL_V2 && G(),
                                 ],
                             }),
-                            u === F.d.MODAL && U(),
+                            _ === V.d.MODAL && G(),
                         ],
                     }),
                 }),
-                u !== F.d.MODAL && u !== F.d.MODAL_V2 && U(),
+                _ !== V.d.MODAL && _ !== V.d.MODAL_V2 && G(),
             ],
         }),
     });
 }
-function Y(i) {
-    let { user: t, currentUser: e, activity: n, className: x, onClose: g } = i,
-        { voiceGuild: m, voiceChannel: p } = (0, s.cf)([A.A, u.A, c.A], () => {
-            let i = (0, a.A)(n);
-            if (!i && n.type !== k.$pd.HANG_STATUS) return {};
-            let e = i
-                    ? u.A.getVoiceStateForSession(t.id, n?.session_id)?.channelId
-                    : u.A.getVoiceStateForUser(t.id)?.channelId,
-                l = c.A.getChannel(e);
-            return { voiceGuild: A.A.getGuild(l?.getGuildId()), voiceChannel: l };
+function K(e) {
+    let { user: t, currentUser: n, activity: r, className: h, onClose: p } = e,
+        { voiceGuild: E, voiceChannel: m } = (0, s.cf)([d.A, _.A, c.A], () => {
+            let e = (0, a.A)(r);
+            if (!e && r.type !== F.$pd.HANG_STATUS) return {};
+            let n = e
+                    ? _.A.getVoiceStateForSession(t.id, r?.session_id)?.channelId
+                    : _.A.getVoiceStateForUser(t.id)?.channelId,
+                i = c.A.getChannel(n);
+            return { voiceGuild: d.A.getGuild(i?.getGuildId()), voiceChannel: i };
         });
-    (0, r.h)(n?.application_id);
-    let j = (0, s.bG)([o.A], () =>
-        n?.application_id != null
-            ? o.A.getApplication(n.application_id)
-            : n?.name != null
-              ? o.A.getApplicationByName(n.name)
+    (0, u.h)(r?.application_id);
+    let g = (0, s.bG)([l.A], () =>
+        r?.application_id != null
+            ? l.A.getApplication(r.application_id)
+            : r?.name != null
+              ? l.A.getApplicationByName(r.name)
               : null,
     );
-    return n?.type === k.$pd.CUSTOM_STATUS || n?.type === k.$pd.HANG_STATUS
+    return r?.type === F.$pd.CUSTOM_STATUS || r?.type === F.$pd.HANG_STATUS
         ? null
-        : (0, d.A)(n)
-          ? (0, l.jsx)(Q, { user: t, currentUser: e, activity: n, className: x, onClose: g })
-          : (0, l.jsx)(h.A, {
+        : (0, o.A)(r)
+          ? (0, i.jsx)(W, { user: t, currentUser: n, activity: r, className: h, onClose: p })
+          : (0, i.jsx)(f.A, {
                 user: t,
-                currentUser: e,
-                activity: n,
-                application: j,
-                voiceGuild: m,
-                voiceChannel: p,
-                className: x,
-                onClose: g,
+                currentUser: n,
+                activity: r,
+                application: g,
+                voiceGuild: E,
+                voiceChannel: m,
+                className: h,
+                onClose: p,
             });
 }

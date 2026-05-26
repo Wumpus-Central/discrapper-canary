@@ -1,16 +1,17 @@
-n.d(t, { p: () => r });
-var l = n(627968);
+"use strict";
+n.d(t, { p: () => o });
+var i = n(627968);
 n(64700);
-var s = n(192308),
-    i = n(792852),
+var r = n(192308),
+    s = n(792852),
     a = n(696016);
-let r = function () {
+let o = function () {
     let { initialEditingClipId: e, selectedGameId: t } =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { resetFilters: r, setSelectedGameId: o } = i.P.getState();
-    r(),
-        null != t && o(t),
-        (0, s.openModalLazy)(
+        { resetFilters: o, setSelectedGameId: l } = s.P.getState();
+    o(),
+        null != t && l(t),
+        (0, r.openModalLazy)(
             async () => {
                 let { default: t } = await Promise.all([
                     n.e("34053"),
@@ -30,7 +31,7 @@ let r = function () {
                     n.e("20342"),
                     n.e("73273"),
                 ]).then(n.bind(n, 818080));
-                return (n) => (0, l.jsx)(t, { initialEditingClipId: e, ...n });
+                return (n) => (0, i.jsx)(t, { initialEditingClipId: e, ...n });
             },
             { modalKey: a.nm },
         );
