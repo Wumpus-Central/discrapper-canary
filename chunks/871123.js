@@ -107,30 +107,34 @@ function R(e) {
     };
 }
 function b(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        { size: i = 512 } = n;
     if (
         null == t ||
         e?.tenantMetadata?.socialLayer?.carouselItems == null ||
         0 === e.tenantMetadata.socialLayer.carouselItems.length
     )
         return { primaryIconAsset: void 0, primaryIconLabel: void 0 };
-    let n = e.tenantMetadata.socialLayer.carouselItems[0];
-    return null == n.labelIconAssetId
+    let r = e.tenantMetadata.socialLayer.carouselItems[0];
+    return null == r.labelIconAssetId
         ? { primaryIconAsset: void 0, primaryIconLabel: void 0 }
         : {
-              primaryIconAsset: f.A.toURLSafe((0, _.YE)(t, n.labelIconAssetId, 512, "webp")) ?? void 0,
-              primaryIconLabel: n.label,
+              primaryIconAsset: f.A.toURLSafe((0, _.YE)(t, r.labelIconAssetId, i, "webp")) ?? void 0,
+              primaryIconLabel: r.label,
           };
 }
 function D(e) {
-    let t = e?.applicationId,
-        n = e?.tenantMetadata?.socialLayer?.cardImageAssetId ?? e?.thumbnailAssetId;
-    if (null != n && null != t) return f.A.toURLSafe((0, _.YE)(t, n, 512, "webp"));
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { size: n = 512 } = t,
+        i = e?.applicationId,
+        r = e?.tenantMetadata?.socialLayer?.cardImageAssetId ?? e?.thumbnailAssetId;
+    if (null != r && null != i) return f.A.toURLSafe((0, _.YE)(i, r, n, "webp"));
 }
 function L(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { size: n = 1024 } = t;
     if (e?.tenantMetadata?.socialLayer?.cardBackgroundImageAssetId != null && e?.applicationId != null)
-        return f.A.toURLSafe(
-            (0, _.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, 1024, A),
-        );
+        return f.A.toURLSafe((0, _.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, n, A));
 }
 function w(e, t, n) {
     let { tab: i, applicationId: r } = (0, s.parse)(t);
