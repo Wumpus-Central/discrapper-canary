@@ -1,5 +1,9 @@
 e.exports = {
     Nr: "card_abfd90",
+    ur: "cardFlairWrapper_abfd90",
+    mN: "cardFlairGlow_abfd90",
+    Oj: "cardFlairGlowAlwaysOn_abfd90",
+    T_: "cardFlairGlowOnHover_abfd90",
     GW: "cardMedium_abfd90",
     ax: "cardSmall_abfd90",
     Vl: "cardImageContainer_abfd90",

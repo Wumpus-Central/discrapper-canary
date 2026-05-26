@@ -72,7 +72,8 @@ class S extends i.Component {
                                             let { default: t } = await Promise.all([
                                                 s.e("36029"),
                                                 s.e("13498"),
-                                                s.e("34053"),
+                                                s.e("35529"),
+                                                s.e("71568"),
                                                 s.e("64615"),
                                                 s.e("92064"),
                                                 s.e("87297"),

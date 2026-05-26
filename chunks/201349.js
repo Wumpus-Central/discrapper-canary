@@ -46,15 +46,15 @@ let D = { width: 500, height: O.$V },
     L = (0, C.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("77739"),
+                n.e("22321"),
                 n.e("94314"),
-                n.e("94908"),
+                n.e("26705"),
                 n.e("51776"),
                 n.e("29761"),
-                n.e("52887"),
+                n.e("34186"),
                 n.e("42430"),
                 n.e("16492"),
-                n.e("90081"),
+                n.e("35128"),
                 n.e("34552"),
                 n.e("93103"),
                 n.e("71210"),
@@ -137,8 +137,8 @@ var P = n(861382),
     z = n(721768),
     $ = n(842209),
     q = n(210978),
-    Z = n(392054),
-    X = n(168186),
+    X = n(392054),
+    Z = n(168186),
     Q = n(990078),
     J = n(939249),
     ee = n(802019),
@@ -159,17 +159,17 @@ function er(e) {
         _ = r.useCallback(
             (e, t) => {
                 let n = 8;
-                return s[t + 1]?.type === Z.Hf.BUILT_IN && (n += 8), 32 + n;
+                return s[t + 1]?.type === X.Hf.BUILT_IN && (n += 8), 32 + n;
             },
             [s],
         ),
-        f = r.useCallback((e, t) => (t ? 8 * (s[e + 1]?.type !== Z.Hf.BUILT_IN) : 8 * (0 !== e)), [s]),
+        f = r.useCallback((e, t) => (t ? 8 * (s[e + 1]?.type !== X.Hf.BUILT_IN) : 8 * (0 !== e)), [s]),
         h = r.useCallback(
             (e, t) => {
                 let r = s[t];
                 if (null == r) return;
                 let a = (0, et.Rg)(r),
-                    c = 4 * (r.type === Z.Hf.BUILT_IN),
+                    c = 4 * (r.type === X.Hf.BUILT_IN),
                     d = 32 - 2 * c,
                     _ = (0, i.jsx)(a, {
                         channel: n,
@@ -180,7 +180,7 @@ function er(e) {
                         height: d,
                         selectable: !0,
                     }),
-                    f = r.type !== Z.Hf.BUILT_IN && t < s.length - 1 && s[t + 1].type === Z.Hf.BUILT_IN;
+                    f = r.type !== X.Hf.BUILT_IN && t < s.length - 1 && s[t + 1].type === X.Hf.BUILT_IN;
                 return (0, i.jsxs)(
                     "div",
                     {
@@ -305,7 +305,7 @@ let ec = [8, 8, 0, 8],
             ),
             D = r.useCallback(
                 (e, t, i) => {
-                    z.Gf({ channelId: n.id, command: e, section: t, location: Z.Oh.DISCOVERY, triggerSection: i });
+                    z.Gf({ channelId: n.id, command: e, section: t, location: X.Oh.DISCOVERY, triggerSection: i });
                 },
                 [n.id],
             );
@@ -321,7 +321,7 @@ let ec = [8, 8, 0, 8],
                         if (((t = n), u < (n += e.data.length))) {
                             let n = e.data[u - t],
                                 i = p.find((e) => e.id === n.applicationId);
-                            D(n, i, (0, X.$S)(e.section));
+                            D(n, i, (0, Z.$S)(e.section));
                             break;
                         }
                     return !0;
@@ -380,7 +380,7 @@ let ec = [8, 8, 0, 8],
                     if (
                         null == s ||
                         (r.section.id !== s.applicationId && r.section.id !== ea.Ik.FRECENCY) ||
-                        s.inputType === Z.y$.PLACEHOLDER
+                        s.inputType === X.y$.PLACEHOLDER
                     )
                         return (0, i.jsx)(es.A, {}, a);
                     let o = p.find((e) => e.id === s.applicationId);
@@ -394,7 +394,7 @@ let ec = [8, 8, 0, 8],
                             selected: u === e,
                             showImage: r.section.id !== s.applicationId,
                             section: o,
-                            onClick: () => D(s, o, (0, X.$S)(r.section)),
+                            onClick: () => D(s, o, (0, Z.$S)(r.section)),
                             onHover: () => {
                                 c(null), f(!1);
                             },
@@ -505,8 +505,8 @@ var eM = n(931664),
     ez = n(625494),
     e$ = n(488926),
     eq = n(723702),
-    eZ = n(486319),
-    eX = n(355622),
+    eX = n(486319),
+    eZ = n(355622),
     eQ = n(112541),
     eJ = n(834730),
     e0 = n(140735),
@@ -963,7 +963,7 @@ function tB(e) {
                     let e = tE.A.getChannel(t.parent_id);
                     return e?.isForumLikeChannel() ?? !1;
                 }),
-                r = [eX.oU.NORMAL, eX.oU.SIDEBAR].includes(n);
+                r = [eZ.oU.NORMAL, eZ.oU.SIDEBAR].includes(n);
             return { shouldShow: t.isThread() && !i && r };
         })({ channel: t, type: n });
     return s ? (0, i.jsx)(tV, { thread: t, pendingScheduledMessage: r }) : null;
@@ -976,8 +976,8 @@ var tH = n(822610),
     tz = n(899536),
     t$ = n(74833),
     tq = n(216964),
-    tZ = n(387758),
-    tX = n(39623),
+    tX = n(387758),
+    tZ = n(39623),
     tQ = n(267102),
     tJ = n(186306),
     t0 = n(339871),
@@ -1017,7 +1017,7 @@ function t3(e) {
                       (0, i.jsx)(t4, {
                           slateEditor: o,
                           markdownSyntax: "inlineCode",
-                          children: (0, i.jsx)(tZ.G, {
+                          children: (0, i.jsx)(tX.G, {
                               size: "custom",
                               width: 20,
                               height: 20,
@@ -1028,7 +1028,7 @@ function t3(e) {
                   (0, i.jsx)(t4, {
                       slateEditor: o,
                       markdownSyntax: "spoiler",
-                      children: (0, i.jsx)(tX.b, { size: "md", color: "currentColor", className: a()(t2.Kk, r) }),
+                      children: (0, i.jsx)(tZ.b, { size: "md", color: "currentColor", className: a()(t2.Kk, r) }),
                   }),
               ],
           });
@@ -1256,13 +1256,15 @@ function ni(e, t, s, a, o) {
                     u(!1),
                         (0, h.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
-                                n.e("94908"),
+                                n.e("26705"),
                                 n.e("70750"),
                                 n.e("51776"),
                                 n.e("31967"),
-                                n.e("82647"),
-                                n.e("52887"),
+                                n.e("40523"),
+                                n.e("17204"),
                                 n.e("32264"),
+                                n.e("64801"),
+                                n.e("12815"),
                                 n.e("49681"),
                                 n.e("76602"),
                                 n.e("34530"),
@@ -1338,7 +1340,7 @@ function ni(e, t, s, a, o) {
 function nr(e, t, n) {
     return r.useCallback(
         (i) => {
-            if (t === eX.oU.CREATE_FORUM_POST || t === eX.oU.CREATE_ANNOUNCEMENT_POST) n.current?.insertGIF(i);
+            if (t === eZ.oU.CREATE_FORUM_POST || t === eZ.oU.CREATE_ANNOUNCEMENT_POST) n.current?.insertGIF(i);
             else {
                 let t = {
                     gif_provider: i.provider ?? (0, eT.cf)(),
@@ -1370,7 +1372,7 @@ function na(e) {
     return r.useCallback(
         (e, r) => {
             n ||
-                (a === eX.oU.CREATE_ANNOUNCEMENT_POST || (0, ex.YS)(r, i, s, a.drafts.type)
+                (a === eZ.oU.CREATE_ANNOUNCEMENT_POST || (0, ex.YS)(r, i, s, a.drafts.type)
                     ? ((0, td.fh)({
                           sticker: e,
                           stickerSelectLocation: r,
@@ -1533,8 +1535,8 @@ let np = (e, t) => ({
                     maxCharacterCount: z,
                     showRemainingCharsAfterCount: $,
                     allowNewLines: q = !0,
-                    characterCountClassName: Z,
-                    "aria-describedby": X,
+                    characterCountClassName: X,
+                    "aria-describedby": Z,
                     "aria-labelledby": Q,
                     setEditorRef: J,
                     autoCompletePosition: ee,
@@ -1572,7 +1574,7 @@ let np = (e, t) => ({
                     canCreateThreads: eM,
                     canEveryoneSendMessages: eP,
                 } = nf(O, R, ev, y),
-                ex = R.toolbarType === eX.O1.STATIC,
+                ex = R.toolbarType === eZ.O1.STATIC,
                 eU = !ek.D_.useSetting() && !(0, eq.isAndroidWeb)() && null != window.ResizeObserver,
                 eF = !eU || !R.commands?.enabled || !b || "/" !== s,
                 eV = (0, eN.A)(),
@@ -1675,13 +1677,13 @@ let np = (e, t) => ({
                 tS = r.useCallback(() => {
                     eK.emit("submit-failure");
                 }, [eK]);
-            (0, eZ.R)(eK, O.guild_id, O.id);
+            (0, eX.R)(eK, O.guild_id, O.id);
             let tC = null != U,
                 tv = (eD && !((eR || eb) && eP)) || (e1 && R.submit?.useDisabledStylesOnSubmit),
                 tL = null;
             null != ev ? (tL = w?.(ev, eO, tR.g$)) : (!eD || eM) && (tL = L?.(tC, tR.g$));
             let tw = eU && null != o && !eD && R.showCharacterCount && null == ev,
-                tM = eU && !__OVERLAY__ && null != o && null == ev && R.toolbarType !== eX.O1.NONE && !eD,
+                tM = eU && !__OVERLAY__ && null != o && null == ev && R.toolbarType !== eZ.O1.NONE && !eD,
                 tP = (function (e) {
                     let {
                             channel: t,
@@ -1709,7 +1711,7 @@ let np = (e, t) => ({
                             r = [];
                         return (
                             null != t.guild_id &&
-                                n === eX.oU.NORMAL &&
+                                n === eZ.oU.NORMAL &&
                                 r.push((0, i.jsx)(ty.A, { guildId: t.guild_id, channel: t, className: tR.UW })),
                             null != s &&
                                 e.push(
@@ -1737,9 +1739,9 @@ let np = (e, t) => ({
                     selectedAutocompleteInputError: tE,
                 }),
                 tx = 0 === s.trim().length,
-                tU = null != U ? [X, tr].filter(Boolean).join(" ") : X,
-                tk = R.layout === eX.wt.INLINE,
-                tG = R.layout === eX.wt.FLUSH,
+                tU = null != U ? [Z, tr].filter(Boolean).join(" ") : Z,
+                tk = R.layout === eZ.wt.INLINE,
+                tG = R.layout === eZ.wt.FLUSH,
                 tF = (0, i.jsx)("div", { ref: ed, className: tR.BW }),
                 tV = tI ? (0, i.jsx)(M, { align: "right", positionTargetRef: ed, channel: O }) : null,
                 tY =
@@ -1757,7 +1759,7 @@ let np = (e, t) => ({
                     ? (0, i.jsx)(tj.A, {
                           type: R,
                           textValue: s,
-                          className: Z,
+                          className: X,
                           maxCharacterCount: z,
                           showRemainingCharsAfterCount: $,
                       })
@@ -1806,12 +1808,12 @@ let np = (e, t) => ({
                                                 className: a()(tR.vW, {
                                                     [tR.BF]: tv,
                                                     [tR.RL]:
-                                                        R !== eX.oU.EDIT && (null != tL || (tv && null == tL) || eR),
-                                                    [tR.fk]: R === eX.oU.THREAD_CREATION,
+                                                        R !== eZ.oU.EDIT && (null != tL || (tv && null == tL) || eR),
+                                                    [tR.fk]: R === eZ.oU.THREAD_CREATION,
                                                     [tR.TZ]:
-                                                        R === eX.oU.CREATE_FORUM_POST ||
-                                                        R === eX.oU.FORWARD_MESSAGE_INPUT,
-                                                    [tR.$i]: R === eX.oU.USER_PROFILE_REPLY,
+                                                        R === eZ.oU.CREATE_FORUM_POST ||
+                                                        R === eZ.oU.FORWARD_MESSAGE_INPUT,
+                                                    [tR.$i]: R === eZ.oU.USER_PROFILE_REPLY,
                                                 }),
                                                 onMouseDown: tf,
                                                 children: [
@@ -1858,9 +1860,9 @@ let np = (e, t) => ({
                                                             canOnlyUseTextCommands: tC,
                                                             className: a()(
                                                                 {
-                                                                    [tR.QI]: R === eX.oU.THREAD_CREATION,
-                                                                    [tR.AV]: R === eX.oU.PROFILE_BIO_INPUT,
-                                                                    [tR.GR]: R === eX.oU.OVERLAY_INLINE_REPLY,
+                                                                    [tR.QI]: R === eZ.oU.THREAD_CREATION,
+                                                                    [tR.AV]: R === eZ.oU.PROFILE_BIO_INPUT,
+                                                                    [tR.GR]: R === eZ.oU.OVERLAY_INLINE_REPLY,
                                                                 },
                                                                 _,
                                                             ),
