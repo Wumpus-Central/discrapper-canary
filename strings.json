@@ -9133,6 +9133,8 @@
   "t3O2BR": "Or, send an invite link to a friend!",
   "t9mhPt": "Group DMs can have up to !!{number}!! members.",
   "yiQW1O": "You can't add any more friends.",
+  "AVPtNF": "Search to find specific server members. They’ll need to accept your invite before they join the group DM.",
+  "//DXrW": "Invite non-friends to groups",
   "eg+R9x": "You need to be friends with **!!{username}!!** to start a group DM.",
   "7orY6K": "You don't have any friends to add!",
   "HrSDPF": "{number, plural, one {You can add 1 more friend.} other {You can add  more friends.} }",
