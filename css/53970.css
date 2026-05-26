@@ -10,42 +10,6 @@
     z-index: 10
 }
 
-.wrapper__1505a {
-    background-color: var(--black);
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    width: 100%
-}
-
-.videoContainer__1505a {
-    bottom: 0;
-    contain: layout style paint;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    inset-inline: 0;
-    width: 100%;
-    will-change: transform, transform-origin
-}
-
-.videoContainer__1505a.zoomed__1505a {
-    transform: translate(var(--custom-pan-x), var(--custom-pan-y)) scale(var(--custom-zoom-scale));
-    transform-origin: center
-}
-
-.full-motion .videoContainer__1505a.zoomed__1505a {
-    transition: var(--custom-zoom-transition)
-}
-
-.zoomEnabled__1505a {
-    cursor: grab
-}
-
-.zoomDragging__1505a {
-    cursor: grabbing
-}
-
 @keyframes outgoing-call-pulse__2f4f7 {
     0% {
         opacity: 0;

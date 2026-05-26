@@ -1,3 +1,34 @@
+.container__93e55 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.messageContainer__93e55 {
+    background-color: var(--background-mod-muted);
+    border-color: var(--border-subtle);
+    border-radius: var(--radius-sm);
+    border-style: solid;
+    border-width: 1px;
+    padding: var(--space-12)
+}
+
+.ercContainer__93e55 {
+    overflow: visible;
+    padding: var(--space-12) 0;
+    pointer-events: none;
+    position: relative
+}
+
+.learnMore__7b2a3 {
+    cursor: pointer
+}
+
+.container_ae4343 {
+    display: flex;
+    gap: var(--space-8)
+}
+
 .container__89401 {
     align-items: center;
     height: 100%;

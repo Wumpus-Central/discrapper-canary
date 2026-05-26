@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { A: () => Y }), n(321073);
+n.d(t, { A: () => K }), n(321073);
 var r = n(17928),
     s = n(228366),
     a = n(450827),
@@ -24,19 +24,23 @@ let S = !1,
     y = 0,
     C = [],
     v = !1,
-    O = new Set(),
-    R = null,
-    b = new Set();
-function D() {
-    (N = ""), (y = 0), (C = []), (O = new Set()), (S = !1), (R = null);
+    O = !1,
+    R = new Set(),
+    b = null,
+    D = new Set();
+function L() {
+    (N = ""), (y = 0), (C = []), (R = new Set()), (S = !1), (b = null), (O = !1);
 }
-function L(e) {
-    (N = e), (y = 0), w();
+function w(e) {
+    return O !== e && ((O = e), !0);
 }
-function w() {
+function M(e) {
+    return (N = e), (y = 0), P();
+}
+function P() {
     let e, t, n;
     if (!S) return !1;
-    let r = h.A.getChannel(R);
+    let r = h.A.getChannel(b);
     if (0 === N.trim().length) {
         var s;
         let e, t, n, a;
@@ -61,7 +65,7 @@ function w() {
                             .filter((t) => t !== e?.id)
                             .filter((e) => !A.A.isBlockedOrIgnored(e))
                             .filter((e) => !A.A.isFriend(e))
-                            .filter((e) => b.has(e)),
+                            .filter((e) => D.has(e)),
                     ]),
                 ))),
             s?.isGroupDM() && (n = n.filter((e) => !s.recipients.includes(e))),
@@ -71,13 +75,14 @@ function w() {
                     if (null == r || r.isProvisional || (r.bot && !(r.isStaff() && e?.isStaff()))) return n;
                     let s = { user: r, comparator: f.Ay.getName(r) };
                     if (t && null != a && !A.A.isFriend(r.id)) {
-                        let t = x(r.id, a);
+                        let t = k(r.id, a);
                         if (0 === t.length && !(r.isStaff() && e?.isStaff())) return n;
                         t.length > 0 && (s.mutualGuilds = t);
                     }
                     return n.push(s), n;
                 }, [])
-                .sort(P)),
+                .sort(U)),
+            w(!1),
             !0
         );
     }
@@ -114,12 +119,12 @@ function w() {
         !1
     );
 }
-function M() {
+function x() {
     if (!S) return !1;
     let e = v;
     return (v = A.A.getFriendCount() > 0) !== e;
 }
-function P(e, t) {
+function U(e, t) {
     if (p.A.hasConsented(T.YAq.PERSONALIZATION)) {
         let n = u.A.getUserAffinity(e.user.id)?.communicationProbability ?? 0,
             i = u.A.getUserAffinity(t.user.id)?.communicationProbability ?? 0;
@@ -129,7 +134,7 @@ function P(e, t) {
         (0, _.sS)(f.Ay.getName(t.user).toLocaleLowerCase()),
     );
 }
-function x(e, t) {
+function k(e, t) {
     let n = [];
     for (let i of t) {
         if (!m.Ay.isMember(i, e)) continue;
@@ -138,7 +143,7 @@ function x(e, t) {
     }
     return n;
 }
-function U(e) {
+function G(e) {
     let { results: t } = e;
     if (!S || "" === N) return;
     let n = I.default.getCurrentUser(),
@@ -151,38 +156,38 @@ function U(e) {
         if (null == t || t.isProvisional || (t.bot && !(t.isStaff() && n?.isStaff()))) continue;
         let o = { user: t, comparator: a };
         if (i && null != r && !A.A.isFriend(t.id)) {
-            let e = x(t.id, r);
+            let e = k(t.id, r);
             if (0 === e.length && !(t.isStaff() && n?.isStaff())) continue;
             e.length > 0 && (o.mutualGuilds = e);
         }
         s.push(o);
     }
-    (C = s), j.emitChange();
+    (C = s), W.emitChange();
 }
-function k() {
-    return null != i && (i.destroy(), (i = null)), a.A.getUserSearchContext(U, 1e3);
+function F() {
+    return null != i && (i.destroy(), (i = null)), a.A.getUserSearchContext(G, 1e3);
 }
-function G(e) {
+function V(e) {
     if (e.key !== T.TLS) return !1;
-    (S = !0), M(), (i = k()), (R = null), L("");
+    (S = !0), x(), (i = F()), (b = null), M("");
 }
-function F(e) {
+function B(e) {
     if (e.key !== T.TLS) return !1;
-    V();
+    H();
 }
-function V() {
-    null != i && (i.destroy(), (i = null)), (b = new Set()), D();
+function H() {
+    null != i && (i.destroy(), (i = null)), (D = new Set()), L();
 }
-function B() {
-    return !!S && !!(0, l.G)("PrivateChannelRecipientsInviteStore") && w();
+function j() {
+    return !!S && !!(0, l.G)("PrivateChannelRecipientsInviteStore") && P();
 }
-class H extends r.Ay.Store {
+class Y extends r.Ay.Store {
     static displayName = "PrivateChannelRecipientsInviteStore";
     initialize() {
         this.waitFor(h.A, p.A, o.A, E.A, m.Ay, g.A, A.A, u.A, I.default),
-            this.syncWith([I.default, h.A], w),
-            this.syncWith([u.A], B),
-            this.syncWith([A.A], M);
+            this.syncWith([I.default, h.A], P),
+            this.syncWith([u.A], j),
+            this.syncWith([A.A], x);
     }
     getResults() {
         return C;
@@ -191,34 +196,34 @@ class H extends r.Ay.Store {
         return v;
     }
     getSelectedUsers() {
-        return O;
+        return R;
     }
     getQuery() {
         return N;
     }
     getState() {
-        return { query: N, selectedRow: y, selectedUsers: O, results: C, hasFriends: v };
+        return { query: N, selectedRow: y, selectedUsers: R, results: C, hasFriends: v, isLoading: O };
     }
 }
-let j = new H(s.h, {
+let W = new Y(s.h, {
         CONNECTION_OPEN: function () {
-            D(), (b = new Set());
+            L(), (D = new Set());
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t } = e;
             if (!S || !(0, l.G)("PrivateChannelRecipientsInviteStore")) return !1;
-            for (let e of t) for (let t of e.members) b.add(t.user.id);
+            for (let e of t) for (let t of e.members) D.add(t.user.id);
             return !1;
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
             if (!S || !(0, l.G)("PrivateChannelRecipientsInviteStore")) return !1;
-            for (let e of t.members) b.add(e.user.id);
+            for (let e of t.members) D.add(e.user.id);
             return !1;
         },
         GUILD_MEMBER_ADD: function (e) {
             let { user: t } = e;
-            return !!S && !!(0, l.G)("PrivateChannelRecipientsInviteStore") && (b.add(t.id), !1);
+            return !!S && !!(0, l.G)("PrivateChannelRecipientsInviteStore") && (D.add(t.id), !1);
         },
         GUILD_MEMBER_REMOVE: function (e) {
             let { user: t } = e;
@@ -226,51 +231,55 @@ let j = new H(s.h, {
                 !!S &&
                 !!(0, l.G)("PrivateChannelRecipientsInviteStore") &&
                 0 === m.Ay.memberOf(t.id).length &&
-                (b.delete(t.id), !1)
+                (D.delete(t.id), !1)
             );
         },
         GUILD_MEMBERS_CHUNK_BATCH: function (e) {
             let { chunks: t } = e;
             if (!S || !(0, l.G)("PrivateChannelRecipientsInviteStore")) return !1;
-            for (let e of t) for (let t of e.members) b.add(t.user.id);
-            return !1;
+            for (let e of t) for (let t of e.members) D.add(t.user.id);
+            return w(!1);
+        },
+        GUILD_MEMBERS_REQUEST: function (e) {
+            let { query: t } = e;
+            return !!S && !!(0, l.G)("PrivateChannelRecipientsInviteStore") && t === N.toLocaleLowerCase() && w(!0);
         },
         CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n } = e;
             if (null != t) return !1;
             let i = S;
-            return D(), (S = i), (R = n), w();
+            return L(), (S = i), (b = n), P();
         },
-        MODAL_PUSH: G,
-        SHOW_ACTION_SHEET: G,
+        MODAL_PUSH: V,
+        SHOW_ACTION_SHEET: V,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
             (S = !0),
                 (function () {
-                    if (((b = new Set()), !(0, l.G)("PrivateChannelRecipientsInviteStore"))) return;
+                    if (((D = new Set()), !(0, l.G)("PrivateChannelRecipientsInviteStore"))) return;
                     let e = m.Ay.getMutableAllGuildsAndMembers();
-                    for (let t in e) for (let n in e[t]) b.add(n);
+                    for (let t in e) for (let n in e[t]) D.add(n);
                 })(),
-                M(),
-                (i = k()),
-                (R = e.channelId),
-                L("");
+                x(),
+                (i = F()),
+                (b = e.channelId),
+                M("");
         },
-        MODAL_POP: F,
-        HIDE_ACTION_SHEET: F,
-        PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: V,
+        MODAL_POP: B,
+        HIDE_ACTION_SHEET: B,
+        PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: H,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function (e) {
-            (R = e.channelId), L(e.query);
+            (b = e.channelId), M(e.query);
         },
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
             y = e.row;
         },
         PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function (e) {
             let { userId: t } = e;
-            O.add(t), (O = new Set(O));
+            R.add(t), (R = new Set(R));
         },
         PRIVATE_CHANNEL_RECIPIENTS_REMOVE_USER: function (e) {
             let { userId: t } = e;
-            O.delete(t), (O = new Set(O));
+            R.delete(t), (R = new Set(R));
         },
     }),
-    Y = j;
+    K = W;

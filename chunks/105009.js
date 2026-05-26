@@ -4,8 +4,8 @@ var a = l(627968),
     i = l(931991),
     s = l(734057),
     r = l(71393),
-    c = l(576705),
-    o = l(287809),
+    o = l(576705),
+    c = l(287809),
     u = l(607814),
     d = l(696016);
 async function m(e, t) {
@@ -16,11 +16,9 @@ async function m(e, t) {
         (0, n.openModalLazy)(
             async () => {
                 let { default: n } = await Promise.all([
-                        l.e("94908"),
-                        l.e("60909"),
-                        l.e("77739"),
-                        l.e("76846"),
-                        l.e("52887"),
+                        l.e("69117"),
+                        l.e("24709"),
+                        l.e("93814"),
                         l.e("8555"),
                         l.e("66580"),
                         l.e("8979"),
@@ -30,7 +28,7 @@ async function m(e, t) {
                         l.e("12811"),
                     ]).then(l.bind(l, 191110)),
                     s = m?.guild_id != null ? r.A.getGuild(m.guild_id) : null,
-                    u = null != s && (0, i.ie)(s, c.A, o.default).canCreateExpressions,
+                    u = null != s && (0, i.ie)(s, o.A, c.default).canCreateExpressions,
                     h = null == e.name || "" === e.name ? (0, d.cM)(e.createdAt) : e.name,
                     f = h.slice(0, 32);
                 return (e) =>
