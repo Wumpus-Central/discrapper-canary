@@ -1,38 +1,38 @@
 "use strict";
-n.d(t, { A: () => j, F: () => b });
-var l = n(627968),
-    i = n(64700),
+n.d(t, { A: () => R, F: () => C });
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(435428),
-    o = n(598748),
-    c = n(17928),
-    u = n(834730),
+    o = n(127382),
+    l = n(598748),
+    u = n(17928),
+    c = n(834730),
     d = n(939249),
-    h = n(554830),
-    m = n(975460),
-    p = n(369374),
-    f = n(531913),
-    g = n(850046),
-    _ = n(619517),
-    x = n(633075),
-    C = n(841595),
-    A = n(576622),
-    E = n(985018),
-    I = n(532786);
-function v(e, t) {
-    let n = (0, c.bG)([C.A], () => C.A.getUserProfile(e));
+    _ = n(554830),
+    f = n(975460),
+    h = n(369374),
+    p = n(531913),
+    E = n(850046),
+    m = n(619517),
+    g = n(633075),
+    A = n(841595),
+    I = n(903209),
+    T = n(375708),
+    S = n(532786);
+function N(e, t) {
+    let n = (0, u.bG)([A.A], () => A.A.getUserProfile(e));
     return (
-        i.useEffect(() => {
+        r.useEffect(() => {
             let t = new AbortController();
-            return (0, A.A)(e, void 0, { abortSignal: t.signal }), () => t.abort();
+            return (0, I.A)(e, void 0, { abortSignal: t.signal }), () => t.abort();
         }, [e]),
-        i.useMemo(
+        r.useMemo(
             () => ({
                 hasWidget:
                     null != n &&
                     null != n.widgets &&
-                    n.widgets.some((e) => e instanceof x.R && e.applicationId === t?.id),
+                    n.widgets.some((e) => e instanceof g.R && e.applicationId === t?.id),
                 isLoadingProfile: null == n,
             }),
             [n, t],
@@ -40,37 +40,37 @@ function v(e, t) {
     );
 }
 function y(e) {
-    let t = (0, m.g)(e.activityApplication),
+    let t = (0, f.g)(e.activityApplication),
         n = (function (e, t) {
-            let n = (0, g.A)(
+            let n = (0, E.A)(
                     e,
-                    i.useMemo(() => (null != t ? [t.id] : []), [t]),
+                    r.useMemo(() => (null != t ? [t.id] : []), [t]),
                 ),
-                { hasWidget: l, isLoadingProfile: s } = v(e, t);
-            return null == t || null == n[t.id] || s ? null : { previewData: n[t.id], hasWidget: l };
+                { hasWidget: i, isLoadingProfile: s } = N(e, t);
+            return null == t || null == n[t.id] || s ? null : { previewData: n[t.id], hasWidget: i };
         })(e.userId, t);
-    return null == n ? null : (0, l.jsx)(b, { ...e, ...n });
+    return null == n ? null : (0, i.jsx)(C, { ...e, ...n });
 }
-function b(e) {
+function C(e) {
     let {
         previewData: { previewIcon: t, previewText: n },
-        hasWidget: i,
+        hasWidget: r,
     } = e;
-    return (0, l.jsxs)("div", {
-        className: a()(I.kL, e.className),
+    return (0, i.jsxs)("div", {
+        className: a()(S.kL, e.className),
         children: [
-            (0, l.jsx)("div", {
-                className: I.Qs,
-                children: (0, l.jsxs)(u.E, {
+            (0, i.jsx)("div", {
+                className: S.Qs,
+                children: (0, i.jsxs)(c.E, {
                     variant: "text-xs/semibold",
                     lineClamp: 1,
                     children: [
                         null != t &&
-                            (0, l.jsxs)(l.Fragment, {
+                            (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, l.jsx)("div", {
-                                        className: I.Kk,
-                                        children: (0, l.jsx)(_.Ay, {
+                                    (0, i.jsx)("div", {
+                                        className: S.Kk,
+                                        children: (0, i.jsx)(m.Ay, {
                                             src: t.proxyUrl,
                                             width: t.width,
                                             height: t.height,
@@ -84,46 +84,46 @@ function b(e) {
                     ],
                 }),
             }),
-            i &&
-                (0, l.jsx)(d.D, {
-                    "aria-label": E.intl.string(E.t["OBCR+p"]),
-                    className: I.NO,
+            r &&
+                (0, i.jsx)(d.D, {
+                    "aria-label": T.intl.string(T.t["OBCR+p"]),
+                    className: S.NO,
                     onClick: (t) => {
                         e.onClickViewMore(t);
                     },
-                    children: (0, l.jsx)(h.K, { size: "xxs" }),
+                    children: (0, i.jsx)(_.K, { size: "xxs" }),
                 }),
         ],
     });
 }
-function S(e) {
-    let t = (0, m.g)(e.activityApplication);
-    return null == t ? null : (0, l.jsx)(N, { ...e, widgetApplication: t });
+function v(e) {
+    let t = (0, f.g)(e.activityApplication);
+    return null == t ? null : (0, i.jsx)(O, { ...e, widgetApplication: t });
 }
-function N(e) {
-    let t = (0, f.A)(e.userId, e.widgetApplication.id),
-        n = t.surfaceConfigs[o.m.ACTIVITY_ACCESSORY],
-        { hasWidget: i, isLoadingProfile: s } = v(e.userId, e.widgetApplication);
-    return null == n || s
+function O(e) {
+    let t = (0, p.A)(e.userId, e.widgetApplication.id),
+        n = t.surfaceConfigs[l.m.ACTIVITY_ACCESSORY],
+        { hasWidget: r, isLoadingProfile: s } = N(e.userId, e.widgetApplication);
+    return null == n || s || !t.hasIdentity
         ? null
-        : (0, l.jsxs)("div", {
-              className: a()(I.kL, e.className),
+        : (0, i.jsxs)("div", {
+              className: a()(S.kL, e.className),
               children: [
-                  (0, l.jsx)("div", {
-                      className: I.Qs,
-                      children: (0, l.jsx)(r.kH, { ...t, surface: o.m.ACTIVITY_ACCESSORY, surfaceConfig: n }),
+                  (0, i.jsx)("div", {
+                      className: S.Qs,
+                      children: (0, i.jsx)(o.kH, { ...t, surface: l.m.ACTIVITY_ACCESSORY, surfaceConfig: n }),
                   }),
-                  i &&
-                      (0, l.jsx)(d.D, {
-                          "aria-label": E.intl.string(E.t["OBCR+p"]),
-                          className: I.NO,
+                  r &&
+                      (0, i.jsx)(d.D, {
+                          "aria-label": T.intl.string(T.t["OBCR+p"]),
+                          className: S.NO,
                           onClick: e.onClickViewMore,
-                          children: (0, l.jsx)(h.K, { size: "xxs" }),
+                          children: (0, i.jsx)(_.K, { size: "xxs" }),
                       }),
               ],
           });
 }
-function j(e) {
-    let { enabled: t } = p.A.useConfig({ location: "ActivityApplicationWidgetPreview" });
-    return t ? (0, l.jsx)(S, { ...e }) : (0, l.jsx)(y, { ...e });
+function R(e) {
+    let { enabled: t } = h.A.useConfig({ location: "ActivityApplicationWidgetPreview" });
+    return t ? (0, i.jsx)(v, { ...e }) : (0, i.jsx)(y, { ...e });
 }
