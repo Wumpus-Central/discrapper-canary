@@ -1,0 +1,455 @@
+.discordMemberCreatedAt_e6abe8 {
+    display: flex;
+    gap: 10px
+}
+
+.discordMemberCreatedAtIconContainer_e6abe8 {
+    background-color: var(--interactive-background-hover);
+    border-radius: 50%;
+    color: var(--interactive-text-active);
+    height: 24px;
+    padding: 8px;
+    width: 24px
+}
+
+.discordMemberCreatedAtIcon_e6abe8 {
+    align-self: center
+}
+
+.discordMemberCreatedAtText_e6abe8 {
+    display: flex;
+    flex-direction: column
+}
+
+.connectedAccounts_e6abe8 {
+    display: flex;
+    flex-direction: row;
+    width: 100%
+}
+
+.connectedAccountsColumn_e6abe8 {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 8px)
+}
+
+.connectedAccountsColumn_e6abe8+.connectedAccountsColumn_e6abe8 {
+    margin-inline-start: 16px
+}
+
+.connectedAccountContainer_e6abe8 {
+    border: 1px solid var(--user-profile-border);
+    border-radius: var(--radius-sm);
+    margin-top: 16px;
+    padding: 8px
+}
+
+.connectedAccountContainerWithMetadata_e6abe8 {
+    padding-bottom: 8px;
+    padding-top: 8px
+}
+
+.connectedAccount_e6abe8 {
+    align-items: center;
+    display: flex;
+    flex: 0 1;
+    gap: 8px
+}
+
+.connectedAccountChildren_e6abe8 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-inline-start: 32px;
+    overflow: hidden
+}
+
+.connectedAccountChildrenNoIcon_e6abe8 {
+    margin-inline-start: 0
+}
+
+.connectedAccountPoweredBy_e6abe8 {
+    color: var(--text-muted);
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 8px
+}
+
+.connectedAccountPoweredByText_e6abe8 {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 4px;
+    vertical-align: text-top
+}
+
+.connectedAccountIcon_e6abe8 {
+    flex-shrink: 0;
+    height: 24px;
+    width: 24px
+}
+
+.connectedAccountNameContainer_e6abe8 {
+    flex-grow: 1;
+    overflow: hidden
+}
+
+.connectedAccountNameContainerClickable_e6abe8 {
+    cursor: pointer
+}
+
+.connectedAccountName_e6abe8,
+.connectedAccountNameTextContainer_e6abe8 {
+    align-items: center;
+    display: flex;
+    overflow: hidden
+}
+
+.connectedAccountNameTextContainer_e6abe8 {
+    flex: 1
+}
+
+.connectedAccountNameText_e6abe8 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+    white-space: nowrap
+}
+
+.connectedAccountVerifiedIcon_e6abe8 {
+    margin-inline-start: 4px
+}
+
+.connectedAccountHideIcon_e6abe8 {
+    color: var(--interactive-text-default);
+    height: 14px;
+    margin: 2px;
+    width: 14px
+}
+
+.connectedAccountOpenIcon_e6abe8 {
+    color: var(--interactive-text-default);
+    display: block;
+    height: 16px;
+    transform: rotate(45deg);
+    width: 16px
+}
+
+.connectedAccountOpenIcon_e6abe8:hover {
+    color: var(--interactive-text-hover)
+}
+
+.connectedAccountOpenIcon_e6abe8:active {
+    color: var(--interactive-text-active)
+}
+
+.row__89036 {
+    align-items: center;
+    border-radius: 4px;
+    color: var(--text-default);
+    cursor: pointer;
+    display: flex;
+    font-weight: var(--font-weight-medium);
+    line-height: 30px;
+    margin-block: 1px;
+    margin-inline: 12px 0;
+    padding: 4px
+}
+
+.row__89036:hover {
+    background-color: var(--user-profile-background-hover)
+}
+
+.avatar__89036 {
+    flex-shrink: 0;
+    margin-inline-end: 10px
+}
+
+.details__89036 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden
+}
+
+.tag__89036 {
+    font-size: 16px;
+    line-height: 20px
+}
+
+.displayName__89036 {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.discriminator__89036 {
+    font-size: 12px;
+    opacity: .6
+}
+
+.scroller__28fdc {
+    gap: 12px;
+    margin-inline-start: -12px
+}
+
+.friendsLoadingItem__28fdc {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-block: 1px;
+    margin-inline: 8px 0;
+    padding: 4px
+}
+
+.friendsLoadingItem__28fdc>:first-child {
+    border-radius: var(--radius-round);
+    height: 40px;
+    margin: 0
+}
+
+.guildsLoadingItem__28fdc {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-block: 1px;
+    margin-inline: 8px 0;
+    padding: 4px
+}
+
+.guildsLoadingItem__28fdc>:first-child {
+    border-radius: var(--radius-lg);
+    height: 40px;
+    margin: 0
+}
+
+.row__0a95c {
+    align-items: center;
+    border-radius: 4px;
+    color: var(--text-default);
+    cursor: pointer;
+    display: flex;
+    font-weight: var(--font-weight-medium);
+    line-height: 30px;
+    margin-block: 1px;
+    margin-inline: 12px 0;
+    padding: 4px
+}
+
+.row__0a95c:hover {
+    background-color: var(--user-profile-background-hover)
+}
+
+.icon__0a95c,
+.noIcon__0a95c {
+    flex-shrink: 0;
+    margin-inline-end: 10px
+}
+
+.noIcon__0a95c {
+    background-color: var(--brand-500);
+    color: var(--white)
+}
+
+.details__0a95c {
+    flex: 1 1 auto;
+    min-width: 0
+}
+
+.details__0a95c,
+.name__0a95c {
+    overflow: hidden
+}
+
+.name__0a95c {
+    font-size: 16px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.avatar__0a95c {
+    flex: 0 0 auto;
+    margin-inline-end: 4px
+}
+
+.nick__0a95c {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden
+}
+
+.container_d1d9f3 {
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.tabBar_d1d9f3 {
+    border-bottom: 1px solid var(--user-profile-border);
+    display: flex;
+    gap: 32px;
+    margin-top: 16px;
+    padding: 0 16px
+}
+
+.tabBar_d1d9f3 .tabBarItem_d1d9f3 {
+    border-bottom-width: 1px
+}
+
+.tabBarItem_d1d9f3 {
+    box-sizing: border-box;
+    height: 25px
+}
+
+.root__24502 {
+    border: none;
+    border-radius: var(--radius-sm);
+    max-height: unset;
+    overflow: hidden;
+    position: relative;
+    width: unset
+}
+
+.headerInner__24502 {
+    margin-inline-end: 16px;
+    min-height: 52px;
+    position: relative
+}
+
+.headerButtons__24502,
+.headerInner__24502 {
+    display: flex;
+    justify-content: flex-end
+}
+
+.headerButtons__24502 {
+    align-items: center;
+    flex: 1;
+    gap: 8px;
+    height: var(--custom-button-button-md-height);
+    padding-top: 16px
+}
+
+.headerButtons__24502:empty {
+    visibility: hidden
+}
+
+.messageTextButton__24502 {
+    display: initial
+}
+
+.messageTextButton__24502:has(+.messageIconButton__24502+button) {
+    display: none
+}
+
+.messageIconButton__24502 {
+    display: none
+}
+
+.messageIconButton__24502:has(+button) {
+    display: initial
+}
+
+.fetchError__24502 {
+    margin: 16px 16px 0
+}
+
+.body__24502 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+    overflow: hidden
+}
+
+.userInfo__24502 {
+    margin: 16px 16px 0
+}
+
+.bannerContainer__24502 {
+    margin: 0 16px;
+    overflow: visible
+}
+
+.friendRequestBanner__24502 {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.backdrop__24502 {
+    background: var(--background-scrim);
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: var(--custom-user-profile-hoist-z-index)
+}
+
+.toast__24502 {
+    top: 24.5px;
+    z-index: var(--custom-user-profile-toast-z-index)
+}
+
+.section__1f6ca {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px
+}
+
+.header__1f6ca {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.header__1f6ca.clickable__1f6ca {
+    cursor: pointer
+}
+
+.list__1f6ca {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.list__1f6ca[hidden] {
+    display: none
+}
+
+.overlay__3b260 {
+    margin: 12px 16px
+}
+
+.divider__3b260 {
+    margin: 0 12px
+}
+
+.list__3b260 {
+    gap: 0;
+    margin-inline-start: -8px
+}
+
+.loadingMutualFriend__3b260 {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-block: 1px;
+    margin-inline: 8px 0;
+    padding: 4px
+}
+
+.loadingMutualFriend__3b260>:first-child {
+    border-radius: var(--radius-round);
+    height: 40px;
+    margin: 0
+}

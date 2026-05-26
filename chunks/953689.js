@@ -15,7 +15,7 @@ var a = s(627968),
     v = s(428262),
     x = s(652215),
     L = s(375708),
-    f = s(103930);
+    f = s(470330);
 class S extends i.Component {
     state = {
         hasAcceptedEULA: !this.props.forceShow && this.props.hasPreviouslyAcceptedEULA,
@@ -70,9 +70,11 @@ class S extends i.Component {
                                     onClick: (t) => {
                                         (0, u.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
-                                                s.e("71425"),
-                                                s.e("62098"),
-                                                s.e("87625"),
+                                                s.e("95710"),
+                                                s.e("60663"),
+                                                s.e("19401"),
+                                                s.e("57519"),
+                                                s.e("71568"),
                                                 s.e("64615"),
                                                 s.e("92064"),
                                                 s.e("87297"),

@@ -86,7 +86,7 @@ function em(e) {
         U()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, I.openModalLazy)(async () => {
                 let { default: n } = await Promise.all([
-                    i.e("42641"),
+                    i.e("74974"),
                     i.e("59957"),
                     i.e("28136"),
                     i.e("16084"),
@@ -338,7 +338,7 @@ function ex(e) {
             null != U &&
                 (0, I.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        i.e("42641"),
+                        i.e("74974"),
                         i.e("59957"),
                         i.e("28136"),
                         i.e("16084"),
@@ -526,11 +526,11 @@ var eB = i(685399),
     eZ = i(834757),
     eQ = i(566668),
     e0 = i(832163),
-    e6 = i(565688),
-    e2 = i(533562),
-    e1 = i(927813),
-    e3 = i(329554);
-let e7 = (0, i(600975).C)({
+    e1 = i(565688),
+    e6 = i(533562),
+    e7 = i(927813),
+    e2 = i(329554);
+let e3 = (0, i(600975).C)({
     kind: "guild",
     id: "2026-04_voice_user_duration",
     label: "Voice User Duration",
@@ -548,27 +548,26 @@ var e9 = i(699976),
 let e4 = (0, eJ.Fe)({
     createPromise: () =>
         Promise.all([
-            i.e("92646"),
-            i.e("61097"),
-            i.e("40523"),
-            i.e("64234"),
-            i.e("50128"),
+            i.e("95710"),
+            i.e("74974"),
+            i.e("9987"),
             i.e("29761"),
             i.e("26105"),
             i.e("46461"),
-            i.e("26705"),
-            i.e("9225"),
-            i.e("35316"),
-            i.e("30272"),
+            i.e("57519"),
+            i.e("31477"),
+            i.e("54275"),
+            i.e("6026"),
+            i.e("53153"),
+            i.e("53941"),
             i.e("45650"),
-            i.e("34186"),
-            i.e("57016"),
-            i.e("28743"),
-            i.e("34053"),
-            i.e("32264"),
-            i.e("55990"),
-            i.e("66609"),
-            i.e("42641"),
+            i.e("78737"),
+            i.e("30073"),
+            i.e("47316"),
+            i.e("11737"),
+            i.e("7066"),
+            i.e("35126"),
+            i.e("82249"),
             i.e("79705"),
             i.e("69279"),
             i.e("23924"),
@@ -678,7 +677,7 @@ let e4 = (0, eJ.Fe)({
 });
 function e8(e) {
     let { user: t, channel: i, activity: n, activityApplicationId: s, withGiftingBreadcrumb: a, onAction: r } = e,
-        c = (0, l.jsx)(e3.A, { presenceActivity: n, channel: i, userId: t.id, onAction: r });
+        c = (0, l.jsx)(e2.A, { presenceActivity: n, channel: i, userId: t.id, onAction: r });
     return a && null != s
         ? (0, l.jsxs)(l.Fragment, {
               children: [
@@ -714,7 +713,7 @@ function te(e) {
             activities: en.A.getActivities(t.id, i),
         })),
         h = (0, r.bG)([eE.A], () => eE.A.getVoiceStateForChannel(n, t.id)?.connectedAt),
-        p = null != h ? new Date(h * e1.A.Millis.SECOND).getTime() : null;
+        p = null != h ? new Date(h * e7.A.Millis.SECOND).getTime() : null;
     return (0, l.jsxs)("div", {
         className: e5.aq,
         children: [
@@ -743,7 +742,7 @@ function tt(e) {
         { channel: s, user: c, onAction: o, excludeActivity: d, onWatchStream: u } = e,
         m = n.useMemo(() => ({ [s.guild_id]: [c.id] }), [s.guild_id, c.id]);
     (0, eF.Eq)(m, "VoiceUserActivities");
-    let { enabled: A } = e7.useExperiment({ guildId: s.guild_id, location: "VoiceUserPopout" }),
+    let { enabled: A } = e3.useExperiment({ guildId: s.guild_id, location: "VoiceUserPopout" }),
         [h, p] = (0, r.yK)(
             [eS.A],
             () => [eS.A.getStreamForUser(c.id, s.getGuildId()), eS.A.getActiveStreamForUser(c.id, s.getGuildId())],
@@ -757,8 +756,8 @@ function tt(e) {
             ((t = (0, eB.Ay)(s)),
             (i = n.useMemo(() => t.filter((e) => e.embeddedActivity.userIds.has(c.id)), [t, c.id])),
             [...(0, eB.Rz)(i).values()]),
-        S = (0, e2.W)(),
-        N = (0, e6.m)({ location: "voice_channel_activities" }),
+        S = (0, e6.W)(),
+        N = (0, e1.m)({ location: "voice_channel_activities" }),
         j = (0, r.bG)([e0.A], () => e0.A.getDetectableIdsToApplicationIds()),
         T = d ?? v,
         C = (0, r.yK)([e$.A, en.A, eN.default], () => {
@@ -810,7 +809,7 @@ function tt(e) {
                 }),
             y.map((e) =>
                 (0, l.jsx)(
-                    e3.A,
+                    e2.A,
                     {
                         userId: c.id,
                         embeddedApp: e,
@@ -934,9 +933,8 @@ let ta = (0, ek.J)(function (e) {
         X = (e) => {
             (0, eP.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    i.e("92646"),
-                    i.e("34186"),
-                    i.e("26705"),
+                    i.e("53941"),
+                    i.e("9546"),
                     i.e("94881"),
                     i.e("26132"),
                     i.e("46652"),

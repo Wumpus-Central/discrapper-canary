@@ -18,20 +18,20 @@ var a = l(627968),
     j = l(331322),
     b = l(834730),
     C = l(821609),
-    y = l(292666),
-    E = l(553270),
-    N = l(452027),
+    E = l(292666),
+    N = l(553270),
+    y = l(452027),
     A = l(663341),
     k = l(405433),
     w = l(442433),
     R = l(429913),
     T = l(47167),
-    L = l(713654),
-    I = l(137177),
+    I = l(713654),
+    L = l(137177),
     O = l(145497),
     S = l(734057),
-    M = l(540999),
-    _ = l(71393),
+    _ = l(540999),
+    M = l(71393),
     D = l(287809),
     P = l(58703),
     U = l(403362),
@@ -71,16 +71,16 @@ function q(e) {
         ep = (0, R.h)(em.applicationId),
         ev = (0, i.bG)([G.A], () => G.A.isClipExporting(em.id)),
         { onShareClick: ex } = (0, H.A)(t),
-        eg = (0, i.bG)([M.A], () => M.A.isDeveloper),
+        eg = (0, i.bG)([_.A], () => _.A.isDeveloper),
         ej = (0, K.h)(em),
         eb = n.useCallback(async () => {
             await (0, B.w7)(em.id), ed(!1);
         }, [em.id, ed]),
         eC = (0, i.yK)([D.default], () => em.users.map(D.default.getUser).filter(U.Vq)),
-        ey = (0, i.bG)([_.A], () => (null != em.guildId ? _.A.getGuild(em.guildId) : null)),
-        eE = (0, i.bG)([S.A], () => (null != em.channelId ? S.A.getChannel(em.channelId) : null)),
-        eN = (0, T.Ay)(eE),
-        eA = null != eE ? (0, L.gU)(eE, ey) : null;
+        eE = (0, i.bG)([M.A], () => (null != em.guildId ? M.A.getGuild(em.guildId) : null)),
+        eN = (0, i.bG)([S.A], () => (null != em.channelId ? S.A.getChannel(em.channelId) : null)),
+        ey = (0, T.Ay)(eN),
+        eA = null != eN ? (0, I.gU)(eN, eE) : null;
     async function ek() {
         await (0, F.n)(ee(), t);
     }
@@ -116,11 +116,18 @@ function q(e) {
                                 er(),
                                     (0, w.L3)(e, async () => {
                                         let { default: e } = await Promise.all([
+                                            l.e("74974"),
+                                            l.e("6619"),
+                                            l.e("95429"),
+                                            l.e("91211"),
+                                            l.e("38601"),
                                             l.e("18489"),
                                             l.e("69006"),
+                                            l.e("18307"),
+                                            l.e("86456"),
                                             l.e("20342"),
-                                            l.e("47105"),
-                                        ]).then(l.bind(l, 325624));
+                                            l.e("24043"),
+                                        ]).then(l.bind(l, 197126));
                                         return (l) =>
                                             (0, a.jsx)(e, {
                                                 ...l,
@@ -182,7 +189,7 @@ function q(e) {
                                     ],
                                 }),
                             }),
-                        (0, a.jsx)(y.k, {
+                        (0, a.jsx)(E.k, {
                             label: J.intl.string(J.t.SJKc5n),
                             onChange: (e) => {
                                 "" === e ? ec(void 0) : ec(e);
@@ -195,12 +202,12 @@ function q(e) {
                         !ef &&
                             (0, a.jsxs)(a.Fragment, {
                                 children: [
-                                    (0, a.jsx)(E.A, { label: J.intl.string(J.t.GnQui9), checked: ea, onChange: en }),
-                                    (0, a.jsx)(E.A, { label: J.intl.string(J.t["5mVOCb"]), checked: et, onChange: el }),
-                                    (0, a.jsx)(E.A, { label: J.intl.string(J.t["8K7Ges"]), checked: ei, onChange: es }),
+                                    (0, a.jsx)(N.A, { label: J.intl.string(J.t.GnQui9), checked: ea, onChange: en }),
+                                    (0, a.jsx)(N.A, { label: J.intl.string(J.t["5mVOCb"]), checked: et, onChange: el }),
+                                    (0, a.jsx)(N.A, { label: J.intl.string(J.t["8K7Ges"]), checked: ei, onChange: es }),
                                 ],
                             }),
-                        (0, a.jsx)(N.D, {
+                        (0, a.jsx)(y.D, {
                             label: J.intl.string(J.t.g8pDeY),
                             layout: "horizontal",
                             children: (0, a.jsx)(b.E, {
@@ -209,19 +216,19 @@ function q(e) {
                                 children: (0, P.mk)(new Date(em.createdAt)),
                             }),
                         }),
-                        (0, a.jsx)(N.D, {
+                        (0, a.jsx)(y.D, {
                             label: J.intl.string(J.t.WTozwe),
                             layout: "horizontal",
                             children: (0, a.jsx)(s.A, { users: eC, maxUsers: 10 }),
                         }),
                         null != ep &&
-                            (0, a.jsx)(N.D, {
+                            (0, a.jsx)(y.D, {
                                 label: J.intl.string(X.default.PACPOV),
                                 layout: "horizontal",
                                 children: (0, a.jsxs)("div", {
                                     className: Y._c,
                                     children: [
-                                        (0, a.jsx)(I.A, { game: ep, size: I.M.XXSMALL, className: Y.Z9 }),
+                                        (0, a.jsx)(L.A, { game: ep, size: L.M.XXSMALL, className: Y.Z9 }),
                                         (0, a.jsx)(b.E, {
                                             variant: "text-sm/normal",
                                             color: "text-subtle",
@@ -231,26 +238,26 @@ function q(e) {
                                     ],
                                 }),
                             }),
-                        null != ey &&
-                            (0, a.jsx)(N.D, {
+                        null != eE &&
+                            (0, a.jsx)(y.D, {
                                 label: J.intl.string(J.t.vVKqVh),
                                 layout: "horizontal",
                                 children: (0, a.jsxs)("div", {
                                     className: Y._c,
                                     children: [
-                                        (0, a.jsx)(O.Ay, { guild: ey, iconSize: 16, className: Y.Z9 }),
+                                        (0, a.jsx)(O.Ay, { guild: eE, iconSize: 16, className: Y.Z9 }),
                                         (0, a.jsx)(b.E, {
                                             variant: "text-sm/normal",
                                             color: "text-subtle",
                                             className: Y.lR,
-                                            children: ey.name,
+                                            children: eE.name,
                                         }),
                                     ],
                                 }),
                             }),
-                        null != eE &&
+                        null != eN &&
                             null != eA &&
-                            (0, a.jsx)(N.D, {
+                            (0, a.jsx)(y.D, {
                                 label: J.intl.string(J.t.GPxI1G),
                                 layout: "horizontal",
                                 children: (0, a.jsxs)("div", {
@@ -267,7 +274,7 @@ function q(e) {
                                             variant: "text-sm/normal",
                                             color: "text-subtle",
                                             className: Y.lR,
-                                            children: eN,
+                                            children: ey,
                                         }),
                                     ],
                                 }),
@@ -275,7 +282,7 @@ function q(e) {
                         em.version >= 3 &&
                             null != em.activity &&
                             (null != em.activity.state || null != em.activity.details) &&
-                            (0, a.jsx)(N.D, {
+                            (0, a.jsx)(y.D, {
                                 label: J.intl.string(J.t.aTpwmw),
                                 layout: "horizontal",
                                 children: (0, a.jsx)(b.E, {

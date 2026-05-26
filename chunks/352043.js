@@ -545,7 +545,7 @@ let eJ = (e) => {
                 (0, d.openModalLazy)(
                     async () => {
                         let { default: i } = await Promise.all([
-                            n.e("92646"),
+                            n.e("95710"),
                             n.e("65243"),
                             n.e("25279"),
                             n.e("99910"),
@@ -3745,7 +3745,8 @@ let s2 = Object.freeze({
                 c = a.useCallback(() => {
                     (0, d.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("42641"),
+                            n.e("79146"),
+                            n.e("56402"),
                             n.e("51743"),
                             n.e("84042"),
                             n.e("65225"),

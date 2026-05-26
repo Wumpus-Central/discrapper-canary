@@ -10,6 +10,7 @@ var a,
         (a.EXPORT_TO_FILE = "export_to_file"),
         (a.DELETE = "delete"),
         (a.SHOW_IN_FOLDER = "show_in_folder"),
+        (a.OPEN_IN_INSPECTOR = "open_in_inspector"),
         a);
 let i = new Set([
     "add_to_library",
@@ -21,4 +22,5 @@ let i = new Set([
     "export_to_file",
     "delete",
     "show_in_folder",
+    "open_in_inspector",
 ]);

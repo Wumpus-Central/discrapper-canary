@@ -1,0 +1,27 @@
+.mainContainer_c38e9f {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16)
+}
+
+.pauseContainer_c38e9f {
+    align-items: flex-start;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    justify-content: space-between;
+    padding: var(--space-12)
+}
+
+.pauseContainer_c38e9f,
+.pauseText_c38e9f {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.pauseText_c38e9f {
+    flex-direction: column
+}
+
+.toggle_c38e9f {
+    flex-shrink: 0
+}

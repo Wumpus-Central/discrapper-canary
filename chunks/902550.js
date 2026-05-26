@@ -103,7 +103,7 @@ async function B(e) {
 }
 var q = a(778712),
     J = a(595535),
-    X = a(104126);
+    X = a(915710);
 function Z(e) {
     let { className: t, size: a = J.q } = e,
         n = (0, q.FT)(a);
@@ -122,7 +122,7 @@ function Z(e) {
 }
 var K = a(656925),
     W = a(339984),
-    $ = a(376071);
+    $ = a(712839);
 function Y(e) {
     let { avatar: t, index: a, onSelectRecentAvatar: r, onDeleteRecentAvatar: i, avatarButtonRef: s } = e,
         { id: o, storageHash: u, description: d = z.intl.string(z.t.lqaIxI) } = t,
@@ -188,11 +188,12 @@ function Q(e) {
                     (0, C.openModalLazy)(
                         async () => {
                             let { default: t } = await Promise.all([
-                                a.e("48424"),
-                                a.e("32637"),
-                                a.e("92060"),
-                                a.e("69117"),
-                                a.e("71425"),
+                                a.e("53941"),
+                                a.e("29761"),
+                                a.e("53153"),
+                                a.e("75430"),
+                                a.e("57519"),
+                                a.e("3031"),
                                 a.e("24199"),
                                 a.e("88941"),
                                 a.e("43437"),
@@ -200,8 +201,8 @@ function Q(e) {
                                 a.e("18401"),
                                 a.e("43039"),
                                 a.e("48804"),
-                                a.e("83057"),
-                                a.e("50997"),
+                                a.e("55314"),
+                                a.e("89094"),
                                 a.e("29177"),
                                 a.e("32551"),
                                 a.e("57840"),
@@ -212,7 +213,7 @@ function Q(e) {
                                 a.e("45723"),
                                 a.e("70697"),
                                 a.e("18546"),
-                                a.e("61216"),
+                                a.e("38835"),
                                 a.e("58164"),
                                 a.e("71470"),
                                 a.e("37490"),
@@ -253,7 +254,7 @@ function Q(e) {
                         ? B(r)
                         : (j(!0),
                           (0, C.openModalLazy)(async () => {
-                              let { default: e } = await Promise.all([a.e("60845"), a.e("48944")]).then(
+                              let { default: e } = await Promise.all([a.e("42317"), a.e("26563")]).then(
                                   a.bind(a, 555251),
                               );
                               return (t) => {
@@ -377,7 +378,7 @@ function es(e, t) {
 }
 var ec = a(2553),
     eo = a(693591),
-    eu = a(593195);
+    eu = a(294891);
 let ed = [
     { gif: a(203736), png: a(775788) },
     { gif: a(640237), png: a(689006) },
@@ -551,11 +552,12 @@ function eC(e) {
                 (0, C.openModalLazy)(
                     async () => {
                         let { default: n } = await Promise.all([
-                            a.e("48424"),
-                            a.e("32637"),
-                            a.e("92060"),
-                            a.e("69117"),
-                            a.e("71425"),
+                            a.e("53941"),
+                            a.e("29761"),
+                            a.e("53153"),
+                            a.e("75430"),
+                            a.e("57519"),
+                            a.e("3031"),
                             a.e("24199"),
                             a.e("88941"),
                             a.e("43437"),
@@ -563,8 +565,8 @@ function eC(e) {
                             a.e("18401"),
                             a.e("43039"),
                             a.e("48804"),
-                            a.e("83057"),
-                            a.e("50997"),
+                            a.e("55314"),
+                            a.e("89094"),
                             a.e("29177"),
                             a.e("32551"),
                             a.e("57840"),
@@ -575,7 +577,7 @@ function eC(e) {
                             a.e("45723"),
                             a.e("70697"),
                             a.e("18546"),
-                            a.e("61216"),
+                            a.e("38835"),
                             a.e("58164"),
                             a.e("71470"),
                             a.e("37490"),
@@ -610,20 +612,21 @@ function eC(e) {
             (0, C.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        a.e("32637"),
-                        a.e("64710"),
-                        a.e("48424"),
-                        a.e("92060"),
-                        a.e("69117"),
-                        a.e("71425"),
+                        a.e("29761"),
+                        a.e("58435"),
+                        a.e("53941"),
+                        a.e("53153"),
+                        a.e("75430"),
+                        a.e("57519"),
+                        a.e("3031"),
                         a.e("24199"),
                         a.e("88941"),
                         a.e("43437"),
                         a.e("88077"),
                         a.e("18401"),
                         a.e("43039"),
-                        a.e("83057"),
-                        a.e("50997"),
+                        a.e("55314"),
+                        a.e("89094"),
                         a.e("29177"),
                         a.e("32551"),
                         a.e("57840"),
@@ -634,7 +637,7 @@ function eC(e) {
                         a.e("45723"),
                         a.e("70697"),
                         a.e("18546"),
-                        a.e("61216"),
+                        a.e("38835"),
                         a.e("70653"),
                         a.e("31825"),
                         a.e("68647"),

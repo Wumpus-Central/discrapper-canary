@@ -1,0 +1,95 @@
+.inventory__042c9 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 400px;
+    width: 224px
+}
+
+.inventoryTitle__042c9 {
+    margin-bottom: 12px
+}
+
+.inventoryControls__042c9 {
+    display: flex;
+    gap: 12px
+}
+
+.inventoryControlsButton__042c9 {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: var(--radius-xs);
+    color: var(--text-strong);
+    cursor: pointer;
+    gap: 4px;
+    height: 80px;
+    justify-content: center;
+    width: 106px
+}
+
+.inventoryControlsButton__042c9,
+.list__042c9 {
+    display: flex;
+    flex-direction: column
+}
+
+.list__042c9 {
+    gap: 12px;
+    margin-top: 12px;
+    width: 224px
+}
+
+.nameplateItem__042c9 {
+    cursor: pointer;
+    position: relative
+}
+
+.nameplateItemOverlay__042c9 {
+    border-radius: var(--radius-sm);
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    transition: box-shadow .15s ease-out;
+    width: 100%
+}
+
+.selected__042c9 {
+    box-shadow: inset 0 0 0 2px var(--brand-500);
+    opacity: 1
+}
+
+.iconBadge__042c9 {
+    border-radius: 50%;
+    height: 20px;
+    inset-inline-end: -4px;
+    padding: 2px;
+    position: absolute;
+    top: -6px;
+    width: 20px
+}
+
+.spinner_fa25b7 {
+    align-self: center;
+    margin: 8px
+}
+
+.header_fa25b7 {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden
+}
+
+.closeButton_fa25b7 {
+    margin-inline-end: -8px;
+    padding: 0
+}
+
+.content_fa25b7 {
+    display: flex;
+    justify-content: space-between
+}
+
+.modalFooter_fa25b7 {
+    gap: var(--space-8)
+}
