@@ -200,9 +200,12 @@ class eA extends i.PureComponent {
         (0, d.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("29761"),
-                    n.e("72283"),
+                    n.e("47412"),
+                    n.e("82672"),
+                    n.e("4042"),
                     n.e("89545"),
+                    n.e("91531"),
+                    n.e("11493"),
                     n.e("84704"),
                     n.e("86197"),
                 ]).then(n.bind(n, 615715));

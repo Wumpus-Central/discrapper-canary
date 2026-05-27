@@ -1,0 +1,9 @@
+.placeholder__84ae7 {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border: 1px dashed var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    justify-content: center;
+    padding: var(--space-8) var(--space-12)
+}

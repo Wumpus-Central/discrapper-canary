@@ -1,42 +1,29 @@
-n.d(e, { A: () => f, S: () => p });
-var i = n(627968),
-    l = n(64700),
-    a = n(284009),
-    r = n.n(a),
-    s = n(189213),
-    u = n(17928),
-    c = n(139033),
-    d = n(192308),
-    o = n(821609),
-    b = n(830215),
-    h = n(287809),
-    k = n(375708);
-function p(t) {
-    return b.A.verifyResend()
+n.d(i, { S: () => o });
+var a = n(627968);
+n(64700), n(284009);
+var e = n(189213);
+n(17928);
+var l = n(139033),
+    r = n(192308),
+    s = n(830215);
+n(287809);
+var c = n(375708);
+function o(t) {
+    return s.A.verifyResend()
         .then(() => {
-            (0, c.A)({ title: k.intl.string(k.t.LykQYk), subtitle: k.intl.format(k.t.azKEPy, { email: t.email }) });
+            (0, l.A)({ title: c.intl.string(c.t.LykQYk), subtitle: c.intl.format(c.t.azKEPy, { email: t.email }) });
         })
         .catch((t) => {
-            let { body: e } = t,
-                n = k.intl.string(k.t.XcrQN5);
-            null != e && e.email && (n = e.email),
-                (0, d.openModal)((t) =>
-                    (0, i.jsx)(s.Modal, {
-                        actions: [{ variant: "primary", text: k.intl.string(k.t.BddRzS), onClick: t.onClose }],
-                        title: k.intl.string(k.t.VbTh0E),
+            let { body: i } = t,
+                n = c.intl.string(c.t.XcrQN5);
+            null != i && i.email && (n = i.email),
+                (0, r.openModal)((t) =>
+                    (0, a.jsx)(e.Modal, {
+                        actions: [{ variant: "primary", text: c.intl.string(c.t.BddRzS), onClick: t.onClose }],
+                        title: c.intl.string(c.t.VbTh0E),
                         subtitle: n,
                         ...t,
                     }),
                 );
         });
-}
-function f(t) {
-    let { size: e, variant: n } = t,
-        a = (0, u.bG)([h.default], () => h.default.getCurrentUser());
-    r()(null != a, "ResendEmailVerificationButton: currentUser cannot be undefined");
-    let [s, c] = l.useState(!1),
-        d = l.useCallback(() => {
-            c(!0), p(a).then(() => c(!1));
-        }, [a]);
-    return (0, i.jsx)(o.$, { size: e, variant: n, onClick: d, text: k.intl.string(k.t.lm1UKt), disabled: s });
 }

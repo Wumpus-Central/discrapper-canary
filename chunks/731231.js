@@ -304,7 +304,7 @@ function ew(e) {
                 }),
                 (0, f.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("5093"),
+                        n.e("19573"),
                         n.e("62691"),
                         n.e("71202"),
                         n.e("53274"),
@@ -585,12 +585,10 @@ let te = r.memo(function (e) {
                                         }),
                                         (0, f.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
-                                                n.e("74974"),
-                                                n.e("80776"),
-                                                n.e("31477"),
-                                                n.e("60909"),
-                                                n.e("53941"),
-                                                n.e("31232"),
+                                                n.e("4042"),
+                                                n.e("16415"),
+                                                n.e("47412"),
+                                                n.e("94307"),
                                                 n.e("8891"),
                                                 n.e("83952"),
                                                 n.e("66580"),
@@ -1392,12 +1390,10 @@ let tU = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 W.default.track(e_.HAw.OPEN_MODAL, { type: e_.JJy.CREATE_STICKER_MODAL, location: c }),
                                     (0, f.openModalLazy)(async () => {
                                         let { default: t } = await Promise.all([
-                                            n.e("74974"),
-                                            n.e("80776"),
-                                            n.e("31477"),
-                                            n.e("60909"),
-                                            n.e("53941"),
-                                            n.e("31232"),
+                                            n.e("4042"),
+                                            n.e("16415"),
+                                            n.e("47412"),
+                                            n.e("94307"),
                                             n.e("8891"),
                                             n.e("83952"),
                                             n.e("66580"),

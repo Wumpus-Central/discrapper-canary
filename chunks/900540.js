@@ -86,7 +86,8 @@ function em(e) {
         U()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, I.openModalLazy)(async () => {
                 let { default: n } = await Promise.all([
-                    i.e("23015"),
+                    i.e("16415"),
+                    i.e("78067"),
                     i.e("59957"),
                     i.e("28136"),
                     i.e("16084"),
@@ -338,7 +339,8 @@ function ex(e) {
             null != U &&
                 (0, I.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        i.e("23015"),
+                        i.e("16415"),
+                        i.e("78067"),
                         i.e("59957"),
                         i.e("28136"),
                         i.e("16084"),
@@ -544,29 +546,39 @@ let e3 = (0, i(600975).C)({
     ],
 });
 var e9 = i(699976),
-    e5 = i(415679);
-let e4 = (0, eJ.Fe)({
+    e4 = i(415679);
+let e8 = (0, eJ.Fe)({
     createPromise: () =>
         Promise.all([
-            i.e("95710"),
-            i.e("23015"),
-            i.e("9987"),
-            i.e("29761"),
-            i.e("26105"),
-            i.e("46461"),
-            i.e("57519"),
-            i.e("31477"),
-            i.e("54275"),
-            i.e("6026"),
-            i.e("53153"),
-            i.e("53941"),
-            i.e("45650"),
-            i.e("78737"),
-            i.e("30073"),
-            i.e("57277"),
-            i.e("14329"),
-            i.e("7066"),
-            i.e("35126"),
+            i.e("62727"),
+            i.e("34816"),
+            i.e("10545"),
+            i.e("50128"),
+            i.e("56377"),
+            i.e("77083"),
+            i.e("17214"),
+            i.e("40660"),
+            i.e("64509"),
+            i.e("96330"),
+            i.e("56159"),
+            i.e("77049"),
+            i.e("22946"),
+            i.e("21838"),
+            i.e("97189"),
+            i.e("47412"),
+            i.e("4042"),
+            i.e("4222"),
+            i.e("18090"),
+            i.e("84448"),
+            i.e("16415"),
+            i.e("89001"),
+            i.e("84001"),
+            i.e("94863"),
+            i.e("41229"),
+            i.e("53694"),
+            i.e("36407"),
+            i.e("70682"),
+            i.e("43535"),
             i.e("79705"),
             i.e("69279"),
             i.e("23924"),
@@ -601,7 +613,7 @@ let e4 = (0, eJ.Fe)({
             i.e("26073"),
             i.e("34303"),
             i.e("28866"),
-            i.e("1368"),
+            i.e("2419"),
             i.e("58038"),
             i.e("93159"),
             i.e("31716"),
@@ -639,7 +651,7 @@ let e4 = (0, eJ.Fe)({
             i.e("23276"),
             i.e("78412"),
             i.e("63213"),
-            i.e("9662"),
+            i.e("35878"),
             i.e("80239"),
             i.e("75016"),
             i.e("29354"),
@@ -674,17 +686,17 @@ let e4 = (0, eJ.Fe)({
         ]).then(i.bind(i, 963614)),
     webpackId: 963614,
 });
-function e8(e) {
+function e5(e) {
     let { user: t, channel: i, activity: n, activityApplicationId: s, withGiftingBreadcrumb: a, onAction: r } = e,
         c = (0, l.jsx)(e7.A, { presenceActivity: n, channel: i, userId: t.id, onAction: r });
     return a && null != s
         ? (0, l.jsxs)(l.Fragment, {
               children: [
                   c,
-                  (0, l.jsx)(e4, {
-                      className: e5.L,
+                  (0, l.jsx)(e8, {
+                      className: e4.L,
                       applicationId: s,
-                      rewardOfferNoticeClassName: e5.Nh,
+                      rewardOfferNoticeClassName: e4.Nh,
                       userIds: [t.id],
                       location: "voice_channel",
                       guildId: i.guild_id,
@@ -714,7 +726,7 @@ function te(e) {
         h = (0, r.bG)([eE.A], () => eE.A.getVoiceStateForChannel(n, t.id)?.connectedAt),
         p = null != h ? new Date(h * e6.A.Millis.SECOND).getTime() : null;
     return (0, l.jsxs)("div", {
-        className: e5.aq,
+        className: e4.aq,
         children: [
             (0, l.jsx)(F.eu, {
                 src: d,
@@ -723,10 +735,10 @@ function te(e) {
                 avatarDecoration: o,
                 status: (0, eK.A)(A) ? z.clD.STREAMING : u === z.clD.OFFLINE ? void 0 : u,
                 isMobile: m,
-                className: e5.my,
+                className: e4.my,
             }),
             (0, l.jsxs)("div", {
-                className: e5.Qq,
+                className: e4.Qq,
                 children: [
                     (0, l.jsx)(T.E, { variant: "text-sm/medium", lineClamp: 1, children: c }),
                     null != p && (0, l.jsx)(eX.z, { textColor: "text-feedback-positive", entry: { start: p } }),
@@ -822,7 +834,7 @@ function tt(e) {
             C.map((e) => {
                 let t = S ?? e.application_id;
                 return (0, l.jsx)(
-                    e8,
+                    e5,
                     {
                         user: c,
                         channel: s,
@@ -838,13 +850,13 @@ function tt(e) {
     });
     return A
         ? (0, l.jsxs)("div", {
-              className: a()(eo.popover, e5.Db),
+              className: a()(eo.popover, e4.Db),
               children: [
                   (0, l.jsx)(te, { user: c, guildId: s.guild_id, channelId: s.id }),
-                  _ && (0, l.jsx)(eW.Ip, { className: a()(eo.popover, e5.XG), children: P }),
+                  _ && (0, l.jsx)(eW.Ip, { className: a()(eo.popover, e4.XG), children: P }),
               ],
           })
-        : (0, l.jsx)(eW.Ip, { className: a()(eo.popover, e5.kL), children: P });
+        : (0, l.jsx)(eW.Ip, { className: a()(eo.popover, e4.kL), children: P });
 }
 var ti = i(325278),
     tl = i(976358);
@@ -932,9 +944,10 @@ let ta = (0, ek.J)(function (e) {
         X = (e) => {
             (0, eP.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    i.e("53941"),
-                    i.e("9546"),
-                    i.e("94881"),
+                    i.e("56377"),
+                    i.e("83481"),
+                    i.e("5868"),
+                    i.e("24351"),
                     i.e("26132"),
                     i.e("46652"),
                     i.e("93190"),

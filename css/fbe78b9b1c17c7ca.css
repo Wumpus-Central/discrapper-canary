@@ -1,0 +1,301 @@
+.placeholderFill__7ffbc {
+    fill: var(--background-mod-normal)
+}
+
+.container__1df30 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12)
+}
+
+.circular__1df30,
+.spinner__1df30 {
+    height: 56px
+}
+
+.circular__1df30 {
+    border-radius: var(--radius-round);
+    display: block;
+    width: 56px
+}
+
+.recentAvatarContainer__1df30 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    margin-top: var(--space-8)
+}
+
+.hasError__1df30 {
+    margin-bottom: var(--space-8)
+}
+
+.recentAvatarsHeading__1df30 {
+    margin-bottom: 0
+}
+
+.recentAvatarSlots__1df30 {
+    position: relative
+}
+
+.recentAvatarList__1df30,
+.recentAvatarSlots__1df30 {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.recentAvatarButtonContainer__1df30 {
+    position: relative
+}
+
+.recentAvatarButton__1df30 {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden
+}
+
+.recentAvatarButton__1df30:after {
+    background-color: transparent;
+    content: "";
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    transition: background-color 50ms ease-in;
+    width: 100%
+}
+
+.recentAvatarButton__1df30:hover:after {
+    background-color: var(--opacity-black-20);
+    transition: background-color .15s ease-out
+}
+
+.recentAvatar__1df30 {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.deleteButton__1df30 {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: var(--radius-round);
+    color: var(--text-feedback-critical);
+    cursor: pointer;
+    display: flex;
+    height: 28px;
+    inset-inline-end: -6px;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    top: -6px;
+    width: 28px
+}
+
+.deleteButton__1df30:after {
+    background-color: transparent;
+    border-radius: var(--radius-round);
+    content: "";
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    transition: background-color 50ms ease-in;
+    width: 100%
+}
+
+.deleteButton__1df30:hover:after {
+    background-color: var(--opacity-red-8);
+    transition: background-color .15s ease-out
+}
+
+.deleteButton__1df30:focus-visible,
+.deleteButton__1df30:hover,
+.recentAvatarButtonContainer__1df30:has(:focus-visible) .deleteButton__1df30,
+.recentAvatarButtonContainer__1df30:hover .deleteButton__1df30 {
+    opacity: 1
+}
+
+.full-motion .deleteIcon__1df30 {
+    transition: transform .15s ease-in-out
+}
+
+.full-motion .deleteButton__1df30:hover .deleteIcon__1df30 {
+    transform: scale(1.125)
+}
+
+.full-motion .deleteButton__1df30:active .deleteIcon__1df30 {
+    transform: scale(.875)
+}
+
+.emptyAvatarSlots__1df30 {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-12)
+}
+
+.avatarPlaceholder__1df30 {}
+
+.modalContent_edf440 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24)
+}
+
+.imageSelectionSection_edf440 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}
+
+.optionsList_edf440 {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: 1fr 1fr
+}
+
+.option_edf440 {
+    align-items: stretch;
+    aspect-ratio: 1;
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: var(--space-16);
+    position: relative;
+    row-gap: var(--space-12);
+    transition: background-color 50ms ease-in;
+    z-index: 1
+}
+
+.optionDescription_edf440 {
+    align-items: center;
+    display: grid;
+    justify-items: center
+}
+
+.optionDescription_edf440.hasBoostingPill_edf440 {
+    grid-template-rows: auto 1fr auto
+}
+
+.optionDescription_edf440.hasBoostingPill_edf440:before {
+    content: "";
+    display: block;
+    height: 22px
+}
+
+.optionIconAndLabel_edf440 {
+    align-items: center;
+    color: var(--interactive-text-default);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    transition: color 50ms ease-in
+}
+
+.optionLabelText_edf440 {
+    align-items: center;
+    color: currentColor;
+    -moz-column-gap: var(--space-4);
+    column-gap: var(--space-4);
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+.hasPremiumIcon_edf440 {
+    margin-inline-end: 2px
+}
+
+.gifGrid_edf440 {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    z-index: -1
+}
+
+.gifGrid_edf440:after {
+    content: "";
+    inset: 0;
+    position: absolute;
+    transition: background-color 50ms ease-in;
+    z-index: 1
+}
+
+.option_edf440:hover .optionIconAndLabel_edf440 {
+    color: var(--interactive-text-active);
+    transition: color .15s ease-out
+}
+
+.theme-dark .imageUploadOption_edf440:before {
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    transition: background-color 50ms ease-in;
+    z-index: -1
+}
+
+.theme-dark .gifGrid_edf440:after {
+    background-color: var(--opacity-black-64);
+    transition: background-color 50ms ease-in
+}
+
+.theme-dark .option_edf440:hover.imageUploadOption_edf440:before {
+    background-color: var(--opacity-black-8);
+    transition: background-color .15s ease-out
+}
+
+.theme-dark .option_edf440:hover .gifGrid_edf440:after {
+    background-color: var(--opacity-black-68);
+    transition: background-color .15s ease-out
+}
+
+.theme-light .gifGrid_edf440:after {
+    background-color: var(--opacity-white-64)
+}
+
+.theme-light .option_edf440:hover {
+    background-color: var(--interactive-background-selected)
+}
+
+.theme-light .option_edf440:hover .gifGrid_edf440:after {
+    background-color: var(--opacity-white-56)
+}
+
+.gif_edf440 {
+    background-position: 50%;
+    background-size: cover
+}
+
+.premiumWheel_edf440 {
+    margin-top: 3px
+}
+
+.boostingPill_edf440 {
+    background-color: var(--background-surface-highest);
+    border-radius: var(--radius-round);
+    color: var(--interactive-text-default);
+    padding: 4px
+}
+
+.imagePickerContainer_edf440 {
+    display: flex;
+    justify-content: center
+}
+
+.imageSpecifications_edf440 {
+    padding: 0 var(--space-4)
+}
+
+.premiumUpsell_edf440 {
+    border-radius: var(--radius-sm);
+    margin: 0
+}

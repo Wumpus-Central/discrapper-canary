@@ -1,25 +1,25 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var a = n(627968),
-    i = n(192308),
-    l = n(691540),
-    s = n(857250),
+    l = n(192308),
+    s = n(691540),
+    i = n(857250),
     o = n(97483),
-    d = n(464477),
-    r = n(917136),
-    p = n(985018);
-async function h() {
+    r = n(464477),
+    d = n(917136),
+    h = n(375708);
+async function p() {
     try {
-        let { ticket: e, challenge: t } = await r.startRegisterWebAuthnCredential();
-        (0, i.openModalLazy)(async () => {
-            let { RegisterWebAuthnCredentialModal: i } = await Promise.all([
-                n.e("90217"),
+        let { ticket: e, challenge: t } = await d.startRegisterWebAuthnCredential();
+        (0, l.openModalLazy)(async () => {
+            let { RegisterWebAuthnCredentialModal: l } = await Promise.all([
+                n.e("6022"),
                 n.e("4736"),
                 n.e("40114"),
             ]).then(n.bind(n, 328009));
-            return (n) => (0, a.jsx)(i, { ...n, ticket: e, challenge: t });
+            return (n) => (0, a.jsx)(l, { ...n, ticket: e, challenge: t });
         });
     } catch (e) {
-        e.message !== p.intl.string(p.t.N2yb9a) &&
-            ((0, d.Os)(e), (0, l.P0)((0, s.o)(p.intl.string(p.t.xSCvBf), o.Ck.FAILURE)));
+        e.message !== h.intl.string(h.t.N2yb9a) &&
+            ((0, r.Os)(e), (0, s.P0)((0, i.o)(h.intl.string(h.t.xSCvBf), o.Ck.FAILURE)));
     }
 }

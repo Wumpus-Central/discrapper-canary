@@ -1,14 +1,12 @@
 "use strict";
 n.d(t, {
     AF: () => h,
-    JQ: () => _,
-    Mn: () => m,
+    JQ: () => c,
     Ud: () => l,
-    XW: () => f,
-    YS: () => d,
-    c6: () => c,
-    fR: () => u,
-    startRegisterWebAuthnCredential: () => E,
+    YS: () => u,
+    c6: () => _,
+    fR: () => d,
+    startRegisterWebAuthnCredential: () => f,
 });
 var i = n(239947),
     r = n(636537),
@@ -25,13 +23,13 @@ async function l() {
     ).body;
     return { challenge: e, ticket: t };
 }
-async function d() {
+async function u() {
     let { challenge: e, ticket: t } = (
         await r.Bo.post({ url: o.Rsh.WEBAUTHN_PASSWORDLESS_CHALLENGE, rejectWithError: !0 })
     ).body;
     return { challenge: e, ticket: t };
 }
-function _() {
+function c() {
     r.Bo.get({ url: o.Rsh.MFA_WEBAUTHN_CREDENTIALS, rejectWithError: !0 }).then((e) => {
         if (null != e.body) {
             let t = e.body.map((e) => {
@@ -42,12 +40,12 @@ function _() {
         }
     });
 }
-async function u(e) {
+async function d(e) {
     return await r.Bo.del({ url: o.Rsh.MFA_WEBAUTHN_CREDENTIAL(e.id), rejectWithError: !0 }).then(() => {
         s.h.dispatch({ type: "AUTHENTICATOR_DELETE", credential: e });
     });
 }
-async function c(e, t) {
+async function _(e, t) {
     let n = await r.Bo.patch({ url: o.Rsh.MFA_WEBAUTHN_CREDENTIAL(e), body: { name: t }, rejectWithError: !1 });
     if (null != n.body) {
         let e = n.body,
@@ -56,7 +54,7 @@ async function c(e, t) {
         s.h.dispatch({ type: "AUTHENTICATOR_UPDATE", credential: i });
     }
 }
-async function E() {
+async function f() {
     let {
         body: { ticket: e, challenge: t },
     } = await r.Bo.post({ url: o.Rsh.MFA_WEBAUTHN_CREDENTIALS, body: {}, rejectWithError: !1 });
@@ -71,10 +69,4 @@ async function h(e, t, n) {
     });
     s.h.dispatch({ type: "AUTHENTICATOR_CREATE", credential: r.body }),
         s.h.dispatch({ type: "MFA_ENABLE_SUCCESS", codes: r.body.backup_codes });
-}
-function m() {
-    s.h.dispatch({ type: "WEBAUTHN_TRIGGER_REGISTER" });
-}
-function f() {
-    s.h.dispatch({ type: "WEBAUTHN_CLEAR_REGISTER_TRIGGER" });
 }
