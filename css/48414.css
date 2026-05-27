@@ -2995,21 +2995,13 @@
     margin-top: 24px
 }
 
-.stepBody_fa6a46 {
+.bodyColumn_fa6a46 {
     display: flex;
-    flex-direction: row;
-    gap: var(--size-32);
-    margin: 0 var(--size-16);
-    min-height: 400px
-}
-
-.bodyColumnLeft_fa6a46,
-.bodyColumnRight_fa6a46 {
-    display: flex;
-    flex: 1;
     flex-direction: column;
     gap: var(--size-16);
-    justify-content: center
+    justify-content: center;
+    margin-inline: var(--size-16);
+    min-height: 400px
 }
 
 .skuImage_fa6a46 {
@@ -6334,6 +6326,12 @@ h2.title_feb59c {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent
+}
+
+.confettiCanvas__6c43c {
+    height: 100%;
+    position: absolute;
+    width: 100%
 }
 
 .divider_a45ed3 {
