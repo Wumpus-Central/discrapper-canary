@@ -1,3 +1,56 @@
+.content__45458 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--space-16) var(--space-16);
+    width: 208px
+}
+
+.content__45458:not(:has(.body__45458)) {
+    padding-block-end: var(--space-24)
+}
+
+.graphic__45458 {
+    display: flex;
+    height: 64px;
+    justify-content: center;
+    margin: var(--space-16) auto 0
+}
+
+.graphicAnimated__45458 {
+    position: relative;
+    transform: scale(1.4);
+    z-index: 0
+}
+
+.titleGroup__45458 {
+    margin-top: var(--space-16);
+    position: relative;
+    z-index: 1
+}
+
+.title__45458 {
+    font-family: var(--font-display-marketing-header);
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    width: 100%
+}
+
+.titleNitro__45458 {
+    font-style: italic
+}
+
+.body__45458 {
+    margin: var(--space-4) 0 0;
+    text-align: center;
+    width: 100%
+}
+
 .popover__2ee1b {}
 
 .popoverGradientWrapper__2ee1b {}

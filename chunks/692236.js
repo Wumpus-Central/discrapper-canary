@@ -1,5 +1,6 @@
 e.exports = {
     kL: "container__16577",
+    hw: "voiceInviteEmbed__16577",
     rf: "body__16577",
     Qs: "content__16577",
     tE: "fullWidthContent__16577",
@@ -9,4 +10,6 @@ e.exports = {
     xk: "chin__16577",
     ys: "glow__16577",
     r$: "dots__16577",
+    qr: "footer__16577",
+    Dq: "footerIcon__16577",
 };

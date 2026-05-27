@@ -2480,57 +2480,28 @@ span.clanTag__5d473 {
     width: 34px
 }
 
-.content__45458 {
-    align-items: center;
-    box-sizing: border-box;
+.container_db1863 {
+    align-items: flex-start;
+    background: var(--background-feedback-info);
+    border: 1px solid var(--icon-feedback-info);
+    border-radius: var(--radius-sm);
     display: flex;
-    flex-direction: column;
-    padding: 0 var(--space-16) var(--space-16);
-    width: 208px
+    flex-direction: row;
+    padding: var(--space-12)
 }
 
-.content__45458:not(:has(.body__45458)) {
-    padding-block-end: var(--space-24)
+.text_db1863 {
+    flex: 1
 }
 
-.graphic__45458 {
-    display: flex;
-    height: 64px;
-    justify-content: center;
-    margin: var(--space-16) auto 0
+.closeButton_db1863 {
+    color: var(--icon-subtle);
+    cursor: pointer;
+    flex-shrink: 0
 }
 
-.graphicAnimated__45458 {
-    position: relative;
-    transform: scale(1.4);
-    z-index: 0
-}
-
-.titleGroup__45458 {
-    margin-top: var(--space-16);
-    position: relative;
-    z-index: 1
-}
-
-.title__45458 {
-    font-family: var(--font-display-marketing-header);
-    font-size: 16px;
-    font-weight: 900;
-    line-height: 16px;
-    text-align: center;
-    text-transform: uppercase;
-    word-wrap: break-word;
-    width: 100%
-}
-
-.titleNitro__45458 {
-    font-style: italic
-}
-
-.body__45458 {
-    margin: var(--space-4) 0 0;
-    text-align: center;
-    width: 100%
+.closeButton_db1863:hover {
+    color: var(--icon-default)
 }
 
 .wrapper_f7ecac {
@@ -3847,11 +3818,20 @@ span.clanTag__5d473 {
 }
 
 .container__16577 {
+    gap: 4px;
+    justify-content: flex-start
+}
+
+.container__16577,
+.voiceInviteEmbed__16577 {
+    display: flex;
+    flex-direction: column
+}
+
+.voiceInviteEmbed__16577 {
     background-color: var(--background-surface-high);
     border-radius: var(--radius-sm);
     cursor: default;
-    display: flex;
-    flex-direction: column;
     gap: var(--space-md);
     isolation: isolate;
     max-width: 432px;
@@ -3955,6 +3935,23 @@ span.clanTag__5d473 {
     -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 0, transparent 100%);
     mask-image: radial-gradient(circle at 50% 50%, #000 0, transparent 100%);
     width: 50%
+}
+
+.footer__16577 {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    gap: 2px;
+    min-width: 0;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.footerIcon__16577 {
+    height: 14px;
+    width: 14px
 }
 
 :root {
