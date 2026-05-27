@@ -663,6 +663,11 @@ screen and (max-width:485px) {
     margin-top: var(--space-24)
 }
 
+.card_a2332b.noGradient_a2332b {
+    --custom-gradient-color-start: var(--transparent);
+    --custom-gradient-color-end: var(--transparent)
+}
+
 .wordmark_a2332b {
     margin-bottom: var(--space-8);
     min-height: 25px;
@@ -762,6 +767,26 @@ screen and (max-width:485px) {
     margin: var(--space-16) 0;
     opacity: .1;
     z-index: 0
+}
+
+.annualDiscountBanner_a2332b {
+    align-items: center;
+    background: var(--background-mod-muted);
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: var(--space-12);
+    justify-content: space-between;
+    margin-top: var(--space-12);
+    padding: var(--space-12) var(--space-16);
+    position: relative;
+    z-index: 1
+}
+
+.annualDiscountBannerText_a2332b {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0
 }
 
 .firstFeatureItemContainer_a2332b {
