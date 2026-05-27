@@ -1,47 +1,48 @@
 o.r(e),
     o.d(e, {
         CheckpointNumbersCenterAlignedRive: () => w,
-        UnlockRive: () => Q.V,
-        ThemeAwareNitroWishlistingWumpusRive: () => X.u,
-        CheckpointKnickKnacksRive: () => y,
+        UnlockRive: () => J.V,
+        ThemeAwareNitroWishlistingWumpusRive: () => H.u,
+        CheckpointKnickKnacksRive: () => M,
         AnimatedNitroOrbRewardsRive: () => t.Z,
-        FistBumpRive: () => F.l,
-        PerfTestRive: () => x.Q,
-        NitroRewardsMouseRive: () => O.C,
-        BoostGemLevelTwoRive: () => s.J,
-        GameServerHostingRive: () => U.E,
+        FistBumpRive: () => U.l,
+        PerfTestRive: () => j.Q,
+        NitroRewardsMouseRive: () => G.C,
+        BoostGemLevelTwoRive: () => l.J,
+        GameServerHostingRive: () => B.E,
         CheckpointFriendsRive: () => S,
-        BoostGemLevelOneRive: () => i.t,
-        TabHoverGradientRive: () => G.U,
-        WandAndSparklesRive: () => z,
-        BoostThisServerRive: () => l.D,
-        NitroQuestOrbsMultiplierRive: () => N.E,
+        BoostGemLevelOneRive: () => a.t,
+        TabHoverGradientRive: () => K.U,
+        WandAndSparklesRive: () => $,
+        BoostThisServerRive: () => s.D,
+        NitroQuestOrbsMultiplierRive: () => E.E,
         BoostGemLevelThreeRive: () => n.z,
-        AVSurveyFacesRive: () => a.i,
+        AVSurveyFacesRive: () => i.i,
+        NitroCoinRive: () => _,
         CheckpointIntroRive: () => k,
-        DiceRive: () => B.m,
+        DiceRive: () => F.m,
         CheckpointCardRive: () => v,
-        CheckpointNumbersLeftAlignedRive: () => I,
-        PulseGradientRive: () => D.M,
-        VibingWumpusBackgroundRive: () => Z.R,
-        JetpackWumpusWithTrinketsRive: () => W.e,
+        CheckpointNumbersLeftAlignedRive: () => P,
+        PulseGradientRive: () => X.M,
+        VibingWumpusBackgroundRive: () => z.R,
+        JetpackWumpusWithTrinketsRive: () => N.e,
         GlowButtonRive: () => R.s,
-        TeenScreenTimeRive: () => T.w,
-        NitroWishlistingWumpusRive: () => j,
-        VibingWumpusRive: () => H.Z,
+        TeenScreenTimeRive: () => Q.w,
+        NitroWishlistingWumpusRive: () => T,
+        VibingWumpusRive: () => Z.Z,
     });
 var t = o(567341),
-    a = o(896572),
-    i = o(565553),
+    i = o(896572),
+    a = o(565553),
     n = o(285828),
-    s = o(168900),
-    l = o(527383),
-    c = o(627968);
+    l = o(168900),
+    s = o(527383),
+    b = o(627968);
 o(64700);
-let b =
+let c =
     "https://cdn.discordapp.com/assets/content/90100f5bba072ea8759cb5badbe01f05187ed7b573e7b6d6553775a3f78eef9d.riv";
-var d = o(502377),
-    u = o(799226);
+var d = o(594639),
+    u = o(105596);
 let m = {
     Main: {
         reducedMotion: "boolean",
@@ -226,20 +227,20 @@ let m = {
 };
 function v(r) {
     let { artboard: e = "Main", stateMachine: o, ...t } = r,
-        { status: a, buffer: i } = (0, u.CE)(b),
-        n = (0, u.m2)(b);
-    return a === u.BW.Loading
+        { status: i, buffer: a } = (0, u.CE)(c),
+        n = (0, u.m2)(c);
+    return i === u.BW.Loading
         ? null
-        : (0, c.jsx)(d.w, {
+        : (0, b.jsx)(d.w, {
               ...(n ? { key: "override" } : {}),
-              buffer: i,
+              buffer: a,
               artboard: e,
               stateMachine: o,
               artboardProperties: m,
               ...t,
           });
 }
-v.riveSrc = b;
+v.riveSrc = c;
 let g =
         "https://cdn.discordapp.com/assets/content/944cf05122af903e5091602b52fbd726c5c4956954d3628f659f21040a431c4e.riv",
     A = {
@@ -387,13 +388,13 @@ let g =
     };
 function S(r) {
     let { artboard: e = "MAIN", stateMachine: o, ...t } = r,
-        { status: a, buffer: i } = (0, u.CE)(g),
+        { status: i, buffer: a } = (0, u.CE)(g),
         n = (0, u.m2)(g);
-    return a === u.BW.Loading
+    return i === u.BW.Loading
         ? null
-        : (0, c.jsx)(d.w, {
+        : (0, b.jsx)(d.w, {
               ...(n ? { key: "override" } : {}),
-              buffer: i,
+              buffer: a,
               artboard: e,
               stateMachine: o,
               artboardProperties: A,
@@ -434,13 +435,13 @@ let f =
     };
 function k(r) {
     let { artboard: e = "Checkpoint Intro Desktop", stateMachine: o, ...t } = r,
-        { status: a, buffer: i } = (0, u.CE)(f),
+        { status: i, buffer: a } = (0, u.CE)(f),
         n = (0, u.m2)(f);
-    return a === u.BW.Loading
+    return i === u.BW.Loading
         ? null
-        : (0, c.jsx)(d.w, {
+        : (0, b.jsx)(d.w, {
               ...(n ? { key: "override" } : {}),
-              buffer: i,
+              buffer: a,
               artboard: e,
               stateMachine: o,
               artboardProperties: p,
@@ -450,7 +451,7 @@ function k(r) {
 k.riveSrc = f;
 let C =
         "https://cdn.discordapp.com/assets/content/b938a7ed497f825ee131572ca37f34e5c674b47edec8a88661d2a7d380966f1c.riv",
-    M = {
+    V = {
         Preview: { reducedMotion: "boolean", iconColor: "color" },
         Friends: { reducedMotion: "boolean", iconColor: "color" },
         Globe: { reducedMotion: "boolean", iconColor: "color" },
@@ -466,114 +467,133 @@ let C =
         Messages: { reducedMotion: "boolean", iconColor: "color" },
         Servers: { reducedMotion: "boolean", iconColor: "color" },
     };
-function y(r) {
+function M(r) {
     let { artboard: e = "Preview", stateMachine: o, ...t } = r,
-        { status: a, buffer: i } = (0, u.CE)(C),
+        { status: i, buffer: a } = (0, u.CE)(C),
         n = (0, u.m2)(C);
-    return a === u.BW.Loading
+    return i === u.BW.Loading
         ? null
-        : (0, c.jsx)(d.w, {
+        : (0, b.jsx)(d.w, {
               ...(n ? { key: "override" } : {}),
-              buffer: i,
+              buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: M,
+              artboardProperties: V,
               ...t,
           });
 }
-y.riveSrc = C;
-let V =
+M.riveSrc = C;
+let y =
         "https://cdn.discordapp.com/assets/content/ce09db302fba4b6308baf379d0cbd02ee57cbf2503a998192e31df9637cc161e.riv",
     h = {
         Artboard: { reducedMotion: "boolean", TextColor: "color", "Fire CountUp": "trigger", DisplayValue: "number" },
     };
 function w(r) {
     let { artboard: e = "Artboard", stateMachine: o, ...t } = r,
-        { status: a, buffer: i } = (0, u.CE)(V),
-        n = (0, u.m2)(V);
-    return a === u.BW.Loading
+        { status: i, buffer: a } = (0, u.CE)(y),
+        n = (0, u.m2)(y);
+    return i === u.BW.Loading
         ? null
-        : (0, c.jsx)(d.w, {
+        : (0, b.jsx)(d.w, {
               ...(n ? { key: "override" } : {}),
-              buffer: i,
+              buffer: a,
               artboard: e,
               stateMachine: o,
               artboardProperties: h,
               ...t,
           });
 }
-w.riveSrc = V;
+w.riveSrc = y;
 let L =
         "https://cdn.discordapp.com/assets/content/b5a7e4dd53b173c7d1f38ddbd65142267a79529a228987d184c858c16c21ddf6.riv",
-    P = {
+    I = {
         Artboard: { reducedMotion: "boolean", TextColor: "color", "Fire CountUp": "trigger", DisplayValue: "number" },
     };
-function I(r) {
+function P(r) {
     let { artboard: e = "Artboard", stateMachine: o, ...t } = r,
-        { status: a, buffer: i } = (0, u.CE)(L),
+        { status: i, buffer: a } = (0, u.CE)(L),
         n = (0, u.m2)(L);
-    return a === u.BW.Loading
+    return i === u.BW.Loading
         ? null
-        : (0, c.jsx)(d.w, {
+        : (0, b.jsx)(d.w, {
               ...(n ? { key: "override" } : {}),
-              buffer: i,
+              buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: P,
+              artboardProperties: I,
               ...t,
           });
 }
-I.riveSrc = L;
-var B = o(908803),
-    F = o(90517),
-    U = o(289704),
+P.riveSrc = L;
+var F = o(908803),
+    U = o(90517),
+    B = o(289704),
     R = o(145188),
-    W = o(970002),
-    N = o(122720),
-    O = o(907581);
-let E =
+    N = o(970002);
+let O =
+        "https://cdn.discordapp.com/assets/content/fac02dd925a746a61291e1f604a8affff663e9d8a22cd9b21749991ff745f1f2.riv",
+    W = { "STACKED COINS": {}, "SINGLE COIN": {} };
+function _(r) {
+    let { artboard: e = "STACKED COINS", stateMachine: o, ...t } = r,
+        { status: i, buffer: a } = (0, u.CE)(O),
+        n = (0, u.m2)(O);
+    return i === u.BW.Loading
+        ? null
+        : (0, b.jsx)(d.w, {
+              ...(n ? { key: "override" } : {}),
+              buffer: a,
+              artboard: e,
+              stateMachine: o,
+              artboardProperties: W,
+              ...t,
+          });
+}
+_.riveSrc = O;
+var E = o(122720),
+    G = o(907581);
+let x =
         "https://cdn.discordapp.com/assets/content/7d79185ce3c3038667277ee16ba8cb835b1b012f20b92ef5428b9166c5347c59.riv",
-    _ = { "Nitro Wishlist": { reducedMotion: "boolean" } };
-function j(r) {
+    D = { "Nitro Wishlist": { reducedMotion: "boolean" } };
+function T(r) {
     let { artboard: e = "Nitro Wishlist", stateMachine: o, ...t } = r,
-        { status: a, buffer: i } = (0, u.CE)(E),
-        n = (0, u.m2)(E);
-    return a === u.BW.Loading
+        { status: i, buffer: a } = (0, u.CE)(x),
+        n = (0, u.m2)(x);
+    return i === u.BW.Loading
         ? null
-        : (0, c.jsx)(d.w, {
+        : (0, b.jsx)(d.w, {
               ...(n ? { key: "override" } : {}),
-              buffer: i,
+              buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: _,
+              artboardProperties: D,
               ...t,
           });
 }
-j.riveSrc = E;
-var x = o(102079),
-    D = o(440166),
-    G = o(549254),
-    T = o(632679),
-    X = o(583094),
-    Q = o(242644),
-    H = o(773350),
-    Z = o(615429);
-let J =
+T.riveSrc = x;
+var j = o(102079),
+    X = o(440166),
+    K = o(549254),
+    Q = o(632679),
+    H = o(583094),
+    J = o(242644),
+    Z = o(773350),
+    z = o(615429);
+let q =
         "https://cdn.discordapp.com/assets/content/026e9c119f280f5edf3ba486ba20c26e21c5dac14dfedd0a238373298bf289f0.riv",
-    K = { "Surprise Me": { fill: "color" } };
-function z(r) {
+    Y = { "Surprise Me": { fill: "color" } };
+function $(r) {
     let { artboard: e = "Surprise Me", stateMachine: o, ...t } = r,
-        { status: a, buffer: i } = (0, u.CE)(J),
-        n = (0, u.m2)(J);
-    return a === u.BW.Loading
+        { status: i, buffer: a } = (0, u.CE)(q),
+        n = (0, u.m2)(q);
+    return i === u.BW.Loading
         ? null
-        : (0, c.jsx)(d.w, {
+        : (0, b.jsx)(d.w, {
               ...(n ? { key: "override" } : {}),
-              buffer: i,
+              buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: K,
+              artboardProperties: Y,
               ...t,
           });
 }
-z.riveSrc = J;
+$.riveSrc = q;
