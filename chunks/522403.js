@@ -1,6 +1,5 @@
 e.exports = {
     m7: "scrollerWrapper__8dd17",
-    $u: "scrollerMask__8dd17",
     sF: "maskLeft__8dd17",
     RC: "maskRight__8dd17",
     XG: "scroller__8dd17",

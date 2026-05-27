@@ -801,17 +801,6 @@
     position: relative
 }
 
-.scrollerMask__8dd17 {
-    --custom-scroller-mask-width-left: 0;
-    --custom-scroller-mask-width-right: 0;
-    -webkit-mask-image: linear-gradient(90deg, transparent, #fff var(--custom-scroller-mask-width-left), #fff calc(100% - var(--custom-scroller-mask-width-right)), transparent);
-    mask-image: linear-gradient(90deg, transparent, #fff var(--custom-scroller-mask-width-left), #fff calc(100% - var(--custom-scroller-mask-width-right)), transparent)
-}
-
-.full-motion .scrollerMask__8dd17 {
-    transition: --custom-scroller-mask-width-left .1s ease-out, --custom-scroller-mask-width-right .1s ease-out
-}
-
 @property --custom-scroller-mask-width-left {
     syntax: "<length>";
     inherits: false;
@@ -822,6 +811,19 @@
     syntax: "<length>";
     inherits: false;
     initial-value: 0
+}
+
+.maskLeft__8dd17,
+.maskRight__8dd17 {
+    --custom-scroller-mask-width-left: 0;
+    --custom-scroller-mask-width-right: 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #fff var(--custom-scroller-mask-width-left), #fff calc(100% - var(--custom-scroller-mask-width-right)), transparent);
+    mask-image: linear-gradient(90deg, transparent, #fff var(--custom-scroller-mask-width-left), #fff calc(100% - var(--custom-scroller-mask-width-right)), transparent)
+}
+
+.full-motion .maskLeft__8dd17,
+.full-motion .maskRight__8dd17 {
+    transition: --custom-scroller-mask-width-left .1s ease-out, --custom-scroller-mask-width-right .1s ease-out
 }
 
 .maskLeft__8dd17 {
@@ -872,6 +874,7 @@
     cursor: pointer;
     display: flex;
     height: 40px;
+    isolation: isolate;
     justify-content: center;
     opacity: 0;
     pointer-events: none;
