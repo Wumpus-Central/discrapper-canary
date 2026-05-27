@@ -3945,7 +3945,7 @@ let { Themes: c } = u.zv,
         },
     },
     { Themes: _ } = u.zv,
-    f = {
+    h = {
         ANSI_BLUE: {
             [_.DARK]: { raw: "BLUE_NEW_31", opacity: 1 },
             [_.LIGHT]: { raw: "BLUE_NEW_52", opacity: 1 },
@@ -5027,10 +5027,10 @@ let { Themes: c } = u.zv,
             [_.DARKER]: { raw: "NEUTRAL_32", opacity: 1 },
         },
     },
-    { Themes: h } = u.zv,
+    { Themes: f } = u.zv,
     p = {
         SHADOW_BORDER: {
-            [h.DARK]: {
+            [f.DARK]: {
                 boxShadow: "0 0 0 1px hsl(none 0% 100% / 0.08)",
                 filter: "drop-shadow(0 0 1px hsl(none 0% 100% / 0.08))",
                 nativeStyles: {
@@ -5042,7 +5042,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#ffffff",
                 },
             },
-            [h.LIGHT]: {
+            [f.LIGHT]: {
                 boxShadow: "0 0 0 1px hsl(none 0% 0% / 0.08)",
                 filter: "drop-shadow(0 0 1px hsl(none 0% 0% / 0.08))",
                 nativeStyles: {
@@ -5054,7 +5054,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.MIDNIGHT]: {
+            [f.MIDNIGHT]: {
                 boxShadow: "0 0 0 1px hsl(none 0% 100% / 0.08)",
                 filter: "drop-shadow(0 0 1px hsl(none 0% 100% / 0.08))",
                 nativeStyles: {
@@ -5066,7 +5066,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#ffffff",
                 },
             },
-            [h.DARKER]: {
+            [f.DARKER]: {
                 boxShadow: "0 0 0 1px hsl(none 0% 100% / 0.08)",
                 filter: "drop-shadow(0 0 1px hsl(none 0% 100% / 0.08))",
                 nativeStyles: {
@@ -5080,7 +5080,7 @@ let { Themes: c } = u.zv,
             },
         },
         SHADOW_BUTTON_OVERLAY: {
-            [h.DARK]: {
+            [f.DARK]: {
                 boxShadow: "0 12px 24px 0 hsl(none 0% 0% / 0.24)",
                 filter: "drop-shadow(0 12px 24px hsl(none 0% 0% / 0.24))",
                 nativeStyles: {
@@ -5092,7 +5092,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.LIGHT]: {
+            [f.LIGHT]: {
                 boxShadow: "0 12px 24px 0 hsl(none 0% 0% / 0.24)",
                 filter: "drop-shadow(0 12px 24px hsl(none 0% 0% / 0.24))",
                 nativeStyles: {
@@ -5104,7 +5104,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.MIDNIGHT]: {
+            [f.MIDNIGHT]: {
                 boxShadow: "0 12px 24px 0 hsl(none 0% 0% / 0.24)",
                 filter: "drop-shadow(0 12px 24px hsl(none 0% 0% / 0.24))",
                 nativeStyles: {
@@ -5116,7 +5116,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.DARKER]: {
+            [f.DARKER]: {
                 boxShadow: "0 12px 24px 0 hsl(none 0% 0% / 0.24)",
                 filter: "drop-shadow(0 12px 24px hsl(none 0% 0% / 0.24))",
                 nativeStyles: {
@@ -5130,7 +5130,7 @@ let { Themes: c } = u.zv,
             },
         },
         SHADOW_HIGH: {
-            [h.DARK]: {
+            [f.DARK]: {
                 boxShadow: "0 12px 24px 0 hsl(none 0% 0% / 0.24)",
                 filter: "drop-shadow(0 12px 24px hsl(none 0% 0% / 0.24))",
                 nativeStyles: {
@@ -5142,7 +5142,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.LIGHT]: {
+            [f.LIGHT]: {
                 boxShadow: "0 12px 36px 0 hsl(none 0% 0% / 0.12)",
                 filter: "drop-shadow(0 12px 36px hsl(none 0% 0% / 0.12))",
                 nativeStyles: {
@@ -5154,7 +5154,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#a5abb3",
                 },
             },
-            [h.MIDNIGHT]: {
+            [f.MIDNIGHT]: {
                 boxShadow: "0 12px 24px 0 hsl(none 0% 0% / 0.24)",
                 filter: "drop-shadow(0 12px 24px hsl(none 0% 0% / 0.24))",
                 nativeStyles: {
@@ -5166,7 +5166,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.DARKER]: {
+            [f.DARKER]: {
                 boxShadow: "0 12px 24px 0 hsl(none 0% 0% / 0.24)",
                 filter: "drop-shadow(0 12px 24px hsl(none 0% 0% / 0.24))",
                 nativeStyles: {
@@ -5180,7 +5180,7 @@ let { Themes: c } = u.zv,
             },
         },
         SHADOW_LEDGE: {
-            [h.DARK]: {
+            [f.DARK]: {
                 boxShadow:
                     "0 2px 0 0 hsl(none 0% 0% / 0.05), 0 1.5px 0 0 hsl(none 0% 0% / 0.05), 0 1px 0 0 hsl(none 0% 0% / 0.16)",
                 filter: "drop-shadow(0 1.5px 0 hsl(none 0% 0% / 0.24))",
@@ -5193,7 +5193,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.LIGHT]: {
+            [f.LIGHT]: {
                 boxShadow:
                     "0 2px 0 0 hsl(none 0% 0% / 0.03), 0 1.5px 0 0 hsl(none 0% 0% / 0.03), 0 1px 0 0 hsl(none 0% 0% / 0.08)",
                 filter: "drop-shadow(0 1.5px 0 hsl(none 0% 0% / 0.12))",
@@ -5206,7 +5206,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#a5abb3",
                 },
             },
-            [h.MIDNIGHT]: {
+            [f.MIDNIGHT]: {
                 boxShadow:
                     "0 2px 0 0 hsl(none 0% 0% / 0.05), 0 1.5px 0 0 hsl(none 0% 0% / 0.05), 0 1px 0 0 hsl(none 0% 0% / 0.16)",
                 filter: "drop-shadow(0 1.5px 0 hsl(none 0% 0% / 0.24))",
@@ -5219,7 +5219,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.DARKER]: {
+            [f.DARKER]: {
                 boxShadow:
                     "0 2px 0 0 hsl(none 0% 0% / 0.05), 0 1.5px 0 0 hsl(none 0% 0% / 0.05), 0 1px 0 0 hsl(none 0% 0% / 0.16)",
                 filter: "drop-shadow(0 1.5px 0 hsl(none 0% 0% / 0.24))",
@@ -5234,7 +5234,7 @@ let { Themes: c } = u.zv,
             },
         },
         SHADOW_LOW: {
-            [h.DARK]: {
+            [f.DARK]: {
                 boxShadow: "0 1px 4px 0 hsl(none 0% 0% / 0.14)",
                 filter: "drop-shadow(0 1px 4px hsl(none 0% 0% / 0.14))",
                 nativeStyles: {
@@ -5246,7 +5246,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.LIGHT]: {
+            [f.LIGHT]: {
                 boxShadow: "0 1px 4px 0 hsl(none 0% 0% / 0.08)",
                 filter: "drop-shadow(0 1px 4px hsl(none 0% 0% / 0.08))",
                 nativeStyles: {
@@ -5258,7 +5258,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#a5abb3",
                 },
             },
-            [h.MIDNIGHT]: {
+            [f.MIDNIGHT]: {
                 boxShadow: "0 1px 4px 0 hsl(none 0% 0% / 0.14)",
                 filter: "drop-shadow(0 1px 4px hsl(none 0% 0% / 0.14))",
                 nativeStyles: {
@@ -5270,7 +5270,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.DARKER]: {
+            [f.DARKER]: {
                 boxShadow: "0 1px 4px 0 hsl(none 0% 0% / 0.14)",
                 filter: "drop-shadow(0 1px 4px hsl(none 0% 0% / 0.14))",
                 nativeStyles: {
@@ -5284,7 +5284,7 @@ let { Themes: c } = u.zv,
             },
         },
         SHADOW_LOW_ACTIVE: {
-            [h.DARK]: {
+            [f.DARK]: {
                 boxShadow: "0 0 4px 0 hsl(none 0% 0% / 0.14)",
                 filter: "drop-shadow(0 0 4px hsl(none 0% 0% / 0.14))",
                 nativeStyles: {
@@ -5296,7 +5296,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.LIGHT]: {
+            [f.LIGHT]: {
                 boxShadow: "0 0 4px 0 hsl(none 0% 0% / 0.08)",
                 filter: "drop-shadow(0 0 4px hsl(none 0% 0% / 0.08))",
                 nativeStyles: {
@@ -5308,7 +5308,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#a5abb3",
                 },
             },
-            [h.MIDNIGHT]: {
+            [f.MIDNIGHT]: {
                 boxShadow: "0 0 4px 0 hsl(none 0% 0% / 0.14)",
                 filter: "drop-shadow(0 0 4px hsl(none 0% 0% / 0.14))",
                 nativeStyles: {
@@ -5320,7 +5320,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.DARKER]: {
+            [f.DARKER]: {
                 boxShadow: "0 0 4px 0 hsl(none 0% 0% / 0.14)",
                 filter: "drop-shadow(0 0 4px hsl(none 0% 0% / 0.14))",
                 nativeStyles: {
@@ -5334,7 +5334,7 @@ let { Themes: c } = u.zv,
             },
         },
         SHADOW_LOW_HOVER: {
-            [h.DARK]: {
+            [f.DARK]: {
                 boxShadow: "0 4px 10px 0 hsl(none 0% 0% / 0.14)",
                 filter: "drop-shadow(0 4px 10px hsl(none 0% 0% / 0.14))",
                 nativeStyles: {
@@ -5346,7 +5346,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.LIGHT]: {
+            [f.LIGHT]: {
                 boxShadow: "0 4px 8px 0 hsl(none 0% 0% / 0.08)",
                 filter: "drop-shadow(0 4px 8px hsl(none 0% 0% / 0.08))",
                 nativeStyles: {
@@ -5358,7 +5358,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#a5abb3",
                 },
             },
-            [h.MIDNIGHT]: {
+            [f.MIDNIGHT]: {
                 boxShadow: "0 4px 10px 0 hsl(none 0% 0% / 0.14)",
                 filter: "drop-shadow(0 4px 10px hsl(none 0% 0% / 0.14))",
                 nativeStyles: {
@@ -5370,7 +5370,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.DARKER]: {
+            [f.DARKER]: {
                 boxShadow: "0 4px 10px 0 hsl(none 0% 0% / 0.14)",
                 filter: "drop-shadow(0 4px 10px hsl(none 0% 0% / 0.14))",
                 nativeStyles: {
@@ -5384,7 +5384,7 @@ let { Themes: c } = u.zv,
             },
         },
         SHADOW_MEDIUM: {
-            [h.DARK]: {
+            [f.DARK]: {
                 boxShadow: "0 4px 8px 0 hsl(none 0% 0% / 0.16)",
                 filter: "drop-shadow(0 4px 8px hsl(none 0% 0% / 0.16))",
                 nativeStyles: {
@@ -5396,7 +5396,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.LIGHT]: {
+            [f.LIGHT]: {
                 boxShadow: "0 4px 8px 0 hsl(none 0% 0% / 0.08)",
                 filter: "drop-shadow(0 4px 8px hsl(none 0% 0% / 0.08))",
                 nativeStyles: {
@@ -5408,7 +5408,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#a5abb3",
                 },
             },
-            [h.MIDNIGHT]: {
+            [f.MIDNIGHT]: {
                 boxShadow: "0 4px 8px 0 hsl(none 0% 0% / 0.16)",
                 filter: "drop-shadow(0 4px 8px hsl(none 0% 0% / 0.16))",
                 nativeStyles: {
@@ -5420,7 +5420,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.DARKER]: {
+            [f.DARKER]: {
                 boxShadow: "0 4px 8px 0 hsl(none 0% 0% / 0.16)",
                 filter: "drop-shadow(0 4px 8px hsl(none 0% 0% / 0.16))",
                 nativeStyles: {
@@ -5434,7 +5434,7 @@ let { Themes: c } = u.zv,
             },
         },
         SHADOW_MOBILE_CHATINPUT: {
-            [h.DARK]: {
+            [f.DARK]: {
                 boxShadow: "0 -1px 4px 0 hsl(240 7.1% 11% / 0.5)",
                 filter: "drop-shadow(0 -1px 4px hsl(240 7.1% 11% / 0.5))",
                 nativeStyles: {
@@ -5446,7 +5446,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#1a1a1e",
                 },
             },
-            [h.LIGHT]: {
+            [f.LIGHT]: {
                 boxShadow: "0 -1px 4px 0 hsl(240 7.1% 11% / 0.5)",
                 filter: "drop-shadow(0 -1px 4px hsl(240 7.1% 11% / 0.5))",
                 nativeStyles: {
@@ -5458,7 +5458,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#1a1a1e",
                 },
             },
-            [h.MIDNIGHT]: {
+            [f.MIDNIGHT]: {
                 boxShadow: "0 -1px 4px 0 hsl(240 7.1% 11% / 0.5)",
                 filter: "drop-shadow(0 -1px 4px hsl(240 7.1% 11% / 0.5))",
                 nativeStyles: {
@@ -5470,7 +5470,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#1a1a1e",
                 },
             },
-            [h.DARKER]: {
+            [f.DARKER]: {
                 boxShadow: "0 -1px 4px 0 hsl(240 7.1% 11% / 0.5)",
                 filter: "drop-shadow(0 -1px 4px hsl(240 7.1% 11% / 0.5))",
                 nativeStyles: {
@@ -5484,7 +5484,7 @@ let { Themes: c } = u.zv,
             },
         },
         SHADOW_MOBILE_NAVIGATOR_X: {
-            [h.DARK]: {
+            [f.DARK]: {
                 boxShadow: "0 0 10px 0 hsl(none 0% 0% / 0.22)",
                 filter: "drop-shadow(0 0 10px hsl(none 0% 0% / 0.22))",
                 nativeStyles: {
@@ -5496,7 +5496,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.LIGHT]: {
+            [f.LIGHT]: {
                 boxShadow: "0 0 9px 0 hsl(none 0% 0% / 0.13)",
                 filter: "drop-shadow(0 0 9px hsl(none 0% 0% / 0.13))",
                 nativeStyles: {
@@ -5508,7 +5508,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.MIDNIGHT]: {
+            [f.MIDNIGHT]: {
                 boxShadow: "0 0 10px 0 hsl(none 0% 0% / 0.22)",
                 filter: "drop-shadow(0 0 10px hsl(none 0% 0% / 0.22))",
                 nativeStyles: {
@@ -5520,7 +5520,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.DARKER]: {
+            [f.DARKER]: {
                 boxShadow: "0 0 10px 0 hsl(none 0% 0% / 0.22)",
                 filter: "drop-shadow(0 0 10px hsl(none 0% 0% / 0.22))",
                 nativeStyles: {
@@ -5534,7 +5534,7 @@ let { Themes: c } = u.zv,
             },
         },
         SHADOW_TOP_HIGH: {
-            [h.DARK]: {
+            [f.DARK]: {
                 boxShadow: "0 -12px 32px 0 hsl(none 0% 0% / 0.24)",
                 filter: "drop-shadow(0 -12px 32px hsl(none 0% 0% / 0.24))",
                 nativeStyles: {
@@ -5546,7 +5546,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.LIGHT]: {
+            [f.LIGHT]: {
                 boxShadow: "0 -12px 36px 0 hsl(none 0% 0% / 0.12)",
                 filter: "drop-shadow(0 -12px 36px hsl(none 0% 0% / 0.12))",
                 nativeStyles: {
@@ -5558,7 +5558,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#a5abb3",
                 },
             },
-            [h.MIDNIGHT]: {
+            [f.MIDNIGHT]: {
                 boxShadow: "0 -12px 32px 0 hsl(none 0% 0% / 0.24)",
                 filter: "drop-shadow(0 -12px 32px hsl(none 0% 0% / 0.24))",
                 nativeStyles: {
@@ -5570,7 +5570,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.DARKER]: {
+            [f.DARKER]: {
                 boxShadow: "0 -12px 32px 0 hsl(none 0% 0% / 0.24)",
                 filter: "drop-shadow(0 -12px 32px hsl(none 0% 0% / 0.24))",
                 nativeStyles: {
@@ -5584,7 +5584,7 @@ let { Themes: c } = u.zv,
             },
         },
         SHADOW_TOP_LEDGE: {
-            [h.DARK]: {
+            [f.DARK]: {
                 boxShadow:
                     "0 -2px 0 0 hsl(none 0% 0% / 0.05), 0 -1.5px 0 0 hsl(none 0% 0% / 0.05), 0 -1px 0 0 hsl(none 0% 0% / 0.16)",
                 filter: "drop-shadow(0 -1.5px 0 hsl(none 0% 0% / 0.24))",
@@ -5597,7 +5597,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.LIGHT]: {
+            [f.LIGHT]: {
                 boxShadow:
                     "0 -2px 0 0 hsl(none 0% 0% / 0.03), 0 -1.5px 0 0 hsl(none 0% 0% / 0.03), 0 -1px 0 0 hsl(none 0% 0% / 0.08)",
                 filter: "drop-shadow(0 -1.5px 0 hsl(none 0% 0% / 0.12))",
@@ -5610,7 +5610,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#a5abb3",
                 },
             },
-            [h.MIDNIGHT]: {
+            [f.MIDNIGHT]: {
                 boxShadow:
                     "0 -2px 0 0 hsl(none 0% 0% / 0.05), 0 -1.5px 0 0 hsl(none 0% 0% / 0.05), 0 -1px 0 0 hsl(none 0% 0% / 0.16)",
                 filter: "drop-shadow(0 -1.5px 0 hsl(none 0% 0% / 0.24))",
@@ -5623,7 +5623,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.DARKER]: {
+            [f.DARKER]: {
                 boxShadow:
                     "0 -2px 0 0 hsl(none 0% 0% / 0.05), 0 -1.5px 0 0 hsl(none 0% 0% / 0.05), 0 -1px 0 0 hsl(none 0% 0% / 0.16)",
                 filter: "drop-shadow(0 -1.5px 0 hsl(none 0% 0% / 0.24))",
@@ -5638,7 +5638,7 @@ let { Themes: c } = u.zv,
             },
         },
         SHADOW_TOP_LOW: {
-            [h.DARK]: {
+            [f.DARK]: {
                 boxShadow: "0 -1px 4px 0 hsl(none 0% 0% / 0.14)",
                 filter: "drop-shadow(0 -1px 4px hsl(none 0% 0% / 0.14))",
                 nativeStyles: {
@@ -5650,7 +5650,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.LIGHT]: {
+            [f.LIGHT]: {
                 boxShadow: "0 -1px 4px 0 hsl(none 0% 0% / 0.08)",
                 filter: "drop-shadow(0 -1px 4px hsl(none 0% 0% / 0.08))",
                 nativeStyles: {
@@ -5662,7 +5662,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#a5abb3",
                 },
             },
-            [h.MIDNIGHT]: {
+            [f.MIDNIGHT]: {
                 boxShadow: "0 -1px 4px 0 hsl(none 0% 0% / 0.14)",
                 filter: "drop-shadow(0 -1px 4px hsl(none 0% 0% / 0.14))",
                 nativeStyles: {
@@ -5674,7 +5674,7 @@ let { Themes: c } = u.zv,
                     shadowColorAndroid: "#000000",
                 },
             },
-            [h.DARKER]: {
+            [f.DARKER]: {
                 boxShadow: "0 -1px 4px 0 hsl(none 0% 0% / 0.14)",
                 filter: "drop-shadow(0 -1px 4px hsl(none 0% 0% / 0.14))",
                 nativeStyles: {
@@ -7398,7 +7398,7 @@ let { Themes: c } = u.zv,
         },
     },
     { SemanticColorExperiments: A } = { SemanticColorExperiments: {} },
-    { SemanticColorHighContrast: I } = { SemanticColorHighContrast: f },
+    { SemanticColorHighContrast: I } = { SemanticColorHighContrast: h },
     { Shadows: T } = { Shadows: p },
     { Spacing: S } = {
         Spacing: {
@@ -7417,7 +7417,7 @@ let { Themes: c } = u.zv,
             PX_96: 96,
         },
     },
-    { Modules: N } = {
+    { Modules: y } = {
         Modules: {
             button: {
                 BORDER_RADIUS: {
@@ -7660,6 +7660,14 @@ let { Themes: c } = u.zv,
                         return 24;
                     },
                 },
+                CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 0;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 1;
+                        return 0;
+                    },
+                },
                 CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
@@ -7706,6 +7714,46 @@ let { Themes: c } = u.zv,
                         if (0 === t.length) return 6;
                         for (let e of t) if ("mobile-visual-refresh" === e) return 10;
                         return 6;
+                    },
+                },
+                CHAT_INPUT_FLOATING_ACCESSORY_BORDER_WIDTH: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 0;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 1;
+                        return 0;
+                    },
+                },
+                CHAT_INPUT_FLOATING_ACCESSORY_MARGIN_BOTTOM: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 0;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 8;
+                        return 0;
+                    },
+                },
+                CHAT_INPUT_FLOATING_ACCESSORY_MARGIN_HORIZONTAL: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 0;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 16;
+                        return 0;
+                    },
+                },
+                CHAT_INPUT_FLOATING_ACCESSORY_TOP_BORDER_WIDTH: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 1;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 0;
+                        return 1;
+                    },
+                },
+                CHAT_INPUT_FLOATING_BORDER_RADIUS: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 0;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 16;
+                        return 0;
                     },
                 },
                 CHAT_INPUT_FLOATING_CONTENT_GAP: {
@@ -8508,7 +8556,7 @@ let { Themes: c } = u.zv,
             select: { MAX_WIDTH: { resolve: () => 248 }, OPTION_HEIGHT: { resolve: () => 40 } },
         },
     },
-    { Layout: y, Space: C } = {
+    { Layout: N, Space: v } = {
         Layout: {
             SPACE_0: 0,
             SPACE_4: 4,
@@ -8688,10 +8736,10 @@ let { Themes: c } = u.zv,
             },
         },
     },
-    v = l()(g, (e) => r()(e)),
-    O = {
+    C = l()(g, (e) => r()(e)),
+    R = {
         themes: E,
-        modules: N,
+        modules: y,
         colors: l()(m, (e, t) => ({
             css: L(t),
             resolve(n) {
@@ -8707,16 +8755,16 @@ let { Themes: c } = u.zv,
                     let e = I[t]?.[n.theme];
                     null != e && ((r = e.raw ?? r), (s = e.opacity ?? s));
                 }
-                if (1 === s) return O.unsafe_rawColors[r].resolve(n);
+                if (1 === s) return R.unsafe_rawColors[r].resolve(n);
                 {
-                    let e = v[r];
-                    return 0 !== e.alpha() && 1 !== s && (e = e.alpha(s)), R(e, n.saturation);
+                    let e = C[r];
+                    return 0 !== e.alpha() && 1 !== s && (e = e.alpha(s)), O(e, n.saturation);
                 }
             },
         })),
         unsafe_rawColors: l()(g, (e, t) => {
-            let n = v[t];
-            return { css: L(t), resolve: (e) => R(n, e?.saturation ?? 1) };
+            let n = C[t];
+            return { css: L(t), resolve: (e) => O(n, e?.saturation ?? 1) };
         }),
         shadows: l()(T, (e, t) => ({
             css: L(t),
@@ -8728,8 +8776,8 @@ let { Themes: c } = u.zv,
         })),
         radii: { none: 0, xs: 4, sm: 8, md: 12, lg: 16, xl: 24, xxl: 32, round: 0x7fffffff },
         spacing: l()(S, (e) => `${e}px`),
-        layout: l()(y, (e) => ("number" == typeof e ? `${e}px` : e)),
-        space: l()(C, (e) => ({
+        layout: l()(N, (e) => ("number" == typeof e ? `${e}px` : e)),
+        space: l()(v, (e) => ({
             css: e.css,
             resolve(t) {
                 let { density: n } = t;
@@ -8737,7 +8785,7 @@ let { Themes: c } = u.zv,
             },
         })),
     };
-function R(e, t) {
+function O(e, t) {
     return {
         spring() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -8776,4 +8824,4 @@ function L(e, t) {
         i = D(e);
     return `var(--${[n, i].filter(Boolean).join("-")})`;
 }
-let w = O;
+let w = R;
