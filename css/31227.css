@@ -104,8 +104,15 @@
 
 .iconMetaQuest_b68a35 {
     margin-inline-end: 4px;
-    -webkit-mask-image: url(/assets/de5e17f06fbd2235.svg);
-    mask-image: url(/assets/de5e17f06fbd2235.svg)
+    -webkit-mask-image: url(/assets/ac961aa8d4bb48a5.svg);
+    mask-image: url(/assets/ac961aa8d4bb48a5.svg);
+    mask-mode: alpha;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain
 }
 
 .iconUSFlag_b68a35 {
