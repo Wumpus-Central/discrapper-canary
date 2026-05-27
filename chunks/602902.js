@@ -11,8 +11,8 @@ var r = n(192308),
     c = n(174459),
     d = n(518960),
     _ = n(372684),
-    f = n(439818),
-    h = n(607814),
+    f = n(607814),
+    h = n(589553),
     p = n(696016),
     E = n(652215);
 async function m(e, t) {
@@ -27,24 +27,19 @@ async function m(e, t) {
             let t = [],
                 n = [];
             for (let i of e) {
-                let e = await (0, h.VO)(i),
-                    r = i.name ?? (0, p.cM)(i.createdAt),
-                    s = (0, f.A)(r);
-                if (i.type === _.nQ.CLIP || i.type === _.nQ.VOICE_CLIP) {
-                    let r = `${"" !== s ? s : "clip"}.mp4`;
-                    t.push(new File([e], r, { type: "video/mp4" })), n.push({ clip: i });
-                } else if (i.type === _.nQ.SCREENSHOT) {
-                    let i = `${"" !== s ? s : "screenshot"}.jpeg`;
-                    t.push(new File([e], i, { type: "image/jpeg" })), n.push({});
-                }
-                c.default.track(E.HAw.CLIP_SHARED, {
-                    location_stack: g,
-                    guild_id: I.guild_id,
-                    channel_id: I.id,
-                    channel_type: I.type,
-                    application_id: i.applicationId,
-                    clip_uuid: i.id,
-                });
+                let e = await (0, f.VO)(i),
+                    r = (0, h.A)(i, i.type === _.nQ.SCREENSHOT ? "jpeg" : "mp4");
+                i.type === _.nQ.CLIP || i.type === _.nQ.VOICE_CLIP
+                    ? (t.push(new File([e], r, { type: "video/mp4" })), n.push({ clip: i }))
+                    : i.type === _.nQ.SCREENSHOT && (t.push(new File([e], r, { type: "image/jpeg" })), n.push({})),
+                    c.default.track(E.HAw.CLIP_SHARED, {
+                        location_stack: g,
+                        guild_id: I.guild_id,
+                        channel_id: I.id,
+                        channel_type: I.type,
+                        application_id: i.applicationId,
+                        clip_uuid: i.id,
+                    });
             }
             (0, d.R)(t, I, l.C.ChannelMessage, { filesMetadata: n, origin: "unknown:clip_share" }), r.closeAllModals();
         } catch (e) {

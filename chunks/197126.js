@@ -1,4 +1,4 @@
-e.d(i, { default: () => U });
+e.d(i, { default: () => V });
 var t = e(627968);
 e(64700);
 var l = e(980707),
@@ -9,8 +9,8 @@ var l = e(980707),
     s = e(607814),
     d = e(375708),
     u = e(691540),
-    f = e(857250),
-    p = e(97483),
+    p = e(857250),
+    f = e(97483),
     y = e(624479),
     g = e(77729),
     h = e(16590),
@@ -19,43 +19,42 @@ var l = e(980707),
     _ = e(549685),
     x = e(32880),
     D = e(983069),
-    E = e(741394),
-    C = e(372684),
-    O = e(439818),
+    E = e(372684),
+    C = e(589553),
     j = e(696016),
-    w = e(264572).Buffer,
+    O = e(264572).Buffer,
     m = e(17928),
-    I = e(7807),
-    R = e(931991),
-    Z = e(71393),
-    T = e(576705),
-    v = e(711014),
-    H = e(287809),
-    S = e(105009),
-    F = e(505930),
-    P = e(807072),
-    N = e(192308),
-    k = e(346411),
+    w = e(7807),
+    I = e(931991),
+    R = e(71393),
+    Z = e(576705),
+    T = e(711014),
+    v = e(287809),
+    H = e(105009),
+    S = e(505930),
+    F = e(807072),
+    P = e(192308),
+    N = e(346411),
     B = e(540999),
     G = e(781710),
     X = e(405433),
-    L = e(688810),
-    W = e(274372),
-    M = e(74847),
-    K = e(602902),
-    V = e(678708);
-function U(n) {
+    k = e(688810),
+    L = e(274372),
+    W = e(74847),
+    M = e(602902),
+    K = e(678708);
+function V(n) {
     let {
             clips: i,
             channelId: e,
-            onShare: U,
-            onEdit: Y,
-            onBeforeDelete: Q,
-            onAfterDelete: q,
-            actionsDisabled: J = !1,
-            displayConfiguration: z = a.I,
+            onShare: V,
+            onEdit: U,
+            onBeforeDelete: Y,
+            onAfterDelete: Q,
+            actionsDisabled: q = !1,
+            displayConfiguration: J = a.I,
         } = n,
-        $ = (function (n) {
+        z = (function (n) {
             let { clips: i, actionsDisabled: e = !1 } = n;
             return i.some((n) => !0 === n.isTemporary)
                 ? (0, t.jsx)(r.Dr, {
@@ -68,17 +67,17 @@ function U(n) {
                       },
                   })
                 : null;
-        })({ clips: i, actionsDisabled: J }),
-        nn = (function (n) {
+        })({ clips: i, actionsDisabled: q }),
+        $ = (function (n) {
             let { clips: i, channelId: e, onShare: l, actionsDisabled: a = !1 } = n,
-                { analyticsLocations: c } = (0, L.Ay)(),
-                u = (0, m.bG)([W.A], () => i.some((n) => W.A.isClipExporting(n.id)));
-            async function f() {
+                { analyticsLocations: c } = (0, k.Ay)(),
+                u = (0, m.bG)([L.A], () => i.some((n) => L.A.isClipExporting(n.id)));
+            async function p() {
                 (0, o.Z_)();
-                let n = (0, M.t)(e);
+                let n = (0, W.t)(e);
                 (0, s.H1)(i.map((n) => n.id));
                 try {
-                    await (0, K.K)(i, { channelId: n ? e : void 0, analyticsLocations: c });
+                    await (0, M.K)(i, { channelId: n ? e : void 0, analyticsLocations: c });
                 } catch (n) {
                 } finally {
                     (0, s.H1)(null);
@@ -90,10 +89,10 @@ function U(n) {
                 label: d.intl.string(d.t.RDE0Sc),
                 leadingAccessory: { type: "icon", icon: X.l },
                 disabled: a && !u,
-                action: f,
+                action: p,
             });
-        })({ clips: i, channelId: e, onShare: U, actionsDisabled: J }),
-        ni = (function (n) {
+        })({ clips: i, channelId: e, onShare: V, actionsDisabled: q }),
+        nn = (function (n) {
             let { clips: i, onEdit: e, actionsDisabled: l = !1 } = n;
             return i.length > 1
                 ? null
@@ -106,42 +105,42 @@ function U(n) {
                           (0, o.Z_)(), e?.();
                       },
                   });
-        })({ clips: i, onEdit: Y, actionsDisabled: J }),
-        ne = (function (n) {
+        })({ clips: i, onEdit: U, actionsDisabled: q }),
+        ni = (function (n) {
             let { clips: i, actionsDisabled: e = !1 } = n;
             return !0 === i[0].isFavorite
                 ? null
                 : (0, t.jsx)(r.Dr, {
                       id: "favorite",
                       label: d.intl.string(d.t.nPywqO),
-                      leadingAccessory: { type: "icon", icon: F.y },
+                      leadingAccessory: { type: "icon", icon: S.y },
                       disabled: e,
                       action: function () {
                           (0, o.Z_)(), i.forEach((n) => (0, s.XK)(n));
                       },
                   });
-        })({ clips: i, actionsDisabled: J }),
-        nt = (function (n) {
+        })({ clips: i, actionsDisabled: q }),
+        ne = (function (n) {
             let { clips: i, channelId: e } = n,
-                l = (0, m.bG)([v.Ay, T.A, H.default, Z.A], () =>
-                    v.Ay.getFlattenedGuildIds().some((n) => {
-                        let i = Z.A.getGuild(n);
-                        return null != i && (0, R.ie)(i, T.A, H.default).canCreateExpressions;
+                l = (0, m.bG)([T.Ay, Z.A, v.default, R.A], () =>
+                    T.Ay.getFlattenedGuildIds().some((n) => {
+                        let i = R.A.getGuild(n);
+                        return null != i && (0, I.ie)(i, Z.A, v.default).canCreateExpressions;
                     }),
                 ),
                 a = i[0];
-            if (i.length > 1 || !l || a.type === C.nQ.SCREENSHOT) return null;
+            if (i.length > 1 || !l || a.type === E.nQ.SCREENSHOT) return null;
             async function c() {
-                (0, o.Z_)(), await (0, S.n)(a, e);
+                (0, o.Z_)(), await (0, H.n)(a, e);
             }
             return (0, t.jsx)(r.Dr, {
                 id: "clips-export-soundboard",
                 label: d.intl.string(h.default.HH4Tjj),
-                leadingAccessory: { type: "icon", icon: I.J },
+                leadingAccessory: { type: "icon", icon: w.J },
                 action: c,
             });
         })({ clips: i, channelId: e }),
-        nl = (function (n) {
+        nt = (function (n) {
             let { clips: i } = n,
                 e = i[0];
             return i.length > 1 || null == g.A.clipboard.copyFile
@@ -153,22 +152,22 @@ function U(n) {
                       action: function () {
                           (0, o.Z_)(),
                               g.A.clipboard.copyFile(e.filepath),
-                              (0, u.P0)((0, f.o)(d.intl.string(d.t.mGZ66D), p.Ck.SUCCESS));
+                              (0, u.P0)((0, p.o)(d.intl.string(d.t.mGZ66D), f.Ck.SUCCESS));
                       },
                   });
         })({ clips: i }),
-        nr = (function (n) {
+        nl = (function (n) {
             let { clips: i } = n,
                 e = i[0];
             if (i.length > 1) return null;
-            let l = e.type === C.nQ.SCREENSHOT;
+            let l = e.type === E.nQ.SCREENSHOT;
             async function a() {
                 (0, o.Z_)(), (0, s.H1)([e.id]);
                 try {
                     let n = await (0, s.VO)(e),
                         i = await n.arrayBuffer(),
-                        t = (0, O.A)((0, E.uk)(e.filepath));
-                    await g.A.fileManager.saveWithDialog(w.from(i), t);
+                        t = (0, C.A)(e, l ? "jpeg" : "mp4");
+                    await g.A.fileManager.saveWithDialog(O.from(i), t);
                 } catch (n) {
                     j.nx.error("Error exporting clip to file", n);
                 } finally {
@@ -181,8 +180,8 @@ function U(n) {
                     let n = await (0, s.VO)(e),
                         i = await (0, D.R_)(n),
                         t = await i.arrayBuffer(),
-                        l = (0, O.A)((0, E.kh)(e.filepath)) + ".ogg";
-                    await g.A.fileManager.saveWithDialog(w.from(t), l);
+                        l = (0, C.A)(e, "ogg");
+                    await g.A.fileManager.saveWithDialog(O.from(t), l);
                 } catch (n) {
                     j.nx.error("Error exporting clip to sound file", n);
                 } finally {
@@ -210,22 +209,22 @@ function U(n) {
                 ],
             });
         })({ clips: i }),
-        no = (function (n) {
+        nr = (function (n) {
             let { clips: i, actionsDisabled: e = !1 } = n;
             return !0 !== i[0].isFavorite
                 ? null
                 : (0, t.jsx)(r.Dr, {
                       id: "unfavorite",
                       label: d.intl.string(h.default.IZsalP),
-                      leadingAccessory: { type: "icon", icon: P.U },
+                      leadingAccessory: { type: "icon", icon: F.U },
                       color: "danger",
                       disabled: e,
                       action: function () {
                           (0, o.Z_)(), i.forEach((n) => (0, s.XK)(n));
                       },
                   });
-        })({ clips: i, actionsDisabled: J }),
-        na = (function (n) {
+        })({ clips: i, actionsDisabled: q }),
+        no = (function (n) {
             let { clips: i, onBeforeDelete: e, onAfterDelete: l, actionsDisabled: a = !1 } = n;
             return (0, t.jsx)(r.Dr, {
                 id: "clips-delete",
@@ -237,12 +236,12 @@ function U(n) {
                     (0, o.Z_)(), (0, b.A)(n, { clips: i, onBeforeDelete: e, onAfterDelete: l });
                 },
             });
-        })({ clips: i, onBeforeDelete: Q, onAfterDelete: q, actionsDisabled: J }),
-        nc = (function (n) {
+        })({ clips: i, onBeforeDelete: Y, onAfterDelete: Q, actionsDisabled: q }),
+        na = (function (n) {
             let { clips: i } = n;
             return (0, m.bG)([B.A], () => B.A.isDeveloper)
                 ? (0, t.jsx)(r.Dr, {
-                      leadingAccessory: { type: "icon", icon: V.s },
+                      leadingAccessory: { type: "icon", icon: K.s },
                       id: "show-in-folder",
                       label: "Show in Folder",
                       action: function () {
@@ -251,29 +250,29 @@ function U(n) {
                   })
                 : null;
         })({ clips: i }),
-        ns = (function (n) {
+        nc = (function (n) {
             let { clips: i } = n;
             return (0, m.bG)([B.A], () => B.A.isDeveloper)
                 ? (0, t.jsx)(r.Dr, {
-                      leadingAccessory: { type: "icon", icon: k.P },
+                      leadingAccessory: { type: "icon", icon: N.P },
                       id: "open-in-inspector",
                       label: "Open in Inspector",
                       action: function () {
-                          (0, o.Z_)(), (0, N.closeAllModals)(), (0, G.h)(i[0].filepath);
+                          (0, o.Z_)(), (0, P.closeAllModals)(), (0, G.h)(i[0].filepath);
                       },
                   })
                 : null;
         })({ clips: i }),
-        nd = z.has(a.C.ADD_TO_LIBRARY),
-        nu = z.has(a.C.SHARE),
-        nf = z.has(a.C.EDIT),
-        np = z.has(a.C.FAVORITE),
-        ny = z.has(a.C.EXPORT_TO_SOUNDBOARD),
-        ng = z.has(a.C.COPY_TO_CLIPBOARD),
-        nh = z.has(a.C.EXPORT_TO_FILE),
-        nA = z.has(a.C.DELETE),
-        nb = z.has(a.C.SHOW_IN_FOLDER),
-        n_ = z.has(a.C.OPEN_IN_INSPECTOR);
+        ns = J.has(a.C.ADD_TO_LIBRARY),
+        nd = J.has(a.C.SHARE),
+        nu = J.has(a.C.EDIT),
+        np = J.has(a.C.FAVORITE),
+        nf = J.has(a.C.EXPORT_TO_SOUNDBOARD),
+        ny = J.has(a.C.COPY_TO_CLIPBOARD),
+        ng = J.has(a.C.EXPORT_TO_FILE),
+        nh = J.has(a.C.DELETE),
+        nA = J.has(a.C.SHOW_IN_FOLDER),
+        nb = J.has(a.C.OPEN_IN_INSPECTOR);
     return (0, t.jsxs)(l.W, {
         "data-menu-migrated-auto": !0,
         navId: "clips-more-options",
@@ -281,10 +280,10 @@ function U(n) {
         onClose: o.Z_,
         onSelect: o.Z_,
         children: [
-            (0, t.jsxs)(r.rX, { children: [nd && $, nu && nn, nf && ni] }),
-            (0, t.jsxs)(r.rX, { children: [np && ne, ny && nt, ng && nl, nh && nr] }),
-            (0, t.jsxs)(r.rX, { children: [nb && nc, n_ && ns] }),
-            (0, t.jsxs)(r.rX, { children: [np && no, nA && na] }),
+            (0, t.jsxs)(r.rX, { children: [ns && z, nd && $, nu && nn] }),
+            (0, t.jsxs)(r.rX, { children: [np && ni, nf && ne, ny && nt, ng && nl] }),
+            (0, t.jsxs)(r.rX, { children: [nA && na, nb && nc] }),
+            (0, t.jsxs)(r.rX, { children: [np && nr, nh && no] }),
         ],
     });
 }
