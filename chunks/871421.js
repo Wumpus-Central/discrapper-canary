@@ -230,7 +230,10 @@ class S extends s.A {
         };
     }
     clear() {
-        this.sessionEndTimeout.stop(),
+        I.nx.info(
+            `decider: clear() called \u{2014} currentSessionGameKey=${this.currentSessionGameKey} pendingSessionGameKey=${this.pendingSessionGameKey} pendingCandidates=${d.A.getPendingClipCandidates().length} candidates=${d.A.getClipCandidates().length}`,
+        ),
+            this.sessionEndTimeout.stop(),
             (this.currentSessionGameKey = null),
             (this.pendingSessionGameKey = null),
             this.processClipCandidates(),
@@ -244,11 +247,13 @@ class S extends s.A {
     scheduleClip(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this.unscheduleClip(),
+        I.nx.info(`decider: scheduleClip signal=${e.type} delay=${t}ms isCandidate=${n}`),
+            this.unscheduleClip(),
             (this.scheduledClipSignal = e),
             (this.lastClipTimestamp = performance.now() + t),
             this.scheduledClipTimeout.start(t, () => {
-                (this.scheduledClipSignal = null),
+                I.nx.info(`decider: scheduled timeout fired \u{2014} saving clip (signal=${e.type} isCandidate=${n})`),
+                    (this.scheduledClipSignal = null),
                     (0, g.yd)(
                         e.type === f.Gy.MANUAL ? "manual" : "auto",
                         [...this.timeline.read()],
@@ -260,26 +265,46 @@ class S extends s.A {
     handleRunningGamesChange() {
         let e = l.Ay.getVisibleGame(),
             t = null != e ? (0, l.Es)(e) : null;
-        if (null === this.currentSessionGameKey) {
-            this.currentSessionGameKey = t;
+        if (
+            (I.nx.info(
+                `decider: handleRunningGamesChange visibleGame=${e?.name ?? "null"} newPrimaryKey=${t} currentSessionGameKey=${this.currentSessionGameKey} pendingSessionGameKey=${this.pendingSessionGameKey}`,
+            ),
+            null === this.currentSessionGameKey)
+        ) {
+            I.nx.info(`decider: handleRunningGamesChange \u{2014} starting session for ${t}`),
+                (this.currentSessionGameKey = t);
             return;
         }
         if (t === this.currentSessionGameKey) {
-            this.sessionEndTimeout.stop(), (this.pendingSessionGameKey = null);
+            I.nx.info("decider: handleRunningGamesChange \u2014 same primary, cancelling pending end"),
+                this.sessionEndTimeout.stop(),
+                (this.pendingSessionGameKey = null);
             return;
         }
         if (null === t) {
-            this.sessionEndTimeout.stop(),
+            I.nx.info(
+                "decider: handleRunningGamesChange \u2014 visible game became null, finalizing session immediately",
+            ),
+                this.sessionEndTimeout.stop(),
                 this.processClipCandidates(),
                 (this.currentSessionGameKey = null),
                 (this.pendingSessionGameKey = null);
             return;
         }
-        this.pendingSessionGameKey !== t &&
-            ((this.pendingSessionGameKey = t),
-            this.sessionEndTimeout.start(3e4, () => {
-                this.processClipCandidates(), (this.currentSessionGameKey = t), (this.pendingSessionGameKey = null);
-            }));
+        this.pendingSessionGameKey === t
+            ? I.nx.info("decider: handleRunningGamesChange \u2014 already debouncing for this key")
+            : (I.nx.info(
+                  `decider: handleRunningGamesChange \u{2014} primary game changed from ${this.currentSessionGameKey} to ${t}, debouncing 30000ms`,
+              ),
+              (this.pendingSessionGameKey = t),
+              this.sessionEndTimeout.start(3e4, () => {
+                  I.nx.info(
+                      `decider: sessionEndTimeout fired after debounce \u{2014} finalizing session (newPrimaryKey=${t})`,
+                  ),
+                      this.processClipCandidates(),
+                      (this.currentSessionGameKey = t),
+                      (this.pendingSessionGameKey = null);
+              }));
     }
     async debugStashDeciderData() {
         if (d.A.getPendingClipCandidates().length > 0)
