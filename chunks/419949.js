@@ -1,5 +1,5 @@
-o.r(
-    (a.exports = {
+_.r(
+    (e.exports = {
         container: "container_f369db",
         uploadArea: "uploadArea_f369db",
         label: "label_f369db",
@@ -15,9 +15,12 @@ o.r(
         gridViewBanner: "gridViewBanner_f369db",
         placeholder: "placeholder_f369db",
         mainCard: "mainCard_f369db",
+        mainCardContainer: "mainCardContainer_f369db",
+        gameInvitesHeaderContainer: "gameInvitesHeaderContainer_f369db",
         emptyMainCard: "emptyMainCard_f369db",
         outOfDate: "outOfDate_f369db",
         header: "header_f369db",
+        headerContainer: "headerContainer_f369db",
         headerWithMatchingPosts: "headerWithMatchingPosts_f369db",
         noForm: "noForm_f369db",
         sortContainer: "sortContainer_f369db",
