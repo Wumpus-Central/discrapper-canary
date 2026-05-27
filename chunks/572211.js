@@ -119,6 +119,7 @@ function v(e) {
     return (0, l.jsxs)("div", {
         ref: M,
         className: _.E6,
+        style: { background: U },
         children: [
             V &&
                 (0, l.jsxs)(T, {
@@ -145,7 +146,6 @@ function v(e) {
                     ],
                 }),
             (0, l.jsxs)("div", {
-                style: { background: U },
                 children: [
                     (0, l.jsxs)("div", {
                         className: _.hQ,
