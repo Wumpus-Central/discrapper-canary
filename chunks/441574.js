@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { ob: () => V, jK: () => q, g$: () => Q, qT: () => Z, fE: () => $, bb: () => X }), n(938796), n(321073);
+n.d(t, { ob: () => V, jK: () => q, g$: () => Q, qT: () => X, fE: () => $, bb: () => Z }), n(938796), n(321073);
 var i,
     r,
     s,
@@ -1148,6 +1148,10 @@ var V =
         (l[(l.TOON = 4)] = "TOON"),
         (l[(l.POP = 5)] = "POP"),
         (l[(l.GLOW = 6)] = "GLOW"),
+        (l[(l.TEST_1 = 1001)] = "TEST_1"),
+        (l[(l.TEST_2 = 1002)] = "TEST_2"),
+        (l[(l.TEST_3 = 1003)] = "TEST_3"),
+        (l[(l.TEST_4 = 1004)] = "TEST_4"),
         l),
     j =
         (((u = {})[(u.UNSPECIFIED = 0)] = "UNSPECIFIED"),
@@ -1207,12 +1211,12 @@ var V =
         (p[(p.TIER_1 = 3)] = "TIER_1"),
         (p[(p.TIER_2 = 4)] = "TIER_2"),
         p),
-    Z =
+    X =
         (((E = {})[(E.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (E[(E.PRIMARY = 1)] = "PRIMARY"),
         (E[(E.MEMBER = 2)] = "MEMBER"),
         E),
-    X =
+    Z =
         (((m = {})[(m.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (m[(m.ANIMATED_EMOJIS = 1)] = "ANIMATED_EMOJIS"),
         (m[(m.EMOJIS_EVERYWHERE = 2)] = "EMOJIS_EVERYWHERE"),
@@ -2651,7 +2655,7 @@ class eB extends S.G {
                 kind: "enum",
                 T: () => [
                     "discord_protos.users.v1.PremiumSubscriptionGroupRole",
-                    Z,
+                    X,
                     "PREMIUM_SUBSCRIPTION_GROUP_ROLE_",
                 ],
             },
@@ -2749,7 +2753,7 @@ class eW extends S.G {
         super("discord_protos.users.v1.PerkConfig", [
             { no: 1, name: "source", kind: "enum", repeat: 1, T: () => ["discord_protos.users.v1.PerkSource", Q] },
             { no: 2, name: "increased_file_upload_size", kind: "message", oneof: "kind", T: () => e$ },
-            { no: 3, name: "increased_guild_limit", kind: "message", oneof: "kind", T: () => eZ },
+            { no: 3, name: "increased_guild_limit", kind: "message", oneof: "kind", T: () => eX },
         ]);
     }
     create(e) {
@@ -2785,7 +2789,7 @@ class eW extends S.G {
                 case 3:
                     r.kind = {
                         oneofKind: "increasedGuildLimit",
-                        increasedGuildLimit: eZ.internalBinaryRead(e, e.uint32(), n, r.kind.increasedGuildLimit),
+                        increasedGuildLimit: eX.internalBinaryRead(e, e.uint32(), n, r.kind.increasedGuildLimit),
                     };
                     break;
                 default:
@@ -2807,7 +2811,7 @@ class eW extends S.G {
         "increasedFileUploadSize" === e.kind.oneofKind &&
             e$.internalBinaryWrite(e.kind.increasedFileUploadSize, t.tag(2, A.O0.LengthDelimited).fork(), n).join(),
             "increasedGuildLimit" === e.kind.oneofKind &&
-                eZ.internalBinaryWrite(e.kind.increasedGuildLimit, t.tag(3, A.O0.LengthDelimited).fork(), n).join();
+                eX.internalBinaryWrite(e.kind.increasedGuildLimit, t.tag(3, A.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? A.f$.onWrite : i)(this.typeName, e, t), t;
     }
@@ -2886,8 +2890,8 @@ class eq extends S.G {
         return !1 !== i && (!0 == i ? A.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eZ = new eq();
-class eX extends S.G {
+let eX = new eq();
+class eZ extends S.G {
     constructor() {
         super("discord_protos.users.v1.Perks", [
             { no: 1, name: "active_perks_bitmask", kind: "scalar", repeat: 1, T: 4 },
@@ -2973,7 +2977,7 @@ class eX extends S.G {
         return !1 !== i && (!0 == i ? A.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eQ = new eX();
+let eQ = new eZ();
 class eJ extends S.G {
     constructor() {
         super("discord_protos.users.v1.UserCountryData", [
