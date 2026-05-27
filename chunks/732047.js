@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => tK, Y: () => tW });
+n.d(t, { A: () => tz, Y: () => tK });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -1644,11 +1644,12 @@ function tG(e) {
         children: (e) => (0, i.jsx)("div", { className: a()(e, tk.k0), children: t }),
     });
 }
-var tF = n(561844),
-    tV = n(731738),
-    tB = n(807393),
-    tH = n(260364);
-function tj(e) {
+var tF = n(192308),
+    tV = n(561844),
+    tB = n(731738),
+    tH = n(807393),
+    tj = n(260364);
+function tY(e) {
     let { isExpanded: t, questId: n } = e;
     return (
         (0, E.H6)({
@@ -1660,7 +1661,7 @@ function tj(e) {
         null
     );
 }
-function tY() {
+function tW() {
     return (
         r.useEffect(() => {
             _.trigger();
@@ -1668,7 +1669,7 @@ function tY() {
         null
     );
 }
-function tW(e) {
+function tK(e) {
     let { quest: t } = e,
         n = (0, g.L)({ quest: t, location: tm.rE.QUESTS_BAR }),
         s = (0, m.s)(),
@@ -1701,9 +1702,9 @@ function tW(e) {
                 f = r.useRef(i),
                 h = r.useCallback(
                     (e) => {
-                        n || (c(!1), o(e));
+                        (n && e) || (a !== e && (c(!1), o(e)));
                     },
-                    [n],
+                    [n, a],
                 ),
                 p = r.useCallback(() => {
                     h(!0);
@@ -1809,7 +1810,7 @@ function tW(e) {
                     window.clearTimeout(c.current), _ || h || d.current || i(!1);
                 }, [_, h, i]),
                 C = r.useCallback(() => {
-                    (0, tF.av)({
+                    (0, tV.av)({
                         questId: t.id,
                         event: tU.HAw.QUEST_HOVER,
                         properties: {
@@ -1824,7 +1825,7 @@ function tW(e) {
                         S({ withDelay: !0 });
                 }, [S, u, t.id]),
                 v = r.useCallback(() => {
-                    (0, tF.av)({
+                    (0, tV.av)({
                         questId: t.id,
                         event: tU.HAw.QUEST_HOVER_OFF,
                         properties: {
@@ -1837,16 +1838,20 @@ function tW(e) {
                         (d.current = !1),
                         y();
                 }, [y, u, t.id]);
-            return (
-                r.useEffect(() => {
-                    h && v();
-                }, [h, v]),
+            r.useEffect(() => {
+                h && d.current && v();
+            }, [h, v]),
                 r.useLayoutEffect(() => {
                     o && !l && d.current && s();
                 }, [s, o, l]),
                 r.useLayoutEffect(() => {
                     a || !o || l || d.current || i(!1);
-                }, [o, a, l, i]),
+                }, [o, a, l, i]);
+            let O = (0, tF.useHasAnyModalOpen)();
+            return (
+                r.useEffect(() => {
+                    O && d.current && v();
+                }, [v, O]),
                 {
                     ctxMenuOpen: _,
                     gameSheetOpen: h,
@@ -1887,7 +1892,7 @@ function tW(e) {
         } = e;
         r.useEffect(() => {
             n &&
-                ((0, tF.av)({
+                ((0, tV.av)({
                     questId: t.id,
                     event: tU.HAw.QUEST_CONTENT_RENDERING_FAILURE,
                     properties: {
@@ -1898,8 +1903,8 @@ function tW(e) {
                     },
                     sourceQuestContent: p.uF.QUEST_BAR_V2,
                 }),
-                tB.A.increment({
-                    name: tV.K.QUEST_CONTENT_RENDERING_FAILURE,
+                tH.A.increment({
+                    name: tB.K.QUEST_CONTENT_RENDERING_FAILURE,
                     tags: [
                         `quest_id:${t.id}`,
                         `quest_content:${(0, b.jO)(p.uF.QUEST_BAR)}`,
@@ -1909,7 +1914,7 @@ function tW(e) {
         }, [n, d, t.id]),
             r.useEffect(() => {
                 i ||
-                    (0, tF.av)({
+                    (0, tV.av)({
                         questId: t.id,
                         event: tU.HAw.QUEST_CONTENT_RENDERING_FAILURE,
                         properties: {
@@ -1925,7 +1930,7 @@ function tW(e) {
                 s ||
                     !a ||
                     o ||
-                    (0, tF.av)({
+                    (0, tV.av)({
                         questId: t.id,
                         event: tU.HAw.QUEST_CONTENT_RENDERING_FAILURE,
                         properties: {
@@ -1938,7 +1943,7 @@ function tW(e) {
                     });
             }, [s, a, o, t.id, l, d]),
             r.useEffect(() => {
-                (!u || c) && tH.A.clearTracking(), s && a && !o && !n && i && tH.A.stopTracking(t.id);
+                (!u || c) && tj.A.clearTracking(), s && a && !o && !n && i && tj.A.stopTracking(t.id);
             }, [u, c, s, a, o, n, i, t.id]);
     })({
         quest: t,
@@ -1978,7 +1983,7 @@ function tW(e) {
                 children: [
                     P &&
                         (0, i.jsxs)(i.Fragment, {
-                            children: [(0, i.jsx)(tj, { questId: O, isExpanded: x }), (0, i.jsx)(tY, {})],
+                            children: [(0, i.jsx)(tY, { questId: O, isExpanded: x }), (0, i.jsx)(tW, {})],
                         }),
                     (0, i.jsx)(tG, {
                         isUnenrolled: !R,
@@ -2037,9 +2042,9 @@ function tW(e) {
         ),
     });
 }
-let tK = function () {
+let tz = function () {
     let e = (0, S.dN)();
     return null == e
         ? null
-        : (0, i.jsx)(I.jY, { source: tm.rE.QUESTS_BAR, questId: e.id, children: (0, i.jsx)(tW, { quest: e }) }, e.id);
+        : (0, i.jsx)(I.jY, { source: tm.rE.QUESTS_BAR, questId: e.id, children: (0, i.jsx)(tK, { quest: e }) }, e.id);
 };
