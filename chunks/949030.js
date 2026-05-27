@@ -1,4 +1,5 @@
-n.d(t, { b: () => r });
+"use strict";
+n.d(t, { b: () => s });
 var i = n(840251),
-    l = n(688151);
-let r = new i.E([], l.$G.OPEN_NITRO, { location: "open nitro tab/settings" });
+    r = n(688151);
+let s = new i.E([], r.$G.OPEN_NITRO, { location: "open nitro tab/settings" });

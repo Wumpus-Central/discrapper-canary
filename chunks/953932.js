@@ -1,24 +1,25 @@
-l.d(t, { A: () => o });
-var s = l(627968),
-    r = l(64700),
-    d = l(821609),
-    n = l(975571),
-    c = l(607814),
-    i = l(652215),
-    a = l(375708),
-    u = l(212283);
-function o() {
+"use strict";
+n.d(t, { A: () => d });
+var i = n(627968),
+    r = n(64700),
+    s = n(821609),
+    a = n(975571),
+    o = n(607814),
+    l = n(652215),
+    u = n(375708),
+    c = n(212283);
+function d() {
     let e = r.useCallback(() => {
-            window.open(n.A.getArticleURL(i.MVz.CLIPS), "_blank", "noopener,noreferrer");
+            window.open(a.A.getArticleURL(l.MVz.CLIPS), "_blank", "noopener,noreferrer");
         }, []),
         t = r.useCallback(() => {
-            c.yO({ clipsEnabled: !0, trackAnalytics: !0 });
+            o.yO({ clipsEnabled: !0, trackAnalytics: !0 });
         }, []);
-    return (0, s.jsxs)("div", {
-        className: u.o,
+    return (0, i.jsxs)("div", {
+        className: c.o,
         children: [
-            (0, s.jsx)(d.$, { onClick: e, text: a.intl.string(a.t.hvVgAZ), variant: "secondary", size: "sm" }),
-            (0, s.jsx)(d.$, { onClick: t, text: a.intl.string(a.t.h8rgrK), variant: "primary", size: "sm" }),
+            (0, i.jsx)(s.$, { onClick: e, text: u.intl.string(u.t.hvVgAZ), variant: "secondary", size: "sm" }),
+            (0, i.jsx)(s.$, { onClick: t, text: u.intl.string(u.t.h8rgrK), variant: "primary", size: "sm" }),
         ],
     });
 }

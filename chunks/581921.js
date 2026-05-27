@@ -1,22 +1,23 @@
-n.d(t, { P: () => f, ThirdPartyPromotionsModal: () => h });
+"use strict";
+n.d(t, { P: () => C, ThirdPartyPromotionsModal: () => v });
 var i = n(627968);
 n(64700);
-var l = n(289873),
-    r = n(189213),
-    s = n(834730),
-    a = n(17928),
-    c = n(192308),
-    o = n(793574),
-    d = n(174459),
-    u = n(975571),
-    E = n(962644),
-    A = n(35587),
-    _ = n(374200),
-    T = n(56225),
-    I = n(881373);
-let N = (e) => {
+var r = n(289873),
+    s = n(189213),
+    a = n(834730),
+    o = n(17928),
+    l = n(192308),
+    u = n(793574),
+    c = n(174459),
+    d = n(975571),
+    _ = n(962644),
+    h = n(35587),
+    f = n(374200),
+    p = n(56225),
+    E = n(881373);
+let m = (e) => {
     let { promotion: t, analyticsLocations: n } = e;
-    return (0, i.jsx)(T.wx, {
+    return (0, i.jsx)(p.wx, {
         recurrence: t,
         titleVariant: "secondary",
         showPartnerLogo: !1,
@@ -24,89 +25,89 @@ let N = (e) => {
         analyticsLocations: n,
     });
 };
-var R = n(652215),
-    m = n(962995),
-    C = n(375708),
-    p = n(75662);
+var g = n(652215),
+    A = n(962995),
+    I = n(375708),
+    T = n(75662);
 let S = {
-        "Logitech G": { title: m.default.jkdhZq, titleParams: { discountPercent: I.aW }, body: m.default.mH30Yx },
+        "Logitech G": { title: A.default.jkdhZq, titleParams: { discountPercent: E.aW }, body: A.default.mH30Yx },
         "Logitech 5%": {
-            title: m.default.zeBjoX,
-            titleParams: { discountPercent: I.y$ },
-            body: m.default.fC4abC,
+            title: A.default.zeBjoX,
+            titleParams: { discountPercent: E.y$ },
+            body: A.default.fC4abC,
             bodyParams: { months: 6 },
         },
         "Logitech PRO Series Sim": {
-            title: m.default.pSBCjv,
-            titleParams: { discountPercent: I.K2 },
-            body: m.default.lsRjfl,
+            title: A.default.pSBCjv,
+            titleParams: { discountPercent: E.K2 },
+            body: A.default.lsRjfl,
         },
     },
-    O = {
+    y = {
         logitech: {
-            modalTitle: m.default["2I7nK+"],
+            modalTitle: A.default["2I7nK+"],
             modalSubtitle: {
-                message: m.default.W8jOD0,
-                values: { termsUrl: u.A.getArticleURL(R.MVz.LOGITECH_PROMOTION) },
+                message: A.default.W8jOD0,
+                values: { termsUrl: d.A.getArticleURL(g.MVz.LOGITECH_PROMOTION) },
             },
             landingUrl: "https://www.logitech.com/",
         },
     },
-    g = (e, t) => {
+    N = (e, t) => {
         let n = S[e.outboundTitle];
         return {
             id: e.id,
             partnerId: e.partnerId ?? "",
-            title: null != n ? C.intl.formatToPlainString(n.title, n.titleParams ?? {}) : "",
+            title: null != n ? I.intl.formatToPlainString(n.title, n.titleParams ?? {}) : "",
             outboundTitle: e.outboundTitle,
-            body: null != n && null != n.body ? C.intl.formatToPlainString(n.body, n.bodyParams ?? {}) : "",
+            body: null != n && null != n.body ? I.intl.formatToPlainString(n.body, n.bodyParams ?? {}) : "",
             startDate: e.startDate,
             endDate: e.endDate,
             redemptionURL: e.outboundRedemptionPageLink,
             code: t,
         };
     },
-    h = (e) => {
-        let { partnerId: t, transitionState: n, onClose: c } = e,
-            d = O[t],
-            [u, E] = (0, a.yK)([_.A], () => {
-                let { recurring: e, oneTime: n } = _.A.getPromotionsByPartner(t);
+    v = (e) => {
+        let { partnerId: t, transitionState: n, onClose: l } = e,
+            c = y[t],
+            [d, _] = (0, o.yK)([f.A], () => {
+                let { recurring: e, oneTime: n } = f.A.getPromotionsByPartner(t);
                 return [e.filter((e) => null != S[e.outboundTitle]), n.filter((e) => null != S[e.outboundTitle])];
             }),
-            { promotionsLoaded: I, claimedOutboundPromotionCodeMap: R } = (0, A.y7)();
-        if (!I) return (0, i.jsx)(l.y, {});
-        let h = d?.modalSubtitle != null ? C.intl.format(d.modalSubtitle.message, d.modalSubtitle.values) : void 0,
-            f = null == d ? t : C.intl.string(d.modalTitle);
-        return (0, i.jsx)(r.Modal, {
-            title: f,
-            subtitle: h,
+            { promotionsLoaded: E, claimedOutboundPromotionCodeMap: g } = (0, h.y7)();
+        if (!E) return (0, i.jsx)(r.y, {});
+        let v = c?.modalSubtitle != null ? I.intl.format(c.modalSubtitle.message, c.modalSubtitle.values) : void 0,
+            C = null == c ? t : I.intl.string(c.modalTitle);
+        return (0, i.jsx)(s.Modal, {
+            title: C,
+            subtitle: v,
             actions: [],
             transitionState: n,
-            onClose: c,
+            onClose: l,
             children: (0, i.jsxs)("div", {
-                className: p.kL,
+                className: T.kL,
                 children: [
-                    u.length > 0 &&
+                    d.length > 0 &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(s.E, {
+                                (0, i.jsx)(a.E, {
                                     variant: "text-md/medium",
                                     color: "text-subtle",
-                                    children: C.intl.string(m.default["9Y2p6p"]),
+                                    children: I.intl.string(A.default["9Y2p6p"]),
                                 }),
                                 (0, i.jsx)("div", {
-                                    className: p.kR,
-                                    children: u.map((e) =>
+                                    className: T.kR,
+                                    children: d.map((e) =>
                                         (0, i.jsx)(
-                                            T.wx,
+                                            p.wx,
                                             {
                                                 recurrence: {
-                                                    ...g(e, R[e.id] ?? null),
-                                                    asset: (0, T.Cf)()[e.partnerId ?? ""]?.asset ?? "",
+                                                    ...N(e, g[e.id] ?? null),
+                                                    asset: (0, p.Cf)()[e.partnerId ?? ""]?.asset ?? "",
                                                 },
                                                 showPartnerImage: !0,
                                                 displayCTAInDedicatedFooter: !0,
-                                                analyticsLocations: [o.A.THIRD_PARTY_PROMOTIONS_MODAL],
+                                                analyticsLocations: [u.A.THIRD_PARTY_PROMOTIONS_MODAL],
                                             },
                                             e.id,
                                         ),
@@ -114,23 +115,23 @@ let S = {
                                 }),
                             ],
                         }),
-                    E.length > 0 &&
+                    _.length > 0 &&
                         (0, i.jsxs)("div", {
-                            className: p.E7,
+                            className: T.E7,
                             children: [
-                                (0, i.jsx)(s.E, {
+                                (0, i.jsx)(a.E, {
                                     variant: "text-md/medium",
                                     color: "text-subtle",
-                                    children: C.intl.string(m.default.Wm58LR),
+                                    children: I.intl.string(A.default.Wm58LR),
                                 }),
                                 (0, i.jsx)("div", {
-                                    className: p.kR,
-                                    children: E.map((e) =>
+                                    className: T.kR,
+                                    children: _.map((e) =>
                                         (0, i.jsx)(
-                                            N,
+                                            m,
                                             {
-                                                promotion: g(e, R[e.id] ?? null),
-                                                analyticsLocations: [o.A.THIRD_PARTY_PROMOTIONS_MODAL],
+                                                promotion: N(e, g[e.id] ?? null),
+                                                analyticsLocations: [u.A.THIRD_PARTY_PROMOTIONS_MODAL],
                                             },
                                             e.id,
                                         ),
@@ -142,15 +143,15 @@ let S = {
             }),
         });
     },
-    f = (e) => {
-        let { partnerId: t, analyticsLocations: l } = e;
-        d.default.track(R.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, {
+    C = (e) => {
+        let { partnerId: t, analyticsLocations: r } = e;
+        c.default.track(g.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, {
             partner_ids: [t],
             partner_id: t,
-            location_stack: l,
+            location_stack: r,
         }),
-            E.Ay.fetchActivePromotions(),
-            (0, c.openModalLazy)(async () => {
+            _.Ay.fetchActivePromotions(),
+            (0, l.openModalLazy)(async () => {
                 let { ThirdPartyPromotionsModal: e } = await Promise.resolve().then(n.bind(n, 581921));
                 return (n) => (0, i.jsx)(e, { ...n, partnerId: t });
             });

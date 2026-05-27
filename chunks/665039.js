@@ -1,8 +1,9 @@
-l.d(t, { j: () => d });
-var s = l(64700),
-    r = l(77729);
-function d(e) {
-    return (0, s.useMemo)(
+"use strict";
+n.d(t, { j: () => s });
+var i = n(64700),
+    r = n(77729);
+function s(e) {
+    return (0, i.useMemo)(
         () =>
             null == e || null == r.A.clips.getClipProtocolURLFromPath
                 ? null

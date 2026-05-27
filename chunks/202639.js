@@ -1,59 +1,60 @@
-e.d(i, { d: () => m });
-var s = e(627968),
-    n = e(64700),
-    a = e(503698),
-    o = e.n(a),
-    r = e(873174),
-    l = e(717421),
-    d = e(834730),
-    c = e(465794),
-    p = e(788868),
-    u = e(650583),
-    h = e(379378);
-function m(t) {
+"use strict";
+n.d(t, { d: () => f });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(873174),
+    l = n(717421),
+    u = n(834730),
+    c = n(465794),
+    d = n(788868),
+    _ = n(650583),
+    h = n(379378);
+function f(e) {
     let {
-            showUpsell: i,
-            text: e,
-            textVariant: a,
-            button: m,
-            buttonAnalyticsObject: v,
-            className: b,
-            onSubscribeModalClose: x,
-            position: y = "floating",
-            useUpdatedStyling: f = !1,
-            subscribeButtonVariantOverride: g,
-            leadingAction: k,
-        } = t,
-        [j, w] = n.useState(i);
-    i && !j && w(!0);
-    let E = (0, l.z)({
-        transform: i ? "translateY(0%)" : "translateY(120%)",
-        opacity: +!!i,
+            showUpsell: t,
+            text: n,
+            textVariant: s,
+            button: f,
+            buttonAnalyticsObject: p,
+            className: E,
+            onSubscribeModalClose: m,
+            position: g = "floating",
+            useUpdatedStyling: A = !1,
+            subscribeButtonVariantOverride: I,
+            leadingAction: T,
+        } = e,
+        [S, y] = r.useState(t);
+    t && !S && y(!0);
+    let N = (0, l.z)({
+        transform: t ? "translateY(0%)" : "translateY(120%)",
+        opacity: +!!t,
         config: { tension: 120, friction: 14 },
         onRest: () => {
-            i || w(!1);
+            t || y(!1);
         },
     });
-    return (0, s.jsxs)(r.animated.div, {
-        style: { ...E, visibility: j ? "visible" : "hidden" },
-        onKeyDown: (t) => {
-            (t.key === u.dh.ENTER || t.key === u.dh.SPACE) && t.stopPropagation();
+    return (0, i.jsxs)(o.animated.div, {
+        style: { ...N, visibility: S ? "visible" : "hidden" },
+        onKeyDown: (e) => {
+            (e.key === _.dh.ENTER || e.key === _.dh.SPACE) && e.stopPropagation();
         },
-        className: o()(h.Zj, f && h.ww, { [h.tO]: "floating" === y, [h.Kx]: "inline" === y }, b),
+        className: a()(h.Zj, A && h.ww, { [h.tO]: "floating" === g, [h.Kx]: "inline" === g }, E),
         children: [
-            (0, s.jsx)(d.E, { variant: a ?? "text-sm/medium", color: "text-strong", className: h.tD, children: e }),
-            null != k && (0, s.jsx)("div", { className: h.Zv, children: k }),
-            "string" == typeof m
-                ? (0, s.jsx)(c.A, {
+            (0, i.jsx)(u.E, { variant: s ?? "text-sm/medium", color: "text-strong", className: h.tD, children: n }),
+            null != T && (0, i.jsx)("div", { className: h.Zv, children: T }),
+            "string" == typeof f
+                ? (0, i.jsx)(c.A, {
                       size: "sm",
-                      subscriptionTier: p.pe.TIER_2,
-                      buttonTextOverride: m,
-                      premiumModalAnalyticsLocation: v,
-                      tabIndex: i ? 0 : -1,
-                      onSubscribeModalClose: x,
-                      variantOverride: g,
+                      subscriptionTier: d.pe.TIER_2,
+                      buttonTextOverride: f,
+                      premiumModalAnalyticsLocation: p,
+                      tabIndex: t ? 0 : -1,
+                      onSubscribeModalClose: m,
+                      variantOverride: I,
                   })
-                : m,
+                : f,
         ],
     });
 }

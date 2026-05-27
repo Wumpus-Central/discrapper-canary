@@ -1,75 +1,76 @@
-n.d(t, { x: () => I, e: () => b });
-var a = n(627968),
+"use strict";
+n.d(t, { x: () => y, e: () => T });
+var i = n(627968),
     r = n(64700),
-    l = n(503698),
-    i = n.n(l),
-    s = n(873174),
-    o = n(113325),
-    c = n(315629),
-    d = n(17928),
-    u = n(453903),
-    m = n(765671),
+    s = n(503698),
+    a = n.n(s),
+    o = n(873174),
+    l = n(113325),
+    u = n(315629),
+    c = n(17928),
+    d = n(453903),
+    _ = n(765671),
     h = n(186111),
-    p = n(795127),
-    _ = n(844222),
-    g = n(866323);
-let f = { mass: 1, tension: 800, friction: 32 },
-    E = { mass: 1, tension: 1200, friction: 48 };
-var x = n(818348),
-    v = n(824078);
-let b = r.createContext(null),
-    S = x.FX;
-function I(e) {
+    f = n(795127),
+    p = n(844222),
+    E = n(866323);
+let m = { mass: 1, tension: 800, friction: 32 },
+    g = { mass: 1, tension: 1200, friction: 48 };
+var A = n(818348),
+    I = n(824078);
+let T = r.createContext(null),
+    S = A.FX;
+function y(e) {
     let {
             children: t,
             targetElementRef: n,
-            shouldShow: l = !0,
-            onRequestClose: x,
-            position: I = "top",
-            align: k,
-            alignmentStrategy: C = "trigger-center",
-            caretConfig: y,
-            hasVideo: M = !1,
-            gradientColor: j,
-            gradientOffsetBottom: A = 0.4,
-            onPositionChange: w,
-            onNudgeChange: O,
-            scrollBehavior: N = "sticky",
-            modal: R = !1,
-            returnRef: D,
-            experimental_ignoreModalClicks: T = !0,
-            closeOnClickOutside: P = !1,
+            shouldShow: s = !0,
+            onRequestClose: A,
+            position: y = "top",
+            align: N,
+            alignmentStrategy: v = "trigger-center",
+            caretConfig: C,
+            hasVideo: R = !1,
+            gradientColor: O,
+            gradientOffsetBottom: b = 0.4,
+            onPositionChange: D,
+            onNudgeChange: L,
+            scrollBehavior: w = "sticky",
+            modal: M = !1,
+            returnRef: P,
+            experimental_ignoreModalClicks: x = !0,
+            closeOnClickOutside: k = !1,
         } = e,
-        [L, V] = r.useState(l),
-        [B, W] = r.useState(I),
-        H = r.useRef(I),
-        U = r.useRef(0),
-        { ref: G, width: z, height: Z } = (0, m.Ay)(),
-        $ = (0, d.bG)([h.A], () => h.A.getLayers()),
-        F = $[$.length - 1] ?? "base",
-        K = r.useRef(w);
+        [U, G] = r.useState(s),
+        [F, V] = r.useState(y),
+        B = r.useRef(y),
+        H = r.useRef(0),
+        { ref: j, width: Y, height: W } = (0, _.Ay)(),
+        K = (0, c.bG)([h.A], () => h.A.getLayers()),
+        $ = K[K.length - 1] ?? "base",
+        z = r.useRef(D);
     r.useEffect(() => {
-        K.current = w;
-    }, [w]);
-    let Q = r.useCallback((e) => {
-            null != e && e !== H.current && ((H.current = e), W(e), K.current?.(e));
+        z.current = D;
+    }, [D]);
+    let q = r.useCallback((e) => {
+            null != e && e !== B.current && ((B.current = e), V(e), z.current?.(e));
         }, []),
-        q = r.useMemo(
-            () => null == n.current || (n.current.closest("[data-layer]")?.getAttribute("data-layer") ?? "base") === F,
-            [n, F],
+        X = r.useMemo(
+            () => null == n.current || (n.current.closest("[data-layer]")?.getAttribute("data-layer") ?? "base") === $,
+            [n, $],
         );
     r.useEffect(() => {
-        q && l ? V(!0) : q || V(!1);
-    }, [q, l]),
+        X && s ? G(!0) : X || G(!1);
+    }, [X, s]),
         r.useEffect(() => {
-            Q(I);
-        }, [I, Q]);
-    let J = (function (e) {
-            let { shouldShow: t, caretPosition: n, onExitComplete: a } = e,
-                { reducedMotion: l } = r.useContext(_.C),
-                { config: i, ...s } = ((e, t) => {
+            q(y);
+        }, [y, q]);
+    let Z = (function (e) {
+            let { shouldShow: t, caretPosition: n, onExitComplete: i } = e,
+                { reducedMotion: s } = r.useContext(p.C),
+                { config: a, ...o } = ((e, t) => {
                     let n = { opacity: 0, transform: "" },
-                        a = { opacity: 0, transform: "" };
+                        i = { opacity: 0, transform: "" };
                     if (t)
                         return {
                             from: { opacity: 0 },
@@ -79,128 +80,128 @@ function I(e) {
                         };
                     switch (e) {
                         case "top":
-                            (n.transform = "translate3d(0, -10px, 0)"), (a.transform = "translate3d(0, -10px, 0)");
+                            (n.transform = "translate3d(0, -10px, 0)"), (i.transform = "translate3d(0, -10px, 0)");
                             break;
                         case "bottom":
-                            (n.transform = "translate3d(0, 10px, 0)"), (a.transform = "translate3d(0, 10px, 0)");
+                            (n.transform = "translate3d(0, 10px, 0)"), (i.transform = "translate3d(0, 10px, 0)");
                             break;
                         case "left":
-                            (n.transform = "translate3d(-10px, 0, 0)"), (a.transform = "translate3d(-10px, 0, 0)");
+                            (n.transform = "translate3d(-10px, 0, 0)"), (i.transform = "translate3d(-10px, 0, 0)");
                             break;
                         case "right":
-                            (n.transform = "translate3d(10px, 0, 0)"), (a.transform = "translate3d(10px, 0, 0)");
+                            (n.transform = "translate3d(10px, 0, 0)"), (i.transform = "translate3d(10px, 0, 0)");
                     }
                     return {
                         from: n,
                         enter: { opacity: 1, transform: "translate3d(0px, 0px, 0)" },
-                        leave: a,
+                        leave: i,
                         config: void 0,
                     };
-                })(n, l.enabled);
-            return (0, g.p)(
+                })(n, s.enabled);
+            return (0, E.p)(
                 t,
                 {
-                    ...s,
-                    config: i ?? ((e, n) => (t ? f : E)),
+                    ...o,
+                    config: a ?? ((e, n) => (t ? m : g)),
                     onRest: () => {
-                        t || null == a || a();
+                        t || null == i || i();
                     },
                 },
                 "animate-always",
             );
         })({
-            shouldShow: l,
-            caretPosition: (0, p.g)(B),
+            shouldShow: s,
+            caretPosition: (0, f.g)(F),
             onExitComplete: () => {
-                V(!1);
+                G(!1);
             },
         }),
-        Y = r.useMemo(() => {
-            if ("edge" === C && null != k) {
-                let e = "top" === B || "bottom" === B,
-                    t = "left" === B || "right" === B;
+        Q = r.useMemo(() => {
+            if ("edge" === v && null != N) {
+                let e = "top" === F || "bottom" === F,
+                    t = "left" === F || "right" === F;
                 if (e) {
-                    if ("left" === k || "center" === k || "right" === k) return k;
-                } else if (t && ("top" === k || "center" === k || "bottom" === k)) return k;
+                    if ("left" === N || "center" === N || "right" === N) return N;
+                } else if (t && ("top" === N || "center" === N || "bottom" === N)) return N;
             }
             return "center";
-        }, [C, k, B]),
-        X = r.useMemo(() => {
-            if ("edge" !== C)
+        }, [v, N, F]),
+        J = r.useMemo(() => {
+            if ("edge" !== v)
                 return (function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "center",
                         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "top",
                         n = arguments.length > 2 ? arguments[2] : void 0,
-                        a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+                        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
                     if ("center" === e || "custom" === e) return 0;
                     let r = "left" === t || "right" === t,
-                        l = r ? a : (n ?? 240);
-                    if (0 === l) return 0;
-                    let i = l / 2 - (r ? 22 : 20);
+                        s = r ? i : (n ?? 240);
+                    if (0 === s) return 0;
+                    let a = s / 2 - (r ? 22 : 20);
                     switch (e) {
                         case "start":
-                            return i;
+                            return a;
                         case "end":
-                            return -i;
+                            return -a;
                         default:
                             return 0;
                     }
-                })(y?.align ?? "center", B, z, Z);
-        }, [C, y, B, z, Z]),
-        ee = r.useMemo(() => ({ position: B, caretConfig: y ?? { align: "center" } }), [B, y]);
-    return (0, a.jsx)(u.$, {
+                })(C?.align ?? "center", F, Y, W);
+        }, [v, C, F, Y, W]),
+        ee = r.useMemo(() => ({ position: F, caretConfig: C ?? { align: "center" } }), [F, C]);
+    return (0, i.jsx)(d.$, {
         targetElementRef: n,
-        shouldShow: L,
-        onRequestClose: x,
-        position: B,
-        align: Y,
+        shouldShow: U,
+        onRequestClose: A,
+        position: F,
+        align: Q,
         spacing: 14,
-        offset: X,
+        offset: J,
         layerContext: void 0,
-        positionKey: null != X ? `${B}-${X}` : void 0,
+        positionKey: null != J ? `${F}-${J}` : void 0,
         popoutKey: void 0,
         fixed: !1,
         autoInvert: !0,
-        nudgeAlignIntoViewport: "top" === B || "bottom" === B,
-        closeOnClickOutside: P,
-        ignoreModalClicks: T,
-        scrollBehavior: N,
+        nudgeAlignIntoViewport: "top" === F || "bottom" === F,
+        closeOnClickOutside: k,
+        ignoreModalClicks: x,
+        scrollBehavior: w,
         renderPopout: (e) => {
-            let { setPopoutRef: n, position: r, nudge: l, ...d } = e;
+            let { setPopoutRef: n, position: r, nudge: s, ...c } = e;
             return (
-                Q(r),
-                l !== U.current && ((U.current = l), O?.(l)),
-                J((e, r) => {
+                q(r),
+                s !== H.current && ((H.current = s), L?.(s)),
+                Z((e, r) => {
                     if (!r) return null;
-                    let u = (0, a.jsx)(o.l, {
-                        ...d,
+                    let d = (0, i.jsx)(l.l, {
+                        ...c,
                         setDialogRef: n,
-                        modal: R,
-                        className: i()(null != j ? v.popoverContentWithGradient : v.popover, {
-                            [v["popover--video"]]: M,
+                        modal: M,
+                        className: a()(null != O ? I.popoverContentWithGradient : I.popover, {
+                            [I["popover--video"]]: R,
                         }),
-                        returnRef: D,
-                        children: (0, a.jsx)(b.Provider, { value: ee, children: t }),
+                        returnRef: P,
+                        children: (0, i.jsx)(T.Provider, { value: ee, children: t }),
                     });
-                    return (0, a.jsx)(s.animated.div, {
-                        ref: G,
+                    return (0, i.jsx)(o.animated.div, {
+                        ref: j,
                         "data-mana-component": "popover",
                         style: {
                             ...e,
                             "--custom-caret-edge-offset-horizontal": "20px",
                             "--custom-caret-edge-offset-vertical": "22px",
-                            "--custom-caret-edge-offset-horizontal-nudge": `${l}px`,
+                            "--custom-caret-edge-offset-horizontal-nudge": `${s}px`,
                             "--custom-popover-width": "240px",
                         },
                         children:
-                            null != j
-                                ? (0, a.jsx)(c.h, {
-                                      offsetBottom: A,
-                                      color: j,
-                                      className: v.popoverGradientWrapper,
-                                      children: u,
+                            null != O
+                                ? (0, i.jsx)(u.h, {
+                                      offsetBottom: b,
+                                      color: O,
+                                      className: I.popoverGradientWrapper,
+                                      children: d,
                                   })
-                                : u,
+                                : d,
                     });
                 })
             );

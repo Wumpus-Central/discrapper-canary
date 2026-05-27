@@ -1,5 +1,6 @@
-l.d(t, { Pu: () => n, mp: () => d });
-var s = l(353640);
+"use strict";
+n.d(t, { Pu: () => a, mp: () => s });
+var i = n(353640);
 let r = {
     query: "",
     sortOrder: "descending",
@@ -9,7 +10,7 @@ let r = {
     selectedGuildId: null,
     selectedYear: null,
 };
-function d(e) {
+function s(e) {
     return (
         "" !== e.query.trim() ||
         null != e.selectedGameId ||
@@ -19,7 +20,7 @@ function d(e) {
         null != e.selectedYear
     );
 }
-let n = (0, s.v)((e) => ({
+let a = (0, i.v)((e) => ({
     ...r,
     setQuery: (t) => e({ query: t }),
     setSortOrder: (t) => e({ sortOrder: t }),
@@ -27,8 +28,8 @@ let n = (0, s.v)((e) => ({
     setSelectedUserIds: (t) => e({ selectedUserIds: t }),
     toggleUserId: (t) =>
         e((e) => {
-            let l = new Set(e.selectedUserIds);
-            return l.has(t) ? l.delete(t) : l.add(t), { selectedUserIds: l };
+            let n = new Set(e.selectedUserIds);
+            return n.has(t) ? n.delete(t) : n.add(t), { selectedUserIds: n };
         }),
     setSelectedActivity: (t) => e({ selectedActivity: t }),
     setSelectedGuildId: (t) => e({ selectedGuildId: t }),

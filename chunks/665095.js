@@ -1,89 +1,90 @@
-n.d(t, { A: () => P });
-var l = n(627968),
-    s = n(64700),
-    i = n(562708),
+"use strict";
+n.d(t, { A: () => k });
+var i = n(627968),
+    r = n(64700),
+    s = n(562708),
     a = n(17928),
-    r = n(636537),
-    o = n(192308),
+    o = n(636537),
+    l = n(192308),
     u = n(830215),
     c = n(398590),
     d = n(631670),
-    h = n(475743),
-    m = n(775121),
-    p = n(139286),
-    f = n(80556),
-    g = n(557722),
-    A = n(363195),
-    x = n(870570),
-    C = n(446868),
-    v = n(503698),
-    E = n.n(v),
-    T = n(607399),
-    j = n(821609),
-    _ = n(331322),
-    N = n(534514),
-    S = n(834730),
+    _ = n(475743),
+    h = n(775121),
+    f = n(139286),
+    p = n(80556),
+    E = n(557722),
+    m = n(363195),
+    g = n(870570),
+    A = n(446868),
+    I = n(503698),
+    T = n.n(I),
+    S = n(607399),
+    y = n(821609),
+    N = n(331322),
+    v = n(534514),
+    C = n(834730),
     R = n(700525),
-    y = n(975571),
-    I = n(652215),
-    b = n(375708),
-    M = n(72828);
-let w = y.A.getArticleURL(I.MVz.VERIFICATION_FAQ);
-class U extends s.PureComponent {
-    static defaultProps = { types: [I.Fz7.CAPTCHA], onCaptchaVerify: I.tEg, onLogout: I.tEg };
+    O = n(975571),
+    b = n(652215),
+    D = n(375708),
+    L = n(72828);
+let w = O.A.getArticleURL(b.MVz.VERIFICATION_FAQ);
+class M extends r.PureComponent {
+    static defaultProps = { types: [b.Fz7.CAPTCHA], onCaptchaVerify: b.tEg, onLogout: b.tEg };
     renderFields() {
-        let { types: e, captchaKey: t, theme: n, onCaptchaVerify: s } = this.props;
-        return (0, l.jsx)(l.Fragment, {
+        let { types: e, captchaKey: t, theme: n, onCaptchaVerify: r } = this.props;
+        return (0, i.jsx)(i.Fragment, {
             children: e.map((e) =>
-                e === I.Fz7.CAPTCHA
-                    ? (0, l.jsx)(R.A, { onVerify: s, theme: n }, t)
-                    : (0, l.jsx)(j.$, { onClick: () => this.handleClick(e), text: C.A.getButtonTitle(e) }, e),
+                e === b.Fz7.CAPTCHA
+                    ? (0, i.jsx)(R.A, { onVerify: r, theme: n }, t)
+                    : (0, i.jsx)(y.$, { onClick: () => this.handleClick(e), text: A.A.getButtonTitle(e) }, e),
             ),
         });
     }
     render() {
-        return (0, l.jsxs)(_.B, {
+        return (0, i.jsxs)(N.B, {
             gap: 16,
-            className: M.Ot,
+            className: L.Ot,
             align: "center",
             direction: "vertical",
             justify: "center",
             children: [
-                (0, l.jsxs)(_.B, {
+                (0, i.jsxs)(N.B, {
                     gap: 16,
                     fullWidth: !1,
-                    className: E()(M.kL, { [M.Fr]: T.Fr }),
+                    className: T()(L.kL, { [L.Fr]: S.Fr }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, l.jsxs)(_.B, {
+                        (0, i.jsxs)(N.B, {
                             align: "center",
                             direction: "vertical",
                             justify: "center",
                             gap: 16,
                             children: [
-                                (0, l.jsx)("div", { className: M.Sl }),
-                                (0, l.jsxs)(_.B, {
-                                    className: M.FS,
+                                (0, i.jsx)("div", { className: L.Sl }),
+                                (0, i.jsxs)(N.B, {
+                                    className: L.FS,
                                     gap: 4,
                                     align: "center",
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, l.jsx)(N.D, {
+                                        (0, i.jsx)(v.D, {
                                             variant: "heading-xl/normal",
-                                            children: b.intl.string(b.t.Iz0kDg),
+                                            children: D.intl.string(D.t.Iz0kDg),
                                         }),
-                                        (0, l.jsx)(S.E, {
+                                        (0, i.jsx)(C.E, {
                                             variant: "text-md/normal",
-                                            children: b.intl.format(b.t["0rqMV5"], { helpCenterURL: w }),
+                                            children: D.intl.format(D.t["0rqMV5"], { helpCenterURL: w }),
                                         }),
                                     ],
                                 }),
                             ],
                         }),
-                        (0, l.jsx)(_.B, {
+                        (0, i.jsx)(N.B, {
                             gap: 16,
                             direction: "vertical",
                             justify: "center",
@@ -92,33 +93,33 @@ class U extends s.PureComponent {
                         }),
                     ],
                 }),
-                (0, l.jsxs)(_.B, {
+                (0, i.jsxs)(N.B, {
                     gap: 8,
                     align: "center",
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, l.jsx)(S.E, {
+                        (0, i.jsx)(C.E, {
                             variant: "text-sm/normal",
-                            className: M.qr,
-                            children: b.intl.string(b.t.qqYun3),
+                            className: L.qr,
+                            children: D.intl.string(D.t.qqYun3),
                         }),
-                        (0, l.jsxs)(_.B, {
+                        (0, i.jsxs)(N.B, {
                             gap: 8,
                             align: "center",
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, l.jsx)(S.E, {
+                                (0, i.jsx)(C.E, {
                                     variant: "text-sm/semibold",
-                                    className: M.qr,
-                                    children: b.intl.format(b.t.WL51ZR, { supportURL: y.A.getSubmitRequestURL() }),
+                                    className: L.qr,
+                                    children: D.intl.format(D.t.WL51ZR, { supportURL: O.A.getSubmitRequestURL() }),
                                 }),
-                                (0, l.jsx)("div", { className: E()(M.qr, M.mf), children: "\u2022" }),
-                                (0, l.jsx)(S.E, {
+                                (0, i.jsx)("div", { className: T()(L.qr, L.mf), children: "\u2022" }),
+                                (0, i.jsx)(C.E, {
                                     variant: "text-sm/semibold",
-                                    className: M.qr,
-                                    children: b.intl.format(b.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
+                                    className: L.qr,
+                                    children: D.intl.format(D.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
                                 }),
                             ],
                         }),
@@ -132,79 +133,79 @@ class U extends s.PureComponent {
         t?.(e);
     };
 }
-var O = n(87404),
-    D = n(53516);
-function P() {
-    let { action: e, theme: t } = (0, a.cf)([x.A, A.A], () => ({ action: x.A.getAction(), theme: A.A.theme })),
-        v = C.A.getVerificationTypes(e),
-        [E, T] = s.useState(0),
-        j = (0, h.A)(v);
-    (0, p.A)(
+var P = n(87404),
+    x = n(53516);
+function k() {
+    let { action: e, theme: t } = (0, a.cf)([g.A, m.A], () => ({ action: g.A.getAction(), theme: m.A.theme })),
+        I = A.A.getVerificationTypes(e),
+        [T, S] = r.useState(0),
+        y = (0, _.A)(I);
+    (0, f.A)(
         {
-            type: i.ImpressionTypes.MODAL,
-            name: i.ImpressionNames.USER_ACTION_REQUIRED,
-            properties: { verification_type: v[0], verification_types: v },
+            type: s.ImpressionTypes.MODAL,
+            name: s.ImpressionNames.USER_ACTION_REQUIRED,
+            properties: { verification_type: I[0], verification_types: I },
         },
         {},
-        [v.toString()],
+        [I.toString()],
     );
-    let _ = () => {
+    let N = () => {
         (0, d.Cw)(),
-            (0, o.openModalLazy)(
+            (0, l.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e("47999"), n.e("89913"), n.e("25467")]).then(
                         n.bind(n, 415478),
                     );
-                    return (t) => (0, l.jsx)(e, { ...t });
+                    return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: O.H1, Layer: f.Ay },
+                { modalKey: P.H1, Layer: p.Ay },
             );
     };
     return (
-        s.useEffect(
+        r.useEffect(
             () => (
-                m.A.disable(),
+                h.A.disable(),
                 () => {
-                    m.A.enable();
+                    h.A.enable();
                 }
             ),
             [],
         ),
-        s.useEffect(() => {
-            j?.[0] === I.Fz7.PHONE &&
-                v?.[0] === I.Fz7.EMAIL &&
-                (0, o.openModalLazy)(
+        r.useEffect(() => {
+            y?.[0] === b.Fz7.PHONE &&
+                I?.[0] === b.Fz7.EMAIL &&
+                (0, l.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e("31910"), n.e("10919")]).then(n.bind(n, 556506));
                         return (t) =>
-                            (0, l.jsx)(e, {
+                            (0, i.jsx)(e, {
                                 ...t,
-                                title: b.intl.string(b.t.KLnLIP),
-                                body: b.intl.string(b.t.XGbCq3),
-                                confirmText: b.intl.string(b.t["3oK4qw"]),
+                                title: D.intl.string(D.t.KLnLIP),
+                                body: D.intl.string(D.t.XGbCq3),
+                                confirmText: D.intl.string(D.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: O.Pr, Layer: f.Ay, onCloseCallback: _ },
+                    { modalKey: P.Pr, Layer: p.Ay, onCloseCallback: N },
                 );
-        }, [v, j]),
-        (0, l.jsx)(U, {
-            types: v,
-            captchaKey: E,
+        }, [I, y]),
+        (0, i.jsx)(M, {
+            types: I,
+            captchaKey: T,
             onCaptchaVerify: (e) => {
-                r.Bo.post({
-                    url: I.Rsh.CAPTCHA,
+                o.Bo.post({
+                    url: b.Rsh.CAPTCHA,
                     body: { captcha_key: e },
                     oldFormErrors: !0,
                     rejectWithError: !0,
                 }).then(c.jH, () => {
-                    T((e) => e + 1);
+                    S((e) => e + 1);
                 });
             },
             theme: t,
             onClick: (e) => {
-                e === I.Fz7.EMAIL_OR_PHONE || e === I.Fz7.EMAIL || e === I.Fz7.REVERIFY_EMAIL
-                    ? _()
-                    : (0, o.openModalLazy)(
+                e === b.Fz7.EMAIL_OR_PHONE || e === b.Fz7.EMAIL || e === b.Fz7.REVERIFY_EMAIL
+                    ? N()
+                    : (0, l.openModalLazy)(
                           async () => {
                               let { default: e } = await Promise.all([
                                   n.e("96768"),
@@ -216,26 +217,26 @@ function P() {
                                   n.e("84704"),
                               ]).then(n.bind(n, 615715));
                               return (t) =>
-                                  (0, l.jsx)(e, { layerContext: f.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
+                                  (0, i.jsx)(e, { layerContext: p.OH, reason: E.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: D.V, Layer: f.Ay },
+                          { modalKey: x.V, Layer: p.Ay },
                       );
             },
             onLogout: () => {
-                (0, o.openModalLazy)(
+                (0, l.openModalLazy)(
                     async () => {
                         let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 732159));
                         return (t) =>
-                            (0, l.jsx)(e, {
-                                title: b.intl.string(b.t["2jxGer"]),
-                                subtitle: b.intl.string(b.t.SUnWBB),
-                                confirmText: b.intl.string(b.t["2jxGer"]),
-                                cancelText: b.intl.string(b.t["ETE/oC"]),
+                            (0, i.jsx)(e, {
+                                title: D.intl.string(D.t["2jxGer"]),
+                                subtitle: D.intl.string(D.t.SUnWBB),
+                                confirmText: D.intl.string(D.t["2jxGer"]),
+                                cancelText: D.intl.string(D.t["ETE/oC"]),
                                 onConfirm: () => u.A.logout("verification"),
                                 ...t,
                             });
                     },
-                    { Layer: f.Ay },
+                    { Layer: p.Ay },
                 );
             },
         })

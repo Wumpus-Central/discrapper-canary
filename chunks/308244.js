@@ -1,31 +1,32 @@
-n.d(t, { E: () => b, A: () => R });
-var r = n(627968),
-    l = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    s = n(834730),
-    o = n(140735),
-    d = n(707554),
-    u = n(349288),
-    c = n(174459),
-    m = n(559868),
-    g = n(652215),
-    p = n(375708);
-let f = () => {
-    c.default.track(g.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target: m.Do });
+"use strict";
+n.d(t, { E: () => S, A: () => T });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(834730),
+    l = n(140735),
+    u = n(707554),
+    c = n(349288),
+    d = n(174459),
+    _ = n(559868),
+    h = n(652215),
+    f = n(375708);
+let p = () => {
+    d.default.track(h.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target: _.Do });
 };
-function _() {
-    return (0, r.jsxs)(r.Fragment, {
+function E() {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)("span", { children: p.intl.string(p.t.OJmNR9) }),
-            (0, r.jsx)("br", {}),
-            (0, r.jsx)("br", {}),
-            (0, r.jsx)("span", {
-                children: p.intl.format(p.t.RCYeBL, {
+            (0, i.jsx)("span", { children: f.intl.string(f.t.OJmNR9) }),
+            (0, i.jsx)("br", {}),
+            (0, i.jsx)("br", {}),
+            (0, i.jsx)("span", {
+                children: f.intl.format(f.t.RCYeBL, {
                     blogHook: (e, t) =>
-                        (0, r.jsx)(
-                            u.Anchor,
-                            { onClick: f, target: "_blank", rel: "noreferrer noopener", href: m.Do, children: e },
+                        (0, i.jsx)(
+                            c.Anchor,
+                            { onClick: p, target: "_blank", rel: "noreferrer noopener", href: _.Do, children: e },
                             t,
                         ),
                 }),
@@ -33,49 +34,49 @@ function _() {
         ],
     });
 }
-var h = n(311016),
-    E = n(692051),
-    x = n(713804),
-    v = n(992595);
-function R(e) {
+var m = n(311016),
+    g = n(692051),
+    A = n(713804),
+    I = n(992595);
+function T(e) {
     let {
             userBio: t,
             className: n,
-            animateOnHoverOrFocusOnly: i = !1,
-            isHoveringOrFocusing: o = !1,
-            lineClamp: d = 6,
-            setLineClamp: u = !0,
-            textColor: c,
-            userId: m,
+            animateOnHoverOrFocusOnly: s = !1,
+            isHoveringOrFocusing: l = !1,
+            lineClamp: u = 6,
+            setLineClamp: c = !0,
+            textColor: d,
+            userId: _,
         } = e,
-        g = l.useMemo(
-            () => ((0, h.A)(m) ? (0, r.jsx)(_, {}) : null == t || "" === t ? null : (0, x.parseBioReact)(t)),
-            [m, t],
+        h = r.useMemo(
+            () => ((0, m.A)(_) ? (0, i.jsx)(E, {}) : null == t || "" === t ? null : (0, A.parseBioReact)(t)),
+            [_, t],
         );
-    return null == g
+    return null == h
         ? null
-        : (0, r.jsx)("div", {
-              className: a()(n, v.PT),
-              children: (0, r.jsx)(s.E, {
+        : (0, i.jsx)("div", {
+              className: a()(n, I.PT),
+              children: (0, i.jsx)(o.E, {
                   variant: "text-sm/normal",
-                  lineClamp: u ? d : void 0,
-                  color: void 0 !== c ? c : void 0,
-                  children: (0, r.jsx)(E.Y.Provider, {
-                      value: { disableAnimations: i && !o, disableInteractions: !1 },
-                      children: g,
+                  lineClamp: c ? u : void 0,
+                  color: void 0 !== d ? d : void 0,
+                  children: (0, i.jsx)(g.Y.Provider, {
+                      value: { disableAnimations: s && !l, disableInteractions: !1 },
+                      children: h,
                   }),
               }),
           });
 }
-function b(e) {
-    let t = l.useId(),
-        { userBio: n, userId: i } = e;
-    return (0, h.A)(i) || (null != n && "" !== n)
-        ? (0, r.jsxs)("section", {
+function S(e) {
+    let t = r.useId(),
+        { userBio: n, userId: s } = e;
+    return (0, m.A)(s) || (null != n && "" !== n)
+        ? (0, i.jsxs)("section", {
               "aria-labelledby": t,
               children: [
-                  (0, r.jsx)(o.A, { children: (0, r.jsx)(d.H, { id: t, children: p.intl.string(p.t.ZzAR2Y) }) }),
-                  (0, r.jsx)(R, { ...e }),
+                  (0, i.jsx)(l.A, { children: (0, i.jsx)(u.H, { id: t, children: f.intl.string(f.t.ZzAR2Y) }) }),
+                  (0, i.jsx)(T, { ...e }),
               ],
           })
         : null;

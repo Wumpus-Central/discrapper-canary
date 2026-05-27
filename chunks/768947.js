@@ -1,26 +1,27 @@
-let t;
-l.d(s, { OY: () => y, ph: () => w, py: () => g });
-var r = l(64700),
-    n = l(730296),
-    a = l(635377),
-    c = l.n(a),
-    p = l(181370),
-    o = l.n(p),
-    i = l(52133);
-async function h(e) {
-    let s = n.pb[e];
-    return (await (null == t && (t = (0, n.A)()), t)).loadGrammar(s);
+"use strict";
+let i;
+n.d(t, { OY: () => I, ph: () => y, py: () => A });
+var r = n(64700),
+    s = n(730296),
+    a = n(635377),
+    o = n.n(a),
+    l = n(181370),
+    u = n.n(l),
+    c = n(52133);
+async function d(e) {
+    let t = s.pb[e];
+    return (await (null == i && (i = (0, s.A)()), i)).loadGrammar(t);
 }
-let m = /^[a-z0-9_+\-.#]+$/,
-    u = Promise.resolve(null),
-    b = new Map(),
-    f = new (c())({ max: 256 });
-function j(e) {
-    if (null == e || !(e in n.pb)) return u;
-    let s = b.get(e);
-    return null == s && ((s = h(e)), b.set(e, s)), s;
+let _ = /^[a-z0-9_+\-.#]+$/,
+    h = Promise.resolve(null),
+    f = new Map(),
+    p = new (o())({ max: 256 });
+function E(e) {
+    if (null == e || !(e in s.pb)) return h;
+    let t = f.get(e);
+    return null == t && ((t = d(e)), f.set(e, t)), t;
 }
-let d = {
+let m = {
         h: "cpp",
         hpp: "cpp",
         cc: "cpp",
@@ -164,82 +165,82 @@ let d = {
         "julia-repl": "julia",
         jldoctest: "julia",
     },
-    v = new Set(Object.keys(n.pb));
-function g(e) {
+    g = new Set(Object.keys(s.pb));
+function A(e) {
     if (null == e) return;
-    let s = e.toLowerCase();
-    if (!m.test(s)) return;
-    if (v.has(s)) return s;
-    let l = d[s];
-    if (null != l && v.has(l)) return l;
+    let t = e.toLowerCase();
+    if (!_.test(t)) return;
+    if (g.has(t)) return t;
+    let n = m[t];
+    if (null != n && g.has(n)) return n;
 }
-function y(e, s) {
-    let l = r.use(j(e)),
-        t = r.useMemo(() => o()(`${e}\0${s}`), [e, s]),
-        n = r.useCallback(
+function I(e, t) {
+    let n = r.use(E(e)),
+        i = r.useMemo(() => u()(`${e}\0${t}`), [e, t]),
+        s = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 if (!e) {
-                    let e = f.get(t);
+                    let e = p.get(i);
                     if (null != e) return e;
                 }
                 if (
                     !(function (e) {
-                        for (let s of e.split("\n")) if (s.length > 1e3) return !1;
+                        for (let t of e.split("\n")) if (t.length > 1e3) return !1;
                         return !0;
-                    })(s) ||
-                    null == l
+                    })(t) ||
+                    null == n
                 )
                     return;
-                let r = (function (e, s) {
-                    let l = e.endsWith("\n")
+                let r = (function (e, t) {
+                    let n = e.endsWith("\n")
                             ? e
                             : `${e}
 `,
-                        t = s.createSession();
+                        i = t.createSession();
                     try {
-                        return t.setText(l), t.highlightToHtml();
+                        return i.setText(n), i.highlightToHtml();
                     } finally {
-                        t.free();
+                        i.free();
                     }
-                })(s, l);
-                if (null != r) return f.set(t, r), r;
+                })(t, n);
+                if (null != r) return p.set(i, r), r;
             },
-            [t, s, l],
+            [i, t, n],
         ),
-        [a, c] = r.useState(n);
+        [a, o] = r.useState(s);
     return (
         r.useEffect(() => {
-            c(n());
-        }, [n]),
+            o(s());
+        }, [s]),
         r.useEffect(() => {
             let e = a?.missingInjections;
             if (null == e || 0 === e.length) return;
-            let s = !1;
-            for (let l of e)
-                j(l).then(() => {
-                    s ||
-                        c((e) => {
-                            let s = n(!0);
-                            return null == s ||
-                                (null != e && e.html === s.html && (0, i.v)(e.missingInjections, s.missingInjections))
+            let t = !1;
+            for (let n of e)
+                E(n).then(() => {
+                    t ||
+                        o((e) => {
+                            let t = s(!0);
+                            return null == t ||
+                                (null != e && e.html === t.html && (0, c.v)(e.missingInjections, t.missingInjections))
                                 ? e
-                                : s;
+                                : t;
                         });
                 });
             return () => {
-                s = !0;
+                t = !0;
             };
-        }, [t, n, a?.missingInjections]),
+        }, [i, s, a?.missingInjections]),
         a?.html ?? null
     );
 }
-v.add("ansi");
-let x = null,
-    k = Object.fromEntries(Array.from({ length: 16 }, (e, s) => [s, `var(--custom-ansi-color-${s})`]));
-function w(e) {
-    x ??= l.e("1180").then(l.t.bind(l, 628759, 23));
-    let { default: s } = r.use(x),
-        [t] = r.useState(() => new s({ escapeXML: !0, fg: "var(--text-default)", bg: "transparent", colors: k }));
-    return r.useMemo(() => t.toHtml(e), [t, e]);
+g.add("ansi");
+let T = null,
+    S = Object.fromEntries(Array.from({ length: 16 }, (e, t) => [t, `var(--custom-ansi-color-${t})`]));
+function y(e) {
+    T ??= n.e("1180").then(n.t.bind(n, 628759, 23));
+    let { default: t } = r.use(T),
+        [i] = r.useState(() => new t({ escapeXML: !0, fg: "var(--text-default)", bg: "transparent", colors: S }));
+    return r.useMemo(() => i.toHtml(e), [i, e]);
 }

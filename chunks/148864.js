@@ -1,31 +1,32 @@
-let n;
-s.d(t, { A: () => d });
-var r = s(17928),
-    a = s(228366),
-    i = s(423764);
-let l = (0, i.rE)();
-function o(e) {
+"use strict";
+let i;
+n.d(t, { A: () => c });
+var r = n(17928),
+    s = n(228366),
+    a = n(423764);
+let o = (0, a.rE)();
+function l(e) {
     let { countryCode: t } = e;
-    null != t && (l = (0, i.XF)(t) ?? (0, i.rE)());
+    null != t && (o = (0, a.XF)(t) ?? (0, a.rE)());
 }
-class c extends r.Ay.DeviceSettingsStore {
+class u extends r.Ay.DeviceSettingsStore {
     static displayName = "PhoneStore";
     static persistKey = "PhoneStore";
     initialize(e) {
-        null != e && (n = e.selectedCountryCode);
+        null != e && (i = e.selectedCountryCode);
     }
     getUserAgnosticState() {
-        return { selectedCountryCode: n };
+        return { selectedCountryCode: i };
     }
     getCountryCode() {
-        return null != n ? n : l;
+        return null != i ? i : o;
     }
 }
-let d = new c(a.h, {
+let c = new u(s.h, {
     PHONE_SET_COUNTRY_CODE: function (e) {
         let { countryCode: t } = e;
-        n = t;
+        i = t;
     },
-    CONNECTION_OPEN: o,
-    SET_LOCATION_METADATA: o,
+    CONNECTION_OPEN: l,
+    SET_LOCATION_METADATA: l,
 });

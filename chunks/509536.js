@@ -1,72 +1,73 @@
-r.d(t, { K4: () => g, Zt: () => v });
-var i = r(627968),
-    s = r(64700),
-    n = r(17928),
-    a = r(444927),
-    l = r(793574),
-    o = r(688810),
-    d = r(663066),
-    c = r(71393),
-    u = r(287809),
-    h = r(174459),
-    p = r(625494),
-    m = r(281910),
-    _ = r(652215);
-let v = "BoostedGuildPerksModalConnected",
-    E = (e) => {
-        let { guildId: t, close: r, location: d, registerDismissModalHandler: p, scrollToPowerupCards: v } = e,
-            E = (0, n.bG)([u.default], () => u.default.getCurrentUser()),
-            g = (0, n.bG)([c.A], () => c.A.getGuild(t), [t]),
-            I = (0, a.A)(() => Date.now()),
-            { analyticsLocations: f } = (0, o.Ay)(l.A.BOOSTED_GUILD_PERKS_MODAL),
-            C = g?.id,
-            A = s.useCallback(() => {
-                r(),
-                    null != C &&
-                        h.default.track(_.HAw.MODAL_DISMISSED, {
-                            type: _.liQ.PREMIUM_GUILD_USER_MODAL,
-                            location_stack: f,
-                            location_section: d.section,
-                            location_object: d.object,
-                            guild_id: C,
-                            duration_open_ms: Date.now() - I,
+"use strict";
+n.d(t, { K4: () => g, Zt: () => E });
+var i = n(627968),
+    r = n(64700),
+    s = n(17928),
+    a = n(444927),
+    o = n(793574),
+    l = n(688810),
+    u = n(663066),
+    c = n(71393),
+    d = n(287809),
+    _ = n(174459),
+    h = n(625494),
+    f = n(281910),
+    p = n(652215);
+let E = "BoostedGuildPerksModalConnected",
+    m = (e) => {
+        let { guildId: t, close: n, location: u, registerDismissModalHandler: h, scrollToPowerupCards: E } = e,
+            m = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
+            g = (0, s.bG)([c.A], () => c.A.getGuild(t), [t]),
+            A = (0, a.A)(() => Date.now()),
+            { analyticsLocations: I } = (0, l.Ay)(o.A.BOOSTED_GUILD_PERKS_MODAL),
+            T = g?.id,
+            S = r.useCallback(() => {
+                n(),
+                    null != T &&
+                        _.default.track(p.HAw.MODAL_DISMISSED, {
+                            type: p.liQ.PREMIUM_GUILD_USER_MODAL,
+                            location_stack: I,
+                            location_section: u.section,
+                            location_object: u.object,
+                            guild_id: T,
+                            duration_open_ms: Date.now() - A,
                         });
-            }, [f, I, d.object, d.section, r, C]);
-        return (s.useLayoutEffect(() => {
-            p?.(A);
-        }, [A, p]),
-        null == E || null == g)
+            }, [I, A, u.object, u.section, n, T]);
+        return (r.useLayoutEffect(() => {
+            h?.(S);
+        }, [S, h]),
+        null == m || null == g)
             ? null
-            : (0, i.jsx)(o.f5, {
-                  value: f,
-                  children: (0, i.jsx)(m.A, { analyticsLocation: d, onClose: A, guild: g, scrollToPowerupCards: v }),
+            : (0, i.jsx)(l.f5, {
+                  value: I,
+                  children: (0, i.jsx)(f.A, { analyticsLocation: u, onClose: S, guild: g, scrollToPowerupCards: E }),
               });
     };
 function g(e) {
-    let { guildId: t, location: r, scrollToPowerupCards: s } = e,
-        n = { current: null };
-    (0, d.B8)(
+    let { guildId: t, location: n, scrollToPowerupCards: r } = e,
+        s = { current: null };
+    (0, u.B8)(
         (e) => {
             let { closeLayer: a } = e;
             return (
-                null == n.current && (n.current = a),
-                (0, i.jsx)(E, {
+                null == s.current && (s.current = a),
+                (0, i.jsx)(m, {
                     close: a,
                     guildId: t,
-                    location: r,
+                    location: n,
                     registerDismissModalHandler: (e) => {
-                        n.current = e;
+                        s.current = e;
                     },
-                    scrollToPowerupCards: s,
+                    scrollToPowerupCards: r,
                 })
             );
         },
         {
-            layerKey: v,
+            layerKey: E,
             onEscape: () =>
-                p._.hasSubscribers(_.jej.MODAL_CLOSE)
-                    ? (p._.dispatch(_.jej.MODAL_CLOSE), !0)
-                    : null != n.current && (n.current(), !0),
+                h._.hasSubscribers(p.jej.MODAL_CLOSE)
+                    ? (h._.dispatch(p.jej.MODAL_CLOSE), !0)
+                    : null != s.current && (s.current(), !0),
         },
     );
 }

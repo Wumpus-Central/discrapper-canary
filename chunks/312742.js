@@ -1,7 +1,8 @@
-r.d(t, { i: () => p });
-var n = r(212246),
-    i = r(218436),
-    o = r(64700);
+"use strict";
+n.d(t, { i: () => E });
+var i = n(212246),
+    r = n(218436),
+    s = n(64700);
 function a(e) {
     return (a =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
@@ -14,22 +15,22 @@ function a(e) {
                       : typeof e;
               })(e);
 }
-function u(e, t, r) {
+function o(e, t, n) {
     return (
-        t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = r),
+        t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }
-var c = (function () {
+var l = (function () {
         var e;
-        function t(e, r, n) {
+        function t(e, n, i) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-            u(this, "spec", void 0),
-                u(this, "monitor", void 0),
-                u(this, "connector", void 0),
+            o(this, "spec", void 0),
+                o(this, "monitor", void 0),
+                o(this, "connector", void 0),
                 (this.spec = e),
-                (this.monitor = r),
-                (this.connector = n);
+                (this.monitor = n),
+                (this.connector = i);
         }
         return (
             (e = [
@@ -38,9 +39,9 @@ var c = (function () {
                     value: function () {
                         var e,
                             t = this.spec,
-                            r = this.monitor;
+                            n = this.monitor;
                         return null !=
-                            (e = "object" === a(t.item) ? t.item : "function" == typeof t.item ? t.item(r) : {})
+                            (e = "object" === a(t.item) ? t.item : "function" == typeof t.item ? t.item(n) : {})
                             ? e
                             : null;
                     },
@@ -58,10 +59,10 @@ var c = (function () {
                 {
                     key: "isDragging",
                     value: function (e, t) {
-                        var r = this.spec,
-                            n = this.monitor,
-                            i = r.isDragging;
-                        return i ? i(n) : t === e.getSourceId();
+                        var n = this.spec,
+                            i = this.monitor,
+                            r = n.isDragging;
+                        return r ? r(i) : t === e.getSourceId();
                     },
                 },
                 {
@@ -69,150 +70,150 @@ var c = (function () {
                     value: function () {
                         var e = this.spec,
                             t = this.monitor,
-                            r = this.connector,
-                            n = e.end;
-                        n && n(t.getItem(), t), r.reconnect();
+                            n = this.connector,
+                            i = e.end;
+                        i && i(t.getItem(), t), n.reconnect();
                     },
                 },
             ]),
             (function (e, t) {
-                for (var r = 0; r < t.length; r++) {
-                    var n = t[r];
-                    (n.enumerable = n.enumerable || !1),
-                        (n.configurable = !0),
-                        "value" in n && (n.writable = !0),
-                        Object.defineProperty(e, n.key, n);
+                for (var n = 0; n < t.length; n++) {
+                    var i = t[n];
+                    (i.enumerable = i.enumerable || !1),
+                        (i.configurable = !0),
+                        "value" in i && (i.writable = !0),
+                        Object.defineProperty(e, i.key, i);
                 }
             })(t.prototype, e),
             t
         );
     })(),
-    s = r(190334),
-    l = r(321733);
+    u = n(190334),
+    c = n(321733);
 function d(e, t) {
     (null == t || t > e.length) && (t = e.length);
-    for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
-    return n;
+    for (var n = 0, i = Array(t); n < t; n++) i[n] = e[n];
+    return i;
 }
-var f = r(55166),
-    g = r(394886),
-    h = r(541163),
-    v = r(806424);
-function p(e, t) {
-    var r,
+var _ = n(55166),
+    h = n(394886),
+    f = n(541163),
+    p = n(806424);
+function E(e, t) {
+    var n,
         a,
-        u,
-        p,
-        y,
-        b,
+        o,
+        E,
         m,
-        D,
+        g,
+        A,
         I,
-        S = (0, f.I)(e, t);
-    (0, l.V)(
+        T,
+        S = (0, _.I)(e, t);
+    (0, c.V)(
         !S.begin,
         "useDrag::spec.begin was deprecated in v14. Replace spec.begin() with spec.item(). (see more here - https://react-dnd.github.io/react-dnd/docs/api/use-drag)",
     );
-    var k =
-            ((r = (0, s.u)()),
-            (0, o.useMemo)(
+    var y =
+            ((n = (0, u.u)()),
+            (0, s.useMemo)(
                 function () {
-                    return new g.G(r);
+                    return new h.G(n);
                 },
-                [r],
+                [n],
             )),
-        O =
+        N =
             ((a = S.options),
-            (u = S.previewOptions),
-            (p = (0, s.u)()),
-            (y = (0, o.useMemo)(
+            (o = S.previewOptions),
+            (E = (0, u.u)()),
+            (m = (0, s.useMemo)(
                 function () {
-                    return new h.b(p.getBackend());
+                    return new f.b(E.getBackend());
                 },
-                [p],
+                [E],
             )),
-            (0, i.E)(
+            (0, r.E)(
                 function () {
                     return (
-                        (y.dragSourceOptions = a || null),
-                        y.reconnect(),
+                        (m.dragSourceOptions = a || null),
+                        m.reconnect(),
                         function () {
-                            return y.disconnectDragSource();
+                            return m.disconnectDragSource();
                         }
                     );
                 },
-                [y, a],
+                [m, a],
             ),
-            (0, i.E)(
+            (0, r.E)(
                 function () {
                     return (
-                        (y.dragPreviewOptions = u || null),
-                        y.reconnect(),
+                        (m.dragPreviewOptions = o || null),
+                        m.reconnect(),
                         function () {
-                            return y.disconnectDragPreview();
+                            return m.disconnectDragPreview();
                         }
                     );
                 },
-                [y, u],
+                [m, o],
             ),
-            y);
+            m);
     return (
-        (b = (0, s.u)()),
-        (m = (0, o.useMemo)(
+        (g = (0, u.u)()),
+        (A = (0, s.useMemo)(
             function () {
-                return new c(S, k, O);
+                return new l(S, y, N);
             },
-            [k, O],
+            [y, N],
         )),
-        (0, o.useEffect)(
+        (0, s.useEffect)(
             function () {
-                m.spec = S;
+                A.spec = S;
             },
             [S],
         ),
-        (D = m),
-        (I = (0, o.useMemo)(
+        (I = A),
+        (T = (0, s.useMemo)(
             function () {
                 var e = S.type;
-                return (0, l.V)(null != e, "spec.type must be defined"), e;
+                return (0, c.V)(null != e, "spec.type must be defined"), e;
             },
             [S],
         )),
-        (0, i.E)(
+        (0, r.E)(
             function () {
-                if (null != I) {
+                if (null != T) {
                     var e,
                         t =
                             (function (e) {
                                 if (Array.isArray(e)) return e;
-                            })((e = (0, n.V)(I, D, b))) ||
+                            })((e = (0, i.V)(T, I, g))) ||
                             (function (e) {
                                 var t,
-                                    r,
-                                    n =
+                                    n,
+                                    i =
                                         null == e
                                             ? null
                                             : ("u" > typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
-                                if (null != n) {
-                                    var i = [],
-                                        o = !0,
+                                if (null != i) {
+                                    var r = [],
+                                        s = !0,
                                         a = !1;
                                     try {
                                         for (
-                                            n = n.call(e);
-                                            !(o = (t = n.next()).done) && (i.push(t.value), 2 !== i.length);
-                                            o = !0
+                                            i = i.call(e);
+                                            !(s = (t = i.next()).done) && (r.push(t.value), 2 !== r.length);
+                                            s = !0
                                         );
                                     } catch (e) {
-                                        (a = !0), (r = e);
+                                        (a = !0), (n = e);
                                     } finally {
                                         try {
-                                            o || null == n.return || n.return();
+                                            s || null == i.return || i.return();
                                         } finally {
-                                            if (a) throw r;
+                                            if (a) throw n;
                                         }
                                     }
-                                    return i;
+                                    return r;
                                 }
                             })(e) ||
                             (function (e) {
@@ -233,26 +234,26 @@ function p(e, t) {
                                     "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
                                 );
                             })(),
-                        r = t[0],
-                        i = t[1];
-                    return k.receiveHandlerId(r), O.receiveHandlerId(r), i;
+                        n = t[0],
+                        r = t[1];
+                    return y.receiveHandlerId(n), N.receiveHandlerId(n), r;
                 }
             },
-            [b, k, O, D, I],
+            [g, y, N, I, T],
         ),
         [
-            (0, v.j)(S.collect, k, O),
-            (0, o.useMemo)(
+            (0, p.j)(S.collect, y, N),
+            (0, s.useMemo)(
                 function () {
-                    return O.hooks.dragSource();
+                    return N.hooks.dragSource();
                 },
-                [O],
+                [N],
             ),
-            (0, o.useMemo)(
+            (0, s.useMemo)(
                 function () {
-                    return O.hooks.dragPreview();
+                    return N.hooks.dragPreview();
                 },
-                [O],
+                [N],
             ),
         ]
     );

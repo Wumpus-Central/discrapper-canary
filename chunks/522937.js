@@ -1,30 +1,31 @@
-n.d(t, { R: () => a });
+"use strict";
+n.d(t, { R: () => o });
 var i = n(627968);
 n(64700);
-var l = n(661531),
+var r = n(661531),
     s = n(996682),
-    r = n(27989);
-let a = (e) => {
+    a = n(27989);
+let o = (e) => {
     let {
             size: t = "md",
             width: n,
-            height: a,
-            color: o = l.A.colors.ICON_FEEDBACK_CRITICAL,
+            height: o,
+            color: l = r.A.colors.ICON_FEEDBACK_CRITICAL,
             colorClass: u = "",
-            ...d
+            ...c
         } = e,
-        c = (0, r.J)(t),
-        h = c?.width ?? n,
-        g = c?.height ?? a;
+        d = (0, a.J)(t),
+        _ = d?.width ?? n,
+        h = d?.height ?? o;
     return (0, i.jsx)("svg", {
-        ...(0, s.A)(d),
+        ...(0, s.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: h,
-        height: g,
+        width: _,
+        height: h,
         fill: "none",
         viewBox: "0 0 24 24",
         children: (0, i.jsx)("path", {
-            fill: "string" == typeof o ? o : o.css,
+            fill: "string" == typeof l ? l : l.css,
             d: "M2 13a1 1 0 0 1 1-1 9 9 0 0 1 9 9 1 1 0 1 1-2 0 7 7 0 0 0-7-7 1 1 0 0 1-1-1ZM2 17.83c0-.46.37-.83.83-.83C5.13 17 7 18.87 7 21.17c0 .46-.37.83-.83.83H3a1 1 0 0 1-1-1v-3.17Z",
             className: u,
         }),

@@ -1,65 +1,66 @@
-r.d(t, { Ay: () => u, dy: () => d, jJ: () => c });
-var i = r(17928),
-    s = r(71393),
-    n = r(645619),
-    a = r(800007),
-    l = r(568065),
-    o = r(652215);
-function d(e) {
-    return e.type !== l.b_.INACTIVE;
+"use strict";
+n.d(t, { Ay: () => d, dy: () => u, jJ: () => c });
+var i = n(17928),
+    r = n(71393),
+    s = n(645619),
+    a = n(800007),
+    o = n(568065),
+    l = n(652215);
+function u(e) {
+    return e.type !== o.b_.INACTIVE;
 }
 function c(e, t) {
-    let r = (0, i.bG)([s.A], () => s.A.getGuild(e)),
-        d = (0, i.bG)([n.A], () => n.A.getStateForGuild(e)),
-        c = r?.features?.has(o.GuildFeatures.PREMIUM_TIER_3_OVERRIDE) ?? !1;
+    let n = (0, i.bG)([r.A], () => r.A.getGuild(e)),
+        u = (0, i.bG)([s.A], () => s.A.getStateForGuild(e)),
+        c = n?.features?.has(l.GuildFeatures.PREMIUM_TIER_3_OVERRIDE) ?? !1;
     return t.map((e) =>
         (function (e) {
             var t, i;
             if (e.skuId === a.W5)
                 return {
-                    type: r?.features?.has(o.GuildFeatures.GAME_SERVERS) ? l.b_.POWERUP_ACTIVATED : l.b_.INACTIVE,
+                    type: n?.features?.has(l.GuildFeatures.GAME_SERVERS) ? o.b_.POWERUP_ACTIVATED : o.b_.INACTIVE,
                     powerup: e,
                     sourceEntitlement: void 0,
                     sourcePowerup: void 0,
                 };
             let {
-                    isActiveFromLevel: s,
-                    levelEntitlement: n,
-                    levelPowerup: u,
+                    isActiveFromLevel: r,
+                    levelEntitlement: s,
+                    levelPowerup: d,
                 } = (function (e) {
-                    if (null == e || null == r || null == d)
+                    if (null == e || null == n || null == u)
                         return { isActiveFromLevel: !1, levelEntitlement: void 0, levelPowerup: void 0 };
-                    let t = l.wr[e.skuId];
+                    let t = o.wr[e.skuId];
                     if (null == t) return { isActiveFromLevel: !1, levelEntitlement: void 0, levelPowerup: void 0 };
-                    let i = r.premiumTier >= t,
-                        s = l.a8[t];
+                    let i = n.premiumTier >= t,
+                        r = o.a8[t];
                     return {
                         isActiveFromLevel: i,
-                        levelEntitlement: null != s ? d.unlockedPowerups?.[s] : void 0,
-                        levelPowerup: null != s ? d.allPowerups?.[s] : void 0,
+                        levelEntitlement: null != r ? u.unlockedPowerups?.[r] : void 0,
+                        levelPowerup: null != r ? u.allPowerups?.[r] : void 0,
                     };
                 })(e),
-                h = ((t = e), c && l.o2.has(t.skuId)),
-                p = ((i = e), d?.unlockedPowerups?.[i.skuId] ?? null),
-                m = { type: l.b_.INACTIVE, powerup: e, sourceEntitlement: void 0, sourcePowerup: void 0 };
+                _ = ((t = e), c && o.o2.has(t.skuId)),
+                h = ((i = e), u?.unlockedPowerups?.[i.skuId] ?? null),
+                f = { type: o.b_.INACTIVE, powerup: e, sourceEntitlement: void 0, sourcePowerup: void 0 };
             return (
-                s
-                    ? (m = { type: l.b_.LEVEL_ACTIVATED, powerup: e, sourceEntitlement: n, sourcePowerup: u })
-                    : h
-                      ? (m = {
-                            type: l.b_.TIER_OVERRIDE_ACTIVATED,
+                r
+                    ? (f = { type: o.b_.LEVEL_ACTIVATED, powerup: e, sourceEntitlement: s, sourcePowerup: d })
+                    : _
+                      ? (f = {
+                            type: o.b_.TIER_OVERRIDE_ACTIVATED,
                             powerup: e,
                             sourceEntitlement: void 0,
                             sourcePowerup: e,
                         })
-                      : null != p &&
-                        (m = { type: l.b_.POWERUP_ACTIVATED, powerup: e, sourceEntitlement: p, sourcePowerup: e }),
-                m
+                      : null != h &&
+                        (f = { type: o.b_.POWERUP_ACTIVATED, powerup: e, sourceEntitlement: h, sourcePowerup: e }),
+                f
             );
         })(e),
     );
 }
-function u(e, t) {
-    let r = c(e, null == t ? [] : [t]);
-    return r.length <= 0 ? { type: l.b_.INACTIVE, sourceEntitlement: void 0, sourcePowerup: void 0 } : r[0];
+function d(e, t) {
+    let n = c(e, null == t ? [] : [t]);
+    return n.length <= 0 ? { type: o.b_.INACTIVE, sourceEntitlement: void 0, sourcePowerup: void 0 } : n[0];
 }

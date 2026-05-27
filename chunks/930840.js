@@ -1,35 +1,36 @@
-s.d(l, { c: () => j });
-var r = s(627968),
-    n = s(64700),
-    t = s(503698),
-    a = s.n(t),
-    c = s(990078),
-    u = s(628284),
-    i = s(624479),
-    o = s(939249),
-    d = s(661531),
-    m = s(957565),
-    h = s(375708),
-    x = s(408345);
-function j(e) {
-    let { chunks: l, className: s, onCopy: t, ...j } = e,
-        p = n.useMemo(() => l?.join(" "), [l]),
-        [E, f] = n.useState(!1),
-        T = n.useCallback(() => {
-            (0, m.C)(p, () => {
-                f(!0), t?.();
+"use strict";
+n.d(t, { c: () => p });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(990078),
+    l = n(628284),
+    u = n(624479),
+    c = n(939249),
+    d = n(661531),
+    _ = n(957565),
+    h = n(375708),
+    f = n(408345);
+function p(e) {
+    let { chunks: t, className: n, onCopy: s, ...p } = e,
+        E = r.useMemo(() => t?.join(" "), [t]),
+        [m, g] = r.useState(!1),
+        A = r.useCallback(() => {
+            (0, _.C)(E, () => {
+                g(!0), s?.();
             });
-        }, [t, p]),
-        v = E ? u.y : i.T;
-    return (0, r.jsx)(o.D, {
-        className: a()(x.k, s),
-        onClick: T,
-        children: (0, r.jsx)(c.m, {
-            text: E ? h.intl.string(h.t.t5VZ88) : h.intl.string(h.t.OpuAlK),
-            children: (0, r.jsx)(v, {
-                ...j,
+        }, [s, E]),
+        I = m ? l.y : u.T;
+    return (0, i.jsx)(c.D, {
+        className: a()(f.k, n),
+        onClick: A,
+        children: (0, i.jsx)(o.m, {
+            text: m ? h.intl.string(h.t.t5VZ88) : h.intl.string(h.t.OpuAlK),
+            children: (0, i.jsx)(I, {
+                ...p,
                 size: "xxs",
-                color: E ? d.A.colors.TEXT_FEEDBACK_POSITIVE : d.A.colors.INTERACTIVE_TEXT_DEFAULT,
+                color: m ? d.A.colors.TEXT_FEEDBACK_POSITIVE : d.A.colors.INTERACTIVE_TEXT_DEFAULT,
             }),
         }),
     });

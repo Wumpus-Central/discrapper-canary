@@ -1,49 +1,50 @@
-s.d(e, { pq: () => a, vF: () => c });
-var i = s(780755),
-    n = s(978862);
-let r = ["debug", "info", "warn", "error", "log", "assert", "trace"],
-    o = {};
-function a(t) {
-    if (!("console" in n.O)) return t();
-    let e = n.O.console,
-        s = {},
-        i = Object.keys(o);
-    i.forEach((t) => {
-        let i = o[t];
-        (s[t] = e[t]), (e[t] = i);
+"use strict";
+n.d(t, { pq: () => o, vF: () => l });
+var i = n(780755),
+    r = n(978862);
+let s = ["debug", "info", "warn", "error", "log", "assert", "trace"],
+    a = {};
+function o(e) {
+    if (!("console" in r.O)) return e();
+    let t = r.O.console,
+        n = {},
+        i = Object.keys(a);
+    i.forEach((e) => {
+        let i = a[e];
+        (n[e] = t[e]), (t[e] = i);
     });
     try {
-        return t();
+        return e();
     } finally {
-        i.forEach((t) => {
-            e[t] = s[t];
+        i.forEach((e) => {
+            t[e] = n[e];
         });
     }
 }
-let c = (0, n.B)("logger", function () {
-    let t = !1,
-        e = {
+let l = (0, r.B)("logger", function () {
+    let e = !1,
+        t = {
             enable: () => {
-                t = !0;
+                e = !0;
             },
             disable: () => {
-                t = !1;
+                e = !1;
             },
-            isEnabled: () => t,
+            isEnabled: () => e,
         };
     return (
         i.T
-            ? r.forEach((s) => {
-                  e[s] = (...e) => {
-                      t &&
-                          a(() => {
-                              n.O.console[s](`Sentry Logger [${s}]:`, ...e);
+            ? s.forEach((n) => {
+                  t[n] = (...t) => {
+                      e &&
+                          o(() => {
+                              r.O.console[n](`Sentry Logger [${n}]:`, ...t);
                           });
                   };
               })
-            : r.forEach((t) => {
-                  e[t] = () => void 0;
+            : s.forEach((e) => {
+                  t[e] = () => void 0;
               }),
-        e
+        t
     );
 });

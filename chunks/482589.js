@@ -1,17 +1,18 @@
-i.d(t, { j: () => d });
-var r = i(64700),
-    l = i(554146),
-    a = i(558845),
-    n = i(367727),
-    s = i(366505),
-    o = i(49999);
-function d() {
+"use strict";
+n.d(t, { j: () => u });
+var i = n(64700),
+    r = n(554146),
+    s = n(558845),
+    a = n(367727),
+    o = n(366505),
+    l = n(49999);
+function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        { programReward: t } = (0, s.F)(),
-        i = t?.last_granted_reward ?? null;
-    r.useEffect(() => {
+        { programReward: t } = (0, o.F)(),
+        n = t?.last_granted_reward ?? null;
+    i.useEffect(() => {
         e ||
-            (0, a.dD)(l.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER) ||
-            (null != i && (0, n.qr)(l.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER, i, { dismissAction: o.i.INDIRECT_ACTION }));
-    }, [e, i]);
+            (0, s.dD)(r.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER) ||
+            (null != n && (0, a.qr)(r.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER, n, { dismissAction: l.i.INDIRECT_ACTION }));
+    }, [e, n]);
 }

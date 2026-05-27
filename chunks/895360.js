@@ -1,23 +1,24 @@
-i.d(e, { D: () => A });
-var r = i(627968),
-    l = i(503698),
-    s = i.n(l),
-    n = i(933832),
-    a = i(661531),
-    u = i(834730),
-    o = i(691540),
-    d = i(857250),
-    c = i(97483),
-    p = i(765178),
-    h = i(375708),
-    S = i(199267),
-    I = i(861173);
-function f() {
-    return (0, r.jsxs)("div", {
-        className: s()(I.oR, S.o),
+"use strict";
+n.d(t, { D: () => m });
+var i = n(627968),
+    r = n(503698),
+    s = n.n(r),
+    a = n(933832),
+    o = n(661531),
+    l = n(834730),
+    u = n(691540),
+    c = n(857250),
+    d = n(97483),
+    _ = n(765178),
+    h = n(375708),
+    f = n(199267),
+    p = n(861173);
+function E() {
+    return (0, i.jsxs)("div", {
+        className: s()(p.oR, f.o),
         children: [
-            (0, r.jsx)(n.A, { size: "custom", className: S.K, color: a.A.colors.STATUS_POSITIVE.css }),
-            (0, r.jsx)(u.E, {
+            (0, i.jsx)(a.A, { size: "custom", className: f.K, color: o.A.colors.STATUS_POSITIVE.css }),
+            (0, i.jsx)(l.E, {
                 color: "text-strong",
                 variant: "text-sm/semibold",
                 children: h.intl.string(h.t["3T2jbf"]),
@@ -25,7 +26,7 @@ function f() {
         ],
     });
 }
-function A() {
-    let t = h.intl.string(h.t["3T2jbf"]);
-    (0, o.P0)((0, d.o)("", c.Ck.CUSTOM, { component: (0, r.jsx)(f, {}) })), p.O.announce(t);
+function m() {
+    let e = h.intl.string(h.t["3T2jbf"]);
+    (0, u.P0)((0, c.o)("", d.Ck.CUSTOM, { component: (0, i.jsx)(E, {}) })), _.O.announce(e);
 }

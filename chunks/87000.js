@@ -1,48 +1,49 @@
-s.d(e, { A: () => f });
-var t = s(627968);
-s(64700);
-var o = s(503698),
-    a = s.n(o),
-    n = s(317097),
-    i = s(17928),
-    l = s(661531),
-    u = s(602853),
-    h = s(173936),
-    c = s(775602),
-    d = s(394549);
-let p = l.A.unsafe_rawColors.PRIMARY_300,
-    g = l.A.unsafe_rawColors.WHITE,
-    A = l.A.unsafe_rawColors.PRIMARY_630;
-function f(r) {
-    let { color: e, size: s, forcedIconColor: o, className: l, iconClassName: f } = r,
-        [w, b] = (0, i.yK)([c.A], () => [c.A.desaturateUserColors, c.A.saturation]),
-        k = (0, u.r)(p).hex(),
-        C = e ?? k,
-        _ = (0, n.$k)((0, n.LX)(C), !1, w ? b : null),
-        x = (0, u.r)(g).hex(),
-        y = (0, u.r)(A).hex(),
-        R =
-            null != o
-                ? o
-                : (function (r) {
-                      let { backgroundColor: e, colors: s } = r,
-                          [t, o] = s,
-                          a = "string" == typeof e ? (0, n.LX)(e) : e,
-                          i = "string" == typeof t ? (0, n.LX)(t) : t,
-                          l = "string" == typeof o ? (0, n.LX)(o) : o;
-                      return (0, n.bJ)(a, i) > (0, n.bJ)(a, l) ? t : o;
-                  })({ backgroundColor: C, colors: [x, y] }),
-        m = s / 8;
-    return (0, t.jsx)("div", {
-        style: { background: _, width: s, height: s, borderRadius: s, lineHeight: `${s}px` },
+"use strict";
+n.d(t, { A: () => E });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(317097),
+    o = n(17928),
+    l = n(661531),
+    u = n(602853),
+    c = n(173936),
+    d = n(775602),
+    _ = n(394549);
+let h = l.A.unsafe_rawColors.PRIMARY_300,
+    f = l.A.unsafe_rawColors.WHITE,
+    p = l.A.unsafe_rawColors.PRIMARY_630;
+function E(e) {
+    let { color: t, size: n, forcedIconColor: r, className: l, iconClassName: E } = e,
+        [m, g] = (0, o.yK)([d.A], () => [d.A.desaturateUserColors, d.A.saturation]),
+        A = (0, u.r)(h).hex(),
+        I = t ?? A,
+        T = (0, a.$k)((0, a.LX)(I), !1, m ? g : null),
+        S = (0, u.r)(f).hex(),
+        y = (0, u.r)(p).hex(),
+        N =
+            null != r
+                ? r
+                : (function (e) {
+                      let { backgroundColor: t, colors: n } = e,
+                          [i, r] = n,
+                          s = "string" == typeof t ? (0, a.LX)(t) : t,
+                          o = "string" == typeof i ? (0, a.LX)(i) : i,
+                          l = "string" == typeof r ? (0, a.LX)(r) : r;
+                      return (0, a.bJ)(s, o) > (0, a.bJ)(s, l) ? i : r;
+                  })({ backgroundColor: I, colors: [S, y] }),
+        v = n / 8;
+    return (0, i.jsx)("div", {
+        style: { background: T, width: n, height: n, borderRadius: n, lineHeight: `${n}px` },
         className: l,
-        children: (0, t.jsx)(h.q, {
+        children: (0, i.jsx)(c.q, {
             size: "custom",
-            color: R,
-            className: a()(d.w, f),
-            width: s - 2 * m,
-            height: s - 2 * m,
-            style: { margin: m },
+            color: N,
+            className: s()(_.w, E),
+            width: n - 2 * v,
+            height: n - 2 * v,
+            style: { margin: v },
         }),
     });
 }

@@ -1,32 +1,33 @@
-i.d(t, { LR: () => d, S9: () => o, Se: () => s, Zk: () => n });
-var r = i(945810);
-let l = (0, r.mj)({
+"use strict";
+n.d(t, { LR: () => u, S9: () => l, Se: () => o, Zk: () => a });
+var i = n(945810);
+let r = (0, i.mj)({
         kind: "user",
         name: "2026-05-kontrolfreek-deprecated-ff",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    a = (0, r.mj)({
+    s = (0, i.mj)({
         kind: "user",
         name: "2026-05-steelseries-higher-discount-ff",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     });
-function n(e) {
+function a(e) {
     let { location: t } = e,
-        { enabled: i } = l.useConfig({ location: t });
-    return i;
-}
-function s(e) {
-    let { enabled: t } = l.getConfig({ location: e });
-    return t;
+        { enabled: n } = r.useConfig({ location: t });
+    return n;
 }
 function o(e) {
-    let { location: t } = e,
-        { enabled: i } = a.useConfig({ location: t });
-    return i;
+    let { enabled: t } = r.getConfig({ location: e });
+    return t;
 }
-function d(e) {
-    let { enabled: t } = a.getConfig({ location: e });
+function l(e) {
+    let { location: t } = e,
+        { enabled: n } = s.useConfig({ location: t });
+    return n;
+}
+function u(e) {
+    let { enabled: t } = s.getConfig({ location: e });
     return t;
 }

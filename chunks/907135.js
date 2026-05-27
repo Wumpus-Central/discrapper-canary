@@ -1,131 +1,132 @@
+"use strict";
 n.d(t, { A: () => J });
-var l,
-    s,
-    i = n(627968),
+var i,
+    r,
+    s = n(627968),
     a = n(64700),
-    r = n(289873),
-    o = n(331322),
+    o = n(289873),
+    l = n(331322),
     u = n(534514),
     c = n(834730),
     d = n(821609),
-    h = n(964486),
-    m = n(847599),
-    p = n(595746),
-    f = n(240248),
-    g = n(562708);
+    _ = n(964486),
+    h = n(847599),
+    f = n(595746),
+    p = n(240248),
+    E = n(562708);
 n(181658);
-var A = n(499785),
-    x = n(652215);
-async function C() {
-    let e = await A.A.get({
-        url: x.Rsh.SAFETY_FLOWS_TASK,
-        trackedActionData: { event: g.NetworkActionNames.USER_VERIFY },
+var m = n(499785),
+    g = n(652215);
+async function A() {
+    let e = await m.A.get({
+        url: g.Rsh.SAFETY_FLOWS_TASK,
+        trackedActionData: { event: E.NetworkActionNames.USER_VERIFY },
         rejectWithError: !0,
     });
     return 204 === e.status ? null : e.body;
 }
-async function v(e) {
+async function I(e) {
     return (
-        await A.A.post({
-            url: x.Rsh.SAFETY_FLOWS_TASK,
+        await m.A.post({
+            url: g.Rsh.SAFETY_FLOWS_TASK,
             body: e,
-            trackedActionData: { event: g.NetworkActionNames.USER_VERIFY },
+            trackedActionData: { event: E.NetworkActionNames.USER_VERIFY },
             rejectWithError: !0,
         })
     ).body;
 }
-let E = a.createContext(null);
-function T() {
-    let e = a.useContext(E);
+let T = a.createContext(null);
+function S() {
+    let e = a.useContext(T);
     if (null == e) throw Error("useSafetyFlowTask must be used within a SafetyFlowTaskContext Provider");
     return e;
 }
-var j = n(837451),
-    _ = n(375708),
-    N =
-        (((l = {})[(l.REFRESH_APP = -1)] = "REFRESH_APP"),
-        (l[(l.EMAIL_VERIFICATION = 3)] = "EMAIL_VERIFICATION"),
-        (l[(l.AGE_VERIFICATION = 9)] = "AGE_VERIFICATION"),
-        l);
-let S = {
+var y = n(837451),
+    N = n(375708),
+    v =
+        (((i = {})[(i.REFRESH_APP = -1)] = "REFRESH_APP"),
+        (i[(i.EMAIL_VERIFICATION = 3)] = "EMAIL_VERIFICATION"),
+        (i[(i.AGE_VERIFICATION = 9)] = "AGE_VERIFICATION"),
+        i);
+let C = {
         EMAIL_VERIFICATION: "email_verification",
         PHONE_VERIFICATION: "phone_verification",
         GENERIC_CALL_TO_ACTION: "generic_call_to_action",
         REFRESH_APP: "refresh_app",
         AGE_VERIFICATION: "age_verification",
     },
-    R = new Set(Object.values(S));
-_.intl.string(j.default["Qm6K/s"]), _.intl.string(j.default["dSkE/A"]);
-var y = (((s = {}).Empty = "empty"), (s.VerificationCode = "verification_code"), s),
-    I = n(627575),
-    b = n(17928),
-    M = n(155718),
+    R = new Set(Object.values(C));
+N.intl.string(y.default["Qm6K/s"]), N.intl.string(y.default["dSkE/A"]);
+var O = (((r = {}).Empty = "empty"), (r.VerificationCode = "verification_code"), r),
+    b = n(627575),
+    D = n(17928),
+    L = n(155718),
     w = n(139716),
-    U = n(287809),
-    O = n(430993),
-    D = n(825484),
-    P = n(214437);
-let k = (e) => {
+    M = n(287809),
+    P = n(430993),
+    x = n(825484),
+    k = n(214437);
+let U = (e) => {
         let { actions: t, footerInput: n } = e;
         return 0 === t.length && null == n
             ? null
-            : (0, i.jsxs)("footer", {
-                  className: P.q,
+            : (0, s.jsxs)("footer", {
+                  className: k.q,
                   children: [
-                      null != n && (0, i.jsx)("div", { children: n }),
-                      (0, i.jsx)(D.e, {
-                          className: P.G,
+                      null != n && (0, s.jsx)("div", { children: n }),
+                      (0, s.jsx)(x.e, {
+                          className: k.G,
                           justify: "end",
-                          children: t.map((e, t) => (0, i.jsx)(d.$, { ...e }, t)),
+                          children: t.map((e, t) => (0, s.jsx)(d.$, { ...e }, t)),
                       }),
                   ],
               });
     },
-    L = { bottom: 40, left: 32, right: 32, top: 32 };
+    G = { bottom: 40, left: 32, right: 32, top: 32 };
 var F = n(831067);
-let G = (e) => {
-    let { children: t, actions: n, footerInput: l, title: s } = e;
-    return (0, i.jsxs)(o.B, {
+let V = (e) => {
+    let { children: t, actions: n, footerInput: i, title: r } = e;
+    return (0, s.jsxs)(l.B, {
         direction: "vertical",
         justify: "start",
-        padding: L,
+        padding: G,
         className: F.kL,
         children: [
-            (0, i.jsx)(u.D, { variant: "heading-lg/semibold", className: F.R_, children: s }),
-            (0, i.jsx)(O.c, { children: t }),
-            (0, i.jsx)("div", { className: F.Ic }),
-            (0, i.jsx)(k, { actions: n, footerInput: l }),
+            (0, s.jsx)(u.D, { variant: "heading-lg/semibold", className: F.R_, children: r }),
+            (0, s.jsx)(P.c, { children: t }),
+            (0, s.jsx)("div", { className: F.Ic }),
+            (0, s.jsx)(U, { actions: n, footerInput: i }),
         ],
     });
 };
-var V = n(242235);
-let B = {
+var B = n(242235);
+let H = {
         refresh_app: (e) => {
             let { onSubmit: t, disabled: n } = e,
-                l = a.useCallback(async () => {
-                    await t({ type: y.Empty }), window.location.reload();
+                i = a.useCallback(async () => {
+                    await t({ type: O.Empty }), window.location.reload();
                 }, [t]);
-            return (0, i.jsxs)("div", {
-                className: V.kL,
+            return (0, s.jsxs)("div", {
+                className: B.kL,
                 children: [
-                    (0, i.jsx)(u.D, {
+                    (0, s.jsx)(u.D, {
                         variant: "heading-lg/bold",
-                        className: V.DD,
-                        children: _.intl.string(j.default.v52itt),
+                        className: B.DD,
+                        children: N.intl.string(y.default.v52itt),
                     }),
-                    (0, i.jsx)(c.E, {
+                    (0, s.jsx)(c.E, {
                         variant: "text-md/normal",
                         color: "text-muted",
-                        className: V.h_,
-                        children: _.intl.string(j.default["5am8D3"]),
+                        className: B.h_,
+                        children: N.intl.string(y.default["5am8D3"]),
                     }),
-                    (0, i.jsx)(o.B, {
+                    (0, s.jsx)(l.B, {
                         direction: "horizontal",
                         justify: "end",
-                        children: (0, i.jsx)(d.$, {
+                        children: (0, s.jsx)(d.$, {
                             variant: "primary",
-                            text: _.intl.string(j.default["GDsHl+"]),
-                            onClick: l,
+                            text: N.intl.string(y.default["GDsHl+"]),
+                            onClick: i,
                             disabled: n,
                         }),
                     }),
@@ -134,89 +135,89 @@ let B = {
         },
         age_verification: function (e) {
             let { onSubmit: t } = e,
-                n = (0, b.bG)([U.default], () => U.default.getCurrentUser());
-            return (0, i.jsx)(G, {
+                n = (0, D.bG)([M.default], () => M.default.getCurrentUser());
+            return (0, s.jsx)(V, {
                 title: "Lorem ipsum dolor",
                 actions: [
                     {
                         text: "Consectetur adipiscing",
                         variant: "primary",
                         onClick: () => {
-                            n?.ageVerificationStatus === M.Tk.UNVERIFIED
+                            n?.ageVerificationStatus === L.Tk.UNVERIFIED
                                 ? w.A.showAgeVerificationGetStartedModal({
-                                      entryPoint: m.q1.SAFETY_FLOWS,
-                                      onClose: () => t({ type: y.Empty }),
+                                      entryPoint: h.q1.SAFETY_FLOWS,
+                                      onClose: () => t({ type: O.Empty }),
                                   })
-                                : t({ type: y.Empty });
+                                : t({ type: O.Empty });
                         },
                     },
                 ],
-                children: (0, i.jsxs)(o.B, {
+                children: (0, s.jsxs)(l.B, {
                     gap: 8,
                     children: [
-                        (0, i.jsx)(c.E, {
+                        (0, s.jsx)(c.E, {
                             variant: "text-md/normal",
                             children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
                         }),
-                        (0, i.jsx)(c.E, {
+                        (0, s.jsx)(c.E, {
                             variant: "text-md/normal",
                             children: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                         }),
-                        (0, i.jsx)(c.E, { variant: "text-md/normal", children: "Ut enim ad minim veniam quis" }),
+                        (0, s.jsx)(c.E, { variant: "text-md/normal", children: "Ut enim ad minim veniam quis" }),
                     ],
                 }),
             });
         },
     },
-    H = (e) => {
+    j = (e) => {
         let { onSubmit: t, disabled: n } = e,
-            { task: l } = T(),
-            s = B[l.ui_component.component.type];
-        return null == s
+            { task: i } = S(),
+            r = H[i.ui_component.component.type];
+        return null == r
             ? null
-            : (0, i.jsx)(s, {
-                  configData: l.ui_component.component.data,
+            : (0, s.jsx)(r, {
+                  configData: i.ui_component.component.data,
                   onSubmit: t,
-                  taskId: l.task_id,
-                  flowId: l.flow_context?.flow_id,
-                  assignmentId: l.assignment_id,
+                  taskId: i.task_id,
+                  flowId: i.flow_context?.flow_id,
+                  assignmentId: i.assignment_id,
                   disabled: n,
               });
     };
-var Q = n(754302),
+var Y = n(754302),
     W = n(721940);
-let z = {
-        [N.EMAIL_VERIFICATION]: _.intl.string(j.default.HC4IiR),
-        [N.REFRESH_APP]: _.intl.string(j.default.SzfxQ3),
-        [N.AGE_VERIFICATION]: _.intl.string(j.default["dSkE/A"]),
+let K = {
+        [v.EMAIL_VERIFICATION]: N.intl.string(y.default.HC4IiR),
+        [v.REFRESH_APP]: N.intl.string(y.default.SzfxQ3),
+        [v.AGE_VERIFICATION]: N.intl.string(y.default["dSkE/A"]),
     },
-    q = function () {
-        let { task: e } = T(),
+    $ = function () {
+        let { task: e } = S(),
             t = e.flow_context.tasks.findIndex((t) => t.task_type === e.task_type);
-        return (0, i.jsxs)(o.B, {
+        return (0, s.jsxs)(l.B, {
             direction: "vertical",
             justify: "space-between",
-            padding: L,
+            padding: G,
             className: W.k,
             children: [
-                (0, i.jsxs)(o.B, {
+                (0, s.jsxs)(l.B, {
                     direction: "vertical",
                     justify: "space-between",
                     children: [
-                        (0, i.jsx)(u.D, {
+                        (0, s.jsx)(u.D, {
                             variant: "display-md",
                             className: W.D,
-                            children: _.intl.string(j.default["/OpRAP"]),
+                            children: N.intl.string(y.default["/OpRAP"]),
                         }),
-                        (0, i.jsx)(o.B, {
+                        (0, s.jsx)(l.B, {
                             direction: "vertical",
                             justify: "space-between",
                             gap: 0,
                             children: e.flow_context.tasks.map((e, n) =>
-                                (0, i.jsx)(
-                                    Q.B,
+                                (0, s.jsx)(
+                                    Y.B,
                                     {
-                                        title: z[e.task_type] ?? "",
+                                        title: K[e.task_type] ?? "",
                                         listType: "numbered",
                                         index: n,
                                         color: n === t ? "text-strong" : n < t ? "feedback-positive" : "text-muted",
@@ -228,155 +229,155 @@ let z = {
                         }),
                     ],
                 }),
-                (0, i.jsx)(c.E, {
+                (0, s.jsx)(c.E, {
                     variant: "text-md/normal",
                     color: "text-subtle",
-                    children: _.intl.format(j.default["0DHxym"], {
-                        handleLogOut: () => (0, I.k)("safety_flows_sidebar"),
+                    children: N.intl.format(y.default["0DHxym"], {
+                        handleLogOut: () => (0, b.k)("safety_flows_sidebar"),
                     }),
                 }),
             ],
         });
     };
-var Z = n(231723),
-    K = n(818348),
-    Y = n(561452);
-let $ = n(843020);
-function X(e) {
-    let { task: t, handleSubmit: n, disabled: l } = e,
-        [s, r] = a.useState(t),
-        o = a.useMemo(() => ({ task: s, setTask: r }), [s, r]);
+var z = n(231723),
+    q = n(818348),
+    X = n(561452);
+let Z = n(843020);
+function Q(e) {
+    let { task: t, handleSubmit: n, disabled: i } = e,
+        [r, o] = a.useState(t),
+        l = a.useMemo(() => ({ task: r, setTask: o }), [r, o]);
     return (
         a.useEffect(() => {
-            r(t);
+            o(t);
         }, [t]),
-        (0, i.jsxs)(E.Provider, {
-            value: o,
-            children: [(0, i.jsx)(q, {}), (0, i.jsx)(H, { onSubmit: n, disabled: l })],
+        (0, s.jsxs)(T.Provider, {
+            value: l,
+            children: [(0, s.jsx)($, {}), (0, s.jsx)(j, { onSubmit: n, disabled: i })],
         })
     );
 }
 let J = function (e) {
     let { transitionState: t, onClose: n } = e,
-        [l, s] = a.useState(null),
-        [g, A] = a.useState(!0),
-        [x, E] = a.useState(null),
-        [T, b] = a.useState(!1),
-        M = a.useCallback(async () => {
-            A(!0), E(null);
+        [i, r] = a.useState(null),
+        [E, m] = a.useState(!0),
+        [g, T] = a.useState(null),
+        [S, D] = a.useState(!1),
+        L = a.useCallback(async () => {
+            m(!0), T(null);
             try {
-                let e = await C();
+                let e = await A();
                 if (null == e) return void n();
-                !(0, f.uJ)(e.ui_component?.component.type) && R.has(e.ui_component.component.type)
-                    ? s(e)
-                    : s({
+                !(0, p.uJ)(e.ui_component?.component.type) && R.has(e.ui_component.component.type)
+                    ? r(e)
+                    : r({
                           task_id: e.task_id,
-                          task_type: N.REFRESH_APP,
+                          task_type: v.REFRESH_APP,
                           assignment_id: e.assignment_id,
-                          ui_component: { component: { type: S.REFRESH_APP, data: {} } },
+                          ui_component: { component: { type: C.REFRESH_APP, data: {} } },
                           flow_context: { tasks: [], flow_id: e.flow_context.flow_id },
                       });
             } catch {
-                E(_.intl.string(j.default["/f++3g"]));
+                T(N.intl.string(y.default["/f++3g"]));
             } finally {
-                A(!1);
+                m(!1);
             }
         }, [n]),
         w = a.useCallback(
             async (e) => {
-                if (null !== l) {
-                    b(!0);
+                if (null !== i) {
+                    D(!0);
                     try {
-                        let t = { task_id: l.task_id, flow_id: l.flow_context.flow_id, data: e };
-                        await v(t), M();
+                        let t = { task_id: i.task_id, flow_id: i.flow_context.flow_id, data: e };
+                        await I(t), L();
                     } catch (e) {
-                        E(_.intl.string(j.default["+QRSxc"]));
+                        T(N.intl.string(y.default["+QRSxc"]));
                     } finally {
-                        b(!1);
+                        D(!1);
                     }
                 }
             },
-            [l, M],
+            [i, L],
         );
-    (0, h.Ay)(() => {
-        M();
+    (0, _.Ay)(() => {
+        L();
     });
-    let U = a.useMemo(() => l?.task_type === N.AGE_VERIFICATION, [l]);
-    return (0, i.jsxs)("div", {
-        className: Y.Tp,
+    let M = a.useMemo(() => i?.task_type === v.AGE_VERIFICATION, [i]);
+    return (0, s.jsxs)("div", {
+        className: X.Tp,
         children: [
-            (0, i.jsx)("img", { className: Y.xX, src: $, alt: "" }),
-            U
-                ? (0, i.jsx)(p.default, {
-                      transitionState: t ?? Z.ip.ENTERED,
-                      entryPoint: m.q1.SAFETY_FLOWS,
-                      onClose: K.tE,
+            (0, s.jsx)("img", { className: X.xX, src: Z, alt: "" }),
+            M
+                ? (0, s.jsx)(f.default, {
+                      transitionState: t ?? z.ip.ENTERED,
+                      entryPoint: h.q1.SAFETY_FLOWS,
+                      onClose: q.tE,
                       onComplete: async () => {
-                          await w({ type: y.Empty });
+                          await w({ type: O.Empty });
                       },
                       dismissable: !1,
                   })
-                : (0, i.jsx)("div", {
-                      className: Y.nA,
-                      children: g
-                          ? (0, i.jsx)(r.y, { type: r.y.Type.SPINNING_CIRCLE })
-                          : (0, i.jsx)("div", {
-                                className: Y.kL,
-                                children: (0, i.jsxs)(o.B, {
+                : (0, s.jsx)("div", {
+                      className: X.nA,
+                      children: E
+                          ? (0, s.jsx)(o.y, { type: o.y.Type.SPINNING_CIRCLE })
+                          : (0, s.jsx)("div", {
+                                className: X.kL,
+                                children: (0, s.jsxs)(l.B, {
                                     direction: "horizontal",
                                     justify: "start",
-                                    className: Y.rf,
+                                    className: X.rf,
                                     children: [
-                                        null !== x &&
-                                            (0, i.jsxs)(o.B, {
+                                        null !== g &&
+                                            (0, s.jsxs)(l.B, {
                                                 direction: "vertical",
                                                 justify: "space-between",
                                                 align: "center",
-                                                className: Y.Nj,
+                                                className: X.Nj,
                                                 padding: 16,
                                                 children: [
-                                                    (0, i.jsxs)(o.B, {
+                                                    (0, s.jsxs)(l.B, {
                                                         direction: "vertical",
                                                         gap: 4,
                                                         children: [
-                                                            (0, i.jsx)(u.D, {
+                                                            (0, s.jsx)(u.D, {
                                                                 variant: "heading-xl/semibold",
-                                                                children: _.intl.string(_.t.c6kn6F),
+                                                                children: N.intl.string(N.t.c6kn6F),
                                                             }),
-                                                            (0, i.jsx)(c.E, {
+                                                            (0, s.jsx)(c.E, {
                                                                 variant: "text-md/normal",
                                                                 color: "text-muted",
-                                                                children: _.intl.string(_.t.ZUEGFn),
+                                                                children: N.intl.string(N.t.ZUEGFn),
                                                             }),
                                                         ],
                                                     }),
-                                                    (0, i.jsxs)(o.B, {
+                                                    (0, s.jsxs)(l.B, {
                                                         direction: "horizontal",
                                                         justify: "center",
                                                         align: "center",
                                                         children: [
-                                                            (0, i.jsx)(d.$, {
+                                                            (0, s.jsx)(d.$, {
                                                                 fullWidth: !0,
                                                                 variant: "secondary",
-                                                                text: _.intl.string(_.t["2jxGer"]),
+                                                                text: N.intl.string(N.t["2jxGer"]),
                                                                 onClick: () => {
-                                                                    (0, I.k)("safety_flows_modal");
+                                                                    (0, b.k)("safety_flows_modal");
                                                                 },
                                                             }),
-                                                            (0, i.jsx)(d.$, {
+                                                            (0, s.jsx)(d.$, {
                                                                 fullWidth: !0,
-                                                                text: _.intl.string(_.t["7NqTJn"]),
+                                                                text: N.intl.string(N.t["7NqTJn"]),
                                                                 onClick: () => {
-                                                                    M();
+                                                                    L();
                                                                 },
                                                             }),
                                                         ],
                                                     }),
                                                 ],
                                             }),
-                                        null === x &&
-                                            null != l &&
-                                            (0, i.jsx)(X, { task: l, handleSubmit: w, disabled: T }),
+                                        null === g &&
+                                            null != i &&
+                                            (0, s.jsx)(Q, { task: i, handleSubmit: w, disabled: S }),
                                     ],
                                 }),
                             }),

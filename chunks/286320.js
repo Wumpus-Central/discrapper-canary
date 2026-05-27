@@ -1,58 +1,59 @@
-i.d(t, { b: () => u });
-var n = i(64700),
-    a = i(17928),
-    s = i(228366);
-let r = { fetched: !1, fetching: !1, affinities: [] };
-class c extends a.Ay.Store {
+"use strict";
+n.d(t, { b: () => h });
+var i = n(64700),
+    r = n(17928),
+    s = n(228366);
+let a = { fetched: !1, fetching: !1, affinities: [] };
+class o extends r.Ay.Store {
     get hasFetched() {
-        return r.fetched;
+        return a.fetched;
     }
     get isFetching() {
-        return r.fetching;
+        return a.fetching;
     }
     get affinities() {
-        return r.affinities;
+        return a.affinities;
     }
 }
-let l = new c(s.h, {
+let l = new o(s.h, {
     BILLING_PREMIUM_AFFINITY_FETCH_START: function (e) {
         let {} = e;
-        r.fetching = !0;
+        a.fetching = !0;
     },
     BILLING_PREMIUM_AFFINITY_FETCHED: function (e) {
         let {} = e;
-        (r.fetched = !0), (r.fetching = !1);
+        (a.fetched = !0), (a.fetching = !1);
     },
     BILLING_PREMIUM_AFFINITY_FETCH_SUCCEEDED: function (e) {
         let { res: t } = e;
-        r.affinities = t;
+        a.affinities = t;
     },
     LOGOUT: function () {
-        (r.fetched = !1), (r.fetching = !1), (r.affinities = []);
+        (a.fetched = !1), (a.fetching = !1), (a.affinities = []);
     },
 });
-var h = i(636537),
-    f = i(889227),
-    I = i(652215);
-async function d() {
+var u = n(636537),
+    c = n(889227),
+    d = n(652215);
+async function _() {
     s.h.dispatch({ type: "BILLING_PREMIUM_AFFINITY_FETCH_START" });
     try {
-        let e = await h.Bo.get({ url: I.Rsh.BILLING_NITRO_AFFINITY, rejectWithError: !0 });
-        s.h.dispatch({ type: "BILLING_PREMIUM_AFFINITY_FETCH_SUCCEEDED", res: e.body.map((e) => new f.A(e)) });
+        let e = await u.Bo.get({ url: d.Rsh.BILLING_NITRO_AFFINITY, rejectWithError: !0 });
+        s.h.dispatch({ type: "BILLING_PREMIUM_AFFINITY_FETCH_SUCCEEDED", res: e.body.map((e) => new c.A(e)) });
     } finally {
         s.h.dispatch({ type: "BILLING_PREMIUM_AFFINITY_FETCHED" });
     }
 }
-function u() {
+function h() {
     let {
         affinities: e,
         hasFetched: t,
-        isFetching: i,
-    } = (0, a.cf)([l], () => ({ affinities: l.affinities, hasFetched: l.hasFetched, isFetching: l.isFetching }));
+        isFetching: n,
+    } = (0, r.cf)([l], () => ({ affinities: l.affinities, hasFetched: l.hasFetched, isFetching: l.isFetching }));
     return (
-        n.useEffect(() => {
-            t || i || d();
-        }, [t, i]),
+        i.useEffect(() => {
+            t || n || _();
+        }, [t, n]),
         e
     );
 }

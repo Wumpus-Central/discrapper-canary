@@ -1,113 +1,114 @@
+"use strict";
 n.d(t, { d: () => d });
-var l = n(627968),
-    s = n(64700),
-    i = n(66455),
+var i = n(627968),
+    r = n(64700),
+    s = n(66455),
     a = n(172218),
-    r = n(607470),
-    o = n(609174),
+    o = n(607470),
+    l = n(609174),
     u = n(665039),
     c = n(204351);
 let d = (e) => {
-        let { isStatic: t = !1, children: n, ...s } = e;
-        return t ? (0, l.jsx)(h, { children: n }) : (0, l.jsx)(m, { ...s, children: n });
+        let { isStatic: t = !1, children: n, ...r } = e;
+        return t ? (0, i.jsx)(_, { children: n }) : (0, i.jsx)(h, { ...r, children: n });
     },
-    h = (e) => {
+    _ = (e) => {
         let { children: t } = e,
-            n = (0, o.Y_)();
-        return (0, l.jsxs)("div", {
+            n = (0, l.Y_)();
+        return (0, i.jsxs)("div", {
             className: c.Q,
-            children: [(0, l.jsx)("img", { alt: "", src: n.thumbnail, className: c.f }), t],
+            children: [(0, i.jsx)("img", { alt: "", src: n.thumbnail, className: c.f }), t],
         });
     },
-    m = (e) => {
-        let { isPlaying: t = !1, scrubOnHover: n = !1, preload: d = "metadata", lazy: h = !1, children: m } = e,
-            p = (0, o.Y_)(),
-            [f, g] = s.useState(!1),
-            A = s.useCallback((e) => g(e), []),
-            x = (0, a.K)(A, 0.15),
-            C = s.useRef(null),
-            v = (0, i.A)(p.editMetadata?.start ?? 0),
-            E = (0, u.j)(p),
-            T = 0 === p.length,
-            [j, _] = s.useState(0),
-            N = s.useCallback(
+    h = (e) => {
+        let { isPlaying: t = !1, scrubOnHover: n = !1, preload: d = "metadata", lazy: _ = !1, children: h } = e,
+            f = (0, l.Y_)(),
+            [p, E] = r.useState(!1),
+            m = r.useCallback((e) => E(e), []),
+            g = (0, a.K)(m, 0.15),
+            A = r.useRef(null),
+            I = (0, s.A)(f.editMetadata?.start ?? 0),
+            T = (0, u.j)(f),
+            S = 0 === f.length,
+            [y, N] = r.useState(0),
+            v = r.useCallback(
                 (e) => {
-                    let t = C.current;
+                    let t = A.current;
                     if (null == t) return;
-                    let n = p.editMetadata?.start ?? 0,
-                        l = p.editMetadata?.end ?? t.duration;
-                    t.currentTime = Math.max(0, v.current + ((l - n) * e) / 100);
+                    let n = f.editMetadata?.start ?? 0,
+                        i = f.editMetadata?.end ?? t.duration;
+                    t.currentTime = Math.max(0, I.current + ((i - n) * e) / 100);
                 },
-                [C, v, p],
+                [A, I, f],
             ),
-            S = s.useCallback(
+            C = r.useCallback(
                 (e) => {
-                    if (!n || null == C.current) return;
-                    let t = C.current.getBoundingClientRect();
-                    N(((e.clientX - t.left) / t.width) * 100);
+                    if (!n || null == A.current) return;
+                    let t = A.current.getBoundingClientRect();
+                    v(((e.clientX - t.left) / t.width) * 100);
                 },
-                [C, n, N],
+                [A, n, v],
             );
         return (
-            s.useEffect(() => {
-                if (T) return;
-                let e = C.current;
-                null == e || ((!t || e.paused) && ((e.currentTime = v.current), t ? e.play() : e.pause()));
-            }, [t, C, T, v, f]),
-            s.useEffect(() => {
-                let e = C?.current;
-                if (null == e || T) return;
+            r.useEffect(() => {
+                if (S) return;
+                let e = A.current;
+                null == e || ((!t || e.paused) && ((e.currentTime = I.current), t ? e.play() : e.pause()));
+            }, [t, A, S, I, p]),
+            r.useEffect(() => {
+                let e = A?.current;
+                if (null == e || S) return;
                 let t = null,
                     n = () => {
                         if (e.paused || e.ended) {
-                            (t = null), _(0);
+                            (t = null), N(0);
                             return;
                         }
-                        let l = p.editMetadata?.start ?? 0,
-                            s = p.editMetadata?.end ?? e.duration,
-                            i = ((e.currentTime - l) / (s - l)) * 100;
-                        _(isNaN(i) ? 0 : Math.max(0, Math.min(100, i))), (t = requestAnimationFrame(n));
+                        let i = f.editMetadata?.start ?? 0,
+                            r = f.editMetadata?.end ?? e.duration,
+                            s = ((e.currentTime - i) / (r - i)) * 100;
+                        N(isNaN(s) ? 0 : Math.max(0, Math.min(100, s))), (t = requestAnimationFrame(n));
                     },
-                    l = () => {
+                    i = () => {
                         null == t && (t = requestAnimationFrame(n));
                     },
-                    s = () => {
-                        null != t && (cancelAnimationFrame(t), (t = null), _(0));
+                    r = () => {
+                        null != t && (cancelAnimationFrame(t), (t = null), N(0));
                     };
                 return (
-                    e.addEventListener("play", l),
-                    e.addEventListener("pause", s),
-                    e.addEventListener("ended", s),
-                    e.paused || l(),
+                    e.addEventListener("play", i),
+                    e.addEventListener("pause", r),
+                    e.addEventListener("ended", r),
+                    e.paused || i(),
                     () => {
-                        null != t && (cancelAnimationFrame(t), _(0)),
-                            e.removeEventListener("play", l),
-                            e.removeEventListener("pause", s),
-                            e.removeEventListener("ended", s);
+                        null != t && (cancelAnimationFrame(t), N(0)),
+                            e.removeEventListener("play", i),
+                            e.removeEventListener("pause", r),
+                            e.removeEventListener("ended", r);
                     }
                 );
-            }, [C, T, p.editMetadata, f]),
-            (0, l.jsxs)("div", {
-                ref: x,
+            }, [A, S, f.editMetadata, p]),
+            (0, i.jsxs)("div", {
+                ref: g,
                 className: c.Q,
-                onMouseMove: S,
+                onMouseMove: C,
                 children: [
-                    T
-                        ? (0, l.jsx)("img", { alt: "", src: p.thumbnail, className: c.f })
-                        : null != E
-                          ? h && !f
-                              ? (0, l.jsx)("img", { alt: "", src: p.thumbnail, className: c.f })
-                              : (0, l.jsx)(r.A, {
+                    S
+                        ? (0, i.jsx)("img", { alt: "", src: f.thumbnail, className: c.f })
+                        : null != T
+                          ? _ && !p
+                              ? (0, i.jsx)("img", { alt: "", src: f.thumbnail, className: c.f })
+                              : (0, i.jsx)(o.A, {
                                     preload: d,
-                                    poster: p.thumbnail,
+                                    poster: f.thumbnail,
                                     muted: !0,
-                                    src: E,
+                                    src: T,
                                     loop: !0,
                                     className: c.f,
-                                    ref: C,
+                                    ref: A,
                                 })
                           : null,
-                    m,
+                    h,
                 ],
             })
         );
