@@ -1,32 +1,33 @@
-r.d(t, { Cf: () => U, wx: () => W });
-var i = r(627968),
-    l = r(64700),
-    a = r(834730),
-    s = r(366010),
-    n = r(947641),
-    o = r(408278),
-    d = r(624479),
-    c = r(821609),
-    u = r(695366),
-    m = r(194261),
-    h = r(534514),
-    C = r(331322),
-    p = r(17928),
-    _ = r(661531),
-    g = r(144165),
-    E = r(31502),
-    x = r(914410),
-    f = r(363195),
-    R = r(174459),
-    A = r(58703),
-    N = r(975571),
-    I = r(38405),
-    S = r(149995),
-    j = r(398523),
-    v = r(881373),
-    P = r(264779),
-    D = r(852218);
-let b = () =>
+"use strict";
+n.d(t, { Cf: () => F, wx: () => Y });
+var i = n(627968),
+    r = n(64700),
+    s = n(834730),
+    a = n(366010),
+    o = n(947641),
+    l = n(408278),
+    u = n(624479),
+    c = n(821609),
+    d = n(695366),
+    _ = n(194261),
+    f = n(534514),
+    h = n(331322),
+    p = n(17928),
+    E = n(661531),
+    m = n(144165),
+    g = n(31502),
+    A = n(914410),
+    I = n(363195),
+    T = n(174459),
+    S = n(58703),
+    N = n(975571),
+    y = n(38405),
+    C = n(149995),
+    v = n(398523),
+    O = n(881373),
+    R = n(264779),
+    b = n(852218);
+let D = () =>
         (0, i.jsxs)("svg", {
             width: "20",
             height: "20",
@@ -74,7 +75,7 @@ let b = () =>
                 }),
             ],
         }),
-    T = () =>
+    L = () =>
         (0, i.jsxs)("svg", {
             width: "20",
             height: "20",
@@ -122,7 +123,7 @@ let b = () =>
                 }),
             ],
         }),
-    y = () =>
+    w = () =>
         (0, i.jsxs)("svg", {
             width: "20",
             height: "20",
@@ -155,7 +156,7 @@ let b = () =>
                 }),
             ],
         }),
-    O = () =>
+    M = () =>
         (0, i.jsxs)("svg", {
             width: "20",
             height: "20",
@@ -188,124 +189,124 @@ let b = () =>
                 }),
             ],
         });
-var L = r(652215),
-    w = r(962995),
-    M = r(375708),
-    B = r(75662),
-    k = r(208556);
-function U() {
-    let e = (0, E.Q)("getRecurringPromotionPartnerAttributes");
+var P = n(652215),
+    x = n(962995),
+    U = n(375708),
+    k = n(75662),
+    G = n(208556);
+function F() {
+    let e = (0, g.Q)("getRecurringPromotionPartnerAttributes");
     return {
-        [D.XY]: {
-            title: e ? w.default.PF1aT5 : w.default.LsJ9hj,
-            titleParams: e ? { discountPercentage: v.aW } : { discountPercent: v.aW },
-            body: e ? w.default.KoKwMn : w.default.Yl5ww1,
-            bodyWithExpiration: w.default["6KjkUa"],
+        [b.XY]: {
+            title: e ? x.default.PF1aT5 : x.default.LsJ9hj,
+            titleParams: e ? { discountPercentage: O.aW } : { discountPercent: O.aW },
+            body: e ? x.default.KoKwMn : x.default.Yl5ww1,
+            bodyWithExpiration: x.default["6KjkUa"],
             redemptionURL: "https://www.logitech.com/",
             logos: {
-                dark: (0, i.jsx)(l.Fragment, {}, "logitech-logo-dark"),
-                light: (0, i.jsx)(l.Fragment, {}, "logitech-logo-light"),
+                dark: (0, i.jsx)(r.Fragment, {}, "logitech-logo-dark"),
+                light: (0, i.jsx)(r.Fragment, {}, "logitech-logo-light"),
             },
-            asset: k.A,
+            asset: G.A,
         },
-        [D.KS]: {
-            title: M.t.p7BkHh,
-            titleParams: { discountPercentage: (0, S.LR)("getRecurringPromotionPartnerAttributes") ? j.zG : j.H7 },
-            body: e ? M.t.nmvvaN : M.t.igiSKe,
-            bodyWithExpiration: M.t.w8CXUl,
+        [b.KS]: {
+            title: U.t.p7BkHh,
+            titleParams: { discountPercentage: (0, C.LR)("getRecurringPromotionPartnerAttributes") ? v.zG : v.H7 },
+            body: e ? U.t.nmvvaN : U.t.igiSKe,
+            bodyWithExpiration: U.t.w8CXUl,
             redemptionURL: "https://steelseries.com/",
-            logos: { dark: (0, i.jsx)(b, {}), light: (0, i.jsx)(T, {}) },
+            logos: { dark: (0, i.jsx)(D, {}), light: (0, i.jsx)(L, {}) },
             asset: "https://cdn.discordapp.com/assets/content/c23a186569a2e8606d206cd4b5cc7f4ee8f880c844bc0debd5fd3400400ff7bc.png",
         },
-        [D.Cs]: {
-            title: e ? M.t.QEJnti : M.t["9N8obd"],
-            titleParams: e ? { discountPercentage: j.F0 } : void 0,
-            body: e ? M.t.eT5vm0 : M.t["34g+Z3"],
-            bodyWithExpiration: M.t.rqmpXc,
-            bodyNote: (0, S.Se)("getRecurringPromotionPartnerAttributes") ? M.t.vblnHk : void 0,
+        [b.Cs]: {
+            title: e ? U.t.QEJnti : U.t["9N8obd"],
+            titleParams: e ? { discountPercentage: v.F0 } : void 0,
+            body: e ? U.t.eT5vm0 : U.t["34g+Z3"],
+            bodyWithExpiration: U.t.rqmpXc,
+            bodyNote: (0, C.Se)("getRecurringPromotionPartnerAttributes") ? U.t.vblnHk : void 0,
             redemptionURL: "https://www.kontrolfreek.com/",
-            logos: { dark: (0, i.jsx)(y, {}), light: (0, i.jsx)(O, {}) },
+            logos: { dark: (0, i.jsx)(w, {}), light: (0, i.jsx)(M, {}) },
             asset: "https://cdn.discordapp.com/assets/content/6706fc54c35e86999d3537dcc3ef8bfe91f25db6a141b4b6e5b451ebc5cae86b.png",
         },
     };
 }
-let F = () => {
-        let e = (0, A.N5)(),
-            t = (0, A.P6)();
+let V = () => {
+        let e = (0, S.N5)(),
+            t = (0, S.P6)();
         return (0, i.jsxs)("div", {
-            className: `${B.G9} ${B.sQ}`,
+            className: `${k.G9} ${k.sQ}`,
             children: [
-                (0, i.jsx)(a.E, {
+                (0, i.jsx)(s.E, {
                     variant: "text-sm/normal",
                     color: "text-muted",
-                    className: B.kT,
-                    children: M.intl.format(w.default["65EEvD"], { days: t }),
+                    className: k.kT,
+                    children: U.intl.format(x.default["65EEvD"], { days: t }),
                 }),
-                (0, i.jsx)(x.Ay, {
+                (0, i.jsx)(A.Ay, {
                     progress: e,
-                    variant: x.qP.UNSET,
+                    variant: A.qP.UNSET,
                     override: { default: { gradientStart: "var(--illo-blue-70)", gradientEnd: "var(--illo-blue-10)" } },
                 }),
             ],
         });
     },
-    G = (e) => {
+    B = (e) => {
         let { children: t } = e;
-        return (0, i.jsx)("div", { className: B.oP, children: (0, i.jsx)("div", { className: B.t0, children: t }) });
+        return (0, i.jsx)("div", { className: k.oP, children: (0, i.jsx)("div", { className: k.t0, children: t }) });
     },
     H = (e) => {
-        let { recurrence: t, analyticsLocations: r = [] } = e,
-            s = (0, i.jsx)(n.r, { color: _.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
-            u = (0, i.jsx)("span", {
-                className: B.nP,
-                children: (0, i.jsx)(o.K, {
-                    icon: d.T,
+        let { recurrence: t, analyticsLocations: n = [] } = e,
+            a = (0, i.jsx)(o.r, { color: E.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT }),
+            d = (0, i.jsx)("span", {
+                className: k.nP,
+                children: (0, i.jsx)(l.K, {
+                    icon: u.T,
                     size: "sm",
                     variant: "icon-only",
                     "aria-label": "",
                     onClick: () => {
                         navigator.clipboard.writeText(t.code),
-                            h(s),
-                            R.default.track(L.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                            f(a),
+                            T.default.track(P.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                                 partner: t.partnerId,
                                 cta_type: "copy code",
                                 promotion: t.outboundTitle,
                                 promotion_id: t.id,
-                                location_stack: r,
+                                location_stack: n,
                             });
                     },
                 }),
             }),
-            [m, h] = l.useState(() => u);
+            [_, f] = r.useState(() => d);
         if (null != t.code)
             return (0, i.jsx)("div", {
-                className: B.oP,
+                className: k.oP,
                 children: (0, i.jsxs)("div", {
-                    className: B.t0,
+                    className: k.t0,
                     children: [
                         (0, i.jsx)("div", {
-                            className: B.cD,
-                            children: (0, i.jsx)(a.E, {
+                            className: k.cD,
+                            children: (0, i.jsx)(s.E, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
                                 children: t.code,
                             }),
                         }),
-                        m,
+                        _,
                         (0, i.jsx)(c.$, {
                             variant: "secondary",
                             size: "sm",
-                            text: M.intl.formatToPlainString(M.t.DF68t7, { redemptionURL: t.redemptionURL }),
+                            text: U.intl.formatToPlainString(U.t.DF68t7, { redemptionURL: t.redemptionURL }),
                             onClick: () => {
                                 window.open(t.redemptionURL, "_blank"),
-                                    R.default.track(L.HAw.RECURRING_PROMOTION_CLAIMED),
-                                    R.default.track(L.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                                    T.default.track(P.HAw.RECURRING_PROMOTION_CLAIMED),
+                                    T.default.track(P.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                                         partner: t.partnerId,
                                         cta_type: "visit store",
                                         promotion: t.outboundTitle,
                                         promotion_id: t.id,
                                         url: t.redemptionURL,
-                                        location_stack: r,
+                                        location_stack: n,
                                     });
                             },
                         }),
@@ -313,118 +314,118 @@ let F = () => {
                 }),
             });
     },
-    V = (e) => {
+    j = (e) => {
         let {
             recurrence: t,
-            canBeClaimed: r,
-            hasClaimError: l,
-            setCode: a,
-            setHasClaimError: s,
-            className: n,
-            analyticsLocations: o = [],
+            canBeClaimed: n,
+            hasClaimError: r,
+            setCode: s,
+            setHasClaimError: a,
+            className: o,
+            analyticsLocations: l = [],
         } = e;
-        return r
-            ? l
+        return n
+            ? r
                 ? (0, i.jsx)("div", {
-                      className: n,
+                      className: o,
                       children: (0, i.jsx)(c.$, {
-                          icon: u.E,
+                          icon: d.E,
                           variant: "critical-secondary",
                           size: "sm",
                           disabled: !0,
-                          text: M.intl.string(M.t["8LKchl"]),
+                          text: U.intl.string(U.t["8LKchl"]),
                       }),
                   })
                 : (0, i.jsx)("div", {
-                      className: n,
+                      className: o,
                       children: (0, i.jsx)(c.$, {
-                          icon: m.X,
+                          icon: _.X,
                           variant: "secondary",
                           size: "sm",
-                          text: M.intl.string(M.t.vwASIl),
+                          text: U.intl.string(U.t.vwASIl),
                           onClick: () => {
-                              (0, P.kd)({
+                              (0, R.kd)({
                                   promotionId: t.id,
                                   promotionTitle: t.outboundTitle,
                                   partnerId: t.partnerId,
-                                  analyticsLocations: o,
+                                  analyticsLocations: l,
                               })
                                   .then((e) => {
-                                      a(e.code);
+                                      s(e.code);
                                   })
                                   .catch((e) => {
-                                      s(!0), I.A.captureException(e);
+                                      a(!0), y.A.captureException(e);
                                   });
                           },
                       }),
                   })
             : null;
     },
-    W = (e) => {
+    Y = (e) => {
         var t;
-        let r,
-            a,
+        let n,
+            s,
             {
-                recurrence: n,
-                titleClassName: o,
-                showPartnerLogo: d = !1,
+                recurrence: o,
+                titleClassName: l,
+                showPartnerLogo: u = !1,
                 showPartnerImage: c = !1,
-                titleVariant: u = "primary",
-                displayCTAInDedicatedFooter: m = !1,
-                analyticsLocations: _ = [],
+                titleVariant: d = "primary",
+                displayCTAInDedicatedFooter: _ = !1,
+                analyticsLocations: E = [],
             } = e,
-            [E, x] = l.useState(n.code),
-            [R, A] = l.useState(!1),
-            I =
-                ((t = n.partnerId),
-                (r = (0, p.bG)([f.A], () => (0, s.M)(f.A.theme))),
-                null == (a = U()[t]) ? null : r ? a.logos.dark : a.logos.light),
-            S = null == E;
+            [g, A] = r.useState(o.code),
+            [T, S] = r.useState(!1),
+            y =
+                ((t = o.partnerId),
+                (n = (0, p.bG)([I.A], () => (0, a.M)(I.A.theme))),
+                null == (s = F()[t]) ? null : n ? s.logos.dark : s.logos.light),
+            C = null == g;
         return (0, i.jsxs)("div", {
-            className: B.lA,
+            className: k.lA,
             children: [
                 (0, i.jsxs)("div", {
-                    className: B.LV,
+                    className: k.LV,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: B.JN,
+                            className: k.JN,
                             children: [
-                                d && I,
+                                u && y,
                                 (0, i.jsxs)("div", {
-                                    className: null != o ? `${B.yO} ${o}` : B.yO,
+                                    className: null != l ? `${k.yO} ${l}` : k.yO,
                                     children: [
-                                        (0, i.jsx)(h.D, {
-                                            variant: "secondary" === u ? "heading-md/semibold" : "heading-lg/semibold",
+                                        (0, i.jsx)(f.D, {
+                                            variant: "secondary" === d ? "heading-md/semibold" : "heading-lg/semibold",
                                             color: "text-strong",
-                                            children: n.title,
+                                            children: o.title,
                                         }),
-                                        (0, i.jsxs)(C.B, {
+                                        (0, i.jsxs)(h.B, {
                                             direction: "vertical",
                                             gap: 8,
                                             children: [
-                                                (0, i.jsx)(h.D, {
+                                                (0, i.jsx)(f.D, {
                                                     variant: "heading-sm/medium",
                                                     color: "text-subtle",
-                                                    children: R
-                                                        ? M.intl.format(M.t.i2EuFO, {
+                                                    children: T
+                                                        ? U.intl.format(U.t.i2EuFO, {
                                                               helpdeskArticle: N.A.getArticleURL(
-                                                                  L.MVz.RECURRING_PROMOTION,
+                                                                  P.MVz.RECURRING_PROMOTION,
                                                               ),
                                                           })
-                                                        : S
-                                                          ? n.body
-                                                          : null != n.bodyWithExpiration
-                                                            ? M.intl.format(n.bodyWithExpiration, { date: n.endDate })
-                                                            : n.body,
+                                                        : C
+                                                          ? o.body
+                                                          : null != o.bodyWithExpiration
+                                                            ? U.intl.format(o.bodyWithExpiration, { date: o.endDate })
+                                                            : o.body,
                                                 }),
-                                                null != n.bodyNote &&
-                                                    (0, i.jsx)(h.D, {
+                                                null != o.bodyNote &&
+                                                    (0, i.jsx)(f.D, {
                                                         variant: "heading-sm/medium",
                                                         color: "text-subtle",
-                                                        children: M.intl.format(n.bodyNote, {
-                                                            partnerName: D.CD[n.partnerId].label,
+                                                        children: U.intl.format(o.bodyNote, {
+                                                            partnerName: b.CD[o.partnerId].label,
                                                             helpdeskArticle: N.A.getArticleURL(
-                                                                L.MVz.RECURRING_PROMOTION,
+                                                                P.MVz.RECURRING_PROMOTION,
                                                             ),
                                                         }),
                                                     }),
@@ -432,24 +433,24 @@ let F = () => {
                                         }),
                                     ],
                                 }),
-                                !m &&
-                                    (0, i.jsx)(V, {
-                                        recurrence: n,
-                                        canBeClaimed: S,
-                                        hasClaimError: R,
-                                        setCode: x,
-                                        setHasClaimError: A,
-                                        analyticsLocations: _,
+                                !_ &&
+                                    (0, i.jsx)(j, {
+                                        recurrence: o,
+                                        canBeClaimed: C,
+                                        hasClaimError: T,
+                                        setCode: A,
+                                        setHasClaimError: S,
+                                        analyticsLocations: E,
                                     }),
                             ],
                         }),
                         c &&
                             (0, i.jsx)("div", {
-                                className: B.R4,
-                                children: (0, i.jsx)(g._, {
-                                    src: n.asset ?? "",
-                                    className: B.Ys,
-                                    imageClassName: n.partnerId === D.XY ? B.Cy : void 0,
+                                className: k.R4,
+                                children: (0, i.jsx)(m._, {
+                                    src: o.asset ?? "",
+                                    className: k.Ys,
+                                    imageClassName: o.partnerId === b.XY ? k.Cy : void 0,
                                     width: 100,
                                     height: 100,
                                     zoomable: !1,
@@ -457,19 +458,19 @@ let F = () => {
                             }),
                     ],
                 }),
-                m && (0, i.jsx)(F, {}),
-                null != E && (0, i.jsx)(H, { recurrence: { ...n, code: E }, analyticsLocations: _ }),
-                m &&
-                    null == E &&
-                    (0, i.jsx)(G, {
-                        children: (0, i.jsx)(V, {
-                            recurrence: n,
-                            canBeClaimed: S,
-                            hasClaimError: R,
-                            setCode: x,
-                            setHasClaimError: A,
-                            className: B.qx,
-                            analyticsLocations: _,
+                _ && (0, i.jsx)(V, {}),
+                null != g && (0, i.jsx)(H, { recurrence: { ...o, code: g }, analyticsLocations: E }),
+                _ &&
+                    null == g &&
+                    (0, i.jsx)(B, {
+                        children: (0, i.jsx)(j, {
+                            recurrence: o,
+                            canBeClaimed: C,
+                            hasClaimError: T,
+                            setCode: A,
+                            setHasClaimError: S,
+                            className: k.qx,
+                            analyticsLocations: E,
                         }),
                     }),
             ],
