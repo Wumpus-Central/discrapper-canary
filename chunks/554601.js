@@ -561,11 +561,10 @@ function eJ(e) {
                                                         n.e("84448"),
                                                         n.e("16415"),
                                                         n.e("89001"),
-                                                        n.e("84001"),
+                                                        n.e("27546"),
                                                         n.e("94863"),
                                                         n.e("41229"),
                                                         n.e("53694"),
-                                                        n.e("36407"),
                                                         n.e("70682"),
                                                         n.e("43535"),
                                                         n.e("79705"),
@@ -841,8 +840,8 @@ function e4(e) {
     );
 }
 var e8 = n(34188),
-    e7 = n(700623),
-    e2 = n(177953),
+    e2 = n(700623),
+    e7 = n(177953),
     e3 = n(825484),
     e9 = n(512950),
     e6 = n(900797),
@@ -1114,7 +1113,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: tv.wi,
                             children: [
-                                (0, r.jsx)(e7.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e2.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1181,7 +1180,7 @@ function tR(e) {
     return (0, r.jsxs)("div", {
         className: tv.I8,
         children: [
-            (0, r.jsx)(e2.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, r.jsx)(e7.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             (0, r.jsx)(T.E, {
                 variant: "text-sm/semibold",
                 color: "interactive-text-default",
@@ -1402,13 +1401,13 @@ var tZ = n(111042),
     t1 = n(179771),
     t4 = n(824552),
     t8 = n(168186),
-    t7 = n(594061),
-    t2 = n(935208),
+    t2 = n(594061),
+    t7 = n(935208),
     t3 = n(630248),
     t9 = n(355097);
 function t6(e, t) {
     o.useEffect(() => {
-        t7.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t2.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t3.A], () => t3.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -1421,7 +1420,7 @@ function t6(e, t) {
         i = o.useMemo(() => t?.filter((t) => !e.some((e) => e.id === t.application.id)), [e, t]),
         s = o.useMemo(() => {
             i?.forEach((e) => {
-                let t = t2.default.extractTimestamp(e.id);
+                let t = t7.default.extractTimestamp(e.id);
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute();
@@ -1439,7 +1438,7 @@ function t6(e, t) {
     return o.useMemo(() => {
         let e, i;
         t?.forEach((t) => {
-            let n = t2.default.extractTimestamp(t.id);
+            let n = t7.default.extractTimestamp(t.id);
             (null == i || n > i) && ((e = t), (i = n));
         }),
             l.forEach((t) => {
@@ -1842,7 +1841,7 @@ function nV(e) {
                 o.useEffect(() => {
                     let e = eE().sortBy(Object.entries(n), (e) => {
                         let [t, n] = e;
-                        return -t2.default.extractTimestamp(n);
+                        return -t7.default.extractTimestamp(n);
                     });
                     i(
                         eE()
@@ -2063,8 +2062,8 @@ var nQ = n(984516),
     n1 = n(485845),
     n4 = n(994369),
     n8 = n(240591),
-    n7 = n(46477);
-function n2(e, t) {
+    n2 = n(46477);
+function n7(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
         s = ((n = e), (l = t.filterPredicates ?? []), n.filter((e) => l.every((t) => t(e))));
@@ -2362,7 +2361,7 @@ function lm(e) {
                     var e, i, a, r, o, d, u;
                     let m, p, h, A, f;
                     if (!s) return [];
-                    return n2(c, {
+                    return n7(c, {
                         limit: l,
                         filterPredicates: [
                             ((m = (0, n8.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
@@ -2375,8 +2374,8 @@ function lm(e) {
                                             isGuildInstalled: r,
                                             isUserInstalled: o,
                                         } = (0, g.Sx)(t, e.applicationId),
-                                        c = n?.guild_id != null ? n7.we(a?.permissions, n.guild_id, l, i, s) : null,
-                                        d = n?.guild_id != null ? n7._W(a?.permissions, n, n.guild_id) : null;
+                                        c = n?.guild_id != null ? n2.we(a?.permissions, n.guild_id, l, i, s) : null,
+                                        d = n?.guild_id != null ? n2._W(a?.permissions, n, n.guild_id) : null;
                                     p[e.applicationId] = {
                                         descriptor: a,
                                         applicationAllowedForUser: c,
@@ -2393,13 +2392,13 @@ function lm(e) {
                                     isUserInstalled: d,
                                 } = p[e.applicationId];
                                 return (
-                                    n7.zl(e, m, {
+                                    n2.zl(e, m, {
                                         applicationAllowedForUser: o,
                                         applicationAllowedForChannel: r,
                                         commandBotId: a?.botId,
                                         isGuildInstalled: c,
                                         isUserInstalled: d,
-                                    }) === n7.CA.ALLOWED
+                                    }) === n2.CA.ALLOWED
                                 );
                             }),
                         ],
@@ -2499,7 +2498,7 @@ function lm(e) {
                                     }),
                             );
                     } else a && (u = m);
-                    return n2(u, {
+                    return n7(u, {
                         limit: i,
                         filterPredicates: [
                             ((d = (0, n8.Bh)("channel" === t.type ? t.channel : void 0, [
@@ -2514,20 +2513,20 @@ function lm(e) {
                                         isGuildInstalled: o,
                                         isUserInstalled: c,
                                     } = (0, g.Sx)(t, e.id),
-                                    u = n?.guild_id != null ? n7.we(a?.permissions, n.guild_id, l, i, s) : null,
-                                    m = n?.guild_id != null ? n7._W(a?.permissions, n, n.guild_id) : null;
+                                    u = n?.guild_id != null ? n2.we(a?.permissions, n.guild_id, l, i, s) : null,
+                                    m = n?.guild_id != null ? n2._W(a?.permissions, n, n.guild_id) : null;
                                 return (
                                     null == r ||
                                     !(r.length > 0) ||
                                     r.some(
                                         (e) =>
-                                            n7.zl(e, d, {
+                                            n2.zl(e, d, {
                                                 applicationAllowedForUser: u,
                                                 applicationAllowedForChannel: m,
                                                 commandBotId: a?.botId,
                                                 isGuildInstalled: o,
                                                 isUserInstalled: c,
-                                            }) === n7.CA.ALLOWED,
+                                            }) === n2.CA.ALLOWED,
                                     )
                                 );
                             }),

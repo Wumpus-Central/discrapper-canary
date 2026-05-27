@@ -553,3 +553,19 @@ html:not(.chat-input) .inputInner_b1f01d {
 .scrollerContent_c3474d {
     padding: 4px
 }
+
+.baseAvatar__6738d {
+    display: inline-block;
+    vertical-align: top
+}
+
+.largeAvatar__6738d {
+    line-height: 24px;
+    margin-inline-end: 8px
+}
+
+.miniAvatar__6738d {
+    line-height: 18px;
+    margin-inline-end: 4px;
+    margin-top: 1px
+}

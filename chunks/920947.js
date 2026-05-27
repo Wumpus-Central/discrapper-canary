@@ -1,119 +1,109 @@
-s.d(i, { A: () => O });
-var l = s(627968),
-    n = s(64700),
-    t = s(17928),
-    a = s(793574),
-    o = s(70730);
-let r = (0, s(945810).mj)({
+l.d(s, { A: () => b });
+var i = l(627968),
+    t = l(64700),
+    n = l(17928),
+    a = l(793574),
+    r = l(70730);
+let o = (0, l(945810).mj)({
     kind: "user",
     name: "2026-05-remove-friendship-anniversary-profile-popout",
     defaultConfig: { hidePopout: !1 },
     variations: { 1: { hidePopout: !0 } },
 });
-var d = s(275759),
-    c = s(503698),
-    u = s.n(c),
-    h = s(562708),
-    p = s(408278),
-    A = s(789645),
-    x = s(834730),
-    m = s(939249),
-    v = s(308528),
-    f = s(982168),
-    g = s(730134),
-    C = s(139286),
-    E = s(287809),
-    j = s(45787),
-    I = s(788868),
-    N = s(778712),
-    _ = s(375708),
-    b = s(212583);
-function P(e) {
-    let { profileUserId: i, shouldBannerBeClickable: s = !1, onClose: a } = e,
-        o = (0, t.bG)([E.default], () => E.default.getUser(i), [i]),
-        r = (0, t.bG)([E.default], () => E.default.getCurrentUser()),
-        c = (0, t.bG)([d.Ay], () => d.Ay.getFriendAnniversaryYears(i), [i]);
-    n.useEffect(() => {
-        (0, C.x)({
-            name: h.ImpressionNames.GIFT_INTENT_USER_PROFILE_POPOUT,
-            type: h.ImpressionTypes.VIEW,
-            properties: { gift_intent_type: I.np.FRIEND_ANNIVERSARY },
-        });
-    }, []);
-    let P = n.useCallback(() => {
-            v.A.openPrivateChannel({ recipientIds: i }), a?.(), f.A.popAll();
-        }, [a, i]),
-        R = (0, l.jsxs)(l.Fragment, {
+var d = l(275759),
+    u = l(562708),
+    c = l(408278),
+    h = l(789645),
+    p = l(834730),
+    x = l(730134),
+    m = l(139286),
+    A = l(287809),
+    v = l(45787),
+    f = l(788868),
+    g = l(778712),
+    E = l(375708),
+    j = l(212583);
+function I(e) {
+    let { profileUserId: s } = e,
+        l = (0, n.bG)([A.default], () => A.default.getUser(s), [s]),
+        a = (0, n.bG)([A.default], () => A.default.getCurrentUser()),
+        r = (0, n.bG)([d.Ay], () => d.Ay.getFriendAnniversaryYears(s), [s]);
+    return (
+        t.useEffect(() => {
+            (0, m.x)({
+                name: u.ImpressionNames.GIFT_INTENT_USER_PROFILE_POPOUT,
+                type: u.ImpressionTypes.VIEW,
+                properties: { gift_intent_type: f.np.FRIEND_ANNIVERSARY },
+            });
+        }, []),
+        (0, i.jsxs)("div", {
+            className: j.kL,
             children: [
-                (0, l.jsx)("div", {
-                    className: b.b,
-                    children: (0, l.jsx)(p.K, {
-                        icon: A.P,
+                (0, i.jsx)("div", {
+                    className: j.b,
+                    children: (0, i.jsx)(c.K, {
+                        icon: h.P,
                         size: "sm",
                         variant: "icon-only",
-                        "aria-label": _.intl.string(_.t.cpT0Cq),
+                        "aria-label": E.intl.string(E.t.cpT0Cq),
                         onClick: (e) => {
-                            e.stopPropagation(), (0, j.CK)(i);
+                            e.stopPropagation(), (0, v.CK)(s);
                         },
                     }),
                 }),
-                (0, l.jsx)(x.E, {
+                (0, i.jsx)(p.E, {
                     variant: "text-sm/semibold",
                     color: "text-strong",
-                    children: _.intl.string(_.t.icDVNb),
+                    children: E.intl.string(E.t.icDVNb),
                 }),
-                (0, l.jsxs)("div", {
-                    className: b.SC,
+                (0, i.jsxs)("div", {
+                    className: j.SC,
                     children: [
-                        null != o && (0, l.jsx)(g.A, { size: N._3.SIZE_16, user: o }),
-                        null != r && (0, l.jsx)(g.A, { className: b.GM, size: N._3.SIZE_16, user: r }),
-                        (0, l.jsx)(x.E, {
+                        null != l && (0, i.jsx)(x.A, { size: g._3.SIZE_16, user: l }),
+                        null != a && (0, i.jsx)(x.A, { className: j.GM, size: g._3.SIZE_16, user: a }),
+                        (0, i.jsx)(p.E, {
                             variant: "text-xs/normal",
                             color: "text-strong",
-                            children: _.intl.formatToPlainString(_.t.PpG27s, { numberOfYears: c }),
+                            children: E.intl.formatToPlainString(E.t.PpG27s, { numberOfYears: r }),
                         }),
                     ],
                 }),
             ],
-        });
-    return s
-        ? (0, l.jsx)(m.D, { className: u()(b.kL, b.Wk), onClick: P, children: R })
-        : (0, l.jsx)("div", { className: b.kL, children: R });
+        })
+    );
 }
-var R = s(880528),
-    y = s(570287),
-    k = s(822775),
-    S = s(904290),
-    T = s(656884);
-function D(e) {
-    let { user: i, guildId: s, channelId: n, onClose: t, disableAutoFocus: a, upsellEligible: o } = e,
-        r = (0, R.x)().hideDMInput;
-    return (0, l.jsxs)(l.Fragment, {
+var N = l(570287),
+    _ = l(822775),
+    R = l(904290),
+    C = l(656884);
+function P(e) {
+    let { user: s, guildId: l, channelId: t, onClose: n, disableAutoFocus: a, upsellEligible: r } = e;
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            o && (0, l.jsx)(P, { profileUserId: i.id, shouldBannerBeClickable: r, onClose: t }),
-            !r && (0, l.jsx)(S.A, { user: i, guildId: s, channelId: n, onClose: t, disableAutoFocus: a, upsell: o }),
+            r && (0, i.jsx)(I, { profileUserId: s.id }),
+            (0, i.jsx)(R.A, { user: s, guildId: l, channelId: t, onClose: n, disableAutoFocus: a, upsell: r }),
         ],
     });
 }
-function O(e) {
-    let { user: i, guildId: s, channelId: n, onClose: c, appContext: u, disableAutoFocus: h = !1 } = e,
-        p = (0, y.A)(i.id, s),
-        A = (0, o.p)(a.A.USER_PROFILE_POPOUT),
-        { hidePopout: x } = r.useConfig({ location: "UserProfilePopout" }),
-        m = (0, t.bG)([d.Ay], () => d.Ay.canShowProfilePopoutGiftIntents(i.id), [i.id]);
-    return (0, l.jsxs)("div", {
-        className: T.qr,
+function b(e) {
+    let { user: s, guildId: l, channelId: t, onClose: u, appContext: c, disableAutoFocus: h = !1 } = e,
+        p = (0, N.A)(s.id, l),
+        x = (0, r.p)(a.A.USER_PROFILE_POPOUT),
+        { hidePopout: m } = o.useConfig({ location: "UserProfilePopout" }),
+        A = (0, n.bG)([d.Ay], () => d.Ay.canShowProfilePopoutGiftIntents(s.id), [s.id]);
+    return (0, i.jsxs)("div", {
+        className: C.qr,
         children: [
             p &&
-                (0, l.jsx)(D, {
-                    user: i,
-                    guildId: s,
-                    channelId: n,
-                    onClose: c,
+                (0, i.jsx)(P, {
+                    user: s,
+                    guildId: l,
+                    channelId: t,
+                    onClose: u,
                     disableAutoFocus: h,
-                    upsellEligible: A && m && !x,
+                    upsellEligible: x && A && !m,
                 }),
-            !p && (0, l.jsx)(k.A, { user: i, guildId: s, onClose: c, fullWidth: !0, appContext: u }),
+            !p && (0, i.jsx)(_.A, { user: s, guildId: l, onClose: u, fullWidth: !0, appContext: c }),
         ],
     });
 }

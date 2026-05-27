@@ -546,8 +546,8 @@ let e3 = (0, i(600975).C)({
     ],
 });
 var e9 = i(699976),
-    e4 = i(415679);
-let e8 = (0, eJ.Fe)({
+    e8 = i(415679);
+let e4 = (0, eJ.Fe)({
     createPromise: () =>
         Promise.all([
             i.e("62727"),
@@ -572,11 +572,10 @@ let e8 = (0, eJ.Fe)({
             i.e("84448"),
             i.e("16415"),
             i.e("89001"),
-            i.e("84001"),
+            i.e("27546"),
             i.e("94863"),
             i.e("41229"),
             i.e("53694"),
-            i.e("36407"),
             i.e("70682"),
             i.e("43535"),
             i.e("79705"),
@@ -693,10 +692,10 @@ function e5(e) {
         ? (0, l.jsxs)(l.Fragment, {
               children: [
                   c,
-                  (0, l.jsx)(e8, {
-                      className: e4.L,
+                  (0, l.jsx)(e4, {
+                      className: e8.L,
                       applicationId: s,
-                      rewardOfferNoticeClassName: e4.Nh,
+                      rewardOfferNoticeClassName: e8.Nh,
                       userIds: [t.id],
                       location: "voice_channel",
                       guildId: i.guild_id,
@@ -726,7 +725,7 @@ function te(e) {
         h = (0, r.bG)([eE.A], () => eE.A.getVoiceStateForChannel(n, t.id)?.connectedAt),
         p = null != h ? new Date(h * e6.A.Millis.SECOND).getTime() : null;
     return (0, l.jsxs)("div", {
-        className: e4.aq,
+        className: e8.aq,
         children: [
             (0, l.jsx)(F.eu, {
                 src: d,
@@ -735,10 +734,10 @@ function te(e) {
                 avatarDecoration: o,
                 status: (0, eK.A)(A) ? z.clD.STREAMING : u === z.clD.OFFLINE ? void 0 : u,
                 isMobile: m,
-                className: e4.my,
+                className: e8.my,
             }),
             (0, l.jsxs)("div", {
-                className: e4.Qq,
+                className: e8.Qq,
                 children: [
                     (0, l.jsx)(T.E, { variant: "text-sm/medium", lineClamp: 1, children: c }),
                     null != p && (0, l.jsx)(eX.z, { textColor: "text-feedback-positive", entry: { start: p } }),
@@ -850,13 +849,13 @@ function tt(e) {
     });
     return A
         ? (0, l.jsxs)("div", {
-              className: a()(eo.popover, e4.Db),
+              className: a()(eo.popover, e8.Db),
               children: [
                   (0, l.jsx)(te, { user: c, guildId: s.guild_id, channelId: s.id }),
-                  _ && (0, l.jsx)(eW.Ip, { className: a()(eo.popover, e4.XG), children: P }),
+                  _ && (0, l.jsx)(eW.Ip, { className: a()(eo.popover, e8.XG), children: P }),
               ],
           })
-        : (0, l.jsx)(eW.Ip, { className: a()(eo.popover, e4.kL), children: P });
+        : (0, l.jsx)(eW.Ip, { className: a()(eo.popover, e8.kL), children: P });
 }
 var ti = i(325278),
     tl = i(976358);
@@ -960,12 +959,11 @@ let ta = (0, ek.J)(function (e) {
                     i.e("68403"),
                     i.e("85968"),
                     i.e("66495"),
-                    i.e("60195"),
                     i.e("71210"),
                     i.e("29787"),
                     i.e("88342"),
+                    i.e("82073"),
                     i.e("97558"),
-                    i.e("94000"),
                     i.e("91994"),
                     i.e("42451"),
                     i.e("98965"),
