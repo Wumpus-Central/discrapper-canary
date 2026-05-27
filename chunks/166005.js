@@ -353,7 +353,7 @@ function V(e) {
                     (e += o + 4), n.push(i);
                 }
             }
-            p(n.length === A.length ? A : n), N(t), E.current++;
+            p(n.length !== A.length || n.some((e, l) => e.id !== A[l]?.id) ? n : A), N(t), E.current++;
         }, [r, A, M]);
     let I = M ? r : A,
         P = () => {
