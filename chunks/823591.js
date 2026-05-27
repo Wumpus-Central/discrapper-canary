@@ -241,10 +241,10 @@ function ed(e) {
                 (0, u.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            l.e("1944"),
+                            l.e("96768"),
                             l.e("4782"),
-                            l.e("56377"),
-                            l.e("5956"),
+                            l.e("37041"),
+                            l.e("12616"),
                             l.e("54975"),
                             l.e("89545"),
                             l.e("91531"),

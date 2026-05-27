@@ -1,0 +1,1 @@
+s.exports = { r: "body__269fe", G: "tagsRow__269fe" };

@@ -17,7 +17,7 @@ function p(e, n) {
               action: () =>
                   (0, l.openModalLazy)(async () => {
                       let { default: d } = await Promise.all([
-                          a.e("1944"),
+                          a.e("96768"),
                           a.e("11585"),
                           a.e("3589"),
                           a.e("89916"),
@@ -27,9 +27,9 @@ function p(e, n) {
                           a.e("19193"),
                           a.e("7775"),
                           a.e("58608"),
-                          a.e("70195"),
+                          a.e("28034"),
                           a.e("37038"),
-                      ]).then(a.bind(a, 946430));
+                      ]).then(a.bind(a, 333369));
                       return (a) =>
                           (0, t.jsx)(d, {
                               ...a,

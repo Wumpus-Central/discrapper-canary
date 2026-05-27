@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => p, UE: () => f, gA: () => h });
+n.d(t, { Ay: () => p, UE: () => h, gA: () => f });
 var i = n(627968);
 n(64700);
 var r = n(192308),
@@ -11,7 +11,7 @@ var r = n(192308),
     c = n(67518),
     d = n(652215),
     _ = n(375708);
-function f(e) {
+function h(e) {
     let { user: t, activity: n, entry: i } = e;
     return null != i
         ? { applicationId: (0, o.zD)(i) ? i.extra.application_id : void 0, sourceUserId: i.author_id }
@@ -22,10 +22,10 @@ function f(e) {
             }
           : { applicationId: void 0, sourceUserId: void 0 };
 }
-function h(e) {
+function f(e) {
     let { user: t, activity: l, entry: u } = e,
-        { applicationId: d } = f({ activity: l, entry: u, user: t }),
-        h = (0, c.n)(d),
+        { applicationId: d } = h({ activity: l, entry: u, user: t }),
+        f = (0, c.n)(d),
         p = null != l && (0, a.A)(l),
         E = null != u && (0, o.zD)(u);
     return p || E
@@ -35,7 +35,8 @@ function h(e) {
               action: () =>
                   (0, r.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
-                          n.e("16415"),
+                          n.e("14433"),
+                          n.e("32757"),
                           n.e("56600"),
                           n.e("34530"),
                           n.e("8891"),
@@ -51,17 +52,17 @@ function h(e) {
                       return (t) => (0, i.jsx)(e, { ...t, onSubmitted: () => {} });
                   }),
           })
-        : h;
+        : f;
 }
 function p(e) {
     let { user: t, activity: n, entry: r, onAction: a, isMenuOpen: o, appContext: c } = e,
-        { applicationId: d, sourceUserId: h } = f({ activity: n, entry: r, user: t }),
+        { applicationId: d, sourceUserId: f } = h({ activity: n, entry: r, user: t }),
         p = (0, u.A)({
             location: "UserProfileActivityContextMenu",
             source: l.Ob.UserProfileCardContextMenu,
             trackEntryPointImpression: o,
             applicationId: d,
-            sourceUserId: h,
+            sourceUserId: f,
             appContext: c,
         });
     return null == p

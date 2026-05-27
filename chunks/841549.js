@@ -6,11 +6,10 @@ function a(e, t, a) {
     a.isGroupDM()
         ? (0, i.L3)(e, async () => {
               let { default: e } = await Promise.all([
-                  n.e("24351"),
-                  n.e("5956"),
-                  n.e("56377"),
-                  n.e("30402"),
-                  n.e("38552"),
+                  n.e("65744"),
+                  n.e("83783"),
+                  n.e("37041"),
+                  n.e("23531"),
                   n.e("26692"),
                   n.e("26132"),
                   n.e("46652"),
@@ -68,11 +67,10 @@ function a(e, t, a) {
         : a.isDM()
           ? (0, i.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    n.e("24351"),
-                    n.e("5956"),
-                    n.e("56377"),
-                    n.e("30402"),
-                    n.e("38552"),
+                    n.e("65744"),
+                    n.e("83783"),
+                    n.e("37041"),
+                    n.e("23531"),
                     n.e("26692"),
                     n.e("26132"),
                     n.e("46652"),
@@ -142,11 +140,10 @@ function a(e, t, a) {
           : null != a.guild_id
             ? (0, i.L3)(e, async () => {
                   let { default: e } = await Promise.all([
-                      n.e("5956"),
-                      n.e("56377"),
-                      n.e("30402"),
-                      n.e("38552"),
-                      n.e("24351"),
+                      n.e("83783"),
+                      n.e("37041"),
+                      n.e("23531"),
+                      n.e("65744"),
                       n.e("26692"),
                       n.e("26132"),
                       n.e("46652"),
@@ -215,7 +212,7 @@ function a(e, t, a) {
               })
             : (0, i.L3)(e, async () => {
                   let { default: e } = await Promise.all([
-                      n.e("24351"),
+                      n.e("65744"),
                       n.e("26132"),
                       n.e("46652"),
                       n.e("93190"),

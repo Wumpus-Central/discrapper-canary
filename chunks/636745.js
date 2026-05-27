@@ -1,0 +1,17 @@
+e.exports = {
+    Xn: "shaker__640e4",
+    X9: "customHeaderForMana__640e4",
+    t4: "errorBody__640e4",
+    rN: "promotionBodyWrapper__640e4",
+    u5: "promotionBody__640e4",
+    hb: "promotionImage__640e4",
+    iZ: "promotionAccountIdentifier__640e4",
+    FL: "promotionAccountIdentifierAvatar__640e4",
+    KZ: "promotionAccountIdentifierBody__640e4",
+    EF: "promotionAccountIdentifierError__640e4",
+    ex: "promotionConfirmUpgrade__640e4",
+    DD: "title__640e4",
+    G3: "bodyText__640e4",
+    M6: "errorImage__640e4",
+    Ss: "priceDetails__640e4",
+};

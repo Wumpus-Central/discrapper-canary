@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(192308),
     d = n(331322),
     _ = n(939249),
-    f = n(478016),
-    h = n(834730),
+    h = n(478016),
+    f = n(834730),
     p = n(442433),
     E = n(66834),
     m = n(736653),
@@ -20,21 +20,21 @@ var i = n(627968),
     I = n(95561),
     T = n(889227),
     S = n(495544),
-    N = n(696451),
-    y = n(317525),
-    C = n(174459),
-    v = n(975571),
-    O = n(967740),
-    R = n(652215),
+    y = n(696451),
+    N = n(317525),
+    v = n(174459),
+    C = n(975571),
+    R = n(967740),
+    O = n(652215),
     b = n(375708),
     D = n(967671),
     L = n(227568);
 function w(e, t) {
     (0, c.openModalLazy)(async () => {
         let { default: r } = await Promise.all([
-            n.e("77049"),
-            n.e("24351"),
-            n.e("16415"),
+            n.e("6026"),
+            n.e("65744"),
+            n.e("14433"),
             n.e("73435"),
             n.e("79816"),
             n.e("60235"),
@@ -52,24 +52,24 @@ function w(e, t) {
 }
 let M = function (e) {
     let { guildId: t, transitionState: s, onClose: c } = e,
-        M = (0, l.bG)([y.A], () => y.A.getSortedRoles(t)),
+        M = (0, l.bG)([N.A], () => N.A.getSortedRoles(t)),
         P = (0, l.bG)([S.default], () => S.default.getId()),
-        x = (0, l.bG)([N.Ay], () => N.Ay.getMember(t, P)),
-        [U, k] = r.useState([]),
+        x = (0, l.bG)([y.Ay], () => y.Ay.getMember(t, P)),
+        [k, U] = r.useState([]),
         G = (0, m.Ay)();
     if (
         (r.useEffect(() => {
-            0 !== U.length &&
-                C.default.track(R.HAw.PASSPORT_ENTRY_VIEWED, {
-                    role_ids: U.map((e) => {
+            0 !== k.length &&
+                v.default.track(O.HAw.PASSPORT_ENTRY_VIEWED, {
+                    role_ids: k.map((e) => {
                         let { role_id: t } = e;
                         return t;
                     }),
                     ...(0, I.H$)(t),
                 });
-        }, [t, U]),
+        }, [t, k]),
         r.useEffect(() => {
-            E.A.getGuildRoleConnectionsConfigurations(t).then((e) => k(e));
+            E.A.getGuildRoleConnectionsConfigurations(t).then((e) => U(e));
         }, [t]),
         null == x)
     )
@@ -79,14 +79,14 @@ let M = function (e) {
         transitionState: s,
         title: b.intl.string(b.t.ghtnss),
         onClose: c,
-        subtitle: b.intl.format(b.t["Y+TsEV"], { helpdeskArticleUrl: v.A.getArticleURL(R.MVz.CONNECTION_DETAILS) }),
+        subtitle: b.intl.format(b.t["Y+TsEV"], { helpdeskArticleUrl: C.A.getArticleURL(O.MVz.CONNECTION_DETAILS) }),
         actions: [],
         children: (0, i.jsx)(d.B, {
             padding: { top: 8 },
             children: F.map((e) => {
                 let s = x.roles.includes(e.id),
                     o = (function (e) {
-                        let n = U.find((t) => {
+                        let n = k.find((t) => {
                             let { role_id: n } = t;
                             return n === e;
                         });
@@ -143,21 +143,21 @@ let M = function (e) {
                             s
                                 ? (0, i.jsx)("div", {
                                       className: D.UA,
-                                      children: (0, i.jsx)(f.U, { size: "xs", color: "currentColor" }),
+                                      children: (0, i.jsx)(h.U, { size: "xs", color: "currentColor" }),
                                   })
                                 : null,
-                            (0, i.jsx)(O.A, { guildId: t, role: e, size: 24 }),
+                            (0, i.jsx)(R.A, { guildId: t, role: e, size: 24 }),
                             (0, i.jsxs)("div", {
                                 className: D.fk,
                                 children: [
-                                    (0, i.jsx)(h.E, {
+                                    (0, i.jsx)(f.E, {
                                         variant: "text-md/medium",
                                         color: "text-strong",
                                         className: D.CF,
                                         children: e.name,
                                     }),
                                     void 0 !== e.description
-                                        ? (0, i.jsx)(h.E, {
+                                        ? (0, i.jsx)(f.E, {
                                               variant: "text-xs/normal",
                                               color: "text-default",
                                               className: D.Xr,

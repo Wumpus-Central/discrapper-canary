@@ -27,15 +27,15 @@ function C(e) {
             lineClamp: j = 1,
             cardWidth: N,
             cardHeight: T,
-            thumbnailHeight: S,
-            descriptionTextVariant: y = "text-sm/normal",
+            thumbnailHeight: y,
+            descriptionTextVariant: S = "text-sm/normal",
             showOpaqueBackground: b = !1,
         } = e,
         L = (0, l.bG)([c.A], () => c.A.getGuild(C), [C]),
-        R = (0, l.bG)([d.A], () => d.A.getRole(C, t?.role_id ?? E.dJq)),
-        M = (0, r.R)(t, 600),
-        P = (0, A.z)(t),
-        k = (0, m.BB)(L),
+        k = (0, l.bG)([d.A], () => d.A.getRole(C, t?.role_id ?? E.dJq)),
+        R = (0, r.R)(t, 600),
+        M = (0, A.z)(t),
+        P = (0, m.BB)(L),
         { shouldHideGuildPurchaseEntryPoints: w } = (0, o.MH)(C),
         D = (0, A.X)(t),
         O = (0, f.A)({ guildId: C, guildProductListingId: t.id, sourceAnalyticsLocations: I });
@@ -46,7 +46,7 @@ function C(e) {
                 (e = { guildId: C, guildProductListingId: t.id, analyticsLocation: I }),
                 void (0, a.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
-                        n.e("7239"),
+                        n.e("36115"),
                         n.e("35778"),
                         n.e("47812"),
                         n.e("13583"),
@@ -59,13 +59,13 @@ function C(e) {
         G = (0, i.jsx)(x.i, {
             product: t,
             guildId: C,
-            showEditProduct: k,
+            showEditProduct: P,
             showUnpublishProduct: !1,
             showCopyLink: !0,
             showTestDownload: !1,
             showDeleteProduct: !1,
             showReportProduct: !0,
-            onEditProduct: k
+            onEditProduct: P
                 ? () => {
                       g.q(L.id, t.id);
                   }
@@ -89,13 +89,13 @@ function C(e) {
     return (0, i.jsx)(
         p.A,
         {
-            imageUrl: M,
+            imageUrl: R,
             name: t.name,
             description: t.description,
             formattedPrice: D,
-            role: R,
+            role: k,
             ctaComponent: (0, i.jsx)(s.$, { ...O }),
-            productType: P,
+            productType: M,
             shouldShowFullDescriptionButton: v,
             onShowFullDescription: U,
             onTapCard: U,
@@ -105,8 +105,8 @@ function C(e) {
             lineClamp: j,
             cardWidth: N,
             cardHeight: T,
-            thumbnailHeight: S,
-            descriptionTextVariant: y,
+            thumbnailHeight: y,
+            descriptionTextVariant: S,
             isDraft: !t.published,
         },
         t.id,

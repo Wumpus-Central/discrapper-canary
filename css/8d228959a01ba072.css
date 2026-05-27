@@ -1,0 +1,23 @@
+.keywordTextAreaContainer__4546e {
+    padding-top: 8px
+}
+
+.keywordTextArea__4546e {
+    background: var(--background-base-lowest)
+}
+
+.collapseable__4546e {
+    margin-top: 16px;
+    padding: 8px 12px
+}
+
+.header__4546e {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.arrow__4546e {
+    color: var(--interactive-text-default)
+}

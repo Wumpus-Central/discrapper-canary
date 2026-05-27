@@ -1,0 +1,15 @@
+.panel__777bf {
+    gap: var(--space-32);
+    overflow-y: auto;
+    padding: 12px
+}
+
+.container__777bf,
+.panel__777bf {
+    display: flex;
+    flex-direction: column
+}
+
+.container__777bf {
+    gap: var(--space-8)
+}

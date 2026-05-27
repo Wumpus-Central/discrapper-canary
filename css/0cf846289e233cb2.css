@@ -1,0 +1,133 @@
+.outerContainer__5a77b {
+    clip-path: inset(0 0 0 16px);
+    line-height: 16px;
+    margin-inline-start: -16px;
+    row-gap: 4px
+}
+
+.innerContainer__5a77b,
+.outerContainer__5a77b {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+
+.languageItem__5a77b {
+    padding-inline-start: 4px
+}
+
+.languageItem__5a77b:before {
+    color: var(--text-muted);
+    content: "•";
+    display: inline-block;
+    margin-inline-end: 4px;
+    text-align: center;
+    width: 1ch
+}
+
+.sideContainer_de3a16 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px
+}
+
+.gridContainer_de3a16 {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))
+}
+
+.guildCountContainer_de3a16 {
+    display: flex;
+    gap: 4px
+}
+
+.guildsIconContainer_de3a16 {
+    height: 18px;
+    justify-self: center
+}
+
+.sectionContainer_de3a16 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px
+}
+
+.sectionContainer_de3a16.reducedGap_de3a16 {
+    gap: 24px
+}
+
+.infoSection_de3a16 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.infoSection_de3a16:empty {
+    display: none
+}
+
+.linkGrid_de3a16 {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 1fr 1fr
+}
+
+.title_feb59c {
+    margin-bottom: 8px
+}
+
+h1.title_feb59c {
+    font-size: 20px;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.2
+}
+
+h2.title_feb59c {
+    font-size: 16px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.25
+}
+
+h3.title_feb59c {
+    font-size: 14px;
+    line-height: 1.14
+}
+
+h3.title_feb59c,
+h4.title_feb59c,
+h5.title_feb59c,
+h6.title_feb59c {
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase
+}
+
+h4.title_feb59c,
+h5.title_feb59c,
+h6.title_feb59c {
+    font-size: 12px;
+    line-height: 1.33
+}
+
+.theme-dark h3.title_feb59c {
+    color: var(--primary-200)
+}
+
+.theme-dark h4.title_feb59c,
+.theme-dark h5.title_feb59c,
+.theme-dark h6.title_feb59c {
+    color: var(--primary-300)
+}
+
+.theme-light h3.title_feb59c,
+.theme-light h4.title_feb59c,
+.theme-light h5.title_feb59c,
+.theme-light h6.title_feb59c {
+    color: var(--primary-400)
+}
+
+h1.title_feb59c,
+h2.title_feb59c {
+    color: var(--text-default)
+}

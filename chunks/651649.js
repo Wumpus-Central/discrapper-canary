@@ -11,8 +11,8 @@ var r = n(192308),
     c = n(869146),
     d = n(495544),
     _ = n(734057),
-    f = n(290863),
-    h = n(763827),
+    h = n(290863),
+    f = n(763827),
     p = n(116956),
     E = n(37962),
     m = n(670455),
@@ -30,8 +30,7 @@ class A extends E.A {
         this.possiblyShowFeedbackModal(m.MW.VOICE, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("93814"),
-                    n.e("95653"),
+                    n.e("14433"),
                     n.e("56030"),
                     n.e("67829"),
                     n.e("61379"),
@@ -50,7 +49,7 @@ class A extends E.A {
     handleStreamClose = (e) => {
         let { streamKey: t, canShowFeedback: s } = e,
             a = (0, l.Iy)(t),
-            o = (0, u.Ee)(a, f.A),
+            o = (0, u.Ee)(a, h.A),
             c = p.A.getVideoStats(t) ?? {},
             _ = {
                 media_session_id: p.A.getMediaSessionId(t),
@@ -64,8 +63,7 @@ class A extends E.A {
             this.possiblyShowFeedbackModal(m.MW.STREAM, () => {
                 (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("93814"),
-                        n.e("95653"),
+                        n.e("14433"),
                         n.e("56030"),
                         n.e("67829"),
                         n.e("61379"),
@@ -94,8 +92,7 @@ class A extends E.A {
         this.possiblyShowFeedbackModal(m.MW.VIDEO_BACKGROUND, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("93814"),
-                    n.e("95653"),
+                    n.e("14433"),
                     n.e("56030"),
                     n.e("61379"),
                     n.e("8891"),
@@ -113,9 +110,9 @@ class A extends E.A {
     handleActivityClose = (e) => {
         let { applicationId: t, location: l, showFeedback: u } = e,
             d = o.A.getApplication(t),
-            f = (0, a.H)(l),
-            p = _.A.getChannel(f),
-            E = { rtc_connection_id: h.A.getRTCConnectionId(), media_session_id: h.A.getMediaSessionId() },
+            h = (0, a.H)(l),
+            p = _.A.getChannel(h),
+            E = { rtc_connection_id: f.A.getRTCConnectionId(), media_session_id: f.A.getMediaSessionId() },
             A = c.A.getWindowOpen(g.MLl.CHANNEL_CALL_POPOUT) ? s.KX : s.SY;
         null != d &&
             u &&
@@ -123,8 +120,7 @@ class A extends E.A {
                 (0, r.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("93814"),
-                            n.e("95653"),
+                            n.e("14433"),
                             n.e("56030"),
                             n.e("61379"),
                             n.e("8891"),
@@ -153,8 +149,7 @@ class A extends E.A {
         this.possiblyShowFeedbackModal(m.MW.IN_APP_REPORTS, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("93814"),
-                    n.e("95653"),
+                    n.e("14433"),
                     n.e("56030"),
                     n.e("61379"),
                     n.e("8891"),

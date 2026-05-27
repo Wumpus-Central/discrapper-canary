@@ -117,8 +117,8 @@ var L = n(352527),
     q = n(767089),
     $ = n(554146),
     J = n(477782),
-    Y = n(177953),
-    Z = n(950305),
+    Z = n(177953),
+    Y = n(950305),
     X = n(980707),
     Q = n(308368),
     ee = n(688810),
@@ -396,8 +396,8 @@ function eb(e) {
                                                   {
                                                       id: "summarize_thread_for_everyone",
                                                       label: M.intl.string(M.t.eCzSdd),
-                                                      iconLeft: Y.n,
-                                                      leadingAccessory: { type: "icon", icon: Y.n },
+                                                      iconLeft: Z.n,
+                                                      leadingAccessory: { type: "icon", icon: Z.n },
                                                       action: () => el.A.summarizeThread(t, !1),
                                                   },
                                                   "summarize_thread_for_everyone",
@@ -407,8 +407,8 @@ function eb(e) {
                                                   {
                                                       id: "summarize_thread_for_me",
                                                       label: M.intl.string(M.t["HOe+Hq"]),
-                                                      iconLeft: Z.n,
-                                                      leadingAccessory: { type: "icon", icon: Z.n },
+                                                      iconLeft: Y.n,
+                                                      leadingAccessory: { type: "icon", icon: Y.n },
                                                       action: () => el.A.summarizeThread(t),
                                                   },
                                                   "summarize_thread_for_me",
@@ -443,8 +443,8 @@ let eD = s.memo(function (e) {
             [y, l],
         ),
         { topBarButton: J } = x.$.useConfig({ location: "ChannelAttachButton" }),
-        { enableQuickBar: Y } = A.h.useConfig({ location: "ChannelAttachButton" }),
-        { onShareClick: Z } = (0, L.A)(l.id),
+        { enableQuickBar: Z } = A.h.useConfig({ location: "ChannelAttachButton" }),
+        { onShareClick: Y } = (0, L.A)(l.id),
         X = (0, o.bG)([f.A], () => f.A.getSettings().remindersEnabled),
         Q = (0, c.useModalsStore)((e) => (0, c.hasModalOpenSelector)(e, eM.nm)),
         ee = (0, o.bG)([H.A], () => H.A.hasLayers()),
@@ -458,11 +458,12 @@ let eD = s.memo(function (e) {
         (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("20039"),
-                    n.e("38552"),
-                    n.e("5956"),
+                    n.e("54616"),
+                    n.e("22367"),
+                    n.e("616"),
                     n.e("88623"),
                     n.e("2979"),
+                    n.e("25201"),
                     n.e("83952"),
                     n.e("81202"),
                     n.e("1962"),
@@ -477,7 +478,7 @@ let eD = s.memo(function (e) {
                     n.e("64237"),
                     n.e("35528"),
                 ]).then(n.bind(n, 244028));
-                return (t) => (0, i.jsx)(e, { ...t, channelId: l.id, onClipClick: (e) => Z({ clips: [e] }) });
+                return (t) => (0, i.jsx)(e, { ...t, channelId: l.id, onClipClick: (e) => Y({ clips: [e] }) });
             },
             { modalKey: eM.nm },
         ),
@@ -490,7 +491,7 @@ let eD = s.memo(function (e) {
         R &&
         !Q &&
         !J &&
-        !Y &&
+        !Z &&
         !ee &&
         el("recentClips"),
         s.useEffect(() => {

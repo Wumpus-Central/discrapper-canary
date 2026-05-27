@@ -34,8 +34,8 @@ function g(e) {
                 (0, c.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("1944"),
-                            n.e("81113"),
+                            n.e("96768"),
+                            n.e("16716"),
                             n.e("21537"),
                             n.e("54048"),
                             n.e("18943"),
@@ -96,8 +96,8 @@ class y extends i.A {
                 (0, c.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("1944"),
-                            n.e("81113"),
+                            n.e("96768"),
+                            n.e("16716"),
                             n.e("21537"),
                             n.e("35588"),
                             n.e("54048"),

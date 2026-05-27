@@ -89,7 +89,7 @@ let C = (0, a.Qx)(u.X.ACTIVITY_PRIVACY_PER_GUILD_DEFAULT_SETTING, {
             if (null == s) return;
             let l = (0, I.Xc)(e);
             (0, _.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([i.e("92164"), i.e("67683"), i.e("62041"), i.e("41996")]).then(
+                let { default: e } = await Promise.all([i.e("92164"), i.e("36281"), i.e("62041"), i.e("41996")]).then(
                     i.bind(i, 32167),
                 );
                 return (t) =>
@@ -17023,7 +17023,7 @@ let pG = (0, a.Tf)(u.X.ACCOUNT_INFO_PHONE_SETTING, {
             ? (0, _.openModalLazy)(
                   async () => {
                       let { default: e } = await Promise.all([
-                          i.e("1944"),
+                          i.e("96768"),
                           i.e("4782"),
                           i.e("89545"),
                           i.e("11493"),
@@ -17674,7 +17674,7 @@ function f_() {
                 (0, _.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            i.e("1944"),
+                            i.e("96768"),
                             i.e("4782"),
                             i.e("89545"),
                             i.e("11493"),
@@ -19703,7 +19703,7 @@ let Iv = {
                 (0, _.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
                         i.e("92164"),
-                        i.e("67683"),
+                        i.e("36281"),
                         i.e("62041"),
                         i.e("63786"),
                     ]).then(i.bind(i, 413201));

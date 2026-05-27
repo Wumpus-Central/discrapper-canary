@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(627968);
 n(64700);
 var r = n(192308),
@@ -11,14 +11,14 @@ var r = n(192308),
     c = n(287809),
     d = n(723702),
     _ = n(753070);
-function f(e, t, f) {
+function h(e, t, h) {
     if (d.isPlatformEmbedded)
         (0, r.openModalLazy)(async () => {
             let { default: e } = await Promise.all([
-                n.e("4042"),
-                n.e("56377"),
+                n.e("616"),
+                n.e("37041"),
                 n.e("17918"),
-                n.e("16415"),
+                n.e("32757"),
                 n.e("207"),
                 n.e("76171"),
                 n.e("34530"),
@@ -41,7 +41,7 @@ function f(e, t, f) {
                 n.e("91782"),
                 n.e("90088"),
             ]).then(n.bind(n, 477156));
-            return (t) => (0, i.jsx)(e, { ...t, analyticsLocations: f });
+            return (t) => (0, i.jsx)(e, { ...t, analyticsLocations: h });
         });
     else {
         let n = o.A.getChannel(t),
@@ -59,7 +59,7 @@ function f(e, t, f) {
             u.Ay.getMediaEngine()
                 .getDesktopSource(i, !0)
                 .then((n) => {
-                    (0, s.XI)(e, t, { pid: null, sourceId: n, sourceName: null, analyticsLocations: f });
+                    (0, s.XI)(e, t, { pid: null, sourceId: n, sourceName: null, analyticsLocations: h });
                 });
     }
 }

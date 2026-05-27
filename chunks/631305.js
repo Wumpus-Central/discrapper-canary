@@ -13,17 +13,17 @@ function c(e, t) {
     null != e.targetBoostedGuildTier && (c += ` - Tier ${e.targetBoostedGuildTier}`),
         l.default.track(u.HAw.OPEN_MODAL, { type: c, location: e.analyticsSourceLocation });
     let { openInPopoutEnabled: d, ..._ } = e,
-        f = a.A.getWindowOpen(u.MLl.CHANNEL_CALL_POPOUT) && null != d && d;
-    f && (0, o.A)(u.MLl.CHANNEL_CALL_POPOUT);
-    let h = f ? r.KX : r.SY;
+        h = a.A.getWindowOpen(u.MLl.CHANNEL_CALL_POPOUT) && null != d && d;
+    h && (0, o.A)(u.MLl.CHANNEL_CALL_POPOUT);
+    let f = h ? r.KX : r.SY;
     (0, s.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
-                n.e("56377"),
-                n.e("77049"),
+                n.e("37041"),
+                n.e("6026"),
                 n.e("21838"),
-                n.e("56159"),
-                n.e("19573"),
+                n.e("84153"),
+                n.e("5093"),
                 n.e("52041"),
                 n.e("60235"),
                 n.e("45959"),
@@ -38,7 +38,7 @@ function c(e, t) {
             onCloseCallback: () => {
                 l.default.track(u.HAw.MODAL_DISMISSED, { type: c, location: e.analyticsSourceLocation });
             },
-            contextKey: h,
+            contextKey: f,
         },
     );
 }
