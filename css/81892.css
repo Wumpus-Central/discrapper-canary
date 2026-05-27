@@ -1,3 +1,94 @@
+.editorAnimate__2a891 {
+    animation: slidein__2a891 .25s ease-in 1s forwards;
+    margin-inline-end: calc((var(--custom-in-app-icon-editor-content-width) + (var(--custom-in-app-icon-editor-padding)*2))*-1)
+}
+
+@keyframes slidein__2a891 {
+    0% {
+        margin-inline-end: calc((var(--custom-in-app-icon-editor-content-width) + (var(--custom-in-app-icon-editor-padding)*2))*-1)
+    }
+
+    to {
+        margin-inline-end: 0
+    }
+}
+
+.title__2a891 {
+    align-items: center;
+    display: flex;
+    flex: 1
+}
+
+.title__2a891 .premiumIcon__2a891 {
+    margin-inline-start: 8px
+}
+
+.editor__2a891 {
+    background: var(--background-base-low);
+    border-inline-start: 5px solid var(--background-base-lower);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    height: 100%;
+    inset-inline-end: 0;
+    padding: var(--custom-in-app-icon-editor-padding) 0;
+    padding-inline: var(--space-16);
+    position: relative;
+    z-index: 1
+}
+
+.editorHeader__2a891 {
+    width: var(--custom-in-app-icon-editor-content-width)
+}
+
+.editorBody__2a891,
+.editorHeader__2a891 {
+    padding: 0 var(--custom-in-app-icon-editor-padding)
+}
+
+.selectionGroup__2a891 {
+    margin-top: 16px;
+    width: var(--custom-in-app-icon-editor-content-width)
+}
+
+.editorFooter__2a891 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 0 var(--custom-in-app-icon-editor-padding)
+}
+
+.closeCircleButton__2a891 {
+    cursor: pointer;
+    height: 20px;
+    inset-inline-end: 18px;
+    position: absolute;
+    top: 18px;
+    width: 20px;
+    z-index: 2
+}
+
+.closeCircle__2a891 {
+    color: var(--interactive-text-default);
+    height: 100%;
+    width: 100%
+}
+
+.closeCircle__2a891:focus,
+.closeCircle__2a891:hover {
+    color: var(--interactive-text-hover)
+}
+
+.mobileContainer__26f4a {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 100
+}
+
 .container__5a2df {
     border: 1px solid var(--border-muted);
     width: 288px
