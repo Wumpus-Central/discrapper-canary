@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => K }), n(938796), n(321073), n(142703);
+n.d(t, { A: () => z }), n(938796), n(321073), n(142703);
 var i = n(735438),
     r = n.n(i),
     s = n(665260),
@@ -10,43 +10,55 @@ var i = n(735438),
     c = n(779185),
     d = n(723176),
     _ = n(626584),
-    f = n(390248),
-    h = n(508602);
+    h = n(390248),
+    f = n(508602);
 let p = (e) => {
     let { type: t } = e;
-    return t !== h.A.AUTO_MODERATION_MESSAGE && t !== h.A.AUTO_MODERATION_NOTIFICATION;
+    return t !== f.A.AUTO_MODERATION_MESSAGE && t !== f.A.AUTO_MODERATION_NOTIFICATION;
 };
 var E = n(164956),
-    m = n(320095),
-    g = n(697470),
-    A = (n(763754), n(491001)),
-    I = n(815807),
-    T = n(773669),
-    S = n(935208),
+    m = n(931480),
+    g = n(320095),
+    A = n(697470),
+    I = (n(763754), n(491001)),
+    T = n(815807),
+    S = n(773669),
+    y = n(935208),
     N = n(495544),
-    y = n(734057),
+    v = n(734057),
     C = n(72314),
-    v = n(808728),
+    R = n(808728),
     O = n(696451),
-    R = n(71393),
-    b = n(576705),
-    D = n(994500),
-    L = n(309010),
-    w = n(967198),
-    M = n(287809),
-    P = n(652215);
-let x = new Set(),
+    b = n(71393),
+    D = n(576705),
+    L = n(994500),
+    w = n(309010),
+    M = n(967198),
+    P = n(287809),
+    x = n(652215);
+let k = new Set(),
     U = new _.A("MessageStore"),
-    k = !1;
-function G() {
+    G = !1;
+function F(e, t) {
+    if (t.hasMoreAfter) return t;
+    let n = m.A.getMessages(e);
+    if (0 === n.length) return t;
+    let i = n.filter((e) => !t.has(e.id));
+    return 0 === i.length
+        ? t
+        : t.mutate((e) => {
+              e._merge(i), e._array.sort((e, t) => y.default.compare(e.id, t.id));
+          }, !0);
+}
+function V() {
     u.A.forEach((e) => {
         u.A.commit(e.mutate({ ready: !1, loadingMore: !1 }));
     }),
-        x.clear();
+        k.clear();
 }
-async function F(e, t, n) {
+async function B(e, t, n) {
     let i = d.A.database(),
-        r = y.A.getBasicChannel(e);
+        r = v.A.getBasicChannel(e);
     if (null != i && null != r)
         try {
             let n = d.A.messages(i),
@@ -55,15 +67,15 @@ async function F(e, t, n) {
         } catch {}
     U.log("Push notification message not in cache, adding directly", t.id, t.channel_id);
     let s = u.A.getOrCreate(e);
-    u.A.commit(s.receivePushNotification(t, n)), W.emitChange();
+    u.A.commit(s.receivePushNotification(t, n)), $.emitChange();
 }
-function V() {
+function H() {
     u.A.forEach((e) => {
         let { channelId: t } = e;
-        null == y.A.getChannel(t) && u.A.clear(t);
+        null == v.A.getChannel(t) && u.A.clear(t);
     });
 }
-function B() {
+function j() {
     let e = !1;
     return (
         u.A.forEach((t) => {
@@ -71,10 +83,10 @@ function B() {
                 t.reset(
                     t.map(
                         (t) => (
-                            t.blocked !== D.A.isBlockedForMessage(t) &&
-                                ((e = !0), (t = t.set("blocked", D.A.isBlockedForMessage(t)))),
-                            t.ignored !== D.A.isIgnoredForMessage(t) &&
-                                ((e = !0), (t = t.set("ignored", D.A.isIgnoredForMessage(t)))),
+                            t.blocked !== L.A.isBlockedForMessage(t) &&
+                                ((e = !0), (t = t.set("blocked", L.A.isBlockedForMessage(t)))),
+                            t.ignored !== L.A.isIgnoredForMessage(t) &&
+                                ((e = !0), (t = t.set("ignored", L.A.isIgnoredForMessage(t)))),
                             t
                         ),
                     ),
@@ -84,17 +96,17 @@ function B() {
         e
     );
 }
-function H(e) {
+function Y(e) {
     let { type: t, channelId: n, messageId: i, userId: r, emoji: s, reactionType: a } = e,
         o = u.A.get(n);
-    if (null == o || !(0, I.vp)(e)) return !1;
+    if (null == o || !(0, T.vp)(e)) return !1;
     let l = N.default.getId() === r;
     (o = o.update(i, (n) =>
         "MESSAGE_REACTION_ADD" === t ? n.addReaction(s, l, e.colors, a) : n.removeReaction(s, l, a),
     )),
         u.A.commit(o);
 }
-function j(e) {
+function W(e) {
     let { type: t, messageData: n } = e,
         { message: i } = n,
         r = (0, c.cR)(n),
@@ -105,23 +117,23 @@ function j(e) {
         r,
         (e) => (
             e.embeds?.filter(p).length > 0 && (e = e.set("embeds", [])),
-            "MESSAGE_SEND_FAILED_AUTOMOD" === t && (e = e.set("flags", (0, s.UI)(e.flags, P.pr7.EPHEMERAL))),
+            "MESSAGE_SEND_FAILED_AUTOMOD" === t && (e = e.set("flags", (0, s.UI)(e.flags, x.pr7.EPHEMERAL))),
             e
         ),
     )),
         u.A.commit(o);
 }
-class Y extends a.Ay.Store {
+class K extends a.Ay.Store {
     static displayName = "MessageStore";
     initialize() {
-        this.waitFor(N.default, y.A, C.A, v.Ay, O.Ay, R.A, E.A, T.default, b.A, D.A, L.A, w.A, M.default),
+        this.waitFor(N.default, v.A, C.A, m.A, R.Ay, O.Ay, b.A, E.A, S.default, D.A, L.A, w.A, M.A, P.default),
             this.syncWith([E.A], () => {});
     }
     getMessages(e) {
         if (E.A.hasViewingRoles()) {
-            let t = y.A.getChannel(e),
+            let t = v.A.getChannel(e),
                 n = t?.getGuildId();
-            if (E.A.isViewingRoles(n) && !b.A.can(P.xBc.VIEW_CHANNEL, t)) return new u.A(e);
+            if (E.A.isViewingRoles(n) && !D.A.can(x.xBc.VIEW_CHANNEL, t)) return new u.A(e);
         }
         return u.A.getOrCreate(e);
     }
@@ -129,13 +141,13 @@ class Y extends a.Ay.Store {
         return u.A.getOrCreate(e).get(t);
     }
     getLastEditableMessage(e) {
-        let t = M.default.getCurrentUser();
+        let t = P.default.getCurrentUser();
         return r()(this.getMessages(e).toArray())
             .reverse()
-            .find((e) => (0, g.A)(e, t?.id));
+            .find((e) => (0, A.A)(e, t?.id));
     }
     getLastChatCommandMessage(e) {
-        let t = M.default.getCurrentUser();
+        let t = P.default.getCurrentUser();
         return this.getMessages(e)
             .toArray()
             .reverse()
@@ -150,7 +162,7 @@ class Y extends a.Ay.Store {
         return r()(this.getMessages(e).toArray()).reverse().get(0);
     }
     getLastNonCurrentUserMessage(e) {
-        let t = M.default.getCurrentUser();
+        let t = P.default.getCurrentUser();
         return r()(this.getMessages(e).toArray())
             .reverse()
             .find((e) => e.author.id !== t?.id);
@@ -179,21 +191,21 @@ class Y extends a.Ay.Store {
         return u.A.getOrCreate(e).loadingMore;
     }
     hasCurrentUserSentMessage(e) {
-        let t = M.default.getCurrentUser();
+        let t = P.default.getCurrentUser();
         return null != this.getMessages(e).findNewest((e) => e.author.id === t?.id);
     }
     hasCurrentUserSentWaveBlockingMessage(e) {
-        let t = M.default.getCurrentUser();
+        let t = P.default.getCurrentUser();
         return (
             null !=
-            this.getMessages(e).findNewest((e) => e.type !== P.lAJ.FRIEND_REQUEST_ACCEPTED && e.author.id === t?.id)
+            this.getMessages(e).findNewest((e) => e.type !== x.lAJ.FRIEND_REQUEST_ACCEPTED && e.author.id === t?.id)
         );
     }
     hasCurrentUserSentMessageSinceAppStart() {
-        return k;
+        return G;
     }
 }
-let W = new Y(o.h, {
+let $ = new K(o.h, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: function (e) {
             let { changesByChannelId: t } = e;
             for (let e in t) {
@@ -202,10 +214,10 @@ let W = new Y(o.h, {
                     (n.cached, n.mergeDelta(t[e].new_messages, t[e].modified_messages, t[e].deleted_message_ids));
             }
         },
-        CONNECTION_OPEN: G,
-        OVERLAY_INITIALIZE: G,
+        CONNECTION_OPEN: V,
+        OVERLAY_INITIALIZE: V,
         CACHE_LOADED: function (e) {
-            for (let [t, n] of S.default.entries(e.messages)) {
+            for (let [t, n] of y.default.entries(e.messages)) {
                 let e = u.A.getOrCreate(t).addCachedMessages(n, !0);
                 u.A.commit(e);
             }
@@ -239,6 +251,7 @@ let W = new Y(o.h, {
                 avoidInitialScroll: d,
             })),
                 null != c && (n || i) && (!n || !i) && (_ = _.truncate(n, i)),
+                (_ = F(t, _)),
                 u.A.commit(_);
         },
         LOAD_MESSAGES_FAILURE: function (e) {
@@ -260,6 +273,7 @@ let W = new Y(o.h, {
                     (null != r || null != s) &&
                     (null == r || null == s) &&
                     (l = l.truncate(null != r, null != s)),
+                (l = F(t, l)),
                 u.A.commit(l);
         },
         LOCAL_MESSAGES_LOADED: function (e) {
@@ -291,22 +305,22 @@ let W = new Y(o.h, {
         },
         CLEAR_MESSAGES: function (e) {
             let { channelId: t } = e;
-            U.log(`Clearing messages for ${t}`), u.A.clear(t), x.clear();
+            U.log(`Clearing messages for ${t}`), u.A.clear(t), k.clear();
         },
         MESSAGE_CREATE: function (e) {
             let { channelId: t, message: i, optimistic: r, isPushNotification: s } = e,
                 a = u.A.getOrCreate(t),
                 o = n(587626).A.isConnected();
             return s
-                ? (0, A.K)()
-                    ? (F(t, i, o), !1)
+                ? (0, I.K)()
+                    ? (B(t, i, o), !1)
                     : (U.log("Inserting message tapped on from a push notification", i.id, i.channel_id),
                       void u.A.commit(a.receivePushNotification(i, o)))
                 : !(!a.ready || (r && a.has(i.id))) &&
                       void (null != i.nonce &&
-                          i.state !== P.cmJ.SENDING &&
-                          x.has(i.nonce) &&
-                          ((a = a.remove(i.nonce)), x.delete(i.nonce)),
+                          i.state !== x.cmJ.SENDING &&
+                          k.has(i.nonce) &&
+                          ((a = a.remove(i.nonce)), k.delete(i.nonce)),
                       (a = a.receiveMessage(i, !0 === C.A.isAtBottom(t))),
                       u.A.commit(a));
         },
@@ -321,10 +335,10 @@ let W = new Y(o.h, {
                     : r.update(
                           n,
                           (e) => (
-                              (e = e.set("state", P.cmJ.SEND_FAILED)).isCommandType()
+                              (e = e.set("state", x.cmJ.SEND_FAILED)).isCommandType()
                                   ? (e = (e = e.set("interactionError", i ?? "")).set(
                                         "flags",
-                                        (0, s.UI)(e.flags, P.pr7.EPHEMERAL),
+                                        (0, s.UI)(e.flags, x.pr7.EPHEMERAL),
                                     ))
                                   : null != i && (e = e.set("interactionError", i ?? "")),
                               e
@@ -332,20 +346,20 @@ let W = new Y(o.h, {
                       )),
                 u.A.commit(r);
         },
-        MESSAGE_SEND_FAILED_AUTOMOD: j,
-        MESSAGE_EDIT_FAILED_AUTOMOD: j,
+        MESSAGE_SEND_FAILED_AUTOMOD: W,
+        MESSAGE_EDIT_FAILED_AUTOMOD: W,
         MESSAGE_UPDATE: function (e) {
             let t = e.message.id,
                 n = e.message.channel_id,
                 i = u.A.getOrCreate(n);
             if (null == i || !i.has(t)) return !1;
-            (i = i.update(t, (t) => (0, m.IU)(t, e.message))), u.A.commit(i);
+            (i = i.update(t, (t) => (0, g.IU)(t, e.message))), u.A.commit(i);
         },
         MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
             let { messageId: t, channelId: n } = e,
                 i = u.A.get(n);
             if (null == i || !i.has(t)) return !1;
-            (i = i.update(t, f.Td)), u.A.commit(i);
+            (i = i.update(t, h.Td)), u.A.commit(i);
         },
         MESSAGE_DELETE: function (e) {
             let { id: t, channelId: n } = e,
@@ -358,7 +372,7 @@ let W = new Y(o.h, {
                         ? i.mutate({ revealedMessageId: e.id })
                         : i.mutate({ revealedMessageId: null });
             }
-            (i = i.remove(t)), u.A.commit(i), x.delete(t);
+            (i = i.remove(t)), u.A.commit(i), k.delete(t);
         },
         MESSAGE_DELETE_BULK: function (e) {
             let { ids: t, channelId: n } = e,
@@ -375,7 +389,7 @@ let W = new Y(o.h, {
             }
             u.A.commit(s),
                 t.forEach((e) => {
-                    x.delete(e);
+                    k.delete(e);
                 });
         },
         MESSAGE_REVEAL: function (e) {
@@ -388,22 +402,22 @@ let W = new Y(o.h, {
                 n = u.A.getOrCreate(t);
             (n = n.loadComplete({ newMessages: [], hasMoreAfter: !1, hasMoreBefore: !1 })), u.A.commit(n);
         },
-        CHANNEL_DELETE: V,
-        THREAD_DELETE: V,
-        GUILD_DELETE: V,
-        RELATIONSHIP_ADD: B,
-        RELATIONSHIP_UPDATE: B,
-        RELATIONSHIP_REMOVE: B,
+        CHANNEL_DELETE: H,
+        THREAD_DELETE: H,
+        GUILD_DELETE: H,
+        RELATIONSHIP_ADD: j,
+        RELATIONSHIP_UPDATE: j,
+        RELATIONSHIP_REMOVE: j,
         GUILD_MEMBERS_CHUNK_BATCH: function (e) {},
         THREAD_MEMBER_LIST_UPDATE: function (e) {},
-        MESSAGE_REACTION_ADD: H,
+        MESSAGE_REACTION_ADD: Y,
         MESSAGE_REACTION_ADD_MANY: function (e) {
             let { channelId: t, messageId: n, reactions: i } = e,
                 r = u.A.get(t);
             if (null == r) return !1;
-            (r = r.update(n, (e) => e.addReactionBatch(i, M.default.getCurrentUser()?.id))), u.A.commit(r);
+            (r = r.update(n, (e) => e.addReactionBatch(i, P.default.getCurrentUser()?.id))), u.A.commit(r);
         },
-        MESSAGE_REACTION_REMOVE: H,
+        MESSAGE_REACTION_REMOVE: Y,
         MESSAGE_REACTION_REMOVE_ALL: function (e) {
             let { channelId: t, messageId: n } = e,
                 i = u.A.get(t);
@@ -420,24 +434,24 @@ let W = new Y(o.h, {
             u.A.forEach((e) => {
                 u.A.clear(e.channelId);
             }),
-                x.clear();
+                k.clear();
         },
         UPLOAD_START: function (e) {
             let { message: t } = e;
-            t?.nonce != null && x.add(t.nonce);
+            t?.nonce != null && k.add(t.nonce);
         },
         UPLOAD_FAIL: function (e) {
             let { channelId: t, messageId: n } = e;
-            if (null == n || !x.has(n)) return !1;
+            if (null == n || !k.has(n)) return !1;
             let i = u.A.getOrCreate(t),
                 r = i.get(n);
             if (null == r) return !1;
-            (i = (i = i.remove(n)).merge([r])), x.delete(n), u.A.commit(i);
+            (i = (i = i.remove(n)).merge([r])), k.delete(n), u.A.commit(i);
         },
         LOCAL_MESSAGE_CREATE: function (e) {
             let { message: t } = e,
-                n = M.default.getCurrentUser();
-            null != t && null != t.author && null != n && t.author.id === n.id && (k = !0);
+                n = P.default.getCurrentUser();
+            null != t && null != t.author && null != n && t.author.id === n.id && (G = !0);
         },
     }),
-    K = W;
+    z = $;
