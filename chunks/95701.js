@@ -6,7 +6,7 @@ n.d(t, {
     Gw: () => L,
     IY: () => q,
     JT: () => K,
-    LE: () => Z,
+    LE: () => X,
     Le: () => V,
     Lt: () => eN,
     MK: () => M,
@@ -16,7 +16,7 @@ n.d(t, {
     TA: () => el,
     UE: () => eC,
     YB: () => ef,
-    ZE: () => X,
+    ZE: () => Z,
     Z_: () => W,
     ay: () => O,
     bk: () => z,
@@ -230,7 +230,7 @@ let K = new Set([
     ]),
     $ = new Set([E.rbe.GUILD_TEXT, E.rbe.GUILD_ANNOUNCEMENT]),
     q = new Set([E.rbe.GUILD_TEXT, E.rbe.GUILD_ANNOUNCEMENT, E.rbe.GUILD_FORUM, E.rbe.GUILD_MEDIA]),
-    Z = new Set([
+    X = new Set([
         E.rbe.GUILD_TEXT,
         E.rbe.GUILD_ANNOUNCEMENT,
         E.rbe.GUILD_FORUM,
@@ -238,7 +238,7 @@ let K = new Set([
         E.rbe.GUILD_VOICE,
         E.rbe.GUILD_STAGE_VOICE,
     ]),
-    X = new Set([
+    Z = new Set([
         E.rbe.GUILD_ANNOUNCEMENT,
         E.rbe.GUILD_TEXT,
         E.rbe.GUILD_FORUM,
@@ -524,7 +524,7 @@ class ef extends ec {
         return this.defaultSortOrder ?? u.T.LATEST_ACTIVITY;
     }
     getDefaultLayout() {
-        return this.isMediaChannel()
+        return this.isMediaChannel() || this.isGameInvitesChannel()
             ? o.C.GRID
             : null == this.defaultForumLayout || this.defaultForumLayout === o.C.DEFAULT
               ? o.C.LIST

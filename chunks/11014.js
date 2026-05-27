@@ -4738,7 +4738,7 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
                 t.e("40660"),
                 t.e("64801"),
                 t.e("51703"),
-                t.e("38839"),
+                t.e("6717"),
                 t.e("49681"),
                 t.e("21044"),
                 t.e("33097"),
@@ -4746,9 +4746,9 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
                 t.e("21225"),
                 t.e("23685"),
                 t.e("42516"),
-                t.e("76241"),
-            ]).then(t.bind(t, 563817)),
-        webpackId: 563817,
+                t.e("42392"),
+            ]).then(t.bind(t, 502110)),
+        webpackId: 502110,
         renderLoader: rH,
         name: "ForumChannel",
     }),
@@ -4844,7 +4844,7 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
     rK = (0, nS.Fe)({
         createPromise: () =>
             Promise.all([
-                t.e("38839"),
+                t.e("6717"),
                 t.e("11394"),
                 t.e("4974"),
                 t.e("12453"),

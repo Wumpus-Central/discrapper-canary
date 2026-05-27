@@ -7,7 +7,11 @@ let a = "No Mic";
 function o(e) {
     return (0, i.bG)(
         [r.A],
-        () => !!e.isForumPost() && null != e.parent_id && (r.A.getChannel(e.parent_id)?.isGameInvitesChannel() ?? !1),
+        () =>
+            null != e &&
+            !!e.isForumPost() &&
+            null != e.parent_id &&
+            (r.A.getChannel(e.parent_id)?.isGameInvitesChannel() ?? !1),
     );
 }
 function l(e, t) {
