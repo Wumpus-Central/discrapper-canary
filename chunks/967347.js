@@ -96,7 +96,7 @@ async function _() {
         },
     ];
 }
-async function f() {
+async function h() {
     if (!o.isPlatformEmbedded) return [];
     if ((0, o.isLinux)()) return _();
     if (!(0, o.isWindows)()) return [];
@@ -104,9 +104,9 @@ async function f() {
     let e = l.Ay.requireModule("discord_media");
     return (await e.getSystemAnalyticsBlob()) ?? [];
 }
-async function h() {
+async function f() {
     try {
-        let e = (await f()).filter((e) => c.hashes[e.name] !== e.hash);
+        let e = (await h()).filter((e) => c.hashes[e.name] !== e.hash);
         for (let { name: t, hash: n, data: i } of e) {
             let e = { ...i, gpus: i.gpus?.map((e) => JSON.stringify(e)) };
             a.default.track(u.HAw.HARDWARE_DETECTED, e), ((c = { hashes: { ...c.hashes } }).hashes[t] = n);
@@ -117,6 +117,7 @@ async function h() {
 class p extends i.Ay.PersistedStore {
     static displayName = "SystemAnalyticsStore";
     static persistKey = "SystemAnalyticsStore";
+    cachedHardwareInfo;
     initialize(e) {
         (c = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(s.A);
     }
@@ -124,16 +125,17 @@ class p extends i.Ay.PersistedStore {
         return c;
     }
     async info() {
+        if (void 0 !== this.cachedHardwareInfo) return this.cachedHardwareInfo;
         try {
-            let e = (await f()).find((e) => "hardware_detected" === e.name);
+            let e = (await h()).find((e) => "hardware_detected" === e.name);
             if (null == e) return null;
-            return e.data;
+            return (0, o.isLinux)() && (this.cachedHardwareInfo = e.data), e.data;
         } catch (e) {}
     }
 }
 let E = new p(r.h, {
     START_SESSION: function () {
-        return h(), !1;
+        return f(), !1;
     },
 });
 function m() {
