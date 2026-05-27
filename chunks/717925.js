@@ -1,8 +1,8 @@
 n.d(t, { E: () => y, T: () => T });
 var l = n(627968),
-    a = n(64700),
-    i = n(503698),
-    r = n.n(i),
+    i = n(64700),
+    a = n(503698),
+    r = n.n(a),
     s = n(683071),
     o = n(289873),
     u = n(725836);
@@ -24,13 +24,13 @@ let y = (e) => {
     E = (e) =>
         null != e && "object" == typeof e && "message" in e && "type" in e
             ? (0, l.jsx)(s.w, { type: e.type, hidden: e.hidden, children: e.message }, e.key)
-            : (0, l.jsx)(a.Fragment, { children: e.directContent }, e.key),
+            : (0, l.jsx)(i.Fragment, { children: e.directContent }, e.key),
     P = (e) => null == e || "" === e,
     S = (e) => {
         let { children: t } = e,
             {
                 errorMessage: n,
-                warningMessage: i,
+                warningMessage: a,
                 richNotices: r,
             } = (() => {
                 let { errorMessage: e } = (0, d.e)({}),
@@ -39,30 +39,37 @@ let y = (e) => {
                 return {
                     errorMessage: e,
                     warningMessage: t,
-                    richNotices: a.useMemo(() => {
+                    richNotices: i.useMemo(() => {
                         let e = [];
                         return null != n && e.push(n), e;
                     }, [n]),
                 };
-            })();
-        return a.useMemo(
-            () =>
-                P(n) && P(i) && !(r.length > 0) && null == t
-                    ? null
-                    : (0, l.jsxs)("div", {
-                          className: A.dD,
-                          children: [
-                              P(n) ? null : (0, l.jsx)(s.w, { type: "critical", children: n }),
-                              P(i) ? null : (0, l.jsx)(s.w, { type: "warning", children: i }),
-                              r.map(E),
-                              t,
-                          ],
-                      }),
-            [n, i, r, t],
+            })(),
+            o = i.useRef(null);
+        return (
+            i.useEffect(() => {
+                P(n) || null == o.current || o.current.scrollIntoView({ behavior: "smooth" });
+            }, [n]),
+            i.useMemo(
+                () =>
+                    P(n) && P(a) && !(r.length > 0) && null == t
+                        ? null
+                        : (0, l.jsxs)("div", {
+                              ref: o,
+                              className: A.dD,
+                              children: [
+                                  P(n) ? null : (0, l.jsx)(s.w, { type: "critical", children: n }),
+                                  P(a) ? null : (0, l.jsx)(s.w, { type: "warning", children: a }),
+                                  r.map(E),
+                                  t,
+                              ],
+                          }),
+                [n, a, r, t],
+            )
         );
     },
     _ = (e) =>
-        a.useMemo(
+        i.useMemo(
             () =>
                 null == e
                     ? null
@@ -77,25 +84,25 @@ let y = (e) => {
         ),
     f = (e) => {
         let { upperInlineNoticeProps: t, shouldShowGlobalNotices: n } = e,
-            i = _(t);
-        return a.useMemo(
+            a = _(t);
+        return i.useMemo(
             () =>
-                null != i || n
+                null != a || n
                     ? n
-                        ? null != i
-                            ? (0, l.jsx)(S, { children: i })
+                        ? null != a
+                            ? (0, l.jsx)(S, { children: a })
                             : (0, l.jsx)(S, {})
-                        : (0, l.jsx)("div", { className: A.dD, children: i })
+                        : (0, l.jsx)("div", { className: A.dD, children: a })
                     : null,
-            [n, i],
+            [n, a],
         );
     },
     T = (e) => {
         let {
                 upperInlineNoticeProps: t,
                 planSelectContent: n,
-                purchaseItemContent: a,
-                subscriptionDetailsContent: i,
+                purchaseItemContent: i,
+                subscriptionDetailsContent: a,
                 isStepLoading: s,
                 paymentMethodContent: o,
                 invoiceSummaryContent: c,
@@ -117,9 +124,9 @@ let y = (e) => {
                           children: [
                               (0, l.jsx)(f, { upperInlineNoticeProps: t, shouldShowGlobalNotices: S }),
                               n,
-                              null != n && null != a && (0, l.jsx)("div", { className: A.ls }),
-                              a,
-                              null != i && (0, l.jsx)("div", { className: A.P3, children: i }),
+                              null != n && null != i && (0, l.jsx)("div", { className: A.ls }),
+                              i,
+                              null != a && (0, l.jsx)("div", { className: A.P3, children: a }),
                               (0, l.jsx)("div", { className: A.Jv, children: o }),
                               null != c && (0, l.jsx)("div", { className: A.ZF, children: c }),
                           ],
