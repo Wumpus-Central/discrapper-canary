@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { C: () => p, JE: () => _, NE: () => f, VU: () => E, bA: () => g, eo: () => m, mb: () => h }),
-    n(323874),
-    n(14289),
-    n(35956);
-var i = n(64700),
-    r = n(735438),
-    s = n(353640),
-    a = n(121894),
-    o = n(816866),
-    l = n(87558),
-    u = n(559474);
+t.d(r, { C: () => m, JE: () => d, NE: () => f, VU: () => A, bA: () => g, eo: () => _, mb: () => v }),
+    t(323874),
+    t(14289),
+    t(35956);
+var a = t(64700),
+    n = t(735438),
+    l = t(353640),
+    i = t(121894),
+    o = t(816866),
+    s = t(87558),
+    u = t(559474);
 function c(e) {
     null != e.previewSrc && URL.revokeObjectURL(e.previewSrc),
         Object.values(e.layerSrcByLayerId).forEach((e) => URL.revokeObjectURL(e));
 }
-function d(e) {
-    let { collectionAssets: t, avatarDecorationAssets: n, profileFrameAssets: i, previewProfileEffectSkuId: r } = e;
-    return Object.keys(t).length > 0 || Object.keys(n).length > 0 || Object.keys(i).length > 0 || null != r;
+function p(e) {
+    let { collectionAssets: r, avatarDecorationAssets: t, profileFrameAssets: a, previewProfileEffectSkuId: n } = e;
+    return Object.keys(r).length > 0 || Object.keys(t).length > 0 || Object.keys(a).length > 0 || null != n;
 }
-let _ = (0, s.v)((e) => ({
+let d = (0, l.v)((e) => ({
         previewEnabled: !1,
         collectionAssets: {},
         avatarDecorationAssets: {},
@@ -28,98 +27,98 @@ let _ = (0, s.v)((e) => ({
         previewProfileFrameKey: null,
         heroLogoMaxHeight: null,
         heroResponsive: !1,
-        setPreviewEnabled: (t) => e({ previewEnabled: t }),
-        setHeroLogoMaxHeight: (t) => e({ heroLogoMaxHeight: t }),
-        setHeroResponsive: (t) => e({ heroResponsive: t }),
-        upsertCollectionAsset: (t, n) =>
-            (0, a.r)(() => {
+        setPreviewEnabled: (r) => e({ previewEnabled: r }),
+        setHeroLogoMaxHeight: (r) => e({ heroLogoMaxHeight: r }),
+        setHeroResponsive: (r) => e({ heroResponsive: r }),
+        upsertCollectionAsset: (r, t) =>
+            (0, i.r)(() => {
                 e((e) => {
-                    let i = e.collectionAssets[t];
-                    null != i && URL.revokeObjectURL(i.src);
-                    let r = URL.createObjectURL(n),
-                        s = { ...e.collectionAssets };
+                    let a = e.collectionAssets[r];
+                    null != a && URL.revokeObjectURL(a.src);
+                    let n = URL.createObjectURL(t),
+                        l = { ...e.collectionAssets };
                     return (
-                        (s[t] = { type: t, name: n.name, src: r }), { ...e, collectionAssets: s, previewEnabled: !0 }
+                        (l[r] = { type: r, name: t.name, src: n }), { ...e, collectionAssets: l, previewEnabled: !0 }
                     );
                 });
             }),
-        deleteCollectionAsset: (t) =>
-            (0, a.r)(() => {
+        deleteCollectionAsset: (r) =>
+            (0, i.r)(() => {
                 e((e) => {
-                    let n = e.collectionAssets[t];
-                    if (null == n) return e;
-                    URL.revokeObjectURL(n.src);
-                    let { [t]: i, ...r } = e.collectionAssets;
-                    return { ...e, collectionAssets: r, previewEnabled: d({ ...e, collectionAssets: r }) };
+                    let t = e.collectionAssets[r];
+                    if (null == t) return e;
+                    URL.revokeObjectURL(t.src);
+                    let { [r]: a, ...n } = e.collectionAssets;
+                    return { ...e, collectionAssets: n, previewEnabled: p({ ...e, collectionAssets: n }) };
                 });
             }),
-        upsertAvatarDecorationAsset: (t) =>
-            (0, a.r)(() => {
+        upsertAvatarDecorationAsset: (r) =>
+            (0, i.r)(() => {
                 e((e) => {
-                    let n = e.avatarDecorationAssets[t.name];
-                    null != n && URL.revokeObjectURL(n.src);
-                    let i = URL.createObjectURL(t),
-                        r = { ...e.avatarDecorationAssets };
+                    let t = e.avatarDecorationAssets[r.name];
+                    null != t && URL.revokeObjectURL(t.src);
+                    let a = URL.createObjectURL(r),
+                        n = { ...e.avatarDecorationAssets };
                     return (
-                        (r[t.name] = { type: u.Jn.AVATAR_DECORATION, name: t.name, src: i }),
+                        (n[r.name] = { type: u.Jn.AVATAR_DECORATION, name: r.name, src: a }),
                         {
                             ...e,
-                            avatarDecorationAssets: r,
-                            previewAvatarDecorationKey: e.previewAvatarDecorationKey ?? t.name,
+                            avatarDecorationAssets: n,
+                            previewAvatarDecorationKey: e.previewAvatarDecorationKey ?? r.name,
                             previewEnabled: !0,
                         }
                     );
                 });
             }),
-        deleteAvatarDecorationAsset: (t) =>
-            (0, a.r)(() => {
+        deleteAvatarDecorationAsset: (r) =>
+            (0, i.r)(() => {
                 e((e) => {
-                    let n = e.avatarDecorationAssets[t];
-                    if (null == n) return e;
-                    URL.revokeObjectURL(n.src);
-                    let { [t]: i, ...r } = e.avatarDecorationAssets,
-                        s = e.previewAvatarDecorationKey === t;
+                    let t = e.avatarDecorationAssets[r];
+                    if (null == t) return e;
+                    URL.revokeObjectURL(t.src);
+                    let { [r]: a, ...n } = e.avatarDecorationAssets,
+                        l = e.previewAvatarDecorationKey === r;
                     return {
                         ...e,
-                        avatarDecorationAssets: r,
-                        previewAvatarDecorationKey: s ? null : e.previewAvatarDecorationKey,
-                        previewEnabled: d({ ...e, avatarDecorationAssets: r }),
+                        avatarDecorationAssets: n,
+                        previewAvatarDecorationKey: l ? null : e.previewAvatarDecorationKey,
+                        previewEnabled: p({ ...e, avatarDecorationAssets: n }),
                     };
                 });
             }),
-        upsertProfileFrame: (t, n) =>
-            (0, a.r)(() => {
+        upsertProfileFrame: (r, t) =>
+            (0, i.r)(() => {
                 e((e) => {
-                    let i = e.profileFrameAssets[t];
+                    let a = e.profileFrameAssets[r];
                     return (
-                        null != i && c(i),
+                        null != a && c(a),
                         {
                             ...e,
-                            profileFrameAssets: { ...e.profileFrameAssets, [t]: n },
-                            previewProfileFrameKey: e.previewProfileFrameKey ?? t,
+                            profileFrameAssets: { ...e.profileFrameAssets, [r]: t },
+                            previewProfileFrameKey: e.previewProfileFrameKey ?? r,
                             previewEnabled: !0,
                         }
                     );
                 });
             }),
-        deleteProfileFrame: (t) =>
-            (0, a.r)(() => {
+        deleteProfileFrame: (r) =>
+            (0, i.r)(() => {
                 e((e) => {
-                    let n = e.profileFrameAssets[t];
-                    if (null == n) return e;
-                    c(n);
-                    let { [t]: i, ...r } = e.profileFrameAssets,
-                        s = e.previewProfileFrameKey === t;
+                    let t = e.profileFrameAssets[r];
+                    if (null == t) return e;
+                    c(t);
+                    let { [r]: a, ...n } = e.profileFrameAssets,
+                        l = e.previewProfileFrameKey === r;
                     return {
                         ...e,
-                        profileFrameAssets: r,
-                        previewProfileFrameKey: s ? null : e.previewProfileFrameKey,
-                        previewEnabled: d({ ...e, profileFrameAssets: r }),
+                        profileFrameAssets: n,
+                        previewProfileFrameKey: l ? null : e.previewProfileFrameKey,
+                        previewEnabled: p({ ...e, profileFrameAssets: n }),
                     };
                 });
             }),
         clearAssets: () =>
-            (0, a.r)(() => {
+            (0, i.r)(() => {
                 e(
                     (e) => (
                         Object.values(e.collectionAssets).forEach((e) => URL.revokeObjectURL(e.src)),
@@ -139,78 +138,78 @@ let _ = (0, s.v)((e) => ({
                     ),
                 );
             }),
-        setPreviewProfileEffectSkuId: (t) =>
-            (0, a.r)(() =>
+        setPreviewProfileEffectSkuId: (r) =>
+            (0, i.r)(() =>
                 e((e) => ({
-                    previewProfileEffectSkuId: t,
-                    previewEnabled: null != t || d({ ...e, previewProfileEffectSkuId: t }),
+                    previewProfileEffectSkuId: r,
+                    previewEnabled: null != r || p({ ...e, previewProfileEffectSkuId: r }),
                 })),
             ),
-        setPreviewAvatarDecorationKey: (t) =>
-            (0, a.r)(() => e((e) => ({ previewAvatarDecorationKey: t, previewEnabled: null != t || d(e) }))),
-        setPreviewProfileFrameKey: (t) =>
-            (0, a.r)(() => e((e) => ({ previewProfileFrameKey: t, previewEnabled: null != t || d(e) }))),
+        setPreviewAvatarDecorationKey: (r) =>
+            (0, i.r)(() => e((e) => ({ previewAvatarDecorationKey: r, previewEnabled: null != r || p(e) }))),
+        setPreviewProfileFrameKey: (r) =>
+            (0, i.r)(() => e((e) => ({ previewProfileFrameKey: r, previewEnabled: null != r || p(e) }))),
     })),
     f = () => {
-        let e = _((e) => e.collectionAssets),
-            t = _((e) => e.avatarDecorationAssets);
-        return i.useMemo(
+        let e = d((e) => e.collectionAssets),
+            r = d((e) => e.avatarDecorationAssets);
+        return a.useMemo(
             () => ({
-                collectionAssets: Object.values(e).sort((e, t) => e.name.localeCompare(t.name)),
-                avatarDecorationAssets: Object.values(t).sort((e, t) => e.name.localeCompare(t.name)),
+                collectionAssets: Object.values(e).sort((e, r) => e.name.localeCompare(r.name)),
+                avatarDecorationAssets: Object.values(r).sort((e, r) => e.name.localeCompare(r.name)),
             }),
-            [e, t],
+            [e, r],
         );
     },
-    h = (e) => _((t) => (t.previewEnabled ? t.collectionAssets[e]?.src : null)),
-    p = (e) => {
-        let { previewEnabled: t, previewProfileEffectSkuId: n } = _(),
-            s = (0, o.ZK)(t ? n : null);
-        return i.useMemo(() => {
-            if (null == s || null == e) return null;
-            let { effects: t, stillFrames: n } = s,
-                i = null != n && Object.keys(n).length > 0;
-            if (0 === t.length && !i) return null;
-            let a = (0, r.cloneDeep)(e);
+    v = (e) => d((r) => (r.previewEnabled ? r.collectionAssets[e]?.src : null)),
+    m = (e) => {
+        let { previewEnabled: r, previewProfileEffectSkuId: t } = d(),
+            l = (0, o.ZK)(r ? t : null);
+        return a.useMemo(() => {
+            if (null == l || null == e) return null;
+            let { effects: r, stillFrames: t } = l,
+                a = null != t && Object.keys(t).length > 0;
+            if (0 === r.length && !a) return null;
+            let i = (0, n.cloneDeep)(e);
             return (
-                (a.title = s.name),
-                (a.effects = t.map((e) => {
-                    let { base64: t, ...n } = e;
-                    return n;
+                (i.title = l.name),
+                (i.effects = r.map((e) => {
+                    let { base64: r, ...t } = e;
+                    return t;
                 })),
-                i &&
-                    ((a.reducedMotionSrc = n[l.qH.REDUCED_MOTION]?.src ?? ""),
-                    (a.staticFrameSrc = n[l.qH.STATIC]?.src ?? ""),
-                    (a.thumbnailPreviewSrc = n[l.qH.THUMBNAIL]?.src ?? "")),
-                a
+                a &&
+                    ((i.reducedMotionSrc = t[s.qH.REDUCED_MOTION]?.src ?? ""),
+                    (i.staticFrameSrc = t[s.qH.STATIC]?.src ?? ""),
+                    (i.thumbnailPreviewSrc = t[s.qH.THUMBNAIL]?.src ?? "")),
+                i
             );
-        }, [s, e]);
+        }, [l, e]);
     },
-    E = () =>
-        _((e) =>
+    A = () =>
+        d((e) =>
             e.previewEnabled && null != e.previewAvatarDecorationKey
                 ? (e.avatarDecorationAssets[e.previewAvatarDecorationKey]?.src ?? null)
                 : null,
         ),
-    m = () => {
-        let e = _((e) =>
+    _ = () => {
+        let e = d((e) =>
             e.previewEnabled && null != e.previewProfileFrameKey
                 ? (e.profileFrameAssets[e.previewProfileFrameKey] ?? null)
                 : null,
         );
-        return i.useMemo(() => {
+        return a.useMemo(() => {
             if (null == e) return null;
-            let t = {};
-            for (let n of e.layers) {
-                let i = e.layerSrcByLayerId[n.id];
-                if (null == i) continue;
-                let r = new Image();
-                (r.src = i), (t[n.id] = r);
+            let r = {};
+            for (let t of e.layers) {
+                let a = e.layerSrcByLayerId[t.id];
+                if (null == a) continue;
+                let n = new Image();
+                (n.src = a), (r[t.id] = n);
             }
-            return { layers: e.layers, layerData: t };
+            return { layers: e.layers, layerData: r };
         }, [e]);
     },
     g = () => {
-        let e = _((e) => e.profileFrameAssets);
-        return i.useMemo(() => Object.values(e).sort((e, t) => e.key.localeCompare(t.key)), [e]);
+        let e = d((e) => e.profileFrameAssets);
+        return a.useMemo(() => Object.values(e).sort((e, r) => e.key.localeCompare(r.key)), [e]);
     };

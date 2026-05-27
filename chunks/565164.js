@@ -1,30 +1,29 @@
-"use strict";
-n.d(t, { B8: () => _, wb: () => h, z5: () => d }), n(321073);
-var i = n(627968),
-    r = n(64700),
-    s = n(61491),
-    a = n(834730),
-    o = n(984212),
-    l = n(875699);
-let u = /#xywh=(\d+),(\d+),(\d+),(\d+)/i,
+n.d(t, { B8: () => m, wb: () => h, z5: () => d }), n(321073);
+var r = n(627968),
+    l = n(64700),
+    a = n(61491),
+    i = n(834730),
+    s = n(984212),
+    u = n(875699);
+let o = /#xywh=(\d+),(\d+),(\d+),(\d+)/i,
     c = [];
 function d(e, t, n) {
-    let [i, s] = r.useState(null),
-        [a, l] = r.useState(null);
+    let [r, a] = l.useState(null),
+        [i, u] = l.useState(null);
     return (
-        r.useEffect(() => {
+        l.useEffect(() => {
             if (null == t || 0 === t.length) return;
             let n = e.current;
             if (null == n) return;
             n.track.mode = "hidden";
-            let i = () => {
+            let r = () => {
                 let e = n.track.cues ?? [],
-                    i = [];
+                    r = [];
                 for (let t = 0; t < e.length; t++) {
                     let n = e[t];
-                    if (!(0, o.C)(n)) continue;
-                    let r = (function (e) {
-                        let t = e.match(u);
+                    if (!(0, s.C)(n)) continue;
+                    let l = (function (e) {
+                        let t = e.match(o);
                         if (null == t) return null;
                         let n = e.split("#")[0];
                         return 0 === n.length
@@ -37,59 +36,59 @@ function d(e, t, n) {
                                   h: parseInt(t[4], 10),
                               };
                     })(n.text);
-                    null != r && i.push({ startSec: n.startTime, endSec: n.endTime, ...r });
+                    null != l && r.push({ startSec: n.startTime, endSec: n.endTime, ...l });
                 }
-                i.sort((e, t) => e.startSec - t.startSec), s({ url: t, cues: i });
+                r.sort((e, t) => e.startSec - t.startSec), a({ url: t, cues: r });
             };
             return (
-                n.addEventListener("load", i),
-                n.readyState === HTMLTrackElement.LOADED && i(),
-                () => n.removeEventListener("load", i)
+                n.addEventListener("load", r),
+                n.readyState === HTMLTrackElement.LOADED && r(),
+                () => n.removeEventListener("load", r)
             );
         }, [t, e]),
-        r.useEffect(() => {
+        l.useEffect(() => {
             if (null == n || 0 === n.length) return;
             let e = new Image();
             return (
-                (e.onload = () => l(n)),
+                (e.onload = () => u(n)),
                 (e.src = n),
                 () => {
                     e.onload = null;
                 }
             );
         }, [n]),
-        null != i && i?.url === t && a === n ? i.cues : c
+        null != r && r?.url === t && i === n ? r.cues : c
     );
 }
-function _(e, t) {
+function m(e, t) {
     if (0 === e.length) return null;
     let n = 0,
-        i = e.length - 1;
-    for (; n <= i; ) {
-        let r = (n + i) >> 1,
-            s = e[r];
-        if (t < s.startSec) i = r - 1;
+        r = e.length - 1;
+    for (; n <= r; ) {
+        let l = (n + r) >> 1,
+            a = e[l];
+        if (t < a.startSec) r = l - 1;
         else {
-            if (!(t >= s.endSec)) return s;
-            n = r + 1;
+            if (!(t >= a.endSec)) return a;
+            n = l + 1;
         }
     }
     return e[Math.max(0, Math.min(n, e.length - 1))];
 }
 function h(e) {
-    let { cue: t, timeSec: n, cursorXPx: r, timelineWidthPx: o } = e;
+    let { cue: t, timeSec: n, cursorXPx: l, timelineWidthPx: s } = e;
     if (t.w <= 0 || t.h <= 0) return null;
-    let u = t.w / 2,
-        c = 8 + u,
-        d = Math.max(c, o - 8 - u),
-        _ = Math.max(c, Math.min(r, d));
-    return (0, i.jsxs)("div", {
-        className: l.kL,
+    let o = t.w / 2,
+        c = 8 + o,
+        d = Math.max(c, s - 8 - o),
+        m = Math.max(c, Math.min(l, d));
+    return (0, r.jsxs)("div", {
+        className: u.kL,
         "aria-hidden": !0,
-        style: { left: `${_}px`, bottom: "16px", width: `${t.w}px` },
+        style: { left: `${m}px`, bottom: "16px", width: `${t.w}px` },
         children: [
-            (0, i.jsx)("div", {
-                className: l.FF,
+            (0, r.jsx)("div", {
+                className: u.FF,
                 style: {
                     width: `${t.w}px`,
                     height: `${t.h}px`,
@@ -98,12 +97,12 @@ function h(e) {
                     backgroundRepeat: "no-repeat",
                 },
             }),
-            (0, i.jsx)(a.E, {
-                className: l.Sp,
+            (0, r.jsx)(i.E, {
+                className: u.Sp,
                 variant: "text-xs/normal",
                 color: "always-white",
                 tabularNumbers: !0,
-                children: (0, s.rB)(n),
+                children: (0, a.rB)(n),
             }),
         ],
     });

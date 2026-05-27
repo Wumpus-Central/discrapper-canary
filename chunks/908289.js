@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { A: () => r });
+n.d(e, { A: () => r });
 var i = n(360469);
-function r(e) {
-    if (null != e && null != e.url && i.yz.test(e.url)) return e.url;
+function r(t) {
+    if (null != t && null != t.url && i.yz.test(t.url)) return t.url;
 }

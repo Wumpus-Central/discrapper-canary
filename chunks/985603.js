@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { $p: () => c, A: () => _, FZ: () => l, XQ: () => u, xf: () => d });
+n.d(t, { $p: () => d, A: () => E, FZ: () => c, XQ: () => o, xf: () => u });
 var i,
-    r = n(64700),
-    s = n(688810),
-    a = n(174459),
-    o = n(652215);
-let l = "xbox",
-    u = "thirdPartyPartnerPerk",
-    c = "third_party_learn_more_xbox";
-var d = (((i = {}).CLAIM = "claim"), (i.PARTNER_PAGE_REDIRECT = "partner_page_redirect"), (i.CANCEL = "cancel"), i);
-function _() {
-    let { analyticsLocations: e } = (0, s.Ay)();
-    return r.useCallback(
+    l = n(64700),
+    r = n(688810),
+    s = n(174459),
+    a = n(652215);
+let c = "xbox",
+    o = "thirdPartyPartnerPerk",
+    d = "third_party_learn_more_xbox";
+var u = (((i = {}).CLAIM = "claim"), (i.PARTNER_PAGE_REDIRECT = "partner_page_redirect"), (i.CANCEL = "cancel"), i);
+function E() {
+    let { analyticsLocations: e } = (0, r.Ay)();
+    return l.useCallback(
         (t, n) => {
-            a.default.track(o.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
-                partner: l,
+            s.default.track(a.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                partner: c,
                 cta_type: t,
                 url: n ?? null,
                 location_stack: e,

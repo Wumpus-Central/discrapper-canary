@@ -1,9 +1,8 @@
-"use strict";
-function i(e, t, n) {
+n.d(e, { A: () => i });
+function i(t, e, n) {
     return null == n
         ? null
-        : (e.getApplicationActivity(n) ??
-              t.getApplicationActivity(n, !0) ??
-              t.getHiddenActivities().find((e) => e.application_id === n));
+        : (t.getApplicationActivity(n) ??
+              e.getApplicationActivity(n, !0) ??
+              e.getHiddenActivities().find((t) => t.application_id === n));
 }
-n.d(t, { A: () => i });

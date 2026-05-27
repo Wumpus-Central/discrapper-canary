@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { A: () => a });
-var i = n(503698),
-    r = n.n(i),
-    s = n(77157);
-function a(e) {
-    let t = (0, s.A)(e);
-    return r()({
+t.d(r, { A: () => i });
+var a = t(503698),
+    s = t.n(a),
+    l = t(77157);
+function i(e) {
+    let r = (0, l.A)(e);
+    return s()({
         "custom-profile-frame": !!e,
-        "custom-profile-frame-bottom": t?.layers.some((e) => {
-            let { type: t, anchor: n } = e;
-            return "staple" === t && "bottom" === n;
+        "custom-profile-frame-bottom": r?.layers.some((e) => {
+            let { type: r, anchor: t } = e;
+            return "staple" === r && "bottom" === t;
         }),
     });
 }

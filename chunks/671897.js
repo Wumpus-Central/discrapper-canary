@@ -1,57 +1,56 @@
-"use strict";
-n.d(t, { A: () => Q }), n(321073);
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(873174),
-    l = n(17928),
-    u = n(661531),
+n.d(t, { A: () => J }), n(321073);
+var r = n(627968),
+    l = n(64700),
+    a = n(503698),
+    i = n.n(a),
+    s = n(873174),
+    u = n(17928),
+    o = n(661531),
     c = n(876230),
     d = n(106236),
-    _ = n(717421),
+    m = n(717421),
     h = n(358618),
     f = n(793920),
     p = n(983851),
-    E = n(86147),
-    m = n(729475),
+    v = n(86147),
+    x = n(729475),
     g = n(261958),
-    A = n(32880),
-    I = n(922016),
-    T = n(980707),
-    S = n(477782),
-    y = n(365199),
+    E = n(32880),
+    b = n(922016),
+    S = n(980707),
+    w = n(477782),
+    C = n(365199),
     N = n(268791),
-    v = n(315710),
-    C = n(534514),
+    y = n(315710),
+    A = n(534514),
     R = n(775602),
-    O = n(174459),
-    b = n(61491),
-    D = n(990078),
-    L = n(113494),
-    w = n(782134),
-    M = n(417270),
-    P = n(939249),
-    x = n(834730),
-    k = n(375708),
-    U = n(834926);
-let G = "-:--",
-    F = {
-        [c.Q6.PLAYING]: { icon: L.E, label: k.intl.string(k.t.ZcgDJX) },
-        [c.Q6.PAUSED]: { icon: w.u, label: k.intl.string(k.t.RscU7I) },
-        [c.Q6.ENDED]: { icon: M.m, label: k.intl.string(k.t.hsvh0i) },
+    T = n(174459),
+    j = n(61491),
+    L = n(990078),
+    M = n(113494),
+    k = n(782134),
+    P = n(417270),
+    D = n(939249),
+    I = n(834730),
+    B = n(375708),
+    F = n(834926);
+let _ = "-:--",
+    U = {
+        [c.Q6.PLAYING]: { icon: M.E, label: B.intl.string(B.t.ZcgDJX) },
+        [c.Q6.PAUSED]: { icon: k.u, label: B.intl.string(B.t.RscU7I) },
+        [c.Q6.ENDED]: { icon: P.m, label: B.intl.string(B.t.hsvh0i) },
     },
-    V = { [c.oA.MD]: c.n4.MD, [c.oA.LG]: c.n4.LG },
-    B = { [c.n4.MD]: "md", [c.n4.LG]: "lg" };
-function H(e) {
+    O = { [c.oA.MD]: c.n4.MD, [c.oA.LG]: c.n4.LG },
+    K = { [c.n4.MD]: "md", [c.n4.LG]: "lg" };
+function $(e) {
     let { videoRef: t, compact: n = !1 } = e,
-        [s, o] = r.useState(null),
-        [l, u] = r.useState(null),
-        [c, d] = r.useState(!1);
-    r.useEffect(() => {
+        [a, s] = l.useState(null),
+        [u, o] = l.useState(null),
+        [c, d] = l.useState(!1);
+    l.useEffect(() => {
         let e = t.current;
         function n() {
-            null != e && (o(e.currentTime), u(e.duration));
+            null != e && (s(e.currentTime), o(e.duration));
         }
         if (null != e)
             return (
@@ -65,22 +64,22 @@ function H(e) {
                 }
             );
     }, [t]);
-    let _ = Number.isFinite(s) && Number.isFinite(l) ? Math.max(0, l - s) : null,
-        h = c ? (null != _ ? `-${(0, b.rB)(_)}` : G) : Number.isFinite(s) ? (0, b.rB)(s) : G,
-        f = Number.isFinite(l) ? (0, b.rB)(l) : G;
-    return (0, i.jsxs)(P.D, {
-        className: a()(U.d$, U.jk),
+    let m = Number.isFinite(a) && Number.isFinite(u) ? Math.max(0, u - a) : null,
+        h = c ? (null != m ? `-${(0, j.rB)(m)}` : _) : Number.isFinite(a) ? (0, j.rB)(a) : _,
+        f = Number.isFinite(u) ? (0, j.rB)(u) : _;
+    return (0, r.jsxs)(D.D, {
+        className: i()(F.d$, F.jk),
         "data-testid": "discord-web-video-player-duration",
         onClick: () => d((e) => !e),
         children: [
-            (0, i.jsx)(x.E, { variant: "text-sm/normal", className: U.Ue, tabularNumbers: !0, children: h }),
+            (0, r.jsx)(I.E, { variant: "text-sm/normal", className: F.Ue, tabularNumbers: !0, children: h }),
             !n &&
-                (0, i.jsxs)(i.Fragment, {
+                (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, i.jsx)(x.E, { variant: "text-sm/normal", className: U.zO, children: "/" }),
-                        (0, i.jsx)(x.E, {
+                        (0, r.jsx)(I.E, { variant: "text-sm/normal", className: F.zO, children: "/" }),
+                        (0, r.jsx)(I.E, {
                             variant: "text-sm/normal",
-                            className: U.Ue,
+                            className: F.Ue,
                             tabularNumbers: !0,
                             children: f,
                         }),
@@ -89,381 +88,381 @@ function H(e) {
         ],
     });
 }
-let j = r.forwardRef(function (e, t) {
+let Q = l.forwardRef(function (e, t) {
     let {
         iconComponent: n,
-        animationTime: r,
-        visible: s,
-        ariaLabel: l,
+        animationTime: l,
+        visible: a,
+        ariaLabel: u,
         active: d,
-        disabled: _,
+        disabled: m,
         tooltipLabel: h,
         tooltipDelayMs: f = 1500,
         shortcut: p,
-        onClick: E,
-        buttonSize: m = c.n4.MD,
+        onClick: v,
+        buttonSize: x = c.n4.MD,
         "data-testid": g,
-        clickableProps: A,
+        clickableProps: E,
     } = e;
-    return (0, i.jsx)(D.m, {
-        text: s ? h : void 0,
+    return (0, r.jsx)(L.m, {
+        text: a ? h : void 0,
         keyboardShortcut: "" !== (p ?? "").trim() ? p : void 0,
         delay: f,
-        children: (0, i.jsx)(P.D, {
-            onClick: !0 === _ ? void 0 : E,
-            className: a()(U.K5, { [U.Iy]: _ }),
-            "aria-label": l,
-            "aria-disabled": _,
+        children: (0, r.jsx)(D.D, {
+            onClick: !0 === m ? void 0 : v,
+            className: i()(F.K5, { [F.Iy]: m }),
+            "aria-label": u,
+            "aria-disabled": m,
             "data-testid": g,
             innerRef: t,
-            ...A,
-            children: (0, i.jsx)(o.animated.div, {
-                className: U.K5,
+            ...E,
+            children: (0, r.jsx)(s.animated.div, {
+                className: F.K5,
                 style: {
-                    opacity: (0, o.to)([r.to({ range: [0, 1], output: [0, 1] })], (e) => `${s ? e : Math.pow(e, 8)}`),
-                    height: { [c.n4.LG]: "32px", [c.n4.MD]: "24px" }[m],
+                    opacity: (0, s.to)([l.to({ range: [0, 1], output: [0, 1] })], (e) => `${a ? e : Math.pow(e, 8)}`),
+                    height: { [c.n4.LG]: "32px", [c.n4.MD]: "24px" }[x],
                 },
-                children: (0, i.jsx)(n, {
-                    size: B[m],
-                    color: !0 !== _ ? u.A.colors.WHITE : u.A.colors.TEXT_MUTED,
-                    className: a()(U.jk, { [U.x2]: d, [U.Wr]: !_ }),
+                children: (0, r.jsx)(n, {
+                    size: K[x],
+                    color: !0 !== m ? o.A.colors.WHITE : o.A.colors.TEXT_MUTED,
+                    className: i()(F.jk, { [F.x2]: d, [F.Wr]: !m }),
                 }),
             }),
         }),
     });
 });
-var Y = n(91034),
-    W = n(710434),
-    K = n(634156),
-    $ = n(652215),
-    z = n(445563);
-let q = [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
-    X = q[0],
-    Z = q[q.length - 1];
-function Q(e) {
+var V = n(91034),
+    G = n(710434),
+    Y = n(634156),
+    H = n(652215),
+    Z = n(445563);
+let z = [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2],
+    X = z[0],
+    W = z[z.length - 1];
+function J(e) {
     let {
             videoRef: t,
             playerState: n,
-            animSpring: s,
-            visible: I,
-            seekForwardEnabled: T,
-            hideCaptionBtn: S = !1,
-            hideTranscriptBtn: y = !1,
+            animSpring: a,
+            visible: b,
+            seekForwardEnabled: S,
+            hideCaptionBtn: w = !1,
+            hideTranscriptBtn: C = !1,
             hideSkipButtons: N = !1,
-            hideFullScreenBtn: v = !1,
-            hidePlaybackSpeedBtn: C = !1,
-            size: b,
-            downloadUrl: D,
-            downloadContentType: L,
-            extraButtons: w,
-            autoFocus: M = !1,
-            keyDownHandlerRef: P,
-            volume: x,
-            muted: G,
-            transcriptEnabled: B,
-            captionEnabled: q,
+            hideFullScreenBtn: y = !1,
+            hidePlaybackSpeedBtn: A = !1,
+            size: j,
+            downloadUrl: L,
+            downloadContentType: M,
+            extraButtons: k,
+            autoFocus: P = !1,
+            keyDownHandlerRef: D,
+            volume: I,
+            muted: _,
+            transcriptEnabled: K,
+            captionEnabled: z,
             fullScreenEnabled: X,
-            handlePlaybackBtnClick: Z,
-            handleTranscriptBtnClick: Q,
+            handlePlaybackBtnClick: W,
+            handleTranscriptBtnClick: J,
             handleCaptionBtnClick: ee,
             handleFullScreenBtnClick: en,
-            handleSeekBackBtnClick: ei,
-            handleSeekForwardBtnClick: er,
-            autoHideVolumeSlider: es = !1,
-            compactTimeDisplay: ea = !1,
-            handleControlBarPendingInteraction: eo,
-            onVolumeChange: el,
-            onMutedChange: eu,
+            handleSeekBackBtnClick: er,
+            handleSeekForwardBtnClick: el,
+            autoHideVolumeSlider: ea = !1,
+            compactTimeDisplay: ei = !1,
+            handleControlBarPendingInteraction: es,
+            onVolumeChange: eu,
+            onMutedChange: eo,
         } = e,
-        ec = (0, l.bG)([R.A], () => R.A.useReducedMotion),
-        ed = (0, l.bG)([R.A], () => R.A.keyboardModeEnabled),
-        [e_, eh] = r.useState(G ? 0 : x),
-        [ef, ep] = r.useState(!1),
-        [eE, em] = r.useState(!1),
-        [{ volumeAnimSpring: eg }, eA] = (0, _.z)(() => ({
+        ec = (0, u.bG)([R.A], () => R.A.useReducedMotion),
+        ed = (0, u.bG)([R.A], () => R.A.keyboardModeEnabled),
+        [em, eh] = l.useState(_ ? 0 : I),
+        [ef, ep] = l.useState(!1),
+        [ev, ex] = l.useState(!1),
+        [{ volumeAnimSpring: eg }, eE] = (0, m.z)(() => ({
             from: { volumeAnimSpring: 0 },
             config: { tension: 100, friction: 3, clamp: !0 },
         })),
-        eI = r.useRef(null),
-        [eT, eS] = r.useState(1),
-        ey = r.useCallback(
+        eb = l.useRef(null),
+        [eS, ew] = l.useState(1),
+        eC = l.useCallback(
             (e) => {
-                eS(e), null != t.current && (t.current.playbackRate = e);
+                ew(e), null != t.current && (t.current.playbackRate = e);
             },
             [t],
         ),
-        eN = r.useCallback(() => {
-            if (null == D) return;
-            let e = L?.split("/");
-            O.default.track($.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
+        eN = l.useCallback(() => {
+            if (null == L) return;
+            let e = M?.split("/");
+            T.default.track(H.HAw.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                 attachment_type: e?.[0],
                 attachment_subtype: e?.[1],
             }),
-                window.open(D, "_blank");
-        }, [D, L]),
-        ev = r.useCallback(
+                window.open(L, "_blank");
+        }, [L, M]),
+        ey = l.useCallback(
             (e) => {
-                null != t.current && (e !== t.current.volume && (t.current.volume = e), e !== e_ && eh(e));
+                null != t.current && (e !== t.current.volume && (t.current.volume = e), e !== em && eh(e));
             },
-            [t, e_],
+            [t, em],
         ),
-        eC = r.useCallback(() => {
+        eA = l.useCallback(() => {
             if (null != t.current)
-                if (0 === e_) {
-                    let e = 0 === x ? 0.3 : x;
-                    ev(e), eu(!1), el(e);
-                } else el(e_), ev(0), eu(!0);
-        }, [t, e_, ev, x, eu, el]),
+                if (0 === em) {
+                    let e = 0 === I ? 0.3 : I;
+                    ey(e), eo(!1), eu(e);
+                } else eu(em), ey(0), eo(!0);
+        }, [t, em, ey, I, eo, eu]),
         eR = () => {
             ep(!0);
         },
-        eO = () => {
+        eT = () => {
             ep(!1);
         },
-        eb = r.useCallback(
+        ej = l.useCallback(
             (e) => {
                 switch (e.key) {
                     case c.TJ.PLAYBACK:
-                        Z();
+                        W();
                         break;
                     case c.TJ.SPACE:
-                        ed || (e.preventDefault(), Z());
+                        ed || (e.preventDefault(), W());
                         break;
                     case c.TJ.SEEK_BACK:
-                        ei();
-                        break;
-                    case c.TJ.SEEK_FORWARD:
                         er();
                         break;
+                    case c.TJ.SEEK_FORWARD:
+                        el();
+                        break;
                     case c.TJ.CAPTION:
-                        S || ee();
+                        w || ee();
                         break;
                     case c.TJ.FULLSCREEN:
-                        v || en();
+                        y || en();
                         break;
                     case c.TJ.MUTE:
-                        eC();
+                        eA();
                 }
             },
-            [ee, en, Z, ei, er, eC, S, v, ed],
+            [ee, en, W, er, el, eA, w, y, ed],
         );
-    r.useEffect(() => {
-        M && null != eI.current && eI.current.focus();
-    }, [M]),
-        r.useEffect(
+    l.useEffect(() => {
+        P && null != eb.current && eb.current.focus();
+    }, [P]),
+        l.useEffect(
             () => (
-                null != P && (P.current = eb),
+                null != D && (D.current = ej),
                 () => {
-                    null != P && (P.current = null);
+                    null != D && (D.current = null);
                 }
             ),
-            [eb, P],
+            [ej, D],
         ),
-        r.useEffect(
+        l.useEffect(
             () => (
-                eA({ volumeAnimSpring: !es || eE || ef ? 1 : 0, immediate: ec }),
+                eE({ volumeAnimSpring: !ea || ev || ef ? 1 : 0, immediate: ec }),
                 () => {
                     eg.stop();
                 }
             ),
-            [es, eE, ef, eA, ec, eg],
+            [ea, ev, ef, eE, ec, eg],
         );
-    let eD = 0 === e_ ? h._ : e_ < 0.5 ? f.S : p.H,
-        { icon: eL, label: ew } = F[n];
-    return (0, i.jsxs)(i.Fragment, {
+    let eL = 0 === em ? h._ : em < 0.5 ? f.S : p.H,
+        { icon: eM, label: ek } = U[n];
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsxs)("div", {
-                className: U.X3,
+            (0, r.jsxs)("div", {
+                className: F.X3,
                 children: [
-                    (0, i.jsx)(j, {
-                        iconComponent: eL,
-                        animationTime: s,
-                        visible: I,
-                        ariaLabel: ew,
-                        tooltipLabel: ew,
+                    (0, r.jsx)(Q, {
+                        iconComponent: eM,
+                        animationTime: a,
+                        visible: b,
+                        ariaLabel: ek,
+                        tooltipLabel: ek,
                         shortcut: c.TJ.PLAYBACK,
-                        onClick: Z,
-                        ref: eI,
-                        buttonSize: V[b],
+                        onClick: W,
+                        ref: eb,
+                        buttonSize: O[j],
                         "data-testid": "discord-web-video-player-play-pause-btn",
                     }),
                     !N &&
-                        (0, i.jsxs)(i.Fragment, {
+                        (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, i.jsx)(j, {
-                                    iconComponent: W.q,
-                                    animationTime: s,
-                                    visible: I,
-                                    onClick: ei,
-                                    ariaLabel: k.intl.string(z.default["dRVF+Z"]),
-                                    tooltipLabel: k.intl.string(z.default["dRVF+Z"]),
+                                (0, r.jsx)(Q, {
+                                    iconComponent: G.q,
+                                    animationTime: a,
+                                    visible: b,
+                                    onClick: er,
+                                    ariaLabel: B.intl.string(Z.default["dRVF+Z"]),
+                                    tooltipLabel: B.intl.string(Z.default["dRVF+Z"]),
                                     shortcut: c.TJ.SEEK_BACK,
-                                    buttonSize: V[b],
+                                    buttonSize: O[j],
                                     "data-testid": "discord-web-video-player-seek-backward-btn",
                                 }),
-                                (0, i.jsx)(j, {
-                                    iconComponent: K.i,
-                                    animationTime: s,
-                                    visible: I,
-                                    onClick: er,
-                                    disabled: !T,
-                                    ariaLabel: T ? k.intl.string(z.default.yV2FLL) : k.intl.string(z.default.YWbiPw),
-                                    tooltipLabel: T ? k.intl.string(z.default.yV2FLL) : k.intl.string(z.default.YWbiPw),
-                                    tooltipDelayMs: 1500 * !!T,
+                                (0, r.jsx)(Q, {
+                                    iconComponent: Y.i,
+                                    animationTime: a,
+                                    visible: b,
+                                    onClick: el,
+                                    disabled: !S,
+                                    ariaLabel: S ? B.intl.string(Z.default.yV2FLL) : B.intl.string(Z.default.YWbiPw),
+                                    tooltipLabel: S ? B.intl.string(Z.default.yV2FLL) : B.intl.string(Z.default.YWbiPw),
+                                    tooltipDelayMs: 1500 * !!S,
                                     shortcut: c.TJ.SEEK_FORWARD,
-                                    buttonSize: V[b],
+                                    buttonSize: O[j],
                                     "data-testid": "discord-web-video-player-seek-forward-btn",
                                 }),
                             ],
                         }),
                 ],
             }),
-            (0, i.jsxs)(o.animated.div, {
-                className: a()(U.X3, U.L1),
+            (0, r.jsxs)(s.animated.div, {
+                className: i()(F.X3, F.L1),
                 style: {
-                    opacity: (0, o.to)([s.to({ range: [0, 1], output: [0, 1] })], (e) => `${I ? e : Math.pow(e, 8)}`),
+                    opacity: (0, s.to)([a.to({ range: [0, 1], output: [0, 1] })], (e) => `${b ? e : Math.pow(e, 8)}`),
                 },
                 children: [
-                    (0, i.jsxs)("div", {
+                    (0, r.jsxs)("div", {
                         onMouseEnter: eR,
-                        onMouseLeave: eO,
+                        onMouseLeave: eT,
                         onFocus: eR,
-                        onBlur: eO,
-                        className: U.RD,
+                        onBlur: eT,
+                        className: F.RD,
                         "data-testid": "discord-web-video-player-volume-control",
                         children: [
-                            (0, i.jsx)(j, {
-                                iconComponent: eD,
-                                animationTime: s,
-                                visible: I,
-                                onClick: eC,
-                                ariaLabel: k.intl.string(z.default.XiLvuG),
-                                tooltipLabel: k.intl.string(z.default.XiLvuG),
+                            (0, r.jsx)(Q, {
+                                iconComponent: eL,
+                                animationTime: a,
+                                visible: b,
+                                onClick: eA,
+                                ariaLabel: B.intl.string(Z.default.XiLvuG),
+                                tooltipLabel: B.intl.string(Z.default.XiLvuG),
                                 shortcut: c.TJ.MUTE,
-                                buttonSize: V[b],
+                                buttonSize: O[j],
                                 "data-testid": "discord-web-video-player-volume-btn",
                             }),
-                            (0, i.jsx)(o.animated.div, {
-                                className: U.MQ,
+                            (0, r.jsx)(s.animated.div, {
+                                className: F.MQ,
                                 "data-testid": "discord-web-video-player-volume-slider",
                                 style: {
-                                    opacity: (0, o.to)(
+                                    opacity: (0, s.to)(
                                         [eg.to({ range: [0, 1], output: [0, 1] })],
-                                        (e) => `${I ? e : Math.pow(e, 8)}`,
+                                        (e) => `${b ? e : Math.pow(e, 8)}`,
                                     ),
-                                    width: (0, o.to)([eg.to({ range: [0, 1], output: [0, 100] })], (e) => `${e}px`),
+                                    width: (0, s.to)([eg.to({ range: [0, 1], output: [0, 100] })], (e) => `${e}px`),
                                 },
-                                children: (0, i.jsx)(d.A, {
+                                children: (0, r.jsx)(d.A, {
                                     mini: !0,
-                                    value: e_,
+                                    value: em,
                                     keyboardStep: 0.1,
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        ev(e),
-                                            el(e),
-                                            eE && (em(!1), eo(!1)),
-                                            G && e > 0 ? eu(!1) : G || 0 !== e || eu(!0);
+                                        ey(e),
+                                            eu(e),
+                                            ev && (ex(!1), es(!1)),
+                                            _ && e > 0 ? eo(!1) : _ || 0 !== e || eo(!0);
                                     },
                                     asValueChanges: (e) => {
-                                        ev(e), eE || (em(!0), eo(!0));
+                                        ey(e), ev || (ex(!0), es(!0));
                                     },
-                                    fillStyles: { backgroundColor: u.A.colors.WHITE.css },
+                                    fillStyles: { backgroundColor: o.A.colors.WHITE.css },
                                     orientation: "horizontal",
-                                    "aria-label": k.intl.string(z.default.XiLvuG),
+                                    "aria-label": B.intl.string(Z.default.XiLvuG),
                                 }),
                             }),
                         ],
                     }),
-                    (0, i.jsx)(H, { videoRef: t, compact: ea }),
+                    (0, r.jsx)($, { videoRef: t, compact: ei }),
                 ],
             }),
-            (0, i.jsxs)("div", {
-                className: a()(U.X3, U.ST),
+            (0, r.jsxs)("div", {
+                className: i()(F.X3, F.ST),
                 children: [
-                    (0, i.jsx)(J, {
-                        canCollapse: null != w && w.length > 0,
+                    (0, r.jsx)(q, {
+                        canCollapse: null != k && k.length > 0,
                         buttons: (function (e) {
                             let {
                                     hideTranscriptBtn: t = !1,
                                     hideCaptionBtn: n = !1,
-                                    transcriptEnabled: i,
-                                    captionEnabled: r,
-                                    playerState: s,
-                                    handleTranscriptBtnClick: a,
-                                    handleCaptionBtnClick: o,
-                                    downloadUrl: l,
-                                    handleDownloadButtonClick: u,
+                                    transcriptEnabled: r,
+                                    captionEnabled: l,
+                                    playerState: a,
+                                    handleTranscriptBtnClick: i,
+                                    handleCaptionBtnClick: s,
+                                    downloadUrl: u,
+                                    handleDownloadButtonClick: o,
                                     extraButtons: d,
                                 } = e,
-                                _ = [];
+                                m = [];
                             return (
                                 t ||
-                                    _.push({
+                                    m.push({
                                         id: "transcript",
                                         iconComponent: g.u,
-                                        label: k.intl.string(z.default["6EjGUv"]),
-                                        onClick: a,
-                                        active: i && s !== c.Q6.ENDED,
-                                        disabled: s === c.Q6.ENDED,
+                                        label: B.intl.string(Z.default["6EjGUv"]),
+                                        onClick: i,
+                                        active: r && a !== c.Q6.ENDED,
+                                        disabled: a === c.Q6.ENDED,
                                         "data-testid": "discord-web-video-player-transcript-btn",
                                     }),
                                 n ||
-                                    _.push({
+                                    m.push({
                                         id: "caption",
-                                        iconComponent: Y.I,
-                                        label: k.intl.string(z.default["0DbPcL"]),
-                                        onClick: o,
-                                        active: r,
+                                        iconComponent: V.I,
+                                        label: B.intl.string(Z.default["0DbPcL"]),
+                                        onClick: s,
+                                        active: l,
                                         shortcut: c.TJ.CAPTION,
                                         "data-testid": "discord-web-video-player-captions-btn",
                                     }),
-                                null != l &&
-                                    _.push({
+                                null != u &&
+                                    m.push({
                                         id: "download",
-                                        iconComponent: A.s,
-                                        label: k.intl.string(k.t["1WjMbC"]),
-                                        onClick: u,
+                                        iconComponent: E.s,
+                                        label: B.intl.string(B.t["1WjMbC"]),
+                                        onClick: o,
                                         "data-testid": "discord-web-video-player-download-btn",
                                     }),
-                                null != d && _.push(...d),
-                                _
+                                null != d && m.push(...d),
+                                m
                             );
                         })({
-                            hideTranscriptBtn: y,
-                            hideCaptionBtn: S,
-                            transcriptEnabled: B,
-                            captionEnabled: q,
+                            hideTranscriptBtn: C,
+                            hideCaptionBtn: w,
+                            transcriptEnabled: K,
+                            captionEnabled: z,
                             playerState: n,
-                            handleTranscriptBtnClick: Q,
+                            handleTranscriptBtnClick: J,
                             handleCaptionBtnClick: ee,
-                            downloadUrl: D,
+                            downloadUrl: L,
                             handleDownloadButtonClick: eN,
-                            extraButtons: w,
+                            extraButtons: k,
                         }),
-                        animSpring: s,
-                        visible: I,
-                        size: b,
+                        animSpring: a,
+                        visible: b,
+                        size: j,
                     }),
-                    !C &&
-                        (0, i.jsx)(et, {
-                            playbackRate: eT,
-                            onPlaybackRateChange: ey,
-                            animSpring: s,
-                            visible: I,
-                            size: b,
-                            handleControlBarPendingInteraction: eo,
+                    !A &&
+                        (0, r.jsx)(et, {
+                            playbackRate: eS,
+                            onPlaybackRateChange: eC,
+                            animSpring: a,
+                            visible: b,
+                            size: j,
+                            handleControlBarPendingInteraction: es,
                         }),
-                    !v &&
-                        (0, i.jsx)(j, {
-                            iconComponent: X ? E.z : m.T,
-                            animationTime: s,
-                            visible: I,
+                    !y &&
+                        (0, r.jsx)(Q, {
+                            iconComponent: X ? v.z : x.T,
+                            animationTime: a,
+                            visible: b,
                             onClick: en,
-                            ariaLabel: k.intl.string(z.default.z9Cnzv),
-                            tooltipLabel: k.intl.string(z.default.z9Cnzv),
+                            ariaLabel: B.intl.string(Z.default.z9Cnzv),
+                            tooltipLabel: B.intl.string(Z.default.z9Cnzv),
                             shortcut: c.TJ.FULLSCREEN,
-                            buttonSize: V[b],
+                            buttonSize: O[j],
                             "data-testid": "discord-web-video-player-fullscreen-btn",
                         }),
                 ],
@@ -471,19 +470,19 @@ function Q(e) {
         ],
     });
 }
-function J(e) {
-    let { buttons: t, canCollapse: n, animSpring: r, visible: s, size: a } = e;
+function q(e) {
+    let { buttons: t, canCollapse: n, animSpring: l, visible: a, size: i } = e;
     return 0 === t.length
         ? null
         : !n || t.length <= 1
-          ? (0, i.jsx)(i.Fragment, {
+          ? (0, r.jsx)(r.Fragment, {
                 children: t.map((e) =>
-                    (0, i.jsx)(
-                        j,
+                    (0, r.jsx)(
+                        Q,
                         {
                             iconComponent: e.iconComponent,
-                            animationTime: r,
-                            visible: s,
+                            animationTime: l,
+                            visible: a,
                             onClick: e.onClick,
                             active: e.active,
                             disabled: e.disabled,
@@ -491,35 +490,35 @@ function J(e) {
                             tooltipLabel: e.label,
                             tooltipDelayMs: e.tooltipDelayMs,
                             shortcut: e.shortcut,
-                            buttonSize: V[a],
+                            buttonSize: O[i],
                             "data-testid": e["data-testid"],
                         },
                         e.id,
                     ),
                 ),
             })
-          : (0, i.jsx)(ee, { buttons: t, animSpring: r, visible: s, size: a });
+          : (0, r.jsx)(ee, { buttons: t, animSpring: l, visible: a, size: i });
 }
 function ee(e) {
-    let { buttons: t, animSpring: n, visible: s, size: a } = e,
-        o = r.useRef(null),
-        l = k.intl.string(k.t.PdRCRg);
-    return (0, i.jsx)(I.Y, {
-        targetElementRef: o,
+    let { buttons: t, animSpring: n, visible: a, size: i } = e,
+        s = l.useRef(null),
+        u = B.intl.string(B.t.PdRCRg);
+    return (0, r.jsx)(b.Y, {
+        targetElementRef: s,
         position: "top",
         align: "right",
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, i.jsx)(T.W, {
+            return (0, r.jsx)(S.W, {
                 navId: "video-player-overflow",
-                "aria-label": l,
+                "aria-label": u,
                 onClose: n,
                 onSelect: n,
                 children: t.map((e) => {
                     let t = { type: "icon", icon: e.iconComponent };
                     return null != e.active
-                        ? (0, i.jsx)(
-                              S.sL,
+                        ? (0, r.jsx)(
+                              w.sL,
                               {
                                   id: e.id,
                                   label: e.label,
@@ -530,8 +529,8 @@ function ee(e) {
                               },
                               e.id,
                           )
-                        : (0, i.jsx)(
-                              S.Dr,
+                        : (0, r.jsx)(
+                              w.Dr,
                               {
                                   id: e.id,
                                   label: e.label,
@@ -546,14 +545,14 @@ function ee(e) {
             });
         },
         children: (e) =>
-            (0, i.jsx)(j, {
-                ref: o,
-                iconComponent: y.j,
+            (0, r.jsx)(Q, {
+                ref: s,
+                iconComponent: C.j,
                 animationTime: n,
-                visible: s,
-                ariaLabel: l,
-                tooltipLabel: l,
-                buttonSize: V[a],
+                visible: a,
+                ariaLabel: u,
+                tooltipLabel: u,
+                buttonSize: O[i],
                 clickableProps: e,
                 "data-testid": "discord-web-video-player-overflow-menu-button",
             }),
@@ -563,67 +562,67 @@ function et(e) {
     let {
             playbackRate: t,
             onPlaybackRateChange: n,
-            animSpring: s,
-            visible: a,
-            size: o,
-            handleControlBarPendingInteraction: l,
+            animSpring: a,
+            visible: i,
+            size: s,
+            handleControlBarPendingInteraction: u,
         } = e,
-        u = r.useRef(null),
-        c = k.intl.string(z.default.ZwPhbB);
-    return (0, i.jsx)(I.Y, {
-        targetElementRef: u,
+        o = l.useRef(null),
+        c = B.intl.string(Z.default.ZwPhbB);
+    return (0, r.jsx)(b.Y, {
+        targetElementRef: o,
         position: "top",
         align: "right",
-        onRequestOpen: () => l(!0),
+        onRequestOpen: () => u(!0),
         onRequestClose: () => {
-            l(!1), u.current?.focus();
+            u(!1), o.current?.focus();
         },
-        renderPopout: () => (0, i.jsx)(en, { playbackRate: t, onPlaybackRateChange: n, label: c }),
+        renderPopout: () => (0, r.jsx)(en, { playbackRate: t, onPlaybackRateChange: n, label: c }),
         children: (e) =>
-            (0, i.jsx)(j, {
-                ref: u,
+            (0, r.jsx)(Q, {
+                ref: o,
                 iconComponent: N.$,
-                animationTime: s,
-                visible: a,
+                animationTime: a,
+                visible: i,
                 ariaLabel: c,
                 tooltipLabel: c,
-                buttonSize: V[o],
+                buttonSize: O[s],
                 clickableProps: { ...e, "aria-haspopup": "dialog" },
                 "data-testid": "discord-web-video-player-playback-speed-btn",
             }),
     });
 }
 function en(e) {
-    let { playbackRate: t, onPlaybackRateChange: n, label: s } = e,
-        a = r.useRef(null);
+    let { playbackRate: t, onPlaybackRateChange: n, label: a } = e,
+        i = l.useRef(null);
     return (
-        (0, v.t)(a),
-        (0, i.jsxs)("div", {
-            ref: a,
-            className: U.qp,
+        (0, y.t)(i),
+        (0, r.jsxs)("div", {
+            ref: i,
+            className: F.qp,
             role: "dialog",
-            "aria-label": s,
+            "aria-label": a,
             "data-testid": "discord-web-video-player-playback-speed-popout",
             children: [
-                (0, i.jsx)(C.D, {
+                (0, r.jsx)(A.D, {
                     variant: "heading-md/semibold",
                     color: "text-default",
-                    className: U.xl,
-                    children: s,
+                    className: F.xl,
+                    children: a,
                 }),
-                (0, i.jsx)(d.A, {
+                (0, r.jsx)(d.A, {
                     value: t,
                     initialValue: 1,
                     minValue: X,
-                    maxValue: Z,
-                    markers: q,
+                    maxValue: W,
+                    markers: z,
                     stickToMarkers: !0,
                     defaultValue: 1,
                     onValueChange: n,
                     asValueChanges: n,
                     onMarkerRender: (e) => `${e}x`,
                     orientation: "horizontal",
-                    "aria-label": s,
+                    "aria-label": a,
                     getAriaValueText: (e) => `${e}x`,
                 }),
             ],

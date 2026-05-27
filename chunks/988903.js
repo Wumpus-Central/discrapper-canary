@@ -1,44 +1,43 @@
-"use strict";
-n.d(t, { Cm: () => S, $b: () => N, mf: () => C, h6: () => y });
+n.d(t, { Cm: () => S, $b: () => O, mf: () => h, h6: () => g });
 var i = n(554146),
-    r = n(367727),
-    s = n(994500),
-    a = n(174459),
-    o = n(927813),
-    l = n(240921);
-let u = (0, l.Ay)({
+    l = n(367727),
+    r = n(994500),
+    s = n(174459),
+    a = n(927813),
+    c = n(240921);
+let o = (0, c.Ay)({
     name: "2026-05-block-user-feedback",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var c = n(17928),
-    d = n(228366);
-let _ = f();
-function f() {
+var d = n(17928),
+    u = n(228366);
+let E = A();
+function A() {
     return { ignoreTimestamps: {} };
 }
-class h extends c.Ay.PersistedStore {
+class _ extends d.Ay.PersistedStore {
     static displayName = "IgnoreNoticeStore";
     static persistKey = "IgnoreNoticeStore";
     initialize(e) {
         let t = e?.ignoreTimestamps ?? {};
-        _ = { ...f(), ignoreTimestamps: t };
+        E = { ...A(), ignoreTimestamps: t };
     }
     getState() {
-        return _;
+        return E;
     }
     getIgnoreTimestamps() {
-        return _.ignoreTimestamps;
+        return E.ignoreTimestamps;
     }
 }
-let p = new h(d.h, {
+let T = new _(u.h, {
         RELATIONSHIP_IGNORE_USER_SUCCESS: function (e) {
             let { userId: t, timestamp: n } = e;
-            _.ignoreTimestamps[t] = n;
+            E.ignoreTimestamps[t] = n;
         },
     }),
-    E = (0, l.Ay)({
+    I = (0, c.Ay)({
         name: "2026-05-ignore-user-feedback",
         kind: "user",
         defaultConfig: { enabled: !1, shouldGetShorterIgnoreDuration: !1 },
@@ -48,34 +47,34 @@ let p = new h(d.h, {
             2: { enabled: !0, shouldGetShorterIgnoreDuration: !0 },
         },
     });
-var m = n(14594),
-    g = n(652215);
-let A = 3 * o.A.Millis.DAY,
-    I = o.A.Millis.WEEK,
-    T = o.A.Millis.DAYS_30,
+var N = n(14594),
+    R = n(652215);
+let m = 3 * a.A.Millis.DAY,
+    C = a.A.Millis.WEEK,
+    p = a.A.Millis.DAYS_30,
     S = () => {
-        if (!u.getConfig({ location: "block_user_feedback_utils" }).enabled) return !1;
-        let e = s.A.getSinces();
+        if (!o.getConfig({ location: "block_user_feedback_utils" }).enabled) return !1;
+        let e = r.A.getSinces();
         return Object.keys(e).some((t) => {
             let n = Date.now() - Date.parse(e[t]);
-            return s.A.isBlocked(t) && n > I && n < T;
+            return r.A.isBlocked(t) && n > C && n < p;
         });
     },
-    N = (e, t, n, i) => {
-        a.default.track(g.HAw.BLOCK_USER_FEEDBACK_SUBMITTED, { rating: e, feedback: t, reason: n, skipped: i });
+    O = (e, t, n, i) => {
+        s.default.track(R.HAw.BLOCK_USER_FEEDBACK_SUBMITTED, { rating: e, feedback: t, reason: n, skipped: i });
     },
-    y = () => {
-        let { enabled: e, shouldGetShorterIgnoreDuration: t } = E.getConfig({ location: "ignore_user_feedback_utils" });
+    g = () => {
+        let { enabled: e, shouldGetShorterIgnoreDuration: t } = I.getConfig({ location: "ignore_user_feedback_utils" });
         if (!e) return !1;
-        let { isDismissed: n } = (0, r.FZ)(i.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: m.aH });
+        let { isDismissed: n } = (0, l.FZ)(i.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: N.aH });
         if (n) return !1;
-        let a = t ? A : I,
-            o = p.getIgnoreTimestamps();
-        return Object.keys(o).some((e) => {
-            let t = Date.now() - Number(o[e]);
-            return s.A.isIgnored(e) && t > a && t < T;
+        let s = t ? m : C,
+            a = T.getIgnoreTimestamps();
+        return Object.keys(a).some((e) => {
+            let t = Date.now() - Number(a[e]);
+            return r.A.isIgnored(e) && t > s && t < p;
         });
     },
-    C = (e, t, n, i) => {
-        a.default.track(g.HAw.IGNORE_USER_FEEDBACK_SUBMITTED, { rating: e, feedback: t, reason: n, skipped: i });
+    h = (e, t, n, i) => {
+        s.default.track(R.HAw.IGNORE_USER_FEEDBACK_SUBMITTED, { rating: e, feedback: t, reason: n, skipped: i });
     };

@@ -1,18 +1,17 @@
-"use strict";
-let i;
-n.d(t, { A: () => s });
-var r = n(9302);
-function s(e, t) {
+let n;
+r.d(l, { A: () => t });
+var a = r(9302);
+function t(e, l) {
     if (__OVERLAY__) {
-        let e = t.getGame(),
-            n = (0, r.getPID)();
-        return null == e || null == n
+        let e = l.getGame(),
+            r = (0, a.getPID)();
+        return null == e || null == r
             ? null
-            : i?.id === e.id && i?.pid === n
-              ? i
-              : (i = {
+            : n?.id === e.id && n?.pid === r
+              ? n
+              : (n = {
                     id: e.id,
-                    pid: n,
+                    pid: r,
                     pidPath: [],
                     nativeProcessObserverId: 0,
                     hidden: !1,

@@ -1,104 +1,103 @@
-"use strict";
 let i;
 n.d(t, { A: () => W }), n(321073);
-var r = n(17928),
+var l = n(17928),
     s = n(228366),
-    a = n(450827),
-    o = n(736056),
-    l = n(18707),
+    r = n(450827),
+    a = n(736056),
+    o = n(18707),
     u = n(427358),
-    c = n(95701),
-    d = n(695184),
-    _ = n(240248),
-    h = n(427262),
+    d = n(95701),
+    c = n(695184),
+    h = n(240248),
+    g = n(427262),
     f = n(734057),
-    p = n(153488),
+    A = n(153488),
     E = n(205761),
-    m = n(696451),
-    g = n(71393),
-    A = n(994500),
-    I = n(287809),
-    T = n(652215);
-let S = !1,
-    y = "",
-    N = 0,
+    I = n(696451),
+    p = n(71393),
+    S = n(994500),
+    m = n(287809),
+    C = n(652215);
+let _ = !1,
+    N = "",
+    T = 0,
     v = [],
-    C = !1,
-    R = !1,
-    O = new Set(),
-    b = null;
-function D() {
-    (y = ""), (N = 0), (v = []), (O = new Set()), (S = !1), (b = null), (R = !1);
+    M = !1,
+    y = !1,
+    D = new Set(),
+    R = null;
+function x() {
+    (N = ""), (T = 0), (v = []), (D = new Set()), (_ = !1), (R = null), (y = !1);
 }
-function L(e) {
-    return R !== e && ((R = e), !0);
+function O(e) {
+    return y !== e && ((y = e), !0);
 }
-function w(e) {
-    return (y = e), (N = 0), M();
+function U(e) {
+    return (N = e), (T = 0), L();
 }
-function M() {
+function L() {
     let e, t, n;
-    if (!S) return !1;
-    let r = f.A.getChannel(b);
-    if (0 === y.trim().length) {
+    if (!_) return !1;
+    let l = f.A.getChannel(R);
+    if (0 === N.trim().length) {
         var s;
-        let e, t, n, a;
+        let e, t, n, r;
         return (
             null != i && i.clearQuery(),
-            (s = r),
-            (e = I.default.getCurrentUser()),
-            (t = (0, l.G)("PrivateChannelRecipientsInviteStore")),
-            (n = [...A.A.getFriendIDs()]),
+            (s = l),
+            (e = m.default.getCurrentUser()),
+            (t = (0, o.G)("PrivateChannelRecipientsInviteStore")),
+            (n = [...S.A.getFriendIDs()]),
             e?.isStaff() &&
                 (n = Array.from(
-                    new Set([...n, ...I.default.filter((t) => t.isStaff() && t.id !== e.id, !1).map((e) => e.id)]),
+                    new Set([...n, ...m.default.filter((t) => t.isStaff() && t.id !== e.id, !1).map((e) => e.id)]),
                 )),
-            (a = null),
+            (r = null),
             t &&
-                ((a = new Set(g.A.getGuildIds())),
+                ((r = new Set(p.A.getGuildIds())),
                 (n = Array.from(
                     new Set([
                         ...n,
                         ...u.A.getUserAffinities()
                             .map((e) => e.otherUserId)
                             .filter((t) => t !== e?.id)
-                            .filter((e) => !A.A.isBlockedOrIgnored(e))
-                            .filter((e) => !A.A.isFriend(e)),
+                            .filter((e) => !S.A.isBlockedOrIgnored(e))
+                            .filter((e) => !S.A.isFriend(e)),
                     ]),
                 ))),
             s?.isGroupDM() && (n = n.filter((e) => !s.recipients.includes(e))),
             (v = n
                 .reduce((n, i) => {
-                    let r = I.default.getUser(i);
-                    if (null == r || r.isProvisional || (r.bot && !(r.isStaff() && e?.isStaff()))) return n;
-                    let s = { user: r, comparator: h.Ay.getName(r) };
-                    if (t && null != a && !A.A.isFriend(r.id)) {
-                        let t = k(r.id, a);
-                        if (0 === t.length && !(r.isStaff() && e?.isStaff())) return n;
+                    let l = m.default.getUser(i);
+                    if (null == l || l.isProvisional || (l.bot && !(l.isStaff() && e?.isStaff()))) return n;
+                    let s = { user: l, comparator: g.Ay.getName(l) };
+                    if (t && null != r && !S.A.isFriend(l.id)) {
+                        let t = G(l.id, r);
+                        if (0 === t.length && !(l.isStaff() && e?.isStaff())) return n;
                         t.length > 0 && (s.mutualGuilds = t);
                     }
                     return n.push(s), n;
                 }, [])
-                .sort(x)),
-            L(!1),
+                .sort(P)),
+            O(!1),
             !0
         );
     }
-    let a = I.default.getCurrentUser(),
-        o = a?.isStaff() ?? !1,
-        _ = (0, l.G)("PrivateChannelRecipientsInviteStore");
-    _ && d.A.requestMembers(null, y);
-    let p = null != r ? r.recipients : [];
+    let r = m.default.getCurrentUser(),
+        a = r?.isStaff() ?? !1,
+        h = (0, o.G)("PrivateChannelRecipientsInviteStore");
+    h && c.A.requestMembers(null, N);
+    let A = null != l ? l.recipients : [];
     return (
         null != i &&
             i.setQuery({
-                query: y,
-                filters: _ ? void 0 : { friends: !0, staff: o, provisional: !1 },
-                blacklist: p,
+                query: N,
+                filters: h ? void 0 : { friends: !0, staff: a, provisional: !1 },
+                blacklist: A,
                 boosters:
                     ((t = Math.max(
                         ...(e = E.A.getFrequentlyWithoutFetchingLatest().filter(
-                            (e) => e instanceof c.cq && e.isDM(),
+                            (e) => e instanceof d.cq && e.isDM(),
                         )).map((e) => {
                             let { id: t } = e;
                             return E.A.getScoreWithoutFetchingLatest(t);
@@ -107,140 +106,140 @@ function M() {
                     (n = {}),
                     e.forEach((e) => {
                         let i = E.A.getScoreWithoutFetchingLatest(e.id),
-                            r = e.getRecipientId(),
-                            s = 0.2 * !!A.A.isFriend(r),
-                            a = 0.1 * (null != f.A.getDMFromUserId(r));
-                        n[r] = 1 + i / t + s + a;
+                            l = e.getRecipientId(),
+                            s = 0.2 * !!S.A.isFriend(l),
+                            r = 0.1 * (null != f.A.getDMFromUserId(l));
+                        n[l] = 1 + i / t + s + r;
                     }),
                     n),
             }),
         !1
     );
 }
-function P() {
-    if (!S) return !1;
-    let e = C;
-    return (C = A.A.getFriendCount() > 0) !== e;
+function w() {
+    if (!_) return !1;
+    let e = M;
+    return (M = S.A.getFriendCount() > 0) !== e;
 }
-function x(e, t) {
-    if (p.A.hasConsented(T.YAq.PERSONALIZATION)) {
+function P(e, t) {
+    if (A.A.hasConsented(C.YAq.PERSONALIZATION)) {
         let n = u.A.getUserAffinity(e.user.id)?.communicationProbability ?? 0,
             i = u.A.getUserAffinity(t.user.id)?.communicationProbability ?? 0;
         if (n !== i) return i - n;
     }
-    return (0, _.sS)(h.Ay.getName(e.user).toLocaleLowerCase()).localeCompare(
-        (0, _.sS)(h.Ay.getName(t.user).toLocaleLowerCase()),
+    return (0, h.sS)(g.Ay.getName(e.user).toLocaleLowerCase()).localeCompare(
+        (0, h.sS)(g.Ay.getName(t.user).toLocaleLowerCase()),
     );
 }
-function k(e, t) {
+function G(e, t) {
     let n = [];
     for (let i of t) {
-        if (!m.Ay.isMember(i, e)) continue;
-        let t = g.A.getGuild(i);
+        if (!I.Ay.isMember(i, e)) continue;
+        let t = p.A.getGuild(i);
         null != t && n.push(t);
     }
     return n;
 }
-function U(e) {
+function F(e) {
     let { results: t } = e;
-    if (!S || "" === y) return;
-    let n = I.default.getCurrentUser(),
-        i = (0, l.G)("PrivateChannelRecipientsInviteStore"),
-        r = i ? new Set(g.A.getGuildIds()) : null,
+    if (!_ || "" === N) return;
+    let n = m.default.getCurrentUser(),
+        i = (0, o.G)("PrivateChannelRecipientsInviteStore"),
+        l = i ? new Set(p.A.getGuildIds()) : null,
         s = [];
-    for (let { id: e, comparator: a } of t) {
+    for (let { id: e, comparator: r } of t) {
         if (null != n && e === n.id) continue;
-        let t = I.default.getUser(e);
+        let t = m.default.getUser(e);
         if (null == t || t.isProvisional || (t.bot && !(t.isStaff() && n?.isStaff()))) continue;
-        let o = { user: t, comparator: a };
-        if (i && null != r && !A.A.isFriend(t.id)) {
-            let e = k(t.id, r);
+        let a = { user: t, comparator: r };
+        if (i && null != l && !S.A.isFriend(t.id)) {
+            let e = G(t.id, l);
             if (0 === e.length && !(t.isStaff() && n?.isStaff())) continue;
-            e.length > 0 && (o.mutualGuilds = e);
+            e.length > 0 && (a.mutualGuilds = e);
         }
-        s.push(o);
+        s.push(a);
     }
     (v = s), Y.emitChange();
 }
-function G() {
-    return null != i && (i.destroy(), (i = null)), a.A.getUserSearchContext(U, 1e3);
+function b() {
+    return null != i && (i.destroy(), (i = null)), r.A.getUserSearchContext(F, 1e3);
 }
-function F(e) {
-    if (e.key !== T.TLS) return !1;
-    (S = !0), P(), (i = G()), (b = null), w("");
+function j(e) {
+    if (e.key !== C.TLS) return !1;
+    (_ = !0), w(), (i = b()), (R = null), U("");
 }
 function V(e) {
-    if (e.key !== T.TLS) return !1;
-    B();
+    if (e.key !== C.TLS) return !1;
+    k();
 }
-function B() {
-    null != i && (i.destroy(), (i = null)), D();
+function k() {
+    null != i && (i.destroy(), (i = null)), x();
 }
 function H() {
-    return !!S && !!(0, l.G)("PrivateChannelRecipientsInviteStore") && M();
+    return !!_ && !!(0, o.G)("PrivateChannelRecipientsInviteStore") && L();
 }
-class j extends r.Ay.Store {
+class B extends l.Ay.Store {
     static displayName = "PrivateChannelRecipientsInviteStore";
     initialize() {
-        this.waitFor(f.A, p.A, o.A, E.A, m.Ay, g.A, A.A, u.A, I.default),
-            this.syncWith([I.default, f.A], M),
+        this.waitFor(f.A, A.A, a.A, E.A, I.Ay, p.A, S.A, u.A, m.default),
+            this.syncWith([m.default, f.A], L),
             this.syncWith([u.A], H),
-            this.syncWith([A.A], P);
+            this.syncWith([S.A], w);
     }
     getResults() {
         return v;
     }
     hasFriends() {
-        return C;
+        return M;
     }
     getSelectedUsers() {
-        return O;
+        return D;
     }
     getQuery() {
-        return y;
+        return N;
     }
     getState() {
-        return { query: y, selectedRow: N, selectedUsers: O, results: v, hasFriends: C, isLoading: R };
+        return { query: N, selectedRow: T, selectedUsers: D, results: v, hasFriends: M, isLoading: y };
     }
 }
-let Y = new j(s.h, {
+let Y = new B(s.h, {
         CONNECTION_OPEN: function () {
-            D();
+            x();
         },
         GUILD_MEMBERS_CHUNK_BATCH: function (e) {
-            return !!S && !!(0, l.G)("PrivateChannelRecipientsInviteStore") && L(!1);
+            return !!_ && !!(0, o.G)("PrivateChannelRecipientsInviteStore") && O(!1);
         },
         GUILD_MEMBERS_REQUEST: function (e) {
             let { query: t } = e;
-            return !!S && !!(0, l.G)("PrivateChannelRecipientsInviteStore") && t === y.toLocaleLowerCase() && L(!0);
+            return !!_ && !!(0, o.G)("PrivateChannelRecipientsInviteStore") && t === N.toLocaleLowerCase() && O(!0);
         },
         CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n } = e;
             if (null != t) return !1;
-            let i = S;
-            return D(), (S = i), (b = n), M();
+            let i = _;
+            return x(), (_ = i), (R = n), L();
         },
-        MODAL_PUSH: F,
-        SHOW_ACTION_SHEET: F,
+        MODAL_PUSH: j,
+        SHOW_ACTION_SHEET: j,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-            (S = !0), P(), (i = G()), (b = e.channelId), w("");
+            (_ = !0), w(), (i = b()), (R = e.channelId), U("");
         },
         MODAL_POP: V,
         HIDE_ACTION_SHEET: V,
-        PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: B,
+        PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: k,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function (e) {
-            (b = e.channelId), w(e.query);
+            (R = e.channelId), U(e.query);
         },
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
-            N = e.row;
+            T = e.row;
         },
         PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function (e) {
             let { userId: t } = e;
-            O.add(t), (O = new Set(O));
+            D.add(t), (D = new Set(D));
         },
         PRIVATE_CHANNEL_RECIPIENTS_REMOVE_USER: function (e) {
             let { userId: t } = e;
-            O.delete(t), (O = new Set(O));
+            D.delete(t), (D = new Set(D));
         },
     }),
     W = Y;

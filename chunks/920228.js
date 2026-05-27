@@ -1,39 +1,38 @@
-"use strict";
-n.d(t, { A: () => r });
-var i = n(64700);
-function r(e) {
-    let { videoRef: t, enabled: n, onPipPause: r, onHiddenPause: s } = e,
-        a = i.useRef(r),
-        o = i.useRef(s),
-        l = i.useRef(!1);
-    i.useEffect(() => {
-        (a.current = r), (o.current = s);
-    }, [r, s]),
-        i.useEffect(() => {
+n.d(t, { A: () => l });
+var r = n(64700);
+function l(e) {
+    let { videoRef: t, enabled: n, onPipPause: l, onHiddenPause: a } = e,
+        i = r.useRef(l),
+        s = r.useRef(a),
+        u = r.useRef(!1);
+    r.useEffect(() => {
+        (i.current = l), (s.current = a);
+    }, [l, a]),
+        r.useEffect(() => {
             if (!n) return;
             let e = t.current;
             if (null == e) return;
-            let i = () => {
-                    l.current || a.current();
+            let r = () => {
+                    u.current || i.current();
                 },
-                r = () => {
+                l = () => {
                     document.pictureInPictureElement === e
-                        ? a.current()
+                        ? i.current()
                         : "hidden" === document.visibilityState
-                          ? o.current()
-                          : (l.current = !1);
+                          ? s.current()
+                          : (u.current = !1);
                 },
-                s = () => {
-                    l.current = !0;
+                a = () => {
+                    u.current = !0;
                 };
             return (
-                e.addEventListener("enterpictureinpicture", i),
-                e.addEventListener("play", r),
-                e.addEventListener("pause", s),
+                e.addEventListener("enterpictureinpicture", r),
+                e.addEventListener("play", l),
+                e.addEventListener("pause", a),
                 () => {
-                    e.removeEventListener("enterpictureinpicture", i),
-                        e.removeEventListener("play", r),
-                        e.removeEventListener("pause", s);
+                    e.removeEventListener("enterpictureinpicture", r),
+                        e.removeEventListener("play", l),
+                        e.removeEventListener("pause", a);
                 }
             );
         }, [t, n]);

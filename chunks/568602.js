@@ -1,45 +1,44 @@
-"use strict";
-n.d(t, { b: () => l });
-var i = n(627968),
-    r = n(64700),
-    s = n(735438),
-    a = n.n(s),
-    o = n(775602);
-class l extends r.Component {
+e.d(i, { b: () => o });
+var s = e(627968),
+    a = e(64700),
+    n = e(735438),
+    r = e.n(n),
+    h = e(775602);
+class o extends a.Component {
     static defaultProps = { isShaking: !0, intensity: 5 };
-    ref = r.createRef();
+    ref = a.createRef();
     animationFrame;
     shouldRenderFrame = !0;
     componentDidMount() {
         this.props.isShaking && this.startShaking();
     }
-    componentDidUpdate(e) {
-        this.props.isShaking !== e.isShaking && this.setShaking(this.props.isShaking);
+    componentDidUpdate(t) {
+        this.props.isShaking !== t.isShaking && this.setShaking(this.props.isShaking);
     }
-    setShaking(e) {
-        e ? this.startShaking() : this.stopShaking();
+    setShaking(t) {
+        t ? this.startShaking() : this.stopShaking();
     }
     startShaking() {
         (this.shouldRenderFrame = !0), (this.animationFrame = requestAnimationFrame(this.animate));
     }
     stopShaking() {
         null != this.animationFrame && cancelAnimationFrame(this.animationFrame);
-        let e = this.ref.current;
-        null != e && (e.style.transform = "");
+        let t = this.ref.current;
+        null != t && (t.style.transform = "");
     }
     animate = () => {
-        let { intensity: e, isShaking: t } = this.props;
-        if (!t) return;
-        let n = this.ref.current;
-        if (this.shouldRenderFrame && null != n) {
-            let t = a().random(-e, e, !0),
-                i = a().random(-e, e, !0);
-            n.style.transform = o.A.useReducedMotion ? "" : `translate3d(${t}px,${i}px,0px)`;
+        let { intensity: t, isShaking: i } = this.props;
+        if (!i) return;
+        let e = this.ref.current;
+        if (this.shouldRenderFrame && null != e) {
+            let i = r().random(-t, t, !0),
+                s = r().random(-t, t, !0);
+            e.style.transform = h.A.useReducedMotion ? "" : `translate3d(${i}px,${s}px,0px)`;
         }
         (this.shouldRenderFrame = !this.shouldRenderFrame), (this.animationFrame = requestAnimationFrame(this.animate));
     };
     render() {
-        let { className: e, children: t } = this.props;
-        return (0, i.jsx)("div", { className: e, ref: this.ref, children: t });
+        let { className: t, children: i } = this.props;
+        return (0, s.jsx)("div", { className: t, ref: this.ref, children: i });
     }
 }

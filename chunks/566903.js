@@ -1,47 +1,46 @@
-"use strict";
-n.d(t, { A: () => d });
-var i = n(599026),
-    r = n(440594),
-    s = n(541806),
-    a = n(765379),
-    o = n(90644),
-    l = n(82149),
-    u = n(652215),
-    c = n(375708);
+r.d(t, { A: () => d });
+var n = r(599026),
+    l = r(440594),
+    i = r(541806),
+    o = r(765379),
+    a = r(90644),
+    s = r(82149),
+    u = r(652215),
+    E = r(375708);
 function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = e?.name === "" ? null : e?.name,
+        r = e?.name === "" ? null : e?.name,
         d = e?.details === "" ? null : e?.details,
-        _ = e?.state === "" ? null : e?.state,
-        f = e?.type === u.$pd.STREAMING ? (d ?? n) : n;
+        I = e?.state === "" ? null : e?.state,
+        _ = e?.type === u.$pd.STREAMING ? (d ?? r) : r;
     if (
-        (e?.status_display_type === i.A.NAME && null != n
-            ? (f = n)
-            : e?.status_display_type === i.A.STATE && null != _
-              ? (f = _)
-              : e?.status_display_type === i.A.DETAILS && null != d && (f = d),
-        (0, a.A)(e))
+        (e?.status_display_type === n.A.NAME && null != r
+            ? (_ = r)
+            : e?.status_display_type === n.A.STATE && null != I
+              ? (_ = I)
+              : e?.status_display_type === n.A.DETAILS && null != d && (_ = d),
+        (0, o.A)(e))
     ) {
-        let e = (0, r.A)(n);
+        let e = (0, l.A)(r);
         return { text: e, tooltip: e };
     }
-    if (e?.type === u.$pd.PLAYING && null != f)
-        return { text: f, tooltip: c.intl.formatToPlainString(c.t.lFApmz, { game: f }) };
-    if ((0, o.A)(e) && t && null != _) {
-        let e = _.split("; ")?.join(", ");
-        return { text: e, tooltip: c.intl.formatToPlainString(c.t.Vnuxue, { name: e }) };
+    if (e?.type === u.$pd.PLAYING && null != _)
+        return { text: _, tooltip: E.intl.formatToPlainString(E.t.lFApmz, { game: _ }) };
+    if ((0, a.A)(e) && t && null != I) {
+        let e = I.split("; ")?.join(", ");
+        return { text: e, tooltip: E.intl.formatToPlainString(E.t.Vnuxue, { name: e }) };
     }
-    return (0, l.Cy)(e) && null != n
-        ? { text: n, tooltip: c.intl.formatToPlainString(c.t.pW3Ip3, { name: n }) }
-        : e?.type === u.$pd.LISTENING && null != f
-          ? { text: f, tooltip: c.intl.formatToPlainString(c.t.Vnuxue, { name: f }) }
-          : (0, s.A)(e) && t && null != d
-            ? { text: d, tooltip: c.intl.formatToPlainString(c.t.pW3Ip3, { name: d }) }
-            : e?.type === u.$pd.WATCHING && null != f
-              ? { text: f, tooltip: c.intl.formatToPlainString(c.t.pW3Ip3, { name: f }) }
-              : e?.type === u.$pd.COMPETING && null != f
-                ? { text: f, tooltip: c.intl.formatToPlainString(c.t.QQ2wVE, { name: f }) }
-                : e?.type === u.$pd.STREAMING && null != f
-                  ? { text: f, tooltip: c.intl.formatToPlainString(c.t["0wJXSh"], { name: f }) }
+    return (0, s.Cy)(e) && null != r
+        ? { text: r, tooltip: E.intl.formatToPlainString(E.t.pW3Ip3, { name: r }) }
+        : e?.type === u.$pd.LISTENING && null != _
+          ? { text: _, tooltip: E.intl.formatToPlainString(E.t.Vnuxue, { name: _ }) }
+          : (0, i.A)(e) && t && null != d
+            ? { text: d, tooltip: E.intl.formatToPlainString(E.t.pW3Ip3, { name: d }) }
+            : e?.type === u.$pd.WATCHING && null != _
+              ? { text: _, tooltip: E.intl.formatToPlainString(E.t.pW3Ip3, { name: _ }) }
+              : e?.type === u.$pd.COMPETING && null != _
+                ? { text: _, tooltip: E.intl.formatToPlainString(E.t.QQ2wVE, { name: _ }) }
+                : e?.type === u.$pd.STREAMING && null != _
+                  ? { text: _, tooltip: E.intl.formatToPlainString(E.t["0wJXSh"], { name: _ }) }
                   : {};
 }
