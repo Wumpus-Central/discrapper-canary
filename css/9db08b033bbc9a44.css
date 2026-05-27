@@ -176,6 +176,10 @@
     z-index: 1
 }
 
+.infoContainerExclusive__4a37a {
+    background-image: radial-gradient(154.08% 141.42% at 0 0, color-mix(in srgb, var(--background-brand) 25%, transparent) 0, transparent 100%)
+}
+
 .no-webkit-scrollbar .infoContainer__4a37a {
     scrollbar-width: none
 }

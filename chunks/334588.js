@@ -5,6 +5,7 @@ a.exports = {
     Wi: "offerBannerContent__4a37a",
     nr: "panelsContainer__4a37a",
     op: "infoContainer__4a37a",
+    uk: "infoContainerExclusive__4a37a",
     Td: "infoBottomSection__4a37a",
     t7: "infoBottomSectionBorder__4a37a",
     K3: "exclusiveBadge__4a37a",
