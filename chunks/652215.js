@@ -5191,6 +5191,7 @@ var rD =
         (ex.RING_CALL_ACCEPTED = "ring_call_accepted"),
         (ex.CHANNEL_ICON_EDIT_PROGRESSED = "channel_icon_edit_progressed"),
         (ex.GDM_EDIT_INTERACTED = "gdm_edit_interacted"),
+        (ex.PRIVATE_CHANNEL_INVITE_MODAL_OPENED = "private_channel_invite_modal_opened"),
         (ex.CAN_OPEN_URL_REQUESTED = "can_open_url_requested"),
         (ex.MODERATOR_REPORT_ORIGINAL_MESSAGE_LINK_CLICKED = "moderator_report_original_message_link_clicked"),
         (ex.MODERATOR_QUEUE_ACTION = "moderator_queue_action"),
