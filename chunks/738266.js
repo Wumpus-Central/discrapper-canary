@@ -696,12 +696,12 @@ function e4(e) {
     });
 }
 var e6 = l(661531),
-    e8 = l(862482),
-    e9 = l(359778),
+    e9 = l(862482),
+    e8 = l(359778),
     te = l(400725);
 let tt = (e) => {
     let { className: t, icon: l, noticeText: i, buttonText: s, onClick: r, canSync: o } = e;
-    return (0, n.jsx)(e9.Z, {
+    return (0, n.jsx)(e8.Z, {
         className: A()(t, te.N),
         children: (0, n.jsxs)(e7.A, {
             justify: e7.A.Justify.BETWEEN,
@@ -713,9 +713,9 @@ let tt = (e) => {
                     children: (0, n.jsx)(a.E, { variant: "text-md/normal", children: i }),
                 }),
                 o &&
-                    (0, n.jsx)(e8.$n, {
-                        size: e8.$n.Sizes.SMALL,
-                        color: e8.$n.Colors.PRIMARY,
+                    (0, n.jsx)(e9.$n, {
+                        size: e9.$n.Sizes.SMALL,
+                        color: e9.$n.Colors.PRIMARY,
                         onClick: r,
                         children: s,
                     }),
@@ -894,7 +894,7 @@ function ta(e) {
                                     onClick: function () {
                                         (0, y.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                l.e("33573"),
+                                                l.e("1944"),
                                                 l.e("11585"),
                                                 l.e("89916"),
                                                 l.e("20379"),
@@ -1013,7 +1013,7 @@ function tr(e) {
                                                 onClick: function () {
                                                     (0, y.openModalLazy)(async () => {
                                                         let { default: e } = await Promise.all([
-                                                            l.e("33573"),
+                                                            l.e("1944"),
                                                             l.e("89916"),
                                                             l.e("20379"),
                                                             l.e("19193"),
@@ -1360,14 +1360,14 @@ function t6(e) {
         }),
     });
 }
-var t8 = l(235640),
-    t9 = l(268761),
+var t9 = l(235640),
+    t8 = l(268761),
     le = l(474078),
     lt = l(783878),
     ll = l(980296);
 let ln = (e) => {
     let { autoArchiveDuration: t, onChange: l, isDisabled: i, helperText: s } = e,
-        a = (0, t9.Gk)();
+        a = (0, t8.Gk)();
     return (0, n.jsx)("div", {
         className: ll.gy,
         children: (0, n.jsx)(lt.Z, {
@@ -1979,7 +1979,7 @@ class lv extends i.PureComponent {
                                               ],
                                           }),
                                       }),
-                                      (0, n.jsx)(t8.A, { reactionEmoji: e.defaultReactionEmoji }),
+                                      (0, n.jsx)(t9.A, { reactionEmoji: e.defaultReactionEmoji }),
                                   ],
                               }),
                           }),
@@ -2175,7 +2175,7 @@ class lv extends i.PureComponent {
                       page: eB.liQ.CHANNEL_SETTINGS,
                       children: (0, n.jsx)(ln, {
                           isDisabled: !s,
-                          autoArchiveDuration: (0, t9.Gl)(e, null),
+                          autoArchiveDuration: (0, t8.Gl)(e, null),
                           onChange: this.handleChangeDefaultAutoArchiveDuration,
                           helperText: e.isForumLikeChannel()
                               ? eH.intl.string(eH.t.fyXclY)

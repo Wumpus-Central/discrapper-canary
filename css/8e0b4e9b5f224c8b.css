@@ -1,3 +1,10 @@
+.phoneField_a0c54f {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: 5fr 6fr;
+    position: relative
+}
+
 .phoneVerificationModal_db41ea {
     min-height: 252px;
     padding: 16px;

@@ -1439,7 +1439,7 @@ function nU(e) {
                       let { default: e } = await Promise.all([
                           n.e("5956"),
                           n.e("90665"),
-                          n.e("47412"),
+                          n.e("1944"),
                           n.e("99430"),
                           n.e("72465"),
                           n.e("83952"),

@@ -1,0 +1,20 @@
+.section__82d84 {
+    margin-bottom: 16px
+}
+
+.emojiInput__82d84 {
+    cursor: pointer;
+    display: grid;
+    flex-basis: 100%;
+    flex-grow: 1;
+    gap: var(--space-8);
+    grid-template-columns: auto 1fr auto;
+    min-height: var(--control-input-height-md);
+    min-width: 16ch;
+    padding: 0 var(--space-12)
+}
+
+.emojiText__82d84 {
+    cursor: pointer;
+    padding-inline-start: 40px
+}

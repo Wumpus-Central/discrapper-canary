@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(627968);
 n(64700);
 var r = n(892491),
@@ -18,24 +18,24 @@ var c = n(36149),
 function _(e) {
     if (null != e) return (0, c.Sr)(e) ? r.F.LIGHTBOX : void 0;
 }
-let f = {
+let h = {
     showAgeVerification: (e) => {
         let { onClose: t, entryPoint: r, shouldShowExpressiveModal: o = !1, webviewUrl: l, ...c } = e;
         if (null == l) return;
-        let f = { modalKey: d.SW, onCloseCallback: t, backdropStyle: _(r), Layer: a.Ay };
+        let h = { modalKey: d.SW, onCloseCallback: t, backdropStyle: _(r), Layer: a.Ay };
         o || u(r)
             ? (0, s.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([n.e("43156"), n.e("18024"), n.e("24947")]).then(
                       n.bind(n, 662558),
                   );
                   return (t) => (0, i.jsx)(e, { webviewUrl: l, ...c, ...t });
-              }, f)
+              }, h)
             : (0, s.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([n.e("56377"), n.e("43156"), n.e("88941"), n.e("23425")]).then(
                       n.bind(n, 745336),
                   );
                   return (t) => (0, i.jsx)(e, { webviewUrl: l, ...c, ...t });
-              }, f);
+              }, h);
     },
     showAgeVerificationGetStartedModal: (e) => {
         let { onClose: t, entryPoint: r } = e;
@@ -43,7 +43,7 @@ let f = {
             ? (0, s.openModalLazy)(
                   async () => {
                       let { default: e } = await Promise.all([
-                          n.e("3794"),
+                          n.e("96762"),
                           n.e("54398"),
                           n.e("54048"),
                           n.e("607"),
@@ -60,7 +60,7 @@ let f = {
                     async () => {
                         let { default: e } = await Promise.all([
                             n.e("56377"),
-                            n.e("3794"),
+                            n.e("96762"),
                             n.e("54048"),
                             n.e("88941"),
                             n.e("607"),
@@ -74,7 +74,7 @@ let f = {
               : (0, s.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("3794"),
+                            n.e("96762"),
                             n.e("34763"),
                             n.e("61268"),
                             n.e("607"),

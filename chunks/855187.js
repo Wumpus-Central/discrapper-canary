@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(627968);
 n(64700);
 var r = n(17928),
@@ -11,9 +11,9 @@ var r = n(17928),
     c = n(952572),
     d = n(495544),
     _ = n(761853),
-    f = n(375708);
-function h(e, t) {
-    let h = (0, s.k)(),
+    h = n(375708);
+function f(e, t) {
+    let f = (0, s.k)(),
         { videoEnabled: p, hasVideoDevice: E } = (0, r.cf)([_.Ay], () => ({
             videoEnabled: _.Ay.isVideoEnabled(),
             hasVideoDevice: _.Ay.isVideoAvailable(),
@@ -23,13 +23,13 @@ function h(e, t) {
     return (!p || g) && m && E
         ? (0, i.jsx)(o.Dr, {
               id: "change-video-background",
-              label: p ? f.intl.string(f.t.mZKxHb) : f.intl.string(f.t["vkV93/"]),
+              label: p ? h.intl.string(h.t.mZKxHb) : h.intl.string(h.t["vkV93/"]),
               action: function () {
                   (0, a.openModalLazy)(
                       async () => {
                           let { default: e } = await Promise.all([
-                              n.e("47412"),
-                              n.e("73289"),
+                              n.e("1944"),
+                              n.e("77857"),
                               n.e("28367"),
                               n.e("18441"),
                               n.e("21690"),
@@ -47,7 +47,7 @@ function h(e, t) {
                           ]).then(n.bind(n, 308229));
                           return (t) => (0, i.jsx)(e, { ...t, videoEnabled: p });
                       },
-                      { modalKey: "camera-preview", contextKey: null != t ? (0, a.modalContextFromAppContext)(t) : h },
+                      { modalKey: "camera-preview", contextKey: null != t ? (0, a.modalContextFromAppContext)(t) : f },
                   );
               },
               icon: p ? l.f : u.b,

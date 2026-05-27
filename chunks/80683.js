@@ -103,8 +103,8 @@ class J extends r.Ay.Store {
         return q === e;
     }
 }
-let Y = new J(K.h);
-var Z = n(821609),
+let Z = new J(K.h);
+var Y = n(821609),
     X = n(35787);
 let Q = (e) => {
     let { guild: t, onClose: i } = e;
@@ -126,7 +126,7 @@ let Q = (e) => {
                     }),
                     (0, l.jsx)("div", {
                         className: X.UD,
-                        children: (0, l.jsx)(Z.$, { variant: "primary", text: F.intl.string(F.t.hLw0wc), onClick: i }),
+                        children: (0, l.jsx)(Y.$, { variant: "primary", text: F.intl.string(F.t.hLw0wc), onClick: i }),
                     }),
                 ],
             }),
@@ -200,9 +200,9 @@ class eA extends i.PureComponent {
         (0, d.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("47412"),
-                    n.e("82672"),
-                    n.e("4042"),
+                    n.e("1944"),
+                    n.e("4782"),
+                    n.e("5956"),
                     n.e("89545"),
                     n.e("91531"),
                     n.e("11493"),
@@ -408,7 +408,7 @@ function ef(e) {
         m = h?.isStaff() ?? !1,
         g = (0, r.bG)([es.Ay], () => null != h && (es.Ay.getMember(s, h.id)?.isPending ?? !1)),
         p = !!(0, R.Qd)(a),
-        A = (0, r.bG)([Y], () => Y.shouldShowPopout(s)),
+        A = (0, r.bG)([Z], () => Z.shouldShowPopout(s)),
         f = (0, r.bG)([eo.A], () => eo.A.can(y.xBc.SEND_MESSAGES, t)),
         x = (0, r.bG)([D.A], () => D.A.getRequest(s)),
         { showLinkedLobbyApplicationLoadingIndicator: E, requiredLinkedLobbyApplication: T } = (0, eu.A)(t.linkedLobby),

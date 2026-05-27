@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => U });
+n.d(t, { A: () => k });
 var i = n(627968),
     r = n(64700),
     s = n(562708),
@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(398590),
     d = n(631670),
     _ = n(475743),
-    f = n(775121),
-    h = n(139286),
+    h = n(775121),
+    f = n(139286),
     p = n(80556),
     E = n(557722),
     m = n(363195),
@@ -20,16 +20,16 @@ var i = n(627968),
     I = n(503698),
     T = n.n(I),
     S = n(607399),
-    N = n(821609),
-    y = n(331322),
-    C = n(534514),
-    v = n(834730),
-    O = n(700525),
-    R = n(975571),
+    y = n(821609),
+    N = n(331322),
+    v = n(534514),
+    C = n(834730),
+    R = n(700525),
+    O = n(975571),
     b = n(652215),
     D = n(375708),
     L = n(72828);
-let w = R.A.getArticleURL(b.MVz.VERIFICATION_FAQ);
+let w = O.A.getArticleURL(b.MVz.VERIFICATION_FAQ);
 class M extends r.PureComponent {
     static defaultProps = { types: [b.Fz7.CAPTCHA], onCaptchaVerify: b.tEg, onLogout: b.tEg };
     renderFields() {
@@ -37,20 +37,20 @@ class M extends r.PureComponent {
         return (0, i.jsx)(i.Fragment, {
             children: e.map((e) =>
                 e === b.Fz7.CAPTCHA
-                    ? (0, i.jsx)(O.A, { onVerify: r, theme: n }, t)
-                    : (0, i.jsx)(N.$, { onClick: () => this.handleClick(e), text: A.A.getButtonTitle(e) }, e),
+                    ? (0, i.jsx)(R.A, { onVerify: r, theme: n }, t)
+                    : (0, i.jsx)(y.$, { onClick: () => this.handleClick(e), text: A.A.getButtonTitle(e) }, e),
             ),
         });
     }
     render() {
-        return (0, i.jsxs)(y.B, {
+        return (0, i.jsxs)(N.B, {
             gap: 16,
             className: L.Ot,
             align: "center",
             direction: "vertical",
             justify: "center",
             children: [
-                (0, i.jsxs)(y.B, {
+                (0, i.jsxs)(N.B, {
                     gap: 16,
                     fullWidth: !1,
                     className: T()(L.kL, { [L.Fr]: S.Fr }),
@@ -58,25 +58,25 @@ class M extends r.PureComponent {
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsxs)(y.B, {
+                        (0, i.jsxs)(N.B, {
                             align: "center",
                             direction: "vertical",
                             justify: "center",
                             gap: 16,
                             children: [
                                 (0, i.jsx)("div", { className: L.Sl }),
-                                (0, i.jsxs)(y.B, {
+                                (0, i.jsxs)(N.B, {
                                     className: L.FS,
                                     gap: 4,
                                     align: "center",
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, i.jsx)(C.D, {
+                                        (0, i.jsx)(v.D, {
                                             variant: "heading-xl/normal",
                                             children: D.intl.string(D.t.Iz0kDg),
                                         }),
-                                        (0, i.jsx)(v.E, {
+                                        (0, i.jsx)(C.E, {
                                             variant: "text-md/normal",
                                             children: D.intl.format(D.t["0rqMV5"], { helpCenterURL: w }),
                                         }),
@@ -84,7 +84,7 @@ class M extends r.PureComponent {
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(y.B, {
+                        (0, i.jsx)(N.B, {
                             gap: 16,
                             direction: "vertical",
                             justify: "center",
@@ -93,30 +93,30 @@ class M extends r.PureComponent {
                         }),
                     ],
                 }),
-                (0, i.jsxs)(y.B, {
+                (0, i.jsxs)(N.B, {
                     gap: 8,
                     align: "center",
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsx)(v.E, {
+                        (0, i.jsx)(C.E, {
                             variant: "text-sm/normal",
                             className: L.qr,
                             children: D.intl.string(D.t.qqYun3),
                         }),
-                        (0, i.jsxs)(y.B, {
+                        (0, i.jsxs)(N.B, {
                             gap: 8,
                             align: "center",
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, i.jsx)(v.E, {
+                                (0, i.jsx)(C.E, {
                                     variant: "text-sm/semibold",
                                     className: L.qr,
-                                    children: D.intl.format(D.t.WL51ZR, { supportURL: R.A.getSubmitRequestURL() }),
+                                    children: D.intl.format(D.t.WL51ZR, { supportURL: O.A.getSubmitRequestURL() }),
                                 }),
                                 (0, i.jsx)("div", { className: T()(L.qr, L.mf), children: "\u2022" }),
-                                (0, i.jsx)(v.E, {
+                                (0, i.jsx)(C.E, {
                                     variant: "text-sm/semibold",
                                     className: L.qr,
                                     children: D.intl.format(D.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
@@ -135,12 +135,12 @@ class M extends r.PureComponent {
 }
 var P = n(87404),
     x = n(53516);
-function U() {
+function k() {
     let { action: e, theme: t } = (0, a.cf)([g.A, m.A], () => ({ action: g.A.getAction(), theme: m.A.theme })),
         I = A.A.getVerificationTypes(e),
         [T, S] = r.useState(0),
-        N = (0, _.A)(I);
-    (0, h.A)(
+        y = (0, _.A)(I);
+    (0, f.A)(
         {
             type: s.ImpressionTypes.MODAL,
             name: s.ImpressionNames.USER_ACTION_REQUIRED,
@@ -149,7 +149,7 @@ function U() {
         {},
         [I.toString()],
     );
-    let y = () => {
+    let N = () => {
         (0, d.Cw)(),
             (0, l.openModalLazy)(
                 async () => {
@@ -164,15 +164,15 @@ function U() {
     return (
         r.useEffect(
             () => (
-                f.A.disable(),
+                h.A.disable(),
                 () => {
-                    f.A.enable();
+                    h.A.enable();
                 }
             ),
             [],
         ),
         r.useEffect(() => {
-            N?.[0] === b.Fz7.PHONE &&
+            y?.[0] === b.Fz7.PHONE &&
                 I?.[0] === b.Fz7.EMAIL &&
                 (0, l.openModalLazy)(
                     async () => {
@@ -185,9 +185,9 @@ function U() {
                                 confirmText: D.intl.string(D.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: P.Pr, Layer: p.Ay, onCloseCallback: y },
+                    { modalKey: P.Pr, Layer: p.Ay, onCloseCallback: N },
                 );
-        }, [I, N]),
+        }, [I, y]),
         (0, i.jsx)(M, {
             types: I,
             captchaKey: T,
@@ -204,13 +204,13 @@ function U() {
             theme: t,
             onClick: (e) => {
                 e === b.Fz7.EMAIL_OR_PHONE || e === b.Fz7.EMAIL || e === b.Fz7.REVERIFY_EMAIL
-                    ? y()
+                    ? N()
                     : (0, l.openModalLazy)(
                           async () => {
                               let { default: e } = await Promise.all([
-                                  n.e("47412"),
-                                  n.e("82672"),
-                                  n.e("4042"),
+                                  n.e("1944"),
+                                  n.e("4782"),
+                                  n.e("5956"),
                                   n.e("89545"),
                                   n.e("91531"),
                                   n.e("11493"),

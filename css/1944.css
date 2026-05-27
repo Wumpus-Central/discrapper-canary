@@ -3867,17 +3867,6 @@
     display: flex
 }
 
-.desktopTooltip__7b565 {
-    display: flex;
-    padding: 4px 0;
-    width: 100%
-}
-
-.infoIcon__7b565 {
-    color: var(--white);
-    margin-inline-end: 4px
-}
-
 .bgShade__6d791 {
     background-color: rgba(19, 19, 24, .9);
     border: 1px solid hsla(0, 0%, 100%, .08);
@@ -5294,6 +5283,22 @@
 
 .voice__451f5 {
     margin: var(--space-16) 0
+}
+
+.action_e2d85e {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center
+}
+
+.loading_e2d85e {
+    cursor: default;
+    opacity: .6
+}
+
+.text_e2d85e:hover {
+    text-decoration: underline
 }
 
 .containerExpanded__7ff28 {
@@ -6745,6 +6750,10 @@
     width: 100%
 }
 
+.errorText__38262 {
+    margin-top: var(--space-4)
+}
+
 .counter__90981 {
     background-color: var(--background-surface-highest);
     border: 1px solid var(--border-muted);
@@ -7162,11 +7171,4 @@
 
 .categorySubGroup_ed5050:empty {
     display: none
-}
-
-.phoneField_a0c54f {
-    display: grid;
-    gap: var(--space-8);
-    grid-template-columns: 5fr 6fr;
-    position: relative
 }

@@ -9,12 +9,12 @@ var r = n(192308),
     l = n(652215);
 function u(e) {
     var t, u, c, d;
-    let { platformType: _, location: f, overrideUrl: h, successRedirect: p } = e;
+    let { platformType: _, location: h, overrideUrl: f, successRedirect: p } = e;
     (_ === l.fg2.LEAGUE_OF_LEGENDS && (_ = l.fg2.RIOT_GAMES), _ === l.fg2.CRUNCHYROLL)
-        ? ((t = [f ?? "unknown"]),
+        ? ((t = [h ?? "unknown"]),
           (0, r.openModalLazy)(async () => {
               let { default: e } = await Promise.all([
-                  n.e("29761"),
+                  n.e("1944"),
                   n.e("29484"),
                   n.e("61935"),
                   n.e("36335"),
@@ -25,10 +25,10 @@ function u(e) {
               return (n) => (0, i.jsx)(e, { analyticsLocation: t, ...n });
           }))
         : _ === l.fg2.XBOX
-          ? ((u = [f ?? "unknown"]),
+          ? ((u = [h ?? "unknown"]),
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("29761"),
+                    n.e("1944"),
                     n.e("70164"),
                     n.e("95429"),
                     n.e("98189"),
@@ -44,11 +44,11 @@ function u(e) {
                 return (t) => (0, i.jsx)(e, { analyticsLocation: u, ...t });
             }))
           : _ === l.fg2.PLAYSTATION || _ === l.fg2.PLAYSTATION_STAGING
-            ? ((c = [f ?? "unknown"]),
+            ? ((c = [h ?? "unknown"]),
               (d = _),
               (0, r.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([
-                      n.e("29761"),
+                      n.e("1944"),
                       n.e("98965"),
                       n.e("36335"),
                       n.e("64610"),
@@ -61,25 +61,25 @@ function u(e) {
             : _ === l.fg2.DOMAIN
               ? (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("40523"),
+                        n.e("16415"),
                         n.e("97893"),
                         n.e("37687"),
                         n.e("94048"),
                     ]).then(n.bind(n, 110819));
-                    return (t) => (0, i.jsx)(e, { analyticsLocation: [f ?? "unknown"], ...t });
+                    return (t) => (0, i.jsx)(e, { analyticsLocation: [h ?? "unknown"], ...t });
                 })
               : s.A.get(_)?.isFederated === !0
                 ? (0, r.openModalLazy)(async () => {
                       let { default: e } = await n.e("10645").then(n.bind(n, 61492));
-                      return (t) => (0, i.jsx)(e, { platformType: _, location: f, successRedirect: p, ...t });
+                      return (t) => (0, i.jsx)(e, { platformType: _, location: h, successRedirect: p, ...t });
                   })
-                : null != h
+                : null != f
                   ? (0, a.h)({
                         shouldConfirm: !0,
-                        href: h,
+                        href: f,
                         onConfirm: () => {
-                            (0, o.d)(_, { location: f, successRedirect: p }, h);
+                            (0, o.d)(_, { location: h, successRedirect: p }, f);
                         },
                     })
-                  : (0, o.d)(_, { location: f, successRedirect: p });
+                  : (0, o.d)(_, { location: h, successRedirect: p });
 }
