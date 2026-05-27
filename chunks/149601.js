@@ -17809,7 +17809,11 @@ let fV = (0, a.E2)(u.X.ACCOUNT_STANDING_SETTING, {
         useTitle: () => g.intl.string(g.t["16r9jm"]),
         buildLayout: () => [fk],
     }),
-    fB = (0, a.t0)(u.X.ACCOUNT_STANDING_NESTED_PANEL, {
+    fB = (0, a.zZ)(u.X.ACCOUNT_STANDING_CATEGORY, {
+        useTitle: () => g.intl.string(g.t["16r9jm"]),
+        buildLayout: () => [fF],
+    }),
+    fF = (0, a.t0)(u.X.ACCOUNT_STANDING_NESTED_PANEL, {
         useTitle: fU.$b,
         useSubtitle: fU.bh,
         useLeadingDecoration: function () {
@@ -17820,10 +17824,6 @@ let fV = (0, a.E2)(u.X.ACCOUNT_STANDING_SETTING, {
             fG.Yn();
         },
         buildLayout: () => [fw],
-    }),
-    fF = (0, a.zZ)(u.X.ACCOUNT_STANDING_CATEGORY, {
-        useTitle: () => g.intl.string(g.t["16r9jm"]),
-        buildLayout: () => [fB],
     });
 var fz = i(834981),
     fY = i(840387),
@@ -17930,7 +17930,7 @@ let f2 = (0, a.Tf)(u.X.ACCOUNT_DELETE_SETTING, {
             };
         },
         useObscuredNotice: u1.L,
-        buildLayout: () => [pk, fP, fF, fq, f6],
+        buildLayout: () => [pk, fP, fB, fq, f6],
     }),
     f7 = (0, a.i4)(u.X.ACCOUNT_SIDEBAR_ITEM, {
         useTitle: () => g.intl.string(g.t["ldCE/p"]),
