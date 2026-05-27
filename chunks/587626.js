@@ -10,23 +10,23 @@ var i,
     c = n(17928),
     d = n(506774),
     _ = n(228366),
-    f = n(730852),
-    h = n(626584),
+    h = n(730852),
+    f = n(626584),
     p = n(652896),
     E = n(796774),
     m = n(617617),
     g = n(495544),
     A = n(470710),
     I = n(734057),
-    T = n(235058),
+    T = n(761853),
     S = n(763827),
-    N = n(873985),
-    y = n(309010),
-    C = n(461213),
-    v = n(116956),
-    O = n(723702),
-    R =
-        (((i = R || {}).CLOSED = "CLOSED"),
+    y = n(873985),
+    N = n(309010),
+    v = n(461213),
+    C = n(116956),
+    R = n(723702),
+    O =
+        (((i = O || {}).CLOSED = "CLOSED"),
         (i.WILL_RECONNECT = "WILL_RECONNECT"),
         (i.CONNECTING = "CONNECTING"),
         (i.IDENTIFYING = "IDENTIFYING"),
@@ -41,15 +41,15 @@ n(323874), n(14289), n(35956), n(321073), n(142703);
 var M = n(284009),
     P = n.n(M),
     x = n(777915),
-    U = n(61090),
-    k = n(158390),
+    k = n(61090),
+    U = n(158390),
     G = n(731738),
     F = n(70298),
     V = n(636537),
     B = n(71393),
     H = n(403362),
     j = n(723176);
-let Y = new h.A("GuildVersions");
+let Y = new f.A("GuildVersions");
 class W {
     pending = new Map();
     committed = new Map();
@@ -179,11 +179,11 @@ class W {
     }
 }
 let K = new W();
-var z = n(314732),
-    $ = n(214771),
+var $ = n(314732),
+    z = n(214771),
     q = n(937724),
-    Z = n(807393),
-    X = n(464578),
+    X = n(807393),
+    Z = n(464578),
     Q = n(111162),
     J = n(353835),
     ee = n(927813),
@@ -305,7 +305,7 @@ el.push(
                     n = this._pako,
                     i = this._inflate;
                 if (null == i)
-                    return void new h.A("GatewayCompressionHandler").error(
+                    return void new f.A("GatewayCompressionHandler").error(
                         "flush end happened on closed compression adapter",
                     );
                 if (e !== n.Z_OK) throw Error(`zlib error, ${e}, ${i.strm.msg}`);
@@ -366,10 +366,10 @@ el.push(
                 this.close(),
                     (this._socketId = e._socketId),
                     es()
-                        ? (0, O.isAndroid)()
+                        ? (0, R.isAndroid)()
                             ? eo?.enableZstdStreamSupport(this._socketId)
                             : ea.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0)
-                        : (0, O.isAndroid)()
+                        : (0, R.isAndroid)()
                           ? eo?.enableZlibStreamSupport(this._socketId)
                           : ea.DCDCompressionManager.enableZlibStreamSupport(this._socketId);
             }
@@ -387,7 +387,7 @@ el.push(
                 let e = this._socketId;
                 (this._socketId = null),
                     null !== e &&
-                        ((0, O.isAndroid)()
+                        ((0, R.isAndroid)()
                             ? eo?.disableZlibStreamSupport(e)
                             : ea.DCDCompressionManager.disableZlibStreamSupport(e));
             }
@@ -416,8 +416,8 @@ function ed(e) {
 }
 el.push(ec);
 let e_ = BigInt(0),
-    ef = BigInt(8),
-    eh = BigInt(16),
+    eh = BigInt(8),
+    ef = BigInt(16),
     ep = BigInt(32),
     eE = BigInt(64),
     em = BigInt(128),
@@ -426,12 +426,12 @@ let e_ = BigInt(0),
     eI = BigInt(0x1000000),
     eT = BigInt(0x80000000),
     eS = BigInt(0x100000000),
-    eN = BigInt(0x10000000000),
-    ey = BigInt(0x1000000000000),
-    eC = BigInt("72057594037927936"),
-    ev = BigInt("18446744073709551615"),
-    eO = BigInt("18446744073709551616"),
-    eR = BigInt("340282366920938463463374607431768211455"),
+    ey = BigInt(0x10000000000),
+    eN = BigInt(0x1000000000000),
+    ev = BigInt("72057594037927936"),
+    eC = BigInt("18446744073709551615"),
+    eR = BigInt("18446744073709551616"),
+    eO = BigInt("340282366920938463463374607431768211455"),
     eb = BigInt("340282366920938463463374607431768211456"),
     eD = BigInt("115792089237316195423570985008687907853269984665640564039457584007913129639935"),
     eL = BigInt("115792089237316195423570985008687907853269984665640564039457584007913129639936");
@@ -449,7 +449,7 @@ let eP = (0, eM.mj)({
 function ex(e) {
     return eP.getConfig({ location: e }).enabled;
 }
-let eU = new (class {
+let ek = new (class {
         _stringEncoding;
         _keyEncoding;
         _safeIntEncoding;
@@ -609,7 +609,7 @@ let eU = new (class {
                     }
                     let t = e < e_,
                         n = t ? -e : e;
-                    if (n < eO)
+                    if (n < eR)
                         if ((this._expand(11), 1 === this._safeBigIntEncoding && n < eT))
                             n < eg && !t
                                 ? ((this._u[this._i++] = 97), this._v.setBigUint64(this._i++, n, !0))
@@ -635,7 +635,7 @@ let eU = new (class {
                         this._expand(19),
                             (this._u[this._i] = 110),
                             (this._u[this._i + 2] = +!!t),
-                            this._v.setBigUint64(this._i + 3, n & ev, !0),
+                            this._v.setBigUint64(this._i + 3, n & eC, !0),
                             this._v.setBigUint64(this._i + 11, n >> eE, !0);
                         for (let e = 18; e > 10; e--)
                             if (0 !== this._u[this._i + e]) {
@@ -645,10 +645,10 @@ let eU = new (class {
                     } else if (n < eL) {
                         this._expand(35), (this._u[this._i] = 110), (this._u[this._i + 2] = +!!t);
                         let e = n >> em,
-                            i = n & eR;
-                        this._v.setBigUint64(this._i + 3, i & ev, !0),
+                            i = n & eO;
+                        this._v.setBigUint64(this._i + 3, i & eC, !0),
                             this._v.setBigUint64(this._i + 11, i >> eE, !0),
-                            this._v.setBigUint64(this._i + 19, e & ev, !0),
+                            this._v.setBigUint64(this._i + 19, e & eC, !0),
                             this._v.setBigUint64(this._i + 27, e >> eE, !0);
                         for (let e = 34; e > 18; e--)
                             if (0 !== this._u[this._i + e]) {
@@ -661,14 +661,14 @@ let eU = new (class {
                         for (; e > eD; ) {
                             let t = e & eD,
                                 n = t >> em,
-                                r = t & eR;
-                            i.push(r & ev, r >> eE, n & ev, n >> eE), (e >>= eg);
+                                r = t & eO;
+                            i.push(r & eC, r >> eE, n & eC, n >> eE), (e >>= eg);
                         }
-                        if (e > eR) {
+                        if (e > eO) {
                             let t = e >> em,
-                                n = e & eR;
-                            i.push(n & ev, n >> eE, t & ev, t >> eE);
-                        } else e > ev ? i.push(e & ev, e >> eE) : e > e_ && i.push(e);
+                                n = e & eO;
+                            i.push(n & eC, n >> eE, t & eC, t >> eE);
+                        } else e > eC ? i.push(e & eC, e >> eE) : e > e_ && i.push(e);
                         let r = i[i.length - 1],
                             s =
                                 8 * i.length -
@@ -680,11 +680,11 @@ let eU = new (class {
                                         : r < eI
                                           ? 5
                                           : 4
-                                    : r < ey
-                                      ? r < eN
+                                    : r < eN
+                                      ? r < ey
                                           ? 3
                                           : 2
-                                      : +(r < eC));
+                                      : +(r < ev));
                         this._expand(s + 6),
                             s < 256
                                 ? ((this._u[this._i] = 110),
@@ -888,7 +888,7 @@ let eU = new (class {
         encoding: { string: "binary", key: "binary", array: "list", null: "atom", undefined: "null" },
         useLegacyAtoms: !0,
     }),
-    ek = new (class {
+    eU = new (class {
         _nilDecoding;
         _stringDecoding;
         _binaryDecoding;
@@ -1078,8 +1078,8 @@ let eU = new (class {
                                 : e >= 4
                                   ? ((n <<= ep), (n += BigInt(this._v.getUint32(this._i + (e -= 4), !0))))
                                   : e >= 2
-                                    ? ((n <<= eh), (n += BigInt(this._v.getUint16(this._i + (e -= 2), !0))))
-                                    : ((n <<= ef), (n += BigInt(this._d[this._i])), e--);
+                                    ? ((n <<= ef), (n += BigInt(this._v.getUint16(this._i + (e -= 2), !0))))
+                                    : ((n <<= eh), (n += BigInt(this._d[this._i])), e--);
                     }
                     return (this._i += t), 1 === i && (n = -n), n.toString();
                 }
@@ -1157,7 +1157,7 @@ let eU = new (class {
     }),
     eG = (function () {
         let e;
-        if (O.isPlatformEmbedded) {
+        if (R.isPlatformEmbedded) {
             try {
                 e = ei.Ay.requireModule("discord_erlpack");
             } catch (t) {
@@ -1173,7 +1173,7 @@ let eU = new (class {
                     }
                     pack(t) {
                         if ((null == this._useWetf && (this._useWetf = ex("EtfEncoding")), this._useWetf)) {
-                            let e = eU.pack(t);
+                            let e = ek.pack(t);
                             return e.buffer.slice(e.byteOffset, e.byteOffset + e.byteLength);
                         }
                         return e.pack(t).buffer;
@@ -1182,11 +1182,11 @@ let eU = new (class {
                         if ((null == this._useWetf && (this._useWetf = ex("EtfEncoding")), this._useWetf)) {
                             let e = t instanceof Uint8Array ? t : new Uint8Array(t);
                             try {
-                                return ek.unpack(e);
+                                return eU.unpack(e);
                             } catch (n) {
                                 throw (
                                     (et.A.captureException(n, { tags: { app_context: "WetfParser" } }),
-                                    new h.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
+                                    new f.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
                                         erlpackUnpackError: n,
                                         erlpackDataPreview: null != t ? Array.from(e.slice(0, 32)) : null,
                                         erlpackDataLength: e.length,
@@ -1200,7 +1200,7 @@ let eU = new (class {
                             return e.unpack(t);
                         } catch (e) {
                             throw (
-                                (new h.A("GatewayEncodingErlpackEncoding").error("Error unpacking", {
+                                (new f.A("GatewayEncodingErlpackEncoding").error("Error unpacking", {
                                     erlpackUnpackError: e,
                                     erlpackDataPreview: null != t ? Array.from(t.slice(0, 32)) : null,
                                     erlpackDataLength: null != t ? t.length : null,
@@ -1297,8 +1297,8 @@ class eK {
                 _.h.dispatch(e).catch((t) => this.socket.resetSocketAndClearCacheOnError({ error: t, action: e.type }));
     }
 }
-var ez = n(365971),
-    e$ =
+var e$ = n(365971),
+    ez =
         (((r = {}).LONGER_DISPATCH = "longer_dispatch"),
         (r.EXCEEDED_MAX_CONSECUTIVE_FLUSHES = "exceeded_max_consecutive_flushes"),
         (r.FIRED_DUE_TO_MAX_TIMEOUT = "fired_due_to_max_timeout"),
@@ -1310,12 +1310,12 @@ var ez = n(365971),
         (s.TIME_OVER_DEADLINE = "time_over_deadline"),
         (s.DEADLINE_INITIAL_TIME_REMAINING = "initial_time_of_deadline"),
         s),
-    eZ =
+    eX =
         (((a = {}).COUNT_DISPATCHES_LEFT_AFTER_YIELD = "count_dispatches_left_after_yield"),
         (a.COUNT_FLUSH_BEFORE_QUEUE_EMPTY = "count_flush_before_queue_empty"),
         (a.COUNT_INITIAL_DISPATCHS_LENGTH = "count_initial_dispatches_length"),
         a);
-let eX = Object.freeze({
+let eZ = Object.freeze({
         time_to_fire_idle_callback: null,
         time_to_flush_all_work: null,
         time_over_deadline: null,
@@ -1339,13 +1339,13 @@ let eX = Object.freeze({
         skip_idle_callback_due_to_backgrounded: 0,
     });
 class e1 {
-    _timeTracking = (0, l.cloneDeep)(eX);
+    _timeTracking = (0, l.cloneDeep)(eZ);
     _timingStats = (0, l.cloneDeep)(eQ);
     _measurements = (0, l.cloneDeep)(eJ);
     _eventCounts = (0, l.cloneDeep)(e0);
     _enabled = !1;
     reset() {
-        (this._timeTracking = (0, l.cloneDeep)(eX)),
+        (this._timeTracking = (0, l.cloneDeep)(eZ)),
             (this._timingStats = (0, l.cloneDeep)(eQ)),
             (this._measurements = (0, l.cloneDeep)(eJ)),
             (this._eventCounts = (0, l.cloneDeep)(e0));
@@ -1436,7 +1436,7 @@ class e5 {
         };
     }
 }
-let e7 = new h.A("DispatcherWorkScheduler");
+let e7 = new f.A("DispatcherWorkScheduler");
 class e8 {
     _flushTimeoutHandler = null;
     _flushIdleHandler = null;
@@ -1453,7 +1453,7 @@ class e8 {
             ((this._isBackgrounded = e),
             this._isBackgrounded &&
                 this.hasWorkScheduled &&
-                (this.telemetry.track(e$.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()));
+                (this.telemetry.track(ez.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()));
     }
     _queueIdleCallback() {
         throw Error("Not implemented");
@@ -1470,8 +1470,8 @@ class e8 {
             e7.log("Unable to fully flush work queue after max retries, skipping future deadline."),
                 this._workCallbackFn(),
                 this.clearWorkTimeout(),
-                this.telemetry.measure(eZ.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, this._consecutiveFlushesBeforeQueueEmpty),
-                this.telemetry.track(e$.EXCEEDED_MAX_CONSECUTIVE_FLUSHES),
+                this.telemetry.measure(eX.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, this._consecutiveFlushesBeforeQueueEmpty),
+                this.telemetry.track(ez.EXCEEDED_MAX_CONSECUTIVE_FLUSHES),
                 (this._consecutiveFlushesBeforeQueueEmpty = 0),
                 (this._nextDispatchTimeout = e4);
             return;
@@ -1484,7 +1484,7 @@ class e8 {
             n
                 ? (this._consecutiveFlushesBeforeQueueEmpty > 0 &&
                       this.telemetry.measure(
-                          eZ.COUNT_FLUSH_BEFORE_QUEUE_EMPTY,
+                          eX.COUNT_FLUSH_BEFORE_QUEUE_EMPTY,
                           parseInt(`${this._consecutiveFlushesBeforeQueueEmpty}`),
                       ),
                   (this._consecutiveFlushesBeforeQueueEmpty = 0),
@@ -1520,13 +1520,13 @@ class e8 {
         if (((this._workCallbackFn = e), !this.hasWorkScheduled)) {
             if (
                 (this.telemetry.time(eq.TIME_TO_QUEUE_EMPTY),
-                this._nextDispatchTimeout === e4 && this.telemetry.track(e$.LONGER_DISPATCH),
+                this._nextDispatchTimeout === e4 && this.telemetry.track(ez.LONGER_DISPATCH),
                 t)
             )
                 return void this._queueIdleCallback();
             this._flushTimeoutHandler = setTimeout(() => {
                 if ((P()(null != this._workCallbackFn, "Work callback should be set"), this._isBackgrounded))
-                    return this.telemetry.track(e$.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback();
+                    return this.telemetry.track(ez.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback();
                 this._queueIdleCallback();
             }, this._nextDispatchTimeout);
         }
@@ -1550,7 +1550,7 @@ class tn extends e8 {
         super(),
             _.h.subscribe("WINDOW_VISIBILITY_CHANGE", (e) => {
                 let { visible: t, windowId: n } = e;
-                n === (0, ez.Xg)() && this._trackAppBackgrounded(!t);
+                n === (0, e$.Xg)() && this._trackAppBackgrounded(!t);
             });
     }
     _queueIdleCallback() {
@@ -1559,7 +1559,7 @@ class tn extends e8 {
             this._scheduleRequestIdleCallback(
                 (e) => {
                     if (e?.didTimeout) {
-                        this.telemetry.track(e$.FIRED_DUE_TO_MAX_TIMEOUT),
+                        this.telemetry.track(ez.FIRED_DUE_TO_MAX_TIMEOUT),
                             this.telemetry.clearTime(eq.TIME_TO_FIRE_IDLE_CALLBACK),
                             this._processWorkCallback();
                         return;
@@ -1605,7 +1605,7 @@ class tn extends e8 {
                 (clearTimeout(this._flushIdleMaxTimeoutHandler), (this._flushIdleMaxTimeoutHandler = null));
     }
 }
-let ti = new h.A("GatewaySocket"),
+let ti = new f.A("GatewaySocket"),
     tr = new Set(["INITIAL_GUILD", "READY"]),
     ts = new Set(["READY", "INITIAL_GUILD"]),
     ta = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]),
@@ -1712,10 +1712,10 @@ class tu {
         if (0 === e.length) return !0;
         let n = "none",
             i = !1;
-        this.scheduler.telemetry.measure(eZ.COUNT_INITIAL_DISPATCHS_LENGTH, e.length);
+        this.scheduler.telemetry.measure(eX.COUNT_INITIAL_DISPATCHS_LENGTH, e.length);
         try {
             let r = [];
-            this.socket.connectionState === R.RESUMING && c.Ay.Emitter.pause(150);
+            this.socket.connectionState === O.RESUMING && c.Ay.Emitter.pause(150);
             let s = 0;
             if (
                 (c.Ay.Emitter.batched(() => {
@@ -1754,7 +1754,7 @@ class tu {
                 r.length > 0)
             )
                 return (
-                    this.scheduler.telemetry.measure(eZ.COUNT_DISPATCHES_LEFT_AFTER_YIELD, r.length),
+                    this.scheduler.telemetry.measure(eX.COUNT_DISPATCHES_LEFT_AFTER_YIELD, r.length),
                     this.queue.unshift(...r),
                     this.scheduler.requestWorkTimeout(this.flush, !0),
                     !1
@@ -1768,7 +1768,7 @@ class tu {
         var t, n;
         let { data: i, type: r, compressionAnalytics: s, preloadedData: a } = e,
             o = performance.now();
-        if (this.socket.connectionState === R.RESUMING) {
+        if (this.socket.connectionState === O.RESUMING) {
             let e = o - this.resumeAnalytics.lastUpdateTime;
             0 === this.resumeAnalytics.numEvents
                 ? (this.resumeAnalytics.initialWaitTime = e)
@@ -1794,8 +1794,8 @@ class tu {
                             experiments: c,
                             guild_experiments: d,
                             relationships: _,
-                            users: f,
-                            ...h
+                            users: h,
+                            ...f
                         } = e,
                         p = [],
                         E = [],
@@ -1821,14 +1821,14 @@ class tu {
                         }),
                         {
                             presences_size: JSON.stringify(i?.friends ?? []).length,
-                            users_size: JSON.stringify(f).length,
+                            users_size: JSON.stringify(h).length,
                             read_states_size: JSON.stringify(s).length,
                             private_channels_size: JSON.stringify(a).length,
                             user_settings_size: JSON.stringify(l ?? "").length + (u ?? "").length,
                             experiments_size: JSON.stringify(c ?? []).length + JSON.stringify(d ?? []).length,
                             user_guild_settings_size: JSON.stringify(o).length,
                             relationships_size: JSON.stringify(_).length,
-                            remaining_data_size: JSON.stringify(h ?? {}).length,
+                            remaining_data_size: JSON.stringify(f ?? {}).length,
                             guild_channels_size: JSON.stringify(p).length,
                             guild_members_size: JSON.stringify(r ?? []).length,
                             guild_presences_size: JSON.stringify(i?.guilds ?? []).length,
@@ -1869,8 +1869,8 @@ class tu {
                     } catch (e) {}
                     return n;
                 })(i)),
-                null != s && U.A.addDetail("payload_size(kb)", Math.round(s.uncompressed_byte_size / 1024)),
-                U.A.addDetail("server_time(ms)", e.identify_total_server_duration_ms ?? 0),
+                null != s && k.A.addDetail("payload_size(kb)", Math.round(s.uncompressed_byte_size / 1024)),
+                k.A.addDetail("server_time(ms)", e.identify_total_server_duration_ms ?? 0),
                 (n = {
                     ...s,
                     ...e,
@@ -1903,7 +1903,7 @@ class tu {
                     had_cache_at_startup: t.analytics.hadCacheAtStartup ?? !1,
                     used_cache_at_startup: t.analytics.usedCacheAtStartup ?? !1,
                 }),
-                X.A.attachReadyPayloadProperties(n),
+                Z.A.attachReadyPayloadProperties(n),
                 L.default.track(ej.HAw.READY_PAYLOAD_RECEIVED, n, { logEventProperties: !0 });
         } else
             "RESUMED" === r
@@ -1926,7 +1926,7 @@ class tu {
                   this.socket.handleResumeDispatched(),
                   (this.resumeAnalytics = eW()))
                 : this.getDispatchHandler(r)?.dispatch(i, r, a);
-        this.socket.connectionState === R.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - o);
+        this.socket.connectionState === O.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - o);
     }
     clear() {
         (this.paused = !1), (this.queue.length = 0);
@@ -1969,7 +1969,7 @@ var tc = n(143236),
         (o[(o.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
         (o[(o.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         o);
-class tf extends tc.EventEmitter {
+class th extends tc.EventEmitter {
     presenceUpdate(e, t, n, i) {
         this.send(t_.PRESENCE_UPDATE, { status: e, since: t, activities: n, afk: i });
     }
@@ -1986,7 +1986,7 @@ class tf extends tc.EventEmitter {
                 flags: u = 0,
             } = e,
             c = { guild_id: t, channel_id: n, self_mute: i, self_deaf: r, self_video: s, flags: u };
-        null != n && N.A.shouldIncludePreferredRegion() && ((c.preferred_region = a), (c.preferred_regions = o)),
+        null != n && y.A.shouldIncludePreferredRegion() && ((c.preferred_region = a), (c.preferred_regions = o)),
             null != l && (c.tracks = l?.map((e) => ({ type: e.type, rid: e.rid, quality: e.quality }))),
             this.send(t_.VOICE_STATE_UPDATE, c);
     }
@@ -2067,23 +2067,23 @@ class tf extends tc.EventEmitter {
         this.send(t_.REMOTE_COMMAND, { target_session_id: e, payload: t });
     }
 }
-let th = !1;
+let tf = !1;
 var tp = n(981133),
     tE = n(751124);
-let tm = new h.A("GatewaySocket"),
+let tm = new f.A("GatewaySocket"),
     tg = new eB();
 function tA() {}
 let tI = 30 * ee.A.Millis.SECOND,
     tT = 3 * ee.A.Millis.MINUTE,
     tS = +ee.A.Millis.MINUTE;
-function tN(e) {
+function ty(e) {
     return null == e ? 0 : "string" == typeof e ? e.length : e.byteLength;
 }
-let ty = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
-class tC extends tf {
+let tN = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
+class tv extends th {
     gatewayBackoff;
     handleIdentify;
-    dispatchExceptionBackoff = new k.A(1e3, tS);
+    dispatchExceptionBackoff = new U.A(1e3, tS);
     dispatchSuccessTimer = 0;
     connectionState_;
     webSocket;
@@ -2122,8 +2122,8 @@ class tC extends tf {
     constructor() {
         super(),
             (this.dispatcher = new tu(this)),
-            (this.gatewayBackoff = new k.A(1e3, 6e4)),
-            (this.connectionState_ = R.CLOSED),
+            (this.gatewayBackoff = new U.A(1e3, 6e4)),
+            (this.connectionState_ = O.CLOSED),
             (this.webSocket = null),
             (this.seq = 0),
             (this.sessionId = null),
@@ -2164,7 +2164,7 @@ class tC extends tf {
             (this.heartbeatQOSState.upcomingState = e);
     }
     handleUpdateTimeSpentSessionId(e, t, n) {
-        this.connectionState_ === R.SESSION_ESTABLISHED &&
+        this.connectionState_ === O.SESSION_ESTABLISHED &&
             (this.send(t_.UPDATE_TIME_SPENT_SESSION_ID, {
                 initialization_timestamp: e,
                 session_id: t,
@@ -2176,13 +2176,13 @@ class tC extends tf {
         var e, t, n;
         let i, r;
         if (!this.willReconnect()) return void tm.verbose("Skipping _connect because willReconnect is false");
-        if (th) return void tm.info("Skipping _connect because socket is paused");
-        (this.connectionState = R.CONNECTING), (this.nextReconnectIsImmediate = !1);
+        if (tf) return void tm.info("Skipping _connect because socket is paused");
+        (this.connectionState = O.CONNECTING), (this.nextReconnectIsImmediate = !1);
         let s = this.compressionHandler.getAlgorithm(),
             a = tg.getName(),
             o = this._getGatewayUrl(),
             l = window.GLOBAL_ENV.API_VERSION;
-        U.A.mark("\uD83C\uDF10", "Socket._connect"),
+        k.A.mark("\uD83C\uDF10", "Socket._connect"),
             tm.info(`[CONNECT] ${o}, encoding: ${a}, version: ${l}, compression: ${s ?? "none"}`),
             null !== this.webSocket &&
                 (tm.error("_connect called with already existing websocket"), this._cleanup((e) => e.close(4e3))),
@@ -2241,7 +2241,7 @@ class tC extends tf {
                     (this.webSocket = e), this.compressionHandler.bindWebSocket(e);
                 },
                 onOpen: (e) => {
-                    U.A.mark(`\u{1F310}`, `GatewaySocket.onOpen ${e}`);
+                    k.A.mark(`\u{1F310}`, `GatewaySocket.onOpen ${e}`);
                     let t = Date.now() - this.connectionStartTime;
                     tm.info(`[CONNECTED] ${u.toString()} in ${t} ms`),
                         (this.isFastConnect = e),
@@ -2254,7 +2254,7 @@ class tC extends tf {
                         let n = Date.now(),
                             { op: i, s: r, t: s, d: a } = tg.unpack(e);
                         if (
-                            (i !== t_.DISPATCH && U.A.mark(`\u{1F310}`, `GatewaySocket.onMessage ${i} ${t_[i]}`),
+                            (i !== t_.DISPATCH && k.A.mark(`\u{1F310}`, `GatewaySocket.onMessage ${i} ${t_[i]}`),
                             Q.default.isLoggingGatewayEvents)
                         ) {
                             let e = [i];
@@ -2263,10 +2263,10 @@ class tC extends tf {
                         let o = Date.now() - n;
                         switch (
                             ("READY" === s
-                                ? X.A.parseReady.set(n, o)
+                                ? Z.A.parseReady.set(n, o)
                                 : "READY_SUPPLEMENTAL" === s
-                                  ? X.A.parseReadySupplemental.set(n, o)
-                                  : o > 10 && U.A.mark("\uD83C\uDF10", "Parse " + s, o),
+                                  ? Z.A.parseReadySupplemental.set(n, o)
+                                  : o > 10 && k.A.mark("\uD83C\uDF10", "Parse " + s, o),
                             null != r && (this.seq = r),
                             i)
                         ) {
@@ -2292,7 +2292,7 @@ class tC extends tf {
                                     "READY" === s
                                         ? {
                                               compressed_byte_size: t,
-                                              uncompressed_byte_size: tN(e),
+                                              uncompressed_byte_size: ty(e),
                                               compression_algorithm: this.compressionHandler.getAlgorithm(),
                                               packing_algorithm: tg.getName(),
                                               unpack_duration_ms: o,
@@ -2316,7 +2316,7 @@ class tC extends tf {
                     (r = !1),
                     (n) => {
                         let s = n.data;
-                        null != n.raw_length ? (i += n.raw_length) : (i += tN(s));
+                        null != n.raw_length ? (i += n.raw_length) : (i += ty(s));
                         try {
                             e.feed(s);
                         } catch (e) {
@@ -2342,7 +2342,7 @@ class tC extends tf {
     _handleReconnect() {
         tm.verbose("[RECONNECT] gateway requested I reconnect."),
             this._cleanup((e) => e.close(4e3)),
-            (this.connectionState = R.WILL_RECONNECT),
+            (this.connectionState = O.WILL_RECONNECT),
             this._connect();
     }
     _handleInvalidSession(e) {
@@ -2354,22 +2354,22 @@ class tC extends tf {
             let t = e.session_id;
             this.sessionId = t;
             let n = eY(e);
-            U.A.setServerTrace(n),
+            k.A.setServerTrace(n),
                 tm.info(`[READY] took ${i}ms, as ${t}`),
                 tm.verbose(`${n}`),
-                (this.connectionState = R.SESSION_ESTABLISHED),
+                (this.connectionState = O.SESSION_ESTABLISHED),
                 this.gatewayBackoff.succeed(),
                 (this.iosGoingAwayEventCount = 0),
                 this.setResumeUrl(e.resume_gateway_url);
         } else
             "READY_SUPPLEMENTAL" === t
                 ? (tm.info(`[READY_SUPPLEMENTAL] took ${i}ms`),
-                  (this.connectionState = R.SESSION_ESTABLISHED),
+                  (this.connectionState = O.SESSION_ESTABLISHED),
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0))
                 : "RESUMED" === t &&
                   (tm.verbose(eY(e)),
-                  (this.connectionState = R.SESSION_ESTABLISHED),
+                  (this.connectionState = O.SESSION_ESTABLISHED),
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0));
         this.dispatcher.receiveDispatch(e, t, n);
@@ -2384,7 +2384,7 @@ class tC extends tf {
         (this.didForceClearGuildHashes = !1), (this.hasConnectedOnce = !0);
     }
     _getGatewayUrl() {
-        return null != this.resumeUrl ? this.resumeUrl : ty;
+        return null != this.resumeUrl ? this.resumeUrl : tN;
     }
     _handleHeartbeatReceive() {
         this._sendHeartbeat(),
@@ -2402,20 +2402,20 @@ class tC extends tf {
                 tm.verbose("Expedited heartbeat succeeded"));
     }
     _handleHeartbeatTimeout() {
-        this._cleanup((e) => e.close(4e3)), (this.connectionState = R.WILL_RECONNECT);
+        this._cleanup((e) => e.close(4e3)), (this.connectionState = O.WILL_RECONNECT);
         let e = this.gatewayBackoff.fail(() => this._connect());
         tm.warn(`[ACK TIMEOUT] reconnecting in ${(e / 1e3).toFixed(2)} seconds.`);
     }
     _handleClose(e, t, n) {
         if (((e = e || !1), this._cleanup(), this.emit("close", { code: t, reason: n }), 4004 === t))
             return (
-                (this.connectionState = R.CLOSED),
+                (this.connectionState = O.CLOSED),
                 tm.warn("[WS CLOSED] because of authentication failure, marking as closed."),
                 this._reset(e, t, n)
             );
         if (
             (this._tryDetectInvalidIOSToken(t, n, e),
-            (this.connectionState = R.WILL_RECONNECT),
+            (this.connectionState = O.WILL_RECONNECT),
             this.nextReconnectIsImmediate)
         )
             tm.info(`[WS CLOSED] (${e.toString()}, ${t}, ${n}) retrying immediately.`), this._connect();
@@ -2426,7 +2426,7 @@ class tC extends tf {
         }
     }
     _tryDetectInvalidIOSToken(e, t, n) {
-        (0, O.isIOS)() &&
+        (0, R.isIOS)() &&
             null != this.token &&
             1001 === e &&
             "Stream end encountered" === t &&
@@ -2440,7 +2440,7 @@ class tC extends tf {
                     (e) => {
                         let { status: t } = e;
                         401 === t &&
-                            ((this.connectionState = R.CLOSED),
+                            ((this.connectionState = O.CLOSED),
                             tm.warn("[WS CLOSED] because of manual authentication failure, marking as closed."),
                             this._reset(n, 4004, "invalid token manually detected")),
                             L.default.track(ej.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
@@ -2498,7 +2498,7 @@ class tC extends tf {
             (this.compressionHandler = ed(tg));
     }
     _doResume() {
-        (this.connectionState = R.RESUMING),
+        (this.connectionState = O.RESUMING),
             (this.dispatcher.resumeAnalytics = eW(Date.now() - this.connectionStartTime)),
             tm.info(`[RESUME] resuming session ${this.sessionId ?? ""}, seq: ${this.seq}`),
             this.send(t_.RESUME, { token: this.token, session_id: this.sessionId, seq: this.seq }, !1);
@@ -2507,13 +2507,13 @@ class tC extends tf {
         (this.seq = 0), (this.sessionId = null);
         let e = this.handleIdentify();
         if (null === e) return void this._handleClose(!0, 4004, "No connection info provided");
-        this.connectionState = R.IDENTIFYING;
+        this.connectionState = O.IDENTIFYING;
         let t = Date.now();
         this.identifyStartTime = t;
         let [n, i, r] = await Promise.all([
                 (0, q.O)() ? K.getCommittedVersions() : {},
-                (0, q.O)() ? $.A.getCommittedVersions() : {},
-                !!(0, q.O)() && z.A.canUseGuildVersions(),
+                (0, q.O)() ? z.A.getCommittedVersions() : {},
+                !!(0, q.O)() && $.A.canUseGuildVersions(),
             ]),
             s = r
                 ? {
@@ -2527,7 +2527,7 @@ class tC extends tf {
                       initial_guild_id: i.initial_guild_id,
                   }
                 : { guild_versions: {} };
-        if (this.connectionState !== R.IDENTIFYING || this.identifyStartTime !== t)
+        if (this.connectionState !== O.IDENTIFYING || this.identifyStartTime !== t)
             return void tm.warn("Skipping identify because connectionState or identifyStartTime has changed");
         let { token: a, properties: o = {}, presence: l } = e;
         (this.token = a), tm.verbose("[IDENTIFY]");
@@ -2555,7 +2555,7 @@ class tC extends tf {
         if (null === e) return void this._handleClose(!0, 4004, "No connection info provided");
         let { token: t } = e;
         (this.token = t),
-            (this.connectionState = R.IDENTIFYING),
+            (this.connectionState = O.IDENTIFYING),
             (this.identifyStartTime = Date.now()),
             (this.identifyCount += 1),
             tm.verbose("[IDENTIFY, fast-connect]"),
@@ -2588,25 +2588,25 @@ class tC extends tf {
         return tm;
     }
     willReconnect() {
-        return this.connectionState === R.WILL_RECONNECT;
+        return this.connectionState === O.WILL_RECONNECT;
     }
     isClosed() {
-        return this.connectionState === R.CLOSED;
+        return this.connectionState === O.CLOSED;
     }
     isSessionEstablished() {
-        return this.connectionState === R.SESSION_ESTABLISHED || this.connectionState === R.RESUMING;
+        return this.connectionState === O.SESSION_ESTABLISHED || this.connectionState === O.RESUMING;
     }
     isConnected() {
         return (
-            this.connectionState === R.IDENTIFYING ||
-            this.connectionState === R.RESUMING ||
-            this.connectionState === R.SESSION_ESTABLISHED
+            this.connectionState === O.IDENTIFYING ||
+            this.connectionState === O.RESUMING ||
+            this.connectionState === O.SESSION_ESTABLISHED
         );
     }
     connect() {
         return this.isClosed()
             ? (tm.verbose(".connect() called, new state is WILL_RECONNECT"),
-              (this.connectionState = R.WILL_RECONNECT),
+              (this.connectionState = O.WILL_RECONNECT),
               this._connect(),
               !0)
             : (tm.error("Cannot start a new connection, connection state is not closed"), !1);
@@ -2615,7 +2615,7 @@ class tC extends tf {
         let { action: t, error: n, metricAction: i } = e;
         tm.error(`resetSocketAndClearCacheOnError during ${t}: ${n.message}`, n.stack);
         let r = (0, F.b)();
-        Z.A.increment({ name: G.K.SOCKET_CRASHED, tags: [`action:${i ?? t}`, `modded_client:${r}`] }, !0),
+        X.A.increment({ name: G.K.SOCKET_CRASHED, tags: [`action:${i ?? t}`, `modded_client:${r}`] }, !0),
             !1 !== e.sentry && et.A.captureException(n, { tags: { socketCrashedAction: t } }),
             L.default.track(ej.HAw.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
@@ -2626,7 +2626,7 @@ class tC extends tf {
             this._cleanup((e) => e.close()),
             this._reset(!0, 1e3, "Resetting socket due to error."),
             this.dispatcher.clear(),
-            (this.connectionState = R.WILL_RECONNECT),
+            (this.connectionState = O.WILL_RECONNECT),
             this.dispatchExceptionBackoff.cancel(),
             0 === this.dispatchExceptionBackoff._fails
                 ? (tm.verbose("Triggering fast reconnect"),
@@ -2649,7 +2649,7 @@ class tC extends tf {
         tm.info(`Closing connection, current state is ${this.connectionState}`);
         let t = e ? 4e3 : void 0;
         this._cleanup((e) => e.close(t)),
-            (this.connectionState = R.CLOSED),
+            (this.connectionState = O.CLOSED),
             e ||
                 ((this.sessionId = null),
                 (this.token = null),
@@ -2693,7 +2693,7 @@ class tC extends tf {
             (this.nextReconnectIsImmediate = !0),
             this.willReconnect()
                 ? this._connect()
-                : t && this.connectionState !== R.SESSION_ESTABLISHED && this._handleClose(!0, 0, e);
+                : t && this.connectionState !== O.SESSION_ESTABLISHED && this._handleClose(!0, 0, e);
     }
     send = (e, t, n) => {
         Q.default.isLoggingGatewayEvents && tm.verboseDangerously("~>", e, t_[e], t);
@@ -2705,9 +2705,9 @@ class tC extends tf {
         else tm.warn(`Attempted to send while not being in a connected state opcode: ${e}`);
     };
 }
-var tv = n(812729),
-    tO = n.n(tv);
-class tR {
+var tC = n(812729),
+    tR = n.n(tC);
+class tO {
     alwaysUpdateState;
     dirty = !1;
     state = this.getInitialState();
@@ -2730,8 +2730,8 @@ class tR {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
             t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = this.getNextState({ ...this.state, ...e });
-        if (t) this.dirty = !tO()(n, this.getInitialState());
-        else for (let e of Object.keys(n)) this.dirty = this.dirty || !tO()(this.state[e], n[e]);
+        if (t) this.dirty = !tR()(n, this.getInitialState());
+        else for (let e of Object.keys(n)) this.dirty = this.dirty || !tR()(this.state[e], n[e]);
         let i = this.dirty && this.shouldCommit();
         return (
             (i || this.alwaysUpdateState) && (this.state = n),
@@ -2742,17 +2742,17 @@ class tR {
         (this.dirty = !1), this.didCommit(this.state);
     }
 }
-class tb extends tR {
+class tb extends tO {
     socket;
     switchingAccounts = !1;
     constructor(e) {
         super(!1), (this.socket = e);
     }
     getInitialState() {
-        return C.A.getLocalPresence();
+        return v.A.getLocalPresence();
     }
     getNextState() {
-        return C.A.getLocalPresence();
+        return v.A.getLocalPresence();
     }
     shouldCommit() {
         return this.socket.isSessionEstablished();
@@ -2786,10 +2786,10 @@ var tD = n(665260),
     tM = n(885386),
     tP = n(616356),
     tx = n(469177);
-let tU = new h.A("ConnectionStore"),
-    tk = new tC(),
-    tG = new tb(tk),
-    tF = new (class extends tR {
+let tk = new f.A("ConnectionStore"),
+    tU = new tv(),
+    tG = new tb(tU),
+    tF = new (class extends tO {
         socket;
         constructor(e) {
             super(), (this.socket = e);
@@ -2832,8 +2832,8 @@ let tU = new h.A("ConnectionStore"),
                 selfMute: T.Ay.isSelfMute(),
                 selfDeaf: T.Ay.isSelfDeaf(),
                 selfVideo: T.Ay.isVideoEnabled(),
-                preferredRegion: N.A.getPreferredRegion(),
-                preferredRegions: N.A.getPreferredRegions(),
+                preferredRegion: y.A.getPreferredRegion(),
+                preferredRegions: y.A.getPreferredRegions(),
                 videoStreamParameters: T.Ay.getVideoStreamParameters(),
                 flags: this.computeVoiceFlags(),
             };
@@ -2876,10 +2876,10 @@ let tU = new h.A("ConnectionStore"),
                       flags: u,
                   });
         }
-    })(tk);
-(tk.handleIdentify = () => {
+    })(tU);
+(tU.handleIdentify = () => {
     let e = g.default.getToken();
-    if ((tU.verbose("handleIdentify called", { hasToken: null != e }), null == e)) return null;
+    if ((tk.verbose("handleIdentify called", { hasToken: null != e }), null == e)) return null;
     let t = D.A.getState(),
         n = g.default.getInstallationForTracking();
     return {
@@ -2894,21 +2894,21 @@ let tU = new h.A("ConnectionStore"),
         presence: tG.getInitialState(),
     };
 }),
-    (0, O.isDesktop)() &&
+    (0, R.isDesktop)() &&
         b.A.powerMonitor.on("resume", () => {
-            tk.expeditedHeartbeat(5e3, "power monitor resumed");
+            tU.expeditedHeartbeat(5e3, "power monitor resumed");
         }),
     w.A.addOfflineCallback(() => {
-        tk.networkStateChange(15e3, "network detected offline.", !1);
+        tU.networkStateChange(15e3, "network detected offline.", !1);
     }),
     w.A.addOnlineCallback(() => {
-        tk.networkStateChange(5e3, "network detected online.");
+        tU.networkStateChange(5e3, "network detected online.");
     }),
-    tk.on("disconnect", (e) => {
+    tU.on("disconnect", (e) => {
         let { code: t, reason: n } = e;
         _.h.dispatch({ type: "CONNECTION_CLOSED", code: t, reason: n });
     }),
-    tk.on("close", (e) => {
+    tU.on("close", (e) => {
         let { code: t, reason: n } = e;
         _.h.dispatch({ type: "CONNECTION_INTERRUPTED", code: t, reason: n });
     }),
@@ -2920,16 +2920,16 @@ var tV = n(73825),
     tY = n(945096),
     tW = n(692744),
     tK = n(814890),
-    tz = n(505527),
-    t$ = n(853811),
+    t$ = n(505527),
+    tz = n(853811),
     tq = n(381438);
-let tZ = (0, eM.mj)({
+let tX = (0, eM.mj)({
     kind: "user",
     name: "2026-02-content-classification-presence-filter",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var tX = n(756377),
+var tZ = n(756377),
     tQ = n(736130),
     tJ = n(761821),
     t0 = n(843010),
@@ -3098,7 +3098,7 @@ function no(e) {
     if (null != e) for (let n of e) null != n.most_recent_message && t.push(n.most_recent_message);
     return t;
 }
-let nl = new h.A("ConnectionStore");
+let nl = new f.A("ConnectionStore");
 function nu(e) {
     return e.map((e) => {
         let t = e.timestamps?.end,
@@ -3109,7 +3109,7 @@ function nu(e) {
     });
 }
 let nc = new eK(
-        tk,
+        tU,
         (e, t) => {
             e = e ?? { type: "CHANNEL_UPDATES", channels: [] };
             let n = (0, t1.UE)(t),
@@ -3120,7 +3120,7 @@ let nc = new eK(
         (e) => "CHANNEL_UPDATE" !== e,
     ),
     nd = new eK(
-        tk,
+        tU,
         (e, t) => (
             (e = null == e ? { type: "SOUNDBOARD_SOUNDS_RECEIVED", updates: [] } : e).updates.push({
                 guildId: t.guild_id,
@@ -3140,21 +3140,21 @@ let nc = new eK(
         (e) => "SOUNDBOARD_SOUNDS" !== e,
     ),
     n_ = new eK(
-        tk,
+        tU,
         (e, t) => ((e = e ?? { type: "GUILD_MEMBERS_CHUNK_BATCH", chunks: [] }).chunks.push(t), e),
         (e) => "GUILD_MEMBERS_CHUNK" !== e,
     ),
-    nf = new eK(
-        tk,
+    nh = new eK(
+        tU,
         (e, t) => ((e = null == e ? { type: "PRESENCE_UPDATES", updates: [] } : e).updates.push(t), e),
         (e) => "PRESENCE_UPDATE" !== e && "GUILD_MEMBERS_CHUNK" !== e,
     ),
-    nh = {};
+    nf = {};
 function np(e, t) {
-    for (let n of e) nh[n] = { preload: () => null, dispatch: t };
+    for (let n of e) nf[n] = { preload: () => null, dispatch: t };
 }
 function nE(e, t, n) {
-    for (let i of e) nh[i] = { preload: t, dispatch: n };
+    for (let i of e) nf[i] = { preload: t, dispatch: n };
 }
 function nm(e) {
     let t = [];
@@ -3182,7 +3182,7 @@ function nm(e) {
 function ng(e) {
     _.h.dispatch(e).catch((t) => {
         nl.error(`dispatchOrResetSocket error during ${e.type}:`, t),
-            tk.resetSocketOnDispatchError({ error: t, action: e.type });
+            tU.resetSocketOnDispatchError({ error: t, action: e.type });
     });
 }
 function nA(e, t, n) {
@@ -3196,12 +3196,12 @@ function nA(e, t, n) {
             pending: c,
             joined_at: d,
             communication_disabled_until: _,
-            unusual_dm_activity_until: f,
-            collectibles: h,
+            unusual_dm_activity_until: h,
+            collectibles: f,
             display_name_styles: p,
         } = n,
         E = t6.Ay.getMember(e, t.id),
-        m = (0, tj.t)(h),
+        m = (0, tj.t)(f),
         g = (0, tY.mT)(p);
     (null != E &&
         E.nick === r &&
@@ -3213,7 +3213,7 @@ function nA(e, t, n) {
         E.joinedAt === d &&
         E.communicationDisabledUntil === _ &&
         E.flags === o &&
-        (E.unusualDMActivityUntil ?? null) === (f ?? null) &&
+        (E.unusualDMActivityUntil ?? null) === (h ?? null) &&
         u().isEqual(E.collectibles ?? null, m ?? null) &&
         u().isEqual(E.displayNameStyles ?? null, g ?? null)) ||
         ng({
@@ -3228,7 +3228,7 @@ function nA(e, t, n) {
             isPending: c,
             joinedAt: d,
             communicationDisabledUntil: _,
-            unusualDMActivityUntil: f,
+            unusualDMActivityUntil: h,
             flags: o,
             collectibles: m,
             displayNameStyles: g,
@@ -3257,11 +3257,11 @@ function nT(e) {
     }));
 }
 function nS(e, t) {
-    return e.map((e) => nN(e, t));
+    return e.map((e) => ny(e, t));
 }
-function nN(e, t) {
+function ny(e, t) {
     let n = (function (e, t) {
-        let { enabled: n } = tZ.getConfig({ location: "presence_filtering" });
+        let { enabled: n } = tX.getConfig({ location: "presence_filtering" });
         if (!n) return { activities: e, hiddenActivities: t };
         let i = [],
             r = [];
@@ -3270,7 +3270,7 @@ function nN(e, t) {
                 t.content_classification?.loaded
                     ? null == t.content_classification.data
                         ? 0
-                        : (0, t$.U1)({ type: t$.fS.MINIMAL, data: t.content_classification.data }) !== tq.Y.EVERYONE
+                        : (0, tz.U1)({ type: tz.fS.MINIMAL, data: t.content_classification.data }) !== tq.Y.EVERYONE
                     : 1
             )
                 ? r.push(t)
@@ -3289,18 +3289,18 @@ function nN(e, t) {
         processedAtTimestamp: e.processed_at_timestamp,
     };
 }
-function ny(e) {
-    nf.add(e);
+function nN(e) {
+    nh.add(e);
 }
 nE(
     ["INITIAL_GUILD"],
     (e) => ("full" === e.data_mode ? null : I.D.loadGuildIds([e.id])),
     (e) => {
-        X.A.initialGuild.measure(() => {
+        Z.A.initialGuild.measure(() => {
             c.Ay.Emitter.batched(() => {
                 var t;
                 let n,
-                    i = ((t = tk.identifyStartTime), (n = na(e)), (nt = { guild: e, identifyTime: t }), n);
+                    i = ((t = tU.identifyStartTime), (n = na(e)), (nt = { guild: e, identifyTime: t }), n);
                 null != eH.default.getCurrentUser() &&
                     (ng({ type: "GUILD_CREATE", guild: i }),
                     ng({
@@ -3328,9 +3328,9 @@ nE(
     },
 ),
     np(["READY_SUPPLEMENTAL"], (e) => {
-        X.A.readySupplemental.measure(() => {
+        Z.A.readySupplemental.measure(() => {
             c.Ay.Emitter.batched(() => {
-                let t = (e = X.A.hydrateReadySupplemental.measure(() =>
+                let t = (e = Z.A.hydrateReadySupplemental.measure(() =>
                     (function (e, t) {
                         let { guilds: n, merged_members: i, merged_presences: r, ...s } = e,
                             a = nr(nn, r?.friends),
@@ -3349,14 +3349,14 @@ nE(
                                 unavailable: !1,
                             }));
                         return null != l && o.push(l), (nn = {}), { ...s, presences: a, guilds: o };
-                    })(e, tk.identifyStartTime),
+                    })(e, tU.identifyStartTime),
                 )).guilds.filter((e) => !0 !== e.unavailable);
                 t.forEach((e) => {
                     e.presences = nS(e.presences || [], e.id);
                 });
                 let n = nS(e.presences ?? [], void 0),
                     i = (e.lazy_private_channels ?? []).map((e) => (0, t1.UE)(e));
-                X.A.dispatchReadySupplemental.measure(() => {
+                Z.A.dispatchReadySupplemental.measure(() => {
                     ng({ type: "CONNECTION_OPEN_SUPPLEMENTAL", guilds: t, presences: n, lazyPrivateChannels: i });
                 });
                 let r = [];
@@ -3397,7 +3397,7 @@ nE(
                     Promise.all([
                         n,
                         (0, q.O)() ? t9.A.getGuildIds() : Promise.resolve(new Set()),
-                        null != t ? z.A.okAsync(t) : Promise.resolve(!1),
+                        null != t ? $.A.okAsync(t) : Promise.resolve(!1),
                     ]).then((e) => {
                         let [t, n, i] = e;
                         return { guildVersions: t, guildChannels: n, databaseOk: i };
@@ -3420,9 +3420,9 @@ nE(
         (e, t, n) => {
             e.user.bot
                 ? ng({ type: "LOGOUT" })
-                : X.A.ready.measure(() => {
+                : Z.A.ready.measure(() => {
                       c.Ay.Emitter.batched(() => {
-                          let t = (e = X.A.hydrateReady.measure(() =>
+                          let t = (e = Z.A.hydrateReady.measure(() =>
                                   (function (e, t, n) {
                                       let { users: i, private_channels: r, merged_members: s, guilds: a, ...o } = e;
                                       null != j.A.database() &&
@@ -3452,7 +3452,7 @@ nE(
                                           null != c && l.push(c),
                                           { ...o, users: i, presences: [], guilds: l, private_channels: r ?? [] }
                                       );
-                                  })(e, tk.identifyStartTime, n),
+                                  })(e, tU.identifyStartTime, n),
                               )).private_channels.map((e) => (0, t1.UE)(e)),
                               i = e.guilds
                                   .filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted)
@@ -3460,7 +3460,7 @@ nE(
                               r = e.guilds.filter((e) => !0 !== e.unavailable),
                               s = e.guilds.filter((e) => !0 === e.geo_restricted),
                               a = null == e.user_settings_proto ? void 0 : (0, tJ.Gd)(e.user_settings_proto);
-                          X.A.dispatchReady.measure(() => {
+                          Z.A.dispatchReady.measure(() => {
                               ng({
                                   type: "CONNECTION_OPEN",
                                   sessionId: e.session_id,
@@ -3530,7 +3530,7 @@ nE(
     }),
     np(["TYPING_START"], (e) => {
         null != e.member && nA(e.guild_id, e.member.user, e.member),
-            ng({ type: "TYPING_START", channelId: e.channel_id, userId: e.user_id });
+            ng({ type: "TYPING_START", guildId: e.guild_id, channelId: e.channel_id, userId: e.user_id });
     }),
     np(["GUILD_RING_START"], (e) => {
         ng({ type: "GUILD_RING_START", ongoingRings: e.ongoing_rings, channelId: e.channel_id, guildId: e.guild_id });
@@ -3783,14 +3783,14 @@ nE(
     np(["GUILD_MEMBERS_CHUNK"], (e) => {
         c.Ay.Emitter.batched(() => {
             n_.add({ guildId: e.guild_id, members: e.members, notFound: e.not_found }),
-                null != e.presences && nS(e.presences, e.guild_id).forEach(ny),
+                null != e.presences && nS(e.presences, e.guild_id).forEach(nN),
                 eK.flush("GUILD_MEMBERS_CHUNK");
         });
     }),
     np(["THREAD_MEMBER_LIST_UPDATE"], (e) => {
         c.Ay.Emitter.batched(() => {
             ng({ type: "THREAD_MEMBER_LIST_UPDATE", guildId: e.guild_id, threadId: e.thread_id, members: e.members }),
-                null != e.presences && nS(e.presences, e.guild_id).forEach(ny),
+                null != e.presences && nS(e.presences, e.guild_id).forEach(nN),
                 eK.flush();
         });
     }),
@@ -3931,7 +3931,7 @@ nE(
         ng({ type: "GAME_RELATIONSHIP_REMOVE", userId: e.id, applicationId: e.application_id });
     }),
     np(["PRESENCE_UPDATE"], (e) => {
-        ny(nN(e, e.guild_id));
+        nN(ny(e, e.guild_id));
     }),
     np(["PRESENCES_REPLACE"], (e) => {
         ng({ type: "PRESENCES_REPLACE", presences: nS(e, void 0) });
@@ -4009,10 +4009,10 @@ nE(
         ng({ type: "RECENT_MENTION_DELETE", id: e.message_id });
     }),
     np(["SAVED_MESSAGE_CREATE"], (e) => {
-        ng({ type: "SAVED_MESSAGE_CREATE", savedMessage: (0, tX.iz)(e) });
+        ng({ type: "SAVED_MESSAGE_CREATE", savedMessage: (0, tZ.iz)(e) });
     }),
     np(["SAVED_MESSAGE_DELETE"], (e) => {
-        ng({ type: "SAVED_MESSAGE_DELETE", savedMessageData: (0, tX.x6)(e) });
+        ng({ type: "SAVED_MESSAGE_DELETE", savedMessageData: (0, tZ.x6)(e) });
     }),
     np(["FRIEND_SUGGESTION_CREATE"], (e) => {
         ng({ type: "FRIEND_SUGGESTION_CREATE", suggestion: e });
@@ -4042,7 +4042,7 @@ nE(
             messageId: e.message_id,
             userId: e.user_id,
             emoji: { id: e.answer_id, name: "" },
-            reactionType: tz.v.VOTE,
+            reactionType: t$.v.VOTE,
         });
     }),
     np(["MESSAGE_POLL_VOTE_ADD_MANY"], (e) => {
@@ -4050,7 +4050,7 @@ nE(
             type: "MESSAGE_REACTION_ADD_MANY",
             channelId: e.channel_id,
             messageId: e.message_id,
-            reactions: e.votes.map((e) => ({ ...e, emoji: { id: e.answer_id, name: "" }, reactionType: tz.v.VOTE })),
+            reactions: e.votes.map((e) => ({ ...e, emoji: { id: e.answer_id, name: "" }, reactionType: t$.v.VOTE })),
         });
     }),
     np(["MESSAGE_REACTION_REMOVE_ALL"], (e) => {
@@ -4127,7 +4127,7 @@ nE(
                 let { member: n } = t;
                 if ((nA(e.guild_id, n.user, n), null == n.presence)) return;
                 let { presence: i } = n;
-                ny(nN(i, e.guild_id));
+                nN(ny(i, e.guild_id));
             };
             e.ops.forEach((e) => {
                 let { op: n, items: i, item: r } = e;
@@ -4617,21 +4617,21 @@ nE(
     np(["GUILD_OFFICIAL_GAME_APPLICATIONS_UPDATE"], (e, t) => {
         ng({ type: t, gameApplicationIds: e.game_application_ids, guildId: e.guild_id });
     });
-var nC = n(355097);
-let nv = window.DiscordNative;
-tk.dispatcher.getDispatchHandler = function (e) {
-    return nh[e];
+var nv = n(355097);
+let nC = window.DiscordNative;
+tU.dispatcher.getDispatchHandler = function (e) {
+    return nf[e];
 };
-let nO = new h.A("ConnectionStore"),
-    nR = 0,
+let nR = new f.A("ConnectionStore"),
+    nO = 0,
     nb = null,
     nD = !0,
     nL = null,
     nw = null;
 async function nM(e) {
-    (nR = Date.now()), (nb = e.sessionId), tG.handleConnectionOpen();
+    (nO = Date.now()), (nb = e.sessionId), tG.handleConnectionOpen();
     let t = {},
-        n = y.A.getVoiceChannelId();
+        n = N.A.getVoiceChannelId();
     if (null != n) {
         let e = d.w.get("discord_watchdog_restart_timestamp"),
             i = null != e && Date.now() - parseInt(e, 10) < 6e4;
@@ -4639,12 +4639,12 @@ async function nM(e) {
             (d.w.remove("discord_watchdog_restart_timestamp"),
             window?.performance?.getEntriesByType?.("navigation")?.[0]?.type === "reload" ||
                 i ||
-                (await nv?.processUtils?.getLastCrash?.())?.rendererCrashReason != null ||
+                (await nC?.processUtils?.getLastCrash?.())?.rendererCrashReason != null ||
                 !nD)
         ) {
             let e = I.A.getChannel(n);
             null != e && ((t = { guildId: e.getGuildId(), channelId: n }), (0, E.CX)(n));
-        } else S.A.setLastSessionVoiceChannelId(null != n ? n : null), f.default.selectVoiceChannel(null);
+        } else S.A.setLastSessionVoiceChannelId(null != n ? n : null), h.default.selectVoiceChannel(null);
     }
     tF.update(t, !0), (nD = !1), (nw = null);
 }
@@ -4654,52 +4654,52 @@ function nP() {
 function nx() {
     return tF.update(), !1;
 }
-function nU() {
+function nk() {
     return tG.update(), !1;
 }
-function nk(e) {
-    tk.isSessionEstablished() && tk.streamDelete(e);
+function nU(e) {
+    tU.isSessionEstablished() && tU.streamDelete(e);
 }
 class nG extends c.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
-        this.waitFor(g.default, A.A, I.A, T.Ay, S.A, N.A, y.A, C.A, v.A, m.A),
+        this.waitFor(g.default, A.A, I.A, T.Ay, S.A, y.A, N.A, v.A, C.A, m.A),
             this.syncWith([T.Ay], nx),
-            this.syncWith([C.A], nU);
+            this.syncWith([v.A], nk);
     }
     getSocket() {
-        return tk;
+        return tU;
     }
     isTryingToConnect() {
-        return !tk.isClosed();
+        return !tU.isClosed();
     }
     isConnected() {
-        return tk.isSessionEstablished();
+        return tU.isSessionEstablished();
     }
     isConnectedOrOverlay() {
-        return tk.isSessionEstablished() || __OVERLAY__;
+        return tU.isSessionEstablished() || __OVERLAY__;
     }
     lastTimeConnectedChanged() {
-        return nR;
+        return nO;
     }
 }
 let nF = new nG(_.h, {
     START_SESSION: function () {
-        return tk.isClosed()
-            ? (nO.verbose("Socket is reconnecting because of starting new session"), tk.connect())
-            : (nO.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
+        return tU.isClosed()
+            ? (nR.verbose("Socket is reconnecting because of starting new session"), tU.connect())
+            : (nR.verbose("Socket is not reconnecting during a new session because it is not closed"), !1);
     },
     LOGIN_SUCCESS: function () {
         return (
-            nO.verbose("session refresh dispatched", { isEstablished: tk.isSessionEstablished() }),
-            !!tk.isSessionEstablished() && (tk.close(), tk.connect())
+            nR.verbose("session refresh dispatched", { isEstablished: tU.isSessionEstablished() }),
+            !!tU.isSessionEstablished() && (tU.close(), tU.connect())
         );
     },
     LOGOUT: function (e) {
-        e.isSwitchingAccount && tG.handleAccountSwitch(), nO.verbose("Closing socket because of logout"), tk.close();
+        e.isSwitchingAccount && tG.handleAccountSwitch(), nR.verbose("Closing socket because of logout"), tU.close();
     },
     CLEAR_CACHES: function (e) {
-        return e.resetSocket && (tk.close(), tk.dispatcher.clear(), tk.connect()), !1;
+        return e.resetSocket && (tU.close(), tU.dispatcher.clear(), tU.connect()), !1;
     },
     CONNECTION_OPEN: (e) => {
         nM(e);
@@ -4708,19 +4708,19 @@ let nF = new nG(_.h, {
         nw = null;
     },
     CONNECTION_CLOSED: function () {
-        nO.verbose("connection closed dispatched"), (nR = Date.now());
+        nR.verbose("connection closed dispatched"), (nO = Date.now());
     },
     RTC_CONNECTION_STATE: function (e) {
         if (e.state !== ej.S7L.DISCONNECTED) return !1;
-        e.willReconnect && (null != e.streamKey ? tk.streamPing(e.streamKey) : tk.voiceServerPing());
+        e.willReconnect && (null != e.streamKey ? tU.streamPing(e.streamKey) : tU.voiceServerPing());
     },
     VOICE_CHANNEL_SELECT: function (e) {
         return (
             tF.update({ guildId: e.guildId, channelId: e.channelId }),
             (nw = e.lockVoiceStateForResume && null != e.channelId ? e.channelId : null),
-            (0, O.isIOS)() &&
+            (0, R.isIOS)() &&
                 nL === ej.g6G.BACKGROUND &&
-                (null == e.channelId ? tk.close(!0) : tk.isClosed() && ((th = !1), tk.connect())),
+                (null == e.channelId ? tU.close(!0) : tU.isClosed() && ((tf = !1), tU.connect())),
             !1
         );
     },
@@ -4730,7 +4730,7 @@ let nF = new nG(_.h, {
             if (g.default.getId() !== t.userId) return e;
             if (t.sessionId === nb) {
                 if (null != nw)
-                    return nO.verbose("Ignoring voice state for own session due to VSU lock on channel:", nw), e;
+                    return nR.verbose("Ignoring voice state for own session due to VSU lock on channel:", nw), e;
                 tF.setState({ guildId: t.guildId, channelId: t.channelId });
             } else {
                 if (t.guildId !== tF.guildId) return e;
@@ -4755,51 +4755,51 @@ let nF = new nG(_.h, {
     },
     APP_STATE_UPDATE: function (e) {
         return (
-            (0, O.isIOS)()
+            (0, R.isIOS)()
                 ? (g.default.isAuthenticated() &&
                       (nL === ej.g6G.INACTIVE && e.state === ej.g6G.BACKGROUND && null == tF.channelId
-                          ? tk.close(!0)
+                          ? tU.close(!0)
                           : nL === ej.g6G.BACKGROUND &&
                             e.state === ej.g6G.ACTIVE &&
-                            tk.isClosed() &&
-                            ((th = !1), tk.connect())),
+                            tU.isClosed() &&
+                            ((tf = !1), tU.connect())),
                   (nL = e.state))
                 : e.state === ej.g6G.ACTIVE &&
-                  ((th = !1), g.default.isAuthenticated() && tk.resetBackoff("App state is active")),
+                  ((tf = !1), g.default.isAuthenticated() && tU.resetBackoff("App state is active")),
             !1
         );
     },
     GUILD_MEMBERS_REQUEST: function (e) {
         return (
-            tk.isSessionEstablished() &&
+            tU.isSessionEstablished() &&
                 ("userIds" in e
                     ? u()(e.userIds)
                           .chunk(100)
                           .forEach((t) => {
-                              tk.requestGuildMembers(e.guildIds, { userIds: t, presences: !!e.presences });
+                              tU.requestGuildMembers(e.guildIds, { userIds: t, presences: !!e.presences });
                           })
-                    : tk.requestGuildMembers(e.guildIds, { query: e.query, limit: e.limit, presences: !!e.presences })),
+                    : tU.requestGuildMembers(e.guildIds, { query: e.query, limit: e.limit, presences: !!e.presences })),
             !1
         );
     },
     GUILD_SEARCH_RECENT_MEMBERS: function (e) {
         let { guildId: t, query: n, continuationToken: i } = e;
-        tk.isSessionEstablished() && tk.searchRecentMembers(t, { query: n, continuationToken: i });
+        tU.isSessionEstablished() && tU.searchRecentMembers(t, { query: n, continuationToken: i });
     },
     GUILD_SUBSCRIPTIONS_FLUSH: function (e) {
         let { subscriptions: t } = e;
-        return tk.isSessionEstablished() && tk.updateGuildSubscriptions(t), !1;
+        return tU.isSessionEstablished() && tU.updateGuildSubscriptions(t), !1;
     },
     CALL_CONNECT: function (e) {
         let { channelId: t } = e;
-        return tk.isSessionEstablished() && tk.callConnect(t), !1;
+        return tU.isSessionEstablished() && tU.callConnect(t), !1;
     },
     CALL_CONNECT_MULTIPLE: function (e) {
         let { channelIds: t } = e;
         return (
-            tk.isSessionEstablished() &&
+            tU.isSessionEstablished() &&
                 t.forEach((e) => {
-                    tk.callConnect(e);
+                    tU.callConnect(e);
                 }),
             !1
         );
@@ -4807,57 +4807,57 @@ let nF = new nG(_.h, {
     STREAM_CREATE: nP,
     STREAM_START: function (e) {
         let { streamType: t, guildId: n, channelId: i } = e;
-        if (tk.isSessionEstablished()) {
+        if (tU.isSessionEstablished()) {
             let e = null != n ? I.A.getChannel(i)?.rtcRegion : A.A.getCall(i)?.region;
-            tk.streamCreate(t, n, i, e ?? N.A.getPreferredRegion());
+            tU.streamCreate(t, n, i, e ?? y.A.getPreferredRegion());
         }
         return !1;
     },
     STREAM_WATCH: function (e) {
         let { streamKey: t, allowMultiple: n } = e;
-        if (tk.isSessionEstablished()) {
+        if (tU.isSessionEstablished()) {
             if (n);
             else {
                 let e;
-                (e = v.A.getAllActiveStreamKeys().find((e) => (0, p.Iy)(e).ownerId === g.default.getId())),
-                    v.A.getAllActiveStreamKeys()
+                (e = C.A.getAllActiveStreamKeys().find((e) => (0, p.Iy)(e).ownerId === g.default.getId())),
+                    C.A.getAllActiveStreamKeys()
                         .filter((t) => t !== e)
-                        .forEach((e) => nk(e));
+                        .forEach((e) => nU(e));
             }
-            tk.streamWatch(t);
+            tU.streamWatch(t);
         }
         return !1;
     },
     STREAM_STOP: function (e) {
         let { streamKey: t } = e;
-        return nk(t), nP(), !1;
+        return nU(t), nP(), !1;
     },
     STREAM_SET_PAUSED: function (e) {
         let { streamKey: t, paused: n } = e;
-        tk.isSessionEstablished() && tk.streamSetPaused(t, n);
+        tU.isSessionEstablished() && tU.streamSetPaused(t, n);
     },
     PUSH_NOTIFICATION_CLICK: function () {
-        return tk.expeditedHeartbeat(5e3, "user clicked on notification", !0), !1;
+        return tU.expeditedHeartbeat(5e3, "user clicked on notification", !0), !1;
     },
     REQUEST_FORUM_UNREADS: function (e) {
         let { guildId: t, channelId: n, threads: i } = e;
-        tk.requestForumUnreads(t, n, i);
+        tU.requestForumUnreads(t, n, i);
     },
     REQUEST_SOUNDBOARD_SOUNDS: function (e) {
         let { guildIds: t } = e;
-        tk.requestSoundboardSounds(t);
+        tU.requestSoundboardSounds(t);
     },
     REMOTE_COMMAND: function (e) {
         let { sessionId: t, payload: n } = e;
-        return tk.isSessionEstablished() && tk.remoteCommand(t, n), !1;
+        return tU.isSessionEstablished() && tU.remoteCommand(t, n), !1;
     },
     RESET_SOCKET: function (e) {
-        tk.connectionState !== R.WILL_RECONNECT && tk.resetSocketAndClearCacheOnError(e.args);
+        tU.connectionState !== O.WILL_RECONNECT && tU.resetSocketAndClearCacheOnError(e.args);
     },
     CLIPS_SETTINGS_UPDATE: nP,
     RUNNING_GAMES_CHANGE: nP,
     USER_SETTINGS_PROTO_UPDATE: function (e) {
-        e.settings.type === nC.oD.PRELOADED_USER_SETTINGS &&
+        e.settings.type === nv.oD.PRELOADED_USER_SETTINGS &&
             e.settings.proto.clips?.allowVoiceRecording != null &&
             nP();
     },
