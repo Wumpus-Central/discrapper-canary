@@ -1,18 +1,19 @@
 "use strict";
 n.d(t, {
-    Ac: () => T,
+    Ac: () => S,
     B0: () => _,
     CP: () => E,
     EI: () => c,
-    N2: () => h,
+    N2: () => f,
     Tu: () => g,
-    WU: () => S,
+    WU: () => y,
     Xf: () => p,
-    a4: () => f,
+    a4: () => h,
     lw: () => A,
     nZ: () => m,
     rv: () => d,
-    z5: () => I,
+    us: () => I,
+    z5: () => T,
 }),
     n(321073);
 var i = n(64700),
@@ -66,12 +67,12 @@ function _(e, t) {
         pendingErrors: o,
     };
 }
-function f(e) {
+function h(e) {
     let { user: t, guildId: n } = e,
         i = (0, r.bG)([l.Ay], () => (null != n ? l.Ay.getMember(n, t.id) : null));
     return null != n ? i?.avatarDecoration : t.avatarDecoration;
 }
-function h(e) {
+function f(e) {
     let { user: t, guildId: n } = e;
     return (0, r.bG)([o.A], () =>
         null == n ? o.A.getUserProfile(t.id)?.profileEffect : o.A.getGuildMemberProfile(t.id, n)?.profileEffect,
@@ -113,15 +114,19 @@ function A(e) {
             ? n
             : t;
 }
-function I(e, t) {
-    return void 0 === e ? null != t : null != e;
+function I(e) {
+    let { pendingValue: t, userValue: n, guildValue: i, guildId: r } = e;
+    if (void 0 !== t) return A({ userValue: n, guildValue: i, pendingValue: t, guildId: r }) ?? null;
 }
 function T(e, t) {
     return void 0 === e ? null != t : null != e;
 }
-function S(e) {
+function S(e, t) {
+    return void 0 === e ? null != t : null != e;
+}
+function y(e) {
     "set" === e
-        ? s.O.announce(u.intl.string(u.t.NstziV))
+        ? s.O.announce(u.intl.string(u.t.dyU5c5))
         : "remove" === e
           ? s.O.announce(u.intl.string(u.t["f1+oNk"]))
           : s.O.announce(u.intl.string(u.t["/b5nqj"]));
