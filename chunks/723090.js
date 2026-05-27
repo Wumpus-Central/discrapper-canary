@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Oj: () => S, CD: () => y, JL: () => C }), n(938796);
+n.d(t, { Oj: () => S, CD: () => N, JL: () => v }), n(938796);
 var i,
     r,
     s,
@@ -12,8 +12,8 @@ var u = n(17928),
     d = n(773669),
     _ = n(652215);
 n(758836), n(375708);
-var f = n(287809),
-    h = n(428262),
+var h = n(287809),
+    f = n(428262),
     p = n(580630),
     E = n(561573),
     m = (((i = {})[(i.DISCOUNT = 1)] = "DISCOUNT"), i),
@@ -43,7 +43,7 @@ function S(e) {
             l().mapValues(n, (e) => l().mapValues(e, (e) => ({ type: e.type, amount: e.amount })))),
     };
 }
-function N(e) {
+function y(e) {
     let { sku: t, priceSetAssignmentPurchaseType: n, isOrbPrice: i } = e,
         r = (0, u.bG)([E.A], () => E.A.getPricesForSkuId(t?.id ?? null));
     return a.useMemo(() => {
@@ -71,22 +71,18 @@ function N(e) {
         };
     }, [t, r, n, i]);
 }
-function y(e) {
+function N(e) {
     let { sku: t, priceSetAssignmentPurchaseType: n = _.lid.DEFAULT } = e,
-        {
-            normalPrice: i,
-            discountedPrice: r,
-            discountPercent: s,
-        } = (function (e) {
+        i = (function (e) {
             let { sku: t, priceSetAssignmentPurchaseType: n = _.lid.DEFAULT } = e,
                 {
                     userPrice: i,
                     pricesForPurchaseType: r,
                     purchaseType: s,
                     storeHasPrice: o,
-                } = N({ sku: t, priceSetAssignmentPurchaseType: n, isOrbPrice: !1 }),
+                } = y({ sku: t, priceSetAssignmentPurchaseType: n, isOrbPrice: !1 }),
                 l = (0, u.yK)([E.A], () => E.A.getRewardsForSkuId(t?.id) ?? []),
-                d = (0, u.bG)([f.default], () => f.default.getCurrentUser());
+                d = (0, u.bG)([h.default], () => h.default.getCurrentUser());
             return a.useMemo(() => {
                 if (null == t) return { normalPrice: null, discountedPrice: null, discountPercent: null };
                 if (!o) {
@@ -101,29 +97,33 @@ function y(e) {
                 let e = l.find((e) => e[s]?.type === m.DISCOUNT),
                     a = null != e ? e[s] : null,
                     u = null != a && null != i ? i : null,
-                    f = null != a && a.amount > 0 ? a.amount : null,
-                    h =
+                    h = null != a && a.amount > 0 ? a.amount : null,
+                    f =
                         null != a
                             ? r?.prices[_.FBC.BASE]?.[A.NORMAL]?.find((e) => e.currency !== _.Yri.DISCORD_ORB)
                             : i;
-                return { normalPrice: null != h && h.amount > 0 ? h : null, discountedPrice: u, discountPercent: f };
+                return { normalPrice: null != f && f.amount > 0 ? f : null, discountedPrice: u, discountPercent: h };
             }, [t, n, d?.premiumType, o, i, r, s, l]);
         })({ sku: t, priceSetAssignmentPurchaseType: n }),
-        o = (0, u.bG)([d.default], () => d.default.locale);
+        r = (0, u.bG)([d.default], () => d.default.locale);
     return a.useMemo(
-        () => ({
-            normalPrice: null != i && i.amount > 0 ? (0, p.$g)(i.amount, i.currency) : null,
-            discountedPrice: null != r ? (0, p.$g)(r.amount, r.currency) : null,
-            discountPercent: null != s ? (0, p.l9)(o, -s / 100) : null,
-        }),
-        [i, r, s, o],
+        () =>
+            (function (e, t) {
+                let { normalPrice: n, discountedPrice: i, discountPercent: r } = e;
+                return {
+                    normalPrice: null != n && n.amount > 0 ? (0, p.$g)(n.amount, n.currency) : null,
+                    discountedPrice: null != i ? (0, p.$g)(i.amount, i.currency) : null,
+                    discountPercent: null != r ? (0, p.l9)(t, -r / 100) : null,
+                };
+            })(i, r),
+        [i, r],
     );
 }
-function C(e) {
+function v(e) {
     let { sku: t, priceSetAssignmentPurchaseType: n = _.lid.DEFAULT } = e,
-        { userPrice: i, storeHasPrice: r } = N({ sku: t, priceSetAssignmentPurchaseType: n, isOrbPrice: !0 }),
-        s = (0, u.bG)([f.default], () => f.default.getCurrentUser()),
-        o = a.useMemo(() => h.Ay.isPremium(s, I.PremiumTypes.TIER_2), [s]);
+        { userPrice: i, storeHasPrice: r } = y({ sku: t, priceSetAssignmentPurchaseType: n, isOrbPrice: !0 }),
+        s = (0, u.bG)([h.default], () => h.default.getCurrentUser()),
+        o = a.useMemo(() => f.Ay.isPremium(s, I.PremiumTypes.TIER_2), [s]);
     return a.useMemo(() => {
         if (null == t) return null;
         if (!r) {
