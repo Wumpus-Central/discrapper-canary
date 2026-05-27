@@ -9,7 +9,7 @@ function r(e, t) {
             let { default: l } = await Promise.all([
                 n.e("40660"),
                 n.e("25377"),
-                n.e("62727"),
+                n.e("6697"),
                 n.e("60389"),
                 n.e("32543"),
                 n.e("16752"),

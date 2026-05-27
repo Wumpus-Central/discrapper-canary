@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(503698),
     d = n.n(c),
     _ = n(224640),
-    f = n(17928),
-    h = n(990078),
+    h = n(17928),
+    f = n(990078),
     p = n(349288),
     E = n(187322),
     m = n(475825),
@@ -26,12 +26,12 @@ let S = (0, n(600975).C)({
     defaultConfig: { showScores: !1 },
     treatments: [{ id: 1, label: "Show scores in QS results", config: { showScores: !0 } }],
 });
-var N = n(12351),
-    y = n(915089),
-    C = n(734057),
-    v = n(458294),
-    O = n(71393),
-    R = n(290863),
+var y = n(12351),
+    N = n(915089),
+    v = n(734057),
+    C = n(458294),
+    R = n(71393),
+    O = n(290863),
     b = n(222823),
     D = n(309010),
     L = n(607567),
@@ -39,18 +39,18 @@ var N = n(12351),
     M = n(625494),
     P = n(975571),
     x = n(820785),
-    U = n(615300),
-    k = n(451988),
+    k = n(615300),
+    U = n(451988),
     G = n(844222),
     F = n(652215),
     V = n(375708),
     B = n(246729);
 let H = { friction: 15, tension: 100 };
 class j extends r.PureComponent {
-    state = { shown: !1, translateY: new U.A.Value(0) };
+    state = { shown: !1, translateY: new k.A.Value(0) };
     static contextType = G.C;
     rootRef = r.createRef();
-    focusTimeout = new k.Ep();
+    focusTimeout = new U.Ep();
     componentDidMount() {
         this.setState({ shown: !0 }), M._.subscribe(F.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
@@ -74,13 +74,13 @@ class j extends r.PureComponent {
     };
     springTo(e) {
         let { reducedMotion: t } = this.context;
-        !0 !== t.enabled && U.A.spring(this.state.translateY, { toValue: Math.min(e, 250), ...H }).start();
+        !0 !== t.enabled && k.A.spring(this.state.translateY, { toValue: Math.min(e, 250), ...H }).start();
     }
     renderArrowGroup(e) {
         return (0, i.jsxs)("div", {
             className: d()(B.XN, e),
             children: [
-                (0, i.jsx)(U.A.div, {
+                (0, i.jsx)(k.A.div, {
                     className: d()(B.Hf, B.xM),
                     style: this.getStyle(),
                     children: (0, i.jsx)("img", { alt: "", src: n(824829), className: B.D6 }),
@@ -150,53 +150,53 @@ let W = () =>
 class K extends r.Component {
     static defaultProps = { unread: !1 };
     render() {
-        let e = O.A.getGuild(this.props.channel.guild_id);
+        let e = R.A.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(x.c3, {
             ...this.props,
             children: (0, i.jsx)("div", { className: Y.MD, children: null != e ? e.name : null }),
         });
     }
 }
-let z = f.Ay.connectStores([b.Ay, C.A], (e) => {
+let $ = h.Ay.connectStores([b.Ay, v.A], (e) => {
         let { channel: t } = e;
         return {
             unread: b.Ay.hasUnread(t.id),
             mentions: b.Ay.getMentionCount(t.id),
             isMentionLowImportance: b.Ay.getIsMentionLowImportance(t.id),
-            category: C.A.getChannel(t.parent_id),
+            category: v.A.getChannel(t.parent_id),
         };
     })(K),
-    $ = f.Ay.connectStores([L.Ay], (e) => {
+    z = h.Ay.connectStores([L.Ay], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
         return { voiceStates: L.Ay.getVoiceStates(t.guild_id)[t.id] };
     })(K),
-    q = f.Ay.connectStores([v.default], (e) => {
+    q = h.Ay.connectStores([C.default], (e) => {
         let { guild: t } = e;
-        return { unread: v.default.hasUnread(t.id) };
+        return { unread: C.default.hasUnread(t.id) };
     })(x.OS),
-    X = f.Ay.connectStores([b.Ay, R.A], (e) => {
+    X = h.Ay.connectStores([b.Ay, O.A], (e) => {
         let { channel: t } = e,
             n = null,
-            i = R.A.getState().statuses;
+            i = O.A.getState().statuses;
         return (
             t.recipients?.some((e) => i[e] === F.clD.ONLINE) && (n = F.clD.ONLINE),
             { mentions: b.Ay.getMentionCount(t.id), status: n }
         );
     })(x.nG),
-    Z = f.Ay.connectStores([C.A, b.Ay, R.A], (e) => {
+    Z = h.Ay.connectStores([v.A, b.Ay, O.A], (e) => {
         let { user: t } = e,
-            n = C.A.getDMFromUserId(t.id);
+            n = v.A.getDMFromUserId(t.id);
         return {
             mentions: null != n ? b.Ay.getMentionCount(n) : 0,
-            status: R.A.getStatus(t.id),
-            isMobile: R.A.isMobileOnline(t.id),
+            status: O.A.getStatus(t.id),
+            isMobile: O.A.isMobileOnline(t.id),
         };
     })(x.KJ);
 function Q(e, t, n) {
     return (0, i.jsx)(
-        h.m,
+        f.m,
         { __unsupportedReactNodeAsText: n, children: (0, i.jsx)("span", { className: Y.ZT, children: t }) },
         e,
     );
@@ -204,7 +204,7 @@ function Q(e, t, n) {
 class J extends r.PureComponent {
     scrollerRef = r.createRef();
     inputRef = r.createRef();
-    _listId = (0, y.Ld)();
+    _listId = (0, N.Ld)();
     state = { query: this.props.query, mouseFocusDisabled: !0 };
     componentDidMount() {
         I.A.disable(), I.A.enableTemp(A.w);
@@ -254,13 +254,13 @@ class J extends r.PureComponent {
                         n.e("72273"),
                         n.e("47412"),
                         n.e("45333"),
-                        n.e("5868"),
+                        n.e("38552"),
                         n.e("16415"),
-                        n.e("22946"),
+                        n.e("28881"),
                         n.e("78220"),
-                        n.e("84448"),
-                        n.e("4042"),
-                        n.e("62727"),
+                        n.e("93033"),
+                        n.e("5956"),
+                        n.e("6697"),
                         n.e("99961"),
                         n.e("31688"),
                         n.e("77083"),
@@ -274,8 +274,8 @@ class J extends r.PureComponent {
                         n.e("97189"),
                         n.e("4222"),
                         n.e("18090"),
-                        n.e("94863"),
-                        n.e("27546"),
+                        n.e("40805"),
+                        n.e("78385"),
                         n.e("70682"),
                         n.e("79705"),
                         n.e("24351"),
@@ -288,28 +288,27 @@ class J extends r.PureComponent {
                         n.e("18670"),
                         n.e("27900"),
                         n.e("8641"),
-                        n.e("91511"),
+                        n.e("14323"),
                         n.e("57006"),
                         n.e("25610"),
                         n.e("19575"),
                         n.e("60389"),
-                        n.e("10889"),
-                        n.e("62349"),
+                        n.e("17116"),
+                        n.e("77857"),
                         n.e("83185"),
-                        n.e("73289"),
+                        n.e("88712"),
                         n.e("87845"),
                         n.e("35636"),
-                        n.e("93084"),
-                        n.e("83481"),
-                        n.e("47199"),
-                        n.e("12453"),
+                        n.e("30402"),
+                        n.e("85639"),
+                        n.e("50150"),
                         n.e("49089"),
                         n.e("61175"),
                         n.e("88265"),
                         n.e("79785"),
                         n.e("98689"),
                         n.e("4974"),
-                        n.e("78067"),
+                        n.e("42527"),
                         n.e("23924"),
                         n.e("42205"),
                         n.e("71091"),
@@ -593,7 +592,7 @@ class J extends r.PureComponent {
             case T.rD.TEXT_CHANNEL:
             case T.rD.VOICE_CHANNEL:
                 let r = t.record,
-                    s = O.A.getGuild(r.getGuildId());
+                    s = R.A.getGuild(r.getGuildId());
                 if (null == s) return;
                 switch (r.type) {
                     case F.rbe.GUILD_TEXT:
@@ -885,7 +884,7 @@ class J extends r.PureComponent {
                 return (0, i.jsx)(x.Y9, { children: n.record.text }, `${n.type}-${n.record.id}`);
             case T.rD.TEXT_CHANNEL:
                 return (0, i.jsx)(
-                    z,
+                    $,
                     {
                         id: this.getRowId(t),
                         focused: r >= 0 && t === r,
@@ -900,7 +899,7 @@ class J extends r.PureComponent {
                 );
             case T.rD.VOICE_CHANNEL:
                 return (0, i.jsx)(
-                    $,
+                    z,
                     {
                         id: this.getRowId(t),
                         focused: r >= 0 && t === r,
@@ -1007,9 +1006,9 @@ class J extends r.PureComponent {
         }
     };
     renderProtip() {
-        return (0, i.jsx)(N.A, {
+        return (0, i.jsx)(y.A, {
             className: d()(Y.PP, { [Y.ov]: this.state.query.length > 0 }),
-            type: N.A.Types.INLINE,
+            type: y.A.Types.INLINE,
             children: V.intl.format(V.t.wukqXQ, {
                 userSymbolHook: (e, t) => Q(t, T.AT.USER, V.intl.string(V.t.GQRCGn)),
                 textChannelSymbolHook: (e, t) => Q(t, T.AT.TEXT_CHANNEL, V.intl.string(V.t.wrwhuZ)),
@@ -1039,7 +1038,7 @@ class J extends r.PureComponent {
     }
 }
 function ee(e) {
-    let t = (0, f.cf)([u.A], () => u.A.getProps());
+    let t = (0, h.cf)([u.A], () => u.A.getProps());
     return (0, i.jsx)(J, { ...t, ...e });
 }
 let et = "QUICK_SWITCHER_MODAL_KEY";

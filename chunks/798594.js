@@ -12,7 +12,7 @@ _.exports = {
     QB: "clipThumbContainer__1d12e",
     X7: "clipProgressBar__1d12e",
     Z2: "clipProgressFill__1d12e",
-    Ad: "newBadge__1d12e",
+    ry: "clipBadges__1d12e",
     wI: "clipMetadata__1d12e",
     gS: "clipIcon__1d12e",
     NH: "clipIconImage__1d12e",

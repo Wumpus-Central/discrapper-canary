@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $: () => f });
+n.d(t, { $: () => h });
 var i = n(64700),
     r = n(532794),
     s = n(561794),
@@ -31,7 +31,7 @@ function d(e) {
     return (0, o.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
-                n.e("84448"),
+                n.e("93033"),
                 n.e("56377"),
                 n.e("77083"),
                 n.e("17214"),
@@ -40,21 +40,21 @@ function d(e) {
                 n.e("96330"),
                 n.e("56159"),
                 n.e("77049"),
-                n.e("22946"),
+                n.e("28881"),
                 n.e("21838"),
                 n.e("34816"),
-                n.e("62727"),
+                n.e("6697"),
                 n.e("97189"),
                 n.e("47412"),
-                n.e("4042"),
+                n.e("5956"),
                 n.e("4222"),
                 n.e("18090"),
                 n.e("16415"),
                 n.e("89001"),
-                n.e("27546"),
-                n.e("94863"),
+                n.e("55990"),
+                n.e("40805"),
                 n.e("41229"),
-                n.e("53694"),
+                n.e("78385"),
                 n.e("70682"),
                 n.e("43535"),
                 n.e("79705"),
@@ -188,12 +188,12 @@ function d(e) {
     );
 }
 var _ = n(788868);
-function f(e) {
+function h(e) {
     let {
             giftRecipient: t,
             analyticsLocations: l,
-            analyticsObject: f,
-            wishlistAnalyticsObject: h,
+            analyticsObject: h,
+            wishlistAnalyticsObject: f,
             premiumAnalyticsObject: p,
             analyticsLocation: E,
             giftMessage: m,
@@ -203,9 +203,9 @@ function f(e) {
         { enabled: I } = c.useConfig({ location: g }),
         T = (0, s.tA)({ isGift: !0, giftRecipient: t }),
         S = A && null != t,
-        N = I && null == t,
-        y = S || N,
-        C = T && null != t;
+        y = I && null == t,
+        N = S || y,
+        v = T && null != t;
     return {
         openGiftModal: i.useCallback(() => {
             S && null != t
@@ -213,18 +213,18 @@ function f(e) {
                       giftRecipient: t,
                       analyticsLocations: l,
                       analyticsLocation: E,
-                      analyticsObject: h ?? f,
+                      analyticsObject: f ?? h,
                       giftMessage: m,
                   })
-                : N
+                : y
                   ? d({
                         analyticsLocations: l,
                         analyticsLocation: E,
-                        analyticsObject: h ?? f,
+                        analyticsObject: f ?? h,
                         giftMessage: m,
                         giftingOrigin: _.vQ.GUILD_CHANNEL,
                     })
-                  : C && null != t
+                  : v && null != t
                     ? (function (e) {
                           let {
                               giftRecipient: t,
@@ -239,7 +239,7 @@ function f(e) {
                                   let { default: e } = await Promise.all([
                                       n.e("17214"),
                                       n.e("23129"),
-                                      n.e("84448"),
+                                      n.e("93033"),
                                       n.e("56377"),
                                       n.e("77083"),
                                       n.e("40660"),
@@ -247,21 +247,21 @@ function f(e) {
                                       n.e("96330"),
                                       n.e("56159"),
                                       n.e("77049"),
-                                      n.e("22946"),
+                                      n.e("28881"),
                                       n.e("21838"),
                                       n.e("34816"),
-                                      n.e("62727"),
+                                      n.e("6697"),
                                       n.e("97189"),
                                       n.e("47412"),
-                                      n.e("4042"),
+                                      n.e("5956"),
                                       n.e("4222"),
                                       n.e("18090"),
                                       n.e("16415"),
                                       n.e("89001"),
-                                      n.e("27546"),
-                                      n.e("94863"),
+                                      n.e("55990"),
+                                      n.e("40805"),
                                       n.e("41229"),
-                                      n.e("53694"),
+                                      n.e("78385"),
                                       n.e("70682"),
                                       n.e("43535"),
                                       n.e("79705"),
@@ -398,7 +398,7 @@ function f(e) {
                           giftRecipient: t,
                           analyticsLocations: l,
                           analyticsLocation: E,
-                          analyticsObject: h ?? f,
+                          analyticsObject: f ?? h,
                           giftMessage: m,
                       })
                     : (0, r.A)({
@@ -407,11 +407,11 @@ function f(e) {
                           initialPlanId: null,
                           analyticsLocations: l,
                           analyticsLocation: E,
-                          analyticsObject: p ?? f,
+                          analyticsObject: p ?? h,
                           giftMessage: m,
                       });
-        }, [S, N, C, t, l, E, f, h, p, m]),
-        shouldShowWishlistModal: C,
-        shouldShowGiftSelectionModal: y,
+        }, [S, y, v, t, l, E, h, f, p, m]),
+        shouldShowWishlistModal: v,
+        shouldShowGiftSelectionModal: N,
     };
 }

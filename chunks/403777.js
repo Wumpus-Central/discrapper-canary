@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g, n: () => h });
+n.d(t, { A: () => g, n: () => f });
 var i = n(627968);
 n(64700);
 var r = n(192308),
@@ -11,8 +11,8 @@ var r = n(192308),
     c = n(958805),
     d = n(485745),
     _ = n(652215);
-let f = new Set();
-function h(e, t) {
+let h = new Set();
+function f(e, t) {
     return `USER_PROFILE_MODAL_KEY:${e}:${null == t ? "" : t}`;
 }
 async function p(e) {
@@ -32,13 +32,13 @@ async function p(e) {
     let S = l.default.getCurrentUser();
     if (null == S) return;
     (0, u.XQ)();
-    let N = h(t, p);
-    f.add(
+    let y = f(t, p);
+    h.add(
         await (0, r.openModalLazy)(
             async () => {
                 let e = (
                     await Promise.all([
-                        n.e("62727"),
+                        n.e("6697"),
                         n.e("3794"),
                         n.e("24351"),
                         n.e("53352"),
@@ -50,13 +50,12 @@ async function p(e) {
                         n.e("16415"),
                         n.e("73435"),
                         n.e("30170"),
-                        n.e("4042"),
-                        n.e("76744"),
-                        n.e("16881"),
+                        n.e("5956"),
+                        n.e("40805"),
                         n.e("28226"),
                         n.e("48109"),
                         n.e("14831"),
-                        n.e("84448"),
+                        n.e("93033"),
                         n.e("24664"),
                         n.e("77083"),
                         n.e("17214"),
@@ -65,15 +64,14 @@ async function p(e) {
                         n.e("96330"),
                         n.e("56159"),
                         n.e("77049"),
-                        n.e("22946"),
+                        n.e("28881"),
                         n.e("21838"),
                         n.e("34816"),
                         n.e("97189"),
                         n.e("47412"),
                         n.e("4222"),
                         n.e("18090"),
-                        n.e("94863"),
-                        n.e("27546"),
+                        n.e("78385"),
                         n.e("70682"),
                         n.e("79705"),
                         n.e("10545"),
@@ -302,21 +300,21 @@ async function p(e) {
                     });
             },
             {
-                modalKey: N,
+                modalKey: y,
                 contextKey: (0, r.modalContextFromAppContext)(g ?? (0, o.zd)() ?? _.BRT.APP),
                 onCloseRequest: () => {
                     t === S.id && (0, d.b)()
                         ? (0, u.VQ)()
-                        : ((0, r.closeModal)(N), f.delete(N), c.A.clearPendingWidgets(), (0, u.XQ)());
+                        : ((0, r.closeModal)(y), h.delete(y), c.A.clearPendingWidgets(), (0, u.XQ)());
                 },
             },
         ),
     );
 }
 function E() {
-    if (0 !== f.size) {
-        for (let e of f) (0, r.closeModal)(e);
-        f.clear(), c.A.clearPendingWidgets(), (0, u.XQ)();
+    if (0 !== h.size) {
+        for (let e of h) (0, r.closeModal)(e);
+        h.clear(), c.A.clearPendingWidgets(), (0, u.XQ)();
     }
 }
 class m extends a.A {

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(627968);
 n(64700);
 var r = n(192308),
@@ -11,7 +11,7 @@ var r = n(192308),
     c = n(539895),
     d = n(652215);
 let _ = "INVITE_MODAL_KEY";
-class f extends a.A {
+class h extends a.A {
     _initialize() {
         s.h.subscribe("INVITE_MODAL_OPEN", this.handleOpenModal),
             s.h.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal);
@@ -28,13 +28,13 @@ class f extends a.A {
             (0, r.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        n.e("33110"),
+                        n.e("14323"),
                         n.e("90665"),
-                        n.e("62727"),
+                        n.e("6697"),
                         n.e("74275"),
-                        n.e("4042"),
+                        n.e("5956"),
                         n.e("40660"),
-                        n.e("22946"),
+                        n.e("28881"),
                         n.e("43437"),
                         n.e("86127"),
                         n.e("88599"),
@@ -71,4 +71,4 @@ class f extends a.A {
         (0, r.closeModal)(_);
     }
 }
-let h = new f();
+let f = new h();

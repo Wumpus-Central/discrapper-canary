@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(268218),
     d = n(335180),
     _ = n(966597),
-    f = n(85109),
-    h = n(910425),
+    h = n(85109),
+    f = n(910425),
     p = n(594061),
     E = n(617617),
     m = n(625494),
@@ -19,7 +19,7 @@ var i = n(627968),
 let A = (0, c.Fe)({
     createPromise: () =>
         Promise.all([
-            n.e("84448"),
+            n.e("93033"),
             n.e("99961"),
             n.e("31688"),
             n.e("56377"),
@@ -30,16 +30,16 @@ let A = (0, c.Fe)({
             n.e("96330"),
             n.e("56159"),
             n.e("77049"),
-            n.e("22946"),
+            n.e("28881"),
             n.e("21838"),
             n.e("34816"),
             n.e("97189"),
             n.e("47412"),
-            n.e("4042"),
+            n.e("5956"),
             n.e("4222"),
             n.e("18090"),
-            n.e("94863"),
-            n.e("27546"),
+            n.e("40805"),
+            n.e("78385"),
             n.e("70682"),
             n.e("79705"),
             n.e("24351"),
@@ -54,15 +54,15 @@ let A = (0, c.Fe)({
             n.e("18670"),
             n.e("27900"),
             n.e("8641"),
-            n.e("91511"),
+            n.e("14323"),
             n.e("57006"),
-            n.e("62727"),
+            n.e("6697"),
             n.e("90665"),
             n.e("25610"),
             n.e("19575"),
             n.e("16415"),
             n.e("88265"),
-            n.e("5868"),
+            n.e("38552"),
             n.e("32538"),
             n.e("7897"),
             n.e("3794"),
@@ -261,13 +261,13 @@ function I(e) {
             children: I,
             badgeState: T,
             popoutPosition: S,
-            popoutAlign: N,
-            targetElementRef: y,
-            spacing: C,
-            dialogClassName: v,
+            popoutAlign: y,
+            targetElementRef: N,
+            spacing: v,
+            dialogClassName: C,
         } = e,
-        { analyticsLocations: O } = (0, u.Ay)(l.A.NOTIFICATION_CENTER),
-        [R, b] = r.useState(!1),
+        { analyticsLocations: R } = (0, u.Ay)(l.A.NOTIFICATION_CENTER),
+        [O, b] = r.useState(!1),
         [D, L] = [
             (0, s.bG)([E.A], () => E.A.settings.inbox?.currentTab ?? a.Y2.UNREADS),
             r.useCallback((e) => {
@@ -294,16 +294,16 @@ function I(e) {
             }, [])),
             { showTutorial: !t && D === a.Y2.UNREADS, setSeenTutorial: n }),
         P = r.useCallback(() => {
-            b(!1), R && d?.();
-        }, [d, R]),
+            b(!1), O && d?.();
+        }, [d, O]),
         x = r.useCallback(() => {
-            b(!R), R ? d?.() : c?.();
-        }, [d, c, R]);
+            b(!O), O ? d?.() : c?.();
+        }, [d, c, O]);
     r.useEffect(() => (m._.subscribe(g.jej.TOGGLE_INBOX, x), () => void m._.unsubscribe(g.jej.TOGGLE_INBOX, x)), [x]);
-    let { enabled: U, inInbox: k } = _.A.useConfig({ location: "RecentsPopout" }),
-        G = (0, s.bG)([f.A], () => f.A.hasOverdueReminder(), []) && U && k;
+    let { enabled: k, inInbox: U } = _.A.useConfig({ location: "RecentsPopout" }),
+        G = (0, s.bG)([h.A], () => h.A.hasOverdueReminder(), []) && k && U;
     r.useEffect(() => {
-        D !== a.Y2.BOOKMARKS || U || k || L(a.Y2.MENTIONS), D === a.Y2.GAME_INVITES && L(a.Y2.MENTIONS);
+        D !== a.Y2.BOOKMARKS || k || U || L(a.Y2.MENTIONS), D === a.Y2.GAME_INVITES && L(a.Y2.MENTIONS);
     });
     let F = r.useCallback(
             (e) => {
@@ -311,20 +311,20 @@ function I(e) {
             },
             [P],
         ),
-        V = (0, h.Sc)();
+        V = (0, f.Sc)();
     return (0, i.jsx)(u.f5, {
-        value: O,
+        value: R,
         children: (0, i.jsx)(o.Y, {
-            targetElementRef: y,
+            targetElementRef: N,
             animation: o.Y.Animation.NONE,
             position: S,
-            align: N,
+            align: y,
             autoInvert: !1,
-            shouldShow: R,
+            shouldShow: O,
             onRequestClose: P,
             renderPopout: function () {
                 return (0, i.jsx)(A, {
-                    dialogClassName: v,
+                    dialogClassName: C,
                     isScheduledMessagesEnabled: V,
                     tab: D,
                     setTab: L,
@@ -333,12 +333,12 @@ function I(e) {
                     handleMentionsJump: F,
                     showTutorial: w,
                     setSeenTutorial: M,
-                    forLaterEnabled: U,
-                    showForLater: k,
+                    forLaterEnabled: k,
+                    showForLater: U,
                 });
             },
             ignoreModalClicks: !0,
-            spacing: C,
+            spacing: v,
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;

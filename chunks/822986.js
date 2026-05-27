@@ -17,11 +17,11 @@ let _ = function (e, t) {
             i = n > 0 ? n : 1 - n;
         return d("yy" === t ? i % 100 : i, t.length);
     },
-    f = function (e, t) {
+    h = function (e, t) {
         var n = e.getUTCMonth();
         return "M" === t ? String(n + 1) : d(n + 1, 2);
     },
-    h = function (e, t) {
+    f = function (e, t) {
         var n = t.length;
         return d(Math.floor(e.getUTCMilliseconds() * Math.pow(10, n - 3)), t.length);
     };
@@ -110,7 +110,7 @@ let g = {
         switch (t) {
             case "M":
             case "MM":
-                return f(e, t);
+                return h(e, t);
             case "Mo":
                 return n.ordinalNumber(i + 1, { unit: "month" });
             case "MMM":
@@ -315,7 +315,7 @@ let g = {
             : ((i = e), (r = t), d(i.getUTCSeconds(), r.length));
     },
     S: function (e, t) {
-        return h(e, t);
+        return f(e, t);
     },
     X: function (e, t, n, i) {
         var r = (i._originalDate || e).getTimezoneOffset();
@@ -375,12 +375,12 @@ var A = n(291048),
     I = n(84776),
     T = n(368617),
     S = n(998280),
-    N = n(98430),
-    y = n(728898),
-    C = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,
-    v = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g,
-    O = /^'([^]*?)'?$/,
-    R = /''/g,
+    y = n(98430),
+    N = n(728898),
+    v = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,
+    C = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g,
+    R = /^'([^]*?)'?$/,
+    O = /''/g,
     b = /[a-zA-Z]/;
 function D(e, t, n) {
     (0, a.A)(2, arguments);
@@ -390,8 +390,8 @@ function D(e, t, n) {
         c,
         d,
         _,
-        f,
         h,
+        f,
         p,
         E,
         m,
@@ -401,10 +401,10 @@ function D(e, t, n) {
         M,
         P,
         x,
-        U,
-        k = String(t),
-        G = (0, N.q)(),
-        F = null != (o = null != (l = null == n ? void 0 : n.locale) ? l : G.locale) ? o : y.A,
+        k,
+        U = String(t),
+        G = (0, y.q)(),
+        F = null != (o = null != (l = null == n ? void 0 : n.locale) ? l : G.locale) ? o : N.A,
         V = (0, S.A)(
             null !=
                 (u =
@@ -414,9 +414,9 @@ function D(e, t, n) {
                         (d =
                             null != (_ = null == n ? void 0 : n.firstWeekContainsDate)
                                 ? _
-                                : null == n || null == (f = n.locale) || null == (h = f.options)
+                                : null == n || null == (h = n.locale) || null == (f = h.options)
                                   ? void 0
-                                  : h.firstWeekContainsDate)
+                                  : f.firstWeekContainsDate)
                             ? d
                             : G.firstWeekContainsDate)
                         ? c
@@ -442,9 +442,9 @@ function D(e, t, n) {
                         ? L
                         : G.weekStartsOn)
                     ? D
-                    : null == (x = G.locale) || null == (U = x.options)
+                    : null == (x = G.locale) || null == (k = x.options)
                       ? void 0
-                      : U.weekStartsOn)
+                      : k.weekStartsOn)
             ? m
             : 0,
     );
@@ -456,21 +456,20 @@ function D(e, t, n) {
     var j = (0, I.A)(H),
         Y = (0, r.A)(H, j),
         W = { firstWeekContainsDate: V, weekStartsOn: B, locale: F, _originalDate: H };
-    return k
-        .match(v)
+    return U.match(C)
         .map(function (e) {
             var t = e[0];
             return "p" === t || "P" === t ? (0, A.A[t])(e, F.formatLong) : e;
         })
         .join("")
-        .match(C)
+        .match(v)
         .map(function (i) {
             if ("''" === i) return "'";
             var r,
                 s,
                 a = i[0];
             if ("'" === a) {
-                return (s = (r = i).match(O)) ? s[1].replace(R, "'") : r;
+                return (s = (r = i).match(R)) ? s[1].replace(O, "'") : r;
             }
             var o = g[a];
             if (o)

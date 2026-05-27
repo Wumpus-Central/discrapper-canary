@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { F5: () => _, XA: () => h, jv: () => f });
+n.d(t, { F5: () => _, XA: () => f, jv: () => h });
 var i = n(627968);
 n(64700);
 var r = n(653922),
@@ -13,7 +13,7 @@ var r = n(653922),
 let _ = (e, t) =>
         (0, s.openModalLazy)(async () => {
             let { default: r } = await Promise.all([
-                n.e("4042"),
+                n.e("77857"),
                 n.e("90665"),
                 n.e("50985"),
                 n.e("63232"),
@@ -39,15 +39,15 @@ let _ = (e, t) =>
                     ...n,
                 });
         }),
-    f = (e, t) => {
+    h = (e, t) => {
         _(
             (n) => {
-                o.A.setIcon(e, n.imageUri, t).catch(h);
+                o.A.setIcon(e, n.imageUri, t).catch(f);
             },
             [t],
         );
     },
-    h = (e) => {
+    f = (e) => {
         if (e?.body?.retry_after != null) {
             let t = (0, r.A)(new Date(), e.body.retry_after);
             a.A.show({

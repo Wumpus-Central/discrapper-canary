@@ -10,9 +10,9 @@ var i = n(627968),
     c = n(776231),
     d = n(614269),
     _ = n(829097),
-    f = n(734057),
-    h = n(945810);
-let p = (0, h.mj)({
+    h = n(734057),
+    f = n(945810);
+let p = (0, f.mj)({
     kind: "user",
     name: "2026-05-clips-scrub-preview-frontend",
     defaultConfig: { enableScrubPreview: !1 },
@@ -25,17 +25,17 @@ var E = n(922016),
     I = n(565645),
     T = n(822123),
     S = n(267889),
-    N = n(451909),
-    y = n(118517),
-    C = n(232835),
-    v = n(625494);
-let O = (0, h.mj)({
+    y = n(451909),
+    N = n(118517),
+    v = n(232835),
+    C = n(625494);
+let R = (0, f.mj)({
     kind: "user",
     name: "2026-05-clips-media-comments",
     defaultConfig: { enableMediaComments: !1 },
     variations: { 1: { enableMediaComments: !0 } },
 });
-var R = n(652215),
+var O = n(652215),
     b = n(307731),
     D = n(381941),
     L = n(909022);
@@ -46,8 +46,8 @@ function w(e, t) {
 function M(e) {
     let { attachmentId: t, channelId: n, messageId: s, guildId: l, videoRef: u, isControlBarExpanded: c = !0 } = e,
         d = (0, T.QZ)(l).slice(0, 3),
-        _ = (0, o.bG)([f.A], () => f.A.getChannel(n), [n]),
-        { enableMediaComments: h } = O.useConfig({ location: "ClipEmbedMediaMentionBar" }),
+        _ = (0, o.bG)([h.A], () => h.A.getChannel(n), [n]),
+        { enableMediaComments: f } = R.useConfig({ location: "ClipEmbedMediaMentionBar" }),
         p = r.useRef(null);
     function M(e, n) {
         e?.stopPropagation(),
@@ -61,14 +61,14 @@ function M(e) {
                         : "surrogates" in e && null != e.surrogates
                           ? e.surrogates
                           : e.name;
-                A.A.sendMessage(_.id, N.Ay.parse(_, n), !1, {
+                A.A.sendMessage(_.id, y.Ay.parse(_, n), !1, {
                     location: D.Hx.MEDIA_MENTION,
                     messageReference: { channel_id: _.id, guild_id: _.getGuildId() ?? void 0, message_id: s },
                     mediaMention: w(t, u),
                 });
             })(n);
     }
-    return h && null != _ && null != s
+    return f && null != _ && null != s
         ? (0, i.jsxs)("div", {
               className: a()(L.M0, { [L.pd]: !c }),
               children: [
@@ -126,17 +126,17 @@ function M(e) {
                       className: L.x6,
                       onClick: function (e) {
                           if ((e.stopPropagation(), null == _ || null == s)) return;
-                          let n = C.A.getMessage(_.id, s);
+                          let n = v.A.getMessage(_.id, s);
                           null == n ||
                               (null != u?.current?.currentTime &&
-                                  ((0, y.Yf)({
+                                  ((0, N.Yf)({
                                       channel: _,
                                       message: n,
                                       shouldMention: !e.shiftKey,
                                       showMentionToggle: !_.isPrivate(),
                                       mediaMention: w(t, u),
                                   }),
-                                  v._.dispatch(R.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: _.id })));
+                                  C._.dispatch(O.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: _.id })));
                       },
                       children: (0, i.jsx)(g.W, { size: "sm" }),
                   }),
@@ -148,8 +148,8 @@ function P() {
     return (0, i.jsx)("div", { className: L.yF });
 }
 var x = n(534890),
-    U = n(661531),
-    k = n(228366);
+    k = n(661531),
+    U = n(228366);
 let G = [],
     F = {},
     V = {};
@@ -180,7 +180,7 @@ class j extends o.Ay.Store {
         return F[e] ?? G;
     }
 }
-let Y = new j(k.h, {
+let Y = new j(U.h, {
     LOAD_MESSAGES_SUCCESS: function (e) {
         let { messages: t } = e;
         return t.reduce((e, t) => B(t) || e, !1);
@@ -207,21 +207,21 @@ let Y = new j(k.h, {
 });
 var W = n(7584);
 let K = /^<(a)?:(\w+):(\d+)>$/;
-var z = n(933668);
-function $(e) {
+var $ = n(933668);
+function z(e) {
     let { attachmentId: t, durationSeconds: n, isControlBarExpanded: r = !0 } = e,
         s = (0, o.bG)([Y], () => Y.getMentionsForAttachment(t), [t]),
-        { enableMediaComments: l } = O.useConfig({ location: "ClipEmbedMediaMentionTimeline" });
+        { enableMediaComments: l } = R.useConfig({ location: "ClipEmbedMediaMentionTimeline" });
     return !l || 0 === s.length || n <= 0
         ? null
         : (0, i.jsx)("div", {
-              className: a()(z.IO, { [z.pd]: !r }),
+              className: a()($.IO, { [$.pd]: !r }),
               children: s.map((e) => (0, i.jsx)(q, { entry: e, durationSeconds: n }, e.messageId)),
           });
 }
 function q(e) {
     let { entry: t, durationSeconds: n } = e,
-        s = (0, o.bG)([C.A], () => C.A.getMessage(t.channelId, t.messageId), [t.channelId, t.messageId]),
+        s = (0, o.bG)([v.A], () => v.A.getMessage(t.channelId, t.messageId), [t.channelId, t.messageId]),
         a = `${Math.min(100, (t.timestamp / 1e3 / n) * 100)}%`,
         l = r.useMemo(
             () =>
@@ -240,7 +240,7 @@ function q(e) {
     return null == s
         ? null
         : (0, i.jsx)("div", {
-              className: z.xL,
+              className: $.xL,
               style: { left: a },
               children:
                   null != l
@@ -250,9 +250,9 @@ function q(e) {
                             shouldAnimate: !1,
                             animated: l.animated,
                             surrogate: l.surrogate,
-                            className: z.Zg,
+                            className: $.Zg,
                         })
-                      : (0, i.jsx)(x.o, { colorClass: z.Or, color: U.A.colors.ICON_OVERLAY_LIGHT, size: "refresh_sm" }),
+                      : (0, i.jsx)(x.o, { colorClass: $.Or, color: k.A.colors.ICON_OVERLAY_LIGHT, size: "refresh_sm" }),
           });
 }
 var X = n(783384),
@@ -291,7 +291,7 @@ function el(e) {
             size: t = "md",
             width: n,
             height: r,
-            color: s = U.A.colors.INTERACTIVE_ICON_DEFAULT,
+            color: s = k.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: a = "",
             ...o
         } = e,
@@ -339,22 +339,22 @@ function e_(e) {
         { enableAdvancedSignals: c } = ei.L_.useConfig({ location: "DistributedClipShareCTA" }),
         d = t.clip_remote_id,
         _ = (0, o.bG)([er.A], () => (null != d ? er.A.getClipByRemoteId(d) : null)),
-        { onShareClick: f } = (0, es.A)(n),
-        h = (0, o.bG)([er.A], () => null != _ && null != n && null != d && er.A.wasClipSharedInChannel(d, n)),
+        { onShareClick: h } = (0, es.A)(n),
+        f = (0, o.bG)([er.A], () => null != _ && null != n && null != d && er.A.wasClipSharedInChannel(d, n)),
         p = r.useCallback(
             (e) => {
                 null != _ &&
-                    (e.stopPropagation(), f({ clips: [_], messageReference: { channel_id: n, message_id: s } }));
+                    (e.stopPropagation(), h({ clips: [_], messageReference: { channel_id: n, message_id: s } }));
             },
-            [f, _, n, s],
+            [h, _, n, s],
         );
-    return !c || null == _ || h
+    return !c || null == _ || f
         ? null
         : (0, i.jsxs)("button", {
               className: a()(ed.eZ, { [ed.vu]: l, [ed.jn]: !u }),
               onClick: p,
               children: [
-                  (0, i.jsx)(el, { size: "refresh_sm", color: U.A.colors.WHITE }),
+                  (0, i.jsx)(el, { size: "refresh_sm", color: k.A.colors.WHITE }),
                   (0, i.jsx)(en.E, {
                       variant: "text-xs/semibold",
                       color: "always-white",
@@ -363,16 +363,13 @@ function e_(e) {
               ],
           });
 }
-var ef = n(696016),
-    eh = n(581874);
+var eh = n(696016),
+    ef = n(581874);
 let ep = (0, u.Fe)({
-    createPromise: () =>
-        Promise.all([n.e("30272"), n.e("57174"), n.e("84971"), n.e("30920"), n.e("78010"), n.e("91652")]).then(
-            n.bind(n, 664111),
-        ),
+    createPromise: () => Promise.resolve().then(n.bind(n, 664111)),
     webpackId: 664111,
     name: "DiscordVideoPlayer",
-    renderLoader: () => (0, i.jsx)("div", { className: eh.Lq }),
+    renderLoader: () => (0, i.jsx)("div", { className: ef.Lq }),
 });
 function eE(e) {
     let {
@@ -380,7 +377,7 @@ function eE(e) {
             posterUrl: n,
             className: s,
             active: u = !1,
-            autoPlay: h,
+            autoPlay: f,
             src: E,
             embed: m = !1,
             fillContainer: g = !1,
@@ -388,12 +385,12 @@ function eE(e) {
             maxWidth: I = 1 / 0,
             maxHeight: T = 1 / 0,
             channelId: S,
-            messageId: N,
-            showTextContent: y = I >= 250,
-            showParticipants: C = !0,
-            volume: v,
-            autoMute: O,
-            onVolumeChange: R,
+            messageId: y,
+            showTextContent: N = I >= 250,
+            showParticipants: v = !0,
+            volume: C,
+            autoMute: R,
+            onVolumeChange: O,
             onMutedChange: b,
             onClick: D,
             onContextMenu: L,
@@ -401,17 +398,17 @@ function eE(e) {
         } = e,
         P = t.width ?? 0,
         x = t.height ?? 0,
-        U = (0, o.bG)([f.A], () => f.A.getBasicChannel(S)?.guild_id, [S]),
-        k = P > 0 && x > 0 ? P / x : 16 / 9,
+        k = (0, o.bG)([h.A], () => h.A.getBasicChannel(S)?.guild_id, [S]),
+        U = P > 0 && x > 0 ? P / x : 16 / 9,
         G = Math.min(P > 0 ? P : A, I),
-        F = G / k;
-    F > T && (G = (F = T) * k), G < A && (F = (G = A) / k);
+        F = G / U;
+    F > T && (G = (F = T) * U), G < A && (F = (G = A) / U);
     let V = Math.round(Math.min(G, I)),
         B = Math.round(Math.min(F, T)),
         H = P > 0 && x > 0 ? Math.min(V / P, B / x, 1) : 1,
         j = (0, c.AE)({ src: n, width: Math.round(P * H), height: Math.round(x * H) }),
         [Y, W] = r.useState(!1),
-        [K, z] = r.useState(!0),
+        [K, $] = r.useState(!0),
         [q, Z] = r.useState(0),
         Q = r.useCallback((e, t) => {
             Number.isFinite(t) && t > 0 && Z((e) => (e === t ? e : t));
@@ -425,12 +422,12 @@ function eE(e) {
                         iconComponent: l.r,
                         label: ec.intl.string(eu.default.hFWVZQ),
                         active: K,
-                        onClick: () => z((e) => !e),
+                        onClick: () => $((e) => !e),
                         "data-testid": "clips-player-speaking-indicators-toggle",
                     },
                 ];
         }, [J, K]),
-        en = (0, _._)({ location: ef.Mu }).externalAnalyticsEnabled,
+        en = (0, _._)({ location: eh.Mu }).externalAnalyticsEnabled,
         ei = r.useMemo(
             () =>
                 en
@@ -459,22 +456,22 @@ function eE(e) {
                     children: [
                         (0, i.jsx)(X.A, {
                             createdAt: null != t.clip_created_at ? Date.parse(t.clip_created_at) : void 0,
-                            participantIds: C ? er : [],
+                            participantIds: v ? er : [],
                             applicationId: t.application?.id,
                             title: t.title,
-                            guildId: U,
+                            guildId: k,
                             playerState: n,
                             isControlBarExpanded: r,
                             isFullScreen: Y,
-                            showTextContent: y,
+                            showTextContent: N,
                         }),
-                        null != N &&
+                        null != y &&
                             null != S &&
                             (0, i.jsx)(e_, {
                                 isControlBarExpanded: r,
                                 isPlayerActive: a,
                                 attachment: t,
-                                messageId: N,
+                                messageId: y,
                                 channelId: S,
                             }),
                         K &&
@@ -482,30 +479,30 @@ function eE(e) {
                             null != s &&
                             null != S &&
                             (0, i.jsx)(et, {
-                                guildId: U,
+                                guildId: k,
                                 timeline: t.clip_events_timeline,
                                 videoRef: s,
                                 userIds: er,
                                 channelId: S,
                             }),
                         a &&
-                            null != U &&
+                            null != k &&
                             (0, i.jsx)(M, {
                                 attachmentId: t.id,
                                 channelId: S,
-                                messageId: N,
-                                guildId: U,
+                                messageId: y,
+                                guildId: k,
                                 videoRef: s,
                                 isControlBarExpanded: r,
                             }),
-                        null != U && (0, i.jsx)($, { attachmentId: t.id, durationSeconds: q, isControlBarExpanded: r }),
+                        null != k && (0, i.jsx)(z, { attachmentId: t.id, durationSeconds: q, isControlBarExpanded: r }),
                     ],
                 });
             },
-            [t, U, Y, C, y, S, N, K, er, q],
+            [t, k, Y, v, N, S, y, K, er, q],
         );
     return (0, i.jsx)("div", {
-        className: a()(eh.kL, { [eh.HA]: g }, s),
+        className: a()(ef.kL, { [ef.HA]: g }, s),
         onClick: (e) => e.stopPropagation(),
         onKeyUp: m ? (e) => e.stopPropagation() : void 0,
         onKeyDown: m ? (e) => e.stopPropagation() : void 0,
@@ -520,10 +517,10 @@ function eE(e) {
             posterPlaceholder: t.placeholder,
             posterPlaceholderVersion: t.placeholder_version,
             active: u,
-            autoplay: h,
-            initialVolume: v,
-            initialMuted: O,
-            onVolumeChange: R,
+            autoplay: f,
+            initialVolume: C,
+            initialMuted: R,
+            onVolumeChange: O,
             onMutedChange: b,
             onProgressUpdate: Q,
             orientation: "landscape",

@@ -11,8 +11,8 @@ var r = n(665260),
     c = n(696451),
     d = n(967198),
     _ = n(225142),
-    f = n(701785),
-    h = n(374084),
+    h = n(701785),
+    f = n(374084),
     p = n(65995),
     E = n(473529),
     m = n(978165),
@@ -39,10 +39,10 @@ class A extends a.A {
             (0, r.Lt)(t ?? 0, g.D.COMPLETED_HOME_ACTIONS)
         ) {
             this.onboardingCompleteGuilds.add(o);
-            let e = f.h.getNewMemberActions(o)?.length ?? 0;
+            let e = h.h.getNewMemberActions(o)?.length ?? 0;
             if (0 === e) return;
             (0, s.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([n.e("60134"), n.e("34934"), n.e("41678"), n.e("63893")]).then(
+                let { default: t } = await Promise.all([n.e("6697"), n.e("34934"), n.e("41678"), n.e("63893")]).then(
                     n.bind(n, 455796),
                 );
                 return (n) => (0, i.jsx)(t, { ...n, initialPercent: (e - 1) / e, numActions: e });
@@ -58,7 +58,7 @@ class A extends a.A {
         if (null == t || null == n) return;
         let { memberActions: i, completedActions: r } = await this._getOrLoadOnboardingMemberActions(t),
             s = i?.find((e) => e.channelId === n);
-        r?.[n] !== !0 && null != s && s.actionType === h.NewMemberActionTypes.VIEW && (0, _.eC)(t, n);
+        r?.[n] !== !0 && null != s && s.actionType === f.NewMemberActionTypes.VIEW && (0, _.eC)(t, n);
     };
     handleMessageSend = (e) => {
         let { guildId: t, channelId: n, message: i } = e;
@@ -78,7 +78,7 @@ class A extends a.A {
     _completeChatAction = async (e, t) => {
         let { memberActions: n, completedActions: i } = await this._getOrLoadOnboardingMemberActions(e),
             r = n?.find((e) => e.channelId === t);
-        i?.[t] !== !0 && null != r && r.actionType === h.NewMemberActionTypes.CHAT && (0, _.eC)(e, t);
+        i?.[t] !== !0 && null != r && r.actionType === f.NewMemberActionTypes.CHAT && (0, _.eC)(e, t);
     };
     _getOrLoadOnboardingMemberActions = async (e) => {
         let t = (0, E.K)(e),
@@ -90,8 +90,8 @@ class A extends a.A {
         return { memberActions: r, completedActions: s };
     };
     _getOrLoadOnboardingHomeSettings = async (e) => {
-        let t = f.h.getNewMemberActions(e),
-            n = f.h.getIsLoading(e);
+        let t = h.h.getNewMemberActions(e),
+            n = h.h.getIsLoading(e);
         if (!(null == t && !n && (0, m.j)(e))) return t;
         {
             let t = await (0, _.ag)(e);

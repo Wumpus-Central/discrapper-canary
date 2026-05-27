@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => y, oE: () => T });
+n.d(t, { Ay: () => N, oE: () => T });
 var i = n(439372),
     r = n(734057),
     s = n(763827),
@@ -12,8 +12,8 @@ n(64700);
 var c = n(192308),
     d = n(174459),
     _ = n(105600),
-    f = n(64175),
-    h = n(652215);
+    h = n(64175),
+    f = n(652215);
 n(100544);
 let p = 3 * o.A.Millis.DAY,
     E = 2 * o.A.Millis.DAY,
@@ -34,8 +34,8 @@ function g(e) {
                 (0, c.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("92646"),
-                            n.e("70750"),
+                            n.e("47412"),
+                            n.e("6697"),
                             n.e("21537"),
                             n.e("54048"),
                             n.e("18943"),
@@ -59,10 +59,10 @@ function g(e) {
                     {
                         onCloseCallback: () => {
                             (0, _.U)(t),
-                                d.default.track(h.HAw.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                                    action: f.Qi.DISMISS,
+                                d.default.track(f.HAw.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                                    action: h.Qi.DISMISS,
                                     channel_id: t,
-                                    warning_medium: f.W_.MODAL,
+                                    warning_medium: h.W_.MODAL,
                                     blocked_user_ids: i,
                                     ignored_user_ids: r,
                                 });
@@ -85,7 +85,7 @@ function S(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return !!(!t && I()) || ((0, l.kP)(e) ?? 0) > Date.now() - E;
 }
-class N extends i.A {
+class y extends i.A {
     actions = { CHANNEL_SELECT: g, APP_STATE_UPDATE: A };
     handleBlockedOrIgnoredUserVoiceChannelJoin(e, t) {
         let i = s.A.getChannelId();
@@ -96,8 +96,8 @@ class N extends i.A {
                 (0, c.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("92646"),
-                            n.e("70750"),
+                            n.e("47412"),
+                            n.e("6697"),
                             n.e("21537"),
                             n.e("35588"),
                             n.e("54048"),
@@ -116,12 +116,12 @@ class N extends i.A {
                     {
                         modalKey: "blocked_user_joined_voice_channel_modal",
                         onCloseCallback: () => {
-                            d.default.track(h.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                                action: f.Qi.DISMISS,
+                            d.default.track(f.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                                action: h.Qi.DISMISS,
                                 channel_id: i,
                                 blocked_user_ids: e ? [t] : [],
                                 ignored_user_ids: e ? [] : [t],
-                                warning_surface: f.gD.POST_JOIN_MODAL,
+                                warning_surface: h.gD.POST_JOIN_MODAL,
                             });
                         },
                     },
@@ -129,4 +129,4 @@ class N extends i.A {
         }
     }
 }
-let y = new N();
+let N = new y();

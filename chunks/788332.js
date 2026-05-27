@@ -1,0 +1,1 @@
+_.exports = { S: "clipTriggerBadge__90e9a", $: "clipTriggerBadgeAvatar__90e9a" };

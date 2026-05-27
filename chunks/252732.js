@@ -13,8 +13,8 @@ n(453771);
 var c = n(427262),
     d = n(228366),
     _ = n(478644),
-    f = n(339984),
-    h = n(375708);
+    h = n(339984),
+    f = n(375708);
 function p(e) {
     let { uploadType: t, guildId: r, analyticsSource: u, filters: c, isTryItOut: p = !1, stackingBehavior: E } = e,
         m = (0, o.Y)(t, r),
@@ -22,7 +22,7 @@ function p(e) {
     (0, s.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
-                n.e("4042"),
+                n.e("77857"),
                 n.e("90665"),
                 n.e("50985"),
                 n.e("63232"),
@@ -46,7 +46,7 @@ function p(e) {
                 (0, i.jsx)(e, {
                     filters: c,
                     maxFileSizeBytes: _.j,
-                    imageSpecifications: t === f.HL.BANNER ? h.intl.string(h.t.IhzZlo) : void 0,
+                    imageSpecifications: t === h.HL.BANNER ? f.intl.string(f.t.IhzZlo) : void 0,
                     onFileSelected: (e) => {
                         g = null != m ? a.A.fromBlob(m, e) : null;
                     },
@@ -55,7 +55,7 @@ function p(e) {
                         null == g && null != m && (g = a.A.fromBlob(m, s));
                         let c = (await g?.getOriginalMd5()) ?? null,
                             _ = s.name.replace(/\.[^/.]+$/, ""),
-                            f = (0, l.Rh)({ filename: _, assetOrigin: n });
+                            h = (0, l.Rh)({ filename: _, assetOrigin: n });
                         !(function (e) {
                             let {
                                 image: t,
@@ -78,7 +78,7 @@ function p(e) {
                             image: (0, l.XB)({
                                 assetOrigin: n,
                                 imageUri: i,
-                                description: f,
+                                description: h,
                                 originalAsset: o,
                                 originalMd5: c,
                             }),

@@ -11,7 +11,7 @@ var r = n(192308),
     c = n(788868),
     d = n(652215);
 function _(e) {
-    let { processedCode: t, channelContext: _, customGiftMessage: f, giftInfo: h } = e,
+    let { processedCode: t, channelContext: _, customGiftMessage: h, giftInfo: f } = e,
         p = !1,
         E = null,
         m = s.default.getCurrentUser(),
@@ -19,7 +19,7 @@ function _(e) {
     (0, r.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
-                n.e("62727"),
+                n.e("6697"),
                 n.e("34816"),
                 n.e("10471"),
                 n.e("35429"),
@@ -34,9 +34,9 @@ function _(e) {
                 (0, i.jsx)(e, {
                     code: t,
                     channelContext: _,
-                    customGiftMessage: f,
-                    emojiName: h?.emoji?.name,
-                    soundId: h?.sound?.id,
+                    customGiftMessage: h,
+                    emojiName: f?.emoji?.name,
+                    soundId: f?.sound?.id,
                     onComplete: (e, t) => {
                         (E = e),
                             t && ((p = t), e.isSubscription && null == a.A.getPremiumSubscription(!1) && (0, u.o)(!0));

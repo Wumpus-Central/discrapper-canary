@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(627968);
 n(64700);
 var r = n(231723),
@@ -11,27 +11,28 @@ var r = n(231723),
     c = n(500049),
     d = n(60809),
     _ = n(652215);
-function f(e) {
-    let { context: t, openInPopout: f, analyticsLocation: h = "open-activity-shelf", initialState: p } = e;
-    f && (0, a.A)(_.MLl.CHANNEL_CALL_POPOUT);
-    let E = f ? r.KX : r.SY;
+function h(e) {
+    let { context: t, openInPopout: h, analyticsLocation: f = "open-activity-shelf", initialState: p } = e;
+    h && (0, a.A)(_.MLl.CHANNEL_CALL_POPOUT);
+    let E = h ? r.KX : r.SY;
     (0, u.k)(c.Se.DISMISSED), (0, u.R)(c.s4.VOICE, void 0, p, "channel" === t.type ? t.channel.id : void 0);
     let m = "contextless" !== t.type && (o.Ay.hasUnread(t.channel.id) || o.Ay.getMentionCount(t.channel.id) > 0);
     return (
         l.default.track(_.HAw.VOICE_PANEL_TAB_OPENED, {
             tab: "activities",
-            location: h,
+            location: f,
             source: c.s4.VOICE,
             is_chat_badged: m,
         }),
         (0, s.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("4042"),
+                    n.e("5956"),
                     n.e("56377"),
-                    n.e("83481"),
-                    n.e("5868"),
-                    n.e("22946"),
+                    n.e("30402"),
+                    n.e("38552"),
+                    n.e("28881"),
+                    n.e("56224"),
                     n.e("34552"),
                     n.e("93103"),
                     n.e("71210"),

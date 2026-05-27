@@ -10,8 +10,8 @@ var i,
     c = n(834730),
     d = n(939249),
     _ = n(789645),
-    f = n(192308),
-    h = n(922016),
+    h = n(192308),
+    f = n(922016),
     p = n(775602),
     E = n(429913),
     m = n(409626),
@@ -20,12 +20,12 @@ var i,
     I = n(311043),
     T = n(569926),
     S = n(363195),
-    N = n(760751),
-    y = n(174459),
-    C = n(486020),
-    v = n(507107),
-    O = n(551875),
-    R = n(18437),
+    y = n(760751),
+    N = n(174459),
+    v = n(486020),
+    C = n(507107),
+    R = n(551875),
+    O = n(18437),
     b = n(590202),
     D = n(73473),
     L = (((i = {}).FETCH_FAILED = "FETCH_FAILED"), (i.NO_GAMES_AVAILABLE = "NO_GAMES_AVAILABLE"), i),
@@ -33,13 +33,13 @@ var i,
     M = n(652215),
     P = n(375708),
     x = n(420298);
-let U = (e) => {
+let k = (e) => {
         let t,
             n,
             i,
             { quest: s, onClose: o } = e,
             l = (0, a.bG)([S.A], () => S.A.getState().theme),
-            f = (0, u.M)(l) ? M.NJ8.DARK : M.NJ8.LIGHT;
+            h = (0, u.M)(l) ? M.NJ8.DARK : M.NJ8.LIGHT;
         return (0, r.jsxs)("div", {
             className: x.N1,
             children: [
@@ -49,7 +49,7 @@ let U = (e) => {
                         (0, r.jsx)("img", {
                             className: x.rC,
                             alt: s.config.messages.gameTitle,
-                            src: (0, O.tW)(s, O.fY.GAME_TILE, f).url,
+                            src: (0, R.tW)(s, R.fY.GAME_TILE, h).url,
                         }),
                         (0, r.jsxs)("div", {
                             className: x.if,
@@ -90,16 +90,16 @@ let U = (e) => {
             ],
         });
     },
-    k = (e) => {
+    U = (e) => {
         let { quest: t, game: i, sourceQuestContent: o, onGameProfileModalOpen: u, onGameProfileModalClose: c } = e,
-            _ = (0, R.Ut)(),
-            h = (0, a.bG)([p.A], () => p.A.useReducedMotion),
+            _ = (0, O.Ut)(),
+            f = (0, a.bG)([p.A], () => p.A.useReducedMotion),
             E = s.useRef(null),
             g = null != i.gameRecord,
             I = () => {
                 _({
                     questId: t.id,
-                    questContent: v.uF.SPONSORED_QUEST_SHEET,
+                    questContent: C.uF.SPONSORED_QUEST_SHEET,
                     questContentCTA: b.Cy.GAME_STORE_OPEN_GAME_LINK,
                     sourceQuestContent: o,
                 });
@@ -108,20 +108,20 @@ let U = (e) => {
                 g &&
                     (_({
                         questId: t.id,
-                        questContent: v.uF.SPONSORED_QUEST_SHEET,
+                        questContent: C.uF.SPONSORED_QUEST_SHEET,
                         questContentCTA: b.Cy.GAME_PROFILE_OPEN,
                         sourceQuestContent: o,
                     }),
-                    await (0, f.openModalLazy)(
+                    await (0, h.openModalLazy)(
                         async () => {
                             let { default: e } = await Promise.all([
                                 n.e("20039"),
                                 n.e("16415"),
                                 n.e("40660"),
-                                n.e("62727"),
+                                n.e("6697"),
                                 n.e("34816"),
                                 n.e("97189"),
-                                n.e("84448"),
+                                n.e("93033"),
                                 n.e("56377"),
                                 n.e("77083"),
                                 n.e("17214"),
@@ -129,23 +129,23 @@ let U = (e) => {
                                 n.e("96330"),
                                 n.e("56159"),
                                 n.e("77049"),
-                                n.e("22946"),
+                                n.e("28881"),
                                 n.e("21838"),
                                 n.e("47412"),
-                                n.e("4042"),
+                                n.e("5956"),
                                 n.e("4222"),
                                 n.e("18090"),
                                 n.e("89001"),
-                                n.e("27546"),
-                                n.e("94863"),
+                                n.e("55990"),
+                                n.e("40805"),
                                 n.e("41229"),
-                                n.e("53694"),
+                                n.e("78385"),
                                 n.e("70682"),
                                 n.e("43535"),
                                 n.e("79705"),
                                 n.e("8641"),
                                 n.e("98394"),
-                                n.e("12453"),
+                                n.e("50150"),
                                 n.e("44910"),
                                 n.e("23924"),
                                 n.e("42205"),
@@ -268,7 +268,6 @@ let U = (e) => {
                                 n.e("28203"),
                                 n.e("96268"),
                                 n.e("54241"),
-                                n.e("78010"),
                                 n.e("93767"),
                                 n.e("1962"),
                                 n.e("7406"),
@@ -298,7 +297,7 @@ let U = (e) => {
             },
             S = s.useCallback(
                 (e) => {
-                    if (null == E.current || h) return;
+                    if (null == E.current || f) return;
                     let t = E.current.getBoundingClientRect(),
                         n = e.clientX - t.left,
                         i = e.clientY - t.top,
@@ -306,18 +305,18 @@ let U = (e) => {
                         s = t.height / 2;
                     E.current.style.transform = `rotateX(${-(((i - s) / s) * 15)}deg) rotateY(${((n - r) / r) * 15}deg)`;
                 },
-                [h],
+                [f],
             ),
-            N = s.useCallback(() => {
-                null == E.current || h || (E.current.style.transform = "rotateX(0deg) rotateY(0deg)");
-            }, [h]);
+            y = s.useCallback(() => {
+                null == E.current || f || (E.current.style.transform = "rotateX(0deg) rotateY(0deg)");
+            }, [f]);
         return (0, r.jsx)(l.m, {
             text: i.name,
             children: (0, r.jsx)(d.D, {
                 className: x.zR,
                 onClick: T,
                 onMouseMove: S,
-                onMouseLeave: N,
+                onMouseLeave: y,
                 children: (0, r.jsx)("div", {
                     ref: E,
                     className: x._M,
@@ -375,7 +374,7 @@ function F(e) {
     } = e;
     (0, E.A)(i), (0, T.x)(i);
     let _ = (0, a.bG)([I.A], () => i.some((e) => I.A.isFetching(e))),
-        h = (0, a.bG)([I.A], () => i.some((e) => I.A.didFetchingFail(e))),
+        f = (0, a.bG)([I.A], () => i.some((e) => I.A.didFetchingFail(e))),
         p = (0, a.yK)([I.A], () =>
             i
                 .map((e) => I.A.getGame(e))
@@ -383,15 +382,15 @@ function F(e) {
                 .filter((e) => (0, g.oS)(e.applicationId))
                 .slice(0, 10),
         ),
-        m = (0, a.bG)([N.A, I.A], () => {
+        m = (0, a.bG)([y.A, I.A], () => {
             let e = new Set(p.map((e) => e.applicationId));
             return i
                 .filter((t) => !e.has(t))
                 .filter((e) => null == I.A.getGame(e))
                 .map((e) => {
-                    let t = N.A.getDetectableGame(e);
+                    let t = y.A.getDetectableGame(e);
                     if (t?.cover_image_hash == null) return null;
-                    let n = C.Ay.getApplicationIconURL({
+                    let n = v.Ay.getApplicationIconURL({
                         id: e,
                         icon: t.cover_image_hash,
                         size: 256,
@@ -424,27 +423,27 @@ function F(e) {
             let e = A.length;
             return e <= 4 ? 4 - e : 5 === e ? 0 : e <= 8 ? 8 - e : 10 - e;
         }, [A.length]),
-        v = !_ && 0 === A.length,
-        O = h || v;
+        C = !_ && 0 === A.length,
+        R = f || C;
     if (
         (s.useEffect(() => {
-            if (O) {
-                let e = h ? L.FETCH_FAILED : L.NO_GAMES_AVAILABLE;
-                y.default.track(M.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
+            if (R) {
+                let e = f ? L.FETCH_FAILED : L.NO_GAMES_AVAILABLE;
+                N.default.track(M.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
                     o(),
-                    (0, f.openModalLazy)(async () => {
+                    (0, h.openModalLazy)(async () => {
                         let { default: e } = await n.e("91646").then(n.bind(n, 659309));
                         return (t) => (0, r.jsx)(e, { ...t });
                     });
             }
-        }, [O, h, t.id, o]),
-        _ && !O)
+        }, [R, f, t.id, o]),
+        _ && !R)
     ) {
         let e = Math.min(i.length, 10);
         return (0, r.jsxs)("div", {
             className: x.kL,
             children: [
-                (0, r.jsx)(U, { quest: t, onClose: o }),
+                (0, r.jsx)(k, { quest: t, onClose: o }),
                 (0, r.jsx)("div", {
                     className: x.LA,
                     children: i.slice(0, e).map((e) => (0, r.jsx)("div", { className: x.Vj }, e)),
@@ -452,7 +451,7 @@ function F(e) {
             ],
         });
     }
-    return O
+    return R
         ? null
         : (0, r.jsxs)("div", {
               ref: (e) => {
@@ -460,13 +459,13 @@ function F(e) {
               },
               className: x.kL,
               children: [
-                  (0, r.jsx)(U, { quest: t, onClose: o }),
+                  (0, r.jsx)(k, { quest: t, onClose: o }),
                   (0, r.jsxs)("div", {
                       className: x.LA,
                       children: [
                           A.map((e) =>
                               (0, r.jsx)(
-                                  k,
+                                  U,
                                   {
                                       quest: t,
                                       game: e,
@@ -494,18 +493,18 @@ function V(e) {
             sourceQuestContent: c,
             impressionRef: d,
         } = e,
-        [_, f] = s.useState(!1),
-        p = (0, R.Ut)(),
+        [_, h] = s.useState(!1),
+        p = (0, O.Ut)(),
         E = s.useRef(null),
         m = t?.current != null,
         g = m ? t : E,
         A = () => {
-            f(!0);
+            h(!0);
         },
         I = () => {
-            f(!1);
+            h(!1);
         };
-    return (0, r.jsx)(h.Y, {
+    return (0, r.jsx)(f.Y, {
         targetElementRef: g,
         clickTrap: !0,
         renderPopout: (e) => {
@@ -546,7 +545,7 @@ let B = function (e) {
         ? null
         : (0, r.jsx)(D.R, {
               questOrQuests: e.quest,
-              questContent: v.uF.SPONSORED_QUEST_SHEET,
+              questContent: C.uF.SPONSORED_QUEST_SHEET,
               sourceQuestContent: e.sourceQuestContent,
               children: (t) => (0, r.jsx)(V, { ...e, impressionRef: t }),
           });
