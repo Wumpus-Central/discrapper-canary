@@ -221,28 +221,6 @@
     flex-shrink: 0
 }
 
-.container__55b8c {
-    background: var(--background-mod-subtle);
-    border: 1px solid var(--border-muted);
-    border-radius: 4px;
-    padding: 12px;
-    position: relative
-}
-
-.spoiler__55b8c {
-    align-items: center;
-    border-radius: 4px;
-    display: flex;
-    inset-block: 0;
-    inset-inline: 0;
-    justify-content: center;
-    position: absolute
-}
-
-.hidden__55b8c {
-    visibility: hidden
-}
-
 .channelHeader__35a7e {
     align-items: center;
     background-color: var(--background-surface-high);
@@ -390,24 +368,4 @@
 .friendRequestsButton__523aa:hover {
     background-color: var(--control-secondary-background-hover);
     color: var(--interactive-text-active)
-}
-
-.container__43a4b {
-    border-radius: var(--radius-sm);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    overflow: hidden;
-    padding: 10px 12px
-}
-
-.buttonContainer__43a4b {
-    align-items: center;
-    display: flex;
-    gap: 8px
-}
-
-.gameIcon__43a4b {
-    vertical-align: bottom
 }

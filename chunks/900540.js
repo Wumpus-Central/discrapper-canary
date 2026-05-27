@@ -529,8 +529,8 @@ var eB = i(685399),
     eQ = i(566668),
     e0 = i(832163),
     e1 = i(565688),
-    e6 = i(533562),
-    e2 = i(927813),
+    e2 = i(533562),
+    e6 = i(927813),
     e7 = i(329554);
 let e3 = (0, i(600975).C)({
     kind: "guild",
@@ -546,8 +546,8 @@ let e3 = (0, i(600975).C)({
     ],
 });
 var e9 = i(699976),
-    e5 = i(415679);
-let e8 = (0, eJ.Fe)({
+    e8 = i(415679);
+let e5 = (0, eJ.Fe)({
     createPromise: () =>
         Promise.all([
             i.e("32757"),
@@ -555,18 +555,17 @@ let e8 = (0, eJ.Fe)({
             i.e("58712"),
             i.e("7966"),
             i.e("37041"),
-            i.e("84576"),
+            i.e("2641"),
             i.e("63941"),
             i.e("25201"),
             i.e("64509"),
             i.e("96330"),
             i.e("84153"),
             i.e("6026"),
-            i.e("95457"),
+            i.e("43970"),
             i.e("21838"),
             i.e("96768"),
             i.e("18090"),
-            i.e("65744"),
             i.e("38149"),
             i.e("91947"),
             i.e("79705"),
@@ -683,10 +682,10 @@ function e4(e) {
         ? (0, l.jsxs)(l.Fragment, {
               children: [
                   c,
-                  (0, l.jsx)(e8, {
-                      className: e5.L,
+                  (0, l.jsx)(e5, {
+                      className: e8.L,
                       applicationId: s,
-                      rewardOfferNoticeClassName: e5.Nh,
+                      rewardOfferNoticeClassName: e8.Nh,
                       userIds: [t.id],
                       location: "voice_channel",
                       guildId: i.guild_id,
@@ -714,9 +713,9 @@ function te(e) {
             activities: en.A.getActivities(t.id, i),
         })),
         h = (0, r.bG)([eE.A], () => eE.A.getVoiceStateForChannel(n, t.id)?.connectedAt),
-        p = null != h ? new Date(h * e2.A.Millis.SECOND).getTime() : null;
+        p = null != h ? new Date(h * e6.A.Millis.SECOND).getTime() : null;
     return (0, l.jsxs)("div", {
-        className: e5.aq,
+        className: e8.aq,
         children: [
             (0, l.jsx)(F.eu, {
                 src: d,
@@ -725,10 +724,10 @@ function te(e) {
                 avatarDecoration: o,
                 status: (0, eK.A)(A) ? z.clD.STREAMING : u === z.clD.OFFLINE ? void 0 : u,
                 isMobile: m,
-                className: e5.my,
+                className: e8.my,
             }),
             (0, l.jsxs)("div", {
-                className: e5.Qq,
+                className: e8.Qq,
                 children: [
                     (0, l.jsx)(T.E, { variant: "text-sm/medium", lineClamp: 1, children: c }),
                     null != p && (0, l.jsx)(eX.z, { textColor: "text-feedback-positive", entry: { start: p } }),
@@ -757,7 +756,7 @@ function tt(e) {
             ((t = (0, eB.Ay)(s)),
             (i = n.useMemo(() => t.filter((e) => e.embeddedActivity.userIds.has(c.id)), [t, c.id])),
             [...(0, eB.Rz)(i).values()]),
-        S = (0, e6.W)(),
+        S = (0, e2.W)(),
         N = (0, e1.m)({ location: "voice_channel_activities" }),
         j = (0, r.bG)([e0.A], () => e0.A.getDetectableIdsToApplicationIds()),
         T = d ?? v,
@@ -840,13 +839,13 @@ function tt(e) {
     });
     return A
         ? (0, l.jsxs)("div", {
-              className: a()(eo.popover, e5.Db),
+              className: a()(eo.popover, e8.Db),
               children: [
                   (0, l.jsx)(te, { user: c, guildId: s.guild_id, channelId: s.id }),
-                  _ && (0, l.jsx)(eW.Ip, { className: a()(eo.popover, e5.XG), children: P }),
+                  _ && (0, l.jsx)(eW.Ip, { className: a()(eo.popover, e8.XG), children: P }),
               ],
           })
-        : (0, l.jsx)(eW.Ip, { className: a()(eo.popover, e5.kL), children: P });
+        : (0, l.jsx)(eW.Ip, { className: a()(eo.popover, e8.kL), children: P });
 }
 var ti = i(325278),
     tl = i(976358);
@@ -936,7 +935,7 @@ let ta = (0, ek.J)(function (e) {
                 let { default: e } = await Promise.all([
                     i.e("37041"),
                     i.e("23531"),
-                    i.e("65744"),
+                    i.e("94881"),
                     i.e("26132"),
                     i.e("46652"),
                     i.e("93190"),

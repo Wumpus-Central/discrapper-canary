@@ -8,10 +8,6 @@
     margin-bottom: 4px
 }
 
-.earlyAccessBadge__4c2e9 {
-    margin-bottom: 8px
-}
-
 .disabledReason__4c2e9 {
     margin-top: 8px;
     opacity: .7
@@ -23,16 +19,23 @@
 
 .sectionLabel__4c2e9 {
     flex-shrink: 0;
-    padding-bottom: 2px;
-    padding-top: 24px
+    padding-bottom: 8px;
+    padding-top: 16px
+}
+
+.variantGroupLabelValue__4c2e9 {
+    color: var(--text-default);
+    font-weight: 600;
+    margin-inline-start: 4px
 }
 
 .variantScrollArea__4c2e9 {
-    flex: 1 1 0;
-    -webkit-mask-image: linear-gradient(180deg, #000 80%, transparent);
-    mask-image: linear-gradient(180deg, #000 80%, transparent);
-    min-height: 0;
+    flex-shrink: 0;
+    -webkit-mask-image: linear-gradient(180deg, #000 85%, transparent);
+    mask-image: linear-gradient(180deg, #000 85%, transparent);
+    max-height: 30px;
     overflow-y: auto;
+    padding-bottom: 4px;
     scrollbar-width: none
 }
 

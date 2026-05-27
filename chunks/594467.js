@@ -14345,7 +14345,7 @@ let mz = function (e) {
                         ? et.A.saveGuild(t.id, { homeHeader: null })
                         : (0, S.openModalLazy)(async () => {
                               let { default: l } = await Promise.all([
-                                  n.e("12616"),
+                                  n.e("8308"),
                                   n.e("5940"),
                                   n.e("12380"),
                                   n.e("93513"),
@@ -18128,7 +18128,8 @@ function hs(e) {
             (0, nF.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("23531"),
-                    n.e("65744"),
+                    n.e("92457"),
+                    n.e("94881"),
                     n.e("26132"),
                     n.e("46652"),
                     n.e("93190"),
@@ -26122,7 +26123,7 @@ function fJ(e) {
                 let l = Ed.A.fromBlob(Ec.f.GUILD_ICON, t);
                 (0, S.openModalLazy)(async () => {
                     let { default: s } = await Promise.all([
-                        n.e("12616"),
+                        n.e("8308"),
                         n.e("5940"),
                         n.e("12380"),
                         n.e("93513"),

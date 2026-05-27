@@ -239,7 +239,7 @@ let q = function (e) {
                 let { PremiumBrandRefreshSubscriptionCancellationModal: s } = await Promise.all([
                     i.e("34218"),
                     i.e("96768"),
-                    i.e("84576"),
+                    i.e("2641"),
                     i.e("9045"),
                     i.e("84820"),
                     i.e("94161"),
@@ -283,7 +283,7 @@ let q = function (e) {
                                 let { PremiumResubscribeModal: e } = await Promise.all([
                                     i.e("65631"),
                                     i.e("58712"),
-                                    i.e("84576"),
+                                    i.e("2641"),
                                     i.e("92443"),
                                     i.e("9045"),
                                     i.e("94161"),
