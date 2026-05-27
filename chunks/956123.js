@@ -65,8 +65,8 @@ var j = r(641150),
     G = r(758836);
 let P = [
         { tab: G.G2.AVATAR_DECORATIONS, labelKey: R.t.dRZYNE },
-        { tab: G.G2.PROFILE_EFFECTS, labelKey: R.t["1cNjtx"] },
         { tab: G.G2.NAMEPLATES, labelKey: R.t.V68Fqz },
+        { tab: G.G2.PROFILE_EFFECTS, labelKey: R.t["1cNjtx"] },
         { tab: G.G2.PROFILE_FRAMES, labelKey: R.t.ecTJkR },
         { tab: G.G2.BUNDLES, labelKey: R.t.FYFpps },
         { tab: G.G2.CATALOG, labelKey: R.t.xFcotU },
@@ -128,7 +128,7 @@ var $ = r(7689),
     B = r(174459),
     H = r(440938),
     q = r(652215),
-    U = r(345832);
+    U = r(113960);
 function z(e) {
     let { handleTransition: t, selectedTab: r, isNarrow: s, hasText: i } = e,
         { searchQuery: c, onSetSearchQuery: d } = (0, A.v)(),
@@ -250,7 +250,7 @@ function er(e) {
         ),
     });
 }
-var el = r(113600);
+var el = r(584512);
 function en(e) {
     let { label: t, icon: r, showNewBadge: n } = e;
     return (0, l.jsxs)(W.E, {
@@ -513,7 +513,7 @@ var eu = r(812729),
     eh = r(486020);
 r(801416);
 var ef = r(518477),
-    eC = r(478511);
+    eC = r(773743);
 function eg(e) {
     let { selectedTab: t, handleTransition: r } = e,
         y = (0, a.bG)([C.default], () => C.default.getCurrentUser()),
