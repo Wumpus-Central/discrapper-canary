@@ -1,4 +1,4 @@
-n.d(t, { dL: () => X, Ay: () => en, oO: () => ee }), n(321073);
+n.d(t, { dL: () => Q, Ay: () => en, oO: () => ee }), n(321073);
 var l = n(627968),
     a = n(64700),
     i = n(575593),
@@ -32,7 +32,7 @@ var l = n(627968),
     L = n(977445),
     O = n(778307),
     D = n(218075),
-    w = n(987723),
+    w = n(578942),
     U = n(615405),
     k = n(45938),
     Y = n(937008),
@@ -65,8 +65,8 @@ var Z = n(375708),
     z = n(319820),
     J = n(327105),
     $ = n(594387);
-let X = (e) => e.name,
-    Q = {
+let Q = (e) => e.name,
+    X = {
         [i.R.BUNDLE]: () => Z.intl.string(J.default["jM8/71"]),
         [i.R.AVATAR_DECORATION]: () => Z.intl.string(J.default.r29Oel),
         [i.R.PROFILE_EFFECT]: () => Z.intl.string(J.default.eTYAvF),
@@ -76,7 +76,7 @@ let X = (e) => e.name,
     ee = (e) => {
         let t = Z.intl.string(J.default.iZe9Wy);
         if (null == e);
-        else if (e.type in Q) return (0, Q[e.type])();
+        else if (e.type in X) return (0, X[e.type])();
         return t;
     },
     et = (e) => {
@@ -100,7 +100,7 @@ let X = (e) => e.name,
                         if (null != n) {
                             let { discount: e, basePrice: a, showTaxes: i } = (0, z.yh)({ invoicePreview: n });
                             return (
-                                l.push({ id: "sku", label: X(t), amount: a }),
+                                l.push({ id: "sku", label: Q(t), amount: a }),
                                 null != e &&
                                     l.push({
                                         id: "discount",
@@ -160,7 +160,7 @@ let X = (e) => e.name,
                             {
                                 ...c,
                                 ...p,
-                                label: X(t),
+                                label: Q(t),
                                 description: u,
                                 graphic: d,
                                 target: null != o ? { type: "gift", user: o } : void 0,
@@ -257,9 +257,9 @@ function en(e) {
             _()(null != V, "SKU must exist and be fetched."), _()(null != d, "Application must exist.");
             let J = (0, L.u)(d.id),
                 $ = f.M.EEA_COUNTRIES.has(U.A.ipCountryCodeWithFallback),
-                X = s === F.h.PURCHASING || s === F.h.COMPLETED,
-                Q = A.find((e) => e.id === u) ?? null,
-                ee = null != Q ? Q.type : null,
+                Q = s === F.h.PURCHASING || s === F.h.COMPLETED,
+                X = A.find((e) => e.id === u) ?? null,
+                ee = null != X ? X.type : null,
                 et = null != z && z.length > 0 && (null == u || null === ee) && c ? D.fU.SELECT_PAYMENT_METHOD : void 0,
                 en = V.productLine === H.EZt.SOCIAL_LAYER_GAME_ITEM,
                 el = T && !en,
@@ -268,8 +268,7 @@ function en(e) {
                         testModeWarning: J ? Z.intl.string(Z.t.OvMyMd) : null,
                         devShelfError:
                             (0, v.n)(d, H.gfo.EMBEDDED) && h === N.$.ERROR ? Z.intl.string(Z.t.tAmECt) : null,
-                        socialLayerGameItemDisclaimer:
-                            en && B && !W && !P ? (0, w.k3)(d, { location: "OneTimePurchaseReviewState" }) : null,
+                        socialLayerGameItemDisclaimer: en && B && !W && !P ? (0, w.k3)(d) : null,
                     }),
                     [J, d, h, en, B, W, P],
                 ),
@@ -284,7 +283,7 @@ function en(e) {
                                       onChange: r,
                                       forceShow: !0,
                                       showWithdrawalWaiver: $,
-                                      disabled: X,
+                                      disabled: Q,
                                       subscriptionPlan: null,
                                       finePrintClassname: q.i,
                                       purchaseType: m,
@@ -301,7 +300,7 @@ function en(e) {
                                       }),
                                   }),
                               }),
-                    [t, n, r, $, X, m, P, ee, p, V.productLine, d.name, d.id, B, W],
+                    [t, n, r, $, Q, m, P, ee, p, V.productLine, d.name, d.id, B, W],
                 );
             return {
                 sku: V,
@@ -318,7 +317,7 @@ function en(e) {
                 warningAndErrorMessages: ea,
                 purchaseTermsAndLegalContent: ei,
                 eligiblePaymentGateways: z,
-                disabled: X,
+                disabled: Q,
             };
         })({ hasLegalTermsFlash: t, legalTermsNodeRef: n }),
         P = a.useMemo(() => ({ paymentGatewayRestrictions: m, shouldUseUnifiedCheckoutUI: !0 }), [m]),

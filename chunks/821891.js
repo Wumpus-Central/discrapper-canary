@@ -1,12 +1,12 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => E });
 var l = n(627968);
 n(64700);
 var a = n(881489),
     i = n(367921),
-    r = n(987723),
+    r = n(578942),
     s = n(739508),
     o = n(975571),
-    u = n(927578),
+    u = n(428262),
     c = n(580630),
     d = n(615396),
     p = n(652215),
@@ -14,26 +14,26 @@ var a = n(881489),
     h = n(788868),
     C = n(375708),
     A = n(516442);
-function E(e) {
+function y(e) {
     let t,
         n,
         A,
-        E,
+        y,
         {
-            subscriptionPlan: y,
+            subscriptionPlan: E,
             isGift: P,
             isTrial: S,
             isOrbCheckout: _,
-            isEmbeddedIAP: T,
-            renewalInvoice: f,
-            paymentSourceType: N,
+            isEmbeddedIAP: f,
+            renewalInvoice: T,
+            paymentSourceType: I,
             hide: x,
-            purchaseType: I,
+            purchaseType: N,
             productLine: g,
             proratedAmount: v,
             basePrice: M,
-            currentSubscription: j,
-            skuId: b,
+            currentSubscription: b,
+            skuId: j,
             applicationName: R,
             applicationId: L,
             hasAlreadyLinked: O,
@@ -41,17 +41,17 @@ function E(e) {
         D = (0, a.ds)();
     if (x) return null;
     let w = null == e.planGroup ? [] : e.planGroup;
-    if (null != f) {
-        let e = u.Ay.getIntervalForInvoice(f);
+    if (null != T) {
+        let e = u.Ay.getIntervalForInvoice(T);
         (t = e.intervalType),
             (n = e.intervalCount),
-            (A = (0, c.CE)((0, c.$g)(f.total, f.currency), t, n)),
-            (E = (0, c.CE)((0, c.$g)(f.subtotal, f.currency), t, n));
-    } else null != y && ((t = y.interval), (n = y.intervalCount));
+            (A = (0, c.CE)((0, c.$g)(T.total, T.currency), t, n)),
+            (y = (0, c.CE)((0, c.$g)(T.subtotal, T.currency), t, n));
+    } else null != E && ((t = E.interval), (n = E.intervalCount));
     let U = (0, i.Ro)({
-            purchaseType: I ?? p.VVm.SUBSCRIPTION,
-            plan: y,
-            premiumSubscription: null == j ? null : j,
+            purchaseType: N ?? p.VVm.SUBSCRIPTION,
+            plan: E,
+            premiumSubscription: null == b ? null : b,
             productLine: g,
             isGift: !!P,
             planGroup: w,
@@ -66,14 +66,14 @@ function E(e) {
         G = C.intl.format(C.t.xlJyOM, { virtualGoodsURL: p.X7G.PAID_TERMS_VIRTUAL_GOODS, paidURL: p.X7G.PAID_TERMS });
         let e = "";
         (e =
-            b === m.Dp.ORB_PROFILE_BADGE
+            j === m.Dp.ORB_PROFILE_BADGE
                 ? C.intl.string(C.t.APcKRo)
-                : b === m.Dp.FRACTIONAL_PREMIUM
+                : j === m.Dp.FRACTIONAL_PREMIUM
                   ? C.intl.string(C.t.FhJ74j)
                   : C.intl.string(C.t["Sxed/G"])),
             Array.isArray(G) ? (G = [...G, ` ${e}`]) : (G += ` ${e}`);
-    } else if (T)
-        if (null != A && f?.subscriptionPeriodEnd != null) G = C.intl.format(C.t["2VPTay"], { subtotalRate: E });
+    } else if (f)
+        if (null != A && T?.subscriptionPeriodEnd != null) G = C.intl.format(C.t["2VPTay"], { subtotalRate: y });
         else
             switch (t) {
                 case h.WT.MONTH:
@@ -88,7 +88,7 @@ function E(e) {
                 default:
                     throw Error(`Unexpected interval: ${t}`);
             }
-    else if (I === p.VVm.ONE_TIME)
+    else if (N === p.VVm.ONE_TIME)
         switch (g) {
             case p.EZt.COLLECTIBLES:
                 (F = k),
@@ -101,16 +101,14 @@ function E(e) {
                 break;
             case p.EZt.SOCIAL_LAYER_GAME_ITEM:
                 (F = k),
-                    (G = (0, r._z)(
-                        null != L ? { id: L, name: R ?? "game's" } : void 0,
-                        { shouldAppendDisclaimer: !0 === P || !0 === O },
-                        { location: "LegalFinePrint" },
-                    ));
+                    (G = (0, r._z)(null != L ? { id: L, name: R ?? "game's" } : void 0, {
+                        shouldAppendDisclaimer: !0 === P || !0 === O,
+                    }));
                 break;
             default:
                 (F = Y), (G = "");
         }
-    else if (null == y || P)
+    else if (null == E || P)
         switch ((P && (F = k), t)) {
             case h.WT.MONTH:
                 (G = P ? C.intl.string(C.t.IjNapk) : C.intl.string(C.t["/sGXPr"])),
@@ -134,8 +132,8 @@ function E(e) {
             a = (0, i.Ro)({
                 productLine: g,
                 purchaseType: p.VVm.SUBSCRIPTION,
-                plan: y,
-                premiumSubscription: null == j ? null : j,
+                plan: E,
+                premiumSubscription: null == b ? null : b,
                 isGift: !1,
                 planGroup: w,
                 isPrepaidPaymentSource: !1,
@@ -148,8 +146,8 @@ function E(e) {
                     return (0, s.pM)(e, { tags: { planId: l ?? "none" } }), null;
                 }
                 return (0, c.CE)((0, c.$g)(e.amount, e.currency), t, n);
-            })(M, t, n, y.id)),
-            (G = j?.isPausedAllowsResumeButNotUpdates
+            })(M, t, n, E.id)),
+            (G = b?.isPausedAllowsResumeButNotUpdates
                 ? C.intl.format(C.t.B6oNwB, {
                       primaryText: a,
                       rate: l,
@@ -157,7 +155,7 @@ function E(e) {
                       contactLink: p.X7G.CONTACT,
                       helpdeskArticle: o.A.getArticleURL(p.MVz.BILLING),
                   })
-                : null != j && (0, d.vT)(j, y.id, w)
+                : null != b && (0, d.vT)(b, E.id, w)
                   ? C.intl.format(C.t.LyBQUW, {
                         primaryText: a,
                         rate: l,
@@ -175,14 +173,14 @@ function E(e) {
                     : D
                       ? C.intl.format(C.t.Oo2FeS, {
                             buttonText: a,
-                            interval: u.Ay.formatInterval(y?.interval),
+                            interval: u.Ay.formatInterval(E?.interval),
                             cancelSubscriptionArticle: o.A.getArticleURL(p.MVz.PREMIUM_DETAILS_CANCEL_SUB),
                             paidServiceTermsArticle: o.A.getArticleURL(p.MVz.PAID_TERMS),
                         })
                       : S
                         ? C.intl.format(C.t["Hvo/Z5"], {
                               buttonText: a,
-                              interval: u.Ay.formatInterval(y?.interval),
+                              interval: u.Ay.formatInterval(E?.interval),
                               cancelSubscriptionArticle: o.A.getArticleURL(p.MVz.PREMIUM_DETAILS_CANCEL_SUB),
                               paidServiceTermsArticle: o.A.getArticleURL(p.MVz.PAID_TERMS),
                           })
@@ -191,7 +189,7 @@ function E(e) {
                                 primaryText: a,
                                 proratedAmount: (0, c.$g)(v, M.currency),
                                 renewalAmount: (0, c.$g)(M.amount, M.currency),
-                                rateInterval: u.Ay.formatInterval(y?.interval),
+                                rateInterval: u.Ay.formatInterval(E?.interval),
                                 paidURL: p.X7G.PAID_TERMS,
                                 contactLink: p.X7G.CONTACT,
                                 helpdeskArticle: o.A.getArticleURL(p.MVz.BILLING),
@@ -208,11 +206,11 @@ function E(e) {
         children: [
             "" !== F && (0, l.jsx)("div", { children: F }),
             "" !== G && (0, l.jsx)("div", { children: G }),
-            N === p.hes.PAYSAFE_CARD && (0, l.jsx)("div", { children: C.intl.string(C.t.kj9VLI) }),
-            N === p.hes.SOFORT && (0, l.jsx)("div", { children: C.intl.string(C.t["UYy1/h"]) }),
+            I === p.hes.PAYSAFE_CARD && (0, l.jsx)("div", { children: C.intl.string(C.t.kj9VLI) }),
+            I === p.hes.SOFORT && (0, l.jsx)("div", { children: C.intl.string(C.t["UYy1/h"]) }),
         ],
     });
 }
-let y = function (e) {
-    return (0, l.jsx)("div", { className: A.F, children: (0, l.jsx)(E, { ...e }) });
+let E = function (e) {
+    return (0, l.jsx)("div", { className: A.F, children: (0, l.jsx)(y, { ...e }) });
 };
