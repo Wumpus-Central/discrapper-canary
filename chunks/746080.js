@@ -16,6 +16,7 @@ var i,
         (i.GUILD_BOOSTS = "boosts"),
         (i.GAME_SERVERS = "game-servers"),
         (i.REPORT_TO_MOD = "report-to-mod"),
+        (i.GUILD_OFFICIAL_MESSAGES = "official-messages"),
         i);
 let a = new Set(Object.values(s));
 function o(e) {

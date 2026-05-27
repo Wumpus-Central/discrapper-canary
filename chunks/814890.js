@@ -1,40 +1,41 @@
 "use strict";
 n.d(t, {
     Lr: () => A,
-    ZV: () => O,
+    We: () => S,
+    ZV: () => v,
     c7: () => g,
-    j2: () => N,
+    j2: () => C,
     kC: () => T,
     p4: () => I,
     so: () => y,
-    wT: () => S,
+    wT: () => N,
     zv: () => m,
 });
-var r = n(835245),
-    i = n(317097),
+var i = n(835245),
+    r = n(317097),
     s = n(155718),
     a = n(626584),
     o = n(337591),
     l = n(731068),
     u = n(486020),
-    d = n(403362),
-    c = n(661191),
+    c = n(403362),
+    d = n(935208),
     _ = n(489414),
     f = n(532294),
-    E = n(985018);
-let h = new a.A("InteractionComponentUtils"),
-    p = (e, t) => ({
+    h = n(375708);
+let p = new a.A("InteractionComponentUtils"),
+    E = (e, t) => ({
         id: e.id,
         name: e.name,
         animated: e.animated,
         src: t && null != e.id ? u.Ay.getEmojiURL({ id: e.id, animated: e.animated || !1, size: 48 }) : void 0,
     }),
     m = (e, t, n) => {
-        let r =
+        let i =
             e?.data.interactionType === s.G4.MESSAGE_COMPONENT && e?.state === o.m.FAILED ? e.data.componentId : null;
         if (
             null !=
-            (null != r
+            (null != i
                 ? (function (e, t) {
                       switch (e.type) {
                           case s.I5.ACTION_ROW:
@@ -45,19 +46,19 @@ let h = new a.A("InteractionComponentUtils"),
                           case s.I5.CONTAINER:
                               return e.components.find((e) => e.id === t) ?? null;
                       }
-                  })(n, r)
+                  })(n, i)
                 : null)
         )
             return (
-                t?.interactionError ?? (e?.errorCode === 429 ? E.intl.string(E.t.fitPBS) : E.intl.string(E.t.VCsUJu))
+                t?.interactionError ?? (e?.errorCode === 429 ? h.intl.string(h.t.fitPBS) : h.intl.string(h.t.VCsUJu))
             );
     };
 function g(e) {
-    return e.placeholder ?? E.intl.string(E.t.Otr6W2);
+    return e.placeholder ?? h.intl.string(h.t.Otr6W2);
 }
 function A(e, t) {
-    let { minValues: n, required: r } = e;
-    return "modal" === t ? !r : 0 === n;
+    let { minValues: n, required: i } = e;
+    return "modal" === t ? !i : 0 === n;
 }
 function I(e) {
     let t = new Map();
@@ -83,10 +84,23 @@ function T(e) {
         .join("\n");
     return "" !== t ? t : null;
 }
-function S(e, t) {
+function S(e) {
+    for (let t of I(e).values())
+        if (t.type === s.I5.MEDIA_GALLERY) {
+            let e = t.items[0];
+            if (null == e) continue;
+            let n = (0, l.FE)(e.media);
+            if ("INVALID" !== n) return { ...e.media, type: n, alt: e.description };
+        } else if (t.type === s.I5.THUMBNAIL) {
+            let e = (0, l.FE)(t.media);
+            if ("INVALID" !== e) return { ...t.media, type: e, alt: t.description };
+        }
+    return null;
+}
+function N(e, t) {
     return (function e(n) {
-        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        for (let i of n) {
+        let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        for (let r of n) {
             let n = (function (e) {
                 switch (e.type) {
                     case s.I5.ACTION_ROW:
@@ -117,20 +131,20 @@ function S(e, t) {
                     case s.I5.CHECKBOX:
                         return [];
                     default:
-                        return h.warn("getComponentChildren: Unknown component type", e.type), [];
+                        return p.warn("getComponentChildren: Unknown component type", e.type), [];
                 }
-            })(i);
-            if (n.some((e) => e.id === t.id)) return [i, ...r];
-            let a = e(n, [i, ...r]);
+            })(r);
+            if (n.some((e) => e.id === t.id)) return [r, ...i];
+            let a = e(n, [r, ...i]);
             if (null != a) return a;
         }
         return null;
     })(e);
 }
 function y(e) {
-    return JSON.stringify({ type: "component-upload", containerId: e, uniqueId: crypto.randomUUID?.() ?? (0, r.A)() });
+    return JSON.stringify({ type: "component-upload", containerId: e, uniqueId: crypto.randomUUID?.() ?? (0, i.A)() });
 }
-function N(e) {
+function C(e) {
     try {
         let t = JSON.parse(e);
         if (t?.type !== "component-upload" || "string" != typeof t.containerId || "string" != typeof t.uniqueId)
@@ -140,7 +154,7 @@ function N(e) {
         return null;
     }
 }
-function O(e) {
+function v(e) {
     return e
         .map((e, t) =>
             (function e(t, n) {
@@ -177,20 +191,20 @@ function O(e) {
                     })(t.type)
                 )
                     return null;
-                function r(t, r) {
-                    let i = e(t, [...n, r]);
-                    return null == i ? null : i;
+                function i(t, i) {
+                    let r = e(t, [...n, i]);
+                    return null == r ? null : r;
                 }
                 switch (t.type) {
                     case s.I5.ACTION_ROW: {
-                        let e = t.components.map((e, t) => r(e, t)).filter(d.Vq);
-                        return { type: s.I5.ACTION_ROW, id: R(n), components: e };
+                        let e = t.components.map((e, t) => i(e, t)).filter(c.Vq);
+                        return { type: s.I5.ACTION_ROW, id: O(n), components: e };
                     }
                     case s.I5.BUTTON: {
-                        let e = null != t.emoji ? p(t.emoji, !1) : void 0;
+                        let e = null != t.emoji ? E(t.emoji, !1) : void 0;
                         return {
                             type: s.I5.BUTTON,
-                            id: R(n),
+                            id: O(n),
                             customId: t.custom_id,
                             style: t.style,
                             disabled: t.disabled,
@@ -203,7 +217,7 @@ function O(e) {
                     case s.I5.STRING_SELECT:
                         return {
                             type: s.I5.STRING_SELECT,
-                            id: R(n),
+                            id: O(n),
                             customId: t.custom_id,
                             disabled: t.disabled,
                             required: t.required ?? !1,
@@ -213,7 +227,7 @@ function O(e) {
                                 value: e.value,
                                 default: e.default,
                                 description: e.description,
-                                emoji: null != e.emoji ? p(e.emoji, !1) : void 0,
+                                emoji: null != e.emoji ? E(e.emoji, !1) : void 0,
                             })),
                             placeholder: t.placeholder,
                             minValues: t.min_values,
@@ -222,7 +236,7 @@ function O(e) {
                     case s.I5.TEXT_INPUT:
                         return {
                             type: t.type,
-                            id: R(n),
+                            id: O(n),
                             style: t.style,
                             customId: t.custom_id,
                             label: t.label,
@@ -236,7 +250,7 @@ function O(e) {
                     case s.I5.USER_SELECT:
                         return {
                             type: s.I5.USER_SELECT,
-                            id: R(n),
+                            id: O(n),
                             customId: t.custom_id,
                             disabled: t.disabled,
                             required: t.required ?? !1,
@@ -248,7 +262,7 @@ function O(e) {
                     case s.I5.ROLE_SELECT:
                         return {
                             type: s.I5.ROLE_SELECT,
-                            id: R(n),
+                            id: O(n),
                             customId: t.custom_id,
                             disabled: t.disabled,
                             required: t.required ?? !1,
@@ -260,7 +274,7 @@ function O(e) {
                     case s.I5.MENTIONABLE_SELECT:
                         return {
                             type: s.I5.MENTIONABLE_SELECT,
-                            id: R(n),
+                            id: O(n),
                             customId: t.custom_id,
                             disabled: t.disabled,
                             required: t.required ?? !1,
@@ -272,7 +286,7 @@ function O(e) {
                     case s.I5.CHANNEL_SELECT:
                         return {
                             type: s.I5.CHANNEL_SELECT,
-                            id: R(n),
+                            id: O(n),
                             customId: t.custom_id,
                             disabled: t.disabled,
                             required: t.required ?? !1,
@@ -283,17 +297,17 @@ function O(e) {
                             defaultValues: t.default_values,
                         };
                     case s.I5.SECTION: {
-                        let e = t.components.map((e, t) => r(e, t)).filter(d.Vq),
-                            i = r(t.accessory, e.length);
-                        if (0 === e.length || null == i) return null;
-                        return { type: s.I5.SECTION, id: R(n), components: e, accessory: i };
+                        let e = t.components.map((e, t) => i(e, t)).filter(c.Vq),
+                            r = i(t.accessory, e.length);
+                        if (0 === e.length || null == r) return null;
+                        return { type: s.I5.SECTION, id: O(n), components: e, accessory: r };
                     }
                     case s.I5.TEXT_DISPLAY:
-                        return { type: s.I5.TEXT_DISPLAY, id: R(n), content: t.content };
+                        return { type: s.I5.TEXT_DISPLAY, id: O(n), content: t.content };
                     case s.I5.THUMBNAIL:
                         return {
                             type: s.I5.THUMBNAIL,
-                            id: R(n),
+                            id: O(n),
                             media: (0, l.Uv)(t.media),
                             description: t.description,
                             spoiler: t.spoiler,
@@ -301,7 +315,7 @@ function O(e) {
                     case s.I5.MEDIA_GALLERY:
                         return {
                             type: s.I5.MEDIA_GALLERY,
-                            id: R(n),
+                            id: O(n),
                             items: t.items.map((e) => ({
                                 media: (0, l.Uv)(e.media),
                                 description: e.description,
@@ -311,7 +325,7 @@ function O(e) {
                     case s.I5.FILE:
                         return {
                             type: s.I5.FILE,
-                            id: R(n),
+                            id: O(n),
                             file: (0, l.Uv)(t.file),
                             name: t.name,
                             size: t.size,
@@ -320,7 +334,7 @@ function O(e) {
                     case s.I5.SEPARATOR:
                         return {
                             type: s.I5.SEPARATOR,
-                            id: R(n),
+                            id: O(n),
                             divider: t.divider ?? !0,
                             spacing: t.spacing ?? s.C8.SMALL,
                         };
@@ -328,28 +342,28 @@ function O(e) {
                         if (null == t.content_inventory_entry) return null;
                         return {
                             type: s.I5.CONTENT_INVENTORY_ENTRY,
-                            id: R(n),
+                            id: O(n),
                             contentInventoryEntry: t.content_inventory_entry,
                         };
                     case s.I5.CONTAINER: {
-                        let e = t.components.map((e, t) => r(e, t)).filter(d.Vq);
+                        let e = t.components.map((e, t) => i(e, t)).filter(c.Vq);
                         return {
                             type: s.I5.CONTAINER,
-                            id: R(n),
-                            accentColor: null != t.accent_color ? (0, i.$k)(t.accent_color, !0) : void 0,
+                            id: O(n),
+                            accentColor: null != t.accent_color ? (0, r.$k)(t.accent_color, !0) : void 0,
                             spoiler: t.spoiler,
                             components: e,
                         };
                     }
                     case s.I5.LABEL: {
-                        let e = r(t.component, 0);
+                        let e = i(t.component, 0);
                         if (null == e) return null;
-                        return { type: s.I5.LABEL, id: R(n), label: t.label, description: t.description, component: e };
+                        return { type: s.I5.LABEL, id: O(n), label: t.label, description: t.description, component: e };
                     }
                     case s.I5.FILE_UPLOAD:
                         return {
                             type: t.type,
-                            id: R(n),
+                            id: O(n),
                             customId: t.custom_id,
                             disabled: t.disabled,
                             required: t.required ?? !1,
@@ -365,7 +379,7 @@ function O(e) {
                             (u = a.checkpoint_data).version === f.w.V2025
                                 ? {
                                       type: a.type,
-                                      id: R(o),
+                                      id: O(o),
                                       checkpointData: {
                                           version: u.version,
                                           cardId: u.card_id,
@@ -385,7 +399,7 @@ function O(e) {
                                           topEmoji:
                                               null != u.top_emoji
                                                   ? {
-                                                        emojiId: c.default.isProbablyAValidSnowflake(
+                                                        emojiId: d.default.isProbablyAValidSnowflake(
                                                             u.top_emoji.emoji_id,
                                                         )
                                                             ? u.top_emoji.emoji_id
@@ -408,7 +422,7 @@ function O(e) {
                     case s.I5.RADIO_GROUP:
                         return {
                             type: t.type,
-                            id: R(n),
+                            id: O(n),
                             customId: t.custom_id,
                             options: t.options,
                             required: t.required ?? !1,
@@ -416,7 +430,7 @@ function O(e) {
                     case s.I5.CHECKBOX_GROUP:
                         return {
                             type: t.type,
-                            id: R(n),
+                            id: O(n),
                             customId: t.custom_id,
                             options: t.options,
                             minValues: t.min_values,
@@ -424,14 +438,14 @@ function O(e) {
                             required: t.required ?? !1,
                         };
                     case s.I5.CHECKBOX:
-                        return { type: t.type, id: R(n), customId: t.custom_id, default: t.default };
+                        return { type: t.type, id: O(n), customId: t.custom_id, default: t.default };
                     default:
-                        return h.warn("transformComponent: Unknown component type", t.type), null;
+                        return p.warn("transformComponent: Unknown component type", t.type), null;
                 }
             })(e, [t]),
         )
         .filter((e) => null != e);
 }
-function R(e) {
+function O(e) {
     return (0, _.X1)(e.join(","));
 }

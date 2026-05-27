@@ -19,4 +19,5 @@ var i,
         (i.GUILD_BOOSTS = "guild-boosts"),
         (i.GAME_SERVERS = "game-servers"),
         (i.GAME_SERVERS_EMPTY = "game-servers-empty"),
+        (i.GUILD_OFFICIAL_MESSAGES = "official-messages"),
         i);

@@ -1,19 +1,29 @@
 "use strict";
-n.d(t, { FE: () => E, IS: () => d, Rr: () => h, Uv: () => _, aG: () => f, e5: () => c, oU: () => p, rq: () => m }),
+n.d(t, {
+    FE: () => h,
+    IS: () => c,
+    Rr: () => p,
+    Uv: () => _,
+    aG: () => f,
+    e5: () => d,
+    fj: () => g,
+    oU: () => E,
+    rq: () => m,
+}),
     n(938796);
-var r,
-    i,
+var i,
+    r,
     s = n(665260),
     a = n(155718),
-    o = n(77350),
+    o = n(59318),
     l = n(998218),
     u = n(652215),
-    d =
-        (((r = {})[(r.EXPLICIT = 1)] = "EXPLICIT"),
-        (r[(r.GORE = 2)] = "GORE"),
-        (r[(r.SELF_HARM = 4)] = "SELF_HARM"),
-        r),
-    c = (((i = {})[(i.IS_ANIMATED = 1)] = "IS_ANIMATED"), i);
+    c =
+        (((i = {})[(i.EXPLICIT = 1)] = "EXPLICIT"),
+        (i[(i.GORE = 2)] = "GORE"),
+        (i[(i.SELF_HARM = 4)] = "SELF_HARM"),
+        i),
+    d = (((r = {})[(r.IS_ANIMATED = 1)] = "IS_ANIMATED"), r);
 function _(e) {
     var t;
     return {
@@ -55,14 +65,14 @@ function f(e) {
         }
     );
 }
-function E(e) {
+function h(e) {
     return (0, o.tT)(e.contentType)
         ? "IMAGE"
         : (0, o.XB)(e.contentType) && null != e.proxyUrl && null != l.A.toURLSafe(e.proxyUrl)
           ? "VIDEO"
           : "INVALID";
 }
-function h(e, t) {
+function p(e, t) {
     return {
         ...f(e),
         type: (0, o.u)(e.filename) ? "IMAGE" : (0, o.AE)(e.filename) ? "VIDEO" : "INVALID",
@@ -73,7 +83,7 @@ function h(e, t) {
         },
     };
 }
-function p(e, t, n) {
+function E(e, t, n) {
     return {
         type: n,
         url: e.url,
@@ -88,4 +98,12 @@ function p(e, t, n) {
 }
 function m(e) {
     return null != e.width && e.width > 0 && null != e.height && e.height > 0;
+}
+function g(e) {
+    if (null == e) return null;
+    if ("VIDEO" === e.type && null != e.proxyUrl) {
+        let t = l.A.toURLSafe(e.proxyUrl);
+        return null == t ? null : (t.searchParams.append("format", "webp"), t.toString());
+    }
+    return e.proxyUrl ?? e.url ?? null;
 }
