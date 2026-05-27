@@ -265,7 +265,7 @@ function e_() {
                       subscriptionRequired: !0,
                       progress: l.getDate() / u,
                       ctaText: $.intl.string($.t.w7s5Qr),
-                      onCtaClick: () => (0, el.P)({ partnerId: eu.XY }),
+                      onCtaClick: () => (0, el.P)({ partnerId: eu.XY, analyticsLocations: e }),
                       blurTint: "#2E213D",
                       backgroundAssetUrl:
                           "https://cdn.discordapp.com/assets/content/2cc5d80403549735a2556ca7fd31d7b773826f7e46cd2a301aadb2330059d323.svg",
@@ -887,7 +887,7 @@ let tm = (e) => {
                                                           await Promise.all([
                                                               n.e("34218"),
                                                               n.e("53941"),
-                                                              n.e("74974"),
+                                                              n.e("23015"),
                                                               n.e("53153"),
                                                               n.e("31477"),
                                                               n.e("54275"),
@@ -1050,7 +1050,7 @@ let tv = function (e) {
                             let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
                                 n.e("34218"),
                                 n.e("53941"),
-                                n.e("74974"),
+                                n.e("23015"),
                                 n.e("53153"),
                                 n.e("31477"),
                                 n.e("54275"),

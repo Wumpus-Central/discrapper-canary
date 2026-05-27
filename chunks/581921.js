@@ -144,8 +144,12 @@ let S = {
         });
     },
     v = (e) => {
-        let { partnerId: t } = e;
-        c.default.track(g.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { partner_id: t }),
+        let { partnerId: t, analyticsLocations: r } = e;
+        c.default.track(g.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, {
+            partner_ids: [t],
+            partner_id: t,
+            location_stack: r,
+        }),
             _.Ay.fetchActivePromotions(),
             (0, l.openModalLazy)(async () => {
                 let { ThirdPartyPromotionsModal: e } = await Promise.resolve().then(n.bind(n, 581921));

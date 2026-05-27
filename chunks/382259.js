@@ -193,7 +193,7 @@ let L = (e) => {
     },
     P = (e) => {
         let { analyticsLocations: t, partnerIds: r } = e;
-        f.default.track(b.HAw.RECURRING_PROMOTION_MODAL_OPENED, { location_stack: t }),
+        f.default.track(b.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { location_stack: t, partner_ids: r }),
             A.Ay.fetchActivePromotions(),
             (0, c.openModalLazy)(async () => {
                 let { Premium3PRewardsModalEntry: e } = await Promise.all([n.e("967"), n.e("91900")]).then(
