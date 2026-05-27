@@ -7,5 +7,4 @@ e.exports = {
     qS: "badge__553bf",
     q2: "shine__553bf",
     ys: "glow__553bf",
-    ut: "questHomeHeroTooltipImage__553bf",
 };

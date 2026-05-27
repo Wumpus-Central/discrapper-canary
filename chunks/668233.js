@@ -1763,7 +1763,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 551836, Version Hash: 50794fd2822194353dbfd1328610ae07855decdd`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 551868, Version Hash: 50ed3809e2fa836191122415ae210ce3a8f82b37`,
 ),
     ev.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -7136,8 +7136,8 @@ let up = 15 * n5.A.Millis.MINUTE,
                             n.e("13848"),
                             n.e("39214"),
                             n.e("99108"),
-                            n.e("14878"),
                             n.e("88307"),
+                            n.e("14878"),
                             n.e("26508"),
                             n.e("61347"),
                             n.e("73091"),
@@ -17973,21 +17973,13 @@ let TZ = Math.ceil(Math.sqrt(115200)),
         return (0, U.jsxs)(U.Fragment, {
             children: [
                 v
-                    ? (0, U.jsx)(c7.u, {
+                    ? (0, U.jsx)(AM.A, {
                           title: u?.questHomeEntrypoint?.tooltipTitle,
                           body: u?.questHomeEntrypoint?.tooltipSubtitle ?? "",
                           asset:
                               u?.questHomeEntrypoint?.tooltipImage != null
-                                  ? (0, U.jsx)("img", {
-                                        src: u.questHomeEntrypoint.tooltipImage,
-                                        alt: "",
-                                        className: TX.ut,
-                                    })
+                                  ? (0, U.jsx)("img", { src: u.questHomeEntrypoint.tooltipImage, alt: "" })
                                   : void 0,
-                          assetSize: 48,
-                          position: "right",
-                          align: "center",
-                          asContainer: !0,
                           children: O,
                       })
                     : O,
@@ -18422,7 +18414,7 @@ let SN = "isHideDevBanner",
                     className: t2()(Sy.Wz, Sy.mr),
                     children: [
                         (0, U.jsx)(SS, { className: Sy.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "551836" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "551868" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })
@@ -25186,8 +25178,8 @@ let CI = (0, rs.Fe)({
                 n.e("13848"),
                 n.e("39214"),
                 n.e("99108"),
-                n.e("14878"),
                 n.e("88307"),
+                n.e("14878"),
                 n.e("26508"),
                 n.e("61347"),
                 n.e("73091"),
