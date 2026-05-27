@@ -2645,7 +2645,11 @@ class tv extends th {
     }
     close() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (this.isClosed()) return void tm.verbose("close() called, but socket is already closed.");
+        if (this.isClosed()) {
+            tm.verbose("close() called, but socket is already closed."),
+                e || ((this.sessionId = null), (this.token = null));
+            return;
+        }
         tm.info(`Closing connection, current state is ${this.connectionState}`);
         let t = e ? 4e3 : void 0;
         this._cleanup((e) => e.close(t)),
