@@ -1397,11 +1397,15 @@
 }
 
 .headerRight_df4c28 {
-    align-items: center;
-    display: flex;
     gap: var(--space-4);
     margin-inline-start: auto;
     padding-inline-end: var(--space-8)
+}
+
+.copyLinkSplit_df4c28,
+.headerRight_df4c28 {
+    align-items: center;
+    display: flex
 }
 
 .sidebar_df4c28 {

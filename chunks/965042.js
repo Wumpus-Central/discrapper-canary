@@ -4,12 +4,12 @@ var i = n(398590),
     r = n(790271),
     s = n(186111),
     a = n(944771),
-    o = n(848281),
+    o = n(764451),
     l = n(652215);
-async function u(e, t) {
+async function u(e, t, n) {
     if (!(0, r.mz)("playground_open")) return !1;
-    let n = await (0, a.getComponentPlaygroundConfigs)(),
-        u =
+    let u = await (0, a.getComponentPlaygroundConfigs)(),
+        c =
             null != e
                 ? (function (e, t) {
                       for (let n of t) {
@@ -17,10 +17,10 @@ async function u(e, t) {
                           if (null != t) return t.id;
                       }
                       return null;
-                  })(e, n)
+                  })(e, u)
                 : null,
-        c =
-            null != u && null != t
+        d =
+            null != c && null != t
                 ? (function (e, t, n) {
                       for (let i of n) {
                           let n = i.collections.find((t) => t.id.toLowerCase() === e.toLowerCase());
@@ -31,15 +31,20 @@ async function u(e, t) {
                               }
                       }
                       return null;
-                  })(u, t, n)
+                  })(c, t, u)
                 : null;
     return (
-        o.PlaygroundStore.setState({ selectedCollection: u, selectedStory: c }),
+        o.PlaygroundStore.setState({
+            selectedCollection: c,
+            selectedStory: d,
+            controlOverrides: null != d && null != n ? n : null,
+            currentProps: null,
+        }),
         s.A.getLayers().includes(l.zgK.COMPONENT_PLAYGROUND) || (0, i.id)(l.zgK.COMPONENT_PLAYGROUND),
         !0
     );
 }
 function c(e) {
     let { match: t } = e;
-    return u(t.collection, t.story);
+    return u(t.collection, t.story, t.controlOverrides);
 }

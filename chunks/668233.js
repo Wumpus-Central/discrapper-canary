@@ -1763,7 +1763,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 551447, Version Hash: ac4615d45eae352650a784032cc67d43e061aa83`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 551590, Version Hash: dcf8d91ecc086aeabce85885f517fc659da7fe41`,
 ),
     ev.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -18426,7 +18426,7 @@ let SN = "isHideDevBanner",
                     className: t2()(Sy.Wz, Sy.mr),
                     children: [
                         (0, U.jsx)(SS, { className: Sy.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "551447" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "551590" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })
@@ -35170,7 +35170,7 @@ let PX = nV((e) => {
     }),
     PZ = nV((e) => {
         let { location: t } = e,
-            i = (0, OM.parsePlaygroundUrl)(t.pathname);
+            i = (0, OM.parsePlaygroundUrl)(t.pathname, t.search);
         return (
             (0, RB.B)(() => {
                 let { openPlaygroundFromParsedUrl: e } = n(965042);

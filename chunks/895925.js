@@ -4,6 +4,7 @@ e.exports = {
     wx: "header_df4c28",
     zN: "headerDivider_df4c28",
     IE: "headerRight_df4c28",
+    sd: "copyLinkSplit_df4c28",
     pz: "sidebar_df4c28",
     MY: "page_df4c28",
     Qs: "content_df4c28",
