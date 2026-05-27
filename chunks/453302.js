@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(627968);
 n(64700);
 var r = n(691540),
@@ -11,7 +11,7 @@ var r = n(691540),
     c = n(652215),
     d = n(670455),
     _ = n(375708);
-function f(e, t, n) {
+function h(e, t, n) {
     let { rating: i, problem: o, feedback: d } = n;
     !(function (e) {
         let {
@@ -49,13 +49,13 @@ function f(e, t, n) {
     }),
         (0, r.P0)((0, s.o)(_.intl.string(_.t["d9+vQ8"]), a.Ck.SUCCESS));
 }
-function h(e) {
+function f(e) {
     let { summary: t, channel: r, rating: s } = e;
     null != t &&
         (s === d.P0.BAD
             ? (0, o.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([
-                      n.e("93814"),
+                      n.e("4495"),
                       n.e("56030"),
                       n.e("8891"),
                       n.e("18413"),
@@ -65,7 +65,7 @@ function h(e) {
                       n.e("26484"),
                       n.e("352"),
                   ]).then(n.bind(n, 447696));
-                  return (n) => (0, i.jsx)(e, { ...n, onSubmit: (e) => f(t, r, e), startRating: s });
+                  return (n) => (0, i.jsx)(e, { ...n, onSubmit: (e) => h(t, r, e), startRating: s });
               })
-            : f(t, r, { rating: s, problem: null, feedback: "", dontShowAgain: !1 }));
+            : h(t, r, { rating: s, problem: null, feedback: "", dontShowAgain: !1 }));
 }

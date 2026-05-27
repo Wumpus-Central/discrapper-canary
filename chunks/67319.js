@@ -126,7 +126,7 @@ let eI = l.memo(function (e) {
             C = (e) => {
                 (0, ei.L3)(e, async () => {
                     let { default: e } = await Promise.all([
-                        n.e("65744"),
+                        n.e("24351"),
                         n.e("26132"),
                         n.e("46652"),
                         n.e("93190"),
@@ -145,6 +145,7 @@ let eI = l.memo(function (e) {
                         n.e("29422"),
                         n.e("7059"),
                         n.e("43116"),
+                        n.e("11617"),
                         n.e("70314"),
                         n.e("70515"),
                         n.e("27435"),
@@ -432,7 +433,7 @@ var eK = n(661531),
     e1 = n(280056),
     e2 = n(204651),
     e5 = n(489643);
-function e7(e) {
+function e3(e) {
     let { width: t = 24, height: n = 24, isBadged: s = !1 } = e,
         [a] = l.useState(() => (0, e9.A)());
     return (0, i.jsxs)("svg", {
@@ -459,12 +460,12 @@ function e6(e) {
     return (0, i.jsxs)("div", {
         className: a()(e5.v, t),
         children: [
-            (0, i.jsx)(e7, { isBadged: l }),
+            (0, i.jsx)(e3, { isBadged: l }),
             l ? (0, i.jsx)($.E, { className: e5.F, variant: "text-xs/semibold", children: n > 99 ? "99+" : n }) : null,
         ],
     });
 }
-function e3(e) {
+function e7(e) {
     let {
             toggleRequestToSpeakSidebar: t,
             showRequestToSpeakSidebar: n,
@@ -511,7 +512,7 @@ function tn(e) {
             !l && d
                 ? (0, i.jsx)("div", {
                       className: a()(tt.x6, { [tt.vc]: c }),
-                      children: (0, i.jsx)(e3, {
+                      children: (0, i.jsx)(e7, {
                           toggleRequestToSpeakSidebar: () => {
                               c && eY.A.updateChatOpen(t.id, !1), (0, j.X)(r, j.O.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n();
                           },
@@ -804,7 +805,7 @@ let tE = l.memo(function (e) {
                         e,
                         async () => {
                             let { default: e } = await Promise.all([
-                                n.e("65744"),
+                                n.e("24351"),
                                 n.e("26132"),
                                 n.e("46652"),
                                 n.e("93190"),
@@ -823,6 +824,7 @@ let tE = l.memo(function (e) {
                                 n.e("29422"),
                                 n.e("7059"),
                                 n.e("43116"),
+                                n.e("11617"),
                                 n.e("70314"),
                                 n.e("70515"),
                                 n.e("27435"),
@@ -1103,7 +1105,7 @@ let tF = 16 / 9,
                             t,
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("65744"),
+                                    n.e("24351"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
@@ -1122,6 +1124,7 @@ let tF = 16 / 9,
                                     n.e("29422"),
                                     n.e("7059"),
                                     n.e("43116"),
+                                    n.e("11617"),
                                     n.e("70314"),
                                     n.e("70515"),
                                     n.e("27435"),
@@ -1189,7 +1192,7 @@ var t$ = n(847374),
     t1 = n(636585),
     t2 = n(486020),
     t5 = n(711865);
-function t7(e) {
+function t3(e) {
     let { channel: t, speaker: s, className: r } = e,
         o = l.useRef(null),
         { newestAnalyticsLocation: c } = (0, g.Ay)(),
@@ -1202,7 +1205,7 @@ function t7(e) {
                 e,
                 async () => {
                     let { default: e } = await Promise.all([
-                        n.e("65744"),
+                        n.e("24351"),
                         n.e("26132"),
                         n.e("46652"),
                         n.e("93190"),
@@ -1221,6 +1224,7 @@ function t7(e) {
                         n.e("29422"),
                         n.e("7059"),
                         n.e("43116"),
+                        n.e("11617"),
                         n.e("70314"),
                         n.e("70515"),
                         n.e("27435"),
@@ -1279,11 +1283,11 @@ function t6(e) {
         guildId: n.guild_id,
         users: t,
         max: 10,
-        renderUser: (e, t, l) => (0, i.jsx)(t7, { channel: n, speaker: e, className: t }, l),
+        renderUser: (e, t, l) => (0, i.jsx)(t3, { channel: n, speaker: e, className: t }, l),
         renderMoreUsers: (e, t, n) => (0, i.jsx)("div", { className: a()(t5.$U, t), children: e }, n),
     });
 }
-var t3 = n(947790);
+var t7 = n(947790);
 let t4 = l.memo(function (e) {
     let {
         label: t,
@@ -1297,15 +1301,15 @@ let t4 = l.memo(function (e) {
     } = e;
     return (0, i.jsxs)(Q.D, {
         onClick: l,
-        className: a()(t3.kL, s),
+        className: a()(t7.kL, s),
         children: [
             null == o
-                ? (0, i.jsx)(eF.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: t3.Vo })
-                : (0, i.jsx)(eH.c, { size: "custom", color: "currentColor", width: 20, height: 20, className: t3.Vo }),
+                ? (0, i.jsx)(eF.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: t7.Vo })
+                : (0, i.jsx)(eH.c, { size: "custom", color: "currentColor", width: 20, height: 20, className: t7.Vo }),
             (0, i.jsxs)($.E, {
                 color: "text-strong",
                 variant: "text-md/semibold",
-                className: t3.Qq,
+                className: t7.Qq,
                 children: [t, " \u2014 ", n],
             }),
             r &&
@@ -1320,7 +1324,7 @@ let t4 = l.memo(function (e) {
                 color: "currentColor",
                 width: 20,
                 height: 20,
-                className: a()(t3.mw, { [t3.VU]: r }),
+                className: a()(t7.mw, { [t7.VU]: r }),
             }),
         ],
     });
@@ -1996,24 +2000,24 @@ function n2(e) {
     );
 }
 var n5 = n(104171),
-    n7 = n(81466),
+    n3 = n(81466),
     n6 = n(823508);
-function n3(e) {
+function n7(e) {
     let { className: t, guildId: l } = e,
         s = (0, n6.A)();
     return (0, i.jsx)(nS.A, {
         className: t,
-        icon: (0, i.jsx)(n7.C, { size: "custom", color: "currentColor", height: 20, width: 20 }),
+        icon: (0, i.jsx)(n3.C, { size: "custom", color: "currentColor", height: 20, width: 20 }),
         color: eK.A.unsafe_rawColors.BRAND_500.css,
         title: ex.intl.string(ex.t["60lJ0C"]),
         description: ex.intl.string(ex.t["EYn7/y"]),
         onClick: function () {
             (0, d.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("95457"),
+                    n.e("28881"),
                     n.e("8909"),
-                    n.e("59167"),
-                    n.e("75702"),
+                    n.e("4495"),
+                    n.e("42527"),
                     n.e("59957"),
                     n.e("28136"),
                     n.e("16084"),
@@ -2128,7 +2132,7 @@ function it(e) {
                     }),
                     d ? null : (0, i.jsx)(nf.A, { channelId: t.id, showDismiss: !1 }),
                     s ? (0, i.jsx)(nT, { className: n4.fN, channel: t }) : null,
-                    c ? (0, i.jsx)(n3, { className: n4.fN, guildId: r }) : null,
+                    c ? (0, i.jsx)(n7, { className: n4.fN, guildId: r }) : null,
                     s ? (0, i.jsx)(n8, { className: a()({ [n4.fN]: !0 }), onClick: n }) : null,
                     (0, i.jsx)(ie, { channel: t }),
                 ],

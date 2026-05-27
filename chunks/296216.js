@@ -1,44 +1,45 @@
-if ((i.d(t, { F: () => m, J: () => A }), 21552 == i.j)) var l = i(205369);
-var n = i(639627),
-    s = i(66834),
-    a = i(71393),
-    r = i(576705),
-    c = i(977997),
-    o = i(607567),
-    d = i(652215);
-let u = "DRAGGABLE_USER";
+t.d(i, { F: () => m, J: () => A });
+var n = t(913247),
+    l = t(22174),
+    s = t(66834),
+    a = t(71393),
+    r = t(576705),
+    d = t(977997),
+    u = t(607567),
+    o = t(652215);
+let c = "DRAGGABLE_USER";
 function m(e) {
-    return (0, l.T)(
-        u,
+    return (0, n.T)(
+        c,
         {
             canDrop(e) {
-                let { channel: t } = e,
-                    i = t.getGuildId(),
-                    l = a.A.getGuild(i)?.maxVideoChannelUsers ?? -1,
-                    n = o.Ay.countVoiceStatesForChannel(t.id),
-                    s = null != i && c.A.hasVideo(t.id) && l > 0 && n >= l + 1;
-                return r.A.can(d.xBc.MOVE_MEMBERS, t) && r.A.can(d.xBc.CONNECT, t) && !s;
-            },
-            drop(e, t) {
                 let { channel: i } = e,
-                    l = c.A.getVoiceStateForUser(t.getItem().user.id);
-                l?.channelId !== i.id && s.A.setChannel(i.getGuildId(), t.getItem().user.id, i.id);
+                    t = i.getGuildId(),
+                    n = a.A.getGuild(t)?.maxVideoChannelUsers ?? -1,
+                    l = u.Ay.countVoiceStatesForChannel(i.id),
+                    s = null != t && d.A.hasVideo(i.id) && n > 0 && l >= n + 1;
+                return r.A.can(o.xBc.MOVE_MEMBERS, i) && r.A.can(o.xBc.CONNECT, i) && !s;
+            },
+            drop(e, i) {
+                let { channel: t } = e,
+                    n = d.A.getVoiceStateForUser(i.getItem().user.id);
+                n?.channelId !== t.id && s.A.setChannel(t.getGuildId(), i.getItem().user.id, t.id);
             },
         },
-        (e, t) => ({ connectUserDropTarget: e.dropTarget(), isUserOver: t.isOver() && t.canDrop() }),
+        (e, i) => ({ connectUserDropTarget: e.dropTarget(), isUserOver: i.isOver() && i.canDrop() }),
     )(e);
 }
 function A(e) {
-    return (0, n.I)(
-        u,
+    return (0, l.I)(
+        c,
         {
             canDrag(e) {
-                let { user: t, canDrag: i } = e;
-                return i ?? !1;
+                let { user: i, canDrag: t } = e;
+                return t ?? !1;
             },
             beginDrag(e) {
-                let { user: t } = e;
-                return { user: t };
+                let { user: i } = e;
+                return { user: i };
             },
         },
         (e) => ({ connectUserDragSource: e.dragSource() }),

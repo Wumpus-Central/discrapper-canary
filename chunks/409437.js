@@ -4311,8 +4311,7 @@ function sT(e) {
         if (null == a) return null;
         (0, sS.L3)(e, async () => {
             let { default: e } = await Promise.all([
-                n.e("92457"),
-                n.e("94881"),
+                n.e("24351"),
                 n.e("26132"),
                 n.e("46652"),
                 n.e("93190"),
@@ -5102,7 +5101,7 @@ function aQ(e) {
                     onClick: () => {
                         null != l &&
                             (0, io.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([n.e("14433"), n.e("40243")]).then(
+                                let { default: e } = await Promise.all([n.e("97660"), n.e("40243")]).then(
                                     n.bind(n, 547166),
                                 );
                                 return (n) => (0, r.jsx)(e, { ...n, guildId: t.guild_id, user: l, modReportId: t.id });
@@ -5399,7 +5398,7 @@ var re = n(364522),
     rn = n(454292),
     rl = n(84120),
     ri = n(773746),
-    rs = n(127936),
+    rs = n(717415),
     ra = n(480595),
     rr = n(461213);
 function ro(e) {
@@ -5458,9 +5457,9 @@ function ro(e) {
     });
 }
 var rc = n(983851),
-    rd = n(262763),
-    ru = n(499211),
-    rh = n(900540),
+    rd = n(104171),
+    ru = n(262763),
+    rh = n(499211),
     rm = n(977997),
     rg = n(607567),
     rp = n(556114);
@@ -5469,21 +5468,23 @@ function rA(e) {
         l = (0, ts._M)(t),
         i = (0, m.bG)([rm.A], () => rm.A.isInChannel(t.id)),
         s = (0, m.bG)([rg.Ay], () => rg.Ay.getVoiceStatesForChannel(t), [t]),
-        { needSubscriptionToAccess: a } = (0, ru.A)(t.id),
+        { needSubscriptionToAccess: a } = (0, rh.A)(t.id),
         c = o.useCallback(() => {
-            rd.A.handleVoiceConnect({ channel: t, connected: i, needSubscriptionToAccess: a, locked: !1 });
+            ru.A.handleVoiceConnect({ channel: t, connected: i, needSubscriptionToAccess: a, locked: !1 });
         }, [t, i, a]),
-        u = null != s && s.length > 0;
-    return l || u
+        u = o.useMemo(() => s.map((e) => e.user.id), [s]),
+        h = (0, iP.$I)(t, u),
+        g = h.length > 0;
+    return l || g
         ? (0, r.jsxs)("div", {
               className: d()(rp.Lz, n),
               children: [
                   (0, r.jsxs)(eM.D, {
-                      className: rp.wx,
+                      className: rp.Xt,
                       onClick: c,
                       children: [
                           (0, r.jsx)(rc.H, {
-                              size: "sm",
+                              size: "refresh_sm",
                               color: i ? J.A.colors.STATUS_POSITIVE : J.A.colors.ICON_MUTED,
                           }),
                           (0, r.jsx)(ej.E, {
@@ -5494,16 +5495,8 @@ function rA(e) {
                           }),
                       ],
                   }),
-                  u
-                      ? (0, r.jsx)(rh.A, {
-                            className: rp.Xk,
-                            channel: t,
-                            voiceStates: s,
-                            collapsed: !1,
-                            isThread: !0,
-                            allowDragging: !1,
-                            hideInviteSuggestions: !0,
-                        })
+                  g
+                      ? (0, r.jsx)(rd.Ay, { className: rp.L_, guildId: t.guild_id, users: h, size: rd.DN.SIZE_24 })
                       : null,
               ],
           })
@@ -5767,7 +5760,7 @@ function ry(e) {
         },
         h = (e, s, a) => {
             (0, io.openModalLazy)(async () => {
-                let { default: o } = await Promise.all([n.e("74370"), n.e("14788"), n.e("67554")]).then(
+                let { default: o } = await Promise.all([n.e("3794"), n.e("14788"), n.e("67554")]).then(
                     n.bind(n, 219801),
                 );
                 return (n) =>

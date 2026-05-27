@@ -231,7 +231,7 @@ function eP(e) {
                         (0, w.openModalLazy)(
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("16415"),
+                                    n.e("4495"),
                                     n.e("44616"),
                                     n.e("96680"),
                                     n.e("85579"),
@@ -580,8 +580,8 @@ function e0() {
               ],
           });
 }
-var e1 = n(410516),
-    e4 = n(361597),
+var e4 = n(410516),
+    e1 = n(361597),
     e6 = n(975571),
     e8 = n(428262),
     e2 = n(69494),
@@ -603,7 +603,7 @@ function tt(e) {
         })),
         { activeSubscription: E, defaultPlanId: I } = (0, T.P5)(),
         { isPremium: P, isEligibleForTrial: A, isEligibleForDiscount: _, discountOffer: g } = (0, eY.i)(),
-        j = (0, e1.YJ)(g),
+        j = (0, e4.YJ)(g),
         M = (0, p.A)(),
         R = (0, O.bB)(),
         { isGift: C, giftRecipient: b, giftMessage: k, claimableRewards: N } = (0, x.Pv)(),
@@ -660,7 +660,7 @@ function tt(e) {
     let en =
         ee && !C
             ? (0, l.jsx)(e3.XH, { ...et, isInPlanSelectStep: !0, showPlanStatusSubText: !0 })
-            : (0, l.jsx)(e4.$p, { ...et });
+            : (0, l.jsx)(e1.$p, { ...et });
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(e5.Z, { giftMessage: k }),

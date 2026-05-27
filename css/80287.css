@@ -1,0 +1,23 @@
+.hidden_d2e74b {
+    visibility: hidden
+}
+
+.hidden_d2e74b,
+.whiteFlash_d2e74b {
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
+.whiteFlash_d2e74b {
+    background-color: #fff
+}
+
+.movingImage_d2e74b {
+    border-radius: var(--space-4);
+    height: 0;
+    opacity: 0;
+    position: fixed;
+    visibility: hidden;
+    width: 0
+}

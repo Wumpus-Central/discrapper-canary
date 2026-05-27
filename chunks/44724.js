@@ -1,40 +1,47 @@
-"use strict";
-n.d(t, { X: () => d, default: () => _, navigateToSocialLayerStorefrontWithGuildPreview: () => h });
-var i = n(376728),
-    r = n(976860),
-    s = n(71393),
-    a = n(449054),
-    o = n(733391),
-    l = n(832163),
-    u = n(81341),
-    c = n(652215);
-function d(e) {
-    let { guildId: t, invite: n, forceFetch: i } = e;
-    null != n && (t = n.guild?.id), null != t && (0, o.Rw)(t, { eager: !0, forceFetch: i });
+t.d(n, { G: () => g, X: () => p, default: () => f, navigateToSocialLayerStorefrontWithGuildPreview: () => h });
+var l = t(376728),
+    i = t(976860),
+    a = t(71393),
+    u = t(449054),
+    o = t(871123),
+    r = t(733391),
+    d = t(832163),
+    s = t(81341),
+    c = t(652215);
+function p(e) {
+    let { guildId: n, invite: t, forceFetch: l } = e;
+    null != t && (n = t.guild?.id), null != n && (0, r.Rw)(n, { eager: !0, forceFetch: l });
 }
-function _(e) {
-    let { guildId: t, pageIndex: n, invite: i, skuId: s, slug: a } = e,
-        o = (0, u.V)({ location: "navigateToSocialLayerStorefront" }),
-        d = null == t ? void 0 : l.A.getApplicationIdFromGuildId(t);
-    return o && null != d
-        ? Promise.resolve((0, r.pX)(c.BVt.COLLECTIBLES_SHOP_GAME_SHOP(d, n, s, a)))
-        : h({ guildId: t, pageIndex: n, invite: i, skuId: s, slug: a });
+function g(e) {
+    let { applicationId: n, forceFetch: t } = e;
+    (0, r.ap)(n, { eager: !0, forceFetch: t });
+}
+function f(e) {
+    let { applicationId: n, guildId: t, pageIndex: l, invite: a, skuId: u, slug: r } = e,
+        p = (0, s.V)({ location: "navigateToSocialLayerStorefront" }),
+        g = n ?? d.A.getApplicationIdFromGuildId(t),
+        f = t ?? (0, o.n5)(n);
+    return null == g && null == f && null == a
+        ? Promise.resolve()
+        : p && null != g
+          ? Promise.resolve((0, i.pX)(c.BVt.COLLECTIBLES_SHOP_GAME_SHOP(g, l, u, r)))
+          : h({ guildId: f, pageIndex: l, invite: a, skuId: u, slug: r });
 }
 async function h(e) {
-    let { guildId: t, invite: n, pageIndex: o, skuId: l, slug: u } = e,
-        d = null;
-    if ((null != n && ((t = n.guild?.id), (d = new Set(n.guild?.features))), null == t)) return;
-    let _ = s.A.getGuild(t);
+    let { guildId: n, invite: t, pageIndex: o, skuId: r, slug: d } = e,
+        s = null;
+    if ((null != t && ((n = t.guild?.id), (s = new Set(t.guild?.features))), null == n)) return;
+    let p = a.A.getGuild(n);
     return (
-        _?.joinedAt == null &&
-            (null == d || d.has(c.GuildFeatures.PREVIEW_ENABLED)
-                ? await (0, a.Z2)(t, {}, { shouldNavigate: !1 })
-                : null != n &&
-                  (await i.Ay.acceptInvite({
-                      inviteKey: n.code,
+        p?.joinedAt == null &&
+            (null == s || s.has(c.GuildFeatures.PREVIEW_ENABLED)
+                ? await (0, u.Z2)(n, {}, { shouldNavigate: !1 })
+                : null != t &&
+                  (await l.Ay.acceptInvite({
+                      inviteKey: t.code,
                       context: { location: "game_shop" },
                       skipOnboarding: !0,
                   }))),
-        (0, r.pX)(c.BVt.CHANNELS_GAME_SHOP(t, o, l, u))
+        (0, i.pX)(c.BVt.CHANNELS_GAME_SHOP(n, o, r, d))
     );
 }
