@@ -386,6 +386,7 @@ class eZ extends r.PureComponent {
         }),
             eA._.subscribe(ee.jej.SCROLL_PAGE_UP, this.scrollPageUp),
             eA._.subscribe(ee.jej.SCROLL_PAGE_DOWN, this.scrollPageDown),
+            (0, eN.G)("PrivateChannelRecipientsInvite") && this.createInvite(),
             setTimeout(() => {
                 this.forceFocus();
             }, 0);
