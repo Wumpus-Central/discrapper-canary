@@ -7538,6 +7538,14 @@ let { Themes: c } = u.zv,
                 SIZE_XXS: { resolve: () => 12 },
             },
             mobile: {
+                BOUNTY_TILE_BORDER_RADIUS: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 24;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 12;
+                        return 24;
+                    },
+                },
                 CARD_DEFAULT_RADIUS: { resolve: () => 16 },
                 CHANNEL_DETAILS_NAV_BUTTONS_GAP: {
                     resolve(e) {

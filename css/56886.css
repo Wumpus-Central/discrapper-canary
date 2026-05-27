@@ -9306,6 +9306,7 @@
     --icon-size-sm: 18px;
     --icon-size-xs: 16px;
     --icon-size-xxs: 12px;
+    --mobile-bounty-tile-border-radius: 24px;
     --mobile-card-default-radius: 16px;
     --mobile-channel-details-nav-buttons-gap: 12px;
     --mobile-channel-details-nav-icon-button-size: sm;
@@ -9458,6 +9459,7 @@
 .mobile-visual-refresh {
     --button-border-radius: 8px;
     --button-border-radius-lg: 12px;
+    --mobile-bounty-tile-border-radius: 12px;
     --mobile-channel-details-nav-buttons-gap: 0px;
     --mobile-channel-details-nav-icon-button-size: lg;
     --mobile-channel-details-nav-icon-button-variant: icon-only;
