@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { y$: () => h, t4: () => _, Ni: () => c });
+n.d(t, { y$: () => E, t4: () => p, Ni: () => h });
 var i = n(942381),
     r = n(265690),
     s = n(315069),
@@ -58,16 +58,19 @@ class l extends s.A {
         return null == this.billingFacetRecord ? null : this.billingFacetRecord.invoicePreview;
     }
 }
-var u = n(566980);
-let [c, d] = (0, n(786300).A)();
-function _(e) {
+var u = n(566980),
+    c = n(786300),
+    d = n(428262),
+    _ = n(788868);
+let [h, f] = (0, c.A)();
+function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return d()(e, t);
+    return f()(e, t);
 }
-function h(e) {
+function E(e) {
     let { checkoutInitParameters: t, contextMetadata: n, order: s, initialPaymentSourceId: a, initialCurrency: o } = e;
     return (0, r.h)(
-        (e) => ({
+        (e, i) => ({
             checkoutInitParameters: t,
             contextMetadata: n,
             order: s,
@@ -77,6 +80,12 @@ function h(e) {
             selectedPlanId: void 0,
             setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0 }),
             setSelectedPlanId: (t) => e({ selectedPlanId: t ?? void 0 }),
+            getSelectedPlanAttributes: () => {
+                var e;
+                return null == (e = i().selectedPlanId)
+                    ? { isPremium: !0, isPremiumGroupPurchase: !1 }
+                    : { isPremium: (0, d.ys)(e), isPremiumGroupPurchase: e === _.gD.PREMIUM_GROUP_MONTH };
+            },
             fetchCheckoutInvoicePreviewRequest: null,
             setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: t ?? null }),
             checkoutInvoicePreview: null,

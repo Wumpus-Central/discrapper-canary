@@ -1,38 +1,39 @@
-n.d(t, { x: () => E });
+n.d(t, { x: () => P });
 var l = n(284009),
-    a = n.n(l),
-    i = n(976634),
+    i = n.n(l),
+    a = n(976634),
     r = n(426398),
-    s = n(671744),
-    o = n(61299),
-    u = n(174459),
-    c = n(723702),
-    d = n(937008),
-    p = n(834252),
-    m = n(166532),
-    h = n(566980),
-    C = n(615310),
-    A = n(652215),
-    y = n(788868);
-function E(e) {
+    s = n(463376),
+    o = n(722847),
+    u = n(61299),
+    c = n(174459),
+    d = n(723702),
+    p = n(937008),
+    m = n(834252),
+    h = n(166532),
+    C = n(566980),
+    A = n(615310),
+    y = n(652215),
+    E = n(788868);
+function P(e) {
     let {
             analyticsData: t,
             initialPlanId: n,
             breadcrumbSteps: l,
-            handleStepChange: E,
-            onReturn: P,
-            continueSessionToInitialStep: S,
+            handleStepChange: P,
+            onReturn: S,
+            continueSessionToInitialStep: _,
         } = e,
         { paymentSources: f } = (0, r.jm)(),
         {
-            selectedSkuId: _,
-            setPurchaseState: T,
-            contextMetadata: I,
-            paymentSourceId: x,
-            setPaymentSourceId: N,
-            purchaseError: g,
-            setPurchaseError: v,
-        } = (0, s.t4)((e) => ({
+            selectedSkuId: T,
+            setPurchaseState: I,
+            contextMetadata: x,
+            paymentSourceId: N,
+            setPaymentSourceId: g,
+            purchaseError: v,
+            setPurchaseError: M,
+        } = (0, o.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setPurchaseState: e.setPurchaseState,
             contextMetadata: e.contextMetadata,
@@ -42,71 +43,70 @@ function E(e) {
             setPurchaseError: e.setPurchaseError,
         })),
         {
-            purchaseErrorBlockRef: M,
-            paymentAuthenticationState: b,
-            activeSubscription: j,
-            paymentElementsEnabled: R,
-            isPremiumGroupPurchase: L,
-            isEligibleForTrial: O,
-        } = (0, p.P5)(),
-        { step: D, previousStep: w } = (0, C.Ay)(),
-        { isGift: U } = (0, d.Pv)(),
-        k = {
-            ...(0, o._V)(),
+            purchaseErrorBlockRef: b,
+            paymentAuthenticationState: j,
+            activeSubscription: R,
+            paymentElementsEnabled: L,
+        } = (0, m.P5)(),
+        { isPremiumGroupPurchase: O, isEligibleForTrial: D } = (0, s.i)(),
+        { step: w, previousStep: U } = (0, A.Ay)(),
+        { isGift: k } = (0, p.Pv)(),
+        G = {
+            ...(0, u._V)(),
             paymentSources: f,
-            paymentSourceId: x,
-            setPaymentSourceId: N,
-            purchaseError: g,
-            setPurchaseError: v,
-            purchaseErrorBlockRef: M,
-            paymentAuthenticationState: b,
-            selectedSkuId: _,
-            isGift: U,
+            paymentSourceId: N,
+            setPaymentSourceId: g,
+            purchaseError: v,
+            setPurchaseError: M,
+            purchaseErrorBlockRef: b,
+            paymentAuthenticationState: j,
+            selectedSkuId: T,
+            isGift: k,
         },
         Y =
-            P ??
+            S ??
             (() => {
-                E(Object.values(f).length < 1 && null == n ? m.pn.PLAN_SELECT : m.pn.REVIEW, {
-                    trackedFromStep: R ? m.pn.PAYMENT_ELEMENT : m.pn.PAYMENT_TYPE,
+                P(Object.values(f).length < 1 && null == n ? h.pn.PLAN_SELECT : h.pn.REVIEW, {
+                    trackedFromStep: L ? h.pn.PAYMENT_ELEMENT : h.pn.PAYMENT_TYPE,
                 });
             });
-    a()(D, "Step should be set here");
-    let G = (0, i.A)(() => Date.now(), [D]),
-        F = (0, i.A)(
+    i()(w, "Step should be set here");
+    let F = (0, a.A)(() => Date.now(), [w]),
+        B = (0, a.A)(
             () =>
-                null != S && null == w ? (R ? m.pn.PAYMENT_ELEMENT : S) : R ? m.pn.PAYMENT_ELEMENT : m.pn.PAYMENT_TYPE,
-            [S, w, R],
+                null != _ && null == U ? (L ? h.pn.PAYMENT_ELEMENT : _) : L ? h.pn.PAYMENT_ELEMENT : h.pn.PAYMENT_TYPE,
+            [_, U, L],
         );
-    return (0, o.Y)({
-        paymentModalArgs: k,
-        initialStep: F,
-        prependSteps: [m.pn.PROMOTION_INFO],
-        appendSteps: [m.pn.REVIEW, m.pn.CONFIRM],
+    return (0, u.Y)({
+        paymentModalArgs: G,
+        initialStep: B,
+        prependSteps: [h.pn.PROMOTION_INFO],
+        appendSteps: [h.pn.REVIEW, h.pn.CONFIRM],
         breadcrumpSteps: l,
-        currentBreadcrumpStep: D,
+        currentBreadcrumpStep: w,
         usePaymentModalStep: !0,
         analyticsData: t,
-        onReturn: L ? void 0 : Y,
+        onReturn: O ? void 0 : Y,
         onComplete: (e) => {
-            m.l_.has(e)
-                ? (T(h.h.COMPLETED), E(m.pn.CONFIRM, { trackedFromStep: e }))
-                : E(m.pn.REVIEW, { trackedFromStep: e });
+            h.l_.has(e)
+                ? (I(C.h.COMPLETED), P(h.pn.CONFIRM, { trackedFromStep: e }))
+                : P(h.pn.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
             let { currentStep: n, toStep: l } = e,
-                a = Date.now();
-            u.default.track(A.HAw.PAYMENT_FLOW_STEP, {
+                i = Date.now();
+            c.default.track(y.HAw.PAYMENT_FLOW_STEP, {
                 ...t,
                 from_step: n,
                 to_step: l,
-                step_duration_ms: a - G,
-                flow_duration_ms: a - I.startTime,
+                step_duration_ms: i - F,
+                flow_duration_ms: i - x.startTime,
             });
         },
-        isEligibleForTrial: O,
+        isEligibleForTrial: D,
         allowDesktopRedirectPurchase:
-            (0, c.isDesktop)() && null != _ && [y.pe.TIER_0, y.pe.TIER_2].includes(_) && !U && null == j,
-        continueSessionToInitialStep: S,
+            (0, d.isDesktop)() && null != T && [E.pe.TIER_0, E.pe.TIER_2].includes(T) && !k && null == R,
+        continueSessionToInitialStep: _,
         shouldUseManaModal: !0,
     });
 }
