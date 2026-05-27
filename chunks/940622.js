@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { C: () => p, JE: () => _, NE: () => f, VU: () => E, bA: () => g, mb: () => h, oM: () => m }),
+n.d(t, { C: () => p, JE: () => _, NE: () => f, VU: () => E, bA: () => g, eo: () => m, mb: () => h }),
     n(323874),
     n(14289),
     n(35956);
@@ -62,7 +62,12 @@ let _ = (0, s.v)((e) => ({
                         r = { ...e.avatarDecorationAssets };
                     return (
                         (r[t.name] = { type: u.Jn.AVATAR_DECORATION, name: t.name, src: i }),
-                        { ...e, avatarDecorationAssets: r, previewEnabled: !0 }
+                        {
+                            ...e,
+                            avatarDecorationAssets: r,
+                            previewAvatarDecorationKey: e.previewAvatarDecorationKey ?? t.name,
+                            previewEnabled: !0,
+                        }
                     );
                 });
             }),
@@ -72,8 +77,14 @@ let _ = (0, s.v)((e) => ({
                     let n = e.avatarDecorationAssets[t];
                     if (null == n) return e;
                     URL.revokeObjectURL(n.src);
-                    let { [t]: i, ...r } = e.avatarDecorationAssets;
-                    return { ...e, avatarDecorationAssets: r, previewEnabled: d({ ...e, avatarDecorationAssets: r }) };
+                    let { [t]: i, ...r } = e.avatarDecorationAssets,
+                        s = e.previewAvatarDecorationKey === t;
+                    return {
+                        ...e,
+                        avatarDecorationAssets: r,
+                        previewAvatarDecorationKey: s ? null : e.previewAvatarDecorationKey,
+                        previewEnabled: d({ ...e, avatarDecorationAssets: r }),
+                    };
                 });
             }),
         upsertProfileFrame: (t, n) =>
@@ -82,7 +93,12 @@ let _ = (0, s.v)((e) => ({
                     let i = e.profileFrameAssets[t];
                     return (
                         null != i && c(i),
-                        { ...e, profileFrameAssets: { ...e.profileFrameAssets, [t]: n }, previewEnabled: !0 }
+                        {
+                            ...e,
+                            profileFrameAssets: { ...e.profileFrameAssets, [t]: n },
+                            previewProfileFrameKey: e.previewProfileFrameKey ?? t,
+                            previewEnabled: !0,
+                        }
                     );
                 });
             }),
@@ -171,13 +187,11 @@ let _ = (0, s.v)((e) => ({
         }, [s, e]);
     },
     E = () =>
-        _((e) => {
-            if (!e.previewEnabled) return null;
-            let t = e.previewAvatarDecorationKey;
-            if (null != t) return e.avatarDecorationAssets[t]?.src ?? null;
-            let n = Object.values(e.avatarDecorationAssets);
-            return n[0]?.src;
-        }),
+        _((e) =>
+            e.previewEnabled && null != e.previewAvatarDecorationKey
+                ? (e.avatarDecorationAssets[e.previewAvatarDecorationKey]?.src ?? null)
+                : null,
+        ),
     m = () => {
         let e = _((e) =>
             e.previewEnabled && null != e.previewProfileFrameKey
