@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
     $W: () => H,
-    $b: () => Z,
+    $b: () => X,
     Br: () => O,
     Bs: () => eo,
     CE: () => el,
@@ -13,7 +13,7 @@ n.d(t, {
     R8: () => R,
     V6: () => es,
     WD: () => P,
-    WU: () => X,
+    WU: () => Z,
     Wj: () => W,
     Zu: () => er,
     aT: () => J,
@@ -208,13 +208,13 @@ let C = (e) => e?.premiumType != null,
     },
     $ = (e, t) => (0, r.uniqBy)([...k(e, s.R.PROFILE_FRAME), ...G(t, s.R.PROFILE_FRAME)], "skuId"),
     q = (e) => e.applicationId === A.FYj,
-    Z = (e) => 3.8 * e,
-    X = (e) => {
+    X = (e) => 3.8 * e,
+    Z = (e) => {
         let t = new Date(),
             n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
         return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / 864e5);
     },
-    Q = (e) => null != e && X(e) <= g.x3,
+    Q = (e) => null != e && Z(e) <= g.x3,
     J = (e) => {
         let t = g.Tq[e];
         return null != t && new Date().getTime() < t;
@@ -257,6 +257,7 @@ let ei = (e, t, n) => {
                 return "bundle";
             case s.R.EXTERNAL_SKU:
                 if (t === g.Dp.FRACTIONAL_PREMIUM) return "3-day nitro credit";
+                if (t === g.Dp.FRACTIONAL_PREMIUM_1_DAY) return "1-day nitro credit";
                 if (t === g.Dp.ORB_PROFILE_BADGE) return "orb profile badge";
                 return "unknown";
             case s.R.VARIANTS_GROUP:
