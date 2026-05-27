@@ -21,7 +21,7 @@ function o(e, t) {
                     }
                     return null;
                 })(),
-                u = s.E.has(i) ? { ...c, componentMap: l } : c;
+                u = s.E6.has(i) ? { ...c, componentMap: l } : c;
             return (0, r.jsx)(d, { ...u, children: o }, (0, a.A)());
         })(e, t),
     );
@@ -34,7 +34,7 @@ function u(e) {
         return !1;
     }
 }
-class m extends n.Component {
+class h extends n.Component {
     state = { hasError: !1 };
     static getDerivedStateFromError() {
         return { hasError: !0 };
@@ -46,7 +46,7 @@ class m extends n.Component {
         return this.state.hasError ? null : this.props.children;
     }
 }
-let h = (e) => {
+let m = (e) => {
         let { layout: t, Components: l } = e;
         return n.useMemo(() => o(t, l), [t, l]);
     },
@@ -57,7 +57,7 @@ let h = (e) => {
             n.useEffect(() => {
                 0 === t.children.length && s?.();
             }, [t, s]),
-            (0, r.jsx)(m, { onError: a, children: (0, r.jsx)(h, { layout: t, Components: c }) })
+            (0, r.jsx)(h, { onError: a, children: (0, r.jsx)(m, { layout: t, Components: c }) })
         );
     },
     g = (e) => {

@@ -1,4 +1,4 @@
-l.d(t, { Ay: () => v, JZ: () => E, Mm: () => m, Wk: () => f, hi: () => p, oP: () => A });
+l.d(t, { Ay: () => v, JZ: () => E, Mm: () => h, Wk: () => A, hi: () => p, oP: () => f });
 var r = l(627968),
     n = l(64700),
     a = l(503698),
@@ -8,8 +8,8 @@ var r = l(627968),
     d = l(152858),
     o = l(498381),
     u = l(682124);
-let m = 6,
-    h = (e) => {
+let h = 6,
+    m = (e) => {
         let { index: t, active: l, setPage: n } = e;
         return (0, r.jsx)("div", {
             className: s()(u.page, { [u.active]: l }),
@@ -25,7 +25,7 @@ let m = 6,
     p = (e) => {
         let { page: t, pages: l, setPage: a } = e,
             [s, d] = n.useState(0),
-            m = (0, c.w)((e) => {
+            h = (0, c.w)((e) => {
                 let { contentRect: t } = e;
                 d(t.width);
             }),
@@ -44,7 +44,7 @@ let m = 6,
                 }
                 return e.map((e, l) =>
                     "number" == typeof e
-                        ? (0, r.jsx)(h, { index: e, active: t === e, setPage: a }, e)
+                        ? (0, r.jsx)(m, { index: e, active: t === e, setPage: a }, e)
                         : (0, r.jsx)(
                               "div",
                               {
@@ -56,7 +56,7 @@ let m = 6,
                 );
             }, [t, l, a, s]);
         return (0, r.jsx)("div", {
-            ref: m,
+            ref: h,
             className: u.pagination,
             children: (0, r.jsxs)(o.Ym, {
                 direction: "horizontal",
@@ -94,29 +94,29 @@ let m = 6,
     },
     g = n.createContext(void 0),
     E = () => n.useContext(g);
-function A(e, t, l, r) {
+function f(e, t, l, r) {
     return null == t || null == l ? e : r ? e.slice(0, l) : e.slice(l * t, l * (t + 1));
 }
-let f = (e, t, l) => {
+let A = (e, t, l) => {
         let {
-                paginationStrategy: r = d.o.PAGINATE,
+                paginationStrategy: r = d.oV.PAGINATE,
                 perPage: a,
                 paginationPosition: s = "bottom",
                 scrollToTop: i = !0,
             } = t ?? {},
-            c = r === d.o.TRUNCATE,
+            c = r === d.oV.TRUNCATE,
             [o, u] = n.useState(0),
-            [m, h] = n.useState(a),
+            [h, m] = n.useState(a),
             [p, g] = n.useState(e),
             E = null == a || a < 1 ? 0 : Math.ceil(e / a),
-            A = null != a && a > 0;
+            f = null != a && a > 0;
         return (
-            (m !== a || p !== e) && (h(a), g(e), u(0)),
+            (h !== a || p !== e) && (m(a), g(e), u(0)),
             {
                 page: o,
                 pages: E,
-                paginate: A,
-                showPagination: !c && A && E > 1,
+                paginate: f,
+                showPagination: !c && f && E > 1,
                 paginationPosition: s,
                 truncate: c,
                 perPage: a,
@@ -134,23 +134,23 @@ let f = (e, t, l) => {
     },
     v = (e) => {
         let { columns: t = 3, paginationOptions: l, children: a } = e,
-            i = Math.max(1, Math.min(m, Math.floor(t))),
+            i = Math.max(1, Math.min(h, Math.floor(t))),
             c = n.Children.count(a),
             d = n.useRef(null),
             {
                 page: o,
-                pages: h,
+                pages: m,
                 paginate: E,
                 showPagination: v,
-                paginationPosition: T,
-                truncate: x,
+                paginationPosition: x,
+                truncate: T,
                 perPage: S,
                 setPage: y,
-            } = f(c, l, d),
-            j = n.useMemo(() => A(n.Children.toArray(a), E ? o : void 0, S, x), [o, S, a, E, x]);
+            } = A(c, l, d),
+            j = n.useMemo(() => f(n.Children.toArray(a), E ? o : void 0, S, T), [o, S, a, E, T]);
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                v && "top" === T && (0, r.jsx)(p, { page: o, pages: h, setPage: y }),
+                v && "top" === x && (0, r.jsx)(p, { page: o, pages: m, setPage: y }),
                 (0, r.jsx)(g.Provider, {
                     value: l,
                     children: (0, r.jsx)("div", {
@@ -159,7 +159,7 @@ let f = (e, t, l) => {
                         children: (0, r.jsx)("div", { className: s()(u.grid, u[`columns${i}`]), children: j }),
                     }),
                 }),
-                v && "bottom" === T && (0, r.jsx)(p, { page: o, pages: h, setPage: y }),
+                v && "bottom" === x && (0, r.jsx)(p, { page: o, pages: m, setPage: y }),
             ],
         });
     };

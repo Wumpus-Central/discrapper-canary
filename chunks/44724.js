@@ -1,1 +1,39 @@
-n.d(t,{X:()=>c,default:()=>f,navigateToSocialLayerStorefrontWithGuildPreview:()=>g});var i=n(376728),l=n(976860),a=n(71393),u=n(449054),o=n(733391),r=n(832163),d=n(81341),s=n(652215);function c(e){let{guildId:t,invite:n,forceFetch:i}=e;null!=n&&(t=n.guild?.id),null!=t&&(0,o.Rw)(t,{eager:!0,forceFetch:i})}function f(e){let{guildId:t,pageIndex:n,invite:i,skuId:a,slug:u}=e,o=(0,d.V)({location:"navigateToSocialLayerStorefront"}),c=null==t?void 0:r.A.getApplicationIdFromGuildId(t);return o&&null!=c?Promise.resolve((0,l.pX)(s.BVt.COLLECTIBLES_SHOP_GAME_SHOP(c,n,a,u))):g({guildId:t,pageIndex:n,invite:i,skuId:a,slug:u})}async function g(e){let{guildId:t,invite:n,pageIndex:o,skuId:r,slug:d}=e,c=null;if(null!=n&&(t=n.guild?.id,c=new Set(n.guild?.features)),null==t)return;let f=a.A.getGuild(t);return f?.joinedAt==null&&(null==c||c.has(s.GuildFeatures.PREVIEW_ENABLED)?await (0,u.Z2)(t,{},{shouldNavigate:!1}):null!=n&&await i.Ay.acceptInvite({inviteKey:n.code,context:{location:"game_shop"},skipOnboarding:!0})),(0,l.pX)(s.BVt.CHANNELS_GAME_SHOP(t,o,r,d))}OP(t,o,l,u))}
+n.d(t, { X: () => c, default: () => f, navigateToSocialLayerStorefrontWithGuildPreview: () => g });
+var i = n(376728),
+    l = n(976860),
+    a = n(71393),
+    u = n(449054),
+    o = n(733391),
+    r = n(832163),
+    d = n(81341),
+    s = n(652215);
+function c(e) {
+    let { guildId: t, invite: n, forceFetch: i } = e;
+    null != n && (t = n.guild?.id), null != t && (0, o.Rw)(t, { eager: !0, forceFetch: i });
+}
+function f(e) {
+    let { guildId: t, pageIndex: n, invite: i, skuId: a, slug: u } = e,
+        o = (0, d.V)({ location: "navigateToSocialLayerStorefront" }),
+        c = null == t ? void 0 : r.A.getApplicationIdFromGuildId(t);
+    return o && null != c
+        ? Promise.resolve((0, l.pX)(s.BVt.COLLECTIBLES_SHOP_GAME_SHOP(c, n, a, u)))
+        : g({ guildId: t, pageIndex: n, invite: i, skuId: a, slug: u });
+}
+async function g(e) {
+    let { guildId: t, invite: n, pageIndex: o, skuId: r, slug: d } = e,
+        c = null;
+    if ((null != n && ((t = n.guild?.id), (c = new Set(n.guild?.features))), null == t)) return;
+    let f = a.A.getGuild(t);
+    return (
+        f?.joinedAt == null &&
+            (null == c || c.has(s.GuildFeatures.PREVIEW_ENABLED)
+                ? await (0, u.Z2)(t, {}, { shouldNavigate: !1 })
+                : null != n &&
+                  (await i.Ay.acceptInvite({
+                      inviteKey: n.code,
+                      context: { location: "game_shop" },
+                      skipOnboarding: !0,
+                  }))),
+        (0, l.pX)(s.BVt.CHANNELS_GAME_SHOP(t, o, r, d))
+    );
+}

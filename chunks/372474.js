@@ -115,10 +115,10 @@ let v = (e) => {
             paginationStrategy: {
                 label: "Pagination Strategy",
                 type: "select",
-                defaultValue: j.o.PAGINATE,
+                defaultValue: j.oV.PAGINATE,
                 options: [
-                    { label: "Paginate", value: j.o.PAGINATE },
-                    { label: "Truncate", value: j.o.TRUNCATE },
+                    { label: "Paginate", value: j.oV.PAGINATE },
+                    { label: "Truncate", value: j.oV.TRUNCATE },
                 ],
             },
             perPage: { label: "Grid Items per Page (default, all)", type: "number", defaultValue: 3 },
