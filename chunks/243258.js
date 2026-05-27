@@ -8,17 +8,17 @@ var l = i(627968),
     o = i(176781),
     d = i(661531),
     u = i(691540),
-    h = i(857250),
-    p = i(97483),
+    p = i(857250),
+    h = i(97483),
     m = i(720149),
     g = i(573435),
     f = i(953832),
     x = i(619517),
     C = i(451909),
     A = i(378570),
-    y = i(223863),
-    E = i(95701),
-    _ = i(734057),
+    _ = i(223863),
+    y = i(95701),
+    E = i(734057),
     k = i(31717),
     j = i(174459),
     w = i(403362),
@@ -104,13 +104,13 @@ function L(t) {
                             : t.type === N.nQ.SCREENSHOT &&
                               (l.push(new File([e], i, { type: "image/jpeg" })), d.push({}));
                     }
-                    let g = (await Promise.all(t.map(y.pk))).filter(w.Vq).filter((t) => (0, T.t)(t));
+                    let g = (await Promise.all(t.map(_.pk))).filter(w.Vq).filter((t) => (0, T.t)(t));
                     if (0 === g.length) {
-                        (0, u.P0)((0, h.o)(O.intl.string(O.t.iufib1), p.Ck.FAILURE)), n(!1);
+                        (0, u.P0)((0, p.o)(O.intl.string(O.t.iufib1), h.Ck.FAILURE)), n(!1);
                         return;
                     }
                     for (let t of (o && s(), g)) {
-                        let n = _.A.getChannel(t);
+                        let n = E.A.getChannel(t);
                         if (null != n) {
                             for (let t of ((0, I.R)(l, n, k.C.ChannelMessage, {
                                 filesMetadata: d,
@@ -125,6 +125,7 @@ function L(t) {
                                     channel_type: n.type,
                                     application_id: t.applicationId,
                                     clip_uuid: t.id,
+                                    remote_clip_id: t.remoteClipId,
                                 });
                             null != a &&
                                 "" !== a.trim() &&
@@ -133,7 +134,7 @@ function L(t) {
                     }
                     r && 1 === g.length && ((0, A.iN)(g[0], { openTextInVoiceIfVoiceChannel: !0 }), c.closeAllModals());
                 } catch (t) {
-                    (0, u.P0)((0, h.o)(O.intl.string(O.t.iufib1), p.Ck.FAILURE));
+                    (0, u.P0)((0, p.o)(O.intl.string(O.t.iufib1), h.Ck.FAILURE));
                 } finally {
                     n(!1);
                 }
@@ -141,7 +142,7 @@ function L(t) {
             [e, i, s],
         ),
         o = n.useCallback((t) => {
-            if (t instanceof E.YB && !(0, T.t)(t.id)) return { label: O.intl.string(O.t.iufib1) };
+            if (t instanceof y.YB && !(0, T.t)(t.id)) return { label: O.intl.string(O.t.iufib1) };
         }, []);
     return (0, l.jsx)(f.ForwardModal, {
         ...a,

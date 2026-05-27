@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { y$: () => f, t4: () => _, Ni: () => c });
+n.d(t, { y$: () => h, t4: () => _, Ni: () => c });
 var i = n(942381),
     r = n(265690),
     s = n(315069),
@@ -64,7 +64,7 @@ function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
     return d()(e, t);
 }
-function f(e) {
+function h(e) {
     let { checkoutInitParameters: t, contextMetadata: n, order: s, initialPaymentSourceId: a, initialCurrency: o } = e;
     return (0, r.h)(
         (e) => ({
@@ -77,17 +77,21 @@ function f(e) {
             selectedPlanId: void 0,
             setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0 }),
             setSelectedPlanId: (t) => e({ selectedPlanId: t ?? void 0 }),
+            fetchCheckoutInvoicePreviewRequest: null,
+            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: t ?? null }),
             checkoutInvoicePreview: null,
+            checkoutInvoiceError: null,
             setCheckoutInvoicePreview: (t, n) =>
                 e({ checkoutInvoicePreview: t ?? null, checkoutInvoiceError: n ?? null }),
+            fetchRenewalInvoicePreviewRequest: null,
+            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: t ?? null }),
+            renewalInvoicePreview: null,
+            renewalInvoiceError: null,
+            setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),
             discountInvoicePreview: null,
             setDiscountInvoicePreview: (t) => {
                 e({ discountInvoicePreview: t ?? null });
             },
-            renewalInvoicePreview: null,
-            setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),
-            checkoutInvoiceError: null,
-            renewalInvoiceError: null,
             entitlementsGranted: [],
             setEntitlementsGranted: (t) => e({ entitlementsGranted: t }),
             hasAcceptedTerms: !1,
