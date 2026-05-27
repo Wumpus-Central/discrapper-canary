@@ -14,15 +14,15 @@ let a = (e) => {
         onCloseCallback: c,
         itemConsumed: d,
         purchaseType: _ = s.gs.FIAT,
-        overrideGraphic: f,
-        overrideGradientColor: h,
+        overrideGraphic: h,
+        overrideGradientColor: f,
         rentalExpiresAt: p,
     } = e;
     (0, r.openModalLazy)(
         async () => {
             if ((0, s.EZ)(t.skuId) || t.skuId === s.Dp.ORB_PROFILE_BADGE) {
                 let { default: e } = await Promise.all([
-                    n.e("84448"),
+                    n.e("48414"),
                     n.e("97189"),
                     n.e("4430"),
                     n.e("64827"),
@@ -44,8 +44,7 @@ let a = (e) => {
                     n.e("54103"),
                     n.e("32737"),
                     n.e("86546"),
-                    n.e("3590"),
-                    n.e("98660"),
+                    n.e("43256"),
                     n.e("14122"),
                     n.e("25265"),
                     n.e("95481"),
@@ -62,7 +61,7 @@ let a = (e) => {
                     });
             }
             let { default: e } = await Promise.all([
-                n.e("84448"),
+                n.e("48414"),
                 n.e("4430"),
                 n.e("64827"),
                 n.e("84569"),
@@ -86,8 +85,7 @@ let a = (e) => {
                 n.e("54103"),
                 n.e("32737"),
                 n.e("86546"),
-                n.e("3590"),
-                n.e("98660"),
+                n.e("43256"),
                 n.e("14122"),
                 n.e("2750"),
                 n.e("25265"),
@@ -101,8 +99,8 @@ let a = (e) => {
                     overrideDescription: l,
                     shouldShowPromotionalExperience: u,
                     purchaseType: _,
-                    overrideGraphic: f,
-                    overrideGradientColor: h,
+                    overrideGraphic: h,
+                    overrideGradientColor: f,
                     rentalExpiresAt: p,
                     ...n,
                 });

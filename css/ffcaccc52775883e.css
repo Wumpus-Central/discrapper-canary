@@ -26,6 +26,50 @@
     width: 100%
 }
 
+.positionCenter_e8605d {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.previewContainer_e8605d {
+    box-sizing: border-box;
+    height: 60px;
+    overflow: visible;
+    width: 60px
+}
+
+.sampleProfile_e8605d {
+    background-color: var(--background-surface-higher);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-xs);
+    box-sizing: border-box;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top;
+    width: 100%
+}
+
+.emptyPlaceholder_e8605d {
+    border: 1px dashed var(--border-strong);
+    border-radius: var(--radius-xs);
+    height: 76px;
+    width: 76px
+}
+
+.emptyPreviewBackgroundImage_e8605d {
+    border-radius: var(--radius-xs);
+    height: 60px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top;
+    width: 60px
+}
+
 .gradient_f11c9b {
     border-radius: inherit;
     box-shadow: inset 0 0 0 1px var(--border-muted);
