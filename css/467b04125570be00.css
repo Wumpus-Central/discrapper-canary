@@ -1,3 +1,39 @@
+.container__710ee {
+    flex-direction: column;
+    min-height: 300px
+}
+
+.circle__710ee,
+.container__710ee {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.circle__710ee {
+    background-color: var(--background-base-lowest);
+    border-radius: 50%;
+    height: 64px;
+    width: 64px
+}
+
+.icon__710ee {
+    color: var(--interactive-text-active)
+}
+
+.title__710ee {
+    margin: 32px 0 8px
+}
+
+.roleTip__710ee,
+.subtitle__710ee {
+    text-align: center
+}
+
+.roleTip__710ee {
+    margin-top: 4px
+}
+
 .header_d0b769 {
     align-items: center;
     background-color: unset;
