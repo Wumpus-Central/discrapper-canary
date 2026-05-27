@@ -1,15 +1,15 @@
 n.d(l, { Ay: () => h, UX: () => C, dZ: () => f });
 var r = n(627968),
-    s = n(64700),
-    t = n(503698),
-    i = n.n(t),
+    t = n(64700),
+    s = n(503698),
+    i = n.n(s),
     a = n(284009),
     d = n.n(a),
     o = n(340287),
     c = n(430993),
     u = n(430690),
     p = n(742810),
-    N = n(671744),
+    N = n(722847),
     A = n(834252),
     E = n(166532),
     m = n(615310),
@@ -19,30 +19,36 @@ function h(e) {
             let { header: l, ...n } = e;
             return { header: l, stepProps: n };
         })(e),
-        { step: t, stepConfigs: a } = (0, m.Ay)(),
+        { step: s, stepConfigs: a } = (0, m.Ay)(),
         {
             setBodyNode: o,
             setFooterNode: h,
             setModalOverlayNode: f,
             isDisplayingWowMomentConfirmation: C,
-            unifiedCheckoutFlow: x,
+            unifiedCheckoutFlow: P,
         } = (0, A.P5)(),
-        { setReadySlideId: P } = (0, N.t4)((e) => ({ setReadySlideId: e.setReadySlideId })),
-        j = a.find((e) => e.key === t);
-    s.useEffect(() => {
+        { setReadySlideId: x } = (0, N.t4)((e) => ({ setReadySlideId: e.setReadySlideId })),
+        y = a.find((e) => e.key === s);
+    t.useEffect(() => {
         f(null);
-    }, [t, f]),
-        d()(null != j, "Unknown step for current payment flow (PaymentModalStep): step=%s, flow=%s", t, x);
-    let y = j?.options?.hideSlider ?? !1,
-        R = j?.options?.hideDefaultModalBody ?? !1,
-        I = j?.options?.sliderBodyClassName,
+    }, [s, f]),
+        d()(null != y, "Unknown step for current payment flow (PaymentModalStep): step=%s, flow=%s", s, P);
+    let j = y?.options?.hideSlider ?? !1,
+        R = y?.options?.hideDefaultModalBody ?? !1,
+        I = y?.options?.sliderBodyClassName,
         _ = (0, p.D7)({ location: "PaymentModalStep" }),
-        M = s.useMemo(() => _ && t === E.pn.REVIEW, [_, t]);
+        M = t.useMemo(() => _ && s === E.pn.REVIEW, [_, s]),
+        T = t.useCallback(
+            (e, l) => {
+                l === s && o(e);
+            },
+            [s, o],
+        );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (j?.options?.renderHeader ?? !0) ? l : null,
-            j.renderStep(n),
-            null == t || y
+            (y?.options?.renderHeader ?? !0) ? l : null,
+            y.renderStep(n),
+            null == s || j
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -51,9 +57,9 @@ function h(e) {
                               : (0, r.jsx)(c.c, {
                                     children: (0, r.jsx)(u.t, {
                                         shouldUseMediaQueriesForSizing: !0,
-                                        activeSlide: t,
+                                        activeSlide: s,
                                         centered: !1,
-                                        onSlideReady: (e) => P(e),
+                                        onSlideReady: (e) => x(e),
                                         width: "100%",
                                         disableDefaultTransformStyling: M,
                                         overflow: C ? "visible" : void 0,
@@ -66,9 +72,7 @@ function h(e) {
                                                         id: e.key,
                                                         children: (0, r.jsx)("form", {
                                                             className: i()(S.OO, { [S.Wq]: M }, I),
-                                                            ref: (e) => {
-                                                                o(e);
-                                                            },
+                                                            ref: (l) => T(l, e.key),
                                                             onSubmit: (e) => e.preventDefault(),
                                                         }),
                                                     },

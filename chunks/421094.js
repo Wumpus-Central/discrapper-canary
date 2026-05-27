@@ -1,8 +1,8 @@
 n.d(t, { K: () => s });
 var l = n(627968),
-    a = n(64700),
-    i = n(61572),
-    r = n(375708);
+    i = n(64700),
+    r = n(376843),
+    a = n(375708);
 let s = (e) => {
     let {
             handlePaymentSourceAdd: t,
@@ -11,15 +11,15 @@ let s = (e) => {
             disabled: o,
             hasEntitlements: u,
             eligiblePaymentGateways: c,
-            label: d = r.intl.string(r.t["u+Cw58"]),
+            label: d = a.intl.string(a.t["u+Cw58"]),
             shouldUseUnifiedCheckoutUI: p,
             paymentSourceDropdownClassName: m,
             paymentSourceDropdownPrependOption: h,
             location: C = "PremiumSubscriptionReview",
         } = e,
-        A = a.useMemo(
+        A = i.useMemo(
             () => ({
-                newPaymentMethodOptionLabel: u && !n ? r.intl.string(r.t.IGU7El) : null,
+                newPaymentMethodOptionLabel: u && !n ? a.intl.string(a.t.IGU7El) : null,
                 isTrial: n,
                 paymentGatewayRestrictions: c,
                 shouldUseUnifiedCheckoutUI: p,
@@ -28,7 +28,7 @@ let s = (e) => {
             }),
             [u, n, c, p, m, h],
         );
-    return (0, l.jsx)(i.N, {
+    return (0, l.jsx)(r.N, {
         label: d,
         disabled: o,
         onPaymentSourceAdd: t,

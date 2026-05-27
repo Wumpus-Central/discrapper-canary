@@ -339,6 +339,10 @@ screen and (max-width:485px) {
     background: linear-gradient(90deg, rgba(133, 71, 198, .5), rgba(184, 69, 193, .5) 50.24%, rgba(171, 93, 138, .5))
 }
 
+.giftRedemptionLink__9aa63 {
+    margin-top: var(--space-8)
+}
+
 .wrapper_c0e5ec {
     border-radius: 4px;
     transition: background-color .2s ease
@@ -741,10 +745,6 @@ screen and (max-width:485px) {
 
 .compactSelectGiftTitle_d947e6 {
     margin-top: 16px
-}
-
-.giftRedemptionLink__9aa63 {
-    margin-top: var(--space-8)
 }
 
 .previewTotalSectionContainer_b41cc5 {
