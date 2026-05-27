@@ -18,7 +18,7 @@ function d(e, t) {
 function _() {
     let e = (0, l.yK)([u.A], () => u.A.getClips()),
         t = (0, l.bG)([u.A], () => u.A.getPendingClips()),
-        n = (0, c.P)();
+        n = (0, c.Pu)();
     return i.useMemo(() => {
         let i = [...t, ...e],
             r = new Map(),

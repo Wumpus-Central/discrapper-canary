@@ -8,7 +8,7 @@ var r = n(192308),
 let o = function () {
     let { initialEditingClipId: e, selectedGameId: t } =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { resetFilters: o, setSelectedGameId: l } = s.P.getState();
+        { resetFilters: o, setSelectedGameId: l } = s.Pu.getState();
     o(),
         null != t && l(t),
         (0, r.openModalLazy)(

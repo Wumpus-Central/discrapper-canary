@@ -2912,7 +2912,7 @@ button.inner__02fc8:disabled {
 
 .heading-sm\/normal__71c22 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
@@ -2923,7 +2923,7 @@ button.inner__02fc8:disabled {
 
 .heading-sm\/medium__71c22 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -2934,7 +2934,7 @@ button.inner__02fc8:disabled {
 
 .heading-sm\/semibold__71c22 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
@@ -2945,7 +2945,7 @@ button.inner__02fc8:disabled {
 
 .heading-sm\/bold__71c22 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -2956,7 +2956,7 @@ button.inner__02fc8:disabled {
 
 .heading-sm\/extrabold__71c22 {
     font-family: var(--font-display);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 800;
     line-height: 1.2857142857142858
 }
@@ -2967,7 +2967,7 @@ button.inner__02fc8:disabled {
 
 .heading-md\/normal__71c22 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -2978,7 +2978,7 @@ button.inner__02fc8:disabled {
 
 .heading-md\/medium__71c22 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -2989,7 +2989,7 @@ button.inner__02fc8:disabled {
 
 .heading-md\/semibold__71c22 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -3000,7 +3000,7 @@ button.inner__02fc8:disabled {
 
 .heading-md\/bold__71c22 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -3011,7 +3011,7 @@ button.inner__02fc8:disabled {
 
 .heading-md\/extrabold__71c22 {
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -3022,7 +3022,7 @@ button.inner__02fc8:disabled {
 
 .heading-lg\/normal__71c22 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.2
 }
@@ -3033,7 +3033,7 @@ button.inner__02fc8:disabled {
 
 .heading-lg\/medium__71c22 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -3044,7 +3044,7 @@ button.inner__02fc8:disabled {
 
 .heading-lg\/semibold__71c22 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.2
 }
@@ -3055,7 +3055,7 @@ button.inner__02fc8:disabled {
 
 .heading-lg\/bold__71c22 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -3066,7 +3066,7 @@ button.inner__02fc8:disabled {
 
 .heading-lg\/extrabold__71c22 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 800;
     line-height: 1.2
 }
@@ -3077,7 +3077,7 @@ button.inner__02fc8:disabled {
 
 .heading-xl\/normal__71c22 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -3088,7 +3088,7 @@ button.inner__02fc8:disabled {
 
 .heading-xl\/medium__71c22 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -3099,7 +3099,7 @@ button.inner__02fc8:disabled {
 
 .heading-xl\/semibold__71c22 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -3110,7 +3110,7 @@ button.inner__02fc8:disabled {
 
 .heading-xl\/bold__71c22 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -3121,7 +3121,7 @@ button.inner__02fc8:disabled {
 
 .heading-xl\/extrabold__71c22 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -3132,7 +3132,7 @@ button.inner__02fc8:disabled {
 
 .heading-xxl\/normal__71c22 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -3143,7 +3143,7 @@ button.inner__02fc8:disabled {
 
 .heading-xxl\/medium__71c22 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -3154,7 +3154,7 @@ button.inner__02fc8:disabled {
 
 .heading-xxl\/semibold__71c22 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -3165,7 +3165,7 @@ button.inner__02fc8:disabled {
 
 .heading-xxl\/bold__71c22 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -3176,7 +3176,7 @@ button.inner__02fc8:disabled {
 
 .heading-xxl\/extrabold__71c22 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 800;
     line-height: 1.25
 }
@@ -3187,20 +3187,20 @@ button.inner__02fc8:disabled {
 
 .eyebrow__71c22 {
     font-family: var(--font-display);
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: .02em;
     line-height: 1.3333333333333333;
     text-transform: uppercase
 }
 
-.eyebrow__71c22,
 .eyebrow__71c22.fontScaling__71c22 {
     font-size: .75rem
 }
 
 .heading-deprecated-12\/normal__71c22 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -3211,7 +3211,7 @@ button.inner__02fc8:disabled {
 
 .heading-deprecated-12\/medium__71c22 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -3222,7 +3222,7 @@ button.inner__02fc8:disabled {
 
 .heading-deprecated-12\/semibold__71c22 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -3233,7 +3233,7 @@ button.inner__02fc8:disabled {
 
 .heading-deprecated-12\/bold__71c22 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -3244,7 +3244,7 @@ button.inner__02fc8:disabled {
 
 .heading-deprecated-12\/extrabold__71c22 {
     font-family: var(--font-display);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 800;
     line-height: 1.3333333333333333
 }
@@ -3255,7 +3255,7 @@ button.inner__02fc8:disabled {
 
 .redesign\/heading-18\/medium__71c22 {
     font-family: var(--font-display);
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -3266,7 +3266,7 @@ button.inner__02fc8:disabled {
 
 .redesign\/heading-18\/semibold__71c22 {
     font-family: var(--font-display);
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -3277,7 +3277,7 @@ button.inner__02fc8:disabled {
 
 .redesign\/heading-18\/bold__71c22 {
     font-family: var(--font-display);
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -3288,7 +3288,7 @@ button.inner__02fc8:disabled {
 
 .text-xxs\/normal__71c22 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 400;
     line-height: 1.2
 }
@@ -3299,7 +3299,7 @@ button.inner__02fc8:disabled {
 
 .text-xxs\/medium__71c22 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -3310,18 +3310,18 @@ button.inner__02fc8:disabled {
 
 .text-xxs\/semibold__71c22 {
     font-family: var(--font-primary);
-    font-size: .625rem;
+    font-size: 10px;
     font-weight: 600;
     line-height: 1.2
 }
 
-.text-xxs\/bold__71c22,
 .text-xxs\/semibold__71c22.fontScaling__71c22 {
     font-size: .625rem
 }
 
 .text-xxs\/bold__71c22 {
     font-family: var(--font-primary);
+    font-size: 10px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -3332,7 +3332,7 @@ button.inner__02fc8:disabled {
 
 .text-xs\/normal__71c22 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -3343,7 +3343,7 @@ button.inner__02fc8:disabled {
 
 .text-xs\/medium__71c22 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -3354,18 +3354,18 @@ button.inner__02fc8:disabled {
 
 .text-xs\/semibold__71c22 {
     font-family: var(--font-primary);
-    font-size: .75rem;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
 
-.text-xs\/bold__71c22,
 .text-xs\/semibold__71c22.fontScaling__71c22 {
     font-size: .75rem
 }
 
 .text-xs\/bold__71c22 {
     font-family: var(--font-primary);
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -3376,18 +3376,18 @@ button.inner__02fc8:disabled {
 
 .text-sm\/normal__71c22 {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
 
-.text-sm\/medium__71c22,
-.text-sm\/normal__71c22,
 .text-sm\/normal__71c22.fontScaling__71c22 {
     font-size: .875rem
 }
 
 .text-sm\/medium__71c22 {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -3398,18 +3398,18 @@ button.inner__02fc8:disabled {
 
 .text-sm\/semibold__71c22 {
     font-family: var(--font-primary);
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
 
-.text-sm\/bold__71c22,
 .text-sm\/semibold__71c22.fontScaling__71c22 {
     font-size: .875rem
 }
 
 .text-sm\/bold__71c22 {
     font-family: var(--font-primary);
+    font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -3420,7 +3420,7 @@ button.inner__02fc8:disabled {
 
 .text-md\/normal__71c22 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.25
 }
@@ -3431,7 +3431,7 @@ button.inner__02fc8:disabled {
 
 .text-md\/medium__71c22 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.25
 }
@@ -3442,7 +3442,7 @@ button.inner__02fc8:disabled {
 
 .text-md\/semibold__71c22 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.25
 }
@@ -3453,7 +3453,7 @@ button.inner__02fc8:disabled {
 
 .text-md\/bold__71c22 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.25
 }
@@ -3464,18 +3464,18 @@ button.inner__02fc8:disabled {
 
 .text-lg\/normal__71c22 {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 400;
     line-height: 1.2
 }
 
-.text-lg\/medium__71c22,
-.text-lg\/normal__71c22,
 .text-lg\/normal__71c22.fontScaling__71c22 {
     font-size: 1.25rem
 }
 
 .text-lg\/medium__71c22 {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -3486,18 +3486,18 @@ button.inner__02fc8:disabled {
 
 .text-lg\/semibold__71c22 {
     font-family: var(--font-primary);
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: 600;
     line-height: 1.2
 }
 
-.text-lg\/bold__71c22,
 .text-lg\/semibold__71c22.fontScaling__71c22 {
     font-size: 1.25rem
 }
 
 .text-lg\/bold__71c22 {
     font-family: var(--font-primary);
+    font-size: 20px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -3508,7 +3508,7 @@ button.inner__02fc8:disabled {
 
 .redesign\/message-preview\/normal__71c22 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -3519,7 +3519,7 @@ button.inner__02fc8:disabled {
 
 .redesign\/message-preview\/medium__71c22 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -3530,7 +3530,7 @@ button.inner__02fc8:disabled {
 
 .redesign\/message-preview\/semibold__71c22 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -3541,7 +3541,7 @@ button.inner__02fc8:disabled {
 
 .redesign\/message-preview\/bold__71c22 {
     font-family: var(--font-primary);
-    font-size: .9375rem;
+    font-size: 15px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -3552,7 +3552,7 @@ button.inner__02fc8:disabled {
 
 .redesign\/channel-title\/normal__71c22 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.375
 }
@@ -3563,7 +3563,7 @@ button.inner__02fc8:disabled {
 
 .redesign\/channel-title\/medium__71c22 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.375
 }
@@ -3574,7 +3574,7 @@ button.inner__02fc8:disabled {
 
 .redesign\/channel-title\/semibold__71c22 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.375
 }
@@ -3585,7 +3585,7 @@ button.inner__02fc8:disabled {
 
 .redesign\/channel-title\/bold__71c22 {
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.375
 }
@@ -3596,44 +3596,44 @@ button.inner__02fc8:disabled {
 
 .display-sm__71c22 {
     font-family: var(--font-headline);
+    font-size: 20px;
     font-weight: 800;
     line-height: 1
 }
 
-.display-sm__71c22,
 .display-sm__71c22.fontScaling__71c22 {
     font-size: 1.25rem
 }
 
 .display-md__71c22 {
     font-family: var(--font-headline);
+    font-size: 34px;
     font-weight: 800;
     line-height: 1.0588235294117647
 }
 
-.display-md__71c22,
 .display-md__71c22.fontScaling__71c22 {
     font-size: 2.125rem
 }
 
 .display-lg__71c22 {
     font-family: var(--font-headline);
+    font-size: 44px;
     font-weight: 800;
     line-height: .9545454545454546
 }
 
-.display-lg__71c22,
 .display-lg__71c22.fontScaling__71c22 {
     font-size: 2.75rem
 }
 
 .code__71c22 {
     font-family: var(--font-code);
+    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
 
-.code__71c22,
 .code__71c22.fontScaling__71c22 {
     font-size: .75rem
 }
