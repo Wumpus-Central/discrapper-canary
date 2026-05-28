@@ -8415,6 +8415,14 @@ let { Themes: c } = u.zv,
                     },
                 },
                 TABLE_ROW_ICON_SIZE: { resolve: () => 32 },
+                TABLE_ROW_LABEL_COLOR: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return "mobile-text-heading-primary";
+                        for (let e of t) if ("mobile-visual-refresh" === e) return "text-strong";
+                        return "mobile-text-heading-primary";
+                    },
+                },
                 TABLE_ROW_LABEL_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;

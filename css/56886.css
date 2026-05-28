@@ -9431,6 +9431,7 @@
     --mobile-table-row-group-helper-text-style: text-sm/medium;
     --mobile-table-row-height: 60px;
     --mobile-table-row-icon-size: 32px;
+    --mobile-table-row-label-color: mobile-text-heading-primary;
     --mobile-table-row-label-text-style: text-md/semibold;
     --mobile-table-row-padding: 12px;
     --mobile-user-profile-about-me-heading-text-style: text-sm/semibold;
@@ -9556,6 +9557,7 @@
     --mobile-table-row-content-height: 32px;
     --mobile-table-row-group-helper-text-style: text-sm/normal;
     --mobile-table-row-height: 56px;
+    --mobile-table-row-label-color: text-strong;
     --mobile-table-row-label-text-style: text-md/medium;
     --mobile-user-profile-about-me-heading-text-style: text-sm/medium;
     --mobile-user-row-label-line-height-ios: 20px;
