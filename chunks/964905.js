@@ -1763,7 +1763,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 552436, Version Hash: ed7db8bda073eff1b4e6bf094277034aab5b9540`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 552460, Version Hash: 5337f52b53ca9a83527f9150abb9147f30e27bfc`,
 ),
     ev.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -7423,7 +7423,6 @@ function uF(e) {
                                                 s({ type: "HINT", text: t });
                                         },
                                         maxLength: 37,
-                                        autoFocus: !0,
                                         autoComplete: "off",
                                         name: "add-friend",
                                         "data-form-type": "other",
@@ -18425,7 +18424,7 @@ let SR = "isHideDevBanner",
                     className: t2()(SC.Wz, SC.mr),
                     children: [
                         (0, U.jsx)(Sv, { className: SC.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "552436" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "552460" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })
