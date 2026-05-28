@@ -1,0 +1,14 @@
+.tags__513ed {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8)
+}
+
+.error__513ed {
+    margin-bottom: var(--space-16)
+}
+
+.selectAllButton__513ed {
+    margin-top: var(--space-12)
+}

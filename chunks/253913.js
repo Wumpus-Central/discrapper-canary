@@ -5,6 +5,7 @@ var i,
     s =
         (((i = {}).PERMISSIONS = "Permissions"),
         (i.GUIDELINES = "Guidelines"),
+        (i.RECOMMENDED_TAGS = "Recommended Tags"),
         (i.TAGS = "Tags"),
         (i.DEFAULT_REACTION = "Default Reaction"),
         (i.CREATE_POST = "Create Post"),
