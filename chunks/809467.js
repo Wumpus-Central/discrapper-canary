@@ -16,5 +16,7 @@ e.exports = {
     l3: "groupLabelIcon_b08638",
     X6: "perServerNotice_b08638",
     TD: "perServerNoticeDismissButton_b08638",
+    BJ: "keyboardModeNotice_b08638",
+    qp: "keyboardModeNoticeIcon_b08638",
     HT: "floatingUpsellContainer_b08638",
 };

@@ -396,6 +396,20 @@
     transition: color .15s ease-out
 }
 
+.keyboardModeNotice_b08638 {
+    display: none
+}
+
+.keyboard-mode .keyboardModeNotice_b08638 {
+    display: block
+}
+
+.keyboardModeNoticeIcon_b08638 {
+    display: inline-flex;
+    margin-inline: 2px;
+    vertical-align: middle
+}
+
 .floatingUpsellContainer_b08638 {
     bottom: 0;
     inset-inline: 0;
