@@ -1,48 +1,49 @@
 "use strict";
-n.d(t, { i: () => c });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { i: () => d });
+var i = n(627968),
+    r = n(64700),
     s = n(735438),
     a = n.n(s),
     o = n(900283),
     l = n(106236),
-    u = n(375905);
-let d = (e) => `${e.toFixed(0)}%`,
-    c = i.forwardRef(function (e, t) {
+    u = n(598286);
+let c = (e) => `${e.toFixed(0)}%`,
+    d = r.forwardRef(function (e, t) {
         let {
                 value: n,
                 minValue: s = 0,
-                maxValue: c = 100,
+                maxValue: d = 100,
                 onChange: _,
-                onInteraction: f,
-                renderValue: E = d,
-                "aria-label": h,
+                onInteraction: h,
+                renderValue: f = c,
+                "aria-label": p,
             } = e,
-            p = i.useRef(null),
-            m = i.useMemo(() => a().debounce(() => f?.(o.Q.SLIDER), 100), [f]);
+            E = r.useRef(null),
+            m = r.useMemo(() => a().debounce(() => h?.(o.Q.SLIDER), 100), [h]);
         return (
-            i.useImperativeHandle(
+            r.useImperativeHandle(
                 t,
-                () => ({ focus: () => p.current?.focus(), blur: () => p.current?.blur(), activate: () => !1 }),
+                () => ({ focus: () => E.current?.focus(), blur: () => E.current?.blur(), activate: () => !1 }),
                 [],
             ),
-            (0, r.jsx)("div", {
+            (0, i.jsx)("div", {
                 className: u.x,
-                children: (0, r.jsx)(l.A, {
-                    ref: p,
+                children: (0, i.jsx)(l.A, {
+                    ref: E,
                     mini: !0,
                     handleSize: 16,
                     className: u.a,
                     initialValue: n,
                     minValue: s,
-                    maxValue: c,
+                    maxValue: d,
                     onValueChange: (e) => {
                         _(e), m();
                     },
                     asValueChanges: _,
-                    onValueRender: E,
+                    onValueRender: f,
                     orientation: "horizontal",
-                    "aria-label": h,
+                    consumeAxisOnly: !0,
+                    "aria-label": p,
                 }),
             })
         );
