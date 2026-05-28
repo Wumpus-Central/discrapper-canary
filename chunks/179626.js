@@ -6424,6 +6424,7 @@ function uD(e) {
     return (0, a.zD)(`${u.X.SOUNDS_LIST_ITEM_PREFIX}${e.sound}`, {
         useTitle: e.useTitle,
         useSubtitle: () => j.intl.format(j.t.OOiGCM, { onClick: () => uL(e.sound) }),
+        useSearchTerms: e.useSearchTerms,
         useValue: () => {
             let t = (0, g.bG)([uI.A], () => uI.A.isSoundDisabled(e.sound)),
                 i = e.useDisabled?.();
@@ -6449,8 +6450,16 @@ let uP = [
         { useTitle: () => j.intl.string(j.t.JoTq8n), sound: "camera_on" },
         { useTitle: () => j.intl.string(j.t["8P6tQ6"]), sound: "camera_off" },
         { useTitle: () => j.intl.string(j.t["juL9/L"]), sound: "disconnect" },
-        { useTitle: () => j.intl.string(j.t.x98vQq), sound: "ptt_start" },
-        { useTitle: () => j.intl.string(j.t["1HjRqC"]), sound: "ptt_stop" },
+        {
+            useTitle: () => j.intl.string(j.t.x98vQq),
+            useSearchTerms: () => [j.intl.string(j.t.Q8gkVL)],
+            sound: "ptt_start",
+        },
+        {
+            useTitle: () => j.intl.string(j.t["1HjRqC"]),
+            useSearchTerms: () => [j.intl.string(j.t.Q8gkVL)],
+            sound: "ptt_stop",
+        },
         { useTitle: () => j.intl.string(j.t["9JB1Ck"]), sound: "user_join" },
         { useTitle: () => j.intl.string(j.t.KUBBNt), sound: "user_leave" },
         { useTitle: () => j.intl.string(j.t.EZjqUT), sound: "user_moved" },
