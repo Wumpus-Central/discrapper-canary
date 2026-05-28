@@ -1,0 +1,1 @@
+p.exports = { $: "attachmentIcon__1db97" };
