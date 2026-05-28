@@ -1,3 +1,11 @@
+.settingsPage__9cd63 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-32);
+    min-width: 0;
+    width: 100%
+}
+
 .container__8279f {
     align-items: center;
     background: linear-gradient(0deg, var(--opacity-black-20) 0, var(--opacity-black-20) 100%), linear-gradient(187deg, var(--premium-tier-0-header-gradient-1) -9.85%, var(--premium-tier-0-header-gradient-2) 35.44%, var(--premium-tier-0-header-gradient-3) 55.85%, var(--premium-tier-0-header-gradient-4) 100.07%, var(--premium-tier-0-header-gradient-5) 110.26%);

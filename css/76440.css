@@ -761,7 +761,10 @@ img.messageBadge__10651 {
     pointer-events: auto;
     position: absolute;
     transform: translateX(-50%);
-    transition: opacity .2s ease
+    transition: opacity .2s ease;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
 }
 
 .bar_a750ac,
@@ -808,7 +811,10 @@ img.messageBadge__10651 {
     inset-inline-start: var(--space-20);
     pointer-events: none;
     position: absolute;
-    transition: opacity .2s ease
+    transition: opacity .2s ease;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
 }
 
 .timeline__76ea6.minimized__76ea6 {
@@ -822,6 +828,7 @@ img.messageBadge__10651 {
     height: 24px;
     justify-content: center;
     padding: 2px;
+    pointer-events: auto;
     position: absolute;
     transform: translateX(-50%);
     width: 24px
@@ -835,6 +842,15 @@ img.messageBadge__10651 {
 .marker__76ea6 .chatIcon__76ea6 {
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px)
+}
+
+.markerMessage__76ea6 {
+    display: inline-block;
+    max-width: 140px;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
 }
 
 .root__2bf8a {
@@ -1117,13 +1133,6 @@ img.messageBadge__10651 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
-}
-
-.nameplatePreview__5828f {
-    align-items: center;
-    display: flex;
-    height: 100%;
-    width: 100%
 }
 
 .profileEffects__0dd08 {
@@ -4988,12 +4997,6 @@ span.clanTag__5d473 {
     text-align: start
 }
 
-.container__98113 {
-    align-items: center;
-    display: flex;
-    flex-direction: column
-}
-
 .giftButton__82222 {
     --button-outline-brand-text: var(--brand-500)
 }
@@ -6513,14 +6516,6 @@ span.clanTag__5d473 {
 
 .nameplatePreviewPlaceholder__14af9 {
     background: var(--background-mod-normal)
-}
-
-.settingsPage__9cd63 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-32);
-    min-width: 0;
-    width: 100%
 }
 
 .moonIcon__1fc68 {

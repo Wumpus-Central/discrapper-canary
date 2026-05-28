@@ -6,7 +6,7 @@ function s(e, t) {
     if (null == e) return null;
     let n = t?.find((t) => t.id === e.attachment_id);
     return {
-        timestamp: (0, i.rB)(e.timestamp),
+        timestamp: (0, i.rB)(e.timestamp / 1e3),
         title: n?.title ?? null,
         isClip: ((n?.flags ?? 0) & r.sbO.IS_CLIP) != 0,
     };
