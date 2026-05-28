@@ -1,1 +1,6 @@
-e.exports = { N1: "headerContainer__095fe", wx: "header__095fe", wT: "toggleExpandIcon__095fe" };
+e.exports = {
+    N1: "headerContainer__095fe",
+    qd: "headerTitle__095fe",
+    AN: "headerSpacer__095fe",
+    wT: "toggleExpandIcon__095fe",
+};

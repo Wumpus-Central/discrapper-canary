@@ -3465,18 +3465,17 @@
 }
 
 .headerContainer__095fe {
-    cursor: pointer;
-    justify-content: space-between
-}
-
-.header__095fe,
-.headerContainer__095fe {
     align-items: center;
-    display: flex
+    display: flex;
+    gap: 4px
 }
 
-.header__095fe {
-    gap: 4px
+.headerTitle__095fe {
+    cursor: pointer
+}
+
+.headerSpacer__095fe {
+    flex: 1
 }
 
 .toggleExpandIcon__095fe {
