@@ -4784,7 +4784,7 @@ svg.radioIcon_c1e9c4 {
 .children__9293f {
     align-items: center;
     display: flex;
-    flex: 1 1 auto;
+    flex: 1 1 0;
     min-width: 0;
     overflow: hidden;
     position: relative
@@ -4827,7 +4827,7 @@ svg.radioIcon_c1e9c4 {
 .toolbar__9293f {
     align-items: center;
     display: flex;
-    flex: 0 0.1 auto;
+    flex: 0 1 auto;
     gap: var(--space-xs);
     max-width: 100%;
     min-width: 0;

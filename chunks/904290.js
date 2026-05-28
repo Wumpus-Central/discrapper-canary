@@ -104,9 +104,12 @@ function M(e) {
             (0, C.xs)(t.id),
                 await o.A.openPrivateChannel({ recipientIds: [t.id] }),
                 (0, c.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("4495"), n.e("22638"), n.e("8891"), n.e("95501")]).then(
-                        n.bind(n, 367516),
-                    );
+                    let { default: e } = await Promise.all([
+                        n.e("63277"),
+                        n.e("22638"),
+                        n.e("8891"),
+                        n.e("95501"),
+                    ]).then(n.bind(n, 367516));
                     return (t) =>
                         (0, a.jsx)(e, { ...t, giftIntentType: w.np.FRIEND_ANNIVERSARY, analyticsLocationHistory: k });
                 });

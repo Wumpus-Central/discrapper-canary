@@ -2210,6 +2210,12 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     color: var(--input-placeholder-text-default)
 }
 
+.fields__12532 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
 .container__09ccc {
     background-color: var(--background-surface-high);
     border-radius: 4px;
@@ -2478,13 +2484,7 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     flex: 0 1 244px;
     margin: 0 4px;
     max-width: 244px;
-    min-width: 244px
-}
-
-@container (max-width: 500px) {
-    .search__49676 {
-        min-width: var(--space-32)
-    }
+    min-width: clamp(var(--space-32), 100cqi - 240px, 244px)
 }
 
 .toolbar__49676 {
