@@ -1,57 +1,62 @@
-i.d(e, { default: () => f });
-var l = i(627968),
-    n = i(64700),
-    s = i(189213),
-    r = i(17928),
-    a = i(834730),
-    d = i(287809),
-    o = i(725386),
-    u = i(502944),
-    c = i(985018),
-    g = i(500681);
-function f(t) {
-    let { onClose: e, trackUserProfileEditAction: i, ...f } = t,
-        h = (0, r.bG)([d.default], () => d.default.getCurrentUser()),
-        p = (function () {
-            let t = (0, o.A)({ location: "UserProfileWidgetAddModal" }),
-                [e, i] = n.useState(t);
+l.d(e, { default: () => h });
+var n = l(627968),
+    i = l(64700),
+    r = l(189213),
+    s = l(17928),
+    a = l(834730),
+    d = l(287809),
+    u = l(633075),
+    c = l(725386),
+    o = l(502944),
+    g = l(375708),
+    f = l(500681);
+function h(t) {
+    let { onClose: e, trackUserProfileEditAction: l, highlightedApplicationIds: h, ...p } = t,
+        k = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
+        m = (function (t) {
+            let e = (0, c.A)({ location: "UserProfileWidgetAddModal" }),
+                [l, n] = i.useState(e);
             return (
-                n.useEffect(() => {
-                    t.length > e.length && i(t);
-                }, [t, e]),
-                e
+                i.useEffect(() => {
+                    e.length > l.length && n(e);
+                }, [e, l]),
+                i.useMemo(() => {
+                    if (null == t || 0 === t.length) return l;
+                    let e = (e) => e instanceof u.R && t.includes(e.applicationId);
+                    return [...l.filter(e), ...l.filter((t) => !e(t))];
+                }, [l, t])
             );
-        })(),
-        k = p.length > 0,
-        [x, m] = n.useState(!1),
-        C = { onClick: () => e(), text: c.intl.string(c.t.cpT0Cq) },
-        b = n.useCallback(() => {
-            m(!0), e();
+        })(h),
+        x = m.length > 0,
+        [C, b] = i.useState(!1),
+        A = { onClick: () => e(), text: g.intl.string(g.t.cpT0Cq) },
+        U = i.useCallback(() => {
+            b(!0), e();
         }, [e]);
-    return null == h
+    return null == k
         ? null
-        : (0, l.jsx)(s.Modal, {
-              title: c.intl.string(c.t["grUgR+"]),
-              actions: k ? [] : [C],
-              size: k ? "md" : "sm",
+        : (0, n.jsx)(r.Modal, {
+              title: g.intl.string(g.t["grUgR+"]),
+              actions: x ? [] : [A],
+              size: x ? "md" : "sm",
               onClose: e,
-              ...f,
-              children: k
-                  ? (0, l.jsx)("ul", {
-                        "aria-label": c.intl.string(c.t["+EIBSA"]),
-                        className: g.f,
-                        children: p.map((t) =>
-                            (0, l.jsx)(
-                                u.A,
-                                { widget: t, onAddWidget: b, loading: x, trackUserProfileEditAction: i },
+              ...p,
+              children: x
+                  ? (0, n.jsx)("ul", {
+                        "aria-label": g.intl.string(g.t["+EIBSA"]),
+                        className: f.f,
+                        children: m.map((t) =>
+                            (0, n.jsx)(
+                                o.A,
+                                { widget: t, onAddWidget: U, loading: C, trackUserProfileEditAction: l },
                                 t.getUniqueKey(),
                             ),
                         ),
                     })
-                  : (0, l.jsx)(a.E, {
+                  : (0, n.jsx)(a.E, {
                         variant: "text-md/medium",
                         color: "text-subtle",
-                        children: c.intl.string(c.t["1nkDOs"]),
+                        children: g.intl.string(g.t["1nkDOs"]),
                     }),
           });
 }

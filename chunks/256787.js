@@ -1,11 +1,11 @@
 "use strict";
 n.d(t, {
     IL: () => _,
-    Jq: () => h,
+    Jq: () => f,
     L0: () => d,
     PN: () => m,
     XQ: () => E,
-    Zm: () => f,
+    Zm: () => h,
     ef: () => p,
     ki: () => c,
     vf: () => g,
@@ -51,6 +51,7 @@ let r = [
         i.M.RIOT_CONNECTION_DEPRECATION_ADMIN,
         i.M.NOTIFICATION_NUDGE_POST_CALL_DISCONNECT,
         i.M.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_BUTTON_NOTIFICATION,
+        i.M.APP_WIDGET_V2_PROFILE_UPSELL_COACHMARK,
     ],
     a = [
         i.M.GIFTING_PROMOTION_ICON,
@@ -94,11 +95,11 @@ function d(e) {
 function _(e) {
     return a.includes(e);
 }
-function f(e) {
+function h(e) {
     return c(e) || d(e) || _(e);
 }
-function h(e) {
-    return !f(e);
+function f(e) {
+    return !h(e);
 }
 function p(e) {
     return l.includes(e);
@@ -115,4 +116,4 @@ function g(e) {
 let A = Object.keys(i.M)
     .map((e) => parseInt(e))
     .filter((e) => !isNaN(e));
-A.filter(h);
+A.filter(f);

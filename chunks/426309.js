@@ -192,7 +192,7 @@ var F = a(789645),
     Y = a(641886),
     q = a(780898),
     J = a(652215),
-    Q = a(726267),
+    Q = a(571523),
     X = a(427262);
 function Z(e) {
     let { nameplate: t } = e,
@@ -2326,7 +2326,11 @@ var t7 = a(554146),
     aa = a(644103),
     an = a(574560),
     al = a(994182);
-let as = [t7.M.GAME_ACCOUNT_LINK_RECURRING_UPSELL].map((e) => ({ id: String(e), label: t7.M[e], value: e }));
+let as = [t7.M.GAME_ACCOUNT_LINK_RECURRING_UPSELL, t7.M.APP_WIDGET_V2_PROFILE_UPSELL_COACHMARK].map((e) => ({
+    id: String(e),
+    label: t7.M[e],
+    value: e,
+}));
 function ai() {
     let [e, t] = o.useState("dismissals"),
         [a, n] = o.useState(t7.M.GAME_ACCOUNT_LINK_RECURRING_UPSELL),
@@ -7524,7 +7528,7 @@ let rp = {
                     a.e("87845"),
                     a.e("17006"),
                     a.e("45970"),
-                    a.e("61685"),
+                    a.e("88566"),
                     a.e("4974"),
                     a.e("49817"),
                     a.e("80186"),
@@ -8690,7 +8694,7 @@ let rU = {
         return (s.displayName = "ConsentCheckBoxModalContent"), (e) => (0, r.jsx)(s, { ...e });
     },
     GuildRaidLockdownFeedbackModal: async () => {
-        let { default: e } = await Promise.all([a.e("61685"), a.e("46313")]).then(a.bind(a, 336496));
+        let { default: e } = await Promise.all([a.e("88566"), a.e("46313")]).then(a.bind(a, 336496));
         return (t) =>
             (0, r.jsx)(e, {
                 ...t,

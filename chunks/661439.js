@@ -1,16 +1,17 @@
-n.d(t, { X: () => o });
+"use strict";
+n.d(t, { X: () => u });
 var i = n(636537),
-    s = n(228366),
-    a = n(90165),
-    r = n(927813),
-    l = n(652215);
-let c = 6 * r.A.Millis.HOUR;
-async function o() {
-    let e = a.A.lastFetched;
-    if (!(null != e && Date.now() - e < c))
+    r = n(228366),
+    s = n(90165),
+    a = n(927813),
+    o = n(652215);
+let l = 6 * a.A.Millis.HOUR;
+async function u() {
+    let e = s.A.lastFetched;
+    if (!(null != e && Date.now() - e < l))
         try {
-            let e = await i.Bo.get({ url: l.Rsh.USER_ACTIVITY_STATISTICS, oldFormErrors: !0, rejectWithError: !1 });
-            s.h.dispatch({ type: "USER_ACTIVITY_STATISTICS_FETCH_SUCCESS", statistics: e.body });
+            let e = await i.Bo.get({ url: o.Rsh.USER_ACTIVITY_STATISTICS, oldFormErrors: !0, rejectWithError: !1 });
+            r.h.dispatch({ type: "USER_ACTIVITY_STATISTICS_FETCH_SUCCESS", statistics: e.body });
         } catch (e) {
             return e;
         }
