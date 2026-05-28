@@ -381,16 +381,23 @@ function eS(e) {
                 }),
                 V = null != l && l(e.id),
                 B = {
-                    onClick: (t) => {
-                        b({ action: "PRESS_BADGE" }), (0, ef.R9)({ badge: e.id, analyticsLocations: R, ...O });
-                        let i = e.id.startsWith("staff") && !_,
-                            r = a?.userId != null ? u.default.getUser(a.userId) : null;
-                        if (G && !i && r?.bot !== !0) {
-                            t.preventDefault(),
+                    onClick: (i) => {
+                        b({ action: "PRESS_BADGE" }),
+                            (0, ef.vP)({
+                                badgeId: (0, L.P3)(e.id),
+                                badgeAction: "PRESS_BADGE",
+                                position: t,
+                                analyticsLocations: R,
+                                ...O,
+                            });
+                        let r = e.id.startsWith("staff") && !_,
+                            s = a?.userId != null ? u.default.getUser(a.userId) : null;
+                        if (G && !r && s?.bot !== !0) {
+                            i.preventDefault(),
                                 (0, P._)({
                                     initialBadgeId: (0, L.P3)(e.id),
                                     targetUserId: a?.userId,
-                                    targetUsername: r?.globalName ?? r?.username,
+                                    targetUsername: s?.globalName ?? s?.username,
                                 });
                             return;
                         }
@@ -405,7 +412,7 @@ function eS(e) {
                         }
                         if (c) {
                             if (
-                                (t.preventDefault(),
+                                (i.preventDefault(),
                                 ec.default.track(eg.HAw.TIERED_TENURE_BADGE_CLICKED, {
                                     badge: e.id,
                                     premium_type: M,
@@ -420,14 +427,14 @@ function eS(e) {
                                 return;
                             }
                             if (_) {
-                                let n = null != e.link ? (0, A.default)(e.link, { analyticsLocations: R }) : null;
-                                if (null == n) return;
-                                return o?.(), n(t);
+                                let t = null != e.link ? (0, A.default)(e.link, { analyticsLocations: R }) : null;
+                                if (null == t) return;
+                                return o?.(), t(i);
                             }
                             return (0, ee.D)({ analyticsLocations: R, displayProfile: a }), void o?.();
                         }
-                        let s = null != e.link ? (0, A.default)(e.link, { analyticsLocations: R }) : null;
-                        if (null != s) return o?.(), s(t);
+                        let l = null != e.link ? (0, A.default)(e.link, { analyticsLocations: R }) : null;
+                        if (null != l) return o?.(), l(i);
                     },
                     onMouseEnter: () => {
                         "quest_completed" === e.id &&
@@ -436,7 +443,13 @@ function eS(e) {
                                 is_targeted: !1,
                             }),
                             b({ action: "HOVER_BADGE" }),
-                            (0, ef.sQ)({ badge: e.id, analyticsLocations: R, ...O });
+                            (0, ef.vP)({
+                                badgeId: (0, L.P3)(e.id),
+                                badgeAction: "HOVER_BADGE",
+                                position: t,
+                                analyticsLocations: R,
+                                ...O,
+                            });
                     },
                     href: e.link,
                     "aria-label": e.description,
