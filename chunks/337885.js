@@ -1,4 +1,4 @@
-n.d(t, { d: () => D, default: () => P });
+n.d(t, { d: () => L, default: () => F });
 var l = n(627968),
     i = n(64700),
     s = n(123292),
@@ -26,117 +26,118 @@ var l = n(627968),
     T = n(71393),
     I = n(807632),
     R = n(652215),
-    k = n(375708),
-    _ = n(939422);
-let M = p.oU.CREATE_GAME_INVITE_POST_DESCRIPTION,
-    w = "create-game-invite-post";
-function D(e) {
+    k = n(774418),
+    _ = n(375708),
+    M = n(939422);
+let w = p.oU.CREATE_GAME_INVITE_POST_DESCRIPTION,
+    D = "create-game-invite-post";
+function L(e) {
     (0, u.openModalLazy)(
         async () => {
             let { default: t } = await Promise.resolve().then(n.bind(n, 337885));
             return (n) => (0, l.jsx)(t, { ...n, parentChannel: e });
         },
-        { modalKey: w },
+        { modalKey: D },
     );
 }
-let L = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
-function O(e) {
+let O = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
+function P(e) {
     let { application: t } = e,
         { analyticsLocations: n } = (0, x.Ay)(h.A.GAME_INVITE_CHANNEL_CREATE_POST),
         { canStartAuthorization: i, hasAlreadyLinked: a, startAuthorization: r, fetched: o } = (0, f.RD)(t),
         c = (0, g.z)(r, a);
     return o && i && !a
         ? (0, l.jsxs)("div", {
-              className: _.Op,
+              className: M.Op,
               children: [
                   (0, l.jsx)(N.A, { game: t, size: N.M.MEDIUM }),
                   (0, l.jsx)(m.E, {
                       variant: "text-sm/medium",
                       color: "text-default",
-                      className: _.xs,
-                      children: k.intl.string(k.t.UHF2Zn),
+                      className: M.xs,
+                      children: _.intl.string(k.default.UHF2Zn),
                   }),
                   (0, l.jsx)(s.Q, {
                       variant: "primary",
                       size: "sm",
-                      text: k.intl.string(k.t.EBSaL4),
+                      text: _.intl.string(k.default.EBSaL4),
                       onClick: () => c({ analyticsLocations: n }),
                   }),
               ],
           })
         : null;
 }
-function P(e) {
+function F(e) {
     let t,
         { parentChannel: n, transitionState: s, onClose: u } = e,
         m = i.useMemo(() => n.availableTags ?? [], [n.availableTags]),
         h = (0, c.bG)([T.A], () => T.A.getGuild(n.guild_id)?.gameApplicationIds?.[0], [n.guild_id]),
         { data: x } = (0, j.YY)(h),
         [{ textValue: g, richValue: f }, p] = i.useState(() => (0, v.N3)()),
-        [N, D] = i.useState(!1),
-        [P, F] = i.useState(() => new Set()),
-        [G, U] = i.useState(!1),
-        z = i.useMemo(() => m.find((e) => e.name === I.Dg), [m]),
-        H = null == z || !P.has(z.id),
-        B = i.useCallback((e, t, n) => {
+        [N, L] = i.useState(!1),
+        [F, G] = i.useState(() => new Set()),
+        [U, z] = i.useState(!1),
+        H = i.useMemo(() => m.find((e) => e.name === I.Dg), [m]),
+        B = null == H || !F.has(H.id),
+        V = i.useCallback((e, t, n) => {
             p({ textValue: t, richValue: n });
         }, []),
-        V = i.useCallback((e) => {
-            F((t) => {
+        W = i.useCallback((e) => {
+            G((t) => {
                 let n = new Set(t);
                 return n.has(e) ? n.delete(e) : n.add(e), n;
             });
         }, []),
-        W = i.useCallback(
+        $ = i.useCallback(
             (e) => {
-                null != z &&
-                    F((t) => {
+                null != H &&
+                    G((t) => {
                         let n = new Set(t);
-                        return e ? n.delete(z.id) : n.add(z.id), n;
+                        return e ? n.delete(H.id) : n.add(H.id), n;
                     });
             },
-            [z],
+            [H],
         ),
-        $ = ((t = g.trim().split("\n")[0] ?? ""), (0, E.A)(t.slice(0, R.Ign), !0)),
-        q = (0, b.w0)({ parentChannel: n, name: $, appliedTags: P, upload: y.Se }),
-        K = !G && g.length > 0 && g.length <= 120,
-        Y = i.useCallback(async () => {
-            if (K) {
-                U(!0);
+        q = ((t = g.trim().split("\n")[0] ?? ""), (0, E.A)(t.slice(0, R.Ign), !0)),
+        K = (0, b.w0)({ parentChannel: n, name: q, appliedTags: F, upload: y.Se }),
+        Y = !U && g.length > 0 && g.length <= 120,
+        X = i.useCallback(async () => {
+            if (Y) {
+                z(!0);
                 try {
-                    let e = await q(g);
+                    let e = await K(g);
                     (0, S.JA)(e), u();
                 } catch {
-                    U(!1);
+                    z(!1);
                 }
             }
-        }, [K, q, u, g]);
+        }, [Y, K, u, g]);
     return (0, l.jsx)(a.Modal, {
-        title: k.intl.string(k.t.tOsHsu),
+        title: _.intl.string(k.default.tOsHsu),
         transitionState: s,
         onClose: u,
         actions: [
-            { variant: "secondary", text: k.intl.string(k.t["ETE/oC"]), onClick: u, disabled: G },
-            { variant: "primary", text: k.intl.string(k.t.CumH4u), onClick: Y, disabled: !K, loading: G },
+            { variant: "secondary", text: _.intl.string(_.t["ETE/oC"]), onClick: u, disabled: U },
+            { variant: "primary", text: _.intl.string(_.t.CumH4u), onClick: X, disabled: !Y, loading: U },
         ],
         children: (0, l.jsxs)("div", {
-            className: _.rf,
+            className: M.rf,
             children: [
                 (0, l.jsx)(r.D, {
                     required: !0,
-                    label: k.intl.string(k.t["/mEbGf"]),
+                    label: _.intl.string(k.default["/mEbGf"]),
                     children: (0, l.jsx)(A.Ay, {
-                        type: M,
+                        type: w,
                         channel: n,
-                        placeholder: k.intl.string(k.t["SU/IAE"]),
+                        placeholder: _.intl.string(k.default["SU/IAE"]),
                         textValue: g,
                         richValue: f,
                         focused: N,
-                        onChange: B,
-                        onFocus: () => D(!0),
-                        onBlur: () => D(!1),
-                        onSubmit: L,
-                        parentModalKey: w,
+                        onChange: V,
+                        onFocus: () => L(!0),
+                        onBlur: () => L(!1),
+                        onSubmit: O,
+                        parentModalKey: D,
                         disableThemedBackground: !0,
                         maxCharacterCount: 120,
                         showRemainingCharsAfterCount: 120,
@@ -144,14 +145,14 @@ function P(e) {
                 }),
                 m.length > 0
                     ? (0, l.jsx)(r.D, {
-                          label: k.intl.string(k.t.KM6lRG),
-                          description: k.intl.string(k.t["yoIAe/"]),
+                          label: _.intl.string(_.t.KM6lRG),
+                          description: _.intl.string(k.default["yoIAe/"]),
                           children: (0, l.jsx)("div", {
-                              className: _.GA,
+                              className: M.GA,
                               children: m.map((e) =>
                                   (0, l.jsx)(
                                       C.A,
-                                      { tag: e, size: C.A.Sizes.SMALL, selected: P.has(e.id), onClick: () => V(e.id) },
+                                      { tag: e, size: C.A.Sizes.SMALL, selected: F.has(e.id), onClick: () => W(e.id) },
                                       e.id,
                                   ),
                               ),
@@ -160,16 +161,16 @@ function P(e) {
                     : null,
                 (0, l.jsx)(r.D, {
                     layout: "horizontal",
-                    label: k.intl.string(k.t.Xd2NFi),
-                    description: k.intl.string(k.t.G91SYQ),
+                    label: _.intl.string(k.default.Xd2NFi),
+                    description: _.intl.string(k.default.G91SYQ),
                     children: (0, l.jsx)(d.m, {
-                        text: k.intl.formatToPlainString(k.t["0s2ICk"], { noMicTagName: I.Dg }),
-                        shouldShow: null == z,
+                        text: _.intl.formatToPlainString(k.default["0s2ICk"], { noMicTagName: I.Dg }),
+                        shouldShow: null == H,
                         asContainer: !0,
-                        children: (0, l.jsx)(o.d, { checked: H, onChange: W, disabled: null == z }),
+                        children: (0, l.jsx)(o.d, { checked: B, onChange: $, disabled: null == H }),
                     }),
                 }),
-                null != x && (0, l.jsx)(O, { application: x }),
+                null != x && (0, l.jsx)(P, { application: x }),
             ],
         }),
     });
