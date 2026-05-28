@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     Ui: "cardContainer__5b393",
     Nr: "card__5b393",
     Io: "pill__5b393",
@@ -19,6 +19,7 @@ _.exports = {
     eq: "primaryAssetImage__5b393",
     lH: "primaryAssetImageLarge__5b393",
     yK: "primaryAssetScaleDownOnHover__5b393",
+    Uc: "stickerPrimaryAsset__5b393",
     hQ: "contentContainer__5b393",
     P_: "textContent__5b393",
     Gv: "footerContentWrapper__5b393",
