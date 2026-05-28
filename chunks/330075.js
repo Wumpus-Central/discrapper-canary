@@ -36,17 +36,17 @@ function C(e) {
         R = (0, r.R)(t, 600),
         M = (0, A.z)(t),
         P = (0, m.BB)(L),
-        { shouldHideGuildPurchaseEntryPoints: w } = (0, o.MH)(C),
-        D = (0, A.X)(t),
+        { shouldHideGuildPurchaseEntryPoints: D } = (0, o.MH)(C),
+        w = (0, A.X)(t),
         O = (0, f.A)({ guildId: C, guildProductListingId: t.id, sourceAnalyticsLocations: I });
-    if (null == L || w) return null;
+    if (null == L || D) return null;
     let U = () => {
             var e;
             return (
                 (e = { guildId: C, guildProductListingId: t.id, analyticsLocation: I }),
                 void (0, a.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
-                        n.e("7239"),
+                        n.e("24716"),
                         n.e("35778"),
                         n.e("47812"),
                         n.e("13583"),
@@ -92,7 +92,7 @@ function C(e) {
             imageUrl: R,
             name: t.name,
             description: t.description,
-            formattedPrice: D,
+            formattedPrice: w,
             role: k,
             ctaComponent: (0, i.jsx)(s.$, { ...O }),
             productType: M,

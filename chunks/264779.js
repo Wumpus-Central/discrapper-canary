@@ -1,17 +1,18 @@
 "use strict";
 n.d(t, {
-    Cp: () => y,
-    HB: () => L,
-    Ng: () => T,
+    $_: () => M,
+    Cp: () => v,
+    HB: () => w,
+    Ng: () => S,
     OP: () => O,
-    S0: () => R,
+    S0: () => b,
     So: () => C,
-    WD: () => I,
-    Wl: () => D,
-    dG: () => v,
-    eN: () => b,
+    WD: () => T,
+    Wl: () => L,
+    dG: () => R,
+    eN: () => D,
     kc: () => N,
-    kd: () => S,
+    kd: () => y,
 }),
     n(938796);
 var i = n(665260),
@@ -24,14 +25,15 @@ var i = n(665260),
     c = n(166403),
     d = n(354670),
     _ = n(174459),
-    f = n(723702),
-    h = n(935208),
-    p = n(374200),
-    E = n(852218),
-    m = n(788868),
-    g = n(652215),
-    A = n(360469);
-function I(e, t) {
+    h = n(723702),
+    f = n(428262),
+    p = n(935208),
+    E = n(374200),
+    m = n(852218),
+    g = n(788868),
+    A = n(652215),
+    I = n(360469);
+function T(e, t) {
     let n = (0, a.M)(t) ? "logo-dark" : "logo-light",
         i = window.GLOBAL_ENV.CDN_HOST,
         r = "?size=256";
@@ -39,17 +41,17 @@ function I(e, t) {
         ? `https://${i}/promotions/${e}/${n}${r}`
         : `${location.protocol}${window.GLOBAL_ENV.API_ENDPOINT}/promotions/${e}/${n}${r}`;
 }
-function T(e) {
+function S(e) {
     return { code: e.code, userId: e.user_id, claimedAt: e.claimed_at, promotion: u.A.createFromServer(e.promotion) };
 }
-async function S(e) {
+async function y(e) {
     let t,
         { promotionId: n, promotionTitle: i, partnerId: s, analyticsLocations: a } = e,
-        o = await r.Bo.post({ url: g.Rsh.CLAIM_OUTBOUND_PROMOTION_CODE(n), rejectWithError: !1 }),
+        o = await r.Bo.post({ url: A.Rsh.CLAIM_OUTBOUND_PROMOTION_CODE(n), rejectWithError: !1 }),
         l = o.body;
     return (
-        (t = A.vu.DESKTOP),
-        _.default.track(g.HAw.OUTBOUND_PROMOTION_CLAIMED, {
+        (t = I.vu.DESKTOP),
+        _.default.track(A.HAw.OUTBOUND_PROMOTION_CLAIMED, {
             platform: t,
             status: o.status,
             location_stack: a,
@@ -57,7 +59,7 @@ async function S(e) {
             name: i ?? null,
             partner: s ?? null,
         }),
-        T(l)
+        S(l)
     );
 }
 function N(e, t) {
@@ -65,10 +67,10 @@ function N(e, t) {
         ? t.outboundRedemptionUrlFormat.replace("{code}", encodeURIComponent(e))
         : (t.outboundRedemptionPageLink ?? "");
 }
-function y() {
-    let e = p.A.outboundPromotions,
-        t = p.A.consumedInboundPromotionId,
-        n = e.filter((e) => e.id !== t && !(0, i.Lt)(e.flags, m.$3.SUPPRESS_NOTIFICATION) && !v(e)),
+function v() {
+    let e = E.A.outboundPromotions,
+        t = E.A.consumedInboundPromotionId,
+        n = e.filter((e) => e.id !== t && !(0, i.Lt)(e.flags, g.$3.SUPPRESS_NOTIFICATION) && !R(e)),
         r =
             l.A.settings.userContent?.recurringDismissibleContentStates[s.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR]
                 ?.lastDismissedObjectId,
@@ -77,33 +79,33 @@ function y() {
                 ? n
                 : n.filter((e) => {
                       let { id: t } = e;
-                      return 1 === h.default.compare(t, r);
+                      return 1 === p.default.compare(t, r);
                   }),
         o = c.A.getPremiumTypeSubscription(),
         u = !!o?.hasActiveTrial,
         _ = d.A.hasAnyUnexpiredOffer(),
-        f = u || _ ? a.filter((e) => e.isRedeemableByTrialUsers()) : a;
-    return 0 === f.length ? null : f.sort((e, t) => (new Date(e.startDate) < new Date(t.startDate) ? -1 : 1))[0].id;
+        h = u || _ ? a.filter((e) => e.isRedeemableByTrialUsers()) : a;
+    return 0 === h.length ? null : h.sort((e, t) => (new Date(e.startDate) < new Date(t.startDate) ? -1 : 1))[0].id;
 }
 function C() {
-    let e = y();
+    let e = v();
     return null != e && !(0, o.j6)(s.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, e, { cooldownDurationMs: 2592e5 });
 }
-function v(e) {
-    return e.partnerId === E.XY;
+function R(e) {
+    return e.partnerId === m.XY;
 }
 function O(e) {
-    return !(0, f.isIOS)() || !e.hasFlag(m.$3.IS_BLOCKED_IOS);
+    return !(0, h.isIOS)() || !e.hasFlag(g.$3.IS_BLOCKED_IOS);
 }
-function R(e, t) {
+function b(e, t) {
     return null != t[e.id] || e.isRedeemableByTrialUsers();
 }
-function b(e) {
+function D(e) {
     let t = {};
     for (let { code: n, promotion: i } of e) t[i.id] = n;
     return t;
 }
-function D(e, t) {
+function L(e, t) {
     let n = new Set(
         t.map((e) => {
             let { id: t } = e;
@@ -112,10 +114,15 @@ function D(e, t) {
     );
     return e.filter((e) => {
         let { promotion: t } = e;
-        return !n.has(t.id) && !L(t) && !v(t) && O(t);
+        return !n.has(t.id) && !w(t) && !R(t) && O(t);
     });
 }
-function L(e) {
+function w(e) {
     let { promotionType: t } = e;
-    return t === E.pt.THIRD_PARTY_OUTBOUND_RECURRING;
+    return t === m.pt.THIRD_PARTY_OUTBOUND_RECURRING;
+}
+function M(e) {
+    return (
+        null == e || !1 === f.Ay.isPremiumExactly(e, g.PremiumTypes.TIER_2) || e.isFractionalPremiumWithNoStandardSub()
+    );
 }

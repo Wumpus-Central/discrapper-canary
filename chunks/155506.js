@@ -51,7 +51,7 @@ function N(e) {
                 (e = { guildId: r, guildProductListingId: l.id, invoicePreview: a }),
                 (0, s.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
-                        n.e("7239"),
+                        n.e("24716"),
                         n.e("67837"),
                         n.e("35778"),
                         n.e("47812"),
@@ -121,7 +121,7 @@ let D = {
 var H = n(20742),
     G = n(688810),
     K = n(937008),
-    B = n(834252),
+    B = n(536302),
     W = n(106778),
     V = n(228366),
     Y = n(213530),

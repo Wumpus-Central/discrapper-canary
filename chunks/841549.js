@@ -6,10 +6,10 @@ function a(e, t, a) {
     a.isGroupDM()
         ? (0, i.L3)(e, async () => {
               let { default: e } = await Promise.all([
-                  n.e("87497"),
-                  n.e("56495"),
+                  n.e("954"),
+                  n.e("16639"),
                   n.e("56377"),
-                  n.e("30402"),
+                  n.e("7578"),
                   n.e("88667"),
                   n.e("94881"),
                   n.e("26692"),
@@ -69,10 +69,10 @@ function a(e, t, a) {
         : a.isDM()
           ? (0, i.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    n.e("87497"),
-                    n.e("56495"),
+                    n.e("954"),
+                    n.e("16639"),
                     n.e("56377"),
-                    n.e("30402"),
+                    n.e("7578"),
                     n.e("88667"),
                     n.e("94881"),
                     n.e("26692"),
@@ -144,9 +144,9 @@ function a(e, t, a) {
           : null != a.guild_id
             ? (0, i.L3)(e, async () => {
                   let { default: e } = await Promise.all([
-                      n.e("56495"),
+                      n.e("16639"),
                       n.e("56377"),
-                      n.e("30402"),
+                      n.e("7578"),
                       n.e("88667"),
                       n.e("94881"),
                       n.e("26692"),
@@ -217,7 +217,7 @@ function a(e, t, a) {
               })
             : (0, i.L3)(e, async () => {
                   let { default: e } = await Promise.all([
-                      n.e("87497"),
+                      n.e("954"),
                       n.e("94881"),
                       n.e("26132"),
                       n.e("46652"),

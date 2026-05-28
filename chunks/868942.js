@@ -91,16 +91,16 @@ var C = i(85563),
     D = i(573359),
     P = i(422936),
     G = i(774774),
-    U = i(327479),
-    M = i(473702),
+    M = i(327479),
+    U = i(473702),
     V = i(788868),
     k = i(652215),
     w = i(601107),
     B = i(375708),
     F = i(640692);
 let z = new T.A("SubscriptionHeader.tsx"),
-    X = { page: k.liQ.USER_SETTINGS, section: k.JJy.SETTINGS_PREMIUM, object: k.ZSU.CARD },
-    Y = [k.Dmq.PAUSED, k.Dmq.PAUSE_PENDING, k.Dmq.BILLING_RETRY];
+    Y = { page: k.liQ.USER_SETTINGS, section: k.JJy.SETTINGS_PREMIUM, object: k.ZSU.CARD },
+    X = [k.Dmq.PAUSED, k.Dmq.PAUSE_PENDING, k.Dmq.BILLING_RETRY];
 function H(e) {
     let {
         wordMark: t,
@@ -202,9 +202,9 @@ function Z() {
     return (0, n.jsx)(H, {
         wordMark: (0, n.jsx)(W, {}),
         subscriptionInfo: (0, n.jsx)("div", { className: F.MS, children: B.intl.string(B.t.R0GJL2) }),
-        buttons: (0, n.jsx)(U.A, {
+        buttons: (0, n.jsx)(M.A, {
             className: F.au,
-            onClick: () => (0, p.A)({ subscriptionTier: V.pe.TIER_1, analyticsLocations: e, analyticsObject: X }),
+            onClick: () => (0, p.A)({ subscriptionTier: V.pe.TIER_1, analyticsLocations: e, analyticsObject: Y }),
             text: B.intl.string(B.t["/ygMUY"]),
         }),
         statusClasses: { [F.aS]: !0 },
@@ -232,15 +232,16 @@ let q = function (e) {
             (t.status === k.Dmq.ACTIVE || t.status === k.Dmq.PAST_DUE || t.status === k.Dmq.PAUSE_PENDING || J) && er();
         },
         el = () => {
-            t.status === k.Dmq.BILLING_RETRY && er(M.g.CONFIRM);
+            t.status === k.Dmq.BILLING_RETRY && er(U.g.CONFIRM);
         },
         er = (e) => {
             (0, d.openModalLazy)(async () => {
                 let { PremiumBrandRefreshSubscriptionCancellationModal: s } = await Promise.all([
                     i.e("34218"),
-                    i.e("78925"),
+                    i.e("58735"),
                     i.e("741"),
-                    i.e("9659"),
+                    i.e("63336"),
+                    i.e("16581"),
                     i.e("9045"),
                     i.e("84820"),
                     i.e("94161"),
@@ -270,7 +271,7 @@ let q = function (e) {
                         initialPlanId: t.premiumPlanIdFromItems,
                         analyticsLocations: Z,
                         analyticsLocation: G,
-                        analyticsObject: X,
+                        analyticsObject: Y,
                         subscription: t,
                     });
                 else {
@@ -284,7 +285,7 @@ let q = function (e) {
                                 let { PremiumResubscribeModal: e } = await Promise.all([
                                     i.e("65631"),
                                     i.e("17214"),
-                                    i.e("9659"),
+                                    i.e("63336"),
                                     i.e("92443"),
                                     i.e("9045"),
                                     i.e("94161"),
@@ -331,13 +332,13 @@ let q = function (e) {
             }
         },
         eo = () => {
-            Y.includes(t.status) && null != t.pauseEndsAt
+            X.includes(t.status) && null != t.pauseEndsAt
                 ? t.status === k.Dmq.PAUSED && t.pauseReason !== w.qf.USER_TEMPORARY_BAN
                     ? (0, p.A)({
                           initialPlanId: t.premiumPlanIdFromItems,
                           analyticsLocations: Z,
                           analyticsLocation: G,
-                          analyticsObject: X,
+                          analyticsObject: Y,
                           subscription: t,
                           skipConfirm: !0,
                       })
@@ -347,10 +348,10 @@ let q = function (e) {
                   });
         },
         eu = () => {
-            t.status === k.Dmq.PAUSED && er(M.g.PAUSE_SELECT);
+            t.status === k.Dmq.PAUSED && er(U.g.PAUSE_SELECT);
         },
         ed = () => {
-            er(M.g.WHAT_YOU_LOSE);
+            er(U.g.WHAT_YOU_LOSE);
         },
         ec = y.Ay.getPlanIdFromInvoice(t, s);
     if ((0, f.m1)(ec)) return null;
@@ -382,7 +383,7 @@ let q = function (e) {
         case V.PremiumTypes.TIER_2:
             eh = (0, n.jsx)(I, { className: F.V6, "aria-label": B.intl.string(B.t.lpNrPu) });
     }
-    let eE = Y.includes(t.status) && !J ? K : H;
+    let eE = X.includes(t.status) && !J ? K : H;
     return (0, n.jsx)(eE, {
         wordMark: eh,
         subscriptionInfo:
@@ -435,14 +436,14 @@ let q = function (e) {
                         (0, n.jsx)(u.m, {
                             text: i,
                             asContainer: !0,
-                            children: (0, n.jsx)(U.A, {
+                            children: (0, n.jsx)(M.A, {
                                 className: l()(F.au, F.lB),
                                 disabled: e,
                                 onClick: () => {
                                     (0, p.A)({
                                         analyticsLocations: Z,
                                         analyticsLocation: G,
-                                        analyticsObject: X,
+                                        analyticsObject: Y,
                                         subscription: t,
                                     });
                                 },

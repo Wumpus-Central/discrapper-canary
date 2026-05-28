@@ -311,11 +311,11 @@ function e_() {
 var eh = n(102338);
 let ef = "xgpp";
 function ep(e) {
-    let { glowingSectionId: t } = e,
-        n = (0, D.l)("premium_subscriber_home_rewards"),
-        { logitechCard: i, steelseriesCard: s } = e_();
-    if (!n) return null;
-    let a = null != i || null != s;
+    let { glowingSectionId: t, glowingPerkId: n } = e,
+        i = (0, D.l)("premium_subscriber_home_rewards"),
+        { logitechCard: s, steelseriesCard: a } = e_();
+    if (!i) return null;
+    let l = null != s || null != a;
     return (0, r.jsx)(ei, {
         id: ef,
         sectionClassName: o()(eh.uW, eh.Uv, eh.qr),
@@ -325,12 +325,12 @@ function ep(e) {
             children: z.intl.string(z.t.NG1e6l),
         }),
         beforeGrid: (0, r.jsx)("div", { className: et.JE, children: (0, r.jsx)(Z, { glowing: t === ef }) }),
-        grid: a
+        grid: l
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       (0, r.jsx)(ee, { containerClassName: en.Nr }),
-                      null != i && (0, r.jsx)(Q.S, { ...i, containerClassName: en.Nr }),
-                      null != s && (0, r.jsx)(Q.S, { ...s, containerClassName: en.Nr }),
+                      null != s && (0, r.jsx)(Q.S, { ...s, containerClassName: en.Nr, glowing: n === s.id }),
+                      null != a && (0, r.jsx)(Q.S, { ...a, containerClassName: en.Nr, glowing: n === a.id }),
                   ],
               })
             : null,
@@ -888,16 +888,17 @@ let tm = (e) => {
                                                               n.e("34218"),
                                                               n.e("58735"),
                                                               n.e("741"),
-                                                              n.e("87497"),
+                                                              n.e("954"),
                                                               n.e("48307"),
                                                               n.e("87521"),
                                                               n.e("18090"),
                                                               n.e("84153"),
-                                                              n.e("9659"),
+                                                              n.e("63336"),
                                                               n.e("77083"),
                                                               n.e("17214"),
-                                                              n.e("48357"),
+                                                              n.e("72813"),
                                                               n.e("64509"),
+                                                              n.e("16581"),
                                                               n.e("23924"),
                                                               n.e("42205"),
                                                               n.e("71091"),
@@ -1053,16 +1054,17 @@ let tC = function (e) {
                                 n.e("34218"),
                                 n.e("58735"),
                                 n.e("741"),
-                                n.e("87497"),
+                                n.e("954"),
                                 n.e("48307"),
                                 n.e("87521"),
                                 n.e("18090"),
                                 n.e("84153"),
-                                n.e("9659"),
+                                n.e("63336"),
                                 n.e("77083"),
                                 n.e("17214"),
-                                n.e("48357"),
+                                n.e("72813"),
                                 n.e("64509"),
+                                n.e("16581"),
                                 n.e("23924"),
                                 n.e("42205"),
                                 n.e("71091"),
@@ -1895,7 +1897,7 @@ let nL = "section",
                                           discountedPrice: $,
                                       }),
                                   }),
-                                  (0, r.jsx)(ep, { glowingSectionId: P }),
+                                  (0, r.jsx)(ep, { glowingPerkId: x, glowingSectionId: P }),
                                   (0, r.jsx)(nR, { glowingPerkId: x }),
                                   (0, r.jsx)(nC, { glowingPerkId: x }),
                                   (0, r.jsx)(eg, {

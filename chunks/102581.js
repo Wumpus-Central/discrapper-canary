@@ -28,9 +28,9 @@ var i,
     M = s(174459),
     y = s(474090),
     S = s(694080),
-    P = s(287790),
-    D = s(286320),
-    O = s(422936),
+    P = s(723709),
+    O = s(286320),
+    D = s(422936),
     G = s(234419),
     L = s(851746),
     w = s(727949),
@@ -255,8 +255,8 @@ var eb = s(31502),
     ey = s(704333),
     eS = s(414499),
     eP = s(597770),
-    eD = s(500060),
-    eO = s(885574),
+    eO = s(500060),
+    eD = s(885574),
     eG = s(406860),
     eL = s(985603),
     ew = s(983060),
@@ -269,7 +269,7 @@ function eF() {
             { icon: ey.B, text: eg.intl.string(eU.default.MUypiB) },
             { icon: eS.h, text: eg.intl.string(eU.default.ec5Rdd) },
             { icon: eP.o, text: eg.intl.string(eU.default["9t2CzW"]), tooltip: eU.default.AyECej },
-            { icon: eD.o, text: eg.intl.string(eU.default.R7YJAY) },
+            { icon: eO.o, text: eg.intl.string(eU.default.R7YJAY) },
         ];
     return (0, l.jsx)(k.L, {
         innerRef: e,
@@ -328,7 +328,7 @@ function eF() {
                                                                             children: (0, l.jsx)(eM.m, {
                                                                                 text: eg.intl.string(i),
                                                                                 position: "top",
-                                                                                children: (0, l.jsx)(eO.m, {
+                                                                                children: (0, l.jsx)(eD.m, {
                                                                                     size: "xxs",
                                                                                     color: "var(--icon-default)",
                                                                                 }),
@@ -583,12 +583,12 @@ let tc = n.memo(
             u = null != d,
             m = (0, o.bG)([F.A], () => F.A.useReducedMotion),
             { visibilityPercentageRef: x, visibilityPercentage: p } = (0, e$.U)(!m),
-            j = (0, D.b)(),
+            j = (0, O.b)(),
             f = !u && j.length > 0,
             N = (0, eq.c)(eZ.C.MARKETING_PAGE_BANNER),
             A = null != N && "marketingPageBanner" === N.properties.properties.oneofKind,
             _ = (0, eJ.ar)() && !A,
-            C = (0, O.O)(),
+            C = (0, D.O)(),
             E = (null != C && ek.U4.includes(C.discountId)) || A;
         return (0, l.jsx)(g.f5, {
             value: a,
@@ -806,7 +806,7 @@ let tT = (e) => {
             { analyticsLocations: c } = (0, g.Ay)(h.A.PREMIUM_MARKETING_PLAN_COMPARISON),
             o = (0, G.V)(),
             d = o?.subscription_trial?.sku_id,
-            u = (0, O.O)(),
+            u = (0, D.O)(),
             m = (0, tp.YJ)(u),
             x = null != u && (0, tp.U9)(u, ek.pe.TIER_2) && m === ek.gD.PREMIUM_MONTH_TIER_2,
             p = (0, tp.N1)(m),
@@ -1068,7 +1068,7 @@ let tT = (e) => {
             }),
         });
     },
-    tD = function (e) {
+    tO = function (e) {
         let { scrollOffset: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { scrollOffset: 60 },
             s = (0, n.useCallback)(
                 (e) => {
@@ -1124,7 +1124,7 @@ let tT = (e) => {
             }
         );
     };
-var tO = s(818348),
+var tD = s(818348),
     tG = s(808557);
 let tL = () => {
     let e = (0, c.zy)();
@@ -1154,17 +1154,20 @@ let tL = () => {
         y = null != T ? (0, K.EL)(T) : null,
         S = null != y ? K.Ay.getSkuIdForPlan(y.planId) : null,
         P = null !== S && S !== ek.pe.TIER_2 ? ek.pe.TIER_2 : null,
-        D = (0, W.cg)(),
-        { analyticsLocations: O } = (0, g.Ay)(h.A.PREMIUM_MARKETING);
+        O = (0, W.cg)(),
+        { analyticsLocations: D } = (0, g.Ay)(h.A.PREMIUM_MARKETING);
     n.useEffect(() => {
         R(!0);
     }, []);
     let G = (0, V.DK)(z.W.NITRO, "PremiumMarketingHome"),
         { shouldShowBonusOrbsUX: L } = (0, H.lk)(t_.rE.NITRO_HOME_MARKETING),
         w = G && L ? ez.NI.COMBINED_ORBS : L ? ez.NI.ORB_MULTIPLIER : G ? ez.NI.ORB_REWARDS : null,
-        J = n.useMemo(() => null != w && "orbs" === new URLSearchParams(e.search).get("section"), [e.search, w]);
-    (0, Y.z)(w ?? ez.NI.COMBINED_ORBS, J);
-    let { navBarSections: X, activeSectionId: q } = tD([et.HOME, et.WHATS_NEW, et.BEST_OF_NITRO, et.PLANS, et.COMPARE]),
+        J = n.useMemo(() => {
+            let t = new URLSearchParams(e.search).get("section");
+            return "orbs" === t ? w : t === ez.NI.THREE_P_PROMOTIONS ? ez.NI.THREE_P_PROMOTIONS : null;
+        }, [e.search, w]);
+    (0, Y.z)(J ?? "", null != J);
+    let { navBarSections: X, activeSectionId: q } = tO([et.HOME, et.WHATS_NEW, et.BEST_OF_NITRO, et.PLANS, et.COMPARE]),
         { home: $, whatsNew: es, bestOfNitro: ei, plans: el, compare: en } = X,
         er = (0, l.jsxs)("div", {
             ref: s,
@@ -1187,11 +1190,11 @@ let tL = () => {
                                 children: (0, l.jsx)(tc, {
                                     ref: a,
                                     subscriptionTier: P,
-                                    isEligibleForBogoPromotion: D,
+                                    isEligibleForBogoPromotion: O,
                                 }),
                             }),
                         }),
-                        D &&
+                        O &&
                             (0, l.jsx)("div", {
                                 className: tG.Hz,
                                 children: (0, l.jsx)(Z.A, { variant: Z.c.APPLICATION_NITRO_HOME }),
@@ -1225,18 +1228,18 @@ let tL = () => {
                     onChange: (e) => {
                         e &&
                             !E &&
-                            (M.default.track(ea.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: O }),
+                            (M.default.track(ea.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: D }),
                             I(!0));
                     },
                     children: (0, l.jsx)("div", { ref: d, className: tG._Z }),
                 }),
                 (0, l.jsx)(ef, { ref: u }),
-                (0, l.jsx)(ec, { isVisible: !j && !N && v, subscriptionTier: P, isEligibleForBogoPromotion: D }),
+                (0, l.jsx)(ec, { isVisible: !j && !N && v, subscriptionTier: P, isEligibleForBogoPromotion: O }),
                 (0, l.jsx)(ee, { className: tG.MF }),
             ],
         });
     return (0, l.jsx)(U.N, {
-        theme: tO.NJ.DARKER,
+        theme: tD.NJ.DARKER,
         children: (e) => (0, l.jsx)(B.Gt, { className: r()(tG.XG, e), ref: t, children: er }),
     });
 };
@@ -1676,7 +1679,7 @@ let sp = n.forwardRef((e, t) => {
         o = (0, so.QQ)(),
         d = (0, eJ.ar)(),
         u = (0, W.cg)(),
-        m = (0, D.b)().length > 0,
+        m = (0, O.b)().length > 0,
         x = eg.intl.string(eg.t.YCZldK);
     return (0, l.jsx)(g.f5, {
         value: c,
@@ -1750,13 +1753,13 @@ let sN = (e) => {
             y = (0, W.cg)(),
             S = (0, eE.Gh)("premium-marketing-settings-page"),
             P = y ?? !1,
-            D = (0, o.bG)([tU.A], () => {
+            O = (0, o.bG)([tU.A], () => {
                 let e = tU.A.getMarketingComponentByType(eZ.C.BILLING_SETTINGS_NITRO_GIFT_BANNER);
                 return null == e || "billingSettingsNitroGiftBanner" !== e.properties.properties.oneofKind
                     ? null
                     : e.properties.properties.billingSettingsNitroGiftBanner;
             }),
-            { analyticsLocations: O } = (0, g.Ay)(h.A.PREMIUM_MARKETING);
+            { analyticsLocations: D } = (0, g.Ay)(h.A.PREMIUM_MARKETING);
         n.useEffect(() => {
             f(!0);
         }, []);
@@ -1821,7 +1824,7 @@ let sN = (e) => {
                 (0, l.jsxs)("div", {
                     className: r()({ [sj.V1]: !T }),
                     children: [
-                        null != D && (0, l.jsx)(tF.c, { className: sj.w$, config: D }),
+                        null != O && (0, l.jsx)(tF.c, { className: sj.w$, config: O }),
                         (0, l.jsxs)("div", {
                             className: sj.iS,
                             children: [
@@ -1864,7 +1867,7 @@ let sN = (e) => {
                     onChange: (e) => {
                         e &&
                             !x &&
-                            (M.default.track(ea.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: O }),
+                            (M.default.track(ea.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: D }),
                             p(!0));
                     },
                     children: (0, l.jsx)("div", { ref: s, className: sj._Z }),
@@ -1882,7 +1885,7 @@ let sN = (e) => {
     s_ = (e) => {
         let { entrypoint: t } = e,
             s = (0, G.V)(),
-            i = (0, O.O)(),
+            i = (0, D.O)(),
             a = (0, w.NF)({ trialOffer: s }),
             r = (0, w.Tp)(),
             c = (0, o.bG)([L.A], () => L.A.getReminderStateId());
@@ -1906,12 +1909,12 @@ let sE = function (e) {
         k = (0, o.bG)([R.default], () => R.default.getCurrentUser()),
         U = k?.id,
         B = (0, G.V)(),
-        F = (0, O.O)(),
+        F = (0, D.O)(),
         H = (0, N.Y)(ek.T7),
         [z, V] = n.useState(!0),
         K = n.useRef(0),
         W = (0, y.YE)(k, ek.PremiumTypes.TIER_2);
-    (0, D.b)(),
+    (0, O.b)(),
         n.useEffect(() => {
             u.h.wait(async () => {
                 let e = Date.now();
