@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $G: () => a, EJ: () => o, S8: () => d, W7: () => c, oN: () => l, sS: () => u, xI: () => i.xI });
+n.d(t, { $G: () => a, EJ: () => o, S8: () => c, oN: () => l, sS: () => u, xI: () => i.xI });
 var i = n(621466);
 let r = /[\u0300-\u036f]/g,
     s = /[\uD800-\uDBFF][\uDC00-\uDFFF]/;
@@ -23,24 +23,17 @@ function l(e) {
               .replace(/\s/g, "")
         : "";
 }
-let u = null == String.prototype.normalize ? (e) => e : (e) => e.normalize("NFD").replace(r, "").normalize("NFC");
-function c(e) {
-    if (void 0 === Intl?.Segmenter) return e.length;
-    let t = new Intl.Segmenter().segment(e),
-        n = 0;
-    for (let e of t) n += 1;
-    return n;
-}
-let d =
-    null == String.prototype.normalize
-        ? (e) => e
-        : function (e) {
-              let t = n(209034),
-                  i = "";
-              return (
-                  [...e.normalize("NFD")].forEach((e) => {
-                      i += t[e] ?? e;
-                  }),
-                  i.normalize("NFD").toLocaleLowerCase()
-              );
-          };
+let u = null == String.prototype.normalize ? (e) => e : (e) => e.normalize("NFD").replace(r, "").normalize("NFC"),
+    c =
+        null == String.prototype.normalize
+            ? (e) => e
+            : function (e) {
+                  let t = n(209034),
+                      i = "";
+                  return (
+                      [...e.normalize("NFD")].forEach((e) => {
+                          i += t[e] ?? e;
+                      }),
+                      i.normalize("NFD").toLocaleLowerCase()
+                  );
+              };

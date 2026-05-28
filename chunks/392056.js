@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => es, rr: () => ei }), n(321073);
+n.d(t, { Ay: () => er, rr: () => en }), n(321073);
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -242,13 +242,12 @@ var F = n(734057),
     j = n(58703),
     Y = n(659674),
     W = n(515718),
-    K = n(240248),
-    $ = n(998218),
-    z = n(259407),
-    q = n(191704);
-let X = ["sessionshare.sp-int.playstation.com", "session-share.playstation.com"],
-    Z = ["PlayStation"];
-function Q(e) {
+    K = n(998218),
+    $ = n(259407),
+    z = n(191704);
+let q = ["sessionshare.sp-int.playstation.com", "session-share.playstation.com"],
+    X = ["PlayStation"];
+function Z(e) {
     let t = e.embed.url,
         n = e.embed.provider?.name;
     if (null == t || null == n) return null;
@@ -263,7 +262,7 @@ function Q(e) {
             r = [];
         if ((null != i && (r = i.split("/")), "PlayStation" === e)) {
             let e;
-            if (null == n || !X.includes(n) || 2 !== r.length) return null;
+            if (null == n || !q.includes(n) || 2 !== r.length) return null;
             let t = r[1];
             return {
                 embedUrl: ((e = R.intl.currentLocale), `https://${n}/embed/${t}?locale=${e}`),
@@ -276,20 +275,20 @@ function Q(e) {
         ? null
         : (0, i.jsx)("iframe", {
               src: s.embedUrl,
-              className: a()(q.u, e.className),
+              className: a()(z.u, e.className),
               style: s.style,
               sandbox:
                   "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts",
           });
 }
-var J = n(692051),
-    ee = n(838541),
-    et = n(992595);
-function en(e) {
-    let t = $.A.toURLSafe(e);
+var Q = n(692051),
+    J = n(838541),
+    ee = n(992595);
+function et(e) {
+    let t = K.A.toURLSafe(e);
     return null == t ? e : (t.searchParams.set("format", "png"), t.toString());
 }
-function ei(e) {
+function en(e) {
     let {
             className: t,
             iframeWrapperClassName: n,
@@ -386,7 +385,7 @@ function ei(e) {
             children: (0, i.jsx)("div", {
                 className: a()(g.pu, n),
                 style: _,
-                children: (0, i.jsx)(z.Ay, {
+                children: (0, i.jsx)($.Ay, {
                     provider: c,
                     src: u.url,
                     style: e,
@@ -435,7 +434,7 @@ function ei(e) {
         ],
     });
 }
-function er(e) {
+function ei(e) {
     let {
         className: t,
         href: n,
@@ -477,7 +476,7 @@ function er(e) {
         sourceMetadata: A,
     });
 }
-class es extends r.PureComponent {
+class er extends r.PureComponent {
     static defaultProps = {
         hideMedia: !1,
         allowFullScreen: !0,
@@ -540,7 +539,7 @@ class es extends r.PureComponent {
                     className: a()(g.rN, g.aK),
                     children: this.renderContentPlaceholder({ width: 150, height: 18 }),
                 })
-              : (0, i.jsx)(J.Y.Consumer, {
+              : (0, i.jsx)(Q.Y.Consumer, {
                     children: (o) => {
                         let { disableAnimations: l } = o;
                         return (0, i.jsxs)("div", {
@@ -550,7 +549,7 @@ class es extends r.PureComponent {
                                     ? (0, i.jsx)("img", {
                                           alt: "",
                                           className: g.SG,
-                                          src: s && !l ? t.iconProxyURL : en(t.iconProxyURL),
+                                          src: s && !l ? t.iconProxyURL : et(t.iconProxyURL),
                                       })
                                     : null,
                                 null != t.url
@@ -626,7 +625,7 @@ class es extends r.PureComponent {
             { sourceMetadata: o } = this.state;
         return null == t
             ? null
-            : (0, i.jsx)(J.Y.Consumer, {
+            : (0, i.jsx)(Q.Y.Consumer, {
                   children: (i) => {
                       let { disableAnimations: l } = i;
                       return s({
@@ -806,7 +805,7 @@ class es extends r.PureComponent {
             (0, i.jsx)(T.G.Consumer, {
                 children: (t) =>
                     (0, i.jsx)(
-                        J.Y.Consumer,
+                        Q.Y.Consumer,
                         {
                             children: (n) => {
                                 let { disableAnimations: i } = n;
@@ -847,10 +846,10 @@ class es extends r.PureComponent {
         if (e)
             return null == a
                 ? null
-                : (0, i.jsx)(J.Y.Consumer, {
+                : (0, i.jsx)(Q.Y.Consumer, {
                       children: (e) => {
                           let { disableAnimations: o } = e;
-                          return (0, i.jsx)(er, {
+                          return (0, i.jsx)(ei, {
                               className: g.W$,
                               href: r,
                               thumbnail: s,
@@ -875,7 +874,7 @@ class es extends r.PureComponent {
             A = () => {
                 this.setState({ videoControlsShown: !1 });
             };
-        return (0, i.jsx)(ei, {
+        return (0, i.jsx)(en, {
             className: g.W$,
             href: r,
             allowFullScreen: d,
@@ -900,7 +899,7 @@ class es extends r.PureComponent {
         let { autoPlayGif: e } = this.props,
             { footer: t, timestamp: n } = this.props.embed;
         return null != t
-            ? (0, i.jsx)(J.Y.Consumer, {
+            ? (0, i.jsx)(Q.Y.Consumer, {
                   children: (r) => {
                       let { disableAnimations: s } = r;
                       return (0, i.jsxs)("div", {
@@ -910,7 +909,7 @@ class es extends r.PureComponent {
                                   ? (0, i.jsx)("img", {
                                         alt: "",
                                         className: g.mG,
-                                        src: e && !s ? t.iconProxyURL : en(t.iconProxyURL),
+                                        src: e && !s ? t.iconProxyURL : et(t.iconProxyURL),
                                     })
                                   : null,
                               (0, i.jsxs)("span", {
@@ -948,7 +947,7 @@ class es extends r.PureComponent {
             height: l,
             maxWidth: n,
             maxHeight: r,
-            mediaLayoutType: ee.dG.STATIC,
+            mediaLayoutType: J.dG.STATIC,
             useFullWidth: !1,
             zoomable: !1,
         });
@@ -1089,7 +1088,7 @@ class es extends r.PureComponent {
                     footer: f,
                 } = e.renderAll();
             return (0, i.jsx)("article", {
-                className: a()(n, g.vO, et.PT, {
+                className: a()(n, g.vO, ee.PT, {
                     [g.dK]: t,
                     [g.o4]: s === I.Oc.SPOILER,
                     [g.q$]: e.shouldObscure,
@@ -1134,7 +1133,16 @@ class es extends r.PureComponent {
             }
         }
         let u = 150 / (c.A.fontScale / 100),
-            d = null != s ? (0, K.W7)(s) : 0,
+            d =
+                null != s
+                    ? (function (e) {
+                          if (void 0 === Intl?.Segmenter) return e.length;
+                          let t = new Intl.Segmenter().segment(e),
+                              n = 0;
+                          for (let e of t) n += 1;
+                          return n;
+                      })(s)
+                    : 0,
             h = (s?.split("\n").length ?? 0) >= 5;
         return { maxWidth: void 0 === l || d >= u || h ? "max-content" : l, justifySelf: "auto" };
     }
@@ -1148,8 +1156,8 @@ class es extends r.PureComponent {
     }
     render() {
         let { embed: e, obscureReason: t, className: n } = this.props;
-        return null != e.provider && Z.includes(e.provider.name)
-            ? (0, i.jsx)(Q, { embed: e, className: n })
+        return null != e.provider && X.includes(e.provider.name)
+            ? (0, i.jsx)(Z, { embed: e, className: n })
             : (function (e) {
                     if (null == e.url || e.provider?.name !== "Spotify" || e.type !== _.Auw.LINK) return !1;
                     try {

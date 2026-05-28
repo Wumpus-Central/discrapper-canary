@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(17928),
     r = n(228366),
     s = n(935208);
@@ -22,14 +22,12 @@ class l extends i.Ay.PersistedStore {
         return a;
     }
 }
-let d = new l(r.h, {
+let u = new l(r.h, {
     UNENROLLED_ACTIVITY_QUEST_DISMISS: function (e) {
         return (
             a.size >= 20 &&
                 (a = new Set(
-                    a
-                        .values()
-                        .toArray()
+                    Array.from(a)
                         .sort(s.default.compare)
                         .slice(Math.floor(10))
                         .map((e) => e.toString()),
