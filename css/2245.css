@@ -634,8 +634,6 @@
 }
 
 .userTag__26b1f {
-    --custom-username-color: var(--text-strong);
-    font-family: var(--text-strong);
     font-size: 14px;
     font-weight: var(--font-weight-normal);
     line-height: 18px
@@ -649,7 +647,7 @@
 }
 
 .userTagUsername__26b1f {
-    color: var(--custom-username-color);
+    color: var(--text-strong);
     display: inline;
     text-overflow: unset;
     vertical-align: top;
@@ -663,7 +661,7 @@
 }
 
 .userTagDiscriminator__26b1f {
-    color: var(--custom-username-color);
+    color: var(--text-strong);
     vertical-align: top
 }
 

@@ -28,6 +28,5 @@ a.r(
         profileButtons: "profileButtons__9c3be",
         profileRolesSection: "profileRolesSection__9c3be",
         profileAppConnections: "profileAppConnections__9c3be",
-        memberSinceText: "memberSinceText__9c3be",
     }),
 );

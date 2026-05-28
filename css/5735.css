@@ -2125,10 +2125,6 @@ html .tabBadge_e6b769 {
     border: 1px solid ButtonText
 }
 
-.notEditable_fb1442 {
-    --custom-username-color: var(--text-muted)
-}
-
 .container__47fbb:before {
     border-radius: var(--radius-round);
     content: "";
@@ -2597,10 +2593,6 @@ html .tabBadge_e6b769 {
 
 .profileAppConnections__9c3be {
     margin-top: 4px
-}
-
-.memberSinceText__9c3be {
-    color: var(--text-muted)
 }
 
 .root_b92f52 {
@@ -5977,6 +5969,10 @@ html .tabBadge_e6b769 {
     position: relative
 }
 
+.learnMore__7b2a3 {
+    cursor: pointer
+}
+
 .secondaryButton__652ee {
     min-width: 0;
     width: auto
@@ -6180,6 +6176,11 @@ html .tabBadge_e6b769 {
     inset-inline-end: var(--space-8);
     position: absolute;
     top: var(--space-8)
+}
+
+.container_ae4343 {
+    display: flex;
+    gap: var(--space-8)
 }
 
 .container__85a13 {

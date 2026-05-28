@@ -2564,7 +2564,7 @@ class rR extends r.PureComponent {
                 let { default: e } = await Promise.all([
                     n.e("56377"),
                     n.e("70337"),
-                    n.e("78925"),
+                    n.e("58735"),
                     n.e("63635"),
                     n.e("13114"),
                     n.e("60584"),
@@ -2597,7 +2597,7 @@ class rR extends r.PureComponent {
                     n.e("76825"),
                     n.e("59204"),
                     n.e("83186"),
-                    n.e("81175"),
+                    n.e("5735"),
                     n.e("57014"),
                     n.e("90665"),
                     n.e("98924"),
