@@ -1142,6 +1142,7 @@ let ep = [
     em = {
         id: "void",
         name: "Void",
+        deprecationNotice: "Void is deprecated. Use Mana instead.",
         groups: [
             {
                 title: "HelpMessage",

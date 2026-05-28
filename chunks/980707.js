@@ -772,44 +772,45 @@ function ec(e) {
             control: i,
             disabled: a,
             isFocused: l,
-            showDefaultFocus: u = !1,
-            interactive: c = !0,
-            menuItemProps: d,
-            onClose: _,
+            isUsingKeyboardNavigation: u = !1,
+            showDefaultFocus: c = !1,
+            interactive: d = !0,
+            menuItemProps: _,
+            onClose: h,
         } = e,
-        { onInteraction: h } = s.useContext(O.x),
-        f = s.useRef(null),
-        p = s.useRef(null);
+        { onInteraction: f } = s.useContext(O.x),
+        p = s.useRef(null),
+        E = s.useRef(null);
     s.useLayoutEffect(() => {
-        l ? (G(f), p.current?.focus()) : p.current?.blur?.();
-    }, [l]);
-    let E = s.useCallback(() => {
-            p.current?.activate?.() && _();
-        }, [_]),
-        m = i(
+        l ? (G(p), E.current?.focus()) : u && E.current?.blur?.();
+    }, [l, u]);
+    let m = s.useCallback(() => {
+            E.current?.activate?.() && h();
+        }, [h]),
+        g = i(
             {
-                onClose: _,
+                onClose: h,
                 disabled: a,
                 isFocused: l,
                 onInteraction: s.useCallback(
                     (e) => {
-                        h?.({ type: e ?? O.Q.DEFAULT });
+                        f?.({ type: e ?? O.Q.DEFAULT });
                     },
-                    [h],
+                    [f],
                 ),
             },
-            p,
+            E,
         );
     return (0, r.jsxs)("div", {
-        onClick: E,
+        onClick: m,
         className: o()(b.item, L[t], {
             [b.disabled]: a,
-            [b.focused]: u && l,
-            [b.hideInteraction]: !u,
-            [b.nonInteractive]: !c,
+            [b.focused]: c && l,
+            [b.hideInteraction]: !c,
+            [b.nonInteractive]: !d,
         }),
         "aria-disabled": a,
-        ...d,
+        ..._,
         children: [
             null != n
                 ? (0, r.jsx)("div", {
@@ -817,7 +818,7 @@ function ec(e) {
                       children: (0, r.jsx)("div", { className: b.label, children: n }),
                   })
                 : null,
-            m,
+            g,
         ],
     });
 }
@@ -1321,6 +1322,7 @@ function e_(e) {
                                                 {
                                                     ...l.props,
                                                     isFocused: n.isFocused(e),
+                                                    isUsingKeyboardNavigation: n.isUsingKeyboardNavigation,
                                                     menuItemProps: n.getItemProps({ path: e }),
                                                     onClose: s,
                                                 },

@@ -6,6 +6,7 @@ e.exports = {
     IE: "headerRight_df4c28",
     sd: "copyLinkSplit_df4c28",
     pz: "sidebar_df4c28",
+    B0: "deprecationNotice_df4c28",
     MY: "page_df4c28",
     Qs: "content_df4c28",
     iW: "main_df4c28",

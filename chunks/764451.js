@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { Playground: () => J, PlaygroundStore: () => $ }), n(323874), n(14289), n(35956);
+n.r(t), n.d(t, { Playground: () => et, PlaygroundStore: () => q }), n(323874), n(14289), n(35956);
 var i = n(627968),
     r = n(64700),
     s = n(625903),
@@ -16,66 +16,93 @@ var i = n(627968),
     E = n(691540),
     m = n(990078),
     g = n(408278),
-    A = n(398590),
-    I = n(839214),
-    T = n(58736),
-    S = n(856488),
-    y = n(269880),
-    N = n(25044),
-    v = n(957565),
-    C = n(761508);
-function R(e) {
-    let { groups: t, selectedStory: n, onStorySelect: s } = e;
-    return (0, i.jsx)(C.V, {
-        selectedItem: n,
-        orientation: "vertical",
-        onItemSelect: (e) => {
-            null != e && s(e);
-        },
-        children: t.map((e, a) =>
-            (0, i.jsxs)(
-                r.Fragment,
-                {
-                    children: [
-                        (0, i.jsx)(C.V.Header, { children: e.title }),
-                        e.stories.map((e) =>
-                            (0, i.jsx)(
-                                C.V.Item,
-                                {
-                                    selectedItem: n,
-                                    id: e.id,
-                                    "aria-label": e.name,
-                                    onItemSelect: () => {
-                                        s(e.id);
-                                    },
-                                    children: (0, i.jsx)("span", {
-                                        "data-testid": `playground-story-${e.id}`,
-                                        children: e.name,
-                                    }),
-                                },
-                                e.id,
-                            ),
-                        ),
-                        a < t.length - 1 && (0, i.jsx)(C.V.Separator, {}),
-                    ],
-                },
-                e.title,
-            ),
-        ),
+    A = n(417098),
+    I = n(398590),
+    T = n(839214),
+    S = n(58736),
+    y = n(856488),
+    N = n(269880),
+    v = n(25044),
+    C = n(957565),
+    R = n(331322),
+    O = n(892547),
+    b = n(834730),
+    D = n(761508);
+function L(e) {
+    let { groups: t, selectedStory: n, onStorySelect: s } = e,
+        [a, o] = r.useState(""),
+        l = r.useMemo(() => {
+            if ("" === a.trim()) return t;
+            let e = a.toLowerCase();
+            return t
+                .map((t) => ({ ...t, stories: t.stories.filter((t) => t.name.toLowerCase().includes(e)) }))
+                .filter((e) => e.stories.length > 0);
+        }, [t, a]);
+    return (0, i.jsxs)(i.Fragment, {
+        children: [
+            (0, i.jsx)(R.B, {
+                style: { marginBottom: "var(--space-12)" },
+                children: (0, i.jsx)(O.I, {
+                    size: "sm",
+                    query: a,
+                    onChange: o,
+                    onClear: () => o(""),
+                    placeholder: "Search stories\u2026",
+                    "aria-label": "Search stories",
+                }),
+            }),
+            0 === l.length
+                ? (0, i.jsx)(b.E, { variant: "text-sm/normal", color: "text-muted", children: "No results" })
+                : (0, i.jsx)(D.V, {
+                      selectedItem: n,
+                      orientation: "vertical",
+                      onItemSelect: (e) => {
+                          null != e && s(e);
+                      },
+                      children: l.map((e, t) =>
+                          (0, i.jsxs)(
+                              r.Fragment,
+                              {
+                                  children: [
+                                      (0, i.jsx)(D.V.Header, { children: e.title }),
+                                      e.stories.map((e) =>
+                                          (0, i.jsx)(
+                                              D.V.Item,
+                                              {
+                                                  selectedItem: n,
+                                                  id: e.id,
+                                                  "aria-label": e.name,
+                                                  onItemSelect: () => {
+                                                      s(e.id);
+                                                  },
+                                                  children: (0, i.jsx)("span", {
+                                                      "data-testid": `playground-story-${e.id}`,
+                                                      children: e.name,
+                                                  }),
+                                              },
+                                              e.id,
+                                          ),
+                                      ),
+                                      t < l.length - 1 && (0, i.jsx)(D.V.Separator, {}),
+                                  ],
+                              },
+                              e.title,
+                          ),
+                      ),
+                  }),
+        ],
     });
 }
-var O = n(503698),
-    b = n.n(O),
-    D = n(310784),
-    L = n.n(D),
-    w = n(331322),
-    M = n(834730),
-    P = n(292666),
-    x = n(691885),
-    k = n(150934),
-    U = n(106236),
-    G = n(895925);
-function F(e) {
+var w = n(503698),
+    M = n.n(w),
+    P = n(310784),
+    x = n.n(P),
+    k = n(292666),
+    U = n(691885),
+    G = n(150934),
+    F = n(106236),
+    V = n(895925);
+function B(e) {
     let { controls: t, props: n, onPropsChange: r } = e,
         s = (e, t) => {
             r({ ...n, [e]: t });
@@ -84,8 +111,8 @@ function F(e) {
     return 0 === a.length
         ? null
         : (0, i.jsx)("div", {
-              className: G.in,
-              children: (0, i.jsx)(w.B, {
+              className: V.in,
+              children: (0, i.jsx)(R.B, {
                   gap: 16,
                   children: a.map((e) => {
                       let [t, r] = e,
@@ -94,7 +121,7 @@ function F(e) {
                           children: [
                               "select" === r.type &&
                                   null != r.options &&
-                                  (0, i.jsx)(x.l, {
+                                  (0, i.jsx)(U.l, {
                                       label: r.label,
                                       value: a,
                                       onSelectionChange: (e) => s(t, e),
@@ -107,11 +134,11 @@ function F(e) {
                                       fullWidth: !0,
                                   }),
                               "boolean" === r.type &&
-                                  (0, i.jsx)(k.S, { checked: a, onChange: (e) => s(t, e), label: r.label }),
+                                  (0, i.jsx)(G.S, { checked: a, onChange: (e) => s(t, e), label: r.label }),
                               "text" === r.type &&
-                                  (0, i.jsx)(P.k, { value: a, onChange: (e) => s(t, e), label: r.label }),
+                                  (0, i.jsx)(k.k, { value: a, onChange: (e) => s(t, e), label: r.label }),
                               "number" === r.type &&
-                                  (0, i.jsx)(P.k, {
+                                  (0, i.jsx)(k.k, {
                                       type: "number",
                                       value: String(a),
                                       min: r.minValue,
@@ -119,7 +146,7 @@ function F(e) {
                                       label: r.label,
                                   }),
                               "slider" === r.type &&
-                                  (0, i.jsx)(U.A, {
+                                  (0, i.jsx)(F.A, {
                                       initialValue: null != a ? Number(a) : 0,
                                       value: null != a ? Number(a) : void 0,
                                       minValue: r.minValue,
@@ -135,31 +162,31 @@ function F(e) {
                                   }),
                               "color" === r.type &&
                                   (0, i.jsxs)("div", {
-                                      className: G.fJ,
+                                      className: V.fJ,
                                       children: [
-                                          (0, i.jsx)(M.E, {
+                                          (0, i.jsx)(b.E, {
                                               variant: "text-md/medium",
                                               color: "text-strong",
                                               tag: "label",
                                               children: r.label,
                                           }),
                                           (0, i.jsxs)("div", {
-                                              className: G.nY,
+                                              className: V.nY,
                                               children: [
                                                   (0, i.jsx)("input", {
                                                       type: "color",
-                                                      className: G.oP,
+                                                      className: V.oP,
                                                       value: (function (e) {
-                                                          if (null == e || "" === e) return V;
+                                                          if (null == e || "" === e) return H;
                                                           try {
-                                                              return L()(e).hex();
+                                                              return x()(e).hex();
                                                           } catch {
-                                                              return V;
+                                                              return H;
                                                           }
                                                       })(a),
                                                       onChange: (e) => s(t, e.target.value),
                                                   }),
-                                                  (0, i.jsx)(P.k, { value: a ?? "", onChange: (e) => s(t, e) }),
+                                                  (0, i.jsx)(k.k, { value: a ?? "", onChange: (e) => s(t, e) }),
                                               ],
                                           }),
                                       ],
@@ -170,8 +197,8 @@ function F(e) {
               }),
           });
 }
-let V = "#000000";
-function B(e, t) {
+let H = "#000000";
+function j(e, t) {
     let n = e.controls,
         i = {};
     if (null == n) return i;
@@ -208,7 +235,7 @@ function B(e, t) {
     }
     return i;
 }
-function H(e, t) {
+function Y(e, t) {
     let n = e.controls,
         i = {};
     if (null == n || null == t) return i;
@@ -218,54 +245,54 @@ function H(e, t) {
     }
     return i;
 }
-function j(e) {
+function W(e) {
     let { story: t, controlsLayout: n } = e,
-        s = $.useField("controlOverrides"),
+        s = q.useField("controlOverrides"),
         [a, o] = r.useState(t.id),
-        [l, u] = r.useState(() => B(t, s));
-    a !== t.id && (o(t.id), u(B(t, s))),
+        [l, u] = r.useState(() => j(t, s));
+    a !== t.id && (o(t.id), u(j(t, s))),
         r.useLayoutEffect(() => {
-            $.setState({ currentProps: l, controlOverrides: null });
+            q.setState({ currentProps: l, controlOverrides: null });
         }, [t.id]);
     let c = t.component,
         d = "hidden" !== n && null != t.controls;
     return (0, i.jsxs)("div", {
-        className: b()(G.iW, { [G.vT]: "bottom" === n, [G.Ix]: "right" === n }),
+        className: M()(V.iW, { [V.vT]: "bottom" === n, [V.Ix]: "right" === n }),
         children: [
             (0, i.jsx)("div", {
-                className: G.Ji,
-                children: (0, i.jsx)("div", { className: G.Dw, children: (0, i.jsx)(c, { ...l }, t.id) }),
+                className: V.Ji,
+                children: (0, i.jsx)("div", { className: V.Dw, children: (0, i.jsx)(c, { ...l }, t.id) }),
             }),
             d &&
                 null != t.controls &&
                 (0, i.jsx)("div", {
-                    className: b()(G.ne, { [G.WK]: "bottom" === n, [G.BT]: "right" === n }),
-                    children: (0, i.jsx)(F, {
+                    className: M()(V.ne, { [V.WK]: "bottom" === n, [V.BT]: "right" === n }),
+                    children: (0, i.jsx)(B, {
                         controls: t.controls,
                         props: l,
                         onPropsChange: (e) => {
-                            u(e), $.setState({ currentProps: e });
+                            u(e), q.setState({ currentProps: e });
                         },
                     }),
                 }),
         ],
     });
 }
-var Y = n(97483),
-    W = n(818348),
-    K = n(375708);
-let $ = (0, I.D)(() => ({
+var K = n(97483),
+    $ = n(818348),
+    z = n(375708);
+let q = (0, T.D)(() => ({
     selectedCollection: null,
     selectedStory: null,
     controlsLayout: "right",
     controlOverrides: null,
     currentProps: null,
 }));
-function z() {
-    let e = (0, y.A)(),
-        t = (0, S.A)(),
-        n = (0, N.A)(),
-        s = $.useField("controlsLayout"),
+function X() {
+    let e = (0, N.A)(),
+        t = (0, y.A)(),
+        n = (0, v.A)(),
+        s = q.useField("controlsLayout"),
         a = r.useMemo(
             () =>
                 (0, i.jsxs)(
@@ -277,21 +304,21 @@ function z() {
                                 id: "controls-right",
                                 group: "controls-layout",
                                 label: "Right Side",
-                                action: () => $.setState({ controlsLayout: "right" }),
+                                action: () => q.setState({ controlsLayout: "right" }),
                                 checked: "right" === s,
                             }),
                             (0, i.jsx)(h.iD, {
                                 id: "controls-bottom",
                                 group: "controls-layout",
                                 label: "Bottom",
-                                action: () => $.setState({ controlsLayout: "bottom" }),
+                                action: () => q.setState({ controlsLayout: "bottom" }),
                                 checked: "bottom" === s,
                             }),
                             (0, i.jsx)(h.iD, {
                                 id: "controls-hidden",
                                 group: "controls-layout",
                                 label: "Hidden",
-                                action: () => $.setState({ controlsLayout: "hidden" }),
+                                action: () => q.setState({ controlsLayout: "hidden" }),
                                 checked: "hidden" === s,
                             }),
                         ],
@@ -302,30 +329,30 @@ function z() {
         );
     return (0, i.jsxs)(_.W, {
         "data-menu-migrated": !0,
-        onSelect: W.tE,
+        onSelect: $.tE,
         navId: "playground-settings-menu",
-        onClose: W.tE,
+        onClose: $.tE,
         "aria-label": "Playground Settings",
         children: [
             (0, i.jsx)(h.Dr, {
                 id: "appearance",
-                label: K.intl.string(K.t["iHH+ky"]),
+                label: z.intl.string(z.t["iHH+ky"]),
                 children: [...e.filter((e) => null != e), a],
             }),
             (0, i.jsx)(h.Dr, {
                 id: "accessibility",
-                label: K.intl.string(K.t.G0neg7),
+                label: z.intl.string(z.t.G0neg7),
                 children: t.filter((e) => null != e),
             }),
             (0, i.jsx)(h.Dr, { id: "experiments", label: "Experiments", children: n.filter((e) => null != e) }),
         ],
     });
 }
-function q() {
+function Z() {
     let e = r.useRef(null);
     return (0, i.jsx)(p.Y, {
         targetElementRef: e,
-        renderPopout: () => (0, i.jsx)(z, {}),
+        renderPopout: () => (0, i.jsx)(X, {}),
         position: "bottom",
         align: "center",
         animation: p.Y.Animation.SCALE,
@@ -341,33 +368,33 @@ function q() {
             }),
     });
 }
-function X(e, t, n, i) {
+function Q(e, t, n, i) {
     let r = null != t ? `dev://playground/${e.id}/${t.id}` : `dev://playground/${e.id}`;
     if (!n || null == t) return r;
-    let s = H(t, i),
+    let s = Y(t, i),
         a = Object.keys(s);
     if (0 === a.length) return r;
     let o = new URLSearchParams();
     for (let e of a) o.set(e, s[e]);
     return `${r}?${o.toString()}`;
 }
-function Z(e) {
-    (0, v.C)(e, () =>
-        (0, E.P0)({ id: "playground-link-copied", message: "Copied playground link", type: Y.Ck.SUCCESS }),
+function J(e) {
+    (0, C.C)(e, () =>
+        (0, E.P0)({ id: "playground-link-copied", message: "Copied playground link", type: K.Ck.SUCCESS }),
     );
 }
-function Q(e) {
+function ee(e) {
     let { collection: t, story: n } = e,
-        s = $.useField("currentProps"),
+        s = q.useField("currentProps"),
         l = r.useRef(null),
-        u = r.useMemo(() => null != n && Object.keys(H(n, s)).length > 0, [n, s]),
-        c = r.useCallback(() => Z(X(t, n, !0, s)), [t, n, s]),
-        d = r.useCallback(() => Z(X(t, n, !1, s)), [t, n, s]);
+        u = r.useMemo(() => null != n && Object.keys(Y(n, s)).length > 0, [n, s]),
+        c = r.useCallback(() => J(Q(t, n, !0, s)), [t, n, s]),
+        d = r.useCallback(() => J(Q(t, n, !1, s)), [t, n, s]);
     return u
         ? (0, i.jsxs)("div", {
               role: "group",
               "aria-label": "Copy playground link",
-              className: G.sd,
+              className: V.sd,
               children: [
                   (0, i.jsx)(g.K, {
                       size: "sm",
@@ -382,7 +409,7 @@ function Q(e) {
                           let { closePopout: t } = e;
                           return (0, i.jsxs)(_.W, {
                               "data-menu-migrated": !0,
-                              onSelect: W.tE,
+                              onSelect: $.tE,
                               navId: "playground-copy-link-menu",
                               onClose: t,
                               "aria-label": "Copy link options",
@@ -423,11 +450,11 @@ function Q(e) {
           })
         : (0, i.jsx)(g.K, { size: "sm", "aria-label": "Copy Link", variant: "icon-only", icon: a.T, onClick: c });
 }
-function J(e) {
+function et(e) {
     let { configs: t } = e,
-        n = $.useField("selectedCollection"),
-        s = $.useField("selectedStory"),
-        a = $.useField("controlsLayout"),
+        n = q.useField("selectedCollection"),
+        s = q.useField("selectedStory"),
+        a = q.useField("controlsLayout"),
         o = r.useMemo(() => t.flatMap((e) => e.collections), [t]),
         {
             collection: _,
@@ -441,12 +468,12 @@ function J(e) {
             return { collection: e, group: t, story: i };
         }, [n, s, o]),
         E = _?.name ?? "Design System",
-        I = p?.name;
+        T = p?.name;
     return (0, i.jsxs)("div", {
-        className: G.zr,
+        className: V.zr,
         children: [
             (0, i.jsx)("div", {
-                className: G.Os,
+                className: V.Os,
                 children: o.map((e) =>
                     (0, i.jsx)(
                         d.Q,
@@ -461,7 +488,7 @@ function J(e) {
                                         var t;
                                         return (
                                             (t = e.id),
-                                            void $.setState({
+                                            void q.setState({
                                                 selectedCollection: t,
                                                 selectedStory: null,
                                                 controlOverrides: null,
@@ -477,59 +504,61 @@ function J(e) {
                 ),
             }),
             (0, i.jsxs)("div", {
-                className: G.Qs,
+                className: V.Qs,
                 children: [
-                    (0, i.jsxs)(T.Ay, {
-                        className: G.wx,
+                    (0, i.jsxs)(S.Ay, {
+                        className: V.wx,
                         children: [
-                            null != E ? (0, i.jsx)(T.Ay.Title, { children: E }) : null,
-                            null != I
+                            null != E ? (0, i.jsx)(S.Ay.Title, { children: E }) : null,
+                            null != T
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          null != E ? (0, i.jsx)(T.Ay.Caret, { className: G.zN }) : null,
-                                          (0, i.jsx)(T.Ay.Title, { children: I }),
+                                          null != E ? (0, i.jsx)(S.Ay.Caret, { className: V.zN }) : null,
+                                          (0, i.jsx)(S.Ay.Title, { children: T }),
                                       ],
                                   })
                                 : null,
                             p?.docs != null
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(T.Ay.Divider, { className: G.zN }),
-                                          (0, i.jsx)(T.Ay.Title, {
+                                          (0, i.jsx)(S.Ay.Divider, { className: V.zN }),
+                                          (0, i.jsx)(S.Ay.Title, {
                                               children: (0, i.jsx)(c.Anchor, { href: p.docs, children: "Docs" }),
                                           }),
                                       ],
                                   })
                                 : null,
-                            null != _ ? (0, i.jsx)(Q, { collection: _, story: p }) : null,
+                            null != _ ? (0, i.jsx)(ee, { collection: _, story: p }) : null,
                             (0, i.jsxs)("div", {
-                                className: G.IE,
+                                className: V.IE,
                                 children: [
-                                    (0, i.jsx)(q, {}),
+                                    (0, i.jsx)(Z, {}),
                                     (0, i.jsx)(g.K, {
                                         size: "sm",
                                         icon: l.P,
-                                        "aria-label": K.intl.string(K.t.cpT0Cq),
+                                        "aria-label": z.intl.string(z.t.cpT0Cq),
                                         variant: "icon-only",
-                                        onClick: A.jH,
+                                        onClick: I.jH,
                                     }),
                                 ],
                             }),
                         ],
                     }),
+                    _?.deprecationNotice != null &&
+                        (0, i.jsx)(A.$T, { color: A.Hv.WARNING, className: V.B0, children: _.deprecationNotice }),
                     (0, i.jsxs)("div", {
-                        className: G.MY,
+                        className: V.MY,
                         children: [
                             (0, i.jsx)(u.Ip, {
                                 fade: !0,
-                                className: G.pz,
+                                className: V.pz,
                                 children:
                                     null != _
-                                        ? (0, i.jsx)(R, {
+                                        ? (0, i.jsx)(L, {
                                               groups: _.groups,
                                               selectedStory: s,
                                               onStorySelect: (e) => {
-                                                  $.setState({
+                                                  q.setState({
                                                       selectedStory: e,
                                                       controlOverrides: null,
                                                       currentProps: null,
@@ -539,10 +568,10 @@ function J(e) {
                                         : null,
                             }),
                             (0, i.jsx)("div", {
-                                className: G.Qs,
+                                className: V.Qs,
                                 children:
                                     null != p && null != h
-                                        ? (0, i.jsx)(j, { story: p, groupTitle: h.title, controlsLayout: a })
+                                        ? (0, i.jsx)(W, { story: p, groupTitle: h.title, controlsLayout: a })
                                         : null,
                             }),
                         ],
