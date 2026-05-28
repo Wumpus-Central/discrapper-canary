@@ -7,7 +7,7 @@ e.exports = {
     hK: "thumbnailRow__848b5",
     xn: "thumbnail__848b5",
     Y4: "thumbnailSelected__848b5",
+    Yf: "thumbnailContent__848b5",
     G8: "activeItem__848b5",
-    Rt: "bundleSlideFadeIn__848b5",
     dT: "activeItemName__848b5",
 };

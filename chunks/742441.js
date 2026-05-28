@@ -2,7 +2,7 @@ e.exports = {
     XU: "collectiblePreviewsContainer__7f14f",
     i1: "previewContainer__7f14f",
     KR: "previewSurface__7f14f",
-    Rt: "bundleSlideFadeIn__7f14f",
+    Or: "previewFadeIn__7f14f",
     eF: "collectiblePreviewsContainerNoChat__7f14f collectiblePreviewsContainer__7f14f",
     Jq: "collectiblePreviewsContainerWithChat__7f14f collectiblePreviewsContainer__7f14f",
     bF: "fractionalNitroPreviewContainer__7f14f collectiblePreviewsContainer__7f14f",

@@ -1907,7 +1907,6 @@
 .thumbnail__848b5 {
     align-items: center;
     background-color: var(--background-mod-subtle);
-    border: 1px solid transparent;
     border-radius: var(--radius-md);
     box-sizing: border-box;
     cursor: pointer;
@@ -1916,16 +1915,47 @@
     justify-content: center;
     overflow: clip;
     padding: 0;
+    position: relative;
     width: 56px
 }
 
-.thumbnail__848b5:hover:not(.thumbnailSelected__848b5) {
+.thumbnail__848b5:after {
+    border: 2px solid transparent;
+    border-radius: inherit;
+    box-sizing: border-box;
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.full-motion .thumbnail__848b5:after {
+    transition: border-color .2s ease
+}
+
+.thumbnail__848b5:hover:not(.thumbnailSelected__848b5):after {
     border-color: var(--border-strong)
 }
 
-.thumbnailSelected__848b5 {
-    border-color: var(--border-focus);
-    border-width: 2px
+.thumbnailSelected__848b5:after {
+    border-color: var(--border-focus)
+}
+
+.thumbnailContent__848b5 {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.full-motion .thumbnailContent__848b5 {
+    transition: transform .6s cubic-bezier(.16, 1, .3, 1)
+}
+
+.thumbnail__848b5:hover .thumbnailContent__848b5,
+.thumbnailSelected__848b5 .thumbnailContent__848b5 {
+    transform: scale(.9)
 }
 
 .thumbnail__848b5>* {
@@ -1949,20 +1979,6 @@
     flex-direction: column;
     flex-shrink: 0;
     gap: 4px
-}
-
-.full-motion .activeItem__848b5 {
-    animation: bundleSlideFadeIn__848b5 .5s ease
-}
-
-@keyframes bundleSlideFadeIn__848b5 {
-    0% {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
 }
 
 .activeItemName__848b5 {
@@ -3673,7 +3689,7 @@
 
 .full-motion .next__2fd86,
 .full-motion .prev__2fd86 {
-    transition: opacity .25s ease
+    transition: opacity .3s ease-out
 }
 
 .next__2fd86:has(:focus-visible),
@@ -3717,12 +3733,12 @@
 }
 
 .full-motion .previewSurface__7f14f {
-    animation: bundleSlideFadeIn__7f14f .5s ease
+    animation: previewFadeIn__7f14f .3s ease-in-out
 }
 
-@keyframes bundleSlideFadeIn__7f14f {
+@keyframes previewFadeIn__7f14f {
     0% {
-        opacity: 0
+        opacity: .2
     }
 
     to {
