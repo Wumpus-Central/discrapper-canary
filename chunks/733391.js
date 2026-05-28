@@ -52,26 +52,26 @@ function m(e) {
 }
 async function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { withGoogleSkuIds: s = !1, countryCode: l } = n;
+        { withGoogleSkuIds: s = !1, countryCode: l, paymentGateway: u } = n;
     try {
         r.h.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId: e });
         let n = {};
-        s && (n.with_google_sku_ids = !0), (0, a.uJ)(l) || (n.country_code = l);
-        let u = await i.Bo.get({ url: t, query: n, rejectWithError: !0 });
-        if (null == u.body || !u.ok) throw Error("Failed to fetch social layer storefront SKU");
-        let c = u.body.store_listing,
-            d = u.body.storefront_metadata;
+        s && (n.with_google_sku_ids = !0), (0, a.uJ)(l) || (n.country_code = l), null != u && (n.payment_gateway = u);
+        let c = await i.Bo.get({ url: t, query: n, rejectWithError: !0 });
+        if (null == c.body || !c.ok) throw Error("Failed to fetch social layer storefront SKU");
+        let d = c.body.store_listing,
+            _ = c.body.storefront_metadata;
         r.h.dispatch({
             type: "SOCIAL_LAYER_STOREFRONT_PARTIAL_LOAD_SUCCESS",
-            assets: Object.fromEntries(u.body.assets.map((e) => [e.id, e])),
+            assets: Object.fromEntries(c.body.assets.map((e) => [e.id, e])),
         }),
-            null != d &&
+            null != _ &&
                 r.h.dispatch({
                     type: "SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS",
-                    applicationId: c.sku.application_id,
-                    storefrontMetadata: (0, o.NE)(d),
+                    applicationId: d.sku.application_id,
+                    storefrontMetadata: (0, o.NE)(_),
                 }),
-            r.h.dispatch({ type: "STORE_LISTING_FETCH_SUCCESS", storeListing: c });
+            r.h.dispatch({ type: "STORE_LISTING_FETCH_SUCCESS", storeListing: d });
     } catch (t) {
         r.h.dispatch({ type: "STORE_LISTINGS_FETCH_FAIL", skuId: e });
     }
