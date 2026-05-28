@@ -59,7 +59,7 @@ function m(e, t, n) {
             o = a - i.length;
         {
             let n = r?.[i.filepath];
-            if (((e = n ?? { audioModelDataPerUser: {} }), null == n))
+            if (((e = n ?? { audioModelDataPerUser: {}, gameEventData: [] }), null == n)) {
                 for (let n in t.audioModelDataPerUser) {
                     let i = t.audioModelDataPerUser[n];
                     e.audioModelDataPerUser[n] = {
@@ -68,6 +68,12 @@ function m(e, t, n) {
                         rmsData: g(i.rmsData, o, a),
                     };
                 }
+                e.gameEventData = (function (e, t, n) {
+                    let i = [];
+                    for (let r of e) r.timestamp_ms < t || r.timestamp_ms > n || i.push(r);
+                    return i;
+                })(t.gameEventData, o, a);
+            }
             !(function (e) {
                 let t = Number.MAX_VALUE,
                     n = -Number.MAX_VALUE;
@@ -136,6 +142,11 @@ function m(e, t, n) {
             (_ /= f),
             (h /= f),
             (p = +c + 0.08 * y(l, 0.8, 3) + 0 * y(u, 0.2, 3) + 0 * d + 2 * _ + 6.25 * h)),
+            (p += +(function (e) {
+                let t = 1;
+                for (let n of e) t *= 1 - Math.max(0, Math.min(1, n.score));
+                return +(1 - t);
+            })(e.gameEventData)),
             s.push({ clip: i, score: p });
     }
     s.sort((e, t) => t.score - e.score);
@@ -218,7 +229,7 @@ function y(e, t, n) {
 }
 var N = n(315240);
 function v() {
-    return { audioModelDataPerUser: {} };
+    return { audioModelDataPerUser: {}, gameEventData: [] };
 }
 var C = n(696016);
 class R extends s.A {
@@ -325,7 +336,17 @@ class R extends s.A {
                 this.scheduleClip(e);
                 break;
             case h.Gy.GAME_EVENT:
-                1 === e.importance && this.scheduleClip(e, 1e4);
+                if (
+                    (this.decisionSignals.gameEventData.push({
+                        timestamp_ms: t,
+                        score: e.score ?? 0,
+                        name: e.eventIconTag,
+                    }),
+                    1 === e.importance)
+                ) {
+                    let n = Math.max(0, 1e4 - Math.max(0, Date.now() - t));
+                    this.scheduleClip(e, n, !0);
+                }
                 break;
             case h.Gy.PHRASE:
                 if (
