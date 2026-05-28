@@ -1,77 +1,77 @@
-l.d(a, { R: () => i, j: () => r });
-var t = l(627968),
-    n = l(192308);
-let s = "social-layer-storefront-product-details-modal",
-    i = (e) => {
+s.d(a, { R: () => n, j: () => o });
+var t = s(627968),
+    l = s(192308);
+let i = "social-layer-storefront-product-details-modal",
+    n = (e) => {
         let {
             customNavigateToSocialLayerStorefront: a,
-            skuId: i,
-            applicationId: r,
-            isStorefront: o,
-            giftRecipient: c,
+            skuId: n,
+            applicationId: o,
+            isStorefront: c,
+            giftRecipient: r,
             giftingOrigin: d,
-            analyticsLocations: u,
-            analyticsContext: x,
-            onClose: j,
+            analyticsLocations: p,
+            analyticsContext: u,
+            onClose: m,
         } = e;
-        (0, n.openModalLazy)(
+        (0, l.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    l.e("46438"),
-                    l.e("48357"),
-                    l.e("94925"),
-                    l.e("56377"),
-                    l.e("38609"),
-                    l.e("66383"),
-                    l.e("4425"),
-                    l.e("90665"),
-                    l.e("43535"),
-                    l.e("9233"),
-                    l.e("86814"),
-                    l.e("37021"),
-                    l.e("18024"),
-                    l.e("69747"),
-                    l.e("3131"),
-                    l.e("47177"),
-                    l.e("27272"),
-                    l.e("36149"),
-                    l.e("51778"),
-                    l.e("21930"),
-                    l.e("24914"),
-                    l.e("97563"),
-                    l.e("20382"),
-                    l.e("93766"),
-                    l.e("52511"),
-                    l.e("72963"),
-                    l.e("73165"),
-                    l.e("66017"),
-                    l.e("63333"),
-                    l.e("36768"),
-                    l.e("9935"),
-                    l.e("23157"),
-                ]).then(l.bind(l, 546804));
-                return (l) =>
+                    s.e("46438"),
+                    s.e("48357"),
+                    s.e("94925"),
+                    s.e("56377"),
+                    s.e("57014"),
+                    s.e("12244"),
+                    s.e("4425"),
+                    s.e("90665"),
+                    s.e("43535"),
+                    s.e("9233"),
+                    s.e("72963"),
+                    s.e("86814"),
+                    s.e("37021"),
+                    s.e("18024"),
+                    s.e("69747"),
+                    s.e("3131"),
+                    s.e("47177"),
+                    s.e("27272"),
+                    s.e("36149"),
+                    s.e("51778"),
+                    s.e("21930"),
+                    s.e("24914"),
+                    s.e("97563"),
+                    s.e("20382"),
+                    s.e("93766"),
+                    s.e("52511"),
+                    s.e("73165"),
+                    s.e("66017"),
+                    s.e("63333"),
+                    s.e("36768"),
+                    s.e("9935"),
+                    s.e("23157"),
+                ]).then(s.bind(s, 546804));
+                return (s) =>
                     (0, t.jsx)(e, {
-                        ...l,
-                        skuId: i,
-                        applicationId: r,
-                        isStorefront: o,
-                        analyticsLocations: u,
-                        analyticsContext: x,
-                        giftRecipient: c,
+                        ...s,
+                        skuId: n,
+                        applicationId: o,
+                        isStorefront: c,
+                        analyticsLocations: p,
+                        analyticsContext: u,
+                        giftRecipient: r,
                         giftingOrigin: d,
                         customNavigateToSocialLayerStorefront: a,
                     });
             },
             {
-                modalKey: s,
-                allowsNavigation: o,
+                modalKey: i,
+                allowsNavigation: c,
                 onCloseCallback: () => {
-                    j?.();
+                    m?.();
                 },
             },
         );
     };
-function r() {
-    (0, n.hasModalOpen)(s) && (0, n.closeModal)(s);
+function o() {
+    (0, l.hasModalOpen)(i) && (0, l.closeModal)(i);
 }
