@@ -5568,15 +5568,6 @@
     cursor: pointer
 }
 
-.menuIcon__62974 {
-    color: var(--interactive-text-default);
-    cursor: pointer
-}
-
-.menuIcon__62974:hover {
-    color: var(--interactive-text-active)
-}
-
 .loadingSpinner__5b1b2 {
     height: 24px;
     margin-inline-end: 8px;
@@ -5951,6 +5942,15 @@
     margin-block-end: calc(var(--custom-content-card-padding)*-1);
     margin-inline: calc(var(--custom-content-card-padding)*-1);
     width: calc(100% + var(--custom-content-card-padding)*2)
+}
+
+.menuIcon__62974 {
+    color: var(--interactive-text-default);
+    cursor: pointer
+}
+
+.menuIcon__62974:hover {
+    color: var(--interactive-text-active)
 }
 
 .formText_ddd181 a:hover {

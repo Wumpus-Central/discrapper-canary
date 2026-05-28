@@ -455,8 +455,8 @@ var e3 = n(787541),
     e5 = n(72314),
     e7 = n(808728),
     e6 = n(967198),
-    e4 = n(297469),
-    e8 = n(960755),
+    e8 = n(297469),
+    e4 = n(960755),
     te = n(866842),
     tt = n(633965),
     tn = n(702841),
@@ -891,7 +891,7 @@ let t$ = tz(
                     null != t &&
                         (0, $.openModalLazy)(async () => {
                             let { default: i } = await Promise.all([
-                                n.e("67631"),
+                                n.e("78925"),
                                 n.e("11585"),
                                 n.e("3589"),
                                 n.e("89916"),
@@ -1080,12 +1080,12 @@ let t6 = r.memo(function (e) {
         { density: c } = (0, C.wR)(),
         u = "compact" === c ? 8 : 12;
     switch (t) {
-        case e4.PU:
+        case e8.PU:
             return (0, s.jsx)("div", { style: { height: u } });
-        case e4.bK:
+        case e8.bK:
             if (n.features.has(F.GuildFeatures.HUB)) return null;
             return (0, s.jsx)("div", { style: { height: u } });
-        case e4.HP:
+        case e8.HP:
             return (0, s.jsx)(tQ, { name: K.intl.string(K.t.mlPMCy) });
         case l.recentsSectionNumber:
             return (0, s.jsx)(tQ, { name: K.intl.string(K.t.gKcrqM), onDismiss: d });
@@ -1097,7 +1097,7 @@ let t6 = r.memo(function (e) {
                 children: [(0, s.jsx)("div", { className: t7.ts }), (0, s.jsx)(t1, { category: e, channel: n })],
             });
         }
-        case e4.TF: {
+        case e8.TF: {
             let e = l.getNamedCategoryFromSection(t);
             if (null == e) return null;
             return (0, s.jsx)(t$, {
@@ -1119,8 +1119,8 @@ let t6 = r.memo(function (e) {
         }
     }
 });
-var t4 = n(104171),
-    t8 = n(186369),
+var t8 = n(104171),
+    t4 = n(186369),
     ne = n(970812),
     nt = n(871237),
     nn = n(349828);
@@ -1128,7 +1128,7 @@ function nl(e, t, n) {
     return {
         hasDivider:
             !(function (e, t) {
-                if (t === e4.PU) {
+                if (t === e8.PU) {
                     let t = e.getGuildActionSection().getRows();
                     return (
                         (1 === t.length && t[0] === tE.n.GUILD_PREMIUM_PROGRESS_BAR) ||
@@ -1137,15 +1137,15 @@ function nl(e, t, n) {
                 }
                 return 0 === e.getSections(!1)[t];
             })(e, n) &&
-            (n === e4.PU ||
+            (n === e8.PU ||
                 (e.id === nn.Vc
                     ? n !== e.getSections(!1).length - 1
-                    : n === e4.HP ||
-                      (!!t && n !== e4.bK && (n === e.recentsSectionNumber || (e.voiceChannelsSectionNumber, !1))))),
+                    : n === e8.HP ||
+                      (!!t && n !== e8.bK && (n === e.recentsSectionNumber || (e.voiceChannelsSectionNumber, !1))))),
         canHaveVoiceSummary:
-            n !== e4.PU &&
-            n !== e4.HP &&
-            n !== e4.bK &&
+            n !== e8.PU &&
+            n !== e8.HP &&
+            n !== e8.bK &&
             n !== e.recentsSectionNumber &&
             n !== e.voiceChannelsSectionNumber,
     };
@@ -1167,9 +1167,9 @@ let ni = r.memo(function (e) {
                 optInEnabled: c,
             } = e,
             { hasDivider: h, canHaveVoiceSummary: A } = r.useMemo(() => nl(n, c, t), [n, c, t, l]),
-            g = r.useMemo(() => (t === e4.PU ? null : n.getCategoryFromSection(t)), [n, t, l]),
+            g = r.useMemo(() => (t === e8.PU ? null : n.getCategoryFromSection(t)), [n, t, l]),
             m = (0, J.jN)(a),
-            { enableWaveformIcon: p } = (0, t8.b)(a, "ChannelListSectionFooter"),
+            { enableWaveformIcon: p } = (0, t4.b)(a, "ChannelListSectionFooter"),
             f = (0, u.yK)([tq.Ay], () => {
                 if (null == g || !g.isCollapsed || !A) return [];
                 let e = g.getChannelRecords(),
@@ -1192,7 +1192,7 @@ let ni = r.memo(function (e) {
                   children: [
                       (0, s.jsx)("div", {
                           className: t7.qz,
-                          children: (0, s.jsx)(t4.Ay, {
+                          children: (0, s.jsx)(t8.Ay, {
                               renderIcon: !0,
                               users: C,
                               max: 8,
@@ -1292,7 +1292,7 @@ function nC(e) {
                         );
                         (0, $.openModalLazy)(async () => {
                             let { default: l } = await Promise.all([
-                                n.e("67631"),
+                                n.e("98600"),
                                 n.e("42527"),
                                 n.e("59957"),
                                 n.e("28136"),
@@ -1620,7 +1620,7 @@ function nW(e) {
             Array.from(nK.A.getNewChannelIds(t.id)).filter((e) => nK.A.shouldIndicateNewChannel(t.id, e)),
         ),
         d = (0, tn.bG)([nz.Ay], () => nz.Ay.hasUnread(t.id, nS.P.GUILD_ONBOARDING_QUESTION)),
-        c = o.length > e4.rR,
+        c = o.length > e8.rR,
         u = (0, tn.bG)([nk.A, nz.Ay], () => {
             let e = nk.A.lastFetchedAt(t.id),
                 n = nz.Ay.lastMessageId(t.id, nS.P.GUILD_ONBOARDING_QUESTION);
@@ -1784,14 +1784,14 @@ var n9 = n(506774),
     n5 = n(95561),
     n7 = n(289397),
     n6 = n(486418),
-    n4 = n(575926),
-    n8 = n(440293),
+    n8 = n(575926),
+    n4 = n(440293),
     le = n(174459),
     lt = n(634654),
     ln = n(391277);
 function ll(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
-        i = (0, n8.w)(t),
+        i = (0, n4.w)(t),
         r = (0, tn.bG)([tu.A], () => tu.A.getGuild(t)),
         a = r?.features.has(F.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) === !0,
         o = "false" === n9.w.get(lt.bJ, "false"),
@@ -1800,7 +1800,7 @@ function ll(e) {
         id: `shop-${t}`,
         className: ef()(ln.A2, { [ln.wH]: n, [ln.ST]: o }),
         innerClassName: ln.LE,
-        renderIcon: (e) => (0, s.jsx)(n4.h, { width: 20, height: 20, className: ef()([e, ln.sV]) }),
+        renderIcon: (e) => (0, s.jsx)(n8.h, { width: 20, height: 20, className: ef()([e, ln.sV]) }),
         text: K.intl.string(K.t.al5EXL),
         selected: n,
         onClick: l,
@@ -1847,7 +1847,7 @@ function li(e) {
         ? (0, s.jsx)(ll, { guildId: t.id, selected: l, handleClick: r })
         : (0, s.jsx)(H.G, {
               id: `shop-${t.id}`,
-              renderIcon: (e) => (0, s.jsx)(n4.h, { width: 20, height: 20, className: e }),
+              renderIcon: (e) => (0, s.jsx)(n8.h, { width: 20, height: 20, className: e }),
               text: K.intl.string(K.t.al5EXL),
               selected: l,
               onClick: r,
@@ -2223,9 +2223,9 @@ let lF = (e) => {
                                                           ? (0, $.openModalLazy)(
                                                                 async () => {
                                                                     let { default: e } = await Promise.all([
-                                                                        n.e("67631"),
-                                                                        n.e("4782"),
-                                                                        n.e("79412"),
+                                                                        n.e("78925"),
+                                                                        n.e("82672"),
+                                                                        n.e("98600"),
                                                                         n.e("89545"),
                                                                         n.e("91531"),
                                                                         n.e("11493"),
@@ -2294,26 +2294,26 @@ function l5(e) {
 }
 var l7 = n(695633),
     l6 = n(669715),
-    l4 = n(137177),
-    l8 = n(999436);
+    l8 = n(137177),
+    l4 = n(999436);
 function ie(e) {
     let { className: t, embeddedApps: n, muted: l } = e;
     if (n.length <= 0) return null;
     {
         if (1 === n.length)
             return (0, s.jsx)("div", {
-                className: ef()(l8.kL, t, l && l8.F4),
-                children: (0, s.jsx)(l4.A, { game: n[0].application, className: l8.wK }),
+                className: ef()(l4.kL, t, l && l4.F4),
+                children: (0, s.jsx)(l8.A, { game: n[0].application, className: l4.wK }),
             });
         let e = n.length - 1;
         return (0, s.jsxs)("div", {
-            className: ef()(l8.kL, t, l && l8.F4),
+            className: ef()(l4.kL, t, l && l4.F4),
             children: [
-                (0, s.jsx)(l4.A, { game: n[0].application, className: l8.wK }),
+                (0, s.jsx)(l8.A, { game: n[0].application, className: l4.wK }),
                 2 === n.length
-                    ? (0, s.jsx)(l4.A, { game: n[1].application, className: l8.wK })
+                    ? (0, s.jsx)(l8.A, { game: n[1].application, className: l4.wK })
                     : (0, s.jsx)(N.E, {
-                          className: l8.ju,
+                          className: l4.ju,
                           variant: "text-xs/bold",
                           color: "interactive-text-active",
                           children: `+${e}`,
@@ -2802,8 +2802,8 @@ function iR(e) {
                                           let { default: e } = await Promise.all([
                                               n.e("79146"),
                                               n.e("24351"),
-                                              n.e("48414"),
-                                              n.e("40660"),
+                                              n.e("46009"),
+                                              n.e("86003"),
                                               n.e("56402"),
                                               n.e("76602"),
                                               n.e("28229"),
@@ -2883,7 +2883,7 @@ var ij = n(364522),
     iT = n(970928),
     iL = n(427262),
     iU = n(456644);
-let iD = t4.DN.SIZE_24;
+let iD = t8.DN.SIZE_24;
 function iO(e) {
     let { activity: t, embeddedApp: n } = e,
         l = t?.assets,
@@ -2940,14 +2940,14 @@ function iP(e) {
                                 children: t.state,
                             }),
                         i.length > 0 &&
-                            (0, s.jsx)(t4.Ay, {
+                            (0, s.jsx)(t8.Ay, {
                                 className: iU.TN,
                                 guildId: l.guild_id,
                                 users: r,
                                 size: iD,
                                 max: 7,
                                 renderUser: (e) => {
-                                    if (null == e || e === t4.mt) return null;
+                                    if (null == e || e === t8.mt) return null;
                                     let t = iL.Ay.getName(e);
                                     return (0, s.jsx)(
                                         Q.m,
@@ -3131,7 +3131,7 @@ class iz extends nN {
                         n.e("24351"),
                         n.e("56377"),
                         n.e("30402"),
-                        n.e("38552"),
+                        n.e("44899"),
                         n.e("26132"),
                         n.e("46652"),
                         n.e("93190"),
@@ -3437,7 +3437,7 @@ function i5(e) {
     );
 }
 function i7(e) {
-    let { guildChannels: t } = e8.A.getGuildWithoutChangingGuildActionRows(e),
+    let { guildChannels: t } = e4.A.getGuildWithoutChangingGuildActionRows(e),
         n = t.getChannels(i3[e] ?? []);
     if (null == n || 0 === n.length) return !1;
     let l = null,
@@ -3499,12 +3499,12 @@ function i7(e) {
     return (i1[e] = { topBar: S ? (N ?? iQ) : iQ, bottomBar: I ? (x ?? iQ) : iQ }), !0;
 }
 let i6 = o().throttle(i7, 200);
-function i4(e) {
+function i8(e) {
     let { guildId: t } = e,
         n = tu.A.getGuild(t);
     return null != n && !!n.features.has(F.GuildFeatures.COMMUNITY) && i6(t);
 }
-function i8(e) {
+function i4(e) {
     let { id: t } = e,
         n = eq.A.getChannel(t);
     if (null == n) return !1;
@@ -3534,7 +3534,7 @@ function sn(e) {
 class sl extends u.Ay.Store {
     static displayName = "ChannelListUnreadsStore";
     initialize() {
-        this.waitFor(e8.A, eq.A, tu.A, lr.A, nz.Ay, e6.A, eX.Ay, eQ.A, tq.Ay);
+        this.waitFor(e4.A, eq.A, tu.A, lr.A, nz.Ay, e6.A, eX.Ay, eQ.A, tq.Ay);
     }
     getUnreadStateForGuildId(e) {
         return i1[e] ?? i0;
@@ -3584,13 +3584,13 @@ let si = new sl(eU.h, {
     RESORT_THREADS: st,
     THREAD_CREATE: se,
     THREAD_DELETE: se,
-    THREAD_LIST_SYNC: i4,
-    THREAD_MEMBER_UPDATE: i8,
-    THREAD_MEMBERS_UPDATE: i8,
+    THREAD_LIST_SYNC: i8,
+    THREAD_MEMBER_UPDATE: i4,
+    THREAD_MEMBERS_UPDATE: i4,
     THREAD_UPDATE: se,
-    BULK_CLEAR_RECENTS: i4,
-    CATEGORY_COLLAPSE_ALL: i4,
-    CATEGORY_EXPAND_ALL: i4,
+    BULK_CLEAR_RECENTS: i8,
+    CATEGORY_COLLAPSE_ALL: i8,
+    CATEGORY_EXPAND_ALL: i8,
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e,
             n = e6.A.getGuildId();
@@ -3756,8 +3756,9 @@ function sm(e) {
     async function o() {
         await (0, $.openModalLazy)(async () => {
             let { default: e } = await Promise.all([
-                n.e("28881"),
+                n.e("55801"),
                 n.e("8909"),
+                n.e("86003"),
                 n.e("43513"),
                 n.e("47626"),
                 n.e("56373"),
@@ -4294,7 +4295,7 @@ function sB(e) {
         x = (0, sE.A)(),
         N = (0, u.bG)([tq.Ay], () => tq.Ay.isFavorite(t.id, n.id)),
         _ = e.connected || x?.channelId === n.id,
-        { enableHighlight: S, enableWaveformIcon: I } = (0, t8.b)(t.id, "VoiceChannel"),
+        { enableHighlight: S, enableWaveformIcon: I } = (0, t4.b)(t.id, "VoiceChannel"),
         b = null != o && o.length > 0,
         G = S && b,
         R = I && b,
@@ -4478,7 +4479,7 @@ class sK extends r.PureComponent {
             t.getItems().some((n) => {
                 if ("row" !== n.type) return !1;
                 let { section: l, row: i } = n;
-                if (l < e4.bK || e.isPlaceholderRow(l, i)) return !1;
+                if (l < e8.bK || e.isPlaceholderRow(l, i)) return !1;
                 let s = e.getChannelFromSectionRow(l, i);
                 if (null == s) return !1;
                 let { channel: r, category: a } = s;
@@ -4498,8 +4499,8 @@ class sK extends r.PureComponent {
     getSectionHeight = (e) => {
         let { guild: t, guildChannels: n, density: l } = this.props,
             i = "compact" === l ? 8 : 12;
-        if (e === e4.PU) return i;
-        if (e === e4.bK) return t.features.has(F.GuildFeatures.HUB) ? 0 : i;
+        if (e === e8.PU) return i;
+        if (e === e8.bK) return t.features.has(F.GuildFeatures.HUB) ? 0 : i;
         if (e === n.voiceChannelsSectionNumber) {
             let t = n.getCategoryFromSection(e);
             if (null == t || t.isEmpty()) return 0;
@@ -4532,7 +4533,7 @@ class sK extends r.PureComponent {
             if (t === n.voiceChannelsSectionNumber) return 44;
             let { hasDivider: d, canHaveVoiceSummary: c } = nl(n, r, t),
                 u = d ? (a ? 9 : 12) : 0;
-            if (!c || t === e4.PU) return u;
+            if (!c || t === e8.PU) return u;
             let h = n.getNamedCategoryFromSection(t);
             return null == h ||
                 !(function (e) {
@@ -4572,7 +4573,7 @@ class sK extends r.PureComponent {
                 density: r = "default",
             } = this.props,
             a = sF(r);
-        if (e === e4.PU) {
+        if (e === e8.PU) {
             let e = n.getGuildActionSection();
             return e.isEmpty()
                 ? 0
@@ -4647,11 +4648,11 @@ class sK extends r.PureComponent {
             },
             (function (e, t) {
                 switch (e) {
-                    case e4.PU:
+                    case e8.PU:
                         return "hoisted-spacer";
-                    case e4.bK:
+                    case e8.bK:
                         return "uncategorized-spacer";
-                    case e4.HP:
+                    case e8.HP:
                         return "favorites";
                     case t.recentsSectionNumber:
                         return "recents-header";
@@ -4681,7 +4682,7 @@ class sK extends r.PureComponent {
                 optInEnabled: g,
                 withGuildIcon: m,
             } = this.props;
-        if (t === e4.PU) {
+        if (t === e8.PU) {
             let e = c.getGuildActionSection(),
                 t = e.getRow(n);
             if (null == t) return null;
@@ -4757,7 +4758,7 @@ class sK extends r.PureComponent {
         let p = c.getChannelFromSectionRow(t, n);
         if (null == p) return null;
         let { category: f, channel: C } = p,
-            E = f instanceof e4.xu,
+            E = f instanceof e8.xu,
             x = C.record,
             N = `${t}${C.id}`;
         switch (x.type) {
@@ -4934,15 +4935,15 @@ class sK extends r.PureComponent {
     }
     getAnchorId = (e, t) => {
         let { guildChannels: n } = this.props;
-        if (e !== e4.PU) {
+        if (e !== e8.PU) {
             if (null == t)
-                return e === e4.HP
+                return e === e8.HP
                     ? "favorites-header"
                     : e === n.recentsSectionNumber
                       ? "recents-header"
                       : e === n.voiceChannelsSectionNumber
                         ? "voice-channels"
-                        : e === e4.bK
+                        : e === e8.bK
                           ? "uncategorized-header"
                           : n.getNamedCategoryFromSection(e)?.id;
             if (!n.isPlaceholderRow(e, t)) return n.getChannelFromSectionRow(e, t)?.channel?.id;
@@ -5244,7 +5245,7 @@ function sY(e) {
                 m
             );
         })(e.guild),
-        n = (0, u.cf)([e8.A], () => e8.A.getGuild(e.guildId, { guildActionRows: t })),
+        n = (0, u.cf)([e4.A], () => e4.A.getGuild(e.guildId, { guildActionRows: t })),
         { density: l } = (0, C.wR)();
     return (0, s.jsx)(sz, { ...e, ...n, density: l });
 }

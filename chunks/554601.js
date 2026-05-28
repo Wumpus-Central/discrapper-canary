@@ -541,24 +541,23 @@ function eJ(e) {
                                             action: () => {
                                                 (0, eO.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        n.e("28881"),
+                                                        n.e("55801"),
                                                         n.e("56377"),
                                                         n.e("77083"),
                                                         n.e("17214"),
-                                                        n.e("40660"),
+                                                        n.e("86003"),
                                                         n.e("64509"),
                                                         n.e("96330"),
                                                         n.e("56159"),
                                                         n.e("77049"),
                                                         n.e("21838"),
-                                                        n.e("34816"),
                                                         n.e("81113"),
-                                                        n.e("97189"),
-                                                        n.e("67631"),
-                                                        n.e("79412"),
+                                                        n.e("34533"),
+                                                        n.e("78925"),
+                                                        n.e("98600"),
                                                         n.e("4222"),
                                                         n.e("18090"),
-                                                        n.e("48414"),
+                                                        n.e("46009"),
                                                         n.e("4495"),
                                                         n.e("89001"),
                                                         n.e("55990"),
@@ -566,8 +565,8 @@ function eJ(e) {
                                                         n.e("48689"),
                                                         n.e("78385"),
                                                         n.e("70682"),
-                                                        n.e("43535"),
-                                                        n.e("79705"),
+                                                        n.e("41475"),
+                                                        n.e("48100"),
                                                         n.e("23924"),
                                                         n.e("42205"),
                                                         n.e("71091"),
@@ -588,7 +587,7 @@ function eJ(e) {
                                                         n.e("84569"),
                                                         n.e("6338"),
                                                         n.e("3178"),
-                                                        n.e("7743"),
+                                                        n.e("30124"),
                                                         n.e("45959"),
                                                         n.e("60658"),
                                                         n.e("8304"),
@@ -606,7 +605,6 @@ function eJ(e) {
                                                         n.e("31716"),
                                                         n.e("8751"),
                                                         n.e("62931"),
-                                                        n.e("81987"),
                                                         n.e("50417"),
                                                         n.e("45679"),
                                                         n.e("34530"),
@@ -656,6 +654,7 @@ function eJ(e) {
                                                         n.e("54819"),
                                                         n.e("21574"),
                                                         n.e("31445"),
+                                                        n.e("81987"),
                                                         n.e("26437"),
                                                         n.e("78050"),
                                                         n.e("94607"),
@@ -844,8 +843,8 @@ var e4 = n(34188),
     e2 = n(177953),
     e3 = n(825484),
     e9 = n(512950),
-    e6 = n(900797),
-    e5 = n(847374),
+    e5 = n(900797),
+    e6 = n(847374),
     te = n(10716),
     tt = n(702841),
     tn = n(150934),
@@ -1291,8 +1290,8 @@ function tM(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e6.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
-                              : (0, r.jsx)(e5.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
+                              ? (0, r.jsx)(e5.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              : (0, r.jsx)(e6.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
                 : null,
@@ -1405,7 +1404,7 @@ var tZ = n(111042),
     t2 = n(935208),
     t3 = n(630248),
     t9 = n(355097);
-function t6(e, t) {
+function t5(e, t) {
     o.useEffect(() => {
         t7.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
@@ -1449,7 +1448,7 @@ function t6(e, t) {
         return [...s.filter((e) => e.id === a), ...s.filter((e) => e.id !== a)];
     }, [s, l, n, t]);
 }
-var t5 = n(457408),
+var t6 = n(457408),
     ne = n(546183),
     nt = n(228366);
 let nn = 10 * Y.A.Millis.MINUTE,
@@ -2122,11 +2121,11 @@ function n9(e, t) {
         l = (0, I.lq)(t);
     return (0, g.RF)(n, l);
 }
-function n6(e, t) {
+function n5(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
-var n5 = n(562708),
+var n6 = n(562708),
     le = n(139286),
     lt = n(520117);
 function ln(e) {
@@ -2136,8 +2135,8 @@ function ln(e) {
         trackSearchResultsItemImpressionRef: (0, lt.A)({
             onVisible: () => {
                 (0, le.x)({
-                    type: n5.ImpressionTypes.VIEW,
-                    name: n5.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
+                    type: n6.ImpressionTypes.VIEW,
+                    name: n6.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
                     properties: { application_id: t, command_id: n, search_results_position: l, query: i, source: s },
                 });
             },
@@ -2456,7 +2455,7 @@ function lm(e) {
                                 let n = $.Ay.getScoreWithoutLoadingLatest(u, e);
                                 return $.Ay.getScoreWithoutLoadingLatest(u, t) - n;
                             }),
-                            n6,
+                            n5,
                         ],
                     });
                 }, [s, c, l, t, n]),
@@ -3049,10 +3048,10 @@ function lv(e) {
                             let e = [];
                             return c && e.push(ns.gq), e;
                         }, [c]),
-                        u = t6(r, a),
+                        u = t5(r, a),
                         m = (0, A.bG)([eF.default], () => eF.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
-                        let e = (e) => !(!1 === m && (0, t5.A)(e.id));
+                        let e = (e) => !(!1 === m && (0, t6.A)(e.id));
                         return l
                             ? u
                                   .filter(
@@ -3226,7 +3225,7 @@ function lS(e) {
                         }, new Set()),
                     [s],
                 ),
-                c = t6(
+                c = t5(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})
@@ -3248,7 +3247,7 @@ function lS(e) {
                                     return t;
                                 }),
                             )
-                            .filter((e) => !(!1 === i && (0, t5.A)(e.id)))
+                            .filter((e) => !(!1 === i && (0, t6.A)(e.id)))
                             .map((e) => ({ application: e })),
                     [i, c],
                 ),

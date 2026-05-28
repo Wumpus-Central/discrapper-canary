@@ -284,14 +284,12 @@ function eu(e) {
             h
                 ? (0, j.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
-                          s.e("16415"),
-                          s.e("78067"),
-                          s.e("56377"),
-                          s.e("36624"),
+                          s.e("98600"),
+                          s.e("42527"),
                           s.e("59957"),
-                          s.e("41835"),
                           s.e("28136"),
                           s.e("16084"),
+                          s.e("36624"),
                           s.e("22547"),
                       ]).then(s.bind(s, 1310));
                       return (t) => (0, n.jsx)(e, { ...t, guild: a, source: M.PE1.GUILD_HEADER_INVITE_BUTTON });

@@ -1,0 +1,17 @@
+.offerDetailContainer__11ee8 {
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-16)
+}
+
+.legalContainer__11ee8 {
+    margin: var(--space-16) 0
+}
+
+.spinnerContainer__11ee8 {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}

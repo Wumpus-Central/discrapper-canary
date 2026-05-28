@@ -1,32 +1,33 @@
-a.d(l, { z: () => s });
-var t = a(627968);
-a(64700);
-var n = a(503698),
-    i = a.n(n),
-    o = a(707554),
-    r = a(920531);
-function s(e) {
-    let l,
-        { tag: a = "h5", children: n, className: s, disabled: d, required: u = !1, error: c, errorId: b, ...p } = e;
+"use strict";
+n.d(t, { z: () => l });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(707554),
+    o = n(920531);
+function l(e) {
+    let t,
+        { tag: n = "h5", children: r, className: l, disabled: u, required: c = !1, error: d, errorId: _, ...h } = e;
     return (
-        (l = "legend" === a ? a : o.H),
-        (0, t.jsxs)(l, {
-            className: i()(r[a], "h5" !== a ? r.defaultColor : null, s, {
-                [r[`defaultMargin${a}`]]: null == s,
-                [r.disabled]: d,
-                [r.error]: null != c,
+        (t = "legend" === n ? n : a.H),
+        (0, i.jsxs)(t, {
+            className: s()(o[n], "h5" !== n ? o.defaultColor : null, l, {
+                [o[`defaultMargin${n}`]]: null == l,
+                [o.disabled]: u,
+                [o.error]: null != d,
             }),
-            ...p,
+            ...h,
             children: [
-                n,
-                u && null == c ? (0, t.jsx)("span", { className: r.required, children: "*" }) : null,
-                null != c
-                    ? (0, t.jsxs)("span", {
-                          id: b,
-                          className: r.errorMessage,
+                r,
+                c && null == d ? (0, i.jsx)("span", { className: o.required, children: "*" }) : null,
+                null != d
+                    ? (0, i.jsxs)("span", {
+                          id: _,
+                          className: o.errorMessage,
                           children: [
-                              null != n ? (0, t.jsx)("span", { className: r.errorSeparator, children: "-" }) : null,
-                              c,
+                              null != r ? (0, i.jsx)("span", { className: o.errorSeparator, children: "-" }) : null,
+                              d,
                           ],
                       })
                     : null,
