@@ -17043,8 +17043,8 @@ let pM = (0, a.Tf)(u.X.ACCOUNT_INFO_PHONE_SETTING, {
             ? (0, _.openModalLazy)(
                   async () => {
                       let { default: e } = await Promise.all([
-                          i.e("78925"),
-                          i.e("82672"),
+                          i.e("58735"),
+                          i.e("4782"),
                           i.e("89545"),
                           i.e("11493"),
                           i.e("84704"),
@@ -17694,8 +17694,8 @@ function fC() {
                 (0, _.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            i.e("78925"),
-                            i.e("82672"),
+                            i.e("58735"),
+                            i.e("4782"),
                             i.e("89545"),
                             i.e("11493"),
                             i.e("84704"),

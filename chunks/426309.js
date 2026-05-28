@@ -8002,7 +8002,7 @@ let rU = {
         return (t) => (0, r.jsx)(e, { ...t, guildId: "123" });
     },
     PhoneVerificationModal: async () => {
-        let { default: e } = await Promise.all([a.e("78925"), a.e("82672"), a.e("89545"), a.e("11493")]).then(
+        let { default: e } = await Promise.all([a.e("58735"), a.e("4782"), a.e("89545"), a.e("11493")]).then(
             a.bind(a, 914724),
         );
         return (t) => (0, r.jsx)(e, { error: null, working: !1, validPhone: !1, ...t });
@@ -8841,7 +8841,7 @@ let rU = {
     },
     FamilyCenterQRCodeModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("78925"),
+            a.e("58735"),
             a.e("30244"),
             a.e("98189"),
             a.e("48370"),
