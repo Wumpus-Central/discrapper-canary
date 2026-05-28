@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { oH: () => y, s3: () => I, lo: () => S, Jg: () => N });
+n.d(t, { oH: () => v, s3: () => T, lo: () => y, Jg: () => N });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -9,27 +9,28 @@ var i = n(627968),
     u = n(331322),
     c = n(224640),
     d = n(430993),
-    _ = n(500380),
+    _ = n(632088),
+    h = n(500380),
     f = n(423764),
-    h = n(683433),
-    p = n(981036),
-    E = n(725836),
-    m = n(834730),
-    g = n(857414);
-function A(e) {
+    p = n(683433),
+    E = n(981036),
+    m = n(725836),
+    g = n(834730),
+    A = n(857414);
+function I(e) {
     let { countryCode: t, relocationCountryCode: n } = e;
     return (0, i.jsxs)("div", {
-        className: g.uL,
+        className: A.uL,
         children: [
-            (0, i.jsx)("img", { alt: "", className: g.bI, src: (0, _.t)(t) }),
-            (0, i.jsx)(m.E, { variant: "text-md/normal", color: "text-subtle", children: (0, f.j7)((0, f.ni)(t)) }),
-            (0, i.jsx)(m.E, { variant: "text-md/normal", color: "text-subtle", className: g.B5, children: "\u2192" }),
-            (0, i.jsx)("img", { alt: "", className: g.bI, src: (0, _.t)(n) }),
-            (0, i.jsx)(m.E, { variant: "text-md/normal", color: "text-subtle", children: (0, f.j7)((0, f.ni)(n)) }),
+            (0, i.jsx)("img", { alt: "", className: A.bI, src: (0, h.t)(t) }),
+            (0, i.jsx)(g.E, { variant: "text-md/normal", color: "text-subtle", children: (0, f.j7)((0, f.ni)(t)) }),
+            (0, i.jsx)(g.E, { variant: "text-md/normal", color: "text-subtle", className: A.B5, children: "\u2192" }),
+            (0, i.jsx)("img", { alt: "", className: A.bI, src: (0, h.t)(n) }),
+            (0, i.jsx)(g.E, { variant: "text-md/normal", color: "text-subtle", children: (0, f.j7)((0, f.ni)(n)) }),
         ],
     });
 }
-function I(e) {
+function T(e) {
     let {
             gradientColor: t,
             title: n,
@@ -39,9 +40,9 @@ function I(e) {
             relocationCountryCode: u,
             ...c
         } = e,
-        { checkoutHeaderConfigs: d } = (0, E.ck)(),
-        h = r.useCallback(
-            () => (null == l ? null : (0, i.jsx)("img", { alt: "", className: g.bI, src: (0, _.t)(l) })),
+        { checkoutHeaderConfigs: d } = (0, m.ck)(),
+        _ = r.useCallback(
+            () => (null == l ? null : (0, i.jsx)("img", { alt: "", className: A.bI, src: (0, h.t)(l) })),
             [l],
         ),
         p = r.useMemo(() => {
@@ -52,10 +53,10 @@ function I(e) {
                     variant: "expressive",
                 };
         }, [s, a, d.headerBadgeText, d.headerBadgeIcon]),
-        m = null != l && null != u,
-        I = r.useMemo(() => {
-            if (!m && null != l) return { text: (0, f.j7)((0, f.ni)(l)), leadingIcon: h };
-        }, [m, l, h]);
+        E = null != l && null != u,
+        g = r.useMemo(() => {
+            if (!E && null != l) return { text: (0, f.j7)((0, f.ni)(l)), leadingIcon: _ };
+        }, [E, l, _]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.rQ, {
@@ -66,29 +67,29 @@ function I(e) {
                 titleTextVariant: "heading-lg/semibold",
                 alignCenter: !1,
                 title: n,
-                subtitle: I,
+                subtitle: g,
             }),
-            m && (0, i.jsx)(A, { countryCode: l, relocationCountryCode: u }),
+            E && (0, i.jsx)(I, { countryCode: l, relocationCountryCode: u }),
         ],
     });
 }
-let T = { top: 16, bottom: 8 };
-function S(e) {
+let S = { top: 16, bottom: 8 };
+function y(e) {
     let { onBackClick: t, primaryButtonProps: n, portalClassName: r } = e,
         { variant: s } = n,
-        { setCheckoutFooterContentNode: o } = (0, E.ck)();
+        { setCheckoutFooterContentNode: o } = (0, m.ck)();
     return (0, i.jsxs)(l.j, {
         children: [
-            (0, i.jsx)("div", { ref: o, className: a()(g.K4, r) }),
+            (0, i.jsx)("div", { ref: o, className: a()(A.K4, r) }),
             (0, i.jsxs)(u.B, {
                 direction: "horizontal",
                 align: "center",
                 justify: null != t ? "space-between" : "end",
                 fullWidth: !0,
-                padding: T,
+                padding: S,
                 children: [
-                    null != t ? (0, i.jsx)(h.A, { onClick: t }) : null,
-                    (0, i.jsx)(p.p, { ...n, variant: s ?? "active", autoFocus: !0 }),
+                    null != t ? (0, i.jsx)(p.A, { onClick: t }) : null,
+                    (0, i.jsx)(E.p, { ...n, variant: s ?? "active", autoFocus: !0 }),
                 ],
             }),
         ],
@@ -96,9 +97,9 @@ function S(e) {
 }
 function N(e) {
     let { children: t, size: n = "md", maxHeight: r = "viewport", ...s } = e;
-    return (0, i.jsx)(c.d, { size: n, ...s, maxHeight: r, children: t });
+    return (0, i.jsx)(c.d, { size: n, ...s, maxHeight: r, contentOutsideContainer: (0, i.jsx)(_.A, {}), children: t });
 }
-function y(e) {
+function v(e) {
     let {
         title: t,
         gradientColor: n = "purple",
@@ -109,13 +110,13 @@ function y(e) {
         onBackClick: l,
         primaryButtonProps: u,
         children: _,
-        ...f
+        ...h
     } = e;
-    return (0, i.jsx)(E.e0, {
+    return (0, i.jsx)(m.e0, {
         children: (0, i.jsxs)(c.d, {
-            ...f,
+            ...h,
             children: [
-                (0, i.jsx)(I, {
+                (0, i.jsx)(T, {
                     gradientColor: n,
                     title: t,
                     countryCode: r,
@@ -124,7 +125,7 @@ function y(e) {
                     headerBadgeIcon: o,
                 }),
                 (0, i.jsx)(d.c, { children: _ }),
-                (0, i.jsx)(S, { onBackClick: l, primaryButtonProps: u }),
+                (0, i.jsx)(y, { onBackClick: l, primaryButtonProps: u }),
             ],
         }),
     });

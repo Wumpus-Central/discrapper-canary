@@ -1,51 +1,53 @@
-i.d(t, { default: () => A });
+i.d(t, { default: () => h });
 var n = i(627968);
 i(64700);
 var s = i(284009),
     l = i.n(s),
     r = i(20742),
     a = i(224640),
-    o = i(834252),
-    u = i(166532),
-    d = i(61299),
-    c = i(375708),
-    g = i(318152);
-function m(e) {
+    o = i(632088),
+    u = i(834252),
+    d = i(166532),
+    c = i(61299),
+    g = i(375708),
+    m = i(318152);
+function A(e) {
     let {
             transitionState: t,
             analyticsLocation: i,
             onClose: s,
-            onAddPaymentSource: o,
-            toastContent: m,
-            initialStep: A = u.pn.PAYMENT_TYPE,
-            overwriteSubscriptionPaymentSource: h = !1,
+            onAddPaymentSource: u,
+            toastContent: A,
+            initialStep: h = d.pn.PAYMENT_TYPE,
+            overwriteSubscriptionPaymentSource: E = !1,
         } = e,
-        E = (0, d._V)(),
-        T = (0, d.Y)({
-            paymentModalArgs: E,
-            initialStep: A,
+        S = (0, c._V)(),
+        T = (0, c.Y)({
+            paymentModalArgs: S,
+            initialStep: h,
             prependSteps: [],
             appendSteps: [],
             onReturn: () => {
                 s();
             },
             onComplete: (e, t) => {
-                l()(null != t, "paymentSource missing"), o?.(t), s();
+                l()(null != t, "paymentSource missing"), u?.(t), s();
             },
             onStepChange: () => {},
-            header: (0, n.jsx)(r.rQ, { title: c.intl.string(c.t.eQ2bLp) }),
+            header: (0, n.jsx)(r.rQ, { title: g.intl.string(g.t.eQ2bLp) }),
             analyticsLocation: i,
             hideBreadcrumbs: !0,
-            toastContent: m,
-            overwriteSubscriptionPaymentSource: h,
+            toastContent: A,
+            overwriteSubscriptionPaymentSource: E,
         });
     return (0, n.jsx)(a.d, {
         transitionState: t,
         onClose: s,
         size: "sm",
-        "aria-label": c.intl.string(c.t.eQ2bLp),
+        "aria-label": g.intl.string(g.t.eQ2bLp),
+        contentOutsideContainer: (0, n.jsx)(o.A, {}),
         children: (0, n.jsx)("form", {
-            className: g.Zd,
+            className: m.Zd,
             onSubmit: function (e) {
                 e.preventDefault();
             },
@@ -53,11 +55,11 @@ function m(e) {
         }),
     });
 }
-function A(e) {
-    return (0, n.jsx)(o.PaymentContextProvider, {
+function h(e) {
+    return (0, n.jsx)(u.PaymentContextProvider, {
         activeSubscription: null,
         stepConfigs: [],
         skuIDs: [],
-        children: (0, n.jsx)(m, { ...e }),
+        children: (0, n.jsx)(A, { ...e }),
     });
 }
