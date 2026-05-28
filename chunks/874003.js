@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => V });
+n.d(t, { A: () => F });
 var i = n(627968),
     r = n(64700),
     s = n(735438),
@@ -20,150 +20,160 @@ var i = n(627968),
     I = n(964486),
     T = n(85448),
     S = n(495544),
-    y = n(734057),
-    N = n(761853),
-    v = n(763827),
-    C = n(287809),
-    R = n(977997),
-    O = n(935208),
-    b = n(829997),
-    D = n(329139),
-    L = n(375708),
-    w = n(36482);
-function M(e) {
+    y = n(761853),
+    N = n(763827),
+    v = n(287809),
+    C = n(977997),
+    R = n(935208),
+    O = n(829997),
+    b = n(329139),
+    D = n(375708),
+    L = n(36482);
+function w(e) {
     let { worldX: t, worldY: n, worldZ: i } = e;
     return { x: t, y: n, z: i };
 }
-function P(e, t) {
+function M(e, t) {
     let n = 7 / t,
         i = e / 2;
     return { zoom: n, pan: { offsetX: i * (1 - n), offsetY: i - i * (1 - t / 14) * n } };
 }
-function x(e) {
-    let { mode: t, users: n, onUserDragged: s, distance: a, view: o, setView: l, canvasSize: c, setCanvasSize: _ } = e,
-        h = r.useRef(null),
+function P(e) {
+    let {
+            mode: t,
+            users: n,
+            guildId: s,
+            onUserDragged: a,
+            distance: o,
+            view: l,
+            setView: c,
+            canvasSize: _,
+            setCanvasSize: h,
+        } = e,
         f = r.useRef(null),
-        [p, E] = r.useState(null),
-        [m, g] = r.useState(!1),
-        A = (0, d.r)(u.A.colors.BACKGROUND_BASE_LOW).hex(),
-        T = (0, d.r)(u.A.colors.BACKGROUND_MOD_MUTED).hex(),
-        S = (0, d.r)(u.A.colors.STATUS_POSITIVE).hex(),
-        y = (0, d.r)(u.A.colors.TEXT_DEFAULT).hex(),
-        N = L.intl.string(D.default.chrbRg);
+        p = r.useRef(null),
+        [E, m] = r.useState(null),
+        [g, A] = r.useState(!1),
+        T = (0, d.r)(u.A.colors.BACKGROUND_BASE_LOW).hex(),
+        S = (0, d.r)(u.A.colors.BACKGROUND_MOD_MUTED).hex(),
+        y = (0, d.r)(u.A.colors.STATUS_POSITIVE).hex(),
+        N = (0, d.r)(u.A.colors.TEXT_DEFAULT).hex(),
+        v = D.intl.string(b.default.chrbRg);
     (0, I.u5)(() => {
-        let e = h.current;
+        let e = f.current;
         if (null == e) return;
         let t = !0,
             n = new ResizeObserver((e) => {
                 let n = Math.floor(e[0].contentRect.width);
-                n <= 0 || (t && ((t = !1), l(P(n, a))), _(n));
+                n <= 0 || (t && ((t = !1), c(M(n, o))), h(n));
             });
         return n.observe(e), () => n.disconnect();
     }),
         r.useEffect(() => {
-            let e = h.current;
+            let e = f.current;
             if (null == e) return;
             let t = (t) => {
                 t.preventDefault();
                 let n = e.getBoundingClientRect(),
                     i = t.clientX - n.left,
                     r = t.clientY - n.top;
-                l((e) => {
+                c((e) => {
                     let { zoom: n, pan: s } = e,
-                        a = Math.max(k, Math.min(U, n * Math.exp(-t.deltaY * G))),
+                        a = Math.max(x, Math.min(k, n * Math.exp(-t.deltaY * U))),
                         o = a / n;
                     return { zoom: a, pan: { offsetX: i - (i - s.offsetX) * o, offsetY: r - (r - s.offsetY) * o } };
                 });
             };
             return e.addEventListener("wheel", t, { passive: !1 }), () => e.removeEventListener("wheel", t);
-        }, [l]),
+        }, [c]),
         r.useEffect(() => {
-            let e = f.current;
-            if (null == e || 0 === c) return;
+            let e = p.current;
+            if (null == e || 0 === _) return;
             let t = e.getContext("2d");
             if (null != t) {
                 t.setTransform(1, 0, 0, 1, 0, 0),
-                    t.clearRect(0, 0, c, c),
-                    (t.fillStyle = A),
-                    t.fillRect(0, 0, c, c),
-                    t.setTransform(o.zoom, 0, 0, o.zoom, o.pan.offsetX, o.pan.offsetY),
-                    (t.strokeStyle = T),
-                    (t.lineWidth = 1 / o.zoom);
+                    t.clearRect(0, 0, _, _),
+                    (t.fillStyle = T),
+                    t.fillRect(0, 0, _, _),
+                    t.setTransform(l.zoom, 0, 0, l.zoom, l.pan.offsetX, l.pan.offsetY),
+                    (t.strokeStyle = S),
+                    (t.lineWidth = 1 / l.zoom);
                 for (let e = 0; e <= 10; e++) {
-                    let n = (e * c) / 10;
+                    let n = (e * _) / 10;
                     t.beginPath(),
                         t.moveTo(n, 0),
-                        t.lineTo(n, c),
+                        t.lineTo(n, _),
                         t.stroke(),
                         t.beginPath(),
                         t.moveTo(0, n),
-                        t.lineTo(c, n),
+                        t.lineTo(_, n),
                         t.stroke();
                 }
-                (t.fillStyle = S),
+                (t.fillStyle = y),
                     t.beginPath(),
-                    t.arc(c / 2, c / 2, 10 / o.zoom, 0, 2 * Math.PI),
+                    t.arc(_ / 2, _ / 2, 10 / l.zoom, 0, 2 * Math.PI),
                     t.fill(),
-                    (t.fillStyle = y),
-                    (t.font = `bold ${11 / o.zoom}px gg sans`),
+                    (t.fillStyle = N),
+                    (t.font = `bold ${11 / l.zoom}px gg sans`),
                     (t.textAlign = "center"),
-                    t.fillText(N, c / 2, c / 2 - 16 / o.zoom);
+                    t.fillText(v, _ / 2, _ / 2 - 16 / l.zoom);
             }
-        }, [c, o, A, T, S, y, N]);
-    let v = r.useCallback(
+        }, [_, l, T, S, y, N, v]);
+    let C = r.useCallback(
             (e, n) => {
-                "manual" === t && 0 === e.button && (e.stopPropagation(), E(n));
+                "manual" === t && 0 === e.button && (e.stopPropagation(), m(n));
             },
             [t],
         ),
-        C = r.useCallback((e) => {
-            0 === e.button && g(!0);
+        O = r.useCallback((e) => {
+            0 === e.button && A(!0);
         }, []),
-        R = r.useCallback(
+        w = r.useCallback(
             (e) => {
-                if (m)
-                    return void l((t) => ({
+                if (g)
+                    return void c((t) => ({
                         zoom: t.zoom,
                         pan: { offsetX: t.pan.offsetX + e.movementX, offsetY: t.pan.offsetY + e.movementY },
                     }));
-                if (null == p) return;
-                let t = f.current;
-                if (null == t || 0 === c) return;
+                if (null == E) return;
+                let t = p.current;
+                if (null == t || 0 === _) return;
                 let n = t.getBoundingClientRect();
-                s(p, {
-                    canvasX: (e.clientX - n.left - o.pan.offsetX) / o.zoom,
-                    canvasY: (e.clientY - n.top - o.pan.offsetY) / o.zoom,
+                a(E, {
+                    canvasX: (e.clientX - n.left - l.pan.offsetX) / l.zoom,
+                    canvasY: (e.clientY - n.top - l.pan.offsetY) / l.zoom,
                 });
             },
-            [m, p, c, o.pan.offsetX, o.pan.offsetY, o.zoom, l, s],
+            [g, E, _, l.pan.offsetX, l.pan.offsetY, l.zoom, c, a],
         ),
-        b = r.useCallback(() => {
-            E(null), g(!1);
+        P = r.useCallback(() => {
+            m(null), A(!1);
         }, []),
-        M = m ? "grabbing" : "default";
+        F = g ? "grabbing" : "default";
     return (0, i.jsxs)("div", {
-        ref: h,
-        className: w.BW,
-        style: { cursor: M },
-        onMouseDown: C,
-        onMouseMove: R,
-        onMouseUp: b,
-        onMouseLeave: b,
+        ref: f,
+        className: L.BW,
+        style: { cursor: F },
+        onMouseDown: O,
+        onMouseMove: w,
+        onMouseUp: P,
+        onMouseLeave: P,
         onContextMenu: (e) => e.preventDefault(),
         children: [
-            (0, i.jsx)("canvas", { ref: f, width: c, height: c, className: w.Ji }),
-            O.default.entries(n).map((e) => {
+            (0, i.jsx)("canvas", { ref: p, width: _, height: _, className: L.Ji }),
+            R.default.entries(n).map((e) => {
                 let [n, r] = e;
                 return (0, i.jsx)(
-                    F,
+                    G,
                     {
                         userId: n,
+                        guildId: s,
                         position: {
-                            canvasX: r.canvasX * o.zoom + o.pan.offsetX,
-                            canvasY: r.canvasY * o.zoom + o.pan.offsetY,
+                            canvasX: r.canvasX * l.zoom + l.pan.offsetX,
+                            canvasY: r.canvasY * l.zoom + l.pan.offsetY,
                         },
                         draggable: "manual" === t,
-                        onMouseDown: v,
+                        handleMouseDown: C,
                     },
                     n,
                 );
@@ -171,33 +181,41 @@ function x(e) {
         ],
     });
 }
-let k = 0.25,
-    U = 4,
-    G = 0.002;
-function F(e) {
-    let { userId: t, position: n, draggable: r, onMouseDown: s } = e,
-        a = (0, o.bG)([C.default], () => C.default.getUser(t)),
-        l = (0, A.A)({ userId: t });
-    return null == a
+let x = 0.25,
+    k = 4,
+    U = 0.002;
+function G(e) {
+    let { userId: t, guildId: n, position: s, draggable: a, handleMouseDown: l } = e,
+        u = (0, o.bG)([v.default], () => v.default.getUser(t)),
+        d = (0, A.A)({ userId: t }),
+        [h, f] = r.useState(!1);
+    return null == u
         ? null
         : (0, i.jsx)(c.m, {
-              text: a.username,
+              text: u.username,
+              shouldShow: !h,
+              hideOnClick: !1,
               children: (0, i.jsx)("div", {
-                  className: w.my,
-                  style: { left: n.canvasX - 12, top: n.canvasY - 12, cursor: r ? "grab" : "default" },
-                  onMouseDown: (e) => s(e, t),
+                  className: L.my,
+                  style: { left: s.canvasX - 12, top: s.canvasY - 12, cursor: a ? "grab" : "default" },
+                  onMouseDown: (e) => {
+                      f(!0), l(e, t);
+                  },
+                  onMouseUp: () => {
+                      f(!1);
+                  },
                   children: (0, i.jsx)(T.A, {
                       userId: t,
                       size: _._3.SIZE_24,
-                      src: a.getAvatarURL(void 0, 24),
-                      speaking: l,
+                      src: u.getAvatarURL(n, 24),
+                      speaking: d,
                       ringing: !1,
                   }),
               }),
           });
 }
-function V() {
-    let e = (0, o.bG)([N.Ay], () => N.Ay.getAudioMixerSettings()),
+function F() {
+    let e = (0, o.bG)([y.Ay], () => y.Ay.getAudioMixerSettings()),
         t = l.x.DEFAULT,
         [n, u] = r.useState({ zoom: 1, pan: { offsetX: 0, offsetY: 0 } }),
         [c, d] = r.useState(0),
@@ -217,35 +235,34 @@ function V() {
             },
             [c],
         ),
-        I = (0, o.bG)([v.A, y.A], () => {
-            let e = v.A.getChannelId();
-            return null != e ? y.A.getChannel(e) : null;
-        }),
-        T = S.default.getId(),
-        C = I?.id,
-        O = (0, o.yK)(
-            [R.A],
+        { channelId: I, guildId: T } = (0, o.cf)([N.A], () => ({
+            channelId: N.A.getChannelId(),
+            guildId: N.A.getGuildId() ?? void 0,
+        })),
+        v = (0, o.bG)([S.default], () => S.default.getId()),
+        R = (0, o.yK)(
+            [C.A],
             () =>
-                null == C
+                null == I
                     ? []
-                    : Object.values(R.A.getVoiceStatesForChannel(C)).filter((e) => {
+                    : Object.values(C.A.getVoiceStatesForChannel(I)).filter((e) => {
                           let { userId: t } = e;
-                          return t !== T;
+                          return t !== v;
                       }),
-            [C, T],
+            [I, v],
         ),
-        k = e.mode,
-        U = r.useMemo(
+        x = e.mode,
+        k = r.useMemo(
             () => ({
                 line: (t) => {
-                    if (1 === O.length) return { worldX: 0, worldY: 0, worldZ: -e.distance };
-                    let n = t / (O.length - 1);
+                    if (1 === R.length) return { worldX: 0, worldY: 0, worldZ: -e.distance };
+                    let n = t / (R.length - 1);
                     return { worldX: -e.spread / 2 + e.spread * n, worldY: 0, worldZ: -e.distance };
                 },
                 arc: (t) => {
-                    if (1 === O.length) return { worldX: 0, worldY: 0, worldZ: -e.distance };
+                    if (1 === R.length) return { worldX: 0, worldY: 0, worldZ: -e.distance };
                     let n = (e.arcAngle * Math.PI) / 180,
-                        i = Math.PI / 2 + n / 2 - (t / (O.length - 1)) * n;
+                        i = Math.PI / 2 + n / 2 - (t / (R.length - 1)) * n;
                     return { worldX: e.distance * Math.cos(i), worldY: 0, worldZ: -e.distance * Math.sin(i) };
                 },
                 grid: (t) => {
@@ -258,137 +275,137 @@ function V() {
                     };
                 },
             }),
-            [e, O.length],
+            [e, R.length],
         ),
-        [G, F] = r.useState(new Map()),
-        V = r.useMemo(
+        [U, G] = r.useState(new Map()),
+        F = r.useMemo(
             () =>
                 0 === c
                     ? {}
                     : Object.fromEntries(
-                          O.map((e, t) => {
+                          R.map((e, t) => {
                               let { userId: n } = e;
-                              if ("manual" === k) {
-                                  let e = G.get(n);
+                              if ("manual" === x) {
+                                  let e = U.get(n);
                                   return [n, e ?? { canvasX: c / 2, canvasY: c / 2 }];
                               }
-                              return [n, _(U[k](t))];
+                              return [n, _(k[x](t))];
                           }),
                       ),
-            [c, G, k, O, U, _],
+            [c, U, x, R, k, _],
         );
     r.useEffect(() => {
-        "manual" === k ||
+        "manual" === x ||
             0 === c ||
-            N.Ay.getMediaEngine().eachConnection((e) => {
-                O.forEach((t, n) => {
+            y.Ay.getMediaEngine().eachConnection((e) => {
+                R.forEach((t, n) => {
                     let { userId: i } = t,
-                        r = U[k](n);
-                    e.setUserPosition(i, M(r));
+                        r = k[x](n);
+                    e.setUserPosition(i, w(r));
                 });
             });
-    }, [e, c, k, O, U]);
-    let B = r.useCallback(
+    }, [e, c, x, R, k]);
+    let V = r.useCallback(
             (e, t) => {
-                if ((F((n) => new Map(n).set(e, t)), 0 === c)) return;
-                let n = A(t);
-                N.Ay.getMediaEngine().eachConnection((t) => {
-                    t.setUserPosition(e, M(n));
-                });
+                G((n) => new Map(n).set(e, t)),
+                    0 !== c &&
+                        y.Ay.getMediaEngine().eachConnection((n) => {
+                            n.setUserPosition(e, w(A(t)));
+                        });
             },
             [c, A],
         ),
-        H = r.useCallback(
+        B = r.useCallback(
             (n) => {
                 g.A.setAudioMixerSettings({ ...e, ...n }, t);
             },
             [e, t],
         ),
-        [j, Y] = r.useState(e.roomSize),
-        W = r.useRef(null),
-        K = r.useCallback(
+        [H, j] = r.useState(e.roomSize),
+        Y = r.useRef(null),
+        W = r.useCallback(
             (e) => {
-                Y(e),
-                    null !== W.current && clearTimeout(W.current),
-                    (W.current = window.setTimeout(() => {
-                        H({ roomSize: e }), (W.current = null);
+                j(e),
+                    null !== Y.current && clearTimeout(Y.current),
+                    (Y.current = window.setTimeout(() => {
+                        B({ roomSize: e }), (Y.current = null);
                     }, 500));
             },
-            [H],
+            [B],
         ),
-        $ = [
-            { value: "line", label: L.intl.string(D.default.xwwX9a), ariaLabel: L.intl.string(D.default.Go69Wz) },
-            { value: "arc", label: L.intl.string(D.default.k21Ys4), ariaLabel: L.intl.string(D.default["g8+1Gb"]) },
-            { value: "grid", label: L.intl.string(D.default.nVAKlB), ariaLabel: L.intl.string(D.default.fxMbmH) },
-            { value: "manual", label: L.intl.string(D.default.Wmv386), ariaLabel: L.intl.string(D.default.U9PON6) },
+        K = [
+            { value: "line", label: D.intl.string(b.default.xwwX9a), ariaLabel: D.intl.string(b.default.Go69Wz) },
+            { value: "arc", label: D.intl.string(b.default.k21Ys4), ariaLabel: D.intl.string(b.default["g8+1Gb"]) },
+            { value: "grid", label: D.intl.string(b.default.nVAKlB), ariaLabel: D.intl.string(b.default.fxMbmH) },
+            { value: "manual", label: D.intl.string(b.default.Wmv386), ariaLabel: D.intl.string(b.default.U9PON6) },
         ];
     return (0, i.jsxs)("div", {
-        className: w.kL,
+        className: L.kL,
         children: [
             (0, i.jsxs)("div", {
-                className: w.ne,
+                className: L.ne,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: w.nM,
+                        className: L.nM,
                         children: [
                             (0, i.jsx)(h.E, {
                                 variant: "text-md/normal",
-                                children: L.intl.string(D.default["p/J17q"]),
+                                children: D.intl.string(b.default["p/J17q"]),
                             }),
                             (0, i.jsx)(f.d, {
                                 checked: e.enabled,
-                                onChange: (e) => H({ enabled: e }),
-                                "aria-label": L.intl.string(D.default.gtmo6U),
+                                onChange: (e) => B({ enabled: e }),
+                                "aria-label": D.intl.string(b.default.gtmo6U),
                             }),
                         ],
                     }),
-                    (0, i.jsx)(a.c, { className: w.yF }),
-                    (0, i.jsx)(p.z, { className: w.Pf, children: L.intl.string(D.default.FCvOS0) }),
+                    (0, i.jsx)(a.c, { className: L.yF }),
+                    (0, i.jsx)(p.z, { className: L.Pf, children: D.intl.string(b.default.FCvOS0) }),
                     (0, i.jsx)(E.A, {
-                        className: w.aw,
+                        className: L.aw,
                         initialValue: e.spatialBlend,
                         value: e.spatialBlend,
                         minValue: 0,
                         maxValue: 1,
-                        asValueChanges: (e) => H({ spatialBlend: e }),
+                        asValueChanges: (e) => B({ spatialBlend: e }),
                         onValueRender: (e) => `${Math.round(100 * e)}%`,
-                        "aria-label": L.intl.string(D.default.FCvOS0),
+                        "aria-label": D.intl.string(b.default.FCvOS0),
                     }),
-                    (0, i.jsx)(p.z, { className: w.Pf, children: L.intl.string(D.default["/GM1bA"]) }),
+                    (0, i.jsx)(p.z, { className: L.Pf, children: D.intl.string(b.default["/GM1bA"]) }),
                     (0, i.jsx)(E.A, {
-                        className: w.aw,
-                        initialValue: j,
-                        value: j,
+                        className: L.aw,
+                        initialValue: H,
+                        value: H,
                         minValue: 10,
                         maxValue: 150,
-                        asValueChanges: K,
+                        asValueChanges: W,
                         onValueRender: (e) => e.toFixed(0),
-                        "aria-label": L.intl.string(D.default.l5XHLy),
+                        "aria-label": D.intl.string(b.default.l5XHLy),
                     }),
-                    (0, i.jsx)(a.c, { className: w.yF }),
-                    (0, i.jsx)(p.z, { className: w.Pf, children: L.intl.string(D.default.CMFya4) }),
+                    (0, i.jsx)(a.c, { className: L.yF }),
+                    (0, i.jsx)(p.z, { className: L.Pf, children: D.intl.string(b.default.CMFya4) }),
                     (0, i.jsx)("div", {
-                        className: w.XU,
+                        className: L.XU,
                         role: "group",
-                        "aria-label": L.intl.string(D.default.CMFya4),
-                        children: $.map((t) => {
+                        "aria-label": D.intl.string(b.default.CMFya4),
+                        children: K.map((t) => {
                             let { value: n, label: r, ariaLabel: s } = t;
                             return (0, i.jsx)(
                                 "button",
                                 {
-                                    className: `${w._V} ${k === n ? w.cB : ""}`,
+                                    className: `${L._V} ${x === n ? L.cB : ""}`,
                                     "aria-label": s,
-                                    "aria-pressed": k === n,
+                                    "aria-pressed": x === n,
                                     onClick: () => {
-                                        if ("manual" === n && "manual" !== k && c > 0) {
+                                        if ("manual" === n && "manual" !== x && c > 0) {
                                             let e = new Map();
-                                            O.forEach((t, n) => {
+                                            R.forEach((t, n) => {
                                                 let { userId: i } = t;
-                                                e.set(i, _(U[k](n)));
+                                                e.set(i, _(k[x](n)));
                                             }),
-                                                F(e);
+                                                G(e);
                                         }
-                                        H({ mode: n }), c > 0 && u(P(c, e.distance));
+                                        B({ mode: n }), c > 0 && u(M(c, e.distance));
                                     },
                                     children: r,
                                 },
@@ -396,98 +413,99 @@ function V() {
                             );
                         }),
                     }),
-                    "manual" !== k &&
+                    "manual" !== x &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(p.z, { className: w.Pf, children: L.intl.string(D.default.i4BAoc) }),
+                                (0, i.jsx)(p.z, { className: L.Pf, children: D.intl.string(b.default.i4BAoc) }),
                                 (0, i.jsx)(E.A, {
-                                    className: w.aw,
+                                    className: L.aw,
                                     initialValue: e.distance,
                                     value: e.distance,
                                     minValue: 1,
                                     maxValue: 10,
-                                    asValueChanges: (e) => H({ distance: e }),
+                                    asValueChanges: (e) => B({ distance: e }),
                                     onValueRender: (e) => e.toFixed(1),
-                                    "aria-label": L.intl.string(D.default.i4BAoc),
+                                    "aria-label": D.intl.string(b.default.i4BAoc),
                                 }),
                             ],
                         }),
-                    "line" === k &&
+                    "line" === x &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(p.z, { className: w.Pf, children: L.intl.string(D.default["/ZoKQI"]) }),
+                                (0, i.jsx)(p.z, { className: L.Pf, children: D.intl.string(b.default["/ZoKQI"]) }),
                                 (0, i.jsx)(E.A, {
-                                    className: w.aw,
+                                    className: L.aw,
                                     initialValue: e.spread,
                                     value: e.spread,
                                     minValue: 0,
                                     maxValue: 10,
-                                    asValueChanges: (e) => H({ spread: e }),
+                                    asValueChanges: (e) => B({ spread: e }),
                                     onValueRender: (e) => e.toFixed(1),
-                                    "aria-label": L.intl.string(D.default["/ZoKQI"]),
+                                    "aria-label": D.intl.string(b.default["/ZoKQI"]),
                                 }),
                             ],
                         }),
-                    "arc" === k &&
+                    "arc" === x &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(p.z, { className: w.Pf, children: L.intl.string(D.default.EOmtMO) }),
+                                (0, i.jsx)(p.z, { className: L.Pf, children: D.intl.string(b.default.EOmtMO) }),
                                 (0, i.jsx)(E.A, {
-                                    className: w.aw,
+                                    className: L.aw,
                                     initialValue: e.arcAngle,
                                     value: e.arcAngle,
                                     minValue: 0,
                                     maxValue: 180,
-                                    asValueChanges: (e) => H({ arcAngle: e }),
+                                    asValueChanges: (e) => B({ arcAngle: e }),
                                     onValueRender: (e) => `${e.toFixed(0)}\xb0`,
-                                    "aria-label": L.intl.string(D.default.FbPuig),
+                                    "aria-label": D.intl.string(b.default.FbPuig),
                                 }),
                             ],
                         }),
-                    "grid" === k &&
+                    "grid" === x &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(p.z, { className: w.Pf, children: L.intl.string(D.default.Q5EMQe) }),
+                                (0, i.jsx)(p.z, { className: L.Pf, children: D.intl.string(b.default.Q5EMQe) }),
                                 (0, i.jsx)(E.A, {
-                                    className: w.aw,
+                                    className: L.aw,
                                     initialValue: e.gridColumns,
                                     value: e.gridColumns,
                                     minValue: 2,
                                     maxValue: 6,
                                     keyboardStep: 1,
-                                    asValueChanges: (e) => H({ gridColumns: Math.round(e) }),
+                                    asValueChanges: (e) => B({ gridColumns: Math.round(e) }),
                                     onValueRender: (e) => e.toFixed(0),
-                                    "aria-label": L.intl.string(D.default.Q5EMQe),
+                                    "aria-label": D.intl.string(b.default.Q5EMQe),
                                 }),
-                                (0, i.jsx)(p.z, { className: w.Pf, children: L.intl.string(D.default.lxrCwG) }),
+                                (0, i.jsx)(p.z, { className: L.Pf, children: D.intl.string(b.default.lxrCwG) }),
                                 (0, i.jsx)(E.A, {
-                                    className: w.aw,
+                                    className: L.aw,
                                     initialValue: e.gridSpacing,
                                     value: e.gridSpacing,
                                     minValue: 0.5,
                                     maxValue: 3,
-                                    asValueChanges: (e) => H({ gridSpacing: e }),
+                                    asValueChanges: (e) => B({ gridSpacing: e }),
                                     onValueRender: (e) => e.toFixed(1),
-                                    "aria-label": L.intl.string(D.default.LDP0hu),
+                                    "aria-label": D.intl.string(b.default.LDP0hu),
                                 }),
                             ],
                         }),
-                    (0, i.jsx)(a.c, { className: w.yF }),
+                    (0, i.jsx)(a.c, { className: L.yF }),
                     (0, i.jsx)(m.$, {
                         variant: "secondary",
                         size: "sm",
-                        text: L.intl.string(D.default.HlbWSY),
+                        text: D.intl.string(b.default.HlbWSY),
                         onClick: () => {
-                            let e = (0, s.omit)(b.b, ["enabled", "experimentOverride"]);
-                            Y(e.roomSize), c > 0 && u(P(c, e.distance)), H(e);
+                            let e = (0, s.omit)(O.b, ["enabled", "experimentOverride"]);
+                            j(e.roomSize), c > 0 && u(M(c, e.distance)), B(e);
                         },
                     }),
                 ],
             }),
-            (0, i.jsx)(x, {
-                mode: k,
-                users: V,
-                onUserDragged: B,
+            (0, i.jsx)(P, {
+                mode: x,
+                users: F,
+                guildId: T,
+                onUserDragged: V,
                 distance: e.distance,
                 view: n,
                 setView: u,

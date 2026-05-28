@@ -1763,7 +1763,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 552479, Version Hash: f3be5cfd99a1894bb3a73fc87b51548857e6520f`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 552505, Version Hash: 283988758d1771da931c8d28f4c2760529f00b9a`,
 ),
     ev.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -18424,7 +18424,7 @@ let SR = "isHideDevBanner",
                     className: t2()(SC.Wz, SC.mr),
                     children: [
                         (0, U.jsx)(Sv, { className: SC.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "552479" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "552505" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })
@@ -19361,7 +19361,7 @@ function NT() {
         },
         o = r ? na.intl.string(Nh.default.EWQJcc) : na.intl.string(Nh.default["9qCMXb"]),
         l = r ? na.intl.string(s ? Nh.default.RX3dTX : Nh.default.nqknZL) : na.intl.string(Nh.default["9qCMXb"]),
-        u = na.intl.string(Nh.default.lGiQKa);
+        u = na.intl.string(Nh.default.HUDkvK);
     return (0, U.jsx)(so.Y, {
         targetElementRef: i,
         renderPopout: (e) => {
@@ -19394,7 +19394,7 @@ function NT() {
                     }),
                     (0, U.jsx)(S5.A, {
                         "aria-label": u,
-                        className: t2()(Nm.UT, { [Nm.q6]: c }),
+                        className: t2()(Nm.UT, { [Nm.q6]: c, [Ng.v]: s }),
                         disabled: !r,
                         icon: (0, U.jsx)(d, {
                             className: Nm.$$,
