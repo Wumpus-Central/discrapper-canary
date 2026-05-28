@@ -1,0 +1,291 @@
+.container__0ab2c {
+    min-height: 100vh;
+    position: relative
+}
+
+.sidebarHeader__0ab2c {
+    opacity: .9;
+    transition: opacity .2s ease
+}
+
+.sidebarHeader__0ab2c:hover {
+    opacity: 1
+}
+
+.sidebarHeader__0ab2c:hover .addRoleIcon__0ab2c {
+    opacity: 1
+}
+
+.layoutStyle__0ab2c {
+    color: var(--text-default);
+    padding-bottom: 80px;
+    padding-top: 24px;
+    padding-inline: 0 15px;
+    position: relative
+}
+
+.inline__0ab2c {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    overflow: hidden
+}
+
+.xsmallAvatar__0ab2c {
+    flex-shrink: 0;
+    height: 20px !important;
+    width: 20px !important
+}
+
+.warning__0ab2c {
+    gap: 4px;
+    margin-top: 4px
+}
+
+.sidebarHeaderDefault__0ab2c,
+.warning__0ab2c {
+    align-items: center;
+    display: flex
+}
+
+.sidebarHeaderDefault__0ab2c {
+    cursor: pointer;
+    justify-content: space-between
+}
+
+.sidebarHeaderLocked__0ab2c {
+    cursor: default
+}
+
+.addRoleIcon__0ab2c {
+    opacity: .8;
+    transition: opacity .2s ease
+}
+
+.username__0ab2c {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.description__0ab2c {
+    margin-bottom: 20px
+}
+
+.button__0ab2c {
+    margin: 0 auto
+}
+
+.userRowAvatar__0ab2c {
+    flex-shrink: 0;
+    margin-inline-end: 16px
+}
+
+.userRowText__0ab2c {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap
+}
+
+.userRowSubText__0ab2c {
+    align-items: center;
+    display: flex;
+    margin-top: 2px;
+    white-space: pre-wrap
+}
+
+.userRowSubAvatar__0ab2c {
+    flex-shrink: 0;
+    margin-inline-end: 4px
+}
+
+.permissionsForm__0ab2c:not(:last-of-type) {
+    margin-bottom: 40px
+}
+
+.createOverwritePopout__0ab2c {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    box-shadow: var(--elevation-high);
+    width: 250px
+}
+
+.roleRow__0ab2c {
+    gap: 8px;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0 12px
+}
+
+.roleName__0ab2c {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.searchBar__0ab2c {
+    padding: 12px 12px 8px
+}
+
+.advancedModeDivider__4914c {
+    margin: 40px 0 31px
+}
+
+.trigger__4914c {
+    all: unset;
+    cursor: pointer
+}
+
+.advancedTitle__4914c {
+    align-items: center;
+    display: inline-flex
+}
+
+.titleCaret__4914c {
+    margin-inline-start: 14px;
+    transform: rotate(-90deg)
+}
+
+.full-motion .titleCaret__4914c {
+    transition: transform .2s ease
+}
+
+[data-expanded] .titleCaret__4914c {
+    transform: rotate(0)
+}
+
+.panel__4914c {
+    height: var(--disclosure-panel-height);
+    overflow: clip
+}
+
+.full-motion .panel__4914c {
+    transition: height .2s ease-in-out
+}
+
+.cardContent_f62fce {
+    padding: 16px
+}
+
+.cardDescription_f62fce {
+    padding-top: 8px;
+    padding-inline-start: 4px
+}
+
+.card_b651ff {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    margin-top: 16px;
+    padding: 16px
+}
+
+.label_b651ff {
+    flex: 1;
+    margin: 0 10px
+}
+
+.easyModeContainer__1a4ef {
+    padding: 0
+}
+
+.settingCard__1a4ef {
+    background: var(--background-mod-muted);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    margin-top: 16px
+}
+
+.settingCard__1a4ef.active__1a4ef {
+    background: var(--background-mod-subtle)
+}
+
+.shield__1a4ef {}
+
+.cardIcon__1a4ef {
+    color: var(--text-default)
+}
+
+.cardFolder__1a4ef {
+    background: var(--background-surface-high);
+    border-end-end-radius: var(--radius-md);
+    border-end-start-radius: var(--radius-md)
+}
+
+.adminWarning__1a4ef {
+    padding: 16px
+}
+
+.folderHeader__1a4ef {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px
+}
+
+.folderTitle__1a4ef {
+    color: var(--text-default);
+    margin: 0
+}
+
+.sectionTitle__1a4ef {
+    padding-bottom: 16px
+}
+
+.roleMemberList__1a4ef {
+    max-height: 400px;
+    padding: 0 16px 8px
+}
+
+.divider__1a4ef {
+    padding-bottom: 16px
+}
+
+.memberRow__1a4ef {
+    justify-content: space-between;
+    padding-bottom: 16px
+}
+
+.memberRow__1a4ef,
+.memberRowBody__1a4ef {
+    align-items: center;
+    display: flex
+}
+
+.memberRowBody__1a4ef {
+    gap: 4px;
+    justify-content: flex-start
+}
+
+.rowLabelSubText__1a4ef {
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.removeIconContainer__1a4ef {
+    margin-inline-start: 4px
+}
+
+.removeIcon__1a4ef {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    height: 16px;
+    width: 16px
+}
+
+.disabledRemoveIcon__1a4ef {
+    color: var(--icon-muted);
+    cursor: auto
+}
+
+.enable-forced-colors .cardFolder__1a4ef {
+    border: 1px solid CanvasText
+}
+
+.enable-forced-colors .removeIcon__1a4ef {
+    color: ButtonText
+}
+
+.enable-forced-colors .disabledRemoveIcon__1a4ef {
+    color: GrayText
+}

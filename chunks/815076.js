@@ -319,7 +319,7 @@ let ek = (e) => {
                         pendingProfileEffect: I,
                         pendingProfileFrame: j,
                         disabledInputs: !0,
-                        hideMessageInput: null == I,
+                        hideMessageInput: h || null == I,
                         hideCustomStatus: !0,
                         hideBioSection: h,
                         hideExampleButton: !0,

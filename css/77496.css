@@ -742,9 +742,9 @@
     border-radius: 3px;
     color: var(--white);
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: var(--font-weight-bold);
-    line-height: 29px;
+    line-height: 1.8125rem;
     margin-top: 20px;
     padding: 10px 20px;
     text-transform: uppercase
@@ -5558,6 +5558,23 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a:not(:focus-within) .bottomCont
     background-color: unset
 }
 
+.obscuredIcon__43090 {
+    height: 32px;
+    width: 32px
+}
+
+.author_d3eee8 {
+    flex-shrink: 0
+}
+
+.author_d3eee8 a {
+    color: var(--text-muted)
+}
+
+.author_d3eee8.hasUnreads_d3eee8 a {
+    color: var(--text-strong)
+}
+
 @value headerBarHeight 60px;
 
 .headerBar__8a7fc {
@@ -7402,23 +7419,4 @@ html .invoiceCancelRow__968a4 {
     border-radius: 16px;
     display: block;
     width: 100%
-}
-
-.container__05cdc {
-    display: flex
-}
-
-.sparkleIcon__05cdc {
-    height: 12px;
-    width: 12px
-}
-
-.sparkleTop__05cdc {
-    align-self: flex-start;
-    margin-inline-end: auto
-}
-
-.sparkleBottom__05cdc {
-    align-self: flex-end;
-    margin-inline-start: auto
 }
