@@ -1,8 +1,8 @@
 "use strict";
 n.d(t, {
-    m8: () => h,
+    m8: () => f,
     n6: () => A,
-    OO: () => f,
+    OO: () => h,
     jS: () => d,
     Iq: () => c,
     Ig: () => E,
@@ -11,7 +11,7 @@ n.d(t, {
     aD: () => S,
     uK: () => u,
     lk: () => g,
-    jm: () => N,
+    jm: () => y,
     sy: () => p,
     A8: () => T,
 });
@@ -49,13 +49,13 @@ let u = (0, a.mj)({
         defaultConfig: { enabled: !1, showSkipButton: !1 },
         variations: { 1: { enabled: !0, showSkipButton: !0 }, 2: { enabled: !0, showSkipButton: !1 } },
     }),
-    f = (0, a.mj)({
+    h = (0, a.mj)({
         name: "2026-05-app-store-overlay-feature-gate",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    h = (0, a.mj)({
+    f = (0, a.mj)({
         name: "2026-03-quest-reload-video-on-obscured",
         kind: "user",
         defaultConfig: { enabled: !1 },
@@ -128,9 +128,15 @@ let I = (0, a.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    N = (0, a.mj)({
+    y = (0, a.mj)({
         name: "2026-05-quest-home-remove-expired-quests",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
+(0, a.mj)({
+    name: "2026-05-bounty-stale-refresh-quest-home",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+});
