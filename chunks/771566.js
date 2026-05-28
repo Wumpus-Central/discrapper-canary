@@ -9,8 +9,8 @@ var n,
     d = s(821609),
     L = s(830382),
     H = s(722847),
-    M = s(937008),
-    u = s(834252),
+    u = s(937008),
+    M = s(536302),
     o = s(972607),
     g = s(419212),
     h = s(97352),
@@ -157,7 +157,7 @@ function S(e) {
         {
             planId: n,
             startingPremiumSubscriptionPlanId: a,
-            onClose: M,
+            onClose: u,
             followupSKUInfo: o,
             isDowngrade: g,
             hideClose: _,
@@ -166,8 +166,8 @@ function S(e) {
             startingFractionalPremiumEndsAt: R,
             customCTAType: x,
         } = e,
-        { isDisplayingWowMomentConfirmation: D, customCheckoutFlow: S } = (0, u.P5)(),
-        { isPremiumGroupPurchase: y } = (0, H.t4)((e) => e.getSelectedPlanAttributes()),
+        { isDisplayingWowMomentConfirmation: D, customCheckoutFlow: S } = (0, M.P5)(),
+        y = (0, H.t4)((e) => e.get("isPremiumGroupPurchase")),
         { theme: F } = (0, c.wR)(),
         W = (0, C.bG)([p.A], () => (null != o ? p.A.get(o.id) : null)),
         K = (0, N.b2)(R),
@@ -242,12 +242,12 @@ function S(e) {
         let e = h.A.get(n);
         r()(null != e, "Missing plan"), (t = (0, l.jsx)("div", { className: b.Qq, children: B(e) }));
     }
-    let q = m.Ay.getPremiumType(n);
-    r()(null != q, "premium type should not be null in purchase confirmation");
-    let [G, z] = i.useState(!1),
+    let G = m.Ay.getPremiumType(n);
+    r()(null != G, "premium type should not be null in purchase confirmation");
+    let [q, z] = i.useState(!1),
         V = i.useCallback(() => {
-            null != M && (M(), S === j.uH.MOBILE_WEB_REDIRECT_CHECKOUT && z(!0));
-        }, [M, S]);
+            null != u && (u(), S === j.uH.MOBILE_WEB_REDIRECT_CHECKOUT && z(!0));
+        }, [u, S]);
     s = y
         ? w.intl.string(v.default.clIveA)
         : "deeplink_to_desktop_app" === x || S === j.uH.MOBILE_WEB_REDIRECT_CHECKOUT
@@ -266,7 +266,7 @@ function S(e) {
               ? f.Ay.Types.PREMIUM_UPDATED
               : f.Ay.Types.PREMIUM_ACTIVATED;
     return D
-        ? (0, l.jsx)(P.A, { type: Y(), text: t, buttonText: s, hideClose: _ || Q, onClose: V, buttonLoading: G })
+        ? (0, l.jsx)(P.A, { type: Y(), text: t, buttonText: s, hideClose: _ || Q, onClose: V, buttonLoading: q })
         : (0, l.jsxs)("div", {
               className: b.EL,
               children: [
@@ -277,7 +277,7 @@ function S(e) {
                       : (0, l.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: b.x6,
-                            children: (0, l.jsx)(d.$, { variant: "primary", text: s, onClick: V, loading: G }),
+                            children: (0, l.jsx)(d.$, { variant: "primary", text: s, onClick: V, loading: q }),
                         }),
               ],
           });
@@ -290,7 +290,7 @@ function y(e) {
             hasSentMessage: a,
             giftMessageError: c,
             isSendingMessage: d,
-        } = (0, M.Pv)(),
+        } = (0, u.Pv)(),
         L = (0, C.bG)([h.A], () => h.A.get(t));
     r()(null != L, "Missing plan");
     let H = (0, C.bG)([g.A], () => g.A.getGiftCode(L.skuId));

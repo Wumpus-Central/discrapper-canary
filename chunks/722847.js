@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { y$: () => E, t4: () => p, Ni: () => h });
+n.d(t, { y$: () => m, t4: () => E, Ni: () => f });
 var i = n(942381),
     r = n(265690),
     s = n(315069),
@@ -62,15 +62,32 @@ var u = n(566980),
     c = n(786300),
     d = n(428262),
     _ = n(788868);
-let [h, f] = (0, c.A)();
-function p(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return f()(e, t);
-}
+let h = (e) =>
+        null == e
+            ? { isPremiumPurchase: !0, isPremiumGroupPurchase: !1 }
+            : { isPremiumPurchase: (0, d.ys)(e), isPremiumGroupPurchase: e === _.gD.PREMIUM_GROUP_MONTH },
+    [f, p] = (0, c.A)();
 function E(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
+    return p()(e, t);
+}
+function m(e) {
     let { checkoutInitParameters: t, contextMetadata: n, order: s, initialPaymentSourceId: a, initialCurrency: o } = e;
-    return (0, r.h)(
-        (e, i) => ({
+    return (0, r.h)((e, i) => {
+        let r = {
+            skuIds: () => i().checkoutInitParameters.skuIds,
+            isGift: () => i().checkoutInitParameters.isGift,
+            referralTrialOfferId: () => i().checkoutInitParameters.referralTrialOfferId,
+            activeSubscription: () => i().checkoutInitParameters.activeSubscription,
+            excludeSubscriptionPlansBySKU: () => i().checkoutInitParameters.excludeSubscriptionPlansBySKU,
+            purchaseType: () => i().checkoutInitParameters.purchaseType,
+            applicationId: () => i().checkoutInitParameters.applicationId,
+            isPremiumPurchase: () => h(i().selectedPlanId).isPremiumPurchase,
+            isPremiumGroupPurchase: () => h(i().selectedPlanId).isPremiumGroupPurchase,
+            selectedPlanAttributes: () => h(i().selectedPlanId),
+        };
+        return {
+            get: (e) => (null != r[e] ? r[e]() : null),
             checkoutInitParameters: t,
             contextMetadata: n,
             order: s,
@@ -80,12 +97,6 @@ function E(e) {
             selectedPlanId: void 0,
             setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0 }),
             setSelectedPlanId: (t) => e({ selectedPlanId: t ?? void 0 }),
-            getSelectedPlanAttributes: () => {
-                var e;
-                return null == (e = i().selectedPlanId)
-                    ? { isPremium: !0, isPremiumGroupPurchase: !1 }
-                    : { isPremium: (0, d.ys)(e), isPremiumGroupPurchase: e === _.gD.PREMIUM_GROUP_MONTH };
-            },
             fetchCheckoutInvoicePreviewRequest: null,
             setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: t ?? null }),
             checkoutInvoicePreview: null,
@@ -121,7 +132,6 @@ function E(e) {
             setUpdatedSubscription: (t) => e({ updatedSubscription: t }),
             readySlideId: null,
             setReadySlideId: (t) => e({ readySlideId: t ?? null }),
-        }),
-        i.x,
-    );
+        };
+    }, i.x);
 }

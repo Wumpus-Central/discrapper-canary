@@ -178,7 +178,7 @@ function eh(e) {
             selectedSkuId: e.selectedSkuId,
             updatedSubscription: e.updatedSubscription,
             paymentSourceId: e.paymentSourceId,
-            isPremiumGroupPurchase: e.getSelectedPlanAttributes().isPremiumGroupPurchase,
+            isPremiumGroupPurchase: e.get("isPremiumGroupPurchase"),
         })),
         {
             activeSubscription: f,
@@ -235,7 +235,7 @@ function eh(e) {
                         (0, A.openModalLazy)(
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("56495"),
+                                    n.e("16639"),
                                     n.e("44616"),
                                     n.e("96680"),
                                     n.e("85579"),
@@ -541,8 +541,8 @@ var eK = n(800471),
     e0 = n(543767),
     e1 = n(807098),
     e6 = n(298305),
-    e4 = n(387745);
-function e3() {
+    e3 = n(387745);
+function e4() {
     let e = (0, i.bG)([q.A], () => {
             let e = q.A.getMarketingComponentByType(B.C.GIFT_CUSTOMIZATION_BANNER);
             return null == e || "giftCustomizationBanner" !== e.properties.properties.oneofKind
@@ -563,11 +563,11 @@ function e3() {
     return null == e || null == t
         ? null
         : (0, l.jsxs)("div", {
-              className: e4.qD,
+              className: e3.qD,
               style: o,
               children: [
                   (0, l.jsx)("div", {
-                      className: e4.my,
+                      className: e3.my,
                       children: (0, l.jsx)(e6.A, {
                           claimableRewards: t,
                           maxRewardImageSrc: n ?? "",
@@ -577,7 +577,7 @@ function e3() {
                   }),
                   (0, l.jsx)(eO.E, {
                       variant: "text-md/medium",
-                      className: e4._M,
+                      className: e3._M,
                       color: "always-white",
                       children: eE.intl.string(eE.t.Abiuci),
                   }),
@@ -691,7 +691,7 @@ function ti(e) {
             }),
             (0, l.jsxs)(J.UX, {
                 children: [
-                    v && (0, l.jsx)(e3, {}),
+                    v && (0, l.jsx)(e4, {}),
                     (0, l.jsx)(eB, {
                         onStepChange: t,
                         onBackClick: () => t(k.pn.SKU_SELECT),
