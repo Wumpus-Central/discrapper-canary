@@ -223,28 +223,29 @@ function Q(e) {
         },
         eD = r.useCallback(
             (e) => {
-                switch (e.key) {
-                    case c.TJ.PLAYBACK:
-                        Z();
-                        break;
-                    case c.TJ.SPACE:
-                        e_ || (e.preventDefault(), Z());
-                        break;
-                    case c.TJ.SEEK_BACK:
-                        ei();
-                        break;
-                    case c.TJ.SEEK_FORWARD:
-                        er();
-                        break;
-                    case c.TJ.CAPTION:
-                        S || ee();
-                        break;
-                    case c.TJ.FULLSCREEN:
-                        v || en();
-                        break;
-                    case c.TJ.MUTE:
-                        eR();
-                }
+                if (!e.metaKey)
+                    switch (e.key) {
+                        case c.TJ.PLAYBACK:
+                            e.stopPropagation(), Z();
+                            break;
+                        case c.TJ.SPACE:
+                            e.stopPropagation(), e_ || (e.preventDefault(), Z());
+                            break;
+                        case c.TJ.SEEK_BACK:
+                            e.stopPropagation(), ei();
+                            break;
+                        case c.TJ.SEEK_FORWARD:
+                            e.stopPropagation(), er();
+                            break;
+                        case c.TJ.CAPTION:
+                            e.stopPropagation(), S || ee();
+                            break;
+                        case c.TJ.FULLSCREEN:
+                            e.stopPropagation(), v || en();
+                            break;
+                        case c.TJ.MUTE:
+                            e.stopPropagation(), eR();
+                    }
             },
             [ee, en, Z, ei, er, eR, S, v, e_],
         );
