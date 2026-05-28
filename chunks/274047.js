@@ -1763,7 +1763,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 552705, Version Hash: 040564a47d4cf446fa121c9dbfb1434441a02f07`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 552849, Version Hash: 0c64b7f4535249f07ea6cb113f930ae11c104769`,
 ),
     ev.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -3363,14 +3363,14 @@ function rX(e) {
             canShowReminders: i,
             lastClipsSession: r,
             mostRecentClip: s,
-        } = (0, e6.cf)([rV.A], () => {
-            let e = rV.A.getLastClipsSession(),
+        } = (0, e6.cf)([rV.Ay], () => {
+            let e = rV.Ay.getLastClipsSession(),
                 t = e?.newClipIds,
-                n = null != t ? rV.A.getClipIds().find((e) => t.includes(e)) : null;
+                n = null != t ? rV.Ay.getClipIds().find((e) => t.includes(e)) : null;
             return {
-                canShowReminders: rV.A.canShowReminders(),
+                canShowReminders: rV.Ay.canShowReminders(),
                 lastClipsSession: e,
-                mostRecentClip: null != n ? rV.A.getClipById(n) : null,
+                mostRecentClip: null != n ? rV.Ay.getClipById(n) : null,
             };
         }),
         a = (0, rB.K)((e) => e.clipsButtonRef),
@@ -3412,9 +3412,9 @@ function rQ(e) {
         n = (0, rG.sw)(),
         { topBarButton: i, userStatusMenu: r } = rH.$.useConfig({ location: "ClipsButton" }),
         { enableQuickBar: s } = rF.h.useConfig({ location: "ClipsButton" }),
-        { hasNewClips: a, hasAnyClipAnimations: o } = (0, e6.cf)([rV.A], () => ({
-            hasNewClips: rV.A.getNewClipIds().length > 0,
-            hasAnyClipAnimations: rV.A.hasAnyClipAnimations(),
+        { hasNewClips: a, hasAnyClipAnimations: o } = (0, e6.cf)([rV.Ay], () => ({
+            hasNewClips: rV.Ay.getNewClipIds().length > 0,
+            hasAnyClipAnimations: rV.Ay.hasAnyClipAnimations(),
         })),
         l = (0, rB.K)((e) => e.clipsButtonRef),
         u = (0, rB.K)((e) => e.setClipsButtonRef),
@@ -18341,7 +18341,7 @@ let Sp = "isHideDevBanner",
                     className: t2()(Sf.Wz, Sf.mr),
                     children: [
                         (0, U.jsx)(Sh, { className: Sf.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "552705" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "552849" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })
@@ -18361,14 +18361,14 @@ function SR() {
     let { enableQuickBar: e } = rF.h.useConfig({ location: "ClipsQuickBar" }),
         t = (0, SN.MZ)((e) => e.isOpen),
         n = (0, Sv.sY)((e) => e.isOpen),
-        i = (0, e6.bG)([rV.A], () => rV.A.canShowReminders()),
+        i = (0, e6.bG)([rV.Ay], () => rV.Ay.canShowReminders()),
         r = (0, e6.bG)([ia.Ay, SI.A], () => (0, SA.A)(ia.Ay, SI.A)),
-        s = (0, e6.yK)([rV.A], () => rV.A.getLastClipsSession()?.newClipIds ?? []),
+        s = (0, e6.yK)([rV.Ay], () => rV.Ay.getLastClipsSession()?.newClipIds ?? []),
         a = e8.useMemo(
             () =>
                 (0, Sy.u)(
                     s
-                        .map((e) => rV.A.getClipById(e))
+                        .map((e) => rV.Ay.getClipById(e))
                         .filter((e) => null != e)
                         .filter((e) => e.applicationId === r?.id),
                     "descending",
@@ -18535,10 +18535,10 @@ function SU() {
     let { enableQuickBar: e } = rF.h.useConfig({ location: "ClipsReminder" }),
         { isOpen: t, openedAt: n, applicationId: i } = (0, Sv.sY)(),
         { isQuestBarEmpty: r } = (0, SO.c9)(),
-        s = (0, e6.yK)([rV.A], () => rV.A.getLastClipsSession()?.newClipIds ?? Sx),
+        s = (0, e6.yK)([rV.Ay], () => rV.Ay.getLastClipsSession()?.newClipIds ?? Sx),
         a = e8.useMemo(() => {
             if (null == i || 0 === s.length) return Sk;
-            let e = s.map((e) => rV.A.getClipById(e)).filter((e) => null != e && e.applicationId === i);
+            let e = s.map((e) => rV.Ay.getClipById(e)).filter((e) => null != e && e.applicationId === i);
             return (0, Sy.u)(e, "descending");
         }, [i, s]),
         { data: o } = (0, lo.I)(i),

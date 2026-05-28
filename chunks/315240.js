@@ -381,7 +381,7 @@ function ei(e, t) {
         frames_encoded_during_clip: t.framesEncodedDuringClip,
         frames_dropped: t.framesDropped,
         frames_dropped_during_clip: t.framesDroppedDuringClip,
-        clip_duration_setting: C.A.getSettings().clipsLength,
+        clip_duration_setting: C.Ay.getSettings().clipsLength,
         clip_duration: t.clipDuration,
         clip_resolution_width: t.clipResolutionWidth,
         clip_resolution_height: t.clipResolutionHeight,
@@ -456,7 +456,7 @@ async function ea() {
         i = arguments.length > 1 ? arguments[1] : void 0,
         r = arguments.length > 2 ? arguments[2] : void 0,
         s = arguments.length > 3 ? arguments[3] : void 0,
-        l = C.A.getSettings().storageLocation,
+        l = C.Ay.getSettings().storageLocation,
         u = z(n, R.nQ.CLIP, i, r);
     u.isCandidate = s ?? !1;
     let c = `${(0, D.A)(u.applicationName.substring(0, 20))}_${u.id}.mp4`,
@@ -520,7 +520,7 @@ async function eo() {
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = arguments.length > 2 ? arguments[2] : void 0,
         i = arguments.length > 3 ? arguments[3] : void 0;
-    if (C.A.getIsAtMaxSaveClipOperations())
+    if (C.Ay.getIsAtMaxSaveClipOperations())
         return void a.h.dispatch({ type: "CLIPS_SAVE_CLIP_NO_OP", clipMethod: e, reason: R.RC.MAX_CONCURRENT_SAVES });
     let o = (0, L.TD)(),
         l = m.A.getCurrentUserActiveStream(),
@@ -577,8 +577,8 @@ async function eo() {
         }, P.ut);
     try {
         if ("auto" === e && !i) {
-            let e = C.A.getSettings().maxAutoClips,
-                t = C.A.getClips().filter((e) => !0 === e.isTemporary),
+            let e = C.Ay.getSettings().maxAutoClips,
+                t = C.Ay.getClips().filter((e) => !0 === e.isTemporary),
                 n = t.length - e + 1;
             if (n > 0) {
                 let i = t.sort((e, t) => e.createdAt - t.createdAt).slice(0, n);
@@ -593,7 +593,7 @@ async function eo() {
         let r = await ea(e, t, n, i);
         if (
             i &&
-            !C.A.getPendingClipCandidates().some((e) => {
+            !C.Ay.getPendingClipCandidates().some((e) => {
                 let { id: t } = e;
                 return t === r.id;
             })
@@ -610,15 +610,15 @@ async function eo() {
     } finally {
         clearTimeout(v);
     }
-    P.nx.info(`${C.A.getSettings().clipsLength / 1e3}s clip save took ${Math.round(performance.now() - N)}ms`);
+    P.nx.info(`${C.Ay.getSettings().clipsLength / 1e3}s clip save took ${Math.round(performance.now() - N)}ms`);
 }
 async function el(e) {
     let t, n;
-    if (C.A.getIsAtMaxSaveClipOperations()) return;
+    if (C.Ay.getIsAtMaxSaveClipOperations()) return;
     let i = m.A.getCurrentUserActiveStream(),
         r = I.Ay.getMediaEngine(),
         s = z(e, R.nQ.SCREENSHOT),
-        l = C.A.getSettings().storageLocation,
+        l = C.Ay.getSettings().storageLocation,
         u = `${(0, D.A)(s.applicationName.substring(0, 20))}_${s.id}.jpeg`,
         c = o.A.fileManager.join(l, u);
     if (
@@ -668,7 +668,7 @@ function eu(e, t) {
     a.h.dispatch({ type: "CLIPS_SAVE_ANIMATION_END", streamKey: e, timestamp: t });
 }
 async function ec(e, t) {
-    let n = C.A.getClipById(e) ?? C.A.getClipCandidateById(e);
+    let n = C.Ay.getClipById(e) ?? C.Ay.getClipCandidateById(e);
     if (null == n) return;
     let i = { ...n, ...t };
     null != (await U(i)) &&
@@ -754,7 +754,7 @@ function eI(e) {
 function eT(e) {
     a.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
-        settings: { clipSignals: { ...C.A.getSettings().clipSignals, ...e } },
+        settings: { clipSignals: { ...C.Ay.getSettings().clipSignals, ...e } },
     });
 }
 function eS(e, t) {

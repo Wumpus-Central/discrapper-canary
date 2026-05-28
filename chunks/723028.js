@@ -8,7 +8,7 @@ var i = n(627968),
     d = n(688810),
     c = n(274372),
     p = n(280483),
-    u = n(556316),
+    u = n(582633),
     h = n(309777),
     C = n(429364),
     I = n(97451);
@@ -17,7 +17,7 @@ function j(e) {
     (0, p.A)();
     let { analyticsLocations: f } = (0, d.Ay)(o.A.CLIPS_EDITOR),
         x = l.useRef(null),
-        k = (0, a.bG)([c.A], () => c.A.getClipById(s));
+        k = (0, a.bG)([c.Ay], () => c.Ay.getClipById(s));
     return null == k
         ? null
         : (0, i.jsx)(d.f5, {

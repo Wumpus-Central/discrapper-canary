@@ -21,20 +21,20 @@ var l,
     _ = n(825484),
     I = n(821609),
     j = n(315240),
-    v = n(403362),
-    y = n(372684),
+    y = n(403362),
+    v = n(372684),
     T = n(226421),
     N = n(732774);
 function b() {
-    let e = (0, o.yK)([f.A], () => {
-        let e = f.A.getLastClipsSession()?.newClipIds;
+    let e = (0, o.yK)([f.Ay], () => {
+        let e = f.Ay.getLastClipsSession()?.newClipIds;
         return null == e
             ? []
-            : f.A.getClipIds()
+            : f.Ay.getClipIds()
                   .slice(0, 4)
                   .filter((t) => e.includes(t))
-                  .map((e) => f.A.getClipById(e))
-                  .filter(v.Vq);
+                  .map((e) => f.Ay.getClipById(e))
+                  .filter(y.Vq);
     });
     return (0, i.jsx)("div", {
         className: r()(N.vH, {
@@ -46,7 +46,7 @@ function b() {
         children: Array.from({ ...e, length: 4 })
             .map((e, t) =>
                 null != e
-                    ? e.type === y.nQ.VOICE_CLIP
+                    ? e.type === v.nQ.VOICE_CLIP
                         ? (0, i.jsx)(T.A, { className: N.xn }, e.id)
                         : (0, i.jsx)("img", { alt: "", className: N.xn, src: e.thumbnail }, e.id)
                     : (0, i.jsx)("div", {}, `placeholder-${t}`),
@@ -147,7 +147,7 @@ var ec = n(661531),
     e_ = n(994500),
     eI = n(287809),
     ej = n(652215),
-    ev =
+    ey =
         (((l = {}).UPLOAD_A_FILE = "UPLOAD_A_FILE"),
         (l.UPLOAD_TEXT_AS_FILE = "UPLOAD_TEXT_AS_FILE"),
         (l.INVITE_TO_PLAY_GAME = "INVITE_TO_GAME"),
@@ -161,7 +161,7 @@ var ec = n(661531),
         (l.SCHEDULED_MESSAGE = "SCHEDULED_MESSAGE"),
         (l.SUMMARIZE_THREAD = "SUMMARIZE_THREAD"),
         l),
-    ey = n(49999),
+    ev = n(49999),
     eT = n(412136);
 let eN = /(.*)```(\w+)\n(.*)```(.*)/s;
 function eb(e) {
@@ -189,7 +189,7 @@ function eb(e) {
         g();
     }
     function S() {
-        (0, et.Dr)($.M.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: ey.i.TAKE_ACTION }),
+        (0, et.Dr)($.M.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: ev.i.TAKE_ACTION }),
             (0, c.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e("83644"), n.e("42322")]).then(n.bind(n, 143657));
@@ -220,7 +220,7 @@ function eb(e) {
             "aria-label": M.intl.string(M.t.Xm41aV),
             children: l.map(function (e) {
                 switch (e.type) {
-                    case ev.UPLOAD_A_FILE:
+                    case ey.UPLOAD_A_FILE:
                         return (0, i.jsx)(
                             J.Dr,
                             {
@@ -232,7 +232,7 @@ function eb(e) {
                             },
                             "upload-file",
                         );
-                    case ev.UPLOAD_TEXT_AS_FILE:
+                    case ey.UPLOAD_TEXT_AS_FILE:
                         if ("" === h) return null;
                         return (0, i.jsx)(
                             J.Dr,
@@ -245,7 +245,7 @@ function eb(e) {
                             },
                             "upload-text-as-file",
                         );
-                    case ev.CLIPS:
+                    case ey.CLIPS:
                         return (0, i.jsx)(
                             J.Dr,
                             {
@@ -258,7 +258,7 @@ function eb(e) {
                             },
                             "clips",
                         );
-                    case ev.POLL:
+                    case ey.POLL:
                         return (0, i.jsx)(
                             J.Dr,
                             {
@@ -270,7 +270,7 @@ function eb(e) {
                             },
                             "poll",
                         );
-                    case ev.INVITE_TO_PLAY_GAME:
+                    case ey.INVITE_TO_PLAY_GAME:
                         return (0, i.jsx)(
                             J.Dr,
                             {
@@ -293,7 +293,7 @@ function eb(e) {
                             },
                             "play",
                         );
-                    case ev.INVITE_TO_LISTEN:
+                    case ey.INVITE_TO_LISTEN:
                         return (0, i.jsx)(
                             J.Dr,
                             {
@@ -316,7 +316,7 @@ function eb(e) {
                             },
                             "listen",
                         );
-                    case ev.INVITE_TO_WATCH:
+                    case ey.INVITE_TO_WATCH:
                         return (0, i.jsx)(
                             J.Dr,
                             {
@@ -339,7 +339,7 @@ function eb(e) {
                             },
                             "watch",
                         );
-                    case ev.CREATE_THREAD:
+                    case ey.CREATE_THREAD:
                         return (0, i.jsx)(
                             J.Dr,
                             {
@@ -351,7 +351,7 @@ function eb(e) {
                             },
                             "THREAD",
                         );
-                    case ev.SLASH_COMMAND:
+                    case ey.SLASH_COMMAND:
                         return (0, i.jsx)(
                             J.Dr,
                             {
@@ -363,7 +363,7 @@ function eb(e) {
                             },
                             "SLASH_COMMAND",
                         );
-                    case ev.SCHEDULED_MESSAGE:
+                    case ey.SCHEDULED_MESSAGE:
                         return (0, i.jsx)(
                             J.Dr,
                             {
@@ -376,7 +376,7 @@ function eb(e) {
                             },
                             "scheduled_message",
                         );
-                    case ev.SUMMARIZE_THREAD:
+                    case ey.SUMMARIZE_THREAD:
                         return (0, i.jsx)(
                             J.Dr,
                             {
@@ -431,24 +431,24 @@ let eD = s.memo(function (e) {
     let { className: t, channel: l, draftType: a, editorTextContent: E, setValue: S, canOnlyUseTextCommands: _ } = e,
         I = (0, k.Us)(),
         j = s.useRef(null),
-        v = s.useRef(null),
-        y = (0, o.bG)([V.A], () => V.A.getActivities()),
+        y = s.useRef(null),
+        v = (0, o.bG)([V.A], () => V.A.getActivities()),
         T = (0, C.Et)(),
-        N = (0, o.bG)([f.A], () => f.A.getLastClipsSession()),
-        b = (0, o.yK)([f.A], () => f.A.getNewClipIds()),
+        N = (0, o.bG)([f.Ay], () => f.Ay.getLastClipsSession()),
+        b = (0, o.yK)([f.Ay], () => f.Ay.getNewClipIds()),
         R = (0, o.bG)([w.Ay], () => null == w.Ay.getCurrentSidebarChannelId(l.id)),
         $ = (0, o.yK)(
             [F.A],
-            () => (l.type === ej.rbe.DM ? y.filter((e) => !F.A.getParty(e.party?.id)?.has(l.getRecipientId())) : y),
-            [y, l],
+            () => (l.type === ej.rbe.DM ? v.filter((e) => !F.A.getParty(e.party?.id)?.has(l.getRecipientId())) : v),
+            [v, l],
         ),
         { topBarButton: J } = x.$.useConfig({ location: "ChannelAttachButton" }),
         { enableQuickBar: Z } = A.h.useConfig({ location: "ChannelAttachButton" }),
         { onShareClick: Y } = (0, L.A)(l.id),
-        X = (0, o.bG)([f.A], () => f.A.getSettings().remindersEnabled),
+        X = (0, o.bG)([f.Ay], () => f.Ay.getSettings().remindersEnabled),
         Q = (0, c.useModalsStore)((e) => (0, c.hasModalOpenSelector)(e, eM.nm)),
         ee = (0, o.bG)([H.A], () => H.A.hasLayers()),
-        et = (0, o.bG)([f.A], () => f.A.hasClips()),
+        et = (0, o.bG)([f.Ay], () => f.Ay.hasClips()),
         [en, el] = s.useState(null),
         ei = (0, p.sw)() && (T || et),
         es = l.isPrivate(),
@@ -460,7 +460,7 @@ let eD = s.memo(function (e) {
                 let { default: e } = await Promise.all([
                     n.e("60817"),
                     n.e("22367"),
-                    n.e("61685"),
+                    n.e("88566"),
                     n.e("72813"),
                     n.e("83952"),
                     n.e("1962"),
@@ -504,8 +504,8 @@ let eD = s.memo(function (e) {
                 }
             );
         });
-    let ev = (0, G.n)(l),
-        ey = (0, G.Tb)(l),
+    let ey = (0, G.n)(l),
+        ev = (0, G.Tb)(l),
         eT = !U.D_.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver,
         eN = (0, O.I7)(l ?? void 0),
         eD = (0, P.Sc)(),
@@ -587,7 +587,7 @@ let eD = s.memo(function (e) {
             );
         })({
             canAttachFiles: ea,
-            canStartThreads: ev || ey,
+            canStartThreads: ey || ev,
             useSlate: eT,
             hasClips: ei,
             canUseApplicationCommands: !_,
@@ -602,7 +602,7 @@ let eD = s.memo(function (e) {
     if (0 === ek.length) return null;
     let eO = (0, i.jsx)(d.p, { size: "refresh_sm", color: "currentColor", colorClass: eR.dW }),
         eP = (0, i.jsx)(u.Y, {
-            targetElementRef: v,
+            targetElementRef: y,
             shouldShow: null != en,
             animation: u.Y.Animation.NONE,
             align: "recentClips" === en ? "center" : "left",
@@ -636,7 +636,7 @@ let eD = s.memo(function (e) {
             },
             children: (e) =>
                 (0, i.jsx)(q.A, {
-                    ref: v,
+                    ref: y,
                     className: r()(eR.g$, t),
                     childClassName: eR.wh,
                     isActive: !1,

@@ -540,7 +540,7 @@ let tv = (e) => {
             { parentAnalyticsLocation: t } = (0, ea.Ay)(),
             n = (0, t_.bG)([tm.A], () => tm.A.hasLayers()),
             i = (0, tT.Et)(),
-            a = (0, t_.bG)([tI.A], () => tI.A.getIsAtMaxSaveClipOperations()),
+            a = (0, t_.bG)([tI.Ay], () => tI.Ay.getIsAtMaxSaveClipOperations()),
             o = (0, t_.bG)([tg.Ay], () => tg.Ay.getKeybindForAction(k.hCu.SAVE_CLIP));
         if (!i || null == o || n) return null;
         let l = tA.dI(o.shortcut, !0);

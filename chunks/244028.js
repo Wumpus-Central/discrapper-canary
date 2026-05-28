@@ -284,7 +284,7 @@ function ed(e) {
 var eu = l(452143);
 function em(e) {
     let { onEdit: t } = e,
-        l = (0, r.yK)([C.A], () => C.A.getClips()),
+        l = (0, r.yK)([C.Ay], () => C.Ay.getClips()),
         n = a.useMemo(() => ed(l), [l]),
         s = a.useMemo(
             () =>
@@ -524,7 +524,7 @@ let eY = function (e) {
                 let a =
                     v && x.size > 0
                         ? Array.from(x)
-                              .map((e) => C.A.getClipById(e))
+                              .map((e) => C.Ay.getClipById(e))
                               .filter(eS.Vq)
                         : [t];
                 (0, eE.L3)(
@@ -939,10 +939,10 @@ function to(e) {
     let { filteredClips: t, totalClipCount: l, onClipClick: n, onEdit: s } = e,
         [c, o] = a.useState(!0),
         [d, u] = a.useState({ width: 0, height: 0 }),
-        h = (0, r.bG)([C.A], () => C.A.getSettings().storageLocation),
-        p = (0, r.yK)([C.A], () => C.A.getNewClipIds()),
-        x = (0, r.bG)([C.A], () => C.A.getExportingClipIds().length > 0),
-        g = (0, r.bG)([C.A], () => ed(C.A.getClips()).length > 0),
+        h = (0, r.bG)([C.Ay], () => C.Ay.getSettings().storageLocation),
+        p = (0, r.yK)([C.Ay], () => C.Ay.getNewClipIds()),
+        x = (0, r.bG)([C.Ay], () => C.Ay.getExportingClipIds().length > 0),
+        g = (0, r.bG)([C.Ay], () => ed(C.Ay.getClips()).length > 0),
         v = (0, tn.Pu)(tn.mp),
         { enableAutoClipsReview: f } = T.useConfig({ location: "ClipsGalleryContent" }),
         j = f && g && !v;
@@ -1596,10 +1596,10 @@ function tk(e) {
         [T, S] = a.useState(new Set()),
         { clipsByGame: R, filteredClips: P, favoriteClips: G, allClips: _ } = (0, tE.a)(),
         { onShareClick: z } = (0, E.A)(t),
-        U = (0, r.bG)([C.A], () => C.A.getExportingClipIds().length > 0),
+        U = (0, r.bG)([C.Ay], () => C.Ay.getExportingClipIds().length > 0),
         [O, H] = a.useState(null != L ? "editing" : "gallery"),
         [F, K] = a.useState(L ?? null),
-        $ = (0, r.bG)([C.A], () => (null != F ? C.A.getClipById(F) : null), [F]),
+        $ = (0, r.bG)([C.Ay], () => (null != F ? C.Ay.getClipById(F) : null), [F]),
         B = a.useRef(O);
     (B.current = O), (a.useRef(F).current = F);
     let [Q, Y] = a.useState(null != L ? d.ip.ENTERED : d.ip.HIDDEN),

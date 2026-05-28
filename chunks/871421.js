@@ -243,7 +243,7 @@ class R extends s.A {
     currentSessionGameKey = null;
     pendingSessionGameKey = null;
     constructor() {
-        super(), (this.timeline = new _(d.A.getSettings().clipsLength));
+        super(), (this.timeline = new _(d.Ay.getSettings().clipsLength));
     }
     actions = {
         CLIPS_SIGNAL_CREATED: (e) => this.handleClipsSignalCreated(e.signal, e.timestamp),
@@ -280,7 +280,7 @@ class R extends s.A {
     }
     handleSpeaking(e) {
         if (!(0, f.TD)() || e.context !== i.x.DEFAULT) return;
-        let t = d.A.isVoiceRecordingAllowedForUser(e.userId);
+        let t = d.Ay.isVoiceRecordingAllowedForUser(e.userId);
         (e.userId === c.default.getId() || t) &&
             this.process({ type: h.Gy.SPEAKING, speakingFlags: e.speakingFlags, userId: e.userId });
     }
@@ -319,11 +319,11 @@ class R extends s.A {
     isSignalEnabled(e) {
         switch (e) {
             case h.Gy.DISTRIBUTED:
-                return d.A.getSettings().clipSignals.enableDistributedSignals;
+                return d.Ay.getSettings().clipSignals.enableDistributedSignals;
             case h.Gy.PHRASE:
-                return d.A.getSettings().clipSignals.enablePhraseSignals;
+                return d.Ay.getSettings().clipSignals.enablePhraseSignals;
             case h.Gy.GAME_EVENT:
-                return d.A.getSettings().clipSignals.enableGameSignals;
+                return d.Ay.getSettings().clipSignals.enableGameSignals;
             default:
                 return !0;
         }
@@ -375,7 +375,7 @@ class R extends s.A {
     }
     clear() {
         C.nx.info(
-            `decider: clear() called \u{2014} currentSessionGameKey=${this.currentSessionGameKey} pendingSessionGameKey=${this.pendingSessionGameKey} pendingCandidates=${d.A.getPendingClipCandidates().length} candidates=${d.A.getClipCandidates().length}`,
+            `decider: clear() called \u{2014} currentSessionGameKey=${this.currentSessionGameKey} pendingSessionGameKey=${this.pendingSessionGameKey} pendingCandidates=${d.Ay.getPendingClipCandidates().length} candidates=${d.Ay.getClipCandidates().length}`,
         ),
             this.sessionEndTimeout.stop(),
             (this.currentSessionGameKey = null),
@@ -451,9 +451,9 @@ class R extends s.A {
               }));
     }
     async debugStashDeciderData() {
-        if (d.A.getPendingClipCandidates().length > 0)
+        if (d.Ay.getPendingClipCandidates().length > 0)
             return void alert("wait for pending candidates to finish saving!");
-        let e = d.A.getClipCandidates();
+        let e = d.Ay.getClipCandidates();
         if (0 === e.length) return void alert("no candidates to stash");
         let t = { decisionSignals: this.decisionSignals, clipCandidates: e, localUserId: c.default.getId() };
         await a.A.clips.debugStashClipDeciderData(t),
@@ -469,11 +469,11 @@ class R extends s.A {
             });
     }
     processClipCandidates() {
-        let e = d.A.getClipCandidates(),
+        let e = d.Ay.getClipCandidates(),
             t = m(e, this.decisionSignals, c.default.getId());
         for (let n of (C.nx.info("ranked clips:", t), e))
             null != t.selected.find((e) => e.clip.id === n.id) ? (0, N.K7)(n) : (0, N.oH)(n.filepath, n.id);
-        for (let e of d.A.getPendingClipCandidates()) this.pendingCandidateDiscards.add(e.id);
+        for (let e of d.Ay.getPendingClipCandidates()) this.pendingCandidateDiscards.add(e.id);
         this.decisionSignals = v();
     }
     handleLateCandidateSave(e) {
@@ -482,7 +482,7 @@ class R extends s.A {
             (this.pendingCandidateDiscards.delete(t.id), (0, N.oH)(t.filepath, t.id));
     }
     handleSettingsUpdate() {
-        this.timeline.updateLength(d.A.getSettings().clipsLength);
+        this.timeline.updateLength(d.Ay.getSettings().clipsLength);
     }
 }
 let O = new R();

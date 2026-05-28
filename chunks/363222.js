@@ -1,36 +1,37 @@
 "use strict";
-n.d(t, { A: () => Q });
+n.d(t, { A: () => ee });
 var i,
     r = n(691540),
     s = n(97483),
     a = n(228366),
-    o = n(627363),
-    l = n(710195),
-    u = n(952818),
-    c = n(569926),
-    d = n(652896),
-    _ = n(616356),
-    h = n(495544),
-    f = n(761853),
-    p = n(19575),
-    E = n(459838),
-    m = n(439372),
-    g = n(77729),
-    A = n(967347),
-    I = n(885386),
-    T = n(763827),
-    S = n(116956),
-    y = n(174459),
-    N = n(723702),
-    v = n(734066),
-    C = n(274372),
-    R = n(372684),
-    O = n(915618),
-    b = n(572164),
-    D = n(696016),
-    L = n(652215),
-    w = n(325278);
-class M extends m.A {
+    o = n(77729),
+    l = n(627363),
+    u = n(710195),
+    c = n(952818),
+    d = n(569926),
+    _ = n(652896),
+    h = n(616356),
+    f = n(495544),
+    p = n(761853),
+    E = n(741394),
+    m = n(19575),
+    g = n(459838),
+    A = n(439372),
+    I = n(967347),
+    T = n(885386),
+    S = n(763827),
+    y = n(116956),
+    N = n(174459),
+    v = n(723702),
+    C = n(734066),
+    R = n(274372),
+    O = n(372684),
+    b = n(915618),
+    D = n(572164),
+    L = n(696016),
+    w = n(652215),
+    M = n(325278);
+class P extends A.A {
     actions = {
         POST_CONNECTION_OPEN: (e) => this.handlePostConnectionOpen(),
         RTC_CONNECTION_FLAGS: (e) => this.handleRTCConnectionFlags(e),
@@ -49,23 +50,23 @@ class M extends m.A {
     };
     handleRTCConnectionState(e) {
         let { context: t, state: n, streamKey: i } = e;
-        if (!(0, v.Pm)() || n !== L.S7L.RTC_CONNECTED) return;
-        let r = h.default.getId();
-        if (t === E.x.DEFAULT) {
+        if (!(0, C.Pm)() || n !== w.S7L.RTC_CONNECTED) return;
+        let r = f.default.getId();
+        if (t === g.x.DEFAULT) {
             this.applyUserVoiceRecording(r), this.applyUserSoundboardRecording(r);
             return;
         }
-        if (t === E.x.STREAM && null != i) {
-            let { ownerId: e } = (0, d.Iy)(i);
+        if (t === g.x.STREAM && null != i) {
+            let { ownerId: e } = (0, _.Iy)(i);
             if (e !== r) return;
-            let t = S.A.getRTCConnection(i);
+            let t = y.A.getRTCConnection(i);
             if (null == t) return;
             this.applyStreamRecording(r, t);
         }
     }
     handleRTCUsersUpdate(e) {
         let { userIds: t, context: n } = e;
-        n === E.x.DEFAULT &&
+        n === g.x.DEFAULT &&
             t.forEach((e) => {
                 this.applyUserVoiceRecording(e), this.applyUserSoundboardRecording(e);
             });
@@ -73,35 +74,35 @@ class M extends m.A {
     handleRTCConnectionFlags(e) {
         let { userId: t, channelId: n, guildId: i } = e;
         this.maybeShowClipsWarning(t), this.applyUserVoiceRecording(t), this.applyUserSoundboardRecording(t);
-        let r = S.A.getRTCConnection(
-            d._z({ streamType: null != i ? w.U4.GUILD : w.U4.CALL, ownerId: t, channelId: n, guildId: i }),
+        let r = y.A.getRTCConnection(
+            _._z({ streamType: null != i ? M.U4.GUILD : M.U4.CALL, ownerId: t, channelId: n, guildId: i }),
         );
         null != r && this.applyStreamRecording(t, r);
     }
     handleClipsInitFailure(e) {
         let { applicationName: t, errMsg: n } = e;
-        y.default.track(L.HAw.CLIPS_INIT_FAILURE, { application_name: t, error_message: n });
+        N.default.track(w.HAw.CLIPS_INIT_FAILURE, { application_name: t, error_message: n });
     }
     maybeShowClipsWarning(e) {
-        let t = T.A.getChannelId();
+        let t = S.A.getChannelId();
         null == t ||
-            C.A.getClipsWarningShown(t) ||
-            e === h.default.getId() ||
-            !C.A.isClipsEnabledForUser(e) ||
-            (I.Q$.getSetting() &&
+            R.Ay.getClipsWarningShown(t) ||
+            e === f.default.getId() ||
+            !R.Ay.isClipsEnabledForUser(e) ||
+            (T.Q$.getSetting() &&
                 (a.h.dispatch({ type: "CLIPS_SHOW_CALL_WARNING", channelId: t }), this.showClipsToast()));
     }
     handleClipsAllowVoiceRecordingUpdate() {
-        T.A.getUserIds()?.forEach((e) => this.maybeShowClipsWarning(e));
+        S.A.getUserIds()?.forEach((e) => this.maybeShowClipsWarning(e));
     }
     handlePostConnectionOpen() {
-        !(0, O.A)(f.Ay) ||
+        !(0, b.A)(p.Ay) ||
             (this.applyNativeClipsSettings(),
-            (0, v.Pm)() &&
+            (0, C.Pm)() &&
                 (this.loadClipsFromStorage(),
-                (null == C.A.getHardwareClassification() ||
-                    null == C.A.getHardwareClassificationForDecoupled() ||
-                    C.A.getHardwareClassificationVersion() !== D.V0) &&
+                (null == R.Ay.getHardwareClassification() ||
+                    null == R.Ay.getHardwareClassificationForDecoupled() ||
+                    R.Ay.getHardwareClassificationVersion() !== L.V0) &&
                     this.classifyHardwareAndTrack().then((e) => {
                         a.h.dispatch({ type: "CLIPS_CLASSIFY_HARDWARE", classification: e });
                     })));
@@ -109,23 +110,23 @@ class M extends m.A {
     loadClipsFromStorage() {}
     handleRTCConnectionVideo(e) {
         let { userId: t, context: n, channelId: i, guildId: r } = e;
-        if (n !== E.x.STREAM || !(0, O.A)(f.Ay)) return;
-        let s = S.A.getRTCConnection(
-            d._z({ streamType: null != r ? w.U4.GUILD : w.U4.CALL, ownerId: t, channelId: i, guildId: r }),
+        if (n !== g.x.STREAM || !(0, b.A)(p.Ay)) return;
+        let s = y.A.getRTCConnection(
+            _._z({ streamType: null != r ? M.U4.GUILD : M.U4.CALL, ownerId: t, channelId: i, guildId: r }),
         );
         null != s && this.applyStreamRecording(t, s);
     }
     async classifyHardwareAndTrack() {
         try {
             let { gpuModels: e, classification: t } = await (async () => {
-                let e = await (0, A.w)();
+                let e = await (0, I.w)();
                 if (e?.gpus != null) {
                     let t = e.gpus.map((e) => e.brand).filter((e) => null != e && "" !== e),
                         n = this.classifyHardware(t);
                     return { gpuModels: t, classification: n };
                 }
                 {
-                    let e = (await g.A.processUtils.getSystemInfo()).gpus.map((e) => {
+                    let e = (await o.A.processUtils.getSystemInfo()).gpus.map((e) => {
                             let { model: t } = e;
                             return t;
                         }),
@@ -134,56 +135,56 @@ class M extends m.A {
                 }
             })();
             return (
-                y.default.track(L.HAw.CLIPS_HARDWARE_CLASSIFICATION, {
+                N.default.track(w.HAw.CLIPS_HARDWARE_CLASSIFICATION, {
                     classification: t,
-                    version: D.V0,
+                    version: L.V0,
                     gpu_models: e,
                 }),
                 t
             );
         } catch (e) {
-            return R.k9.UNKNOWN;
+            return O.k9.UNKNOWN;
         }
     }
     classifyHardware(e) {
-        if ((0, N.isWindows)()) {
-            let t = e.some((e) => D.sc.test(e)),
-                n = e.some((e) => D.l_.test(e));
-            return t ? R.k9.MEETS_AUTO_ENABLE : n ? R.k9.MEETS_MINIMUM : R.k9.BELOW_MINIMUM;
+        if ((0, v.isWindows)()) {
+            let t = e.some((e) => L.sc.test(e)),
+                n = e.some((e) => L.l_.test(e));
+            return t ? O.k9.MEETS_AUTO_ENABLE : n ? O.k9.MEETS_MINIMUM : O.k9.BELOW_MINIMUM;
         }
-        return (0, N.isMac)()
-            ? "arm64" === g.A.app.getAppArch()
-                ? R.k9.MEETS_AUTO_ENABLE
-                : R.k9.MEETS_MINIMUM
-            : R.k9.UNKNOWN;
+        return (0, v.isMac)()
+            ? "arm64" === o.A.app.getAppArch()
+                ? O.k9.MEETS_AUTO_ENABLE
+                : O.k9.MEETS_MINIMUM
+            : O.k9.UNKNOWN;
     }
     applyUserVoiceRecording(e) {
-        if (!(0, O.A)(f.Ay)) return;
-        let t = T.A.getRTCConnection();
+        if (!(0, b.A)(p.Ay)) return;
+        let t = S.A.getRTCConnection();
         if (null == t) return;
-        if (e === h.default.getId()) return void t.setClipRecordUser(e, "audio", (0, b.TD)());
-        let n = C.A.isVoiceRecordingAllowedForUser(e);
+        if (e === f.default.getId()) return void t.setClipRecordUser(e, "audio", (0, D.TD)());
+        let n = R.Ay.isVoiceRecordingAllowedForUser(e);
         t.setClipRecordUser(e, "audio", n);
     }
     applyUserSoundboardRecording(e) {
-        if (!(0, O.A)(f.Ay)) return;
-        let t = T.A.getRTCConnection();
-        null != t && t.setClipRecordUser(e, "soundboard", (0, b.TD)());
+        if (!(0, b.A)(p.Ay)) return;
+        let t = S.A.getRTCConnection();
+        null != t && t.setClipRecordUser(e, "soundboard", (0, D.TD)());
     }
     applyStreamRecording(e, t) {
-        if ((0, O.A)(f.Ay) && h.default.getId() === e) {
-            let n = (0, b.TD)();
+        if ((0, b.A)(p.Ay) && f.default.getId() === e) {
+            let n = (0, D.TD)();
             t.setClipRecordUser(e, "audio", n), t.setClipRecordUser(e, "video", n);
             return;
         }
     }
 }
-var P = n(138082),
-    x = n(974293);
+var x = n(138082),
+    k = n(974293);
 n(321073);
-var k = n(626584),
-    U = (((i = {}).MISSING = "missing"), (i.DOWNLOADED = "downloaded"), (i.DOWNLOADING = "downloading"), i);
-let G = [
+var U = n(626584),
+    G = (((i = {}).MISSING = "missing"), (i.DOWNLOADED = "downloaded"), (i.DOWNLOADING = "downloading"), i);
+let F = [
         ["laughter_screaming_exp58", "onnx", "f5a655cb76a57561ae84c9a9eb1829433db9ad8f4fd192a40f3277a5a5cfa6ad"],
         [
             "laughter_screaming_krispy_21_may",
@@ -198,8 +199,8 @@ let G = [
         ["laughter_screaming_krispy", "onnx", "8835cfe08b2517162462b710c44bda60c116611c997fbce4d14679a26d6d75ed"],
         ["ggml-base", "bin", "60ed5bc3dd14eea856493d334349b405782ddcaf0028d4b5df4088345fba2efe"],
     ],
-    F = new k.A("ClipsAssetManager");
-class V {
+    V = new U.A("ClipsAssetManager");
+class B {
     state = { assets: {}, assetState: {}, catalogLastFetchTime: void 0, catalogFetchFailed: !1 };
     activeDownloads = new Map();
     catalogRefreshing = !1;
@@ -207,28 +208,28 @@ class V {
     start() {
         !this.started &&
             ((this.started = !0),
-            F.info("Clips asset manager started"),
-            (0, b.TD)() && (F.info("Clips enabled on startup, prefetching assets"), this.maybePrefetchAssets()));
+            V.info("Clips asset manager started"),
+            (0, D.TD)() && (V.info("Clips enabled on startup, prefetching assets"), this.maybePrefetchAssets()));
     }
     stop() {
-        p.Ay.stopClipsDownloads(),
+        m.Ay.stopClipsDownloads(),
             this.activeDownloads.clear(),
             (this.started = !1),
-            F.info("Clips asset manager stopped");
+            V.info("Clips asset manager stopped");
     }
     getAssetState(e) {
         return this.state.assetState[e];
     }
     areAllAssetsDownloaded() {
         let e = Object.values(this.state.assetState);
-        return e.length > 0 && e.every((e) => e.status === U.DOWNLOADED);
+        return e.length > 0 && e.every((e) => e.status === G.DOWNLOADED);
     }
     async maybePrefetchAssets() {
-        if (!__OVERLAY__ && (0, N.isWindows)())
+        if (!__OVERLAY__ && (0, v.isWindows)())
             try {
                 await this.refreshCatalog(), await this.prefetchAssets();
             } catch (e) {
-                F.warn(`Failed to prefetch clips assets: ${e.message}`);
+                V.warn(`Failed to prefetch clips assets: ${e.message}`);
             }
     }
     async refreshCatalog() {
@@ -241,27 +242,27 @@ class V {
                     (this.state.catalogLastFetchTime = new Date()),
                     (this.state.catalogFetchFailed = !1);
                 let t = Object.values(e.assets).map((e) => e.fileName);
-                await p.Ay.cleanupUnusedClipsFiles(t), F.info("Clips asset catalog refreshed");
+                await m.Ay.cleanupUnusedClipsFiles(t), V.info("Clips asset catalog refreshed");
             } catch (e) {
-                F.warn(`Failed to refresh clips asset catalog: ${e.message}`), (this.state.catalogFetchFailed = !0);
+                V.warn(`Failed to refresh clips asset catalog: ${e.message}`), (this.state.catalogFetchFailed = !0);
             } finally {
                 this.catalogRefreshing = !1;
             }
     }
     loadCatalog() {
         let e = { assets: {} };
-        for (let [t, n, i] of G)
+        for (let [t, n, i] of F)
             e.assets[t] = { url: `https://cdn.discordapp.com/assets/content/${i}.${n}`, fileName: `${t}.${n}` };
-        return F.info("Loaded clips asset catalog with assets:", Object.keys(e.assets)), e;
+        return V.info("Loaded clips asset catalog with assets:", Object.keys(e.assets)), e;
     }
     async scanAssetState(e) {
-        if (!p.Ay.canCheckClipsFilesExist()) return;
+        if (!m.Ay.canCheckClipsFilesExist()) return;
         let t = Object.entries(e.assets).map((e) => {
             let [t, n] = e;
             return { id: t, fileName: n.fileName };
         });
-        for (let { id: e, exists: n } of await p.Ay.checkClipsFilesExist(t))
-            this.state.assetState[e] = { status: n ? U.DOWNLOADED : U.MISSING };
+        for (let { id: e, exists: n } of await m.Ay.checkClipsFilesExist(t))
+            this.state.assetState[e] = { status: n ? G.DOWNLOADED : G.MISSING };
     }
     async prefetchAssets() {
         if (__OVERLAY__) return;
@@ -269,36 +270,36 @@ class V {
             t = [];
         for (let [n, i] of Object.entries(e)) {
             let e = this.state.assetState[n];
-            e?.status !== U.DOWNLOADED &&
-                e?.status !== U.DOWNLOADING &&
+            e?.status !== G.DOWNLOADED &&
+                e?.status !== G.DOWNLOADING &&
                 t.push(this.downloadAsset({ assetId: n, url: i.url, fileName: i.fileName }));
         }
-        F.info(`Waiting for ${t.length} clips asset downloads`),
+        V.info(`Waiting for ${t.length} clips asset downloads`),
             await Promise.all(t),
-            F.info("Finished downloading all clips assets");
+            V.info("Finished downloading all clips assets");
     }
     downloadAsset(e) {
         let { url: t, assetId: n, fileName: i } = e,
             r = this.state.assetState[n],
             s = this.activeDownloads.get(n);
         if (null != s) return s;
-        if (r?.status === U.DOWNLOADED) return Promise.resolve();
-        if (r?.status === U.DOWNLOADING)
+        if (r?.status === G.DOWNLOADED) return Promise.resolve();
+        if (r?.status === G.DOWNLOADING)
             return Promise.reject(Error("Clips asset is downloading but not in active downloads map"));
-        this.state.assetState[n] = { status: U.DOWNLOADING, downloadedBytes: 0 };
-        let a = p.Ay.downloadClipsFile(t, i, (e) => {
+        this.state.assetState[n] = { status: G.DOWNLOADING, downloadedBytes: 0 };
+        let a = m.Ay.downloadClipsFile(t, i, (e) => {
             let { downloadedBytes: t, totalBytes: i } = e;
             this.state.assetState[n] = { ...this.state.assetState[n], downloadedBytes: t, totalBytes: i };
         })
             .then((e) => {
-                e.fetchedFromNetwork && F.info("Downloaded clips asset from network:", n),
-                    (this.state.assetState[n] = { status: U.DOWNLOADED, downloadedBytes: void 0 });
+                e.fetchedFromNetwork && V.info("Downloaded clips asset from network:", n),
+                    (this.state.assetState[n] = { status: G.DOWNLOADED, downloadedBytes: void 0 });
             })
             .catch((t) => {
                 t?.USER_CANCELED_DOWNLOAD
-                    ? F.info("User canceled the download for clips asset", e)
-                    : F.error("Failed to download clips asset", { reason: t, ...e }),
-                    (this.state.assetState[n] = { status: U.MISSING });
+                    ? V.info("User canceled the download for clips asset", e)
+                    : V.error("Failed to download clips asset", { reason: t, ...e }),
+                    (this.state.assetState[n] = { status: G.MISSING });
             })
             .finally(() => {
                 this.activeDownloads.delete(n);
@@ -306,31 +307,31 @@ class V {
         return this.activeDownloads.set(n, a), a;
     }
 }
-let B = new V();
-var H = n(315240);
+let H = new B();
+var j = n(315240);
 n(871421);
-var j = n(227628),
-    Y = n(468550),
-    W = n(375708);
-let K = !1,
-    $ = null,
+var Y = n(227628),
+    W = n(468550),
+    K = n(375708);
+let $ = !1,
     z = null,
-    q = null;
-function X() {
-    let e = (0, x.qi)(),
-        t = (0, x.$i)(),
-        n = z !== e,
-        i = q !== t;
+    q = null,
+    X = null;
+function Z() {
+    let e = (0, k.qi)(),
+        t = (0, k.$i)(),
+        n = q !== e,
+        i = X !== t;
     if (!n && !i) return;
-    let r = f.Ay.getMediaEngine();
+    let r = p.Ay.getMediaEngine();
     n && r.setClipsV3Enabled(e),
         i && r.setClipsV3MLEnabled(t),
-        D.nx.info(`clips v3 runtime flags pushed: v3=${e} (was ${z}), ml=${t} (was ${q})`),
-        (z = e),
-        (q = t),
-        e && t && B.start();
+        L.nx.info(`clips v3 runtime flags pushed: v3=${e} (was ${q}), ml=${t} (was ${X})`),
+        (q = e),
+        (X = t),
+        e && t && H.start();
 }
-class Z extends M {
+class Q extends P {
     constructor() {
         super(),
             Object.assign(this.actions, {
@@ -341,40 +342,40 @@ class Z extends M {
                 CLIPS_PROMOTE_CLIP_CANDIDATE: (e) => this.maybeOpenQuickBar(),
             });
     }
-    stores = new Map().set(l.A, () => this.applyNativeClipsSettings());
+    stores = new Map().set(u.A, () => this.applyNativeClipsSettings());
     maybeOpenQuickBar() {
-        let { enableQuickBar: e } = P.h.getConfig({ location: "ClipsManager" });
-        if (!e || !C.A.canShowReminders()) return;
-        let t = u.Ay.getVisibleGame();
+        let { enableQuickBar: e } = x.h.getConfig({ location: "ClipsManager" });
+        if (!e || !R.Ay.canShowReminders()) return;
+        let t = c.Ay.getVisibleGame();
         null == t ||
-            (C.A.getLastClipsSession()
-                ?.newClipIds.map(C.A.getClipById)
+            (R.Ay.getLastClipsSession()
+                ?.newClipIds.map(R.Ay.getClipById)
                 .some((e) => e?.applicationId === t.id) &&
-                (j.MZ.getState().isOpen || (0, j.w9)()));
+                (Y.MZ.getState().isOpen || (0, Y.w9)()));
     }
     handleClipsReminder(e) {
         if (null == e) return;
-        let { enableQuickBar: t } = P.h.getConfig({ location: "ClipsManager" });
-        if (!t || !C.A.canShowReminders()) return;
-        let n = C.A.getLastClipsSession();
+        let { enableQuickBar: t } = x.h.getConfig({ location: "ClipsManager" });
+        if (!t || !R.Ay.canShowReminders()) return;
+        let n = R.Ay.getLastClipsSession();
         if (null == n || 0 === n.newClipIds.length) return;
-        let i = C.A.getClipById(n.newClipIds[0]);
-        i?.applicationId === e && (0, Y.M8)(e);
+        let i = R.Ay.getClipById(n.newClipIds[0]);
+        i?.applicationId === e && (0, W.M8)(e);
     }
     showClipsToast() {
         (0, r.P0)({
             id: "CLIPS_IN_CALL_WARNING",
-            message: W.intl.string(W.t["d+41qJ"]),
+            message: K.intl.string(K.t["d+41qJ"]),
             type: s.Ck.CLIP,
-            options: { duration: D.Vi },
+            options: { duration: L.Vi },
         });
     }
     applyNativeClipsSettings(e) {
-        if (!(0, O.A)(f.Ay)) return;
-        let t = f.Ay.getMediaEngine(),
+        if (!(0, b.A)(p.Ay)) return;
+        let t = p.Ay.getMediaEngine(),
             n = () => {
-                let n = C.A.getSettings(),
-                    i = (0, b.TD)();
+                let n = R.Ay.getSettings(),
+                    i = (0, D.TD)();
                 if (
                     (t.setClipBufferLength(i ? n.clipsLength / 1e3 : 0),
                     e?.settings.decoupledClipsEnabled === !0 && this.fireClipsInitEvent(),
@@ -386,58 +387,58 @@ class Z extends M {
                         this.fireClipsInitEvent();
                 }
             };
-        X(),
-            !(0, x.qi)() || K
+        Z(),
+            !(0, k.qi)() || $
                 ? n()
-                : (K
+                : ($
                       ? Promise.resolve()
-                      : null != $
-                        ? $
-                        : ($ = (async () => {
+                      : null != z
+                        ? z
+                        : (z = (async () => {
                               try {
-                                  X(), await p.Ay.ensureModule("discord_clips");
-                                  let e = p.Ay.requireModule("discord_clips").getModulePath(),
-                                      t = f.Ay.getMediaEngine(),
-                                      n = p.Ay.getClipsDataDirSync();
+                                  Z(), await m.Ay.ensureModule("discord_clips");
+                                  let e = m.Ay.requireModule("discord_clips").getModulePath(),
+                                      t = p.Ay.getMediaEngine(),
+                                      n = m.Ay.getClipsDataDirSync();
                                   t.setClipsDataPath(n),
                                       t.setClipsModulePath(e),
-                                      (K = !0),
-                                      D.nx.info("discord_clips module loaded, path: " + e);
+                                      ($ = !0),
+                                      L.nx.info("discord_clips module loaded, path: " + e);
                               } catch (e) {
-                                  ($ = null), D.nx.error("Failed to load discord_clips module", e);
+                                  (z = null), L.nx.error("Failed to load discord_clips module", e);
                               }
                           })())
                   ).then(n);
     }
     handleClipsInitOnToggleDetection(e) {
-        let t = u.Ay.getVisibleGame();
+        let t = c.Ay.getVisibleGame();
         null != t && t.id === e.game.id && (this.prefetchRichPresenceData(t.id), this.fireClipsInitEvent());
     }
     handleClipsInitOnGamesChange(e) {
-        let t = u.Ay.getVisibleGame();
-        (0, j.yj)(),
+        let t = c.Ay.getVisibleGame();
+        (0, Y.yj)(),
             e.removed.length > 0 && null == t && this.handleClipsReminder(e.removed[0]?.id),
             null == t ||
-                ((0, Y.kF)(),
+                ((0, W.kF)(),
                 this.prefetchRichPresenceData(t.id),
                 e.added.find((e) => e.pid === t.pid)
-                    ? setTimeout(() => this.fireClipsInitEvent(), D.dV)
+                    ? setTimeout(() => this.fireClipsInitEvent(), L.dV)
                     : this.fireClipsInitEvent(),
                 this.maybeOpenQuickBar());
     }
     prefetchRichPresenceData(e) {
-        c.I.fetchMany([e]), o.YY.fetchMany([e]);
+        d.I.fetchMany([e]), l.YY.fetchMany([e]);
     }
     handleStreamEnded(e) {
-        if (!(0, x.qi)()) return;
-        let { ownerId: t } = (0, d.Iy)(e.streamKey);
-        t === h.default.getId() && this.fireClipsInitEvent();
+        if (!(0, k.qi)()) return;
+        let { ownerId: t } = (0, _.Iy)(e.streamKey);
+        t === f.default.getId() && this.fireClipsInitEvent();
     }
     fireClipsInitEvent() {
-        if (!(0, b.TD)() || null != _.A.getCurrentUserActiveStream()) return;
-        let e = u.Ay.getVisibleGame();
+        if (!(0, D.TD)() || null != h.A.getCurrentUserActiveStream()) return;
+        let e = c.Ay.getVisibleGame();
         if (e?.pid == null || e?.windowHandle == null || null == e.name || "" === e.name) return;
-        let t = C.A.getSettings();
+        let t = R.Ay.getSettings();
         a.h.dispatch({
             type: "CLIPS_INIT",
             sourceId: `window:${e?.windowHandle}`,
@@ -446,11 +447,26 @@ class Z extends M {
         });
     }
     loadClipsFromStorage() {
-        let e = C.A.getSettings().storageLocation;
+        let { storageLocation: e } = R.Ay.getSettings();
         "" !== e &&
-            H.Fb(e).catch((e) => {
-                D.nx.error("Failed to load clips directory on connection open", e);
-            });
+            e !== R.he &&
+            j
+                .Fb(e)
+                .then(() => J())
+                .catch((e) => {
+                    L.nx.error("Failed to load clips directory on connection open", e);
+                });
     }
 }
-let Q = new Z();
+async function J() {
+    if (R.Ay.hasClips() || null == o.A || null == o.A.app) return;
+    let e = await o.A.app.getPath("documents");
+    if (R.Ay.getSettings().storageLocation === e)
+        try {
+            let e = await o.A.app.getPath("videos");
+            j.HU((0, E.CN)(e, R._c));
+        } catch (e) {
+            L.nx.error("Failed to resolve videos path for old default storage migration", e);
+        }
+}
+let ee = new Q();

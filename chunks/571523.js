@@ -497,10 +497,10 @@ var tg = n(652215),
 function tT(e) {
     let { onOpenGallery: t, onOpenSettings: n, onClose: s, setPopoutRef: a } = e;
     (0, e7.A)();
-    let o = (0, c.yK)([eY.A], () => eY.A.getClips()),
-        l = (0, c.bG)([eY.A], () => eY.A.getPendingClips()),
-        u = (0, c.bG)([eY.A], () => eY.A.getSettings()),
-        d = (0, c.bG)([eY.A], () => eY.A.getNewClipIds()),
+    let o = (0, c.yK)([eY.Ay], () => eY.Ay.getClips()),
+        l = (0, c.bG)([eY.Ay], () => eY.Ay.getPendingClips()),
+        u = (0, c.bG)([eY.Ay], () => eY.Ay.getSettings()),
+        d = (0, c.bG)([eY.Ay], () => eY.Ay.getNewClipIds()),
         _ = (0, c.bG)([e0.Ay], () => e0.Ay.getKeybindForAction(tg.hCu.SAVE_CLIP)),
         h = r.useRef(null),
         f = r.useMemo(() => {
@@ -634,7 +634,7 @@ function ty(e) {
     let { onClose: t, popoutContainerRef: n } = e,
         s = (0, B.sw)(),
         { userStatusMenu: a } = H.$.useConfig({ location: "ClipsUserStatusMenuItem" }),
-        o = (0, c.bG)([eY.A], () => eY.A.getNewClipIds().length),
+        o = (0, c.bG)([eY.Ay], () => eY.Ay.getNewClipIds().length),
         l = r.useCallback(
             (e) => {
                 t(), (0, eW.p)({ initialEditingClipId: e });

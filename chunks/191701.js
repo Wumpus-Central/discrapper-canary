@@ -65,7 +65,7 @@ function tl(t, e) {
     return `${t} ${e ? "\u2713" : "\u2717"}`;
 }
 function ta() {
-    return d.A.getSettings().debugTooltipsEnabled;
+    return d.Ay.getSettings().debugTooltipsEnabled;
 }
 var tr = i(572164),
     ts = i(22802);
@@ -536,7 +536,7 @@ class eE extends r.Ay.Store {
             I.default,
             c.A,
             E.A,
-            d.A,
+            d.Ay,
             D.A,
             S.A,
             _.A,
@@ -1150,7 +1150,7 @@ let eS = new eE(s.h, {
             0 ===
             (e = (function () {
                 let t = [],
-                    e = d.A.getSettings(),
+                    e = d.Ay.getSettings(),
                     { enableAdvancedSignals: i } = q.L_.getConfig({ location: "getEnabledClipsFeatures" }),
                     { enableDistributedClips: n } = Z.A.getConfig({ location: "getEnabledClipsFeatures" }),
                     l = tt.Ay.getKeybindForAction(z.hCu.SAVE_CLIP);

@@ -205,7 +205,7 @@ var O = n(919706),
     U = n(844222),
     z = n(866323),
     W = n(274372),
-    $ = n(607814),
+    $ = n(315240),
     B = n(361157),
     Y = n(652896),
     Z = n(750506),
@@ -220,8 +220,8 @@ function ee(e) {
         a = (0, i.useRef)(null),
         o = (0, B.K)((e) => e.clipsButtonRef),
         u = (0, Y._z)(t),
-        c = (0, r.bG)([W.A], () => W.A.getActiveAnimation()),
-        d = (0, r.yK)([W.A], () => W.A.getStreamClipAnimations(u)),
+        c = (0, r.bG)([W.Ay], () => W.Ay.getActiveAnimation()),
+        d = (0, r.yK)([W.Ay], () => W.Ay.getStreamClipAnimations(u)),
         m = (0, i.useRef)(void 0);
     i.useEffect(
         () => () => {

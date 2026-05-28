@@ -11,11 +11,11 @@ var n = l(627968),
     p = l(773669),
     g = l(696016),
     h = l(375708),
-    b = l(607814);
+    b = l(315240);
 function S(t) {
     let i,
         { onSelect: l } = t,
-        { clipsLength: S } = (0, a.cf)([u.A], () => u.A.getSettings()),
+        { clipsLength: S } = (0, a.cf)([u.Ay], () => u.Ay.getSettings()),
         f =
             ((i = (0, a.bG)([p.default], () => p.default.locale)),
             e.useMemo(

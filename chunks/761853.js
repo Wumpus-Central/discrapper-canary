@@ -1313,7 +1313,7 @@ class nL extends C.Ay.Store {
                 [eX.O5.DESKTOP_CAPTURE]: te.supports(eX.O5.DESKTOP_CAPTURE),
                 [eX.O5.HYBRID_VIDEO]: te.supports(eX.O5.HYBRID_VIDEO),
             }),
-            this.waitFor(eF.default, eV.A, eB.A, eH.A, x.A, V.A, ej.A, H.Ay, ew.A, eY.default, eW.A);
+            this.waitFor(eF.default, eV.A, eB.A, eH.A, x.Ay, V.A, ej.A, H.Ay, ew.A, eY.default, eW.A);
     }
     supports(e) {
         return te.supports(e);

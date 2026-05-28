@@ -357,9 +357,9 @@ function eg(e) {
     let { attachment: t, channelId: n, messageId: s, isControlBarExpanded: o, isPlayerActive: u } = e,
         { enableAdvancedSignals: c } = eu.L_.useConfig({ location: "DistributedClipShareCTA" }),
         d = t.clip_remote_id,
-        _ = (0, l.bG)([ec.A], () => (null != d ? ec.A.getClipByRemoteId(d) : null)),
+        _ = (0, l.bG)([ec.Ay], () => (null != d ? ec.Ay.getClipByRemoteId(d) : null)),
         { onShareClick: h } = (0, ed.A)(n),
-        f = (0, l.bG)([ec.A], () => null != _ && null != n && null != d && ec.A.wasClipSharedInChannel(d, n)),
+        f = (0, l.bG)([ec.Ay], () => null != _ && null != n && null != d && ec.Ay.wasClipSharedInChannel(d, n)),
         p = r.useCallback(
             (e) => {
                 null != _ &&

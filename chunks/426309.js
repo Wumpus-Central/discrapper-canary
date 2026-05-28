@@ -28,8 +28,8 @@ function N() {
         a = o.useCallback((e) => {
             if (!e) return void (0, C.kF)();
             let t = j.Ay.getVisibleGame()?.id,
-                a = b.A.getLastClipsSession()?.newClipIds[0],
-                n = (null != a ? b.A.getClipById(a)?.applicationId : null) ?? b.A.getClips()[0]?.applicationId,
+                a = b.Ay.getLastClipsSession()?.newClipIds[0],
+                n = (null != a ? b.Ay.getClipById(a)?.applicationId : null) ?? b.Ay.getClips()[0]?.applicationId,
                 l = t ?? n;
             null != l && (0, C.M8)(l);
         }, []),

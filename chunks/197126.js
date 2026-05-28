@@ -6,7 +6,7 @@ var l = e(980707),
     o = e(442433),
     a = e(253799),
     c = e(663341),
-    s = e(607814),
+    s = e(315240),
     d = e(375708),
     u = e(691540),
     p = e(857250),
@@ -71,7 +71,7 @@ function V(n) {
         $ = (function (n) {
             let { clips: i, channelId: e, onShare: l, actionsDisabled: a = !1 } = n,
                 { analyticsLocations: c } = (0, k.Ay)(),
-                u = (0, m.bG)([L.A], () => i.some((n) => L.A.isClipExporting(n.id)));
+                u = (0, m.bG)([L.Ay], () => i.some((n) => L.Ay.isClipExporting(n.id)));
             async function p() {
                 (0, o.Z_)();
                 let n = (0, W.t)(e);

@@ -1,45 +1,45 @@
-n.d(t, { A: () => f });
-var r = n(627968),
-    s = n(17928),
-    i = n(661531),
-    a = n(990078),
-    l = n(777666),
-    o = n(176781),
-    d = n(313961),
-    c = n(328153),
-    g = n(616356),
-    u = n(274372),
-    h = n(572164),
-    p = n(806931),
-    v = n(985018),
-    m = n(576061);
-let f = (e) => {
-    let { channelId: t } = e;
-    return (0, s.bG)([g.A, d.A, u.A, c.Ay], () => {
-        if (null == t) return !1;
-        let e = g.A.getCurrentUserActiveStream(),
-            n = c.Ay.getVisibleGame()?.windowHandle;
+r.d(e, { A: () => R });
+var t = r(627968),
+    l = r(17928),
+    a = r(661531),
+    n = r(990078),
+    i = r(777666),
+    c = r(176781),
+    o = r(313961),
+    u = r(952818),
+    A = r(616356),
+    p = r(274372),
+    d = r(572164),
+    h = r(806931),
+    m = r(375708),
+    x = r(576061);
+let R = (s) => {
+    let { channelId: e } = s;
+    return (0, l.bG)([A.A, o.A, p.Ay, u.Ay], () => {
+        if (null == e) return !1;
+        let s = A.A.getCurrentUserActiveStream(),
+            r = u.Ay.getVisibleGame()?.windowHandle;
         return (
-            !!((null != e && (0, h.TD)()) || (null != n && (0, h.Ao)())) ||
-            d.A.getParticipants(t).some((e) => e.type === p.lp.USER && u.A.isClipsEnabledForUser(e.user.id))
+            !!((null != s && (0, d.TD)()) || (null != r && (0, d.Ao)())) ||
+            o.A.getParticipants(e).some((s) => s.type === h.lp.USER && p.Ay.isClipsEnabledForUser(s.user.id))
         );
     })
-        ? (0, r.jsx)(a.m, {
-              text: v.intl.string(v.t.DJXW3G),
-              children: (0, r.jsxs)("div", {
-                  className: m.g0,
+        ? (0, t.jsx)(n.m, {
+              text: m.intl.string(m.t.DJXW3G),
+              children: (0, t.jsxs)("div", {
+                  className: x.g0,
                   children: [
-                      (0, r.jsx)(l.fk, {
-                          icon: o.x,
-                          shape: l.EG.ROUND_LEFT,
-                          color: i.A.unsafe_rawColors.PRIMARY_500.css,
-                          className: m.Z7,
+                      (0, t.jsx)(i.fk, {
+                          icon: c.x,
+                          shape: i.EG.ROUND_LEFT,
+                          color: a.A.unsafe_rawColors.PRIMARY_500.css,
+                          className: x.Z7,
                       }),
-                      (0, r.jsx)(l.Lp, {
-                          text: v.intl.string(v.t.pCMkDb),
-                          shape: l.EG.ROUND_RIGHT,
-                          color: i.A.unsafe_rawColors.PRIMARY_500.css,
-                          className: m.lm,
+                      (0, t.jsx)(i.Lp, {
+                          text: m.intl.string(m.t.pCMkDb),
+                          shape: i.EG.ROUND_RIGHT,
+                          color: a.A.unsafe_rawColors.PRIMARY_500.css,
+                          className: x.lm,
                       }),
                   ],
               }),

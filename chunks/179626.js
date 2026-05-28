@@ -18104,7 +18104,7 @@ let NT = (() => {
         useSubtitle: () => j.intl.string(j.t.vlDHdC),
         minValue: NS.wN,
         maxValue: NS.qh,
-        getInitialValue: () => Nh.A.getSettings().maxAutoClips,
+        getInitialValue: () => Nh.Ay.getSettings().maxAutoClips,
         onValueRender: (e) => `${Math.floor(e)}`,
         asValueChanges: (e) => NE.e6(Math.floor(e)),
         markers: NT,
@@ -18113,9 +18113,9 @@ let NT = (() => {
     Np = (0, a.zD)(u.X.CLIPS_ENABLE_GAME_SIGNALS, {
         useTitle: () => j.intl.string(j.t.iV6KcI),
         useSubtitle: () => j.intl.string(j.t["dJ2tX+"]),
-        useValue: () => (0, g.bG)([Nh.A], () => Nh.A.getSettings().clipSignals.enableGameSignals),
+        useValue: () => (0, g.bG)([Nh.Ay], () => Nh.Ay.getSettings().clipSignals.enableGameSignals),
         setValue: (e) => {
-            let t = Nh.A.getSettings().clipSignals;
+            let t = Nh.Ay.getSettings().clipSignals;
             NE.PW({ ...t, enableGameSignals: e });
         },
     }),
@@ -18131,7 +18131,7 @@ let NT = (() => {
         useTitle: () => "Show clips debug tooltips",
         useSubtitle: () =>
             "Show overlay tooltips for the clips engine starting, enabled features, auto-clip signals, and save errors. Intended for development and testing.",
-        useValue: () => (0, g.bG)([Nh.A], () => Nh.A.getSettings().debugTooltipsEnabled),
+        useValue: () => (0, g.bG)([Nh.Ay], () => Nh.Ay.getSettings().debugTooltipsEnabled),
         setValue: (e) => NE.YP(e),
     }),
     N_ = (0, a.zZ)(u.X.CLIPS_DEVELOPER_CATEGORY, {
@@ -18147,9 +18147,9 @@ var NI = i(753070);
 let NC = (0, a.Hn)(u.X.CLIPS_FRAME_RATE, {
     useTitle: () => j.intl.string(j.t["2wScL1"]),
     useSubtitle: () => j.intl.string(j.t["Rf9+fy"]),
-    useValue: () => (0, g.bG)([Nh.A], () => Nh.A.getSettings().clipsQuality.frameRate),
+    useValue: () => (0, g.bG)([Nh.Ay], () => Nh.Ay.getSettings().clipsQuality.frameRate),
     setValue: (e) => {
-        let { clipsQuality: t } = Nh.A.getSettings();
+        let { clipsQuality: t } = Nh.Ay.getSettings();
         NE.GS({ resolution: t.resolution, frameRate: e });
     },
     useOptions: () => [
@@ -18161,7 +18161,7 @@ let NC = (0, a.Hn)(u.X.CLIPS_FRAME_RATE, {
 var Nb = i(372684);
 let Nv = (0, a.E2)(u.X.CLIPS_HARDWARE_CLASSIFICATION_WARNING, {
     useSearchTerms: () => [j.intl.string(j.t.SIxrIF)],
-    usePredicate: () => (0, g.bG)([Nh.A], () => Nh.A.getHardwareClassification()) === Nb.k9.BELOW_MINIMUM,
+    usePredicate: () => (0, g.bG)([Nh.Ay], () => Nh.Ay.getHardwareClassification()) === Nb.k9.BELOW_MINIMUM,
     Component: () => (0, E.jsx)(sc.A, { look: sc.k.WARNING, children: j.intl.string(j.t.SIxrIF) }),
 });
 var Ny = i(158278);
@@ -18190,7 +18190,7 @@ let Nj = (0, a.E2)(u.X.CLIPS_KEYBIND, {
     NO = (0, a.Hn)(u.X.CLIPS_LENGTH, {
         useTitle: () => j.intl.string(j.t.OgfUio),
         useSubtitle: () => j.intl.string(j.t.H7j4tY),
-        useValue: () => (0, g.bG)([Nh.A], () => Nh.A.getSettings().clipsLength),
+        useValue: () => (0, g.bG)([Nh.Ay], () => Nh.Ay.getSettings().clipsLength),
         setValue: (e) => NE.h$(e),
         useOptions: () => [
             { id: "30s", value: NS.LX.SECONDS_30, label: j.intl.formatToPlainString(j.t["bTFv/3"], { count: 30 }) },
@@ -18205,9 +18205,9 @@ let Nj = (0, a.E2)(u.X.CLIPS_KEYBIND, {
     NL = (0, a.Hn)(u.X.CLIPS_RESOLUTION, {
         useTitle: () => j.intl.string(j.t.aFudZJ),
         useSubtitle: () => j.intl.string(j.t.nIrkW5),
-        useValue: () => (0, g.bG)([Nh.A], () => Nh.A.getSettings().clipsQuality.resolution),
+        useValue: () => (0, g.bG)([Nh.Ay], () => Nh.Ay.getSettings().clipsQuality.resolution),
         setValue: (e) => {
-            let { clipsQuality: t } = Nh.A.getSettings();
+            let { clipsQuality: t } = Nh.Ay.getSettings();
             NE.GS({ resolution: e, frameRate: t.frameRate });
         },
         useOptions: () => [
@@ -18261,7 +18261,7 @@ let Nj = (0, a.E2)(u.X.CLIPS_KEYBIND, {
     NP = (0, a.E2)(u.X.CLIPS_STORAGE_LOCATION, {
         useSearchTerms: () => [j.intl.string(j.t.s4773E), j.intl.string(j.t.svjwGh)],
         Component: () => {
-            let e = (0, g.bG)([Nh.A], () => Nh.A.getSettings().storageLocation),
+            let e = (0, g.bG)([Nh.Ay], () => Nh.Ay.getSettings().storageLocation),
                 t = S.useRef(!1),
                 i = async () => {
                     if (!t.current) {
@@ -18310,7 +18310,7 @@ let NV = (0, a.zD)(u.X.CLIPS_ENABLE_DECOUPLED_CLIPPING, {
     Nk = (0, a.zD)(u.X.CLIPS_ENABLE_REMINDERS, {
         useTitle: () => j.intl.string(j.t["3zwNf6"]),
         useSubtitle: () => j.intl.string(j.t.m4Cjj9),
-        useValue: () => (0, g.bG)([Nh.A], () => Nh.A.getSettings().remindersEnabled),
+        useValue: () => (0, g.bG)([Nh.Ay], () => Nh.Ay.getSettings().remindersEnabled),
         setValue: (e) => NE.Mt(e),
     }),
     Nw = (0, a.zZ)(u.X.CLIPS_RECORDING_CATEGORY, {
