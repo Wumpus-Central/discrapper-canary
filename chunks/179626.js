@@ -2865,7 +2865,7 @@ let sA = (0, a.zD)(u.X.SHOW_GAME_LIBRARY, {
     }),
     sh = (0, a.zZ)(u.X.APPEARANCE_ADVANCED_CATEGORY, {
         useTitle: () => j.intl.string(j.t["8/udY0"]),
-        buildLayout: () => [sg, sA],
+        buildLayout: () => [...((0, o.SB)("AppearanceAdvancedCategory_buildLayout") ? [] : [sg]), sA],
     });
 var sE = i(565645);
 let sS = (0, a.zD)(u.X.CHAT_EMOJI_CONVERT_EMOTICONS, {
@@ -5085,7 +5085,7 @@ let aA = function () {
     }),
     aS = (0, a.zZ)(u.X.SYSTEM_GENERAL_CATEGORY, {
         useTitle: () => j.intl.string(j.t.cg6ltt),
-        buildLayout: () => [rE, aa, rS],
+        buildLayout: () => [rE, aa, rS, sg],
         usePredicate: () => c.Av && ((0, c.uF)() || (0, c.j9)()),
         initialize: () => {
             rh();
