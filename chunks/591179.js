@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { X: () => r });
+n.d(t, { E: () => s, X: () => r });
 let i = (0, n(945810).mj)({
     name: "2026-03-wysiwyg-user-profile-editing",
     kind: "user",
@@ -9,4 +9,7 @@ let i = (0, n(945810).mj)({
 function r(e) {
     let { enabled: t } = i.useConfig({ location: e });
     return t;
+}
+function s(e) {
+    return i.getConfig({ location: e }).enabled;
 }

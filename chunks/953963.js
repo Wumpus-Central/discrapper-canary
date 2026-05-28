@@ -1,4 +1,4 @@
-i.d(t, { A: () => k });
+i.d(t, { A: () => L });
 var n = i(627968),
     l = i(64700),
     s = i(503698),
@@ -21,25 +21,26 @@ var n = i(627968),
     v = i(836602),
     E = i(958805),
     y = i(61881),
-    b = i(624826),
-    T = i(606758),
-    C = i(518477),
-    N = i(652215),
-    w = i(375708),
-    R = i(381280);
-let O = "user-profile-save-reset-toolbar-label";
-function k(e) {
+    b = i(591179),
+    T = i(624826),
+    C = i(606758),
+    N = i(518477),
+    w = i(652215),
+    R = i(375708),
+    O = i(381280);
+let k = "user-profile-save-reset-toolbar-label";
+function L(e) {
     let { className: t, guildId: i } = e,
         { trackUserProfileEditSaved: s } = (0, I.NJ)(),
-        k = (0, d.bG)([h.A], () => h.A.useReducedMotion),
-        [L, G] = l.useState(!1),
-        [_, P] = l.useState(!1),
+        L = (0, d.bG)([h.A], () => h.A.useReducedMotion),
+        [G, _] = l.useState(!1),
+        [P, M] = l.useState(!1),
         {
-            widgetsToSave: M,
-            changedWidgets: D,
-            removedWidgets: U,
-            hasUnsavedWidgets: F,
-            canSaveWidgets: W,
+            widgetsToSave: D,
+            changedWidgets: U,
+            removedWidgets: F,
+            hasUnsavedWidgets: W,
+            canSaveWidgets: H,
         } = (function () {
             let e = (0, d.yK)([y.A], () => y.A.getSaveablePendingWidgets() ?? []),
                 t = (0, d.yK)([y.A], () => y.A.getChangedWidgets()),
@@ -50,21 +51,22 @@ function k(e) {
                 }));
             return { widgetsToSave: e, changedWidgets: t, removedWidgets: i, hasUnsavedWidgets: n, canSaveWidgets: l };
         })(),
-        H = (0, d.bG)([v.A], () => v.A.hasUnsavedChanges()),
-        B = F || H,
-        V = !(F && !W),
-        z = (0, o.p)(B, {
-            from: { opacity: 0, y: 80 * !k },
+        B = (0, b.X)("UserProfileModalV2SaveBar"),
+        V = (0, d.bG)([v.A], () => B && v.A.hasUnsavedChanges()),
+        z = W || V,
+        X = !(W && !H),
+        Y = (0, o.p)(z, {
+            from: { opacity: 0, y: 80 * !L },
             enter: { opacity: 1, y: 0 },
-            leave: { opacity: 0, y: 80 * !k },
+            leave: { opacity: 0, y: 80 * !L },
         }),
-        Y = l.useCallback(() => {
-            E.A.clearPendingWidgets(), (0, f.XQ)();
-        }, []),
-        X = l.useCallback(async () => {
-            P(!0);
+        q = l.useCallback(() => {
+            E.A.clearPendingWidgets(), B && (0, f.XQ)();
+        }, [B]),
+        K = l.useCallback(async () => {
+            M(!0);
             let e = !0;
-            if (H)
+            if (V)
                 try {
                     if (null == i) {
                         let t = v.A.getPendingChanges(),
@@ -76,7 +78,7 @@ function k(e) {
                             (e = n?.ok ?? !1),
                                 n?.ok &&
                                     (void 0 !== t.pendingAvatar &&
-                                        (0, b.t)({
+                                        (0, T.t)({
                                             avatarHash: n.body.avatar,
                                             avatarId: i.avatarId,
                                             avatarAssetOrigin: t.pendingAvatar?.assetOrigin,
@@ -104,7 +106,7 @@ function k(e) {
                             (e = l?.ok ?? !1),
                                 l?.ok &&
                                     (void 0 !== t.pendingAvatar &&
-                                        (0, b.t)({
+                                        (0, T.t)({
                                             isGuildProfile: !0,
                                             avatarHash: l.body.avatar,
                                             avatarId: n.avatarId,
@@ -121,9 +123,9 @@ function k(e) {
                 } catch {
                     e = !1;
                 }
-            if (F)
+            if (W)
                 try {
-                    for (let e of (await E.A.savePendingWidgets(M), D)) {
+                    for (let e of (await E.A.savePendingWidgets(D), U)) {
                         let t = { widgetEdited: e.type, isWidgetRemoved: !1 };
                         (0, S.fu)(e) &&
                             ((t.gameIds = e.games.map((e) => e.applicationId)),
@@ -131,61 +133,61 @@ function k(e) {
                             (t.numCharactersCommentary = e.games.reduce((e, t) => e + (t.comment?.length ?? 0), 0))),
                             s(t);
                     }
-                    for (let e of U) s({ widgetEdited: e.type, isWidgetRemoved: !0 });
+                    for (let e of F) s({ widgetEdited: e.type, isWidgetRemoved: !0 });
                 } catch {
                     e = !1;
                 }
-            e ? (0, m.x8)() : (0, T.XA)(C.jM.PROFILE_SAVE_GENERIC_FAILURE), P(!1);
-        }, [H, F, M, D, U, s, i]);
+            e ? (0, m.x8)() : (0, C.XA)(N.jM.PROFILE_SAVE_GENERIC_FAILURE), M(!1);
+        }, [V, W, D, U, F, s, i]);
     return (
         l.useEffect(() => {
             let e = null;
             function t() {
-                G(!0), (e = setTimeout(() => G(!1), 500));
+                _(!0), (e = setTimeout(() => _(!1), 500));
             }
             return (
-                j._.subscribe(N.jej.EMPHASIZE_NOTICE, t),
+                j._.subscribe(w.jej.EMPHASIZE_NOTICE, t),
                 () => {
-                    j._.unsubscribe(N.jej.EMPHASIZE_NOTICE, t), null !== e && clearTimeout(e);
+                    j._.unsubscribe(w.jej.EMPHASIZE_NOTICE, t), null !== e && clearTimeout(e);
                 }
             );
         }, []),
         l.useEffect(() => {
-            B && c.O.announce(w.intl.string(w.t["0Y/qkL"]));
-        }, [B]),
-        z((e, i) =>
+            z && c.O.announce(R.intl.string(R.t["0Y/qkL"]));
+        }, [z]),
+        Y((e, i) =>
             i
                 ? (0, n.jsx)(r.animated.div, {
                       className: t,
                       style: e,
                       children: (0, n.jsxs)("footer", {
-                          className: a()(R.Qs, { [R.hO]: L }),
-                          "aria-labelledby": O,
+                          className: a()(O.Qs, { [O.hO]: G }),
+                          "aria-labelledby": k,
                           children: [
                               (0, n.jsx)(u.E, {
-                                  id: O,
+                                  id: k,
                                   variant: "text-md/medium",
                                   color: "text-strong",
-                                  className: R.iU,
-                                  children: w.intl.string(w.t["/lQiX/"]),
+                                  className: O.iU,
+                                  children: R.intl.string(R.t["/lQiX/"]),
                               }),
                               (0, n.jsxs)("div", {
-                                  className: R.o1,
+                                  className: O.o1,
                                   children: [
                                       (0, n.jsx)(g.$, {
                                           size: "sm",
                                           variant: "secondary",
-                                          text: w.intl.string(w.t.yBZMsQ),
-                                          onClick: Y,
-                                          disabled: !B || _,
+                                          text: R.intl.string(R.t.yBZMsQ),
+                                          onClick: q,
+                                          disabled: !z || P,
                                       }),
                                       (0, n.jsx)(g.$, {
                                           size: "sm",
                                           variant: "primary",
-                                          text: w.intl.string(w.t["R3BPH+"]),
-                                          onClick: X,
-                                          loading: _,
-                                          disabled: !V || !B,
+                                          text: R.intl.string(R.t["R3BPH+"]),
+                                          onClick: K,
+                                          loading: P,
+                                          disabled: !X || !z,
                                       }),
                                   ],
                               }),

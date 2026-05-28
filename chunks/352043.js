@@ -545,7 +545,7 @@ let eJ = (e) => {
                 (0, d.openModalLazy)(
                     async () => {
                         let { default: i } = await Promise.all([
-                            n.e("32757"),
+                            n.e("81113"),
                             n.e("65243"),
                             n.e("25279"),
                             n.e("99910"),
@@ -1194,7 +1194,7 @@ function t2(e) {
         m = (0, c.bG)([S.default], () => S.default.getCurrentUser()),
         { analyticsLocations: x } = (0, V.Ay)(F.A.PREMIUM_GIFT_INTENT_CARD),
         h = (0, c.bG)([tW.Ay], () => tW.Ay.getFriendAnniversaryYears(i.id)),
-        g = (0, tQ.$)(t),
+        g = (0, tQ.$u)(t),
         { openGiftModal: _ } = (0, tY.$)({
             giftRecipient: i,
             analyticsLocations: x,

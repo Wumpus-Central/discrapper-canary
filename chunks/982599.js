@@ -1,29 +1,31 @@
-n.d(t, { A: () => _, k: () => m });
-var i = n(627968);
-n(64700);
-var a = n(503698),
-    l = n.n(a),
-    s = n(17928),
-    r = n(425763),
-    o = n(447453),
-    c = n(495544),
-    d = n(953963),
-    u = n(485745),
-    g = n(367414);
-function m(e) {
-    let t = (0, s.bG)([c.default], () => c.default.getId() === e),
+i.d(t, { A: () => x, k: () => f });
+var n = i(627968);
+i(64700);
+var l = i(503698),
+    s = i.n(l),
+    a = i(17928),
+    r = i(425763),
+    c = i(447453),
+    o = i(495544),
+    u = i(591179),
+    d = i(953963),
+    m = i(485745),
+    g = i(367414);
+function f(e) {
+    let t = (0, a.bG)([o.default], () => o.default.getId() === e),
+        i = !(0, u.X)("useIsModalV2EditingToolbarVisible"),
         n = (0, r.VU)(),
-        i = (0, u.A)();
-    return t && (n || i);
+        l = (0, m.A)(i);
+    return t && (n || l);
 }
-function _(e) {
-    let { userId: t, guildId: n, className: a } = e,
-        u = (0, s.bG)([c.default], () => c.default.getId() === t),
+function x(e) {
+    let { userId: t, guildId: i, className: l } = e,
+        u = (0, a.bG)([o.default], () => o.default.getId() === t),
         m = (0, r.VU)();
     return u
-        ? (0, i.jsx)("div", {
-              className: l()(g.kL, a),
-              children: m ? (0, i.jsx)(o.S, { className: g.Wg }) : (0, i.jsx)(d.A, { className: g.ZS, guildId: n }),
+        ? (0, n.jsx)("div", {
+              className: s()(g.kL, l),
+              children: m ? (0, n.jsx)(c.S, { className: g.Wg }) : (0, n.jsx)(d.A, { className: g.ZS, guildId: i }),
           })
         : null;
 }
