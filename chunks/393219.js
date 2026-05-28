@@ -1437,7 +1437,7 @@ function nU(e) {
               onClick: () => {
                   (0, e_.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
-                          n.e("61685"),
+                          n.e("88566"),
                           n.e("90665"),
                           n.e("58735"),
                           n.e("99430"),
@@ -3223,7 +3223,8 @@ function sj(e) {
         a = r.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
     (0, sE.Eq)(a, "ThreadMessageAccessoryMessage");
     let o = r.useMemo(
-        () => (null != t.content && "" !== t.content ? (0, sC.Ay)(t, { formatInline: !0 }).content : null),
+        () =>
+            null != t.content && "" !== t.content ? (0, sC.Ay)(t, { formatInline: !0, allowLinks: !0 }).content : null,
         [t],
     );
     return (0, s.jsxs)("div", {

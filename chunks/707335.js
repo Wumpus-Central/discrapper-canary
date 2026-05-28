@@ -16,8 +16,8 @@ var l = a(627968),
     x = a(778712),
     v = a(463930),
     j = a(163328),
-    S = a(730134),
-    w = a(80682),
+    w = a(730134),
+    S = a(80682),
     I = a(713654),
     p = a(465364),
     M = a(763754),
@@ -29,9 +29,9 @@ var l = a(627968),
     F = a(935208),
     R = a(427262),
     C = a(456874),
-    G = a(707539),
-    T = a(838541),
-    k = a(375708),
+    k = a(707539),
+    G = a(838541),
+    T = a(375708),
     K = a(992092);
 function B(e) {
     let { channel: t } = e,
@@ -40,17 +40,17 @@ function B(e) {
 }
 function L(e) {
     let { channel: t } = e,
-        a = (0, G.JO)(t);
+        a = (0, k.JO)(t);
     return (0, l.jsxs)(f.E, {
         className: K.W$,
         variant: "text-sm/normal",
         color: "text-default",
-        children: [k.intl.string(k.t.Jmh6n9), "\xa0 \u2022 \xa0", (0, G.aK)(a)],
+        children: [T.intl.string(T.t.Jmh6n9), "\xa0 \u2022 \xa0", (0, k.aK)(a)],
     });
 }
 function W(e) {
     let { channel: t, message: a } = e;
-    (0, w.Eq)({ [t.guild_id]: [a.author.id] }, "ThreadBrowserRowSubtext");
+    (0, S.Eq)({ [t.guild_id]: [a.author.id] }, "ThreadBrowserRowSubtext");
     let r = (0, n.bG)([A.default], () => A.default.getUser(a.author.id) ?? a.author),
         { nick: i, colorString: d, colorStrings: o } = (0, M.Ay)(a),
         u = (0, E.gn)(t.guild_id, r.id, o),
@@ -60,13 +60,16 @@ function W(e) {
             [a],
         ),
         h = s.useMemo(() => {
-            let e = null != a.content && "" !== a.content ? (0, p.Ay)(a, { formatInline: !0 }).content : null,
+            let e =
+                    null != a.content && "" !== a.content
+                        ? (0, p.Ay)(a, { formatInline: !0, allowLinks: !0 }).content
+                        : null,
                 {
                     contentPlaceholder: t,
                     renderedContent: s,
                     trailingIcon: n,
                     leadingIcon: r,
-                } = (0, y.o)(a, e, c, g, K.BK, { trailingIconClass: K.sl, leadingIconClass: K.aG, iconSize: T.eJ });
+                } = (0, y.o)(a, e, c, g, K.BK, { trailingIconClass: K.sl, leadingIconClass: K.aG, iconSize: G.eJ });
             return (0, l.jsxs)(l.Fragment, { children: [r, s ?? (0, l.jsx)("span", { children: t }), n] });
         }, [a, c, g]);
     return (0, l.jsxs)(f.E, {
@@ -74,12 +77,12 @@ function W(e) {
         variant: "text-sm/normal",
         color: "text-default",
         children: [
-            (0, l.jsx)(S.A, { className: K.my, user: r, size: x._3.SIZE_16 }),
+            (0, l.jsx)(w.A, { className: K.my, user: r, size: x._3.SIZE_16 }),
             (0, l.jsx)(v.g, { name: i, colorString: d, colorStrings: u, className: K.fh }),
             ":\xa0",
             h,
             "\xa0 \u2022 \xa0",
-            (0, G.aK)(F.default.extractTimestamp(a.id)),
+            (0, k.aK)(F.default.extractTimestamp(a.id)),
         ],
     });
 }
@@ -90,7 +93,7 @@ function D(e) {
             null == a
                 ? new Date(t.threadMetadata?.archiveTimestamp ?? Date.now()).getTime()
                 : F.default.extractTimestamp(a);
-    (0, w.Eq)({ [t.guild_id]: [t.ownerId] }, "ThreadBrowserRowSubtext");
+    (0, S.Eq)({ [t.guild_id]: [t.ownerId] }, "ThreadBrowserRowSubtext");
     let r = (0, n.bG)([A.default], () => A.default.getUser(t.ownerId)),
         i = (0, n.bG)([_.Ay], () => _.Ay.getMember(t.guild_id, t.ownerId)),
         d = (0, E.gn)(t.guild_id, r?.id, i?.colorStrings ?? null),
@@ -107,13 +110,13 @@ function D(e) {
                               className: K.A2,
                               children: (0, l.jsx)(o, { width: 10, height: 10, size: "custom", color: "currentColor" }),
                           }),
-                          k.intl.format(k.t["5Wk9+o"], { time: (0, G.aK)(s) }),
+                          T.intl.format(T.t["5Wk9+o"], { time: (0, k.aK)(s) }),
                       ],
                   })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(S.A, { className: K.my, user: r, size: x._3.SIZE_16 }),
-                          k.intl.format(k.t["GFDmd/"], {
+                          (0, l.jsx)(w.A, { className: K.my, user: r, size: x._3.SIZE_16 }),
+                          T.intl.format(T.t["GFDmd/"], {
                               authorHook: (e, t) =>
                                   (0, l.jsx)(
                                       v.g,
@@ -127,7 +130,7 @@ function D(e) {
                                   ),
                           }),
                           (0, l.jsx)("span", { className: K.xE, children: "\u2022" }),
-                          k.intl.format(k.t["5Wk9+o"], { time: (0, G.aK)(s) }),
+                          T.intl.format(T.t["5Wk9+o"], { time: (0, k.aK)(s) }),
                       ],
                   }),
     });
