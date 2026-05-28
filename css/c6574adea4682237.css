@@ -1,0 +1,13 @@
+.themeSelector_c85552 {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    height: 32px
+}
+
+.themePillItem_c85552 {
+    border-radius: var(--radius-xs)
+}
+
+.themePillItemSelected_c85552 {
+    border: 1px solid var(--border-subtle)
+}
