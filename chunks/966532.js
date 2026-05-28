@@ -1,17 +1,18 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => _ });
 var i = n(439372),
-    r = n(328153),
+    r = n(952818),
     s = n(287809),
     a = n(977997),
     o = n(572164),
-    l = n(399925),
-    d = n(734066),
-    _ = n(64683);
-class u extends i.A {
+    l = n(315240),
+    u = n(734066),
+    c = n(64683);
+class d extends i.A {
     registrations = new Map();
     activeHandlers = new Map();
     initialized = !1;
+    terminatedCount = 0;
     actions = {
         RUNNING_GAMES_CHANGE: () => this.updateActiveHandlers(),
         CLIPS_SETTINGS_UPDATE: () => this.updateActiveHandlers(),
@@ -25,26 +26,26 @@ class u extends i.A {
                 {
                     type: "voiceChannel",
                     name: "ml-audio-classification",
-                    isEnabled: d.J,
-                    importHandler: () => n.e("94430").then(n.bind(n, 712589)),
+                    isEnabled: u.J,
+                    importHandler: () => n.e("77639").then(n.bind(n, 686586)),
                 },
                 {
                     type: "voiceChannel",
                     name: "distributed-clipping",
-                    isEnabled: d.J,
+                    isEnabled: u.J,
                     importHandler: () => n.e("70726").then(n.bind(n, 949285)),
                 },
                 {
                     type: "application",
                     name: "steam-timeline",
-                    isEnabled: d.J,
+                    isEnabled: u.J,
                     importHandler: () => n.e("52741").then(n.bind(n, 664420)),
                 },
                 {
                     type: "application",
                     name: "league-of-legends",
-                    applicationId: _.m,
-                    isEnabled: d.J,
+                    applicationId: c.m,
+                    isEnabled: u.J,
                     importHandler: () => n.e("31263").then(n.bind(n, 903010)),
                 },
             ]))
@@ -66,26 +67,32 @@ class u extends i.A {
         return t?.channelId != null;
     }
     async updateActiveHandlers() {
-        this.ensureInitialized();
-        let e = (0, o.TD)(),
-            t = r.Ay.getRunningGames(),
-            n = this.isUserInVoiceChannel();
-        if (!e) return void (await this.stopAllHandlers());
-        let i = new Set(t.map((e) => e.id));
-        for (let [e, t] of this.registrations) {
-            let r = !1;
-            null == t.isEnabled || t.isEnabled()
-                ? "application" === t.type
-                    ? (r = null == t.applicationId ? i.size > 0 : i.has(t.applicationId))
-                    : "voiceChannel" === t.type && (r = n)
-                : (r = !1);
-            let s = this.activeHandlers.has(e);
-            r && !s ? await this.startHandler(e, t) : !r && s && (await this.stopHandler(e));
+        if ((this.ensureInitialized(), !(0, o.TD)())) return void this.stopAllHandlers();
+        let e = this.terminatedCount;
+        for (let [t, n] of this.registrations) {
+            let i = () => {
+                    if (!(0, o.TD)()) return !1;
+                    if (null == n.isEnabled || n.isEnabled()) {
+                        if ("application" === n.type) {
+                            let e = new Set(r.Ay.getRunningGames().map((e) => e.id));
+                            return null == n.applicationId ? e.size > 0 : e.has(n.applicationId);
+                        } else if ("voiceChannel" === n.type) return this.isUserInVoiceChannel();
+                    }
+                    return !1;
+                },
+                s = () => this.activeHandlers.has(t),
+                a = i(),
+                l = s();
+            if (a && !l) {
+                let r = (await n.importHandler()).default;
+                if (this.terminatedCount !== e) return;
+                i() && !s() && this.startHandler(t, n, r);
+            } else !a && l && this.stopHandler(t);
         }
     }
-    async startHandler(e, t) {
-        let n = (0, (await t.importHandler()).default)(l.Ts);
-        n.start(), this.activeHandlers.set(e, { handler: n, registration: t });
+    startHandler(e, t, n) {
+        let i = n(l.Ts);
+        i.start(), this.activeHandlers.set(e, { handler: i, registration: t });
     }
     stopHandler(e) {
         let t = this.activeHandlers.get(e);
@@ -102,8 +109,7 @@ class u extends i.A {
         this.ensureInitialized();
     }
     _terminate() {
-        for (let [, e] of this.activeHandlers) e.handler.stop();
-        this.activeHandlers.clear();
+        this.terminatedCount++, this.stopAllHandlers();
     }
 }
-let c = new u();
+let _ = new d();
