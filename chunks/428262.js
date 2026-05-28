@@ -356,7 +356,7 @@ function ek(e, t, n) {
     return a.useMemo(
         () => ({
             priceOptions: ex(e, i),
-            planPricesLoading: (null == t || (null != e.currency && t.currency !== e.currency)) && null == n,
+            planPricesLoading: null != e.currency && null != t && t.currency !== e.currency && null == n,
         }),
         [e, t, i, n],
     );
