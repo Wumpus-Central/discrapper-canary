@@ -148,6 +148,7 @@ var i,
         (i.WINDOW_SET_PROGRESS_BAR = "DISCORD_WINDOW_SET_PROGRESS_BAR"),
         (i.WINDOW_IS_ALWAYS_ON_TOP = "DISCORD_WINDOW_IS_ALWAYS_ON_TOP"),
         (i.WINDOW_SET_ALWAYS_ON_TOP = "DISCORD_WINDOW_SET_ALWAYS_ON_TOP"),
+        (i.WINDOW_OPEN_DOCUMENT_PIP = "DISCORD_WINDOW_OPEN_DOCUMENT_PIP"),
         (i.WINDOW_DEVTOOLS_OPENED = "DISCORD_WINDOW_DEVTOOLS_OPENED"),
         (i.WINDOW_DEVTOOLS_CLOSED = "DISCORD_WINDOW_DEVTOOLS_CLOSED"),
         (i.WINDOW_SET_CONTENT_PROTCTION = "DISCORD_WINDOW_SET_CONTENT_PROTCTION"),
@@ -162,8 +163,8 @@ var i,
         i),
     d = n(636537),
     _ = n(941426),
-    f = n(506774),
-    h = n(56562),
+    h = n(506774),
+    f = n(56562),
     p = n(223273),
     E = n(723702),
     m = n(998218),
@@ -172,19 +173,19 @@ var i,
 let I = window.DiscordNative,
     T = new Set(["jpg", "jpeg", "jfif", "png"]),
     S = new Set(["jpg", "jpeg", "jfif", "png", "webp", "gif", "tiff", "bmp", "avif"]),
-    N = null,
     y = null,
-    C = null,
-    v = {},
-    O = !1,
-    R = {};
+    N = null,
+    v = null,
+    C = {},
+    R = !1,
+    O = {};
 null != I &&
-    ((N = I.app
+    ((y = I.app
         .getVersion()
         .split(".")
         .map((e) => parseInt(e))),
-    (C = I.app.getModuleVersions()),
-    (y = I.app.getBuildNumber()));
+    (v = I.app.getModuleVersions()),
+    (N = I.app.getBuildNumber()));
 let b = new Set([
         "discord_erlpack",
         "discord_game_utils",
@@ -199,8 +200,8 @@ let b = new Set([
     M = /[<>:"/\\|?*@]/g,
     P = /(\.[a-zA-Z0-9]+):[^.]*$/,
     x = /(\.[a-zA-Z0-9]+)%3A.+$/,
-    U = /[^a-zA-Z0-9]/g,
-    k = /\.[^.]*$/;
+    k = /[^a-zA-Z0-9]/g,
+    U = /\.[^.]*$/;
 var G = (((r = {}).SAVED = "saved"), (r.CANCELED = "canceled"), (r.ERRORED = "errored"), r);
 function F(e) {
     try {
@@ -227,7 +228,7 @@ var B =
     (s[(s.ScreenRecording = 4)] = "ScreenRecording"),
     s);
 function H(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : C;
     return {
         id: t[e.id ?? ""],
         nativeProcessObserverId: parseInt(e.id ?? "", 10),
@@ -247,7 +248,7 @@ function H(e) {
         pidPath: e.pidPath ?? [],
         gameMetadata: e.gameMetadata,
         windowHandle: e.windowHandle ?? null,
-        fullscreenType: e.fullscreenType ?? h.aI.UNKNOWN,
+        fullscreenType: e.fullscreenType ?? f.aI.UNKNOWN,
         isLauncher: e.isLauncher ?? !1,
         executableFingerprint: e.executableFingerprint,
     };
@@ -271,9 +272,9 @@ function Y(e) {
 }
 let W = {
         requireModule(e) {
-            if (O && R.hasOwnProperty(e) && null != R[e]) return R[e];
+            if (R && O.hasOwnProperty(e) && null != O[e]) return O[e];
             let t = I.nativeModules.requireModule(e);
-            return O && (R[e] = t), t;
+            return R && (O[e] = t), t;
         },
         ensureModule: (e) =>
             E.isPlatformEmbedded
@@ -298,9 +299,9 @@ let W = {
                     (e.disconnectAllProcesses(), e.destroyHostProcess()),
                 I.powerMonitor.removeAllListeners(),
                 window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN &&
-                    !0 !== f.w.get(l.qx) &&
+                    !0 !== h.w.get(l.qx) &&
                     this.supportsFeature(g.BYE.USER_DATA_CACHE) &&
-                    I.userDataCache.cacheUserData(f.w.stringify());
+                    I.userDataCache.cacheUserData(h.w.stringify());
         },
         inputEventRegister(e, t, n, i) {
             this.getDiscordUtils().inputEventRegister(
@@ -324,14 +325,14 @@ let W = {
         },
         setObservedGamesCallback(e, t, n, i) {
             try {
-                v = {};
+                C = {};
                 let r = 0,
                     s = this.getDiscordUtils(),
                     a = e.map((e) => {
                         let t = ++r;
-                        return null != e.id && (v[t] = e.id), { ...e, cmdline: e.cmdLine, id: t };
+                        return null != e.id && (C[t] = e.id), { ...e, cmdline: e.cmdLine, id: t };
                     }),
-                    o = v,
+                    o = C,
                     l = (e) => n(e.map((e) => H(e, o)));
                 null != i && null != s.setProcessObserverUserId && s.setProcessObserverUserId(i),
                     t && null != s.setObservedGamesCallback2
@@ -459,13 +460,13 @@ let W = {
             return I.app.getReleaseChannel();
         },
         get version() {
-            return N;
-        },
-        get buildNumber() {
             return y;
         },
+        get buildNumber() {
+            return N;
+        },
         get moduleVersions() {
-            return C;
+            return v;
         },
         get parsedOSRelease() {
             if (!E.isPlatformEmbedded) return [];
@@ -500,9 +501,9 @@ let W = {
             a = F(a);
             let l = s.searchParams.get("format");
             if (null != l) {
-                let e = l.replace(U, "").toLowerCase();
+                let e = l.replace(k, "").toLowerCase();
                 if (e.length > 0) {
-                    let t = a.replace(k, "");
+                    let t = a.replace(U, "");
                     a = `${t}.${e}`;
                 }
             } else if (!a.includes(".")) {
@@ -511,7 +512,7 @@ let W = {
             }
             let u = await V(e),
                 c = A.from(u),
-                d = f.w.get(w);
+                d = h.w.get(w);
             if (("string" != typeof d && (d = void 0), "function" == typeof I.fileManager.saveWithDialog2)) {
                 if (null == (i = await I.fileManager.saveWithDialog2(c, a, d ?? void 0))) return "errored";
                 if (i.canceledByUser) return "canceled";
@@ -522,7 +523,7 @@ let W = {
                 } catch (e) {
                     return "errored";
                 }
-            return null == r || "" === r ? "errored" : (f.w.set(w, r), "saved");
+            return null == r || "" === r ? "errored" : (h.w.set(w, r), "saved");
         },
         async saveFile(e, t) {
             o()(E.isPlatformEmbedded, "Save file method called outside native app");
@@ -862,16 +863,16 @@ let W = {
             "application/json" === l && (u = JSON.stringify(t));
             let c = (o / 1e3) * s,
                 _ = Math.ceil(u.length / c),
-                f = Array(_);
+                h = Array(_);
             for (let e = 0; e < _; e++) {
                 let t = e * c;
-                f[e] = u.substring(t, t + c);
+                h[e] = u.substring(t, t + c);
             }
             return new Promise((e, t) => {
                 null != I.http &&
                     I.http.makeChunkedRequest(
                         i,
-                        f,
+                        h,
                         { method: r, chunkInterval: o, contentType: l, token: a },
                         (n, i) => (null != n ? t(n) : i.status >= 400 ? t(Error(i.body)) : void e(i)),
                     );
@@ -922,11 +923,11 @@ let W = {
         GetWindowFullscreenTypeByPid(e, t, n) {
             let { getWindowFullscreenTypeByPid: i } = this.getDiscordUtils(),
                 r = 0 !== e && null != i && null != t ? i(e, t) : null;
-            return -1 === r && (r = null), r ?? n ?? h.aI.UNKNOWN;
+            return -1 === r && (r = null), r ?? n ?? f.aI.UNKNOWN;
         },
         GetWindowFullscreenTypeExtraByPid(e, t) {
             let { getWindowFullscreenTypeExtraByPid: n } = this.getDiscordUtils();
-            return null == n || null == t ? { quns: h.YL.QUNS_UNKNOWN } : n(e, t);
+            return null == n || null == t ? { quns: f.YL.QUNS_UNKNOWN } : n(e, t);
         },
         SetGPUBoostEnabledByPid(e, t) {
             let { setGPUBoostEnabledByPid: n } = this.getDiscordUtils();
@@ -1014,7 +1015,7 @@ let W = {
             if (null != t) return t(e);
         },
         isModuleVersionAtLeast(e, t) {
-            let n = [...(N ?? [0, 0, 0])];
+            let n = [...(y ?? [0, 0, 0])];
             n.push(this.moduleVersions?.[e] ?? 0);
             let i = t[this.releaseChannel] ?? t.stable;
             for (let [e, t] of n.entries())
@@ -1045,7 +1046,7 @@ let W = {
             Y(c.APP_ASYNC_INDEX_TSX_LOADED);
         },
         setUseRequireModuleCache(e) {
-            O = e;
+            R = e;
         },
         async GetSystemGpuStats(e) {
             if (!E.isPlatformEmbedded) return [];
