@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => _, xW: () => a });
+n.d(t, { Ay: () => c, xW: () => a });
 var i,
     r = n(17928),
     s = n(228366),
@@ -32,6 +32,7 @@ let o = {
         upload_fail_50: { label: "Uploads: Fail 50% of uploads with 500 status after a 1 second delay", category: 0 },
         send_fail_100: { label: "Send: Fail with 500 status", category: 0 },
         premium_roadblocks: { label: "Enable all new premium roadblocks", category: 2 },
+        force_mock_iap: { label: "[iOS] Force mock IAP products", category: 2 },
         iar_testing: { label: "Enable staff only test iar menu options", category: 3 },
         iar_skip_api_report_submit: {
             label: "Enable to skip calling the API to skip submitting actual IAR reports",
@@ -53,7 +54,7 @@ let o = {
         libdiscore_verbose_telemetry_logging: { label: "Enable verbose telemetry logging for libdiscore", category: 6 },
     },
     l = {};
-class d extends r.Ay.DeviceSettingsStore {
+class u extends r.Ay.DeviceSettingsStore {
     static displayName = "DevToolsDevSettingsStore";
     static persistKey = "DevToolsDevSettingsStore";
     getUserAgnosticState() {
@@ -83,7 +84,7 @@ class d extends r.Ay.DeviceSettingsStore {
             });
     }
 }
-let _ = new d(s.h, {
+let c = new u(s.h, {
     DEV_TOOLS_DEV_SETTING_SET: function (e) {
         !1 === e.value ? delete l[e.toggle] : (l[e.toggle] = e.value);
     },

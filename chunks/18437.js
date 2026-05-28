@@ -1,4 +1,4 @@
-l.d(t, { Ii: () => A, Ut: () => g, WS: () => p, cR: () => S, tG: () => T, u0: () => m });
+l.d(t, { Ii: () => A, Ut: () => g, WS: () => p, cR: () => S, tG: () => T, u0: () => f });
 var n = l(64700),
     r = l(835245),
     s = l(323889),
@@ -11,8 +11,8 @@ var n = l(64700),
     E = l(561844),
     v = l(590202),
     _ = l(971649),
-    f = l(652215);
-function m() {
+    m = l(652215);
+function f() {
     let e = (0, _.vU)();
     return n.useCallback(
         (t) => {
@@ -22,7 +22,7 @@ function m() {
     );
 }
 function g() {
-    let e = m();
+    let e = f();
     return n.useCallback(
         (t) => {
             let {
@@ -34,12 +34,12 @@ function g() {
                     trackGuildAndChannelMetadata: E,
                     sourceQuestContent: _,
                 } = t,
-                m = (0, c.L4)(n),
+                f = (0, c.L4)(n),
                 g = (0, c.Gp)(n, l);
             (0, a.N)((0, v.jO)(n)).then((t) => {
                 e({
                     questId: l,
-                    event: f.HAw.QUEST_CONTENT_CLICKED,
+                    event: m.HAw.QUEST_CONTENT_CLICKED,
                     properties: {
                         ...(0, v.fF)(n, u, d),
                         ...(0, i.A)(),
@@ -47,7 +47,7 @@ function g() {
                         click_id: (0, r.A)(),
                         apple_advertising_id: null != t && (0, o.isIOS)() ? t.advertisingId : null,
                         android_advertising_id: null != t && (0, o.isAndroid)() ? t.advertisingId : null,
-                        metadata_sealed: null != m ? m : null,
+                        metadata_sealed: null != f ? f : null,
                         traffic_metadata_sealed: null != g ? g : null,
                     },
                     trackGuildAndChannelMetadata: E,
@@ -80,7 +80,7 @@ function T() {
                     questContentCTA: d,
                     questContentPosition: E,
                     questContentRowIndex: _,
-                    trackGuildAndChannelMetadata: m,
+                    trackGuildAndChannelMetadata: f,
                     sourceQuestContent: g,
                 } = t,
                 p = (0, c.L4)(u, l);
@@ -89,7 +89,7 @@ function T() {
                     adContentId: l,
                     relatedQuestId: n,
                     adCreativeType: s,
-                    event: f.HAw.QUEST_CONTENT_CLICKED,
+                    event: m.HAw.QUEST_CONTENT_CLICKED,
                     properties: {
                         ...(0, v.fF)(u, E, _),
                         ...(0, i.A)(),
@@ -99,7 +99,7 @@ function T() {
                         android_advertising_id: null != t && (0, o.isAndroid)() ? t.advertisingId : null,
                         metadata_sealed: null != p ? p : null,
                     },
-                    trackGuildAndChannelMetadata: m,
+                    trackGuildAndChannelMetadata: f,
                     shouldExtendSession: (0, c.xn)(u),
                     sourceQuestContent: g,
                 });
@@ -135,19 +135,23 @@ function S(e) {
             [t, l, r, a],
         ),
         o = n.useCallback(() => {
-            i(f.HAw.QUEST_HOVER);
+            i(m.HAw.QUEST_HOVER);
         }, [i]),
         c = n.useCallback(() => {
-            i(f.HAw.QUEST_HOVER_OFF);
+            i(m.HAw.QUEST_HOVER_OFF);
         }, [i]),
         _ = n.useCallback(() => {
-            u.default.track(f.HAw.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
+            u.default.track(m.HAw.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
         }, []),
-        m = n.useCallback(() => {
-            u.default.track(f.HAw.QUEST_CONTENT_CLICKED, { is_targeted: !1, ...(0, v.fF)(r) });
-        }, [r]);
+        f = n.useCallback(() => {
+            u.default.track(m.HAw.QUEST_CONTENT_CLICKED, {
+                is_targeted: !1,
+                ...a,
+                ...(null != t ? { ad_content_id: t.id } : {}),
+            });
+        }, [a, t]);
     return n.useMemo(
-        () => ({ handleMouseEnter: o, handleMouseLeave: c, handleOnboardingPopoutRender: _, handleEntrypointClick: m }),
-        [o, c, _, m],
+        () => ({ handleMouseEnter: o, handleMouseLeave: c, handleOnboardingPopoutRender: _, handleEntrypointClick: f }),
+        [o, c, _, f],
     );
 }
