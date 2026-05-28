@@ -285,7 +285,7 @@ var eL = n(285406),
     eJ = n(468689),
     e0 = n(375708),
     e1 = n(330766);
-function e3(e) {
+function e6(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e,
         s = (0, e$.bG)([X.A, eI.default], () => {
             let e = eI.default.getCurrentUser(),
@@ -318,10 +318,10 @@ function e3(e) {
         })
     );
 }
-var e6 = n(338854);
+var e3 = n(338854);
 function e5(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e;
-    return (0, l.jsx)(e6.H, {
+    return (0, l.jsx)(e3.H, {
         targetElementRef: i,
         title: e0.intl.string(e0.t.gCgirr),
         body: e0.intl.string(e0.t.fLMZFw),
@@ -338,17 +338,17 @@ function e5(e) {
         caretConfig: { align: "center" },
     });
 }
-var e2 = n(834730),
-    e8 = n(821609),
+var e8 = n(834730),
+    e2 = n(821609),
     e4 = n(383470);
-function e9(e) {
+function e7(e) {
     let { markAsDismissed: t } = e;
     return (0, l.jsxs)("div", {
         className: e4.kL,
         children: [
             (0, l.jsx)("div", { className: e4.Wn }),
-            (0, l.jsx)(e2.E, { variant: "text-sm/normal", className: e4.Qs, children: e0.intl.string(e0.t.rdzeVP) }),
-            (0, l.jsx)(e8.$, {
+            (0, l.jsx)(e8.E, { variant: "text-sm/normal", className: e4.Qs, children: e0.intl.string(e0.t.rdzeVP) }),
+            (0, l.jsx)(e2.$, {
                 variant: "overlay-primary",
                 text: e0.intl.string(e0.t["NX+WJN"]),
                 fullWidth: !0,
@@ -359,7 +359,7 @@ function e9(e) {
         ],
     });
 }
-var e7 = n(166978);
+var e9 = n(166978);
 function te(e) {
     let { guild: t, markAsDismissed: n, targetElementRef: i } = e;
     return (0, l.jsx)(A.A, {
@@ -405,24 +405,24 @@ let tn = r.memo(function (e) {
                 case u.M.GUILD_POWERUP_PERKS_COACHMARK:
                     return (0, l.jsx)(tt, {
                         renderPopout: (e) =>
-                            (0, l.jsx)(e7.UB, { guildId: n.id, markAsDismissed: a, channelRowRef: e, ...o }),
+                            (0, l.jsx)(e9.UB, { guildId: n.id, markAsDismissed: a, channelRowRef: e, ...o }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GAME_SERVER_NEW_GAMES_COACHMARK:
                     return (0, l.jsx)(tt, {
                         renderPopout: (e) =>
-                            (0, l.jsx)(e7.YX, { guildId: n.id, markAsDismissed: a, channelRowRef: e, ...o }),
+                            (0, l.jsx)(e9.YX, { guildId: n.id, markAsDismissed: a, channelRowRef: e, ...o }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK:
                     return (0, l.jsx)(tt, {
                         renderPopout: (e) =>
-                            (0, l.jsx)(e7.Ns, { guildId: n.id, markAsDismissed: a, channelRowRef: e, ...o }),
+                            (0, l.jsx)(e9.Ns, { guildId: n.id, markAsDismissed: a, channelRowRef: e, ...o }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK:
                     return (0, l.jsx)(tt, {
-                        renderPopout: (e) => (0, l.jsx)(e7.K8, { guildId: n.id, markAsDismissed: a, channelRowRef: e }),
+                        renderPopout: (e) => (0, l.jsx)(e9.K8, { guildId: n.id, markAsDismissed: a, channelRowRef: e }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.BOOST_TO_UNLOCK_COACHMARK: {
@@ -430,7 +430,7 @@ let tn = r.memo(function (e) {
                     if (null == e) return i();
                     return (0, l.jsx)(tt, {
                         renderPopout: (t) =>
-                            (0, l.jsx)(e7.Gw, {
+                            (0, l.jsx)(e9.Gw, {
                                 type: eU.o.BOOST_TO_UNLOCK,
                                 guildId: n.id,
                                 powerup: e,
@@ -446,7 +446,7 @@ let tn = r.memo(function (e) {
                     if (null == e) return i();
                     return (0, l.jsx)(tt, {
                         renderPopout: (t) =>
-                            (0, l.jsx)(e7.Mr, {
+                            (0, l.jsx)(e9.Mr, {
                                 type: eU.o.EXPIRING_PERK,
                                 guildId: n.id,
                                 featuredExpiringPowerup: e,
@@ -459,7 +459,7 @@ let tn = r.memo(function (e) {
                 }
                 case u.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
                     return (0, l.jsx)(tt, {
-                        renderPopout: (e) => (0, l.jsx)(e3, { guildId: n.id, markAsDismissed: a, targetElementRef: e }),
+                        renderPopout: (e) => (0, l.jsx)(e6, { guildId: n.id, markAsDismissed: a, targetElementRef: e }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
@@ -469,7 +469,7 @@ let tn = r.memo(function (e) {
                     });
                 case u.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP:
                     return (0, l.jsx)(tt, {
-                        renderPopout: (0, l.jsx)(e9, { markAsDismissed: a }),
+                        renderPopout: (0, l.jsx)(e7, { markAsDismissed: a }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
@@ -558,7 +558,7 @@ let tc = ts().debounce(td.Ay.trackWithMetadata, 500),
                         null != n
                             ? (0, l.jsx)(to.D, { variant: "heading-md/semibold", className: tu.DD, children: n })
                             : null,
-                        (0, l.jsx)(e2.E, { variant: "text-sm/normal", children: i }),
+                        (0, l.jsx)(e8.E, { variant: "text-sm/normal", children: i }),
                         _,
                     ],
                 }),
@@ -749,14 +749,14 @@ var tX = n(503698),
     tJ = n(713654),
     t0 = n(976860),
     t1 = n(790535),
-    t3 = n(110618),
-    t6 = n(495544),
+    t6 = n(110618),
+    t3 = n(495544),
     t5 = n(309010),
-    t2 = n(312006),
-    t8 = n(403362),
+    t8 = n(312006),
+    t2 = n(403362),
     t4 = n(707592),
-    t9 = n(698441),
-    t7 = n(935159),
+    t7 = n(698441),
+    t9 = n(935159),
     ne = n(11550),
     nt = n(435328),
     nn = n(563312),
@@ -782,7 +782,7 @@ let na = r.memo(function (e) {
                 className: tF()(nr.fI, nr.pF),
                 children: [
                     (0, l.jsx)("div", { className: nr.Ok }),
-                    (0, l.jsx)(e2.E, {
+                    (0, l.jsx)(e8.E, {
                         color: "text-feedback-positive",
                         variant: "text-xs/semibold",
                         className: nr.U4,
@@ -802,19 +802,19 @@ let na = r.memo(function (e) {
                 className: tF()(nr.fI, nr.pF),
                 children: [
                     i,
-                    (0, l.jsx)(e2.E, { color: "none", variant: "text-xs/normal", className: nr.HA, children: n }),
+                    (0, l.jsx)(e8.E, { color: "none", variant: "text-xs/normal", className: nr.HA, children: n }),
                     null != s &&
                         null != r &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)(e2.E, {
+                                (0, l.jsx)(e8.E, {
                                     className: nr.hY,
                                     color: "none",
                                     variant: "text-xs/normal",
                                     children: "\u2022",
                                 }),
                                 r,
-                                (0, l.jsx)(e2.E, {
+                                (0, l.jsx)(e8.E, {
                                     color: "none",
                                     variant: "text-xs/normal",
                                     className: nr.zH,
@@ -842,7 +842,7 @@ function no(e) {
         ),
         r = (0, tJ.gU)(n);
     return (0, l.jsx)(na, {
-        onClickCloseIcon: () => (0, t7.iF)({ eventId: t?.id }),
+        onClickCloseIcon: () => (0, t9.iF)({ eventId: t?.id }),
         heading: e0.intl.string(e0.t["X2K3/4"]),
         topic: t.name,
         location: i,
@@ -853,13 +853,13 @@ function no(e) {
 function nd(e) {
     let { guildEvent: t, noticeType: n } = e,
         i = (0, ns.G3)(t),
-        s = (0, d.bG)([t9.Ay], () => t9.Ay.isInterestedInEventRecurrence(t.id, i), [t.id, i]),
+        s = (0, d.bG)([t7.Ay], () => t7.Ay.isInterestedInEventRecurrence(t.id, i), [t.id, i]),
         r = (0, d.bG)([ne.A], () => ne.A.getUpcomingNoticeSeenTime(t.id), [t.id]);
     return (
-        s || null != r || (0, t7.pE)(t.id),
-        (0, l.jsx)(e8.$, {
+        s || null != r || (0, t9.pE)(t.id),
+        (0, l.jsx)(e2.$, {
             onClick: function () {
-                (0, nl.A)(t.id, null, t.guild_id, () => setTimeout(() => (0, t7.Lx)(t.id), 1e3)),
+                (0, nl.A)(t.id, null, t.guild_id, () => setTimeout(() => (0, t9.Lx)(t.id), 1e3)),
                     eu.default.track(H.HAw.CHANNEL_NOTICE_CTA_CLICKED, { guild_id: t.guild_id, notice_type: n });
             },
             text: e0.intl.string(e0.t.DlcqlU),
@@ -897,7 +897,7 @@ function nu(e) {
                         (0, l.jsx)(tr.D, {
                             onClick: () => (0, t4.uR)({ eventId: t.id }),
                             className: nr.oP,
-                            children: (0, l.jsx)(e2.E, {
+                            children: (0, l.jsx)(e8.E, {
                                 color: "text-strong",
                                 variant: "text-md/semibold",
                                 className: nr.eq,
@@ -907,7 +907,7 @@ function nu(e) {
                         (0, l.jsx)(tr.D, {
                             onClick: () => {
                                 eu.default.track(H.HAw.CHANNEL_NOTICE_CLOSED, { notice_type: n, guild_id: t.guild_id }),
-                                    (0, t7.Lx)(t.id);
+                                    (0, t9.Lx)(t.id);
                             },
                             className: nr.ut,
                             "aria-label": e0.intl.string(e0.t.cpT0Cq),
@@ -925,7 +925,7 @@ function nu(e) {
                             width: 16,
                             height: 16,
                         }),
-                        (0, l.jsx)(e2.E, {
+                        (0, l.jsx)(e8.E, {
                             color: "text-default",
                             variant: "text-xs/normal",
                             className: nr.Sv,
@@ -945,7 +945,7 @@ function nu(e) {
                                   height: 16,
                                   className: nr.uE,
                               }),
-                        (0, l.jsx)(e2.E, {
+                        (0, l.jsx)(e8.E, {
                             color: "none",
                             variant: "text-xs/normal",
                             className: nr.HA,
@@ -964,7 +964,7 @@ function nc(e) {
     return null == n
         ? null
         : (0, l.jsx)(na, {
-              onClickCloseIcon: () => (0, t7.iF)({ eventId: t?.id }),
+              onClickCloseIcon: () => (0, t9.iF)({ eventId: t?.id }),
               heading: e0.intl.string(e0.t["1+boPi"]),
               topic: t.name,
               location: (0, nt.l)(n, !0),
@@ -986,7 +986,7 @@ function nA(e) {
     return (0, l.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
         className: nr.PD,
-        children: (0, l.jsx)(e8.$, {
+        children: (0, l.jsx)(e2.$, {
             variant: "active",
             size: "sm",
             text: e0.intl.string(e0.t.z4FcDs),
@@ -1000,7 +1000,7 @@ function nE(e) {
     return (0, l.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
         className: nr.PD,
-        children: (0, l.jsx)(e8.$, {
+        children: (0, l.jsx)(e2.$, {
             variant: "active",
             size: "sm",
             text: n,
@@ -1020,7 +1020,7 @@ function nh(e) {
         r = (0, d.bG)([p.A], () => p.A.getParticipantCount(n.id, M.ip.AUDIENCE), [n.id]),
         a = e0.intl.formatToPlainString(e0.t["+v2pN2"], { count: `${r}` });
     return (0, l.jsx)(na, {
-        onClickCloseIcon: () => (0, t7.iF)({ stageId: t?.id }),
+        onClickCloseIcon: () => (0, t9.iF)({ stageId: t?.id }),
         heading: e0.intl.string(e0.t["X2K3/4"]),
         location: i,
         details: a,
@@ -1051,9 +1051,9 @@ function n_(e) {
         u = (0, d.bG)([f.A], () => f.A.can(H.xBc.CONNECT, n)),
         c =
             ((t = n.id),
-            (0, d.bG)([t6.default, t5.A, t2.Ay], () => {
-                let e = t6.default.getId();
-                return t5.A.getVoiceChannelId() === t ? t2.Ay.getPermissionsForUser(e, t) : null;
+            (0, d.bG)([t3.default, t5.A, t8.Ay], () => {
+                let e = t3.default.getId();
+                return t5.A.getVoiceChannelId() === t ? t8.Ay.getPermissionsForUser(e, t) : null;
             }, [t])),
         A = e0.intl.string(e0.t.VJlc0S);
     switch (s) {
@@ -1068,7 +1068,7 @@ function n_(e) {
             A = e0.intl.string(e0.t.wBoE6L);
             break;
         default:
-            (0, t8.xb)(s);
+            (0, t2.xb)(s);
     }
     return null == a
         ? null
@@ -1079,11 +1079,11 @@ function n_(e) {
                             className: tF()(nr.fI, nr.pF),
                             children: [
                                 (0, l.jsx)(t$.Ay, { guildId: a, users: o, showUserPopout: !0, size: t$.DN.SIZE_16 }),
-                                (0, l.jsx)(e2.E, {
+                                (0, l.jsx)(e8.E, {
                                     color: "none",
                                     variant: "text-xs/normal",
                                     className: nr.c8,
-                                    children: (0, t3.c)(a, o, n?.id, i.length),
+                                    children: (0, t6.c)(a, o, n?.id, i.length),
                                 }),
                             ],
                         })
@@ -1428,13 +1428,13 @@ let nQ = new n$(N.h),
         { type: H.n5X.LINKED_ROLES_ADMIN, dismissibleContentType: u.M.LINKED_ROLE_ADMIN_GUILD },
         { type: H.n5X.GAME_CLAIM, dismissibleContentType: u.M.GAME_CLAIM_COACHMARK },
     ],
-    n1 = n0.map((e) => e.store).filter(t8.Vq),
-    n3 = new Set([u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, u.M.CHANNEL_NOTICE_GUILD_BANNER]);
-function n6(e) {
+    n1 = n0.map((e) => e.store).filter(t2.Vq),
+    n6 = new Set([u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, u.M.CHANNEL_NOTICE_GUILD_BANNER]);
+function n3(e) {
     e.stopPropagation();
 }
 let n5 = [];
-function n2(e) {
+function n8(e) {
     var t, n;
     let i,
         s,
@@ -1469,7 +1469,7 @@ function n2(e) {
                     : n0
                           .filter((e) => {
                               let { dismissibleContentType: t, store: n } = e;
-                              return !0 === n?.channelNoticePredicate(A, E) && !n3.has(t);
+                              return !0 === n?.channelNoticePredicate(A, E) && !n6.has(t);
                           })
                           .map((e) => e.dismissibleContentType),
             [A, E, I],
@@ -1501,9 +1501,9 @@ function n2(e) {
                     return null;
             }
         })();
-    return null == O ? null : (0, l.jsx)("div", { onContextMenu: n6, children: O });
+    return null == O ? null : (0, l.jsx)("div", { onContextMenu: n3, children: O });
 }
-let n8 = (e) => {
+let n2 = (e) => {
     let { guild: t } = e;
     switch (ee(t)) {
         case J.ENABLE_PUBLIC_GUILD:
@@ -1521,10 +1521,10 @@ let n8 = (e) => {
         case J.HUB_STUDY_ROOM:
             return (0, l.jsx)(nL, { guild: t });
     }
-    return nb.P.isDisallowPopupsSet() ? null : (0, l.jsx)(n2, { guild: e.guild });
+    return nb.P.isDisallowPopupsSet() ? null : (0, l.jsx)(n8, { guild: e.guild });
 };
 var n4 = n(532233);
-function n9(e) {
+function n7(e) {
     let { guild: t, setHasSubheader: n } = e,
         i = r.useRef(null);
     return (
@@ -1532,10 +1532,10 @@ function n9(e) {
             let e = i.current;
             null != e && n(e.childNodes.length > 0);
         }),
-        (0, l.jsx)("div", { className: n4.k, ref: i, children: (0, l.jsx)(n8, { guild: t }) })
+        (0, l.jsx)("div", { className: n4.k, ref: i, children: (0, l.jsx)(n2, { guild: t }) })
     );
 }
-var n7 = n(66933),
+var n9 = n(66933),
     ie = n(846930),
     it = n(153822);
 let ii = "server-settings",
@@ -1618,12 +1618,11 @@ class il extends r.PureComponent {
                     n.e("78925"),
                     n.e("51533"),
                     n.e("56495"),
-                    n.e("56424"),
+                    n.e("87497"),
                     n.e("78220"),
-                    n.e("70339"),
-                    n.e("67957"),
-                    n.e("78900"),
-                    n.e("10804"),
+                    n.e("9659"),
+                    n.e("60584"),
+                    n.e("38609"),
                     n.e("99961"),
                     n.e("31688"),
                     n.e("77083"),
@@ -1631,33 +1630,33 @@ class il extends r.PureComponent {
                     n.e("64509"),
                     n.e("96330"),
                     n.e("84153"),
-                    n.e("12289"),
+                    n.e("6026"),
                     n.e("21838"),
-                    n.e("34533"),
+                    n.e("48307"),
+                    n.e("87521"),
+                    n.e("741"),
                     n.e("18090"),
-                    n.e("98443"),
-                    n.e("333"),
-                    n.e("41590"),
+                    n.e("503"),
+                    n.e("97487"),
                     n.e("48100"),
-                    n.e("31967"),
-                    n.e("83928"),
-                    n.e("92702"),
-                    n.e("53727"),
-                    n.e("24716"),
+                    n.e("98111"),
+                    n.e("7239"),
                     n.e("76032"),
                     n.e("52519"),
                     n.e("76825"),
                     n.e("59204"),
-                    n.e("10310"),
-                    n.e("57006"),
-                    n.e("59329"),
+                    n.e("83186"),
+                    n.e("81175"),
                     n.e("60389"),
-                    n.e("95311"),
-                    n.e("88712"),
+                    n.e("12257"),
+                    n.e("83185"),
+                    n.e("37261"),
+                    n.e("61964"),
+                    n.e("17133"),
                     n.e("87845"),
-                    n.e("35636"),
+                    n.e("45317"),
                     n.e("30402"),
-                    n.e("24959"),
+                    n.e("43703"),
                     n.e("98854"),
                     n.e("61175"),
                     n.e("72318"),
@@ -1681,12 +1680,10 @@ class il extends r.PureComponent {
                     n.e("60235"),
                     n.e("64827"),
                     n.e("7167"),
-                    n.e("30938"),
                     n.e("96643"),
                     n.e("94493"),
                     n.e("92789"),
                     n.e("47834"),
-                    n.e("74016"),
                     n.e("19551"),
                     n.e("84569"),
                     n.e("62156"),
@@ -2136,7 +2133,7 @@ class il extends r.PureComponent {
             children: [
                 null != e && this.renderGuildHeader(this.state.hasGuildSubheader),
                 null != e &&
-                    (0, l.jsx)(n9, { guild: e, setHasSubheader: (e) => this.setState({ hasGuildSubheader: e }) }),
+                    (0, l.jsx)(n7, { guild: e, setHasSubheader: (e) => this.setState({ hasGuildSubheader: e }) }),
                 this.renderChannelList(),
             ],
         });
@@ -2257,30 +2254,30 @@ function ir(e) {
         e$ = (0, d.bG)([eK.A], () => eK.A.getChannelId()),
         eQ = (0, d.bG)([eF.A], () => eF.A.desyncedVoiceStatesCount),
         eJ = (0, ey.A)(L);
-    n7.A.useConfig({ guildId: L, location: "guild_sidebar" });
+    n9.A.useConfig({ guildId: L, location: "guild_sidebar" });
     let e0 = (0, ef.C$)(L, "GuildSidebar"),
         e1 = (0, d.bG)([X.A], () => X.A.getGuild(L)?.features.has(H.GuildFeatures.GAME_SERVERS) ?? !1, [L]),
-        e3 = e0 && !e1 && !1 === eJ,
-        e6 = (0, eG.J)("GuildSidebar"),
+        e6 = e0 && !e1 && !1 === eJ,
+        e3 = (0, eG.J)("GuildSidebar"),
         e5 = (0, ex.S)(L, "GuildSidebar"),
-        e2 = e0 && !e1 && e5 && !1 === eJ,
-        e8 = (0, eH.A)(),
+        e8 = e0 && !e1 && e5 && !1 === eJ,
+        e2 = (0, eH.A)(),
         e4 = (0, eb.A)(L),
-        e9 = !1 === eJ && e8 && null != e4,
-        e7 = (0, eP.A)(L),
-        te = !1 === eJ && e8 && null != e7,
+        e7 = !1 === eJ && e2 && null != e4,
+        e9 = (0, eP.A)(L),
+        te = !1 === eJ && e2 && null != e9,
         tt = [];
     ep && tt.push(u.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
         eT && tt.push(u.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
         eM && tt.push(u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
         !1 === eJ && tt.push(u.M.GUILD_POWERUP_PERKS_COACHMARK),
-        e3 && tt.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
-        e2 && tt.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
+        e6 && tt.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
+        e8 && tt.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
         eq && tt.push(u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
     let [tn, ti] = (0, ei.kn)(tt, eE.m.GUILD_HEADER_TOOLTIPS),
-        [ts, tl] = (0, eD.vB)(e6 && e0 && !1 === eJ && !(0, el.ai)(L), eE.m.GUILD_HEADER_TOOLTIPS),
+        [ts, tl] = (0, eD.vB)(e3 && e0 && !1 === eJ && !(0, el.ai)(L), eE.m.GUILD_HEADER_TOOLTIPS),
         [tr, ta] = (0, ei.D8)(
-            e9 ? u.M.BOOST_TO_UNLOCK_COACHMARK : null,
+            e7 ? u.M.BOOST_TO_UNLOCK_COACHMARK : null,
             L,
             { cooldownDurationMs: eU.bW, numTimesToRecur: 5 },
             eE.m.GUILD_HEADER_TOOLTIPS,
@@ -2299,10 +2296,10 @@ function ir(e) {
                       ? { contentType: ts, data: null, markAsDismissed: tl }
                       : tr === u.M.BOOST_TO_UNLOCK_COACHMARK && null != e4
                         ? { contentType: tr, data: { featuredPowerup: e4 }, markAsDismissed: ta }
-                        : to === u.M.EXPIRING_POWERUP_COACHMARK && null != e7
-                          ? { contentType: to, data: { featuredExpiringPowerup: e7 }, markAsDismissed: td }
+                        : to === u.M.EXPIRING_POWERUP_COACHMARK && null != e9
+                          ? { contentType: to, data: { featuredExpiringPowerup: e9 }, markAsDismissed: td }
                           : null,
-            [tn, ts, tr, to, e4, e7, ti, tl, ta, td],
+            [tn, ts, tr, to, e4, e9, ti, tl, ta, td],
         );
     return (0, l.jsx)(il, {
         guildId: L,

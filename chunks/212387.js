@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $: () => V, A: () => B });
+n.d(t, { $: () => B, A: () => H });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -18,30 +18,31 @@ var i = n(627968),
     g = n(661531),
     A = n(775602),
     I = n(139136),
-    T = n(474012),
-    S = n(929283),
-    y = n(245068),
-    N = n(761365),
-    v = n(366523),
-    C = n(403362),
-    R = n(652215),
-    O = n(778712),
-    b = n(997990);
-function D(e) {
+    T = n(665411),
+    S = n(474012),
+    y = n(929283),
+    N = n(245068),
+    v = n(761365),
+    C = n(366523),
+    R = n(403362),
+    O = n(652215),
+    b = n(778712),
+    D = n(997990);
+function L(e) {
     let { sku: t, isFocused: n, user: s } = e,
-        a = r.useMemo(() => (0, T.T)(t), [t]);
+        a = r.useMemo(() => (0, S.T)(t), [t]);
     if (null == a) return null;
     if ("bundle" === a.type)
         return (0, i.jsx)("div", {
-            className: b.hT,
-            children: (0, i.jsx)(y.X, { product: a, isHighlighted: n, user: s }),
+            className: D.hT,
+            children: (0, i.jsx)(N.X, { product: a, isHighlighted: n, user: s }),
         });
     switch (a.item.type) {
         case f.R.AVATAR_DECORATION:
-            return (0, i.jsx)(S.i, { user: s, avatarSize: O._3.SIZE_80, item: a.item, isHighlighted: n });
+            return (0, i.jsx)(y.i, { user: s, avatarSize: b._3.SIZE_80, item: a.item, isHighlighted: n });
         case f.R.PROFILE_EFFECT:
             return (0, i.jsx)("div", {
-                className: b.xC,
+                className: D.xC,
                 children: (0, i.jsx)(I.A, {
                     skuId: a.item.skuId,
                     isHighlighted: n,
@@ -51,81 +52,86 @@ function D(e) {
             });
         case f.R.NAMEPLATE:
             return (0, i.jsx)("div", {
-                className: b.M4,
+                className: D.M4,
                 children: (0, i.jsx)("div", {
-                    className: b.N1,
-                    children: (0, i.jsx)(N.A, { user: s, nameplate: a.item, isHighlighted: n, size: "small" }),
+                    className: D.N1,
+                    children: (0, i.jsx)(v.A, { user: s, nameplate: a.item, isHighlighted: n, size: "small" }),
                 }),
+            });
+        case f.R.PROFILE_FRAME:
+            return (0, i.jsx)("div", {
+                className: D.pI,
+                children: (0, i.jsx)(T.A, { frame: a.item, transparentBackground: !0 }),
             });
         default:
             return null;
     }
 }
-function L(e) {
+function w(e) {
     let { sku: t, isFocused: n } = e;
-    return (0, i.jsx)(v.e, {
+    return (0, i.jsx)(C.e, {
         shape: "custom",
-        containerClassName: a()(b.JS, n && b.P3),
-        backgroundImageClassName: b.m1,
-        foregroundImageClassName: b.aF,
+        containerClassName: a()(D.JS, n && D.P3),
+        backgroundImageClassName: D.m1,
+        foregroundImageClassName: D.aF,
         sku: t,
     });
 }
-function w(e) {
+function M(e) {
     let { eventTargetRef: t, assetClassName: n, disableHover: s } = e,
         o = (0, c.bG)([A.A], () => A.A.useReducedMotion),
         { theme: l, saturation: u } = (0, p.wR)(),
         { highContrastModeEnabled: d } = r.useContext(E.C),
         [_, h, f, I] = g.A.colors.TEXT_DEFAULT.resolve({ theme: l, saturation: u, highContrastModeEnabled: d }).rgba();
     return (0, i.jsx)("div", {
-        className: b.yv,
+        className: D.yv,
         children: (0, i.jsx)(m.u, {
-            className: a()(b.MO, n),
+            className: a()(D.MO, n),
             dataBinding: { reducedMotion: s || o, logoColor: { r: _, g: h, b: f, a: I } },
             eventTargetRef: t,
             fit: "contain",
         }),
     });
 }
-function M(e) {
+function P(e) {
     let { sku: t, isFocused: n, user: r, eventTargetRef: s, assetClassName: a, disableHover: o } = e;
     switch (t.productLine) {
-        case R.EZt.COLLECTIBLES:
-            return (0, i.jsx)(D, { sku: t, isFocused: n, user: r });
-        case R.EZt.SOCIAL_LAYER_GAME_ITEM:
-            return (0, i.jsx)(L, { sku: t, isFocused: n });
-        case R.EZt.APPLICATION:
-        case R.EZt.BOOST:
-        case R.EZt.GUILD_ROLE:
+        case O.EZt.COLLECTIBLES:
+            return (0, i.jsx)(L, { sku: t, isFocused: n, user: r });
+        case O.EZt.SOCIAL_LAYER_GAME_ITEM:
+            return (0, i.jsx)(w, { sku: t, isFocused: n });
+        case O.EZt.APPLICATION:
+        case O.EZt.BOOST:
+        case O.EZt.GUILD_ROLE:
             return null;
-        case R.EZt.PREMIUM:
-            return (0, i.jsx)(w, { eventTargetRef: s, assetClassName: a, disableHover: o });
-        case R.EZt.GUILD_PRODUCT:
+        case O.EZt.PREMIUM:
+            return (0, i.jsx)(M, { eventTargetRef: s, assetClassName: a, disableHover: o });
+        case O.EZt.GUILD_PRODUCT:
             return null;
         default:
-            (0, C.xb)(t.productLine);
+            (0, R.xb)(t.productLine);
     }
 }
-var P = n(661492),
-    x = n(627001),
-    k = n(375708),
-    U = n(213494),
-    G = n(476324);
-function F(e) {
+var x = n(661492),
+    k = n(627001),
+    U = n(375708),
+    G = n(213494),
+    F = n(476324);
+function V(e) {
     return { width: e.size, height: e.size };
 }
-function V(e) {
+function B(e) {
     let { spec: t, cardStyle: n } = e;
     return (0, i.jsx)("div", {
-        className: a()(U.Nr, n),
-        style: F(t),
+        className: a()(G.Nr, n),
+        style: V(t),
         children: (0, i.jsx)("div", {
-            className: U.ho,
-            children: (0, i.jsx)(d.eu, { src: G, size: O._3.SIZE_80, "aria-label": k.intl.string(k.t.lqaIxI) }),
+            className: G.ho,
+            children: (0, i.jsx)(d.eu, { src: F, size: b._3.SIZE_80, "aria-label": U.intl.string(U.t.lqaIxI) }),
         }),
     });
 }
-function B(e) {
+function H(e) {
     let {
             sku: t,
             user: n,
@@ -153,15 +159,15 @@ function B(e) {
         }, [y]),
         (0, i.jsxs)(o.s, {
             ref: S,
-            className: a()(U.Nr, f),
+            className: a()(G.Nr, f),
             onClick: I,
             "aria-label": T,
-            style: F(s),
+            style: V(s),
             children: [
-                (0, i.jsx)(l.A, { children: (0, i.jsx)(u.H, { children: (0, P.TC)(t) }) }),
+                (0, i.jsx)(l.A, { children: (0, i.jsx)(u.H, { children: (0, x.TC)(t) }) }),
                 (0, i.jsx)("div", {
-                    className: a()(U.ev, p),
-                    children: (0, i.jsx)(M, {
+                    className: a()(G.ev, p),
+                    children: (0, i.jsx)(P, {
                         sku: t,
                         isFocused: !m && y,
                         user: n,
@@ -170,7 +176,7 @@ function B(e) {
                         disableHover: g,
                     }),
                 }),
-                (0, i.jsx)(x.P, { spec: s, application: v }),
+                (0, i.jsx)(k.P, { spec: s, application: v }),
                 d,
             ],
         })

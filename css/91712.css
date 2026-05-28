@@ -1,0 +1,222 @@
+.root__6981d {
+    height: 100%
+}
+
+.root__6981d,
+.tileWrapper__6981d {
+    position: relative;
+    width: 100%
+}
+
+.videoFrame__6981d {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    position: relative
+}
+
+.videoWrapper__6981d {
+    z-index: 1
+}
+
+.actionRow__6981d {
+    bottom: -8px;
+    display: flex;
+    inset-inline-start: 50%;
+    position: absolute;
+    transform: translateX(-50%) translateY(100%);
+    transition: opacity .2s ease-in-out;
+    z-index: 10
+}
+
+.actionRow__6981d.idle__6981d {
+    opacity: 0
+}
+
+.viewAllButton__6981d {
+    background: var(--primary-630);
+    border-radius: 48px;
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    margin-inline-start: 8px;
+    padding: 4px 8px
+}
+
+.viewAllButton__6981d:hover {
+    background: var(--primary-700)
+}
+
+.viewAllButtonInner__6981d {
+    align-items: center;
+    display: flex;
+    white-space: nowrap
+}
+
+.buttonIcon__6981d {
+    color: var(--white);
+    margin-inline-end: 4px
+}
+
+.participantsWrapperAnimated__6981d {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    inset-inline: 8px;
+    bottom: 0;
+    overflow: hidden;
+    position: absolute
+}
+
+.gradientBackground__41626 {
+    background-color: var(--bg-animated-gradient-background-not-black);
+    filter: blur(200px);
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.gradientBackground__41626>div {
+    border-radius: 50%;
+    position: absolute;
+    transform-origin: center center
+}
+
+.leftDarkEllipse__41626 {
+    background: var(--bg-animated-gradient-background-indigo-2);
+    height: 88.5%;
+    inset-inline-start: -49.5%;
+    opacity: 1;
+    top: -44.2%;
+    transform: scaleX(1) scaleY(1.25);
+    width: 99%
+}
+
+@keyframes leftDarkEllipse__41626 {
+
+    0%,
+    to {
+        opacity: 1;
+        transform: scaleX(1) scaleY(1.25)
+    }
+
+    55% {
+        opacity: .75;
+        transform: scale(.82)
+    }
+}
+
+.leftLightEllipse__41626 {
+    background: var(--blurple-49);
+    height: 23.5%;
+    inset-inline-start: -22.5%;
+    opacity: 1;
+    top: -11.8%;
+    transform: scaleX(1) scaleY(1.25);
+    width: 45%
+}
+
+@keyframes leftLightEllipse__41626 {
+
+    0%,
+    to {
+        opacity: .6;
+        transform: scaleX(1) scaleY(1.25)
+    }
+
+    55% {
+        opacity: .45;
+        transform: scale(.82)
+    }
+}
+
+.rightDarkEllipse__41626 {
+    background: var(--bg-animated-gradient-background-indigo-2);
+    height: 88.5%;
+    inset-inline-end: -50%;
+    opacity: .75;
+    top: -44.2%;
+    transform: scale(.82);
+    width: 99%
+}
+
+@keyframes rightDarkEllipse__41626 {
+
+    0%,
+    to {
+        opacity: .75;
+        transform: scale(.82)
+    }
+
+    55% {
+        opacity: .7;
+        transform: scaleX(1) scaleY(1.25)
+    }
+}
+
+.rightLightEllipse__41626 {
+    background: var(--blurple-49);
+    height: 23.5%;
+    inset-inline-end: -22.5%;
+    opacity: .45;
+    top: -11.7%;
+    transform: scale(.82);
+    width: 45%
+}
+
+@keyframes rightLightEllipse__41626 {
+
+    0%,
+    to {
+        opacity: .45;
+        transform: scale(.82)
+    }
+
+    55% {
+        opacity: .7;
+        transform: scaleX(1) scaleY(1.25)
+    }
+}
+
+.centerEllipse__41626 {
+    background: var(--blurple-49);
+    height: 100%;
+    opacity: .45;
+    top: -50%;
+    transform: translate(50%) scale(.36);
+    width: 100%
+}
+
+@keyframes centerEllipse__41626 {
+
+    0%,
+    to {
+        opacity: .45;
+        transform: scale(.36)
+    }
+
+    55% {
+        opacity: .6;
+        transform: scaleX(.7) scaleY(.3)
+    }
+}
+
+.full-motion .leftDarkEllipse__41626 {
+    animation: leftDarkEllipse__41626 4.5s ease-in-out infinite
+}
+
+.full-motion .leftLightEllipse__41626 {
+    animation: leftLightEllipse__41626 4.5s ease-in-out infinite
+}
+
+.full-motion .rightDarkEllipse__41626 {
+    animation: rightDarkEllipse__41626 4.5s ease-in-out infinite
+}
+
+.full-motion .rightLightEllipse__41626 {
+    animation: rightLightEllipse__41626 4.5s ease-in-out infinite
+}
+
+.full-motion .centerEllipse__41626 {
+    animation: centerEllipse__41626 4.5s ease-in-out infinite
+}

@@ -3,4 +3,6 @@ e.exports = {
     HX: "profileContainer_c9a5b2",
     wt: "sampleProfile_c9a5b2",
     EX: "small_c9a5b2",
+    GA: "transparentSampleProfile_c9a5b2",
+    tL: "backLayerMask_c9a5b2",
 };
