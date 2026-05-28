@@ -538,7 +538,7 @@ function e5(e) {
 }
 var e8 = n(491182),
     e6 = n(860227),
-    e9 = n(112758),
+    e9 = n(837528),
     te = n(516287),
     tt = n(843626),
     tn = n(294454),
@@ -1461,7 +1461,7 @@ let nH = o.memo(function (e) {
             [h],
         ),
         x = (0, e9.r4)(h?.author.id, l.id),
-        E = (0, e9.Ck)(t, h),
+        E = (0, e9.Ck)(t, n, l),
         S = (0, e9.H9)(h, l, s, c),
         _ = (0, e9.Ge)(a, c),
         I = o.useCallback(() => {

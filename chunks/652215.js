@@ -4486,6 +4486,7 @@ var rD =
         (ex.MESSAGE_ALSO_SEND_TO_CHANNEL_SENT = "message_also_send_to_channel_sent"),
         (ex.MESSAGE_ALSO_SEND_TO_CHANNEL_TOGGLED = "message_also_send_to_channel_toggled"),
         (ex.REPLY_MESSAGE_STARTED = "reply_message_started"),
+        (ex.REPLIED_MESSAGE_CLICKED = "replied_message_clicked"),
         (ex.MESSAGE_SHORTCUT_ACTION_SENT = "message_shortcut_action_sent"),
         (ex.FORUM_CHANNEL_POSTS_SORTED = "forum_channel_posts_sorted"),
         (ex.FORUM_CHANNEL_LAYOUT_UPDATED = "forum_channel_layout_updated"),
