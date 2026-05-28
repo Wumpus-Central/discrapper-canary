@@ -383,15 +383,15 @@ function eS(e) {
                 B = {
                     onClick: (t) => {
                         b({ action: "PRESS_BADGE" }), (0, ef.R9)({ badge: e.id, analyticsLocations: R, ...O });
-                        let i = e.id.startsWith("staff") && !_;
-                        if (G && !i) {
-                            t.preventDefault();
-                            let n = a?.userId != null ? u.default.getUser(a.userId) : null;
-                            (0, P._)({
-                                initialBadgeId: (0, L.P3)(e.id),
-                                targetUserId: a?.userId,
-                                targetUsername: n?.globalName ?? n?.username,
-                            });
+                        let i = e.id.startsWith("staff") && !_,
+                            r = a?.userId != null ? u.default.getUser(a.userId) : null;
+                        if (G && !i && r?.bot !== !0) {
+                            t.preventDefault(),
+                                (0, P._)({
+                                    initialBadgeId: (0, L.P3)(e.id),
+                                    targetUserId: a?.userId,
+                                    targetUsername: r?.globalName ?? r?.username,
+                                });
                             return;
                         }
                         if (n) {
@@ -426,8 +426,8 @@ function eS(e) {
                             }
                             return (0, ee.D)({ analyticsLocations: R, displayProfile: a }), void o?.();
                         }
-                        let r = null != e.link ? (0, A.default)(e.link, { analyticsLocations: R }) : null;
-                        if (null != r) return o?.(), r(t);
+                        let s = null != e.link ? (0, A.default)(e.link, { analyticsLocations: R }) : null;
+                        if (null != s) return o?.(), s(t);
                     },
                     onMouseEnter: () => {
                         "quest_completed" === e.id &&
