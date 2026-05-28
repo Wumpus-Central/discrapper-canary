@@ -17,8 +17,8 @@ function y() {
     return "u" < typeof document || "visible" === document.visibilityState;
 }
 var A = s(854378),
-    g = s(414121),
-    f =
+    f = s(414121),
+    g =
         (((n = {})[(n.INITIALIZING = 0)] = "INITIALIZING"),
         (n[(n.PENDING_REMOTE_INIT = 1)] = "PENDING_REMOTE_INIT"),
         (n[(n.PENDING_TICKET = 2)] = "PENDING_TICKET"),
@@ -34,12 +34,12 @@ var A = s(854378),
 s(393431), s(532706), s(42231), s(232424), s(949626), s(767709), s(65162), s(508300);
 var _ = s(284009),
     j = s.n(_),
-    b = s(889227);
-async function T(e, t) {
+    T = s(889227);
+async function b(e, t) {
     let s = (t = await G.decryptEncodedCiphertext(e, t)).match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
     if (null == s) throw Error("Invalid encoded user record.");
     let [, n, r, a, i] = s;
-    return new b.A({ id: n, discriminator: r, avatar: "0" === a ? null : a, username: i });
+    return new T.A({ id: n, discriminator: r, avatar: "0" === a ? null : a, username: i });
 }
 function k(e) {
     return btoa(String.fromCharCode(...new Uint8Array(e)))
@@ -104,37 +104,45 @@ let V = s(906118);
 function Z(e) {
     let { text: t = "" } = e,
         [s, n] = a.useState(!1);
-    a.useEffect(() => {
-        let e = new Image();
-        (e.src = V), (e.onload = () => n(!0)), (e.onerror = () => n(!0));
-    }, [V]),
+    return (
+        a.useEffect(() => {
+            let e = new Image();
+            (e.src = V), (e.onload = () => n(!0)), (e.onerror = () => n(!0));
+        }, [V]),
         a.useEffect(() => {
             s && l.O.announce(B.intl.string(B.t.j2p125));
-        }, [s]);
-    let i = "" !== t && s;
-    return (0, r.jsx)("div", {
-        className: H.Ac,
-        role: i ? "img" : void 0,
-        "aria-label": i ? B.intl.string(B.t.SzYj9v) : void 0,
-        tabIndex: i ? 0 : void 0,
-        children: i
-            ? (0, r.jsxs)(r.Fragment, {
-                  children: [
-                      (0, r.jsx)(g.Ay, { className: H.JB, size: 160, text: t }),
-                      (0, r.jsx)("div", {
+        }, [s]),
+        (0, r.jsx)("div", {
+            className: H.Ac,
+            children:
+                "" !== t && s
+                    ? (0, r.jsxs)(r.Fragment, {
+                          children: [
+                              (0, r.jsx)(f.Ay, {
+                                  className: H.JB,
+                                  size: 160,
+                                  text: t,
+                                  ariaLabel: B.intl.string(B.t.SzYj9v),
+                              }),
+                              (0, r.jsx)("div", {
+                                  className: H.R6,
+                                  "aria-hidden": !0,
+                                  children: (0, r.jsx)("img", { src: V, alt: "" }),
+                              }),
+                          ],
+                      })
+                    : (0, r.jsx)("div", {
                           className: H.R6,
-                          "aria-hidden": !0,
-                          children: (0, r.jsx)("img", { src: V, alt: "" }),
+                          "aria-label": B.intl.string(B.t.BUGkVF),
+                          "aria-busy": !0,
+                          children: (0, r.jsx)(o.y, {
+                              className: H.JB,
+                              type: o.y.Type.WANDERING_CUBES,
+                              "aria-hidden": !0,
+                          }),
                       }),
-                  ],
-              })
-            : (0, r.jsx)("div", {
-                  className: H.R6,
-                  "aria-label": B.intl.string(B.t.BUGkVF),
-                  "aria-busy": !0,
-                  children: (0, r.jsx)(o.y, { className: H.JB, type: o.y.Type.WANDERING_CUBES, "aria-hidden": !0 }),
-              }),
-    });
+        })
+    );
 }
 let Q = (e) => {
     let { className: t, children: s } = e;
@@ -150,12 +158,12 @@ function J(e) {
         isMultiAccount: l,
     } = e;
     switch (t.step) {
-        case f.INITIALIZING:
-        case f.PENDING_REMOTE_INIT:
+        case g.INITIALIZING:
+        case g.PENDING_REMOTE_INIT:
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(Z, {
-                        text: t.step === f.PENDING_REMOTE_INIT ? `https://discord.com/ra/${t.fingerprint}` : "",
+                        text: t.step === g.PENDING_REMOTE_INIT ? `https://discord.com/ra/${t.fingerprint}` : "",
                     }),
                     (0, r.jsx)(A.hE, { className: z.QB, children: B.intl.string(B.t.UPiHaL) }),
                     null != n
@@ -185,7 +193,7 @@ function J(e) {
                     }),
                 ],
             });
-        case f.PENDING_TICKET: {
+        case g.PENDING_TICKET: {
             let { user: e } = t;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -209,8 +217,8 @@ function J(e) {
                 ],
             });
         }
-        case f.PENDING_LOGIN:
-        case f.FINISH:
+        case g.PENDING_LOGIN:
+        case g.FINISH:
             return (0, r.jsx)(o.y, { type: o.y.Type.WANDERING_CUBES });
     }
 }
@@ -221,11 +229,11 @@ function q(e) {
             let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                 [n, r] = a.useState(0),
                 [i, l] = a.useState(!1),
-                [o, c] = a.useState({ step: f.INITIALIZING }),
+                [o, c] = a.useState({ step: g.INITIALIZING }),
                 d = a.useRef(null),
                 u = a.useMemo(() => new w.A(1500, 3e4), []),
                 h = (0, x.A)(() => {
-                    c({ step: f.INITIALIZING }),
+                    c({ step: g.INITIALIZING }),
                         t
                             ? r((e) => e + 1)
                             : (D.info(
@@ -235,14 +243,14 @@ function q(e) {
                 }),
                 p = a.useCallback(() => {
                     D.error("Could not complete Remote Auth login, trying to restart with a new Remote Auth session."),
-                        c({ step: f.INITIALIZING }),
+                        c({ step: g.INITIALIZING }),
                         u.pending || u.fail(h);
                 }, [h, u]);
             return (
                 a.useEffect(() => {
                     t &&
                         i &&
-                        o.step === f.INITIALIZING &&
+                        o.step === g.INITIALIZING &&
                         (D.info("reconnecting, now that document is visible"), l(!1), r((e) => e + 1));
                 }, [o, t, i, l]),
                 a.useEffect(() => {
@@ -262,7 +270,7 @@ function q(e) {
                         if (null != l) return l;
                         throw Error("No key pair set");
                     }
-                    let g = () => {
+                    let f = () => {
                             y
                                 ? ((y = !1), i.send(JSON.stringify({ op: "heartbeat" })))
                                 : (r("heartbeat timeout, reconnecting."), i.close(), p());
@@ -282,13 +290,13 @@ function q(e) {
                                     let e = await G.publicKeyFingerprint(A());
                                     if (e !== l.fingerprint) throw Error(`bad fingerprint ${e} !== ${l.fingerprint}`);
                                     r("handshake complete awaiting remote auth."),
-                                        c({ step: f.PENDING_REMOTE_INIT, fingerprint: e });
+                                        c({ step: g.PENDING_REMOTE_INIT, fingerprint: e });
                                     return;
                                 }
                                 case "pending_login": {
                                     let t = l.ticket;
                                     if (null == t) return void p();
-                                    c({ step: f.PENDING_LOGIN, ticket: t }),
+                                    c({ step: g.PENDING_LOGIN, ticket: t }),
                                         I.Bo.post({
                                             url: R.Rsh.REMOTE_AUTH_LOGIN,
                                             body: { ticket: t },
@@ -311,8 +319,8 @@ function q(e) {
                                     S._.dispatch(R.jej.WAVE_EMPHASIZE),
                                         r("remote auth handshake started, awaiting ticket/cancel.");
                                     let e = l.encrypted_user_payload,
-                                        t = await T(A(), e);
-                                    c({ step: f.PENDING_TICKET, user: t });
+                                        t = await b(A(), e);
+                                    c({ step: g.PENDING_TICKET, user: t });
                                     return;
                                 }
                                 case "cancel":
@@ -323,7 +331,7 @@ function q(e) {
                                     let e = l.heartbeat_interval;
                                     E = setTimeout(
                                         () => {
-                                            (E = null), g(), (m = setInterval(g, e));
+                                            (E = null), f(), (m = setInterval(f, e));
                                         },
                                         Math.floor(e * Math.random()),
                                     );
@@ -393,12 +401,12 @@ function q(e) {
         ),
         d = (function (e) {
             switch (e) {
-                case f.INITIALIZING:
-                case f.PENDING_REMOTE_INIT:
+                case g.INITIALIZING:
+                case g.PENDING_REMOTE_INIT:
                     return 0;
-                case f.PENDING_TICKET:
-                case f.PENDING_LOGIN:
-                case f.FINISH:
+                case g.PENDING_TICKET:
+                case g.PENDING_LOGIN:
+                case g.FINISH:
                     return 1;
             }
         })(o.step);
