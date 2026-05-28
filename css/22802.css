@@ -128,6 +128,19 @@
     overflow: visible
 }
 
+.announcer_b88801 {
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    pointer-events: none;
+    white-space: nowrap
+}
+
 .activityInviteEducation_b88801 {
     bottom: unset;
     margin-inline-start: -8px;
