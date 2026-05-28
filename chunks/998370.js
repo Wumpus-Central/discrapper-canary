@@ -1,0 +1,7 @@
+s.d(t, { J: () => i });
+let i = (0, s(945810).mj)({
+    name: "2026-04-gifting-badge",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});

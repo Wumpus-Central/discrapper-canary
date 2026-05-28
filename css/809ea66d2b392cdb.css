@@ -1,0 +1,118 @@
+.container_b39700 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%
+}
+
+.barRow_b39700 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.progressBarTrack_b39700 {
+    background-color: var(--background-mod-normal);
+    flex: 1;
+    overflow: hidden
+}
+
+.progressBarFill_b39700,
+.progressBarTrack_b39700 {
+    border-radius: var(--radius-round);
+    height: 6px
+}
+
+.progressBarFill_b39700 {
+    background-color: var(--brand-500)
+}
+
+.labels_b39700 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end
+}
+
+.tierIcon_b39700 {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.row_cda434 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.content_cda434 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0 8px
+}
+
+.progressBarTrack_cda434 {
+    background-color: var(--background-mod-normal);
+    overflow: hidden
+}
+
+.progressBarFill_cda434,
+.progressBarTrack_cda434 {
+    border-radius: var(--radius-round);
+    height: 6px
+}
+
+.progressBarFill_cda434 {
+    background-color: var(--brand-500)
+}
+
+.labels_cda434 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    min-height: 16px
+}
+
+.tierIcon_cda434 {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.content_e6ca69 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    padding: 32px
+}
+
+.progressRow_e6ca69 {
+    padding: 16px;
+    width: 100%
+}
+
+.messageSection_e6ca69 {
+    gap: 8px
+}
+
+.levelUpCopy_e6ca69,
+.messageSection_e6ca69 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%
+}
+
+.levelUpCopy_e6ca69 {
+    gap: 12px
+}
+
+.badgeIcon_e6ca69 {
+    -o-object-fit: contain;
+    object-fit: contain
+}
