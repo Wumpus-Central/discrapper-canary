@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { qM: () => h, Xd: () => E, Qh: () => m, AK: () => p, Zm: () => f, pz: () => g }), n(321073);
+n.d(t, { qM: () => f, Xd: () => E, Qh: () => m, AK: () => p, Zm: () => h, pz: () => g }), n(321073);
 var i = n(636537),
     r = n(228366),
     s = n(403362),
@@ -92,10 +92,10 @@ let l = [
 var c = n(788868),
     d = n(307731),
     _ = n(652215);
-function f(e) {
+function h(e) {
     r.h.dispatch({ type: "GUILD_POWERUPS_ACK_NOTIFICATION", guildId: e });
 }
-function h() {
+function f() {
     r.h.dispatch({ type: "GUILD_POWERUPS_RESET_NOTIFICATIONS" });
 }
 function p(e, t) {
@@ -133,8 +133,8 @@ function p(e, t) {
                         skuId: t.sku.id,
                         cost: i.boost_price,
                         dependencies: null != t.sku.dependent_sku_id ? [t.sku.dependent_sku_id] : [],
-                        animatedImageUrl: t.powerup_metadata?.animated_image_url,
-                        staticImageUrl: t.powerup_metadata?.static_image_url,
+                        animatedImageUrl: t.powerup_metadata?.animated_image_url ?? i.animated_image_url,
+                        staticImageUrl: t.powerup_metadata?.static_image_url ?? i.static_image_url,
                         storeRemovalDate: t.powerup_metadata?.store_removal_date,
                         deactivationCooldownPeriodDays: t.powerup_metadata?.deactivation_cooldown_period_days,
                     };
