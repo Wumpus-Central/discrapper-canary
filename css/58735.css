@@ -4276,6 +4276,11 @@
     width: 176px
 }
 
+.qrCodeContainer_e16417:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px
+}
+
 .qrCodeOverlay_e16417 {
     align-items: center;
     display: flex;
@@ -7275,11 +7280,4 @@
 
 .categorySubGroup_ed5050:empty {
     display: none
-}
-
-.phoneField_a0c54f {
-    display: grid;
-    gap: var(--space-8);
-    grid-template-columns: 5fr 6fr;
-    position: relative
 }
