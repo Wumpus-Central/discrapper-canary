@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { kJ: () => p, lg: () => h, Ay: () => E }), n(938796);
+n.d(t, { kJ: () => p, lg: () => f, Ay: () => E }), n(938796);
 var i,
     r = (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"), (i[(i.OUT_OF_PROCESS = 1)] = "OUT_OF_PROCESS"), i),
     s = n(136722),
@@ -19,8 +19,8 @@ class u extends a.A {
 var c = n(889227),
     d = n(360469),
     _ = n(705751);
-let f = { [d.I4]: 7, [d.qA]: 12 };
-function h(e) {
+let h = { [d.I4]: 7, [d.qA]: 12 };
+function f(e) {
     let t = { os: e.os, name: e.name };
     return (
         null != e.arguments && (t.arguments = e.arguments), null != e.is_launcher && (t.isLauncher = e.is_launcher), t
@@ -82,7 +82,7 @@ class p extends a.A {
         return ["1443349464290168976", "1443350165678198935", "1443033465766281327"].includes(this.id) &&
             ("1443350165678198935" !== this.id || t({ location: "ApplicationRecord" })) &&
             e({ location: "ApplicationRecord" })
-            ? "https://aes.sgp.pvp.net/providers/discord/link/v1"
+            ? "https://aes.sgp.pvp.net/providers/discord/link/v1?origin=Discord"
             : this._connectionEntrypointUrl;
     }
     getIconURL(e, t) {
@@ -194,7 +194,7 @@ class E extends p {
             (this.storeListingSkuId = e.storeListingSkuId),
             (this.guildId = e.guildId),
             (this.guild = e.guild),
-            (this.executables = (e.executables ?? []).map(h)),
+            (this.executables = (e.executables ?? []).map(f)),
             (this.hashes = e.hashes ?? []),
             (this.eulaId = e.eulaId),
             (this.slug = e.slug),
@@ -297,7 +297,7 @@ class E extends p {
         });
     }
     getMaxParticipants() {
-        return this.maxParticipants ?? f[this.id] ?? 0;
+        return this.maxParticipants ?? h[this.id] ?? 0;
     }
     supportsIntegrationTypes() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];

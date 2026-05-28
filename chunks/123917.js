@@ -28,13 +28,13 @@ let _ = {
         });
     },
 };
-var f = n(306173),
-    h = n(174459),
+var h = n(306173),
+    f = n(174459),
     p = n(652215);
 let E = class {
     static isBlockedDomain(e) {
-        let t = (0, f.xd)() ? (0, f.tR)(e) : null;
-        return "" !== t && null !== t && h.default.track(p.HAw.LINK_SECURITY_CHECK_BLOCKED, { blocked_domain: t }), t;
+        let t = (0, h.xd)() ? (0, h.tR)(e) : null;
+        return "" !== t && null !== t && f.default.track(p.HAw.LINK_SECURITY_CHECK_BLOCKED, { blocked_domain: t }), t;
     }
 };
 var m = n(343328),
@@ -59,6 +59,7 @@ let I = {
         ...new Set([
             "https://account.riotgames.com/#connected-accounts",
             "https://aes.sgp.pvp.net/providers/discord/link/v1",
+            "https://aes.sgp.pvp.net/providers/discord/link/v1?origin=Discord",
             "https://marvelrivals.com/discord",
             "https://wutheringwaves-dc.kurogames-global.com/",
             "https://id.embark.games/id/connected-platforms",
@@ -71,12 +72,12 @@ let I = {
         ]),
     ]);
 var S = n(788995),
-    N = n(432e3),
-    y = n(734057),
-    C = n(71393),
-    v = n(17928),
-    O = n(506774),
-    R = n(998218),
+    y = n(432e3),
+    N = n(734057),
+    v = n(71393),
+    C = n(17928),
+    R = n(506774),
+    O = n(998218),
     b = n(155078),
     D = n(272984);
 let L = "MaskedLinkStore",
@@ -93,17 +94,17 @@ function x(e) {
         case location.hostname:
             return !0;
         default:
-            return D.UN.includes(t) || R.A.isDiscordHostname(t) || w.has(t);
+            return D.UN.includes(t) || O.A.isDiscordHostname(t) || w.has(t);
     }
 }
-function U(e) {
+function k(e) {
     let t = (0, b.J)(e);
     return M.has(t);
 }
-class k extends v.Ay.Store {
+class U extends C.Ay.Store {
     static displayName = "MaskedLinkStore";
     initialize() {
-        let e = O.w.get(L) ?? {};
+        let e = R.w.get(L) ?? {};
         if (Array.isArray(e)) (w = new Set(null != e ? Array.from(e) : null)), (M = new Set());
         else {
             let { trustedDomains: t, trustedProtocols: n } = e;
@@ -114,19 +115,19 @@ class k extends v.Ay.Store {
         return x(e);
     }
     isTrustedProtocol(e) {
-        return U(e);
+        return k(e);
     }
 }
-let G = new k(a.h, {
+let G = new U(a.h, {
     MASKED_LINK_ADD_TRUSTED_DOMAIN: function (e) {
         let { url: t } = e;
         if (x(t)) return !1;
-        w.add((0, b.E)(t)), O.w.set(L, { trustedDomains: w, trustedProtocols: M });
+        w.add((0, b.E)(t)), R.w.set(L, { trustedDomains: w, trustedProtocols: M });
     },
     MASKED_LINK_ADD_TRUSTED_PROTOCOL: function (e) {
         let { url: t } = e;
-        if (U(t)) return !1;
-        M.add((0, b.J)(t)), O.w.set(L, { trustedDomains: w, trustedProtocols: M });
+        if (k(t)) return !1;
+        M.add((0, b.J)(t)), R.w.set(L, { trustedDomains: w, trustedProtocols: M });
     },
 });
 var F = n(232835),
@@ -134,13 +135,13 @@ var F = n(232835),
     B = n(309010),
     H = n(375708);
 function j(e, t) {
-    let n = y.A.getChannel(B.A.getChannelId());
+    let n = N.A.getChannel(B.A.getChannelId());
     return (null == n || n.type !== p.rbe.DM || !!V.A.isFriend(n.getRecipientId() ?? "")) && e === t;
 }
 function Y(e, t) {
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         a = arguments.length > 3 ? arguments[3] : void 0,
-        { trusted: c, onClick: d, onConfirm: f, onCancel: v, shouldConfirm: O, messageId: R, channelId: D } = e,
+        { trusted: c, onClick: d, onConfirm: h, onCancel: C, shouldConfirm: R, messageId: O, channelId: D } = e,
         L = r().sanitizeUrl(e.href);
     if (null == L) {
         null != t && t.preventDefault(),
@@ -160,14 +161,14 @@ function Y(e, t) {
     }
     let M = null,
         P = !1,
-        x = R,
-        U = D,
-        k = null;
-    if (null != R && null != D) {
-        let e = F.A.getMessage(D, R),
-            t = y.A.getBasicChannel(D);
+        x = O,
+        k = D,
+        U = null;
+    if (null != O && null != D) {
+        let e = F.A.getMessage(D, O),
+            t = N.A.getBasicChannel(D);
         M = t?.guild_id ?? null;
-        let n = C.A.getGuild(M),
+        let n = v.A.getGuild(M),
             i =
                 e?.messageReference?.guild_id != null &&
                 e?.webhookId != null &&
@@ -175,27 +176,27 @@ function Y(e, t) {
                 null != M;
         i && e?.messageReference?.guild_id != null
             ? ((x = e.messageReference.message_id),
-              (U = e.messageReference.channel_id),
-              (k = e.messageReference.guild_id))
-            : (k = M);
+              (k = e.messageReference.channel_id),
+              (U = e.messageReference.guild_id))
+            : (U = M);
         let r = t?.type === p.rbe.GUILD_ANNOUNCEMENT && n?.features.has(p.GuildFeatures.COMMUNITY) === !0,
             s = e?.hasFlag(p.pr7.EPHEMERAL) === !0;
         P = null != e && !s && (i || r);
     }
     if (null != D) {
-        let e = y.A.getChannel(D),
-            t = C.A.getGuild(e?.getGuildId());
+        let e = N.A.getChannel(D),
+            t = v.A.getGuild(e?.getGuildId());
         null != e &&
             null != t &&
             t.features.has(p.GuildFeatures.DISCOVERABLE) &&
-            h.default.track(p.HAw.URL_CLICKED, { url_domain: (0, b.E)(w), guild_id: t.id, channel_id: e.id }),
-            (0, m.A)(D) && h.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "inline_link", target: w });
+            f.default.track(p.HAw.URL_CLICKED, { url_domain: (0, b.E)(w), guild_id: t.id, channel_id: e.id }),
+            (0, m.A)(D) && f.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "inline_link", target: w });
     }
     if ((g.A.trackLinkClicked(w), null != d)) {
         if (d(t)) return;
     } else {
         let { default: e } = n(464792),
-            r = e(w, { skipExtensionCheck: void 0, analyticsLocations: i, messageId: R });
+            r = e(w, { skipExtensionCheck: void 0, analyticsLocations: i, messageId: O });
         if (null != r && r(t)) return;
     }
     let V = () => {
@@ -204,19 +205,19 @@ function Y(e, t) {
                     messageId: x,
                     channelId: D,
                     guildId: M,
-                    sourceChannelId: U,
-                    sourceGuildId: k,
+                    sourceChannelId: k,
+                    sourceGuildId: U,
                 }),
-            null != f)
-                ? f()
+            null != h)
+                ? h()
                 : (0, u.A)(w);
         },
-        B = v ?? (() => {});
+        B = C ?? (() => {});
     if (null !== E.isBlockedDomain(w)) {
         t?.preventDefault(), _.show(w);
         return;
     }
-    if (null != (0, N.m)(w)) {
+    if (null != (0, y.m)(w)) {
         t?.preventDefault(), S.A.show(w);
         return;
     }
@@ -224,15 +225,15 @@ function Y(e, t) {
         Y = (0, b.J)(w),
         W = "http:" !== Y && "https:" !== Y;
     if ((!W && (j || G.isTrustedDomain(w))) || (W && G.isTrustedProtocol(w)))
-        return void (null == t || (null != O && O)
+        return void (null == t || (null != R && R)
             ? V()
             : P &&
               g.A.trackAnnouncementMessageLinkClicked({
                   messageId: x,
                   channelId: D,
                   guildId: M,
-                  sourceChannelId: U,
-                  sourceGuildId: k,
+                  sourceChannelId: k,
+                  sourceGuildId: U,
               }));
     if ((null != t && t.preventDefault(), W))
         I.show({ url: w, trustUrl: l, onConfirm: V, onCancel: B, isProtocol: !0, contextKey: a });
