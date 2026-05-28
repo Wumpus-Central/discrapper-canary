@@ -3,7 +3,6 @@ n.d(t, {
     Cv: () => D,
     NE: () => O,
     OY: () => P,
-    Ox: () => B,
     Q6: () => x,
     Ri: () => y,
     Ye: () => k,
@@ -188,7 +187,4 @@ function F(e) {
 }
 function V(e) {
     if (null != e) return p.A.getGuildIdFromApplicationId(e) ?? o.A.getApplication(e)?.guildId;
-}
-function B(e) {
-    return r().mapValues(e, (e) => ({ isEligible: e.is_eligible }));
 }

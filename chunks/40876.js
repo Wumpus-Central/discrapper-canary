@@ -814,17 +814,6 @@ let r = {
         actions: ["AUTHENTICATOR_DELETE", "CURRENT_USER_UPDATE", "MFA_WEBAUTHN_CREDENTIALS_LOADED"],
         inlineRequire: () => n(915968).A,
     },
-    SocialLayerStorefrontAnnouncementManager: {
-        actions: [
-            "LOGOUT",
-            "POST_CONNECTION_OPEN",
-            "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
-            "SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_SUCCESS",
-        ],
-        inlineRequire: () => n(888668).A,
-        neverLoadBeforeConnectionOpen: !0,
-        hasStoreChangeListeners: !0,
-    },
     HavenManager: { actions: ["HAVEN_DISCONNECT"], inlineRequire: () => n(63446).A },
     RestrictedHoursManager: {
         actions: [

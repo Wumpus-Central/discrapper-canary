@@ -1,118 +1,106 @@
 e.d(t, {
     a: () =>
         function i(t, e) {
-            let { isGift: n, giftRecipient: l, giftingOrigin: s, additionalUserIds: h } = e,
+            let { isGift: a, giftRecipient: c, giftingOrigin: p, additionalUserIds: h } = e,
                 {
                     discoverySessionId: _,
                     analyticsLocations: g,
                     guildId: k,
-                    isEligibilityCheckContinuation: y,
-                    checkoutState: C,
+                    isEligibilityCheckContinuation: C,
+                    checkoutState: E,
                 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                E = r.A.getSKUEligibilityEntry(t.id),
-                I = E?.state,
-                L = !n && null != k && (null == I || "checking" === I || "ineligible" === I);
-            if (!L && !y) {
+                I = s.A.getSKUEligibilityEntry(t.id),
+                y = I?.state,
+                L = !a && null != k && (null == y || "checking" === y || "ineligible" === y);
+            if (!L && !C) {
                 let i = "none";
-                n
+                a
                     ? (i = "gift")
                     : null == k
                       ? (i = "no_guild")
-                      : "eligible" === I
+                      : "eligible" === y
                         ? (i = "already_eligible")
-                        : "error" === I && (i = "prior_error"),
-                    d.default.track(c.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_SKIPPED, {
+                        : "error" === y && (i = "prior_error"),
+                    o.default.track(r.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_SKIPPED, {
                         sku_id: t.id,
                         guild_id: k ?? null,
                         application_id: t.applicationId,
-                        is_gift: n,
-                        eligibility_state: I ?? "none",
+                        is_gift: a,
+                        eligibility_state: y ?? "none",
                         skip_reason: i,
-                        error_http_status: E?.state === "error" ? (E.httpStatus ?? null) : null,
+                        error_http_status: I?.state === "error" ? (I.httpStatus ?? null) : null,
                         location_stack: g,
                     });
             }
-            let f = C ?? { hasFinished: !1 };
+            let b = E ?? { hasFinished: !1 };
             L
-                ? (0, u.L)({
+                ? (0, d.L)({
                       guildId: k,
                       skuId: t.id,
                       analyticsLocations: g ?? [],
                       onContinue: () => {
-                          if (!f.hasFinished)
+                          if (!b.hasFinished)
                               return i(
                                   t,
-                                  { isGift: n, giftRecipient: l, giftingOrigin: s, additionalUserIds: h },
+                                  { isGift: a, giftRecipient: c, giftingOrigin: p, additionalUserIds: h },
                                   {
                                       discoverySessionId: _,
                                       analyticsLocations: g,
                                       guildId: k,
                                       isEligibilityCheckContinuation: !0,
-                                      checkoutState: f,
+                                      checkoutState: b,
                                   },
                               );
                       },
                   })
-                : p({
+                : u({
                       discoverySessionId: _,
                       sku: t,
                       analyticsLocations: g ?? [],
-                      isGift: n,
-                      giftRecipient: l,
-                      giftingOrigin: s,
+                      isGift: a,
+                      giftRecipient: c,
+                      giftingOrigin: p,
                       additionalUserIds: h,
                       onCloseCallback: () => {
-                          (0, a.ET)(), (0, o.z)(), (0, u.l)(), (f.hasFinished = !0);
+                          (0, l.ET)(), (0, n.z)(), (0, d.l)(), (b.hasFinished = !0);
                       },
                       onComplete: () => {
-                          f.hasFinished = !0;
+                          b.hasFinished = !0;
                       },
                       modalKey: "slayer-payment-modal",
                   });
         },
-    openSocialLayerStorefrontAnnouncementModal: () => h,
 });
-var n = e(627968),
-    l = e(192308),
-    a = e(391048),
-    o = e(636099),
-    s = e(210561),
-    d = e(174459),
-    r = e(832163),
-    u = e(556808),
-    c = e(652215);
-let p = (i) => {
+var l = e(391048),
+    n = e(636099),
+    a = e(155506),
+    o = e(174459),
+    s = e(832163),
+    d = e(556808),
+    r = e(652215);
+let u = (i) => {
     let {
         discoverySessionId: t,
         sku: e,
-        analyticsLocations: n,
-        isGift: l,
-        giftRecipient: a,
-        additionalUserIds: o,
+        analyticsLocations: l,
+        isGift: n,
+        giftRecipient: o,
+        additionalUserIds: s,
         giftingOrigin: d,
         onCloseCallback: r,
         onComplete: u,
         modalKey: c,
     } = i;
-    return s.oE[s.CL.SLAYER_STOREFRONT_CHECKOUT]
+    return a.oE[a.CL.SLAYER_STOREFRONT_CHECKOUT]
         .get()
         .openCheckoutModal({
             discoverySessionId: t,
             applicationId: e.applicationId,
             skuId: e.id,
             skuProductLine: e.productLine,
-            analyticsLocations: n,
+            analyticsLocations: l,
             onComplete: u,
-            giftContextProps: { isGift: l, giftRecipient: a, giftingOrigin: d, additionalUserIds: o },
+            giftContextProps: { isGift: n, giftRecipient: o, giftingOrigin: d, additionalUserIds: s },
             modalAPIOptions: { modalKey: c, onCloseCallback: r },
         });
 };
-function h() {
-    (0, l.openModalLazy)(
-        async () => {
-            let { default: i } = await Promise.all([e.e("63292"), e.e("26388")]).then(e.bind(e, 297187));
-            return (t) => (0, n.jsx)(i, { ...t });
-        },
-        { modalKey: "slayer-storefront-announcement-modal" },
-    );
-}

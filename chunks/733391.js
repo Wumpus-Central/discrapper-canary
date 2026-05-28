@@ -1,15 +1,5 @@
 "use strict";
-n.d(t, {
-    Kh: () => S,
-    Pp: () => A,
-    Rw: () => m,
-    SP: () => T,
-    Xw: () => y,
-    ap: () => E,
-    dS: () => v,
-    iR: () => N,
-    qf: () => I,
-});
+n.d(t, { Kh: () => S, Pp: () => A, Rw: () => m, SP: () => T, Xw: () => y, ap: () => E, iR: () => N, qf: () => I });
 var i = n(636537),
     r = n(228366),
     s = n(927813),
@@ -195,13 +185,4 @@ function N(e, t) {
                     httpStatus: e?.status,
                 });
             }));
-}
-async function v() {
-    r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_START" });
-    try {
-        let e = (await i.Bo.get({ url: u.Rsh.SOCIAL_LAYER_STOREFRONT_ELIGIBILITY, rejectWithError: !0 })).body;
-        return r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_SUCCESS", affinity: (0, o.Ox)(e) }), e;
-    } catch (e) {
-        return r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_AFFINITY_FETCH_FAILURE" }), null;
-    }
 }
