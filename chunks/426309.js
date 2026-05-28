@@ -132,13 +132,13 @@ function N() {
                         (0, r.jsx)(h.$, {
                             text: "stash decider data",
                             onClick: () => {
-                                _.Ay.debugStashDeciderData();
+                                _.A.debugStashDeciderData();
                             },
                         }),
                         (0, r.jsx)(h.$, {
                             text: "re-run ranking",
                             onClick: () => {
-                                _.ih.debugRerunRanking();
+                                _.i.debugRerunRanking();
                             },
                         }),
                     ],
