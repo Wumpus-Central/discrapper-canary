@@ -1,35 +1,35 @@
 o.r(e),
     o.d(e, {
         CheckpointNumbersCenterAlignedRive: () => w,
-        UnlockRive: () => J.V,
-        ThemeAwareNitroWishlistingWumpusRive: () => H.u,
+        UnlockRive: () => H.V,
+        ThemeAwareNitroWishlistingWumpusRive: () => Q.u,
         CheckpointKnickKnacksRive: () => M,
         AnimatedNitroOrbRewardsRive: () => t.Z,
         FistBumpRive: () => U.l,
-        PerfTestRive: () => j.Q,
-        NitroRewardsMouseRive: () => G.C,
+        PerfTestRive: () => D.Q,
+        NitroRewardsMouseRive: () => W.C,
         BoostGemLevelTwoRive: () => l.J,
-        GameServerHostingRive: () => B.E,
+        GameServerHostingRive: () => R.E,
         CheckpointFriendsRive: () => S,
         BoostGemLevelOneRive: () => a.t,
-        TabHoverGradientRive: () => K.U,
-        WandAndSparklesRive: () => $,
+        TabHoverGradientRive: () => j.U,
+        WandAndSparklesRive: () => q,
         BoostThisServerRive: () => s.D,
-        NitroQuestOrbsMultiplierRive: () => E.E,
+        NitroQuestOrbsMultiplierRive: () => _.E,
         BoostGemLevelThreeRive: () => n.z,
         AVSurveyFacesRive: () => i.i,
-        NitroCoinRive: () => _,
+        NitroCoinRive: () => O.s,
         CheckpointIntroRive: () => k,
         DiceRive: () => F.m,
         CheckpointCardRive: () => v,
-        CheckpointNumbersLeftAlignedRive: () => P,
-        PulseGradientRive: () => X.M,
-        VibingWumpusBackgroundRive: () => z.R,
+        CheckpointNumbersLeftAlignedRive: () => I,
+        PulseGradientRive: () => T.M,
+        VibingWumpusBackgroundRive: () => K.R,
         JetpackWumpusWithTrinketsRive: () => N.e,
-        GlowButtonRive: () => R.s,
-        TeenScreenTimeRive: () => Q.w,
-        NitroWishlistingWumpusRive: () => T,
-        VibingWumpusRive: () => Z.Z,
+        GlowButtonRive: () => B.s,
+        TeenScreenTimeRive: () => X.w,
+        NitroWishlistingWumpusRive: () => x,
+        VibingWumpusRive: () => J.Z,
     });
 var t = o(567341),
     i = o(896572),
@@ -506,10 +506,10 @@ function w(r) {
 w.riveSrc = y;
 let L =
         "https://cdn.discordapp.com/assets/content/b5a7e4dd53b173c7d1f38ddbd65142267a79529a228987d184c858c16c21ddf6.riv",
-    I = {
+    P = {
         Artboard: { reducedMotion: "boolean", TextColor: "color", "Fire CountUp": "trigger", DisplayValue: "number" },
     };
-function P(r) {
+function I(r) {
     let { artboard: e = "Artboard", stateMachine: o, ...t } = r,
         { status: i, buffer: a } = (0, u.CE)(L),
         n = (0, u.m2)(L);
@@ -520,44 +520,26 @@ function P(r) {
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: I,
+              artboardProperties: P,
               ...t,
           });
 }
-P.riveSrc = L;
+I.riveSrc = L;
 var F = o(908803),
     U = o(90517),
-    B = o(289704),
-    R = o(145188),
-    N = o(970002);
-let O =
-        "https://cdn.discordapp.com/assets/content/fac02dd925a746a61291e1f604a8affff663e9d8a22cd9b21749991ff745f1f2.riv",
-    W = { "STACKED COINS": {}, "SINGLE COIN": {} };
-function _(r) {
-    let { artboard: e = "STACKED COINS", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, u.CE)(O),
-        n = (0, u.m2)(O);
-    return i === u.BW.Loading
-        ? null
-        : (0, b.jsx)(d.w, {
-              ...(n ? { key: "override" } : {}),
-              buffer: a,
-              artboard: e,
-              stateMachine: o,
-              artboardProperties: W,
-              ...t,
-          });
-}
-_.riveSrc = O;
-var E = o(122720),
-    G = o(907581);
-let x =
+    R = o(289704),
+    B = o(145188),
+    N = o(970002),
+    O = o(149282),
+    _ = o(122720),
+    W = o(907581);
+let E =
         "https://cdn.discordapp.com/assets/content/7d79185ce3c3038667277ee16ba8cb835b1b012f20b92ef5428b9166c5347c59.riv",
-    D = { "Nitro Wishlist": { reducedMotion: "boolean" } };
-function T(r) {
+    G = { "Nitro Wishlist": { reducedMotion: "boolean" } };
+function x(r) {
     let { artboard: e = "Nitro Wishlist", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, u.CE)(x),
-        n = (0, u.m2)(x);
+        { status: i, buffer: a } = (0, u.CE)(E),
+        n = (0, u.m2)(E);
     return i === u.BW.Loading
         ? null
         : (0, b.jsx)(d.w, {
@@ -565,26 +547,26 @@ function T(r) {
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: D,
+              artboardProperties: G,
               ...t,
           });
 }
-T.riveSrc = x;
-var j = o(102079),
-    X = o(440166),
-    K = o(549254),
-    Q = o(632679),
-    H = o(583094),
-    J = o(242644),
-    Z = o(773350),
-    z = o(615429);
-let q =
+x.riveSrc = E;
+var D = o(102079),
+    T = o(440166),
+    j = o(549254),
+    X = o(632679),
+    Q = o(583094),
+    H = o(242644),
+    J = o(773350),
+    K = o(615429);
+let Z =
         "https://cdn.discordapp.com/assets/content/026e9c119f280f5edf3ba486ba20c26e21c5dac14dfedd0a238373298bf289f0.riv",
-    Y = { "Surprise Me": { fill: "color" } };
-function $(r) {
+    z = { "Surprise Me": { fill: "color" } };
+function q(r) {
     let { artboard: e = "Surprise Me", stateMachine: o, ...t } = r,
-        { status: i, buffer: a } = (0, u.CE)(q),
-        n = (0, u.m2)(q);
+        { status: i, buffer: a } = (0, u.CE)(Z),
+        n = (0, u.m2)(Z);
     return i === u.BW.Loading
         ? null
         : (0, b.jsx)(d.w, {
@@ -592,8 +574,8 @@ function $(r) {
               buffer: a,
               artboard: e,
               stateMachine: o,
-              artboardProperties: Y,
+              artboardProperties: z,
               ...t,
           });
 }
-$.riveSrc = q;
+q.riveSrc = Z;

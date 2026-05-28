@@ -1,35 +1,50 @@
-c.d(s, { m: () => _, _: () => A });
-var t = c(627968),
-    a = c(503698),
-    r = c.n(a),
-    i = c(305003),
-    n = c(752079),
-    d = c(758836),
-    p = c(68644),
-    o = c(743102);
-let _ = {
+r.d(t, { m: () => E, _: () => A });
+var n = r(627968),
+    s = r(64700),
+    a = r(503698),
+    o = r.n(a),
+    l = r(149282),
+    c = r(305003),
+    i = r(752079),
+    u = r(521e3),
+    d = r(758836),
+    p = r(68644);
+let v = (e) => {
+        let { alt: t, className: r, artboard: a } = e,
+            c = s.useContext(u.vf);
+        return (0, n.jsx)("div", {
+            role: "img",
+            "aria-label": t,
+            className: o()(p.eV, r),
+            children:
+                "STACKED COINS" === a
+                    ? (0, n.jsx)(l.s, { artboard: "STACKED COINS", eventTargetRef: c ?? void 0 })
+                    : (0, n.jsx)(l.s, { artboard: "SINGLE COIN", eventTargetRef: c ?? void 0 }),
+        });
+    },
+    E = {
         [d.Dp.FRACTIONAL_PREMIUM]: {
             render: (e) => {
-                let { alt: s, className: c } = e;
-                return (0, t.jsx)("img", { src: o, className: c, alt: s, height: 120 });
+                let { alt: t, className: r } = e;
+                return (0, n.jsx)(v, { alt: t, className: r, artboard: "STACKED COINS" });
             },
         },
         [d.Dp.FRACTIONAL_PREMIUM_1_DAY]: {
             render: (e) => {
-                let { alt: s, className: c } = e;
-                return (0, t.jsx)("img", { src: o, className: c, alt: s, height: 120 });
+                let { alt: t, className: r } = e;
+                return (0, n.jsx)(v, { alt: t, className: r, artboard: "SINGLE COIN" });
             },
         },
         [d.Dp.ORB_PROFILE_BADGE]: {
             render: (e) => {
-                let { animationState: s = "on", className: c } = e;
-                return (0, t.jsx)(n.A, { animationState: s, className: r()(p.o, c) });
+                let { animationState: t = "on", className: r } = e;
+                return (0, n.jsx)(i.A, { animationState: t, className: o()(p.oy, r) });
             },
         },
     },
     A = () => ({
-        id: i.A.ORB_PROFILE_BADGE,
-        icon: i.A.ORB_PROFILE_BADGE,
+        id: c.A.ORB_PROFILE_BADGE,
+        icon: c.A.ORB_PROFILE_BADGE,
         iconSrc:
             "https://cdn.discordapp.com/assets/content/7ec17eb0599fb95fce5411a3261bcbf6aaa81ce85ec91bcf1038f4cf36d35712.png",
         description: "",
