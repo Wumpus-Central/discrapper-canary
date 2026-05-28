@@ -365,6 +365,14 @@ function ei(e, t) {
         frames_encoded_amd_vaapi: n.get(l.yo.AMD_VAAPI) ?? 0,
         frames_encoded_intel: n.get(l.yo.INTEL) ?? 0,
         frames_encoded_intel_direct3d: n.get(l.yo.INTEL_DIRECT_3D) ?? 0,
+        frames_encoded_wmf_direct3d_intel: n.get(l.yo.WMF_DIRECT_3D_INTEL) ?? 0,
+        frames_encoded_wmf_direct3d_nvidia: n.get(l.yo.WMF_DIRECT_3D_NVIDIA) ?? 0,
+        frames_encoded_wmf_direct3d_amd: n.get(l.yo.WMF_DIRECT_3D_AMD) ?? 0,
+        frames_encoded_wmf_direct3d:
+            (n.get(l.yo.WMF_DIRECT_3D) ?? 0) +
+            (n.get(l.yo.WMF_DIRECT_3D_INTEL) ?? 0) +
+            (n.get(l.yo.WMF_DIRECT_3D_NVIDIA) ?? 0) +
+            (n.get(l.yo.WMF_DIRECT_3D_AMD) ?? 0),
         frames_encoded_uncategorized: n.get(l.yo.UNCATEGORIZED) ?? 0,
         frames_encoded_unknown: n.get(l.yo.UNKNOWN) ?? 0,
         frames_submitted: t.framesSubmitted,

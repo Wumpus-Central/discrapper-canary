@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, {
-    ET: () => R,
-    Wn: () => h,
+    ET: () => v,
+    Wn: () => f,
     aV: () => S,
-    dg: () => C,
-    eq: () => f,
+    dg: () => N,
+    eq: () => E,
     iF: () => A,
     kZ: () => I,
     s7: () => T,
-    tH: () => N,
-    yo: () => m,
+    tH: () => y,
+    yo: () => p,
 }),
     n(321073);
 var i,
@@ -18,11 +18,11 @@ var i,
     a,
     o = n(499979),
     l = n(687658),
-    d = n(87306);
-let _ = [0, 5e5, 1e6, 15e5, 2e6, 3e6, 4e6, 5e6, 6e6, 7e6, 8e6],
-    u = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60],
-    c = [720, 480, 360],
-    E = [
+    u = n(87306);
+let c = [0, 5e5, 1e6, 15e5, 2e6, 3e6, 4e6, 5e6, 6e6, 7e6, 8e6],
+    d = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60],
+    _ = [720, 480, 360],
+    h = [
         "framesCodec",
         "framesNetwork",
         "packets",
@@ -52,7 +52,7 @@ let _ = [0, 5e5, 1e6, 15e5, 2e6, 3e6, 4e6, 5e6, 6e6, 7e6, 8e6],
         "qualityFrameDrops",
         "qualitySizeMismatches",
     ];
-var h =
+var f =
         (((i = {}).H264 = "H264"),
         (i.H265 = "H265"),
         (i.VP8 = "VP8"),
@@ -60,7 +60,7 @@ var h =
         (i.AV1 = "AV1"),
         (i.UNKNOWN = "UNKNOWN"),
         i),
-    m =
+    p =
         (((r = {}).NVIDIA_CUDA = "nvidia_cuda"),
         (r.NVIDIA_DIRECT_3D = "nvidia_direct_3d"),
         (r.NVIDIA_VULKAN = "nvidia_vulkan"),
@@ -78,11 +78,14 @@ var h =
         (r.WMF_SW = "wmf_sw"),
         (r.WMF_HW = "wmf_hw"),
         (r.WMF_DIRECT_3D = "wmf_direct_3d"),
+        (r.WMF_DIRECT_3D_INTEL = "wmf_direct_3d_intel"),
+        (r.WMF_DIRECT_3D_NVIDIA = "wmf_direct_3d_nvidia"),
+        (r.WMF_DIRECT_3D_AMD = "wmf_direct_3d_amd"),
         (r.WMF_CHROME = "wmf_chrome"),
         (r.UNCATEGORIZED = "uncategorized"),
         (r.UNKNOWN = "unknown"),
         r),
-    f =
+    E =
         (((s = {}).VIDEOTOOLBOX = "videotoolbox"),
         (s.VP8_LIBVPX = "vp8_libvpx"),
         (s.ELECTRON = "electron"),
@@ -96,7 +99,10 @@ var h =
         (s.D3D11VIDEODECODER = "d3d11videodecoder"),
         (s.UNKNOWN = "unknown"),
         s);
-let g = Object.freeze({
+let m = Object.freeze({
+        "mediafoundation direct3d intel": "wmf_direct_3d_intel",
+        "mediafoundation direct3d nvidia": "wmf_direct_3d_nvidia",
+        "mediafoundation direct3d amd": "wmf_direct_3d_amd",
         mediafoundationvideoencodeaccelerator: "wmf_chrome",
         "nvidia: cuda": "nvidia_cuda",
         "nvidia: direct3d": "nvidia_direct_3d",
@@ -119,7 +125,7 @@ let g = Object.freeze({
         "mediafoundation hw": "wmf_hw",
         "mediafoundation direct3d": "wmf_direct_3d",
     }),
-    p = Object.freeze({
+    g = Object.freeze({
         videotoolbox: "videotoolbox",
         libvpx: "vp8_libvpx",
         electron: "electron",
@@ -141,12 +147,12 @@ var A =
     a);
 function I(e) {
     if (null == e) return "unknown";
-    for (let t of Object.keys(g)) if (e.toLowerCase().includes(t)) return g[t];
+    for (let t of Object.keys(m)) if (e.toLowerCase().includes(t)) return m[t];
     return "uncategorized";
 }
 function T(e) {
     if (null == e) return "unknown";
-    for (let t of Object.keys(p)) if (e.toLowerCase().includes(t)) return p[t];
+    for (let t of Object.keys(g)) if (e.toLowerCase().includes(t)) return g[t];
     return "uncategorized";
 }
 function S(e) {
@@ -158,7 +164,7 @@ function S(e) {
     if ("AV1" === e || "AV1X" === e) return "AV1";
     else return "UNKNOWN";
 }
-class N {
+class y {
     bytes = 0;
     framesCodec = 0;
     framesCodecError = null;
@@ -205,7 +211,7 @@ class N {
     localWant = 0;
     consecutiveStaticColorFrames = 0;
     static parseInboundStats(e, t) {
-        let n = new N();
+        let n = new y();
         return (
             null == e ||
                 ((n.bytes = e.bytesReceived),
@@ -242,7 +248,7 @@ class N {
         );
     }
     static parseOutboundStats(e, t) {
-        let n = new N();
+        let n = new y();
         return null == e
             ? n
             : {
@@ -294,8 +300,8 @@ class N {
               };
     }
 }
-class C {
-    decoderBuckets = Object.fromEntries(Object.values(f).map((e) => [e, 0]));
+class N {
+    decoderBuckets = Object.fromEntries(Object.values(E).map((e) => [e, 0]));
     codecBuckets = { H264: 0, H265: 0, VP8: 0, VP9: 0, AV1: 0, UNKNOWN: 0 };
     statsWindow = [];
     fpsHistogram = new l.d();
@@ -303,7 +309,7 @@ class C {
     inboundBitrateEstimateHistogram = new l.d();
     resolutionHistogram = new l.d();
     localWantHistogram = new l.d();
-    systemResources = new d.A();
+    systemResources = new u.A();
     decoderCodec = "UNKNOWN";
     startTime;
     timeToFirstFrame;
@@ -361,18 +367,18 @@ class C {
     constructor(e) {
         (this.startTime = e.now()),
             (this.videoStoppedWatch = new o.W0(e)),
-            _.forEach((e) => {
+            c.forEach((e) => {
                 this.bitrateBuckets[e] = 0;
             }),
-            u.forEach((e) => {
+            d.forEach((e) => {
                 this.fpsBuckets[e] = 0;
             }),
-            c.forEach((e) => {
+            _.forEach((e) => {
                 this.resolutionBuckets[e] = 0;
             });
     }
     collectAggregationStats(e, t) {
-        for (let n of E) {
+        for (let n of h) {
             let i = e[n];
             if (null === i) continue;
             let r = t[n] ?? 0;
@@ -403,24 +409,24 @@ class C {
                 resolution: a,
                 minorResolution: o,
                 majorResolution: l,
-                encoder: d,
-                decoder: E,
-                codecType: h,
-                localWant: m,
+                encoder: u,
+                decoder: h,
+                codecType: f,
+                localWant: p,
             } = t,
-            { timestamp: f } = n,
-            g = (s - f) / 1e3;
+            { timestamp: E } = n,
+            m = (s - E) / 1e3;
         if (
-            ((this.intervalTotal += g),
-            (this.resolutionTotal += a * g),
-            (this.minorResolutionTotal += o * g),
-            (this.majorResolutionTotal += l * g),
+            ((this.intervalTotal += m),
+            (this.resolutionTotal += a * m),
+            (this.minorResolutionTotal += o * m),
+            (this.majorResolutionTotal += l * m),
             (this.cryptorMaxAttempts = Math.max(this.cryptorMaxAttempts, t.cryptorMaxAttempts)),
-            null != d &&
-                null != h &&
+            null != u &&
+                null != f &&
                 "encoderBuckets" in this &&
-                ((this.encoderBuckets[d] += g),
-                (this.codecBuckets[h] += g),
+                ((this.encoderBuckets[u] += m),
+                (this.codecBuckets[f] += m),
                 null != t.codecType && "UNKNOWN" !== t.codecType && (this.encoderCodec = t.codecType),
                 null != e.vmafScore &&
                     e.vmafScore >= 0 &&
@@ -437,32 +443,32 @@ class C {
                     this.consecutiveStaticColorFramesMax,
                     e.consecutiveStaticColorFrames,
                 ))),
-            null != E &&
-                null != h &&
+            null != h &&
+                null != f &&
                 "decoderBuckets" in this &&
-                ((this.decoderBuckets[E] += g),
-                (this.codecBuckets[h] += g),
+                ((this.decoderBuckets[h] += m),
+                (this.codecBuckets[f] += m),
                 null != t.codecType && "UNKNOWN" !== t.codecType && (this.decoderCodec = t.codecType)),
             this.statsWindow.length < 6)
         )
             return;
-        let { bytes: p, framesCodec: A, timestamp: I } = this.statsWindow[this.statsWindow.length - 3];
-        c.forEach((e) => {
-            a <= e && (this.resolutionBuckets[e] += g);
+        let { bytes: g, framesCodec: A, timestamp: I } = this.statsWindow[this.statsWindow.length - 3];
+        _.forEach((e) => {
+            a <= e && (this.resolutionBuckets[e] += m);
         });
         let T = (s - I) / 1e3,
-            S = ((i - p) * 8) / T,
-            N = (r - A) / T;
-        _.forEach((e) => {
-            S <= e && (this.bitrateBuckets[e] += g);
+            S = ((i - g) * 8) / T,
+            y = (r - A) / T;
+        c.forEach((e) => {
+            S <= e && (this.bitrateBuckets[e] += m);
         }),
-            u.forEach((e) => {
-                N <= e && (this.fpsBuckets[e] += g);
+            d.forEach((e) => {
+                y <= e && (this.fpsBuckets[e] += m);
             }),
             this.resolutionHistogram.addSample(a),
             this.bitrateHistogram.addSample(S),
-            this.fpsHistogram.addSample(N),
-            this.localWantHistogram.addSample(m),
+            this.fpsHistogram.addSample(y),
+            this.localWantHistogram.addSample(p),
             this.statsWindow.shift();
     }
     addSystemResources() {
@@ -477,8 +483,8 @@ class C {
         return e;
     }
 }
-class R extends C {
-    encoderBuckets = Object.fromEntries(Object.values(m).map((e) => [e, 0]));
+class v extends N {
+    encoderBuckets = Object.fromEntries(Object.values(p).map((e) => [e, 0]));
     encoderCodec = "UNKNOWN";
     targetFrames = 0;
     targetBytesMax = 0;
