@@ -987,6 +987,7 @@ class tl extends d.PureComponent {
                             children: (0, u.jsx)(b.D, {
                                 onClick: this.openSettings,
                                 className: te.or,
+                                "aria-label": eR.intl.string(eR.t.Yx4IiC),
                                 children: (0, u.jsx)(M.Z, { size: "sm", color: S.A.unsafe_rawColors.PRIMARY_400.css }),
                             }),
                         }),
