@@ -1774,42 +1774,6 @@ span.clanTag__5d473 {
     border-radius: var(--radius-round)
 }
 
-.container_a88956 {
-    height: 100%;
-    position: relative;
-    width: 100%
-}
-
-.backgroundSvg_a88956 {
-    -webkit-backdrop-filter: blur(var(--custom-backdrop-blur-amount));
-    backdrop-filter: blur(var(--custom-backdrop-blur-amount));
-    border-radius: 50%;
-    position: absolute;
-    z-index: 0
-}
-
-.backgroundSvg_a88956,
-.svg_a88956 {
-    height: 100%;
-    width: 100%
-}
-
-.svg_a88956 {
-    position: relative;
-    z-index: 1
-}
-
-.overlay_a88956 {
-    align-items: center;
-    display: flex;
-    inset-inline-start: 50%;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2
-}
-
 .wrapper_f7ecac {
     align-items: center;
     background-color: var(--background-surface-highest);
@@ -2899,6 +2863,13 @@ span.clanTag__5d473 {
 }
 
 .container__5e1e2 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: flex-start
+}
+
+.voiceChannelListInvite__5e1e2 {
     background-color: var(--background-surface-high);
     border-radius: var(--radius-sm);
     display: flex;
@@ -2982,6 +2953,23 @@ span.clanTag__5d473 {
 
 .guildTooltipIcon__5e1e2 {
     border-radius: var(--radius-sm)
+}
+
+.footer__5e1e2 {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    gap: 2px;
+    min-width: 0;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.footerIcon__5e1e2 {
+    height: 14px;
+    width: 14px
 }
 
 .eyebrow_e558df {
@@ -5000,6 +4988,12 @@ span.clanTag__5d473 {
     text-align: start
 }
 
+.container__98113 {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
 .giftButton__82222 {
     --button-outline-brand-text: var(--brand-500)
 }
@@ -6519,6 +6513,14 @@ span.clanTag__5d473 {
 
 .nameplatePreviewPlaceholder__14af9 {
     background: var(--background-mod-normal)
+}
+
+.settingsPage__9cd63 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-32);
+    min-width: 0;
+    width: 100%
 }
 
 .moonIcon__1fc68 {

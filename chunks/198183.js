@@ -1,5 +1,6 @@
 e.exports = {
     kL: "container__5e1e2",
+    nz: "voiceChannelListInvite__5e1e2",
     wx: "header__5e1e2",
     yW: "channelInfo__5e1e2",
     p: "channelIcon__5e1e2",
@@ -10,4 +11,6 @@ e.exports = {
     p$: "emptyState__5e1e2",
     Eq: "voiceUserRow__5e1e2",
     TB: "joinButtonRegion__5e1e2",
+    qr: "footer__5e1e2",
+    Dq: "footerIcon__5e1e2",
 };

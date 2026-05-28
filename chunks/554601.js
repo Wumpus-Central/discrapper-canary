@@ -552,7 +552,7 @@ function eJ(e) {
                                                         n.e("6026"),
                                                         n.e("21838"),
                                                         n.e("48307"),
-                                                        n.e("75337"),
+                                                        n.e("57014"),
                                                         n.e("87521"),
                                                         n.e("741"),
                                                         n.e("78925"),
@@ -561,11 +561,8 @@ function eJ(e) {
                                                         n.e("56495"),
                                                         n.e("89001"),
                                                         n.e("55990"),
-                                                        n.e("40805"),
-                                                        n.e("64625"),
-                                                        n.e("25336"),
+                                                        n.e("2245"),
                                                         n.e("97487"),
-                                                        n.e("41475"),
                                                         n.e("48100"),
                                                         n.e("23924"),
                                                         n.e("42205"),
@@ -843,8 +840,8 @@ var e4 = n(34188),
     e7 = n(700623),
     e2 = n(177953),
     e3 = n(825484),
-    e5 = n(512950),
-    e9 = n(900797),
+    e9 = n(512950),
+    e5 = n(900797),
     e6 = n(847374),
     te = n(10716),
     tt = n(702841),
@@ -1226,9 +1223,9 @@ function tO(e) {
                   ],
               })
             : s && !i && (0, I.Ag)(n)
-              ? (0, r.jsx)(e5.p, {
+              ? (0, r.jsx)(e9.p, {
                     className: tv.ai,
-                    messageType: e5.Y.WARNING,
+                    messageType: e9.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1291,7 +1288,7 @@ function tM(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e9.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              ? (0, r.jsx)(e5.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
                               : (0, r.jsx)(e6.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
@@ -1404,10 +1401,10 @@ var tZ = n(111042),
     t7 = n(594061),
     t2 = n(935208),
     t3 = n(630248),
-    t5 = n(355097);
-function t9(e, t) {
+    t9 = n(355097);
+function t5(e, t) {
     o.useEffect(() => {
-        t7.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t7.bW.loadIfUncached(t9.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t3.A], () => t3.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -2117,12 +2114,12 @@ function n3(e, t) {
     let n = t3.A.getScoreWithoutLoadingLatest(e.id);
     return t3.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function n5(e, t) {
+function n9(e, t) {
     let n = (0, I.lq)(e),
         l = (0, I.lq)(t);
     return (0, g.RF)(n, l);
 }
-function n9(e, t) {
+function n5(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
@@ -2456,7 +2453,7 @@ function lm(e) {
                                 let n = $.Ay.getScoreWithoutLoadingLatest(u, e);
                                 return $.Ay.getScoreWithoutLoadingLatest(u, t) - n;
                             }),
-                            n9,
+                            n5,
                         ],
                     });
                 }, [s, c, l, t, n]),
@@ -2545,7 +2542,7 @@ function lm(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n3, n5],
+                        sortComparers: [n3, n9],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -3049,7 +3046,7 @@ function lv(e) {
                             let e = [];
                             return c && e.push(ns.gq), e;
                         }, [c]),
-                        u = t9(r, a),
+                        u = t5(r, a),
                         m = (0, A.bG)([eF.default], () => eF.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         let e = (e) => !(!1 === m && (0, t6.A)(e.id));
@@ -3226,7 +3223,7 @@ function lS(e) {
                         }, new Set()),
                     [s],
                 ),
-                c = t9(
+                c = t5(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})
