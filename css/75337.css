@@ -886,34 +886,6 @@ img.messageBadge__10651 {
     white-space: nowrap
 }
 
-.shareCTAButton__18cbd {
-    align-items: center;
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
-    background: linear-gradient(0deg, hsl(var(--black-hsl)/.2) 0, hsl(var(--black-hsl)/.2) 100%), var(--background-mod-normal);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md);
-    bottom: 72px;
-    box-shadow: 0 4px 4px 0 hsl(var(--black-hsl)/.25);
-    cursor: pointer;
-    display: flex;
-    gap: var(--space-8);
-    inset-inline-end: var(--space-16);
-    opacity: 0;
-    padding: var(--space-8) var(--space-12);
-    pointer-events: all;
-    position: absolute;
-    transition: opacity .2s ease-in-out
-}
-
-.shareCTAButton__18cbd.inactivePlayer__18cbd {
-    bottom: var(--space-16)
-}
-
-.shareCTAButton__18cbd.active__18cbd {
-    opacity: 1
-}
-
 .container__459fb {
     display: flex;
     flex-wrap: wrap;
@@ -1145,6 +1117,13 @@ img.messageBadge__10651 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
+}
+
+.nameplatePreview__5828f {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%
 }
 
 .profileEffects__0dd08 {
@@ -1795,6 +1774,42 @@ span.clanTag__5d473 {
     border-radius: var(--radius-round)
 }
 
+.container_a88956 {
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.backgroundSvg_a88956 {
+    -webkit-backdrop-filter: blur(var(--custom-backdrop-blur-amount));
+    backdrop-filter: blur(var(--custom-backdrop-blur-amount));
+    border-radius: 50%;
+    position: absolute;
+    z-index: 0
+}
+
+.backgroundSvg_a88956,
+.svg_a88956 {
+    height: 100%;
+    width: 100%
+}
+
+.svg_a88956 {
+    position: relative;
+    z-index: 1
+}
+
+.overlay_a88956 {
+    align-items: center;
+    display: flex;
+    inset-inline-start: 50%;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2
+}
+
 .wrapper_f7ecac {
     align-items: center;
     background-color: var(--background-surface-highest);
@@ -1896,6 +1911,10 @@ span.clanTag__5d473 {
     background-color: HighlightText;
     border-color: Highlight;
     color: Highlight
+}
+
+.noBoxShadowMargin_d0aeea {
+    margin: 0
 }
 
 .socialLayerCardHover__517e1 .socialLayerCardBackgroundImage__517e1 {
@@ -3206,9 +3225,9 @@ span.clanTag__5d473 {
 }
 
 .glow__16577 {
-    background-color: hsl(from var(--icon-voice-speaking) h s l/.4);
+    background-color: #0e4f35;
     border-radius: 50%;
-    filter: blur(160px);
+    filter: blur(130px);
     height: 100%;
     inset-inline-start: 0;
     transform: translateX(70%);
@@ -3225,13 +3244,15 @@ span.clanTag__5d473 {
 
 .dots__16577 {
     --custom-dot-color: hsl(from var(--icon-voice-connected) h s l/0.2);
+    --custom-dot-size: calc(100/var(--custom-number-of-dots, 20)*1%);
     aspect-ratio: 1;
     background: radial-gradient(circle at 50% 50%, var(--custom-dot-color) 0, var(--custom-dot-color) 1.25px, transparent 1.25px, transparent 100%);
+    background-position: calc(var(--custom-dot-size)*-1.5) 0;
     background-repeat: repeat;
-    background-size: calc(100/var(--custom-number-of-dots, 20)*1%) calc(100/var(--custom-number-of-dots, 20)*1%);
+    background-size: var(--custom-dot-size) var(--custom-dot-size);
     inset-inline-start: 50%;
-    -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 0, transparent 100%);
-    mask-image: radial-gradient(circle at 50% 50%, #000 0, transparent 100%);
+    -webkit-mask-image: radial-gradient(100% 50% at 100% 50%, #000 0, transparent 100%);
+    mask-image: radial-gradient(100% 50% at 100% 50%, #000 0, transparent 100%);
     width: 50%
 }
 
