@@ -1551,16 +1551,6 @@
     justify-content: center
 }
 
-.container__32805 {
-    box-sizing: border-box;
-    display: grid;
-    gap: var(--custom-quest-grid-gap);
-    grid-template-columns: repeat(auto-fill, minmax(max(var(--custom-min-quest-tile-width), calc((100% - var(--custom-quest-grid-gap)*(var(--custom-tiles-per-row) - 1))/var(--custom-tiles-per-row))), 1fr));
-    justify-content: center;
-    max-width: 1310px;
-    width: 100%
-}
-
 .scrollerWrapper__8dd17 {
     position: relative
 }
@@ -1652,30 +1642,13 @@
     inset-inline-end: var(--space-8)
 }
 
-.carouselItems__02563 {
-    display: flex;
-    gap: 20px
-}
-
-.extraSpacingPlaceholder__02563 {
-    flex-shrink: 0;
-    height: var(--custom-extra-spacing-placeholder-size);
-    width: var(--custom-extra-spacing-placeholder-size)
-}
-
-.highlightedWrapper__02563,
-.questTile__02563 {
+.highlightedWrapper__46ac1 {
     flex-shrink: 0;
     overflow: hidden;
-    position: relative;
-    width: var(--custom-min-quest-tile-width)
+    position: relative
 }
 
-.highlightedWrapper__02563 {
-    border-radius: var(--custom-quest-tile-border-radius)
-}
-
-.reflect__02563 {
+.reflect__46ac1 {
     background-color: #fff;
     height: 100%;
     inset-inline-start: 0;
@@ -1688,11 +1661,11 @@
     z-index: 999
 }
 
-.full-motion .reflect__02563 {
-    animation: reflect__02563 4s ease-in-out
+.full-motion .reflect__46ac1 {
+    animation: reflect__46ac1 4s ease-in-out
 }
 
-@keyframes reflect__02563 {
+@keyframes reflect__46ac1 {
     0% {
         opacity: 0;
         transform: scale(0) rotate(45deg)
@@ -1712,6 +1685,34 @@
         opacity: 0;
         transform: scale(50) rotate(45deg)
     }
+}
+
+.container__32805 {
+    box-sizing: border-box;
+    display: grid;
+    gap: var(--custom-quest-grid-gap);
+    grid-template-columns: repeat(auto-fill, minmax(max(var(--custom-min-quest-tile-width), calc((100% - var(--custom-quest-grid-gap)*(var(--custom-tiles-per-row) - 1))/var(--custom-tiles-per-row))), 1fr));
+    justify-content: center;
+    max-width: 1310px;
+    width: 100%
+}
+
+.carouselItems__02563 {
+    display: flex;
+    gap: 20px
+}
+
+.extraSpacingPlaceholder__02563 {
+    flex-shrink: 0;
+    height: var(--custom-extra-spacing-placeholder-size);
+    width: var(--custom-extra-spacing-placeholder-size)
+}
+
+.questTile__02563 {
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+    width: var(--custom-min-quest-tile-width)
 }
 
 .emptyStateContainer__02563 {
