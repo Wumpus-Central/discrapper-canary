@@ -26,18 +26,13 @@ class f extends c.Ay.PersistedStore {
     }
 }
 let p = new f(r.h, {
-        FRIEND_ONLINE_TIMER_REPORTED: function (e) {
-            let { timestampMs: t } = e;
-            return (h.lastReportedAtMs = t), !0;
-        },
-    }),
-    E = (0, n(945810).mj)({
-        kind: "user",
-        name: "2026-05-notify-friends-on-come-online",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
-    });
-var m = n(652215),
+    FRIEND_ONLINE_TIMER_REPORTED: function (e) {
+        let { timestampMs: t } = e;
+        return (h.lastReportedAtMs = t), !0;
+    },
+});
+var E = n(802185),
+    m = n(652215),
     g = n(818348);
 let A = 5 * l.A.Millis.MINUTE;
 async function I() {
@@ -66,7 +61,7 @@ class S extends s.A {
         this.clear();
     }
     start = () => {
-        (E.getConfig({ location: "FriendOnlineTimerManager" }).enabled && !a.hV.getSetting()) ||
+        (E.A.getConfig({ location: "FriendOnlineTimerManager" }).enabled && !a.hV.getSetting()) ||
             !p.isCooldownElapsed() ||
             null != this.timerId ||
             (T(o.A.getStatus()) &&
