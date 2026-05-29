@@ -1,10 +1,11 @@
 "use strict";
-n.d(t, { US: () => a, YL: () => l, aI: () => o, gH: () => u }), n(873298);
+n.d(t, { US: () => o, YL: () => u, aI: () => l, gH: () => c, tI: () => a.tI });
 var i,
     r,
     s,
-    a = (((i = {}).ANIMATED = "ANIMATED"), (i.INSTANT = "INSTANT"), i),
-    o =
+    a = n(873298),
+    o = (((i = {}).ANIMATED = "ANIMATED"), (i.INSTANT = "INSTANT"), i),
+    l =
         (((r = {})[(r.UNKNOWN = 0)] = "UNKNOWN"),
         (r[(r.WINDOWED = 1)] = "WINDOWED"),
         (r[(r.MAXIMIZED = 2)] = "MAXIMIZED"),
@@ -12,7 +13,7 @@ var i,
         (r[(r.FULLSCREEN = 4)] = "FULLSCREEN"),
         (r[(r.MINIMIZED = 5)] = "MINIMIZED"),
         r),
-    l =
+    u =
         (((s = {})[(s.QUNS_UNKNOWN = -1)] = "QUNS_UNKNOWN"),
         (s[(s.QUNS_NOT_PRESENT = 1)] = "QUNS_NOT_PRESENT"),
         (s[(s.QUNS_BUSY = 2)] = "QUNS_BUSY"),
@@ -22,7 +23,7 @@ var i,
         (s[(s.QUNS_QUIET_TIME = 6)] = "QUNS_QUIET_TIME"),
         (s[(s.QUNS_APP = 7)] = "QUNS_APP"),
         s);
-let u = {
+let c = {
     compatibilityHook: !1,
     warn: !1,
     enabled: !1,
