@@ -57,7 +57,10 @@ let f = {
         ctaAction: () => (0, r.pX)(o.BVt.NITRO_HOME),
     },
     [i.$.GUILD_BOOSTER]: {
-        ctaLabel: () => u.intl.string(u.t["6LHsjg"]),
+        ctaLabel: (e) => {
+            let { owned: t } = e;
+            return t ? u.intl.string(u.t.VMvz3m) : u.intl.string(u.t.xFVZeU);
+        },
         ctaAction: () => (0, a.openUserSettings)(s.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
     },
     [i.$.ORB_PROFILE]: {
