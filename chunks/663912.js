@@ -22,7 +22,7 @@ var l = t(627968),
     b = t(616356),
     G = t(495544),
     _ = t(734057),
-    j = t(235058),
+    j = t(761853),
     w = t(287809),
     O = t(810412),
     V = t(761661),
@@ -129,20 +129,21 @@ function y(e) {
                               action: () => o.A.setSidechainCompression(!s, { analyticsLocations: c }),
                               checked: s,
                           }),
-                          (0, l.jsx)(a.aK, {
-                              id: "sidechain-parameters",
-                              label: D.intl.string(D.t.fhEzfj),
-                              control: (e, n) =>
-                                  (0, l.jsx)(d.i, {
-                                      ...e,
-                                      ref: n,
-                                      value: u,
-                                      maxValue: 100,
-                                      onChange: (e) =>
-                                          o.A.setSidechainCompressionStrength(e, { analyticsLocations: c }),
-                                      "aria-label": D.intl.string(D.t.fhEzfj),
-                                  }),
-                          }),
+                          s &&
+                              (0, l.jsx)(a.aK, {
+                                  id: "sidechain-parameters",
+                                  label: D.intl.string(D.t.fhEzfj),
+                                  control: (e, n) =>
+                                      (0, l.jsx)(d.i, {
+                                          ...e,
+                                          ref: n,
+                                          value: u,
+                                          maxValue: 100,
+                                          onChange: (e) =>
+                                              o.A.setSidechainCompressionStrength(e, { analyticsLocations: c }),
+                                          "aria-label": D.intl.string(D.t.fhEzfj),
+                                      }),
+                              }),
                       ],
                   })
                 : null;
