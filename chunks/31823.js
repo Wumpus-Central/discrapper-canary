@@ -1,22 +1,23 @@
-a.r(
-    (e.exports = {
-        card: "card__823e1",
-        progressContainer: "progressContainer__823e1",
-        progress: "progress__823e1",
-        full: "full__823e1",
-        half: "half__823e1",
-        none: "none__823e1",
-        start: "start__823e1",
-        middle: "middle__823e1",
-        end: "end__823e1",
-        active: "active__823e1",
-        boostContainer: "boostContainer__823e1",
-        boostContainerActive: "boostContainerActive__823e1",
-        boost: "boost__823e1",
-        perkRowContainer: "perkRowContainer__823e1",
-        perkRow: "perkRow__823e1",
-        perkText: "perkText__823e1",
-        button: "button__823e1",
-        footer: "footer__823e1",
-    }),
-);
+n.d(t, { V: () => u });
+var l = n(17928),
+    r = n(933958),
+    i = n(627363),
+    a = n(20015),
+    s = n(722847),
+    o = n(652215);
+let u = () => {
+    let e = (0, s.t4)((e) => e.applicationId),
+        { data: t } = (0, i.YY)(e),
+        n = null != t && (0, a.n)(t, o.gfo.EMBEDDED) && (0, a.n)(t, o.gfo.EMBEDDED_IAP);
+    return {
+        application: t,
+        isEmbeddedIAP: n,
+        activitySessionId: (0, l.bG)([r.Ay], () => {
+            let t = Array.from(r.Ay.getSelfEmbeddedActivities().values()).find((t) => {
+                let { applicationId: n } = t;
+                return n === e;
+            });
+            return t?.compositeInstanceId;
+        }),
+    };
+};

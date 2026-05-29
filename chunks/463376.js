@@ -15,8 +15,8 @@ function o() {
             let t = e.get("selectedPlanAttributes");
             return {
                 selectedSkuId: e.selectedSkuId,
-                referralTrialOfferId: e.checkoutInitParameters.referralTrialOfferId,
-                isGift: e.checkoutInitParameters.isGift,
+                referralTrialOfferId: e.referralTrialOfferId,
+                isGift: e.isGift,
                 isPremium: t.isPremiumPurchase,
                 isPremiumGroupPurchase: t.isPremiumGroupPurchase,
             };
@@ -31,16 +31,16 @@ function o() {
             null != m.discount &&
             null != m.discount.planIds &&
             m.discount.planIds.some((t) => s.hd[t].skuId === e),
-        C = !!(d && null != m && h);
+        A = !!(d && null != m && h);
     return l.useMemo(
         () => ({
             isPremium: t,
             isPremiumGroupPurchase: n,
             isEligibleForTrial: p,
-            isEligibleForDiscount: C,
+            isEligibleForDiscount: A,
             userTrialOffer: c,
             discountOffer: m,
         }),
-        [t, n, p, C, c, m],
+        [t, n, p, A, c, m],
     );
 }

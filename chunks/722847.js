@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { y$: () => m, t4: () => E, Ni: () => f });
+n.d(t, { y$: () => g, t4: () => m, Ni: () => p });
 var i = n(942381),
     r = n(265690),
     s = n(315069),
@@ -69,32 +69,26 @@ var u = n(566980),
     d = n(428262),
     _ = n(788868);
 let h = (e) =>
-        null == e
-            ? { isPremiumPurchase: !0, isPremiumGroupPurchase: !1 }
-            : { isPremiumPurchase: (0, d.ys)(e), isPremiumGroupPurchase: e === _.gD.PREMIUM_GROUP_MONTH },
-    [f, p] = (0, c.A)();
-function E(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return p()(e, t);
-}
+    null == e
+        ? { isPremiumPurchase: !0, isPremiumGroupPurchase: !1 }
+        : { isPremiumPurchase: (0, d.ys)(e), isPremiumGroupPurchase: e === _.gD.PREMIUM_GROUP_MONTH };
+var f = n(504275);
+let [p, E] = (0, c.A)();
 function m(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
+    return E()(e, t);
+}
+function g(e) {
     let { checkoutInitParameters: t, contextMetadata: n, order: s, initialPaymentSourceId: a, initialCurrency: o } = e;
     return (0, r.h)((e, i) => {
         let r = {
-            skuIds: () => i().checkoutInitParameters.skuIds,
-            isGift: () => i().checkoutInitParameters.isGift,
-            referralTrialOfferId: () => i().checkoutInitParameters.referralTrialOfferId,
-            activeSubscription: () => i().checkoutInitParameters.activeSubscription,
-            excludeSubscriptionPlansBySKU: () => i().checkoutInitParameters.excludeSubscriptionPlansBySKU,
-            purchaseType: () => i().checkoutInitParameters.purchaseType,
-            applicationId: () => i().checkoutInitParameters.applicationId,
             isPremiumPurchase: () => h(i().selectedPlanId).isPremiumPurchase,
             isPremiumGroupPurchase: () => h(i().selectedPlanId).isPremiumGroupPurchase,
             selectedPlanAttributes: () => h(i().selectedPlanId),
         };
         return {
+            ...(0, f.p)(e, i, t),
             get: (e) => (null != r[e] ? r[e]() : null),
-            checkoutInitParameters: t,
             contextMetadata: n,
             order: s,
             orderRecord: null != s ? l.createFromServer(s) : null,
@@ -134,6 +128,8 @@ function m(e) {
             setAppliedUserDiscounts: (t) => e({ appliedUserDiscounts: t }),
             purchaseError: null,
             setPurchaseError: (t) => e({ purchaseError: t ?? null }),
+            purchasePreviewError: null,
+            setPurchasePreviewError: (t) => e({ purchasePreviewError: t ?? null }),
             updatedSubscription: null,
             setUpdatedSubscription: (t) => e({ updatedSubscription: t }),
             readySlideId: null,

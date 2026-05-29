@@ -5,7 +5,7 @@ var l = n(64700),
     a = n(722847),
     s = n(788868);
 let o = () => {
-    let e = (0, a.t4)((e) => e.get("skuIds"));
+    let e = (0, a.t4)((e) => e.skuIds);
     return l.useMemo(() => e.filter((e) => !s.oz.includes(e)), [JSON.stringify(e)]);
 };
 function u() {

@@ -247,7 +247,7 @@ function ec(e) {
 var ep = l(867060),
     em = l(652215),
     eg = l(508155),
-    ex = l(31823);
+    ex = l(254204);
 function ef(e) {
     let t,
         { active: l, nextActive: n, position: r } = e;
@@ -802,8 +802,8 @@ var eQ = l(97808),
     e5 = l(854627),
     e6 = l(696451),
     e8 = l(317525),
-    e3 = l(287809),
-    e9 = l(562153),
+    e9 = l(287809),
+    e3 = l(562153),
     e7 = l(19575),
     e4 = l(32746);
 let e2 = e7.Ay.getEnableHardwareAcceleration() ? eQ.Js : eY.A;
@@ -811,7 +811,7 @@ function te(e) {
     let { guildId: t } = e,
         l = (0, i.bG)([c.A], () => c.A.getGuild(t)),
         n = (0, i.bG)([e8.A], () => e8.A.getSortedRoles(t).find((e) => e.tags?.premium_subscriber === null)),
-        r = (0, i.bG)([e3.default], () => e3.default.getCurrentUser()),
+        r = (0, i.bG)([e9.default], () => e9.default.getCurrentUser()),
         a = r?.id,
         o = (0, i.bG)([e6.Ay], () => (null != a ? e6.Ay.getMember(t, a) : void 0), [a, t]),
         u = o?.premiumSince != null,
@@ -863,7 +863,7 @@ function te(e) {
                           }),
                           username: (0, s.jsx)(eq.g, {
                               variant: "text-md/semibold",
-                              name: e9.Ay.getName(t, null, r),
+                              name: e3.Ay.getName(t, null, r),
                               colorString: n.colorString,
                               colorStrings: n.colorStrings,
                           }),
