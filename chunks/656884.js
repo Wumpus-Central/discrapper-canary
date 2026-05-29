@@ -6,7 +6,4 @@ e.exports = {
     qr: "footer__5be3e",
     tB: "backdrop__5be3e",
     oR: "toast__5be3e",
-    g$: "friendRequestToastContainer__5be3e",
-    $J: "friendRequestToast__5be3e",
-    i3: "xIcon__5be3e",
 };

@@ -83,37 +83,6 @@
     z-index: var(--custom-user-profile-toast-z-index)
 }
 
-.friendRequestToastContainer__5be3e {
-    position: absolute;
-    top: -8px;
-    width: 100%
-}
-
-.friendRequestToast__5be3e {
-    background-color: var(--background-surface-highest);
-    border: 1px solid var(--border-normal);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-medium);
-    flex-direction: row;
-    gap: 8px;
-    padding: 12px
-}
-
-.friendRequestToast__5be3e,
-.xIcon__5be3e {
-    align-items: center;
-    display: flex;
-    justify-content: center
-}
-
-.xIcon__5be3e {
-    background-color: var(--background-code-deletion);
-    border-radius: 8px;
-    flex-shrink: 0;
-    height: 36px;
-    width: 36px
-}
-
 .subtext__339d0 {
     color: var(--text-subtle);
     line-height: 13px;
