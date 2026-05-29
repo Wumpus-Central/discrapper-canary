@@ -5918,6 +5918,7 @@ var r6 =
         (e1.NITRO_2_POINT_0 = "39188406147479"),
         (e1.ANDROID_SCREENSHARE_AUDIO_BUG = "40397083647511"),
         (e1.XBOX_GAME_PASS_PERKS = "40387273783831"),
+        (e1.SHOP_FRAMES_EARLY_ACCESS = "40775065582615"),
         e1),
     r4 = (((e2 = {}).INVALID_BILLING_ADDRESS = "#docs-internal-guid-1731ba7c-7fff-87a1-c976-f62cc1cd2618"), e2);
 let r5 = (e) => `https://www.youtube.com/embed/${e}`,
