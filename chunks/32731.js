@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => h }), n(938796);
+n.d(t, { A: () => f }), n(938796);
 var i = n(989349),
     r = n.n(i),
     s = n(665260),
     a = n(315069),
     o = n(395671),
     l = n(384726),
-    d = n(575593);
-function _(e) {
+    u = n(575593);
+function c(e) {
     if (null != e)
         return {
             staticImagePath: e.static_image_path,
@@ -15,7 +15,7 @@ function _(e) {
             videoPath: e.video_path,
         };
 }
-function u(e) {
+function d(e) {
     return {
         src: e.src,
         loop: e.loop,
@@ -32,9 +32,9 @@ function u(e) {
         }),
     };
 }
-let c = new Set(["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"]);
-var E = n(652215);
-class h extends a.A {
+let _ = new Set(["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"]);
+var h = n(652215);
+class f extends a.A {
     id;
     type;
     applicationId;
@@ -79,7 +79,7 @@ class h extends a.A {
     eligibleOffers;
     static createFromServer(e) {
         let { price: t } = e;
-        return new h({
+        return new f({
             id: e.id,
             type: e.type,
             applicationId: e.application_id,
@@ -123,7 +123,7 @@ class h extends a.A {
             externalPurchaseUrl: e.external_purchase_url,
             deleted: e.deleted ?? !1,
             bundledSkuIds: e.bundled_sku_ids ?? [],
-            bundledSkus: e.bundled_skus?.map((e) => h.createFromServer(e)) ?? [],
+            bundledSkus: e.bundled_skus?.map((e) => f.createFromServer(e)) ?? [],
             tenantMetadata: (function (e) {
                 if (null != e)
                     return {
@@ -151,24 +151,24 @@ class h extends a.A {
                                     type: e.type,
                                     item: (function (e) {
                                         if (null != e) {
-                                            if (e.type === d.R.AVATAR_DECORATION)
+                                            if (e.type === u.R.AVATAR_DECORATION)
                                                 return {
                                                     id: e.id,
                                                     type: e.type,
                                                     asset: e.asset,
-                                                    assets: _(e.assets),
+                                                    assets: c(e.assets),
                                                     label: e.label,
                                                 };
-                                            if (e.type === d.R.NAMEPLATE)
+                                            if (e.type === u.R.NAMEPLATE)
                                                 return {
                                                     id: e.id,
                                                     type: e.type,
                                                     asset: e.asset,
-                                                    assets: _(e.assets),
+                                                    assets: c(e.assets),
                                                     label: e.label,
                                                     palette: e.palette,
                                                 };
-                                            if (e.type === d.R.PROFILE_EFFECT)
+                                            if (e.type === u.R.PROFILE_EFFECT)
                                                 return {
                                                     id: e.id,
                                                     type: e.type,
@@ -179,10 +179,19 @@ class h extends a.A {
                                                     staticFrameSrc: e.staticFrameSrc,
                                                     thumbnailPreviewSrc: e.thumbnailPreviewSrc,
                                                     reducedMotionSrc: e.reducedMotionSrc,
-                                                    effects: e.effects?.map(u),
+                                                    effects: e.effects?.map(d),
                                                 };
-                                            if (e.type === d.R.PROFILE_FRAME)
-                                                return { id: e.id, type: e.type, label: e.label, layers: e.layers };
+                                            if (e.type === u.R.PROFILE_FRAME)
+                                                return {
+                                                    id: e.id,
+                                                    type: e.type,
+                                                    label: e.label,
+                                                    layers: e.layers,
+                                                    innerWidth: e.inner_width,
+                                                    overflowTop: e.overflow_top,
+                                                    overflowBottom: e.overflow_bottom,
+                                                    overflowHorizontal: e.overflow_horizontal,
+                                                };
                                         }
                                     })(e.item),
                                     categorySkuId: e.category_sku_id,
@@ -264,7 +273,7 @@ class h extends a.A {
     }
     get supportedOperatingSystems() {
         let e = null != this.systemRequirements ? Object.keys(this.systemRequirements) : [];
-        return e.length > 0 ? e : [E.uje.WINDOWS];
+        return e.length > 0 ? e : [h.uje.WINDOWS];
     }
     get isOnSale() {
         return null != this.price && null != this.price.saleAmount;
@@ -272,11 +281,11 @@ class h extends a.A {
     isGiftable() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.price;
         return (
-            this.type === E.Puh.DURABLE_PRIMARY &&
+            this.type === h.Puh.DURABLE_PRIMARY &&
             this.available &&
             this.requiresPayment &&
             null != e &&
-            E.Ly6.has(e.currency) &&
+            h.Ly6.has(e.currency) &&
             null == this.externalPurchaseUrl
         );
     }
@@ -301,26 +310,26 @@ class h extends a.A {
         return !this.premium && null != e && e.amount > 0;
     }
     get isTheGameAwardsWinner() {
-        return c.has(this.id);
+        return _.has(this.id);
     }
     get available() {
-        return (0, s.Lt)(this.flags, E.d68.AVAILABLE) || null != this.externalPurchaseUrl;
+        return (0, s.Lt)(this.flags, h.d68.AVAILABLE) || null != this.externalPurchaseUrl;
     }
     isAvailableForDistribution() {
         return (
             this.available &&
             null != this.getPrice() &&
             null == this.externalPurchaseUrl &&
-            (!this.premium || (0, s.Lt)(this.flags, E.d68.PREMIUM_AND_DISTRIBUTION))
+            (!this.premium || (0, s.Lt)(this.flags, h.d68.PREMIUM_AND_DISTRIBUTION))
         );
     }
     isAvailable() {
-        return (0, s.Lt)(this.flags, E.d68.AVAILABLE);
+        return (0, s.Lt)(this.flags, h.d68.AVAILABLE);
     }
     isPremiumPerk() {
         return (
             this.premium &&
-            ((0, s.Lt)(this.flags, E.d68.PREMIUM_PURCHASE) || (0, s.Lt)(this.flags, E.d68.PREMIUM_AND_DISTRIBUTION))
+            ((0, s.Lt)(this.flags, h.d68.PREMIUM_PURCHASE) || (0, s.Lt)(this.flags, h.d68.PREMIUM_AND_DISTRIBUTION))
         );
     }
     hasFeature(e) {

@@ -51,7 +51,16 @@ n.d(t, {
                 if (l.type === i.R.PROFILE_FRAME)
                     return {
                         type: "single",
-                        item: new o.A({ skuId: t.id, type: l.type, label: l.label, layers: l.layers }),
+                        item: new o.A({
+                            skuId: t.id,
+                            type: l.type,
+                            label: l.label,
+                            layers: l.layers,
+                            innerWidth: l.innerWidth,
+                            overflowTop: l.overflowTop,
+                            overflowBottom: l.overflowBottom,
+                            overflowHorizontal: l.overflowHorizontal,
+                        }),
                     };
             }
         },
