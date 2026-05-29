@@ -244,11 +244,11 @@ var T = l(503698),
     P = l(898196),
     U = l(187322),
     B = l(765671),
-    $ = l(531685);
+    G = l(531685);
 l(323874), l(14289), l(35956), l(393431), l(532706), l(42231), l(232424), l(949626), l(767709), l(65162);
-var z = l(661531),
-    F = l(602853),
-    G = l(602674),
+var $ = l(661531),
+    z = l(602853),
+    F = l(602674),
     H = l(335416),
     V = l(664875);
 let K = new Map(),
@@ -257,7 +257,7 @@ let K = new Map(),
             o = n.useRef(null),
             { ref: u, width: c, height: d } = (0, B.Ay)(),
             [m, f] = n.useState(null),
-            h = (0, F.r)(z.A.colors.BACKGROUND_MOD_STRONG).hex();
+            h = (0, z.r)($.A.colors.BACKGROUND_MOD_STRONG).hex();
         return (n.useEffect(
             () => (
                 (o.current = new Worker(new URL("/assets/" + l.u("33197"), l.b))),
@@ -283,7 +283,7 @@ let K = new Map(),
                 a.addEventListener("message", r),
                 (async () => {
                     try {
-                        let e = (0, G.v)();
+                        let e = (0, F.v)();
                         if (null == e) throw Error("Failed to create audio context");
                         let t = await Promise.all(i.map((t) => e.decodeAudioData(t.arrayBuffer.slice(0))));
                         if (n) return;
@@ -354,7 +354,7 @@ function en(e) {
         children: (0, a.jsx)("div", {
             className: ea.H,
             style: { left: `${i}%` },
-            children: (0, a.jsx)(t, { size: "refresh_sm", color: z.A.colors.ICON_DEFAULT }),
+            children: (0, a.jsx)(t, { size: "refresh_sm", color: $.A.colors.ICON_DEFAULT }),
         }),
     });
 }
@@ -380,38 +380,54 @@ function ei(e) {
 }
 let er = n.memo(function (e) {
     let { clip: t, videoLength: l } = e;
-    return t.timeline.map(function (e) {
-        let n = (function (e) {
-            if (null == l || l <= 0 || t.decision?.timestamp == null) return null;
-            let a = (e - (t.decision?.timestamp - t.length)) / 1e3;
-            return a < 0 || a > l ? null : (a / l) * 100;
-        })(e.timestamp);
-        if (null == n) return null;
-        let i = `${e.timestamp}-${e.signal.type}`;
-        switch (e.signal.type) {
-            case o.Gy.LAUGHTER:
-                return (0, a.jsx)(
-                    en,
-                    {
-                        icon: W.i,
-                        title: el.intl.string(et.default.bTC23D),
-                        body: el.intl.string(et.default["ry+jxm"]),
-                        position: n,
-                    },
-                    i,
-                );
-            case o.Gy.GAME_EVENT:
-                return (0, a.jsx)(
-                    en,
-                    { icon: X.q, title: e.signal.title ?? "", body: el.intl.string(et.default["347DBb"]), position: n },
-                    i,
-                );
-            case o.Gy.SOUNDBOARD:
-                return (0, a.jsx)(ei, { signal: e.signal, guildId: t.guildId, position: n }, i);
-            default:
-                return null;
-        }
-    });
+    return n
+        .useMemo(
+            () =>
+                (function (e) {
+                    let t = e.filter((e) => e.signal.type === o.Gy.LAUGHTER).sort((e, t) => e.timestamp - t.timestamp),
+                        l = new Set();
+                    for (let e = 0; e < t.length - 1; e++) t[e + 1].timestamp - t[e].timestamp < 2500 && l.add(t[e]);
+                    return e.filter((e) => !l.has(e));
+                })(t.timeline),
+            [t.timeline],
+        )
+        .map(function (e) {
+            let n = (function (e) {
+                if (null == l || l <= 0 || t.decision?.timestamp == null) return null;
+                let a = (e - (t.decision?.timestamp - t.length)) / 1e3;
+                return a < 0 || a > l ? null : (a / l) * 100;
+            })(e.timestamp);
+            if (null == n) return null;
+            let i = `${e.timestamp}-${e.signal.type}`;
+            switch (e.signal.type) {
+                case o.Gy.LAUGHTER:
+                    return (0, a.jsx)(
+                        en,
+                        {
+                            icon: W.i,
+                            title: el.intl.string(et.default.bTC23D),
+                            body: el.intl.string(et.default["ry+jxm"]),
+                            position: n,
+                        },
+                        i,
+                    );
+                case o.Gy.GAME_EVENT:
+                    return (0, a.jsx)(
+                        en,
+                        {
+                            icon: X.q,
+                            title: e.signal.title ?? "",
+                            body: el.intl.string(et.default["347DBb"]),
+                            position: n,
+                        },
+                        i,
+                    );
+                case o.Gy.SOUNDBOARD:
+                    return (0, a.jsx)(ei, { signal: e.signal, guildId: t.guildId, position: n }, i);
+                default:
+                    return null;
+            }
+        });
 });
 var es = l(698269);
 let eo = n.memo(function (e) {
@@ -528,9 +544,9 @@ function ef(e) {
         k = n.useRef(null),
         [A, N] = n.useState(!1),
         [w, T] = n.useState(null),
+        $ = n.useRef(null),
         z = n.useRef(null),
-        F = n.useRef(null),
-        [G, H] = n.useState(!1),
+        [F, H] = n.useState(!1),
         [V, K] = n.useState(null);
     n.useEffect(
         () =>
@@ -542,7 +558,7 @@ function ef(e) {
         [b],
     );
     let { ref: W, width: X = 0, height: J = 0 } = (0, B.Ay)(),
-        Q = (0, I.bG)([$.A], () => $.A.windowSize());
+        Q = (0, I.bG)([G.A], () => G.A.windowSize());
     n.useMemo(() => {
         Q.width, Q.height;
         let e = W.current;
@@ -607,8 +623,8 @@ function ef(e) {
             [ee],
         ),
         er = n.useCallback(() => {
-            G && v(), H(!1), T(null);
-        }, [G, v]);
+            F && v(), H(!1), T(null);
+        }, [F, v]);
     n.useEffect(
         () => (
             document.addEventListener("mousemove", ei),
@@ -678,7 +694,7 @@ function ef(e) {
                         (0, a.jsx)("div", {
                             className: ec.k2,
                             children: (0, a.jsx)("div", {
-                                ref: F,
+                                ref: z,
                                 className: ec.re,
                                 children: (0, a.jsxs)(M.E, {
                                     variant: "text-sm/normal",
@@ -730,7 +746,7 @@ function ef(e) {
                             (0, a.jsx)("canvas", { className: ec.zj, ref: Y }),
                             (0, a.jsx)("canvas", { className: ec.Ay, ref: W }),
                             (0, a.jsx)(U.vN, {
-                                children: (0, a.jsx)("div", { tabIndex: 0, ref: z, className: ec.lG }),
+                                children: (0, a.jsx)("div", { tabIndex: 0, ref: $, className: ec.lG }),
                             }),
                             (0, a.jsx)(h.A, {
                                 preload: "auto",
