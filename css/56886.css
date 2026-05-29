@@ -9334,6 +9334,7 @@
     --mobile-chat-input-floating-accessory-border-width: 0px;
     --mobile-chat-input-floating-accessory-margin-bottom: 0px;
     --mobile-chat-input-floating-accessory-margin-horizontal: 0px;
+    --mobile-chat-input-floating-accessory-padding-top: 4px;
     --mobile-chat-input-floating-accessory-top-border-width: 1px;
     --mobile-chat-input-floating-border-radius: 0px;
     --mobile-chat-input-floating-content-gap: 0px;
@@ -9342,6 +9343,7 @@
     --mobile-chat-input-floating-inline-full-gradient-height: 0px;
     --mobile-chat-input-floating-offset-minimum: 0px;
     --mobile-chat-input-floating-scrim-gradient-height: 0px;
+    --mobile-chat-input-floating-scrim-gradient-height-at-bottom: 0px;
     --mobile-chat-input-floating-scrim-offset-top: 0px;
     --mobile-chat-input-floating-typing-gradient-height-reduced: 0px;
     --mobile-chat-input-icon-default-tint: interactive-text-default;
@@ -9482,9 +9484,10 @@
     --mobile-chat-input-expression-offset-top: 10px;
     --mobile-chat-input-floating-inline-full-gradient-height: 20px;
     --mobile-chat-input-floating-offset-minimum: 16px;
-    --mobile-chat-input-floating-scrim-gradient-height: 52px;
+    --mobile-chat-input-floating-scrim-gradient-height: 56px;
+    --mobile-chat-input-floating-scrim-gradient-height-at-bottom: 36px;
     --mobile-chat-input-floating-scrim-offset-top: 24px;
-    --mobile-chat-input-floating-typing-gradient-height-reduced: 8px;
+    --mobile-chat-input-floating-typing-gradient-height-reduced: 16px;
     --mobile-chat-input-icon-default-tint: interactive-icon-default;
     --mobile-chat-input-icon-size: small20;
     --mobile-chat-input-pill-border-width: 1px;
@@ -9581,6 +9584,7 @@
     --mobile-chat-input-floating-accessory-border-width: 1px;
     --mobile-chat-input-floating-accessory-margin-bottom: 8px;
     --mobile-chat-input-floating-accessory-margin-horizontal: 16px;
+    --mobile-chat-input-floating-accessory-padding-top: 0px;
     --mobile-chat-input-floating-accessory-top-border-width: 0px;
     --mobile-chat-input-floating-border-radius: 16px;
     --mobile-chat-input-floating-content-gap: 8px;
