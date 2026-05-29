@@ -703,7 +703,7 @@ let tY = s.memo(function (e) {
             W = s.useCallback(() => {
                 (0, tt.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("88566"),
+                        n.e("30850"),
                         n.e("23930"),
                         n.e("76171"),
                         n.e("86672"),
@@ -1486,7 +1486,7 @@ let nc = (0, y.A)(function (e) {
         [L] = (0, eh.A)([
             (function () {
                 if (null != v && null != v.id) return v.id;
-                if (null != f && null != f.id) return f.id;
+                if (null != f) return f.id;
                 if (null != C) return C.applicationId;
                 if (null != O) return O.applicationId;
                 if (null != m && null != m.id) return m.id;
