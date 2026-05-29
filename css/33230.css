@@ -438,6 +438,112 @@
     width: 100%
 }
 
+.sidebar_ac0f9f {
+    border-inline-end: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    width: var(--custom-gallery-panel-width)
+}
+
+.sidebarHeader_ac0f9f {
+    justify-content: space-between;
+    padding: var(--space-16) var(--space-16) var(--space-8)
+}
+
+.sidebarHeader_ac0f9f,
+.sidebarHeaderTitleGroup_ac0f9f {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.sidebarContent_ac0f9f {
+    flex: 1;
+    min-height: 0
+}
+
+.section_ac0f9f,
+.sidebarContent_ac0f9f {
+    display: flex;
+    flex-direction: column
+}
+
+.section_ac0f9f {
+    gap: var(--space-4);
+    padding: var(--space-12) var(--space-12)
+}
+
+.section_ac0f9f:not(:first-child) {
+    border-block-start: 1px solid var(--border-subtle)
+}
+
+.sectionLabel_ac0f9f {
+    padding: var(--space-4) var(--space-8)
+}
+
+.facetSection_ac0f9f {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0
+}
+
+.facetList_ac0f9f {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.row_ac0f9f {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    color: var(--text-default);
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-8);
+    padding: var(--space-8)
+}
+
+.row_ac0f9f:hover {
+    background: var(--background-mod-subtle)
+}
+
+.rowSelected_ac0f9f {
+    background: var(--background-mod-subtle)
+}
+
+.rowDisabled_ac0f9f {
+    opacity: .5;
+    pointer-events: none
+}
+
+.rowIcon_ac0f9f {
+    align-items: center;
+    display: inline-flex;
+    flex-shrink: 0;
+    height: 20px;
+    justify-content: center;
+    width: 20px
+}
+
+.rowLabel_ac0f9f {
+    flex: 1 1 auto;
+    min-width: 0
+}
+
+.rowTrailer_ac0f9f {
+    align-items: center;
+    color: var(--text-muted);
+    display: inline-flex;
+    flex-shrink: 0
+}
+
+.showAllRow_ac0f9f {
+    align-items: center;
+    display: flex;
+    padding: var(--space-4) var(--space-8)
+}
+
 .sidebar__75f8c {
     border-inline-end: 1px solid var(--border-muted);
     display: flex;

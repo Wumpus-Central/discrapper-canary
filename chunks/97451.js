@@ -6,5 +6,4 @@ e.exports = {
     V_: "displayScreenshot__38295 displayVideo__38295",
     DV: "clipsPlayer__38295",
     xS: "videoSizer__38295",
-    nV: "editorHeader__38295",
 };

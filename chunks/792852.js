@@ -11,7 +11,7 @@ let s = {
     selectedUserIds: new Set(),
     selectedGuildId: null,
     selectedActivity: null,
-    selectedYear: null,
+    dateFilter: null,
     query: "",
     sortOrder: r.mu.MOST_RECENT,
 };
@@ -22,10 +22,9 @@ function a(e) {
         e.selectedUserIds.size > 0 ||
         null != e.selectedActivity ||
         null != e.selectedGuildId ||
-        null != e.selectedYear ||
+        null != e.dateFilter ||
         null != e.gameFacet ||
-        null != e.clippedWithFacet ||
-        e.activeMainLink !== r.oH.ALL_CLIPS
+        null != e.clippedWithFacet
     );
 }
 let o = (0, i.v)((e) => ({
@@ -54,7 +53,7 @@ let o = (0, i.v)((e) => ({
         }),
     setSelectedGuildId: (t) => e({ selectedGuildId: t }),
     setSelectedActivity: (t) => e({ selectedActivity: t }),
-    setSelectedYear: (t) => e({ selectedYear: t }),
+    setDateFilter: (t) => e({ dateFilter: t }),
     setQuery: (t) => e({ query: t }),
     setSortOrder: (t) => e({ sortOrder: t }),
     clearFilters: () =>
@@ -63,7 +62,7 @@ let o = (0, i.v)((e) => ({
             selectedUserIds: new Set(),
             selectedGuildId: null,
             selectedActivity: null,
-            selectedYear: null,
+            dateFilter: null,
             query: "",
         }),
     resetAll: () => e(s),

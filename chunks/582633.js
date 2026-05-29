@@ -843,19 +843,16 @@ function eh(e) {
     let b = null == m || t !== i.ip.ENTERED;
     return (0, a.jsx)("div", {
         className: E.OJ,
-        children: (0, a.jsxs)("div", {
+        children: (0, a.jsx)("div", {
             className: E.zT,
-            children: [
-                (0, a.jsx)("div", { className: E.nV }),
-                b
-                    ? (0, a.jsx)(c, {})
-                    : (0, a.jsxs)(a.Fragment, {
-                          children: [
-                              (0, a.jsx)(w, { ref: d }),
-                              (0, a.jsx)(ef, { transitionState: t, sourceURL: m, voiceAudioTracks: v }),
-                          ],
-                      }),
-            ],
+            children: b
+                ? (0, a.jsx)(c, {})
+                : (0, a.jsxs)(a.Fragment, {
+                      children: [
+                          (0, a.jsx)(w, { ref: d }),
+                          (0, a.jsx)(ef, { transitionState: t, sourceURL: m, voiceAudioTracks: v }),
+                      ],
+                  }),
         }),
     });
 }
