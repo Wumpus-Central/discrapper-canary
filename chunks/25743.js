@@ -10,37 +10,42 @@ var r = t(503698),
     d = t(834730),
     L = t(742810),
     o = t(584160),
-    C = t(834252),
+    C = t(536302),
     m = t(166532),
     h = t(615310),
     p = t(800471),
     x = t(147925),
-    g = t(89892);
-function T(e) {
+    g = t(375708),
+    T = t(89892);
+function E(e) {
     let { breadcrumb: n, isActiveBreadcrumb: t, isFinalBreadcrumb: r, separatorClassName: l } = e;
     return (0, s.jsxs)(
         "div",
         {
-            className: i()(g.hj, { [g.jQ]: r }),
+            "aria-current": t ? "step" : void 0,
+            className: i()(T.hj, { [T.jQ]: r }),
             children: [
                 (0, s.jsx)(d.E, {
                     variant: "text-sm/medium",
                     color: t ? "text-strong" : "text-muted",
                     children: n.label,
                 }),
-                r ? null : (0, s.jsx)(x.A, { className: i()(g.LJ, l), direction: x.A.Directions.RIGHT }),
+                r
+                    ? null
+                    : (0, s.jsx)(x.A, { "aria-hidden": !0, className: i()(T.LJ, l), direction: x.A.Directions.RIGHT }),
             ],
         },
         n.id,
     );
 }
-let E = function (e) {
+let S = function (e) {
     let { breadcrumbs: n, activeId: t, className: r, separatorClassName: l } = e;
-    return (0, s.jsx)("div", {
-        className: i()(g.jD, r),
+    return (0, s.jsx)("nav", {
+        "aria-label": g.intl.string(g.t.TfxqUO),
+        className: i()(T.jD, r),
         children: n.map((e, r) =>
             (0, s.jsx)(
-                T,
+                E,
                 {
                     breadcrumb: e,
                     isActiveBreadcrumb: e.id === t,
@@ -52,22 +57,21 @@ let E = function (e) {
         ),
     });
 };
-var S = t(422936),
-    N = t(234419),
-    j = t(795269),
-    f = t(788868),
-    v = t(375708),
+var N = t(422936),
+    j = t(234419),
+    f = t(795269),
+    v = t(788868),
     _ = t(503110);
 let I = (e) => {
     let { discountAmount: n } = e,
-        t = (0, N.V)(),
-        r = null != t && t.trial_id === f.Dw,
-        i = v.intl.string(v.t.IBYG5U);
+        t = (0, j.V)(),
+        r = null != t && t.trial_id === v.Dw,
+        i = g.intl.string(g.t.IBYG5U);
     return (
         void 0 !== n
-            ? (i = v.intl.formatToPlainString(v.t.iiLbvu, { percent: n }))
-            : r && (i = v.intl.string(v.t.gtNqJQ)),
-        (0, s.jsx)("div", { className: _.f, children: (0, s.jsx)(j.R, { text: i }) })
+            ? (i = g.intl.formatToPlainString(g.t.iiLbvu, { percent: n }))
+            : r && (i = g.intl.string(g.t.gtNqJQ)),
+        (0, s.jsx)("div", { className: _.f, children: (0, s.jsx)(f.R, { text: i }) })
     );
 };
 var P = t(88001),
@@ -75,8 +79,8 @@ var P = t(88001),
     A = t(967744),
     M = t(232266),
     y = t(243002),
-    F = t(303930),
-    b = t(241988);
+    b = t(303930),
+    F = t(241988);
 function D(e) {
     let { isOneStepCheckout: n, headerText: t, step: r, filteredBreadcrumbs: i } = e;
     if (n)
@@ -89,7 +93,7 @@ function D(e) {
         className: R.go,
         children: [
             (0, s.jsx)(l.D, { variant: "text-lg/semibold", children: t }),
-            a && (0, s.jsx)(E, { activeId: r, breadcrumbs: i }),
+            a && (0, s.jsx)(S, { activeId: r, breadcrumbs: i }),
         ],
     });
 }
@@ -111,48 +115,48 @@ let O = function (e) {
             onClose: r,
             upgradeToPremiumType: l,
             isEligibleForTrial: x = !1,
-            showTrialBadge: g = !1,
-            showDiscountBadge: T = !1,
-            isPremiumGroupPurchase: E = !1,
-            forceBrandRefreshHeader: N = !1,
+            showTrialBadge: T = !1,
+            showDiscountBadge: E = !1,
+            isPremiumGroupPurchase: S = !1,
+            forceBrandRefreshHeader: j = !1,
         } = e,
-        j = l === f.PremiumTypes.TIER_2,
+        f = l === v.PremiumTypes.TIER_2,
         _ = (0, p.lp)(x),
-        M = (0, S.O)(),
+        M = (0, N.O)(),
         y = M?.discount?.amount,
         { startedPaymentFlowWithPaymentSourcesRef: O, isDisplayingWowMomentConfirmation: w } = (0, C.P5)(),
-        { step: H, breadcrumbsData: Y } = (0, h.Ay)(),
-        k = (0, L.D7)({ location: "PremiumPaymentHeader" });
-    if (!N && (null == Y || 0 === Y.length)) return null;
-    let U = (Y ?? []).flatMap((e) => {
+        { step: H, breadcrumbsData: U } = (0, h.Ay)(),
+        Y = (0, L.D7)({ location: "PremiumPaymentHeader" });
+    if (!j && (null == U || 0 === U.length)) return null;
+    let k = (U ?? []).flatMap((e) => {
         let n = e.useBreadcrumbLabel(x),
             t = e.sectionHeaderText;
         return null != n ? { id: e.id, label: n, sectionHeaderText: t } : [];
     });
-    if (!N && 0 === U.length) return null;
-    let z = (U = U.filter((e) => {
-            if (E && e.id === m.pn.PLAN_SELECT) return !1;
+    if (!j && 0 === k.length) return null;
+    let z = (k = k.filter((e) => {
+            if (S && e.id === m.pn.PLAN_SELECT) return !1;
             let n = e.id !== m.pn.ADD_PAYMENT_STEPS,
                 t = e.id === m.pn.ADD_PAYMENT_STEPS && !O.current;
             return !x || n || t;
         })).find((e) => e.id === H),
         W = z?.sectionHeaderText?.() ?? z?.label,
-        G = !(k && null != H && o.M.includes(H)) && null != W && null != H,
-        V = _ && G && H === m.pn.REVIEW,
-        q = j ? "nitro-pink" : "nitro-green",
-        J = E ? (0, P.DP)() : j ? v.intl.string(v.t.lG6a5x) : v.intl.string(v.t["t9uG/o"]),
+        G = !(Y && null != H && o.M.includes(H)) && null != W && null != H,
+        q = _ && G && H === m.pn.REVIEW,
+        V = f ? "nitro-pink" : "nitro-green",
+        J = S ? (0, P.DP)() : f ? g.intl.string(g.t.lG6a5x) : g.intl.string(g.t["t9uG/o"]),
         Q = R.kL,
         Z = i()(R.N1, A.headerGradient);
     return w
-        ? (0, s.jsx)("div", { className: Q, children: (0, s.jsx)(a.h, { color: q, className: Z }) })
+        ? (0, s.jsx)("div", { className: Q, children: (0, s.jsx)(a.h, { color: V, className: Z }) })
         : (0, s.jsxs)("div", {
               className: Q,
               children: [
                   (0, s.jsxs)(a.h, {
-                      color: q,
+                      color: V,
                       className: i()(Z, { [R.s1]: !G }),
                       children: [
-                          (0, s.jsx)(B, { isTier2: j }),
+                          (0, s.jsx)(B, { isTier2: f }),
                           !n &&
                               (0, s.jsx)(c.s_, {
                                   "data-migration-pending": !0,
@@ -160,11 +164,11 @@ let O = function (e) {
                                   onClick: r,
                                   className: R.Ep,
                               }),
-                          (0, s.jsx)("img", { src: j ? b : F, alt: "", className: V ? R.i_ : R.kX }),
+                          (0, s.jsx)("img", { src: f ? F : b, alt: "", className: q ? R.i_ : R.kX }),
                           (0, s.jsxs)("div", {
                               className: R.FS,
                               children: [
-                                  E &&
+                                  S &&
                                       (0, s.jsx)("div", {
                                           className: R.$N,
                                           children: (0, s.jsx)(u.E, { type: "beta", variant: "expressive" }),
@@ -179,8 +183,8 @@ let O = function (e) {
                           }),
                       ],
                   }),
-                  (g || T) && (0, s.jsx)(I, { discountAmount: y }),
-                  G && (0, s.jsx)(D, { isOneStepCheckout: _, headerText: W, step: H, filteredBreadcrumbs: U }),
+                  (T || E) && (0, s.jsx)(I, { discountAmount: y }),
+                  G && (0, s.jsx)(D, { isOneStepCheckout: _, headerText: W, step: H, filteredBreadcrumbs: k }),
               ],
           });
 };

@@ -417,8 +417,8 @@ var eS = n(502572),
     eK = n(144165),
     e$ = n(854627),
     ez = n(427262),
-    eq = n(326084),
-    eX = n(851746),
+    eq = n(851746),
+    eX = n(326084),
     eZ = n(664654),
     eQ = n(212737),
     eJ = n(849812);
@@ -454,7 +454,7 @@ let e0 = (e) => {
         });
     },
     e3 = (e) => {
-        let { nReferralsSent: t } = e;
+        let { nReferralsSent: t, imageSize: n = 93 } = e;
         return (0, r.jsx)(eW.a, {
             percent: 33.3 * t,
             colorOverride: "#53ac66",
@@ -464,23 +464,51 @@ let e0 = (e) => {
             overlayClassName: t === eZ.Z ? eJ.ys : void 0,
             children: (0, r.jsx)(eK._, {
                 src: "https://cdn.discordapp.com/assets/content/f55a25cc26b81c0d72e110bb7fd978e6aff78e847f53b34011ba4600be592975.svg",
-                height: 93,
-                width: 93,
+                height: n,
+                width: n,
                 zoomable: !1,
             }),
         });
     },
     e6 = (e) => {
         let { className: t } = e,
-            { referralSentUsers: i } = (0, eZ.J)(),
-            s = (0, u.bG)([eX.A], () => eX.A.getRecipientStatus()),
-            a = (0, u.bG)([eX.A], () => eX.A.getHasEligibleFriends()),
-            l = s.size === eZ.Z && [...s.values()].every((e) => e === eq.aK.REDEEMED),
-            c = s.size === eZ.Z;
+            {
+                referralSentUsers: i,
+                nReferralsSent: s,
+                hasEligibleFriends: a,
+                allSent: l,
+                bodyText: c,
+            } = (function () {
+                var e, t, n;
+                let { referralSentUsers: i } = (0, eZ.J)(),
+                    r = (0, u.bG)([eq.A], () => eq.A.getRecipientStatus()),
+                    s = (0, u.bG)([eq.A], () => eq.A.getHasEligibleFriends()),
+                    a = r.size === eZ.Z,
+                    o =
+                        ((e = !1 !== s),
+                        (t = i.length),
+                        (n = r.size === eZ.Z && [...r.values()].every((e) => e === eX.aK.REDEEMED)),
+                        e
+                            ? t === eZ.Z
+                                ? n
+                                    ? z.intl.format(z.t["1aEjsH"], {
+                                          helpdeskArticle: er.A.getArticleURL(W.MVz.REFERRAL_PROGRAM),
+                                      })
+                                    : z.intl.format(z.t["+u3AOO"], {
+                                          helpdeskArticle: er.A.getArticleURL(W.MVz.REFERRAL_PROGRAM),
+                                      })
+                                : z.intl.format(z.t["omMr+V"], {
+                                      helpdeskArticle: er.A.getArticleURL(W.MVz.REFERRAL_PROGRAM),
+                                  })
+                            : z.intl.format(z.t["zWhX/Q"], {
+                                  helpdeskArticle: er.A.getArticleURL(W.MVz.REFERRAL_PROGRAM),
+                              }));
+                return { referralSentUsers: i, nReferralsSent: r.size, hasEligibleFriends: s, allSent: a, bodyText: o };
+            })();
         return (0, r.jsxs)("div", {
             className: o()(eJ.kL, t),
             children: [
-                (0, r.jsx)("div", { className: eJ.G3, children: (0, r.jsx)(e3, { nReferralsSent: s.size }) }),
+                (0, r.jsx)("div", { className: eJ.G3, children: (0, r.jsx)(e3, { nReferralsSent: s }) }),
                 (0, r.jsxs)("div", {
                     className: eJ.IH,
                     children: [
@@ -493,31 +521,12 @@ let e0 = (e) => {
                                     color: "text-strong",
                                     children: z.intl.string(z.t.USo4s7),
                                 }),
-                                (0, r.jsx)(x.E, {
-                                    variant: "text-md/medium",
-                                    color: "text-subtle",
-                                    children:
-                                        !1 === a
-                                            ? z.intl.format(z.t["zWhX/Q"], {
-                                                  helpdeskArticle: er.A.getArticleURL(W.MVz.REFERRAL_PROGRAM),
-                                              })
-                                            : i.length === eZ.Z
-                                              ? !0 === l
-                                                  ? z.intl.format(z.t["1aEjsH"], {
-                                                        helpdeskArticle: er.A.getArticleURL(W.MVz.REFERRAL_PROGRAM),
-                                                    })
-                                                  : z.intl.format(z.t["+u3AOO"], {
-                                                        helpdeskArticle: er.A.getArticleURL(W.MVz.REFERRAL_PROGRAM),
-                                                    })
-                                              : z.intl.format(z.t["omMr+V"], {
-                                                    helpdeskArticle: er.A.getArticleURL(W.MVz.REFERRAL_PROGRAM),
-                                                }),
-                                }),
+                                (0, r.jsx)(x.E, { variant: "text-md/medium", color: "text-subtle", children: c }),
                             ],
                         }),
                         (0, r.jsx)(M.$, {
                             variant: "primary",
-                            disabled: !1 === a || !0 === c,
+                            disabled: !1 === a || !0 === l,
                             text: z.intl.string(z.t.Lm2nFc),
                             onClick: () =>
                                 ((e) => {
