@@ -1,10 +1,11 @@
 "use strict";
-n.d(t, { BC: () => a, Yt: () => u, kI: () => d, oE: () => c });
+n.d(t, { BC: () => o, Yt: () => _, kI: () => f, oE: () => h });
 var i = n(310784),
     r = n.n(i),
     s = n(818348);
-let a = 74;
-function o(e, t, n) {
+let a = { TWILIGHT: 1, PLUM: 2, FIRE: 3, GOLD_DUST: 4, MOSS: 5, JADE: 6, OBSIDIAN: 7, OCEAN: 8, DENIM: 9, BLURPLE: 10 },
+    o = 74;
+function l(e, t, n) {
     return {
         color: e,
         angle: 0,
@@ -15,25 +16,67 @@ function o(e, t, n) {
         ],
     };
 }
-let l = {
-    1: { id: 1, darkAppearance: o("#7C547E", "#040A20", 30), lightAppearance: o("#FA9EFF", "#5A7EFE", 30) },
-    9: { id: 9, darkAppearance: o("#282F6A", "#040413", 100), lightAppearance: o("#DBDBFF", "#6060FF", 100) },
-    8: { id: 8, darkAppearance: o("#1D466F", "#0D0D24", 50), lightAppearance: o("#9ADBF7", "#2D3CCA", 50) },
-    10: { id: 10, darkAppearance: o("#5541A3", "#0E0C13", 60), lightAppearance: o("#C3BFFF", "#816BDC", 60) },
-    7: { id: 7, darkAppearance: o("#463C5F", "#05081A", 50), lightAppearance: o("#B59DF2", "#8F89D2", 50) },
-    2: { id: 2, darkAppearance: o("#51265D", "#1A0414", 35), lightAppearance: o("#E893FF", "#FFADDC", 35) },
-    3: { id: 3, darkAppearance: o("#421516", "#0B0913", 35), lightAppearance: o("#FFEBCA", "#FF8989", 35) },
-    4: { id: 4, darkAppearance: o("#4C3625", "#161311", 100), lightAppearance: o("#FFE7DA", "#FFD89B", 100) },
-    5: { id: 5, darkAppearance: o("#394232", "#10150E", 100), lightAppearance: o("#B7D19F", "#B1DCA4", 100) },
-    6: { id: 6, darkAppearance: o("#1B4849", "#080816", 50), lightAppearance: o("#C5F0D2", "#60ADB2", 50) },
-};
-function u(e) {
-    return null == e ? null : (l[e] ?? null);
+let u = [a.TWILIGHT, a.DENIM, a.OCEAN, a.BLURPLE, a.OBSIDIAN, a.PLUM, a.FIRE, a.GOLD_DUST, a.MOSS, a.JADE],
+    c = {
+        [a.TWILIGHT]: {
+            id: a.TWILIGHT,
+            darkAppearance: l("#7C547E", "#040A20", 30),
+            lightAppearance: l("#FA9EFF", "#5A7EFE", 30),
+        },
+        [a.DENIM]: {
+            id: a.DENIM,
+            darkAppearance: l("#282F6A", "#040413", 100),
+            lightAppearance: l("#DBDBFF", "#6060FF", 100),
+        },
+        [a.OCEAN]: {
+            id: a.OCEAN,
+            darkAppearance: l("#1D466F", "#0D0D24", 50),
+            lightAppearance: l("#9ADBF7", "#2D3CCA", 50),
+        },
+        [a.BLURPLE]: {
+            id: a.BLURPLE,
+            darkAppearance: l("#5541A3", "#0E0C13", 60),
+            lightAppearance: l("#C3BFFF", "#816BDC", 60),
+        },
+        [a.OBSIDIAN]: {
+            id: a.OBSIDIAN,
+            darkAppearance: l("#463C5F", "#05081A", 50),
+            lightAppearance: l("#B59DF2", "#8F89D2", 50),
+        },
+        [a.PLUM]: {
+            id: a.PLUM,
+            darkAppearance: l("#51265D", "#1A0414", 35),
+            lightAppearance: l("#E893FF", "#FFADDC", 35),
+        },
+        [a.FIRE]: {
+            id: a.FIRE,
+            darkAppearance: l("#421516", "#0B0913", 35),
+            lightAppearance: l("#FFEBCA", "#FF8989", 35),
+        },
+        [a.GOLD_DUST]: {
+            id: a.GOLD_DUST,
+            darkAppearance: l("#4C3625", "#161311", 100),
+            lightAppearance: l("#FFE7DA", "#FFD89B", 100),
+        },
+        [a.MOSS]: {
+            id: a.MOSS,
+            darkAppearance: l("#394232", "#10150E", 100),
+            lightAppearance: l("#B7D19F", "#B1DCA4", 100),
+        },
+        [a.JADE]: {
+            id: a.JADE,
+            darkAppearance: l("#1B4849", "#080816", 50),
+            lightAppearance: l("#C5F0D2", "#60ADB2", 50),
+        },
+    },
+    d = new Set(Object.values(a));
+function _(e) {
+    return null != e && d.has(e) ? c[e] : null;
 }
-function c(e, t) {
+function h(e, t) {
     return t === s.NJ.LIGHT ? e.lightAppearance : e.darkAppearance;
 }
-function d(e) {
+function f(e) {
     let t = r()(e),
         n = t.get("hsl.h"),
         i = t.get("hsl.s"),
@@ -48,3 +91,4 @@ function d(e) {
             .hex(),
     ];
 }
+u.map((e) => c[e]);

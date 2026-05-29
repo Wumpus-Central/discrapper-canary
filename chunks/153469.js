@@ -101,6 +101,7 @@ function E(e, t) {
             secondaryColor: s,
             isDarkTheme: (0, a.M)(t),
             baseMixAmount: n.baseMix,
+            textMixAmount: 0,
         }),
         _ = `
       ${Object.entries(c)
