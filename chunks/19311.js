@@ -1,88 +1,88 @@
-r.d(n, { Ay: () => C, CY: () => E, ti: () => j });
+n.d(t, { Ay: () => C, ti: () => T });
 var l,
-    t = r(627968);
-r(64700);
-var s = r(503698),
-    i = r.n(s),
-    a = r(331322),
-    d = r(990078),
-    c = r(821609),
-    o = r(123292),
-    u = r(364840),
-    p = r(999784),
-    x = r(375708),
-    h = r(613676),
-    j =
+    a = n(627968);
+n(64700);
+var r = n(503698),
+    i = n.n(r),
+    s = n(331322),
+    E = n(990078),
+    _ = n(821609),
+    o = n(123292),
+    A = n(364840),
+    I = n(999784),
+    c = n(375708),
+    d = n(613676),
+    T =
         (((l = {})[(l.CONTINUE = 0)] = "CONTINUE"),
         (l[(l.UPGRADE = 1)] = "UPGRADE"),
         (l[(l.PURCHASE = 2)] = "PURCHASE"),
         l);
-let E = (e) => (2 === e ? "expressive" : 0 === e ? "primary" : "active"),
-    v = (e) => {
+let S = (e) => (2 === e ? "expressive" : 0 === e ? "primary" : "active"),
+    N = (e) => {
         let {
-                primaryIcon: n,
-                primaryCTA: r,
+                primaryIcon: t,
+                primaryCTA: n,
                 primaryType: l,
-                primaryText: s,
+                primaryText: r,
                 primaryDisabled: i,
-                primarySubmitting: a,
-                onPrimary: d,
+                primarySubmitting: s,
+                onPrimary: E,
             } = e,
             o = {
                 type: l,
                 disabled: i,
-                onClick: d,
-                icon: null == n ? void 0 : () => (0, t.jsx)(n, { color: "currentColor", className: h.C4 }),
-                loading: a,
-                text: s,
+                onClick: E,
+                icon: null == t ? void 0 : () => (0, a.jsx)(t, { color: "currentColor", className: d.C4 }),
+                loading: s,
+                text: r,
             };
-        return 2 === r ? (0, t.jsx)(c.$, { variant: E(r), ...o }) : (0, t.jsx)(c.$, { ...o, variant: E(r) });
+        return 2 === n ? (0, a.jsx)(_.$, { variant: S(n), ...o }) : (0, a.jsx)(_.$, { ...o, variant: S(n) });
     },
-    A = (e) => {
+    u = (e) => {
         let {
-                onBack: n,
-                backText: r,
+                onBack: t,
+                backText: n,
                 primaryIcon: l,
-                primaryCTA: s,
-                primaryType: c,
-                primaryText: j,
-                primaryTooltip: E,
-                primaryDisabled: A,
+                primaryCTA: r,
+                primaryType: _,
+                primaryText: T,
+                primaryTooltip: S,
+                primaryDisabled: u,
                 primarySubmitting: C,
-                onPrimary: m,
+                onPrimary: R,
             } = e,
-            y =
-                null == n
+            U =
+                null == t
                     ? null
-                    : (0, t.jsx)(o.Q, { text: r ?? x.intl.string(x.t["13/7kX"]), onClick: n, variant: "secondary" }),
-            T = (0, t.jsxs)(a.B, {
+                    : (0, a.jsx)(o.Q, { text: n ?? c.intl.string(c.t["13/7kX"]), onClick: t, variant: "secondary" }),
+            P = (0, a.jsxs)(s.B, {
                 direction: "horizontal",
                 align: "center",
                 gap: 0,
                 padding: 0,
                 fullWidth: !1,
                 children: [
-                    (0, t.jsx)(p.A, {}),
+                    (0, a.jsx)(I.A, {}),
                     (() => {
-                        if (null == s || null == j) return null;
+                        if (null == r || null == T) return null;
                         let e = {
                             primaryIcon: l,
-                            primaryCTA: s,
-                            primaryType: c,
-                            primaryText: j,
-                            primaryDisabled: A,
+                            primaryCTA: r,
+                            primaryType: _,
+                            primaryText: T,
+                            primaryDisabled: u,
                             primarySubmitting: C,
-                            onPrimary: m,
+                            onPrimary: R,
                         };
-                        return null != E
-                            ? (0, t.jsx)(d.m, { text: E, asContainer: !0, children: (0, t.jsx)(v, { ...e }) })
-                            : (0, t.jsx)(v, { ...e, onPrimary: m });
+                        return null != S
+                            ? (0, a.jsx)(E.m, { text: S, asContainer: !0, children: (0, a.jsx)(N, { ...e }) })
+                            : (0, a.jsx)(N, { ...e, onPrimary: R });
                     })(),
                 ],
             });
-        return (0, t.jsx)(u.j, {
-            children: (0, t.jsxs)("div", { className: i()(h.eT, { [h.T$]: null == y }), children: [y, T] }),
+        return (0, a.jsx)(A.j, {
+            children: (0, a.jsxs)("div", { className: i()(d.eT, { [d.T$]: null == U }), children: [U, P] }),
         });
     };
-A.CTAType = j;
-let C = A;
+u.CTAType = T;
+let C = u;
