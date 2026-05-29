@@ -212,7 +212,7 @@ function F(t) {
                 children: (t) =>
                     (0, n.jsx)(b.A, {
                         quest: i,
-                        imageSize: { width: 908, height: 380 },
+                        imageSize: { width: U.i$ * U.K, height: U.ls * U.K },
                         containerClassName: X.WQ,
                         isInteracting: !0,
                         assetRef: t,

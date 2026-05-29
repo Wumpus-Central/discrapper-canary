@@ -1656,7 +1656,7 @@ var t5 = l(449054),
     ll = l(548118),
     ls = l(714991),
     li = l(776231),
-    la = l(860689),
+    la = l(494821),
     ln = l(728968),
     lr = l(937495),
     lo = l(517061);
@@ -2646,7 +2646,7 @@ function sf(e) {
                     return void (0, sg.openModalLazy)(
                         async () => {
                             let { ItemDetailsModal: e } = await Promise.all([
-                                l.e("954"),
+                                l.e("8180"),
                                 l.e("53917"),
                                 l.e("15186"),
                                 l.e("80830"),
@@ -2674,7 +2674,7 @@ function sf(e) {
                         void (0, sg.openModalLazy)(
                             async () => {
                                 let { SubscriptionDetailsModal: a } = await Promise.all([
-                                    l.e("954"),
+                                    l.e("8180"),
                                     l.e("53917"),
                                     l.e("15186"),
                                     l.e("80830"),

@@ -615,9 +615,10 @@ function eW(e) {
                 ? G(null)
                 : (0, x.openModalLazy)(async () => {
                       let { default: n } = await Promise.all([
-                          l.e("72813"),
-                          l.e("17006"),
+                          l.e("77737"),
+                          l.e("8308"),
                           l.e("90665"),
+                          l.e("12380"),
                           l.e("63232"),
                           l.e("43437"),
                           l.e("58164"),
@@ -792,8 +793,8 @@ var eJ = l(789645),
     e1 = l(842241),
     e7 = l(279208),
     e8 = l(747007),
-    e9 = l(710358),
-    e3 = l(958590),
+    e3 = l(710358),
+    e9 = l(958590),
     e4 = l(174459),
     e2 = l(957565),
     e5 = l(118888);
@@ -804,9 +805,9 @@ function tt(e) {
         r = (0, a.bG)([C.Ay], () => (null != n ? C.Ay.getDefaultChannel(n)?.id : null), [n]),
         s = (0, a.bG)([b.A], () => b.A.getGuild(n), [n]),
         { channel_id: d, id: u } = l ?? {},
-        c = (0, a.bG)([e3.A], () => {
+        c = (0, a.bG)([e9.A], () => {
             let e = d ?? r;
-            return null == e ? null : e3.A.getInvite(e);
+            return null == e ? null : e9.A.getInvite(e);
         }, [d, r]);
     if (null == l) return t(), null;
     let o = s?.vanityURLCode ?? c?.code,
@@ -824,7 +825,7 @@ function tt(e) {
                 "aria-label": ec.intl.string(ec.t.cpT0Cq),
                 children: (0, i.jsx)(eJ.P, { size: "md", color: "currentColor" }),
             }),
-            (0, i.jsx)(e9.A, {
+            (0, i.jsx)(e3.A, {
                 children: (0, i.jsx)("div", {
                     className: e5.zc,
                     children: (0, i.jsx)(e0.C, {

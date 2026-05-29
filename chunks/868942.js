@@ -240,7 +240,8 @@ let q = function (e) {
                     i.e("34218"),
                     i.e("58735"),
                     i.e("741"),
-                    i.e("63336"),
+                    i.e("55351"),
+                    i.e("77737"),
                     i.e("16581"),
                     i.e("9045"),
                     i.e("84820"),
@@ -283,9 +284,8 @@ let q = function (e) {
                         (0, d.openModalLazy)(
                             async () => {
                                 let { PremiumResubscribeModal: e } = await Promise.all([
-                                    i.e("65631"),
-                                    i.e("17214"),
-                                    i.e("63336"),
+                                    i.e("55351"),
+                                    i.e("77737"),
                                     i.e("92443"),
                                     i.e("9045"),
                                     i.e("94161"),

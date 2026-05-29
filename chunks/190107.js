@@ -1,37 +1,41 @@
 "use strict";
 n.d(t, {
-    yr: () => G,
-    Fw: () => P,
+    yr: () => j,
+    Fw: () => F,
     Ko: () => N,
-    ej: () => L,
-    K3: () => Y,
-    hK: () => k,
-    ZV: () => S,
-    J6: () => V,
-    zO: () => j,
-    rE: () => A,
-    eA: () => M,
-    tZ: () => T,
-    Ls: () => H,
+    ej: () => k,
+    K3: () => q,
+    hK: () => H,
+    ZV: () => y,
+    J6: () => W,
+    zO: () => z,
+    rE: () => I,
+    eA: () => G,
+    tZ: () => S,
+    Ls: () => $,
     Li: () => f.L,
-    BQ: () => z,
-    fP: () => D,
-    B3: () => B,
-    gB: () => U,
+    K: () => L,
+    BQ: () => Q,
+    fP: () => x,
+    B3: () => K,
+    gB: () => B,
     A6: () => C,
-    fO: () => v,
-    Pc: () => K,
-    mg: () => w,
-    uz: () => F,
-    Tz: () => I,
-    aA: () => y,
-    WQ: () => $,
-    aJ: () => x,
-    CI: () => b,
-    pc: () => Z,
-    GD: () => R,
-    kL: () => W,
-    TY: () => g,
+    fO: () => R,
+    Pc: () => Z,
+    mg: () => U,
+    ls: () => D,
+    uz: () => Y,
+    Tz: () => T,
+    aA: () => v,
+    i$: () => b,
+    WQ: () => J,
+    aJ: () => V,
+    CI: () => P,
+    pc: () => et,
+    GD: () => M,
+    qh: () => O,
+    kL: () => X,
+    TY: () => A,
 });
 var i,
     r,
@@ -41,17 +45,18 @@ var i,
     l,
     u,
     c,
-    d = n(735438),
-    _ = n(412703),
+    d,
+    _ = n(735438),
+    h = n(412703),
     f = n(902173),
-    h =
+    p =
         (((i = {})[(i.ConsecutiveHeartbeatPeriodMinutes = 2)] = "ConsecutiveHeartbeatPeriodMinutes"),
         (i[(i.StatusLookbackPeriodDays = 30)] = "StatusLookbackPeriodDays"),
         i),
-    p = n(636537),
-    E = n(927813),
-    m = n(507107);
-let g = {
+    E = n(636537),
+    m = n(927813),
+    g = n(507107);
+let A = {
     GIFT_INVENTORY_SETTINGS_BADGE: 1,
     QUEST_BAR: 2,
     QUEST_BAR_V2: 2,
@@ -59,7 +64,7 @@ let g = {
     ACTIVITY_PANEL: 4,
     QUEST_LIVE_STREAM: 8,
 };
-var A =
+var I =
     (((r = {}).ACTIVITY_PANEL = "quests_bar_activity_panel"),
     (r.QUESTS_MANAGER = "quests_manager"),
     (r.QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER = "quests_console_optimistic_updates_manager"),
@@ -72,6 +77,7 @@ var A =
     (r.QUESTS_BAR_MOBILE = "quests_bar_mobile"),
     (r.REWARD_CODE_MODAL = "reward_code_modal"),
     (r.INGAME_REWARD_MODAL = "ingame_reward_modal"),
+    (r.INGAME_CONNECTION_MODAL = "ingame_connection_modal"),
     (r.COLLECTIBLE_REWARD_MODAL = "collectible_reward_modal"),
     (r.ORBS_REWARD_MODAL = "orbs_reward_modal"),
     (r.QUESTS_MINOR_REWARD_CAPPING_CONFIG = "QUESTS_MINOR_REWARD_CAPPING_CONFIG"),
@@ -110,89 +116,93 @@ var A =
     (r.NITRO_HOME_TAB = "nitro_home_tab"),
     (r.QUEST_ORB_MULTIPLIER_TAB_TOOLTIP = "quest_orb_multiplier_tab_tooltip"),
     r);
-let I = new Set([f.L.NITRO_2_POINT_0_CTA, f.L.ORBS_MULTIPLIER_QUEST, f.L.XBOX_GAME_PASS_QUEST]),
-    T = E.A.Millis.MINUTE * h.ConsecutiveHeartbeatPeriodMinutes,
-    S = { tension: 900, friction: 45, clamp: !0 },
+let T = new Set([f.L.NITRO_2_POINT_0_CTA, f.L.ORBS_MULTIPLIER_QUEST, f.L.XBOX_GAME_PASS_QUEST]),
+    S = m.A.Millis.MINUTE * p.ConsecutiveHeartbeatPeriodMinutes,
+    y = { tension: 900, friction: 45, clamp: !0 },
     N = { tension: 360, friction: 30, clamp: !0 },
-    y = 6,
+    v = 6,
     C = 2;
-var v = (((s = {}).CONSOLE = "CONSOLE"), (s.DESKTOP = "DESKTOP"), s);
-let O = (0, p.TP)(),
-    R =
-        -1 !== O.indexOf("localhost") || -1 !== O.indexOf("127.0.0.1")
-            ? `${O}/_cdn_storage/`
+var R = (((s = {}).CONSOLE = "CONSOLE"), (s.DESKTOP = "DESKTOP"), s),
+    O = (((a = {}).IN_GAME = "in_game"), (a.WEB = "web"), a);
+let b = 454,
+    D = 190,
+    L = 2,
+    w = (0, E.TP)(),
+    M =
+        -1 !== w.indexOf("localhost") || -1 !== w.indexOf("127.0.0.1")
+            ? `${w}/_cdn_storage/`
             : "https://cdn.discordapp.com/",
-    b = R + "quests/";
-var D =
-    (((a = {}).COLLAPSED = "collapsed"),
-    (a.EXPANDED = "expanded"),
-    (a.CLOSED = "closed"),
-    (a.SOFT_DISMISSED = "soft-dismissed"),
-    (a.RESET_TO_PREVIOUS = "reset-to-previous"),
-    a);
-let L = "545364944258990091",
-    w = "{reward_code}";
-var M =
-    (((o = {}).EXCLUDED_QUEST = "excluded_quest"),
-    (o.UNKNOWN_QUEST = "unknown_quest"),
-    (o.NOT_SHAREABLE_QUEST = "not_shareable_quest"),
+    P = M + "quests/";
+var x =
+    (((o = {}).COLLAPSED = "collapsed"),
+    (o.EXPANDED = "expanded"),
+    (o.CLOSED = "closed"),
+    (o.SOFT_DISMISSED = "soft-dismissed"),
+    (o.RESET_TO_PREVIOUS = "reset-to-previous"),
     o);
-let P = "1333839522189938740",
-    x = "1410358070831480904",
-    U = "1420556874629251124",
-    k = "1402418703554842694",
-    G = "1496993616537587813",
-    F = "1496993616537587812",
-    V = new Set([
-        m.yW.DESKTOP_ACCOUNT_PANEL_AREA,
-        m.yW.MOBILE_HOME_DOCK_AREA,
-        m.yW.QUEST_HOME_BANNER_DESKTOP,
-        m.yW.QUEST_HOME_MOBILE_CAROUSEL,
+let k = "545364944258990091",
+    U = "{reward_code}";
+var G =
+    (((l = {}).EXCLUDED_QUEST = "excluded_quest"),
+    (l.UNKNOWN_QUEST = "unknown_quest"),
+    (l.NOT_SHAREABLE_QUEST = "not_shareable_quest"),
+    l);
+let F = "1333839522189938740",
+    V = "1410358070831480904",
+    B = "1420556874629251124",
+    H = "1402418703554842694",
+    j = "1496993616537587813",
+    Y = "1496993616537587812",
+    W = new Set([
+        g.yW.DESKTOP_ACCOUNT_PANEL_AREA,
+        g.yW.MOBILE_HOME_DOCK_AREA,
+        g.yW.QUEST_HOME_BANNER_DESKTOP,
+        g.yW.QUEST_HOME_MOBILE_CAROUSEL,
     ]),
-    B = new Set([
-        _.n.STREAM_ON_DESKTOP,
-        _.n.PLAY_ON_DESKTOP,
-        _.n.PLAY_ON_XBOX,
-        _.n.PLAY_ON_PLAYSTATION,
-        _.n.PLAY_ACTIVITY,
+    K = new Set([
+        h.n.STREAM_ON_DESKTOP,
+        h.n.PLAY_ON_DESKTOP,
+        h.n.PLAY_ON_XBOX,
+        h.n.PLAY_ON_PLAYSTATION,
+        h.n.PLAY_ACTIVITY,
     ]),
-    H = new Set([
-        _.n.STREAM_ON_DESKTOP,
-        _.n.PLAY_ON_DESKTOP,
-        _.n.PLAY_ON_XBOX,
-        _.n.PLAY_ON_PLAYSTATION,
-        _.n.PLAY_ACTIVITY,
+    $ = new Set([
+        h.n.STREAM_ON_DESKTOP,
+        h.n.PLAY_ON_DESKTOP,
+        h.n.PLAY_ON_XBOX,
+        h.n.PLAY_ON_PLAYSTATION,
+        h.n.PLAY_ACTIVITY,
     ]),
-    j = new Set([
-        _.n.STREAM_ON_DESKTOP,
-        _.n.PLAY_ON_DESKTOP,
-        _.n.PLAY_ON_XBOX,
-        _.n.PLAY_ON_PLAYSTATION,
-        _.n.PLAY_ACTIVITY,
+    z = new Set([
+        h.n.STREAM_ON_DESKTOP,
+        h.n.PLAY_ON_DESKTOP,
+        h.n.PLAY_ON_XBOX,
+        h.n.PLAY_ON_PLAYSTATION,
+        h.n.PLAY_ACTIVITY,
     ]),
-    Y = { is_targeted: !1 };
-var W =
-        (((l = {}).SUGGESTED = "suggested"),
-        (l.MOST_RECENT = "most_recent"),
-        (l.EXPIRING_SOON = "expiring_soon"),
-        (l.RECENTLY_ENROLLED = "recently_enrolled"),
-        l),
-    K = (((u = {}).VIDEO = "task_video"), (u.PLAY = "task_play"), u),
-    z =
-        (((c = {}).VIRTUAL_CURRENCY = "reward_virtual_currency"),
-        (c.COLLECTIBLE = "reward_collectible"),
-        (c.IN_GAME = "reward_in_game"),
-        c);
-function $(e) {
-    return Object.values(K).includes(e)
+    q = { is_targeted: !1 };
+var X =
+        (((u = {}).SUGGESTED = "suggested"),
+        (u.MOST_RECENT = "most_recent"),
+        (u.EXPIRING_SOON = "expiring_soon"),
+        (u.RECENTLY_ENROLLED = "recently_enrolled"),
+        u),
+    Z = (((c = {}).VIDEO = "task_video"), (c.PLAY = "task_play"), c),
+    Q =
+        (((d = {}).VIRTUAL_CURRENCY = "reward_virtual_currency"),
+        (d.COLLECTIBLE = "reward_collectible"),
+        (d.IN_GAME = "reward_in_game"),
+        d);
+function J(e) {
+    return Object.values(Z).includes(e)
         ? { group: "task", filter: e }
-        : Object.values(z).includes(e)
+        : Object.values(Q).includes(e)
           ? { group: "reward", filter: e }
           : null;
 }
-let q = ["reward", "task"],
-    Z = Object.entries(
-        (0, d.groupBy)(
+let ee = ["reward", "task"],
+    et = Object.entries(
+        (0, _.groupBy)(
             [
                 { group: "task", filter: "task_play" },
                 { group: "task", filter: "task_video" },
@@ -203,7 +213,7 @@ let q = ["reward", "task"],
             "group",
         ),
     ).sort((e, t) => {
-        let n = q.indexOf(e[0]),
-            i = q.indexOf(t[0]);
+        let n = ee.indexOf(e[0]),
+            i = ee.indexOf(t[0]);
         return n < i ? -1 : +(i < n);
     });
