@@ -1,18 +1,27 @@
 "use strict";
-n.d(t, { ls: () => a, uj: () => r, v1: () => s, y5: () => o });
-var l = n(506774);
-let i = "MediaPlayerVolume";
-function s() {
-    let { volume: e } = l.w.get(i) ?? {};
+n.d(t, { GD: () => o, ls: () => l, oc: () => u, uj: () => c, v1: () => a, y5: () => d });
+var i = n(506774),
+    r = n(824744);
+let s = "MediaPlayerVolume";
+function a() {
+    let { volume: e } = i.w.get(s) ?? {};
     return "number" != typeof e && (e = 1), (e = Math.min(1, Math.max(0, e)));
 }
-function a(e) {
-    l.w.set(i, { volume: e, muted: r() });
+function o() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+    return (0, r.M)(a(), e);
 }
-function r() {
-    let { muted: e } = l.w.get(i) ?? {};
+function l(e) {
+    i.w.set(s, { volume: e, muted: c() });
+}
+function u(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+    l((0, r.w)(e, t));
+}
+function c() {
+    let { muted: e } = i.w.get(s) ?? {};
     return "boolean" != typeof e && (e = !1), e;
 }
-function o(e) {
-    l.w.set(i, { volume: s(), muted: e });
+function d(e) {
+    i.w.set(s, { volume: a(), muted: e });
 }
