@@ -1,25 +1,26 @@
-l.d(e, { A: () => m });
-var r = l(627968);
-l(64700);
-var s = l(503698),
-    i = l.n(s),
-    n = l(744808),
-    d = l(282389),
-    t = l(985018),
-    c = l(744053),
-    u = l(778765);
+i.d(s, { A: () => m });
+var e = i(627968);
+i(64700);
+var r = i(503698),
+    l = i.n(r),
+    t = i(744808),
+    d = i(875741),
+    c = i(375708),
+    n = i(744053),
+    h = i(778765);
 function m(a) {
-    let { frame: e, ...l } = a,
-        s = (0, d.A)(e.skuId);
-    return (0, r.jsx)("div", {
-        className: i()(c.i1, s),
+    let { frame: s, ...i } = a,
+        { profileFrameStyle: r, profileFrameClassName: m } = (0, d.A)(s.skuId);
+    return (0, e.jsx)("div", {
+        className: l()(n.i1, m),
+        style: r,
         role: "img",
-        "aria-label": t.intl.formatToPlainString(t.t["DT/PwH"], { a11y_text: e.label }),
-        children: (0, r.jsxs)("div", {
-            className: c.HX,
+        "aria-label": c.intl.formatToPlainString(c.t["DT/PwH"], { a11y_text: s.label }),
+        children: (0, e.jsxs)("div", {
+            className: n.HX,
             children: [
-                (0, r.jsx)("img", { src: u.A, alt: "", className: c.wt, "aria-hidden": !0, draggable: !1 }),
-                (0, r.jsx)(n.A, { frame: e, ...l }),
+                (0, e.jsx)("img", { src: h.A, alt: "", className: n.wt, "aria-hidden": !0, draggable: !1 }),
+                (0, e.jsx)(t.A, { frame: s, ...i }),
             ],
         }),
     });

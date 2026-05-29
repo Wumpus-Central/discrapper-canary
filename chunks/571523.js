@@ -661,7 +661,7 @@ var tN = n(480335),
     tv = n(31956),
     tC = n(361628),
     tR = n(744808),
-    tO = n(282389),
+    tO = n(875741),
     tb = n(645507),
     tD = n(970931),
     tL = n(462887),
@@ -1502,31 +1502,31 @@ function n9(e) {
         j = r.useRef(null),
         Y = r.useRef(null),
         W = (0, tC.A)(v?.profileFrame?.skuId, "UserProfileAccountPopout"),
-        K = (0, tO.A)(v?.profileFrame?.skuId);
+        { profileFrameStyle: K, profileFrameClassName: $ } = (0, tO.A)(v?.profileFrame?.skuId);
     (0, tv.A)({ skuId: v?.profileFrame?.skuId, openedAt: S, context: R, analyticsLocations: C });
-    let $ = r.useRef((0, eI.A)((e) => e.shouldRenderTenureLevelUp)),
-        z = r.useMemo(() => (0, tb.A)(), []),
-        [q, X] = r.useState(() => eI.A.getState().shouldRenderTenureLevelUp);
+    let z = r.useRef((0, eI.A)((e) => e.shouldRenderTenureLevelUp)),
+        q = r.useMemo(() => (0, tb.A)(), []),
+        [X, Z] = r.useState(() => eI.A.getState().shouldRenderTenureLevelUp);
     r.useEffect(() => {
         let e = setTimeout(() => {
-            X(!1);
+            Z(!1);
         }, 500);
         return () => clearTimeout(e);
     }, []);
-    let Z = (e) => {
-            g?.(), (0, t$.openUserProfileModal)({ customStatusPrompt: z, sourceAnalyticsLocations: C, ...R, ...e });
+    let Q = (e) => {
+            g?.(), (0, t$.openUserProfileModal)({ customStatusPrompt: q, sourceAnalyticsLocations: C, ...R, ...e });
         },
-        Q = v?.widgets != null && v.widgets.length > 0,
-        J = r.useCallback(() => {
+        J = v?.widgets != null && v.widgets.length > 0,
+        ee = r.useCallback(() => {
             g();
         }, [g]),
-        ee = r.useCallback(() => {
-            B(), J();
-        }, [B, J]),
-        en = (0, ex.QR)({ location: "UserProfileAccountPopout" }),
-        { enabled: ei } = eP.useConfig({ location: "UserProfileAccountPopout" }),
-        er = (0, ex.zd)({ location: "UserProfileAccountPopout" }),
-        es = r.useId();
+        en = r.useCallback(() => {
+            B(), ee();
+        }, [B, ee]),
+        ei = (0, ex.QR)({ location: "UserProfileAccountPopout" }),
+        { enabled: er } = eP.useConfig({ location: "UserProfileAccountPopout" }),
+        es = (0, ex.zd)({ location: "UserProfileAccountPopout" }),
+        ea = r.useId();
     return (0, i.jsx)(M.f5, {
         value: C,
         children: (0, i.jsx)(tW.of, {
@@ -1537,18 +1537,19 @@ function n9(e) {
             isLoaded: v?.isLoaded,
             children: (0, i.jsxs)(eN.l, {
                 ref: O,
-                "aria-labelledby": es,
+                "aria-labelledby": ea,
                 className: a()(eV.jC, y),
                 "data-layer": "base",
                 children: [
                     (0, i.jsx)(m.A, {
-                        children: (0, i.jsx)(eS.H, { id: es, children: ep.intl.string(ep.t["5fWB8U"]) }),
+                        children: (0, i.jsx)(eS.H, { id: ea, children: ep.intl.string(ep.t["5fWB8U"]) }),
                     }),
                     (0, i.jsxs)(eS.F, {
                         children: [
-                            (0, i.jsx)(n0, { displayProfile: v, handleOpenUserProfileModal: Z, height: b }),
+                            (0, i.jsx)(n0, { displayProfile: v, handleOpenUserProfileModal: Q, height: b }),
                             (0, i.jsxs)(t1.A, {
-                                className: a()(eV.BK, K),
+                                className: a()(eV.BK, $),
+                                style: K,
                                 user: E,
                                 displayProfile: v,
                                 themeType: n7.d.POPOUT,
@@ -1561,27 +1562,27 @@ function n9(e) {
                                                 user: E,
                                                 displayProfile: v,
                                                 themeType: n7.d.POPOUT,
-                                                onOpenProfile: N ? void 0 : Z,
+                                                onOpenProfile: N ? void 0 : Q,
                                             }),
                                             (0, i.jsx)(t9.A, {
                                                 ref: j,
                                                 user: E,
                                                 themeType: n7.d.POPOUT,
                                                 onCloseProfile: g,
-                                                prompt: z,
+                                                prompt: q,
                                             }),
                                         ],
                                     }),
                                     (0, i.jsxs)(ev.Ip, {
                                         className: eV.rf,
-                                        style: { pointerEvents: q ? "none" : void 0 },
+                                        style: { pointerEvents: X ? "none" : void 0 },
                                         children: [
                                             (0, i.jsx)(tQ.A, { userId: E.id }),
                                             (0, i.jsx)(t2.Ay, {
                                                 className: eV.eF,
                                                 user: E,
                                                 displayName: nr.Ay.getName(void 0, null, E),
-                                                onClickName: N ? void 0 : Z,
+                                                onClickName: N ? void 0 : Q,
                                                 displayNameTrailing: (0, i.jsx)(t8, { user: E, isVisible: D }),
                                                 pronouns: v?.pronouns,
                                                 trailing: (0, i.jsx)(tq.A, {
@@ -1589,7 +1590,7 @@ function n9(e) {
                                                     themeType: n7.d.POPOUT,
                                                     onClose: g,
                                                     shouldOpenBadgeTooltip: null != T ? (e) => e === T : void 0,
-                                                    shouldGlowTenureBadge: $.current,
+                                                    shouldGlowTenureBadge: z.current,
                                                 }),
                                             }),
                                             (0, i.jsx)(tZ.A, { isPremiumUser: H, onInteraction: g }),
@@ -1599,16 +1600,16 @@ function n9(e) {
                                                 hidePersonalInformation: k,
                                                 onClose: g,
                                             }),
-                                            Q &&
+                                            J &&
                                                 (0, i.jsx)(t0.A, {
                                                     user: E,
                                                     widgets: v?.widgets,
-                                                    onOpenUserProfileModal: Z,
+                                                    onOpenUserProfileModal: Q,
                                                 }),
                                             (0, i.jsx)(tJ.A, {
                                                 user: E,
                                                 currentUser: E,
-                                                onOpenUserProfileModal: Z,
+                                                onOpenUserProfileModal: Q,
                                                 onClose: g,
                                             }),
                                             (0, i.jsxs)("div", {
@@ -1622,7 +1623,7 @@ function n9(e) {
                                                                     action: "EDIT_PROFILE",
                                                                     label: ep.intl.string(ep.t.s5vZlQ),
                                                                     icon: eC.R,
-                                                                    onClick: ee,
+                                                                    onClick: en,
                                                                     ref: Y,
                                                                 }),
                                                                 (0, i.jsx)(eH, {
@@ -1745,14 +1746,14 @@ function n9(e) {
                                         ],
                                     }),
                                     v?.profileEffect != null &&
-                                        !$.current &&
+                                        !z.current &&
                                         (0, i.jsx)(tN.A, { skuId: v.profileEffect.skuId, isHovering: L }),
                                     null != W && (0, i.jsx)(tR.A, { frame: W }),
                                 ],
                             }),
-                            ei
+                            er
                                 ? (0, i.jsx)(nk, { targetElementRef: Y, onClose: g })
-                                : en && er
+                                : ei && es
                                   ? (0, i.jsx)(nD, { targetElementRef: Y, onClose: g })
                                   : null,
                             (0, i.jsx)(tH, {}),
@@ -2679,11 +2680,11 @@ class rx extends r.PureComponent {
                     n.e("58735"),
                     n.e("63635"),
                     n.e("13114"),
-                    n.e("88566"),
+                    n.e("30850"),
                     n.e("64479"),
                     n.e("90656"),
                     n.e("99961"),
-                    n.e("31688"),
+                    n.e("85363"),
                     n.e("77083"),
                     n.e("17214"),
                     n.e("72813"),
@@ -2708,14 +2709,14 @@ class rx extends r.PureComponent {
                     n.e("24716"),
                     n.e("76032"),
                     n.e("78220"),
-                    n.e("30643"),
+                    n.e("83282"),
                     n.e("52519"),
                     n.e("76825"),
                     n.e("59204"),
                     n.e("10310"),
                     n.e("57006"),
                     n.e("14142"),
-                    n.e("76440"),
+                    n.e("57014"),
                     n.e("90665"),
                     n.e("7578"),
                     n.e("38559"),
@@ -2742,7 +2743,7 @@ class rx extends r.PureComponent {
                     n.e("81275"),
                     n.e("15086"),
                     n.e("92922"),
-                    n.e("18042"),
+                    n.e("1162"),
                     n.e("71145"),
                     n.e("8950"),
                     n.e("17006"),
@@ -2888,7 +2889,7 @@ class rx extends r.PureComponent {
                     n.e("32209"),
                     n.e("62862"),
                     n.e("37021"),
-                    n.e("67318"),
+                    n.e("62359"),
                     n.e("39171"),
                     n.e("87478"),
                     n.e("36564"),

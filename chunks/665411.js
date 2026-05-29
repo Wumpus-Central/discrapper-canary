@@ -6,7 +6,7 @@ var r = n(503698),
     s = n.n(r),
     a = n(754474),
     o = n(744808),
-    l = n(282389),
+    l = n(875741),
     u = n(375708),
     c = n(744053),
     d = n(423393);
@@ -18,9 +18,10 @@ let _ = (e) => {
     f = (e) => e.order === a.u.FRONT && !0 !== e.responsive;
 function p(e) {
     let { frame: t, transparentBackground: n = !1, ...r } = e,
-        a = (0, l.A)(t.skuId);
+        { profileFrameStyle: a, profileFrameClassName: p } = (0, l.A)(t.skuId);
     return (0, i.jsxs)("div", {
-        className: s()(c.i1, a),
+        className: s()(c.i1, p),
+        style: a,
         role: "img",
         "aria-label": u.intl.formatToPlainString(u.t["DT/PwH"], { a11y_text: t.label }),
         children: [

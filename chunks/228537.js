@@ -21,7 +21,7 @@ var t = n(627968),
     I = n(31956),
     C = n(361628),
     y = n(744808),
-    N = n(282389),
+    N = n(875741),
     E = n(915089),
     P = n(713517),
     k = n(645507),
@@ -312,8 +312,8 @@ var e1 = n(463156),
     e3 = n(349288),
     e2 = n(509434),
     e8 = n(307301),
-    e9 = n(228366),
-    e5 = n(95561),
+    e5 = n(228366),
+    e9 = n(95561),
     e6 = n(874490),
     e4 = n(370480),
     le = n(968309),
@@ -332,7 +332,7 @@ function la(e) {
         });
 }
 function ls() {
-    e9.h.dispatch({ type: "CONNECTIONS_GRID_MODAL_SHOW", onComplete: la, stackingBehavior: "stack" });
+    e5.h.dispatch({ type: "CONNECTIONS_GRID_MODAL_SHOW", onComplete: la, stackingBehavior: "stack" });
 }
 function lo(e) {
     let { account: l, locale: n, userId: i } = e,
@@ -357,7 +357,7 @@ function lo(e) {
                               ? `${s.name}, ${l.name}, ${eL.intl.string(eL.t.q5jLJB)}`
                               : `${l.name}, ${eL.intl.string(eL.t.q5jLJB)}`,
                       onClick: (n) => {
-                          (0, e5.zV)(eQ.HAw.CONNECTED_ACCOUNT_VIEWED, { platform_type: l.type, other_user_id: i }),
+                          (0, e9.zV)(eQ.HAw.CONNECTED_ACCOUNT_VIEWED, { platform_type: l.type, other_user_id: i }),
                               (0, lt.h)({ href: e, trusted: s?.type !== eQ.fg2.DOMAIN }, n);
                       },
                       children: (0, t.jsxs)("div", {
@@ -681,12 +681,12 @@ var lJ = n(473219),
     l2 = n(466681);
 let l8 =
         "https://cdn.discordapp.com/assets/content/6ccc97f30d0e11f23e116bb2534831ca573533a9dd726f5859ae527e82cdf37a.png",
-    l9 =
+    l5 =
         "https://cdn.discordapp.com/assets/content/82b9aaf680c9ca85c8e9cdb51056df7d33d865e18e645393934b76c03b944611.png";
-function l5(e) {
+function l9(e) {
     let { effect: l, shouldAnimate: n } = e,
         i = (0, l0.Ay)(),
-        r = (0, lQ.M)(i) ? l8 : l9;
+        r = (0, lQ.M)(i) ? l8 : l5;
     return (0, t.jsxs)("div", {
         className: l2.B0,
         "aria-hidden": !0,
@@ -741,7 +741,7 @@ function l6(e) {
         accessibleLabel: eL.intl.string(eL.t["/dRfCf"]),
         "aria-haspopup": "dialog",
         disabled: r,
-        renderPreview: (e) => (0, t.jsx)(l5, { effect: h, shouldAnimate: e }),
+        renderPreview: (e) => (0, t.jsx)(l9, { effect: h, shouldAnimate: e }),
     });
 }
 var l4 = n(515727),
@@ -754,7 +754,7 @@ function nn(e) {
     let { user: l, guildId: n, disabled: r } = e,
         { analyticsLocations: o } = (0, j.Ay)(),
         d = (0, l0.Ay)(),
-        u = (0, lQ.M)(d) ? l8 : l9,
+        u = (0, lQ.M)(d) ? l8 : l5,
         c = null != n,
         g = (0, s.bG)([l3.A], () => (null != n ? l3.A.getGuild(n) : null)),
         f = (0, Z.Xf)({ user: l }),
@@ -765,8 +765,8 @@ function nn(e) {
         v = c && null != f,
         A = (0, Z.lw)({ pendingValue: p, userValue: f, guildValue: m, guildId: n ?? void 0 }),
         b = (0, C.A)(A?.skuId, "EditableTileProfileFrameButton"),
-        I = (0, N.A)(b?.skuId),
-        E =
+        { profileFrameStyle: I, profileFrameClassName: E } = (0, N.A)(b?.skuId),
+        P =
             null != A && (x ? null != p : null != m)
                 ? {
                       onClick: () => (0, l_.p)({ guildId: n ?? void 0, profileFrame: null }),
@@ -774,7 +774,7 @@ function nn(e) {
                       accessibleLabel: eL.intl.string(v ? eL.t.j6hZyM : eL.t.nQBruk),
                   }
                 : void 0,
-        P = i.useCallback(() => {
+        k = i.useCallback(() => {
             (0, l4.w)({
                 analyticsLocations: o,
                 guild: g ?? void 0,
@@ -783,16 +783,17 @@ function nn(e) {
             });
         }, [o, g, b]);
     return (0, t.jsx)(lM.V, {
-        affordance: h && !v ? "add" : E,
+        affordance: h && !v ? "add" : P,
         variant: "square",
-        onClick: P,
+        onClick: k,
         accessibleLabel: eL.intl.string(eL.t["9/hmle"]),
         "aria-haspopup": "dialog",
         disabled: r,
         renderPreview: () =>
             null != b
                 ? (0, t.jsxs)("div", {
-                      className: a()(ne.j_, ne.i1, I),
+                      className: a()(ne.j_, ne.i1, E),
+                      style: I,
                       children: [
                           (0, t.jsx)("img", { src: u, alt: "", className: ne.wt, draggable: !1 }),
                           (0, t.jsx)(y.A, { frame: b, filterLayer: nl }),
@@ -1648,7 +1649,7 @@ function n3(e) {
 }
 var n2 = n(568602),
     n8 = n(625494);
-function n9(e) {
+function n5(e) {
     let { children: l } = e,
         [n, r] = i.useState(!1);
     return (
@@ -1669,7 +1670,7 @@ function n9(e) {
         (0, t.jsx)(n2.b, { isShaking: n, intensity: 1.4, children: l })
     );
 }
-var n5 = n(515054),
+var n9 = n(515054),
     n6 = n(933832),
     n4 = n(972213),
     te = n(97483),
@@ -2627,8 +2628,8 @@ var t0 = n(913453),
     t3 = n(186272),
     t2 = n(645625),
     t8 = n(337796);
-let t9 = (e) => e * (2 - e),
-    t5 = { "compact-sm": { avatarOffsetX: 16 }, "compact-xs": { avatarSize: o._3.SIZE_96, avatarOffsetX: 16 } },
+let t5 = (e) => e * (2 - e),
+    t9 = { "compact-sm": { avatarOffsetX: 16 }, "compact-xs": { avatarSize: o._3.SIZE_96, avatarOffsetX: 16 } },
     t6 = (e) => {
         let { type: l, anchor: n } = e;
         return "staple" !== l || "bottom" !== n;
@@ -2696,7 +2697,7 @@ function il(e) {
             l <= 350 ? w("compact-xs") : l <= 380 ? w("compact-sm") : w(void 0);
         }, []);
     (0, h.g)(T, U, [], { fireOnMount: !0 });
-    let V = null != L ? t5[L] : void 0,
+    let V = null != L ? t9[L] : void 0,
         F = i.useMemo(() => p ?? (0, k.A)(), [p]),
         { relationshipType: B, originApplicationId: $ } = (0, s.cf)([O.A], () => ({
             relationshipType: O.A.getRelationshipType(l.id),
@@ -3045,7 +3046,7 @@ function ii(e) {
                     from: { progress: 0 },
                     enter: { progress: 1 },
                     leave: { progress: 0 },
-                    config: { duration: 300, easing: t9 },
+                    config: { duration: 300, easing: t5 },
                     onRest: () => t(!1),
                 }),
                 a = (0, x.A)("(min-width: 929px) and (min-height: 550px)"),
@@ -3142,11 +3143,11 @@ function ii(e) {
         eO = (0, V.Ay)(l.id, z),
         e_ = void 0 !== em ? em?.skuId : eO?.profileFrame?.skuId,
         eM = (0, C.A)(e_, "UserProfileModalV2"),
-        eG = (0, N.A)(e_);
+        { profileFrameStyle: eG, profileFrameClassName: ew } = (0, N.A)(e_);
     (0, I.A)({ skuId: eO?.profileFrame?.skuId, openedAt: S, context: eT, analyticsLocations: eD });
-    let ew = M.Ay.useName(eO?.guildId, u, l),
-        eU = (0, E.GV)(),
-        eV = eL.intl.format(eL.t.KRe1Fk, { name: ew });
+    let eU = M.Ay.useName(eO?.guildId, u, l),
+        eV = (0, E.GV)(),
+        eF = eL.intl.format(eL.t.KRe1Fk, { name: eU });
     return (0, t.jsx)(j.f5, {
         value: eD,
         children: (0, t.jsx)(L.of, {
@@ -3164,16 +3165,17 @@ function ii(e) {
                         hideShadow: !0,
                         className: a()(t8.zr, { [t8.QF]: eO?.private === !0 }),
                         transitionState: k,
-                        "aria-labelledby": eU,
+                        "aria-labelledby": eV,
                         parentComponent: "UserProfileModalV2",
                         children: [
-                            (0, t.jsx)(n9, {
+                            (0, t.jsx)(n5, {
                                 children: (0, t.jsxs)("div", {
-                                    className: a()(t2.layoutContainer, eG, {
+                                    className: a()(t2.layoutContainer, ew, {
                                         [t2.editingPanelEnabled]: $,
                                         [t2.editingPanelExpanded]: $ && ep,
                                         [t2.isAnimating]: ex,
                                     }),
+                                    style: eG,
                                     children: [
                                         (0, t.jsxs)(it, {
                                             user: l,
@@ -3185,7 +3187,7 @@ function ii(e) {
                                                     children: [
                                                         (0, t.jsx)(e1.A, { isCurrentUser: B, onClose: D }),
                                                         (0, t.jsx)(f.A, {
-                                                            children: (0, t.jsx)(m.H, { id: eU, children: eV }),
+                                                            children: (0, t.jsx)(m.H, { id: eV, children: eF }),
                                                         }),
                                                         eE &&
                                                             (0, t.jsx)(nF, {
@@ -3243,7 +3245,7 @@ function ii(e) {
                                                             guildId: z,
                                                             channelId: u,
                                                             displayProfile: eO,
-                                                            nickname: ew,
+                                                            nickname: eU,
                                                             originGuildId: o,
                                                             hasEntered: k === p.ip.ENTERED,
                                                             customStatusPrompt: R,
@@ -3256,7 +3258,7 @@ function ii(e) {
                                                             allowEditing: et,
                                                             isLoading: W,
                                                         }),
-                                                        (0, t.jsx)(n5.A, {
+                                                        (0, t.jsx)(n9.A, {
                                                             user: l,
                                                             currentUser: n,
                                                             displayProfile: eO,

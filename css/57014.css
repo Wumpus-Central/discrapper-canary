@@ -507,13 +507,6 @@ img.messageBadge__10651 {
     z-index: 2
 }
 
-:where(:root) {
-    --custom-profile-frame-overflow-top: 304;
-    --custom-profile-frame-overflow-bottom: 212;
-    --custom-profile-frame-overflow-horizontal: 56;
-    --custom-profile-frame-container-width: 1200
-}
-
 :where(:root) .theme-midnight {
     --custom-profile-frame-drop-shadow-opacity: 0.6
 }
@@ -4999,6 +4992,12 @@ span.clanTag__5d473 {
     text-align: start
 }
 
+.container__98113 {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
 .giftButton__82222 {
     --button-outline-brand-text: var(--brand-500)
 }
@@ -6518,6 +6517,14 @@ span.clanTag__5d473 {
 
 .nameplatePreviewPlaceholder__14af9 {
     background: var(--background-mod-normal)
+}
+
+.settingsPage__9cd63 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-32);
+    min-width: 0;
+    width: 100%
 }
 
 .moonIcon__1fc68 {
