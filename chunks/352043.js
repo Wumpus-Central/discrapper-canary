@@ -4010,7 +4010,13 @@ let s1 = Object.freeze({
                 ),
                 c = (0, e_.EJ)(o?.questionText ?? "", ep.TU),
                 d = (0, U.Ay)(t),
-                u = (0, I.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id }),
+                u = (0, I.P)({
+                    user: t.author,
+                    channelId: n.id,
+                    guildId: n.guild_id,
+                    messageId: t.id,
+                    displayInline: !0,
+                }),
                 m = t.messageReference,
                 x = a.useCallback(() => {
                     null != m &&
