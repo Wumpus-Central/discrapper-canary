@@ -72,8 +72,8 @@ function y(e) {
                                           ? (0, A.A)(M.pid)
                                           : (0, o.openModalLazy)(async () => {
                                                 let { default: e } = await Promise.all([
-                                                    n.e("8101"),
-                                                    n.e("23930"),
+                                                    n.e("19790"),
+                                                    n.e("17918"),
                                                     n.e("76171"),
                                                     n.e("38601"),
                                                     n.e("36946"),

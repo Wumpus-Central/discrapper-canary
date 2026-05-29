@@ -1,0 +1,44 @@
+t.d(l, { p: () => u });
+var n = t(627968),
+    a = t(64700),
+    r = t(503698),
+    s = t.n(r),
+    i = t(305866),
+    c = t(103552),
+    o = t(183610);
+function u(e) {
+    let {
+            children: l,
+            placeholder: t,
+            value: r,
+            onChange: u,
+            onClose: d,
+            className: h,
+            multiSelect: x,
+            emptyStateText: m,
+            emptyStateHeader: p,
+            onQueryChange: C,
+            ...b
+        } = e,
+        j = a.useCallback(
+            (e) => {
+                u(e), x || d?.();
+            },
+            [u, d, x],
+        );
+    return (0, n.jsx)(i.l, {
+        className: s()(o.kL, o.XG, h),
+        children: (0, n.jsx)(c.G3, {
+            ...b,
+            value: r,
+            multiSelect: x,
+            onChange: j,
+            placeholder: t,
+            children: l,
+            listClassName: o.p_,
+            emptyStateText: m,
+            emptyStateHeader: p,
+            onQueryChange: C,
+        }),
+    });
+}

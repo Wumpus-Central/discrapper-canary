@@ -1,0 +1,16 @@
+e.exports = {
+    pz: "sidebar_e29cd7",
+    kL: "container_e29cd7",
+    gn: "titleContainer_e29cd7",
+    P6: "titleElevated_e29cd7",
+    DD: "title_e29cd7",
+    Qw: "titleText_e29cd7",
+    Cm: "addRole_e29cd7",
+    p_: "list_e29cd7",
+    nM: "row_e29cd7",
+    s2: "lock_e29cd7",
+    BP: "dragAfter_e29cd7",
+    qo: "dragBefore_e29cd7",
+    YL: "tooltip_e29cd7",
+    Ev: "verifiedRoleIcon_e29cd7",
+};

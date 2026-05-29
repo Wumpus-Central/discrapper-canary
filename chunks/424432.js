@@ -1489,8 +1489,8 @@ function e0() {
 var e1 = a(935399),
     e2 = a(462887),
     e8 = a(289873),
-    e3 = a(478016),
-    e6 = a(565645),
+    e6 = a(478016),
+    e3 = a(565645),
     e5 = a(7584),
     e4 = a(619499),
     e9 = a(207803),
@@ -1538,7 +1538,7 @@ function tc() {
                 (0, r.jsxs)(w.D, {
                     variant: "heading-xl/bold",
                     children: [
-                        (0, r.jsx)(e6.A, {
+                        (0, r.jsx)(e3.A, {
                             emojiName: e5.Ay.getByName("frame_with_picture")?.surrogates,
                             className: ti.Zg,
                         }),
@@ -1565,7 +1565,7 @@ function tc() {
                                                 text: "None",
                                                 variant: "secondary",
                                                 fullWidth: !0,
-                                                icon: null == d ? e3.U : void 0,
+                                                icon: null == d ? e6.U : void 0,
                                                 disabled: null == d,
                                                 onClick: () => (0, e7.p)({ profileFrame: null }),
                                             }),
@@ -1583,7 +1583,7 @@ function tc() {
                                                           text: t.name,
                                                           variant: "secondary",
                                                           fullWidth: !0,
-                                                          icon: d?.skuId === e.skuId ? e3.U : void 0,
+                                                          icon: d?.skuId === e.skuId ? e6.U : void 0,
                                                           disabled: d?.skuId === e.skuId,
                                                           onClick: () => (0, e7.p)({ profileFrame: e }),
                                                       }),
@@ -2205,14 +2205,14 @@ let t0 = (e) => {
 var t1 = a(783878),
     t2 = a(137177),
     t8 = a(311043),
-    t3 = a(569926),
-    t6 = a(282435);
+    t6 = a(569926),
+    t3 = a(282435);
 function t5(e) {
-    return t6.Bf.get(e) ?? 0;
+    return t3.Bf.get(e) ?? 0;
 }
 function t4(e) {
     let { gameId: t } = e,
-        { data: a, isLoading: l } = (0, t3.I)(t),
+        { data: a, isLoading: l } = (0, t6.I)(t),
         n = (0, M.bG)([t8.A], () => t8.A.hasNoData(t), [t]);
     return l || (null == a && !n)
         ? (0, r.jsx)(D.E, { variant: "text-sm/normal", color: "text-muted", children: "Loading\u2026" })
@@ -3164,7 +3164,7 @@ let a8 = [
         },
     },
 ];
-function a3() {
+function a6() {
     let e = (0, M.yK)([a1.A, H.default], () =>
         a1.A.getUserAffinities().map((e) => {
             let { otherUserId: t, communicationProbability: a, vcProbability: l, isFriend: n } = e;
@@ -3173,7 +3173,7 @@ function a3() {
     );
     return 0 === e.length ? null : (0, r.jsx)(tR, { className: tT.nd, columns: a8, rowClassName: a2.nM, data: e });
 }
-var a6 = a(139716),
+var a3 = a(139716),
     a5 = a(847599),
     a4 = a(282621);
 function a9() {
@@ -3205,7 +3205,7 @@ function a9() {
                             size: "sm",
                             text: "Launch Age Verification Modal",
                             onClick: () =>
-                                a6.A.showAgeVerificationGetStartedModal({ entryPoint: a5.q1.DEV_TOOLS_QUICK_ACTIONS }),
+                                a3.A.showAgeVerificationGetStartedModal({ entryPoint: a5.q1.DEV_TOOLS_QUICK_ACTIONS }),
                             fullWidth: !0,
                         }),
                     ],
@@ -3321,7 +3321,7 @@ let l_ = (e) => {
                                   className: tT.nH,
                                   onClick: () => (0, lc.C)(l, () => s(!0)),
                                   children: n
-                                      ? (0, r.jsx)(e3.U, { color: "currentColor", size: "sm" })
+                                      ? (0, r.jsx)(e6.U, { color: "currentColor", size: "sm" })
                                       : (0, r.jsx)(la.T, { color: "currentColor", size: "sm" }),
                               })
                             : null,
@@ -3378,7 +3378,7 @@ function lk(e) {
                     className: lS.nH,
                     onClick: () => (0, lc.C)(JSON.stringify(l), () => s(!0)),
                     children: n
-                        ? (0, r.jsx)(e3.U, { color: "currentColor", size: "sm" })
+                        ? (0, r.jsx)(e6.U, { color: "currentColor", size: "sm" })
                         : (0, r.jsx)(la.T, { color: "currentColor", size: "sm" }),
                 }),
             ],
@@ -3952,7 +3952,7 @@ let l8 = [
         },
     },
 ];
-function l3() {
+function l6() {
     o.useEffect(() => {
         !(function () {
             let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -3992,7 +3992,7 @@ function l3() {
     );
     return 0 === e.length ? null : (0, r.jsx)(tR, { className: tT.nd, columns: l8, rowClassName: l2.nM, data: e });
 }
-function l6() {
+function l3() {
     return (0, r.jsxs)(D.E, {
         variant: "text-lg/normal",
         children: [
@@ -4448,7 +4448,7 @@ let nR = [
 ];
 function nO(e) {
     let { runningGame: t, isDebugGame: a } = e,
-        { data: l } = (0, t3.I)(t.id);
+        { data: l } = (0, t6.I)(t.id);
     return (0, r.jsxs)(R.B, {
         direction: "horizontal",
         gap: 8,
@@ -4877,8 +4877,8 @@ function n8() {
         }),
     });
 }
-var n3 = a(825484),
-    n6 = a(37962),
+var n6 = a(825484),
+    n3 = a(37962),
     n5 = a(881520),
     n4 = a(670455),
     n9 = a(861160);
@@ -4893,7 +4893,7 @@ function se() {
         [a, l] = o.useState(0),
         [n, s] = o.useState(1e3),
         [i, d] = o.useState(0),
-        c = (0, M.bG)([n5.A], () => (null === e ? null : (n5.A.getFeedbackConfig(n4.MW[e]) ?? n6.u[n4.MW[e]]))),
+        c = (0, M.bG)([n5.A], () => (null === e ? null : (n5.A.getFeedbackConfig(n4.MW[e]) ?? n3.u[n4.MW[e]]))),
         m = Object.entries(n4.MW),
         v = m.slice(m.length / 2).map((e) => {
             let [t] = e;
@@ -4978,7 +4978,7 @@ function se() {
                         onChange: (e) => d(parseFloat(e)),
                     }),
                 }),
-                (0, r.jsxs)(n3.e, {
+                (0, r.jsxs)(n6.e, {
                     children: [
                         (0, r.jsx)(h.$, {
                             variant: "critical-primary",
@@ -5516,7 +5516,7 @@ let s2 = new s1(tA.h, {
     },
 });
 var s8 = a(835002);
-async function s3(e, t) {
+async function s6(e, t) {
     return await sJ.A.get({
         url: J.Rsh.GENERATED_POOL_BY_ID(e),
         trackedActionData: { event: sH.NetworkActionNames.USER_LOGIN },
@@ -5534,7 +5534,7 @@ async function s3(e, t) {
         })
         .catch(() => (sY.A.showFailedToast(s8.OB.GENERIC_ERROR), null));
 }
-var s6 = a(844330),
+var s3 = a(844330),
     s5 = a(277851);
 let s4 = [
         sS.n,
@@ -5574,7 +5574,7 @@ let s4 = [
                     onSubmit: async (n) => {
                         n.preventDefault(), s(!0);
                         try {
-                            await s3(e, a), t(""), l("");
+                            await s6(e, a), t(""), l("");
                         } finally {
                             s(!1);
                         }
@@ -5654,7 +5654,7 @@ let s4 = [
             direction: "horizontal",
             align: "start",
             justify: "space-between",
-            children: (0, r.jsx)(s6.A, {
+            children: (0, r.jsx)(s3.A, {
                 icon: (0, r.jsx)(D.E, {
                     variant: "text-md/medium",
                     color: d,
@@ -6934,7 +6934,7 @@ async function i2(e, t, a) {
 async function i8(e) {
     await lz.Bo.post({ url: J.Rsh.SEND_POWERUPS_SYSTEM_MESSAGE(e), rejectWithError: !0 });
 }
-function i3() {
+function i6() {
     let e = (0, M.bG)([aY.A], () => aY.A.getGuildId()),
         t = (0, M.bG)([aK.A], () => aK.A.getGuild(e)?.name),
         a = (0, M.yK)([ae.A], () => [...iQ, ...iX].filter((t) => null != e && (0, iK.zs)(t, e))),
@@ -7085,11 +7085,11 @@ function i3() {
             ],
         });
 }
-var i6 = a(450510),
+var i3 = a(450510),
     i5 = a(320681);
 function i4(e) {
     let { hotspotLocation: t } = e,
-        [a, l] = (0, M.yK)([i6.HP], () => [i6.HP.hasHotspot(t, !0), i6.HP.getHotspotOverride(t)]);
+        [a, l] = (0, M.yK)([i3.HP], () => [i3.HP.hasHotspot(t, !0), i3.HP.getHotspotOverride(t)]);
     return (0, r.jsx)(x.l, {
         label: t,
         errorMessage: a ? "Inactive" : void 0,
@@ -7100,7 +7100,7 @@ function i4(e) {
             { id: "active", value: !0, label: "Force Active" },
             { id: "inactive", value: !1, label: "Force Inactive" },
         ],
-        onSelectionChange: (e) => (null != e ? (0, i6.Kl)(t, e) : (0, i6.LF)(t)),
+        onSelectionChange: (e) => (null != e ? (0, i3.Kl)(t, e) : (0, i3.LF)(t)),
         selectionMode: "single",
         fullWidth: !0,
     });
@@ -7115,7 +7115,7 @@ function i9() {
             className: i5.IN,
             children: (0, r.jsx)(R.B, {
                 gap: 20,
-                children: Object.keys(i6._2)
+                children: Object.keys(i3._2)
                     .sort((e, t) => e.localeCompare(t))
                     .map((e) => (0, r.jsx)(i4, { hotspotLocation: e }, e)),
             }),
@@ -7674,11 +7674,11 @@ let rb = {
                     a.e("12257"),
                     a.e("88712"),
                     a.e("83446"),
-                    a.e("7578"),
+                    a.e("58650"),
                     a.e("87845"),
                     a.e("17006"),
                     a.e("45970"),
-                    a.e("8101"),
+                    a.e("19790"),
                     a.e("4974"),
                     a.e("49817"),
                     a.e("80186"),
@@ -8918,7 +8918,7 @@ let rK = {
         return (s.displayName = "ConsentCheckBoxModalContent"), (e) => (0, r.jsx)(s, { ...e });
     },
     GuildRaidLockdownFeedbackModal: async () => {
-        let { default: e } = await Promise.all([a.e("8101"), a.e("46313")]).then(a.bind(a, 336496));
+        let { default: e } = await Promise.all([a.e("19790"), a.e("46313")]).then(a.bind(a, 336496));
         return (t) =>
             (0, r.jsx)(e, {
                 ...t,
@@ -9268,7 +9268,7 @@ let r1 = async () => {
             await (0, rQ._D)();
         }
     },
-    r3 = async () => {
+    r6 = async () => {
         try {
             let { body: e } = await lz.Bo.get({ url: J.Rsh.USER_OFFERS, rejectWithError: !0 });
             return { trial: e.trial, discount: e.discount.map(rX.A.createFromServer) };
@@ -9276,7 +9276,7 @@ let r1 = async () => {
             return { trial: [], discount: [] };
         }
     },
-    r6 = async () => {
+    r3 = async () => {
         try {
             await lz.Bo.del({ url: J.Rsh.USER_OFFERS, rejectWithError: !0 });
         } catch {
@@ -9643,7 +9643,7 @@ function r7() {
                 (j(!1),
                 rZ.A.forceReset(),
                 (0, rQ._D)(),
-                r3().then((e) => {
+                r6().then((e) => {
                     m(e.trial.sort((e, t) => e.id.localeCompare(t.id))),
                         g(e.discount.sort((e, t) => e.id.localeCompare(t.id)));
                 }));
@@ -9655,7 +9655,7 @@ function r7() {
             null != i && (await r2(i, "discount"), j(!0));
         },
         k = async () => {
-            await r6(), j(!0);
+            await r3(), j(!0);
         },
         I = async () => {
             let e = new Date(Date.now() + 60 * b * 1e3).toISOString();
@@ -10807,7 +10807,7 @@ function oX(e) {
                 }),
             }),
             (0, r.jsx)(or.jl, {
-                children: (0, r.jsxs)(n3.e, {
+                children: (0, r.jsxs)(n6.e, {
                     direction: "horizontal-reverse",
                     children: [
                         (0, r.jsx)(h.$, {
@@ -10922,8 +10922,8 @@ function o2(e) {
 function o8(e) {
     return JSON.stringify(e, (e, t) => (void 0 === t ? null : t), 2);
 }
-let o3 = ["__webpack_require__", "fn"],
-    o6 = ["web.js", "web.js.map"],
+let o6 = ["__webpack_require__", "fn"],
+    o3 = ["web.js", "web.js.map"],
     o5 = [
         {
             id: "details",
@@ -11012,7 +11012,7 @@ let o3 = ["__webpack_require__", "fn"],
                                                 if (null != a) {
                                                     let [, e, l, n, s] = a,
                                                         i = l.split(/[\\/]/).pop();
-                                                    return o3.includes(e.trim())
+                                                    return o6.includes(e.trim())
                                                         ? null
                                                         : (0, r.jsxs)(
                                                               "div",
@@ -11022,7 +11022,7 @@ let o3 = ["__webpack_require__", "fn"],
                                                                           className: oM.e0,
                                                                           children: e.trim(),
                                                                       }),
-                                                                      !o6.includes(i ?? "") &&
+                                                                      !o3.includes(i ?? "") &&
                                                                           (0, r.jsxs)(r.Fragment, {
                                                                               children: [
                                                                                   " (",
@@ -12977,9 +12977,9 @@ var d0 = a(706712),
     d1 = a(367727),
     d2 = a(845886);
 function d8() {
-    return (0, r.jsx)(d.Ip, { className: d2.kL, children: (0, r.jsx)(d3, {}) });
+    return (0, r.jsx)(d.Ip, { className: d2.kL, children: (0, r.jsx)(d6, {}) });
 }
-function d3() {
+function d6() {
     let e = o.useCallback(() => {
             (0, ng._N)(t7.M.NITRO_TENURE_BADGE_LEVEL_UP);
         }, []),
@@ -13002,7 +13002,7 @@ function d3() {
         ],
     });
 }
-var d6 = a(136722),
+var d3 = a(136722),
     d5 = a(576705),
     d4 = a(558393),
     d9 = a(719366),
@@ -13037,12 +13037,12 @@ function ct() {
         d = null != l ? d4.A.getGuildPermissionSpecMap(l) : null,
         c = Object.values(o ?? {}).map((e) => {
             let { title: t, flag: a } = e,
-                l = d6.zy(n, a);
+                l = d3.zy(n, a);
             return (0, r.jsx)(ce, { title: t, can: l }, t);
         }),
         u = Object.values(d ?? {}).map((e) => {
             let { title: t, flag: a } = e,
-                l = d6.zy(s, a);
+                l = d3.zy(s, a);
             return (0, r.jsx)(ce, { title: t, can: l }, t);
         });
     return (0, r.jsx)("div", {
@@ -13331,7 +13331,7 @@ function cS() {
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(n3.e, {
+                              (0, r.jsx)(n6.e, {
                                   children: (0, r.jsx)(h.$, {
                                       variant: "critical-primary",
                                       text: "Clear Theme Override",
@@ -13936,8 +13936,8 @@ var cQ = a(290136),
     c1 = a(940622),
     c2 = a(961895),
     c8 = a(343991),
-    c3 = a(699666);
-let c6 = () => {
+    c6 = a(699666);
+let c3 = () => {
         (0, eR.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(a.bind(a, 343991));
@@ -13971,17 +13971,17 @@ let c6 = () => {
                 async (e) => {
                     c5(e), s(!1);
                     let t = e.dataTransfer;
-                    if (null == t) return void c6();
+                    if (null == t) return void c3();
                     let l = await Promise.all(
                         Array.from(t.items).map((e) => e.webkitGetAsEntry() ?? e.getAsEntry()),
                     ).then((e) => e.filter((e) => null != e));
-                    l.length > 0 ? a(l) : c6();
+                    l.length > 0 ? a(l) : c3();
                 },
                 [a],
             );
         return (0, r.jsxs)("div", {
             ref: i,
-            className: k()(t, c3.iE),
+            className: k()(t, c6.iE),
             onDragEnter: d,
             onDragOver: c5,
             onDragLeave: c,
@@ -13990,14 +13990,14 @@ let c6 = () => {
                 l,
                 n &&
                     (0, r.jsx)("div", {
-                        className: c3.d2,
+                        className: c6.d2,
                         children: (0, r.jsxs)("div", {
-                            className: c3.vW,
+                            className: c6.vW,
                             children: [
                                 (0, r.jsx)(c2.A, { icons: eo.ir }),
                                 (0, r.jsx)(w.D, { variant: "heading-lg/bold", children: "Upload Shop Assets" }),
                                 (0, r.jsxs)("div", {
-                                    className: c3.GA,
+                                    className: c6.GA,
                                     children: [
                                         (0, r.jsx)(D.E, {
                                             variant: "text-sm/normal",
@@ -14008,7 +14008,7 @@ let c6 = () => {
                                             children: [
                                                 "Click",
                                                 (0, r.jsx)(cQ.c, {
-                                                    className: c3.q4,
+                                                    className: c6.q4,
                                                     size: "xs",
                                                     color: eO.A.colors.TEXT_DEFAULT,
                                                 }),
@@ -15114,7 +15114,7 @@ function u1() {
 }
 var u2 = a(91871),
     u8 = a.n(u2);
-let u3 = [
+let u6 = [
         {
             key: "id",
             cellClassName: lS.Hz,
@@ -15140,7 +15140,7 @@ let u3 = [
             },
         },
     ],
-    u6 = [
+    u3 = [
         {
             id: "details",
             name: "Details",
@@ -15219,7 +15219,7 @@ function u5() {
         ),
         [s, i] = o.useState(void 0),
         d = n.find((e) => e.key === s),
-        { TabBar: c, renderSelectedTab: u } = (0, aU.Ay)({ tabs: u6 }, []),
+        { TabBar: c, renderSelectedTab: u } = (0, aU.Ay)({ tabs: u3 }, []),
         m = (0, M.bG)([lf], () => lf.trackTriggers),
         h = o.useCallback((e) => {
             tA.h.dispatch({ type: "SET_TRACK_TRIGGERS", enabled: e });
@@ -15258,7 +15258,7 @@ function u5() {
                     }),
                 ],
             }),
-            (0, r.jsx)(tR, { columns: u3, data: n, selectedRowKey: s, onClickRow: (e) => i(e.key) }),
+            (0, r.jsx)(tR, { columns: u6, data: n, selectedRowKey: s, onClickRow: (e) => i(e.key) }),
             null != d &&
                 (0, r.jsxs)(aP, {
                     className: lS.rf,
@@ -16451,8 +16451,8 @@ var mK = a(284009),
     m1 = a(359778),
     m2 = a(507107),
     m8 = a(801365),
-    m3 = a(792620),
-    m6 = a(241124),
+    m6 = a(792620),
+    m3 = a(241124),
     m5 = a(732047),
     m4 = a(717695),
     m9 = a(961974),
@@ -16932,7 +16932,7 @@ function hD() {
                                         if (null == e.userStatus) return hy.UNENROLLED;
                                         if (null != e.userStatus.claimedAt) return hy.CLAIMED;
                                         if (null != e.userStatus.completedAt) return hy.COMPLETED_100;
-                                        let t = (0, m3.Yh)(e),
+                                        let t = (0, m6.Yh)(e),
                                             a = t.progressSeconds,
                                             l = t.targetSeconds;
                                         return a / l >= 1
@@ -17265,7 +17265,7 @@ function hD() {
                                         }),
                                     (0, r.jsx)("div", {
                                         className: hi.ok,
-                                        children: (0, r.jsx)(m6.jY, {
+                                        children: (0, r.jsx)(m3.jY, {
                                             isPreview: !0,
                                             source: "preview",
                                             questId: "0",
@@ -17280,7 +17280,7 @@ function hD() {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)(w.D, { variant: "heading-sm/semibold", children: "Quest Home Card" }),
-                            (0, r.jsx)(m6.jY, {
+                            (0, r.jsx)(m3.jY, {
                                 isPreview: !0,
                                 source: "preview",
                                 questId: "0",
@@ -17308,7 +17308,7 @@ function hD() {
                                 }),
                             (0, r.jsx)("div", {
                                 className: hi.l4,
-                                children: (0, r.jsx)(m6.jY, {
+                                children: (0, r.jsx)(m3.jY, {
                                     isPreview: !0,
                                     source: "preview",
                                     questId: "0",
@@ -17932,7 +17932,7 @@ function h2() {
                 messageType: u4.Y.INFO,
                 children: "When you are done, please remember to upload the logs.",
             }),
-            (0, r.jsxs)(n3.e, {
+            (0, r.jsxs)(n6.e, {
                 children: [
                     (0, r.jsx)(h.$, {
                         variant: e ? "critical-primary" : "primary",
@@ -17952,8 +17952,8 @@ function h2() {
     });
 }
 var h8 = a(145497);
-let h3 = (0, hO.D)(() => ({ userId: null, state: null, loading: !1, error: null }));
-function h6(e) {
+let h6 = (0, hO.D)(() => ({ userId: null, state: null, loading: !1, error: null }));
+function h3(e) {
     let { title: t, guildIds: a } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -18138,9 +18138,9 @@ function h5(e) {
                 (0, r.jsxs)("div", {
                     className: hq.uk,
                     children: [
-                        (0, r.jsx)(h6, { title: "Pending Guild Member Requests:", guildIds: s.pendingRequestGuildIds }),
-                        (0, r.jsx)(h6, { title: "Sent Guild Member Requests:", guildIds: s.sentRequestGuildIds }),
-                        (0, r.jsx)(h6, {
+                        (0, r.jsx)(h3, { title: "Pending Guild Member Requests:", guildIds: s.pendingRequestGuildIds }),
+                        (0, r.jsx)(h3, { title: "Sent Guild Member Requests:", guildIds: s.sentRequestGuildIds }),
+                        (0, r.jsx)(h3, {
                             title: "Unacknowledged Guild Member Requests:",
                             guildIds: s.unacknowledgedRequestGuildIds,
                         }),
@@ -18151,24 +18151,24 @@ function h5(e) {
 }
 function h4() {
     let e = o.useCallback((e) => {
-            h3.setState({ userId: e, state: null });
+            h6.setState({ userId: e, state: null });
         }, []),
         t = o.useCallback(async () => {
-            let { userId: e, loading: t } = h3.getState();
+            let { userId: e, loading: t } = h6.getState();
             if (!t && null != e) {
-                h3.setState({ loading: !0, error: null });
+                h6.setState({ loading: !0, error: null });
                 try {
                     let t = await hY(e);
-                    h3.setState({ state: t, loading: !1 });
+                    h6.setState({ state: t, loading: !1 });
                 } catch (t) {
                     let e = new hR.LG(t);
-                    h3.setState({ error: e.getAnyErrorMessage(), loading: !1 });
+                    h6.setState({ error: e.getAnyErrorMessage(), loading: !1 });
                 } finally {
-                    h3.setState({ loading: !1 });
+                    h6.setState({ loading: !1 });
                 }
             }
         }, []),
-        a = h3.useField("loading");
+        a = h6.useField("loading");
     return (0, r.jsxs)("div", {
         className: hq.$n,
         children: [
@@ -18178,8 +18178,8 @@ function h4() {
     });
 }
 function h9() {
-    let e = h3.useField("state"),
-        t = h3.useField("error");
+    let e = h6.useField("state"),
+        t = h6.useField("error");
     return (0, r.jsxs)(u.n, {
         label: "Debug User State",
         description:
@@ -18316,7 +18316,7 @@ function xv() {
                 value: a,
                 onChange: (e) => xp.setState({ urlString: e, error: null }),
             }),
-            (0, r.jsxs)(n3.e, {
+            (0, r.jsxs)(n6.e, {
                 children: [
                     (0, r.jsx)(h.$, {
                         variant: "primary",
@@ -18613,7 +18613,7 @@ function xI() {
                 name: "Colors",
                 group: aU.fu.UI,
                 tags: ["tokens", "themes", "palette"],
-                render: () => (0, r.jsx)(l6, {}),
+                render: () => (0, r.jsx)(l3, {}),
             }),
             e.push({ id: "design_toggles", name: "Design Toggles", group: aU.fu.UI, render: () => (0, r.jsx)(nE, {}) }),
             e.push({
@@ -18668,14 +18668,14 @@ function xI() {
                 name: "Affinity",
                 group: aU.fu.USERS,
                 tags: ["friends"],
-                render: () => (0, r.jsx)(a3, {}),
+                render: () => (0, r.jsx)(a6, {}),
             }),
             e.push({
                 id: "channel_affinity",
                 name: "Channel Affinity",
                 group: aU.fu.USERS,
                 tags: ["channels"],
-                render: () => (0, r.jsx)(l3, {}),
+                render: () => (0, r.jsx)(l6, {}),
             }),
             aI.A.isDeveloper &&
                 (e.push({
@@ -18782,7 +18782,7 @@ function xI() {
                 name: "Skill Trees",
                 group: aU.fu.BOOSTING,
                 tags: ["boosting", "powerups", "server tag"],
-                render: () => (0, r.jsx)(i3, {}),
+                render: () => (0, r.jsx)(i6, {}),
             }),
             e.push({ id: "game_server", name: "Game Server", group: aU.fu.BOOSTING, render: () => (0, r.jsx)(sy, {}) }),
             e.push({

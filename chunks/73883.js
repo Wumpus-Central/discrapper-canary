@@ -100,7 +100,7 @@ function w(e) {
                                           n.e("58735"),
                                           n.e("76962"),
                                           n.e("95429"),
-                                          n.e("98189"),
+                                          n.e("88905"),
                                           n.e("48370"),
                                           n.e("24227"),
                                       ]).then(n.bind(n, 832910));
@@ -109,7 +109,7 @@ function w(e) {
                                 : (i.type === P.fg2.PLAYSTATION || i.type === P.fg2.PLAYSTATION_STAGING) &&
                                   (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
-                                          n.e("7578"),
+                                          n.e("58650"),
                                           n.e("25861"),
                                           n.e("71210"),
                                           n.e("38035"),

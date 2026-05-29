@@ -1,82 +1,119 @@
 "use strict";
-n.d(t, { a: () => _, u: () => d }), n(321073);
+n.d(t, { a: () => E, u: () => _ }), n(321073);
 var i = n(64700),
     r = n(91871),
     s = n.n(r),
-    a = n(989349),
-    o = n.n(a),
-    l = n(17928),
-    u = n(274372),
-    c = n(792852);
+    a = n(17928),
+    o = n(274372),
+    l = n(111994),
+    u = n(792852);
+let c = new Set();
 function d(e, t) {
-    return "ascending" === t
-        ? e.sort((e, t) => e.createdAt - t.createdAt)
-        : "descending" === t
-          ? e.sort((e, t) => t.createdAt - e.createdAt)
-          : e;
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c;
+    if (
+        (!n.has(0) &&
+            ((t.activeMainLink === l.oH.AUTO_CLIPS && "auto" !== e.clipMethod) ||
+                (t.activeMainLink === l.oH.FAVORITES && !e.isFavorite))) ||
+        (!n.has(1) && null != t.gameFacet && e.applicationId !== t.gameFacet) ||
+        (!n.has(2) && null != t.clippedWithFacet && !e.users.includes(t.clippedWithFacet)) ||
+        (!n.has(3) &&
+            t.selectedGameIds.size > 0 &&
+            (null == e.applicationId || !t.selectedGameIds.has(e.applicationId)))
+    )
+        return !1;
+    if (!n.has(4) && t.selectedUserIds.size > 0) {
+        for (let n of t.selectedUserIds) if (!e.users.includes(n)) return !1;
+    }
+    if (
+        (!n.has(5) && null != t.selectedGuildId && e.guildId !== t.selectedGuildId) ||
+        (!n.has(6) &&
+            null != t.selectedActivity &&
+            e.activity?.state !== t.selectedActivity &&
+            e.activity?.details !== t.selectedActivity) ||
+        (!n.has(7) && null != t.selectedYear && new Date(e.createdAt).getFullYear() !== t.selectedYear)
+    )
+        return !1;
+    if (!n.has(8)) {
+        let n = t.query.trim();
+        if ("" !== n) {
+            let t = n.toLowerCase(),
+                i = null != e.name && s()(t, e.name.toLowerCase()),
+                r = s()(t, e.applicationName.toLowerCase()),
+                a = e.activity?.state != null && s()(t, e.activity.state.toLowerCase()),
+                o = e.activity?.details != null && s()(t, e.activity.details.toLowerCase());
+            if (!i && !r && !a && !o) return !1;
+        }
+    }
+    return !0;
 }
-function _() {
-    let e = (0, l.yK)([u.Ay], () => u.Ay.getClips()),
-        t = (0, l.bG)([u.Ay], () => u.Ay.getPendingClips()),
-        n = (0, c.Pu)();
+function _(e, t) {
+    return t === l.mu.OLDEST
+        ? e.sort((e, t) => e.createdAt - t.createdAt)
+        : e.sort((e, t) => t.createdAt - e.createdAt);
+}
+let h = new Set([1, 3]),
+    f = new Set([2, 4]),
+    p = new Set([0, 1]);
+function E() {
+    let e = (0, a.yK)([o.Ay], () => o.Ay.getClips()),
+        t = (0, a.bG)([o.Ay], () => o.Ay.getPendingClips()),
+        n = (0, u.Pu)();
     return i.useMemo(() => {
         let i = [...t, ...e],
-            r = new Map(),
-            a = [];
+            r = [],
+            s = new Map(),
+            a = new Map(),
+            o = { allClips: 0, autoClips: 0, favorites: 0 };
         for (let e of i) {
-            let t = (function (e, t) {
-                if (t.selectedUserIds.size > 0 && !Array.from(t.selectedUserIds).every((t) => e.users.includes(t)))
-                    return !1;
-                if ("" !== t.query.trim()) {
-                    let n = t.query.toLowerCase(),
-                        i = null != e.name && s()(n, e.name.toLowerCase()),
-                        r = s()(n, e.applicationName.toLowerCase()),
-                        a = e.activity?.state != null && s()(n, e.activity.state.toLowerCase()),
-                        o = e.activity?.details != null && s()(n, e.activity.details.toLowerCase());
-                    if (!i && !r && !a && !o) return !1;
-                }
-                if (null !== t.selectedGuildId && e.guildId !== t.selectedGuildId) return !1;
-                if (null !== t.selectedActivity) {
-                    let n = e.activity?.state,
-                        i = e.activity?.details;
-                    if (n !== t.selectedActivity && i !== t.selectedActivity) return !1;
-                }
-                return (null === t.selectedYear || o()(e.createdAt).year() === t.selectedYear) && !0;
-            })(e, n);
-            if ((t && a.push(e), null == e.applicationId)) continue;
-            let i = r.get(e.applicationId);
-            null == i
-                ? r.set(e.applicationId, {
-                      clips: [e],
-                      filteredClips: t ? [e] : [],
-                      mostRecentClipCreatedAt: e.createdAt,
-                      name: e.applicationName,
-                  })
-                : (i.clips.push(e),
-                  t && i.filteredClips.push(e),
-                  e.createdAt > i.mostRecentClipCreatedAt && (i.mostRecentClipCreatedAt = e.createdAt));
+            if ((d(e, n) && r.push(e), null != e.applicationId)) {
+                let t = d(e, n, h),
+                    i = s.get(e.applicationId);
+                null == i ? s.set(e.applicationId, { name: e.applicationName, count: +!!t }) : t && (i.count += 1);
+            }
+            let t = d(e, n, f);
+            for (let n of e.users) {
+                let e = a.get(n);
+                null == e ? a.set(n, { count: +!!t, totalCount: 1 }) : (t && (e.count += 1), (e.totalCount += 1));
+            }
+            d(e, n, p) &&
+                ((o.allClips += 1), "auto" === e.clipMethod && (o.autoClips += 1), e.isFavorite && (o.favorites += 1));
         }
-        let l = d(a, n.sortOrder),
-            u = d(
-                a.filter((e) => e.isFavorite),
-                n.sortOrder,
-            );
+        let l = _(r, n.sortOrder);
         return {
-            clipsByGame: Array.from(r.entries())
-                .map((e) => {
-                    let [t, i] = e;
-                    return {
-                        applicationId: t,
-                        name: i.name,
-                        count: i.filteredClips.length,
-                        mostRecentClipCreatedAt: i.mostRecentClipCreatedAt,
-                        filteredClips: d(i.filteredClips, n.sortOrder),
-                    };
-                })
-                .sort((e, t) => t.mostRecentClipCreatedAt - e.mostRecentClipCreatedAt),
             allClips: i,
             filteredClips: l,
-            favoriteClips: u,
+            gamesFacet: Array.from(s.entries())
+                .map((e) => {
+                    let [t, { name: i, count: r }] = e;
+                    return {
+                        key: t,
+                        name: i,
+                        count: r,
+                        isSelected: n.gameFacet === t,
+                        isDisabled: 0 === r && n.gameFacet !== t,
+                    };
+                })
+                .sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
+            participantsFacet: Array.from(a.entries())
+                .map((e) => {
+                    let [t, { count: i, totalCount: r }] = e;
+                    return {
+                        key: t,
+                        name: t,
+                        count: i,
+                        totalCount: r,
+                        isSelected: n.clippedWithFacet === t,
+                        isDisabled: 0 === i && n.clippedWithFacet !== t,
+                    };
+                })
+                .sort((e, t) =>
+                    e.totalCount !== t.totalCount ? t.totalCount - e.totalCount : e.key.localeCompare(t.key),
+                )
+                .map((e) => {
+                    let { totalCount: t, ...n } = e;
+                    return n;
+                }),
+            mainLinkCounts: o,
         };
     }, [e, t, n]);
 }

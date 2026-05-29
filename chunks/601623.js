@@ -424,7 +424,7 @@ function eU(e) {
                       let e = { source: eM.Eo.NAGBAR, alertType: (0, eP.$5)(d) },
                           { default: t } = await Promise.all([
                               n.e("69124"),
-                              n.e("8101"),
+                              n.e("19790"),
                               n.e("40258"),
                               n.e("73669"),
                               n.e("46313"),
@@ -1357,7 +1357,7 @@ let t9 = r.memo(function () {
                         onClick: async () => {
                             try {
                                 let { openIAPPurchaseModal: e } = await Promise.all([
-                                    n.e("56377"),
+                                    n.e("54633"),
                                     n.e("77083"),
                                     n.e("17214"),
                                     n.e("72813"),
