@@ -1135,6 +1135,13 @@ img.messageBadge__10651 {
     white-space: nowrap
 }
 
+.nameplatePreview__5828f {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%
+}
+
 .profileEffects__0dd08 {
     border-radius: inherit;
     height: 100%;
@@ -3401,11 +3408,6 @@ span.clanTag__5d473 {
 
 .compactExpired__403f1 {
     color: var(--app-message-embed-secondary-text)
-}
-
-.blockedEmbed__403f1 {
-    background-color: var(--background-surface-highest);
-    border: 1px solid var(--border-normal)
 }
 
 .emojiContainer__0524a {

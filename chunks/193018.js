@@ -15,5 +15,4 @@ e.exports = {
     Cr: "compactInfo__403f1",
     Qi: "compactAppName__403f1",
     Jl: "compactExpired__403f1",
-    cp: "blockedEmbed__403f1",
 };

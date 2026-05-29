@@ -306,6 +306,21 @@
     flex-grow: 1
 }
 
+.embed__1911c {
+    align-self: start;
+    background-color: var(--background-surface-highest);
+    border: 1px solid var(--border-normal);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-self: start;
+    max-width: 350px;
+    overflow: hidden;
+    padding: 12px;
+    width: 100%
+}
+
 .container_cacd02 {
     flex-wrap: wrap;
     justify-content: flex-start
