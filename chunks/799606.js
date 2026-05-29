@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { P: () => C });
+n.d(t, { P: () => R });
 var i = n(627968),
     r = n(64700),
     s = n(835245),
@@ -9,7 +9,7 @@ var i = n(627968),
     u = n(655857),
     c = n(166532),
     d = n(615310),
-    _ = n(671744),
+    _ = n(722847),
     h = n(753390);
 let f = (e) => {
     let {
@@ -41,63 +41,92 @@ let f = (e) => {
 };
 var p = n(543767);
 let E = (e) => {
-        let { fetchParams: t } = e,
-            [n, i] = (0, p.YV)(t),
-            { setCheckoutInvoicePreview: s } = (0, _.t4)((e) => ({
+        let { fetchParams: t, refetchKey: n } = e,
+            [i, s] = (0, p.YV)(t, n),
+            { setCheckoutInvoicePreview: a } = (0, _.t4)((e) => ({
                 setCheckoutInvoicePreview: e.setCheckoutInvoicePreview,
             }));
         return (
             r.useEffect(() => {
-                s(n, i);
-            }, [n, i, s]),
+                a(i, s);
+            }, [i, s, a]),
             null
         );
     },
     m = (e) => {
-        let { fetchParams: t } = e,
-            [n, i] = (0, p.QQ)(t),
-            { setCheckoutInvoicePreview: s } = (0, _.t4)((e) => ({
+        let { fetchParams: t, refetchKey: n } = e,
+            [i, s] = (0, p.C8)(t, n),
+            { setCheckoutInvoicePreview: a } = (0, _.t4)((e) => ({
                 setCheckoutInvoicePreview: e.setCheckoutInvoicePreview,
             }));
         return (
             r.useEffect(() => {
-                s(n, i);
-            }, [n, i, s]),
+                a(i, s);
+            }, [i, s, a]),
             null
         );
     },
     g = (e) => {
-        let { fetchParams: t } = e,
-            [n, i] = (0, p.YV)(t),
-            { setRenewalInvoicePreview: s } = (0, _.t4)((e) => ({
+        let { fetchParams: t, refetchKey: n } = e,
+            [i, s] = (0, p.QQ)(t, n),
+            { setCheckoutInvoicePreview: a } = (0, _.t4)((e) => ({
+                setCheckoutInvoicePreview: e.setCheckoutInvoicePreview,
+            }));
+        return (
+            r.useEffect(() => {
+                a(i, s);
+            }, [i, s, a]),
+            null
+        );
+    },
+    A = (e) => {
+        let { fetchParams: t, refetchKey: n } = e,
+            [i, s] = (0, p.YV)(t, n),
+            { setRenewalInvoicePreview: a } = (0, _.t4)((e) => ({
                 setRenewalInvoicePreview: e.setRenewalInvoicePreview,
             }));
         return (
             r.useEffect(() => {
-                s(n, i);
-            }, [n, i, s]),
+                a(i, s);
+            }, [i, s, a]),
             null
         );
     },
-    A = () => {
-        let { fetchCheckoutInvoicePreviewRequest: e, fetchRenewalInvoicePreviewRequest: t } = (0, _.t4)((e) => ({
-            fetchCheckoutInvoicePreviewRequest: e.fetchCheckoutInvoicePreviewRequest,
-            fetchRenewalInvoicePreviewRequest: e.fetchRenewalInvoicePreviewRequest,
-        }));
-        return null == e && null == t
+    I = () => {
+        let e = (0, d.Ay)((e) => e.step),
+            t = r.useRef(e),
+            {
+                fetchCheckoutInvoicePreviewRequest: n,
+                fetchRenewalInvoicePreviewRequest: s,
+                setFetchCheckoutInvoicePreviewRequest: a,
+                setFetchRenewalInvoicePreviewRequest: o,
+            } = (0, _.t4)((e) => ({
+                setFetchCheckoutInvoicePreviewRequest: e.setFetchCheckoutInvoicePreviewRequest,
+                setFetchRenewalInvoicePreviewRequest: e.setFetchRenewalInvoicePreviewRequest,
+                fetchCheckoutInvoicePreviewRequest: e.fetchCheckoutInvoicePreviewRequest,
+                fetchRenewalInvoicePreviewRequest: e.fetchRenewalInvoicePreviewRequest,
+            }));
+        return (r.useEffect(() => {
+            let n = t.current;
+            (t.current = e), n === c.pn.REVIEW && e !== c.pn.REVIEW && (a(null), o(null));
+        }, [e, a, o]),
+        null == n && null == s)
             ? null
             : (0, i.jsxs)(i.Fragment, {
                   children: [
-                      null != e && "premium_checkout_invoice" === e.type && (0, i.jsx)(E, { fetchParams: e.params }),
-                      null != e &&
-                          "premium_one_time_gift_purchase_invoice" === e.type &&
-                          (0, i.jsx)(m, { fetchParams: e.params }),
-                      null != t && "premium_renewal_invoice" === t.type && (0, i.jsx)(g, { fetchParams: t.params }),
+                      null != n && "premium_checkout_invoice" === n.type && (0, i.jsx)(E, { fetchParams: n.params }),
+                      null != n &&
+                          "premium_checkout_invoice_get_request" === n.type &&
+                          (0, i.jsx)(m, { fetchParams: n.params }),
+                      null != n &&
+                          "premium_one_time_gift_purchase_invoice" === n.type &&
+                          (0, i.jsx)(g, { fetchParams: n.params }),
+                      null != s && "premium_renewal_invoice" === s.type && (0, i.jsx)(A, { fetchParams: s.params }),
                   ],
               });
     };
-var I = n(83617);
-let T = () => {
+var T = n(83617);
+let S = () => {
     let {
             setCheckoutPriceOptions: e,
             paymentSourceId: t,
@@ -123,9 +152,9 @@ let T = () => {
             (async () => {
                 let { current: i } = l;
                 try {
-                    i.length > 0 && !n.excludeSubscriptionPlansBySKU && (await (0, I.c_)(t, i));
+                    i.length > 0 && !n.excludeSubscriptionPlansBySKU && (await (0, T.c_)(t, i));
                 } catch (e) {
-                    if (e.code !== I.oy) throw e;
+                    if (e.code !== T.oy) throw e;
                 }
                 e({ paymentSourceId: t, currency: void 0, loaded: !0 });
             })();
@@ -133,17 +162,17 @@ let T = () => {
         null
     );
 };
-var S = n(679374),
-    y = n(652215);
-let N = {
+var y = n(679374),
+    N = n(652215);
+let v = {
     skuIds: [],
     isGift: !1,
     referralTrialOfferId: null,
     activeSubscription: null,
     excludeSubscriptionPlansBySKU: !1,
-    purchaseType: y.VVm.SUBSCRIPTION,
+    purchaseType: N.VVm.SUBSCRIPTION,
 };
-function v() {
+function C() {
     return (
         !(function () {
             let e = (0, d.bB)(),
@@ -156,9 +185,9 @@ function v() {
         null
     );
 }
-function C(e) {
-    let { checkoutInitParameters: t = N, loadId: n, discoverySessionId: c, children: d } = e,
-        h = (0, S._5)(),
+function R(e) {
+    let { checkoutInitParameters: t = v, loadId: n, discoverySessionId: c, children: d } = e,
+        h = (0, y._5)(),
         p = (0, a.A)(() => {
             let e = h?.id ?? n ?? (0, s.A)();
             return (
@@ -170,8 +199,8 @@ function C(e) {
             initialCheckoutPaymentSourceId: E,
             defaultPaymentSourceId: m,
             eligiblePaymentGateways: g,
-            hasFetchedPaymentSources: I,
-            paymentSources: C,
+            hasFetchedPaymentSources: A,
+            paymentSources: T,
         } = (0, l.mz)({ skuId: t.skuIds[0], isGift: t.isGift, activeSubscription: t.activeSubscription }),
         [R] = r.useState(() =>
             (0, _.y$)({
@@ -198,17 +227,17 @@ function C(e) {
         (0, i.jsxs)(_.Ni, {
             value: R,
             children: [
-                (0, i.jsx)(v, {}),
-                (0, i.jsx)(T, {}),
+                (0, i.jsx)(C, {}),
+                (0, i.jsx)(S, {}),
                 (0, i.jsx)(f, {
                     isGift: t.isGift,
                     activeSubscription: t.activeSubscription,
                     defaultPaymentSourceId: m,
                     eligiblePaymentGateways: g,
-                    hasFetchedPaymentSources: I,
-                    paymentSources: C,
+                    hasFetchedPaymentSources: A,
+                    paymentSources: T,
                 }),
-                t.purchaseType === y.VVm.SUBSCRIPTION && (0, i.jsx)(A, {}),
+                t.purchaseType === N.VVm.SUBSCRIPTION && (0, i.jsx)(I, {}),
                 d,
             ],
         })

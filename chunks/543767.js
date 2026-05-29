@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { $n: () => m, C8: () => I, OQ: () => h, QQ: () => g, YV: () => A, sL: () => T });
+n.d(t, { $n: () => m, C8: () => I, OQ: () => f, QQ: () => g, YV: () => A, sL: () => T });
 var i = n(64700),
     r = n(284009),
     s = n.n(r),
     a = n(636537),
     o = n(228366),
-    l = n(845584),
+    l = n(913122),
     u = n(570221),
-    c = n(927578),
+    c = n(428262),
     d = n(371794),
     _ = n(652215);
-async function f(e) {
+async function h(e) {
     let {
             items: t,
             paymentSourceId: n,
@@ -18,8 +18,8 @@ async function f(e) {
             code: r,
             applyEntitlements: s = !1,
             currency: d,
-            renewal: f,
-            metadata: h,
+            renewal: h,
+            metadata: f,
         } = e,
         p = {
             items: (t = (0, c.qn)(t)).map((e) => {
@@ -31,8 +31,8 @@ async function f(e) {
             code: r,
             apply_entitlements: s,
             currency: d,
-            renewal: f,
-            metadata: h,
+            renewal: h,
+            metadata: f,
         };
     try {
         let e = await a.Bo.post({
@@ -55,7 +55,7 @@ async function f(e) {
         throw new l.Ey(e);
     }
 }
-async function h(e) {
+async function f(e) {
     let {
         subscriptionId: t,
         items: n,
@@ -63,8 +63,8 @@ async function h(e) {
         renewal: r,
         currency: s,
         applyEntitlements: d = !1,
-        analyticsLocations: f,
-        analyticsLocation: h,
+        analyticsLocations: h,
+        analyticsLocation: f,
         userDiscountOfferId: p,
     } = e;
     null != n && (n = (0, c.qn)(n));
@@ -82,7 +82,7 @@ async function h(e) {
     try {
         let e = await a.Bo.patch({
                 url: _.Rsh.BILLING_SUBSCRIPTION_PREVIEW(t),
-                query: { location: h, location_stack: f },
+                query: { location: f, location_stack: h },
                 body: E,
                 oldFormErrors: !0,
                 rejectWithError: !1,
@@ -149,49 +149,51 @@ function m(e, t, n) {
         [s, o]
     );
 }
-function g(e) {
-    let t = (0, i.useRef)(e),
-        n = (0, i.useRef)(!1);
+function g(e, t) {
+    let n = (0, i.useRef)(e),
+        r = (0, i.useRef)(!1);
     (0, i.useEffect)(() => {
-        t.current = e;
+        n.current = e;
     });
-    let r = JSON.stringify(e);
+    let s = JSON.stringify(e);
     return m(
         e,
         (0, i.useCallback)(() => {
-            let e = t.current,
-                i = n.current ? e : { ...e, paymentSourceId: null };
-            return (n.current = !0), p(i);
-        }, [r]),
+            let e = n.current,
+                t = r.current ? e : { ...e, paymentSourceId: null };
+            return (r.current = !0), p(t);
+        }, [s]),
+        t,
     );
 }
-function A(e) {
+function A(e, t) {
     if ("subscriptionId" in e && null == e.subscriptionId) {
         let { subscriptionId: t, ...n } = e;
         e = n;
     }
-    let t = (0, i.useRef)(e),
-        n = (0, i.useRef)(!1);
+    let n = (0, i.useRef)(e),
+        r = (0, i.useRef)(!1);
     (0, i.useEffect)(() => {
-        t.current = e;
+        n.current = e;
     });
-    let r = JSON.stringify(e),
-        s = (0, i.useCallback)(() => {
-            let e = t.current,
-                i = n.current ? e : { ...e, paymentSourceId: null };
-            return "subscriptionId" in i ? ((n.current = !0), h(i)) : "items" in i ? ((n.current = !0), f(i)) : null;
-        }, [r]);
-    return m(e, s);
+    let s = JSON.stringify(e),
+        a = (0, i.useCallback)(() => {
+            let e = n.current,
+                t = r.current ? e : { ...e, paymentSourceId: null };
+            return "subscriptionId" in t ? ((r.current = !0), f(t)) : "items" in t ? ((r.current = !0), h(t)) : null;
+        }, [s]);
+    return m(e, a, t);
 }
-function I(e) {
-    let t = (0, i.useRef)(e);
+function I(e, t) {
+    let n = (0, i.useRef)(e);
     (0, i.useEffect)(() => {
-        t.current = e;
+        n.current = e;
     });
-    let n = JSON.stringify(e);
+    let r = JSON.stringify(e);
     return m(
         e,
-        (0, i.useCallback)(() => E(t.current), [n]),
+        (0, i.useCallback)(() => E(n.current), [r]),
+        t,
     );
 }
 function T(e) {
