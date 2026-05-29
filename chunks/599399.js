@@ -1,4 +1,4 @@
-a.r(l), a.d(l, { manaCollection: () => ah, playgroundConfig: () => ay });
+a.r(l), a.d(l, { manaCollection: () => av, playgroundConfig: () => ag });
 var t = a(627968),
     o = a(64700),
     i = a(17928),
@@ -719,8 +719,8 @@ let q = {
         },
     ],
 };
-var _ = a(417098);
-let X = {
+var U = a(417098);
+let _ = {
     title: "Notice",
     stories: [
         {
@@ -729,14 +729,14 @@ let X = {
             component: function (e) {
                 let { color: l, message: a } = e,
                     o = {
-                        BRAND: _.Hv.BRAND,
-                        INFO: _.Hv.INFO,
-                        WARNING: _.Hv.WARNING,
-                        DANGER: _.Hv.DANGER,
-                        DEFAULT: _.Hv.DEFAULT,
-                        NEUTRAL: _.Hv.NEUTRAL,
+                        BRAND: U.Hv.BRAND,
+                        INFO: U.Hv.INFO,
+                        WARNING: U.Hv.WARNING,
+                        DANGER: U.Hv.DANGER,
+                        DEFAULT: U.Hv.DEFAULT,
+                        NEUTRAL: U.Hv.NEUTRAL,
                     };
-                return (0, t.jsx)(_.$T, { color: o[l], children: a });
+                return (0, t.jsx)(U.$T, { color: o[l], children: a });
             },
             controls: {
                 color: {
@@ -761,7 +761,7 @@ let X = {
         },
     ],
 };
-var U = a(933832),
+var X = a(933832),
     W = a(176781),
     Z = a(173936),
     Y = a(972213),
@@ -786,7 +786,7 @@ let Q = {
                         withIcons: b,
                     } = e,
                     [p, m] = o.useState("option1"),
-                    x = [U.A, W.x, Z.q, z.Z, Y.d],
+                    x = [X.A, W.x, Z.q, z.Z, Y.d],
                     h = Array.from({ length: l }, (e, l) => ({
                         value: `option${l + 1}`,
                         name: `Option ${l + 1}`,
@@ -1150,7 +1150,7 @@ let ec = [
             ea,
             { title: "Avatar", stories: [u] },
             S,
-            X,
+            _,
             {
                 title: "VoidInputs",
                 stories: [
@@ -1830,9 +1830,9 @@ let eH = {
     ],
 };
 var eq = a(693321),
-    e_ = a(770378),
-    eX = a(521767),
-    eU = a(817724),
+    eU = a(770378),
+    e_ = a(521767),
+    eX = a(817724),
     eW = a(650682),
     eZ = a(987062),
     eY = a(561392),
@@ -1973,7 +1973,7 @@ function e5(e) {
                 validation: v,
                 ref: g.setReference,
                 ...k(),
-                children: (0, t.jsxs)(e_.Ur, {
+                children: (0, t.jsxs)(eU.Ur, {
                     id: e.controlId,
                     "aria-labelledby": e.labelId,
                     "aria-describedby": e.describedById,
@@ -1992,22 +1992,22 @@ function e5(e) {
                     "data-mana-component": "date-range-picker",
                     className: e8.Nz,
                     children: [
-                        (0, t.jsxs)(eX.Y, {
+                        (0, t.jsxs)(e_.Y, {
                             className: e8.wO,
                             children: [
-                                (0, t.jsx)(eU.J3, {
+                                (0, t.jsx)(eX.J3, {
                                     slot: "start",
                                     children: (e) =>
-                                        (0, t.jsx)(eU.Eu, {
+                                        (0, t.jsx)(eX.Eu, {
                                             segment: e,
                                             className: y()(e8.mX, e.isPlaceholder && e8.qf),
                                         }),
                                 }),
                                 (0, t.jsx)("span", { className: e8.me, "aria-hidden": "true", children: "\u2192" }),
-                                (0, t.jsx)(eU.J3, {
+                                (0, t.jsx)(eX.J3, {
                                     slot: "end",
                                     children: (e) =>
-                                        (0, t.jsx)(eU.Eu, {
+                                        (0, t.jsx)(eX.Eu, {
                                             segment: e,
                                             className: y()(e8.mX, e.isPlaceholder && e8.qf),
                                         }),
@@ -3362,16 +3362,18 @@ let lP = {
         },
     ],
 };
-var lB = a(43105),
-    lz = a(338854),
-    l$ = a(353795),
-    lF = a(312640),
-    lG = a(798618),
-    lH = a(916845),
-    lq = a(627330),
-    l_ = a(375708),
-    lX = a(824078);
-function lU(e) {
+var lB = a(943854),
+    lz = a.n(lB),
+    l$ = a(43105),
+    lF = a(338854),
+    lG = a(353795),
+    lH = a(312640),
+    lq = a(798618),
+    lU = a(916845),
+    l_ = a(627330),
+    lX = a(375708),
+    lW = a(824078);
+function lZ(e) {
     let {
             steps: l,
             caretConfig: a = { align: "center" },
@@ -3403,7 +3405,7 @@ function lU(e) {
         }, [s]);
     if (!d || null == h) return null;
     let C = {
-            text: h.action?.text ?? (v ? l_.intl.string(l_.t.i4jeWR) : l_.intl.string(l_.t.PDTjLN)),
+            text: h.action?.text ?? (v ? lX.intl.string(lX.t.i4jeWR) : lX.intl.string(lX.t.PDTjLN)),
             variant: h.action?.variant ?? "primary",
             onClick: g,
             ...h.action,
@@ -3421,30 +3423,30 @@ function lU(e) {
                 ? { alignmentStrategy: "edge", align: c.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
-    return (0, t.jsx)(lF.x, {
+    return (0, t.jsx)(lH.x, {
         ...j,
         children: (0, t.jsxs)("div", {
             ref: r,
             children: [
-                (0, t.jsx)(lH.q, { onClick: V, variant: null != h.gradientColor ? "color-mix" : void 0 }),
+                (0, t.jsx)(lU.q, { onClick: V, variant: null != h.gradientColor ? "color-mix" : void 0 }),
                 null != h.graphic &&
                     (0, t.jsx)("div", {
-                        className: y()(lX.graphic, { [lX[`graphic--${i}`]]: null != i }),
-                        children: (0, t.jsx)(l$.v, {
+                        className: y()(lW.graphic, { [lW[`graphic--${i}`]]: null != i }),
+                        children: (0, t.jsx)(lG.v, {
                             ...h.graphic,
                             aspectRatio: h.graphic.aspectRatio ?? ("sm" === i ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, t.jsx)(lq.D, { title: h.title, body: h.body, badge: h.badge, textLink: h.textLink }),
+                (0, t.jsx)(l_.D, { title: h.title, body: h.body, badge: h.badge, textLink: h.textLink }),
                 (0, t.jsx)("div", {
-                    className: lX.actionBar,
+                    className: lW.actionBar,
                     children: (0, t.jsxs)("div", {
-                        className: lX.multistepActionLayout,
+                        className: lW.multistepActionLayout,
                         children: [
                             (0, t.jsx)(p.E, {
                                 variant: "text-xs/normal",
-                                className: lX.multistepIndicator,
-                                children: l_.intl.formatToPlainString(l_.t.rO31eY, {
+                                className: lW.multistepIndicator,
+                                children: lX.intl.formatToPlainString(lX.t.rO31eY, {
                                     count: b + 1,
                                     totalSteps: l.length,
                                 }),
@@ -3453,14 +3455,14 @@ function lU(e) {
                         ],
                     }),
                 }),
-                (0, t.jsx)(lG.F, {}),
+                (0, t.jsx)(lq.F, {}),
             ],
         }),
     });
 }
-let lW =
+let lY =
         "https://cdn.discordapp.com/assets/content/26736d800236761a21973e6fe690dfd5fa484f664976b3bba91b98d5d47bb1f7.svg",
-    lZ = {
+    lK = {
         title: "Popover",
         stories: [
             {
@@ -3485,7 +3487,7 @@ let lW =
                         style: { display: "flex", justifyContent: "center", alignItems: "center", minHeight: "400px" },
                         children: [
                             (0, t.jsx)(
-                                lB.A,
+                                l$.A,
                                 {
                                     ...c,
                                     position: u,
@@ -3501,7 +3503,7 @@ let lW =
                                               src:
                                                   "sm" === d
                                                       ? "https://cdn.discordapp.com/assets/content/7c8ee05f499cdf960d0b69208667276e8ca276aa2edcee6141d55e237d1ed5d2.svg"
-                                                      : lW,
+                                                      : lY,
                                           }
                                         : void 0,
                                     caretConfig: { align: n },
@@ -3612,37 +3614,45 @@ let lW =
                 id: "video-popover",
                 docs: "https://design.discord.tools/components/web/popover",
                 component: function (e) {
-                    let { showActions: l, ...a } = e,
-                        [i, n] = o.useState(!1),
-                        s = o.useRef(null);
+                    let { showActions: l, previewUrl: a, assetUrl: i, ...n } = e,
+                        [s, r] = o.useState(!1),
+                        d = o.useRef(null);
                     return (0, t.jsxs)("div", {
                         children: [
                             (0, t.jsx)(
-                                lz.H,
+                                lF.H,
                                 {
-                                    ...a,
-                                    targetElementRef: s,
-                                    shouldShow: i,
-                                    onRequestClose: () => n(!1),
+                                    ...n,
+                                    targetElementRef: d,
+                                    shouldShow: s,
+                                    onRequestClose: () => r(!1),
                                     title: "Video Popover Demo",
                                     body: "Click the video to view it in the media viewer!",
-                                    assetUrl:
-                                        "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov",
+                                    assetUrl: i,
+                                    previewUrl: lz()(a) ? void 0 : a,
                                     badge: "new",
-                                    action: l ? { text: "Learn More", onClick: () => n(!1) } : void 0,
+                                    action: l ? { text: "Learn More", onClick: () => r(!1) } : void 0,
                                 },
-                                a.position,
+                                n.position,
                             ),
                             (0, t.jsx)(m.$, {
                                 variant: "primary",
                                 text: "Show Video Popover",
-                                buttonRef: s,
-                                onClick: () => n(!i),
+                                buttonRef: d,
+                                onClick: () => r(!s),
                             }),
                         ],
                     });
                 },
-                controls: { showActions: { label: "Show Actions", type: "boolean", defaultValue: !0 } },
+                controls: {
+                    showActions: { label: "Show Actions", type: "boolean", defaultValue: !0 },
+                    assetUrl: {
+                        label: "Asset URL",
+                        type: "text",
+                        defaultValue: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov",
+                    },
+                    previewUrl: { label: "Preview URL", type: "text", defaultValue: "" },
+                },
             },
             {
                 name: "MultiStepPopover",
@@ -3656,7 +3666,7 @@ let lW =
                             {
                                 title: "Welcome to the Feature!",
                                 body: "This is the first step of our multi-step introduction.",
-                                asset: (0, t.jsx)("img", { src: lW, alt: "Step 1" }),
+                                asset: (0, t.jsx)("img", { src: lY, alt: "Step 1" }),
                                 badge: "new",
                                 action: { text: "Next" },
                                 gradientColor: "blue",
@@ -3674,7 +3684,7 @@ let lW =
                             {
                                 title: "Get Started!",
                                 body: "You're all set to begin using this awesome feature.",
-                                asset: (0, t.jsx)("img", { src: lW, alt: "Step 3" }),
+                                asset: (0, t.jsx)("img", { src: lY, alt: "Step 3" }),
                                 action: { text: "Get Started", variant: l ? "expressive" : void 0 },
                                 gradientColor: "nitro-pink",
                                 textLink: { text: "Learn More", link: "https://discord.com", external: !0 },
@@ -3683,7 +3693,7 @@ let lW =
                     return (0, t.jsxs)("div", {
                         children: [
                             (0, t.jsx)(
-                                lU,
+                                lZ,
                                 {
                                     ...a,
                                     targetElementRef: s,
@@ -3719,8 +3729,8 @@ let lW =
             },
         ],
     };
-var lY = a(911608);
-let lK = {
+var lQ = a(911608);
+let lJ = {
     title: "ProgressBar",
     stories: [
         {
@@ -3731,8 +3741,8 @@ let lK = {
                     r = "" !== n ? n : void 0,
                     d = "" !== s ? s : "Progress";
                 return a
-                    ? (0, t.jsx)(lY.z, { isIndeterminate: !0, size: o, animate: i, valueLabel: r, "aria-label": d })
-                    : (0, t.jsx)(lY.z, { value: l, size: o, animate: i, valueLabel: r, "aria-label": d });
+                    ? (0, t.jsx)(lQ.z, { isIndeterminate: !0, size: o, animate: i, valueLabel: r, "aria-label": d })
+                    : (0, t.jsx)(lQ.z, { value: l, size: o, animate: i, valueLabel: r, "aria-label": d });
             },
             controls: {
                 value: { label: "Value", type: "slider", defaultValue: 50, minValue: 0, maxValue: 100 },
@@ -3755,8 +3765,8 @@ let lK = {
         },
     ],
 };
-var lQ = a(773812);
-let lJ = {
+var l0 = a(773812);
+let l1 = {
         title: "RadioGroup",
         stories: [
             {
@@ -3830,7 +3840,7 @@ let lJ = {
                         direction: "vertical",
                         gap: "md",
                         children: [
-                            (0, t.jsx)(lQ.z, { value: u, label: i, onChange: h, options: x, disabled: l }),
+                            (0, t.jsx)(l0.z, { value: u, label: i, onChange: h, options: x, disabled: l }),
                             (0, t.jsxs)(p.E, {
                                 variant: "text-sm/normal",
                                 children: ["Current selection: ", "string" == typeof u && "" !== u ? u : "None"],
@@ -3888,7 +3898,7 @@ let lJ = {
             },
         ],
     },
-    l0 = {
+    l2 = {
         title: "RangeCalendar",
         stories: [
             {
@@ -3982,10 +3992,10 @@ let lJ = {
             },
         ],
     };
-var l1 = a(593924),
-    l2 = a(844222),
-    l3 = a(692327);
-let l4 = Object.entries(l1)
+var l3 = a(593924),
+    l4 = a(844222),
+    l6 = a(692327);
+let l7 = Object.entries(l3)
     .filter((e) => {
         let l = e[1];
         return "function" == typeof l && "riveSrc" in l;
@@ -3995,10 +4005,10 @@ let l4 = Object.entries(l1)
         return { name: l, Component: a };
     })
     .sort((e, l) => e.name.localeCompare(l.name));
-var l6 = a(540637),
-    l7 = a(732771),
-    l8 = a(379649);
-let l5 = [
+var l8 = a(540637),
+    l5 = a(732771),
+    l9 = a(379649);
+let ae = [
         { label: "Aardvark", value: "aardvark", id: "aardvark", description: "This is an aardvark" },
         { label: "Cat", value: "cat", id: "cat", description: "This is a cat" },
         { label: "Dog", value: "dog", id: "dog" },
@@ -4006,7 +4016,7 @@ let l5 = [
         { label: "Panda", value: "panda", id: "panda" },
         { label: "Snake", value: "snake", id: "snake", disabled: !0 },
     ],
-    l9 = [
+    al = [
         {
             label: "Aardvark",
             value: "aardvark",
@@ -4017,11 +4027,11 @@ let l5 = [
         },
         { label: "Cat", value: "cat", id: "cat", leading: lj.N, trailing: "20m", description: "This is a cat" },
         { label: "Dog", value: "dog", id: "dog", leading: lj.N },
-        { label: "Kangaroo", value: "kangaroo", id: "kangaroo", leading: { type: "image", src: l8 } },
-        { label: "Panda", value: "panda", id: "panda", leading: { type: "avatar", src: l8 } },
+        { label: "Kangaroo", value: "kangaroo", id: "kangaroo", leading: { type: "image", src: l9 } },
+        { label: "Panda", value: "panda", id: "panda", leading: { type: "avatar", src: l9 } },
         { label: "Snake", value: "snake", id: "snake", leading: lj.N, disabled: !0 },
     ],
-    ae = {
+    aa = {
         title: "Select",
         stories: [
             {
@@ -4031,7 +4041,7 @@ let l5 = [
                     let { selectionMode: l, withLeadingAndTrailing: a, ...i } = e,
                         [n, s] = o.useState(void 0),
                         [r, d] = o.useState([]),
-                        u = al(a, i.asyncOptions);
+                        u = at(a, i.asyncOptions);
                     return "single" === l
                         ? (0, t.jsx)(lt.l, { ...i, selectionMode: l, options: u, onSelectionChange: s, value: n })
                         : (0, t.jsx)(lt.l, { ...i, selectionMode: l, options: u, onSelectionChange: d, value: r });
@@ -4086,7 +4096,7 @@ let l5 = [
                     let { selectionMode: l, withLeadingAndTrailing: a, asyncOptions: i, ...n } = e,
                         [s, r] = o.useState(void 0),
                         [d, u] = o.useState([]),
-                        c = al(a, i);
+                        c = at(a, i);
                     return "single" === l
                         ? (0, t.jsx)(lE.Z, { ...n, selectionMode: l, onSelectionChange: r, value: s, options: c })
                         : (0, t.jsx)(lE.Z, { ...n, selectionMode: l, onSelectionChange: u, value: d, options: c });
@@ -4146,16 +4156,16 @@ let l5 = [
                             ...p
                         } = e,
                         { required: m, disabled: x } = p,
-                        h = al(c, p.asyncOptions),
+                        h = at(c, p.asyncOptions),
                         [y, v] = o.useState(null);
-                    return (0, t.jsxs)(l7.iS, {
+                    return (0, t.jsxs)(l5.iS, {
                         selectionMode: l,
                         onSelectionChange: v,
                         options: h,
                         value: y,
                         ...p,
                         children: [
-                            (0, t.jsx)(l7.a3, {
+                            (0, t.jsx)(l5.a3, {
                                 label: a,
                                 hideLabel: i,
                                 placeholder: b,
@@ -4167,7 +4177,7 @@ let l5 = [
                                 successMessage: d,
                                 wrapTags: u,
                             }),
-                            (0, t.jsx)(l7.X2, {}),
+                            (0, t.jsx)(l5.X2, {}),
                         ],
                     });
                 },
@@ -4213,11 +4223,11 @@ let l5 = [
                 component: function (e) {
                     let { selectionMode: l, required: a, shouldFocusWrap: i, withLeadingAndTrailing: n } = e,
                         [s, r] = o.useState(null);
-                    return (0, t.jsx)(l6.q, {
+                    return (0, t.jsx)(l8.q, {
                         selectionMode: l,
                         required: a,
                         shouldFocusWrap: i,
-                        items: n ? l9 : l5,
+                        items: n ? al : ae,
                         onSelectionChange: r,
                         selectedItems: s,
                     });
@@ -4243,10 +4253,10 @@ let l5 = [
             },
         ],
     };
-function al(e, l) {
+function at(e, l) {
     let a = o.useRef(null);
     return o.useMemo(() => {
-        let t = e ? l9 : l5;
+        let t = e ? al : ae;
         return l
             ? (e) =>
                   new Promise(
@@ -4255,7 +4265,7 @@ function al(e, l) {
             : t;
     }, [e, l]);
 }
-let aa = {
+let ao = {
     title: "Switch",
     stories: [
         {
@@ -4291,9 +4301,9 @@ let aa = {
         },
     ],
 };
-var at = a(528265),
-    ao = a(11779);
-let ai = {
+var ai = a(528265),
+    an = a(11779);
+let as = {
         title: "TagGroup",
         stories: [
             {
@@ -4304,7 +4314,7 @@ let ai = {
                         r = (0, i.bG)([n.default], () => n.default.getCurrentUser()),
                         d = o.useMemo(
                             () => [
-                                { id: "strength", label: "Strength", icon: ao.r },
+                                { id: "strength", label: "Strength", icon: an.r },
                                 { id: "dexterity", label: "Dexterity", icon: { type: "role", color: "#ff44aa" } },
                                 {
                                     id: "wisdom",
@@ -4325,7 +4335,7 @@ let ai = {
                         x = o.useCallback(() => {
                             c(d);
                         }, [d]),
-                        h = (0, t.jsx)(at.C, {
+                        h = (0, t.jsx)(ai.C, {
                             label: "Categories",
                             selectionMode: l,
                             layout: s,
@@ -4365,7 +4375,7 @@ let ai = {
             },
         ],
     },
-    an = [
+    ar = [
         "heading-sm/normal",
         "heading-sm/medium",
         "heading-sm/semibold",
@@ -4433,9 +4443,9 @@ let ai = {
         "display-lg",
         "code",
     ];
-var as = a(364522),
-    ar = a(653197);
-let ad = {
+var ad = a(364522),
+    au = a(653197);
+let ac = {
     name: "Text",
     id: "text",
     component: p.E,
@@ -4444,7 +4454,7 @@ let ad = {
             label: "Variant",
             type: "select",
             defaultValue: "text-sm/normal",
-            options: Object.values(an).map((e) => ({ label: e, value: e })),
+            options: Object.values(ar).map((e) => ({ label: e, value: e })),
         },
         color: {
             label: "Color",
@@ -4467,10 +4477,10 @@ let ad = {
         children: { label: "Text", type: "text", defaultValue: "Hello, world!" },
     },
 };
-var au = a(459192),
-    ac = a(990078),
-    ab = a(557464);
-let ap = {
+var ab = a(459192),
+    ap = a(990078),
+    am = a(557464);
+let ax = {
     title: "Tooltip",
     stories: [
         {
@@ -4493,7 +4503,7 @@ let ap = {
                         if ("center" !== n && null != n)
                             return "custom" === n ? { align: n, customOffset: s } : { align: n };
                     }, [n, s]);
-                return (0, t.jsx)(ac.m, {
+                return (0, t.jsx)(ap.m, {
                     text: l,
                     position: a,
                     align: i,
@@ -4572,8 +4582,8 @@ let ap = {
                         if ("center" !== u && null != u)
                             return "custom" === u ? { align: u, customOffset: c } : { align: u };
                     }, [u, c]),
-                    v = o.useMemo(() => (i ? { type: "image", src: ab.A, aspectRatio: "1/1" } : void 0), [i]);
-                return (0, t.jsx)(au.u, {
+                    v = o.useMemo(() => (i ? { type: "image", src: am.A, aspectRatio: "1/1" } : void 0), [i]);
+                return (0, t.jsx)(ab.u, {
                     title: l,
                     body: a,
                     position: r,
@@ -4657,27 +4667,27 @@ let ap = {
         },
     ],
 };
-var am = a(508382),
-    ax = a(481224);
-let ah = {
+var ah = a(508382),
+    ay = a(481224);
+let av = {
         id: "mana",
         name: "Mana",
         groups: [
             {
                 title: "Text",
                 stories: [
-                    ad,
+                    ac,
                     {
                         name: "Typography Scales",
                         id: "text-scales",
                         component: function (e) {
-                            return (0, t.jsx)(as.Ar, {
-                                className: ar.H,
-                                children: Object.values(an).map((l) =>
+                            return (0, t.jsx)(ad.Ar, {
+                                className: au.H,
+                                children: Object.values(ar).map((l) =>
                                     (0, t.jsxs)(
                                         k.Z,
                                         {
-                                            className: ar.N,
+                                            className: au.N,
                                             children: [
                                                 (0, t.jsx)(p.E, { ...e, variant: l, children: e.children }),
                                                 (0, t.jsx)(p.E, {
@@ -4703,16 +4713,16 @@ let ah = {
             eF,
             eH,
             e9,
-            lJ,
-            l0,
-            aa,
+            l1,
+            l2,
+            ao,
             lP,
             lg,
-            ae,
-            lZ,
+            aa,
             lK,
-            ap,
-            ai,
+            lJ,
+            ax,
+            as,
             lc,
             {
                 title: "FloatingLayer",
@@ -4731,7 +4741,7 @@ let ah = {
                                     blockPointerEvents: d,
                                 } = e,
                                 [u, c] = o.useState(!1);
-                            return (0, t.jsx)(am.Ow, {
+                            return (0, t.jsx)(ah.Ow, {
                                 open: u,
                                 onOpenChange: c,
                                 placement: l,
@@ -4743,7 +4753,7 @@ let ah = {
                                 blockPointerEvents: d,
                                 renderLayer: () =>
                                     (0, t.jsx)("div", {
-                                        className: ax.q,
+                                        className: ay.q,
                                         children: (0, t.jsx)(p.E, {
                                             variant: "text-sm/medium",
                                             children: "FloatingLayer Content",
@@ -4807,13 +4817,13 @@ let ah = {
                         id: "rive-all-animations",
                         component: function () {
                             let [e, l] = o.useState(!0),
-                                a = o.useContext(l2.C),
+                                a = o.useContext(l4.C),
                                 [i, n] = o.useState(0);
-                            return (0, t.jsxs)(l2.C.Provider, {
+                            return (0, t.jsxs)(l4.C.Provider, {
                                 value: { ...a, reducedMotion: { ...a.reducedMotion, enabled: e } },
                                 children: [
                                     (0, t.jsx)("div", {
-                                        className: l3.QT,
+                                        className: l6.QT,
                                         children: (0, t.jsxs)(b.B, {
                                             gap: 8,
                                             children: [
@@ -4832,16 +4842,16 @@ let ah = {
                                     (0, t.jsx)(
                                         "div",
                                         {
-                                            className: l3.Vg,
-                                            children: l4.map((e) => {
+                                            className: l6.Vg,
+                                            children: l7.map((e) => {
                                                 let { name: l, Component: a } = e;
                                                 return (0, t.jsxs)(
                                                     "div",
                                                     {
-                                                        className: l3.Hn,
+                                                        className: l6.Hn,
                                                         children: [
                                                             (0, t.jsx)("div", {
-                                                                className: l3.k$,
+                                                                className: l6.k$,
                                                                 children: (0, t.jsx)(a, {
                                                                     style: { width: "100%", height: "100%" },
                                                                 }),
@@ -4849,7 +4859,7 @@ let ah = {
                                                             (0, t.jsx)(p.E, {
                                                                 variant: "text-xs/normal",
                                                                 color: "text-subtle",
-                                                                className: l3.Pf,
+                                                                className: l6.Pf,
                                                                 children: l,
                                                             }),
                                                         ],
@@ -4868,4 +4878,4 @@ let ah = {
             },
         ],
     },
-    ay = { collections: [ah, eb] };
+    ag = { collections: [av, eb] };

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => C, e: () => y });
+n.d(t, { A: () => v, e: () => N });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(911608),
     d = n(939249),
     _ = n(789645),
-    f = n(349288),
-    h = n(834730),
+    h = n(349288),
+    f = n(834730),
     p = n(228366),
     E = n(31717),
     m = n(399263);
@@ -33,7 +33,7 @@ var A = n(46054),
     I = n(453771),
     T = n(375708),
     S = n(490563);
-let N = (e) => {
+let y = (e) => {
     let { filename: t } = e,
         r = (0, I.GD)(t),
         s = n(714694)(`./icon-file-${r}.svg`);
@@ -44,7 +44,7 @@ let N = (e) => {
         title: r,
     });
 };
-function y(e) {
+function N(e) {
     let { channelId: t, file: n } = e,
         s = (0, u.bG)([m.A], () => m.A.getMessageForFile(n.id)?.content),
         a = r.useMemo(() => {
@@ -58,52 +58,54 @@ function y(e) {
         o = r.useCallback(() => {
             g.cancel(t, n);
         }, [t, n]),
-        f = 100 === n.progress,
-        h = !f && n.currentSize > 0,
+        h = 100 === n.progress,
+        f = !h && n.currentSize > 0,
         p = r.useMemo(() => (null == s || "" === s.trim() ? null : A.A.parse(s)), [s]);
-    return (0, i.jsxs)("div", {
-        className: S.Ig,
+    return (0, i.jsxs)(i.Fragment, {
         children: [
             null != p && (0, i.jsx)("div", { className: S.Qs, children: p }),
-            (0, i.jsxs)("div", {
-                className: S.NJ,
-                children: [
-                    (0, i.jsx)(N, { filename: a }),
-                    (0, i.jsxs)("div", {
-                        className: S.Jg,
-                        children: [
-                            (0, i.jsxs)("div", {
-                                className: S.tP,
-                                children: [
-                                    (0, i.jsx)("div", { className: S.iW, children: a }),
-                                    h
-                                        ? (0, i.jsx)("div", {
-                                              className: S.Ej,
-                                              children: `\u{2014} ${l().filesize(n.currentSize)}`,
-                                          })
-                                        : null,
-                                ],
-                            }),
-                            (0, i.jsx)("div", {
-                                className: S.L$,
-                                children: f
-                                    ? T.intl.string(T.t.jfKTes)
-                                    : (0, i.jsx)(c.z, { value: n.progress, "aria-label": a }),
-                            }),
-                        ],
-                    }),
-                    f
-                        ? null
-                        : (0, i.jsx)(d.D, {
-                              onClick: o,
-                              children: (0, i.jsx)(_.P, { size: "md", color: "currentColor", className: S.x7 }),
-                          }),
-                ],
+            (0, i.jsx)("div", {
+                className: S.Ig,
+                children: (0, i.jsxs)("div", {
+                    className: S.NJ,
+                    children: [
+                        (0, i.jsx)(y, { filename: a }),
+                        (0, i.jsxs)("div", {
+                            className: S.Jg,
+                            children: [
+                                (0, i.jsxs)("div", {
+                                    className: S.tP,
+                                    children: [
+                                        (0, i.jsx)("div", { className: S.iW, children: a }),
+                                        f
+                                            ? (0, i.jsx)("div", {
+                                                  className: S.Ej,
+                                                  children: `\u{2014} ${l().filesize(n.currentSize)}`,
+                                              })
+                                            : null,
+                                    ],
+                                }),
+                                (0, i.jsx)("div", {
+                                    className: S.L$,
+                                    children: h
+                                        ? T.intl.string(T.t.jfKTes)
+                                        : (0, i.jsx)(c.z, { value: n.progress, "aria-label": a }),
+                                }),
+                            ],
+                        }),
+                        h
+                            ? null
+                            : (0, i.jsx)(d.D, {
+                                  onClick: o,
+                                  children: (0, i.jsx)(_.P, { size: "md", color: "currentColor", className: S.x7 }),
+                              }),
+                    ],
+                }),
             }),
         ],
     });
 }
-let C = (e) => {
+let v = (e) => {
     let { className: t, url: n, fileName: r, fileSize: s, onClick: o, onContextMenu: u, renderAdjacentContent: c } = e;
     return (0, i.jsxs)("div", {
         className: a()(S.Ig, t),
@@ -111,13 +113,13 @@ let C = (e) => {
             (0, i.jsxs)("div", {
                 className: S.NJ,
                 children: [
-                    (0, i.jsx)(N, { filename: r }),
+                    (0, i.jsx)(y, { filename: r }),
                     (0, i.jsxs)("div", {
                         className: S.Jg,
                         children: [
                             (0, i.jsx)("div", {
                                 className: S.RT,
-                                children: (0, i.jsx)(f.Anchor, {
+                                children: (0, i.jsx)(h.Anchor, {
                                     className: S.AD,
                                     href: n,
                                     onClick: o,
@@ -125,7 +127,7 @@ let C = (e) => {
                                     children: r,
                                 }),
                             }),
-                            (0, i.jsx)(h.E, {
+                            (0, i.jsx)(f.E, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
                                 children: l().filesize(s),

@@ -1,25 +1,31 @@
 "use strict";
-n.d(t, { $P: () => l, Kh: () => u, Oy: () => d, RJ: () => s, al: () => o, cZ: () => a, wu: () => i }), n(64700);
-let r = ["gif", "webp", "png", "apng"];
-function i(e) {
+n.d(t, { $P: () => c, Kh: () => d, Oy: () => _, RJ: () => a, al: () => u, cZ: () => l, gA: () => o, wu: () => s }),
+    n(64700);
+let i = ["gif", "webp", "png", "apng"],
+    r = ["png", "jpg", "jpeg", "webp", "svg"];
+function s(e) {
     return "type" in e && "image" === e.type && "string" == typeof e.src;
 }
-function s(e) {
+function a(e) {
+    let t = e.toLowerCase().split(".").pop();
+    return null != t && i.includes(t);
+}
+function o(e) {
     let t = e.toLowerCase().split(".").pop();
     return null != t && r.includes(t);
 }
-function a(e) {
+function l(e) {
     return "type" in e && "video" === e.type && "string" == typeof e.src;
 }
-function o(e) {
+function u(e) {
     return "type" in e && "lottie" === e.type && "function" == typeof e.lottie;
 }
-function l(e) {
+function c(e) {
     return "type" in e && "rive" === e.type && "function" == typeof e.rive;
 }
-function u(e) {
+function d(e) {
     return "type" in e && "dynamic" === e.type && "component" in e;
 }
-function d(e) {
-    return null != e && ((!!i(e) && null != e.src && s(e.src)) || a(e) || o(e) || l(e));
+function _(e) {
+    return null != e && ((!!s(e) && null != e.src && a(e.src)) || l(e) || u(e) || c(e));
 }
