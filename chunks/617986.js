@@ -1,23 +1,27 @@
 "use strict";
 n.d(t, {
-    l9: () => J,
     QA: () => et,
+    Df: () => $,
     z6: () => Q,
     cf: () => K,
     hJ: () => z,
+    zg: () => ei,
     q$: () => en,
     Zc: () => X,
-    gC: () => ei,
+    gC: () => er,
     d5: () => ee,
-    Fy: () => er,
+    Fy: () => es,
     f7: () => Y,
     m6: () => q,
     navigateToQuestHome: () => Z,
-    e0: () => es,
+    e0: () => ea,
     rx: () => W,
-    Oz: () => ea,
-    Df: () => $,
-});
+    Oz: () => eo,
+    l9: () => J,
+}),
+    n(323874),
+    n(14289),
+    n(35956);
 var i = n(627968);
 n(64700);
 var r = n(835245),
@@ -93,12 +97,12 @@ function W(e) {
             n.e("90665"),
             n.e("72813"),
             n.e("56377"),
-            n.e("76440"),
+            n.e("57014"),
             n.e("94317"),
             n.e("55642"),
             n.e("80889"),
             n.e("22513"),
-            n.e("88566"),
+            n.e("30850"),
             n.e("19401"),
             n.e("31591"),
             n.e("61766"),
@@ -441,7 +445,7 @@ function ee(e) {
         autoplay: u = !0,
         skipEnrollmentCheck: c = !1,
     } = e;
-    if ((0, P.K$)(t)) return void er(t);
+    if ((0, P.K$)(t)) return void es(t);
     let d = (0, r.A)();
     if (!c && t.userStatus?.enrolledAt == null && !(0, k.Ic)(t)) {
         v.A.isEnrolling(t.id) ||
@@ -530,7 +534,29 @@ function en(e) {
             t || (0, E.bG)({ pathname: B.BVt.QUEST_HOME, hash: e });
         });
 }
-function ei(e, t) {
+function ei(e) {
+    let t = (function (e) {
+            let t = platform.os?.family;
+            if ("Android" !== t && "iOS" !== t) return "discord://";
+            let n = new URLSearchParams();
+            e.forEach((e) => n.append("ad_creative_ids", e));
+            let i = g.default.getFingerprint(),
+                r = (0, s.I_)(),
+                a = `${location.protocol}//${window.GLOBAL_ENV.WEBAPP_ENDPOINT}/quest-home?${n.toString()}`;
+            return (0, s.Ay)(a, { utmSource: "quest-home-preview", fingerprint: i, attemptId: r });
+        })(e),
+        n = (0, s.X7)(t);
+    null != n &&
+        T.default.track(B.HAw.DEEP_LINK_CLICKED, {
+            fingerprint: (0, a.v)(n.fingerprint),
+            attempt_id: n.attemptId,
+            source: n.utmSource,
+        }),
+        y.A.launch(t, (e) => {
+            e || (0, E.bG)({ pathname: B.BVt.QUEST_HOME });
+        });
+}
+function er(e, t) {
     (0, o.openModalLazy)(async () => {
         let { default: r } = await Promise.all([
             n.e("72813"),
@@ -548,7 +574,7 @@ function ei(e, t) {
         return (n) => (0, i.jsx)(r, { ...n, multiplier: e, orbMultiplierEligibility: t });
     });
 }
-function er(e) {
+function es(e) {
     (0, o.openModalLazy)(async () => {
         let { default: t } = await Promise.all([
             n.e("58735"),
@@ -561,7 +587,7 @@ function er(e) {
         return (n) => (0, i.jsx)(t, { ...n, questId: e.id });
     });
 }
-async function es(e, t) {
+async function ea(e, t) {
     let { type: n } = await (0, N.Oy)(e.id, {
         questContent: t.questContent,
         questContentCTA: t.questContentCTA,
@@ -586,6 +612,6 @@ async function es(e, t) {
         case N.WM.PREVIOUS_IN_FLIGHT_REQUEST:
     }
 }
-function ea(e) {
+function eo(e) {
     if ((0, U.vA)(e)) return e.config.features.includes(V.Li.CLOUD_GAMING_ACTIVITY) ? u.h : c._;
 }
