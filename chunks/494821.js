@@ -1,20 +1,20 @@
 "use strict";
 n.d(t, {
-    $O: () => S,
+    b9: () => E,
+    yN: () => T,
+    Yh: () => g,
+    zT: () => c,
+    Wj: () => d,
+    Y1: () => f,
+    kI: () => h,
+    dangerouslyConstructGuildRecordFromUntypedObject: () => I,
+    xi: () => m,
     DY: () => p,
     Me: () => _,
-    Wj: () => d,
-    Y1: () => h,
-    Yh: () => g,
-    b9: () => E,
-    dangerouslyConstructGuildRecordFromUntypedObject: () => I,
+    tJ: () => y,
     fh: () => u,
-    kI: () => f,
-    tJ: () => N,
-    xi: () => m,
     yF: () => A,
-    yN: () => T,
-    zT: () => c,
+    $O: () => S,
 });
 var i = n(284009),
     r = n.n(i),
@@ -26,7 +26,7 @@ function u(e) {
     return (0, a.Wj)(o.vI, e);
 }
 function c(e, t, n) {
-    var i, r;
+    var i, r, l, u;
     return (0, a.e)(o.vI, n, {
         id: e.id,
         joinedAt: t.joinedAt,
@@ -68,20 +68,49 @@ function c(e, t, n) {
         hubType: e.hub_type ?? null,
         latestOnboardingQuestionId: e.latest_onboarding_question_id ?? null,
         profile: e.profile ?? null,
+        guildTheme:
+            ((i = e.theme),
+            (r = n),
+            void 0 === i
+                ? (r?.guildTheme ?? null)
+                : null != i
+                  ? ((function (e) {
+                        return null == e
+                            ? null
+                            : {
+                                  enabled: e.enabled,
+                                  themeSettings:
+                                      null == e || (null == e.preset_id && null == e.custom_user_theme_settings)
+                                          ? null
+                                          : {
+                                                presetId: null == e.preset_id ? void 0 : e.preset_id,
+                                                customUserThemeSettings: (function (e) {
+                                                    if (null != e)
+                                                        return {
+                                                            colors: e.colors,
+                                                            gradientColorStops: e.gradient_color_stops ?? [],
+                                                            gradientAngle: e.gradient_angle ?? 0,
+                                                            baseMix: e.base_mix ?? 0,
+                                                        };
+                                                })(e.custom_user_theme_settings),
+                                            },
+                              };
+                    })(i) ?? { enabled: !1, themeSettings: null })
+                  : null),
         premiumFeatures:
             null != e.premium_features
                 ? {
-                      features: (i = e.premium_features).features,
-                      additionalEmojiSlots: i.additional_emoji_slots,
-                      additionalStickerSlots: i.additional_sticker_slots,
-                      additionalSoundSlots: i.additional_sound_slots,
+                      features: (l = e.premium_features).features,
+                      additionalEmojiSlots: l.additional_emoji_slots,
+                      additionalStickerSlots: l.additional_sticker_slots,
+                      additionalSoundSlots: l.additional_sound_slots,
                   }
                 : null,
         moderatorReporting:
             null != e.moderator_reporting
                 ? {
-                      moderatorReportingEnabled: (r = e.moderator_reporting).moderator_reporting_enabled,
-                      moderatorReportChannelId: r.moderator_report_channel_id,
+                      moderatorReportingEnabled: (u = e.moderator_reporting).moderator_reporting_enabled,
+                      moderatorReportChannelId: u.moderator_report_channel_id,
                   }
                 : null,
         verificationRoleId: e.verification_role_id ?? null,
@@ -110,12 +139,12 @@ function _(e, t, n) {
         member: null != n ? { userId: n.userId, roles: n.roles } : null,
     };
 }
-function f(e, t) {
+function h(e, t) {
     return null == e.properties
         ? t
         : c(e.properties, { joinedAt: t.joinedAt, premiumSubscriberCount: t.premiumSubscriberCount }, t);
 }
-function h(e, t) {
+function f(e, t) {
     return c(
         e,
         {
@@ -126,7 +155,7 @@ function h(e, t) {
     );
 }
 function p(e) {
-    return N({
+    return y({
         id: e.id,
         name: e.name,
         description: e.description,
@@ -143,7 +172,7 @@ function p(e) {
     });
 }
 function E(e) {
-    return N({
+    return y({
         id: e.id,
         name: e.name,
         description: e.description,
@@ -154,7 +183,7 @@ function E(e) {
     });
 }
 function m(e) {
-    return N({
+    return y({
         id: e.guildId,
         name: e.name ?? "",
         icon: e.icon ?? null,
@@ -164,7 +193,7 @@ function m(e) {
     });
 }
 function g(e) {
-    return N({
+    return y({
         id: e.id,
         name: e.name,
         icon: e.icon ?? null,
@@ -175,7 +204,7 @@ function g(e) {
     });
 }
 function A(e) {
-    return N({
+    return y({
         id: e.id,
         name: e.name,
         icon: e.icon ?? null,
@@ -186,7 +215,7 @@ function A(e) {
     });
 }
 function I(e) {
-    return y({
+    return N({
         id: e.id,
         name: e.name || "",
         description: e.description || null,
@@ -229,6 +258,7 @@ function I(e) {
         hubType: e.hubType,
         latestOnboardingQuestionId: e.latestOnboardingQuestionId ?? null,
         profile: e.profile ?? null,
+        guildTheme: e.guildTheme ?? null,
         premiumFeatures: e.premiumFeatures ?? null,
         moderatorReporting: e.moderatorReporting ?? null,
         gameApplicationIds: e.gameApplicationIds ?? null,
@@ -237,7 +267,7 @@ function I(e) {
     });
 }
 function T(e) {
-    var t, n;
+    var t, n, i, r, s;
     return {
         id: e.id,
         name: e.name,
@@ -284,11 +314,32 @@ function T(e) {
         hub_type: e.hubType,
         latest_onboarding_question_id: e.latestOnboardingQuestionId,
         profile: e.profile,
+        theme:
+            null != e.guildTheme
+                ? {
+                      enabled: (n = e.guildTheme).enabled,
+                      ...(null == (i = n.themeSettings)
+                          ? { preset_id: null, custom_user_theme_settings: null }
+                          : {
+                                preset_id: i.presetId ?? null,
+                                custom_user_theme_settings:
+                                    null == (r = i.customUserThemeSettings)
+                                        ? null
+                                        : {
+                                              colors: [...r.colors],
+                                              gradient_color_stops:
+                                                  null != r.gradientColorStops ? [...r.gradientColorStops] : [],
+                                              gradient_angle: r.gradientAngle ?? 0,
+                                              base_mix: r.baseMix ?? 0,
+                                          },
+                            }),
+                  }
+                : null,
         moderator_reporting:
             null != e.moderatorReporting
                 ? {
-                      moderator_reporting_enabled: (n = e.moderatorReporting).moderatorReportingEnabled,
-                      moderator_report_channel_id: n.moderatorReportChannelId,
+                      moderator_reporting_enabled: (s = e.moderatorReporting).moderatorReportingEnabled,
+                      moderator_report_channel_id: s.moderatorReportChannelId,
                   }
                 : null,
         official_message_color: e.officialMessageColor,
@@ -307,11 +358,11 @@ function S(e) {
                 ? new Date(e.premiumProgressBarEnabledUserUpdatedAt)
                 : null,
     };
-    return delete t.roles, delete t.member, y(t);
-}
-function N(e) {
-    return y({ ...o.do, ...e });
+    return delete t.roles, delete t.member, N(t);
 }
 function y(e) {
+    return N({ ...o.do, ...e });
+}
+function N(e) {
     return (0, a.yE)(o.vI, e);
 }

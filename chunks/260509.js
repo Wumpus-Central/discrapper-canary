@@ -3,9 +3,9 @@ n.d(t, {
     DG: () => E,
     Fy: () => A,
     Iv: () => _,
-    Rb: () => f,
+    Rb: () => h,
     af: () => m,
-    bM: () => h,
+    bM: () => f,
     do: () => d,
     kn: () => g,
     ok: () => p,
@@ -57,6 +57,7 @@ let u = "Guild",
         hubType: null,
         latestOnboardingQuestionId: null,
         profile: null,
+        guildTheme: null,
         premiumFeatures: null,
         moderatorReporting: null,
         verificationRoleId: null,
@@ -68,15 +69,15 @@ function _(e, t) {
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return s.Ay.getGuildIconURL({ id: e.id, size: t, icon: e.icon, canAnimate: n, lossless: i });
 }
-function f(e) {
+function h(e) {
     return (0, o.oN)(e.name);
 }
-function h(e, t) {
+function f(e, t) {
     let n = "string" == typeof t ? t : null != t ? t.id : null;
     return e.ownerId === n;
 }
 function p(e, t) {
-    return (!!t.mfaEnabled || e.mfaLevel !== l.EkJ.ELEVATED) && h(e, t);
+    return (!!t.mfaEnabled || e.mfaLevel !== l.EkJ.ELEVATED) && f(e, t);
 }
 function E(e) {
     return null == e.joinedAt;
