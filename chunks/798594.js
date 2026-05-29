@@ -1,10 +1,11 @@
-_.exports = {
+e.exports = {
     QN: "clipItem__1d12e",
     r9: "disabled__1d12e",
     in: "focused__1d12e",
     g3: "clipHoverButtons__1d12e",
     ne: "clipThumbOverlay__1d12e",
     wH: "selected__1d12e",
+    o8: "focusWrapper__1d12e",
     OH: "clipBadge__1d12e",
     E9: "clipBottomBadges__1d12e",
     fT: "clipThumb__1d12e",

@@ -41,13 +41,13 @@ var S = l(175841),
     G = l(939249),
     _ = l(27232),
     z = l(505930),
-    U = l(821609),
-    O = l(933832),
+    O = l(821609),
+    U = l(933832),
     H = l(97808),
     F = l(778712),
     K = l(22231),
-    $ = l(429913),
-    B = l(607470),
+    B = l(429913),
+    $ = l(607470),
     Q = l(137177),
     Y = l(495544),
     V = l(287809),
@@ -64,7 +64,7 @@ function ea(e) {
     let { clip: t, moment: l, onEdit: n, onHoverChange: s } = e,
         o = (0, J.j)(t),
         { analyticsLocations: d } = (0, j.Ay)(),
-        u = (0, $.h)(t.applicationId),
+        u = (0, B.h)(t.applicationId),
         g = Y.default.getId(),
         v = (0, r.bG)([V.default], () => {
             let e = t.users.find((e) => e !== g);
@@ -162,7 +162,7 @@ function ea(e) {
                             ? (0, i.jsx)("img", { alt: "", src: t.thumbnail, className: el.xn })
                             : (0, i.jsx)("div", { className: el.$$ }),
                         I
-                            ? (0, i.jsx)(B.A, {
+                            ? (0, i.jsx)($.A, {
                                   preload: "none",
                                   poster: t.thumbnail,
                                   muted: !0,
@@ -200,10 +200,10 @@ function ea(e) {
                                   },
                                   `${t.id}:favorite:${t.isFavorite}`,
                               )
-                            : (0, i.jsx)(U.$, {
+                            : (0, i.jsx)(O.$, {
                                   variant: "overlay-secondary",
                                   size: "sm",
-                                  icon: O.A,
+                                  icon: U.A,
                                   text: et.intl.string(et.t["R3BPH+"]),
                                   onClick: es,
                               }),
@@ -242,14 +242,14 @@ function ea(e) {
                 (0, i.jsxs)("div", {
                     className: el.o1,
                     children: [
-                        (0, i.jsx)(U.$, {
+                        (0, i.jsx)(O.$, {
                             variant: "overlay-secondary",
                             size: "sm",
                             icon: K.R,
                             text: et.intl.string(et.t.bt75uw),
                             onClick: P,
                         }),
-                        (0, i.jsx)(U.$, {
+                        (0, i.jsx)(O.$, {
                             variant: "primary",
                             size: "sm",
                             icon: p.l,
@@ -406,22 +406,22 @@ var eh = l(989349),
     eG = l.n(eP),
     e_ = l(460905),
     ez = l(713608),
-    eU = l(562153),
-    eO = l(788332);
+    eO = l(562153),
+    eU = l(788332);
 function eH(e) {
     let { clip: t } = e,
         l = t.decision?.signal;
     eG()(l?.type === q.Gy.DISTRIBUTED, "Clip must be a distributed clip");
     let a = (0, r.bG)([V.default], () => V.default.getUser(l.remoteTriggerUserId)),
-        n = (0, eU.tx)(t.guildId, null, a);
+        n = (0, eO.tx)(t.guildId, null, a);
     return null == a
         ? null
         : (0, i.jsx)(c.m, {
               text: et.intl.string(ee.default.vTTkFF),
               children: (0, i.jsxs)("div", {
-                  className: eO.S,
+                  className: eU.S,
                   children: [
-                      (0, i.jsx)("img", { src: a.getAvatarURL(t.guildId, 12, !1), className: eO.$, alt: n }),
+                      (0, i.jsx)("img", { src: a.getAvatarURL(t.guildId, 12, !1), className: eU.$, alt: n }),
                       (0, i.jsx)(k.E, {
                           color: "always-white",
                           variant: "text-xs/bold",
@@ -436,7 +436,7 @@ function eF(e) {
     return (0, i.jsx)(c.m, {
         text: a,
         children: (0, i.jsxs)("div", {
-            className: eO.S,
+            className: eU.S,
             children: [
                 (0, i.jsx)(t, { size: "xxs", color: "white" }),
                 (0, i.jsx)(k.E, { color: "always-white", variant: "text-xs/bold", children: l }),
@@ -466,8 +466,8 @@ function eK(e) {
             return null;
     }
 }
-var e$ = l(718812),
-    eB = l(652215),
+var eB = l(718812),
+    e$ = l(652215),
     eQ = l(798594);
 let eY = function (e) {
     let { clip: t, actionsDisabled: n, isNew: c, onEdit: o, onClick: d } = e,
@@ -511,14 +511,17 @@ let eY = function (e) {
         }, [w, t.editMetadata?.start]),
         P = a.useCallback(
             (e) => {
-                e.relatedTarget?.parentElement?.parentElement !== e.currentTarget.parentElement && R();
+                (null != e.relatedTarget && e.currentTarget.contains(e.relatedTarget)) || R();
             },
             [R],
         ),
-        G = a.useCallback(() => {
+        G = a.useCallback((e) => {
+            e.stopPropagation();
+        }, []),
+        _ = a.useCallback(() => {
             b(!1);
         }, []),
-        _ = a.useCallback(
+        z = a.useCallback(
             (e) => {
                 b(!0), A.current?.pause();
                 let a =
@@ -531,7 +534,7 @@ let eY = function (e) {
                     e,
                     async () => {
                         let { default: e } = await Promise.all([
-                            l.e("88566"),
+                            l.e("30850"),
                             l.e("6619"),
                             l.e("95429"),
                             l.e("91211"),
@@ -547,90 +550,94 @@ let eY = function (e) {
                                 clips: a,
                                 actionsDisabled: n,
                                 onShare: () => {
-                                    eD.default.track(eB.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "share" });
+                                    eD.default.track(e$.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "share" });
                                 },
                                 onEdit: () => {
-                                    o(t), eD.default.track(eB.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "edit" });
+                                    o(t), eD.default.track(e$.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "edit" });
                                 },
                                 onBeforeDelete: T,
                                 onAfterDelete: () => {
-                                    eD.default.track(eB.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "delete" });
+                                    eD.default.track(e$.HAw.CLIP_GALLERY_CARD_BUTTON_CLICKED, { type: "delete" });
                                 },
                             });
                     },
-                    { onClose: G },
+                    { onClose: _ },
                 );
             },
-            [t, v, x, n, T, G, o],
+            [t, v, x, n, T, _, o],
         ),
-        z = a.useCallback(
+        O = a.useCallback(
             (e) => {
-                n || (e.preventDefault(), e.stopPropagation(), _(e));
+                n || (e.preventDefault(), e.stopPropagation(), z(e));
             },
-            [n, _],
+            [n, z],
         ),
         U = a.useCallback(
             (e) => {
                 n ||
                     (e.shiftKey ? (e.preventDefault(), g(t.id)) : v ? g(t.id) : null != d && d(t),
-                    eD.default.track(eB.HAw.CLIP_GALLERY_CARD_CLICKED));
+                    eD.default.track(e$.HAw.CLIP_GALLERY_CARD_CLICKED));
             },
             [n, v, g, t, d],
         );
     return (0, i.jsx)(j.f5, {
         value: p,
-        children: (0, i.jsxs)(ev.s, {
-            "aria-disabled": n,
-            "aria-label": et.intl.string(!0 === w ? et.t["HO/oXl"] : et.t.bt75uw),
-            onClick: n ? void 0 : U,
-            onContextMenu: z,
-            className: s()(eQ.QN, { [eQ.r9]: n, [eQ.in]: y, [eQ.wH]: E }),
+        children: (0, i.jsx)("div", {
+            className: eQ.o8,
             onBlur: P,
-            onFocus: S,
-            onMouseOver: S,
-            onMouseLeave: R,
-            children: [
-                (0, i.jsx)(eV, { clip: t, isNew: c, videoRef: A, onOpenContextMenu: _, actionsDisabled: n }),
-                (0, i.jsxs)("div", {
-                    className: eQ.wI,
-                    children: [
-                        (0, i.jsx)(eW, { clip: t }),
-                        (0, i.jsxs)("div", {
-                            className: eQ.i0,
-                            children: [
-                                (0, i.jsx)(eX, { clip: t }),
-                                (0, i.jsx)(k.E, {
-                                    className: eQ.xD,
-                                    color: "text-subtle",
-                                    variant: "text-sm/normal",
-                                    children: D,
-                                }),
-                                (0, i.jsx)(k.E, {
-                                    className: eQ.xD,
-                                    color: "text-subtle",
-                                    variant: "text-sm/normal",
-                                    children: M,
-                                }),
-                            ],
-                        }),
-                        (0, i.jsx)("div", {
-                            className: eQ.jW,
-                            children: (0, i.jsx)(eg.A, {
-                                maxUsers: 3,
-                                users: u,
-                                size: F._3.SIZE_24,
-                                onFocusOverflow: (e) => {
-                                    let t = e.relatedTarget,
-                                        l = e.currentTarget.parentElement?.parentElement?.parentElement;
-                                    t?.parentElement === l ||
-                                        (t?.parentElement?.parentElement?.parentElement !== l && S());
-                                },
-                                "aria-label": et.intl.string(et.t.WTozwe),
+            children: (0, i.jsxs)(ev.s, {
+                "aria-disabled": n,
+                "aria-label": et.intl.string(!0 === w ? et.t["HO/oXl"] : et.t.bt75uw),
+                onClick: n ? void 0 : U,
+                onContextMenu: O,
+                className: s()(eQ.QN, { [eQ.r9]: n, [eQ.in]: y, [eQ.wH]: E }),
+                onFocus: S,
+                onMouseOver: S,
+                onMouseLeave: R,
+                children: [
+                    (0, i.jsx)(eV, { clip: t, isNew: c, videoRef: A, onOpenContextMenu: z, actionsDisabled: n }),
+                    (0, i.jsxs)("div", {
+                        className: eQ.wI,
+                        children: [
+                            (0, i.jsx)(eW, { clip: t }),
+                            (0, i.jsxs)("div", {
+                                className: eQ.i0,
+                                children: [
+                                    (0, i.jsx)(eX, { clip: t }),
+                                    (0, i.jsx)(k.E, {
+                                        className: eQ.xD,
+                                        color: "text-subtle",
+                                        variant: "text-sm/normal",
+                                        children: D,
+                                    }),
+                                    (0, i.jsx)(k.E, {
+                                        className: eQ.xD,
+                                        color: "text-subtle",
+                                        variant: "text-sm/normal",
+                                        children: M,
+                                    }),
+                                ],
                             }),
-                        }),
-                    ],
-                }),
-            ],
+                            (0, i.jsx)("div", {
+                                className: eQ.jW,
+                                children: (0, i.jsx)(eg.A, {
+                                    maxUsers: 3,
+                                    users: u,
+                                    size: F._3.SIZE_24,
+                                    onFocusOverflow: (e) => {
+                                        let t = e.relatedTarget,
+                                            l = e.currentTarget.parentElement?.parentElement?.parentElement;
+                                        t?.parentElement === l ||
+                                            (t?.parentElement?.parentElement?.parentElement !== l && S());
+                                    },
+                                    onClickOverflow: G,
+                                    "aria-label": et.intl.string(et.t.WTozwe),
+                                }),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
         }),
     });
 };
@@ -719,21 +726,17 @@ function eV(e) {
                 (0, i.jsxs)("div", {
                     className: eQ.g3,
                     children: [
-                        (0, i.jsx)(
-                            c.m,
-                            {
-                                text: et.intl.string(t.isFavorite ? ee.default.IZsalP : ee.default.ihBfyA),
-                                position: "top",
-                                children: (0, i.jsx)(h.K, {
-                                    onClick: g,
-                                    icon: t.isFavorite ? _.G : z.y,
-                                    "aria-label": et.intl.string(et.t.k8fFjp),
-                                    variant: "overlay-secondary",
-                                    size: "sm",
-                                }),
-                            },
-                            `${t.id}:favorite:${t.isFavorite}`,
-                        ),
+                        (0, i.jsx)(c.m, {
+                            text: et.intl.string(t.isFavorite ? ee.default.IZsalP : ee.default.ihBfyA),
+                            position: "top",
+                            children: (0, i.jsx)(h.K, {
+                                onClick: g,
+                                icon: t.isFavorite ? _.G : z.y,
+                                "aria-label": et.intl.string(et.t.k8fFjp),
+                                variant: "overlay-secondary",
+                                size: "sm",
+                            }),
+                        }),
                         (0, i.jsx)(h.K, {
                             onClick: v,
                             icon: ej.F,
@@ -786,7 +789,7 @@ function eV(e) {
 }
 function eX(e) {
     let { clip: t } = e,
-        l = (0, e$.h)(t),
+        l = (0, eB.h)(t),
         a = "" !== l;
     return (0, i.jsx)(k.E, {
         className: eQ.NV,
@@ -804,7 +807,7 @@ function eq(e) {
         : n
           ? (0, i.jsx)("img", { alt: "", src: t.thumbnail, className: eQ.fT })
           : null != a
-            ? (0, i.jsx)(B.A, {
+            ? (0, i.jsx)($.A, {
                   preload: "none",
                   poster: t.thumbnail,
                   muted: !0,
@@ -866,7 +869,7 @@ function tt(e) {
     });
 }
 function tl() {
-    let e = (0, eJ.bG)([e5.Ay], () => e5.Ay.getKeybindForAction(eB.hCu.SAVE_CLIP)),
+    let e = (0, eJ.bG)([e5.Ay], () => e5.Ay.getKeybindForAction(e$.hCu.SAVE_CLIP)),
         t = null != e ? e8.dI(e.shortcut, !0) : null;
     return (0, i.jsxs)("div", {
         className: te.kR,
@@ -1391,7 +1394,7 @@ var ty = l(174726);
 let tb = a.memo(function (e) {
         let { allClips: t } = e,
             { query: l, setQuery: n } = (0, tn.Pu)(),
-            s = (0, eJ.bG)([e5.Ay], () => e5.Ay.getKeybindForAction(eB.hCu.SAVE_CLIP)),
+            s = (0, eJ.bG)([e5.Ay], () => e5.Ay.getKeybindForAction(e$.hCu.SAVE_CLIP)),
             r = (0, tn.Pu)(
                 (e) =>
                     +(e.selectedUserIds.size > 0) +
@@ -1436,7 +1439,7 @@ let tb = a.memo(function (e) {
                                                 ref: p,
                                                 children:
                                                     r > 0
-                                                        ? (0, i.jsx)(U.$, {
+                                                        ? (0, i.jsx)(O.$, {
                                                               size: "sm",
                                                               variant: "secondary",
                                                               ...e,
@@ -1513,7 +1516,7 @@ function tN(e) {
         r = (0, tn.Pu)((e) => e.selectedGameId),
         c = (0, tn.Pu)((e) => e.setSelectedGameId),
         o = a.useMemo(() => t.map((e) => e.applicationId), [t]),
-        d = (0, $.A)(o),
+        d = (0, B.A)(o),
         u = a.useCallback(() => c(null), [c]),
         h = a.useCallback(() => c("favorites"), [c]),
         p = a.useMemo(() => new Map(d.map((e) => [e?.id, e])), [d]);
@@ -1596,12 +1599,12 @@ function tk(e) {
         [T, S] = a.useState(new Set()),
         { clipsByGame: R, filteredClips: P, favoriteClips: G, allClips: _ } = (0, tE.a)(),
         { onShareClick: z } = (0, E.A)(t),
-        U = (0, r.bG)([C.Ay], () => C.Ay.getExportingClipIds().length > 0),
-        [O, H] = a.useState(null != L ? "editing" : "gallery"),
+        O = (0, r.bG)([C.Ay], () => C.Ay.getExportingClipIds().length > 0),
+        [U, H] = a.useState(null != L ? "editing" : "gallery"),
         [F, K] = a.useState(L ?? null),
-        $ = (0, r.bG)([C.Ay], () => (null != F ? C.Ay.getClipById(F) : null), [F]),
-        B = a.useRef(O);
-    (B.current = O), (a.useRef(F).current = F);
+        B = (0, r.bG)([C.Ay], () => (null != F ? C.Ay.getClipById(F) : null), [F]),
+        $ = a.useRef(U);
+    ($.current = U), (a.useRef(F).current = F);
     let [Q, Y] = a.useState(null != L ? d.ip.ENTERED : d.ip.HIDDEN),
         V = a.useRef(null),
         X = (0, tn.Pu)((e) => e.selectedGameId),
@@ -1634,7 +1637,7 @@ function tk(e) {
         }, []);
     a.useEffect(() => {
         let e = (e) => {
-            "Escape" === e.key && "editing" === B.current && (e.stopPropagation(), ei());
+            "Escape" === e.key && "editing" === $.current && (e.stopPropagation(), ei());
         };
         return (
             document.addEventListener("keydown", e),
@@ -1645,13 +1648,13 @@ function tk(e) {
     }, [ei, n]),
         a.useEffect(
             () =>
-                "editing" === O && null != F
+                "editing" === U && null != F
                     ? void (0, y.YK)(F)
                     : ((0, y.jA)(),
                       () => {
                           (0, y.jA)();
                       }),
-            [O, F],
+            [U, F],
         );
     let ea = a.useCallback(() => {
             S(new Set());
@@ -1695,8 +1698,8 @@ function tk(e) {
                     ref: V,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: s()(tw.PD, "gallery" === O && tw.vu),
-                            inert: "gallery" !== O,
+                            className: s()(tw.PD, "gallery" === U && tw.vu),
+                            inert: "gallery" !== U,
                             children: [
                                 (0, i.jsx)(tN, { clipsByGame: R, filteredClips: P, favoriteClips: G, allClips: _ }),
                                 (0, i.jsxs)("div", {
@@ -1724,7 +1727,7 @@ function tk(e) {
                                                                             size: "sm",
                                                                             variant: "icon-only",
                                                                             "aria-label": et.intl.string(et.t.RDE0Sc),
-                                                                            loading: U,
+                                                                            loading: O,
                                                                         }),
                                                                     }),
                                                                     (0, i.jsx)(c.m, {
@@ -1762,15 +1765,15 @@ function tk(e) {
                             ],
                         }),
                         (0, i.jsx)("div", {
-                            className: s()(tw.jN, "editing" === O && tw.vu),
-                            inert: "editing" !== O,
+                            className: s()(tw.jN, "editing" === U && tw.vu),
+                            inert: "editing" !== U,
                             onTransitionEnd: () => {
-                                "gallery" === O ? (K(null), Y(d.ip.HIDDEN)) : "editing" === O && Y(d.ip.ENTERED);
+                                "gallery" === U ? (K(null), Y(d.ip.HIDDEN)) : "editing" === U && Y(d.ip.ENTERED);
                             },
                             children:
-                                null != $ &&
+                                null != B &&
                                 (0, i.jsxs)(N.p, {
-                                    clip: $,
+                                    clip: B,
                                     modalContainerRef: V,
                                     children: [
                                         (0, i.jsx)(b.A, { transitionState: Q, onClose: ei }),
