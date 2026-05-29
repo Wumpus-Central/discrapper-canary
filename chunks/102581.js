@@ -28,7 +28,7 @@ var i,
     M = s(174459),
     y = s(474090),
     S = s(694080),
-    P = s(723709),
+    P = s(808879),
     O = s(286320),
     D = s(422936),
     G = s(234419),
@@ -46,15 +46,15 @@ var i,
     Y = s(994763),
     Z = s(949964),
     Q = s(226830),
-    J = s(366010),
-    X = s(736653),
+    X = s(366010),
+    J = s(736653),
     q = s(303136),
     $ = s(676279);
 let ee = (e) => {
     let t,
         { className: s } = e,
         i = (0, $.TM)(),
-        n = (0, J.q)((0, X.Ay)());
+        n = (0, X.q)((0, J.Ay)());
     return (
         (t = i
             ? n
@@ -213,12 +213,16 @@ let eT = (e) => {
                             (0, l.jsx)(eN.t, { className: eR.nE, colorClass: eR.oG }),
                             (0, l.jsx)("div", {
                                 className: eR.zc,
+                                role: "tablist",
+                                "aria-label": eg.intl.string(eg.t.O9MiXY),
                                 children: u.map((e) => {
                                     let t = s === e.id,
                                         i = a[e.id];
                                     return (0, l.jsxs)(
                                         eA.D,
                                         {
+                                            role: "tab",
+                                            "aria-selected": t,
                                             className: eR.S0,
                                             onClick: e.scrollToSection,
                                             children: [
@@ -444,30 +448,30 @@ let eW = n.memo(function (e) {
     });
 var eZ = s(877624),
     eQ = s(707554),
-    eJ = s(526292),
-    eX = s(236834),
+    eX = s(526292),
+    eJ = s(236834),
     eq = s(549996),
     e$ = s(810660),
     e0 = s(371764),
     e1 = s(97808),
     e2 = s(854627),
     e3 = s(778712),
-    e5 = s(45861);
-function e8(e) {
+    e8 = s(45861);
+function e5(e) {
     let { referrer: t } = e,
         { avatarSrc: s, eventHandlers: i } = (0, e2.A)({ userId: t?.id, size: e3._3.SIZE_24, animateOnHover: !0 });
     return (0, l.jsx)("div", {
-        className: e5.$6,
+        className: e8.$6,
         children: (0, l.jsxs)("div", {
-            className: e5.sc,
+            className: e8.sc,
             children: [
                 (0, l.jsx)("div", {
-                    className: e5.kR,
+                    className: e8.kR,
                     children: (0, l.jsx)(e1.eu, { src: s, "aria-label": t.username, size: e3._3.SIZE_32, ...i }),
                 }),
                 (0, l.jsx)(eo.D, {
                     variant: "heading-sm/normal",
-                    className: e5.FS,
+                    className: e8.FS,
                     color: "text-strong",
                     children: eg.intl.format(eg.t.IqxblS, {
                         username: null != t.globalName ? t.globalName : t.username,
@@ -579,7 +583,7 @@ let tc = n.memo(
         let { className: s, subscriptionTier: i, isEligibleForBogoPromotion: n } = e,
             { analyticsLocations: a } = (0, g.Ay)(h.A.PREMIUM_MARKETING_HERO_CTA),
             c = tt(),
-            d = (0, eX.A)(),
+            d = (0, eJ.A)(),
             u = null != d,
             m = (0, o.bG)([F.A], () => F.A.useReducedMotion),
             { visibilityPercentageRef: x, visibilityPercentage: p } = (0, e$.U)(!m),
@@ -587,7 +591,7 @@ let tc = n.memo(
             f = !u && j.length > 0,
             N = (0, eq.c)(eZ.C.MARKETING_PAGE_BANNER),
             A = null != N && "marketingPageBanner" === N.properties.properties.oneofKind,
-            _ = (0, eJ.ar)() && !A,
+            _ = (0, eX.ar)() && !A,
             C = (0, D.O)(),
             E = (null != C && ek.U4.includes(C.discountId)) || A;
         return (0, l.jsx)(g.f5, {
@@ -621,7 +625,7 @@ let tc = n.memo(
                                     u &&
                                         (0, l.jsx)("div", {
                                             className: tr.eZ,
-                                            children: (0, l.jsx)(e8, { referrer: d }),
+                                            children: (0, l.jsx)(e5, { referrer: d }),
                                         }),
                                     f &&
                                         (0, l.jsx)("div", {
@@ -1162,20 +1166,20 @@ let tL = () => {
     let G = (0, V.DK)(z.W.NITRO, "PremiumMarketingHome"),
         { shouldShowBonusOrbsUX: L } = (0, H.lk)(t_.rE.NITRO_HOME_MARKETING),
         w = G && L ? ez.NI.COMBINED_ORBS : L ? ez.NI.ORB_MULTIPLIER : G ? ez.NI.ORB_REWARDS : null,
-        J = n.useMemo(() => {
+        X = n.useMemo(() => {
             let t = new URLSearchParams(e.search).get("section");
             return "orbs" === t ? w : t === ez.NI.THREE_P_PROMOTIONS ? ez.NI.THREE_P_PROMOTIONS : null;
         }, [e.search, w]);
-    (0, Y.z)(J ?? "", null != J);
-    let { navBarSections: X, activeSectionId: q } = tO([et.HOME, et.WHATS_NEW, et.BEST_OF_NITRO, et.PLANS, et.COMPARE]),
-        { home: $, whatsNew: es, bestOfNitro: ei, plans: el, compare: en } = X,
+    (0, Y.z)(X ?? "", null != X);
+    let { navBarSections: J, activeSectionId: q } = tO([et.HOME, et.WHATS_NEW, et.BEST_OF_NITRO, et.PLANS, et.COMPARE]),
+        { home: $, whatsNew: es, bestOfNitro: ei, plans: el, compare: en } = J,
         er = (0, l.jsxs)("div", {
             ref: s,
             className: r()(tG.kL, tG.Gd, tG.iI, { [tG.Hq]: !m }),
             "data-cy": "tier-0-marketing-page",
             children: [
                 (0, l.jsx)(ee, { className: tG.yH }),
-                (0, l.jsx)(eT, { navBarSections: X, activeSectionId: q, isAnimationComplete: x }),
+                (0, l.jsx)(eT, { navBarSections: J, activeSectionId: q, isAnimationComplete: x }),
                 (0, l.jsxs)("div", {
                     className: tG.Qr,
                     children: [
@@ -1258,7 +1262,7 @@ let tZ = (e) => {
     let t,
         s,
         { premiumSubscription: i, className: n, textColor: a } = e,
-        c = (0, eJ.ar)();
+        c = (0, eX.ar)();
     if (null == i) return null;
     let o = null != i ? K.Ay.getPremiumPlanItem(i) : null;
     if (
@@ -1298,7 +1302,7 @@ let tZ = (e) => {
     );
 };
 var tQ = s(147935);
-let tJ = (e) => {
+let tX = (e) => {
     let { lifted: t = !1 } = e;
     return (0, l.jsxs)("svg", {
         width: "100%",
@@ -1333,7 +1337,7 @@ let tJ = (e) => {
         ],
     });
 };
-var tX = s(900797),
+var tJ = s(900797),
     tq = s(847374),
     t$ = s(777666),
     t0 = s(464769);
@@ -1343,8 +1347,8 @@ function t1(e) {
 }
 var t2 = s(904788),
     t3 = s(507553),
-    t5 = s(591179),
-    t8 = s(255438),
+    t8 = s(591179),
+    t5 = s(255438),
     t6 = s(355097);
 let t4 = "/assets/5b4fec8511c3676a.svg",
     t7 = "/assets/0838bda6ecd20d91.svg";
@@ -1360,7 +1364,7 @@ let si = (e) => {
             children: [
                 t ? eg.intl.string(eg.t.maZaN3) : eg.intl.string(eg.t["37C26f"]),
                 t
-                    ? (0, l.jsx)(tX.t, { size: "md", color: "currentColor", className: ss.arrow })
+                    ? (0, l.jsx)(tJ.t, { size: "md", color: "currentColor", className: ss.arrow })
                     : (0, l.jsx)(tq.a, { size: "md", color: "currentColor", className: ss.arrow }),
             ],
         });
@@ -1414,13 +1418,13 @@ let si = (e) => {
             [a, c] = n.useState(!1),
             o = ((e) => {
                 let { styles: t } = e,
-                    i = (0, X.Ay)(),
-                    l = (0, t5.X)("usePerkCards"),
+                    i = (0, J.Ay)(),
+                    l = (0, t8.X)("usePerkCards"),
                     n = (0, ed.bG)([R.default], () => {
                         let e = R.default.getCurrentUser();
                         return K.Ay.canUsePremiumProfileCustomization(e);
                     }),
-                    a = (0, t8.Xq)(ek.f3 / 1024, { useKibibytes: !0 });
+                    a = (0, t5.Xq)(ek.f3 / 1024, { useKibibytes: !0 });
                 return {
                     badge: {
                         title: eg.intl.string(eg.t.SS87rQ),
@@ -1604,8 +1608,8 @@ let sc = function (e) {
             config: { tension: 120, friction: 12 },
         }),
         c = { section: ea.JJy.MARKETING_FLOATING_CTA },
-        o = (0, X.Ay)(),
-        d = (0, J.M)(o);
+        o = (0, J.Ay)(),
+        d = (0, X.M)(o);
     return (0, l.jsx)(es.animated.div, {
         className: r()(sr.iE, { [sr.H8]: i, [sr.q4]: !t }),
         style: a,
@@ -1677,7 +1681,7 @@ let sp = n.forwardRef((e, t) => {
     let { className: s, buttonClassName: i, subscriptionTier: n, isDarkMode: a } = e,
         { analyticsLocations: c } = (0, g.Ay)(h.A.PREMIUM_MARKETING_HERO_CTA),
         o = (0, so.QQ)(),
-        d = (0, eJ.ar)(),
+        d = (0, eX.ar)(),
         u = (0, W.cg)(),
         m = (0, O.b)().length > 0,
         x = eg.intl.string(eg.t.YCZldK);
@@ -1730,14 +1734,14 @@ var sh = s(22118),
     sf = s(79119);
 let sN = (e) => {
         let { inOfferExperience: t } = e;
-        return t ? (0, l.jsx)(tJ, { lifted: t }) : null;
+        return t ? (0, l.jsx)(tX, { lifted: t }) : null;
     },
     sA = () => {
         (0, C.P)(_.b);
         let e = n.useRef(null),
             t = n.useRef(null),
             s = n.useRef(null),
-            i = (0, X.Ay)(),
+            i = (0, J.Ay)(),
             a = (0, tw.M)(i),
             [c, d] = n.useState(!1),
             [u, m] = n.useState(!1),
@@ -1749,7 +1753,7 @@ let sN = (e) => {
             I = null !== E && E !== ek.pe.TIER_2 ? ek.pe.TIER_2 : null,
             v = (0, G.V)(),
             R = v?.subscription_trial?.sku_id,
-            T = (0, eJ.ar)(),
+            T = (0, eX.ar)(),
             y = (0, W.cg)(),
             S = (0, eE.Gh)("premium-marketing-settings-page"),
             P = y ?? !1,
@@ -1936,8 +1940,8 @@ let sE = function (e) {
     let Y = (0, c.zy)(),
         Z = n.useRef(!1),
         Q = L && w && H,
-        [J, X] = n.useState(Q);
-    Q && !J && X(!0),
+        [X, J] = n.useState(Q);
+    Q && !X && J(!0),
         n.useEffect(() => {
             if (Z.current || !Q) return;
             let e = new URLSearchParams(Y.search).get("checkout");
@@ -1956,7 +1960,7 @@ let sE = function (e) {
               ? (0, l.jsx)(A.uK, {})
               : $ && W
                 ? (0, l.jsx)(g.f5, { value: a, children: (0, l.jsx)(P.Ay, { userId: U }) })
-                : J
+                : X
                   ? null
                   : (0, l.jsx)("div", { className: r()(sC.kL, sC.Lq), children: (0, l.jsx)(d.y, {}) });
     return null != ee
