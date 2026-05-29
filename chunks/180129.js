@@ -1,6 +1,8 @@
 e.exports = {
     RA: "previewsContainerInner__4e635",
     hZ: "profileEffectPreviewsContainerInner__4e635 previewsContainerInner__4e635",
+    YL: "profileEffectScaledContainer__4e635",
+    V9: "profileEffectScaledInner__4e635",
     Zj: "nameplatePreviewContainerInner__4e635 previewsContainerInner__4e635",
     Bb: "profilePreviewContainerWithChat__4e635",
     M4: "nameplatePreview__4e635",

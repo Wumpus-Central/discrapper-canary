@@ -7,11 +7,38 @@
 }
 
 .profileEffectPreviewsContainerInner__4e635 {
+    align-items: center;
     margin-top: 0
 }
 
-.nameplatePreviewContainerInner__4e635,
-.profileEffectPreviewsContainerInner__4e635 {
+.profileEffectScaledContainer__4e635 {
+    --custom-pfx-preview-scale: 0.9;
+    --custom-pfx-preview-canvas-width: 346px;
+    --custom-pfx-preview-canvas-height: 642px;
+    align-items: center;
+    align-self: center;
+    display: flex;
+    height: calc(var(--custom-pfx-preview-canvas-height)*var(--custom-pfx-preview-scale));
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: calc(var(--custom-pfx-preview-canvas-width)*var(--custom-pfx-preview-scale))
+}
+
+.profileEffectScaledInner__4e635 {
+    display: flex;
+    justify-content: center;
+    transform: scale(var(--custom-pfx-preview-scale));
+    transform-origin: center;
+    width: var(--custom-pfx-preview-canvas-width)
+}
+
+.profileEffectScaledInner__4e635 .user-profile-popout {
+    box-shadow: unset;
+    min-height: 500px
+}
+
+.nameplatePreviewContainerInner__4e635 {
     align-items: center
 }
 
