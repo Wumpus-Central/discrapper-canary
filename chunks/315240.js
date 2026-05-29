@@ -300,7 +300,7 @@ function z() {
 async function q(e) {
     let { allowVoiceRecording: t } = e;
     await u.Q$.updateSetting(t),
-        N.default.track(_.HAw.CLIPS_SETTINGS_UPDATED, { allow_voice_recording: t }),
+        N.default.track(_.HAw.CLIPS_SETTINGS_UPDATED, { allow_voice_recording: t, clip_runtime: (0, O.GN)() }),
         a.h.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
 }
 async function X(e) {
@@ -314,6 +314,7 @@ async function X(e) {
                 clips_enabled: t,
                 guild_id: n,
                 ...(!t && { decoupled_clips_enabled: !1 }),
+                clip_runtime: (0, O.GN)(),
             });
 }
 function Z(e) {
@@ -326,6 +327,7 @@ function Z(e) {
             N.default.track(_.HAw.CLIPS_SETTINGS_UPDATED, {
                 ...(t && { clips_enabled: !0 }),
                 decoupled_clips_enabled: t,
+                clip_runtime: (0, O.GN)(),
             });
 }
 function Q(e) {
@@ -333,7 +335,7 @@ function Q(e) {
 }
 function J(e) {
     a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { remindersEnabled: e } }),
-        N.default.track(_.HAw.CLIPS_SETTINGS_UPDATED, { reminders_enabled: e });
+        N.default.track(_.HAw.CLIPS_SETTINGS_UPDATED, { reminders_enabled: e, clip_runtime: (0, O.GN)() });
 }
 function ee(e) {
     a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { storageLocation: e } }),
@@ -391,6 +393,7 @@ function ei(e, t) {
         target_fps: E.A.getState().fps,
         audio_track_count: t.audioTrackCount,
         saved_at: t.savedAt,
+        clip_runtime: (0, O.GN)(),
     };
 }
 async function er(e) {
@@ -429,6 +432,7 @@ async function er(e) {
                     clip_trigger_type: e.decision?.signal.type,
                     num_clip_participants: e.users.length,
                     application_id: e.applicationId,
+                    clip_runtime: (0, O.GN)(),
                 });
         } catch (e) {
             P.nx.warn("Failed to send remote clip trigger", e);
@@ -505,7 +509,7 @@ async function ea() {
         );
     } catch (t) {
         if ((s && a.h.dispatch({ type: "CLIPS_SAVE_CLIP_CANDIDATE_ERROR", clipId: u.id }), !("errorMessage" in t)))
-            throw (N.default.track(_.HAw.CLIP_SAVE_FAILURE, E), t);
+            throw (N.default.track(_.HAw.CLIP_SAVE_FAILURE, { ...E, clip_runtime: (0, O.GN)() }), t);
         let e = ei(E, t);
         throw (
             ((e.error_at = t.errorAt),
@@ -673,7 +677,7 @@ async function ec(e, t) {
     let i = { ...n, ...t };
     null != (await U(i)) &&
         (await I.Ay.getMediaEngine().updateClipMetadata(i.filepath, JSON.stringify(i)),
-        N.default.track(_.HAw.CLIP_EDITED, { clip_uuid: i.id }),
+        N.default.track(_.HAw.CLIP_EDITED, { clip_uuid: i.id, clip_runtime: (0, O.GN)() }),
         a.h.dispatch({ type: "CLIPS_UPDATE_METADATA", clip: i }));
 }
 async function ed(e) {
