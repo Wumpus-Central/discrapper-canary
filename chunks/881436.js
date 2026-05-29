@@ -1,0 +1,7 @@
+e.exports = {
+    kL: "container__2e07e",
+    rf: "body__2e07e",
+    f_: "entry__2e07e",
+    aY: "code__2e07e",
+    ti: "inlineCode__2e07e",
+};
