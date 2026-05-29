@@ -7748,6 +7748,14 @@ let { Themes: c } = u.zv,
                         return 0;
                     },
                 },
+                CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 4;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 0;
+                        return 4;
+                    },
+                },
                 CHAT_INPUT_FLOATING_ACCESSORY_TOP_BORDER_WIDTH: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
@@ -7808,7 +7816,15 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 0;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 52;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 56;
+                        return 0;
+                    },
+                },
+                CHAT_INPUT_FLOATING_SCRIM_GRADIENT_HEIGHT_AT_BOTTOM: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 0;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 36;
                         return 0;
                     },
                 },
@@ -7824,7 +7840,7 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 0;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 8;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 16;
                         return 0;
                     },
                 },
