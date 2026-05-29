@@ -43,3 +43,4 @@ function u(e, t, n) {
         }
     }
 }
+a.I.APP_DIRECTORY_PROFILE, a.I.ACTIVITY_BOOKMARK, a.I.APP_OAUTH2_LINK;
