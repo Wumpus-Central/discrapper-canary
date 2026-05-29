@@ -33,6 +33,7 @@ class l extends s.A {
     billingFacetRecord;
     giftingFacet;
     createdAt;
+    unsatisfiedConstraints;
     static createFromServer(e) {
         return new l({
             id: e.id,
@@ -42,6 +43,7 @@ class l extends s.A {
             billingFacetRecord: o.createFromOrder(e),
             giftingFacet: e.gifting_facet ?? null,
             createdAt: e.created_at,
+            unsatisfiedConstraints: e.unsatisfied_constraints ?? [],
         });
     }
     constructor(e) {
@@ -52,10 +54,14 @@ class l extends s.A {
             (this.orderLineItems = e.orderLineItems ?? []),
             (this.billingFacetRecord = e.billingFacetRecord ?? null),
             (this.giftingFacet = e.giftingFacet ?? null),
-            (this.createdAt = e.createdAt);
+            (this.createdAt = e.createdAt),
+            (this.unsatisfiedConstraints = e.unsatisfiedConstraints ?? []);
     }
     getInvoicePreview() {
         return null == this.billingFacetRecord ? null : this.billingFacetRecord.invoicePreview;
+    }
+    firstUnsatisfiedConstraintReasonCode() {
+        return this.unsatisfiedConstraints.length > 0 ? this.unsatisfiedConstraints[0].reason_code : null;
     }
 }
 var u = n(566980),
