@@ -10,8 +10,8 @@ var i = n(636537),
     c = n(700241),
     d = n(976860),
     _ = n(378570),
-    f = n(95701),
-    h = n(734057),
+    h = n(95701),
+    f = n(734057),
     p = n(222823),
     E = n(174459),
     m = n(371794),
@@ -75,8 +75,8 @@ let S = {
     },
     _openCachedDMChannel(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-            i = h.A.getDMFromUserId(e),
-            r = null != i ? h.A.getChannel(i) : null;
+            i = f.A.getDMFromUserId(e),
+            r = null != i ? f.A.getChannel(i) : null;
         return null == r
             ? null
             : (n &&
@@ -94,21 +94,21 @@ let S = {
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }),
-            r = (0, f.UE)(n.body);
+            r = (0, h.UE)(n.body);
         return s.h.dispatch({ type: "CHANNEL_CREATE", channel: r }), r.id;
     },
     async getOrEnsurePrivateChannel(e) {
-        let t = h.A.getDMFromUserId(e);
+        let t = f.A.getDMFromUserId(e);
         return null != t ? t : await this.ensurePrivateChannel(e);
     },
     async getDMChannel(e) {
         let t = await i.Bo.get({ url: I.Rsh.DM_CHANNEL(e), rejectWithError: !0 }),
-            n = (0, f.UE)(t.body);
+            n = (0, h.UE)(t.body);
         return s.h.dispatch({ type: "CHANNEL_CREATE", channel: n }), n.id;
     },
     _getRecipients: (e) => (null != e ? (Array.isArray(e) ? e : [e]) : []),
     _openPrivateChannel(e) {
-        let t = (0, f.UE)(e);
+        let t = (0, h.UE)(e);
         return (
             s.h.dispatch({ type: "CHANNEL_CREATE", channel: t }),
             null != (0, u.Y)() ? (0, _.iN)(t.id, { navigationReplace: !0 }) : A.default.selectPrivateChannel(t.id),
@@ -179,13 +179,13 @@ let S = {
     setDMOwner: (e, t) =>
         i.Bo.patch({ url: I.Rsh.CHANNEL(e), body: { owner: t }, oldFormErrors: !0, rejectWithError: !0 }),
     async setName(e, t) {
-        let n = h.A.getChannel(e),
+        let n = f.A.getChannel(e),
             r = await i.Bo.patch({ url: I.Rsh.CHANNEL(e), body: { name: t }, oldFormErrors: !0, rejectWithError: !0 }),
             s = n?.getGuildId();
         return null == s || n?.isThread() || l.A.checkGuildTemplateDirty(s), r;
     },
     async setIcon(e, t, n) {
-        let r = h.A.getChannel(e),
+        let r = f.A.getChannel(e),
             s = {
                 channel_id: e,
                 channel_type: r?.type,
@@ -219,7 +219,7 @@ let S = {
     },
     async updateChannel(e, t, n) {
         let r = "icon" in t,
-            s = h.A.getChannel(e),
+            s = f.A.getChannel(e),
             a = t.icon,
             o = {
                 channel_id: e,
@@ -273,4 +273,13 @@ let S = {
         return l.A.checkGuildTemplateDirty(e), a;
     },
     fetchChannel: async (e) => (await i.Bo.get({ url: I.Rsh.CHANNEL(e), rejectWithError: !0 })).body,
+    async openChannel(e) {
+        try {
+            let t = await this.fetchChannel(e),
+                n = (0, h.UE)(t);
+            return s.h.dispatch({ type: "CHANNEL_CREATE", channel: n }), n;
+        } catch {
+            return;
+        }
+    },
 };
