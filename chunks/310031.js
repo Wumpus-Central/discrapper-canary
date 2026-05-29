@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => J }), n(938796), n(321073), n(839272);
+n.d(t, { A: () => ee }), n(938796), n(321073), n(839272);
 var i = n(284009),
     r = n.n(i),
     s = n(17928),
@@ -242,16 +242,41 @@ function q() {
         })),
     );
 }
-function X(e) {
+function X() {
+    let e = $(),
+        t = (function () {
+            let e = u.Ay.getSettingsFilteredMentions();
+            if (null == e) return !1;
+            let t = new Set(e.map((e) => e.id)),
+                n = new Set((u.Ay.getMentions() ?? []).map((e) => e.id)),
+                i = new Set(),
+                r = [];
+            for (let e of x.getMessages())
+                e.kind === R.yL.MENTION && (i.add(e.id), n.has(e.id) && !t.has(e.id) && r.push(e.id));
+            let s = e
+                    .filter((e) => !i.has(e.id))
+                    .map((e) => ({
+                        id: e.id,
+                        channelId: e.channel_id,
+                        guildId: p.A.getBasicChannel(e.channel_id)?.guild_id,
+                        kind: R.yL.MENTION,
+                        message: e,
+                    })),
+                a = x.deleteMessages(r);
+            return s.length > 0 ? (x.addMessages(s), !0) : a;
+        })();
+    if (!1 === e && !t) return !1;
+}
+function Z(e) {
     let { id: t } = e;
     return x.deleteMessages([t]);
 }
-function Z(e) {
+function Q(e) {
     let { channel: t } = e;
     if (!x.getMessages().some((e) => e.channelId === t.id)) return !1;
     q();
 }
-class Q extends s.Ay.Store {
+class J extends s.Ay.Store {
     static displayName = "NotificationsInboxStore";
     initialize() {
         this.waitFor(c.A, p.A, E.Ay, d.A, m.A, g.Ay, u.Ay, A.Ay, I.Ay, T.default);
@@ -307,7 +332,7 @@ class Q extends s.Ay.Store {
         return { navOnClick: Y };
     }
 }
-let J = new Q(a.h, {
+let ee = new J(a.h, {
     LOAD_RECENT_MENTIONS_SUCCESS: function (e) {
         let { messages: t } = e;
         if (0 === t.length) return !1;
@@ -355,8 +380,8 @@ let J = new Q(a.h, {
             message: r,
         });
     },
-    MESSAGE_DELETE: X,
-    RECENT_MENTION_DELETE: X,
+    MESSAGE_DELETE: Z,
+    RECENT_MENTION_DELETE: Z,
     MESSAGE_DELETE_BULK: function (e) {
         let { ids: t } = e;
         return x.deleteMessages(t);
@@ -365,11 +390,11 @@ let J = new Q(a.h, {
     LOGOUT: function () {
         z();
     },
-    USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: q,
-    USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: q,
+    USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: X,
+    USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: X,
+    USER_GUILD_SETTINGS_GUILD_UPDATE: X,
+    USER_GUILD_SETTINGS_CHANNEL_UPDATE: X,
     GUILD_CREATE: q,
-    USER_GUILD_SETTINGS_GUILD_UPDATE: q,
-    USER_GUILD_SETTINGS_CHANNEL_UPDATE: q,
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
         if (I.Ay.allowNoMessages(t)) return !1;
@@ -380,8 +405,8 @@ let J = new Q(a.h, {
         if (!x.getMessages().some((e) => e.guildId === t.id)) return !1;
         q();
     },
-    THREAD_DELETE: Z,
-    CHANNEL_DELETE: Z,
+    THREAD_DELETE: Q,
+    CHANNEL_DELETE: Q,
     THREAD_MEMBER_UPDATE: function (e) {
         let { userId: t } = e;
         if (t !== T.default.getCurrentUser()?.id) return !1;
