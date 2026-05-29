@@ -17,15 +17,20 @@ function a(e) {
 }
 function o(e) {
     let { children: t, className: n } = e,
-        { onForceIdle: o, onActive: l } = r.useContext(s.k3),
-        { preventIdle: u, allowIdle: c } = a("interact");
-    r.useEffect(() => () => c(), [c]);
-    let d = r.useCallback(
+        { preventIdle: s, allowIdle: o } = a("interact-hover"),
+        { preventIdle: l, allowIdle: u } = a("interact-focus");
+    r.useEffect(
+        () => () => {
+            o(), u();
+        },
+        [o, u],
+    );
+    let c = r.useCallback(
         (e) => {
             let t = e.target.ownerDocument ?? document;
-            e.currentTarget.contains(t.activeElement) || o();
+            e.currentTarget.contains(t.activeElement) || u();
         },
-        [o],
+        [u],
     );
-    return (0, i.jsx)("div", { className: n, onMouseEnter: u, onMouseLeave: c, onFocus: l, onBlur: d, children: t });
+    return (0, i.jsx)("div", { className: n, onMouseEnter: s, onMouseLeave: o, onFocus: l, onBlur: c, children: t });
 }
