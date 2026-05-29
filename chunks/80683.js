@@ -21,8 +21,8 @@ var l = n(627968),
     _ = n(486020),
     I = n(60465),
     j = n(409626),
-    v = n(422069),
-    y = n(652215),
+    y = n(422069),
+    v = n(652215),
     T = n(624458),
     N = n(821124),
     b = n(202384),
@@ -103,8 +103,8 @@ class J extends r.Ay.Store {
         return q === e;
     }
 }
-let Z = new J(K.h);
-var Y = n(821609),
+let Y = new J(K.h);
+var Z = n(821609),
     X = n(35787);
 let Q = (e) => {
     let { guild: t, onClose: i } = e;
@@ -126,7 +126,7 @@ let Q = (e) => {
                     }),
                     (0, l.jsx)("div", {
                         className: X.UD,
-                        children: (0, l.jsx)(Y.$, { variant: "primary", text: F.intl.string(F.t.hLw0wc), onClick: i }),
+                        children: (0, l.jsx)(Z.$, { variant: "primary", text: F.intl.string(F.t.hLw0wc), onClick: i }),
                     }),
                 ],
             }),
@@ -202,7 +202,7 @@ class eA extends i.PureComponent {
                 let { default: e } = await Promise.all([
                     n.e("58735"),
                     n.e("4782"),
-                    n.e("60584"),
+                    n.e("8101"),
                     n.e("89545"),
                     n.e("91531"),
                     n.e("11493"),
@@ -227,7 +227,7 @@ class eA extends i.PureComponent {
         this.setState({ submitting: !0 });
         let e = this.props.channel.getGuildId();
         try {
-            await f.A.joinGuild(e, { source: y.Q4z.CHAT_INPUT_BLOCKER });
+            await f.A.joinGuild(e, { source: v.Q4z.CHAT_INPUT_BLOCKER });
         } catch {
             this.setState({ submitting: !1 });
         }
@@ -286,7 +286,7 @@ class eA extends i.PureComponent {
                 useReducedMotion: _,
                 isStaff: I,
                 guildJoinRequest: j,
-                showLinkedLobbyApplicationLoadingIndicator: v,
+                showLinkedLobbyApplicationLoadingIndicator: y,
                 requiredLinkedLobbyApplication: T,
                 pendingGameProfileReturn: N,
                 guild: b,
@@ -338,7 +338,7 @@ class eA extends i.PureComponent {
                 ? ((L.message = F.intl.format(F.t.HbivnU, { roleName: `@${S.name}` })),
                   null === S.tags.guild_connections &&
                       ((L.buttonText = F.intl.string(F.t["6Ge2LG"])), (L.onButtonClick = () => (0, E.b)(S, b.id))))
-                : v || null == T
+                : y || null == T
                   ? i && !I
                       ? ((L.message = F.intl.string(F.t["2dThMM"])),
                         (L.buttonText = F.intl.string(F.t["50gfOv"])),
@@ -348,10 +348,10 @@ class eA extends i.PureComponent {
                           (L.buttonText = F.intl.string(F.t.lm1UKt)),
                           (L.onButtonClick = this.handleResendVerification))
                         : a
-                          ? ((L.message = F.intl.formatToPlainString(F.t.IH7RMF, { min: y.$8o.MEMBER_AGE })),
+                          ? ((L.message = F.intl.formatToPlainString(F.t.IH7RMF, { min: v.$8o.MEMBER_AGE })),
                             (L.countdown = r))
                           : o &&
-                            ((L.message = F.intl.formatToPlainString(F.t["2JA2GH"], { min: y.$8o.ACCOUNT_AGE })),
+                            ((L.message = F.intl.formatToPlainString(F.t["2JA2GH"], { min: v.$8o.ACCOUNT_AGE })),
                             (L.countdown = c))
                   : ((L.imageSrc = T.getIconURL(em.iu.SMALL) ?? void 0),
                     (L.message = F.intl.format(F.t.EvDn1D, { name: T.name })),
@@ -401,21 +401,21 @@ function ef(e) {
         s = t.getGuildId(),
         a = (0, r.bG)([ea.A], () => ea.A.getGuild(s)),
         o = (0, r.bG)([er.A], () => er.A.getCheck(s)),
-        c = t.type === y.rbe.GUILD_ANNOUNCEMENT && null != a && a.features.has(y.GuildFeatures.NEWS),
+        c = t.type === v.rbe.GUILD_ANNOUNCEMENT && null != a && a.features.has(v.GuildFeatures.NEWS),
         d = (0, r.bG)([ei.A], () => (c ? ei.A.getFollowerStatsForChannel(t.id) : null)),
         u = (0, r.bG)([z.A], () => z.A.isLurking(s)),
         h = (0, r.bG)([ec.default], () => ec.default.getCurrentUser()),
         m = h?.isStaff() ?? !1,
         g = (0, r.bG)([es.Ay], () => null != h && (es.Ay.getMember(s, h.id)?.isPending ?? !1)),
         p = !!(0, R.Qd)(a),
-        A = (0, r.bG)([Z], () => Z.shouldShowPopout(s)),
-        f = (0, r.bG)([eo.A], () => eo.A.can(y.xBc.SEND_MESSAGES, t)),
+        A = (0, r.bG)([Y], () => Y.shouldShowPopout(s)),
+        f = (0, r.bG)([eo.A], () => eo.A.can(v.xBc.SEND_MESSAGES, t)),
         x = (0, r.bG)([D.A], () => D.A.getRequest(s)),
         { showLinkedLobbyApplicationLoadingIndicator: E, requiredLinkedLobbyApplication: T } = (0, eu.A)(t.linkedLobby),
         N = (function (e) {
             let { channelId: t } = e,
-                n = (0, r.bG)([v.A], () => {
-                    let e = v.A.getPendingReturn();
+                n = (0, r.bG)([y.A], () => {
+                    let e = y.A.getPendingReturn();
                     return null == e || e.channelId !== t ? null : e;
                 }),
                 l = i.useCallback(() => {
@@ -434,7 +434,7 @@ function ef(e) {
             if (null == s || null == a) return null;
             let o =
                 s?.iconHash != null && "" !== s.iconHash
-                    ? _.Ay.getGameAssetURL({ id: s.id, hash: s.iconHash, size: y.eQT })
+                    ? _.Ay.getGameAssetURL({ id: s.id, hash: s.iconHash, size: v.eQT })
                     : void 0;
             return { gameId: s.id, gameName: a, gameIconUrl: o, onReturnToGameProfile: l };
         })({ channelId: t.id }),
@@ -444,7 +444,7 @@ function ef(e) {
             isLurking: u,
             isFollowable: c,
             shouldShowLurkerModeSuccessPopout: A,
-            showLurkerModeUpsellPopout: u && null != a && ed.MJ(y.xBc.SEND_MESSAGES, t),
+            showLurkerModeUpsellPopout: u && null != a && ed.MJ(v.xBc.SEND_MESSAGES, t),
             theme: el.A.theme,
             canSendMessages: f,
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,

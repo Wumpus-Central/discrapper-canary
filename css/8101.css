@@ -2659,10 +2659,6 @@
     color: var(--text-link)
 }
 
-.iconContainer__098fc {
-    padding-top: .125rem
-}
-
 .iconContainer__8efcc {
     height: 100%
 }
@@ -2750,8 +2746,7 @@
 }
 
 .iconContainer_e9ab2f {
-    color: var(--text-muted);
-    padding-top: 0
+    color: var(--text-muted)
 }
 
 .icon_b9588c {
@@ -2905,10 +2900,6 @@
 .easterEggAnimationHideLeaf__9f20a .userPremiumGuildSubscriptionLeaf,
 .easterEggAnimationHideLeaf__9f20a .userPremiumGuildSubscriptionLeafParent {
     visibility: hidden
-}
-
-.iconContainer_a1f71e {
-    padding-top: 0
 }
 
 .popoutWrapper_a1f71e {

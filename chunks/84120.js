@@ -36,18 +36,18 @@ function y(e) {
             }),
         ),
         P = (0, s.bG)([x.A], () => x.A.getCurrentUserActiveStream()),
-        w = (0, s.bG)([E.A], () => E.A.getChannelId()),
-        D = v.default.extractTimestamp(l.id) + _.M < Date.now(),
+        D = (0, s.bG)([E.A], () => E.A.getChannelId()),
+        w = v.default.extractTimestamp(l.id) + _.M < Date.now(),
         O = (0, i.jsx)(i.Fragment, { children: (0, d.Wf)(l, a, t) }),
         { analyticsLocations: U } = (0, u.Ay)(y, c.A.REQUEST_TO_STREAM_INVITE_EMBED),
         G = T.intl.string(N.default["5+172e"]),
         V = !1;
     return (
-        D
+        w
             ? ((G = T.intl.string(N.default.u4QmWl)), (V = !0))
             : null != P
               ? ((G = T.intl.string(N.default.P0wwmM)), (V = !0))
-              : w !== a.id
+              : D !== a.id
                 ? ((G = T.intl.string(N.default.qRXats)), (V = !0))
                 : null == M && ((G = T.intl.string(N.default["43zohO"])), (V = !0)),
         (0, i.jsx)(m.h, {
@@ -72,8 +72,8 @@ function y(e) {
                                           ? (0, A.A)(M.pid)
                                           : (0, o.openModalLazy)(async () => {
                                                 let { default: e } = await Promise.all([
-                                                    n.e("95457"),
-                                                    n.e("17918"),
+                                                    n.e("8101"),
+                                                    n.e("23930"),
                                                     n.e("76171"),
                                                     n.e("38601"),
                                                     n.e("36946"),
@@ -99,7 +99,7 @@ function y(e) {
                 channelId: a.id,
                 messageId: l.id,
                 onView: S,
-                isDeadEnd: D,
+                isDeadEnd: w,
             },
         })
     );
@@ -111,8 +111,8 @@ var S = n(666176),
     R = n(290863),
     M = n(461213),
     P = n(287809),
-    w = n(454292),
-    D = n(850670),
+    D = n(454292),
+    w = n(850670),
     O = n(125017),
     U = n(104171),
     G = n(659051),
@@ -249,7 +249,7 @@ function q(e) {
         M = k.some((e) => e.trackingArea === h.kY.CLOUD_PLAY);
     (0, W.A)(M, v);
     let P = k.length > 0,
-        w = l.useMemo(
+        D = l.useMemo(
             () =>
                 (0, i.jsx)(r.E, {
                     variant: "text-xs/medium",
@@ -271,7 +271,7 @@ function q(e) {
                       onClickBanner: f,
                       bannerAspectRatio: m.u.ACTIVITY,
                       iconSrc: E ?? void 0,
-                      info: w,
+                      info: D,
                       actions: k,
                       primaryActionFirst: !0,
                       onClickContent: f,
@@ -291,8 +291,8 @@ function q(e) {
           });
 }
 var Z = n(773746),
-    X = n(127936);
-function $(e) {
+    X = n(717415);
+function Q(e) {
     let {
             analyticsLocations: t,
             application: n,
@@ -382,7 +382,7 @@ function $(e) {
               renderAccountLinkUpsell: y,
           });
 }
-var Q = n(172710);
+var $ = n(172710);
 function ee(e) {
     let { application: t, message: n, header: s, onClickContent: a, onView: o, guildId: d } = e,
         c = l.useMemo(
@@ -528,7 +528,7 @@ function eo(e) {
         m = !(0, G.A)(c, r, t.id),
         h = (0, d.n$)(t.name, r.activity?.type, m),
         g = l.useMemo(() => {
-            if (null != c) return () => (0, Q.Mp)(c);
+            if (null != c) return () => (0, $.Mp)(c);
         }, [c]);
     return m
         ? (0, i.jsx)(ee, { application: t, message: r, header: h, onClickContent: g, onView: a, guildId: u })
@@ -603,12 +603,12 @@ function em(e) {
             {
                 let e = r.author.id;
                 return (
-                    (0, D.v)(r) && (e = e === u && l.isPrivate() ? l.getRecipientId() : u),
+                    (0, w.v)(r) && (e = e === u && l.isPrivate() ? l.getRecipientId() : u),
                     R.A.getApplicationActivity(e, r.application.id)
                 );
             }
         }, [r, l, u]),
-        h = (0, s.bG)([k.A, M.A], () => (0, w.A)(k.A, M.A, c.id), [c.id]),
+        h = (0, s.bG)([k.A, M.A], () => (0, D.A)(k.A, M.A, c.id), [c.id]),
         g = eu({ presenceActivity: m, channel: l, activityActionType: r.activity?.type });
     return (0, ed.pH)(m?.party?.id) || c.id === S.HT.id
         ? (0, i.jsx)(eo, {
@@ -623,7 +623,7 @@ function em(e) {
           })
         : r.activity?.type === z.xL.STREAM_REQUEST
           ? (0, i.jsx)(y, { analyticsLocations: t, application: c, channel: l, currentUserId: u, message: r })
-          : (0, i.jsx)($, {
+          : (0, i.jsx)(Q, {
                 analyticsLocations: t,
                 application: c,
                 channel: l,

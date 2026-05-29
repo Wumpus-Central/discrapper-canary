@@ -535,7 +535,7 @@ let eV = function (e) {
                     e,
                     async () => {
                         let { default: e } = await Promise.all([
-                            l.e("30850"),
+                            l.e("8101"),
                             l.e("6619"),
                             l.e("95429"),
                             l.e("91211"),
@@ -862,8 +862,8 @@ function eJ(e) {
 }
 var e0 = l(702841),
     e2 = l(687966),
-    e3 = l(475358),
-    e1 = l(123292),
+    e1 = l(475358),
+    e3 = l(123292),
     e7 = l(292801),
     e6 = l(780964),
     e5 = l(766075),
@@ -890,7 +890,7 @@ function ti() {
                 description: et.intl.string(ee.default["4K56sP"]),
             }),
             (0, i.jsx)(tl, {
-                header: null != t ? (0, i.jsx)(e3.e, { shortcut: t }) : null,
+                header: null != t ? (0, i.jsx)(e1.e, { shortcut: t }) : null,
                 description:
                     null != t
                         ? (0, i.jsxs)(i.Fragment, {
@@ -898,7 +898,7 @@ function ti() {
                                   et.intl.format(ee.default.BIwQis, { keybind: t }),
                                   (0, i.jsx)("div", {
                                       className: tt.JH,
-                                      children: (0, i.jsx)(e1.Q, {
+                                      children: (0, i.jsx)(e3.Q, {
                                           text: et.intl.string(ee.default.GPfOas),
                                           variant: "primary",
                                           textVariant: "text-sm/medium",
@@ -1433,7 +1433,7 @@ let tA = a.memo(function (e) {
                                     color: "text-strong",
                                     children: et.intl.string(et.t.z2jK6X),
                                 }),
-                                null != u && (0, i.jsx)(e3.e, { className: tb.P, shortcut: u }),
+                                null != u && (0, i.jsx)(e1.e, { className: tb.P, shortcut: u }),
                             ],
                         }),
                         (0, i.jsxs)("div", {

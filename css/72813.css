@@ -562,9 +562,9 @@
 .iconContainer__235ca {
     align-items: center;
     display: flex;
+    height: 1.375rem;
     inset-inline-end: 100%;
     justify-content: center;
-    padding-top: .25rem;
     position: absolute;
     width: 2.5rem
 }
