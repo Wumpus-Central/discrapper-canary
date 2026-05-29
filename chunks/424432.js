@@ -248,7 +248,7 @@ function en(e) {
         ],
     });
 }
-var el = a(696157),
+var el = a(808166),
     es = a(95701),
     ei = a(331884);
 function er(e) {
@@ -5861,6 +5861,15 @@ function io() {
                             (0, r.jsx)(h.$, {
                                 size: "sm",
                                 variant: "secondary",
+                                text: "Re-randomize",
+                                disabled: null == e,
+                                onClick: () => {
+                                    tA.h.dispatch({ type: "DEV_TOOLS_RESAMPLE_FRIEND_ANNIVERSARIES" });
+                                },
+                            }),
+                            (0, r.jsx)(h.$, {
+                                size: "sm",
+                                variant: "secondary",
                                 text: "Clear",
                                 onClick: () => {
                                     c(null);
@@ -7649,7 +7658,7 @@ let rb = {
             return () => (0, r.jsx)(e, { application: t, channelId: "987654321", onClose: rv.Z_ });
         },
         GuildChannelListContextMenu: async () => {
-            let { default: e } = await Promise.all([a.e("9004"), a.e("19690"), a.e("45322"), a.e("10758")]).then(
+            let { default: e } = await Promise.all([a.e("9004"), a.e("19690"), a.e("22941"), a.e("10758")]).then(
                     a.bind(a, 455557),
                 ),
                 t = Object.values(aK.A.getGuilds())[0];
@@ -7750,7 +7759,7 @@ let rb = {
                     a.e("17699"),
                     a.e("57032"),
                     a.e("72238"),
-                    a.e("45322"),
+                    a.e("22941"),
                     a.e("94832"),
                     a.e("37038"),
                     a.e("26386"),
@@ -18279,7 +18288,7 @@ function xg() {
     });
 }
 var xv = a(963935),
-    xj = a(179626),
+    xj = a(952096),
     xb = a(53181);
 function xf(e) {
     let { title: t, initExpanded: a, highlightMode: n = "none", children: l } = e,

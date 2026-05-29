@@ -20164,7 +20164,6 @@ let Cf = (0, a.zD)(u.X.SCREEN_DOWNTIME_REMINDER, {
 var C_ = i(70730);
 let CI = (0, a.zD)(u.X.FRIEND_ANNIVERSARY_NOTIFICATIONS, {
         useTitle: () => j.intl.string(j.t.NjOMvh),
-        usePersistentBadge: () => ({ badgeType: h.Xi.BETA }),
         useValue: L.oz.useSetting,
         setValue: function (e) {
             L.oz.updateSetting(e),
@@ -20175,8 +20174,8 @@ let CI = (0, a.zD)(u.X.FRIEND_ANNIVERSARY_NOTIFICATIONS, {
         },
         useSearchTerms: () => [j.intl.string(j.t.hi4dSk)],
         usePredicate: () => {
-            let { enabled: e, showDmPrompts: t } = C_.u.getConfig({ location: "FriendAnniversaryNotifications" });
-            return e && t;
+            let { enabled: e } = C_.u.getConfig({ location: "FriendAnniversaryNotifications" });
+            return e;
         },
     }),
     CC = (0, V.mj)({
