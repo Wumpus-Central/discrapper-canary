@@ -1,3 +1,14 @@
+.container__5f4c1 {
+    background-color: var(--background-base-low);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--elevation-medium);
+    width: 180px
+}
+
+.clearText__5f4c1 {
+    color: var(--text-link)
+}
+
 .rowDivider_ccbbbb,
 .rowIconPlaceholder_ccbbbb {
     --custom-row-icon-size: 40px

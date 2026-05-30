@@ -234,6 +234,18 @@
     padding: 0 4px 4px
 }
 
+.markup__75297 ol.inlineFormat__75297 {
+    counter-reset: inline-ol-counter
+}
+
+.markup__75297 ol.inlineFormat__75297>li {
+    counter-increment: inline-ol-counter
+}
+
+.markup__75297 ol.inlineFormat__75297>li:before {
+    content: counter(inline-ol-counter) "."
+}
+
 .markup__75297 li {
     margin-bottom: 4px;
     white-space: break-spaces
@@ -5258,17 +5270,6 @@ div.profileThemedContainer__656be {
 
 .placeholder_bd6d20 {
     background-color: var(--background-mod-subtle)
-}
-
-.container__5f4c1 {
-    background-color: var(--background-base-low);
-    border-radius: var(--radius-sm);
-    box-shadow: var(--elevation-medium);
-    width: 180px
-}
-
-.clearText__5f4c1 {
-    color: var(--text-link)
 }
 
 .spacing_fd14e0 {

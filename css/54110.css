@@ -1134,6 +1134,8 @@
 }
 
 .heroBackground__5d00f {
+    border-radius: inherit;
+    overflow: hidden;
     z-index: 0
 }
 
