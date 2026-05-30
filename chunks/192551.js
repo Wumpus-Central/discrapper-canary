@@ -143,12 +143,12 @@ var v = n(64700),
     O = n(775602),
     b = n(178540),
     D = n(507107),
-    L = n(946080),
-    w = n(18437),
-    M = n(971649),
-    P = n(651892),
-    x = n(901406),
-    k = n(862611),
+    L = n(18437),
+    w = n(971649),
+    M = n(651892),
+    P = n(901406),
+    x = n(862611),
+    k = n(284846),
     U = n(263752);
 function G(e) {
     let {
@@ -158,7 +158,7 @@ function G(e) {
             analyticsCtxQuestContentPosition: s,
             analyticsCtxQuestContentRowIndex: a,
         } = e,
-        l = (0, w.Ut)(),
+        l = (0, L.Ut)(),
         u = (0, S.bG)([O.A], () => O.A.useReducedMotion),
         _ = (0, o.Xf)({ useReducedMotion: u }),
         h = (0, b.O)((e) => e.setErrorHints),
@@ -199,7 +199,7 @@ function F(e) {
             size: _,
         } = e,
         h = (0, c.RR)({ quest: t }),
-        f = (0, M.vU)()?.getId(),
+        f = (0, w.vU)()?.getId(),
         p = (0, c.Vn)(t),
         E = (0, c.fc)(t),
         [g, A, I] = (0, c.Qo)(t, E);
@@ -216,7 +216,7 @@ function F(e) {
                 size: _,
                 variant: (0, l.AJ)(n, "secondary"),
                 onClick: () => {
-                    (0, x.se)(
+                    (0, P.se)(
                         { quest: t },
                         {
                             content: s,
@@ -249,18 +249,18 @@ function V(e) {
             analyticsCtxQuestContentRowIndex: u,
             size: c,
         } = e,
-        { hasAlreadyLinked: _ } = (0, L.U)(t),
-        h = (0, M.go)(),
-        f = (0, w.Ut)();
+        { hasAlreadyLinked: _ } = (0, k.U)(t),
+        h = (0, w.go)(),
+        f = (0, L.Ut)();
     return !0 === _
         ? n === l.V3.QUEST_BAR_FOOTER
             ? (0, i.jsx)(r.$, {
                   size: c,
                   fullWidth: !0,
                   variant: "secondary",
-                  text: (0, P.wr)(t),
+                  text: (0, M.wr)(t),
                   onClick: () =>
-                      (0, x.pu)(t, {
+                      (0, P.pu)(t, {
                           content: s,
                           ctaContent: d.Cy.OPEN_GAME_LINK,
                           position: o,
@@ -297,7 +297,7 @@ function V(e) {
 function B(e) {
     let { quest: t, analyticsCtxSourceQuestContent: n, size: s, parentContainerRef: a } = e,
         { applications: o } = (0, c.fc)(t);
-    return (0, i.jsx)(k.A, {
+    return (0, i.jsx)(x.A, {
         quest: t,
         sourceQuestContent: n,
         applications: o ?? [],
