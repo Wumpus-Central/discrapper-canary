@@ -8,6 +8,7 @@ var i,
         (((i = {}).CLIENT_THEMES = "CLIENT_THEMES"),
         (i.APP_ICON = "APP_ICON"),
         (i.CUSTOM_THEME = "CUSTOM_THEME"),
+        (i.GUILD_THEME_PREVIEW = "GUILD_THEME_PREVIEW"),
         (i.APPLICATION_TEST_MODE_DEBUG = "APPLICATION_TEST_MODE_DEBUG"),
         i),
     l =

@@ -1,33 +1,34 @@
 "use strict";
 n.d(t, {
-    b9: () => E,
-    yN: () => T,
-    Yh: () => g,
-    zT: () => c,
-    Wj: () => d,
-    Y1: () => f,
-    kI: () => h,
-    dangerouslyConstructGuildRecordFromUntypedObject: () => I,
-    xi: () => m,
-    DY: () => p,
-    Me: () => _,
-    tJ: () => y,
-    fh: () => u,
-    yF: () => A,
-    $O: () => S,
+    $O: () => y,
+    DY: () => E,
+    Me: () => h,
+    Wj: () => _,
+    Y1: () => p,
+    Yh: () => A,
+    b9: () => m,
+    dangerouslyConstructGuildRecordFromUntypedObject: () => T,
+    fh: () => c,
+    kI: () => f,
+    tJ: () => N,
+    xi: () => g,
+    yF: () => I,
+    yN: () => S,
+    zT: () => d,
 });
 var i = n(284009),
     r = n.n(i),
     s = n(357758),
     a = n(867051),
-    o = n(260509),
-    l = n(652215);
-function u(e) {
-    return (0, a.Wj)(o.vI, e);
+    o = n(679787),
+    l = n(260509),
+    u = n(652215);
+function c(e) {
+    return (0, a.Wj)(l.vI, e);
 }
-function c(e, t, n) {
-    var i, r, l, u;
-    return (0, a.e)(o.vI, n, {
+function d(e, t, n) {
+    var i, r, u, c;
+    return (0, a.e)(l.vI, n, {
         id: e.id,
         joinedAt: t.joinedAt,
         premiumSubscriberCount: t.premiumSubscriberCount,
@@ -38,19 +39,19 @@ function c(e, t, n) {
         banner: e.banner ?? null,
         homeHeader: e.home_header ?? null,
         features: (0, s.y)(e.features),
-        preferredLocale: e.preferred_locale ?? o.do.preferredLocale,
+        preferredLocale: e.preferred_locale ?? l.do.preferredLocale,
         ownerId: e.owner_id,
         application_id: e.application_id ?? null,
         afkChannelId: e.afk_channel_id ?? null,
-        afkTimeout: e.afk_timeout ?? o.do.afkTimeout,
+        afkTimeout: e.afk_timeout ?? l.do.afkTimeout,
         systemChannelId: e.system_channel_id ?? null,
-        verificationLevel: e.verification_level ?? o.do.verificationLevel,
-        explicitContentFilter: e.explicit_content_filter ?? o.do.explicitContentFilter,
+        verificationLevel: e.verification_level ?? l.do.verificationLevel,
+        explicitContentFilter: e.explicit_content_filter ?? l.do.explicitContentFilter,
         defaultMessageNotifications: e.default_message_notifications,
-        mfaLevel: e.mfa_level ?? o.do.mfaLevel,
+        mfaLevel: e.mfa_level ?? l.do.mfaLevel,
         vanityURLCode: e.vanity_url_code ?? null,
-        premiumTier: e.premium_tier ?? o.do.premiumTier,
-        premiumProgressBarEnabled: e.premium_progress_bar_enabled || o.do.premiumProgressBarEnabled,
+        premiumTier: e.premium_tier ?? l.do.premiumTier,
+        premiumProgressBarEnabled: e.premium_progress_bar_enabled || l.do.premiumProgressBarEnabled,
         premiumProgressBarEnabledUserUpdatedAt:
             null != e.premium_progress_bar_enabled_user_updated_at
                 ? new Date(e.premium_progress_bar_enabled_user_updated_at)
@@ -60,10 +61,10 @@ function c(e, t, n) {
         rulesChannelId: e.rules_channel_id ?? null,
         safetyAlertsChannelId: e.safety_alerts_channel_id ?? null,
         publicUpdatesChannelId: e.public_updates_channel_id ?? null,
-        maxStageVideoChannelUsers: e.max_stage_video_channel_users ?? o.do.maxStageVideoChannelUsers,
-        maxVideoChannelUsers: e.max_video_channel_users ?? o.do.maxVideoChannelUsers,
-        maxMembers: e.max_members ?? o.do.maxMembers,
-        nsfwLevel: e.nsfw_level ?? o.do.nsfwLevel,
+        maxStageVideoChannelUsers: e.max_stage_video_channel_users ?? l.do.maxStageVideoChannelUsers,
+        maxVideoChannelUsers: e.max_video_channel_users ?? l.do.maxVideoChannelUsers,
+        maxMembers: e.max_members ?? l.do.maxMembers,
+        nsfwLevel: e.nsfw_level ?? l.do.nsfwLevel,
         ownerConfiguredContentLevel: e.owner_configured_content_level ?? null,
         hubType: e.hub_type ?? null,
         latestOnboardingQuestionId: e.latest_onboarding_question_id ?? null,
@@ -74,43 +75,22 @@ function c(e, t, n) {
             void 0 === i
                 ? (r?.guildTheme ?? null)
                 : null != i
-                  ? ((function (e) {
-                        return null == e
-                            ? null
-                            : {
-                                  enabled: e.enabled,
-                                  themeSettings:
-                                      null == e || (null == e.preset_id && null == e.custom_user_theme_settings)
-                                          ? null
-                                          : {
-                                                presetId: null == e.preset_id ? void 0 : e.preset_id,
-                                                customUserThemeSettings: (function (e) {
-                                                    if (null != e)
-                                                        return {
-                                                            colors: e.colors,
-                                                            gradientColorStops: e.gradient_color_stops ?? [],
-                                                            gradientAngle: e.gradient_angle ?? 0,
-                                                            baseMix: e.base_mix ?? 0,
-                                                        };
-                                                })(e.custom_user_theme_settings),
-                                            },
-                              };
-                    })(i) ?? { enabled: !1, themeSettings: null })
+                  ? ((0, o.UW)(i) ?? { enabled: !1, themeSettings: null })
                   : null),
         premiumFeatures:
             null != e.premium_features
                 ? {
-                      features: (l = e.premium_features).features,
-                      additionalEmojiSlots: l.additional_emoji_slots,
-                      additionalStickerSlots: l.additional_sticker_slots,
-                      additionalSoundSlots: l.additional_sound_slots,
+                      features: (u = e.premium_features).features,
+                      additionalEmojiSlots: u.additional_emoji_slots,
+                      additionalStickerSlots: u.additional_sticker_slots,
+                      additionalSoundSlots: u.additional_sound_slots,
                   }
                 : null,
         moderatorReporting:
             null != e.moderator_reporting
                 ? {
-                      moderatorReportingEnabled: (u = e.moderator_reporting).moderator_reporting_enabled,
-                      moderatorReportChannelId: u.moderator_report_channel_id,
+                      moderatorReportingEnabled: (c = e.moderator_reporting).moderator_reporting_enabled,
+                      moderatorReportChannelId: c.moderator_report_channel_id,
                   }
                 : null,
         verificationRoleId: e.verification_role_id ?? null,
@@ -118,15 +98,15 @@ function c(e, t, n) {
         officialMessageColor: e.official_message_color ?? null,
     });
 }
-function d(e, t) {
+function _(e, t) {
     let n = null != e.joined_at ? new Date(e.joined_at) : (t?.joinedAt ?? null),
         i = e.premium_subscription_count ?? 0;
     return null == e.properties
         ? (r()(null != t, "If guild.properties is null, existingGuild must be passed in"),
           (0, a.h1)(t, { joinedAt: n, premiumSubscriberCount: i }))
-        : c(e.properties, { joinedAt: n, premiumSubscriberCount: i }, t);
+        : d(e.properties, { joinedAt: n, premiumSubscriberCount: i }, t);
 }
-function _(e, t, n) {
+function h(e, t, n) {
     return {
         ...e,
         joinedAt: null != e.joinedAt ? e.joinedAt.toISOString() : null,
@@ -139,13 +119,13 @@ function _(e, t, n) {
         member: null != n ? { userId: n.userId, roles: n.roles } : null,
     };
 }
-function h(e, t) {
+function f(e, t) {
     return null == e.properties
         ? t
-        : c(e.properties, { joinedAt: t.joinedAt, premiumSubscriberCount: t.premiumSubscriberCount }, t);
+        : d(e.properties, { joinedAt: t.joinedAt, premiumSubscriberCount: t.premiumSubscriberCount }, t);
 }
-function f(e, t) {
-    return c(
+function p(e, t) {
+    return d(
         e,
         {
             joinedAt: null != e.joined_at ? new Date(e.joined_at) : (t?.joinedAt ?? null),
@@ -154,8 +134,8 @@ function f(e, t) {
         t,
     );
 }
-function p(e) {
-    return y({
+function E(e) {
+    return N({
         id: e.id,
         name: e.name,
         description: e.description,
@@ -171,19 +151,19 @@ function p(e) {
         homeHeader: e.home_header,
     });
 }
-function E(e) {
-    return y({
+function m(e) {
+    return N({
         id: e.id,
         name: e.name,
         description: e.description,
         icon: e.icon,
-        premiumSubscriberCount: e.premiumSubscriberCount ?? o.do.premiumSubscriberCount,
-        premiumTier: e.premiumTier ?? o.do.premiumTier,
+        premiumSubscriberCount: e.premiumSubscriberCount ?? l.do.premiumSubscriberCount,
+        premiumTier: e.premiumTier ?? l.do.premiumTier,
         features: (0, s.y)(e.features),
     });
 }
-function m(e) {
-    return y({
+function g(e) {
+    return N({
         id: e.guildId,
         name: e.name ?? "",
         icon: e.icon ?? null,
@@ -192,19 +172,19 @@ function m(e) {
         features: (0, s.y)(e.features),
     });
 }
-function g(e) {
-    return y({
+function A(e) {
+    return N({
         id: e.id,
         name: e.name,
         icon: e.icon ?? null,
         description: e.description ?? null,
         splash: e.splash ?? null,
         features: (0, s.y)(e.features),
-        verificationLevel: e.verification_level ?? o.do.verificationLevel,
+        verificationLevel: e.verification_level ?? l.do.verificationLevel,
     });
 }
-function A(e) {
-    return y({
+function I(e) {
+    return N({
         id: e.id,
         name: e.name,
         icon: e.icon ?? null,
@@ -214,8 +194,8 @@ function A(e) {
         features: (0, s.y)(e.features),
     });
 }
-function I(e) {
-    return N({
+function T(e) {
+    return v({
         id: e.id,
         name: e.name || "",
         description: e.description || null,
@@ -225,20 +205,20 @@ function I(e) {
         banner: e.banner || null,
         homeHeader: e.homeHeader || null,
         features: (0, s.y)(e.features),
-        preferredLocale: e.preferredLocale || o.do.preferredLocale,
+        preferredLocale: e.preferredLocale || l.do.preferredLocale,
         afkChannelId: e.afkChannelId || null,
         afkTimeout: e.afkTimeout,
         systemChannelId: e.systemChannelId || null,
-        verificationLevel: e.verificationLevel || o.do.verificationLevel,
+        verificationLevel: e.verificationLevel || l.do.verificationLevel,
         joinedAt: e.joinedAt instanceof Date ? e.joinedAt : null != e.joinedAt ? new Date(e.joinedAt) : e.joinedAt,
-        defaultMessageNotifications: e.defaultMessageNotifications || o.do.defaultMessageNotifications,
-        mfaLevel: e.mfaLevel || o.do.mfaLevel,
+        defaultMessageNotifications: e.defaultMessageNotifications || l.do.defaultMessageNotifications,
+        mfaLevel: e.mfaLevel || l.do.mfaLevel,
         application_id: e.application_id || null,
-        explicitContentFilter: e.explicitContentFilter || o.do.explicitContentFilter,
+        explicitContentFilter: e.explicitContentFilter || l.do.explicitContentFilter,
         vanityURLCode: e.vanityURLCode || null,
-        premiumTier: e.premiumTier || o.do.premiumTier,
-        premiumSubscriberCount: e.premiumSubscriberCount || o.do.premiumSubscriberCount,
-        premiumProgressBarEnabled: e.premiumProgressBarEnabled || o.do.premiumProgressBarEnabled,
+        premiumTier: e.premiumTier || l.do.premiumTier,
+        premiumSubscriberCount: e.premiumSubscriberCount || l.do.premiumSubscriberCount,
+        premiumProgressBarEnabled: e.premiumProgressBarEnabled || l.do.premiumProgressBarEnabled,
         premiumProgressBarEnabledUserUpdatedAt:
             e.premiumProgressBarEnabledUserUpdatedAt instanceof Date
                 ? e.premiumProgressBarEnabledUserUpdatedAt
@@ -250,10 +230,10 @@ function I(e) {
         rulesChannelId: e.rulesChannelId || null,
         safetyAlertsChannelId: e.safetyAlertsChannelId || null,
         publicUpdatesChannelId: e.publicUpdatesChannelId || null,
-        maxStageVideoChannelUsers: e.maxStageVideoChannelUsers || o.do.maxStageVideoChannelUsers,
-        maxVideoChannelUsers: e.maxVideoChannelUsers || o.do.maxVideoChannelUsers,
-        maxMembers: e.maxMembers || o.do.maxMembers,
-        nsfwLevel: e.nsfwLevel ?? o.do.nsfwLevel,
+        maxStageVideoChannelUsers: e.maxStageVideoChannelUsers || l.do.maxStageVideoChannelUsers,
+        maxVideoChannelUsers: e.maxVideoChannelUsers || l.do.maxVideoChannelUsers,
+        maxMembers: e.maxMembers || l.do.maxMembers,
+        nsfwLevel: e.nsfwLevel ?? l.do.nsfwLevel,
         ownerConfiguredContentLevel: e.ownerConfiguredContentLevel ?? null,
         hubType: e.hubType,
         latestOnboardingQuestionId: e.latestOnboardingQuestionId ?? null,
@@ -266,8 +246,8 @@ function I(e) {
         verificationRoleId: e.verificationRoleId ?? null,
     });
 }
-function T(e) {
-    var t, n, i, r, s;
+function S(e) {
+    var t, n, i;
     return {
         id: e.id,
         name: e.name,
@@ -309,37 +289,17 @@ function T(e) {
         max_video_channel_users: e.maxVideoChannelUsers,
         max_members: e.maxMembers,
         nsfw_level: e.nsfwLevel,
-        nsfw: [l.ftr.AGE_RESTRICTED, l.ftr.EXPLICIT].includes(e.nsfwLevel),
+        nsfw: [u.ftr.AGE_RESTRICTED, u.ftr.EXPLICIT].includes(e.nsfwLevel),
         owner_configured_content_level: e.ownerConfiguredContentLevel,
         hub_type: e.hubType,
         latest_onboarding_question_id: e.latestOnboardingQuestionId,
         profile: e.profile,
-        theme:
-            null != e.guildTheme
-                ? {
-                      enabled: (n = e.guildTheme).enabled,
-                      ...(null == (i = n.themeSettings)
-                          ? { preset_id: null, custom_user_theme_settings: null }
-                          : {
-                                preset_id: i.presetId ?? null,
-                                custom_user_theme_settings:
-                                    null == (r = i.customUserThemeSettings)
-                                        ? null
-                                        : {
-                                              colors: [...r.colors],
-                                              gradient_color_stops:
-                                                  null != r.gradientColorStops ? [...r.gradientColorStops] : [],
-                                              gradient_angle: r.gradientAngle ?? 0,
-                                              base_mix: r.baseMix ?? 0,
-                                          },
-                            }),
-                  }
-                : null,
+        theme: null != e.guildTheme ? { enabled: (n = e.guildTheme).enabled, ...(0, o.QK)(n.themeSettings) } : null,
         moderator_reporting:
             null != e.moderatorReporting
                 ? {
-                      moderator_reporting_enabled: (s = e.moderatorReporting).moderatorReportingEnabled,
-                      moderator_report_channel_id: s.moderatorReportChannelId,
+                      moderator_reporting_enabled: (i = e.moderatorReporting).moderatorReportingEnabled,
+                      moderator_report_channel_id: i.moderatorReportChannelId,
                   }
                 : null,
         official_message_color: e.officialMessageColor,
@@ -348,7 +308,7 @@ function T(e) {
         verification_role_id: e.verificationRoleId,
     };
 }
-function S(e) {
+function y(e) {
     let t = {
         ...e,
         features: (0, s.y)(e.features),
@@ -358,11 +318,11 @@ function S(e) {
                 ? new Date(e.premiumProgressBarEnabledUserUpdatedAt)
                 : null,
     };
-    return delete t.roles, delete t.member, N(t);
-}
-function y(e) {
-    return N({ ...o.do, ...e });
+    return delete t.roles, delete t.member, v(t);
 }
 function N(e) {
-    return (0, a.yE)(o.vI, e);
+    return v({ ...l.do, ...e });
+}
+function v(e) {
+    return (0, a.yE)(l.vI, e);
 }
