@@ -142,6 +142,7 @@ async function y() {
                             gameId: e.game_id,
                             collectiblesShopNavigationEnabled: !0 === e.collectibles_shop_navigation_enabled,
                             excludedPlatforms: e.excluded_platforms ?? [],
+                            disableMobileAccountLinking: !0 === e.disable_mobile_account_linking,
                         })) ?? [],
                     announcementModalConfig:
                         null != e.announcement_modal_config
