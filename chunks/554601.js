@@ -541,9 +541,9 @@ function eJ(e) {
                                             action: () => {
                                                 (0, eO.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        n.e("8180"),
+                                                        n.e("44837"),
                                                         n.e("54633"),
-                                                        n.e("55351"),
+                                                        n.e("26105"),
                                                         n.e("46461"),
                                                         n.e("77737"),
                                                         n.e("43147"),
@@ -557,13 +557,14 @@ function eJ(e) {
                                                         n.e("27660"),
                                                         n.e("18090"),
                                                         n.e("49494"),
-                                                        n.e("16639"),
+                                                        n.e("32011"),
                                                         n.e("89001"),
                                                         n.e("55990"),
                                                         n.e("5630"),
-                                                        n.e("36198"),
+                                                        n.e("86653"),
                                                         n.e("7066"),
-                                                        n.e("78385"),
+                                                        n.e("25336"),
+                                                        n.e("333"),
                                                         n.e("41475"),
                                                         n.e("46912"),
                                                         n.e("56419"),
@@ -841,9 +842,9 @@ function e4(e) {
     );
 }
 var e8 = n(34188),
-    e7 = n(700623),
-    e2 = n(177953),
-    e3 = n(825484),
+    e2 = n(700623),
+    e3 = n(177953),
+    e7 = n(825484),
     e5 = n(512950),
     e9 = n(900797),
     e6 = n(847374),
@@ -1114,7 +1115,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: tv.wi,
                             children: [
-                                (0, r.jsx)(e7.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e2.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1181,7 +1182,7 @@ function tR(e) {
     return (0, r.jsxs)("div", {
         className: tv.I8,
         children: [
-            (0, r.jsx)(e2.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, r.jsx)(e3.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             (0, r.jsx)(T.E, {
                 variant: "text-sm/semibold",
                 color: "interactive-text-default",
@@ -1217,7 +1218,7 @@ function tO(e) {
     }, [n, a, d, u]),
     (0, I.$B)(n) && (0, I.Ag)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e3.e, {
+            ? (0, r.jsxs)(e7.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tI, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1402,15 +1403,15 @@ var tZ = n(111042),
     t1 = n(179771),
     t4 = n(824552),
     t8 = n(168186),
-    t7 = n(594061),
-    t2 = n(935208),
-    t3 = n(630248),
+    t2 = n(594061),
+    t3 = n(935208),
+    t7 = n(630248),
     t5 = n(355097);
 function t9(e, t) {
     o.useEffect(() => {
-        t7.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t2.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let n = (0, A.bG)([t3.A], () => t3.A.getApplicationFrecencyWithoutLoadingLatest()),
+    let n = (0, A.bG)([t7.A], () => t7.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
             () =>
                 null == t || 0 === t.length
@@ -1421,7 +1422,7 @@ function t9(e, t) {
         i = o.useMemo(() => t?.filter((t) => !e.some((e) => e.id === t.application.id)), [e, t]),
         s = o.useMemo(() => {
             i?.forEach((e) => {
-                let t = t2.default.extractTimestamp(e.id);
+                let t = t3.default.extractTimestamp(e.id);
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute();
@@ -1439,7 +1440,7 @@ function t9(e, t) {
     return o.useMemo(() => {
         let e, i;
         t?.forEach((t) => {
-            let n = t2.default.extractTimestamp(t.id);
+            let n = t3.default.extractTimestamp(t.id);
             (null == i || n > i) && ((e = t), (i = n));
         }),
             l.forEach((t) => {
@@ -1842,7 +1843,7 @@ function nV(e) {
                 o.useEffect(() => {
                     let e = eE().sortBy(Object.entries(n), (e) => {
                         let [t, n] = e;
-                        return -t2.default.extractTimestamp(n);
+                        return -t3.default.extractTimestamp(n);
                     });
                     i(
                         eE()
@@ -2063,8 +2064,8 @@ var nQ = n(984516),
     n1 = n(485845),
     n4 = n(994369),
     n8 = n(240591),
-    n7 = n(46477);
-function n2(e, t) {
+    n2 = n(46477);
+function n3(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
         s = ((n = e), (l = t.filterPredicates ?? []), n.filter((e) => l.every((t) => t(e))));
@@ -2114,9 +2115,9 @@ function n2(e, t) {
         i,
     ).slice(0, i);
 }
-function n3(e, t) {
-    let n = t3.A.getScoreWithoutLoadingLatest(e.id);
-    return t3.A.getScoreWithoutLoadingLatest(t.id) - n;
+function n7(e, t) {
+    let n = t7.A.getScoreWithoutLoadingLatest(e.id);
+    return t7.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
 function n5(e, t) {
     let n = (0, I.lq)(e),
@@ -2362,7 +2363,7 @@ function lm(e) {
                     var e, i, a, r, o, d, u;
                     let m, p, h, A, f;
                     if (!s) return [];
-                    return n2(c, {
+                    return n3(c, {
                         limit: l,
                         filterPredicates: [
                             ((m = (0, n8.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
@@ -2375,8 +2376,8 @@ function lm(e) {
                                             isGuildInstalled: r,
                                             isUserInstalled: o,
                                         } = (0, g.Sx)(t, e.applicationId),
-                                        c = n?.guild_id != null ? n7.we(a?.permissions, n.guild_id, l, i, s) : null,
-                                        d = n?.guild_id != null ? n7._W(a?.permissions, n, n.guild_id) : null;
+                                        c = n?.guild_id != null ? n2.we(a?.permissions, n.guild_id, l, i, s) : null,
+                                        d = n?.guild_id != null ? n2._W(a?.permissions, n, n.guild_id) : null;
                                     p[e.applicationId] = {
                                         descriptor: a,
                                         applicationAllowedForUser: c,
@@ -2393,13 +2394,13 @@ function lm(e) {
                                     isUserInstalled: d,
                                 } = p[e.applicationId];
                                 return (
-                                    n7.zl(e, m, {
+                                    n2.zl(e, m, {
                                         applicationAllowedForUser: o,
                                         applicationAllowedForChannel: r,
                                         commandBotId: a?.botId,
                                         isGuildInstalled: c,
                                         isUserInstalled: d,
-                                    }) === n7.CA.ALLOWED
+                                    }) === n2.CA.ALLOWED
                                 );
                             }),
                         ],
@@ -2499,7 +2500,7 @@ function lm(e) {
                                     }),
                             );
                     } else a && (u = m);
-                    return n2(u, {
+                    return n3(u, {
                         limit: i,
                         filterPredicates: [
                             ((d = (0, n8.Bh)("channel" === t.type ? t.channel : void 0, [
@@ -2514,20 +2515,20 @@ function lm(e) {
                                         isGuildInstalled: o,
                                         isUserInstalled: c,
                                     } = (0, g.Sx)(t, e.id),
-                                    u = n?.guild_id != null ? n7.we(a?.permissions, n.guild_id, l, i, s) : null,
-                                    m = n?.guild_id != null ? n7._W(a?.permissions, n, n.guild_id) : null;
+                                    u = n?.guild_id != null ? n2.we(a?.permissions, n.guild_id, l, i, s) : null,
+                                    m = n?.guild_id != null ? n2._W(a?.permissions, n, n.guild_id) : null;
                                 return (
                                     null == r ||
                                     !(r.length > 0) ||
                                     r.some(
                                         (e) =>
-                                            n7.zl(e, d, {
+                                            n2.zl(e, d, {
                                                 applicationAllowedForUser: u,
                                                 applicationAllowedForChannel: m,
                                                 commandBotId: a?.botId,
                                                 isGuildInstalled: o,
                                                 isUserInstalled: c,
-                                            }) === n7.CA.ALLOWED,
+                                            }) === n2.CA.ALLOWED,
                                     )
                                 );
                             }),
@@ -2546,7 +2547,7 @@ function lm(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n3, n5],
+                        sortComparers: [n7, n5],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,

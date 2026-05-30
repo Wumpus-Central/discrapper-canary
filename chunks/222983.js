@@ -21,8 +21,8 @@ var l = n(627968),
     _ = n(143413),
     I = n(495544),
     j = n(734057),
-    v = n(808728),
-    y = n(498642),
+    y = n(808728),
+    v = n(498642),
     T = n(71393),
     N = n(186111),
     b = n(232835),
@@ -79,8 +79,8 @@ function W(e) {
         q,
         $,
         J,
-        Z,
         Y,
+        Z,
         { channel: X } = e,
         Q = (0, o.bG)([T.A], () => (null != X ? T.A.getGuild(X.getGuildId()) : null), [X]),
         ee = null != Q && R.default.extractTimestamp(Q.id) < Date.now() - D.NOr,
@@ -111,8 +111,8 @@ function W(e) {
             guildPopulated:
                 ((s = (0, o.bG)([j.A], () => j.A.getChannel(Q?.systemChannelId))),
                 (d = (0, o.yK)([b.A], () => (null != s ? b.A.getMessages(s.id).toArray() : []))),
-                (0, o.bG)([y.A], () => {
-                    let e = y.A.getMemberCount(Q?.id) ?? 0,
+                (0, o.bG)([v.A], () => {
+                    let e = v.A.getMemberCount(Q?.id) ?? 0,
                         t = d.some((e) => e.type === D.lAJ.USER_JOIN);
                     return e > 1 || t;
                 }, [Q, d])),
@@ -130,15 +130,15 @@ function W(e) {
                 ((x = (0, o.bG)([N.A], () => N.A.hasLayers())),
                 (G = (0, o.bG)([T.A], () => T.A.getGuild(Q?.id))),
                 G?.icon != null && !x),
-            guildChannelCreated: (0, o.bG)([v.Ay], () => {
-                let e = v.Ay.getChannels(Q?.id),
-                    t = e[v.vM];
+            guildChannelCreated: (0, o.bG)([y.Ay], () => {
+                let e = y.Ay.getChannels(Q?.id),
+                    t = e[y.vM];
                 function n(e) {
                     return (
                         null != Q && R.default.extractTimestamp(e.channel.id) - R.default.extractTimestamp(Q.id) > 500
                     );
                 }
-                return e[v.I6].some(n) || t.some(n);
+                return e[y.I6].some(n) || t.some(n);
             }, [Q]),
         },
         {
@@ -155,8 +155,7 @@ function W(e) {
                 null != Q &&
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("67631"),
-                            n.e("42527"),
+                            n.e("86653"),
                             n.e("59957"),
                             n.e("28136"),
                             n.e("16084"),
@@ -222,32 +221,32 @@ function W(e) {
         eg = !(es || ea || er || eo),
         { titleAnimatedStyle: ep, opacities: eA } =
             ((J = (0, A.A)(() => new r.A.Value(0))),
-            (Z = (0, A.A)(() => new r.A.Value(0))),
-            (Y = (0, A.A)(() => [new r.A.Value(0), new r.A.Value(0), new r.A.Value(0), new r.A.Value(0)])),
+            (Y = (0, A.A)(() => new r.A.Value(0))),
+            (Z = (0, A.A)(() => [new r.A.Value(0), new r.A.Value(0), new r.A.Value(0), new r.A.Value(0)])),
             i.useEffect(() => {
                 r.A.stagger(300, [
                     r.A.parallel([
-                        r.A.timing(Z, { toValue: 1, duration: 450 }),
+                        r.A.timing(Y, { toValue: 1, duration: 450 }),
                         r.A.timing(J, { toValue: 1, duration: 450 }),
                     ]),
                     r.A.stagger(100, [
-                        r.A.timing(Y[0], { toValue: 1, duration: 300 }),
-                        r.A.timing(Y[1], { toValue: 1, duration: 300 }),
-                        r.A.timing(Y[2], { toValue: 1, duration: 300 }),
-                        r.A.timing(Y[3], { toValue: 1, duration: 300 }),
+                        r.A.timing(Z[0], { toValue: 1, duration: 300 }),
+                        r.A.timing(Z[1], { toValue: 1, duration: 300 }),
+                        r.A.timing(Z[2], { toValue: 1, duration: 300 }),
+                        r.A.timing(Z[3], { toValue: 1, duration: 300 }),
                     ]),
                 ]).start();
-            }, [Z, J, Y]),
+            }, [Y, J, Z]),
             {
                 titleAnimatedStyle: eg
                     ? {
                           transform: [
                               { translateY: J.interpolate({ inputRange: [0, 1], outputRange: ["-20px", "0px"] }) },
                           ],
-                          opacity: Z,
+                          opacity: Y,
                       }
                     : {},
-                opacities: Y,
+                opacities: Z,
             }),
         [ef, eC] = i.useState([]),
         ex = ef.length > 0;
