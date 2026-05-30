@@ -940,11 +940,3 @@
 .buttonWrapper__24af7:hover {
     color: var(--interactive-text-active)
 }
-
-.fauxDisabled__666fa {
-    opacity: .5
-}
-
-.enable-forced-colors .fauxDisabled__666fa {
-    opacity: 1
-}

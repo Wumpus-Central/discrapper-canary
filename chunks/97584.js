@@ -13,6 +13,7 @@ e.exports = {
     z_: "treatmentHeading__101ad",
     W2: "treatmentContent__101ad",
     nf: "treatmentGraphic__101ad",
+    v8: "headerContainerB__101ad",
     ap: "reverseTrialContainer__101ad",
     rG: "reverseTrialTextContainer__101ad",
     Hk: "reverseTrialArtContainer__101ad",
