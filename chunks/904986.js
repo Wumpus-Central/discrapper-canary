@@ -26,6 +26,7 @@ class _ extends o.A {
     activeOutputSinks = new Map();
     videoSupported = !1;
     useElectronVideo = !1;
+    spatialAudioEnabled = !1;
     voiceBitrate = c.PR;
     remoteSinkWantsMaxFramerate = c.sG;
     videoQualityManager;
@@ -170,5 +171,11 @@ class _ extends o.A {
     async emitStats() {
         let e = await this.getStats();
         return null != e && this.emit(l.y.Stats, e), e;
+    }
+    getSpatialAudioEnabled() {
+        return this.context === c.x.DEFAULT && this.spatialAudioEnabled;
+    }
+    setSpatialAudioEnabled(e) {
+        this.spatialAudioEnabled = e;
     }
 }

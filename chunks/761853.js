@@ -693,6 +693,7 @@ function ns(e) {
         e.setNoiseSuppression(eB.A.hasNoiseSuppression(n) || t.noiseSuppression),
         ni(e, eB.A.hasAutomaticGainControl(n) || t.automaticGainControl),
         nr(e, t.noiseCancellation),
+        e.setSpatialAudioEnabled(t.audioMixerSettings.enabled),
         (0, E.isWeb)())
     ) {
         let n = t.noiseCancellation ? -150 : -100;
@@ -1940,7 +1941,9 @@ function nw(e) {
     },
     AUDIO_SET_AUDIO_MIXER_SETTINGS: function (e) {
         let { context: t, settings: n } = e;
-        nc({ audioMixerSettings: n }, t), te.setAudioMixerOptions(n);
+        nc({ audioMixerSettings: n }, t),
+            te.setAudioMixerOptions(n),
+            te.eachConnection((e) => e.setSpatialAudioEnabled(n.enabled), eX.x.DEFAULT);
     },
     AUDIO_SET_LOCAL_PAN: function (e) {
         let { context: t, userId: n, left: i, right: r } = e,
