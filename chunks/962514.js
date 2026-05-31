@@ -80,7 +80,7 @@ function O(e) {
     !(function (e) {
         let { message: t, initialAnswerId: i } = e;
         (0, y.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("9413"), n.e("40183"), n.e("78195"), n.e("19794")]).then(
+            let { default: e } = await Promise.all([n.e("24789"), n.e("40183"), n.e("78195"), n.e("19794")]).then(
                 n.bind(n, 716936),
             );
             return (n) => (0, T.jsx)(e, { ...n, message: t, initialAnswerId: i });

@@ -165,8 +165,8 @@ function tt(t) {
                               let { default: t } = await Promise.all([
                                   n.e("2563"),
                                   n.e("44837"),
-                                  n.e("9413"),
-                                  n.e("6212"),
+                                  n.e("24789"),
+                                  n.e("88850"),
                                   n.e("16117"),
                                   n.e("54633"),
                                   n.e("19675"),

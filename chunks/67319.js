@@ -429,13 +429,13 @@ var eK = n(661531),
     e$ = n(174459),
     eJ = n(776781),
     e0 = n(233993),
-    e1 = n(835245),
-    e9 = n(280056),
+    e9 = n(835245),
+    e1 = n(280056),
     e2 = n(204651),
     e5 = n(489643);
 function e6(e) {
     let { width: t = 24, height: n = 24, isBadged: s = !1 } = e,
-        [a] = l.useState(() => (0, e1.A)());
+        [a] = l.useState(() => (0, e9.A)());
     return (0, i.jsxs)("svg", {
         width: t,
         height: n,
@@ -450,7 +450,7 @@ function e6(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)("g", { mask: `url(#${a})`, children: (0, i.jsx)(e9.c, {}) }),
+            (0, i.jsx)("g", { mask: `url(#${a})`, children: (0, i.jsx)(e1.c, {}) }),
         ],
     });
 }
@@ -1188,8 +1188,8 @@ let tZ = l.memo(function (e) {
 var t$ = n(847374),
     tJ = n(402216),
     t0 = n(97808),
-    t1 = n(717558),
-    t9 = n(636585),
+    t9 = n(717558),
+    t1 = n(636585),
     t2 = n(486020),
     t5 = n(711865);
 function t6(e) {
@@ -1198,7 +1198,7 @@ function t6(e) {
         { newestAnalyticsLocation: c } = (0, g.Ay)(),
         d = (0, N.Us)(),
         { reducedMotion: u } = l.useContext(tv.C),
-        h = (0, t1.A)({ userId: s.id }),
+        h = (0, t9.A)({ userId: s.id }),
         A = null != s.member ? (0, t2.xT)(s.member) : null,
         x = (e) => {
             (0, ei.L3)(
@@ -1278,7 +1278,7 @@ function t6(e) {
 }
 function t7(e) {
     let { speakers: t, channel: n } = e;
-    return (0, i.jsx)(t9.A, {
+    return (0, i.jsx)(t1.A, {
         className: t5.z,
         guildId: n.guild_id,
         users: t,
@@ -1925,7 +1925,7 @@ function n0(e) {
         ],
     });
 }
-let n1 = l.memo(function (e) {
+let n9 = l.memo(function (e) {
     let { channel: t, isOnStartStageScreen: n } = e,
         l = nB(t.id),
         s = (0, eJ.Ni)(t.id),
@@ -1954,7 +1954,7 @@ let n1 = l.memo(function (e) {
             })
           : (0, i.jsx)(nW, { channel: t });
 });
-var n9 = n(520006);
+var n1 = n(520006);
 function n2(e) {
     let {
             stream: t,
@@ -1983,7 +1983,7 @@ function n2(e) {
                 onClick: () => {
                     H()(null != A, "guild cannot be null"),
                         H()(null != l, "channel cannot be null"),
-                        (0, n9.X)({
+                        (0, n1.X)({
                             guild: A,
                             channel: l,
                             streamUserId: t?.ownerId,
@@ -2016,9 +2016,8 @@ function n3(e) {
                 let { default: e } = await Promise.all([
                     n.e("2563"),
                     n.e("44837"),
-                    n.e("6212"),
+                    n.e("88850"),
                     n.e("16117"),
-                    n.e("9413"),
                     n.e("19675"),
                     n.e("86653"),
                     n.e("78704"),
@@ -2359,7 +2358,7 @@ function ih(e) {
             disableGradients: !S || (0 === O && v.x.TOP),
             renderBottomCenter: () =>
                 S
-                    ? (0, i.jsx)(g.f5, { value: f, children: (0, i.jsx)(n1, { channel: n, isOnStartStageScreen: U }) })
+                    ? (0, i.jsx)(g.f5, { value: f, children: (0, i.jsx)(n9, { channel: n, isOnStartStageScreen: U }) })
                     : null,
             renderBottomRight: () =>
                 S

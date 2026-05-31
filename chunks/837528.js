@@ -122,11 +122,11 @@ function O(e, t, s, o) {
                     e,
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("9413"),
+                            n.e("24789"),
                             n.e("54633"),
                             n.e("30402"),
                             n.e("88667"),
-                            n.e("12259"),
+                            n.e("88850"),
                             n.e("58735"),
                             n.e("72318"),
                             n.e("87411"),
