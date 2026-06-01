@@ -128,12 +128,12 @@ class v extends r.Component {
                 id: g,
                 rows: A,
                 flex: v,
-                autosize: w,
-                required: D,
-                onInvalid: N,
+                autosize: N,
+                required: w,
+                onInvalid: D,
                 inputRef: O,
             } = this.props,
-            C = w ? p.y : "textarea",
+            C = N ? p.y : "textarea",
             R = this.hasError(),
             P = this.props["aria-labelledby"] ?? this.context?.titleId,
             b = this.getAriaDescribedBy();
@@ -159,12 +159,12 @@ class v extends r.Component {
                                 minLength: i,
                                 maxLength: o ? void 0 : s,
                                 spellCheck: u,
-                                required: D,
+                                required: w,
                                 onChange: this.onChange,
                                 onBlur: this.onBlur,
                                 onFocus: this.onFocus,
                                 onKeyDown: this.onKeyDown,
-                                onInvalid: N,
+                                onInvalid: D,
                                 rows: A,
                                 ref: O,
                             }),
@@ -198,9 +198,9 @@ class v extends r.Component {
         e?.(t);
     };
 }
-var w = n(922016),
-    D = n(939249),
-    N = n(285796),
+var N = n(922016),
+    w = n(939249),
+    D = n(285796),
     O = n(565645),
     C = n(765671),
     R = n(964486),
@@ -213,23 +213,23 @@ var w = n(922016),
     I = n(989349),
     L = n.n(I),
     k = n(885386),
-    F = n(284009),
-    H = n.n(F),
-    Y = n(403918),
-    $ = n(652215);
-let B = [Y.yt.MINUTES_30, Y.yt.HOURS_1, Y.yt.HOURS_4];
-var K = n(58703),
-    z = n(927813),
+    H = n(284009),
+    F = n.n(H),
+    Y = n(927813),
+    $ = n(403918),
+    B = n(652215);
+let K = [$.yt.MINUTES_30, $.yt.HOURS_1, $.yt.HOURS_4];
+var z = n(58703),
     q = n(403362);
 let G = (t) => {
         let e = Date.now() + t;
-        return (0, K.ro)(new Date(), new Date(e))
+        return (0, z.ro)(new Date(), new Date(e))
             ? f.intl.formatToPlainString(f.t["+3jw2j"], { time: f.intl.data.formatTime(e, { format: "short" }) })
             : f.intl.formatToPlainString(f.t["/Avy4C"], { time: f.intl.data.formatTime(e, { format: "short" }) });
     },
     Q = (t) => {
         let e = Date.now() + t;
-        return (0, K.ro)(new Date(), new Date(e))
+        return (0, z.ro)(new Date(), new Date(e))
             ? f.intl.data.formatTime(e, { format: "short" })
             : f.intl.formatToPlainString(f.t.DN91Jz, { time: f.intl.data.formatTime(e, { format: "short" }) });
     };
@@ -238,7 +238,7 @@ var Z = n(685396),
     W = n(480335),
     X = n(999291),
     V = n(718019),
-    tt = n(694720),
+    tt = n(328296),
     te = n(915614),
     tn = n(946356),
     tl = n(878555),
@@ -314,26 +314,26 @@ function tc(t) {
         [j, S] = r.useState(
             (function () {
                 let t = k.G2.getSetting();
-                if (null == t || "" === t.expiresAtMs) return Y.yt.TODAY;
+                if (null == t || "" === t.expiresAtMs) return $.yt.TODAY;
                 let e = Number(t.expiresAtMs);
-                if (isNaN(e)) return Y.yt.TODAY;
-                if (0 === e) return Y.yt.DONT_CLEAR;
+                if (isNaN(e)) return $.yt.TODAY;
+                if (0 === e) return $.yt.DONT_CLEAR;
                 let n = new Date(),
                     l = new Date(e);
                 if (n.getFullYear() !== l.getFullYear() || n.getMonth() !== l.getMonth() || n.getDate() !== l.getDate())
-                    return Y.yt.TODAY;
+                    return $.yt.TODAY;
                 let r = Number(e) - Date.now();
-                return B.find((t) => r <= t) ?? Y.yt.TODAY;
+                return K.find((t) => r <= t) ?? $.yt.TODAY;
             })(),
         ),
         I = r.useRef(null),
-        F = r.useRef(null),
-        K = r.useRef(null),
+        H = r.useRef(null),
+        z = r.useRef(null),
         J = null != d ? d.label() : f.intl.string(f.t.xod367),
         [W, X] = r.useState(J),
         { ref: V, width: tt } = (0, C.Ay)(J);
     r.useEffect(() => {
-        let t = K.current;
+        let t = z.current;
         if (null == tt || null == t) return;
         let e = tt - 78;
         t.textContent = J;
@@ -346,7 +346,7 @@ function tc(t) {
         }
     }, [tt, J]),
         r.useEffect(() => {
-            _.default.track($.HAw.OPEN_MODAL, { type: P.A.CUSTOM_STATUS_MODAL, location_stack: h });
+            _.default.track(B.HAw.OPEN_MODAL, { type: P.A.CUSTOM_STATUS_MODAL, location_stack: h });
         }, [h]),
         (0, R.Ay)(() => {
             I.current?.focus(), I.current?.setSelection(x.length, x.length);
@@ -368,30 +368,14 @@ function tc(t) {
                     k.G2.updateSetting({
                         text: o.length > 0 ? o : "",
                         expiresAtMs:
-                            null != l && l !== Y.yt.DONT_CLEAR
+                            null != l && l !== $.yt.DONT_CLEAR
                                 ? String(
                                       L()()
                                           .add(
-                                              (function (t) {
-                                                  if (t !== Y.yt.TODAY)
-                                                      return (
-                                                          H()(
-                                                              "number" == typeof t,
-                                                              "Invalid custom status clear timeout",
-                                                          ),
-                                                          t
-                                                      );
-                                                  {
-                                                      let t = new Date();
-                                                      return (
-                                                          new Date(
-                                                              t.getFullYear(),
-                                                              t.getMonth(),
-                                                              t.getDate() + 1,
-                                                          ).getTime() - t.getTime()
-                                                      );
-                                                  }
-                                              })(l),
+                                              l === $.yt.TODAY
+                                                  ? Y.A.Millis.DAY
+                                                  : (F()("number" == typeof l, "Invalid custom status clear timeout"),
+                                                    l),
                                               "ms",
                                           )
                                           .toDate()
@@ -402,7 +386,7 @@ function tc(t) {
                         emojiName: null != n ? n.name : "",
                         createdAtMs: String(i ?? L()().toDate().getTime()),
                     }),
-                        _.default.track($.HAw.CUSTOM_STATUS_UPDATED, {
+                        _.default.track(B.HAw.CUSTOM_STATUS_UPDATED, {
                             location: null != r ? r.location : null,
                             emoji_type: null == n ? null : null != n.id ? "custom" : "unicode",
                             text_len: o.length,
@@ -420,24 +404,24 @@ function tc(t) {
         actionBarInput: (0, l.jsx)("div", {
             className: td.l3,
             children: (0, l.jsx)(u.Te, {
-                maxVisibleItems: Y.SX.length + 1,
+                maxVisibleItems: $.SX.length + 1,
                 value: j,
                 options: [
                     { value: th, key: th, label: f.intl.string(f.t.E45wvP), disabled: !0 },
-                    ...Y.SX.map((t) => ({
+                    ...$.SX.map((t) => ({
                         value: t,
                         key: t,
                         label: (function (t) {
                             switch (t) {
-                                case Y.yt.TODAY:
-                                    return G(z.A.Millis.DAY);
-                                case Y.yt.HOURS_4:
-                                    return G(4 * z.A.Millis.HOUR);
-                                case Y.yt.HOURS_1:
-                                    return G(+z.A.Millis.HOUR);
-                                case Y.yt.MINUTES_30:
-                                    return G(30 * z.A.Millis.MINUTE);
-                                case Y.yt.DONT_CLEAR:
+                                case $.yt.TODAY:
+                                    return G(Y.A.Millis.DAY);
+                                case $.yt.HOURS_4:
+                                    return G(4 * Y.A.Millis.HOUR);
+                                case $.yt.HOURS_1:
+                                    return G(+Y.A.Millis.HOUR);
+                                case $.yt.MINUTES_30:
+                                    return G(30 * Y.A.Millis.MINUTE);
+                                case $.yt.DONT_CLEAR:
                                     return f.intl.string(f.t.bRn8cq);
                                 default:
                                     (0, q.xb)(t);
@@ -456,15 +440,15 @@ function tc(t) {
                                 ? n
                                 : (function (t) {
                                       switch (t) {
-                                          case Y.yt.TODAY:
-                                              return `${f.intl.formatToPlainString(f.t.Rea2gR, { hours: 24 })} (${Q(z.A.Millis.DAY)})`;
-                                          case Y.yt.HOURS_4:
-                                              return `${f.intl.formatToPlainString(f.t.Rea2gR, { hours: 4 })} (${Q(4 * z.A.Millis.HOUR)})`;
-                                          case Y.yt.HOURS_1:
-                                              return `${f.intl.formatToPlainString(f.t.Rea2gR, { hours: 1 })} (${Q(z.A.Millis.HOUR)})`;
-                                          case Y.yt.MINUTES_30:
-                                              return `${f.intl.formatToPlainString(f.t.TS3eJb, { minutes: 30 })} (${Q(30 * z.A.Millis.MINUTE)})`;
-                                          case Y.yt.DONT_CLEAR:
+                                          case $.yt.TODAY:
+                                              return `${f.intl.formatToPlainString(f.t.Rea2gR, { hours: 24 })} (${Q(Y.A.Millis.DAY)})`;
+                                          case $.yt.HOURS_4:
+                                              return `${f.intl.formatToPlainString(f.t.Rea2gR, { hours: 4 })} (${Q(4 * Y.A.Millis.HOUR)})`;
+                                          case $.yt.HOURS_1:
+                                              return `${f.intl.formatToPlainString(f.t.Rea2gR, { hours: 1 })} (${Q(Y.A.Millis.HOUR)})`;
+                                          case $.yt.MINUTES_30:
+                                              return `${f.intl.formatToPlainString(f.t.TS3eJb, { minutes: 30 })} (${Q(30 * Y.A.Millis.MINUTE)})`;
+                                          case $.yt.DONT_CLEAR:
                                               return f.intl.string(f.t.bRn8cq);
                                           default:
                                               (0, q.xb)(t);
@@ -509,11 +493,11 @@ function tc(t) {
                         className: td.Kf,
                         ref: V,
                         children: [
-                            (0, l.jsx)("span", { ref: K, className: td._D, "aria-hidden": "true" }),
+                            (0, l.jsx)("span", { ref: z, className: td._D, "aria-hidden": "true" }),
                             (0, l.jsx)("div", {
                                 className: td.S0,
-                                children: (0, l.jsx)(w.Y, {
-                                    targetElementRef: F,
+                                children: (0, l.jsx)(N.Y, {
+                                    targetElementRef: H,
                                     renderPopout: (t) => {
                                         let { closePopout: e } = t;
                                         return (0, l.jsx)(U.A, {
@@ -537,13 +521,13 @@ function tc(t) {
                                         });
                                     },
                                     position: "left",
-                                    animation: w.Y.Animation.NONE,
+                                    animation: N.Y.Animation.NONE,
                                     align: "top",
                                     children: (t, e) => {
                                         let { isShown: n } = e;
                                         return (0, l.jsx)(E.A, {
                                             ...t,
-                                            ref: F,
+                                            ref: H,
                                             active: n,
                                             "aria-label":
                                                 null != y
@@ -569,7 +553,7 @@ function tc(t) {
                             (0, l.jsx)(v, {
                                 autosize: !0,
                                 value: x,
-                                maxLength: Y.hp,
+                                maxLength: $.hp,
                                 rows: 1,
                                 showRemainingCharacterCount: !1,
                                 placeholder: W,
@@ -584,13 +568,13 @@ function tc(t) {
                                 id: tl,
                             }),
                             (x.length > 0 || null != y) &&
-                                (0, l.jsx)(D.D, {
+                                (0, l.jsx)(w.D, {
                                     "aria-label": f.intl.string(f.t.wfYTHe),
                                     className: td.mt,
                                     onClick: () => {
                                         T(""), A(null);
                                     },
-                                    children: (0, l.jsx)(N.a, { size: "md", color: "currentColor", className: td.hj }),
+                                    children: (0, l.jsx)(D.a, { size: "md", color: "currentColor", className: td.hj }),
                                 }),
                         ],
                     }),
