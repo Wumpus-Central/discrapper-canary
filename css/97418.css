@@ -340,22 +340,6 @@
     justify-content: center
 }
 
-.clipThumbOverlay_e13340 {
-    box-sizing: border-box;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    inset-inline: 0;
-    opacity: 0;
-    padding: var(--space-8);
-    pointer-events: none;
-    transition: opacity .1s ease
-}
-
-.clipThumbOverlay_e13340.isVisible_e13340 {
-    opacity: 1
-}
-
 .container_ea79f0 {
     align-items: center;
     box-sizing: border-box;
@@ -413,6 +397,185 @@
 
 .changeKeybindButton_ea79f0 {
     margin-top: var(--space-10)
+}
+
+.clipThumbOverlay_e13340 {
+    box-sizing: border-box;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    opacity: 0;
+    padding: var(--space-8);
+    pointer-events: none;
+    transition: opacity .1s ease
+}
+
+.clipThumbOverlay_e13340.isVisible_e13340 {
+    opacity: 1
+}
+
+.card_e12da8 {
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: calc(var(--space-8)*-1);
+    padding: var(--space-8);
+    transition: background-color .1s ease
+}
+
+.card_e12da8.disabled_e12da8 {
+    cursor: wait
+}
+
+.card_e12da8.focused_e12da8,
+.card_e12da8:hover {
+    background-color: var(--background-mod-subtle);
+    filter: var(--shadow-low-hover-filter)
+}
+
+.card_e12da8.focused_e12da8 .hoverButtons_e12da8,
+.card_e12da8:focus-within .hoverButtons_e12da8,
+.card_e12da8:hover .hoverButtons_e12da8 {
+    opacity: 1
+}
+
+.card_e12da8.focused_e12da8 .thumbScrim_e12da8,
+.card_e12da8:focus-within .thumbScrim_e12da8,
+.card_e12da8:hover .thumbScrim_e12da8 {
+    opacity: 1
+}
+
+.card_e12da8.selected_e12da8 {
+    border: 2px solid var(--brand-500);
+    margin: calc(var(--space-6)*-1);
+    padding: var(--space-4)
+}
+
+.thumbFrame_e12da8 {
+    aspect-ratio: 16/9;
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-8);
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.thumbScrim_e12da8 {
+    background: linear-gradient(180deg, rgba(0, 0, 0, .6), transparent);
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .1s ease
+}
+
+.badgesTopLeft_e12da8 {
+    display: flex;
+    inset-inline-start: var(--space-8)
+}
+
+.badgesTopLeft_e12da8,
+.hoverButtons_e12da8 {
+    gap: var(--space-4);
+    position: absolute;
+    top: var(--space-8)
+}
+
+.hoverButtons_e12da8 {
+    display: inline-flex;
+    inset-inline-end: var(--space-8);
+    justify-content: flex-end;
+    opacity: 0;
+    pointer-events: auto;
+    transition: opacity .1s ease
+}
+
+.bottomBadges_e12da8 {
+    bottom: var(--space-4);
+    display: flex;
+    gap: var(--space-4);
+    inset-inline-end: var(--space-4);
+    position: absolute
+}
+
+.progressBar_e12da8 {
+    background-color: rgba(0, 0, 0, .3);
+    bottom: 0;
+    height: 4px;
+    inset-inline: 0;
+    position: absolute;
+    z-index: 2
+}
+
+.progressFill_e12da8 {
+    background-color: var(--brand-500);
+    height: 100%
+}
+
+.durationBadge_e12da8 {
+    align-items: center;
+    background: var(--control-overlay-secondary-background-default);
+    border-radius: var(--radius-xs);
+    box-sizing: border-box;
+    display: flex;
+    gap: var(--space-4);
+    height: 22px;
+    padding: 2px var(--space-4)
+}
+
+.metadata_e12da8 {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--space-8);
+    width: 100%
+}
+
+.gameIcon_e12da8 {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-shrink: 0;
+    height: 32px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: 32px
+}
+
+.gameIconImage_e12da8 {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.textInfo_e12da8 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    min-width: 0
+}
+
+.subtitle_e12da8,
+.title_e12da8 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.avatars_e12da8 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0
 }
 
 .sectionHeaderContainer__32534 {

@@ -838,7 +838,8 @@ function eh(e) {
             className: E.zT,
             children: b
                 ? (0, a.jsx)(c, {})
-                : (0, a.jsxs)(a.Fragment, {
+                : (0, a.jsxs)("div", {
+                      className: E.Xf,
                       children: [
                           (0, a.jsx)(w, { ref: d }),
                           (0, a.jsx)(ef, { transitionState: t, voiceAudioTracks: v }),

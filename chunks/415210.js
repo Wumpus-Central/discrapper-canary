@@ -463,7 +463,7 @@ let eD = s.memo(function (e) {
                     n.e("22367"),
                     n.e("86653"),
                     n.e("84262"),
-                    n.e("33230"),
+                    n.e("97418"),
                     n.e("54110"),
                     n.e("48158"),
                     n.e("32704"),
@@ -482,9 +482,9 @@ let eD = s.memo(function (e) {
                     n.e("89160"),
                     n.e("31782"),
                     n.e("20342"),
-                    n.e("2921"),
-                    n.e("35528"),
-                ]).then(n.bind(n, 355984));
+                    n.e("62194"),
+                    n.e("57634"),
+                ]).then(n.bind(n, 425545));
                 return (t) => (0, i.jsx)(e, { ...t, channelId: l.id, onClipClick: (e) => X({ clips: [e] }) });
             },
             { modalKey: eM.nm },
