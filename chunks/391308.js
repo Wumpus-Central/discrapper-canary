@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     cs: "outgoing-call-pulse__2f4f7",
     iE: "wrapper__2f4f7",
     DF: "ringing__2f4f7",
@@ -19,7 +19,6 @@ e.exports = {
     Wk: "overlayTitleText__2f4f7",
     V7: "overlayButton__2f4f7",
     qV: "overlayIconsContainer__2f4f7",
-    d5: "reducedGap__2f4f7",
     _v: "overlayButtonContainer__2f4f7",
     kl: "hideWhenInactive__2f4f7",
     gr: "titleIcon__2f4f7",

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { hS: () => g, Ay: () => A, BE: () => E });
+n.d(t, { Ay: () => I, BE: () => E, Ak: () => m, hS: () => A, b8: () => g });
 var i,
     r = (((i = {})[(i.DESKTOP = 0)] = "DESKTOP"), (i[(i.MOBILE = 1)] = "MOBILE"), i),
     s = n(636537),
@@ -10,14 +10,17 @@ var i,
     c = n(594061),
     d = n(835095),
     _ = n(264779),
-    f = n(374200),
-    h = n(788868),
+    h = n(374200),
+    f = n(788868),
     p = n(652215);
 function E() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    f.A.isFetchingActivePromotions || (e && null != f.A.lastFetchedActivePromotions) || m();
+    h.A.isFetchingActivePromotions || (e && null != h.A.lastFetchedActivePromotions) || g();
 }
-async function m() {
+function m() {
+    o.h.dispatch({ type: "ACTIVE_PROMOTIONS_CLEAR" });
+}
+async function g() {
     try {
         o.h.dispatch({ type: "ACTIVE_PROMOTIONS_FETCH" });
         let e = r.DESKTOP,
@@ -27,9 +30,9 @@ async function m() {
                 oldFormErrors: !0,
                 rejectWithError: !0,
             }),
-            n = f.A.consumedInboundPromotionId;
-        if (!f.A.hasFetchedConsumedInboundPromotionId) {
-            let e = (await (0, l.LM)(h.tv, !1)).find((e) => null != e.promotion_id && !0 === e.consumed);
+            n = h.A.consumedInboundPromotionId;
+        if (!h.A.hasFetchedConsumedInboundPromotionId) {
+            let e = (await (0, l.LM)(f.tv, !1)).find((e) => null != e.promotion_id && !0 === e.consumed);
             n = e?.promotion_id ?? null;
         }
         o.h.dispatch({ type: "ACTIVE_PROMOTIONS_FETCH_SUCCESS", promotions: t.body, consumedInboundPromotionId: n });
@@ -37,8 +40,8 @@ async function m() {
         o.h.dispatch({ type: "ACTIVE_PROMOTIONS_FETCH_FAIL" });
     }
 }
-async function g() {
-    if (!f.A.isFetchingActiveBogoPromotion)
+async function A() {
+    if (!h.A.isFetchingActiveBogoPromotion)
         try {
             o.h.dispatch({ type: "ACTIVE_BOGO_PROMOTION_FETCH" });
             let e = (
@@ -49,8 +52,8 @@ async function g() {
             o.h.dispatch({ type: "ACTIVE_BOGO_PROMOTION_FETCH_FAIL" });
         }
 }
-let A = {
-    fetchActivePromotions: m,
+let I = {
+    fetchActivePromotions: g,
     fetchClaimedOutboundPromotionCodes: async function e() {
         try {
             let e = (
@@ -71,7 +74,7 @@ let A = {
     },
     dismissOutboundPromotionNotice: function () {
         o.h.dispatch({ type: "OUTBOUND_PROMOTION_NOTICE_DISMISS" });
-        let e = f.A.lastDismissedOutboundPromotionStartDate;
+        let e = h.A.lastDismissedOutboundPromotionStartDate;
         null != e &&
             c.wc.updateAsync(
                 "userContent",
@@ -84,5 +87,5 @@ let A = {
     markOutboundPromotionsSeen() {
         o.h.dispatch({ type: "OUTBOUND_PROMOTIONS_SEEN" });
     },
-    fetchActiveBogoPromotion: g,
+    fetchActiveBogoPromotion: A,
 };

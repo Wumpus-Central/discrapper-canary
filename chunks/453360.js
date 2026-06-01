@@ -1,0 +1,61 @@
+"use strict";
+n.d(t, { i: () => l });
+var i = n(852015),
+    r = n(144367),
+    s = n(428420),
+    a = n(535384);
+class o extends a.G {
+    constructor() {
+        super("discord_protos.premium_marketing.v1.ThemeAwareAsset", [
+            { no: 1, name: "light_url", kind: "scalar", T: 9 },
+            { no: 2, name: "dark_url", kind: "scalar", T: 9 },
+            { no: 3, name: "light_static_url", kind: "scalar", T: 9 },
+            { no: 4, name: "dark_static_url", kind: "scalar", T: 9 },
+        ]);
+    }
+    create(e) {
+        let t = { lightUrl: "", darkUrl: "", lightStaticUrl: "", darkStaticUrl: "" };
+        return (
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
+            void 0 !== e && (0, r.x)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, r) {
+        let s = r ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
+            let [t, r] = e.tag();
+            switch (t) {
+                case 1:
+                    s.lightUrl = e.string();
+                    break;
+                case 2:
+                    s.darkUrl = e.string();
+                    break;
+                case 3:
+                    s.lightStaticUrl = e.string();
+                    break;
+                case 4:
+                    s.darkStaticUrl = e.string();
+                    break;
+                default:
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
+                    let o = e.skip(r);
+                    !1 !== a && (!0 === a ? i.f$.onRead : a)(this.typeName, s, t, r, o);
+            }
+        }
+        return s;
+    }
+    internalBinaryWrite(e, t, n) {
+        "" !== e.lightUrl && t.tag(1, i.O0.LengthDelimited).string(e.lightUrl),
+            "" !== e.darkUrl && t.tag(2, i.O0.LengthDelimited).string(e.darkUrl),
+            "" !== e.lightStaticUrl && t.tag(3, i.O0.LengthDelimited).string(e.lightStaticUrl),
+            "" !== e.darkStaticUrl && t.tag(4, i.O0.LengthDelimited).string(e.darkStaticUrl);
+        let r = n.writeUnknownFields;
+        return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
+    }
+}
+let l = new o();

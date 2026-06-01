@@ -1154,7 +1154,7 @@ var e0 = n(417098),
     tC = n(204651),
     ty = n(71393),
     tw = n(977997),
-    tb = n(823901),
+    tb = n(46282),
     tN = n(489277),
     t_ = n(243612),
     tR = n(296841);
@@ -2379,7 +2379,7 @@ let nz = c.memo(function (e) {
                         if (t.isDM() && null != s)
                             return void (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("36198"),
+                                    n.e("63434"),
                                     n.e("94881"),
                                     n.e("26132"),
                                     n.e("46652"),

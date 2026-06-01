@@ -11,23 +11,24 @@ var u = n(192308),
     c = n(892491),
     d = n(544231),
     _ = n(665909);
-function f(e) {
+function h(e) {
     let { channelId: t, warningId: i, senderId: r, warningType: s } = e;
     (0, o.wv)({ location: "takeover-modal" }) &&
         (0, u.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("29092"),
+                    n.e("6274"),
                     n.e("29389"),
                     n.e("25028"),
-                    n.e("93103"),
                     n.e("88941"),
-                    n.e("46248"),
+                    n.e("93103"),
+                    n.e("21435"),
+                    n.e("32823"),
                     n.e("52229"),
                     n.e("38056"),
                     n.e("34546"),
-                    n.e("60816"),
                     n.e("20577"),
+                    n.e("60816"),
                     n.e("6627"),
                     n.e("43549"),
                     n.e("70940"),
@@ -53,13 +54,13 @@ function f(e) {
             },
         );
 }
-function h(e) {
+function f(e) {
     let { channelId: t } = e;
     if (null == t || !(0, o.wv)({ location: "channel_select" }) || !(0, a.gz)()) return !1;
     let n = r.A.getChannel(t);
     if (null == n || !n.isDM()) return !1;
     let i = (0, a.Di)(t);
-    return null != i && (f({ warningId: i.id, warningType: i.type, senderId: n.getRecipientId(), channelId: t }), !0);
+    return null != i && (h({ warningId: i.id, warningType: i.type, senderId: n.getRecipientId(), channelId: t }), !0);
 }
 function p(e) {
     let { channels: t } = e;
@@ -71,10 +72,10 @@ function p(e) {
     let r = (0, a.Di)(i.id);
     return (
         !!(null != r && i.isDM()) &&
-        (f({ warningId: r.id, warningType: r.type, senderId: i.getRecipientId(), channelId: i.id }), !0)
+        (h({ warningId: r.id, warningType: r.type, senderId: i.getRecipientId(), channelId: i.id }), !0)
     );
 }
 class E extends i.A {
-    actions = { CHANNEL_SELECT: h, CHANNEL_UPDATES: p };
+    actions = { CHANNEL_SELECT: f, CHANNEL_UPDATES: p };
 }
 let m = new E();

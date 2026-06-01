@@ -468,7 +468,9 @@ function et(e) {
             return { collection: e, group: t, story: i };
         }, [n, s, o]),
         E = _?.name ?? "Design System",
-        T = p?.name;
+        T = p?.name,
+        y = null != p && null != h ? (0, i.jsx)(W, { story: p, groupTitle: h.title, controlsLayout: a }) : null,
+        N = _?.Provider;
     return (0, i.jsxs)("div", {
         className: V.zr,
         children: [
@@ -569,10 +571,7 @@ function et(e) {
                             }),
                             (0, i.jsx)("div", {
                                 className: V.Qs,
-                                children:
-                                    null != p && null != h
-                                        ? (0, i.jsx)(W, { story: p, groupTitle: h.title, controlsLayout: a })
-                                        : null,
+                                children: null != N ? (0, i.jsx)(N, { children: y }) : y,
                             }),
                         ],
                     }),

@@ -1,34 +1,74 @@
-e.d(t, { X: () => h, n: () => j });
-var n = e(627968),
-    i = e(64700),
-    c = e(503698),
-    r = e.n(c),
-    o = e(342952),
-    a = e(990078),
-    u = e(240248),
-    l = e(594832),
-    p = e(985018),
-    d = e(860895);
-function x(s) {
-    let { spec: t, icon: e, tooltipText: i } = s,
-        c = !(0, u.uJ)(i),
-        o = (0, n.jsx)("div", {
-            className: r()(d.Fx, { [d.Y_]: c }),
-            style: { top: t.iconInset, insetInlineEnd: t.iconInset },
-            children: e,
-        });
-    return c ? (0, n.jsx)(a.m, { text: i, position: "top", delay: l.Zh, children: o }) : o;
-}
-function h(s) {
-    let { spec: t, className: e, ...i } = s;
-    return (0, n.jsx)(x, {
-        spec: t,
-        icon: (0, n.jsx)(o.I, { className: r()(d.XA, e), ...i, size: t.avatarSize, maxUsers: 3 }),
-        tooltipText: p.intl.string(p.t["OnWY3/"]),
+"use strict";
+n.d(t, { A: () => E });
+var i = n(627968),
+    r = n(64700),
+    s = n(877624),
+    a = n(554146),
+    o = n(349288),
+    l = n(367727),
+    u = n(174459),
+    c = n(549996),
+    d = n(498470),
+    _ = n(637706),
+    h = n(635995),
+    f = n(652215),
+    p = n(49999);
+function E() {
+    let e = (0, c.c)(s.C.NAGBAR),
+        t = e?.properties.properties.oneofKind === "nagbar" ? e.properties.properties.nagbar : null,
+        n = e?.promotionId,
+        E = r.useCallback(
+            (e) => {
+                null != n &&
+                    (0, l.qr)(a.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, n, { dismissAction: e, forceTrack: !0 });
+            },
+            [n],
+        ),
+        m = r.useCallback(() => {
+            u.default.track(f.HAw.APP_NOTICE_CLOSED, { notice_type: f.kqX.PREMIUM_MARKETING_NAGBAR }),
+                E(p.i.USER_DISMISS);
+        }, [E]),
+        g = r.useRef(null);
+    if (
+        (r.useEffect(() => {
+            null == t ||
+                null == n ||
+                (g.current !== n &&
+                    ((g.current = n), (0, l.Wx)(a.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, { snowflakeId: n })));
+        }, [t, n]),
+        null == t)
+    )
+        return null;
+    let A = (0, d.h)({
+            buttonAction: t.ctaAction,
+            deeplinkSection: t.deeplinkSection,
+            onClose: () => {
+                E(p.i.TAKE_ACTION);
+            },
+        }),
+        I = (0, _.C)(t.helpArticle, "");
+    return (0, i.jsxs)(h.T0, {
+        onClick: m,
+        children: [
+            (0, i.jsxs)(h.In, {
+                children: [
+                    t.body,
+                    null != I &&
+                        (0, i.jsxs)(i.Fragment, {
+                            children: ["\xa0", (0, i.jsx)(o.Anchor, { href: I.url, children: I.linkText })],
+                        }),
+                ],
+            }),
+            "" !== t.ctaLabel &&
+                (0, i.jsx)(h.fY, {
+                    text: t.ctaLabel,
+                    onClick: () => {
+                        u.default.track(f.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
+                            notice_type: f.kqX.PREMIUM_MARKETING_NAGBAR,
+                        }),
+                            A();
+                    },
+                }),
+        ],
     });
-}
-function j(s) {
-    let { user: t, ...e } = s,
-        c = i.useMemo(() => [t], [t]);
-    return (0, n.jsx)(h, { users: c, ...e });
 }

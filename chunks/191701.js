@@ -116,7 +116,7 @@ var tu = i(387755),
     tK = i(480870),
     tG = i(355622),
     tF = i(408018),
-    tY = i(201349),
+    tY = i(331159),
     tH = i(451909),
     tJ = i(135621),
     tB = i(381941),
@@ -196,14 +196,14 @@ var tQ = i(554146),
     t1 = i(263577),
     t2 = i(826673),
     t7 = i(308726),
-    t9 = i(823901),
-    t8 = i(360469),
+    t8 = i(46282),
+    t9 = i(360469),
     t5 = i(70617),
     t3 = i(881732);
 function t6(t) {
     let { game: e } = t,
         i = (0, t0.h)(e.id);
-    return null == i ? null : (0, $.jsx)(t1.V, { src: i.getIconURL(t8.iu.LARGE), size: 40 });
+    return null == i ? null : (0, $.jsx)(t1.V, { src: i.getIconURL(t9.iu.LARGE), size: 40 });
 }
 let t4 = 5 * k.A.Millis.SECOND,
     et = 8 * k.A.Millis.SECOND,
@@ -611,7 +611,7 @@ let eS = new eE(s.h, {
                                     i = () => {
                                         l("one-click-go-live");
                                     };
-                                (0, t9.H)({
+                                (0, t8.H)({
                                     pid: w.A.getTargetPID(),
                                     analyticsLocation: z.ThZ.OVERLAY_NUDGE,
                                     allowOneClickGoLive: !0,

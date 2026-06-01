@@ -1,0 +1,71 @@
+.collectiblePreviewsContainer__7f14f {
+    background-color: var(--background-surface-highest);
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    width: 600px
+}
+
+.previewContainer__7f14f {
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+    --custom-bundle-arrows-opacity: 0
+}
+
+.previewContainer__7f14f:hover {
+    --custom-bundle-arrows-opacity: 1
+}
+
+.previewSurface__7f14f {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    position: absolute
+}
+
+.full-motion .previewSurface__7f14f {
+    animation: previewFadeIn__7f14f .3s ease-in-out
+}
+
+@keyframes previewFadeIn__7f14f {
+    0% {
+        opacity: .2
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.collectiblePreviewsContainerNoChat__7f14f,
+.collectiblePreviewsContainerWithChat__7f14f,
+.fractionalNitroPreviewContainer__7f14f {}
+
+.pdpControls__7f14f {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    inset-inline-end: 16px;
+    justify-content: flex-end;
+    position: absolute;
+    top: 16px;
+    z-index: 1
+}
+
+.modalRoot_ab2984 {
+    background-color: var(--custom-background-primary);
+    border-radius: inherit;
+    height: 600px;
+    margin-bottom: calc(var(--custom-modal-padding-bottom)*-1 - 1px);
+    margin-top: calc(var(--custom-modal-padding-top)*-1 - 1px);
+    margin-inline: -1px;
+    overflow: clip
+}
+
+.modalContent_ab2984 {
+    display: flex;
+    height: 100%;
+    padding: 0
+}

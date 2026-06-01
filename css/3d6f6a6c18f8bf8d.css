@@ -1,0 +1,19 @@
+.surface__5b95d {
+    background: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    display: flex;
+    justify-content: center;
+    padding: 24px
+}
+
+.nagbarOverride__5b95d {
+    width: 100%
+}
+
+.chatInputSurface__5b95d {
+    background: var(--background-gradient-highest, var(--chat-background-default));
+    border-radius: var(--radius-sm);
+    display: flex;
+    justify-content: center;
+    padding: 24px
+}

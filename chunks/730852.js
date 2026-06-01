@@ -43,24 +43,25 @@ let w = function (e, t) {
             if (e && l.isGuildStageVoice() && (0, m.xn)(l.id))
                 return void (0, h.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("90665"),
+                        n.e("65424"),
                         n.e("24199"),
                         n.e("54048"),
                         n.e("43039"),
                         n.e("88077"),
                         n.e("32817"),
-                        n.e("1555"),
+                        n.e("13681"),
                         n.e("21690"),
                         n.e("55314"),
                         n.e("89094"),
                         n.e("29177"),
-                        n.e("5501"),
                         n.e("32551"),
-                        n.e("57840"),
+                        n.e("76881"),
                         n.e("38835"),
                         n.e("44695"),
-                        n.e("13681"),
                         n.e("45723"),
+                        n.e("1555"),
+                        n.e("5501"),
+                        n.e("23891"),
                         n.e("43568"),
                     ]).then(n.bind(n, 717523));
                     return (t) => e({ channel: l, ...t });

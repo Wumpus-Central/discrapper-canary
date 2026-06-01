@@ -1,0 +1,30 @@
+"use strict";
+n.d(t, { A: () => h });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(562708),
+    o = n(877624),
+    l = n(406810),
+    u = n(834730),
+    c = n(508770),
+    d = n(139286),
+    _ = n(364424);
+function h(e) {
+    let { componentId: t, badgeCopy: n, acknowledgedBadgeCopy: r, isDismissed: h } = e;
+    return ((0, d.A)({
+        type: a.ImpressionTypes.VIEW,
+        name: a.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+        properties: { component_type: o.C.PREMIUM_TAB, component_id: t },
+    }),
+    h)
+        ? (0, i.jsxs)("div", {
+              className: s()(_.BE, _.Hn),
+              children: [
+                  (0, i.jsx)(l.O, { size: "custom", width: 10, height: 10, color: "currentColor", className: _.Kk }),
+                  (0, i.jsx)(u.E, { variant: "eyebrow", color: "text-subtle", children: r }),
+              ],
+          })
+        : (0, i.jsx)(c.E, { type: { text: n }, variant: "expressive" });
+}
