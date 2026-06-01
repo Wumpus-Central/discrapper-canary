@@ -105,6 +105,9 @@ class l extends i.A {
     exportClipToFile(e, t, n) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
+    setClipsPerfMonitoring(e, t, n) {
+        return Promise.reject(Error("UNSUPPORTED"));
+    }
     saveScreenshot(e, t, n, i, r) {
         return Promise.reject(Error("UNSUPPORTED"));
     }

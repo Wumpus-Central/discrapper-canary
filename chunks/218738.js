@@ -1,88 +1,90 @@
-n.d(t, { default: () => f });
-var i = n(627968),
-    a = n(64700),
-    _ = n(110259),
-    r = n(192308),
-    o = n(930932),
-    l = n(878234),
-    s = n(382935),
-    c = n(835806),
-    d = n(954571),
-    b = n(652215),
-    u = n(670455),
-    m = n(985018),
-    p = n(564082);
-function f(e) {
-    let { isStreamer: t, stream: f, streamApplication: g, onClose: E, transitionState: S, analyticsData: h } = e;
+i.d(n, { default: () => g });
+var t = i(627968),
+    a = i(64700),
+    r = i(562708),
+    l = i(192308),
+    o = i(930932),
+    s = i(878234),
+    d = i(382935),
+    u = i(21217),
+    c = i(835806),
+    m = i(174459),
+    _ = i(652215),
+    p = i(670455),
+    f = i(375708),
+    b = i(564082);
+function g(e) {
+    let { isStreamer: n, stream: g, streamApplication: E, onClose: A, transitionState: S, analyticsData: T } = e,
+        { surveyEmojiKind: M } = u.A.useConfig({ location: "StreamFeedback" });
     a.useEffect(() => {
-        d.default.track(b.HAw.OPEN_MODAL, {
+        m.default.track(_.HAw.OPEN_MODAL, {
             type: "Stream Problem Report",
-            other_user_id: f.ownerId,
-            application_id: null != g ? g.id : null,
-            application_name: null != g ? g.name : null,
-            game_id: null != g ? g.id : null,
+            other_user_id: g.ownerId,
+            application_id: null != E ? E.id : null,
+            application_name: null != E ? E.name : null,
+            game_id: null != E ? E.id : null,
             source: "Stream End",
         });
-    }, [f.ownerId, g]);
-    let j = m.intl.string(m.t["5smP3R"]),
-        x = m.intl.string(m.t["0uxA2V"]),
-        A = m.intl.string(m.t.CqjnLN),
-        T = {
-            impressionName: _.ImpressionNames.STREAM_FEEDBACK_MODAL,
+    }, [g.ownerId, E]);
+    let C = f.intl.string(f.t["5smP3R"]),
+        h = f.intl.string(f.t["0uxA2V"]),
+        k = f.intl.string(f.t.CqjnLN),
+        v = {
+            impressionName: r.ImpressionNames.STREAM_FEEDBACK_MODAL,
             impressionProperties: {
-                media_session_id: h.media_session_id,
-                rtc_connection_id: h.rtc_connection_id,
-                parent_media_session_id: h.parent_media_session_id,
+                media_session_id: T.media_session_id,
+                rtc_connection_id: T.rtc_connection_id,
+                parent_media_session_id: T.parent_media_session_id,
             },
         },
-        R = {
-            value: t ? u.Eq.STREAMING : u.Eq.STREAM_WATCHING,
-            label: m.intl.string(t ? p.default["0ZBLiZ"] : p.default.TVTIT1),
-            problemsHeader: m.intl.string(m.t["6Y1t5P"]),
-            problemOptions: (0, o.wq)({ isStreamer: t }),
-            freeformConfig: { value: u.j6.FREEFORM, label: m.intl.string(m.t.emlT91) },
+        w = {
+            value: n ? p.Eq.STREAMING : p.Eq.STREAM_WATCHING,
+            label: f.intl.string(n ? b.default["0ZBLiZ"] : b.default.TVTIT1),
+            problemsHeader: f.intl.string(f.t["6Y1t5P"]),
+            problemOptions: (0, o.wq)({ isStreamer: n }),
+            freeformConfig: { value: p.j6.FREEFORM, label: f.intl.string(f.t.emlT91) },
         };
-    return (0, i.jsx)(s.A, {
+    return (0, t.jsx)(d.A, {
         onSubmit: function (e) {
-            let { dontShowAgain: t, rating: a, feedback: _, category: s, problem: d } = e;
+            let { dontShowAgain: n, rating: a, feedback: r, category: d, problem: u } = e;
             if (
-                (t && (0, o.n3)({ feedbackType: u.MW.STREAM, location: "StreamFeedback" }), null != a) &&
+                (n && (0, o.n3)({ feedbackType: p.MW.STREAM, location: "StreamFeedback" }), null != a) &&
                 ((0, c.A)({
-                    problem: d?.value ?? null,
-                    category: s,
-                    variant: d?.variant ?? null,
-                    stream: f,
-                    feedback: _,
-                    streamApplication: g,
-                    analyticsData: h,
+                    problem: u?.value ?? null,
+                    category: d,
+                    variant: u?.variant ?? null,
+                    stream: g,
+                    feedback: r,
+                    streamApplication: E,
+                    analyticsData: T,
                     location: "Stream End",
                     rating: a,
                 }),
-                null != d)
+                null != u)
             ) {
-                if ((0, l.r)(a, s, d))
-                    return void (0, r.openModalLazy)(async () => {
-                        let { default: e } = await n.e("69791").then(n.bind(n, 72514));
-                        return (t) =>
-                            (0, i.jsx)(e, {
-                                ...t,
-                                mediaSessionId: h.media_session_id,
-                                rtcConnectionId: h.rtc_connection_id,
+                if ((0, s.r)(a, d, u))
+                    return void (0, l.openModalLazy)(async () => {
+                        let { default: e } = await i.e("69791").then(i.bind(i, 72514));
+                        return (n) =>
+                            (0, t.jsx)(e, {
+                                ...n,
+                                mediaSessionId: T.media_session_id,
+                                rtcConnectionId: T.rtc_connection_id,
                             });
                     });
-                (0, r.openModalLazy)(async () => {
-                    let { default: e } = await n.e("37836").then(n.bind(n, 845671));
-                    return (t) => (0, i.jsx)(e, { body: m.intl.string(m.t.mMTVnv), ...t });
+                (0, l.openModalLazy)(async () => {
+                    let { default: e } = await i.e("37836").then(i.bind(i, 845671));
+                    return (n) => (0, t.jsx)(e, { body: f.intl.string(f.t.mMTVnv), ...n });
                 });
             }
         },
-        onClose: E,
-        ratingHeader: j,
-        ratingEmojiKind: "face",
-        ratingBody: t ? x : A,
-        categoriesHeader: m.intl.string(p.default.tq8598),
-        optionsTree: [R],
-        impression: T,
+        onClose: A,
+        ratingHeader: C,
+        ratingEmojiKind: M,
+        ratingBody: n ? h : k,
+        categoriesHeader: f.intl.string(b.default.tq8598),
+        optionsTree: [w],
+        impression: v,
         transitionState: S,
     });
 }
