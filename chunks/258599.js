@@ -1,108 +1,114 @@
 "use strict";
-n.d(t, { e: () => k }), n(321073);
+n.d(t, { e: () => x }), n(321073);
 var i,
     r = n(627968),
     s = n(64700),
     a = n(919523),
     o = n(503698),
     l = n.n(o),
-    d = n(17928),
-    _ = n(116833);
+    u = n(17928),
+    c = n(116833);
 n(938796);
-var u =
+var d =
         (((i = {})[(i.MOBILE_DARK_GRADIENT_THEME_ENABLED = 4)] = "MOBILE_DARK_GRADIENT_THEME_ENABLED"),
         (i[(i.MOBILE_LIGHT_GRADIENT_THEME_ENABLED = 8)] = "MOBILE_LIGHT_GRADIENT_THEME_ENABLED"),
         (i[(i.REDUCED_CONTRAST_ENABLED = 16)] = "REDUCED_CONTRAST_ENABLED"),
         (i[(i.INCREASED_CONTRAST_ENABLED = 32)] = "INCREASED_CONTRAST_ENABLED"),
         (i[(i.REDUCE_SATURATION_ENABLED = 64)] = "REDUCE_SATURATION_ENABLED"),
         i),
-    c = n(460890),
-    E = n(38021),
-    h = n(818348);
-function m(e) {
+    _ = n(460890),
+    h = n(38021),
+    f = n(818348);
+function p(e) {
     let {
             children: t,
-            theme: n = h.NJ.DARK,
+            theme: n = f.NJ.DARK,
             primaryColor: i = null,
             secondaryColor: a = null,
             gradient: o = null,
             flags: l = 0,
-            contrast: d = 1,
-            saturation: _ = 1,
-            density: u = "compact",
-            disableAdaptiveTheme: c = !1,
-            reduceAdaptiveTheme: m = !1,
+            contrast: u = 1,
+            saturation: c = 1,
+            density: d = "compact",
+            disableAdaptiveTheme: _ = !1,
+            reduceAdaptiveTheme: p = !1,
         } = e,
-        f = s.useMemo(
+        E = s.useMemo(
             () =>
-                (0, E.dI)({
+                (0, h.dI)({
                     theme: n,
                     primaryColor: i,
                     secondaryColor: a,
                     gradient: o,
                     flags: l,
-                    contrast: d,
-                    saturation: _,
-                    density: u,
-                    disableAdaptiveTheme: c,
-                    reduceAdaptiveTheme: m,
+                    contrast: u,
+                    saturation: c,
+                    density: d,
+                    disableAdaptiveTheme: _,
+                    reduceAdaptiveTheme: p,
                 }),
-            [n, i, a, o, l, d, _, u, c, m],
+            [n, i, a, o, l, u, c, d, _, p],
         );
-    return (0, r.jsx)(E.Dx.Provider, { value: f, children: t });
+    return (0, r.jsx)(h.Dx.Provider, { value: E, children: t });
 }
-var f = n(775602),
-    g = n(989395),
-    p = n(71855),
+var E = n(775602),
+    m = n(989395),
+    g = n(71855),
     A = n(267102),
     I = n(652215);
 let T = ["Shift", "Alt", "Meta", "Control"];
 var S = n(534409),
-    N = n(614738),
-    C = n(750506),
-    R = n(869146),
-    O = n(773669),
-    y = n(363195),
-    v = n(531685),
+    y = n(614738);
+let N = (0, n(945810).mj)({
+    name: "2026-05-mana-type-consolidation",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+var v = n(750506),
+    C = n(869146),
+    R = n(773669),
+    O = n(363195),
+    b = n(531685),
     D = n(19575),
     L = n(418842),
-    b = n(597619),
-    w = n(571247),
-    P = n(985018);
-function k(e) {
+    w = n(597619),
+    M = n(571247),
+    P = n(375708);
+function x(e) {
     let { windowKey: t, themeOverride: n, children: i } = e,
         o = null != t,
-        [E] = s.useState(() => D.Ay.getEnableHardwareAcceleration()),
+        [h] = s.useState(() => D.Ay.getEnableHardwareAcceleration()),
         {
-            locale: h,
-            theme: k,
-            focused: M,
+            locale: f,
+            theme: x,
+            focused: k,
             currentWindow: U,
-            fontScale: x,
-            fontScaleClass: G,
+            fontScale: G,
+            fontScaleClass: F,
             keyboardModeEnabled: V,
-            saturation: F,
-            desaturateUserColors: B,
-            useForcedColors: H,
-            systemForcedColors: j,
+            saturation: B,
+            desaturateUserColors: H,
+            useForcedColors: j,
+            systemForcedColors: Y,
             useReducedMotion: W,
-            alwaysShowLinkDecorations: Y,
-            highContrastMode: K,
-        } = (0, d.cf)([O.default, f.A, y.A, R.A, v.A], () => ({
-            locale: O.default.locale,
-            theme: n ?? y.A.theme,
-            focused: o ? R.A.getWindowFocused(t) : v.A.isFocused(),
-            currentWindow: o ? (R.A.getWindow(t) ?? window) : window,
-            fontScale: f.A.fontScale,
-            fontScaleClass: f.A.fontScaleClass,
-            keyboardModeEnabled: f.A.keyboardModeEnabled,
-            saturation: f.A.saturation,
-            desaturateUserColors: f.A.desaturateUserColors,
-            useForcedColors: f.A.useForcedColors,
-            systemForcedColors: f.A.systemForcedColors,
-            useReducedMotion: f.A.useReducedMotion,
-            alwaysShowLinkDecorations: f.A.alwaysShowLinkDecorations,
-            highContrastMode: f.A.isHighContrastModeEnabled,
+            alwaysShowLinkDecorations: K,
+            highContrastMode: $,
+        } = (0, u.cf)([R.default, E.A, O.A, C.A, b.A], () => ({
+            locale: R.default.locale,
+            theme: n ?? O.A.theme,
+            focused: o ? C.A.getWindowFocused(t) : b.A.isFocused(),
+            currentWindow: o ? (C.A.getWindow(t) ?? window) : window,
+            fontScale: E.A.fontScale,
+            fontScaleClass: E.A.fontScaleClass,
+            keyboardModeEnabled: E.A.keyboardModeEnabled,
+            saturation: E.A.saturation,
+            desaturateUserColors: E.A.desaturateUserColors,
+            useForcedColors: E.A.useForcedColors,
+            systemForcedColors: E.A.systemForcedColors,
+            useReducedMotion: E.A.useReducedMotion,
+            alwaysShowLinkDecorations: E.A.alwaysShowLinkDecorations,
+            highContrastMode: E.A.isHighContrastModeEnabled,
         })),
         z = (function (e, t) {
             let [n, i] = s.useState(0),
@@ -134,17 +140,18 @@ function k(e) {
                 }, [e, a, n, t]),
                 t && 0 === n && a
             );
-        })(U, __OVERLAY__ || M),
-        $ = 0;
-    1 !== F && ($ |= u.REDUCE_SATURATION_ENABLED);
-    let q = (0, L.C)(),
-        X = (0, S.qK)("RootThemeContextProvider"),
-        Z = (0, S.k5)("RootThemeContextProvider"),
-        Q = (0, S.lV)("RootThemeContextProvider"),
-        J = (0, N.y)("RootThemeContextProvider"),
-        ee = (0, p.m2)({ isPopoutWindow: o }),
-        et = (function (e, t, n, i, r) {
-            let o = s.useContext(g.A),
+        })(U, __OVERLAY__ || k),
+        q = 0;
+    1 !== B && (q |= d.REDUCE_SATURATION_ENABLED);
+    let X = (0, L.C)(),
+        Z = (0, S.qK)("RootThemeContextProvider"),
+        Q = (0, S.k5)("RootThemeContextProvider"),
+        J = (0, S.lV)("RootThemeContextProvider"),
+        ee = (0, y.y)("RootThemeContextProvider"),
+        et = N.useConfig({ location: "RootThemeContextProvider" }).enabled,
+        en = (0, g.m2)({ isPopoutWindow: o }),
+        ei = (function (e, t, n, i, r) {
+            let o = s.useContext(m.A),
                 l = s.useCallback(
                     () => ({
                         i18n: {
@@ -162,10 +169,10 @@ function k(e) {
                             BETA: P.intl.string(P.t.oW0eUd),
                             EARLY_ACCESS: P.intl.string(P.t.EYxi0o),
                             BILLING_TRIAL_FREE_TRIAL_TEXT: P.intl.string(P.t.IBYG5U),
-                            MODAL_DONT_SHOW_AGAIN: P.intl.string(w.default.m3Vfcs),
-                            LISTBOX_EMPTY_STATE: P.intl.string(w.default.db85vU),
+                            MODAL_DONT_SHOW_AGAIN: P.intl.string(M.default.m3Vfcs),
+                            LISTBOX_EMPTY_STATE: P.intl.string(M.default.db85vU),
                             LISTBOX_EMPTY_STATE_WITH_QUERY: (e) =>
-                                P.intl.formatToPlainString(w.default.bPKiId, { query: e }),
+                                P.intl.formatToPlainString(M.default.bPKiId, { query: e }),
                             KEY_CTRL_A11Y_LABEL: P.intl.string(P.t.jm6v8i),
                             KEY_CMD_A11Y_LABEL: P.intl.string(P.t.pYkiQq),
                             KEY_ALT_A11Y_LABEL: P.intl.string(P.t.R2n7d3),
@@ -187,83 +194,84 @@ function k(e) {
                             KEY_BACKSPACE: P.intl.string(P.t["L+36+h"]),
                             KEY_BACKSPACE_A11Y_LABEL: P.intl.string(P.t["9c/Ikv"]),
                             KEY_DELETE_A11Y_LABEL: P.intl.string(P.t.BTFDmq),
-                            DATE_INPUT_OPEN_CALENDAR_LABEL: P.intl.string(w.default.I8kUqR),
-                            CALENDAR_PREVIOUS_MONTH_LABEL: P.intl.string(w.default.raS6yf),
-                            CALENDAR_NEXT_MONTH_LABEL: P.intl.string(w.default["/cp93l"]),
+                            DATE_INPUT_OPEN_CALENDAR_LABEL: P.intl.string(M.default.I8kUqR),
+                            CALENDAR_PREVIOUS_MONTH_LABEL: P.intl.string(M.default.raS6yf),
+                            CALENDAR_NEXT_MONTH_LABEL: P.intl.string(M.default["/cp93l"]),
                             INLINE_NOTICE_GENERIC_ERROR: P.intl.string(P.t["rTU7/z"]),
                             STEP_INDICATOR: (e, t) =>
-                                P.intl.formatToPlainString(w.default["v2YSk/"], { stepNumber: e, stepCount: t }),
-                            SELECT_PLACEHOLDER: P.intl.string(w.default["A+pfVR"]),
-                            CLEAR_SELECTION: P.intl.string(w.default.JA5C7L),
-                            SELECTED_TAGS_HEADING: P.intl.string(w.default.VMNfsY),
-                            PERCENT_COMPLETE: (e) => P.intl.formatToPlainString(w.default["2L/ygS"], { percent: e }),
+                                P.intl.formatToPlainString(M.default["v2YSk/"], { stepNumber: e, stepCount: t }),
+                            SELECT_PLACEHOLDER: P.intl.string(M.default["A+pfVR"]),
+                            CLEAR_SELECTION: P.intl.string(M.default.JA5C7L),
+                            SELECTED_TAGS_HEADING: P.intl.string(M.default.VMNfsY),
+                            PERCENT_COMPLETE: (e) => P.intl.formatToPlainString(M.default["2L/ygS"], { percent: e }),
                         },
                         locale: r,
                         theme: e,
                         saturation: t,
-                        defaultLayerContext: C.uY,
+                        defaultLayerContext: v.uY,
                         experiments: { enabledExperiments: n },
                         trackImpression: o,
                         isWindowFocused: () => i,
-                        dynamicGraphicComponents: _.Q,
+                        dynamicGraphicComponents: c.Q,
                     }),
                     [e, t, n, o, i, r],
                 ),
-                [d, u] = s.useState(l);
+                [u, d] = s.useState(l);
             return (
                 s.useLayoutEffect(() => {
                     function e() {
-                        u(l);
+                        d(l);
                     }
                     (0, a.waitForAllDefaultIntlMessagesLoaded)().then(e), P.intl.onLocaleChange(e);
                 }, [l]),
-                d
+                u
             );
         })(
-            k,
-            F,
+            x,
+            B,
             s.useMemo(() => {
                 let e = [];
                 return (
-                    X && e.push("refresh-fast-follow-avatars"),
-                    Z && e.push("refresh-fast-follow-guild-bg"),
-                    Q && e.push("refresh-fast-follow-distinct-borders"),
-                    J && e.push("mana-toggle-inputs"),
+                    Z && e.push("refresh-fast-follow-avatars"),
+                    Q && e.push("refresh-fast-follow-guild-bg"),
+                    J && e.push("refresh-fast-follow-distinct-borders"),
+                    ee && e.push("mana-toggle-inputs"),
+                    et && e.push("mana-type-consolidation"),
                     e
                 );
-            }, [X, Z, Q, J]),
-            M,
-            h,
+            }, [Z, Q, J, ee, et]),
+            k,
+            f,
         );
-    return (0, r.jsx)(c.GE, {
-        value: et,
-        children: (0, r.jsx)(m, {
-            theme: k,
-            flags: $,
-            saturation: F,
-            density: q,
-            children: (0, r.jsx)(b.fs, {
-                lang: h,
-                theme: k,
-                density: q,
-                focused: M,
-                fontScale: x,
-                fontScaleClass: G,
+    return (0, r.jsx)(_.GE, {
+        value: ei,
+        children: (0, r.jsx)(p, {
+            theme: x,
+            flags: q,
+            saturation: B,
+            density: X,
+            children: (0, r.jsx)(w.fs, {
+                lang: f,
+                theme: x,
+                density: X,
+                focused: k,
+                fontScale: G,
+                fontScaleClass: F,
                 keyboardModeEnabled: V,
                 mouseMode: z,
-                saturation: F,
-                desaturateUserColors: B,
-                useForcedColors: H,
-                systemForcedColors: j,
+                saturation: B,
+                desaturateUserColors: H,
+                useForcedColors: j,
+                systemForcedColors: Y,
                 useReducedMotion: W,
-                alwaysShowLinkDecorations: Y,
-                hardwareAccelerationEnabled: E,
-                highContrastMode: K,
+                alwaysShowLinkDecorations: K,
+                hardwareAccelerationEnabled: h,
+                highContrastMode: $,
                 isPopoutWindow: o,
-                rootClassName: l()(ee, {
-                    "refresh-fast-follow-avatars": X,
-                    "refresh-fast-follow-guild-bg": Z,
-                    "refresh-fast-follow-distinct-borders": Q,
+                rootClassName: l()(en, {
+                    "refresh-fast-follow-avatars": Z,
+                    "refresh-fast-follow-guild-bg": Q,
+                    "refresh-fast-follow-distinct-borders": J,
                 }),
                 children: i,
             }),
