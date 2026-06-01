@@ -1,149 +1,143 @@
-n.d(t, { A: () => p });
-var l = n(627968),
-    s = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    r = n(990078),
-    o = n(614820),
-    u = n(862482),
-    d = n(781696),
-    c = n(573435),
-    m = n(270082);
-let h = s.forwardRef(function (e, t) {
-        let {
-                children: n,
-                onContextMenu: s,
-                onClick: i,
-                onMouseDown: r,
-                disabled: o,
-                icon: d,
-                iconForeground: h,
-                innerClassName: p,
-                className: f,
-                redGlow: g,
-                onMouseEnter: A,
-                onMouseLeave: x,
-                "aria-label": C,
-                "aria-checked": v,
-                role: E,
-                plated: T,
-            } = e,
-            j =
-                "function" == typeof d
-                    ? (0, l.jsx)(d, {
-                          width: 20,
-                          height: 20,
-                          size: "custom",
-                          colorClass: h ?? "",
-                          color: "currentColor",
-                      })
-                    : d;
-        return (0, l.jsxs)(u.$n, {
-            "data-migration-pending": !0,
-            "aria-label": C,
-            buttonRef: t,
-            look: u.$n.Looks.BLANK,
-            size: u.$n.Sizes.NONE,
-            disabled: o,
-            innerClassName: p,
-            wrapperClassName: a()(m.x6, f),
-            className: a()(m.x6, f, { [m.Xr]: g, [m.r9]: o, [m.Sn]: !o, [m.ZQ]: T, [m.OH]: g && T }),
-            onClick: (e) => {
-                null != i && i(e);
-            },
-            onMouseDown: r,
-            onMouseEnter: A,
-            onMouseLeave: x,
-            onContextMenu: s,
-            role: E,
-            "aria-checked": v,
-            focusProps: { offset: { left: -1, top: -1, right: 1, bottom: 1 } },
-            children: [
-                null != n ? (0, l.jsx)(c.Ay, { width: 20, height: 20, mask: c.Ay.Masks.PANEL_BUTTON, children: j }) : j,
-                n,
-            ],
-        });
-    }),
-    p = s.forwardRef(function (e, t) {
-        if (null == e.tooltipType) {
-            let {
-                    tooltipText: n,
-                    tooltipForceOpen: s,
-                    tooltipShouldShow: i,
-                    tooltipPositionKey: a,
-                    "aria-label": u,
-                    ...d
-                } = e,
-                c = (0, o.O)(n),
-                m = u ?? c;
-            return (0, l.jsx)(r.m, {
-                text: n,
-                forceOpen: s,
-                shouldShow: i,
-                positionKey: a,
-                ariaHidden: m === c,
-                children: (0, l.jsx)(h, { ...d, "aria-label": m, ref: t }),
-            });
-        }
-        {
-            let {
-                tooltipText: n,
-                tooltipForceOpen: s,
-                tooltipShouldShow: i,
-                tooltipPositionKey: a,
-                onClick: r,
-                onMouseEnter: o,
-                onMouseLeave: u,
-                onContextMenu: c,
-                onFocus: p,
-                onBlur: f,
-                "aria-label": g,
-                ...A
-            } = e;
-            return (0, l.jsx)(d.ST, {
-                "data-migration-pending": !0,
-                tooltipClassName: m.RF,
-                tooltipContentClassName: m.In,
-                "aria-label": g,
-                forceOpen: s,
-                shouldShow: i,
-                color: d.oM.GREEN,
-                positionKeyStemOverride: a,
-                text: n,
-                children: (e) => {
-                    let {
-                        onClick: n,
-                        onMouseEnter: s,
-                        onMouseLeave: i,
-                        onContextMenu: a,
-                        onFocus: d,
-                        onBlur: m,
-                        "aria-label": g,
-                    } = e;
-                    return (0, l.jsx)(h, {
-                        onClick: (e) => {
-                            n?.(), r?.(e);
-                        },
-                        onMouseEnter: () => {
-                            s?.(), o?.();
-                        },
-                        onMouseLeave: () => {
-                            i?.(), u?.();
-                        },
-                        onContextMenu: (e) => {
-                            a?.(), c?.(e);
-                        },
-                        onFocus: () => {
-                            d?.(), p?.();
-                        },
-                        onBlur: () => {
-                            m?.(), f?.();
-                        },
-                        "aria-label": g,
-                        ...A,
-                        ref: t,
-                    });
-                },
-            });
-        }
+n.d(t, { A: () => h });
+var l = n(627968);
+n(64700);
+var s = n(503698),
+    i = n.n(s),
+    a = n(990078),
+    r = n(614820),
+    o = n(862482),
+    u = n(781696),
+    d = n(573435),
+    c = n(270082);
+function m(e) {
+    let {
+            children: t,
+            onContextMenu: n,
+            onClick: s,
+            onMouseDown: a,
+            disabled: r,
+            icon: u,
+            iconForeground: m,
+            innerClassName: h,
+            className: p,
+            redGlow: f,
+            onMouseEnter: g,
+            onMouseLeave: A,
+            "aria-label": x,
+            "aria-checked": C,
+            role: v,
+            plated: E,
+            ref: T,
+        } = e,
+        j =
+            "function" == typeof u
+                ? (0, l.jsx)(u, { width: 20, height: 20, size: "custom", colorClass: m ?? "", color: "currentColor" })
+                : u;
+    return (0, l.jsxs)(o.$n, {
+        "data-migration-pending": !0,
+        "aria-label": x,
+        buttonRef: T,
+        look: o.$n.Looks.BLANK,
+        size: o.$n.Sizes.NONE,
+        disabled: r,
+        innerClassName: h,
+        wrapperClassName: i()(c.x6, p),
+        className: i()(c.x6, p, { [c.Xr]: f, [c.r9]: r, [c.Sn]: !r, [c.ZQ]: E, [c.OH]: f && E }),
+        onClick: (e) => {
+            null != s && s(e);
+        },
+        onMouseDown: a,
+        onMouseEnter: g,
+        onMouseLeave: A,
+        onContextMenu: n,
+        role: v,
+        "aria-checked": C,
+        focusProps: { offset: { left: -1, top: -1, right: 1, bottom: 1 } },
+        children: [
+            null != t ? (0, l.jsx)(d.Ay, { width: 20, height: 20, mask: d.Ay.Masks.PANEL_BUTTON, children: j }) : j,
+            t,
+        ],
     });
+}
+let h = function (e) {
+    if (null == e.tooltipType) {
+        let {
+                tooltipText: t,
+                tooltipForceOpen: n,
+                tooltipShouldShow: s,
+                tooltipPositionKey: i,
+                "aria-label": o,
+                ...u
+            } = e,
+            d = (0, r.O)(t),
+            c = o ?? d;
+        return (0, l.jsx)(a.m, {
+            text: t,
+            forceOpen: n,
+            shouldShow: s,
+            positionKey: i,
+            ariaHidden: c === d,
+            children: (0, l.jsx)(m, { ...u, "aria-label": c }),
+        });
+    }
+    {
+        let {
+            tooltipText: t,
+            tooltipForceOpen: n,
+            tooltipShouldShow: s,
+            tooltipPositionKey: i,
+            onClick: a,
+            onMouseEnter: r,
+            onMouseLeave: o,
+            onContextMenu: d,
+            onFocus: h,
+            onBlur: p,
+            "aria-label": f,
+            ...g
+        } = e;
+        return (0, l.jsx)(u.ST, {
+            "data-migration-pending": !0,
+            tooltipClassName: c.RF,
+            tooltipContentClassName: c.In,
+            "aria-label": f,
+            forceOpen: n,
+            shouldShow: s,
+            color: u.oM.GREEN,
+            positionKeyStemOverride: i,
+            text: t,
+            children: (e) => {
+                let {
+                    onClick: t,
+                    onMouseEnter: n,
+                    onMouseLeave: s,
+                    onContextMenu: i,
+                    onFocus: u,
+                    onBlur: c,
+                    "aria-label": f,
+                } = e;
+                return (0, l.jsx)(m, {
+                    onClick: (e) => {
+                        t?.(), a?.(e);
+                    },
+                    onMouseEnter: () => {
+                        n?.(), r?.();
+                    },
+                    onMouseLeave: () => {
+                        s?.(), o?.();
+                    },
+                    onContextMenu: (e) => {
+                        i?.(), d?.(e);
+                    },
+                    onFocus: () => {
+                        u?.(), h?.();
+                    },
+                    onBlur: () => {
+                        c?.(), p?.();
+                    },
+                    "aria-label": f,
+                    ...g,
+                });
+            },
+        });
+    }
+};

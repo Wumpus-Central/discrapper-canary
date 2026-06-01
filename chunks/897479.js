@@ -9,17 +9,17 @@ function o(e) {
         o = (0, r.zy)(),
         d = (0, r.W6)(),
         h = null,
-        c = null;
+        u = null;
     return (
         l.Children.forEach(t, (e) => {
             if (null == h && l.isValidElement(e)) {
                 let { component: t, render: n, ...i } = e.props,
-                    r = i.path || i.from;
-                null != (h = null != r ? (0, a.B)(o.pathname, { ...i, path: r }) : null) &&
-                    ((i = { ...i, key: r, location: o, match: h, history: d }),
-                    null != t ? (c = l.createElement(t, i)) : null != n && (c = n(i)));
+                    r = null != i.path && "" !== i.path ? i.path : i.from;
+                if (null == (h = null != r ? (0, a.B)(o.pathname, { ...i, path: r }) : null)) return;
+                let s = { ...i, key: r, location: o, match: h, history: d };
+                null != t ? (u = l.createElement(t, s)) : null != n && (u = n(s));
             }
         }),
-        (0, i.jsx)(s.F, { ...n, children: c })
+        (0, i.jsx)(s.F, { ...n, children: u })
     );
 }
