@@ -60,6 +60,5 @@ e.exports = {
     nP: "wideBannerCtaContainer__08415",
     bU: "wideBannerLogo__08415",
     Mh: "wideBannerCloseButton__08415",
-    Vp: "shelfBlockContainer__08415",
     OW: "shopScroll__08415",
 };

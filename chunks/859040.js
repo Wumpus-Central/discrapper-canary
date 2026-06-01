@@ -2,18 +2,18 @@
 n.d(t, {
     h$: () => eA,
     CK: () => e_,
-    BX: () => eN,
+    BX: () => ey,
     JJ: () => em,
     RE: () => ep,
     Or: () => eI,
     ue: () => eS,
-    Jp: () => eh,
+    Jp: () => ef,
     Sw: () => eu,
     Cz: () => el,
     iJ: () => eE,
     RD: () => ec,
-    gB: () => ef,
-    T2: () => ey,
+    gB: () => eh,
+    T2: () => eN,
     gn: () => ed,
     Aq: () => eT,
     LX: () => eg,
@@ -40,8 +40,8 @@ n(250953),
     });
 var d = n(976860),
     _ = n(773669),
-    f = n(590180);
-let h = (0, n(353640).v)((e) => ({
+    h = n(590180);
+let f = (0, n(353640).v)((e) => ({
         logs: [],
         addLog: (t) => e((e) => ({ logs: [...e.logs, `[${new Date().toISOString().split("T")[0]}] ${t}`] })),
         clearLogs: () => e({ logs: [] }),
@@ -49,7 +49,7 @@ let h = (0, n(353640).v)((e) => ({
     p = (e) => {
         let t = new Date().toLocaleTimeString("en-US", { hour12: !1 }),
             n = `[${t}] ${e}`;
-        h.getState().addLog(n);
+        f.getState().addLog(n);
     };
 var E = n(4227),
     m = n(870216),
@@ -76,9 +76,9 @@ class S extends T.A {
         });
     }
 }
-var N = n(719986),
-    y = n(32731);
-class C {
+var y = n(719986),
+    N = n(32731);
+class v {
     id;
     skuIds;
     name;
@@ -107,13 +107,13 @@ class C {
     }
     static fromServer(e) {
         let { sku_ids: t, options: n, created_at: i, updated_at: r, skus: s, tenant_metadata: a, ...o } = e;
-        return new C({
+        return new v({
             ...o,
             skuIds: t,
             options: n.map((e) => ({ name: e.name, optionValues: e.option_values })),
             createdAt: new Date(i),
             updatedAt: new Date(r),
-            skus: s.map((e) => y.A.createFromServer(e)),
+            skus: s.map((e) => N.A.createFromServer(e)),
             primaryCollectionId: a.collectibles.primary_collection_id,
             primaryCollectionStyles:
                 null != a.collectibles.primary_collection_styles
@@ -127,7 +127,7 @@ class C {
         });
     }
 }
-class v {
+class C {
     id;
     applicationId;
     name;
@@ -224,10 +224,10 @@ class v {
             tenant_metadata: a,
             ...o
         } = e;
-        return new v({
+        return new C({
             ...o,
             applicationId: t,
-            products: o.products.map(C.fromServer),
+            products: o.products.map(v.fromServer),
             createdAt: new Date(n),
             updatedAt: new Date(i),
             unpublishedAt: null != r ? new Date(r) : void 0,
@@ -237,11 +237,11 @@ class v {
             heroRanking: a.collectibles.hero_ranking,
             heroDisplayConfig:
                 null != a.collectibles.hero_display_config
-                    ? N.M.fromServer(a.collectibles.hero_display_config)
+                    ? y.M.fromServer(a.collectibles.hero_display_config)
                     : void 0,
             heroLogoDisplayConfig:
                 null != a.collectibles.hero_logo_display_config
-                    ? N.M.fromServer(a.collectibles.hero_logo_display_config)
+                    ? y.M.fromServer(a.collectibles.hero_logo_display_config)
                     : void 0,
             heroUrl: a.collectibles.hero_url,
             heroRiveUrl: a.collectibles.hero_rive_url,
@@ -274,16 +274,16 @@ class v {
         });
     }
 }
-var O = n(510801),
-    R = n(419709);
+var R = n(510801),
+    O = n(419709);
 class b {
     categories;
     collections;
     userDiscounts;
     constructor(e) {
-        (this.categories = e.categories.map((e) => O.A.fromServer(e))),
-            (this.collections = e.collections.map((e) => v.fromServer(e))),
-            (this.userDiscounts = e.user_discounts?.map((e) => R.T.fromServer(e)));
+        (this.categories = e.categories.map((e) => R.A.fromServer(e))),
+            (this.collections = e.collections.map((e) => C.fromServer(e))),
+            (this.userDiscounts = e.user_discounts?.map((e) => O.T.fromServer(e)));
     }
     static fromServer(e) {
         return new b(e);
@@ -428,8 +428,8 @@ class x {
         );
     }
 }
-var U = n(986630),
-    k = n(384726),
+var k = n(986630),
+    U = n(384726),
     G = n(696444),
     F = n(474012),
     V = n(758836),
@@ -490,8 +490,8 @@ class H {
             base_variant_sku_id: c,
             variant_label: d,
             variant_value: _,
-            purchased_at: f,
-            purchase_type: h,
+            purchased_at: h,
+            purchase_type: f,
             expires_at: p,
             ...E
         } = e;
@@ -505,18 +505,18 @@ class H {
                 let { rewardSkuId: t } = e;
                 return t === n;
             }),
-            prices: (0, k.A)(a),
+            prices: (0, U.A)(a),
             items: (0, F.K)(E.items),
             bundledProducts: o?.map(G.A.fromServer),
-            variants: l?.map(U.x.fromServer),
+            variants: l?.map(k.x.fromServer),
             googleSkuIds: E.google_sku_ids,
             eligibleOffers: E.eligible_offers,
             baseVariantName: u,
             baseVariantSkuId: c,
             variantLabel: d,
             variantValue: _,
-            purchaseType: h,
-            purchasedAt: null != f ? new Date(f) : f,
+            purchaseType: f,
+            purchasedAt: null != h ? new Date(h) : h,
             expiresAt: null != p ? new Date(p) : null,
         });
     }
@@ -563,28 +563,28 @@ class K {
         return new K(e);
     }
 }
-class z {
+class $ {
     subblocks;
     constructor(e) {
         (this.type = j.g.FEATURED),
             (this.subblocks = e.subblocks.map((e) => (e.type === W.u.CATEGORY ? K.fromServer(e) : e)));
     }
     static fromServer(e) {
-        return new z(e);
+        return new $(e);
     }
 }
-class $ {
+class z {
     rankedSkuIds;
     sortedSkuIds;
     constructor(e) {
         (this.type = j.g.FEED), (this.rankedSkuIds = e.ranked_sku_ids), (this.sortedSkuIds = e.sorted_sku_ids);
     }
     static fromServer(e) {
-        return new $(e);
+        return new z(e);
     }
 }
 var q = n(325595);
-class Z {
+class X {
     title;
     categorySkuId;
     categoryStoreListingId;
@@ -603,10 +603,10 @@ class Z {
             (this.buttonText = e.button_text);
     }
     static fromServer(e) {
-        return new Z(e);
+        return new X(e);
     }
 }
-var X = n(993408);
+var Z = n(993408);
 class Q {
     categorySkuId;
     name;
@@ -646,8 +646,8 @@ class Q {
             (this.heroLogoUrl = e.hero_logo_url),
             (this.mobileHeroUrl = e.mobile_hero_url),
             (this.mobileHeroAnimatedUrl = e.mobile_hero_animated_url),
-            (this.bannerDisplayConfig = (0, X.f6)(e.banner_display_config)),
-            (this.logoDisplayConfig = (0, X.f6)(e.logo_display_config));
+            (this.bannerDisplayConfig = (0, Z.f6)(e.banner_display_config)),
+            (this.logoDisplayConfig = (0, Z.f6)(e.logo_display_config));
     }
     static fromServer(e) {
         return new Q(e);
@@ -716,8 +716,8 @@ class ee {
             (this.heroLogoUrl = e.hero_logo_url),
             (this.mobileHeroUrl = e.mobile_hero_url),
             (this.mobileHeroAnimatedUrl = e.mobile_hero_animated_url),
-            (this.logoDisplayConfig = (0, X.f6)(e.logo_display_config)),
-            (this.bannerDisplayConfig = (0, X.f6)(e.banner_display_config));
+            (this.logoDisplayConfig = (0, Z.f6)(e.logo_display_config)),
+            (this.bannerDisplayConfig = (0, Z.f6)(e.banner_display_config));
     }
     static fromServer(e) {
         return new ee(e);
@@ -725,13 +725,23 @@ class ee {
 }
 class et {
     name;
-    categorySkuId;
     rankedSkuIds;
+    categorySkuId;
+    showButton;
+    buttonText;
+    titleColor;
+    desktopBackgroundImage;
+    mobileBackgroundImage;
     constructor(e) {
         (this.type = j.g.SHELF),
             (this.name = e.name),
-            (this.categorySkuId = e.category_sku_id),
-            (this.rankedSkuIds = e.ranked_sku_ids);
+            (this.rankedSkuIds = e.ranked_sku_ids),
+            (this.categorySkuId = e.category_sku_id ?? null),
+            (this.showButton = !1 !== e.show_button),
+            (this.buttonText = e.button_text ?? null),
+            (this.titleColor = e.title_color ?? null),
+            (this.desktopBackgroundImage = e.desktop_background_image ?? null),
+            (this.mobileBackgroundImage = e.mobile_background_image ?? null);
     }
     static fromServer(e) {
         return new et(e);
@@ -769,9 +779,9 @@ class er {
                     case j.g.HERO:
                         return Q.fromServer(e);
                     case j.g.FEATURED:
-                        return z.fromServer(e);
-                    case j.g.FEED:
                         return $.fromServer(e);
+                    case j.g.FEED:
+                        return z.fromServer(e);
                     case j.g.WIDE_BANNER:
                         return ei.y.fromServer(e);
                     case j.g.SHELF:
@@ -787,14 +797,14 @@ class er {
                     case j.g.FRAMES_BANNER:
                         return q.p.fromServer(e);
                     case j.g.FRAMES_PRODUCT_SHELF:
-                        return Z.fromServer(e);
+                        return X.fromServer(e);
                     default:
                         return;
                 }
             })
             .filter((e) => void 0 !== e)),
-            (this.categories = e.categories.map((e) => O.A.fromServer(e))),
-            (this.userDiscounts = e.user_discounts?.map((e) => R.T.fromServer(e)));
+            (this.categories = e.categories.map((e) => R.A.fromServer(e))),
+            (this.userDiscounts = e.user_discounts?.map((e) => O.T.fromServer(e)));
     }
     static fromServer(e) {
         return new er(e);
@@ -863,7 +873,7 @@ let el = (e) => {
                 r && p(`fetchCollectiblesCategories failed: ${e.message}`);
         }
     },
-    ef = async () => {
+    eh = async () => {
         if (E.A.isFetching) return;
         l.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH" });
         let e = c.Ay.get("shop_show_debug_overlay");
@@ -888,7 +898,7 @@ let el = (e) => {
             );
         }
     },
-    eh = async (e, t) => {
+    ef = async (e, t) => {
         l.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH", skuId: e, startedAt: Date.now() });
         try {
             let n = { locale: _.default.locale };
@@ -899,7 +909,7 @@ let el = (e) => {
             l.h.dispatch({
                 type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS",
                 skuId: e,
-                product: U.A.fromServer(i.body),
+                product: k.A.fromServer(i.body),
                 endedAt: Date.now(),
             });
         } catch (n) {
@@ -909,7 +919,7 @@ let el = (e) => {
         }
     },
     ep = async (e, t) => {
-        f.A.isFetchingProduct(e) || (await eh(e, t));
+        h.A.isFetchingProduct(e) || (await ef(e, t));
     },
     eE = async (e) => {
         l.h.dispatch({ type: "COLLECTIBLES_CLAIM", skuId: e });
@@ -982,7 +992,7 @@ let el = (e) => {
     eS = (e) => {
         l.h.dispatch({ type: "COLLECTIBLES_SKIP_NUM_CATEGORIES", skipNumCategories: e });
     },
-    eN = async (e, t) => {
+    ey = async (e, t) => {
         l.h.dispatch({ type: "COLLECTIBLES_CLAIM", skuId: t });
         try {
             let n = await o.Bo.put({
@@ -996,7 +1006,7 @@ let el = (e) => {
             throw (l.h.dispatch({ type: "COLLECTIBLES_CLAIM_FAILURE", skuId: t, error: e }), e);
         }
     },
-    ey = async (e) => {
+    eN = async (e) => {
         let { tab: t, abortSignal: n } = e;
         if (m.A.isFetchingLayout(t)) return;
         let i = m.A.getLayoutFetchError(t);
