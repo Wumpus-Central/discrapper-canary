@@ -497,11 +497,11 @@ class eQ extends r.PureComponent {
         let { channel: t } = this.props;
         return null == t
             ? en.intl.string(en.t.jD1qzM)
-            : t.isDM() && e
-              ? en.intl.string(en.t.IIOxgV)
-              : (0, eN.G)("PrivateChannelRecipientsInvite")
-                ? en.intl.string(t.isMultiUserDM() ? en.t.FFxUQ0 : en.t["PWkO7+"])
-                : en.intl.string(t.isMultiUserDM() ? en.t.AQAPts : en.t.Xjlbvs);
+            : t.isMultiUserDM()
+              ? en.intl.string(en.t.NB5DFD)
+              : t.isDM() && e
+                ? en.intl.string(en.t.IIOxgV)
+                : en.intl.string(en.t["PWkO7+"]);
     }
     getSubtitle() {
         let { channel: e, hasFriends: t } = this.props;

@@ -4043,7 +4043,7 @@ function i9(e) {
                 (0, r.jsxs)(iZ.e, {
                     className: i6.U,
                     children: [
-                        (0, r.jsx)(i8.NE, { channel: n, text: ek.intl.string(ek.t["6Qgrev"]), icon: iY.D }),
+                        (0, r.jsx)(i8.NE, { channel: n, text: ek.intl.string(ek.t.NB5DFD), icon: iY.D }),
                         (0, r.jsx)(eD.$, {
                             icon: tq.R,
                             variant: "secondary",

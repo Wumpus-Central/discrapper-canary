@@ -2962,7 +2962,7 @@ function iG(e) {
                                 className: eo.Uf,
                                 children: (0, i.jsx)(it.NE, {
                                     channel: n,
-                                    text: Y.intl.string(Y.t.taNYTF),
+                                    text: Y.intl.string(Y.t.NB5DFD),
                                     icon: iT.D,
                                     variant: "secondary",
                                     fullWidth: !0,
@@ -5067,7 +5067,7 @@ class rX extends s.PureComponent {
                     d.push(
                         (0, i.jsx)(
                             it.Ay,
-                            { channel: e, tooltip: r ? Y.intl.string(Y.t.IIOxgV) : Y.intl.string(Y.t.Xjlbvs) },
+                            { channel: e, tooltip: r ? Y.intl.string(Y.t.IIOxgV) : Y.intl.string(Y.t["PWkO7+"]) },
                             "invite",
                         ),
                     ),
@@ -5081,7 +5081,7 @@ class rX extends s.PureComponent {
                     d.push((0, i.jsx)(ie, { channel: e }, "calls")),
                     d.push((0, i.jsx)(lR, { channel: e }, "pins")),
                     e.isManaged() ||
-                        d.push((0, i.jsx)(it.Ay, { channel: e, tooltip: Y.intl.string(Y.t.AQAPts) }, "invite")),
+                        d.push((0, i.jsx)(it.Ay, { channel: e, tooltip: Y.intl.string(Y.t.NB5DFD) }, "invite")),
                     d.push((0, i.jsx)(lN, { channelId: e.id }, "members"));
                 break;
             case er.rbe.ANNOUNCEMENT_THREAD:

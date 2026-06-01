@@ -5325,7 +5325,8 @@ img.thumbnail__0f2e8 {
 }
 
 .inviteToGroupButton_c8ffbb {
-    padding: 16px
+    padding-block-start: 16px;
+    padding-inline: 16px 8px
 }
 
 .addMembersIcon_c8ffbb {
