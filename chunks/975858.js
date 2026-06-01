@@ -51,8 +51,8 @@ function h(e) {
 let f = {
     [i.$.PREMIUM_TENURE]: {
         ctaLabel: (e) => {
-            let { owned: t } = e;
-            return t ? u.intl.string(u.t.xGjjkd) : u.intl.string(u.t.BTxm69);
+            let { owned: t, isViewerOnUpgradeableNitro: n } = e;
+            return !0 === n ? u.intl.string(u.t.uKFeS1) : t ? u.intl.string(u.t.xGjjkd) : u.intl.string(u.t.BTxm69);
         },
         ctaAction: () => (0, r.pX)(o.BVt.NITRO_HOME),
     },

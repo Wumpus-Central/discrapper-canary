@@ -268,7 +268,15 @@
 }
 
 .tierTimelineDescription_bf9073 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
     width: 100%
+}
+
+.tierTimelineDescriptionIcon_bf9073 {
+    color: var(--text-subtle);
+    flex-shrink: 0
 }
 
 .tierTimelineGrid_bf9073 {
