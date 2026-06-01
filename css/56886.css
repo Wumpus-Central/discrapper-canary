@@ -9152,58 +9152,58 @@
 
 @font-face {
     font-display: swap;
-    font-family: Cherry Bomb One;
+    font-family: Sakura;
     font-style: normal;
     font-weight: 400;
-    src: url(/assets/27a6daf95bd8adde.woff2) format("woff2")
+    src: url(/assets/ff60709af37ebc8b.woff2) format("woff2")
 }
 
 @font-face {
     font-display: swap;
-    font-family: Chicle;
+    font-family: Jellybean;
     font-style: normal;
     font-weight: 400;
-    src: url(/assets/08d347453f57b1f5.woff2) format("woff2")
+    src: url(/assets/8d71945d435bf286.woff2) format("woff2")
 }
 
 @font-face {
     font-display: swap;
-    font-family: Neo Castel;
+    font-family: Medieval;
     font-style: normal;
     font-weight: 400;
-    src: url(/assets/b98eacfe1a3d06eb.woff2) format("woff2")
+    src: url(/assets/87e9ecec814cd049.woff2) format("woff2")
 }
 
 @font-face {
     font-display: swap;
-    font-family: Museo Moderno;
+    font-family: Modern;
     font-style: normal;
     font-weight: 500;
-    src: url(/assets/8b6d8d408e0e52a7.woff2) format("woff2")
+    src: url(/assets/3f1f517b6d9a37e5.woff2) format("woff2")
 }
 
 @font-face {
     font-display: swap;
-    font-family: Pixelify Sans;
+    font-family: "8Bit";
     font-style: normal;
     font-weight: 400;
-    src: url(/assets/752009d1dc4553e8.woff2) format("woff2")
+    src: url(/assets/450fb053b633769f.woff2) format("woff2")
 }
 
 @font-face {
     font-display: swap;
-    font-family: Sinistre;
+    font-family: Vampyre;
     font-style: normal;
     font-weight: 400;
-    src: url(/assets/9b974db0b9197a22.woff2) format("woff2")
+    src: url(/assets/a53031957c63bb95.woff2) format("woff2")
 }
 
 @font-face {
     font-display: swap;
-    font-family: Zilla Slab;
+    font-family: Tempo;
     font-style: normal;
     font-weight: 600;
-    src: url(/assets/8698e980e38d61ed.woff2) format("woff2")
+    src: url(/assets/d4826c9762d0d25d.woff2) format("woff2")
 }
 
 :root {
