@@ -1,16 +1,16 @@
 t.a(e, async function (e, r) {
     try {
-        t.d(n, { Ay: () => a, ER: () => c });
+        t.d(n, { Ay: () => s, ER: () => c });
         var i = t(627968),
-            o = t(207495),
+            o = t(94714),
             u = t(64700),
-            _ = e([o]);
-        o = (_.then ? (await _)() : _)[0];
-        let d = (0, u.createContext)(null);
+            a = e([o]);
+        o = (a.then ? (await a)() : a)[0];
+        let b = (0, u.createContext)(null);
         function c() {
-            return (0, u.useContext)(d);
+            return (0, u.useContext)(b);
         }
-        let b = new Set([
+        let f = new Set([
             "bold",
             "italic",
             "underline",
@@ -27,7 +27,7 @@ t.a(e, async function (e, r) {
             "quote",
             "small",
         ]);
-        function l({ node: e, renderers: n, ...t }) {
+        function _({ node: e, renderers: n, ...t }) {
             let r = n[e.type];
             if (
                 (!(function (e, n) {
@@ -35,7 +35,7 @@ t.a(e, async function (e, r) {
                 })(r, e.type),
                 Array.isArray(e.value))
             )
-                return (0, i.jsx)(r, { node: e, ...t, children: (0, i.jsx)(f, { nodes: e.value, renderers: n }) });
+                return (0, i.jsx)(r, { node: e, ...t, children: (0, i.jsx)(l, { nodes: e.value, renderers: n }) });
             switch (e.type) {
                 case "mention":
                 case "timestamp":
@@ -49,7 +49,7 @@ t.a(e, async function (e, r) {
                         let {
                             value: { text: e, url: t },
                         } = o;
-                        u = e ? (0, i.jsx)(f, { nodes: e, renderers: n }) : t;
+                        u = e ? (0, i.jsx)(l, { nodes: e, renderers: n }) : t;
                     }
                     return (0, i.jsx)(r, { node: e, ...e.value, ...t, children: u });
                 }
@@ -61,7 +61,7 @@ t.a(e, async function (e, r) {
                         node: e,
                         level: e.value.level,
                         ...t,
-                        children: (0, i.jsx)(f, { nodes: e.value.content, renderers: n }),
+                        children: (0, i.jsx)(l, { nodes: e.value.content, renderers: n }),
                     });
                 case "list": {
                     let o = n.listItem ?? "li";
@@ -76,7 +76,7 @@ t.a(e, async function (e, r) {
                                     node: t,
                                     siblings: e.value.items,
                                     index: r,
-                                    children: (0, i.jsx)(f, { nodes: t.content, renderers: n }),
+                                    children: (0, i.jsx)(l, { nodes: t.content, renderers: n }),
                                 },
                                 r,
                             ),
@@ -89,24 +89,24 @@ t.a(e, async function (e, r) {
                     return (0, i.jsx)(r, {
                         node: e,
                         ...t,
-                        children: (0, i.jsx)(f, { nodes: e.value.content, renderers: n }),
+                        children: (0, i.jsx)(l, { nodes: e.value.content, renderers: n }),
                     });
                 default:
                     throw TypeError(`Unknown node type "${e.type}"`);
             }
         }
-        function f({ nodes: e, renderers: n }) {
+        function l({ nodes: e, renderers: n }) {
             return (0, i.jsx)(i.Fragment, {
-                children: e.map((t, r) => (0, i.jsx)(l, { node: t, renderers: n, siblings: e, index: r }, r)),
+                children: e.map((t, r) => (0, i.jsx)(_, { node: t, renderers: n, siblings: e, index: r }, r)),
             });
         }
-        function a({ content: e, renderers: n }) {
+        function s({ content: e, renderers: n }) {
             let t = (0, u.useMemo)(() => {
-                    let e = Object.keys(n).filter((e) => b.has(e));
+                    let e = Object.keys(n).filter((e) => f.has(e));
                     return e.length > 0 ? e : null;
                 }, [n]),
                 r = (0, u.useMemo)(() => (0, o.q)(e, t), [e, t]);
-            return (0, i.jsx)(d.Provider, { value: r, children: (0, i.jsx)(f, { nodes: r, renderers: n }) });
+            return (0, i.jsx)(b.Provider, { value: r, children: (0, i.jsx)(l, { nodes: r, renderers: n }) });
         }
         r();
     } catch (e) {

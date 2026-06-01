@@ -3,8 +3,8 @@ var l = t(627968),
     r = t(64700),
     a = t(588975),
     s = t(442433),
-    c = t(9578),
-    i = t(975807),
+    i = t(9578),
+    c = t(975807),
     d = t(235393),
     u = t(332173),
     o = t(202803),
@@ -15,7 +15,7 @@ function j(e) {
     let { type: n, value: t, children: r } = e;
     switch (n) {
         case "normal":
-            return (0, l.jsx)(c.A, { title: t.title, href: t.url, children: (0, l.jsx)("span", { children: r }) });
+            return (0, l.jsx)(i.A, { title: t.title, href: t.url, children: (0, l.jsx)("span", { children: r }) });
         case "mention":
             switch (t.type) {
                 case "channel":
@@ -23,13 +23,23 @@ function j(e) {
                     let {
                             value: { guild_id: a, channel_id: s },
                         } = t,
-                        i = "message_id" in t.value ? t.value.message_id : void 0;
-                    return (0, l.jsx)(m.A, { channelId: s, guildId: a, messageId: i });
+                        c = "message_id" in t.value ? t.value.message_id : void 0;
+                    return (0, l.jsx)(m.A, {
+                        channelId: String(s),
+                        guildId: String(a),
+                        messageId: null != c ? String(c) : void 0,
+                    });
                 case "attachment":
                     let {
-                        value: { domain: d, ephemeral: u, channel_id: o, attachment_id: x, name: j },
+                        value: { domain: d, bucket: u, channel_id: o, attachment_id: x, name: j },
                     } = t;
-                    return (0, l.jsx)(g, { domain: d, ephemeral: u, channelId: o, attachmentId: x, name: j });
+                    return (0, l.jsx)(g, {
+                        domain: d,
+                        ephemeral: "ephemeral_attachments" === u,
+                        channelId: String(o),
+                        attachmentId: String(x),
+                        name: j,
+                    });
                 default:
                     (0, h.xb)(t);
             }
@@ -39,11 +49,11 @@ function j(e) {
     }
 }
 function g(e) {
-    let { domain: n, ephemeral: c, channelId: h, attachmentId: m, name: j } = e,
-        g = `https://${n}/${c ? "ephemeral-attachments" : "attachments"}/${h}/${m}/${j}`,
+    let { domain: n, ephemeral: i, channelId: h, attachmentId: m, name: j } = e,
+        g = `https://${n}/${i ? "ephemeral-attachments" : "attachments"}/${h}/${m}/${j}`,
         f = r.useCallback(async () => {
             let e = await (0, o.AN)(g);
-            d.A.trackLinkClicked(e), (0, i.A)(e);
+            d.A.trackLinkClicked(e), (0, c.A)(e);
         }, [g]),
         p = r.useCallback(
             (e) => {

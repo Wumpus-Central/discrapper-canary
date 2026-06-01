@@ -3,10 +3,10 @@ t.a(e, async function (e, l) {
         t.d(n, { z: () => m });
         var r = t(627968);
         t(64700);
-        var a = t(223535),
+        var a = t(785041),
             s = t(17928),
-            c = t(159273),
-            i = t(7584),
+            i = t(159273),
+            c = t(7584),
             d = t(930101),
             u = t(78377),
             o = t(690521),
@@ -29,7 +29,7 @@ t.a(e, async function (e, l) {
         function x(e) {
             let { value: n, jumboable: t } = e,
                 l = o.Ay.getURL(n),
-                a = i.Ay.convertSurrogateToName(n),
+                a = c.Ay.convertSurrogateToName(n),
                 s = (0, u.p)();
             return (0, r.jsx)(d.H, {
                 node: { name: a, src: l, jumboable: t },
@@ -41,12 +41,12 @@ t.a(e, async function (e, l) {
             let { value: n, jumboable: t } = e,
                 l = (0, u.p)(),
                 a = l?.guildId,
-                i = (0, s.bG)([c.Ay], () => c.Ay.getDisambiguatedEmojiContext(a).getById(n.id), [a, n.id]),
-                o = i?.name ?? n.name;
+                c = (0, s.bG)([i.Ay], () => i.Ay.getDisambiguatedEmojiContext(a).getById(String(n.id)), [a, n.id]),
+                o = c?.name ?? n.name;
             return (
-                null != i && i.require_colons && (o = `:${i.name}:`),
+                null != c && c.require_colons && (o = `:${c.name}:`),
                 (0, r.jsx)(d.X, {
-                    node: { name: o, animated: n.animated, emojiId: n.id, jumboable: t },
+                    node: { name: o, animated: n.animated, emojiId: String(n.id), jumboable: t },
                     channelId: l?.channelId,
                     messageId: l?.messageId,
                 })
