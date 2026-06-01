@@ -821,7 +821,7 @@ let ts = `rel=0&iv_load_policy=3&showinfo=0&modestbranding=1&pageType=${O.NzX}`,
         if (a.type === O.geh.YOUTUBE_VIDEO)
             (t = { url: (0, O.PE$)(a.youtubeVideoId), ...tn }),
                 (l = { url: `${(0, O.uJ2)(a.youtubeVideoId)}?${ts}`, ...tr }),
-                (s = eM.mt.YOUTUBE);
+                (s = eM.m.YOUTUBE);
         else {
             let e = null != a.width ? a.width : 0,
                 s = null != a.height ? a.height : 0;
@@ -1073,7 +1073,7 @@ let tp = (e) => {
         if (a.type === O.geh.YOUTUBE_VIDEO)
             (t = { url: (0, O.PE$)(a.youtubeVideoId), ...tx }),
                 (l = { url: `${(0, O.uJ2)(a.youtubeVideoId)}?${tj}`, ...tA }),
-                (s = eM.mt.YOUTUBE);
+                (s = eM.m.YOUTUBE);
         else {
             let e = null != a.width ? a.width : 0,
                 s = null != a.height ? a.height : 0;

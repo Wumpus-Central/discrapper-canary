@@ -385,7 +385,7 @@ function en(e) {
             children: (0, i.jsx)("div", {
                 className: a()(g.pu, n),
                 style: _,
-                children: (0, i.jsx)($.Ay, {
+                children: (0, i.jsx)($.A, {
                     provider: c,
                     src: u.url,
                     style: e,
