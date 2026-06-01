@@ -257,25 +257,28 @@ function z(e) {
             useOptions: o,
             usePersistentBadge: c,
             getDismissibleBadges: u,
+            useHelperText: d,
         } = n,
-        d = s(),
-        x = i?.(),
-        j = t(),
-        h = o(),
-        f = V({ persistentBadge: c?.(), dismissibleBadges: u?.() }),
-        p = a?.(),
-        g = E(n);
+        x = s(),
+        j = i?.(),
+        h = t(),
+        f = o(),
+        p = V({ persistentBadge: c?.(), dismissibleBadges: u?.() }),
+        g = a?.(),
+        y = E(n),
+        v = d?.();
     return (0, r.jsx)(m, {
         children: (0, r.jsx)(G.z, {
-            label: d,
-            description: x,
-            options: h,
-            value: j,
-            badge: f,
+            label: x,
+            description: j,
+            options: f,
+            value: h,
+            badge: p,
             onChange: (e) => {
-                g(), l(e);
+                y(), l(e);
             },
-            disabled: p,
+            disabled: g,
+            helperText: v,
         }),
     });
 }

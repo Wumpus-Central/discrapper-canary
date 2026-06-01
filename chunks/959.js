@@ -27,8 +27,7 @@ function p(e) {
                         (0, o.L3)(t, async () => {
                             let { default: t } = await Promise.all([
                                 n.e("24789"),
-                                n.e("86653"),
-                                n.e("94881"),
+                                n.e("49286"),
                                 n.e("26132"),
                                 n.e("46652"),
                                 n.e("93190"),

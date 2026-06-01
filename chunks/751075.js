@@ -1,4 +1,4 @@
-i.d(t, { CD: () => d, e0: () => c, qP: () => A });
+i.d(t, { CD: () => d, YP: () => c, e0: () => g, qP: () => h });
 var n,
     s = i(627968),
     l = i(64700),
@@ -6,9 +6,10 @@ var n,
     a = i.n(r),
     o = i(573435),
     u = i(132438);
-let d = 48;
-var c = (((n = {})[(n.ROUNDED = 0)] = "ROUNDED"), (n[(n.SQUIRCLE = 1)] = "SQUIRCLE"), n);
-function g(e) {
+let d = 48,
+    c = 40;
+var g = (((n = {})[(n.ROUNDED = 0)] = "ROUNDED"), (n[(n.SQUIRCLE = 1)] = "SQUIRCLE"), n);
+function m(e) {
     let { sizePx: t } = e,
         i = 0.5 / t,
         n = `translate(${i}, ${i}) scale(${1 - 2 * i})`;
@@ -27,7 +28,7 @@ function g(e) {
         }),
     });
 }
-function m(e) {
+function A(e) {
     let { icon: t, sizePx: i, positionClassName: n } = e,
         r = l.useMemo(() => ({ width: `${i}px`, height: `${i}px` }), [i]);
     switch (t.shape) {
@@ -42,22 +43,22 @@ function m(e) {
                         height: i,
                         children: (0, s.jsx)("div", { className: u.pU, style: r, children: t.icon }),
                     }),
-                    (0, s.jsx)(g, { sizePx: i }),
+                    (0, s.jsx)(m, { sizePx: i }),
                 ],
             });
         case 0:
             return (0, s.jsx)("div", { className: a()(u.Gt, n, u.Nb), style: r, children: t.icon });
     }
 }
-function A(e) {
+function h(e) {
     let { icons: t } = e,
         { frontIcon: i, backIcon: n } = t;
     return (0, s.jsxs)("div", {
         className: u.VD,
         "aria-hidden": !0,
         children: [
-            null != n && (0, s.jsx)(m, { icon: n, sizePx: 40, positionClassName: u.j2 }),
-            (0, s.jsx)(m, { icon: i, sizePx: d, positionClassName: u.hU }),
+            null != n && (0, s.jsx)(A, { icon: n, sizePx: c, positionClassName: u.j2 }),
+            (0, s.jsx)(A, { icon: i, sizePx: d, positionClassName: u.hU }),
         ],
     });
 }

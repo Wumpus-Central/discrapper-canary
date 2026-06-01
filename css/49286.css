@@ -6254,16 +6254,6 @@ div.profileThemedContainer__656be {
     min-width: 220px
 }
 
-.categorySubGroup__9b8f2 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-16)
-}
-
-.categorySubGroup__9b8f2:empty {
-    display: none
-}
-
 .header__88a04 {
     background-color: var(--background-surface-higher);
     border-radius: var(--radius-sm)
@@ -6708,6 +6698,16 @@ div.profileThemedContainer__656be {
 
 .browser__9a792 {
     overflow: hidden
+}
+
+.videoPaused_afb275 {
+    align-items: center;
+    display: flex;
+    justify-content: start
+}
+
+.warningCircle_afb275 {
+    margin-inline-end: 4px
 }
 
 .list__20827 {

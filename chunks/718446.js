@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { parseSettingsUrl: () => h, settingsPathToRoute: () => c, trackParseSettingsUrl: () => f });
+n.r(t), n.d(t, { parseSettingsUrl: () => f, settingsPathToRoute: () => c, trackParseSettingsUrl: () => h });
 var i = n(492462),
     r = n(174459),
     s = n(780964),
@@ -17,7 +17,7 @@ function d(e) {
 function _(e) {
     return Object.values(o.od).includes(e);
 }
-function f(e, t) {
+function h(e, t) {
     let { target: n, path: i } = e;
     null == n
         ? r.default.track(l.HAw.USER_SETTINGS_URL_PARSING_FAILED, {
@@ -26,22 +26,22 @@ function f(e, t) {
           })
         : r.default.track(l.HAw.USER_SETTINGS_URL_PARSED, { user_settings_url_path: i, user_settings_url_origin: t });
 }
-function h(e) {
+function f(e) {
     let t,
         { path: n, search: r } = e,
         [, , l, u] = n.split("?")[0].split("/"),
         c = d(l),
-        f = [c, d(u)].filter(Boolean).join("/"),
-        h =
+        h = [c, d(u)].filter(Boolean).join("/"),
+        f =
             ((t = (0, a.Bv)("UserSection")),
             {
                 [o.od.ACCOUNT]: s.X.ACCOUNT_PANEL,
                 [o.od.ACCOUNT_STANDING]: s.X.ACCOUNT_STANDING_CATEGORY,
                 [o.od.ACCOUNT_ACCOUNT_STANDING]: s.X.ACCOUNT_STANDING_CATEGORY,
                 [o.od.PROFILE_CUSTOMIZATION]: s.X.PROFILE_PANEL,
-                [o.od.CONTENT_AND_SOCIAL]: s.X.CONTENT_AND_SOCIAL_PANEL,
-                [o.od.CONNECTED_GAMES]: s.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES_CATEGORY,
-                [o.od.CONTENT_AND_SOCIAL_CONNECTED_GAMES]: s.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES_CATEGORY,
+                [o.od.CONTENT_AND_SOCIAL]: t ? s.X.MESSAGING_PERMISSIONS_PANEL : s.X.CONTENT_AND_SOCIAL_PANEL,
+                [o.od.CONNECTED_GAMES]: s.X.CONNECTED_GAMES_CATEGORY,
+                [o.od.CONTENT_AND_SOCIAL_CONNECTED_GAMES]: s.X.CONNECTED_GAMES_CATEGORY,
                 [o.od.DATA_AND_PRIVACY]: s.X.DATA_AND_PRIVACY_PANEL,
                 [o.od.PRIVACY_AND_SAFETY]: s.X.DATA_AND_PRIVACY_PANEL,
                 [o.od.FAMILY_CENTER]: s.X.FAMILY_CENTER_PANEL,
@@ -76,8 +76,8 @@ function h(e) {
                 [o.od.DEVELOPER_OPTIONS]: s.X.DEVELOPER_OPTIONS_PANEL,
             });
     return {
-        target: (_(f) ? h[f] : void 0) ?? (_(c) ? h[c] : void 0),
-        path: f,
+        target: (_(h) ? f[h] : void 0) ?? (_(c) ? f[c] : void 0),
+        path: h,
         params: (0, i.parse)(r ?? location.search),
     };
 }

@@ -125,7 +125,7 @@ n.r(k),
         ChatMinusIcon: () => _w,
         ChatPlusIcon: () => _M.g,
         ChatRetryIcon: () => _P,
-        ChatShieldIcon: () => _x,
+        ChatShieldIcon: () => _x.l,
         ChatSlowModeIcon: () => _k,
         ChatSmileIcon: () => _U.S,
         ChatSpeakIcon: () => _G._,
@@ -1763,7 +1763,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 554187, Version Hash: 57433e0276bf9759a517ce8e6098ff3bdbd6d0c9`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 554260, Version Hash: 14999848941211722a989e2a57e04bb6db17a41a`,
 ),
     ev.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -3853,7 +3853,7 @@ let s3 = (0, rs.Fe)({
                 n.e("63635"),
                 n.e("24789"),
                 n.e("72318"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("32538"),
                 n.e("23924"),
                 n.e("42205"),
@@ -4059,7 +4059,7 @@ let s3 = (0, rs.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("6619"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("14947"),
                 n.e("68340"),
                 n.e("5630"),
@@ -4145,7 +4145,7 @@ let s3 = (0, rs.Fe)({
                 n.e("92922"),
                 n.e("16117"),
                 n.e("18042"),
-                n.e("71145"),
+                n.e("14898"),
                 n.e("27147"),
                 n.e("23924"),
                 n.e("42205"),
@@ -4485,7 +4485,7 @@ let s3 = (0, rs.Fe)({
                 n.e("18710"),
                 n.e("86629"),
                 n.e("98384"),
-                n.e("11883"),
+                n.e("71492"),
                 n.e("24564"),
                 n.e("24049"),
                 n.e("34428"),
@@ -4527,7 +4527,7 @@ let s3 = (0, rs.Fe)({
                 n.e("93720"),
                 n.e("54658"),
                 n.e("31828"),
-                n.e("77788"),
+                n.e("7983"),
                 n.e("80026"),
                 n.e("4787"),
                 n.e("30373"),
@@ -6790,8 +6790,7 @@ let uE = 15 * n5.A.Millis.MINUTE,
                         e,
                         async () => {
                             let { default: e } = await Promise.all([
-                                n.e("86653"),
-                                n.e("94881"),
+                                n.e("49286"),
                                 n.e("26132"),
                                 n.e("46652"),
                                 n.e("93190"),
@@ -6826,7 +6825,7 @@ let uE = 15 * n5.A.Millis.MINUTE,
                             n.e("88850"),
                             n.e("78220"),
                             n.e("49494"),
-                            n.e("86653"),
+                            n.e("49286"),
                             n.e("47753"),
                             n.e("99961"),
                             n.e("85363"),
@@ -8433,7 +8432,7 @@ function cj() {
         ? (0, U.jsx)(cB.e, {
               label: na.t.zqv4nV,
               labelHook: () => {
-                  (0, i7.openUserSettings)(i5.X.CONTENT_AND_SOCIAL_RESTRICTED_USERS_CATEGORY);
+                  (0, i7.openUserSettings)(i5.X.RESTRICTED_USERS_CATEGORY);
               },
               dismissNotice: () => t(rE.i.USER_DISMISS),
               className: cH._,
@@ -9903,108 +9902,74 @@ let _w = (e) => {
 };
 var _M = n(888366);
 let _P = (e) => {
-        let {
-                size: t = "md",
-                width: n,
-                height: i,
-                color: r = r9.A.colors.INTERACTIVE_ICON_DEFAULT,
-                colorClass: s = "",
-                ...a
-            } = e,
-            o = (0, dc.J)(t),
-            l = o?.width ?? n,
-            u = o?.height ?? i;
-        return (0, U.jsxs)("svg", {
-            ...(0, du.A)(a),
-            xmlns: "http://www.w3.org/2000/svg",
-            width: l,
-            height: u,
-            fill: "none",
-            viewBox: "0 0 24 24",
-            children: [
-                (0, U.jsx)("path", {
-                    d: "M19 16A3 3 0 1 0 21 21.25a1 1 0 1 1 1.32 1.5A4.98 4.98 0 0 1 14 19a5 5 0 0 1 8-4 1 1 0 0 1 2 0v3a1 1 0 0 1-1 1h-3a1 1 0 1 1 0-2h1.23A3 3 0 0 0 19 16Z",
-                    fill: "string" == typeof r ? r : r.css,
-                    className: s,
-                }),
-                (0, U.jsx)("path", {
-                    d: "M22 12c0 .1-.06.2-.16.23a3 3 0 0 0-.19.09.58.58 0 0 1-.44.04 7 7 0 0 0-8.8 9c.1.3-.09.64-.4.64H2.2a1 1 0 0 1-.76-1.66l2.07-2.37a.52.52 0 0 0 .04-.61A10 10 0 1 1 22 12Z",
-                    fill: "string" == typeof r ? r : r.css,
-                    className: s,
-                }),
-            ],
-        });
-    },
-    _x = (e) => {
-        let {
-                size: t = "md",
-                width: n,
-                height: i,
-                color: r = r9.A.colors.INTERACTIVE_ICON_DEFAULT,
-                colorClass: s = "",
-                ...a
-            } = e,
-            o = (0, dc.J)(t),
-            l = o?.width ?? n,
-            u = o?.height ?? i;
-        return (0, U.jsxs)("svg", {
-            ...(0, du.A)(a),
-            xmlns: "http://www.w3.org/2000/svg",
-            width: l,
-            height: u,
-            fill: "none",
-            viewBox: "0 0 24 24",
-            children: [
-                (0, U.jsx)("path", {
-                    fill: "string" == typeof r ? r : r.css,
-                    fillRule: "evenodd",
-                    d: "M19.33 13.01c.28-.03.58.02.84.15l3.05 1.52c.48.24.78.73.78 1.27v1.51a7.1 7.1 0 0 1-4.21 6.49.71.71 0 0 1-.58 0A7.1 7.1 0 0 1 15 17.46v-1.51c0-.54.3-1.03.78-1.27l3.05-1.52a1.49 1.49 0 0 1 .33-.12l.17-.03Zm.17 8.73c.06 0 .12-.01.17-.03a4.18 4.18 0 0 0 2.48-3.82v-.9c0-.31-.18-.6-.46-.74l-1.8-.9a.88.88 0 0 0-.39-.09v6.48Z",
-                    clipRule: "evenodd",
-                    className: s,
-                }),
-                (0, U.jsx)("path", {
-                    fill: "string" == typeof r ? r : r.css,
-                    d: "M11.8 2a10 10 0 0 1 10 9.73l-.73-.36-.2-.09a3.5 3.5 0 0 0-2.75 0l-.19.09-3.04 1.52A3.42 3.42 0 0 0 13 15.95v1.51c0 1.53.38 2.99 1.07 4.28-.73.17-1.49.26-2.27.26H2a1 1 0 0 1-.75-1.66l2.07-2.37a.52.52 0 0 0 .04-.61A10 10 0 0 1 11.8 2Z",
-                    className: s,
-                }),
-            ],
-        });
-    },
-    _k = (e) => {
-        let {
-                size: t = "md",
-                width: n,
-                height: i,
-                color: r = r9.A.colors.INTERACTIVE_ICON_DEFAULT,
-                colorClass: s = "",
-                ...a
-            } = e,
-            o = (0, dc.J)(t),
-            l = o?.width ?? n,
-            u = o?.height ?? i;
-        return (0, U.jsxs)("svg", {
-            ...(0, du.A)(a),
-            xmlns: "http://www.w3.org/2000/svg",
-            width: l,
-            height: u,
-            fill: "none",
-            viewBox: "0 0 24 24",
-            children: [
-                (0, U.jsx)("path", {
-                    fill: "string" == typeof r ? r : r.css,
-                    d: "M12 22c.32 0 .52-.33.41-.63A6.99 6.99 0 0 1 19 12c.83 0 1.63.14 2.37.41.3.1.63-.1.63-.41a10 10 0 1 0-18.45 5.36c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12Z",
-                    className: s,
-                }),
-                (0, U.jsx)("path", {
-                    fill: "string" == typeof r ? r : r.css,
-                    fillRule: "evenodd",
-                    d: "M24 19a5 5 0 1 1-10 0 5 5 0 0 1 10 0Zm-5-3a1 1 0 0 1 1 1v1.59l.7.7a1 1 0 0 1-1.4 1.42l-1-1A1 1 0 0 1 18 19v-2a1 1 0 0 1 1-1Z",
-                    clipRule: "evenodd",
-                    className: s,
-                }),
-            ],
-        });
-    };
+    let {
+            size: t = "md",
+            width: n,
+            height: i,
+            color: r = r9.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: s = "",
+            ...a
+        } = e,
+        o = (0, dc.J)(t),
+        l = o?.width ?? n,
+        u = o?.height ?? i;
+    return (0, U.jsxs)("svg", {
+        ...(0, du.A)(a),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: l,
+        height: u,
+        fill: "none",
+        viewBox: "0 0 24 24",
+        children: [
+            (0, U.jsx)("path", {
+                d: "M19 16A3 3 0 1 0 21 21.25a1 1 0 1 1 1.32 1.5A4.98 4.98 0 0 1 14 19a5 5 0 0 1 8-4 1 1 0 0 1 2 0v3a1 1 0 0 1-1 1h-3a1 1 0 1 1 0-2h1.23A3 3 0 0 0 19 16Z",
+                fill: "string" == typeof r ? r : r.css,
+                className: s,
+            }),
+            (0, U.jsx)("path", {
+                d: "M22 12c0 .1-.06.2-.16.23a3 3 0 0 0-.19.09.58.58 0 0 1-.44.04 7 7 0 0 0-8.8 9c.1.3-.09.64-.4.64H2.2a1 1 0 0 1-.76-1.66l2.07-2.37a.52.52 0 0 0 .04-.61A10 10 0 1 1 22 12Z",
+                fill: "string" == typeof r ? r : r.css,
+                className: s,
+            }),
+        ],
+    });
+};
+var _x = n(476713);
+let _k = (e) => {
+    let {
+            size: t = "md",
+            width: n,
+            height: i,
+            color: r = r9.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: s = "",
+            ...a
+        } = e,
+        o = (0, dc.J)(t),
+        l = o?.width ?? n,
+        u = o?.height ?? i;
+    return (0, U.jsxs)("svg", {
+        ...(0, du.A)(a),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: l,
+        height: u,
+        fill: "none",
+        viewBox: "0 0 24 24",
+        children: [
+            (0, U.jsx)("path", {
+                fill: "string" == typeof r ? r : r.css,
+                d: "M12 22c.32 0 .52-.33.41-.63A6.99 6.99 0 0 1 19 12c.83 0 1.63.14 2.37.41.3.1.63-.1.63-.41a10 10 0 1 0-18.45 5.36c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12Z",
+                className: s,
+            }),
+            (0, U.jsx)("path", {
+                fill: "string" == typeof r ? r : r.css,
+                fillRule: "evenodd",
+                d: "M24 19a5 5 0 1 1-10 0 5 5 0 0 1 10 0Zm-5-3a1 1 0 0 1 1 1v1.59l.7.7a1 1 0 0 1-1.4 1.42l-1-1A1 1 0 0 1 18 19v-2a1 1 0 0 1 1-1Z",
+                clipRule: "evenodd",
+                className: s,
+            }),
+        ],
+    });
+};
 var _U = n(845798),
     _G = n(556112),
     _F = n(953822),
@@ -18325,7 +18290,7 @@ let Sg = "isHideDevBanner",
                     className: t2()(Sm.Wz, Sm.mr),
                     children: [
                         (0, U.jsx)(SE, { className: Sm.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "554187" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "554260" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })
@@ -18802,8 +18767,7 @@ class S4 extends e8.PureComponent {
     handleContextMenu(e, t) {
         (0, uh.L3)(e, async () => {
             let { default: e } = await Promise.all([
-                n.e("86653"),
-                n.e("94881"),
+                n.e("49286"),
                 n.e("26132"),
                 n.e("46652"),
                 n.e("93190"),
@@ -18875,8 +18839,7 @@ class S5 extends e8.PureComponent {
     handleUserContextMenu = (e, t) => {
         (0, uh.L3)(e, async () => {
             let { default: e } = await Promise.all([
-                n.e("86653"),
-                n.e("94881"),
+                n.e("49286"),
                 n.e("26132"),
                 n.e("46652"),
                 n.e("93190"),
@@ -19361,7 +19324,8 @@ function Ny(e) {
                       n.e("30402"),
                       n.e("24789"),
                       n.e("88667"),
-                      n.e("94881"),
+                      n.e("12697"),
+                      n.e("49286"),
                       n.e("26132"),
                       n.e("46652"),
                       n.e("93190"),
@@ -19421,8 +19385,7 @@ function Ny(e) {
               })
             : (0, uh.L3)(e, async () => {
                   let { default: e } = await Promise.all([
-                      n.e("86653"),
-                      n.e("94881"),
+                      n.e("49286"),
                       n.e("26132"),
                       n.e("46652"),
                       n.e("93190"),
@@ -21403,7 +21366,7 @@ let N9 = () => (0, U.jsx)("div", { className: N2.wG, children: (0, U.jsx)(rn.y, 
                 n.e("90665"),
                 n.e("63635"),
                 n.e("72318"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("30402"),
                 n.e("88667"),
                 n.e("88850"),
@@ -21663,7 +21626,7 @@ let N9 = () => (0, U.jsx)("div", { className: N2.wG, children: (0, U.jsx)(rn.y, 
                 n.e("56574"),
                 n.e("54802"),
                 n.e("54110"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("77737"),
                 n.e("3402"),
                 n.e("44837"),
@@ -21927,7 +21890,7 @@ let N9 = () => (0, U.jsx)("div", { className: N2.wG, children: (0, U.jsx)(rn.y, 
                 n.e("90665"),
                 n.e("63635"),
                 n.e("72318"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("30402"),
                 n.e("88667"),
                 n.e("88850"),
@@ -22481,10 +22444,10 @@ let N9 = () => (0, U.jsx)("div", { className: N2.wG, children: (0, U.jsx)(rn.y, 
         createPromise: () =>
             Promise.all([
                 n.e("58735"),
-                n.e("71145"),
+                n.e("14898"),
                 n.e("47753"),
                 n.e("27147"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("28367"),
                 n.e("83952"),
                 n.e("38056"),
@@ -22584,7 +22547,7 @@ let N9 = () => (0, U.jsx)("div", { className: N2.wG, children: (0, U.jsx)(rn.y, 
                 n.e("63635"),
                 n.e("24789"),
                 n.e("72318"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("69984"),
                 n.e("23924"),
                 n.e("42205"),
@@ -22779,7 +22742,7 @@ let N9 = () => (0, U.jsx)("div", { className: N2.wG, children: (0, U.jsx)(rn.y, 
                 n.e("90665"),
                 n.e("63635"),
                 n.e("72318"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("30402"),
                 n.e("88667"),
                 n.e("88850"),
@@ -23049,7 +23012,7 @@ let N9 = () => (0, U.jsx)("div", { className: N2.wG, children: (0, U.jsx)(rn.y, 
                 n.e("63635"),
                 n.e("24789"),
                 n.e("72318"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("66346"),
                 n.e("2742"),
                 n.e("14755"),
@@ -24623,7 +24586,7 @@ let Cy = (0, rs.Fe)({
                 n.e("14947"),
                 n.e("51755"),
                 n.e("11124"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("61663"),
                 n.e("54633"),
                 n.e("16117"),
@@ -24811,7 +24774,7 @@ let Cy = (0, rs.Fe)({
                 n.e("88850"),
                 n.e("78220"),
                 n.e("49494"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("47753"),
                 n.e("99961"),
                 n.e("85363"),
@@ -26700,7 +26663,7 @@ let OZ = (0, rs.Fe)({
                 n.e("90665"),
                 n.e("63635"),
                 n.e("72318"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("30402"),
                 n.e("88667"),
                 n.e("88850"),
@@ -27122,7 +27085,7 @@ let OZ = (0, rs.Fe)({
                 n.e("90665"),
                 n.e("63635"),
                 n.e("72318"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("30402"),
                 n.e("88667"),
                 n.e("88850"),
@@ -27449,7 +27412,7 @@ let OZ = (0, rs.Fe)({
                 n.e("90665"),
                 n.e("63635"),
                 n.e("72318"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("30402"),
                 n.e("88667"),
                 n.e("88850"),
@@ -27735,7 +27698,7 @@ let OZ = (0, rs.Fe)({
     O2 = (0, rs.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("86653"),
+                n.e("49286"),
                 n.e("14119"),
                 n.e("93103"),
                 n.e("74610"),
@@ -30115,7 +30078,7 @@ let D3 = {
                 (0, nv.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("86653"),
+                            n.e("49286"),
                             n.e("59957"),
                             n.e("28136"),
                             n.e("16084"),
@@ -31064,7 +31027,7 @@ let LM = {
                     tS.Ay.focus(),
                     (0, nv.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("86653"),
+                            n.e("49286"),
                             n.e("90665"),
                             n.e("58735"),
                             n.e("99430"),
@@ -31529,7 +31492,7 @@ let LU = {
                               ? (0, ox.XI)(a.guild_id, a.id, { pid: s.pid })
                               : (0, nv.openModalLazy)(async () => {
                                     let { default: e } = await Promise.all([
-                                        n.e("86653"),
+                                        n.e("49286"),
                                         n.e("17918"),
                                         n.e("76171"),
                                         n.e("86672"),
@@ -35216,7 +35179,7 @@ let P5 = [
                             n.e("54802"),
                             n.e("58735"),
                             n.e("93855"),
-                            n.e("86653"),
+                            n.e("49286"),
                             n.e("28367"),
                             n.e("8555"),
                             n.e("35321"),
@@ -35819,7 +35782,7 @@ var xN = n(681582),
 let xO = (0, nN.Fe)({
     createPromise: () =>
         Promise.all([
-            n.e("86653"),
+            n.e("49286"),
             n.e("97418"),
             n.e("54633"),
             n.e("22513"),
@@ -35939,7 +35902,7 @@ let xO = (0, nN.Fe)({
             n.e("15086"),
             n.e("92922"),
             n.e("18042"),
-            n.e("71145"),
+            n.e("14898"),
             n.e("27147"),
             n.e("23924"),
             n.e("42205"),
@@ -36578,7 +36541,7 @@ let xO = (0, nN.Fe)({
             n.e("86629"),
             n.e("98384"),
             n.e("55552"),
-            n.e("11883"),
+            n.e("71492"),
             n.e("75090"),
             n.e("11346"),
             n.e("93213"),
@@ -36648,7 +36611,7 @@ let xO = (0, nN.Fe)({
             n.e("80559"),
             n.e("49409"),
             n.e("81754"),
-            n.e("77788"),
+            n.e("7983"),
             n.e("70383"),
             n.e("70424"),
             n.e("80026"),
@@ -36718,7 +36681,7 @@ let xO = (0, nN.Fe)({
             n.e("50992"),
             n.e("86381"),
             n.e("28711"),
-            n.e("21345"),
+            n.e("19559"),
             n.e("10385"),
             n.e("93368"),
             n.e("56750"),
@@ -37218,7 +37181,7 @@ let kc = (0, rs.Fe)({
             Promise.all([
                 n.e("54633"),
                 n.e("42376"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("43282"),
                 n.e("207"),
                 n.e("88077"),
@@ -37246,7 +37209,7 @@ let kc = (0, rs.Fe)({
     k_ = (0, rs.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("86653"),
+                n.e("49286"),
                 n.e("32817"),
                 n.e("38601"),
                 n.e("63618"),
@@ -37651,7 +37614,7 @@ let kw = (0, rs.Fe)({
                 n.e("55642"),
                 n.e("80889"),
                 n.e("22513"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("19401"),
                 n.e("14947"),
                 n.e("33110"),
@@ -37892,7 +37855,7 @@ let kw = (0, rs.Fe)({
                 n.e("83072"),
                 n.e("98594"),
                 n.e("81154"),
-                n.e("86653"),
+                n.e("49286"),
                 n.e("14755"),
                 n.e("2332"),
                 n.e("14947"),

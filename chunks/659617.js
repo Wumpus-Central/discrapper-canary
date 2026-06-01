@@ -89,48 +89,51 @@ function V(e) {
     } = e;
     return r.useCallback(
         async (e, r, f) => {
-            var p, E, m, A, I;
-            let y = null == n,
-                N = U(i, s),
-                v = i.name ?? "";
-            if ("" === v && u) {
+            let p = null == n,
+                E = U(i, s),
+                m = i.name ?? "";
+            if ("" === m && u) {
                 let e = F(t, n);
-                v = "" !== e ? e : P.intl.string(P.t["7Xm5QI"]);
+                m = "" !== e ? e : P.intl.string(P.t["7Xm5QI"]);
             }
-            let R = (0, O.Gl)(t),
-                b = T.A.getChannel(C.default.castMessageIdAsChannelId(n)),
-                D = await j(t, [], void 0, () => {
+            let A = (0, O.Gl)(t),
+                I = T.A.getChannel(C.default.castMessageIdAsChannelId(n)),
+                y = await j(t, [], void 0, () => {
                     let e = null != n ? w.Rsh.CHANNEL_MESSAGE_THREADS(t.id, n) : w.Rsh.CHANNEL_THREADS(t.id);
                     return a.Bo.post({
                         url: e,
                         body: {
-                            name: v,
-                            type: N
+                            name: m,
+                            type: E
                                 ? w.rbe.PRIVATE_THREAD
                                 : t.type === w.rbe.GUILD_ANNOUNCEMENT
                                   ? w.rbe.ANNOUNCEMENT_THREAD
                                   : w.rbe.PUBLIC_THREAD,
-                            auto_archive_duration: R,
+                            auto_archive_duration: A,
                             location: o,
                         },
                         rejectWithError: !1,
                     });
                 });
-            D !== b &&
-                (c.A.clearDraft(t.id, S.C.ThreadSettings),
-                c.A.clearDraft(t.id, S.C.FirstThreadMessage),
-                l?.(D),
-                (y || e.length > 0 || (null != r && r.length > 0) || (null != f && f.length > 0)) &&
-                    ((p = D),
-                    (E = e),
-                    (m = r),
-                    (A = f),
-                    null != (I = h) && null != A && A.length > 0
-                        ? I(p, A, E, m)
-                        : null != m && m.length > 0
-                          ? d.A.sendStickers(p.id, m, g.Ay.parse(p, E), { location: M.Hx.THREAD_CREATION })
-                          : d.A.sendMessage(p.id, g.Ay.parse(p, E), void 0, { location: M.Hx.THREAD_CREATION }))),
-                _.A.clearAll(t.id, S.C.FirstThreadMessage);
+            if (y !== I) {
+                var N, v, R, b, D;
+                let n = S.A.getDraft(t.id, S.C.FirstThreadMessage);
+                c.A.clearDraft(t.id, S.C.ThreadSettings),
+                    c.A.clearDraft(t.id, S.C.FirstThreadMessage),
+                    "" !== n && n !== e && c.A.saveDraft(y.id, n, S.C.ChannelMessage),
+                    l?.(y),
+                    (p || e.length > 0 || (null != r && r.length > 0) || (null != f && f.length > 0)) &&
+                        ((N = y),
+                        (v = e),
+                        (R = r),
+                        (b = f),
+                        null != (D = h) && null != b && b.length > 0
+                            ? D(N, b, v, R)
+                            : null != R && R.length > 0
+                              ? d.A.sendStickers(N.id, R, g.Ay.parse(N, v), { location: M.Hx.THREAD_CREATION })
+                              : d.A.sendMessage(N.id, g.Ay.parse(N, v), void 0, { location: M.Hx.THREAD_CREATION }));
+            }
+            _.A.clearAll(t.id, S.C.FirstThreadMessage);
         },
         [t, n, i, l, s, o, u, h],
     );
@@ -238,7 +241,7 @@ async function j(e, t, i, r) {
                         }),
                             (c = e.id),
                             (0, p.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([n.e("31688"), n.e("73384"), n.e("66009")]).then(
+                                let { default: e } = await Promise.all([n.e("85363"), n.e("73384"), n.e("66009")]).then(
                                     n.bind(n, 33216),
                                 );
                                 return (n) => (0, f.jsx)(e, { ...n, channelId: c, messageId: t });
