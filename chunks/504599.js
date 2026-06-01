@@ -18128,8 +18128,7 @@ function hs(e) {
         null != l &&
             (0, nF.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    n.e("24789"),
-                    n.e("88667"),
+                    n.e("23531"),
                     n.e("49286"),
                     n.e("26132"),
                     n.e("46652"),

@@ -483,9 +483,9 @@ let e5 = (e) => {
         return (0, a.jsx)("div", { className: e4.p, children: t });
     },
     e9 = (e) => {
-        let { referralSentUsers: t } = e;
+        let { referralSentUsers: t, className: n } = e;
         return (0, a.jsx)("div", {
-            className: e4.L$,
+            className: u()(e4.L$, n),
             children: (() => {
                 let e = [];
                 for (let n = 0; n < e2.Z; n++)
@@ -527,7 +527,7 @@ let e5 = (e) => {
                 (0, a.jsxs)("div", {
                     className: e4.IH,
                     children: [
-                        (0, a.jsx)(e9, { referralSentUsers: n }),
+                        (0, a.jsx)(e9, { referralSentUsers: n, className: e4.ds }),
                         (0, a.jsxs)("div", {
                             className: e4.n4,
                             children: [
@@ -707,7 +707,7 @@ function tm(e) {
                             (0, a.jsx)(U.E, { variant: "text-md/medium", color: "text-subtle", children: o }),
                         ],
                     }),
-                    (0, a.jsx)(e9, { referralSentUsers: n }),
+                    (0, a.jsx)(e9, { referralSentUsers: n, className: tE.t7 }),
                 ],
             }),
             (0, a.jsx)(x.$, {
@@ -1190,15 +1190,15 @@ let tB = () => {
                                                                 n.e("87521"),
                                                                 n.e("18090"),
                                                                 n.e("57105"),
-                                                                n.e("88850"),
+                                                                n.e("12259"),
                                                                 n.e("26105"),
                                                                 n.e("46461"),
-                                                                n.e("77737"),
+                                                                n.e("71192"),
                                                                 n.e("16581"),
                                                                 n.e("23924"),
                                                                 n.e("42205"),
                                                                 n.e("71091"),
-                                                                n.e("28367"),
+                                                                n.e("50748"),
                                                                 n.e("10471"),
                                                                 n.e("35429"),
                                                                 n.e("11301"),
@@ -1355,15 +1355,15 @@ let tZ = function (e) {
                                 n.e("87521"),
                                 n.e("18090"),
                                 n.e("57105"),
-                                n.e("88850"),
+                                n.e("12259"),
                                 n.e("26105"),
                                 n.e("46461"),
-                                n.e("77737"),
+                                n.e("71192"),
                                 n.e("16581"),
                                 n.e("23924"),
                                 n.e("42205"),
                                 n.e("71091"),
-                                n.e("28367"),
+                                n.e("50748"),
                                 n.e("10471"),
                                 n.e("35429"),
                                 n.e("11301"),
