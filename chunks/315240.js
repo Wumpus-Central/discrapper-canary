@@ -1,780 +1,853 @@
 "use strict";
-n.d(t, {
-    yT: () => el,
-    yO: () => X,
-    $N: () => ey,
-    YK: () => eh,
-    h$: () => en,
-    eQ: () => q,
-    YP: () => Q,
-    PW: () => eT,
-    MI: () => eu,
-    Fb: () => ef,
-    w7: () => ev,
-    K7: () => ep,
-    HU: () => ee,
-    VO: () => em,
-    Mt: () => J,
-    GS: () => et,
-    fd: () => Z,
-    Ts: () => eS,
-    e6: () => eI,
-    H1: () => eA,
-    oH: () => eE,
-    jA: () => e_,
-    l0: () => eN,
-    yd: () => eo,
-    XK: () => ed,
-    Yy: () => ec,
-}),
-    n(321073);
-var i = n(636537),
-    r = n(459838),
-    s = n(823598),
+n.d(t, { A: () => eo, u: () => U }), n(321073);
+var i,
+    r,
+    s = n(17928),
     a = n(228366),
-    o = n(77729),
-    l = n(166929),
-    u = n(885386),
-    c = n(994500),
-    d = n(461213),
-    _ = n(652215),
-    h = n(952818),
-    f = n(652896),
-    p = n(400492),
-    E = n(929921),
-    m = n(616356),
-    g = n(495544),
-    A = n(734057),
-    I = n(761853),
-    T = n(763827),
-    S = n(116956),
-    y = n(803301),
-    N = n(174459),
-    v = n(723702),
-    C = n(274372),
-    R = n(372684),
-    O = n(974293),
-    b = n(458977),
-    D = n(439818),
-    L = n(572164),
-    w = n(835245),
-    M = n(935208),
-    P = n(696016);
-let x = [
-        (e) => {
-            let t = { ...e, version: 1, applicationName: e.gameName, applicationId: void 0 };
-            return delete t.gameName, t;
-        },
-        (e) => ({ ...e, version: 2, name: e.name.startsWith("Clip - ") ? void 0 : e.name }),
-        (e) => ({ ...e, version: 3, name: "" === e.name ? void 0 : e.name }),
-        (e) => {
-            let t = e.filepath.endsWith(".jpeg") || e.filepath.endsWith(".jpg");
-            return { ...e, version: 4, timeline: [], type: t ? R.nQ.SCREENSHOT : R.nQ.CLIP };
-        },
-        (e) => ({ ...e, version: 5, id: (0, w.A)(), createdAt: M.default.extractTimestamp(e.id) }),
-    ],
-    k = null;
-async function U(e) {
-    let t = (await n.e("34188").then(n.t.bind(n, 88137, 23))).default,
-        i =
-            null != k
-                ? k
-                : (k = t
-                      .object({
-                          id: t.string().required(),
-                          version: t.number().positive().integer().min(0).max(P.kd).optional(),
-                          name: t.string().when("version", { is: t.number().less(3), then: t.string().allow("") }),
-                          gameName: t
-                              .string()
-                              .when("version", {
-                                  is: t.number().greater(0).required(),
-                                  then: t.forbidden(),
-                                  otherwise: t.required(),
-                              }),
-                          applicationName: t
-                              .string()
-                              .when("version", {
-                                  is: t.number().greater(0).required(),
-                                  then: t.required().allow(""),
-                                  otherwise: t.forbidden(),
-                              }),
-                          applicationId: t.string(),
-                          activity: t
-                              .object()
-                              .keys({
-                                  state: t.string(),
-                                  details: t.string(),
-                                  timestamps: t.object().keys({ start: t.number(), end: t.number() }),
-                                  party: t.object().keys({ id: t.string(), size: t.array().items(t.number()) }),
-                              }),
-                          users: t.array().items(t.string()).required(),
-                          filepath: t.string().required(),
-                          length: t.number().required(),
-                          thumbnail: t.string().required().allow(""),
-                          editMetadata: t
-                              .object()
-                              .keys({
-                                  start: t.number(),
-                                  end: t.number(),
-                                  applicationAudio: t.boolean(),
-                                  voiceAudio: t.boolean(),
-                                  soundboardAudio: t.boolean(),
-                              }),
-                          createdAt: t
-                              .number()
-                              .when("version", { is: t.number().greater(4).required(), then: t.required() }),
-                          type: t
-                              .string()
-                              .allow(R.nQ.CLIP, R.nQ.SCREENSHOT, R.nQ.VOICE_CLIP)
-                              .when("version", {
-                                  is: t.number().greater(3).required(),
-                                  then: t.required(),
-                                  otherwise: t.forbidden(),
-                              }),
-                          clipMethod: t.string().allow("auto", "manual").required(),
-                          guildId: t.string(),
-                          channelId: t.string(),
-                          isFavorite: t.boolean(),
-                          isTemporary: t.boolean(),
-                          isCandidate: t.boolean(),
-                          remoteClipId: t.string(),
-                          gameSessionId: t.string(),
-                          decision: t
-                              .object()
-                              .keys({
-                                  reason: t.string(),
-                                  clippingPressure: t.number(),
-                                  currentThreshold: t.number(),
-                                  effectivePressure: t.number(),
-                                  timestamp: t.number(),
-                                  signal: t.object().required(),
-                              }),
-                          timeline: t
-                              .array()
-                              .items(
-                                  t
-                                      .object()
-                                      .keys({ signal: t.object().required(), timestamp: t.number().required() })
-                                      .unknown(),
-                              )
-                              .when("version", {
-                                  is: t.number().greater(3).required(),
-                                  then: t.required(),
-                                  otherwise: t.forbidden(),
-                              }),
-                      })
-                      .required());
-    try {
+    o = n(427358),
+    l = n(95701),
+    u = n(734057),
+    c = n(776096),
+    d = n(576705),
+    _ = n(763827),
+    h = n(222823),
+    f = n(543465),
+    p = n(287809),
+    E = n(977997),
+    m = n(927813),
+    g = n(935208),
+    A = n(914853),
+    I = n(41984),
+    T = n(956753),
+    S = n(296027),
+    y =
+        (((i = {}).GuildText = "GUILD_TEXT"),
+        (i.GuildVoice = "GUILD_VOICE"),
+        (i.DirectMessage = "DIRECT_MESSAGE"),
+        (i.GroupDM = "GROUP_DM"),
+        i);
+function N(e, t, n, i) {
+    let r = 0;
+    for (let [s, a] of e.entries()) {
+        let e = i(s);
+        if (e <= 0) continue;
+        let o = e * R(a, t, n);
+        o > r && (r = o);
+    }
+    return r;
+}
+class v {
+    signals;
+    providers;
+    lastActivityAtMs;
+    scoreInfo = { rawSignalsScore: {} };
+    constructor(e, t) {
+        (this.signals = e), (this.providers = t), (this.lastActivityAtMs = Date.now());
+    }
+    _computeMentionScore(e) {
+        if (this.signals.mentionCount <= 0) return 0;
+        let t = R(this.signals.lastDirectMentionAtMs, e, 6e5);
+        this.scoreInfo.rawSignalsScore.lastDirectMentionAtMs = t;
+        let n = R(this.signals.lastRoleMentionAtMs, e, 6e5);
         return (
-            delete e.eventTimeline,
-            delete e.eventTimelineReferenceTimestamp,
-            delete e.autoclipData,
-            delete e.emotionHistory,
-            null != e.decision && delete e.decision.emotionHistory,
-            t.assert(e, i),
-            null == e.version && (e.version = 0),
-            x.slice(e.version).reduce((e, t) => t(e), e)
-        );
-    } catch (e) {
-        return null;
-    }
-}
-n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162);
-var G = n(284009),
-    F = n.n(G);
-async function V(e) {
-    let t,
-        { default: i } = await n.e("25777").then(n.t.bind(n, 293384, 19)),
-        r = i.createFile(!1),
-        s = new Promise((e) => {
-            r.onReady = e;
-        }),
-        a = await e.arrayBuffer();
-    for (let e of ((a.fileStart = 0),
-    r.appendBuffer(a),
-    r.flush(),
-    await s,
-    F()(null != r.boxes, "mp4boxInputFile.boxes should not be null after parsing"),
-    r.boxes))
-        "uuid" === e.type && (t = e.start);
-    let o = e.slice(0, t, e.type),
-        l = e.slice(t + 4, t + 8 + 16, e.type);
-    return new Blob([o, new Uint8Array([0, 0, 0, 24]), l], { type: e.type });
-}
-var B = n(956050),
-    H = n(47167),
-    j = n(587895),
-    Y = n(311043),
-    W = n(287809),
-    K = n(977997),
-    $ = n(375708);
-function z() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "manual",
-        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : R.nQ.CLIP,
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-        i = arguments.length > 3 ? arguments[3] : void 0,
-        r = arguments.length > 4 ? arguments[4] : void 0,
-        {
-            sourceName: s,
-            sourceApplicationId: a,
-            activity: o,
-            isVoiceOnly: l,
-        } = (function () {
-            let e,
-                t = m.A.getStreamerActiveStreamMetadata(),
-                n = t?.pid,
-                i = t?.sourceName,
-                r = (() => {
-                    if (null == t) return h.Ay.getVisibleGame();
-                    {
-                        let e = null != n ? h.Ay.getGameForPID(n) : null,
-                            t = null != i ? h.Ay.getGameForName(i) : null;
-                        return e ?? t;
-                    }
-                })(),
-                s = t?.id ?? r?.id,
-                a = t?.sourceName ?? r?.name,
-                o = T.A.getChannelId(),
-                l = null == a && null != o;
-            if (l) {
-                let e = null != o ? A.A.getChannel(o) : null;
-                a = null != e ? (0, H.m1)(e, W.default, c.A) : "";
-            }
-            let u =
-                    ((e = new Set()),
-                    null == s ||
-                        (e.add(s),
-                        Y.A.getGame(s)?.linkedApplications?.forEach((t) => e.add(t.id)),
-                        j.A.getApplication(s)?.linkedGames?.forEach((t) => {
-                            e.add(t.id), Y.A.getGame(t.id)?.linkedApplications?.forEach((t) => e.add(t.id));
-                        })),
-                    e),
-                f = d.A.getUnfilteredActivities(!0).filter(
-                    (e) => e.type === _.$pd.PLAYING && null != e.application_id && u.has(e.application_id),
-                );
-            return {
-                sourceName: a,
-                sourceApplicationId: s,
-                activity: (function (e) {
-                    if (null != e)
-                        return {
-                            state: e.state,
-                            details: e.details,
-                            timestamps: e.timestamps,
-                            party: null != e.party ? { id: e.party.id, size: e.party.size } : void 0,
-                        };
-                })(
-                    f.find((e) => (null != e.state && "" !== e.state) || (null != e.details && "" !== e.details)) ??
-                        f[0],
-                ),
-                isVoiceOnly: l,
-            };
-        })(),
-        u = T.A.getChannelId(),
-        f = T.A.getGuildId(),
-        p = new Set([g.default.getId()]);
-    null != u && (p = p.union(new Set(Object.keys(K.A.getVoiceStatesForChannel(u))))),
-        n.forEach((e) => {
-            let { signal: t } = e;
-            "userId" in t && null != t.userId && p.add(t.userId);
-        });
-    let E = l && t === R.nQ.CLIP ? R.nQ.VOICE_CLIP : t;
-    return {
-        id: (0, w.A)(),
-        createdAt: Date.now(),
-        version: P.kd,
-        applicationName: s ?? $.intl.string($.t.qtSJxb),
-        applicationId: a,
-        activity: o,
-        users: Array.from(p),
-        clipMethod: e,
-        isTemporary: "auto" === e,
-        guildId: f ?? void 0,
-        channelId: u ?? void 0,
-        timeline: n,
-        decision: i,
-        gameSessionId: r,
-        remoteClipId: i?.signal?.type === R.Gy.DISTRIBUTED ? i.signal.remoteTriggerClipId : void 0,
-        length: 0,
-        thumbnail: "",
-        type: E,
-    };
-}
-async function q(e) {
-    let { allowVoiceRecording: t } = e;
-    await u.Q$.updateSetting(t),
-        N.default.track(_.HAw.CLIPS_SETTINGS_UPDATED, { allow_voice_recording: t, clip_runtime: (0, O.GN)() }),
-        a.h.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
-}
-async function X(e) {
-    let { clipsEnabled: t, guildId: n, trackAnalytics: i = !1 } = e;
-    await a.h.dispatch({
-        type: "CLIPS_SETTINGS_UPDATE",
-        settings: { clipsEnabled: t, ...(!t && { decoupledClipsEnabled: !1 }) },
-    }),
-        i &&
-            N.default.track(_.HAw.CLIPS_SETTINGS_UPDATED, {
-                clips_enabled: t,
-                guild_id: n,
-                ...(!t && { decoupled_clips_enabled: !1 }),
-                clip_runtime: (0, O.GN)(),
-            });
-}
-function Z(e) {
-    let { enabled: t, trackAnalytics: n = !1 } = e;
-    a.h.dispatch({
-        type: "CLIPS_SETTINGS_UPDATE",
-        settings: { ...(t && { clipsEnabled: !0 }), decoupledClipsEnabled: t },
-    }),
-        n &&
-            N.default.track(_.HAw.CLIPS_SETTINGS_UPDATED, {
-                ...(t && { clips_enabled: !0 }),
-                decoupled_clips_enabled: t,
-                clip_runtime: (0, O.GN)(),
-            });
-}
-function Q(e) {
-    a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { debugTooltipsEnabled: e } });
-}
-function J(e) {
-    a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { remindersEnabled: e } }),
-        N.default.track(_.HAw.CLIPS_SETTINGS_UPDATED, { reminders_enabled: e, clip_runtime: (0, O.GN)() });
-}
-function ee(e) {
-    a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { storageLocation: e } }),
-        ef(e).catch((e) => {
-            P.nx.error("Failed to load clips directory after storage location change", e);
-        });
-}
-function et(e) {
-    a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { clipsQuality: e } });
-}
-function en(e) {
-    a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { clipsLength: e } });
-}
-function ei(e, t) {
-    let n = new Map();
-    for (let e in t.framesEncodedByEncoder) {
-        let i = t.framesEncodedByEncoder[e],
-            r = (0, l.kZ)(e),
-            s = n.get(r) ?? 0;
-        n.set(r, s + i);
-    }
-    return {
-        ...e,
-        frames_encoded_nvidia_cuda: n.get(l.yo.NVIDIA_CUDA) ?? 0,
-        frames_encoded_nvidia_direct3d: n.get(l.yo.NVIDIA_DIRECT_3D) ?? 0,
-        frames_encoded_openh264: n.get(l.yo.OPENH264) ?? 0,
-        frames_encoded_videotoolbox: n.get(l.yo.VIDEOTOOLBOX) ?? 0,
-        frames_encoded_amd_direct3d: n.get(l.yo.AMD_DIRECT_3D) ?? 0,
-        frames_encoded_amd_vaapi: n.get(l.yo.AMD_VAAPI) ?? 0,
-        frames_encoded_intel: n.get(l.yo.INTEL) ?? 0,
-        frames_encoded_intel_direct3d: n.get(l.yo.INTEL_DIRECT_3D) ?? 0,
-        frames_encoded_wmf_direct3d_intel: n.get(l.yo.WMF_DIRECT_3D_INTEL) ?? 0,
-        frames_encoded_wmf_direct3d_nvidia: n.get(l.yo.WMF_DIRECT_3D_NVIDIA) ?? 0,
-        frames_encoded_wmf_direct3d_amd: n.get(l.yo.WMF_DIRECT_3D_AMD) ?? 0,
-        frames_encoded_wmf_direct3d:
-            (n.get(l.yo.WMF_DIRECT_3D) ?? 0) +
-            (n.get(l.yo.WMF_DIRECT_3D_INTEL) ?? 0) +
-            (n.get(l.yo.WMF_DIRECT_3D_NVIDIA) ?? 0) +
-            (n.get(l.yo.WMF_DIRECT_3D_AMD) ?? 0),
-        frames_encoded_uncategorized: n.get(l.yo.UNCATEGORIZED) ?? 0,
-        frames_encoded_unknown: n.get(l.yo.UNKNOWN) ?? 0,
-        frames_submitted: t.framesSubmitted,
-        frames_submitted_during_clip: t.framesSubmittedDuringClip,
-        frames_encoded: t.framesEncoded,
-        frames_encoded_during_clip: t.framesEncodedDuringClip,
-        frames_dropped: t.framesDropped,
-        frames_dropped_during_clip: t.framesDroppedDuringClip,
-        clip_duration_setting: C.Ay.getSettings().clipsLength,
-        clip_duration: t.clipDuration,
-        clip_resolution_width: t.clipResolutionWidth,
-        clip_resolution_height: t.clipResolutionHeight,
-        min_fps: t.minFps,
-        max_fps: t.maxFps,
-        submitted_fps: t.submittedFps,
-        target_fps: E.A.getState().fps,
-        audio_track_count: t.audioTrackCount,
-        saved_at: t.savedAt,
-        clip_runtime: (0, O.GN)(),
-    };
-}
-async function er(e) {
-    if (
-        !b.A.getConfig({ location: "maybeSendRemoteClipTrigger" }).enableDistributedClips ||
-        e.isCandidate ||
-        null == e.applicationId ||
-        e.decision?.signal.type !== R.Gy.MANUAL
-    )
-        return;
-    let t = T.A.getChannelId(),
-        n = A.A.getChannel(t);
-    if (
-        null != n &&
-        (function (e) {
-            if (!d.A.getActivities(!1).some((e) => e.type === _.$pd.PLAYING)) return !1;
-            if (e.isPrivate()) return e.recipients.every((e) => c.A.isFriend(e));
-            if (e.isGuildVocalOrThread()) {
-                let t = e.guild_id;
-                return !u.JG.getSetting().includes(t);
-            }
-            return !1;
-        })(n)
-    )
-        try {
-            let {
-                body: { remote_clip_id: t },
-            } = await i.Bo.post({
-                url: _.Rsh.SEND_CLIPS_REMOTE_TRIGGER(n.id),
-                body: { application_id: e.applicationId },
-                rejectWithError: !0,
-            });
-            null != t && (await ec(e.id, { remoteClipId: t })),
-                N.default.track(_.HAw.CLIP_REMOTE_TRIGGER_SENT, {
-                    remote_clip_id: t,
-                    clip_trigger_type: e.decision?.signal.type,
-                    num_clip_participants: e.users.length,
-                    application_id: e.applicationId,
-                    clip_runtime: (0, O.GN)(),
-                });
-        } catch (e) {
-            P.nx.warn("Failed to send remote clip trigger", e);
-        }
-}
-function es(e) {
-    return "string" == typeof e
-        ? { errorMessage: e }
-        : null != e && "object" == typeof e
-          ? {
-                errorMessage:
-                    "string" == typeof e.errorMessage
-                        ? e.errorMessage
-                        : "string" == typeof e.message
-                          ? e.message
-                          : void 0,
-                errorAt: "string" == typeof e.errorAt ? e.errorAt : void 0,
-            }
-          : {};
-}
-async function ea() {
-    let e,
-        t,
-        n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "manual",
-        i = arguments.length > 1 ? arguments[1] : void 0,
-        r = arguments.length > 2 ? arguments[2] : void 0,
-        s = arguments.length > 3 ? arguments[3] : void 0,
-        l = arguments.length > 4 ? arguments[4] : void 0,
-        u = C.Ay.getSettings().storageLocation,
-        c = z(n, R.nQ.CLIP, i, r, l);
-    c.isCandidate = s ?? !1;
-    let d = `${(0, D.A)(c.applicationName.substring(0, 20))}_${c.id}.mp4`,
-        h = o.A.fileManager.join(u, d),
-        p = I.Ay.getMediaEngine(),
-        E = JSON.stringify(c),
-        A =
-            ((t = null != (e = m.A.getCurrentUserActiveStream()) ? S.A.getRTCConnection((0, f._z)(e)) : null),
-            {
-                rtc_connection_id: t?.getRTCConnectionId(),
-                media_session_id: t?.getMediaSessionId(),
-                parent_media_session_id: t?.parentMediaSessionId,
-                guild_id: c.guildId,
-                channel_id: c.channelId,
-                application_id: c.applicationId,
-                application_name: c.applicationName,
-                clip_uuid: c.id,
-                clip_event_timeline_size: c.timeline.length,
-            });
-    s && a.h.dispatch({ type: "CLIPS_SAVE_CLIP_CANDIDATE", clip: { ...c, pending: !0, filepath: h } });
-    try {
-        let { duration: e, clipStats: t } = await (null != m.A.getCurrentUserActiveStream()
-                ? p.saveClipForUser(g.default.getId(), h, E)
-                : p.saveClip(h, E)),
-            n = ei(A, t);
-        (n.clip_save_time_ms = t.clipSaveTimeMs),
-            (n.clip_size_bytes = t.clipSizeBytes),
-            null != t.viewerDecodeFps &&
-                ((n.decode_fps_during_clip = t.viewerDecodeFps),
-                (n.encode_fps_during_clip = t.viewerEncodeFps),
-                (n.target_fps = null),
-                (n.remote_clip_id = c.remoteClipId));
-        let i = "";
-        try {
-            i = await (0, B.m)(o.A.clips.getClipProtocolURLFromPath(h), 0);
-        } catch (e) {
-            P.nx.warn("Failed to generate clip thumbnail:", e);
-        }
-        return (
-            (c.thumbnail = i),
-            (c.length = e),
-            N.default.track(_.HAw.CLIP_SAVED, n),
-            P.nx.info(`Clip save succeeded with ${e}ms and thumbnail ${i.length} bytes thumbnail.`),
-            await p.updateClipMetadata(h, JSON.stringify(c)),
-            { ...c, filepath: h }
-        );
-    } catch (t) {
-        if ((s && a.h.dispatch({ type: "CLIPS_SAVE_CLIP_CANDIDATE_ERROR", clipId: c.id }), !("errorMessage" in t)))
-            throw (N.default.track(_.HAw.CLIP_SAVE_FAILURE, { ...A, clip_runtime: (0, O.GN)() }), t);
-        let e = ei(A, t);
-        throw (
-            ((e.error_at = t.errorAt),
-            (e.error_message = t.errorMessage),
-            N.default.track(_.HAw.CLIP_SAVE_FAILURE, e),
-            t)
+            (this.scoreInfo.rawSignalsScore.lastRoleMentionAtMs = n),
+            2 * Math.min(this.signals.mentionCount, 3) * Math.max(t, n)
         );
     }
-}
-async function eo() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "manual",
-        t = arguments.length > 1 ? arguments[1] : void 0,
-        n = arguments.length > 2 ? arguments[2] : void 0,
-        i = arguments.length > 3 ? arguments[3] : void 0,
-        o = arguments.length > 4 ? arguments[4] : void 0;
-    if (C.Ay.getIsAtMaxSaveClipOperations())
-        return void a.h.dispatch({ type: "CLIPS_SAVE_CLIP_NO_OP", clipMethod: e, reason: R.RC.MAX_CONCURRENT_SAVES });
-    let l = (0, L.TD)(),
-        u = m.A.getCurrentUserActiveStream(),
-        c = null != u,
-        d = (0, L.Ao)(),
-        _ = h.Ay.getVisibleGame()?.windowHandle != null,
-        E = I.Ay.hasClipsSource(),
-        g = d && _ && E;
-    if (!(l && c) && !g)
-        return void a.h.dispatch({
-            type: "CLIPS_SAVE_CLIP_NO_OP",
-            clipMethod: e,
-            reason: R.RC.NO_ELIGIBLE_SOURCE,
-            sourceChecks: {
-                clipsEnabled: l,
-                hasActiveStream: c,
-                decoupledClipsEnabled: d,
-                hasVisibleGameWindow: _,
-                hasClipsSource: E,
-            },
-        });
-    let A = null != u ? (0, f._z)(u) : void 0,
-        T = (() => {
-            if (null != u) return P.Fv.STREAMER;
-            if (g) return P.Fv.DECOUPLED;
-            throw Error("No clip type available");
-        })(),
-        S = await (async () => {
-            if (null == A) return;
-            let { ownerId: e, guildId: t } = (0, f.Iy)(A),
-                n = y.A.getStreamId(e, t, r.x.STREAM);
-            if (null != n)
-                try {
-                    let e = (0, s.lE)(),
-                        t = await e.getNextVideoOutputFrame(n);
-                    return (0, B.n)(t);
-                } catch (e) {
-                    return;
-                }
-        })();
-    a.h.dispatch({
-        type: "CLIPS_SAVE_CLIP_START",
-        clipType: T,
-        streamKey: A,
-        thumbnail: i ? void 0 : S,
-        clipMethod: e,
-        signal: n?.signal,
-    });
-    let N = "manual" === e ? (0, p.Ak)("clip_save", 0.5) : null,
-        v = performance.now(),
-        O = setTimeout(() => {
-            P.nx.warn(`Clip save still pending after ${P.ut}ms \u{2014} native callback may have stalled`),
-                a.h.dispatch({ type: "CLIPS_SAVE_CLIP_TIMEOUT", clipMethod: e, elapsedMs: P.ut });
-        }, P.ut);
-    try {
-        if ("auto" === e && !i) {
-            let e = C.Ay.getSettings().maxAutoClips,
-                t = C.Ay.getClips().filter((e) => !0 === e.isTemporary),
-                n = t.length - e + 1;
-            if (n > 0) {
-                let i = t.sort((e, t) => e.createdAt - t.createdAt).slice(0, n);
-                for (let t of (P.nx.info(`Deleting ${i.length} temporary clips to stay within limit of ${e}`), i))
-                    try {
-                        await eE(t.filepath, t.id);
-                    } catch (e) {
-                        P.nx.error("Failed to delete temporary clip", e);
-                    }
-            }
-        }
-        let r = await ea(e, t, n, i, o);
+    _computeMessageScore(e) {
+        let t;
         if (
-            i &&
-            !C.Ay.getPendingClipCandidates().some((e) => {
-                let { id: t } = e;
-                return t === r.id;
-            })
+            ((t =
+                0 +
+                (function (e, t) {
+                    if (null == e) return 0;
+                    let n = t - e;
+                    return n <= 0 || n <= 18e4 ? 0.8 : n >= 6e5 ? 0 : 0.8 * (1 - (n - 18e4) / 42e4);
+                })(this.signals.lastMessageAtMs, e)),
+            this.signals.unread)
         ) {
-            a.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" }), eE(r.filepath, r.id);
-            return;
+            let n = R(this.signals.lastUnreadAtMs, e, 18e5);
+            (t += 0.8 * n), (this.scoreInfo.rawSignalsScore.lastUnreadAtMs = n);
         }
-        a.h.dispatch({ type: "CLIPS_SAVE_CLIP", clip: r }), er(r);
-    } catch (e) {
-        P.nx.error("Clip Failed to Save", e),
-            N?.stop(),
-            i || (0, p.Ak)("clip_error", 0.5),
-            a.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR", ...es(e) });
-    } finally {
-        clearTimeout(O);
+        let n = N(this.signals.recentMessageAuthorIds, e, 6e5, this.providers.getNormalizedUserAffinity);
+        return (this.scoreInfo.rawSignalsScore.recentMessageAuthorIds = n), (t += 1.2 * n);
     }
-    P.nx.info(`${C.Ay.getSettings().clipsLength / 1e3}s clip save took ${Math.round(performance.now() - v)}ms`);
+    _computeActivityScore(e) {
+        if (!this.signals.isTyping) return 0;
+        let t = N(this.signals.typingUserIdsWithTimestampMs, e, 15e3, this.providers.getNormalizedUserAffinity);
+        return (this.scoreInfo.rawSignalsScore.typingUserIdsWithTimestampMs = t), 1.5 * t;
+    }
+    getScoreWithoutPenalty(e) {
+        let t = this._computeActivityScore(e),
+            n = this._computeMentionScore(e),
+            i = this._computeMessageScore(e);
+        return (
+            (this.scoreInfo.activityScore = t),
+            (this.scoreInfo.mentionScore = n),
+            (this.scoreInfo.messageScore = i),
+            t + n + i
+        );
+    }
+    computeScore(e) {
+        let t = D(e, this.lastActivityAtMs);
+        return (this.scoreInfo.penalty = t), this.getScoreWithoutPenalty(e) * (1 - t);
+    }
+    pruneSignals(e) {
+        if (this.signals.typingUserIdsWithTimestampMs.size > 0) {
+            let t = new Map();
+            for (let [n, i] of this.signals.typingUserIdsWithTimestampMs.entries()) e - i <= 15e3 && t.set(n, i);
+            let n = Array.from(t.keys());
+            this.signals = {
+                ...this.signals,
+                typingUserIdsWithTimestampMs: t,
+                typingUserIds: n,
+                isTyping: n.length > 0,
+            };
+        }
+        if (this.signals.recentMessageAuthorIds.size > 0) {
+            let t = new Map();
+            for (let [n, i] of this.signals.recentMessageAuthorIds.entries()) e - i <= 6e5 && t.set(n, i);
+            let n =
+                null != this.signals.recentMessageAuthorId && t.has(this.signals.recentMessageAuthorId)
+                    ? this.signals.recentMessageAuthorId
+                    : null;
+            this.signals = { ...this.signals, recentMessageAuthorIds: t, recentMessageAuthorId: n };
+        }
+    }
+    updateSignals(e, t) {
+        (this.lastActivityAtMs = t), (this.signals = e);
+    }
 }
-async function el(e) {
-    let t, n;
-    if (C.Ay.getIsAtMaxSaveClipOperations()) return;
-    let i = m.A.getCurrentUserActiveStream(),
-        r = I.Ay.getMediaEngine(),
-        s = z(e, R.nQ.SCREENSHOT),
-        l = C.Ay.getSettings().storageLocation,
-        u = `${(0, D.A)(s.applicationName.substring(0, 20))}_${s.id}.jpeg`,
-        c = o.A.fileManager.join(l, u);
-    if (
-        (null != s.applicationId &&
-            null != (n = h.Ay.getRunningGames().find((e) => e.id === s.applicationId)) &&
-            P.nx.log("Matched application ID to running game:", s.applicationId, n.name),
-        null == n &&
-            null != s.applicationName &&
-            null != (n = h.Ay.getRunningGames().find((e) => e.name === s.applicationName)) &&
-            P.nx.log("Matched application name to running game:", s.applicationName),
-        null == n && null != (n = h.Ay.getVisibleGame()) && P.nx.log("Using visible game for screenshot:", n.name),
-        n?.windowHandle != null)
-    )
-        (t = parseInt(n.windowHandle, 10)), P.nx.log("Using window handle for full resolution screenshot:", t);
-    else {
-        P.nx.error("Failed to save screenshot: No window handle available"), (0, p.Ak)("clip_error", 0.5);
-        return;
+class C {
+    signals;
+    providers;
+    lastActivityAtMs;
+    scoreInfo = { rawSignalsScore: {} };
+    _textualScore;
+    constructor(e, t) {
+        (this.signals = e),
+            (this.providers = t),
+            (this._textualScore = new v(e, t)),
+            (this.lastActivityAtMs = Date.now());
     }
-    a.h.dispatch({
-        type: "CLIPS_SAVE_CLIP_START",
-        clipType: P.Fv.STREAMER,
-        streamKey: null != i ? (0, f._z)(i) : void 0,
-        thumbnail: void 0,
-        clipMethod: e ?? "manual",
-    });
-    let d = (0, p.Ak)("clip_save", 0.5),
-        _ = performance.now();
-    try {
-        let e = { ...s, filepath: c, length: 0, thumbnail: "" },
-            n = JSON.stringify(e),
-            i = (await r.saveScreenshot(c, n, 90, void 0, t)).toString("base64");
-        (e.thumbnail = `data:image/jpeg;base64,${i}`),
-            a.h.dispatch({ type: "CLIPS_SAVE_CLIP", clip: e }),
-            P.nx.info(`Screenshot save took ${Math.round(performance.now() - _)}ms`),
-            P.nx.log("Successfully saved screenshot to:", c);
-    } catch (e) {
-        throw (
-            (P.nx.error("Failed to save screenshot:", e),
-            d?.stop(),
-            (0, p.Ak)("clip_error", 0.5),
-            a.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR", ...es(e) }),
-            e)
+    _computeTextualScore(e) {
+        let t = this._textualScore.getScoreWithoutPenalty(e);
+        return (
+            (this.scoreInfo = {
+                ...this.scoreInfo,
+                ...this._textualScore.scoreInfo,
+                rawSignalsScore: { ...this.scoreInfo.rawSignalsScore, ...this._textualScore.scoreInfo.rawSignalsScore },
+            }),
+            O(t, 2)
+        );
+    }
+    _computeVoiceUsersScore(e) {
+        if (0 === this.signals.voiceUsersWithJoinTimestampMs.size) return 0;
+        let t = N(this.signals.voiceUsersWithJoinTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
+        return (this.scoreInfo.rawSignalsScore.voiceUsersWithJoinTimestampMs = t), 1.25 * t;
+    }
+    _computeVoiceActivityScore(e) {
+        let t = 0;
+        null != this.signals.lastVoiceJoinAtMs && (t = Math.max(t, R(this.signals.lastVoiceJoinAtMs, e, 12e4))),
+            (this.scoreInfo.rawSignalsScore.lastVoiceJoinAtMs = t);
+        let n = N(this.signals.lastUnmuteActivityAtMs, e, 12e4, this.providers.getNormalizedUserAffinity);
+        return (
+            (this.scoreInfo.rawSignalsScore.lastUnmuteActivityAtMs = n),
+            (n = Math.max(
+                n,
+                N(this.signals.lastUndeafenActivityAtMs, e, 12e4, this.providers.getNormalizedUserAffinity),
+            )),
+            (this.scoreInfo.rawSignalsScore.lastUndeafenActivityAtMs = n),
+            1.25 * (n + t)
+        );
+    }
+    _computeStreamUsersScore(e) {
+        let t = N(this.signals.streamUsersWithTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
+        this.scoreInfo.rawSignalsScore.streamUsersWithTimestampMs = t;
+        let n = N(this.signals.videoUsersWithTimestampMs, e, 6e5, this.providers.getNormalizedUserAffinity);
+        return (this.scoreInfo.rawSignalsScore.videoUsersWithTimestampMs = n), 2 * (t + n);
+    }
+    computeScore(e) {
+        let t = this._computeTextualScore(e),
+            n = this._computeVoiceUsersScore(e),
+            i = this._computeVoiceActivityScore(e),
+            r = this._computeStreamUsersScore(e),
+            s = D(e, this.lastActivityAtMs);
+        return (
+            (this.scoreInfo.penalty = s),
+            (this.scoreInfo.voiceUsersScore = n),
+            (this.scoreInfo.voiceActivityScore = i),
+            (this.scoreInfo.streamUsersScore = r),
+            (t + n + i + r) * (1 - s)
+        );
+    }
+    pruneSignals(e) {
+        this._textualScore.pruneSignals(e);
+        let t = (t) => {
+            if (0 === t.size) return t;
+            let n = new Map();
+            for (let [i, r] of t.entries()) e - r <= 12e4 && n.set(i, r);
+            return n;
+        };
+        this.signals = {
+            ...this.signals,
+            lastUnmuteActivityAtMs: t(this.signals.lastUnmuteActivityAtMs),
+            lastUndeafenActivityAtMs: t(this.signals.lastUndeafenActivityAtMs),
+        };
+    }
+    updateSignals(e, t) {
+        this._textualScore.updateSignals(e, t), (this.signals = e), (this.lastActivityAtMs = t);
+    }
+}
+function R(e, t, n) {
+    if (null == e) return 0;
+    let i = t - e;
+    return i <= 0 ? 1 : i >= n ? 0 : 1 - i / n;
+}
+function O(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+    return e <= 0 ? 0 : e >= t ? t : e;
+}
+function b(e) {
+    let t = e.getGuildId?.() ?? null;
+    if (e.isDM?.()) {
+        let t = e.getRecipientId?.() ?? null;
+        return { channelId: e.id, kind: "DIRECT_MESSAGE", guildId: null, recipientIds: null != t ? [t] : [] };
+    }
+    return e.isGroupDM?.() || e.isMultiUserDM?.()
+        ? { channelId: e.id, kind: "GROUP_DM", guildId: null, recipientIds: e.recipients ?? [] }
+        : null != t
+          ? { channelId: e.id, kind: e.isVocal?.() ? "GUILD_VOICE" : "GUILD_TEXT", guildId: t, recipientIds: [] }
+          : null;
+}
+function D(e, t) {
+    let n = e - t;
+    return n <= 6e5 ? 0 : n >= 18e5 ? 1 : (n - 6e5) / 12e5;
+}
+function L(e, t) {
+    let n = e.guildId;
+    if (null == n) return 0;
+    let i = 0;
+    return (
+        null != t.voiceGuildId && n === t.voiceGuildId && (i += 1),
+        null != t.mostRecentGuildId && n === t.mostRecentGuildId && (i += 0.4),
+        i
+    );
+}
+function w(e, t) {
+    return 0.8 * (null != e.guildId ? O(t.getNormalizedGuildAffinity(e.guildId)) : 0);
+}
+class M {
+    candidate;
+    signals;
+    _activeNowScoreSource;
+    _score = 0;
+    constructor(e, t, n) {
+        (this.candidate = e),
+            (this.signals = t),
+            "GUILD_VOICE" === e.kind || "GROUP_DM" === e.kind
+                ? (this._activeNowScoreSource = new C(t, n))
+                : (this._activeNowScoreSource = new v(t, n)),
+            this.recomputeScore(Date.now());
+    }
+    get score() {
+        return this._score;
+    }
+    get lastScoreInfo() {
+        return this._activeNowScoreSource.scoreInfo;
+    }
+    get prunable() {
+        return this._score <= 0;
+    }
+    recomputeScore(e) {
+        return (this._score = this._activeNowScoreSource.computeScore(e)), this._score;
+    }
+    prepareForUpdate(e) {
+        return (
+            this.candidate.kind,
+            this._activeNowScoreSource.pruneSignals(e),
+            (this.signals = this._activeNowScoreSource.signals),
+            this.signals
+        );
+    }
+    updateSignalsAndRescore(e, t) {
+        return (
+            this.prepareForUpdate(t),
+            (this.signals = { ...this.signals, ...e }),
+            this.candidate.kind,
+            this._activeNowScoreSource.updateSignals(this.signals, t),
+            this.recomputeScore(t)
         );
     }
 }
-function eu(e, t) {
-    a.h.dispatch({ type: "CLIPS_SAVE_ANIMATION_END", streamKey: e, timestamp: t });
-}
-async function ec(e, t) {
-    let n = C.Ay.getClipById(e) ?? C.Ay.getClipCandidateById(e);
-    if (null == n) return;
-    let i = { ...n, ...t };
-    null != (await U(i)) &&
-        (await I.Ay.getMediaEngine().updateClipMetadata(i.filepath, JSON.stringify(i)),
-        N.default.track(_.HAw.CLIP_EDITED, { clip_uuid: i.id, clip_runtime: (0, O.GN)() }),
-        a.h.dispatch({ type: "CLIPS_UPDATE_METADATA", clip: i }));
-}
-async function ed(e) {
-    await ec(e.id, { isFavorite: !e.isFavorite });
-}
-function e_() {
-    a.h.dispatch({ type: "CLIPS_CLEAR_CLIPS_SESSION" });
-}
-function eh(e) {
-    a.h.dispatch({ type: "CLIPS_REMOVE_SINGLE_NEW_CLIP_ID", clipId: e });
-}
-async function ef(e) {
-    if (!(0, v.isDesktop)() || o.A.clips?.loadClipsDirectory == null) return;
-    let t = await o.A.clips.loadClipsDirectory(e),
-        n = [];
-    for (let e of t) {
-        let t = await U({ ...e.metadata, filepath: e.filepath });
-        null != t && n.push(t);
+var P = n(406595),
+    x = n(240516),
+    k = n(652215),
+    U = (((r = {}).Text = "TEXT"), (r.Voice = "VOICE"), r);
+class G {
+    _maxItems;
+    _channelsByChannelId = new Map();
+    _sortedScoreIndex = [];
+    _sortedChannelIdSet = new Set();
+    _isDirty = !1;
+    constructor(e) {
+        this._maxItems = e;
     }
-    a.h.dispatch({ type: "CLIPS_LOAD_DIRECTORY_SUCCESS", clips: n });
+    get size() {
+        return this._channelsByChannelId.size;
+    }
+    getChannel(e) {
+        return this._channelsByChannelId.get(e) ?? null;
+    }
+    upsert(e) {
+        this._channelsByChannelId.set(e.candidate.channelId, e), (this._isDirty = !0);
+    }
+    delete(e) {
+        this._channelsByChannelId.has(e) && (this._channelsByChannelId.delete(e), (this._isDirty = !0));
+    }
+    applyBatch(e) {
+        e(), (this._isDirty = !0);
+    }
+    rebuildSortedIndexIfDirty(e) {
+        if (!this._isDirty) return;
+        let t = [];
+        for (let [n, i] of this._channelsByChannelId.entries()) {
+            let r = e(i);
+            r > 0 && t.push({ channelId: n, score: r });
+        }
+        t.sort((e, t) => (e.score !== t.score ? t.score - e.score : e.channelId < t.channelId ? -1 : 1));
+        let n = t.slice(0, this._maxItems);
+        (this._sortedScoreIndex = n),
+            (this._sortedChannelIdSet = new Set(n.map((e) => e.channelId))),
+            (this._isDirty = !1);
+    }
+    getSortedChannels() {
+        let e = [];
+        for (let { channelId: t } of this._sortedScoreIndex) {
+            let n = this._channelsByChannelId.get(t);
+            null != n && e.push(n);
+        }
+        return e;
+    }
+    getSortedChannelIds() {
+        return this._sortedScoreIndex.map((e) => e.channelId);
+    }
+    hasSortedChannelId(e) {
+        return this._sortedChannelIdSet.has(e);
+    }
+    clear() {
+        this._channelsByChannelId.clear(),
+            (this._sortedScoreIndex = []),
+            this._sortedChannelIdSet.clear(),
+            (this._isDirty = !1);
+    }
 }
-function ep(e) {
-    ec(e.id, { isCandidate: !1 }),
-        a.h.dispatch({ type: "CLIPS_PROMOTE_CLIP_CANDIDATE", clip: { ...e, isCandidate: !1 } });
+let F = !1,
+    V = null,
+    B = !1,
+    H = new G(100),
+    j = new G(100);
+function Y() {
+    return S.default.isAnyOverlayRendering();
 }
-async function eE(e, t) {
-    (0, v.isDesktop)() &&
-        o.A.clips?.deleteClip != null &&
-        (await o.A.clips.deleteClip(e), a.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: t, filepath: e }));
+function W(e) {
+    return (!!e || !B) && F !== e && ((F = e), !0);
 }
-async function em(e) {
-    try {
-        eA([e.id]);
-        let t = I.Ay.getMediaEngine(),
-            { filepath: n, ...i } = e;
-        await ec(e.id, i);
-        let r = e.editMetadata ?? {
-            start: 0,
-            end: e.length / 1e3,
-            applicationAudio: !0,
-            voiceAudio: !0,
-            soundboardAudio: !0,
-        };
-        if (t.hasExportClipToFile() && (0, O.qi)()) {
-            let n = await o.A.app.getPath("temp"),
-                i = o.A.fileManager.join(n, "Discord Clips"),
-                s = `${crypto.randomUUID()}-${Date.now()}.mp4`,
-                a = o.A.fileManager.join(i, s),
-                l = await t.exportClipToFile(e.filepath, a, r);
-            try {
-                let t = await o.A.clips.loadClip(l),
-                    n = new Blob([t.data], { type: "video/mp4" });
-                if (e.type === R.nQ.SCREENSHOT) return n;
-                return V(n);
-            } finally {
-                await eg(l);
+function K() {
+    let e = _.A.getChannelId();
+    if (null == e) return null;
+    let t = u.A.getChannel(e);
+    return t?.getGuildId?.() ?? null;
+}
+function $(e) {
+    let { isAlreadyTracked: t, guildId: n, updatingUserId: i, providers: r } = e;
+    return (
+        !!(
+            t ||
+            (function (e, t) {
+                if (null == e) return !1;
+                if (null != V && e === V) return !0;
+                let n = K();
+                return (null != n && e === n) || t.getNormalizedGuildAffinity(e) > x.u.MINIMUM_GUILD_AFFINITY;
+            })(n, r)
+        ) || !!(null != i && r.getNormalizedUserAffinity(i) > x.u.MINIMUM_USER_AFFINITY)
+    );
+}
+function z(e) {
+    let t = c.A.affinities,
+        n = 0;
+    for (let e = 0; e < t.length; e += 1) {
+        let i = t[e].score ?? 0;
+        i > n && (n = i);
+    }
+    return (
+        n <= 0 && (n = 1),
+        {
+            getNormalizedGuildAffinity: (e) => {
+                let t = (c.A.getGuildAffinity(e)?.score ?? 0) / n;
+                return t <= 0 ? 0 : t >= 1 ? 1 : t;
+            },
+            getNormalizedUserAffinity: (t) => {
+                let n = o.A.getUserAffinity(t);
+                if (n?.isFriend) return x.u.FRIEND_BASE_COMMUNICATION_AFFINITY;
+                let i = n?.communicationProbability ?? 0,
+                    r = e.includeVcProbability ? Math.max(i, n?.vcProbability ?? 0) : i;
+                return r <= 0 ? 0 : r >= 1 ? 1 : r;
+            },
+        }
+    );
+}
+function q(e, t) {
+    let n = L(e.candidate, { voiceGuildId: K(), mostRecentGuildId: V });
+    return (
+        e.score *
+        (1 + n) *
+        (e.candidate.kind === y.DirectMessage || e.candidate.kind === y.GroupDM ? 1 : 1 + w(e.candidate, t))
+    );
+}
+function X() {
+    let e = z({ includeVcProbability: !1 }),
+        t = z({ includeVcProbability: !0 });
+    H.rebuildSortedIndexIfDirty((t) => q(t, e)), j.rebuildSortedIndexIfDirty((e) => q(e, t));
+}
+function Z() {
+    return {
+        mentionCount: 0,
+        lastDirectMentionAtMs: null,
+        lastRoleMentionAtMs: null,
+        unread: !1,
+        lastUnreadAtMs: null,
+        lastMessageAtMs: null,
+        recentMessageAuthorIds: new Map(),
+        recentMessageAuthorId: null,
+        typingUserIdsWithTimestampMs: new Map(),
+        typingUserIds: [],
+        isTyping: !1,
+        unreadOrMentionAgeMs: null,
+    };
+}
+function Q() {
+    return {
+        ...Z(),
+        voiceUsersWithJoinTimestampMs: new Map(),
+        lastVoiceJoinAtMs: null,
+        lastUnmuteActivityAtMs: new Map(),
+        lastUndeafenActivityAtMs: new Map(),
+        streamUsersWithTimestampMs: new Map(),
+        videoUsersWithTimestampMs: new Map(),
+    };
+}
+function J(e, t) {
+    let n = u.A.getChannel(e);
+    if (null == n) return !1;
+    let [i] = P.A.isFavorite(A.x.MESSAGES, e);
+    if (i || n.isPrivate?.()) return !1;
+    let r = n.getGuildId?.() ?? null;
+    return (
+        !(null == r || f.Ay.isGuildOrCategoryOrChannelMuted(r, n.id)) &&
+        !!d.A.can(k.xBc.READ_MESSAGE_HISTORY, n) &&
+        ("TEXT" === t ? (0, l.ke)(n.type) : n.isVocal?.() === !0)
+    );
+}
+function ee(e, t, n) {
+    if (!J(e, "TEXT")) return null;
+    let i = u.A.getChannel(e);
+    if (null == i) return null;
+    let r = b({
+        id: i.id,
+        getGuildId: () => i.getGuildId?.() ?? null,
+        isDM: () => i.isDM?.() ?? !1,
+        isGroupDM: () => i.isGroupDM?.() ?? !1,
+        isMultiUserDM: () => i.isMultiUserDM?.() ?? !1,
+        recipients: i.recipients ?? [],
+        isVocal: () => i.isVocal?.() ?? !1,
+    });
+    if (null == r || r.kind !== y.GuildText) return null;
+    let s = H.getChannel(e);
+    if (null != s) return s;
+    let a = new M(r, t, n);
+    return H.upsert(a), a;
+}
+function et(e, t, n) {
+    if (!J(e, "VOICE")) return null;
+    let i = u.A.getChannel(e);
+    if (null == i) return null;
+    let r = b({
+        id: i.id,
+        getGuildId: () => i.getGuildId?.() ?? null,
+        isDM: () => i.isDM?.() ?? !1,
+        isGroupDM: () => i.isGroupDM?.() ?? !1,
+        isMultiUserDM: () => i.isMultiUserDM?.() ?? !1,
+        recipients: i.recipients ?? [],
+        isVocal: () => i.isVocal?.() ?? !1,
+    });
+    if (null == r || r.kind !== y.GuildVoice) return null;
+    let s = j.getChannel(e);
+    if (null != s) return s;
+    let a = new M(r, t, n);
+    return j.upsert(a), a;
+}
+let en = 30 * m.A.Millis.MINUTE;
+function ei() {
+    let e = Date.now(),
+        t = e - en,
+        n = c.A.affinities
+            .filter((e) => (e.score ?? 0) > 0)
+            .slice(0, 3)
+            .map((e) => e.guildId),
+        i = K();
+    null == i || n.includes(i) || n.push(i);
+    let r = z({ includeVcProbability: !1 }),
+        s = z({ includeVcProbability: !0 });
+    for (let i of n) {
+        let n = u.A.getMutableGuildChannelsForGuild(i);
+        for (let i in n) {
+            let a = n[i];
+            if (null != a) {
+                if ((0, l.ke)(a.type)) {
+                    let e = a.lastMessageId;
+                    if (null == e) continue;
+                    let n = g.default.extractTimestamp(e);
+                    if (n < t || null != H.getChannel(i)) continue;
+                    let s = Z();
+                    (s.lastMessageAtMs = n),
+                        (s.unread = h.Ay.hasUnread(i)),
+                        (s.mentionCount = h.Ay.getMentionCount(i)),
+                        s.unread && (s.lastUnreadAtMs = n),
+                        s.mentionCount > 0 && (s.lastDirectMentionAtMs = n),
+                        ee(i, s, r);
+                }
+                if (a.isVocal()) {
+                    if (null != j.getChannel(i)) continue;
+                    let t = Object.entries(E.A.getVoiceStatesForChannel(i));
+                    if (0 === t.length) continue;
+                    let n = new Map();
+                    for (let [i] of t) n.set(i, e);
+                    et(i, { ...Q(), voiceUsersWithJoinTimestampMs: n, lastVoiceJoinAtMs: e }, s);
+                }
             }
         }
-        let s = await t.exportClip(e.filepath, r);
-        if (e.type === R.nQ.SCREENSHOT) return s;
-        return V(s);
-    } finally {
-        eA(null);
+    }
+    X();
+}
+function er(e) {
+    let t = u.A.getChannel(e);
+    if (null == t) return !1;
+    let n = t.getGuildId?.() ?? null;
+    if (null == n || !f.Ay.isGuildOrCategoryOrChannelMuted(n, e)) return !1;
+    let i = null != H.getChannel(e),
+        r = null != j.getChannel(e);
+    return i && H.delete(e), r && j.delete(e), i || r;
+}
+class es extends s.Ay.Store {
+    static displayName = "OverlayActiveNowStore";
+    initialize() {
+        this.waitFor(u.A, c.A, P.A, S.default, d.A, h.Ay, _.A, o.A, p.default, f.Ay, E.A);
+    }
+    getActiveNowChannelByChannelId(e, t) {
+        return "TEXT" === t ? H.getChannel(e) : j.getChannel(e);
+    }
+    getActiveNowChannels(e) {
+        let { kind: t } = e;
+        return "VOICE" === t ? j.getSortedChannels() : H.getSortedChannels();
+    }
+    getActiveNowChannelIds(e) {
+        let { kind: t } = e;
+        return "VOICE" === t ? j.getSortedChannelIds() : H.getSortedChannelIds();
+    }
+    hasActiveNowChannelId(e) {
+        let { kind: t, channelId: n } = e;
+        return "VOICE" === t ? j.hasSortedChannelId(n) : H.hasSortedChannelId(n);
+    }
+    getScoreForChannelId(e) {
+        let t = H.getChannel(e) ?? j.getChannel(e);
+        if (null == t) return null;
+        let n = z({ includeVcProbability: t.candidate.kind === y.GuildVoice });
+        return q(t, n);
+    }
+    getScoreBreakdownForChannelId(e) {
+        let t = H.getChannel(e) ?? j.getChannel(e) ?? null;
+        if (null == t) return null;
+        let n = t.candidate.kind === y.GuildVoice ? "VOICE" : "TEXT",
+            i = z({ includeVcProbability: t.candidate.kind === y.GuildVoice }),
+            r = L(t.candidate, { voiceGuildId: K(), mostRecentGuildId: V }),
+            s = t.candidate.kind === y.DirectMessage || t.candidate.kind === y.GroupDM,
+            a = s ? 0 : w(t.candidate, i),
+            o = t.score;
+        return {
+            channelId: e,
+            kind: n,
+            baseScore: o,
+            contextBoost: r,
+            guildAffinity: null != t.candidate.guildId ? i.getNormalizedGuildAffinity(t.candidate.guildId) : 0,
+            finalScore: o * (1 + r) * (s ? 1 : 1 + a),
+            scoreInfo: t.lastScoreInfo,
+        };
     }
 }
-async function eg(e) {
-    if ((0, v.isDesktop)())
-        try {
-            await o.A.clips.deleteClip(e);
-        } catch {}
-}
-function eA(e) {
-    a.h.dispatch({ type: "CLIPS_SET_EXPORTING", clipIds: e });
-}
-function eI(e) {
-    a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { maxAutoClips: e } });
-}
-function eT(e) {
-    a.h.dispatch({
-        type: "CLIPS_SETTINGS_UPDATE",
-        settings: { clipSignals: { ...C.Ay.getSettings().clipSignals, ...e } },
-    });
-}
-function eS(e, t) {
-    a.h.dispatch({ type: "CLIPS_SIGNAL_CREATED", signal: e, timestamp: t });
-}
-function ey(e) {
-    a.h.dispatch({ type: "CLIPS_ML_DETECTION", detections: e });
-}
-function eN() {
-    eS({ type: R.Gy.MANUAL });
-}
-async function ev(e) {
-    await ec(e, { isTemporary: !1 });
-}
+let ea = (e) => (0, T.v$)(e, "OverlayActiveNowStore"),
+    eo = new es(
+        a.h,
+        __OVERLAY__
+            ? {}
+            : {
+                  OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: ea(function (e) {
+                      if (e.tab !== A.x.MESSAGES) return !1;
+                      let t = e.targetId;
+                      if (e.isFavorite) {
+                          let e = null != H.getChannel(t),
+                              n = null != j.getChannel(t);
+                          return e && H.delete(t), n && j.delete(t), e || n;
+                      }
+                      return !1;
+                  }),
+                  OVERLAY_MOUNTED: ea(function (e) {
+                      return W(!0), ei(), !0;
+                  }),
+                  OVERLAY_UPDATE_OVERLAY_METHOD: ea(function (e) {
+                      let { overlayMethod: t } = e;
+                      return t === I.Ue.OutOfProcess || t === I.Ue.OutOfProcessLimitedInteraction
+                          ? (W(!0), X(), !0)
+                          : !Y() && W(!1);
+                  }),
+                  OVERLAY_CRASHED: ea(function (e) {
+                      return !Y() && W(!1);
+                  }),
+                  OVERLAY_SET_INPUT_LOCKED: ea(function (e) {
+                      return !e.locked && (W(!0), X(), !0);
+                  }),
+                  FRIENDS_LIST_POPOUT_MOUNTED: ea(function () {
+                      return (B = !0), W(!0), ei(), !0;
+                  }),
+                  MESSAGE_CREATE: ea(function (e) {
+                      if (!F || e.optimistic) return !1;
+                      let t = p.default.getCurrentUser()?.id ?? null,
+                          n = e.message?.author?.id ?? null;
+                      if (null == t || null == n || n === t) return !1;
+                      let i = u.A.getChannel(e.channelId);
+                      if (null == i || i.isPrivate() || !(0, l.ke)(i.type)) return !1;
+                      let r = (function (e) {
+                              let t = e.timestamp;
+                              if (null == t) return Date.now();
+                              let n = new Date(t).getTime();
+                              return Number.isFinite(n) ? n : Date.now();
+                          })(e.message),
+                          s = z({ includeVcProbability: !1 }),
+                          a = i.getGuildId?.() ?? null;
+                      if (
+                          !$({
+                              isAlreadyTracked: null != H.getChannel(e.channelId),
+                              guildId: a,
+                              updatingUserId: n,
+                              providers: s,
+                          })
+                      )
+                          return !1;
+                      let o = ee(e.channelId, Z(), s);
+                      if (null == o) return !1;
+                      let c = (e.message?.mentions ?? []).some((e) => e?.id === t),
+                          d = e.message?.mention_roles,
+                          _ = Array.isArray(d) && d.length > 0,
+                          h = o.prepareForUpdate(r),
+                          f = new Map(h.recentMessageAuthorIds);
+                      f.set(n, r);
+                      let E = {
+                          lastMessageAtMs: r,
+                          unread: !0,
+                          lastUnreadAtMs: r,
+                          recentMessageAuthorId: n,
+                          recentMessageAuthorIds: f,
+                      };
+                      return (
+                          (c || _) &&
+                              ((E.mentionCount = Math.max(h.mentionCount, +!!c + +!!_)),
+                              c && (E.lastDirectMentionAtMs = r),
+                              _ && (E.lastRoleMentionAtMs = r)),
+                          o.updateSignalsAndRescore(E, r),
+                          o.prunable && H.delete(e.channelId),
+                          X(),
+                          !0
+                      );
+                  }),
+                  MESSAGE_ACK: ea(function (e) {
+                      if (!F) return !1;
+                      let t = H.getChannel(e.channelId);
+                      if (null == t) return !1;
+                      let n = Date.now(),
+                          i = { unread: !1, lastUnreadAtMs: null };
+                      return (
+                          null != e.newMentionCount &&
+                              (e.newMentionCount > 0
+                                  ? ((i.mentionCount = e.newMentionCount),
+                                    null == t.signals.lastDirectMentionAtMs && (i.lastDirectMentionAtMs = n))
+                                  : ((i.mentionCount = 0),
+                                    (i.lastDirectMentionAtMs = null),
+                                    (i.lastRoleMentionAtMs = null))),
+                          t.updateSignalsAndRescore(i, n),
+                          t.prunable && H.delete(e.channelId),
+                          X(),
+                          !0
+                      );
+                  }),
+                  TYPING_START: ea(function (e) {
+                      if (!F) return !1;
+                      let t = p.default.getCurrentUser()?.id ?? null;
+                      if (null == t || e.userId === t) return !1;
+                      let n = u.A.getChannel(e.channelId);
+                      if (null == n || n.isPrivate() || !(0, l.ke)(n.type)) return !1;
+                      let i = Date.now(),
+                          r = z({ includeVcProbability: !1 }),
+                          s = n.getGuildId?.() ?? null;
+                      if (
+                          !$({
+                              isAlreadyTracked: null != H.getChannel(e.channelId),
+                              guildId: s,
+                              updatingUserId: e.userId,
+                              providers: r,
+                          })
+                      )
+                          return !1;
+                      let a = ee(e.channelId, Z(), r);
+                      if (null == a) return !1;
+                      let o = new Map(a.prepareForUpdate(i).typingUserIdsWithTimestampMs);
+                      o.set(e.userId, i);
+                      let c = Array.from(o.keys());
+                      return (
+                          a.updateSignalsAndRescore(
+                              { typingUserIdsWithTimestampMs: o, typingUserIds: c, isTyping: c.length > 0 },
+                              i,
+                          ),
+                          a.prunable && H.delete(e.channelId),
+                          X(),
+                          !0
+                      );
+                  }),
+                  VOICE_STATE_UPDATES: ea(function (e) {
+                      if (!F) return !1;
+                      let t = Date.now(),
+                          n = z({ includeVcProbability: !0 }),
+                          i = !1;
+                      return (
+                          j.applyBatch(() => {
+                              for (let r of e.voiceStates) {
+                                  let e = r.userId,
+                                      s = r.channelId ?? null,
+                                      a = r.oldChannelId ?? null,
+                                      o = (n) => {
+                                          let r = j.getChannel(n);
+                                          if (null == r) return;
+                                          let s = r.signals,
+                                              a = new Map(s.voiceUsersWithJoinTimestampMs);
+                                          a.delete(e);
+                                          let o = new Map(s.streamUsersWithTimestampMs);
+                                          o.delete(e);
+                                          let l = new Map(s.videoUsersWithTimestampMs);
+                                          l.delete(e);
+                                          let u = new Map(s.lastUnmuteActivityAtMs);
+                                          u.delete(e);
+                                          let c = new Map(s.lastUndeafenActivityAtMs);
+                                          c.delete(e),
+                                              r.updateSignalsAndRescore(
+                                                  {
+                                                      voiceUsersWithJoinTimestampMs: a,
+                                                      streamUsersWithTimestampMs: o,
+                                                      videoUsersWithTimestampMs: l,
+                                                      lastUnmuteActivityAtMs: u,
+                                                      lastUndeafenActivityAtMs: c,
+                                                  },
+                                                  t,
+                                              ),
+                                              r.prunable && j.delete(n),
+                                              (i = !0);
+                                      };
+                                  if ((null != a && a !== s && o(a), null != s)) {
+                                      let o = u.A.getChannel(s),
+                                          l = o?.getGuildId?.() ?? null;
+                                      if (
+                                          !$({
+                                              isAlreadyTracked: null != j.getChannel(s),
+                                              guildId: l,
+                                              updatingUserId: e,
+                                              providers: n,
+                                          })
+                                      )
+                                          continue;
+                                      let c = et(s, Q(), n);
+                                      if (null == c) continue;
+                                      let d = c.prepareForUpdate(t),
+                                          _ = null == a || a !== s,
+                                          h = new Map(d.voiceUsersWithJoinTimestampMs);
+                                      _ && !h.has(e) && h.set(e, t);
+                                      let f = new Map(d.streamUsersWithTimestampMs);
+                                      r.selfStream ? f.has(e) || f.set(e, t) : f.delete(e);
+                                      let p = new Map(d.videoUsersWithTimestampMs);
+                                      r.selfVideo ? p.has(e) || p.set(e, t) : p.delete(e);
+                                      let E = new Map(d.lastUnmuteActivityAtMs);
+                                      if (!r.selfMute && !r.mute) {
+                                          let n = E.get(e) ?? null;
+                                          (null == n || t - n >= 15e3) && E.set(e, t);
+                                      }
+                                      let m = new Map(d.lastUndeafenActivityAtMs);
+                                      if (!r.selfDeaf && !r.deaf) {
+                                          let n = m.get(e) ?? null;
+                                          (null == n || t - n >= 15e3) && m.set(e, t);
+                                      }
+                                      c.updateSignalsAndRescore(
+                                          {
+                                              voiceUsersWithJoinTimestampMs: h,
+                                              lastVoiceJoinAtMs: _ ? t : d.lastVoiceJoinAtMs,
+                                              streamUsersWithTimestampMs: f,
+                                              videoUsersWithTimestampMs: p,
+                                              lastUnmuteActivityAtMs: E,
+                                              lastUndeafenActivityAtMs: m,
+                                          },
+                                          t,
+                                      ),
+                                          c.prunable && j.delete(s),
+                                          (i = !0);
+                                  }
+                              }
+                          }),
+                          i && X(),
+                          i
+                      );
+                  }),
+                  VOICE_CHANNEL_SELECT: ea(function (e) {
+                      return X(), !0;
+                  }),
+                  RTC_CONNECTION_STATE: ea(function (e) {
+                      return X(), !0;
+                  }),
+                  CHANNEL_SELECT: ea(function (e) {
+                      let { channelId: t } = e;
+                      if (null == t) return !1;
+                      let n = u.A.getChannel(t);
+                      return !(null == n || n.isPrivate()) && ((V = n.getGuildId?.() ?? null), X(), !0);
+                  }),
+                  USER_GUILD_SETTINGS_CHANNEL_UPDATE: ea(function (e) {
+                      return er(e.channelId);
+                  }),
+                  USER_GUILD_SETTINGS_GUILD_UPDATE: ea(function (e) {
+                      let t = e.guildId,
+                          n = !1;
+                      for (let e of H.getSortedChannels())
+                          e.candidate.guildId === t && (n = er(e.candidate.channelId) || n);
+                      for (let e of j.getSortedChannels())
+                          e.candidate.guildId === t && (n = er(e.candidate.channelId) || n);
+                      return n;
+                  }),
+                  USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: ea(function (e) {
+                      let t = e.guildId,
+                          n = !1;
+                      for (let e of H.getSortedChannels())
+                          e.candidate.guildId === t && (n = er(e.candidate.channelId) || n);
+                      for (let e of j.getSortedChannels())
+                          e.candidate.guildId === t && (n = er(e.candidate.channelId) || n);
+                      return n;
+                  }),
+                  LOGOUT: ea(function () {
+                      let e = H.size > 0 || j.size > 0;
+                      return H.clear(), j.clear(), (F = !1), (B = !1), (V = null), e;
+                  }),
+              },
+    );

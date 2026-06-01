@@ -1,11 +1,11 @@
-l.d(t, { A: () => s });
+l.d(t, { A: () => r });
 var a = l(627968),
     n = l(192308),
-    i = l(607814);
-function s(e, t) {
-    let { clips: s, onBeforeDelete: r, onAfterDelete: c } = t;
+    i = l(61302);
+function r(e, t) {
+    let { clips: r, onBeforeDelete: s, onAfterDelete: o } = t;
     if (e?.shiftKey) {
-        r?.(), s.forEach((e) => (0, i.oH)(e.filepath, e.id)), c?.();
+        s?.(), r.forEach((e) => (0, i.oH)(e.filepath, e.id)), o?.();
         return;
     }
     (0, n.openModalLazy)(
@@ -13,11 +13,11 @@ function s(e, t) {
             let { default: e } = await l.e("13367").then(l.bind(l, 223818));
             return (t) =>
                 (0, a.jsx)(e, {
-                    clips: s,
+                    clips: r,
                     ...t,
-                    onBeforeDelete: r,
+                    onBeforeDelete: s,
                     onAfterDelete: async () => {
-                        await t.onClose(), c?.();
+                        await t.onClose(), o?.();
                     },
                 });
         },

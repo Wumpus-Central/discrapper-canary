@@ -5,7 +5,7 @@ var i = n(439372),
     s = n(287809),
     a = n(977997),
     o = n(572164),
-    l = n(315240),
+    l = n(61302),
     u = n(734066),
     c = n(64683);
 class d extends i.A {
@@ -39,7 +39,7 @@ class d extends i.A {
                     type: "application",
                     name: "steam-timeline",
                     isEnabled: u.J,
-                    importHandler: () => n.e("52741").then(n.bind(n, 664420)),
+                    importHandler: () => n.e("13034").then(n.bind(n, 849745)),
                 },
                 {
                     type: "application",

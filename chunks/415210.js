@@ -20,7 +20,7 @@ var l,
     S = n(834730),
     _ = n(825484),
     I = n(821609),
-    j = n(315240),
+    j = n(61302),
     y = n(403362),
     v = n(372684),
     T = n(226421),
@@ -117,8 +117,8 @@ var L = n(352527),
     q = n(767089),
     $ = n(554146),
     J = n(477782),
-    Y = n(177953),
-    Z = n(950305),
+    Z = n(177953),
+    Y = n(950305),
     X = n(980707),
     Q = n(308368),
     ee = n(688810),
@@ -396,8 +396,8 @@ function eb(e) {
                                                   {
                                                       id: "summarize_thread_for_everyone",
                                                       label: M.intl.string(M.t.eCzSdd),
-                                                      iconLeft: Y.n,
-                                                      leadingAccessory: { type: "icon", icon: Y.n },
+                                                      iconLeft: Z.n,
+                                                      leadingAccessory: { type: "icon", icon: Z.n },
                                                       action: () => el.A.summarizeThread(t, !1),
                                                   },
                                                   "summarize_thread_for_everyone",
@@ -407,8 +407,8 @@ function eb(e) {
                                                   {
                                                       id: "summarize_thread_for_me",
                                                       label: M.intl.string(M.t["HOe+Hq"]),
-                                                      iconLeft: Z.n,
-                                                      leadingAccessory: { type: "icon", icon: Z.n },
+                                                      iconLeft: Y.n,
+                                                      leadingAccessory: { type: "icon", icon: Y.n },
                                                       action: () => el.A.summarizeThread(t),
                                                   },
                                                   "summarize_thread_for_me",
@@ -443,8 +443,8 @@ let eD = s.memo(function (e) {
             [v, l],
         ),
         { topBarButton: J } = x.$.useConfig({ location: "ChannelAttachButton" }),
-        { enableQuickBar: Y } = A.h.useConfig({ location: "ChannelAttachButton" }),
-        Z = !J && !Y && I !== ej.BRT.OVERLAY && I !== ej.BRT.POPOUT,
+        { enableQuickBar: Z } = A.h.useConfig({ location: "ChannelAttachButton" }),
+        Y = !J && !Z && I !== ej.BRT.OVERLAY && I !== ej.BRT.POPOUT,
         { onShareClick: X } = (0, L.A)(l.id),
         Q = (0, o.bG)([f.Ay], () => f.Ay.getSettings().remindersEnabled),
         ee = (0, c.useModalsStore)((e) => (0, c.hasModalOpenSelector)(e, eM.nm)),
@@ -461,7 +461,7 @@ let eD = s.memo(function (e) {
                 let { default: e } = await Promise.all([
                     n.e("11124"),
                     n.e("22367"),
-                    n.e("86653"),
+                    n.e("49286"),
                     n.e("84262"),
                     n.e("97418"),
                     n.e("54110"),
@@ -497,7 +497,7 @@ let eD = s.memo(function (e) {
         Q &&
         R &&
         !ee &&
-        Z &&
+        Y &&
         !et &&
         ei("recentClips"),
         s.useEffect(() => {
