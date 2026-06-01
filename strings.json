@@ -402,6 +402,8 @@
   "fs+2Kn": "Suggested Servers",
   "fiq8O5": "Notify users who played a specific game in the last 60 days",
   "md9HmB": "@game",
+  "t0FTsH": "{createdAt, date, long} · !!{expiryLabel}!!",
+  "mv/nIa": "+{count, plural, one { more option} other { more options} }",
   "n2XH2M": "Discord isn't supported on mobile web browsers. Join over 100 million people who use Discord to talk with communities and friends.",
   "WC3u3n": "Where you're streaming",
   "JsqeEk": "Select a server for your stream",

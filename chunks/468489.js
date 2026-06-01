@@ -23,4 +23,9 @@ e.exports = {
     Ow: "embedSourceUrl__250d5",
     ov: "metadataRow__250d5",
     a5: "reactionInfo__250d5",
+    MH: "pollQuestion__250d5",
+    xd: "pollAnswers__250d5",
+    Nf: "pollAnswerOption__250d5",
+    TT: "pollAnswerText__250d5",
+    PF: "pollMoreOptions__250d5",
 };

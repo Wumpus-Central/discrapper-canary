@@ -1,24 +1,3 @@
-.linkAnchor__22275 {
-    cursor: pointer
-}
-
-.linkIcon__22275 {
-    fill: var(--interactive-text-default)
-}
-
-.linkAnchor__22275:hover .linkIcon__22275 {
-    fill: var(--interactive-text-hover)
-}
-
-.tooltip__22275 {
-    max-width: 320px
-}
-
-.tooltipContent__22275 {
-    text-overflow: ellipsis;
-    white-space: nowrap
-}
-
 .row__8e830 {
     display: flex;
     flex-direction: row
