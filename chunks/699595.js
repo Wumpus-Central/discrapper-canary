@@ -1,34 +1,50 @@
-n.d(t, { J: () => r, c: () => s });
+n.d(t, { W: () => o });
 var l = n(64700),
-    a = n(155718),
-    i = n(671744);
-let r = (e) => {
-        let t = (0, i.t4)((e) => {
-                let { discountInvoicePreview: t } = e;
-                return t;
-            }),
-            n = l.useMemo(() => {
-                if (null == e) return null;
-                if (null == t) return null;
-                let n = t.invoiceItems.find((t) => t.subscriptionPlanId === e);
-                if (null == n) return null;
-                let l = n.discounts.find((e) => e.type === a.iS.SUBSCRIPTION_PLAN);
-                return null != l ? l.amount : null;
-            }, [t, e]);
-        return { discountInvoicePreview: t, discountAmountOff: n };
-    },
-    s = (e, t) => {
-        let n = (0, i.t4)((e) => {
-            let { setDiscountInvoicePreview: t } = e;
+    r = n(543767),
+    i = n(410516),
+    a = n(722847),
+    s = n(463376);
+let o = (e) => {
+    let t,
+        { priceOptions: n, trialId: o, metadata: u, discountInvoicePreview: c } = e,
+        { isEligibleForDiscount: d, discountOffer: p } = (0, s.i)(),
+        m = (0, i.YJ)(p),
+        h = !0 === n.loaded,
+        A = null != c,
+        [C, E] = (0, r.YV)({
+            items: null != m ? [{ planId: m, quantity: 1 }] : [],
+            renewal: !1,
+            preventFetch: A || !d || null == m || !h,
+            trialId: o,
+            paymentSourceId: n.paymentSourceId,
+            currency: n.currency,
+            metadata: u,
+        }),
+        y = A ? c : C,
+        P = l.useMemo(() => {
+            let e = d ? (y ?? null) : null;
+            return {
+                discountOffer: p,
+                applicablePlan: m,
+                discountInvoicePreview: e,
+                discountAmountOff: null != m ? (0, i.pg)(e, m) : null,
+                discountInvoiceError: E,
+            };
+        }, [p, m, y, E, d]);
+    return (
+        (t = (0, a.t4)((e) => {
+            let { setPremiumDiscountInfo: t } = e;
             return t;
-        });
+        })),
         l.useEffect(
             () => (
-                t ? n(e) : n(null),
+                t(P),
                 () => {
-                    n(null);
+                    t(i.TI);
                 }
             ),
-            [e, n, t],
-        );
-    };
+            [P, t],
+        ),
+        P
+    );
+};

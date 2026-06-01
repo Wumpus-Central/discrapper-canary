@@ -647,7 +647,7 @@ function ti(e) {
         X = G && null != K,
         $ = Z && null == E && V?.subscriptionPeriodEnd == null,
         ee = (0, eQ.D7)({ location: "premium_payment_plan_select_step" });
-    (0, eJ.c)(V, _);
+    (0, eJ.W)({ priceOptions: d, trialId: a, discountInvoicePreview: V });
     let et = r.useMemo(
         () => ({
             planOptions: L,

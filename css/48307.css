@@ -94,6 +94,18 @@
     row-gap: var(--space-4)
 }
 
+.radioItemSubTextRow__220d4 {
+    align-items: baseline;
+    -moz-column-gap: var(--space-4);
+    column-gap: var(--space-4);
+    display: flex;
+    flex-direction: row
+}
+
+.subTextStrikethrough__220d4 {
+    text-decoration: line-through
+}
+
 .radioBar__220d4 {
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-md);

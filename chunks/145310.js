@@ -16,7 +16,8 @@ let u = (e) => {
         E = (0, i.tS)({ intervalType: h?.interval, intervalCount: h?.interval_count }),
         m = n ?? _?.subscription_trial?.sku_id ?? p,
         g = null != h && m === h.sku_id,
-        A = _?.trial_id === o.Dw;
+        A = _?.trial_id === o.Dw,
+        I = null != f && o.U4.includes(f.discountId);
     return {
         buttonText: u
             ? l.intl.string(l.t.J61px0)
@@ -25,7 +26,7 @@ let u = (e) => {
                 c || d
                     ? l.intl.string(l.t.fkPGat)
                     : m === o.pe.TIER_2
-                      ? l.intl.formatToPlainString(l.t.bkQ4bH, { percent: t })
+                      ? l.intl.formatToPlainString(I ? l.t.ZhPpOu : l.t.bkQ4bH, { percent: t })
                       : void 0)
               : ((e) => {
                     let {

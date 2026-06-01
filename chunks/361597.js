@@ -1,18 +1,18 @@
 n.d(t, {
-    U_: () => ei,
-    Rx: () => ec,
-    yq: () => ea,
-    LR: () => eC,
-    $p: () => eA,
-    cD: () => ed,
+    U_: () => en,
+    Rx: () => eo,
+    yq: () => el,
+    LR: () => em,
+    $p: () => eh,
+    cD: () => eu,
     O8: () => er,
-    Ct: () => em,
-    RO: () => es,
+    Ct: () => ed,
+    RO: () => ei,
 });
 var l = n(627968),
-    i = n(64700),
-    a = n(284009),
-    r = n.n(a),
+    r = n(64700),
+    i = n(284009),
+    a = n.n(i),
     s = n(17928),
     o = n(785007),
     u = n(331322),
@@ -21,143 +21,141 @@ var l = n(627968),
     p = n(726656),
     m = n(463376),
     h = n(558620),
-    C = n(699595),
     A = n(722847),
-    y = n(34188),
+    C = n(34188),
     E = n(661531),
-    P = n(939249),
-    S = n(398590),
-    _ = n(793574),
-    f = n(688810),
-    T = n(509536),
-    I = n(663066),
-    x = n(976860),
+    y = n(939249),
+    P = n(398590),
+    S = n(793574),
+    _ = n(688810),
+    I = n(509536),
+    f = n(663066),
+    T = n(976860),
     N = n(859040),
-    g = n(652215),
-    v = n(375708),
-    M = n(456508);
-let b = (e) => {
+    v = n(652215),
+    g = n(375708),
+    x = n(456508);
+let R = (e) => {
     let { onClose: t } = e,
-        { analyticsLocations: n } = (0, f.Ay)(),
-        i = () => {
+        { analyticsLocations: n } = (0, _.Ay)(),
+        r = () => {
             t(),
-                (0, x.pX)(g.BVt.COLLECTIBLES_SHOP),
-                (0, N.Cz)({ analyticsSource: _.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
-                (0, S.jH)(),
-                (0, I.dF)(T.Zt);
+                (0, T.pX)(v.BVt.COLLECTIBLES_SHOP),
+                (0, N.Cz)({ analyticsSource: S.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
+                (0, P.jH)(),
+                (0, f.dF)(I.Zt);
         };
     return (0, l.jsxs)("div", {
-        className: M.kL,
+        className: x.kL,
         children: [
             (0, l.jsx)("div", {
-                className: M.Wk,
-                children: (0, l.jsx)(y.U, { size: "custom", width: 20, height: 20, color: E.A.colors.ICON_DEFAULT }),
+                className: x.Wk,
+                children: (0, l.jsx)(C.U, { size: "custom", width: 20, height: 20, color: E.A.colors.ICON_DEFAULT }),
             }),
             (0, l.jsx)(d.E, {
                 variant: "text-sm/normal",
-                children: v.intl.format(v.t.twSHte, {
-                    checkItOut: (e) => (0, l.jsx)(P.D, { className: M.nf, onClick: i, children: e }),
+                children: g.intl.format(g.t.twSHte, {
+                    checkItOut: (e) => (0, l.jsx)(y.D, { className: x.nf, onClick: r, children: e }),
                 }),
             }),
         ],
     });
 };
-var j = n(937008),
-    R = n(834252),
+var M = n(937008),
+    b = n(768050),
     L = n(222707),
-    O = n(773669),
-    D = n(561794),
+    j = n(773669),
+    O = n(561794),
     w = n(97352),
-    U = n(45938),
-    k = n(975571),
-    G = n(428262),
-    Y = n(580630),
-    F = n(960851),
-    B = n(881489),
-    W = n(906023),
-    V = n(380619),
+    D = n(45938),
+    U = n(975571),
+    k = n(428262),
+    G = n(580630),
+    Y = n(960851),
+    F = n(881489),
+    B = n(906023),
+    W = n(380619),
     H = n(477421),
-    K = n(422936),
-    Z = n(410516),
-    q = n(735164),
-    z = n(363476),
-    J = n(531506),
-    $ = n(871181),
-    X = n(318007),
-    Q = n(736339),
-    ee = n(285719),
-    et = n(788868);
+    V = n(410516),
+    K = n(735164),
+    Z = n(363476),
+    q = n(531506),
+    z = n(871181),
+    $ = n(318007),
+    J = n(736339),
+    X = n(285719),
+    Q = n(788868);
 n(26279);
-var en = n(818348),
-    el = n(345138);
-function ei(e, t) {
+var ee = n(818348),
+    et = n(345138);
+function en(e, t) {
     let { isEligibleForBOGOPromotion: n } = t;
     return null != e && !n;
 }
-function ea(e, t) {
-    let n = v.intl.string(v.t.BYa62u),
-        l = v.intl.string(v.t.CDa6Dq),
-        i = (() => {
+function el(e, t) {
+    let n = g.intl.string(g.t.BYa62u),
+        l = g.intl.string(g.t.CDa6Dq),
+        r = (() => {
             switch (e.interval) {
-                case et.WT.YEAR:
+                case Q.WT.YEAR:
                     return n;
-                case et.WT.MONTH:
+                case Q.WT.MONTH:
                 default:
                     return l;
             }
         })(),
-        a = e.skuId;
+        i = e.skuId;
     switch (t) {
-        case et.pe.TIER_0:
-            switch (a) {
-                case et.pe.TIER_1:
-                    return v.intl.string(v.t.q6mxDS);
-                case et.pe.TIER_2:
-                    return v.intl.string(v.t.seZVS0);
+        case Q.pe.TIER_0:
+            switch (i) {
+                case Q.pe.TIER_1:
+                    return g.intl.string(g.t.q6mxDS);
+                case Q.pe.TIER_2:
+                    return g.intl.string(g.t.seZVS0);
                 default:
-                    return i;
+                    return r;
             }
-        case et.pe.TIER_1:
-            switch (a) {
-                case et.pe.TIER_0:
-                    return v.intl.string(v.t["7+u2zg"]);
-                case et.pe.TIER_2:
-                    return v.intl.string(v.t.NG2qcc);
+        case Q.pe.TIER_1:
+            switch (i) {
+                case Q.pe.TIER_0:
+                    return g.intl.string(g.t["7+u2zg"]);
+                case Q.pe.TIER_2:
+                    return g.intl.string(g.t.NG2qcc);
                 default:
-                    return i;
+                    return r;
             }
-        case et.pe.TIER_2:
-            switch (a) {
-                case et.pe.TIER_0:
-                case et.pe.TIER_1:
-                    return v.intl.string(v.t["eB0/w9"]);
-                case et.pe.TIER_2:
-                    return e.interval === et.WT.MONTH
-                        ? v.intl.formatToPlainString(v.t.RqUv86, { numFreeGuildSubscriptions: et.M4 })
-                        : i;
+        case Q.pe.TIER_2:
+            switch (i) {
+                case Q.pe.TIER_0:
+                case Q.pe.TIER_1:
+                    return g.intl.string(g.t["eB0/w9"]);
+                case Q.pe.TIER_2:
+                    return e.interval === Q.WT.MONTH
+                        ? g.intl.formatToPlainString(g.t.RqUv86, { numFreeGuildSubscriptions: Q.M4 })
+                        : r;
                 default:
-                    return i;
+                    return r;
             }
         default:
-            return i;
+            return r;
     }
 }
 let er = () => {
         let { userTrialOffer: e } = (0, m.i)(),
             t = e?.subscription_trial,
-            { daysCount: n, copy: l } = i.useMemo(
+            { daysCount: n, copy: l } = r.useMemo(
                 () =>
-                    t?.interval === et.WT.DAY
+                    t?.interval === Q.WT.DAY
                         ? t?.interval_count > 7
-                            ? { daysCount: 14, copy: v.intl.string(v.t.Z1V2cs) }
-                            : { daysCount: 7, copy: v.intl.string(v.t.MI1rHs) }
-                        : { daysCount: 30, copy: v.intl.string(v.t["+S5lrV"]) },
+                            ? { daysCount: 14, copy: g.intl.string(g.t.Z1V2cs) }
+                            : { daysCount: 7, copy: g.intl.string(g.t.MI1rHs) }
+                        : { daysCount: 30, copy: g.intl.string(g.t["+S5lrV"]) },
                 [t],
             );
         return { daysCount: n, copy: l, userTrialOffer: e };
     },
-    es = (e) => {
-        let { selectedPlanId: t, priceOptions: n, planOptions: l, subscriptionPeriodEnd: a, showTotal: u } = e,
+    ei = (e) => {
+        let { selectedPlanId: t, priceOptions: n, planOptions: l, subscriptionPeriodEnd: i, showTotal: u } = e,
             {
                 selectedSkuId: c,
                 setSelectedPlanId: d,
@@ -167,267 +165,259 @@ let er = () => {
                 setSelectedPlanId: e.setSelectedPlanId,
                 checkoutPriceOptions: e.checkoutPriceOptions,
             })),
-            { activeSubscription: y } = (0, R.P5)(),
-            { userTrialOffer: E, isEligibleForTrial: P, discountOffer: S } = (0, m.i)(),
-            _ = (0, Z.YJ)(S),
+            { activeSubscription: C } = (0, b.P5)(),
+            { userTrialOffer: E, isEligibleForTrial: y, discountOffer: P } = (0, m.i)(),
+            S = (0, V.YJ)(P),
             {
-                isGift: f,
-                giftRecipient: T,
-                selectedGiftStyle: I,
-                customGiftMessage: x,
+                isGift: _,
+                giftRecipient: I,
+                selectedGiftStyle: f,
+                customGiftMessage: T,
                 setCustomGiftMessage: N,
-                claimableRewards: g,
-                setSelectedGiftingPromotionReward: v,
-            } = (0, j.Pv)(),
-            M = (0, h.A)(),
-            b = (0, V.kz)(M, f && (0, U.Ik)(T), g),
-            L = (0, D.tA)({ giftRecipient: T, isGift: f });
-        r()(void 0 !== y, "should not be undefined");
-        let [O, k] = (0, s.yK)([w.A], () => [null != y ? w.A.get(y.planId) : null, null != t ? w.A.get(t) : null]),
-            Y = E?.subscription_trial,
-            B = (0, F.cg)(),
-            W = k ?? M,
-            K = i.useCallback(
+                claimableRewards: v,
+                setSelectedGiftingPromotionReward: g,
+            } = (0, M.Pv)(),
+            x = (0, h.A)(),
+            R = (0, W.kz)(x, _ && (0, D.Ik)(I), v),
+            L = (0, O.tA)({ giftRecipient: I, isGift: _ });
+        a()(void 0 !== C, "should not be undefined");
+        let [j, U] = (0, s.yK)([w.A], () => [null != C ? w.A.get(C.planId) : null, null != t ? w.A.get(t) : null]),
+            G = E?.subscription_trial,
+            F = (0, Y.cg)(),
+            B = U ?? x,
+            K = r.useCallback(
                 (e) => {
                     d(e);
                 },
                 [d],
             ),
-            q = n ?? p;
-        r()(null != q, "Price option has to be set");
-        let z = S?.discount?.planIds,
-            J = null != S && l.some((e) => z?.includes(e)) && null != S.discount,
-            $ = null != _ && l.includes(_) ? (0, G.y8)(_, !1, f, q) : void 0,
-            X = W?.id != null && l.includes(W.id);
-        i.useEffect(() => {
-            if (!X) {
-                let e = !f && null != _ && l.includes(_) ? _ : null;
-                if (null == O || f) K(e ?? l[0]);
-                else if (null != O) {
-                    let e = l.find((e) => e !== O.id);
+            Z = n ?? p;
+        a()(null != Z, "Price option has to be set");
+        let q = P?.discount?.planIds,
+            z = null != P && l.some((e) => q?.includes(e)) && null != P.discount,
+            $ = null != S && l.includes(S) ? (0, k.y8)(S, !1, _, Z) : void 0,
+            J = B?.id != null && l.includes(B.id);
+        r.useEffect(() => {
+            if (!J) {
+                let e = !_ && null != S && l.includes(S) ? S : null;
+                if (null == j || _) K(e ?? l[0]);
+                else if (null != j) {
+                    let e = l.find((e) => e !== j.id);
                     null != e && K(e);
                 }
             }
-        }, [X, f, l, O, K, _]),
-            i.useEffect(() => {
-                b && null != g && g.length > 0 && v(g[0]);
-            }, [g, v, b]);
-        let { ref: Q, ...ee } = (0, o._u)(),
-            et = W?.id != null ? (0, G.y8)(W.id, !1, f, q) : void 0,
-            { ipCountryCode: el } = (0, H.A)(),
-            ei = "HR" === el && null != et && et.currency === en.Yr.EUR,
-            ea = (0, G.J$)(q.paymentSourceId),
-            es = !f && (J || (null != Y && P && null != a)),
-            { discountAmountOff: eo } = (0, C.J)(_),
-            { copy: eu } = er();
+        }, [J, _, l, j, K, S]),
+            r.useEffect(() => {
+                R && null != v && v.length > 0 && g(v[0]);
+            }, [v, g, R]);
+        let { ref: X, ...Q } = (0, o._u)(),
+            et = B?.id != null ? (0, k.y8)(B.id, !1, _, Z) : void 0,
+            { ipCountryCode: en } = (0, H.A)(),
+            el = "HR" === en && null != et && et.currency === ee.Yr.EUR,
+            ei = (0, k.J$)(Z.paymentSourceId),
+            ea = !_ && (z || (null != G && y && null != i)),
+            { copy: es } = er();
         return {
             skuId: c,
             setPlanId: K,
-            selectedPlan: W,
+            selectedPlan: B,
             selectedPlanPrice: et,
-            premiumSubscriptionPlan: O,
-            premiumSubscription: y,
-            thePriceOptions: q,
+            premiumSubscriptionPlan: j,
+            premiumSubscription: C,
+            thePriceOptions: Z,
             hasSeenCollectiblesInSkuSelect: L,
-            shouldShowUpdatedPaymentModal: es,
-            shouldShowHRKEuroWarning: ei,
-            shouldShowTotalInSubscriptionFlow: !P && !J && X && u,
-            canContinue: X,
-            isPrepaid: ea,
-            radioGroupRef: Q,
-            radioGroupProps: ee,
-            isGift: f,
-            giftRecipient: T,
-            customGiftMessage: x,
+            shouldShowUpdatedPaymentModal: ea,
+            shouldShowHRKEuroWarning: el,
+            shouldShowTotalInSubscriptionFlow: !y && !z && J && u,
+            canContinue: J,
+            isPrepaid: ei,
+            radioGroupRef: X,
+            radioGroupProps: Q,
+            isGift: _,
+            giftRecipient: I,
+            customGiftMessage: T,
             setCustomGiftMessage: N,
-            selectedGiftStyle: I,
-            isEligibleForBOGOPromotion: B,
-            isEligibleForTrial: P,
+            selectedGiftStyle: f,
+            isEligibleForBOGOPromotion: F,
+            isEligibleForTrial: y,
             userTrialOffer: E,
-            trialPeriodCopy: eu,
-            discountOffer: S,
-            discountOfferPlanId: _,
-            isPlansEligibleForDiscount: J,
+            trialPeriodCopy: es,
+            isPlansEligibleForDiscount: z,
             discountedPlanRegularPrice: $,
-            discountAmountOff: eo,
         };
     },
-    eo = (e) => {
-        let { isPrepaid: t, selectedPlan: n, selectedPlanPrice: i, intervalType: a, className: r } = e;
+    ea = (e) => {
+        let { isPrepaid: t, selectedPlan: n, selectedPlanPrice: r, intervalType: i, className: a } = e;
         return (0, l.jsxs)("div", {
-            className: r,
+            className: a,
             children: [
-                (0, l.jsx)("div", { className: el.T }),
-                (0, l.jsx)(q.Sd, {
-                    label: v.intl.string(v.t.txajQG),
-                    value: (0, l.jsx)(z.A, {
-                        price: i.amount,
-                        currency: i.currency,
-                        intervalType: a,
+                (0, l.jsx)("div", { className: et.T }),
+                (0, l.jsx)(K.Sd, {
+                    label: g.intl.string(g.t.txajQG),
+                    value: (0, l.jsx)(Z.A, {
+                        price: r.amount,
+                        currency: r.currency,
+                        intervalType: i,
                         intervalCount: n.intervalCount,
                         isPrepaidPaymentSource: t,
                     }),
-                    className: el.M3,
+                    className: et.M3,
                 }),
             ],
         });
     },
-    eu = (e) => {
+    es = (e) => {
         let {
                 giftRecipient: t,
                 customGiftMessage: n,
-                setCustomGiftMessage: i,
-                selectedGiftStyle: a,
-                hasSeenCollectiblesInSkuSelect: r,
+                setCustomGiftMessage: r,
+                selectedGiftStyle: i,
+                hasSeenCollectiblesInSkuSelect: a,
                 isPrepaid: s,
                 canContinue: o,
                 selectedPlan: d,
                 selectedPlanPrice: p,
                 useCompactGiftComponents: m,
                 handleClose: h,
-                showTotal: C,
-                switchPlanSelectComponent: A,
-                warningComponent: y,
+                showTotal: A,
+                switchPlanSelectComponent: C,
+                warningComponent: E,
             } = e,
-            E = (e) =>
+            y = (e) =>
                 (0, l.jsxs)(u.B, {
                     gap: 8,
                     children: [
                         (0, l.jsx)(c.D, {
                             variant: "heading-md/semibold",
                             color: "text-strong",
-                            children: v.intl.string(v.t["3E5hXj"]),
+                            children: g.intl.string(g.t["3E5hXj"]),
                         }),
                         e,
                     ],
                 });
-        return (0, U.Ik)(t)
+        return (0, D.Ik)(t)
             ? (0, l.jsxs)("div", {
-                  className: el.mh,
+                  className: et.mh,
                   children: [
-                      (0, l.jsx)("div", { className: el.MU, children: null != a && (0, l.jsx)(X.t, {}) }),
+                      (0, l.jsx)("div", { className: et.MU, children: null != i && (0, l.jsx)($.t, {}) }),
                       (0, l.jsxs)("div", {
-                          className: el.Tc,
+                          className: et.Tc,
                           children: [
-                              (0, l.jsx)(ee.Z, { className: m ? el.KW : void 0, giftRecipient: t }),
+                              (0, l.jsx)(X.Z, { className: m ? et.KW : void 0, giftRecipient: t }),
                               (() => {
-                                  if ((0, U.lo)(t) === U.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != i)
-                                      return (0, l.jsx)($.A, {
-                                          className: el.iX,
-                                          innerClassName: el.pt,
-                                          onTextChange: (e) => i(e),
+                                  if ((0, D.lo)(t) === D.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null != r)
+                                      return (0, l.jsx)(z.A, {
+                                          className: et.iX,
+                                          innerClassName: et.pt,
+                                          onTextChange: (e) => r(e),
                                           pendingText: n,
                                           currentText: n,
                                       });
                               })(),
-                              E(A),
-                              y,
-                              !r && (0, l.jsx)(b, { onClose: h }),
+                              y(C),
+                              E,
+                              !a && (0, l.jsx)(R, { onClose: h }),
                           ],
                       }),
                   ],
               })
             : (0, l.jsxs)("div", {
-                  className: el.Du,
+                  className: et.Du,
                   children: [
-                      (0, l.jsx)(ee.Z, { className: m ? el.KW : void 0, giftRecipient: t }),
-                      E(A),
+                      (0, l.jsx)(X.Z, { className: m ? et.KW : void 0, giftRecipient: t }),
+                      y(C),
                       o &&
-                          C &&
+                          A &&
                           null != d &&
                           null != p &&
-                          (0, l.jsx)(eo, { selectedPlan: d, selectedPlanPrice: p, intervalType: null, isPrepaid: s }),
-                      y,
-                      !r && (0, l.jsx)(b, { onClose: h }),
+                          (0, l.jsx)(ea, { selectedPlan: d, selectedPlanPrice: p, intervalType: null, isPrepaid: s }),
+                      E,
+                      !a && (0, l.jsx)(R, { onClose: h }),
                   ],
               });
     },
-    ec = (e) => {
+    eo = (e) => {
         let {
                 isPrepaid: t,
                 premiumSubscription: n,
                 setPlanId: l,
-                thePriceOptions: i,
-                shouldShowUpdatedPaymentModal: a,
-                isEligibleForTrial: r,
+                thePriceOptions: r,
+                shouldShowUpdatedPaymentModal: i,
+                isEligibleForTrial: a,
                 isPlansEligibleForDiscount: o,
-                discountAmountOff: u,
-                discountOfferPlanId: c,
             } = e,
-            d = (0, s.bG)([O.default], () => O.default.locale),
-            { isGift: p, giftRecipient: m } = (0, j.Pv)(),
-            h = p && (0, U.Ik)(m),
-            { enabled: C } = W.A.getConfig({ location: "PremiumSwitchPlanSelectOption" });
+            u = (0, s.bG)([j.default], () => j.default.locale),
+            { isGift: c, giftRecipient: d } = (0, M.Pv)(),
+            p = c && (0, D.Ik)(d),
+            { enabled: m } = B.A.getConfig({ location: "PremiumSwitchPlanSelectOption" });
         return {
             isPrepaid: t,
             selectPlan: l,
-            premiumSubscription: p ? null : (n ?? null),
-            priceOptions: i,
-            shouldShowUpdatedPaymentModal: a,
+            premiumSubscription: c ? null : (n ?? null),
+            priceOptions: r,
+            shouldShowUpdatedPaymentModal: i,
             isEligibleForDiscount: o,
-            discountAmountOff: u,
-            discountOfferPlanId: c,
-            isEligibleForTrial: r,
-            userLocale: d,
-            isGift: p,
-            isCustomGift: h,
-            shouldUseCalculatedDiscount: C,
-            discountOffer: (0, K.O)(),
-            isEligibleForBOGOPromotion: (0, F.cg)(),
+            discountInfo: (0, A.t4)((e) => e.premiumDiscountInfo),
+            isEligibleForTrial: a,
+            userLocale: u,
+            isGift: c,
+            isCustomGift: p,
+            shouldUseCalculatedDiscount: m,
+            isEligibleForBOGOPromotion: (0, Y.cg)(),
         };
     },
-    ed = (e, t) => {
+    eu = (e, t) => {
         let n = null != e && e.planId === t,
             l =
                 n ||
-                (t === et.gD.PREMIUM_MONTH_TIER_2 &&
+                (t === Q.gD.PREMIUM_MONTH_TIER_2 &&
                     null != e &&
-                    [et.gD.PREMIUM_YEAR_TIER_0, et.gD.PREMIUM_YEAR_TIER_1].includes(e.planId));
+                    [Q.gD.PREMIUM_YEAR_TIER_0, Q.gD.PREMIUM_YEAR_TIER_1].includes(e.planId));
         return { isCurrentPlan: n, disabled: l };
     },
-    ep = (e) => {
-        let { planOptions: t, radioGroupRef: n, selectedPlan: a, radioGroupProps: r } = e,
-            s = ec(e),
-            o = i.useMemo(
+    ec = (e) => {
+        let { planOptions: t, radioGroupRef: n, selectedPlan: i, radioGroupProps: a } = e,
+            s = eo(e),
+            o = r.useMemo(
                 () =>
                     t.map((t) => {
-                        let { isCurrentPlan: n, disabled: i } = ed(s.premiumSubscription, t);
+                        let { isCurrentPlan: n, disabled: r } = eu(s.premiumSubscription, t);
                         return (0, l.jsx)(
-                            Q.Ay,
-                            { planId: t, selected: a?.id === t, isCurrentPlan: n, disabled: e.disabled || i, ...s },
+                            J.Ay,
+                            { planId: t, selected: i?.id === t, isCurrentPlan: n, disabled: e.disabled || r, ...s },
                             t,
                         );
                     }),
-                [e.disabled, t, s, a],
+                [e.disabled, t, s, i],
             );
-        return (0, l.jsx)("div", { ref: n, ...r, children: o });
+        return (0, l.jsx)("div", { ref: n, ...a, children: o });
     },
-    em = (e, t) => {
+    ed = (e, t) => {
         let { subscriptionPeriodEnd: n, trialPeriodCopy: l } = t,
-            i = e?.trial_id === et.Dw;
+            r = e?.trial_id === Q.Dw;
         return null == n
             ? null
-            : i
-              ? v.intl.format(v.t.nG95hA, { endDate: n })
-              : v.intl.format(v.t.s4E7kb, { trialEnd: n, trialPeriod: l });
+            : r
+              ? g.intl.format(g.t.nG95hA, { endDate: n })
+              : g.intl.format(g.t.s4E7kb, { trialEnd: n, trialPeriod: l });
     },
-    eh = (e) => {
+    ep = (e) => {
         let { shouldShowHRKEuroWarning: t, selectedPlanPrice: n } = e;
         return t && null != n
             ? (0, l.jsx)(p.A, {
-                  message: v.intl.formatToPlainString(v.t["9hnZoK"], {
-                      kunaPriceWithCurrency: (0, Y.$g)(7.5345 * n.amount, en.Yr.HRK),
+                  message: g.intl.formatToPlainString(g.t["9hnZoK"], {
+                      kunaPriceWithCurrency: (0, G.$g)(7.5345 * n.amount, ee.Yr.HRK),
                   }),
               })
             : null;
     },
-    eC = (e) => {
+    em = (e) => {
         let {
             selectedPlan: t,
             selectedPlanPrice: n,
-            isPrepaid: i,
-            shouldShowHRKEuroWarning: a,
-            shouldShowUpdatedPaymentModal: r,
+            isPrepaid: r,
+            shouldShowHRKEuroWarning: i,
+            shouldShowUpdatedPaymentModal: a,
             showTotal: s,
             shouldShowTotalInSubscriptionFlow: o,
             previewTotalSectionClassName: u,
@@ -437,31 +427,31 @@ let er = () => {
                 o &&
                     null != t &&
                     null != n &&
-                    (0, l.jsx)(eo, {
+                    (0, l.jsx)(ea, {
                         className: u,
                         selectedPlan: t,
                         selectedPlanPrice: n,
                         intervalType: t.interval,
-                        isPrepaid: i,
+                        isPrepaid: r,
                     }),
-                eh({ shouldShowHRKEuroWarning: a, selectedPlanPrice: n }),
-                !r &&
+                ep({ shouldShowHRKEuroWarning: i, selectedPlanPrice: n }),
+                !a &&
                     s &&
                     (0, l.jsx)(p.A, {
-                        message: v.intl.format(v.t.Om31w8, {
-                            documentationLink: k.A.getArticleURL(g.MVz.LOCALIZED_PRICING),
+                        message: g.intl.format(g.t.Om31w8, {
+                            documentationLink: U.A.getArticleURL(v.MVz.LOCALIZED_PRICING),
                         }),
                     }),
             ],
         });
     };
-function eA(e) {
+function eh(e) {
     let {
             disabled: t,
             selectedPlanId: n,
-            planGroup: i,
-            priceOptions: a,
-            planOptions: r,
+            planGroup: r,
+            priceOptions: i,
+            planOptions: a,
             subscriptionPeriodEnd: s,
             showTotal: o = !0,
             useCompactGiftComponents: u,
@@ -472,142 +462,138 @@ function eA(e) {
             setPlanId: m,
             selectedPlan: h,
             premiumSubscription: C,
-            premiumSubscriptionPlan: A,
+            premiumSubscriptionPlan: E,
             isEligibleForBOGOPromotion: y,
-            isGift: E,
-            thePriceOptions: P,
-            isEligibleForTrial: S,
-            giftRecipient: _,
+            isGift: P,
+            thePriceOptions: S,
+            isEligibleForTrial: _,
+            giftRecipient: I,
             customGiftMessage: f,
             setCustomGiftMessage: T,
-            selectedGiftStyle: I,
-            discountOffer: x,
-            discountOfferPlanId: N,
-            isPlansEligibleForDiscount: g,
-            discountedPlanRegularPrice: M,
-            hasSeenCollectiblesInSkuSelect: b,
-            userTrialOffer: j,
-            shouldShowUpdatedPaymentModal: R,
-            discountAmountOff: O,
-            isPrepaid: D,
-            radioGroupRef: w,
-            radioGroupProps: U,
-            selectedPlanPrice: k,
-            shouldShowHRKEuroWarning: G,
-            shouldShowTotalInSubscriptionFlow: F,
-            canContinue: W,
-            trialPeriodCopy: V,
-        } = es({ selectedPlanId: n, priceOptions: a, planOptions: r, subscriptionPeriodEnd: s, showTotal: o }),
-        H = (0, B.ds)(),
-        K = () =>
-            (0, l.jsx)(ep, {
+            selectedGiftStyle: N,
+            isPlansEligibleForDiscount: v,
+            discountedPlanRegularPrice: x,
+            hasSeenCollectiblesInSkuSelect: R,
+            userTrialOffer: M,
+            shouldShowUpdatedPaymentModal: b,
+            isPrepaid: j,
+            radioGroupRef: O,
+            radioGroupProps: w,
+            selectedPlanPrice: D,
+            shouldShowHRKEuroWarning: U,
+            shouldShowTotalInSubscriptionFlow: k,
+            canContinue: Y,
+            trialPeriodCopy: B,
+        } = ei({ selectedPlanId: n, priceOptions: i, planOptions: a, subscriptionPeriodEnd: s, showTotal: o }),
+        { discountAmountOff: W, applicablePlan: H, discountOffer: V } = (0, A.t4)((e) => e.premiumDiscountInfo),
+        K = (0, F.ds)(),
+        Z = () =>
+            (0, l.jsx)(ec, {
                 disabled: t,
-                planOptions: r,
-                radioGroupRef: w,
-                radioGroupProps: U,
-                isGift: E,
-                isPrepaid: D,
+                planOptions: a,
+                radioGroupRef: O,
+                radioGroupProps: w,
+                isGift: P,
+                isPrepaid: j,
                 premiumSubscription: C,
                 setPlanId: m,
                 selectedPlan: h,
-                thePriceOptions: P,
-                shouldShowUpdatedPaymentModal: R,
-                isEligibleForTrial: S,
-                isPlansEligibleForDiscount: g,
-                discountAmountOff: O,
-                discountOfferPlanId: N,
+                thePriceOptions: S,
+                shouldShowUpdatedPaymentModal: b,
+                isEligibleForTrial: _,
+                isPlansEligibleForDiscount: v,
             }),
-        { showFractionalPremiumBanner: Z, fractionalPremiumInfo: q } = (0, L._V)({
+        { showFractionalPremiumBanner: z, fractionalPremiumInfo: $ } = (0, L._V)({
             premiumSubscription: C,
             selectedPlanId: n,
-            planGroup: i,
-            isGift: E,
+            planGroup: r,
+            isGift: P,
             fractionalPremiumInfoArgs: {
                 forceFetch: !1,
                 excludeReverseTrial: !1,
                 excludeReverseTrialFromCountdown: !0,
             },
         });
-    if (E)
-        return (0, l.jsx)(eu, {
-            giftRecipient: _,
+    if (P)
+        return (0, l.jsx)(es, {
+            giftRecipient: I,
             customGiftMessage: f,
             setCustomGiftMessage: T,
-            selectedGiftStyle: I,
-            hasSeenCollectiblesInSkuSelect: b,
-            isPrepaid: D,
-            canContinue: W,
+            selectedGiftStyle: N,
+            hasSeenCollectiblesInSkuSelect: R,
+            isPrepaid: j,
+            canContinue: Y,
             selectedPlan: h,
-            selectedPlanPrice: k,
+            selectedPlanPrice: D,
             useCompactGiftComponents: u,
             handleClose: c,
             showTotal: o,
-            switchPlanSelectComponent: K(),
-            warningComponent: eh({ shouldShowHRKEuroWarning: G, selectedPlanPrice: k }),
+            switchPlanSelectComponent: Z(),
+            warningComponent: ep({ shouldShowHRKEuroWarning: U, selectedPlanPrice: D }),
         });
-    let z = !(S && Z && !H),
-        $ = ei(A, { isEligibleForBOGOPromotion: y });
+    let J = !(_ && z && !K),
+        X = en(E, { isEligibleForBOGOPromotion: y });
     return (0, l.jsxs)("div", {
         children: [
-            Z &&
-                !H &&
-                (0, l.jsx)(J.vi, {
-                    fractionalPremiumInfo: q,
-                    enablePremiumBrandRefresh: !0,
-                    variant: S ? J.uA.TRIAL : void 0,
-                    trialPeriod: S ? V : void 0,
-                    trialEnd: S ? s : void 0,
-                }),
-            $ && !Z && (0, l.jsx)("div", { className: el.G3, children: ea(A, p) }),
             z &&
-                ((e, t, i) => {
-                    if (!R) return (0, l.jsx)("div", { className: el.VZ, children: v.intl.string(v.t.a19jpU) });
+                !K &&
+                (0, l.jsx)(q.vi, {
+                    fractionalPremiumInfo: $,
+                    enablePremiumBrandRefresh: !0,
+                    variant: _ ? q.uA.TRIAL : void 0,
+                    trialPeriod: _ ? B : void 0,
+                    trialEnd: _ ? s : void 0,
+                }),
+            X && !z && (0, l.jsx)("div", { className: et.G3, children: el(E, p) }),
+            J &&
+                ((e, t, r) => {
+                    if (!b) return (0, l.jsx)("div", { className: et.VZ, children: g.intl.string(g.t.a19jpU) });
                     if (t)
                         return (0, l.jsxs)("div", {
                             children: [
                                 (0, l.jsx)(d.E, {
                                     variant: "text-sm/normal",
-                                    className: el.Tz,
-                                    children: em(e, { subscriptionPeriodEnd: s, trialPeriodCopy: V }),
+                                    className: et.Tz,
+                                    children: ed(e, { subscriptionPeriodEnd: s, trialPeriodCopy: B }),
                                 }),
-                                (0, l.jsx)("hr", { className: el.RA }),
+                                (0, l.jsx)("hr", { className: et.RA }),
                             ],
                         });
-                    if (i && null != O && null != M && null != N && n === N) {
-                        let e = h?.interval === et.WT.YEAR,
-                            t = (0, Y.$g)(M.amount - O, M.currency),
-                            n = (0, Y.$g)(M.amount, M.currency);
+                    if (r && null != W && null != x && null != H && n === H) {
+                        let e = h?.interval === Q.WT.YEAR,
+                            t = (0, G.$g)(x.amount - W, x.currency),
+                            n = (0, G.$g)(x.amount, x.currency);
                         return (0, l.jsxs)("div", {
                             children: [
                                 (0, l.jsx)(d.E, {
                                     variant: "text-sm/normal",
-                                    className: el.Tz,
+                                    className: et.Tz,
                                     children: e
-                                        ? v.intl.format(v.t.ofweWu, {
-                                              numYears: x?.discount.userUsageLimit ?? "",
+                                        ? g.intl.format(g.t.ofweWu, {
+                                              numYears: V?.discount.userUsageLimit ?? "",
                                               discountedPrice: t,
                                               regularPrice: n,
                                           })
-                                        : v.intl.format(v.t["nG7g/E"], {
-                                              numMonths: x?.discount.userUsageLimit ?? "",
+                                        : g.intl.format(g.t["nG7g/E"], {
+                                              numMonths: V?.discount.userUsageLimit ?? "",
                                               discountedPrice: t,
                                               regularPrice: n,
                                           }),
                                 }),
-                                (0, l.jsx)("hr", { className: el.RA }),
+                                (0, l.jsx)("hr", { className: et.RA }),
                             ],
                         });
                     }
-                })(j, S, g),
-            K(),
-            eC({
+                })(M, _, v),
+            Z(),
+            em({
                 selectedPlan: h,
-                selectedPlanPrice: k,
-                isPrepaid: D,
-                shouldShowHRKEuroWarning: G,
-                shouldShowUpdatedPaymentModal: R,
+                selectedPlanPrice: D,
+                isPrepaid: j,
+                shouldShowHRKEuroWarning: U,
+                shouldShowUpdatedPaymentModal: b,
                 showTotal: o,
-                shouldShowTotalInSubscriptionFlow: F,
+                shouldShowTotalInSubscriptionFlow: k,
             }),
         ],
     });
