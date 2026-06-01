@@ -291,15 +291,16 @@ let eC = (e) => {
             u = s.type === H.R.BUNDLE ? s.items[i ?? 0] : void 0,
             m = u?.type ?? s.type,
             h = m === H.R.AVATAR_DECORATION,
-            { firstAvatarDecoration: x, firstProfileEffect: E, firstNameplate: p, firstProfileFrame: A } = (0, G.f5)(s),
-            v = u?.type === H.R.AVATAR_DECORATION ? u : x,
-            j = u?.type === H.R.PROFILE_EFFECT ? u : E,
-            I = u?.type === H.R.PROFILE_FRAME ? u : A,
-            R = u?.type === H.R.NAMEPLATE ? u : p;
+            x = m === H.R.PROFILE_EFFECT,
+            { firstAvatarDecoration: E, firstProfileEffect: p, firstNameplate: A, firstProfileFrame: v } = (0, G.f5)(s),
+            j = u?.type === H.R.AVATAR_DECORATION ? u : E,
+            I = u?.type === H.R.PROFILE_EFFECT ? u : p,
+            R = u?.type === H.R.PROFILE_FRAME ? u : v,
+            g = u?.type === H.R.NAMEPLATE ? u : A;
         r.useEffect(() => {
-            if (null != v) return (0, eI.p)({ avatarDecoration: v }), () => (0, eI.p)({ avatarDecoration: void 0 });
-        }, [v]);
-        let g = () =>
+            if (null != j) return (0, eI.p)({ avatarDecoration: j }), () => (0, eI.p)({ avatarDecoration: void 0 });
+        }, [j]);
+        let N = () =>
             (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsx)(ev.A, {
@@ -307,11 +308,11 @@ let eC = (e) => {
                         pendingAvatar: d,
                         user: t,
                         canUsePremiumCustomization: a,
-                        pendingAvatarDecoration: v,
-                        pendingProfileEffect: j,
-                        pendingProfileFrame: I,
+                        pendingAvatarDecoration: j,
+                        pendingProfileEffect: I,
+                        pendingProfileFrame: R,
                         disabledInputs: !0,
-                        hideMessageInput: !0,
+                        hideMessageInput: !x || null != u,
                         hideCustomStatus: !0,
                         hideBioSection: h,
                         hideExampleButton: !0,
@@ -321,14 +322,14 @@ let eC = (e) => {
                     h && (0, l.jsx)(e_, { user: t }),
                 ],
             });
-        if (m === H.R.NAMEPLATE && null != R)
+        if (m === H.R.NAMEPLATE && null != g)
             return (0, l.jsx)("div", {
                 className: ef.Zj,
-                children: (0, l.jsx)(ek, { user: t, nameplate: R, avatarDecoration: v }),
+                children: (0, l.jsx)(ek, { user: t, nameplate: g, avatarDecoration: j }),
             });
-        return m === H.R.PROFILE_EFFECT && null != j
-            ? (0, l.jsx)("div", { className: ef.YL, children: (0, l.jsx)("div", { className: ef.V9, children: g() }) })
-            : (0, l.jsx)("div", { className: h ? ef.RA : ef.hZ, children: g() });
+        return x && null != u && null != I
+            ? (0, l.jsx)("div", { className: ef.YL, children: (0, l.jsx)("div", { className: ef.V9, children: N() }) })
+            : (0, l.jsx)("div", { className: h ? ef.RA : ef.hZ, children: N() });
     },
     eL = (e) => {
         let { user: s, selectedProduct: t, previewingProduct: i, selectedBundleSlide: r } = e;
