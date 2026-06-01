@@ -48,20 +48,25 @@ function h(e) {
                           .map((e, t) => {
                               let n = e.name,
                                   r = s()(_.my, m, t === A && !g && _.NE);
-                              return E
-                                  ? (0, i.jsx)("div", {
-                                        className: r,
-                                        children: (0, i.jsx)(d.Ay, { guild: e, onClick: h, size: f, showTooltip: !1 }),
-                                    })
-                                  : (0, i.jsx)(
-                                        l.m,
-                                        {
-                                            asContainer: !0,
-                                            text: n,
-                                            children: (0, i.jsx)(d.Ay, { guild: e, onClick: h, size: f }),
-                                        },
-                                        e.id,
-                                    );
+                              return (0, i.jsx)(
+                                  "div",
+                                  {
+                                      className: r,
+                                      children: E
+                                          ? (0, i.jsx)(d.Ay, { guild: e, onClick: h, size: f, showTooltip: !1 })
+                                          : (0, i.jsx)(l.m, {
+                                                asContainer: !0,
+                                                text: n,
+                                                children: (0, i.jsx)(d.Ay, {
+                                                    guild: e,
+                                                    onClick: h,
+                                                    size: f,
+                                                    showTooltip: !1,
+                                                }),
+                                            }),
+                                  },
+                                  e.id,
+                              );
                           })
                           .value();
                   if (g) {
