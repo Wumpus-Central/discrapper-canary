@@ -53,7 +53,7 @@ var t = n(627968),
     ee = n(287809),
     el = n(836602),
     en = n(996988),
-    et = n(985253);
+    et = n(207634);
 let ei = (0, o.FT)(et.T[en.d.MODAL_V2].avatarSize),
     er = {
         pendingThemeColors: void 0,
@@ -313,8 +313,8 @@ var e1 = n(463156),
     e3 = n(349288),
     e2 = n(509434),
     e9 = n(307301),
-    e5 = n(228366),
-    e8 = n(95561),
+    e8 = n(228366),
+    e5 = n(95561),
     e6 = n(874490),
     e4 = n(370480),
     le = n(968309),
@@ -333,7 +333,7 @@ function la(e) {
         });
 }
 function ls() {
-    e5.h.dispatch({ type: "CONNECTIONS_GRID_MODAL_SHOW", onComplete: la, stackingBehavior: "stack" });
+    e8.h.dispatch({ type: "CONNECTIONS_GRID_MODAL_SHOW", onComplete: la, stackingBehavior: "stack" });
 }
 function lo(e) {
     let { account: l, locale: n, userId: i } = e,
@@ -358,7 +358,7 @@ function lo(e) {
                               ? `${s.name}, ${l.name}, ${eL.intl.string(eL.t.q5jLJB)}`
                               : `${l.name}, ${eL.intl.string(eL.t.q5jLJB)}`,
                       onClick: (n) => {
-                          (0, e8.zV)(eQ.HAw.CONNECTED_ACCOUNT_VIEWED, { platform_type: l.type, other_user_id: i }),
+                          (0, e5.zV)(eQ.HAw.CONNECTED_ACCOUNT_VIEWED, { platform_type: l.type, other_user_id: i }),
                               (0, lt.h)({ href: e, trusted: s?.type !== eQ.fg2.DOMAIN }, n);
                       },
                       children: (0, t.jsxs)("div", {
@@ -682,17 +682,17 @@ var lJ = n(473219),
     l2 = n(466681);
 let l9 =
         "https://cdn.discordapp.com/assets/content/6ccc97f30d0e11f23e116bb2534831ca573533a9dd726f5859ae527e82cdf37a.png",
-    l5 =
+    l8 =
         "https://cdn.discordapp.com/assets/content/82b9aaf680c9ca85c8e9cdb51056df7d33d865e18e645393934b76c03b944611.png";
-function l8(e) {
+function l5(e) {
     let { effect: l, shouldAnimate: n } = e,
         i = (0, l0.Ay)(),
-        r = (0, lQ.M)(i) ? l9 : l5;
+        r = (0, lQ.M)(i) ? l9 : l8;
     return (0, t.jsxs)("div", {
-        className: l2.B0,
+        className: l2.ti,
         "aria-hidden": !0,
         children: [
-            (0, t.jsx)("img", { src: r, alt: "", className: l2.AH }),
+            (0, t.jsx)("img", { src: r, alt: "", className: l2.QQ }),
             l?.skuId != null &&
                 (0, t.jsx)(b.A, {
                     skuId: l.skuId,
@@ -742,7 +742,7 @@ function l6(e) {
         accessibleLabel: eL.intl.string(eL.t["/dRfCf"]),
         "aria-haspopup": "dialog",
         disabled: r,
-        renderPreview: (e) => (0, t.jsx)(l8, { effect: v, shouldAnimate: e }),
+        renderPreview: (e) => (0, t.jsx)(l5, { effect: v, shouldAnimate: e }),
     });
 }
 var l4 = n(515727),
@@ -755,7 +755,7 @@ function nn(e) {
     let { user: l, guildId: n, disabled: r } = e,
         { analyticsLocations: o } = (0, j.Ay)(),
         d = (0, l0.Ay)(),
-        u = (0, lQ.M)(d) ? l9 : l5,
+        u = (0, lQ.M)(d) ? l9 : l8,
         c = null != n,
         g = (0, s.bG)([l3.A], () => (null != n ? l3.A.getGuild(n) : null)),
         f = (0, Z.Xf)({ user: l }),
@@ -791,21 +791,18 @@ function nn(e) {
         "aria-haspopup": "dialog",
         disabled: r,
         renderPreview: () =>
-            null != b
-                ? (0, t.jsxs)("div", {
-                      className: a()(ne.j_, ne.i1, E),
-                      style: I,
-                      children: [
-                          (0, t.jsx)("img", { src: u, alt: "", className: ne.wt, draggable: !1 }),
-                          (0, t.jsx)(y.A, { frame: b, filterLayer: nl }),
-                      ],
-                  })
-                : (0, t.jsxs)(t.Fragment, {
-                      children: [
-                          (0, t.jsx)("img", { src: u, alt: "", className: a()(ne.j_, ne.dJ) }),
-                          (0, t.jsx)("div", { className: a()(ne.j_, ne.zC) }),
-                      ],
-                  }),
+            (0, t.jsxs)("div", {
+                className: a()(ne.ti, { [ne.yT]: null == b }),
+                children: [
+                    (0, t.jsx)("img", { src: u, alt: "", className: ne.QQ, draggable: !1 }),
+                    null != b &&
+                        (0, t.jsx)("div", {
+                            className: a()(ne.hm, E),
+                            style: I,
+                            children: (0, t.jsx)(y.A, { frame: b, filterLayer: nl }),
+                        }),
+                ],
+            }),
     });
 }
 var nt = n(33851),
@@ -1650,7 +1647,7 @@ function n3(e) {
 }
 var n2 = n(568602),
     n9 = n(625494);
-function n5(e) {
+function n8(e) {
     let { children: l } = e,
         [n, r] = i.useState(!1);
     return (
@@ -1671,7 +1668,7 @@ function n5(e) {
         (0, t.jsx)(n2.b, { isShaking: n, intensity: 1.4, children: l })
     );
 }
-var n8 = n(515054),
+var n5 = n(515054),
     n6 = n(933832),
     n4 = n(972213),
     te = n(97483),
@@ -2629,8 +2626,8 @@ var t0 = n(913453),
     t3 = n(186272),
     t2 = n(645625),
     t9 = n(337796);
-let t5 = (e) => e * (2 - e),
-    t8 = { "compact-sm": { avatarOffsetX: 16 }, "compact-xs": { avatarSize: o._3.SIZE_96, avatarOffsetX: 16 } },
+let t8 = (e) => e * (2 - e),
+    t5 = { "compact-sm": { avatarOffsetX: 16 }, "compact-xs": { avatarSize: o._3.SIZE_96, avatarOffsetX: 16 } },
     t6 = (e) => {
         let { type: l, anchor: n } = e;
         return "staple" !== l || "bottom" !== n;
@@ -2699,7 +2696,7 @@ function il(e) {
             l <= 350 ? U("compact-xs") : l <= 380 ? U("compact-sm") : U(void 0);
         }, []);
     (0, v.g)(M, V, [], { fireOnMount: !0 });
-    let F = null != w ? t8[w] : void 0,
+    let F = null != w ? t5[w] : void 0,
         B = i.useMemo(() => p ?? (0, k.A)(), [p]),
         { relationshipType: $, originApplicationId: Z } = (0, s.cf)([T.A], () => ({
             relationshipType: T.A.getRelationshipType(l.id),
@@ -3052,7 +3049,7 @@ function ii(e) {
                     from: { progress: 0 },
                     enter: { progress: 1 },
                     leave: { progress: 0 },
-                    config: { duration: 300, easing: t5 },
+                    config: { duration: 300, easing: t8 },
                     onRest: () => t(!1),
                 }),
                 a = (0, x.A)("(min-width: 929px) and (min-height: 550px)"),
@@ -3174,7 +3171,7 @@ function ii(e) {
                         "aria-labelledby": eF,
                         parentComponent: "UserProfileModalV2",
                         children: [
-                            (0, t.jsx)(n5, {
+                            (0, t.jsx)(n8, {
                                 children: (0, t.jsxs)("div", {
                                     className: a()(t2.layoutContainer, eU, {
                                         [t2.editingPanelEnabled]: $,
@@ -3265,7 +3262,7 @@ function ii(e) {
                                                             allowEditing: et,
                                                             isLoading: W,
                                                         }),
-                                                        (0, t.jsx)(n8.A, {
+                                                        (0, t.jsx)(n5.A, {
                                                             user: l,
                                                             currentUser: n,
                                                             displayProfile: e_,

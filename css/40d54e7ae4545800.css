@@ -1,4 +1,4 @@
-.previewCard_ee133f {
+.profilePreviewContainer_ee133f {
     background-color: var(--background-base-low);
     border-radius: var(--space-4) var(--space-4) 0 0;
     box-shadow: var(--shadow-low);
@@ -11,13 +11,13 @@
     width: 60px
 }
 
-.previewBackgroundImage_ee133f {
+.profileSkeletonImage_ee133f {
     -o-object-position: top;
     object-position: top
 }
 
-.previewBackgroundImage_ee133f,
-.previewEffectImage_ee133f {
+.previewEffectImage_ee133f,
+.profileSkeletonImage_ee133f {
     height: 100%;
     inset: 0;
     -o-object-fit: cover;
@@ -26,26 +26,25 @@
     width: 100%
 }
 
-.positionCenter_e8605d {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%)
-}
-
-.previewContainer_e8605d {
-    box-sizing: border-box;
+.profilePreviewContainer_e8605d {
+    background-color: var(--background-base-low);
+    box-shadow: var(--shadow-low);
     height: 60px;
-    overflow: visible;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 60px
 }
 
-.sampleProfile_e8605d {
-    background-color: var(--background-surface-higher);
-    border: 1px solid var(--border-muted);
+.profilePreviewContainer_e8605d,
+.profileSkeletonImage_e8605d {
     border-radius: var(--radius-xs);
-    box-sizing: border-box;
+    position: absolute
+}
+
+.profileSkeletonImage_e8605d {
     height: 100%;
+    inset: 0;
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: top;
@@ -53,21 +52,18 @@
     width: 100%
 }
 
-.emptyPlaceholder_e8605d {
-    border: 1px dashed var(--border-strong);
-    border-radius: var(--radius-xs);
-    height: 76px;
-    width: 76px
+.frameContainer_e8605d {
+    inset: 0;
+    overflow: visible;
+    position: absolute
 }
 
-.emptyPreviewBackgroundImage_e8605d {
+.emptyPreview_e8605d:after {
+    border: 2px dotted var(--border-normal);
     border-radius: var(--radius-xs);
-    height: 60px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: top;
-    object-position: top;
-    width: 60px
+    content: "";
+    inset: calc(var(--space-8)*-1);
+    position: absolute
 }
 
 .gradient_f11c9b {
