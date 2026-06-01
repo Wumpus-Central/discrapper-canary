@@ -64,8 +64,12 @@ let f = {
         ctaAction: () => (0, a.openUserSettings)(s.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
     },
     [i.$.ORB_PROFILE]: {
-        ctaLabel: () => u.intl.string(u.t.C2rTrm),
+        ctaLabel: () => u.intl.string(u.t.EBYkzk),
         ctaAction: () => (0, r.pX)(o.BVt.COLLECTIBLES_SHOP_WITH_TAB(l.G2.ORBS)),
+    },
+    [i.$.QUEST_COMPLETED]: {
+        ctaLabel: () => u.intl.string(u.t["0cTvRG"]),
+        ctaAction: () => (0, r.pX)(o.BVt.QUEST_HOME),
     },
 };
 function p(e) {
