@@ -391,7 +391,8 @@ class R extends s.A {
     scheduleClip(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        C.nx.info(`decider: scheduleClip signal=${e.type} delay=${t}ms isCandidate=${n}`),
+        (n && null === this.currentSessionGameKey) ||
+            (C.nx.info(`decider: scheduleClip signal=${e.type} delay=${t}ms isCandidate=${n}`),
             this.unscheduleClip(),
             (this.scheduledClipSignal = e),
             (this.lastClipTimestamp = performance.now() + t),
@@ -404,7 +405,7 @@ class R extends s.A {
                         { signal: e, timestamp: Date.now() },
                         n,
                     );
-            });
+            }));
     }
     handleRunningGamesChange() {
         let e = l.Ay.getVisibleGame(),
