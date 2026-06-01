@@ -290,22 +290,23 @@ function N(e, t, n) {
                 maxContentWidth: j,
                 renderAccessory: Y,
                 onItemVisibilityChange: W,
-                ...K
+                disableFocusRingScope: K = !1,
+                ...$
             } = n,
-            $ = s.useRef(null),
             z = s.useRef(null),
-            q = s.useRef({}),
-            [X, Z] = s.useState(!1),
-            { scrollerRef: Q, scrollerState: J, getScrollerState: ee } = (0, u.A)();
-        (0, c.A)({ scrollerRef: Q, className: B, specs: i, orientation: "vertical", dir: N });
+            q = s.useRef(null),
+            X = s.useRef({}),
+            [Z, Q] = s.useState(!1),
+            { scrollerRef: J, scrollerState: ee, getScrollerState: et } = (0, u.A)();
+        (0, c.A)({ scrollerRef: J, className: B, specs: i, orientation: "vertical", dir: N });
         let {
-            forceUpdateOnChunkChange: et,
-            coordsMap: en,
-            gridData: ei,
-            visibleSections: er,
-            totalHeight: es,
-            forceUpdate: ea,
-            masonryComputer: eo,
+            forceUpdateOnChunkChange: en,
+            coordsMap: ei,
+            gridData: er,
+            visibleSections: es,
+            totalHeight: ea,
+            forceUpdate: eo,
+            masonryComputer: el,
         } = (function (e) {
             let {
                     sections: t,
@@ -376,7 +377,7 @@ function N(e, t, n) {
             padding: U,
             paddingVertical: G,
             paddingHorizontal: F,
-            getScrollerState: ee,
+            getScrollerState: et,
             dir: N,
             maxBufferWidth: j,
         });
@@ -411,92 +412,88 @@ function N(e, t, n) {
                                 }) || n(s[e][1], s[e][2], !1);
                             }
                         }
-                })(er, q.current, W),
-                (q.current = er);
-        }, [er, W]);
-        let el = (0, s.useCallback)(
+                })(es, X.current, W),
+                (X.current = es);
+        }, [es, W]);
+        let eu = (0, s.useCallback)(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-                    e > J.current.dirty && (J.current.dirty = e), 2 === e ? ea() : et(1);
+                    e > ee.current.dirty && (ee.current.dirty = e), 2 === e ? eo() : en(1);
                 },
-                [et, J, ea],
+                [en, ee, eo],
             ),
-            eu = (0, g.A)(Q),
-            ec = (0, s.useCallback)(() => eo.itemGrid, [eo]),
-            ed = (0, s.useCallback)(() => eo.coordsMap, [eo]),
-            e_ = s.useCallback(() => el(), [el]);
-        (0, A.A)({ ref: Q, key: "container", onUpdate: e_, resizeObserver: d, listenerMap: a }),
+            ec = (0, g.A)(J),
+            ed = (0, s.useCallback)(() => el.itemGrid, [el]),
+            e_ = (0, s.useCallback)(() => el.coordsMap, [el]),
+            eh = s.useCallback(() => eu(), [eu]);
+        (0, A.A)({ ref: J, key: "container", onUpdate: eh, resizeObserver: d, listenerMap: a }),
             (0, s.useImperativeHandle)(
                 l,
                 () => ({
-                    getScrollerNode: () => Q.current,
-                    getItemGrid: ec,
-                    getCoordsMap: ed,
-                    getScrollerState: ee,
-                    ...(0, I.A)(Q, ee, eu),
+                    getScrollerNode: () => J.current,
+                    getItemGrid: ed,
+                    getCoordsMap: e_,
+                    getScrollerState: et,
+                    ...(0, I.A)(J, et, ec),
                 }),
-                [Q, ee, ec, eu, ed],
+                [J, et, ed, ec, e_],
             );
-        let eh = (0, s.useCallback)(
+        let ef = (0, s.useCallback)(
             (e) => {
-                el(1),
-                    null == $.current ? Z(!0) : clearTimeout($.current),
-                    ($.current = setTimeout(() => {
-                        ($.current = null), Z(!1);
+                eu(1),
+                    null == z.current ? Q(!0) : clearTimeout(z.current),
+                    (z.current = setTimeout(() => {
+                        (z.current = null), Q(!1);
                     }, 200)),
                     null != h && h(e);
             },
-            [h, el],
+            [h, eu],
         );
         return (
             s.useLayoutEffect(() => {
-                2 !== J.current.dirty && (J.current.dirty = 2);
-            }, [es, J]),
+                2 !== ee.current.dirty && (ee.current.dirty = 2);
+            }, [ea, ee]),
             (0, r.jsxs)("div", {
-                ref: Q,
-                onScroll: eh,
-                className: o()(B, { [e]: !0, [t]: V, [y.qw]: X }),
+                ref: J,
+                onScroll: ef,
+                className: o()(B, { [e]: !0, [t]: V, [y.qw]: Z }),
                 style: (0, T.Ay)(H),
-                ...K,
+                ...$,
                 children: [
-                    Y?.(es) ?? null,
-                    (0, s.useMemo)(
-                        () =>
-                            (0, r.jsx)(S.xp, {
-                                containerRef: z,
-                                children: (0, r.jsx)("div", {
-                                    style: { height: es },
-                                    className: y.Qs,
-                                    ref: z,
-                                    children: Object.keys(er).map((e) => {
-                                        let t = parseInt(e.replace(/^__section__/, ""), 10),
-                                            n = en[e],
-                                            i = er[e],
-                                            s = en[_(t)],
-                                            a = M?.(t);
-                                        return null != n && null != i
-                                            ? (0, r.jsxs)(
-                                                  "div",
-                                                  {
-                                                      ...a,
-                                                      style: { ...n, ...(a?.style ?? {}) },
-                                                      children: [
-                                                          null != L && null != s && L(t, s, e),
-                                                          i.map((e) => {
-                                                              let [t, n, i] = e,
-                                                                  r = en[t];
-                                                              return null != r ? w(n, i, r, t, ei) : null;
-                                                          }),
-                                                      ],
-                                                  },
-                                                  e,
-                                              )
-                                            : null;
-                                    }),
-                                }),
+                    Y?.(ea) ?? null,
+                    (0, s.useMemo)(() => {
+                        let e = (0, r.jsx)("div", {
+                            style: { height: ea },
+                            className: y.Qs,
+                            ref: q,
+                            children: Object.keys(es).map((e) => {
+                                let t = parseInt(e.replace(/^__section__/, ""), 10),
+                                    n = ei[e],
+                                    i = es[e],
+                                    s = ei[_(t)],
+                                    a = M?.(t);
+                                return null != n && null != i
+                                    ? (0, r.jsxs)(
+                                          "div",
+                                          {
+                                              ...a,
+                                              style: { ...n, ...(a?.style ?? {}) },
+                                              children: [
+                                                  null != L && null != s && L(t, s, e),
+                                                  i.map((e) => {
+                                                      let [t, n, i] = e,
+                                                          r = ei[t];
+                                                      return null != r ? w(n, i, r, t, er) : null;
+                                                  }),
+                                              ],
+                                          },
+                                          e,
+                                      )
+                                    : null;
                             }),
-                        [er, w, L, en, es, M, ei],
-                    ),
+                        });
+                        return K ? e : (0, r.jsx)(S.xp, { containerRef: q, children: e });
+                    }, [es, w, L, ei, ea, M, er, K]),
                 ],
             })
         );
