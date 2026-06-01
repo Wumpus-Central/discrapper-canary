@@ -1,0 +1,33 @@
+"use strict";
+n.d(t, { A: () => o }), n(321073);
+var i = n(22098),
+    r = n(820066);
+let s = new Set(["line", "blockQuote"]),
+    a = [];
+function o(e, t, n) {
+    if (r.VW.areStylesDisabled(e)) return [];
+    let [o, l] = t;
+    if (1 !== l.length || !r.AS.isInTypes(o, s)) return a;
+    let { entries: u, serializedChildren: c } = r.cv.markdown(o, n, !0),
+        d = [];
+    for (let t = 0; t < u.length; t++) {
+        let n = u[t];
+        if (n.attributes.length > 0 && n.text.length > 0) {
+            let s = u[t - 1],
+                a = u[t + 1],
+                o = { anchor: (0, i.Q)(e, l, c, n.start), focus: (0, i.Q)(e, l, c, n.start + n.text.length) },
+                _ = r.VW.nodes(e, { at: o, mode: "lowest", voids: !1 }),
+                h = {};
+            for (let e of n.attributes)
+                if (((h[e] = !0), "syntaxBefore" === e && null != a)) for (let e of a.attributes) h[`before_${e}`] = !0;
+                else if ("syntaxAfter" === e && null != s) for (let e of s.attributes) h[`after_${e}`] = !0;
+            for (let [t, n] of _) {
+                let t = { anchor: r.VW.start(e, n), focus: r.VW.end(e, n) };
+                r.Kh.isBefore(t.anchor, o.anchor) && (t.anchor = o.anchor),
+                    r.Kh.isAfter(t.focus, o.focus) && (t.focus = o.focus),
+                    d.push({ ...h, ...t });
+            }
+        }
+    }
+    return d;
+}

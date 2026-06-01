@@ -88,7 +88,7 @@ let c = {
         showSlowmodeIndicator: !0,
         showTypingIndicator: !0,
     },
-    f = {
+    h = {
         analyticsName: "edit",
         drafts: { type: a.C.ChannelMessage },
         emojis: { button: !0 },
@@ -100,7 +100,7 @@ let c = {
         autocomplete: { alwaysUseLayer: !0, small: !0 },
         showCharacterCount: !0,
     },
-    h = {
+    f = {
         analyticsName: "forum",
         drafts: { type: a.C.ChannelMessage },
         emojis: { button: !0 },
@@ -214,8 +214,8 @@ let c = {
             layout: 1,
         },
         SIDEBAR: _,
-        EDIT: f,
-        FORM: h,
+        EDIT: h,
+        FORM: f,
         VOICE_CHANNEL_STATUS: p,
         THREAD_CREATION: E,
         USER_PROFILE: T,
@@ -237,6 +237,12 @@ let c = {
             submit: { useDisabledStylesOnSubmit: !0, disableEnterToSubmit: !0 },
             disableAutoFocus: !0,
             showCharacterCount: !0,
+        },
+        GENERIC_RICH_TEXTAREA: {
+            analyticsName: "generic_rich_textarea",
+            drafts: { type: a.C.ChannelMessage },
+            permissions: { requireSendMessages: !1 },
+            submit: { disableEnterToSubmit: !0 },
         },
         CUSTOM_GIFT: {
             analyticsName: "custom_gift_type",

@@ -1,11 +1,11 @@
 l.r(t),
     l.d(t, {
-        nitroCollection: () => l9,
-        virtualCurrencyCollection: () => l4,
-        playgroundConfig: () => l5,
-        identityCollection: () => l7,
-        RevenuePlaygroundCollectionId: () => l3,
-        paymentsCollection: () => l8,
+        nitroCollection: () => aN,
+        virtualCurrencyCollection: () => aM,
+        playgroundConfig: () => aV,
+        identityCollection: () => aD,
+        RevenuePlaygroundCollectionId: () => a_,
+        paymentsCollection: () => ak,
     });
 var a,
     n = l(700623),
@@ -255,8 +255,8 @@ var Y = l(488428),
     z = l(20742),
     q = l(17928),
     K = l(314116),
-    J = l(990078),
-    X = l(862482),
+    X = l(990078),
+    J = l(862482),
     Q = l(364522),
     Z = l(331322),
     ee = l(691885),
@@ -384,8 +384,8 @@ let eA = {
                                         (0, s.jsx)(ef.A, {
                                             subscriptionTier: e,
                                             premiumModalAnalyticsLocation: {},
-                                            color: X.XD.PRIMARY,
-                                            look: X.pR.FILLED,
+                                            color: J.XD.PRIMARY,
+                                            look: J.pR.FILLED,
                                         }),
                                     ],
                                 }),
@@ -453,7 +453,7 @@ let eA = {
                                                     value: b,
                                                     onChange: (e) => h(e),
                                                 }),
-                                                (0, s.jsx)(J.m, {
+                                                (0, s.jsx)(X.m, {
                                                     text: "Need Promotion Code",
                                                     shouldShow: b.length < 1,
                                                     children: (0, s.jsx)(G.$, {
@@ -510,7 +510,7 @@ let eA = {
                                         }),
                                     ],
                                 }),
-                                (0, s.jsx)(J.m, {
+                                (0, s.jsx)(X.m, {
                                     text: "Already subscribed",
                                     shouldShow: g,
                                     children: (0, s.jsx)(G.$, {
@@ -995,8 +995,8 @@ var eB = l(27192),
     ez = l(994500),
     eq = l(287809),
     eK = l(403362),
-    eJ = l(784018),
-    eX = l(94269);
+    eX = l(784018),
+    eJ = l(94269);
 let eQ = {
     name: "Clip Embed Overlay",
     id: "clip-embed-overlay",
@@ -1018,10 +1018,10 @@ let eQ = {
             p = u.useCallback(() => (0, s.jsx)(eF.A, { title: a, participantIds: c }), [a, c]),
             m = "landscape" === l ? 640 : 360;
         return (0, s.jsxs)("div", {
-            className: eX.iE,
+            className: eJ.iE,
             children: [
                 (0, s.jsx)("div", {
-                    className: eX.j,
+                    className: eJ.j,
                     style: { width: m, height: "landscape" === l ? 360 : 640 },
                     children: (0, s.jsx)(eY.default, {
                         src: t,
@@ -1033,12 +1033,12 @@ let eQ = {
                     }),
                 }),
                 (0, s.jsxs)(eG.Z, {
-                    className: eX.nd,
+                    className: eJ.nd,
                     type: eG.s.PRIMARY,
                     style: { width: m },
                     children: [
                         (0, s.jsxs)("div", {
-                            className: eX.Iv,
+                            className: eJ.Iv,
                             children: [
                                 (0, s.jsx)(y.E, {
                                     variant: "text-sm/semibold",
@@ -1055,7 +1055,7 @@ let eQ = {
                         (0, s.jsx)(et.c, {}),
                         0 === i.length
                             ? (0, s.jsx)("div", {
-                                  className: eX.p$,
+                                  className: eJ.p$,
                                   children: (0, s.jsx)(y.E, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
@@ -1063,14 +1063,14 @@ let eQ = {
                                   }),
                               })
                             : (0, s.jsx)("div", {
-                                  className: eX.p_,
+                                  className: eJ.p_,
                                   onScroll: (e) => e.stopPropagation(),
                                   children: i.map((e) => {
                                       let t = r.has(e.id);
                                       return (0, s.jsxs)(
                                           eH.D,
                                           {
-                                              className: eX.nM,
+                                              className: eJ.nM,
                                               role: "checkbox",
                                               "aria-checked": t,
                                               onClick: () => d(e.id, !t),
@@ -1098,7 +1098,7 @@ let eQ = {
         });
     },
     controls: {
-        videoUrl: { label: "Video URL", type: "text", defaultValue: eJ.kz },
+        videoUrl: { label: "Video URL", type: "text", defaultValue: eX.kz },
         orientation: {
             label: "Orientation",
             type: "select",
@@ -1128,7 +1128,7 @@ let e2 = {
             { label: "Bar", value: "bar" },
         ],
     },
-    e3 = {
+    e6 = {
         title: "Editable Tile Button",
         stories: [
             {
@@ -1261,11 +1261,11 @@ let e2 = {
             },
         ],
     };
-var e6 = l(687021),
+var e3 = l(687021),
     e8 = l(487233),
-    e4 = l(120386),
-    e9 = l(473219);
-let e7 = { value: "", label: "No Guild (main profile)" };
+    e7 = l(120386),
+    e4 = l(473219);
+let e9 = { value: "", label: "No Guild (main profile)" };
 var e5 = l(99696),
     te = l(534514),
     tt = l(599147),
@@ -2066,8 +2066,8 @@ var tY = l(636537),
     tz = l(192087),
     tq = l(295405),
     tK = l(71532);
-let tJ = eN();
-async function tX(e) {
+let tX = eN();
+async function tJ(e) {
     return (await tY.Bo.post({ url: N.Rsh.ORDER_SIGN(e), rejectWithError: !0 })).body;
 }
 async function tQ(e) {
@@ -2085,7 +2085,7 @@ function t0() {
         [l, a] = u.useState(!1),
         [n, i] = u.useState(null),
         [r, o] = u.useState(null),
-        [d, c] = u.useState(tJ.defaultValue),
+        [d, c] = u.useState(tX.defaultValue),
         [p, m] = u.useState(null),
         b = (0, q.bG)([tq.A], () => tq.A.paymentSources),
         h = (0, q.bG)([tq.A], () => tq.A.hasFetchedPaymentSources),
@@ -2161,7 +2161,7 @@ Payment source changed.`);
             if (null == r || "" === r) return void i("No order ID available. Please create an order first.");
             a(!0);
             try {
-                let e = await tX(r);
+                let e = await tJ(r);
                 if (null == e.errors) {
                     i(`Order signed successfully! Order ID: ${r}`), o(null);
                     return;
@@ -2313,7 +2313,7 @@ Error: ${t}`);
                                     selectionMode: "single",
                                     value: d,
                                     onSelectionChange: c,
-                                    options: tJ.options,
+                                    options: tX.options,
                                     formatOption: (e) => {
                                         let { value: t, label: l } = e;
                                         return { id: t, value: t, label: l };
@@ -2393,8 +2393,8 @@ Error: ${t}`);
 }
 var t1 = l(405139),
     t2 = l(19311),
-    t3 = l(869177);
-function t6(e) {
+    t6 = l(869177);
+function t3(e) {
     let t = u.useRef(null),
         l = {
             paymentLabel: w.intl.string(w.t.ZURqX0),
@@ -2406,7 +2406,7 @@ function t6(e) {
             loadingComponent: (0, s.jsx)(en.y, { style: { marginTop: 16 }, type: en.t.PULSING_ELLIPSIS }),
         };
     return e.renderStepBody
-        ? (0, s.jsx)(t3.V, { ...l, ...e })
+        ? (0, s.jsx)(t6.V, { ...l, ...e })
         : "applePay" === e.paymentRequestWallet
           ? (0, s.jsx)(t1.Mv, { ...l, ...e })
           : (0, s.jsx)(t1.dP, { ...l, ...e });
@@ -2423,7 +2423,7 @@ function t8(e) {
             onPrimary: () => void (null != l.current && l.current.show()),
             onBack: () => {},
         }),
-        children: (0, s.jsx)(t6, {
+        children: (0, s.jsx)(t3, {
             renderConnectorView: !0,
             renderStepBody: !0,
             paymentRequestWallet: t,
@@ -2432,16 +2432,16 @@ function t8(e) {
         }),
     });
 }
-var t4 = l(150934),
-    t9 = l(36167),
-    t7 = l(26279);
+var t7 = l(150934),
+    t4 = l(36167),
+    t9 = l(26279);
 let t5 = [
         { id: "tier_2", value: eS.gD.PREMIUM_MONTH_TIER_2, label: "Nitro (Monthly)" },
         { id: "tier_1", value: eS.gD.PREMIUM_MONTH_TIER_1, label: "Nitro Classic (Monthly)" },
         { id: "tier_0", value: eS.gD.PREMIUM_MONTH_TIER_0, label: "Nitro Basic (Monthly)" },
     ],
     le = [
-        { id: "meta_quest", value: t7.uH.META_QUEST_WEB_REDIRECT_CHECKOUT, label: "Meta Quest Web Redirect Checkout" },
+        { id: "meta_quest", value: t9.uH.META_QUEST_WEB_REDIRECT_CHECKOUT, label: "Meta Quest Web Redirect Checkout" },
     ];
 function lt() {
     let [e, t] = u.useState(null);
@@ -2464,7 +2464,7 @@ function ll(e) {
         { error: r, handleSuccess: o, handleFailure: c } = lt(),
         p = u.useCallback(() => {
             let e = (0, d.A)();
-            (0, t9.OD)({ planId: l, isGift: n, loadId: e, flowType: t }, o, c);
+            (0, t4.OD)({ planId: l, isGift: n, loadId: e, flowType: t }, o, c);
         }, [l, n, t, o, c]);
     return (0, s.jsxs)(tk.Hq, {
         label: "Nitro Checkout",
@@ -2508,7 +2508,7 @@ function la(e) {
             if (null == t) return;
             let e = (0, d.A)(),
                 l = N.BVt.BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(t, e);
-            (0, t9.xq)(l, a, n);
+            (0, t4.xq)(l, a, n);
         }, [t, a, n]);
     return (0, s.jsxs)(tk.Hq, {
         label: "Manage Subscription",
@@ -2533,7 +2533,7 @@ function ln(e) {
             if (0 === l.length || null == t) return;
             let e = (0, d.A)(),
                 a = N.BVt.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(l, void 0, e, t);
-            (0, t9.xq)(a, i, r);
+            (0, t4.xq)(a, i, r);
         }, [l, i, r, t]);
     return (0, s.jsxs)(tk.Hq, {
         label: "Guild Boosts",
@@ -2720,7 +2720,7 @@ let lb = {
             id: "standalone-redirect",
             component: function () {
                 let [e, t] = u.useState(!1),
-                    [l, a] = u.useState(t7.uH.META_QUEST_WEB_REDIRECT_CHECKOUT),
+                    [l, a] = u.useState(t9.uH.META_QUEST_WEB_REDIRECT_CHECKOUT),
                     n = u.useCallback((e) => {
                         t(e);
                     }, []),
@@ -2734,7 +2734,7 @@ let lb = {
                             gap: 8,
                             align: "end",
                             children: [
-                                (0, s.jsx)(t4.S, { label: "Enable Flow Type", checked: e, onChange: n }),
+                                (0, s.jsx)(t7.S, { label: "Enable Flow Type", checked: e, onChange: n }),
                                 (0, s.jsx)(ee.l, {
                                     label: "Flow Type",
                                     value: l,
@@ -2784,11 +2784,11 @@ let lb = {
                             (0, s.jsx)(te.D, { variant: "heading-xl/semibold", children: "Payment Request" }),
                             (0, s.jsx)(tk.Hq, {
                                 label: "Default View",
-                                children: (0, s.jsx)(t6, { paymentRequestWallet: t }),
+                                children: (0, s.jsx)(t3, { paymentRequestWallet: t }),
                             }),
                             (0, s.jsx)(tk.Hq, {
                                 label: "Connector View",
-                                children: (0, s.jsx)(t6, { paymentRequestWallet: t, renderConnectorView: !0 }),
+                                children: (0, s.jsx)(t3, { paymentRequestWallet: t, renderConnectorView: !0 }),
                             }),
                             (0, s.jsx)(tk.Hq, {
                                 label: "Add Payment Step Body Connector View",
@@ -3117,19 +3117,399 @@ let l_ = new lg.A("PaymentElement.web.stories"),
         component: (e) => (0, s.jsx)(lM, { ...e, storyType: "stripe-address-element" }),
         controls: { ...lN },
     };
+var lO = l(154283),
+    lw = l(670482),
+    lU = l(15626),
+    lB = l(187322),
+    lG = l(452027),
+    lH = l(823607),
+    l$ = l(511274),
+    lW = l(43990),
+    lF = l(922016),
+    lY = l(355622),
+    lz = l(408018),
+    lq = l(186306),
+    lK = l(655098),
+    lX = l(323350),
+    lJ = l(135261),
+    lQ = l(35277),
+    lZ = l(820066),
+    l0 = l(702483),
+    l1 = l(490682),
+    l2 = l(683167),
+    l6 = l(375499),
+    l3 = l(267889),
+    l8 = l(267102),
+    l7 = l(363195),
+    l4 = l(885386),
+    l9 = l(95701),
+    l5 = l(551483),
+    ae = l(307731),
+    at = l(898525),
+    al = l(457845);
+let aa = (0, l9.createChannelRecord)({ id: "1", type: N.rbe.DM });
+function an(e) {
+    let { editor: t, pickerIntention: l, containerClassName: a } = e,
+        n = (0, q.bG)([l7.A], () => l7.A.theme),
+        i = u.useRef(null),
+        r = u.useCallback(
+            (e, l) => {
+                let { emoji: a, willClose: n } = e;
+                null != a &&
+                    (!(function (e, t) {
+                        let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                            a = t.animated ? "a" : "",
+                            n = t.originalName ?? t.name ?? "",
+                            i = `:${t.name}:`,
+                            r = null != t.id ? `<${a}:${n.replace(/:/g, "")}:${t.id}>` : null,
+                            o = lZ.VW.areStylesDisabled(e) || null == r ? i : r;
+                        lq.o.withSingleEntry(e, () => {
+                            lQ.b.insertText(e, o + (l ? " " : ""));
+                        });
+                    })(t, a, n),
+                    lZ.VW.focus(t)),
+                    n && l();
+            },
+            [t],
+        ),
+        o = u.useCallback(
+            (e) => {
+                let { closePopout: t } = e;
+                return (0, s.jsx)(lW.N, {
+                    theme: n,
+                    children: (e) =>
+                        (0, s.jsx)("div", {
+                            className: e,
+                            children: (0, s.jsx)(l3.A, {
+                                persistSearch: !0,
+                                closePopout: t,
+                                onSelectEmoji: (e) => {
+                                    let { emoji: l, willClose: a } = e;
+                                    return r({ emoji: l, willClose: a }, t);
+                                },
+                                pickerIntention: l,
+                            }),
+                        }),
+                });
+            },
+            [r, l, n],
+        );
+    return (0, s.jsx)("div", {
+        className: lx()(at.S0, a),
+        onMouseDown: (e) => e.preventDefault(),
+        children: (0, s.jsx)(lF.Y, {
+            targetElementRef: i,
+            renderPopout: o,
+            position: "top",
+            animation: lF.Y.Animation.NONE,
+            align: "right",
+            children: (e, t) => {
+                let { isShown: l } = t;
+                return (0, s.jsx)(l6.A, { ...e, ref: i, active: l, tabIndex: 0, className: at.Z8 });
+            },
+        }),
+    });
+}
+function ai(e) {
+    let { editor: t, pickerIntention: l } = e,
+        [, a] = u.useState(t.selection);
+    return (
+        u.useEffect(() => {
+            let e = () => a(t.selection);
+            return (
+                t.events.addListener("onChange", e),
+                () => {
+                    t.events.removeListener("onChange", e);
+                }
+            );
+        }, [t]),
+        (0, s.jsxs)("div", {
+            className: at.aL,
+            onMouseDown: (e) => e.preventDefault(),
+            children: [(0, s.jsx)(lJ.P, { slateEditor: t }), (0, s.jsx)(an, { editor: t, pickerIntention: l })],
+        })
+    );
+}
+function ar(e) {
+    let {
+            editor: t,
+            toolbarVariant: l,
+            placeholder: a,
+            readOnly: n,
+            autoFocus: i,
+            required: r,
+            rows: o,
+            pickerIntention: d,
+            onChangeValue: c,
+            onKeyDown: p,
+            onFocus: m,
+            onBlur: b,
+            ariaLabelledByProp: h,
+        } = e,
+        x = u.useContext(lU._),
+        y = x?.errorMessageId != null,
+        f = u.useRef(null),
+        v = u.useRef(null),
+        g = u.useCallback(() => t, [t]),
+        E = u.useCallback((e) => [...(0, l1.A)(t, e, void 0), ...(0, l0.A)(t, e)], [t]);
+    return (
+        u.useEffect(() => {
+            if ("floating" !== l) return;
+            let e = v.current;
+            if (null == e) return;
+            let t = (t) => {
+                t.target.contains(e) && f.current?.hide();
+            };
+            return (
+                e.ownerDocument.addEventListener("scroll", t, { capture: !0 }),
+                () => e.ownerDocument.removeEventListener("scroll", t, { capture: !0 })
+            );
+        }, [l]),
+        (0, s.jsxs)(s.Fragment, {
+            children: [
+                "floating" === l && (0, s.jsx)(lJ.A, { ref: f, getSlateEditor: g, containerRef: v }),
+                (0, s.jsx)(lB.vN, {
+                    children: (0, s.jsxs)("div", {
+                        className: lx()(at.I6, { [at.mq]: "static" === l }),
+                        "data-error": y || void 0,
+                        "data-disabled": n || void 0,
+                        children: [
+                            "static" === l && !n && (0, s.jsx)(ai, { editor: t, pickerIntention: d }),
+                            (0, s.jsx)("div", {
+                                ref: v,
+                                className: lx()(at.XG, al.yL),
+                                style: { "--custom-rich-text-area-rows": o },
+                                onMouseDown: (e) => {
+                                    e.target === e.currentTarget &&
+                                        (e.preventDefault(), lQ.b.resetSelectionToEditorEnd(t), lw.rL.focus(t));
+                                },
+                                onScroll: () => f.current?.hide(),
+                                children: (0, s.jsx)(lK.A, {
+                                    id: x?.controlId,
+                                    containerClassName: at.RZ,
+                                    className: at.EN,
+                                    editor: t,
+                                    placeholder: a,
+                                    readOnly: n,
+                                    canFocus: !n,
+                                    autoFocus: i,
+                                    decorate: E,
+                                    onChange: c,
+                                    onKeyDown: p,
+                                    onFocus: m,
+                                    onBlur: b,
+                                    "aria-labelledby": h ?? x?.labelId,
+                                    "aria-describedby": x?.describedById,
+                                    "aria-errormessage": x?.errorMessageId,
+                                    "aria-invalid": y || void 0,
+                                    "aria-required": r || void 0,
+                                }),
+                            }),
+                            "floating" === l &&
+                                !n &&
+                                (0, s.jsx)(an, { editor: t, pickerIntention: d, containerClassName: at.C7 }),
+                        ],
+                    }),
+                }),
+            ],
+        })
+    );
+}
+function ao(e) {
+    let {
+            value: t,
+            placeholder: l,
+            minLength: a,
+            maxLength: n,
+            rows: i = 3,
+            autosize: r = !0,
+            autoFocus: o = !1,
+            error: d,
+            emojiPickerIntention: c = ae.EmojiIntention.CHAT,
+            toolbarVariant: p = "floating",
+            editorRef: m,
+            onChange: b,
+            onKeyDown: h,
+            onFocus: x,
+            onBlur: y,
+            "aria-labelledby": f,
+            ...v
+        } = e,
+        g = (function (e) {
+            let t = u.useContext(l8.Ay),
+                l = l4.SI.useSetting(),
+                [a] = u.useState(() => {
+                    let a = (0, lO.ie)();
+                    return (
+                        (a.children = (0, lz.x7)(e)),
+                        (a.selection = { anchor: l5.K, focus: l5.K }),
+                        (0, l2.a)({
+                            editor: a,
+                            chatInputType: lY.oU.GENERIC_RICH_TEXTAREA,
+                            channel: aa,
+                            canUseCommands: !1,
+                            canOnlyUseTextCommands: !1,
+                            windowContext: t,
+                            previewMarkdown: l,
+                            updateState: (e, t, l) => {
+                                let { value: a, selection: n } = l;
+                                void 0 !== a && (e.children = a), null != n && (e.selection = n), e.onChange();
+                            },
+                        }),
+                        a
+                    );
+                });
+            return (
+                u.useLayoutEffect(() => {
+                    a.onChange();
+                }, [a]),
+                u.useEffect(() => {
+                    a.previewMarkdown !== l && ((a.previewMarkdown = l), a.onChange());
+                }, [a, l]),
+                a
+            );
+        })(t),
+        [E, S] = u.useState(t),
+        [C, j] = u.useState(() => g.children.length);
+    u.useImperativeHandle(
+        m,
+        () => ({
+            focus(e) {
+                lQ.b.resetSelectionToEditorEnd(g), lw.rL.toDOMNode(g, g).focus(e);
+            },
+            blur() {
+                lw.rL.toDOMNode(g, g).blur();
+            },
+        }),
+        [g],
+    );
+    let { fieldProps: T } = (0, lG.n)(v),
+        { disabled: P, required: I } = T,
+        {
+            setShouldValidate: A,
+            errorMessage: _,
+            hasError: R,
+        } = (0, l$.Y)({ validateOn: "change", error: d, value: E, minLength: a, maxLength: n }),
+        k = u.useRef(E);
+    k.current = E;
+    let M = u.useCallback(
+        (e) => {
+            let t = (0, lX.WO)(e, { mode: "raw" });
+            t !== k.current && (S(t), A(!0), b?.(t)), r && j(e.length);
+        },
+        [r, b, A],
+    );
+    u.useEffect(() => {
+        t !== k.current &&
+            ((g.children = (0, lz.x7)(t)),
+            (g.selection = { anchor: l5.K, focus: l5.K }),
+            g.onChange(),
+            S(t),
+            r && j(g.children.length));
+    }, [r, t, g]);
+    let N = r ? Math.max(i, Math.min(C, 15)) : i,
+        D = null != n ? (0, s.jsx)(lH.n, { value: E, maxLength: n }) : null;
+    return (0, s.jsx)(lG.D, {
+        ...T,
+        trailingAuxiliaryContent: D,
+        errorMessage: R ? _ : void 0,
+        children: (0, s.jsx)(ar, {
+            editor: g,
+            toolbarVariant: p,
+            placeholder: l,
+            readOnly: P,
+            autoFocus: o,
+            required: I,
+            rows: N,
+            pickerIntention: c,
+            onChangeValue: M,
+            onKeyDown: h,
+            onFocus: x,
+            onBlur: y,
+            ariaLabelledByProp: f,
+        }),
+    });
+}
+let as = {
+    title: "RichTextArea",
+    stories: [
+        {
+            name: "RichTextArea",
+            id: "rich-text-area",
+            component: function (e) {
+                let {
+                        label: t,
+                        placeholder: l,
+                        toolbarVariant: a,
+                        autosize: n,
+                        rows: i,
+                        minLength: r,
+                        maxLength: o,
+                        required: d,
+                        disabled: c,
+                        error: p,
+                        description: m,
+                        helperText: b,
+                    } = e,
+                    [h, x] = u.useState("");
+                return (0, s.jsx)("div", {
+                    style: { maxWidth: 480, padding: 24 },
+                    children: (0, s.jsx)(ao, {
+                        label: t,
+                        placeholder: l,
+                        toolbarVariant: a,
+                        autosize: n,
+                        rows: i,
+                        minLength: r,
+                        maxLength: o,
+                        required: d,
+                        disabled: c,
+                        error: p,
+                        description: m,
+                        helperText: b,
+                        value: h,
+                        onChange: x,
+                    }),
+                });
+            },
+            controls: {
+                label: { label: "Label", type: "text", defaultValue: "About Me" },
+                placeholder: { label: "Placeholder", type: "text", defaultValue: "Tell us about yourself..." },
+                toolbarVariant: {
+                    label: "Toolbar Mode",
+                    type: "select",
+                    defaultValue: "floating",
+                    options: [
+                        { label: "Floating (selection)", value: "floating" },
+                        { label: "Static (always visible)", value: "static" },
+                    ],
+                },
+                autosize: { label: "Autosize", type: "boolean", defaultValue: !0 },
+                rows: { label: "Rows (min when autosize)", type: "number", defaultValue: 3, minValue: 1 },
+                minLength: { label: "Min Length", type: "number", defaultValue: void 0 },
+                maxLength: { label: "Max Length", type: "number", defaultValue: 200 },
+                required: { label: "Required", type: "boolean", defaultValue: !1 },
+                disabled: { label: "Disabled", type: "boolean", defaultValue: !1 },
+                error: { label: "Error Message", type: "text", defaultValue: void 0 },
+                description: { label: "Description", type: "text", defaultValue: void 0 },
+                helperText: { label: "Helper Text", type: "text", defaultValue: void 0 },
+            },
+        },
+    ],
+};
 l(321073);
-var lO = l(735438),
-    lw = l(96337),
-    lU = l(997101),
-    lB = l(597770),
-    lG = l(278416),
-    lH = l(606267),
-    l$ = l(480642),
-    lW = l(944355),
-    lF = l(905220),
-    lY = l(826469),
-    lz = l(812745);
-let lq = {
+var au = l(735438),
+    ad = l(96337),
+    ac = l(997101),
+    ap = l(597770),
+    am = l(278416),
+    ab = l(606267),
+    ah = l(480642),
+    ax = l(944355),
+    ay = l(905220),
+    af = l(826469),
+    av = l(812745);
+let ag = {
         name: "Primitive: Nitro Plan Select",
         id: "unified-checkout-nitro-plan-select",
         component: (e) => {
@@ -3150,23 +3530,23 @@ let lq = {
             return (0, s.jsxs)("div", {
                 className: U.Cd,
                 children: [
-                    (0, s.jsx)(lW.q7, {
+                    (0, s.jsx)(ax.q7, {
                         selection: b,
                         onChange: h,
                         planOptions: [
                             {
                                 id: 0,
-                                title: (0, s.jsx)(lW.ec, { size: "sm", color: "text-strong", premiumType: t }),
+                                title: (0, s.jsx)(ax.ec, { size: "sm", color: "text-strong", premiumType: t }),
                                 titleDescriber: l,
                                 primaryText: a,
-                                subtext: i ? (0, s.jsx)(lW.Lo, { strikethrough: r, price: n }) : void 0,
+                                subtext: i ? (0, s.jsx)(ax.Lo, { strikethrough: r, price: n }) : void 0,
                             },
                             {
                                 id: 1,
-                                title: (0, s.jsx)(lW.ec, { size: "sm", color: "text-strong", premiumType: t }),
+                                title: (0, s.jsx)(ax.ec, { size: "sm", color: "text-strong", premiumType: t }),
                                 titleDescriber: o,
                                 primaryText: d,
-                                subtext: p ? (0, s.jsx)(lW.Lo, { strikethrough: m, price: c }) : void 0,
+                                subtext: p ? (0, s.jsx)(ax.Lo, { strikethrough: m, price: c }) : void 0,
                             },
                         ],
                     }),
@@ -3200,7 +3580,7 @@ let lq = {
             },
         },
     },
-    lK = {
+    aE = {
         name: "Primitive: Subscription Details Accordion",
         id: "unified-checkout-subscription-details",
         component: (e) => {
@@ -3255,7 +3635,7 @@ let lq = {
                     : [];
             return (0, s.jsx)("div", {
                 className: U.SG,
-                children: (0, s.jsx)(lW._D, {
+                children: (0, s.jsx)(ax._D, {
                     label: t,
                     totalLineItemLabel: "" !== l ? l : void 0,
                     totalLineItemLabelSubText: "" !== a ? a : void 0,
@@ -3321,21 +3701,21 @@ let lq = {
             discountAmount: { label: "Discount - Amount (minor units)", type: "number", defaultValue: -100 },
         },
     };
-function lJ(e) {
+function aS(e) {
     let { label: t, giftCardsEnabled: l, disabled: a, hidePersonalInformation: n } = e,
         i = (0, x.bG)([tq.A], () => Object.values(tq.A.paymentSources)),
         [r, o] = u.useState(void 0);
     u.useEffect(() => {
         (0, er.$o)();
     }, []);
-    let d = u.useMemo(() => i.map((e) => new lY.A(e, !0, [])), [i]),
+    let d = u.useMemo(() => i.map((e) => new af.A(e, !0, [])), [i]),
         {
             dropdownPaymentSources: c,
             dropdownPaymentSourceId: p,
             handleDropdownPaymentSourceChange: m,
             giftCardCheckboxProps: b,
             walletCoversSubtotal: h,
-        } = (0, lH.Y0)({
+        } = (0, ab.Y0)({
             checkoutPaymentSources: d,
             paymentSourceId: r,
             setPaymentSourceId: o,
@@ -3343,7 +3723,7 @@ function lJ(e) {
         });
     return (0, s.jsxs)("div", {
         children: [
-            (0, s.jsx)(lW.nL, {
+            (0, s.jsx)(ax.nL, {
                 label: t,
                 giftCardsEnabled: l,
                 giftCardCheckboxProps: b,
@@ -3360,14 +3740,14 @@ function lJ(e) {
         ],
     });
 }
-let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
-    lQ = lw.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
-    lZ = {
+let aC = { "nitro-wheel": r.t, gift: ap.o, orbs: i.C },
+    aj = ad.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
+    aT = {
         name: "Modal: Unified Checkout Stateless Modal",
         id: "unified-checkout-stateless-modal",
         component: function (e) {
             let { primaryButtonText: t, primaryButtonIcon: l, headerBadgeHasIcon: a, ...n } = e,
-                i = a ? lG.g : void 0;
+                i = a ? am.g : void 0;
             return (0, s.jsxs)(Z.B, {
                 gap: 16,
                 align: "center",
@@ -3382,7 +3762,7 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
                         onClick: () =>
                             (0, ei.openModal)(
                                 (e) =>
-                                    (0, s.jsx)(l$.oH, {
+                                    (0, s.jsx)(ah.oH, {
                                         ...e,
                                         ...n,
                                         title: n.title,
@@ -3390,7 +3770,7 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
                                         primaryButtonProps: {
                                             onClick: e.onClose,
                                             text: t,
-                                            icon: "none" !== l ? lX[l] : void 0,
+                                            icon: "none" !== l ? aC[l] : void 0,
                                         },
                                         onBackClick: e.onClose,
                                         children: (0, s.jsx)(Z.B, {
@@ -3421,7 +3801,7 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
                     { label: "None", value: "none" },
                 ],
             },
-            countryCode: { label: "Country Code", type: "select", defaultValue: lU.d.US, options: lQ },
+            countryCode: { label: "Country Code", type: "select", defaultValue: ac.d.US, options: aj },
             headerBadgeText: { label: "Header Pill Text", type: "text", defaultValue: "PROMO" },
             headerBadgeHasIcon: { label: "Header Badge Has Icon", type: "boolean", defaultValue: !1 },
             gradientColor: {
@@ -3438,7 +3818,7 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
             dismissable: { label: "Dismissable", type: "boolean", defaultValue: !0 },
         },
     },
-    l0 = {
+    aP = {
         purchaseButtonText: "Subscribe",
         totalDue: 999,
         renewalPrice: 1099,
@@ -3447,23 +3827,23 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
         intervalCount: 1,
         startDate: new Date(),
     },
-    l1 = {
-        [lW.I0.Subscription]: { type: lW.I0.Subscription, ...l0 },
-        [lW.I0.SubscriptionTrial]: { type: lW.I0.SubscriptionTrial, ...l0 },
-        [lW.I0.OrbsRedemption]: { type: lW.I0.OrbsRedemption, purchaseButtonText: "Redeem" },
-        [lW.I0.Shop]: { type: lW.I0.Shop, purchaseButtonText: "Purchase" },
-        [lW.I0.GiftNitro]: { type: lW.I0.GiftNitro, purchaseButtonText: "Buy Gift" },
-        [lW.I0.GiftShop]: { type: lW.I0.GiftShop, purchaseButtonText: "Buy Gift" },
-        [lW.I0.GiftGameShop]: {
-            type: lW.I0.GiftGameShop,
+    aI = {
+        [ax.I0.Subscription]: { type: ax.I0.Subscription, ...aP },
+        [ax.I0.SubscriptionTrial]: { type: ax.I0.SubscriptionTrial, ...aP },
+        [ax.I0.OrbsRedemption]: { type: ax.I0.OrbsRedemption, purchaseButtonText: "Redeem" },
+        [ax.I0.Shop]: { type: ax.I0.Shop, purchaseButtonText: "Purchase" },
+        [ax.I0.GiftNitro]: { type: ax.I0.GiftNitro, purchaseButtonText: "Buy Gift" },
+        [ax.I0.GiftShop]: { type: ax.I0.GiftShop, purchaseButtonText: "Buy Gift" },
+        [ax.I0.GiftGameShop]: {
+            type: ax.I0.GiftGameShop,
             purchaseButtonText: "Buy Gift",
             applicationName: "Marvel Rivals",
         },
     },
-    l2 = {
+    aA = {
         title: "Unified Checkout",
         stories: [
-            lZ,
+            aT,
             {
                 name: "Primitive: Order Summary Accordion",
                 id: "unified-checkout-order-summary",
@@ -3479,7 +3859,7 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
                         l && a && n.push({ id: 3, label: "Discount Applied", amount: -100 }),
                         (0, s.jsx)("div", {
                             className: U.SG,
-                            children: (0, s.jsx)(lW.Vm, { label: t, lineItems: n, currency: N.Yri.USD }),
+                            children: (0, s.jsx)(ax.Vm, { label: t, lineItems: n, currency: N.Yri.USD }),
                         })
                     );
                 },
@@ -3489,8 +3869,8 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
                     hasLineItems: { label: "Has Line Items", type: "boolean", defaultValue: !0 },
                 },
             },
-            lq,
-            lK,
+            ag,
+            aE,
             {
                 name: "Primitive: Purchase Item",
                 id: "unified-checkout-purchase-item",
@@ -3509,7 +3889,7 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
                     function p(e, p) {
                         let m = eq.default.getCurrentUser(),
                             b = eg.A.getGuildsArray()[0];
-                        return (0, s.jsx)(lW.f7, {
+                        return (0, s.jsx)(ax.f7, {
                             header: l ? t : void 0,
                             headerIconSrc: "https://cdn.discordapp.com/embed/avatars/1.png",
                             label: `${a} ${p}`,
@@ -3530,11 +3910,11 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
                     return (0, s.jsxs)("div", {
                         className: U.SG,
                         children: [
-                            p(lW.JW, "Nitro"),
-                            p(lW.DH, "Nitro Basic"),
-                            p(lW.a6, "Boost"),
-                            p(lW.jw, "App"),
-                            p(lW.oo, "Nitro Credit"),
+                            p(ax.JW, "Nitro"),
+                            p(ax.DH, "Nitro Basic"),
+                            p(ax.a6, "Boost"),
+                            p(ax.jw, "App"),
+                            p(ax.oo, "Nitro Credit"),
                         ],
                     });
                 },
@@ -3565,19 +3945,19 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
                 component: (e) => {
                     let { disabled: t, error: l, errorMessage: a } = e,
                         n = [
-                            { id: "visa-1234", label: "Visa ending in 1234", icon: lz.Be.VISA },
-                            { id: "mastercard-5678", label: "Mastercard ending in 5678", icon: lz.Be.MASTERCARD },
-                            { id: "paypal", label: "user@example.com", icon: lz.Be.PAYPAL },
-                            { id: "amex-9012", label: "Amex ending in 9012", icon: lz.Be.AMEX },
+                            { id: "visa-1234", label: "Visa ending in 1234", icon: av.Be.VISA },
+                            { id: "mastercard-5678", label: "Mastercard ending in 5678", icon: av.Be.MASTERCARD },
+                            { id: "paypal", label: "user@example.com", icon: av.Be.PAYPAL },
+                            { id: "amex-9012", label: "Amex ending in 9012", icon: av.Be.AMEX },
                         ],
                         [i, r] = u.useState(n[0].id);
                     return (0, s.jsxs)("div", {
                         children: [
-                            (0, s.jsx)(lW.v7, {
+                            (0, s.jsx)(ax.v7, {
                                 value: i,
                                 options: n,
                                 onChange: r,
-                                onNew: lO.noop,
+                                onNew: au.noop,
                                 disabled: t,
                                 error: l ? a : void 0,
                             }),
@@ -3604,7 +3984,7 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
                 component: (e) =>
                     (0, s.jsx)(eh.mz, {
                         stepConfigs: [],
-                        children: (0, s.jsx)(lF.P, { children: (0, s.jsx)(lJ, { ...e }) }),
+                        children: (0, s.jsx)(ay.P, { children: (0, s.jsx)(aS, { ...e }) }),
                     }),
                 controls: {
                     label: { label: "Label", type: "text", defaultValue: "Payment Method" },
@@ -3619,8 +3999,8 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
                 component: function (e) {
                     let { type: t, immediateDelivery: l, paysafecard: a } = e,
                         [n, i] = u.useState(!1);
-                    return (0, s.jsx)(lW._P, {
-                        variant: l1[t],
+                    return (0, s.jsx)(ax._P, {
+                        variant: aI[t],
                         immediateDelivery: l ? { value: n, onChange: i } : void 0,
                         paymentSourceType: a ? N.hes.PAYSAFE_CARD : N.hes.CARD,
                     });
@@ -3629,15 +4009,15 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
                     type: {
                         label: "Type",
                         type: "select",
-                        defaultValue: lW.I0.Subscription,
+                        defaultValue: ax.I0.Subscription,
                         options: [
-                            { label: "Subscription", value: lW.I0.Subscription },
-                            { label: "Subscription Trial", value: lW.I0.SubscriptionTrial },
-                            { label: "Orbs Redemption", value: lW.I0.OrbsRedemption },
-                            { label: "Shop", value: lW.I0.Shop },
-                            { label: "Nitro Gift", value: lW.I0.GiftNitro },
-                            { label: "Shop Gift", value: lW.I0.GiftShop },
-                            { label: "Game Shop Gift", value: lW.I0.GiftGameShop },
+                            { label: "Subscription", value: ax.I0.Subscription },
+                            { label: "Subscription Trial", value: ax.I0.SubscriptionTrial },
+                            { label: "Orbs Redemption", value: ax.I0.OrbsRedemption },
+                            { label: "Shop", value: ax.I0.Shop },
+                            { label: "Nitro Gift", value: ax.I0.GiftNitro },
+                            { label: "Shop Gift", value: ax.I0.GiftShop },
+                            { label: "Game Shop Gift", value: ax.I0.GiftGameShop },
                         ],
                     },
                     immediateDelivery: { label: "Immediate Delivery", type: "boolean", defaultValue: !1 },
@@ -3651,10 +4031,10 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
                     return (0, s.jsxs)("div", {
                         children: [
                             (0, s.jsx)(y.E, { variant: "text-sm/normal", children: "Stateless Component:" }),
-                            (0, s.jsx)(lW.y, { onClick: N.tEg }),
+                            (0, s.jsx)(ax.y, { onClick: N.tEg }),
                             (0, s.jsx)("br", {}),
                             (0, s.jsx)(y.E, { variant: "text-sm/normal", children: "Link with Modal:" }),
-                            (0, s.jsx)(lW.Z4, { onComplete: N.tEg }),
+                            (0, s.jsx)(ax.Z4, { onComplete: N.tEg }),
                         ],
                     });
                 },
@@ -3665,8 +4045,8 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
                 component: function () {
                     let [e, t] = u.useState("yearly");
                     return (0, s.jsx)("div", {
-                        children: (0, s.jsx)(lW.me, {
-                            headingComponent: (0, s.jsx)(lW.ec, {
+                        children: (0, s.jsx)(ax.me, {
+                            headingComponent: (0, s.jsx)(ax.ec, {
                                 size: "sm",
                                 color: "text-strong",
                                 premiumType: eS.PremiumTypes.TIER_2,
@@ -3686,10 +4066,10 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
                 id: "checkout-store-country-row",
                 component: (e) => {
                     let { storeCountry: t } = e;
-                    return (0, s.jsx)(lW.s7, { storeCountry: t });
+                    return (0, s.jsx)(ax.s7, { storeCountry: t });
                 },
                 controls: {
-                    storeCountry: { label: "Store Country", type: "select", defaultValue: lU.d.US, options: lQ },
+                    storeCountry: { label: "Store Country", type: "select", defaultValue: ac.d.US, options: aj },
                 },
             },
             {
@@ -3697,7 +4077,7 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
                 id: "checkout-store-relocation-notice",
                 component: (e) => {
                     let { relocationCountry: t, relocationCurrencyCode: l, willForfeitGiftCardBalance: a } = e;
-                    return (0, s.jsx)(lW.ch, {
+                    return (0, s.jsx)(ax.ch, {
                         relocationCountry: t,
                         relocationCurrencyCode: l,
                         willForfeitGiftCardBalance: a,
@@ -3707,8 +4087,8 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
                     relocationCountry: {
                         label: "Relocation Country",
                         type: "select",
-                        defaultValue: lU.d.US,
-                        options: lQ,
+                        defaultValue: ac.d.US,
+                        options: aj,
                     },
                     relocationCurrencyCode: { label: "Relocation Currency Code", type: "text", defaultValue: "USD" },
                     willForfeitGiftCardBalance: {
@@ -3720,19 +4100,19 @@ let lX = { "nitro-wheel": r.t, gift: lB.o, orbs: i.C },
             },
         ],
     };
-var l3 =
+var a_ =
     (((a = {}).PAYMENTS = "payments"),
     (a.VIRTUAL_CURRENCY = "virtual-currency"),
     (a.NITRO = "nitro"),
     (a.IDENTITY = "identity"),
     a);
-let l6 = ["Revenue Storybook", "Revenue Playground"],
-    l8 = {
+let aR = ["Revenue Storybook", "Revenue Playground"],
+    ak = {
         id: "payments",
         name: "Payments",
         groups: [
             eA,
-            l2,
+            aA,
             {
                 title: "Gift Card",
                 stories: [
@@ -3828,10 +4208,10 @@ let l6 = ["Revenue Storybook", "Revenue Playground"],
             { title: "Checkout Review Step", stories: [ew, eU] },
             lb,
         ],
-        tags: l6,
+        tags: aR,
         IconComponent: n.d,
     },
-    l4 = {
+    aM = {
         id: "virtual-currency",
         name: "Virtual Currency",
         groups: [
@@ -3887,10 +4267,10 @@ let l6 = ["Revenue Storybook", "Revenue Playground"],
                 ],
             },
         ],
-        tags: l6,
+        tags: aR,
         IconComponent: i.C,
     },
-    l9 = {
+    aN = {
         id: "nitro",
         name: "Nitro",
         groups: [
@@ -4276,14 +4656,14 @@ let l6 = ["Revenue Storybook", "Revenue Playground"],
             },
             { title: "Clips", stories: [eQ] },
         ],
-        tags: l6,
+        tags: aR,
         IconComponent: r.t,
     },
-    l7 = {
+    aD = {
         id: "identity",
         name: "Identity",
         groups: [
-            e3,
+            e6,
             {
                 title: "Editable Tile Button Examples",
                 stories: [
@@ -4302,12 +4682,12 @@ let l6 = ["Revenue Storybook", "Revenue Playground"],
                                           alignItems: "flex-start",
                                       },
                                       children: [
-                                          (0, s.jsx)(e6.v, {
+                                          (0, s.jsx)(e3.v, {
                                               guildId: t,
                                               onChange: (e) => {
                                                   l(e?.id ?? "");
                                               },
-                                              globalOption: e7,
+                                              globalOption: e9,
                                           }),
                                           (0, s.jsx)(e8.A, { user: a, guildId: "" === t ? null : t }),
                                       ],
@@ -4330,14 +4710,14 @@ let l6 = ["Revenue Storybook", "Revenue Playground"],
                                           alignItems: "flex-start",
                                       },
                                       children: [
-                                          (0, s.jsx)(e6.v, {
+                                          (0, s.jsx)(e3.v, {
                                               guildId: t,
                                               onChange: (e) => {
                                                   l(e?.id ?? "");
                                               },
-                                              globalOption: e7,
+                                              globalOption: e9,
                                           }),
-                                          (0, s.jsx)(e4.A, { user: a, guildId: "" === t ? null : t }),
+                                          (0, s.jsx)(e7.A, { user: a, guildId: "" === t ? null : t }),
                                       ],
                                   });
                         },
@@ -4358,14 +4738,14 @@ let l6 = ["Revenue Storybook", "Revenue Playground"],
                                           alignItems: "flex-start",
                                       },
                                       children: [
-                                          (0, s.jsx)(e6.v, {
+                                          (0, s.jsx)(e3.v, {
                                               guildId: t,
                                               onChange: (e) => {
                                                   l(e?.id ?? "");
                                               },
-                                              globalOption: e7,
+                                              globalOption: e9,
                                           }),
-                                          (0, s.jsx)(e9.A, { user: a, guildId: "" === t ? null : t }),
+                                          (0, s.jsx)(e4.A, { user: a, guildId: "" === t ? null : t }),
                                       ],
                                   });
                         },
@@ -4373,8 +4753,9 @@ let l6 = ["Revenue Storybook", "Revenue Playground"],
                     },
                 ],
             },
+            as,
         ],
-        tags: l6,
+        tags: aR,
         IconComponent: o.n,
     },
-    l5 = { playgroundBaseUrl: "revenue", collections: [l8, l4, l9, l7] };
+    aV = { playgroundBaseUrl: "revenue", collections: [ak, aM, aN, aD] };
