@@ -17,7 +17,7 @@
 
 .container__1dc40 {
     align-items: center;
-    background-color: var(--background-base-lower);
+    background: var(--background-gradient-lower, var(--background-base-lower));
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-low);

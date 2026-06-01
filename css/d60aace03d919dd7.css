@@ -88,14 +88,16 @@
 
 .parentContainer__5573a:focus-within .container__5573a,
 .parentContainer__5573a:hover .container__5573a {
-    background-color: var(--background-base-low);
+    background: var(--background-gradient-low, var(--background-base-low));
     box-shadow: var(--shadow-high);
     transform: translateY(-4px)
 }
 
 .parentContainer__5573a:focus-within .container__5573a.active__5573a,
-.parentContainer__5573a:hover .container__5573a.active__5573a {
-    background-color: var(--background-surface-high)
+.parentContainer__5573a:focus-within .container__5573a.warning__5573a,
+.parentContainer__5573a:hover .container__5573a.active__5573a,
+.parentContainer__5573a:hover .container__5573a.warning__5573a {
+    background: var(--background-surface-high)
 }
 
 .parentContainer__5573a:focus-within .buttonContainer__5573a,
@@ -133,7 +135,7 @@
 }
 
 .container__5573a {
-    background-color: var(--background-base-lower);
+    background: var(--background-gradient-lower, var(--background-base-lower));
     border-color: var(--border-subtle);
     border-radius: var(--radius-lg);
     border-style: solid;
@@ -148,7 +150,7 @@
 
 .container__5573a.active__5573a,
 .container__5573a.warning__5573a {
-    background-color: var(--background-surface-high)
+    background: var(--background-surface-high)
 }
 
 .theme-dark .container__5573a.active__5573a {

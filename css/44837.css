@@ -887,7 +887,7 @@
 
 .boostContainer__823e1 {
     align-items: center;
-    background-color: var(--background-base-lower);
+    background: var(--background-gradient-lower, var(--background-base-lower));
     border-radius: var(--radius-round);
     bottom: 0;
     display: flex;
@@ -5826,14 +5826,24 @@
     cursor: pointer
 }
 
-.container_ae4343 {
+.container_ae4343,
+.guildThemeButtonGroup_ae4343 {
     display: flex;
     gap: var(--space-8)
 }
 
+.guildThemeButtonGroup_ae4343 {
+    width: 100%
+}
+
+.guildThemeButton_ae4343 {
+    flex: 1 1 0;
+    min-width: 0
+}
+
 .containerCompact__6c253 {
     align-items: center;
-    background-color: var(--background-base-lower);
+    background: var(--background-gradient-lower, var(--background-base-lower));
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-low);
@@ -6019,18 +6029,94 @@
     top: var(--space-16)
 }
 
-.modal__61aee,
-.modalContentContainer__61aee {
+.closeGuildTheme__61aee {
+    inset-inline-end: var(--space-8);
+    top: var(--space-8);
+    z-index: 2
+}
+
+.modal__61aee {
     margin: 0;
     overflow: hidden
 }
 
+.modalGuildTheme__61aee {
+    border-radius: var(--radius-lg)
+}
+
 .modalContentContainer__61aee {
-    display: flex;
     height: 600px;
-    max-width: 850px;
+    max-width: 850px
+}
+
+.modalContentContainer__61aee,
+.modalContentContainerGuildTheme__61aee {
+    display: flex;
+    margin: 0;
     min-width: 480px;
+    overflow: hidden;
     padding: 0 !important
+}
+
+.modalContentContainerGuildTheme__61aee {
+    flex-direction: column;
+    height: 454px;
+    max-width: 480px;
+    width: 480px
+}
+
+.guildThemeLayout__61aee {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.guildThemeGraphicGradient__61aee {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    padding: var(--space-24) var(--space-48) var(--space-16);
+    width: 100%
+}
+
+.guildThemeGraphicImage__61aee {
+    max-height: 162px;
+    max-width: 100%;
+    width: 288px
+}
+
+.guildThemeHeader__61aee {
+    gap: var(--space-16);
+    padding: var(--space-24) var(--space-48) 0;
+    text-align: center
+}
+
+.guildThemeHeader__61aee,
+.guildThemeTitleGroup__61aee {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.guildThemeTitleGroup__61aee {
+    gap: 2px
+}
+
+.guildThemeCostRow__61aee {
+    align-items: center;
+    display: flex;
+    gap: 2px;
+    padding-inline-end: var(--space-4)
+}
+
+.guildThemeFooter__61aee {
+    margin-top: auto;
+    padding: var(--space-32)
 }
 
 .sidebar__61aee {

@@ -23,7 +23,7 @@ function a(e, t) {
                 case r.o9.PERK: {
                     let { default: i } = await Promise.all([
                         n.e("47753"),
-                        n.e("17566"),
+                        n.e("31953"),
                         n.e("61175"),
                         n.e("44837"),
                         n.e("3930"),
@@ -31,10 +31,11 @@ function a(e, t) {
                         n.e("42749"),
                         n.e("66147"),
                         n.e("22455"),
-                        n.e("48111"),
+                        n.e("42935"),
+                        n.e("91977"),
                         n.e("69149"),
-                        n.e("8710"),
-                    ]).then(n.bind(n, 288416));
+                        n.e("77224"),
+                    ]).then(n.bind(n, 373627));
                     return (n) => (0, l.jsx)(i, { guildId: e, powerup: t, ...n });
                 }
             }

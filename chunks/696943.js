@@ -3,12 +3,12 @@ n.d(t, {
     Mr: () => ee,
     Ns: () => $,
     mn: () => X,
-    HW: () => K,
+    HW: () => z,
     K8: () => Z,
     jz: () => q,
     bo: () => Y,
     Gw: () => Q,
-    UB: () => z,
+    UB: () => K,
     lw: () => W,
 });
 var l = n(627968),
@@ -40,7 +40,7 @@ var l = n(627968),
     j = n(565553),
     M = n(168900),
     y = n(285828);
-function T(e) {
+function L(e) {
     let { powerup: t, eventTargetRef: n, className: i } = e,
         s = { eventTargetRef: n, fit: "contain", className: i };
     switch (t.skuId) {
@@ -54,7 +54,7 @@ function T(e) {
             return null;
     }
 }
-var L = n(249286),
+var T = n(249286),
     U = n(867060),
     D = n(800007),
     O = n(568065),
@@ -65,7 +65,7 @@ var L = n(249286),
     B = n(853513),
     k = n(375708),
     F = n(945915);
-function K(e) {
+function z(e) {
     let { guildId: t, powerup: n, channelRowRef: i, markAsDismissed: s } = e;
     return (0, l.jsx)(et, {
         asset: (0, l.jsx)(v.b, { className: r()(F.Sl, F.SV) }),
@@ -82,7 +82,7 @@ function K(e) {
         markAsDismissed: s,
     });
 }
-function z(e) {
+function K(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i, ...s } = e;
     return (0, l.jsx)(u.H, {
         targetElementRef: i,
@@ -108,7 +108,7 @@ function z(e) {
 function W(e) {
     let { guildId: t, powerups: n, channelRowRef: i, markAsDismissed: s } = e,
         a = (0, d.bG)([E.A], () => E.A.getGuild(t)?.name),
-        { onActivate: o, isLoading: c, error: u } = (0, L.A)(t, n[0]),
+        { onActivate: o, isLoading: c, error: u } = (0, T.A)(t, n[0]),
         h = (0, I.A)(n[0], !0);
     if (((0, U.A)(u), 0 === n.length)) return;
     let A =
@@ -146,14 +146,18 @@ function W(e) {
 }
 function Y(e) {
     let { guildId: t, powerups: n, channelRowRef: i, markAsDismissed: s } = e,
-        r = n.find((e) => e.skuId === a.FB);
+        r = n.find((e) => e.skuId === a.d0),
+        o =
+            (0, I.A)(r, !0) ??
+            "https://cdn.discordapp.com/assets/content/a43712d53d007cf7433bb7934419b46aa86e2edaa3fabe5486e92f1d8cf23a83.png",
+        d = n.find((e) => e.skuId === a.FB);
     if (null != r)
         return (0, l.jsx)(et, {
             targetElementRef: i,
-            title: k.intl.string(B.default.Ygpx4Q),
-            body: k.intl.string(B.default.mmNkUA),
+            title: r.title,
+            body: "string" == typeof r.description ? r.description : "",
             size: "video",
-            asset: "https://cdn.discordapp.com/assets/content/6ffaa21345f63322cf7ff8725e4e087b8c32968b8b7ba55822f0c369d7f0c03b.gif",
+            asset: (0, l.jsx)("img", { alt: "", src: o, className: F.Sl }),
             actions: [
                 {
                     text: k.intl.string(k.t.RzWDqY),
@@ -165,8 +169,26 @@ function Y(e) {
             ],
             markAsDismissed: s,
         });
-    let o = n.find((e) => O.m_.has(e.skuId));
-    if (null != o)
+    if (null != d)
+        return (0, l.jsx)(et, {
+            targetElementRef: i,
+            title: k.intl.string(B.default.Ygpx4Q),
+            body: k.intl.string(B.default.mmNkUA),
+            size: "video",
+            asset: "https://cdn.discordapp.com/assets/content/6ffaa21345f63322cf7ff8725e4e087b8c32968b8b7ba55822f0c369d7f0c03b.gif",
+            actions: [
+                {
+                    text: k.intl.string(k.t.RzWDqY),
+                    variant: "primary",
+                    onClick: () => {
+                        (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, d.skuId);
+                    },
+                },
+            ],
+            markAsDismissed: s,
+        });
+    let c = n.find((e) => O.m_.has(e.skuId));
+    if (null != c)
         return (0, l.jsx)(et, {
             targetElementRef: i,
             title: k.intl.string(B.default["kA2c+n"]),
@@ -181,14 +203,14 @@ function Y(e) {
                     text: k.intl.string(k.t.RzWDqY),
                     variant: "primary",
                     onClick: () => {
-                        (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, o.skuId);
+                        (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, c.skuId);
                     },
                 },
             ],
             markAsDismissed: s,
         });
-    let d = n.find((e) => O.aH.has(e.skuId));
-    if (null != d)
+    let u = n.find((e) => O.aH.has(e.skuId));
+    if (null != u)
         return (0, l.jsx)(et, {
             targetElementRef: i,
             title: k.intl.string(B.default["kA2c+n"]),
@@ -203,14 +225,14 @@ function Y(e) {
                     text: k.intl.string(k.t.RzWDqY),
                     variant: "primary",
                     onClick: () => {
-                        (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, d.skuId);
+                        (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, u.skuId);
                     },
                 },
             ],
             markAsDismissed: s,
         });
-    let c = n.find((e) => e.skuId === a.zY);
-    return null != c
+    let h = n.find((e) => e.skuId === a.zY);
+    return null != h
         ? (0, l.jsx)(et, {
               targetElementRef: i,
               title: k.intl.string(B.default.rp0Ff1),
@@ -226,7 +248,7 @@ function Y(e) {
                       text: k.intl.string(k.t.RzWDqY),
                       variant: "primary",
                       onClick: () => {
-                          (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, c.skuId);
+                          (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, h.skuId);
                       },
                   },
               ],
@@ -404,7 +426,7 @@ function Q(e) {
     return (0, l.jsx)(et, {
         asset:
             n.type === O.o9.LEVEL
-                ? (0, l.jsx)(T, { powerup: n, eventTargetRef: A, className: F.Lj })
+                ? (0, l.jsx)(L, { powerup: n, eventTargetRef: A, className: F.Lj })
                 : (0, l.jsx)("img", { alt: "", src: c, className: F.Sl }),
         title: k.intl.string(B.default.n37JhA),
         body: k.intl.formatToPlainString(h || n.type === O.o9.LEVEL ? B.default.Yr1ogl : B.default["7MZ2tu"], {
@@ -459,7 +481,7 @@ function ee(e) {
                   stateMachine: x ? "SM_Main_Int" : "SM_Auto",
               })
             : h?.type === O.o9.LEVEL
-              ? (0, l.jsx)(T, { powerup: h, eventTargetRef: C, className: F.Lj })
+              ? (0, l.jsx)(L, { powerup: h, eventTargetRef: C, className: F.Lj })
               : (0, l.jsx)("img", { alt: "", src: p, className: F.Sl }),
         title: N,
         body: b,
