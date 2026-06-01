@@ -1,16 +1,18 @@
 "use strict";
 n.d(t, {
     BC: () => o,
-    XY: () => I,
+    Qy: () => m,
+    U6: () => A,
+    XY: () => S,
     Yt: () => E,
     Z8: () => a,
     Zq: () => p,
-    _k: () => T,
+    _k: () => y,
     a0: () => l,
     iq: () => c,
-    kI: () => g,
-    oE: () => m,
-    sR: () => S,
+    kI: () => I,
+    oE: () => g,
+    sR: () => N,
     wS: () => u,
 });
 var i = n(310784),
@@ -90,10 +92,23 @@ let _ = [a.TWILIGHT, a.DENIM, a.OCEAN, a.BLURPLE, a.OBSIDIAN, a.PLUM, a.FIRE, a.
 function E(e) {
     return null != e && f.has(e) ? h[e] : null;
 }
-function m(e, t) {
+function m() {
+    return { presetId: p[0].id, customUserThemeSettings: void 0 };
+}
+function g(e, t) {
     return t === s.NJ.LIGHT ? e.lightAppearance : e.darkAppearance;
 }
-function g(e) {
+function A(e, t) {
+    let n = g(e, t),
+        i = n.colors
+            .map((e) => {
+                let { hex: t, stop: n } = e;
+                return `${t} ${n}%`;
+            })
+            .join(", ");
+    return `linear-gradient(${n.angle}deg, ${i})`;
+}
+function I(e) {
     let t = r()(e),
         n = t.get("hsl.h"),
         i = t.get("hsl.s"),
@@ -108,13 +123,13 @@ function g(e) {
             .hex(),
     ];
 }
-function A(e, t) {
+function T(e, t) {
     return Math.floor(Math.random() * (t - e + 1)) + e;
 }
-function I() {
-    let e = A(0, 359),
-        t = A(15, 45),
-        n = A(70, 80);
+function S() {
+    let e = T(0, 359),
+        t = T(15, 45),
+        n = T(70, 80);
     return {
         color: r()
             .hsl(e, 0.4, t / 100)
@@ -122,11 +137,11 @@ function I() {
         baseMix: n,
     };
 }
-function T(e, t) {
+function y(e, t) {
     return r()(e)
         .set("hsl.l", Math.max(u / 100, Math.min(c / 100, t / 100)))
         .hex();
 }
-function S(e, t) {
+function N(e, t) {
     return r()(e).set("hsl.h", t).hex();
 }

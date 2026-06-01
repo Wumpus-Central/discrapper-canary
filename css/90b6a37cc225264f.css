@@ -1,3 +1,220 @@
+.nuxContainer_a2943b {
+    align-items: center;
+    aspect-ratio: 16/9;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%
+}
+
+.previewArt_a2943b {
+    aspect-ratio: 256/163;
+    background: var(--background-surface-high);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: relative;
+    transition: background-image .4s cubic-bezier(.4, 0, .2, 1);
+    width: 256px
+}
+
+.previewArtThemed_a2943b {
+    background-position: 50%;
+    background-size: cover
+}
+
+.nuxPreviewArt_a2943b {
+    width: min(256px, 100%)
+}
+
+.previewOverlayImage_a2943b {
+    display: block;
+    height: 154.514px;
+    inset-block-start: 7.314px;
+    inset-inline-start: 7.461px;
+    max-width: none;
+    pointer-events: none;
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 259.862px
+}
+
+.container_a244c3 {
+    background: var(--background-base-lower)
+}
+
+.row__93d4a {
+    border-bottom: 1px solid var(--border-subtle);
+    display: grid;
+    gap: 8px;
+    grid-column: 1/span 3;
+    grid-template-columns: 60px auto 200px 24px;
+    min-height: 60px;
+    padding: 4px 0;
+    position: relative
+}
+
+.row__93d4a:hover .soundEditContainer__93d4a {
+    opacity: 1
+}
+
+.row__93d4a:hover .soundPreviewIcon__93d4a {
+    opacity: 1
+}
+
+.row__93d4a.active__93d4a .soundPreviewIcon__93d4a {
+    opacity: 1
+}
+
+.tableTitle__93d4a {
+    align-items: center;
+    display: flex;
+    margin-bottom: 24px
+}
+
+.boostingIconWrapper__93d4a {
+    cursor: pointer;
+    height: 24px;
+    margin-inline-end: 2px
+}
+
+.soundName__93d4a {
+    align-items: center;
+    cursor: pointer;
+    display: flex
+}
+
+.requirements__93d4a {
+    list-style: disc inside;
+    padding: 1rem 0
+}
+
+.helpText__93d4a {
+    margin: 8px 0 16px
+}
+
+.divider__93d4a {
+    margin: 24px 0
+}
+
+.empty__93d4a {
+    margin-top: 40px
+}
+
+.emptyText__93d4a {
+    margin-bottom: 40px
+}
+
+.buttons__93d4a {
+    display: flex;
+    gap: 20px
+}
+
+.soundTable__93d4a {
+    display: grid;
+    grid-template-columns: 60px auto 200px 24px
+}
+
+.tableHeaders__93d4a {
+    display: grid;
+    gap: 8px;
+    grid-column: 1/span 3;
+    grid-template-columns: 60px auto 200px 24px
+}
+
+.tableHeader__93d4a {
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase
+}
+
+.soundEditContainer__93d4a {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity .2s ease
+}
+
+.soundEdit__93d4a {
+    background-color: var(--background-base-low);
+    border-radius: 50%;
+    box-shadow: var(--elevation-low), var(--elevation-stroke);
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    transition: color .2s ease
+}
+
+.soundEdit__93d4a:not(:last-child) {
+    margin-bottom: 4px
+}
+
+.soundUpdate__93d4a {
+    cursor: pointer;
+    color: var(--interactive-text-default)
+}
+
+.soundUpdate__93d4a:focus,
+.soundUpdate__93d4a:hover {
+    color: var(--interactive-text-active)
+}
+
+.soundRemove__93d4a {
+    cursor: pointer;
+    color: var(--icon-feedback-critical)
+}
+
+.soundEditIcon__93d4a,
+.soundPreviewIcon__93d4a {
+    height: 16px;
+    width: 16px
+}
+
+.soundPreviewIcon__93d4a {
+    margin-inline-start: 8px;
+    opacity: 0;
+    transition: opacity .2s ease
+}
+
+.emoji__93d4a {
+    align-self: center;
+    color: var(--icon-muted)
+}
+
+.uploaderAvatar__93d4a {
+    flex-shrink: 0
+}
+
+.uploader__93d4a {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: 4px;
+    justify-content: flex-start
+}
+
+.enable-forced-colors .soundEdit__93d4a {
+    background-color: ButtonFace;
+    border: 1px solid ButtonFace;
+    color: ButtonText
+}
+
+.enable-forced-colors .soundEdit__93d4a:focus,
+.enable-forced-colors .soundEdit__93d4a:hover {
+    border-color: ButtonText
+}
+
+.browserUnsupportedDialog__93d4a {
+    background: var(--background-surface-high);
+    border-radius: var(--radius-xs);
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    color: var(--text-default);
+    font-weight: var(--font-weight-medium);
+    max-width: 288px;
+    overflow: hidden;
+    padding: 16px
+}
+
 .wrapper__83b1d {
     align-items: flex-start;
     background-color: var(--background-base-lower);

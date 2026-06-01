@@ -29,8 +29,8 @@ function p() {
     return (function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "useActiveGuildThemeForGuildId",
             n = (0, a.OS)(t),
-            u = (0, r.bG)([d.A], () => {
-                if (null != e && n && d.A.isActive && d.A.guildId === e) return d.A.draftEnabled ? d.A.draft : null;
+            u = (0, r.bG)([d.Ay], () => {
+                if (null != e && n && d.Ay.isActive && d.Ay.guildId === e) return d.Ay.draftEnabled ? d.Ay.draft : null;
             }, [e, n]),
             c = (0, r.bG)([l.A], () => {
                 if (null == e || !n) return null;

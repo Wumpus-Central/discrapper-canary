@@ -1,3 +1,13 @@
+.divider__44f7f {
+    align-self: stretch;
+    background: var(--border-subtle);
+    height: 1px
+}
+
+.contentLevelSetting__44f7f {
+    margin-bottom: 0
+}
+
 .gradientButtonContainer__488d9 {
     height: 50px;
     margin-block: 10px 0;

@@ -33,25 +33,22 @@ function r(e) {
           };
 }
 function s(e) {
-    return null == e
+    return null == e || (null == e.preset_id && null == e.custom_user_theme_settings)
         ? null
         : {
-              enabled: e.enabled,
-              themeSettings:
-                  null == e || (null == e.preset_id && null == e.custom_user_theme_settings)
-                      ? null
-                      : {
-                            presetId: null == e.preset_id ? void 0 : e.preset_id,
-                            customUserThemeSettings: (function (e) {
-                                if (null != e)
-                                    return {
-                                        colors: e.colors,
-                                        gradientColorStops: e.gradient_color_stops ?? [],
-                                        gradientAngle: e.gradient_angle ?? 0,
-                                        baseMix: e.base_mix ?? 0,
-                                    };
-                            })(e.custom_user_theme_settings),
-                        },
+              presetId: null == e.preset_id ? void 0 : e.preset_id,
+              customUserThemeSettings: (function (e) {
+                  if (null != e)
+                      return {
+                          colors: e.colors,
+                          gradientColorStops: e.gradient_color_stops ?? [],
+                          gradientAngle: e.gradient_angle ?? 0,
+                          baseMix: e.base_mix ?? 0,
+                      };
+              })(e.custom_user_theme_settings),
           };
 }
-n.d(t, { QK: () => r, UW: () => s, z_: () => i });
+function a(e) {
+    return null == e ? null : { enabled: e.enabled, themeSettings: s(e) };
+}
+n.d(t, { L8: () => s, QK: () => r, UW: () => a, z_: () => i });

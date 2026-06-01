@@ -1,15 +1,17 @@
 "use strict";
-n.d(t, { A: () => m, v: () => c });
+n.d(t, { AY: () => _, Ay: () => A, v5: () => d });
 var i,
-    r = n(735438),
-    s = n(17928),
-    a = n(451988),
-    o = n(228366),
-    l = n(495544),
-    u = n(679787),
-    c = (((i = {}).GUILD_SETTINGS = "guild_settings"), (i.PERK_MODAL = "perk_modal"), i);
-let d = new a.Ep();
-function _() {
+    r,
+    s = n(735438),
+    a = n(17928),
+    o = n(451988),
+    l = n(228366),
+    u = n(495544),
+    c = n(679787),
+    d = (((i = {}).GUILD_SETTINGS = "guild_settings"), (i.PERK_MODAL = "perk_modal"), i),
+    _ = (((r = {}).GUILD_SETTINGS = "guild_settings"), (r.PREVIEW_PANEL = "preview_panel"), r);
+let h = new o.Ep();
+function f() {
     return {
         guildId: null,
         draft: null,
@@ -17,68 +19,73 @@ function _() {
         draftEnabled: !1,
         originalEnabled: !1,
         origin: null,
+        owner: null,
         isSaving: !1,
         isAwaitingGuildUpdate: !1,
         saveError: null,
     };
 }
-let h = _();
-function f() {
-    d.stop();
+let p = f();
+function E() {
+    h.stop();
 }
-function p() {
-    return (null != h.guildId || !!d.isStarted()) && (f(), (h = _()), !0);
+function m() {
+    return (null != p.guildId || !!h.isStarted()) && (E(), (p = f()), !0);
 }
-class E extends s.Ay.Store {
+class g extends a.Ay.Store {
     static displayName = "GuildThemePreviewStore";
     initialize() {
-        this.waitFor(l.default);
+        this.waitFor(u.default);
     }
     get guildId() {
-        return h.guildId;
+        return p.guildId;
     }
     get draft() {
-        return h.draft;
+        return p.draft;
     }
     get original() {
-        return h.original;
+        return p.original;
     }
     get draftEnabled() {
-        return h.draftEnabled;
+        return p.draftEnabled;
     }
     get originalEnabled() {
-        return h.originalEnabled;
+        return p.originalEnabled;
     }
     get origin() {
-        return h.origin;
+        return p.origin;
+    }
+    get owner() {
+        return p.owner;
     }
     get isActive() {
-        return null != h.guildId;
+        return null != p.guildId;
     }
     get isSaving() {
-        return h.isSaving;
+        return p.isSaving;
     }
     get isAwaitingGuildUpdate() {
-        return h.isAwaitingGuildUpdate;
+        return p.isAwaitingGuildUpdate;
     }
     get saveError() {
-        return h.saveError;
+        return p.saveError;
     }
     hasChanges() {
-        return null != h.guildId && (h.draftEnabled !== h.originalEnabled || !(0, r.isEqual)(h.draft, h.original));
+        return null != p.guildId && (p.draftEnabled !== p.originalEnabled || !(0, s.isEqual)(p.draft, p.original));
     }
 }
-let m = new E(o.h, {
+let A = new g(l.h, {
     GUILD_THEME_PREVIEW_START: function (e) {
-        let { guildId: t, draft: n, original: i, draftEnabled: r, originalEnabled: s, origin: a } = e;
-        f(),
-            (h = {
+        let { guildId: t, draft: n, original: i, draftEnabled: r, originalEnabled: s, origin: a, owner: o } = e;
+        E(),
+            (p = {
                 guildId: t,
-                draft: (0, u.z_)(n),
-                original: (0, u.z_)(i),
+                draft: (0, c.z_)(n),
+                original: (0, c.z_)(i),
                 draftEnabled: r,
                 originalEnabled: s,
                 origin: a,
+                owner: o ?? p.owner,
                 isSaving: !1,
                 isAwaitingGuildUpdate: !1,
                 saveError: null,
@@ -86,48 +93,52 @@ let m = new E(o.h, {
     },
     GUILD_THEME_PREVIEW_SELECT_PRESET: function (e) {
         let { presetId: t } = e;
-        if (null == h.guildId) return !1;
+        if (null == p.guildId) return !1;
         let n = { presetId: t, customUserThemeSettings: void 0 };
         return (
-            (!(0, r.isEqual)(h.draft, n) || !h.draftEnabled) &&
-            (f(), (h = { ...h, draft: n, draftEnabled: !0, isAwaitingGuildUpdate: !1, saveError: null }), !0)
+            (!(0, s.isEqual)(p.draft, n) || !p.draftEnabled) &&
+            (E(), (p = { ...p, draft: n, draftEnabled: !0, isAwaitingGuildUpdate: !1, saveError: null }), !0)
         );
     },
     GUILD_THEME_PREVIEW_UPDATE_CUSTOM: function (e) {
         let { colors: t, gradientAngle: n, baseMix: i } = e;
-        if (null == h.guildId) return !1;
-        let s = {
+        if (null == p.guildId) return !1;
+        let r = {
             presetId: void 0,
             customUserThemeSettings: { colors: [...t], gradientColorStops: [], gradientAngle: n, baseMix: i },
         };
         return (
-            (!(0, r.isEqual)(h.draft, s) || !h.draftEnabled) &&
-            (f(), (h = { ...h, draft: s, draftEnabled: !0, isAwaitingGuildUpdate: !1, saveError: null }), !0)
+            (!(0, s.isEqual)(p.draft, r) || !p.draftEnabled) &&
+            (E(), (p = { ...p, draft: r, draftEnabled: !0, isAwaitingGuildUpdate: !1, saveError: null }), !0)
         );
     },
-    GUILD_THEME_PREVIEW_END: p,
+    GUILD_THEME_PREVIEW_TRANSFER_OWNERSHIP: function (e) {
+        let { owner: t } = e;
+        return null != p.guildId && p.owner !== t && ((p = { ...p, owner: t }), !0);
+    },
+    GUILD_THEME_PREVIEW_END: m,
     GUILD_THEME_PREVIEW_SAVE_START: function () {
-        f(), (h = { ...h, isSaving: !0, isAwaitingGuildUpdate: !1, saveError: null });
+        E(), (p = { ...p, isSaving: !0, isAwaitingGuildUpdate: !1, saveError: null });
     },
     GUILD_THEME_PREVIEW_SAVE_SUCCESS: function (e) {
         let { guildId: t, guildTheme: n } = e;
-        if (null == h.guildId || t !== h.guildId) return !1;
+        if (null == p.guildId || t !== p.guildId) return !1;
         let i = n?.themeSettings ?? null,
             r = n?.enabled ?? !1;
         return (
-            (h = {
-                ...h,
-                draft: (0, u.z_)(i),
-                original: (0, u.z_)(i),
+            (p = {
+                ...p,
+                draft: (0, c.z_)(i),
+                original: (0, c.z_)(i),
                 draftEnabled: r,
                 originalEnabled: r,
                 isSaving: !1,
                 isAwaitingGuildUpdate: !0,
                 saveError: null,
             }),
-            f(),
-            d.start(1e4, () => {
-                h.isAwaitingGuildUpdate && o.h.dispatch({ type: "GUILD_THEME_PREVIEW_END" });
+            E(),
+            h.start(1e4, () => {
+                p.isAwaitingGuildUpdate && l.h.dispatch({ type: "GUILD_THEME_PREVIEW_END" });
             }),
             !0
         );
@@ -135,43 +146,43 @@ let m = new E(o.h, {
     GUILD_THEME_PREVIEW_SAVE_FAILURE: function (e) {
         let { guildId: t, error: n } = e;
         return (
-            null != h.guildId &&
-            t === h.guildId &&
-            (f(), (h = { ...h, isSaving: !1, isAwaitingGuildUpdate: !1, saveError: n }), !0)
+            null != p.guildId &&
+            t === p.guildId &&
+            (E(), (p = { ...p, isSaving: !1, isAwaitingGuildUpdate: !1, saveError: n }), !0)
         );
     },
     GUILD_SETTINGS_GUILD_THEME_SAVE_SUCCESS: function (e) {
         let { guildId: t } = e;
-        return null != h.guildId && t === h.guildId && p();
+        return null != p.guildId && t === p.guildId && m();
     },
-    USER_SETTINGS_MODAL_OPEN: p,
+    USER_SETTINGS_MODAL_OPEN: m,
     CHANNEL_SELECT: function (e) {
         let { guildId: t } = e;
-        return null != h.guildId && t !== h.guildId && (p(), !0);
+        return null != p.guildId && t !== p.guildId && (m(), !0);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        return null != h.guildId && t.id === h.guildId && (p(), !0);
+        return null != p.guildId && t.id === p.guildId && (m(), !0);
     },
     GUILD_MEMBER_REMOVE: function (e) {
         let { guildId: t, user: n } = e;
-        return n.id === l.default.getId() && null != h.guildId && t === h.guildId && (p(), !0);
+        return n.id === u.default.getId() && null != p.guildId && t === p.guildId && (m(), !0);
     },
     GUILD_UPDATE: function (e) {
         var t;
         let n,
             i,
-            { guild: s } = e;
+            { guild: r } = e;
         return (
-            !!h.isAwaitingGuildUpdate &&
-            null != h.guildId &&
-            s.id === h.guildId &&
-            void 0 !== s.theme &&
-            ((t = (0, u.UW)(s.theme)),
+            !!p.isAwaitingGuildUpdate &&
+            null != p.guildId &&
+            r.id === p.guildId &&
+            void 0 !== r.theme &&
+            ((t = (0, c.UW)(r.theme)),
             (n = t?.enabled ?? !1),
             (i = t?.themeSettings ?? null),
-            !!(n === h.originalEnabled && (0, r.isEqual)(i, h.original)) && (p(), !0))
+            !!(n === p.originalEnabled && (0, s.isEqual)(i, p.original)) && (m(), !0))
         );
     },
-    LOGOUT: p,
+    LOGOUT: m,
 });
