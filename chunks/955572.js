@@ -1,28 +1,27 @@
 "use strict";
 n.d(t, {
     AC: () => d,
-    Bm: () => h,
-    D3: () => T,
-    Dm: () => O,
-    Er: () => m,
-    FU: () => w,
-    Gm: () => L,
-    HU: () => A,
+    Bm: () => f,
+    D3: () => I,
+    Dm: () => C,
+    Er: () => E,
+    FU: () => L,
+    Gm: () => D,
+    HU: () => g,
     IX: () => v,
-    Jb: () => N,
-    LO: () => E,
-    M1: () => b,
+    Jb: () => S,
+    M1: () => O,
     Qp: () => _,
-    RI: () => S,
-    RJ: () => g,
+    RI: () => T,
+    RJ: () => m,
     XS: () => c,
     Xt: () => R,
     YV: () => p,
     kI: () => y,
-    qz: () => I,
-    ts: () => C,
-    uS: () => f,
-    uh: () => D,
+    qz: () => A,
+    ts: () => N,
+    uS: () => h,
+    uh: () => b,
 });
 var i = n(228366),
     r = n(817281),
@@ -41,11 +40,11 @@ function d() {
 function _(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_ZOOM", zoom: e });
 }
-function f() {
+function h() {
     i.h.dispatch({ type: "ACCESSIBILITY_KEYBOARD_MODE_ENABLE" }),
         s.default.track(o.HAw.KEYBOARD_MODE_TOGGLED, { enabled: !0 });
 }
-function h() {
+function f() {
     i.h.dispatch({ type: "ACCESSIBILITY_KEYBOARD_MODE_DISABLE" }),
         s.default.track(o.HAw.KEYBOARD_MODE_TOGGLED, { enabled: !1 });
 }
@@ -53,18 +52,15 @@ function p() {
     i.h.dispatch({ type: "ACCESSIBILITY_DESATURATE_ROLES_TOGGLE" });
 }
 function E() {
-    i.h.dispatch({ type: "ACCESSIBILITY_DARK_SIDEBAR_TOGGLE" });
-}
-function m() {
     i.h.dispatch({ type: "KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN" });
 }
-function g(e) {
+function m(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED", systemPrefersReducedMotion: e });
 }
-function A(e) {
+function g(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_SATURATION", saturation: e });
 }
-function I(e) {
+function A(e) {
     let t = a.A.useReducedMotion;
     i.h.dispatch({ type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", prefersReducedMotion: e });
     let n = a.A.useReducedMotion;
@@ -76,40 +72,40 @@ function I(e) {
           })
         : t && !n && r.Ay.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers");
 }
-function T(e) {
+function I(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_SYNC_FORCED_COLORS", syncForcedColors: e });
 }
-function S(e) {
+function T(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED", systemForcedColors: e });
 }
-function N(e) {
+function S(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED", systemPrefersContrast: e });
 }
 function y(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS", alwaysShowLinkDecorations: e });
 }
-function C(e) {
+function N(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_ENABLE_CUSTOM_CURSOR", enableCustomCursor: e });
 }
 function v(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_ROLE_STYLE", roleStyle: e }),
         s.default.track(o.HAw.ROLE_STYLE_SETTING_UPDATED, { role_style: e });
 }
-function O(e) {
+function C(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED", enabled: e });
 }
 function R() {
     i.h.dispatch({ type: "ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE" });
 }
-function b() {
+function O() {
     i.h.dispatch({ type: "ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE" });
 }
-function D(e) {
+function b(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_CONTRAST_MODE", contrastMode: e });
 }
-function L(e) {
+function D(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_SWITCH_ICONS_ENABLED", switchIconsEnabled: e });
 }
-function w(e) {
+function L(e) {
     i.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { hdrDynamicRange: e } });
 }

@@ -1,47 +1,48 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => R });
 var i = n(17928),
     r = n(462887),
     s = n(228366),
     a = n(775602),
     o = n(677313),
     l = n(873298),
-    d = n(284016),
-    _ = n(964404),
-    u = n(617617),
-    c = n(652215),
-    E = n(185928),
-    h = n(661531),
-    m = n(353835),
-    f = n(723702);
-function g(e) {
-    if (!__OVERLAY__ && f.isPlatformEmbedded)
+    u = n(284016),
+    c = n(742023),
+    d = n(617617),
+    _ = n(652215),
+    h = n(185928),
+    f = n(661531),
+    p = n(353835),
+    E = n(723702);
+function m(e) {
+    if (!__OVERLAY__ && E.isPlatformEmbedded)
         try {
-            let t = h.A.colors.BACKGROUND_BASE_LOWEST.resolve({ theme: e, saturation: a.A.saturation }).hex();
-            m.A.setApplicationBackgroundColor(t);
+            let t = f.A.colors.BACKGROUND_BASE_LOWEST.resolve({ theme: e, saturation: a.A.saturation }).hex();
+            p.A.setApplicationBackgroundColor(t);
         } catch {}
 }
-let p = 0,
-    A = E.qj,
-    I = (0, o.A)(),
-    T = A[I],
-    S = null;
-function N() {
-    if (!__OVERLAY__ && null != S) return S;
-    var e = I,
-        t = A;
-    if (__OVERLAY__) return c.NJ8.DARK;
-    let n = E.dP;
-    if (a.A.syncForcedColors && "active" === a.A.systemForcedColors && e !== E.Fc.NO_PREFERENCE) return e;
-    if (_.Ay.useSystemTheme === E.Q_.ON && e !== E.Fc.NO_PREFERENCE) return t[e];
-    let i = d.A.getAppearanceSettings()?.theme;
-    return null != i ? i : n[u.A.settings.appearance?.theme ?? l.Sx.UNSET];
+var g = n(594061),
+    A = n(355097);
+let I = 0,
+    T = h.qj,
+    S = (0, o.A)(),
+    y = T[S],
+    N = null;
+function v() {
+    let e = (function () {
+        if (!__OVERLAY__ && null != N) return N;
+        var e = S,
+            t = T;
+        if (__OVERLAY__) return _.NJ8.DARK;
+        let n = h.dP;
+        if (a.A.syncForcedColors && "active" === a.A.systemForcedColors && e !== h.Fc.NO_PREFERENCE) return e;
+        if (c.Ay.useSystemTheme === h.Q_.ON && e !== h.Fc.NO_PREFERENCE) return t[e];
+        let i = u.A.getAppearanceSettings()?.theme;
+        return null != i ? i : n[d.A.settings.appearance?.theme ?? l.Sx.UNSET];
+    })();
+    return e !== y && (m((y = e)), !0);
 }
-function C() {
-    let e = N();
-    return e !== T && (g((T = e)), !0);
-}
-class R extends i.Ay.PersistedStore {
+class C extends i.Ay.PersistedStore {
     static displayName = "ThemeStore";
     static persistKey = "ThemeStore";
     static migrations = [
@@ -53,55 +54,67 @@ class R extends i.Ay.PersistedStore {
     ];
     initialize(e) {
         e?.theme != null &&
-            ((p = 1),
-            g((T = e.theme)),
-            null != e.preferences && (A = e.preferences),
-            (0, r.M)(T) && (A[E.Fc.DARK] = T)),
-            this.waitFor(_.Ay, d.A, u.A, a.A);
+            ((I = 1),
+            m((y = e.theme)),
+            null != e.preferences && (T = e.preferences),
+            (0, r.M)(y) && (T[h.Fc.DARK] = y)),
+            this.waitFor(c.Ay, u.A, d.A, a.A);
     }
     getState() {
-        return { theme: this.theme, preferences: A, status: p };
+        return { theme: this.theme, preferences: T, status: I };
     }
     get theme() {
-        return T;
+        return y;
     }
     get systemTheme() {
-        return I;
+        return S;
     }
     themePreferenceForSystemTheme(e) {
-        return A[e];
+        return T[e];
     }
 }
-let O = new R(s.h, {
-    CACHE_LOADED: C,
+let R = new C(s.h, {
+    CACHE_LOADED: v,
     CONNECTION_OPEN: function () {
-        return 0 === p && ((A = { ...A, [E.Fc.DARK]: c.NJ8.DARKER }), (p = 1)), C();
+        return (
+            0 === I && ((T = { ...T, [h.Fc.DARK]: _.NJ8.DARKER }), (I = 1)),
+            c.Ay.darkSidebar &&
+                (d.A.settings.appearance?.darkSidebar ||
+                    g.wc.updateAsync(
+                        "appearance",
+                        (e) => {
+                            e.darkSidebar = !0;
+                        },
+                        A.Sb.INFREQUENT_USER_ACTION,
+                    ),
+                s.h.wait(() => {
+                    s.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: !1 } });
+                })),
+            v()
+        );
     },
     LOGOUT: function (e) {
-        return (S = null), !e.isSwitchingAccount && T !== c.NJ8.DARK && (g((T = c.NJ8.DARK)), C());
+        return (N = null), !e.isSwitchingAccount && y !== _.NJ8.DARK && (m((y = _.NJ8.DARK)), v());
     },
-    OVERLAY_INITIALIZE: C,
-    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: C,
-    UNSYNCED_USER_SETTINGS_UPDATE: C,
-    USER_SETTINGS_PROTO_UPDATE: C,
-    RESET_PREVIEW_CLIENT_THEME: C,
+    OVERLAY_INITIALIZE: v,
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: v,
+    UNSYNCED_USER_SETTINGS_UPDATE: v,
+    USER_SETTINGS_PROTO_UPDATE: v,
+    RESET_PREVIEW_CLIENT_THEME: v,
     SYSTEM_THEME_CHANGE: function (e) {
         let { systemTheme: t } = e;
-        return (I = t), C();
-    },
-    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: function () {
-        return (0, r.q)(N());
+        return (S = t), v();
     },
     UPDATE_THEME_PREFERENCES: function (e) {
-        return (A = { ...A, ...e.preferences }), C();
+        return (T = { ...T, ...e.preferences }), v();
     },
     SET_THEME_OVERRIDE: function (e) {
-        return (S = e.theme), C();
+        return (N = e.theme), v();
     },
     CLEAR_THEME_OVERRIDE: function () {
-        return (S = null), C();
+        return (N = null), v();
     },
     REFRESH_THEME: function () {
-        return C();
+        return v();
     },
 });

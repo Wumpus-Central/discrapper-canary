@@ -4103,6 +4103,7 @@ var rD =
         (ex.QUEST_GAME_SHEET_ERROR = "quest_game_sheet_error"),
         (ex.QUEST_HOME_ONBOARDING_POPOVER_RENDERED = "quest_home_onboarding_popover_rendered"),
         (ex.QUEST_HOME_MOBILE_DEEP_LINK_MISSING_QUEST = "quest_home_mobile_deep_link_missing_quest"),
+        (ex.QUEST_HOME_CAROUSEL_SCROLL = "quest_home_carousel_scroll"),
         (ex.QUEST_VIDEO_APP_FOCUSED = "quest_video_app_focused"),
         (ex.QUEST_VIDEO_APP_UNFOCUSED = "quest_video_app_unfocused"),
         (ex.QUEST_VIDEO_BUFFERING_ENDED = "quest_video_buffering_ended"),
