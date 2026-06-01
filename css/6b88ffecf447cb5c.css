@@ -12,11 +12,23 @@
     width: 723px
 }
 
+.errorState__6db38,
 .loading__6db38 {
     align-items: center;
     display: flex;
     flex: 1;
     justify-content: center
+}
+
+.errorState__6db38 {
+    flex-direction: column;
+    gap: var(--space-16);
+    padding: var(--space-32);
+    text-align: center
+}
+
+.errorText__6db38 {
+    max-width: 360px
 }
 
 .directoryPanel__6db38 {

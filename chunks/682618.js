@@ -10,13 +10,15 @@ function l(e) {
 }
 let u = async (e) => {
         let t = e ?? s.default.getCurrentUser()?.id;
-        if (null != t)
+        if (null != t) {
+            r.h.dispatch({ type: "BADGE_DIRECTORY_FETCH_START", userId: t });
             try {
                 let e = (await i.Bo.get({ url: o.Rsh.USER_BADGES(l(t)), rejectWithError: !0 })).body;
                 r.h.dispatch({ type: "BADGE_DIRECTORY_FETCH_SUCCESS", userId: t, badges: e.badges });
             } catch (e) {
-                a.A.captureException(e);
+                r.h.dispatch({ type: "BADGE_DIRECTORY_FETCH_FAILURE", userId: t }), a.A.captureException(e);
             }
+        }
     },
     c = async (e, t) => {
         let n = t ?? s.default.getCurrentUser()?.id;

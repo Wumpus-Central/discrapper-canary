@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => d, H5: () => o, rL: () => a });
+n.d(t, { Ay: () => _, H5: () => o, rL: () => a });
 var i = n(17928),
     r = n(228366),
     s = n(287809);
@@ -10,8 +10,9 @@ function o(e) {
     if (null != e) return (null != e.current_tier ? e.tier_obtained_at?.[e.current_tier] : void 0) ?? e.obtained_at;
 }
 let l = new Map(),
-    u = new Set();
-class c extends i.Ay.Store {
+    u = new Set(),
+    c = new Set();
+class d extends i.Ay.Store {
     initialize() {
         this.waitFor(s.default);
     }
@@ -24,6 +25,10 @@ class c extends i.Ay.Store {
     }
     hasCatalogFor(e) {
         return u.has(e);
+    }
+    hasCatalogFetchErrorFor(e) {
+        let t = e ?? s.default.getCurrentUser()?.id;
+        return null != t && c.has(t);
     }
     getBadgeById(e, t) {
         let n = t ?? s.default.getCurrentUser()?.id;
@@ -50,11 +55,19 @@ class c extends i.Ay.Store {
         return null == n || null == i ? 0 : Math.max(0, a(n) - i.current);
     }
 }
-let d = new c(r.h, {
+let _ = new d(r.h, {
+    BADGE_DIRECTORY_FETCH_START: function (e) {
+        let { userId: t } = e;
+        (c = new Set(c)).delete(t);
+    },
     BADGE_DIRECTORY_FETCH_SUCCESS: function (e) {
         let { userId: t, badges: n } = e,
             i = new Map(l);
-        i.set(t, new Map(n.map((e) => [e.badge_id, e]))), (l = i), (u = new Set(u).add(t));
+        i.set(t, new Map(n.map((e) => [e.badge_id, e]))), (l = i), (u = new Set(u).add(t)), (c = new Set(c)).delete(t);
+    },
+    BADGE_DIRECTORY_FETCH_FAILURE: function (e) {
+        let { userId: t } = e;
+        c = new Set(c).add(t);
     },
     BADGE_FETCH_SUCCESS: function (e) {
         let { userId: t, badge: n } = e,
@@ -63,6 +76,6 @@ let d = new c(r.h, {
         r.set(n.badge_id, n), i.set(t, r), (l = i);
     },
     LOGOUT: function () {
-        (l = new Map()), (u = new Set());
+        (l = new Map()), (u = new Set()), (c = new Set());
     },
 });
