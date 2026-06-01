@@ -32,6 +32,7 @@ class l extends s.A {
     orderLineItems;
     billingFacetRecord;
     giftingFacet;
+    checkoutContext;
     createdAt;
     unsatisfiedConstraints;
     static createFromServer(e) {
@@ -42,6 +43,7 @@ class l extends s.A {
             orderLineItems: e.order_line_items,
             billingFacetRecord: o.createFromOrder(e),
             giftingFacet: e.gifting_facet ?? null,
+            checkoutContext: e.checkout_context ?? null,
             createdAt: e.created_at,
             unsatisfiedConstraints: e.unsatisfied_constraints ?? [],
         });
@@ -54,6 +56,7 @@ class l extends s.A {
             (this.orderLineItems = e.orderLineItems ?? []),
             (this.billingFacetRecord = e.billingFacetRecord ?? null),
             (this.giftingFacet = e.giftingFacet ?? null),
+            (this.checkoutContext = e.checkoutContext ?? null),
             (this.createdAt = e.createdAt),
             (this.unsatisfiedConstraints = e.unsatisfiedConstraints ?? []);
     }
