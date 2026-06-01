@@ -50,7 +50,7 @@ var v = n(982240),
     O = n(775602),
     b = n(716574),
     D = n(841595),
-    L = n(92111);
+    L = n(975858);
 function w(e) {
     let { children: t, legacyBadgeId: n, userId: r, fallbackTitle: s, fallbackIconSrc: a } = e,
         o = (0, L.P3)(n),
