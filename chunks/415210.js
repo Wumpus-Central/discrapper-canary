@@ -459,14 +459,13 @@ let eD = s.memo(function (e) {
         (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("11124"),
+                    n.e("66161"),
                     n.e("22367"),
-                    n.e("49286"),
-                    n.e("84262"),
-                    n.e("97418"),
+                    n.e("13878"),
+                    n.e("40955"),
                     n.e("28367"),
                     n.e("48158"),
-                    n.e("32704"),
+                    n.e("81516"),
                     n.e("30204"),
                     n.e("83952"),
                     n.e("1962"),
@@ -482,9 +481,9 @@ let eD = s.memo(function (e) {
                     n.e("89160"),
                     n.e("31782"),
                     n.e("20342"),
-                    n.e("62194"),
-                    n.e("57634"),
-                ]).then(n.bind(n, 425545));
+                    n.e("11774"),
+                    n.e("12382"),
+                ]).then(n.bind(n, 285901));
                 return (t) => (0, i.jsx)(e, { ...t, channelId: l.id, onClipClick: (e) => X({ clips: [e] }) });
             },
             { modalKey: eM.nm },

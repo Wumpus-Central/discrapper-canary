@@ -3,9 +3,9 @@ n.d(t, { A: () => ey });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
-    a = n.n(s);
-let o = "midnight";
-var l = n(17928),
+    a = n.n(s),
+    o = n(505124),
+    l = n(17928),
     u = n(26137),
     c = n(43990),
     d = n(268218),
@@ -472,7 +472,7 @@ function ey(e) {
             (e) => {
                 let { playerState: n, isControlBarExpanded: r, videoRef: s, isActive: l, isVolumeExpanded: u } = e;
                 return (0, i.jsx)(c.N, {
-                    theme: o,
+                    theme: o.NJ.MIDNIGHT,
                     children: (e) =>
                         (0, i.jsxs)("div", {
                             className: a()(eT.MU, e),

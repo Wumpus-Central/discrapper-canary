@@ -126,7 +126,8 @@ let eI = l.memo(function (e) {
             C = (e) => {
                 (0, ei.L3)(e, async () => {
                     let { default: e } = await Promise.all([
-                        n.e("94881"),
+                        n.e("12697"),
+                        n.e("13878"),
                         n.e("26132"),
                         n.e("46652"),
                         n.e("93190"),
@@ -429,13 +430,13 @@ var eK = n(661531),
     e$ = n(174459),
     eJ = n(776781),
     e0 = n(233993),
-    e9 = n(835245),
-    e1 = n(280056),
+    e1 = n(835245),
+    e9 = n(280056),
     e2 = n(204651),
     e5 = n(489643);
-function e3(e) {
+function e7(e) {
     let { width: t = 24, height: n = 24, isBadged: s = !1 } = e,
-        [a] = l.useState(() => (0, e9.A)());
+        [a] = l.useState(() => (0, e1.A)());
     return (0, i.jsxs)("svg", {
         width: t,
         height: n,
@@ -450,7 +451,7 @@ function e3(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)("g", { mask: `url(#${a})`, children: (0, i.jsx)(e1.c, {}) }),
+            (0, i.jsx)("g", { mask: `url(#${a})`, children: (0, i.jsx)(e9.c, {}) }),
         ],
     });
 }
@@ -460,12 +461,12 @@ function e6(e) {
     return (0, i.jsxs)("div", {
         className: a()(e5.v, t),
         children: [
-            (0, i.jsx)(e3, { isBadged: l }),
+            (0, i.jsx)(e7, { isBadged: l }),
             l ? (0, i.jsx)($.E, { className: e5.F, variant: "text-xs/semibold", children: n > 99 ? "99+" : n }) : null,
         ],
     });
 }
-function e7(e) {
+function e3(e) {
     let {
             toggleRequestToSpeakSidebar: t,
             showRequestToSpeakSidebar: n,
@@ -512,7 +513,7 @@ function tn(e) {
             !l && d
                 ? (0, i.jsx)("div", {
                       className: a()(tt.x6, { [tt.vc]: c }),
-                      children: (0, i.jsx)(e7, {
+                      children: (0, i.jsx)(e3, {
                           toggleRequestToSpeakSidebar: () => {
                               c && eY.A.updateChatOpen(t.id, !1), (0, j.X)(r, j.O.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n();
                           },
@@ -805,7 +806,8 @@ let tE = l.memo(function (e) {
                         e,
                         async () => {
                             let { default: e } = await Promise.all([
-                                n.e("94881"),
+                                n.e("12697"),
+                                n.e("13878"),
                                 n.e("26132"),
                                 n.e("46652"),
                                 n.e("93190"),
@@ -894,7 +896,7 @@ var tv = n(844222),
     tw = n(616356),
     tM = n(977997),
     tk = n(312006),
-    tG = n(761853),
+    tG = n(728555),
     tD = n(636359);
 function tV(e) {
     let { aspectRatio: t, className: n, children: l, width: s, ...a } = e,
@@ -1105,7 +1107,8 @@ let tF = 16 / 9,
                             t,
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("94881"),
+                                    n.e("12697"),
+                                    n.e("13878"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
@@ -1188,24 +1191,25 @@ let tZ = l.memo(function (e) {
 var t$ = n(847374),
     tJ = n(402216),
     t0 = n(97808),
-    t9 = n(717558),
-    t1 = n(636585),
+    t1 = n(717558),
+    t9 = n(636585),
     t2 = n(486020),
     t5 = n(711865);
-function t3(e) {
+function t7(e) {
     let { channel: t, speaker: s, className: r } = e,
         o = l.useRef(null),
         { newestAnalyticsLocation: c } = (0, g.Ay)(),
         d = (0, N.Us)(),
         { reducedMotion: u } = l.useContext(tv.C),
-        h = (0, t9.A)({ userId: s.id }),
+        h = (0, t1.A)({ userId: s.id }),
         A = null != s.member ? (0, t2.xT)(s.member) : null,
         x = (e) => {
             (0, ei.L3)(
                 e,
                 async () => {
                     let { default: e } = await Promise.all([
-                        n.e("94881"),
+                        n.e("12697"),
+                        n.e("13878"),
                         n.e("26132"),
                         n.e("46652"),
                         n.e("93190"),
@@ -1278,16 +1282,16 @@ function t3(e) {
 }
 function t6(e) {
     let { speakers: t, channel: n } = e;
-    return (0, i.jsx)(t1.A, {
+    return (0, i.jsx)(t9.A, {
         className: t5.z,
         guildId: n.guild_id,
         users: t,
         max: 10,
-        renderUser: (e, t, l) => (0, i.jsx)(t3, { channel: n, speaker: e, className: t }, l),
+        renderUser: (e, t, l) => (0, i.jsx)(t7, { channel: n, speaker: e, className: t }, l),
         renderMoreUsers: (e, t, n) => (0, i.jsx)("div", { className: a()(t5.$U, t), children: e }, n),
     });
 }
-var t7 = n(947790);
+var t3 = n(947790);
 let t4 = l.memo(function (e) {
     let {
         label: t,
@@ -1301,15 +1305,15 @@ let t4 = l.memo(function (e) {
     } = e;
     return (0, i.jsxs)(Q.D, {
         onClick: l,
-        className: a()(t7.kL, s),
+        className: a()(t3.kL, s),
         children: [
             null == o
-                ? (0, i.jsx)(eF.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: t7.Vo })
-                : (0, i.jsx)(eH.c, { size: "custom", color: "currentColor", width: 20, height: 20, className: t7.Vo }),
+                ? (0, i.jsx)(eF.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: t3.Vo })
+                : (0, i.jsx)(eH.c, { size: "custom", color: "currentColor", width: 20, height: 20, className: t3.Vo }),
             (0, i.jsxs)($.E, {
                 color: "text-strong",
                 variant: "text-md/semibold",
-                className: t7.Qq,
+                className: t3.Qq,
                 children: [t, " \u2014 ", n],
             }),
             r &&
@@ -1324,7 +1328,7 @@ let t4 = l.memo(function (e) {
                 color: "currentColor",
                 width: 20,
                 height: 20,
-                className: a()(t7.mw, { [t7.VU]: r }),
+                className: a()(t3.mw, { [t3.VU]: r }),
             }),
         ],
     });
@@ -1925,7 +1929,7 @@ function n0(e) {
         ],
     });
 }
-let n9 = l.memo(function (e) {
+let n1 = l.memo(function (e) {
     let { channel: t, isOnStartStageScreen: n } = e,
         l = nB(t.id),
         s = (0, eJ.Ni)(t.id),
@@ -1954,7 +1958,7 @@ let n9 = l.memo(function (e) {
             })
           : (0, i.jsx)(nW, { channel: t });
 });
-var n1 = n(520006);
+var n9 = n(520006);
 function n2(e) {
     let {
             stream: t,
@@ -1983,7 +1987,7 @@ function n2(e) {
                 onClick: () => {
                     H()(null != A, "guild cannot be null"),
                         H()(null != l, "channel cannot be null"),
-                        (0, n1.X)({
+                        (0, n9.X)({
                             guild: A,
                             channel: l,
                             streamUserId: t?.ownerId,
@@ -2000,14 +2004,14 @@ function n2(e) {
     );
 }
 var n5 = n(104171),
-    n3 = n(81466),
+    n7 = n(81466),
     n6 = n(823508);
-function n7(e) {
+function n3(e) {
     let { className: t, guildId: l } = e,
         s = (0, n6.A)();
     return (0, i.jsx)(nS.A, {
         className: t,
-        icon: (0, i.jsx)(n3.C, { size: "custom", color: "currentColor", height: 20, width: 20 }),
+        icon: (0, i.jsx)(n7.C, { size: "custom", color: "currentColor", height: 20, width: 20 }),
         color: eK.A.unsafe_rawColors.BRAND_500.css,
         title: ex.intl.string(ex.t["60lJ0C"]),
         description: ex.intl.string(ex.t["EYn7/y"]),
@@ -2019,8 +2023,8 @@ function n7(e) {
                     n.e("1258"),
                     n.e("53586"),
                     n.e("19675"),
-                    n.e("63434"),
-                    n.e("32433"),
+                    n.e("13878"),
+                    n.e("78704"),
                     n.e("59957"),
                     n.e("28136"),
                     n.e("16084"),
@@ -2135,7 +2139,7 @@ function it(e) {
                     }),
                     d ? null : (0, i.jsx)(nf.A, { channelId: t.id, showDismiss: !1 }),
                     s ? (0, i.jsx)(nT, { className: n4.fN, channel: t }) : null,
-                    c ? (0, i.jsx)(n7, { className: n4.fN, guildId: r }) : null,
+                    c ? (0, i.jsx)(n3, { className: n4.fN, guildId: r }) : null,
                     s ? (0, i.jsx)(n8, { className: a()({ [n4.fN]: !0 }), onClick: n }) : null,
                     (0, i.jsx)(ie, { channel: t }),
                 ],
@@ -2358,7 +2362,7 @@ function ih(e) {
             disableGradients: !S || (0 === O && v.x.TOP),
             renderBottomCenter: () =>
                 S
-                    ? (0, i.jsx)(g.f5, { value: f, children: (0, i.jsx)(n9, { channel: n, isOnStartStageScreen: U }) })
+                    ? (0, i.jsx)(g.f5, { value: f, children: (0, i.jsx)(n1, { channel: n, isOnStartStageScreen: U }) })
                     : null,
             renderBottomRight: () =>
                 S

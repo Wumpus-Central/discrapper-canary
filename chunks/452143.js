@@ -5,4 +5,5 @@ e.exports = {
     wx: "header__59668",
     UP: "eyebrow__59668",
     jG: "scrollContainer__59668",
+    cW: "cardWrapper__59668",
 };
