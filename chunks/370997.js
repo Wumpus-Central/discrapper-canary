@@ -48,8 +48,8 @@ var n = t(627968),
     q = t(935208),
     Z = t(773669),
     H = t(363195),
-    J = t(780964),
-    $ = t(358776),
+    $ = t(780964),
+    J = t(358776),
     ee = t(766075),
     el = t(546385),
     et = t(333748);
@@ -455,7 +455,7 @@ let eI = (e) => {
                                             text: eu.intl.format(eu.t.jUhnwb, {
                                                 applicationName: u.name,
                                                 onConnectionPress: () =>
-                                                    (0, ee.openUserSettings)(J.X.CONNECTIONS_PANEL),
+                                                    (0, ee.openUserSettings)($.X.CONNECTIONS_PANEL),
                                             }),
                                         })
                                       : null,
@@ -477,7 +477,7 @@ let eI = (e) => {
     },
     eE = (0, c.v)(() => ({ searchQuery: "" })),
     ef = () => {
-        let e = (0, $.SV)("AuthorizedAppsList"),
+        let e = (0, J.SV)("AuthorizedAppsList"),
             { fetchState: l, appAuthTokens: t } = (0, m.cf)([V.default], () => ({
                 fetchState: V.default.getFetchState(),
                 appAuthTokens: V.default.getNewestTokensForNonChildrenApplications(),
@@ -529,7 +529,7 @@ let eI = (e) => {
                       }),
                 children:
                     null == t || null == g || l !== V.FetchState.FETCHED
-                        ? (0, n.jsx)(R.y, { className: eA.QX, type: R.y.Type.SPINNING_CIRCLE })
+                        ? (0, n.jsx)(R.y, { className: e ? ej.p$ : eA.QX, type: R.y.Type.SPINNING_CIRCLE })
                         : 0 === t.length
                           ? A(eu.intl.string(eu.t.CpPv5l), eu.intl.string(eu.t["E+SM6T"]))
                           : 0 === g.length
