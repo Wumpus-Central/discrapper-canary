@@ -1,9 +1,9 @@
-l.d(t, { Ii: () => A, Ut: () => g, WS: () => p, cR: () => S, tG: () => T, u0: () => f });
+l.d(t, { Ii: () => A, Ut: () => g, WS: () => p, cR: () => S, tG: () => T, u0: () => m });
 var n = l(64700),
     r = l(835245),
     s = l(323889),
-    a = l(345353),
-    i = l(69114),
+    i = l(345353),
+    a = l(69114),
     u = l(174459),
     o = l(723702),
     d = l(507107),
@@ -11,8 +11,8 @@ var n = l(64700),
     E = l(561844),
     v = l(590202),
     _ = l(971649),
-    m = l(652215);
-function f() {
+    f = l(652215);
+function m() {
     let e = (0, _.vU)();
     return n.useCallback(
         (t) => {
@@ -22,7 +22,7 @@ function f() {
     );
 }
 function g() {
-    let e = f();
+    let e = m();
     return n.useCallback(
         (t) => {
             let {
@@ -34,20 +34,20 @@ function g() {
                     trackGuildAndChannelMetadata: E,
                     sourceQuestContent: _,
                 } = t,
-                f = (0, c.L4)(n),
+                m = (0, c.L4)(n),
                 g = (0, c.Gp)(n, l);
-            (0, a.N)((0, v.jO)(n)).then((t) => {
+            (0, i.N)((0, v.jO)(n)).then((t) => {
                 e({
                     questId: l,
-                    event: m.HAw.QUEST_CONTENT_CLICKED,
+                    event: f.HAw.QUEST_CONTENT_CLICKED,
                     properties: {
                         ...(0, v.fF)(n, u, d),
-                        ...(0, i.A)(),
+                        ...(0, a.A)(),
                         cta_name: s,
                         click_id: (0, r.A)(),
                         apple_advertising_id: null != t && (0, o.isIOS)() ? t.advertisingId : null,
                         android_advertising_id: null != t && (0, o.isAndroid)() ? t.advertisingId : null,
-                        metadata_sealed: null != f ? f : null,
+                        metadata_sealed: null != m ? m : null,
                         traffic_metadata_sealed: null != g ? g : null,
                     },
                     trackGuildAndChannelMetadata: E,
@@ -73,33 +73,31 @@ function T() {
     return n.useCallback(
         (t) => {
             let {
-                    adContentId: l,
-                    relatedQuestId: n,
-                    adCreativeType: s,
-                    questContent: u,
-                    questContentCTA: d,
-                    questContentPosition: E,
-                    questContentRowIndex: _,
-                    trackGuildAndChannelMetadata: f,
-                    sourceQuestContent: g,
-                } = t,
-                p = (0, c.L4)(u, l);
-            (0, a.N)((0, v.jO)(u)).then((t) => {
+                adContentId: l,
+                relatedQuestId: n,
+                adCreativeType: s,
+                questContent: u,
+                questContentCTA: d,
+                questContentPosition: E,
+                questContentRowIndex: _,
+                trackGuildAndChannelMetadata: m,
+                sourceQuestContent: g,
+            } = t;
+            (0, i.N)((0, v.jO)(u)).then((t) => {
                 e({
                     adContentId: l,
                     relatedQuestId: n,
                     adCreativeType: s,
-                    event: m.HAw.QUEST_CONTENT_CLICKED,
+                    event: f.HAw.QUEST_CONTENT_CLICKED,
                     properties: {
                         ...(0, v.fF)(u, E, _),
-                        ...(0, i.A)(),
+                        ...(0, a.A)(),
                         cta_name: d,
                         click_id: (0, r.A)(),
                         apple_advertising_id: null != t && (0, o.isIOS)() ? t.advertisingId : null,
                         android_advertising_id: null != t && (0, o.isAndroid)() ? t.advertisingId : null,
-                        metadata_sealed: null != p ? p : null,
                     },
-                    trackGuildAndChannelMetadata: f,
+                    trackGuildAndChannelMetadata: m,
                     shouldExtendSession: (0, c.xn)(u),
                     sourceQuestContent: g,
                 });
@@ -116,42 +114,42 @@ function A(e, t) {
 function S(e) {
     let { questHomeHero: t, shouldShowQuestHomeHeroContent: l } = e,
         r = l ? d.uF.QUEST_HOME_ENTRYPOINT_THEMED : d.uF.QUEST_HOME_ENTRYPOINT,
-        a = n.useMemo(() => {
+        i = n.useMemo(() => {
             let e = (0, v.fF)(r);
             return delete e.row_index, e;
         }, [r]),
-        i = n.useCallback(
+        a = n.useCallback(
             (e) => {
                 null != t && l
                     ? (0, E.Qg)({
                           adContentId: t.id,
                           adCreativeType: s.p.QUEST_HOME_HERO,
                           event: e,
-                          properties: a,
+                          properties: i,
                           sourceQuestContent: r,
                       })
-                    : u.default.track(e, a);
+                    : u.default.track(e, i);
             },
-            [t, l, r, a],
+            [t, l, r, i],
         ),
         o = n.useCallback(() => {
-            i(m.HAw.QUEST_HOVER);
-        }, [i]),
+            a(f.HAw.QUEST_HOVER);
+        }, [a]),
         c = n.useCallback(() => {
-            i(m.HAw.QUEST_HOVER_OFF);
-        }, [i]),
+            a(f.HAw.QUEST_HOVER_OFF);
+        }, [a]),
         _ = n.useCallback(() => {
-            u.default.track(m.HAw.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
+            u.default.track(f.HAw.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
         }, []),
-        f = n.useCallback(() => {
-            u.default.track(m.HAw.QUEST_CONTENT_CLICKED, {
+        m = n.useCallback(() => {
+            u.default.track(f.HAw.QUEST_CONTENT_CLICKED, {
                 is_targeted: !1,
-                ...a,
+                ...i,
                 ...(null != t ? { ad_content_id: t.id } : {}),
             });
-        }, [a, t]);
+        }, [i, t]);
     return n.useMemo(
-        () => ({ handleMouseEnter: o, handleMouseLeave: c, handleOnboardingPopoutRender: _, handleEntrypointClick: f }),
-        [o, c, _, f],
+        () => ({ handleMouseEnter: o, handleMouseLeave: c, handleOnboardingPopoutRender: _, handleEntrypointClick: m }),
+        [o, c, _, m],
     );
 }

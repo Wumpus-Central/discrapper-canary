@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(345353),
     d = n(69114),
     _ = n(807393),
-    f = n(723702),
-    h = n(340124),
+    h = n(723702),
+    f = n(340124),
     p = n(859703),
     E = n(710969),
     m = n(851936),
@@ -20,13 +20,13 @@ var i = n(627968),
     I = n(47167),
     T = n(633965),
     S = n(734057),
-    N = n(71393),
-    y = n(994500),
-    C = n(967198),
-    v = n(287809),
-    O = n(486020);
+    y = n(71393),
+    N = n(994500),
+    v = n(967198),
+    C = n(287809),
+    R = n(486020);
 n(23766);
-var R = n(971649),
+var O = n(971649),
     b = n(652215);
 let D = new Set();
 class L {
@@ -58,7 +58,7 @@ class L {
             minViewTimeSeconds: c = 1,
             isQuestEnrollmentBlocked: d,
             onImpression: _,
-            sourceQuestContent: f,
+            sourceQuestContent: h,
         } = e;
         (this.id = (0, s.A)()),
             (this.questContent = i),
@@ -70,7 +70,7 @@ class L {
             (this.questContentRowIndex = u),
             (this.isQuestEnrollmentBlocked = d),
             (this.onImpressionCallback = _),
-            (this.sourceQuestContent = f),
+            (this.sourceQuestContent = h),
             a.p.QUEST,
             (this.entity = { adContentIds: t, adCreativeType: n });
     }
@@ -98,8 +98,8 @@ class L {
                 min_view_time_seconds: this.minViewTimeSeconds,
                 min_viewport_percentage: this.minViewportPercentage,
                 triggered_by_status_change: this.triggeredByStatusChange,
-                apple_advertising_id: null != e && (0, f.isIOS)() ? e.advertisingId : null,
-                android_advertising_id: null != e && (0, f.isAndroid)() ? e.advertisingId : null,
+                apple_advertising_id: null != e && (0, h.isIOS)() ? e.advertisingId : null,
+                android_advertising_id: null != e && (0, h.isAndroid)() ? e.advertisingId : null,
                 ...(0, d.A)(),
                 ...(function (e) {
                     let t,
@@ -109,12 +109,12 @@ class L {
                         s = (0, T.pc)(),
                         a = (0, T.Ld)();
                     if (!r?.is_campaign_ias_enabled || !i || void 0 === s || void 0 === a) return null;
-                    let o = C.A.getGuildId(),
-                        l = null != o ? N.A.getGuild(o) : null,
+                    let o = v.A.getGuildId(),
+                        l = null != o ? y.A.getGuild(o) : null,
                         u = {
                             guilds:
                                 ((t = s()),
-                                (n = N.A.getGuilds()),
+                                (n = y.A.getGuilds()),
                                 t
                                     .map((e) => {
                                         let t = n[e];
@@ -123,7 +123,7 @@ class L {
                                         null !== t.description && (i.description = t.description);
                                         let r =
                                             null !== t.icon
-                                                ? (O.Ay.getGuildIconURL({
+                                                ? (R.Ay.getGuildIconURL({
                                                       id: t.id,
                                                       icon: t.icon,
                                                       size: 44,
@@ -140,7 +140,7 @@ class L {
                                           .map((e) => {
                                               let t = S.A.getChannel(e);
                                               if (void 0 === t) return null;
-                                              let n = { id: t.id, name: (0, I.m1)(t, v.default, y.A) };
+                                              let n = { id: t.id, name: (0, I.m1)(t, C.default, N.A) };
                                               return t.topic.length > 0 && (n.channel_topic = t.topic), n;
                                           })
                                           .filter((e) => null !== e),
@@ -148,7 +148,7 @@ class L {
                     null != o && (u.selected_guild_id = o);
                     let c =
                         l?.banner !== null && l?.banner !== void 0
-                            ? (O.Ay.getGuildBannerURL({ id: l.id, banner: l.banner }, !0) ?? null)
+                            ? (R.Ay.getGuildBannerURL({ id: l.id, banner: l.banner }, !0) ?? null)
                             : null;
                     return (
                         null !== c && (u.selected_guild_banner_url = c),
@@ -164,7 +164,7 @@ class L {
             if ((this.trackViewedPlacement(e), this.entity.adCreativeType === a.p.QUEST)) {
                 let e = this.entity.adContentIds[i],
                     o = p.A.getQuest(e);
-                null == o || (0, E.Ic)(o) || (0, h.zh)(a.p.QUEST, [e]),
+                null == o || (0, E.Ic)(o) || (0, f.zh)(a.p.QUEST, [e]),
                     (0, m.L)().info(
                         `${o?.config.messages.questName ?? e} Quest viewed for at least ${this.minViewTimeSeconds}s at ${(0, A.jO)(this.questContent)}`,
                         { impressionId: this.id },
@@ -193,7 +193,7 @@ class L {
                         adContentId: e,
                         adCreativeType: this.entity.adCreativeType,
                         event: b.HAw.QUEST_CONTENT_VIEWED,
-                        properties: { ...n, metadata_sealed: r ?? null, ...this.commonProperties() },
+                        properties: { ...n, ...this.commonProperties() },
                     });
             }
         }),
@@ -312,7 +312,7 @@ class L {
                         adContentId: n,
                         adCreativeType: this.entity.adCreativeType,
                         event: b.HAw.QUEST_CONTENT_LOADED,
-                        properties: { ...t, metadata_sealed: r ?? null, ...this.commonProperties() },
+                        properties: { ...t, ...this.commonProperties() },
                     });
             }
         }),
@@ -337,20 +337,20 @@ class L {
 let w = r.createContext(void 0);
 function M(e) {
     let { visible: t, visibleChanged: n, focused: s, reference: o, focusedChanged: c, sourceQuestContent: d } = e,
-        _ = (0, R.iY)(e),
-        f = r.useRef(null),
-        h = (0, l.bG)([p.A], () => null != p.A.questEnrollmentBlockedUntil, []);
+        _ = (0, O.iY)(e),
+        h = r.useRef(null),
+        f = (0, l.bG)([p.A], () => null != p.A.questEnrollmentBlockedUntil, []);
     return (
         (0, u.Ay)(() => () => {
-            null != f.current && f.current.stop();
+            null != h.current && h.current.stop();
         }),
         r.useEffect(() => {
             let i = s && t,
                 r = (n || c || _) && i,
                 o = ((n || c) && !i) || _;
-            if (((r || o) && null != f.current && f.current.stop(), r)) {
+            if (((r || o) && null != h.current && h.current.stop(), r)) {
                 let t = {
-                    isQuestEnrollmentBlocked: h,
+                    isQuestEnrollmentBlocked: f,
                     minViewTimeSeconds: e.minViewTimeSeconds,
                     onImpression: e.onImpression,
                     questContent: e.questContent,
@@ -362,8 +362,8 @@ function M(e) {
                 };
                 e.adCreativeType,
                     a.p.QUEST,
-                    (f.current = new L({ ...t, adContentIds: e.adContentIds, adCreativeType: e.adCreativeType })),
-                    f.current.start();
+                    (h.current = new L({ ...t, adContentIds: e.adContentIds, adCreativeType: e.adCreativeType })),
+                    h.current.start();
             }
         }, [
             s,
@@ -378,10 +378,10 @@ function M(e) {
             e.trackGuildAndChannelMetadata,
             _,
             e.minViewTimeSeconds,
-            h,
+            f,
             d,
             e.adCreativeType,
         ]),
-        (0, i.jsx)(w.Provider, { value: f, children: e.children(o, f) })
+        (0, i.jsx)(w.Provider, { value: h, children: e.children(o, h) })
     );
 }

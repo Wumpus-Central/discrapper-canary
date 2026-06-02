@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { DZ: () => w, Mm: () => L, Qg: () => v, Y5: () => O, av: () => N, kO: () => D, vK: () => b });
+n.d(t, { DZ: () => L, Mm: () => D, Qg: () => v, Y5: () => R, av: () => N, kO: () => b, vK: () => O });
 var i = n(835245),
     r = n(323889),
     s = n(345353),
@@ -96,6 +96,7 @@ function v(e) {
                     a = null != s ? f.A.getQuest(s) : null;
                 return {
                     ...S(t, i, n, r),
+                    metadata_sealed: (0, p.L4)(i, t) ?? null,
                     traffic_metadata_sealed: (0, p.Gp)(i, void 0, t) ?? null,
                     quest_id: s ?? null,
                     quest_status: null != a ? (0, g.NI)(a) : null,
@@ -105,32 +106,27 @@ function v(e) {
         };
     y(r, u, a, !1);
 }
-async function C(e, t) {
-    return { adUser: await (0, s.N)((0, g.jO)(e)), adMetadataSealed: (0, p.L4)(e, t) };
-}
-async function R(e) {
+async function C(e) {
     let {
             questContent: t,
             questContentPosition: n,
             questContentRowIndex: r,
-            questContentCTA: s,
-            impressionId: a,
-            clickId: o,
-            adCreativeId: l,
+            questContentCTA: a,
+            impressionId: o,
+            clickId: l,
         } = e,
-        { adUser: c, adMetadataSealed: d } = await C(t, l);
+        c = await (0, s.N)((0, g.jO)(t));
     return {
         ...(0, g.fF)(t, n, r),
         ...(0, u.A)(),
-        cta_name: s,
-        impression_id: a,
+        cta_name: a,
+        impression_id: o,
         apple_advertising_id: null != c && (0, h.isIOS)() ? c.advertisingId : null,
         android_advertising_id: null != c && (0, h.isAndroid)() ? c.advertisingId : null,
-        click_id: o ?? (0, i.A)(),
-        metadata_sealed: d ?? null,
+        click_id: l ?? (0, i.A)(),
     };
 }
-async function O(e) {
+async function R(e) {
     let {
             questId: t,
             questContent: n,
@@ -147,7 +143,7 @@ async function O(e) {
         questId: t,
         event: A.HAw.QUEST_CONTENT_CLICKED,
         properties: {
-            ...(await R({
+            ...(await C({
                 questContent: n,
                 questContentPosition: r,
                 questContentRowIndex: s,
@@ -155,6 +151,7 @@ async function O(e) {
                 impressionId: a,
                 clickId: o,
             })),
+            metadata_sealed: (0, p.L4)(u) ?? null,
             traffic_metadata_sealed: c ?? null,
         },
         trackGuildAndChannelMetadata: l,
@@ -162,7 +159,7 @@ async function O(e) {
         sourceQuestContent: u,
     });
 }
-async function b(e) {
+async function O(e) {
     let {
         adContentId: t,
         relatedQuestId: n,
@@ -180,20 +177,19 @@ async function b(e) {
         relatedQuestId: n,
         adCreativeType: i,
         event: A.HAw.QUEST_CONTENT_CLICKED,
-        properties: await R({
+        properties: await C({
             questContent: r,
             questContentPosition: a,
             questContentRowIndex: o,
             questContentCTA: s,
             impressionId: l,
-            adCreativeId: t,
         }),
         trackGuildAndChannelMetadata: u,
         shouldExtendSession: (0, p.xn)(r),
         sourceQuestContent: c,
     });
 }
-function D(e) {
+function b(e) {
     let {
             scrollingType: t,
             scrollingDirection: n,
@@ -217,7 +213,7 @@ function D(e) {
         carousel_size: l,
     });
 }
-function L(e) {
+function D(e) {
     let { questContent: t, sourceQuestContent: n, questId: i, mode: r, prevMode: s } = e,
         a = (0, g.fF)(t);
     N({
@@ -227,6 +223,6 @@ function L(e) {
         sourceQuestContent: n,
     });
 }
-function w(e, t) {
+function L(e, t) {
     l.Ay.trackWithMetadata(A.HAw.QUEST_EMBED_FALLBACK_VIEWED, { quest_id: e, reason: t });
 }
