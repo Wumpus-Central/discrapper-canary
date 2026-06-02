@@ -9311,6 +9311,9 @@
     --mobile-channel-details-nav-buttons-gap: 12px;
     --mobile-channel-details-nav-icon-button-size: sm;
     --mobile-channel-details-nav-icon-button-variant: tertiary;
+    --mobile-channel-drawer-corner-radius: 8px;
+    --mobile-channel-drawer-divider-width: 0px;
+    --mobile-channel-drawer-spacing: 8px;
     --mobile-channel-item-radius: 12px;
     --mobile-channel-list-subtitle-text-style: text-xs/medium;
     --mobile-channel-list-title-text-style: redesign/heading-18/bold;
@@ -9578,6 +9581,9 @@
 }
 
 .mobile-visual-refresh-floating {
+    --mobile-channel-drawer-corner-radius: 0px;
+    --mobile-channel-drawer-divider-width: 1px;
+    --mobile-channel-drawer-spacing: 0px;
     --mobile-chat-input-context-bar-gap: 8px;
     --mobile-chat-input-context-bar-padding-horizontal: 12px;
     --mobile-chat-input-context-bar-padding-vertical: 8px;

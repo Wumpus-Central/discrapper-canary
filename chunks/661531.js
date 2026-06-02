@@ -7571,6 +7571,30 @@ let { Themes: c } = u.zv,
                         return "tertiary";
                     },
                 },
+                CHANNEL_DRAWER_CORNER_RADIUS: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 8;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 0;
+                        return 8;
+                    },
+                },
+                CHANNEL_DRAWER_DIVIDER_WIDTH: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 0;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 1;
+                        return 0;
+                    },
+                },
+                CHANNEL_DRAWER_SPACING: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 8;
+                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 0;
+                        return 8;
+                    },
+                },
                 CHANNEL_ITEM_RADIUS: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
