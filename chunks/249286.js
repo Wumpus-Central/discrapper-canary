@@ -1,4 +1,4 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => I });
 var u = n(64700),
     l = n(17928),
     r = n(192308),
@@ -12,12 +12,12 @@ var u = n(64700),
     d = n(181940),
     G = n(627968),
     R = n(652215);
-function I(e, t, u) {
+function P(e, t, u) {
     u && (0, r.closeAllModals)(),
         null != t &&
             (0, r.openModalLazy)(async () => {
                 let { default: u } = await Promise.all([
-                    n.e("44837"),
+                    n.e("6263"),
                     n.e("64827"),
                     n.e("84569"),
                     n.e("22455"),
@@ -32,9 +32,9 @@ function I(e, t, u) {
                 return (n) => (0, G.jsx)(u, { guildId: e, powerup: t, ...n });
             });
 }
-function P(e, t) {
+function I(e, t) {
     let { analyticsLocations: n } = (0, i.Ay)(),
-        { onToggle: r, isLoading: G, error: P } = (0, d.A)(e, t),
+        { onToggle: r, isLoading: G, error: I } = (0, d.A)(e, t),
         S = (0, l.bG)([s.A], () => s.A.getGuild(e)),
         c = (function (e, t) {
             let n = (0, l.bG)([s.A], () => s.A.getGuild(e)),
@@ -77,16 +77,16 @@ function P(e, t) {
                               intent: t.type === a.o9.LEVEL ? a.Pn.LEVEL : a.Pn.PERK,
                               onSubscribeComplete: () =>
                                   r(!0)?.then(() => {
-                                      I(S.id, t, u);
+                                      P(S.id, t, u);
                                   }),
                           })
                         : r(!0)?.then(() => {
-                              I(S.id, t, u);
+                              P(S.id, t, u);
                           });
             },
             [r, t, c, n, S],
         ),
         isLoading: G,
-        error: P,
+        error: I,
     };
 }

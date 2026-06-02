@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => L }), n(321073);
+n.d(t, { A: () => w }), n(321073);
 var i = n(635377),
     r = n.n(i),
     s = n(17928),
@@ -10,8 +10,8 @@ var i = n(635377),
     c = n(734057),
     d = n(994500),
     _ = n(309010),
-    f = n(967198),
-    h = n(287809),
+    h = n(967198),
+    f = n(287809),
     p = n(935208),
     E = n(256331),
     m = n(575279);
@@ -20,10 +20,14 @@ let g = new Map(),
     I = new Map(),
     T = new Map(),
     S = null,
-    N = new Map(),
     y = new Map(),
-    C = 0,
-    v = new Set();
+    N = new Map(),
+    v = 0,
+    C = new Map();
+function R(e, t) {
+    let n = C.get(e);
+    null != n && (n.delete(t), 0 === n.size && C.delete(e));
+}
 function O(e) {
     let { type: t, channelId: n, messageId: i, userId: r, emoji: s, reactionType: a } = e,
         o = g.get(n);
@@ -33,14 +37,14 @@ function O(e) {
     let d = u.default.getId() === r,
         _ = "MESSAGE_REACTION_ADD" === t ? c.message.addReaction(s, d, e.colors, a) : c.message.removeReaction(s, d, a);
     c.message = _;
-    let f = o.conversationMetadataById.get(c.conversationId);
-    if (f?.hydratedMessages != null) {
-        let e = f.hydratedMessages.findIndex((e) => e.id === i);
-        -1 !== e && (f.hydratedMessages[e] = _);
+    let h = o.conversationMetadataById.get(c.conversationId);
+    if (h?.hydratedMessages != null) {
+        let e = h.hydratedMessages.findIndex((e) => e.id === i);
+        -1 !== e && (h.hydratedMessages[e] = _);
     }
     return !0;
 }
-function R(e, t) {
+function b(e, t) {
     let n = g.get(e);
     if (null == n) return !1;
     let i = n.messageMetadataByMessageId.get(t);
@@ -50,22 +54,22 @@ function R(e, t) {
     }
     return n.messageMetadataByMessageId.delete(t);
 }
-function b(e) {
+function D(e) {
     let t = g.delete(e);
     return (
         A.delete(e) && (t = !0),
         I.delete(e) && (t = !0),
         T.delete(e) && (t = !0),
-        N.delete(e) && (t = !0),
         y.delete(e) && (t = !0),
+        N.delete(e) && (t = !0),
         S?.channelId === e && ((S = null), (t = !0)),
         t
     );
 }
-class D extends s.Ay.Store {
+class L extends s.Ay.Store {
     static displayName = "ConversationsStore";
     initialize() {
-        this.waitFor(u.default, c.A, E.A, d.A, _.A, f.A, h.default);
+        this.waitFor(u.default, c.A, E.A, d.A, _.A, h.A, f.default);
     }
     hasChannelData(e) {
         return g.has(e);
@@ -101,14 +105,14 @@ class D extends s.Ay.Store {
         return A.has(e);
     }
     getSelectedConversationId(e) {
-        return N.get(e) ?? null;
+        return y.get(e) ?? null;
     }
     getSelectedConversation(e) {
-        let t = N.get(e);
+        let t = y.get(e);
         return null == t ? null : (g.get(e)?.conversationMetadataById.get(t)?.conversation ?? null);
     }
     getSelectedConversationColor(e) {
-        let t = N.get(e);
+        let t = y.get(e);
         return null == t ? null : (g.get(e)?.conversationMetadataById.get(t)?.color ?? null);
     }
     getHydratedMessages(e, t) {
@@ -117,40 +121,43 @@ class D extends s.Ay.Store {
     getHydratedMessageById(e, t) {
         return g.get(e)?.messageMetadataByMessageId.get(t)?.message ?? null;
     }
-    isConversationFetchPending(e) {
-        return v.has(e);
+    isConversationFetchPending(e, t) {
+        let n = C.get(e);
+        return null != n && 0 !== n.size && (!0 !== t || n.has("full"));
     }
     getSelectionSeq(e) {
-        return y.get(e) ?? 0;
+        return N.get(e) ?? 0;
     }
     getConversationFeedbackRating(e, t) {
         return g.get(e)?.recentFeedbackRatingsByConversationId.get(t) ?? null;
     }
 }
-let L = new D(a.h, {
+let w = new L(a.h, {
     CONVERSATION_FETCH_START: function (e) {
-        let { conversationId: t } = e;
-        v.add(t);
+        var t;
+        let n,
+            { conversationId: i, full: r } = e;
+        (t = r ? "full" : "preview"), null != (n = C.get(i)) ? n.add(t) : C.set(i, new Set([t]));
     },
     CONVERSATION_FETCH_SUCCESS: function (e) {
-        let { channelId: t, conversationId: n, conversation: i, messages: r } = e;
-        v.delete(n);
+        let { channelId: t, conversationId: n, messages: i, fullyHydrated: r } = e;
+        R(n, r ? "full" : "preview");
         let s = g.get(t);
         if (null == s) return;
         let a = s.conversationMetadataById.get(n);
-        null != a && (a.conversation = i);
-        let l = r.map((e) => (0, o.rh)(e));
+        if (null == a || (!r && a.fullyHydrated)) return;
+        let l = i.map((e) => (0, o.rh)(e));
         for (let e of l) {
             let t = s.messageMetadataByMessageId.get(e.id);
             null != t
                 ? (t.message = e)
                 : s.messageMetadataByMessageId.set(e.id, { conversationId: n, moderationLabel: null, message: e });
         }
-        null != a && (a.hydratedMessages = l);
+        (a.hydratedMessages = l), (a.fullyHydrated = r);
     },
     CONVERSATION_FETCH_FAILURE: function (e) {
-        let { conversationId: t } = e;
-        v.delete(t);
+        let { conversationId: t, full: n } = e;
+        R(t, n ? "full" : "preview");
     },
     CONVERSATIONS_FETCH_START: function (e) {
         let { channelId: t } = e;
@@ -195,19 +202,21 @@ let L = new D(a.h, {
                     a = new Map();
                 for (let e of t) {
                     let t = n?.conversationMetadataById.get(e.id),
-                        i = t?.color ?? m.J[C++ % m.J.length];
-                    s.set(e.id, { conversation: e, color: i, hydratedMessages: t?.hydratedMessages ?? null });
-                    let r = null;
+                        i = t?.color ?? m.J[v++ % m.J.length],
+                        r = t?.hydratedMessages ?? null,
+                        o = null != r && !!t?.fullyHydrated;
+                    s.set(e.id, { conversation: e, color: i, hydratedMessages: r, fullyHydrated: o });
+                    let l = null;
                     if (null != e.moderation)
-                        for (let t of ((r = new Map()), e.moderation.flaggedMessageDetails)) {
-                            let e = r.get(t.messageId);
-                            null != e ? e.push(t) : r.set(t.messageId, [t]);
+                        for (let t of ((l = new Map()), e.moderation.flaggedMessageDetails)) {
+                            let e = l.get(t.messageId);
+                            null != e ? e.push(t) : l.set(t.messageId, [t]);
                         }
                     for (let t of e.messageIds) {
                         let i = null;
                         null != e.moderation &&
                             e.moderation.flaggedMessageIds.includes(t) &&
-                            null != r &&
+                            null != l &&
                             (i = (function (e) {
                                 let t = e[0],
                                     n = e.map((e) => e.category ?? e.reason).filter((e) => null != e),
@@ -220,9 +229,9 @@ let L = new D(a.h, {
                                         .filter(Boolean)
                                         .join(" \xb7 ");
                                 return a.length > 0 ? a : "Moderation Failed";
-                            })(r.get(t) ?? []));
-                        let s = n?.messageMetadataByMessageId.get(t)?.message ?? null;
-                        a.set(t, { conversationId: e.id, moderationLabel: i, message: s });
+                            })(l.get(t) ?? []));
+                        let r = n?.messageMetadataByMessageId.get(t)?.message ?? null;
+                        a.set(t, { conversationId: e.id, moderationLabel: i, message: r });
                     }
                 }
                 return {
@@ -242,13 +251,13 @@ let L = new D(a.h, {
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        return b(t.id);
+        return D(t.id);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
         if ("unavailable" in t && !0 === t.unavailable) return !1;
         let n = !1;
-        for (let [e, i] of g) i.guildId === t.id && b(e) && (n = !0);
+        for (let [e, i] of g) i.guildId === t.id && D(e) && (n = !0);
         return n;
     },
     LOAD_MESSAGES_SUCCESS: function (e) {
@@ -259,16 +268,16 @@ let L = new D(a.h, {
         let { channelId: t, conversationId: n } = e;
         return (
             null != t &&
-            (N.set(t, n),
-            y.set(t, (y.get(t) ?? 0) + 1),
+            (y.set(t, n),
+            N.set(t, (N.get(t) ?? 0) + 1),
             null != n && (S = { channelId: t, conversationId: n, seq: (S?.seq ?? 0) + 1 }),
             !0)
         );
     },
     CLEAR_CONVERSATION_SELECTION: function (e) {
         let { channelId: t, conversationId: n } = e,
-            i = N.get(t);
-        return null != i && (null == n || i === n) && (N.set(t, null), y.set(t, (y.get(t) ?? 0) + 1), !0);
+            i = y.get(t);
+        return null != i && (null == n || i === n) && (y.set(t, null), N.set(t, (N.get(t) ?? 0) + 1), !0);
     },
     SET_CONVERSATION_FEEDBACK_RATING: function (e) {
         let { channelId: t, conversationId: n, rating: i } = e,
@@ -341,15 +350,15 @@ let L = new D(a.h, {
     },
     MESSAGE_DELETE: function (e) {
         let { channelId: t, id: n } = e;
-        return R(t, n);
+        return b(t, n);
     },
     MESSAGE_DELETE_BULK: function (e) {
         let { channelId: t, ids: n } = e,
             i = !1;
-        for (let e of n) R(t, e) && (i = !0);
+        for (let e of n) b(t, e) && (i = !0);
         return i;
     },
     LOGOUT: function () {
-        g.clear(), A.clear(), I.clear(), T.clear(), v.clear(), N.clear(), y.clear(), (S = null), (C = 0);
+        g.clear(), A.clear(), I.clear(), T.clear(), C.clear(), y.clear(), N.clear(), (S = null), (v = 0);
     },
 });

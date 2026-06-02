@@ -1,0 +1,33 @@
+.rewardPill_b9d8f0 {
+    align-items: center;
+    align-self: flex-start;
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-round);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    padding: var(--space-4) var(--space-12);
+    text-align: center
+}
+
+.rewardName_b9d8f0 {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.divider_b9d8f0 {
+    border-inline-start: 1px solid var(--border-subtle);
+    height: 100%;
+    margin: 0 var(--space-4)
+}
+
+.container_c4abe9 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: var(--space-24)
+}

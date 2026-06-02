@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { oq: () => p, ik: () => E, xI: () => f, WF: () => d, Eg: () => _, P7: () => h });
+n.d(t, { oq: () => p, qC: () => E, xI: () => h, WF: () => d, Eg: () => _, P7: () => f });
 var i = n(636537),
     r = n(228366),
     s = n(720149),
@@ -84,10 +84,10 @@ function u(e) {
 n(575279);
 var c = n(652215);
 function d(e) {
-    let { channelId: t, guildId: n, limit: s = 25, before: l, after: d, around: _, isStaleRefresh: f } = e;
+    let { channelId: t, guildId: n, limit: s = 25, before: l, after: d, around: _, isStaleRefresh: h } = e;
     if (!(0, o.uJ)(n, "fetch_channel_conversations")) return;
-    let h = null != _ ? "around" : null != d ? "after" : "before";
-    r.h.dispatch({ type: "CONVERSATIONS_FETCH_START", channelId: t, direction: h });
+    let f = null != _ ? "around" : null != d ? "after" : "before";
+    r.h.dispatch({ type: "CONVERSATIONS_FETCH_START", channelId: t, direction: f });
     let p = { limit: s };
     null != l && (p.before = l),
         null != d && (p.after = d),
@@ -98,11 +98,11 @@ function d(e) {
                     type: "CONVERSATIONS_FETCH_SUCCESS",
                     channelId: t,
                     conversations: e.body.conversations.map(u).filter(a.Vq),
-                    direction: h,
+                    direction: f,
                     beforeShortCircuited: e.body.before_short_circuited,
                     afterShortCircuited: e.body.after_short_circuited,
                     anchor: _ ?? l ?? d,
-                    isStaleRefresh: f ?? !1,
+                    isStaleRefresh: h ?? !1,
                 });
             },
             () => {
@@ -113,40 +113,40 @@ function d(e) {
 function _() {
     r.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 }
-function f(e, t, n) {
-    r.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: n }), E(e, t, n);
+function h(e, t, n) {
+    r.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: n }), E(e, t, n, { full: !0 });
     let i = l.A.getConversationMetadata(e, n);
     i?.conversation.startMessageId != null &&
         s.A.jumpToMessage({ channelId: e, messageId: i.conversation.startMessageId, flash: !1 });
 }
-function h(e, t) {
+function f(e, t) {
     r.h.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId: e, conversationId: t });
 }
 function p(e, t, n) {
     r.h.dispatch({ type: "SET_CONVERSATION_FEEDBACK_RATING", channelId: e, conversationId: t, rating: n });
 }
 async function E(e, t, n) {
-    if ((0, o.uJ)(t, "fetch_conversation") && l.A.getConversationMetadata(e, n)?.hydratedMessages == null) {
-        r.h.dispatch({ type: "CONVERSATION_FETCH_START", channelId: e, conversationId: n });
+    let { full: s = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    if (!(0, o.uJ)(t, "fetch_conversation")) return;
+    let a = l.A.getConversationMetadata(e, n);
+    if ((s ? a?.fullyHydrated !== !0 : a?.hydratedMessages == null) && !l.A.isConversationFetchPending(n, s)) {
+        r.h.dispatch({ type: "CONVERSATION_FETCH_START", channelId: e, conversationId: n, full: s });
         try {
             let t = await i.Bo.get({
-                    url: c.Rsh.CHANNEL_CONVERSATION(e, n),
-                    query: { include_messages: !0 },
-                    oldFormErrors: !0,
-                    rejectWithError: !0,
-                }),
-                s = u(t.body);
-            if (null == s)
-                return void r.h.dispatch({ type: "CONVERSATION_FETCH_FAILURE", channelId: e, conversationId: n });
+                url: c.Rsh.CHANNEL_CONVERSATION_MESSAGES(e, n),
+                query: s ? {} : { limit: 4 },
+                oldFormErrors: !0,
+                rejectWithError: !0,
+            });
             r.h.dispatch({
                 type: "CONVERSATION_FETCH_SUCCESS",
                 channelId: e,
                 conversationId: n,
-                conversation: s,
-                messages: t.body.messages ?? [],
+                messages: t.body.messages,
+                fullyHydrated: s,
             });
         } catch {
-            r.h.dispatch({ type: "CONVERSATION_FETCH_FAILURE", channelId: e, conversationId: n });
+            r.h.dispatch({ type: "CONVERSATION_FETCH_FAILURE", channelId: e, conversationId: n, full: s });
         }
     }
 }

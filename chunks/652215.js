@@ -1289,7 +1289,7 @@ let nw = "",
             return `/guilds/${e}/users/${t}/banners/${n}.${i}`;
         },
         CHANNEL_CONVERSATIONS: (e) => `/channels/${e}/conversations`,
-        CHANNEL_CONVERSATION: (e, t) => `/channels/${e}/conversations/${t}`,
+        CHANNEL_CONVERSATION_MESSAGES: (e, t) => `/channels/${e}/conversations/${t}/messages`,
         MESSAGES: (e) => `/channels/${e}/messages`,
         MESSAGES_GREET: (e) => `/channels/${e}/greet`,
         MESSAGES_ANNOUNCEMENT: (e) => `/channels/${e}/messages/announcement`,
