@@ -1554,7 +1554,7 @@ function nX(e) {
                                         onScroll: y,
                                         children: [
                                             v && (h ? (0, t.jsx)(nz, {}) : (0, t.jsx)(nH, {})),
-                                            (h || v) && (0, t.jsx)(nW, {}),
+                                            h && (0, t.jsx)(nW, {}),
                                             (0, t.jsx)(nK, {
                                                 heading: eL.intl.string(eL.t.x5CoXR),
                                                 disabled: o || j,
