@@ -336,7 +336,7 @@ let y = {
     [p.GaG.CHANNEL_OVERWRITE]: { [p.gGk.TYPE]: !0, [p.gGk.ID]: !0, [p.gGk.PERMISSION_OVERWRITES]: !0 },
     [p.GaG.INVITE]: { [p.gGk.INVITER_ID]: !0, [p.gGk.USES]: !0 },
     [p.GaG.WEBHOOK]: { [p.gGk.TYPE]: !0, [p.gGk.APPLICATION_ID]: !0 },
-    [p.GaG.INTEGRATION]: { [p.gGk.TYPE]: !0 },
+    [p.GaG.INTEGRATION]: { [p.gGk.TYPE]: !0, [p.gGk.NAME]: !0 },
     [p.GaG.THREAD]: { [p.gGk.ID]: !0, [p.gGk.TYPE]: !0 },
     [p.GaG.STICKER]: {
         [p.gGk.ID]: !0,
