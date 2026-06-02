@@ -220,6 +220,14 @@ class V extends r.Ay.PersistedStore {
         let i = w.find((t) => t.test(e.exePath));
         return null != i && (this.maybeTrackBlock(e, "pattern_match", i.source), !0);
     }
+    getBlockReason(e) {
+        if (null == e.exePath || "" === e.exePath) return null;
+        let t = e.exePath.toLowerCase(),
+            n = L.find((e) => t.includes(e));
+        if (null != n) return { matchedExe: n, matchedPattern: null };
+        let i = w.find((t) => t.test(e.exePath));
+        return null != i ? { matchedExe: null, matchedPattern: i.source } : null;
+    }
     maybeTrackApplicationLookupFallthrough(e, t, n) {
         let i = e.id;
         x.has(i) ||
