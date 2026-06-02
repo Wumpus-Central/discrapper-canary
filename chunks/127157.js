@@ -42,7 +42,6 @@ e.exports = {
     un: "disclaimerLight_c50f62",
     CU: "learnMoreLink_c50f62",
     On: "priceTag_c50f62",
-    pw: "priceTagContainer_c50f62",
     v7: "headingWithItemTypePill_c50f62",
     H$: "disabledReason_c50f62",
     Oj: "variantsContainer_c50f62",
