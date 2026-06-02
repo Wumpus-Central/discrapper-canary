@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { d1: () => C, PS: () => v, nL: () => D, Os: () => O, kv: () => y, Av: () => b, rK: () => R, TT: () => S });
+n.d(t, { Av: () => O, uz: () => C, d1: () => v, kv: () => N, nL: () => b, rK: () => R, TT: () => S });
 var i = n(77729),
     r = n(87955),
     s = n(735438),
@@ -64,7 +64,7 @@ class _ {
         (this._processing = !1), e && this._minimumTimeRemaining++;
     }
 }
-let f = {
+let h = {
         aa: "aa-ET",
         af: "af-ZA",
         ak: "ak-GH",
@@ -203,13 +203,13 @@ let f = {
         zh: "zh-CN",
         zu: "zu-ZA",
     },
-    h = new l.A("Spellchecker"),
+    f = new l.A("Spellchecker"),
     p = i.A?.spellCheck;
 function E(e) {
-    e = f[e] ?? e;
+    e = h[e] ?? e;
     let t = (0, r.parse)(e.replace(/[_-]/g, "-"));
     if (null == t || null == t.langtag.language || null == t.langtag.region)
-        return void h.error(`${e} is not a valid locale.`);
+        return void f.error(`${e} is not a valid locale.`);
     let { language: n, region: i } = t.langtag;
     return `${n.language.toLowerCase()}-${i.toUpperCase()}`;
 }
@@ -227,7 +227,7 @@ class m {
             let r = `${n}-${this.regionPreference}`;
             if (-1 !== e.indexOf(r)) this.setLocale(r);
             else {
-                let e = i[n] ?? f[t];
+                let e = i[n] ?? h[t];
                 null != e && this.setLocale(e);
             }
         })),
@@ -246,7 +246,7 @@ class m {
     }
     setLocale(e) {
         p.setLocale(e)?.then((t) => {
-            h.info(`Switching to ${e}`, t ? "(available)" : "(unavailable)");
+            f.info(`Switching to ${e}`, t ? "(available)" : "(unavailable)");
         });
     }
     setAppLocale(e) {
@@ -270,6 +270,9 @@ class m {
     }
     getCorrectionsForMisspelling(e, t) {
         return this.isMisspelled(e, t) ? this.corrections : [];
+    }
+    getCachedMisspelling() {
+        return { misspelledWord: this.misspelledWord, corrections: this.corrections };
     }
     replaceMisspelling(e) {
         p.replaceMisspelling(e);
@@ -298,34 +301,30 @@ function T() {
 function S() {
     return (0, I.isDesktop)() && T();
 }
-let N = S() ? A() : null;
-async function y(e) {
-    let t = await N;
+let y = S() ? A() : null;
+async function N(e) {
+    let t = await y;
     null != t && (t.enabled = e);
 }
-async function C(e) {
-    let t = await N;
+async function v(e) {
+    let t = await y;
     null != t && t.setLearnedWords(e);
 }
-async function v(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = await N;
-    return null != n && n.isMisspelled(e, t);
-}
-async function O(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 5,
-        i = await N;
-    return null == i ? [] : i.getCorrectionsForMisspelling(e, t).slice(0, n);
+async function C() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
+        t = await y;
+    if (null == t) return { misspelledWord: "", corrections: [] };
+    let { misspelledWord: n, corrections: i } = t.getCachedMisspelling();
+    return { misspelledWord: n, corrections: i.slice(0, e) };
 }
 async function R(e) {
-    let t = await N;
+    let t = await y;
     null != t && t.replaceMisspelling(e);
 }
-async function b(e) {
-    let t = await N;
+async function O(e) {
+    let t = await y;
     null != t && t.setAppLocale(e);
 }
-function D(e) {
+function b(e) {
     return T() ? (i.A.spellCheck.on("spellcheck-result", e) ?? (() => {})) : () => {};
 }

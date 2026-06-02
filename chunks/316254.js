@@ -1,102 +1,149 @@
-l.d(t, { A: () => L });
+l.d(t, { A: () => v });
 var n = l(627968),
     r = l(64700),
-    i = l(621466),
-    a = l(17928),
+    i = l(418781),
+    u = l.n(i),
+    a = l(621466),
+    c = l(17928),
     s = l(477782),
-    c = l(228366),
-    u = l(638128),
-    o = l(975571),
-    d = l(454235),
-    p = l(652215),
-    E = l(985018);
-function L(e) {
+    o = l(228366),
+    p = l(638128),
+    d = l(975571),
+    E = l(916260),
+    L = l(652215),
+    f = l(375708);
+function v(e) {
     let { text: t = "", target: l } = e,
-        L = (0, a.bG)([u.A], () => u.A.isEnabled()),
-        h = (0, a.bG)([u.A], () => u.A.hasLearnedWord(t), [t]),
-        b = r.useRef({ ...e, spellcheckEnabled: L });
-    b.current = { ...e, spellcheckEnabled: L };
-    let C = r.useRef(!1),
-        [f, A] = r.useState(!1),
-        [k, m] = r.useState([]),
-        H = r.useCallback(() => {
-            let { spellcheckEnabled: e, text: t, onHeightUpdate: l } = b.current;
+        i = (0, c.bG)([p.A], () => p.A.isEnabled()),
+        v = r.useRef({ ...e, spellcheckEnabled: i });
+    v.current = { ...e, spellcheckEnabled: i };
+    let T = r.useRef(!1),
+        [h, m] = r.useState(""),
+        [H, b] = r.useState([]),
+        A = "" !== t ? t : (0, a.vq)(l, HTMLInputElement) || (0, a.vq)(l, HTMLTextAreaElement) ? l.value : "",
+        g = (0, c.bG)([p.A], () => p.A.findLearnedWordIn(A), [A]),
+        x = r.useCallback(() => {
+            let { spellcheckEnabled: e, onHeightUpdate: t } = v.current;
             e &&
-                (0, d.TT)() &&
-                Promise.all([(0, d.PS)(t, !0), (0, d.Os)(t, !0)]).then((e) => {
-                    let [t, n] = e;
-                    C.current && (A(t), m(n), l());
+                (0, E.TT)() &&
+                (0, E.uz)().then((e) => {
+                    let { misspelledWord: l, corrections: n } = e;
+                    T.current && (m(l), b([...n]), t());
                 });
         }, []),
-        T = r.useCallback(() => {
-            if ((0, i.vq)(l, HTMLInputElement) || (0, i.vq)(l, HTMLTextAreaElement)) {
+        C = r.useCallback(() => {
+            if ((0, a.vq)(l, HTMLInputElement) || (0, a.vq)(l, HTMLTextAreaElement)) {
                 let { selectionStart: e, selectionEnd: t, value: n } = l;
                 (l.value = ""), (l.value = n), "email" !== l.type && ((l.selectionStart = e), (l.selectionEnd = t));
             }
         }, [l]);
-    return (r.useEffect(() => {
-        let e = (0, d.nL)(H);
-        return (
-            (C.current = !0),
-            () => {
-                (C.current = !1), e();
-            }
-        );
-    }, [H]),
-    r.useEffect(() => {
-        H();
-    }, [t, L, H]),
-    (0, d.TT)())
-        ? [
-              k.map((e, t) =>
-                  (0, n.jsx)(
-                      s.Dr,
-                      {
-                          id: `correction-${t}`,
-                          label: e,
+    if (
+        (r.useEffect(() => {
+            let e = (0, E.nL)(x);
+            return (
+                (T.current = !0),
+                () => {
+                    (T.current = !1), e();
+                }
+            );
+        }, [x]),
+        r.useEffect(() => {
+            x();
+        }, [i, x]),
+        !(0, E.TT)())
+    )
+        return [null, null];
+    let M = H.map((e, t) =>
+            (0, n.jsx)(
+                s.Dr,
+                {
+                    id: `correction-${t}`,
+                    label: e,
+                    action: () => {
+                        (0, a.vq)(l, HTMLInputElement) || (0, a.vq)(l, HTMLTextAreaElement)
+                            ? (function (e, t, l) {
+                                  let n,
+                                      r,
+                                      i = e.selectionStart ?? e.value.length,
+                                      c = (function (e, t, l) {
+                                          if ("" === t) return null;
+                                          let n = RegExp(`(?<![\\p{L}\\p{N}_])${u()(t)}(?![\\p{L}\\p{N}_])`, "gu"),
+                                              r = null,
+                                              i = 1 / 0;
+                                          for (let u of e.matchAll(n)) {
+                                              let e = u.index,
+                                                  n = e + t.length,
+                                                  a = l < e ? e - l : l > n ? l - n : 0;
+                                              a < i && ((i = a), (r = [e, n]));
+                                          }
+                                          return r;
+                                      })(e.value, t, i);
+                                  if (null == c) {
+                                      (0, E.rK)(l), e.focus();
+                                      return;
+                                  }
+                                  let [s, o] = c,
+                                      p = e.value.slice(0, s) + l + e.value.slice(o);
+                                  if (
+                                      ((n = (0, a.vq)(e, HTMLTextAreaElement)
+                                          ? HTMLTextAreaElement.prototype
+                                          : HTMLInputElement.prototype),
+                                      null != (r = Object.getOwnPropertyDescriptor(n, "value")?.set)
+                                          ? r.call(e, p)
+                                          : (e.value = p),
+                                      e.dispatchEvent(new Event("input", { bubbles: !0 })),
+                                      e.focus(),
+                                      "email" !== e.type)
+                                  ) {
+                                      let t = s + l.length;
+                                      (e.selectionStart = t), (e.selectionEnd = t);
+                                  }
+                              })(l, h, e)
+                            : ((0, E.rK)(e), (0, a.vq)(l, HTMLElement) && l.focus());
+                    },
+                },
+                `correction-${t}`,
+            ),
+        ),
+        y = "" !== h;
+    return [
+        M,
+        (0, n.jsxs)(n.Fragment, {
+            children: [
+                y
+                    ? (0, n.jsx)(s.Dr, {
+                          id: "add-to-dictionary",
+                          label: f.intl.string(f.t.HJmG1G),
                           action: () => {
-                              (0, d.rK)(e), l.focus();
+                              o.h.dispatch({ type: "SPELLCHECK_LEARN_WORD", word: h }), C();
                           },
-                      },
-                      `correction-${t}`,
-                  ),
-              ),
-              (0, n.jsxs)(n.Fragment, {
-                  children: [
-                      f
-                          ? (0, n.jsx)(s.Dr, {
-                                id: "add-to-dictionary",
-                                label: E.intl.string(E.t.HJmG1G),
-                                action: () => {
-                                    c.h.dispatch({ type: "SPELLCHECK_LEARN_WORD", word: t }), T();
-                                },
-                            })
-                          : null,
-                      h &&
-                          (0, n.jsx)(s.Dr, {
-                              id: "remove-from-dictionary",
-                              label: E.intl.string(E.t.xXqIX0),
-                              action: () => {
-                                  c.h.dispatch({ type: "SPELLCHECK_UNLEARN_WORD", word: t }), T();
-                              },
-                          }),
-                      (0, n.jsx)(s.sL, {
-                          id: "spellcheck",
-                          label: E.intl.string(E.t.TKkotf),
-                          checked: L,
+                      })
+                    : null,
+                null == g || y
+                    ? null
+                    : (0, n.jsx)(s.Dr, {
+                          id: "remove-from-dictionary",
+                          label: f.intl.string(f.t.xXqIX0),
                           action: () => {
-                              c.h.dispatch({ type: "SPELLCHECK_TOGGLE" }), T();
+                              o.h.dispatch({ type: "SPELLCHECK_UNLEARN_WORD", word: g }), C();
                           },
                       }),
-                      L
-                          ? (0, n.jsx)(s.Dr, {
-                                id: "languages",
-                                label: E.intl.string(E.t.OlOHDH),
-                                action: () => window.open(o.A.getArticleURL(p.MVz.SPELLCHECK)),
-                            })
-                          : null,
-                  ],
-              }),
-          ]
-        : [null, null];
+                (0, n.jsx)(s.sL, {
+                    id: "spellcheck",
+                    label: f.intl.string(f.t.TKkotf),
+                    checked: i,
+                    action: () => {
+                        o.h.dispatch({ type: "SPELLCHECK_TOGGLE" }), C();
+                    },
+                }),
+                i
+                    ? (0, n.jsx)(s.Dr, {
+                          id: "languages",
+                          label: f.intl.string(f.t.OlOHDH),
+                          action: () => window.open(d.A.getArticleURL(L.MVz.SPELLCHECK)),
+                      })
+                    : null,
+            ],
+        }),
+    ];
 }
