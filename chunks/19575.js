@@ -558,9 +558,6 @@ let W = {
                 await I.fileManager.maybeDownloadClipsFile(e, t, n)
             );
         },
-        stopClipsDownloads() {
-            I.fileManager.stopClipsDownloads();
-        },
         canCheckClipsFilesExist: () => "function" == typeof I.fileManager.checkClipsFilesExist,
         checkClipsFilesExist: async (e) => await I.fileManager.checkClipsFilesExist(e),
         cleanupUnusedClipsFiles: async (e) => await I.fileManager.cleanupUnusedClipsFiles(e),

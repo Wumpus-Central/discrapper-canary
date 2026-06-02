@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => ee });
+n.d(t, { A: () => et });
 var i,
     r = n(691540),
     s = n(97483),
@@ -12,7 +12,7 @@ var i,
     _ = n(652896),
     h = n(616356),
     f = n(495544),
-    p = n(761853),
+    p = n(728555),
     E = n(741394),
     m = n(19575),
     g = n(459838),
@@ -205,33 +205,33 @@ class B {
     state = { assets: {}, assetState: {}, catalogLastFetchTime: void 0, catalogFetchFailed: !1 };
     activeDownloads = new Map();
     catalogRefreshing = !1;
-    started = !1;
-    start() {
-        !this.started &&
-            ((this.started = !0),
-            V.info("Clips asset manager started"),
-            (0, L.TD)() && (V.info("Clips enabled on startup, prefetching assets"), this.maybePrefetchAssets()));
-    }
-    stop() {
-        m.Ay.stopClipsDownloads(),
-            this.activeDownloads.clear(),
-            (this.started = !1),
-            V.info("Clips asset manager stopped");
-    }
-    getAssetState(e) {
-        return this.state.assetState[e];
+    downloadRunning = !1;
+    downloadPromise = null;
+    async start() {
+        if ((V.info("Clips asset manager started"), !(0, L.TD)() || !(0, v.isWindows)() || __OVERLAY__))
+            return { allAssetsDownloaded: !1 };
+        if (null != this.downloadPromise && (this.downloadRunning || this.areAllAssetsDownloaded()))
+            await this.downloadPromise;
+        else {
+            V.info("Clips enabled on startup, prefetching assets"), (this.downloadRunning = !0);
+            try {
+                (this.downloadPromise = this.maybePrefetchAssets()), await this.downloadPromise;
+            } finally {
+                this.downloadRunning = !1;
+            }
+        }
+        return { allAssetsDownloaded: this.areAllAssetsDownloaded() };
     }
     areAllAssetsDownloaded() {
         let e = Object.values(this.state.assetState);
         return e.length > 0 && e.every((e) => e.status === G.DOWNLOADED);
     }
     async maybePrefetchAssets() {
-        if (!__OVERLAY__ && (0, v.isWindows)())
-            try {
-                await this.refreshCatalog(), await this.prefetchAssets();
-            } catch (e) {
-                V.warn(`Failed to prefetch clips assets: ${e.message}`);
-            }
+        try {
+            await this.refreshCatalog(), await this.prefetchAssets();
+        } catch (e) {
+            V.warn(`Failed to prefetch clips assets: ${e.message}`);
+        }
     }
     async refreshCatalog() {
         if (!this.catalogRefreshing)
@@ -266,7 +266,6 @@ class B {
             this.state.assetState[e] = { status: n ? G.DOWNLOADED : G.MISSING };
     }
     async prefetchAssets() {
-        if (__OVERLAY__) return;
         let e = this.state.assets,
             t = [];
         for (let [n, i] of Object.entries(e)) {
@@ -317,8 +316,9 @@ var Y = n(227628),
 let $ = !1,
     z = null,
     q = null,
-    X = null;
-function Z() {
+    X = null,
+    Z = null;
+function Q() {
     let e = (0, b.qi)(),
         t = (0, b.$i)(),
         n = q !== e,
@@ -326,13 +326,27 @@ function Z() {
     if (!n && !i) return;
     let r = p.Ay.getMediaEngine();
     n && r.setClipsV3Enabled(e),
-        i && r.setClipsV3MLEnabled(t),
         w.nx.info(`clips v3 runtime flags pushed: v3=${e} (was ${q}), ml=${t} (was ${X})`),
         (q = e),
         (X = t),
-        e && t && H.start();
+        e &&
+            (t
+                ? (null === Z &&
+                      (w.nx.info("clips v3 ml flag set ml=false until download complete"),
+                      r.setClipsV3MLEnabled(!1),
+                      (Z = !1)),
+                  (async () => {
+                      let { allAssetsDownloaded: e } = await H.start(),
+                          t = e && X;
+                      Z !== t &&
+                          (w.nx.info(`clips v3 ml flag set ml=${t} (was ${Z}). allAssetsDownloaded=${e}`),
+                          r.setClipsV3MLEnabled(t),
+                          (Z = t));
+                  })())
+                : !1 !== Z &&
+                  (w.nx.info(`clips v3 ml flag set ml=false (was ${Z})`), r.setClipsV3MLEnabled(!1), (Z = !1)));
 }
-class Q extends x {
+class J extends x {
     constructor() {
         super(),
             Object.assign(this.actions, {
@@ -388,7 +402,7 @@ class Q extends x {
                         this.fireClipsInitEvent();
                 }
             };
-        Z(),
+        Q(),
             !(0, b.qi)() || $
                 ? n()
                 : ($
@@ -397,7 +411,7 @@ class Q extends x {
                         ? z
                         : (z = (async () => {
                               try {
-                                  Z(), await m.Ay.ensureModule("discord_clips");
+                                  Q(), await m.Ay.ensureModule("discord_clips");
                                   let e = m.Ay.requireModule("discord_clips").getModulePath(),
                                       t = p.Ay.getMediaEngine(),
                                       n = m.Ay.getClipsDataDirSync();
@@ -453,13 +467,13 @@ class Q extends x {
             e !== R.he &&
             j
                 .Fb(e)
-                .then(() => J())
+                .then(() => ee())
                 .catch((e) => {
                     w.nx.error("Failed to load clips directory on connection open", e);
                 });
     }
 }
-async function J() {
+async function ee() {
     if (R.Ay.hasClips() || null == o.A || null == o.A.app) return;
     let e = await o.A.app.getPath("documents");
     if (R.Ay.getSettings().storageLocation === e)
@@ -470,4 +484,4 @@ async function J() {
             w.nx.error("Failed to resolve videos path for old default storage migration", e);
         }
 }
-let ee = new Q();
+let et = new J();

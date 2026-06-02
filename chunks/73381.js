@@ -1,43 +1,44 @@
-r.d(t, { A: () => h }), r(321073);
-var n = r(64700),
-    a = r(512750),
-    i = r(17928),
-    l = r(488803),
-    o = r(522055),
-    s = r(881756),
-    d = r(568065),
-    c = r(800007),
-    u = r(576709),
-    m = r(375708);
-let p =
+"use strict";
+n.d(t, { A: () => E }), n(321073);
+var i = n(64700),
+    r = n(512750),
+    s = n(17928),
+    a = n(488803),
+    o = n(522055),
+    l = n(881756),
+    u = n(568065),
+    c = n(800007),
+    d = n(576709),
+    _ = n(375708);
+let h =
     "https://cdn.discordapp.com/assets/content/2b844e74bd90a5e0ccb408b039a4915f295d8b9c192c823a4afc69c1fc3604a2.png";
-var E = r(645619);
-let _ = new Set([...Array.from(d.aH), ...Array.from(d.m_), a.FB]);
-function h(e) {
-    let t = (0, i.bG)([E.A], () => E.A.getStateForGuild(e)?.powerupCatalog?.[d.o9.PERK]),
-        r = (function (e) {
-            let t = (0, l.C$)(e, "useGameServerPerk"),
-                r = (0, i.bG)([o.A], () => o.A.getLowestGameCostForGuild(e)),
-                { gameName: a, gameName2: E } = (0, s.A)();
-            return n.useMemo(
+var f = n(645619);
+let p = new Set([...Array.from(u.aH), ...Array.from(u.m_), r.FB]);
+function E(e) {
+    let t = (0, s.bG)([f.A], () => f.A.getStateForGuild(e)?.powerupCatalog?.[u.o9.PERK]),
+        n = (function (e) {
+            let t = (0, a.C$)(e, "useGameServerPerk"),
+                n = (0, s.bG)([o.A], () => o.A.getLowestGameCostForGuild(e)),
+                { gameName: r, gameName2: f } = (0, l.A)();
+            return i.useMemo(
                 () =>
-                    t && null != r
+                    t && null != n
                         ? {
                               skuId: c.W5,
-                              title: m.intl.string(u.default["B3OfL/"]),
-                              description: m.intl.format(u.default["+UqyGU"], { gameName: a, gameName2: E }),
-                              cost: r,
+                              title: _.intl.string(d.default["B3OfL/"]),
+                              description: _.intl.format(d.default["+UqyGU"], { gameName: r, gameName2: f }),
+                              cost: n,
                               dependencies: [],
-                              type: d.o9.PERK,
-                              animatedImageUrl: p,
-                              staticImageUrl: p,
+                              type: u.o9.PERK,
+                              animatedImageUrl: h,
+                              staticImageUrl: h,
                           }
                         : null,
-                [t, r, a, E],
+                [t, n, r, f],
             );
         })(e);
-    return n.useMemo(() => {
+    return i.useMemo(() => {
         let e = [...(t ?? [])];
-        return null != r && e.push(r), e.filter((e) => !_.has(e.skuId));
-    }, [t, r]);
+        return null != n && e.push(n), e.filter((e) => !p.has(e.skuId));
+    }, [t, n]);
 }
