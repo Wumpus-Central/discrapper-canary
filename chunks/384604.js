@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"QwW8zd":["Cr\xe9er un post"],"DxwBMf":[[8,"$p",["Cr\xe9e un espace pour inviter d\'autres personnes."]]],"F5YBmi":["Tout s\xe9lectionner"],"h/GwWL":["Invitations \xe0 jouer"],"LFHDVw":["Publier chat vocal"],"/mEbGf":["Description"],"SU/IAE":["Ajoute plus de d\xe9tails sur ta session de jeu"],"EBSaL4":["Lier un compte"],"yoIAe/":["Ajoute des tags d\xe9finir l\'ambiance et ce que tu cherches"],"tOsHsu":["Cr\xe9er un post"],"G91SYQ":["Tu peux d\xe9marrer un appel que d\'autres peuvent rejoindre"],"0s2ICk":["Ajoute un tag \xab\xa0",[1,"noMicTagName"],"\xa0\xbb \xe0 ce salon pour activer cette fonction"],"Xd2NFi":["Chat vocal"]}',
+);

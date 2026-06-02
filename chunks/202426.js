@@ -1,0 +1,3 @@
+a.exports = JSON.parse(
+    '{"QwW8zd":["Skapa post"],"DxwBMf":["Skapa ett utrymme f\xf6r att bjuda in andra."],"F5YBmi":["V\xe4lj alla"],"h/GwWL":["Spelinbjudningar"],"LFHDVw":["Posta r\xf6stchatt"],"/mEbGf":["Beskrivning"],"SU/IAE":["L\xe4gg till fler detaljer om din spelsession"],"EBSaL4":["L\xe4nka konto"],"yoIAe/":["L\xe4gg till taggar f\xf6r k\xe4nsla och vad du letar efter"],"tOsHsu":["Skapa post"],"G91SYQ":["Du kan starta ett samtal som andra kan g\xe5 med i"],"0s2ICk":["L\xe4gg till en \u201D",[1,"noMicTagName"],"\u201D-tagg i den h\xe4r kanalen f\xf6r att aktivera det h\xe4r reglaget"],"Xd2NFi":["R\xf6stchatt"]}',
+);

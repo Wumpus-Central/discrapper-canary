@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"QwW8zd":["Post erstellen"],"DxwBMf":["Erstelle einen Ort, um andere einzuladen."],"F5YBmi":["Alles ausw\xe4hlen"],"h/GwWL":["Spieleinladungen"],"LFHDVw":["Sprachchat\xa0posten"],"/mEbGf":["Beschreibung"],"SU/IAE":["F\xfcge mehr Details \xfcber deine Spielsitzung hinzu."],"EBSaL4":["Account verkn\xfcpfen"],"yoIAe/":["F\xfcge Tags f\xfcr Vibes und das, was du suchst, hinzu."],"tOsHsu":["Post erstellen"],"G91SYQ":["Du kannst einen Anruf starten, dem andere beitreten k\xf6nnen."],"0s2ICk":["F\xfcge diesem Kanal den Tag \u201E",[1,"noMicTagName"],"\u201C hinzu, um diese Umschaltfunktion zu aktivieren."],"Xd2NFi":["Sprachchat"]}',
+);

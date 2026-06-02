@@ -1,0 +1,3 @@
+o.exports = JSON.parse(
+    '{"QwW8zd":["Utw\xf3rz post"],"DxwBMf":["Utw\xf3rz przestrze\u0144, do kt\xf3rej mo\u017Cesz zaprosi\u0107 innych."],"F5YBmi":["Wybierz wszystko"],"h/GwWL":["Zaproszenia do gier"],"LFHDVw":["Opublikuj czat g\u0142osowy"],"/mEbGf":["Opis"],"SU/IAE":["Dodaj wi\u0119cej informacji o swojej sesji gry"],"EBSaL4":["Po\u0142\u0105cz konto"],"yoIAe/":["Dodaj tagi dotycz\u0105ce klimatu i tego, czego szukasz"],"tOsHsu":["Utw\xf3rz post"],"G91SYQ":["Mo\u017Cesz rozpocz\u0105\u0107 rozmow\u0119, do kt\xf3rej inni mog\u0105 do\u0142\u0105czy\u0107"],"0s2ICk":["Dodaj tag \u201E",[1,"noMicTagName"],"\u201D do tego kana\u0142u, aby w\u0142\u0105czy\u0107 ten prze\u0142\u0105cznik"],"Xd2NFi":["Czat g\u0142osowy"]}',
+);

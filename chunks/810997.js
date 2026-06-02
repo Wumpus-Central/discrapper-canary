@@ -1,0 +1,3 @@
+a.exports = JSON.parse(
+    '{"QwW8zd":["Criar postagem"],"DxwBMf":["Crie um espa\xe7o para convidar mais pessoas."],"F5YBmi":["Selecionar tudo"],"h/GwWL":["Convites de jogo"],"LFHDVw":["Postagem de chat de voz"],"/mEbGf":["Descri\xe7\xe3o"],"SU/IAE":["Adicione mais detalhes sobre a sua sess\xe3o de jogo"],"EBSaL4":["Vincular conta"],"yoIAe/":["Adicione tags para vibes e o que voc\xea est\xe1 procurando"],"tOsHsu":["Criar postagem"],"G91SYQ":["Voc\xea pode iniciar uma chamada \xe0 qual outros podem se juntar"],"0s2ICk":["Adicionar uma tag \u201C",[1,"noMicTagName"],"\u201D a este canal para ativar a op\xe7\xe3o"],"Xd2NFi":["Chat de voz"]}',
+);

@@ -1,0 +1,3 @@
+e.exports = JSON.parse(
+    '{"QwW8zd":["Post maken"],"DxwBMf":["Cre\xeber een ruimte en nodig anderen uit."],"F5YBmi":["Alles selecteren"],"h/GwWL":["Game-uitnodigingen"],"LFHDVw":["Voicechat plaatsen"],"/mEbGf":["Beschrijving"],"SU/IAE":["Voeg meer details toe over je gamesessie"],"EBSaL4":["Koppel account"],"yoIAe/":["Voeg tags toe voor de vibes en om te vinden wat je zoekt"],"tOsHsu":["Post maken"],"G91SYQ":["Je kunt een oproep starten waaraan anderen kunnen deelnemen"],"0s2ICk":["Voeg een \'",[1,"noMicTagName"],"\'-tag toe aan dit kanaal om deze schakelaar te activeren"],"Xd2NFi":["Voicechat"]}',
+);

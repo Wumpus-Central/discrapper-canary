@@ -1,0 +1,3 @@
+a.exports = JSON.parse(
+    '{"QwW8zd":["G\xf6nderi Olu\u015Ftur"],"DxwBMf":["Ba\u015Fkalar\u0131n\u0131 davet etmek i\xe7in bir alan olu\u015Ftur."],"F5YBmi":["Hepsini Se\xe7"],"h/GwWL":["Oyun Davetleri"],"LFHDVw":["Sesli Sohbeti Payla\u015F"],"/mEbGf":["A\xe7\u0131klama"],"SU/IAE":["Oyun oturumun hakk\u0131nda daha fazla ayr\u0131nt\u0131 ekle"],"EBSaL4":["Hesab\u0131 Ba\u011Fla"],"yoIAe/":["Arad\u0131\u011F\u0131n i\xe7eriklere ve ortama dair etiketler ekle"],"tOsHsu":["G\xf6nderi olu\u015Ftur"],"G91SYQ":["Ba\u015Fkalar\u0131n\u0131n kat\u0131labilece\u011Fi bir arama ba\u015Flatabilirsin"],"0s2ICk":["Bu kanalda bu ayar\u0131 etkinle\u015Ftirmek i\xe7in \\"",[1,"noMicTagName"],"\\" etiketi ekle"],"Xd2NFi":["Sesli Sohbet"]}',
+);
