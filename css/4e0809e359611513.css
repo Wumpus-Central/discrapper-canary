@@ -1,0 +1,10 @@
+.warningInput__7b22b {
+    --input-background-default: var(--background-feedback-warning);
+    --input-border-default: var(--icon-feedback-warning);
+    --input-border-active: var(--icon-feedback-warning);
+    --input-border-hover: var(--icon-feedback-warning)
+}
+
+.warningText__7b22b {
+    color: var(--icon-feedback-warning)
+}

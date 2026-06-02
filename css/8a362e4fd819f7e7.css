@@ -31,7 +31,7 @@
 .labels_b39700 {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end
+    justify-content: space-between
 }
 
 .tierIcon_b39700 {
@@ -78,41 +78,59 @@
 
 .tierIcon_cda434 {
     -o-object-fit: contain;
-    object-fit: contain
+    object-fit: contain;
+    padding: 16px
 }
 
 .content_e6ca69 {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    justify-content: center;
-    padding: 32px
+    gap: 16px;
+    justify-content: center
 }
 
-.progressRow_e6ca69 {
+.progress_e6ca69 {
+    box-sizing: border-box;
     padding: 16px;
     width: 100%
 }
 
 .messageSection_e6ca69 {
-    gap: 8px
-}
-
-.levelUpCopy_e6ca69,
-.messageSection_e6ca69 {
     align-items: center;
     display: flex;
     flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
     text-align: center;
     width: 100%
 }
 
-.levelUpCopy_e6ca69 {
-    gap: 12px
+.description_e6ca69 {
+    margin: 0 32px
+}
+
+.levelUpBody_e6ca69 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 24px;
+    text-align: center;
+    width: 100%
 }
 
 .badgeIcon_e6ca69 {
     -o-object-fit: contain;
     object-fit: contain
+}
+
+.levelUpProgress_e6ca69 {
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    margin-top: 12px;
+    padding: 0 48px
+}
+
+.levelUpDescription_e6ca69 {
+    padding: 16px 48px
 }

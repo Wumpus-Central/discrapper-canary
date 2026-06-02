@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { Ay: () => I, HB: () => f, Xz: () => g, e$: () => m, nt: () => h });
+n.d(t, { Ay: () => g, HB: () => E, Xz: () => m, e$: () => p, nt: () => f });
 var i = n(636537),
     r = n(873298),
     s = n(228366),
-    a = n(693477),
+    a = n(859040),
     o = n(159201),
     l = n(761821),
-    _ = n(954571),
-    d = n(842144),
-    u = n(191627),
-    c = n(652215);
-async function E(e) {
+    u = n(174459),
+    c = n(842144),
+    d = n(191627),
+    _ = n(652215);
+async function h(e) {
     let t = new Set();
     e.forEach((e) => {
         if (null != e.invoice_items && e.invoice_items.length > 0) {
@@ -20,9 +20,9 @@ async function E(e) {
     }),
         await Promise.all(Array.from(t).map((e) => (0, a.RE)(e)));
 }
-async function h(e, t) {
+async function f(e, t) {
     await i.Bo.patch({
-        url: c.Rsh.FAMILY_CENTER_LINKED_USERS,
+        url: _.Rsh.FAMILY_CENTER_LINKED_USERS,
         body: { linked_user_id: e, link_status: t },
         rejectWithError: !1,
     }).then((e) => {
@@ -30,8 +30,8 @@ async function h(e, t) {
         return s.h.dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS", linkedUsers: t }), t;
     });
 }
-async function m(e) {
-    await i.Bo.del({ url: c.Rsh.FAMILY_CENTER_LINKED_USERS, body: { linked_user_id: e }, rejectWithError: !1 }).then(
+async function p(e) {
+    await i.Bo.del({ url: _.Rsh.FAMILY_CENTER_LINKED_USERS, body: { linked_user_id: e }, rejectWithError: !1 }).then(
         (t) => {
             let { body: n } = t;
             return (
@@ -40,20 +40,20 @@ async function m(e) {
         },
     );
 }
-async function f() {
-    await i.Bo.get({ url: c.Rsh.FAMILY_CENTER_LINK_CODE, rejectWithError: !1 }).then((e) => {
+async function E() {
+    await i.Bo.get({ url: _.Rsh.FAMILY_CENTER_LINK_CODE, rejectWithError: !1 }).then((e) => {
         let { body: t } = e,
             n = t.link_code;
         return s.h.dispatch({ type: "FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS", linkCode: n }), n;
     });
 }
-async function g() {
-    await i.Bo.post({ url: c.Rsh.FAMILY_CENTER_SHARE_IAR_WITH_PARENTS, rejectWithError: !0 });
+async function m() {
+    await i.Bo.post({ url: _.Rsh.FAMILY_CENTER_SHARE_IAR_WITH_PARENTS, rejectWithError: !0 });
 }
-let I = {
+let g = {
     async initialPageLoad() {
         s.h.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
-        let { body: e } = await i.Bo.get({ url: c.Rsh.FAMILY_CENTER_TEEN_ACTIVITY_ME, rejectWithError: !1 }),
+        let { body: e } = await i.Bo.get({ url: _.Rsh.FAMILY_CENTER_TEEN_ACTIVITY_ME, rejectWithError: !1 }),
             { teen_audit_log: t, linked_users: n, users: r, age_group: a } = e,
             o = {
                 teenId: t?.teen_user_id,
@@ -66,10 +66,12 @@ let I = {
                 topGuildActivities: t?.top_guild_activities ?? [],
                 totalSpendAmount: t?.total_spend?.amount ?? null,
                 totalSpendCurrency: t?.total_spend?.currency ?? null,
+                spendingLimit: e.spending_limit ?? null,
+                monthlyPurchases: e.monthly_purchases ?? null,
                 invoices: t?.invoices ?? [],
             };
         return (
-            null != o.invoices && o.invoices.length > 0 && (await E(o.invoices)),
+            null != o.invoices && o.invoices.length > 0 && (await h(o.invoices)),
             s.h.dispatch({
                 type: "FAMILY_CENTER_INITIAL_LOAD",
                 familyCenterTeenActivity: o,
@@ -88,13 +90,13 @@ let I = {
         );
     },
     async fetchLinkedUsers() {
-        let { body: e } = await i.Bo.get({ url: c.Rsh.FAMILY_CENTER_LINKED_USERS, rejectWithError: !1 }),
+        let { body: e } = await i.Bo.get({ url: _.Rsh.FAMILY_CENTER_LINKED_USERS, rejectWithError: !1 }),
             t = { linkedUsers: e.linked_users, users: e.users };
         return s.h.dispatch({ type: "FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS", ...t }), t;
     },
     async requestLink(e, t) {
         let { body: n } = await i.Bo.post({
-                url: c.Rsh.FAMILY_CENTER_LINKED_USERS,
+                url: _.Rsh.FAMILY_CENTER_LINKED_USERS,
                 body: { recipient_id: e, code: t },
                 rejectWithError: !1,
             }),
@@ -103,7 +105,7 @@ let I = {
     },
     async fetchTeenActivity(e) {
         s.h.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
-        let t = c.Rsh.FAMILY_CENTER_TEEN_ACTIVITY(e),
+        let t = _.Rsh.FAMILY_CENTER_TEEN_ACTIVITY(e),
             { body: n } = await i.Bo.get({ url: t, rejectWithError: !1 }),
             r = n.teen_audit_log,
             a = {
@@ -117,10 +119,12 @@ let I = {
                 topGuildActivities: r.top_guild_activities ?? [],
                 totalSpendAmount: r?.total_spend?.amount ?? null,
                 totalSpendCurrency: r?.total_spend?.currency ?? null,
+                spendingLimit: n.spending_limit ?? null,
+                monthlyPurchases: n.monthly_purchases ?? null,
                 invoices: r?.invoices ?? [],
             };
         return (
-            a.invoices && a.invoices.length > 0 && (await E(a.invoices)),
+            a.invoices && a.invoices.length > 0 && (await h(a.invoices)),
             s.h.dispatch({ type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS", familyCenterTeenActivity: a }),
             null != n.restricted_schedule &&
                 s.h.dispatch({
@@ -133,7 +137,7 @@ let I = {
     },
     async fetchMoreTeenActivity(e, t, n, r) {
         let { body: a } = await i.Bo.get({
-                url: c.Rsh.FAMILY_CENTER_TEEN_ACTIVITY_MORE(e, t, n, r),
+                url: _.Rsh.FAMILY_CENTER_TEEN_ACTIVITY_MORE(e, t, n, r),
                 rejectWithError: !1,
             }),
             { teen_audit_log: o } = a,
@@ -150,8 +154,8 @@ let I = {
                 invoices: o?.invoices ?? [],
             };
         return (
-            _.default.track(c.HAw.FAMILY_CENTER_ACTION, {
-                action: u.qb.LoadMore,
+            u.default.track(_.HAw.FAMILY_CENTER_ACTION, {
+                action: d.qb.LoadMore,
                 selected_teen_id: e,
                 action_display_type: t,
             }),
@@ -163,7 +167,7 @@ let I = {
         s.h.dispatch({ type: "FAMILY_CENTER_HANDLE_TAB_SELECT", tab: e });
     },
     fetchTeenSettingsAndConsents: (e) =>
-        i.Bo.get({ url: c.Rsh.FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS(e), rejectWithError: !1 }).then((t) => {
+        i.Bo.get({ url: _.Rsh.FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS(e), rejectWithError: !1 }).then((t) => {
             let { body: n } = t,
                 { settings: i, consents: r } = n;
             s.h.dispatch({
@@ -175,20 +179,20 @@ let I = {
         }),
     async updateTeenSettings(e, t, n) {
         let a = (0, o.f)(r.nT, t),
-            _ = d.A.getSettings(e)?.[t],
-            u = (0, o.a)(_, n, a, r.nT, t);
-        if (null == u) return;
-        let { body: E } = await i.Bo.patch({
-                url: c.Rsh.FAMILY_CENTER_TEEN_SETTINGS(e),
-                body: { settings: (0, l.ob)(r.nT, u) },
+            u = c.A.getSettings(e)?.[t],
+            d = (0, o.a)(u, n, a, r.nT, t);
+        if (null == d) return;
+        let { body: h } = await i.Bo.patch({
+                url: _.Rsh.FAMILY_CENTER_TEEN_SETTINGS(e),
+                body: { settings: (0, l.ob)(r.nT, d) },
                 rejectWithError: !1,
             }),
-            { settings: h } = E;
-        s.h.dispatch({ type: "FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS", userId: e, settings: h });
+            { settings: f } = h;
+        s.h.dispatch({ type: "FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS", userId: e, settings: f });
     },
     updateTeenConsents: (e, t, n) =>
         i.Bo.patch({
-            url: c.Rsh.FAMILY_CENTER_TEEN_CONSENTS(e),
+            url: _.Rsh.FAMILY_CENTER_TEEN_CONSENTS(e),
             body: { grant: t, revoke: n },
             rejectWithError: !1,
         }).then((t) => {

@@ -1,0 +1,1 @@
+p.exports = { B: "warningInput__7b22b", i: "warningText__7b22b" };

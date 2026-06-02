@@ -1,61 +1,78 @@
 r.d(t, {
-    ES: () => n,
-    kf: () => _,
-    oQ: () => v,
+    ES: () => v,
+    fD: () => h,
+    kf: () => S,
+    oQ: () => m,
     p7: () => d,
-    qz: () => o,
-    sM: () => l,
-    up: () => g,
-    yH: () => I,
-    yr: () => y,
+    qz: () => y,
+    sM: () => o,
+    up: () => f,
+    yH: () => _,
+    yr: () => g,
 });
-var a = r(406935),
-    c = r(52133),
-    s = r(885386),
-    i = r(408418),
-    p = r(750714),
-    u = r(652215);
-let d = (0, i.r)("textAndImages", "explicitContentSettings", s.Iv, s.Vv, { comparator: c.A }),
-    l = (0, i.r)(
+var a = r(873298),
+    i = r(406935),
+    u = r(52133),
+    c = r(583538),
+    n = r(885386),
+    s = r(408418),
+    l = r(750714),
+    p = r(652215);
+let d = (0, s.r)("textAndImages", "explicitContentSettings", n.Iv, n.Vv, { comparator: u.A }),
+    o = (0, s.r)(
         "textAndImages",
         "explicitContentFilter",
-        (e) => e?.value ?? p.Je.NON_FRIENDS,
-        (e) => a.ZQ.create({ value: e }),
+        (e) => e?.value ?? l.Je.NON_FRIENDS,
+        (e) => i.ZQ.create({ value: e }),
     ),
-    v = (0, i.r)("textAndImages", "goreContentSettings", s.NF, s._8, { comparator: c.A }),
-    n = (0, i.r)(
+    m = (0, s.r)("textAndImages", "goreContentSettings", n.NF, n._8, { comparator: u.A }),
+    v = (0, s.r)(
         "privacy",
         "defaultMessageRequestRestricted",
         (e) => e?.value,
-        (e) => a._t.create({ value: e }),
+        (e) => i._t.create({ value: e }),
     ),
-    o = (0, i.r)(
+    y = (0, s.r)(
         "privacy",
         "defaultGuildsRestricted",
         (e) => e ?? !1,
         (e) => e,
     ),
-    y = (0, i.r)(
+    g = (0, s.r)(
         "privacy",
         "defaultGuildsRestrictedV2",
         (e) => e?.value,
-        (e) => a._t.create({ value: e }),
+        (e) => i._t.create({ value: e }),
     ),
-    g = (0, i.r)(
+    f = (0, s.r)(
         "privacy",
         "friendSourceFlags",
-        (e) => e?.value ?? u.yKI,
-        (e) => a.ZQ.create({ value: e }),
+        (e) => e?.value ?? p.yKI,
+        (e) => i.ZQ.create({ value: e }),
     ),
-    _ = (0, i.r)(
+    S = (0, s.r)(
         "privacy",
         "dropsOptedOut",
         (e) => e?.value ?? !1,
-        (e) => a._t.create({ value: e }),
+        (e) => i._t.create({ value: e }),
     ),
-    I = (0, i.r)(
+    _ = (0, s.r)(
         "privacy",
         "quests3PDataOptedOut",
         (e) => e?.value ?? !1,
-        (e) => a._t.create({ value: e }),
+        (e) => i._t.create({ value: e }),
+    ),
+    h = (0, s.r)(
+        "safetySettings",
+        "spendingLimitSettings",
+        (e) => {
+            let t = e?.oneTimePurchaseLimit;
+            return null == t ? null : { amount: Number(t.amount), currency: t.currency };
+        },
+        (e) => {
+            if (null == e) return a.te.create({});
+            let { amount: t, currency: r } = e;
+            return a.te.create({ oneTimePurchaseLimit: a.uK.create({ amount: String(t), currency: r }) });
+        },
+        { comparator: c.Ky },
     );
