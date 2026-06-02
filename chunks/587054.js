@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $: () => j, D: () => H });
+n.d(t, { $: () => Y, D: () => j });
 var i = n(627968),
     r = n(64700),
     s = n(989349),
@@ -80,31 +80,32 @@ let R = (e) => {
     });
 };
 var O = n(380786),
-    b = n(601623),
+    b = n(988672),
     D = n(496431),
     L = n(532794),
     w = n(174459),
     M = n(422936),
-    P = n(635995),
-    x = n(99462),
-    k = n(788868);
-let U = function (e) {
+    P = n(410516),
+    x = n(635995),
+    k = n(99462),
+    U = n(788868);
+let G = function (e) {
     let { dismissCurrentNotice: t, subscriptionTier: n } = e,
         { analyticsLocations: r } = (0, p.Ay)(f.A.PREMIUM_TIER_2_DISCOUNT_ENDING_NOTICE),
         s = (0, M.O)(),
         a = (0, D.A)(null != s && null != s.expiresAt ? s.expiresAt.getTime() : 0);
     return null == s ||
-        s.discount?.planIds.some((e) => k.hd[e].skuId !== n) ||
+        s.discount?.planIds.some((e) => U.hd[e].skuId !== n) ||
         null == s.expiresAt ||
         Object.values(a).every((e) => 0 === e)
         ? null
-        : (0, i.jsxs)(P.T0, {
+        : (0, i.jsxs)(x.T0, {
               onClick: () => {
                   t(), w.default.track(S.HAw.APP_NOTICE_CLOSED, { notice_type: S.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING });
               },
               children: [
-                  (0, i.jsx)(P.In, { children: (0, x.rn)(a, Number(s.discount.amount)) }),
-                  (0, i.jsx)(P.fY, {
+                  (0, i.jsx)(x.In, { children: (0, k.rn)(a, Number(s.discount.amount), (0, P.hm)(s)) }),
+                  (0, i.jsx)(x.fY, {
                       onClick: () => {
                           (0, L.A)({
                               subscriptionTier: n,
@@ -121,18 +122,18 @@ let U = function (e) {
               ],
           });
 };
-var G = n(745299),
-    F = n(354670),
-    V = n(428262),
-    B = n(595529);
-function H(e) {
+var F = n(745299),
+    V = n(354670),
+    B = n(428262),
+    H = n(595529);
+function j(e) {
     switch (e) {
         case S.kqX.PREMIUM_TIER_2_TRIAL_ENDING:
-            let t = F.A.getAlmostExpiringTrialOffersForReminder([k.pe.TIER_2]);
-            return { cooldownDurationMs: (0, V.e1)(t[0]) };
+            let t = V.A.getAlmostExpiringTrialOffersForReminder([U.pe.TIER_2]);
+            return { cooldownDurationMs: (0, B.e1)(t[0]) };
         case S.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING:
-            let n = F.A.getAlmostExpiringDiscountOffersForReminder([k.pe.TIER_2]);
-            return { cooldownDurationMs: (0, V.e1)(n[0]) };
+            let n = V.A.getAlmostExpiringDiscountOffersForReminder([U.pe.TIER_2]);
+            return { cooldownDurationMs: (0, B.e1)(n[0]) };
         case S.kqX.RIOT_MIGRATION:
         case S.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN:
             return { cooldownDurationMs: 6048e5 };
@@ -140,27 +141,27 @@ function H(e) {
             return { cooldownDurationMs: 1 / 0 };
     }
 }
-let j = (e) => {
+let Y = (e) => {
     let { dismissibleContent: t, noticeType: n } = e,
-        s = r.useMemo(() => H(n), [n]),
+        s = r.useMemo(() => j(n), [n]),
         l = a()().add(5, "days").toDate(),
-        [u, c] = (0, B.Bo)(t, s, y.m.NOTICE_BAR);
+        [u, c] = (0, H.Bo)(t, s, y.m.NOTICE_BAR);
     if (null == u) return null;
     switch (u) {
         case o.M.NAGBAR_NOTICE_OFFER_EXPIRING:
             if (n === S.kqX.PREMIUM_TIER_2_TRIAL_ENDING)
-                return (0, i.jsx)(G.A, {
+                return (0, i.jsx)(F.A, {
                     dismissCurrentNotice: () => {
                         c(y.i.USER_DISMISS), (0, b.w)(l);
                     },
-                    subscriptionTier: k.pe.TIER_2,
+                    subscriptionTier: U.pe.TIER_2,
                 });
             if (n === S.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING)
-                return (0, i.jsx)(U, {
+                return (0, i.jsx)(G, {
                     dismissCurrentNotice: () => {
                         c(y.i.USER_DISMISS), (0, b.w)(l);
                     },
-                    subscriptionTier: k.pe.TIER_2,
+                    subscriptionTier: U.pe.TIER_2,
                 });
             break;
         case o.M.RIOT_CONNECTION_DEPRECATION:
