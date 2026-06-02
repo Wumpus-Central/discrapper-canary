@@ -89,6 +89,11 @@ let r = {
         inlineRequire: () => n(516562).A,
         hasStoreChangeListeners: !0,
     },
+    DiceRollLifecycleManager: {
+        actions: ["CHANNEL_SELECT", "DICE_ROLL_START"],
+        inlineRequire: () => n(545185).A,
+        neverLoadBeforeConnectionOpen: !0,
+    },
     FriendOnlineTimerManager: {
         actions: [
             "POST_CONNECTION_OPEN",
@@ -97,7 +102,7 @@ let r = {
             "CONNECTION_INTERRUPTED",
             "SELF_PRESENCE_STORE_UPDATE",
         ],
-        inlineRequire: () => n(726082).A,
+        inlineRequire: () => n(470214).A,
         loadRightBeforeConnectionOpen: !0,
     },
     TopEmojisDataManager: { actions: ["EMOJI_INTERACTION_INITIATED"], inlineRequire: () => n(347209).A },

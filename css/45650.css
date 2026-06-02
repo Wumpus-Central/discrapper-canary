@@ -1,0 +1,73 @@
+.wrapper__4106a {
+    background-color: var(--modal-background);
+    flex: 0 0 auto;
+    padding: var(--space-16) var(--space-16) var(--space-8);
+    padding-inline-start: var(--space-24)
+}
+
+.content_a8c622 {
+    background-color: var(--modal-background);
+    border-radius: inherit;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0
+}
+
+.breadcrumbsWrapper_a8c622 {
+    flex: 0 0 auto;
+    margin: 0 16px;
+    padding: 16px 0
+}
+
+.breadcrumbsWrapperManaModal_a8c622 {
+    margin: 0
+}
+
+.bodyWrapper_a8c622 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    position: relative
+}
+
+.scroller_a8c622 {
+    height: 100%;
+    padding: 0 16px 16px
+}
+
+.errorBlockWrapper_a8c622 {
+    padding-bottom: 16px
+}
+
+.errorBlockWrapperLegacy_a8c622 {
+    padding: 16px
+}
+
+.paymentNote_a8c622 {
+    padding: 0 16px
+}
+
+.loadingBlock_a8c622 {
+    height: 192px
+}
+
+.sequencer_a8c622,
+.sequencerStatic_a8c622 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column
+}
+
+.sequencerStatic_a8c622 {
+    flex: 1 1 auto
+}
+
+.sequencerAnimatedNode_a8c622 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0
+}
