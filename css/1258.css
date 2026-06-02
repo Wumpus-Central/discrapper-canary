@@ -6753,13 +6753,13 @@
     padding: 2px 16px
 }
 
-.bannerText_e68795 {
-    margin-inline-start: 90px
+.avatar_e68795 {
+    margin-inline-end: var(--space-8)
 }
 
-.avatar_e68795 {
-    position: absolute;
-    z-index: 1
+.avatarLargeTilted_e68795 {
+    transform: rotate(-7deg) translateY(-8px);
+    transform-origin: left 75%
 }
 
 .planSelectSeparatorLower__7ec3a,

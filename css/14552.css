@@ -825,21 +825,3 @@
     position: absolute;
     z-index: 2
 }
-
-.containerTop__45edc {
-    top: calc(var(--custom-app-top-bar-height) + var(--space-8))
-}
-
-.containerBottom__45edc,
-.containerTop__45edc {
-    display: flex;
-    flex-direction: column;
-    inset-inline-start: 50%;
-    position: fixed;
-    transform: translateX(-50%);
-    z-index: 4999
-}
-
-.containerBottom__45edc {
-    bottom: 140px
-}

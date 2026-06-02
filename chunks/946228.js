@@ -173,7 +173,7 @@ let ew = eD.Ay.getEnableHardwareAcceleration(),
                     (0, g.L3)(e, async () => {
                         let { default: e } = await Promise.all([
                                 n.e("13364"),
-                                n.e("6274"),
+                                n.e("72811"),
                                 n.e("23531"),
                                 n.e("12697"),
                                 n.e("13878"),

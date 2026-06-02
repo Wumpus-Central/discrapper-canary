@@ -243,8 +243,8 @@ function ed(e) {
                         let { default: e } = await Promise.all([
                             l.e("58735"),
                             l.e("4782"),
-                            l.e("6274"),
-                            l.e("63434"),
+                            l.e("72811"),
+                            l.e("13878"),
                             l.e("54975"),
                             l.e("89545"),
                             l.e("91531"),
