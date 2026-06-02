@@ -76,8 +76,7 @@ function L(e) {
                     if (null == i) {
                         let t = v.A.getPendingChanges(),
                             i = (0, j.Sk)(t),
-                            n = (0, j.yX)(t),
-                            l = (0, j.yg)(t);
+                            n = (0, j.yX)(t);
                         if (Object.keys(i).length > 0) {
                             let n = await (0, m._L)(i);
                             (e = n?.ok ?? !1),
@@ -94,13 +93,6 @@ function L(e) {
                             let { bannerOriginalMd5: t, ...i } = n,
                                 l = await (0, A.gi)(i, void 0, t);
                             (e = e && (l?.ok ?? !1)), l?.ok && (0, A.RE)();
-                        }
-                        if (Object.keys(l).length > 0) {
-                            let { primaryGuildId: t } = l;
-                            if (void 0 !== t) {
-                                let i = await (0, p.m)(t, null !== t);
-                                (e = e && (i?.ok ?? !1)), i?.ok && (0, m.fw)();
-                            }
                         }
                     } else {
                         let t = v.A.getPendingChanges(i),
@@ -123,6 +115,14 @@ function L(e) {
                             let { bannerOriginalMd5: t, ...n } = l,
                                 s = await (0, A.gi)(n, i, t);
                             (e = e && (s?.ok ?? !1)), s?.ok && (0, A.RE)();
+                        }
+                    }
+                    let t = (0, j.yg)(v.A.getPendingChanges());
+                    if (Object.keys(t).length > 0) {
+                        let { primaryGuildId: i } = t;
+                        if (void 0 !== i) {
+                            let t = await (0, p.m)(i, null !== i);
+                            (e = e && (t?.ok ?? !1)), t?.ok && (0, m.fw)();
                         }
                     }
                 } catch {
