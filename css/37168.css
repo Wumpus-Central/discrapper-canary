@@ -5519,6 +5519,14 @@
     width: 480px
 }
 
+.modalContentContainerGuildThemeNoFooter__61aee {
+    height: auto
+}
+
+.modalContentContainerGuildThemeNoFooter__61aee .guildThemeHeader__61aee {
+    padding-bottom: var(--space-32)
+}
+
 .guildThemeLayout__61aee {
     display: flex;
     flex: 1 1 auto;

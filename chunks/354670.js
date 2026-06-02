@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => y }), n(205816);
+n.d(t, { A: () => N }), n(205816);
 var i = n(17928),
     r = n(228366),
     s = n(851746),
@@ -18,8 +18,8 @@ var u = n(669316),
     c = n(287809),
     d = n(469778),
     _ = n(428262),
-    f = n(166403),
-    h = n(788868);
+    h = n(166403),
+    f = n(788868);
 let p = {
         userOffersLastFetchedAtDate: void 0,
         userTrialOffers: {},
@@ -50,11 +50,11 @@ function A(e) {
 }
 function I() {
     return (
-        null != f.A.getPremiumTypeSubscription() &&
-        (null != E.userDiscountOffers[h.q]
-            ? (E.userDiscountOffers = { [h.q]: E.userDiscountOffers[h.q] })
-            : null != E.userDiscountOffers[h.EG]
-              ? (E.userDiscountOffers = { [h.EG]: E.userDiscountOffers[h.EG] })
+        null != h.A.getPremiumTypeSubscription() &&
+        (null != E.userDiscountOffers[f.q]
+            ? (E.userDiscountOffers = { [f.q]: E.userDiscountOffers[f.q] })
+            : null != E.userDiscountOffers[f.EG]
+              ? (E.userDiscountOffers = { [f.EG]: E.userDiscountOffers[f.EG] })
               : (E.userDiscountOffers = {}),
         (E.userTrialOffers = {}),
         !0)
@@ -74,7 +74,7 @@ function S() {
     }
     return !1;
 }
-class N extends i.Ay.PersistedStore {
+class y extends i.Ay.PersistedStore {
     static displayName = "UserOfferStore";
     static persistKey = "UserOfferStore";
     static migrations = [
@@ -117,9 +117,9 @@ class N extends i.Ay.PersistedStore {
                       ),
                   }
                 : p),
-            this.waitFor(d.A, s.A, f.A, c.default),
+            this.waitFor(d.A, s.A, h.A, c.default),
             this.syncWith([c.default], g),
-            this.syncWith([f.A], I),
+            this.syncWith([h.A], I),
             this.syncWith([s.A], S);
     }
     getUserTrialOffer(e) {
@@ -146,10 +146,10 @@ class N extends i.Ay.PersistedStore {
         return !n && (i || (e ?? 0) > t);
     }
     shouldShowTrialOfferReminder(e) {
-        return !h.Pn.includes(e.trial_id) || l({ location: "user_offer_store" });
+        return !f.Pn.includes(e.trial_id) || l({ location: "user_offer_store" });
     }
     getAlmostExpiringTrialOffersForReminder(e) {
-        let t = Object.values(h.TP).map((e) => e.id),
+        let t = Object.values(f.TP).map((e) => e.id),
             n = c.default.getCurrentUser();
         return (0, _.TW)(n) && !this.canFractionalPremiumUserUseOffer()
             ? []
@@ -164,7 +164,7 @@ class N extends i.Ay.PersistedStore {
               );
     }
     shouldShowDiscountOfferReminder(e) {
-        return !h.ON.includes(e.discountId) || l({ location: "user_offer_store" });
+        return !f.ON.includes(e.discountId) || l({ location: "user_offer_store" });
     }
     getAlmostExpiringDiscountOffersForReminder(e) {
         let t = c.default.getCurrentUser();
@@ -174,7 +174,7 @@ class N extends i.Ay.PersistedStore {
                   (t) =>
                       null != t.expiresAt &&
                       null != t.discount &&
-                      t.discount.planIds.some((t) => e.includes(h.hd[t].skuId)) &&
+                      t.discount.planIds.some((t) => e.includes(f.hd[t].skuId)) &&
                       t.expiresAt.getTime() < Date.now() + (0, _.e1)(t) &&
                       this.shouldShowDiscountOfferReminder(t),
               );
@@ -190,7 +190,7 @@ class N extends i.Ay.PersistedStore {
         return (0, _.TW)(e) && !this.canFractionalPremiumUserUseOffer()
             ? []
             : Object.values(E.userDiscountOffers ?? {}).filter(
-                  (e) => null == e.expiresAt && !h.ly.includes(e.discountId),
+                  (e) => null == e.expiresAt && !f.ly.includes(e.discountId),
               );
     }
     getUnacknowledgedOffers(e) {
@@ -208,7 +208,7 @@ class N extends i.Ay.PersistedStore {
         return Object.values(E.userDiscountOffers).some((e) => !e.hasExpired());
     }
     canFractionalPremiumUserUseOffer() {
-        return d.A.isFractionalPremiumActive({ excludeReverseTrial: !0 }) && null == f.A.getPremiumTypeSubscription();
+        return d.A.isFractionalPremiumActive({ excludeReverseTrial: !0 }) && null == h.A.getPremiumTypeSubscription();
     }
     getReferrer(e) {
         return null == e ? null : E.userTrialOffers[e]?.referrer;
@@ -223,15 +223,9 @@ class N extends i.Ay.PersistedStore {
         return E.lastFetchSuccessful;
     }
 }
-let y = new N(r.h, {
+let N = new y(r.h, {
     BILLING_USER_OFFER_FETCH_START: function () {
         E.isFetching = !0;
-    },
-    BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS: function (e) {
-        let { userTrialOffer: t } = e;
-        null != t ? (E.userTrialOffers[t.trial_id] = t) : m(),
-            (E.userOffersLastFetchedAtDate = Date.now()),
-            (E.isFetching = !1);
     },
     BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: function (e) {
         let { userTrialOffer: t } = e;

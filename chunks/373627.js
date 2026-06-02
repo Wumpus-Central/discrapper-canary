@@ -93,7 +93,7 @@ function T(e) {
 var O = a(975571),
     V = a(853513),
     B = a(182184);
-function U(e) {
+function R(e) {
     let { powerup: s } = e;
     return s.skuId === t.FB
         ? (0, l.jsx)(h.E, {
@@ -103,8 +103,8 @@ function U(e) {
           })
         : null;
 }
-var F = a(438874),
-    R = a(722523),
+var U = a(438874),
+    F = a(722523),
     $ = a(459192),
     H = a(821609),
     q = a(104510),
@@ -171,7 +171,7 @@ var es = a(439156),
     ea = a(344445);
 function el(e) {
     let { className: s, guildId: a, powerup: i, expressiveCta: r, onClose: d, onError: o } = e,
-        { showToggleButton: c, showConfigureButton: m, isPowerupActive: u } = (0, F.A)(a, i);
+        { showToggleButton: c, showConfigureButton: m, isPowerupActive: u } = (0, U.A)(a, i);
     if (i.skuId === t.d0)
         return (0, l.jsx)("div", {
             className: n()(ea.kL, s),
@@ -189,7 +189,7 @@ function el(e) {
                             className: ea.PV,
                             children: (0, l.jsx)(Y, { guildId: a, powerup: i, isActive: u, onError: o }),
                         }),
-                    m && (0, l.jsx)(R.GU, { className: ea.PV, guildId: a, powerup: i }),
+                    m && (0, l.jsx)(F.GU, { className: ea.PV, guildId: a, powerup: i }),
                 ],
             }),
         });
@@ -198,7 +198,7 @@ function el(e) {
         className: n()(ea.kL, s),
         children: [
             c && (0, l.jsx)(es.A, { guildId: a, powerup: i, onError: o, grow: x, compact: !x, expressiveCta: r }),
-            m && (0, l.jsx)(R.GU, { guildId: a, powerup: i }),
+            m && (0, l.jsx)(F.GU, { guildId: a, powerup: i }),
         ],
     });
 }
@@ -317,7 +317,7 @@ function em(e) {
               parentComponent: "GuildPowerupPerkModal",
               children: (0, l.jsx)(o.$m, {
                   "data-migration-pending": !0,
-                  className: ec.aH,
+                  className: n()(ec.aH, { [ec.GR]: !w }),
                   scrollbarType: "none",
                   children: (0, l.jsxs)("div", {
                       className: ec.lR,
@@ -433,7 +433,7 @@ function em(e) {
                                                       level: E.title,
                                                   }),
                                               }),
-                                          (0, l.jsx)(U, { powerup: a }),
+                                          (0, l.jsx)(R, { powerup: a }),
                                           null != f &&
                                               (0, l.jsx)(h.E, {
                                                   className: ec.z3,
