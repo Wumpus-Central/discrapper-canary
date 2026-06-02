@@ -24,4 +24,9 @@ e.exports = {
     $d: "gcLegendItem__3c20e",
     AW: "gcLegendSwatch__3c20e",
     IF: "gcLegendLabel__3c20e",
+    Us: "gameHeader__3c20e",
+    Gt: "gameIcon__3c20e",
+    fR: "gameTitleColumn__3c20e",
+    mO: "gameName__3c20e",
+    wb: "gameEmpty__3c20e",
 };

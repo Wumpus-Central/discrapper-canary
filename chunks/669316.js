@@ -1,7 +1,9 @@
 "use strict";
-n.d(t, { A: () => r });
-var i = n(315069);
-class r extends i.A {
+n.d(t, { A: () => a });
+var i = n(315069),
+    r = n(788868);
+let s = { [r.Ff.DAY]: r.WT.DAY, [r.Ff.WEEK]: r.WT.DAY, [r.Ff.MONTH]: r.WT.MONTH, [r.Ff.YEAR]: r.WT.YEAR };
+class a extends i.A {
     id;
     discountId;
     discount;
@@ -10,7 +12,7 @@ class r extends i.A {
     deletedAt;
     expiresAt;
     static createFromServer(e) {
-        return new r({
+        return new a({
             id: e.id,
             discountId: e.discount_id,
             discount: {
@@ -45,5 +47,14 @@ class r extends i.A {
     }
     isDeleted() {
         return null != this.deletedAt;
+    }
+    getFullIntervalCount() {
+        return null == this.discount ? 0 : this.discount.userUsageLimit;
+    }
+    getDiscountInterval() {
+        return this.discount.userUsageLimitInterval;
+    }
+    getApplicableSubscriptionInterval() {
+        return s[this.getDiscountInterval()];
     }
 }

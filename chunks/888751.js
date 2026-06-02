@@ -1,13 +1,13 @@
 n.d(t, {
-    EA: () => I,
-    Gj: () => S,
-    IY: () => P,
-    Ig: () => T,
-    Re: () => E,
-    Rs: () => R,
-    fk: () => _,
-    iK: () => A,
-    ib: () => h,
+    EA: () => j,
+    Gj: () => R,
+    IY: () => _,
+    Ig: () => P,
+    Re: () => N,
+    Rs: () => M,
+    fk: () => E,
+    iK: () => I,
+    ib: () => y,
 }),
     n(321073);
 var l = n(284009),
@@ -23,49 +23,50 @@ var l = n(284009),
     p = n(252424),
     f = n(428262),
     g = n(580630),
-    v = n(788868),
-    x = n(375708),
+    x = n(788868),
+    v = n(375708),
     b = n(327105);
-let h = function (e) {
+let h = (e) => (0, f.xq)(e) || (0, f.Zb)(e),
+    y = function (e) {
         let { includeNowSuffix: t } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { includeNowSuffix: !1 };
         return t
-            ? x.intl.format(b.default.U2CmMW, {
+            ? v.intl.format(b.default.U2CmMW, {
                   priceAmount: (0, g.$g)(0, e, { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
               })
             : (0, g.$g)(0, e);
     },
-    y = (e, t, n) => ({ id: e.discount_id ?? t, label: n, amount: -e.amount, lineItemType: "discount" }),
-    A = (e) => {
+    A = (e, t, n) => ({ id: e.discount_id ?? t, label: n, amount: -e.amount, lineItemType: "discount" }),
+    I = (e) => {
         let { interval: t } = e,
             n = (0, f.m6)(e.id);
         switch (t) {
-            case v.WT.MONTH:
-                let l = x.intl.string(b.default.ZnoRKt);
-                return n === v.PremiumTypes.TIER_0
-                    ? x.intl.formatToPlainString(b.default.Z9mu9q, { timeInterval: l })
-                    : x.intl.formatToPlainString(b.default["8Jt4Dw"], { timeInterval: l });
-            case v.WT.YEAR:
-                let a = x.intl.string(b.default.Xrg8aC);
-                return n === v.PremiumTypes.TIER_0
-                    ? x.intl.formatToPlainString(b.default.Z9mu9q, { timeInterval: a })
-                    : x.intl.formatToPlainString(b.default["8Jt4Dw"], { timeInterval: a });
-            case v.WT.DAY:
-                let r = x.intl.string(b.default.WmjxYl);
-                return n === v.PremiumTypes.TIER_0
-                    ? x.intl.formatToPlainString(b.default.Z9mu9q, { timeInterval: r })
-                    : x.intl.formatToPlainString(b.default["8Jt4Dw"], { timeInterval: r });
+            case x.WT.MONTH:
+                let l = v.intl.string(b.default.ZnoRKt);
+                return n === x.PremiumTypes.TIER_0
+                    ? v.intl.formatToPlainString(b.default.Z9mu9q, { timeInterval: l })
+                    : v.intl.formatToPlainString(b.default["8Jt4Dw"], { timeInterval: l });
+            case x.WT.YEAR:
+                let a = v.intl.string(b.default.Xrg8aC);
+                return n === x.PremiumTypes.TIER_0
+                    ? v.intl.formatToPlainString(b.default.Z9mu9q, { timeInterval: a })
+                    : v.intl.formatToPlainString(b.default["8Jt4Dw"], { timeInterval: a });
+            case x.WT.DAY:
+                let r = v.intl.string(b.default.WmjxYl);
+                return n === x.PremiumTypes.TIER_0
+                    ? v.intl.formatToPlainString(b.default.Z9mu9q, { timeInterval: r })
+                    : v.intl.formatToPlainString(b.default["8Jt4Dw"], { timeInterval: r });
         }
     },
-    I = (e) => {
+    j = (e) => {
         let { id: t, label: n, amount: l, subscriptionDiscount: a, entitlementDiscount: r, currency: i } = e,
             s = [{ id: t, label: n, amount: l }];
         return (
-            null != a && s.push(y(a, "subscription-discount", x.intl.string(b.default["9yHcmL"]))),
+            null != a && s.push(A(a, "subscription-discount", v.intl.string(b.default["9yHcmL"]))),
             { hasSubscriptionCredit: null != r, lineItems: s, currency: i }
         );
     },
-    j = (e, t) => {
+    T = (e, t) => {
         let {
                 overrideAmount: n,
                 isPrepaidPaymentSource: l,
@@ -89,9 +90,9 @@ let h = function (e) {
                 currency: r,
             }),
             g = null != p || null != f,
-            v = { id: e.id, label: c, amount: g ? m : d, lineItemType: "main" },
+            x = { id: e.id, label: c, amount: g ? m : d, lineItemType: "main" },
             h = [
-                v,
+                x,
                 ...a.map((e) => ({
                     id: e.id,
                     label: e.label,
@@ -102,11 +103,11 @@ let h = function (e) {
                 })),
             ];
         return (
-            null == p || u || h.push(y(p, "subscription-discount", x.intl.string(b.default["9yHcmL"]))),
-            { lineItems: h, primaryLineItem: v, entitlementDiscount: f }
+            null == p || u || h.push(A(p, "subscription-discount", v.intl.string(b.default["9yHcmL"]))),
+            { lineItems: h, primaryLineItem: x, entitlementDiscount: f }
         );
     },
-    T = (e, t) => {
+    P = (e, t) => {
         let {
                 subscriptionTrial: n,
                 subscriptionPlan: l,
@@ -126,7 +127,7 @@ let h = function (e) {
             lineItems: p,
             primaryLineItem: f,
             entitlementDiscount: g,
-        } = j(s, {
+        } = T(s, {
             subscriptionPlan: l,
             subscriptionTrial: n,
             isPrepaidPaymentSource: a,
@@ -136,18 +137,18 @@ let h = function (e) {
         });
         return (
             0 !== d && null != u && null != c && null != m && p.push({ id: u.id, label: m, amount: d }),
-            r && p.push({ id: "tax", label: x.intl.string(x.t.jiRvC7), amount: e.tax, lineItemType: "tax" }),
+            r && p.push({ id: "tax", label: v.intl.string(v.t.jiRvC7), amount: e.tax, lineItemType: "tax" }),
             { lineItems: p, primaryLineItem: f, entitlementDiscount: g }
         );
     },
-    P = (e, t) => {
+    _ = (e, t) => {
         let { isPrepaidPaymentSource: n = !1, invoiceSummaryType: l, subscriptionPlan: a, subscriptionTrial: r } = t,
             { newPlanInvoiceItem: i, basePlanFullAmount: s, invoiceAdjustmentDisplayItems: u } = (0, o.SA)(e, a),
             {
                 lineItems: c,
                 primaryLineItem: m,
                 entitlementDiscount: p,
-            } = j(i, {
+            } = T(i, {
                 overrideAmount: d.IJ.has(l) ? s : void 0,
                 subscriptionPlan: a,
                 subscriptionTrial: r,
@@ -157,7 +158,7 @@ let h = function (e) {
             });
         return { lineItems: c, primaryLineItem: m, entitlementDiscount: p, hasAdjustmentLineItem: u.length > 0 };
     },
-    _ = (e, t) => {
+    E = (e, t) => {
         let { isCustomGift: n = !1, isPrepaidPaymentSource: l = !1, subscriptionPlan: a } = t;
         return [
             {
@@ -167,53 +168,46 @@ let h = function (e) {
             },
         ];
     },
-    E = (e, t) => {
+    N = (e, t) => {
         let n = (0, o.NL)(e),
             l = (function (e, t) {
                 if (null == e || null == t || e !== t.discountId) return null;
                 let { discount: n } = t,
                     l = new Date(t.appliedAt?.getTime() ?? Date.now()),
-                    a = "";
+                    a = "",
+                    r = t.getFullIntervalCount();
                 switch (n.userUsageLimitInterval) {
-                    case v.Ff.DAY:
-                        l.setDate(l.getDate() + n.userUsageLimitIntervalCount),
-                            (a = x.intl.formatToPlainString(b.default.WzJTZI, {
-                                intervalCount: n.userUsageLimitIntervalCount,
-                            }));
+                    case x.Ff.DAY:
+                        l.setDate(l.getDate() + r),
+                            (a = v.intl.formatToPlainString(b.default.WzJTZI, { intervalCount: r }));
                         break;
-                    case v.Ff.WEEK:
-                        l.setDate(l.getDate() + 7 * n.userUsageLimitIntervalCount),
-                            (a = x.intl.formatToPlainString(b.default.LHWoqL, {
-                                intervalCount: n.userUsageLimitIntervalCount,
-                            }));
+                    case x.Ff.WEEK:
+                        l.setDate(l.getDate() + 7 * r),
+                            (a = v.intl.formatToPlainString(b.default.LHWoqL, { intervalCount: r }));
                         break;
-                    case v.Ff.MONTH:
-                        l.setMonth(l.getMonth() + n.userUsageLimitIntervalCount),
-                            (a = x.intl.formatToPlainString(b.default.ZQLDzk, {
-                                intervalCount: n.userUsageLimitIntervalCount,
-                            }));
+                    case x.Ff.MONTH:
+                        l.setMonth(l.getMonth() + r),
+                            (a = v.intl.formatToPlainString(b.default.ZQLDzk, { intervalCount: r }));
                         break;
-                    case v.Ff.YEAR:
-                        l.setFullYear(l.getFullYear() + n.userUsageLimitIntervalCount),
-                            (a = x.intl.formatToPlainString(b.default.KpnRtO, {
-                                intervalCount: n.userUsageLimitIntervalCount,
-                            }));
+                    case x.Ff.YEAR:
+                        l.setFullYear(l.getFullYear() + r),
+                            (a = v.intl.formatToPlainString(b.default.KpnRtO, { intervalCount: r }));
                         break;
                     default:
                         return null;
                 }
-                return { discountEndDate: l, discountAppliedLabel: a, intervalCount: n.userUsageLimitIntervalCount };
+                return { discountEndDate: l, discountAppliedLabel: a, intervalCount: r };
             })(null != n ? n.discount_id : null, t),
             a = null != l && 1 === l.intervalCount,
             { subscriptionPlanPrice: r, subscriptionPlanId: i, amount: s } = e;
-        return (0, f.xq)(i)
+        return h(i)
             ? { amount: a ? r * e.quantity : s, matchedDiscountInfo: l }
             : { amount: s, matchedDiscountInfo: l };
     },
-    N = (e, t, n) => {
+    S = (e, t, n) => {
         let {
                 invoiceIncludesPremiumBasePlan: l,
-                isPremiumBasePlanInvoiceItem: a,
+                isPremiumPlanInvoiceItem: a,
                 intervalType: i,
                 intervalCount: s,
                 discountOffer: u,
@@ -223,31 +217,31 @@ let h = function (e) {
             {
                 label: m,
                 subscriptionDiscount: p,
-                originalAmount: v,
+                originalAmount: x,
             } = (0, o.Ae)(e, { subscriptionTrial: t, currency: c }),
-            h = d ? x.intl.format(x.t.UDop9c, {}) : void 0,
+            h = d ? v.intl.format(v.t.UDop9c, {}) : void 0,
             y =
                 a || null == p
                     ? null
                     : {
-                          subText: (0, g.CE)((0, g.$g)(v, c), i, s),
+                          subText: (0, g.CE)((0, g.$g)(x, c), i, s),
                           subTextHasStrikethrough: !0,
                           valueIcon: l && (0, f.z4)(e.subscriptionPlanId) ? r.t : void 0,
                           color: "text-feedback-positive",
                           valueColor: "text-feedback-positive",
                       },
-            { amount: A, matchedDiscountInfo: I } = E(e, u),
+            { amount: A, matchedDiscountInfo: I } = N(e, u),
             j = null != I && I.intervalCount > 1,
             T =
                 a && j
                     ? {
-                          subText: x.intl.format(b.default.Chj1Ke, { discountEndDate: I.discountEndDate }),
+                          subText: v.intl.format(b.default.Chj1Ke, { discountEndDate: I.discountEndDate }),
                           subTextColor: "text-feedback-positive",
                       }
                     : null;
         return { matchedDiscountInfo: I, lineItem: { id: e.id, label: m, amount: A, tooltip: h, ...T, ...y } };
     },
-    S = function (e, t, n) {
+    R = function (e, t, n) {
         let {
                 overrideRenewalDate: l,
                 isSubscriptionUpdate: a,
@@ -268,9 +262,9 @@ let h = function (e) {
             g = s.some((e) => (0, f.xq)(e.subscriptionPlanId));
         for (let e of s) {
             let { subscriptionPlanId: t } = e,
-                { lineItem: l } = N(e, n, {
+                { lineItem: l } = S(e, n, {
                     invoiceIncludesPremiumBasePlan: g,
-                    isPremiumBasePlanInvoiceItem: (0, f.xq)(t),
+                    isPremiumPlanInvoiceItem: h(t),
                     intervalType: c,
                     intervalCount: d,
                     discountOffer: r,
@@ -278,7 +272,7 @@ let h = function (e) {
                 });
             p.push(l);
         }
-        let h = (0, u.de)({
+        let y = (0, u.de)({
             overrideRenewalDate: l,
             currentInvoice: e,
             renewalInvoice: t,
@@ -290,22 +284,22 @@ let h = function (e) {
             intervalType: c,
             intervalCount: d,
             currency: m,
-            label: x.intl.string(b.default.GGn3pp),
-            totalLineItemValueSubText: x.intl.string(b.default.yvUaHi),
+            label: v.intl.string(b.default.GGn3pp),
+            totalLineItemValueSubText: v.intl.string(b.default.yvUaHi),
             totalLineItemLabel: ((e, t) => {
                 if (1 === t)
                     switch (e) {
-                        case v.WT.MONTH:
-                            return x.intl.string(b.default.WrFWOV);
-                        case v.WT.YEAR:
-                            return x.intl.string(b.default.SxKq52);
+                        case x.WT.MONTH:
+                            return v.intl.string(b.default.WrFWOV);
+                        case x.WT.YEAR:
+                            return v.intl.string(b.default.SxKq52);
                     }
-                return x.intl.string(b.default.jxUJkZ);
+                return v.intl.string(b.default.jxUJkZ);
             })(c, d),
-            totalLineItemLabelSubText: x.intl.format(b.default.MR4VnX, { renewalDate: h }),
+            totalLineItemLabelSubText: v.intl.format(b.default.MR4VnX, { renewalDate: y }),
         };
     },
-    R = (e, t) => {
+    M = (e, t) => {
         let n,
             l,
             r,
@@ -325,53 +319,53 @@ let h = function (e) {
             } = t,
             N = m.A.get(u);
         a()(null != N, "Missing subscriptionPlan");
-        let { discountOffer: S, discountAmountOff: R, applicablePlan: L } = y,
-            M = (0, f.L_)({ planId: u, isGift: j, priceOptions: A, subscriptionPlan: N }),
-            C = null != M && null == S,
-            k = (0, f.y8)(u, !1, j, A),
+        let { discountOffer: S, discountAmountOff: R, applicablePlan: M } = y,
+            L = (0, f.L_)({ planId: u, isGift: j, priceOptions: A, subscriptionPlan: N }),
+            k = null != L && null == S,
+            C = (0, f.y8)(u, !1, j, A),
             D = (0, c.gS)(e, N, {
                 userLocale: d,
                 isEligibleForBOGOPromotion: P,
-                shouldShowSavingsPercent: C,
+                shouldShowSavingsPercent: k,
                 isGift: j,
                 planId: u,
-                savingsPercent: M,
+                savingsPercent: L,
             }),
             U = ((e, t) => {
                 let { isEligibleForTrial: n } = t;
                 return n
-                    ? x.intl.formatToPlainString(x.t.hXcaLT, {
+                    ? v.intl.formatToPlainString(v.t.hXcaLT, {
                           price: (0, g.$g)(0, e.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
                       })
                     : (0, g.$g)(e.amount, e.currency);
-            })(k, { isEligibleForTrial: T }),
+            })(C, { isEligibleForTrial: T }),
             O = U,
-            w = h && null != L && u === L ? R : null;
+            w = h && null != M && u === M ? R : null;
         null != S &&
             !T &&
             ((0, s.p2)(S)
-                ? N.interval === v.WT.YEAR
-                    ? (n = x.intl.format(b.default.ODKoJd, { percent: M ?? "" }))
-                    : N.interval === v.WT.MONTH &&
-                      (null != w && (O = x.intl.format(x.t.hXcaLT, { price: (0, g.$g)(k.amount - w, k.currency) })),
-                      (n = x.intl.format(b.default.JsSin7, {
+                ? N.interval === x.WT.YEAR
+                    ? (n = v.intl.format(b.default.ODKoJd, { percent: L ?? "" }))
+                    : N.interval === x.WT.MONTH &&
+                      (null != w && (O = v.intl.format(v.t.hXcaLT, { price: (0, g.$g)(C.amount - w, C.currency) })),
+                      (n = v.intl.format(b.default.JsSin7, {
                           priceRate: (0, g.CE)(U, N.interval, N.intervalCount),
-                          intervalCount: S.discount.userUsageLimitIntervalCount,
+                          intervalCount: S.getFullIntervalCount(),
                       })))
                 : (0, s.hm)(S) &&
-                  N.interval === v.WT.YEAR &&
+                  N.interval === x.WT.YEAR &&
                   null != w &&
-                  ((O = x.intl.format(x.t.hXcaLT, { price: (0, g.$g)(k.amount - w, k.currency) })),
+                  ((O = v.intl.format(v.t.hXcaLT, { price: (0, g.$g)(C.amount - w, C.currency) })),
                   (l = U),
-                  (n = x.intl.format(x.t.VZ8Tvh, { regularPrice: U })),
-                  (r = x.intl.formatToPlainString(b.default.nsG1jw, {
+                  (n = v.intl.format(v.t.VZ8Tvh, { regularPrice: U })),
+                  (r = v.intl.formatToPlainString(b.default.nsG1jw, {
                       savingsText: (0, p.l9)(d, parseInt(S.discount.amount) / 100),
                   })))),
             _ &&
                 (E && T
-                    ? (n = (0, c.O7)(N, k))
+                    ? (n = (0, c.O7)(N, C))
                     : I
-                      ? (n = x.intl.string(x.t.ymSxhy))
+                      ? (n = v.intl.string(v.t.ymSxhy))
                       : "string" == typeof D && (n = D));
         let G = ((e) => {
             let { promoTextOverride: t, overrideBadgeText: n, defaultValue: l } = e;
@@ -383,7 +377,7 @@ let h = function (e) {
                 subscriptionPlan: N,
                 userLocale: d,
                 discountOffer: S,
-                yearlyPercentSavings: M,
+                yearlyPercentSavings: L,
                 shouldHideYearlySavingsBadge: null != e || null != S,
             }),
         });
@@ -395,6 +389,6 @@ let h = function (e) {
             secondarySubText: n,
             promoText: G,
             isDisabled: o,
-            savingsPercent: M,
+            savingsPercent: L,
         };
     };

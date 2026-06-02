@@ -31,7 +31,8 @@ function o() {
             null != m.discount &&
             null != m.discount.planIds &&
             m.discount.planIds.some((t) => s.hd[t].skuId === e),
-        A = !!(d && null != m && h);
+        A = !!(d && null != m && h),
+        C = (0, r.p)();
     return l.useMemo(
         () => ({
             isPremium: t,
@@ -40,7 +41,8 @@ function o() {
             isEligibleForDiscount: A,
             userTrialOffer: c,
             discountOffer: m,
+            premiumGroupDiscountOffer: n ? C : null,
         }),
-        [t, n, p, A, c, m],
+        [t, n, p, A, c, m, C],
     );
 }

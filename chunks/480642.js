@@ -34,42 +34,43 @@ function T(e) {
     let {
             gradientColor: t,
             title: n,
-            headerBadgeText: s,
-            headerBadgeIcon: a,
-            countryCode: l,
-            relocationCountryCode: u,
-            ...c
+            headerBadgeVariant: s = "expressive",
+            headerBadgeText: a,
+            headerBadgeIcon: l,
+            countryCode: u,
+            relocationCountryCode: c,
+            ...d
         } = e,
-        { checkoutHeaderConfigs: d } = (0, m.ck)(),
-        _ = r.useCallback(
-            () => (null == l ? null : (0, i.jsx)("img", { alt: "", className: A.bI, src: (0, h.t)(l) })),
-            [l],
+        { checkoutHeaderConfigs: _ } = (0, m.ck)(),
+        p = r.useCallback(
+            () => (null == u ? null : (0, i.jsx)("img", { alt: "", className: A.bI, src: (0, h.t)(u) })),
+            [u],
         ),
-        p = r.useMemo(() => {
-            if (null != s || null != d.headerBadgeText)
+        E = r.useMemo(() => {
+            if (null != a || null != _.headerBadgeText)
                 return {
-                    icon: d.headerBadgeIcon ?? a,
-                    type: { text: d.headerBadgeText ?? s ?? "" },
-                    variant: "expressive",
+                    icon: _.headerBadgeIcon ?? l,
+                    type: { text: _.headerBadgeText ?? a ?? "" },
+                    variant: _.headerBadgeVariant ?? s,
                 };
-        }, [s, a, d.headerBadgeText, d.headerBadgeIcon]),
-        E = null != l && null != u,
-        g = r.useMemo(() => {
-            if (!E && null != l) return { text: (0, f.j7)((0, f.ni)(l)), leadingIcon: _ };
-        }, [E, l, _]);
+        }, [a, l, _.headerBadgeText, _.headerBadgeIcon, s, _.headerBadgeVariant]),
+        g = null != u && null != c,
+        T = r.useMemo(() => {
+            if (!g && null != u) return { text: (0, f.j7)((0, f.ni)(u)), leadingIcon: p };
+        }, [g, u, p]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.rQ, {
-                ...c,
-                badge: p,
+                ...d,
+                badge: E,
                 badgePosition: "end",
                 gradientColor: t,
                 titleTextVariant: "heading-lg/semibold",
                 alignCenter: !1,
                 title: n,
-                subtitle: g,
+                subtitle: T,
             }),
-            E && (0, i.jsx)(I, { countryCode: l, relocationCountryCode: u }),
+            g && (0, i.jsx)(I, { countryCode: u, relocationCountryCode: c }),
         ],
     });
 }
