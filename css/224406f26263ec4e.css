@@ -1,0 +1,102 @@
+.section_ceab1a {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    position: relative
+}
+
+.sectionTitle_ceab1a {
+    padding-inline: var(--space-8)
+}
+
+.container_ceab1a {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg)
+}
+
+.innerContainer_ceab1a {
+    height: 56px;
+    width: 100%
+}
+
+.innerContainer_ceab1a:not(:last-child) {
+    border-bottom: 1px solid var(--background-mod-subtle)
+}
+
+.innerContainer_ceab1a:first-child {
+    border-start-end-radius: var(--radius-lg);
+    border-start-start-radius: var(--radius-lg)
+}
+
+.innerContainer_ceab1a:last-child {
+    border-end-end-radius: var(--radius-lg);
+    border-end-start-radius: var(--radius-lg)
+}
+
+.steamContainer_ceab1a {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: var(--space-12);
+    padding-bottom: var(--space-20);
+    padding-top: var(--space-20)
+}
+
+.steamNameContainer_ceab1a,
+.steamRatingContainer_ceab1a {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4)
+}
+
+.steamRatingContainer_ceab1a {
+    align-items: center
+}
+
+.opencriticContainer_ceab1a {
+    justify-content: space-between;
+    padding-inline: var(--space-12);
+    padding-bottom: var(--space-12);
+    padding-top: var(--space-12)
+}
+
+.opencriticContainer_ceab1a,
+.opencriticRightContainer_ceab1a {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.opencriticRightContainer_ceab1a {
+    gap: var(--space-12);
+    height: 32px
+}
+
+.opencriticTopCriticContainer_ceab1a {
+    align-items: center;
+    background-color: var(--background-surface-higher);
+    border-radius: var(--radius-round);
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    position: relative;
+    width: 32px
+}
+
+.opencriticTopCriticRating_ceab1a {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute
+}
+
+.link_ceab1a {
+    border-radius: inherit;
+    cursor: pointer
+}
+
+.link_ceab1a:hover {
+    background-color: var(--background-surface-higher)
+}

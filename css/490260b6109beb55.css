@@ -1,0 +1,205 @@
+.titleContainer__81b3e {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px
+}
+
+.titleText__81b3e {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap
+}
+
+.menu__81b3e {
+    color: var(--text-strong);
+    cursor: pointer;
+    margin-inline-start: 16px;
+    margin-top: -2px
+}
+
+.tabBar__81b3e {
+    border-bottom: 2px solid var(--border-subtle);
+    margin-bottom: -2px;
+    margin-top: 16px
+}
+
+.tabBarItem__81b3e {
+    margin-inline-end: 32px;
+    margin-bottom: -2px;
+    padding-bottom: 16px
+}
+
+.helpMessageContainer__81b3e {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.enable-forced-colors .tabBarItem__81b3e {
+    margin-bottom: 0
+}
+
+.enable-forced-colors .menu__81b3e {
+    background-color: ButtonFace;
+    border: 1px solid ButtonFace;
+    color: ButtonText
+}
+
+.enable-forced-colors .menu__81b3e:focus,
+.enable-forced-colors .menu__81b3e:hover {
+    border-color: ButtonText
+}
+
+.scroller_d80a13 {
+    height: 100%;
+    padding-bottom: 60px
+}
+
+.contentContainerNoConfig_d80a13 {
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    margin: 20px 0 0;
+    padding: 20px 20px 0
+}
+
+.headerHeading_d80a13 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.headerNoConfigContainer_d80a13 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.headerTitleTextContainer_d80a13 {
+    align-items: center;
+    display: flex;
+    flex: 1
+}
+
+.headerNoConfigSubtitle_d80a13 {
+    margin-bottom: 8px
+}
+
+.betaTag_d80a13 {
+    margin-inline-start: 4px
+}
+
+.connectionsContainer_d80a13 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16px
+}
+
+.accountButton_d80a13 {
+    margin-inline-end: 8px;
+    margin-bottom: 8px
+}
+
+.accountButton_d80a13:last-child {
+    margin-inline-end: 0
+}
+
+.accountButtonInner_d80a13 {
+    background-color: var(--background-base-lowest);
+    border: none
+}
+
+.accountButtonInner_d80a13:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.accountAddWrapper_d80a13 {
+    position: relative
+}
+
+.accountAddInner_d80a13 {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 36px 36px;
+    border-radius: 5px;
+    color: var(--interactive-text-default);
+    height: 48px;
+    justify-content: center;
+    width: 48px
+}
+
+.accountAddInner_d80a13:hover {
+    background-color: #99aab54d;
+    border-color: transparent;
+    cursor: pointer
+}
+
+.accountAddInner_d80a13:disabled {
+    opacity: .3;
+    pointer-events: none
+}
+
+.accountAddCaret_d80a13 {
+    height: 18px;
+    width: 18px
+}
+
+.headerTitleContainer_d80a13 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px
+}
+
+.configurationsContainer_d80a13,
+.operatorContainer_d80a13 {
+    margin-top: 16px
+}
+
+.warningContainer_d80a13 {
+    align-items: center;
+    background-color: rgba(250, 166, 26, .1);
+    border-color: var(--status-warning-background);
+    border-radius: var(--radius-xs);
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    padding: 8px
+}
+
+.warningIcon_d80a13 {
+    color: var(--status-warning-background);
+    height: 40px;
+    margin-inline-end: 8px;
+    width: 40px
+}
+
+.contentWidth_c6bf1b {
+    max-width: calc(740px - var(--custom-guild-settings-roles-edit-shared-sidebar-width));
+    min-width: calc(460px - var(--custom-guild-settings-roles-edit-shared-sidebar-width));
+    padding-inline: 24px 42px;
+    width: calc(100% - 56px)
+}
+
+.header_c6bf1b {
+    background-color: var(--background-base-low);
+    margin-inline: -8px;
+    padding-bottom: 16px;
+    padding-top: 60px;
+    padding-inline: 8px;
+    position: relative;
+    z-index: 2
+}
+
+.stickyHeader_c6bf1b {
+    margin-bottom: 16px;
+    position: sticky;
+    top: 0
+}
+
+.stickyHeaderElevated_c6bf1b {
+    box-shadow: var(--elevation-low)
+}
