@@ -331,7 +331,7 @@
     top: var(--space-16)
 }
 
-.modalHeaderButton__38ccf {
+.headerButtonBase__38ccf {
     align-items: center;
     background-color: var(--control-overlay-secondary-background-default);
     border: 1px solid var(--control-overlay-secondary-border-default);
@@ -341,18 +341,31 @@
     display: flex;
     height: 40px;
     justify-content: center;
-    transition: background-color .2s ease-in-out;
-    width: 40px
+    transition: background-color .2s ease-in-out
 }
 
-.modalHeaderButton__38ccf:hover {
+.headerButtonBase__38ccf:hover {
     background-color: color-mix(in srgb, var(--black) 40%, transparent)
+}
+
+.modalHeaderButton__38ccf {
+    width: 40px
 }
 
 .wishlistButton__38ccf {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
     padding: 0
+}
+
+.goToShopButton__38ccf {
+    color: var(--primary-100);
+    gap: var(--space-8);
+    inset-inline-start: var(--space-16);
+    padding-inline: var(--space-16);
+    position: absolute;
+    top: var(--space-16);
+    white-space: nowrap
 }
 
 .priceSectionContainer__38ccf {
