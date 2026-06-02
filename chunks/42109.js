@@ -1715,7 +1715,10 @@ let sn = (e) => {
                                       (0, c.jsxs)("div", {
                                           className: sl.Jb,
                                           children: [
-                                              (0, c.jsx)(tR.A, { location: "FramesProductShelfBlock" }),
+                                              (0, c.jsx)(tR.A, {
+                                                  location: "FramesProductShelfBlock",
+                                                  showTooltip: !0,
+                                              }),
                                               (0, c.jsx)(ed.D, {
                                                   variant: "heading-lg/semibold",
                                                   color: "always-white",

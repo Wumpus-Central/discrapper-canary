@@ -38,10 +38,11 @@
 }
 
 .leftRail__863fd {
+    --custom-frames-ea-bleed: 24px;
     background-color: var(--background-surface-high);
     display: flex;
     flex-direction: column;
-    padding: 24px;
+    padding: var(--custom-frames-ea-bleed);
     position: relative;
     width: 330px
 }

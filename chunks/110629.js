@@ -1,22 +1,21 @@
-i.d(e, { A: () => d });
+i.d(e, { A: () => c });
 var l = i(627968);
 i(64700);
 var n = i(990078),
     r = i(508770),
-    a = i(403581),
-    u = i(13875),
-    s = i(985018),
-    o = i(437032);
-let d = (t) => {
-    let { location: e } = t;
-    return (0, u.Do)(e)
+    u = i(403581),
+    a = i(13875),
+    o = i(375708),
+    s = i(437032);
+let c = (t) => {
+    let { location: e, showTooltip: i = !1 } = t;
+    if (!(0, a.Do)(e)) return null;
+    let c = (0, l.jsx)(r.E, { type: "early_access", variant: "expressive", icon: u.t });
+    return i
         ? (0, l.jsx)(n.m, {
               position: "top",
-              text: s.intl.string(s.t["L9B+ZZ"]),
-              children: (0, l.jsx)("span", {
-                  className: o.h,
-                  children: (0, l.jsx)(r.E, { type: "early_access", variant: "expressive", icon: a.t }),
-              }),
+              text: o.intl.string(o.t["L9B+ZZ"]),
+              children: (0, l.jsx)("span", { className: s.h, children: c }),
           })
-        : null;
+        : c;
 };
