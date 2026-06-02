@@ -10,12 +10,12 @@ n.d(t, {
     Xy: () => q,
     Y8: () => er,
     Yq: () => eu,
-    Zc: () => X,
-    er: () => z,
-    fM: () => $,
+    Zc: () => Z,
+    er: () => $,
+    fM: () => z,
     fg: () => es,
     iT: () => ed,
-    iq: () => Z,
+    iq: () => X,
     mG: () => ec,
     sp: () => et,
     tR: () => J,
@@ -31,8 +31,8 @@ var i,
     c = n(681154),
     d = n(974690),
     _ = n(379834),
-    f = n(990078),
-    h = n(834730),
+    h = n(990078),
+    f = n(834730),
     p = n(983851),
     E = n(661531),
     m = n(183623),
@@ -41,12 +41,12 @@ var i,
     I = n(177953),
     T = n(432017),
     S = n(246913),
-    N = n(291747),
-    y = n(417270),
-    C = n(768622),
-    v = n(369606),
-    O = n(825860),
-    R = n(605323),
+    y = n(291747),
+    N = n(417270),
+    v = n(768622),
+    C = n(369606),
+    R = n(825860),
+    O = n(605323),
     b = n(748562),
     D = n(306788),
     L = n(47167),
@@ -54,20 +54,20 @@ var i,
     M = n(927813),
     P = n(403362),
     x = n(935208),
-    U = n(20805),
-    k = n(202195),
+    k = n(20805),
+    U = n(202195),
     G = n(832384),
     F = n(299846),
-    V = n(85451);
+    V = n(693879);
 n(424994);
 var B = n(375708),
     H = n(164123);
 let j = {
     [c.ContentInventoryEntryType.TOP_ARTIST]: [er],
-    [c.ContentInventoryEntryType.PLAYED_GAME]: [Z, X, q, ea, J, en, es, et, ee],
+    [c.ContentInventoryEntryType.PLAYED_GAME]: [X, Z, q, ea, J, en, es, et, ee],
     [c.ContentInventoryEntryType.TOP_GAME]: [ei],
     [c.ContentInventoryEntryType.WATCHED_MEDIA]: [eo, el],
-    [c.ContentInventoryEntryType.LAUNCHED_ACTIVITY]: [Z, X, q, ea, es, ee],
+    [c.ContentInventoryEntryType.LAUNCHED_ACTIVITY]: [X, Z, q, ea, es, ee],
 };
 var Y =
     (((i = {})[(i.CARD = 0)] = "CARD"),
@@ -86,20 +86,20 @@ let W = s.createContext({});
 function K() {
     return s.useContext(W);
 }
-function z(e) {
+function $(e) {
     let { children: t, ...n } = e;
     return (0, r.jsx)("div", { className: H.fC, ...n, children: t });
 }
-function $(e) {
+function z(e) {
     let { Icon: t, text: n, iconColor: i, tooltipText: s, showTooltip: a } = e,
         { defaultTextColor: o, defaultIconColor: l, location: u } = K();
-    return (0, r.jsx)(f.m, {
+    return (0, r.jsx)(h.m, {
         text: s,
         shouldShow: a,
-        children: (0, r.jsxs)(z, {
+        children: (0, r.jsxs)($, {
             children: [
                 (0, r.jsx)(t, { size: "xxs", color: i ?? l }),
-                (0, r.jsx)(h.E, {
+                (0, r.jsx)(f.E, {
                     variant: "text-xs/normal",
                     color: o,
                     className: H.KT,
@@ -112,42 +112,41 @@ function $(e) {
 }
 function q(e) {
     let { entry: t } = e,
-        { channel: n } = (0, k.A)(t),
+        { channel: n } = (0, U.A)(t),
         { location: i } = K(),
         s = (0, L.Ay)(n);
-    return null == n || (0, P.S1)(i, [1, 2, 3, 4]) ? null : (0, r.jsx)($, { Icon: p.H, text: s });
+    return null == n || (0, P.S1)(i, [1, 2, 3, 4]) ? null : (0, r.jsx)(z, { Icon: p.H, text: s });
 }
-function Z(e) {
+function X(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: i, defaultIconColor: s, location: a } = K(),
         o = (0, G.Hd)(t) && (0, P.S1)(a, [0, 4, 7, 9]),
         l = o ? E.A.colors.TEXT_FEEDBACK_POSITIVE : s,
-        { streamPreviewUrl: u } = (0, k.A)(t),
-        c = null != u ? m.F : (0, U.yl)(t) ? g.k : A._;
-    return (0, r.jsxs)(z, {
+        { streamPreviewUrl: u } = (0, U.A)(t),
+        c = null != u ? m.F : (0, k.yl)(t) ? g.k : A._;
+    return (0, r.jsxs)($, {
         children: [
             (0, r.jsx)(c, { size: "xxs", color: l }),
             (0, r.jsx)(V.A, {
                 entry: t,
                 textColor: o ? "text-feedback-positive" : i,
                 hovered: n,
-                bold: !0,
                 scaleFontToUserSetting: 5 === a,
             }),
         ],
     });
 }
-function X(e) {
+function Z(e) {
     let { entry: t } = e,
         { defaultTextColor: n, defaultIconColor: i } = K(),
         { state: s, party: a } = (0, F.u)(t),
         o = (0, G.gF)(s, a);
     return null == o
         ? null
-        : (0, r.jsxs)(z, {
+        : (0, r.jsxs)($, {
               children: [
                   (0, r.jsx)(I.n, { size: "xxs", color: i }),
-                  (0, r.jsx)(h.E, { variant: "text-xs/normal", color: n, lineClamp: 1, children: o }),
+                  (0, r.jsx)(f.E, { variant: "text-xs/normal", color: n, lineClamp: 1, children: o }),
               ],
           });
 }
@@ -160,7 +159,7 @@ function Q(e) {
         className: H.fC,
         children: [
             (0, r.jsx)(T.T, { size: "xxs", color: l }),
-            (0, r.jsx)(V.A, { entry: t, textColor: o ? "text-feedback-positive" : i, hovered: n, bold: !0 }),
+            (0, r.jsx)(V.A, { entry: t, textColor: o ? "text-feedback-positive" : i, hovered: n }),
         ],
     });
 }
@@ -168,7 +167,7 @@ function J(e) {
     let { entry: t } = e,
         { location: n } = K(),
         i = (0, P.S1)(n, [0, 3]) ? E.A.colors.STATUS_POSITIVE : void 0;
-    return (0, G.Rf)(t) ? (0, r.jsx)($, { Icon: S.P, text: B.intl.string(B.t.keY6mW), iconColor: i }) : null;
+    return (0, G.Rf)(t) ? (0, r.jsx)(z, { Icon: S.P, text: B.intl.string(B.t.keY6mW), iconColor: i }) : null;
 }
 function ee(e) {
     let { entry: t } = e,
@@ -176,7 +175,7 @@ function ee(e) {
     if (!(0, G.L7)(t)) return null;
     let i = (0, G.JM)(t),
         { text: s, tooltipText: a } = (0, G.Pj)(t);
-    return null == s ? null : (0, r.jsx)($, { Icon: N.x, text: s, tooltipText: a, showTooltip: 0 === n && !i });
+    return null == s ? null : (0, r.jsx)(z, { Icon: y.x, text: s, tooltipText: a, showTooltip: 0 === n && !i });
 }
 function et(e) {
     let { entry: t } = e,
@@ -185,15 +184,15 @@ function et(e) {
         s = (0, G.KH)(t);
     if (null == s) return null;
     let a = (0, G.us)(s);
-    return (0, r.jsx)($, { Icon: y.m, showTooltip: !i, tooltipText: a, text: i ? a : B.intl.string(B.t.adnLsB) });
+    return (0, r.jsx)(z, { Icon: N.m, showTooltip: !i, tooltipText: a, text: i ? a : B.intl.string(B.t.adnLsB) });
 }
 function en(e) {
     let { entry: t } = e,
         { location: n } = K(),
         i = (0, G.iy)(t);
     return (0, G.BZ)(t)
-        ? (0, r.jsx)($, {
-              Icon: C.g,
+        ? (0, r.jsx)(z, {
+              Icon: v.g,
               showTooltip: 0 === n,
               text: B.intl.formatToPlainString(B.t["Klie/P"], { days: i }),
               tooltipText: B.intl.formatToPlainString(B.t.PwMe0s, { days: i }),
@@ -207,8 +206,8 @@ function ei(e) {
         s = (0, G.ty)(t);
     if (null == s) return null;
     let a = i ? B.t.C0AxoR : B.t.SDRHgr;
-    return (0, r.jsx)($, {
-        Icon: v.O,
+    return (0, r.jsx)(z, {
+        Icon: C.O,
         text: (0, r.jsxs)(r.Fragment, {
             children: [
                 B.intl.string(B.t["/50eHi"]),
@@ -226,7 +225,7 @@ function er(e) {
     let s = (0, P.S1)(n, [1, 2, 5])
         ? B.intl.formatToPlainString(B.t.HtifnG, { count: i })
         : B.intl.formatToPlainString(B.t["jq/Bmu"], { count: i });
-    return (0, r.jsx)($, { Icon: v.O, text: s });
+    return (0, r.jsx)(z, { Icon: C.O, text: s });
 }
 function es(e) {
     let { entry: t } = e,
@@ -235,14 +234,14 @@ function es(e) {
     let i = (0, G.CZ)(t);
     return null == i || i === _.m.TRENDING_TYPE_UNSPECIFIED
         ? null
-        : (0, r.jsx)($, { Icon: O.Y, text: B.intl.string(B.t.kAlUsy) });
+        : (0, r.jsx)(z, { Icon: R.Y, text: B.intl.string(B.t.kAlUsy) });
 }
 function ea(e) {
     let { entry: t } = e,
         { location: n } = K();
     if (3 === n) return null;
     let i = x.default.extractTimestamp(t.extra.application_id);
-    return u()().diff(u()(i), "days") > 7 ? null : (0, r.jsx)($, { Icon: R.f, text: B.intl.string(B.t.vYuyWf) });
+    return u()().diff(u()(i), "days") > 7 ? null : (0, r.jsx)(z, { Icon: O.f, text: B.intl.string(B.t.vYuyWf) });
 }
 function eo(e) {
     let { entry: t, hovered: n } = e,
@@ -253,28 +252,28 @@ function eo(e) {
         className: H.fC,
         children: [
             (0, r.jsx)(b.U, { size: "xxs", color: l }),
-            (0, r.jsx)(V.A, { entry: t, textColor: o ? "text-feedback-positive" : i, hovered: n, bold: !0 }),
+            (0, r.jsx)(V.A, { entry: t, textColor: o ? "text-feedback-positive" : i, hovered: n }),
         ],
     });
 }
 function el(e) {
     let { entry: t } = e,
         n = (0, G.kR)(t.extra.media_assets_large_text);
-    return null == n ? null : (0, r.jsx)($, { Icon: D.K, text: n });
+    return null == n ? null : (0, r.jsx)(z, { Icon: D.K, text: n });
 }
 function eu(e) {
     let { entry: t } = e,
         { defaultTextColor: n, location: i } = K();
     if (!("applicationWidgetPreview" in t) || null == t.applicationWidgetPreview) return null;
     let { previewIcon: s, previewTextShort: a } = t.applicationWidgetPreview.previewData;
-    return (0, r.jsxs)(z, {
+    return (0, r.jsxs)($, {
         children: [
             null != s &&
                 (0, r.jsx)("div", {
                     className: H.dQ,
                     children: (0, r.jsx)(w.Ay, { src: s.proxyUrl, width: s.width, height: s.height, responsive: !0 }),
                 }),
-            (0, r.jsx)(h.E, {
+            (0, r.jsx)(f.E, {
                 variant: "text-xs/normal",
                 color: n,
                 className: H.KT,

@@ -1,4 +1,4 @@
-n.d(t, { V: () => $, A: () => Q }), n(321073);
+n.d(t, { V: () => Q, A: () => $ }), n(321073);
 var i,
     l = n(627968),
     s = n(64700),
@@ -22,17 +22,17 @@ var i,
     _ = n(729937),
     j = n(572211),
     N = n(354287),
-    T = n(85451),
+    T = n(693879),
     y = n(832384),
     S = n(207371),
     b = n(205184),
     L = n(689168),
-    k = n(403362),
-    R = n(456060),
+    R = n(403362),
+    k = n(456060),
     M = n(723702),
     P = n(850670),
-    w = n(206589),
-    D = n(125017),
+    D = n(206589),
+    w = n(125017),
     O = n(625248),
     U = n(55730),
     G = n(287613),
@@ -132,7 +132,7 @@ function X(e) {
                                 return null;
                         }
                     })
-                    .filter(k.Vq),
+                    .filter(R.Vq),
             [r],
         );
     if (!(null != n || a.length > 0)) return null;
@@ -167,7 +167,7 @@ function X(e) {
         ],
     });
 }
-function $(e) {
+function Q(e) {
     let { activity: t, className: n } = e,
         i = t?.timestamps?.start ?? t?.created_at;
     return null == i
@@ -180,12 +180,11 @@ function $(e) {
                       entry: { start: i, end: t?.timestamps?.end },
                       textColor: "currentColor",
                       textTabularNumbers: !1,
-                      textFontCode: !1,
                   }),
               ],
           });
 }
-function Q(e) {
+function $(e) {
     let {
             message: t,
             application: n,
@@ -201,11 +200,11 @@ function Q(e) {
             iconSrc: A,
             onView: f,
             presenceActivity: T,
-            currentUserPresenceActivity: k,
+            currentUserPresenceActivity: R,
             hideParty: z,
             partyStatusElement: W,
             analyticsLocations: K,
-            showAuthButton: Q,
+            showAuthButton: $,
             requireAccountLink: ee,
             requireGameLaunch: et,
             canPromptAuth: en,
@@ -234,7 +233,7 @@ function Q(e) {
                     className: Z.dS,
                     color: "none",
                     lineClamp: 2,
-                    children: [er ? (0, R.YC)(t, i, r, d, !1) : (0, l.jsx)($, { activity: T }), er ? null : eo],
+                    children: [er ? (0, k.YC)(t, i, r, d, !1) : (0, l.jsx)(Q, { activity: T }), er ? null : eo],
                 }),
             [er, t, i, r, d, T, eo],
         ),
@@ -262,8 +261,8 @@ function Q(e) {
                 isGameLaunchable: o,
             } = e;
             if (l.author.id === i || !(0, V.A)(t, l, s.id)) return { canJoin: !1, remoteJoinPlatform: null };
-            let d = (0, D._)(t);
-            if (!(0, G.A)(d) || (0, B.U)(d) || (0, w.w)(n, t) || (0, P.v)(l))
+            let d = (0, w._)(t);
+            if (!(0, G.A)(d) || (0, B.U)(d) || (0, D.w)(n, t) || (0, P.v)(l))
                 return { canJoin: !1, remoteJoinPlatform: null };
             if (r && a) return { canJoin: !0, remoteJoinPlatform: null };
             if (l.activity?.type === H.xL.JOIN && null != t) {
@@ -276,7 +275,7 @@ function Q(e) {
                 : { canJoin: !1, remoteJoinPlatform: null };
         })({
             presenceActivity: T,
-            currentUserPresenceActivity: k,
+            currentUserPresenceActivity: R,
             currentUserId: d,
             message: t,
             application: n,
@@ -289,7 +288,7 @@ function Q(e) {
             !(0, V.A)(T, t, n.id) ||
             !(0, U.A)(T, H.jUm.SYNC) ||
             !M.isPlatformEmbedded ||
-            (0, w.w)(k, T)
+            (0, D.w)(R, T)
         ),
         ex = (function (e, t, n, i) {
             if (
@@ -299,10 +298,10 @@ function Q(e) {
                 !(0, U.A)(e, H.jUm.JOIN)
             )
                 return !1;
-            let l = (0, D._)(e);
+            let l = (0, w._)(e);
             return !(!(0, G.A)(l) || (0, B.U)(l));
         })(T, t, n, d),
-        ef = (0, w.w)(k, T),
+        ef = (0, D.w)(R, T),
         eE = null != T && (0, U.A)(T, H.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
         eC = (0, u.bG)(
             [L.A],
@@ -406,7 +405,7 @@ function Q(e) {
             return (
                 null != e &&
                     (l.push(e),
-                    Q &&
+                    $ &&
                         n &&
                         (l.push({
                             label: F.intl.string(F.t.lw71Nf),
@@ -421,7 +420,7 @@ function Q(e) {
                         (i = !0))),
                 { actions: l, hasAccountLinkButton: i }
             );
-        }, [eg, ee, et, eA, ex, ef, h, t.author.id, t.id, T, r.id, r.guild_id, K, ep, d, eC, Q, ei, el, en, eE]),
+        }, [eg, ee, et, eA, ex, ef, h, t.author.id, t.id, T, r.id, r.guild_id, K, ep, d, eC, $, ei, el, en, eE]),
         e_ = eI.some((e) => e.trackingArea === N.kY.CLOUD_PLAY);
     (0, J.A)(e_, K);
     let ej = s.useMemo(

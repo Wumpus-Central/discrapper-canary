@@ -2082,7 +2082,7 @@ function t0() {
     });
 }
 var t1 = a(576470),
-    t2 = a(85451);
+    t2 = a(693879);
 function t8() {
     let e = (0, V.bG)([tH.A], () => tH.A.getFeed(tQ.X1.GLOBAL_FEED)?.refresh_stale_inbox_after_ms != null),
         { loading: t, nextFetchDate: a } = (0, V.cf)(

@@ -13,7 +13,7 @@ var r = n(339350),
     _ = n(765379),
     h = n(471107),
     f = n(506326),
-    p = n(85451),
+    p = n(693879),
     E = n(832384),
     m = n(53257),
     g = n(652215);
@@ -43,11 +43,7 @@ function I(e) {
     return (0, i.jsxs)(f.er, {
         children: [
             (0, i.jsx)(o, { size: "xxs", color: u.A.colors.TEXT_FEEDBACK_POSITIVE }),
-            (0, i.jsx)(p.z, {
-                entry: { start: n, end: s, isCountDown: a },
-                textColor: "text-feedback-positive",
-                bold: !0,
-            }),
+            (0, i.jsx)(p.z, { entry: { start: n, end: s, isCountDown: a }, textColor: "text-feedback-positive" }),
         ],
     });
 }
