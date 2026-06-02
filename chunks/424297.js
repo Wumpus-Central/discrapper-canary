@@ -1,48 +1,45 @@
-r.d(t, { P5: () => P, PaymentContextProvider: () => A });
+r.d(t, { P5: () => C, PaymentContextProvider: () => _ });
 var n = r(627968),
-    a = r(64700),
-    l = r(342393),
-    i = r(989349),
-    u = r.n(i),
-    s = r(688810),
-    o = r(531260),
-    c = r(626584),
-    d = r(174459),
-    p = r(38405),
-    f = r(652215);
-let _ = new c.A("CheckoutErrorBoundary.tsx");
-class m extends a.PureComponent {
+    l = r(64700),
+    u = r(342393),
+    a = r(688810),
+    i = r(626584),
+    s = r(174459),
+    c = r(38405),
+    o = r(652215);
+let d = new i.A("CheckoutErrorBoundary.tsx");
+class p extends l.PureComponent {
     state = { error: null, info: null };
     componentDidCatch(e, t) {
         let {
                 loadId: r,
                 selectedSkuId: n,
-                selectedPlanId: a,
-                isGift: l,
-                purchaseType: i,
-                locationStack: u,
-                additionalAnalyticsData: s,
+                selectedPlanId: l,
+                isGift: u,
+                purchaseType: a,
+                locationStack: i,
+                additionalAnalyticsData: p,
             } = this.props,
-            o = this.props.shouldRethrowError,
-            c = { loadId: r, selectedSkuId: n, selectedPlanId: a, isGift: l, purchaseType: i, locationStack: u },
+            f = this.props.shouldRethrowError,
+            h = { loadId: r, selectedSkuId: n, selectedPlanId: l, isGift: u, purchaseType: a, locationStack: i },
             m = {
                 tags: {
                     app_context: "billing",
                     checkout_error: "true",
                     billing_context: "checkout",
-                    ...(o ? { crashed: "true" } : {}),
+                    ...(f ? { crashed: "true" } : {}),
                 },
-                extra: { ...c, ...(s ?? {}), ...(t ?? {}) },
+                extra: { ...h, ...(p ?? {}), ...(t ?? {}) },
             };
-        p.A.captureException(e, m), _.error("Checkout error occurred:", { error: e, additionalErrorContext: c });
-        let h = "string" == typeof e ? e : e.message;
+        c.A.captureException(e, m), d.error("Checkout error occurred:", { error: e, additionalErrorContext: h });
+        let y = "string" == typeof e ? e : e.message;
         if (
-            (d.default.track(f.HAw.PAYMENT_FLOW_ERROR, {
+            (s.default.track(o.HAw.PAYMENT_FLOW_ERROR, {
                 load_id: r,
-                crashed: o,
-                error_message: h,
-                location_stack: u ?? [],
-                ...s,
+                crashed: f,
+                error_message: y,
+                location_stack: i ?? [],
+                ...p,
             }),
             this.setState({ error: e, info: t }),
             null != this.props.onUnhandledError && this.props.onUnhandledError(e, t, m),
@@ -58,154 +55,139 @@ class m extends a.PureComponent {
             : this.props.children;
     }
 }
-var h = r(426398),
-    y = r(722847),
-    I = r(886243),
-    E = r(786300),
-    S = r(795791),
+var f = r(426398),
+    h = r(571878),
+    m = r(611333),
+    y = r(786300),
+    I = r(795791),
     v = r(615310),
-    C = r(87952),
-    w = r(788868);
-let [x, P, g] = (0, E.A)();
-function A(e) {
+    x = r(87952),
+    S = r(788868);
+let [E, C, P] = (0, y.A)();
+function _(e) {
     let {
             stepConfigs: t,
             breadcrumbs: r,
-            loadId: l,
-            discoverySessionId: i,
-            purchaseType: u = f.VVm.SUBSCRIPTION,
+            loadId: u,
+            discoverySessionId: a,
+            purchaseType: i = o.VVm.SUBSCRIPTION,
             overrideCustomCheckoutFlow: s,
-            ...o
+            ...c
         } = e,
-        c = JSON.stringify(o.skuIDs),
-        d = a.useMemo(() => o.skuIDs, [c]),
-        p = (0, S.$w)(),
-        _ = a.useMemo(
+        d = JSON.stringify(c.skuIDs),
+        p = l.useMemo(() => c.skuIDs, [d]),
+        f = (0, I.$w)(),
+        h = l.useMemo(
             () => ({
-                skuIds: d,
-                isGift: o.isGift ?? !1,
-                referralTrialOfferId: o.referralTrialOfferId ?? null,
-                activeSubscription: o.activeSubscription ?? null,
-                excludeSubscriptionPlansBySKU: o.excludeSubscriptionPlansBySKU ?? !1,
-                purchaseType: u,
-                defaultPlanId: o.defaultPlanId,
-                referralCode: o.referralCode,
-                customCheckoutFlow: s ?? p,
-                unifiedCheckoutFlow: o.unifiedCheckoutFlow,
-                paymentGateway: o.paymentGateway,
-                applicationId: o.applicationId ?? w.tv,
+                skuIds: p,
+                isGift: c.isGift ?? !1,
+                referralTrialOfferId: c.referralTrialOfferId ?? null,
+                activeSubscription: c.activeSubscription ?? null,
+                excludeSubscriptionPlansBySKU: c.excludeSubscriptionPlansBySKU ?? !1,
+                purchaseType: i,
+                defaultPlanId: c.defaultPlanId,
+                referralCode: c.referralCode,
+                customCheckoutFlow: s ?? f,
+                unifiedCheckoutFlow: c.unifiedCheckoutFlow,
+                paymentGateway: c.paymentGateway,
+                applicationId: c.applicationId ?? S.tv,
             }),
             [
-                d,
-                u,
-                o.isGift,
-                o.referralTrialOfferId,
-                o.activeSubscription,
-                o.excludeSubscriptionPlansBySKU,
-                o.applicationId,
-                o.defaultPlanId,
-                o.referralCode,
-                s,
                 p,
-                o.unifiedCheckoutFlow,
-                o.paymentGateway,
+                i,
+                c.isGift,
+                c.referralTrialOfferId,
+                c.activeSubscription,
+                c.excludeSubscriptionPlansBySKU,
+                c.applicationId,
+                c.defaultPlanId,
+                c.referralCode,
+                s,
+                f,
+                c.unifiedCheckoutFlow,
+                c.paymentGateway,
             ],
         );
     return (0, n.jsx)(v.mz, {
         stepConfigs: t,
         breadcrumbs: r,
-        children: (0, n.jsx)(I.P, {
-            loadId: l,
-            discoverySessionId: i,
-            checkoutInitParameters: _,
-            children: (0, n.jsx)(k, { ...o, purchaseType: u }),
+        children: (0, n.jsx)(m.P, {
+            loadId: u,
+            discoverySessionId: a,
+            checkoutInitParameters: h,
+            children: (0, n.jsx)(k, { ...c, purchaseType: i }),
         }),
     });
 }
 function k(e) {
     let { shouldCrashOnUnhandledError: t = !0, onUnhandledError: r, children: i } = e,
-        c = (0, C.A)(),
-        { paymentSources: d, hasPaymentSources: p } = (0, h.jm)(),
-        _ = a.useRef(p),
+        s = (0, x.A)(),
+        { paymentSources: c } = (0, f.jm)(),
         {
-            contextMetadata: I,
-            unifiedCheckoutFlow: E,
-            purchaseType: S,
-            isGift: v,
-            activeSubscription: w,
-            selectedSkuId: P,
-            selectedPlanId: g,
-            paymentSourceId: A,
-            paymentGateway: k,
-        } = (0, y.t4)((e) => ({
+            contextMetadata: d,
+            unifiedCheckoutFlow: m,
+            purchaseType: y,
+            isGift: I,
+            selectedSkuId: v,
+            selectedPlanId: S,
+            paymentSourceId: C,
+            paymentGateway: P,
+        } = (0, h.t4)((e) => ({
             contextMetadata: e.contextMetadata,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
             purchaseType: e.purchaseType,
             isGift: e.isGift,
-            activeSubscription: e.activeSubscription,
             selectedSkuId: e.selectedSkuId,
             selectedPlanId: e.selectedPlanId,
             paymentSourceId: e.paymentSourceId,
             paymentGateway: e.paymentGateway,
         })),
-        { purchaseErrorBlockRef: R } = (function () {
-            let e = a.useRef(null),
-                { purchaseError: t, setPurchaseError: r } = (0, y.t4)((e) => ({
+        { purchaseErrorBlockRef: _ } = (function () {
+            let e = l.useRef(null),
+                { purchaseError: t, setPurchaseError: r } = (0, h.t4)((e) => ({
                     purchaseError: e.purchaseError,
                     setPurchaseError: e.setPurchaseError,
                 }));
             return (
-                a.useEffect(() => {
+                l.useEffect(() => {
                     null != t && null != e.current && e.current.scrollIntoView({ behavior: "smooth" });
                 }, [t]),
                 { purchaseError: t, setPurchaseError: r, purchaseErrorBlockRef: e }
             );
         })(),
-        [T, b] = a.useState(null),
-        [j, O] = a.useState(null),
-        [N, M] = a.useState(null),
-        G = a.useRef(null != w ? w.planId : null);
-    a.useEffect(() => {
-        null == G.current && null != w && (G.current = w.planId);
-    }, [w]);
-    let { endsAt: B } = (0, o.A)({ forceFetch: !1, excludeReverseTrial: !0 }),
-        U = a.useRef(B.isSame(u()(0)) ? null : B);
-    a.useEffect(() => {
-        null != U.current || B.isSame(u()(0)) || (U.current = B);
-    }, [B]);
-    let F = null != A && null != d[A] ? d[A]?.type : null,
-        D = a.useMemo(
-            () => ({ payment_source_id: A, payment_gateway: k, payment_source_type: F, checkout_flow: E }),
-            [A, k, F, E],
+        [k, w] = l.useState(null),
+        [j, g] = l.useState(null),
+        [b, R] = l.useState(null),
+        A = null != C && null != c[C] ? c[C]?.type : null,
+        T = l.useMemo(
+            () => ({ payment_source_id: C, payment_gateway: P, payment_source_type: A, checkout_flow: m }),
+            [C, P, A, m],
         ),
-        L = (0, s.Db)();
-    return (0, n.jsx)(x.Provider, {
+        G = (0, a.Db)();
+    return (0, n.jsx)(E.Provider, {
         value: {
-            stripe: c,
-            purchaseErrorBlockRef: R,
-            bodyNode: T,
-            setBodyNode: b,
+            stripe: s,
+            purchaseErrorBlockRef: _,
+            bodyNode: k,
+            setBodyNode: w,
             footerNode: j,
-            setFooterNode: O,
-            modalOverlayNode: N,
-            setModalOverlayNode: M,
-            startingFractionalPremiumEndsAtRef: U,
-            startedPaymentFlowWithPaymentSourcesRef: _,
-            startingPremiumSubscriptionPlanIdRef: G,
+            setFooterNode: g,
+            modalOverlayNode: b,
+            setModalOverlayNode: R,
         },
-        children: (0, n.jsx)(l.Elements, {
-            options: f.XL8,
-            stripe: c,
-            children: (0, n.jsx)(m, {
+        children: (0, n.jsx)(u.Elements, {
+            options: o.XL8,
+            stripe: s,
+            children: (0, n.jsx)(p, {
                 shouldRethrowError: t,
-                locationStack: L,
+                locationStack: G,
                 onUnhandledError: r,
-                loadId: I.loadId,
-                selectedSkuId: P ?? null,
-                selectedPlanId: g ?? null,
-                isGift: v,
-                purchaseType: S,
-                additionalAnalyticsData: D,
+                loadId: d.loadId,
+                selectedSkuId: v ?? null,
+                selectedPlanId: S ?? null,
+                isGift: I,
+                purchaseType: y,
+                additionalAnalyticsData: T,
                 children: i,
             }),
         }),

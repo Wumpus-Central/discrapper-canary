@@ -11,8 +11,8 @@ var i = t(627968),
     p = t(123292),
     m = t(289873),
     S = t(821609),
-    y = t(820739),
-    g = t(891197),
+    g = t(820739),
+    y = t(891197),
     h = t(444927),
     I = t(964486),
     f = t(793574),
@@ -29,11 +29,11 @@ var i = t(627968),
     T = t(666646),
     M = t(584160),
     L = t(480642),
-    D = t(722847),
+    D = t(571878),
     R = t(357669),
     G = t(832286),
     U = t(958340),
-    O = t(259160),
+    O = t(937008),
     k = t(424297),
     w = t(166532),
     B = t(566980),
@@ -92,7 +92,7 @@ function em(e) {
         } = e,
         [d, p] = l.useState(n),
         [m, S] = l.useState(null),
-        [y, g] = l.useState([]),
+        [g, y] = l.useState([]),
         h = (0, D.t4)((e) => e.activeSubscription),
         I = (0, u.bG)([q.A], () => q.A.hasFetchedSubscriptions()),
         f = (0, u.bG)([eo.A], () => eo.A.defaultPaymentSourceId),
@@ -107,8 +107,8 @@ function em(e) {
             guildId: a,
             currency: m,
             setCurrency: S,
-            currencies: y,
-            setCurrencies: g,
+            currencies: g,
+            setCurrencies: y,
             paymentModalArgs: A,
             premiumSubscriptionPaymentSourceId: P,
             analyticsLocation: o,
@@ -118,28 +118,29 @@ function em(e) {
     });
 }
 var eS = t(879100),
-    ey = t(788868);
-function eg(e) {
+    eg = t(788868);
+function ey(e) {
     let { handleClose: n, existingAvailableSlots: t } = e,
         { guildId: l, numGuildBoostsToPurchase: s, paymentModalArgs: r } = ed(),
-        { startingFractionalPremiumEndsAtRef: a } = (0, k.P5)(),
         {
-            paymentSourceId: o,
-            activeSubscription: c,
-            customCheckoutFlow: d,
+            paymentSourceId: a,
+            activeSubscription: o,
+            customCheckoutFlow: c,
+            startingFractionalPremiumEndsAt: d,
         } = (0, D.t4)((e) => ({
             paymentSourceId: e.paymentSourceId,
             activeSubscription: e.activeSubscription,
             customCheckoutFlow: e.customCheckoutFlow,
+            startingFractionalPremiumEndsAt: e.startingFractionalPremiumEndsAt,
         })),
         p = (0, u.bG)([U.A], () => (null != l ? U.A.getGuild(l) : void 0), [l]),
         m = null != l ? z.A.getGuild(l) : null,
-        S = (0, h.A)(() => (0, ea.b2)(a.current)),
-        y = (0, u.bG)([K.A], () => (null != c ? (0, ea.c9)(c.planId) : null)),
-        { paymentSources: g } = r,
-        I = (0, F.g)(g, o),
+        S = (0, h.A)(() => (0, ea.b2)(d)),
+        g = (0, u.bG)([K.A], () => (null != o ? (0, ea.c9)(o.planId) : null)),
+        { paymentSources: y } = r,
+        I = (0, F.g)(y, a),
         f = null != m ? m.name : null != p ? p.name : void 0,
-        P = S && null != y && !ey.YV.has(y.id);
+        P = S && null != g && !eg.YV.has(g.id);
     return (0, i.jsx)(eS.W, {
         guild: m,
         guildBoostQuantity: s + t.length,
@@ -148,7 +149,7 @@ function eg(e) {
         paymentSourceType: I,
         fallbackGuildName: f,
         didPurchaseOnFractionalPremium: P,
-        customCheckoutFlow: d,
+        customCheckoutFlow: c,
     });
 }
 var eh = t(683071),
@@ -219,9 +220,9 @@ var eJ = t(773669),
     e0 = t(376843),
     e1 = t(717925),
     e3 = t(596034),
-    e4 = t(848584),
-    e6 = t(241989),
-    e8 = t(908419),
+    e8 = t(848584),
+    e4 = t(241989),
+    e6 = t(908419),
     e2 = t(888751),
     e5 = t(874638),
     e7 = t(692440),
@@ -237,7 +238,7 @@ function nt(e) {
             currency: r,
             startDate: a,
         } = e,
-        { immediateDelivery: u } = (0, e8.U)();
+        { immediateDelivery: u } = (0, e6.U)();
     return (0, i.jsx)(e3._, {
         variant: {
             type: e3.I.Subscription,
@@ -321,7 +322,7 @@ function ns(e) {
         0 !== r.tax && u.push({ id: "tax", label: eW.intl.string(eW.t.jiRvC7), amount: r.tax, lineItemType: "tax" });
     let { lineItems: o, currency: c } = (0, e2.EA)({ id: "main-line-item", amount: n, ...a }),
         d = [...o, ...u];
-    return (0, i.jsx)(e4.Vm, {
+    return (0, i.jsx)(e8.Vm, {
         defaultExpanded: !0,
         label: eW.intl.string(ne.default.eoXh7B),
         lineItems: d,
@@ -368,7 +369,7 @@ function na(e) {
             setPaymentSourceId: m,
             onPaymentSourceAdd: S,
         } = e,
-        y = (function (e) {
+        g = (function (e) {
             let n,
                 {
                     guildId: t,
@@ -383,20 +384,20 @@ function na(e) {
                 }, [t]),
                 c = s.interval,
                 d = s.intervalCount,
-                p = (0, u.bG)([K.A], () => K.A.getForSkuAndInterval((0, X.mH)(ey.pe.GUILD), c, d));
+                p = (0, u.bG)([K.A], () => K.A.getForSkuAndInterval((0, X.mH)(eg.pe.GUILD), c, d));
             r()(null != p, "Missing guildBoostingSubscriptionPlan");
             let m = (0, X.J$)(i.paymentSourceId),
                 S = (0, ew.ds)();
             n = null != l ? (0, X.Om)(l, a[0].quantity, a[0].planId) : a;
-            let { analyticsLocations: y } = (0, P.Ay)(),
-                [g, h] = (0, ek.YV)({
+            let { analyticsLocations: g } = (0, P.Ay)(),
+                [y, h] = (0, ek.YV)({
                     subscriptionId: l?.id,
                     items: n,
                     renewal: !1,
                     applyEntitlements: !0,
                     paymentSourceId: i.paymentSourceId,
                     currency: i.currency,
-                    analyticsLocations: y,
+                    analyticsLocations: g,
                     analyticsLocation: f.A.GUILD_BOOSTING_REVIEW_PRORATED,
                 }),
                 [I, A] = (0, ek.YV)({
@@ -405,12 +406,12 @@ function na(e) {
                     renewal: !0,
                     paymentSourceId: i.paymentSourceId,
                     currency: i.currency,
-                    analyticsLocations: y,
+                    analyticsLocations: g,
                     analyticsLocation: f.A.GUILD_BOOSTING_REVIEW_RENEWAL,
                 });
             return (
                 (0, T.OQ)({
-                    checkoutInvoicePreview: g,
+                    checkoutInvoicePreview: y,
                     checkoutInvoiceError: h,
                     renewalInvoicePreview: I,
                     renewalInvoiceError: A,
@@ -420,7 +421,7 @@ function na(e) {
                     guildBoostingSubscriptionPlan: p,
                     isPrepaid: m,
                     isReverseTrial: S,
-                    checkoutInvoicePreview: g,
+                    checkoutInvoicePreview: y,
                     renewalInvoicePreview: I,
                     isSubscriptionUpdate: null != l,
                 }
@@ -433,18 +434,18 @@ function na(e) {
             newAdditionalPlans: d,
         }),
         {
-            isSubscriptionUpdate: g,
+            isSubscriptionUpdate: y,
             guild: h,
             isPrepaid: I,
             isReverseTrial: A,
             checkoutInvoicePreview: x,
             renewalInvoicePreview: E,
-        } = y,
+        } = g,
         b = (0, _.A)({ location: "GuildBoostReview", message: eW.intl.string(ne.default["tK8A/8"]) }),
         C = l.useMemo(() => ({ shouldUseUnifiedCheckoutUI: !0 }), []);
     if (null == x || null == E || null == h) return (0, i.jsx)(e1.E, {});
     let N = (0, i.jsx)(nr, {
-            isSubscriptionUpdate: g,
+            isSubscriptionUpdate: y,
             premiumSubscription: a,
             checkoutInvoicePreview: x,
             renewalInvoicePreview: E,
@@ -480,7 +481,7 @@ function na(e) {
                 startDate: (0, e7.de)({ isSubscriptionUpdate: n, currentInvoice: l, renewalInvoice: i }),
             };
         })({
-            isSubscriptionUpdate: g,
+            isSubscriptionUpdate: y,
             premiumSubscriptionPlan: c,
             renewalInvoicePreview: E,
             checkoutInvoicePreview: x,
@@ -500,27 +501,27 @@ function na(e) {
                 { guildBoostingSubscriptionPlan: u, isPrepaid: o, isReverseTrial: c } = a,
                 d = t.interval,
                 p = t.intervalCount,
-                m = (e) => (0, e5.Z)(i.invoiceItems).find((n) => ey.pW.has(n.subscriptionPlanId) && e(n)),
+                m = (e) => (0, e5.Z)(i.invoiceItems).find((n) => eg.pW.has(n.subscriptionPlanId) && e(n)),
                 S = m((e) => e.amount >= 0);
             r()(null != S, "Missing guild boosting invoice item");
-            let y = m((e) => e.amount < 0),
-                g = null != y ? S.quantity - y.quantity : S.quantity,
+            let g = m((e) => e.amount < 0),
+                y = null != g ? S.quantity - g.quantity : S.quantity,
                 h = i.invoiceItems.filter((e) => (0, X.xq)(e.subscriptionPlanId)),
                 I = h.reduce((e, n) => e + n.amount, 0),
-                f = (0, ek.sL)(S) * g,
+                f = (0, ek.sL)(S) * y,
                 P = (0, eZ.$g)(f, i.currency),
                 A = (0, eZ.CE)(P, d, p),
                 x = (0, eZ.$g)(i.total, i.currency) + (i.currency !== e9.Yr.USD ? "*" : ""),
                 E = i.subtotal - f - I,
                 _ = S.discounts.map((e) => {
                     let n = e.amount / S.quantity;
-                    return { ...e, amount: n * g };
+                    return { ...e, amount: n * y };
                 }),
                 b = _.find((e) => e.type === eX.iS.SUBSCRIPTION_PLAN),
                 C = _.find((e) => e.type === eX.iS.ENTITLEMENT),
-                N = S.subscriptionPlanPrice * g;
+                N = S.subscriptionPlanPrice * y;
             return {
-                addedQuantity: g,
+                addedQuantity: y,
                 guildBoostingSubscriptionPlan: u,
                 isPrepaid: o,
                 isReverseTrial: c,
@@ -545,7 +546,7 @@ function na(e) {
             checkoutInvoicePreview: x,
             renewalInvoicePreview: E,
             priceOptions: s,
-            reviewState: y,
+            reviewState: g,
         }),
         D = (0, i.jsx)(ns, { ...L }),
         R = (function (e, n, t) {
@@ -564,7 +565,7 @@ function na(e) {
                     planName: (0, X.Mn)(s.id, !1, r),
                 }),
                 target: { type: "boost", guild: e },
-                graphic: (0, i.jsx)(e6.a6, {}),
+                graphic: (0, i.jsx)(e4.a6, {}),
                 price: a,
                 PriceIcon: c ? ej.t : void 0,
                 priceTooltip: c ? eW.intl.string(ne.default.YUNJJa) : void 0,
@@ -579,7 +580,7 @@ function na(e) {
                 return !n && t && null != i ? { type: "reverseTrial", text: ni(i.currentPeriodEnd) } : null;
             })({ isPrepaid: I, isReverseTrial: A, premiumSubscription: a }),
         ),
-        G = (0, i.jsx)(e6.f7, { ...R });
+        G = (0, i.jsx)(e4.f7, { ...R });
     return (0, i.jsx)(e1.T, {
         shouldShowGlobalNotices: !0,
         upperInlineNoticeProps: b,
@@ -694,8 +695,8 @@ function nS(e) {
         fractionalBanner: p,
         existingSlotNotice: m,
         discountCallout: S,
-        refreshDiscountCallout: y,
-        legacyPricingNotes: g,
+        refreshDiscountCallout: g,
+        legacyPricingNotes: y,
         refreshPricingNotes: h,
     } = e;
     return (0, i.jsxs)("div", {
@@ -733,12 +734,12 @@ function nS(e) {
                     }),
                 ],
             }),
-            g.map((e, n) => (0, i.jsx)(l.Fragment, { children: e }, n)),
+            y.map((e, n) => (0, i.jsx)(l.Fragment, { children: e }, n)),
             S,
         ],
     });
 }
-function ny(e) {
+function ng(e) {
     let {
         isLoading: n,
         numGuildBoosts: t,
@@ -752,8 +753,8 @@ function ny(e) {
         refreshDescriptionContent: p,
         fractionalBanner: m,
         existingSlotNotice: S,
-        discountCallout: y,
-        refreshDiscountCallout: g,
+        discountCallout: g,
+        refreshDiscountCallout: y,
         legacyPricingNotes: h,
         refreshPricingNotes: I,
     } = e;
@@ -794,7 +795,7 @@ function ny(e) {
                     (0, i.jsx)("div", { className: ex()(no.El, { [nn.S]: n }), children: u }),
                 ],
             }),
-            g,
+            y,
             (0, i.jsxs)("div", {
                 className: no.fh,
                 children: [
@@ -810,7 +811,7 @@ function ny(e) {
         ],
     });
 }
-function ng(e) {
+function ny(e) {
     let { existingAvailableSlots: n, canceledCount: t, premiumSubscription: l } = e;
     return (0, i.jsxs)("div", {
         className: nn.Mv,
@@ -850,8 +851,8 @@ function nh(e) {
             existingAvailableSlots: d = [],
             priceOptions: p,
             isRefreshEnabled: S = !1,
-            showRefreshSubtotalRate: y = !1,
-            refreshNextStepLabel: g = eW.intl.string(eW.t.QBnNHq),
+            showRefreshSubtotalRate: g = !1,
+            refreshNextStepLabel: y = eW.intl.string(eW.t.QBnNHq),
         } = e,
         h = (function (e) {
             let n,
@@ -864,28 +865,28 @@ function nh(e) {
                     onClickPremiumSubscriptionLink: d,
                     existingAvailableSlots: p,
                     priceOptions: S,
-                    showRefreshSubtotalRate: y,
+                    showRefreshSubtotalRate: g,
                 } = e,
-                g =
+                y =
                     ((n = (0, u.bG)([q.A], () => q.A.getPremiumTypeSubscription())),
                     (0, u.bG)([eo.A], () =>
                         n?.paymentSourceId != null ? eo.A.getPaymentSource(n.paymentSourceId)?.country : null,
                     )),
                 h = s.interval,
                 I = s.intervalCount,
-                A = (0, u.bG)([K.A], () => K.A.getForSkuAndInterval((0, X.mH)(ey.pe.GUILD), h, I)),
+                A = (0, u.bG)([K.A], () => K.A.getForSkuAndInterval((0, X.mH)(eg.pe.GUILD), h, I)),
                 x = (0, u.bG)([eK.default], () => eK.default.getCurrentUser()),
                 E = (0, eU.A)({ forceFetch: !1 });
             r()(null != A, "Missing guildBoostingSubscriptionPlan");
             let _ = [{ planId: A.id, quantity: 1 }],
                 b = c?.items.find(
-                    (e) => e.planId === ey.gD.PREMIUM_MONTH_TIER_2 || e.planId === ey.gD.PREMIUM_YEAR_TIER_2,
+                    (e) => e.planId === eg.gD.PREMIUM_MONTH_TIER_2 || e.planId === eg.gD.PREMIUM_YEAR_TIER_2,
                 );
             null != b && _.push(b);
             let C = c?.items.find(
-                    (e) => e.planId === ey.gD.PREMIUM_MONTH_GUILD || e.planId === ey.gD.PREMIUM_YEAR_GUILD,
+                    (e) => e.planId === eg.gD.PREMIUM_MONTH_GUILD || e.planId === eg.gD.PREMIUM_YEAR_GUILD,
                 ),
-                N = null == g || !ey.uJ.has(g) || null == C,
+                N = null == y || !eg.uJ.has(y) || null == C,
                 { analyticsLocations: v } = (0, P.Ay)(),
                 [j, M] = (0, ek.YV)({
                     subscriptionId: c?.id,
@@ -902,9 +903,9 @@ function nh(e) {
             l.useLayoutEffect(() => {
                 o(L);
             }, [L, o]);
-            let D = (0, eF.V)()?.subscription_trial?.sku_id === ey.pe.TIER_2,
+            let D = (0, eF.V)()?.subscription_trial?.sku_id === eg.pe.TIER_2,
                 R = X.Ay.hasBoostDiscount(x),
-                G = R && null != c && X.Ay.isPremiumAtLeast(X.Ay.getPremiumType(c.planId), ey.PremiumTypes.TIER_1),
+                G = R && null != c && X.Ay.isPremiumAtLeast(X.Ay.getPremiumType(c.planId), eg.PremiumTypes.TIER_1),
                 U = j?.findInvoiceItemByPlanId(A.id),
                 O =
                     null != U
@@ -925,7 +926,7 @@ function nh(e) {
                         (n = l ? "reverse_trial" : s ? "discount" : r ? "upsell_trial" : "upsell"),
                         {
                             showExistingSlotNotice: t > 0,
-                            showFractionalPremiumBanner: i === ey.xc.FP_SUB_PAUSED,
+                            showFractionalPremiumBanner: i === eg.xc.FP_SUB_PAUSED,
                             upsellVariant: n,
                         }
                     );
@@ -941,8 +942,8 @@ function nh(e) {
                   (t = eW.intl.format(eW.t.hf6YOY, { planName: X.Ay.getTierDisplayNameByPlanId(c.planId) })))
                 : (t = eW.intl.format("upsell_trial" === B.upsellVariant ? eW.t.ba1L74 : eW.t.fkffDT, {
                       onPremiumSubscriptionClick: d,
-                      discountPercentage: (0, eQ.l9)(eJ.default.locale, ey.oX / 100),
-                      freeSubscriptionCount: ey.M4,
+                      discountPercentage: (0, eQ.l9)(eJ.default.locale, eg.oX / 100),
+                      freeSubscriptionCount: eg.M4,
                   }));
             let F = p.filter((e) => (0, Z.I5)(e)).length,
                 V = (0, X.J$)(S.paymentSourceId),
@@ -957,15 +958,15 @@ function nh(e) {
                         ? (0, i.jsx)(nl, { text: ni(c.currentPeriodEnd), className: nn.jk })
                         : (0, i.jsx)("div", { className: no._X, children: eW.intl.string(eW.t.jNY1FO) }),
                 $ = B.showExistingSlotNotice
-                    ? (0, i.jsx)(ng, { existingAvailableSlots: p, canceledCount: F, premiumSubscription: c })
+                    ? (0, i.jsx)(ny, { existingAvailableSlots: p, canceledCount: F, premiumSubscription: c })
                     : null,
                 J = B.showFractionalPremiumBanner ? (0, i.jsx)(eY.vi, { fractionalPremiumInfo: E }) : null,
                 Q = V
                     ? ((function (e) {
                           let { intervalType: n, intervalCount: t = 1 } = e;
-                          return n === ey.WT.YEAR
+                          return n === eg.WT.YEAR
                               ? eW.intl.string(eW.t.YDpAzZ)
-                              : n === ey.WT.MONTH && 1 === t
+                              : n === eg.WT.MONTH && 1 === t
                                 ? eW.intl.string(eW.t["6ZR3By"])
                                 : null;
                       })({ intervalType: h, intervalCount: I }) ?? eW.intl.string(eW.t.K9Bmze))
@@ -977,11 +978,11 @@ function nh(e) {
                       : (function (e) {
                             let { amount: n, currency: t, intervalType: i, intervalCount: l = 1 } = e,
                                 s = (0, eZ.$g)(n, t);
-                            return i === ey.WT.YEAR
+                            return i === eg.WT.YEAR
                                 ? eW.intl.formatToPlainString(eW.t["8M04YJ"], { price: s })
-                                : i === ey.WT.MONTH && 1 === l
+                                : i === eg.WT.MONTH && 1 === l
                                   ? eW.intl.formatToPlainString(eW.t.VStWCR, { price: s })
-                                  : i === ey.WT.MONTH && l > 1
+                                  : i === eg.WT.MONTH && l > 1
                                     ? eW.intl.formatToPlainString(eW.t.xJvAFU, { price: s })
                                     : null;
                         })({ intervalType: h, intervalCount: I, amount: O.amount, currency: O.currency }),
@@ -996,7 +997,7 @@ function nh(e) {
                       }),
                 et = L
                     ? (0, i.jsx)(m.y, {})
-                    : y && !V
+                    : g && !V
                       ? (0, eZ.CE)((0, eZ.$g)(k, O.currency), h, I)
                       : (0, eZ.$g)(k, O.currency),
                 ei = [],
@@ -1045,9 +1046,9 @@ function nh(e) {
             onClickPremiumSubscriptionLink: c,
             existingAvailableSlots: d,
             priceOptions: p,
-            showRefreshSubtotalRate: y,
+            showRefreshSubtotalRate: g,
         });
-    return (0, i.jsx)(S ? ny : nS, {
+    return (0, i.jsx)(S ? ng : nS, {
         isLoading: h.isLoading,
         numGuildBoosts: t,
         setNumGuildBoosts: s,
@@ -1063,10 +1064,10 @@ function nh(e) {
         refreshDiscountCallout: h.refreshDiscountCallout,
         legacyPricingNotes: h.legacyPricingNotes,
         refreshPricingNotes: h.refreshPricingNotes,
-        refreshNextStepLabel: g,
+        refreshNextStepLabel: y,
     });
 }
-let nI = ey.gD.NONE_MONTH;
+let nI = eg.gD.NONE_MONTH;
 var nf = t(898640);
 function nP(e) {
     let { handleClose: n, setForceDisableSubmitButton: t, refreshNextStepLabel: l } = e,
@@ -1082,9 +1083,9 @@ function nP(e) {
             activeSubscription: e.activeSubscription,
         })),
         S = (0, h.A)(() => (0, Z.D$)($.A.boostSlots)),
-        y = (0, Y.n)("GuildBoostPurchaseModal"),
-        g = eP.useConfig({ location: "GuildBoostPurchaseModal" }).enabled,
-        I = y && g,
+        g = (0, Y.n)("GuildBoostPurchaseModal"),
+        y = eP.useConfig({ location: "GuildBoostPurchaseModal" }).enabled,
+        I = g && y,
         f = (0, u.bG)([U.A], () => (null != o ? U.A.getGuild(o) : void 0), [o]),
         P = null != o ? z.A.getGuild(o) : null,
         A = null != m && m.isPurchasedExternally,
@@ -1107,7 +1108,7 @@ function nP(e) {
         },
         priceOptions:
             null != p ? { paymentSourceId: p, currency: null != c ? c : void 0 } : { currency: null != c ? c : void 0 },
-        isRefreshEnabled: y,
+        isRefreshEnabled: g,
         showRefreshSubtotalRate: I,
         refreshNextStepLabel: l,
     });
@@ -1157,13 +1158,13 @@ function nj(e) {
             (0, i.jsx)(nN.A, {
                 icon: eD._,
                 iconClassName: nv.pl,
-                description: eW.intl.formatToPlainString(eW.t.sQBgs2, { numFreeGuildSubscriptions: ey.M4 }),
+                description: eW.intl.formatToPlainString(eW.t.sQBgs2, { numFreeGuildSubscriptions: eg.M4 }),
                 color: eE.A.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
             (0, i.jsx)(nN.A, {
                 icon: eD._,
                 iconClassName: nv.pl,
-                description: eW.intl.formatToPlainString(eW.t["1A6vXi"], { percent: (0, eQ.l9)(t, ey.oX / 100) }),
+                description: eW.intl.formatToPlainString(eW.t["1A6vXi"], { percent: (0, eQ.l9)(t, eg.oX / 100) }),
                 color: eE.A.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
             n ? (0, i.jsx)(nN.A, { icon: nA.n, iconClassName: nv.zO, description: eW.intl.string(eW.t.Z9b2x2) }) : null,
@@ -1181,18 +1182,18 @@ function nT(e) {
             onSubscriptionConfirmation: a,
             analyticsLocation: u,
             analyticsSourceLocation: m,
-            priceOptions: y,
+            priceOptions: g,
         } = e,
-        { analyticsLocations: g, sourceAnalyticsLocations: h } = (0, P.Ay)(f.A.GUILD_BOOSTING_PREMIUM_UPSELL),
+        { analyticsLocations: y, sourceAnalyticsLocations: h } = (0, P.Ay)(f.A.GUILD_BOOSTING_PREMIUM_UPSELL),
         I = null == n || null == n.premiumSubscriptionType,
-        A = X.Ay.getPrice(ey.gD.PREMIUM_MONTH_TIER_2, !1, !1, y),
+        A = X.Ay.getPrice(eg.gD.PREMIUM_MONTH_TIER_2, !1, !1, g),
         x = (0, eZ.$g)(A.amount, A.currency),
         E = (0, eF.V)(),
         _ = E?.trial_id,
-        b = E?.subscription_trial?.sku_id === ey.pe.TIER_2;
+        b = E?.subscription_trial?.sku_id === eg.pe.TIER_2;
     return (
         l.useEffect(() => {
-            Q.default.track(nu.HAw.PREMIUM_UPSELL_VIEWED, { type: ey.e.GUILD_PREMIUM_UPSELL_MODAL, location_stack: h });
+            Q.default.track(nu.HAw.PREMIUM_UPSELL_VIEWED, { type: eg.e.GUILD_PREMIUM_UPSELL_MODAL, location_stack: h });
         }, [h]),
         (0, i.jsxs)(i.Fragment, {
             children: [
@@ -1237,8 +1238,8 @@ function nT(e) {
                                             t(),
                                                 (0, nb.A)({
                                                     initialPlanId: null,
-                                                    subscriptionTier: ey.pe.TIER_2,
-                                                    analyticsLocations: g,
+                                                    subscriptionTier: eg.pe.TIER_2,
+                                                    analyticsLocations: y,
                                                     analyticsObject: {
                                                         ...u,
                                                         section: nu.JJy.PREMIUM_GUILD_PURCHASE_MODAL,
@@ -1266,15 +1267,15 @@ function nM(e) {
             activeSubscription: e.activeSubscription,
         })),
         S = (0, u.bG)([K.A], () => (null != m ? (0, ea.c9)(m.planId) : null)),
-        y = (0, u.bG)([K.A], () => (null == S ? K.A.get(nI) : S));
-    r()(null != y, "Missing nextPremiumSubscriptionPlan"), r()(null != a && "" !== a, "Currency not defined");
-    let { paymentSources: g } = o,
+        g = (0, u.bG)([K.A], () => (null == S ? K.A.get(nI) : S));
+    r()(null != g, "Missing nextPremiumSubscriptionPlan"), r()(null != a && "" !== a, "Currency not defined");
+    let { paymentSources: y } = o,
         h = null != m ? m.paymentSourceId : null,
-        I = Object.keys(g).length > 0,
+        I = Object.keys(y).length > 0,
         f = l.useCallback(() => t(w.pn.PLAN_SELECT), [t]),
         P = l.useCallback(() => t(null != h || I ? w.pn.REVIEW : w.pn.ADD_PAYMENT_STEPS), [t, h, I]);
     return (0, i.jsx)(nT, {
-        premiumSubscriptionPlan: y,
+        premiumSubscriptionPlan: g,
         analyticsLocation: c,
         analyticsSourceLocation: d,
         onClose: n,
@@ -1293,7 +1294,7 @@ function nD() {
         s = (0, u.bG)([K.A], () => (null != e ? (0, ea.c9)(e.planId) : null));
     return {
         newAdditionalPlans: l.useMemo(
-            () => (null != e && t && i ? (0, nL.v)(e, n) : [{ planId: ey.gD.PREMIUM_MONTH_GUILD, quantity: n }]),
+            () => (null != e && t && i ? (0, nL.v)(e, n) : [{ planId: eg.gD.PREMIUM_MONTH_GUILD, quantity: n }]),
             [e, t, i, n],
         ),
         currentPremiumSubscriptionPlan: s,
@@ -1314,9 +1315,9 @@ function nR(e) {
         }));
     r()(null != t, "Missing guildId"), r()(null != s && "" !== s, "Currency not defined");
     let { paymentSources: m } = a,
-        { newAdditionalPlans: S, currentPremiumSubscriptionPlan: y } = nD(),
-        g = (0, u.bG)([K.A], () => (null == y ? K.A.get(nI) : y));
-    r()(null != g, "Missing nextPremiumSubscriptionPlan");
+        { newAdditionalPlans: S, currentPremiumSubscriptionPlan: g } = nD(),
+        y = (0, u.bG)([K.A], () => (null == g ? K.A.get(nI) : g));
+    r()(null != y, "Missing nextPremiumSubscriptionPlan");
     let h = null != c ? { paymentSourceId: c, currency: s } : { currency: s },
         I = l.useCallback(() => {
             n(w.pn.ADD_PAYMENT_STEPS), d(null);
@@ -1327,7 +1328,7 @@ function nR(e) {
         priceOptions: h,
         currentPremiumSubscription: p,
         premiumSubscriptionPaymentSourceId: o,
-        premiumSubscriptionPlan: g,
+        premiumSubscriptionPlan: y,
         newAdditionalPlans: S,
         paymentSourceId: c,
         setPaymentSourceId: d,
@@ -1337,9 +1338,9 @@ function nR(e) {
 let nG = [w.pn.PLAN_SELECT, w.pn.REVIEW, w.pn.CONFIRM],
     nU = [w.pn.PLAN_SELECT, w.pn.ADD_PAYMENT_STEPS, w.pn.REVIEW, w.pn.CONFIRM];
 async function nO(e, n) {
-    await (0, y.CD)();
+    await (0, g.CD)();
     let t = (0, Z.D$)($.A.boostSlots);
-    return (0, y.VA)(
+    return (0, g.VA)(
         e,
         t.map((e) => e.id),
         n,
@@ -1393,7 +1394,7 @@ function nw(e) {
             onClose: s,
             analyticsLocations: o,
             analyticsLocation: d,
-            analyticsSourceLocation: y,
+            analyticsSourceLocation: g,
             guildId: O,
             onSubscribeComplete: k,
             onSubscriptionConfirmation: es,
@@ -1449,8 +1450,8 @@ function nw(e) {
             () =>
                 eb.find((e) => {
                     let { planId: n } = e;
-                    return ey.pW.has(n);
-                })?.planId ?? ey.gD.PREMIUM_MONTH_GUILD,
+                    return eg.pW.has(n);
+                })?.planId ?? eg.gD.PREMIUM_MONTH_GUILD,
             [eb],
         ),
         eQ = (0, u.bG)([K.A], () => K.A.get(eq)?.skuId, [eq]),
@@ -1458,19 +1459,19 @@ function nw(e) {
             () => ({
                 load_id: e$,
                 payment_type: e9.fr[e9.VV.SUBSCRIPTION],
-                sku_id: (0, X.mH)(ey.pe.GUILD),
+                sku_id: (0, X.mH)(eg.pe.GUILD),
                 subscription_type: nu.rzx.PREMIUM,
                 subscription_plan_id: eq,
                 quantity: eo,
                 location: d,
-                source: y,
+                source: g,
                 location_stack: eK,
                 checkout_flow: C.CL.GUILD_BOOST_CHECKOUT,
                 is_gift: !1,
                 eligible_for_trial: !1,
                 guild_id: O,
             }),
-            [e$, d, eK, y, O, eo, eq],
+            [e$, d, eK, g, O, eo, eq],
         ),
         eX = l.useMemo(() => {
             let { guild_id: e, ...n } = eZ;
@@ -1481,7 +1482,7 @@ function nw(e) {
     }, [eU]);
     let [e0, e1] = l.useState(w.pn.PLAN_SELECT),
         e3 = l.useMemo(() => Date.now(), [e0]),
-        e4 = l.useCallback(
+        e8 = l.useCallback(
             function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     { trackedFromStep: t } = n;
@@ -1499,19 +1500,19 @@ function nw(e) {
             },
             [eO, eZ, e0, e3, eJ, O, ea],
         ),
-        e6 = {
+        e4 = {
             paymentFlowFailedAnalyticsData: eX,
             flowStartTime: eJ,
             guildId: O,
-            handleStepChange: e4,
+            handleStepChange: e8,
             onSubscribeComplete: k,
             paymentSourceId: eU,
             setIsSubmittingCurrentStep: eM,
             setPurchaseError: eO,
         },
-        e8 = l.useRef(e6);
+        e6 = l.useRef(e4);
     l.useEffect(() => {
-        e8.current = e6;
+        e6.current = e4;
     }),
         l.useEffect(() => {
             let {
@@ -1523,7 +1524,7 @@ function nw(e) {
                 paymentSourceId: s,
                 setIsSubmittingCurrentStep: r,
                 setPurchaseError: a,
-            } = e8.current;
+            } = e6.current;
             (async () => {
                 if (!0 === eY)
                     try {
@@ -1570,11 +1571,11 @@ function nw(e) {
         eL !== W.oc.PENDING &&
             e0 !== w.pn.CONFIRM &&
             null != eI &&
-            (e2 !== nG && e5(nG), nG.includes(e0) || e0 === w.pn.PREMIUM_UPSELL || e4(w.pn.REVIEW)),
+            (e2 !== nG && e5(nG), nG.includes(e0) || e0 === w.pn.PREMIUM_UPSELL || e8(w.pn.REVIEW)),
             e0 === w.pn.ADD_PAYMENT_STEPS && e2 !== nU && e5(nU),
             ni && e0 !== w.pn.PLAN_SELECT && e1(w.pn.PLAN_SELECT);
-    }, [e0, e4, ni, eL, ek, eI, e2]),
-        (0, W.b)(e0, eL, e4, nn),
+    }, [e0, e8, ni, eL, ek, eI, e2]),
+        (0, W.b)(e0, eL, e8, nn),
         (0, w.zT)(e0, e7, nn);
     let nl = (0, Y.n)("GuildBoostPurchaseModal"),
         ns = nl && (e0 === w.pn.REVIEW || e0 === w.pn.CONFIRM),
@@ -1586,7 +1587,7 @@ function nw(e) {
         (l.useEffect(() => {
             let e;
             eH &&
-                (null != K.A.get(ey.gD.PREMIUM_MONTH_GUILD) && eS((e = (0, ee._w)(ey.gD.PREMIUM_MONTH_GUILD, eU, !1))),
+                (null != K.A.get(eg.gD.PREMIUM_MONTH_GUILD) && eS((e = (0, ee._w)(eg.gD.PREMIUM_MONTH_GUILD, eU, !1))),
                 null == eU && null != ek && null != ek.paymentSourceId ? ep(ek.currency) : null != e && ep(e[0]));
         }, [eU, ek, eH, np, ep, eS]),
         eP)
@@ -1607,7 +1608,7 @@ function nw(e) {
                 planGroup: [],
                 initialPlanId: null,
                 handleClose: nt,
-                handleStepChange: e4,
+                handleStepChange: e8,
                 analyticsData: eZ,
                 setAnalyticsData: e9.tE,
                 skipConfirm: !1,
@@ -1627,7 +1628,7 @@ function nw(e) {
                             planGroup: [],
                             initialPlanId: null,
                             handleClose: nt,
-                            handleStepChange: e4,
+                            handleStepChange: e8,
                             analyticsData: eZ,
                             setAnalyticsData: e9.tE,
                             skipConfirm: !1,
@@ -1666,16 +1667,16 @@ function nw(e) {
                                 isMissingGuildInformation: null == ej && null == u,
                             }),
                             onClick: () => {
-                                ef || (null != eC && eC.premiumSubscriptionType === ey.PremiumTypes.TIER_2)
-                                    ? e4(null != eI || eB ? w.pn.REVIEW : w.pn.ADD_PAYMENT_STEPS)
-                                    : e4(w.pn.PREMIUM_UPSELL);
+                                ef || (null != eC && eC.premiumSubscriptionType === eg.PremiumTypes.TIER_2)
+                                    ? e8(null != eI || eB ? w.pn.REVIEW : w.pn.ADD_PAYMENT_STEPS)
+                                    : e8(w.pn.PREMIUM_UPSELL);
                             },
                         }));
                     break;
                 case w.pn.ADD_PAYMENT_STEPS:
                     break;
                 case w.pn.AWAITING_AUTHENTICATION:
-                    e = (0, i.jsx)(g.N, { className: nf.__invalid_body });
+                    e = (0, i.jsx)(y.N, { className: nf.__invalid_body });
                     break;
                 case w.pn.REVIEW:
                     (e = (0, i.jsx)(nR, {
@@ -1683,7 +1684,7 @@ function nw(e) {
                         planGroup: [],
                         initialPlanId: null,
                         handleClose: nt,
-                        handleStepChange: e4,
+                        handleStepChange: e8,
                         analyticsData: eZ,
                         setAnalyticsData: e9.tE,
                         skipConfirm: !1,
@@ -1732,7 +1733,7 @@ function nw(e) {
                                 let s = await (0, A.nV)(ek, l, n, i, eK);
                                 if (s.redirectConfirmation) return void no(null != s.redirectURL);
                             }
-                            null == eu && e4(w.pn.CONFIRM),
+                            null == eu && e8(w.pn.CONFIRM),
                                 nn(B.h.COMPLETED),
                                 null != O && (await nO(O, null != eu)),
                                 null != eu && nt(),
@@ -1762,12 +1763,12 @@ function nw(e) {
                         (s = (0, i.jsx)(N.p, { ...o }));
                     break;
                 case w.pn.CONFIRM:
-                    e = (0, i.jsx)(eg, {
+                    e = (0, i.jsx)(ey, {
                         subscriptionTier: null,
                         planGroup: [],
                         initialPlanId: null,
                         handleClose: nt,
-                        handleStepChange: e4,
+                        handleStepChange: e8,
                         analyticsData: eZ,
                         setAnalyticsData: e9.tE,
                         skipConfirm: !1,
@@ -1782,7 +1783,7 @@ function nw(e) {
                           planGroup: [],
                           initialPlanId: null,
                           handleClose: nt,
-                          handleStepChange: e4,
+                          handleStepChange: e8,
                           analyticsData: eZ,
                           setAnalyticsData: e9.tE,
                           skipConfirm: !1,
@@ -1803,7 +1804,7 @@ function nw(e) {
                               currentStep: e0,
                               isRefreshEnabled: nl,
                               backStep: t,
-                              handleStepChange: e4,
+                              handleStepChange: e8,
                               primaryButtonProps: o,
                               secondaryButton: l,
                               legacySubmitButton: s,

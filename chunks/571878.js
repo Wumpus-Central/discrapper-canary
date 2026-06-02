@@ -83,7 +83,14 @@ function g(e) {
     return m()(e, t);
 }
 function A(e) {
-    let { checkoutInitParameters: t, contextMetadata: n, order: s, initialPaymentSourceId: a, initialCurrency: o } = e;
+    let {
+        checkoutInitParameters: t,
+        startingValues: n,
+        contextMetadata: s,
+        order: a,
+        initialPaymentSourceId: o,
+        initialCurrency: d,
+    } = e;
     return (0, r.h)((e, i) => {
         let r = {
             isPremiumPurchase: () => f(i().selectedPlanId).isPremiumPurchase,
@@ -92,10 +99,21 @@ function A(e) {
         };
         return {
             ...(0, p.p)(e, i, t),
+            ...{
+                startedPaymentFlowWithPaymentSources: n.startedPaymentFlowWithPaymentSources,
+                startingPremiumSubscriptionPlanId: n.startingPremiumSubscriptionPlanId,
+                startingFractionalPremiumEndsAt: null,
+                captureStartingPremiumSubscriptionPlanId: (t) => {
+                    null == i().startingPremiumSubscriptionPlanId && e({ startingPremiumSubscriptionPlanId: t });
+                },
+                captureStartingFractionalPremiumEndsAt: (t) => {
+                    null == i().startingFractionalPremiumEndsAt && e({ startingFractionalPremiumEndsAt: t });
+                },
+            },
             get: (e) => (null != r[e] ? r[e]() : null),
-            contextMetadata: n,
-            order: s,
-            orderRecord: null != s ? l.createFromServer(s) : null,
+            contextMetadata: s,
+            order: a,
+            orderRecord: null != a ? l.createFromServer(a) : null,
             setOrder: (t) => e({ order: t, orderRecord: l.createFromServer(t) }),
             selectedSkuId: void 0,
             selectedPlanId: void 0,
@@ -118,9 +136,9 @@ function A(e) {
             setEntitlementsGranted: (t) => e({ entitlementsGranted: t }),
             hasAcceptedTerms: !1,
             setHasAcceptedTerms: (t) => e({ hasAcceptedTerms: t }),
-            paymentSourceId: a,
+            paymentSourceId: o,
             setPaymentSourceId: (t) => e({ paymentSourceId: t ?? null }),
-            checkoutPriceOptions: { paymentSourceId: a ?? void 0, currency: o, loaded: !1 },
+            checkoutPriceOptions: { paymentSourceId: o ?? void 0, currency: d, loaded: !1 },
             setCheckoutPriceOptions: (t) => e((e) => ({ checkoutPriceOptions: { ...e.checkoutPriceOptions, ...t } })),
             setCheckoutCurrency: (t) =>
                 e((e) => ({ checkoutPriceOptions: { ...e.checkoutPriceOptions, currency: t } })),

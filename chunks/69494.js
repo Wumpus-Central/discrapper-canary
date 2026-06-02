@@ -1,20 +1,19 @@
-n.d(l, { A: () => p });
+n.d(l, { A: () => u });
 var r = n(627968);
 n(64700);
-var s = n(503698),
-    t = n.n(s),
+var t = n(503698),
+    s = n.n(t),
     i = n(40474),
-    a = n(722847),
-    d = n(536302),
+    a = n(571878),
     o = n(166532),
-    c = n(615310),
-    u = n(756925);
-function p(e) {
+    d = n(615310),
+    c = n(756925);
+function u(e) {
     let { className: l, isEligibleForTrial: n = !1 } = e,
-        { step: s, breadcrumbsData: p } = (0, c.Ay)(),
-        { startedPaymentFlowWithPaymentSourcesRef: N } = (0, d.P5)();
-    if ((0, a.t4)((e) => e.get("isPremiumPurchase")) || null == p || 0 === p.length) return null;
-    let m = p.flatMap((e) => {
+        { step: t, breadcrumbsData: u } = (0, d.Ay)(),
+        p = (0, a.t4)((e) => e.startedPaymentFlowWithPaymentSources);
+    if ((0, a.t4)((e) => e.get("isPremiumPurchase")) || null == u || 0 === u.length) return null;
+    let m = u.flatMap((e) => {
         let l = e.useBreadcrumbLabel(n);
         return null != l ? { id: e.id, label: l } : [];
     });
@@ -22,11 +21,11 @@ function p(e) {
         ? null
         : ((m = m.filter((e) => {
               let l = e.id !== o.pn.ADD_PAYMENT_STEPS,
-                  r = e.id === o.pn.ADD_PAYMENT_STEPS && !N.current;
+                  r = e.id === o.pn.ADD_PAYMENT_STEPS && !p;
               return !n || l || r;
           })),
           (0, r.jsx)("div", {
-              className: t()("breadcrumb", u.i, l),
-              children: (0, r.jsx)(i.A, { activeId: s, breadcrumbs: m }),
+              className: s()("breadcrumb", c.i, l),
+              children: (0, r.jsx)(i.A, { activeId: t, breadcrumbs: m }),
           }));
 }
