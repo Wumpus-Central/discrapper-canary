@@ -5686,11 +5686,10 @@ let oO = (0, a.zD)(u.X.SPATIAL_AUDIO_EXPERIMENT_OVERRIDE_SETTING, {
             aK.A.setMode(t, { vadUseKrisp: e });
         },
         useDisabled: function () {
-            return (0, g.bG)([lV.Ay], () => {
-                let e = lV.Ay.getMode(),
-                    t = lV.Ay.getModeOptions().autoThreshold;
-                return e === eA.TBI.VOICE_ACTIVITY && t;
-            });
+            return (0, g.bG)(
+                [lV.Ay],
+                () => lV.Ay.getMode() !== eA.TBI.VOICE_ACTIVITY || !lV.Ay.getModeOptions().autoThreshold,
+            );
         },
         usePredicate: function () {
             return (0, g.bG)([lV.Ay], () => lV.Ay.isAdvancedVoiceActivitySupported() && lV.Ay.isInputProfileCustom());
