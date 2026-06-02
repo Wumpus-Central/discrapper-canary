@@ -36,8 +36,8 @@ var n = t(627968),
     U = t(427262),
     D = t(329554),
     M = t(402313),
-    L = t(699976),
-    F = t(415679),
+    F = t(699976),
+    L = t(415679),
     z = t(824078);
 let K = (0, f.Fe)({
     createPromise: () =>
@@ -51,9 +51,9 @@ let K = (0, f.Fe)({
             t.e("46461"),
             t.e("71192"),
             t.e("43147"),
-            t.e("54084"),
+            t.e("78383"),
             t.e("35316"),
-            t.e("6263"),
+            t.e("54018"),
             t.e("45650"),
             t.e("48307"),
             t.e("87521"),
@@ -61,17 +61,18 @@ let K = (0, f.Fe)({
             t.e("27660"),
             t.e("18090"),
             t.e("12075"),
-            t.e("42671"),
-            t.e("73345"),
-            t.e("70654"),
+            t.e("619"),
+            t.e("35842"),
+            t.e("27482"),
             t.e("89001"),
             t.e("55990"),
             t.e("1279"),
             t.e("48689"),
             t.e("25336"),
             t.e("333"),
-            t.e("42064"),
-            t.e("77403"),
+            t.e("65923"),
+            t.e("41475"),
+            t.e("46912"),
             t.e("56419"),
             t.e("69279"),
             t.e("23924"),
@@ -195,15 +196,15 @@ function B(e) {
               children: [
                   d,
                   (0, n.jsx)(K, {
-                      className: F.L,
+                      className: L.L,
                       applicationId: s,
-                      rewardOfferNoticeClassName: F.Nh,
+                      rewardOfferNoticeClassName: L.Nh,
                       userIds: [i.id],
                       location: "voice_channel",
                       guildId: t.guild_id,
                       channelId: t.id,
                       numWishlistItems: 2,
-                      cardSpec: L.Z.SIZE_110,
+                      cardSpec: F.Z.SIZE_110,
                   }),
               ],
           })
@@ -227,7 +228,7 @@ function Y(e) {
         x = (0, r.bG)([P.A], () => P.A.getVoiceStateForChannel(l, i.id)?.connectedAt),
         S = null != x ? new Date(x * w.A.Millis.SECOND).getTime() : null;
     return (0, n.jsxs)("div", {
-        className: F.aq,
+        className: L.aq,
         children: [
             (0, n.jsx)(u.eu, {
                 src: g,
@@ -236,10 +237,10 @@ function Y(e) {
                 avatarDecoration: A,
                 status: (0, p.A)(f) ? o.clD.STREAMING : h === o.clD.OFFLINE ? void 0 : h,
                 isMobile: I,
-                className: F.my,
+                className: L.my,
             }),
             (0, n.jsxs)("div", {
-                className: F.Qq,
+                className: L.Qq,
                 children: [
                     (0, n.jsx)(c.E, { variant: "text-sm/medium", lineClamp: 1, children: m }),
                     null != S && (0, n.jsx)(v.z, { textColor: "text-feedback-positive", entry: { start: S } }),
@@ -261,7 +262,7 @@ function q(e) {
             [s, d.id],
         ),
         [w, U] = (0, r.yK)([P.A, G.A, k.A, x.default], () => (0, S.eo)(s, P.A, G.A, k.A, x.default)),
-        L = (0, r.bG)([T.default], () => T.default.getId()),
+        F = (0, r.bG)([T.default], () => T.default.getId()),
         K = (0, r.bG)([V.A], () => (0, _.nr)(b, V.A), [b]),
         q = (0, I.r9)() && (0, I.UK)(s.id),
         H =
@@ -296,7 +297,7 @@ function q(e) {
                     activeStream: O,
                     streamActivity: K,
                     user: d,
-                    currentUserId: L,
+                    currentUserId: F,
                     canWatch: w,
                     unavailableReason: U,
                     onWatchStream: p,
@@ -335,11 +336,11 @@ function q(e) {
     });
     return f
         ? (0, n.jsxs)("div", {
-              className: a()(z.popover, F.Db),
+              className: a()(z.popover, L.Db),
               children: [
                   (0, n.jsx)(Y, { user: d, guildId: s.guild_id, channelId: s.id }),
-                  ee && (0, n.jsx)(m.Ip, { className: a()(z.popover, F.XG), children: et }),
+                  ee && (0, n.jsx)(m.Ip, { className: a()(z.popover, L.XG), children: et }),
               ],
           })
-        : (0, n.jsx)(m.Ip, { className: a()(z.popover, F.kL), children: et });
+        : (0, n.jsx)(m.Ip, { className: a()(z.popover, L.kL), children: et });
 }

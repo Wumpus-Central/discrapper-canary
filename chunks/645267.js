@@ -1,0 +1,16 @@
+e.exports = {
+    kL: "container__3a5a1",
+    WH: "innerContainer__3a5a1",
+    Wb: "keyComboInner__3a5a1",
+    ti: "keyComboContainer__3a5a1",
+    wx: "header__3a5a1",
+    qd: "headerTitle__3a5a1",
+    yk: "roleContainer__3a5a1",
+    Lc: "highestRole__3a5a1",
+    fd: "addRoleIcon__3a5a1",
+    Zf: "roleTooltipItem__3a5a1",
+    $g: "addRoleContainer__3a5a1",
+    $f: "guildIcon__3a5a1",
+    S: "loadingSpinner__3a5a1",
+    pl: "noRoles__3a5a1",
+};

@@ -18,8 +18,7 @@ function v(e) {
             (0, o.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([
                     i.e("28367"),
-                    i.e("70654"),
-                    i.e("20980"),
+                    i.e("35842"),
                     i.e("40258"),
                     i.e("73669"),
                     i.e("46313"),

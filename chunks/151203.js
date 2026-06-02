@@ -47,7 +47,8 @@ function k(e) {
                                 let { default: e } = await Promise.all([
                                     r.e("72811"),
                                     r.e("23531"),
-                                    r.e("13878"),
+                                    r.e("35842"),
+                                    r.e("94881"),
                                     r.e("26132"),
                                     r.e("46652"),
                                     r.e("93190"),

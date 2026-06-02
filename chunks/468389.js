@@ -206,9 +206,8 @@ function w(i, e) {
                                                 return (0, a.openModalLazy)(
                                                     async () => {
                                                         let { default: e } = await Promise.all([
-                                                            t.e("70654"),
-                                                            t.e("42671"),
-                                                            t.e("73345"),
+                                                            t.e("27482"),
+                                                            t.e("35842"),
                                                             t.e("72811"),
                                                             t.e("25568"),
                                                             t.e("43039"),
