@@ -17,8 +17,8 @@ var n,
     j = a(404778),
     b = a(77729),
     f = a(952818),
-    _ = a(728555),
-    y = a(274372),
+    y = a(728555),
+    _ = a(274372),
     E = a(372684),
     C = a(61302),
     S = a(871421),
@@ -41,7 +41,7 @@ function w() {
         t = k((e) => e.pending),
         a = k((e) => e.lastResult),
         n = o.useCallback(async (e, t, a, n) => {
-            let l = _.Ay.getMediaEngine();
+            let l = y.Ay.getMediaEngine();
             if (null == l.setClipsPerfMonitoring) return T("setClipsPerfMonitoring unsupported in this build"), null;
             D(n);
             try {
@@ -110,15 +110,15 @@ function M() {
         a = o.useCallback((e) => {
             if (!e) return void (0, A.kF)();
             let t = f.Ay.getVisibleGame()?.id,
-                a = y.Ay.getLastClipsSession()?.newClipIds[0],
-                n = (null != a ? y.Ay.getClipById(a)?.applicationId : null) ?? y.Ay.getClips()[0]?.applicationId,
+                a = _.Ay.getLastClipsSession()?.newClipIds[0],
+                n = (null != a ? _.Ay.getClipById(a)?.applicationId : null) ?? _.Ay.getClips()[0]?.applicationId,
                 l = t ?? n;
             null != l && (0, A.M8)(l);
         }, []),
         [n, l] = o.useState(E.rb.KILL),
         [s, i] = o.useState(1),
         [h, b] = o.useState(""),
-        [_, k] = o.useState("");
+        [y, k] = o.useState("");
     return (0, r.jsx)(x.Ip, {
         children: (0, r.jsxs)(p.l, {
             children: [
@@ -201,14 +201,14 @@ function M() {
                         }),
                         (0, r.jsx)(v.k, {
                             label: "Description (optional)",
-                            value: _,
+                            value: y,
                             onChange: k,
                             placeholder: "e.g., Killed enemy ADC in bot lane",
                         }),
                         (0, r.jsx)(m.$, {
                             text: "Create Game Event",
                             onClick: () => {
-                                C.Ts({ type: E.Gy.GAME_EVENT, eventType: n, importance: s, title: h, description: _ });
+                                C.Ts({ type: E.Gy.GAME_EVENT, eventType: n, importance: s, title: h, description: y });
                             },
                         }),
                         (0, r.jsx)(m.$, {
@@ -440,11 +440,11 @@ function ej() {
                                     return (0, r.jsx)(ef, { src: t, onSetStatic: p, removeAsset: v }, t);
                                 }),
                             }),
-                            (0, r.jsx)(ey, {
+                            (0, r.jsx)(e_, {
                                 label: "gradient override",
                                 onChange: (e) => g({ name: ea.AK, darkBackground: e, lightBackground: e }),
                             }),
-                            (0, r.jsx)(e_, { label: "set", onClick: () => {} }),
+                            (0, r.jsx)(ey, { label: "set", onClick: () => {} }),
                         ],
                     }),
                 ],
@@ -532,7 +532,7 @@ function ef(e) {
         ],
     });
 }
-function e_(e) {
+function ey(e) {
     let { label: t, onClick: a } = e;
     return (0, r.jsxs)("div", {
         className: ev.Uu,
@@ -542,7 +542,7 @@ function e_(e) {
         ],
     });
 }
-function ey(e) {
+function e_(e) {
     let { label: t, onChange: a } = e;
     return (0, r.jsxs)("div", {
         className: ev.Im,
@@ -759,9 +759,9 @@ let eZ =
             [p, g] = o.useState(8),
             [v, j] = o.useState([]),
             [b, f] = o.useState(e0),
-            _ = o.useRef([]),
-            [y, E] = o.useState(t.name),
-            C = y.toLowerCase().replace(/\s+/g, "_"),
+            y = o.useRef([]),
+            [_, E] = o.useState(t.name),
+            C = _.toLowerCase().replace(/\s+/g, "_"),
             S = o.useMemo(
                 () => ({
                     type: ew.R.PROFILE_EFFECT,
@@ -802,7 +802,7 @@ let eZ =
                                 f((e) => ({ ...e, [t]: a }));
                             else if ("" !== a.base64 && null != a.base64) {
                                 let e = (0, eO.fB)(a.base64);
-                                (a.src = e), _.current.push(e), f((e) => ({ ...e, [t]: a }));
+                                (a.src = e), y.current.push(e), f((e) => ({ ...e, [t]: a }));
                             }
                         }
                     });
@@ -814,14 +814,14 @@ let eZ =
         }),
         o.useEffect(() => {
             let { profileEffect: e, upsertProfileEffect: t } = D.current;
-            e.readonly || t({ skuId: e.skuId, name: y, effects: v, stillFrames: b });
-        }, [v, b, y]),
+            e.readonly || t({ skuId: e.skuId, name: _, effects: v, stillFrames: b });
+        }, [v, b, _]),
         o.useEffect(
             () => () => {
-                _.current.forEach((e) => {
+                y.current.forEach((e) => {
                     URL.revokeObjectURL(e);
                 }),
-                    (_.current = []);
+                    (y.current = []);
             },
             [],
         ),
@@ -879,7 +879,7 @@ let eZ =
                                       (0, r.jsx)(h.E, { variant: "text-md/normal", children: "Profile Effect Name" }),
                                       (0, r.jsx)("input", {
                                           type: "text",
-                                          value: y,
+                                          value: _,
                                           className: eQ.hF,
                                           onChange: (e) => {
                                               E(e.target.value);
@@ -1053,7 +1053,7 @@ let eZ =
                                                           fileContents: () =>
                                                               JSON.stringify({
                                                                   ...t,
-                                                                  name: y,
+                                                                  name: _,
                                                                   readonly: !1,
                                                                   effects: v,
                                                                   stillFrames: b,
@@ -1698,8 +1698,8 @@ function tj() {
 }
 var tb = a(702841),
     tf = a(793574),
-    t_ = a(590180),
-    ty = a(4227),
+    ty = a(590180),
+    t_ = a(4227),
     tE = a(828614),
     tC = a(61750),
     tS = a(328762);
@@ -1707,13 +1707,13 @@ let tN = (e) => {
         let [t, a] = o.useState(0);
         return (
             o.useLayoutEffect(() => {
-                let e = ty.A.getPurchase;
+                let e = t_.A.getPurchase;
                 return (
-                    (ty.A.getPurchase = (e) => void 0),
-                    ty.A.emitChange(),
+                    (t_.A.getPurchase = (e) => void 0),
+                    t_.A.emitChange(),
                     a(1),
                     () => {
-                        (ty.A.getPurchase = e), ty.A.emitChange();
+                        (t_.A.getPurchase = e), t_.A.emitChange();
                     }
                 );
             }, []),
@@ -1722,9 +1722,9 @@ let tN = (e) => {
     },
     tA = () => {
         let e = (0, tb.bG)([ee.default], () => ee.default.getCurrentUser()),
-            t = (0, tb.bG)([t_.A], () => t_.A.categories),
-            a = (0, tb.bG)([ty.A], () => ty.A.purchases),
-            n = (0, tb.bG)([t_.A], () => t_.A.lastSuccessfulFetch),
+            t = (0, tb.bG)([ty.A], () => ty.A.categories),
+            a = (0, tb.bG)([t_.A], () => t_.A.purchases),
+            n = (0, tb.bG)([ty.A], () => ty.A.lastSuccessfulFetch),
             l = t.size > 0 && a.size > 0 && null != n,
             { isFetching: s, categories: i } = (0, tu.Ay)({ logPerf: !1, stalePurchasesOK: !0, noOp: l }),
             d = l ? t : i,
@@ -1737,8 +1737,8 @@ let tN = (e) => {
                 g(null), b(null);
                 return;
             }
-            let e = t_.A.getProduct(u),
-                t = t_.A.getCategoryForProduct(u);
+            let e = ty.A.getProduct(u),
+                t = ty.A.getCategoryForProduct(u);
             null != e && null != t ? (g(e), b(t)) : (g(null), b(null));
         }, [u, c]),
         s)
@@ -2664,11 +2664,11 @@ var ap = a(696986),
     aj = a(994500),
     ab = a(310031),
     af = a(394953),
-    a_ = a(732421);
-let ay = [
+    ay = a(732421);
+let a_ = [
         {
             key: "channelName",
-            cellClassName: P()(a_.Hn, a_.HA),
+            cellClassName: P()(ay.Hn, ay.HA),
             render(e) {
                 let { channelName: t } = e;
                 return (0, r.jsx)(h.E, { variant: "text-md/normal", children: t });
@@ -2676,7 +2676,7 @@ let ay = [
         },
         {
             key: "channelId",
-            cellClassName: P()(a_.Hn, a_.Zm),
+            cellClassName: P()(ay.Hn, ay.Zm),
             render(e) {
                 let { channelId: t } = e;
                 return (0, r.jsx)(h.E, { variant: "text-md/normal", children: t });
@@ -2686,7 +2686,7 @@ let ay = [
     aE = [
         {
             key: "channelName",
-            cellClassName: P()(a_.Hn, a_.HA),
+            cellClassName: P()(ay.Hn, ay.HA),
             render(e) {
                 let { channelName: t } = e;
                 return (0, r.jsx)(h.E, { variant: "text-md/normal", children: t });
@@ -2694,7 +2694,7 @@ let ay = [
         },
         {
             key: "loadState",
-            cellClassName: P()(a_.Hn, a_.C7),
+            cellClassName: P()(ay.Hn, ay.C7),
             render(e) {
                 let { loadState: t } = e;
                 return (0, r.jsx)(h.E, { variant: "text-md/normal", children: t });
@@ -2702,7 +2702,7 @@ let ay = [
         },
         {
             key: "channelId",
-            cellClassName: P()(a_.Hn, a_.Zm),
+            cellClassName: P()(ay.Hn, ay.Zm),
             render(e) {
                 let { channelId: t } = e;
                 return (0, r.jsx)(h.E, { variant: "text-md/normal", children: t });
@@ -2748,7 +2748,7 @@ function aC() {
     return (0, r.jsx)("div", {
         className: tG.nd,
         children: (0, r.jsxs)(x.Ip, {
-            className: a_.Qs,
+            className: ay.Qs,
             children: [
                 (0, r.jsxs)("div", {
                     children: [
@@ -2778,7 +2778,7 @@ function aC() {
                         (0, r.jsxs)("div", { children: ["Unread Recent Mentions Count: ", e] }),
                         (0, r.jsxs)("div", { children: ["Unread Channel Count: ", t.length] }),
                         (0, r.jsx)(tF, {
-                            columns: ay,
+                            columns: a_,
                             data: Object.entries(m).map((e) => {
                                 let [t, a] = e;
                                 return {
@@ -2891,17 +2891,17 @@ function aL() {
         f = o.useCallback((e) => {
             e ? (0, eF.openModal)((e) => (0, r.jsx)(aD.A, { ...e })) : aI.cL();
         }, []),
-        _ = (0, t$.A)({
+        y = (0, t$.A)({
             location: "DevToolsSlayerStorefrontPanel",
             applicationId: n,
             source: tB.Ob.Embed,
             trackEntryPointImpression: !0,
         }),
-        y = o.useCallback(
+        _ = o.useCallback(
             (e) => {
-                _?.(e);
+                y?.(e);
             },
-            [_],
+            [y],
         ),
         E = o.useCallback(() => {
             (0, aS.pX)(el.BVt.COLLECTIBLES_SHOP_GAME_SHOP(n));
@@ -2916,7 +2916,7 @@ function aL() {
                 (0, r.jsx)(c.d, { label: "Override activity application ID", checked: a, onChange: d }),
                 (0, r.jsx)(c.d, { label: "Show own voice activity (bypass self check)", checked: h, onChange: x }),
                 (0, r.jsx)(c.d, { label: "Enable application test mode", checked: b, onChange: f }),
-                (0, r.jsx)(m.$, { text: "Open Game Profile Modal", onClick: y }),
+                (0, r.jsx)(m.$, { text: "Open Game Profile Modal", onClick: _ }),
                 (0, r.jsx)(m.$, { text: "Navigate to App Game Shop", onClick: E }),
                 (0, r.jsx)($.D, { variant: "heading-lg/normal", children: "Wishlists" }),
                 (0, r.jsx)(v.k, {
@@ -2999,11 +2999,11 @@ function a4() {
         p = (0, V.bG)([f.Ay, a8.A], () => (0, aX.A)(f.Ay, a8.A)),
         g = (0, tP.h)(s),
         b = (0, aq.g)(g),
-        _ = (0, V.yK)(
+        y = (0, V.yK)(
             [tL.A],
             () => g?.linkedGames?.map((e) => tL.A.getApplication(e.id)).filter((e) => null != e) ?? [],
         ),
-        y = (0, aJ.RD)(g, { allowedFlows: [a3._M.RPC], debug: !0 }),
+        _ = (0, aJ.RD)(g, { allowedFlows: [a3._M.RPC], debug: !0 }),
         E = (0, aJ.RD)(g, { allowedFlows: [a3._M.WEB], debug: !0 }),
         C = (0, V.bG)([a0.A], () => null != b && a0.A.isConnected(b.id)),
         S = (0, aJ.RD)(g, { debug: !0 }),
@@ -3073,8 +3073,8 @@ function a4() {
                         children: [
                             "Linked Games:",
                             " ",
-                            _.length > 0
-                                ? _.map((e) => ((0, aq.t)(g)?.id === e.id ? `${e.name}*` : e.name)).join(", ")
+                            y.length > 0
+                                ? y.map((e) => ((0, aq.t)(g)?.id === e.id ? `${e.name}*` : e.name)).join(", ")
                                 : "N/A",
                         ],
                     }),
@@ -3086,7 +3086,7 @@ function a4() {
                 children: [
                     (0, r.jsx)($.D, { variant: "heading-lg/normal", children: "Authorization" }),
                     (0, r.jsx)(aQ.VT, {
-                        overallStatus: y.debug.isSubscribedToAuthorizeRequest
+                        overallStatus: _.debug.isSubscribedToAuthorizeRequest
                             ? aQ.nW.OVERALL_GOOD
                             : C
                               ? aQ.nW.WARN
@@ -3102,18 +3102,18 @@ function a4() {
                                     : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                             },
                             {
-                                status: y.debug.isSubscribedToAuthorizeRequest
+                                status: _.debug.isSubscribedToAuthorizeRequest
                                     ? aQ.nW.GOOD
                                     : C
                                       ? aQ.nW.WARN
                                       : aQ.nW.BAD,
                                 text: a6.intl.string(a5.default.S94dzs),
                                 description:
-                                    y.debug.isSubscribedToAuthorizeRequest || !C
+                                    _.debug.isSubscribedToAuthorizeRequest || !C
                                         ? null
                                         : a6.intl.string(a5.default.aTULMB),
                                 learnMoreLink:
-                                    y.debug.isSubscribedToAuthorizeRequest || !C
+                                    _.debug.isSubscribedToAuthorizeRequest || !C
                                         ? null
                                         : "https://discord.com/developers/docs/discord-social-sdk/how-to/debug-log",
                             },
@@ -3159,8 +3159,8 @@ function a4() {
                             "This will start whichever authorization flow is available. RPC authorization takes precedence over web.",
                     }),
                     (0, r.jsx)(m.$, {
-                        disabled: !y.canStartAuthorization,
-                        onClick: () => y.startAuthorization({ analyticsLocations: l }),
+                        disabled: !_.canStartAuthorization,
+                        onClick: () => _.startAuthorization({ analyticsLocations: l }),
                         variant: "secondary",
                         text: "Start In-App Authorization",
                     }),
@@ -3311,8 +3311,8 @@ var nr = a(989349),
     nj = a(957565),
     nb = a(58703),
     nf = a(80703),
-    n_ = a(495544);
-let ny = 0,
+    ny = a(495544);
+let n_ = 0,
     nE = [],
     nC = 0,
     nS = [],
@@ -3320,7 +3320,7 @@ let ny = 0,
 class nA extends V.Ay.Store {
     static displayName = "AnalyticsLogStore";
     initialize() {
-        this.waitFor(n_.default, aP.A);
+        this.waitFor(ny.default, aP.A);
     }
     get loggedEvents() {
         return nE;
@@ -3340,10 +3340,10 @@ let nk = new nA(tM.h, {
         let { event: t, properties: a, fingerprint: n } = e;
         aP.A.isDeveloper &&
             (nE.push({
-                key: (ny++).toString(),
+                key: (n_++).toString(),
                 event: t,
                 properties: a,
-                fingerprint: null != n ? (0, nf.d)(n) : n_.default.getId(),
+                fingerprint: null != n ? (0, nf.d)(n) : ny.default.getId(),
                 timestamp: new Date(),
             }),
             nC++,
@@ -4223,7 +4223,7 @@ let lf = o.memo(function (e) {
         ],
     });
 });
-function l_(e) {
+function ly(e) {
     let { items: t, onChange: a } = e,
         [n, l] = lx(),
         s = (0, o.useCallback)(
@@ -4237,7 +4237,7 @@ function l_(e) {
         children: t.filter((e) => isNaN(Number(e))).map((e) => (0, r.jsx)(lf, { content: e, onChange: s }, e)),
     });
 }
-function ly(e) {
+function l_(e) {
     let { searchQuery: t = "" } = e,
         a = (0, ls.Ay)((e) => e.recentlyShown),
         [n, l] = lx(),
@@ -4247,7 +4247,7 @@ function ly(e) {
             .slice(0, 3);
     return 0 === s.length
         ? null
-        : (0, r.jsx)(d.n, { label: "Recent Overrides", children: (0, r.jsx)(l_, { items: s }) });
+        : (0, r.jsx)(d.n, { label: "Recent Overrides", children: (0, r.jsx)(ly, { items: s }) });
 }
 function lE(e) {
     let { searchQuery: t = "" } = e,
@@ -4255,7 +4255,7 @@ function lE(e) {
             .map((e) => ar.M[e])
             .filter((e) => e.toLowerCase().includes(t.toLowerCase()))
             .slice(0, 3);
-    return 0 === a.length ? null : (0, r.jsx)(d.n, { label: "Recently Shown", children: (0, r.jsx)(l_, { items: a }) });
+    return 0 === a.length ? null : (0, r.jsx)(d.n, { label: "Recently Shown", children: (0, r.jsx)(ly, { items: a }) });
 }
 var lC = a(594061),
     lS = a(268571);
@@ -4331,12 +4331,12 @@ function lN() {
                     ],
                 }),
                 (0, r.jsx)(lE, {}),
-                (0, r.jsx)(ly, {}),
+                (0, r.jsx)(l_, {}),
                 (0, r.jsxs)(d.n, {
                     label: "All Dismissible Contents",
                     children: [
                         (0, r.jsx)(nx.I, { query: n, onChange: l, onClear: () => l("") }),
-                        (0, r.jsx)(l_, { items: u.slice(0, s) }),
+                        (0, r.jsx)(ly, { items: u.slice(0, s) }),
                     ],
                 }),
             ],
@@ -5180,7 +5180,7 @@ let sx = async () =>
     };
 var sb = a(51846),
     sf = a(214868);
-let s_ = {
+let sy = {
         [el.GD.QUEST_REWARD]: "Quest Reward",
         [el.GD.DEVELOPER_GIFT]: "Developer Gift",
         [el.GD.INVOICE]: "Invoice",
@@ -5189,7 +5189,7 @@ let s_ = {
         [el.GD.SUBSCRIPTION]: "Subscription",
         [el.GD.SUBSCRIPTION_MEMBER]: "Subscription Member",
     },
-    sy = (e) => {
+    s_ = (e) => {
         let t,
             { entitlement: a, active: n, onDelete: l } = e,
             s = (e) => (null != e ? (0, nb.i$)(e, "LLL") : "---");
@@ -5214,7 +5214,7 @@ let s_ = {
                     variant: "text-md/normal",
                     children: [
                         "Entitlement source type: ",
-                        null != (t = a.sourceType) && t in s_ ? s_[t] : `Unknown source type ${t}`,
+                        null != (t = a.sourceType) && t in sy ? sy[t] : `Unknown source type ${t}`,
                     ],
                 }),
                 n &&
@@ -5377,7 +5377,7 @@ function sC() {
                                         (0, r.jsx)("div", {
                                             children: l.map((e) =>
                                                 (0, r.jsx)(
-                                                    sy,
+                                                    s_,
                                                     { entitlement: e, active: !0, onDelete: () => p(e.id) },
                                                     e.id,
                                                 ),
@@ -5394,7 +5394,7 @@ function sC() {
                                             children: "Unconsumed Fractional Premium",
                                         }),
                                         (0, r.jsx)("div", {
-                                            children: i.map((e) => (0, r.jsx)(sy, { entitlement: e }, e.id)),
+                                            children: i.map((e) => (0, r.jsx)(s_, { entitlement: e }, e.id)),
                                         }),
                                     ],
                                 }),
@@ -5727,7 +5727,7 @@ let ii = [
         let { pool: t } = e,
             { id: a, summary: n } = t,
             l = ie.getUsersForPool(a),
-            s = (0, V.bG)([n_.default], () => n_.default.getId()),
+            s = (0, V.bG)([ny.default], () => ny.default.getId()),
             i = ii[Number(a) % ii.length],
             d = ir[Number(a) % ir.length],
             c = o.useCallback(() => {
@@ -6253,8 +6253,8 @@ function ig() {
 var iv = a(460890),
     ij = a(349288),
     ib = a(517461),
-    i_ = a(214947),
-    iy = a(403581),
+    iy = a(214947),
+    i_ = a(403581),
     iE = a(34188);
 let iC = [
     "ILLO_BLUE",
@@ -6290,8 +6290,8 @@ let iN = [0, 0.5, 1],
     iL = { [el.NJ8.MIDNIGHT]: el.NJ8.DARKER, [el.NJ8.DARKER]: el.NJ8.DARK, [el.NJ8.LIGHT]: el.NJ8.DARK },
     iP = { [el.NJ8.LIGHT]: "light", [el.NJ8.DARK]: "ash", [el.NJ8.DARKER]: "dark", [el.NJ8.MIDNIGHT]: "onyx" },
     iU = [
-        { id: "friends", icon: i_.$, text: "Friends" },
-        { id: "nitro", icon: iy.t, text: "Nitro Home", nitroHoverGradient: !0 },
+        { id: "friends", icon: iy.$, text: "Friends" },
+        { id: "nitro", icon: i_.t, text: "Nitro Home", nitroHoverGradient: !0 },
         { id: "shop", icon: iE.U, text: "Shop", useCustomGradient: !0 },
     ],
     iG = iC.map((e) => ({ label: e, value: e, id: e })),
@@ -6574,8 +6574,8 @@ function iX() {
                 ),
             [s],
         ),
-        _ = f[t],
-        y = o.useCallback(
+        y = f[t],
+        _ = o.useCallback(
             (e) => {
                 l({ ...s, [t]: e(s[t]) });
             },
@@ -6585,22 +6585,22 @@ function iX() {
         C = o.useMemo(() => {
             let e = [];
             for (let t = 0; t < ik; t++) {
-                let a = parseFloat(_.opacities[t]);
+                let a = parseFloat(y.opacities[t]);
                 if (isNaN(a) || a < 0 || a > 1) return null;
-                e.push({ color: _.colors[t], opacity: a, position: iN[t] });
+                e.push({ color: y.colors[t], opacity: a, position: iN[t] });
             }
             return e;
-        }, [_]),
+        }, [y]),
         S = o.useMemo(() => {
             if (null == C) return null;
             let { text: e, background: t } = E;
             return iA.map((a, n) =>
-                iF[_.scales[n]].map((a) => {
+                iF[y.scales[n]].map((a) => {
                     let l = iY(e, t, i$(C, n, { ...C[n], color: a.value }));
                     return { ...a, trailing: `(${l}:1)` };
                 }),
             );
-        }, [C, E, _.scales]),
+        }, [C, E, y.scales]),
         N = o.useMemo(() => {
             try {
                 return iM.map((e) => {
@@ -6721,10 +6721,10 @@ function iX() {
                                                     (0, r.jsx)(lP.Q, {
                                                         variant: "secondary",
                                                         textVariant: "text-xs/normal",
-                                                        text: `(${iW(_.colors[t], parseFloat(_.opacities[t]))})`,
+                                                        text: `(${iW(y.colors[t], parseFloat(y.opacities[t]))})`,
                                                         onClick: () =>
                                                             navigator.clipboard.writeText(
-                                                                iW(_.colors[t], parseFloat(_.opacities[t])),
+                                                                iW(y.colors[t], parseFloat(y.opacities[t])),
                                                             ),
                                                     }),
                                                 ],
@@ -6733,10 +6733,10 @@ function iX() {
                                                 selectionMode: "single",
                                                 label: "Scale",
                                                 disabled: a,
-                                                value: _.scales[t],
+                                                value: y.scales[t],
                                                 onSelectionChange: (e) => {
                                                     let a = iF[e][0]?.value;
-                                                    y((n) => ({
+                                                    _((n) => ({
                                                         ...n,
                                                         scales: i$(n.scales, t, e),
                                                         colors: null != a ? i$(n.colors, t, a) : n.colors,
@@ -6749,17 +6749,17 @@ function iX() {
                                                 selectionMode: "single",
                                                 label: "Value",
                                                 disabled: a,
-                                                value: _.colors[t],
+                                                value: y.colors[t],
                                                 onSelectionChange: (e) =>
-                                                    y((a) => ({ ...a, colors: i$(a.colors, t, e) })),
+                                                    _((a) => ({ ...a, colors: i$(a.colors, t, e) })),
                                                 closeOnSelect: !0,
-                                                options: S?.[t] ?? iF[_.scales[t]],
+                                                options: S?.[t] ?? iF[y.scales[t]],
                                             }),
                                             (0, r.jsx)(v.k, {
                                                 label: "Opacity",
                                                 name: `opacity-${t}`,
-                                                value: _.opacities[t],
-                                                onChange: (e) => y((a) => ({ ...a, opacities: i$(a.opacities, t, e) })),
+                                                value: y.opacities[t],
+                                                onChange: (e) => _((a) => ({ ...a, opacities: i$(a.opacities, t, e) })),
                                                 placeholder: "0\u20131",
                                             }),
                                             (0, r.jsx)(v.k, {
@@ -6805,7 +6805,7 @@ function iX() {
                                                             };
                                                         })(a);
                                                         u((a) => i$(a, t, e.deltaE)),
-                                                            y((a) => ({
+                                                            _((a) => ({
                                                                 ...a,
                                                                 scales: i$(a.scales, t, e.scale),
                                                                 colors: i$(a.colors, t, e.color),
@@ -6851,12 +6851,12 @@ function iX() {
                                                     tabIndex: 0,
                                                     onFocus: () => {},
                                                     ...("useCustomGradient" in e && {
-                                                        hoverGradientStart: iV(_.colors[0], parseFloat(_.opacities[0])),
+                                                        hoverGradientStart: iV(y.colors[0], parseFloat(y.opacities[0])),
                                                         hoverGradientMiddle: iV(
-                                                            _.colors[1],
-                                                            parseFloat(_.opacities[1]),
+                                                            y.colors[1],
+                                                            parseFloat(y.opacities[1]),
                                                         ),
-                                                        hoverGradientEnd: iV(_.colors[2], parseFloat(_.opacities[2])),
+                                                        hoverGradientEnd: iV(y.colors[2], parseFloat(y.opacities[2])),
                                                     }),
                                                     ...{ "data-list-item-id": `devtools-preview-${t}` },
                                                     children:
@@ -7343,8 +7343,8 @@ function rb() {
 }
 a(393431), a(532706), a(42231), a(232424), a(949626), a(767709), a(65162);
 var rf = a(687813),
-    r_ = a(604121);
-let ry = {
+    ry = a(604121);
+let r_ = {
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Messages_Opt.lottie":
         () => a.e("36508").then(a.t.bind(a, 655671, 17)),
     "discord_common/js/packages/tokens/tools/platforms/lottie/originals/native/Lottie_Navigation_Notifications_Opt.lottie":
@@ -7652,7 +7652,7 @@ function rC() {
             gap: 24,
             children: [
                 (0, r.jsx)(t7.Z, {
-                    options: Object.keys(ry).map((e) => ({ id: e, label: e, value: e })),
+                    options: Object.keys(r_).map((e) => ({ id: e, label: e, value: e })),
                     value: e,
                     onSelectionChange: t,
                     selectionMode: "single",
@@ -7670,7 +7670,7 @@ function rC() {
                     disabled: null == e,
                     onClick: async () => {
                         if (null == e) return;
-                        let t = ry[e],
+                        let t = r_[e],
                             a = new Blob(
                                 [
                                     JSON.stringify(
@@ -7696,10 +7696,10 @@ function rC() {
                     (0, r.jsx)("div", {
                         style: { width: a, height: l },
                         children: (0, r.jsx)(
-                            r_.a,
+                            ry.a,
                             {
                                 importData: () => {
-                                    let t = ry[e];
+                                    let t = r_[e];
                                     return e.endsWith(".lottie")
                                         ? t().then(rE).then(eK().cloneDeep)
                                         : t().then((e) => eK().cloneDeep(e.default));
@@ -9441,17 +9441,17 @@ function oi(e) {
         };
     }, [c]);
     let { id: p, expires_at: g, redeemed_at: v, trial_id: j, subscription_trial: b, referrer: f } = t,
-        _ =
+        y =
             a.find((e) => {
                 let { value: t } = e;
                 return t === j;
             })?.label ?? "Unknown";
-    null != f && (_ = `${_} from @${f.username}`);
-    let y = null != g,
+    null != f && (y = `${y} from @${f.username}`);
+    let _ = null != g,
         E = null != g && new Date(g).getTime() < Date.now(),
         C = b?.sku_id === sh.pe.TIER_0,
         S = async () => {
-            u(!0), y ? await N({ expiresAt: null }) : await (0, r5.u1)(t), n(), u(!1);
+            u(!0), _ ? await N({ expiresAt: null }) : await (0, r5.u1)(t), n(), u(!1);
         },
         N = async (e) => {
             u(!0);
@@ -9488,14 +9488,14 @@ function oi(e) {
     }, [l, i]);
     let A = "Active";
     return (
-        y && (A = "Acked"),
+        _ && (A = "Acked"),
         E && (A = "Expired"),
         (0, r.jsxs)("div", {
             className: P()(sf.Nr, C ? sf.Qf : sf.C1),
             children: [
                 (0, r.jsx)("div", {
                     className: P()(sf.nM, sf.S7),
-                    children: (0, r.jsx)($.D, { variant: "heading-lg/semibold", color: "always-white", children: _ }),
+                    children: (0, r.jsx)($.D, { variant: "heading-lg/semibold", color: "always-white", children: y }),
                 }),
                 (0, r.jsxs)(U.D, {
                     className: P()(sf.nM, sf.QB),
@@ -9570,7 +9570,7 @@ function oi(e) {
                     children: [
                         (0, r.jsx)(U.D, {
                             onClick: S,
-                            className: P()(sf.qS, sf.vk, { [sf.R1]: y, [sf._7]: E }),
+                            className: P()(sf.qS, sf.vk, { [sf.R1]: _, [sf._7]: E }),
                             children: (0, r.jsx)(h.E, {
                                 variant: "eyebrow",
                                 color: "Acked" === A ? void 0 : "always-white",
@@ -9621,8 +9621,8 @@ function or(e) {
                 return t === v;
             })?.label ?? "Unknown",
         f = null != g,
-        _ = t.hasExpired(),
-        y = t.isApplied(),
+        y = t.hasExpired(),
+        _ = t.isApplied(),
         E = async () => {
             u(!0), f ? await C({ expiresAt: null }) : await (0, r5.u1)(void 0, t), n(), u(!1);
         },
@@ -9659,7 +9659,7 @@ function or(e) {
     }, [l, i]);
     let S = "Active";
     return (
-        _ && (S = "Expired"),
+        y && (S = "Expired"),
         f && (S = "Acked"),
         (0, r.jsxs)("div", {
             className: P()(sf.Nr, sf.id),
@@ -9721,14 +9721,14 @@ function or(e) {
                     children: [
                         (0, r.jsx)(U.D, {
                             onClick: E,
-                            className: P()(sf.qS, sf.vk, { [sf.R1]: f, [sf._7]: _ }),
+                            className: P()(sf.qS, sf.vk, { [sf.R1]: f, [sf._7]: y }),
                             children: (0, r.jsx)(h.E, {
                                 variant: "eyebrow",
                                 color: "Acked" === S ? void 0 : "always-white",
                                 children: S,
                             }),
                         }),
-                        y &&
+                        _ &&
                             (0, r.jsx)("div", {
                                 className: P()(sf.qS, sf.k3),
                                 children: (0, r.jsx)(h.E, {
@@ -9759,8 +9759,8 @@ function oo() {
         [c, u] = o.useState([]),
         [p, v] = o.useState([]),
         [j, b] = o.useState(!0),
-        [f, _] = o.useState(10080),
-        [y, E] = o.useState([]),
+        [f, y] = o.useState(10080),
+        [_, E] = o.useState([]),
         { entitlements: C, deleteFractionalPremium: S, refreshEntitlementList: N } = sj();
     o.useEffect(() => {
         N();
@@ -9918,7 +9918,7 @@ function oo() {
                                 ],
                                 value: f,
                                 placeholder: "Reverse Trial Length",
-                                onSelectionChange: _,
+                                onSelectionChange: y,
                                 selectionMode: "single",
                                 fullWidth: !0,
                             }),
@@ -9926,7 +9926,7 @@ function oo() {
                         ],
                     }),
                 }),
-                y.length > 0 &&
+                _.length > 0 &&
                     (0, r.jsxs)("div", {
                         children: [
                             (0, r.jsx)(h.E, {
@@ -9935,8 +9935,8 @@ function oo() {
                                 children: "Active reverse trial",
                             }),
                             (0, r.jsx)("div", {
-                                children: y.map((e) =>
-                                    (0, r.jsx)(sy, { entitlement: e, active: !0, onDelete: () => S(e.id) }, e.id),
+                                children: _.map((e) =>
+                                    (0, r.jsx)(s_, { entitlement: e, active: !0, onDelete: () => S(e.id) }, e.id),
                                 ),
                             }),
                         ],
@@ -10240,8 +10240,8 @@ var og = a(935462),
     oj = a(93688),
     ob = a(717400),
     of = a(676955),
-    o_ = a(31300),
-    oy = a(500060),
+    oy = a(31300),
+    o_ = a(500060),
     oE = a(391973),
     oC = a(684013),
     oS = a(765671),
@@ -11050,11 +11050,11 @@ function dt(e) {
         case oI.ON.Flux:
             return of.v;
         case oI.ON.LegacyModule:
-            return o_.k;
+            return oy.k;
         case oI.ON.OOPModule:
-            return oy.o;
+            return o_.o;
         default:
-            return o_.k;
+            return oy.k;
     }
 }
 function da(e) {
@@ -11214,8 +11214,8 @@ function dr() {
                 ? c(j.reduce((e, t) => ("game_tracking_starting" === t.name ? Math.max(e, t.timestamp) : e), 0))
                 : c(null));
     }, [s, j, b]);
-    let [f, _] = o.useState(""),
-        y = o.useMemo(
+    let [f, y] = o.useState(""),
+        _ = o.useMemo(
             () =>
                 0 === b
                     ? []
@@ -11229,22 +11229,22 @@ function dr() {
                       }),
             [j, u, d, s, b],
         ),
-        [E, C] = o.useState(y),
+        [E, C] = o.useState(_),
         [S, N] = o.useState(null),
         A = o.useMemo(() => j.find((e) => e.key === S), [j, S]),
         k = o.useCallback((e) => {
             C(e);
         }, []),
         { renderSelectedTab: I } = (0, aH.Ay)({ tabs: ds }, []);
-    (0, nv.RT)(f, y, k, di, [j]);
+    (0, nv.RT)(f, _, k, di, [j]);
     let D = o.useCallback((e) => {
             l(e), oC.A.setModuleLogging(e);
         }, []),
         [T, R] = o.useState(!1),
         O = o.useRef(null),
         w = o.useCallback(() => {
-            (0, nj.C)(JSON.stringify(y)), R(!0);
-        }, [y]);
+            (0, nj.C)(JSON.stringify(_)), R(!0);
+        }, [_]);
     o.useEffect(() => {
         if (T)
             return (
@@ -11350,8 +11350,8 @@ function dr() {
                         className: oW._V,
                         children: (0, r.jsx)(nx.I, {
                             query: f,
-                            onChange: _,
-                            onClear: () => _(""),
+                            onChange: y,
+                            onClear: () => y(""),
                             placeholder: "Regex search by breadcrumb name and data",
                         }),
                     }),
@@ -11577,8 +11577,8 @@ var dv = a(488428),
     dj = a(73825),
     db = a(753390),
     df = a(813730),
-    d_ = a(944304),
-    dy = a(300233),
+    dy = a(944304),
+    d_ = a(300233),
     dE = a(599941),
     dC = a(817649),
     dS = a(4630),
@@ -11608,8 +11608,8 @@ let dw = function () {
         i = l.map((e) => ({ id: e.id, value: e, label: e.name })),
         [c, u] = o.useState(i.length > 0 ? i[0].value : null),
         [p, b] = o.useState(""),
-        [f, _] = o.useState({ plan_id: sh.gD.PREMIUM_MONTH_TIER_2, gift: "true" }),
-        y = "true" !== f.gift && null != s,
+        [f, y] = o.useState({ plan_id: sh.gD.PREMIUM_MONTH_TIER_2, gift: "true" }),
+        _ = "true" !== f.gift && null != s,
         [E, C] = o.useState(i.length > 0 ? i[0].value : null),
         { analyticsLocations: S } = (0, aY.Ay)(tf.A.PAYMENT_FLOW_TEST_PAGE),
         [N, A] = o.useState(""),
@@ -11694,7 +11694,7 @@ let dw = function () {
                                 fullWidth: !0,
                             }),
                             null != c
-                                ? (0, r.jsx)(d_.A, { guild: c, analyticsLocation: {} })
+                                ? (0, r.jsx)(dy.A, { guild: c, analyticsLocation: {} })
                                 : (0, r.jsx)("div", { children: "No Guild to boost" }),
                         ],
                     }),
@@ -11747,7 +11747,7 @@ let dw = function () {
                                     { id: "tier_0", value: sh.gD.PREMIUM_MONTH_TIER_0, label: "Nitro Basic" },
                                 ],
                                 onSelectionChange: (e) => {
-                                    _((t) => ({ ...t, plan_id: e }));
+                                    y((t) => ({ ...t, plan_id: e }));
                                 },
                                 selectionMode: "single",
                                 fullWidth: !0,
@@ -11760,7 +11760,7 @@ let dw = function () {
                                     { id: "not_gift", value: "false", label: "Not Gift" },
                                 ],
                                 onSelectionChange: (e) => {
-                                    _((t) => ({ ...t, gift: e }));
+                                    y((t) => ({ ...t, gift: e }));
                                 },
                                 selectionMode: "single",
                                 fullWidth: !0,
@@ -11769,11 +11769,11 @@ let dw = function () {
                     }),
                     (0, r.jsx)(lq.m, {
                         text: "Already subscribed",
-                        shouldShow: y,
+                        shouldShow: _,
                         children: (0, r.jsx)(m.$, {
                             variant: "primary",
                             text: "Open Link",
-                            disabled: y,
+                            disabled: _,
                             onClick: () => {
                                 window.open(el.BVt.BILLING_PREMIUM_SUBSCRIBE + "?" + dv.stringify({ ...f }));
                             },
@@ -11843,7 +11843,7 @@ let dw = function () {
                                 selectionMode: "single",
                                 fullWidth: !0,
                             }),
-                            (0, r.jsx)(dy.H, {
+                            (0, r.jsx)(d_.H, {
                                 guildId: E?.id,
                                 children: (0, r.jsx)(dO, { selectedGuildForGuildSub: E }),
                             }),
@@ -12811,8 +12811,8 @@ function dQ() {
         [p, v] = o.useState("pm_card_us"),
         [j, b] = o.useState(!1),
         f = Object.values((0, tb.bG)([dV.A], () => dV.A.paymentSources)),
-        _ = dH[e],
-        y = async () => {
+        y = dH[e],
+        _ = async () => {
             let t = p;
             "" === t && (t = "pm_card_us"),
                 await nZ.Bo.post({
@@ -12901,7 +12901,7 @@ function dQ() {
                                 label: "Card Token",
                                 hideLabel: !0,
                                 value: p,
-                                options: _.map((e) => {
+                                options: y.map((e) => {
                                     let { value: t, label: a } = e;
                                     return { id: t, value: t, label: a };
                                 }),
@@ -12912,7 +12912,7 @@ function dQ() {
                                 variant: "primary",
                                 size: "sm",
                                 text: "Create Stripe Credit Card",
-                                onClick: y,
+                                onClick: _,
                             }),
                             f.length > 0 &&
                                 (0, r.jsx)(m.$, {
@@ -12979,8 +12979,8 @@ let dX = [
     ];
 function d8(e) {
     let { experimentName: t, options: a = dX } = e,
-        n = (0, tb.bG)([dB.A, n_.default], () => {
-            let e = n_.default.getId(),
+        n = (0, tb.bG)([dB.A, ny.default], () => {
+            let e = ny.default.getId(),
                 a = dB.A.getAssignment("user", e, t);
             return a?.isOverride === !0 ? String(a.variantId) : "none";
         }),
@@ -13222,8 +13222,8 @@ var cu = a(873298),
     cj = a(56348),
     cb = a(385803),
     cf = a(381941);
-let c_ = [el.NJ8.DARK, el.NJ8.LIGHT, el.NJ8.DARKER, el.NJ8.MIDNIGHT],
-    cy = [cu.NS.COMPACT, cu.NS.COZY, cu.NS.DEFAULT];
+let cy = [el.NJ8.DARK, el.NJ8.LIGHT, el.NJ8.DARKER, el.NJ8.MIDNIGHT],
+    c_ = [cu.NS.COMPACT, cu.NS.COZY, cu.NS.DEFAULT];
 function cE(e) {
     return e[Math.floor(Math.random() * e.length)];
 }
@@ -13247,7 +13247,7 @@ async function cC() {
                 lC.Sb.INFREQUENT_USER_ACTION,
             );
         } else {
-            let e = cE(c_);
+            let e = cE(cy);
             await cg.u_(
                 { theme: e, backgroundGradientPresetId: void 0, customUserThemeSettings: void 0 },
                 lC.Sb.INFREQUENT_USER_ACTION,
@@ -13256,7 +13256,7 @@ async function cC() {
     } catch (e) {}
 }
 async function cS() {
-    let e = ty.A.purchases,
+    let e = t_.A.purchases,
         t = (0, eI.x9)(e),
         a = (0, eI.$W)(e),
         n = t.length > 0,
@@ -13276,7 +13276,7 @@ function cN() {
         (0, cv.XS)(e);
         let t = cE(cf.qh);
         (0, cv.AC)(t);
-        let a = cE(cy);
+        let a = cE(c_);
         cx.Xi.updateSetting(a);
     } catch (e) {}
 }
@@ -13286,15 +13286,15 @@ function cA() {
         t = cx.eh.useSetting(),
         a = (0, V.bG)([ch.A], () => ch.A.theme),
         n = t.backgroundGradientPresetId,
-        l = (0, V.bG)([ty.A], () => ty.A.purchases),
+        l = (0, V.bG)([t_.A], () => t_.A.purchases),
         s = (0, eI.x9)(l),
         i = (0, eI.$W)(l),
         d = e?.avatarDecoration?.skuId,
         c = e?.collectibles?.nameplate?.skuId,
         u = null != d ? (s.find((e) => e.skuId === d) ?? null) : null,
         x = null != c ? (i.find((e) => e.skuId === c) ?? null) : null,
-        p = (0, V.bG)([t_.A], () => t_.A.getProduct(u?.skuId)),
-        g = (0, V.bG)([t_.A], () => t_.A.getProduct(x?.skuId)),
+        p = (0, V.bG)([ty.A], () => ty.A.getProduct(u?.skuId)),
+        g = (0, V.bG)([ty.A], () => ty.A.getProduct(x?.skuId)),
         v = (0, V.bG)([cm.A], () => cm.A.fontSize),
         j = (0, V.bG)([cm.A], () => cm.A.messageGroupSpacing),
         b = cx.Xi.useSetting();
@@ -13302,7 +13302,7 @@ function cA() {
         o.useEffect(() => {
             let e = ee.default.getCurrentUser(),
                 t = cx.eh.getSetting(),
-                a = ty.A.purchases,
+                a = t_.A.purchases,
                 n = (0, eI.x9)(a),
                 l = (0, eI.$W)(a),
                 s = ch.A.theme,
@@ -14359,7 +14359,7 @@ let ux = new Set([
     uj = { max: 2e6, warn: 1e6 },
     ub = { max: 1e6, warn: 5e5 },
     uf = { max: 25e4, warn: 5e4 },
-    u_ = {
+    uy = {
         [eT.Jn.PROFILE_EFFECT]: ug,
         [eT.Jn.AVATAR_DECORATION]: uv,
         [eT.Jn.PROFILE_FRAME]: uj,
@@ -14382,14 +14382,14 @@ let ux = new Set([
         [eT.RN.LOGO]: uf,
         [eT.RN.TAB_TOOLTIP]: uf,
     },
-    uy = [eT.Kx.COLLECTION],
+    u_ = [eT.Kx.COLLECTION],
     uE = [eT.Kx.AVATAR_DECORATIONS, eT.Kx.FRAMES, eT.Kx.NAMEPLATES, eT.Kx.PROFILE_EFFECTS],
     uC = async (e) => {
         let t = e.createReader(),
             a = await new Promise((e) => t.readEntries(e)),
             n = new Set();
         for (let e of a) e.isDirectory && n.add(e.name);
-        let l = uy.filter((e) => !n.has(e));
+        let l = u_.filter((e) => !n.has(e));
         return uE.some((e) => n.has(e)) || l.push(`at least one of: ${uE.join(", ")}`), l;
     },
     uS = /^[a-z0-9]+(_[a-z0-9]+)*(\.[a-z0-9]+)?$/,
@@ -14408,7 +14408,7 @@ let ux = new Set([
         } else s > e.warn && n("Files are a tad chonky - are you sure they're optimized?", [`${r}`]);
     },
     uk = (e, t, a, n) => {
-        let l = u_[e];
+        let l = uy[e];
         if (null != l) for (let e of t) e.name.endsWith(".txt") || uA(l, e, a, n);
     },
     uI = (e) => {
@@ -14711,7 +14711,7 @@ let uR = o.createContext({ setDropHandler: () => {} }),
                                         let { files: t, addError: a, addWarning: n } = e;
                                         for (let e of t.collectionFiles) {
                                             let t = (0, eT.pd)(e),
-                                                l = null != t ? u_[t] : null;
+                                                l = null != t ? uy[t] : null;
                                             null != l && uA(l, e, a, n);
                                         }
                                         uN({ names: t.collectionFiles.map((e) => e.name), addError: a });
@@ -14772,7 +14772,7 @@ let uR = o.createContext({ setDropHandler: () => {} }),
                                                 .filter((e) => !uS.test(e))
                                                 .map((e) => `${eT.Kx.FRAMES}/${e}`);
                                         l.length > 0 && a("File names must be in lowercase snake case", l);
-                                        let s = u_[eT.Jn.PROFILE_FRAME];
+                                        let s = uy[eT.Jn.PROFILE_FRAME];
                                         Object.entries(t.profileFrameDirsMap).forEach((e) => {
                                             let [t, l] = e,
                                                 i = `${eT.Kx.FRAMES}/${t}`,
@@ -15045,7 +15045,7 @@ var uK = a(663803),
     uY = a(859040),
     uq = a(385815);
 let uJ = () => {
-    let e = (0, V.bG)([t_.A], () => t_.A.skipNumCategories);
+    let e = (0, V.bG)([ty.A], () => ty.A.skipNumCategories);
     return (0, r.jsxs)("div", {
         className: uq.k,
         children: [
@@ -15063,7 +15063,6 @@ let uJ = () => {
 };
 var uQ =
         (((n = {}).DEFAULT = "default"),
-        (n.DEFAULT_WITH_ORB_SHELF = "default_with_orb_shelf"),
         (n.ORB_TAB = "orb_tab"),
         (n.FRAMES = "frames"),
         (n.FRAMES_PINNED = "frames_pinned"),
@@ -15124,7 +15123,7 @@ let u1 = () => {
             a = Object.keys(ar.M).find((e) => "COLLECTIBLES_SHOP_ENTRY_MARKETING" === e);
         return null == a
             ? null
-            : (0, r.jsx)("div", { className: t, style: { zIndex: 1 }, children: (0, r.jsx)(l_, { items: [a] }) });
+            : (0, r.jsx)("div", { className: t, style: { zIndex: 1 }, children: (0, r.jsx)(ly, { items: [a] }) });
     };
 var u8 = a(578797),
     u3 = a(628917);
@@ -15641,12 +15640,12 @@ let mj = [
         ["capGdi", "GDI / PrintWindow + BitBlt"],
         ["capVideoHook", "Video Hook"],
     ],
-    m_ = [
+    my = [
         ["bypassHybridGpuFpsRestriction", "WGC: Bypass Hybrid-GPU 60 FPS Restriction"],
         ["gdiForceBitblt", "GDI: Force Allow BitBlt"],
         ["allowHdr", "Allow HDR Capture"],
     ];
-function my(e) {
+function m_(e) {
     let { title: t, toggles: a, state: n } = e;
     return (0, r.jsxs)(F.B, {
         gap: 8,
@@ -15661,26 +15660,26 @@ function my(e) {
 }
 function mE() {
     let e = (0, V.bG)([mg.Ay], () => mg.Ay.getSnapshot()),
-        t = (0, V.bG)([_.Ay], () => _.Ay.supports(mv.O5.VIDEO));
+        t = (0, V.bG)([y.Ay], () => y.Ay.supports(mv.O5.VIDEO));
     return (0, r.jsxs)(x.Ip, {
         className: tG.nd,
         children: [
             (0, r.jsx)(j.c, { gap: 16 }),
-            (0, r.jsx)(my, { title: "Video Codecs (Sender)", toggles: mj, state: e }),
+            (0, r.jsx)(m_, { title: "Video Codecs (Sender)", toggles: mj, state: e }),
             t
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(j.c, { gap: 16 }),
-                          (0, r.jsx)(my, { title: "Video Encoders", toggles: mb, state: e }),
+                          (0, r.jsx)(m_, { title: "Video Encoders", toggles: mb, state: e }),
                           (0, r.jsx)(j.c, { gap: 16 }),
-                          (0, r.jsx)(my, { title: "Capture Sources", toggles: mf, state: e }),
+                          (0, r.jsx)(m_, { title: "Capture Sources", toggles: mf, state: e }),
                           (0, r.jsx)(j.c, { gap: 16 }),
-                          (0, r.jsx)(my, { title: "Capture Options", toggles: m_, state: e }),
+                          (0, r.jsx)(m_, { title: "Capture Options", toggles: my, state: e }),
                       ],
                   })
                 : null,
             (0, r.jsx)(j.c, { gap: 16 }),
-            (0, r.jsx)(my, {
+            (0, r.jsx)(m_, {
                 title: "Preview",
                 toggles: [["alwaysShowCapturePreview", "Always Show (ignore main window focus)"]],
                 state: e,
@@ -15750,14 +15749,14 @@ function mS() {
                     text: i ? "Cancel" : "Start Processing",
                     onClick: i
                         ? function () {
-                              _.Ay.getMediaEngine().cancelBatchAudioProcessing(),
+                              y.Ay.getMediaEngine().cancelBatchAudioProcessing(),
                                   s((e) => ({ ...e, status: "cancelled" }));
                           }
                         : function () {
                               "" !== e &&
                                   "" !== a &&
                                   (s({ status: "processing", current: 0, total: 0, processed: 0, failed: 0, log: [] }),
-                                  _.Ay.getMediaEngine().processBatchAudioFiles(
+                                  y.Ay.getMediaEngine().processBatchAudioFiles(
                                       e,
                                       a,
                                       (e, t, a, n) => {
@@ -15896,7 +15895,7 @@ function mP() {
     let { name: e } = (0, mO.x5)(mv.oh.AUDIO_INPUT),
         [t, a] = o.useState(!1),
         [n, l] = o.useState([]),
-        s = (0, V.bG)([_.Ay], () => _.Ay.getKrispSuppressionLevel()),
+        s = (0, V.bG)([y.Ay], () => y.Ay.getKrispSuppressionLevel()),
         [i, d] = o.useState(null),
         u = o.useRef(null),
         m = o.useRef(null),
@@ -15905,7 +15904,7 @@ function mP() {
             krispModels: j,
             krispModelOverride: b,
             inputMode: f,
-            echoCancellation: y,
+            echoCancellation: _,
             autoThreshold: E,
             vadUseKrisp: C,
             vadKrispActivationThreshold: S,
@@ -15915,20 +15914,20 @@ function mP() {
             noiseCancellationSupported: I,
             noiseCancellationEnableStats: D,
             vadDuringPreProcess: T,
-        } = (0, V.cf)([_.Ay], () => ({
-            krispModels: _.Ay.getKrispModels(),
-            krispModelOverride: _.Ay.getKrispModelOverride(),
-            echoCancellation: _.Ay.getEchoCancellation(),
-            autoThreshold: _.Ay.getModeOptions().autoThreshold,
-            vadUseKrisp: _.Ay.getModeOptions().vadUseKrisp,
-            inputMode: _.Ay.getMode(),
-            vadKrispActivationThreshold: _.Ay.getKrispVadActivationThreshold(),
-            noiseCancellation: _.Ay.getNoiseCancellation(),
-            noiseSuppression: _.Ay.getNoiseSuppression(),
-            noiseSuppressionSupported: _.Ay.isNoiseSuppressionSupported(),
-            noiseCancellationSupported: _.Ay.isNoiseCancellationSupported(),
-            noiseCancellationEnableStats: _.Ay.getKrispEnableStats(),
-            vadDuringPreProcess: _.Ay.getModeOptions().vadDuringPreProcess,
+        } = (0, V.cf)([y.Ay], () => ({
+            krispModels: y.Ay.getKrispModels(),
+            krispModelOverride: y.Ay.getKrispModelOverride(),
+            echoCancellation: y.Ay.getEchoCancellation(),
+            autoThreshold: y.Ay.getModeOptions().autoThreshold,
+            vadUseKrisp: y.Ay.getModeOptions().vadUseKrisp,
+            inputMode: y.Ay.getMode(),
+            vadKrispActivationThreshold: y.Ay.getKrispVadActivationThreshold(),
+            noiseCancellation: y.Ay.getNoiseCancellation(),
+            noiseSuppression: y.Ay.getNoiseSuppression(),
+            noiseSuppressionSupported: y.Ay.isNoiseSuppressionSupported(),
+            noiseCancellationSupported: y.Ay.isNoiseCancellationSupported(),
+            noiseCancellationEnableStats: y.Ay.getKrispEnableStats(),
+            vadDuringPreProcess: y.Ay.getModeOptions().vadDuringPreProcess,
         })),
         R = N ? "KRISP" : A ? "STANDARD" : "NONE",
         O = (0, mT.v)(),
@@ -15936,7 +15935,7 @@ function mP() {
             u.current?.stop(), (u.current = null), d(null);
         }, []);
     function M() {
-        _.Ay.getMediaEngine().stopRecordingRawSamples();
+        y.Ay.getMediaEngine().stopRecordingRawSamples();
     }
     function L(e) {
         if ((t && M(), w(), null == O)) return;
@@ -15955,7 +15954,7 @@ function mP() {
         w();
     }, [w]),
         (0, mD.l0)(() => {
-            mI.A.setMode(_.Ay.getMode(), { vadDuringPreProcess: null, vadKrispActivationThreshold: void 0 });
+            mI.A.setMode(y.Ay.getMode(), { vadDuringPreProcess: null, vadKrispActivationThreshold: void 0 });
         });
     let P = [];
     return (
@@ -16049,7 +16048,7 @@ function mP() {
                         }),
                     (0, r.jsx)(c.d, {
                         label: "Echo Cancellation",
-                        checked: y,
+                        checked: _,
                         onChange: (e) => mI.A.setEchoCancellation(e),
                     }),
                     (0, r.jsxs)(F.B, {
@@ -16064,7 +16063,7 @@ function mP() {
                                           w(),
                                               a(!0),
                                               mI.A.setLoopback("krisp_test", !0),
-                                              _.Ay.getMediaEngine().startRecordingRawSamples((t, n, i) => {
+                                              y.Ay.getMediaEngine().startRecordingRawSamples((t, n, i) => {
                                                   a(!1), mI.A.setLoopback("krisp_test", !1);
                                                   let r = new AudioBuffer({
                                                       length: t.length,
@@ -16084,7 +16083,7 @@ function mP() {
                                                           audioBuffer: r,
                                                           createdAt: Date.now(),
                                                           suppression: R,
-                                                          echoCancellation: y,
+                                                          echoCancellation: _,
                                                           krispSuppressionLevel: s,
                                                       },
                                                   ]);
@@ -16120,7 +16119,7 @@ function mP() {
 var mU = a(874003),
     mG = a(329139);
 function mF() {
-    return _.Ay.getMediaEngine().supports(mv.O5.SPATIAL_AUDIO)
+    return y.Ay.getMediaEngine().supports(mv.O5.SPATIAL_AUDIO)
         ? (0, r.jsx)(x.Ip, { className: tG.nd, children: (0, r.jsx)(mU.A, {}) })
         : (0, r.jsx)(x.Ip, {
               className: tG.nd,
@@ -16341,16 +16340,16 @@ function m2(e) {
         [x, p] = o.useState(!1),
         [v, j] = o.useState(!1),
         [b, f] = o.useState(null),
-        _ = (e) => {
+        y = (e) => {
             let t = new Date(e);
             return mW.default.fromTimestamp(t.getTime());
         },
-        y = async (e) => {
+        _ = async (e) => {
             let { status: t = n.status, premiumStreakStart: a, endedAt: s } = e,
                 i = {
                     subscription_status: t,
-                    ...(null != a ? { premium_streak_started_at: _(a) } : null),
-                    ...(null != s ? { ended_at: _(s) } : null),
+                    ...(null != a ? { premium_streak_started_at: y(a) } : null),
+                    ...(null != s ? { ended_at: y(s) } : null),
                 };
             await nZ.Bo.patch({ url: `/debug/subscriptions/${n.id}`, body: i, rejectWithError: !1 }), l();
         },
@@ -16577,7 +16576,7 @@ function m2(e) {
                                             value: n.status,
                                             options: m0,
                                             onSelectionChange: (e) => {
-                                                y({ status: e });
+                                                _({ status: e });
                                             },
                                             selectionMode: "single",
                                             fullWidth: !0,
@@ -16624,7 +16623,7 @@ function m2(e) {
                                                 (0, r.jsx)(iu.J, {
                                                     label: "Premium Streak Start Date",
                                                     value: no()(n.premiumSince?.toISOString().substring(0, 10)),
-                                                    onSelect: (e) => y({ premiumStreakStart: e.toISOString() }),
+                                                    onSelect: (e) => _({ premiumStreakStart: e.toISOString() }),
                                                 }),
                                                 (0, r.jsx)(mK, {}),
                                             ],
@@ -16632,7 +16631,7 @@ function m2(e) {
                                         (0, r.jsx)(iu.J, {
                                             label: "Metadata Ended At Date",
                                             value: "" !== N ? no()(N) : void 0,
-                                            onSelect: (e) => y({ endedAt: e.toISOString() }),
+                                            onSelect: (e) => _({ endedAt: e.toISOString() }),
                                         }),
                                     ],
                                 }),
@@ -16804,10 +16803,10 @@ let hf = function (e) {
         }),
     });
 };
-var h_ = a(247928);
-let hy = function (e) {
+var hy = a(247928);
+let h_ = function (e) {
     let { allowClicks: t = !1, children: a, withBorder: n = !1 } = e;
-    return (0, r.jsx)(h_.M, {
+    return (0, r.jsx)(hy.M, {
         children: (0, r.jsx)(hl.Z, {
             className: P()(hb.Rx, { [hb.aK]: n }),
             outline: n,
@@ -17161,7 +17160,7 @@ function hV() {
             });
         }
     }
-    function _(e, a) {
+    function y(e, a) {
         let n = t.config.taskConfigV2.tasks,
             s = n[m7.n.WATCH_VIDEO];
         if (null == s) return;
@@ -17187,7 +17186,7 @@ function hV() {
             },
         });
     }
-    function y(e, a) {
+    function _(e, a) {
         if ("questName" === e || "gameTitle" === e || "gamePublisher" === e) {
             var n, s;
             l({
@@ -17288,19 +17287,19 @@ function hV() {
                     (0, r.jsx)(hS, {
                         title: "Quest Name",
                         assetKey: "questName",
-                        onMessageChange: y,
+                        onMessageChange: _,
                         initialValue: t.config.messages.questName,
                     }),
                     (0, r.jsx)(hS, {
                         title: "Game Title",
                         assetKey: "gameTitle",
-                        onMessageChange: y,
+                        onMessageChange: _,
                         initialValue: t.config.messages.gameTitle,
                     }),
                     (0, r.jsx)(hS, {
                         title: "Game Publisher",
                         assetKey: "gamePublisher",
-                        onMessageChange: y,
+                        onMessageChange: _,
                         initialValue: t.config.messages.gamePublisher,
                     }),
                     A &&
@@ -17379,21 +17378,21 @@ function hV() {
                                 (0, r.jsx)(hC, {
                                     title: "Quest Video",
                                     assetKey: "videoPlayerVideo",
-                                    onFileChange: _,
+                                    onFileChange: y,
                                     filters: hG,
                                     initialValue: k?.assets.video.url,
                                 }),
                                 (0, r.jsx)(hC, {
                                     title: "Quest Video (Low Resolution)",
                                     assetKey: "videoPlayerVideoLowRes",
-                                    onFileChange: _,
+                                    onFileChange: y,
                                     filters: hG,
                                     initialValue: k?.assets.videoLowRes?.url,
                                 }),
                                 (0, r.jsx)(hC, {
                                     title: "Video Player Thumbnail (optional)",
                                     assetKey: "videoPlayerThumbnail",
-                                    onFileChange: _,
+                                    onFileChange: y,
                                     filters: hU,
                                     initialValue: k?.assets.video.thumbnail,
                                 }),
@@ -17569,7 +17568,7 @@ function hV() {
             (0, r.jsxs)("div", {
                 className: hb.$$,
                 children: [
-                    (0, r.jsxs)(hy, {
+                    (0, r.jsxs)(h_, {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)($.D, { variant: "heading-sm/semibold", children: "Quest Bar" }),
@@ -17595,7 +17594,7 @@ function hV() {
                             }),
                         ],
                     }),
-                    (0, r.jsxs)(hy, {
+                    (0, r.jsxs)(h_, {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)($.D, { variant: "heading-sm/semibold", children: "Quest Home Card" }),
@@ -17614,7 +17613,7 @@ function hV() {
                             }),
                         ],
                     }),
-                    (0, r.jsxs)(hy, {
+                    (0, r.jsxs)(h_, {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)($.D, { variant: "heading-sm/semibold", children: "Channel Call Header" }),
@@ -17653,7 +17652,7 @@ function hV() {
                             },
                         }),
                     }),
-                    (0, r.jsxs)(hy, {
+                    (0, r.jsxs)(h_, {
                         withBorder: !0,
                         children: [
                             (0, r.jsx)($.D, { variant: "heading-sm/semibold", children: "Quest Card Embed" }),
@@ -17675,7 +17674,7 @@ function hV() {
                         children: (0, r.jsx)(c.d, { label: "Invalid Quests Embed:", checked: p, onChange: g }),
                     }),
                     A &&
-                        (0, r.jsxs)(hy, {
+                        (0, r.jsxs)(h_, {
                             withBorder: !0,
                             allowClicks: !0,
                             children: [
@@ -18538,8 +18537,8 @@ var xh = a(761508),
     xj = a(764451),
     xb = a(784957),
     xf = a(52822),
-    x_ = a(642153);
-let xy = [
+    xy = a(642153);
+let x_ = [
         { id: "virtual-currency", name: "Virtual Current (Orb) Components" },
         { id: "nitro", name: "Nitro Components" },
     ],
@@ -18576,18 +18575,18 @@ function xC() {
     let [e, t] = o.useState("virtual-currency"),
         a = o.useMemo(() => xE[e], [e]);
     return (0, r.jsxs)("div", {
-        className: P()(tG.nd, x_.kL),
+        className: P()(tG.nd, xy.kL),
         children: [
             (0, r.jsx)(xh.V, {
-                className: x_.$H,
+                className: xy.$H,
                 selectedItem: e,
                 onItemSelect: t,
                 look: "brand",
                 type: "top",
                 orientation: "horizontal",
-                children: xy.map((e) => (0, r.jsx)(xh.V.Item, { id: e.id, children: e.name }, e.id)),
+                children: x_.map((e) => (0, r.jsx)(xh.V.Item, { id: e.id, children: e.name }, e.id)),
             }),
-            (0, r.jsx)(x.Ar, { children: (0, r.jsx)("div", { className: x_.Qs, children: (0, r.jsx)(a, {}) }) }),
+            (0, r.jsx)(x.Ar, { children: (0, r.jsx)("div", { className: xy.Qs, children: (0, r.jsx)(a, {}) }) }),
         ],
     });
 }
