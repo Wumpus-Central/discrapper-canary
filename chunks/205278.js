@@ -1618,9 +1618,10 @@ function nY(e) {
         m = g.find((e) => e.value === f) ?? g[0],
         p = i.useCallback(
             (e) => {
-                r(e === nK ? null : e);
+                let n = e === nK ? null : e;
+                n !== l && r(n);
             },
-            [r],
+            [r, l],
         );
     return (0, t.jsx)(nH, {
         className: nW.kL,
