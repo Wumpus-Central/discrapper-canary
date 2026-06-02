@@ -2,24 +2,24 @@
 n.d(t, {
     Dp: () => P,
     Dy: () => T,
-    EZ: () => U,
-    G2: () => y,
-    H1: () => R,
+    EZ: () => k,
+    G2: () => N,
+    H1: () => O,
     MS: () => V,
     Pf: () => I,
     QB: () => F,
     Tq: () => A,
     _6: () => G,
     ck: () => b,
-    cw: () => O,
-    dF: () => v,
+    cw: () => R,
+    dF: () => C,
     gs: () => M,
     l5: () => w,
     md: () => D,
-    pQ: () => k,
+    pQ: () => U,
     rr: () => S,
     sH: () => B,
-    uY: () => N,
+    uY: () => y,
     x3: () => L,
 });
 var i,
@@ -32,13 +32,13 @@ var i,
     c = n(122482),
     d = n.n(c),
     _ = n(88248),
-    f = n.n(_),
-    h = n(641150),
+    h = n.n(_),
+    f = n(641150),
     p = n(401864),
     E = n(124987),
     m = n(334279);
 let g = ["1385035256058482798", "1385035256083648542", "1385035256104620154"],
-    A = d()([...f()(g, u()(Array(g.length), new Date("2025-07-02").getTime()))]);
+    A = d()([...h()(g, u()(Array(g.length), new Date("2025-07-02").getTime()))]);
 var I =
     (((i = {})[(i.VISIBLE = 0)] = "VISIBLE"),
     (i[(i.HIDDEN = 1)] = "HIDDEN"),
@@ -47,12 +47,12 @@ var I =
     i);
 let T = 24,
     S = 225;
-var N =
+var y =
         (((r = {}).SEARCH_ICON = "search icon"),
         (r.SEARCH_BAR = "search bar"),
         (r.SEARCH_BAR_CLEAR = "search bar clear"),
         r),
-    y =
+    N =
         (((s = {}).HOME = "home"),
         (s.CATALOG = "catalog"),
         (s.ORBS = "orbs"),
@@ -65,10 +65,10 @@ var N =
         (s.COLLECTION_INDEX = "collection-index"),
         (s.GAME_SHOPS = "game-shops"),
         s);
-let C = ["avatar-decorations", "profile-effects", "nameplates", "profile-frames", "bundles"],
-    v = (e) => C.includes(e),
-    O = (e) => null != e && "home" !== e && "catalog" !== e && "game-shops" !== e,
-    R = 800,
+let v = ["avatar-decorations", "profile-effects", "nameplates", "profile-frames", "bundles"],
+    C = (e) => v.includes(e),
+    R = (e) => null != e && "home" !== e && "catalog" !== e && "game-shops" !== e,
+    O = 800,
     b = [
         "1212569433839636530",
         "1144308439720394944",
@@ -422,9 +422,9 @@ let P = {
         FRACTIONAL_PREMIUM_1_DAY: m.j.PREMIUM_TIER_2_1_DAY,
     },
     x = new Set(Object.values(P)),
-    U = (e) => m.I.ALL.has(e),
-    k = (e) => x.has(e),
-    G = [h.q.AVATAR_DECORATION, h.q.PROFILE_EFFECT, h.q.NAMEPLATE, h.q.PROFILE_FRAME, h.q.BUNDLE],
+    k = (e) => m.I.ALL.has(e),
+    U = (e) => x.has(e),
+    G = [f.q.AVATAR_DECORATION, f.q.NAMEPLATE, f.q.PROFILE_EFFECT, f.q.PROFILE_FRAME, f.q.BUNDLE],
     F = [
         { sortType: E.$.RELEVANCE, sortDirection: p.A.DESC },
         { sortType: E.$.RECENCY, sortDirection: p.A.DESC },
@@ -449,6 +449,7 @@ var B =
     (o.BUNDLE_VIEW_PROFILE_EFFECT = "bundle_view_profile_effect"),
     (o.BUNDLE_VIEW_NAMEPLATE = "bundle_view_nameplate"),
     (o.FULL_PROFILE_PREVIEW = "full_profile_preview"),
+    (o.FULL_PROFILE_PREVIEW_BUTTON = "full_profile_preview_button"),
     (o.VIEW_DETAILS = "view_details"),
     (o.PAYMENT_OPTIONS = "payment_options"),
     (o.OPEN_DETAILS = "open_details"),

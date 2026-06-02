@@ -46,7 +46,7 @@ let I = function (e) {
             I = (0, c.fc)(t),
             T = A(t, s, o, g(n, t)),
             S = d === l.V3.QUEST_HOME_TILE_V2_FOOTER,
-            y = S ? void 0 : (0, p.Oz)(t),
+            y = S ? (0, p.Q_)(t) : (0, p.Oz)(t),
             N = S
                 ? (0, a.C0)(t)
                 : (function (e, t) {
@@ -462,7 +462,7 @@ function z(e) {
         C = n.id,
         { isEnrolling: R } = (0, S.cf)([y.A], () => ({ isEnrolling: y.A.isEnrolling(C) }), [C]),
         O = d === l.V3.QUEST_HOME_TILE_V2_FOOTER,
-        b = O ? void 0 : (0, p.Oz)(n),
+        b = O ? (0, p.Q_)(n) : (0, p.Oz)(n),
         D = (function (e, t) {
             let { launchInGameActivity: n } = (0, c.zW)(t);
             if ((0, _.K$)(t))

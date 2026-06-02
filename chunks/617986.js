@@ -1,24 +1,25 @@
 "use strict";
 n.d(t, {
-    QA: () => en,
-    Df: () => z,
-    z6: () => J,
-    cf: () => $,
-    hJ: () => q,
-    zg: () => er,
-    q$: () => ei,
-    Zc: () => Z,
-    gC: () => es,
-    d5: () => et,
-    Fy: () => ea,
-    _x: () => K,
-    f7: () => Y,
-    m6: () => X,
-    navigateToQuestHome: () => Q,
-    e0: () => eo,
-    rx: () => W,
-    Oz: () => el,
-    l9: () => ee,
+    QA: () => ei,
+    Df: () => q,
+    rx: () => K,
+    z6: () => ee,
+    cf: () => z,
+    hJ: () => X,
+    zg: () => es,
+    q$: () => er,
+    Zc: () => Q,
+    gC: () => ea,
+    d5: () => en,
+    Fy: () => eo,
+    _x: () => $,
+    f7: () => W,
+    navigateToQuestHome: () => J,
+    e0: () => el,
+    m6: () => Z,
+    Q_: () => ec,
+    l9: () => et,
+    Oz: () => eu,
 }),
     n(323874),
     n(14289),
@@ -33,64 +34,65 @@ var o = n(192308),
     l = n(892491),
     u = n(414499),
     c = n(687966),
-    d = n(157559),
-    _ = n(376728),
-    h = n(167189),
-    f = n(833291),
-    p = n(726845),
-    E = n(976860),
-    m = n(830543),
-    g = n(495544),
-    A = n(299091),
-    I = n(711014),
-    T = n(174459),
-    S = n(998218),
-    y = n(877062),
-    N = n(340124),
-    v = n(859703),
-    C = n(405670),
-    R = n(192444),
-    O = n(551875),
-    b = n(561844),
-    D = n(590202),
-    L = n(851936),
-    w = n(588350),
-    M = n.n(w),
-    P = n(792620),
-    x = n(375708),
-    k = n(710969),
-    U = n(814793),
-    G = n(753386),
-    F = n(448967),
-    V = n(190107),
-    B = n(652215),
-    H = n(488995);
-async function j(e) {
+    d = n(646270),
+    _ = n(157559),
+    h = n(376728),
+    f = n(167189),
+    p = n(833291),
+    E = n(726845),
+    m = n(976860),
+    g = n(830543),
+    A = n(495544),
+    I = n(299091),
+    T = n(711014),
+    S = n(174459),
+    y = n(998218),
+    N = n(877062),
+    v = n(340124),
+    C = n(859703),
+    R = n(405670),
+    O = n(192444),
+    b = n(551875),
+    D = n(561844),
+    L = n(590202),
+    w = n(851936),
+    M = n(588350),
+    P = n.n(M),
+    x = n(792620),
+    k = n(375708),
+    U = n(710969),
+    G = n(814793),
+    F = n(753386),
+    V = n(448967),
+    B = n(190107),
+    H = n(652215),
+    j = n(488995);
+async function Y(e) {
     try {
-        let t = (0, f.br)(e);
-        if (null == t || t.type !== h.I.INVITE) return !1;
-        let n = A.A.getInvite(t.code);
+        let t = (0, p.br)(e);
+        if (null == t || t.type !== f.I.INVITE) return !1;
+        let n = I.A.getInvite(t.code);
         if (null == n) {
-            let { invite: e } = await _.Ay.resolveInvite(t.code, "Markdown Link");
+            let { invite: e } = await h.Ay.resolveInvite(t.code, "Markdown Link");
             n = e;
         }
         if (null == n) return !1;
-        let i = I.Ay.getFlattenedGuildIds(),
+        let i = T.Ay.getFlattenedGuildIds(),
             r = n?.guild?.id;
         return null != r && i.includes(r);
     } catch (e) {
         return !1;
     }
 }
-async function Y(e) {
+async function W(e) {
     try {
-        if (S.A.isDiscordUrl(e)) return !0;
-        return await j(e);
+        if (y.A.isDiscordUrl(e)) return !0;
+        return await Y(e);
     } catch (e) {
         return !1;
     }
 }
-function W(e) {
+function K(e) {
     let { quest: t, sourceQuestContent: r } = e;
     (0, o.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
@@ -100,7 +102,7 @@ function W(e) {
             n.e("78383"),
             n.e("72811"),
             n.e("79264"),
-            n.e("66161"),
+            n.e("28677"),
             n.e("55642"),
             n.e("80889"),
             n.e("22513"),
@@ -246,13 +248,13 @@ function W(e) {
         return (n) => (0, i.jsx)(e, { ...n, initialQuest: t, sourceQuestContent: r });
     });
 }
-function K(e) {
+function $(e) {
     let { quest: t, sourceQuestContent: r } = e;
     (0, o.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
             n.e("14947"),
             n.e("1785"),
-            n.e("66161"),
+            n.e("28677"),
             n.e("50704"),
             n.e("4354"),
             n.e("25693"),
@@ -273,10 +275,10 @@ function K(e) {
         return (n) => (0, i.jsx)(e, { ...n, initialQuest: t, sourceQuestContent: r });
     });
 }
-function $(e, t, r) {
+function z(e, t, r) {
     (0, o.openModalLazy)(async () => {
         let { default: s } = await Promise.all([
-            n.e("66161"),
+            n.e("28677"),
             n.e("5636"),
             n.e("50704"),
             n.e("71100"),
@@ -297,12 +299,12 @@ function $(e, t, r) {
         return (n) => (0, i.jsx)(s, { ...n, initialQuest: e, location: t, sourceQuestContent: r });
     });
 }
-function z(e, t, r) {
+function q(e, t, r) {
     (0, o.openModalLazy)(async () => {
         let { default: s } = await Promise.all([
             n.e("76825"),
             n.e("50704"),
-            n.e("66161"),
+            n.e("28677"),
             n.e("71100"),
             n.e("89693"),
             n.e("54048"),
@@ -327,11 +329,11 @@ function z(e, t, r) {
         return (n) => (0, i.jsx)(s, { ...n, initialQuest: e, sourceQuestContent: r, location: t });
     });
 }
-function q(e, t, r, s) {
+function X(e, t, r, s) {
     (0, o.openModalLazy)(async () => {
         let { default: a } = await Promise.all([
             n.e("50704"),
-            n.e("66161"),
+            n.e("28677"),
             n.e("71100"),
             n.e("63549"),
             n.e("54048"),
@@ -363,14 +365,14 @@ function q(e, t, r, s) {
         return (n) => (0, i.jsx)(a, { ...n, initialQuest: e, sourceQuestContent: r, location: t, preview: s });
     });
 }
-function X(e, t, r) {
+function Z(e, t, r) {
     (0, o.openModalLazy)(async () => {
         let { default: s } = await Promise.all([n.e("28154"), n.e("81169")]).then(n.bind(n, 124232));
         return (n) => (0, i.jsx)(s, { ...n, quest: e, location: t, sourceQuestContent: r });
     });
 }
-function Z(e, t, r) {
-    (0, b.Y5)({
+function Q(e, t, r) {
+    (0, D.Y5)({
         questId: e.id,
         questContent: t.content,
         questContentPosition: t.position,
@@ -412,43 +414,43 @@ function Z(e, t, r) {
             },
         );
 }
-function Q(e) {
-    let { fromContent: t, questId: n, forceDiscoveryQuestHomeRoute: i = !1 } = e;
-    (0, U.jQ)({ questId: n, fromContent: t });
-    let r = null != n ? `#${n}` : "";
-    i && p.A.setState({ selectedTab: H.GlobalDiscoveryTab.QUESTS }),
-        (0, m.default)(),
-        (0, E.pX)((i ? B.BVt.QUEST_HOME_DEPRECATED : B.BVt.QUEST_HOME) + r);
-}
 function J(e) {
+    let { fromContent: t, questId: n, forceDiscoveryQuestHomeRoute: i = !1 } = e;
+    (0, G.jQ)({ questId: n, fromContent: t });
+    let r = null != n ? `#${n}` : "";
+    i && E.A.setState({ selectedTab: j.GlobalDiscoveryTab.QUESTS }),
+        (0, g.default)(),
+        (0, m.pX)((i ? H.BVt.QUEST_HOME_DEPRECATED : H.BVt.QUEST_HOME) + r);
+}
+function ee(e) {
     let t,
-        n = (0, L.L)({ quest: e });
+        n = (0, w.L)({ quest: e });
     if (Math.random() > 0.01) return;
     let i =
         ((t = [
             {
                 key: "NOT_INTERESTED",
-                text: (0, P.vv)(e)
-                    ? x.intl.string(x.t.wHRWkE)
-                    : x.intl.formatToPlainString(x.t.AZRWVY, { entityName: e.config.messages.gameTitle }),
+                text: (0, x.vv)(e)
+                    ? k.intl.string(k.t.wHRWkE)
+                    : k.intl.formatToPlainString(k.t.AZRWVY, { entityName: e.config.messages.gameTitle }),
             },
-            { key: "INVALUABLE", text: x.intl.string(x.t.ETU4Na) },
-            { key: "TOO_LONG", text: x.intl.string(x.t.uRIIpD) },
-            { key: "UNSURE_HOW", text: x.intl.string(x.t["5dxvxs"]) },
-            { key: "OTHER", text: x.intl.string(x.t.RFasgu) },
+            { key: "INVALUABLE", text: k.intl.string(k.t.ETU4Na) },
+            { key: "TOO_LONG", text: k.intl.string(k.t.uRIIpD) },
+            { key: "UNSURE_HOW", text: k.intl.string(k.t["5dxvxs"]) },
+            { key: "OTHER", text: k.intl.string(k.t.RFasgu) },
         ]),
         {
             id: "1290718710658629658",
-            title: x.intl.string(x.t.ugbhDS),
-            subtitle: x.intl.string(x.t.FIYcpC),
-            choices: M()(t.slice(0, 4)).concat(t[4]),
+            title: k.intl.string(k.t.ugbhDS),
+            subtitle: k.intl.string(k.t.FIYcpC),
+            choices: P()(t.slice(0, 4)).concat(t[4]),
         });
-    n.log(`Showing survey ${i.id}`), (0, F.m)({ questId: e.id, survey: i });
+    n.log(`Showing survey ${i.id}`), (0, V.m)({ questId: e.id, survey: i });
 }
-function ee() {
+function et() {
     return Promise.all([
         n.e("72811"),
-        n.e("66161"),
+        n.e("28677"),
         n.e("5636"),
         n.e("22448"),
         n.e("71100"),
@@ -479,7 +481,7 @@ function ee() {
         n.e("97199"),
     ]).then(n.bind(n, 834135));
 }
-function et(e) {
+function en(e) {
     let {
         quest: t,
         questContent: n,
@@ -488,34 +490,34 @@ function et(e) {
         autoplay: u = !0,
         skipEnrollmentCheck: c = !1,
     } = e;
-    if ((0, P.K$)(t)) return void ea(t);
+    if ((0, x.K$)(t)) return void eo(t);
     let d = (0, r.A)();
-    if (!c && t.userStatus?.enrolledAt == null && !(0, k.Ic)(t)) {
-        v.A.isEnrolling(t.id) ||
-            (0, N.Oy)(t.id, { questContent: n, questContentCTA: D.Cy.ACCEPT_QUEST, sourceQuestContent: s });
-        let e = C.Ay.getState().getVideoProgress(t.id);
+    if (!c && t.userStatus?.enrolledAt == null && !(0, U.Ic)(t)) {
+        C.A.isEnrolling(t.id) ||
+            (0, v.Oy)(t.id, { questContent: n, questContentCTA: L.Cy.ACCEPT_QUEST, sourceQuestContent: s });
+        let e = R.Ay.getState().getVideoProgress(t.id);
         null != e &&
             e.timestampSec > 1 &&
-            ((0, N.QG)(t.id),
-            T.default.track(B.HAw.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
+            ((0, v.QG)(t.id),
+            S.default.track(H.HAw.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
                 quest_id: t.id,
-                source_quest_content: (0, D.jO)(s),
+                source_quest_content: (0, L.jO)(s),
                 source_quest_content_cta: a,
                 video_session_id: d,
             }));
     }
-    let { setCaptionEnabled: _, muted: h, volume: f, captionEnabled: p } = C.Ay.getState(),
-        { enabled: E, variant: m } = R.Ig.getConfig({ location: V.rE.VIDEO_MODAL }),
-        g = null != (0, O.tW)(t, O.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
+    let { setCaptionEnabled: _, muted: h, volume: f, captionEnabled: p } = R.Ay.getState(),
+        { enabled: E, variant: m } = O.Ig.getConfig({ location: B.rE.VIDEO_MODAL }),
+        g = null != (0, b.tW)(t, b.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
     h &&
         E &&
-        (m === R.sy.AUTO_ENABLE_CAPTIONS && g && !p
+        (m === O.sy.AUTO_ENABLE_CAPTIONS && g && !p
             ? _(!0)
-            : m === R.sy.AUTO_UNMUTE && (C.Ay.getState().setMuted(!1), 0 === f && C.Ay.getState().setVolume(0.3)));
+            : m === O.sy.AUTO_UNMUTE && (R.Ay.getState().setMuted(!1), 0 === f && R.Ay.getState().setVolume(0.3)));
     let A = performance.now();
     (0, o.openModalLazy)(
         async () => {
-            let { default: e } = await ee();
+            let { default: e } = await et();
             return (n) =>
                 (0, i.jsx)(e, {
                     ...n,
@@ -527,17 +529,17 @@ function et(e) {
                 });
         },
         {
-            modalKey: (0, G.cZ)(t.id),
+            modalKey: (0, F.cZ)(t.id),
             backdropStyle: l.F.IMMERSIVE,
-            onCloseCallback: () => (0, G.vm)({ questId: t.id, sourceQuestContent: s, videoSessionId: d }),
+            onCloseCallback: () => (0, F.vm)({ questId: t.id, sourceQuestContent: s, videoSessionId: d }),
         },
     );
 }
-function en(e) {
+function ei(e) {
     let t = (function (e) {
             let t = platform.os?.family;
             if ("Android" === t || "iOS" === t) {
-                let t = g.default.getFingerprint(),
+                let t = A.default.getFingerprint(),
                     n = (0, s.I_)(),
                     i = `${location.protocol}//${window.GLOBAL_ENV.WEBAPP_ENDPOINT}/quests/${e}`;
                 return (0, s.Ay)(i, { utmSource: "quest", fingerprint: t, attemptId: n });
@@ -546,20 +548,20 @@ function en(e) {
         })(e),
         n = (0, s.X7)(t);
     null != n &&
-        T.default.track(B.HAw.DEEP_LINK_CLICKED, {
+        S.default.track(H.HAw.DEEP_LINK_CLICKED, {
             fingerprint: (0, a.v)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
-        y.A.launch(t, (t) => {
-            t || (0, E.bG)({ pathname: B.BVt.QUEST_HOME, hash: e });
+        N.A.launch(t, (t) => {
+            t || (0, m.bG)({ pathname: H.BVt.QUEST_HOME, hash: e });
         });
 }
-function ei(e) {
+function er(e) {
     let t = (function (e) {
             let t = platform.os?.family;
             if ("Android" === t || "iOS" === t) {
-                let t = g.default.getFingerprint(),
+                let t = A.default.getFingerprint(),
                     n = (0, s.I_)(),
                     i = `${location.protocol}//${window.GLOBAL_ENV.WEBAPP_ENDPOINT}/quest-preview/${e}`;
                 return (0, s.Ay)(i, { utmSource: "quest-preview", fingerprint: t, attemptId: n });
@@ -568,38 +570,38 @@ function ei(e) {
         })(e),
         n = (0, s.X7)(t);
     null != n &&
-        T.default.track(B.HAw.DEEP_LINK_CLICKED, {
+        S.default.track(H.HAw.DEEP_LINK_CLICKED, {
             fingerprint: (0, a.v)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
-        y.A.launch(t, (t) => {
-            t || (0, E.bG)({ pathname: B.BVt.QUEST_HOME, hash: e });
+        N.A.launch(t, (t) => {
+            t || (0, m.bG)({ pathname: H.BVt.QUEST_HOME, hash: e });
         });
 }
-function er(e) {
+function es(e) {
     let t = (function (e) {
             let t = platform.os?.family;
             if ("Android" !== t && "iOS" !== t) return "discord://";
             let n = new URLSearchParams();
             e.forEach((e) => n.append("ad_creative_ids", e));
-            let i = g.default.getFingerprint(),
+            let i = A.default.getFingerprint(),
                 r = (0, s.I_)(),
                 a = `${location.protocol}//${window.GLOBAL_ENV.WEBAPP_ENDPOINT}/quest-home?${n.toString()}`;
             return (0, s.Ay)(a, { utmSource: "quest-home-preview", fingerprint: i, attemptId: r });
         })(e),
         n = (0, s.X7)(t);
     null != n &&
-        T.default.track(B.HAw.DEEP_LINK_CLICKED, {
+        S.default.track(H.HAw.DEEP_LINK_CLICKED, {
             fingerprint: (0, a.v)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
-        y.A.launch(t, (e) => {
-            e || (0, E.bG)({ pathname: B.BVt.QUEST_HOME });
+        N.A.launch(t, (e) => {
+            e || (0, m.bG)({ pathname: H.BVt.QUEST_HOME });
         });
 }
-function es(e, t) {
+function ea(e, t) {
     (0, o.openModalLazy)(async () => {
         let { default: r } = await Promise.all([
             n.e("71192"),
@@ -616,7 +618,7 @@ function es(e, t) {
         return (n) => (0, i.jsx)(r, { ...n, multiplier: e, orbMultiplierEligibility: t });
     });
 }
-function ea(e) {
+function eo(e) {
     (0, o.openModalLazy)(async () => {
         let { default: t } = await Promise.all([
             n.e("58735"),
@@ -629,8 +631,8 @@ function ea(e) {
         return (n) => (0, i.jsx)(t, { ...n, questId: e.id });
     });
 }
-async function eo(e, t) {
-    let { type: n } = await (0, N.Oy)(e.id, {
+async function el(e, t) {
+    let { type: n } = await (0, v.Oy)(e.id, {
         questContent: t.questContent,
         questContentCTA: t.questContentCTA,
         sourceQuestContent: t.sourceQuestContent,
@@ -638,22 +640,25 @@ async function eo(e, t) {
         questContentRowIndex: t.questContentRowIndex,
     });
     switch (n) {
-        case N.WM.SUCCESS:
-            et({
+        case v.WM.SUCCESS:
+            en({
                 quest: e,
                 questContent: t.questContent,
                 sourceQuestContent: t.sourceQuestContent,
                 sourceQuestContentCTA: t.sourceQuestContentCTA,
             });
             break;
-        case N.WM.CAPTCHA_FAILED:
-            d.A.show({ title: x.intl.string(x.t["/CidxO"]), body: x.intl.string(x.t.HQdHg6) });
+        case v.WM.CAPTCHA_FAILED:
+            _.A.show({ title: k.intl.string(k.t["/CidxO"]), body: k.intl.string(k.t.HQdHg6) });
             break;
-        case N.WM.UNKNOWN_ERROR:
-            d.A.show({ title: x.intl.string(x.t.R0RpRX), body: x.intl.string(x.t.OXD41D) });
-        case N.WM.PREVIOUS_IN_FLIGHT_REQUEST:
+        case v.WM.UNKNOWN_ERROR:
+            _.A.show({ title: k.intl.string(k.t.R0RpRX), body: k.intl.string(k.t.OXD41D) });
+        case v.WM.PREVIOUS_IN_FLIGHT_REQUEST:
     }
 }
-function el(e) {
-    if ((0, U.vA)(e)) return e.config.features.includes(V.Li.CLOUD_GAMING_ACTIVITY) ? u.h : c._;
+function eu(e) {
+    if ((0, G.vA)(e)) return e.config.features.includes(B.Li.CLOUD_GAMING_ACTIVITY) ? u.h : c._;
+}
+function ec(e) {
+    if ((0, x.K$)(e)) return d.u;
 }
