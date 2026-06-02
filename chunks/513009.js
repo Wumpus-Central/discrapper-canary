@@ -15788,7 +15788,27 @@ function xa() {
                         },
                         "effect",
                     ),
-                    (0, E.jsx)(TH, { user: e, guild: i, sectionTitle: j.intl.string(j.t.GWrZOd) }, "frame"),
+                    (0, E.jsx)(
+                        TH,
+                        {
+                            user: e,
+                            guild: i,
+                            sectionTitle: (0, E.jsxs)(E.Fragment, {
+                                children: [
+                                    j.intl.string(j.t.GWrZOd),
+                                    (0, E.jsx)(tr.m, {
+                                        text: j.intl.string(j.t["5AFxuK"]),
+                                        children: (0, E.jsx)(o8.t, {
+                                            size: "md",
+                                            color: "currentColor",
+                                            className: xr.a,
+                                        }),
+                                    }),
+                                ],
+                            }),
+                        },
+                        "frame",
+                    ),
                     (0, E.jsx)(
                         Tk,
                         {
