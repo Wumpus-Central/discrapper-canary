@@ -11,11 +11,12 @@ n.d(t, {
     jd: () => N,
     jz: () => R,
     mC: () => T,
-    n5: () => V,
-    nG: () => F,
+    n5: () => B,
+    nG: () => V,
     pV: () => I,
     rG: () => G,
     sq: () => b,
+    uV: () => F,
     wH: () => U,
     xf: () => w,
     y8: () => S,
@@ -137,9 +138,9 @@ function w(e) {
     if (e?.tenantMetadata?.socialLayer?.cardBackgroundImageAssetId != null && e?.applicationId != null)
         return f.A.toURLSafe((0, h.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, n, I));
 }
-function M(e, t, n) {
-    let { tab: i, applicationId: r } = (0, s.parse)(t);
-    return e.indexOf(m.BVt.COLLECTIBLES_SHOP) >= 0 && i === g.G2.GAME_SHOPS && r === n;
+function M(e, t, n, i) {
+    let { tab: r, applicationId: a, skuId: o } = (0, s.parse)(t);
+    return e.indexOf(m.BVt.COLLECTIBLES_SHOP) >= 0 && r === g.G2.GAME_SHOPS && a === n && (null == i || o === i);
 }
 function P(e, t) {
     return M(location.pathname, location.search, t.applicationId)
@@ -181,10 +182,14 @@ function G(e, t, n, i) {
     return M(e, t, n) || (null != i && e.indexOf((0, E.Ny)(i)) >= 0);
 }
 function F(e) {
+    let { pathname: t, search: n, pageIndex: i = 0, applicationId: r, guildId: s, skuId: a } = e;
+    return M(t, n, r, a) || (null != s && t.includes(m.BVt.CHANNELS_GAME_SHOP(s, i, a)));
+}
+function V(e) {
     let t = (0, a.bG)([p.A], () => p.A.getGuildIdFromApplicationId(e)),
         n = (0, l.h)(e);
     return { guildId: t ?? n?.guildId, application: n };
 }
-function V(e) {
+function B(e) {
     if (null != e) return p.A.getGuildIdFromApplicationId(e) ?? o.A.getApplication(e)?.guildId;
 }

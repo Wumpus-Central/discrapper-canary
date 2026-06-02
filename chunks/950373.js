@@ -703,7 +703,7 @@ let tY = s.memo(function (e) {
             W = s.useCallback(() => {
                 (0, tt.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("49286"),
+                        n.e("63434"),
                         n.e("17918"),
                         n.e("76171"),
                         n.e("86672"),
@@ -749,7 +749,7 @@ let tY = s.memo(function (e) {
             s.useEffect(() => {
                 N && (Q(!1), null != X.current && (clearTimeout(X.current), (X.current = null)));
             }, [N]);
-        let J = b?.guildId == null || null == m ? null : (0, r.jsx)(t$, { guildId: b.guildId, applicationId: b.id }),
+        let J = null == b || null == m ? null : (0, r.jsx)(t$, { applicationId: b.id }),
             ee = F
                 ? (0, r.jsx)(tK, {
                       tooltipText: z.intl.formatToPlainString(tP.default.YhnUVO, { gameName: K }),
@@ -921,21 +921,21 @@ function tK(e) {
     });
 }
 function t$(e) {
-    let { applicationId: t, guildId: n } = e,
-        i = s.useRef(null);
+    let { applicationId: t } = e,
+        n = s.useRef(null);
     s.useEffect(() => {
         P.default.track(k.HAw.RTC_GAME_SHOP_BUTTON_VIEWED, { application_id: t });
     }, [t]);
-    let a = s.useCallback(() => {
-            (0, tF.X)({ guildId: n });
-        }, [n]),
+    let i = s.useCallback(() => {
+            (0, tF.G)({ applicationId: t });
+        }, [t]),
+        a = s.useCallback(() => {
+            (0, tF.default)({ applicationId: t });
+        }, [t]),
         o = s.useCallback(() => {
-            (0, tF.default)({ guildId: n });
-        }, [n]),
-        l = s.useCallback(() => {
-            P.default.track(k.HAw.RTC_GAME_SHOP_BUTTON_CLICKED, { application_id: t }), o();
-        }, [t, o]);
-    return (0, r.jsx)(tE.A, { tooltipText: z.intl.string(z.t.vyaWs7), onClick: l, onMouseDown: a, icon: to.U, ref: i });
+            P.default.track(k.HAw.RTC_GAME_SHOP_BUTTON_CLICKED, { application_id: t }), a();
+        }, [t, a]);
+    return (0, r.jsx)(tE.A, { tooltipText: z.intl.string(z.t.vyaWs7), onClick: o, onMouseDown: i, icon: to.U, ref: n });
 }
 var tz = n(428689),
     tq = n(673294);
