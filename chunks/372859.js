@@ -1763,7 +1763,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 555498, Version Hash: 3a802a13151444536450bf31d956004ed4972c02`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 555517, Version Hash: 3e138d2dd6925f4008c86517931c9531e4350b60`,
 ),
     ev.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -2914,7 +2914,7 @@ var rn = n(289873),
 let ro = (0, rs.Fe)({
     createPromise: () =>
         Promise.all([
-            n.e("14947"),
+            n.e("57534"),
             n.e("39713"),
             n.e("46461"),
             n.e("12259"),
@@ -2990,7 +2990,7 @@ let rI = (0, rs.Fe)({
             Promise.all([
                 n.e("24003"),
                 n.e("49706"),
-                n.e("14947"),
+                n.e("57534"),
                 n.e("87521"),
                 n.e("71192"),
                 n.e("39713"),
@@ -3096,7 +3096,7 @@ let rI = (0, rs.Fe)({
             Promise.all([
                 n.e("24003"),
                 n.e("49706"),
-                n.e("14947"),
+                n.e("57534"),
                 n.e("87521"),
                 n.e("71192"),
                 n.e("39713"),
@@ -3218,7 +3218,7 @@ let rI = (0, rs.Fe)({
             Promise.all([
                 n.e("24003"),
                 n.e("49706"),
-                n.e("14947"),
+                n.e("57534"),
                 n.e("87521"),
                 n.e("71192"),
                 n.e("39713"),
@@ -4083,7 +4083,7 @@ let s3 = (0, rs.Fe)({
             Promise.all([
                 n.e("6619"),
                 n.e("99110"),
-                n.e("14947"),
+                n.e("57534"),
                 n.e("68670"),
                 n.e("20928"),
                 n.e("333"),
@@ -4606,7 +4606,7 @@ let s3 = (0, rs.Fe)({
             n.e("91803"),
         ]).then(n.bind(n, 496879)),
     s7 = (0, rs.Fe)({ createPromise: s5, webpackId: 496879 }),
-    s8 = (0, ry.v)(() => ({ isOpen: !0 })),
+    s8 = (0, ry.v)(() => ({ isOpen: !0, width: 375 })),
     s9 = e8.memo(function () {
         e8.useLayoutEffect(() => {
             tS.Ay.setMinimumSize(800, 500);
@@ -6844,7 +6844,7 @@ let uE = 15 * n5.A.Millis.MINUTE,
                 handleGuildContextMenu(e, t) {
                     (0, uh.L3)(e, async () => {
                         let { default: e } = await Promise.all([
-                            n.e("14947"),
+                            n.e("57534"),
                             n.e("28149"),
                             n.e("90665"),
                             n.e("39713"),
@@ -18246,7 +18246,7 @@ let Sf = "isHideDevBanner",
                     className: t2()(Sh.Wz, Sh.mr),
                     children: [
                         (0, U.jsx)(S_, { className: Sh.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "555498" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "555517" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })
@@ -21290,7 +21290,7 @@ let N4 = () => (0, U.jsx)("div", { className: NQ.wG, children: (0, U.jsx)(rn.y, 
             Promise.all([
                 n.e("57073"),
                 n.e("93559"),
-                n.e("14947"),
+                n.e("57534"),
                 n.e("71192"),
                 n.e("34306"),
                 n.e("23311"),
@@ -21637,7 +21637,7 @@ let N4 = () => (0, U.jsx)("div", { className: NQ.wG, children: (0, U.jsx)(rn.y, 
                 n.e("63635"),
                 n.e("72318"),
                 n.e("99110"),
-                n.e("14947"),
+                n.e("57534"),
                 n.e("46757"),
                 n.e("23924"),
                 n.e("42205"),
@@ -21826,7 +21826,7 @@ let N4 = () => (0, U.jsx)("div", { className: NQ.wG, children: (0, U.jsx)(rn.y, 
     vr = (0, nN.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("14947"),
+                n.e("57534"),
                 n.e("71192"),
                 n.e("34306"),
                 n.e("23311"),
@@ -22691,7 +22691,7 @@ let N4 = () => (0, U.jsx)("div", { className: NQ.wG, children: (0, U.jsx)(rn.y, 
     vf = (0, nN.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("14947"),
+                n.e("57534"),
                 n.e("71192"),
                 n.e("23311"),
                 n.e("22367"),
@@ -22968,7 +22968,7 @@ let N4 = () => (0, U.jsx)("div", { className: NQ.wG, children: (0, U.jsx)(rn.y, 
         createPromise: () =>
             Promise.all([
                 n.e("23311"),
-                n.e("14947"),
+                n.e("57534"),
                 n.e("78547"),
                 n.e("24403"),
                 n.e("99961"),
@@ -23760,12 +23760,13 @@ let vP = (e) => (0, U.jsx)(vm, { ...e }),
         });
     };
 function vV(e) {
-    document.body.style.setProperty("--custom-guild-sidebar-width", `${e}px`);
+    s8.setState({ width: e }), document.body.style.setProperty("--custom-guild-sidebar-width", `${e}px`);
 }
 function vB(e) {
     let { hasNotice: t, sidebarTheme: n, hideSidebar: i, hideChannelList: r, isSidebarOpen: s } = e,
         a = (0, e6.bG)([t5.A], () => t5.A.isFullscreenInContext()),
-        o = s8((e) => !e.isOpen) && !1;
+        o = s8((e) => !e.isOpen) && !1,
+        l = s8((e) => e.width);
     e8.useLayoutEffect(() => {}, [!1]),
         e8.useLayoutEffect(() => {
             if (o) vV(76);
@@ -23774,42 +23775,72 @@ function vB(e) {
                 Number.isNaN(e) && (e = 375), vV(e);
             }
         }, [o]);
-    let l = e8.useRef(null),
-        u = e8.useCallback(
+    let u = e8.useRef(null),
+        c = e8.useCallback(
             (e, t) => {
                 vV(e);
                 t <= 264 ? document.body.classList.add(NQ._A) : document.body.classList.remove(NQ._A),
                     t >= 432 ? document.body.classList.add(NQ.uN) : document.body.classList.remove(NQ.uN);
                 let n = t - e;
-                l.current?.style.setProperty("--custom-overdrag", `${1 + Math.min(Math.abs(n / 76), 0.25)}`);
+                u.current?.style.setProperty("--custom-overdrag", `${1 + Math.min(Math.abs(n / 76), 0.25)}`);
             },
             [!1],
         ),
-        c = e8.useCallback(() => {
+        d = e8.useCallback(() => {
             document.body.classList.add(NQ.cB);
         }, []),
-        d = e8.useCallback((e) => {
+        _ = e8.useCallback((e) => {
             document.body.classList.remove(NQ.cB),
                 document.body.classList.remove(NQ._A),
                 document.body.classList.remove(NQ.uN),
                 document.body.classList.remove(NQ.l4),
-                l.current?.style.setProperty("--custom-overdrag", "0px"),
+                u.current?.style.setProperty("--custom-overdrag", "0px"),
                 tA.w.set(rr.o, e),
                 ew.default.track(eL.HAw.CHANNEL_SIDEBAR_RESIZED, { width: e });
         }, []),
-        _ = (0, rl.A)({
+        h = (0, rl.A)({
             minDimension: 264,
             maxDimension: 432,
-            resizableDomNodeRef: l,
-            onElementResize: u,
-            onElementResizeStart: c,
-            onElementResizeEnd: d,
+            resizableDomNodeRef: u,
+            onElementResize: c,
+            onElementResizeStart: d,
+            onElementResizeEnd: _,
             orientation: rl.R.HORIZONTAL_RIGHT,
             throttleDuration: 0,
         }),
-        h = e8.useCallback(() => {
+        f = e8.useCallback(() => {
             s8.setState((e) => ({ isOpen: !e.isOpen }));
-        }, []);
+        }, []),
+        p = e8.useCallback(
+            (e) => {
+                let t;
+                if ("Enter" === e.key) {
+                    e.preventDefault(), f();
+                    return;
+                }
+                if (o) return;
+                switch (e.key) {
+                    case "ArrowRight":
+                        t = l + 10;
+                        break;
+                    case "ArrowLeft":
+                        t = l - 10;
+                        break;
+                    case "Home":
+                        t = 264;
+                        break;
+                    case "End":
+                        t = 432;
+                        break;
+                    default:
+                        return;
+                }
+                e.preventDefault();
+                let n = Math.min(Math.max(t, 264), 432);
+                n !== l && (vV(n), tA.w.set(rr.o, n), ew.default.track(eL.HAw.CHANNEL_SIDEBAR_RESIZED, { width: n }));
+            },
+            [o, l, f],
+        );
     if (
         (e8.useLayoutEffect(() => {
             o && vV(76);
@@ -23817,12 +23848,12 @@ function vB(e) {
         i)
     )
         return null;
-    let f = { className: t2()(NQ.th, { [NQ.Qd]: !t }) };
+    let E = { className: t2()(NQ.th, { [NQ.Qd]: !t }) };
     return (0, U.jsx)(t6.N, {
         theme: n,
         children: (e) =>
             (0, U.jsxs)("div", {
-                ref: l,
+                ref: u,
                 "data-collapsed": o,
                 className: t2()(NQ.pz, e, { [NQ.Ij]: e0.Fr, [NQ.R]: a, [NQ.WG]: r }),
                 children: [
@@ -23830,12 +23861,21 @@ function vB(e) {
                     !r &&
                         (0, U.jsxs)(U.Fragment, {
                             children: [
-                                (0, U.jsx)("div", { ...f, children: (0, U.jsx)(vy, {}) }),
-                                (0, U.jsx)(t3.D, {
-                                    onClick: h,
-                                    "aria-label": "Resize Sidebar",
-                                    className: NQ.tq,
-                                    onMouseDown: _,
+                                (0, U.jsx)("div", { ...E, children: (0, U.jsx)(vy, {}) }),
+                                (0, U.jsx)(e5.vN, {
+                                    children: (0, U.jsx)("div", {
+                                        role: "separator",
+                                        tabIndex: 0,
+                                        "aria-orientation": "vertical",
+                                        "aria-label": "Resize Sidebar",
+                                        "aria-valuenow": l,
+                                        "aria-valuemin": 264,
+                                        "aria-valuemax": 432,
+                                        className: NQ.tq,
+                                        onClick: f,
+                                        onMouseDown: h,
+                                        onKeyDown: p,
+                                    }),
                                 }),
                                 (0, U.jsx)(N0, {}),
                             ],
@@ -24587,7 +24627,7 @@ let CA = (0, rs.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("68670"),
-                n.e("14947"),
+                n.e("57534"),
                 n.e("47199"),
                 n.e("99110"),
                 n.e("88296"),
@@ -24655,7 +24695,7 @@ let CA = (0, rs.Fe)({
             Promise.all([
                 n.e("24003"),
                 n.e("49706"),
-                n.e("14947"),
+                n.e("57534"),
                 n.e("87521"),
                 n.e("71192"),
                 n.e("39713"),
@@ -24777,7 +24817,7 @@ let CA = (0, rs.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("68670"),
-                n.e("14947"),
+                n.e("57534"),
                 n.e("28149"),
                 n.e("90665"),
                 n.e("39713"),
@@ -26634,7 +26674,7 @@ n(41604);
 let O$ = (0, rs.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("14947"),
+                n.e("57534"),
                 n.e("59499"),
                 n.e("15680"),
                 n.e("62493"),
@@ -26692,6 +26732,7 @@ let O$ = (0, rs.Fe)({
                 n.e("34306"),
                 n.e("11491"),
                 n.e("84328"),
+                n.e("22155"),
                 n.e("68670"),
                 n.e("23924"),
                 n.e("42205"),
@@ -27075,7 +27116,7 @@ let O$ = (0, rs.Fe)({
     Oq = (0, rs.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("14947"),
+                n.e("57534"),
                 n.e("23311"),
                 n.e("22367"),
                 n.e("88826"),
@@ -27399,7 +27440,7 @@ let O$ = (0, rs.Fe)({
     OX = (0, rs.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("14947"),
+                n.e("57534"),
                 n.e("59499"),
                 n.e("15680"),
                 n.e("62493"),
@@ -27457,6 +27498,7 @@ let O$ = (0, rs.Fe)({
                 n.e("34306"),
                 n.e("11491"),
                 n.e("84328"),
+                n.e("22155"),
                 n.e("68670"),
                 n.e("23924"),
                 n.e("42205"),
@@ -35338,7 +35380,7 @@ let P2 = [
                         let { default: e } = await Promise.all([
                             n.e("49706"),
                             n.e("85926"),
-                            n.e("14947"),
+                            n.e("57534"),
                             n.e("87521"),
                             n.e("71192"),
                             n.e("39713"),
@@ -35842,7 +35884,7 @@ let xN = (0, nN.Fe)({
             n.e("71192"),
             n.e("54176"),
             n.e("79264"),
-            n.e("14947"),
+            n.e("57534"),
             n.e("71100"),
             n.e("49706"),
             n.e("5636"),
@@ -37695,7 +37737,7 @@ let kO = (0, rs.Fe)({
                 n.e("22513"),
                 n.e("99110"),
                 n.e("92210"),
-                n.e("14947"),
+                n.e("57534"),
                 n.e("71100"),
                 n.e("5636"),
                 n.e("32697"),
@@ -37945,7 +37987,7 @@ let kO = (0, rs.Fe)({
                 n.e("81154"),
                 n.e("99110"),
                 n.e("23311"),
-                n.e("14947"),
+                n.e("57534"),
                 n.e("78547"),
                 n.e("24403"),
                 n.e("99961"),
@@ -38319,7 +38361,7 @@ let kO = (0, rs.Fe)({
     kH = (0, rs.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("14947"),
+                n.e("57534"),
                 n.e("24806"),
                 n.e("23924"),
                 n.e("13554"),

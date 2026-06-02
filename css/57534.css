@@ -3164,11 +3164,13 @@
 }
 
 .sidebarResizeHandle__5e434:active,
+.sidebarResizeHandle__5e434:focus-visible,
 .sidebarResizeHandle__5e434:hover {
     background-color: var(--background-mod-strong)
 }
 
 .high-contrast-mode .sidebarResizeHandle__5e434:active,
+.high-contrast-mode .sidebarResizeHandle__5e434:focus-visible,
 .high-contrast-mode .sidebarResizeHandle__5e434:hover {
     background-color: var(--border-normal)
 }
@@ -4312,11 +4314,6 @@
 
 .current__5b927 {
     color: var(--text-default)
-}
-
-.rootPopout_b5970a {
-    height: 100%;
-    width: 100%
 }
 
 .container__0bec3 {
