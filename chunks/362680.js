@@ -431,7 +431,7 @@ function eJ(e) {
     if (!a) return null;
     let A = () => {
         (0, eI.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("54018"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
+            let { default: e } = await Promise.all([n.e("37168"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
                 n.bind(n, 719847),
             );
             return (t) =>
@@ -490,7 +490,7 @@ function eq(e) {
         f = !!x && (0, ek.bg)(o.flags),
         E = () => {
             (0, eI.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("54018"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
+                let { default: e } = await Promise.all([n.e("37168"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
                     n.bind(n, 719847),
                 );
                 return (n) =>
@@ -1489,7 +1489,7 @@ function nB(e) {
               onClick: () => {
                   (0, eI.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
-                          n.e("35842"),
+                          n.e("99110"),
                           n.e("90665"),
                           n.e("58735"),
                           n.e("99430"),
@@ -5514,7 +5514,7 @@ function aK(e) {
                                     onClick: () =>
                                         (0, eI.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                n.e("72811"),
+                                                n.e("39713"),
                                                 n.e("97804"),
                                                 n.e("7265"),
                                                 n.e("97641"),
@@ -5681,11 +5681,11 @@ function a5(e) {
     let t,
         n,
         i,
-        { author: l, banned: r, channelId: a } = e,
-        o = (0, u.bG)([P.default], () => P.default.getId()),
-        d = rL.Ay.useName(l),
-        c = o === l.id,
-        m = (0, u.bG)([D.A, tl.A], () => {
+        { author: l, banned: r, channelId: a, onMention: o } = e,
+        d = (0, u.bG)([P.default], () => P.default.getId()),
+        c = rL.Ay.useName(l),
+        m = d === l.id,
+        h = (0, u.bG)([D.A, tl.A], () => {
             let e = D.A.getChannel(a);
             if (null == e) return !1;
             if (e.isPrivate()) return !0;
@@ -5697,15 +5697,16 @@ function a5(e) {
             return tl.A.can(K.xBc.SEND_MESSAGES, e);
         });
     return (
-        c
+        m
             ? ((t = J.intl.string(J.t["F/OLvL"])), (i = J.intl.string(J.t.C89OLE)))
             : ((i = J.intl.string(J.t.YVub5y)),
               r
                   ? (t = J.intl.string(J.t["57nBty"]))
-                  : null != d && m
-                    ? ((t = J.intl.formatToPlainString(J.t["9Akp1s"], { username: d })),
+                  : null != c && h
+                    ? ((t = J.intl.formatToPlainString(J.t["9Akp1s"], { username: c })),
                       (n = (0, s.jsx)(eg.$, {
                           onClick: function () {
+                              o?.();
                               let { id: e } = l,
                                   t = `@${rL.Ay.getUserTag(l, { decoration: "never" })}`,
                                   n = `<@${e}>`;
@@ -6521,7 +6522,22 @@ function ok(e) {
             break;
         case K.elq.EXPIRED:
         case K.elq.BANNED:
-            C = (0, s.jsx)(a5, { banned: c.state === K.elq.BANNED, author: n.author, channelId: n.channel_id });
+            C = (0, s.jsx)(a5, {
+                banned: c.state === K.elq.BANNED,
+                author: n.author,
+                channelId: n.channel_id,
+                onMention: () =>
+                    (0, aE.he)(
+                        {
+                            invite: c,
+                            action: "mention",
+                            inviter_id: n.author.id,
+                            invite_message_id: n.id,
+                            invite_instance_id: d,
+                        },
+                        m,
+                    ),
+            });
             break;
         case K.elq.ERROR:
             C = (0, s.jsx)(aU, { author: n.author, inviteError: a });
@@ -6664,7 +6680,7 @@ function oH(e) {
     (0, oV.C)(t.id);
     let l = r.useCallback(() => {
         (0, eI.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("54018"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
+            let { default: e } = await Promise.all([n.e("37168"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
                 n.bind(n, 719847),
             );
             return (n) => (0, s.jsx)(e, { appId: t.id, guildId: i, ...n });

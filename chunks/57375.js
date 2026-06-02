@@ -12,26 +12,26 @@ var s = l(627968),
     x = l(702841),
     g = l(778712),
     h = l(504394),
-    j = l(966327),
-    v = l(964486),
+    v = l(966327),
+    j = l(964486),
     _ = l(503698),
     p = l.n(_),
     f = l(20742),
     N = l(834730),
     I = l(241524),
-    A = l(260451),
-    E = l(287809),
+    E = l(260451),
+    A = l(287809),
     C = l(375708),
     b = l(197691);
 function y(e) {
     let { friendMemberIds: i, className: l, avatarSize: n = g._3.SIZE_16 } = e,
-        a = (0, x.yK)([E.default], () =>
+        a = (0, x.yK)([A.default], () =>
             i
                 .slice(0, 3)
-                .map((e) => E.default.getUser(e))
+                .map((e) => A.default.getUser(e))
                 .filter((e) => null != e),
         ),
-        { enabled: r } = A.SH.useConfig({ location: "InviteFriendMembers" }),
+        { enabled: r } = E.SH.useConfig({ location: "InviteFriendMembers" }),
         d = t.useCallback(
             (e, i) => (0, s.jsx)(N.E, { tag: "span", variant: "text-sm/medium", color: "text-subtle", children: e }, i),
             [],
@@ -56,7 +56,7 @@ function y(e) {
                         {
                             className: b.R3,
                             style: { zIndex: a.length - i },
-                            children: (0, s.jsx)(j.A, { user: e, size: n }),
+                            children: (0, s.jsx)(v.A, { user: e, size: n }),
                         },
                         e.id,
                     ),
@@ -73,8 +73,8 @@ var T = l(460760),
     P = l(825860),
     D = l(661531),
     M = l(939249),
-    z = l(573435),
-    R = l(822017);
+    R = l(573435),
+    z = l(822017);
 function U(e) {
     let { game: i, activityLevel: l } = e,
         t = i.getCoverURL();
@@ -85,17 +85,17 @@ function U(e) {
         "aria-label": i.name,
         text: i.name,
         children: (0, s.jsxs)("div", {
-            className: R.Xy,
+            className: z.Xy,
             children: [
-                (0, s.jsx)("img", { className: R._s, src: t, alt: i.name }),
+                (0, s.jsx)("img", { className: z._s, src: t, alt: i.name }),
                 n &&
-                    (0, s.jsx)(z.Ay, {
-                        mask: z.hW.GAMEPLAY_HIGH_ACTIVITY_ICON,
+                    (0, s.jsx)(R.Ay, {
+                        mask: R.hW.GAMEPLAY_HIGH_ACTIVITY_ICON,
                         width: 16,
                         height: 16,
-                        className: R.Sy,
+                        className: z.Sy,
                         children: (0, s.jsx)("div", {
-                            className: R.oZ,
+                            className: z.oZ,
                             children: (0, s.jsx)(P.Y, {
                                 color: D.A.unsafe_rawColors.ORANGE_330.css,
                                 width: 12,
@@ -126,14 +126,14 @@ function G(e) {
                         "aria-label": C.intl.string(C.t.yohc6E),
                         text: C.intl.string(C.t.yohc6E),
                         children: (0, s.jsxs)(M.D, {
-                            className: p()(R.Xy, R.oL, R.vk),
+                            className: p()(z.Xy, z.oL, z.vk),
                             onClick: u,
                             "aria-label": `Show ${n.length} more games`,
                             children: [
-                                (0, s.jsx)("img", { className: p()(R._s, R.tJ), src: e, alt: l.name }),
-                                (0, s.jsx)("div", { className: R.Fg }),
+                                (0, s.jsx)("img", { className: p()(z._s, z.tJ), src: e, alt: l.name }),
+                                (0, s.jsx)("div", { className: z.Fg }),
                                 (0, s.jsx)("div", {
-                                    className: R.AZ,
+                                    className: z.AZ,
                                     children: (0, s.jsx)(N.E, {
                                         variant: "text-xs/normal",
                                         color: "always-white",
@@ -161,11 +161,11 @@ var O = l(438842),
     V = l(649640),
     H = l(174459),
     F = l(17928),
-    W = l(683071),
-    B = l(922016),
-    Y = l(408278),
-    Z = l(625903),
-    q = l(972387),
+    B = l(683071),
+    W = l(922016),
+    q = l(408278),
+    Y = l(625903),
+    Z = l(972387),
     K = l(539895),
     $ = l(403581),
     Q = l(793574),
@@ -258,10 +258,10 @@ function ec(e) {
 var eu = l(963120);
 function em(e) {
     let { invite: i, guild: l, className: n } = e,
-        a = (0, F.bG)([E.default], () => E.default.getCurrentUser()),
+        a = (0, F.bG)([A.default], () => A.default.getCurrentUser()),
         { submitting: r, error: d, invite_instance_id: o } = (0, F.cf)([K.A], () => K.A.getProps()),
         m = t.useCallback(() => {
-            q.A.acceptInvite(i, o);
+            Z.A.acceptInvite(i, o);
         }, [i, o]),
         x = (0, en.uE)(),
         h =
@@ -270,7 +270,7 @@ function em(e) {
                       usernameHook: (e, i) => (0, s.jsx)("span", { className: eu.Pb, children: x }, i),
                   })
                 : C.intl.string(C.t["e/6Ogt"]),
-        v = t.useRef(null),
+        j = t.useRef(null),
         [_, p] = t.useState(!1),
         f = t.useCallback(() => {
             _ ||
@@ -286,7 +286,7 @@ function em(e) {
         className: n,
         children: [
             null != d
-                ? (0, s.jsx)("div", { className: eu.Un, children: (0, s.jsx)(W.w, { type: "critical", children: d }) })
+                ? (0, s.jsx)("div", { className: eu.Un, children: (0, s.jsx)(B.w, { type: "critical", children: d }) })
                 : null,
             N ? (0, s.jsx)(et, { className: eu.sX }) : null,
             (0, s.jsxs)(u.e, {
@@ -304,13 +304,13 @@ function em(e) {
                         icon:
                             N || null == a
                                 ? void 0
-                                : () => (0, s.jsx)(j.A, { "aria-hidden": !0, size: g._3.SIZE_16, user: a }),
+                                : () => (0, s.jsx)(v.A, { "aria-hidden": !0, size: g._3.SIZE_16, user: a }),
                     }),
                     N
                         ? null
-                        : (0, s.jsx)(B.Y, {
-                              targetElementRef: v,
-                              animation: B.Y.Animation.NONE,
+                        : (0, s.jsx)(W.Y, {
+                              targetElementRef: j,
+                              animation: W.Y.Animation.NONE,
                               position: "top",
                               align: "right",
                               shouldShow: _,
@@ -319,10 +319,10 @@ function em(e) {
                               renderPopout: (e) => (0, s.jsx)(ec, { invite: i, ...e }),
                               children: (e) =>
                                   (0, s.jsx)("div", {
-                                      ref: v,
-                                      children: (0, s.jsx)(Y.K, {
+                                      ref: j,
+                                      children: (0, s.jsx)(q.K, {
                                           ...e,
-                                          icon: Z.Z,
+                                          icon: Y.Z,
                                           "aria-label": C.intl.string(C.t["3D5yo/"]),
                                           variant: "secondary",
                                           onClick: f,
@@ -337,15 +337,15 @@ function em(e) {
 var ex = l(473644),
     eg = l(57930),
     eh = l(991660),
-    ej = l(534514),
-    ev = l(404778),
+    ev = l(534514),
+    ej = l(404778),
     e_ = l(847374),
     ep = l(900797),
     ef = l(565645),
     eN = l(59520),
     eI = l(997590),
-    eA = l(454346),
-    eE = l(80500),
+    eE = l(454346),
+    eA = l(80500),
     eC = l(274997),
     eb = l(319745),
     ey = l(488225),
@@ -356,9 +356,9 @@ var ex = l(473644),
     eP = l(998445),
     eD = l(9578),
     eM = l(573648);
-let ez = {
-    [ei.fg2.TWITCH]: eA.a,
-    [ei.fg2.YOUTUBE]: eE.C,
+let eR = {
+    [ei.fg2.TWITCH]: eE.a,
+    [ei.fg2.YOUTUBE]: eA.C,
     [ei.fg2.TWITTER]: eC.p,
     [ei.fg2.TWITTER_LEGACY]: eC.p,
     [ei.fg2.FACEBOOK]: eb.Z,
@@ -368,10 +368,10 @@ let ez = {
     [ei.fg2.SPOTIFY]: eS.L,
     [ei.fg2.BLUESKY]: eL.a,
 };
-function eR(e) {
+function ez(e) {
     let { url: i, invite: l } = e,
         n = eM.A.getByUrl(i),
-        a = null != n ? ez[n.type] : void 0,
+        a = null != n ? eR[n.type] : void 0,
         r = t.useCallback(
             () => (
                 H.default.track(ei.HAw.INVITE_ACCEPT_SOCIAL_LINK_CLICKED, {
@@ -407,7 +407,7 @@ function eU(e) {
     return (0, s.jsxs)("div", {
         className: eu.Ff,
         children: [
-            (0, s.jsx)(ej.D, {
+            (0, s.jsx)(ev.D, {
                 className: eu.Uo,
                 variant: "heading-sm/medium",
                 color: "text-default",
@@ -479,11 +479,11 @@ function eG(e) {
                             i.social_links.length > 0 &&
                             (0, s.jsxs)(s.Fragment, {
                                 children: [
-                                    (0, s.jsx)(ev.c, {}),
+                                    (0, s.jsx)(ej.c, {}),
                                     (0, s.jsxs)("div", {
                                         className: eu.Ff,
                                         children: [
-                                            (0, s.jsx)(ej.D, {
+                                            (0, s.jsx)(ev.D, {
                                                 className: eu.Uo,
                                                 variant: "heading-sm/medium",
                                                 color: "text-default",
@@ -494,7 +494,7 @@ function eG(e) {
                                                 variant: "text-sm/normal",
                                                 color: "text-default",
                                                 children: i.social_links.map((e) =>
-                                                    (0, s.jsx)(eR, { url: e, invite: l }, e),
+                                                    (0, s.jsx)(ez, { url: e, invite: l }, e),
                                                 ),
                                             }),
                                         ],
@@ -504,7 +504,7 @@ function eG(e) {
                         null != i.category_ids &&
                             i.category_ids.length > 0 &&
                             (0, s.jsxs)(s.Fragment, {
-                                children: [(0, s.jsx)(ev.c, {}), (0, s.jsx)(eU, { categoryIds: i.category_ids })],
+                                children: [(0, s.jsx)(ej.c, {}), (0, s.jsx)(eU, { categoryIds: i.category_ids })],
                             }),
                     ],
                 }),
@@ -707,7 +707,7 @@ function eF(e) {
     t.useEffect(() => {
         (0, T.Mu)();
     }, []);
-    let { treatment: m } = A.zQ.useConfig({ location: "AcceptInviteModalRedesign" }),
+    let { treatment: m } = E.zQ.useConfig({ location: "AcceptInviteModalRedesign" }),
         x = (0, I.A)("(max-width: 600px)"),
         g = "v1" === m || x,
         h = t.useMemo(() => (g ? eV : eH), [g]);
@@ -729,7 +729,7 @@ function eF(e) {
         ],
     });
 }
-function eW(e) {
+function eB(e) {
     let {
             invite: i,
             guild: l,
@@ -741,10 +741,10 @@ function eW(e) {
             channel: x,
             onClose: h,
         } = e,
-        { treatment: j } = A.SH.useConfig({ location: "AcceptInviteModalRedesign" }),
-        v = null != d && d.length > 0,
+        { treatment: v } = E.SH.useConfig({ location: "AcceptInviteModalRedesign" }),
+        j = null != d && d.length > 0,
         { gamesToDisplay: _, lastGameToDisplay: p, remainingGames: I } = (0, k.A)(c),
-        E = t.useMemo(
+        A = t.useMemo(
             () => c.traits.map((e, i) => ({ key: `trait-${i}`, ...e })).filter((e) => e.label.length > 0),
             [c],
         ),
@@ -779,7 +779,7 @@ function eW(e) {
                                 gap: 16,
                                 children: [
                                     (0, s.jsx)(ex.A, { guild: l, invite: i, showGuildTag: !0 }),
-                                    v &&
+                                    j &&
                                         (0, s.jsx)(y, {
                                             friendMemberIds: d,
                                             className: eu.QS,
@@ -794,14 +794,14 @@ function eW(e) {
                                         }),
                                     0 === _.length
                                         ? null
-                                        : "v1" === j
+                                        : "v1" === v
                                           ? (0, s.jsx)(O.A, {
                                                 gamesToDisplay: _,
                                                 lastGameToDisplay: p,
                                                 remainingGames: I,
                                                 activity: c.gameActivity,
                                             })
-                                          : "v2" === j
+                                          : "v2" === v
                                             ? (0, s.jsx)(o.B, {
                                                   direction: "vertical",
                                                   gap: 8,
@@ -820,7 +820,7 @@ function eW(e) {
                                                   }),
                                               })
                                             : null,
-                                    (0, s.jsx)(w.w, { items: E, traitColor: "text-subtle" }),
+                                    (0, s.jsx)(w.w, { items: A, traitColor: "text-subtle" }),
                                 ],
                             }),
                         ],
@@ -831,10 +831,10 @@ function eW(e) {
         ],
     });
 }
-var eB = l(915089),
-    eY = l(9994),
-    eZ = l(395671),
-    eq = l(299091),
+var eW = l(915089),
+    eq = l(9994),
+    eY = l(395671),
+    eZ = l(299091),
     eK = l(486020),
     e$ = l(723702),
     eQ = l(19575);
@@ -848,9 +848,9 @@ function eX(e) {
             title: C.intl.string(C.t.u9zxnX),
             subtitle: C.intl.string(C.t.FWkU6P),
             transitionState: i,
-            onClose: () => (q.A.close(l), Promise.resolve()),
+            onClose: () => (Z.A.close(l), Promise.resolve()),
             size: "sm",
-            actions: [{ text: C.intl.string(C.t.wcqOoF), onClick: () => q.A.close(l) }],
+            actions: [{ text: C.intl.string(C.t.wcqOoF), onClick: () => Z.A.close(l) }],
         }),
     });
 }
@@ -859,28 +859,33 @@ function eJ(e) {
         l,
         a,
         { transitionState: _ } = e;
-    (0, x.bG)([E.default], () => E.default.getCurrentUser()?.premiumType);
-    let p = (0, x.bG)([E.default], () => E.default.getCurrentUser()),
+    (0, x.bG)([A.default], () => A.default.getCurrentUser()?.premiumType);
+    let p = (0, x.bG)([A.default], () => A.default.getCurrentUser()),
         { invite: f, error: N, submitting: I, invite_instance_id: b } = (0, x.cf)([K.A], () => K.A.getProps()),
-        y = (0, x.bG)([eq.A], () => eq.A.getInvite(f?.code ?? "") ?? null),
-        T = (0, x.bG)([eq.A], () => eq.A.getFriendMemberIds(f?.code ?? ""));
+        y = (0, x.bG)([eZ.A], () => eZ.A.getInvite(f?.code ?? "") ?? null),
+        T = (0, x.bG)([eZ.A], () => eZ.A.getFriendMemberIds(f?.code ?? ""));
     t.useEffect(() => {
         null != f && null != f.guild && (0, en.dR)(f.approximate_member_count ?? 0, f.code, f.guild.id);
     }, [f, f?.approximate_member_count, f?.code, f?.guild?.id]);
     let k = (0, en.uE)(),
-        { enabled: S, discoveryGuild: L, isLoading: P } = (0, A.qE)(f?.guild ?? null, "AcceptInviteModal"),
-        { enabled: D } = A.SH.useConfig({ location: "AcceptInviteModal" }),
+        { enabled: S, discoveryGuild: L, isLoading: P } = (0, E.qE)(f?.guild ?? null, "AcceptInviteModal"),
+        { enabled: D } = E.SH.useConfig({ location: "AcceptInviteModal" }),
         M = D ? T : null;
     t.useEffect(() => {
         !__OVERLAY__ &&
             e$.isPlatformEmbedded &&
             (document.hasFocus() || ((0, e$.isWindows)() ? eQ.Ay.minimize() : eQ.Ay.restore(), eQ.Ay.focus()));
     }, []),
-        (0, v.Ay)(() => {
-            H.default.track(ei.HAw.OPEN_MODAL, { type: "Accept Invite", invite_code: f?.code, guild_id: f?.guild?.id });
+        (0, j.Ay)(() => {
+            let e = f?.state === ei.elq.EXPIRED || f?.state === ei.elq.BANNED || f?.state === ei.elq.ERROR;
+            H.default.track(ei.HAw.OPEN_MODAL, {
+                type: e ? "Invalid Invite" : "Accept Invite",
+                invite_code: f?.code,
+                guild_id: f?.guild?.id,
+            });
         });
-    let z = (0, eB.GV)(),
-        { analyticsLocations: R } = (0, X.Ay)(Q.A.INVITE_MODAL),
+    let R = (0, eW.GV)(),
+        { analyticsLocations: z } = (0, X.Ay)(Q.A.INVITE_MODAL),
         U = M?.length ?? 0,
         G = U > 0;
     if (
@@ -897,9 +902,9 @@ function eJ(e) {
     )
         return (0, s.jsx)(r.d, {
             size: "md",
-            "aria-labelledby": z,
+            "aria-labelledby": R,
             transitionState: _,
-            onClose: () => (q.A.close(f?.code), Promise.resolve()),
+            onClose: () => (Z.A.close(f?.code), Promise.resolve()),
             children: (0, s.jsx)("div", { className: es.g4, children: (0, s.jsx)(d.y, {}) }),
         });
     if (f.state === ei.elq.EXPIRED || f.state === ei.elq.BANNED || f.state === ei.elq.ERROR)
@@ -907,28 +912,28 @@ function eJ(e) {
     if (null == f.channel)
         return (0, s.jsx)(r.d, {
             size: "md",
-            "aria-labelledby": z,
+            "aria-labelledby": R,
             transitionState: _,
-            onClose: () => (q.A.close(f.code), Promise.resolve()),
+            onClose: () => (Z.A.close(f.code), Promise.resolve()),
             children: (0, s.jsx)("div", { className: es.g4, children: (0, s.jsx)(d.y, {}) }),
         });
     function O() {
-        null != f && q.A.acceptInvite(f, b);
+        null != f && Z.A.acceptInvite(f, b);
     }
     function w() {
         H.default.track(ei.HAw.INVITE_ACCEPT_DISMISSED, { invite_code: f?.code, guild_id: f?.guild?.id }),
-            q.A.close(f?.code);
+            Z.A.close(f?.code);
     }
-    let { guild: V, channel: F, inviter: W, target_application: B } = f,
-        Y = null == f.guild && null == f.channel && null != W,
-        Z = null != V;
-    if (null != B) (i = V?.name), (l = eZ.Ay.createFromServer(B).getCoverImageURL(1024));
+    let { guild: V, channel: F, inviter: B, target_application: W } = f,
+        q = null == f.guild && null == f.channel && null != B,
+        Y = null != V;
+    if (null != W) (i = V?.name), (l = eY.Ay.createFromServer(W).getCoverImageURL(1024));
     else if (null != V) (i = V.name), (l = eK.Ay.getGuildSplashURL({ id: V.id, splash: V.splash }));
-    else if (((null == (i = F.name) || "" === i) && null != W && (i = W.username), null == i))
+    else if (((null == (i = F.name) || "" === i) && null != B && (i = B.username), null == i))
         throw Error("no name for group DM invite");
     let $ = (0, ea.Sn)();
     if (
-        ((a = Y
+        ((a = q
             ? C.intl.string(C.t["e/6Ogt"])
             : C.intl.format(C.t["9sWQNT"], {
                   usernameHook: () => (0, s.jsx)("span", { className: es.Pb, children: k }),
@@ -937,17 +942,17 @@ function eJ(e) {
     )
         return (0, s.jsx)(r.d, {
             size: "md",
-            "aria-labelledby": z,
+            "aria-labelledby": R,
             transitionState: _,
             onClose: () => (w(), Promise.resolve()),
             children: (0, s.jsx)("div", { className: es.g4, children: (0, s.jsx)(d.y, {}) }),
         });
     if (S && null != V)
         return (0, s.jsx)(X.f5, {
-            value: R,
+            value: z,
             children: (0, s.jsx)(eF, {
                 transitionState: _,
-                headerId: z,
+                headerId: R,
                 channel: F,
                 invite: f,
                 guild: V,
@@ -957,7 +962,7 @@ function eJ(e) {
                 onClose: w,
             }),
         });
-    let J = null != y ? (0, eY.oO)(y) : null,
+    let J = null != y ? (0, eq.oO)(y) : null,
         ee = (function (e) {
             if (null == e) return !1;
             let i = null != e.description && e.description.length > 0,
@@ -965,12 +970,12 @@ function eJ(e) {
                 s = null != e.gameApplicationIds && e.gameApplicationIds.length > 0;
             return i && (l || s);
         })(J);
-    return null != J && ee && null != V && (A.SH.getConfig({ location: "AcceptInviteModal.hasProfile" }), D)
+    return null != J && ee && null != V && (E.SH.getConfig({ location: "AcceptInviteModal.hasProfile" }), D)
         ? (0, s.jsx)(X.f5, {
-              value: R,
-              children: (0, s.jsx)(eW, {
+              value: z,
+              children: (0, s.jsx)(eB, {
                   transitionState: _,
-                  headerId: z,
+                  headerId: R,
                   channel: F,
                   invite: f,
                   guild: V,
@@ -981,10 +986,10 @@ function eJ(e) {
               }),
           })
         : (0, s.jsx)(X.f5, {
-              value: R,
+              value: z,
               children: (0, s.jsx)(r.d, {
                   size: null != l ? "xl" : "sm",
-                  "aria-labelledby": z,
+                  "aria-labelledby": R,
                   "aria-label": V?.name ?? F?.name ?? "",
                   transitionState: _,
                   onClose: () => (w(), Promise.resolve()),
@@ -1003,8 +1008,8 @@ function eJ(e) {
                                   className: es.Ro,
                                   children: [
                                       (0, s.jsx)("div", {
-                                          id: z,
-                                          children: (0, s.jsx)(h.A, { invite: f, disableUser: Z, error: N }),
+                                          id: R,
+                                          children: (0, s.jsx)(h.A, { invite: f, disableUser: Y, error: N }),
                                       }),
                                       (0, s.jsxs)("div", {
                                           children: [
@@ -1013,7 +1018,7 @@ function eJ(e) {
                                                   gap: 8,
                                                   align: "center",
                                                   children: [
-                                                      null == B
+                                                      null == W
                                                           ? (0, s.jsx)(c.$, {
                                                                 onClick: O,
                                                                 loading: I,
@@ -1025,7 +1030,7 @@ function eJ(e) {
                                                                     $ || null == p
                                                                         ? void 0
                                                                         : () =>
-                                                                              (0, s.jsx)(j.A, {
+                                                                              (0, s.jsx)(v.A, {
                                                                                   "aria-hidden": !0,
                                                                                   size: g._3.SIZE_16,
                                                                                   user: p,
