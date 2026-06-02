@@ -5050,7 +5050,7 @@ class rX extends s.PureComponent {
             showCall: l,
             showActivityPanel: s,
             showFramePanel: a,
-            addToDMUpdatesEnabled: r,
+            addToDMTitleUpdate: r,
         } = this.props;
         o()(null != e, "Missing channel in Channel.renderHeaderToolbar");
         let d = [];
@@ -5614,7 +5614,7 @@ let rQ = (0, ep.A)(rX),
             ei = (0, iW.Uf)(f),
             es = null != f && c === f.id,
             ea = null != f && f.isGuildStageVoice(),
-            { enabled: ed } = lI.A.useConfig({
+            { enabled: ed } = lI.n.useConfig({
                 location: f?.isDM() ? "DM Channel Invite Modal" : "Invalid Channel for Experiment",
             });
         !(function (e) {
@@ -5699,6 +5699,6 @@ let rQ = (0, ep.A)(rX),
             premiumIndicatorEnabled: !1,
             hasTextActivityInPanelMode: D,
             embeddedActivity: O,
-            addToDMUpdatesEnabled: ed,
+            addToDMTitleUpdate: ed,
         });
     });

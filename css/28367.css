@@ -555,7 +555,7 @@
 .scroller__8dd17 {
     scroll-behavior: var(--custom-scroller-scroll-behavior);
     scroll-padding-inline: calc(var(--custom-scroller-mask-width) + var(--custom-scroller-overflow-amount));
-    scroll-snap-type: x mandatory
+    scroll-snap-type: x proximity
 }
 
 .pageSnapAnchor__8dd17 {

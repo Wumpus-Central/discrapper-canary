@@ -491,7 +491,7 @@ class eQ extends r.PureComponent {
         });
     }
     getTitle() {
-        let { addToDMUpdatesEnabled: e } = this.props;
+        let { addToDmTitleUpdate: e } = this.props;
         if (this.isNotFriends() && !this.allowNonFriendRecipientPicker()) return en.intl.string(en.t.Xjlbvs);
         if (this.isPartyFull()) return en.intl.string(en.t.OtTQDz);
         let { channel: t } = this.props;
@@ -823,7 +823,13 @@ class eQ extends r.PureComponent {
         });
     }
     getFooterProps() {
-        let { hasFriends: e, channel: t, selectedUsers: n, addToDMUpdatesEnabled: r } = this.props;
+        let {
+            hasFriends: e,
+            channel: t,
+            selectedUsers: n,
+            canCustomizeGDM: r,
+            customizeGDMCancelButton: s,
+        } = this.props;
         if (this.isNotFriends() && !this.allowNonFriendRecipientPicker()) {
             let e = null != t ? t.getRecipientId() : null;
             if (null == e) throw Error("no recipient in DM");
@@ -849,27 +855,30 @@ class eQ extends r.PureComponent {
         if (this.isPartyFull()) return {};
         if (null == t || (t.isDM() && r)) {
             let e = null != t || n.size > 1,
-                s = new Set(t?.isDM() && r ? [t.getRecipientId(), ...n] : n);
+                a = new Set(t?.isDM() && r ? [t.getRecipientId(), ...n] : n),
+                o = null == t || (t.isDM() && s);
             return {
                 actionBarInput: e
                     ? (0, i.jsx)(eJ, {
                           previewIcon: this.state.previewIcon,
-                          selectedUsers: s,
+                          selectedUsers: a,
                           channelName: this.state.newChannelName,
                           onChange: this.handleChannelNameChange,
                           onIconChange: this.handleIconChange,
                           onIconRemove: this.handleIconRemove,
                       })
                     : void 0,
-                actions: [
-                    { variant: "secondary", text: en.intl.string(en.t["ETE/oC"]), onClick: this.props.onClose },
-                    this.getCreateGroupButtonAction(),
-                ],
+                actions: o
+                    ? [
+                          { variant: "secondary", text: en.intl.string(en.t["ETE/oC"]), onClick: this.props.onClose },
+                          this.getCreateGroupButtonAction(),
+                      ]
+                    : [this.getCreateGroupButtonAction()],
             };
         }
         if (t.isDM()) return { actions: [this.getCreateGroupButtonAction()] };
-        let s = this.getInviteLinkFooter();
-        return null != s ? { actionBarInput: s } : {};
+        let a = this.getInviteLinkFooter();
+        return null != a ? { actionBarInput: a } : {};
     }
     render() {
         let { transitionState: e, onClose: t } = this.props,
@@ -1086,19 +1095,15 @@ class eQ extends r.PureComponent {
         });
     };
     _addRecipientsToExistingGroupDM = (e, t, n) => {
-        let { addToDMUpdatesEnabled: i } = this.props,
-            r = ef.A.getChannelId() === e;
+        let i = ef.A.getChannelId() === e;
         (t.length > 0 ? x.A.addRecipients(e, t, et.ThZ.ADD_FRIENDS_TO_DM) : Promise.resolve(e))
             .then((e) => {
-                this.props.onComplete?.(e),
-                    i && this.updateGDM(e, et.ThZ.ADD_FRIENDS_TO_DM),
-                    ei(e, n),
-                    r && t.length > 0 && P.A.ring(e, t, "dm_invite");
+                this.props.onComplete?.(e), ei(e, n), i && t.length > 0 && P.A.ring(e, t, "dm_invite");
             })
             .catch(ez);
     };
     _promoteDMToGroupDM = (e, t, n, i, r) => {
-        let { addToDMUpdatesEnabled: s } = this.props,
+        let { canCustomizeGDM: s } = this.props,
             a = ef.A.getChannelId() === e,
             o = eW(t),
             l = r && o ? [...n, t] : n,
@@ -1220,14 +1225,19 @@ function e0(e) {
                 t.recipients.every((e) => J.default.getUser(e)?.isStaff()),
             [t],
         ),
-        { enabled: o } = ey.A.useConfig({
+        { enabled: o } = ey.n.useConfig({
+            location: t?.isDM() ? "DM Channel Invite Modal" : "Invalid Channel for Experiment",
+        }),
+        { canCustomizeGDM: l, addCancelButton: c } = ey.c.useConfig({
             location: t?.isDM() ? "DM Channel Invite Modal" : "Invalid Channel for Experiment",
         });
     return (0, i.jsx)(eQ, {
         channel: t,
         isStaffOnlyDM: a,
         onComplete: n,
-        addToDMUpdatesEnabled: !!(t?.isDM() && o),
+        addToDmTitleUpdate: o,
+        canCustomizeGDM: l,
+        customizeGDMCancelButton: c,
         ...r,
         ...s,
     });

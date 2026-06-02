@@ -1,8 +1,18 @@
 "use strict";
-n.d(t, { A: () => i });
-let i = (0, n(240921).Ay)({
-    kind: "user",
-    name: "2026-04-add-to-dm-updates",
-    defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
-});
+n.d(t, { c: () => s, n: () => r });
+var i = n(240921);
+let r = (0, i.Ay)({
+        kind: "user",
+        name: "2026-06-add-to-dm-title",
+        defaultConfig: { enabled: !1 },
+        variations: { 1: { enabled: !0 } },
+    }),
+    s = (0, i.Ay)({
+        kind: "user",
+        name: "2026-06-add-to-dm-customize",
+        defaultConfig: { canCustomizeGDM: !1, addCancelButton: !1 },
+        variations: {
+            1: { canCustomizeGDM: !0, addCancelButton: !1 },
+            2: { canCustomizeGDM: !0, addCancelButton: !0 },
+        },
+    });
