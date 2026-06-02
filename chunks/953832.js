@@ -24,9 +24,9 @@ var l = n(627968),
     R = n(31717),
     y = n(232835),
     S = n(403362),
-    P = n(885918),
-    E = n(513480),
-    M = n(530912),
+    M = n(885918),
+    P = n(513480),
+    E = n(530912),
     N = n(71393),
     _ = n(287809),
     D = n(652215);
@@ -41,15 +41,15 @@ function I(e) {
     });
 }
 var F = n(355622),
-    T = n(201349),
+    T = n(331159),
     L = n(294454),
     O = n(375708),
     V = n(745812);
 function U(e) {
     let { message: t, canSend: n, selectedDestinations: i, onSend: s, inputValue: r, setInputValue: o } = e,
         u = (0, b.A)(),
-        c = (0, E.QK)(i),
-        d = (0, M.VF)(),
+        c = (0, P.QK)(i),
+        d = (0, E.VF)(),
         { textValue: h, richValue: m } = r,
         [g, f] = a.useState(!1),
         C = a.useCallback(() => f(!0), []),
@@ -149,6 +149,7 @@ function eo(e) {
                           allowLinks: !0,
                           allowHeading: !0,
                           allowList: !0,
+                          allowGameMentions: !0,
                           hideSimpleEmbedContent: !1,
                           contentMessage: m,
                       }).content
@@ -297,17 +298,17 @@ function ed(e) {
             [t, K],
         ),
         et = (0, o.bG)([w.A], () => (null != Y ? w.A.getChannel(Y) : void 0), [Y]),
-        en = (0, M.Jf)(),
-        el = (0, M.nL)(),
+        en = (0, E.Jf)(),
+        el = (0, E.nL)(),
         ea = a.useRef(0),
         ei = a.useRef(0),
         [es, er] = a.useState(N),
         ed = es.length,
         eh = ed >= 5,
-        em = (0, E.QK)(es),
+        em = (0, P.QK)(es),
         eg = (0, o.bG)([R.A], () => (null != ee ? R.A.getDraft(ee.channel_id, R.C.ForwardContextMessage) : "")),
         [ef, ex] = a.useState(() => (0, p.ur)(eg)),
-        eC = (0, E.M6)(es),
+        eC = (0, P.M6)(es),
         ep = (0, b.A)(),
         [eA, eb] = a.useState(""),
         { results: ev, updateSearchText: ej } = (0, k.R)({
@@ -333,7 +334,7 @@ function ed(e) {
         ey = a.useCallback(async () => {
             null != Y &&
                 null != q &&
-                (0, M.hH)({
+                (0, E.hH)({
                     channelId: Y,
                     messageId: q,
                     numDestinationChanges: ea.current,
@@ -345,7 +346,7 @@ function ed(e) {
     a.useEffect(() => {
         "" === eA && eS.current?.focus();
     }, [eA]);
-    let eP = a.useMemo(
+    let eM = a.useMemo(
             () =>
                 (0, i.throttle)(
                     () => {
@@ -356,7 +357,7 @@ function ed(e) {
                 ),
             [],
         ),
-        eE = a.useCallback(
+        eP = a.useCallback(
             (e) => {
                 null != Y && null != q && en(Y, q, "" !== eA),
                     er((t) => {
@@ -371,7 +372,7 @@ function ed(e) {
             },
             [Y, eh, q, eA, ek, en],
         ),
-        eM = a.useCallback(
+        eE = a.useCallback(
             async function (e) {
                 let {
                     withMessage: a,
@@ -411,7 +412,7 @@ function ed(e) {
                     i &&
                         (await A.A.fetchMessages({ channelId: o[0] }),
                         (0, v.iN)(o[0], { openTextInVoiceIfVoiceChannel: !0 }));
-                let u = await P.A.sendForwards(r, o, { ...D, withMessage: a }),
+                let u = await M.A.sendForwards(r, o, { ...D, withMessage: a }),
                     g = o.some((e) => {
                         let t = w.A.getChannel(e);
                         return null != t && t.rateLimitPerUser > 0;
@@ -422,7 +423,7 @@ function ed(e) {
                         return "fulfilled" === t;
                     })
                 ) {
-                    (0, M.TA)({
+                    (0, E.TA)({
                         channelId: Y,
                         messageId: q,
                         hasError: !1,
@@ -432,10 +433,10 @@ function ed(e) {
                         numQueryChanges: ei.current,
                         anyDestinationHasSlowmode: g,
                     }),
-                        eP();
+                        eM();
                     return;
                 }
-                (0, M.TA)({
+                (0, E.TA)({
                     channelId: Y,
                     messageId: q,
                     hasError: !0,
@@ -448,13 +449,13 @@ function ed(e) {
                 let f = e.filter((e, t) => "rejected" === u[t].status);
                 (0, L.vK)({ message: r, failedDestinations: f, forwardOptions: D });
             },
-            [Y, D, q, t, T, eP, Q],
+            [Y, D, q, t, T, eM, Q],
         ),
         eN = a.useCallback(
             (e) => {
-                eM(es, { withMessage: e, transitionToDestination: 1 === es.length, closeAfterSend: !0 });
+                eE(es, { withMessage: e, transitionToDestination: 1 === es.length, closeAfterSend: !0 });
             },
-            [eM, es],
+            [eE, es],
         ),
         e_ = a.useCallback(() => {
             null != ee && x.A.clearDraft(ee.channel_id, R.C.ForwardContextMessage), eN(ef.textValue);
@@ -464,7 +465,7 @@ function ed(e) {
             message: ee,
             originChannel: et,
             selectedDestinations: es,
-            handleToggleDestination: eE,
+            handleToggleDestination: eP,
             disableSelection: eh,
             validateDestination: W,
         }),

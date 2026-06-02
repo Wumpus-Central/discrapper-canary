@@ -192,3 +192,16 @@
 .copyLinkButton__5c1cf:hover {
     color: var(--icon-strong)
 }
+
+.icon__1bb46 {}
+
+.iconWrapper__1bb46 {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.name__1bb46 {
+    overflow: hidden;
+    text-overflow: ellipsis
+}

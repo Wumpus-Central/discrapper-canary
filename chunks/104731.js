@@ -41,8 +41,8 @@ var H = s(145331),
     B = s(834730),
     Q = s(349288),
     F = s(922016),
-    U = s(980707),
-    G = s(477782),
+    G = s(980707),
+    U = s(477782),
     V = s(408278),
     Y = s(625903),
     z = s(112173),
@@ -249,25 +249,25 @@ function ea(e) {
                 onRequestClose: () => a(null),
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, n.jsx)(U.W, {
+                    return (0, n.jsx)(G.W, {
                         "data-menu-migrated-auto": !0,
                         navId: "search-settings-cog",
                         onClose: t,
                         "aria-label": J.intl.string(J.t.fb59v0),
                         onSelect: () => a(null),
                         children: (0, n.jsxs)(
-                            G.rX,
+                            U.rX,
                             {
                                 label: J.intl.string(J.t["/tMwrA"]),
                                 children: [
-                                    (0, n.jsx)(G.iD, {
+                                    (0, n.jsx)(U.iD, {
                                         id: "xdm-search-disabled",
                                         group: "xdm-search-items",
                                         label: J.intl.string(J.t.jRkYAh),
                                         checked: !u,
                                         action: () => d(!1),
                                     }),
-                                    (0, n.jsx)(G.iD, {
+                                    (0, n.jsx)(U.iD, {
                                         id: "xdm-search-enabled",
                                         group: "xdm-search-items",
                                         label: J.intl.string(J.t["lWpJ/t"]),
@@ -331,19 +331,19 @@ function ei(e) {
         onRequestClose: () => a(null),
         renderPopout: (e) => {
             let { closePopout: s } = e;
-            return (0, n.jsx)(U.W, {
+            return (0, n.jsx)(G.W, {
                 "data-menu-migrated-auto": !0,
                 navId: "search-result-sort-menu",
                 onClose: s,
                 "aria-label": J.intl.string(J.t.utp2hS),
                 onSelect: () => a(null),
                 children: (0, n.jsx)(
-                    G.rX,
+                    U.rX,
                     {
                         children: o.map((e) => {
                             let { label: s, value: l } = e;
                             return (0, n.jsx)(
-                                G.iD,
+                                U.iD,
                                 {
                                     group: "sort-by",
                                     id: `sort-by-option-${l}`,
@@ -633,7 +633,7 @@ let eI = [],
                 },
                 [b, s.isSearching, t, E, a],
             ),
-            U = l.useCallback(
+            G = l.useCallback(
                 (e, n) => {
                     let l = p.A.getChannel(e.channel_id),
                         r = null != l ? l.getGuildId() : null,
@@ -657,7 +657,7 @@ let eI = [],
                 },
                 [s, t, a, h],
             ),
-            G = l.useCallback(
+            U = l.useCallback(
                 (e) => {
                     (0, H.kq)({ searchContext: t, searchRequestAnalyticsId: a, newPageIndex: e }), y(e);
                 },
@@ -729,9 +729,9 @@ let eI = [],
                             search: s,
                             searchContext: t,
                             renderEmbeds: r,
-                            onClick: U,
+                            onClick: G,
                             onScrollTo: L,
-                            onPageChange: G,
+                            onPageChange: U,
                             paginationTotalCount: B ? w : void 0,
                             renderPageWrapper: Q,
                             onBlockedResultsClick: j,
@@ -805,7 +805,12 @@ function eE(e) {
                                     );
                                 })(t, [j.A])).set(
                                     "customRenderedContent",
-                                    (0, k.Ay)(t, { postProcessor: l, allowHeading: !0, allowList: !0 }),
+                                    (0, k.Ay)(t, {
+                                        postProcessor: l,
+                                        allowHeading: !0,
+                                        allowList: !0,
+                                        allowGameMentions: !0,
+                                    }),
                                 )),
                                     r.push(t);
                             }),

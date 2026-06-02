@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => A, eF: () => C, lE: () => y }), n(321073);
+n.d(t, { Ay: () => A, eF: () => E, lE: () => y }), n(321073);
 var l = n(284009),
     i = n.n(l),
     s = n(155718),
@@ -22,8 +22,9 @@ let m =
         "staticRouteLink",
         "soundboard",
         "timestamp",
+        "gameMention",
     ]),
-    f = new Set(["timestampMentionInput"]),
+    f = new Set(["gameMentionInput", "timestampMentionInput"]),
     g = new Set(["line", "blockQuote"]),
     x = new Set(["applicationCommandOption"]);
 function A(e, t, n) {
@@ -36,7 +37,7 @@ function A(e, t, n) {
             let l = h.VW.richValue(e);
             (l !== r || e.previewMarkdown !== a) &&
                 (o.o.withMergedEntry(e, () => {
-                    h.VW.withoutNormalizing(e, () => C(e, t, n));
+                    h.VW.withoutNormalizing(e, () => E(e, t, n));
                 }),
                 (r = l),
                 (a = e.previewMarkdown)),
@@ -45,22 +46,22 @@ function A(e, t, n) {
         e
     );
 }
-function C(e, t, n) {
+function E(e, t, n) {
     let l = h.VW.areStylesDisabled(e);
     for (let i of h.VW.blocks(e))
-        if (g.has(i[0].type)) l ? I(e, i, !0, null) : E(e, i, t, n);
+        if (g.has(i[0].type)) l ? I(e, i, !0, null) : C(e, i, t, n);
         else {
             let [s, r] = i;
             for (let i = s.children.length - 1; i >= 0; i--) {
                 let a = s.children[i];
                 if (!h.l5.isText(a) && x.has(a.type)) {
                     let s = [a, h.PW.child(r, i)];
-                    l ? I(e, s, !0, null) : E(e, s, t, n);
+                    l ? I(e, s, !0, null) : C(e, s, t, n);
                 }
             }
         }
 }
-function E(e, t, n, l) {
+function C(e, t, n, l) {
     let s = "line" === t[0].type && t[0].codeBlockState?.isInCodeBlock === !0,
         r = h.cv.markdown(t[0], n);
     I(e, t, s, r) && ((t = h.cv.updateElement(e, t)), (r = h.cv.markdown(t[0], n))),
@@ -190,6 +191,18 @@ function y(e, t, n, l) {
             case "timestamp":
                 o = { type: "timestamp", parsed: u.data, children: [{ text: "" }] };
                 break;
+            case "gameMention": {
+                let t = u.data.id,
+                    n = e.mentionGames.get(t);
+                o = {
+                    type: "gameMention",
+                    gameId: t,
+                    gameName: n?.name,
+                    gameIconHash: n?.icon_hash,
+                    children: [{ text: "" }],
+                };
+                break;
+            }
             case "timestampMentionInput":
                 o = { type: "timestampMentionInput", children: [{ text: u.data.content }] };
                 break;

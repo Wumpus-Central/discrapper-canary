@@ -1440,8 +1440,8 @@ let nH = o.memo(function (e) {
             if (null != e.content && "" !== e.content) {
                 let t = { formatInline: !0, allowLinks: !0 },
                     n = e.isFirstMessageInForumPost(l)
-                        ? { ...t, noStyleAndInteraction: !0, allowHeading: !0, allowList: !0 }
-                        : { ...t, formatInline: !0, allowHeading: p, allowList: p };
+                        ? { ...t, noStyleAndInteraction: !0, allowHeading: !0, allowList: !0, allowGameMentions: !0 }
+                        : { ...t, formatInline: !0, allowHeading: p, allowList: p, allowGameMentions: !0 };
                 return (0, tT.Ay)(e, n).content;
             }
             return null;
@@ -4259,8 +4259,8 @@ function sI(e) {
         if (null == a) return null;
         (0, sf.L3)(e, async () => {
             let { default: e } = await Promise.all([
-                n.e("73345"),
-                n.e("12697"),
+                n.e("35842"),
+                n.e("94881"),
                 n.e("26132"),
                 n.e("46652"),
                 n.e("93190"),

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => f, _c: () => _, go: () => c, vF: () => d }), n(938796), n(321073);
+n.d(t, { Ay: () => h, _c: () => _, go: () => c, vF: () => d }), n(938796), n(321073);
 var i = n(485845),
     r = n(665260),
     s = n(315069),
@@ -49,7 +49,7 @@ class d extends s.A {
 function _(e) {
     return (0, r.Lt)(e.flags, u.pr7.IS_COMPONENTS_V2);
 }
-let f = class extends c {
+let h = class extends c {
     id;
     channel_id;
     author;
@@ -59,6 +59,7 @@ let f = class extends c {
     mentions;
     mentionRoles;
     mentionChannels;
+    mentionGames;
     mentionEveryone;
     mentioned;
     tts;
@@ -105,6 +106,8 @@ let f = class extends c {
             (this.mentions = e.mentions || []),
             (this.mentionRoles = e.mentionRoles || []),
             (this.mentionChannels = e.mentionChannels || []),
+            (this.mentionGames =
+                e.mentionGames instanceof Map ? e.mentionGames : new Map((e.mentionGames ?? []).map((e) => [e.id, e]))),
             (this.mentioned = e.mentioned || !1),
             (this.pinned = e.pinned || !1),
             (this.mentionEveryone = e.mentionEveryone || !1),
@@ -290,6 +293,7 @@ let f = class extends c {
     toJS() {
         return {
             ...this,
+            mentionGames: [...this.mentionGames.values()],
             webkhook_id: this.webhookId,
             edited_timestamp: this.editedTimestamp,
             mention_everyone: this.mentionEveryone,

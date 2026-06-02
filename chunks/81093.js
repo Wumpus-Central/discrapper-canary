@@ -8,6 +8,7 @@ e.exports = {
     Ov: "autocompleteRowContentPrimary__13533",
     wq: "autocompleteRowIcon__13533",
     hf: "autocompleteRowHeading__13533",
+    QN: "headingWithBadge__13533",
     p3: "autocompleteRowSubheading__13533",
     I0: "autocompleteRowContentSecondary__13533",
     E3: "base__13533",

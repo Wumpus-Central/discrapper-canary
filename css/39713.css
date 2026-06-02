@@ -2698,6 +2698,13 @@
     white-space: nowrap
 }
 
+.headingWithBadge__13533 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    min-width: 0
+}
+
 .autocompleteRowSubheading__13533 {
     margin-top: 2px
 }
@@ -5076,10 +5083,6 @@
     color: var(--text-default)
 }
 
-.notice__5a95d {
-    margin-bottom: var(--space-16)
-}
-
 .heading-sm\/normal_b717a1 {
     font-family: var(--font-display);
     font-size: 14px;
@@ -6933,8 +6936,4 @@
 
 .spinner__1d6c7 {
     margin: 32px
-}
-
-.description_cd2e37 {
-    margin-bottom: var(--space-8)
 }

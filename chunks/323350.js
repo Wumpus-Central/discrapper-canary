@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { IQ: () => m, WO: () => p }), n(321073);
+n.d(t, { IQ: () => g, WO: () => E }), n(321073);
 var i = n(284009),
     r = n.n(i),
     s = n(47167),
@@ -10,14 +10,15 @@ var i = n(284009),
     c = n(994500),
     d = n(967198),
     _ = n(287809),
-    f = n(427262),
-    h = n(820066);
-function p(e, t) {
-    let { mode: n, ignoreTrailingEmptyNodes: i, preventEmojiSurrogates: r } = t ?? {},
-        [s, a] = t?.range != null ? h.ZF.edges(t.range) : [void 0, void 0];
-    return E(e, { mode: n, start: s, end: a, ignoreTrailingEmptyNodes: i, preventEmojiSurrogates: r });
-}
+    h = n(427262),
+    f = n(820066),
+    p = n(827669);
 function E(e, t) {
+    let { mode: n, ignoreTrailingEmptyNodes: i, preventEmojiSurrogates: r } = t ?? {},
+        [s, a] = t?.range != null ? f.ZF.edges(t.range) : [void 0, void 0];
+    return m(e, { mode: n, start: s, end: a, ignoreTrailingEmptyNodes: i, preventEmojiSurrogates: r });
+}
+function m(e, t) {
     let {
             mode: n,
             start: i,
@@ -27,45 +28,45 @@ function E(e, t) {
             ignoreTrailingEmptyNodes: o,
             preventEmojiSurrogates: l,
         } = t ?? {},
-        u = e.length > 0 && !h.l5.isText(e[0]);
+        u = e.length > 0 && !f.l5.isText(e[0]);
     null == s && (s = u ? "\n" : "");
     let c = i?.path[0] ?? 0,
         d = r?.path[0] ?? e.length - 1;
     if (o)
         for (let t = d; t >= c; t--) {
             let n = e[t];
-            if (h.l5.isText(n)) {
+            if (f.l5.isText(n)) {
                 if (n.text.length > 0) {
                     d = t;
                     break;
                 }
-            } else if (!h.cv.isEmpty(n)) {
+            } else if (!f.cv.isEmpty(n)) {
                 d = t;
                 break;
             }
             if (t === c) return "";
         }
-    let _ = c > 0 && h.AS.isType(e[c - 1], "blockQuote"),
-        f = h.AS.isType(e[c], "blockQuote"),
-        p = h.AS.isType(e[d], "blockQuote"),
+    let _ = c > 0 && f.AS.isType(e[c - 1], "blockQuote"),
+        h = f.AS.isType(e[c], "blockQuote"),
+        p = f.AS.isType(e[d], "blockQuote"),
         E = [];
     for (let t = c; t <= d; t++) {
         let s = e[t];
-        if (a && h.l5.isText(s) && 0 === s.text.length) continue;
-        let o = m(s, {
+        if (a && f.l5.isText(s) && 0 === s.text.length) continue;
+        let o = g(s, {
             mode: n,
             start: null != i && t === c ? { path: i.path.slice(1), offset: i.offset } : void 0,
             end: null != r && t === d ? { path: r.path.slice(1), offset: r.offset } : void 0,
-            allowBlockQuotePrefix: null == i || null == r || (!_ && (!f || p)),
+            allowBlockQuotePrefix: null == i || null == r || (!_ && (!h || p)),
             preventEmojiSurrogates: l,
         });
         (!a || o.length > 0) && E.push(o);
     }
     return E.join(s);
 }
-function m(e, t) {
-    let { mode: n, start: i, allowBlockQuotePrefix: p = !1, preventEmojiSurrogates: m = !1 } = t ?? {};
-    if (h.l5.isText(e))
+function g(e, t) {
+    let { mode: n, start: i, allowBlockQuotePrefix: E = !1, preventEmojiSurrogates: g = !1 } = t ?? {};
+    if (f.l5.isText(e))
         return (function (e, t) {
             let { start: n, end: i } = t ?? {};
             return (
@@ -77,18 +78,18 @@ function m(e, t) {
     switch (e.type) {
         case "line":
         case "testInline":
-            return E(e.children, t);
+            return m(e.children, t);
         case "testInlineVoid":
             return "";
         case "blockQuote": {
-            let n = E(e.children, t),
+            let n = m(e.children, t),
                 r = null != i && 1 === i.path.length && 0 === i.path[0] && 0 === i.offset;
-            if (p && (null == i || r)) return `> ${n}`;
+            if (E && (null == i || r)) return `> ${n}`;
             return n;
         }
         case "emoji": {
             let t = e.emoji;
-            if (!m && null != t.surrogate) return t.surrogate;
+            if (!g && null != t.surrogate) return t.surrogate;
             return t.name;
         }
         case "customEmoji": {
@@ -131,21 +132,32 @@ function m(e, t) {
             if ("raw" === n) return t;
             let i = _.default.getUser(e.userId);
             if (null == i) return t;
-            return `@${f.Ay.getUserTag(i, { decoration: "never" })}`;
+            return `@${h.Ay.getUserTag(i, { decoration: "never" })}`;
         }
         case "commandMention":
             return `</${e.commandName}:${e.commandId}>`;
         case "timestamp":
             return (0, a.tf)(e.parsed.timestamp, e.parsed.format);
+        case "gameMention": {
+            let t = (0, p.K)(e.gameId);
+            if ("raw" === n) return t;
+            if (null != e.gameName) return `@${e.gameName}`;
+            return t;
+        }
         case "timestampMentionInput": {
-            let n = E(e.children, t);
+            let n = m(e.children, t);
             if (null == i) return `<@time:${n}>`;
             return n;
         }
+        case "gameMentionInput": {
+            let n = m(e.children, t);
+            if (null == i) return `@${n}`;
+            return n;
+        }
         case "applicationCommand":
-            return E(e.children, { ...t, separator: " ", ignoreEmptyNodes: !0 });
+            return m(e.children, { ...t, separator: " ", ignoreEmptyNodes: !0 });
         case "applicationCommandOption": {
-            let n = E(e.children, t);
+            let n = m(e.children, t);
             if (null == i) return `${e.optionDisplayName}:${n}`;
             return n;
         }

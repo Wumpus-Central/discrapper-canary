@@ -174,6 +174,7 @@ function X(e) {
                           noStyleAndInteraction: r,
                           allowHeading: !0,
                           allowList: !0,
+                          allowGameMentions: !0,
                           textColor: a,
                       })
                     : { hasSpoilerEmbeds: !1, content: null },

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => O, W1: () => R }), n(323874), n(14289), n(35956);
+n.d(t, { Ay: () => C, W1: () => v }), n(323874), n(14289), n(35956);
 var i,
     r = n(735438),
     s = n.n(r),
@@ -7,11 +7,11 @@ var i,
     o = n.n(a);
 n(228785);
 var l = n(791332),
-    d = n.n(l),
-    _ = n(833291),
-    u = n(403362),
-    c = n(998218),
-    E =
+    u = n.n(l),
+    c = n(833291),
+    d = n(403362),
+    _ = n(998218),
+    h =
         (((i = {}).TEXT = "text"),
         (i.STRIKETHROUGH = "s"),
         (i.UNDERLINE = "u"),
@@ -46,86 +46,87 @@ var l = n(791332),
         (i.HEADING = "heading"),
         (i.SUBTEXT = "subtext"),
         (i.SILENT_PREFIX = "silentPrefix"),
+        (i.GAME_MENTION = "gameMention"),
         i),
-    h = n(417964);
-let m = new (o())({ max: 50 });
-function f(e) {
-    let t = m.get(e);
+    f = n(417964);
+let p = new (o())({ max: 50 });
+function E(e) {
+    let t = p.get(e);
     if (null != t) return t;
-    let n = (0, h.Fd)(e),
-        i = (0, h.El)(n),
+    let n = (0, f.Fd)(e),
+        i = (0, f.El)(n),
         r = { whitespaceSanitized: n, fullySanitized: i };
-    return m.set(e, r), r;
+    return p.set(e, r), r;
 }
-let g = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"],
-    p = [
-        E.TEXT,
-        E.UNDERLINE,
-        E.STRONG,
-        E.ITALICS,
-        E.STRIKETHROUGH,
-        E.INLINE_CODE,
-        E.SPOILER,
-        E.LINE_BREAK,
-        E.TIMESTAMP,
+let m = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"],
+    g = [
+        h.TEXT,
+        h.UNDERLINE,
+        h.STRONG,
+        h.ITALICS,
+        h.STRIKETHROUGH,
+        h.INLINE_CODE,
+        h.SPOILER,
+        h.LINE_BREAK,
+        h.TIMESTAMP,
     ],
-    A = [...p, E.EMOJI, E.CUSTOM_EMOJI],
-    I = [E.LIST, E.HEADING, E.BLOCK_QUOTE, E.SUBTEXT],
-    T = [E.TEXT],
+    A = [...g, h.EMOJI, h.CUSTOM_EMOJI],
+    I = [h.LIST, h.HEADING, h.BLOCK_QUOTE, h.SUBTEXT],
+    T = [h.TEXT],
     S = [
-        E.UNDERLINE,
-        E.STRONG,
-        E.ITALICS,
-        E.STRIKETHROUGH,
-        E.INLINE_CODE,
-        E.SPOILER,
-        E.LINE_BREAK,
-        E.TIMESTAMP,
-        E.EMOJI,
-        E.CUSTOM_EMOJI,
-        E.LIST,
-        E.HEADING,
-        E.BLOCK_QUOTE,
-        E.SUBTEXT,
+        h.UNDERLINE,
+        h.STRONG,
+        h.ITALICS,
+        h.STRIKETHROUGH,
+        h.INLINE_CODE,
+        h.SPOILER,
+        h.LINE_BREAK,
+        h.TIMESTAMP,
+        h.EMOJI,
+        h.CUSTOM_EMOJI,
+        h.LIST,
+        h.HEADING,
+        h.BLOCK_QUOTE,
+        h.SUBTEXT,
     ];
-function N(e, t) {
+function y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     for (let i of (Array.isArray(e) || (e = [e]), e)) {
         if (void 0 === i || !t.includes(i.type)) return null;
-        if (i.type === E.INLINE_CODE) {
+        if (i.type === h.INLINE_CODE) {
             let e = [...t, ...n];
-            if (null == N(i.validationChildContent, e)) return null;
+            if (null == y(i.validationChildContent, e)) return null;
         }
-        if (Array.isArray(i.content) && null == N(i.content, t)) return null;
+        if (Array.isArray(i.content) && null == y(i.content, t)) return null;
     }
     return e;
 }
-function C(e) {
-    if ((0, _.rL)(e) || f(e).whitespaceSanitized !== e) return !0;
-    let t = c.A.toURLSafe(e);
+function N(e) {
+    if ((0, c.rL)(e) || E(e).whitespaceSanitized !== e) return !0;
+    let t = _.A.toURLSafe(e);
     if (null == t) return !0;
     if ("http:" !== t.protocol && "https:" !== t.protocol) return !1;
     let n = e.split("/");
-    return n.length < 3 || "" !== n[1] || c.A.safeDecodeURIComponent(n[2]) !== n[2];
+    return n.length < 3 || "" !== n[1] || _.A.safeDecodeURIComponent(n[2]) !== n[2];
 }
-function R(e) {
+function v(e) {
     try {
-        if (C(e)) throw Error("Rejected due to suspicious characters in URL: " + JSON.stringify(e));
+        if (N(e)) throw Error("Rejected due to suspicious characters in URL: " + JSON.stringify(e));
         let t = new URL(e),
             n = t.protocol ?? "";
-        if (!g.includes(n.toLowerCase())) throw Error("Provided protocol is not allowed: " + n);
+        if (!m.includes(n.toLowerCase())) throw Error("Provided protocol is not allowed: " + n);
         if (("http:" === n || "https:" === n) && (null == t.hostname || 0 === t.hostname.length))
             throw Error("no hostname");
-        let i = (0, h.nK)(t);
+        let i = (0, f.nK)(t);
         (t.username = ""), (t.password = "");
-        let r = (0, h.nK)(t);
+        let r = (0, f.nK)(t);
         return { target: i, displayTarget: r };
     } catch (e) {
         return null;
     }
 }
-let O = {
-    ...d().defaultRules.link,
+let C = {
+    ...u().defaultRules.link,
     match(e, t, n) {
         if (!t.allowLinks || -1 === e.indexOf("](")) return null;
         let i = 0;
@@ -135,77 +136,77 @@ let O = {
                 if (++i > 10) return null;
             } else "]" === n && i > 0 && i--;
         }
-        return d().defaultRules.link.match(e, t, n);
+        return u().defaultRules.link.match(e, t, n);
     },
     parse(e, t, n) {
         let [i, r, a, o] = e,
-            l = () => ({ type: E.TEXT, content: i });
-        if (C(a)) return l();
-        let c = f(a),
-            h = f(r),
-            m = f(null != o ? o : ""),
-            g = c.whitespaceSanitized,
-            O = h.fullySanitized,
-            y = m.fullySanitized,
-            v = O.trim();
-        if (0 === g.trim().length || 0 === v.length) return l();
-        let D = R(d().unescapeUrl(a)),
-            L = (0, _.Ay)(r).length > 0 || (0, _.Ay)(o).length > 0;
-        if (null == D || L) return l();
-        let b = { ...n, allowEscape: !1, parseInlineCodeChildContent: !0 },
-            w = n.allowEmojiLinks ? A : p,
-            P = [...w, ...I],
-            k = [...T, ...S],
-            M = N(t(O, b), P, [E.EMOJI]),
-            U = N(t(y, b), k);
+            l = () => ({ type: h.TEXT, content: i });
+        if (N(a)) return l();
+        let _ = E(a),
+            f = E(r),
+            p = E(null != o ? o : ""),
+            m = _.whitespaceSanitized,
+            C = f.fullySanitized,
+            R = p.fullySanitized,
+            O = C.trim();
+        if (0 === m.trim().length || 0 === O.length) return l();
+        let b = v(u().unescapeUrl(a)),
+            D = (0, c.Ay)(r).length > 0 || (0, c.Ay)(o).length > 0;
+        if (null == b || D) return l();
+        let L = { ...n, allowEscape: !1, parseInlineCodeChildContent: !0 },
+            w = n.allowEmojiLinks ? A : g,
+            M = [...w, ...I],
+            P = [...T, ...S],
+            x = y(t(C, L), M, [h.EMOJI]),
+            k = y(t(R, L), P);
         if (
-            null == M ||
-            null == U ||
+            null == x ||
+            null == k ||
             0 ===
                 (function e(t) {
                     let n = "";
                     for (let i of t)
                         switch (i.type) {
-                            case E.TEXT:
-                            case E.INLINE_CODE:
+                            case h.TEXT:
+                            case h.INLINE_CODE:
                                 n += i.content;
                                 break;
-                            case E.CUSTOM_EMOJI:
+                            case h.CUSTOM_EMOJI:
                                 n += i.name;
                                 break;
-                            case E.EMOJI:
+                            case h.EMOJI:
                                 n += i.surrogate;
                                 break;
-                            case E.LINE_BREAK:
+                            case h.LINE_BREAK:
                                 n += "\n";
                                 break;
-                            case E.STRONG:
-                            case E.ITALICS:
-                            case E.UNDERLINE:
-                            case E.STRIKETHROUGH:
-                            case E.SPOILER:
+                            case h.STRONG:
+                            case h.ITALICS:
+                            case h.UNDERLINE:
+                            case h.STRIKETHROUGH:
+                            case h.SPOILER:
                                 n += e(i.content);
                                 break;
-                            case E.TIMESTAMP:
+                            case h.TIMESTAMP:
                                 n += "<timestamp>";
                                 break;
-                            case E.BLOCK_QUOTE:
-                            case E.LIST:
-                            case E.HEADING:
-                            case E.SUBTEXT:
+                            case h.BLOCK_QUOTE:
+                            case h.LIST:
+                            case h.HEADING:
+                            case h.SUBTEXT:
                                 n += `<${i.type}Content>`;
                                 break;
                             default:
-                                (0, u.xb)(i.type);
+                                (0, d.xb)(i.type);
                         }
                     return n;
-                })(M).trim().length
+                })(x).trim().length
         )
             return l();
-        let x = s().pick(t.rules, w),
-            G = d().parserFor(x)(h.whitespaceSanitized, b),
-            V = m.whitespaceSanitized,
-            { target: F } = D;
-        return { content: G, target: F, title: V };
+        let U = s().pick(t.rules, w),
+            G = u().parserFor(U)(f.whitespaceSanitized, L),
+            F = p.whitespaceSanitized,
+            { target: V } = b;
+        return { content: G, target: V, title: F };
     },
 };

@@ -2,10 +2,10 @@
 n.d(t, {
     DB: () => g,
     VN: () => _,
-    Vf: () => f,
+    Vf: () => h,
     Ze: () => E,
     e: () => I,
-    eP: () => h,
+    eP: () => f,
     kc: () => A,
     lg: () => m,
     xS: () => p,
@@ -24,12 +24,12 @@ var i,
         (i[(i.ALLOW_EVERYONE = 1)] = "ALLOW_EVERYONE"),
         (i[(i.ALLOW_EVERYONE_OR_HERE = 2)] = "ALLOW_EVERYONE_OR_HERE"),
         i),
-    f =
+    h =
         (((r = {})[(r.DENY = 0)] = "DENY"),
         (r[(r.ALLOW_CHANNEL = 1)] = "ALLOW_CHANNEL"),
         (r[(r.ALLOW_GUILD = 2)] = "ALLOW_GUILD"),
         r),
-    h =
+    f =
         (((s = {})[(s.DENY = 0)] = "DENY"),
         (s[(s.ALLOW_MENTIONABLE = 1)] = "ALLOW_MENTIONABLE"),
         (s[(s.ALLOW_ALL = 2)] = "ALLOW_ALL"),
@@ -53,6 +53,7 @@ var i,
         (u.COMMANDS = "COMMANDS"),
         (u.COMMAND_OPTIONS = "COMMAND_OPTIONS"),
         (u.CHOICES = "CHOICES"),
+        (u.GAME = "GAME"),
         (u.TIMESTAMPS = "TIMESTAMPS"),
         u),
     A =
@@ -68,6 +69,7 @@ var i,
         (c.COMMAND_SUGGESTION = "COMMAND_SUGGESTION"),
         (c.CHOICE = "CHOICE"),
         (c.EMOJI_UPSELL = "EMOJI_UPSELL"),
+        (c.GAME_MENTION = "GAME_MENTION"),
         (c.TIMESTAMP = "TIMESTAMP"),
         c),
     I =
