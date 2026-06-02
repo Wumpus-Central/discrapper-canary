@@ -1,9 +1,12 @@
+.badgeContainer_d5a27a {
+    gap: var(--space-4)
+}
+
 .badge_d5a27a,
 .badgeContainer_d5a27a {
     align-items: center;
     display: flex;
-    flex-direction: row;
-    gap: var(--space-4)
+    flex-direction: row
 }
 
 .badge_d5a27a {
@@ -11,8 +14,18 @@
     backdrop-filter: blur(22px);
     background-color: var(--control-overlay-secondary-background-default);
     border-radius: var(--radius-lg);
+    gap: var(--space-6);
     padding: var(--space-4) var(--space-8);
     text-transform: uppercase
+}
+
+.leadingText_d5a27a {
+    font-variant-numeric: tabular-nums
+}
+
+.bulletSeparator_d5a27a {
+    font-size: 10px;
+    opacity: .4
 }
 
 .badgeTask_d5a27a {
@@ -97,14 +110,42 @@
     width: 100%
 }
 
-.orbsBalanceIcon_e3f38d {
-    margin-inline-end: 4px;
+.questRewardTileWrapperUnenrolled_e3f38d {
+    border-radius: var(--radius-md);
+    height: 66px;
+    margin-inline-end: var(--space-8);
+    overflow: hidden;
     position: relative;
-    top: 2px
+    width: 66px
+}
+
+.questRewardTile_e3f38d {
+    inset-inline-start: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.orbsBalanceIcon_e3f38d {
+    margin-inline-end: 4px
 }
 
 .gameTitle_e3f38d {
-    margin-bottom: 1px
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, .16)) drop-shadow(0 0 1px rgba(255, 255, 255, .08)) drop-shadow(0 1px 4px rgba(0, 0, 0, .16));
+    margin-bottom: 1px;
+    opacity: .8
+}
+
+.rewardLine_e3f38d {
+    align-items: center;
+    display: flex;
+    min-width: 0
+}
+
+.rewardText_e3f38d {
+    display: block;
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, .16)) drop-shadow(0 0 1px rgba(255, 255, 255, .08)) drop-shadow(0 1px 4px rgba(0, 0, 0, .16));
+    flex: 1;
+    min-width: 0
 }
 
 .questRewardTileOverlay_e3f38d {
@@ -136,7 +177,6 @@
 .questDescriptionText__44846 {
     color: var(--primary-230);
     line-height: 1.4;
-    margin-bottom: 4px;
     transition: .4s ease
 }
 
@@ -151,10 +191,14 @@
     gap: var(--space-4)
 }
 
+.premiumRewardGradient__44846 {
+    z-index: -1
+}
+
 .container__6d3d8 {
     aspect-ratio: 395/286;
     border: 1px solid var(--border-muted);
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-lg);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -164,7 +208,9 @@
 }
 
 .featuredSection__6d3d8 {
-    aspect-ratio: 603/429
+    aspect-ratio: auto;
+    border-radius: var(--radius-xl);
+    height: 344px
 }
 
 .heroBackground__6d3d8 {
@@ -194,32 +240,22 @@
     z-index: -1
 }
 
-.scrim__6d3d8:after,
+.scrimLight__6d3d8 {
+    opacity: .9
+}
+
 .scrim__6d3d8:before {
     content: "";
     inset: 0;
     position: absolute
 }
 
-.scrim__6d3d8:before {
-    background: linear-gradient(to top, var(--black) 25%, transparent 68%)
+.scrimLight__6d3d8:before {
+    background: linear-gradient(180deg, transparent 13.45%, #000 85.15%)
 }
 
-.scrim__6d3d8:after {
-    background: linear-gradient(to top, var(--black) 29%, transparent 72%);
-    opacity: 0
-}
-
-.full-motion .scrim__6d3d8:after {
-    transition: opacity .27s ease-out
-}
-
-.scrimHovering__6d3d8:after {
-    opacity: 1
-}
-
-.full-motion .scrimHovering__6d3d8:after {
-    transition: opacity .24s ease-out
+.scrimDark__6d3d8:before {
+    background: linear-gradient(180deg, transparent 13.45%, #0b0b0e 85.15%)
 }
 
 .expiredScrim__6d3d8 {
@@ -261,7 +297,6 @@
     display: flex;
     height: 32px;
     justify-content: center;
-    opacity: 0;
     transition: background-color 50ms ease-in, color 50ms ease-in, opacity .25s ease-out, border-color 50ms ease-in;
     width: 32px
 }
@@ -275,10 +310,6 @@
 .circularOverlayButton__6d3d8:active {
     background-color: var(--control-overlay-secondary-background-active);
     color: var(--control-overlay-secondary-text-active)
-}
-
-.circularOverlayButtonHovering__6d3d8 {
-    opacity: 1
 }
 
 .heading_a10b43 {
