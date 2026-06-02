@@ -4,8 +4,8 @@ var t,
     a = i(64700),
     n = i(503698),
     l = i.n(n),
-    d = i(534514),
-    o = i(17928),
+    o = i(534514),
+    d = i(17928),
     c = i(821609),
     m = i(462887),
     u = i(315629),
@@ -26,11 +26,11 @@ var t,
     _ = i(807098),
     P = i(374200),
     I = i(380619),
-    M = i(375708),
-    b = i(756974);
+    b = i(375708),
+    M = i(756974);
 function w() {
     let { claimableRewards: e } = (0, E.Pv)(),
-        r = (0, o.bG)([P.A], () => {
+        r = (0, d.bG)([P.A], () => {
             let e = P.A.getMarketingComponentByType(A.C.GIFT_PLAN_SELECTION_CARD_BANNER);
             return null == e || "giftPlanSelectionCardBanner" !== e.properties.properties.oneofKind
                 ? null
@@ -45,27 +45,27 @@ function w() {
             null != n && null != n.colors && n.colors.length >= 2
                 ? (0, I.K5)({ gradient: n.colors, angle: n.angle ?? void 0 })
                 : void 0,
-        d = (0, I.x)(a, l);
+        o = (0, I.x)(a, l);
     return (0, s.jsxs)("div", {
-        className: b.kL,
-        style: d,
+        className: M.kL,
+        style: o,
         children: [
             (0, s.jsxs)("div", {
-                className: b.V_,
+                className: M.V_,
                 children: [
                     (0, s.jsx)(p.E, {
                         variant: "text-md/bold",
                         color: "always-white",
-                        children: M.intl.string(M.t.OEtqpm),
+                        children: b.intl.string(b.t.OEtqpm),
                     }),
                     (0, s.jsx)(p.E, {
                         variant: "text-md/medium",
                         color: "always-white",
-                        children: M.intl.formatToPlainString(M.t["2h5M+X"], { availableCount: e.length }),
+                        children: b.intl.formatToPlainString(b.t["2h5M+X"], { availableCount: e.length }),
                     }),
                 ],
             }),
-            null != t && (0, s.jsx)("img", { alt: "gift promotion reward", src: t, className: b.my }),
+            null != t && (0, s.jsx)("img", { alt: "gift promotion reward", src: t, className: M.my }),
         ],
     });
 }
@@ -76,15 +76,15 @@ var G = i(422936),
     U = i(204413),
     k = i(410516),
     H = i(774774),
-    B = i(289873),
-    L = i(97352),
+    L = i(289873),
+    B = i(97352),
     F = i(788868),
     V = i(378874);
 let K = function (e) {
     let { isGift: r = !1, priceOptions: i } = e,
-        t = (0, o.bG)([L.A], () => L.A.get(F.gD.PREMIUM_GROUP_MONTH)),
+        t = (0, d.bG)([B.A], () => B.A.get(F.gD.PREMIUM_GROUP_MONTH)),
         a = (0, m.q)((0, j.Ay)());
-    if (null == t) return (0, s.jsx)(B.y, { type: B.y.Type.PULSING_ELLIPSIS, className: V.xB });
+    if (null == t) return (0, s.jsx)(L.y, { type: L.y.Type.PULSING_ELLIPSIS, className: V.xB });
     let n = (0, R.sS)(t, i, !1, r),
         l = F.WT.MONTH;
     return (0, s.jsxs)("div", {
@@ -122,19 +122,19 @@ function Q(e) {
             isApplicationHome: c = !1,
             useShortTitle: p = !1,
         } = e,
-        x = (0, o.bG)([C.A], () => C.A.getPremiumTypeSubscription()),
-        h = (0, o.bG)([f.default], () => f.default.getCurrentUser()),
+        x = (0, d.bG)([C.A], () => C.A.getPremiumTypeSubscription()),
+        h = (0, d.bG)([f.default], () => f.default.getCurrentUser()),
         g = (0, O.V)(),
         T = g?.subscription_trial?.sku_id,
         N = x?.hasActiveTrial ? h?.premiumType : null,
         R = (0, H.Lj)(N, T),
         v = null != R,
         y = (0, m.q)((0, j.Ay)()),
-        A = p ? M.intl.string(M.t.tUbSDK) : M.intl.string(M.t["t9uG/o"]),
+        A = p ? b.intl.string(b.t.tUbSDK) : b.intl.string(b.t["t9uG/o"]),
         E = (0, s.jsxs)(s.Fragment, {
             children: [
                 v && (0, s.jsx)(Y.R, { text: R, className: Z.pill }),
-                (0, s.jsx)(d.D, {
+                (0, s.jsx)(o.D, {
                     variant: "display-md",
                     color: y ? "text-strong" : "always-white",
                     className: Z.cardTitle,
@@ -168,9 +168,9 @@ var ee =
     (t.GIFT_SELECTION_MODAL = "giftSelectionModal"),
     t);
 function er(e) {
-    let { discountOffer: r, priceOptions: i, isGift: t } = e,
-        n = (0, k.N1)(F.gD.PREMIUM_YEAR_TIER_2),
-        l = a.useMemo(() => {
+    let { discountOffer: r, priceOptions: i, isGift: t, narrowLayout: n = !1 } = e,
+        l = (0, k.N1)(F.gD.PREMIUM_YEAR_TIER_2),
+        o = a.useMemo(() => {
             try {
                 let e = (0, R.y8)(F.gD.PREMIUM_YEAR_TIER_2, !1, t, i);
                 return (0, v.$g)(e.amount, e.currency);
@@ -178,7 +178,7 @@ function er(e) {
                 return null;
             }
         }, [t, i]);
-    return null == n || null == l
+    return null == l || null == o
         ? null
         : (0, s.jsxs)("div", {
               className: Z.annualDiscountBanner,
@@ -187,17 +187,17 @@ function er(e) {
                       className: Z.annualDiscountBannerText,
                       children: [
                           (0, s.jsx)(p.E, {
-                              variant: "text-md/semibold",
+                              variant: n ? "text-sm/semibold" : "text-md/semibold",
                               color: "always-white",
-                              children: M.intl.format(M.t["TCFNZ/"], { discountedPrice: n }),
+                              children: b.intl.format(b.t["TCFNZ/"], { discountedPrice: l }),
                           }),
                           (0, s.jsx)(p.E, {
-                              variant: "text-sm/normal",
-                              children: M.intl.format(M.t.aUTlph, { regularPrice: l }),
+                              variant: n ? "text-xs/normal" : "text-sm/normal",
+                              children: b.intl.format(b.t.aUTlph, { regularPrice: o }),
                           }),
                       ],
                   }),
-                  (0, s.jsx)(Y.R, { text: M.intl.formatToPlainString(M.t.v5WSns, { percent: r.discount.amount }) }),
+                  (0, s.jsx)(Y.R, { text: b.intl.formatToPlainString(b.t.v5WSns, { percent: r.discount.amount }) }),
               ],
           });
 }
@@ -215,18 +215,19 @@ function ei(e) {
             isApplicationHome: g = !1,
             showWumpus: T = !0,
             showPill: N = !0,
+            narrowLayout: R = !1,
         } = e,
-        R = (0, o.bG)([C.A], () => C.A.getPremiumTypeSubscription()),
-        v = (0, o.bG)([f.default], () => f.default.getCurrentUser()),
-        A = (0, O.V)(),
-        E = A?.subscription_trial?.sku_id,
-        _ = R?.hasActiveTrial ? v?.premiumType : null,
-        P = (0, G.O)(),
-        I = (0, y.k5)(),
-        b = null != E || null != _ ? F.Vk.PREMIUM_TRIAL : null != P || I ? F.Vk.PREMIUM_DISCOUNT : null,
-        D = (0, m.q)((0, j.Ay)()),
-        S = !n && (0, k.hm)(P),
-        U = (0, H.rm)(I, _, n ? null : P, A, E);
+        v = (0, d.bG)([C.A], () => C.A.getPremiumTypeSubscription()),
+        A = (0, d.bG)([f.default], () => f.default.getCurrentUser()),
+        E = (0, O.V)(),
+        _ = E?.subscription_trial?.sku_id,
+        P = v?.hasActiveTrial ? A?.premiumType : null,
+        I = (0, G.O)(),
+        M = (0, y.k5)(),
+        D = null != _ || null != P ? F.Vk.PREMIUM_TRIAL : null != I || M ? F.Vk.PREMIUM_DISCOUNT : null,
+        S = (0, m.q)((0, j.Ay)()),
+        U = !n && (0, k.hm)(I),
+        L = (0, H.rm)(M, P, n ? null : I, E, _);
     return (0, s.jsxs)(u.h, {
         color: "nitro-pink",
         className: l()(Z.card, a, { [Z.withGiftBanner]: x }),
@@ -236,40 +237,40 @@ function ei(e) {
                     () =>
                         (0, s.jsxs)(s.Fragment, {
                             children: [
-                                !S &&
+                                !U &&
                                     (0, s.jsxs)(s.Fragment, {
                                         children: [
                                             (0, s.jsx)("img", { src: X, alt: "", className: l()(Z.bigCloud, Z[h]) }),
                                             (0, s.jsx)("img", { src: $, alt: "", className: l()(Z.smallCloud, Z[h]) }),
                                         ],
                                     }),
-                                (!S || null != r) &&
+                                (!U || null != r) &&
                                     (0, s.jsx)("img", { src: J, alt: "", className: l()(Z.wumpus, Z[h]) }),
                             ],
                         }),
                     {},
                 ),
-            N && !S && (0, s.jsx)(Y.R, { text: U ?? M.intl.string(M.t["6bEcYr"]), className: Z.pill }),
-            (0, s.jsx)(d.D, {
+            N && !U && (0, s.jsx)(Y.R, { text: L ?? b.intl.string(b.t["6bEcYr"]), className: Z.pill }),
+            (0, s.jsx)(o.D, {
                 variant: "display-md",
-                color: D ? "text-strong" : "always-white",
+                color: S ? "text-strong" : "always-white",
                 className: Z.cardTitle,
-                children: M.intl.string(M.t.lG6a5x),
+                children: b.intl.string(b.t.lG6a5x),
             }),
             (0, s.jsx)(z.A, {
                 isGift: n,
                 premiumTier: F.PremiumTypes.TIER_2,
-                offerType: b,
-                offerTierMatchesCard: E === F.pe.TIER_2 || (0, k.U9)(P, F.pe.TIER_2),
-                showYearlyPrice: i && !S,
+                offerType: D,
+                offerTierMatchesCard: _ === F.pe.TIER_2 || (0, k.U9)(I, F.pe.TIER_2),
+                showYearlyPrice: i && !U,
                 priceOptions: p,
                 enablePremiumBrandRefresh: !0,
                 headingVariant: "text-md/medium",
                 headingColor: "text-strong",
                 headerClassName: Z.priceHeader,
             }),
-            S
-                ? (0, s.jsx)(er, { discountOffer: P, priceOptions: p, isGift: n })
+            U
+                ? (0, s.jsx)(er, { discountOffer: I, priceOptions: p, isGift: n, narrowLayout: R })
                 : (0, s.jsx)("hr", { className: Z.divider }),
             (0, s.jsx)(q.ZP, {
                 featureSet: t,
@@ -278,7 +279,7 @@ function ei(e) {
                 enablePremiumBrandRefresh: !0,
                 isApplicationHome: g,
                 firstFeatureItemClassName:
-                    S || ("inCard" !== h && "giftSelectionModal" !== h) ? void 0 : Z.firstFeatureItemContainer,
+                    U || ("inCard" !== h && "giftSelectionModal" !== h) ? void 0 : Z.firstFeatureItemContainer,
             }),
             r,
             x && (0, s.jsx)(w, {}),
@@ -294,20 +295,20 @@ function et(e) {
             (0, s.jsxs)("div", {
                 className: Z.cardHeader,
                 children: [
-                    (0, s.jsx)(d.D, {
+                    (0, s.jsx)(o.D, {
                         variant: "display-md",
                         color: n ? "text-strong" : "always-white",
                         className: Z.cardTitle,
-                        children: M.intl.string(W.default.eSKiXk),
+                        children: b.intl.string(W.default.eSKiXk),
                     }),
-                    (0, s.jsx)(Y.R, { text: M.intl.string(M.t.oW0eUd), className: Z.betaPill }),
+                    (0, s.jsx)(Y.R, { text: b.intl.string(b.t.oW0eUd), className: Z.betaPill }),
                 ],
             }),
             (0, s.jsx)(K, { priceOptions: a }),
-            (0, s.jsx)(d.D, {
+            (0, s.jsx)(o.D, {
                 variant: "heading-md/semibold",
                 color: "text-muted",
-                children: M.intl.string(W.default["R+dzZw"]),
+                children: b.intl.string(W.default["R+dzZw"]),
             }),
             (0, s.jsx)("hr", { className: Z.divider }),
             (0, s.jsx)(q.Lg, { isApplicationHome: t }),
@@ -317,19 +318,19 @@ function et(e) {
 }
 let es = (e) => {
         let { subscriptionTier: r, isReducedMotion: i, tierCardProps: t, className: a, narrowLayout: n } = e,
-            d = r === F.pe.TIER_2,
-            { subscribeButtonProps: o, subscriptionTier: m } = (0, U.$)({
+            o = r === F.pe.TIER_2,
+            { subscribeButtonProps: d, subscriptionTier: m } = (0, U.$)({
                 subscriptionTier: r,
-                variantOverride: d ? "expressive" : "secondary",
+                variantOverride: o ? "expressive" : "secondary",
             }),
-            { disabled: u } = o,
+            { disabled: u } = d,
             p = (0, s.jsx)("div", {
                 className: Z.CTAButton,
-                children: (0, s.jsx)(c.$, { size: "md", fullWidth: !0, ...o, disabled: u }),
+                children: (0, s.jsx)(c.$, { size: "md", fullWidth: !0, ...d, disabled: u }),
             }),
             h = (0, s.jsx)("div", {
                 className: l()({ [Z.premiumCardHover]: !i }),
-                children: (0, s.jsx)(d ? ei : Q, {
+                children: (0, s.jsx)(o ? ei : Q, {
                     className: l()(Z.applicationHomeCard, { [Z.narrow]: n }),
                     ctaButton: p,
                     showYearlyPrice: !0,
@@ -358,7 +359,7 @@ let es = (e) => {
                     size: "md",
                     fullWidth: !0,
                     icon: h.t,
-                    text: M.intl.string(M.t["2pG5Ga"]),
+                    text: b.intl.string(b.t["2pG5Ga"]),
                     variant: "secondary",
                 }),
             }),
@@ -386,18 +387,18 @@ function en(e) {
     let { innerRef: r, className: i } = e,
         { analyticsLocations: t } = (0, N.Ay)(T.A.PREMIUM_MARKETING_TIER_CARD),
         a = (0, q.pw)(r),
-        n = (0, o.bG)([g.A], () => g.A.useReducedMotion),
+        n = (0, d.bG)([g.A], () => g.A.useReducedMotion),
         c = (0, D.PA)();
     return (0, s.jsx)(N.f5, {
         value: t,
         children: (0, s.jsxs)("div", {
             className: l()(Z.premiumCardsContainer, i),
             children: [
-                (0, s.jsx)(d.D, {
+                (0, s.jsx)(o.D, {
                     variant: "display-md",
                     color: "text-strong",
                     className: Z.premiumCardsHeader,
-                    children: M.intl.string(M.t.vLz3Zs),
+                    children: b.intl.string(b.t.vLz3Zs),
                 }),
                 (0, s.jsxs)("div", {
                     ref: a,
