@@ -1,61 +1,60 @@
-e.d(n, { default: () => U });
-var s = e(627968),
-    i = e(64700),
+e.d(n, { default: () => A });
+var i = e(627968),
+    s = e(64700),
     o = e(772707),
     a = e(17928),
-    u = e(116833),
-    r = e(340124),
-    E = e(859703),
-    T = e(507107),
-    c = e(838077),
-    C = e(31587),
-    _ = e(590202),
-    l = e(73473),
+    r = e(116833),
+    u = e(340124),
+    c = e(859703),
+    l = e(507107),
+    C = e(629455),
+    E = e(31587),
+    T = e(590202),
+    _ = e(73473),
     L = e(190107),
     N = e(375708);
-function A(t) {
-    let { transitionState: n, onClose: e, quest: l, showSkipButton: A } = t,
-        U = (0, C.fc)(l),
-        d = (0, c.mU)({
-            quest: l,
-            taskDetails: U,
+function d(t) {
+    let { transitionState: n, onClose: e, quest: _, showSkipButton: d } = t,
+        A = (0, E.fc)(_),
+        p = (0, C.mU)({
+            quest: _,
+            taskDetails: A,
             location: L.rE.QUEST_ACTIVITY_UNENROLLED_MODAL,
-            questContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
-            sourceQuestContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
+            sourceQuestContent: l.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
         }),
-        I = (0, a.bG)([E.A], () => E.A.isEnrolling(l.id)),
-        O = i.useCallback(async () => {
-            await (0, r.Oy)(l.id, {
-                questContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
-                questContentCTA: _.Cy.START_QUEST,
-                sourceQuestContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
+        U = (0, a.bG)([c.A], () => c.A.isEnrolling(_.id)),
+        I = s.useCallback(async () => {
+            await (0, u.Oy)(_.id, {
+                questContent: l.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
+                questContentCTA: T.Cy.START_QUEST,
+                sourceQuestContent: l.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
             }),
                 e();
-        }, [l.id, e]),
-        p = i.useCallback(() => ((0, r.Zb)(l.id), e()), [l.id, e]);
-    return (0, s.jsx)(o.k, {
+        }, [_.id, e]),
+        O = s.useCallback(() => ((0, u.Zb)(_.id), e()), [_.id, e]);
+    return (0, i.jsx)(o.k, {
         transitionState: n,
-        onClose: p,
+        onClose: O,
         graphic: {
             type: "dynamic",
-            component: u.DynamicGraphicComponent.QUEST_ACTIVITY_UNENROLLED,
-            props: { quest: l },
+            component: r.DynamicGraphicComponent.QUEST_ACTIVITY_UNENROLLED,
+            props: { quest: _ },
         },
         gradientColor: "blue",
         title: N.intl.string(N.t.IrNgN4),
-        subtitle: `${N.intl.format(N.t.V3NSJx, { questName: l.config.messages.questName })} ${d}`,
+        subtitle: `${N.intl.format(N.t.V3NSJx, { questName: _.config.messages.questName })} ${p}`,
         actions: [
-            ...(A ? [{ text: N.intl.string(N.t["5Wxrcd"]), variant: "secondary", onClick: p }] : []),
-            { text: N.intl.string(N.t.l7E81v), variant: "primary", onClick: O, loading: I },
+            ...(d ? [{ text: N.intl.string(N.t["5Wxrcd"]), variant: "secondary", onClick: O }] : []),
+            { text: N.intl.string(N.t.l7E81v), variant: "primary", onClick: I, loading: U },
         ],
     });
 }
-function U(t) {
-    let { quest: n, showSkipButton: e, transitionState: i, onClose: o } = t;
-    return (0, s.jsx)(l.R, {
+function A(t) {
+    let { quest: n, showSkipButton: e, transitionState: s, onClose: o } = t;
+    return (0, i.jsx)(_.R, {
         questOrQuests: n,
-        questContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
-        sourceQuestContent: T.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
-        children: () => (0, s.jsx)(A, { quest: n, transitionState: i, onClose: o, showSkipButton: e }),
+        questContent: l.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
+        sourceQuestContent: l.uF.QUEST_ACTIVITY_UNENROLLED_MODAL,
+        children: () => (0, i.jsx)(d, { quest: n, transitionState: s, onClose: o, showSkipButton: e }),
     });
 }

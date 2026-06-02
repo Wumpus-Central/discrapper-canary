@@ -1274,7 +1274,6 @@ function tT(e) {
         O = (0, ea.mU)({
             quest: u,
             location: tE.rE.QUESTS_BAR,
-            questContent: p.uF.QUEST_BAR_V2,
             taskDetails: _,
             sourceQuestContent: p.uF.QUEST_BAR_V2,
             popoutTargetElementRef: m,

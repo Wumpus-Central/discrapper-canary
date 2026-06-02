@@ -24,14 +24,7 @@ let p = function (e) {
             sourceQuestContent: g,
             gameProfileSource: A,
         } = e,
-        I = (0, o.mU)({
-            quest: r,
-            taskDetails: E,
-            location: m,
-            questContent: p,
-            sourceQuestContent: g,
-            gameProfileSource: A,
-        }),
+        I = (0, o.mU)({ quest: r, taskDetails: E, location: m, sourceQuestContent: g, gameProfileSource: A }),
         T = (0, u.z)(),
         S = (0, l.SD)(r, T),
         y = S && T === c.MA.NITRO;

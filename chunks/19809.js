@@ -935,7 +935,7 @@ function tM(t) {
         M = (0, ti.wo)(e.config, O),
         U = (0, b.I6)(e),
         { completedRatio: F, completedRatioDisplay: V } = (0, u.O9)(e, U),
-        $ = (0, te.A9)(e, h, tS.rE.QUEST_HOME_DESKTOP, s, J.Ob.QuestHome, E),
+        $ = (0, te.A9)(e, h, tS.rE.QUEST_HOME_DESKTOP, J.Ob.QuestHome, E),
         B = i.useMemo(
             () =>
                 R && k

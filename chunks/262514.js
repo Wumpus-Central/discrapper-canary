@@ -5,7 +5,7 @@ var n = s(627968),
     l = s.n(a),
     o = s(507107),
     r = s(73473),
-    c = s(873174),
+    c = s(922139),
     u = s(494012),
     d = s(717421),
     m = s(834730),
@@ -42,8 +42,8 @@ var n = s(627968),
     z = s(617986),
     G = s(190107),
     F = s(375708),
-    H = s(860600),
-    K = s(847483);
+    H = s(562296),
+    K = s(474491);
 let $ = async () => await s.e("40119").then(s.t.bind(s, 718698, 19));
 function Y(e) {
     let { quest: t, location: s, isInteracting: a, contentPosition: o, sourceQuestContent: r } = e,
@@ -70,7 +70,7 @@ function Y(e) {
         ex = t.userStatus?.orbQuantityClaimed ?? (0, M._Z)(t.config),
         eh = (0, M.wo)(t.config, el),
         { completedRatio: ej, completedRatioDisplay: eE } = (0, b.O9)(t),
-        eg = (0, _.A9)(t, r, G.rE.EMBED_DESKTOP, s, C.Ob.QuestEmbed, U),
+        eg = (0, _.A9)(t, r, G.rE.EMBED_DESKTOP, C.Ob.QuestEmbed, U),
         ef = (0, W.Pd)(t),
         eC = i.useMemo(
             () =>
@@ -328,7 +328,7 @@ var Z = s(366010),
     el = s(918338),
     eo = s(270045),
     er = s(57718),
-    ec = s(258118);
+    ec = s(368774);
 function eu(e) {
     let { quest: t, isInteracting: s, location: i, sourceQuestContent: a } = e,
         l = (0, D.Ic)(t),
@@ -440,8 +440,8 @@ function eu(e) {
         ],
     });
 }
-var ed = s(124900),
-    em = s(160729);
+var ed = s(355620),
+    em = s(103257);
 function ex(e) {
     let { quest: t, location: s, questContentPosition: a, sourceQuestContent: c } = e,
         [u, d] = i.useState(!1),

@@ -746,7 +746,7 @@ var tQ = s(190107),
 function tU(e) {
     let { quest: t, questContent: s, isHovering: n, isInFeaturedSection: l, sourceQuestContent: i } = e,
         o = a.useRef(null),
-        c = (0, to.A9)(t, i, tQ.rE.QUEST_HOME_DESKTOP, s, ti.Ob.QuestHome, o),
+        c = (0, to.A9)(t, i, tQ.rE.QUEST_HOME_DESKTOP, ti.Ob.QuestHome, o),
         u = (0, tc.z)(),
         d = (0, et.SD)(t, u),
         m = u === tu.MA.NITRO && d;
