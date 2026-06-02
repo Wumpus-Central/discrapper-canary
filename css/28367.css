@@ -861,6 +861,11 @@
     margin-top: var(--space-24)
 }
 
+.shelfCards__6e2ec {
+    width: -moz-min-content;
+    width: min-content
+}
+
 .heroBackground__5d00f {
     border-radius: inherit;
     overflow: hidden;

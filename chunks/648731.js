@@ -1,1 +1,1 @@
-e.exports = { v: "shelf__6e2ec" };
+_.exports = { v: "shelf__6e2ec", I: "shelfCards__6e2ec" };
