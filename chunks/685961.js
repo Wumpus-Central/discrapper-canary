@@ -33,7 +33,7 @@ let C = {
     predicate: () => E.he.getSetting() === S.he.DISABLED,
 };
 var y = l(444802);
-let I = {
+let k = {
     getTitle: () => T.intl.string(T.t.RVX1zT),
     getDisabledTitle: () => T.intl.string(T.t.SYkEBi),
     getDescription: () => T.intl.string(T.t.aqlmp8),
@@ -56,7 +56,7 @@ let I = {
         return e === S.TO.SHOW || t === S.TO.SHOW || l === S.TO.SHOW;
     },
 };
-var k = l(632119);
+var I = l(632119);
 let M = {
         getTitle: () => T.intl.string(T.t["Gtck/t"]),
         getDisabledTitle: () => T.intl.string(T.t.E6UmXa),
@@ -69,13 +69,13 @@ let M = {
             x.TS.SUB_UNSOLICITED_PORN,
         ],
         onApply: () =>
-            (0, k.Jz)(
+            (0, I.Jz)(
                 (function () {
                     let {
                             explicitContentGuilds: e,
                             explicitContentFriendDm: t,
                             explicitContentNonFriendDm: l,
-                        } = (0, k.C$)(),
+                        } = (0, I.C$)(),
                         n = {};
                     return (
                         e === S.TO.SHOW && (n.explicitContentGuilds = S.TO.BLUR),
@@ -86,14 +86,14 @@ let M = {
                 })(),
             ),
         predicate: () => {
-            let { explicitContentGuilds: e, explicitContentFriendDm: t, explicitContentNonFriendDm: l } = (0, k.C$)();
+            let { explicitContentGuilds: e, explicitContentFriendDm: t, explicitContentNonFriendDm: l } = (0, I.C$)();
             return e === S.TO.SHOW || t === S.TO.SHOW || l === S.TO.SHOW;
         },
     },
     D = {
         [x.Wb.SAFETY_DM_SPAM_FILTER]: C,
         [x.Wb.SAFETY_SC_FILTERS_SEXUAL_MEDIA]: M,
-        [x.Wb.SAFETY_SC_FILTERS_GRAPHIC_MEDIA]: I,
+        [x.Wb.SAFETY_SC_FILTERS_GRAPHIC_MEDIA]: k,
     };
 var R = l(825484),
     O = l(821609),
@@ -395,7 +395,7 @@ function ey(e) {
         })(e)
     );
 }
-let eI = (e) => {
+let ek = (e) => {
         let {
                 data: { title: t, subtitle: l, placeholder: i, message_link_title: s, message_link_placeholder: r },
                 onChange: d,
@@ -487,7 +487,7 @@ let eI = (e) => {
             ],
         });
     },
-    ek = (e) => {
+    eI = (e) => {
         let { element: t, onChange: l, state: i } = e,
             s = t.name,
             r = `${t.name}_message_link`,
@@ -497,7 +497,7 @@ let eI = (e) => {
                 },
                 [l, s, r],
             );
-        return (0, n.jsx)(eI, {
+        return (0, n.jsx)(ek, {
             data: t.data,
             onChange: d,
             initialContentUrl: i?.[s],
@@ -1151,8 +1151,8 @@ let tC = (e) => {
     });
 };
 var ty = l(773812),
-    tI = l(405977);
-let tk = (e) => {
+    tk = l(405977);
+let tI = (e) => {
     let { element: t, onChange: l, state: i } = e,
         s = t.name,
         { title: r, options: d } = t.data,
@@ -1173,8 +1173,8 @@ let tk = (e) => {
             (0, n.jsxs)(P.E, {
                 variant: "text-md/medium",
                 color: "text-strong",
-                className: tI.P,
-                children: [r, t.should_submit_data && (0, n.jsx)("span", { className: tI.m, children: "*" })],
+                className: tk.P,
+                children: [r, t.should_submit_data && (0, n.jsx)("span", { className: tk.m, children: "*" })],
             }),
             (0, n.jsx)(ty.z, { value: o, onChange: x, options: m }),
         ],
@@ -1600,8 +1600,8 @@ let ls = (e) => {
         E = la(t, "checkbox"),
         C = la(t, "text_line_resource"),
         y = li(t, "external_link"),
-        I = li(t, "free_text"),
-        k = li(t, "dropdown"),
+        k = li(t, "free_text"),
+        I = li(t, "dropdown"),
         M = la(t, "country_select"),
         R = la(t, "inline_notice"),
         O = li(t, "radio_group"),
@@ -1620,17 +1620,17 @@ let ls = (e) => {
             (e) => ({
                 nodeRef: t.id,
                 destination: e,
-                textInput: null != I || null != k || null != M || O.length > 0 || null != U ? q : void 0,
+                textInput: null != k || null != I || null != M || O.length > 0 || null != U ? q : void 0,
                 multiSelect: null != E ? { name: E.name, state: K } : void 0,
             }),
-            [t, I, k, M, O, U, E, K, q],
+            [t, k, I, M, O, U, E, K, q],
         ),
         en = a.useMemo(
             () =>
                 (0, h.ks)(
                     {
-                        freeTextElements: I,
-                        dropdownElements: k,
+                        freeTextElements: k,
+                        dropdownElements: I,
                         countrySelectElement: M,
                         radioGroupElements: O,
                         multiSelectElement: E,
@@ -1638,7 +1638,7 @@ let ls = (e) => {
                     },
                     { textInput: q, multiSelect: K },
                 ),
-            [I, k, M, O, E, U, q, K],
+            [k, I, M, O, E, U, q, K],
         ),
         ea = a.useCallback(
             (e, t) => {
@@ -1742,6 +1742,7 @@ let ls = (e) => {
                     "BUTTON" !== l.tagName &&
                         "A" !== l.tagName &&
                         "button" !== l.getAttribute("role") &&
+                        "link" !== l.getAttribute("role") &&
                         (e.preventDefault(), eo(t.button));
                 }
             },
@@ -1888,12 +1889,12 @@ let ls = (e) => {
                         (0, n.jsx)(e8, { entry: l.record }),
                     null != la(t, "app_preview") && "application" === l.name && (0, n.jsx)(Q, { entry: l.record }),
                     null != E && (0, n.jsx)(tf, { element: E, onChange: ea, state: K }),
-                    ln.includes(l.name) && null != U && (0, n.jsx)(ek, { element: U, onChange: es, state: q }),
+                    ln.includes(l.name) && null != U && (0, n.jsx)(eI, { element: U, onChange: es, state: q }),
                     ln.includes(l.name) &&
-                        null != k &&
-                        k.length > 0 &&
-                        (0, n.jsx)("div", { children: (0, n.jsx)(eH, { elements: k, onChange: es, state: q }) }),
-                    O.map((e) => (0, n.jsx)(tk, { element: e, onChange: es, state: q }, e.name)),
+                        null != I &&
+                        I.length > 0 &&
+                        (0, n.jsx)("div", { children: (0, n.jsx)(eH, { elements: I, onChange: es, state: q }) }),
+                    O.map((e) => (0, n.jsx)(tI, { element: e, onChange: es, state: q }, e.name)),
                     null != R &&
                         (function (e, t, l) {
                             let { visible_when: n } = e.data;
@@ -1910,9 +1911,9 @@ let ls = (e) => {
                         (0, n.jsx)(ti, { element: R }),
                     null != M && (0, n.jsx)(eR, { element: M, onChange: es, state: q }),
                     ln.includes(l.name) &&
-                        null != I &&
-                        I.length > 0 &&
-                        (0, n.jsx)(eq, { elements: I, onChange: es, state: q }),
+                        null != k &&
+                        k.length > 0 &&
+                        (0, n.jsx)(eq, { elements: k, onChange: es, state: q }),
                     ((null != t.children && t.children.length > 0) || (null != y && y.length > 0)) &&
                         (0, n.jsxs)("div", {
                             className: ec.qI,
@@ -1954,7 +1955,7 @@ let ld = (e) => {
         { nodes: A, root_node_id: N, success_node_id: f, fail_node_id: S } = l,
         [E, T] = a.useState(N),
         [C, y] = a.useState(void 0),
-        [I, k] = a.useState(void 0),
+        [k, I] = a.useState(void 0),
         [M, D] = a.useState([]),
         [R, O] = a.useState(void 0),
         [w, L] = a.useState(void 0),
@@ -1973,7 +1974,7 @@ let ld = (e) => {
                 (D([...M, e]),
                 null != a.key && _?.(a.key),
                 y(void 0),
-                k(void 0),
+                I(void 0),
                 t.name === x.t0.MESSAGE || t.name === x.t0.FIRST_DM)
             ) {
                 let e = t.record.id;
@@ -2007,7 +2008,7 @@ let ld = (e) => {
                     next_node: A[n].id,
                 });
             }
-            y(l?.multiSelect?.state), k(l?.textInput), T(n), D(e), _?.("..");
+            y(l?.multiSelect?.state), I(l?.textInput), T(n), D(e), _?.("..");
         },
         H = a.useCallback(
             (e, t) => {
@@ -2024,8 +2025,8 @@ let ld = (e) => {
                 if (n >= 0) {
                     let e = M.slice(0, n),
                         t = M[n];
-                    k(t?.textInput), y(t?.multiSelect?.state), D(e);
-                } else D([]), k(void 0), y(void 0);
+                    I(t?.textInput), y(t?.multiSelect?.state), D(e);
+                } else D([]), I(void 0), y(void 0);
                 U(t), T(l.id);
             },
             [A, M],
@@ -2078,7 +2079,7 @@ let ld = (e) => {
                                 onNavigateBack: V,
                                 onNavigateToNode: H,
                                 multiSelect: C,
-                                textInput: I,
+                                textInput: k,
                                 successNodeId: f,
                                 failNodeId: S,
                                 onSubmit: B,
