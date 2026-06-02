@@ -208,7 +208,7 @@ function w(i, e) {
                                                         let { default: e } = await Promise.all([
                                                             t.e("13364"),
                                                             t.e("13878"),
-                                                            t.e("72811"),
+                                                            t.e("6274"),
                                                             t.e("25568"),
                                                             t.e("43039"),
                                                             t.e("48804"),

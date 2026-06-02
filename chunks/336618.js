@@ -45,20 +45,31 @@ function M(e) {
     });
 }
 function P(e) {
-    let { Component: t, events: n, play: r } = (0, c.T)();
-    return (0, i.jsxs)(R.A, {
+    let { Component: t, events: n, play: s } = (0, c.T)(),
+        a = r.useCallback(() => Promise.resolve({ default: e.trinketAnimationUrl }), [e.trinketAnimationUrl]),
+        o = r.useCallback(() => Promise.resolve({ default: e.trinketGlowAnimationUrl }), [e.trinketGlowAnimationUrl]);
+    return (0, i.jsx)(R.A, {
         className: w.x6,
         "aria-label": D.intl.string(D.t.Z1RnTk),
         isActive: !1,
         noHover: !0,
         onClick: () => {
-            r(), e.onClick?.();
+            s(), e.onClick?.();
         },
         ...n,
-        children: [
-            (0, i.jsx)("div", { className: L.zc, children: (0, i.jsx)(t, { className: L.is, color: "currentColor" }) }),
-            e.hovered && (0, i.jsx)("img", { className: L.rY, src: e.trinketAnimationUrl, alt: "" }),
-        ],
+        children: (0, i.jsxs)("div", {
+            className: L.zc,
+            children: [
+                (0, i.jsx)(t, { className: L.is, color: "currentColor" }),
+                e.hovered &&
+                    (0, i.jsxs)(i.Fragment, {
+                        children: [
+                            null != e.trinketAnimationUrl && (0, i.jsx)(d.a, { className: L.rY, importData: a }),
+                            null != e.trinketGlowAnimationUrl && (0, i.jsx)(d.a, { className: L.c5, importData: o }),
+                        ],
+                    }),
+            ],
+        }),
     });
 }
 let x = S.A.Millis.DAYS_30,
@@ -90,7 +101,7 @@ let x = S.A.Millis.DAYS_30,
                 if (U?.background != null) return { "--custom-promotion-gradient": U.background };
             }, [U]),
             F = !(0, N.uJ)(D?.boxAnimationUrl),
-            V = !(0, N.uJ)(D?.trinketAnimationUrl) && !F,
+            V = (!(0, N.uJ)(D?.trinketAnimationUrl) || !(0, N.uJ)(D?.trinketGlowAnimationUrl)) && !F,
             B = (0, l.bG)([A.A], () => A.A.getGiftPromotion()?.id),
             H = null != w && !t && _ && R >= x && null != B,
             [j, Y] = (0, p.Cc)(H ? u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, B ?? ""),
@@ -121,8 +132,13 @@ let x = S.A.Millis.DAYS_30,
             X =
                 F && D?.boxAnimationUrl != null
                     ? (0, i.jsx)(M, { boxAnimationUrl: D.boxAnimationUrl, hovered: K, onClick: q })
-                    : V && D?.trinketAnimationUrl != null
-                      ? (0, i.jsx)(P, { trinketAnimationUrl: D.trinketAnimationUrl, hovered: K, onClick: q })
+                    : V
+                      ? (0, i.jsx)(P, {
+                            trinketAnimationUrl: D?.trinketAnimationUrl ?? null,
+                            trinketGlowAnimationUrl: D?.trinketGlowAnimationUrl ?? null,
+                            hovered: K,
+                            onClick: q,
+                        })
                       : (0, i.jsx)(C.A, { disabled: t, channel: n });
         return (0, i.jsx)("div", {
             className: a()(L.kL, { [L.DM]: K }),
