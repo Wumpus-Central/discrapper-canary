@@ -1195,7 +1195,8 @@ a-rp {
     margin-inline: 0;
     min-height: var(--space-32);
     min-width: var(--space-32);
-    padding: 0
+    padding: 0;
+    position: relative
 }
 
 .emojiButton__74017 {

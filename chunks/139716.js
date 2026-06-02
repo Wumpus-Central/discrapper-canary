@@ -31,7 +31,7 @@ let h = {
                   return (t) => (0, i.jsx)(e, { webviewUrl: l, ...c, ...t });
               }, h)
             : (0, s.openModalLazy)(async () => {
-                  let { default: e } = await Promise.all([n.e("6274"), n.e("43156"), n.e("88941"), n.e("23425")]).then(
+                  let { default: e } = await Promise.all([n.e("72811"), n.e("43156"), n.e("88941"), n.e("23425")]).then(
                       n.bind(n, 745336),
                   );
                   return (t) => (0, i.jsx)(e, { webviewUrl: l, ...c, ...t });
@@ -59,7 +59,7 @@ let h = {
               ? (0, s.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("6274"),
+                            n.e("72811"),
                             n.e("71192"),
                             n.e("54048"),
                             n.e("88941"),

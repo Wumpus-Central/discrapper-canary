@@ -1,77 +1,77 @@
-s.d(a, { R: () => n, j: () => o });
-var t = s(627968),
-    l = s(192308);
-let i = "social-layer-storefront-product-details-modal",
-    n = (e) => {
+n.d(t, { R: () => i, j: () => s });
+var l = n(627968),
+    a = n(192308);
+let r = "social-layer-storefront-product-details-modal",
+    i = (e) => {
         let {
-            customNavigateToSocialLayerStorefront: a,
-            skuId: n,
-            applicationId: o,
-            isStorefront: c,
-            giftRecipient: r,
-            giftingOrigin: d,
-            analyticsLocations: p,
-            analyticsContext: u,
-            onClose: m,
+            customNavigateToSocialLayerStorefront: t,
+            skuId: i,
+            applicationId: s,
+            isStorefront: E,
+            giftRecipient: _,
+            giftingOrigin: o,
+            analyticsLocations: A,
+            analyticsContext: I,
+            onClose: c,
         } = e;
-        (0, l.openModalLazy)(
+        (0, a.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    s.e("46438"),
-                    s.e("71192"),
-                    s.e("94925"),
-                    s.e("6274"),
-                    s.e("79264"),
-                    s.e("61872"),
-                    s.e("65424"),
-                    s.e("43535"),
-                    s.e("9233"),
-                    s.e("72963"),
-                    s.e("86814"),
-                    s.e("37021"),
-                    s.e("18997"),
-                    s.e("18024"),
-                    s.e("3131"),
-                    s.e("47177"),
-                    s.e("69747"),
-                    s.e("27272"),
-                    s.e("36149"),
-                    s.e("51778"),
-                    s.e("24914"),
-                    s.e("97563"),
-                    s.e("21930"),
-                    s.e("20382"),
-                    s.e("63333"),
-                    s.e("93766"),
-                    s.e("73165"),
-                    s.e("52511"),
-                    s.e("66017"),
-                    s.e("36768"),
-                    s.e("9935"),
-                    s.e("23157"),
-                ]).then(s.bind(s, 546804));
-                return (s) =>
-                    (0, t.jsx)(e, {
-                        ...s,
-                        skuId: n,
-                        applicationId: o,
-                        isStorefront: c,
-                        analyticsLocations: p,
-                        analyticsContext: u,
-                        giftRecipient: r,
-                        giftingOrigin: d,
-                        customNavigateToSocialLayerStorefront: a,
+                    n.e("46438"),
+                    n.e("71192"),
+                    n.e("94925"),
+                    n.e("72811"),
+                    n.e("79264"),
+                    n.e("61872"),
+                    n.e("90665"),
+                    n.e("43535"),
+                    n.e("9233"),
+                    n.e("72963"),
+                    n.e("86814"),
+                    n.e("37021"),
+                    n.e("18997"),
+                    n.e("18024"),
+                    n.e("3131"),
+                    n.e("47177"),
+                    n.e("69747"),
+                    n.e("27272"),
+                    n.e("36149"),
+                    n.e("51778"),
+                    n.e("24914"),
+                    n.e("97563"),
+                    n.e("21930"),
+                    n.e("20382"),
+                    n.e("63333"),
+                    n.e("93766"),
+                    n.e("73165"),
+                    n.e("52511"),
+                    n.e("66017"),
+                    n.e("36768"),
+                    n.e("9935"),
+                    n.e("23157"),
+                ]).then(n.bind(n, 546804));
+                return (n) =>
+                    (0, l.jsx)(e, {
+                        ...n,
+                        skuId: i,
+                        applicationId: s,
+                        isStorefront: E,
+                        analyticsLocations: A,
+                        analyticsContext: I,
+                        giftRecipient: _,
+                        giftingOrigin: o,
+                        customNavigateToSocialLayerStorefront: t,
                     });
             },
             {
-                modalKey: i,
-                allowsNavigation: c,
+                modalKey: r,
+                allowsNavigation: E,
                 onCloseCallback: () => {
-                    m?.();
+                    c?.();
                 },
             },
         );
     };
-function o() {
-    (0, l.hasModalOpen)(i) && (0, l.closeModal)(i);
+function s() {
+    (0, a.hasModalOpen)(r) && (0, a.closeModal)(r);
 }

@@ -1,3 +1,12 @@
+.buttonsContainer__5989f {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-inline-start: 12px;
+    margin-top: 12px
+}
+
 .container__59fad {
     display: flex;
     flex-direction: column;

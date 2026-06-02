@@ -478,7 +478,7 @@ let e_ = (e) => {
                 onClick: () =>
                     (0, ew.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            l.e("6274"),
+                            l.e("72811"),
                             l.e("97804"),
                             l.e("7265"),
                             l.e("97641"),
@@ -764,8 +764,8 @@ function e6(e) {
               ],
           });
 }
-var e4 = l(922985),
-    e9 = l(842503);
+var e9 = l(922985),
+    e4 = l(842503);
 let e7 = function (e) {
     let { loadId: t } = e,
         l = x.A.useField("categoryId"),
@@ -782,10 +782,10 @@ let e7 = function (e) {
         c = l === F.Iq ? N.intl.string(N.t.Ivw1Is) : N.intl.formatToPlainString(N.t["+1WAFb"], { categoryName: r }),
         o = l === F.Iq ? N.intl.string(N.t.aXvEjd) : N.intl.format(N.t.XLioqn, { onClick: n });
     return (0, s.jsxs)("div", {
-        className: e4.kL,
+        className: e9.kL,
         children: [
-            (0, s.jsx)("img", { alt: "", src: e9, className: e4.Sl }),
-            (0, s.jsx)(g.D, { variant: "heading-xl/semibold", className: e4.wx, children: c }),
+            (0, s.jsx)("img", { alt: "", src: e4, className: e9.Sl }),
+            (0, s.jsx)(g.D, { variant: "heading-xl/semibold", className: e9.wx, children: c }),
             (0, s.jsx)(J.E, { variant: "text-md/normal", color: "text-default", children: o }),
         ],
     });

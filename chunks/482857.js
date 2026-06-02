@@ -133,7 +133,7 @@ function I(e) {
                     let { default: e } = await Promise.all([
                         t.e("13364"),
                         t.e("13878"),
-                        t.e("6274"),
+                        t.e("72811"),
                         t.e("37687"),
                         t.e("78412"),
                         t.e("59957"),
