@@ -1,11 +1,12 @@
-t.d(i, { A: () => s }), t(64700), t(17928);
-var n = t(429913);
-t(403362), t(311043);
-var l = t(569926);
+"use strict";
+n.d(t, { A: () => s }), n(64700), n(17928);
+var i = n(429913);
+n(403362), n(311043);
+var r = n(569926);
 function s(e) {
-    let i = (0, n.h)(e),
-        t = null != e && null == i,
-        s = i?.getCanonicalGameId() ?? null,
-        { data: a, isLoading: r } = (0, l.I)(s);
-    return { gameId: s, gameRecord: a ?? null, isLoading: t || r };
+    let t = (0, i.h)(e),
+        n = null != e && null == t,
+        s = t?.getCanonicalGameId() ?? null,
+        { data: a, isLoading: o } = (0, r.I)(s);
+    return { gameId: s, gameRecord: a ?? null, isLoading: n || o };
 }

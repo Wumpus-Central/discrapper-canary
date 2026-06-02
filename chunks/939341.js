@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { C4: () => T, D8: () => v, XN: () => y, nO: () => S });
+n.d(t, { C4: () => T, D8: () => C, XN: () => N, nO: () => S });
 var i = n(64700),
     r = n(17928),
     s = n(573648),
@@ -10,8 +10,8 @@ var i = n(64700),
     c = n(429913),
     d = n(569926),
     _ = n(82149),
-    f = n(174459),
-    h = n(970928),
+    h = n(174459),
+    f = n(970928),
     p = n(486020),
     E = n(20805),
     m = n(327098),
@@ -34,16 +34,18 @@ function S(e) {
     let t,
         { entry: n, showCoverImage: i = !0, trackingSource: r } = e,
         { activity: s, activityApplication: a, fallbackApplication: o } = (0, m.A)(n),
-        { largeImage: l, smallImage: u } = v(s, a),
-        { largeImage: c } = N(s, o ?? a),
-        { data: _ } = (0, d.I)((o ?? a)?.id),
-        f = _?.getCoverURL(),
-        p =
+        l = o ?? a,
+        { largeImage: u, smallImage: c } = C(s, a),
+        { largeImage: _ } = y(s, l),
+        h = l?.getCanonicalGameId(),
+        { data: p } = (0, d.I)(h),
+        g = p?.getCoverURL(),
+        I =
             (0, E.Tq)(n) && n.extra.entries.length > 0
                 ? { src: n.extra.entries[0].media.image_url }
                 : (0, E.Lf)(n)
                   ? {
-                        src: (0, h.uD)(n.extra.application_id, n.extra.media_assets_large_image, A.iu.LARGE),
+                        src: (0, f.uD)(n.extra.application_id, n.extra.media_assets_large_image, A.iu.LARGE),
                         alt: n.extra.media_title,
                     }
                   : (0, E.p6)(n)
@@ -51,19 +53,19 @@ function S(e) {
                     : void 0;
     return (
         (t =
-            null != l
-                ? { largeImage: l, smallImage: u }
-                : null != p
-                  ? { largeImage: p, smallImage: void 0 }
-                  : null != f && i
-                    ? { largeImage: { src: f }, smallImage: void 0 }
-                    : { largeImage: c, smallImage: void 0 }),
-        C({ activity: s, application: o ?? a, largeImageSrc: t.largeImage?.src, trackingSource: r }),
+            null != u
+                ? { largeImage: u, smallImage: c }
+                : null != I
+                  ? { largeImage: I, smallImage: void 0 }
+                  : null != g && i
+                    ? { largeImage: { src: g }, smallImage: void 0 }
+                    : { largeImage: _, smallImage: void 0 }),
+        v({ activity: s, application: o ?? a, largeImageSrc: t.largeImage?.src, trackingSource: r }),
         t
     );
 }
-function N(e, t) {
-    let { largeImage: n, smallImage: i } = v(e, t);
+function y(e, t) {
+    let { largeImage: n, smallImage: i } = C(e, t);
     return (function (e) {
         let { activity: t, application: n, largeImage: i, smallImage: r } = e;
         if (null != i) return { largeImage: i, smallImage: r };
@@ -89,17 +91,17 @@ function N(e, t) {
         return null != a ? { largeImage: a, smallImage: r } : { largeImage: r, smallImage: void 0 };
     })({ activity: e, application: t, largeImage: n, smallImage: i });
 }
-function y(e, t, n) {
-    let i = N(e, t);
-    return C({ activity: e, application: t, largeImageSrc: i.largeImage?.src, trackingSource: n }), i;
+function N(e, t, n) {
+    let i = y(e, t);
+    return v({ activity: e, application: t, largeImageSrc: i.largeImage?.src, trackingSource: n }), i;
 }
-function C(e) {
+function v(e) {
     let { activity: t, application: n, largeImageSrc: s, trackingSource: a } = e,
         o = t?.application_id,
         l = (0, c.h)(o),
         d = (0, r.bG)([u.A], () => null != o && u.A.didFetchingApplicationFail(o)),
         _ = null == o || null != l || d,
-        h = null != l || null != n,
+        f = null != l || null != n,
         p = null == s,
         E = t?.name,
         m = t?.type,
@@ -110,25 +112,25 @@ function C(e) {
         T &&
             _ &&
             p &&
-            f.default.track(g.HAw.ACTIVITY_DEFAULT_ICON_SHOWN, {
+            h.default.track(g.HAw.ACTIVITY_DEFAULT_ICON_SHOWN, {
                 source: a,
                 application_id: o,
                 activity_name: E,
                 activity_type: m,
                 activity_session_id: A,
-                application_found: h,
+                application_found: f,
                 has_rich_assets: I,
             });
-    }, [a, T, _, p, o, E, m, A, h, I]);
+    }, [a, T, _, p, o, E, m, A, f, I]);
 }
-function v(e, t) {
+function C(e, t) {
     let n = (0, c.h)(e?.application_id);
     if (null == e) return { largeImage: void 0, smallImage: void 0 };
     let i = e?.assets?.large_image,
         r =
             null != i
                 ? {
-                      src: (0, h.uD)(e.application_id, i, [A.iu.LARGE, A.iu.LARGE]),
+                      src: (0, f.uD)(e.application_id, i, [A.iu.LARGE, A.iu.LARGE]),
                       text: e.assets?.large_text?.trim(),
                       url: e.assets?.large_url,
                   }
@@ -137,7 +139,7 @@ function v(e, t) {
         o =
             null != s
                 ? {
-                      src: (0, h.uD)(e.application_id, s, [A.iu.LARGE, A.iu.LARGE]),
+                      src: (0, f.uD)(e.application_id, s, [A.iu.LARGE, A.iu.LARGE]),
                       text: e.assets?.small_text?.trim(),
                       url: e.assets?.small_url,
                   }

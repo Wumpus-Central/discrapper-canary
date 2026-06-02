@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { A: () => f });
 var i = n(64700),
-    r = n(569926),
+    r = n(202163),
     s = n(989441),
     a = n(802516),
     o = n(49381),
@@ -29,7 +29,7 @@ let d = {
     _ = [s.D.XBOX_GAME_PASS, s.D.STEAM],
     h = [];
 function f(e) {
-    let { data: t } = (0, r.I)(e);
+    let { gameRecord: t } = (0, r.A)(e);
     return (0, i.useMemo)(() => {
         if (null == t) return h;
         let e = new Set(_),
