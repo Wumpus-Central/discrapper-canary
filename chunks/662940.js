@@ -75,10 +75,7 @@ function p(e, t, n) {
         case o.UA.UNENROLLED:
         case o.UA.ENROLLED:
         case o.UA.INCOMPLETE:
-            if (null != n) {
-                if (e === o.UA.UNENROLLED) return String(n.target);
-                return `${n.progress}/${n.target}`;
-            }
+            if (null != n) return `${n.progress}/${n.target}`;
             return (0, s.xm)(t);
         case o.UA.COMPLETED:
         case o.UA.CLAIMED:
