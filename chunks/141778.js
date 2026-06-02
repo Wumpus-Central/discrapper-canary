@@ -1,12 +1,12 @@
-n.d(t, { getApplicationPaymentSteps: () => en });
+n.d(t, { getApplicationPaymentSteps: () => et });
 var i = n(627968),
     l = n(64700),
     r = n(166532),
     s = n(735305),
     a = n(7764);
 n(938796);
-var o = n(17928),
-    c = n(241524),
+var c = n(17928),
+    o = n(241524),
     d = n(31823),
     u = n(266060),
     p = n(427675),
@@ -84,25 +84,25 @@ function C(e) {
         ],
     });
 }
-var y = n(71393),
-    E = n(19311),
-    k = n(482132),
-    v = n(975965),
+var v = n(71393),
+    y = n(19311),
+    E = n(482132),
+    k = n(975965),
     N = n(376747);
 function I(e) {
     let { handleStepChange: t, handleClose: n } = e,
         s = (0, u.K)(),
-        { subscriptionMetadataRequest: a } = (0, v.l)(),
+        { subscriptionMetadataRequest: a } = (0, k.l)(),
         { application: h } = (0, d.V)(),
         f = (0, p.S3)(),
-        S = (0, c.A)(N.Y),
-        b = (0, o.bG)([y.A], () => y.A.getGuild(a?.guild_id)),
+        S = (0, o.A)(N.Y),
+        b = (0, c.bG)([v.A], () => v.A.getGuild(a?.guild_id)),
         j = l.useCallback(() => t(r.pn.REVIEW), [t]);
     if (null == f) return null;
     let C = (0, m.bg)(f.flags);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(k.dZ, {
+            (0, i.jsx)(E.dZ, {
                 children: S
                     ? (0, i.jsx)(A, {
                           confirmCta: g.intl.string(g.t.PBHFSq),
@@ -126,12 +126,12 @@ function I(e) {
                       }),
             }),
             !S &&
-                (0, i.jsx)(k.UX, {
-                    children: (0, i.jsx)(E.Ay, {
+                (0, i.jsx)(E.UX, {
+                    children: (0, i.jsx)(y.Ay, {
                         onBack: n,
                         backText: g.intl.string(g.t.TQBY1J),
                         onPrimary: j,
-                        primaryCTA: E.ti.CONTINUE,
+                        primaryCTA: y.ti.CONTINUE,
                         primaryText: g.intl.string(g.t["gZhF+3"]),
                     }),
                 }),
@@ -146,7 +146,7 @@ var T = n(775602),
 function w(e) {
     let t,
         n,
-        { showBenefits: s, handleClose: a, onSubscriptionConfirmation: o } = e,
+        { showBenefits: s, handleClose: a, onSubscriptionConfirmation: c } = e,
         h = (0, u.K)(),
         { application: f } = (0, d.V)(),
         { readySlideId: S, updatedSubscription: b } = (0, P.t4)((e) => ({
@@ -154,11 +154,11 @@ function w(e) {
             updatedSubscription: e.updatedSubscription,
         })),
         j = (0, p.S3)(),
-        y = (0, c.A)(N.Y),
-        { createMultipleConfettiAt: v } = l.useContext(_.x),
+        v = (0, o.A)(N.Y),
+        { createMultipleConfettiAt: k } = l.useContext(_.x),
         I = j?.name ?? "",
         w = () => {
-            a(), o?.();
+            a(), c?.();
         },
         F = S === r.pn.CONFIRM,
         U = (0, m.bg)(j?.flags ?? 0),
@@ -168,7 +168,7 @@ function w(e) {
                 : null;
     return (
         s
-            ? y
+            ? v
                 ? (t = (0, i.jsx)(A, {
                       title: g.intl.format(g.t.ea6tZr, { tierName: I }),
                       subtitle:
@@ -191,21 +191,21 @@ function w(e) {
                                     : g.intl.format(g.t.vHkMF4, { tier: I }),
                             })
                           : (0, i.jsx)(R.A, {})),
-                  (n = (0, i.jsx)(E.Ay, {
+                  (n = (0, i.jsx)(y.Ay, {
                       onPrimary: w,
-                      primaryCTA: E.ti.CONTINUE,
+                      primaryCTA: y.ti.CONTINUE,
                       primaryText: g.intl.string(g.t["JtWl+a"]),
                   })))
-            : (t = y
+            : (t = v
                   ? (0, i.jsx)(C, { tierName: I, onConfirm: w, subscription: b })
                   : (0, i.jsx)(x.XG, { tierName: I, onConfirm: w, subscription: b })),
         l.useEffect(() => {
-            T.A.useReducedMotion && F && v(window.innerWidth / 2, window.innerHeight / 2);
-        }, [v, F]),
+            T.A.useReducedMotion && F && k(window.innerWidth / 2, window.innerHeight / 2);
+        }, [k, F]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(k.dZ, { children: [(0, i.jsx)(B.A, {}), t] }),
-                null != n && (0, i.jsx)(k.UX, { children: n }),
+                (0, i.jsxs)(E.dZ, { children: [(0, i.jsx)(B.A, {}), t] }),
+                null != n && (0, i.jsx)(E.UX, { children: n }),
             ],
         })
     );
@@ -215,15 +215,15 @@ var F = n(86379),
     D = n(655857),
     M = n(97352),
     H = n(428262),
-    O = n(937008),
+    O = n(259160),
     L = n(121005),
     G = n(615310);
 function W(e) {
     let { initialStep: t, initialPlanId: n, guildId: r, setAnalyticsData: s } = e,
         {
             selectedSkuId: a,
-            setSelectedSkuId: o,
-            setSelectedPlanId: c,
+            setSelectedSkuId: c,
+            setSelectedPlanId: o,
             priceOptions: d,
         } = (0, P.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
@@ -232,7 +232,7 @@ function W(e) {
             priceOptions: e.checkoutPriceOptions,
         })),
         { hasFetchedRelatedSubscriptionPlans: u, subscriptionPriceOptionsLoading: p, displayCurrency: m } = (0, D.Jn)(),
-        { setSubscriptionMetadataRequest: x } = (0, v.l)(),
+        { setSubscriptionMetadataRequest: x } = (0, k.l)(),
         h = (0, F.Hp)(),
         f = (0, L.A)(),
         S = (0, G.l)(),
@@ -245,7 +245,7 @@ function W(e) {
         null != r && x({ guild_id: r });
     }, [r, x]),
     l.useEffect(() => {
-        c(n);
+        o(n);
         let e = null != n ? M.A.get(n) : null;
         g ||
             h ||
@@ -253,8 +253,8 @@ function W(e) {
                 let n = null != e ? (0, H.y8)(e.id, !1, b, { paymentSourceId: d.paymentSourceId }) : void 0;
                 return { ...t, subscription_plan_id: e?.id, price: n?.amount, regular_price: e?.price, currency: m };
             }),
-            null != e && (o(e?.skuId), S(t)));
-    }, [h, n, b, g, d, m, a, s, c, o, S, t]),
+            null != e && (c(e?.skuId), S(t)));
+    }, [h, n, b, g, d, m, a, s, o, c, S, t]),
     g)
         ? (0, i.jsx)(R.A, {})
         : h
@@ -268,18 +268,17 @@ var Y = n(284009),
     X = n(666646),
     z = n(558620),
     K = n(427858),
-    $ = n(768050),
-    q = n(566980),
-    J = n(871084),
-    ee = n(367160);
-function et(e) {
+    $ = n(566980),
+    q = n(871084),
+    J = n(367160);
+function ee(e) {
     let {
             backButtonEligible: t,
             prevStep: n,
             handleStepChange: s,
             planGroup: a,
-            openInvoiceId: o,
-            analyticsData: c,
+            openInvoiceId: c,
+            analyticsData: o,
             analyticsLocation: d,
             handleClose: u,
         } = e,
@@ -290,6 +289,7 @@ function et(e) {
             purchaseError: S,
             setUpdatedSubscription: b,
             setCurrency: g,
+            activeSubscription: j,
         } = (0, P.t4)((e) => ({
             setHasAcceptedTerms: e.setHasAcceptedTerms,
             purchaseState: e.purchaseState,
@@ -297,14 +297,14 @@ function et(e) {
             purchaseError: e.purchaseError,
             setUpdatedSubscription: e.setUpdatedSubscription,
             setCurrency: e.setCheckoutCurrency,
+            activeSubscription: e.activeSubscription,
         })),
-        { paymentSources: j } = (0, Q.jm)(),
-        { dropdownCurrencies: A } = (0, D.Jn)(),
-        { activeSubscription: C } = (0, $.P5)(),
-        { subscriptionMetadataRequest: y } = (0, v.l)(),
-        E = (0, z.A)(),
+        { paymentSources: A } = (0, Q.jm)(),
+        { dropdownCurrencies: C } = (0, D.Jn)(),
+        { subscriptionMetadataRequest: v } = (0, k.l)(),
+        y = (0, z.A)(),
         N = (0, p.S3)();
-    V()(null != E, "Expected plan to be selected");
+    V()(null != y, "Expected plan to be selected");
     let I = l.useRef(null),
         [T, _] = (0, Z.A)(!1, 500),
         B = (0, X.mx)(),
@@ -322,60 +322,60 @@ function et(e) {
         M = l.useCallback(() => {
             s(r.pn.ADD_PAYMENT_STEPS);
         }, [s]);
-    return h === q.h.PURCHASING
+    return h === $.h.PURCHASING
         ? (0, i.jsx)(R.A, {})
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(k.dZ, {
+                  (0, i.jsx)(E.dZ, {
                       children:
-                          null == C
-                              ? (0, i.jsx)(ee._, {
-                                    selectedPlanId: E.id,
+                          null == j
+                              ? (0, i.jsx)(J._, {
+                                    selectedPlanId: y.id,
                                     planGroup: a,
-                                    paymentSources: j,
+                                    paymentSources: A,
                                     handlePaymentSourceAdd: M,
-                                    metadata: w ? void 0 : y,
+                                    metadata: w ? void 0 : v,
                                 })
                               : (0, i.jsx)(K.A, {
-                                    premiumSubscription: C,
-                                    paymentSources: j,
+                                    premiumSubscription: j,
+                                    paymentSources: A,
                                     handlePaymentSourceAdd: M,
-                                    planId: E.id,
+                                    planId: y.id,
                                     setHasAcceptedTerms: x,
                                     legalTermsNodeRef: U,
                                     hasLegalTermsFlash: T,
                                     planGroup: a,
-                                    currencies: A,
+                                    currencies: C,
                                     onCurrencyChange: (e) => g(e),
-                                    hasOpenInvoice: null != o,
+                                    hasOpenInvoice: null != c,
                                     purchaseState: h,
                                     handleClose: u,
                                     shouldUseUnifiedCheckoutUI: !0,
                                 }),
                   }),
-                  (0, i.jsx)(k.UX, {
-                      children: (0, i.jsx)(J.A, {
-                          premiumSubscription: C ?? null,
+                  (0, i.jsx)(E.UX, {
+                      children: (0, i.jsx)(q.A, {
+                          premiumSubscription: j ?? null,
                           onBack: () => null != n && s(n),
                           onNext: F,
                           legalTermsNodeRef: U,
                           flashLegalTerms: () => _(!0),
                           analyticsLocation: d,
-                          baseAnalyticsData: c,
+                          baseAnalyticsData: o,
                           flowStartTime: f.startTime,
                           planGroup: a,
-                          openInvoiceId: o,
-                          metadata: w ? void 0 : y,
+                          openInvoiceId: c,
+                          metadata: w ? void 0 : v,
                           backButtonEligible: t,
                           invoiceError: B,
-                          disablePurchase: y?.guild_id == null && !w,
+                          disablePurchase: v?.guild_id == null && !w,
                           onPaymentSourceAdd: M,
                       }),
                   }),
               ],
           });
 }
-function en(e) {
+function et(e) {
     let { guildId: t, showBenefitsFirst: n } = e;
     return [
         {
@@ -397,7 +397,7 @@ function en(e) {
         {
             key: r.pn.REVIEW,
             renderStep: (e) =>
-                (0, i.jsx)(et, { backButtonEligible: !!n || void 0, prevStep: n ? r.pn.BENEFITS : void 0, ...e }),
+                (0, i.jsx)(ee, { backButtonEligible: !!n || void 0, prevStep: n ? r.pn.BENEFITS : void 0, ...e }),
             options: { renderHeader: !0, useBreadcrumbLabel: () => g.intl.string(g.t.QBnNHq) },
         },
         { key: r.pn.CONFIRM, renderStep: (e) => (0, i.jsx)(w, { showBenefits: !n, ...e }) },

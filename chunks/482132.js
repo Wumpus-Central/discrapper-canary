@@ -1,8 +1,8 @@
 n.d(l, { Ay: () => C, UX: () => y, dZ: () => P });
 var r = n(627968),
-    s = n(64700),
-    t = n(503698),
-    i = n.n(t),
+    t = n(64700),
+    s = n(503698),
+    i = n.n(s),
     a = n(284009),
     d = n.n(a),
     o = n(340287),
@@ -12,7 +12,7 @@ var r = n(627968),
     m = n(742810),
     A = n(722847),
     N = n(573359),
-    E = n(768050),
+    E = n(424297),
     h = n(166532),
     S = n(615310),
     f = n(370353);
@@ -21,31 +21,34 @@ function C(e) {
             let { header: l, ...n } = e;
             return { header: l, stepProps: n };
         })(e),
-        { step: t, stepConfigs: a } = (0, S.Ay)(),
-        { setBodyNode: o, setFooterNode: C, setModalOverlayNode: P, unifiedCheckoutFlow: y } = (0, E.P5)(),
-        x = (0, u.bG)([N.A], () => N.A.isDisplayingWowMomentConfirmation),
-        { setReadySlideId: j } = (0, A.t4)((e) => ({ setReadySlideId: e.setReadySlideId })),
-        R = a.find((e) => e.key === t);
-    s.useEffect(() => {
+        { step: s, stepConfigs: a } = (0, S.Ay)(),
+        { setBodyNode: o, setFooterNode: C, setModalOverlayNode: P } = (0, E.P5)(),
+        y = (0, u.bG)([N.A], () => N.A.isDisplayingWowMomentConfirmation),
+        { setReadySlideId: x, unifiedCheckoutFlow: j } = (0, A.t4)((e) => ({
+            setReadySlideId: e.setReadySlideId,
+            unifiedCheckoutFlow: e.unifiedCheckoutFlow,
+        })),
+        R = a.find((e) => e.key === s);
+    t.useEffect(() => {
         P(null);
-    }, [t, P]),
-        d()(null != R, "Unknown step for current payment flow (PaymentModalStep): step=%s, flow=%s", t, y);
+    }, [s, P]),
+        d()(null != R, "Unknown step for current payment flow (PaymentModalStep): step=%s, flow=%s", s, j);
     let I = R?.options?.hideSlider ?? !1,
         M = R?.options?.hideDefaultModalBody ?? !1,
         _ = R?.options?.sliderBodyClassName,
         D = (0, m.D7)({ location: "PaymentModalStep" }),
-        T = s.useMemo(() => D && t === h.pn.REVIEW, [D, t]),
-        g = s.useCallback(
+        T = t.useMemo(() => D && s === h.pn.REVIEW, [D, s]),
+        g = t.useCallback(
             (e, l) => {
-                l === t && o(e);
+                l === s && o(e);
             },
-            [t, o],
+            [s, o],
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (R?.options?.renderHeader ?? !0) ? l : null,
             R.renderStep(n),
-            null == t || I
+            null == s || I
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -54,12 +57,12 @@ function C(e) {
                               : (0, r.jsx)(c.c, {
                                     children: (0, r.jsx)(p.t, {
                                         shouldUseMediaQueriesForSizing: !0,
-                                        activeSlide: t,
+                                        activeSlide: s,
                                         centered: !1,
-                                        onSlideReady: (e) => j(e),
+                                        onSlideReady: (e) => x(e),
                                         width: "100%",
                                         disableDefaultTransformStyling: T,
-                                        overflow: x ? "visible" : void 0,
+                                        overflow: y ? "visible" : void 0,
                                         children: a
                                             .filter((e) => null != e.key)
                                             .map((e) =>

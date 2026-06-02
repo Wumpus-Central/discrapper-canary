@@ -541,15 +541,14 @@ function eJ(e) {
                                             action: () => {
                                                 (0, eO.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        n.e("54018"),
+                                                        n.e("25485"),
                                                         n.e("72811"),
-                                                        n.e("26105"),
+                                                        n.e("6992"),
                                                         n.e("46461"),
                                                         n.e("71192"),
                                                         n.e("43147"),
                                                         n.e("78383"),
-                                                        n.e("35316"),
-                                                        n.e("45650"),
+                                                        n.e("82433"),
                                                         n.e("48307"),
                                                         n.e("79264"),
                                                         n.e("87521"),
@@ -583,6 +582,8 @@ function eJ(e) {
                                                         n.e("60235"),
                                                         n.e("64827"),
                                                         n.e("7167"),
+                                                        n.e("85404"),
+                                                        n.e("57791"),
                                                         n.e("96643"),
                                                         n.e("92789"),
                                                         n.e("2368"),
@@ -629,18 +630,21 @@ function eJ(e) {
                                                         n.e("77084"),
                                                         n.e("28152"),
                                                         n.e("80230"),
+                                                        n.e("23532"),
                                                         n.e("95093"),
                                                         n.e("37687"),
                                                         n.e("71234"),
                                                         n.e("96137"),
                                                         n.e("48900"),
                                                         n.e("60177"),
+                                                        n.e("52557"),
                                                         n.e("1006"),
                                                         n.e("1354"),
                                                         n.e("21570"),
                                                         n.e("23276"),
                                                         n.e("55577"),
                                                         n.e("1227"),
+                                                        n.e("88003"),
                                                         n.e("20282"),
                                                         n.e("54282"),
                                                         n.e("78412"),
@@ -850,8 +854,8 @@ function e8(e) {
         })
     );
 }
-var e4 = n(34188),
-    e2 = n(700623),
+var e2 = n(34188),
+    e4 = n(700623),
     e7 = n(177953),
     e3 = n(825484),
     e5 = n(512950),
@@ -1111,7 +1115,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: tv.wi,
                             children: [
-                                (0, r.jsx)(e4.U, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e2.U, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1124,7 +1128,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: tv.wi,
                             children: [
-                                (0, r.jsx)(e2.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e4.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1411,14 +1415,14 @@ var tZ = n(111042),
     t0 = n(403362),
     t1 = n(179771),
     t8 = n(824552),
-    t4 = n(168186),
-    t2 = n(594061),
+    t2 = n(168186),
+    t4 = n(594061),
     t7 = n(935208),
     t3 = n(630248),
     t5 = n(355097);
 function t9(e, t) {
     o.useEffect(() => {
-        t2.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t4.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t3.A], () => t3.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -1435,7 +1439,7 @@ function t9(e, t) {
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute();
-            let e = i?.map((e) => (0, t4.bq)(e.application, !0)) ?? [],
+            let e = i?.map((e) => (0, t2.bq)(e.application, !0)) ?? [],
                 t = [...l];
             return (
                 t.push(...e),
@@ -2072,8 +2076,8 @@ var nQ = n(984516),
     n0 = n(651753),
     n1 = n(485845),
     n8 = n(994369),
-    n4 = n(240591),
-    n2 = n(46477);
+    n2 = n(240591),
+    n4 = n(46477);
 function n7(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
@@ -2330,7 +2334,7 @@ function lm(e) {
                             includeNonEmbeddedApps: a,
                         } = e,
                         r = "channel" === t.type ? t.channel : void 0,
-                        c = (0, n4.MW)(r, [M.kc.CHAT]).hasBaseAccessPermissions,
+                        c = (0, n2.MW)(r, [M.kc.CHAT]).hasBaseAccessPermissions,
                         d = (0, g.SD)(t, c, i),
                         u = (0, g.A4)(c, i),
                         m = o.useCallback(
@@ -2375,7 +2379,7 @@ function lm(e) {
                     return n7(c, {
                         limit: l,
                         filterPredicates: [
-                            ((m = (0, n4.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
+                            ((m = (0, n2.Bh)("channel" === t.type ? t.channel : void 0, [M.kc.CHAT])),
                             (p = {}),
                             (e) => {
                                 let { context: n, userId: l, roleIds: i, isImpersonating: s } = m;
@@ -2385,8 +2389,8 @@ function lm(e) {
                                             isGuildInstalled: r,
                                             isUserInstalled: o,
                                         } = (0, g.Sx)(t, e.applicationId),
-                                        c = n?.guild_id != null ? n2.we(a?.permissions, n.guild_id, l, i, s) : null,
-                                        d = n?.guild_id != null ? n2._W(a?.permissions, n, n.guild_id) : null;
+                                        c = n?.guild_id != null ? n4.we(a?.permissions, n.guild_id, l, i, s) : null,
+                                        d = n?.guild_id != null ? n4._W(a?.permissions, n, n.guild_id) : null;
                                     p[e.applicationId] = {
                                         descriptor: a,
                                         applicationAllowedForUser: c,
@@ -2403,13 +2407,13 @@ function lm(e) {
                                     isUserInstalled: d,
                                 } = p[e.applicationId];
                                 return (
-                                    n2.zl(e, m, {
+                                    n4.zl(e, m, {
                                         applicationAllowedForUser: o,
                                         applicationAllowedForChannel: r,
                                         commandBotId: a?.botId,
                                         isGuildInstalled: c,
                                         isUserInstalled: d,
-                                    }) === n2.CA.ALLOWED
+                                    }) === n4.CA.ALLOWED
                                 );
                             }),
                         ],
@@ -2512,7 +2516,7 @@ function lm(e) {
                     return n7(u, {
                         limit: i,
                         filterPredicates: [
-                            ((d = (0, n4.Bh)("channel" === t.type ? t.channel : void 0, [
+                            ((d = (0, n2.Bh)("channel" === t.type ? t.channel : void 0, [
                                 M.kc.CHAT,
                                 M.kc.PRIMARY_ENTRY_POINT,
                             ])),
@@ -2524,20 +2528,20 @@ function lm(e) {
                                         isGuildInstalled: o,
                                         isUserInstalled: c,
                                     } = (0, g.Sx)(t, e.id),
-                                    u = n?.guild_id != null ? n2.we(a?.permissions, n.guild_id, l, i, s) : null,
-                                    m = n?.guild_id != null ? n2._W(a?.permissions, n, n.guild_id) : null;
+                                    u = n?.guild_id != null ? n4.we(a?.permissions, n.guild_id, l, i, s) : null,
+                                    m = n?.guild_id != null ? n4._W(a?.permissions, n, n.guild_id) : null;
                                 return (
                                     null == r ||
                                     !(r.length > 0) ||
                                     r.some(
                                         (e) =>
-                                            n2.zl(e, d, {
+                                            n4.zl(e, d, {
                                                 applicationAllowedForUser: u,
                                                 applicationAllowedForChannel: m,
                                                 commandBotId: a?.botId,
                                                 isGuildInstalled: o,
                                                 isUserInstalled: c,
-                                            }) === n2.CA.ALLOWED,
+                                            }) === n4.CA.ALLOWED,
                                     )
                                 );
                             }),

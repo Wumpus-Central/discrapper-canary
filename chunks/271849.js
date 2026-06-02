@@ -18,12 +18,12 @@ var l = n(627968),
     P = n(364995),
     S = n(31823),
     _ = n(426398),
-    I = n(463376),
-    f = n(473617),
+    f = n(463376),
+    I = n(473617),
     T = n(722847),
     N = n(995835),
-    v = n(937008),
-    g = n(768050),
+    v = n(259160),
+    g = n(424297),
     x = n(349786),
     R = n(800471),
     M = n(71867),
@@ -50,14 +50,21 @@ var l = n(627968),
     J = n(814304);
 let X = (e) => {
     let { selectedPlanId: t, paymentSources: n, trialId: l, metadata: i, isTrial: a = !1 } = e,
-        { selectedSkuId: s, priceOptions: u } = (0, T.t4)((e) => ({
+        {
+            selectedSkuId: s,
+            priceOptions: u,
+            activeSubscription: c,
+            defaultPlanId: d,
+        } = (0, T.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             priceOptions: e.checkoutPriceOptions,
+            activeSubscription: e.activeSubscription,
+            defaultPlanId: e.defaultPlanId,
         })),
-        { hasPaymentSources: c } = (0, _.jm)(),
-        { activeSubscription: d, defaultPlanId: p, startedPaymentFlowWithPaymentSourcesRef: m } = (0, g.P5)(),
+        { hasPaymentSources: p } = (0, _.jm)(),
+        { startedPaymentFlowWithPaymentSourcesRef: m } = (0, g.P5)(),
         { isEmbeddedIAP: h } = (0, S.V)(),
-        { isPremium: A, isPremiumGroupPurchase: C, isEligibleForDiscount: N } = (0, I.i)(),
+        { isPremium: A, isPremiumGroupPurchase: C, isEligibleForDiscount: N } = (0, f.i)(),
         { checkoutPaymentSources: x } = (0, P.t)(),
         { isGift: M, giftRecipient: b, selectedGiftStyle: L } = (0, v.Pv)(),
         O = (0, G.ds)() && !M,
@@ -73,7 +80,7 @@ let X = (e) => {
             proratedInvoicePreview: z,
             renewalInvoicePreview: J,
             subscriptionPeriodEnd: X,
-        } = (0, f.V)({ selectedPlanId: t, priceOptions: u, trialId: l, metadata: i, isTrial: a }),
+        } = (0, I.V)({ selectedPlanId: t, priceOptions: u, trialId: l, metadata: i, isTrial: a }),
         Q = M && (0, D.Ik)(b),
         ee = u.paymentSourceId,
         et = (0, j.g)(n, ee),
@@ -82,14 +89,14 @@ let X = (e) => {
         ei = (0, U.J$)(u.paymentSourceId),
         ea = (0, y.A)({ forceFetch: !1, excludeReverseTrial: !1, excludeReverseTrialFromCountdown: !0 }),
         es = !B && (ea.isFractionalPremiumActive || O) && q.JM.has(t),
-        eo = r.useMemo(() => (0, U.Tm)({ skuId: s, isPremium: A, defaultPlanId: p }), [s, p, A]),
+        eo = r.useMemo(() => (0, U.Tm)({ skuId: s, isPremium: A, defaultPlanId: d }), [s, d, A]),
         eu = r.useMemo(
             () => (el && null == ee ? $.intl.format($.t["2wPRSF"], { months: er.length }) : null),
             [el, ee, er],
         );
     return {
         disabled: H,
-        activeSubscription: d,
+        activeSubscription: c,
         subscriptionPeriodEnd: X,
         plan: W,
         premiumPlanOptions: eo,
@@ -104,7 +111,7 @@ let X = (e) => {
         selectedGiftStyle: L,
         isInOneStepSubscriptionCheckout: B,
         shouldAllowPlanSelect: B && !C,
-        hasPaymentSources: c,
+        hasPaymentSources: p,
         paymentSourceId: ee,
         eligiblePaymentGateways: F,
         inReverseTrial: O,
@@ -132,8 +139,8 @@ function Q(e) {
             hasLegalTermsFlash: P,
             trialId: S,
             trialFooterMessageOverride: _,
-            reviewWarningMessage: I,
-            metadata: f,
+            reviewWarningMessage: f,
+            metadata: I,
             hideSubscriptionDetails: v,
             referralTrialOfferId: g,
             isTrial: R = !1,
@@ -167,10 +174,10 @@ function Q(e) {
             hasEntitlements: ey,
             paymentSourceOptionalWarningCopy: eP,
             selectedSourceRelocationCountry: eS,
-        } = X({ selectedPlanId: t, paymentSources: i, trialId: S, metadata: f, isTrial: R }),
+        } = X({ selectedPlanId: t, paymentSources: i, trialId: S, metadata: I, isTrial: R }),
         e_ = (0, T.t4)((e) => e.checkoutPriceOptions),
-        eI = r.useMemo(() => (0, U.l6)(e_, ed?.checkoutContext?.available_plans), [e_, ed]),
-        ef = (0, N.I)({ skuId: eo?.skuId, isGift: eu, className: J.Gw });
+        ef = r.useMemo(() => (0, U.l6)(e_, ed?.checkoutContext?.available_plans), [e_, ed]),
+        eI = (0, N.I)({ skuId: eo?.skuId, isGift: eu, className: J.Gw });
     if (null != ec && ec.type === Z.N$.LOADING)
         return (0, l.jsx)("div", { className: J.zp, children: (0, l.jsx)(c.y, {}) });
     let eT = (0, l.jsx)(Z.eb, {
@@ -202,7 +209,7 @@ function Q(e) {
             (0, l.jsxs)("div", {
                 children: [
                     (0, l.jsx)(W.je, { paymentRestrictionBannerType: eg }),
-                    null != I &&
+                    null != f &&
                         (0, l.jsxs)("div", {
                             className: J.Je,
                             children: [
@@ -212,7 +219,7 @@ function Q(e) {
                                     width: 20,
                                     height: 20,
                                 }),
-                                (0, l.jsx)(p.E, { className: J.CJ, variant: "text-sm/normal", children: I }),
+                                (0, l.jsx)(p.E, { className: J.CJ, variant: "text-sm/normal", children: f }),
                             ],
                         }),
                     eE &&
@@ -223,7 +230,7 @@ function Q(e) {
                                 children: (0, l.jsx)(p.E, { variant: "text-sm/medium", children: (0, b.Nn)() }),
                             }),
                         }),
-                    ef,
+                    eI,
                     en &&
                         (0, l.jsxs)("div", {
                             children: [
@@ -235,7 +242,7 @@ function Q(e) {
                                     planGroup: n,
                                     subscriptionPeriodEnd: ee,
                                     showTotal: !1,
-                                    priceOptions: eI,
+                                    priceOptions: ef,
                                     handleClose: w,
                                 }),
                                 (0, l.jsx)(Y.pK, {}),
@@ -292,7 +299,7 @@ function Q(e) {
                                     isGift: eu,
                                     paymentSourceType: V,
                                     isEmbeddedIAP: G,
-                                    basePrice: (0, U.y8)(eo.id, !1, eu, eI),
+                                    basePrice: (0, U.y8)(eo.id, !1, eu, ef),
                                     willRelocateStoreCountry: null != eS,
                                 }),
                             showPricingLink: eo.currency !== z.Yr.USD,

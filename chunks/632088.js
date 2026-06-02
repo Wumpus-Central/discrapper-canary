@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => o, h: () => s });
-var i = n(627968);
-n(64700);
-var r = n(722647);
-let s = "cash-app-pay-container";
-function a() {
-    return (0, i.jsx)("div", { id: s, className: r.w });
+r.d(t, { A: () => u, h: () => l });
+var n = r(627968);
+r(64700);
+var a = r(722647);
+let l = "cash-app-pay-container";
+function i() {
+    return (0, n.jsx)("div", { id: l, className: a.w });
 }
-function o() {
-    return (0, i.jsx)(a, {});
+function u() {
+    return (0, n.jsx)(i, {});
 }

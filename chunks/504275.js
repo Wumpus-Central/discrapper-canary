@@ -1,14 +1,22 @@
 "use strict";
-n.d(t, { p: () => r, r: () => i });
-let i = {
+n.d(t, { p: () => a, r: () => s });
+var i = n(652215),
+    r = n(788868);
+let s = {
         skuIds: [],
         isGift: !1,
         referralTrialOfferId: null,
         activeSubscription: null,
         excludeSubscriptionPlansBySKU: !1,
-        purchaseType: n(652215).VVm.SUBSCRIPTION,
+        purchaseType: i.VVm.SUBSCRIPTION,
+        applicationId: r.tv,
+        referralCode: null,
+        paymentGateway: void 0,
+        defaultPlanId: void 0,
+        customCheckoutFlow: void 0,
+        unifiedCheckoutFlow: void 0,
     },
-    r = (e, t, n) => ({
+    a = (e, t, n) => ({
         ...n,
         setCheckoutInitParameters: (n) => {
             var i;

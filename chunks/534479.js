@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { A: () => a });
-var i = n(627968);
-n(64700);
-var r = n(289873),
-    s = n(749114);
-function a() {
-    return (0, i.jsx)(r.y, { className: s.u });
+r.d(t, { A: () => i });
+var n = r(627968);
+r(64700);
+var a = r(289873),
+    l = r(749114);
+function i() {
+    return (0, n.jsx)(a.y, { className: l.u });
 }

@@ -1,23 +1,22 @@
-"use strict";
-n.d(t, { $w: () => l, uM: () => u });
-var i = n(492462),
-    r = n(873263);
-n(809733), n(38405);
-var s = n(26279),
-    a = n(652215);
-let o = (e, t, n) => {
-        if (!e.startsWith(a.BVt.BILLING_MANAGE_SUBSCRIPTION)) {
-            if (t === a.W6J.MOBILE_WEB_REDIRECT_CHECKOUT) return s.uH.MOBILE_WEB_REDIRECT_CHECKOUT;
-            if (n === s.uH.META_QUEST_WEB_REDIRECT_CHECKOUT) return s.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
+r.d(t, { $w: () => s, uM: () => o });
+var n = r(492462),
+    a = r(873263);
+r(809733), r(38405);
+var l = r(26279),
+    i = r(652215);
+let u = (e, t, r) => {
+        if (!e.startsWith(i.BVt.BILLING_MANAGE_SUBSCRIPTION)) {
+            if (t === i.W6J.MOBILE_WEB_REDIRECT_CHECKOUT) return l.uH.MOBILE_WEB_REDIRECT_CHECKOUT;
+            if (r === l.uH.META_QUEST_WEB_REDIRECT_CHECKOUT) return l.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
         }
     },
-    l = () => {
-        let { search: e, pathname: t } = (0, r.zy)(),
-            { deep_link_type: n, flow_type: s } = (0, i.parse)(e);
-        return o(t, n, s);
+    s = () => {
+        let { search: e, pathname: t } = (0, a.zy)(),
+            { deep_link_type: r, flow_type: l } = (0, n.parse)(e);
+        return u(t, r, l);
     },
-    u = () => {
+    o = () => {
         let e = window.location.pathname,
-            { deep_link_type: t, flow_type: n } = (0, i.parse)(window.location.search);
-        return o(e, t, n);
+            { deep_link_type: t, flow_type: r } = (0, n.parse)(window.location.search);
+        return u(e, t, r);
     };

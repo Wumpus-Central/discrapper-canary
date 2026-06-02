@@ -9,7 +9,8 @@
     margin-bottom: calc(-1px - var(--custom-modal-padding-bottom));
     margin-top: calc(-1px - var(--custom-modal-padding-top));
     margin-inline: -1px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     padding: 24px;
     position: relative
 }
