@@ -1,40 +1,40 @@
-n.d(e, { A: () => E });
-var l = n(627968);
-n(64700);
-var i = n(17928),
-    r = n(192308),
-    a = n(477782),
-    d = n(931991),
-    s = n(849736),
-    u = n(698441),
-    o = n(496092),
-    c = n(988794),
-    g = n(985018);
-function E(t, e, E) {
-    let { canManageGuildEvent: A } = (0, d.nr)(E ?? e),
-        m = (0, i.bG)([u.Ay], () => u.Ay.isActive(t)),
-        f = (0, i.bG)([u.Ay], () => u.Ay.getGuildScheduledEvent(t), [t]),
-        y = A(f);
-    if (null == t || !y || !m || f?.entity_type === c.Ps.EXTERNAL) return null;
-    let _ = () => {
-        E?.isGuildStageVoice() ? (0, s.OE)(E) : null != t && o.A.endEvent(t, e.id), (0, r.closeAllModals)();
+i.d(n, { A: () => A });
+var e = i(627968);
+i(64700);
+var l = i(17928),
+    a = i(192308),
+    r = i(477782),
+    s = i(931991),
+    c = i(849736),
+    o = i(698441),
+    d = i(496092),
+    u = i(988794),
+    p = i(375708);
+function A(t, n, A) {
+    let { canManageGuildEvent: y } = (0, s.nr)(A ?? n),
+        g = (0, l.bG)([o.Ay], () => o.Ay.isActive(t)),
+        b = (0, l.bG)([o.Ay], () => o.Ay.getGuildScheduledEvent(t), [t]),
+        E = y(b);
+    if (null == t || !E || !g || b?.entity_type === u.Ps.EXTERNAL) return null;
+    let h = () => {
+        A?.isGuildStageVoice() ? (0, c.OE)(A) : null != t && d.default.endEvent(t, n.id), (0, a.closeAllModals)();
     };
-    return (0, l.jsx)(a.Dr, {
-        id: g.intl.string(g.t.qaYzPA),
-        label: g.intl.string(g.t.qaYzPA),
+    return (0, e.jsx)(r.Dr, {
+        id: p.intl.string(p.t.qaYzPA),
+        label: p.intl.string(p.t.qaYzPA),
         action: function () {
-            (0, r.openModalLazy)(async () => {
-                let { Modal: t } = await n.e("4823").then(n.bind(n, 158954));
-                return (e) => {
-                    let { onClose: n, transitionState: i } = e;
-                    return (0, l.jsx)(t, {
-                        transitionState: i,
-                        title: g.intl.string(g.t.qaYzPA),
-                        subtitle: g.intl.string(g.t.bnDQ7E),
-                        onClose: n,
+            (0, a.openModalLazy)(async () => {
+                let { Modal: t } = await i.e("4823").then(i.bind(i, 158954));
+                return (n) => {
+                    let { onClose: i, transitionState: l } = n;
+                    return (0, e.jsx)(t, {
+                        transitionState: l,
+                        title: p.intl.string(p.t.qaYzPA),
+                        subtitle: p.intl.string(p.t.bnDQ7E),
+                        onClose: i,
                         actions: [
-                            { onClick: n, variant: "secondary", text: g.intl.string(g.t["ETE/oC"]) },
-                            { onClick: _, variant: "critical-primary", text: g.intl.string(g.t.mjB9pd) },
+                            { onClick: i, variant: "secondary", text: p.intl.string(p.t["ETE/oC"]) },
+                            { onClick: h, variant: "critical-primary", text: p.intl.string(p.t.mjB9pd) },
                         ],
                     });
                 };

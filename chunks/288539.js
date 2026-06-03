@@ -19,7 +19,7 @@ var i = n(627968),
 function A(e) {
     let { userId: t, className: s, children: a } = e,
         l = r.useCallback(() => {
-            (0, c.K)({ kind: "user" });
+            (0, c.showInaccessibleLinkModal)({ kind: "user" });
         }, []),
         u = r.useCallback(
             (e) => {
@@ -57,9 +57,9 @@ function I(e) {
                       null != b
                           ? (0, o.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("27482"),
-                                    n.e("72811"),
-                                    n.e("23531"),
+                                    n.e("72414"),
+                                    n.e("39713"),
+                                    n.e("88296"),
                                     n.e("94881"),
                                     n.e("26692"),
                                     n.e("26132"),
@@ -132,10 +132,10 @@ function I(e) {
                           : O.isDM() &&
                             (0, o.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("27482"),
-                                    n.e("35842"),
-                                    n.e("72811"),
-                                    n.e("23531"),
+                                    n.e("72414"),
+                                    n.e("99110"),
+                                    n.e("39713"),
+                                    n.e("88296"),
                                     n.e("94881"),
                                     n.e("26692"),
                                     n.e("26132"),

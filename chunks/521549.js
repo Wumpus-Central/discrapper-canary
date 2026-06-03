@@ -1,28 +1,28 @@
-n.d(t, { default: () => s });
+n.d(i, { default: () => u });
 var l = n(627968);
 n(64700);
-var i = n(158954),
-    u = n(956793),
+var e = n(189213),
+    a = n(730852),
     r = n(496092),
-    E = n(508654),
-    d = n(985018);
-function s(e) {
-    let { channel: t, transitionState: n, onClose: s } = e,
-        a = (0, E.Qs)(t.id);
-    if (null == a) return null;
-    let c = () => {
-        u.default.selectVoiceChannel(null), s();
+    s = n(508654),
+    d = n(375708);
+function u(t) {
+    let { channel: i, transitionState: n, onClose: u } = t,
+        c = (0, s.Qs)(i.id);
+    if (null == c) return null;
+    let o = () => {
+        a.default.selectVoiceChannel(null), u();
     };
-    return (0, l.jsx)(i.Modal, {
+    return (0, l.jsx)(e.Modal, {
         transitionState: n,
         title: d.intl.string(d.t["4Ao8LC"]),
         subtitle: d.intl.string(d.t["0I0B8f"]),
-        onClose: s,
+        onClose: u,
         actions: [
-            { onClick: c, variant: "secondary", text: d.intl.string(d.t.P60OAX) },
+            { onClick: o, variant: "secondary", text: d.intl.string(d.t.P60OAX) },
             {
                 onClick: () => {
-                    r.A.endEvent(a.id, a.guild_id), c();
+                    r.default.endEvent(c.id, c.guild_id), o();
                 },
                 variant: "critical-primary",
                 text: d.intl.string(d.t.mjB9pd),

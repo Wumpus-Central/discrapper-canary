@@ -101,7 +101,7 @@ async function P(e, t) {
         return;
     }
     let c = (0, u.vu)(e);
-    if (null != c && !(await w(c))) return void (0, M.K)({ kind: "channel" });
+    if (null != c && !(await w(c))) return void (0, M.showInaccessibleLinkModal)({ kind: "channel" });
     if (null == c) return void (0, a.pX)(e, t);
     let d = (function (e) {
         if (null == e.channelId) return e;
@@ -116,5 +116,5 @@ async function P(e, t) {
           ? null != d.threadId
               ? (0, a.pX)(D.BVt.CHANNEL_THREAD_VIEW(d.guildId, d.channelId, d.threadId, d.messageId), t)
               : (0, a.pX)(D.BVt.CHANNEL(d.guildId, d.channelId, d.messageId), t)
-          : (0, M.E)();
+          : (0, M.showInaccessibleReportPostModal)();
 }

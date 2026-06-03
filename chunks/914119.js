@@ -1,202 +1,202 @@
-l.d(n, { default: () => O });
-var t = l(627968),
-    i = l(64700),
-    s = l(189213),
-    a = l(939249),
-    r = l(658675),
-    c = l(17928),
-    o = l(998445),
-    d = l(834730),
-    u = l(857071),
-    h = l(931991),
-    m = l(571909),
-    v = l(660110),
-    x = l(734057),
-    C = l(71393),
-    N = l(845584),
-    A = l(284009),
-    g = l.n(A),
-    j = l(956793),
-    k = l(849736),
-    E = l(790535),
-    p = l(763827),
-    y = l(988794);
-async function f(e, n) {
-    let { entity_type: l } = e;
-    switch (l) {
-        case y.Ps.STAGE_INSTANCE: {
-            let n = p.A.getChannelId(),
-                l = x.A.getChannel(e.channel_id);
-            g()(null != l, "could not find channel"),
-                n !== l.id && (await E.cy(l, !0), await E.jA(l, null)),
-                await (0, k.e7)(l, !1, !0);
+n.d(t, { default: () => M });
+var i = n(627968),
+    a = n(64700),
+    l = n(189213),
+    s = n(939249),
+    r = n(658675),
+    c = n(17928),
+    o = n(998445),
+    d = n(834730),
+    u = n(857071),
+    h = n(931991),
+    A = n(571909),
+    v = n(660110),
+    g = n(734057),
+    y = n(71393),
+    E = n(913122),
+    p = n(284009),
+    _ = n.n(p),
+    C = n(730852),
+    f = n(849736),
+    m = n(790535),
+    w = n(763827),
+    I = n(988794);
+async function N(e, t) {
+    let { entity_type: n } = e;
+    switch (n) {
+        case I.Ps.STAGE_INSTANCE: {
+            let t = w.A.getChannelId(),
+                n = g.A.getChannel(e.channel_id);
+            _()(null != n, "could not find channel"),
+                t !== n.id && (await m.cy(n, !0), await m.jA(n, null)),
+                await (0, f.e7)(n, !1, !0);
             break;
         }
-        case y.Ps.VOICE: {
-            let n = p.A.getChannelId(),
-                l = x.A.getChannel(e.channel_id);
-            g()(null != l, "could not find channel"), n !== l.id && j.default.selectVoiceChannel(l.id);
+        case I.Ps.VOICE: {
+            let t = w.A.getChannelId(),
+                n = g.A.getChannel(e.channel_id);
+            _()(null != n, "could not find channel"), t !== n.id && C.default.selectVoiceChannel(n.id);
         }
     }
 }
-l(321073);
-var _ = l(755584),
-    w = l(602146),
-    I = l(95701),
-    G = l(496092),
-    S = l(652215);
-async function P(e, n) {
-    let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-        t = [];
-    t.push(...l);
-    let i = await _.A.createChannel({
+n(321073);
+var P = n(755584),
+    S = n(602146),
+    x = n(95701),
+    G = n(496092),
+    k = n(652215);
+async function L(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
+        i = [];
+    i.push(...n);
+    let a = await P.A.createChannel({
         guildId: e.id,
-        type: S.rbe.GUILD_STAGE_VOICE,
-        name: n.substring(0, 100),
-        permissionOverwrites: t,
+        type: k.rbe.GUILD_STAGE_VOICE,
+        name: t.substring(0, 100),
+        permissionOverwrites: i,
     });
-    if (null == i || 201 !== i.status) throw Error("Can't create channel for event");
-    return (0, I.UE)(i.body);
+    if (null == a || 201 !== a.status) throw Error("Can't create channel for event");
+    return (0, x.UE)(a.body);
 }
-async function T(e, n) {
-    let { entity_type: l } = e;
-    if (l === y.Ps.STAGE_INSTANCE) {
-        let l = await (function (e, n) {
-            let { guild_id: l, channel_id: t } = e,
-                i = C.A.getGuild(l);
-            if (null == i) return Promise.resolve(null);
-            let s = x.A.getChannel(t);
-            return null == s ? P(i, e.name, n) : Promise.resolve(s);
-        })(e, n);
-        g()(null != l, "could not find or create channel");
+async function T(e, t) {
+    let { entity_type: n } = e;
+    if (n === I.Ps.STAGE_INSTANCE) {
+        let n = await (function (e, t) {
+            let { guild_id: n, channel_id: i } = e,
+                a = y.A.getGuild(n);
+            if (null == a) return Promise.resolve(null);
+            let l = g.A.getChannel(i);
+            return null == l ? L(a, e.name, t) : Promise.resolve(l);
+        })(e, t);
+        _()(null != n, "could not find or create channel");
     }
 }
 async function b(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { channel_id: l, entity_type: t, name: i, id: s, guild_id: a } = e;
-    switch (t) {
-        case y.Ps.STAGE_INSTANCE:
-            g()(null != l, "channel_id is required"), await (0, w.yG)(l, i, y.dD.GUILD_ONLY, n, s);
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        { channel_id: n, entity_type: i, name: a, id: l, guild_id: s } = e;
+    switch (i) {
+        case I.Ps.STAGE_INSTANCE:
+            _()(null != n, "channel_id is required"), await (0, S.yG)(n, a, I.dD.GUILD_ONLY, t, l);
             break;
-        case y.Ps.VOICE:
-            g()(null != l, "channel_id is required"), await G.A.startEvent(s, a);
+        case I.Ps.VOICE:
+            _()(null != n, "channel_id is required"), await G.default.startEvent(l, s);
             break;
-        case y.Ps.EXTERNAL:
-            await G.A.startEvent(s, a);
+        case I.Ps.EXTERNAL:
+            await G.default.startEvent(l, s);
     }
 }
-let L = { onSuccess: () => {}, permissionOverwrites: [] };
-var U = l(691012),
-    M = l(779519),
-    B = l(985018),
-    D = l(682043);
-function O(e) {
-    let { transitionState: n, event: l, onSuccess: A, onClose: g } = e,
-        { guild_id: j, privacy_level: k } = l,
-        E = (0, c.bG)([x.A], () => x.A.getChannel(l.channel_id), [l]),
-        p = (0, c.bG)([C.A], () => C.A.getGuild(j), [j]),
-        { canManageGuildEvent: _ } = (0, h.nr)(E ?? p),
-        w = _(l),
-        I = (0, c.bG)([u.A], () => u.A.isLurking(j), [j]),
-        G = l.entity_type === y.Ps.STAGE_INSTANCE,
-        [S, P] = i.useState(G),
-        [O, { loading: R, error: V }] = (function () {
-            let [e, n] = i.useState(!1),
-                [l, t] = i.useState(null);
+let j = { onSuccess: () => {}, permissionOverwrites: [] };
+var O = n(691012),
+    U = n(779519),
+    D = n(375708),
+    V = n(682043);
+function M(e) {
+    let { transitionState: t, event: n, onSuccess: p, onClose: _ } = e,
+        { guild_id: C, privacy_level: f } = n,
+        m = (0, c.bG)([g.A], () => g.A.getChannel(n.channel_id), [n]),
+        w = (0, c.bG)([y.A], () => y.A.getGuild(C), [C]),
+        { canManageGuildEvent: P } = (0, h.nr)(m ?? w),
+        S = P(n),
+        x = (0, c.bG)([u.A], () => u.A.isLurking(C), [C]),
+        G = n.entity_type === I.Ps.STAGE_INSTANCE,
+        [k, L] = a.useState(G),
+        [M, { loading: X, error: B }] = (function () {
+            let [e, t] = a.useState(!1),
+                [n, i] = a.useState(null);
             return [
-                async function (e, l) {
-                    let { onSuccess: i = L.onSuccess, permissionOverwrites: s = L.permissionOverwrites } =
-                        arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : L;
-                    n(!0);
+                async function (e, n) {
+                    let { onSuccess: a = j.onSuccess, permissionOverwrites: l = j.permissionOverwrites } =
+                        arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : j;
+                    t(!0);
                     try {
-                        await T(e, s),
-                            await b(e, l),
-                            await f(e, i),
-                            await (function (e, n) {
-                                let { entity_type: l } = e;
-                                switch (l) {
-                                    case y.Ps.STAGE_INSTANCE:
-                                    case y.Ps.VOICE:
-                                    case y.Ps.EXTERNAL:
-                                        n?.();
+                        await T(e, l),
+                            await b(e, n),
+                            await N(e, a),
+                            await (function (e, t) {
+                                let { entity_type: n } = e;
+                                switch (n) {
+                                    case I.Ps.STAGE_INSTANCE:
+                                    case I.Ps.VOICE:
+                                    case I.Ps.EXTERNAL:
+                                        t?.();
                                 }
                                 return Promise.resolve();
-                            })(e, i),
-                            n(!1);
+                            })(e, a),
+                            t(!1);
                     } catch (e) {
-                        t(new N.LG(e)), n(!1);
+                        i(new E.LG(e)), t(!1);
                     }
-                    n(!1);
+                    t(!1);
                 },
-                { loading: e, error: l },
+                { loading: e, error: n },
             ];
         })();
-    if (!w) return null;
-    let J = k === y.dD.PUBLIC ? B.intl.string(B.t.HhlaLP) : B.intl.string(B.t.GI3xXd),
+    if (!S) return null;
+    let H = f === I.dD.PUBLIC ? D.intl.string(D.t.HhlaLP) : D.intl.string(D.t.GI3xXd),
         q = () => {
-            A?.(), g(), (0, m.ek)(!1);
+            p?.(), _(), (0, A.ek)(!1);
         },
-        X = async () => {
-            await O(l, S, { onSuccess: q });
+        J = async () => {
+            await M(n, k, { onSuccess: q });
         };
-    return (0, t.jsxs)(s.Modal, {
-        transitionState: n,
-        onClose: g,
-        title: l.name,
-        subtitle: B.intl.format(B.t.UMajol, {
-            privacyLevel: J,
-            privacyLevelHook: (e, n) =>
-                k !== y.dD.PUBLIC
+    return (0, i.jsxs)(l.Modal, {
+        transitionState: t,
+        onClose: _,
+        title: n.name,
+        subtitle: D.intl.format(D.t.UMajol, {
+            privacyLevel: H,
+            privacyLevelHook: (e, t) =>
+                f !== I.dD.PUBLIC
                     ? null
-                    : (0, t.jsxs)(
+                    : (0, i.jsxs)(
                           "div",
                           {
-                              className: D.ro,
+                              className: V.ro,
                               children: [
-                                  (0, t.jsx)(o.L, { size: "xs", color: "currentColor", className: D.HJ }),
-                                  (0, t.jsx)(d.E, { variant: "text-md/normal", children: e }),
+                                  (0, i.jsx)(o.L, { size: "xs", color: "currentColor", className: V.HJ }),
+                                  (0, i.jsx)(d.E, { variant: "text-md/normal", children: e }),
                               ],
                           },
-                          n,
+                          t,
                       ),
         }),
         actionBarInput: G
-            ? (0, t.jsxs)(a.D, {
-                  onClick: () => P(!S),
-                  className: D.Qy,
+            ? (0, i.jsxs)(s.D, {
+                  onClick: () => L(!k),
+                  className: V.Qy,
                   children: [
-                      (0, t.jsx)(r.P, { checked: S }),
-                      (0, t.jsx)(d.E, {
+                      (0, i.jsx)(r.P, { checked: k }),
+                      (0, i.jsx)(d.E, {
                           color: "text-default",
                           variant: "text-sm/normal",
-                          children: B.intl.string(B.t["Pe+Pwp"]),
+                          children: D.intl.string(D.t["Pe+Pwp"]),
                       }),
                   ],
               })
             : void 0,
-        actions: [{ variant: "active", text: B.intl.string(B.t.cK1GGY), onClick: X, loading: R }],
+        actions: [{ variant: "active", text: D.intl.string(D.t.cK1GGY), onClick: J, loading: X }],
         children: [
-            (0, t.jsx)(M.A, {
-                guild: p,
-                channel: E,
-                name: l.name,
-                description: l.description ?? void 0,
-                imageSource: (0, U.A)(l),
+            (0, i.jsx)(U.A, {
+                guild: w,
+                channel: m,
+                name: n.name,
+                description: n.description ?? void 0,
+                imageSource: (0, O.A)(n),
                 isActive: !1,
-                isUserLurking: I,
+                isUserLurking: x,
                 speakers: [],
                 speakerCount: 0,
                 rsvped: !0,
-                guildEvent: l,
+                guildEvent: n,
                 hideAgeVerificationNotice: !0,
             }),
-            y.Tn.has(l.entity_type) && (0, t.jsx)(v.A, { className: D.XI, channelId: l.channel_id }),
-            null != V && null != V.getAnyErrorMessage()
-                ? (0, t.jsx)(d.E, {
+            I.Tn.has(n.entity_type) && (0, i.jsx)(v.A, { className: V.XI, channelId: n.channel_id }),
+            null != B && null != B.getAnyErrorMessage()
+                ? (0, i.jsx)(d.E, {
                       color: "text-feedback-critical",
                       variant: "text-sm/normal",
-                      className: D.gJ,
-                      children: V.getAnyErrorMessage(),
+                      className: V.gJ,
+                      children: B.getAnyErrorMessage(),
                   })
                 : null,
         ],

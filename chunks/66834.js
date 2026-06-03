@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => k, k: () => U }), n(142703);
+n.d(t, { A: () => U, k: () => k }), n(142703);
 var i = n(562708),
     r = n(136722),
     s = n(636537),
@@ -10,22 +10,22 @@ var i = n(562708),
     c = n(879408),
     d = n(470348),
     _ = n(568185),
-    f = n(741231),
-    h = n(854492),
-    p = n(700241),
-    E = n(658128),
-    m = n(976860),
-    g = n(288254),
-    A = n(495544),
-    I = n(383394),
-    T = n(808728),
-    S = n(71393),
+    h = n(741231),
+    f = n(854492),
+    p = n(398884),
+    E = n(700241),
+    m = n(658128),
+    g = n(976860),
+    A = n(288254),
+    I = n(495544),
+    T = n(383394),
+    S = n(808728),
+    y = n(71393),
     N = n(309010),
-    y = n(967198),
+    v = n(967198),
     C = n(287809),
-    v = n(174459),
+    R = n(174459),
     O = n(488926),
-    R = n(927578),
     b = n(499785),
     D = n(157559),
     L = n(652215),
@@ -40,30 +40,30 @@ let P = (e) => {
     x = (e) => {
         a.h.dispatch({ type: "GUILD_DELETE", guild: { id: e } });
     };
-function U(e) {
+function k(e) {
     return new Promise((t) =>
-        S.A.addConditionalChangeListener(() => {
-            let n = S.A.getGuild(e);
+        y.A.addConditionalChangeListener(() => {
+            let n = y.A.getGuild(e);
             return null == n || (t(n), !1);
         }),
     );
 }
-let k = {
+let U = {
     joinGuild: async function e(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             { source: i, loadId: r, lurkLocation: o, autoNavigate: u = !0 } = t,
             c = t.lurker ?? !1,
             d = C.default.getCurrentUser();
-        if (d?.hasFlag(L.nhx.QUARANTINED)) return (0, p.default)(), new Promise((e, t) => t(Error()));
+        if (d?.hasFlag(L.nhx.QUARANTINED)) return (0, E.default)(), new Promise((e, t) => t(Error()));
         a.h.wait(() => a.h.dispatch({ type: "GUILD_JOIN", guildId: e, lurker: c, source: i, loadId: r }));
         try {
-            let t = y.A.getGuildId(),
-                l = e === t && null != S.A.getGuild(e) ? N.A.getChannelId(e) : null,
+            let t = v.A.getGuildId(),
+                l = e === t && null != y.A.getGuild(e) ? N.A.getChannelId(e) : null,
                 d = await s.Bo.put({
                     url: L.Rsh.GUILD_JOIN(e),
                     query: {
                         lurker: c,
-                        session_id: c ? A.default.getSessionId() : null,
+                        session_id: c ? I.default.getSessionId() : null,
                         recommendation_load_id: r,
                         location: c && null != o ? o : null,
                         from_directory: i === L.Q4z.DIRECTORY_ENTRY || null,
@@ -76,9 +76,9 @@ let k = {
             if (
                 (null != d.body.join_request &&
                     a.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: e, request: d.body.join_request }),
-                null == S.A.getGuild(e) && d.body.show_verification_form && u)
+                null == y.A.getGuild(e) && d.body.show_verification_form && u)
             )
-                return (0, m.pX)(L.BVt.GUILD_MEMBER_VERIFICATION(e)), d;
+                return (0, g.pX)(L.BVt.GUILD_MEMBER_VERIFICATION(e)), d;
             if (
                 (null != d.body.welcome_screen &&
                     a.h.dispatch({
@@ -99,36 +99,32 @@ let k = {
             }
             return d;
         } catch (t) {
-            if (
+            throw (
                 (t.body?.code === L.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
                     (0, l.yO)(w.w_.JOIN_LARGE_GUILD_UNDERAGE),
-                t.body?.code === L.t02.TOO_MANY_USER_GUILDS)
-            ) {
-                let e = C.default.getCurrentUser();
-                R.Ay.canUseIncreasedGuildCap(e) || e?.isStaff() ? P(L.cZu) : P(L.qlD);
-            }
-            throw (
-                (t.body?.code === L.t02.GUILD_AT_CAPACITY &&
+                t.body?.code === L.t02.TOO_MANY_USER_GUILDS &&
+                    ((0, p.Om)(C.default.getCurrentUser()) ? P(L.cZu) : P(L.qlD)),
+                t.body?.code === L.t02.GUILD_AT_CAPACITY &&
                     D.A.show({ title: M.intl.string(M.t.ZZlox4), body: M.intl.string(M.t.ZUEGFn) }),
                 c && t.body?.code === L.t02.UNKNOWN_GUILD && x(e),
                 t)
             );
         }
     },
-    waitForGuild: U,
+    waitForGuild: k,
     async transitionToGuildSync(e, t, n, i) {
         var r;
-        let s = ((r = (await U(e)).id), null != n ? n : (0, E.W)(r)),
+        let s = ((r = (await k(e)).id), null != n ? n : (0, m.W)(r)),
             a = t;
         t?.hasOwnProperty("welcomeModalChannelId") &&
             null == t.welcomeModalChannelId &&
             (a = { ...t, welcomeModalChannelId: s ?? void 0 }),
-            (0, f.A)(L.BVt.CHANNEL(e, s, i), a),
+            (0, h.A)(L.BVt.CHANNEL(e, s, i), a),
             await new Promise(setImmediate);
     },
     deleteGuild: x,
     selectGuild(e) {
-        (0, h.j)(e);
+        (0, f.j)(e);
     },
     createGuild(e) {
         a.h.dispatch({ type: "GUILD_CREATE", guild: e });
@@ -202,7 +198,7 @@ let k = {
         let { usePubSub: r } = d.A.getConfig({ location: "startBulkBan" });
         try {
             let s = await this.banMultipleUsers(e, t, n, i);
-            if (r && c.A.consumeCompletedBeforeStarted(e, A.default.getId())) return;
+            if (r && c.A.consumeCompletedBeforeStarted(e, I.default.getId())) return;
             if ((a.h.dispatch({ type: "GUILD_BULK_BAN_STARTED", guildId: e }), !r)) {
                 let { banned_users: n = [], failed_users: i = [] } = s.body ?? {};
                 a.h.dispatch({
@@ -297,7 +293,7 @@ let k = {
         a.h.dispatch({ type: "GUILD_MOVE_BY_ID", sourceId: e, targetId: t, moveToBelow: n, combine: i });
     },
     createGuildFolderLocal(e, t) {
-        v.default.track(L.HAw.GUILD_FOLDER_CREATED),
+        R.default.track(L.HAw.GUILD_FOLDER_CREATED),
             a.h.dispatch({ type: "GUILD_FOLDER_CREATE_LOCAL", sourceIds: e, name: t });
     },
     editGuildFolderLocal(e, t, n) {
@@ -307,8 +303,8 @@ let k = {
         a.h.dispatch({ type: "GUILD_FOLDER_DELETE_LOCAL", targetId: e });
     },
     toggleGuildFolderExpand(e) {
-        let t = I.A.isFolderExpanded(e);
-        v.default.track(L.HAw.GUILD_FOLDER_CLICKED, { source: "sidebar", action: t ? "collapsed" : "expanded" }),
+        let t = T.A.isFolderExpanded(e);
+        R.default.track(L.HAw.GUILD_FOLDER_CLICKED, { source: "sidebar", action: t ? "collapsed" : "expanded" }),
             a.h.dispatch({ type: "TOGGLE_GUILD_FOLDER_EXPAND", folderId: e });
     },
     setGuildFolderExpanded(e, t) {
@@ -321,11 +317,11 @@ let k = {
         a.h.dispatch({ type: "GUILD_NSFW_AGREE", guildId: e });
     },
     nsfwReturnToSafety(e) {
-        if (null == e) return void (0, m.pX)(L.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 });
-        let t = T.Ay.getDefaultChannel(e);
-        null == t || (0, u.qR)(t) || (0, g.BV)(t)
-            ? (0, m.pX)(L.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 })
-            : (0, m.pX)(L.BVt.CHANNEL(e, t.id));
+        if (null == e) return void (0, g.pX)(L.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 });
+        let t = S.Ay.getDefaultChannel(e);
+        null == t || (0, u.qR)(t) || (0, A.BV)(t)
+            ? (0, g.pX)(L.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 })
+            : (0, g.pX)(L.BVt.CHANNEL(e, t.id));
     },
     spoilerAgree(e) {
         a.h.dispatch({ type: "CHANNEL_SPOILER_AGREE", channelId: e });
@@ -334,8 +330,8 @@ let k = {
         a.h.dispatch({ type: "CHANNEL_SPOILER_AGREE_CLEAR", channelId: e });
     },
     escapeToDefaultChannel(e) {
-        let t = T.Ay.getDefaultChannel(e);
-        null != t ? (0, m.pX)(L.BVt.CHANNEL(e, t.id)) : (0, m.pX)(L.BVt.FRIENDS);
+        let t = S.Ay.getDefaultChannel(e);
+        null != t ? (0, g.pX)(L.BVt.CHANNEL(e, t.id)) : (0, g.pX)(L.BVt.FRIENDS);
     },
     async fetchApplications(e, t) {
         let n = { url: L.Rsh.GUILD_APPLICATIONS(e), oldFormErrors: !0, rejectWithError: !1 };

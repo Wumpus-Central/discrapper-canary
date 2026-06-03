@@ -1116,8 +1116,8 @@ function td(e) {
             var e;
             let l, i;
             if (null != j) return;
-            if (E && null != n) return await G.A.saveEvent(n, m, t), d();
-            let r = await G.A.createGuildEvent(m, t);
+            if (E && null != n) return await G.default.saveEvent(n, m, t), d();
+            let r = await G.default.createGuildEvent(m, t);
             return (
                 (e = r.body),
                 (l = (0, _.K7)(e)),
