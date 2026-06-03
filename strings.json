@@ -829,6 +829,7 @@
   "HVCRVf": "!!{numBoosts}!! Server Boosts for plan owner",
   "gsE005": "!!{totalSeats}!! total members",
   "t3TzwQ": "Your {percent}% discount will end {discountEndDate, date, short}. After that you’ll be charged !!{regularPrice}!!/month.",
+  "FwjZzr": "Your **{percent}% discount will end {discountEndDate, date, short}**. After that you’ll be charged !!{regularPrice}!!/month.",
   "/S02sx": "Paused",
   "OPJNST": "Credits are paused while on a Nitro Squad plan",
   "sm4HCL": "Something went wrong! Please try again",

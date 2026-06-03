@@ -5584,9 +5584,7 @@
 }
 
 .header_f1578d {
-    align-items: center;
-    border-bottom: 1px solid var(--border-muted);
-    display: flex
+    border-bottom: 1px solid var(--border-muted)
 }
 
 .headerTitle_f1578d {
@@ -5615,8 +5613,13 @@
     padding-top: var(--space-24)
 }
 
-.descriptionContainer_f1578d {
+.descriptionContainer_f1578d,
+.discountDescription_f1578d {
     margin-bottom: var(--space-10)
+}
+
+.discountDescription_f1578d strong {
+    color: var(--text-strong)
 }
 
 .buttonContainer_f1578d {

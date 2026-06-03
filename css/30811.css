@@ -3048,6 +3048,19 @@
     display: inline
 }
 
+.nitroWheelLockup__19f56 {
+    display: grid;
+    place-items: center
+}
+
+.nitroWheelLockupLayer__19f56 {
+    grid-area: 1/1
+}
+
+.nitroWheelLockupLayer__19f56 img {
+    display: block
+}
+
 .linkIcon_ebf183 {
     display: inline-block
 }
@@ -4328,6 +4341,18 @@
     color: var(--text-default)
 }
 
+.rootPopout_b5970a {
+    height: 100%;
+    width: 100%
+}
+
+.headerSection__1c228 {
+    align-items: center;
+    display: flex;
+    height: 34px;
+    justify-content: space-between
+}
+
 .container__0bec3 {
     height: 100%;
     inset-inline-start: 0;
@@ -5278,6 +5303,27 @@ html.disable-forced-colors * {
     width: 136px
 }
 
+.groupDiscountBanner_a5923e {
+    margin-top: var(--space-6)
+}
+
+.groupDiscountBannerText_a5923e {
+    flex: 1;
+    min-width: 0
+}
+
+.divider_a5923e {
+    margin: var(--space-16) 0;
+    opacity: .1;
+    z-index: 0
+}
+
+.bannerDivider_a5923e {
+    margin: var(--space-10) 0;
+    opacity: .1;
+    z-index: 0
+}
+
 .subscription_d970da {
     align-items: center;
     background-color: var(--background-base-lower);
@@ -5754,42 +5800,6 @@ html.disable-forced-colors * {
 .statusIcon_b28dff {
     color: var(--text-link);
     margin-inline-start: 5px
-}
-
-.card_b44011 {
-    border-color: var(--border-subtle);
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 16px;
-    overflow: hidden
-}
-
-.card_b44011.inModal_b44011 {
-    gap: 8px;
-    padding: var(--space-8) var(--space-16)
-}
-
-.cardHeader_b44011 {
-    align-items: center;
-    background-color: var(--background-mod-normal);
-    display: flex;
-    justify-content: space-between;
-    padding: 16px
-}
-
-.cardHeader_b44011.inModal_b44011 {
-    background-color: unset;
-    padding: 8px 0
-}
-
-.emptyCard__0a9e8 {
-    border-width: 0;
-    padding: 36px 16px;
-    text-align: center
-}
-
-.title__0a9e8 {
-    text-transform: uppercase
 }
 
 .messageContainer__7796e {

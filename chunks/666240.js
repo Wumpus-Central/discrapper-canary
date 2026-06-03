@@ -5,6 +5,7 @@ e.exports = {
     wS: "contentGrid_f1578d",
     bh: "descriptionAndButtonContainer_f1578d",
     iQ: "descriptionContainer_f1578d",
+    eY: "discountDescription_f1578d",
     UD: "buttonContainer_f1578d",
     Or: "usersListHeader_f1578d",
 };
