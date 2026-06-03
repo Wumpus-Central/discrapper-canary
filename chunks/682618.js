@@ -1,32 +1,41 @@
 "use strict";
-n.d(t, { R: () => u, o: () => c });
-var i = n(636537),
-    r = n(228366),
-    s = n(287809),
-    a = n(38405),
-    o = n(652215);
-function l(e) {
-    return e === s.default.getCurrentUser()?.id ? o.ME : e;
+n.d(t, { R: () => d, o: () => _ });
+var i = n(731738),
+    r = n(636537),
+    s = n(228366),
+    a = n(807393),
+    o = n(287809),
+    l = n(38405),
+    u = n(652215);
+function c(e) {
+    return e === o.default.getCurrentUser()?.id ? u.ME : e;
 }
-let u = async (e) => {
-        let t = e ?? s.default.getCurrentUser()?.id;
-        if (null != t) {
-            r.h.dispatch({ type: "BADGE_DIRECTORY_FETCH_START", userId: t });
-            try {
-                let e = (await i.Bo.get({ url: o.Rsh.USER_BADGES(l(t)), rejectWithError: !0 })).body;
-                r.h.dispatch({ type: "BADGE_DIRECTORY_FETCH_SUCCESS", userId: t, badges: e.badges });
-            } catch (e) {
-                r.h.dispatch({ type: "BADGE_DIRECTORY_FETCH_FAILURE", userId: t }), a.A.captureException(e);
-            }
+let d = async (e) => {
+        let t = e ?? o.default.getCurrentUser()?.id;
+        if (null == t) return;
+        let n = o.default.getCurrentUser()?.id,
+            d = null != n && t === n ? "self" : "other",
+            _ = `viewed_user:${d}`,
+            h = Date.now();
+        s.h.dispatch({ type: "BADGE_DIRECTORY_FETCH_START", userId: t });
+        try {
+            let e = await r.Bo.get({ url: u.Rsh.USER_BADGES(c(t)), rejectWithError: !0 });
+            a.A.distribution({ name: i.K.BADGE_DIRECTORY_CATALOG_FETCH, tags: [_, "result:success"] }, Date.now() - h);
+            let n = e.body;
+            s.h.dispatch({ type: "BADGE_DIRECTORY_FETCH_SUCCESS", userId: t, badges: n.badges });
+        } catch (e) {
+            a.A.distribution({ name: i.K.BADGE_DIRECTORY_CATALOG_FETCH, tags: [_, "result:failure"] }, Date.now() - h),
+                s.h.dispatch({ type: "BADGE_DIRECTORY_FETCH_FAILURE", userId: t }),
+                l.A.captureException(e);
         }
     },
-    c = async (e, t) => {
-        let n = t ?? s.default.getCurrentUser()?.id;
+    _ = async (e, t) => {
+        let n = t ?? o.default.getCurrentUser()?.id;
         if (null != n)
             try {
-                let t = await i.Bo.get({ url: o.Rsh.USER_BADGE(l(n), e), rejectWithError: !0 });
-                r.h.dispatch({ type: "BADGE_FETCH_SUCCESS", userId: n, badge: t.body });
+                let t = await r.Bo.get({ url: u.Rsh.USER_BADGE(c(n), e), rejectWithError: !0 });
+                s.h.dispatch({ type: "BADGE_FETCH_SUCCESS", userId: n, badge: t.body });
             } catch (e) {
-                a.A.captureException(e);
+                l.A.captureException(e);
             }
     };

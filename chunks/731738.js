@@ -45,4 +45,6 @@ var i,
         (i.GOOGLE_WALLET_METHOD_IMPRESSION = "google_wallet_method_impression"),
         (i.GOOGLE_WALLET_METHOD_SELECTED = "google_wallet_method_selected"),
         (i.GOOGLE_WALLET_VERIFICATION_FAILED = "google_wallet_verification_failed"),
+        (i.BADGE_DIRECTORY_MODAL_OPEN = "badge_directory_modal_open"),
+        (i.BADGE_DIRECTORY_CATALOG_FETCH = "badge_directory_catalog_fetch"),
         i);
