@@ -527,7 +527,7 @@ let e5 = (e) => {
                 (0, a.jsxs)("div", {
                     className: e4.IH,
                     children: [
-                        (0, a.jsx)(e9, { referralSentUsers: n, className: e4.ds }),
+                        (0, a.jsx)(e9, { referralSentUsers: n, className: e4.GV }),
                         (0, a.jsxs)("div", {
                             className: e4.n4,
                             children: [
@@ -692,7 +692,7 @@ function tm(e) {
     return (0, a.jsxs)("div", {
         className: u()(tE.kL, t),
         children: [
-            (0, a.jsx)("div", { className: tE.G3, children: (0, a.jsx)(te, { nReferralsSent: i, imageSize: 55 }) }),
+            (0, a.jsx)("div", { className: tE.G3, children: (0, a.jsx)(te, { nReferralsSent: i, imageSize: 65 }) }),
             (0, a.jsxs)("div", {
                 className: tE.IH,
                 children: [
@@ -1184,20 +1184,20 @@ let tB = () => {
                                                             await Promise.all([
                                                                 n.e("34218"),
                                                                 n.e("2570"),
-                                                                n.e("38804"),
+                                                                n.e("71569"),
                                                                 n.e("90862"),
                                                                 n.e("68835"),
                                                                 n.e("90665"),
                                                                 n.e("42329"),
                                                                 n.e("39713"),
-                                                                n.e("71626"),
+                                                                n.e("35028"),
                                                                 n.e("55642"),
                                                                 n.e("80889"),
                                                                 n.e("22513"),
-                                                                n.e("37412"),
+                                                                n.e("5872"),
                                                                 n.e("92210"),
                                                                 n.e("2327"),
-                                                                n.e("71100"),
+                                                                n.e("94345"),
                                                                 n.e("5636"),
                                                                 n.e("32697"),
                                                                 n.e("58435"),
@@ -1468,20 +1468,20 @@ let tZ = function (e) {
                             let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
                                 n.e("34218"),
                                 n.e("2570"),
-                                n.e("38804"),
+                                n.e("71569"),
                                 n.e("90862"),
                                 n.e("68835"),
                                 n.e("90665"),
                                 n.e("42329"),
                                 n.e("39713"),
-                                n.e("71626"),
+                                n.e("35028"),
                                 n.e("55642"),
                                 n.e("80889"),
                                 n.e("22513"),
-                                n.e("37412"),
+                                n.e("5872"),
                                 n.e("92210"),
                                 n.e("2327"),
-                                n.e("71100"),
+                                n.e("94345"),
                                 n.e("5636"),
                                 n.e("32697"),
                                 n.e("58435"),

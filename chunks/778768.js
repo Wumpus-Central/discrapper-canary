@@ -36,8 +36,8 @@ var n = t(627968),
     U = t(696451),
     D = t(71393),
     M = t(958590),
-    L = t(576705),
-    F = t(290863),
+    F = t(576705),
+    L = t(290863),
     z = t(427262),
     K = t(582904),
     B = t(375708),
@@ -68,7 +68,8 @@ function W(e) {
         d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, m.openModalLazy)(async () => {
                 let { default: l } = await Promise.all([
-                    t.e("86653"),
+                    t.e("36780"),
+                    t.e("60918"),
                     t.e("59957"),
                     t.e("28136"),
                     t.e("16084"),
@@ -139,11 +140,11 @@ function Z(e) {
             isMobileOnline: Z,
             activities: J,
         } = (0, o.cf)(
-            [F.A],
+            [L.A],
             () => ({
-                status: F.A.getStatus(t.id, r),
-                isMobileOnline: F.A.isMobileOnline(t.id),
-                activities: F.A.getActivities(t.id, r),
+                status: L.A.getStatus(t.id, r),
+                isMobileOnline: L.A.isMobileOnline(t.id),
+                activities: L.A.getActivities(t.id, r),
             }),
             [t.id, r],
         ),
@@ -166,7 +167,7 @@ function Z(e) {
             async function e() {
                 let e = M.A.getInvite(i.id, {}) ?? null;
                 if (null == e) {
-                    if (!L.A.can(I.xBc.CREATE_INSTANT_INVITE, i)) return null;
+                    if (!F.A.can(I.xBc.CREATE_INSTANT_INVITE, i)) return null;
                     try {
                         await _.Ay.createInvite(i.id, {}, $);
                     } catch (e) {

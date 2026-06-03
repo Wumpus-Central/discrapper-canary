@@ -38,7 +38,7 @@ function P(e) {
         [w, U] = l.useState(!1),
         D = l.useRef(null),
         M = l.useRef(null),
-        [L, F] = l.useState(0),
+        [F, L] = l.useState(0),
         { analyticsLocations: z } = (0, _.Ay)(S.A.VOICE_INVITE_SUGGESTIONS);
     (0, E.A)({
         name: d.ImpressionNames.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT,
@@ -72,7 +72,8 @@ function P(e) {
             null != B &&
                 (0, c.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        t.e("86653"),
+                        t.e("36780"),
+                        t.e("60918"),
                         t.e("59957"),
                         t.e("28136"),
                         t.e("16084"),
@@ -97,7 +98,7 @@ function P(e) {
             let e = () => {
                 null != D.current && clearTimeout(D.current);
             };
-            return Y || ((D.current = setTimeout(() => el("timeout"), 1e4)), F((e) => e + 1)), e;
+            return Y || ((D.current = setTimeout(() => el("timeout"), 1e4)), L((e) => e + 1)), e;
         }, [el, Y]),
         ea = l.useCallback(
             () => (
@@ -174,7 +175,7 @@ function P(e) {
                                                             (0, n.jsx)("circle", { className: G.hN }),
                                                         ],
                                                     },
-                                                    `voice-invite-suggestions-timer-${L}`,
+                                                    `voice-invite-suggestions-timer-${F}`,
                                                 ),
                                           (0, n.jsx)(h.R, {
                                               size: "custom",

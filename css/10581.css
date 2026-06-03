@@ -1,0 +1,12 @@
+.group__0a16d {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    padding: var(--space-8) 0 var(--space-4)
+}
+
+.backwardsCompatibleCheckbox__0a16d {
+    align-items: start;
+    display: flex;
+    padding: var(--space-8)
+}
