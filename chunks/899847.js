@@ -43,8 +43,9 @@ async function p(e) {
 async function E() {
     await i.Bo.get({ url: _.Rsh.FAMILY_CENTER_LINK_CODE, rejectWithError: !1 }).then((e) => {
         let { body: t } = e,
-            n = t.link_code;
-        return s.h.dispatch({ type: "FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS", linkCode: n }), n;
+            n = t.link_code,
+            i = t.expires_at;
+        return s.h.dispatch({ type: "FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS", linkCode: n, expiresAt: i }), n;
     });
 }
 async function m() {
