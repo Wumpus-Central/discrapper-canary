@@ -1,0 +1,33 @@
+.phoneFieldPopout__61a01 {
+    height: 240px;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 40px;
+    width: 220px
+}
+
+.phoneFieldPopout__61a01 .phoneFieldScroller__61a01 {
+    height: 196px;
+    padding-bottom: 10px
+}
+
+.phoneFieldPopout__61a01 .countryItem__61a01 {
+    width: 100%
+}
+
+.phoneFieldPopout__61a01 .countryName__61a01 {
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 18px;
+    margin-inline-end: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.phoneFieldPopout__61a01 .countryCode__61a01 {
+    color: var(--text-strong);
+    font-size: 13px;
+    font-weight: var(--font-weight-semibold);
+    text-align: end
+}

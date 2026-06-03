@@ -1,6 +1,6 @@
 "use strict";
 n.r(t),
-    n.d(t, { enable: () => C, isNotSupported: () => N, trackToggleSelfDeaf: () => O, trackToggleSelfMute: () => v });
+    n.d(t, { enable: () => v, isNotSupported: () => y, trackToggleSelfDeaf: () => R, trackToggleSelfMute: () => C });
 var i = n(627968);
 n(64700);
 var r = n(862482),
@@ -10,10 +10,10 @@ var r = n(862482),
     l = n(228366),
     u = n(626584),
     c = n(734057),
-    d = n(235058),
+    d = n(728555),
     _ = n(309010),
-    f = n(532624),
-    h = n(531685),
+    h = n(532624),
+    f = n(531685),
     p = n(174459),
     E = n(350535),
     m = n(427603),
@@ -23,13 +23,13 @@ var r = n(862482),
 let T = new u.A("AudioActionCreators");
 function S() {
     (0, s.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([n.e("81013"), n.e("15799"), n.e("44602"), n.e("25280")]).then(
+        let { default: e } = await Promise.all([n.e("9446"), n.e("15799"), n.e("44602"), n.e("25280")]).then(
             n.bind(n, 987482),
         );
         return (t) => (0, i.jsx)(e, { source: "Unsupported Browser", ...t });
     });
 }
-function N() {
+function y() {
     return (
         !d.Ay.isSupported() &&
         ((0, s.openModal)((e) =>
@@ -46,12 +46,12 @@ function N() {
         !0)
     );
 }
-function y(e) {
+function N(e) {
     p.default.track(g.HAw.PERMISSIONS_ACKED, { type: "audio", action: e });
 }
-function C() {
+function v() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return N()
+    return y()
         ? Promise.resolve(!1)
         : (p.default.track(g.HAw.PERMISSIONS_REQUESTED, { type: "audio" }),
           d.Ay.getMediaEngine()
@@ -59,51 +59,51 @@ function C() {
               .then(
                   () => {
                       l.h.dispatch({ type: "MEDIA_ENGINE_SET_AUDIO_ENABLED", enabled: !0, unmute: e }),
-                          y(A.hL.ACCEPTED);
+                          N(A.hL.ACCEPTED);
                   },
                   (e) => {
                       switch (e) {
                           case g.xei.NO_DEVICES_FOUND:
-                              y(A.hL.NO_DEVICES);
+                              N(A.hL.NO_DEVICES);
                               break;
                           case g.xei.PERMISSION_DENIED:
-                              y(A.hL.DENIED);
+                              N(A.hL.DENIED);
                               break;
                           case g.xei.PERMISSION_DISMISSED:
-                              y(A.hL.DISMISSED);
+                              N(A.hL.DISMISSED);
                               break;
                           default:
-                              y(A.hL.ERROR), T.warn(`unknown getUserMedia error: ${e}`);
+                              N(A.hL.ERROR), T.warn(`unknown getUserMedia error: ${e}`);
                       }
                   },
               )
               .then(() => !0));
 }
-function v(e) {
+function C(e) {
     let { usedKeybind: t = !1, location: n } = e,
-        i = f.Ay.getKeybindForAction(g.hCu.TOGGLE_MUTE, !1, !0),
+        i = h.Ay.getKeybindForAction(g.hCu.TOGGLE_MUTE, !1, !0),
         r = _.A.getVoiceChannelId(),
         s = null != r ? c.A.getChannel(r) : null;
     p.default.track(g.HAw.INPUT_MUTE_TOGGLED, {
         enabled: !d.Ay.isSelfMute(),
         custom_keybind_assigned: null != i,
         used_keybind: t,
-        app_in_focus: h.A.isAppFocused(),
+        app_in_focus: f.A.isAppFocused(),
         overlay_activated: null != (0, m.A)(),
         voice_channel_type: null != s ? s.type : null,
         location: n,
     });
 }
-function O(e) {
+function R(e) {
     let { usedKeybind: t = !1, location: n } = e,
-        i = f.Ay.getKeybindForAction(g.hCu.TOGGLE_DEAFEN, !1, !0),
+        i = h.Ay.getKeybindForAction(g.hCu.TOGGLE_DEAFEN, !1, !0),
         r = _.A.getVoiceChannelId(),
         s = null != r ? c.A.getChannel(r) : null;
     p.default.track(g.HAw.SELF_DEAFEN_TOGGLED, {
         enabled: !d.Ay.isSelfDeaf(),
         keybind_assigned: null != i ? (0, E.dI)(i.shortcut) : void 0,
         used_keybind: t,
-        app_in_focus: h.A.isAppFocused(),
+        app_in_focus: f.A.isAppFocused(),
         overlay_activated: null != (0, m.A)(),
         voice_channel_type: null != s ? s.type : null,
         location: n,

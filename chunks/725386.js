@@ -18,22 +18,22 @@ function A(e) {
     let { enabled: t } = o.A.useConfig({ location: e.location }),
         i = d.Q_.useSetting(),
         A = (0, a.bG)([m.default], () => m.default.getCurrentUser()),
-        h = (0, I.A)(A?.id),
-        E = (0, u.w$)(e),
+        E = (0, I.A)(A?.id),
+        h = (0, u.w$)(e),
         j = (0, a.bG)([c.A], () => c.A.getAllConfigsByApplication()),
         N = (0, a.bG)([c.A], () => c.A.getFeaturedApplicationIds()),
-        v = (0, a.bG)([c.A], () => c.A.getDeveloperApplicationIds());
+        T = (0, a.bG)([c.A], () => c.A.getDeveloperApplicationIds());
     return (
         n.useEffect(() => {
             t && ((0, r.Wq)(), i && (0, r.i$)());
         }, [t, i]),
         n.useMemo(() => {
-            let e = new Set(h.filter((e) => e instanceof f.R).map((e) => e.applicationId)),
-                n = new Set(h.map((e) => e.type));
+            let e = new Set(E.filter((e) => e instanceof f.R).map((e) => e.applicationId)),
+                n = new Set(E.map((e) => e.type));
             return p.Zc.flatMap((a) => {
                 if (a === s.x.APPLICATION) {
                     if (t) {
-                        let t = new Set([...N, ...(i ? v : [])]);
+                        let t = new Set([...N, ...(i ? T : [])]);
                         return Object.values(j)
                             .map((e) => e[0])
                             .filter(g.Vq)
@@ -47,15 +47,15 @@ function A(e) {
                             )
                             .map((e) => new f.R({ applicationId: e.application_id }));
                     }
-                    return null == E
+                    return null == h
                         ? []
-                        : E.filter((t) => !e.has(t.applicationId)).map(
-                              (e) => new f.R({ applicationId: e.applicationId }),
-                          );
+                        : h
+                              .filter((t) => !e.has(t.applicationId))
+                              .map((e) => new f.R({ applicationId: e.applicationId }));
                 }
                 if ((0, x.hL)(a)) return n.has(a) ? [] : new x.Yy({ type: a, games: [] });
                 (0, g.xb)(a);
             });
-        }, [t, i, j, N, v, E, h])
+        }, [t, i, j, N, T, h, E])
     );
 }

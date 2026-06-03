@@ -156,7 +156,7 @@ function W(e) {
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
                             n.e("81927"),
-                            n.e("21294"),
+                            n.e("42527"),
                             n.e("59957"),
                             n.e("28136"),
                             n.e("16084"),
@@ -196,7 +196,7 @@ function W(e) {
                     action: B.AG.DOWNLOAD,
                 }),
                     (0, m.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("81013"), n.e("44602"), n.e("25280")]).then(
+                        let { default: e } = await Promise.all([n.e("9446"), n.e("44602"), n.e("25280")]).then(
                             n.bind(n, 987482),
                         );
                         return (t) => (0, l.jsx)(e, { source: D.JJy.CHANNEL_WELCOME_CTA, ...t });
