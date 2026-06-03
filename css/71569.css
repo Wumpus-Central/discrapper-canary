@@ -120,19 +120,6 @@
     border: none
 }
 
-.container__492b5 {
-    background-color: transparent;
-    box-shadow: none
-}
-
-.image__492b5 {
-    margin-bottom: 8px
-}
-
-.subtitle__492b5 {
-    text-align: center
-}
-
 .nitroUpsellContainer_d0caf4 {
     align-items: center;
     display: flex;
@@ -4391,6 +4378,10 @@
 
 .user-profile-sidebar .banner__43147 {
     border-radius: 0
+}
+
+.custom-user-profile-theme.user-profile-sidebar .banner__43147 {
+    background: var(--background-surface-higher)
 }
 
 .text__43147 {
