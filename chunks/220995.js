@@ -6,8 +6,8 @@ var n = t(627968),
     r = t(922139),
     d = t(562708),
     u = t(17928),
-    o = t(990078),
-    c = t(192308),
+    c = t(990078),
+    o = t(192308),
     m = t(717421),
     A = t(922016),
     g = t(939249),
@@ -70,9 +70,10 @@ function P(e) {
         ),
         ei = l.useCallback(() => {
             null != B &&
-                (0, c.openModalLazy)(async () => {
+                (0, o.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        t.e("67942"),
+                        t.e("81927"),
+                        t.e("21294"),
                         t.e("59957"),
                         t.e("28136"),
                         t.e("16084"),
@@ -185,7 +186,7 @@ function P(e) {
                                           }),
                                       ],
                                   }),
-                                  (0, n.jsx)(o.m, {
+                                  (0, n.jsx)(c.m, {
                                       text: O.intl.string(O.t["EE+P0H"]),
                                       overflowOnly: !0,
                                       children: (0, n.jsx)(p.E, {

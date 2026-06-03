@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { A: () => ey });
+n.d(t, { A: () => eS });
 var i = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(17928),
-    l = n(761508),
-    u = n(534514),
-    c = n(915089),
-    d = n(763827),
-    _ = n(977997),
-    h = n(572487),
-    f = n(798286),
-    p = n(83942),
-    E = n(259374),
+    s = n(17928),
+    a = n(761508),
+    o = n(534514),
+    l = n(915089),
+    u = n(763827),
+    c = n(977997),
+    d = n(572487),
+    _ = n(798286),
+    h = n(83942),
+    f = n(259374),
+    p = n(503698),
+    E = n.n(p),
     m = n(459838),
     g = n(691540),
     A = n(857250),
@@ -26,7 +26,7 @@ var i = n(627968),
     C = n(233545),
     R = n(229659),
     O = n(885386),
-    b = n(761853),
+    b = n(728555),
     D = n(174459),
     L = n(957565),
     w = n(975571),
@@ -68,11 +68,11 @@ function F(e) {
             null != t && t(), C.ho();
         }, [e]),
         n = (0, r.useCallback)(() => {
-            let { hostname: t, averagePing: n, lastPing: s, outboundLossRate: o } = e,
-                l = O.Q_.getSetting();
+            let { hostname: t, averagePing: n, lastPing: s, outboundLossRate: a } = e,
+                o = O.Q_.getSetting();
             return (0, i.jsxs)(r.Fragment, {
                 children: [
-                    l &&
+                    o &&
                         (0, i.jsxs)("div", {
                             children: [
                                 (0, i.jsx)("div", {
@@ -95,17 +95,17 @@ function F(e) {
                               children: k.intl.format(k.t["6iv2TF"], { lastPing: s.toFixed(0) }),
                           })
                         : null,
-                    null != o
+                    null != a
                         ? (0, i.jsx)("div", {
                               className: U.xB,
-                              children: k.intl.format(k.t["VIBJM+"], { outboundLossRate: o.toFixed(1) }),
+                              children: k.intl.format(k.t["VIBJM+"], { outboundLossRate: a.toFixed(1) }),
                           })
                         : null,
                     (0, i.jsxs)("div", {
-                        className: a()(U.xB, U.xJ),
+                        className: E()(U.xB, U.xJ),
                         children: [
-                            null == o ? k.intl.formatToPlainString(k.t.vggaMt, { badPing: 250 }) : null,
-                            null != o
+                            null == a ? k.intl.formatToPlainString(k.t.vggaMt, { badPing: 250 }) : null,
+                            null != a
                                 ? k.intl.formatToPlainString(k.t["3pFz1P"], { badPing: 250, badLossRate: 10 })
                                 : null,
                         ],
@@ -113,9 +113,9 @@ function F(e) {
                 ],
             });
         }, [e]),
-        { connectionState: s, connectionTypeText: o } = e,
-        l = O.Q_.getSetting(),
-        u = {
+        { connectionState: s, connectionTypeText: a } = e,
+        o = O.Q_.getSetting(),
+        l = {
             [P.S7L.AWAITING_ENDPOINT]: k.intl.format(k.t.Eu2vUR, { url: P.qF7.STATUS }),
             [P.S7L.CONNECTING]: k.intl.string(k.t["y+E8aD"]),
             [P.S7L.AUTHENTICATING]: k.intl.string(k.t["5lGIZH"]),
@@ -131,29 +131,29 @@ function F(e) {
         }[s];
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            "function" == typeof u ? u() : (0, i.jsx)("p", { className: a()(U.xB, U.xJ), children: u }),
+            "function" == typeof l ? l() : (0, i.jsx)("p", { className: E()(U.xB, U.xJ), children: l }),
             (0, i.jsx)("hr", { className: U.me }),
             (0, i.jsxs)("div", {
                 className: U.Vf,
                 children: [
                     (0, i.jsxs)("span", {
-                        className: a()(U.uO, U.ro),
+                        className: E()(U.uO, U.ro),
                         children: [
                             (0, i.jsx)(T.X, {
                                 size: "xxs",
                                 color: S.A.colors.TEXT_FEEDBACK_POSITIVE.css,
                                 className: U.__invalid_icon,
                             }),
-                            o,
+                            a,
                         ],
                     }),
-                    l &&
+                    o &&
                         b.Ay.supports(x.O5.DIAGNOSTICS) &&
                         !__OVERLAY__ &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsxs)(y.Anchor, {
-                                    className: a()(U.Ce, U.ro),
+                                    className: E()(U.Ce, U.ro),
                                     onClick: t,
                                     children: [
                                         k.intl.string(k.t.KBoWg9),
@@ -165,7 +165,7 @@ function F(e) {
                                     ],
                                 }),
                                 (0, i.jsxs)(y.Anchor, {
-                                    className: a()(U.d3, U.ro),
+                                    className: E()(U.d3, U.ro),
                                     onClick: G,
                                     title: "Copy to clipboard",
                                     children: [
@@ -179,7 +179,7 @@ function F(e) {
                                 }),
                             ],
                         }),
-                    !l &&
+                    !o &&
                         !__OVERLAY__ &&
                         (0, i.jsx)(y.Anchor, {
                             className: U.Ce,
@@ -198,17 +198,17 @@ var V = n(834730),
     Y = n(500020);
 function W(e) {
     let { chunks: t, columns: n, className: s } = e,
-        o = r.useMemo(() => ({ "--secure-frames-columns": n }), [n]);
+        a = r.useMemo(() => ({ "--secure-frames-columns": n }), [n]);
     return null == t
         ? (0, i.jsx)("div", { className: Y.Lq, children: (0, i.jsx)(j.y, {}) })
         : (0, i.jsx)("div", {
-              style: o,
-              className: a()(Y.aY, s),
+              style: a,
+              className: E()(Y.aY, s),
               children: t.map((e, t) =>
                   (0, i.jsx)(
                       "div",
                       {
-                          className: a()(Y.iv, { [Y.yF]: t > n - 1 }),
+                          className: E()(Y.iv, { [Y.yF]: t > n - 1 }),
                           children: (0, i.jsx)(V.E, {
                               className: Y.ph,
                               variant: "code",
@@ -226,10 +226,10 @@ var K = n(930840),
     z = n(555273);
 function q(e) {
     let { channelId: t } = e,
-        n = (0, o.bG)([d.A], () => d.A.getSecureFramesState()?.epochAuthenticator),
-        s = (0, H.z)({ fingerprintBase64: n, chunkSize: 5, desiredLength: 30 }),
-        a = r.useCallback(() => {
-            (0, f.k0)({ channelId: t });
+        n = (0, s.bG)([u.A], () => u.A.getSecureFramesState()?.epochAuthenticator),
+        a = (0, H.z)({ fingerprintBase64: n, chunkSize: 5, desiredLength: 30 }),
+        l = r.useCallback(() => {
+            (0, _.k0)({ channelId: t });
         }, [t]);
     return (0, i.jsxs)("div", {
         className: z.kL,
@@ -249,16 +249,16 @@ function q(e) {
             (0, i.jsxs)("div", {
                 className: z.wx,
                 children: [
-                    (0, i.jsx)(u.D, {
+                    (0, i.jsx)(o.D, {
                         variant: "text-sm/bold",
                         color: "text-strong",
                         children: k.intl.string(k.t.cTQI5t),
                     }),
-                    null != s &&
-                        (0, i.jsx)(K.c, { chunks: s, color: S.A.colors.INTERACTIVE_TEXT_DEFAULT.css, onCopy: a }),
+                    null != a &&
+                        (0, i.jsx)(K.c, { chunks: a, color: S.A.colors.INTERACTIVE_TEXT_DEFAULT.css, onCopy: l }),
                 ],
             }),
-            (0, i.jsx)(W, { className: z.aY, chunks: s, columns: 3 }),
+            (0, i.jsx)(W, { className: z.aY, chunks: a, columns: 3 }),
             (0, i.jsx)(V.E, {
                 variant: "text-xs/normal",
                 color: "text-subtle",
@@ -466,20 +466,20 @@ var er = n(75811),
     es = n(209426);
 function ea(e) {
     let { channelId: t } = e,
-        n = (0, o.bG)([d.A], () => d.A.getSecureFramesState()?.epochAuthenticator),
-        s = (0, H.z)({ fingerprintBase64: n, chunkSize: 5, desiredLength: 30 }),
-        [a, l] = r.useState(!1),
-        c = r.useMemo(() => s?.join(" "), [s]),
-        _ = r.useCallback(() => {
-            null != c &&
-                (0, L.C)(c, () => {
-                    l(!0), (0, f.k0)({ channelId: t }), setTimeout(() => l(!1), 2e3);
+        n = (0, s.bG)([u.A], () => u.A.getSecureFramesState()?.epochAuthenticator),
+        a = (0, H.z)({ fingerprintBase64: n, chunkSize: 5, desiredLength: 30 }),
+        [l, c] = r.useState(!1),
+        d = r.useMemo(() => a?.join(" "), [a]),
+        h = r.useCallback(() => {
+            null != d &&
+                (0, L.C)(d, () => {
+                    c(!0), (0, _.k0)({ channelId: t }), setTimeout(() => c(!1), 2e3);
                 });
-        }, [t, c]);
+        }, [t, d]);
     return (0, i.jsxs)("div", {
         className: es.kL,
         children: [
-            (0, i.jsx)(u.D, { variant: "text-sm/bold", color: "text-strong", children: k.intl.string(k.t.cTQI5t) }),
+            (0, i.jsx)(o.D, { variant: "text-sm/bold", color: "text-strong", children: k.intl.string(k.t.cTQI5t) }),
             (0, i.jsx)(V.E, {
                 variant: "text-xs/normal",
                 color: "text-muted",
@@ -487,15 +487,15 @@ function ea(e) {
             }),
             (0, i.jsx)("div", {
                 className: es.on,
-                children: (0, i.jsx)(er.j, { chunks: s, columns: 3, className: es.lu }),
+                children: (0, i.jsx)(er.j, { chunks: a, columns: 3, className: es.lu }),
             }),
-            null != s &&
+            null != a &&
                 (0, i.jsxs)(Q.D, {
                     className: en.n2,
-                    onClick: _,
+                    onClick: h,
                     children: [
                         (0, i.jsx)("div", {
-                            className: a ? en.Dx : en.t6,
+                            className: l ? en.Dx : en.t6,
                             children: (0, i.jsx)(X.$, {
                                 icon: v.T,
                                 text: k.intl.string(k.t.OpuAlK),
@@ -505,7 +505,7 @@ function ea(e) {
                             }),
                         }),
                         (0, i.jsx)("div", {
-                            className: a ? en.t6 : en.Dx,
+                            className: l ? en.t6 : en.Dx,
                             children: (0, i.jsx)(X.$, {
                                 icon: J.y,
                                 text: k.intl.string(k.t.t5VZ88),
@@ -540,95 +540,94 @@ let eo = (0, n(240921).Ay)({
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
 var el = n(172115),
-    eu = n(9934),
-    ec = n(824078);
-function ed() {
-    return (0, o.cf)([d.A], () => ({
-        connectionState: d.A.getState(),
-        hostname: d.A.getHostname(),
-        averagePing: d.A.getAveragePing(),
-        lastPing: d.A.getLastPing(),
-        outboundLossRate: d.A.getOutboundLossRate(),
+    eu = n(9934);
+function ec() {
+    return (0, s.cf)([u.A], () => ({
+        connectionState: u.A.getState(),
+        hostname: u.A.getHostname(),
+        averagePing: u.A.getAveragePing(),
+        lastPing: u.A.getLastPing(),
+        outboundLossRate: u.A.getOutboundLossRate(),
+        pings: u.A.getPings(),
+    }));
+}
+function ed(e) {
+    return (0, s.cf)([d.A], () => ({
+        connectionState: d.A.getConnectionState(e),
+        hostname: d.A.getHostname(e),
+        averagePing: d.A.getAveragePing(e),
+        lastPing: d.A.getLastPing(e),
         pings: d.A.getPings(),
+        outboundLossRate: d.A.getOutboundLossRate(e),
     }));
 }
 function e_(e) {
-    return (0, o.cf)([h.A], () => ({
-        connectionState: h.A.getConnectionState(e),
-        hostname: h.A.getHostname(e),
-        averagePing: h.A.getAveragePing(e),
-        lastPing: h.A.getLastPing(e),
-        pings: h.A.getPings(),
-        outboundLossRate: h.A.getOutboundLossRate(e),
-    }));
+    let { lobbyId: t, connectionTypeText: n, closePopout: r } = e,
+        s = ed(t);
+    return (0, i.jsx)(ei, { ...s, closePopout: r, connectionTypeText: n });
 }
 function eh(e) {
     let { lobbyId: t, connectionTypeText: n, closePopout: r } = e,
-        s = e_(t);
-    return (0, i.jsx)(ei, { ...s, closePopout: r, connectionTypeText: n });
+        s = ed(t);
+    return (0, i.jsx)(F, { ...s, closePopout: r, connectionTypeText: n });
 }
 function ef(e) {
-    let { lobbyId: t, connectionTypeText: n, closePopout: r } = e,
-        s = e_(t);
-    return (0, i.jsx)(F, { ...s, closePopout: r, connectionTypeText: n });
+    let { closePopout: t, connectionTypeText: n } = e,
+        r = ec();
+    return (0, i.jsx)(ei, { ...r, closePopout: t, connectionTypeText: n });
 }
 function ep(e) {
     let { closePopout: t, connectionTypeText: n } = e,
-        r = ed();
-    return (0, i.jsx)(ei, { ...r, closePopout: t, connectionTypeText: n });
+        r = ec();
+    return (0, i.jsx)(F, { ...r, closePopout: t, connectionTypeText: n });
 }
 function eE(e) {
-    let { closePopout: t, connectionTypeText: n } = e,
-        r = ed();
-    return (0, i.jsx)(F, { ...r, closePopout: t, connectionTypeText: n });
+    let { channelId: t, isOverlay: n, lobbyId: r, closePopout: s } = e,
+        a = (0, f.k)({ channelId: t }) ? k.intl.string(k.t["3BogKe"]) : k.intl.string(k.t.ETIVvg);
+    return n
+        ? (0, i.jsx)(e_, { lobbyId: r, closePopout: s, connectionTypeText: a })
+        : (0, i.jsx)(ef, { closePopout: s, connectionTypeText: a });
 }
 function em(e) {
     let { channelId: t, isOverlay: n, lobbyId: r, closePopout: s } = e,
-        a = (0, E.k)({ channelId: t }) ? k.intl.string(k.t["3BogKe"]) : k.intl.string(k.t.ETIVvg);
+        a = (0, f.k)({ channelId: t }) ? k.intl.string(k.t["3BogKe"]) : k.intl.string(k.t.ETIVvg);
     return n
         ? (0, i.jsx)(eh, { lobbyId: r, closePopout: s, connectionTypeText: a })
         : (0, i.jsx)(ep, { closePopout: s, connectionTypeText: a });
 }
 function eg(e) {
-    let { channelId: t, isOverlay: n, lobbyId: r, closePopout: s } = e,
-        a = (0, E.k)({ channelId: t }) ? k.intl.string(k.t["3BogKe"]) : k.intl.string(k.t.ETIVvg);
-    return n
-        ? (0, i.jsx)(ef, { lobbyId: r, closePopout: s, connectionTypeText: a })
-        : (0, i.jsx)(eE, { closePopout: s, connectionTypeText: a });
-}
-function eA(e) {
     let [t, n] = r.useState($.Rj.RTC_DEBUG_PANEL),
-        s = (0, c.GV)(),
+        s = (0, l.GV)(),
         o = [
-            { id: $.Rj.RTC_DEBUG_PANEL, content: (0, i.jsx)(em, { ...e }) },
+            { id: $.Rj.RTC_DEBUG_PANEL, content: (0, i.jsx)(eE, { ...e }) },
             { id: $.Rj.RTC_SECURE_FRAMES, content: (0, i.jsx)(ea, { channelId: e.channelId }) },
         ];
     r.useEffect(() => {
-        (0, f.Hg)({ channelId: e.channelId, selectedTab: t });
+        (0, _.Hg)({ channelId: e.channelId, selectedTab: t });
     }, [e.channelId, t]);
-    let u = (0, p.c)();
+    let u = (0, h.c)();
     return (
         r.useEffect(() => {
             u && n($.Rj.RTC_DEBUG_PANEL);
         }, [u]),
         (0, i.jsxs)("div", {
-            className: a()(ec.popover, eu.kL),
+            className: eu.kL,
             children: [
-                (0, i.jsxs)(l.V, {
+                (0, i.jsxs)(a.V, {
                     className: eu.vR,
                     selectedItem: t,
                     type: "top",
                     look: "brand",
                     onItemSelect: n,
                     children: [
-                        (0, i.jsx)(l.V.Item, {
+                        (0, i.jsx)(a.V.Item, {
                             id: $.Rj.RTC_DEBUG_PANEL,
                             className: eu.YU,
                             children: k.intl.string(k.t.MBY1Pm),
                         }),
                         u
                             ? null
-                            : (0, i.jsx)(l.V.Item, {
+                            : (0, i.jsx)(a.V.Item, {
                                   id: $.Rj.RTC_SECURE_FRAMES,
                                   className: eu.YU,
                                   children: k.intl.string(k.t.zC6o3s),
@@ -640,7 +639,7 @@ function eA(e) {
                     children: o.map((e) => {
                         let { id: n, content: r } = e;
                         return (0, i.jsx)(
-                            l.V.Panel,
+                            a.V.Panel,
                             { id: n, "aria-labelledby": s, className: n !== t ? eu._t : void 0, children: r },
                             n,
                         );
@@ -650,76 +649,76 @@ function eA(e) {
         })
     );
 }
-function eI(e) {
-    let t = (0, o.bG)([_.A], () => _.A.hasVideo(e.channelId)),
-        [n, s] = r.useState($.Rj.RTC_DEBUG_PANEL),
-        a = (0, c.GV)(),
-        d = r.useMemo(() => {
+function eA(e) {
+    let t = (0, s.bG)([c.A], () => c.A.hasVideo(e.channelId)),
+        [n, u] = r.useState($.Rj.RTC_DEBUG_PANEL),
+        d = (0, l.GV)(),
+        f = r.useMemo(() => {
             switch (n) {
                 case $.Rj.RTC_DEBUG_PANEL:
-                    return (0, i.jsx)(eg, { ...e });
+                    return (0, i.jsx)(em, { ...e });
                 case $.Rj.RTC_SECURE_FRAMES:
                     return (0, i.jsx)(q, { channelId: e.channelId });
             }
         }, [e, n]);
     r.useEffect(() => {
-        (0, f.Hg)({ channelId: e.channelId, selectedTab: n });
+        (0, _.Hg)({ channelId: e.channelId, selectedTab: n });
     }, [e.channelId, n]);
-    let h = (0, p.c)();
+    let p = (0, h.c)();
     return (
         r.useEffect(() => {
-            h && s($.Rj.RTC_DEBUG_PANEL);
-        }, [h]),
+            p && u($.Rj.RTC_DEBUG_PANEL);
+        }, [p]),
         (0, i.jsxs)("div", {
             className: el.kL,
             children: [
-                (0, i.jsx)(u.D, {
+                (0, i.jsx)(o.D, {
                     className: el.DD,
                     variant: "heading-lg/bold",
                     color: "text-strong",
                     children: t ? k.intl.string(k.t.IlHdW8) : k.intl.string(k.t.WsOisp),
                 }),
-                (0, i.jsxs)(l.V, {
+                (0, i.jsxs)(a.V, {
                     className: el.vR,
                     selectedItem: n,
                     type: "top",
                     look: "brand",
-                    onItemSelect: s,
+                    onItemSelect: u,
                     children: [
-                        (0, i.jsx)(l.V.Item, {
+                        (0, i.jsx)(a.V.Item, {
                             id: $.Rj.RTC_DEBUG_PANEL,
                             className: el.YU,
                             children: k.intl.string(k.t.MBY1Pm),
                         }),
-                        h
+                        p
                             ? null
-                            : (0, i.jsx)(l.V.Item, {
+                            : (0, i.jsx)(a.V.Item, {
                                   id: $.Rj.RTC_SECURE_FRAMES,
                                   className: el.YU,
                                   children: k.intl.string(k.t.zC6o3s),
                               }),
                     ],
                 }),
-                (0, i.jsx)(l.V.Panel, { id: n, "aria-labelledby": a, children: d }),
+                (0, i.jsx)(a.V.Panel, { id: n, "aria-labelledby": d, children: f }),
             ],
         })
     );
 }
-function eT(e) {
-    return (0, E.k)({ channelId: e.channelId })
-        ? (0, i.jsx)(eI, { ...e })
+function eI(e) {
+    return (0, f.k)({ channelId: e.channelId })
+        ? (0, i.jsx)(eA, { ...e })
         : (0, i.jsx)("div", {
               className: el.L3,
-              children: (0, i.jsx)("section", { className: el.J8, children: (0, i.jsx)(eg, { ...e }) }),
+              children: (0, i.jsx)("section", { className: el.J8, children: (0, i.jsx)(em, { ...e }) }),
           });
 }
-function eS(e) {
-    return (0, E.k)({ channelId: e.channelId })
-        ? (0, i.jsx)(eA, { ...e })
-        : (0, i.jsx)("div", { className: a()(ec.popover, eu.L3), children: (0, i.jsx)(em, { ...e }) });
+function eT(e) {
+    return (0, f.k)({ channelId: e.channelId })
+        ? (0, i.jsx)(eg, { ...e })
+        : (0, i.jsx)("div", { className: eu.L3, children: (0, i.jsx)(eE, { ...e }) });
 }
-function ey(e) {
+function eS(e) {
     return eo.useConfig({ location: "RTCConnectionPopout" }).enabled
-        ? (0, i.jsx)(eS, { ...e })
-        : (0, i.jsx)(eT, { ...e });
+        ? (0, i.jsx)(eT, { ...e })
+        : (0, i.jsx)(eI, { ...e });
 }

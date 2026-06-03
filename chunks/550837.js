@@ -1,5 +1,5 @@
 _.exports = {
-    SW: "popout__76f04",
+    SW: "popout__76f04 " + a(824078).popover,
     DD: "title__76f04",
     p_: "list__76f04",
     nM: "row__76f04",
