@@ -240,14 +240,13 @@ function eH(e) {
         T = c ?? I,
         S = null != u,
         y = S && h,
-        N = { offset: { top: -8, left: -8, right: -8, bottom: -8 } },
-        v = r.useCallback(() => {
+        N = r.useCallback(() => {
             g(!0);
         }, []),
-        C = r.useCallback(() => {
+        v = r.useCallback(() => {
             (0, A.hasAnyModalOpen)() || g(!1);
         }, []),
-        R = () =>
+        C = () =>
             (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)("div", {
@@ -273,24 +272,18 @@ function eH(e) {
                     }),
                 ],
             }),
-        O = (e) => {
+        R = (e) => {
             let t;
             return (
                 (t = y
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(E.D, {
-                                  className: eV.ef,
-                                  onClick: f,
-                                  focusProps: { offset: { ...N.offset, right: 0 } },
-                                  children: R(),
-                              }),
+                              (0, i.jsx)(E.D, { className: eV.ef, onClick: f, children: C() }),
                               (0, i.jsx)(E.D, {
                                   className: eV.ap,
                                   "aria-label": ep.intl.string(ep.t.PdRCRg),
                                   ...e,
-                                  onClick: v,
-                                  focusProps: N,
+                                  onClick: N,
                                   children: (0, i.jsx)(eG._, { size: "xs", color: "currentColor" }),
                               }),
                           ],
@@ -299,36 +292,35 @@ function eH(e) {
                       ? (0, i.jsxs)(E.D, {
                             className: eV.ef,
                             ...e,
-                            onClick: v,
-                            focusProps: N,
+                            onClick: N,
                             children: [
-                                R(),
+                                C(),
                                 (0, i.jsx)("div", {
                                     className: eV.ap,
                                     children: (0, i.jsx)(eG._, { size: "xs", color: "currentColor" }),
                                 }),
                             ],
                         })
-                      : (0, i.jsx)(E.D, { className: eV.ef, onClick: f, focusProps: N, children: R() })),
+                      : (0, i.jsx)(E.D, { className: eV.ef, onClick: f, children: C() })),
                 (0, i.jsx)("div", { ref: T, className: eV.jG, children: t })
             );
         };
     return S
         ? (0, i.jsx)("li", {
               className: eV.j$,
-              onMouseEnter: v,
-              onMouseLeave: C,
+              onMouseEnter: N,
+              onMouseLeave: v,
               children: (0, i.jsx)(p.Y, {
                   targetElementRef: d ?? T,
                   align: _,
                   spacing: 0,
                   renderPopout: u,
                   shouldShow: m,
-                  onRequestClose: C,
-                  children: O,
+                  onRequestClose: v,
+                  children: R,
               }),
           })
-        : (0, i.jsx)("li", { className: eV.j$, children: O() });
+        : (0, i.jsx)("li", { className: eV.j$, children: R() });
 }
 function ej(e) {
     let { children: t, "aria-label": n } = e;
@@ -2722,7 +2714,7 @@ class rP extends r.PureComponent {
                     n.e("14045"),
                     n.e("57006"),
                     n.e("4960"),
-                    n.e("2570"),
+                    n.e("5330"),
                     n.e("90665"),
                     n.e("38612"),
                     n.e("35028"),
@@ -2752,7 +2744,7 @@ class rP extends r.PureComponent {
                     n.e("15086"),
                     n.e("18042"),
                     n.e("14898"),
-                    n.e("41216"),
+                    n.e("77138"),
                     n.e("23924"),
                     n.e("42205"),
                     n.e("71091"),
