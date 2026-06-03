@@ -2,10 +2,9 @@
     border-top: 1px solid var(--user-profile-border)
 }
 
-.footerButton__272c7,
 .footerContainer__272c7 {
     position: relative;
-    z-index: 0
+    z-index: var(--custom-user-profile-middle-layer-z-index)
 }
 
 .footerButton__272c7 {
@@ -15,7 +14,9 @@
     display: flex;
     height: var(--custom-user-profile-footer-height);
     justify-content: center;
-    width: 100%
+    position: relative;
+    width: 100%;
+    z-index: 0
 }
 
 .custom-user-profile-theme .footerButton__272c7:before {
