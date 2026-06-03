@@ -1,56 +1,55 @@
-"use strict";
-n.d(t, { A: () => _ });
-var i = n(627968);
+n.d(t, { A: () => c });
+var a = n(627968);
 n(64700);
-var r = n(877624),
-    s = n(43105),
-    a = n(403581),
-    o = n(549996),
-    l = n(498470),
-    u = n(807098),
-    c = n(637706),
-    d = n(49999);
-function _(e) {
-    let { children: t, targetElementRef: n, dismissPopover: _ } = e,
-        h = (0, o.c)(r.C.PREMIUM_TAB_POPOVER),
-        f =
-            null != h && "premiumTabPopover" === h.properties.properties.oneofKind
-                ? h.properties.properties.premiumTabPopover
+var o = n(877624),
+    r = n(43105),
+    l = n(403581),
+    i = n(549996),
+    d = n(498470),
+    s = n(807098),
+    p = n(637706),
+    u = n(49999);
+function c(e) {
+    let { children: t, targetElementRef: n, dismissPopover: c } = e,
+        m = (0, i.c)(o.C.PREMIUM_TAB_POPOVER),
+        b =
+            null != m && "premiumTabPopover" === m.properties.properties.oneofKind
+                ? m.properties.properties.premiumTabPopover
                 : null,
-        p = (0, u.T)(f?.asset);
-    if (null == f) return t;
-    let E =
-            f.button?.copy != null
+        g = (0, s.T)(b?.asset);
+    if (null == b) return t;
+    let f =
+            b.button?.copy != null
                 ? [
                       {
-                          text: f.button.copy,
+                          text: b.button.copy,
                           variant: "expressive",
-                          onClick: (0, l.h)({
-                              buttonAction: f.button.buttonAction,
-                              deeplinkSection: f.button.deeplinkSection,
-                              onClose: () => _(d.i.USER_DISMISS),
+                          onClick: (0, d.h)({
+                              buttonAction: b.button.buttonAction,
+                              deeplinkSection: b.button.deeplinkSection,
+                              onClose: () => c(u.i.USER_DISMISS),
                           }),
-                          icon: a.t,
+                          icon: l.t,
                       },
                   ]
                 : void 0,
-        m = (0, c.C)(f.helpArticle, f.helpArticleId);
-    return (0, i.jsxs)(i.Fragment, {
+        _ = (0, p.C)(b.helpArticle, b.helpArticleId);
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, i.jsx)("div", { children: t }),
-            (0, i.jsx)(s.A, {
+            (0, a.jsx)("div", { children: t }),
+            (0, a.jsx)(r.A, {
                 targetElementRef: n,
-                title: f.header,
-                body: f.body,
-                textLink: null != m ? { text: m.linkText, link: m.url } : void 0,
-                graphic: null != p ? { type: "image", src: p } : void 0,
+                title: b.header,
+                body: b.body,
+                textLink: null != _ ? { text: _.linkText, link: _.url } : void 0,
+                graphic: null != g ? { type: "image", src: g } : void 0,
                 size: "md",
                 align: "top",
                 alignmentStrategy: "edge",
                 position: "right",
                 caretConfig: { align: "start" },
-                actions: E,
-                onRequestClose: () => _(d.i.USER_DISMISS),
+                actions: f,
+                onRequestClose: () => c(u.i.USER_DISMISS),
                 gradientColor: "nitro-pink",
             }),
         ],
