@@ -1665,12 +1665,12 @@ html:not(.chat-input) .inputInner_b1f01d {
     display: inline-flex;
     gap: 2px;
     height: unset;
-    inset-inline-end: min(8px, calc(50% - 29px));
+    inset-inline-end: min(8px, calc(50% - 60px));
     opacity: 0;
     padding: 2px;
     pointer-events: none;
     position: absolute;
-    top: -16px
+    top: -20px
 }
 
 .custom-user-profile-theme.theme-dark .popover_c97e55 {
@@ -1703,12 +1703,12 @@ html:not(.chat-input) .inputInner_b1f01d {
 @keyframes hoverIn_c97e55 {
     0% {
         opacity: 0;
-        top: -14px
+        top: -18px
     }
 
     to {
         opacity: 1;
-        top: -16px
+        top: -20px
     }
 }
 
