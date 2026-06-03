@@ -47,4 +47,5 @@ var i,
         (i.GOOGLE_WALLET_VERIFICATION_FAILED = "google_wallet_verification_failed"),
         (i.BADGE_DIRECTORY_MODAL_OPEN = "badge_directory_modal_open"),
         (i.BADGE_DIRECTORY_CATALOG_FETCH = "badge_directory_catalog_fetch"),
+        (i.BADGE_DIRECTORY_ERROR_STATE_VIEWED = "badge_directory_error_state_viewed"),
         i);
