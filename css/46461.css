@@ -3,8 +3,10 @@
     border: 1px solid var(--border-normal);
     border-radius: var(--radius-lg);
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
     padding: var(--space-8) var(--space-12);
+    white-space: nowrap;
     width: -moz-fit-content;
     width: fit-content
 }

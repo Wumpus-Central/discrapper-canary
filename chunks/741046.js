@@ -13,8 +13,8 @@ var i,
     g = t(107834),
     h = t(793574),
     N = t(688810),
-    j = t(753390),
-    p = t(86379),
+    p = t(753390),
+    j = t(86379),
     f = t(160946),
     A = t(545075),
     v = t(949030),
@@ -155,22 +155,22 @@ let eh = () => {
     });
 };
 var eN = t(375708),
-    ej = t(296725);
-let ep = n.forwardRef((e, s) => {
+    ep = t(296725);
+let ej = n.forwardRef((e, s) => {
     let { analyticsLocations: t } = (0, N.Ay)(h.A.PREMIUM_MARKETING_FOOTER_CTA);
     return (0, a.jsx)(N.f5, {
         value: t,
         children: (0, a.jsx)("div", {
             ref: s,
-            className: ej.kL,
+            className: ep.kL,
             children: (0, a.jsxs)("div", {
-                className: ej.hQ,
+                className: ep.hQ,
                 children: [
                     (0, a.jsx)(eh, {}),
                     (0, a.jsx)(eo.D, {
                         variant: "display-md",
                         color: "text-strong",
-                        className: ej.RH,
+                        className: ep.RH,
                         children: eN.intl.string(eN.t.lEw32m),
                     }),
                 ],
@@ -178,7 +178,7 @@ let ep = n.forwardRef((e, s) => {
         }),
     });
 });
-ep.displayName = "PremiumMarketingFooter";
+ej.displayName = "PremiumMarketingFooter";
 var ef = t(403581),
     eA = t(939249),
     ev = t(834730),
@@ -485,7 +485,7 @@ var e5 = t(579245),
     e4 = t(175569),
     e9 = t(369805);
 let e3 = () => {
-    let e = (0, e9.A)();
+    let e = (0, e9.A)(void 0, { includesPremiumGroup: !0 });
     return null == e ? null : (0, a.jsx)(e4.A, { text: e });
 };
 var se = t(97352);
@@ -535,8 +535,8 @@ let sl = n.memo(
             m = null != d,
             u = (0, o.bG)([B.A], () => B.A.useReducedMotion),
             { visibilityPercentageRef: x, visibilityPercentage: g } = (0, e$.U)(!u),
-            j = (0, D.b)(),
-            p = !m && j.length > 0,
+            p = (0, D.b)(),
+            j = !m && p.length > 0,
             f = (0, eq.c)(eX.C.MARKETING_PAGE_BANNER),
             A = null != f && "marketingPageBanner" === f.properties.properties.oneofKind,
             v = (0, eY.ar)() && !A,
@@ -575,7 +575,7 @@ let sl = n.memo(
                                             className: sn.eZ,
                                             children: (0, a.jsx)(e7, { referrer: d }),
                                         }),
-                                    p &&
+                                    j &&
                                         (0, a.jsx)("div", {
                                             className: sn.Qn,
                                             children: (0, a.jsx)(e5.A, {
@@ -633,8 +633,8 @@ t(321073);
 var sg = t(773669),
     sh = t(975571),
     sN = t(398523),
-    sj = t(881373),
-    sp = t(84483),
+    sp = t(881373),
+    sj = t(84483),
     sf = t(190107),
     sA = t(962995),
     sv = t(490285),
@@ -762,8 +762,8 @@ let sE = (e) => {
             u = (0, su.YJ)(m),
             x = null != m && (0, su.U9)(m, eL.pe.TIER_2) && u === eL.gD.PREMIUM_MONTH_TIER_2,
             g = (0, su.N1)(u),
-            j = null != g ? `${g}/${(0, W.FJ)(eL.WT.MONTH)}` : "",
-            p = (0, W.JM)(eL.gD.PREMIUM_MONTH_TIER_0),
+            p = null != g ? `${g}/${(0, W.FJ)(eL.WT.MONTH)}` : "",
+            j = (0, W.JM)(eL.gD.PREMIUM_MONTH_TIER_0),
             f = (0, W.JM)(eL.gD.PREMIUM_MONTH_TIER_2),
             A = (() => {
                 let e = (0, e_.l)("premium_marketing_comparison"),
@@ -797,10 +797,10 @@ let sE = (e) => {
                     i = [],
                     { shouldShowBonusOrbsUX: a, multiplier: n } = (0, F.lk)(sf.rE.NITRO_HOME_MARKETING),
                     { enabled: l } = sN.Ay.useConfig({ location: "useGetV2PlanComparisonTableRowsApplicationHome" }),
-                    { functionalityEnabled: r } = (0, sj.YS)({
+                    { functionalityEnabled: r } = (0, sp.YS)({
                         location: "useGetV2PlanComparisonTableRowsApplicationHome",
                     }),
-                    { isInTreatment: c } = (0, sp.uX)("premium_marketing_comparison");
+                    { isInTreatment: c } = (0, sj.uX)("premium_marketing_comparison");
                 return (
                     e &&
                         ((t = {
@@ -1006,10 +1006,10 @@ let sE = (e) => {
                                 className: sC.tp,
                                 children: [
                                     (0, a.jsx)(sS, {
-                                        tier0Price: p,
+                                        tier0Price: j,
                                         tier2Price: f,
                                         shouldUseDiscountPrice: x,
-                                        tier2DiscountedPriceString: j,
+                                        tier2DiscountedPriceString: p,
                                     }),
                                     A.map((e) => (0, n.createElement)(sR, { ...e, key: e.id })),
                                 ],
@@ -1098,7 +1098,7 @@ let sk = () => {
         };
         return e.addEventListener("animationend", s), () => e.removeEventListener("animationend", s);
     }, [u]);
-    let [j, p] = n.useState(!1),
+    let [p, j] = n.useState(!1),
         [f, A] = n.useState(!1),
         [C, I] = n.useState(!1),
         [E, T] = n.useState(!1),
@@ -1136,7 +1136,7 @@ let sk = () => {
                             ref: $.ref,
                             children: (0, a.jsx)(L.L, {
                                 innerRef: l,
-                                onChange: (e) => p(e),
+                                onChange: (e) => j(e),
                                 threshold: 0,
                                 active: !0,
                                 children: (0, a.jsx)(sl, {
@@ -1185,8 +1185,8 @@ let sk = () => {
                     },
                     children: (0, a.jsx)("div", { ref: d, className: sD._Z }),
                 }),
-                (0, a.jsx)(ep, { ref: m }),
-                (0, a.jsx)(ec, { isVisible: !j && !f && E, subscriptionTier: y, isEligibleForBogoPromotion: D }),
+                (0, a.jsx)(ej, { ref: m }),
+                (0, a.jsx)(ec, { isVisible: !p && !f && E, subscriptionTier: y, isEligibleForBogoPromotion: D }),
                 (0, a.jsx)(ee, { className: sD.MF }),
             ],
         });
@@ -1680,11 +1680,11 @@ var tx = t(22118),
     tg = t(111932),
     th = t(16939),
     tN = t(79119);
-let tj = (e) => {
+let tp = (e) => {
         let { inOfferExperience: s } = e;
         return s ? (0, a.jsx)(sX, { lifted: s }) : null;
     },
-    tp = () => {
+    tj = () => {
         (0, b.P)(v.b);
         let e = n.useRef(null),
             s = n.useRef(null),
@@ -1694,7 +1694,7 @@ let tj = (e) => {
             [c, d] = n.useState(!1),
             [m, u] = n.useState(!1),
             [x, g] = n.useState(!1),
-            [j, p] = n.useState(!1),
+            [p, j] = n.useState(!1),
             f = (0, o.bG)([_.A], () => _.A.getPremiumTypeSubscription()),
             A = null != f ? (0, W.EL)(f) : null,
             C = null != A ? W.Ay.getSkuIdForPlan(A.planId) : null,
@@ -1713,7 +1713,7 @@ let tj = (e) => {
             }),
             { analyticsLocations: k } = (0, N.Ay)(h.A.PREMIUM_MARKETING);
         n.useEffect(() => {
-            p(!0);
+            j(!0);
         }, []);
         let G = (0, a.jsx)("div", {
             className: th.dY,
@@ -1763,7 +1763,7 @@ let tj = (e) => {
                     (0, a.jsxs)("div", {
                         className: th.n1,
                         children: [
-                            (0, a.jsx)(tj, { inOfferExperience: R }),
+                            (0, a.jsx)(tp, { inOfferExperience: R }),
                             P &&
                                 (0, a.jsx)(eI.l, {
                                     className: th.ij,
@@ -1809,7 +1809,7 @@ let tj = (e) => {
                 (0, a.jsx)("div", { className: th.aC, children: (0, a.jsx)(tx.A, { className: th.JQ, hideCTAs: !0 }) }),
                 (0, a.jsx)("div", { className: th.hz }),
                 (0, a.jsx)(tl, {
-                    isVisible: !c && !m && j,
+                    isVisible: !c && !m && p,
                     subscriptionTier: I,
                     isApplicationHome: !1,
                     isEligibleForBogoPromotion: M,
@@ -1845,7 +1845,7 @@ let tj = (e) => {
             !0 === l && (0, w.QG)(), !0 === r && (0, w.ne)(c), (null != t || null != i) && (0, P.u1)(t, i);
         }, [t, i, l, r, c]),
         s === eL.Mf.UserSettings)
-            ? (0, a.jsx)(tp, {})
+            ? (0, a.jsx)(tj, {})
             : s === eL.Mf.ApplicationStoreHome
               ? (0, a.jsx)(sk, {})
               : null;
@@ -1854,7 +1854,7 @@ var tA = t(972119);
 let tv = function (e) {
     let { entrypoint: s = eL.Mf.UserSettings } = e;
     (0, b.P)(v.b);
-    let t = (0, p.Hp)(),
+    let t = (0, j.Hp)(),
         { sourceAnalyticsLocations: i, analyticsLocations: l } = (0, N.Ay)(h.A.PREMIUM_MARKETING),
         G = (0, o.bG)([_.A], () => _.A.hasFetchedSubscriptions()),
         w = (0, o.bG)([R.A], () => R.A.hasFetchedPaymentSources),
@@ -1870,7 +1870,7 @@ let tv = function (e) {
         n.useEffect(() => {
             m.h.wait(async () => {
                 let e = Date.now();
-                await Promise.all([j.hP(), j.$o(), (0, u.zS)(null, null, el.tF5.DISCOVERY)]),
+                await Promise.all([p.hP(), p.$o(), (0, u.zS)(null, null, el.tF5.DISCOVERY)]),
                     (W.current = Date.now() - e),
                     K(!1);
             });

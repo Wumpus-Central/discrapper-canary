@@ -1,3 +1,39 @@
+.card_b44011 {
+    border-color: var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    overflow: hidden
+}
+
+.card_b44011.inModal_b44011 {
+    gap: 8px;
+    padding: var(--space-8) var(--space-16)
+}
+
+.cardHeader_b44011 {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    display: flex;
+    justify-content: space-between;
+    padding: 16px
+}
+
+.cardHeader_b44011.inModal_b44011 {
+    background-color: unset;
+    padding: 8px 0
+}
+
+.emptyCard__0a9e8 {
+    border-width: 0;
+    padding: 36px 16px;
+    text-align: center
+}
+
+.title__0a9e8 {
+    text-transform: uppercase
+}
+
 .channelIcon_e98186 {
     color: var(--text-default)
 }

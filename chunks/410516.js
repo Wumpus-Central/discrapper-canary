@@ -95,11 +95,12 @@ let S = (e, t, n, r) => {
     },
     y = (e) => {
         let t = (0, f.O)(),
-            { priceOptions: n, discountAmountOff: i } = S(e, t);
-        if (null == e || null == t) return null;
+            n = (0, f.p)(),
+            { priceOptions: i, discountAmountOff: r } = S(e, t ?? n);
+        if (null == e || (null == t && null == n)) return null;
         try {
-            let t = (0, c.y8)(e, !1, !1, n);
-            return (0, d.$g)(t.amount - (i ?? 0), t.currency);
+            let t = (0, c.y8)(e, !1, !1, i);
+            return (0, d.$g)(t.amount - (r ?? 0), t.currency);
         } catch {
             return null;
         }
