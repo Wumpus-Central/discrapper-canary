@@ -24,8 +24,8 @@ function x(e) {
         m = (0, r.VU)();
     return u
         ? (0, n.jsx)("div", {
-              className: s()(g.kL, l),
-              children: m ? (0, n.jsx)(c.S, { className: g.Wg }) : (0, n.jsx)(d.A, { className: g.ZS, guildId: i }),
+              className: s()(g.k, l),
+              children: m ? (0, n.jsx)(c.S, { className: g.W }) : (0, n.jsx)(d.A, { guildId: i }),
           })
         : null;
 }

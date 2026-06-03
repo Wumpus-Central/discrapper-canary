@@ -304,7 +304,7 @@ function ew(e) {
                 }),
                 (0, h.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("17611"),
+                        n.e("69565"),
                         n.e("62691"),
                         n.e("71202"),
                         n.e("53274"),
@@ -585,10 +585,10 @@ let te = r.memo(function (e) {
                                         }),
                                         (0, h.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
-                                                n.e("5872"),
-                                                n.e("36780"),
+                                                n.e("66559"),
+                                                n.e("67942"),
                                                 n.e("68331"),
-                                                n.e("94307"),
+                                                n.e("16688"),
                                                 n.e("8891"),
                                                 n.e("83952"),
                                                 n.e("66580"),
@@ -1390,10 +1390,10 @@ let tk = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 W.default.track(e_.HAw.OPEN_MODAL, { type: e_.JJy.CREATE_STICKER_MODAL, location: c }),
                                     (0, h.openModalLazy)(async () => {
                                         let { default: t } = await Promise.all([
-                                            n.e("5872"),
-                                            n.e("36780"),
+                                            n.e("66559"),
+                                            n.e("67942"),
                                             n.e("68331"),
-                                            n.e("94307"),
+                                            n.e("16688"),
                                             n.e("8891"),
                                             n.e("83952"),
                                             n.e("66580"),

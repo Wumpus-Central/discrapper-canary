@@ -1,0 +1,10 @@
+.actionBarInput_d295eb {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.emptyState_d295eb {
+    margin: 8px 24px;
+    text-align: center
+}

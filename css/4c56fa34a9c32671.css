@@ -1,0 +1,96 @@
+.destinationRow__85e39 {
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    min-height: 48px;
+    padding: 0 8px
+}
+
+.destinationRow__85e39.disabled__85e39 {
+    cursor: not-allowed
+}
+
+.destinationRow__85e39:not(.disabled__85e39):hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.identity__85e39 {
+    align-items: center;
+    flex-direction: row;
+    flex-shrink: 1;
+    gap: 12px
+}
+
+.identity__85e39,
+.labels__85e39 {
+    display: flex;
+    overflow: hidden
+}
+
+.labels__85e39 {
+    flex-direction: column;
+    margin: 4px 0
+}
+
+.label__85e39 {
+    color: var(--text-strong)
+}
+
+.sublabel__85e39 {
+    color: var(--text-muted)
+}
+
+.threadSubLabel__85e39 {
+    align-items: center;
+    display: flex
+}
+
+.subLabelIcon__85e39 {
+    height: 12px;
+    margin-inline-end: 2px;
+    width: 12px
+}
+
+.subLabelSeparator__85e39 {
+    margin: 0 4px
+}
+
+.disabled__85e39 .iconWrapper__85e39 {
+    opacity: 50%
+}
+
+.disabled__85e39 .label__85e39,
+.disabled__85e39 .subLabel__85e39 {
+    color: var(--text-muted)
+}
+
+.checkbox__85e39 {
+    flex: 0;
+    margin-inline-start: 16px
+}
+
+.fauxButton__85e39 {
+    pointer-events: none
+}
+
+.warningIcon__85e39 {
+    color: var(--text-feedback-warning)
+}
+
+.noResults__85e39 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    margin: 0 32px;
+    text-align: center
+}
+
+.noResultsImg__85e39 {
+    width: 200px
+}

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { C: () => p, JE: () => _, NE: () => h, VU: () => E, bA: () => g, eo: () => m, mb: () => f }),
+n.d(t, { C: () => E, JE: () => h, NE: () => f, VU: () => m, bA: () => A, eo: () => g, mb: () => p }),
     n(323874),
     n(14289),
     n(35956);
@@ -9,16 +9,17 @@ var i = n(64700),
     a = n(121894),
     o = n(816866),
     l = n(87558),
-    u = n(559474);
-function c(e) {
+    u = n(875741),
+    c = n(559474);
+function d(e) {
     null != e.previewSrc && URL.revokeObjectURL(e.previewSrc),
         Object.values(e.layerSrcByLayerId).forEach((e) => URL.revokeObjectURL(e));
 }
-function d(e) {
+function _(e) {
     let { collectionAssets: t, avatarDecorationAssets: n, profileFrameAssets: i, previewProfileEffectSkuId: r } = e;
     return Object.keys(t).length > 0 || Object.keys(n).length > 0 || Object.keys(i).length > 0 || null != r;
 }
-let _ = (0, s.v)((e) => ({
+let h = (0, s.v)((e) => ({
         previewEnabled: !1,
         collectionAssets: {},
         avatarDecorationAssets: {},
@@ -50,7 +51,7 @@ let _ = (0, s.v)((e) => ({
                     if (null == n) return e;
                     URL.revokeObjectURL(n.src);
                     let { [t]: i, ...r } = e.collectionAssets;
-                    return { ...e, collectionAssets: r, previewEnabled: d({ ...e, collectionAssets: r }) };
+                    return { ...e, collectionAssets: r, previewEnabled: _({ ...e, collectionAssets: r }) };
                 });
             }),
         upsertAvatarDecorationAsset: (t) =>
@@ -61,7 +62,7 @@ let _ = (0, s.v)((e) => ({
                     let i = URL.createObjectURL(t),
                         r = { ...e.avatarDecorationAssets };
                     return (
-                        (r[t.name] = { type: u.Jn.AVATAR_DECORATION, name: t.name, src: i }),
+                        (r[t.name] = { type: c.Jn.AVATAR_DECORATION, name: t.name, src: i }),
                         {
                             ...e,
                             avatarDecorationAssets: r,
@@ -83,7 +84,7 @@ let _ = (0, s.v)((e) => ({
                         ...e,
                         avatarDecorationAssets: r,
                         previewAvatarDecorationKey: s ? null : e.previewAvatarDecorationKey,
-                        previewEnabled: d({ ...e, avatarDecorationAssets: r }),
+                        previewEnabled: _({ ...e, avatarDecorationAssets: r }),
                     };
                 });
             }),
@@ -92,7 +93,7 @@ let _ = (0, s.v)((e) => ({
                 e((e) => {
                     let i = e.profileFrameAssets[t];
                     return (
-                        null != i && c(i),
+                        null != i && d(i),
                         {
                             ...e,
                             profileFrameAssets: { ...e.profileFrameAssets, [t]: n },
@@ -107,14 +108,14 @@ let _ = (0, s.v)((e) => ({
                 e((e) => {
                     let n = e.profileFrameAssets[t];
                     if (null == n) return e;
-                    c(n);
+                    d(n);
                     let { [t]: i, ...r } = e.profileFrameAssets,
                         s = e.previewProfileFrameKey === t;
                     return {
                         ...e,
                         profileFrameAssets: r,
                         previewProfileFrameKey: s ? null : e.previewProfileFrameKey,
-                        previewEnabled: d({ ...e, profileFrameAssets: r }),
+                        previewEnabled: _({ ...e, profileFrameAssets: r }),
                     };
                 });
             }),
@@ -124,7 +125,7 @@ let _ = (0, s.v)((e) => ({
                     (e) => (
                         Object.values(e.collectionAssets).forEach((e) => URL.revokeObjectURL(e.src)),
                         Object.values(e.avatarDecorationAssets).forEach((e) => URL.revokeObjectURL(e.src)),
-                        Object.values(e.profileFrameAssets).forEach(c),
+                        Object.values(e.profileFrameAssets).forEach(d),
                         {
                             collectionAssets: {},
                             avatarDecorationAssets: {},
@@ -143,17 +144,17 @@ let _ = (0, s.v)((e) => ({
             (0, a.r)(() =>
                 e((e) => ({
                     previewProfileEffectSkuId: t,
-                    previewEnabled: null != t || d({ ...e, previewProfileEffectSkuId: t }),
+                    previewEnabled: null != t || _({ ...e, previewProfileEffectSkuId: t }),
                 })),
             ),
         setPreviewAvatarDecorationKey: (t) =>
-            (0, a.r)(() => e((e) => ({ previewAvatarDecorationKey: t, previewEnabled: null != t || d(e) }))),
+            (0, a.r)(() => e((e) => ({ previewAvatarDecorationKey: t, previewEnabled: null != t || _(e) }))),
         setPreviewProfileFrameKey: (t) =>
-            (0, a.r)(() => e((e) => ({ previewProfileFrameKey: t, previewEnabled: null != t || d(e) }))),
+            (0, a.r)(() => e((e) => ({ previewProfileFrameKey: t, previewEnabled: null != t || _(e) }))),
     })),
-    h = () => {
-        let e = _((e) => e.collectionAssets),
-            t = _((e) => e.avatarDecorationAssets);
+    f = () => {
+        let e = h((e) => e.collectionAssets),
+            t = h((e) => e.avatarDecorationAssets);
         return i.useMemo(
             () => ({
                 collectionAssets: Object.values(e).sort((e, t) => e.name.localeCompare(t.name)),
@@ -162,9 +163,9 @@ let _ = (0, s.v)((e) => ({
             [e, t],
         );
     },
-    f = (e) => _((t) => (t.previewEnabled ? t.collectionAssets[e]?.src : null)),
-    p = (e) => {
-        let { previewEnabled: t, previewProfileEffectSkuId: n } = _(),
+    p = (e) => h((t) => (t.previewEnabled ? t.collectionAssets[e]?.src : null)),
+    E = (e) => {
+        let { previewEnabled: t, previewProfileEffectSkuId: n } = h(),
             s = (0, o.ZK)(t ? n : null);
         return i.useMemo(() => {
             if (null == s || null == e) return null;
@@ -186,14 +187,14 @@ let _ = (0, s.v)((e) => ({
             );
         }, [s, e]);
     },
-    E = () =>
-        _((e) =>
+    m = () =>
+        h((e) =>
             e.previewEnabled && null != e.previewAvatarDecorationKey
                 ? (e.avatarDecorationAssets[e.previewAvatarDecorationKey]?.src ?? null)
                 : null,
         ),
-    m = () => {
-        let e = _((e) =>
+    g = () => {
+        let e = h((e) =>
             e.previewEnabled && null != e.previewProfileFrameKey
                 ? (e.profileFrameAssets[e.previewProfileFrameKey] ?? null)
                 : null,
@@ -207,10 +208,10 @@ let _ = (0, s.v)((e) => ({
                 let r = new Image();
                 (r.src = i), (t[n.id] = r);
             }
-            return { layers: e.layers, layerData: t };
+            return { layers: e.layers, layerData: t, css: (0, u.a)(e) };
         }, [e]);
     },
-    g = () => {
-        let e = _((e) => e.profileFrameAssets);
+    A = () => {
+        let e = h((e) => e.profileFrameAssets);
         return i.useMemo(() => Object.values(e).sort((e, t) => e.key.localeCompare(t.key)), [e]);
     };

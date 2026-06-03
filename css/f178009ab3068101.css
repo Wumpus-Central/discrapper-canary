@@ -1,0 +1,23 @@
+.footer_c3ef83 {
+    align-items: center;
+    justify-content: space-between
+}
+
+.failedDestinations_c3ef83 {
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 8px 16px
+}
+
+.failedRow_c3ef83 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    height: 48px
+}
+
+.label_c3ef83 {
+    color: var(--text-strong)
+}

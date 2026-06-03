@@ -1,0 +1,118 @@
+.wrapper__2fe50 {
+    width: 500px;
+    z-index: 1
+}
+
+.modalHeader__2fe50 {
+    flex: 1;
+    padding-bottom: 16px
+}
+
+.header__2fe50 {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.closeButton__2fe50.closeButton__2fe50 {
+    inset-inline-end: 12px;
+    position: absolute;
+    top: 10px;
+    z-index: 3
+}
+
+.resultWrapper__2fe50 {
+    align-items: center;
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    color: var(--primary-300);
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    height: 48px;
+    justify-content: space-between;
+    padding: 8px
+}
+
+.resultWrapper__2fe50:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.result__2fe50 {
+    align-items: start;
+    display: flex;
+    flex: 1;
+    overflow: hidden
+}
+
+.resultAvatar__2fe50 {
+    margin-inline-end: 10px
+}
+
+.resultIcon__2fe50 {
+    align-items: center;
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+    opacity: .6;
+    width: 30px
+}
+
+.resultIconBackground__2fe50 {
+    opacity: .6
+}
+
+.resultText__2fe50 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    font-weight: var(--font-weight-medium);
+    margin-inline-start: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.resultUsername__2fe50 {
+    font-weight: var(--font-weight-normal);
+    margin-inline-start: 4px;
+    opacity: .5
+}
+
+.resultCategoryName__2fe50 {
+    font-size: 10px;
+    line-height: 16px;
+    margin-inline-start: 4px;
+    text-transform: uppercase
+}
+
+.resultCategoryName__2fe50,
+.resultGuildName__2fe50 {
+    font-weight: var(--font-weight-medium);
+    opacity: .5
+}
+
+.resultGuildName__2fe50 {
+    font-size: 14px;
+    margin-inline: 4px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.inviteButton__2fe50 {
+    flex: none;
+    height: 32px;
+    transition: unset;
+    width: 72px
+}
+
+.results__2fe50 {
+    height: 300px
+}
+
+.noResults__2fe50 {
+    background: url(/assets/05207174d5432737.svg) no-repeat 50% 40%;
+    width: 100%
+}

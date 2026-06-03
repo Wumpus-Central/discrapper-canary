@@ -27,7 +27,8 @@ function k(e) {
         n = r.useCallback(() => {
             (0, o.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    s.e("43284"),
+                    s.e("46776"),
+                    s.e("94494"),
                     s.e("36946"),
                     s.e("92639"),
                     s.e("40963"),

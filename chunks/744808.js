@@ -47,30 +47,31 @@ function p(e) {
 function E(e) {
     let { frame: t, className: n, filterLayer: s } = e,
         c = (0, l.bG)([u.A], () => u.A.theme),
-        { profileFrameStyle: E, profileFrameClassName: m } = (0, h.A)(t.skuId),
-        g = (0, _.eo)(),
-        A = g?.layers ?? t.layers,
-        I = null == s ? A : A.filter(s),
-        T = I.map((e) => {
+        E = (0, _.eo)(),
+        m = (0, h.A)(t.skuId),
+        { profileFrameStyle: g, profileFrameClassName: A } = E?.css ?? m,
+        I = E?.layers ?? t.layers,
+        T = null == s ? I : I.filter(s),
+        S = T.map((e) => {
             let { id: t } = e;
             return t;
         }).join("\0"),
-        S = r.useMemo(() => I, [A, T]),
-        { layerData: y } = (0, d.A)({ skuId: t.skuId, layers: null != g ? void 0 : S }),
-        N = g?.layerData ?? y;
-    return 0 === S.length
+        y = r.useMemo(() => T, [I, S]),
+        { layerData: N } = (0, d.A)({ skuId: t.skuId, layers: null != E ? void 0 : y }),
+        v = E?.layerData ?? N;
+    return 0 === y.length
         ? null
         : (0, i.jsx)(o.N, {
               theme: c,
               children: (e) =>
                   (0, i.jsx)("div", {
-                      className: a()(f.uF, e, m, n),
-                      style: E,
+                      className: a()(f.uF, e, A, n),
+                      style: g,
                       "aria-label": t.label,
                       role: "img",
                       children: (0, i.jsx)("div", {
                           className: f.hH,
-                          children: S.map((e) => (0, i.jsx)(p, { skuId: t.skuId, layer: e, data: N[e.id] }, e.id)),
+                          children: y.map((e) => (0, i.jsx)(p, { skuId: t.skuId, layer: e, data: v[e.id] }, e.id)),
                       }),
                   }),
           });

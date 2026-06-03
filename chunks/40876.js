@@ -79,6 +79,11 @@ let r = {
         inlineRequire: () => n(388427).A,
         hasStoreChangeListeners: !0,
     },
+    DesktopSettingExperimentBridgeManager: {
+        actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
+        inlineRequire: () => n(595064).A,
+        hasStoreChangeListeners: !0,
+    },
     DesktopTTIEarlyUpdateCheckExperimentManager: {
         actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
         inlineRequire: () => n(788768).A,

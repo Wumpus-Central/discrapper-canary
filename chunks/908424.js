@@ -14,7 +14,8 @@ function p(e) {
         f = n.useCallback(() => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    t.e("43284"),
+                    t.e("46776"),
+                    t.e("94494"),
                     t.e("36946"),
                     t.e("92639"),
                     t.e("40963"),

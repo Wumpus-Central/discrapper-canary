@@ -1,11 +1,11 @@
 l.r(t),
     l.d(t, {
         nitroCollection: () => l9,
-        virtualCurrencyCollection: () => l7,
+        virtualCurrencyCollection: () => l4,
         playgroundConfig: () => ae,
         identityCollection: () => l5,
         RevenuePlaygroundCollectionId: () => l3,
-        paymentsCollection: () => l4,
+        paymentsCollection: () => l8,
     });
 var a,
     n = l(700623),
@@ -27,7 +27,7 @@ var a,
     g = l(228366),
     E = l(830382),
     S = l(73825),
-    C = l(259160),
+    C = l(937008),
     j = l(424297),
     T = l(491057),
     P = l(314671),
@@ -1252,9 +1252,9 @@ let e2 = {
         ],
     };
 var e3 = l(687021),
-    e8 = l(487233),
-    e4 = l(120386),
-    e7 = l(473219);
+    e7 = l(487233),
+    e8 = l(120386),
+    e4 = l(473219);
 let e9 = { value: "", label: "No Guild (main profile)" };
 var e5 = l(99696),
     te = l(534514),
@@ -2401,7 +2401,7 @@ function t3(e) {
           ? (0, s.jsx)(t1.Mv, { ...l, ...e })
           : (0, s.jsx)(t1.dP, { ...l, ...e });
 }
-function t8(e) {
+function t7(e) {
     let { paymentRequestWallet: t } = e,
         l = u.useRef(null),
         [a, n] = u.useState(!1);
@@ -2422,8 +2422,8 @@ function t8(e) {
         }),
     });
 }
-var t4 = l(150934),
-    t7 = l(36167);
+var t8 = l(150934),
+    t4 = l(36167);
 let t9 = [
         { id: "tier_2", value: eS.gD.PREMIUM_MONTH_TIER_2, label: "Nitro (Monthly)" },
         { id: "tier_1", value: eS.gD.PREMIUM_MONTH_TIER_1, label: "Nitro Classic (Monthly)" },
@@ -2453,7 +2453,7 @@ function lt(e) {
         { error: r, handleSuccess: o, handleFailure: c } = le(),
         p = u.useCallback(() => {
             let e = (0, d.A)();
-            (0, t7.OD)({ planId: l, isGift: n, loadId: e, flowType: t }, o, c);
+            (0, t4.OD)({ planId: l, isGift: n, loadId: e, flowType: t }, o, c);
         }, [l, n, t, o, c]);
     return (0, s.jsxs)(tk.Hq, {
         label: "Nitro Checkout",
@@ -2497,7 +2497,7 @@ function ll(e) {
             if (null == t) return;
             let e = (0, d.A)(),
                 l = N.BVt.BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE(t, e);
-            (0, t7.xq)(l, a, n);
+            (0, t4.xq)(l, a, n);
         }, [t, a, n]);
     return (0, s.jsxs)(tk.Hq, {
         label: "Manage Subscription",
@@ -2522,7 +2522,7 @@ function la(e) {
             if (0 === l.length || null == t) return;
             let e = (0, d.A)(),
                 a = N.BVt.BILLING_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE(l, void 0, e, t);
-            (0, t7.xq)(a, i, r);
+            (0, t4.xq)(a, i, r);
         }, [l, i, r, t]);
     return (0, s.jsxs)(tk.Hq, {
         label: "Guild Boosts",
@@ -2723,7 +2723,7 @@ let lm = {
                             gap: 8,
                             align: "end",
                             children: [
-                                (0, s.jsx)(t4.S, { label: "Enable Flow Type", checked: e, onChange: n }),
+                                (0, s.jsx)(t8.S, { label: "Enable Flow Type", checked: e, onChange: n }),
                                 (0, s.jsx)(ee.l, {
                                     label: "Flow Type",
                                     value: l,
@@ -2781,7 +2781,7 @@ let lm = {
                             }),
                             (0, s.jsx)(tk.Hq, {
                                 label: "Add Payment Step Body Connector View",
-                                children: (0, s.jsx)(t8, { paymentRequestWallet: t }),
+                                children: (0, s.jsx)(t7, { paymentRequestWallet: t }),
                             }),
                         ],
                     }),
@@ -3183,7 +3183,7 @@ var lw = l(735438),
     l$ = l(606267),
     lW = l(480642),
     lF = l(944355),
-    lz = l(886243),
+    lz = l(611333),
     lY = l(826469),
     lq = l(812745);
 let lK = {
@@ -3783,8 +3783,8 @@ var l3 =
     (a.NITRO = "nitro"),
     (a.IDENTITY = "identity"),
     a);
-let l8 = ["Revenue Storybook", "Revenue Playground"],
-    l4 = {
+let l7 = ["Revenue Storybook", "Revenue Playground"],
+    l8 = {
         id: "payments",
         name: "Payments",
         groups: [
@@ -3885,10 +3885,10 @@ let l8 = ["Revenue Storybook", "Revenue Playground"],
             { title: "Checkout Review Step", stories: [ew, eU] },
             lm,
         ],
-        tags: l8,
+        tags: l7,
         IconComponent: n.d,
     },
-    l7 = {
+    l4 = {
         id: "virtual-currency",
         name: "Virtual Currency",
         groups: [
@@ -3944,7 +3944,7 @@ let l8 = ["Revenue Storybook", "Revenue Playground"],
                 ],
             },
         ],
-        tags: l8,
+        tags: l7,
         IconComponent: i.C,
     },
     l9 = {
@@ -4007,7 +4007,7 @@ let l8 = ["Revenue Storybook", "Revenue Playground"],
                             let e = u.useCallback(() => {
                                 (0, ei.openModalLazy)(async () => {
                                     let { default: e } = await Promise.all([
-                                        l.e("2125"),
+                                        l.e("51762"),
                                         l.e("66901"),
                                         l.e("41704"),
                                     ]).then(l.bind(l, 562011));
@@ -4125,7 +4125,8 @@ let l8 = ["Revenue Storybook", "Revenue Playground"],
                                 a = u.useCallback(() => {
                                     (0, ei.openModalLazy)(async () => {
                                         let { default: t } = await Promise.all([
-                                            l.e("2125"),
+                                            l.e("51762"),
+                                            l.e("76649"),
                                             l.e("66901"),
                                             l.e("56430"),
                                         ]).then(l.bind(l, 39613));
@@ -4232,7 +4233,7 @@ let l8 = ["Revenue Storybook", "Revenue Playground"],
                             let e = u.useCallback(() => {
                                 (0, ei.openModalLazy)(async () => {
                                     let { default: e } = await Promise.all([
-                                        l.e("2125"),
+                                        l.e("51762"),
                                         l.e("66901"),
                                         l.e("40716"),
                                     ]).then(l.bind(l, 629959));
@@ -4257,7 +4258,7 @@ let l8 = ["Revenue Storybook", "Revenue Playground"],
                             let e = u.useCallback(() => {
                                 (0, ei.openModalLazy)(async () => {
                                     let { default: e } = await Promise.all([
-                                        l.e("2125"),
+                                        l.e("51762"),
                                         l.e("66901"),
                                         l.e("61129"),
                                     ]).then(l.bind(l, 475312));
@@ -4333,7 +4334,7 @@ let l8 = ["Revenue Storybook", "Revenue Playground"],
             },
             { title: "Clips", stories: [eQ] },
         ],
-        tags: l8,
+        tags: l7,
         IconComponent: r.t,
     },
     l5 = {
@@ -4366,7 +4367,7 @@ let l8 = ["Revenue Storybook", "Revenue Playground"],
                                               },
                                               globalOption: e9,
                                           }),
-                                          (0, s.jsx)(e8.A, { user: a, guildId: "" === t ? null : t }),
+                                          (0, s.jsx)(e7.A, { user: a, guildId: "" === t ? null : t }),
                                       ],
                                   });
                         },
@@ -4394,7 +4395,7 @@ let l8 = ["Revenue Storybook", "Revenue Playground"],
                                               },
                                               globalOption: e9,
                                           }),
-                                          (0, s.jsx)(e4.A, { user: a, guildId: "" === t ? null : t }),
+                                          (0, s.jsx)(e8.A, { user: a, guildId: "" === t ? null : t }),
                                       ],
                                   });
                         },
@@ -4422,7 +4423,7 @@ let l8 = ["Revenue Storybook", "Revenue Playground"],
                                               },
                                               globalOption: e9,
                                           }),
-                                          (0, s.jsx)(e7.A, { user: a, guildId: "" === t ? null : t }),
+                                          (0, s.jsx)(e4.A, { user: a, guildId: "" === t ? null : t }),
                                       ],
                                   });
                         },
@@ -4432,7 +4433,7 @@ let l8 = ["Revenue Storybook", "Revenue Playground"],
             },
             lO,
         ],
-        tags: l8,
+        tags: l7,
         IconComponent: o.n,
     },
-    ae = { playgroundBaseUrl: "revenue", collections: [l4, l7, l9, l5] };
+    ae = { playgroundBaseUrl: "revenue", collections: [l8, l4, l9, l5] };
