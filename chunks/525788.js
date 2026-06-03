@@ -140,7 +140,8 @@ function x(e) {
                         async () => {
                             let { default: e } = await Promise.all([
                                 n.e("72414"),
-                                n.e("8817"),
+                                n.e("38804"),
+                                n.e("94881"),
                                 n.e("26132"),
                                 n.e("46652"),
                                 n.e("93190"),

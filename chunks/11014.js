@@ -87,7 +87,7 @@ let ec = es.Ay.getEnableHardwareAcceleration(),
                     null != h &&
                         (0, I.L3)(e, async () => {
                             let { default: e } = await Promise.all([
-                                t.e("12697"),
+                                t.e("94881"),
                                 t.e("26132"),
                                 t.e("46652"),
                                 t.e("93190"),
@@ -2807,8 +2807,7 @@ function iP(e) {
         m = (e) => {
             (0, I.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    t.e("12697"),
-                    t.e("8817"),
+                    t.e("94881"),
                     t.e("26132"),
                     t.e("46652"),
                     t.e("93190"),
@@ -4996,8 +4995,7 @@ class rX extends s.PureComponent {
         o()(null != l, "Missing user in Channel.openDMContextMenu"),
             (0, I.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    t.e("12697"),
-                    t.e("8817"),
+                    t.e("94881"),
                     t.e("26132"),
                     t.e("46652"),
                     t.e("93190"),
