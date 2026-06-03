@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => b, i: () => O }), n(321073);
+n.d(t, { A: () => N, i: () => y }), n(321073);
 var i = n(459838),
     r = n(451988),
     s = n(439372),
@@ -60,7 +60,7 @@ function g(e, t, n) {
             o = a - i.length;
         {
             let n = r?.[i.filepath];
-            if (((e = n ?? { audioModelDataPerUser: {}, gameEventData: [] }), null == n)) {
+            if (((e = n ?? { audioModelDataPerUser: {}, gameEventData: [] }), null == n))
                 for (let n in t.audioModelDataPerUser) {
                     let i = t.audioModelDataPerUser[n];
                     e.audioModelDataPerUser[n] = {
@@ -69,13 +69,7 @@ function g(e, t, n) {
                         rmsData: A(i.rmsData, o, a),
                     };
                 }
-                e.gameEventData = (function (e, t, n) {
-                    let i = [];
-                    for (let r of e) r.timestamp_ms < t || r.timestamp_ms > n || i.push(r);
-                    return i;
-                })(t.gameEventData, o, a);
-            }
-            !(function (e) {
+            (function (e) {
                 let t = Number.MAX_VALUE,
                     n = -Number.MAX_VALUE;
                 for (let i in e.audioModelDataPerUser) {
@@ -103,52 +97,58 @@ function g(e, t, n) {
                     let s = e.audioModelDataPerUser[n];
                     i(s.laughterData, t, r), i(s.shoutingData, t, r), i(s.rmsData, t, r);
                 }
-            })(e);
+            })(e),
+                (e.gameEventData = (function (e, t, n) {
+                    let i = [];
+                    for (let r of e) r.timestamp_ms < t || r.timestamp_ms > n || i.push(r);
+                    return i;
+                })(t.gameEventData, o, a));
         }
-        let l = [],
-            u = [],
-            c = 0,
-            d = 0,
-            _ = 0,
-            h = 0,
-            f = 0;
+        let l = new Map();
         for (let t in e.audioModelDataPerUser) {
-            let i = e.audioModelDataPerUser[t];
-            if (0 === i.laughterData.length && 0 === i.shoutingData.length && 0 === i.rmsData.length) continue;
-            let r = y(i.laughterData, i.rmsData),
-                s = y(i.shoutingData, i.rmsData),
-                a = t === n ? 3 : 1;
-            (c += a * S(r, 4, 0.8)),
-                (d += a * S(s, 4, 0.2)),
-                (_ += a * I(i.rmsData)),
-                (h +=
-                    a *
-                    (function (e) {
-                        if (e.length < 2) return 0;
-                        let t = 0;
-                        for (let n of e) t += n.value;
-                        t /= e.length;
-                        let n = 0;
-                        for (let i of e) n += (i.value - t) * (i.value - t);
-                        return n / e.length;
-                    })(r)),
-                r.length > 0 && l.push(r),
-                s.length > 0 && u.push(s),
-                (f += a);
+            let n = e.audioModelDataPerUser[t];
+            if (0 === n.laughterData.length && 0 === n.shoutingData.length && 0 === n.rmsData.length) continue;
+            let i = (function (e, t) {
+                if (0 === e.length || 0 === t.length) return [];
+                m()(e.length === t.length, "track length doesn't match rms length?");
+                let n = e.map((e) => +(e.value > 0.7)),
+                    i = -1;
+                for (let e = 0; e <= n.length; e++) {
+                    let t = e < n.length && 1 === n[e];
+                    t && -1 === i && (i = e), t || -1 === i || (e - i < 2 && n.fill(0, i, e), (i = -1));
+                }
+                return e.map((e, i) => {
+                    let r = Math.min(4 * t[i].value, 1);
+                    return { timestamp_ms: e.timestamp_ms, value: r * n[i] };
+                });
+            })(n.laughterData, n.rmsData);
+            l.set(
+                t,
+                (function (e) {
+                    if (0 === e.length) return 0;
+                    let t = 0;
+                    for (let n of e) t += n.value;
+                    return t / e.length;
+                })(i),
+            );
         }
-        let p = 0;
-        f > 0 &&
-            ((c /= f),
-            (d /= f),
-            (_ /= f),
-            (h /= f),
-            (p = +c + 0.08 * N(l, 0.8, 3) + 0 * N(u, 0.2, 3) + 0 * d + 2 * _ + 6.25 * h)),
-            (p += +(function (e) {
+        let u = 0;
+        if (l.size > 1) {
+            let e = 0;
+            for (let [t, i] of l) t !== n && ((u += i), e++);
+            u /= e;
+        }
+        let c = l.get(n);
+        null == c && (c = 0);
+        let d = c * (1 + u);
+        (d +=
+            0 *
+            (function (e) {
                 let t = 1;
                 for (let n of e) t *= 1 - Math.max(0, Math.min(1, n.score));
                 return +(1 - t);
             })(e.gameEventData)),
-            s.push({ clip: i, score: p });
+            s.push({ clip: i, score: d });
     }
     s.sort((e, t) => t.score - e.score);
     let a = [];
@@ -173,73 +173,18 @@ function g(e, t, n) {
 function A(e, t, n) {
     return e.filter((e) => e.timestamp_ms >= t && e.timestamp_ms <= n);
 }
-function I(e) {
-    if (0 === e.length) return 0;
-    let t = 0;
-    for (let n of e) t += n.value;
-    return t / e.length;
-}
-function T(e, t) {
-    let n = 0;
-    for (let i of e) i.value > t && n++;
-    return n;
-}
-function S(e, t, n) {
-    if (0 === e.length) return 0;
-    if (e.length <= t) return T(e, n) + I(e);
-    let i = -Number.MAX_VALUE;
-    for (let r = 0; r <= e.length - t; r++) {
-        let s = e.slice(r, r + t),
-            a = T(s, n) + I(s);
-        a > i && (i = a);
-    }
-    return i;
-}
-function y(e, t) {
-    if (0 === e.length || 0 === t.length) return e;
-    m()(e.length === t.length, "track length doesn't match rms length?");
-    let n = Array(e.length);
-    for (let i = 0; i < e.length; i++) n[i] = { timestamp_ms: e[i].timestamp_ms, value: e[i].value * (1 + t[i].value) };
-    return n;
-}
-function N(e, t, n) {
-    if (e.length < 2) return 0;
-    let i = e.map((e) =>
-            (function (e, t) {
-                if (0 === e.length || t <= 1) return e;
-                let n = Math.floor(t / 2),
-                    i = Array(e.length);
-                for (let t = 0; t < e.length; t++) {
-                    let r = Math.max(0, t - n),
-                        s = Math.min(e.length - 1, t + n),
-                        a = 0;
-                    for (let t = r; t <= s; t++) a += e[t].value;
-                    i[t] = { timestamp_ms: e[t].timestamp_ms, value: a / (s - r + 1) };
-                }
-                return i;
-            })(e, n),
-        ),
-        r = Math.min(...i.map((e) => e.length)),
-        s = 0;
-    for (let e = 0; e < r; e++) {
-        let n = 0;
-        for (let r of i) r[e].value > t && n++;
-        n >= 2 && s++;
-    }
-    return s;
-}
-var v = n(61302);
-function C() {
+var I = n(61302);
+function T() {
     return { audioModelDataPerUser: {}, gameEventData: [] };
 }
-var R = n(696016);
-class O extends s.A {
+var S = n(696016);
+class y extends s.A {
     timeline;
     scheduledClipTimeout = new r.Ep();
     scheduledClipSignal = null;
     lastClipTimestamp = 0;
     pendingCandidateDiscards = new Set();
-    decisionSignals = C();
+    decisionSignals = T();
     sessionEndTimeout = new r.Ep();
     currentSessionGameKey = null;
     currentSessionId = null;
@@ -376,7 +321,7 @@ class O extends s.A {
         };
     }
     clear() {
-        R.nx.info(
+        S.nx.info(
             `decider: clear() called \u{2014} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${this.currentSessionId} pendingSessionGameKey=${this.pendingSessionGameKey} pendingCandidates=${_.Ay.getPendingClipCandidates().length} candidates=${_.Ay.getClipCandidates().length}`,
         ),
             this.unscheduleClip(),
@@ -395,14 +340,14 @@ class O extends s.A {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         (n && (null === this.currentSessionId || null == d.A.getVoiceChannelId())) ||
-            (R.nx.info(`decider: scheduleClip signal=${e.type} delay=${t}ms isCandidate=${n}`),
+            (S.nx.info(`decider: scheduleClip signal=${e.type} delay=${t}ms isCandidate=${n}`),
             this.unscheduleClip(),
             (this.scheduledClipSignal = e),
             (this.lastClipTimestamp = performance.now() + t),
             this.scheduledClipTimeout.start(t, () => {
-                R.nx.info(`decider: scheduled timeout fired \u{2014} saving clip (signal=${e.type} isCandidate=${n})`),
+                S.nx.info(`decider: scheduled timeout fired \u{2014} saving clip (signal=${e.type} isCandidate=${n})`),
                     (this.scheduledClipSignal = null),
-                    (0, v.yd)(
+                    (0, I.yd)(
                         e.type === f.Gy.MANUAL ? "manual" : "auto",
                         [...this.timeline.read()],
                         { signal: e, timestamp: Date.now() },
@@ -417,7 +362,7 @@ class O extends s.A {
         null != e &&
             ((this.currentSessionGameKey = (0, l.Es)(e)),
             (this.currentSessionId = crypto.randomUUID()),
-            R.nx.info(
+            S.nx.info(
                 `decider: handleVoiceChannelSelect \u{2014} new gaming session id: ${this.currentSessionId}, for game: ${this.currentSessionGameKey}`,
             ));
     }
@@ -425,7 +370,7 @@ class O extends s.A {
         let e = l.Ay.getVisibleGame(),
             t = null != e ? (0, l.Es)(e) : null;
         if (
-            (R.nx.info(
+            (S.nx.info(
                 `decider: handleRunningGamesChange visibleGame=${e?.name ?? "null"} newPrimaryKey=${t} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${this.currentSessionId} pendingSessionGameKey=${this.pendingSessionGameKey}`,
             ),
             null === this.currentSessionGameKey)
@@ -433,18 +378,18 @@ class O extends s.A {
             return void (null != t
                 ? ((this.currentSessionGameKey = t),
                   (this.currentSessionId = crypto.randomUUID()),
-                  R.nx.info(
+                  S.nx.info(
                       `decider: handleRunningGamesChange \u{2014} starting session for ${t} (id=${this.currentSessionId})`,
                   ))
-                : R.nx.info(`decider: handleRunningGamesChange \u{2014} not starting session (newPrimaryKey=${t})`));
+                : S.nx.info(`decider: handleRunningGamesChange \u{2014} not starting session (newPrimaryKey=${t})`));
         if (t === this.currentSessionGameKey) {
-            R.nx.info("decider: handleRunningGamesChange \u2014 same primary, cancelling pending end"),
+            S.nx.info("decider: handleRunningGamesChange \u2014 same primary, cancelling pending end"),
                 this.sessionEndTimeout.stop(),
                 (this.pendingSessionGameKey = null);
             return;
         }
         if (null === t) {
-            R.nx.info(
+            S.nx.info(
                 "decider: handleRunningGamesChange \u2014 visible game became null, finalizing session immediately",
             ),
                 this.sessionEndTimeout.stop(),
@@ -455,8 +400,8 @@ class O extends s.A {
             return;
         }
         this.pendingSessionGameKey === t
-            ? R.nx.info("decider: handleRunningGamesChange \u2014 already debouncing for this key")
-            : (R.nx.info(
+            ? S.nx.info("decider: handleRunningGamesChange \u2014 already debouncing for this key")
+            : (S.nx.info(
                   `decider: handleRunningGamesChange \u{2014} primary game changed from ${this.currentSessionGameKey} to ${t}, debouncing 30000ms`,
               ),
               (this.pendingSessionGameKey = t),
@@ -465,7 +410,7 @@ class O extends s.A {
                       (this.currentSessionGameKey = t),
                       (this.currentSessionId = crypto.randomUUID()),
                       (this.pendingSessionGameKey = null),
-                      R.nx.info(
+                      S.nx.info(
                           `decider: sessionEndTimeout fired after debounce \u{2014} finalizing previous session, started new session (newPrimaryKey=${t}, id=${this.currentSessionId})`,
                       );
               }));
@@ -477,32 +422,32 @@ class O extends s.A {
         if (0 === e.length) return void alert("no candidates to stash");
         let t = { decisionSignals: this.decisionSignals, clipCandidates: e, localUserId: c.default.getId() };
         await a.A.clips.debugStashClipDeciderData(t),
-            R.nx.info(`debugStashDeciderData: stashed ${e.length} candidates`);
+            S.nx.info(`debugStashDeciderData: stashed ${e.length} candidates`);
     }
     static async debugRerunRanking() {
-        R.nx.info("DEBUG RERUN RANKING");
+        S.nx.info("DEBUG RERUN RANKING");
         let e = await a.A.clips.debugReadStashedClipDeciderData(),
             t = g(e.clipCandidates, e.decisionSignals, e.localUserId);
-        R.nx.info("ranked clips:", t),
+        S.nx.info("ranked clips:", t),
             t.selected.forEach((e, t) => {
-                R.nx.info(`Clip ${t + 1} score ${e.score}, ${a.A.fileManager.basename(e.clip.filepath)}`);
+                S.nx.info(`Clip ${t + 1} score ${e.score}, ${a.A.fileManager.basename(e.clip.filepath)}`);
             });
     }
     processClipCandidates() {
         let e = _.Ay.getClipCandidates(),
             t = g(e, this.decisionSignals, c.default.getId());
-        for (let n of (R.nx.info("ranked clips:", t), e))
-            null != t.selected.find((e) => e.clip.id === n.id) ? (0, v.K7)(n) : (0, v.oH)(n.filepath, n.id);
+        for (let n of (S.nx.info("ranked clips:", t), e))
+            null != t.selected.find((e) => e.clip.id === n.id) ? (0, I.K7)(n) : (0, I.oH)(n.filepath, n.id);
         for (let e of _.Ay.getPendingClipCandidates()) this.pendingCandidateDiscards.add(e.id);
-        this.decisionSignals = C();
+        this.decisionSignals = T();
     }
     handleLateCandidateSave(e) {
         let { clip: t } = e;
         this.pendingCandidateDiscards.has(t.id) &&
-            (this.pendingCandidateDiscards.delete(t.id), (0, v.oH)(t.filepath, t.id));
+            (this.pendingCandidateDiscards.delete(t.id), (0, I.oH)(t.filepath, t.id));
     }
     handleSettingsUpdate() {
         this.timeline.updateLength(_.Ay.getSettings().clipsLength);
     }
 }
-let b = new O();
+let N = new y();

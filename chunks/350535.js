@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
     Cy: () => S,
-    OH: () => R,
+    OH: () => O,
     Qd: () => T,
     Xt: () => D,
     Z0: () => g,
     _$: () => I,
     dI: () => b,
-    pi: () => O,
+    pi: () => R,
     sg: () => L,
 }),
     n(321073);
@@ -21,9 +21,9 @@ var i = n(695497),
     c = n(316501),
     d = n(650583);
 let _ = __OVERLAY__ ? d.Nu : (0, u.isLinux)() ? d.C8 : (0, u.isMac)() ? d.V8 : (0, u.isWindows)() ? d.Nu : {},
-    f = a().invert(d.C8);
-(f["223"] = "`"), Object.freeze(f);
-let h = Object.freeze(a().invert(d.V8)),
+    h = a().invert(d.C8);
+(h["223"] = "`"), Object.freeze(h);
+let f = Object.freeze(a().invert(d.V8)),
     p = a().invert(d.Nu);
 (p["223"] = "`"), Object.freeze(p);
 let E = a().invert(_ ?? {});
@@ -39,7 +39,7 @@ function A(e, t, n) {
     let i = (0, c.Ze)().get("Backquote");
     if (t === i) return m(t);
     let r = (0, c.sv)({ key: i, code: "Backquote", keyCode: e });
-    return "\\" === t && "`" === i ? t : null == r ? m(i ?? t) : m(r.key);
+    return ("\\" === t || ("'" === t && 192 !== e)) && "`" === i ? t : null == r ? m(i ?? t) : m(r.key);
 }
 function I() {
     return (0, u.isLinux)()
@@ -59,10 +59,10 @@ function T(e) {
                 [, n, i] = e;
             switch (i) {
                 case d.g$.LINUX:
-                    t = f["" + n];
+                    t = h["" + n];
                     break;
                 case d.g$.MACOS:
-                    t = h["" + n];
+                    t = f["" + n];
                     break;
                 case d.g$.WINDOWS:
                     t = p["" + n];
@@ -70,7 +70,7 @@ function T(e) {
                 case d.g$.BROWSER: {
                     let e = r()(n);
                     if (null == e) return null;
-                    t = N(e);
+                    t = y(e);
                     break;
                 }
                 default:
@@ -102,7 +102,7 @@ function S(e) {
                     t = "+" === e ? d.Nu.plus : d.Nu[e];
                     break;
                 case s && n === d.g$.BROWSER:
-                    t = r()(N(e));
+                    t = r()(y(e));
                     break;
                 case s:
                     t = _[e];
@@ -122,12 +122,12 @@ function S(e) {
     let s = (0, c.Q_)(e);
     return null != s ? s.keyCode : null;
 }
-function N(e) {
+function y(e) {
     let t = e.replace(/^(right|left) (shift|meta|ctrl|alt)$/, "$2").replace("meta", "command");
     return "pause" === t || "break" === t ? "pause/break" : t;
 }
 (0, u.isMac)() || (E["223"] = "`"), Object.freeze(E);
-let y = [
+let N = [
         ["META", "\u2318"],
         ["CMD", "\u2318"],
         ["RIGHT META", "RIGHT \u2318"],
@@ -153,12 +153,12 @@ let y = [
         ["TAB", "\u21E5"],
         ["SPACE", "\u2423"],
     ],
-    C = (e) => {
-        for (let [t, n] of y) if (t === e.toUpperCase()) return n;
+    v = (e) => {
+        for (let [t, n] of N) if (t === e.toUpperCase()) return n;
         return e;
     },
-    v = /shift|meta|ctrl|alt$/;
-function O(e) {
+    C = /shift|meta|ctrl|alt$/;
+function R(e) {
     let t = { keyCode: 0, key: "", code: "", metaKey: !1, shiftKey: !1, altKey: !1, ctrlKey: !1 };
     return null == e
         ? []
@@ -166,7 +166,7 @@ function O(e) {
               let i = T(n),
                   r = { ...t };
               if (null == i) return e.push({ ...r, combo: n }), e;
-              if (v.test(i) && ("meta" === i || "shift" === i || "alt" === i || "ctrl" === i))
+              if (C.test(i) && ("meta" === i || "shift" === i || "alt" === i || "ctrl" === i))
                   return (t[i + "Key"] = !0), e.map((e) => ((e[i + "Key"] = !0), e));
               {
                   let t = S(i, d.g$.BROWSER);
@@ -174,7 +174,7 @@ function O(e) {
               }
           }, []);
 }
-function R(e) {
+function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I(),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.zY.KEYBOARD_KEY;
     return e
@@ -186,7 +186,7 @@ function R(e) {
         .reduce((e, i) => {
             let r = S(
                 ((e) => {
-                    for (let [t, n] of y) if (n === e.toUpperCase()) return t.toLowerCase();
+                    for (let [t, n] of N) if (n === e.toUpperCase()) return t.toLowerCase();
                     return e;
                 })(i),
                 t,
@@ -211,7 +211,7 @@ function b(e) {
             })
             .filter(l.Vq);
     return t
-        ? (-1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? i.map(C) : i).join(" + ").toUpperCase()
+        ? (-1 !== n.g.navigator.appVersion.indexOf("Mac OS X") ? i.map(v) : i).join(" + ").toUpperCase()
         : i.join("+");
 }
 function D(e, t) {
