@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Um: () => e0, FZ: () => e5 }), n(321073);
+n.d(t, { Um: () => e2, FZ: () => e8 }), n(321073);
 var i,
     r,
     s,
@@ -157,11 +157,12 @@ class C extends g.G {
             { no: 20, name: "user_premium_type", kind: "message", oneof: "filter", T: () => eB },
             { no: 21, name: "unit_id_matches_filter_snapshot", kind: "message", oneof: "filter", T: () => ej },
             { no: 22, name: "guild_ids", kind: "message", oneof: "filter", T: () => eW },
+            { no: 23, name: "guild_id_range", kind: "message", oneof: "filter", T: () => eq },
             { no: 25, name: "guild_member_count_range", kind: "message", oneof: "filter", T: () => e$ },
-            { no: 26, name: "guild_has_feature", kind: "message", oneof: "filter", T: () => eq },
+            { no: 26, name: "guild_has_feature", kind: "message", oneof: "filter", T: () => eZ },
             { no: 27, name: "user_location", kind: "message", oneof: "filter", T: () => q },
             { no: 28, name: "user_ip", kind: "message", oneof: "filter", T: () => J },
-            { no: 29, name: "installation_ids", kind: "message", oneof: "filter", T: () => eZ },
+            { no: 29, name: "installation_ids", kind: "message", oneof: "filter", T: () => eJ },
             { no: 30, name: "negate", kind: "scalar", T: 8 },
         ]);
     }
@@ -304,6 +305,12 @@ class C extends g.G {
                         guildIds: eW.internalBinaryRead(e, e.uint32(), n, r.filter.guildIds),
                     };
                     break;
+                case 23:
+                    r.filter = {
+                        oneofKind: "guildIdRange",
+                        guildIdRange: eq.internalBinaryRead(e, e.uint32(), n, r.filter.guildIdRange),
+                    };
+                    break;
                 case 25:
                     r.filter = {
                         oneofKind: "guildMemberCountRange",
@@ -313,7 +320,7 @@ class C extends g.G {
                 case 26:
                     r.filter = {
                         oneofKind: "guildHasFeature",
-                        guildHasFeature: eq.internalBinaryRead(e, e.uint32(), n, r.filter.guildHasFeature),
+                        guildHasFeature: eZ.internalBinaryRead(e, e.uint32(), n, r.filter.guildHasFeature),
                     };
                     break;
                 case 27:
@@ -328,7 +335,7 @@ class C extends g.G {
                 case 29:
                     r.filter = {
                         oneofKind: "installationIds",
-                        installationIds: eZ.internalBinaryRead(e, e.uint32(), n, r.filter.installationIds),
+                        installationIds: eJ.internalBinaryRead(e, e.uint32(), n, r.filter.installationIds),
                     };
                     break;
                 case 30:
@@ -393,18 +400,20 @@ class C extends g.G {
                     .join(),
             "guildIds" === e.filter.oneofKind &&
                 eW.internalBinaryWrite(e.filter.guildIds, t.tag(22, p.O0.LengthDelimited).fork(), n).join(),
+            "guildIdRange" === e.filter.oneofKind &&
+                eq.internalBinaryWrite(e.filter.guildIdRange, t.tag(23, p.O0.LengthDelimited).fork(), n).join(),
             "guildMemberCountRange" === e.filter.oneofKind &&
                 e$
                     .internalBinaryWrite(e.filter.guildMemberCountRange, t.tag(25, p.O0.LengthDelimited).fork(), n)
                     .join(),
             "guildHasFeature" === e.filter.oneofKind &&
-                eq.internalBinaryWrite(e.filter.guildHasFeature, t.tag(26, p.O0.LengthDelimited).fork(), n).join(),
+                eZ.internalBinaryWrite(e.filter.guildHasFeature, t.tag(26, p.O0.LengthDelimited).fork(), n).join(),
             "userLocation" === e.filter.oneofKind &&
                 q.internalBinaryWrite(e.filter.userLocation, t.tag(27, p.O0.LengthDelimited).fork(), n).join(),
             "userIp" === e.filter.oneofKind &&
                 J.internalBinaryWrite(e.filter.userIp, t.tag(28, p.O0.LengthDelimited).fork(), n).join(),
             "installationIds" === e.filter.oneofKind &&
-                eZ.internalBinaryWrite(e.filter.installationIds, t.tag(29, p.O0.LengthDelimited).fork(), n).join(),
+                eJ.internalBinaryWrite(e.filter.installationIds, t.tag(29, p.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.negate && t.tag(30, p.O0.Varint).bool(e.negate);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? p.f$.onWrite : i)(this.typeName, e, t), t;
@@ -2162,6 +2171,58 @@ let e$ = new eK();
 class ez extends g.G {
     constructor() {
         super(
+            "discord_protos.discord_experimentation.v1.GuildIdRange",
+            [
+                { no: 1, name: "min_id", kind: "message", T: () => eR },
+                { no: 2, name: "max_id", kind: "message", T: () => eR },
+            ],
+            {
+                "discord_protos.discord_experimentation.v1.filter_category": "FILTER_CATEGORY_GUILD",
+                "discord_protos.discord_experimentation.v1.filter_evaluation_mode": "FILTER_EVALUATION_MODE_LAZY",
+            },
+        );
+    }
+    create(e) {
+        let t = {};
+        return (
+            globalThis.Object.defineProperty(t, m.$, { enumerable: !1, value: this }),
+            void 0 !== e && (0, E.x)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let r = i ?? this.create(),
+            s = e.pos + t;
+        for (; e.pos < s; ) {
+            let [t, i] = e.tag();
+            switch (t) {
+                case 1:
+                    r.minId = eR.internalBinaryRead(e, e.uint32(), n, r.minId);
+                    break;
+                case 2:
+                    r.maxId = eR.internalBinaryRead(e, e.uint32(), n, r.maxId);
+                    break;
+                default:
+                    let s = n.readUnknownField;
+                    if ("throw" === s)
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                    let a = e.skip(i);
+                    !1 !== s && (!0 === s ? p.f$.onRead : s)(this.typeName, r, t, i, a);
+            }
+        }
+        return r;
+    }
+    internalBinaryWrite(e, t, n) {
+        e.minId && eR.internalBinaryWrite(e.minId, t.tag(1, p.O0.LengthDelimited).fork(), n).join(),
+            e.maxId && eR.internalBinaryWrite(e.maxId, t.tag(2, p.O0.LengthDelimited).fork(), n).join();
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? p.f$.onWrite : i)(this.typeName, e, t), t;
+    }
+}
+let eq = new ez();
+class eX extends g.G {
+    constructor() {
+        super(
             "discord_protos.discord_experimentation.v1.GuildHasFeature",
             [{ no: 1, name: "features", kind: "scalar", repeat: 2, T: 9 }],
             {
@@ -2200,8 +2261,8 @@ class ez extends g.G {
         return !1 !== i && (!0 == i ? p.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eq = new ez();
-class eX extends g.G {
+let eZ = new eX();
+class eQ extends g.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.InstallationIds",
@@ -2246,16 +2307,16 @@ class eX extends g.G {
         return !1 !== i && (!0 == i ? p.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eZ = new eX();
-var eQ = n(335871),
-    eJ =
+let eJ = new eQ();
+var e0 = n(335871),
+    e1 =
         (((s = {})[(s.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (s[(s.USER = 1)] = "USER"),
         (s[(s.INSTALLATION = 2)] = "INSTALLATION"),
         (s[(s.GUILD = 3)] = "GUILD"),
         (s[(s.CUSTOM = 4)] = "CUSTOM"),
         s),
-    e0 =
+    e2 =
         (((a = {})[(a.SURFACE_UNSPECIFIED = 0)] = "SURFACE_UNSPECIFIED"),
         (a[(a.API = 1)] = "API"),
         (a[(a.APP = 2)] = "APP"),
@@ -2266,41 +2327,41 @@ var eQ = n(335871),
         (a[(a.SEO = 7)] = "SEO"),
         (a[(a.MARKETING = 8)] = "MARKETING"),
         a),
-    e1 = (((o = {})[(o.ENABLED = 0)] = "ENABLED"), (o[(o.DISABLED = 1)] = "DISABLED"), o),
-    e2 =
+    e3 = (((o = {})[(o.ENABLED = 0)] = "ENABLED"), (o[(o.DISABLED = 1)] = "DISABLED"), o),
+    e6 =
         (((l = {})[(l.FULL = 0)] = "FULL"),
         (l[(l.FORCE_CONTROL = 3)] = "FORCE_CONTROL"),
         (l[(l.OVERRIDES_ONLY = 4)] = "OVERRIDES_ONLY"),
         (l[(l.OFF = 5)] = "OFF"),
         l),
-    e3 =
+    e4 =
         (((u = {})[(u.DEFAULT = 0)] = "DEFAULT"),
         (u[(u.HOLDOUT = 1)] = "HOLDOUT"),
         (u[(u.NUMBERLINE = 2)] = "NUMBERLINE"),
         u),
-    e6 =
+    e5 =
         (((c = {})[(c.CUSTOM_UNIT_PREFIX_UNSPECIFIED = 0)] = "CUSTOM_UNIT_PREFIX_UNSPECIFIED"),
         (c[(c.SEO_URL_SLUG = 1)] = "SEO_URL_SLUG"),
         c),
-    e4 =
+    e7 =
         (((d = {})[(d.DEFAULT = 0)] = "DEFAULT"),
         (d[(d.OFF = 1)] = "OFF"),
         (d[(d.OVERRIDES_ONLY = 2)] = "OVERRIDES_ONLY"),
         d),
-    e5 =
+    e8 =
         (((_ = {})[(_.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (_[(_.CONTROL = 1)] = "CONTROL"),
         (_[(_.TREATMENT = 2)] = "TREATMENT"),
         (_[(_.OVERRIDE = 3)] = "OVERRIDE"),
         _),
-    e7 =
+    e9 =
         (((h = {})[(h.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (h[(h.ACTIVE = 1)] = "ACTIVE"),
         (h[(h.UNUSED = 2)] = "UNUSED"),
         (h[(h.BURNED = 3)] = "BURNED"),
         (h[(h.PRESERVED = 4)] = "PRESERVED"),
         h),
-    e8 =
+    te =
         (((f = {})[(f.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (f[(f.DRAFT = 1)] = "DRAFT"),
         (f[(f.MEASUREMENT = 2)] = "MEASUREMENT"),
@@ -2308,15 +2369,15 @@ var eQ = n(335871),
         (f[(f.ARCHIVED = 6)] = "ARCHIVED"),
         (f[(f.AA_MODE = 7)] = "AA_MODE"),
         f);
-class e9 extends g.G {
+class tt extends g.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Experiment", [
             { no: 1, name: "id", kind: "scalar", T: 6 },
             { no: 2, name: "name", kind: "scalar", T: 9 },
-            { no: 3, name: "created_at", kind: "message", T: () => eQ.D },
+            { no: 3, name: "created_at", kind: "message", T: () => e0.D },
             { no: 4, name: "creator_id", kind: "scalar", T: 6 },
             { no: 5, name: "version", kind: "scalar", T: 5 },
-            { no: 6, name: "edited_at", kind: "message", T: () => eQ.D },
+            { no: 6, name: "edited_at", kind: "message", T: () => e0.D },
             { no: 7, name: "editor_id", kind: "scalar", T: 6 },
             { no: 8, name: "title", kind: "scalar", T: 9 },
             { no: 9, name: "description", kind: "scalar", T: 9 },
@@ -2328,17 +2389,17 @@ class e9 extends g.G {
                 no: 14,
                 name: "unit_type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.UnitType", eJ],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.UnitType", e1],
             },
-            { no: 15, name: "variations", kind: "message", repeat: 1, T: () => tt },
+            { no: 15, name: "variations", kind: "message", repeat: 1, T: () => ti },
             { no: 16, name: "rules", kind: "message", repeat: 1, T: () => y },
-            { no: 18, name: "phase", kind: "enum", T: () => ["discord_protos.discord_experimentation.v1.Phase", e8] },
+            { no: 18, name: "phase", kind: "enum", T: () => ["discord_protos.discord_experimentation.v1.Phase", te] },
             {
                 no: 19,
                 name: "surfaces",
                 kind: "enum",
                 repeat: 1,
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.Surface", e0],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.Surface", e2],
             },
             { no: 20, name: "owning_team_id", kind: "scalar", T: 9 },
             { no: 21, name: "cached_notification_channel_id", kind: "scalar", T: 6 },
@@ -2346,13 +2407,13 @@ class e9 extends g.G {
                 no: 22,
                 name: "exposure_tracking",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.ExposureTracking", e1],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.ExposureTracking", e3],
             },
             {
                 no: 25,
                 name: "assignment_mode",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.AssignmentMode", e2],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.AssignmentMode", e6],
             },
             { no: 23, name: "enable_edit_raw_json_ui", kind: "scalar", T: 8 },
             { no: 24, name: "winning_variation_id", kind: "scalar", T: 5 },
@@ -2361,21 +2422,21 @@ class e9 extends g.G {
                 no: 26,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.Type", e3],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.Type", e4],
             },
             { no: 27, name: "is_template", kind: "scalar", T: 8 },
             { no: 28, name: "field_numbers_to_copy", kind: "scalar", repeat: 1, T: 5 },
             { no: 29, name: "engine_feature_flags", kind: "scalar", repeat: 2, T: 9 },
-            { no: 30, name: "debug_config", kind: "message", T: () => ts },
-            { no: 31, name: "expected_end_date", kind: "message", T: () => eQ.D },
+            { no: 30, name: "debug_config", kind: "message", T: () => to },
+            { no: 31, name: "expected_end_date", kind: "message", T: () => e0.D },
             { no: 32, name: "is_automated_change", kind: "scalar", T: 8 },
-            { no: 33, name: "archive_at", kind: "message", T: () => eQ.D },
+            { no: 33, name: "archive_at", kind: "message", T: () => e0.D },
             { no: 35, name: "guild_experiment_version", kind: "message", T: () => A.as },
             {
                 no: 36,
                 name: "custom_unit_prefix",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Experiment.CustomUnitPrefix", e6],
+                T: () => ["discord_protos.discord_experimentation.v1.Experiment.CustomUnitPrefix", e5],
             },
             { no: 37, name: "growthbook_tags", kind: "scalar", repeat: 2, T: 9 },
             { no: 38, name: "allocate_right_to_left", kind: "scalar", T: 8 },
@@ -2387,7 +2448,7 @@ class e9 extends g.G {
                 kind: "enum",
                 T: () => [
                     "discord_protos.discord_experimentation.v1.Experiment.EligibilityPersistence",
-                    e4,
+                    e7,
                     "ELIGIBILITY_PERSISTENCE_",
                 ],
             },
@@ -2447,7 +2508,7 @@ class e9 extends g.G {
                     r.name = e.string();
                     break;
                 case 3:
-                    r.createdAt = eQ.D.internalBinaryRead(e, e.uint32(), n, r.createdAt);
+                    r.createdAt = e0.D.internalBinaryRead(e, e.uint32(), n, r.createdAt);
                     break;
                 case 4:
                     r.creatorId = e.fixed64().toString();
@@ -2456,7 +2517,7 @@ class e9 extends g.G {
                     r.version = e.int32();
                     break;
                 case 6:
-                    r.editedAt = eQ.D.internalBinaryRead(e, e.uint32(), n, r.editedAt);
+                    r.editedAt = e0.D.internalBinaryRead(e, e.uint32(), n, r.editedAt);
                     break;
                 case 7:
                     r.editorId = e.fixed64().toString();
@@ -2483,7 +2544,7 @@ class e9 extends g.G {
                     r.unitType = e.int32();
                     break;
                 case 15:
-                    r.variations.push(tt.internalBinaryRead(e, e.uint32(), n));
+                    r.variations.push(ti.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 16:
                     r.rules.push(y.internalBinaryRead(e, e.uint32(), n));
@@ -2532,16 +2593,16 @@ class e9 extends g.G {
                     r.engineFeatureFlags.push(e.string());
                     break;
                 case 30:
-                    r.debugConfig = ts.internalBinaryRead(e, e.uint32(), n, r.debugConfig);
+                    r.debugConfig = to.internalBinaryRead(e, e.uint32(), n, r.debugConfig);
                     break;
                 case 31:
-                    r.expectedEndDate = eQ.D.internalBinaryRead(e, e.uint32(), n, r.expectedEndDate);
+                    r.expectedEndDate = e0.D.internalBinaryRead(e, e.uint32(), n, r.expectedEndDate);
                     break;
                 case 32:
                     r.isAutomatedChange = e.bool();
                     break;
                 case 33:
-                    r.archiveAt = eQ.D.internalBinaryRead(e, e.uint32(), n, r.archiveAt);
+                    r.archiveAt = e0.D.internalBinaryRead(e, e.uint32(), n, r.archiveAt);
                     break;
                 case 35:
                     r.guildExperimentVersion = A.as.internalBinaryRead(e, e.uint32(), n, r.guildExperimentVersion);
@@ -2577,10 +2638,10 @@ class e9 extends g.G {
     internalBinaryWrite(e, t, n) {
         "0" !== e.id && t.tag(1, p.O0.Bit64).fixed64(e.id),
             "" !== e.name && t.tag(2, p.O0.LengthDelimited).string(e.name),
-            e.createdAt && eQ.D.internalBinaryWrite(e.createdAt, t.tag(3, p.O0.LengthDelimited).fork(), n).join(),
+            e.createdAt && e0.D.internalBinaryWrite(e.createdAt, t.tag(3, p.O0.LengthDelimited).fork(), n).join(),
             "0" !== e.creatorId && t.tag(4, p.O0.Bit64).fixed64(e.creatorId),
             0 !== e.version && t.tag(5, p.O0.Varint).int32(e.version),
-            e.editedAt && eQ.D.internalBinaryWrite(e.editedAt, t.tag(6, p.O0.LengthDelimited).fork(), n).join(),
+            e.editedAt && e0.D.internalBinaryWrite(e.editedAt, t.tag(6, p.O0.LengthDelimited).fork(), n).join(),
             "0" !== e.editorId && t.tag(7, p.O0.Bit64).fixed64(e.editorId),
             "" !== e.title && t.tag(8, p.O0.LengthDelimited).string(e.title),
             "" !== e.description && t.tag(9, p.O0.LengthDelimited).string(e.description),
@@ -2591,7 +2652,7 @@ class e9 extends g.G {
             "" !== e.hashKey && t.tag(13, p.O0.LengthDelimited).string(e.hashKey),
             0 !== e.unitType && t.tag(14, p.O0.Varint).int32(e.unitType);
         for (let i = 0; i < e.variations.length; i++)
-            tt.internalBinaryWrite(e.variations[i], t.tag(15, p.O0.LengthDelimited).fork(), n).join();
+            ti.internalBinaryWrite(e.variations[i], t.tag(15, p.O0.LengthDelimited).fork(), n).join();
         for (let i = 0; i < e.rules.length; i++)
             y.internalBinaryWrite(e.rules[i], t.tag(16, p.O0.LengthDelimited).fork(), n).join();
         if ((0 !== e.phase && t.tag(18, p.O0.Varint).int32(e.phase), e.surfaces.length)) {
@@ -2617,11 +2678,11 @@ class e9 extends g.G {
         }
         for (let n = 0; n < e.engineFeatureFlags.length; n++)
             t.tag(29, p.O0.LengthDelimited).string(e.engineFeatureFlags[n]);
-        e.debugConfig && ts.internalBinaryWrite(e.debugConfig, t.tag(30, p.O0.LengthDelimited).fork(), n).join(),
+        e.debugConfig && to.internalBinaryWrite(e.debugConfig, t.tag(30, p.O0.LengthDelimited).fork(), n).join(),
             e.expectedEndDate &&
-                eQ.D.internalBinaryWrite(e.expectedEndDate, t.tag(31, p.O0.LengthDelimited).fork(), n).join(),
+                e0.D.internalBinaryWrite(e.expectedEndDate, t.tag(31, p.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.isAutomatedChange && t.tag(32, p.O0.Varint).bool(e.isAutomatedChange),
-            e.archiveAt && eQ.D.internalBinaryWrite(e.archiveAt, t.tag(33, p.O0.LengthDelimited).fork(), n).join(),
+            e.archiveAt && e0.D.internalBinaryWrite(e.archiveAt, t.tag(33, p.O0.LengthDelimited).fork(), n).join(),
             e.guildExperimentVersion &&
                 A.as.internalBinaryWrite(e.guildExperimentVersion, t.tag(35, p.O0.LengthDelimited).fork(), n).join(),
             0 !== e.customUnitPrefix && t.tag(36, p.O0.Varint).int32(e.customUnitPrefix);
@@ -2634,19 +2695,19 @@ class e9 extends g.G {
         return !1 !== i && (!0 == i ? p.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-new e9();
-class te extends g.G {
+new tt();
+class tn extends g.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Variation", [
             { no: 1, name: "id", kind: "scalar", T: 5 },
             { no: 2, name: "label", kind: "scalar", T: 9 },
             { no: 3, name: "target_allocation", kind: "scalar", T: 5 },
-            { no: 4, name: "buckets", kind: "message", repeat: 1, T: () => ti },
+            { no: 4, name: "buckets", kind: "message", repeat: 1, T: () => ts },
             {
                 no: 5,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Variation.Type", e5],
+                T: () => ["discord_protos.discord_experimentation.v1.Variation.Type", e8],
             },
             { no: 6, name: "configuration", kind: "message", T: () => A.hU },
         ]);
@@ -2675,7 +2736,7 @@ class te extends g.G {
                     r.targetAllocation = e.int32();
                     break;
                 case 4:
-                    r.buckets.push(ti.internalBinaryRead(e, e.uint32(), n));
+                    r.buckets.push(ts.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 5:
                     r.type = e.int32();
@@ -2698,7 +2759,7 @@ class te extends g.G {
             "" !== e.label && t.tag(2, p.O0.LengthDelimited).string(e.label),
             0 !== e.targetAllocation && t.tag(3, p.O0.Varint).int32(e.targetAllocation);
         for (let i = 0; i < e.buckets.length; i++)
-            ti.internalBinaryWrite(e.buckets[i], t.tag(4, p.O0.LengthDelimited).fork(), n).join();
+            ts.internalBinaryWrite(e.buckets[i], t.tag(4, p.O0.LengthDelimited).fork(), n).join();
         0 !== e.type && t.tag(5, p.O0.Varint).int32(e.type),
             e.configuration &&
                 A.hU.internalBinaryWrite(e.configuration, t.tag(6, p.O0.LengthDelimited).fork(), n).join();
@@ -2706,8 +2767,8 @@ class te extends g.G {
         return !1 !== i && (!0 == i ? p.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let tt = new te();
-class tn extends g.G {
+let ti = new tn();
+class tr extends g.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Bucket", [
             { no: 1, name: "start", kind: "scalar", T: 5 },
@@ -2716,7 +2777,7 @@ class tn extends g.G {
                 no: 3,
                 name: "type",
                 kind: "enum",
-                T: () => ["discord_protos.discord_experimentation.v1.Bucket.Type", e7],
+                T: () => ["discord_protos.discord_experimentation.v1.Bucket.Type", e9],
             },
             { no: 4, name: "owning_experiment_id", kind: "scalar", T: 6 },
         ]);
@@ -2766,8 +2827,8 @@ class tn extends g.G {
         return !1 !== i && (!0 == i ? p.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let ti = new tn();
-class tr extends g.G {
+let ts = new tr();
+class ta extends g.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.DebugConfig", [
             { no: 1, name: "enable_decision_logging", kind: "scalar", T: 8 },
@@ -2838,4 +2899,4 @@ class tr extends g.G {
         return !1 !== i && (!0 == i ? p.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let ts = new tr();
+let to = new ta();
