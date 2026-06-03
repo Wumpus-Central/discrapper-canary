@@ -22,7 +22,7 @@ e.exports = {
     uS: "topRimPillWithSparkles_a45ed3",
     on: "rimGlowTier2_a45ed3",
     KB: "trialHeader_a45ed3",
-    rd: "fractionalPremiumTopRimPill_a45ed3",
+    LW: "topRimPill_a45ed3",
     sQ: "fractionalPremiumSubheader_a45ed3",
     _K: "premiumGroupHeader_a45ed3",
 };
