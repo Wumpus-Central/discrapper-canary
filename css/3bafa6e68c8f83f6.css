@@ -1,3 +1,11 @@
+.card__96f21 {
+    padding: var(--space-16)
+}
+
+.button__96f21 {
+    display: flex
+}
+
 .item__28071 {
     background-color: var(--background-mod-muted);
     border-radius: 8px;

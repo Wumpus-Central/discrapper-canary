@@ -1,13 +1,13 @@
 "use strict";
-let i, r, s, a, o;
-n.d(t, { A: () => c });
-var l = n(17928),
-    _ = n(228366);
+let i, r, s, a, o, l;
+n.d(t, { A: () => h });
+var u = n(17928),
+    c = n(228366);
 function d() {
-    (i = !1), (r = []), (s = new Set()), (a = new Set()), (o = new Map());
+    (i = !1), (r = []), (s = new Set()), (a = new Set()), (o = new Map()), (l = new Map());
 }
 d();
-class u extends l.Ay.Store {
+class _ extends u.Ay.Store {
     static displayName = "BountyStore";
     get isFetchingQuestHomeBounties() {
         return i;
@@ -27,8 +27,11 @@ class u extends l.Ay.Store {
     getAdDecisionByPlacementAndAdCreativeId(e, t) {
         return o.get(e)?.get(t) ?? null;
     }
+    getBountyVideoProgress(e) {
+        return l.get(e) ?? null;
+    }
 }
-let c = new u(_.h, {
+let h = new _(c.h, {
     LOGOUT: function () {
         d();
     },
@@ -59,5 +62,13 @@ let c = new u(_.h, {
         let { bountyId: t } = e,
             n = new Set(a);
         n.delete(t), (a = n);
+    },
+    BOUNTIES_VIDEO_PROGRESS_UPDATE: function (e) {
+        let { bountyId: t, timestampSec: n, maxTimestampSec: i, duration: r } = e,
+            s = new Map(l);
+        s.set(t, { timestampSec: n, maxTimestampSec: i, duration: r }), (l = s);
+    },
+    AD_SESSION_RESET: function () {
+        l = new Map();
     },
 });

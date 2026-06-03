@@ -1904,97 +1904,114 @@ function n6(e) {
         })({ scrollerRef: I, canShowUpsell: A });
     return null == g
         ? null
-        : (0, t.jsxs)("aside", {
+        : (0, t.jsx)("aside", {
               id: nJ,
               "aria-labelledby": nQ,
               className: a()(n$.nd, { [n$.VU]: b && !p }, u),
               "aria-busy": o,
-              children: [
-                  (0, t.jsx)(f.A, { children: (0, t.jsx)(m.H, { id: nQ, children: eM.intl.string(eM.t["L+ch00"]) }) }),
-                  (0, t.jsxs)("div", {
-                      className: n$.wx,
-                      children: [
-                          (0, t.jsx)(n7, { innerRef: c, onClick: d }),
-                          (0, t.jsx)(nZ, {
-                              selectedGuildId: l ?? null,
-                              originGuildId: n,
-                              onChange: j,
-                              loading: o,
-                              disabled: p,
-                          }),
-                      ],
-                  }),
-                  p
-                      ? (0, t.jsx)(nT, {})
-                      : (0, t.jsxs)(t.Fragment, {
-                            children: [
-                                (0, t.jsx)(m.F, {
-                                    children: (0, t.jsxs)(lG.zC, {
-                                        ref: I,
-                                        className: a()(n$.XG, { [n$.uH]: N }),
-                                        onScroll: y,
-                                        children: [
-                                            v && (h ? (0, t.jsx)(n2, {}) : (0, t.jsx)(n3, {})),
-                                            h && (0, t.jsx)(n8, {}),
-                                            (0, t.jsx)(n9, {
-                                                heading: eM.intl.string(eM.t.x5CoXR),
-                                                disabled: o || b,
-                                                children: (0, t.jsx)(nn.A, { user: g, guildId: l, disabled: o || b }),
-                                            }),
-                                            (0, t.jsxs)(n9, {
-                                                heading: eM.intl.string(eM.t["50Nwpc"]),
-                                                disabled: o || b,
-                                                children: [
-                                                    (0, t.jsx)(lB.A, { user: g, guildId: l, disabled: o || b }),
-                                                    (0, t.jsx)(lz.A, { user: g, guildId: l, disabled: o || b }),
-                                                ],
-                                            }),
-                                            (h || v) &&
+              children: (0, t.jsxs)("div", {
+                  className: n$.l$,
+                  children: [
+                      (0, t.jsx)(f.A, {
+                          children: (0, t.jsx)(m.H, { id: nQ, children: eM.intl.string(eM.t["L+ch00"]) }),
+                      }),
+                      (0, t.jsxs)("div", {
+                          className: n$.wx,
+                          children: [
+                              (0, t.jsx)(n7, { innerRef: c, onClick: d }),
+                              (0, t.jsx)(nZ, {
+                                  selectedGuildId: l ?? null,
+                                  originGuildId: n,
+                                  onChange: j,
+                                  loading: o,
+                                  disabled: p,
+                              }),
+                          ],
+                      }),
+                      p
+                          ? (0, t.jsx)(nT, {})
+                          : (0, t.jsxs)(t.Fragment, {
+                                children: [
+                                    (0, t.jsx)(m.F, {
+                                        children: (0, t.jsxs)(lG.zC, {
+                                            ref: I,
+                                            className: a()(n$.XG, { [n$.uH]: N }),
+                                            onScroll: y,
+                                            children: [
+                                                v && (h ? (0, t.jsx)(n2, {}) : (0, t.jsx)(n3, {})),
+                                                h && (0, t.jsx)(n8, {}),
                                                 (0, t.jsx)(n9, {
-                                                    heading: eM.intl.string(eM.t.NEzEws),
+                                                    heading: eM.intl.string(eM.t.x5CoXR),
                                                     disabled: o || b,
-                                                    showNitroIcon: !0,
-                                                    children: (0, t.jsx)(nl, { user: g, guildId: l, disabled: o || b }),
-                                                }),
-                                            h || v
-                                                ? (0, t.jsxs)(n9, {
-                                                      heading: eM.intl.string(eM.t.Zenogr),
-                                                      disabled: o || b,
-                                                      showNitroIcon: !0,
-                                                      children: [
-                                                          (0, t.jsx)(ny, { user: g, guildId: l, disabled: o || !h }),
-                                                          (0, t.jsx)(l3, {
-                                                              userId: g.id,
-                                                              guildId: l,
-                                                              disabled: o || !h,
-                                                          }),
-                                                      ],
-                                                  })
-                                                : (0, t.jsx)(n9, {
-                                                      heading: eM.intl.string(eM.t["/X3fkf"]),
-                                                      disabled: o || b,
-                                                      children: (0, t.jsx)(lZ, { user: g, disabled: o }),
-                                                  }),
-                                            (0, t.jsxs)(n9, {
-                                                heading: eM.intl.string(x ? eM.t["Vfbar/"] : eM.t.wR5wOo),
-                                                disabled: o || b,
-                                                children: [
-                                                    (0, t.jsx)(ng, {
+                                                    children: (0, t.jsx)(nn.A, {
                                                         user: g,
                                                         guildId: l,
                                                         disabled: o || b,
-                                                        variant: x ? "square" : "full-height-bar",
                                                     }),
-                                                    x && (0, t.jsx)(nx, { user: g, guildId: l, disabled: o || b }),
-                                                ],
-                                            }),
-                                        ],
+                                                }),
+                                                (0, t.jsxs)(n9, {
+                                                    heading: eM.intl.string(eM.t["50Nwpc"]),
+                                                    disabled: o || b,
+                                                    children: [
+                                                        (0, t.jsx)(lB.A, { user: g, guildId: l, disabled: o || b }),
+                                                        (0, t.jsx)(lz.A, { user: g, guildId: l, disabled: o || b }),
+                                                    ],
+                                                }),
+                                                (h || v) &&
+                                                    (0, t.jsx)(n9, {
+                                                        heading: eM.intl.string(eM.t.NEzEws),
+                                                        disabled: o || b,
+                                                        showNitroIcon: !0,
+                                                        children: (0, t.jsx)(nl, {
+                                                            user: g,
+                                                            guildId: l,
+                                                            disabled: o || b,
+                                                        }),
+                                                    }),
+                                                h || v
+                                                    ? (0, t.jsxs)(n9, {
+                                                          heading: eM.intl.string(eM.t.Zenogr),
+                                                          disabled: o || b,
+                                                          showNitroIcon: !0,
+                                                          children: [
+                                                              (0, t.jsx)(ny, {
+                                                                  user: g,
+                                                                  guildId: l,
+                                                                  disabled: o || !h,
+                                                              }),
+                                                              (0, t.jsx)(l3, {
+                                                                  userId: g.id,
+                                                                  guildId: l,
+                                                                  disabled: o || !h,
+                                                              }),
+                                                          ],
+                                                      })
+                                                    : (0, t.jsx)(n9, {
+                                                          heading: eM.intl.string(eM.t["/X3fkf"]),
+                                                          disabled: o || b,
+                                                          children: (0, t.jsx)(lZ, { user: g, disabled: o }),
+                                                      }),
+                                                (0, t.jsxs)(n9, {
+                                                    heading: eM.intl.string(x ? eM.t["Vfbar/"] : eM.t.wR5wOo),
+                                                    disabled: o || b,
+                                                    children: [
+                                                        (0, t.jsx)(ng, {
+                                                            user: g,
+                                                            guildId: l,
+                                                            disabled: o || b,
+                                                            variant: x ? "square" : "full-height-bar",
+                                                        }),
+                                                        x && (0, t.jsx)(nx, { user: g, guildId: l, disabled: o || b }),
+                                                    ],
+                                                }),
+                                            ],
+                                        }),
                                     }),
-                                }),
-                                A && (0, t.jsx)(n5, { isDismissed: C }),
-                            ],
-                        }),
-              ],
+                                    A && (0, t.jsx)(n5, { isDismissed: C }),
+                                ],
+                            }),
+                  ],
+              }),
           });
 }
 var n4 = n(982599),

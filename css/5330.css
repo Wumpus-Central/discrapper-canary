@@ -565,8 +565,7 @@
     background: var(--modal-background);
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    position: relative
+    overflow: hidden
 }
 
 .panel_b08638.withGradient_b08638 {
@@ -574,6 +573,13 @@
     background-position: 20% -1px;
     background-repeat: no-repeat;
     background-size: 250% 100%
+}
+
+.panelInner_b08638 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    position: relative
 }
 
 .header_b08638 {
@@ -7017,12 +7023,4 @@ button.inner__02fc8:disabled {
     height: 24px;
     justify-content: center;
     width: 24px
-}
-
-.card__96f21 {
-    padding: var(--space-16)
-}
-
-.button__96f21 {
-    display: flex
 }

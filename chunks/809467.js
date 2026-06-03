@@ -2,6 +2,7 @@ e.exports = {
     eg: "tabButton_b08638",
     nd: "panel_b08638",
     VU: "withGradient_b08638",
+    l$: "panelInner_b08638",
     wx: "header_b08638",
     cS: "collapseButton_b08638",
     eW: "guildProfileUpsell_b08638",
