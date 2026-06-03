@@ -84,38 +84,66 @@ var J = n(287809),
     et = n(652215),
     en = n(375708);
 async function ei(e, t) {
-    if (0 !== t.length)
+    if (0 === t.length) return;
+    let n = [];
+    for (let e of t) {
+        let t = J.default.getUser(e);
+        null == t || t.bot || n.push(t);
+    }
+    if (0 !== n.length)
         try {
-            let n = await U.Ay.createInvite(e, { max_age: Q({ location: "5326c5_1" }) }, et.PE1.GROUP_DM),
-                i = new Set();
-            for (let e of t) {
-                let t = J.default.getUser(e);
-                null == t ||
-                    t.bot ||
-                    (X.A.enqueue(
-                        {
-                            inviteKey: n.code,
-                            type: X.F.USER,
-                            user: t,
-                            location: et.PE1.GROUP_DM,
-                            inviteAnalyticsMetadata: { source: et.PE1.GROUP_DM },
-                        },
-                        () => {},
-                    ),
-                    i.add(t));
-            }
-            i.size > 0 &&
-                (function (e) {
-                    let t = Array.from(e).map((e) => ee.Ay.getName(e));
-                    if (0 === t.length) return;
-                    let n = en.intl.formatToPlainString(en.t.gztrTs, {
-                        inviteCount: t.length,
-                        username1: t[0],
-                        username2: t[1] ?? "",
-                        remaining: Math.max(0, t.length - 2),
-                    });
-                    (0, _.P0)((0, h.o)(n, f.Ck.SUCCESS));
-                })(i);
+            let t = await U.Ay.createInvite(e, { max_age: Q({ location: "5326c5_1" }) }, et.PE1.GROUP_DM),
+                i = await Promise.all(
+                    n.map(async (e) => {
+                        var n;
+                        return {
+                            user: e,
+                            success: await ((n = t.code),
+                            new Promise((t) => {
+                                X.A.enqueue(
+                                    {
+                                        inviteKey: n,
+                                        type: X.F.USER,
+                                        user: e,
+                                        location: et.PE1.GROUP_DM,
+                                        inviteAnalyticsMetadata: { source: et.PE1.GROUP_DM },
+                                    },
+                                    (e) => {
+                                        t(e);
+                                    },
+                                );
+                            })),
+                        };
+                    }),
+                ),
+                r = [],
+                s = [];
+            for (let { user: e, success: t } of i) t ? r.push(e) : s.push(e);
+            if (s.length > 0) {
+                let e, t;
+                (t =
+                    (e = s.map((e) => ee.Ay.getName(e))).length > 0
+                        ? en.intl.formatToPlainString(en.t["wWp/+6"], {
+                              inviteCount: e.length,
+                              username1: e[0],
+                              username2: e[1] ?? "",
+                              remaining: Math.max(0, e.length - 2),
+                          })
+                        : en.intl.string(en.t.iRntUl)),
+                    (0, _.P0)((0, h.o)(t, f.Ck.FAILURE));
+            } else
+                r.length > 0 &&
+                    (function (e) {
+                        let t = e.map((e) => ee.Ay.getName(e));
+                        if (0 === t.length) return;
+                        let n = en.intl.formatToPlainString(en.t.gztrTs, {
+                            inviteCount: t.length,
+                            username1: t[0],
+                            username2: t[1] ?? "",
+                            remaining: Math.max(0, t.length - 2),
+                        });
+                        (0, _.P0)((0, h.o)(n, f.Ck.SUCCESS));
+                    })(r);
         } catch {
             (0, _.P0)((0, h.o)(en.intl.string(en.t.iRntUl), f.Ck.FAILURE));
         }

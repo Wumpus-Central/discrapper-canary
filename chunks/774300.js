@@ -30,7 +30,7 @@ class _ extends u.A {
                 r.A.ensurePrivateChannel(e.user.id).then(
                     (r) => {
                         let s = o.A.getChannel(r);
-                        null != s && this._sendInvite(s, e.inviteKey, n, i, t);
+                        null != s ? this._sendInvite(s, e.inviteKey, n, i, t) : t(null, !1);
                     },
                     () => t(null, !1),
                 );
