@@ -5922,8 +5922,8 @@ button.inner__02fc8:disabled {
 
 .card__53455 {
     background-color: var(--background-base-lowest);
-    border-radius: var(--radius-lg);
-    box-shadow: inset 0 0 0 1px var(--border-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
     display: flex;
     flex-direction: column;
     isolation: isolate;

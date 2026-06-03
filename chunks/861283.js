@@ -13968,7 +13968,7 @@ function SI() {
             (t = (0, Sx.GM)("connectedAccountsBannerFooter")),
             (n = (0, SS.O)()),
             (l = null != (s = (0, g.bG)([ST.A], () => ST.A.getAccount(null, U.fg2.XBOX))) && !s.revoked),
-            e === Sp.s.NONE || e === Sp.s.FREE_FRACTIONAL_NITRO || (e === Sp.s.NON_NITRO && n)
+            e === Sp.s.NONE || e === Sp.s.FREE_FRACTIONAL_NITRO || n
                 ? { variant: Sp.s.NONE, showFooter: !1 }
                 : { variant: e, showFooter: t && e === Sp.s.NON_NITRO && !l }),
         { analyticsLocations: o } = (0, nZ.Ay)(e2.A.XBOX_CONNECTED_ACCOUNTS_BANNER),
