@@ -57,4 +57,7 @@ class a extends i.A {
     getApplicableSubscriptionInterval() {
         return s[this.getDiscountInterval()];
     }
+    getIsMultiIntervalDiscount() {
+        return this.getFullIntervalCount() > 1;
+    }
 }

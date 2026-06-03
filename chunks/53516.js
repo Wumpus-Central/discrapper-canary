@@ -1,2 +1,1 @@
-n.d(t, { V: () => i });
-let i = "PHONE_VERIFICATION_MODAL_KEY";
+n.d(t,{V:()=>i});let i="PHONE_VERIFICATION_MODAL_KEY"ON_MODAL_KEY"
