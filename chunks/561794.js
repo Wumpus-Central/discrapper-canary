@@ -16,7 +16,7 @@ var i,
     a = n(735438),
     o = n(17928),
     l = n(96203),
-    u = n(530868),
+    u = n(470285),
     c = n(841595),
     d = n(903209),
     _ = n(495544),
@@ -97,7 +97,7 @@ function y(e) {
                 : [p.A.getWishlist(t), p.A.getStatus(t), p.A.getError(t), p.A.getUpdatedAt(t)],
         ),
         h = s.useMemo(() => (null == r ? [] : (0, a.uniq)((0, E.Lh)(r))), [r]);
-    (0, u.j)({ skuIds: h, location: "useFetchWishlist" });
+    (0, u.j)({ skuIds: h });
     let m = (0, o.bG)([c.A], () => {
         if (null != t && null != n) return c.A.getWishlistSettings(n, t)?.updated_at;
     });

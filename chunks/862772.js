@@ -4,7 +4,7 @@ n.d(t, { Ul: () => M, XQ: () => w, rg: () => L });
 var r = n(64700),
     s = n(735438),
     a = n(17928),
-    o = n(530868),
+    o = n(470285),
     l = n(841595),
     u = n(903209),
     c = n(495544),
@@ -188,7 +188,7 @@ function b(e) {
         ),
         b = r.useMemo(() => (0, s.uniq)([...A.map((e) => e.id), ...y.map((e) => e.id)]), [A, y]);
     return (
-        (0, o.j)({ skuIds: b, location: "useWishlistRecommendationsWithWishlists" }),
+        (0, o.j)({ skuIds: b }),
         { recommendations: A, wishlistAndRecommendations: y, skusToUserAndReason: N, status: v }
     );
 }

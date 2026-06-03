@@ -1,11 +1,11 @@
-l.d(t, { A: () => s });
-var n = l(64700),
-    a = l(17928),
-    i = l(67480),
-    r = l(171491);
-function s(e) {
-    let { skuId: t, location: l } = e,
-        s = (0, a.bG)([i.A], () => i.A.get(t)),
-        o = n.useMemo(() => [t], [t]);
-    return (0, r.j)({ skuIds: o, location: l }), s;
+t.d(s, { A: () => r });
+var p = t(64700),
+    u = t(17928),
+    c = t(67480),
+    i = t(470285);
+function r(e) {
+    let { skuId: s } = e,
+        t = (0, u.bG)([c.A], () => c.A.get(s)),
+        r = p.useMemo(() => [s], [s]);
+    return (0, i.j)({ skuIds: r }), t;
 }

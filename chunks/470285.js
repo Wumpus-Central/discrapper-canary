@@ -51,21 +51,9 @@ new d(s.h, {
         for (let e of t) c[e] = { state: "error", fetchedAt: n };
     },
 });
-var _ = n(723090);
-let h = (0, n(945810).mj)({
-    name: "2026-04-storefront-pricing",
-    kind: "user",
-    defaultConfig: { enabled: !1, thresholdMs: 5 * o.A.Millis.MINUTE },
-    variations: {
-        0: { enabled: !1, thresholdMs: 5 * o.A.Millis.MINUTE },
-        1: { enabled: !0, thresholdMs: +o.A.Millis.MINUTE },
-        2: { enabled: !0, thresholdMs: 2 * o.A.Millis.MINUTE },
-        3: { enabled: !0, thresholdMs: 5 * o.A.Millis.MINUTE },
-        4: { enabled: !0, thresholdMs: 10 * o.A.Millis.MINUTE },
-    },
-});
-var f = n(315069);
-class p extends f.A {
+var _ = n(723090),
+    h = n(315069);
+class f extends h.A {
     id;
     applicationId;
     displayName;
@@ -77,7 +65,7 @@ class p extends f.A {
     endsAt;
     static createFromServer(e) {
         var t;
-        return new p({
+        return new f({
             id: e.id,
             applicationId: e.application_id,
             displayName: e.display_name ?? null,
@@ -117,91 +105,80 @@ class p extends f.A {
             (this.endsAt = e.endsAt);
     }
 }
-var E = n(652215);
+var p = n(652215);
 o.A.Millis.HOUR;
-let m = 10 * o.A.Millis.MINUTE;
-function g(e, t) {
-    return e?.type === "error"
-        ? m
-        : (function (e) {
-              let { location: t } = e;
-              return h.getConfig({ location: t }).thresholdMs;
-          })({ location: t });
+let E = 10 * o.A.Millis.MINUTE,
+    m = o.A.Millis.MINUTE;
+function g(e) {
+    return e?.type === "error" ? E : m;
 }
 async function A(e) {
-    let { applicationId: t, location: n } = e;
-    await T({ type: "application", applicationId: t }, n);
+    let { applicationId: t } = e;
+    await T({ type: "application", applicationId: t });
 }
 async function I(e) {
-    let { skuIds: t, location: n } = e;
-    await T({ type: "skus", skuIds: t }, n);
+    let { skuIds: t } = e;
+    await T({ type: "skus", skuIds: t });
 }
-async function T(e, t) {
+async function T(e) {
     let {
-        shouldFetch: n,
-        filteredSkuIds: i,
-        applicationId: o,
-    } = (function (e, t) {
-        if (
-            !(function (e) {
-                let { location: t } = e;
-                return h.getConfig({ location: t }).enabled;
-            })({ location: t })
-        )
-            return { shouldFetch: !1, filteredSkuIds: [], applicationId: null };
+        shouldFetch: t,
+        filteredSkuIds: n,
+        applicationId: i,
+    } = (function (e) {
         if ("application" === e.type) {
-            let n = l.A.getFetchStateForApplicationId(e.applicationId),
-                i = g(n, t);
-            return null != n && ("loading" === n.type || n.fetchedAt > Date.now() - i)
+            let t = l.A.getFetchStateForApplicationId(e.applicationId),
+                n = g(t);
+            return null != t && ("loading" === t.type || t.fetchedAt > Date.now() - n)
                 ? { shouldFetch: !1, filteredSkuIds: [], applicationId: e.applicationId }
                 : { shouldFetch: !0, filteredSkuIds: [], applicationId: e.applicationId };
         }
         {
-            let n = e.skuIds
+            let t = e.skuIds
                 .filter((e) => {
-                    let n = l.A.getFetchStateForSkuId(e);
-                    if (null == n) return !0;
-                    let i = g(n, t);
-                    return "loading" !== n.type && n.fetchedAt < Date.now() - i;
+                    let t = l.A.getFetchStateForSkuId(e);
+                    if (null == t) return !0;
+                    let n = g(t);
+                    return "loading" !== t.type && t.fetchedAt < Date.now() - n;
                 })
                 .sort((e, t) => {
                     let n = l.A.getFetchStateForSkuId(e),
                         i = l.A.getFetchStateForSkuId(t);
                     return null == n && null != i ? -1 : +(null != n && null == i);
                 });
-            return 0 === n.length
+            return 0 === t.length
                 ? { shouldFetch: !1, filteredSkuIds: [], applicationId: null }
-                : { shouldFetch: !0, filteredSkuIds: n.slice(0, 50), applicationId: null };
+                : { shouldFetch: !0, filteredSkuIds: t.slice(0, 50), applicationId: null };
         }
-    })(e, t);
-    if (!n) return;
-    let u = null != o ? { type: "application", applicationId: o } : { type: "skus", skuIds: i };
+    })(e);
+    if (!t) return;
+    let o = null != i ? { type: "application", applicationId: i } : { type: "skus", skuIds: n };
     try {
-        s.h.dispatch({ type: "SKUS_PRICING_FETCH_START", priceId: u });
+        s.h.dispatch({ type: "SKUS_PRICING_FETCH_START", priceId: o });
         let e = (
             await r.Bo.get({
-                url: E.Rsh.STOREFRONT_PRICES,
+                url: p.Rsh.STOREFRONT_PRICES,
                 query: {
-                    ...(null != o ? { application_id: o } : { sku_ids: i }),
+                    ...(null != i ? { application_id: i } : { sku_ids: n }),
                     country_code: a.A.ipCountryCode ?? void 0,
                 },
                 rejectWithError: !0,
             })
         ).body;
-        s.h.dispatch({ type: "SKUS_PRICING_FETCH_SUCCESS", priceId: u, data: (0, _.Oj)(e) });
+        s.h.dispatch({ type: "SKUS_PRICING_FETCH_SUCCESS", priceId: o, data: (0, _.Oj)(e) });
     } catch {
-        s.h.dispatch({ type: "SKUS_PRICING_FETCH_FAIL", priceId: u });
+        s.h.dispatch({ type: "SKUS_PRICING_FETCH_FAIL", priceId: o });
     }
 }
 function S(e) {
-    let { applicationId: t, location: n } = e;
+    let { applicationId: t } = e;
     i.useEffect(() => {
-        null != t && A({ applicationId: t, location: n });
-    }, [t, n]);
+        null != t && A({ applicationId: t });
+    }, [t]);
 }
 function y(e) {
-    let { skuIds: t, location: n } = e;
+    let { skuIds: t } = e;
     i.useEffect(() => {
-        0 !== t.length && I({ skuIds: t, location: n });
-    }, [t, n]);
+        0 !== t.length && I({ skuIds: t });
+    }, [t]);
 }

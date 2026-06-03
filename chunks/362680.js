@@ -2721,7 +2721,7 @@ function lB(e) {
 function lH(e) {
     let { guildId: t, skuId: n, channel: i, customNavigateToSocialLayerStorefront: l } = e,
         a = (0, u.bG)([eO.A], () => eO.A.isFetchingForSKU(n)),
-        o = (0, lb.A)({ skuId: n, location: "SocialLayerStorefrontProductDetailsEmbed" }),
+        o = (0, lb.A)({ skuId: n }),
         d = o?.applicationId,
         c = (0, u.bG)([lN.A], () => null != d && lN.A.isFetchingApplication(d)),
         m = (0, u.bG)([lN.A], () => null != d && lN.A.didFetchingApplicationFail(d)),

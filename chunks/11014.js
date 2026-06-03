@@ -2966,6 +2966,7 @@ function iG(e) {
                                     variant: "secondary",
                                     fullWidth: !0,
                                     allowFrictionlessGDMUpsell: !c,
+                                    entryPointType: it.YW.MEMBER_LIST,
                                 }),
                             }),
                     ],
