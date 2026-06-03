@@ -52,17 +52,17 @@ let z = [],
         return (0, i.jsx)(M.Lp, { className: O()($.Tc, n), text: t });
     },
     X = (e) => {
-        let { header: t, subHeader: n, imageSrc: r, tagText: s, wideStyle: a } = e;
+        let { header: t, subHeader: n, subHeaderExtra: r, imageSrc: s, tagText: a, wideStyle: o } = e;
         return (0, i.jsxs)("div", {
-            className: O()($.Vr, { [$.tF]: a }),
+            className: O()($.Vr, { [$.tF]: o }),
             children: [
-                null != s ? (0, i.jsx)(q, { tagText: s, className: $.bX }) : null,
-                (0, i.jsx)("img", { alt: "", className: O()($._n, { [$.tF]: a }), src: r }),
+                null != a ? (0, i.jsx)(q, { tagText: a, className: $.bX }) : null,
+                (0, i.jsx)("img", { alt: "", className: O()($._n, { [$.tF]: o }), src: s }),
                 (0, i.jsxs)("div", {
-                    className: O()($.Zz, { [$.tF]: a }),
+                    className: O()($.Zz, { [$.tF]: o }),
                     children: [
                         (0, i.jsx)(P.D, { variant: "heading-md/bold", className: $.Hf, children: t }),
-                        (0, i.jsx)(x.E, { variant: "text-md/medium", color: "text-subtle", children: n }),
+                        (0, i.jsxs)(x.E, { variant: "text-md/medium", color: "text-subtle", children: [n, r?.()] }),
                     ],
                 }),
             ],
@@ -391,12 +391,30 @@ function J(e) {
                     subHeaderExtra: b,
                     body: r.body,
                     heroArt: w,
-                    featureCards: r.featureCards.map((e) => ({
-                        header: e.header,
-                        subHeader: e.body,
-                        imageSrc: u ? e.imageLinkLightTheme : e.imageLink,
-                        tagText: "" !== e.pill ? e.pill : void 0,
-                    })),
+                    featureCards: r.featureCards.map((e) => {
+                        let t = (0, T.C)(e.helpArticle, ""),
+                            n =
+                                null != t
+                                    ? () =>
+                                          (0, i.jsxs)(i.Fragment, {
+                                              children: [
+                                                  "\xa0",
+                                                  (0, i.jsx)(g.Anchor, {
+                                                      className: C.$T,
+                                                      href: t.url,
+                                                      children: t.linkText,
+                                                  }),
+                                              ],
+                                          })
+                                    : void 0;
+                        return {
+                            header: e.header,
+                            subHeader: e.body,
+                            subHeaderExtra: n,
+                            imageSrc: u ? e.imageLinkLightTheme : e.imageLink,
+                            tagText: "" !== e.pill ? e.pill : void 0,
+                        };
+                    }),
                     changeLogId: c,
                     button: () => {
                         let e = Date.now(),

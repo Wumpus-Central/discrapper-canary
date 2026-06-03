@@ -28,6 +28,7 @@ class d extends o.G {
             { no: 6, name: "header_localized", kind: "message", T: () => u.X },
             { no: 7, name: "pill_localized", kind: "message", T: () => u.X },
             { no: 8, name: "body_localized", kind: "message", T: () => u.X },
+            { no: 9, name: "help_article", kind: "message", T: () => l.O },
         ]);
     }
     create(e) {
@@ -68,6 +69,9 @@ class d extends o.G {
                 case 8:
                     s.bodyLocalized = u.X.internalBinaryRead(e, e.uint32(), n, s.bodyLocalized);
                     break;
+                case 9:
+                    s.helpArticle = l.O.internalBinaryRead(e, e.uint32(), n, s.helpArticle);
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -89,13 +93,14 @@ class d extends o.G {
             e.pillLocalized &&
                 u.X.internalBinaryWrite(e.pillLocalized, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),
             e.bodyLocalized &&
-                u.X.internalBinaryWrite(e.bodyLocalized, t.tag(8, r.O0.LengthDelimited).fork(), n).join();
+                u.X.internalBinaryWrite(e.bodyLocalized, t.tag(8, r.O0.LengthDelimited).fork(), n).join(),
+            e.helpArticle && l.O.internalBinaryWrite(e.helpArticle, t.tag(9, r.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
 let _ = new d();
-class f extends o.G {
+class h extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.SubscriptionButton", [
             { no: 1, name: "copy", kind: "scalar", T: 9 },
@@ -155,7 +160,7 @@ class f extends o.G {
         return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let h = new f();
+let f = new h();
 class p extends o.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.Variant1Storage", [
@@ -419,7 +424,7 @@ class T extends o.G {
             { no: 3, name: "video_link", kind: "scalar", T: 9 },
             { no: 4, name: "help_article_id", kind: "scalar", T: 9 },
             { no: 5, name: "feature_cards", kind: "message", repeat: 1, T: () => _ },
-            { no: 6, name: "button", kind: "message", T: () => h },
+            { no: 6, name: "button", kind: "message", T: () => f },
             { no: 8, name: "hero_art_video_link_light_theme", kind: "scalar", T: 9 },
             { no: 9, name: "hero_art_image_link_dark_theme", kind: "scalar", T: 9 },
             { no: 10, name: "hero_art_image_link_light_theme", kind: "scalar", T: 9 },
@@ -478,7 +483,7 @@ class T extends o.G {
                     s.featureCards.push(_.internalBinaryRead(e, e.uint32(), n));
                     break;
                 case 6:
-                    s.button = h.internalBinaryRead(e, e.uint32(), n, s.button);
+                    s.button = f.internalBinaryRead(e, e.uint32(), n, s.button);
                     break;
                 case 8:
                     s.heroArtVideoLinkLightTheme = e.string();
@@ -536,7 +541,7 @@ class T extends o.G {
             "" !== e.helpArticleId && t.tag(4, r.O0.LengthDelimited).string(e.helpArticleId);
         for (let i = 0; i < e.featureCards.length; i++)
             _.internalBinaryWrite(e.featureCards[i], t.tag(5, r.O0.LengthDelimited).fork(), n).join();
-        e.button && h.internalBinaryWrite(e.button, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
+        e.button && f.internalBinaryWrite(e.button, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
             "" !== e.heroArtVideoLinkLightTheme && t.tag(8, r.O0.LengthDelimited).string(e.heroArtVideoLinkLightTheme),
             "" !== e.heroArtImageLinkDarkTheme && t.tag(9, r.O0.LengthDelimited).string(e.heroArtImageLinkDarkTheme),
             "" !== e.heroArtImageLinkLightTheme && t.tag(10, r.O0.LengthDelimited).string(e.heroArtImageLinkLightTheme),
