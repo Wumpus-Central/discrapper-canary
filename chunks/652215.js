@@ -4002,6 +4002,7 @@ var rD =
         (ex.IMPRESSION_GIFT_SELECTION_WISHLIST_SECTION_VIEWED = "impression_gift_selection_wishlist_section_viewed"),
         (ex.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED = "collectibles_gifting_shop_item_clicked"),
         (ex.GIFTING_ITEM_CLICKED = "gifting_item_clicked"),
+        (ex.GIFTING_BADGE_INFO_ACTION_SHEET_OPENED = "gifting_badge_info_action_sheet_opened"),
         (ex.GIFT_CARD_REDEMPTION_START = "gift_card_redemption_start"),
         (ex.GIFT_CARD_REDEMPTION_EMBED_CLICKED = "gift_card_redemption_embed_clicked"),
         (ex.GIFT_CARD_REDEMPTION_COMPLETED = "gift_card_redemption_completed"),
