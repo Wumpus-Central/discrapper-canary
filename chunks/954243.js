@@ -160,7 +160,7 @@ class w {
                 })(this.questContent),
             };
         this.entity.adContentIds.forEach((e, i) => {
-            let r = (0, E.L4)(this.questContent, e),
+            let r = (0, E.L4)(this.sourceQuestContent, e),
                 s = this.shouldExtendSession(e);
             if ((this.trackViewedPlacement(e), this.entity.adCreativeType === a.p.QUEST)) {
                 let e = this.entity.adContentIds[i],
@@ -180,7 +180,7 @@ class w {
                             ...this.commonProperties(),
                             metadata_sealed: r ?? null,
                             search_session_id: (0, b.tv)()?.uuid ?? null,
-                            traffic_metadata_sealed: (0, E.Gp)(this.questContent, o?.id) ?? null,
+                            traffic_metadata_sealed: (0, E.Gp)(this.sourceQuestContent, o?.id) ?? null,
                         },
                     });
             } else {
@@ -285,7 +285,7 @@ class w {
             },
             t = { triggered_by_status_change: this.triggeredByStatusChange };
         this.entity.adContentIds.forEach((n, i) => {
-            let r = (0, E.L4)(this.questContent, n);
+            let r = (0, E.L4)(this.sourceQuestContent, n);
             if (this.entity.adCreativeType === a.p.QUEST) {
                 let n = this.entity.adContentIds[i],
                     s = p.A.getQuest(n);
@@ -301,7 +301,7 @@ class w {
                             ...t,
                             metadata_sealed: r ?? null,
                             ...this.commonProperties(),
-                            traffic_metadata_sealed: (0, E.Gp)(this.questContent, s?.id) ?? null,
+                            traffic_metadata_sealed: (0, E.Gp)(this.sourceQuestContent, s?.id) ?? null,
                         },
                     });
             } else {
