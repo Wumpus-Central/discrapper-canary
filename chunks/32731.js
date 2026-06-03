@@ -77,6 +77,7 @@ class f extends a.A {
     description;
     orbsReward;
     eligibleOffers;
+    previewAssetPaths;
     static createFromServer(e) {
         let { price: t } = e;
         return new f({
@@ -224,6 +225,15 @@ class f extends a.A {
             description: e.description,
             orbsReward: e.orbs_reward,
             eligibleOffers: e.eligible_offers ?? [],
+            previewAssetPaths:
+                null != e.preview_asset_paths
+                    ? {
+                          fgStatic: e.preview_asset_paths.fg_static,
+                          fgAnimated: e.preview_asset_paths.fg_animated,
+                          bgStatic: e.preview_asset_paths.bg_static,
+                          bgAnimated: e.preview_asset_paths.bg_animated,
+                      }
+                    : null,
         });
     }
     constructor(e) {
@@ -269,7 +279,8 @@ class f extends a.A {
             (this.thumbnailAssetId = e.thumbnailAssetId),
             (this.description = e.description),
             (this.orbsReward = e.orbsReward),
-            (this.eligibleOffers = e.eligibleOffers);
+            (this.eligibleOffers = e.eligibleOffers),
+            (this.previewAssetPaths = e.previewAssetPaths);
     }
     get supportedOperatingSystems() {
         let e = null != this.systemRequirements ? Object.keys(this.systemRequirements) : [];
