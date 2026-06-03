@@ -7,14 +7,16 @@ function a() {
     let e = i.A.canFractionalPremiumUserUseOffer();
     return (0, r.A)(s.xH, e);
 }
-function o() {
-    let e = i.A.canFractionalPremiumUserUseOffer(),
-        t = (0, r.A)(s.TU, e),
-        n = (0, r.A)(s.KG, e),
-        a = (0, r.A)(s.lj, e),
-        o = (0, r.A)(s.HF, e),
-        l = (0, r.A)(s.V2, e),
-        u = (0, r.A)(s.UX, e),
-        c = (0, r.A)(s.RG, e);
-    return t ?? n ?? a ?? o ?? l ?? u ?? c;
+function o(e) {
+    let { includePremiumGroupDiscount: t = !1 } = null != e ? e : {},
+        n = i.A.canFractionalPremiumUserUseOffer(),
+        a = (0, r.A)(s.TU, n),
+        o = (0, r.A)(s.KG, n),
+        l = (0, r.A)(s.lj, n),
+        u = (0, r.A)(s.HF, n),
+        c = (0, r.A)(s.V2, n),
+        d = (0, r.A)(s.UX, n),
+        _ = (0, r.A)(s.RG, n),
+        h = (0, r.A)(s.xH, n);
+    return a ?? o ?? l ?? u ?? c ?? d ?? _ ?? (t ? h : null);
 }
