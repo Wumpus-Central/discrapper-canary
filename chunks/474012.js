@@ -11,7 +11,7 @@ n.d(t, {
                     t?.type === "single" && n.push(t.item);
                 }
                 if (0 === n.length) return;
-                return { type: "bundle", items: n };
+                return { type: "bundle", items: n, previewAssets: t.previewAssetPaths ?? void 0 };
             }
             let n = t.tenantMetadata?.collectibles,
                 l = n?.item;
@@ -70,7 +70,7 @@ var i = n(575593),
     r = n(898461),
     s = n(837015),
     a = n(203632),
-    o = n(892118),
+    o = n(166886),
     l = n(166590),
     u = n(652215);
 let c = (e) =>
