@@ -18,9 +18,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: var(--space-6) 14px;
     position: relative;
     transition: box-shadow .15s ease-out
+}
+
+.framePresetItem__2ed4c {
+    padding: var(--space-6) 14px
 }
 
 .selected__2ed4c {

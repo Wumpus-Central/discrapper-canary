@@ -77,14 +77,14 @@ let F = (e) => {
     });
 };
 var M = i(503698),
-    U = i.n(M),
-    O = i(575593),
+    O = i.n(M),
+    U = i(575593),
     T = i(939249),
     w = i(428678),
     D = i(834730),
     G = i(34188),
     H = i(92008),
-    L = i(892118),
+    L = i(166886),
     z = i(483968);
 i(321073);
 var J = i(702841),
@@ -101,7 +101,7 @@ let q = () => 80,
         let { children: t, className: i, isSelected: n, ...r } = e;
         return (0, s.jsx)(T.D, {
             "aria-pressed": n,
-            className: U()(Y.X5, i, { [Y.wH]: n }),
+            className: O()(Y.X5, i, { [Y.wH]: n }),
             ...r,
             onClick: r.onSelect,
             children: t,
@@ -113,6 +113,7 @@ let q = () => 80,
         return (0, s.jsxs)(Q, {
             innerRef: i ?? o,
             isSelected: l,
+            className: Y.IO,
             ...u,
             children: [
                 (0, s.jsx)(Z.A, { frame: t }),
@@ -238,7 +239,7 @@ let q = () => 80,
                                 innerRef: e ? l : void 0,
                                 isSelected: e,
                                 canUsePremiumCollectibles: p,
-                                onSelect: () => a({ skuId: h.skuId, type: O.R.PROFILE_FRAME }),
+                                onSelect: () => a({ skuId: h.skuId, type: U.R.PROFILE_FRAME }),
                             },
                             o,
                         );
