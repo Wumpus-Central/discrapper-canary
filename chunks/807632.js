@@ -1,56 +1,55 @@
 "use strict";
-n.d(t, { Dg: () => p, Jo: () => g, V6: () => I, YG: () => E, _k: () => A, n5: () => m });
+n.d(t, { Dg: () => h, Jo: () => E, V6: () => A, YG: () => f, _k: () => g, n5: () => p });
 var i = n(64700),
     r = n(17928),
     s = n(627363),
-    a = n(587895),
-    o = n(473503),
-    l = n(311043),
-    u = n(569926),
-    c = n(985253),
-    d = n(734057),
-    _ = n(71393),
-    h = n(290863);
-let f = { "1509696536903417891": "1432419613165228174" },
-    p = "No Mic";
-function E(e) {
+    a = n(473503),
+    o = n(569926),
+    l = n(734057),
+    u = n(71393),
+    c = n(290863);
+let d = { "1509696536903417891": "1432419613165228174" },
+    _ = {},
+    h = "No Mic";
+function f(e) {
     return (0, r.bG)(
-        [d.A],
+        [l.A],
         () =>
             null != e &&
             !!e.isForumPost() &&
             null != e.parent_id &&
-            (d.A.getChannel(e.parent_id)?.isGameInvitesChannel() ?? !1),
+            (l.A.getChannel(e.parent_id)?.isGameInvitesChannel() ?? !1),
     );
 }
-function m(e, t) {
-    return (0, o.OA)(e, { enabled: t, allowArchived: !0 });
+function p(e, t) {
+    return (0, a.OA)(e, { enabled: t, allowArchived: !0 });
 }
-function g(e) {
-    let t = (0, r.bG)([_.A], () => (null == e ? null : (_.A.getGuild(e)?.gameApplicationIds?.[0] ?? null)), [e]),
-        n = null != e ? f[e] : null,
-        s = (0, u.I)(n ?? t);
+function E(e) {
+    let t = (0, r.bG)([u.A], () => (null == e ? null : (u.A.getGuild(e)?.gameApplicationIds?.[0] ?? null)), [e]),
+        n = null != e ? d[e] : null,
+        s = (0, o.I)(n ?? t);
     return (0, i.useMemo)(() => {
         let { data: e, ...t } = s;
         return { game: e, ...t };
     }, [s]);
 }
-function A(e) {
-    let { game: t } = g(e),
-        n = t?.getOfficialApplicationId(),
+function m(e) {
+    return null != e && null != _[e.id] ? _[e.id] : e?.getOfficialApplicationId();
+}
+function g(e) {
+    let { game: t } = E(e),
+        n = m(t),
         r = (0, s.YY)(n);
     return (0, i.useMemo)(() => {
         let { data: e, ...t } = r;
         return { application: e, ...t };
     }, [r]);
 }
-function I(e, t) {
-    let { game: n } = g(e);
-    return (0, r.bG)([h.A, l.A, a.A], () => {
+function A(e, t) {
+    let { game: n } = E(e);
+    return (0, r.bG)([c.A], () => {
         if (null == t || null == n) return null;
-        let e = (0, c.A)(n.id, l.A, a.A);
-        return 0 === e.size
-            ? null
-            : (h.A.findActivity(t, (t) => null != t.application_id && e.has(t.application_id), null, !0) ?? null);
+        let e = m(n);
+        return null == e ? null : (c.A.findActivity(t, (t) => t.application_id === e, null, !0) ?? null);
     }, [t, n]);
 }
