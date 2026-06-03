@@ -622,7 +622,7 @@ function e3(e) {
     e2.A.open(e, eR.BEX.SOUNDBOARD),
         (0, eG.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
-                n.e("5872"),
+                n.e("39565"),
                 n.e("68331"),
                 n.e("94307"),
                 n.e("8555"),

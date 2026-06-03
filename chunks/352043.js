@@ -1388,7 +1388,7 @@ var nt = n(837381),
     n_ = n(332173),
     nA = n(95701),
     nf = n(994500),
-    nE = n(449054);
+    nE = n(385648);
 function nC(e) {
     let { channel: t, onClick: n, beforeTransition: i, className: s, openChatWithoutConnecting: a } = e,
         r = (0, c.bG)([S.default, nf.A], () => (null == t ? "" : (0, ng.m1)(t, S.default, nf.A)), [t]);
@@ -3737,8 +3737,7 @@ let s1 = Object.freeze({
                 c = a.useCallback(() => {
                     (0, d.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("14045"),
-                            n.e("56402"),
+                            n.e("39565"),
                             n.e("51743"),
                             n.e("84042"),
                             n.e("65225"),

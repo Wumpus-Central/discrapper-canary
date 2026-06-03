@@ -203,7 +203,7 @@
 .radioBar__220d4 {
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-md);
-    padding: var(--space-12) !important
+    padding: var(--space-16) var(--space-12) !important
 }
 
 .radioBar__220d4,
@@ -212,8 +212,7 @@
 }
 
 .radioBarSelected__220d4 {
-    border: 1px solid var(--input-border-hover);
-    padding: var(--space-16) var(--space-12) !important
+    border: 1px solid var(--input-border-hover)
 }
 
 .discountBadge__220d4 {
