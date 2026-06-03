@@ -11,7 +11,7 @@ var i = n(562708),
     d = n(470348),
     _ = n(568185),
     h = n(741231),
-    f = n(854492),
+    f = n(271004),
     p = n(398884),
     E = n(700241),
     m = n(658128),
@@ -124,7 +124,7 @@ let U = {
     },
     deleteGuild: x,
     selectGuild(e) {
-        (0, f.j)(e);
+        (0, f.jA)(e);
     },
     createGuild(e) {
         a.h.dispatch({ type: "GUILD_CREATE", guild: e });

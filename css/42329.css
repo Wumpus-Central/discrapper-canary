@@ -3286,7 +3286,7 @@ screen and (max-width:485px) {
     flex: 0 1 244px;
     margin: 0 4px;
     max-width: 244px;
-    min-width: clamp(var(--space-32), 100cqi - 240px, 244px)
+    width: clamp(var(--space-64), 100cqi - 320px, 244px)
 }
 
 .toolbar__49676 {

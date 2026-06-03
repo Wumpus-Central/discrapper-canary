@@ -1,0 +1,11 @@
+"use strict";
+n.d(t, { Jz: () => r });
+let i = (0, n(240921).Ay)({
+    name: "2026-05-mobile-lurker-server-preview",
+    kind: "user",
+    defaultConfig: { enabled: !1, stickyLurk: !1 },
+    variations: { 1: { enabled: !0, stickyLurk: !1 }, 2: { enabled: !0, stickyLurk: !0 } },
+});
+function r(e) {
+    return i.getConfig({ location: e });
+}
