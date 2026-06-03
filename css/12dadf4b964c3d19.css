@@ -1,0 +1,92 @@
+.layoutEditorContainer_f6350f {
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    font-family: Consolas, Monaco, Courier New, monospace;
+    font-size: 14px;
+    height: 400px;
+    line-height: 1.5;
+    overflow: hidden;
+    position: relative;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+    width: 100%
+}
+
+.highlightLayer_f6350f {
+    height: 100%;
+    inset-inline-start: 0;
+    overflow: auto;
+    padding: 12px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    white-space: pre-wrap;
+    width: 100%;
+    word-wrap: break-word;
+    background-color: transparent;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    color: transparent;
+    letter-spacing: normal;
+    overflow-wrap: break-word
+}
+
+.highlightLayer_f6350f,
+.highlightLayer_f6350f code {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    -moz-tab-size: inherit;
+    -o-tab-size: inherit;
+    tab-size: inherit
+}
+
+.highlightLayer_f6350f code {
+    display: block;
+    white-space: inherit;
+    word-wrap: inherit;
+    background: transparent;
+    letter-spacing: inherit;
+    overflow-wrap: inherit;
+    padding: 0
+}
+
+.textareaLayer_f6350f {
+    background-color: transparent;
+    border: 1px solid transparent;
+    caret-color: var(--text-link);
+    color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    height: 100%;
+    inset-inline-start: 0;
+    letter-spacing: normal;
+    line-height: inherit;
+    margin: 0;
+    outline: none;
+    overflow: auto;
+    padding: 12px;
+    position: absolute;
+    resize: none;
+    -moz-tab-size: inherit;
+    -o-tab-size: inherit;
+    tab-size: inherit;
+    top: 0;
+    white-space: pre-wrap;
+    width: 100%;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    overflow-wrap: break-word
+}
+
+.textareaLayer_f6350f::-moz-placeholder {
+    color: var(--text-muted);
+    opacity: .5
+}
+
+.textareaLayer_f6350f::placeholder {
+    color: var(--text-muted);
+    opacity: .5
+}

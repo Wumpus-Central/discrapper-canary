@@ -600,8 +600,7 @@ function en(e) {
                               action: () =>
                                   (0, a.openModalLazy)(async () => {
                                       let { default: e } = await Promise.all([
-                                          t.e("80915"),
-                                          t.e("847"),
+                                          t.e("14898"),
                                           t.e("5871"),
                                           t.e("7408"),
                                           t.e("71492"),
@@ -654,8 +653,7 @@ function en(e) {
                                     action: () =>
                                         (0, a.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                t.e("80915"),
-                                                t.e("847"),
+                                                t.e("14898"),
                                                 t.e("5871"),
                                                 t.e("7408"),
                                                 t.e("71492"),

@@ -510,7 +510,7 @@ var eB = n(284009),
     e3 = n(143413),
     e4 = n(763754),
     e7 = n(33453);
-function e5(e) {
+function e8(e) {
     let { children: t, className: n, flashKey: l } = e,
         [i, s] = o.useState(!1),
         a = o.useRef(null);
@@ -530,7 +530,7 @@ function e5(e) {
         (0, r.jsx)("div", { "data-flash": i, className: d()(e7.j, n), children: t })
     );
 }
-var e8 = n(491182),
+var e5 = n(491182),
     e6 = n(860227),
     e9 = n(837528),
     te = n(516287),
@@ -763,8 +763,8 @@ var tk = n(111956),
     t3 = n(7584),
     t4 = n(635222),
     t7 = n(969043),
-    t5 = n(427209),
-    t8 = n(743738),
+    t8 = n(427209),
+    t5 = n(743738),
     t6 = n(649963),
     t9 = n(815807),
     ne = n(429433),
@@ -1138,7 +1138,7 @@ function nC(e) {
             f
                 ? (0, r.jsx)(
                       nr.qv,
-                      { label: eO.intl.string(eO.t.I3ltXO), icon: t5.A, onClick: () => (0, tA.Z4)(t, n) },
+                      { label: eO.intl.string(eO.t.I3ltXO), icon: t8.A, onClick: () => (0, tA.Z4)(t, n) },
                       "forward",
                   )
                 : null,
@@ -1234,7 +1234,7 @@ function nC(e) {
 function nx(e) {
     let { channel: t, message: n } = e,
         l = (0, m.bG)([ez.A], () => null != ez.A.getMessage(n.id), [n.id]),
-        i = null == n.interaction || (null != n.interactionData && (0, t8.Bl)(n.interactionData));
+        i = null == n.interaction || (null != n.interactionData && (0, t5.Bl)(n.interactionData));
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !l &&
@@ -1609,7 +1609,7 @@ function nW(e) {
         A = (0, e6.ZD)(n);
     return n.type === w.lAJ.THREAD_STARTER_MESSAGE && null != o && o.state === eJ.a.LOADED
         ? (0, r.jsx)(nq, { ...e, viewingChannelId: n.channel_id, message: o.message, groupId: o.message.id })
-        : (0, r.jsx)(e8.A, {
+        : (0, r.jsx)(e5.A, {
               ...a,
               id: t,
               compact: i,
@@ -1681,7 +1681,7 @@ function nq(e) {
                 "aria-label": eO.intl.string(eO.t.k5WiPf),
                 children: eO.intl.string(eO.t.k5WiPf),
             }),
-            (0, r.jsx)(e8.A, {
+            (0, r.jsx)(e5.A, {
                 ...f,
                 id: t,
                 compact: a,
@@ -1843,7 +1843,7 @@ let n$ = o.memo(function (e) {
                 className: nI.Nt,
                 "aria-setsize": -1,
                 style: null != es ? { backgroundColor: es } : void 0,
-                children: (0, r.jsx)(e8.A, {
+                children: (0, r.jsx)(e5.A, {
                     ...S,
                     "aria-setsize": -1,
                     "aria-roledescription": eO.intl.string(eO.t.BAB0yK),
@@ -1963,7 +1963,7 @@ let n$ = o.memo(function (e) {
         });
     return null != en
         ? (0, r.jsx)(
-              e5,
+              e8,
               { flashKey: en, className: d()({ [nI.bB]: !0, [nI._A]: !u && i.id === f }), children: eA },
               `bg-flash-${l}`,
           )
@@ -1990,7 +1990,7 @@ function n2(e) {
                 (0, r.jsx)(nX._, { size: "md", color: "currentColor", className: n1.TG }),
             )
             .otherwise(() => (0, r.jsx)(eR.P, { size: "md", color: "currentColor", className: n1.Q6 }));
-    return (0, r.jsx)(e8.A, {
+    return (0, r.jsx)(e5.A, {
         compact: i,
         role: "group",
         childrenMessageContent: (0, r.jsx)(n0.A, {
@@ -2071,16 +2071,16 @@ let n3 = o.memo(function (e) {
 });
 var n4 = n(114212),
     n7 = n(999803);
-function n5(e) {
+function n8(e) {
     let { isCollapsed: t, children: n } = e;
     return (0, r.jsx)("div", {
         className: d()(n7.dU, t && n7.yZ),
         children: (0, r.jsx)("div", { className: n7.JN, children: n }),
     });
 }
-let n8 = o.memo(function (e) {
+let n5 = o.memo(function (e) {
     let { isOnTopic: t, isCollapsed: n, children: l } = e;
-    return t ? l : (0, r.jsx)(n5, { isCollapsed: n, children: l });
+    return t ? l : (0, r.jsx)(n8, { isCollapsed: n, children: l });
 });
 var n6 = n(283243);
 function n9(e) {
@@ -2105,7 +2105,7 @@ function lt(e) {
                     if (n9(e)) {
                         var n;
                         return (0, r.jsx)(
-                            n8,
+                            n5,
                             {
                                 isOnTopic: e.isOnTopic,
                                 isCollapsed: i,
@@ -2128,7 +2128,7 @@ function lt(e) {
                         );
                     }
                     return (0, r.jsx)(
-                        n8,
+                        n5,
                         {
                             isOnTopic: e.isOnTopic,
                             isCollapsed: i,
@@ -2917,13 +2917,13 @@ var lQ = n(830178),
     l3 = n(334738),
     l4 = n(267102),
     l7 = n(863922);
-function l5(e, t) {
+function l8(e, t) {
     let n = e.offsetTop,
         l = e.offsetParent;
     for (; null != l && l !== t && (0, l1.vq)(l, HTMLElement); ) (n += l.offsetTop ?? 0), (l = l.offsetParent);
     return n;
 }
-function l8(e) {
+function l5(e) {
     if (null == e.jumpTargetId || !e.ready) return null;
     let { jumpTargetId: t, jumpTargetOffset: n } = e;
     if (e.has(t) || (!e.hasMoreBefore && t === el.default.castChannelIdAsMessageId(e.channelId))) {
@@ -3053,7 +3053,7 @@ class l9 {
         }
         if (null != e.messages.jumpTargetId) {
             if (this.isLoading()) return;
-            let n = l8(e.messages);
+            let n = l5(e.messages);
             if (null == n || this.isJumping() || e.messages.jumpSequenceId === t.jumpSequenceId) {
                 if (this.isJumping())
                     return void (null != n
@@ -3094,7 +3094,7 @@ class l9 {
             i = this.ref.current?.getScrollerNode();
         if (!(0, l1.vq)(l) || null == i) return null;
         let { offsetHeight: s } = l,
-            a = l5(l, i),
+            a = l8(l, i),
             r = a - t;
         return (
             null != n && (r = Math.max(-s, Math.min(n, r))),
@@ -3323,7 +3323,7 @@ class l9 {
         if (!this.isJumping()) return;
         let { messages: e, hasUnreads: t } = this.props;
         if (null != e.jumpTargetId) {
-            let n = l8(e);
+            let n = l5(e);
             if (null == n) return;
             let l = this.getElementFromMessageId(n);
             (0, l1.vq)(l)
@@ -3353,14 +3353,14 @@ class l9 {
             l = this.ref.current?.getScrollerNode();
         if (null == l) return 0;
         let i = this.getScrollerState(),
-            s = l5(e, l);
+            s = l8(e, l);
         return "middle" === t ? Math.min(s - 0.5 * i.offsetHeight + 0.5 * e.offsetHeight + -8, s - n) : s - n;
     }
     restoreScroll() {
         if (this.isInitialized()) return;
         let { initialScrollTop: e } = this;
         this.initialScrollTop = void 0;
-        let t = l8(this.props.messages);
+        let t = l5(this.props.messages);
         null != t
             ? this.scrollToMessage({ jumpTargetId: t, animate: !1 })
             : this.props.hasUnreads &&
@@ -4004,8 +4004,8 @@ function i7(e) {
         ],
     });
 }
-var i5 = n(136722),
-    i8 = n(342952),
+var i8 = n(136722),
+    i5 = n(342952),
     i6 = n(177953),
     i9 = n(725570),
     se = n(435183),
@@ -4076,7 +4076,7 @@ function sm(e) {
                     .filter((e) => {
                         if (null == s) return !1;
                         let n = sc.aH({ forceRoles: { [e.id]: e }, context: t });
-                        return i5.X8(n, i5.kg(w.xBc.ADMINISTRATOR, w.xBc.VIEW_CHANNEL));
+                        return i8.X8(n, i8.kg(w.xBc.ADMINISTRATOR, w.xBc.VIEW_CHANNEL));
                     })
                     .value(),
             [t, s, u],
@@ -4092,7 +4092,7 @@ function sm(e) {
                 .filter((e) => {
                     let n = sc.$3({ permission: w.xBc.ADMINISTRATOR, user: e, context: t }),
                         l = t.permissionOverwrites[e.id] ?? sc.x3,
-                        i = i5.zy(l.allow, w.xBc.VIEW_CHANNEL);
+                        i = i8.zy(l.allow, w.xBc.VIEW_CHANNEL);
                     return n || i;
                 })
                 .value();
@@ -4139,7 +4139,7 @@ function sm(e) {
                 children: [
                     (function () {
                         if (1 !== g.length || h.length > 0)
-                            return (0, r.jsx)(i8.A, { guildId: t.guild_id, className: sh.HD, maxUsers: 5, users: g });
+                            return (0, r.jsx)(i5.A, { guildId: t.guild_id, className: sh.HD, maxUsers: 5, users: g });
                         let e = g[0],
                             n = iN.Ay.getName(e);
                         return (0, r.jsxs)("div", {
@@ -4259,8 +4259,8 @@ function sI(e) {
         if (null == a) return null;
         (0, sf.L3)(e, async () => {
             let { default: e } = await Promise.all([
-                n.e("35842"),
-                n.e("94881"),
+                n.e("8817"),
+                n.e("12697"),
                 n.e("26132"),
                 n.e("46652"),
                 n.e("93190"),
@@ -4626,7 +4626,7 @@ function s7(e) {
         ],
     });
 }
-function s5(e) {
+function s8(e) {
     let t,
         { channel: n, user: l, showingBanner: i } = e,
         s = (0, m.bG)([nD.A], () => nD.A.getRelationshipType(l.id), [l.id]);
@@ -4653,7 +4653,7 @@ function s5(e) {
         children: [t, a ? (0, r.jsx)(s1, { userId: l.id }) : null, i ? null : (0, r.jsx)(sF, { channel: n, user: l })],
     });
 }
-var s8 = n(92650),
+var s5 = n(92650),
     s6 = n(138298),
     s9 = n(761640);
 function ae(e) {
@@ -4674,7 +4674,7 @@ function ae(e) {
             isRejectLoading: u,
             isOptimisticAccepted: h,
             isOptimisticRejected: m,
-        } = (0, s8.t)({ user: lq.default.getUser(n.id), onError: l, onAcceptSuccess: s, onRejectSuccess: i }),
+        } = (0, s5.t)({ user: lq.default.getUser(n.id), onError: l, onAcceptSuccess: s, onRejectSuccess: i }),
         g = d || u || h || m;
     return (0, r.jsxs)(iW.e, {
         size: "sm",
@@ -4715,7 +4715,7 @@ function an(e) {
               ? (t = (0, r.jsx)(ae, { channel: n, user: l }))
               : d
                 ? (t = (0, r.jsx)(sV, { channel: n, user: l }))
-                : ((t = (0, r.jsx)(s5, { channel: n, user: l, showingBanner: i })),
+                : ((t = (0, r.jsx)(s8, { channel: n, user: l, showingBanner: i })),
                   o === w.eA$.PENDING_INCOMING && (h = at.O)),
         (0, r.jsxs)("div", {
             className: h,
@@ -5051,7 +5051,7 @@ function aZ(e) {
                     onClick: () => {
                         null != l &&
                             (0, ii.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([n.e("97660"), n.e("40243")]).then(
+                                let { default: e } = await Promise.all([n.e("72414"), n.e("40243")]).then(
                                     n.bind(n, 547166),
                                 );
                                 return (n) => (0, r.jsx)(e, { ...n, guildId: t.guild_id, user: l, modReportId: t.id });
@@ -5166,7 +5166,7 @@ function a7(e) {
           })
         : null;
 }
-function a5(e) {
+function a8(e) {
     let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: i } = e,
         { ref: s, width: a } = (0, ah.Ay)(),
         [c, u] = o.useState(3),
@@ -5343,7 +5343,7 @@ function a5(e) {
         ],
     });
 }
-var a8 = n(364522),
+var a5 = n(364522),
     a6 = n(983851),
     a9 = n(104171),
     re = n(262763),
@@ -5399,7 +5399,7 @@ function ro(e) {
     return (0, r.jsxs)("div", {
         className: rr.TX,
         children: [
-            (0, r.jsxs)(a8.Ar, {
+            (0, r.jsxs)(a5.Ar, {
                 className: rr.XG,
                 children: [
                     (0, r.jsx)("ol", {
@@ -5423,7 +5423,7 @@ function ro(e) {
                                 }),
                             (0, r.jsx)("div", {
                                 className: rr.Y0,
-                                children: (0, r.jsx)(a5, {
+                                children: (0, r.jsx)(a8, {
                                     parentChannelId: l.parent_id,
                                     postId: l.id,
                                     isFirstMessage: !0,
@@ -6157,7 +6157,7 @@ let rq = (0, u.animated)(S),
                                     });
                             return null;
                         })(s, L ?? O ?? k),
-                        U = s.isForumPost() && !M ? (0, r.jsx)(a5, { postId: s.id }) : null,
+                        U = s.isForumPost() && !M ? (0, r.jsx)(a8, { postId: s.id }) : null,
                         { firstMessage: F } = (0, lw.n5)(s, _),
                         H =
                             null != F
@@ -6221,7 +6221,7 @@ let rq = (0, u.animated)(S),
                             }
                             if (e.type === w.TZK.FORUM_POST_ACTION_BAR)
                                 return (0, r.jsx)(
-                                    a5,
+                                    a8,
                                     {
                                         parentChannelId: s.parent_id,
                                         postId: s.id,

@@ -1,0 +1,299 @@
+.container__8a8e7 {
+    align-items: center;
+    color: var(--text-strong);
+    display: inline-flex;
+    gap: var(--space-4);
+    position: relative;
+    white-space: nowrap
+}
+
+.discount__8a8e7 {
+    color: var(--text-feedback-positive)
+}
+
+.icon__8a8e7 {
+    min-width: -moz-fit-content;
+    min-width: fit-content
+}
+
+.priceStrikethrough__8a8e7 {
+    text-decoration: line-through
+}
+
+.discountPill__8a8e7 {
+    background: var(--green-new-34);
+    border-radius: 20px;
+    padding: 1px 8px 2px;
+    text-decoration-line: none
+}
+
+.theme-light .discountPill__8a8e7 {
+    color: var(--white)
+}
+
+.theme-light .discountBackgroundColor__8a8e7 {
+    color: #9a9a9d
+}
+
+.theme-dark .discountPill__8a8e7 {
+    color: var(--neutral-71)
+}
+
+.theme-dark .discountBackgroundColor__8a8e7 {
+    color: #8d8e91
+}
+
+.container__06f11 {
+    border-radius: 12px;
+    box-sizing: border-box;
+    -webkit-mask-image: radial-gradient(circle, #fff 100%, #000 0);
+    mask-image: radial-gradient(circle, #fff 100%, #000 0);
+    overflow: hidden;
+    padding: var(--custom-aspect-stable-image-container-padding);
+    width: 100%
+}
+
+.container__06f11,
+.imageContainer__06f11 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative
+}
+
+.imageContainer__06f11 {
+    height: 100%
+}
+
+.image__06f11 {
+    border-radius: 12px;
+    box-shadow: var(--shadow-high);
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    position: relative;
+    width: auto
+}
+
+.backgroundImage__06f11,
+.backgroundImageFilter__06f11 {
+    display: block;
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.backgroundImage__06f11 {
+    -o-object-fit: cover;
+    object-fit: cover;
+    transform: scale(1.5)
+}
+
+.backgroundImageFilter__06f11 {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background: rgba(28, 27, 37, .9)
+}
+
+.loader__06f11 {
+    position: absolute
+}
+
+.headerImage__96095 {
+    background-color: var(--background-base-low);
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.header__96095 {
+    height: 284px;
+    padding: 0
+}
+
+.closeButtonContainer__96095 {
+    align-items: center;
+    background-color: var(--opacity-black-84);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+.closeButtonContainer__96095:hover {
+    opacity: .75;
+    transition: .2s ease
+}
+
+.closeButtonIcon__96095 {
+    color: var(--primary-330)
+}
+
+.closeButton__96095 {
+    inset-inline-end: 16px;
+    position: absolute;
+    top: 16px
+}
+
+.header_c0b612 {
+    height: 146px
+}
+
+.customConfetti__69c6c {
+    inset-inline-end: -75px;
+    pointer-events: none;
+    top: -120px
+}
+
+.modalOverrideSliderBody__34eac {
+    padding: 0;
+    width: 440px
+}
+
+.confettiCanvas__34eac {
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
+.customConfetti__34eac {
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity .5s ease-in-out
+}
+
+.customConfetti__34eac.hidden__34eac {
+    opacity: 0
+}
+
+.blurb_cd2ff7 {
+    color: var(--text-default);
+    margin-top: 10px
+}
+
+.blurb_cd2ff7,
+.giftSentMessage_cd2ff7 {
+    font-size: 16px;
+    line-height: 1.44;
+    max-width: 360px;
+    text-align: center
+}
+
+.giftSentMessage_cd2ff7 {
+    color: var(--text-strong);
+    margin-bottom: 8px;
+    margin-top: 16px
+}
+
+.giftRecipientTag_cd2ff7 {
+    color: var(--text-default);
+    font-size: 13px
+}
+
+.giftRecipientContainer_cd2ff7 {
+    align-items: flex-start;
+    background-color: var(--background-mod-muted);
+    border-color: var(--border-subtle);
+    border-radius: var(--radius-sm);
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    padding: var(--space-12)
+}
+
+.giftRecipientTextContainer_cd2ff7 {
+    display: flex;
+    flex-direction: column;
+    gap: 2px
+}
+
+.divider_cd2ff7 {
+    background-color: var(--border-subtle);
+    height: 1px;
+    margin: 20px 0;
+    width: 100%
+}
+
+.subtext_cd2ff7 {
+    color: var(--channels-default);
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 10px
+}
+
+.subtextError_cd2ff7 {
+    color: var(--text-feedback-critical) !important
+}
+
+.header_cd2ff7 {
+    margin-top: 20px
+}
+
+.headerCustomGifting_cd2ff7 {
+    margin-top: 24px
+}
+
+.giftRecipientSection_cd2ff7 {
+    margin-top: 40px;
+    width: 100%
+}
+
+.giftRecipient_cd2ff7 {
+    display: flex;
+    gap: var(--space-8);
+    width: 100%
+}
+
+.giftRecipientButton_cd2ff7 {
+    align-self: flex-end;
+    margin-bottom: 2px
+}
+
+.giftRecipientInputWrapper_cd2ff7 {
+    margin-inline-end: 8px;
+    width: 100%
+}
+
+.giftRecipientInputError_cd2ff7 {
+    border-color: var(--text-feedback-critical) !important
+}
+
+.giftRecipientRowAvatar_cd2ff7 {
+    margin-inline-end: 8px
+}
+
+.sendToRecipientButton_cd2ff7 {
+    height: 42px;
+    margin-inline-start: 8px
+}
+
+.giftBox_cd2ff7 {
+    position: absolute;
+    top: -131px;
+    width: 260px
+}
+
+.confirmation_cd2ff7 {
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px 24px
+}
+
+.seasonalConfirmationPadding_cd2ff7 {
+    padding: 0 16px
+}
+
+.giftCodeSection_cd2ff7 {
+    flex-direction: column
+}

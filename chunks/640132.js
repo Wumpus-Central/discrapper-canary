@@ -430,8 +430,7 @@ function eR(e) {
                       onContextMenu: function (e, n) {
                           (0, o.L3)(e, async () => {
                               let { default: e } = await Promise.all([
-                                  t.e("99110"),
-                                  t.e("94881"),
+                                  t.e("8817"),
                                   t.e("26132"),
                                   t.e("46652"),
                                   t.e("93190"),

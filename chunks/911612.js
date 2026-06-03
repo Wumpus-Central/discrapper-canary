@@ -32,7 +32,7 @@ function u(e) {
                           action: () =>
                               (0, r.openModalLazy)(async () => {
                                   let { default: a } = await Promise.all([
-                                      t.e("847"),
+                                      t.e("68331"),
                                       t.e("11585"),
                                       t.e("3589"),
                                       t.e("89916"),
@@ -59,7 +59,7 @@ function u(e) {
                           action: () =>
                               (0, r.openModalLazy)(async () => {
                                   let { default: a } = await Promise.all([
-                                      t.e("847"),
+                                      t.e("68331"),
                                       t.e("11585"),
                                       t.e("3589"),
                                       t.e("89916"),

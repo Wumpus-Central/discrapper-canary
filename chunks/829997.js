@@ -2,7 +2,6 @@
 n.d(t, { b: () => i });
 let i = {
     enabled: !1,
-    experimentOverride: !1,
     mode: "arc",
     spatialBlend: 1,
     distance: 5,

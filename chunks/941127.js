@@ -14,8 +14,8 @@ var n = i(627968),
     x = i(287809),
     I = i(403362),
     p = i(369374),
-    h = i(753390),
-    A = i(379848),
+    A = i(753390),
+    h = i(379848),
     E = i(840387),
     j = i(201718),
     N = i(495544),
@@ -26,21 +26,21 @@ var n = i(627968),
     C = i(605694),
     O = i(990078),
     k = i(657718),
-    R = i(789645),
-    b = i(478016),
-    L = i(183555),
-    D = i(735321),
+    b = i(789645),
+    R = i(478016),
+    D = i(183555),
+    L = i(735321),
     G = i(606758),
     P = i(518477),
     w = i(49999),
     y = i(375708);
 function M(e) {
     let { user: t, application: i, onDismiss: s } = e,
-        { trackUserProfileEditAction: a } = (0, L.NJ)(),
+        { trackUserProfileEditAction: a } = (0, D.NJ)(),
         r = l.useMemo(() => new g.R({ applicationId: i.id }), [i.id]),
         c = l.useCallback(() => {
             null != r &&
-                ((0, D.Y5)(r),
+                ((0, L.Y5)(r),
                 a({ action: "WIDGET_ADDED", ...r.getProfileEditAnalyticsOptions() }),
                 (0, G.XA)(P.jM.WIDGET_ADDED));
         }, [r, a]);
@@ -60,7 +60,7 @@ function M(e) {
                         children: (0, n.jsx)(k.S, {
                             variant: "secondary",
                             size: "sm",
-                            icon: R.P,
+                            icon: b.P,
                             "aria-label": y.intl.string(y.t.WAI6xu),
                             onClick: () => {
                                 s(w.i.USER_DISMISS);
@@ -73,7 +73,7 @@ function M(e) {
                         children: (0, n.jsx)(k.S, {
                             variant: "primary",
                             size: "sm",
-                            icon: b.U,
+                            icon: R.U,
                             "aria-label": y.intl.formatToPlainString(y.t.KfGahB, { applicationName: i.name }),
                             onClick: () => {
                                 s(w.i.TAKE_ACTION), c();
@@ -95,12 +95,12 @@ function V(e) {
         s = ["en-US", "en-GB"].includes((0, r.bG)([H.default], () => H.default.locale))
             ? y.intl.string(y.t.OYlggR)
             : y.intl.string(y.t.Y55Tua),
-        { trackUserProfileEditAction: c } = (0, L.NJ)(),
+        { trackUserProfileEditAction: c } = (0, D.NJ)(),
         u = l.useCallback(() => {
             c({ action: "PRESS_ADD_WIDGET" }),
                 (0, U.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([i.e("8978"), i.e("87591")]).then(i.bind(i, 333114));
+                        let { default: e } = await Promise.all([i.e("43284"), i.e("87591")]).then(i.bind(i, 333114));
                         return (t) => (0, n.jsx)(e, { ...t, trackUserProfileEditAction: c });
                     },
                     { stackingBehavior: "stack" },
@@ -130,7 +130,7 @@ var X = i(192),
     Z = i(502944),
     $ = i(215538);
 function ee() {
-    let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, L.NJ)(),
+    let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, D.NJ)(),
         i = l.useRef(!1),
         s = (0, Q.A)({ location: "UserProfileModalV2WidgetsEmptyState" });
     return (
@@ -205,9 +205,9 @@ function el() {
             s = l.useMemo(() => n?.filter((e) => e.isEligibleForSuggestions()), [n]),
             a = l.useMemo(() => s?.map((e) => e.applicationId) ?? [], [s]),
             c = (0, m.A)(a),
-            { tokens: o, fetched: h } = (0, d.j)(a),
-            A = (0, f.A)(i?.id),
-            E = null == i || null == s || null == o || !h;
+            { tokens: o, fetched: A } = (0, d.j)(a),
+            h = (0, f.A)(i?.id),
+            E = null == i || null == s || null == o || !A;
         return l.useMemo(
             () =>
                 E
@@ -221,19 +221,19 @@ function el() {
                                     let t = c.find((t) => t?.id === e.applicationId);
                                     return null == t ||
                                         null == o.find((t) => t.application.id === e.applicationId) ||
-                                        null != A.find((t) => t instanceof g.R && t.applicationId === e.applicationId)
+                                        null != h.find((t) => t instanceof g.R && t.applicationId === e.applicationId)
                                         ? null
                                         : { config: e, application: t, dismissibleContent: e.suggestedWidgetLinkedDc };
                                 })
                                 .filter(I.Vq),
                             currentUser: i,
                         },
-            [t, E, s, i, c, o, A],
+            [t, E, s, i, c, o, h],
         );
     })({ location: "ApplicationWidgetUpsell" });
     return e || null == i
         ? null
-        : (0, n.jsx)(A.Ay, {
+        : (0, n.jsx)(h.Ay, {
               contentTypes: t.map((e) => e.dismissibleContent),
               bypassAutoDismiss: !0,
               children: (e) => {
@@ -252,7 +252,7 @@ function es(e) {
                 i = (0, E.Z)();
             return (
                 l.useEffect(() => {
-                    null == e && null == t && i && (0, h.xe)();
+                    null == e && null == t && i && (0, A.xe)();
                 }, [e, t, i]),
                 "GB" === e && i
             );
@@ -271,7 +271,7 @@ function es(e) {
                 a.current && ((a.current = !1), s());
             }, [s]);
         })(t.id, p);
-    let A = () =>
+    let h = () =>
         (0, n.jsxs)(n.Fragment, {
             children: [
                 c &&
@@ -287,7 +287,7 @@ function es(e) {
                 ),
             ],
         });
-    return x ? (0, n.jsx)(ee, {}) : c ? (0, n.jsx)(X.D, { children: A() }) : A();
+    return x ? (0, n.jsx)(ee, {}) : c ? (0, n.jsx)(X.D, { children: h() }) : h();
 }
 function ea(e) {
     let { user: t, ...i } = e,
