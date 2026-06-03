@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { Playground: () => et, PlaygroundStore: () => q }), n(323874), n(14289), n(35956);
+n.r(t), n.d(t, { Playground: () => en, PlaygroundStore: () => X }), n(323874), n(14289), n(35956);
 var i = n(627968),
     r = n(64700),
     s = n(625903),
@@ -198,14 +198,19 @@ function B(e) {
           });
 }
 let H = "#000000";
-function j(e, t) {
-    let n = e.controls,
-        i = {};
-    if (null == n) return i;
-    for (let [e, r] of Object.entries(n)) {
-        let n = t?.[e],
-            s =
-                null != n
+function j(e, t, n) {
+    let i = n?.[e];
+    return void 0 !== i ? i : t.defaultValue;
+}
+function Y(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+        i = e.controls,
+        r = {};
+    if (null == i) return r;
+    for (let [e, s] of Object.entries(i)) {
+        let i = t?.[e],
+            a =
+                null != i
                     ? (function (e, t) {
                           switch (e.type) {
                               case "select": {
@@ -229,70 +234,75 @@ function j(e, t) {
                               case "color":
                                   return t;
                           }
-                      })(r, n)
-                    : r.defaultValue;
-        i[e] = s;
+                      })(s, i)
+                    : j(e, s, n);
+        r[e] = a;
     }
-    return i;
+    return r;
 }
-function Y(e, t) {
-    let n = e.controls,
-        i = {};
-    if (null == n || null == t) return i;
-    for (let [e, r] of Object.entries(n)) {
-        let n = t[e];
-        n !== r.defaultValue && null != n && (i[e] = String(n));
+function W(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+        i = e.controls,
+        r = {};
+    if (null == i || null == t) return r;
+    for (let [e, s] of Object.entries(i)) {
+        let i = t[e];
+        i !== j(e, s, n) && null != i && (r[e] = String(i));
     }
-    return i;
+    return r;
 }
-function W(e) {
+function K(e) {
     let { story: t, controlsLayout: n } = e,
-        s = q.useField("controlOverrides"),
-        [a, o] = r.useState(t.id),
-        [l, u] = r.useState(() => j(t, s));
-    a !== t.id && (o(t.id), u(j(t, s))),
+        s = X.useField("controlOverrides"),
+        a = t.useDefaultOverrides?.() ?? null,
+        o = r.useMemo(() => JSON.stringify(a), [a]),
+        [l, u] = r.useState(() => `${t.id}:${o}`),
+        [c, d] = r.useState(() => Y(t, s, a)),
+        _ = `${t.id}:${o}`;
+    l !== _ && (u(_), d(Y(t, s, a))),
         r.useLayoutEffect(() => {
-            q.setState({ currentProps: l, controlOverrides: null });
-        }, [t.id]);
-    let c = t.component,
-        d = "hidden" !== n && null != t.controls;
+            X.setState({ currentProps: c, currentDefaults: a, controlOverrides: null });
+        }, [_]);
+    let h = t.component,
+        f = "hidden" !== n && null != t.controls;
     return (0, i.jsxs)("div", {
         className: M()(V.iW, { [V.vT]: "bottom" === n, [V.Ix]: "right" === n }),
         children: [
             (0, i.jsx)("div", {
                 className: V.Ji,
-                children: (0, i.jsx)("div", { className: V.Dw, children: (0, i.jsx)(c, { ...l }, t.id) }),
+                children: (0, i.jsx)("div", { className: V.Dw, children: (0, i.jsx)(h, { ...c }, t.id) }),
             }),
-            d &&
+            f &&
                 null != t.controls &&
                 (0, i.jsx)("div", {
                     className: M()(V.ne, { [V.WK]: "bottom" === n, [V.BT]: "right" === n }),
                     children: (0, i.jsx)(B, {
                         controls: t.controls,
-                        props: l,
+                        props: c,
                         onPropsChange: (e) => {
-                            u(e), q.setState({ currentProps: e });
+                            d(e), X.setState({ currentProps: e });
                         },
                     }),
                 }),
         ],
     });
 }
-var K = n(97483),
-    $ = n(818348),
-    z = n(375708);
-let q = (0, T.D)(() => ({
+var $ = n(97483),
+    z = n(818348),
+    q = n(375708);
+let X = (0, T.D)(() => ({
     selectedCollection: null,
     selectedStory: null,
     controlsLayout: "right",
     controlOverrides: null,
     currentProps: null,
+    currentDefaults: null,
 }));
-function X() {
+function Z() {
     let e = (0, N.A)(),
         t = (0, y.A)(),
         n = (0, v.A)(),
-        s = q.useField("controlsLayout"),
+        s = X.useField("controlsLayout"),
         a = r.useMemo(
             () =>
                 (0, i.jsxs)(
@@ -304,21 +314,21 @@ function X() {
                                 id: "controls-right",
                                 group: "controls-layout",
                                 label: "Right Side",
-                                action: () => q.setState({ controlsLayout: "right" }),
+                                action: () => X.setState({ controlsLayout: "right" }),
                                 checked: "right" === s,
                             }),
                             (0, i.jsx)(h.iD, {
                                 id: "controls-bottom",
                                 group: "controls-layout",
                                 label: "Bottom",
-                                action: () => q.setState({ controlsLayout: "bottom" }),
+                                action: () => X.setState({ controlsLayout: "bottom" }),
                                 checked: "bottom" === s,
                             }),
                             (0, i.jsx)(h.iD, {
                                 id: "controls-hidden",
                                 group: "controls-layout",
                                 label: "Hidden",
-                                action: () => q.setState({ controlsLayout: "hidden" }),
+                                action: () => X.setState({ controlsLayout: "hidden" }),
                                 checked: "hidden" === s,
                             }),
                         ],
@@ -329,30 +339,30 @@ function X() {
         );
     return (0, i.jsxs)(_.W, {
         "data-menu-migrated": !0,
-        onSelect: $.tE,
+        onSelect: z.tE,
         navId: "playground-settings-menu",
-        onClose: $.tE,
+        onClose: z.tE,
         "aria-label": "Playground Settings",
         children: [
             (0, i.jsx)(h.Dr, {
                 id: "appearance",
-                label: z.intl.string(z.t["iHH+ky"]),
+                label: q.intl.string(q.t["iHH+ky"]),
                 children: [...e.filter((e) => null != e), a],
             }),
             (0, i.jsx)(h.Dr, {
                 id: "accessibility",
-                label: z.intl.string(z.t.G0neg7),
+                label: q.intl.string(q.t.G0neg7),
                 children: t.filter((e) => null != e),
             }),
             (0, i.jsx)(h.Dr, { id: "experiments", label: "Experiments", children: n.filter((e) => null != e) }),
         ],
     });
 }
-function Z() {
+function Q() {
     let e = r.useRef(null);
     return (0, i.jsx)(p.Y, {
         targetElementRef: e,
-        renderPopout: () => (0, i.jsx)(X, {}),
+        renderPopout: () => (0, i.jsx)(Z, {}),
         position: "bottom",
         align: "center",
         animation: p.Y.Animation.SCALE,
@@ -368,29 +378,30 @@ function Z() {
             }),
     });
 }
-function Q(e, t, n, i) {
-    let r = null != t ? `dev://playground/${e.id}/${t.id}` : `dev://playground/${e.id}`;
-    if (!n || null == t) return r;
-    let s = Y(t, i),
-        a = Object.keys(s);
-    if (0 === a.length) return r;
-    let o = new URLSearchParams();
-    for (let e of a) o.set(e, s[e]);
-    return `${r}?${o.toString()}`;
-}
-function J(e) {
-    (0, C.C)(e, () =>
-        (0, E.P0)({ id: "playground-link-copied", message: "Copied playground link", type: K.Ck.SUCCESS }),
-    );
+function J(e, t, n, i, r) {
+    let s = null != t ? `dev://playground/${e.id}/${t.id}` : `dev://playground/${e.id}`;
+    if (!n || null == t) return s;
+    let a = W(t, i, r),
+        o = Object.keys(a);
+    if (0 === o.length) return s;
+    let l = new URLSearchParams();
+    for (let e of o) l.set(e, a[e]);
+    return `${s}?${l.toString()}`;
 }
 function ee(e) {
+    (0, C.C)(e, () =>
+        (0, E.P0)({ id: "playground-link-copied", message: "Copied playground link", type: $.Ck.SUCCESS }),
+    );
+}
+function et(e) {
     let { collection: t, story: n } = e,
-        s = q.useField("currentProps"),
-        l = r.useRef(null),
-        u = r.useMemo(() => null != n && Object.keys(Y(n, s)).length > 0, [n, s]),
-        c = r.useCallback(() => J(Q(t, n, !0, s)), [t, n, s]),
-        d = r.useCallback(() => J(Q(t, n, !1, s)), [t, n, s]);
-    return u
+        s = X.useField("currentProps"),
+        l = X.useField("currentDefaults"),
+        u = r.useRef(null),
+        c = r.useMemo(() => null != n && Object.keys(W(n, s, l)).length > 0, [n, s, l]),
+        d = r.useCallback(() => ee(J(t, n, !0, s, l)), [t, n, s, l]),
+        f = r.useCallback(() => ee(J(t, n, !1, s, l)), [t, n, s, l]);
+    return c
         ? (0, i.jsxs)("div", {
               role: "group",
               "aria-label": "Copy playground link",
@@ -401,15 +412,15 @@ function ee(e) {
                       "aria-label": "Copy link with configuration",
                       variant: "icon-only",
                       icon: a.T,
-                      onClick: c,
+                      onClick: d,
                   }),
                   (0, i.jsx)(p.Y, {
-                      targetElementRef: l,
+                      targetElementRef: u,
                       renderPopout: (e) => {
                           let { closePopout: t } = e;
                           return (0, i.jsxs)(_.W, {
                               "data-menu-migrated": !0,
-                              onSelect: $.tE,
+                              onSelect: z.tE,
                               navId: "playground-copy-link-menu",
                               onClose: t,
                               "aria-label": "Copy link options",
@@ -418,14 +429,14 @@ function ee(e) {
                                       id: "copy-link-with-config",
                                       label: "Copy link with configuration",
                                       action: () => {
-                                          t(), c();
+                                          t(), d();
                                       },
                                   }),
                                   (0, i.jsx)(h.Dr, {
                                       id: "copy-link-clean",
                                       label: "Copy clean link",
                                       action: () => {
-                                          t(), d();
+                                          t(), f();
                                       },
                                   }),
                               ],
@@ -443,18 +454,18 @@ function ee(e) {
                               variant: "icon-only",
                               icon: o.a,
                               ...e,
-                              buttonRef: l,
+                              buttonRef: u,
                           }),
                   }),
               ],
           })
-        : (0, i.jsx)(g.K, { size: "sm", "aria-label": "Copy Link", variant: "icon-only", icon: a.T, onClick: c });
+        : (0, i.jsx)(g.K, { size: "sm", "aria-label": "Copy Link", variant: "icon-only", icon: a.T, onClick: d });
 }
-function et(e) {
+function en(e) {
     let { configs: t } = e,
-        n = q.useField("selectedCollection"),
-        s = q.useField("selectedStory"),
-        a = q.useField("controlsLayout"),
+        n = X.useField("selectedCollection"),
+        s = X.useField("selectedStory"),
+        a = X.useField("controlsLayout"),
         o = r.useMemo(() => t.flatMap((e) => e.collections), [t]),
         {
             collection: _,
@@ -469,7 +480,7 @@ function et(e) {
         }, [n, s, o]),
         E = _?.name ?? "Design System",
         T = p?.name,
-        y = null != p && null != h ? (0, i.jsx)(W, { story: p, groupTitle: h.title, controlsLayout: a }) : null,
+        y = null != p && null != h ? (0, i.jsx)(K, { story: p, groupTitle: h.title, controlsLayout: a }, p.id) : null,
         N = _?.Provider;
     return (0, i.jsxs)("div", {
         className: V.zr,
@@ -490,7 +501,7 @@ function et(e) {
                                         var t;
                                         return (
                                             (t = e.id),
-                                            void q.setState({
+                                            void X.setState({
                                                 selectedCollection: t,
                                                 selectedStory: null,
                                                 controlOverrides: null,
@@ -530,15 +541,16 @@ function et(e) {
                                       ],
                                   })
                                 : null,
-                            null != _ ? (0, i.jsx)(ee, { collection: _, story: p }) : null,
+                            null != _ ? (0, i.jsx)(et, { collection: _, story: p }) : null,
                             (0, i.jsxs)("div", {
                                 className: V.IE,
                                 children: [
-                                    (0, i.jsx)(Z, {}),
+                                    _?.HeaderControl != null ? (0, i.jsx)(_.HeaderControl, {}) : null,
+                                    (0, i.jsx)(Q, {}),
                                     (0, i.jsx)(g.K, {
                                         size: "sm",
                                         icon: l.P,
-                                        "aria-label": z.intl.string(z.t.cpT0Cq),
+                                        "aria-label": q.intl.string(q.t.cpT0Cq),
                                         variant: "icon-only",
                                         onClick: I.jH,
                                     }),
@@ -560,7 +572,7 @@ function et(e) {
                                               groups: _.groups,
                                               selectedStory: s,
                                               onStorySelect: (e) => {
-                                                  q.setState({
+                                                  X.setState({
                                                       selectedStory: e,
                                                       controlOverrides: null,
                                                       currentProps: null,
