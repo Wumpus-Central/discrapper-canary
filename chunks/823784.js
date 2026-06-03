@@ -1,0 +1,20 @@
+"use strict";
+n.d(t, { $N: () => a, l6: () => o, tv: () => l });
+var i = n(835245),
+    r = n(604594);
+let s = null;
+function a() {
+    let e = Date.now();
+    return null == s
+        ? {
+              searchSession: (s = { uuid: (0, i.A)(), createdAtTimestamp: e, lastUsedTimestamp: e, version: r.Ir }),
+              isNew: !0,
+          }
+        : ((s.lastUsedTimestamp = e), { searchSession: s, isNew: !1 });
+}
+function o() {
+    s = null;
+}
+function l() {
+    return s;
+}

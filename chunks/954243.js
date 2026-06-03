@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { xs: () => M, n0: () => w });
+n.d(t, { xs: () => P, n0: () => M });
 var i = n(627968),
     r = n(64700),
     s = n(835245),
@@ -27,9 +27,10 @@ var i = n(627968),
     R = n(486020);
 n(23766);
 var O = n(971649),
-    b = n(652215);
-let D = new Set();
-class L {
+    b = n(823784),
+    D = n(652215);
+let L = new Set();
+class w {
     id;
     entity;
     questContent;
@@ -82,11 +83,11 @@ class L {
     }
     trackViewedPlacement = (e) => {
         let t = (0, E.HN)(this.questContent);
-        null != t && (0, E.xn)(this.questContent) && D.add(`${e}_${t}`);
+        null != t && (0, E.xn)(this.questContent) && L.add(`${e}_${t}`);
     };
     shouldExtendSession = (e) => {
         let t = (0, E.HN)(this.questContent);
-        return null != t && !D.has(`${e}_${t}`) && (0, E.xn)(this.questContent);
+        return null != t && !L.has(`${e}_${t}`) && (0, E.xn)(this.questContent);
     };
     onMinViewTimeReached = async () => {
         let e = await (0, c.N)((0, A.jO)(this.questContent)),
@@ -173,11 +174,12 @@ class L {
                         ...t,
                         shouldExtendSession: s,
                         questId: e,
-                        event: b.HAw.QUEST_CONTENT_VIEWED,
+                        event: D.HAw.QUEST_CONTENT_VIEWED,
                         properties: {
                             ...n,
                             ...this.commonProperties(),
                             metadata_sealed: r ?? null,
+                            search_session_id: (0, b.tv)()?.uuid ?? null,
                             traffic_metadata_sealed: (0, E.Gp)(this.questContent, o?.id) ?? null,
                         },
                     });
@@ -192,7 +194,7 @@ class L {
                         shouldExtendSession: s,
                         adContentId: e,
                         adCreativeType: this.entity.adCreativeType,
-                        event: b.HAw.QUEST_CONTENT_VIEWED,
+                        event: D.HAw.QUEST_CONTENT_VIEWED,
                         properties: { ...n, ...this.commonProperties() },
                     });
             }
@@ -225,7 +227,7 @@ class L {
                             (0, g.av)({
                                 ...i,
                                 questId: s,
-                                event: b.HAw.QUEST_CONTENT_VIEW_TIME,
+                                event: D.HAw.QUEST_CONTENT_VIEW_TIME,
                                 properties: { ...r, ...e.commonProperties() },
                             });
                     } else {
@@ -238,7 +240,7 @@ class L {
                                 ...i,
                                 adContentId: s,
                                 adCreativeType: e.entity.adCreativeType,
-                                event: b.HAw.QUEST_CONTENT_VIEW_TIME,
+                                event: D.HAw.QUEST_CONTENT_VIEW_TIME,
                                 properties: { ...r, ...e.commonProperties() },
                             });
                     }
@@ -256,7 +258,7 @@ class L {
         let { triggeredByStatusChange: t } = e;
         return (
             this.stop(),
-            new L({
+            new w({
                 questContent: this.questContent,
                 questContentRowIndex: this.questContentRowIndex,
                 questContentPosition: this.questContentPosition,
@@ -294,7 +296,7 @@ class L {
                     (0, g.av)({
                         ...e,
                         questId: n,
-                        event: b.HAw.QUEST_CONTENT_LOADED,
+                        event: D.HAw.QUEST_CONTENT_LOADED,
                         properties: {
                             ...t,
                             metadata_sealed: r ?? null,
@@ -311,7 +313,7 @@ class L {
                         ...e,
                         adContentId: n,
                         adCreativeType: this.entity.adCreativeType,
-                        event: b.HAw.QUEST_CONTENT_LOADED,
+                        event: D.HAw.QUEST_CONTENT_LOADED,
                         properties: { ...t, ...this.commonProperties() },
                     });
             }
@@ -334,8 +336,8 @@ class L {
         };
     })();
 }
-let w = r.createContext(void 0);
-function M(e) {
+let M = r.createContext(void 0);
+function P(e) {
     let { visible: t, visibleChanged: n, focused: s, reference: o, focusedChanged: c, sourceQuestContent: d } = e,
         _ = (0, O.iY)(e),
         h = r.useRef(null),
@@ -362,7 +364,7 @@ function M(e) {
                 };
                 e.adCreativeType,
                     a.p.QUEST,
-                    (h.current = new L({ ...t, adContentIds: e.adContentIds, adCreativeType: e.adCreativeType })),
+                    (h.current = new w({ ...t, adContentIds: e.adContentIds, adCreativeType: e.adCreativeType })),
                     h.current.start();
             }
         }, [
@@ -382,6 +384,6 @@ function M(e) {
             d,
             e.adCreativeType,
         ]),
-        (0, i.jsx)(w.Provider, { value: h, children: e.children(o, h) })
+        (0, i.jsx)(M.Provider, { value: h, children: e.children(o, h) })
     );
 }

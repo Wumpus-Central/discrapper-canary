@@ -1,18 +1,19 @@
-l.d(t, { Ii: () => A, Ut: () => g, WS: () => p, cR: () => S, tG: () => T, u0: () => m });
+l.d(t, { Ii: () => S, Ut: () => p, WS: () => T, cR: () => C, tG: () => A, u0: () => g });
 var n = l(64700),
     r = l(835245),
     s = l(323889),
     i = l(345353),
-    a = l(69114),
-    u = l(174459),
+    u = l(69114),
+    a = l(174459),
     o = l(723702),
     d = l(507107),
     c = l(710969),
     E = l(561844),
     v = l(590202),
     _ = l(971649),
-    f = l(652215);
-function m() {
+    f = l(823784),
+    m = l(652215);
+function g() {
     let e = (0, _.vU)();
     return n.useCallback(
         (t) => {
@@ -21,34 +22,35 @@ function m() {
         [e],
     );
 }
-function g() {
-    let e = m();
+function p() {
+    let e = g();
     return n.useCallback(
         (t) => {
             let {
                     questId: l,
                     questContent: n,
                     questContentCTA: s,
-                    questContentPosition: u,
+                    questContentPosition: a,
                     questContentRowIndex: d,
                     trackGuildAndChannelMetadata: E,
                     sourceQuestContent: _,
                 } = t,
-                m = (0, c.L4)(n),
-                g = (0, c.Gp)(n, l);
+                g = (0, c.L4)(n),
+                p = (0, c.Gp)(n, l);
             (0, i.N)((0, v.jO)(n)).then((t) => {
                 e({
                     questId: l,
-                    event: f.HAw.QUEST_CONTENT_CLICKED,
+                    event: m.HAw.QUEST_CONTENT_CLICKED,
                     properties: {
-                        ...(0, v.fF)(n, u, d),
-                        ...(0, a.A)(),
+                        ...(0, v.fF)(n, a, d),
+                        ...(0, u.A)(),
                         cta_name: s,
                         click_id: (0, r.A)(),
                         apple_advertising_id: null != t && (0, o.isIOS)() ? t.advertisingId : null,
                         android_advertising_id: null != t && (0, o.isAndroid)() ? t.advertisingId : null,
-                        metadata_sealed: null != m ? m : null,
-                        traffic_metadata_sealed: null != g ? g : null,
+                        metadata_sealed: null != g ? g : null,
+                        traffic_metadata_sealed: null != p ? p : null,
+                        search_session_id: (0, f.tv)()?.uuid ?? null,
                     },
                     trackGuildAndChannelMetadata: E,
                     shouldExtendSession: (0, c.xn)(n),
@@ -59,7 +61,7 @@ function g() {
         [e],
     );
 }
-function p() {
+function T() {
     let e = (0, _.vU)();
     return n.useCallback(
         (t) => {
@@ -68,57 +70,58 @@ function p() {
         [e],
     );
 }
-function T() {
-    let e = p();
+function A() {
+    let e = T();
     return n.useCallback(
         (t) => {
             let {
                 adContentId: l,
                 relatedQuestId: n,
                 adCreativeType: s,
-                questContent: u,
+                questContent: a,
                 questContentCTA: d,
                 questContentPosition: E,
                 questContentRowIndex: _,
-                trackGuildAndChannelMetadata: m,
-                sourceQuestContent: g,
+                trackGuildAndChannelMetadata: g,
+                sourceQuestContent: p,
             } = t;
-            (0, i.N)((0, v.jO)(u)).then((t) => {
+            (0, i.N)((0, v.jO)(a)).then((t) => {
                 e({
                     adContentId: l,
                     relatedQuestId: n,
                     adCreativeType: s,
-                    event: f.HAw.QUEST_CONTENT_CLICKED,
+                    event: m.HAw.QUEST_CONTENT_CLICKED,
                     properties: {
-                        ...(0, v.fF)(u, E, _),
-                        ...(0, a.A)(),
+                        ...(0, v.fF)(a, E, _),
+                        ...(0, u.A)(),
                         cta_name: d,
                         click_id: (0, r.A)(),
                         apple_advertising_id: null != t && (0, o.isIOS)() ? t.advertisingId : null,
                         android_advertising_id: null != t && (0, o.isAndroid)() ? t.advertisingId : null,
+                        search_session_id: (0, f.tv)()?.uuid ?? null,
                     },
-                    trackGuildAndChannelMetadata: m,
-                    shouldExtendSession: (0, c.xn)(u),
-                    sourceQuestContent: g,
+                    trackGuildAndChannelMetadata: g,
+                    shouldExtendSession: (0, c.xn)(a),
+                    sourceQuestContent: p,
                 });
             });
         },
         [e],
     );
 }
-function A(e, t) {
+function S(e, t) {
     n.useEffect(() => {
         (0, E.DZ)(t, e);
     }, [e, t]);
 }
-function S(e) {
+function C(e) {
     let { questHomeHero: t, shouldShowQuestHomeHeroContent: l } = e,
         r = l ? d.uF.QUEST_HOME_ENTRYPOINT_THEMED : d.uF.QUEST_HOME_ENTRYPOINT,
         i = n.useMemo(() => {
             let e = (0, v.fF)(r);
             return delete e.row_index, e;
         }, [r]),
-        a = n.useCallback(
+        u = n.useCallback(
             (e) => {
                 null != t && l
                     ? (0, E.Qg)({
@@ -128,28 +131,28 @@ function S(e) {
                           properties: i,
                           sourceQuestContent: r,
                       })
-                    : u.default.track(e, i);
+                    : a.default.track(e, i);
             },
             [t, l, r, i],
         ),
         o = n.useCallback(() => {
-            a(f.HAw.QUEST_HOVER);
-        }, [a]),
+            u(m.HAw.QUEST_HOVER);
+        }, [u]),
         c = n.useCallback(() => {
-            a(f.HAw.QUEST_HOVER_OFF);
-        }, [a]),
+            u(m.HAw.QUEST_HOVER_OFF);
+        }, [u]),
         _ = n.useCallback(() => {
-            u.default.track(f.HAw.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
+            a.default.track(m.HAw.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
         }, []),
-        m = n.useCallback(() => {
-            u.default.track(f.HAw.QUEST_CONTENT_CLICKED, {
+        f = n.useCallback(() => {
+            a.default.track(m.HAw.QUEST_CONTENT_CLICKED, {
                 is_targeted: !1,
                 ...i,
                 ...(null != t ? { ad_content_id: t.id } : {}),
             });
         }, [i, t]);
     return n.useMemo(
-        () => ({ handleMouseEnter: o, handleMouseLeave: c, handleOnboardingPopoutRender: _, handleEntrypointClick: m }),
-        [o, c, _, m],
+        () => ({ handleMouseEnter: o, handleMouseLeave: c, handleOnboardingPopoutRender: _, handleEntrypointClick: f }),
+        [o, c, _, f],
     );
 }
