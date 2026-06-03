@@ -1891,9 +1891,9 @@ var sz =
     l);
 let s$ = [
     { type: "featured-quests", identifier: "featured", title: eE.t["ih/OtS"], maxItems: 4 },
-    { type: "quests", identifier: "in-progress", title: eE.t.CHJy6z },
     { type: "quests", identifier: "ending-soon", title: eE.t.PRg3qh },
     { type: "quests", identifier: "orb", title: eE.t["0Uc94A"] },
+    { type: "quests", identifier: "in-progress", title: eE.t.CHJy6z },
     { type: "quests", identifier: "discovered", title: eE.t["u9Ug++"] },
 ];
 var sY = s(522403);
