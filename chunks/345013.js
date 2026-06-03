@@ -461,7 +461,7 @@ function na(e) {
             onPaymentSourceAdd: S,
             additionalPaymentSourceDropdownProps: C,
             premiumSubscriptionPaymentSourceId: o,
-            hideCurrencySelect: null != o,
+            hideCurrencySelect: !0,
         }),
         j = (function (e) {
             let {
