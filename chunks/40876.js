@@ -280,7 +280,11 @@ let r = {
         inlineRequire: () => n(753189).A,
         neverLoadBeforeConnectionOpen: !0,
     },
-    MultiAccountManager: { actions: ["LOGOUT"], inlineRequire: () => n(81009).A, loadAfterConnectionOpen: !0 },
+    MultiAccountManager: {
+        actions: ["LOGOUT", "MULTI_ACCOUNT_SWITCH_START"],
+        inlineRequire: () => n(81009).A,
+        loadAfterConnectionOpen: !0,
+    },
     OverlayContentProtectionManager: { actions: ["STREAM_START", "STREAM_STOP"], inlineRequire: () => n(48345).A },
     OverlayLockSideEffectManager: { actions: ["OVERLAY_SET_INPUT_LOCKED"], inlineRequire: () => n(674684).A },
     OverlayNotificationAnalyticsManager: {
