@@ -10,4 +10,5 @@ var i,
         (i.BOUNTY_SESSION_COMPLETED = "bounty_session_completed"),
         (i.BOUNTY_IMMEDIATE_DISMISSAL = "bounty_immediate_dismissal"),
         (i.BOUNTY_ABANDONED = "bounty_abandoned"),
+        (i.HANGOUT_WINDOW_SET = "hangout_window_set"),
         i);

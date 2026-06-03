@@ -2,7 +2,7 @@ n.d(t, { A: () => r, J: () => a });
 var i = n(627968);
 n(64700);
 var l = n(21878),
-    s = n(393219);
+    s = n(362680);
 function r(e) {
     let {
         channelMessageProps: { message: t, channel: n, compact: r = !1 },
@@ -16,15 +16,16 @@ function r(e) {
         renderSuppressEmbeds: g,
         renderReactions: p,
         forceAddReactions: A,
-        disableComponentInteractivity: x,
-        className: f,
+        hideInviteEmbedBanner: x,
+        disableComponentInteractivity: f,
+        className: E,
     } = e;
     return u
         ? null
         : (0, i.jsx)(l.A, {
               message: t,
               children: (0, i.jsx)(s.Ay, {
-                  className: f,
+                  className: E,
                   isInteracting: c,
                   message: t,
                   channel: n,
@@ -34,10 +35,11 @@ function r(e) {
                   isMessageSnapshot: m,
                   onMediaItemContextMenu: d,
                   renderThreadAccessory: h,
-                  disableComponentInteractivity: x,
+                  disableComponentInteractivity: f,
                   renderSuppressEmbeds: g,
                   forceAddReactions: A,
                   renderReactions: p,
+                  hideInviteEmbedBanner: x,
               }),
           });
 }

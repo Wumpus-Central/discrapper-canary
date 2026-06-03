@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { hs: () => _, Ay: () => f });
+n.d(t, { hs: () => _, Ay: () => h });
 let i = {
     nitro_unsubbed: 100,
     checkpoint_completed: 10,
@@ -9,6 +9,7 @@ let i = {
     bounty_session_completed: 100,
     bounty_immediate_dismissal: 5,
     bounty_abandoned: 25,
+    hangout_window_set: 100,
 };
 var r = n(636537),
     s = n(228366),
@@ -27,7 +28,7 @@ async function _(e, t) {
         s.h.dispatch({ type: "SURVEY_FETCHED", survey: e?.body?.survey, isActionTriggered: !0 });
     } catch {}
 }
-let f = {
+let h = {
     fetchSurveyDetails: async function e(e) {
         try {
             let t = (await r.Bo.get({ url: d.Rsh.EMBEDDED_SURVEY(e), rejectWithError: !0 })).body;

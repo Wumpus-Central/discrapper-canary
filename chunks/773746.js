@@ -36,8 +36,8 @@ var i,
     O = n(625248),
     U = n(55730),
     G = n(287613),
-    V = n(659051),
-    B = n(702631),
+    B = n(659051),
+    V = n(702631),
     H = n(652215),
     F = n(375708),
     Y = n(946255),
@@ -202,21 +202,22 @@ function $(e) {
             presenceActivity: T,
             currentUserPresenceActivity: R,
             hideParty: z,
-            partyStatusElement: W,
-            analyticsLocations: K,
-            showAuthButton: $,
-            requireAccountLink: ee,
-            requireGameLaunch: et,
-            canPromptAuth: en,
-            startAuthorization: ei,
-            accountLinkButtonRef: el,
-            renderAccountLinkUpsell: es,
+            hideBanner: W = !1,
+            partyStatusElement: K,
+            analyticsLocations: $,
+            showAuthButton: ee,
+            requireAccountLink: et,
+            requireGameLaunch: en,
+            canPromptAuth: ei,
+            startAuthorization: el,
+            accountLinkButtonRef: es,
+            renderAccountLinkUpsell: er,
         } = e,
-        er = (0, P.v)(t),
-        ea = (0, b.s)(n.id),
-        eo = s.useMemo(
+        ea = (0, P.v)(t),
+        eo = (0, b.s)(n.id),
+        ed = s.useMemo(
             () =>
-                ea.some((e) => (0, y.CZ)(e) === o.m.GLOBAL)
+                eo.some((e) => (0, y.CZ)(e) === o.m.GLOBAL)
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsx)(E.Y, { size: "xxs", color: "currentColor" }),
@@ -224,32 +225,32 @@ function $(e) {
                           ],
                       })
                     : null,
-            [ea],
+            [eo],
         ),
-        ed = s.useMemo(
+        ec = s.useMemo(
             () =>
                 (0, l.jsxs)(x.E, {
                     variant: "text-xs/normal",
                     className: Z.dS,
                     color: "none",
                     lineClamp: 2,
-                    children: [er ? (0, k.YC)(t, i, r, d, !1) : (0, l.jsx)(Q, { activity: T }), er ? null : eo],
+                    children: [ea ? (0, k.YC)(t, i, r, d, !1) : (0, l.jsx)(Q, { activity: T }), ea ? null : ed],
                 }),
-            [er, t, i, r, d, T, eo],
+            [ea, t, i, r, d, T, ed],
         ),
-        ec = s.useMemo(() => {
+        eu = s.useMemo(() => {
             let e = T?.details;
             return null == e || "" === e
                 ? null
                 : (0, l.jsx)(x.E, { variant: "text-xs/normal", color: "none", lineClamp: 1, children: e });
         }, [T?.details]),
-        eu = s.useMemo(
-            () => (0, l.jsxs)("div", { className: Z.pq, children: [ec, ed, z || er ? null : W] }),
-            [ed, z, er, W, ec],
+        em = s.useMemo(
+            () => (0, l.jsxs)("div", { className: Z.pq, children: [eu, ec, z || ea ? null : K] }),
+            [ec, z, ea, K, eu],
         ),
-        em = !!c,
-        eh = (0, S.x)(n),
-        { canJoin: eg, remoteJoinPlatform: ep } = (function (e) {
+        eh = !!c,
+        eg = (0, S.x)(n),
+        { canJoin: ep, remoteJoinPlatform: eA } = (function (e) {
             let {
                 presenceActivity: t,
                 currentUserPresenceActivity: n,
@@ -260,9 +261,9 @@ function $(e) {
                 isFrameApplication: a,
                 isGameLaunchable: o,
             } = e;
-            if (l.author.id === i || !(0, V.A)(t, l, s.id)) return { canJoin: !1, remoteJoinPlatform: null };
+            if (l.author.id === i || !(0, B.A)(t, l, s.id)) return { canJoin: !1, remoteJoinPlatform: null };
             let d = (0, w._)(t);
-            if (!(0, G.A)(d) || (0, B.U)(d) || (0, D.w)(n, t) || (0, P.v)(l))
+            if (!(0, G.A)(d) || (0, V.U)(d) || (0, D.w)(n, t) || (0, P.v)(l))
                 return { canJoin: !1, remoteJoinPlatform: null };
             if (r && a) return { canJoin: !0, remoteJoinPlatform: null };
             if (l.activity?.type === H.xL.JOIN && null != t) {
@@ -280,47 +281,47 @@ function $(e) {
             message: t,
             application: n,
             isEmbeddedApplication: m,
-            isFrameApplication: eh,
-            isGameLaunchable: em,
+            isFrameApplication: eg,
+            isGameLaunchable: eh,
         }),
-        eA = !(
+        ex = !(
             null == T ||
-            !(0, V.A)(T, t, n.id) ||
+            !(0, B.A)(T, t, n.id) ||
             !(0, U.A)(T, H.jUm.SYNC) ||
             !M.isPlatformEmbedded ||
             (0, D.w)(R, T)
         ),
-        ex = (function (e, t, n, i) {
+        ef = (function (e, t, n, i) {
             if (
                 t.author.id === i ||
-                !(0, V.A)(e, t, n.id) ||
+                !(0, B.A)(e, t, n.id) ||
                 t.activity?.type !== H.xL.JOIN_REQUEST ||
                 !(0, U.A)(e, H.jUm.JOIN)
             )
                 return !1;
             let l = (0, w._)(e);
-            return !(!(0, G.A)(l) || (0, B.U)(l));
+            return !(!(0, G.A)(l) || (0, V.U)(l));
         })(T, t, n, d),
-        ef = (0, D.w)(R, T),
-        eE = null != T && (0, U.A)(T, H.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
-        eC = (0, u.bG)(
+        eE = (0, D.w)(R, T),
+        eC = null != T && (0, U.A)(T, H.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
+        eI = (0, u.bG)(
             [L.A],
             () => null != T && null != T.application_id && L.A.getState(T.application_id, H.xL.JOIN) === H.eAD.LOADING,
         ),
-        { actions: eI, hasAccountLinkButton: ev } = s.useMemo(() => {
+        { actions: ev, hasAccountLinkButton: e_ } = s.useMemo(() => {
             let e = null,
                 n = !0,
                 i = !1;
-            eg && ee
+            ep && et
                 ? ((e = {
                       label: F.intl.string(F.t.lw71Nf),
                       trackingArea: N.kY.CONNECT_ACCOUNT,
                       onClick: () => {
-                          ei({ analyticsLocations: K });
+                          el({ analyticsLocations: $ });
                       },
                   }),
                   (n = !1))
-                : eg && et
+                : ep && en
                   ? ((e = {
                         label: F.intl.string(F.t["nIG+xx"]),
                         trackingArea: N.kY.PLAY,
@@ -328,11 +329,11 @@ function $(e) {
                         disabled: !0,
                     }),
                     (n = !1))
-                  : eg
+                  : ep
                     ? (e = {
                           label: F.intl.string(F.t.VJlc0S),
                           trackingArea: N.kY.JOIN,
-                          submitting: eC,
+                          submitting: eI,
                           onClick: () => {
                               v.Ay.join({
                                   userId: t.author.id,
@@ -341,9 +342,9 @@ function $(e) {
                                   channelId: r.id,
                                   messageId: t.id,
                                   source: H.ThZ.MESSAGE_EMBED,
-                                  analyticsLocations: K,
+                                  analyticsLocations: $,
                                   embedded: (0, U.A)(T, H.jUm.EMBEDDED),
-                                  remotePartyId: null != ep ? T.party?.id : void 0,
+                                  remotePartyId: null != eA ? T.party?.id : void 0,
                               }),
                                   (0, Y.A)({
                                       type: H.UqL.JOIN,
@@ -354,21 +355,21 @@ function $(e) {
                                       applicationId: T.application_id,
                                       partyId: T.party?.id,
                                       messageId: t.id,
-                                      analyticsLocations: K,
-                                      remoteJoinPlatform: ep,
+                                      analyticsLocations: $,
+                                      remoteJoinPlatform: eA,
                                   });
                           },
                       })
-                    : eE && en
+                    : eC && ei
                       ? ((e = {
                             label: F.intl.string(F.t.lw71Nf),
                             trackingArea: N.kY.CONNECT_ACCOUNT,
                             onClick: () => {
-                                ei({ analyticsLocations: K });
+                                el({ analyticsLocations: $ });
                             },
                         }),
                         (n = !1))
-                      : eA
+                      : ex
                         ? ((e = {
                               label: F.intl.string(F.t.VJlc0S),
                               trackingArea: N.kY.SYNC,
@@ -377,7 +378,7 @@ function $(e) {
                               },
                           }),
                           (n = !1))
-                        : ex
+                        : ef
                           ? (e = {
                                 label: F.intl.string(F.t["hC/Zey"]),
                                 trackingArea: N.kY.INVITE,
@@ -393,7 +394,7 @@ function $(e) {
                                 disabled: t.author.id === d,
                                 disabledReason: t.author.id === d ? F.intl.string(F.t.IBl8ID) : void 0,
                             })
-                          : ef
+                          : eE
                             ? (e = {
                                   label: F.intl.string(F.t.KC26NR),
                                   trackingArea: N.kY.PLAY,
@@ -405,27 +406,27 @@ function $(e) {
             return (
                 null != e &&
                     (l.push(e),
-                    $ &&
+                    ee &&
                         n &&
                         (l.push({
                             label: F.intl.string(F.t.lw71Nf),
                             trackingArea: N.kY.CONNECT_ACCOUNT,
                             onClick: () => {
-                                ei({ analyticsLocations: K });
+                                el({ analyticsLocations: $ });
                             },
                             icon: C.A,
                             iconButton: !0,
-                            buttonRef: el,
+                            buttonRef: es,
                         }),
                         (i = !0))),
                 { actions: l, hasAccountLinkButton: i }
             );
-        }, [eg, ee, et, eA, ex, ef, h, t.author.id, t.id, T, r.id, r.guild_id, K, ep, d, eC, $, ei, el, en, eE]),
-        e_ = eI.some((e) => e.trackingArea === N.kY.CLOUD_PLAY);
-    (0, J.A)(e_, K);
-    let ej = s.useMemo(
-        () => (ef ? null : (0, l.jsx)(X, { presenceActivity: T, remoteJoinPlatform: ep, isGameLaunchable: em })),
-        [ef, T, ep, em],
+        }, [ep, et, en, ex, ef, eE, h, t.author.id, t.id, T, r.id, r.guild_id, $, eA, d, eI, ee, el, es, ei, eC]),
+        ej = ev.some((e) => e.trackingArea === N.kY.CLOUD_PLAY);
+    (0, J.A)(ej, $);
+    let eN = s.useMemo(
+        () => (eE ? null : (0, l.jsx)(X, { presenceActivity: T, remoteJoinPlatform: eA, isGameLaunchable: eh })),
+        [eE, T, eA, eh],
     );
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -433,11 +434,12 @@ function $(e) {
                 header: a,
                 title: i,
                 staticBannerSrc: g,
+                hideBanner: W,
                 onClickBanner: p,
                 bannerAspectRatio: j.u.ACTIVITY,
                 iconSrc: A ?? void 0,
-                info: eu,
-                actions: eI,
+                info: em,
+                actions: ev,
                 primaryActionFirst: !0,
                 onClickContent: p,
                 trackingConfig: {
@@ -449,9 +451,9 @@ function $(e) {
                     channelId: t.channel_id,
                     messageId: t.id,
                 },
-                footer: ej,
+                footer: eN,
             }),
-            ev ? es() : null,
+            e_ ? er() : null,
         ],
     });
 }

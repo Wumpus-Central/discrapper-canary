@@ -37,8 +37,8 @@ var C = n(485845),
     O = n(967198),
     U = n(287809),
     G = n(486020),
-    V = n(204776),
-    B = n(725606),
+    B = n(204776),
+    V = n(725606),
     H = n(572211),
     F = n(500060),
     Y = n(432017),
@@ -72,19 +72,19 @@ function ei(e) {
         { staticBannerSrc: p, videoBannerSrc: A, bannerAspectRatio: C } = (0, $.f)(t),
         I = (0, u.bG)([P.default], () => l ?? P.default.getId(), [l]),
         { analyticsLocations: v } = (0, f.Ay)(x.A.APP_MESSAGE_EMBED),
-        { currentChannelId: _, instanceId: j, isCurrentlyInInstance: b, canLaunchInChannel: k } = (0, B.w)(t.id),
+        { currentChannelId: _, instanceId: j, isCurrentlyInInstance: b, canLaunchInChannel: k } = (0, V.w)(t.id),
         M = (0, T.A)(),
         w = (0, S.Vr)({ context: { type: "contextless" }, applicationId: t.id, botUserId: c?.id }),
         O = null != m && h && w,
         U = k && h,
-        V = (0, R.x)(t),
+        B = (0, R.x)(t),
         F = (0, ee.F)(t),
         Y = (0, ee.t)(t),
         z = r.useMemo(() => {
             let e = [];
             return (
                 h
-                    ? V
+                    ? B
                         ? e.push({
                               label: J.intl.string(J.t.RscU7I),
                               trackingArea: X.kY.PLAY,
@@ -132,7 +132,7 @@ function ei(e) {
                     : null != Y && e.push(Y),
                 e
             );
-        }, [h, Y, V, t.id, U, O, j, b, _, M, i, I, v, m]),
+        }, [h, Y, B, t.id, U, O, j, b, _, M, i, I, v, m]),
         W = h ? (0, s.jsx)(es, { app: t }) : (0, s.jsx)(el, { app: t });
     return (0, s.jsx)(H.h, {
         title: d,
@@ -159,7 +159,7 @@ function ei(e) {
 function el(e) {
     let { app: t } = e,
         n =
-            (0, V.Ie)({
+            (0, B.Ie)({
                 customInstallUrl: t.customInstallUrl,
                 installParams: t.installParams,
                 integrationTypesConfig: t.integrationTypesConfig,
@@ -376,8 +376,8 @@ var eE = n(284009),
     eO = n(328968),
     eU = n(174459),
     eG = n(957565),
-    eV = n(943775),
-    eB = n(997997),
+    eB = n(943775),
+    eV = n(997997),
     eH = n(658575),
     eF = n(376374),
     eY = n(435220),
@@ -408,7 +408,7 @@ function eJ(e) {
         l = t.id,
         a = (0, eH.G)(l),
         [o, d, c, m] = (0, u.yK)([eD.A, D.A], () => {
-            let e = (0, eV.A)(t, 45),
+            let e = (0, eB.A)(t, 45),
                 n = D.A.getBasicChannel(i.channel_id)?.guild_id;
             return [eD.A.getStoreLayout(l), eD.A.getFetchStatus(l), n, e];
         }, [t, l, i.channel_id]);
@@ -431,7 +431,7 @@ function eJ(e) {
     if (!a) return null;
     let A = () => {
         (0, eI.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("81586"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
+            let { default: e } = await Promise.all([n.e("61949"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
                 n.bind(n, 719847),
             );
             return (t) =>
@@ -444,7 +444,7 @@ function eJ(e) {
         description: p,
         link: `${location.protocol}//${location.host}${K.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t.id, eY.GlobalDiscoveryAppsSections.STORE)}`,
         onLinkCopy: () => {
-            (0, eB.K)(l, eB.C.STORE_EMBED);
+            (0, eV.K)(l, eV.C.STORE_EMBED);
         },
         iconSrc: m,
         onIconClick: () => {
@@ -482,7 +482,7 @@ function eq(e) {
             return { parentSku: r, sku: i?.applicationId === t ? i : null, storeListing: s, subscriptionPlan: l };
         })(i, t.id),
         m = (0, u.bG)([D.A], () => D.A.getBasicChannel(l.channel_id)?.guild_id, [l]),
-        h = r.useMemo(() => (0, eV.A)(t, 45), [t]),
+        h = r.useMemo(() => (0, eB.A)(t, 45), [t]),
         g = (0, eH.G)(t.id),
         { openModal: p, subscriptionPurchaseButtonState: A } = (0, eM.A)({ skuId: i, initialSubscribeForGuild: m });
     if (!g || null == o) return null;
@@ -490,7 +490,7 @@ function eq(e) {
         f = !!x && (0, ek.bg)(o.flags),
         E = () => {
             (0, eI.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("81586"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
+                let { default: e } = await Promise.all([n.e("61949"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
                     n.bind(n, 719847),
                 );
                 return (n) =>
@@ -558,7 +558,7 @@ function eq(e) {
         description: I,
         link: `${location.protocol}//${location.host}${K.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t.id, eY.GlobalDiscoveryAppsSections.STORE)}`,
         onLinkCopy: () => {
-            (0, eB.K)(t.id, eB.C.SKU_EMBED, i);
+            (0, eV.K)(t.id, eV.C.SKU_EMBED, i);
         },
         iconSrc: h,
         onIconClick: () => {
@@ -749,7 +749,7 @@ function e7(e) {
                 properties: { application_id: t.id },
             });
         }, [t.id]);
-    return (0, V.Ie)({
+    return (0, B.Ie)({
         customInstallUrl: t.customInstallUrl,
         installParams: t.installParams,
         integrationTypesConfig: t.integrationTypesConfig,
@@ -991,8 +991,8 @@ var tM = n(892768),
     tO = n(696986),
     tU = n(95561),
     tG = n(548118),
-    tV = n(250627),
-    tB = n(741231),
+    tB = n(250627),
+    tV = n(741231),
     tH = n(749314),
     tF = n(71393),
     tY = n(722888),
@@ -1003,11 +1003,11 @@ function tJ(e) {
     let { guildId: t } = e,
         n = (0, u.bG)([tF.A], () => tF.A.getGuild(t)),
         { loading: i, subscriptionsSettings: l } = (0, tY.G)(t),
-        { listingsLoaded: a } = (0, tV.bb)(t),
-        d = (0, tV.fZ)(t, { publishedOnly: !0 }),
+        { listingsLoaded: a } = (0, tB.bb)(t),
+        d = (0, tB.fZ)(t, { publishedOnly: !0 }),
         c = r.useCallback(async () => {
             eU.default.track(K.HAw.GUILD_SHOP_EMBED_CLICKED, { ...(0, tU.H$)(t) }),
-                await (0, tB.A)(K.BVt.SERVER_SHOP(t));
+                await (0, tV.A)(K.BVt.SERVER_SHOP(t));
         }, [t]);
     (0, e5.A)(
         { type: e4.ImpressionTypes.VIEW, name: e4.ImpressionNames.GUILD_SHOP_EMBED },
@@ -1211,7 +1211,7 @@ async function nc(e) {
         did_lurk: s,
     });
     let r = s ? n : void 0;
-    (0, tB.A)(K.BVt.CHANNEL(t, n, i), { welcomeModalChannelId: r });
+    (0, tV.A)(K.BVt.CHANNEL(t, n, i), { welcomeModalChannelId: r });
 }
 var nu = n(387408),
     nm = n(427209),
@@ -1411,7 +1411,7 @@ var nb = n(229527),
 function nM(e) {
     let { code: t } = e,
         [n, i] = t.split("-"),
-        l = (0, tV.Qi)(n, i),
+        l = (0, tB.Qi)(n, i),
         r = (0, nv.bG)([O.A], () => O.A.getGuildId());
     return ((0, e5.A)(
         {
@@ -1460,8 +1460,8 @@ function nw(e) {
 var nO = n(122906),
     nU = n(401755),
     nG = n(195580),
-    nV = n(344900);
-function nB(e) {
+    nB = n(344900);
+function nV(e) {
     let { code: t } = e,
         i = (0, u.bG)([nO.A], () => nO.A.getGuildTemplate(t));
     if (null == i || i.state === nU.QB.RESOLVING)
@@ -1489,8 +1489,8 @@ function nB(e) {
               onClick: () => {
                   (0, eI.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
-                          n.e("88679"),
-                          n.e("10642"),
+                          n.e("61949"),
+                          n.e("42538"),
                           n.e("81927"),
                           n.e("99430"),
                           n.e("72465"),
@@ -1513,7 +1513,7 @@ function nB(e) {
             (0, s.jsxs)(n_.A.Body, {
                 children: [
                     (0, s.jsxs)("div", {
-                        className: nV.iH,
+                        className: nB.iH,
                         children: [
                             (0, s.jsx)(nw, { className: nG.K }),
                             (0, s.jsx)(n_.A.Info, {
@@ -1669,19 +1669,19 @@ function iu(e) {
                     is_member: C,
                 }),
                 d.canAccess
-                    ? (0, tB.A)(K.BVt.CHANNEL(d.guildId, d.threadId, d.messageId))
+                    ? (0, tV.A)(K.BVt.CHANNEL(d.guildId, d.threadId, d.messageId))
                     : C
-                      ? (0, tB.A)(K.BVt.CHANNEL(d.guildId, d.parentChannelId))
+                      ? (0, tV.A)(K.BVt.CHANNEL(d.guildId, d.parentChannelId))
                       : await nd.Z2(d.guildId, {}, { channelId: d.parentChannelId }));
         }, [d, i, C]);
     if (null == d) return null;
     let M = (0, G.F_)({ avatarDecoration: v, size: (0, n3.Te)(tC._3.SIZE_40), canAnimate: S }),
         w = d.user?.getAvatarURL(d.guildId, 40, S),
-        V = () => {
+        B = () => {
             y.enabled || b((e) => !e);
         },
-        B = d.coverImage,
-        H = null != B && (0, n4.ge)(B);
+        V = d.coverImage,
+        H = null != V && (0, n4.ge)(V);
     return (0, s.jsxs)("div", {
         className: ic.wb,
         children: [
@@ -1700,8 +1700,8 @@ function iu(e) {
                                   onError: () => E(!0),
                               })
                             : (0, s.jsx)(n6.A, {
-                                  src: !(h && (m || g)) && H ? `${B}?format=png` : B,
-                                  backgroundSrc: `${B}?format=png`,
+                                  src: !(h && (m || g)) && H ? `${V}?format=png` : V,
+                                  backgroundSrc: `${V}?format=png`,
                                   alt: J.intl.string(J.t.rIbh8H),
                                   aspectRatio: 16 / 9,
                                   className: o()(ic.xn, { [ic.p6]: d.shouldSpoiler }),
@@ -1766,8 +1766,8 @@ function iu(e) {
                                     spacing: 12,
                                     children: (e) =>
                                         (0, s.jsx)("div", {
-                                            onMouseEnter: V,
-                                            onMouseLeave: V,
+                                            onMouseEnter: B,
+                                            onMouseLeave: B,
                                             children: (0, s.jsx)(tE.eu, {
                                                 ...e,
                                                 ref: a,
@@ -2040,7 +2040,7 @@ function iG(e) {
         )
         .otherwise(() => null);
 }
-function iV(e) {
+function iB(e) {
     let { answer: t, isExpired: n, answersInteraction: i, canShowVoteCounts: l, canShowVoterDetails: r } = e,
         a = !0 === t.isSelected,
         d = !0 === t.didSelfVote,
@@ -2077,7 +2077,7 @@ function iV(e) {
         ],
     });
 }
-function iB(e) {
+function iV(e) {
     let { isExpired: t, answersInteraction: n, canShowVoteCounts: i, canTapAnswers: l, ...r } = e;
     return (0, s.jsx)(iv.Fh, {
         className: iw.ry,
@@ -2085,7 +2085,7 @@ function iB(e) {
         answersInteraction: n,
         canTapAnswers: l,
         renderAnswerContent: (e) =>
-            (0, s.jsx)(iV, {
+            (0, s.jsx)(iB, {
                 answer: e,
                 isExpired: t,
                 answersInteraction: n,
@@ -2182,7 +2182,7 @@ function iW(e) {
                 canShowVoteCounts: i.canShowVoteCounts,
             }),
             (0, ig.YW)(i.layoutType)
-                .with(ip.Z.DEFAULT, () => (0, s.jsx)(iB, { ...t }))
+                .with(ip.Z.DEFAULT, () => (0, s.jsx)(iV, { ...t }))
                 .with(ip.Z.IMAGE_ONLY_ANSWERS, () => (0, s.jsx)(iT, { ...t }))
                 .otherwise(() => null));
     return null == a
@@ -2656,7 +2656,7 @@ var lv = n(44724),
     lO = n(300182),
     lU = n(328100),
     lG = n(918374);
-function lV(e) {
+function lB(e) {
     let { sku: t, normalPrice: n, discountedPrice: i, discountPercent: l } = e,
         a = r.useMemo(
             () =>
@@ -2705,7 +2705,7 @@ function lV(e) {
               }),
     });
 }
-function lB(e) {
+function lV(e) {
     let { applicationId: t, skuId: n, channel: i } = e,
         l = (0, u.bG)([lM.A], () => lM.A.getGuildIdFromApplicationId(t));
     return null == l ? null : (0, s.jsx)(lH, { guildId: l, skuId: n, channel: i });
@@ -2783,7 +2783,7 @@ function lH(e) {
                                     (0, s.jsx)(p.E, { variant: "text-md/medium", lineClamp: 1, children: o.name }),
                                 ],
                             }),
-                            (0, s.jsx)(lV, { sku: o, normalPrice: v, discountedPrice: _, discountPercent: j }),
+                            (0, s.jsx)(lB, { sku: o, normalPrice: v, discountedPrice: _, discountPercent: j }),
                         ],
                     }),
                     (0, s.jsxs)(lj.e, {
@@ -3423,8 +3423,8 @@ var sD = n(383233),
     sO = n(644447),
     sU = n(927813),
     sG = n(659674),
-    sV = n(998218),
-    sB = n(5095),
+    sB = n(998218),
+    sV = n(5095),
     sH = n(294520),
     sF = n(320095),
     sY = n(863439),
@@ -3453,18 +3453,18 @@ function sq(e) {
         children: (0, s.jsxs)(n_.A.Body, {
             children: [
                 (0, s.jsxs)("div", {
-                    className: nV.iH,
+                    className: nB.iH,
                     children: [
                         (0, s.jsx)(n_.A.Icon, { guild: t }),
                         (0, s.jsx)(n_.A.Info, {
                             title: d,
                             onClick: o,
                             children: (0, s.jsxs)("span", {
-                                className: nV.FA,
+                                className: nB.FA,
                                 children: [
                                     J.intl.format(J.t["2wimj5"], { guildName: t.name }),
                                     (0, s.jsx)("span", {
-                                        className: nV.E3,
+                                        className: nB.E3,
                                         children: (0, s.jsx)(sJ.A, { guild: t, isBannerVisible: !1 }),
                                     }),
                                 ],
@@ -3473,7 +3473,7 @@ function sq(e) {
                     ],
                 }),
                 (0, s.jsx)("div", {
-                    className: nV.UD,
+                    className: nB.UD,
                     children: (0, s.jsx)(eg.$, {
                         fullWidth: !0,
                         onClick: o,
@@ -3722,8 +3722,8 @@ let rd = r.memo(function (e) {
         w = G.Ay.getApplicationIconURL({ id: n.id, icon: n.icon, bot: n.bot });
     S.disabled && (t = S.tooltip);
     let O = v.length,
-        V = _?.timestamps?.start ?? _?.created_at,
-        B = (function (e) {
+        B = _?.timestamps?.start ?? _?.created_at,
+        V = (function (e) {
             let { activity: t, activityUsersCount: n } = e;
             switch (t?.type) {
                 case K.$pd.STREAMING:
@@ -3758,13 +3758,13 @@ let rd = r.memo(function (e) {
                               (0, s.jsxs)("div", {
                                   className: ra.oL,
                                   children: [
-                                      null != V &&
+                                      null != B &&
                                           (0, s.jsxs)("div", {
                                               className: ra.DT,
                                               children: [
                                                   (0, s.jsx)("div", {
                                                       className: ra.y9,
-                                                      children: (0, s.jsx)(B.Icon, {
+                                                      children: (0, s.jsx)(V.Icon, {
                                                           size: "xxs",
                                                           color: "currentColor",
                                                       }),
@@ -3772,7 +3772,7 @@ let rd = r.memo(function (e) {
                                                   (0, s.jsx)(p.E, {
                                                       variant: "text-xs/medium",
                                                       color: "none",
-                                                      children: (0, s.jsx)(ro, { start: V }),
+                                                      children: (0, s.jsx)(ro, { start: B }),
                                                   }),
                                               ],
                                           }),
@@ -3792,7 +3792,7 @@ let rd = r.memo(function (e) {
                                       }),
                                   ],
                               }),
-                          O > 0 && (0, s.jsx)(Z, { activityUsers: v, guildId: l, activityText: B.text }),
+                          O > 0 && (0, s.jsx)(Z, { activityUsers: v, guildId: l, activityText: V.text }),
                       ],
                   }),
         }),
@@ -3952,14 +3952,14 @@ function rU(e) {
     return J.intl.string(J.t.RWouSQ);
 }
 var rG = n(257727),
-    rV =
-        (((l = rV || {})[(l.DIRECTORY_HERO = 1)] = "DIRECTORY_HERO"),
+    rB =
+        (((l = rB || {})[(l.DIRECTORY_HERO = 1)] = "DIRECTORY_HERO"),
         (l[(l.DIRECTORY_TILE = 2)] = "DIRECTORY_TILE"),
         (l[(l.DIRECTORY_SEARCH = 3)] = "DIRECTORY_SEARCH"),
         (l[(l.LISTING = 4)] = "LISTING"),
         (l[(l.EMBED = 5)] = "EMBED"),
         l);
-let rB = (e) => {
+let rV = (e) => {
         let { className: t } = e;
         return (0, s.jsxs)("div", {
             className: o()(rG.nM, t),
@@ -4000,7 +4000,7 @@ let rB = (e) => {
         return (0, s.jsx)("div", { className: t, children: J.intl.string(J.t.QQsaCc) });
     };
 class rJ extends r.PureComponent {
-    static Types = rV;
+    static Types = rB;
     getState() {
         let { inLibrary: e, sku: t, hasEntitlementBranch: n } = this.props;
         if (n) return 5;
@@ -4017,7 +4017,7 @@ class rJ extends r.PureComponent {
             case 5:
                 return (0, s.jsx)(rK, { className: o()(t, n) });
             case 1:
-                return (0, s.jsx)(rB, { className: o()(t, n) });
+                return (0, s.jsx)(rV, { className: o()(t, n) });
             case 3:
                 return (0, s.jsx)(rH, { sku: i, className: o()(t, n) });
             case 2:
@@ -5198,8 +5198,8 @@ function aU(e) {
     });
 }
 var aG = n(308528),
-    aV = n(889227);
-function aB(e) {
+    aB = n(889227);
+function aV(e) {
     let { invite: t, message: n, getAcceptInviteContext: i } = e,
         l = (0, u.bG)([P.default], () => P.default.getId()),
         a = t.inviter?.id === l,
@@ -5252,9 +5252,9 @@ function aB(e) {
             (0, s.jsxs)(n_.A.Body, {
                 children: [
                     (0, s.jsxs)("div", {
-                        className: nV.iH,
+                        className: nB.iH,
                         children: [
-                            (0, s.jsx)(n_.A.Icon, { user: new aV.A(t.inviter), onClick: c ? g : void 0 }),
+                            (0, s.jsx)(n_.A.Icon, { user: new aB.A(t.inviter), onClick: c ? g : void 0 }),
                             (0, s.jsx)(n_.A.Info, { title: C, onClick: c ? g : void 0, children: I }),
                         ],
                     }),
@@ -5322,7 +5322,7 @@ function aH(e) {
                 (0, s.jsxs)(n_.A.Body, {
                     children: [
                         (0, s.jsxs)("div", {
-                            className: nV.iH,
+                            className: nB.iH,
                             children: [
                                 (0, s.jsx)(n_.A.Icon, { channel: h, onClick: p ? A : void 0 }),
                                 (0, s.jsx)(n_.A.Info, {
@@ -5434,7 +5434,7 @@ function aK(e) {
     })({ isVoiceChannel: S, isOwnInvite: A, isGuest: y, isHubGuild: b, isStage: T, isStream: !1 });
     return (
         (i = (0, s.jsxs)("span", {
-            className: nV.FA,
+            className: nB.FA,
             children: [
                 (0, s.jsx)(aW.A, {
                     guildId: d.id,
@@ -5445,7 +5445,7 @@ function aK(e) {
                     children: () => (0, s.jsx)(n_.A.GuildName, { guild: d, ref: D }),
                 }),
                 (0, s.jsx)("span", {
-                    className: nV.E3,
+                    className: nB.E3,
                     children: (0, s.jsx)(sJ.A, { guild: d, isBannerVisible: !1, disableBoostClick: !0 }),
                 }),
             ],
@@ -5454,16 +5454,16 @@ function aK(e) {
             (l = (0, s.jsx)(iR.m, {
                 asContainer: !0,
                 text: J.intl.string(J.t["/FeTK6"]),
-                children: (0, s.jsx)(tQ.m, { size: "md", color: "currentColor", className: nV.G }),
+                children: (0, s.jsx)(tQ.m, { size: "md", color: "currentColor", className: nB.G }),
             })),
         S
             ? ((i = (0, s.jsx)(n_.A.Channel, { channel: _ })),
               (t = (0, s.jsxs)("span", {
-                  className: nV.FA,
+                  className: nB.FA,
                   children: [
                       J.intl.format(J.t["2wimj5"], { guildName: d.name }),
                       (0, s.jsx)("span", {
-                          className: nV.E3,
+                          className: nB.E3,
                           children: (0, s.jsx)(sJ.A, { guild: d, isBannerVisible: !1 }),
                       }),
                   ],
@@ -5478,14 +5478,14 @@ function aK(e) {
                 (0, s.jsxs)(n_.A.Body, {
                     children: [
                         (0, s.jsxs)("div", {
-                            className: nV.iH,
+                            className: nB.iH,
                             children: [
                                 (0, s.jsx)(n_.A.Icon, { guild: d }),
                                 (0, s.jsx)(n_.A.Info, { title: i, onClick: O, children: t }),
                             ],
                         }),
                         (0, s.jsx)("div", {
-                            className: nV.UD,
+                            className: nB.UD,
                             children: (0, s.jsx)(eg.$, {
                                 onClick: U,
                                 loading: v,
@@ -5506,7 +5506,7 @@ function aK(e) {
                 d.features.has(K.GuildFeatures.HUB) &&
                     (0, s.jsxs)(s.Fragment, {
                         children: [
-                            (0, s.jsx)("div", { className: nV.me }),
+                            (0, s.jsx)("div", { className: nB.me }),
                             (0, s.jsx)(p.E, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
@@ -5722,7 +5722,7 @@ function a5(e) {
                 (0, s.jsxs)(n_.A.Body, {
                     children: [
                         (0, s.jsxs)("div", {
-                            className: nV.iH,
+                            className: nB.iH,
                             children: [
                                 (0, s.jsx)(n_.A.Icon, { expired: !0 }),
                                 (0, s.jsx)(n_.A.Info, {
@@ -5829,7 +5829,7 @@ function a9(e) {
             (0, s.jsxs)(n_.A.Body, {
                 children: [
                     (0, s.jsxs)("div", {
-                        className: nV.iH,
+                        className: nB.iH,
                         children: [
                             (0, s.jsx)(n_.A.Icon, { guild: l, onClick: N && E ? j : void 0 }),
                             (0, s.jsx)(n_.A.Info, { title: t, onClick: N && E ? j : void 0, children: R }),
@@ -6390,7 +6390,7 @@ function oL(e) {
             },
             [R, U],
         ),
-        V = r.useCallback(() => {
+        B = r.useCallback(() => {
             U.cancel(), w({ percentX: 0, percentY: 0, proximity: 0 });
         }, [U]);
     return (0, s.jsxs)("div", {
@@ -6400,7 +6400,7 @@ function oL(e) {
                 ref: k,
                 className: ob.hw,
                 onMouseMove: G,
-                onMouseLeave: V,
+                onMouseLeave: B,
                 children: [
                     (0, s.jsx)("div", { className: ob.ys }),
                     (0, s.jsx)("div", { className: ob.r$, style: { "--custom-number-of-dots": 20 } }),
@@ -6553,7 +6553,7 @@ function oR(e) {
                     });
                     break;
                 case a_.Xd.FRIEND:
-                    C = (0, s.jsx)(aB, { invite: c, message: n, getAcceptInviteContext: i });
+                    C = (0, s.jsx)(aV, { invite: c, message: n, getAcceptInviteContext: i });
                     break;
                 default:
                     if ((0, a_.G4)(c)) {
@@ -6644,42 +6644,49 @@ var ok = n(266620),
     oD = n(666176),
     ow = n(272984);
 let oO = (e) => {
-    let { channel: t, message: n, hideParty: i } = e,
-        { analyticsLocations: l } = (0, f.Ay)(x.A.INVITE_EMBED),
-        r =
+    let { channel: t, message: n, hideParty: i, hideInviteEmbedBanner: l } = e,
+        { analyticsLocations: r } = (0, f.Ay)(x.A.INVITE_EMBED),
+        a =
             null != n.application
                 ? nj.Ay.createFromServer(n.application)
                 : null != n.activity && null != n.activity.party_id && (0, ow.pH)(n.activity.party_id)
                   ? oD.HT
                   : void 0,
-        { data: a } = (0, eX.YY)(n.application?.id),
-        o = a ?? r,
-        d = (0, u.bG)([U.default], () => U.default.getCurrentUser()?.nsfwAllowed),
-        c = e1(n.application?.content_classification, d, t);
-    switch (c) {
+        { data: o } = (0, eX.YY)(n.application?.id),
+        d = o ?? a,
+        c = (0, u.bG)([U.default], () => U.default.getCurrentUser()?.nsfwAllowed),
+        m = e1(n.application?.content_classification, c, t);
+    switch (m) {
         case e0.DISPLAY:
-            if (null == o) return null;
-            return (0, s.jsx)(oP.P0, { app: o, channel: t, message: n, hideParty: i, analyticsLocations: l });
+            if (null == d) return null;
+            return (0, s.jsx)(oP.P0, {
+                app: d,
+                channel: t,
+                message: n,
+                hideParty: i,
+                hideBanner: l,
+                analyticsLocations: r,
+            });
         case e0.BLOCK_UNDERAGE:
         case e0.BLOCK_CHANNEL_RESTRICTION:
-            return (0, s.jsx)(e3, { visibility: c, variant: "game_invite" });
+            return (0, s.jsx)(e3, { visibility: m, variant: "game_invite" });
         default:
             return null;
     }
 };
 var oU = n(503002),
     oG = n(123791);
-function oV(e) {
+function oB(e) {
     let { applicationId: t, guildId: n } = e,
         { data: i } = (0, eX.YY)(t);
-    return null == i ? null : (0, s.jsx)(oB, { app: i, guildId: n });
+    return null == i ? null : (0, s.jsx)(oV, { app: i, guildId: n });
 }
-function oB(e) {
+function oV(e) {
     let { app: t, guildId: i } = e;
     (0, oG.C)(t.id);
     let l = r.useCallback(() => {
         (0, eI.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("81586"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
+            let { default: e } = await Promise.all([n.e("61949"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
                 n.bind(n, 719847),
             );
             return (n) => (0, s.jsx)(e, { appId: t.id, guildId: i, ...n });
@@ -6710,7 +6717,7 @@ let oq = [K.Auw.GIFV],
             : null;
     };
 class o$ extends r.Component {
-    static defaultProps = { renderEmbeds: !0, compact: !1 };
+    static defaultProps = { renderEmbeds: !0, compact: !1, hideInviteEmbedBanner: !1 };
     state = { showSuppressModal: !1, showRemoveAttachmentModal: !1, attachmentToDelete: null };
     getAcceptInviteContext = (e, t) => {
         let { channel: n, message: i } = this.props;
@@ -6756,10 +6763,10 @@ class o$ extends r.Component {
         let { message: e, channel: t, ctaButtonType: n } = this.props,
             i = null;
         switch (n) {
-            case sB.xC.MARK_AS_FALSE_POSITIVE:
+            case sV.xC.MARK_AS_FALSE_POSITIVE:
                 i = (0, s.jsx)(t3, { messageId: e.id, channelId: t.id });
                 break;
-            case sB.xC.AGE_VERIFICATION_RETRY:
+            case sV.xC.AGE_VERIFICATION_RETRY:
                 i = (0, s.jsx)(ef, { channelId: t.id });
                 break;
             default:
@@ -6807,7 +6814,7 @@ class o$ extends r.Component {
                 return this.shouldRenderInvite(l)
                     ? (0, s.jsx)(oR, { code: l, message: e, getAcceptInviteContext: this.getAcceptInviteContext }, l)
                     : null;
-            if (i === tP.I.TEMPLATE) return (0, s.jsx)(nB, { code: l }, l);
+            if (i === tP.I.TEMPLATE) return (0, s.jsx)(nV, { code: l }, l);
             if (i === tP.I.EVENT) return (0, s.jsx)(nP.A, { code: l }, l);
             if (i === tP.I.CHANNEL_LINK) return (0, s.jsx)(sZ, { code: l, message: e }, l);
             else if (i === tP.I.GUILD_PRODUCT) return (0, s.jsx)(nM, { code: l }, l);
@@ -6828,7 +6835,7 @@ class o$ extends r.Component {
                 );
             } else if (i === tP.I.SOCIAL_LAYER_STOREFRONT_APP) {
                 let [e, n] = l.split("-");
-                return (0, s.jsx)(lB, { applicationId: n, skuId: e, channel: t }, l);
+                return (0, s.jsx)(lV, { applicationId: n, skuId: e, channel: t }, l);
             } else if (i === tP.I.QUESTS_EMBED) return (0, s.jsx)(iJ.A, { questId: l }, l);
             else if (i === tP.I.COLLECTIBLES_SHOP) return null;
             else if (i === tP.I.EXPERIMENT) return null;
@@ -7090,7 +7097,7 @@ class o$ extends r.Component {
                       null != t.provider &&
                       "Discord" === t.provider.name
                   ) {
-                      let i = sV.A.safeParseWithQuery(t.url);
+                      let i = sB.A.safeParseWithQuery(t.url);
                       if (null != i && null != i.pathname) {
                           let l = i.pathname.split("/")[3];
                           if (null != l)
@@ -7129,8 +7136,8 @@ class o$ extends r.Component {
     }
     renderActivityInvite(e) {
         if (null == e.activity) return null;
-        let { channel: t } = this.props;
-        return (0, s.jsx)(oO, { channel: t, message: e, hideParty: !1 });
+        let { channel: t, hideInviteEmbedBanner: n } = this.props;
+        return (0, s.jsx)(oO, { channel: t, message: e, hideParty: !1, hideInviteEmbedBanner: n });
     }
     renderPublishBump(e) {
         return this.props.channel.type !== K.rbe.GUILD_ANNOUNCEMENT || this.props.isMessageSnapshot
@@ -7220,7 +7227,7 @@ class o$ extends r.Component {
         let t = e.applicationId;
         return e.type !== d.l.INTERACTION_PREMIUM_UPSELL || null == t
             ? null
-            : (0, s.jsx)(oV, { applicationId: t, guildId: this.props.channel.guild_id });
+            : (0, s.jsx)(oB, { applicationId: t, guildId: this.props.channel.guild_id });
     }
     renderEmbeddedApplicationInstanceEmbed(e) {
         let { application: t, activityInstance: n } = e;
@@ -7354,36 +7361,36 @@ class o$ extends r.Component {
 }
 function o0(e) {
     let t,
-        { channel: n, message: i, renderSuppressEmbeds: l, isMessageSnapshot: r } = e,
-        a = (0, u.bG)([P.default], () => P.default.getId()),
-        o = nn.X6.useSetting(),
-        d = nn.hD.useSetting(),
-        m = nn.rs.useSetting() && !(0, sE.A)(e.message),
-        h = nn.jW.useSetting() && !1 !== e.renderReactions,
-        g = nn.kt.useSetting(),
-        p = (0, u.bG)([sw.A], () => null == n.guild_id || sw.A.canChatInGuild(n.guild_id), [n]),
-        A = (0, u.bG)([nK.A], () => null != n.guild_id && nK.A.isLurking(n.guild_id), [n]),
-        x = (0, u.bG)([ie.Ay, U.default], () => {
+        { channel: n, message: i, renderSuppressEmbeds: l, isMessageSnapshot: r, hideInviteEmbedBanner: a } = e,
+        o = (0, u.bG)([P.default], () => P.default.getId()),
+        d = nn.X6.useSetting(),
+        m = nn.hD.useSetting(),
+        h = nn.rs.useSetting() && !(0, sE.A)(e.message),
+        g = nn.jW.useSetting() && !1 !== e.renderReactions,
+        p = nn.kt.useSetting(),
+        A = (0, u.bG)([sw.A], () => null == n.guild_id || sw.A.canChatInGuild(n.guild_id), [n]),
+        x = (0, u.bG)([nK.A], () => null != n.guild_id && nK.A.isLurking(n.guild_id), [n]),
+        f = (0, u.bG)([ie.Ay, U.default], () => {
             let e = U.default.getCurrentUser();
             return (null != n.guild_id && null != e ? ie.Ay.getMember(n.guild_id, e.id)?.isPending : null) ?? !1;
         }),
-        { canAddNewReactions: f, canManageMessages: E } = (0, u.cf)(
+        { canAddNewReactions: E, canManageMessages: C } = (0, u.cf)(
             [tl.A],
             () => ({
-                canAddNewReactions: p && tl.A.can(K.xBc.ADD_REACTIONS, n),
+                canAddNewReactions: A && tl.A.can(K.xBc.ADD_REACTIONS, n),
                 canManageMessages: tl.A.can(K.xBc.MANAGE_MESSAGES, n),
             }),
-            [p, n],
+            [A, n],
         ),
-        C = (0, nb.ix)(n.guild_id),
-        [, I] = (0, nL.c)(n.guild_id),
-        v = (0, sp.Id)(n),
-        _ =
-            (a === i.author.id || E) &&
+        I = (0, nb.ix)(n.guild_id),
+        [, v] = (0, nL.c)(n.guild_id),
+        _ = (0, sp.Id)(n),
+        j =
+            (o === i.author.id || C) &&
             i.author.id !== K.oIV &&
             !1 !== l &&
             !(0, c.Lt)(i.flags, K.pr7.EPHEMERAL) &&
-            v &&
+            _ &&
             ((t = 0),
             "" !== i.content && t++,
             null != i.activity && t++,
@@ -7392,49 +7399,50 @@ function o0(e) {
             i.messageSnapshots.length > 0 && t++,
             null != i.poll && t++,
             t >= 1),
-        j = a === i.author.id && v && !r,
-        N = i.author.id === a,
-        T = i.isFirstMessageInForumPost(n),
-        y = (0, sz.A)({
+        N = o === i.author.id && _ && !r,
+        T = i.author.id === o,
+        y = i.isFirstMessageInForumPost(n),
+        S = (0, sz.A)({
             channel: n,
-            canChat: p,
-            renderReactions: h,
-            canAddNewReactions: f,
-            isLurking: A,
-            communicationDisabled: I,
-            isActiveChannelOrUnarchivableThread: v,
-            isAutomodQuarantined: C,
+            canChat: A,
+            renderReactions: g,
+            canAddNewReactions: E,
+            isLurking: x,
+            communicationDisabled: v,
+            isActiveChannelOrUnarchivableThread: _,
+            isAutomodQuarantined: I,
         }),
-        S = (0, t7.S)((i.editedTimestamp ?? i.timestamp).valueOf()),
-        b = (0, nX.A)(n?.id),
-        L = (0, ih.A)(i),
-        R = (0, tX.P)(i),
-        k = (0, sY.z)(n),
-        M = (0, sB._f)(i.id, i.channel_id),
-        D = (0, tq._R)();
+        b = (0, t7.S)((i.editedTimestamp ?? i.timestamp).valueOf()),
+        L = (0, nX.A)(n?.id),
+        R = (0, ih.A)(i),
+        k = (0, tX.P)(i),
+        M = (0, sY.z)(n),
+        D = (0, sV._f)(i.id, i.channel_id),
+        w = (0, tq._R)();
     return (0, s.jsx)(o$, {
-        canSuppressEmbeds: _,
-        canDeleteAttachments: j,
-        ...y,
-        disableReactionReads: !!T || y.disableReactionReads,
+        canSuppressEmbeds: j,
+        canDeleteAttachments: N,
+        ...S,
+        disableReactionReads: !!y || S.disableReactionReads,
         ...e,
-        hasSpoilerEmbeds: e.hasSpoilerEmbeds && k,
+        hasSpoilerEmbeds: e.hasSpoilerEmbeds && M,
         hasBailedAst: e.hasBailedAst,
-        isLurking: A && p,
-        isPendingMember: x && p,
-        isCurrentUser: N,
-        inlineAttachmentMedia: o,
-        inlineEmbedMedia: d,
-        renderEmbeds: m,
-        gifAutoPlay: g,
+        isLurking: x && A,
+        isPendingMember: f && A,
+        isCurrentUser: T,
+        inlineAttachmentMedia: d,
+        inlineEmbedMedia: m,
+        renderEmbeds: h,
+        gifAutoPlay: p,
         canRenderReferralEmbed: n.isDM(),
-        poll: L,
-        showListsAndHeaders: S,
-        showMaskedLinks: S,
-        shouldHideMediaOptions: b,
-        enabledContentHarmTypeFlags: R,
-        ctaButtonType: M,
-        shouldAgeVerify: D,
+        poll: R,
+        showListsAndHeaders: b,
+        showMaskedLinks: b,
+        shouldHideMediaOptions: L,
+        enabledContentHarmTypeFlags: k,
+        ctaButtonType: D,
+        shouldAgeVerify: w,
+        hideInviteEmbedBanner: a,
     });
 }
 let o1 = (e) => {
@@ -7455,7 +7463,7 @@ let o1 = (e) => {
         g = (0, t7.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
         p = (0, nX.A)(n?.id),
         A = (0, tX.P)(t),
-        x = (0, sB._f)(t.id, t.channel_id),
+        x = (0, sV._f)(t.id, t.channel_id),
         f = (0, ih.A)(t);
     return (0, s.jsx)(o$, {
         ...d,
