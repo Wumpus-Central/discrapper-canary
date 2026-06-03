@@ -1,0 +1,220 @@
+.divider_a45ed3 {
+    background-color: var(--border-subtle);
+    height: 1px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    width: 100%
+}
+
+.tierCard_a45ed3 {
+    background-image: linear-gradient(95.07deg, var(--premium-tier-2-purple-for-gradients) 0, var(--premium-tier-2-purple-for-gradients-2) 49.96%, var(--premium-tier-2-pink-for-gradients) 95.93%);
+    border-radius: var(--radius-lg);
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    width: 100%
+}
+
+.tierCard_a45ed3.withTier2Rim_a45ed3 {
+    border: 1px solid var(--premium-tier-2-purple-for-gradients)
+}
+
+.tierInfo_a45ed3 {
+    flex: 1;
+    margin-top: 40px;
+    margin-inline: 40px 16px;
+    margin-bottom: 40px
+}
+
+.tierImage_a45ed3 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    width: 100%
+}
+
+.image_a45ed3 {
+    width: 100%
+}
+
+.tierTitle_a45ed3 {
+    height: 40px;
+    margin-bottom: 4px;
+    width: 160px
+}
+
+.tierCardButton_a45ed3 {
+    height: 40px;
+    margin-top: 16px;
+    width: 100%
+}
+
+.tierCardButtonCTA_a45ed3 {
+    color: var(--brand-500)
+}
+
+.managePlanButton_a45ed3 {
+    margin-top: 16px;
+    width: 100%
+}
+
+.giftCard_a45ed3 {
+    background: var(--card-background-default);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 40px
+}
+
+.giftCard_a45ed3,
+.giftCardPromotion_a45ed3 {
+    align-items: center;
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.giftCardPromotion_a45ed3 {
+    border-radius: var(--radius-lg);
+    gap: var(--space-16);
+    height: 200px;
+    padding: 0 30px
+}
+
+.giftImagePromotion_a45ed3 {
+    width: 220px
+}
+
+.full-motion .giftImagePromotion_a45ed3 {
+    width: 235px
+}
+
+.giftImageAnimatedPromotion_a45ed3 {
+    padding-bottom: 20px
+}
+
+.giftInfoPromotion_a45ed3 {
+    margin-inline-start: auto;
+    max-width: 59%
+}
+
+.giftInfoTitlePromotion_a45ed3 {
+    margin-bottom: 8px
+}
+
+.giftInfo_a45ed3 {
+    max-width: 50%
+}
+
+.giftImage_a45ed3 {
+    height: 146px
+}
+
+.seasonalGiftImage_a45ed3 {
+    bottom: 0;
+    height: 100%;
+    inset-inline-end: 47.5%;
+    position: absolute
+}
+
+.giftTitle_a45ed3 {
+    margin-bottom: 16px
+}
+
+.giftText_a45ed3 {
+    margin-bottom: var(--space-12)
+}
+
+.giftAdditionalTerm_a45ed3 {
+    font-style: italic
+}
+
+.giftCardButton_a45ed3 {
+    height: 40px;
+    margin-top: 16px;
+    width: 100%
+}
+
+.giftButtonCTA_a45ed3 {
+    font-size: 14px;
+    font-weight: 700
+}
+
+.theme-light .giftCardButtonColor_a45ed3 {
+    border-color: var(--premium-tier-2-pink-for-gradients-2);
+    color: var(--premium-tier-2-pink-for-gradients-2)
+}
+
+.theme-dark .giftCardButtonColor_a45ed3 {
+    border-color: #fff;
+    color: #fff
+}
+
+.halloweenColor_a45ed3,
+.seasonalColor_a45ed3 {
+    border-color: #fff;
+    color: #fff
+}
+
+.bottomOfPageVisibilitySensor_a45ed3 {
+    bottom: 0;
+    height: 300px;
+    position: absolute
+}
+
+.tier2PlanComparisonTableBackground_a45ed3 {
+    background: linear-gradient(90deg, rgba(180, 115, 245, .1), rgba(226, 146, 170, .1))
+}
+
+.topRimPillWithSparkles_a45ed3 {
+    inset-inline-end: 8px;
+    position: absolute;
+    top: -14px;
+    z-index: 2
+}
+
+.rimGlowTier2_a45ed3 {
+    background: linear-gradient(-90deg, var(--premium-tier-2-purple-for-gradients) 0, #fff 4.98%, #fff 50.52%, var(--premium-tier-2-pink-for-gradients) 100%);
+    height: 1px;
+    inset-inline-end: 5%;
+    position: absolute;
+    top: -1px;
+    width: 88%;
+    z-index: 1
+}
+
+.trialHeader_a45ed3 {
+    margin-bottom: 16px
+}
+
+.topRimPill_a45ed3 {
+    inset-inline-end: 70px;
+    position: absolute;
+    top: -10px;
+    z-index: 2
+}
+
+.fractionalPremiumSubheader_a45ed3 {
+    margin-bottom: 16px
+}
+
+.fractionalPremiumSubheader_a45ed3 p {
+    margin: 0
+}
+
+.fractionalPremiumSubheader_a45ed3 a {
+    color: #fff;
+    text-decoration: underline
+}
+
+.premiumGroupHeader_a45ed3 {
+    font-size: 32px;
+    font-style: italic;
+    line-height: 23.643px;
+    text-transform: uppercase
+}

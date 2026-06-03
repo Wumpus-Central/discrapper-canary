@@ -1,4 +1,4 @@
-i.d(t, { A: () => ea, u: () => ei });
+i.d(t, { A: () => er, u: () => en });
 var n = i(627968),
     l = i(64700),
     s = i(503698),
@@ -19,8 +19,8 @@ var n = i(627968),
     E = i(840387),
     j = i(201718),
     N = i(495544),
-    v = i(615405),
-    T = i(289173),
+    T = i(615405),
+    v = i(289173),
     S = i(373842),
     _ = i(600761),
     C = i(605694),
@@ -100,7 +100,7 @@ function V(e) {
             c({ action: "PRESS_ADD_WIDGET" }),
                 (0, U.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([i.e("59184"), i.e("87591")]).then(i.bind(i, 333114));
+                        let { default: e } = await Promise.all([i.e("42744"), i.e("87591")]).then(i.bind(i, 333114));
                         return (t) => (0, n.jsx)(e, { ...t, trackUserProfileEditAction: c });
                     },
                     { stackingBehavior: "stack" },
@@ -126,22 +126,25 @@ var X = i(192),
     Y = i(982599),
     q = i(515054),
     J = i(534514),
-    Q = i(725386),
-    Z = i(502944),
-    $ = i(215538);
-function ee() {
-    let { trackUserProfileAction: e, trackUserProfileEditAction: t } = (0, D.NJ)(),
-        i = l.useRef(!1),
-        s = (0, Q.A)({ location: "UserProfileModalV2WidgetsEmptyState" });
+    Q = i(841595),
+    Z = i(725386),
+    $ = i(502944),
+    ee = i(215538);
+function et(e) {
+    let { userId: t } = e,
+        { trackUserProfileAction: i, trackUserProfileEditAction: s } = (0, D.NJ)(),
+        a = l.useRef(!1),
+        c = (0, r.bG)([Q.A], () => Q.A.getUserProfile(t)?.fetchError != null, [t]),
+        u = (0, Z.A)({ location: "UserProfileModalV2WidgetsEmptyState" });
     return (
         l.useEffect(() => {
-            i.current || (e({ action: "VIEW_WIDGETS_EMPTY_STATE" }), (i.current = !0));
-        }, [e]),
+            a.current || c || (i({ action: "VIEW_WIDGETS_EMPTY_STATE" }), (a.current = !0));
+        }, [c, i]),
         (0, n.jsxs)("div", {
-            className: $.Ie,
+            className: ee.Ie,
             children: [
                 (0, n.jsxs)("div", {
-                    className: $.FS,
+                    className: ee.FS,
                     children: [
                         (0, n.jsx)(J.D, {
                             variant: "heading-md/medium",
@@ -151,37 +154,44 @@ function ee() {
                         (0, n.jsx)(o.E, {
                             variant: "text-sm/normal",
                             color: "text-default",
-                            children: y.intl.string(y.t.O9SQ1c),
+                            children: c ? y.intl.string(y.t["rTU7/z"]) : y.intl.string(y.t.O9SQ1c),
                         }),
                     ],
                 }),
-                (0, n.jsx)("ul", {
-                    className: $.ZW,
-                    "aria-label": y.intl.string(y.t["+EIBSA"]),
-                    children: s.map((e) =>
-                        (0, n.jsx)(
-                            "li",
-                            { children: (0, n.jsx)(Z.A, { widget: e, size: "small", trackUserProfileEditAction: t }) },
-                            e.getUniqueKey(),
+                !c &&
+                    (0, n.jsx)("ul", {
+                        className: ee.ZW,
+                        "aria-label": y.intl.string(y.t["+EIBSA"]),
+                        children: u.map((e) =>
+                            (0, n.jsx)(
+                                "li",
+                                {
+                                    children: (0, n.jsx)($.A, {
+                                        widget: e,
+                                        size: "small",
+                                        trackUserProfileEditAction: s,
+                                    }),
+                                },
+                                e.getUniqueKey(),
+                            ),
                         ),
-                    ),
-                }),
+                    }),
             ],
         })
     );
 }
-var et = i(117444);
-function ei(e) {
+var ei = i(117444);
+function en(e) {
     let { widget: t, ...i } = e;
     return t instanceof g.R
         ? (0, n.jsx)(C.A, { widget: t, ...i })
-        : (0, T.fu)(t)
+        : (0, v.fu)(t)
           ? (0, n.jsx)(K.A, { widget: t, ...i })
           : null;
 }
-function en() {
+function el() {
     return (0, n.jsxs)("div", {
-        className: et.mJ,
+        className: ei.mJ,
         children: [
             (0, n.jsx)(c.m, { size: "xs" }),
             (0, n.jsx)(o.E, {
@@ -193,7 +203,7 @@ function en() {
         ],
     });
 }
-function el() {
+function es() {
     let {
         isLoading: e,
         suggestions: t,
@@ -243,12 +253,12 @@ function el() {
               },
           });
 }
-function es(e) {
+function ea(e) {
     let { user: t, guildId: i, channelId: s } = e,
         a = (0, f.A)(t.id),
         c = (0, r.bG)([N.default], () => N.default.getId() === t.id),
         o = (() => {
-            let [e, t] = (0, r.yK)([v.A], () => [v.A.ipCountryCode, v.A.ipCountryCodeRequest]),
+            let [e, t] = (0, r.yK)([T.A], () => [T.A.ipCountryCode, T.A.ipCountryCodeRequest]),
                 i = (0, E.Z)();
             return (
                 l.useEffect(() => {
@@ -259,7 +269,7 @@ function es(e) {
         })(),
         d = (0, u.QR)({ location: "UserProfileModalV2Widgets" }),
         x = 0 === a.length && c,
-        I = l.useMemo(() => a.filter(T.fu), [a]),
+        I = l.useMemo(() => a.filter(v.fu), [a]),
         p = l.useMemo(() => a.filter((e) => e instanceof g.R), [a]);
     (0, S.Y)(c, I),
         ((e, t) => {
@@ -277,19 +287,19 @@ function es(e) {
                 c &&
                     (0, n.jsxs)(n.Fragment, {
                         children: [
-                            (0, n.jsx)(V, { className: et.cG }),
-                            o && (0, n.jsx)(en, {}),
-                            d && (0, n.jsx)(el, {}),
+                            (0, n.jsx)(V, { className: ei.cG }),
+                            o && (0, n.jsx)(el, {}),
+                            d && (0, n.jsx)(es, {}),
                         ],
                     }),
                 a.map((e, l) =>
-                    (0, n.jsx)(ei, { widget: e, user: t, guildId: i, channelId: s, index: l }, e.getUniqueKey()),
+                    (0, n.jsx)(en, { widget: e, user: t, guildId: i, channelId: s, index: l }, e.getUniqueKey()),
                 ),
             ],
         });
-    return x ? (0, n.jsx)(ee, {}) : c ? (0, n.jsx)(X.D, { children: h() }) : h();
+    return x ? (0, n.jsx)(et, { userId: t.id }) : c ? (0, n.jsx)(X.D, { children: h() }) : h();
 }
-function ea(e) {
+function er(e) {
     let { user: t, ...i } = e,
         s = l.useRef(null);
     (0, _.i)({ containerRef: s });
@@ -297,8 +307,8 @@ function ea(e) {
     return (0, n.jsxs)(q.K, {
         "data-scroller": !0,
         scrollerRef: s,
-        className: a()(et.XG, { [et.az]: r }),
+        className: a()(ei.XG, { [ei.az]: r }),
         fade: !0,
-        children: [(0, n.jsx)(z.A, { scrollerRef: s }), (0, n.jsx)(es, { user: t, ...i })],
+        children: [(0, n.jsx)(z.A, { scrollerRef: s }), (0, n.jsx)(ea, { user: t, ...i })],
     });
 }

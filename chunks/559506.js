@@ -4,15 +4,14 @@ var i = n(627968);
 n(64700);
 var r = n(17928),
     s = n(683071),
-    a = n(922590),
-    o = n(841595),
+    a = n(841595),
+    o = n(83931),
     l = n(375708);
 function u(e) {
     let { userId: t, className: n } = e,
-        u = (0, a.f1)(t),
-        c = (0, a.fi)(t),
-        d = (0, r.bG)([o.A], () => o.A.getUserProfile(t)?.fetchError);
-    return u.length > 0 || c.length > 0 || null == d
+        u = (0, o.W)(t),
+        c = (0, r.bG)([a.A], () => a.A.getUserProfile(t)?.fetchError);
+    return u || null == c
         ? null
         : (0, i.jsx)("div", {
               className: n,
