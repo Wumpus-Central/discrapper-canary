@@ -6,4 +6,7 @@ e.exports = {
     v9: "selectButtonLabel_cfc01a",
     u4: "selectButtonChevron_cfc01a",
     yt: "listbox_cfc01a",
+    XE: "guildOptionRow_cfc01a",
+    fZ: "guildOptionLeading_cfc01a",
+    qL: "guildOptionText_cfc01a",
 };

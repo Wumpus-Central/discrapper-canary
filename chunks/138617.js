@@ -52,7 +52,7 @@ let D = { width: 500, height: R.$V },
                 n.e("39713"),
                 n.e("23531"),
                 n.e("15680"),
-                n.e("35480"),
+                n.e("71626"),
                 n.e("38916"),
                 n.e("34552"),
                 n.e("93103"),
@@ -1096,7 +1096,7 @@ function t4(e, t, s, a, o) {
                         (0, f.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
                                 n.e("42329"),
-                                n.e("83023"),
+                                n.e("2570"),
                                 n.e("72414"),
                                 n.e("60643"),
                                 n.e("43284"),

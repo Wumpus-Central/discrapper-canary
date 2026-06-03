@@ -1,28 +1,3 @@
-.scroller_ac477d {
-    gap: 24px;
-    height: 100%;
-    padding: 16px
-}
-
-.activityList_ac477d,
-.scroller_ac477d {
-    display: flex;
-    flex-direction: column
-}
-
-.activityList_ac477d {
-    gap: 8px
-}
-
-.activityList_ac477d:empty {
-    display: none
-}
-
-.tooltipContent_ac477d {
-    padding: 8px;
-    text-align: center
-}
-
 .empty__9d78f {
     align-items: center;
     box-sizing: border-box;

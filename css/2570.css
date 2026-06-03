@@ -33,46 +33,6 @@
     z-index: 1
 }
 
-.row__5fe04 {
-    display: flex
-}
-
-.clickable__5fe04 {
-    color: var(--interactive-text-default);
-    cursor: pointer
-}
-
-.clickable__5fe04:hover {
-    color: var(--interactive-text-hover)
-}
-
-.headerCell__5fe04 {
-    display: flex
-}
-
-.headerCellContent__5fe04 {
-    align-items: center;
-    display: flex;
-    min-height: 18px
-}
-
-.stickyHeader__5fe04 {
-    inset-inline-start: 0;
-    position: sticky;
-    top: 0;
-    z-index: 2
-}
-
-.sortIcon__5fe04 {
-    height: 18px;
-    margin-inline-start: 4px;
-    width: 18px
-}
-
-.headerCellSorted__5fe04 {
-    color: var(--text-default)
-}
-
 .emojiIcon_ff168a {
     height: 20px;
     width: 20px
@@ -544,6 +504,38 @@
 
 .listbox_cfc01a {
     width: 264px
+}
+
+.guildOptionRow_cfc01a {
+    color: var(--text-strong);
+    flex-grow: 1;
+    justify-content: flex-start;
+    min-height: var(--select-option-height);
+    padding: var(--space-4);
+    padding-inline-start: var(--space-8)
+}
+
+.guildOptionLeading_cfc01a,
+.guildOptionRow_cfc01a {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex
+}
+
+.guildOptionLeading_cfc01a {
+    flex-shrink: 0;
+    height: 32px;
+    justify-content: center;
+    margin-inline-start: calc(var(--space-8)*-1);
+    padding: var(--space-4);
+    width: 32px
+}
+
+.guildOptionText_cfc01a {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
 }
 
 .tabButton_b08638 {
@@ -6929,11 +6921,6 @@ button.inner__02fc8:disabled {
 .safetySettingsNotice__9536c .closeButton__9536c {
     cursor: pointer;
     margin-inline-start: auto
-}
-
-.blockedIgnoredSettingsNotice__6811a {
-    margin-block: 16px 8px;
-    margin-inline: 30px 20px
 }
 
 .tabs__70e05 {

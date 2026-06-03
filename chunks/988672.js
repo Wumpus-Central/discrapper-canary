@@ -1542,7 +1542,7 @@ let t4 = r.memo(function () {
                                     let { default: e } = await Promise.all([
                                         n.e("42329"),
                                         n.e("89076"),
-                                        n.e("83023"),
+                                        n.e("2570"),
                                         n.e("26105"),
                                         n.e("46461"),
                                         n.e("28743"),

@@ -7753,15 +7753,13 @@ let rA = {
                     a.e("2327"),
                     a.e("17611"),
                     a.e("72414"),
-                    a.e("35480"),
-                    a.e("83023"),
-                    a.e("94682"),
+                    a.e("71626"),
                     a.e("37412"),
                     a.e("44078"),
                     a.e("87845"),
                     a.e("45317"),
                     a.e("78771"),
-                    a.e("37396"),
+                    a.e("13988"),
                     a.e("42329"),
                     a.e("20678"),
                     a.e("88295"),
@@ -7875,7 +7873,7 @@ let rA = {
             return (t) => (0, r.jsx)(e, { ...t, id: "123456789", label: "Copy Test ID" });
         },
         UserSettingsMenu: async () => {
-            let { default: e } = await Promise.all([a.e("35480"), a.e("26132"), a.e("44491")]).then(a.bind(a, 907206));
+            let { default: e } = await Promise.all([a.e("71626"), a.e("26132"), a.e("44491")]).then(a.bind(a, 907206));
             return (t) => (0, r.jsx)(e, { ...t, onClose: rS.Z_ });
         },
         ExpressionPickerContextMenu: async () => {
@@ -7917,7 +7915,7 @@ let rA = {
         AddQuestionsContextMenu: async () => {
             let { AddQuestionsContextMenu: e } = await Promise.all([
                     a.e("47232"),
-                    a.e("35480"),
+                    a.e("71626"),
                     a.e("11810"),
                     a.e("14656"),
                 ]).then(a.bind(a, 892921)),

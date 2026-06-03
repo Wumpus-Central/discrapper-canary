@@ -202,7 +202,7 @@ class eA extends i.PureComponent {
                 let { default: e } = await Promise.all([
                     n.e("68331"),
                     n.e("4782"),
-                    n.e("83023"),
+                    n.e("2570"),
                     n.e("89545"),
                     n.e("91531"),
                     n.e("11493"),

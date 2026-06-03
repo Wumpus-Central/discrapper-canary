@@ -25,7 +25,7 @@ function a(e, t) {
                 }
                 case r.o9.PERK: {
                     let { default: i } = await Promise.all([
-                        n.e("83023"),
+                        n.e("2570"),
                         n.e("96821"),
                         n.e("61175"),
                         n.e("88295"),
