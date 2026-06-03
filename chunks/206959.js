@@ -768,7 +768,8 @@ class H extends T.A {
             this.on("newListener", this.handleNewListenerNative);
     }
     destroy() {
-        this.conn.destroy(),
+        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.conn.destroy(e),
             Object.keys(this.localSpeakingFlags)
                 .filter((e) => e !== this.userId)
                 .forEach((e) => this.emit(c.yq.Speaking, e, y.ME.NONE, this.remoteAudioSSRCs[e])),

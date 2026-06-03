@@ -233,7 +233,7 @@ let j = "2026-03-surface-direct-renderer",
     });
 var W = n(53857),
     K = n(734057),
-    $ = n(761853),
+    $ = n(728555),
     z = n(763827),
     q = n(412780),
     X = n(873985),
@@ -3351,7 +3351,7 @@ class tt extends m.A {
             null != this._connection)
         ) {
             let e = this._connection;
-            (this._connection = null), (this._hasCodecs = !1), e.destroy(this.reconnecting);
+            (this._connection = null), (this._hasCodecs = !1), e.destroy(this.reconnecting || r);
         }
         this.setState(ec.S7L.DISCONNECTED, { willReconnect: r });
     }
