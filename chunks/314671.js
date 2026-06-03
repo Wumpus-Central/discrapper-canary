@@ -11,7 +11,7 @@ var l = n(627968),
     p = n(428644),
     m = n(964486),
     h = n(86379),
-    A = n(176095),
+    A = n(11939),
     C = n(545075),
     E = n(725836),
     y = n(742810),
@@ -216,10 +216,8 @@ function ef(e) {
             ...t,
         }),
         tA = (0, J.W)(eF, ez),
-        tC = (0, a.bG)([A.A], () => A.A.getBalance(ez ?? ""), [ez]),
-        tE = null != tC ? tC.amount : null,
-        ty = null != tC ? tC.currency : null,
-        tP = null != e5 ? e5.getDiscountIdIfExists() : void 0;
+        { giftCardBalance: tC, giftCardCurrency: tE } = (0, A.h)(),
+        ty = null != e5 ? e5.getDiscountIdIfExists() : void 0;
     r.useEffect(() => {
         th((e) => {
             let n = null != e8 ? (0, H.y8)(e8.id, !1, tt, { paymentSourceId: eJ.paymentSourceId }) : void 0;
@@ -241,14 +239,14 @@ function ef(e) {
                 continue_session_initial_step: eG,
                 custom_checkout_flow: e2,
                 has_saved_payment_source: eB,
-                discount_id: null != td ? td.discountId : tP,
+                discount_id: null != td ? td.discountId : ty,
             });
         }),
         r.useEffect(() => {
             null == e8 && (null != e0 && null != eG ? eV(e0) : eV(q)),
                 null != eL ? eH(eL) : null != q && eH(Y.A.get(q)?.skuId);
         }, [eV, e8, eH, q, eL, e0, eG]);
-    let tS = r.useCallback(() => {
+    let tP = r.useCallback(() => {
             let e = (0, W.lo)(tn) === W.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
                 t = Date.now();
             B.default.track(ep.HAw.PAYMENT_FLOW_SUCCEEDED, {
@@ -259,20 +257,20 @@ function ef(e) {
                 sound_id: tt && e ? ti?.soundId : void 0,
                 duration_ms: t - eq.startTime,
                 payment_source_type: tA?.type,
-                gift_card_balance: tE,
-                gift_card_currency: ty,
+                gift_card_balance: tC,
+                gift_card_currency: tE,
             });
             let { enabled: n } = M.u.getConfig({ location: "PaymentModal emitPaymentFlowSuccess" });
             tt && null != tn && null != u && n && (0, L.WO)(u) && (0, b.Yd)(tn.id);
-        }, [tm, tr, tl, tn, tt, ti, eq.startTime, tA, tE, ty, u]),
-        t_ = r.useMemo(() => () => $?.(eK === K.h.COMPLETED, eW), [$, eK, eW]),
-        tf = (0, i.A)(() => Date.now(), [ta]),
-        tI = r.useCallback(
+        }, [tm, tr, tl, tn, tt, ti, eq.startTime, tA, tC, tE, u]),
+        tS = r.useMemo(() => () => $?.(eK === K.h.COMPLETED, eW), [$, eK, eW]),
+        t_ = (0, i.A)(() => Date.now(), [ta]),
+        tf = r.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     { trackedFromStep: n, analyticsDataOverride: l, fulfillment: r, emitPaymentFlowLoadedEvent: i } = t,
                     a = Date.now();
-                if (e === U.pn.CONFIRM && (tS(), O?.(r), ek)) return void t_();
+                if (e === U.pn.CONFIRM && (tP(), O?.(r), ek)) return void tS();
                 ts(e), ej?.(e), e$(null), e === U.pn.ADD_PAYMENT_STEPS && (o.h.wait(c.ET), o.h.wait(d.T3));
                 let s = null != n ? n : ta;
                 null === s || i
@@ -287,24 +285,24 @@ function ef(e) {
                           ...l,
                           from_step: s,
                           to_step: e === U.pn.ADD_PAYMENT_STEPS ? U.pn.PAYMENT_TYPE : e,
-                          step_duration_ms: a - tf,
+                          step_duration_ms: a - t_,
                           flow_duration_ms: a - eq.startTime,
-                          gift_card_balance: tE,
-                          gift_card_currency: ty,
+                          gift_card_balance: tC,
+                          gift_card_currency: tE,
                       });
             },
-            [ts, ej, e$, ta, eG, tm, tf, eq.startTime, tS, O, ek, t_, eB, tE, ty],
+            [ts, ej, e$, ta, eG, tm, t_, eq.startTime, tP, O, ek, tS, eB, tC, tE],
         );
-    (0, D.b)(ta, e7, tI, eZ),
+    (0, D.b)(ta, e7, tf, eZ),
         r.useEffect(() => {
             null != ta && ta !== U.pn.AWAITING_PURCHASE_TOKEN_AUTH && e6 === k.C.PENDING
-                ? tI(U.pn.AWAITING_PURCHASE_TOKEN_AUTH)
-                : ta === U.pn.AWAITING_PURCHASE_TOKEN_AUTH && e6 === k.C.SUCCESS && tI(U.pn.REVIEW);
-        }, [ta, e6, tI]),
-        (0, R.A)(t_),
+                ? tf(U.pn.AWAITING_PURCHASE_TOKEN_AUTH)
+                : ta === U.pn.AWAITING_PURCHASE_TOKEN_AUTH && e6 === k.C.SUCCESS && tf(U.pn.REVIEW);
+        }, [ta, e6, tf]),
+        (0, R.A)(tS),
         (0, G.s)(eX, () => $(!1), tt),
         (0, D.QR)(e7);
-    let tT = (function (e) {
+    let tI = (function (e) {
         let { renderHeader: t, handleClose: n } = e,
             {
                 selectedSkuId: i,
@@ -394,7 +392,7 @@ function ef(e) {
                 e
             );
         }, [w, x, P, S, f, n, a, t, h, A, i, C, p, m, D, b, O, L, o, _, I, c, u, d]);
-    })({ renderHeader: ex, handleClose: t_ });
+    })({ renderHeader: ex, handleClose: tS });
     return (0, l.jsx)(E.e0, {
         children: (0, l.jsx)(s.b, {
             className: eP.Xn,
@@ -408,13 +406,13 @@ function ef(e) {
                 returnRef: eU,
                 manaModalSize: to,
                 modalSizeGetter: tu,
-                handleClose: t_,
+                handleClose: tS,
                 children: (0, l.jsx)(eE.Ay, {
-                    header: tT,
+                    header: tI,
                     initialPlanId: q,
                     subscriptionTier: z,
-                    handleStepChange: tI,
-                    handleClose: t_,
+                    handleStepChange: tf,
+                    handleClose: tS,
                     analyticsData: tm,
                     setAnalyticsData: th,
                     trialId: X,

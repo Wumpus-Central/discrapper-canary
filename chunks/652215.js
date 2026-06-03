@@ -3999,6 +3999,7 @@ var rD =
         (ex.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED = "collectibles_gifting_shop_item_clicked"),
         (ex.GIFTING_ITEM_CLICKED = "gifting_item_clicked"),
         (ex.GIFT_CARD_REDEMPTION_START = "gift_card_redemption_start"),
+        (ex.GIFT_CARD_REDEMPTION_EMBED_CLICKED = "gift_card_redemption_embed_clicked"),
         (ex.GIFT_CARD_REDEMPTION_COMPLETED = "gift_card_redemption_completed"),
         (ex.GIFT_CARD_REDEMPTION_FAILED = "gift_card_redemption_failed"),
         (ex.IMPRESSION_GIFT_CARD_REDEMPTION_SUCCEEDED_MODAL = "impression_gift_card_redemption_succeeded_modal"),

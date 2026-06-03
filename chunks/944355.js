@@ -1,9 +1,9 @@
 n.d(t, {
-    ch: () => D.c,
+    ch: () => U.c,
     DH: () => u.DH,
-    Z4: () => S,
+    Z4: () => M,
     v7: () => o.v,
-    y: () => N,
+    y: () => R,
     _D: () => s._,
     I0: () => c.I,
     s7: () => C.s,
@@ -13,8 +13,8 @@ n.d(t, {
     ec: () => i.e,
     a6: () => u.a6,
     JW: () => u.JW,
-    nL: () => k.n,
-    vW: () => L,
+    nL: () => D.n,
+    vW: () => k,
     q7: () => a.q7,
     _P: () => c._,
     f7: () => u.f7,
@@ -31,48 +31,52 @@ var l = n(848584),
 n(165272);
 var c = n(596034),
     d = n(627968),
-    m = n(503698),
-    p = n.n(m),
-    f = n(939249),
-    g = n(307301),
+    m = n(64700),
+    p = n(503698),
+    f = n.n(p),
+    g = n(939249),
+    x = n(307301),
     v = n(661531),
-    x = n(834730),
-    b = n(691540),
-    h = n(857250),
+    b = n(834730),
+    h = n(691540),
+    y = n(857250),
     A = n(97483),
-    y = n(459357),
-    I = n(99696),
-    _ = n(580630),
-    j = n(671744),
-    T = n(776409),
-    P = n(375708),
-    E = n(513857);
-let N = (e) => {
-        let { text: t = P.intl.string(T.default.iBFPMf), onClick: n, className: l } = e;
-        return (0, d.jsxs)(f.D, {
-            className: p()(E.U, l),
-            onClick: n,
+    I = n(459357),
+    _ = n(99696),
+    T = n(580630),
+    P = n(571878),
+    E = n(776409),
+    j = n(375708),
+    N = n(513857);
+let R = (e) => {
+        let { text: t = j.intl.string(E.default.iBFPMf), onClick: n, className: l, analytics: a } = e;
+        return (0, d.jsxs)(g.D, {
+            className: f()(N.U, l),
+            onClick: () => {
+                null != a && (0, _.P6)(a), n();
+            },
             children: [
-                (0, d.jsx)(g.j, { color: v.A.colors.TEXT_BRAND }),
-                (0, d.jsx)(x.E, { variant: "text-sm/medium", color: "text-brand", children: t }),
+                (0, d.jsx)(x.j, { color: v.A.colors.TEXT_BRAND }),
+                (0, d.jsx)(b.E, { variant: "text-sm/medium", color: "text-brand", children: t }),
             ],
         });
     },
-    S = (e) => {
+    M = (e) => {
         let { onComplete: t, onClose: n, text: l, className: a, initialCode: r, stackingBehavior: i } = e,
-            { enabled: s } = (0, y.c)({ location: "StatefulCheckoutGiftCardRedemptionModalLink" }),
-            u = (0, j.t4)((e) => e.contextMetadata);
+            { enabled: s } = (0, I.c)({ location: "StatefulCheckoutGiftCardRedemptionModalLink" }),
+            u = (0, P.t4)((e) => e.contextMetadata),
+            o = m.useMemo(() => ({ source: "payment_modal", loadId: u.loadId }), [u.loadId]);
         return s
-            ? (0, d.jsx)(N, {
+            ? (0, d.jsx)(R, {
                   text: l,
                   onClick: () => {
-                      (0, I.HF)({
+                      (0, _.HF)({
                           initialCode: r ?? "",
                           onComplete: (e) => {
-                              let n = (0, _.$g)(e.amount, e.currency);
-                              (0, b.P0)(
-                                  (0, h.o)(
-                                      P.intl.formatToPlainString(T.default["66Wi6B"], { price: n }),
+                              let n = (0, T.$g)(e.amount, e.currency);
+                              (0, h.P0)(
+                                  (0, y.o)(
+                                      j.intl.formatToPlainString(E.default["66Wi6B"], { price: n }),
                                       A.Ck.SUCCESS,
                                       { position: A.xJ.TOP },
                                   ),
@@ -86,30 +90,31 @@ let N = (e) => {
                       });
                   },
                   className: a,
+                  analytics: o,
               })
             : null;
     };
-var R = n(452027),
-    M = n(91774);
-let L = (e) => {
+var S = n(452027),
+    L = n(91774);
+let k = (e) => {
     let {
-        fieldLabel: t = P.intl.string(P.t["u+Cw58"]),
+        fieldLabel: t = j.intl.string(j.t["u+Cw58"]),
         label: n,
         value: l,
         Icon: a,
         iconColor: r = v.A.colors.ICON_SUBTLE,
     } = e;
-    return (0, d.jsx)(R.D, {
+    return (0, d.jsx)(S.D, {
         label: t,
         children: (0, d.jsxs)("div", {
-            className: M.nQ,
+            className: L.nQ,
             children: [
-                (0, d.jsx)(x.E, { className: M.OL, variant: "text-md/normal", children: n }),
+                (0, d.jsx)(b.E, { className: L.OL, variant: "text-md/normal", children: n }),
                 (0, d.jsx)("span", {
-                    className: M.OL,
-                    children: (0, d.jsxs)(x.E, {
+                    className: L.OL,
+                    children: (0, d.jsxs)(b.E, {
                         variant: "text-md/normal",
-                        className: M.Kk,
+                        className: L.Kk,
                         children: [(0, d.jsx)(a, { color: r, size: "sm" }), l],
                     }),
                 }),
@@ -119,6 +124,6 @@ let L = (e) => {
 };
 var C = n(454666);
 n(87730);
-var k = n(70433),
-    D = n(900730);
+var D = n(70433),
+    U = n(900730);
 n(451636);
