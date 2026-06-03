@@ -455,3 +455,10 @@
     max-width: 128px;
     padding: 4px
 }
+
+.trailingActions__2636e {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    padding-inline-end: 6px
+}
