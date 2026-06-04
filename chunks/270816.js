@@ -1,65 +1,70 @@
 "use strict";
-n.d(t, { H: () => c });
+n.d(t, { H: () => d });
 var i = n(627968),
     r = n(64700),
     s = n(477782),
     a = n(827343),
     o = n(74848),
-    l = n(731854),
-    u = n(375708);
-function c(e) {
+    l = n(106713),
+    u = n(731854),
+    c = n(375708);
+function d(e) {
     let {
             deviceType: t,
             analyticsLocations: n,
-            asSubmenu: c = !1,
-            onDeviceSelect: d,
-            selectedDeviceId: _,
-            menuGroupOverrideProps: h,
-            menuItemOverrideProps: f,
-            computeMenuRadioItemOverrideProps: p,
+            asSubmenu: d = !1,
+            onDeviceSelect: _,
+            selectedDeviceId: h,
+            menuGroupOverrideProps: f,
+            menuItemOverrideProps: p,
+            computeMenuRadioItemOverrideProps: E,
         } = e,
-        { setDevice: E, getLabel: m } = {
-            [l.oh.AUDIO_INPUT]: { setDevice: a.A.setInputDevice, getLabel: () => u.intl.string(u.t.ElbIXN) },
-            [l.oh.AUDIO_OUTPUT]: { setDevice: a.A.setOutputDevice, getLabel: () => u.intl.string(u.t["6Ww0iH"]) },
-            [l.oh.VIDEO_INPUT]: { setDevice: a.A.setVideoDevice, getLabel: () => u.intl.string(u.t.F122Gz) },
+        { setDevice: m, getLabel: g } = {
+            [u.oh.AUDIO_INPUT]: { setDevice: a.A.setInputDevice, getLabel: () => c.intl.string(c.t.ElbIXN) },
+            [u.oh.AUDIO_OUTPUT]: { setDevice: a.A.setOutputDevice, getLabel: () => c.intl.string(c.t["6Ww0iH"]) },
+            [u.oh.VIDEO_INPUT]: { setDevice: a.A.setVideoDevice, getLabel: () => c.intl.string(c.t.F122Gz) },
         }[t],
-        g = (0, o.tR)(t),
-        { id: A, name: I } = (0, o.x5)(t),
-        T = _ ?? A,
-        S = r.useMemo(
+        A = (0, o.tR)(t),
+        { id: I, name: T } = (0, o.x5)(t),
+        S = h ?? I,
+        y = r.useMemo(
             () =>
-                g.find((e) => {
+                A.find((e) => {
                     let { id: t } = e;
-                    return t === T;
+                    return t === S;
                 }),
-            [g, T],
+            [A, S],
         ),
-        y = g.map((e) => {
+        { showDeviceFormFactorIndicators: N } = l.A.useConfig({ location: "useDeviceMenuItems" }),
+        v = A.map((e) => {
             let r,
-                { id: a, disabled: l, name: u } = e,
-                c = u,
-                _ = (0, o.d)(u);
-            return (
-                null != _ && ((c = _.prefix), (r = _.subName)),
-                (0, i.jsx)(
-                    s.iD,
-                    {
-                        id: `${t}-${a}`,
-                        group: `${t}-devices`,
-                        disabled: l,
-                        label: c,
-                        subtext: r,
-                        checked: a === T,
-                        action: () => {
-                            (d?.(a) ?? !0) && E(a, { analyticsLocations: n });
-                        },
-                        ...p?.(a),
+                a = e.name,
+                l = (0, o.d)(e.name);
+            null != l && ((a = l.prefix), (r = l.subName));
+            let u = {};
+            if (N) {
+                let n = (0, o.d4)(e, t);
+                u = { leadingAccessory: { type: "icon", icon: n }, leftIcon: n };
+            }
+            return (0, i.jsx)(
+                s.iD,
+                {
+                    id: `${t}-${e.id}`,
+                    group: `${t}-devices`,
+                    disabled: e.disabled,
+                    label: a,
+                    subtext: r,
+                    checked: e.id === S,
+                    action: () => {
+                        (_?.(e.id) ?? !0) && m(e.id, { analyticsLocations: n });
                     },
-                    `${t}-${a}`,
-                )
+                    ...E?.(e.id),
+                    ...u,
+                },
+                `${t}-${e.id}`,
             );
         });
-    return c
-        ? (0, i.jsx)(s.Dr, { id: `${t}-devices`, label: m(), subtext: S?.name ?? I, ...f, children: y })
-        : (0, i.jsx)(s.rX, { label: m(), ...h, children: y });
+    return d
+        ? (0, i.jsx)(s.Dr, { id: `${t}-devices`, label: g(), subtext: y?.name ?? T, ...p, children: v })
+        : (0, i.jsx)(s.rX, { label: g(), ...f, children: v });
 }

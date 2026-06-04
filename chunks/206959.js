@@ -1679,6 +1679,7 @@ function j(e, t) {
                 hardwareId: c,
                 containerId: d,
                 effects: _,
+                macosTransportType: h,
             } = t;
             return (
                 /^default/.test(a)
@@ -1696,6 +1697,7 @@ function j(e, t) {
                     hardwareId: c,
                     containerId: d,
                     effects: _,
+                    macosTransportType: h,
                 }
             );
         });
