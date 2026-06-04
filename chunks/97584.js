@@ -11,6 +11,7 @@ e.exports = {
     Eg: "treatmentContainer__101ad",
     WG: "treatmentLeftColumn__101ad",
     z_: "treatmentHeading__101ad",
+    Rx: "treatmentHeadingB__101ad",
     W2: "treatmentContent__101ad",
     nf: "treatmentGraphic__101ad",
     v8: "headerContainerB__101ad",
