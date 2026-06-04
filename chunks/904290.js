@@ -10,7 +10,7 @@ var a = n(627968),
     d = n(688810),
     y = n(355622),
     f = n(408018),
-    h = n(201349),
+    h = n(138617),
     p = n(195880),
     C = n(45787),
     R = n(95701),
@@ -104,12 +104,9 @@ function M(e) {
             (0, C.xs)(t.id),
                 await o.A.openPrivateChannel({ recipientIds: [t.id] }),
                 (0, c.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([
-                        n.e("24789"),
-                        n.e("22638"),
-                        n.e("8891"),
-                        n.e("95501"),
-                    ]).then(n.bind(n, 367516));
+                    let { default: e } = await Promise.all([n.e("9633"), n.e("22638"), n.e("8891"), n.e("95501")]).then(
+                        n.bind(n, 367516),
+                    );
                     return (t) =>
                         (0, a.jsx)(e, { ...t, giftIntentType: w.np.FRIEND_ANNIVERSARY, analyticsLocationHistory: k });
                 });

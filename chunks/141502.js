@@ -12,6 +12,7 @@ let a =
             containerVisibilityPercentage: o,
             containerClassName: l,
             assetClassName: u,
+            animationSpeedScale: c = 1,
         } = e;
         return n
             ? (0, i.jsx)("div", {
@@ -34,6 +35,7 @@ let a =
                           changeOpacity: !1,
                       },
                       animateXAxisWiggle: !0,
+                      animationSpeedScale: c,
                       children: t
                           ? (0, i.jsx)("img", {
                                 src: "https://cdn.discordapp.com/assets/content/082012af2fe8bfa66ce6630e1549a146738936af43a8e60c780f9976fa333d93.png",

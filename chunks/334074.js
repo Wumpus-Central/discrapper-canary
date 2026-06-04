@@ -104,14 +104,26 @@ function h(e) {
         S = I.join(",");
     return (
         (0, i.useEffect)(() => {
+            let e = T.length > 0 ? T.split(",") : [],
+                t = new Set(S.length > 0 ? S.split(",") : []),
+                i = g !== c,
+                r = {};
+            for (let s of e)
+                !t.has(s) &&
+                    (n
+                        ? (r[s] = "disabled")
+                        : p.has(s)
+                          ? i && (r[s] = "global-cooldown")
+                          : (r[s] = "per-game-cooldown"));
             (0, o.v)({
                 timestamp: Date.now(),
-                applicationIds: T.length > 0 ? T.split(",") : [],
+                applicationIds: e,
                 dismissibleContent: c,
-                eligibleToShow: S.length > 0 ? S.split(",") : [],
+                eligibleToShow: [...t],
                 disabled: n,
+                excludedReasons: r,
             });
-        }, [T, S, c, n]),
+        }, [T, S, c, n, p, g]),
         {
             eligibleToShow: I,
             markAsDismissed: (e, t) => {

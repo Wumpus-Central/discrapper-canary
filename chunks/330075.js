@@ -32,8 +32,8 @@ function C(e) {
             showOpaqueBackground: b = !1,
         } = e,
         L = (0, l.bG)([c.A], () => c.A.getGuild(C), [C]),
-        k = (0, l.bG)([d.A], () => d.A.getRole(C, t?.role_id ?? E.dJq)),
-        R = (0, r.R)(t, 600),
+        R = (0, l.bG)([d.A], () => d.A.getRole(C, t?.role_id ?? E.dJq)),
+        k = (0, r.R)(t, 600),
         M = (0, A.z)(t),
         P = (0, m.BB)(L),
         { shouldHideGuildPurchaseEntryPoints: D } = (0, o.MH)(C),
@@ -46,7 +46,7 @@ function C(e) {
                 (e = { guildId: C, guildProductListingId: t.id, analyticsLocation: I }),
                 void (0, a.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
-                        n.e("24716"),
+                        n.e("6153"),
                         n.e("35778"),
                         n.e("47812"),
                         n.e("13583"),
@@ -89,11 +89,11 @@ function C(e) {
     return (0, i.jsx)(
         p.A,
         {
-            imageUrl: R,
+            imageUrl: k,
             name: t.name,
             description: t.description,
             formattedPrice: w,
-            role: k,
+            role: R,
             ctaComponent: (0, i.jsx)(s.$, { ...O }),
             productType: M,
             shouldShowFullDescriptionButton: v,

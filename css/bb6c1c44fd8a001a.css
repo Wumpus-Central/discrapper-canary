@@ -1,0 +1,26 @@
+.deviceItem__6efa2 {
+    padding: 8px 16px
+}
+
+.deviceItemIcon__6efa2 {
+    color: var(--interactive-text-active);
+    height: 32px;
+    margin-inline-end: 8px;
+    padding: 8px;
+    width: 32px
+}
+
+.deviceItemName__6efa2 {
+    align-items: center;
+    display: flex
+}
+
+.spinnerContainer__6efa2 {
+    padding: 64px
+}
+
+.emptyArt__6efa2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px
+}

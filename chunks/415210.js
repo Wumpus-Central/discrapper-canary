@@ -23,8 +23,8 @@ var l,
     j = n(877575),
     v = n(403362),
     T = n(372684),
-    y = n(226421),
-    N = n(732774);
+    N = n(226421),
+    y = n(732774);
 function b() {
     let e = (0, o.yK)([f.Ay], () => {
         let e = f.Ay.getLastClipsSession()?.newClipIds;
@@ -37,18 +37,18 @@ function b() {
                   .filter(v.Vq);
     });
     return (0, i.jsx)("div", {
-        className: r()(N.vH, {
-            [N.gb]: 1 === e.length,
-            [N.$d]: 2 === e.length,
-            [N.gS]: 3 === e.length,
-            [N.hA]: e.length >= 4,
+        className: r()(y.vH, {
+            [y.gb]: 1 === e.length,
+            [y.$d]: 2 === e.length,
+            [y.gS]: 3 === e.length,
+            [y.hA]: e.length >= 4,
         }),
         children: Array.from({ ...e, length: 4 })
             .map((e, t) =>
                 null != e
                     ? e.type === T.nQ.VOICE_CLIP
-                        ? (0, i.jsx)(y.A, { className: N.xn }, e.id)
-                        : (0, i.jsx)("img", { alt: "", className: N.xn, src: e.thumbnail }, e.id)
+                        ? (0, i.jsx)(N.A, { className: y.xn }, e.id)
+                        : (0, i.jsx)("img", { alt: "", className: y.xn, src: e.thumbnail }, e.id)
                     : (0, i.jsx)("div", {}, `placeholder-${t}`),
             )
             .reverse(),
@@ -162,8 +162,8 @@ var ec = n(661531),
         (l.SUMMARIZE_THREAD = "SUMMARIZE_THREAD"),
         l),
     eT = n(49999),
-    ey = n(412136);
-let eN = /(.*)```(\w+)\n(.*)```(.*)/s;
+    eN = n(412136);
+let ey = /(.*)```(\w+)\n(.*)```(.*)/s;
 function eb(e) {
     let {
             channel: t,
@@ -195,14 +195,14 @@ function eb(e) {
                     let { default: e } = await Promise.all([n.e("83644"), n.e("42322")]).then(n.bind(n, 143657));
                     return (n) => (0, i.jsx)(e, { ...n, channel: t });
                 },
-                { modalKey: ey.sm },
+                { modalKey: eN.sm },
             );
     }
     function _() {
         let e = h,
             n = "txt",
             l = "",
-            i = h.match(eN);
+            i = h.match(ey);
         null != i && ((l = i[1]), (n = i[2]), (e = i[3]), (l += i[4])),
             (0, W.R)([(0, er.VE)(new Blob([e], { type: "text/plain" }), `message.${n}`, "text/plain")], t, u),
             K._.dispatchToLastSubscribed(ej.jej.CLEAR_TEXT),
@@ -433,8 +433,8 @@ let eD = s.memo(function (e) {
         j = s.useRef(null),
         v = s.useRef(null),
         T = (0, o.bG)([V.A], () => V.A.getActivities()),
-        y = (0, C.Et)(),
-        N = (0, o.bG)([f.Ay], () => f.Ay.getLastClipsSession()),
+        N = (0, C.Et)(),
+        y = (0, o.bG)([f.Ay], () => f.Ay.getLastClipsSession()),
         b = (0, o.yK)([f.Ay], () => f.Ay.getNewClipIds()),
         R = (0, o.bG)([w.Ay], () => null == w.Ay.getCurrentSidebarChannelId(l.id)),
         $ = (0, o.yK)(
@@ -451,20 +451,21 @@ let eD = s.memo(function (e) {
         et = (0, o.bG)([H.A], () => H.A.hasLayers()),
         en = (0, o.bG)([f.Ay], () => f.Ay.hasClips()),
         [el, ei] = s.useState(null),
-        es = (0, p.sw)() && (y || en),
+        es = (0, p.sw)() && (N || en),
         ea = l.isPrivate(),
         er = (0, o.bG)([B.A], () => ea || (B.A.can(ej.xBc.ATTACH_FILES, l) && B.A.can(ej.xBc.SEND_MESSAGES, l))),
-        eo = (0, m.A)(N);
+        eo = (0, m.A)(y);
     function ev() {
         (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("70864"),
-                    n.e("76298"),
+                    n.e("2295"),
+                    n.e("22367"),
+                    n.e("91688"),
                     n.e("88623"),
-                    n.e("13408"),
-                    n.e("64684"),
-                    n.e("35659"),
+                    n.e("29515"),
+                    n.e("17645"),
+                    n.e("13014"),
                     n.e("30204"),
                     n.e("83952"),
                     n.e("1962"),
@@ -489,8 +490,8 @@ let eD = s.memo(function (e) {
         ),
             ei(null);
     }
-    eo?.newClipIds.length !== N?.newClipIds.length &&
-        (N?.newClipIds.length ?? 0) > 0 &&
+    eo?.newClipIds.length !== y?.newClipIds.length &&
+        (y?.newClipIds.length ?? 0) > 0 &&
         null == el &&
         Q &&
         R &&
@@ -511,8 +512,8 @@ let eD = s.memo(function (e) {
             );
         });
     let eT = (0, G.n)(l),
-        ey = (0, G.Tb)(l),
-        eN = !U.D_.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver,
+        eN = (0, G.Tb)(l),
+        ey = !U.D_.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver,
         eD = (0, k.I7)(l ?? void 0),
         eL = (0, P.Sc)(),
         eO = (0, g.b)(),
@@ -594,8 +595,8 @@ let eD = s.memo(function (e) {
             );
         })({
             canAttachFiles: er,
-            canStartThreads: eT || ey,
-            useSlate: eN,
+            canStartThreads: eT || eN,
+            useSlate: ey,
             hasClips: es,
             canUseApplicationCommands: !_,
             channel: l,
@@ -624,7 +625,7 @@ let eD = s.memo(function (e) {
             renderPopout: (e) => {
                 switch (el) {
                     case "recentClips":
-                        return (0, i.jsx)(D, { ...e, onOpenClips: ev, lastClipsSession: N });
+                        return (0, i.jsx)(D, { ...e, onOpenClips: ev, lastClipsSession: y });
                     case "attachMenu":
                         return (0, i.jsx)(eb, {
                             ...e,

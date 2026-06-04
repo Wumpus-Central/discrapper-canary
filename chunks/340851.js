@@ -6,8 +6,8 @@ var n = t(627968),
     r = t(990078),
     d = t(834730),
     u = t(597601),
-    o = t(922016),
-    c = t(367513),
+    c = t(922016),
+    o = t(367513),
     m = t(442433),
     A = t(730852),
     g = t(401843),
@@ -90,10 +90,10 @@ let D = (0, h.J)(function (e) {
         } = e,
         ed = (0, v.Ay)(d),
         eu = l.useRef(null),
-        [eo, ec] = l.useState(!1),
+        [ec, eo] = l.useState(!1),
         em = l.useRef(null),
         eA = () => {
-            ec(!eo);
+            eo(!ec);
         },
         eg = (e) => {
             eh();
@@ -111,7 +111,7 @@ let D = (0, h.J)(function (e) {
             if (!$ || !(0, _.eo)(d, O.A, b.A, j.A, f.default)[0]) return;
             let e = { streamType: V.U4.GUILD, ownerId: s.id, channelId: d.id, guildId: d.guild_id };
             C.default.getId() !== s.id && A.default.selectVoiceChannel(d.id),
-                W ? ((0, E.A)(e), c.A.selectParticipant(e.channelId, (0, S._z)(e))) : (0, g.Nl)(e),
+                W ? ((0, E.A)(e), o.A.selectParticipant(e.channelId, (0, S._z)(e))) : (0, g.Nl)(e),
                 Q?.(s.id);
         },
         eI = (e) => {
@@ -119,8 +119,8 @@ let D = (0, h.J)(function (e) {
                 let { default: e } = await Promise.all([
                     t.e("39713"),
                     t.e("30402"),
-                    t.e("67942"),
-                    t.e("94881"),
+                    t.e("9633"),
+                    t.e("2062"),
                     t.e("26132"),
                     t.e("46652"),
                     t.e("93190"),
@@ -181,18 +181,18 @@ let D = (0, h.J)(function (e) {
             onMouseEnter: en
                 ? void 0
                 : () => {
-                      eo || (em.current = setTimeout(() => X?.(s.id), 100));
+                      ec || (em.current = setTimeout(() => X?.(s.id), 100));
                   },
             onMouseLeave: en ? void 0 : eh,
             children: (0, n.jsx)(N.A, {
-                clickTrap: s?.id === T.default.getCurrentUser()?.id && eo,
+                clickTrap: s?.id === T.default.getCurrentUser()?.id && ec,
                 targetElementRef: eu,
                 user: s,
                 guildId: d.guild_id,
                 channelId: d.id,
                 newAnalyticsLocations: [p.A.VOICE_USER],
-                shouldShow: eo,
-                onRequestClose: () => ec(!1),
+                shouldShow: ec,
+                onRequestClose: () => eo(!1),
                 children: (e) => {
                     let t, l;
                     return (
@@ -221,7 +221,7 @@ let D = (0, h.J)(function (e) {
                             embeddedApplication: M,
                             avatarContainerClass: a()({ [R.dj]: !0 }),
                             disabled: en && !t,
-                            selected: eo,
+                            selected: ec,
                             onClick: t ? void 0 : eA,
                             onDoubleClick: ep,
                             onContextMenu: eI,
@@ -236,7 +236,7 @@ let D = (0, h.J)(function (e) {
                                   text: (0, x.A)(ei) ?? P.intl.string(P.t.IyYqqY),
                                   children: (0, n.jsx)(y.Ay, { ref: eu, ...l }),
                               })
-                            : (0, n.jsx)(o.Y, {
+                            : (0, n.jsx)(c.Y, {
                                   targetElementRef: eu,
                                   position: "right",
                                   renderPopout: () =>
@@ -246,7 +246,7 @@ let D = (0, h.J)(function (e) {
                                           onAction: eh,
                                           onWatchStream: $ ? ep : void 0,
                                       }),
-                                  shouldShow: ee && !eo,
+                                  shouldShow: ee && !ec,
                                   onRequestClose: eg,
                                   spacing: 17,
                                   children: () =>
