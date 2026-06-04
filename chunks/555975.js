@@ -1427,6 +1427,12 @@ class nx extends R.Ay.Store {
     isDeaf() {
         return this.isSelfDeaf() || tm;
     }
+    isServerMute() {
+        return tf;
+    }
+    isServerDeaf() {
+        return tm;
+    }
     getAudioMixerSettings() {
         return t5().audioMixerSettings;
     }
