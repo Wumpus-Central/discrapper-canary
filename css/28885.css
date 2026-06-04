@@ -5826,7 +5826,7 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 
 .contentContainer_a98bec {
     flex-direction: column;
-    gap: var(--space-24);
+    gap: var(--space-12);
     padding-top: var(--custom-premium-marketing-hero-heading-padding-top);
     z-index: 1
 }
@@ -5840,7 +5840,7 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     display: flex;
     flex-direction: column;
     gap: var(--space-24);
-    margin: 0 80px
+    margin: 12px 80px 0
 }
 
 .marketingPageTextContainer_a98bec {
@@ -5892,13 +5892,6 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 .singleButtonContainer_a98bec {
     margin: auto;
     min-width: 260px
-}
-
-.offerPillContainer_a98bec {
-    inset-inline-start: 50%;
-    position: absolute;
-    top: calc(var(--custom-premium-marketing-hero-heading-padding-top) - 40px);
-    transform: translateX(-50%)
 }
 
 .affinitiesContainer_a98bec,

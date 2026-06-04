@@ -554,7 +554,7 @@ let sl = n.memo(
                         className: sn.hQ,
                         children: [
                             (0, a.jsx)(sa, { containerVisibilityPercentage: g }),
-                            v && (0, a.jsx)("div", { className: sn.XN, children: (0, a.jsx)(e3, {}) }),
+                            v && (0, a.jsx)(e3, {}),
                             (0, a.jsx)("div", {
                                 className: sn.s8,
                                 children: (0, a.jsx)(eJ.F, {
