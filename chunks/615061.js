@@ -1001,6 +1001,7 @@ class eE extends S.A {
         (this.selfMute = e), this.input.setMute(e), this.emit(y.yq.Mute, e);
     };
     setNoiseCancellationDuringProcessing(e) {}
+    setEchoReferenceMode(e) {}
     getSelfMute() {
         return this.selfMute;
     }

@@ -507,6 +507,7 @@ class H extends T.A {
     automaticGainControl = { enabled: !0 };
     noiseCancellation = !1;
     noiseCancellationDuringProcessing = !1;
+    echoReferenceMode = "mix";
     attenuationFactor = 0.5;
     attenuateWhileSpeakingSelf = !1;
     attenuateWhileSpeakingOthers = !0;
@@ -1000,6 +1001,9 @@ class H extends T.A {
             (0, b.lE)().setTransportOptions({
                 noiseCancellationDuringProcessing: this.noiseCancellationDuringProcessing,
             });
+    }
+    setEchoReferenceMode(e) {
+        (this.echoReferenceMode = e), (0, b.lE)().setTransportOptions({ echoReferenceMode: this.echoReferenceMode });
     }
     getNoiseCancellation() {
         return this.noiseCancellation;
