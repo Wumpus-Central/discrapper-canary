@@ -1,7 +1,7 @@
 i.r(t), i.d(t, { default: () => m }), i(321073);
 var l = i(19575),
     r = i(372684),
-    a = i(985018);
+    a = i(375708);
 async function n(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         i = await l.Ay.fetchRiotGamesLiveClientData(e, t);
@@ -283,7 +283,7 @@ class s {
         return this.eventWindow;
     }
 }
-i(64683);
+i(876474);
 class o {
     pollIntervalId = null;
     isPolling = !1;

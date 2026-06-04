@@ -1,14 +1,15 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => h });
 var i = n(439372),
     r = n(952818),
     s = n(287809),
     a = n(977997),
     o = n(572164),
-    l = n(116671),
-    u = n(734066),
-    c = n(64683);
-class d extends i.A {
+    l = n(877575),
+    u = n(974293),
+    c = n(458977),
+    d = n(876474);
+class _ extends i.A {
     registrations = new Map();
     activeHandlers = new Map();
     initialized = !1;
@@ -26,27 +27,28 @@ class d extends i.A {
                 {
                     type: "voiceChannel",
                     name: "ml-audio-classification",
-                    isEnabled: u.J,
-                    importHandler: () => n.e("77639").then(n.bind(n, 686586)),
+                    isEnabled: () => (0, u.$i)(),
+                    importHandler: () => n.e("53725").then(n.bind(n, 691148)),
                 },
                 {
                     type: "voiceChannel",
                     name: "distributed-clipping",
-                    isEnabled: u.J,
-                    importHandler: () => n.e("70726").then(n.bind(n, 949285)),
+                    isEnabled: () =>
+                        c.A.getConfig({ location: "Clip signal handler registration" }).enableDistributedClips,
+                    importHandler: () => n.e("78045").then(n.bind(n, 359788)),
                 },
                 {
                     type: "application",
                     name: "steam-timeline",
-                    isEnabled: u.J,
-                    importHandler: () => n.e("13034").then(n.bind(n, 849745)),
+                    isEnabled: () => !1,
+                    importHandler: () => n.e("33196").then(n.bind(n, 551367)),
                 },
                 {
                     type: "application",
                     name: "league-of-legends",
-                    applicationId: c.m,
-                    isEnabled: u.J,
-                    importHandler: () => n.e("31263").then(n.bind(n, 903010)),
+                    applicationId: d.m,
+                    isEnabled: () => !1,
+                    importHandler: () => n.e("18549").then(n.bind(n, 877588)),
                 },
             ]))
                 "voiceChannel" === e.type
@@ -112,4 +114,4 @@ class d extends i.A {
         this.terminatedCount++, this.stopAllHandlers();
     }
 }
-let _ = new d();
+let h = new _();

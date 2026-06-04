@@ -9,8 +9,8 @@ var i = n(665260),
     u = n(495544),
     c = n(287809),
     d = n(741394),
-    _ = n(734066),
-    h = n(372684),
+    _ = n(372684),
+    h = n(458977),
     f = n(696016),
     p = n(652215),
     E = n(753070);
@@ -71,7 +71,8 @@ async function G() {
     }
 }
 function F(e, t, n) {
-    if (!(0, _.J)() || n !== u.default.getId()) return !1;
+    if (!h.A.getConfig({ location: "trackSharedRemoteClipId" }).enableDistributedClips || n !== u.default.getId())
+        return !1;
     let i = !1;
     for (let n of t) {
         if (null == n.clip_remote_id) continue;
@@ -407,13 +408,13 @@ let B = new V(s.h, {
                 n = U.hardwareClassification;
             (U.hardwareClassificationVersion = f.V0),
                 (U.hardwareClassification = t),
-                U.hardwareClassification === h.k9.MEETS_AUTO_ENABLE &&
-                    n !== h.k9.MEETS_AUTO_ENABLE &&
+                U.hardwareClassification === _.k9.MEETS_AUTO_ENABLE &&
+                    n !== _.k9.MEETS_AUTO_ENABLE &&
                     (U.clipsSettings.clipsEnabled = !0);
             let i = U.hardwareClassificationForDecoupled;
             (U.hardwareClassificationForDecoupled = t),
-                U.hardwareClassificationForDecoupled === h.k9.MEETS_AUTO_ENABLE &&
-                    i !== h.k9.MEETS_AUTO_ENABLE &&
+                U.hardwareClassificationForDecoupled === _.k9.MEETS_AUTO_ENABLE &&
+                    i !== _.k9.MEETS_AUTO_ENABLE &&
                     U.clipsSettings.clipsEnabled &&
                     (U.clipsSettings.decoupledClipsEnabled = !0);
         },
