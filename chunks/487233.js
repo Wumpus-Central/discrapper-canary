@@ -1,54 +1,66 @@
-a.d(l, { A: () => A });
-var i = a(627968);
-a(64700);
-var n = a(17928),
-    r = a(778712),
-    t = a(97808),
-    s = a(688810),
-    d = a(919395),
-    u = a(252732),
-    c = a(101058),
-    o = a(696451),
-    v = a(84540),
-    g = a(836602),
-    f = a(854627),
-    h = a(930349),
-    b = a(339984),
-    p = a(375708);
-let m = r._3.SIZE_72;
-function k(e) {
-    let { userId: l, guildId: a, avatarOverride: n, shouldAnimate: r } = e,
-        { avatarSrc: s } = (0, f.A)({ userId: l, guildId: a, avatarOverride: n, size: m, animateOnHover: !r });
-    return (0, i.jsx)(t.eu, { src: s, size: m, "aria-hidden": !0 });
+l.d(n, { A: () => I });
+var t = l(627968);
+l(64700);
+var a = l(17928),
+    r = l(778712),
+    i = l(97808),
+    s = l(688810),
+    o = l(919395),
+    d = l(252732),
+    u = l(101058),
+    c = l(392107),
+    v = l(696451),
+    g = l(84540),
+    h = l(836602),
+    f = l(854627),
+    m = l(930349),
+    p = l(339984),
+    b = l(375708);
+let x = r._3.SIZE_72;
+function C(e) {
+    let { userId: n, guildId: l, avatarOverride: a, shouldAnimate: r } = e,
+        { avatarSrc: s } = (0, f.A)({ userId: n, guildId: l, avatarOverride: a, size: x, animateOnHover: !r });
+    return (0, t.jsx)(i.eu, { src: s, size: x, "aria-hidden": !0 });
 }
-function A(e) {
-    let { user: l, guildId: a, disabled: r } = e,
-        { newestAnalyticsLocation: t } = (0, s.Ay)(),
-        f = null != a,
-        m = (0, n.bG)([o.Ay], () => (null != a ? o.Ay.getMember(a, l.id) : null)),
-        A = (0, n.bG)([g.A], () => g.A.getPendingChanges(a ?? void 0).pendingAvatar),
-        I = (0, c.V7)({ userId: l.id, image: A }),
-        C = l.avatar,
-        x = f ? m?.avatar : C,
-        y = f && null != C,
-        j = (0, d.z5)(A, x)
+function I(e) {
+    let n,
+        l,
+        { user: r, guildId: i, disabled: f } = e,
+        { newestAnalyticsLocation: x } = (0, s.Ay)(),
+        I = null != i,
+        A = (0, a.bG)([v.Ay], () => (null != i ? v.Ay.getMember(i, r.id) : null)),
+        k = (0, a.bG)([h.A], () => h.A.getPendingChanges(i ?? void 0).pendingAvatar),
+        y = (0, u.V7)({ userId: r.id, image: k }),
+        j = r.avatar,
+        N = I ? A?.avatar : j,
+        w = I && null != j,
+        E = (0, o.z5)(k, N)
             ? {
                   onClick: () => {
-                      (0, u.rM)(null, x, (e) => (0, v.p)({ guildId: a ?? void 0, avatar: e })),
-                          (0, d.WU)(y ? "reset" : "remove");
+                      (0, d.rM)(null, N, (e) => (0, g.p)({ guildId: i ?? void 0, avatar: e })),
+                          (0, o.WU)(w ? "reset" : "remove");
                   },
-                  type: y ? "reset" : "remove",
-                  accessibleLabel: p.intl.string(y ? p.t.Y0mxy1 : p.t.twB3fz),
+                  type: w ? "reset" : "remove",
+                  accessibleLabel: b.intl.string(w ? b.t.Y0mxy1 : b.t.twB3fz),
               }
             : void 0;
-    return (0, i.jsx)(h.V, {
-        affordance: j,
+    return (0, t.jsx)(m.V, {
+        affordance: E,
         variant: "square",
         onClick: () =>
-            (0, u.XD)({ uploadType: b.HL.AVATAR, analyticsSource: t, guildId: a ?? void 0, stackingBehavior: "stack" }),
-        accessibleLabel: p.intl.string(p.t["4OynCD"]),
+            (0, d.XD)({ uploadType: p.HL.AVATAR, analyticsSource: x, guildId: i ?? void 0, stackingBehavior: "stack" }),
+        accessibleLabel: b.intl.string(b.t.lqaIxI),
+        accessibleValue:
+            ((n = null === k),
+            (l = void 0 === k),
+            n || (l && null == N)
+                ? b.intl.string(b.t["3Xph0/"])
+                : l
+                  ? b.intl.string(b.t["16GpW/"])
+                  : ((k.assetOrigin === c.E.ARCHIVED_ASSET ? k.originalAsset.description : k.description) ??
+                    b.intl.string(b.t.cqdtrR))),
         "aria-haspopup": "dialog",
-        disabled: r,
-        renderPreview: (e) => (0, i.jsx)(k, { userId: l.id, guildId: a, avatarOverride: I, shouldAnimate: e }),
+        disabled: f,
+        renderPreview: (e) => (0, t.jsx)(C, { userId: r.id, guildId: i, avatarOverride: y, shouldAnimate: e }),
     });
 }
