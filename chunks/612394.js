@@ -1,52 +1,59 @@
 "use strict";
-n.d(t, { So: () => l, fh: () => u, uA: () => o });
-var i = n(95561),
-    r = n(194004),
-    s = n(174459),
-    a = n(652215);
-function o(e, t, n) {
-    s.default.track(a.HAw.CHANNEL_AUTOCOMPLETE_OPEN, {
-        ...(0, i.dI)(t),
-        ...(0, i.H$)(t.guild_id),
+n.d(t, { AR: () => d, So: () => _, fh: () => h, uA: () => c });
+var i = n(111956),
+    r = n.n(i),
+    s = n(95561),
+    a = n(352505),
+    o = n(194004),
+    l = n(174459),
+    u = n(652215);
+function c(e, t, n) {
+    l.default.track(u.HAw.CHANNEL_AUTOCOMPLETE_OPEN, {
+        ...(0, s.dI)(t),
+        ...(0, s.H$)(t.guild_id),
         autocomplete_type: e,
         num_emoji_results: n?.numEmojiResults ?? 0,
         num_locked_emoji_results: n?.numLockedEmojiResults ?? 0,
         num_sticker_results: n?.numStickerResults ?? 0,
     });
 }
-function l(e, t, n, r) {
-    s.default.track(a.HAw.CHANNEL_AUTOCOMPLETE_SELECTED, {
-        ...(0, i.dI)(n),
-        ...(0, i.H$)(n.guild_id),
+let d = r()((e, t, n) => {
+    a.r.getConfig({ location: "autocomplete_analytics" }).enabled &&
+        l.default.track(u.HAw.DETECTABLE_GAME_SEARCHED, { surface: e, query_length: t, result_count: n });
+}, 50);
+function _(e, t, n, i) {
+    l.default.track(u.HAw.CHANNEL_AUTOCOMPLETE_SELECTED, {
+        ...(0, s.dI)(n),
+        ...(0, s.H$)(n.guild_id),
         autocomplete_type: e,
         selection_type: t,
-        emoji_id: r?.emojiId,
-        sticker_id: r?.stickerId,
-        num_emoji_results: r?.numEmojiResults ?? 0,
-        num_sticker_results: r?.numStickerResults ?? 0,
-        emoji_name: r?.expressionName ?? "",
-        is_custom: r?.isCustom ?? !1,
-        is_animated: r?.isAnimated ?? !1,
-        application_id: r?.gameId,
+        emoji_id: i?.emojiId,
+        sticker_id: i?.stickerId,
+        num_emoji_results: i?.numEmojiResults ?? 0,
+        num_sticker_results: i?.numStickerResults ?? 0,
+        emoji_name: i?.expressionName ?? "",
+        is_custom: i?.isCustom ?? !1,
+        is_animated: i?.isAnimated ?? !1,
+        application_id: i?.gameId,
     });
 }
-function u(e) {
-    let { sticker: t, stickerSelectLocation: n, isReplacement: i, analyticsLocations: o } = e;
-    s.default.track(a.HAw.STICKER_ATTACHED, {
+function h(e) {
+    let { sticker: t, stickerSelectLocation: n, isReplacement: i, analyticsLocations: r } = e;
+    l.default.track(u.HAw.STICKER_ATTACHED, {
         replaced: i,
         source: (function (e) {
             switch (e) {
-                case r.D6.AUTOCOMPLETE:
+                case o.D6.AUTOCOMPLETE:
                     return "autocomplete";
-                case r.D6.STICKER_PICKER:
+                case o.D6.STICKER_PICKER:
                     return "picker";
-                case r.D6.BUILT_IN_INTEGRATION:
+                case o.D6.BUILT_IN_INTEGRATION:
                     return "built_in_integration";
                 default:
                     return null;
             }
         })(n),
         sticker_id: t.id,
-        location_stack: o,
+        location_stack: r,
     });
 }

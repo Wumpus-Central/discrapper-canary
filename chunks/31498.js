@@ -150,15 +150,21 @@ class h extends l.EventEmitter {
         let y = a.eK.getSetting();
         m.allowSoundmoji = m.allowSoundmoji ? y : m.allowSoundmoji;
         let { results: S, metadata: v } = A.queryResults(this.props.channel, this.props.guild, E, m, C),
-            _ = 0;
-        for (let e of Object.values(S)) Array.isArray(e) && (_ += e.length);
-        let N = !0 === S.isLoading,
-            T = this.shouldShow(_, N, A),
+            N = 0;
+        for (let e of Object.values(S)) Array.isArray(e) && (N += e.length);
+        if (l && E.length > 0 && E !== this.state.query?.queryText) {
+            let e = (S.games ?? []).length;
+            x === c.DB.GAME
+                ? (0, s.AR)("game_mention_autocomplete", E.length, e)
+                : x === c.DB.MENTIONS && (0, s.AR)("mention_autocomplete", E.length, e);
+        }
+        let _ = !0 === S.isLoading,
+            T = this.shouldShow(N, _, A),
             j = this.state.selectedIndex;
-        !T || N ? (j = null) : null != j && j >= _ && (j = _ - 1),
+        !T || _ ? (j = null) : null != j && j >= N && (j = N - 1),
             T && !this.state.isVisible && (0, s.uA)(x, this.props.channel, v),
             this.setState({
-                query: { type: x, typeInfo: A, queryText: E, results: S, resultCount: _, options: m, isLoading: N },
+                query: { type: x, typeInfo: A, queryText: E, results: S, resultCount: N, options: m, isLoading: _ },
                 isVisible: T,
                 selectedIndex: j,
                 hadInitialResults: !0,
