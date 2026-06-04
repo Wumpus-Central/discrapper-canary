@@ -1,52 +1,96 @@
-r.d(t, { CheckoutRootProvider: () => S });
+r.d(t, { CheckoutRootProvider: () => g });
 var n = r(627968),
     l = r(64700),
-    u = r(688810),
-    a = r(795791),
-    i = r(615310),
-    s = r(626584),
-    c = r(174459),
-    o = r(38405),
-    d = r(652215);
-let p = new s.A("CheckoutErrorBoundary.tsx");
-class f extends l.PureComponent {
+    a = r(688810),
+    i = r(795791),
+    u = r(615310),
+    s = r(192308),
+    o = r(139033),
+    c = r(626584),
+    d = r(174459),
+    h = r(38405),
+    p = r(71804),
+    f = r(652215),
+    m = r(375708);
+let y = new c.A("CheckoutErrorBoundary.tsx");
+class I extends l.PureComponent {
     state = { error: null, info: null };
-    componentDidCatch(e, t) {
+    closeCheckoutAndShowAlert() {
+        (0, s.closeAllModals)(),
+            (0, o.A)({
+                title: m.intl.string(m.t.iufib1),
+                subtitle: m.intl.string(m.t.ZUEGFn),
+                confirmText: m.intl.string(m.t.TyCVIq),
+            });
+    }
+    getCrashedFlag(e) {
+        return e instanceof p.v
+            ? "rethrow" === e.errorHandlingBehavior
+            : "rethrow" === this.props.errorHandlingBehavior;
+    }
+    emitSentryException(e, t) {
         let {
                 loadId: r,
                 selectedSkuId: n,
                 selectedPlanId: l,
-                isGift: u,
-                purchaseType: a,
-                locationStack: i,
-                additionalAnalyticsData: s,
+                skuIds: a,
+                isGift: i,
+                purchaseType: u,
+                locationStack: s,
+                additionalAnalyticsData: o,
             } = this.props,
-            f = this.props.shouldRethrowError,
-            h = { loadId: r, selectedSkuId: n, selectedPlanId: l, isGift: u, purchaseType: a, locationStack: i },
-            m = {
+            c = this.getCrashedFlag(e),
+            d = {
+                loadId: r,
+                selectedSkuId: n,
+                selectedPlanId: l,
+                isGift: i,
+                purchaseType: u,
+                skuIds: a,
+                locationStack: s,
+                ...(e instanceof p.v ? { checkoutErrorExtraInformation: e.extraSentryInformation } : {}),
+            },
+            f = {
                 tags: {
                     app_context: "billing",
                     checkout_error: "true",
                     billing_context: "checkout",
-                    ...(f ? { crashed: "true" } : {}),
+                    ...(c ? { crashed: "true" } : {}),
                 },
-                extra: { ...h, ...(s ?? {}), ...(t ?? {}) },
+                extra: { ...d, ...(o ?? {}), ...(null != t ? { reactErrorInfo: t } : {}) },
             };
-        o.A.captureException(e, m), p.error("Checkout error occurred:", { error: e, additionalErrorContext: h });
-        let y = "string" == typeof e ? e : e.message;
+        return (
+            h.A.captureException(e, f),
+            y.error("Checkout error occurred:", { error: e, additionalErrorContext: d }),
+            { sentryErrorOptions: f }
+        );
+    }
+    emitPaymentFlowErrorAnalytics(e) {
+        let t = this.getCrashedFlag(e),
+            { loadId: r, locationStack: n, additionalAnalyticsData: l } = this.props,
+            a = "string" == typeof e ? e : e.message;
+        d.default.track(f.HAw.PAYMENT_FLOW_ERROR, {
+            load_id: r,
+            crashed: t,
+            error_message: a,
+            location_stack: n ?? [],
+            ...l,
+        });
+    }
+    componentDidCatch(e, t) {
+        let { sentryErrorOptions: r } = this.emitSentryException(e, t);
         if (
-            (c.default.track(d.HAw.PAYMENT_FLOW_ERROR, {
-                load_id: r,
-                crashed: f,
-                error_message: y,
-                location_stack: i ?? [],
-                ...s,
-            }),
+            (this.emitPaymentFlowErrorAnalytics(e),
             this.setState({ error: e, info: t }),
-            null != this.props.onUnhandledError && this.props.onUnhandledError(e, t, m),
-            this.props.shouldRethrowError)
-        )
-            throw e;
+            null != this.props.onUnhandledError && this.props.onUnhandledError(e, t, r),
+            e instanceof p.v)
+        ) {
+            if ("close-and-alert" === e.errorHandlingBehavior) this.closeCheckoutAndShowAlert();
+            else throw e;
+            return;
+        }
+        if ("close-and-alert" === this.props.errorHandlingBehavior) this.closeCheckoutAndShowAlert();
+        else if ("rethrow" === this.props.errorHandlingBehavior) throw e;
     }
     render() {
         return null != this.state.error
@@ -56,80 +100,80 @@ class f extends l.PureComponent {
             : this.props.children;
     }
 }
-var h = r(426398),
-    m = r(738909),
-    y = r(571878),
-    I = r(611333),
-    v = r(783327),
-    x = r(788868);
-function S(e) {
+var v = r(426398),
+    x = r(738909),
+    S = r(571878),
+    E = r(611333),
+    C = r(783327),
+    k = r(788868);
+function g(e) {
     let {
             stepConfigs: t,
             breadcrumbs: r,
-            loadId: u,
+            loadId: a,
             discoverySessionId: s,
-            purchaseType: c = d.VVm.SUBSCRIPTION,
-            overrideCustomCheckoutFlow: o,
-            ...p
+            purchaseType: o = f.VVm.SUBSCRIPTION,
+            overrideCustomCheckoutFlow: c,
+            ...d
         } = e,
-        f = JSON.stringify(p.skuIDs),
-        h = l.useMemo(() => p.skuIDs, [f]),
-        m = (0, a.$w)(),
+        h = JSON.stringify(d.skuIDs),
+        p = l.useMemo(() => d.skuIDs, [h]),
+        m = (0, i.$w)(),
         y = l.useMemo(
             () => ({
-                skuIds: h,
-                isGift: p.isGift ?? !1,
-                referralTrialOfferId: p.referralTrialOfferId ?? null,
-                activeSubscription: p.activeSubscription ?? null,
-                excludeSubscriptionPlansBySKU: p.excludeSubscriptionPlansBySKU ?? !1,
-                purchaseType: c,
-                defaultPlanId: p.defaultPlanId,
-                referralCode: p.referralCode,
-                customCheckoutFlow: o ?? m,
-                unifiedCheckoutFlow: p.unifiedCheckoutFlow,
-                paymentGateway: p.paymentGateway,
-                applicationId: p.applicationId ?? x.tv,
+                skuIds: p,
+                isGift: d.isGift ?? !1,
+                referralTrialOfferId: d.referralTrialOfferId ?? null,
+                activeSubscription: d.activeSubscription ?? null,
+                excludeSubscriptionPlansBySKU: d.excludeSubscriptionPlansBySKU ?? !1,
+                purchaseType: o,
+                defaultPlanId: d.defaultPlanId,
+                referralCode: d.referralCode,
+                customCheckoutFlow: c ?? m,
+                unifiedCheckoutFlow: d.unifiedCheckoutFlow,
+                paymentGateway: d.paymentGateway,
+                applicationId: d.applicationId ?? k.tv,
             }),
             [
-                h,
-                c,
-                p.isGift,
-                p.referralTrialOfferId,
-                p.activeSubscription,
-                p.excludeSubscriptionPlansBySKU,
-                p.applicationId,
-                p.defaultPlanId,
-                p.referralCode,
+                p,
                 o,
+                d.isGift,
+                d.referralTrialOfferId,
+                d.activeSubscription,
+                d.excludeSubscriptionPlansBySKU,
+                d.applicationId,
+                d.defaultPlanId,
+                d.referralCode,
+                c,
                 m,
-                p.unifiedCheckoutFlow,
-                p.paymentGateway,
+                d.unifiedCheckoutFlow,
+                d.paymentGateway,
             ],
         );
-    return (0, n.jsx)(i.mz, {
+    return (0, n.jsx)(u.mz, {
         stepConfigs: t,
         breadcrumbs: r,
-        children: (0, n.jsx)(I.P, {
-            loadId: u,
+        children: (0, n.jsx)(E.P, {
+            loadId: a,
             discoverySessionId: s,
             checkoutInitParameters: y,
-            children: (0, n.jsx)(E, { ...p, purchaseType: c }),
+            children: (0, n.jsx)(w, { ...d, skuIDs: p, purchaseType: o }),
         }),
     });
 }
-function E(e) {
-    let { shouldCrashOnUnhandledError: t = !0, onUnhandledError: r, children: a } = e,
-        { paymentSources: i } = (0, h.jm)(),
+function w(e) {
+    let { errorHandlingBehavior: t = "rethrow", onUnhandledError: r, skuIDs: i, children: u } = e,
+        { paymentSources: s } = (0, v.jm)(),
         {
-            contextMetadata: s,
+            contextMetadata: o,
             unifiedCheckoutFlow: c,
-            purchaseType: o,
-            isGift: d,
+            purchaseType: d,
+            isGift: h,
             selectedSkuId: p,
-            selectedPlanId: I,
-            paymentSourceId: x,
-            paymentGateway: S,
-        } = (0, y.t4)((e) => ({
+            selectedPlanId: f,
+            paymentSourceId: m,
+            paymentGateway: y,
+        } = (0, S.t4)((e) => ({
             contextMetadata: e.contextMetadata,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
             purchaseType: e.purchaseType,
@@ -139,25 +183,26 @@ function E(e) {
             paymentSourceId: e.paymentSourceId,
             paymentGateway: e.paymentGateway,
         })),
-        E = null != x && null != i[x] ? i[x]?.type : null,
-        C = l.useMemo(
-            () => ({ payment_source_id: x, payment_gateway: S, payment_source_type: E, checkout_flow: c }),
-            [x, S, E, c],
+        E = null != m && null != s[m] ? s[m]?.type : null,
+        k = l.useMemo(
+            () => ({ payment_source_id: m, payment_gateway: y, payment_source_type: E, checkout_flow: c }),
+            [m, y, E, c],
         ),
-        _ = (0, u.Db)();
-    return (0, n.jsx)(m.yv, {
-        children: (0, n.jsx)(v.R, {
-            children: (0, n.jsx)(f, {
-                shouldRethrowError: t,
-                locationStack: _,
+        g = (0, a.Db)();
+    return (0, n.jsx)(x.yv, {
+        children: (0, n.jsx)(C.R, {
+            children: (0, n.jsx)(I, {
+                errorHandlingBehavior: t,
+                locationStack: g,
                 onUnhandledError: r,
-                loadId: s.loadId,
+                loadId: o.loadId,
                 selectedSkuId: p ?? null,
-                selectedPlanId: I ?? null,
-                isGift: d,
-                purchaseType: o,
-                additionalAnalyticsData: C,
-                children: a,
+                selectedPlanId: f ?? null,
+                isGift: h,
+                skuIds: i,
+                purchaseType: d,
+                additionalAnalyticsData: k,
+                children: u,
             }),
         }),
     });

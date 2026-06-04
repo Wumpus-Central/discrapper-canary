@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
-    iU: () => C,
+    iU: () => O,
     TI: () => A,
-    U9: () => I,
-    pg: () => S,
-    tQ: () => v,
-    YJ: () => T,
+    U9: () => S,
+    pg: () => N,
+    tQ: () => R,
+    YJ: () => y,
     hm: () => m,
-    N1: () => N,
+    N1: () => C,
     p2: () => g,
 });
 var i = n(17928),
@@ -31,42 +31,49 @@ function g(e) {
     return null != e && e.discount.userUsageLimitInterval === E.Ff.MONTH;
 }
 let A = {
-    discountOffer: null,
-    applicablePlan: void 0,
-    discountInvoicePreview: null,
-    discountAmountOff: null,
-    discountInvoiceError: null,
-};
-function I(e, t) {
+        discountOffer: null,
+        applicablePlan: void 0,
+        discountInvoicePreview: null,
+        discountAmountOff: null,
+        discountInvoiceError: null,
+    },
+    I = new Set();
+function T(e, t, n) {
+    let i = null != t ? (t.id ?? t.discountId) : "unknown",
+        r = `${e}:${String(i)}`;
+    I.has(r) ||
+        (I.add(r),
+        _.A.captureMessage(e, {
+            tags: { app_context: "billing", billing_context: "discount_offer" },
+            extra: { userDiscountOfferId: t.id, discountId: t.discountId, ...n },
+        }));
+}
+function S(e, t) {
     return (
         null != e &&
         (null == e.discount || null == e.discount.planIds
-            ? (_.A.captureMessage(
+            ? (T(
                   "Unexpected discountOffer payload in discountOfferHasTier: discount offer has no discount or plan ids",
-                  {
-                      tags: { app_context: "billing", billing_context: "discount_offer" },
-                      extra: { userDiscountOfferId: e.id, discountId: e.discountId, discountOffer: e },
-                  },
+                  e,
+                  { reason: null == e.discount ? "missing_discount" : "missing_plan_ids" },
               ),
               !1)
             : new Set(e.discount.planIds.map((e) => E.hd[e].skuId)).has(t))
     );
 }
-function T(e) {
+function y(e) {
     if (null == e) return;
     let t = e.discount?.planIds;
     return null == t || 0 === t.length
-        ? void _.A.captureMessage("getDiscountOfferApplicablePlan: discount offer has no applicable plan ids", {
-              extra: { userDiscountOfferId: e.id, discountId: e.discountId },
-          })
+        ? void T("getDiscountOfferApplicablePlan: discount offer has no applicable plan ids", e)
         : t[0];
 }
-function S(e, t) {
+function N(e, t) {
     let n = e?.invoiceItems.find((e) => e.subscriptionPlanId === t),
         i = n?.discounts.find((e) => e.type === r.iS.SUBSCRIPTION_PLAN);
     return i?.amount ?? null;
 }
-let y = (e, t, n, r) => {
+let v = (e, t, n, r) => {
         let u = (function () {
                 let { defaultPaymentSourceId: e, hasFetchedPaymentSources: t } = (0, i.cf)([o.A], () => ({
                     defaultPaymentSourceId: o.A.defaultPaymentSourceId,
@@ -93,12 +100,12 @@ let y = (e, t, n, r) => {
                 currency: m.currency,
                 userDiscountOfferId: t?.id,
             });
-        return { priceOptions: m, discountAmountOff: null != e ? S(A, e) : null };
+        return { priceOptions: m, discountAmountOff: null != e ? N(A, e) : null };
     },
-    N = (e) => {
+    C = (e) => {
         let t = (0, p.O)(),
             n = (0, p.p)(),
-            { priceOptions: i, discountAmountOff: r } = y(e, t ?? n);
+            { priceOptions: i, discountAmountOff: r } = v(e, t ?? n);
         if (null == e || (null == t && null == n)) return null;
         try {
             let t = (0, c.y8)(e, !1, !1, i);
@@ -107,14 +114,14 @@ let y = (e, t, n, r) => {
             return null;
         }
     },
-    v = (e, t, n) => {
-        let { priceOptions: i, discountAmountOff: r } = y(t, n, e),
+    R = (e, t, n) => {
+        let { priceOptions: i, discountAmountOff: r } = v(t, n, e),
             s = (0, c.y8)(t, !1, !1, i);
         return (0, d.$g)(s.amount - (r ?? 0), s.currency);
     },
-    C = (e, t, n) => {
+    O = (e, t, n) => {
         let r = (0, i.bG)([u.A], () => u.A.get(e), [e]),
-            { priceOptions: s, discountAmountOff: a } = y(e, t, n, null == r);
+            { priceOptions: s, discountAmountOff: a } = v(e, t, n, null == r);
         if (null == r || null == a) return null;
         try {
             let t = (0, c.y8)(e, !1, !1, s);
