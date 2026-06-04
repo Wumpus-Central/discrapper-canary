@@ -13,14 +13,15 @@ var i = n(735438),
     h = n(317525),
     f = n(71393),
     p = n(287809),
-    E = n(562153),
-    m = n(427262);
-let g =
+    E = n(486020),
+    m = n(562153),
+    g = n(427262);
+let A =
         /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,
-    A = {
+    I = {
         order: a().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ["h"],
-        match: (e) => g.exec(e),
+        match: (e) => A.exec(e),
         parse(e, t, n) {
             var i;
             let r = e[0];
@@ -32,13 +33,12 @@ let g =
             };
         },
     };
-var I = n(717125),
-    T = n(47167),
-    S = n(499211),
-    y = n(376943),
-    N = n(576705),
-    v = n(994500),
-    C = n(486020),
+var T = n(717125),
+    S = n(47167),
+    y = n(499211),
+    N = n(376943),
+    v = n(576705),
+    C = n(994500),
     R = n(871237),
     O = n(240248),
     b = n(465365),
@@ -54,7 +54,7 @@ function P(e) {
         type: "guild",
         guildId: e.id,
         content: (0, O.EJ)(e.name, 32),
-        icon: C.Ay.getGuildIconURL({ id: e.id, icon: e.icon, size: 40 }),
+        icon: E.Ay.getGuildIconURL({ id: e.id, icon: e.icon, size: 40 }),
     };
 }
 function x(e, t) {
@@ -71,7 +71,7 @@ function k(e) {
 }
 function U(e, t) {
     let n = d.A.getChannel(e),
-        i = (0, S.p)(e, d.A, I.A, N.A).isSubscriptionGated,
+        i = (0, y.p)(e, d.A, T.A, v.A).isSubscriptionGated,
         r = (0, R.QG)(n) ?? "text";
     if (null != t) {
         let s = t.find((t) => t.id === e);
@@ -95,11 +95,11 @@ function U(e, t) {
               type: n.type,
               id: n.id,
               guildId: n.guild_id,
-              name: (0, T.m1)(n, p.default, v.A),
+              name: (0, S.m1)(n, p.default, C.A),
               isDm: n.isPrivate(),
               isForumPost: n.isForumPost(),
               isMentionable: (0, b.Y)(n.type),
-              canViewChannel: (0, y.nc)(n),
+              canViewChannel: (0, N.nc)(n),
               roleSubscriptionGated: i,
               iconType: r,
               parentId: n.parent_id,
@@ -160,7 +160,7 @@ function B(e, t, n, i) {
                         return {
                             inContent: [
                                 x({
-                                    name: (0, T.m1)(e, p.default, v.A),
+                                    name: (0, S.m1)(e, p.default, C.A),
                                     type: e.type,
                                     iconType: (0, R.QG)(e) ?? "forum",
                                 }),
@@ -195,7 +195,7 @@ let H = {
         order: a().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ["h"],
         match(e) {
-            let t = y.Ju.exec(e);
+            let t = N.Ju.exec(e);
             return null != t && ((null != t[2] && /\D/.test(t[2])) || (null != t[3] && /\D/.test(t[3]))) ? null : t;
         },
         parse(e, t, n) {
@@ -211,7 +211,7 @@ let H = {
     Y = {
         order: a().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ["h"],
-        match: (e) => y.En.exec(e),
+        match: (e) => N.En.exec(e),
         parse(e, t, n) {
             let i = e[0],
                 r = e[1],
@@ -476,7 +476,7 @@ let eu = (e) => {
                 null != s &&
                     ((r = s.id),
                     (i = s.toString()),
-                    null != a && (i = E.Ay.getNickname(a.getGuildId(), n.channelId, s) ?? m.Ay.getName(s)));
+                    null != a && (i = m.Ay.getNickname(a.getGuildId(), n.channelId, s) ?? g.Ay.getName(s)));
                 let o = e[1],
                     l = null != o && L.Ut1.test(o.trim()),
                     u = l && n.unknownUserMentionPlaceholder ? `@${w.intl.string(w.t.sKdZ6U)}` : e[0];
@@ -502,7 +502,7 @@ let eu = (e) => {
         channelMention: H,
         channelOrMessageUrl: j,
         mediaPostLink: Y,
-        attachmentLink: A,
+        attachmentLink: I,
         commandMention: {
             order: a().defaultRules.text.order,
             requiredFirstCharacters: ["<"],
@@ -534,17 +534,27 @@ let eu = (e) => {
             requiredFirstCharacters: ["<"],
             match: (e, t) => (t.allowGameMentions ? en.P.exec(e) : null),
             parse(e, t, n) {
-                let i = e[1],
-                    r = n.mentionGames?.get(i);
-                return !0 !== n.returnMentionIds && null == r && null == _.A.getDetectableGame(i)
-                    ? { type: "text", content: `@${w.intl.string(w.t["11pdXZ"])}` }
-                    : {
-                          type: "gameMention",
-                          gameId: i,
-                          channelId: n.channelId,
-                          gameName: r?.name,
-                          gameIconHash: r?.icon_hash,
-                      };
+                let i,
+                    r = e[1],
+                    s = n.mentionGames?.get(r),
+                    a = _.A.getDetectableGame(r);
+                if (!0 !== n.returnMentionIds && null == s && null == a)
+                    return { type: "text", content: `@${w.intl.string(w.t["11pdXZ"])}` };
+                let o = s?.name ?? a?.name ?? w.intl.string(w.t["11pdXZ"]);
+                return (
+                    s?.icon_hash != null && "" !== s.icon_hash
+                        ? (i = E.Ay.getGameAssetURL({ id: r, hash: s.icon_hash, size: 32 }))
+                        : a?.icon != null && (i = E.Ay.getApplicationIconURL({ id: a.id, icon: a.icon, size: 32 })),
+                    {
+                        type: "gameMention",
+                        gameId: r,
+                        channelId: n.channelId,
+                        gameName: s?.name,
+                        gameIconHash: s?.icon_hash,
+                        icon: i,
+                        displayName: o,
+                    }
+                );
             },
         },
         emoji: {
