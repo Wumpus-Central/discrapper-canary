@@ -541,7 +541,8 @@ function eJ(e) {
                                             action: () => {
                                                 (0, eO.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        n.e("76298"),
+                                                        n.e("94258"),
+                                                        n.e("82285"),
                                                         n.e("39713"),
                                                         n.e("81804"),
                                                         n.e("34358"),
@@ -560,13 +561,12 @@ function eJ(e) {
                                                         n.e("4222"),
                                                         n.e("18090"),
                                                         n.e("55785"),
-                                                        n.e("35659"),
+                                                        n.e("11085"),
                                                         n.e("13874"),
                                                         n.e("333"),
                                                         n.e("47049"),
                                                         n.e("35385"),
                                                         n.e("92424"),
-                                                        n.e("24007"),
                                                         n.e("23924"),
                                                         n.e("42205"),
                                                         n.e("71091"),
@@ -853,8 +853,8 @@ function e8(e) {
 var e2 = n(34188),
     e4 = n(700623),
     e3 = n(177953),
-    e7 = n(825484),
-    e5 = n(512950),
+    e5 = n(825484),
+    e7 = n(512950),
     e6 = n(900797),
     e9 = n(847374),
     te = n(10716),
@@ -1227,7 +1227,7 @@ function tO(e) {
     }, [n, a, d, u]),
     (0, I.$B)(n) && (0, I.Ag)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e7.e, {
+            ? (0, r.jsxs)(e5.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tI, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1237,9 +1237,9 @@ function tO(e) {
                   ],
               })
             : s && !i && (0, I.Ag)(n)
-              ? (0, r.jsx)(e5.p, {
+              ? (0, r.jsx)(e7.p, {
                     className: tv.ai,
-                    messageType: e5.Y.WARNING,
+                    messageType: e7.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1414,13 +1414,13 @@ var tZ = n(111042),
     t2 = n(168186),
     t4 = n(594061),
     t3 = n(935208),
-    t7 = n(630248),
-    t5 = n(355097);
+    t5 = n(630248),
+    t7 = n(355097);
 function t6(e, t) {
     o.useEffect(() => {
-        t4.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t4.bW.loadIfUncached(t7.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let n = (0, A.bG)([t7.A], () => t7.A.getApplicationFrecencyWithoutLoadingLatest()),
+    let n = (0, A.bG)([t5.A], () => t5.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
             () =>
                 null == t || 0 === t.length
@@ -2124,11 +2124,11 @@ function n3(e, t) {
         i,
     ).slice(0, i);
 }
-function n7(e, t) {
-    let n = t7.A.getScoreWithoutLoadingLatest(e.id);
-    return t7.A.getScoreWithoutLoadingLatest(t.id) - n;
-}
 function n5(e, t) {
+    let n = t5.A.getScoreWithoutLoadingLatest(e.id);
+    return t5.A.getScoreWithoutLoadingLatest(t.id) - n;
+}
+function n7(e, t) {
     let n = (0, I.lq)(e),
         l = (0, I.lq)(t);
     return (0, g.RF)(n, l);
@@ -2556,7 +2556,7 @@ function lm(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n7, n5],
+                        sortComparers: [n5, n7],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,

@@ -4,4 +4,7 @@ e.exports = {
     DD: "title_eb881a",
     o1: "actions_eb881a",
     jF: "actionsShifted_eb881a",
+    FW: "headerIconButton_eb881a",
+    Jl: "headerIconButtonSelectedPositive_eb881a",
+    vF: "headerIconButtonSelectedCritical_eb881a",
 };

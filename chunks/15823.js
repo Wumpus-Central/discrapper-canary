@@ -232,8 +232,8 @@ function et(e) {
                                         onClick: () => {
                                             (0, d.openModalLazy)(async () => {
                                                 let { default: e } = await Promise.all([
-                                                    t.e("35659"),
-                                                    t.e("45122"),
+                                                    t.e("11085"),
+                                                    t.e("8886"),
                                                     t.e("73839"),
                                                     t.e("88826"),
                                                     t.e("28510"),

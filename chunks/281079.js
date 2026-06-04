@@ -449,8 +449,8 @@ function e1(e) {
         i = (0, eX.hz)(t, n);
     return { user: l, voiceState: t, nick: n, comparator: i };
 }
-var e2 = n(787541),
-    e3 = n(79858),
+var e3 = n(787541),
+    e2 = n(79858),
     e9 = n(95701),
     e5 = n(72314),
     e7 = n(808728),
@@ -1038,7 +1038,7 @@ let tQ = tY(
             }),
         });
     }),
-    t2 = r.memo(function (e) {
+    t3 = r.memo(function (e) {
         let { category: t, channel: n } = e,
             l = (0, u.bG)([tZ.A], () => tZ.A.isVoiceCategoryCollapsed(t.guild.id));
         return l || null == n || n.record.type === F.rbe.GUILD_CATEGORY
@@ -1056,7 +1056,7 @@ let tQ = tY(
                 : null
             : (0, s.jsx)("div", { style: { height: 16 } });
     }),
-    t3 = r.memo(function (e) {
+    t2 = r.memo(function (e) {
         let { channel: t } = e,
             n = (0, tq.Ay)(t);
         return (0, s.jsx)("li", {
@@ -1104,7 +1104,7 @@ let t4 = r.memo(function (e) {
             if (null == e || e.isEmpty()) return null;
             let n = l.getChannelFromSectionRow(t, 0)?.channel;
             return (0, s.jsxs)(r.Fragment, {
-                children: [(0, s.jsx)("div", { className: t6.ts }), (0, s.jsx)(t2, { category: e, channel: n })],
+                children: [(0, s.jsx)("div", { className: t6.ts }), (0, s.jsx)(t3, { category: e, channel: n })],
             });
         }
         case e4.TF: {
@@ -1751,10 +1751,10 @@ function n$(e) {
 var nQ = n(5373),
     n0 = n(65995),
     n1 = n(33011);
-function n2(e, t) {
+function n3(e, t) {
     return (0, s.jsx)(N.E, { variant: "text-xs/bold", color: "text-default", children: e }, t);
 }
-let n3 = r.memo(function (e) {
+let n2 = r.memo(function (e) {
     let { guild: t } = e,
         n = (0, u.bG)([tr.h], () => tr.h.getNewMemberActions(t.id), [t.id]),
         l = (0, u.bG)([n0.A], () => n0.A.getCompletedActions(t.id)),
@@ -1793,7 +1793,7 @@ let n3 = r.memo(function (e) {
                                         color: "text-muted",
                                         className: n1.Cv,
                                         children: z.intl.format(z.t.eqZ1lW, {
-                                            numberHook: n2,
+                                            numberHook: n3,
                                             total: a.toString(),
                                             completed: i.toString(),
                                         }),
@@ -2300,7 +2300,7 @@ let lW = (e) => {
                                                                     let { default: e } = await Promise.all([
                                                                         n.e("22575"),
                                                                         n.e("4782"),
-                                                                        n.e("76298"),
+                                                                        n.e("94258"),
                                                                         n.e("89545"),
                                                                         n.e("91531"),
                                                                         n.e("11493"),
@@ -2351,8 +2351,8 @@ var lY = n(824865),
     lQ = n(312006),
     l0 = n(505543),
     l1 = n(994500),
-    l2 = n(685399),
-    l3 = n(475889),
+    l3 = n(685399),
+    l2 = n(475889),
     l9 = n(693879),
     l5 = n(435470),
     l7 = n(35275),
@@ -2413,9 +2413,9 @@ function is(e) {
         } = e,
         m = (0, u.bG)([nX.Ay], () => nX.Ay.getMentionCount(t.id)),
         p = (0, u.bG)([nX.Ay], () => nX.Ay.getIsMentionLowImportance(t.id)),
-        f = (0, l2.Ay)(t),
+        f = (0, l3.Ay)(t),
         C = (0, u.bG)([B.A], () => !B.A.can(F.xBc.CONNECT, t)),
-        E = (0, l3.H)(t),
+        E = (0, l2.H)(t),
         x = (0, u.bG)([lh.A], () => lh.A.hasVideo(t.id)),
         _ = (0, lJ.qT)(t.id) && t.isGuildStageVoice(),
         S = (function (e) {
@@ -2875,11 +2875,10 @@ function iM(e) {
                                     ? (0, lq.iN)(t.id)
                                     : (0, $.openModalLazy)(async () => {
                                           let { default: e } = await Promise.all([
-                                              n.e("76298"),
-                                              n.e("28952"),
-                                              n.e("45122"),
+                                              n.e("94258"),
+                                              n.e("93064"),
+                                              n.e("95709"),
                                               n.e("52848"),
-                                              n.e("56402"),
                                               n.e("76602"),
                                               n.e("28229"),
                                               n.e("39970"),
@@ -3102,8 +3101,8 @@ function iK(e) {
 var iW = n(802625);
 function iY(e) {
     let { channel: t, onAction: n } = e,
-        l = (0, l2.Ay)(t),
-        i = Array.from((0, l2.Rz)(l).values());
+        l = (0, l3.Ay)(t),
+        i = Array.from((0, l3.Rz)(l).values());
     return 0 === i.length
         ? null
         : (0, s.jsxs)(iL.Ip, {
@@ -3207,8 +3206,8 @@ class iq extends n_ {
                     let { default: e } = await Promise.all([
                         n.e("64684"),
                         n.e("39713"),
-                        n.e("35659"),
-                        n.e("45122"),
+                        n.e("11085"),
+                        n.e("95709"),
                         n.e("94881"),
                         n.e("26132"),
                         n.e("46652"),
@@ -3439,7 +3438,7 @@ function iZ(e) {
             enableActivities: x,
             resolvedUnreadSetting: A,
         }),
-        _ = (0, l2.Ay)(t),
+        _ = (0, l3.Ay)(t),
         [S, I] = r.useState(!1),
         b = (0, iA.K)(
             r.useCallback((e) => {
@@ -3486,8 +3485,8 @@ var iJ = n(900797),
         (i.MENTIONS = "mentions"),
         (i.VOICE_CHANNELS = "voice-channels"),
         i);
-let i2 = { mode: "hidden", mentionCount: 0, targetChannelId: null },
-    i3 = { topBar: i2, bottomBar: i2 },
+let i3 = { mode: "hidden", mentionCount: 0, targetChannelId: null },
+    i2 = { topBar: i3, bottomBar: i3 },
     i9 = {},
     i5 = {};
 function i7(e) {
@@ -3575,7 +3574,7 @@ function i8(e) {
             : d && f && (N = { mode: "unread", mentionCount: 0, targetChannelId: i });
     let S = null != N && (null == x || ("mentions" !== x.mode && "mentions" === N.mode)),
         I = null != x && ("mentions" === x.mode || !S);
-    return (i9[e] = { topBar: S ? (N ?? i2) : i2, bottomBar: I ? (x ?? i2) : i2 }), !0;
+    return (i9[e] = { topBar: S ? (N ?? i3) : i3, bottomBar: I ? (x ?? i3) : i3 }), !0;
 }
 let se = o().throttle(i8, 200);
 function st(e) {
@@ -3616,7 +3615,7 @@ class sr extends u.Ay.Store {
         this.waitFor(e8.A, eq.A, tu.A, lc.A, nX.Ay, e6.A, eX.Ay, eQ.A, tO.Ay);
     }
     getUnreadStateForGuildId(e) {
-        return i9[e] ?? i3;
+        return i9[e] ?? i2;
     }
 }
 let sa = new sr(eU.h, {
@@ -3835,8 +3834,9 @@ function sC(e) {
     async function o() {
         await (0, $.openModalLazy)(async () => {
             let { default: e } = await Promise.all([
-                n.e("76298"),
-                n.e("35659"),
+                n.e("94258"),
+                n.e("27295"),
+                n.e("11085"),
                 n.e("43513"),
                 n.e("47626"),
                 n.e("56373"),
@@ -4365,7 +4365,7 @@ function sz(e) {
             };
         }),
         A = (0, u.bG)([lh.A], () => lh.A.hasVideo(n.id)),
-        g = (0, l2.Ay)(n),
+        g = (0, l3.Ay)(n),
         m = (0, tq.Ay)(n),
         p = (0, tA.Qs)(n.id),
         f = (0, u.bG)([sx.A], () => sx.A.getStartTime(n), [n]),
@@ -4793,7 +4793,7 @@ class sY extends r.PureComponent {
                 case tE.n.GUILD_GAME_SHOP:
                     return (0, s.jsx)(nF, { guild: l, selected: a === es.VV.GAME_SHOP }, tE.n.GUILD_GAME_SHOP);
                 case tE.n.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR:
-                    return (0, s.jsx)(n3, { guild: l });
+                    return (0, s.jsx)(n2, { guild: l });
                 case tE.n.CHANNELS_AND_ROLES:
                     return (0, s.jsx)(
                         nZ,
@@ -4917,7 +4917,7 @@ class sY extends r.PureComponent {
                 return (0, s.jsx)(ih, { channel: x, guild: l, position: C.position, selected: a === C.id }, N);
             case F.rbe.GUILD_CATEGORY:
                 if (t !== c.voiceChannelsSectionNumber) return null;
-                return (0, s.jsx)(t3, { channel: x }, `readonly-${x.id}`);
+                return (0, s.jsx)(t2, { channel: x }, `readonly-${x.id}`);
             case F.rbe.PUBLIC_THREAD:
             case F.rbe.PRIVATE_THREAD:
             case F.rbe.ANNOUNCEMENT_THREAD:
@@ -5067,14 +5067,14 @@ class sY extends r.PureComponent {
         });
     }
     testShouldSkipTutorial = () => {
-        if (!e3.A.shouldShow("voice-conversations")) return;
+        if (!e2.A.shouldShow("voice-conversations")) return;
         let { guildChannels: e } = this.props,
             t = e.getFirstVoiceChannel();
-        if (null == t) return void e2.X8("voice-conversations");
+        if (null == t) return void e3.X8("voice-conversations");
         let n = this._list;
         if (null != n)
             for (let { section: e, row: l } of this.getSectionRowsFromChannel(t.id))
-                n.isItemVisible(e, l) || e2.X8("voice-conversations");
+                n.isItemVisible(e, l) || e3.X8("voice-conversations");
     };
     render() {
         let { guildChannels: e, guildChannelsVersion: t, showNewUnreadsBar: n } = this.props;
