@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => w });
+n.d(t, { A: () => M });
 var i = n(310784),
     r = n.n(i),
     s = n(119479),
@@ -8685,7 +8685,11 @@ let { Themes: c } = u.zv,
             select: { MAX_WIDTH: { resolve: () => 248 }, OPTION_HEIGHT: { resolve: () => 40 } },
         },
     },
-    { Layout: N, Space: v } = {
+    {
+        Layout: N,
+        Space: v,
+        SpacePx: C,
+    } = {
         Layout: {
             SPACE_0: 0,
             SPACE_4: 4,
@@ -8864,13 +8868,35 @@ let { Themes: c } = u.zv,
                 },
             },
         },
+        SpacePx: {
+            PX_0: 0,
+            PX_4: 4,
+            PX_6: 6,
+            PX_8: 8,
+            PX_10: 10,
+            PX_12: 12,
+            PX_16: 16,
+            PX_20: 20,
+            PX_24: 24,
+            PX_26: 26,
+            PX_30: 30,
+            PX_32: 32,
+            PX_40: 40,
+            PX_48: 48,
+            PX_64: 64,
+            PX_80: 80,
+            PX_96: 96,
+            PX_128: 128,
+            PX_160: 160,
+            PX_192: 192,
+        },
     },
-    C = l()(g, (e) => r()(e)),
-    R = {
+    R = l()(g, (e) => r()(e)),
+    O = {
         themes: E,
         modules: y,
         colors: l()(m, (e, t) => ({
-            css: L(t),
+            css: w(t),
             resolve(n) {
                 let i = e[n.theme],
                     r = i.raw,
@@ -8884,19 +8910,19 @@ let { Themes: c } = u.zv,
                     let e = I[t]?.[n.theme];
                     null != e && ((r = e.raw ?? r), (s = e.opacity ?? s));
                 }
-                if (1 === s) return R.unsafe_rawColors[r].resolve(n);
+                if (1 === s) return O.unsafe_rawColors[r].resolve(n);
                 {
-                    let e = C[r];
-                    return 0 !== e.alpha() && 1 !== s && (e = e.alpha(s)), O(e, n.saturation);
+                    let e = R[r];
+                    return 0 !== e.alpha() && 1 !== s && (e = e.alpha(s)), b(e, n.saturation);
                 }
             },
         })),
         unsafe_rawColors: l()(g, (e, t) => {
-            let n = C[t];
-            return { css: L(t), resolve: (e) => O(n, e?.saturation ?? 1) };
+            let n = R[t];
+            return { css: w(t), resolve: (e) => b(n, e?.saturation ?? 1) };
         }),
         shadows: l()(T, (e, t) => ({
-            css: L(t),
+            css: w(t),
             resolve: (t) => ({
                 boxShadow: e[t.theme].boxShadow,
                 filter: e[t.theme].filter,
@@ -8906,51 +8932,54 @@ let { Themes: c } = u.zv,
         radii: { none: 0, xs: 4, sm: 8, md: 12, lg: 16, xl: 24, xxl: 32, round: 0x7fffffff },
         spacing: l()(S, (e) => `${e}px`),
         layout: l()(N, (e) => ("number" == typeof e ? `${e}px` : e)),
-        space: l()(v, (e) => ({
-            css: e.css,
-            resolve(t) {
-                let { density: n } = t;
-                return e.resolve(n);
-            },
-        })),
+        space: {
+            ...l()(v, (e) => ({
+                css: e.css,
+                resolve(t) {
+                    let { density: n } = t;
+                    return e.resolve(n);
+                },
+            })),
+            ...l()(C, (e) => `${e}px`),
+        },
     };
-function O(e, t) {
+function b(e, t) {
     return {
         spring() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return b(e, t, n).hex("rgba");
+            return D(e, t, n).hex("rgba");
         },
         hsl() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return b(e, t, n).css("hsl");
+            return D(e, t, n).css("hsl");
         },
         hex() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return b(e, t, n).hex();
+            return D(e, t, n).hex();
         },
         int() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                i = b(e, t, n),
+                i = D(e, t, n),
                 r = i.num();
             return 1 !== i.alpha() ? (r << 8) | Math.round(255 * i.alpha()) : r;
         },
         rgba() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return b(e, t, n).rgba();
+            return D(e, t, n).rgba();
         },
     };
 }
-function b(e, t, n) {
+function D(e, t, n) {
     let i = a()(n.opacity ?? 1, 0, 1),
         r = e;
     return 1 !== t && (r = r.set("hsl.s", r.get("hsl.s") * t)), 1 !== i && (r = r.alpha(r.alpha() * i)), r;
 }
-function D(e) {
+function L(e) {
     return e.toLowerCase().replace(/_/g, "-");
 }
-function L(e, t) {
-    let n = null != t ? D(t) : null,
-        i = D(e);
+function w(e, t) {
+    let n = null != t ? L(t) : null,
+        i = L(e);
     return `var(--${[n, i].filter(Boolean).join("-")})`;
 }
-let w = R;
+let M = O;
