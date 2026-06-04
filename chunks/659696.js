@@ -13,10 +13,10 @@ var n = t(627968),
     h = t(366010),
     b = t(192308),
     C = t(289873),
-    g = t(935462),
-    p = t(34188),
-    v = t(358618),
-    j = t(983851),
+    p = t(935462),
+    g = t(34188),
+    j = t(358618),
+    v = t(983851),
     f = t(972213),
     E = t(964486),
     _ = t(736653),
@@ -40,14 +40,9 @@ var n = t(627968),
     Y = t.n(B),
     F = t(375708),
     G = t(309954),
-    z = t(287809);
-let V = (0, t(945810).mj)({
-    name: "2026-04-slayer-storefront-orbs",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 0: { enabled: !1 }, 1: { enabled: !0 }, 2: { enabled: !0 }, 3: { enabled: !0 } },
-});
-var q = t(44724);
+    z = t(287809),
+    V = t(681064),
+    q = t(44724);
 t(321073);
 var W = t(345938),
     $ = t(510022),
@@ -116,9 +111,9 @@ function em(e) {
         {
             isOpen: b,
             onMouseEnter: C,
-            onMouseLeave: g,
-            popoverRef: p,
-            close: v,
+            onMouseLeave: p,
+            popoverRef: g,
+            close: j,
         } = (function (e) {
             let { forcedOpen: l } = e,
                 [t, n] = s.useState(!1),
@@ -175,7 +170,7 @@ function em(e) {
                 }
             );
         })({ forcedOpen: h }),
-        j = s.useMemo(
+        v = s.useMemo(
             () =>
                 "NEEDS_NITRO" === t
                     ? {
@@ -186,7 +181,7 @@ function em(e) {
                           ctaVariant: "expressive",
                           onCtaClick: () => {
                               h && x(eo.i.TAKE_ACTION),
-                                  v(),
+                                  j(),
                                   (0, ea.A)({
                                       subscriptionTier: ec.pe.TIER_2,
                                       analyticsLocations: a,
@@ -202,16 +197,16 @@ function em(e) {
                             ctaIcon: u.C,
                             ctaVariant: "primary",
                             onCtaClick: () => {
-                                v(), (0, ei.navigateToQuestHome)({ fromContent: el.u.ORBS_BALANCE_MENU });
+                                j(), (0, ei.navigateToQuestHome)({ fromContent: el.u.ORBS_BALANCE_MENU });
                             },
                         }
                       : null,
-            [t, h, x, v, a, l.applicationId],
+            [t, h, x, j, a, l.applicationId],
         ),
-        f = null != j && b,
+        f = null != v && b,
         E = s.useCallback(() => {
-            h && x(eo.i.USER_DISMISS), v();
-        }, [h, x, v]);
+            h && x(eo.i.USER_DISMISS), j();
+        }, [h, x, j]);
     return "HIDDEN" === t || null == r
         ? null
         : (0, n.jsxs)(n.Fragment, {
@@ -219,10 +214,10 @@ function em(e) {
                   (0, n.jsx)("div", {
                       ref: c,
                       onMouseEnter: C,
-                      onMouseLeave: g,
+                      onMouseLeave: p,
                       children: (0, n.jsx)(d.$, {
                           onClick: i,
-                          disabled: null != j,
+                          disabled: null != v,
                           variant: o,
                           text: (0, n.jsx)("span", {
                               className: ed.Y,
@@ -235,19 +230,19 @@ function em(e) {
                           fullWidth: !0,
                       }),
                   }),
-                  null != j &&
+                  null != v &&
                       (0, n.jsx)(en.A, {
                           targetElementRef: c,
-                          popoverRef: p,
+                          popoverRef: g,
                           shouldShow: f,
                           position: "right",
                           alignmentStrategy: "edge",
                           align: "bottom",
                           caretConfig: { align: "end" },
                           size: "md",
-                          title: j.title,
-                          body: j.body,
-                          actions: [{ text: j.ctaText, variant: j.ctaVariant, onClick: j.onCtaClick, icon: j.ctaIcon }],
+                          title: v.title,
+                          body: v.body,
+                          actions: [{ text: v.ctaText, variant: v.ctaVariant, onClick: v.onCtaClick, icon: v.ctaIcon }],
                           onRequestClose: E,
                       }),
               ],
@@ -257,12 +252,12 @@ var ex = t(310784),
     eh = t.n(ex),
     eb = t(775602),
     eC = t(654107),
-    eg = t(392056),
-    ep = t(619517),
-    ev = t(34337),
-    ej = t(172079);
-let ef = (e) => (0, ev.$o)({ ...e, className: ej.tN, mediaPlayerClassName: ej.yf }),
-    eE = (e) => (0, n.jsx)(ep.Ay, { ...e });
+    ep = t(392056),
+    eg = t(619517),
+    ej = t(34337),
+    ev = t(172079);
+let ef = (e) => (0, ej.$o)({ ...e, className: ev.tN, mediaPlayerClassName: ev.yf }),
+    eE = (e) => (0, n.jsx)(eg.Ay, { ...e });
 function e_(e) {
     let { item: l, isMuted: t, className: r, alt: a = "" } = e,
         o = (function (e) {
@@ -289,14 +284,14 @@ function e_(e) {
     };
     return "video" === l.type
         ? (0, n.jsx)("div", {
-              className: r ?? ej.kL,
+              className: r ?? ev.kL,
               children: (0, n.jsx)(
                   "div",
                   {
-                      className: `${ej.h4} ${ej.nR}`,
+                      className: `${ev.h4} ${ev.nR}`,
                       style: b,
                       children: (0, n.jsx)(
-                          eg.rr,
+                          ep.rr,
                           {
                               href: null,
                               thumbnail: { url: l.videoThumbnailSrc, width: 747, height: 560 },
@@ -306,13 +301,13 @@ function e_(e) {
                               maxHeight: 560,
                               maxWidth: 747,
                               playable: !0,
-                              className: ej.Ki,
+                              className: ev.Ki,
                               volume: 1,
                               autoMute: t,
                               autoPlay: !0,
                               renderVideoComponent: ef,
                               renderImageComponent: eE,
-                              renderLinkComponent: ev.bU,
+                              renderLinkComponent: ej.bU,
                           },
                           `${l.src}-${t ? "muted" : "unmuted"}`,
                       ),
@@ -321,13 +316,13 @@ function e_(e) {
               ),
           })
         : (0, n.jsx)("div", {
-              className: r ?? ej.kL,
+              className: r ?? ev.kL,
               children: (0, n.jsxs)("div", {
-                  className: ej.h4,
+                  className: ev.h4,
                   style: b,
                   children: [
-                      (0, n.jsx)("img", { src: l.src, alt: a, className: ej.Sl }, l.src),
-                      null != u && !c && (0, n.jsx)("img", { src: u, alt: "", className: ej.Ve, onAnimationEnd: h }, u),
+                      (0, n.jsx)("img", { src: l.src, alt: a, className: ev.Sl }, l.src),
+                      null != u && !c && (0, n.jsx)("img", { src: u, alt: "", className: ev.Ve, onAnimationEnd: h }, u),
                   ],
               }),
           });
@@ -393,12 +388,9 @@ function eO(e) {
         h = l.id,
         b = (0, i.bG)([w.A], () => w.A.getNormalizedSKUEligibility(h), [h]),
         C = (0, k.JL)({ sku: l }),
-        g = (function (e) {
+        p = (function (e) {
             let { orbPriceAmount: l, location: t } = e,
-                n = (function (e) {
-                    let { location: l } = e;
-                    return V.useConfig({ location: l }).enabled;
-                })({ location: t }),
+                n = (0, V.R)({ location: t }),
                 s = (0, i.bG)([z.default], () => z.default.getCurrentUser()?.hasPaidTier2Subscription() ?? !1),
                 { balance: r } = (0, G.W)({ disableFetch: !n || null == l || !s });
             return n && null != l
@@ -409,8 +401,8 @@ function eO(e) {
                     : "NEEDS_NITRO"
                 : "HIDDEN";
         })({ orbPriceAmount: C?.amount, location: "product_details_modal" }),
-        p = b && "CAN_CHECKOUT" === g,
-        v = s.useCallback(() => {
+        g = b && "CAN_CHECKOUT" === p,
+        j = s.useCallback(() => {
             o(eA.Jq.BUY_BUTTON),
                 (0, K.a)(
                     l,
@@ -421,7 +413,7 @@ function eO(e) {
                     },
                 );
         }, [l, o, t, u]),
-        j = s.useCallback(() => {
+        v = s.useCallback(() => {
             o(eA.Jq.GIFT_BUTTON),
                 (0, K.a)(
                     l,
@@ -446,25 +438,25 @@ function eO(e) {
         A = b
             ? (0, n.jsx)(em, {
                   sku: l,
-                  orbsGate: g,
+                  orbsGate: p,
                   orbPrice: C,
                   analyticsLocations: E,
                   onCheckout: _,
-                  variant: p ? "primary" : "secondary",
+                  variant: g ? "primary" : "secondary",
               })
             : null,
         T = (0, n.jsxs)("div", {
             className: ek.mr,
             children: [
                 (0, n.jsx)(d.$, {
-                    variant: p ? "secondary" : "primary",
-                    onClick: v,
+                    variant: g ? "secondary" : "primary",
+                    onClick: j,
                     text: F.intl.string(F.t.boqtTA),
                     fullWidth: !0,
                 }),
                 (0, n.jsx)(m.D, {
                     className: ek.xP,
-                    onClick: j,
+                    onClick: v,
                     "aria-label": F.intl.string(F.t.QAZA5f),
                     role: "button",
                     children: (0, n.jsx)(x.o, { size: "refresh_sm", color: "currentColor" }),
@@ -474,7 +466,7 @@ function eO(e) {
         S = (0, n.jsx)(d.$, {
             icon: x.o,
             variant: "secondary",
-            onClick: j,
+            onClick: v,
             text: F.intl.string(F.t.QAZA5f),
             fullWidth: !0,
         });
@@ -487,9 +479,9 @@ function eO(e) {
                     color: "text-subtle",
                     children: F.intl.string(F.t.IqlPbQ),
                 }),
-            p && A,
+            g && A,
             b ? T : S,
-            !p && A,
+            !g && A,
         ],
     });
 }
@@ -630,7 +622,7 @@ function eM(e) {
     s.useEffect(() => {
         null == d || L.A.isFetchingForSKU(d) || (0, P.Pp)(m, d);
     }, [m, d]);
-    let eg = s.useCallback(() => {
+    let ep = s.useCallback(() => {
             null != et &&
                 (eb(eA.Jq.FORWARD_BUTTON),
                 (0, W.d)({
@@ -641,13 +633,13 @@ function eM(e) {
                     analyticsContext: R,
                 }));
         }, [et, z, eb, G, R]),
-        ep = s.useCallback(() => {
+        eg = s.useCallback(() => {
             eb(eA.Jq.WISHLIST_BUTTON);
         }, [eb]),
-        ev = s.useCallback(() => {
+        ej = s.useCallback(() => {
             (0, q.G)({ applicationId: m });
         }, [m]),
-        ej = s.useCallback(() => {
+        ev = s.useCallback(() => {
             eb(eA.Jq.VISIT_SHOP), (0, b.closeAllModals)(), null != r ? r() : (0, q.default)({ applicationId: m });
         }, [m, eb, r]),
         ef = s.useCallback(() => {
@@ -673,14 +665,14 @@ function eM(e) {
         eH = null;
     eH = X ? (eP ?? ew) : (ew ?? eP);
     let eB = null != et.orbsReward && et.orbsReward > 0;
-    return (0, n.jsx)(g.EO, {
+    return (0, n.jsx)(p.EO, {
         transitionState: o,
         "hide-shadow": !0,
         parentComponent: "SocialLayerStorefrontProductDetailsModal",
         className: ek.CR,
-        size: g.rI.DYNAMIC,
+        size: p.rI.DYNAMIC,
         returnRef: u,
-        children: (0, n.jsxs)(g.$m, {
+        children: (0, n.jsxs)(p.$m, {
             className: ek.jE,
             children: [
                 eB &&
@@ -760,12 +752,12 @@ function eM(e) {
                                 (0, n.jsx)(e_, { item: ea[ed], isMuted: ee, alt: em?.label ?? et.name }),
                                 !x &&
                                     (0, n.jsxs)(eL, {
-                                        onClick: ej,
-                                        onMouseDown: ev,
+                                        onClick: ev,
+                                        onMouseDown: ej,
                                         ariaLabel: F.intl.string(F.t["+v/1Dk"]),
                                         className: ek.gW,
                                         children: [
-                                            (0, n.jsx)(p.U, { size: "refresh_sm", color: "currentColor" }),
+                                            (0, n.jsx)(g.U, { size: "refresh_sm", color: "currentColor" }),
                                             (0, n.jsx)(c.E, {
                                                 variant: "text-md/medium",
                                                 color: "currentColor",
@@ -781,12 +773,12 @@ function eM(e) {
                                                 sku: et,
                                                 isCardHovered: !0,
                                                 className: a()(ek.jU, ek.ij),
-                                                trackButtonClick: ep,
+                                                trackButtonClick: eg,
                                                 variant: "overlay-secondary",
                                                 location: "social_layer_storefront_product_details_modal",
                                             }),
                                         (0, n.jsx)(eL, {
-                                            onClick: eg,
+                                            onClick: ep,
                                             ariaLabel: F.intl.string(F.t.Ej3B3Y),
                                             children: (0, n.jsx)(T.A, { size: "refresh_sm", color: "currentColor" }),
                                         }),
@@ -795,8 +787,8 @@ function eM(e) {
                                                 onClick: ef,
                                                 ariaLabel: ee ? F.intl.string(F.t.YqAjXy) : F.intl.string(F.t.w4m945),
                                                 children: ee
-                                                    ? (0, n.jsx)(v._, { size: "refresh_sm", color: "currentColor" })
-                                                    : (0, n.jsx)(j.H, { size: "refresh_sm", color: "currentColor" }),
+                                                    ? (0, n.jsx)(j._, { size: "refresh_sm", color: "currentColor" })
+                                                    : (0, n.jsx)(v.H, { size: "refresh_sm", color: "currentColor" }),
                                             }),
                                         (0, n.jsx)(eL, {
                                             onClick: B,
