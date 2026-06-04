@@ -1,0 +1,80 @@
+n.d(t, { A: () => I, u: () => q });
+var i = n(627968);
+n(64700);
+var l = n(17928),
+    a = n(477782),
+    r = n(500060),
+    u = n(308368),
+    d = n(627363),
+    s = n(616356),
+    o = n(495544),
+    c = n(228366),
+    A = n(820672),
+    p = n(680724),
+    S = n(735438),
+    y = n.n(S),
+    E = n(734057),
+    _ = n(696451),
+    h = n(317525),
+    m = n(576705),
+    g = n(488926),
+    R = n(652215),
+    T = n(25528),
+    b = n(783198),
+    f = n(375708);
+function q(e, t) {
+    var n;
+    let i = (0, l.bG)([o.default], () => o.default.getId()),
+        a = (0, T.Ay)(e, t.guild_id)[0],
+        r = (0, l.bG)([s.A], () => null != s.A.getStreamForUser(e, t.getGuildId())),
+        p = (0, d.YY)(a?.application_id).data,
+        S =
+            ((n = t.id),
+            (0, l.bG)([m.A, E.A, _.Ay, h.A], () => {
+                if (null == n) return !1;
+                let t = E.A.getChannel(n);
+                if (null == t) return !1;
+                let i = m.A.can(R.xBc.SEND_MESSAGES, t),
+                    l = _.Ay.getMember(t.guild_id, e),
+                    a = y().keyBy(h.A.getManyRoles(t.guild_id, l?.roles ?? []), "id"),
+                    r = g.$3({ permission: R.xBc.STREAM, user: e, context: t, roles: a });
+                return i && r;
+            }));
+    return i === e || null == a || null == p || !S || r
+        ? null
+        : {
+              playingApplication: p,
+              handleRequestToStream: function (n) {
+                  u.A.sendActivityInvite({
+                      type: R.xL.STREAM_REQUEST,
+                      channelId: t.id,
+                      activity: a,
+                      content: `<@${e}>`,
+                      location: n,
+                      targetUserId: e,
+                  }),
+                      c.h.dispatch({ type: "STREAM_REQUEST_COOLDOWN_START", userId: e }),
+                      setTimeout(() => {
+                          c.h.dispatch({ type: "STREAM_REQUEST_COOLDOWN_END", userId: e });
+                      }, A.e);
+              },
+          };
+}
+function I(e, t) {
+    let n = q(e, t),
+        u = (0, l.bG)([p.A], () => p.A.isRequestOnCooldown(e));
+    return null == n
+        ? null
+        : (0, i.jsx)(
+              a.Dr,
+              {
+                  id: "request-to-stream",
+                  label: f.intl.format(b.default["8qq+H7"], { applicationName: n.playingApplication.name }),
+                  action: () => n.handleRequestToStream("request to stream item"),
+                  icon: r.o,
+                  leadingAccessory: { type: "icon", icon: r.o },
+                  disabled: u,
+              },
+              "request-to-stream",
+          );
+}
