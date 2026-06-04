@@ -1,63 +1,63 @@
 "use strict";
-n.d(t, { d: () => h });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { d: () => f });
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(517738),
-    l = n(110259),
-    u = n(113325),
-    d = n(187322),
+    o = n(922139),
+    l = n(113325),
+    u = n(187322),
     c = n(707554),
-    _ = n(22856),
-    f = n(150591),
-    E = n(967744);
-function h(e) {
+    d = n(22856),
+    _ = n(150591),
+    h = n(967744);
+function f(e) {
     let {
             transitionState: t,
             animationVariant: n = "default",
             size: s = "md",
-            paddingSize: h = "sm",
+            paddingSize: f = "sm",
             fullScreenOnMobile: p = !0,
-            returnRef: m,
-            role: g = "dialog",
-            "aria-label": A,
-            dismissable: I = !0,
-            maxHeight: T = "default",
-            onClose: S,
-            contentOutsideContainer: y,
-            trackingProps: N,
-            children: O,
+            returnRef: E,
+            role: m = "dialog",
+            "aria-label": g,
+            dismissable: A = !0,
+            maxHeight: I = "default",
+            onClose: T,
+            contentOutsideContainer: S,
+            trackingProps: y,
+            children: N,
         } = e,
-        R = i.useId(),
-        v = i.useMemo(() => ({ id: R, headingId: `heading-${R}`, onClose: S, dismissable: I }), [I, R, S]),
-        C = (0, f.kS)(t, n),
-        b = i.useRef(null);
-    return (0, r.jsx)(_.V.Provider, {
-        value: v,
-        children: (0, r.jsx)(u.l, {
-            id: R,
-            role: g,
-            "aria-label": A,
-            "aria-labelledby": null != A ? void 0 : v.headingId,
-            returnRef: m,
-            trackingProps: { ...N, impressionType: N?.impressionType ?? l.ImpressionTypes.MODAL },
-            children: (0, r.jsx)(d.xp, {
-                containerRef: b,
-                children: (0, r.jsx)(c.F, {
+        v = r.useId(),
+        C = r.useMemo(() => ({ id: v, headingId: `heading-${v}`, onClose: T, dismissable: A }), [A, v, T]),
+        R = (0, _.kS)(t, n),
+        O = r.useRef(null);
+    return (0, i.jsx)(d.V.Provider, {
+        value: C,
+        children: (0, i.jsx)(l.l, {
+            id: v,
+            role: m,
+            "aria-label": g,
+            "aria-labelledby": null != g ? void 0 : C.headingId,
+            returnRef: E,
+            trackingProps: y,
+            trackingComponentName: "Modal",
+            children: (0, i.jsx)(u.xp, {
+                containerRef: O,
+                children: (0, i.jsx)(c.F, {
                     forceLevel: 1,
-                    children: (0, r.jsxs)("div", {
-                        ref: b,
-                        className: a()(E.outerContainer, { [E.fullScreenOnMobile]: p }),
+                    children: (0, i.jsxs)("div", {
+                        ref: O,
+                        className: a()(h.outerContainer, { [h.fullScreenOnMobile]: p }),
                         children: [
-                            y,
-                            (0, r.jsx)(o.animated.div, {
+                            S,
+                            (0, i.jsx)(o.animated.div, {
                                 "data-mana-component": "modal",
-                                className: a()(E.container, E[`size-${s}`], E[`padding-size-${h}`], {
-                                    [E.maxHeightViewport]: "viewport" === T,
+                                className: a()(h.container, h[`size-${s}`], h[`padding-size-${f}`], {
+                                    [h.maxHeightViewport]: "viewport" === I,
                                 }),
-                                style: C,
-                                children: O,
+                                style: R,
+                                children: N,
                             }),
                         ],
                     }),

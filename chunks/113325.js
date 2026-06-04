@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { M: () => c, l: () => f });
+n.d(t, { M: () => c, l: () => h });
 var i = n(627968),
     r = n(64700),
     s = n(312138),
@@ -33,8 +33,16 @@ function _(e) {
             }),
     });
 }
-function f(e) {
-    let { ref: t, returnRef: n, modal: s = !0, setDialogRef: o, trackingProps: l, ...c } = e,
+function h(e) {
+    let {
+            ref: t,
+            returnRef: n,
+            modal: s = !0,
+            setDialogRef: o,
+            trackingProps: l,
+            trackingComponentName: c = "Dialog",
+            ...h
+        } = e,
         f = r.useRef(null);
     r.useImperativeHandle(t, () => f.current),
         r.useEffect(
@@ -46,21 +54,12 @@ function f(e) {
             ),
             [],
         );
-    let { trackImpression: h } = (0, u.G9)();
+    let { trackImpression: p } = (0, u.G9)();
     return (
         r.useEffect(() => {
-            null != h &&
-                null != l &&
-                h(
-                    {
-                        type: l.impressionType,
-                        name: l.impression?.impressionName,
-                        properties: l.impression?.impressionProperties,
-                    },
-                    { disableTrack: l.disableTrack },
-                );
-        }, [h, l]),
+            null != p && null != l && p({ componentName: c, payload: l });
+        }, [p, c, l]),
         (0, a.t)(f, { returnRef: n, disable: !s }),
-        (0, i.jsx)(s ? d : _, { ...c, ref: f })
+        (0, i.jsx)(s ? d : _, { ...h, ref: f })
     );
 }
