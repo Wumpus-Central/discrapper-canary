@@ -1,3 +1,29 @@
+.circularButton__92e4b {
+    background: var(--background-gradient-lowest, var(--background-mod-normal));
+    border-radius: 20px;
+    height: 40px;
+    width: 40px
+}
+
+.wrapper__92e4b {
+    display: flex;
+    min-width: 32px;
+    position: relative;
+    width: auto
+}
+
+.wrapper__92e4b svg {
+    flex-shrink: 0
+}
+
+.badge__92e4b {
+    flex-grow: 0;
+    flex-shrink: 1;
+    inset-inline-end: -4px;
+    position: absolute;
+    top: -4px
+}
+
 .iframe__49094 {
     height: 100%;
     width: 100%

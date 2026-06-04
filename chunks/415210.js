@@ -459,12 +459,10 @@ let eD = s.memo(function (e) {
         (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("90032"),
+                    n.e("44123"),
                     n.e("91688"),
-                    n.e("61949"),
+                    n.e("3167"),
                     n.e("97549"),
-                    n.e("45249"),
-                    n.e("81516"),
                     n.e("30204"),
                     n.e("83952"),
                     n.e("1962"),

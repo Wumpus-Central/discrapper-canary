@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Iu: () => o, Px: () => _, Z6: () => r, bJ: () => l, nW: () => s, zY: () => a }), n(64700);
+n.d(t, { Iu: () => o, Px: () => u, Z6: () => r, bJ: () => l, nW: () => s, zY: () => a }), n(64700);
 var i,
     r =
         (((i = {})[(i.ROOT = 0)] = "ROOT"),
@@ -11,23 +11,24 @@ var i,
         (i[(i.ACCORDION = 6)] = "ACCORDION"),
         (i[(i.LIST = 7)] = "LIST"),
         (i[(i.RELATED = 8)] = "RELATED"),
-        (i[(i.FIELD_SET = 9)] = "FIELD_SET"),
-        (i[(i.TAB_ITEM = 10)] = "TAB_ITEM"),
-        (i[(i.NESTED_PANEL_NAVIGATOR = 11)] = "NESTED_PANEL_NAVIGATOR"),
-        (i[(i.STATIC = 12)] = "STATIC"),
-        (i[(i.BUTTON = 13)] = "BUTTON"),
-        (i[(i.TOGGLE = 14)] = "TOGGLE"),
-        (i[(i.SLIDER = 15)] = "SLIDER"),
-        (i[(i.SELECT = 16)] = "SELECT"),
-        (i[(i.RADIO = 17)] = "RADIO"),
-        (i[(i.NAVIGATOR = 18)] = "NAVIGATOR"),
-        (i[(i.CUSTOM = 19)] = "CUSTOM"),
+        (i[(i.CARD = 9)] = "CARD"),
+        (i[(i.FIELD_SET = 10)] = "FIELD_SET"),
+        (i[(i.TAB_ITEM = 11)] = "TAB_ITEM"),
+        (i[(i.NESTED_PANEL_NAVIGATOR = 12)] = "NESTED_PANEL_NAVIGATOR"),
+        (i[(i.STATIC = 13)] = "STATIC"),
+        (i[(i.BUTTON = 14)] = "BUTTON"),
+        (i[(i.TOGGLE = 15)] = "TOGGLE"),
+        (i[(i.SLIDER = 16)] = "SLIDER"),
+        (i[(i.SELECT = 17)] = "SELECT"),
+        (i[(i.RADIO = 18)] = "RADIO"),
+        (i[(i.NAVIGATOR = 19)] = "NAVIGATOR"),
+        (i[(i.CUSTOM = 20)] = "CUSTOM"),
         i);
 function s(e) {
     return "layout" in e;
 }
 function a(e) {
-    return e.every((e) => 10 === e.type) && e.length > 0;
+    return e.every((e) => 11 === e.type) && e.length > 0;
 }
 function o(e) {
     return e.every((e) => 5 === e.type) && e.length > 0;
@@ -35,6 +36,6 @@ function o(e) {
 function l(e) {
     return e.parent?.parent?.type === 2 && (null != e.useTitle || null != e.useSubnavLabel);
 }
-function _(e) {
-    return e.parent?.type === 11;
+function u(e) {
+    return e.parent?.type === 12;
 }
