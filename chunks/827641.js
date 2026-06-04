@@ -1,4 +1,4 @@
-s.r(l), s.d(l, { default: () => Q });
+s.r(l), s.d(l, { default: () => J });
 var t = s(627968),
     n = s(64700),
     a = s(503698),
@@ -13,31 +13,32 @@ var t = s(627968),
     x = s(689175),
     g = s(289873),
     j = s(47167),
-    A = s(713654),
-    p = s(640708),
+    p = s(713654),
+    A = s(564771),
+    f = s(640708),
     v = s(742589),
-    f = s(814890),
+    _ = s(814890),
     I = s(46054),
-    _ = s(731068),
+    N = s(731068),
     S = s(976860),
-    N = s(734057),
-    E = s(71393),
-    C = s(486020),
-    L = s(58703),
-    y = s(713132),
-    M = s(59318),
+    E = s(734057),
+    C = s(71393),
+    L = s(486020),
+    y = s(58703),
+    M = s(713132),
+    F = s(59318),
     w = s(636537),
-    F = s(228366),
-    G = s(652215);
-async function b(e, l) {
-    F.h.dispatch({ type: "LOAD_OFFICIAL_MESSAGES", guildId: e, before: l });
+    G = s(228366),
+    b = s(652215);
+async function k(e, l) {
+    G.h.dispatch({ type: "LOAD_OFFICIAL_MESSAGES", guildId: e, before: l });
     try {
         let { body: s } = await w.Bo.get({
-            url: G.Rsh.GUILD_OFFICIAL_MESSAGES(e),
+            url: b.Rsh.GUILD_OFFICIAL_MESSAGES(e),
             query: null != l ? { before: l } : void 0,
             rejectWithError: !1,
         });
-        F.h.dispatch({
+        G.h.dispatch({
             type: "LOAD_OFFICIAL_MESSAGES_SUCCESS",
             guildId: e,
             messages: s.messages,
@@ -45,53 +46,53 @@ async function b(e, l) {
             before: l,
         });
     } catch (s) {
-        throw (F.h.dispatch({ type: "LOAD_OFFICIAL_MESSAGES_FAILURE", guildId: e, before: l }), s);
+        throw (G.h.dispatch({ type: "LOAD_OFFICIAL_MESSAGES_FAILURE", guildId: e, before: l }), s);
     }
 }
-let k = (0, r.UT)(y.A, {
-    getQueryId: (e) => G.fic.GUILD_OFFICIAL_MESSAGES(e),
-    get: (e) => (null != e && y.A.isLoaded(e) ? y.A.getMessages(e) : null),
-    load: (e, l) => (null != e ? b(e, l) : Promise.resolve()),
-    getIsLoading: (e) => null != e && y.A.isLoading(e),
+let H = (0, r.UT)(M.A, {
+    getQueryId: (e) => b.fic.GUILD_OFFICIAL_MESSAGES(e),
+    get: (e) => (null != e && M.A.isLoaded(e) ? M.A.getMessages(e) : null),
+    load: (e, l) => (null != e ? k(e, l) : Promise.resolve()),
+    getIsLoading: (e) => null != e && M.A.isLoading(e),
 });
-var H = s(763754),
-    U = s(81437),
-    O = s(812299),
-    T = s(537174),
+var U = s(763754),
+    O = s(81437),
+    T = s(812299),
+    B = s(537174),
     D = s(381941),
     R = s(746080),
     Z = s(375708),
-    B = s(490674),
-    z = s(992595);
+    z = s(490674),
+    X = s(992595);
 let V = [],
     q = new Intl.NumberFormat();
 function W(e) {
     let { channelId: l, preview: s } = e;
     return (0, t.jsx)("div", {
-        className: i()(B.h_, z.PT),
+        className: i()(z.h_, X.PT),
         children: I.A.parse(s, !0, { allowHeading: !0, allowList: !0, allowLinks: !0, channelId: l }),
     });
 }
-function X(e) {
+function P(e) {
     let { message: l } = e,
         s = l.poll;
     if (null == s) return null;
     let n = s.answers.slice(0, 2),
         a = s.answers.length - n.length;
     return (0, t.jsxs)("div", {
-        className: B.vZ,
+        className: z.vZ,
         children: [
             (0, t.jsx)(c.E, {
                 variant: "text-md/normal",
                 color: "currentColor",
-                className: B.MH,
+                className: z.MH,
                 children: s.question.text,
             }),
             n.map((e) =>
                 (0, t.jsxs)(
                     "div",
                     {
-                        className: B.ZW,
+                        className: z.ZW,
                         children: [
                             e.poll_media.emoji?.name != null &&
                                 (0, t.jsx)("span", { "aria-hidden": !0, children: e.poll_media.emoji.name }),
@@ -114,104 +115,105 @@ function X(e) {
         ],
     });
 }
-function P(e) {
+function Q(e) {
     let l,
         { message: s, guildId: a, officialMessageColor: u } = e,
-        x = (0, r.bG)([N.A], () => N.A.getChannel(s.channel_id)),
+        x = (0, r.bG)([E.A], () => E.A.getChannel(s.channel_id)),
         g = (0, j.Ay)(x),
-        v = (0, T.A)(u),
-        I = (0, H.Ay)(s),
-        E = n.useRef(null),
-        [y, w] = n.useState(!1);
+        v = (0, B.A)(u),
+        I = (0, U.Ay)(s),
+        C = n.useRef(null),
+        [M, w] = n.useState(!1);
     if (
         (n.useLayoutEffect(() => {
-            let e = E.current;
+            let e = C.current;
             null != e && w(e.scrollHeight > e.clientHeight);
         }, [s]),
         null == x)
     )
         return null;
-    let F = (0, O.y)({ message: s, channel: x, user: s.author, compact: !1, isRepliedMessage: !1 }),
-        b = s.getContentMessage(),
-        k = b.attachments.find((e) => (0, M.tT)(e.content_type) || (0, M.XB)(e.content_type)),
-        D = b.embeds.findIndex((e) => null != e.image || null != e.thumbnail),
-        R = -1 !== D ? b.embeds[D] : null,
-        Z = R?.image ?? R?.thumbnail,
-        z =
-            (null != k ? (0, _.Rr)(k, s) : null) ??
-            (null != Z ? (0, _.oU)(Z, { message: s, identifier: { type: "embed", embedIndex: D } }, "IMAGE") : null) ??
-            (0, f.We)(b.components),
-        V = (0, _.fj)(z),
-        P = b.content.length > 0 ? b.content : ((0, f.kC)(b.components) ?? ""),
-        Q = (0, L.mk)(s.timestamp, !0),
-        J = s.reactions.reduce((e, l) => e + l.count, 0),
-        Y = C.Ay.getUserAvatarURL({
+    let G = (0, T.y)({ message: s, channel: x, user: s.author, compact: !1, isRepliedMessage: !1 }),
+        k = s.getContentMessage(),
+        H = k.attachments.find((e) => (0, F.tT)(e.content_type) || (0, F.XB)(e.content_type)),
+        D = k.attachments.find((e) => !(0, F.tT)(e.content_type) && !(0, F.XB)(e.content_type)),
+        R = k.embeds.findIndex((e) => null != e.image || null != e.thumbnail),
+        Z = -1 !== R ? k.embeds[R] : null,
+        X = Z?.image ?? Z?.thumbnail,
+        V =
+            (null != H ? (0, N.Rr)(H, s) : null) ??
+            (null != X ? (0, N.oU)(X, { message: s, identifier: { type: "embed", embedIndex: R } }, "IMAGE") : null) ??
+            (0, _.We)(k.components),
+        Q = (0, N.fj)(V),
+        J = k.content.length > 0 ? k.content : ((0, _.kC)(k.components) ?? ""),
+        Y = (0, y.mk)(s.timestamp, !0),
+        K = s.reactions.reduce((e, l) => e + l.count, 0),
+        $ = L.Ay.getUserAvatarURL({
             avatar: I.guildMemberAvatar ?? s.author.avatar,
             id: s.author.id,
             discriminator: s.author.discriminator,
         });
     return (0, t.jsxs)(d.D, {
-        className: i()(B.Nr, { [B.Sg]: null != v }),
+        className: i()(z.Nr, { [z.Sg]: null != v }),
         onClick: () => {
-            let e = () => (0, S.pX)(G.BVt.CHANNEL(a, s.channel_id, s.id));
-            (0, U.A)(s, e) && e();
+            let e = () => (0, S.pX)(b.BVt.CHANNEL(a, s.channel_id, s.id));
+            (0, O.A)(s, e) && e();
         },
         style: v,
         children: [
             (0, t.jsxs)("div", {
-                ref: E,
-                className: i()(B.zI, { [B.H_]: y }),
+                ref: C,
+                className: i()(z.zI, { [z.H_]: M }),
                 children: [
                     (0, t.jsxs)("div", {
-                        className: B.MY,
+                        className: z.MY,
                         children: [
-                            (0, t.jsx)(o.eu, { size: m._3.SIZE_40, src: Y, "aria-hidden": !0 }),
+                            (0, t.jsx)(o.eu, { size: m._3.SIZE_40, src: $, "aria-hidden": !0 }),
                             (0, t.jsxs)("div", {
-                                className: B.pB,
+                                className: z.pB,
                                 children: [
                                     (0, t.jsxs)("div", {
-                                        className: B.jh,
+                                        className: z.jh,
                                         children: [
                                             (0, t.jsxs)("span", {
-                                                className: B.Cm,
+                                                className: z.Cm,
                                                 children: [
                                                     (0, t.jsx)("span", {
-                                                        className: B.fh,
+                                                        className: z.fh,
                                                         style: { color: I.colorString ?? void 0 },
                                                         children: I.nick,
                                                     }),
-                                                    null != F && (0, t.jsx)("span", { className: B.Ho, children: F }),
+                                                    null != G && (0, t.jsx)("span", { className: z.Ho, children: G }),
                                                 ],
                                             }),
                                             (0, t.jsx)(c.E, {
                                                 variant: "text-sm/normal",
                                                 color: "text-muted",
-                                                children: Q,
+                                                children: Y,
                                             }),
                                         ],
                                     }),
                                     (0, t.jsxs)("div", {
-                                        className: B.e5,
+                                        className: z.e5,
                                         children: [
-                                            null == (l = (0, A.gU)(x))
+                                            null == (l = (0, p.gU)(x))
                                                 ? null
-                                                : (0, t.jsx)(l, { size: "xxs", className: B.Jv }),
+                                                : (0, t.jsx)(l, { size: "xxs", className: z.Jv }),
                                             (0, t.jsx)(c.E, {
                                                 variant: "text-sm/medium",
                                                 color: "text-muted",
-                                                className: B.ZM,
+                                                className: z.ZM,
                                                 children: g ?? x.name,
                                             }),
-                                            J > 0 &&
+                                            K > 0 &&
                                                 (0, t.jsxs)("div", {
-                                                    className: B.a5,
+                                                    className: z.a5,
                                                     children: [
-                                                        (0, t.jsx)(p.A, { height: 2, width: 2, "aria-hidden": "true" }),
+                                                        (0, t.jsx)(f.A, { height: 2, width: 2, "aria-hidden": "true" }),
                                                         (0, t.jsx)(h.n, { size: "xs", color: "currentColor" }),
                                                         (0, t.jsx)(c.E, {
                                                             variant: "text-xs/medium",
                                                             color: "text-muted",
-                                                            children: q.format(J),
+                                                            children: q.format(K),
                                                         }),
                                                     ],
                                                 }),
@@ -222,24 +224,38 @@ function P(e) {
                         ],
                     }),
                     null != s.poll
-                        ? (0, t.jsx)(X, { message: s })
-                        : P.length > 0 && (0, t.jsx)(W, { channelId: s.channel_id, preview: P }),
+                        ? (0, t.jsx)(P, { message: s })
+                        : (0, t.jsxs)(t.Fragment, {
+                              children: [
+                                  J.length > 0 && (0, t.jsx)(W, { channelId: s.channel_id, preview: J }),
+                                  null != D &&
+                                      (0, t.jsx)("div", {
+                                          className: z.Xv,
+                                          inert: !0,
+                                          children: (0, t.jsx)(A.A, {
+                                              url: D.url,
+                                              fileName: D.filename,
+                                              fileSize: D.size,
+                                          }),
+                                      }),
+                              ],
+                          }),
                 ],
             }),
-            null != V &&
+            null != Q &&
                 (0, t.jsx)("div", {
-                    className: B.Fq,
-                    children: (0, t.jsx)("img", { src: V, className: B.af, alt: z?.alt ?? "" }),
+                    className: z.Fq,
+                    children: (0, t.jsx)("img", { src: Q, className: z.af, alt: V?.alt ?? "" }),
                 }),
         ],
     });
 }
-function Q(e) {
+function J(e) {
     let { guildId: l } = e,
-        { data: s, isLoading: a } = k(l, void 0),
-        i = (0, r.bG)([y.A], () => y.A.hasMore(l)),
+        { data: s, isLoading: a } = H(l, void 0),
+        i = (0, r.bG)([M.A], () => M.A.hasMore(l)),
         d = s ?? V,
-        o = (0, r.bG)([E.A], () => E.A.getGuild(l)?.officialMessageColor ?? D.aj),
+        o = (0, r.bG)([C.A], () => C.A.getGuild(l)?.officialMessageColor ?? D.aj),
         m = n.useMemo(() => [...d].sort((e, l) => l.timestamp.getTime() - e.timestamp.getTime()), [d]),
         h = n.useRef(null),
         j = n.useCallback(() => {
@@ -247,10 +263,10 @@ function Q(e) {
             let e = h.current?.getScrollerState();
             if (null == e || e.scrollHeight - (e.scrollTop + e.offsetHeight) > e.offsetHeight) return;
             let s = m[m.length - 1];
-            null != s && k.refetch(l, s.id);
+            null != s && H.refetch(l, s.id);
         }, [l, i, a, m]);
     return (0, t.jsxs)("div", {
-        className: B.tB,
+        className: z.tB,
         children: [
             (0, t.jsxs)(v.A, {
                 channelId: R.VV.GUILD_OFFICIAL_MESSAGES,
@@ -263,14 +279,14 @@ function Q(e) {
             }),
             (0, t.jsx)(x.Ch, {
                 ref: h,
-                className: B.XG,
+                className: z.XG,
                 onScroll: j,
                 children:
                     a && 0 === m.length
-                        ? (0, t.jsx)("div", { className: B.Ie, children: (0, t.jsx)(g.y, {}) })
+                        ? (0, t.jsx)("div", { className: z.Ie, children: (0, t.jsx)(g.y, {}) })
                         : 0 === m.length
                           ? (0, t.jsx)("div", {
-                                className: B.Ie,
+                                className: z.Ie,
                                 children: (0, t.jsx)(c.E, {
                                     variant: "text-md/normal",
                                     color: "text-muted",
@@ -278,12 +294,12 @@ function Q(e) {
                                 }),
                             })
                           : (0, t.jsxs)("div", {
-                                className: B.Vg,
+                                className: z.Vg,
                                 children: [
                                     m.map((e) =>
-                                        (0, t.jsx)(P, { message: e, guildId: l, officialMessageColor: o }, e.id),
+                                        (0, t.jsx)(Q, { message: e, guildId: l, officialMessageColor: o }, e.id),
                                     ),
-                                    a && (0, t.jsx)("div", { className: B.sw, children: (0, t.jsx)(g.y, {}) }),
+                                    a && (0, t.jsx)("div", { className: z.sw, children: (0, t.jsx)(g.y, {}) }),
                                 ],
                             }),
             }),

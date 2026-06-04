@@ -5,6 +5,7 @@ e.exports = {
     Nr: "card__8e988",
     Sg: "guildOfficialMessage__8e988",
     zI: "cardBody__8e988",
+    Xv: "filePreview__8e988",
     MY: "cardHeader__8e988",
     pB: "cardHeaderMeta__8e988",
     jh: "cardHeaderTop__8e988",

@@ -1,0 +1,17 @@
+.container__12f17 {
+    border: .5px solid var(--white);
+    border-radius: var(--radius-sm);
+    display: inline-block;
+    margin-bottom: 4px;
+    padding: 0 6px
+}
+
+.darkText__12f17 {
+    border-color: var(--black);
+    color: var(--black)
+}
+
+.lightText__12f17 {
+    border-color: var(--white);
+    color: var(--white)
+}

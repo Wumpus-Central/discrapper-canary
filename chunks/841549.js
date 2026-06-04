@@ -6,11 +6,10 @@ function a(e, t, a) {
     a.isGroupDM()
         ? (0, i.L3)(e, async () => {
               let { default: e } = await Promise.all([
-                  n.e("64684"),
+                  n.e("45143"),
                   n.e("66641"),
                   n.e("39713"),
-                  n.e("11085"),
-                  n.e("95709"),
+                  n.e("9546"),
                   n.e("94881"),
                   n.e("26692"),
                   n.e("26132"),
@@ -69,11 +68,10 @@ function a(e, t, a) {
         : a.isDM()
           ? (0, i.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    n.e("64684"),
+                    n.e("45143"),
                     n.e("66641"),
                     n.e("39713"),
-                    n.e("11085"),
-                    n.e("95709"),
+                    n.e("9546"),
                     n.e("94881"),
                     n.e("26692"),
                     n.e("26132"),
@@ -148,8 +146,7 @@ function a(e, t, a) {
                   let { default: e } = await Promise.all([
                       n.e("66641"),
                       n.e("39713"),
-                      n.e("11085"),
-                      n.e("95709"),
+                      n.e("9546"),
                       n.e("94881"),
                       n.e("26692"),
                       n.e("26132"),
@@ -219,7 +216,7 @@ function a(e, t, a) {
               })
             : (0, i.L3)(e, async () => {
                   let { default: e } = await Promise.all([
-                      n.e("64684"),
+                      n.e("45143"),
                       n.e("94881"),
                       n.e("26132"),
                       n.e("46652"),

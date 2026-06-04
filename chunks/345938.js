@@ -7,8 +7,8 @@ let a = (t) => {
     (0, s.openModalLazy)(
         async () => {
             let { default: t } = await Promise.all([
-                i.e("93064"),
-                i.e("95709"),
+                i.e("2871"),
+                i.e("19185"),
                 i.e("21530"),
                 i.e("22575"),
                 i.e("46776"),

@@ -1,0 +1,469 @@
+.body_c6f1a4 {
+    background-color: var(--modal-background);
+    border-radius: var(--radius-md);
+    height: 100%;
+    padding: 0 var(--space-16)
+}
+
+.sliderBody_c6f1a4 {
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-grow: 0;
+    padding-bottom: var(--space-8);
+    width: 100%
+}
+
+@media (max-width:485px) {
+    .sliderBody_c6f1a4 {
+        flex-direction: column;
+        flex-grow: 1
+    }
+}
+
+.sliderBodyUnifiedReviewStep_c6f1a4 {
+    padding-bottom: 0
+}
+
+.body_c6f1a4.reviewStep_c6f1a4 {
+    padding: 0 var(--modal-horizontal-padding)
+}
+
+@media (max-width:485px) {
+    .body_c6f1a4.reviewStep_c6f1a4 {
+        width: 100%
+    }
+}
+
+.body_c6f1a4.addPaymentStepForPremium_c6f1a4 {
+    max-width: 440px;
+    padding-inline: var(--space-16)
+}
+
+@media screen and (max-height:550px),
+screen and (max-width:485px) {
+    .body_c6f1a4.addPaymentStepForPremium_c6f1a4 {
+        max-width: 100%
+    }
+}
+
+.sliderBodyLarge_c6f1a4 {
+    width: 804px
+}
+
+.paymentModalLockIcon__9a648 {
+    color: var(--primary-500);
+    padding: 0 var(--space-16)
+}
+
+.theme-dark .paymentModalLockIcon__9a648 {
+    color: var(--primary-300)
+}
+
+.lockIcon__9a648 {
+    margin-inline-end: 2px
+}
+
+.lockIconText__9a648 {
+    white-space: nowrap
+}
+
+.primaryIcon__962c6 {
+    height: 16px;
+    margin-inline-end: 4px;
+    width: 16px
+}
+
+.button__962c6 {
+    display: flex
+}
+
+.footerContentContainer__962c6 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.noBackButton__962c6 {
+    justify-content: flex-end
+}
+
+.link__6a22b {
+    color: var(--interactive-text-active);
+    font-size: 14px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 18px
+}
+
+.container__949a0 {
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.body__949a0,
+.container__949a0 {
+    align-items: center;
+    display: flex
+}
+
+.body__949a0 {
+    flex-direction: column
+}
+
+.description__949a0 {
+    margin-top: 8px;
+    text-align: center
+}
+
+.icon_d2b05e {
+    inset-inline-start: 8px;
+    margin: auto auto 25px;
+    top: 9px;
+    z-index: 1
+}
+
+.connectionInstructions_d2b05e {
+    margin-top: 8px;
+    text-align: center
+}
+
+.buttonIcon__4151b {
+    margin-inline-end: 8px
+}
+
+.button__4151b {
+    margin-bottom: 8px;
+    width: 200px !important
+}
+
+.button__4151b:last-child {
+    margin-bottom: 0
+}
+
+.connectionInstructions__4151b {
+    margin-top: 8px;
+    text-align: center
+}
+
+.paymentRequestIcon__4151b {
+    inset-inline-start: 8px;
+    margin: auto auto 25px;
+    top: 9px;
+    z-index: 1
+}
+
+.theme-light .appleConnectorIcon__4151b {
+    box-shadow: none
+}
+
+.buttonIcon__92b20 {
+    margin-inline-end: 8px
+}
+
+.allPaymentsToggleButton__92b20 {
+    color: var(--text-strong);
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    line-height: 18px;
+    margin: 20px auto 0;
+    padding: 4px 4px 0
+}
+
+.allPaymentsToggleButton__92b20:hover {
+    cursor: pointer
+}
+
+.allPaymentsSection__92b20 {
+    padding-top: 24px
+}
+
+.hidden__92b20 {
+    display: none
+}
+
+.SeparatorLower__92b20,
+.SeparatorUpper__92b20 {
+    background: var(--border-subtle);
+    border: 0;
+    height: 1px;
+    width: 100%
+}
+
+.SeparatorUpper__92b20 {
+    margin: 0 0 16px
+}
+
+.SeparatorLower__92b20 {
+    margin: 16px 0 0
+}
+
+.container__92b20 {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: 1fr 1fr
+}
+
+@media (max-width:485px) {
+    .container__92b20 {
+        grid-template-columns: 1fr
+    }
+}
+
+.body__9e82b {
+    padding-bottom: 16px;
+    padding-top: 16px
+}
+
+.paymentRestrictionBannerContainer__52623 {
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    min-height: 48px;
+    padding-inline: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative
+}
+
+.theme-light .paymentRestrictionBannerContainer__52623 {
+    background: linear-gradient(90deg, #475cc6 0, #6045c1)
+}
+
+.theme-dark .paymentRestrictionBannerContainer__52623 {
+    background: linear-gradient(90deg, #475cc6 0, #6045c1)
+}
+
+.paymentRestrictionBannerBackgroundImage__52623 {
+    background-image: url(/assets/bb502dc7cfcbbacc.svg);
+    background-repeat: no-repeat;
+    bottom: 0;
+    position: absolute;
+    top: 40%;
+    inset-inline: 78% 0
+}
+
+.appsIconContainer__52623 {
+    height: 28px;
+    padding-inline-end: 12px;
+    width: 28px
+}
+
+.theme-light .icon__52623 {
+    display: none
+}
+
+.theme-light .iconDark__52623 {
+    filter: drop-shadow(0 1px 2px rgb(0 0 0/.4));
+    height: 28px;
+    width: 28px
+}
+
+.theme-dark .icon__52623 {
+    filter: drop-shadow(0 1px 2px rgb(0 0 0/.4));
+    height: 28px;
+    width: 28px
+}
+
+.theme-dark .iconDark__52623 {
+    display: none
+}
+
+.flexColumn__9b260 {
+    display: flex;
+    flex-direction: column
+}
+
+.infoNotice__9b260 {
+    margin-bottom: 16px
+}
+
+.paymentRequestButton__9b260 {
+    display: flex;
+    flex: 1;
+    flex-direction: row
+}
+
+.paymentModalBreadcrumbs__9b260:after {
+    padding: 0
+}
+
+.paymentModalError__9b260 {
+    background-color: var(--modal-background);
+    margin-bottom: var(--space-16);
+    padding-top: 12px
+}
+
+.giftCardRedemptionLink__9b260 {
+    margin-top: 16px
+}
+
+.icon__9f2f4 {
+    align-self: center;
+    background-color: var(--background-surface-high);
+    border-radius: 50%
+}
+
+.icon__9f2f4.small__9f2f4 {
+    height: 40px;
+    width: 40px
+}
+
+.icon__9f2f4.medium__9f2f4 {
+    height: 66px;
+    width: 66px
+}
+
+.icon__9f2f4.large__9f2f4 {
+    height: 128px;
+    width: 128px
+}
+
+.container__9e80c {
+    display: flex
+}
+
+.emojiContainer__9e80c {
+    margin-inline-end: 16px
+}
+
+.name__9e80c {
+    margin-bottom: 2px
+}
+
+.infoContainer__9e80c {
+    flex: 1
+}
+
+.emojiIcon__9e80c {
+    height: 20px;
+    width: 20px
+}
+
+.container__4328f {
+    display: flex;
+    flex-direction: column
+}
+
+.header__4328f {
+    color: var(--text-default);
+    margin-top: 16px;
+    text-align: center
+}
+
+.header__4328f strong {
+    color: var(--text-strong)
+}
+
+.divider__4328f {
+    background-color: var(--border-subtle);
+    border: none;
+    height: 1px;
+    margin: 28px 0;
+    width: 100%
+}
+
+.benefitsContainer__4328f {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px
+}
+
+.benefit__4328f {
+    background-color: var(--background-mod-subtle);
+    border-radius: 8px;
+    padding: 16px
+}
+
+.headerContainer__2dea3 {
+    background-color: var(--background-base-low);
+    border-start-end-radius: calc(var(--custom-border-radius) + 2px);
+    border-start-start-radius: calc(var(--custom-border-radius) + 2px);
+    box-sizing: border-box;
+    height: 112px;
+    position: relative
+}
+
+.closeContainer__2dea3 {
+    align-items: center;
+    background-color: var(--opacity-black-84);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    height: 24px;
+    inset-inline-end: 16px;
+    justify-content: center;
+    position: absolute;
+    top: 16px;
+    width: 24px
+}
+
+.closeIcon__2dea3 {
+    color: var(--interactive-text-default);
+    height: 16px;
+    width: 16px
+}
+
+.headerImage__2dea3,
+.headerImageContainer__2dea3 {
+    height: 100%;
+    width: 100%
+}
+
+.headerImage__2dea3 {
+    border-start-end-radius: var(--radius-md);
+    border-start-start-radius: var(--radius-md);
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.confirmationContainer__2dea3 {
+    margin-top: 32px
+}
+
+.purchaseConfirmation__2dea3 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center
+}
+
+.confirmationTitle__2dea3 {
+    margin-top: 16px
+}
+
+.confirmationSubtitle__2dea3 {
+    margin-top: 8px
+}
+
+.seasonalGiftBoxHeaderIcon_ae16b8 {
+    align-self: center;
+    bottom: -11px;
+    position: absolute;
+    width: 260px;
+    z-index: 1
+}
+
+.container_ae16b8 {
+    align-items: center;
+    background-image: unset;
+    background-size: unset;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    justify-content: center;
+    position: relative
+}
+
+.closeButton_ae16b8 {
+    margin: var(--modal-vertical-padding) var(--modal-horizontal-padding);
+    margin-inline-start: auto
+}
+
+.fullWidthGraphicHeaderForManaModal_ae16b8.fullWidthGraphicHeaderForManaModal_ae16b8 {
+    margin-top: calc(var(--custom-modal-padding-top, 24px)*-1 - 2px);
+    margin-inline-start: -1px;
+    width: calc(100% + 2px)
+}

@@ -46,7 +46,7 @@ function C(e) {
                 (e = { guildId: C, guildProductListingId: t.id, analyticsLocation: I }),
                 void (0, a.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
-                        n.e("36115"),
+                        n.e("6153"),
                         n.e("35778"),
                         n.e("47812"),
                         n.e("13583"),
