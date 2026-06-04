@@ -152,12 +152,6 @@ class h extends l.EventEmitter {
         let { results: S, metadata: v } = A.queryResults(this.props.channel, this.props.guild, E, m, C),
             N = 0;
         for (let e of Object.values(S)) Array.isArray(e) && (N += e.length);
-        if (l && E.length > 0 && E !== this.state.query?.queryText) {
-            let e = (S.games ?? []).length;
-            x === c.DB.GAME
-                ? (0, s.AR)("game_mention_autocomplete", E.length, e)
-                : x === c.DB.MENTIONS && (0, s.AR)("mention_autocomplete", E.length, e);
-        }
         let _ = !0 === S.isLoading,
             T = this.shouldShow(N, _, A),
             j = this.state.selectedIndex;

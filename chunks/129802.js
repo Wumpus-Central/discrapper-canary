@@ -3,8 +3,8 @@ var l = a(627968),
     n = a(64700),
     i = a(812729),
     r = a.n(i),
-    o = a(189213),
-    u = a(17928),
+    u = a(189213),
+    o = a(17928),
     d = a(499979),
     s = a(192308),
     m = a(568602),
@@ -103,7 +103,7 @@ function L(e) {
 }
 function W(e) {
     let { selectedGame: t, setSelectedGame: a, placeholder: n } = e,
-        i = (0, u.yK)([D.A, w.Ay, T.default], () => {
+        i = (0, o.yK)([D.A, w.Ay, T.default], () => {
             let e = D.A.games,
                 t = e.reduce((e, t) => ((e[t.id] = t), e), {});
             return [
@@ -120,7 +120,7 @@ function W(e) {
                 }, []),
             ];
         }, []),
-        r = (0, u.bG)([D.A], () => (null == t ? null : L(t, [D.A])), [t]);
+        r = (0, o.bG)([D.A], () => (null == t ? null : L(t, [D.A])), [t]);
     return (0, l.jsx)(k.i, {
         games: i,
         selectedGame: r ?? null,
@@ -144,7 +144,6 @@ function W(e) {
                 : a(null);
         },
         placeholder: n,
-        analyticsSurface: "overlay_game_selection",
     });
 }
 var U = a(489277),
@@ -189,17 +188,17 @@ function X(e) {
         k,
         D,
         { onClose: j, transitionState: O, location: M, appContext: L } = e,
-        X = (0, u.bG)([I.default], () => I.default.getFocusedPID()) ?? (0, S.getPID)(),
-        $ = (0, u.bG)([T.default], () => T.default.getTrackedGameByPid(X), [X]),
+        X = (0, o.bG)([I.default], () => I.default.getFocusedPID()) ?? (0, S.getPID)(),
+        $ = (0, o.bG)([T.default], () => T.default.getTrackedGameByPid(X), [X]),
         [V, Y] = n.useState(null),
         [Q, ee] = n.useState(""),
         et =
             ((t = (0, P.b4)()),
-            (i = (0, u.bG)([I.default], () => I.default.getFocusedPID()) ?? (0, S.getPID)()),
-            (r = (0, u.bG)([T.default], () => T.default.getTrackedGameByPid(i), [i])),
-            (k = (0, u.bG)([w.Ay], () => w.Ay.getVisibleGame())),
-            (D = (0, u.bG)([w.Ay], () => w.Ay.getGamesSeen(!1)[0])),
-            (0, u.bG)([w.Ay, T.default], () => {
+            (i = (0, o.bG)([I.default], () => I.default.getFocusedPID()) ?? (0, S.getPID)()),
+            (r = (0, o.bG)([T.default], () => T.default.getTrackedGameByPid(i), [i])),
+            (k = (0, o.bG)([w.Ay], () => w.Ay.getVisibleGame())),
+            (D = (0, o.bG)([w.Ay], () => w.Ay.getGamesSeen(!1)[0])),
+            (0, o.bG)([w.Ay, T.default], () => {
                 switch (!0) {
                     case null != r:
                         return (function (e) {
@@ -248,8 +247,8 @@ function X(e) {
             }, [t, r, k, D])),
         [ea, el] = n.useState(et?.fullscreenType ?? $?.fullscreenType ?? null),
         [en, ei] = n.useState(et),
-        [er, eo] = n.useState(!1),
-        [eu, ed] = n.useState(!1),
+        [er, eu] = n.useState(!1),
+        [eo, ed] = n.useState(!1),
         [es, em] = n.useState(!1),
         {
             nativeState: ec,
@@ -264,7 +263,7 @@ function X(e) {
                     }
                 ),
             ),
-            (0, u.bG)(
+            (0, o.bG)(
                 [B.A],
                 () => ({ nativeState: B.A.getDebuggingState(), breadcrumbs: B.A.getOverlayLoggingBreadcrumbs() }),
                 [],
@@ -302,13 +301,13 @@ function X(e) {
                 em(!0), ep();
                 return;
             }
-            eo(!0);
+            eu(!0);
             let e = I.default.getFocusedPID() ?? (0, S.getPID)(),
                 t = T.default.getTrackedGameByPid(e),
                 n = U.A.getPopoutInitializationStages(),
                 i = t?.overlayMethod != null ? x.Ue[t.overlayMethod] : null,
                 r = t?.fullscreenType ?? p.aI.UNKNOWN,
-                o = (0, G.tn)(eg, (t) => {
+                u = (0, G.tn)(eg, (t) => {
                     for (let a of Object.values(Z))
                         try {
                             if (!a(t, e)) return !1;
@@ -317,7 +316,7 @@ function X(e) {
                         }
                     return !0;
                 }),
-                u = E.A.getRecentActions(10),
+                o = E.A.getRecentActions(10),
                 m = A.A.getRecentExperimentBuckets(_.A.getAllExperimentAssignments(), new Date(Date.now() - 7776e6)),
                 c =
                     t?.fullscreenHistory == null
@@ -341,12 +340,12 @@ function X(e) {
                     application_id: t?.applicationId,
                     application_name: t?.gameName,
                     game_pid: t?.pid,
-                    recent_overlay_flux_actions: u,
+                    recent_overlay_flux_actions: o,
                     overlay_module_state: t?.state,
                     overlay_native_state: JSON.stringify(ec),
                     overlay_module_oop_initialization_state: JSON.stringify(n),
                     overlay_module_error_message: R.A.errorMessage,
-                    overlay_module_breadcrumbs: JSON.stringify(o),
+                    overlay_module_breadcrumbs: JSON.stringify(u),
                     fullscreen_history_for_pid: c,
                     media_session_id: b.A.getMediaSessionId(),
                     recent_experiment_buckets: JSON.stringify(m),
@@ -354,7 +353,7 @@ function X(e) {
                 };
             await N.default.track(H.HAw.OVERLAY_BUG_REPORT, g),
                 await (0, d.yy)(1e3),
-                eo(!1),
+                eu(!1),
                 j?.(),
                 (0, s.openModalLazy)(
                     async () => {
@@ -368,7 +367,7 @@ function X(e) {
         (0, v.Ay)(() => {
             N.default.track(H.HAw.OPEN_MODAL, { type: "overlay_bug_reporter_modal", location: M });
         }),
-        (0, l.jsx)(o.Modal, {
+        (0, l.jsx)(u.Modal, {
             transitionState: O,
             title: K.intl.string(K.t.OKmenM),
             actions: [
@@ -383,7 +382,7 @@ function X(e) {
                         className: z.DB,
                         children: [
                             (0, l.jsx)(m.b, {
-                                isShaking: eu,
+                                isShaking: eo,
                                 intensity: 1.5,
                                 children: (0, l.jsx)(c.E, {
                                     variant: "text-md/medium",
