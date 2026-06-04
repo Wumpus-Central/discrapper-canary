@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => N, DN: () => E, mt: () => m }), n(321073);
+n.d(t, { Ay: () => y, DN: () => E, mt: () => m }), n(321073);
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(573435),
     d = n(342296),
     _ = n(889227),
-    f = n(287809),
-    h = n(3451),
+    h = n(287809),
+    f = n(3451),
     p = n(227568);
 let E = { SIZE_16: 16, SIZE_24: 24, SIZE_32: 32, SIZE_56: 56 },
     m = "user-icon";
@@ -58,8 +58,8 @@ class S extends r.PureComponent {
             if (!this.props.showDefaultAvatarsForNullUsers)
                 return (0, i.jsx)("div", { className: a()(p.F2, { [p.F_]: d }) });
             else {
-                let e = (n ?? 0) % h.A.DEFAULT_AVATARS.length,
-                    t = h.A.DEFAULT_AVATARS[e];
+                let e = (n ?? 0) % f.A.DEFAULT_AVATARS.length,
+                    t = f.A.DEFAULT_AVATARS[e];
                 return (0, i.jsx)("img", { src: t, alt: "", className: p.my });
             }
         if (e === m) {
@@ -87,7 +87,7 @@ class S extends r.PureComponent {
                   {
                       className: p.UC,
                       onClick: () => {
-                          null != this._ref.current && null != e && this.setState({ popoutUserId: e.id });
+                          null != e && this.setState({ popoutUserId: e.id });
                       },
                       tabIndex: -1,
                       children: _,
@@ -170,7 +170,7 @@ class S extends r.PureComponent {
                 children: [this.renderIcon(), this.renderUsers()],
             });
         let u = n.find((e) => e instanceof _.A && e.id === l),
-            c = o && null == f.default.getUser(l);
+            c = o && null == h.default.getUser(l);
         return (0, i.jsx)(d.A, {
             targetElementRef: this._ref,
             userId: l,
@@ -190,4 +190,4 @@ class S extends r.PureComponent {
         });
     }
 }
-let N = S;
+let y = S;
