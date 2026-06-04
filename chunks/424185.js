@@ -1,97 +1,103 @@
-e.d(i, { default: () => k });
+e.d(i, { default: () => f });
 var n = e(627968),
     l = e(64700),
     r = e(224640),
-    a = e(20742),
-    s = e(430993),
+    s = e(20742),
+    a = e(430993),
     c = e(834730),
-    o = e(696208),
+    u = e(696208),
     d = e(289873),
-    u = e(17928),
+    o = e(17928),
     _ = e(964486),
-    p = e(67480),
-    g = e(954571),
-    x = e(733391),
-    E = e(832163),
-    h = e(652215),
-    b = e(985018),
-    f = e(495630);
-function k(t) {
-    let { transitionState: i, onClose: e, onContinue: k, guildId: A, skuId: I, analyticsLocations: R } = t,
-        j = (0, u.bG)([E.A], () => E.A.getSKUEligibilityEntry(I)),
-        m = j?.state,
-        S = (0, u.bG)([p.A], () => p.A.get(I)),
+    E = e(174459),
+    g = e(733391),
+    h = e(832163),
+    p = e(652215),
+    x = e(375708),
+    b = e(495630);
+function f(t) {
+    let {
+            transitionState: i,
+            onClose: e,
+            onContinue: f,
+            applicationId: k,
+            guildId: R,
+            skuId: j,
+            analyticsLocations: m,
+        } = t,
+        A = (0, o.bG)([h.A], () => h.A.getSKUEligibilityEntry(j)),
+        S = A?.state,
         T = l.useRef(0),
         C = l.useRef(!1);
     (0, _.Ay)(() => {
         (T.current = Date.now()),
-            g.default.track(h.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_STARTED, {
-                sku_id: I,
-                guild_id: A,
-                application_id: S?.applicationId ?? null,
-                eligibility_state: j?.state ?? "none",
-                location_stack: R,
+            E.default.track(p.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_STARTED, {
+                sku_id: j,
+                guild_id: R,
+                application_id: k,
+                eligibility_state: A?.state ?? "none",
+                location_stack: m,
             });
     });
-    let L = l.useCallback(
+    let I = l.useCallback(
         (t) => {
             if (C.current) return;
             C.current = !0;
-            let i = j?.state === "error" ? j : void 0;
-            g.default.track(h.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_COMPLETED, {
-                sku_id: I,
-                guild_id: A,
-                application_id: S?.applicationId ?? null,
+            let i = A?.state === "error" ? A : void 0;
+            E.default.track(p.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_COMPLETED, {
+                sku_id: j,
+                guild_id: R,
+                application_id: k,
                 result: t,
                 duration_ms: Date.now() - T.current,
                 error_reason: i?.reason ?? null,
                 error_http_status: i?.httpStatus ?? null,
-                location_stack: R,
+                location_stack: m,
             });
         },
-        [I, A, S?.applicationId, j, R],
+        [j, R, k, A, m],
     );
     return (
         l.useEffect(() => {
-            null == m && (0, x.iR)(A, I);
-        }, [A, I, m]),
+            null == S && (0, g.F4)(k, j);
+        }, [k, j, S]),
         l.useEffect(() => {
-            if (null != m && "checking" !== m) {
-                if ("ineligible" === m) return void L("ineligible");
-                L(m), k();
+            if (null != S && "checking" !== S) {
+                if ("ineligible" === S) return void I("ineligible");
+                I(S), f();
             }
-        }, [m, k, L]),
+        }, [S, f, I]),
         (0, n.jsx)(r.d, {
             transitionState: i,
             onClose: e,
-            size: "ineligible" === m ? "md" : "sm",
+            size: "ineligible" === S ? "md" : "sm",
             children:
-                "ineligible" === m
+                "ineligible" === S
                     ? (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, n.jsx)(a.rQ, { title: b.intl.string(b.t.cg0M2H) }),
-                              (0, n.jsx)(s.c, {
+                              (0, n.jsx)(s.rQ, { title: x.intl.string(x.t.cg0M2H) }),
+                              (0, n.jsx)(a.c, {
                                   children: (0, n.jsx)(c.E, {
                                       variant: "text-md/normal",
                                       color: "text-subtle",
-                                      children: b.intl.string(b.t.IqlPbQ),
+                                      children: x.intl.string(x.t.IqlPbQ),
                                   }),
                               }),
-                              (0, n.jsx)(o.H, {
+                              (0, n.jsx)(u.H, {
                                   actionsFullWidth: !0,
-                                  actions: [{ variant: "primary", text: b.intl.string(b.t.cpT0Cq), onClick: e }],
+                                  actions: [{ variant: "primary", text: x.intl.string(x.t.cpT0Cq), onClick: e }],
                               }),
                           ],
                       })
-                    : (0, n.jsx)(s.c, {
+                    : (0, n.jsx)(a.c, {
                           children: (0, n.jsxs)("div", {
-                              className: f.Q,
+                              className: b.Q,
                               children: [
                                   (0, n.jsx)(d.y, {}),
                                   (0, n.jsx)(c.E, {
                                       variant: "text-md/normal",
                                       color: "text-subtle",
-                                      children: b.intl.string(b.t.pWxiLd),
+                                      children: x.intl.string(x.t.pWxiLd),
                                   }),
                               ],
                           }),

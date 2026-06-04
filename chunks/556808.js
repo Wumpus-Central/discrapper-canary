@@ -1,15 +1,16 @@
-l.d(e, { L: () => t, l: () => s });
-var i = l(627968),
-    n = l(192308);
+e.d(l, { L: () => t, l: () => s });
+var i = e(627968),
+    n = e(192308);
 let o = "slayer-eligibility-check-modal";
 function t(a) {
-    let { guildId: e, skuId: t, analyticsLocations: s, onContinue: c, onClose: d } = a;
+    let { guildId: l, applicationId: t, skuId: s, analyticsLocations: c, onContinue: d, onClose: u } = a;
     (0, n.openModalLazy)(
         async () => {
-            let { default: a } = await Promise.all([l.e("42211"), l.e("62754")]).then(l.bind(l, 424185));
-            return (l) => (0, i.jsx)(a, { ...l, guildId: e, skuId: t, analyticsLocations: s, onContinue: c });
+            let { default: a } = await Promise.all([e.e("42211"), e.e("62754")]).then(e.bind(e, 424185));
+            return (e) =>
+                (0, i.jsx)(a, { ...e, skuId: s, guildId: l, applicationId: t, analyticsLocations: c, onContinue: d });
         },
-        { modalKey: o, onCloseCallback: d },
+        { modalKey: o, onCloseCallback: u },
     );
 }
 function s() {

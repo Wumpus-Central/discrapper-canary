@@ -1575,8 +1575,9 @@ let nF = r.memo(function (e) {
     }, [p, E, l, f, x]);
     let _ = r.useCallback(() => {
             p(er.i.TAKE_ACTION), E(er.i.TAKE_ACTION);
-            let e = nv.A.getStorefrontState(t.id)?.activePage ?? 0;
-            (0, ei.pX)(F.BVt.CHANNELS_GAME_SHOP(t.id, e));
+            let e = (0, tC.mq)(t.id),
+                n = nv.A.getStorefrontState(e)?.activePage ?? 0;
+            (0, ei.pX)(F.BVt.CHANNELS_GAME_SHOP(t.id, n));
         }, [t.id, p, E]),
         S = r.useCallback(() => {
             (0, nj.X)({ guildId: t.id, forceFetch: x });

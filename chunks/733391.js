@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Kh: () => S, Pp: () => A, Rw: () => m, SP: () => T, Xw: () => y, ap: () => E, iR: () => N, qf: () => I });
+n.d(t, { F4: () => N, Kh: () => S, Pp: () => A, Rw: () => m, SP: () => T, Xw: () => y, ap: () => E, qf: () => I });
 var i = n(636537),
     r = n(228366),
     s = n(927813),
@@ -85,7 +85,7 @@ function I(e, t) {
     return g(t, u.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(e, t), n);
 }
 function T(e, t, n) {
-    r.h.dispatch({ type: "SET_SOCIAL_LAYER_STOREFRONT_STATE", guildId: e, pageIndex: t, skuId: n });
+    r.h.dispatch({ type: "SET_SOCIAL_LAYER_STOREFRONT_STATE", applicationId: e, pageIndex: t, skuId: n });
 }
 async function S(e) {
     try {
@@ -158,32 +158,34 @@ async function y() {
         }
 }
 function N(e, t) {
-    let n = l.A.getSKUEligibility(t);
-    "checking" !== n &&
-        "eligible" !== n &&
-        "ineligible" !== n &&
-        (r.h.dispatch({ type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START", skuId: t }),
-        setTimeout(() => {
-            "checking" === l.A.getSKUEligibility(t) &&
-                r.h.dispatch({
-                    type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE",
-                    skuId: t,
-                    reason: "interaction_deadline",
-                });
-        }, f),
-        i.Bo.post({ url: u.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY(e, t), rejectWithError: !0 })
-            .then((e) => {
-                r.h.dispatch({
-                    type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE",
-                    skuId: t,
-                    interactionId: e.body.interaction_id,
-                });
-            })
-            .catch((e) => {
-                r.h.dispatch({
-                    type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE",
-                    skuId: t,
-                    httpStatus: e?.status,
-                });
-            }));
+    var n;
+    let s;
+    (n = u.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY_FOR_APPLICATION_ID(e, t)),
+        "checking" !== (s = l.A.getSKUEligibility(t)) &&
+            "eligible" !== s &&
+            "ineligible" !== s &&
+            (r.h.dispatch({ type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START", skuId: t }),
+            setTimeout(() => {
+                "checking" === l.A.getSKUEligibility(t) &&
+                    r.h.dispatch({
+                        type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE",
+                        skuId: t,
+                        reason: "interaction_deadline",
+                    });
+            }, f),
+            i.Bo.post({ url: n, rejectWithError: !0 })
+                .then((e) => {
+                    r.h.dispatch({
+                        type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE",
+                        skuId: t,
+                        interactionId: e.body.interaction_id,
+                    });
+                })
+                .catch((e) => {
+                    r.h.dispatch({
+                        type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE",
+                        skuId: t,
+                        httpStatus: e?.status,
+                    });
+                }));
 }

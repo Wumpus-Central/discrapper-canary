@@ -1,15 +1,15 @@
-l.d(t, { A: () => s });
-var n = l(64700),
-    a = l(17928),
-    i = l(733391),
-    r = l(832163);
-function s(e) {
-    let { guildId: t } = e,
-        l = (0, a.bG)([r.A], () => (null != t ? r.A.getStorefrontData(t) : void 0), [t]);
+a.d(e, { A: () => u });
+var p = a(64700),
+    r = a(17928),
+    i = a(733391),
+    n = a(832163);
+function u(t) {
+    let { applicationId: e } = t,
+        a = (0, r.bG)([n.A], () => (null != e ? n.A.getStorefrontDataForApplicationId(e) : void 0), [e]);
     return (
-        n.useEffect(() => {
-            null != t && (0, i.Rw)(t, { eager: !1 });
-        }, [t]),
-        l
+        p.useEffect(() => {
+            null != e && (0, i.ap)(e, { eager: !1 });
+        }, [e]),
+        a
     );
 }

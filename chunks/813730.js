@@ -901,7 +901,7 @@ function tM(e) {
         }, [n.applicationId]),
         s = h.useCallback(() => {
             t();
-            let e = tx.A.getStorefrontStateForApplicationId(n.applicationId)?.activePage;
+            let e = tx.A.getStorefrontState(n.applicationId)?.activePage;
             (0, tf.uV)({
                 pathname: window.location.pathname,
                 search: window.location.search,

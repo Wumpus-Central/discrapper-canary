@@ -11,8 +11,10 @@ n.d(t, {
     jd: () => N,
     jz: () => R,
     mC: () => T,
-    n5: () => B,
+    mq: () => H,
+    n5: () => Y,
     nG: () => V,
+    nY: () => j,
     pV: () => I,
     rG: () => G,
     sq: () => b,
@@ -75,11 +77,12 @@ function C() {
     return null != e && e.features.has(m.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : E.Kf;
 }
 function R(e) {
-    if (p.A.getStorefrontGuildIds().has(e.id)) return !0;
-    if ("type" in e) return !1;
-    let t = e.gameApplicationIds?.length === 1 ? e.gameApplicationIds[0] : void 0,
-        n = p.A.getStorefrontApplicationIds();
-    return !!(null != t && n.has(t)) || (e.features?.has(m.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
+    return (
+        !!p.A.getStorefrontGuildIds().has(e.id) ||
+        (!("type" in e) &&
+            (null != B(e, p.A.getApplicationIdFromGuildId(e.id)) ||
+                (e.features?.has(m.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1)))
+    );
 }
 function O(e) {
     return { logoAssetId: e.logo_asset_id ?? null, lightThemeLogoAssetId: e.light_theme_logo_asset_id ?? null };
@@ -143,7 +146,7 @@ function M(e, t, n, i) {
     return e.indexOf(m.BVt.COLLECTIBLES_SHOP) >= 0 && r === g.G2.GAME_SHOPS && a === n && (null == i || o === i);
 }
 function P(e, t) {
-    return M(location.pathname, location.search, t.applicationId)
+    return null == e || M(location.pathname, location.search, t.applicationId)
         ? `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${m.BVt.COLLECTIBLES_SHOP_GAME_SHOP(t.applicationId, void 0, t.id, t.slug)}`
         : `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${m.BVt.GAME_SHOP(e, t.id, t.slug)}`;
 }
@@ -190,6 +193,20 @@ function V(e) {
         n = (0, l.h)(e);
     return { guildId: t ?? n?.guildId, application: n };
 }
-function B(e) {
+function B(e, t) {
+    return t ?? (e?.gameApplicationIds?.length === 1 ? e.gameApplicationIds[0] : void 0);
+}
+function H(e) {
+    let t = p.A.getApplicationIdFromGuildId(e);
+    return B(_.A.getGuild(e), t);
+}
+function j(e) {
+    let t = (0, a.bG)([p.A], () => p.A.getApplicationIdFromGuildId(e));
+    return B(
+        (0, a.bG)([_.A], () => _.A.getGuild(e), [e]),
+        t,
+    );
+}
+function Y(e) {
     if (null != e) return p.A.getGuildIdFromApplicationId(e) ?? o.A.getApplication(e)?.guildId;
 }
