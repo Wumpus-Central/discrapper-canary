@@ -763,15 +763,14 @@ let eD = (0, Z.L_)((e, t, n) => {
                 (I < p && s()(T, ef().test) && (y.push(ef()), (I += 1)),
                 r && I < p && s()(T, ep().test) && (y.push(ep()), (I += 1)));
             let N = (e) => {
-                !c ||
-                    null == e ||
-                    ((((I < p || 0 === T.length) && s()(T, e.test)) || T === e.test) &&
-                        (I >= p && (S.length > 0 ? S.pop() : g.length > 0 && g.pop()), y.push(e), (I += 1)));
-            };
+                    !c ||
+                        null == e ||
+                        ((((I < p || 0 === T.length) && s()(T, e.test)) || T === e.test) &&
+                            (I >= p && (S.length > 0 ? S.pop() : g.length > 0 && g.pop()), y.push(e), (I += 1)));
+                },
+                v = A.r.getConfig({ location: "mention autocomplete" });
             return (
-                A.r.getConfig({ location: "mention autocomplete" }).enabled && N(eE?.()),
-                N(em?.()),
-                { users: g, globals: y, roles: S }
+                v.enabled && !v.combineMentionAutocomplete && N(eE?.()), N(em?.()), { users: g, globals: y, roles: S }
             );
         },
         queryGuildMentionResults(e) {
@@ -1000,38 +999,40 @@ let eD = (0, Z.L_)((e, t, n) => {
         },
         queryGames(e) {
             let t = g.Ay.getRunningVerifiedApplicationIds(),
-                n = (0, er.sS)(e.toLowerCase()),
-                i =
+                n = e.includes("_"),
+                i = (0, er.sS)(e.toLowerCase()).replaceAll("_", " "),
+                r =
                     0 === e.length
                         ? Array.from(new Set([...t, ...el.Bf.keys()]))
                               .map((e) => U.A.getDetectableGame(e))
                               .filter(Q.Vq)
                         : U.A.games;
-            return o()(i)
+            return o()(r)
                 .filter((e) => !(0, w.nS)(e) && !(0, w.jg)(e))
-                .map((i) => ({
-                    game: i,
-                    score: (function (i) {
-                        let r = 0,
-                            a = (0, er.sS)(i.name.toLowerCase());
+                .map((r) => ({
+                    game: r,
+                    score: (function (r) {
+                        let a = 0,
+                            o = (0, er.sS)(r.name.toLowerCase()),
+                            l = n ? o.replaceAll("_", " ") : o;
                         if (
-                            (i.id === e
-                                ? (r += 1e3)
-                                : a === n
-                                  ? (r += 5)
-                                  : a.startsWith(n)
-                                    ? (r += 4)
-                                    : a.includes(n)
-                                      ? (r += 3)
-                                      : e.length > 1 && s()(n, a) && (r += 1),
-                            r > 0)
+                            (r.id === e
+                                ? (a += 1e3)
+                                : l === i
+                                  ? (a += 5)
+                                  : l.startsWith(i)
+                                    ? (a += 4)
+                                    : l.includes(i)
+                                      ? (a += 3)
+                                      : e.length > 1 && s()(i, l) && (a += 1),
+                            a > 0)
                         ) {
-                            t.includes(i.id) && (r += 10);
-                            let e = el.Bf.get(i.id);
-                            null != e && (r += e / el.Bf.size);
+                            t.includes(r.id) && (a += 10);
+                            let e = el.Bf.get(r.id);
+                            null != e && (a += e / el.Bf.size);
                         }
-                        return r;
-                    })(i),
+                        return a;
+                    })(r),
                 }))
                 .filter((e) => {
                     let { score: t } = e;
