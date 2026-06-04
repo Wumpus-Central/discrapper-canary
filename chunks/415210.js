@@ -60,7 +60,7 @@ function D(e) {
     let { onOpenClips: t, lastClipsSession: n, closePopout: l } = e;
     return (s.useEffect(
         () => () => {
-            (0, j.jA)();
+            (0, j.TE)();
         },
         [],
     ),
@@ -459,10 +459,12 @@ let eD = s.memo(function (e) {
         (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("44123"),
-                    n.e("91688"),
-                    n.e("3167"),
-                    n.e("97549"),
+                    n.e("70864"),
+                    n.e("76298"),
+                    n.e("88623"),
+                    n.e("13408"),
+                    n.e("64684"),
+                    n.e("35659"),
                     n.e("30204"),
                     n.e("83952"),
                     n.e("1962"),

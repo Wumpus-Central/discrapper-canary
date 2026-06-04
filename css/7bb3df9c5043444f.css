@@ -1,0 +1,71 @@
+.modalRoot__0c027 {
+    max-height: 900px
+}
+
+.headerContainer__0c027 {
+    flex-direction: column
+}
+
+.modalCloseButton__0c027 {
+    inset-inline-end: var(--custom-feedback-modal-close-button-margin);
+    position: absolute;
+    top: var(--custom-feedback-modal-close-button-margin)
+}
+
+.helpdeskLink__0c027 {
+    margin-top: var(--space-8)
+}
+
+.header__0c027,
+.ratingBody__0c027 {
+    flex: 1 1 auto;
+    text-align: center
+}
+
+.ratingBody__0c027 {
+    color: var(--text-default);
+    margin-top: var(--space-8)
+}
+
+.footer__0c027 {
+    justify-content: space-between
+}
+
+.noTitleCase__0c027 {
+    text-transform: none
+}
+
+.problemInfo__0c027 {
+    margin-bottom: var(--space-24);
+    margin-top: var(--space-8)
+}
+
+.ratingSelectorContainer__0c027 {
+    padding-bottom: var(--space-16);
+    padding-top: var(--space-16);
+    padding-inline: var(--space-24)
+}
+
+.presetList__0c027 {
+    padding-bottom: var(--space-8)
+}
+
+.hidden__0c027 {
+    visibility: hidden
+}
+
+.emoji__0c027 {
+    opacity: 1
+}
+
+.header__0c027 {
+    color: var(--text-default)
+}
+
+.problemInfo__0c027 {
+    margin-bottom: 0
+}
+
+.marginBottom16__0c027 {
+    margin-bottom: var(--space-16)
+}

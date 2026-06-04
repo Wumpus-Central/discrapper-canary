@@ -1,0 +1,28 @@
+.favoritesEmptyStateTitle__3651c {
+    color: var(--text-default);
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 30px;
+    text-transform: none
+}
+
+.favoritesEmptyStateBody__3651c,
+.favoritesEmptyStateTitle__3651c {
+    margin-inline: auto;
+    max-width: 321px;
+    text-align: center
+}
+
+.favoritesEmptyStateBody__3651c {
+    font-size: 14px
+}
+
+.noChannel__01d5c,
+.noChannelFavorites__01d5c {
+    flex: 1 1 auto;
+    position: relative
+}
+
+.noChannelFavorites__01d5c {
+    background: var(--background-gradient-lower, var(--background-base-lower))
+}

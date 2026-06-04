@@ -20,13 +20,12 @@ function d(e) {
               action: () => {
                   (0, t.openModalLazy)(async () => {
                       let { default: n } = await Promise.all([
-                          i.e("6783"),
-                          i.e("97177"),
-                          i.e("44123"),
-                          i.e("42527"),
+                          i.e("35659"),
+                          i.e("76298"),
+                          i.e("45122"),
+                          i.e("73839"),
                           i.e("88826"),
                           i.e("28510"),
-                          i.e("84935"),
                           i.e("47626"),
                           i.e("61156"),
                           i.e("16767"),

@@ -1,0 +1,227 @@
+.panel_fe7ab2 {
+    flex: 1;
+    min-height: 0
+}
+
+.header_fe7ab2 {
+    margin: 16px 0 8px
+}
+
+.headerBar_fe7ab2 {
+    box-shadow: var(--elevation-low)
+}
+
+.headerTitle_fe7ab2 {
+    flex: 1
+}
+
+.dispatcherHeader_fe7ab2 {
+    max-width: calc(100% - 90px)
+}
+
+.headerTitleText_fe7ab2 {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.inspectorWrapper_fe7ab2 {
+    font-family: var(--font-code);
+    font-size: 14px
+}
+
+.tabBarContainer_fe7ab2 {
+    align-items: center;
+    display: flex;
+    width: 100%
+}
+
+.tabBar_fe7ab2 {
+    background: var(--background-base-lower);
+    border-bottom: 1px solid var(--background-base-lowest);
+    flex-shrink: 0;
+    height: 36px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 95%
+}
+
+.tabContent_fe7ab2 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px
+}
+
+.tabMeasurer_fe7ab2 {
+    height: 0;
+    inset-inline-start: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 0
+}
+
+.tabItem_fe7ab2 {
+    border-bottom: 2px solid transparent;
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 22px;
+    overflow: hidden;
+    padding: 6px 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.tabItem_fe7ab2:hover {
+    border-bottom-color: var(--brand-500)
+}
+
+.tabItem_fe7ab2:active {
+    border-bottom-color: var(--control-brand-foreground)
+}
+
+.tabItem_fe7ab2.selected_fe7ab2 {
+    border-bottom-color: var(--control-brand-foreground)
+}
+
+.menu_fe7ab2 {
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    width: 5%
+}
+
+.overflowChevron_fe7ab2 {
+    height: 100%;
+    position: relative
+}
+
+.table_fe7ab2,
+.tableContainer_fe7ab2 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0
+}
+
+.tableHeader_fe7ab2 {
+    background: var(--background-base-lower);
+    height: 24px;
+    text-transform: uppercase
+}
+
+.tableHeader_fe7ab2,
+.tableRow_fe7ab2 {
+    align-items: center;
+    border-bottom: 1px solid hsla(0, 0%, 100%, .06);
+    display: flex;
+    flex-direction: row;
+    padding: 8px
+}
+
+.tableRow_fe7ab2 {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 22px;
+    min-height: 24px
+}
+
+.tableRow_fe7ab2>div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.tableRow_fe7ab2:hover {
+    background: var(--interactive-background-hover)
+}
+
+.tableRow_fe7ab2:last-child {
+    border-bottom: none
+}
+
+.selectedTableRow_fe7ab2 {
+    background: var(--interactive-background-selected)
+}
+
+.properties_fe7ab2 {
+    align-items: baseline;
+    background: var(--background-base-lower);
+    box-shadow: var(--elevation-low);
+    display: grid;
+    gap: 16px 8px;
+    grid-template-columns: max-content auto;
+    padding: 16px
+}
+
+.propertyName_fe7ab2 {
+    color: var(--text-default);
+    flex: 0 0 auto;
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: var(--font-weight-semibold);
+    text-align: end;
+    text-transform: uppercase
+}
+
+.propertyValue_fe7ab2 {
+    align-items: center;
+    display: flex
+}
+
+.propertyValue_fe7ab2:hover>.copyPropertyButton_fe7ab2 {
+    opacity: 1
+}
+
+.propertyValue_fe7ab2 .copyPropertyButton_fe7ab2 {
+    color: var(--interactive-text-default);
+    height: 18px;
+    margin-inline-start: 4px;
+    opacity: 0;
+    transition: opacity .1s ease-in-out
+}
+
+.propertyValue_fe7ab2 .copyPropertyButton_fe7ab2:hover {
+    color: var(--interactive-text-hover);
+    cursor: pointer
+}
+
+.toolbar_fe7ab2 {
+    align-items: center;
+    border-bottom: 1px solid var(--background-base-lowest);
+    display: flex;
+    flex-direction: row;
+    height: 34px
+}
+
+.toolbarGroup_fe7ab2 {
+    align-items: center;
+    display: inline-flex;
+    margin: 0 8px
+}
+
+.toolbarGroupLabel_fe7ab2 {
+    font-size: 14px;
+    margin-inline-end: 8px
+}
+
+.toolbarButton_fe7ab2 {
+    flex: 0 0 auto
+}
+
+.toolbarDivider_fe7ab2 {
+    border-inline-start: 1px solid var(--text-muted);
+    height: 18px;
+    margin: 8px 0
+}
+
+.premiumStreakOverride_fe7ab2 {
+    margin-top: 12px
+}
