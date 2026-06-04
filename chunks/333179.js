@@ -122,7 +122,7 @@ function U(t) {
                         (0, n.jsx)(g.z, {
                             required: !0,
                             label: x.intl.string(null != D ? x.t["+KCLVp"] : x.t.w4Ivys),
-                            value: E,
+                            value: "" === E ? void 0 : E,
                             options: Q.map((t) => ({ ...t })),
                             onChange: $,
                         }),
