@@ -40,7 +40,7 @@ async function b(e, l) {
         F.h.dispatch({
             type: "LOAD_OFFICIAL_MESSAGES_SUCCESS",
             guildId: e,
-            items: s.items,
+            messages: s.messages,
             hasMore: s.has_more,
             before: l,
         });
