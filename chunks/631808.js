@@ -43,8 +43,8 @@ var v = e(975732),
     w = e(299679),
     y = e(561794),
     G = e(862772),
-    M = e(310209),
-    R = e(944841),
+    R = e(310209),
+    M = e(944841),
     W = e(734057),
     P = e(309010),
     D = e(174459),
@@ -79,7 +79,6 @@ function $(i) {
                         onClick: () => t(Q.pe.TIER_0),
                         isGift: !0,
                         priceOptions: e,
-                        removeTopMargin: !0,
                         className: J.giftSelectionModalContext,
                     }),
                 ],
@@ -90,7 +89,7 @@ function $(i) {
 }
 function z() {
     return (0, s.jsx)(s.Fragment, {
-        children: Array.from({ length: 12 }, (i, t) => (0, s.jsx)(R.O, { spec: Z.Z.SIZE_150 }, `placeholder-${t}`)),
+        children: Array.from({ length: 12 }, (i, t) => (0, s.jsx)(M.O, { spec: Z.Z.SIZE_150 }, `placeholder-${t}`)),
     });
 }
 function Y(i) {
@@ -132,7 +131,7 @@ function Y(i) {
                             itemSource: r === y.uS.WISHLIST ? "organic" : "recommendation",
                             productLine: o.productLine,
                         },
-                        children: (0, s.jsx)(R.A, {
+                        children: (0, s.jsx)(M.A, {
                             numMoreItems: n === t.length - 1 ? I : void 0,
                             sku: o,
                             wishlistId: l,
@@ -374,7 +373,7 @@ function it(i) {
             () =>
                 a()(
                     r.map((i) => {
-                        let e = null != d[i.id] && d[i.id][t.id] === M.j.WISHLIST ? y.uS.WISHLIST : y.uS.POPULAR;
+                        let e = null != d[i.id] && d[i.id][t.id] === R.j.WISHLIST ? y.uS.WISHLIST : y.uS.POPULAR;
                         return null != i ? { sku: i, source: e } : null;
                     }),
                 ),

@@ -1,5 +1,6 @@
 .pill_f19a5c {
     align-items: center;
+    background: var(--background-mod-subtle);
     border: 1px solid var(--border-normal);
     border-radius: var(--radius-lg);
     display: flex;

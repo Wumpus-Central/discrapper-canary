@@ -12,7 +12,6 @@ a.r(
         borderGradient: "borderGradient_a2332b",
         tier0: "tier0_a2332b",
         pillMargin: "pillMargin_a2332b",
-        noGradient: "noGradient_a2332b",
         wordmark: "wordmark_a2332b",
         wumpus: "wumpus_a2332b",
         inCard: "inCard_a2332b",

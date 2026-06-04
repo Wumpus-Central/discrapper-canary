@@ -30,8 +30,8 @@ var n = t(627968),
     b = t(999291),
     y = t(101928),
     R = t(920601),
-    M = t(975732),
-    E = t(299679),
+    E = t(975732),
+    M = t(299679),
     W = t(561794),
     P = t(862772),
     H = t(310209),
@@ -106,7 +106,7 @@ function J(i) {
                       "li",
                       {
                           className: X.XI,
-                          children: (0, n.jsx)(E.dB, {
+                          children: (0, n.jsx)(M.dB, {
                               newValue: {
                                   positionInSection: e,
                                   skuId: s.id,
@@ -153,7 +153,7 @@ function K(i) {
             secondaryColor: I,
         }),
         N = s.useCallback(() => {
-            (0, M.openUserProfileModal)({ userId: e.id, tabSection: z.RP.WISHLIST });
+            (0, E.openUserProfileModal)({ userId: e.id, tabSection: z.RP.WISHLIST });
         }, [e.id]),
         A = s.useMemo(() => "loading" === c, [c]),
         _ = U.Ay.getName(e),
@@ -255,7 +255,7 @@ function K(i) {
                                           children:
                                               A || 0 === r.length
                                                   ? (0, n.jsx)($, { wishlistInDmLength: W.pl })
-                                                  : (0, n.jsx)(E.dB, {
+                                                  : (0, n.jsx)(M.dB, {
                                                         newValue: {
                                                             impressionSessionId: h,
                                                             surface: "dm_gifting_banner",
@@ -343,12 +343,7 @@ let ie = function (i) {
                         priceOptions: t,
                         showPromotionalGiftBanner: r,
                     }),
-                    (0, n.jsx)(m.Ls, {
-                        onClick: () => e(q.pe.TIER_0),
-                        isGift: !0,
-                        priceOptions: t,
-                        removeTopMargin: !0,
-                    }),
+                    (0, n.jsx)(m.Ls, { onClick: () => e(q.pe.TIER_0), isGift: !0, priceOptions: t }),
                 ],
             }),
             (0, n.jsx)(h.A, {}),

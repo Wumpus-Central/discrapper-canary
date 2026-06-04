@@ -1,3 +1,28 @@
+.previewContainer__597b5 {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    position: relative
+}
+
+.previewContainer__597b5:after {
+    bottom: 0;
+    content: "";
+    cursor: default;
+    position: absolute;
+    top: 0;
+    inset-inline: 0
+}
+
+.messageWrapper__597b5 {
+    background-color: var(--background-base-low)
+}
+
+.messageContainer__597b5 {
+    padding-bottom: 16px;
+    padding-top: 16px
+}
+
 .grid_ec9088 {
     display: grid;
     gap: 8px;

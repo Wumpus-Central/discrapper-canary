@@ -81,6 +81,14 @@
     background-color: var(--background-mod-normal)
 }
 
+.applicationIcon_c4891f {
+    margin-inline-end: 8px
+}
+
+.seasonalIcon_c4891f {
+    height: 120px
+}
+
 .externalProductWrapper__320c6 {
     align-items: center;
     display: flex;
@@ -1383,24 +1391,6 @@
 
 .noResults_cba592 {
     gap: 8px
-}
-
-.friendsEmpty_c7ea19 {
-    align-items: center;
-    display: flex;
-    flex-grow: 1;
-    justify-content: center
-}
-
-.button_c7ea19 {
-    margin-top: 20px
-}
-
-.emptyStateContainer_c7ea19 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-24)
 }
 
 .container_e93594 {
@@ -4084,29 +4074,61 @@
     padding: 4px
 }
 
-.previewContainer__597b5 {
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    position: relative
+.auditLogItem_b2f52f {
+    align-items: flex-start;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-between;
+    padding: 12px
 }
 
-.previewContainer__597b5:after {
-    bottom: 0;
-    content: "";
-    cursor: default;
-    position: absolute;
-    top: 0;
-    inset-inline: 0
+.auditLogItemTitleContainer_b2f52f {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 4px;
+    width: 100%
 }
 
-.messageWrapper__597b5 {
-    background-color: var(--background-base-low)
+.auditLogItemTitle_b2f52f {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 4px
 }
 
-.messageContainer__597b5 {
-    padding-bottom: 16px;
-    padding-top: 16px
+.username_b2f52f {
+    cursor: pointer;
+    margin-inline-end: 4px
+}
+
+.auditLogItemDate_b2f52f {
+    align-self: flex-end
+}
+
+.auditLogReason_b2f52f {
+    display: block
+}
+
+.auditLogSecondaryContainer_b2f52f {
+    display: flex;
+    flex-direction: row;
+    gap: 4px
+}
+
+.auditLogSecondary_b2f52f {
+    flex: 1
+}
+
+.auditLogExpandedChangeDetails_b2f52f {
+    background-color: transparent !important;
+    padding: 0
+}
+
+.auditLogExpandedChangeDetails_b2f52f>div {
+    margin: 0
 }
 
 .container__72cd3 {
@@ -4614,11 +4636,6 @@
 
 .tier0_a2332b.pillMargin_a2332b {
     margin-top: var(--space-24)
-}
-
-.card_a2332b.noGradient_a2332b {
-    --custom-gradient-color-start: var(--transparent);
-    --custom-gradient-color-end: var(--transparent)
 }
 
 .wordmark_a2332b {

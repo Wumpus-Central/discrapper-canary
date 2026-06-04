@@ -95,10 +95,10 @@ var d = (function () {
     _ = u(function () {
         return /firefox/i.test(navigator.userAgent);
     }),
-    f = u(function () {
+    h = u(function () {
         return !!window.safari;
     });
-function h(e, t, n) {
+function f(e, t, n) {
     return (
         t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
@@ -108,37 +108,37 @@ var p = (function () {
     var e;
     function t(e, n) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        h(this, "xs", void 0),
-            h(this, "ys", void 0),
-            h(this, "c1s", void 0),
-            h(this, "c2s", void 0),
-            h(this, "c3s", void 0);
+        f(this, "xs", void 0),
+            f(this, "ys", void 0),
+            f(this, "c1s", void 0),
+            f(this, "c2s", void 0),
+            f(this, "c3s", void 0);
         for (var i, r, s, a = e.length, o = [], l = 0; l < a; l++) o.push(l);
         o.sort(function (t, n) {
             return e[t] < e[n] ? -1 : 1;
         });
         for (var u = [], c = [], d = [], _ = 0; _ < a - 1; _++)
             (i = e[_ + 1] - e[_]), (r = n[_ + 1] - n[_]), c.push(i), u.push(r), d.push(r / i);
-        for (var f = [d[0]], p = 0; p < c.length - 1; p++) {
+        for (var h = [d[0]], p = 0; p < c.length - 1; p++) {
             var E = d[p],
                 m = d[p + 1];
-            if (E * m <= 0) f.push(0);
+            if (E * m <= 0) h.push(0);
             else {
                 i = c[p];
                 var g = c[p + 1],
                     A = i + g;
-                f.push((3 * A) / ((A + g) / E + (A + i) / m));
+                h.push((3 * A) / ((A + g) / E + (A + i) / m));
             }
         }
-        f.push(d[d.length - 1]);
-        for (var I = [], T = [], S = 0; S < f.length - 1; S++) {
+        h.push(d[d.length - 1]);
+        for (var I = [], T = [], S = 0; S < h.length - 1; S++) {
             s = d[S];
-            var N = f[S],
-                y = 1 / c[S],
-                C = N + f[S + 1] - s - s;
-            I.push((s - N - C) * y), T.push(C * y * y);
+            var y = h[S],
+                N = 1 / c[S],
+                v = y + h[S + 1] - s - s;
+            I.push((s - y - v) * N), T.push(v * N * N);
         }
-        (this.xs = e), (this.ys = n), (this.c1s = f), (this.c2s = I), (this.c3s = T);
+        (this.xs = e), (this.ys = n), (this.c1s = h), (this.c2s = I), (this.c3s = T);
     }
     return (
         (e = [
@@ -199,14 +199,14 @@ function S(e, t, n) {
     }, "");
     return null != i ? i : n;
 }
-function N(e, t, n) {
+function y(e, t, n) {
     return (
         t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }
-var y =
-    (N((r = {}), g, {
+var N =
+    (y((r = {}), g, {
         exposeProperties: {
             files: function (e) {
                 return Array.prototype.slice.call(e.files);
@@ -217,7 +217,7 @@ var y =
         },
         matchesTypes: ["Files"],
     }),
-    N(r, T, {
+    y(r, T, {
         exposeProperties: {
             html: function (e, t) {
                 return S(e, t, "");
@@ -225,7 +225,7 @@ var y =
         },
         matchesTypes: ["Html", "text/html"],
     }),
-    N(r, A, {
+    y(r, A, {
         exposeProperties: {
             urls: function (e, t) {
                 return S(e, t, "").split("\n");
@@ -233,7 +233,7 @@ var y =
         },
         matchesTypes: ["Url", "text/uri-list"],
     }),
-    N(r, I, {
+    y(r, I, {
         exposeProperties: {
             text: function (e, t) {
                 return S(e, t, "");
@@ -242,18 +242,18 @@ var y =
         matchesTypes: ["Text", "text/plain"],
     }),
     r);
-function C(e, t, n) {
+function v(e, t, n) {
     return (
         t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }
-var v = (function () {
+var C = (function () {
     var e;
     function t(e) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        C(this, "item", void 0),
-            C(this, "config", void 0),
+        v(this, "item", void 0),
+            v(this, "config", void 0),
             (this.config = e),
             (this.item = {}),
             this.initializeExposedProperties();
@@ -329,18 +329,18 @@ var v = (function () {
         t
     );
 })();
-function O(e) {
+function R(e) {
     if (!e) return null;
     var t = Array.prototype.slice.call(e.types || []);
     return (
-        Object.keys(y).filter(function (e) {
-            return y[e].matchesTypes.some(function (e) {
+        Object.keys(N).filter(function (e) {
+            return N[e].matchesTypes.some(function (e) {
                 return t.indexOf(e) > -1;
             });
         })[0] || null
     );
 }
-function R(e, t, n) {
+function O(e, t, n) {
     return (
         t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
@@ -350,9 +350,9 @@ var b = (function () {
     var e;
     function t(e, n) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        R(this, "ownerDocument", null),
-            R(this, "globalContext", void 0),
-            R(this, "optionsArgs", void 0),
+        O(this, "ownerDocument", null),
+            O(this, "globalContext", void 0),
+            O(this, "optionsArgs", void 0),
             (this.globalContext = e),
             (this.optionsArgs = n);
     }
@@ -488,7 +488,7 @@ var M = (function () {
                             clientOffset: n,
                         });
                     var i = e.dataTransfer,
-                        s = O(i);
+                        s = R(i);
                     if (r.monitor.isDragging()) {
                         if (i && "function" == typeof i.setDragImage) {
                             var a = r.monitor.getSourceId(),
@@ -498,17 +498,17 @@ var M = (function () {
                                 var u,
                                     c,
                                     d,
-                                    h,
+                                    f,
                                     g,
                                     A,
                                     I,
                                     T,
                                     S,
-                                    N,
                                     y,
-                                    C,
+                                    N,
                                     v,
-                                    R,
+                                    C,
+                                    O,
                                     b,
                                     D,
                                     L,
@@ -516,13 +516,13 @@ var M = (function () {
                                     M = r.getCurrentSourcePreviewNodeOptions(),
                                     P = M.anchorX,
                                     x = M.anchorY,
-                                    U = M.offsetX,
-                                    k = M.offsetY,
+                                    k = M.offsetX,
+                                    U = M.offsetY,
                                     G =
                                         ((u = { anchorX: P, anchorY: x }),
-                                        (c = { offsetX: U, offsetY: k }),
+                                        (c = { offsetX: k, offsetY: U }),
                                         (g = E(
-                                            (h =
+                                            (f =
                                                 "IMG" === l.nodeName &&
                                                 (_() || !(null != (d = document.documentElement) && d.contains(l))))
                                                 ? o
@@ -532,19 +532,19 @@ var M = (function () {
                                         (I = o.offsetWidth),
                                         (T = o.offsetHeight),
                                         (S = u.anchorX),
-                                        (N = u.anchorY),
-                                        (R = ((y = h ? l.width : I),
-                                        (C = h ? l.height : T),
-                                        f() && h && ((C /= window.devicePixelRatio), (y /= window.devicePixelRatio)),
-                                        (v = { dragPreviewWidth: y, dragPreviewHeight: C })).dragPreviewWidth),
-                                        (b = v.dragPreviewHeight),
+                                        (y = u.anchorY),
+                                        (O = ((N = f ? l.width : I),
+                                        (v = f ? l.height : T),
+                                        h() && f && ((v /= window.devicePixelRatio), (N /= window.devicePixelRatio)),
+                                        (C = { dragPreviewWidth: N, dragPreviewHeight: v })).dragPreviewWidth),
+                                        (b = C.dragPreviewHeight),
                                         (D = c.offsetX),
                                         (L = c.offsetY),
                                         {
                                             x:
                                                 0 === D || D
                                                     ? D
-                                                    : new p([0, 0.5, 1], [A.x, (A.x / I) * R, A.x + R - I]).interpolate(
+                                                    : new p([0, 0.5, 1], [A.x, (A.x / I) * O, A.x + O - I]).interpolate(
                                                           S,
                                                       ),
                                             y:
@@ -553,8 +553,8 @@ var M = (function () {
                                                     : ((w = new p(
                                                           [0, 0.5, 1],
                                                           [A.y, (A.y / T) * b, A.y + b - T],
-                                                      ).interpolate(N)),
-                                                      f() && h && (w += (window.devicePixelRatio - 1) * b),
+                                                      ).interpolate(y)),
+                                                      h() && f && (w += (window.devicePixelRatio - 1) * b),
                                                       w),
                                         });
                                 i.setDragImage(l, G.x, G.y);
@@ -587,7 +587,7 @@ var M = (function () {
             w(this, "handleTopDragEnterCapture", function (e) {
                 if (((r.dragEnterTargetIds = []), !(!r.enterLeaveCounter.enter(e.target) || r.monitor.isDragging()))) {
                     var t = e.dataTransfer,
-                        n = O(t);
+                        n = R(t);
                     n && r.beginDragNativeItem(n, t);
                 }
             }),
@@ -634,7 +634,7 @@ var M = (function () {
                 if (((r.dropTargetIds = []), r.isDraggingNativeItem())) {
                     var t;
                     e.preventDefault(), null == (t = r.currentNativeSource) || t.loadDataTransfer(e.dataTransfer);
-                } else O(e.dataTransfer) && e.preventDefault();
+                } else R(e.dataTransfer) && e.preventDefault();
                 r.enterLeaveCounter.reset();
             }),
             w(this, "handleTopDrop", function (e) {
@@ -851,7 +851,7 @@ var M = (function () {
                 value: function (e, t) {
                     var n;
                     this.clearCurrentDragSourceNode(),
-                        (this.currentNativeSource = ((n = new v(y[e])).loadDataTransfer(t), n)),
+                        (this.currentNativeSource = ((n = new C(N[e])).loadDataTransfer(t), n)),
                         (this.currentNativeHandle = this.registry.addSource(e, this.currentNativeSource)),
                         this.actions.beginDrag([this.currentNativeHandle]);
                 },
@@ -928,14 +928,14 @@ var M = (function () {
 })();
 let P = (e, t) => ({ event: e, check: t });
 var x = n(321733),
-    U = "dnd-core/INIT_COORDS",
-    k = "dnd-core/BEGIN_DRAG",
+    k = "dnd-core/INIT_COORDS",
+    U = "dnd-core/BEGIN_DRAG",
     G = "dnd-core/PUBLISH_DRAG_SOURCE",
     F = "dnd-core/HOVER",
     V = "dnd-core/DROP",
     B = "dnd-core/END_DRAG";
 function H(e, t) {
-    return { type: U, payload: { sourceClientOffset: t || null, clientOffset: e || null } };
+    return { type: k, payload: { sourceClientOffset: t || null, clientOffset: e || null } };
 }
 function j(e) {
     return (j =
@@ -952,7 +952,7 @@ function j(e) {
 function Y(e) {
     return "object" === j(e);
 }
-var W = { type: U, payload: { clientOffset: null, sourceClientOffset: null } };
+var W = { type: k, payload: { clientOffset: null, sourceClientOffset: null } };
 function K(e, t) {
     return null === t
         ? null === e
@@ -962,7 +962,7 @@ function K(e, t) {
             })
           : e === t;
 }
-function z(e, t) {
+function $(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(e);
@@ -974,11 +974,11 @@ function z(e, t) {
     }
     return n;
 }
-function $(e) {
+function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? z(Object(n), !0).forEach(function (t) {
+            ? $(Object(n), !0).forEach(function (t) {
                   var i, r, s;
                   (i = e),
                       (r = t),
@@ -989,7 +989,7 @@ function $(e) {
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : z(Object(n)).forEach(function (t) {
+              : $(Object(n)).forEach(function (t) {
                     Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
                 });
     }
@@ -1075,7 +1075,7 @@ var q = (function () {
                                         t.forEach(function (e) {
                                             (0, x.V)(i.getSource(e), "Expected sourceIds to be registered.");
                                         });
-                                    var f = (function (e, t) {
+                                    var h = (function (e, t) {
                                         for (var n = null, i = e.length - 1; i >= 0; i--)
                                             if (t.canDragSource(e[i])) {
                                                 n = e[i];
@@ -1083,8 +1083,8 @@ var q = (function () {
                                             }
                                         return n;
                                     })(a, d);
-                                    if (null === f) return void e.dispatch(W);
-                                    var h = null;
+                                    if (null === h) return void e.dispatch(W);
+                                    var f = null;
                                     if (u) {
                                         if (!c) throw Error("getSourceClientOffset must be defined");
                                         (r = c),
@@ -1092,23 +1092,23 @@ var q = (function () {
                                                 "function" == typeof r,
                                                 "When clientOffset is provided, getSourceClientOffset must be a function.",
                                             ),
-                                            (h = c(f));
+                                            (f = c(h));
                                     }
-                                    e.dispatch(H(u, h));
-                                    var p = _.getSource(f).beginDrag(d, f);
+                                    e.dispatch(H(u, f));
+                                    var p = _.getSource(h).beginDrag(d, h);
                                     if (null != p) {
                                         return (
                                             (s = p),
                                             (0, x.V)(Y(s), "Item must be an object."),
-                                            _.pinSource(f),
+                                            _.pinSource(h),
                                             {
-                                                type: k,
+                                                type: U,
                                                 payload: {
-                                                    itemType: _.getSourceType(f),
+                                                    itemType: _.getSourceType(h),
                                                     item: p,
-                                                    sourceId: f,
+                                                    sourceId: h,
                                                     clientOffset: u || null,
-                                                    sourceClientOffset: h || null,
+                                                    sourceClientOffset: f || null,
                                                     isSourcePublic: !!(void 0 === l || l),
                                                 },
                                             }
@@ -1183,7 +1183,7 @@ var q = (function () {
                                                 c,
                                                 d,
                                                 _,
-                                                f =
+                                                h =
                                                     ((n = e),
                                                     (o = t),
                                                     (l = a),
@@ -1195,8 +1195,8 @@ var q = (function () {
                                                     ),
                                                     void 0 === d && (d = 0 === o ? {} : u.getDropResult()),
                                                     d),
-                                                h = { type: V, payload: { dropResult: $($({}, r), f) } };
-                                            i.dispatch(h);
+                                                f = { type: V, payload: { dropResult: z(z({}, r), h) } };
+                                            i.dispatch(f);
                                         });
                                 }),
                             endDrag:
@@ -1244,7 +1244,7 @@ var q = (function () {
         t
     );
 })();
-function Z(e) {
+function X(e) {
     return (
         "Minified Redux error #" +
         e +
@@ -1254,7 +1254,7 @@ function Z(e) {
     );
 }
 n(416886);
-var X = ("function" == typeof Symbol && Symbol.observable) || "@@observable",
+var Z = ("function" == typeof Symbol && Symbol.observable) || "@@observable",
     Q = function () {
         return Math.random().toString(36).substring(7).split("").join(".");
     },
@@ -1350,7 +1350,7 @@ var ec = {
     },
     ed = [],
     e_ = [];
-function ef(e, t) {
+function eh(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(e);
@@ -1362,11 +1362,11 @@ function ef(e, t) {
     }
     return n;
 }
-function eh(e) {
+function ef(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? ef(Object(n), !0).forEach(function (t) {
+            ? eh(Object(n), !0).forEach(function (t) {
                   var i, r, s;
                   (i = e),
                       (r = t),
@@ -1377,7 +1377,7 @@ function eh(e) {
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : ef(Object(n)).forEach(function (t) {
+              : eh(Object(n)).forEach(function (t) {
                     Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
                 });
     }
@@ -1439,8 +1439,8 @@ function ep() {
             return c !== d && (c && u.push(c), d && u.push(d)), u;
         })(t.dirtyHandlerIds, {
             type: n.type,
-            payload: eh(
-                eh({}, n.payload),
+            payload: ef(
+                ef({}, n.payload),
                 {},
                 {
                     prevTargetIds:
@@ -1458,8 +1458,8 @@ function ep() {
                 i = arguments.length > 1 ? arguments[1] : void 0,
                 r = i.payload;
             switch (i.type) {
-                case U:
                 case k:
+                case U:
                     return {
                         initialSourceClientOffset: r.sourceClientOffset,
                         initialClientOffset: r.clientOffset,
@@ -1501,7 +1501,7 @@ function ep() {
                 i = arguments.length > 1 ? arguments[1] : void 0,
                 r = i.payload;
             switch (i.type) {
-                case k:
+                case U:
                     return eu(
                         eu({}, n),
                         {},
@@ -1800,7 +1800,7 @@ function eI(e, t) {
 ((i = s || (s = {})).SOURCE = "SOURCE"), (i.TARGET = "TARGET");
 let eT = "u" > typeof global ? global : self,
     eS = eT.MutationObserver || eT.WebKitMutationObserver;
-function eN(e) {
+function ey(e) {
     return function () {
         let t = setTimeout(i, 0),
             n = setInterval(i, 50);
@@ -1809,7 +1809,7 @@ function eN(e) {
         }
     };
 }
-let ey =
+let eN =
     "function" == typeof eS
         ? function (e) {
               let t = 1,
@@ -1822,8 +1822,8 @@ let ey =
                   }
               );
           }
-        : eN;
-class eC {
+        : ey;
+class ev {
     call() {
         try {
             this.task && this.task();
@@ -1837,7 +1837,7 @@ class eC {
         (this.onError = e), (this.release = t), (this.task = null);
     }
 }
-let ev = new (class {
+let eC = new (class {
         enqueueTask(e) {
             let { queue: t, requestFlush: n } = this;
             t.length || (n(), (this.flushing = !0)), (t[t.length] = e);
@@ -1862,23 +1862,23 @@ let ev = new (class {
                 (this.registerPendingError = (e) => {
                     this.pendingErrors.push(e), this.requestErrorThrow();
                 }),
-                (this.requestFlush = ey(this.flush)),
-                (this.requestErrorThrow = eN(() => {
+                (this.requestFlush = eN(this.flush)),
+                (this.requestErrorThrow = ey(() => {
                     if (this.pendingErrors.length) throw this.pendingErrors.shift();
                 }));
         }
     })(),
-    eO = new (class {
+    eR = new (class {
         create(e) {
             let t = this.freeTasks,
-                n = t.length ? t.pop() : new eC(this.onError, (e) => (t[t.length] = e));
+                n = t.length ? t.pop() : new ev(this.onError, (e) => (t[t.length] = e));
             return (n.task = e), n;
         }
         constructor(e) {
             (this.onError = e), (this.freeTasks = []);
         }
-    })(ev.registerPendingError);
-function eR(e, t) {
+    })(eC.registerPendingError);
+function eO(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, i = Array(t); n < t; n++) i[n] = e[n];
     return i;
@@ -1930,11 +1930,11 @@ function eD(e, t) {
                 })(r) ||
                 (function (e) {
                     if (e) {
-                        if ("string" == typeof e) return eR(e, 2);
+                        if ("string" == typeof e) return eO(e, 2);
                         var t = Object.prototype.toString.call(e).slice(8, -1);
                         if (("Object" === t && e.constructor && (t = e.constructor.name), "Map" === t || "Set" === t))
                             return Array.from(e);
-                        if ("Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)) return eR(e, 2);
+                        if ("Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)) return eO(e, 2);
                     }
                 })(r) ||
                 (function () {
@@ -2035,8 +2035,8 @@ var eL = (function () {
                         var t = this;
                         (0, x.V)(this.getSource(e), "Expected an existing source."),
                             this.store.dispatch({ type: ea, payload: { sourceId: e } }),
-                            ev.enqueueTask(
-                                eO.create(function () {
+                            eC.enqueueTask(
+                                eR.create(function () {
                                     t.dragSources.delete(e), t.types.delete(e);
                                 }),
                             );
@@ -2108,8 +2108,8 @@ function eP(e, t) {
     return i;
 }
 var ex = 0,
-    eU = Symbol.for("__REACT_DND_CONTEXT_INSTANCE__"),
-    ek = (0, l.memo)(function (e) {
+    ek = Symbol.for("__REACT_DND_CONTEXT_INSTANCE__"),
+    eU = (0, l.memo)(function (e) {
         var t,
             n,
             i = e.children,
@@ -2149,8 +2149,8 @@ var ex = 0,
                                           n = arguments.length > 2 ? arguments[2] : void 0,
                                           i = arguments.length > 3 ? arguments[3] : void 0;
                                       return (
-                                          t[eU] ||
-                                              (t[eU] = {
+                                          t[ek] ||
+                                              (t[ek] = {
                                                   dragDropManager: (function (e) {
                                                       var t,
                                                           n,
@@ -2178,17 +2178,17 @@ var ex = 0,
                                                                       ("function" == typeof i &&
                                                                           "function" == typeof arguments[3])
                                                                   )
-                                                                      throw Error(Z(0));
+                                                                      throw Error(X(0));
                                                                   if (
                                                                       ("function" == typeof n &&
                                                                           void 0 === i &&
                                                                           ((i = n), (n = void 0)),
                                                                       void 0 !== i)
                                                                   ) {
-                                                                      if ("function" != typeof i) throw Error(Z(1));
+                                                                      if ("function" != typeof i) throw Error(X(1));
                                                                       return i(e)(t, n);
                                                                   }
-                                                                  if ("function" != typeof t) throw Error(Z(2));
+                                                                  if ("function" != typeof t) throw Error(X(2));
                                                                   var r,
                                                                       s = t,
                                                                       a = n,
@@ -2199,19 +2199,19 @@ var ex = 0,
                                                                       l === o && (l = o.slice());
                                                                   }
                                                                   function d() {
-                                                                      if (u) throw Error(Z(3));
+                                                                      if (u) throw Error(X(3));
                                                                       return a;
                                                                   }
                                                                   function _(e) {
-                                                                      if ("function" != typeof e) throw Error(Z(4));
-                                                                      if (u) throw Error(Z(5));
+                                                                      if ("function" != typeof e) throw Error(X(4));
+                                                                      if (u) throw Error(X(5));
                                                                       var t = !0;
                                                                       return (
                                                                           c(),
                                                                           l.push(e),
                                                                           function () {
                                                                               if (t) {
-                                                                                  if (u) throw Error(Z(6));
+                                                                                  if (u) throw Error(X(6));
                                                                                   (t = !1), c();
                                                                                   var n = l.indexOf(e);
                                                                                   l.splice(n, 1), (o = null);
@@ -2219,7 +2219,7 @@ var ex = 0,
                                                                           }
                                                                       );
                                                                   }
-                                                                  function f(e) {
+                                                                  function h(e) {
                                                                       if (
                                                                           !(function (e) {
                                                                               if ("object" != typeof e || null === e)
@@ -2232,9 +2232,9 @@ var ex = 0,
                                                                               return Object.getPrototypeOf(e) === t;
                                                                           })(e)
                                                                       )
-                                                                          throw Error(Z(7));
-                                                                      if (void 0 === e.type) throw Error(Z(8));
-                                                                      if (u) throw Error(Z(9));
+                                                                          throw Error(X(7));
+                                                                      if (void 0 === e.type) throw Error(X(8));
+                                                                      if (u) throw Error(X(9));
                                                                       try {
                                                                           (u = !0), (a = s(a, e));
                                                                       } finally {
@@ -2245,17 +2245,17 @@ var ex = 0,
                                                                       return e;
                                                                   }
                                                                   return (
-                                                                      f({ type: J.INIT }),
+                                                                      h({ type: J.INIT }),
                                                                       ((r = {
-                                                                          dispatch: f,
+                                                                          dispatch: h,
                                                                           subscribe: _,
                                                                           getState: d,
                                                                           replaceReducer: function (e) {
                                                                               if ("function" != typeof e)
-                                                                                  throw Error(Z(10));
-                                                                              (s = e), f({ type: J.REPLACE });
+                                                                                  throw Error(X(10));
+                                                                              (s = e), h({ type: J.REPLACE });
                                                                           },
-                                                                      })[X] = function () {
+                                                                      })[Z] = function () {
                                                                           var e;
                                                                           return (
                                                                               ((e = {
@@ -2264,13 +2264,13 @@ var ex = 0,
                                                                                           "object" != typeof e ||
                                                                                           null === e
                                                                                       )
-                                                                                          throw Error(Z(11));
+                                                                                          throw Error(X(11));
                                                                                       function t() {
                                                                                           e.next && e.next(d());
                                                                                       }
                                                                                       return t(), { unsubscribe: _(t) };
                                                                                   },
-                                                                              })[X] = function () {
+                                                                              })[Z] = function () {
                                                                                   return this;
                                                                               }),
                                                                               e
@@ -2290,7 +2290,7 @@ var ex = 0,
                                                       return l.receiveBackend(u), l;
                                                   })(e, t, n, i),
                                               }),
-                                          t[eU]
+                                          t[ek]
                                       );
                                   })(t.backend, t.context, t.options, t.debugMode),
                                   !t.context,
@@ -2345,7 +2345,7 @@ var ex = 0,
                     return (
                         ++ex,
                         function () {
-                            0 == --ex && (e[eU] = null);
+                            0 == --ex && (e[ek] = null);
                         }
                     );
                 }
@@ -2419,11 +2419,11 @@ function eW(e, t, n) {
 function eK(e, t) {
     var n,
         i,
-        r = e$(e, t, "get");
+        r = ez(e, t, "get");
     return (n = e), (i = r).get ? i.get.call(n) : i.value;
 }
-function ez(e, t, n) {
-    var i = e$(e, t, "set");
+function e$(e, t, n) {
+    var i = ez(e, t, "set");
     return (
         (function (e, t, n) {
             if (t.set) t.set.call(e, n);
@@ -2435,13 +2435,13 @@ function ez(e, t, n) {
         n
     );
 }
-function e$(e, t, n) {
+function ez(e, t, n) {
     if (!t.has(e)) throw TypeError("attempted to " + n + " private field on non-instance");
     return t.get(e);
 }
 var eq = new WeakMap(),
-    eZ = new WeakMap(),
     eX = new WeakMap(),
+    eZ = new WeakMap(),
     eQ = new WeakMap(),
     eJ = new WeakMap(),
     e0 = new WeakMap(),
@@ -2454,8 +2454,8 @@ class e5 {
     constructor(e, t, n) {
         if (
             (eY(this, eq, { writable: !0, value: void 0 }),
-            eY(this, eZ, { writable: !0, value: void 0 }),
             eY(this, eX, { writable: !0, value: void 0 }),
+            eY(this, eZ, { writable: !0, value: void 0 }),
             eY(this, eQ, { writable: !0, value: void 0 }),
             eY(this, eJ, { writable: !0, value: void 0 }),
             eY(this, e0, {
@@ -2481,11 +2481,11 @@ class e5 {
                                 "\n        see this guide: https://github.com/louisbrunner/dnd-multi-backend/tree/master/packages/react-dnd-multi-backend#migrating-from-5xx",
                             ),
                         );
-                    if (eK(this, eX)[a])
+                    if (eK(this, eZ)[a])
                         throw Error(
                             "You must specify a unique 'id' property in your Backend entry:\n        "
                                 .concat(JSON.stringify(n), " (conflicts with: ")
-                                .concat(JSON.stringify(eK(this, eX)[a]), ")"),
+                                .concat(JSON.stringify(eK(this, eZ)[a]), ")"),
                         );
                     return {
                         id: a,
@@ -2499,21 +2499,21 @@ class e5 {
             eW(this, "setup", () => {
                 if ("u" > typeof window) {
                     if (e5.isSetUp) throw Error("Cannot have two MultiBackends at the same time.");
-                    (e5.isSetUp = !0), eK(this, e1).call(this, window), eK(this, eX)[eK(this, eq)].instance.setup();
+                    (e5.isSetUp = !0), eK(this, e1).call(this, window), eK(this, eZ)[eK(this, eq)].instance.setup();
                 }
             }),
             eW(this, "teardown", () => {
                 "u" > typeof window &&
                     ((e5.isSetUp = !1),
                     eK(this, e2).call(this, window),
-                    eK(this, eX)[eK(this, eq)].instance.teardown());
+                    eK(this, eZ)[eK(this, eq)].instance.teardown());
             }),
             eW(this, "connectDragSource", (e, t, n) => eK(this, e4).call(this, "connectDragSource", e, t, n)),
             eW(this, "connectDragPreview", (e, t, n) => eK(this, e4).call(this, "connectDragPreview", e, t, n)),
             eW(this, "connectDropTarget", (e, t, n) => eK(this, e4).call(this, "connectDropTarget", e, t, n)),
-            eW(this, "profile", () => eK(this, eX)[eK(this, eq)].instance.profile()),
-            eW(this, "previewEnabled", () => eK(this, eX)[eK(this, eq)].preview),
-            eW(this, "previewsList", () => eK(this, eZ)),
+            eW(this, "profile", () => eK(this, eZ)[eK(this, eq)].instance.profile()),
+            eW(this, "previewEnabled", () => eK(this, eZ)[eK(this, eq)].preview),
+            eW(this, "previewsList", () => eK(this, eX)),
             eW(this, "backendsList", () => eK(this, eQ)),
             eY(this, e1, {
                 writable: !0,
@@ -2539,25 +2539,25 @@ class e5 {
                         (eK(this, eQ).some(
                             (t) =>
                                 !!(t.id !== eK(this, eq) && t.transition && t.transition.check(e)) &&
-                                (ez(this, eq, t.id), !0),
+                                (e$(this, eq, t.id), !0),
                         ),
                         eK(this, eq) !== t)
                     ) {
                         var n;
-                        eK(this, eX)[t].instance.teardown(),
+                        eK(this, eZ)[t].instance.teardown(),
                             Object.keys(eK(this, eJ)).forEach((e) => {
                                 let t = eK(this, eJ)[e];
                                 t.unsubscribe(), (t.unsubscribe = eK(this, e6).call(this, t.func, ...t.args));
                             }),
-                            eK(this, eZ).backendChanged(this);
-                        let i = eK(this, eX)[eK(this, eq)];
+                            eK(this, eX).backendChanged(this);
+                        let i = eK(this, eZ)[eK(this, eq)];
                         if ((i.instance.setup(), i.skipDispatchOnTransition)) return;
                         let r = new e.constructor(e.type, e);
                         null == (n = e.target) || n.dispatchEvent(r);
                     }
                 },
             }),
-            eY(this, e6, { writable: !0, value: (e, t, n, i) => eK(this, eX)[eK(this, eq)].instance[e](t, n, i) }),
+            eY(this, e6, { writable: !0, value: (e, t, n, i) => eK(this, eZ)[eK(this, eq)].instance[e](t, n, i) }),
             eY(this, e4, {
                 writable: !0,
                 value: (e, t, n, i) => {
@@ -2576,15 +2576,15 @@ class e5 {
             throw Error(
                 "You must specify at least one Backend, if you are coming from 2.x.x (or don't understand this error)\n        see this guide: https://github.com/louisbrunner/dnd-multi-backend/tree/master/packages/react-dnd-multi-backend#migrating-from-2xx",
             );
-        ez(this, eZ, new ej()),
-            ez(this, eX, {}),
-            ez(this, eQ, []),
+        e$(this, eX, new ej()),
+            e$(this, eZ, {}),
+            e$(this, eQ, []),
             n.backends.forEach((n) => {
                 let i = eK(this, e0).call(this, e, t, n);
-                (eK(this, eX)[i.id] = i), eK(this, eQ).push(i);
+                (eK(this, eZ)[i.id] = i), eK(this, eQ).push(i);
             }),
-            ez(this, eq, eK(this, eQ)[0].id),
-            ez(this, eJ, {});
+            e$(this, eq, eK(this, eQ)[0].id),
+            e$(this, eJ, {});
     }
 }
 eW(e5, "isSetUp", !1);
@@ -2677,7 +2677,7 @@ var te = (0, l.createContext)(null),
         return l.createElement(
             te.Provider,
             { value: null != n ? n : s },
-            l.createElement(ek, e8({ backend: e7 }, i)),
+            l.createElement(eU, e8({ backend: e7 }, i)),
             n ? null : l.createElement("div", { ref: a }),
         );
     },
@@ -2779,7 +2779,7 @@ class tc {
             (this.manager = n),
             (this.previewer = i),
             (this.announcer = r),
-            (this.currentHoveredNode = e),
+            (this.currentHoveredNode = this.findInitialHoveredNode(e, t)),
             (this.focusManager = (0, tl.C)({
                 getFocusableElements: () => this.getViableTargets(t),
                 getActiveElement: () => e.ownerDocument.activeElement,
@@ -2788,6 +2788,14 @@ class tc {
             (this.monitor = n.getMonitor()),
             this.overrideRoleToApplicationForHoveredNode(),
             window.addEventListener("keydown", this.handleDraggedElementKeyDown, { capture: !0 });
+    }
+    findInitialHoveredNode(e, t) {
+        let n = null;
+        for (let i of t.values())
+            (e.compareDocumentPosition(i) & Node.DOCUMENT_POSITION_FOLLOWING) != 0 &&
+                (null == n || (i.compareDocumentPosition(n) & Node.DOCUMENT_POSITION_FOLLOWING) != 0) &&
+                (n = i);
+        return n;
     }
     restoreRoleOfHoveredNode() {
         if (null == this.currentHoveredNode) return;
@@ -2866,10 +2874,10 @@ class tc {
 }
 let td = [" ", "Enter"],
     t_ = ["Escape"];
-function tf(e) {
+function th(e) {
     e.preventDefault(), e.stopImmediatePropagation();
 }
-function th(e, t) {
+function tf(e, t) {
     return t.includes(e.key);
 }
 function tp(e) {
@@ -2916,7 +2924,7 @@ class tE {
             this.endDrag();
     }
     handleGlobalKeyDown = (e) => {
-        this.monitor.isDragging() && th(e, t_) && (this.endDrag(e), this._announcer.announceCancel());
+        this.monitor.isDragging() && tf(e, t_) && (this.endDrag(e), this._announcer.announceCancel());
     };
     setDndMode(e) {
         this.options?.onDndModeChanged(e);
@@ -2969,7 +2977,7 @@ class tE {
         if (!tp(t, this._handlingFirstEvent) || ((this._handlingFirstEvent = !1), !this.monitor.canDragSource(e)))
             return;
         if (this.monitor.isDragging()) return void this.actions.publishDragSource();
-        tf(t);
+        th(t);
         let n = this.sourceNodes.get(e);
         null != n &&
             ((this._navigator = new tc(n, this.targetNodes, this.manager, this._previewer, this._announcer)),
@@ -2984,10 +2992,10 @@ class tE {
             this._announcer.announceDrag(n, e));
     };
     handleDrop = (e) => {
-        th(e, td) && (this.actions.drop(), this.endDrag(e), this._announcer.announceDrop());
+        tf(e, td) && (this.actions.drop(), this.endDrag(e), this._announcer.announceDrop());
     };
     endDrag(e) {
-        null != e && tf(e),
+        null != e && th(e),
             this._navigator?.disconnect(),
             this._previewer.clear(),
             this.monitor.isDragging() && this.actions.endDrag(),
