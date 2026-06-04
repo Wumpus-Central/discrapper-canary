@@ -33,14 +33,10 @@ function L(e) {
         a = r.useMemo(() => (0, S.T)(t), [t]);
     if (null == a) return null;
     if ("bundle" === a.type) {
-        let e = a.previewAssets?.fgStatic != null,
-            t = a.previewAssets?.bgStatic;
-        return (0, i.jsxs)("div", {
+        let e = a.previewAssets?.fgStatic != null;
+        return (0, i.jsx)("div", {
             className: e ? D.Nq : D.hT,
-            children: [
-                e && null != t && (0, i.jsx)("img", { className: D.bl, src: t, alt: "" }),
-                (0, i.jsx)(N.X, { product: a, isHighlighted: n, user: s }),
-            ],
+            children: (0, i.jsx)(N.X, { product: a, isHighlighted: n, user: s }),
         });
     }
     switch (a.item.type) {

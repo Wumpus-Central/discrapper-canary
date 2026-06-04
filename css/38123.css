@@ -98,19 +98,10 @@
     padding-inline: 24px
 }
 
-.bundleStaticPreview__517e1 {
+.bundleStaticPreview__517e1,
+.premiumPreview__517e1 {
     height: 100%;
     position: relative;
-    width: 100%
-}
-
-.bundleStaticBackgroundAsset__517e1 {
-    height: 100%;
-    inset: 0;
-    -o-object-fit: cover;
-    object-fit: cover;
-    pointer-events: none;
-    position: absolute;
     width: 100%
 }
 
@@ -122,14 +113,10 @@
     transform-origin: center
 }
 
-.premiumPreview__517e1,
 .premiumRive__517e1 {
     height: 100%;
     position: relative;
-    width: 100%
-}
-
-.premiumRive__517e1 {
+    width: 100%;
     z-index: 1
 }
 
