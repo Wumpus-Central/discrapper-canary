@@ -3425,12 +3425,13 @@
 }
 
 .displayName_a4e9ae {
-    color: var(--text-strong);
-    font-size: 50px;
-    font-weight: 900;
+    color: var(--text-default);
+    font-size: 52px;
     line-height: normal;
-    min-width: 0;
-    overflow-wrap: break-word
+    max-width: 351px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
 }
 
 @container premium-marketing-page-container (max-width: 720px) {
@@ -4614,10 +4615,6 @@ img.thumbnail__0f2e8 {
 
 .subtitle_fdd8e1 {
     flex: 1
-}
-
-.noBoxShadowMargin_d0aeea {
-    margin: 0
 }
 
 .card__39ec2 {
