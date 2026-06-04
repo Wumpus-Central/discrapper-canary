@@ -27,8 +27,8 @@ var a,
     g = l(228366),
     E = l(830382),
     S = l(73825),
-    C = l(937008),
-    j = l(424297),
+    C = l(197510),
+    j = l(937008),
     T = l(491057),
     P = l(314671),
     I = l(97352),
@@ -92,7 +92,7 @@ let R = (e) => {
             } = e,
             h = `${a}-${n}-${c}`;
         return (0, s.jsx)(
-            j.PaymentContextProvider,
+            C.CheckoutRootProvider,
             {
                 stepConfigs: d,
                 applicationId: l,
@@ -103,7 +103,7 @@ let R = (e) => {
                 excludeSubscriptionPlansBySKU: p,
                 overrideCustomCheckoutFlow: b ? _.uH.DEV_STORYBOOK_CHECKOUT : void 0,
                 children: (0, s.jsx)(T.Qt, {
-                    children: (0, s.jsx)(C.dX, {
+                    children: (0, s.jsx)(j.dX, {
                         isGift: n,
                         children: (0, s.jsx)(
                             P.PaymentModal,
@@ -297,7 +297,7 @@ let eT = "checkout-error-boundary-test-modal",
                     (0, s.jsx)(y.E, {
                         variant: "text-sm/normal",
                         children:
-                            "PaymentModal Step within PaymentContext loaded. Click below to navigate to a mock error step that will throw \u2014 the CheckoutErrorBoundary baked into PaymentContextProvider will catch it.",
+                            "PaymentModal Step within CheckoutRootProvider loaded. Click below to navigate to a mock error step that will throw \u2014 the CheckoutErrorBoundary baked into CheckoutRootProvider will catch it.",
                     }),
                     (0, s.jsx)(G.$, {
                         variant: "primary",
@@ -766,13 +766,13 @@ let eA = {
                                                           }),
                                                     await Promise.resolve((a) => {
                                                         let { onClose: i, transitionState: r } = a;
-                                                        return (0, s.jsx)(j.PaymentContextProvider, {
+                                                        return (0, s.jsx)(C.CheckoutRootProvider, {
                                                             activeSubscription: null,
                                                             stepConfigs: n,
                                                             skuIDs: [],
                                                             shouldCrashOnUnhandledError: "crash-client" === l,
                                                             onUnhandledError: t,
-                                                            children: (0, s.jsx)(C.dX, {
+                                                            children: (0, s.jsx)(j.dX, {
                                                                 isGift: !1,
                                                                 children: (0, s.jsx)(P.PaymentModal, {
                                                                     transitionState: r,
@@ -2018,7 +2018,7 @@ let tF = {
     id: "deep-link-test",
     component: function (e) {
         let { deepLinkUrl: t } = e;
-        return (0, s.jsx)(j.PaymentContextProvider, {
+        return (0, s.jsx)(C.CheckoutRootProvider, {
             stepConfigs: [],
             skuIDs: [],
             activeSubscription: null,
@@ -2750,7 +2750,7 @@ let lm = {
         {
             name: "Order SKU",
             component: function () {
-                return (0, s.jsx)(j.PaymentContextProvider, {
+                return (0, s.jsx)(C.CheckoutRootProvider, {
                     stepConfigs: [],
                     skuIDs: [],
                     activeSubscription: null,
@@ -2764,7 +2764,7 @@ let lm = {
             name: "Payment Request",
             component: function (e) {
                 let { paymentRequestWallet: t } = e;
-                return (0, s.jsx)(j.PaymentContextProvider, {
+                return (0, s.jsx)(C.CheckoutRootProvider, {
                     stepConfigs: [],
                     skuIDs: [],
                     activeSubscription: null,
@@ -2814,7 +2814,7 @@ let lm = {
                         paymentRequestWallets: a ? ["googlePay", "applePay"] : [],
                         paymentSourceTypeRestrictions: l ? [tH.he.CARD.valueOf()] : null,
                     };
-                return (0, s.jsx)(j.PaymentContextProvider, {
+                return (0, s.jsx)(C.CheckoutRootProvider, {
                     stepConfigs: [],
                     skuIDs: [],
                     activeSubscription: null,
@@ -2846,7 +2846,7 @@ let lm = {
             name: "Stripe Components",
             id: "stripe-components",
             component: function () {
-                return (0, s.jsx)(j.PaymentContextProvider, {
+                return (0, s.jsx)(C.CheckoutRootProvider, {
                     stepConfigs: [],
                     skuIDs: [],
                     activeSubscription: null,
@@ -2943,7 +2943,7 @@ let lT = (e) => {
     },
     lP = (e) => {
         let { children: t, stepConfigs: l, bodyClassName: a } = e;
-        return (0, s.jsx)(j.PaymentContextProvider, {
+        return (0, s.jsx)(C.CheckoutRootProvider, {
             stepConfigs: l,
             skuIDs: [],
             activeSubscription: null,

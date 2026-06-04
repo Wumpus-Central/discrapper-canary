@@ -1,10 +1,10 @@
-a.d(n, { WrappedUnifiedPaymentModal: () => m });
+a.d(n, { WrappedUnifiedPaymentModal: () => C });
 var t = a(627968),
-    l = a(64700),
-    o = a(688810),
+    o = a(64700),
+    l = a(688810),
     i = a(937008),
-    r = a(834252),
-    s = a(546042),
+    r = a(314671),
+    s = a(197510),
     d = a(551892),
     c = a(679374),
     u = a(818348);
@@ -13,31 +13,31 @@ let p = (e) => {
                 skuId: n,
                 applicationId: a,
                 analyticsObject: i,
-                analyticsSourceLocation: r,
+                analyticsSourceLocation: s,
                 returnRef: c,
                 onComplete: u,
                 renderHeader: p,
                 transitionState: y,
-                modalOnClose: m,
-                paymentModalVersion: C = "v2",
+                modalOnClose: C,
+                paymentModalVersion: m = "v2",
             } = e,
             { customPaymentModalProps: h } = (0, d.u)(),
-            P = l.useCallback(() => {
-                m();
-            }, [m]),
-            I = h?.onClose ?? P,
-            { analyticsLocations: j } = (0, o.Ay)();
-        return (0, t.jsx)(s.PaymentModal, {
+            k = o.useCallback(() => {
+                C();
+            }, [C]),
+            I = h?.onClose ?? k,
+            { analyticsLocations: P } = (0, l.Ay)();
+        return (0, t.jsx)(r.PaymentModal, {
             transitionState: y,
             returnRef: c,
             applicationId: a,
             analyticsObject: i,
-            analyticsSourceLocation: r,
+            analyticsSourceLocation: s,
             initialPlanId: null,
             skuId: n,
             renderHeader: p,
-            analyticsLocations: j,
-            paymentModalVersion: C,
+            analyticsLocations: P,
+            paymentModalVersion: m,
             onComplete: u,
             ...h,
             onClose: I,
@@ -45,24 +45,24 @@ let p = (e) => {
     },
     y = (e) => {
         let { skuId: n } = e;
-        return (0, t.jsx)(r.PaymentContextProvider, { ...e, skuIDs: null != n ? [n] : [], children: e.children });
+        return (0, t.jsx)(s.CheckoutRootProvider, { ...e, skuIDs: null != n ? [n] : [], children: e.children });
     },
-    m = (e) => {
+    C = (e) => {
         let {
                 loadId: n,
                 discoverySessionId: a,
                 onOrderCreated: r,
                 skuId: s,
                 tenantParams: d,
-                analyticsObject: m,
-                analyticsSourceLocation: C,
+                analyticsObject: C,
+                analyticsSourceLocation: m,
                 analyticsLocations: h,
-                applicationId: P,
+                applicationId: k,
                 giftContextProps: I,
-                additionalOptions: j,
-                onComplete: k,
-                onClose: x,
-                renderModalProps: S,
+                additionalOptions: P,
+                onComplete: j,
+                onClose: S,
+                renderModalProps: x,
                 checkoutFlow: v,
                 checkoutFlowConfiguration: M,
                 tenantCheckoutFlowConfig: O,
@@ -72,11 +72,11 @@ let p = (e) => {
             { purchaseType: w } = M,
             {
                 CustomTenantProvider: _,
-                tenantProvidesPaymentContext: L,
+                tenantProvidesCheckoutRoot: L,
                 overrideAnalyticParams: R,
                 tenantAnalyticsLocation: V,
             } = O.TENANT_PROVIDER_CONFIGS,
-            E = l.useMemo(() => (null != V ? [...h, V] : h), [h, V]),
+            E = o.useMemo(() => (null != V ? [...h, V] : h), [h, V]),
             G = null != I ? i.dX : i.Mq,
             N = null != I && I.isGift,
             T = {
@@ -84,7 +84,7 @@ let p = (e) => {
                 loadId: n,
                 discoverySessionId: a,
                 stepConfigs: f,
-                applicationId: P,
+                applicationId: k,
                 skuId: s,
                 activeSubscription: null,
                 purchaseType: w,
@@ -96,35 +96,35 @@ let p = (e) => {
             A = (0, t.jsx)(_, {
                 ...T,
                 tenantParams: d,
-                analyticsSourceLocation: C,
-                additionalOptions: j,
+                analyticsSourceLocation: m,
+                additionalOptions: P,
                 overrideAnalyticParams: R,
-                renderModalProps: S,
-                onComplete: k,
-                onClose: x,
+                renderModalProps: x,
+                onComplete: j,
+                onClose: S,
                 children: (0, t.jsx)(G, {
                     ...I,
                     children: (0, t.jsx)(p, {
-                        applicationId: P,
-                        analyticsObject: m,
-                        analyticsSourceLocation: C,
+                        applicationId: k,
+                        analyticsObject: C,
+                        analyticsSourceLocation: m,
                         skuId: s,
                         renderHeader: b,
-                        onComplete: k,
-                        modalOnClose: S.onClose,
-                        transitionState: S.transitionState,
-                        returnRef: S.returnRef,
+                        onComplete: j,
+                        modalOnClose: x.onClose,
+                        transitionState: x.transitionState,
+                        returnRef: x.returnRef,
                     }),
                 }),
             });
-        return (0, t.jsx)(o.f5, {
+        return (0, t.jsx)(l.f5, {
             value: E,
             children: (0, t.jsx)(c.rV, {
                 skuIDs: null != s ? [s] : [],
                 paymentGateway: R?.payment_gateway,
                 loadId: n,
                 onOrderCreated: r,
-                renderModalProps: S,
+                renderModalProps: x,
                 children: L ? A : (0, t.jsx)(y, { ...T, children: A }),
             }),
         });

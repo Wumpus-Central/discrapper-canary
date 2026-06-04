@@ -8,7 +8,7 @@ var n = a(284009),
     c = a(339048),
     d = a(391048),
     r = a(636099),
-    u = a(892656),
+    u = a(813730),
     p = a(742810),
     C = a(163437),
     _ = a(97352),
@@ -39,7 +39,7 @@ function k(i) {
         M = !1;
     (0, s.openModalLazy)(
         async () => {
-            let { PaymentContextProvider: i } = await Promise.resolve().then(a.bind(a, 768050)),
+            let { CheckoutRootProvider: i } = await Promise.resolve().then(a.bind(a, 197510)),
                 o = (await Promise.all([a.e("18030"), a.e("72752")]).then(a.bind(a, 97491))).default,
                 { ApplicationCheckoutContextProvider: s } = await a.e("18030").then(a.bind(a, 975965)),
                 { getApplicationPaymentSteps: d } = await Promise.all([

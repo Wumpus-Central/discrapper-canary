@@ -6,12 +6,12 @@ var l = n(284009),
     s = n(426398),
     o = n(211083),
     u = n(463376),
-    c = n(722847),
-    d = n(61299),
-    p = n(174459),
-    m = n(723702),
-    h = n(259160),
-    A = n(424297),
+    c = n(738909),
+    d = n(571878),
+    p = n(61299),
+    m = n(174459),
+    h = n(723702),
+    A = n(937008),
     C = n(166532),
     E = n(566980),
     y = n(615310),
@@ -36,7 +36,7 @@ function _(e) {
             purchaseError: M,
             setPurchaseError: b,
             activeSubscription: L,
-        } = (0, c.t4)((e) => ({
+        } = (0, d.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setPurchaseState: e.setPurchaseState,
             contextMetadata: e.contextMetadata,
@@ -46,14 +46,14 @@ function _(e) {
             setPurchaseError: e.setPurchaseError,
             activeSubscription: e.activeSubscription,
         })),
-        { purchaseErrorBlockRef: j } = (0, A.P5)(),
+        { purchaseErrorBlockRef: j } = (0, c.Gm)(),
         { paymentAuthenticationState: O } = (0, o.o)(),
         { enabled: w } = (0, a.Y)({ location: "PaymentModalAddPaymentStep" }),
         { isPremiumGroupPurchase: D, isEligibleForTrial: U } = (0, u.i)(),
         { step: k, previousStep: G } = (0, y.Ay)(),
-        { isGift: Y } = (0, h.Pv)(),
+        { isGift: Y } = (0, A.Pv)(),
         F = {
-            ...(0, d._V)(),
+            ...(0, p._V)(),
             paymentSources: T,
             paymentSourceId: x,
             setPaymentSourceId: R,
@@ -78,7 +78,7 @@ function _(e) {
                 null != I && null == G ? (w ? C.pn.PAYMENT_ELEMENT : I) : w ? C.pn.PAYMENT_ELEMENT : C.pn.PAYMENT_TYPE,
             [I, G, w],
         );
-    return (0, d.Y)({
+    return (0, p.Y)({
         paymentModalArgs: F,
         initialStep: H,
         prependSteps: [C.pn.PROMOTION_INFO],
@@ -96,7 +96,7 @@ function _(e) {
         onStepChange: (e) => {
             let { currentStep: n, toStep: l } = e,
                 r = Date.now();
-            p.default.track(P.HAw.PAYMENT_FLOW_STEP, {
+            m.default.track(P.HAw.PAYMENT_FLOW_STEP, {
                 ...t,
                 from_step: n,
                 to_step: l,
@@ -106,7 +106,7 @@ function _(e) {
         },
         isEligibleForTrial: U,
         allowDesktopRedirectPurchase:
-            (0, m.isDesktop)() && null != N && [S.pe.TIER_0, S.pe.TIER_2].includes(N) && !Y && null == L,
+            (0, h.isDesktop)() && null != N && [S.pe.TIER_0, S.pe.TIER_2].includes(N) && !Y && null == L,
         continueSessionToInitialStep: I,
         shouldUseManaModal: !0,
     });

@@ -6,7 +6,7 @@ var s = i(284009),
     r = i(20742),
     a = i(224640),
     o = i(632088),
-    u = i(834252),
+    u = i(197510),
     d = i(166532),
     c = i(61299),
     g = i(375708),
@@ -56,7 +56,7 @@ function A(e) {
     });
 }
 function h(e) {
-    return (0, n.jsx)(u.PaymentContextProvider, {
+    return (0, n.jsx)(u.CheckoutRootProvider, {
         activeSubscription: null,
         stepConfigs: [],
         skuIDs: [],

@@ -691,15 +691,15 @@ let eK = (e) => {
                             } = e;
                             (0, ef.openModalLazy)(
                                 async () => {
-                                    let { PaymentContextProvider: e } = await Promise.resolve().then(i.bind(i, 424297)),
+                                    let { CheckoutRootProvider: e } = await Promise.resolve().then(i.bind(i, 197510)),
                                         { PaymentModal: v } = await Promise.resolve().then(i.bind(i, 314671)),
                                         { STEPS: p } = await Promise.all([
                                             i.e("66787"),
                                             i.e("15112"),
                                             i.e("41973"),
-                                            i.e("42538"),
+                                            i.e("89156"),
                                             i.e("5539"),
-                                            i.e("65222"),
+                                            i.e("31329"),
                                             i.e("44057"),
                                             i.e("21856"),
                                             i.e("8694"),

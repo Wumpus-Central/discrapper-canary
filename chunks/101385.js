@@ -5,16 +5,16 @@ var i,
     a = n(284009),
     l = n.n(a),
     o = n(688810),
-    c = n(937008),
-    u = n(834252),
+    c = n(197510),
+    u = n(937008),
     d = n(166532),
     m = n(811656),
     p = n(864353),
     C = n(428262),
     S = n(772707),
-    y = n(683071),
-    g = n(17928),
-    h = n(834730),
+    g = n(683071),
+    h = n(17928),
+    y = n(834730),
     x = n(158032),
     b = n(925847),
     I = n(773669),
@@ -25,8 +25,8 @@ var i,
     T = (((i = {})[(i.CONFIRM = 1)] = "CONFIRM"), (i[(i.SUCCESS = 2)] = "SUCCESS"), i),
     v = n(788868),
     M = n(652215),
-    P = n(375708),
-    R = n(977544);
+    R = n(375708),
+    P = n(977544);
 let k = (t) => {
     let {
             analyticsLocations: e,
@@ -38,10 +38,10 @@ let k = (t) => {
             fractionalPremiumInfo: c,
             setStep: u,
         } = t,
-        d = (0, g.bG)([I.default], () => I.default.locale),
+        d = (0, h.bG)([I.default], () => I.default.locale),
         m = new Date(o.subscriptionPeriodStart);
     a.isBoostOnly || (m = C.Ay.extendDateWithUnconsumedFractionalPremium(m, c.unactivatedUnits));
-    let p = (0, g.bG)([E.A], () => E.A.getForApplication(v.tv)),
+    let p = (0, h.bG)([E.A], () => E.A.getForApplication(v.tv)),
         k = (0, f.$g)(l.total, l.currency),
         [F, O] = (0, s.useState)(!1),
         [U, _] = (0, s.useState)(!1),
@@ -58,8 +58,8 @@ let k = (t) => {
                 _(!0), O(!1);
             }
         },
-        G = [{ text: P.intl.string(P.t["cY+Oob"]), onClick: () => D(), variant: "primary", loading: F, disabled: F }],
-        W = P.intl.format(P.t.dbGGui, { price: k, date: w }),
+        G = [{ text: R.intl.string(R.t["cY+Oob"]), onClick: () => D(), variant: "primary", loading: F, disabled: F }],
+        W = R.intl.format(R.t.dbGGui, { price: k, date: w }),
         L = a.premiumPlanIdFromItems;
     if (C.Ay.hasUnconsumedGiftForSubscriptionPlan(p, L)) {
         let t = (0, f.$g)(o.total, o.currency),
@@ -70,22 +70,22 @@ let k = (t) => {
                 date: w,
                 billingPeriod: C.Ay.getIntervalStringAsNoun(e.intervalType),
             };
-        W = o.taxInclusive ? P.intl.format(P.t.G8IxyE, n) : P.intl.format(P.t.kXtIIn, n);
+        W = o.taxInclusive ? R.intl.format(R.t.G8IxyE, n) : R.intl.format(R.t.kXtIIn, n);
     }
     return (0, r.jsxs)(S.k, {
-        graphic: { type: "image", src: R.A },
+        graphic: { type: "image", src: P.A },
         gradientColor: "nitro-pink",
         transitionState: i,
-        title: P.intl.string(P.t.fYEWlq),
+        title: R.intl.string(R.t.fYEWlq),
         actions: G,
         onClose: async () => n(),
         children: [
-            (0, r.jsxs)(h.E, {
+            (0, r.jsxs)(y.E, {
                 variant: "text-md/normal",
                 style: { textAlign: "center" },
-                children: [(0, r.jsx)("p", { children: W }), (0, r.jsx)("p", { children: P.intl.string(P.t.UQolSy) })],
+                children: [(0, r.jsx)("p", { children: W }), (0, r.jsx)("p", { children: R.intl.string(R.t.UQolSy) })],
             }),
-            U ? (0, r.jsx)(y.w, { type: "critical", children: P.intl.string(P.t["5mlOCW"]) }) : null,
+            U ? (0, r.jsx)(g.w, { type: "critical", children: R.intl.string(R.t["5mlOCW"]) }) : null,
         ],
     });
 };
@@ -97,11 +97,11 @@ var F = n(935462),
     N = n(20374);
 function D(t) {
     let { onClose: e } = t,
-        n = (0, r.jsx)(h.E, { className: N.h, variant: "text-md/normal", children: P.intl.string(P.t.FCsTCk) });
+        n = (0, r.jsx)(y.E, { className: N.h, variant: "text-md/normal", children: R.intl.string(R.t.FCsTCk) });
     return (0, r.jsx)(_.A, {
         type: U.Ay.Types.PREMIUM_ACTIVATED,
         text: n,
-        buttonText: P.intl.string(P.t.TkTvBz),
+        buttonText: R.intl.string(R.t.TkTvBz),
         hideClose: !1,
         onClose: e,
     });
@@ -136,7 +136,7 @@ let W = (t) => {
         l()(null != a, "Should not be resubscribing Nitro without premiumType");
         let d = a === v.PremiumTypes.TIER_0,
             [p, S] = s.useState(T.CONFIRM),
-            y = s.useCallback(() => {
+            g = s.useCallback(() => {
                 switch (p) {
                     case T.CONFIRM:
                         return (0, r.jsx)(k, { ...t, setStep: S });
@@ -148,17 +148,17 @@ let W = (t) => {
             }, [p, t, a]);
         return (0, r.jsx)(o.f5, {
             value: e,
-            children: (0, r.jsx)(u.PaymentContextProvider, {
+            children: (0, r.jsx)(c.CheckoutRootProvider, {
                 activeSubscription: n,
                 stepConfigs: L,
                 skuIDs: [],
                 breadcrumbs: z,
-                children: (0, r.jsx)(c.Mq, {
+                children: (0, r.jsx)(u.Mq, {
                     children: (0, r.jsx)(m.A, {
                         isConfirmationStep: p === T.SUCCESS,
                         isEligibleForWowMoment: !d,
                         shouldPrefetchWowMoment: !d,
-                        children: y(),
+                        children: g(),
                     }),
                 }),
             }),
