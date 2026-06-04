@@ -248,8 +248,8 @@ let v = (e) => {
             t
         );
     };
-function B(e) {
-    return e.length > 0 ? Math.max(...e) : 0;
+function B(e, t) {
+    return e.length > 0 ? Math.max(...e) : t;
 }
 function H(e, t, n) {
     return Math.max(0, e - (t - n));
@@ -319,6 +319,7 @@ let j = async (e, t, n) => {
                         let { dims: t } = e;
                         return Math.round(Math.max(0, (t.width - r) / 2));
                     }),
+                o.x.OVERFLOW_HORIZONTAL,
             )),
             {
                 innerWidth: r,
@@ -332,6 +333,7 @@ let j = async (e, t, n) => {
                             let { dims: t } = e;
                             return H(t.height, 716, o.x.OVERFLOW_TOP);
                         }),
+                    0,
                 ),
                 overflowBottom: B(
                     i
@@ -343,6 +345,7 @@ let j = async (e, t, n) => {
                             let { dims: t } = e;
                             return H(t.height, 424, o.x.OVERFLOW_BOTTOM);
                         }),
+                    0,
                 ),
                 overflowHorizontal: s,
             });
