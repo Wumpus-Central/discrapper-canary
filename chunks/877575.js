@@ -1,29 +1,30 @@
 "use strict";
 n.d(t, {
+    TE: () => ef,
     yT: () => ec,
     yO: () => Q,
-    $N: () => ev,
-    YK: () => ep,
+    $N: () => eC,
+    YK: () => eE,
     h$: () => er,
     eQ: () => Z,
-    YP: () => ee,
-    PW: () => ey,
+    qu: () => ep,
+    PW: () => eN,
     MI: () => ed,
-    Fb: () => eE,
-    w7: () => eR,
-    K7: () => em,
+    Fb: () => em,
+    w7: () => eO,
+    K7: () => eg,
+    YP: () => ee,
     HU: () => en,
-    VO: () => eA,
+    VO: () => eI,
     Mt: () => et,
     GS: () => ei,
     fd: () => J,
-    Ts: () => eN,
-    e6: () => eS,
-    H1: () => eT,
-    oH: () => eg,
-    jA: () => ef,
-    l0: () => eC,
+    Ts: () => ev,
+    e6: () => ey,
+    oH: () => eA,
+    l0: () => eR,
     yd: () => eu,
+    H1: () => eS,
     XK: () => eh,
     Yy: () => e_,
 }),
@@ -45,7 +46,7 @@ var i = n(636537),
     m = n(616356),
     g = n(495544),
     A = n(734057),
-    I = n(728555),
+    I = n(555975),
     T = n(763827),
     S = n(116956),
     y = n(803301),
@@ -356,7 +357,7 @@ function et(e) {
 }
 function en(e) {
     a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { storageLocation: e } }),
-        eE(e).catch((e) => {
+        em(e).catch((e) => {
             k.nx.error("Failed to load clips directory after storage location change", e);
         });
 }
@@ -607,7 +608,7 @@ async function eu() {
                 let i = t.sort((e, t) => e.createdAt - t.createdAt).slice(0, n);
                 for (let t of (k.nx.info(`Deleting ${i.length} temporary clips to stay within limit of ${e}`), i))
                     try {
-                        await eg(t.filepath, t.id);
+                        await eA(t.filepath, t.id);
                     } catch (e) {
                         k.nx.error("Failed to delete temporary clip", e);
                     }
@@ -621,7 +622,7 @@ async function eu() {
                 return t === r.id;
             })
         ) {
-            a.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" }), eg(r.filepath, r.id);
+            a.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" }), eA(r.filepath, r.id);
             return;
         }
         a.h.dispatch({ type: "CLIPS_SAVE_CLIP", clip: r }), ea(r);
@@ -703,12 +704,15 @@ async function eh(e) {
     await e_(e.id, { isFavorite: !e.isFavorite });
 }
 function ef() {
-    a.h.dispatch({ type: "CLIPS_CLEAR_CLIPS_SESSION" });
+    a.h.dispatch({ type: "CLIPS_CLEAR_LAST_CLIPS_SESSION" });
 }
 function ep(e) {
+    a.h.dispatch({ type: "CLIPS_SESSION_UPDATE", sessionId: e });
+}
+function eE(e) {
     a.h.dispatch({ type: "CLIPS_REMOVE_SINGLE_NEW_CLIP_ID", clipId: e });
 }
-async function eE(e) {
+async function em(e) {
     if (!(0, v.isDesktop)() || o.A.clips?.loadClipsDirectory == null) return;
     let t = await o.A.clips.loadClipsDirectory(e),
         n = [];
@@ -718,18 +722,18 @@ async function eE(e) {
     }
     a.h.dispatch({ type: "CLIPS_LOAD_DIRECTORY_SUCCESS", clips: n });
 }
-function em(e) {
+function eg(e) {
     e_(e.id, { isCandidate: !1 }),
         a.h.dispatch({ type: "CLIPS_PROMOTE_CLIP_CANDIDATE", clip: { ...e, isCandidate: !1 } });
 }
-async function eg(e, t) {
+async function eA(e, t) {
     (0, v.isDesktop)() &&
         o.A.clips?.deleteClip != null &&
         (await o.A.clips.deleteClip(e), a.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: t, filepath: e }));
 }
-async function eA(e) {
+async function eI(e) {
     try {
-        eT([e.id]);
+        eS([e.id]);
         let t = I.Ay.getMediaEngine(),
             { filepath: n, ...i } = e;
         await e_(e.id, i);
@@ -752,43 +756,43 @@ async function eA(e) {
                 if (e.type === D.nQ.SCREENSHOT) return n;
                 return H(n);
             } finally {
-                await eI(l);
+                await eT(l);
             }
         }
         let s = await t.exportClip(e.filepath, r);
         if (e.type === D.nQ.SCREENSHOT) return s;
         return H(s);
     } finally {
-        eT(null);
+        eS(null);
     }
 }
-async function eI(e) {
+async function eT(e) {
     if ((0, v.isDesktop)())
         try {
             await o.A.clips.deleteClip(e);
         } catch {}
 }
-function eT(e) {
+function eS(e) {
     a.h.dispatch({ type: "CLIPS_SET_EXPORTING", clipIds: e });
 }
-function eS(e) {
+function ey(e) {
     a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { maxAutoClips: e } });
 }
-function ey(e) {
+function eN(e) {
     a.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
         settings: { clipSignals: { ...R.Ay.getSettings().clipSignals, ...e } },
     });
 }
-function eN(e, t) {
+function ev(e, t) {
     a.h.dispatch({ type: "CLIPS_SIGNAL_CREATED", signal: e, timestamp: t });
 }
-function ev(e) {
+function eC(e) {
     a.h.dispatch({ type: "CLIPS_ML_DETECTION", detections: e });
 }
-function eC() {
-    eN({ type: D.Gy.MANUAL });
+function eR() {
+    ev({ type: D.Gy.MANUAL });
 }
-async function eR(e) {
+async function eO(e) {
     await e_(e, { isTemporary: !1 });
 }
