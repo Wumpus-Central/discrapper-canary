@@ -2990,7 +2990,7 @@ let li = () =>
                             className: la.Qs,
                             children: [
                                 (0, c.jsx)(eu.D, {
-                                    variant: "heading-xl/bold",
+                                    variant: "heading-xl/normal",
                                     color: "text-strong",
                                     className: la.R_,
                                     children: "Get monthly Nitro Orbs rewards!",
@@ -3007,7 +3007,7 @@ let li = () =>
                                     children: [
                                         (0, c.jsx)(ll.A, {
                                             subscriptionTier: P.pe.TIER_2,
-                                            variantOverride: "overlay-primary",
+                                            variantOverride: "expressive",
                                             size: "md",
                                         }),
                                         (0, c.jsx)(es.$, {

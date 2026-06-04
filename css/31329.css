@@ -6906,10 +6906,10 @@ screen and (max-width:485px) {
 
 .faqTitle__5465d {
     font-family: var(--font-headline);
-    font-size: 2.5rem;
+    font-size: 40px;
     font-style: italic;
     font-weight: 900;
-    letter-spacing: -.0625rem;
+    letter-spacing: -1px;
     line-height: 1.1;
     margin: 0 0 12px;
     text-transform: uppercase
@@ -6922,7 +6922,7 @@ screen and (max-width:485px) {
 }
 
 .faqDescription__5465d {
-    font-size: 1.125rem;
+    font-size: 18px;
     margin: 0 0 24px
 }
 
@@ -6939,7 +6939,7 @@ screen and (max-width:485px) {
     color: var(--white);
     cursor: pointer;
     display: flex;
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 500;
     justify-content: space-between;
     list-style: none;
@@ -6954,7 +6954,7 @@ screen and (max-width:485px) {
     color: var(--white);
     content: "+";
     flex-shrink: 0;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 300;
     margin-inline-start: 16px
 }
@@ -6965,14 +6965,14 @@ screen and (max-width:485px) {
 
 .faqAnswer__5465d {
     color: var(--text-muted);
-    font-size: 1rem;
+    font-size: 16px;
     margin: 0;
     padding: 0 0 20px
 }
 
 .faqFooter__5465d {
     color: var(--white);
-    font-size: 1rem;
+    font-size: 16px;
     margin-top: 44px;
     text-align: center
 }
@@ -6987,7 +6987,7 @@ screen and (max-width:485px) {
     }
 
     .faqTitle__5465d {
-        font-size: 2rem
+        font-size: 32px
     }
 }
 
@@ -6997,7 +6997,7 @@ screen and (max-width:485px) {
     }
 
     .faqTitle__5465d {
-        font-size: 1.75rem
+        font-size: 28px
     }
 }
 
