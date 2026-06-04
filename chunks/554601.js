@@ -648,7 +648,6 @@ function eJ(e) {
                                                         n.e("63213"),
                                                         n.e("30938"),
                                                         n.e("17859"),
-                                                        n.e("95444"),
                                                         n.e("35878"),
                                                         n.e("48720"),
                                                         n.e("88003"),
@@ -856,8 +855,8 @@ var e2 = n(34188),
     e4 = n(700623),
     e7 = n(177953),
     e3 = n(825484),
-    e5 = n(512950),
-    e6 = n(900797),
+    e6 = n(512950),
+    e5 = n(900797),
     e9 = n(847374),
     te = n(10716),
     tt = n(702841),
@@ -1239,9 +1238,9 @@ function tO(e) {
                   ],
               })
             : s && !i && (0, I.Ag)(n)
-              ? (0, r.jsx)(e5.p, {
+              ? (0, r.jsx)(e6.p, {
                     className: tv.ai,
-                    messageType: e5.Y.WARNING,
+                    messageType: e6.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1304,7 +1303,7 @@ function tM(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e6.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              ? (0, r.jsx)(e5.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
                               : (0, r.jsx)(e9.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
@@ -1417,10 +1416,10 @@ var tZ = n(111042),
     t4 = n(594061),
     t7 = n(935208),
     t3 = n(630248),
-    t5 = n(355097);
-function t6(e, t) {
+    t6 = n(355097);
+function t5(e, t) {
     o.useEffect(() => {
-        t4.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t4.bW.loadIfUncached(t6.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t3.A], () => t3.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -2130,12 +2129,12 @@ function n3(e, t) {
     let n = t3.A.getScoreWithoutLoadingLatest(e.id);
     return t3.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function n5(e, t) {
+function n6(e, t) {
     let n = (0, I.lq)(e),
         l = (0, I.lq)(t);
     return (0, g.RF)(n, l);
 }
-function n6(e, t) {
+function n5(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
@@ -2469,7 +2468,7 @@ function lm(e) {
                                 let n = $.Ay.getScoreWithoutLoadingLatest(u, e);
                                 return $.Ay.getScoreWithoutLoadingLatest(u, t) - n;
                             }),
-                            n6,
+                            n5,
                         ],
                     });
                 }, [s, c, l, t, n]),
@@ -2558,7 +2557,7 @@ function lm(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n3, n5],
+                        sortComparers: [n3, n6],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -3062,7 +3061,7 @@ function lv(e) {
                             let e = [];
                             return c && e.push(ns.gq), e;
                         }, [c]),
-                        u = t6(r, a),
+                        u = t5(r, a),
                         m = (0, A.bG)([eF.default], () => eF.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         let e = (e) => !(!1 === m && (0, t9.A)(e.id));
@@ -3239,7 +3238,7 @@ function lS(e) {
                         }, new Set()),
                     [s],
                 ),
-                c = t6(
+                c = t5(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})

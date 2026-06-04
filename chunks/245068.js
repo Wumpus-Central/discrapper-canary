@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { X: () => I });
+n.d(t, { X: () => A });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -9,72 +9,70 @@ var i = n(627968),
     u = n(778712),
     c = n(736653),
     d = n(775602),
-    _ = n(320447),
-    h = n(442759),
-    f = n(344346),
-    p = n(139136),
-    E = n(929283),
-    m = n(806771),
-    g = n(180171),
-    A = n(989099);
-let I = r.memo(function (e) {
-    let { product: t, isHighlighted: n, user: r, forCollectedModal: s, staticPreviewClassName: I } = e,
-        { firstProfileEffect: T, firstAvatarDecoration: S, firstNameplate: y } = (0, h.f5)(t),
-        { enabled: N } = (0, _.P)("BundlePreview"),
-        v = (0, o.bG)([d.A], () => d.A.useReducedMotion),
-        C = (0, c.Ay)(),
-        R = (0, l.q)(C),
-        O = null != y && null != S && null != T,
-        b = O ? u._3.SIZE_72 : u._3.SIZE_80,
-        D = t.previewAssets?.fgStatic;
-    if (N && null != D) {
-        let e = n && !v,
+    _ = n(442759),
+    h = n(344346),
+    f = n(139136),
+    p = n(929283),
+    E = n(806771),
+    m = n(180171),
+    g = n(989099);
+let A = r.memo(function (e) {
+    let { product: t, isHighlighted: n, user: r, forCollectedModal: s, staticPreviewClassName: A } = e,
+        { firstProfileEffect: I, firstAvatarDecoration: T, firstNameplate: S } = (0, _.f5)(t),
+        y = (0, o.bG)([d.A], () => d.A.useReducedMotion),
+        N = (0, c.Ay)(),
+        v = (0, l.q)(N),
+        C = null != S && null != T && null != I,
+        R = C ? u._3.SIZE_72 : u._3.SIZE_80,
+        O = t.previewAssets?.fgStatic;
+    if (null != O) {
+        let e = n && !y,
             r = t.previewAssets?.fgAnimated;
         return (0, i.jsx)("div", {
-            className: m.EJ,
+            className: E.EJ,
             children: (0, i.jsx)("img", {
-                className: a()(m.d2, I, { [m.M2]: n }),
-                src: e && null != r ? r : D,
+                className: a()(E.d2, A, { [E.M2]: n }),
+                src: e && null != r ? r : O,
                 alt: t.name,
             }),
         });
     }
     return (0, i.jsxs)("div", {
-        className: a()(m.kL, { [m.ib]: !O, [m.c$]: O }),
+        className: a()(E.kL, { [E.ib]: !C, [E.c$]: C }),
         children: [
-            null != T &&
+            null != I &&
                 (0, i.jsx)("div", {
-                    className: m.NM,
-                    children: (0, i.jsx)(p.A, {
+                    className: E.NM,
+                    children: (0, i.jsx)(f.A, {
                         isHighlighted: n,
-                        skuId: T.skuId,
+                        skuId: I.skuId,
                         removeSetHeight: !0,
                         delayProfileEffectIntro: s,
                         withScaleAnimation: s,
                     }),
                 }),
-            O &&
+            C &&
                 (0, i.jsx)("div", {
-                    className: m.M4,
-                    children: (0, i.jsx)(f.A, {
+                    className: E.M4,
+                    children: (0, i.jsx)(h.A, {
                         user: r,
-                        nameplate: y,
+                        nameplate: S,
                         isHighlighted: n,
                         showPlaceholderUser: !n,
-                        pendingAvatarDecoration: S,
+                        pendingAvatarDecoration: T,
                         hideDecorators: !0,
                     }),
                 }),
-            null != S &&
+            null != T &&
                 (0, i.jsx)("div", {
-                    className: m._P,
-                    children: (0, i.jsx)(E.i, {
-                        item: S,
+                    className: E._P,
+                    children: (0, i.jsx)(p.i, {
+                        item: T,
                         user: r,
-                        avatarSize: b,
+                        avatarSize: R,
                         isHighlighted: n,
-                        avatarPlaceholderSrc: R ? A : g,
-                        className: m.my,
+                        avatarPlaceholderSrc: v ? g : m,
+                        className: E.my,
                     }),
                 }),
         ],

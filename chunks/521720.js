@@ -1,55 +1,54 @@
-s.d(t, { default: () => w });
+s.d(t, { default: () => M });
 var a = s(627968),
     r = s(64700),
-    l = s(106778),
-    n = s(575593),
+    n = s(106778),
+    l = s(575593),
     i = s(772707),
     o = s(116833),
     c = s(793574),
     d = s(688810),
     u = s(206835),
     p = s(212739),
-    b = s(428262),
-    h = s(298072),
-    C = s(993408);
-let E = (0, s(945810).mj)({
+    h = s(428262),
+    E = s(298072),
+    m = s(993408);
+let C = (0, s(945810).mj)({
     name: "2026-05-orbs-purchase-upsell-banner",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var m = s(320447),
-    f = s(450481),
-    v = s(442759),
-    x = s(953150),
-    A = s(623373),
-    L = s(660653),
-    R = s(536572),
-    g = s(524246),
-    j = s(534514),
-    k = s(834730),
+var b = s(450481),
+    f = s(442759),
+    v = s(953150),
+    x = s(623373),
+    A = s(660653),
+    L = s(536572),
+    R = s(524246),
+    g = s(534514),
+    j = s(834730),
     y = s(821609),
-    O = s(403581),
-    T = s(532794),
-    I = s(788868),
-    N = s(939052);
-let _ = () => {
+    k = s(403581),
+    O = s(532794),
+    T = s(788868),
+    I = s(939052);
+let N = () => {
     let { analyticsLocations: e } = (0, d.Ay)(),
         t = r.useRef(null);
     return (0, a.jsxs)("div", {
-        className: N.kL,
+        className: I.kL,
         children: [
             (0, a.jsx)("div", {
-                className: N.LG,
+                className: I.LG,
                 "aria-hidden": !0,
                 role: "presentation",
-                children: (0, a.jsx)("img", { src: "/assets/54013366f9df47f1.svg", className: N.Qw, alt: "" }),
+                children: (0, a.jsx)("img", { src: "/assets/54013366f9df47f1.svg", className: I.Qw, alt: "" }),
             }),
             (0, a.jsxs)("div", {
-                className: N.rf,
+                className: I.rf,
                 children: [
-                    (0, a.jsx)(j.D, { variant: "heading-md/bold", children: "Get Orbs on repeat" }),
-                    (0, a.jsxs)(k.E, {
+                    (0, a.jsx)(g.D, { variant: "heading-md/bold", children: "Get Orbs on repeat" }),
+                    (0, a.jsxs)(j.E, {
                         variant: "text-xs/normal",
                         color: "text-subtle",
                         children: [
@@ -63,137 +62,134 @@ let _ = () => {
             (0, a.jsx)(y.$, {
                 buttonRef: t,
                 variant: "secondary",
-                icon: O.t,
+                icon: k.t,
                 text: "Get Nitro",
                 onClick: () => {
-                    (0, T.A)({ subscriptionTier: I.pe.TIER_2, analyticsLocations: e, returnRef: t });
+                    (0, O.A)({ subscriptionTier: T.pe.TIER_2, analyticsLocations: e, returnRef: t });
                 },
             }),
         ],
     });
 };
-var F = s(14368),
-    G = s(213530),
-    D = s(184264),
-    M = s(758836),
-    P = s(375708),
-    S = s(700797);
-let w = (e) => {
+var _ = s(14368),
+    F = s(213530),
+    G = s(184264),
+    D = s(758836),
+    S = s(375708),
+    w = s(700797);
+let M = (e) => {
     let {
             transitionState: t,
             product: s,
             onClose: r,
-            analyticsLocations: j,
-            overrideTitle: k,
+            analyticsLocations: g,
+            overrideTitle: j,
             overrideDescription: y,
-            shouldShowPromotionalExperience: O,
-            purchaseType: T = M.gs.FIAT,
-            overrideGraphic: I,
-            overrideGradientColor: N,
+            shouldShowPromotionalExperience: k,
+            purchaseType: O = D.gs.FIAT,
+            overrideGraphic: T,
+            overrideGradientColor: I,
         } = e,
-        w = (0, h.Q)(s),
-        V = (0, A.rb)(s, w),
-        { analyticsLocations: B } = (0, d.Ay)([...j, c.A.COLLECTIBLES_COLLECTED_MODAL]),
-        { hasRequiredProductItems: $ } = ((e) => {
+        M = (0, E.Q)(s),
+        P = (0, x.rb)(s, M),
+        { analyticsLocations: V } = (0, d.Ay)([...g, c.A.COLLECTIBLES_COLLECTED_MODAL]),
+        { hasRequiredProductItems: B } = ((e) => {
             let {
                     firstProfileEffect: t,
                     firstAvatarDecoration: s,
                     firstNameplate: a,
                     firstProfileFrame: r,
-                } = (0, v.f5)(e),
-                l = (0, C.aw)(e);
+                } = (0, f.f5)(e),
+                n = (0, m.aw)(e);
             return {
                 firstAvatarDecoration: s,
                 firstProfileEffect: t,
                 firstNameplate: a,
-                isBundle: l,
+                isBundle: n,
                 firstProfileFrame: r,
-                hasRequiredProductItems: l ? (0, L.uh)(e) : null != s || null != t || null != a || null != r,
+                hasRequiredProductItems: n ? (0, A.uh)(e) : null != s || null != t || null != a || null != r,
             };
-        })(V),
-        q = (0, u.A)({ analyticsLocations: B }),
-        K = P.intl.string(P.t.eZrmtq),
+        })(P),
+        $ = (0, u.A)({ analyticsLocations: V }),
+        q = S.intl.string(S.t.eZrmtq),
         {
-            environment: Q,
-            modalRef: H,
-            confettiCanvas: U,
-            setConfettiCanvas: W,
-            customConfettiDisplayOptions: Z,
-        } = (0, D.mO)(V, T),
-        z = (0, R.VG)(V);
-    (0, D.$V)(V, B);
-    let { handleUseNow: J, isApplying: X } = (0, f.p)({ product: V, onSuccess: r, onError: r }),
-        Y = (0, D.$k)({
-            product: V,
-            overrideTitle: k,
+            environment: K,
+            modalRef: Q,
+            confettiCanvas: H,
+            setConfettiCanvas: U,
+            customConfettiDisplayOptions: W,
+        } = (0, G.mO)(P, O),
+        Z = (0, L.VG)(P);
+    (0, G.$V)(P, V);
+    let { handleUseNow: z, isApplying: J } = (0, b.p)({ product: P, onSuccess: r, onError: r }),
+        X = (0, G.$k)({
+            product: P,
+            overrideTitle: j,
             isVariantsGroupEnabled: !0,
-            shouldShowPromotionalExperience: O,
-            productName: z,
+            shouldShowPromotionalExperience: k,
+            productName: Z,
         }),
-        ee = (0, D.v8)({
-            product: V,
+        Y = (0, G.v8)({
+            product: P,
             overrideDescription: y,
-            productName: z,
-            shouldShowPromotionalExperience: O,
-            promotionalRewardCollectedText: K,
+            productName: Z,
+            shouldShowPromotionalExperience: k,
+            promotionalRewardCollectedText: q,
         }),
-        et = (0, D.aG)({
-            product: V,
+        ee = (0, G.aG)({
+            product: P,
             onClose: r,
-            analyticsLocations: B,
-            hasRequiredProductItems: $,
-            handleUseNow: J,
-            isApplying: X,
-            openProfileSettings: q,
+            analyticsLocations: V,
+            hasRequiredProductItems: B,
+            handleUseNow: z,
+            isApplying: J,
+            openProfileSettings: $,
         }),
-        { enabled: es } = (0, m.P)("CollectiblesCollectedModal"),
-        ea = (0, b.nK)(),
-        er = (0, p.O)(),
-        el = E.useConfig({ location: "CollectiblesCollectedModal" }).enabled && T === M.gs.ORB && !ea && !er,
-        en = "6/4";
-    switch (V.type) {
-        case n.R.NAMEPLATE:
-        case n.R.AVATAR_DECORATION:
-            en = "16/9";
+        et = (0, h.nK)(),
+        es = (0, p.O)(),
+        ea = C.useConfig({ location: "CollectiblesCollectedModal" }).enabled && O === D.gs.ORB && !et && !es,
+        er = "6/4";
+    switch (P.type) {
+        case l.R.NAMEPLATE:
+        case l.R.AVATAR_DECORATION:
+        case l.R.BUNDLE:
+            er = "16/9";
             break;
-        case n.R.BUNDLE:
-            en = es ? "16/9" : "6/4";
-            break;
-        case n.R.PROFILE_EFFECT:
-        case n.R.PROFILE_FRAME:
+        case l.R.PROFILE_EFFECT:
+        case l.R.PROFILE_FRAME:
         default:
-            en = "6/4";
+            er = "6/4";
     }
-    let { confettiColors: ei } = (0, x.A)(V.styles),
-        eo = I ?? {
+    let { confettiColors: en } = (0, v.A)(P.styles),
+        el = T ?? {
             type: "dynamic",
             component: o.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
-            aspectRatio: en,
-            props: { product: V, forCollectedModal: !0 },
+            aspectRatio: er,
+            props: { product: P, forCollectedModal: !0 },
         };
     return (0, a.jsx)(d.f5, {
-        value: B,
+        value: V,
         children: (0, a.jsxs)("div", {
-            ref: H,
+            ref: Q,
             children: [
-                (0, a.jsx)(l.Fk, { ref: W, className: S.L, environment: Q }),
+                (0, a.jsx)(n.Fk, { ref: U, className: w.L, environment: K }),
                 (0, a.jsx)(i.k, {
-                    graphic: eo,
-                    title: Y,
-                    subtitle: ee ?? void 0,
+                    graphic: el,
+                    title: X,
+                    subtitle: Y ?? void 0,
                     onClose: r,
                     transitionState: t,
-                    actions: et,
-                    gradientColor: N ?? void 0,
-                    children: el && (0, a.jsx)(_, {}),
+                    actions: ee,
+                    gradientColor: I ?? void 0,
+                    children: ea && (0, a.jsx)(N, {}),
                 }),
-                null != Z
-                    ? (0, a.jsx)(G.K, { options: Z })
-                    : (0, a.jsx)(g.A, {
-                          confettiTarget: H.current,
-                          confettiCanvas: U,
-                          sprites: (0, F.rA)(V.categorySkuId),
-                          colors: ei?.map((e) => e.toHexString()),
+                null != W
+                    ? (0, a.jsx)(F.K, { options: W })
+                    : (0, a.jsx)(R.A, {
+                          confettiTarget: Q.current,
+                          confettiCanvas: H,
+                          sprites: (0, _.rA)(P.categorySkuId),
+                          colors: en?.map((e) => e.toHexString()),
                       }),
             ],
         }),

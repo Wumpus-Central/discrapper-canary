@@ -83,36 +83,53 @@
     transform-origin: center
 }
 
-.bundlePreview__517e1 {
+.bundlePreview__517e1,
+.profileFramePreview__517e1 {
     height: 100%;
     width: 100%
 }
 
 .profileFramePreview__517e1 {
+    align-items: center;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
     padding-block: 16px;
     padding-inline: 24px
 }
 
-.premiumPreview__517e1,
-.profileFramePreview__517e1 {
-    align-items: center;
-    display: flex;
+.bundleStaticPreview__517e1 {
     height: 100%;
-    justify-content: center;
+    position: relative;
+    width: 100%
+}
+
+.bundleStaticBackgroundAsset__517e1 {
+    height: 100%;
+    inset: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    pointer-events: none;
+    position: absolute;
     width: 100%
 }
 
 .premiumPreview__517e1 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
     overflow: hidden;
-    position: relative;
     transform-origin: center
 }
 
+.premiumPreview__517e1,
 .premiumRive__517e1 {
     height: 100%;
     position: relative;
-    width: 100%;
+    width: 100%
+}
+
+.premiumRive__517e1 {
     z-index: 1
 }
 

@@ -8,6 +8,8 @@ e.exports = {
     N1: "nameplatePreviewRescaler__517e1",
     hT: "bundlePreview__517e1",
     pI: "profileFramePreview__517e1",
+    Nq: "bundleStaticPreview__517e1",
+    bl: "bundleStaticBackgroundAsset__517e1",
     yv: "premiumPreview__517e1",
     MO: "premiumRive__517e1",
     iR: "premiumCardHover__517e1",

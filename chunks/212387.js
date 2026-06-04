@@ -32,11 +32,17 @@ function L(e) {
     let { sku: t, isFocused: n, user: s } = e,
         a = r.useMemo(() => (0, S.T)(t), [t]);
     if (null == a) return null;
-    if ("bundle" === a.type)
-        return (0, i.jsx)("div", {
-            className: D.hT,
-            children: (0, i.jsx)(N.X, { product: a, isHighlighted: n, user: s }),
+    if ("bundle" === a.type) {
+        let e = a.previewAssets?.fgStatic != null,
+            t = a.previewAssets?.bgStatic;
+        return (0, i.jsxs)("div", {
+            className: e ? D.Nq : D.hT,
+            children: [
+                e && null != t && (0, i.jsx)("img", { className: D.bl, src: t, alt: "" }),
+                (0, i.jsx)(N.X, { product: a, isHighlighted: n, user: s }),
+            ],
         });
+    }
     switch (a.item.type) {
         case f.R.AVATAR_DECORATION:
             return (0, i.jsx)(y.i, { user: s, avatarSize: b._3.SIZE_80, item: a.item, isHighlighted: n });
