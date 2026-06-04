@@ -1,0 +1,30 @@
+.previewContainer__9a244 {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    height: 100%;
+    overflow: hidden
+}
+
+.quote__9a244 {
+    background-color: var(--border-subtle);
+    border-radius: 2px;
+    flex-shrink: 0;
+    height: 100%;
+    width: 4px
+}
+
+.content__9a244 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 6px;
+    padding: 4px 0
+}
+
+.previewImage__9a244 {
+    height: auto;
+    max-height: 225px;
+    max-width: 225px;
+    width: auto
+}

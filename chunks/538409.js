@@ -697,8 +697,8 @@ function e1(e) {
           })
         : null;
 }
-var e3 = n(534890),
-    e6 = n(173936),
+var e6 = n(534890),
+    e3 = n(173936),
     e2 = n(477262),
     e7 = n(942381),
     e5 = n(265690),
@@ -848,7 +848,7 @@ function tu(e) {
         children: (0, a.jsxs)(eE, {
             children: [
                 (0, a.jsx)(es, {
-                    icon: (0, a.jsx)(e3.o, { size: "custom", color: "currentColor", width: 16, height: 16 }),
+                    icon: (0, a.jsx)(e6.o, { size: "custom", color: "currentColor", width: 16, height: 16 }),
                     name: (0, a.jsx)(b.E, {
                         variant: "text-sm/semibold",
                         color: "text-default",
@@ -865,7 +865,7 @@ function tu(e) {
                     onNavigate: r > 0 ? () => d(tt.MESSAGES) : void 0,
                 }),
                 (0, a.jsx)(es, {
-                    icon: (0, a.jsx)(e6.q, { size: "custom", width: 16, height: 16 }),
+                    icon: (0, a.jsx)(e3.q, { size: "custom", width: 16, height: 16 }),
                     name: (0, a.jsx)(b.E, {
                         variant: "text-sm/semibold",
                         color: "text-default",
@@ -1516,8 +1516,8 @@ var tb = n(97808),
     t$ = n(534400),
     t0 = n(495544),
     t1 = n(290863),
-    t3 = n(461213),
-    t6 = n(957565),
+    t6 = n(461213),
+    t3 = n(957565),
     t2 = n(427262),
     t7 = n(743981),
     t5 = n(637498);
@@ -1525,8 +1525,8 @@ function t9(e) {
     let { user: t, guildId: n, onClose: l } = e,
         r = t.id,
         i = (0, f.bG)(
-            [t3.A, t1.A, t0.default],
-            () => (r === t0.default.getId() ? t3.A.getStatus() : t1.A.getStatus(r, n)),
+            [t6.A, t1.A, t0.default],
+            () => (r === t0.default.getId() ? t6.A.getStatus() : t1.A.getStatus(r, n)),
             [r, n],
         );
     return (0, a.jsxs)("div", {
@@ -1633,14 +1633,14 @@ function t8(e) {
                 onClick: () => {
                     i?.(), tZ.A.isOpen() && (0, tK.jH)(), tY.A.openPrivateChannel({ recipientIds: t.id });
                 },
-                children: (0, a.jsx)(e3.o, { size: "custom", color: "currentColor", width: 24, height: 24 }),
+                children: (0, a.jsx)(e6.o, { size: "custom", color: "currentColor", width: 24, height: 24 }),
             }),
             (0, a.jsx)(t4, {
                 disabled: !u,
                 text: e_.intl.string(e_.t["3glT6Z"]),
                 onClick: () => {
                     (0, tV.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("9633"), n.e("91671"), n.e("40243")]).then(
+                        let { default: e } = await Promise.all([n.e("97660"), n.e("91671"), n.e("40243")]).then(
                             n.bind(n, 547166),
                         );
                         return (n) => (0, a.jsx)(e, { ...n, location: d, guildId: r, user: t, modReportId: s });
@@ -1689,9 +1689,9 @@ function t8(e) {
             (0, a.jsx)(t4, {
                 text: e_.intl.string(e_.t.IHTjzA),
                 onClick: () => {
-                    T(tq.Nj.COPY_ID), (0, t6.C)(t.id);
+                    T(tq.Nj.COPY_ID), (0, t3.C)(t.id);
                 },
-                disabled: !t6.p5,
+                disabled: !t3.p5,
                 children: (0, a.jsx)(tW.L, {
                     size: "custom",
                     width: 24,

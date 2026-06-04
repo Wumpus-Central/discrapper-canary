@@ -123,7 +123,7 @@ let V = (0, u.A)(
                                           action: () =>
                                               (0, D.openModalLazy)(async () => {
                                                   let { default: e } = await Promise.all([
-                                                      i.e("9633"),
+                                                      i.e("97660"),
                                                       i.e("40243"),
                                                   ]).then(i.bind(i, 547166));
                                                   return (n) => (0, t.jsx)(e, { ...n, guildId: u.id, user: Y });

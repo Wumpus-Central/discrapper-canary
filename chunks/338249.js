@@ -68,7 +68,7 @@ var f = s(375708),
     v = s(212515);
 let H = (0, O.Fe)({
     createPromise: () =>
-        Promise.all([s.e("10918"), s.e("19846"), s.e("58273"), s.e("75284"), s.e("41031")]).then(s.bind(s, 673809)),
+        Promise.all([s.e("8950"), s.e("19846"), s.e("58273"), s.e("75284"), s.e("41031")]).then(s.bind(s, 673809)),
     webpackId: 673809,
 });
 o.Ay.initialize();
