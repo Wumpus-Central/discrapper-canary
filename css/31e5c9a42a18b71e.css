@@ -1,0 +1,158 @@
+.upsellHeader_d9161f {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+.islands_d9161f {
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.mainIsland_d9161f {
+    bottom: 0;
+    height: 200px;
+    inset-inline-start: 0;
+    width: 400px
+}
+
+.balloonDog_d9161f {
+    bottom: 0;
+    height: 130px;
+    inset-inline-start: -10px;
+    width: 130px
+}
+
+.upsellHeaderText_d9161f {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center
+}
+
+.upsellButtons_d9161f {
+    align-items: center;
+    display: flex;
+    gap: 16px
+}
+
+.valuesContainer_d9161f {
+    display: flex;
+    flex-direction: column;
+    gap: 32px
+}
+
+.valueContainer_d9161f {
+    align-items: center;
+    display: flex;
+    gap: 32px;
+    justify-content: center
+}
+
+.valueText_d9161f {
+    flex-basis: 50%;
+    gap: 12px
+}
+
+.upsellContainer_d9161f,
+.valueText_d9161f {
+    display: flex;
+    flex-direction: column
+}
+
+.upsellContainer_d9161f {
+    gap: 32px
+}
+
+.upsellPreview_d9161f {
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    flex-basis: 50%;
+    padding: 16px
+}
+
+.previewListItem_d9161f {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    display: flex;
+    gap: 12px;
+    padding: 8px 12px;
+    position: relative
+}
+
+.previewListItem_d9161f.selected_d9161f {
+    background-color: var(--background-base-lowest)
+}
+
+.spacingSmall_d9161f {
+    gap: 8px
+}
+
+.spacingLarge_d9161f,
+.spacingSmall_d9161f {
+    display: flex;
+    flex-direction: column
+}
+
+.spacingLarge_d9161f {
+    gap: 12px
+}
+
+.uppercase_d9161f {
+    text-transform: uppercase
+}
+
+.channelIcon_d9161f {
+    color: var(--text-strong);
+    width: 16px
+}
+
+.channel_d9161f {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.spaceBetween_d9161f {
+    justify-content: space-between
+}
+
+.checkbox_d9161f {
+    align-items: center;
+    border: 2px solid var(--interactive-text-default);
+    border-radius: var(--radius-xs);
+    height: 20px;
+    width: 20px
+}
+
+.checkbox_d9161f.selected_d9161f {
+    background-color: var(--brand-500);
+    border: 2px solid var(--brand-500)
+}
+
+.checkmark_d9161f {
+    color: var(--white);
+    height: 16px;
+    width: 16px
+}
+
+.checkboxCircle_d9161f {
+    align-items: center;
+    background-color: var(--brand-500);
+    border-radius: 20px;
+    display: flex;
+    height: 20px;
+    inset-inline-end: -8px;
+    justify-content: center;
+    position: absolute;
+    top: -8px;
+    width: 20px
+}
+
+.tooltip_d9161f {
+    margin-bottom: 16px
+}

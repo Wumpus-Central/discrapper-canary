@@ -35,15 +35,6 @@
     top: 72px
 }
 
-:where(.avatar__75742).withReactReply__75742 {
-    position: static
-}
-
-:where(.avatar__75742).hoisted__75742 {
-    pointer-events: none;
-    z-index: var(--custom-user-profile-hoist-z-index)
-}
-
 .clickable__75742 {
     cursor: pointer
 }

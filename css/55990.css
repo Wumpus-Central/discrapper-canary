@@ -172,7 +172,7 @@ html:not(.chat-input) .inputInner_b1f01d {
 }
 
 .container_ab8609.hoisted_ab8609 {
-    z-index: var(--custom-user-profile-hoist-z-index)
+    z-index: var(--custom-user-profile-scrim-z-index)
 }
 
 .user-profile-popout .container_ab8609 {

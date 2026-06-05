@@ -2646,7 +2646,8 @@ function sf(e) {
                     return void (0, sg.openModalLazy)(
                         async () => {
                             let { ItemDetailsModal: e } = await Promise.all([
-                                l.e("78360"),
+                                l.e("18712"),
+                                l.e("78920"),
                                 l.e("53917"),
                                 l.e("15186"),
                                 l.e("80830"),
@@ -2674,7 +2675,8 @@ function sf(e) {
                         void (0, sg.openModalLazy)(
                             async () => {
                                 let { SubscriptionDetailsModal: a } = await Promise.all([
-                                    l.e("78360"),
+                                    l.e("18712"),
+                                    l.e("78920"),
                                     l.e("53917"),
                                     l.e("15186"),
                                     l.e("80830"),
