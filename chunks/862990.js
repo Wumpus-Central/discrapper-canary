@@ -1,26 +1,43 @@
 "use strict";
-n.d(t, { PA: () => T, O9: () => S, o1: () => g, FY: () => I, ux: () => A, bf: () => N });
+n.d(t, { bf: () => C, O9: () => v, PA: () => N, o1: () => T, bV: () => I, ux: () => S, FY: () => y });
 var i = n(17928),
     r = n(554146),
     s = n(826673),
     a = n(780964),
-    o = n(858897),
+    o = n(766075),
     l = n(287809),
     u = n(166403),
-    c = n(927578),
+    c = n(428262),
     d = n(427262),
     _ = n(593032);
-let f = (0, n(945810).mj)({
+let h = (0, n(945810).mj)({
     name: "2026-04-premium-group-primary-reminder-nagbar",
     kind: "user",
     defaultConfig: !1,
     variations: { 0: !1, 1: !0 },
 });
-var h = n(788868),
+var f = n(788868),
     p = n(88001),
     E = n(466919),
-    m = n(375708);
-let g = (e) => {
+    m = n(375708),
+    g = n(97352),
+    A = n(580630);
+let I = (e, t) => {
+        let { withIntervals: n } = t ?? {};
+        if (null == e || !e.hasAnyPremiumGroup) return null;
+        let i = e.planIdFromItems;
+        if (null == i) return null;
+        let r = g.A.get(i);
+        if (null == r) return null;
+        let s = (0, c.y8)(i),
+            a = (0, A.$g)(s.amount, s.currency);
+        if (!n) return a;
+        {
+            let { interval: e, intervalCount: t } = r;
+            return (0, A.CE)(a, e, t);
+        }
+    },
+    T = (e) => {
         let t,
             n,
             { sender: i, channel: r, isSender: s, inviteState: u } = e,
@@ -86,36 +103,36 @@ let g = (e) => {
             return { message: r, header: t, body: n };
         }
     },
-    A = (e, t) =>
+    S = (e, t) =>
         !(
             !e.isPremiumGroupPrimary() ||
-            !f.getConfig({ location: "PremiumGroupUtils" }) ||
+            !h.getConfig({ location: "PremiumGroupUtils" }) ||
             (0, s.u$)(r.M.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR, t.id).isDismissed ||
             null == t.createdAt ||
             Date.now() - t.createdAt.getTime() < p.qk
         ),
-    I = (e) => {
+    y = (e) => {
         let { isGift: t } = e;
-        return T() && !t;
+        return N() && !t;
     },
-    T = () => {
+    N = () => {
         let e = (0, _.A)({ location: "PremiumGroupPurchase" }),
             t = (0, i.bG)([u.A], () => u.A.getPremiumSubscription()),
             n = (0, i.bG)([l.default], () => l.default.getCurrentUser());
         return (
             !n?.isPremiumWithFractionalPremiumOnly() &&
             !!e &&
-            (null == t || (h.BL.has(t.premiumPlanIdFromItems ?? "") && !t.isPurchasedExternally))
+            (null == t || (f.BL.has(t.premiumPlanIdFromItems ?? "") && !t.isPurchasedExternally))
         );
     },
-    S = () => {
+    v = () => {
         let e = (0, _.A)({ location: "PremiumGroupPurchase" }),
-            t = T(),
+            t = N(),
             n = (0, i.bG)([l.default], () => l.default.getCurrentUser());
         return !!e && !!t && (null == n || !n.isPremiumWithPremiumGroup());
     },
-    N = () => {
-        let e = S(),
+    C = () => {
+        let e = v(),
             t = (0, i.bG)([l.default], () => l.default.getCurrentUser());
         return e && ((0, c.TW)(t) || !(0, c.mv)(t));
     };
