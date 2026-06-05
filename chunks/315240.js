@@ -8,21 +8,22 @@ n.d(t, {
     MI: () => ed,
     Fb: () => eg,
     VO: () => eT,
+    uL: () => ev,
     GS: () => ei,
     fd: () => Q,
-    Ts: () => eC,
+    Ts: () => eR,
     e6: () => eN,
     H1: () => ey,
-    l0: () => eO,
+    l0: () => eb,
     yd: () => eu,
     Su: () => eE,
     yO: () => Z,
-    $N: () => eR,
+    $N: () => eO,
     YK: () => em,
     eQ: () => X,
     qu: () => ep,
-    PW: () => ev,
-    w7: () => eb,
+    PW: () => eC,
+    w7: () => eD,
     K7: () => eA,
     HU: () => en,
     Mt: () => ee,
@@ -775,20 +776,23 @@ function eN(e) {
     a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { maxAutoClips: e } });
 }
 function ev(e) {
+    a.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { enableAutoclipping: e } });
+}
+function eC(e) {
     a.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
         settings: { clipSignals: { ...R.Ay.getSettings().clipSignals, ...e } },
     });
 }
-function eC(e, t) {
+function eR(e, t) {
     a.h.dispatch({ type: "CLIPS_SIGNAL_CREATED", signal: e, timestamp: t });
 }
-function eR(e) {
+function eO(e) {
     a.h.dispatch({ type: "CLIPS_ML_DETECTION", detections: e });
 }
-function eO() {
-    eC({ type: O.Gy.MANUAL });
+function eb() {
+    eR({ type: O.Gy.MANUAL });
 }
-async function eb(e) {
+async function eD(e) {
     await e_(e, { isTemporary: !1 });
 }

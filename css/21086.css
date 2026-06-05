@@ -678,19 +678,6 @@
     background-color: var(--background-base-lower)
 }
 
-.nitroWheelLockup__19f56 {
-    display: grid;
-    place-items: center
-}
-
-.nitroWheelLockupLayer__19f56 {
-    grid-area: 1/1
-}
-
-.nitroWheelLockupLayer__19f56 img {
-    display: block
-}
-
 .container__52c9d {
     position: absolute;
     top: 0;
@@ -6724,4 +6711,17 @@ html .invoiceCancelRow__968a4 {
     flex-grow: 1;
     margin-inline-start: 4px;
     width: 80px
+}
+
+.smallCardItem__02912 {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    overflow: hidden;
+    width: 246px
+}
+
+.storeLinksContainer__4177a {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
 }

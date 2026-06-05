@@ -1,28 +1,30 @@
 "use strict";
-n.d(t, { Ao: () => u, Et: () => l, TD: () => o, XT: () => c });
+n.d(t, { Ao: () => c, Et: () => u, TD: () => l, XT: () => d });
 var i = n(17928),
     r = n(723702),
     s = n(734066),
-    a = n(274372);
-function o() {
-    let e = (0, s.Pm)(),
-        t = a.Ay.getState().clipsSettings.clipsEnabled;
-    return e && t;
-}
+    a = n(888916),
+    o = n(274372);
 function l() {
-    let e = (0, s.sw)(),
-        t = (0, i.bG)([a.Ay], () => a.Ay.getState().clipsSettings.clipsEnabled);
+    let e = (0, s.Pm)(),
+        t = o.Ay.getState().clipsSettings.clipsEnabled;
     return e && t;
 }
 function u() {
-    let e = o(),
-        t = (0, r.isWindows)(),
-        n = a.Ay.getState().clipsSettings.decoupledClipsEnabled;
-    return e && t && n;
+    let e = (0, s.sw)(),
+        t = (0, i.bG)([o.Ay], () => o.Ay.getState().clipsSettings.clipsEnabled);
+    return e && t;
 }
 function c() {
     let e = l(),
-        t = (0, r.isWindows)(),
-        n = (0, i.bG)([a.Ay], () => a.Ay.getState().clipsSettings.decoupledClipsEnabled);
+        t = (0, r.isWindows)();
+    if ((0, a.Fp)()) return e && t;
+    let n = o.Ay.getState().clipsSettings.decoupledClipsEnabled;
     return e && t && n;
+}
+function d() {
+    let e = u(),
+        t = (0, r.isWindows)(),
+        n = (0, i.bG)([o.Ay], () => o.Ay.getState().clipsSettings.decoupledClipsEnabled);
+    return (0, a.As)() ? e && t : e && t && n;
 }

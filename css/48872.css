@@ -18,3 +18,16 @@
     margin-inline-end: 4px;
     width: 14px
 }
+
+.nitroWheelLockup__1f2d0 {
+    display: grid;
+    place-items: center
+}
+
+.nitroWheelLockupLayer__1f2d0 {
+    grid-area: 1/1
+}
+
+.nitroWheelLockupLayer__1f2d0 img {
+    display: block
+}
