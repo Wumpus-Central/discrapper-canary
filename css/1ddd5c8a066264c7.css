@@ -2710,7 +2710,6 @@
 }
 
 .card__53b91 {
-    border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
     display: flex;
     flex-direction: column;
@@ -2756,7 +2755,8 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-12);
-    padding: var(--space-16)
+    padding: var(--space-16);
+    --custom-message-height: 66px
 }
 
 .full-motion .container_a2d698 {
@@ -2811,7 +2811,16 @@
 }
 
 .messageContent_a2d698 {
-    overflow: hidden
+    -webkit-mask-image: linear-gradient(to bottom, #fff calc(var(--custom-message-height) - var(--space-12)), transparent calc(var(--custom-message-height) + var(--space-12)));
+    mask-image: linear-gradient(to bottom, #fff calc(var(--custom-message-height) - var(--space-12)), transparent calc(var(--custom-message-height) + var(--space-12)));
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical
+}
+
+.messageContentContainer_a2d698 {
+    height: var(--custom-message-height)
 }
 
 .bodyBottom_a2d698 {

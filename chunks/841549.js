@@ -295,7 +295,7 @@ function s(e, t, a) {
                 n.e("11802"),
                 n.e("59617"),
                 n.e("93829"),
-                n.e("1785"),
+                n.e("24166"),
             ]).then(n.bind(n, 960064));
             return (t) => (0, l.jsx)(e, { ...t, guildId: a });
         });

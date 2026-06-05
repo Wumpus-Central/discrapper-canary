@@ -4260,7 +4260,7 @@ function sI(e) {
         if (null == a) return null;
         (0, sf.L3)(e, async () => {
             let { default: e } = await Promise.all([
-                n.e("64684"),
+                n.e("45143"),
                 n.e("94881"),
                 n.e("26132"),
                 n.e("46652"),
@@ -5169,35 +5169,35 @@ function a5(e) {
         : null;
 }
 function a8(e) {
-    let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: i } = e,
-        { ref: s, width: a } = (0, am.Ay)(),
-        [c, u] = o.useState(3),
-        [h, g] = o.useState(!n),
-        [p, A] = (0, ag.A)(!1, 2e3),
-        f = (0, m.bG)([eX.A], () => eX.A.getChannel(t), [t]),
-        { firstMessage: C } = (0, a1.OA)(f),
-        x = (0, m.bG)([aQ.A], () => aQ.A.hasJoined(t)),
-        { disableReactionUpdates: E, disableReactionCreates: S, isLurking: _, isPendingMember: j } = (0, av.A)(f),
-        v = (0, ak.W1)(f),
-        T = (0, m.bG)([eX.A], () => eX.A.getChannel(i)),
-        N = (0, iD.Ck)(T),
-        y = (0, m.bG)([ap.A], () => ap.A.shouldDisplayPrompt(t) && !0 === n, [t, n]),
-        b = o.useCallback(
+    let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: i, hideDivider: s = !1, className: a } = e,
+        { ref: c, width: u } = (0, am.Ay)(),
+        [h, g] = o.useState(3),
+        [p, A] = o.useState(!n),
+        [f, C] = (0, ag.A)(!1, 2e3),
+        x = (0, m.bG)([eX.A], () => eX.A.getChannel(t), [t]),
+        { firstMessage: E } = (0, a1.OA)(x),
+        S = (0, m.bG)([aQ.A], () => aQ.A.hasJoined(t)),
+        { disableReactionUpdates: _, disableReactionCreates: j, isLurking: v, isPendingMember: T } = (0, av.A)(x),
+        N = (0, ak.W1)(x),
+        y = (0, m.bG)([eX.A], () => eX.A.getChannel(i)),
+        b = (0, iD.Ck)(y),
+        M = (0, m.bG)([ap.A], () => ap.A.shouldDisplayPrompt(t) && !0 === n, [t, n]),
+        R = o.useCallback(
             (e) => {
                 let t = e[0];
                 if (null != t && n) {
                     let e = t.intersectionRect,
                         n = t.boundingClientRect;
-                    g((e.bottom - e.top) / (n.bottom - n.top) < 1);
+                    A((e.bottom - e.top) / (n.bottom - n.top) < 1);
                 }
             },
             [n],
         );
     if (
         (o.useLayoutEffect(() => {
-            let e = s.current;
+            let e = c.current;
             if (null == e || !n) return;
-            let t = new IntersectionObserver(b, { threshold: 1 });
+            let t = new IntersectionObserver(R, { threshold: 1 });
             return (
                 t.observe(e),
                 () => {
@@ -5206,46 +5206,46 @@ function a8(e) {
             );
         }),
         o.useLayoutEffect(() => {
-            null == a || u(Math.floor((a - 280) / 58));
-        }, [a]),
-        null == f)
+            null == u || g(Math.floor((u - 280) / 58));
+        }, [u]),
+        null == x)
     )
         return null;
-    let M = null != C && C.reactions.length > 0,
-        R = () => {
-            (0, a2.jC)({ postId: f.id, location: { section: w.JJy.CHANNEL_HEADER } }),
-                (0, tu.C)((0, aC.af)(f, T), () => A(!0));
+    let D = null != E && E.reactions.length > 0,
+        L = () => {
+            (0, a2.jC)({ postId: x.id, location: { section: w.JJy.CHANNEL_HEADER } }),
+                (0, tu.C)((0, aC.af)(x, y), () => C(!0));
         },
-        D = x ? ao.A : ac.X;
+        O = S ? ao.A : ac.X;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)("div", {
-                className: d()(a3.kL, { [a3.wx]: h }),
-                ref: s,
+                className: d()(a, a3.kL, { [a3.wx]: p }),
+                ref: c,
                 children: [
-                    v
+                    N
                         ? (0, r.jsx)("div", {
                               className: a3.kX,
-                              children: null != C && (0, r.jsx)(aX, { message: C, channel: f }),
+                              children: null != E && (0, r.jsx)(aX, { message: E, channel: x }),
                           })
                         : (0, r.jsx)("div", {
                               className: a3.hY,
                               children:
-                                  null != C &&
+                                  null != E &&
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          !M &&
-                                              !S &&
-                                              null != N &&
+                                          !D &&
+                                              !j &&
+                                              null != b &&
                                               (0, r.jsx)("div", {
                                                   className: a4.reactions,
                                                   children: (0, r.jsx)(aD.qT, {
-                                                      message: C,
+                                                      message: E,
                                                       readOnly: !1,
                                                       useChatFontScaling: !1,
-                                                      isLurking: _,
-                                                      isPendingMember: j,
-                                                      emoji: N,
+                                                      isLurking: v,
+                                                      isPendingMember: T,
+                                                      emoji: b,
                                                       type: aj.v.NORMAL,
                                                       hideCount: !0,
                                                       count: 0,
@@ -5256,26 +5256,26 @@ function a8(e) {
                                                   }),
                                               }),
                                           (0, r.jsx)(aR.A, {
-                                              message: C,
-                                              channel: f,
+                                              message: E,
+                                              channel: x,
                                               disableReactionCreates: !0,
-                                              disableReactionUpdates: E,
-                                              isLurking: _,
-                                              isPendingMember: j,
-                                              maxReactions: c,
+                                              disableReactionUpdates: _,
+                                              isLurking: v,
+                                              isPendingMember: T,
+                                              maxReactions: h,
                                               className: a3.Br,
                                               useChatFontScaling: !1,
                                               isForumToolbar: !0,
                                               forceHideReactionCreates: !0,
                                           }),
-                                          !S &&
+                                          !j &&
                                               (0, r.jsx)(aT.t, {
-                                                  message: C,
-                                                  channel: f,
+                                                  message: E,
+                                                  channel: x,
                                                   useChatFontScaling: !1,
-                                                  className: d()(a7.secondary, a3.vU, { [a3.w$]: !M }),
+                                                  className: d()(a7.secondary, a3.vU, { [a3.w$]: !D }),
                                                   isForumToolbar: !0,
-                                                  children: !M && eL.intl.string(eL.t.xpOyTO),
+                                                  children: !D && eL.intl.string(eL.t.xpOyTO),
                                               }),
                                       ],
                                   }),
@@ -5283,38 +5283,38 @@ function a8(e) {
                     (0, r.jsxs)("div", {
                         className: a3.Uo,
                         children: [
-                            v
-                                ? (0, r.jsx)(a5, { channel: f })
-                                : !_ &&
+                            N
+                                ? (0, r.jsx)(a5, { channel: x })
+                                : !v &&
                                   (0, r.jsx)(ef.m, {
                                       text: eL.intl.string(eL.t.F7oeDv),
                                       children: (0, r.jsx)(eR.$, {
-                                          icon: D,
+                                          icon: O,
                                           size: "sm",
                                           variant: "secondary",
-                                          text: x ? eL.intl.string(eL.t["7OkUzs"]) : eL.intl.string(eL.t["3aOv+h"]),
+                                          text: S ? eL.intl.string(eL.t["7OkUzs"]) : eL.intl.string(eL.t["3aOv+h"]),
                                           onClick: () => {
-                                              x
-                                                  ? a0.A.leaveThread(f, "Forum Toolbar")
-                                                  : a0.A.joinThread(f, "Forum Toolbar");
+                                              S
+                                                  ? a0.A.leaveThread(x, "Forum Toolbar")
+                                                  : a0.A.joinThread(x, "Forum Toolbar");
                                           },
                                       }),
                                   }),
                             (0, r.jsx)(ef.m, {
                                 text: eL.intl.string(eL.t.WqhZss),
-                                children: p
+                                children: f
                                     ? (0, r.jsx)(eR.$, {
                                           icon: ao.A,
                                           size: "sm",
                                           variant: "secondary",
-                                          onClick: R,
+                                          onClick: L,
                                           text: eL.intl.string(eL.t.t5VZ88),
                                       })
                                     : (0, r.jsx)(ad.K, {
                                           icon: tw.q,
                                           size: "sm",
                                           variant: "secondary",
-                                          onClick: R,
+                                          onClick: L,
                                           "aria-label": eL.intl.string(eL.t.WqhZss),
                                       }),
                             }),
@@ -5327,8 +5327,8 @@ function a8(e) {
                                         variant: "secondary",
                                         onClick: () => {
                                             I.A.jumpToMessage({
-                                                channelId: f.id,
-                                                messageId: f.id,
+                                                channelId: x.id,
+                                                messageId: x.id,
                                                 flash: !0,
                                                 jumpType: ah.US.INSTANT,
                                             });
@@ -5340,8 +5340,8 @@ function a8(e) {
                     }),
                 ],
             }),
-            y && (0, r.jsx)(aI, { threadId: t }),
-            (0, r.jsx)(aM, { channel: f, isLastItem: l }),
+            M && (0, r.jsx)(aI, { threadId: t }),
+            !s && (0, r.jsx)(aM, { channel: x, isLastItem: l }),
         ],
     });
 }
@@ -5402,10 +5402,10 @@ function rc(e) {
         className: ro.TX,
         children: [
             (0, r.jsxs)(a6.Ar, {
-                className: ro.XG,
                 children: [
                     (0, r.jsx)("ol", {
                         children: (0, r.jsx)(n$, {
+                            className: ro.iU,
                             compact: n,
                             channel: l,
                             message: t,
@@ -5416,34 +5416,29 @@ function rc(e) {
                             hideInviteEmbedBanner: !0,
                         }),
                     }),
-                    (0, r.jsxs)("div", {
-                        className: ro.TY,
-                        children: [
-                            s.length > 0 &&
-                                (0, r.jsx)("div", {
-                                    className: ro.GA,
-                                    children: s.map((e) => (0, r.jsx)(iL.A, { tag: e, size: iL.A.Sizes.MEDIUM }, e.id)),
-                                }),
-                            (0, r.jsx)("div", {
-                                className: ro.Y0,
-                                children: (0, r.jsx)(a8, {
-                                    parentChannelId: l.parent_id,
-                                    postId: l.id,
-                                    isFirstMessage: !0,
-                                    isLastItem: !0,
-                                }),
-                            }),
-                        ],
+                    s.length > 0 &&
+                        (0, r.jsx)("div", {
+                            className: ro.GA,
+                            children: s.map((e) => (0, r.jsx)(iL.A, { tag: e, size: iL.A.Sizes.MEDIUM }, e.id)),
+                        }),
+                    (0, r.jsx)("div", { className: ro.b1 }),
+                    (0, r.jsx)(a8, {
+                        className: ro.Jr,
+                        parentChannelId: l.parent_id,
+                        postId: l.id,
+                        isFirstMessage: !0,
+                        isLastItem: !0,
+                        hideDivider: !0,
                     }),
+                    !a &&
+                        (0, r.jsxs)(r.Fragment, {
+                            children: [
+                                (0, r.jsx)("div", { className: ro.b1 }),
+                                (0, r.jsx)(rr, { className: ro.Lz, channel: l }),
+                            ],
+                        }),
                 ],
             }),
-            !a &&
-                (0, r.jsxs)(r.Fragment, {
-                    children: [
-                        (0, r.jsx)("div", { className: ro.b1 }),
-                        (0, r.jsx)(rr, { className: ro.Lz, channel: l }),
-                    ],
-                }),
             (0, r.jsx)("div", { className: ro.ld }),
         ],
     });
