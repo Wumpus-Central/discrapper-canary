@@ -987,32 +987,29 @@ let ty = {
                                 [c, i, l, n],
                             )),
                         S = (0, g.bG)([tn.A], () => (null != T ? tn.A.get(T) : null), [T]),
-                        { normalPrice: P, discountedPrice: N } = (0, tg.CD)({
-                            sku: S,
-                            priceSetAssignmentPurchaseType: e2.lid.GIFT,
-                        }),
-                        f = (0, tf.fq)(S),
-                        x = (0, tf.xf)(S),
-                        R = async (e, t) => {},
-                        L = (e) => {
+                        { userPrice: P } = (0, tg.CD)({ sku: S, priceSetAssignmentPurchaseType: e2.lid.GIFT }),
+                        N = (0, tf.fq)(S),
+                        f = (0, tf.xf)(S),
+                        x = async (e, t) => {},
+                        R = (e) => {
                             null != _ && _(null == e ? void 0 : e);
                         },
-                        U = () =>
+                        L = () =>
                             (0, r.jsxs)("div", {
                                 className: tv.mT,
                                 children: [
-                                    null != f &&
+                                    null != N &&
                                         (0, r.jsx)(t_.A, {
                                             containerClassName: tv.T3,
-                                            cardImage: f,
-                                            cardBackgroundImage: x,
+                                            cardImage: N,
+                                            cardBackgroundImage: f,
                                             altText: S?.name ?? "",
                                             shape: "square",
                                         }),
                                     (0, r.jsxs)("div", {
                                         className: tv._T,
                                         children: [
-                                            (0, r.jsx)(th.A, { sound: C, onSelect: L }),
+                                            (0, r.jsx)(th.A, { sound: C, onSelect: R }),
                                             (0, r.jsx)(tS.A, {
                                                 setEmojiConfetti: p,
                                                 emojiConfetti: null == d ? void 0 : d,
@@ -1021,14 +1018,14 @@ let ty = {
                                     }),
                                 ],
                             }),
-                        v = () => {
+                        U = () => {
                             let e = S?.orbsReward;
                             return (0, r.jsxs)("div", {
                                 className: tv.Tc,
                                 children: [
                                     null != c && (E === e_.vQ.USER_PROFILE_WISHLIST || E === e_.vQ.DM_CHANNEL_WISHLIST)
                                         ? (0, r.jsx)(e0.Z, { giftRecipient: c })
-                                        : (0, r.jsx)(eV, { selectedSkuId: T, validateSelectedGift: R, recipients: A }),
+                                        : (0, r.jsx)(eV, { selectedSkuId: T, validateSelectedGift: x, recipients: A }),
                                     (0, r.jsx)(eJ.A, {
                                         onTextChange: (e) => u?.(e),
                                         pendingText: o,
@@ -1053,11 +1050,11 @@ let ty = {
                                                               className: tv.Xb,
                                                               children:
                                                                   null != S &&
-                                                                  null != f &&
+                                                                  null != N &&
                                                                   (0, r.jsx)(t_.A, {
                                                                       containerClassName: tv.Iy,
-                                                                      cardImage: f,
-                                                                      cardBackgroundImage: x,
+                                                                      cardImage: N,
+                                                                      cardBackgroundImage: f,
                                                                       altText: S.name,
                                                                       shape: "square",
                                                                   }),
@@ -1074,7 +1071,7 @@ let ty = {
                                                           }),
                                                           (0, r.jsx)(eN.E, {
                                                               variant: "text-md/semibold",
-                                                              children: N ?? P,
+                                                              children: P,
                                                           }),
                                                       ],
                                                   }),
@@ -1094,9 +1091,9 @@ let ty = {
                             });
                         };
                     return {
-                        renderStepBody: () => (0, r.jsxs)("div", { className: tv.Du, children: [U(), v()] }),
-                        getLeftColumnComponent: U,
-                        getRightColumnComponent: v,
+                        renderStepBody: () => (0, r.jsxs)("div", { className: tv.Du, children: [L(), U()] }),
+                        getLeftColumnComponent: L,
+                        getRightColumnComponent: U,
                         onStepChange: s,
                         onBackClick: a,
                         disabled: null == c || c.id === O?.id || o.length > e_.Jo,

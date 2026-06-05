@@ -84,15 +84,15 @@ function N(e) {
                 l = (0, u.yK)([E.A], () => E.A.getRewardsForSkuId(t?.id) ?? []),
                 d = (0, u.bG)([h.default], () => h.default.getCurrentUser());
             return a.useMemo(() => {
-                if (null == t) return { normalPrice: null, discountedPrice: null, discountPercent: null };
+                if (null == t)
+                    return { normalPrice: null, discountedPrice: null, discountPercent: null, userPrice: null };
                 if (!o) {
                     let e =
-                        t.productLine === _.EZt.SOCIAL_LAYER_GAME_ITEM ? (0, c.y8)(t, n) : t.getPrice(d?.premiumType);
-                    return {
-                        normalPrice: null != e && e.amount > 0 ? e : null,
-                        discountedPrice: null,
-                        discountPercent: null,
-                    };
+                            t.productLine === _.EZt.SOCIAL_LAYER_GAME_ITEM
+                                ? (0, c.y8)(t, n)
+                                : t.getPrice(d?.premiumType),
+                        i = null != e && e.amount > 0 ? e : null;
+                    return { normalPrice: i, discountedPrice: null, discountPercent: null, userPrice: i };
                 }
                 let e = l.find((e) => e[s]?.type === m.DISCOUNT),
                     a = null != e ? e[s] : null,
@@ -102,18 +102,24 @@ function N(e) {
                         null != a
                             ? r?.prices[_.FBC.BASE]?.[A.NORMAL]?.find((e) => e.currency !== _.Yri.DISCORD_ORB)
                             : i;
-                return { normalPrice: null != f && f.amount > 0 ? f : null, discountedPrice: u, discountPercent: h };
+                return {
+                    normalPrice: null != f && f.amount > 0 ? f : null,
+                    discountedPrice: u,
+                    discountPercent: h,
+                    userPrice: i ?? null,
+                };
             }, [t, n, d?.premiumType, o, i, r, s, l]);
         })({ sku: t, priceSetAssignmentPurchaseType: n }),
         r = (0, u.bG)([d.default], () => d.default.locale);
     return a.useMemo(
         () =>
             (function (e, t) {
-                let { normalPrice: n, discountedPrice: i, discountPercent: r } = e;
+                let { normalPrice: n, discountedPrice: i, discountPercent: r, userPrice: s } = e;
                 return {
                     normalPrice: null != n && n.amount > 0 ? (0, p.$g)(n.amount, n.currency) : null,
-                    discountedPrice: null != i ? (0, p.$g)(i.amount, i.currency) : null,
+                    discountedPrice: null != i && i.amount > 0 ? (0, p.$g)(i.amount, i.currency) : null,
                     discountPercent: null != r ? (0, p.l9)(t, -r / 100) : null,
+                    userPrice: null != s && s.amount > 0 ? (0, p.$g)(s.amount, s.currency) : null,
                 };
             })(i, r),
         [i, r],

@@ -387,8 +387,7 @@ function em(e) {
             displayPrice: eK,
         } = (function (e) {
             let { sku: t } = e,
-                { normalPrice: l, discountedPrice: n, discountPercent: a } = (0, w.CD)({ sku: t }),
-                i = n ?? l,
+                { normalPrice: l, discountedPrice: n, discountPercent: a, userPrice: i } = (0, w.CD)({ sku: t }),
                 o = s.useMemo(
                     () =>
                         null != t && null != t.orbsReward && t.orbsReward > 0
