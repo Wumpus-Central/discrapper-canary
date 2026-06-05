@@ -26,8 +26,8 @@ var _ = n(310829),
     A = n(964486),
     S = n(666646),
     h = n(64700),
-    g = n(17928),
-    P = n(871109);
+    P = n(17928),
+    g = n(871109);
 let N = h.createContext(void 0);
 function f() {
     let e = h.useContext(N);
@@ -35,7 +35,7 @@ function f() {
 }
 function x(e) {
     let { children: t, skuId: n, ...l } = e,
-        i = (0, g.bG)([P.A], () => P.A.getGuildProduct(n));
+        i = (0, P.bG)([g.A], () => g.A.getGuildProduct(n));
     return (
         O()(null != i, "guildProductListing cannot be null"),
         (0, r.jsx)(N.Provider, { value: { guildProductListing: i, ...l }, children: t })
@@ -254,8 +254,8 @@ var eI = n(123292),
     eA = n(993408),
     eS = n(575593),
     eh = n(452027),
-    eg = n(922016),
-    eP = n(778712),
+    eP = n(922016),
+    eg = n(778712),
     eN = n(834730),
     ef = n(534514),
     ex = n(986687),
@@ -282,7 +282,7 @@ function eG(e) {
             hideProfilePreview: a,
         } = e,
         { giftRecipient: o, giftRecipientError: u } = (0, V.Pv)(),
-        c = (0, g.bG)([eU.default], () => eU.default.getCurrentUser()),
+        c = (0, P.bG)([eU.default], () => eU.default.getCurrentUser()),
         d = ev.Ay.canUseShopDiscounts(c),
         C = (0, eR.Ay)(o?.id),
         p = h.useRef(null),
@@ -304,7 +304,7 @@ function eG(e) {
                     children:
                         S &&
                         (0, r.jsx)(
-                            eg.Y,
+                            eP.Y,
                             {
                                 targetElementRef: p,
                                 align: "center",
@@ -315,7 +315,7 @@ function eG(e) {
                                     (0, r.jsx)(ex.A, {
                                         ...e,
                                         user: o,
-                                        pendingAvatar: o.getAvatarURL(null, (0, eP.FT)(eP._3.SIZE_80)),
+                                        pendingAvatar: o.getAvatarURL(null, (0, eg.FT)(eg._3.SIZE_80)),
                                         pendingAvatarDecoration: (0, ey.T)(O) ? O : null,
                                         pendingProfileEffect: (0, ek.C3)(O) ? O : null,
                                         pendingProfileFrame: (0, ej.s)(O) ? O : null,
@@ -422,7 +422,7 @@ let eV = (e) => {
                       id: e.id,
                       value: e.id,
                       label: `${eW.Ay.getUserTag(e)}`,
-                      leading: (0, r.jsx)(eK.A, { user: e, size: eP._3.SIZE_20 }),
+                      leading: (0, r.jsx)(eK.A, { user: e, size: eg._3.SIZE_20 }),
                   })),
               }),
           });
@@ -433,8 +433,8 @@ var eY = n(735438),
     eX = n(570287),
     eq = n(994500);
 function eQ() {
-    let e = (0, g.yK)([eq.A], () => eq.A.getFriendIDs()),
-        t = (0, g.yK)([ez.A], () =>
+    let e = (0, P.yK)([eq.A], () => eq.A.getFriendIDs()),
+        t = (0, P.yK)([ez.A], () =>
             ez.A.getUserAffinities()
                 .filter((e) => {
                     let { isFriend: t, communicationProbability: n, vcProbability: l, otherUserId: i } = e,
@@ -447,7 +447,7 @@ function eQ() {
                 }),
         ),
         n = h.useMemo(() => eZ().uniq([...e, ...t]), [e, t]);
-    return (0, g.yK)(
+    return (0, P.yK)(
         [eU.default],
         () =>
             n.reduce((e, t) => {
@@ -541,7 +541,7 @@ let e9 = (e) => {
                                 checkoutInvoicePreview: e.checkoutInvoicePreview,
                             })),
                             _ = (0, ei.gU)(),
-                            m = (0, g.bG)([eU.default], () => eU.default.getCurrentUser()),
+                            m = (0, P.bG)([eU.default], () => eU.default.getCurrentUser()),
                             T = eQ(),
                             I = async (e, t) => {
                                 d(!0),
@@ -755,10 +755,10 @@ let ts = {
         [o.pn.GIFT_CUSTOMIZATION]: (e) => {
             let { customGiftMessage: t = "", setCustomGiftMessage: n, giftRecipient: l } = (0, V.Pv)(),
                 s = (0, er.t4)((e) => e.selectedSkuId),
-                a = (0, g.bG)([eU.default], () => eU.default.getCurrentUser()),
-                o = (0, g.bG)([tn.A], () => (null != s ? tn.A.get(s) : null), [s]),
+                a = (0, P.bG)([eU.default], () => eU.default.getCurrentUser()),
+                o = (0, P.bG)([tn.A], () => (null != s ? tn.A.get(s) : null), [s]),
                 u = eQ(),
-                c = (0, g.bG)([tl.A], () => (null != s ? tl.A.getForSKU(s) : null), [s]),
+                c = (0, P.bG)([tl.A], () => (null != s ? tl.A.getForSKU(s) : null), [s]),
                 d =
                     c?.headerBackground != null && o?.applicationId != null
                         ? (0, ti.YE)(o.applicationId, c.headerBackground, 256)
@@ -885,8 +885,8 @@ var tT = n(889137),
     tA = n(313961),
     tS = n(238017),
     th = n(650588),
-    tg = n(723090),
-    tP = n(763827),
+    tP = n(723090),
+    tg = n(763827),
     tN = n(403362),
     tf = n(871123),
     tx = n(832163),
@@ -948,12 +948,12 @@ let ty = {
                         } = (0, V.Pv)(),
                         T = (0, er.t4)((e) => e.selectedSkuId),
                         { application: I } = (0, en.V)(),
-                        O = (0, g.bG)([eU.default], () => eU.default.getCurrentUser()),
+                        O = (0, P.bG)([eU.default], () => eU.default.getCurrentUser()),
                         A =
                             ((t = O?.id),
                             (n = eQ()),
                             (l = (function (e) {
-                                let t = (0, g.bG)([tP.A], () => (tP.A.isConnected() ? tP.A.getChannelId() : null)),
+                                let t = (0, P.bG)([tg.A], () => (tg.A.isConnected() ? tg.A.getChannelId() : null)),
                                     [n, l] = h.useState([]);
                                 return (
                                     h.useEffect(() => {
@@ -977,7 +977,7 @@ let ty = {
                                     n
                                 );
                             })(t)),
-                            (i = (0, g.yK)([eU.default], () => m?.map(eU.default.getUser).filter(tN.Vq) ?? [], [m])),
+                            (i = (0, P.yK)([eU.default], () => m?.map(eU.default.getUser).filter(tN.Vq) ?? [], [m])),
                             h.useMemo(
                                 () =>
                                     eZ().uniqWith(
@@ -986,8 +986,8 @@ let ty = {
                                     ),
                                 [c, i, l, n],
                             )),
-                        S = (0, g.bG)([tn.A], () => (null != T ? tn.A.get(T) : null), [T]),
-                        { userPrice: P } = (0, tg.CD)({ sku: S, priceSetAssignmentPurchaseType: e2.lid.GIFT }),
+                        S = (0, P.bG)([tn.A], () => (null != T ? tn.A.get(T) : null), [T]),
+                        { userPrice: g } = (0, tP.CD)({ sku: S, priceSetAssignmentPurchaseType: e2.lid.GIFT }),
                         N = (0, tf.fq)(S),
                         f = (0, tf.xf)(S),
                         x = async (e, t) => {},
@@ -1071,7 +1071,7 @@ let ty = {
                                                           }),
                                                           (0, r.jsx)(eN.E, {
                                                               variant: "text-md/semibold",
-                                                              children: P,
+                                                              children: g,
                                                           }),
                                                       ],
                                                   }),
@@ -1128,12 +1128,7 @@ let ty = {
                 let { applicationId: t, skuId: n } = e,
                     l = (0, ta.h)(t);
                 h.useEffect(() => {
-                    null == l ||
-                        null == l.guildId ||
-                        null == n ||
-                        tl.A.isFetchingForSKU(n) ||
-                        null != tn.A.get(n) ||
-                        (0, to.qf)(l.guildId, n);
+                    null == l || null == n || tl.A.isFetchingForSKU(n) || null != tn.A.get(n) || (0, to.Pp)(l.id, n);
                 }, [l, n]);
             })({ applicationId: i, skuId: a });
             let d = o.onClose,
@@ -1468,8 +1463,8 @@ let ne = (0, h.createContext)({
                                 onRedeemVirtualCurrency: a,
                                 handleStepChange: u,
                             }),
-                            S = (0, g.bG)([tn.A], () => tn.A.get(t), [t]),
-                            P = (0, tD.u)(S?.applicationId),
+                            S = (0, P.bG)([tn.A], () => tn.A.get(t), [t]),
+                            g = (0, tD.u)(S?.applicationId),
                             {
                                 disabled: N,
                                 tooltipText: f,
@@ -1486,13 +1481,13 @@ let ne = (0, h.createContext)({
                                         [n, t, l],
                                     );
                                 return { disabled: i, tooltipText: r, text: t9() };
-                            })({ orbBalance: T, orbPriceAmount: c ? d : m, isInTestMode: P }),
+                            })({ orbBalance: T, orbPriceAmount: c ? d : m, isInTestMode: g }),
                             R = (0, h.useMemo)(
                                 () => ({ onClick: I, loading: i, text: x, disabled: N, tooltipText: f }),
                                 [I, i, x, N, f],
                             ),
                             L = O ? eE.intl.format(eE.t.fsOXXO, {}) : null,
-                            U = P ? eE.intl.string(eE.t.OvMyMd) : null;
+                            U = g ? eE.intl.string(eE.t.OvMyMd) : null;
                         return {
                             isStepLoading: p,
                             upperInlineNoticeProps: (0, h.useMemo)(() => {
@@ -1554,9 +1549,9 @@ let ne = (0, h.createContext)({
                         onRedeemVirtualCurrency: p,
                     } = ((e) => {
                         let { skuId: t, loadId: n, onCheckoutSuccess: l, onSignFailure: i, order: r } = e,
-                            s = (0, g.bG)([eU.default], () => ev.Ay.canUseShopDiscounts(eU.default.getCurrentUser())),
-                            a = (0, g.bG)([tn.A], () => tn.A.get(t), [t]),
-                            o = (0, tg.JL)({ sku: a }),
+                            s = (0, P.bG)([eU.default], () => ev.Ay.canUseShopDiscounts(eU.default.getCurrentUser())),
+                            a = (0, P.bG)([tn.A], () => tn.A.get(t), [t]),
+                            o = (0, tP.JL)({ sku: a }),
                             { product: u } = (0, eM.q)(t),
                             c = (0, h.useMemo)(() => {
                                 if (null != o) return { orbPriceAmount: o.amount };
@@ -1845,8 +1840,8 @@ class nc {
                 (O.current = e.id), (A.current = e);
             },
             { modalKey: h } = t,
-            g = this.generateRenderHeader(),
-            P = _ ?? this.getApplicationIdFor1PShopSKU(c),
+            P = this.generateRenderHeader(),
+            g = _ ?? this.getApplicationIdFor1PShopSKU(c),
             N = !!(null != i && i.isGift),
             f = !1;
         return (0, a.openModalLazy)(
@@ -1863,13 +1858,13 @@ class nc {
                             null != o && o(e), (f = !0);
                         },
                         onClose: u,
-                        renderHeader: g,
+                        renderHeader: P,
                         skuId: c,
                         tenantParams: I ?? {},
                         loadId: O.current,
                         onOrderCreated: S,
                         discoverySessionId: C,
-                        applicationId: P,
+                        applicationId: g,
                         analyticsLocations: m,
                         analyticsObject: T,
                         analyticsSourceLocation: E,
@@ -1890,7 +1885,7 @@ class nc {
                             loadId: O.current,
                             skuId: c,
                             skuProductLine: d,
-                            applicationId: P,
+                            applicationId: g,
                             discoverySessionId: C,
                             analyticsLocations: m,
                             analyticsObject: T,

@@ -2708,62 +2708,63 @@ function lB(e) {
 function lV(e) {
     let { applicationId: t, skuId: n, channel: i } = e,
         l = (0, u.bG)([lM.A], () => lM.A.getGuildIdFromApplicationId(t));
-    return null == l ? null : (0, s.jsx)(lH, { guildId: l, skuId: n, channel: i });
+    return (0, s.jsx)(lH, { applicationId: t, guildId: l, skuId: n, channel: i });
 }
 function lH(e) {
-    let { guildId: t, skuId: n, channel: i, customNavigateToSocialLayerStorefront: l } = e,
-        a = (0, u.bG)([eO.A], () => eO.A.isFetchingForSKU(n)),
-        o = (0, lb.A)({ skuId: n }),
-        d = o?.applicationId,
-        c = (0, u.bG)([lN.A], () => null != d && lN.A.isFetchingApplication(d)),
-        m = (0, u.bG)([lN.A], () => null != d && lN.A.didFetchingApplicationFail(d)),
-        h = (0, ly.h)(d),
-        { analyticsLocations: g } = (0, f.Ay)(x.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED);
+    let { guildId: t, skuId: n, channel: i, applicationId: l, customNavigateToSocialLayerStorefront: a } = e,
+        o = (0, u.bG)([eO.A], () => eO.A.isFetchingForSKU(n)),
+        d = (0, lb.A)({ skuId: n }),
+        c = (0, u.bG)([lM.A], () => (null != t ? lM.A.getApplicationIdFromGuildId(t) : void 0)),
+        m = d?.applicationId ?? l ?? c,
+        h = (0, u.bG)([lN.A], () => null != m && lN.A.isFetchingApplication(m)),
+        g = (0, u.bG)([lN.A], () => null != m && lN.A.didFetchingApplicationFail(m)),
+        A = (0, ly.h)(m),
+        { analyticsLocations: E } = (0, f.Ay)(x.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED);
     (0, lL.pE)();
-    let A = (0, u.bG)([U.default], () =>
+    let C = (0, u.bG)([U.default], () =>
             i.isDM() && null != i.recipients && 0 !== i.recipients.length ? U.default.getUser(i.recipients[0]) : null,
         ),
-        E = (0, u.bG)([lM.A], () => (null != n ? lM.A.getNormalizedSKUEligibility(n) : void 0), [n]),
-        { primaryIconAsset: C, primaryIconLabel: I } = r.useMemo(() => (0, lR.Cv)(o, d), [o, d]),
-        { normalPrice: v, discountedPrice: _, discountPercent: j, userPrice: N } = (0, lS.CD)({ sku: o });
+        I = (0, u.bG)([lM.A], () => (null != n ? lM.A.getNormalizedSKUEligibility(n) : void 0), [n]),
+        { primaryIconAsset: v, primaryIconLabel: _ } = r.useMemo(() => (0, lR.Cv)(d, m), [d, m]),
+        { normalPrice: j, discountedPrice: N, discountPercent: T, userPrice: y } = (0, lS.CD)({ sku: d });
     r.useEffect(() => {
-        null == t || null == n || eO.A.isFetchingForSKU(n) || (0, lk.qf)(t, n);
-    }, [t, n]);
-    let T = r.useCallback(
+        null == m || null == n || eO.A.isFetchingForSKU(n) || (0, lk.Pp)(m, n);
+    }, [m, n]);
+    let S = r.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    o?.applicationId != null &&
+                    d?.applicationId != null &&
                         (0, lP.R)({
-                            customNavigateToSocialLayerStorefront: l,
+                            customNavigateToSocialLayerStorefront: a,
                             skuId: n,
-                            applicationId: o.applicationId,
+                            applicationId: d.applicationId,
                             isStorefront: !1,
-                            analyticsLocations: g,
+                            analyticsLocations: E,
                         });
             },
-            [n, o, g, l],
+            [n, d, E, a],
         ),
-        y = r.useCallback(() => {
-            null != o &&
-                E &&
+        b = r.useCallback(() => {
+            null != d &&
+                I &&
                 (0, lD.a)(
-                    o,
+                    d,
                     { isGift: !1 },
                     { analyticsLocations: [x.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON], guildId: t },
                 );
-        }, [o, t, E]),
-        S = r.useCallback(() => {
-            null != o &&
+        }, [d, t, I]),
+        L = r.useCallback(() => {
+            null != d &&
                 (0, lD.a)(
-                    o,
-                    { isGift: !0, giftRecipient: A ?? void 0 },
+                    d,
+                    { isGift: !0, giftRecipient: C ?? void 0 },
                     { analyticsLocations: [x.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON] },
                 );
-        }, [o, A]),
-        b = null != d && null == h && !m;
-    return (a || c || b) && (null == o || null == h)
+        }, [d, C]),
+        R = null != m && null == A && !g;
+    return (o || h || R) && (null == d || null == A)
         ? (0, s.jsx)("div", { className: lG.kL, children: (0, s.jsx)(tw.y, { className: lG.u1 }) })
-        : null != o && null != h && (0, lT.A)(h) && h.guildId === t
+        : null != A && null != d && (0, lT.A)(A) && A.id === d.applicationId
           ? (0, s.jsxs)("div", {
                 className: lG.kL,
                 children: [
@@ -2771,8 +2772,8 @@ function lH(e) {
                         className: lG.Nr,
                         skuId: n,
                         variant: lU.s.EMBEDDED,
-                        onClick: T,
-                        analyticsLocations: g,
+                        onClick: S,
+                        analyticsLocations: E,
                     }),
                     (0, s.jsxs)("div", {
                         className: lG.zH,
@@ -2784,16 +2785,16 @@ function lH(e) {
                                     (0, s.jsxs)("div", {
                                         className: lG.PB,
                                         children: [
-                                            null != C &&
-                                                (0, s.jsx)("img", { src: C.toString(), alt: I, className: lG.ye }),
+                                            null != v &&
+                                                (0, s.jsx)("img", { src: v.toString(), alt: _, className: lG.ye }),
                                             (0, s.jsx)(p.E, {
                                                 variant: "text-md/medium",
                                                 lineClamp: 1,
-                                                children: o.name,
+                                                children: d.name,
                                             }),
                                         ],
                                     }),
-                                    (0, s.jsx)(lB, { sku: o, normalPrice: v, discountedPrice: _, discountPercent: j }),
+                                    (0, s.jsx)(lB, { sku: d, normalPrice: j, discountedPrice: N, discountPercent: T }),
                                 ],
                             }),
                             (0, s.jsxs)(lj.e, {
@@ -2801,25 +2802,25 @@ function lH(e) {
                                 fullWidth: !0,
                                 children: [
                                     (0, s.jsx)(iR.m, {
-                                        text: E ? void 0 : J.intl.string(J.t.IqlPbQ),
+                                        text: I ? void 0 : J.intl.string(J.t.IqlPbQ),
                                         children: (0, s.jsx)(eg.$, {
-                                            variant: E ? "secondary" : "primary",
-                                            onClick: T,
+                                            variant: I ? "secondary" : "primary",
+                                            onClick: S,
                                             text: J.intl.string(J.t.KLBTgF),
                                             fullWidth: !0,
                                         }),
                                     }),
-                                    E &&
+                                    I &&
                                         (0, s.jsx)(eg.$, {
                                             variant: "primary",
-                                            onClick: y,
+                                            onClick: b,
                                             text:
-                                                null != N
-                                                    ? J.intl.format(J.t.Xp5WTn, { price: N })
+                                                null != y
+                                                    ? J.intl.format(J.t.Xp5WTn, { price: y })
                                                     : J.intl.string(J.t.boqtTA),
                                             fullWidth: !0,
                                         }),
-                                    (0, s.jsx)(lO.A, { onGift: S }),
+                                    (0, s.jsx)(lO.A, { onGift: L }),
                                 ],
                             }),
                         ],

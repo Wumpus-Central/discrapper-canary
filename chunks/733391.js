@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { F4: () => N, Kh: () => S, Pp: () => A, Rw: () => m, SP: () => T, Xw: () => y, ap: () => E, qf: () => I });
+n.d(t, { Kh: () => T, Pp: () => A, Rw: () => m, SP: () => I, Xw: () => S, ap: () => E, iR: () => y });
 var i = n(636537),
     r = n(228366),
     s = n(927813),
@@ -80,14 +80,10 @@ function A(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     return g(t, u.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_BY_APPLICATION_ID(e, t), n);
 }
-function I(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    return g(t, u.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU(e, t), n);
-}
-function T(e, t, n) {
+function I(e, t, n) {
     r.h.dispatch({ type: "SET_SOCIAL_LAYER_STOREFRONT_STATE", applicationId: e, pageIndex: t, skuId: n });
 }
-async function S(e) {
+async function T(e) {
     try {
         r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_START", guildId: e });
         let t = (await i.Bo.get({ url: u.Rsh.SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT(e), rejectWithError: !0 })).body,
@@ -116,7 +112,7 @@ async function S(e) {
         r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_FAILURE", guildId: e });
     }
 }
-async function y() {
+async function S() {
     let e = l.A.getConfigFetchState();
     if (
         !("loading" === e.state || ("success" === e.state && Date.now() - e.fetchedAt < _)) &&
@@ -157,35 +153,33 @@ async function y() {
             r.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE" });
         }
 }
-function N(e, t) {
-    var n;
-    let s;
-    (n = u.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY_FOR_APPLICATION_ID(e, t)),
-        "checking" !== (s = l.A.getSKUEligibility(t)) &&
-            "eligible" !== s &&
-            "ineligible" !== s &&
-            (r.h.dispatch({ type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START", skuId: t }),
-            setTimeout(() => {
-                "checking" === l.A.getSKUEligibility(t) &&
-                    r.h.dispatch({
-                        type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE",
-                        skuId: t,
-                        reason: "interaction_deadline",
-                    });
-            }, f),
-            i.Bo.post({ url: n, rejectWithError: !0 })
-                .then((e) => {
-                    r.h.dispatch({
-                        type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE",
-                        skuId: t,
-                        interactionId: e.body.interaction_id,
-                    });
-                })
-                .catch((e) => {
-                    r.h.dispatch({
-                        type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE",
-                        skuId: t,
-                        httpStatus: e?.status,
-                    });
-                }));
+function y(e, t) {
+    let n = l.A.getSKUEligibility(t);
+    "checking" !== n &&
+        "eligible" !== n &&
+        "ineligible" !== n &&
+        (r.h.dispatch({ type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_START", skuId: t }),
+        setTimeout(() => {
+            "checking" === l.A.getSKUEligibility(t) &&
+                r.h.dispatch({
+                    type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE",
+                    skuId: t,
+                    reason: "interaction_deadline",
+                });
+        }, f),
+        i.Bo.post({ url: u.Rsh.SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY(e, t), rejectWithError: !0 })
+            .then((e) => {
+                r.h.dispatch({
+                    type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE",
+                    skuId: t,
+                    interactionId: e.body.interaction_id,
+                });
+            })
+            .catch((e) => {
+                r.h.dispatch({
+                    type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE",
+                    skuId: t,
+                    httpStatus: e?.status,
+                });
+            }));
 }
