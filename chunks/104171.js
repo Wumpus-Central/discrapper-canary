@@ -166,6 +166,7 @@ class S extends r.PureComponent {
             { popoutUserId: l } = this.state;
         if (null == l)
             return (0, i.jsxs)("div", {
+                ref: this._ref,
                 className: a()(e, p.kL, T(t)),
                 children: [this.renderIcon(), this.renderUsers()],
             });
