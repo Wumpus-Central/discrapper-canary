@@ -5,10 +5,11 @@ n.d(t, {
     KE: () => O,
     Kx: () => N,
     Li: () => T,
+    Lv: () => B,
     Ni: () => v,
     RN: () => g,
     aL: () => A,
-    ds: () => Y,
+    ds: () => W,
     eg: () => V,
     pd: () => L,
 }),
@@ -248,13 +249,26 @@ let v = (e) => {
             t
         );
     };
-function B(e, t) {
+function B(e) {
+    return new Promise((t, n) => {
+        let i = new window.Image(),
+            r = setTimeout(() => n(Error("Timed out measuring image")), 15e3);
+        (i.onload = () => {
+            clearTimeout(r), t({ width: i.naturalWidth, height: i.naturalHeight });
+        }),
+            (i.onerror = () => {
+                clearTimeout(r), n(Error("Failed to measure image"));
+            }),
+            (i.src = e);
+    });
+}
+function H(e, t) {
     return e.length > 0 ? Math.max(...e) : t;
 }
-function H(e, t, n) {
+function j(e, t, n) {
     return Math.max(0, e - (t - n));
 }
-let j = async (e, t, n) => {
+let Y = async (e, t, n) => {
         var i;
         let r,
             s,
@@ -286,22 +300,7 @@ let j = async (e, t, n) => {
                     c.map(async (e) => {
                         let { layer: t } = e;
                         try {
-                            var n;
-                            return {
-                                layer: t,
-                                dims: await ((n = d[t.id]),
-                                new Promise((e, t) => {
-                                    let i = new window.Image(),
-                                        r = setTimeout(() => t(Error("Timed out measuring image")), 15e3);
-                                    (i.onload = () => {
-                                        clearTimeout(r), e({ width: i.naturalWidth, height: i.naturalHeight });
-                                    }),
-                                        (i.onerror = () => {
-                                            clearTimeout(r), t(Error("Failed to measure image"));
-                                        }),
-                                        (i.src = n);
-                                })),
-                            };
+                            return { layer: t, dims: await B(d[t.id]) };
                         } catch (e) {
                             return m.error(`Failed to measure preview layer ${t.id}:`, e), null;
                         }
@@ -309,7 +308,7 @@ let j = async (e, t, n) => {
                 )
             ).filter((e) => null != e)),
             (r = o.x.INNER_WIDTH),
-            (s = B(
+            (s = H(
                 i
                     .filter((e) => {
                         let { layer: t } = e;
@@ -323,7 +322,7 @@ let j = async (e, t, n) => {
             )),
             {
                 innerWidth: r,
-                overflowTop: B(
+                overflowTop: H(
                     i
                         .filter((e) => {
                             let { layer: t } = e;
@@ -331,11 +330,11 @@ let j = async (e, t, n) => {
                         })
                         .map((e) => {
                             let { dims: t } = e;
-                            return H(t.height, 716, o.x.OVERFLOW_TOP);
+                            return j(t.height, 716, o.x.OVERFLOW_TOP);
                         }),
                     0,
                 ),
-                overflowBottom: B(
+                overflowBottom: H(
                     i
                         .filter((e) => {
                             let { layer: t } = e;
@@ -343,7 +342,7 @@ let j = async (e, t, n) => {
                         })
                         .map((e) => {
                             let { dims: t } = e;
-                            return H(t.height, 424, o.x.OVERFLOW_BOTTOM);
+                            return j(t.height, 424, o.x.OVERFLOW_BOTTOM);
                         }),
                     0,
                 ),
@@ -351,7 +350,7 @@ let j = async (e, t, n) => {
             });
         return { key: e, previewSrc: a, layers: _, layerSrcByLayerId: d, ...h };
     },
-    Y = () => {
+    W = () => {
         let [e, t] = a.useState(() => ({
                 collectionFiles: [],
                 avatarDecorationFiles: [],
@@ -377,7 +376,7 @@ let j = async (e, t, n) => {
                         await Promise.all(
                             Object.entries(s.profileFrameDirsMap).map(async (e) => {
                                 let [t, n] = e,
-                                    i = await j(t, n, s.ignoredFilenames);
+                                    i = await Y(t, n, s.ignoredFilenames);
                                 null != i && r(t, i);
                             }),
                         ),
