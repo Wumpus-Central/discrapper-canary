@@ -2467,6 +2467,15 @@
     transform: scale(.93)
 }
 
+.thumbnailInset__848b5 .thumbnailContent__848b5 {
+    transform: scale(.85)
+}
+
+.thumbnailInset__848b5.thumbnailSelected__848b5 .thumbnailContent__848b5,
+.thumbnailInset__848b5:hover .thumbnailContent__848b5 {
+    transform: scale(.75)
+}
+
 .thumbnail__848b5>* {
     pointer-events: none
 }

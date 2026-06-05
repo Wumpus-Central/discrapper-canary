@@ -7,6 +7,7 @@ e.exports = {
     xn: "thumbnail__848b5",
     Y4: "thumbnailSelected__848b5",
     Yf: "thumbnailContent__848b5",
+    u8: "thumbnailInset__848b5",
     mC: "activeItemRow__848b5",
     kx: "activeItemNameText__848b5",
     FP: "activeItemTypeText__848b5",
