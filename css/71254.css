@@ -1695,7 +1695,7 @@
 .container__9c314 {
     --custom-preview-inline-padding: 6px;
     --custom-preview-block-padding: 0;
-    margin-inline: calc((var(--custom-preview-inline-padding) + 2px)*-1);
+    margin-inline: calc((var(--custom-preview-inline-padding) + 1px)*-1);
     position: relative
 }
 
@@ -1730,7 +1730,7 @@
 
 .editable__9c314 {
     align-items: center;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     border-radius: var(--radius-sm);
     box-sizing: border-box;
     cursor: pointer;
@@ -1761,7 +1761,8 @@
 
 .editable__9c314.hasError__9c314 {
     background-color: var(--input-background-error-default);
-    border-color: var(--input-border-error-default)
+    outline: 2px solid var(--input-border-error-default);
+    outline-offset: -2px
 }
 
 .container__9c314:not(.compact__9c314) .editable__9c314.hasError__9c314 {
@@ -1771,9 +1772,7 @@
 .editable__9c314.hasError__9c314:has(:focus),
 .editable__9c314.hasError__9c314:hover {
     background-color: var(--input-background-error-default);
-    border-color: var(--input-border-error-default);
-    outline: 2px solid var(--input-border-error-default);
-    outline-offset: -2px
+    border-color: transparent
 }
 
 .placeholder__9c314 {
@@ -1807,7 +1806,7 @@
     --control-icon-only-background-hover: var(--control-secondary-background-default);
     --control-icon-only-border-hover: var(--control-secondary-border-default);
     margin-block: 2px;
-    margin-inline-end: calc((var(--custom-preview-inline-padding) + 2px)*-1)
+    margin-inline-end: calc((var(--custom-preview-inline-padding) + 1px)*-1)
 }
 
 .inputWrapper_f08f8d {
@@ -6213,6 +6212,12 @@ button.inner__02fc8:disabled {
 .enable-forced-colors .inner__02fc8:disabled {
     opacity: .3;
     pointer-events: none
+}
+
+.container__98113 {
+    align-items: center;
+    display: flex;
+    flex-direction: column
 }
 
 .banner_ea1e6c {

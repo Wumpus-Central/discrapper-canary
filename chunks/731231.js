@@ -407,6 +407,7 @@ let eX = (e) => {
         ? f
             ? (0, i.jsxs)("div", {
                   className: a()(eq.UX, t),
+                  onKeyDown: (e) => e.stopPropagation(),
                   children: [
                       (0, i.jsx)(eH.v, { size: "md", color: "currentColor", className: eq.Kk }),
                       (0, i.jsx)(eR.E, {
@@ -431,6 +432,7 @@ let eX = (e) => {
               })
             : (0, i.jsxs)("div", {
                   className: a()(eq.UX, t),
+                  onKeyDown: (e) => e.stopPropagation(),
                   children: [
                       (0, i.jsx)(ea.t, {
                           size: "custom",
@@ -585,9 +587,9 @@ let te = r.memo(function (e) {
                                         }),
                                         (0, h.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
-                                                n.e("94258"),
-                                                n.e("95709"),
-                                                n.e("22575"),
+                                                n.e("20315"),
+                                                n.e("71254"),
+                                                n.e("95788"),
                                                 n.e("16688"),
                                                 n.e("8891"),
                                                 n.e("83952"),
@@ -1390,9 +1392,9 @@ let tk = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 W.default.track(e_.HAw.OPEN_MODAL, { type: e_.JJy.CREATE_STICKER_MODAL, location: c }),
                                     (0, h.openModalLazy)(async () => {
                                         let { default: t } = await Promise.all([
-                                            n.e("94258"),
-                                            n.e("95709"),
-                                            n.e("22575"),
+                                            n.e("20315"),
+                                            n.e("71254"),
+                                            n.e("95788"),
                                             n.e("16688"),
                                             n.e("8891"),
                                             n.e("83952"),
