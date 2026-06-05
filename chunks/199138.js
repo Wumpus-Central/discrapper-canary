@@ -29,7 +29,9 @@ c.exports = {
     gW: "goToShopButton__38ccf headerButtonBase__38ccf",
     sj: "priceSectionContainer__38ccf",
     hO: "salePriceRow__38ccf",
+    XE: "salePriceRowSpaceBetween__38ccf",
+    _k: "fiatPriceDisplay__38ccf",
     Jb: "originalPrice__38ccf",
     Fi: "discountBadge__38ccf",
-    pt: "orbsEarnedContainer__38ccf",
+    aX: "orbsPriceDisplay__38ccf",
 };

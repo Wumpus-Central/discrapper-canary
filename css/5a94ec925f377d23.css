@@ -384,6 +384,18 @@
     gap: var(--space-4)
 }
 
+.salePriceRowSpaceBetween__38ccf {
+    justify-content: space-between;
+    width: 100%
+}
+
+.fiatPriceDisplay__38ccf {
+    align-items: end;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4)
+}
+
 .originalPrice__38ccf {
     color: var(--text-muted);
     text-decoration: line-through
@@ -393,7 +405,14 @@
     color: var(--text-feedback-positive)
 }
 
-.orbsEarnedContainer__38ccf {
+.orbsPriceDisplay__38ccf {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.orbsEarnedContainer__38ccf,
+.orbsPriceDisplay__38ccf {
     color: var(--text-muted)
 }
 
