@@ -1,18 +1,18 @@
-n.d(t, { A: () => w }), n(321073);
-var s,
-    i = n(627968),
-    r = n(64700),
-    o = n(695497),
-    l = n.n(o),
-    d = n(143236),
-    a = n(723702),
-    h = n(19575),
-    u = n(350535),
-    c = n(650583);
+s.d(t, { A: () => w }), s(321073);
+var n,
+    i = s(627968),
+    r = s(64700),
+    o = s(695497),
+    l = s.n(o),
+    d = s(143236),
+    a = s(723702),
+    h = s(19575),
+    c = s(350535),
+    u = s(650583);
 let p = [],
-    m = (e, t, n) => {
-        let s = +!(0, a.isWindows)();
-        (e !== c.zY.MOUSE_BUTTON || n !== s) && p.forEach((s) => s._handleEvent(e, t, n));
+    m = (e, t, s) => {
+        let n = +!(0, a.isWindows)();
+        (e !== u.zY.MOUSE_BUTTON || s !== n) && p.forEach((n) => n._handleEvent(e, t, s));
     };
 class g extends d.EventEmitter {
     combo = [];
@@ -23,29 +23,29 @@ class g extends d.EventEmitter {
         this.removeAllListeners(), 0 === (p = p.filter((e) => e !== this)).length && h.Ay.setOnInputEventCallback(null);
     }
     toString() {
-        return (0, u.dI)(this.combo);
+        return (0, c.dI)(this.combo);
     }
-    _handleEvent(e, t, n) {
+    _handleEvent(e, t, s) {
         0 === t
             ? (this.combo = this.combo.filter((t) => {
-                  let [s, i] = t;
-                  return s !== e || i !== n;
+                  let [n, i] = t;
+                  return n !== e || i !== s;
               }))
-            : (this.combo.push([e, n, (0, u._$)()]), this.emit("change", this));
+            : (this.combo.push([e, s, (0, c._$)()]), this.emit("change", this));
     }
 }
-var R = n(503698),
-    C = n.n(R),
-    E = n(507392),
-    f = n.n(E),
-    _ = n(735438),
-    D = n.n(_),
-    v = n(187322),
-    b = n(821609),
-    N = n(235986),
-    O = n(375708),
-    I = n(598723),
-    U = (((s = {}).DEFAULT = "DEFAULT"), (s.RECORDING = "RECORDING"), s);
+var R = s(503698),
+    C = s.n(R),
+    E = s(507392),
+    f = s.n(E),
+    _ = s(735438),
+    D = s.n(_),
+    b = s(187322),
+    v = s(821609),
+    N = s(235986),
+    O = s(375708),
+    I = s(598723),
+    U = (((n = {}).DEFAULT = "DEFAULT"), (n.RECORDING = "RECORDING"), n);
 let A = { DEFAULT: I.__invalid_default, RECORDING: I.oz };
 class y extends r.PureComponent {
     _inputId = D().uniqueId("key-recorder-");
@@ -58,52 +58,52 @@ class y extends r.PureComponent {
     }
     componentDidUpdate(e) {
         let { mode: t } = this.props,
-            { mode: n } = e;
-        if (n === t) return;
-        let { _inputRef: s } = this;
-        if (null == s.current) return;
+            { mode: s } = e;
+        if (s === t) return;
+        let { _inputRef: n } = this;
+        if (null == n.current) return;
         let { activeElement: i } = document;
-        "DEFAULT" === t && s.current === i && s.current.blur(),
-            "RECORDING" === t && s.current !== i && s.current.focus();
+        "DEFAULT" === t && n.current === i && n.current.blur(),
+            "RECORDING" === t && n.current !== i && n.current.focus();
     }
     setInputRef = (e) => {
-        let { registerNativeRecorder: t, onChange: n } = this.props;
+        let { registerNativeRecorder: t, onChange: s } = this.props;
         if (((this._inputRef.current = e), this._unregisterNativeRecorder?.(), null != e))
-            if (null != t && null != n)
+            if (null != t && null != s)
                 try {
-                    this._unregisterNativeRecorder = t(e.id, n);
+                    this._unregisterNativeRecorder = t(e.id, s);
                 } catch (e) {
                     this._unregisterNativeRecorder = null;
                 }
-            else null != n && (new (f())(e).handleKey = n);
+            else null != s && (new (f())(e).handleKey = s);
     };
     handleClick = (e) => {
         e.stopPropagation(), e.preventDefault();
-        let { onClick: t, disableOnClickWhileRecording: n } = this.props;
-        (n && "RECORDING" === this._mousedownMode) || t();
+        let { disabled: t, onClick: s, disableOnClickWhileRecording: n } = this.props;
+        !0 === t || (n && "RECORDING" === this._mousedownMode) || s();
     };
     handleMouseDown = () => {
         this._mousedownMode = this.props.mode;
     };
     render() {
         let e,
-            { mode: t, value: n, disabled: s, trailingActions: r } = this.props,
-            o = (0, u.dI)(n, !0);
+            { mode: t, value: s, disabled: n, trailingActions: r } = this.props,
+            o = (0, c.dI)(s, !0);
         return (
             (e =
                 "RECORDING" === t
                     ? O.intl.string(O.t.bmOri0)
-                    : 0 === n.length
+                    : 0 === s.length
                       ? O.intl.string(O.t.co3wt9)
                       : O.intl.string(O.t.idFMvH)),
-            (0, i.jsx)(v.vN, {
+            (0, i.jsx)(b.vN, {
                 focusTarget: this._inputRef,
                 ringTarget: this._containerRef,
                 children: (0, i.jsx)("div", {
                     onClick: this.handleClick,
                     onMouseDown: this.handleMouseDown,
                     ref: this._containerRef,
-                    className: C()(I.Qm, A[t], { [I.Qz]: s }),
+                    className: C()(I.Qm, A[t], { [I.Qz]: n }),
                     children: (0, i.jsxs)(N.A, {
                         className: I.Pp,
                         children: [
@@ -116,7 +116,7 @@ class y extends r.PureComponent {
                                     ref: this.setInputRef,
                                     readOnly: !0,
                                     value: o,
-                                    disabled: "RECORDING" !== this.props.mode || s,
+                                    disabled: "RECORDING" !== this.props.mode || n,
                                 }),
                             }),
                             null != r && !1 !== r
@@ -127,14 +127,14 @@ class y extends r.PureComponent {
                                   })
                                 : (0, i.jsx)("div", {
                                       className: I.UD,
-                                      children: (0, i.jsx)(b.$, {
+                                      children: (0, i.jsx)(v.$, {
                                           size: "sm",
                                           variant: "RECORDING" === this.props.mode ? "critical-secondary" : "secondary",
                                           text: e,
                                           onClick: (e) => {
                                               e.stopPropagation(), e.preventDefault(), this.handleClick(e);
                                           },
-                                          disabled: s,
+                                          disabled: n,
                                       }),
                                   }),
                         ],
@@ -161,19 +161,21 @@ class x extends r.PureComponent {
         (this._mounted = !1), this.cleanUp();
     }
     componentDidUpdate(e) {
-        this.props.defaultValue !== e.defaultValue && this.setState({ codes: this.props.defaultValue });
+        this.props.defaultValue !== e.defaultValue && this.setState({ codes: this.props.defaultValue }),
+            !0 === this.props.disabled && !0 !== e.disabled && this.state.mode === U.RECORDING && this.recordEnd();
     }
     cleanUp() {
         a.isPlatformEmbedded && null != this.gs && (this.gs.destroy(), (this.gs = null));
     }
     handleComboChange(e) {
         let { mode: t } = this.state,
-            { onChange: n } = this.props;
-        t === U.RECORDING && (null != n && n(e), this.setState({ codes: e }));
+            { disabled: s, onChange: n } = this.props;
+        !0 !== s && t === U.RECORDING && (null != n && n(e), this.setState({ codes: e }));
     }
     recordStart = () => {
-        a.isPlatformEmbedded && !k && ((this.gs = new g()), this.gs.on("change", this.handleGSChange)),
-            this.setState({ mode: U.RECORDING });
+        !0 !== this.props.disabled &&
+            (a.isPlatformEmbedded && !k && ((this.gs = new g()), this.gs.on("change", this.handleGSChange)),
+            this.setState({ mode: U.RECORDING }));
     };
     recordEnd = () => {
         this.cleanUp(), this.setState({ mode: U.DEFAULT });
@@ -181,15 +183,15 @@ class x extends r.PureComponent {
     toggleRecordMode = () => {
         this.state.mode === U.DEFAULT ? this.recordStart() : this.recordEnd();
     };
-    handleComboKeys = (e, t, n) => {
-        if ((n.preventDefault(), "keydown" === n.type)) {
-            let e = t.map((e) => [c.zY.KEYBOARD_KEY, l()(e), c.g$.BROWSER]),
-                { keyCode: s } = n;
+    handleComboKeys = (e, t, s) => {
+        if ((s.preventDefault(), "keydown" === s.type)) {
+            let e = t.map((e) => [u.zY.KEYBOARD_KEY, l()(e), u.g$.BROWSER]),
+                { keyCode: n } = s;
             null ==
                 e.find((e) => {
                     let [, t] = e;
-                    return s === t;
-                }) && e.push([c.zY.KEYBOARD_KEY, s, c.g$.BROWSER]),
+                    return n === t;
+                }) && e.push([u.zY.KEYBOARD_KEY, n, u.g$.BROWSER]),
                 this.handleComboChange(e);
         }
     };
@@ -204,7 +206,7 @@ class x extends r.PureComponent {
     render() {
         let e,
             t,
-            { codes: n, mode: s } = this.state,
+            { codes: s, mode: n } = this.state,
             { disabled: r, trailingActions: o } = this.props;
         return (
             k
@@ -212,8 +214,8 @@ class x extends r.PureComponent {
                 : a.isPlatformEmbedded || (e = this.handleComboKeys),
             (0, i.jsx)(y, {
                 disabled: r,
-                value: n,
-                mode: s,
+                value: s,
+                mode: n,
                 onClick: this.toggleRecordMode,
                 onChange: e,
                 registerNativeRecorder: t,

@@ -5430,23 +5430,30 @@
     max-height: 50%
 }
 
-.scroller__31080 {
-    padding: var(--space-16) 0
-}
-
-.nonMessageContentContainer__31080 {
-    margin-inline-start: var(--space-16)
-}
-
 .tagsRow__31080 {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-8)
 }
 
-.forumPostActionBarContainer__31080,
+.embedContainer__31080,
+.forumPostActionBar__31080,
 .tagsRow__31080 {
+    margin-inline-start: var(--space-16)
+}
+
+.dividerThick__31080,
+.dividerThin__31080,
+.embedContainer__31080,
+.forumPostActionBar__31080,
+.message__31080,
+.tagsRow__31080,
+.voice__31080 {
     margin-top: var(--space-16)
+}
+
+.stickyMessage__31080 .forumPostActionBar__31080 {
+    border-top: none
 }
 
 .divider__31080 {
@@ -5460,10 +5467,6 @@
 
 .dividerThick__31080 {
     height: 6px
-}
-
-.voice__31080 {
-    margin: var(--space-16) 0
 }
 
 .barsRoot__70b7b {
@@ -7173,10 +7176,6 @@
 
 .categorySubGroup_ed5050:empty {
     display: none
-}
-
-.checklistSlot__764d0>div {
-    margin: 0
 }
 
 .container_d80c36 {
