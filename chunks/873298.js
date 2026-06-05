@@ -263,6 +263,7 @@ class er extends D.G {
             { no: 23, name: "applications", kind: "message", T: () => tL },
             { no: 24, name: "ads", kind: "message", T: () => tF },
             { no: 25, name: "in_app_feedback_settings", kind: "message", T: () => tW },
+            { no: 26, name: "app_version_settings", kind: "message", T: () => t$ },
         ]);
     }
     create(e) {
@@ -354,6 +355,9 @@ class er extends D.G {
                 case 25:
                     r.inAppFeedbackSettings = tW.internalBinaryRead(e, e.uint32(), n, r.inAppFeedbackSettings);
                     break;
+                case 26:
+                    r.appVersionSettings = t$.internalBinaryRead(e, e.uint32(), n, r.appVersionSettings);
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -393,7 +397,9 @@ class er extends D.G {
             e.applications && tL.internalBinaryWrite(e.applications, t.tag(23, R.O0.LengthDelimited).fork(), n).join(),
             e.ads && tF.internalBinaryWrite(e.ads, t.tag(24, R.O0.LengthDelimited).fork(), n).join(),
             e.inAppFeedbackSettings &&
-                tW.internalBinaryWrite(e.inAppFeedbackSettings, t.tag(25, R.O0.LengthDelimited).fork(), n).join();
+                tW.internalBinaryWrite(e.inAppFeedbackSettings, t.tag(25, R.O0.LengthDelimited).fork(), n).join(),
+            e.appVersionSettings &&
+                t$.internalBinaryWrite(e.appVersionSettings, t.tag(26, R.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? R.f$.onWrite : i)(this.typeName, e, t), t;
     }
@@ -4346,3 +4352,40 @@ class tY extends D.G {
     }
 }
 let tW = new tY();
+class tK extends D.G {
+    constructor() {
+        super("discord_protos.discord_users.v1.AppVersionSettings", [
+            { no: 1, name: "is_using_outdated_mobile_version", kind: "scalar", T: 8 },
+        ]);
+    }
+    create(e) {
+        let t = { isUsingOutdatedMobileVersion: !1 };
+        return (
+            globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
+            void 0 !== e && (0, O.x)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let r = i ?? this.create(),
+            s = e.pos + t;
+        for (; e.pos < s; ) {
+            let [t, i] = e.tag();
+            if (1 === t) r.isUsingOutdatedMobileVersion = e.bool();
+            else {
+                let s = n.readUnknownField;
+                if ("throw" === s)
+                    throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                let a = e.skip(i);
+                !1 !== s && (!0 === s ? R.f$.onRead : s)(this.typeName, r, t, i, a);
+            }
+        }
+        return r;
+    }
+    internalBinaryWrite(e, t, n) {
+        !1 !== e.isUsingOutdatedMobileVersion && t.tag(1, R.O0.Varint).bool(e.isUsingOutdatedMobileVersion);
+        let i = n.writeUnknownFields;
+        return !1 !== i && (!0 == i ? R.f$.onWrite : i)(this.typeName, e, t), t;
+    }
+}
+let t$ = new tK();
