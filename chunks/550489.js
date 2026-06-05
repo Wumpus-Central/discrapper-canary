@@ -445,8 +445,8 @@ var eK = s(19809),
     e7 = s(79545),
     e8 = s(321503),
     e3 = s(720875),
-    e4 = s(687966),
-    e5 = s(782134),
+    e5 = s(687966),
+    e4 = s(782134),
     e6 = s(138134),
     e9 = s(768622),
     te = s(785866),
@@ -518,9 +518,9 @@ function ta(e) {
                                     let t = { size: "xxs", className: tr.rF, color: "currentColor" };
                                     switch ((0, tt.pv)(e)) {
                                         case tt.UK.PLAY:
-                                            return (0, r.jsx)(e4._, { ...t });
+                                            return (0, r.jsx)(e5._, { ...t });
                                         case tt.UK.WATCH:
-                                            return (0, r.jsx)(e5.u, { ...t });
+                                            return (0, r.jsx)(e4.u, { ...t });
                                         case tt.UK.ACTIVITY:
                                             return (0, r.jsx)(e6.i, { ...t });
                                         case tt.UK.INSTANT_PLAY:
@@ -1262,10 +1262,10 @@ var tX = s(203879),
     t7 = s(651892),
     t8 = s(305866),
     t3 = s(915089),
-    t4 = s(332733);
-function t5(e) {
+    t5 = s(332733);
+function t4(e) {
     let { children: t, id: s } = e;
-    return (0, r.jsx)(S.E, { className: t4.g, color: "text-subtle", id: s, variant: "text-sm/semibold", children: t });
+    return (0, r.jsx)(S.E, { className: t5.g, color: "text-subtle", id: s, variant: "text-sm/semibold", children: t });
 }
 let t6 = function (e) {
     let { children: t, renderPopout: s } = e,
@@ -1274,7 +1274,7 @@ let t6 = function (e) {
     return (0, r.jsx)(ec.Y, {
         align: "right",
         position: "bottom",
-        renderPopout: (e) => (0, r.jsx)(t8.l, { className: t4.S, "aria-labelledby": n, children: s(e, n) }),
+        renderPopout: (e) => (0, r.jsx)(t8.l, { className: t5.S, "aria-labelledby": n, children: s(e, n) }),
         scrollBehavior: "close",
         targetElementRef: l,
         children: (e) => t(e, l),
@@ -1304,7 +1304,7 @@ let se = function (e) {
                             {
                                 children: [
                                     t > 0 && (0, r.jsx)("hr", { className: t9.B }),
-                                    (0, r.jsx)(t5, { id: i, children: e.heading }),
+                                    (0, r.jsx)(t4, { id: i, children: e.heading }),
                                     (0, r.jsx)(t1.$, {
                                         "aria-labelledby": i,
                                         options: n,
@@ -1361,7 +1361,7 @@ let sn = function (e) {
             let { closePopout: s } = e;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(t5, { id: t, children: eE.intl.string(eE.t.tZXJIS) }),
+                    (0, r.jsx)(t4, { id: t, children: eE.intl.string(eE.t.tZXJIS) }),
                     (0, r.jsx)(st.z, {
                         options: o,
                         onChange: (e) => {
@@ -2114,8 +2114,8 @@ function s3(e) {
         children: [c && (0, r.jsx)("div", { className: s8.E }, i), t],
     });
 }
-var s4 = s(474646);
-function s5(e) {
+var s5 = s(474646);
+function s4(e) {
     let { containerWidth: t, questIds: s, setMaxRowIndex: n } = e,
         { enabled: l } = ee.aD.useConfig({ location: ty.rE.QUEST_HOME_DESKTOP }),
         i = a.useMemo(() => (null == t ? null : sm(t, 345, 20, 2)), [t]);
@@ -2124,7 +2124,7 @@ function s5(e) {
             null !== i && n(Math.ceil(s.length / i) - 1);
         }, [s.length, i, n]),
         (0, r.jsx)("div", {
-            className: s4.k,
+            className: s5.k,
             style: {
                 "--custom-min-quest-tile-width": "345px",
                 "--custom-quest-grid-gap": "20px",
@@ -2482,18 +2482,22 @@ let nh = {
         return (0, r.jsx)(s7.Provider, {
             value: b,
             children: (0, r.jsx)("div", {
-                className: o()(nm.k, l),
+                className: o()(nm.kL, l),
                 ref: d,
                 children: c.map((e, t) => {
                     let { identifier: s, questIds: n, title: l } = e;
                     return (0, r.jsxs)(
                         "div",
                         {
-                            className: nm.p,
+                            className: nm.p9,
                             children: [
-                                (0, r.jsx)(v.D, { variant: "heading-lg/medium", children: eE.intl.string(l) }),
+                                (0, r.jsx)(v.D, {
+                                    variant: "heading-lg/semibold",
+                                    className: nm.Gf,
+                                    children: eE.intl.string(l),
+                                }),
                                 s === sz.FEATURED && i
-                                    ? (0, r.jsx)(s5, { questIds: n, setMaxRowIndex: _, containerWidth: j })
+                                    ? (0, r.jsx)(s4, { questIds: n, setMaxRowIndex: _, containerWidth: j })
                                     : (0, r.jsx)(nt, {
                                           questIds: n,
                                           rowIndex: t < R ? t : t + C,
@@ -2851,7 +2855,7 @@ function nk(e) {
                                     children: [
                                         (0, eZ.pv)(s.config) === nR.Z.VIDEO
                                             ? (0, r.jsx)(nQ.S, { size: "xs", color: eg.A.colors.ICON_MUTED.css })
-                                            : (0, r.jsx)(e4._, { size: "xs", color: eg.A.colors.ICON_MUTED.css }),
+                                            : (0, r.jsx)(e5._, { size: "xs", color: eg.A.colors.ICON_MUTED.css }),
                                         (0, r.jsx)(S.E, {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
@@ -2880,10 +2884,13 @@ function nk(e) {
 }
 var nB = s(648731);
 function nW(e) {
-    let { hero: t, shelfQuests: s, onQuestCtaClick: n } = e;
+    let { hero: t, shelfQuests: s, onQuestCtaClick: n } = e,
+        l = (0, s6.C)();
     return (0, r.jsx)(s2, {
         className: nB.v,
-        overflowAmount: 20,
+        overflowAmount: 25,
+        maskWidth: sG(l),
+        maskMarginMultiplier: 0.75,
         children: (0, r.jsxs)(_.B, {
             className: nB.I,
             direction: "horizontal",
@@ -3205,8 +3212,8 @@ let n2 = function (e) {
 var n7 = s(111956),
     n8 = s.n(n7),
     n3 = s(379078),
-    n4 = s(704554),
-    n5 = s(823784);
+    n5 = s(704554),
+    n4 = s(823784);
 let n6 = {
     searchType: n3.n.FUZZY,
     searchStringGenerator: (e) =>
@@ -3432,13 +3439,13 @@ let lu = function (e) {
                 o = a.useMemo(() => n8()(s9.gr, 1e3), []),
                 c = a.useCallback(() => {
                     o.cancel();
-                    let e = (0, n5.tv)();
+                    let e = (0, n4.tv)();
                     null != e &&
                         (0, s9.XH)({
                             searchSessionId: e.uuid,
                             searchSessionDurationMs: Date.now() - e.createdAtTimestamp,
                         }),
-                        (0, n5.l6)();
+                        (0, n4.l6)();
                 }, [o]),
                 u = a.useCallback(() => {
                     c(), t("");
@@ -3464,7 +3471,7 @@ let lu = function (e) {
                         ),
                         i)
                     ) {
-                        let { searchSession: t, isNew: s } = (0, n5.$N)();
+                        let { searchSession: t, isNew: s } = (0, n4.$N)();
                         s && (0, s9.OQ)({ searchSessionId: t.uuid }),
                             o({
                                 searchSessionId: t.uuid,
@@ -3477,7 +3484,7 @@ let lu = function (e) {
                 },
                 [i, r, o, u],
             );
-            return (0, n4.RT)(r, l, d, n6), { matchingQuestIds: s, query: e, setQuery: t, onSearchClose: u };
+            return (0, n5.RT)(r, l, d, n6), { matchingQuestIds: s, query: e, setQuery: t, onSearchClose: u };
         })();
     a.useLayoutEffect(() => {
         l && j === et.NC.CLAIMED && Z.A.setState({ tab: et.NC.ALL });

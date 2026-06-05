@@ -1,0 +1,106 @@
+.easyModeContainer__1a4ef {
+    padding: 0
+}
+
+.settingCard__1a4ef {
+    background: var(--background-mod-muted);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    margin-top: 16px
+}
+
+.settingCard__1a4ef.active__1a4ef {
+    background: var(--background-mod-subtle)
+}
+
+.shield__1a4ef {}
+
+.cardIcon__1a4ef {
+    color: var(--text-default)
+}
+
+.cardFolder__1a4ef {
+    background: var(--background-surface-high);
+    border-end-end-radius: var(--radius-md);
+    border-end-start-radius: var(--radius-md)
+}
+
+.adminWarning__1a4ef {
+    padding: 16px
+}
+
+.folderHeader__1a4ef {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px
+}
+
+.folderTitle__1a4ef {
+    color: var(--text-default);
+    margin: 0
+}
+
+.sectionTitle__1a4ef {
+    padding-bottom: 16px
+}
+
+.roleMemberList__1a4ef {
+    max-height: 400px;
+    padding: 0 16px 8px
+}
+
+.divider__1a4ef {
+    padding-bottom: 16px
+}
+
+.memberRow__1a4ef {
+    justify-content: space-between;
+    padding-bottom: 16px
+}
+
+.memberRow__1a4ef,
+.memberRowBody__1a4ef {
+    align-items: center;
+    display: flex
+}
+
+.memberRowBody__1a4ef {
+    gap: 4px;
+    justify-content: flex-start
+}
+
+.rowLabelSubText__1a4ef {
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.removeIconContainer__1a4ef {
+    margin-inline-start: 4px
+}
+
+.removeIcon__1a4ef {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    height: 16px;
+    width: 16px
+}
+
+.disabledRemoveIcon__1a4ef {
+    color: var(--icon-muted);
+    cursor: auto
+}
+
+.enable-forced-colors .cardFolder__1a4ef {
+    border: 1px solid CanvasText
+}
+
+.enable-forced-colors .removeIcon__1a4ef {
+    color: ButtonText
+}
+
+.enable-forced-colors .disabledRemoveIcon__1a4ef {
+    color: GrayText
+}
