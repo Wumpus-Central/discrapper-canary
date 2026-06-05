@@ -16,6 +16,9 @@ function i(e) {
           };
 }
 function r(e) {
+    return null == e ? null : { enabled: e.enabled, themeSettings: i(e.themeSettings) };
+}
+function s(e) {
     var t;
     return null == e
         ? { preset_id: null, custom_user_theme_settings: null }
@@ -32,7 +35,7 @@ function r(e) {
                         },
           };
 }
-function s(e) {
+function a(e) {
     return null == e || (null == e.preset_id && null == e.custom_user_theme_settings)
         ? null
         : {
@@ -48,7 +51,7 @@ function s(e) {
               })(e.custom_user_theme_settings),
           };
 }
-function a(e) {
-    return null == e ? null : { enabled: e.enabled, themeSettings: s(e) };
+function o(e) {
+    return null == e ? null : { enabled: e.enabled, themeSettings: a(e) };
 }
-n.d(t, { L8: () => s, QK: () => r, UW: () => a, z_: () => i });
+n.d(t, { L8: () => a, QK: () => s, UW: () => o, yX: () => r, z_: () => i });

@@ -1,0 +1,62 @@
+"use strict";
+n.d(t, { A: () => m });
+var i = n(735438),
+    r = n(17928),
+    s = n(228366),
+    a = n(71393),
+    o = n(967198),
+    l = n(679787);
+let u = null;
+function c() {
+    return null != u && ((u = null), !0);
+}
+function d(e, t) {
+    return !(u?.guildId === e && (0, i.isEqual)(u.guildTheme, t)) && ((u = { guildId: e, guildTheme: t }), !0);
+}
+function _(e) {
+    return null == e ? c() : d(e, (0, l.yX)(a.A.getGuild(e)?.guildTheme));
+}
+function h() {
+    return _(o.A.getGuildId());
+}
+function f(e) {
+    if (u?.guildId !== e) return !1;
+    let t = o.A.getGuildId();
+    return t !== e && _(t);
+}
+function p(e) {
+    let { guildId: t, guildTheme: n } = e;
+    return t === o.A.getGuildId() && d(t, (0, l.yX)(n));
+}
+class E extends r.Ay.Store {
+    static displayName = "GuildThemeRuntimeStore";
+    initialize() {
+        this.waitFor(a.A, o.A);
+    }
+    getGuildThemeSnapshot(e) {
+        return e === u?.guildId ? u.guildTheme : void 0;
+    }
+}
+let m = new E(s.h, {
+    CACHE_LOADED: h,
+    CACHE_LOADED_LAZY: h,
+    CHANNEL_SELECT: function (e) {
+        let { guildId: t } = e;
+        return null == t ? c() : t !== u?.guildId && _(t);
+    },
+    CONNECTION_OPEN: h,
+    GUILD_DELETE: function (e) {
+        let { guild: t } = e;
+        return f(t.id);
+    },
+    GUILD_MEMBER_REMOVE: function (e) {
+        let { guildId: t } = e;
+        return f(t);
+    },
+    GUILD_SETTINGS_GUILD_THEME_SAVE_SUCCESS: p,
+    GUILD_THEME_PREVIEW_SAVE_SUCCESS: p,
+    OVERLAY_INITIALIZE: h,
+    LOGOUT: function () {
+        return c();
+    },
+});

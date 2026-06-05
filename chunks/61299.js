@@ -1324,6 +1324,14 @@ function tU(e) {
                         tO.warn(e);
                     }
                     break;
+                case eE.he.PIX:
+                    try {
+                        let e = await (0, y.im)(...t);
+                        c(e);
+                    } catch (e) {
+                        tO.warn(e);
+                    }
+                    break;
                 case eE.he.IDEAL:
                     try {
                         let e = C ? await (0, y.im)(...t) : await (0, y.EB)(E, _.info, l);
@@ -1586,6 +1594,7 @@ function t$(e) {
                         [eE.he.PAYSAFE_CARD]: r,
                         [eE.he.GRABPAY_MY]: r,
                         [eE.he.MOMO_WALLET]: r,
+                        [eE.he.PIX]: r,
                     }),
                     [r, o, u, d, i, c, h, p, m],
                 );

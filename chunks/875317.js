@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Om: () => f, Q: () => p });
+n.d(t, { Om: () => p, Q: () => E });
 var i = n(64700),
     r = n(17928),
     s = n(56562),
@@ -9,8 +9,9 @@ var i = n(64700),
     u = n(967198),
     c = n(476931),
     d = n(759532),
-    _ = n(652215);
-function h(e) {
+    _ = n(244696),
+    h = n(652215);
+function f(e) {
     var t;
     if (null == e) return null;
     let n =
@@ -22,28 +23,30 @@ function h(e) {
     let i = (0, c.Yt)(e.presetId);
     return null != i ? { type: "preset", preset: i } : null;
 }
-function f(e) {
-    return null != h(e);
+function p(e) {
+    return null != f(e);
 }
-function p() {
+function E() {
     return (function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "useActiveGuildThemeForGuildId",
             n = (0, a.OS)(t),
             u = (0, r.bG)([d.Ay], () => {
                 if (null != e && n && d.Ay.isActive && d.Ay.guildId === e) return d.Ay.draftEnabled ? d.Ay.draft : null;
             }, [e, n]),
-            c = (0, r.bG)([l.A], () => {
+            c = (0, r.bG)([l.A, _.A], () => {
                 if (null == e || !n) return null;
                 let t = l.A.getGuild(e);
-                return null != t && t.features.has(_.GuildFeatures.GUILD_THEME) ? t.guildTheme : null;
+                if (null == t || !t.features.has(h.GuildFeatures.GUILD_THEME)) return null;
+                let i = _.A.getGuildThemeSnapshot(e);
+                return void 0 !== i ? i : t.guildTheme;
             }, [e, n]),
-            f = (0, r.bG)([o.A], () => (null != e && n ? o.A.resolveGuildThemeSourcePreference(e) : s.tI.PERSONAL), [
+            p = (0, r.bG)([o.A], () => (null != e && n ? o.A.resolveGuildThemeSourcePreference(e) : s.tI.PERSONAL), [
                 e,
                 n,
             ]);
         return i.useMemo(
-            () => (void 0 !== u ? h(u) : f === s.tI.PERSONAL ? null : c?.enabled !== !0 ? null : h(c.themeSettings)),
-            [c, f, u],
+            () => (void 0 !== u ? f(u) : p === s.tI.PERSONAL ? null : c?.enabled !== !0 ? null : f(c.themeSettings)),
+            [c, p, u],
         );
     })(
         (0, r.bG)([u.A], () => u.A.getGuildId()),
