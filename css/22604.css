@@ -1,3 +1,34 @@
+.container__251d4 {
+    position: absolute
+}
+
+@keyframes fadeOut__251d4 {
+    0% {
+        opacity: 1;
+        visibility: visible
+    }
+
+    99% {
+        opacity: .01;
+        visibility: visible
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden
+    }
+}
+
+.upsell__251d4 {
+    opacity: 1;
+    position: absolute;
+    z-index: 1000
+}
+
+.upsell__251d4.hidden__251d4 {
+    animation: fadeOut__251d4 .3s forwards
+}
+
 .clickable__81391 {
     align-items: center;
     border-radius: var(--custom-app-top-bar-item-radius);
