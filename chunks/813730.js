@@ -1,4 +1,4 @@
-n.d(t, { Mw: () => np, gf: () => n_.g, XZ: () => r.X, oE: () => nA, CL: () => r.C });
+n.d(t, { Mw: () => n_, gf: () => np.g, XZ: () => r.X, oE: () => nA, CL: () => r.C });
 var l,
     r = n(75304);
 n(321073);
@@ -10,17 +10,17 @@ var i = n(627968),
     c = n(7764),
     d = n(624210),
     C = n(26279);
-async function p(e) {
+async function _(e) {
     let { checkoutSucceeded: t, order: n } = e;
     if (!t && n?.id != null && n.status === C.Re.DRAFT)
         try {
             await (0, d.Nl)(n.id);
         } catch (e) {}
 }
-var _ = n(310829),
+var p = n(310829),
     E = n(174459),
-    m = n(793574),
-    T = n(862241),
+    T = n(793574),
+    m = n(862241),
     I = n(284009),
     O = n.n(I),
     A = n(964486),
@@ -97,7 +97,7 @@ function w(e) {
 var b = n(196617);
 let H = {
     CHECKOUT_FLOW: r.C.GUILD_PRODUCT_CHECKOUT,
-    CHECKOUT_STEPS: { [o.pn.REVIEW]: T._M },
+    CHECKOUT_STEPS: { [o.pn.REVIEW]: m._M },
     TENANT_PROVIDER_CONFIGS: {
         CustomTenantProvider: (e) => {
             let {
@@ -108,7 +108,7 @@ let H = {
             return (0, i.jsx)(x, { guildId: t, skuId: n, children: l });
         },
         tenantProvidesCheckoutRoot: !1,
-        tenantAnalyticsLocation: m.A.GUILD_PRODUCT_PAYMENT_MODAL,
+        tenantAnalyticsLocation: T.A.GUILD_PRODUCT_PAYMENT_MODAL,
     },
     CustomHeaderComponent: function (e) {
         let { onClose: t, step: n } = e,
@@ -153,10 +153,10 @@ var ee = n(702841),
     ec = n(61750),
     ed = n(972607),
     eC = n(482132),
-    ep = n(921925),
-    e_ = n(788868),
+    e_ = n(921925),
+    ep = n(788868),
     eE = n(375708);
-function em(e) {
+function eT(e) {
     let { handleClose: t, analyticsLocations: n } = e,
         {
             selectedSkuId: l,
@@ -175,16 +175,16 @@ function em(e) {
         d = (0, ee.bG)([es.A], () => es.A.getProduct(l)),
         C = h.useRef(!1);
     O()(null != l, "Expected selectedSkuId"), O()(null != u, "Expected application");
-    let p = c[l];
-    O()(null != p, "Expected sku");
-    let _ = null != o || null != r || null != s,
+    let _ = c[l];
+    O()(null != _, "Expected sku");
+    let p = null != o || null != r || null != s,
         E =
             a.length > 0
                 ? eE.intl.formatToPlainString(eE.t.VuV3Td, { discountOfferAmount: a[0].discount.amount })
                 : void 0;
     return (h.useEffect(() => {
         null == d ||
-            _ ||
+            p ||
             C.current ||
             ((C.current = !0),
             (0, ec.A)({
@@ -194,12 +194,12 @@ function em(e) {
                 onCloseCallback: t,
                 purchaseType: q.gs.FIAT,
             }));
-    }, [d, n, t, _, E]),
-    _)
-        ? (0, i.jsx)(eC.dZ, { children: (0, i.jsx)(ep.A, {}) })
+    }, [d, n, t, p, E]),
+    p)
+        ? (0, i.jsx)(eC.dZ, { children: (0, i.jsx)(e_.A, {}) })
         : null;
 }
-function eT(e) {
+function em(e) {
     let {
             isGift: t,
             giftCode: n,
@@ -213,14 +213,14 @@ function eT(e) {
         c = (0, ee.bG)([et.A], () => et.A.useReducedMotion),
         d = h.useRef(null),
         C = (0, ei.t4)((e) => e.selectedSkuId),
-        p = (0, ee.bG)([es.A], () => es.A.getProduct(C)),
-        { confettiColors: _ } = (0, ea.A)(p?.styles);
+        _ = (0, ee.bG)([es.A], () => es.A.getProduct(C)),
+        { confettiColors: p } = (0, ea.A)(_?.styles);
     return (
         h.useEffect(() => {
             t &&
                 null != s &&
                 null != C &&
-                (u === e_.vQ.USER_PROFILE_WISHLIST || u === e_.vQ.DM_CHANNEL_WISHLIST) &&
+                (u === ep.vQ.USER_PROFILE_WISHLIST || u === ep.vQ.DM_CHANNEL_WISHLIST) &&
                 Z.h.dispatch({ type: "WISHLIST_GIFT_SENT", skuId: C, recipientId: s.id });
         }, [t, s, C, u]),
         t
@@ -241,12 +241,12 @@ function eT(e) {
                           (0, i.jsx)(eo.A, {
                               confettiTarget: d.current,
                               confettiCanvas: e.confettiCanvas,
-                              sprites: (0, eu.rA)(p?.categorySkuId),
-                              colors: _?.map((e) => e.toHexString()),
+                              sprites: (0, eu.rA)(_?.categorySkuId),
+                              colors: p?.map((e) => e.toHexString()),
                           }),
                   ],
               })
-            : (0, i.jsx)(em, { ...e })
+            : (0, i.jsx)(eT, { ...e })
     );
 }
 var eI = n(123292),
@@ -285,15 +285,15 @@ function eG(e) {
         c = (0, P.bG)([eU.default], () => eU.default.getCurrentUser()),
         d = ev.Ay.canUseShopDiscounts(c),
         C = (0, eR.Ay)(o?.id),
-        p = h.useRef(null),
-        [_, E] = h.useState(!1),
-        { product: m } = (0, eM.q)(t, !0),
-        T = h.useMemo(() => (0, eA.fT)(m, d), [m, d]),
-        I = (0, eb.V_)(m);
-    if (null == m || 0 === m.items.length) return null;
-    let [O] = m.items,
-        A = (0, eF.VG)(m),
-        S = null != o && o.id !== c?.id && m.type !== eS.R.BUNDLE && O.type !== eS.R.NAMEPLATE && !a;
+        _ = h.useRef(null),
+        [p, E] = h.useState(!1),
+        { product: T } = (0, eM.q)(t, !0),
+        m = h.useMemo(() => (0, eA.fT)(T, d), [T, d]),
+        I = (0, eb.V_)(T);
+    if (null == T || 0 === T.items.length) return null;
+    let [O] = T.items,
+        A = (0, eF.VG)(T),
+        S = null != o && o.id !== c?.id && T.type !== eS.R.BUNDLE && O.type !== eS.R.NAMEPLATE && !a;
     return (0, i.jsxs)("div", {
         className: r,
         children: [
@@ -306,9 +306,9 @@ function eG(e) {
                         (0, i.jsx)(
                             eP.Y,
                             {
-                                targetElementRef: p,
+                                targetElementRef: _,
                                 align: "center",
-                                shouldShow: _,
+                                shouldShow: p,
                                 onRequestClose: () => E(!1),
                                 preload: () => (0, eL.A)(o.id, o.getAvatarURL(null, 80)),
                                 renderPopout: (e) =>
@@ -328,12 +328,12 @@ function eG(e) {
                                     return (0, i.jsx)(v.D, {
                                         ...l,
                                         className: eH.Nx,
-                                        innerRef: p,
+                                        innerRef: _,
                                         onClick: (e) => {
                                             E((e) => !e), t?.(e);
                                         },
                                         onMouseDown: (e) => {
-                                            _ ? e.stopPropagation() : n?.(e);
+                                            p ? e.stopPropagation() : n?.(e);
                                         },
                                         children: (0, i.jsx)(eN.E, {
                                             variant: "text-xs/medium",
@@ -353,7 +353,7 @@ function eG(e) {
                     (0, i.jsxs)("div", {
                         className: eH.Ug,
                         children: [
-                            (0, i.jsx)(eD.O, { product: m }),
+                            (0, i.jsx)(eD.O, { product: T }),
                             (0, i.jsxs)("div", {
                                 className: eH.JZ,
                                 children: [
@@ -362,7 +362,7 @@ function eG(e) {
                                         variant: "heading-sm/medium",
                                         color: "text-default",
                                         children:
-                                            m?.type === eS.R.BUNDLE
+                                            T?.type === eS.R.BUNDLE
                                                 ? null
                                                 : O.type === eS.R.AVATAR_DECORATION
                                                   ? eE.intl.string(eE.t["7v0T9P"])
@@ -379,7 +379,7 @@ function eG(e) {
                             (0, i.jsx)(ew.x, {
                                 priceAmount: n,
                                 priceCurrency: l,
-                                discount: T,
+                                discount: m,
                                 discountOfferAmount: I,
                                 variant: "text-md/bold",
                             }),
@@ -465,14 +465,14 @@ var eJ = n(871181),
     e7 = n(353791);
 function e8(e) {
     let { handleClose: t, selectedSkuId: n } = e,
-        { analyticsLocations: l } = (0, B.Ay)(m.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
+        { analyticsLocations: l } = (0, B.Ay)(T.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
     return (0, i.jsx)(eI.Q, {
         text: eE.intl.string(eE.t.J82mpK),
         onClick: function () {
             t(),
                 (0, a.closeAllModals)(),
                 null == n
-                    ? (0, eO.Cz)({ analyticsLocations: l, analyticsSource: m.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL })
+                    ? (0, eO.Cz)({ analyticsLocations: l, analyticsSource: T.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL })
                     : (0, e1.pX)(`${e2.BVt.COLLECTIBLES_SHOP}#itemSkuId=${n}`);
         },
         textVariant: "text-sm/medium",
@@ -497,12 +497,12 @@ function e5(e) {
             }),
             [t, n, r],
         );
-    return (0, i.jsx)(n_.g, { customPaymentModalProps: s, children: l });
+    return (0, i.jsx)(np.g, { customPaymentModalProps: s, children: l });
 }
 let e9 = (e) => {
         let { hideConfirmStepConfetti: t, confettiCanvas: n } = (0, h.useContext)(e3),
             { analyticsLocations: l } = (0, B.Ay)();
-        return (0, i.jsx)(eT, { analyticsLocations: l, hideConfetti: t, confettiCanvas: n, ...e });
+        return (0, i.jsx)(em, { analyticsLocations: l, hideConfetti: t, confettiCanvas: n, ...e });
     },
     e4 = {
         [o.pn.GIFT_CUSTOMIZATION]: () => eE.intl.string(eE.t["JCFN/y"]),
@@ -536,13 +536,13 @@ let e9 = (e) => {
                                 giftingOrigin: c,
                                 setValidatingGiftRecipient: d,
                             } = (0, V.Pv)(),
-                            { selectedSkuId: C, checkoutInvoicePreview: p } = (0, ei.t4)((e) => ({
+                            { selectedSkuId: C, checkoutInvoicePreview: _ } = (0, ei.t4)((e) => ({
                                 selectedSkuId: e.selectedSkuId,
                                 checkoutInvoicePreview: e.checkoutInvoicePreview,
                             })),
-                            _ = (0, er.gU)(),
-                            m = (0, P.bG)([eU.default], () => eU.default.getCurrentUser()),
-                            T = eQ(),
+                            p = (0, er.gU)(),
+                            T = (0, P.bG)([eU.default], () => eU.default.getCurrentUser()),
+                            m = eQ(),
                             I = async (e, t) => {
                                 d(!0),
                                     null != s && a(),
@@ -552,7 +552,7 @@ let e9 = (e) => {
                         (0, A.Ay)(() => {
                             null != C &&
                                 null != u &&
-                                (c !== e_.vQ.DM_CHANNEL_WISHLIST &&
+                                (c !== ep.vQ.DM_CHANNEL_WISHLIST &&
                                     E.default.track(e2.HAw.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: C }),
                                 I(u, C));
                         });
@@ -569,8 +569,8 @@ let e9 = (e) => {
                             renderLeftColumn: () =>
                                 (0, i.jsx)("div", { className: e7.qL, children: (0, i.jsx)(e$.t, { isShopGift: !0 }) }),
                             renderRightColumn: () => {
-                                let e = (0, eA.pA)({ invoicePreview: p, selectedSkuId: C, skusById: _ });
-                                return c === e_.vQ.USER_PROFILE_WISHLIST || c === e_.vQ.DM_CHANNEL_WISHLIST
+                                let e = (0, eA.pA)({ invoicePreview: _, selectedSkuId: C, skusById: p });
+                                return c === ep.vQ.USER_PROFILE_WISHLIST || c === ep.vQ.DM_CHANNEL_WISHLIST
                                     ? (0, i.jsxs)("div", {
                                           children: [
                                               (0, i.jsx)(e0.Z, { giftRecipient: u }),
@@ -595,7 +595,7 @@ let e9 = (e) => {
                                           children: [
                                               (0, i.jsx)(eV, {
                                                   selectedSkuId: C,
-                                                  recipients: T,
+                                                  recipients: m,
                                                   className: e7.uh,
                                                   validateSelectedGift: I,
                                               }),
@@ -613,12 +613,12 @@ let e9 = (e) => {
                             },
                             onStepChange: t,
                             onBackClick: n,
-                            ctaDisabled: null != s || null == u || u.id === m?.id || l.length > e_.Jo,
+                            ctaDisabled: null != s || null == u || u.id === T?.id || l.length > ep.Jo,
                             loading: o,
                         };
                     })({ handleStepChange: t, handleClose: n }),
                     u = h.useMemo(() => ({ loading: o, disabled: a }), [o, a]);
-                return (0, i.jsx)(np, {
+                return (0, i.jsx)(n_, {
                     paymentModalStepProps: e,
                     layout: r.X.TWO_COLUMN,
                     renderLeftColumn: l,
@@ -626,7 +626,7 @@ let e9 = (e) => {
                     primaryCTAButtonProps: u,
                 });
             },
-            [o.pn.REVIEW]: T._M,
+            [o.pn.REVIEW]: m._M,
         },
         TENANT_PROVIDER_CONFIGS: {
             tenantProvidesCheckoutRoot: !0,
@@ -639,7 +639,7 @@ let e9 = (e) => {
                         customConfettiVisible: c,
                         setCustomConfettiVisible: d,
                         customConfettiDisplayOptions: C,
-                        hideConfirmStepConfetti: p,
+                        hideConfirmStepConfetti: _,
                     } = ((e) => {
                         let { skuId: t } = e,
                             n = h.useRef(new Y.OH()),
@@ -656,22 +656,22 @@ let e9 = (e) => {
                             hideConfirmStepConfetti: null != a,
                         };
                     })({ skuId: t }),
-                    _ = ((e) => {
+                    p = ((e) => {
                         let { skuId: t } = e;
                         return null != t ? [t] : [];
                     })({ skuId: t }),
                     E = (0, h.useMemo)(
                         () => ({
-                            skuIDs: _,
+                            skuIDs: p,
                             setCustomConfettiVisible: d,
-                            hideConfirmStepConfetti: p,
+                            hideConfirmStepConfetti: _,
                             confettiCanvas: o,
                         }),
-                        [_, d, p, o],
+                        [p, d, _, o],
                     ),
                     {
-                        paymentModalSkuId: m,
-                        paymentModalOnClose: T,
+                        paymentModalSkuId: T,
+                        paymentModalOnClose: m,
                         paymentModalOnComplete: I,
                     } = ((e) => {
                         let { skuIDs: t, onClose: n, onComplete: l, setCustomConfettiVisible: r } = e,
@@ -694,14 +694,14 @@ let e9 = (e) => {
                             n.onClose();
                         }, [n]),
                         onComplete: s.onComplete,
-                        skuIDs: _,
+                        skuIDs: p,
                         setCustomConfettiVisible: d,
                     }),
                     O = null != l ? l.onStepChange : void 0,
                     A = (0, h.useMemo)(
                         () => ({
-                            skuId: m,
-                            onClose: T,
+                            skuId: T,
+                            onClose: m,
                             onComplete: I,
                             applicationId: e2.FYj,
                             initialPlanId: null,
@@ -710,7 +710,7 @@ let e9 = (e) => {
                             transitionState: n.transitionState,
                             returnRef: n.returnRef,
                         }),
-                        [m, T, I, n.transitionState, n.returnRef, O],
+                        [T, m, I, n.transitionState, n.returnRef, O],
                     );
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -722,7 +722,7 @@ let e9 = (e) => {
                         }),
                         (0, i.jsx)(K.CheckoutRootProvider, {
                             ...s,
-                            skuIDs: _,
+                            skuIDs: p,
                             stepConfigs: s.stepConfigs,
                             activeSubscription: null,
                             purchaseType: e6.VV.ONE_TIME,
@@ -735,7 +735,7 @@ let e9 = (e) => {
                     ],
                 });
             },
-            tenantAnalyticsLocation: m.A.COLLECTIBLES_PAYMENT_MODAL,
+            tenantAnalyticsLocation: T.A.COLLECTIBLES_PAYMENT_MODAL,
         },
         CustomHeaderComponent: (e) => {
             let { step: t } = e,
@@ -764,9 +764,9 @@ let ts = {
                         ? (0, tr.YE)(o.applicationId, c.headerBackground, 256)
                         : void 0,
                 C = async (e, t) => {},
-                p = null == l || l.id === a?.id || t.length > e_.Jo,
-                _ = h.useMemo(() => ({ disabled: p }), [p]);
-            return (0, i.jsx)(np, {
+                _ = null == l || l.id === a?.id || t.length > ep.Jo,
+                p = h.useMemo(() => ({ disabled: _ }), [_]);
+            return (0, i.jsx)(n_, {
                 onBackClick: e.handleClose,
                 paymentModalStepProps: e,
                 layout: r.X.TWO_COLUMN,
@@ -798,16 +798,16 @@ let ts = {
                             }),
                         ],
                     }),
-                primaryCTAButtonProps: _,
+                primaryCTAButtonProps: p,
             });
         },
-        [o.pn.REVIEW]: T._M,
+        [o.pn.REVIEW]: m._M,
     },
     CUSTOM_CONFIRM_STEP_CONFIG: c.zX,
     TENANT_PROVIDER_CONFIGS: {
         CustomTenantProvider: (e) => e.children,
         tenantProvidesCheckoutRoot: !1,
-        tenantAnalyticsLocation: m.A.APPLICATION_OTP_PAYMENT_MODAL,
+        tenantAnalyticsLocation: T.A.APPLICATION_OTP_PAYMENT_MODAL,
     },
 };
 var ta = n(429913),
@@ -816,10 +816,10 @@ var ta = n(429913),
     tc = n(318254),
     td = n(262427),
     tC = n(510022),
-    tp = n(317560),
-    t_ = n(366523),
+    t_ = n(317560),
+    tp = n(366523),
     tE = n(208733);
-function tm(e) {
+function tT(e) {
     let { handleClose: t } = e,
         { analyticsLocations: n } = (0, B.Ay)(),
         { selectedSkuId: l, entitlementsGranted: r } = (0, ei.t4)((e) => ({
@@ -836,19 +836,19 @@ function tm(e) {
         C = d?.metadata?.orbs_reward;
     if (
         (h.useEffect(() => {
-            o || ((0, tp.j)(), t(), (0, tC.n)({ sku: c, application: s, analyticsLocations: n, orbsReward: C }));
+            o || ((0, t_.j)(), t(), (0, tC.n)({ sku: c, application: s, analyticsLocations: n, orbsReward: C }));
         }, [o, c, s, t, n, C]),
         !o)
     )
         return null;
-    let p = null != C && C > 0;
+    let _ = null != C && C > 0;
     return (0, i.jsxs)(eC.dZ, {
         children: [
-            (0, i.jsx)(ep.A, {}),
+            (0, i.jsx)(e_.A, {}),
             (0, i.jsxs)("div", {
                 className: tE.EL,
                 children: [
-                    (0, i.jsx)(t_.e, { sku: c, shape: "square", containerClassName: tE.LC }),
+                    (0, i.jsx)(tp.e, { sku: c, shape: "square", containerClassName: tE.LC }),
                     (0, i.jsx)(ef.D, {
                         variant: "heading-xl/semibold",
                         className: tE.RS,
@@ -861,7 +861,7 @@ function tm(e) {
                             giftRecipient: u?.username ?? "your recipient",
                         }),
                     }),
-                    p &&
+                    _ &&
                         (0, i.jsx)("div", {
                             className: tE.Is,
                             children: (0, i.jsx)(td.J, {
@@ -879,7 +879,7 @@ function tm(e) {
     });
 }
 n(801541);
-var tT = n(889137),
+var tm = n(889137),
     tI = n(742158),
     tO = n(683071),
     tA = n(313961),
@@ -941,12 +941,12 @@ let ty = {
                             giftRecipient: c,
                             emojiConfetti: d,
                             soundEffect: C,
-                            setEmojiConfetti: p,
-                            setSoundEffect: _,
+                            setEmojiConfetti: _,
+                            setSoundEffect: p,
                             giftingOrigin: E,
-                            additionalUserIds: m,
+                            additionalUserIds: T,
                         } = (0, V.Pv)(),
-                        T = (0, ei.t4)((e) => e.selectedSkuId),
+                        m = (0, ei.t4)((e) => e.selectedSkuId),
                         { application: I } = (0, en.V)(),
                         O = (0, P.bG)([eU.default], () => eU.default.getCurrentUser()),
                         A =
@@ -977,7 +977,7 @@ let ty = {
                                     n
                                 );
                             })(t)),
-                            (r = (0, P.yK)([eU.default], () => m?.map(eU.default.getUser).filter(tN.Vq) ?? [], [m])),
+                            (r = (0, P.yK)([eU.default], () => T?.map(eU.default.getUser).filter(tN.Vq) ?? [], [T])),
                             h.useMemo(
                                 () =>
                                     eZ().uniqWith(
@@ -986,20 +986,20 @@ let ty = {
                                     ),
                                 [c, r, l, n],
                             )),
-                        S = (0, P.bG)([tn.A], () => (null != T ? tn.A.get(T) : null), [T]),
+                        S = (0, P.bG)([tn.A], () => (null != m ? tn.A.get(m) : null), [m]),
                         { userPrice: g } = (0, tP.CD)({ sku: S, priceSetAssignmentPurchaseType: e2.lid.GIFT }),
                         N = (0, tf.fq)(S),
                         f = (0, tf.xf)(S),
                         x = async (e, t) => {},
                         R = (e) => {
-                            null != _ && _(null == e ? void 0 : e);
+                            null != p && p(null == e ? void 0 : e);
                         },
                         L = () =>
                             (0, i.jsxs)("div", {
                                 className: tv.mT,
                                 children: [
                                     null != N &&
-                                        (0, i.jsx)(t_.A, {
+                                        (0, i.jsx)(tp.A, {
                                             containerClassName: tv.T3,
                                             cardImage: N,
                                             cardBackgroundImage: f,
@@ -1011,7 +1011,7 @@ let ty = {
                                         children: [
                                             (0, i.jsx)(th.A, { sound: C, onSelect: R }),
                                             (0, i.jsx)(tS.A, {
-                                                setEmojiConfetti: p,
+                                                setEmojiConfetti: _,
                                                 emojiConfetti: null == d ? void 0 : d,
                                             }),
                                         ],
@@ -1023,9 +1023,9 @@ let ty = {
                             return (0, i.jsxs)("div", {
                                 className: tv.Tc,
                                 children: [
-                                    null != c && (E === e_.vQ.USER_PROFILE_WISHLIST || E === e_.vQ.DM_CHANNEL_WISHLIST)
+                                    null != c && (E === ep.vQ.USER_PROFILE_WISHLIST || E === ep.vQ.DM_CHANNEL_WISHLIST)
                                         ? (0, i.jsx)(e0.Z, { giftRecipient: c })
-                                        : (0, i.jsx)(eV, { selectedSkuId: T, validateSelectedGift: x, recipients: A }),
+                                        : (0, i.jsx)(eV, { selectedSkuId: m, validateSelectedGift: x, recipients: A }),
                                     (0, i.jsx)(eJ.A, {
                                         onTextChange: (e) => u?.(e),
                                         pendingText: o,
@@ -1051,7 +1051,7 @@ let ty = {
                                                               children:
                                                                   null != S &&
                                                                   null != N &&
-                                                                  (0, i.jsx)(t_.A, {
+                                                                  (0, i.jsx)(tp.A, {
                                                                       containerClassName: tv.Iy,
                                                                       cardImage: N,
                                                                       cardBackgroundImage: f,
@@ -1096,20 +1096,20 @@ let ty = {
                         getRightColumnComponent: U,
                         onStepChange: s,
                         onBackClick: a,
-                        disabled: null == c || c.id === O?.id || o.length > e_.Jo,
+                        disabled: null == c || c.id === O?.id || o.length > ep.Jo,
                     };
                 })({ handleStepChange: t, handleClose: n }),
                 a = h.useMemo(() => ({ disabled: s }), [s]);
-            return (0, i.jsx)(np, {
+            return (0, i.jsx)(n_, {
                 paymentModalStepProps: e,
                 layout: r.X.CUSTOM_STEP_BODY,
                 renderStepBody: l,
                 primaryCTAButtonProps: a,
             });
         },
-        [o.pn.REVIEW]: T._M,
+        [o.pn.REVIEW]: m._M,
     },
-    CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, i.jsx)(tm, { ...e }) },
+    CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, i.jsx)(tT, { ...e }) },
     TENANT_PROVIDER_CONFIGS: {
         tenantProvidesCheckoutRoot: !0,
         CustomTenantProvider: (e) => {
@@ -1135,7 +1135,7 @@ let ty = {
                 C = h.useCallback(() => {
                     d();
                 }, [d]),
-                p = h.useMemo(() => ({ onClose: C, analyticsObject: u }), [C, u]);
+                _ = h.useMemo(() => ({ onClose: C, analyticsObject: u }), [C, u]);
             return (0, i.jsx)(K.CheckoutRootProvider, {
                 loadId: l,
                 discoverySessionId: n,
@@ -1145,14 +1145,14 @@ let ty = {
                 isGift: s,
                 ...c,
                 activeSubscription: null,
-                children: (0, i.jsx)(n_.g, { customPaymentModalProps: p, children: t }),
+                children: (0, i.jsx)(np.g, { customPaymentModalProps: _, children: t }),
             });
         },
-        tenantAnalyticsLocation: m.A.SLAYER_STOREFRONT_PAYMENT_MODAL,
+        tenantAnalyticsLocation: T.A.SLAYER_STOREFRONT_PAYMENT_MODAL,
     },
     CustomHeaderComponent: function (e) {
         let { step: t } = e,
-            n = (0, tT.YW)(t)
+            n = (0, tm.YW)(t)
                 .with(o.pn.GIFT_CUSTOMIZATION, () => eE.intl.string(eE.t["JCFN/y"]))
                 .with(o.pn.AWAITING_PURCHASE_TOKEN_AUTH, () => eE.intl.string(eE.t.lDbi6H))
                 .with(o.pn.CONFIRM, () => "")
@@ -1191,6 +1191,8 @@ var tq =
         (l[(l.FRACTIONAL_PREMIUM_SUBSCRIPTION_GROUP_MEMBER = 1009)] = "FRACTIONAL_PREMIUM_SUBSCRIPTION_GROUP_MEMBER"),
         (l[(l.BUNDLE_PARTIALLY_OWNED = 1010)] = "BUNDLE_PARTIALLY_OWNED"),
         (l[(l.SOCIAL_LAYER_NOT_PURCHASABLE = 1011)] = "SOCIAL_LAYER_NOT_PURCHASABLE"),
+        (l[(l.FRAMES_FIAT_EXCLUSIVE = 1012)] = "FRAMES_FIAT_EXCLUSIVE"),
+        (l[(l.FIRST_PARTY_NO_ORBS = 1013)] = "FIRST_PARTY_NO_ORBS"),
         l),
     tQ = n(289873),
     tJ = n(241989),
@@ -1217,7 +1219,7 @@ let t6 = (e) => {
     },
     t3 = (e) => {
         let { skuId: t, orbPriceAmount: n } = e;
-        (0, t0.c)({ applicationId: (0, _.P)(t), skuIDs: [t] });
+        (0, t0.c)({ applicationId: (0, p.P)(t), skuIDs: [t] });
         let l = (0, ee.bG)([tn.A], () => tn.A.get(t), [t]);
         return null == l
             ? (0, i.jsx)(tQ.y, { type: tQ.y.Type.PULSING_ELLIPSIS })
@@ -1278,9 +1280,9 @@ let ne = (0, h.createContext)({
                                 };
                             }),
                             {
-                                isStepLoading: p,
-                                orbPriceAmount: m,
-                                orbBalanceToDisplay: T,
+                                isStepLoading: _,
+                                orbPriceAmount: T,
+                                orbBalanceToDisplay: m,
                                 onClickCheckout: I,
                                 showCollectiblesDiscountWarning: O,
                                 errorMessage: A,
@@ -1307,8 +1309,8 @@ let ne = (0, h.createContext)({
                                                 : null,
                                     })),
                                     C = (0, tY.gN)(),
-                                    p = (0, h.useRef)(C),
-                                    { emitOrbCheckoutPaymentFlowEvent: m } = ((e) => {
+                                    _ = (0, h.useRef)(C),
+                                    { emitOrbCheckoutPaymentFlowEvent: T } = ((e) => {
                                         let {
                                                 skuId: t,
                                                 orbProductContext: n,
@@ -1327,7 +1329,7 @@ let ne = (0, h.createContext)({
                                                 return {
                                                     load_id: a,
                                                     discovery_session_id: c,
-                                                    application_id: (0, _.P)(t),
+                                                    application_id: (0, p.P)(t),
                                                     location: l,
                                                     location_stack: l,
                                                     sku_id: t,
@@ -1409,18 +1411,18 @@ let ne = (0, h.createContext)({
                                     });
                                 (0, h.useEffect)(() => {
                                     null != l &&
-                                        null !== p.current &&
-                                        (m(e2.HAw.PAYMENT_FLOW_FAILED, l), (p.current = null));
-                                }, [l, m]);
-                                let T = (0, h.useCallback)(() => {
-                                        (p.current = C),
-                                            m(e2.HAw.PAYMENT_FLOW_COMPLETED),
+                                        null !== _.current &&
+                                        (T(e2.HAw.PAYMENT_FLOW_FAILED, l), (_.current = null));
+                                }, [l, T]);
+                                let m = (0, h.useCallback)(() => {
+                                        (_.current = C),
+                                            T(e2.HAw.PAYMENT_FLOW_COMPLETED),
                                             n((e) => {
                                                 c(tV.h.COMPLETED),
                                                     s(o.pn.CONFIRM, { fulfillment: { entitlements: e } });
                                             });
-                                    }, [n, c, C, m, s]),
-                                    I = p.current ?? C,
+                                    }, [n, c, C, T, s]),
+                                    I = _.current ?? C,
                                     O = null != r ? r.orbPriceAmount : null;
                                 return {
                                     isStepLoading: null == r,
@@ -1452,7 +1454,7 @@ let ne = (0, h.createContext)({
                                     ),
                                     orbPriceAmount: O,
                                     orbBalanceToDisplay: I,
-                                    onClickCheckout: T,
+                                    onClickCheckout: m,
                                     selectedSkuId: u,
                                 };
                             })({
@@ -1481,7 +1483,7 @@ let ne = (0, h.createContext)({
                                         [n, t, l],
                                     );
                                 return { disabled: r, tooltipText: i, text: t9() };
-                            })({ orbBalance: T, orbPriceAmount: c ? d : m, isInTestMode: g }),
+                            })({ orbBalance: m, orbPriceAmount: c ? d : T, isInTestMode: g }),
                             R = (0, h.useMemo)(
                                 () => ({ onClick: I, loading: r, text: x, disabled: N, tooltipText: f }),
                                 [I, r, x, N, f],
@@ -1489,7 +1491,7 @@ let ne = (0, h.createContext)({
                             L = O ? eE.intl.format(eE.t.fsOXXO, {}) : null,
                             U = g ? eE.intl.string(eE.t.OvMyMd) : null;
                         return {
-                            isStepLoading: p,
+                            isStepLoading: _,
                             upperInlineNoticeProps: (0, h.useMemo)(() => {
                                 if (null != U || null != L || null != A) {
                                     let e = [];
@@ -1505,8 +1507,8 @@ let ne = (0, h.createContext)({
                                 }
                                 return null;
                             }, [U, L, A]),
-                            purchaseItemContent: (0, i.jsx)(t3, { skuId: t, orbPriceAmount: c ? C : m }),
-                            paymentMethodContent: (0, i.jsx)(t5, { orbBalance: T }),
+                            purchaseItemContent: (0, i.jsx)(t3, { skuId: t, orbPriceAmount: c ? C : T }),
+                            paymentMethodContent: (0, i.jsx)(t5, { orbBalance: m }),
                             legalContent: (0, i.jsx)(t4, {}),
                             primaryButtonProps: R,
                             invoiceSummaryContent: null,
@@ -1546,7 +1548,7 @@ let ne = (0, h.createContext)({
                         orbProductContext: c,
                         isRedeeming: d,
                         orbRedemptionError: C,
-                        onRedeemVirtualCurrency: p,
+                        onRedeemVirtualCurrency: _,
                     } = ((e) => {
                         let { skuId: t, loadId: n, onCheckoutSuccess: l, onSignFailure: r, order: i } = e,
                             s = (0, P.bG)([eU.default], () => ev.Ay.canUseShopDiscounts(eU.default.getCurrentUser())),
@@ -1566,9 +1568,9 @@ let ne = (0, h.createContext)({
                         let {
                                 redeemVirtualCurrency: d,
                                 isSubmitting: C,
-                                error: p,
+                                error: _,
                             } = (0, tB.Q)({ skuId: t, loadId: n, order: i, onSignFailure: r }),
-                            _ = (0, h.useCallback)(
+                            p = (0, h.useCallback)(
                                 (e) => {
                                     d(t, n, (n) => {
                                         l?.({ entitlements: n, skuId: t }), e(n);
@@ -1580,12 +1582,12 @@ let ne = (0, h.createContext)({
                             skuId: t,
                             loadId: n,
                             orbProductContext: c,
-                            onRedeemVirtualCurrency: _,
+                            onRedeemVirtualCurrency: p,
                             isRedeeming: C,
-                            orbRedemptionError: p,
+                            orbRedemptionError: _,
                         };
                     })({ skuId: t, loadId: n, order: o, onSignFailure: u }),
-                    _ = ((e) => {
+                    p = ((e) => {
                         let { orbProductContext: t, onClose: n, overrideAnalyticParams: l } = e;
                         return {
                             analyticsDataOverride: (0, h.useMemo)(() => {
@@ -1607,15 +1609,15 @@ let ne = (0, h.createContext)({
                             orbProductContext: c,
                             isRedeeming: d,
                             orbRedemptionError: C,
-                            onRedeemVirtualCurrency: p,
+                            onRedeemVirtualCurrency: _,
                             skuId: t,
                             analyticsSourceLocation: l,
                         }),
-                        [c, d, C, p, t, l],
+                        [c, d, C, _, t, l],
                     );
                 return (0, i.jsx)(ne.Provider, {
                     value: E,
-                    children: (0, i.jsx)(n_.g, { customPaymentModalProps: _, children: a }),
+                    children: (0, i.jsx)(np.g, { customPaymentModalProps: p, children: a }),
                 });
             },
             overrideAnalyticParams: { payment_gateway: e6.kM.VIRTUAL_CURRENCY, currency: e2.Yri.DISCORD_ORB },
@@ -1783,7 +1785,7 @@ class nc {
     }
     getApplicationIdFor1PShopSKU(e) {
         return this.checkoutFlow === r.C.ORB_CHECKOUT
-            ? (0, _.P)(e)
+            ? (0, p.P)(e)
             : this.checkoutFlow === r.C.COLLECTIBLES_CHECKOUT
               ? e2.FYj
               : void 0;
@@ -1828,10 +1830,10 @@ class nc {
                 skuId: c,
                 skuProductLine: d,
                 discoverySessionId: C,
-                applicationId: _,
+                applicationId: p,
                 analyticsSourceLocation: E,
-                analyticsLocations: m,
-                analyticsObject: T,
+                analyticsLocations: T,
+                analyticsObject: m,
                 tenantParams: I,
             } = e,
             O = { current: (0, s.A)() },
@@ -1841,7 +1843,7 @@ class nc {
             },
             { modalKey: h } = t,
             P = this.generateRenderHeader(),
-            g = _ ?? this.getApplicationIdFor1PShopSKU(c),
+            g = p ?? this.getApplicationIdFor1PShopSKU(c),
             N = !!(null != r && r.isGift),
             f = !1;
         return (0, a.openModalLazy)(
@@ -1865,8 +1867,8 @@ class nc {
                         onOrderCreated: S,
                         discoverySessionId: C,
                         applicationId: g,
-                        analyticsLocations: m,
-                        analyticsObject: T,
+                        analyticsLocations: T,
+                        analyticsObject: m,
                         analyticsSourceLocation: E,
                         renderModalProps: n,
                         giftContextProps: r,
@@ -1880,15 +1882,15 @@ class nc {
                 },
                 onCloseCallback: () => {
                     f ||
-                        (p({ checkoutSucceeded: f, order: A.current }),
+                        (_({ checkoutSucceeded: f, order: A.current }),
                         this.trackPaymentFlowCanceled({
                             loadId: O.current,
                             skuId: c,
                             skuProductLine: d,
                             applicationId: g,
                             discoverySessionId: C,
-                            analyticsLocations: m,
-                            analyticsObject: T,
+                            analyticsLocations: T,
+                            analyticsObject: m,
                             analyticsSourceLocation: E,
                             isGift: N,
                         })),
@@ -1903,7 +1905,7 @@ class nc {
 n(71804), n(584160);
 var nd = n(981036),
     nC = n(367644);
-let np = (e) => {
+let n_ = (e) => {
     let {
             paymentModalStepProps: { handleStepChange: t },
             layout: n,
@@ -1915,8 +1917,8 @@ let np = (e) => {
         } = e,
         { hasPaymentSources: d } = (0, tX.jm)(),
         C = d ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS,
-        p = h.useCallback(() => t(C), [t, C]),
-        _ = h.useMemo(
+        _ = h.useCallback(() => t(C), [t, C]),
+        p = h.useMemo(
             () =>
                 n === r.X.CUSTOM_STEP_BODY
                     ? l()
@@ -1925,18 +1927,18 @@ let np = (e) => {
                       : null,
             [n, l, s, a],
         ),
-        E = h.useMemo(() => ({ ...u, onClick: p, text: eE.intl.string(eE.t.XiOHRX) }), [u, p]);
+        E = h.useMemo(() => ({ ...u, onClick: _, text: eE.intl.string(eE.t.XiOHRX) }), [u, _]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(eC.dZ, { children: _ }),
+            (0, i.jsx)(eC.dZ, { children: p }),
             (0, i.jsx)(eC.UX, { children: (0, i.jsx)(nd.cy, { onBackClick: c, primaryCTAButtonProps: E }) }),
         ],
     });
 };
-var n_ = n(551892);
+var np = n(551892);
 let nE = null,
-    nm = null,
     nT = null,
+    nm = null,
     nI = null,
     nO = null,
     nA = {
@@ -1947,12 +1949,12 @@ let nE = null,
         },
         [r.C.COLLECTIBLES_CHECKOUT]: {
             get: function () {
-                return null == nm && (nm = new nc({ checkoutFlow: r.C.COLLECTIBLES_CHECKOUT })), nm;
+                return null == nT && (nT = new nc({ checkoutFlow: r.C.COLLECTIBLES_CHECKOUT })), nT;
             },
         },
         [r.C.SLAYER_STOREFRONT_CHECKOUT]: {
             get: function () {
-                return null == nT && (nT = new nc({ checkoutFlow: r.C.SLAYER_STOREFRONT_CHECKOUT })), nT;
+                return null == nm && (nm = new nc({ checkoutFlow: r.C.SLAYER_STOREFRONT_CHECKOUT })), nm;
             },
         },
         [r.C.PREMIUM_APPS_OTP_CHECKOUT]: {
