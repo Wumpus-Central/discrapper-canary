@@ -1720,7 +1720,7 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 }
 
 .container_f1a68f {
-    padding: 8px
+    padding: var(--space-8) var(--space-16)
 }
 
 .header_f1a68f,
@@ -1730,11 +1730,11 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 }
 
 .header_f1a68f {
-    margin: 16px 0
+    margin: var(--space-16) 0
 }
 
 .subheader_f1a68f {
-    margin: 12px 0 8px
+    margin: var(--space-12) 0 var(--space-8)
 }
 
 .hasTooltip_f1a68f {
@@ -1748,7 +1748,7 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     font-size: 11px;
     line-height: 14px;
     overflow-x: auto;
-    padding: 8px;
+    padding: var(--space-8);
     scrollbar-color: var(--background-base-low) var(--background-base-lowest);
     -webkit-user-select: text;
     -moz-user-select: text;
@@ -1763,8 +1763,8 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 .colorInputContainer_f1a68f {
     align-items: center;
     display: flex;
-    gap: 4px;
-    margin: 8px 0
+    gap: var(--space-4);
+    margin: var(--space-8) 0
 }
 
 .removeButton_f1a68f {
@@ -1776,7 +1776,7 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 }
 
 .resetButton_f1a68f {
-    margin-top: 16px
+    margin-top: var(--space-16)
 }
 
 .explanation_f1a68f {
@@ -1784,7 +1784,29 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 }
 
 .tenureBadgeControls_f1a68f {
-    margin: 8px 0 16px
+    margin: var(--space-8) 0 var(--space-16)
+}
+
+.perksTable_f1a68f {
+    border-collapse: collapse;
+    margin-bottom: var(--space-16)
+}
+
+.perksHeader_f1a68f {
+    border-bottom: 1px solid var(--background-base-low);
+    color: var(--text-muted);
+    font-weight: 600;
+    text-align: start
+}
+
+.perksCell_f1a68f,
+.perksHeader_f1a68f {
+    padding-block: var(--space-4);
+    padding-inline: 0 var(--space-12)
+}
+
+.perksCell_f1a68f {
+    vertical-align: top
 }
 
 .icon__2a871 {

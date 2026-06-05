@@ -1,3 +1,16 @@
-e.exports = JSON.parse(
-    '{"iK1QsY":["Kanaal aan favorieten toevoegen"],"w1MU8Y":["Gebruiker aan favorieten toevoegen"],"xB/0Z9":["Zoeken in tekstkanalen en pb\'s"],"d3yO98":["Recente Activiteit"],"uC6Lhg":["Recente tekstkanalen"],"HGimIS":["Zoekresultaten"],"GKTlS6":["Favorieten"],"trKJoT":["In de game"],"OV3KfO":["Zoeken in spraakkanalen"],"eiie2x":["Nu actief"],"OskevP":["Favorieten"],"C+ojiQ":["Vrienden in spraak"],"DUIbKP":["Zoekresultaten"],"9ME4wE":["Voorgestelde spraakkanalen"],"4l56iz":["Sluit je aan bij ",[8,"channelIcon",[]]," ",[1,"channelName"]],"VMcw8s":["Klik hier of gebruik ",[8,"keybindHook",[[1,"keybind"]]]," om de chat te openen"],"PBVXVW":["Shift+klik om alles te sluiten"],"ERApc4":["Overlay-chat sluiten"],"x1k3cO":["speelt momenteel ",[1,"gameName"]],"uhJexs":["Chat"],"xpv/t5":["Selecteer een chat om te beginnen met het versturen van berichten."],"tYPfF2":["Tekst-in-spraak minimaliseren"],"KWrMk5":["Overlay-chat openen"],"2yFtJ1":["Recente overlay-chats"],"dvUElD":["Kanaal uit favorieten verwijderen"],"Xr8XHk":["Gebruiker uit favorieten verwijderen"]}',
-);
+e.exports = {
+    kL: "container_edf95e",
+    Oy: "partnerSection_edf95e",
+    U: "subsectionLabel_edf95e",
+    un: "rowId_edf95e",
+    en: "rowMeta_edf95e",
+    Od: "statusBadge_edf95e",
+    xk: "statusActive_edf95e",
+    kS: "statusInactive_edf95e",
+    cm: "rowActions_edf95e",
+    nM: "row_edf95e",
+    Ie: "empty_edf95e",
+    ns: "linkForm_edf95e",
+    CM: "linkFormHelp_edf95e",
+    kc: "errorText_edf95e",
+};

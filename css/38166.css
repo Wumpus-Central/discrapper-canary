@@ -2109,6 +2109,72 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a:not(:focus-within) .bottomCont
     background-color: var(--home-background)
 }
 
+.container_c66e86 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0
+}
+
+.action_c66e86 {
+    align-items: center;
+    display: flex;
+    padding: 12px 20px;
+    transition: background-color .2s ease-in-out
+}
+
+.clickableAction_c66e86 {
+    cursor: pointer
+}
+
+.clickableAction_c66e86:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.actionInfo_c66e86 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 2px;
+    margin-inline-start: 8px
+}
+
+.channelIcon_c66e86 {
+    color: var(--channel-icon);
+    height: 20px;
+    width: 20px
+}
+
+.channelIconContainer_c66e86,
+.rulesIconContainer_c66e86,
+.tagIconContainer_c66e86 {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: 20px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px
+}
+
+.rulesIcon_c66e86 {
+    color: var(--channel-icon);
+    height: 16px;
+    width: 16px
+}
+
+.checkCircle_c66e86 {
+    color: var(--icon-muted)
+}
+
+.checkCircleCompleted_c66e86 {
+    color: var(--status-positive)
+}
+
+.icon_c66e86 {
+    border-radius: var(--radius-sm)
+}
+
 .emptyStateContainer__65428 {
     align-items: center;
     bottom: 0;
