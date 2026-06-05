@@ -5,21 +5,21 @@ var n = i(627968),
     r = i(260598),
     s = i(691885),
     o = i(181658),
-    c = i(208882),
-    d = i(946116),
+    d = i(208882),
+    c = i(946116),
     g = i(375708),
     u = i(907891);
 function p(t) {
     let { transitionState: e, onClose: i, entry: p } = t,
         [h, m] = a.useState(p.description ?? ""),
-        [C, b] = a.useState(p.primaryCategoryId ?? d.mU.UNCATEGORIZED),
+        [C, b] = a.useState(p.primaryCategoryId ?? c.mU.UNCATEGORIZED),
         [y, k] = a.useState(!1),
         [x, I] = a.useState(null),
         S = async () => {
             if ((I(null), h !== p.description || C !== p.primaryCategoryId)) {
                 k(!0);
                 try {
-                    await (0, c.FA)(p.channelId, p.guildId, h, C), k(!1), i();
+                    await (0, d.FA)(p.channelId, p.guildId, h, C), k(!1), i();
                 } catch (t) {
                     k(!1), I(new o.A(t));
                 }
@@ -47,11 +47,12 @@ function p(t) {
                     selectionMode: "single",
                     label: g.intl.string(g.t.Olo8FB),
                     placeholder: g.intl.string(g.t.XqMe3N),
-                    options: (0, d.g2)(p.channelId),
+                    options: (0, c.g2)(p.channelId),
                     clearable: !1,
                     value: C,
                     onSelectionChange: b,
                     maxOptionsVisible: 4,
+                    fullWidth: !0,
                 }),
             ],
         }),
