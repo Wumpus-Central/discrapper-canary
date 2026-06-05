@@ -6740,25 +6740,6 @@
     width: 100%
 }
 
-.noScroll_e81c2b {
-    overflow: visible !important
-}
-
-.settingsContent_e81c2b {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    z-index: 1
-}
-
-.switch_e81c2b {
-    margin: 0
-}
-
-.selectedIcon_e81c2b {
-    background-color: var(--background-base-lower)
-}
-
 .counter__90981 {
     background-color: var(--background-surface-highest);
     border: 1px solid var(--border-muted);
@@ -6782,6 +6763,50 @@
 .counterText__90981,
 .tooltip__90981 {
     text-align: center
+}
+
+.purchasePlaceholder__32d1b {
+    align-items: center;
+    background: var(--background-mod-normal, hsla(240, 4%, 61%, .16));
+    border-radius: 4px;
+    display: flex;
+    justify-content: center
+}
+
+.avatarDecorationPreview__32d1b,
+.nameplatePreview__32d1b,
+.purchasePlaceholder__32d1b {
+    height: 40px;
+    width: 40px
+}
+
+.nameplatePreview__32d1b {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: right;
+    object-position: right
+}
+
+.profileFramePreview__32d1b {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px
+}
+
+.profileFrameInner__32d1b {
+    height: 40px;
+    width: 26px
+}
+
+.container__894c3 {
+    align-items: center;
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    gap: var(--space-12);
+    padding-bottom: var(--space-12);
+    padding-top: var(--space-12)
 }
 
 .container__96cb9 {
@@ -6847,41 +6872,6 @@
     gap: var(--space-12);
     padding-bottom: var(--space-12);
     padding-top: var(--space-12)
-}
-
-.purchasePlaceholder_c40875 {
-    align-items: center;
-    background: var(--background-mod-normal, hsla(240, 4%, 61%, .16));
-    border-radius: 4px;
-    display: flex;
-    justify-content: center
-}
-
-.avatarDecorationPreview_c40875,
-.nameplatePreview_c40875,
-.purchasePlaceholder_c40875 {
-    height: 40px;
-    width: 40px
-}
-
-.nameplatePreview_c40875 {
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: right;
-    object-position: right
-}
-
-.profileFramePreview_c40875 {
-    align-items: center;
-    display: flex;
-    height: 40px;
-    justify-content: center;
-    width: 40px
-}
-
-.profileFrameInner_c40875 {
-    height: 40px;
-    width: 26px
 }
 
 .avatarPairContainer__30f35 {
@@ -7176,6 +7166,10 @@
 
 .categorySubGroup_ed5050:empty {
     display: none
+}
+
+.checklistSlot__764d0>div {
+    margin: 0
 }
 
 .container_d80c36 {
