@@ -922,22 +922,28 @@ let tb = (e) => {
                 className: u()(tR.kL, tR.Eg, t),
                 ref: r,
                 children: (0, a.jsxs)("div", {
-                    className: tR.W2,
+                    className: u()(tR.W2, tR.J_),
                     children: [
-                        (0, a.jsxs)("div", {
-                            className: tR.WG,
+                        (0, a.jsxs)(ev.B, {
+                            align: "start",
+                            gap: 32,
+                            fullWidth: !1,
+                            className: tR.$S,
                             children: [
                                 i && n,
-                                (0, a.jsx)("div", {
-                                    className: tR.N1,
-                                    children: (0, a.jsx)(tp, {
-                                        className: tR.z_,
-                                        color: "text-default",
-                                        responsive: !1,
-                                        children: o,
-                                    }),
+                                (0, a.jsxs)(ev.B, {
+                                    align: "start",
+                                    gap: 12,
+                                    children: [
+                                        (0, a.jsx)(tp, {
+                                            className: tR.z_,
+                                            color: "text-default",
+                                            responsive: !1,
+                                            children: o,
+                                        }),
+                                        (0, a.jsx)(t_, {}),
+                                    ],
                                 }),
-                                (0, a.jsx)(t_, {}),
                             ],
                         }),
                         s && (0, a.jsx)("div", { className: tR.Pq, children: (0, a.jsx)(tm, {}) }),
@@ -1209,7 +1215,7 @@ let tB = () => {
                                                                 n.e("20442"),
                                                                 n.e("26963"),
                                                                 n.e("46334"),
-                                                                n.e("48971"),
+                                                                n.e("95203"),
                                                                 n.e("14819"),
                                                                 n.e("74738"),
                                                                 n.e("44648"),
@@ -1498,7 +1504,7 @@ let tZ = function (e) {
                                 n.e("20442"),
                                 n.e("26963"),
                                 n.e("46334"),
-                                n.e("48971"),
+                                n.e("95203"),
                                 n.e("14819"),
                                 n.e("74738"),
                                 n.e("44648"),

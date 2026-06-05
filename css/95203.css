@@ -423,6 +423,52 @@
     margin-inline-start: 8px
 }
 
+.dnsFont__89a31 {
+    font-synthesis: none
+}
+
+.cherryBomb__89a31 {
+    font-family: Sakura, gg sans, Arial, sans-serif;
+    letter-spacing: .04em
+}
+
+.cherryBomb__89a31.safari__89a31 {
+    transform: translateY(-1px)
+}
+
+.chicle__89a31 {
+    font-family: Jellybean, gg sans, Arial, sans-serif
+}
+
+.museoModerno__89a31 {
+    font-family: Modern, gg sans, Arial, sans-serif;
+    letter-spacing: .01em
+}
+
+.neoCastel__89a31 {
+    font-family: Medieval, gg sans, Arial, sans-serif;
+    letter-spacing: .02em
+}
+
+.neoCastel__89a31.safari__89a31 {
+    transform: translateY(-1px)
+}
+
+.pixelify__89a31 {
+    font-family: "8Bit", gg sans, Arial, sans-serif;
+    letter-spacing: .02em
+}
+
+.sinistre__89a31 {
+    font-family: Vampyre, gg sans, Arial, sans-serif;
+    letter-spacing: .01em
+}
+
+.zillaSlab__89a31 {
+    font-family: Tempo, gg sans, Arial, sans-serif;
+    letter-spacing: .03em
+}
+
 .container_dfb989 {
     display: inline-flex;
     max-width: 100%;

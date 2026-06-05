@@ -389,7 +389,7 @@ let em = (e) => {
                 y.default.track(ec.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_INVITE_CLICKED, { subscription_id: t.id }),
                     (0, V.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            i.e("5948"),
+                            i.e("60532"),
                             i.e("44616"),
                             i.e("96680"),
                             i.e("85579"),
