@@ -25831,69 +25831,75 @@ function fD(e) {
         ),
         f = R.useCallback(
             (e) => {
-                if (
+                switch (
                     (t.isAgeRestricted !== (s.ownerConfiguredContentLevel === ei.ftr.AGE_RESTRICTED) &&
                         E(async () => {
                             let e = t.isAgeRestricted ? ei.ftr.AGE_RESTRICTED : ei.ftr.DEFAULT;
                             await j({ ownerConfiguredContentLevel: e });
                         }),
-                    t.joinType === fv.J.INVITE)
+                    t.joinType)
                 ) {
-                    let { requireTerms: n, termRules: l = [] } = t,
-                        r = l.map((e) => e.value.trim()).filter((e) => "" !== e);
-                    E(async () => {
-                        if (s.features.has(ei.GuildFeatures.DISCOVERABLE)) {
-                            let e = new Set(s.features);
-                            e.delete(ei.GuildFeatures.DISCOVERABLE), await j({ features: e });
-                        }
-                        i.verificationDirty && (await p(n, r, e));
-                    });
-                } else if (t.joinType === fv.J.APPLY) {
-                    let { pendingVerificationFields: n } = t;
-                    if (null == n) return;
-                    E(async () => {
-                        if (s.features.has(ei.GuildFeatures.DISCOVERABLE)) {
-                            let e = new Set(s.features);
-                            e.delete(ei.GuildFeatures.DISCOVERABLE), await j({ features: e });
-                        }
-                        i.verificationDirty && (await N([...n], !0, e)),
-                            i.profileDirty && null != a && (await (0, pE._C)(s.id, { visibility: a.visibility }));
-                    });
-                } else if (t.joinType === fv.J.DISCOVERABLE) {
-                    let { requireTerms: n, termRules: a = [] } = t,
-                        o = a.map((e) => e.value.trim()).filter((e) => "" !== e);
-                    E(async () => {
-                        if ((i.verificationDirty && (await p(n, o, e)), i.guildDirty)) {
-                            let e, t;
-                            (e = !1),
-                                (t = { guild_id: s.id, automatic: !1 }),
-                                (null == l || s.discoverySplash !== l.discoverySplash) &&
-                                    ((t.discovery_splash_edit_type =
-                                        null == s.discoverySplash ? "removed" : "uploaded"),
-                                    (e = !0)),
-                                (null == l ||
-                                    s.features.has(ei.GuildFeatures.DISCOVERABLE) !==
-                                        l.features.has(ei.GuildFeatures.DISCOVERABLE)) &&
-                                    ((t.is_discoverable = s.features.has(ei.GuildFeatures.DISCOVERABLE)), (e = !0)),
-                                (null == l || s.rulesChannelId !== l.rulesChannelId) &&
-                                    ((t.rules_channel_id = s.rulesChannelId), (e = !0)),
-                                e && se.default.track(ei.HAw.GUILD_SETTINGS_DISCOVERY_UPDATED, t);
-                            let n = new Set(s.features);
-                            n.add(ei.GuildFeatures.DISCOVERABLE),
-                                n.delete(ei.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL),
-                                await j({
-                                    features: n,
-                                    discoverySplash: s.discoverySplash,
-                                    description: s.description,
-                                    preferredLocale: s.preferredLocale,
-                                });
-                            try {
-                                await (0, cB.Oh)({ guildId: s.id, ...r });
-                            } catch (e) {
-                                throw (m(new nN.LG(e).getAnyErrorMessage()), e);
+                    case fv.J.INVITE: {
+                        let { requireTerms: n, termRules: l = [] } = t,
+                            r = l.map((e) => e.value.trim()).filter((e) => "" !== e);
+                        E(async () => {
+                            if (s.features.has(ei.GuildFeatures.DISCOVERABLE)) {
+                                let e = new Set(s.features);
+                                e.delete(ei.GuildFeatures.DISCOVERABLE), await j({ features: e });
                             }
-                        }
-                    });
+                            i.verificationDirty && (await p(n, r, e));
+                        });
+                        break;
+                    }
+                    case fv.J.APPLY: {
+                        let { pendingVerificationFields: n } = t;
+                        if (null == n) return;
+                        E(async () => {
+                            if (s.features.has(ei.GuildFeatures.DISCOVERABLE)) {
+                                let e = new Set(s.features);
+                                e.delete(ei.GuildFeatures.DISCOVERABLE), await j({ features: e });
+                            }
+                            i.verificationDirty && (await N([...n], !0, e)),
+                                i.profileDirty && null != a && (await (0, pE._C)(s.id, { visibility: a.visibility }));
+                        });
+                        break;
+                    }
+                    case fv.J.DISCOVERABLE: {
+                        let { requireTerms: n, termRules: a = [] } = t,
+                            o = a.map((e) => e.value.trim()).filter((e) => "" !== e);
+                        E(async () => {
+                            if ((i.verificationDirty && (await p(n, o, e)), i.guildDirty)) {
+                                let e, t;
+                                (e = !1),
+                                    (t = { guild_id: s.id, automatic: !1 }),
+                                    (null == l || s.discoverySplash !== l.discoverySplash) &&
+                                        ((t.discovery_splash_edit_type =
+                                            null == s.discoverySplash ? "removed" : "uploaded"),
+                                        (e = !0)),
+                                    (null == l ||
+                                        s.features.has(ei.GuildFeatures.DISCOVERABLE) !==
+                                            l.features.has(ei.GuildFeatures.DISCOVERABLE)) &&
+                                        ((t.is_discoverable = s.features.has(ei.GuildFeatures.DISCOVERABLE)), (e = !0)),
+                                    (null == l || s.rulesChannelId !== l.rulesChannelId) &&
+                                        ((t.rules_channel_id = s.rulesChannelId), (e = !0)),
+                                    e && se.default.track(ei.HAw.GUILD_SETTINGS_DISCOVERY_UPDATED, t);
+                                let n = new Set(s.features);
+                                n.add(ei.GuildFeatures.DISCOVERABLE),
+                                    n.delete(ei.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL),
+                                    await j({
+                                        features: n,
+                                        discoverySplash: s.discoverySplash,
+                                        description: s.description,
+                                        preferredLocale: s.preferredLocale,
+                                    });
+                                try {
+                                    await (0, cB.Oh)({ guildId: s.id, ...r });
+                                } catch (e) {
+                                    throw (m(new nN.LG(e).getAnyErrorMessage()), e);
+                                }
+                            }
+                        });
+                    }
                 }
             },
             [t, E, s, i, j, p, a, N, l, r],

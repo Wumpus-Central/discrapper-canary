@@ -1113,20 +1113,28 @@ ${s}`),
                                                 let e = (0, g.kK)(t, u, c);
                                                 if (null == e) return;
                                                 let { applicationId: n } = e;
-                                                if (e.type === A.I.APP_DIRECTORY_PROFILE)
-                                                    D(n), (0, E.KL)(u, ek.J.APP_DISCOVERY, l);
-                                                else if (e.type === A.I.APP_DIRECTORY_STOREFRONT) D(n, "storefront");
-                                                else if (e.type === A.I.APP_DIRECTORY_STOREFRONT_SKU)
-                                                    D(n, "storefront_sku");
-                                                else if (e.type === A.I.ACTIVITY_BOOKMARK) {
-                                                    let { params: t } = e;
-                                                    (0, E.KL)(n, ek.J.ACTIVITY, t.referrerId ?? l, t.customId);
-                                                } else
-                                                    e.type === A.I.APP_OAUTH2_LINK &&
-                                                        ((0, E.KL)(n, ek.J.OAUTH, l),
-                                                        _.Ay.trackWithMetadata(b.HAw.APP_OAUTH2_LINK_EMBED_URL_SENT, {
-                                                            application_id: n,
-                                                        }));
+                                                switch (e.type) {
+                                                    case A.I.APP_DIRECTORY_PROFILE:
+                                                        D(n), (0, E.KL)(u, ek.J.APP_DISCOVERY, l);
+                                                        break;
+                                                    case A.I.APP_DIRECTORY_STOREFRONT:
+                                                        D(n, "storefront");
+                                                        break;
+                                                    case A.I.APP_DIRECTORY_STOREFRONT_SKU:
+                                                        D(n, "storefront_sku");
+                                                        break;
+                                                    case A.I.ACTIVITY_BOOKMARK: {
+                                                        let { params: t } = e;
+                                                        (0, E.KL)(n, ek.J.ACTIVITY, t.referrerId ?? l, t.customId);
+                                                        break;
+                                                    }
+                                                    case A.I.APP_OAUTH2_LINK:
+                                                        (0, E.KL)(n, ek.J.OAUTH, l),
+                                                            _.Ay.trackWithMetadata(
+                                                                b.HAw.APP_OAUTH2_LINK_EMBED_URL_SENT,
+                                                                { application_id: n },
+                                                            );
+                                                }
                                             } else if (t === A.I.INVITE)
                                                 eY({
                                                     inviteKey: u,

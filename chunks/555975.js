@@ -536,12 +536,17 @@ function t8(e) {
 function t9(e) {
     let t = t5(e.context),
         n = !ts || t.mute || t.deaf;
-    e.context === eZ.x.DEFAULT
-        ? (n = n || tf || tp || tE || !ev.A.didHavePermission(e$.iL.AUDIO))
-        : e.context === eZ.x.STREAM && (n = !0),
-        e.setSelfMute(n),
-        e.setSelfDeaf(t.deaf),
-        e.context === eZ.x.DEFAULT && P.A.updateNativeMute();
+    switch (e.context) {
+        case eZ.x.DEFAULT:
+            n = n || tf || tp || tE || !ev.A.didHavePermission(e$.iL.AUDIO);
+            break;
+        case eZ.x.STREAM:
+            n = !0;
+            break;
+        default:
+            e.context;
+    }
+    e.setSelfMute(n), e.setSelfDeaf(t.deaf), e.context === eZ.x.DEFAULT && P.A.updateNativeMute();
 }
 function ne() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tg,

@@ -272,15 +272,22 @@ function eQ(e) {
             else {
                 var a;
                 let e;
-                if (t.type === k.r2.MEMBER) {
-                    let l = q.default.getUser(t.id);
-                    null != l && (e = eV.Ay.getName(l));
-                } else if (t.type === k.r2.ROLE) {
-                    let n = Q.A.getGuild(l.getGuildId());
-                    if (null != n) {
-                        let l = J.A.getRole(n.id, t.id);
-                        null != l && (e = l.name);
+                switch (t.type) {
+                    case k.r2.MEMBER: {
+                        let l = q.default.getUser(t.id);
+                        null != l && (e = eV.Ay.getName(l));
+                        break;
                     }
+                    case k.r2.ROLE: {
+                        let n = Q.A.getGuild(l.getGuildId());
+                        if (null != n) {
+                            let l = J.A.getRole(n.id, t.id);
+                            null != l && (e = l.name);
+                        }
+                        break;
+                    }
+                    default:
+                        t.type;
                 }
                 (a = e),
                     _.A.show({
@@ -887,7 +894,7 @@ function ts(e) {
                                     onClick: function () {
                                         (0, y.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                l.e("22575"),
+                                                l.e("26243"),
                                                 l.e("11585"),
                                                 l.e("89916"),
                                                 l.e("20379"),
@@ -1006,7 +1013,7 @@ function ta(e) {
                                                 onClick: function () {
                                                     (0, y.openModalLazy)(async () => {
                                                         let { default: e } = await Promise.all([
-                                                            l.e("22575"),
+                                                            l.e("26243"),
                                                             l.e("89916"),
                                                             l.e("20379"),
                                                             l.e("19193"),

@@ -57,10 +57,13 @@ class h extends i.A {
                     importHandler: () => n.e("18549").then(n.bind(n, 877588)),
                 },
             ]))
-                "voiceChannel" === e.type
-                    ? this.registerVoiceChannel(e.name, e.importHandler, e.isEnabled)
-                    : "application" === e.type &&
-                      this.registerApplication(e.name, e.applicationId, e.importHandler, e.isEnabled);
+                switch (e.type) {
+                    case "voiceChannel":
+                        this.registerVoiceChannel(e.name, e.importHandler, e.isEnabled);
+                        break;
+                    case "application":
+                        this.registerApplication(e.name, e.applicationId, e.importHandler, e.isEnabled);
+                }
     }
     registerApplication(e, t, n, i) {
         this.registrations.set(e, { type: "application", name: e, applicationId: t, isEnabled: i, importHandler: n });

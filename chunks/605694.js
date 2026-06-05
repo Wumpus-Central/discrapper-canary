@@ -15,8 +15,8 @@ var i = n(627968),
     x = n(821609),
     f = n(331322),
     E = n(534514),
-    y = n(477782),
-    T = n(687966),
+    T = n(477782),
+    y = n(687966),
     j = n(404778),
     v = n(155718),
     I = n(793574),
@@ -63,24 +63,24 @@ function q(e) {
             sourceUserId: n.id,
             trackEntryPointImpression: !0,
         }),
-        { fetched: f, hasAlreadyLinked: E, canStartAuthorization: y, startAuthorization: T, token: j } = (0, _.RD)(c),
+        { fetched: f, hasAlreadyLinked: E, canStartAuthorization: T, startAuthorization: y, token: j } = (0, _.RD)(c),
         { analyticsLocations: v } = (0, A.Ay)(I.A.USER_PROFILE_APPLICATION_WIDGET),
         R = l.useCallback(() => {
-            y &&
+            T &&
                 (t({
                     action: E
                         ? "PRESS_APPLICATION_WIDGET_LINKED_RECONNECT"
                         : "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                     applicationId: a.applicationId,
                 }),
-                T({ analyticsLocations: v }));
-        }, [y, E, T, t, a.applicationId, v]),
-        D = null == s && f && !E && y,
+                y({ analyticsLocations: v }));
+        }, [T, E, y, t, a.applicationId, v]),
+        D = null == s && f && !E && T,
         N =
             null == s &&
             f &&
             E &&
-            y &&
+            T &&
             null != j &&
             !Array.from(d._.APPLICATION_IDENTITIES_SCOPES).some((e) => j.scopes.includes(e)) &&
             !j.scopes.includes(d.F.SDK_SOCIAL_LAYER) &&
@@ -499,15 +499,18 @@ function em(e) {
                     : {
                           mode: "from_data",
                           variables: Object.fromEntries([
-                              ...(e.profile?.data?.dynamic?.map((e) =>
-                                  e.type === u.f.STRING
-                                      ? [e.name, { type: "string", value: e.value }]
-                                      : e.type === u.f.NUMBER
-                                        ? [e.name, { type: "number", value: e.value }]
-                                        : e.type === u.f.MEDIA
-                                          ? [e.name, { type: "unfurled_media", media: (0, k.Uv)(e.value) }]
-                                          : (0, U.xb)(e),
-                              ) ?? []),
+                              ...(e.profile?.data?.dynamic?.map((e) => {
+                                  switch (e.type) {
+                                      case u.f.STRING:
+                                          return [e.name, { type: "string", value: e.value }];
+                                      case u.f.NUMBER:
+                                          return [e.name, { type: "number", value: e.value }];
+                                      case u.f.MEDIA:
+                                          return [e.name, { type: "unfurled_media", media: (0, k.Uv)(e.value) }];
+                                      default:
+                                          return (0, U.xb)(e);
+                                  }
+                              }) ?? []),
                               ...Object.entries({ username: e.profile?.username, ...e.profile?.data?.primary })
                                   .filter(U.QE)
                                   .map((e) => {
@@ -564,10 +567,10 @@ function em(e) {
               headerClassName: B.wx,
               additionalManageWidgetMenuItems:
                   null != j.game
-                      ? (0, i.jsx)(y.Dr, {
+                      ? (0, i.jsx)(T.Dr, {
                             id: "view-game-profile",
                             label: "View Game Profile",
-                            icon: T._,
+                            icon: y._,
                             action: j.openGameProfileModal,
                         })
                       : null,
@@ -602,10 +605,10 @@ function ep(e) {
               headerClassName: B.vX,
               additionalManageWidgetMenuItems:
                   null != u.game
-                      ? (0, i.jsx)(y.Dr, {
+                      ? (0, i.jsx)(T.Dr, {
                             id: "view-game-profile",
                             label: "View Game Profile",
-                            icon: T._,
+                            icon: y._,
                             action: u.openGameProfileModal,
                         })
                       : null,

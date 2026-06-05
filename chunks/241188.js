@@ -14,9 +14,9 @@ var a = n(627968),
     p = n(726249),
     x = n(742589),
     v = n(210714),
-    A = n(363195),
-    y = n(519059),
-    f = n(557740),
+    f = n(363195),
+    A = n(519059),
+    y = n(557740),
     I = n(859524),
     j = n(4106),
     b = n(105971);
@@ -34,59 +34,63 @@ var k = n(919796),
     T = n(800319),
     w = n(596720);
 function _(e, t, n) {
-    return t.type === w.Mm.MESSAGE
-        ? t.message.id === t.message.channel_id && null != t.threadChannel
-            ? {
-                  id: e.id,
-                  timestamp: Date.now(),
-                  channelType: e.data.channel_type,
-                  data: { kind: "forumThread", message: t.message, threadChannel: t.threadChannel },
-                  score: e.score,
-                  debugScore: JSON.stringify(e.score_components),
-                  unread: n,
-              }
-            : {
-                  id: e.id,
-                  timestamp: Date.now(),
-                  channelType: e.data.channel_type,
-                  data: {
-                      kind: "message",
-                      message: t.message,
-                      mentioned: e.data.has_mention,
-                      messageContext: e.data.message_context,
-                  },
-                  score: e.score,
-                  debugScore: JSON.stringify(e.score_components),
-                  unread: n,
-              }
-        : t.type === w.Mm.ACTIVITY || t.type === w.Mm.CUSTOM_STATUS
-          ? {
+    switch (t.type) {
+        case w.Mm.MESSAGE:
+            if (t.message.id === t.message.channel_id && null != t.threadChannel)
+                return {
+                    id: e.id,
+                    timestamp: Date.now(),
+                    channelType: e.data.channel_type,
+                    data: { kind: "forumThread", message: t.message, threadChannel: t.threadChannel },
+                    score: e.score,
+                    debugScore: JSON.stringify(e.score_components),
+                    unread: n,
+                };
+            return {
+                id: e.id,
+                timestamp: Date.now(),
+                channelType: e.data.channel_type,
+                data: {
+                    kind: "message",
+                    message: t.message,
+                    mentioned: e.data.has_mention,
+                    messageContext: e.data.message_context,
+                },
+                score: e.score,
+                debugScore: JSON.stringify(e.score_components),
+                unread: n,
+            };
+        case w.Mm.ACTIVITY:
+        case w.Mm.CUSTOM_STATUS:
+            return {
                 id: e.id,
                 timestamp: Date.now(),
                 data: { kind: "contentInventory", content: t.activity },
                 score: e.score,
                 debugScore: JSON.stringify(e.score_components),
                 unread: n,
-            }
-          : t.type === w.Mm.GUILD_EVENT
-            ? {
-                  id: e.id,
-                  timestamp: Date.now(),
-                  data: { kind: "guildEvent", eventId: t.event_id },
-                  score: e.score,
-                  debugScore: JSON.stringify(e.score_components),
-                  unread: n,
-              }
-            : t.type === w.Mm.RECOMMENDED_GUILDS
-              ? {
-                    id: e.id,
-                    timestamp: Date.now(),
-                    data: { kind: "recommendedGuilds" },
-                    score: e.score,
-                    debugScore: JSON.stringify(e.score_components),
-                    unread: n,
-                }
-              : null;
+            };
+        case w.Mm.GUILD_EVENT:
+            return {
+                id: e.id,
+                timestamp: Date.now(),
+                data: { kind: "guildEvent", eventId: t.event_id },
+                score: e.score,
+                debugScore: JSON.stringify(e.score_components),
+                unread: n,
+            };
+        case w.Mm.RECOMMENDED_GUILDS:
+            return {
+                id: e.id,
+                timestamp: Date.now(),
+                data: { kind: "recommendedGuilds" },
+                score: e.score,
+                debugScore: JSON.stringify(e.score_components),
+                unread: n,
+            };
+        default:
+            return null;
+    }
 }
 let C = 15 * n(927813).A.Millis.MINUTE;
 var N = n(939249),
@@ -206,7 +210,7 @@ function en(e) {
         x = g ?? p,
         v = null != s ? (0, X.gU)(s) : null;
     if (null == n || null == l) return null;
-    let A = null != n.description && n.description.length > 0;
+    let f = null != n.description && n.description.length > 0;
     return (0, a.jsxs)("div", {
         className: et.Qo,
         children: [
@@ -218,8 +222,8 @@ function en(e) {
                     children: h,
                 }),
             }),
-            (0, a.jsx)(R.E, { variant: "text-lg/semibold", className: A ? et.X_ : void 0, children: n.name }),
-            A &&
+            (0, a.jsx)(R.E, { variant: "text-lg/semibold", className: f ? et.X_ : void 0, children: n.name }),
+            f &&
                 (0, a.jsx)(R.E, {
                     variant: "text-md/normal",
                     color: "text-subtle",
@@ -273,9 +277,9 @@ var ea = n(232835),
     ep = n(352043),
     ex = n(268719),
     ev = n(935208),
-    eA = n(652215),
-    ey = n(372912),
-    ef = n(701628);
+    ef = n(652215),
+    eA = n(372912),
+    ey = n(701628);
 let eI = i.memo(function (e) {
     let {
             message: t,
@@ -290,13 +294,13 @@ let eI = i.memo(function (e) {
             renderThreadAccessory: h,
             ...g
         } = e,
-        p = t.type === eA.lAJ.POLL_RESULT || (e.disableInteraction ?? !1),
+        p = t.type === ef.lAJ.POLL_RESULT || (e.disableInteraction ?? !1),
         x = t.isFirstMessageInForumPost(c),
         v = (0, es.S)((t.editedTimestamp ?? t.timestamp).valueOf()),
         {
-            content: A,
-            hasSpoilerEmbeds: y,
-            hasBailedAst: f,
+            content: f,
+            hasSpoilerEmbeds: A,
+            hasBailedAst: y,
         } = (0, eu.A)(t, {
             hideSimpleEmbedContent: r,
             allowList: x || v,
@@ -308,14 +312,14 @@ let eI = i.memo(function (e) {
         j = (0, ed.Ay)(t),
         b = (0, d.bG)(
             [$.A],
-            () => t.hasFlag(eA.pr7.HAS_THREAD) && $.A.getChannel(ev.default.castMessageIdAsChannelId(t.id)),
+            () => t.hasFlag(ef.pr7.HAS_THREAD) && $.A.getChannel(ev.default.castMessageIdAsChannelId(t.id)),
         ),
         E = (0, el.$7)({ guildId: c.guild_id, roleId: j.iconRoleId }),
         k = (0, eo.fF)(t),
         T = (0, eo.ZD)(t);
     return (0, a.jsx)(ec.A, {
         compact: !1,
-        className: s()(n, ey.i, { [ef.M1]: (0, er.ec)(t), [ef.XN]: p }),
+        className: s()(n, eA.i, { [ey.M1]: (0, er.ec)(t), [ey.XN]: p }),
         disableInteraction: p,
         childrenExecutedCommand: (0, ex.A)(t, c, !1),
         childrenHeader: (0, eg.A)({
@@ -330,12 +334,12 @@ let eI = i.memo(function (e) {
             hideTimestamp: !0,
             hideGuildTag: !1,
         }),
-        childrenAccessories: e.hideAccessories ? void 0 : (0, em.J)(e, y, f),
-        childrenMessageContent: (0, eh.A)(e, A),
+        childrenAccessories: e.hideAccessories ? void 0 : (0, em.J)(e, A, y),
+        childrenMessageContent: (0, eh.A)(e, f),
         childrenSystemMessage: (0, ep.A)({ ...e, disableInteraction: p }),
         onContextMenu: i,
         onClick: l,
-        hasThread: h && null != b && t.hasFlag(eA.pr7.HAS_THREAD),
+        hasThread: h && null != b && t.hasFlag(ef.pr7.HAS_THREAD),
         hasReply: !1,
         "aria-labelledby": k,
         "aria-describedby": T,
@@ -363,8 +367,8 @@ function ej(e) {
         r = (0, d.bG)([$.A], () => (null != n ? $.A.getChannel(n) : null), [n]),
         c = (0, d.bG)([ee.A], () => (r?.guild_id != null ? ee.A.getGuild(r.guild_id) : null), [r]),
         o = (0, d.yK)(
-            [f.A, ea.A],
-            () => (null == n ? [] : l.map((e) => f.A.getMessage(e) ?? ea.A.getMessage(n, e)).filter((e) => null != e)),
+            [y.A, ea.A],
+            () => (null == n ? [] : l.map((e) => y.A.getMessage(e) ?? ea.A.getMessage(n, e)).filter((e) => null != e)),
             [n, l],
         );
     return null == r || null == c || 0 === o.length
@@ -517,7 +521,7 @@ function ew(e) {
                                   let e = (() => {
                                       switch (t.data.kind) {
                                           case "message":
-                                              if (t.channelType === eA.rbe.GUILD_ANNOUNCEMENT)
+                                              if (t.channelType === ef.rbe.GUILD_ANNOUNCEMENT)
                                                   return F.intl.string(F.t["8P08G9"]);
                                               return F.intl.string(F.t.hMFMY9);
                                           case "guildEvent":
@@ -599,7 +603,7 @@ function eC(e) {
                             break;
                         case "guildEvent": {
                             let e = S.Ay.getGuildScheduledEvent(t.data.eventId);
-                            null != e && (0, M.pX)(eA.BVt.GUILD_EVENT_DETAILS(e.guild_id, e.id));
+                            null != e && (0, M.pX)(ef.BVt.GUILD_EVENT_DETAILS(e.guild_id, e.id));
                             break;
                         }
                         case "forumThread":
@@ -628,16 +632,16 @@ let eS = function (e) {
         s,
         r,
         { scrollContainerRef: c } = e,
-        o = (0, d.bG)([f.A], () => f.A.notificationItem(), []),
-        { showDot: u } = { value: 0, showDot: (0, d.bG)([f.A], () => f.A.hasNewContent(), []) },
+        o = (0, d.bG)([y.A], () => y.A.notificationItem(), []),
+        { showDot: u } = { value: 0, showDot: (0, d.bG)([y.A], () => y.A.hasNewContent(), []) },
         m = i.useRef(null),
         [h, g] = i.useState(!1),
         {
             data: p,
             loading: x,
             isRefreshing: v,
-            handleOnRefresh: A,
-            viewabilityConfigCallbackPairs: y,
+            handleOnRefresh: f,
+            viewabilityConfigCallbackPairs: A,
         } = (function (e) {
             let { showDot: t, notificationItem: n } = e,
                 [a, l] = i.useState(!1),
@@ -646,11 +650,11 @@ let eS = function (e) {
                     readItems: r,
                     allUnreadItemsHydrated: c,
                 } = (function () {
-                    let e = (0, d.bG)([f.A], () => f.A.getUnreadDisplayItems()),
-                        t = (0, d.bG)([f.A], () => f.A.getReadDisplayItems()),
-                        n = (0, d.bG)([f.A], () => f.A.getNextIndexToHydrate()),
-                        a = (0, d.cf)([f.A], () => f.A.getHydratedItems()),
-                        l = (0, d.bG)([f.A], () => f.A.getMissingItems());
+                    let e = (0, d.bG)([y.A], () => y.A.getUnreadDisplayItems()),
+                        t = (0, d.bG)([y.A], () => y.A.getReadDisplayItems()),
+                        n = (0, d.bG)([y.A], () => y.A.getNextIndexToHydrate()),
+                        a = (0, d.cf)([y.A], () => y.A.getHydratedItems()),
+                        l = (0, d.bG)([y.A], () => y.A.getMissingItems());
                     i.useEffect(() => {
                         let e = Date.now() + t.length;
                         j.A.ackGravityItems(t.map((t) => ({ id: t.id, timestamp: e-- }), !0));
@@ -690,19 +694,19 @@ let eS = function (e) {
                     }
                     return { unreadItems: s, readItems: r, allUnreadItemsHydrated: n >= e.length };
                 })(),
-                o = (0, d.bG)([f.A], () => f.A.getVersion(), []),
-                u = (0, d.bG)([f.A], () => !(f.A.isFirstPageHydrated() && o > 0));
+                o = (0, d.bG)([y.A], () => y.A.getVersion(), []),
+                u = (0, d.bG)([y.A], () => !(y.A.isFirstPageHydrated() && o > 0));
             i.useEffect(() => {
-                null != f.A.getLoadId() && b.k.trackFeedShown({ homeSessionId: "gravity" });
+                null != y.A.getLoadId() && b.k.trackFeedShown({ homeSessionId: "gravity" });
             }, [o]);
-            let m = (0, d.bG)([f.A], () => f.A.isRefreshing(), []),
-                h = (0, d.bG)([f.A], () => f.A.isHydrating(), []),
+            let m = (0, d.bG)([y.A], () => y.A.isRefreshing(), []),
+                h = (0, d.bG)([y.A], () => y.A.isHydrating(), []),
                 [g, p] = i.useState([]),
-                { loadId: x, lastScrollEventTimestamp: v } = (0, d.cf)([f.A], () => ({
-                    loadId: f.A.getLoadId(),
-                    lastScrollEventTimestamp: f.A.lastScrollEvent(),
+                { loadId: x, lastScrollEventTimestamp: v } = (0, d.cf)([y.A], () => ({
+                    loadId: y.A.getLoadId(),
+                    lastScrollEventTimestamp: y.A.lastScrollEvent(),
                 })),
-                A = g
+                f = g
                     .filter((e) => {
                         let { item: t } = e;
                         return !T.P.has(t.data.kind);
@@ -712,12 +716,12 @@ let eS = function (e) {
                         return t.id;
                     })
                     .pop(),
-                y = (0, k.A)(A);
+                A = (0, k.A)(f);
             i.useEffect(() => {
-                if (m || u || null == y || null == A || A === y) return;
+                if (m || u || null == A || null == f || f === A) return;
                 let e = Date.now();
                 e - v > C && (j.A.gravityScrollEvent(e), b.k.trackFeedFirstScrollStarted());
-            }, [m, v, y, A, x, u]);
+            }, [m, v, A, f, x, u]);
             let N = i.useCallback(
                     (e) => {
                         let { viewableItems: t } = e;
@@ -878,9 +882,9 @@ let eS = function (e) {
         },
         [N],
     );
-    let S = (0, d.bG)([f.A], () => f.A.hasNewContent(), []),
-        M = (0, d.bG)([f.A], () => f.A.isHydrating(), []),
-        G = i.useMemo(() => y[0].onViewableItemsChanged, [y]),
+    let S = (0, d.bG)([y.A], () => y.A.hasNewContent(), []),
+        M = (0, d.bG)([y.A], () => y.A.isHydrating(), []),
+        G = i.useMemo(() => A[0].onViewableItemsChanged, [A]),
         { registerItemRef: L } =
             ((t = i.useRef(null)),
             (n = i.useRef(new Map())),
@@ -963,8 +967,8 @@ let eS = function (e) {
             c.current?.scrollTo({ top: 0, behavior: "smooth" });
         }, [c]),
         V = i.useCallback(() => {
-            A(), U();
-        }, [A, U]),
+            f(), U();
+        }, [f, U]),
         O = i.useCallback(
             (e) =>
                 "loading" === e.data.kind
@@ -1051,18 +1055,18 @@ var eM = n(852456),
     eG = n(964623);
 let eL = (0, h.A)(function (e) {
     let { width: t } = e,
-        n = (0, y.c)("ICYMIPage");
+        n = (0, A.c)("ICYMIPage");
     i.useEffect(() => {
-        n || (0, r.pX)(eA.BVt.ME);
+        n || (0, r.pX)(ef.BVt.ME);
     }, [n]),
         i.useLayoutEffect(() => {
-            n && m.I(eA.BVt.ICYMI);
+            n && m.I(ef.BVt.ICYMI);
         }, [n]),
         (0, g.Ay)(() => {
             n && (0, v.d)("icymi");
         });
-    let l = (0, d.bG)([A.A], () => A.A.theme),
-        h = (0, d.bG)([f.A], () => f.A.isRefreshing()),
+    let l = (0, d.bG)([f.A], () => f.A.theme),
+        h = (0, d.bG)([y.A], () => y.A.isRefreshing()),
         j = i.useRef(null);
     (0, p.HU)({ location: F.intl.string(F.t["jnXV/V"]) });
     let [b, k] = i.useState(!1);
@@ -1088,11 +1092,11 @@ let eL = (0, h.A)(function (e) {
         );
     }, []);
     let T = E(),
-        w = y.f8.useConfig({ location: "icymi page" }).enabled,
+        w = A.f8.useConfig({ location: "icymi page" }).enabled,
         _ = i.useCallback(
             async (e) => {
                 e.metaKey && w
-                    ? await (0, I.be)(eA.ZSU.ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON)
+                    ? await (0, I.be)(ef.ZSU.ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON)
                     : await T();
             },
             [T, w],

@@ -233,7 +233,7 @@ let j = "2026-03-surface-direct-renderer",
     });
 var W = n(53857),
     K = n(734057),
-    $ = n(728555),
+    $ = n(555975),
     z = n(763827),
     q = n(412780),
     X = n(873985),
@@ -2730,32 +2730,35 @@ class tt extends m.A {
             (this._lastSentSpeakingStatus = 0),
             (this._lastSentSSRC = void 0);
         const u = $.Ay.supports(G.O5.FIRST_FRAME_CALLBACK) && $.Ay.supports(G.O5.REMOTE_USER_MULTI_STREAM);
-        if (r === G.x.DEFAULT) {
-            const t = K.A.getChannel(this.channelId)?.type === ec.rbe.GUILD_STAGE_VOICE;
-            (this._localMediaSinkWantsManager = new eV(e, t, u)),
-                this._localMediaSinkWantsManager.on(eG.Update, (e) => {
-                    this.state === ec.S7L.RTC_CONNECTED &&
-                        null != this._socket &&
-                        (this.logger.info(`Media sink wants: ${JSON.stringify(e)}`),
-                        this._socket.mediaSinkWants(e),
-                        this._connection?.setLocalVideoSinkWants(e));
-                }),
-                this._localMediaSinkWantsManager.on(eG.UserSSRCUpdate, (e, t, n) => {
-                    this._connection?.createUser(e, t, n);
-                });
-        } else
-            r === G.x.STREAM &&
-                ((this._goLiveQualityManager = new L()),
-                this._goLiveQualityManager.on(D.RequestedSSRCsUpdate, (e, t, n) => {
-                    this._connection?.createUser(e, t, n);
-                }),
-                this._goLiveQualityManager.on(D.RequestedStreamsUpdate, (e) => {
-                    this.state === ec.S7L.RTC_CONNECTED &&
-                        null != this._socket &&
-                        (this.logger.info(`Go Live Media sink wants: ${JSON.stringify(e)}`),
-                        this._socket.mediaSinkWants(e),
-                        this._connection?.setLocalVideoSinkWants(e));
-                }));
+        switch (r) {
+            case G.x.DEFAULT: {
+                const t = K.A.getChannel(this.channelId)?.type === ec.rbe.GUILD_STAGE_VOICE;
+                (this._localMediaSinkWantsManager = new eV(e, t, u)),
+                    this._localMediaSinkWantsManager.on(eG.Update, (e) => {
+                        this.state === ec.S7L.RTC_CONNECTED &&
+                            null != this._socket &&
+                            (this.logger.info(`Media sink wants: ${JSON.stringify(e)}`),
+                            this._socket.mediaSinkWants(e),
+                            this._connection?.setLocalVideoSinkWants(e));
+                    }),
+                    this._localMediaSinkWantsManager.on(eG.UserSSRCUpdate, (e, t, n) => {
+                        this._connection?.createUser(e, t, n);
+                    });
+                break;
+            }
+            case G.x.STREAM:
+                (this._goLiveQualityManager = new L()),
+                    this._goLiveQualityManager.on(D.RequestedSSRCsUpdate, (e, t, n) => {
+                        this._connection?.createUser(e, t, n);
+                    }),
+                    this._goLiveQualityManager.on(D.RequestedStreamsUpdate, (e) => {
+                        this.state === ec.S7L.RTC_CONNECTED &&
+                            null != this._socket &&
+                            (this.logger.info(`Go Live Media sink wants: ${JSON.stringify(e)}`),
+                            this._socket.mediaSinkWants(e),
+                            this._connection?.setLocalVideoSinkWants(e));
+                    });
+        }
         (this._remoteVideoSinkWants = eM),
             ew.X.on(ew.N.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged),
             ew.X.on(ew.N.WindowVisibilityChanged, this.windowVisibilityChanged),

@@ -347,27 +347,37 @@ function k(e) {
                                         for (let e in n)
                                             if ("Type" !== e && "inPage" !== e && "object" == typeof n[e]) {
                                                 let i = n[e];
-                                                if ("If" === i.Type || "ElseIf" === i.Type) {
-                                                    if (
-                                                        (function (e, t) {
-                                                            let n = [];
-                                                            for (let t in e)
-                                                                "Type" !== t && "object" == typeof e[t] && n.push(e[t]);
-                                                            if (0 === n.length) return !0;
-                                                            let i = _(n[0], t);
-                                                            for (let e = 1; e < n.length; e++) {
-                                                                let r = n[e],
-                                                                    s = _(r, t);
-                                                                i =
-                                                                    "Or" === (r.Conjuction ?? r.Conjunction ?? "And")
-                                                                        ? i || s
-                                                                        : i && s;
-                                                            }
-                                                            return i;
-                                                        })(i, t)
-                                                    )
+                                                switch (i.Type) {
+                                                    case "If":
+                                                    case "ElseIf":
+                                                        if (
+                                                            (function (e, t) {
+                                                                let n = [];
+                                                                for (let t in e)
+                                                                    "Type" !== t &&
+                                                                        "object" == typeof e[t] &&
+                                                                        n.push(e[t]);
+                                                                if (0 === n.length) return !0;
+                                                                let i = _(n[0], t);
+                                                                for (let e = 1; e < n.length; e++) {
+                                                                    let r = n[e],
+                                                                        s = _(r, t);
+                                                                    i =
+                                                                        "Or" ===
+                                                                        (r.Conjuction ?? r.Conjunction ?? "And")
+                                                                            ? i || s
+                                                                            : i && s;
+                                                                }
+                                                                return i;
+                                                            })(i, t)
+                                                        )
+                                                            return !0;
+                                                        break;
+                                                    case "Else":
                                                         return !0;
-                                                } else if ("Else" === i.Type) return !0;
+                                                    default:
+                                                        i.Type;
+                                                }
                                             }
                                         return !1;
                                     })(e.Questions[t], r),

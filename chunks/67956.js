@@ -311,16 +311,20 @@ let eP = "checkout-error-boundary-test-modal",
     };
 function eA(e) {
     let { errorType: t = "mock-error" } = e;
-    if ("mock-error" === t) throw Error("Simulated error thrown inside a payment step");
-    return "translation-key-error" === t
-        ? (0, s.jsx)("div", {
-              children: w.intl.format(ej.default.cRB332, {
-                  avatar: (0, s.jsx)("div", { children: "Sample Avatar" }),
-                  nickname: (0, s.jsx)("div", { children: "Sample Nickname" }),
-                  username: (0, s.jsx)("div", { children: "Sample Username" }),
-              }),
-          })
-        : (0, s.jsx)("div", { children: "Unknown error type" });
+    switch (t) {
+        case "mock-error":
+            throw Error("Simulated error thrown inside a payment step");
+        case "translation-key-error":
+            return (0, s.jsx)("div", {
+                children: w.intl.format(ej.default.cRB332, {
+                    avatar: (0, s.jsx)("div", { children: "Sample Avatar" }),
+                    nickname: (0, s.jsx)("div", { children: "Sample Nickname" }),
+                    username: (0, s.jsx)("div", { children: "Sample Username" }),
+                }),
+            });
+        default:
+            return (0, s.jsx)("div", { children: "Unknown error type" });
+    }
 }
 let e_ = {
     title: "Checkout",

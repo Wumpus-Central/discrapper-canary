@@ -145,13 +145,17 @@ class eI {
         for (let t of i) {
             let { id: i } = t,
                 s = G.A.getScoreWithoutFetchingLatest(i);
-            if (e === ea.rD.USER && t instanceof P.cq) {
-                if (t.type === h.rbe.DM) r[(i = t.getRecipientId())] = 1 + s / n;
-                else if (t.type === h.rbe.GROUP_DM) {
-                    let e = t.recipients.length;
-                    for (let i of t.recipients) r[i] = 1 + (s / n) * (1 / e);
+            if (e === ea.rD.USER && t instanceof P.cq)
+                switch (t.type) {
+                    case h.rbe.DM:
+                        r[(i = t.getRecipientId())] = 1 + s / n;
+                        break;
+                    case h.rbe.GROUP_DM: {
+                        let e = t.recipients.length;
+                        for (let i of t.recipients) r[i] = 1 + (s / n) * (1 / e);
+                    }
                 }
-            } else r[i] = 1 + s / n;
+            else r[i] = 1 + s / n;
         }
         for (let e of K.A.getFriendIDs()) r[e] = (r[e] ?? 1) + 0.2;
         for (let e of _.A.getDMUserIds()) r[e] = (r[e] ?? 1) + 0.1;

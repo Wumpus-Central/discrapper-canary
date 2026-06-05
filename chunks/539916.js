@@ -2,18 +2,18 @@
 n.d(t, {
     Bu: () => T,
     D1: () => A,
-    Ii: () => k,
+    Ii: () => U,
     Kd: () => I,
-    Km: () => v,
-    ME: () => N,
-    Mc: () => O,
-    QY: () => h,
-    Q_: () => f,
+    Km: () => C,
+    ME: () => y,
+    Mc: () => R,
+    QY: () => f,
+    Q_: () => h,
     SA: () => b,
-    SD: () => y,
+    SD: () => N,
     Sq: () => x,
     Uh: () => L,
-    a5: () => R,
+    a5: () => O,
     fs: () => E,
     hv: () => w,
     iD: () => p,
@@ -23,8 +23,8 @@ n.d(t, {
     qC: () => S,
     sd: () => g,
     tb: () => M,
-    vK: () => U,
-    wZ: () => C,
+    vK: () => k,
+    wZ: () => v,
 }),
     n(321073);
 var i,
@@ -37,8 +37,8 @@ var i,
     c = n(652215),
     d = n(375708);
 let _ = 100,
-    f = 50,
-    h = 100,
+    h = 50,
+    f = 100,
     p = 15,
     E = 50,
     m = 10,
@@ -47,22 +47,22 @@ let _ = 100,
     I = 1,
     T = 13;
 var S = (((i = {})[(i.CUSTOMIZE = 0)] = "CUSTOMIZE"), (i[(i.BROWSE = 1)] = "BROWSE"), i),
-    N = (((r = {})[(r.MULTIPLE_CHOICE = 0)] = "MULTIPLE_CHOICE"), (r[(r.DROPDOWN = 1)] = "DROPDOWN"), r),
-    y =
+    y = (((r = {})[(r.MULTIPLE_CHOICE = 0)] = "MULTIPLE_CHOICE"), (r[(r.DROPDOWN = 1)] = "DROPDOWN"), r),
+    N =
         (((s = {})[(s.ONBOARDING_DEFAULT = 0)] = "ONBOARDING_DEFAULT"),
         (s[(s.ONBOARDING_ADVANCED = 1)] = "ONBOARDING_ADVANCED"),
         s),
-    C =
+    v =
         (((a = {})[(a.APPLICATION = 0)] = "APPLICATION"),
         (a[(a.PROVIDER_CONNECTED_ACCOUNT = 1)] = "PROVIDER_CONNECTED_ACCOUNT"),
         a);
-function v(e) {
+function C(e) {
     if (e.options.length > 0) return !1;
-    let { id: t, ...n } = O(),
+    let { id: t, ...n } = R(),
         { id: i, ...r } = e;
     return l()(n, r);
 }
-function O() {
+function R() {
     return {
         id: String(Date.now()),
         title: d.intl.string(d.t.vY91C9),
@@ -73,7 +73,7 @@ function O() {
         type: 0,
     };
 }
-function R(e) {
+function O(e) {
     return { id: String(Date.now()), title: "", options: [], singleSelect: !1, required: !1, inOnboarding: e, type: 0 };
 }
 function b(e) {
@@ -147,7 +147,7 @@ let M = new Set([
 function x(e) {
     return 0 === e.connection_type ? `app:${e.application_id}` : `provider:${e.provider_id}`;
 }
-function U(e) {
+function k(e) {
     let [t, n] = e.split(":");
     return "app" === t && void 0 !== n && "" !== n
         ? { type: 0, applicationId: n }
@@ -155,30 +155,32 @@ function U(e) {
           ? { type: 1, providerId: n }
           : null;
 }
-function k(e) {
+function U(e) {
     let t = [];
+    if (0 !== e.connection_type && 1 !== e.connection_type) return t.push("Invalid connection type"), t;
+    switch (e.connection_type) {
+        case 0:
+            (0, u.uJ)(e.application_id) && t.push("Application ID is required for application connections"),
+                (0, u.uJ)(e.provider_id) || t.push("Platform ID not allowed for application connections");
+            break;
+        case 1:
+            (0, u.uJ)(e.provider_id)
+                ? t.push("Platform ID is required for platform connections")
+                : P.includes(e.provider_id) || t.push("Invalid platform ID"),
+                (0, u.uJ)(e.application_id) || t.push("Application ID not allowed for platform connections");
+            break;
+        default:
+            e.connection_type;
+    }
     return (
-        0 !== e.connection_type && 1 !== e.connection_type
-            ? t.push("Invalid connection type")
-            : (0 === e.connection_type
-                  ? ((0, u.uJ)(e.application_id) && t.push("Application ID is required for application connections"),
-                    (0, u.uJ)(e.provider_id) || t.push("Platform ID not allowed for application connections"))
-                  : 1 === e.connection_type &&
-                    ((0, u.uJ)(e.provider_id)
-                        ? t.push("Platform ID is required for platform connections")
-                        : P.includes(e.provider_id) || t.push("Invalid platform ID"),
-                    (0, u.uJ)(e.application_id) || t.push("Application ID not allowed for platform connections")),
-              null != e.description &&
-                  e.description.length > g &&
-                  t.push(`Description must be ${g} characters or less`)),
-        t
+        null != e.description && e.description.length > g && t.push(`Description must be ${g} characters or less`), t
     );
 }
 function G(e) {
     let t = [],
         n = new Set();
     for (let [i, r] of e.entries()) {
-        let e = k(r);
+        let e = U(r);
         t.push(...e.map((e) => `Connection ${i + 1}: ${e}`));
         let s = x(r);
         n.has(s) && t.push("Duplicate connection configuration"), n.add(s);

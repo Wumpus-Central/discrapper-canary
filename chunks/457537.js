@@ -50,18 +50,18 @@ let x = {
     name: "Checkbox",
     component: function (e) {
         let { disabled: l, readOnly: a, displayOnly: i, type: n, size: s, align: r, shape: d, label: u } = e,
-            [x, y] = o.useState(!1),
-            h = o.useCallback((e, l) => {
-                y(l);
+            [x, h] = o.useState(!1),
+            y = o.useCallback((e, l) => {
+                h(l);
             }, []),
             v = o.useCallback(() => {
-                y(!0);
+                h(!0);
             }, []),
             g = o.useCallback(() => {
-                y(!1);
+                h(!1);
             }, []),
             f = o.useCallback(() => {
-                y((e) => !e);
+                h((e) => !e);
             }, []);
         return (0, t.jsxs)(b.B, {
             direction: "vertical",
@@ -70,7 +70,7 @@ let x = {
                 (0, t.jsx)(c.Kj, {
                     "data-migration-pending": !0,
                     value: x,
-                    onChange: h,
+                    onChange: y,
                     disabled: l,
                     readOnly: a,
                     displayOnly: i,
@@ -152,8 +152,8 @@ let x = {
         },
     },
 };
-var y = a(503698),
-    h = a.n(y),
+var h = a(503698),
+    y = a.n(h),
     v = a(489215);
 let g = {
     blurpleLight: "blurple-light",
@@ -184,7 +184,7 @@ let g = {
 function f(e) {
     let { text: l, variant: a = "grayLight" } = e,
         o = g[a];
-    return (0, t.jsx)(p.E, { variant: "eyebrow", className: h()(v.chip, v[o]), children: l });
+    return (0, t.jsx)(p.E, { variant: "eyebrow", className: y()(v.chip, v[o]), children: l });
 }
 var V = a(759146);
 let C = ["blurple", "purple", "green", "orange", "yellow", "pink", "red", "gray"],
@@ -287,7 +287,7 @@ function E(e) {
         (l = (0, t.jsx)(w.A.Child, {
             grow: 0,
             shrink: 0,
-            children: (0, t.jsx)("img", { alt: "", className: h()(D.Kk, r), ...a }),
+            children: (0, t.jsx)("img", { alt: "", className: y()(D.Kk, r), ...a }),
         })),
             "right" === e && (p = w.A.Direction.HORIZONTAL_REVERSE);
     } else null != n && (a = n);
@@ -295,7 +295,7 @@ function E(e) {
     return (
         o === k.Z.Types.PRIMARY && (m = !1),
         (0, t.jsx)(k.Z, {
-            className: h()(D.RJ, s),
+            className: y()(D.RJ, s),
             type: o,
             style: c,
             children: (0, t.jsxs)(w.A, {
@@ -308,13 +308,13 @@ function E(e) {
                             null != d && "" !== d
                                 ? (0, t.jsx)(T.z, {
                                       "data-migration-pending": !0,
-                                      className: h()(D.$G, { [D.vV]: m }),
+                                      className: y()(D.$G, { [D.vV]: m }),
                                       children: d,
                                   })
                                 : null,
                             (0, t.jsx)(M.a, {
                                 "data-migration-pending": !0,
-                                className: h()(D.Vz, { [D.vV]: m }),
+                                className: y()(D.Vz, { [D.vV]: m }),
                                 children: u,
                             }),
                             a,
@@ -435,8 +435,8 @@ let q = {
                         showSubtext: b,
                         showDisabledItems: p,
                         showColoredItems: x,
-                        showLoading: y,
-                        showTrailingIndicator: h,
+                        showLoading: h,
+                        showTrailingIndicator: y,
                         dangerItemColor: v,
                     } = e,
                     [g, f] = o.useState(!0),
@@ -476,7 +476,7 @@ let q = {
                                             leadingAccessory: u ? { type: "icon", icon: P.t } : void 0,
                                             subtext: b ? "Pin this message to the channel" : void 0,
                                             badge: "beta",
-                                            loading: y,
+                                            loading: h,
                                             action: () => {},
                                         }),
                                         (0, t.jsx)(N.Dr, {
@@ -504,7 +504,7 @@ let q = {
                                                         id: "brand-item",
                                                         label: "Brand Item",
                                                         color: "brand",
-                                                        trailingIndicator: h ? { type: "icon", icon: F.I } : void 0,
+                                                        trailingIndicator: y ? { type: "icon", icon: F.I } : void 0,
                                                         action: () => {},
                                                     }),
                                                     (0, t.jsx)(N.Dr, {
@@ -1100,7 +1100,7 @@ var es = a(27232),
     ep = a(907085),
     em = a(179820),
     ex = a(508770);
-let ey = {
+let eh = {
         none: void 0,
         StarIcon: es.G,
         FireIcon: er.Y,
@@ -1111,7 +1111,7 @@ let ey = {
         ExperimentalEpicIcon: ep.b,
         ExperimentalMythicIcon: em.O,
     },
-    eh = {
+    ey = {
         title: "Badge",
         stories: [
             {
@@ -1119,7 +1119,7 @@ let ey = {
                 id: "badge",
                 component: function (e) {
                     let { type: l, customText: a, variant: o, iconName: i } = e,
-                        n = null != i && "" !== i && "none" !== i ? ey[i] : void 0;
+                        n = null != i && "" !== i && "none" !== i ? eh[i] : void 0;
                     return (0, t.jsx)(ex.E, {
                         type: "custom" === l && null != a && "" !== a ? { text: a } : l,
                         variant: o,
@@ -1561,10 +1561,10 @@ let eN = {
                             ].slice(0, Math.max(1, Math.min(5, a))),
                         [a, n, s, r, d],
                     ),
-                    y = o.useCallback((e) => {
+                    h = o.useCallback((e) => {
                         c(e);
                     }, []),
-                    h = o.useCallback(() => {
+                    y = o.useCallback(() => {
                         c(x.map((e) => e.value));
                     }, [x]),
                     v = o.useCallback(() => {
@@ -1577,7 +1577,7 @@ let eN = {
                     direction: "vertical",
                     gap: "md",
                     children: [
-                        (0, t.jsx)(eA.$, { selectedValues: u, label: i, onChange: y, options: x, disabled: l }),
+                        (0, t.jsx)(eA.$, { selectedValues: u, label: i, onChange: h, options: x, disabled: l }),
                         (0, t.jsxs)(p.E, {
                             variant: "text-sm/normal",
                             children: ["Current selection: ", u.length > 0 ? u.join(", ") : "None"],
@@ -1590,7 +1590,7 @@ let eN = {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Select All",
-                                    onClick: h,
+                                    onClick: y,
                                     disabled: l || 0 === x.length,
                                 }),
                                 (0, t.jsx)(m.$, {
@@ -1654,7 +1654,7 @@ let eP = {
                     x = o.useCallback(() => {
                         u((0, ej.Ec)((0, ej.Xj)()));
                     }, []),
-                    y = o.useCallback(() => {
+                    h = o.useCallback(() => {
                         u((0, eS._U)("2024-12-25"));
                     }, []);
                 return eD("CalendarStory")
@@ -1696,7 +1696,7 @@ let eP = {
                                           variant: "secondary",
                                           size: "sm",
                                           text: "Set Dec 25",
-                                          onClick: y,
+                                          onClick: h,
                                           disabled: n,
                                       }),
                                   ],
@@ -1754,14 +1754,14 @@ function e0(e) {
         } = e,
         { i18n: b, locale: m } = (0, eW.G9)(),
         x = l?.start ?? null,
-        [y, v] = o.useState(x);
+        [h, v] = o.useState(x);
     return (
         o.useEffect(() => {
             v(x);
         }, [x]),
         (0, t.jsx)(eZ._e, {
             value: l,
-            focusedValue: y,
+            focusedValue: h,
             onFocusChange: v,
             onChange: a,
             minValue: i,
@@ -1771,7 +1771,7 @@ function e0(e) {
             visibleDuration: { months: d },
             "aria-label": c,
             "data-mana-component": "range-calendar",
-            className: h()(eJ.BJ, d > 1 && eJ.Q7, u),
+            className: y()(eJ.BJ, d > 1 && eJ.Q7, u),
             children: (e) =>
                 (0, t.jsxs)(t.Fragment, {
                     children: [
@@ -1838,7 +1838,7 @@ function e2(e) {
         } = e,
         { i18n: b } = (0, eW.G9)(),
         { fieldProps: p } = (0, R.n)(c),
-        { disabled: m, errorMessage: x, required: y = !1 } = p,
+        { disabled: m, errorMessage: x, required: h = !1 } = p,
         v = { hasError: null != x && "" !== x },
         {
             refs: g,
@@ -1877,7 +1877,7 @@ function e2(e) {
                     value: l,
                     onChange: T,
                     isDisabled: m,
-                    isRequired: y,
+                    isRequired: h,
                     minValue: o,
                     maxValue: i,
                     placeholderValue: n,
@@ -1895,7 +1895,7 @@ function e2(e) {
                                     children: (e) =>
                                         (0, t.jsx)(e$.Eu, {
                                             segment: e,
-                                            className: h()(e1.mX, e.isPlaceholder && e1.qf),
+                                            className: y()(e1.mX, e.isPlaceholder && e1.qf),
                                         }),
                                 }),
                                 (0, t.jsx)("span", { className: e1.me, "aria-hidden": "true", children: "\u2192" }),
@@ -1904,7 +1904,7 @@ function e2(e) {
                                     children: (e) =>
                                         (0, t.jsx)(e$.Eu, {
                                             segment: e,
-                                            className: h()(e1.mX, e.isPlaceholder && e1.qf),
+                                            className: y()(e1.mX, e.isPlaceholder && e1.qf),
                                         }),
                                 }),
                                 (0, t.jsx)(eG.$, {
@@ -1967,9 +1967,9 @@ let e4 = {
                         let e = (0, ej.Ec)((0, ej.Xj)());
                         u({ start: e, end: e.add({ days: 7 }) });
                     }, []),
-                    y = (0, ej.Ec)((0, ej.Xj)()),
-                    h = r ? y.subtract({ weeks: 1 }) : void 0,
-                    v = r ? y.add({ weeks: 2 }) : void 0;
+                    h = (0, ej.Ec)((0, ej.Xj)()),
+                    y = r ? h.subtract({ weeks: 1 }) : void 0,
+                    v = r ? h.add({ weeks: 2 }) : void 0;
                 return eD("DateRangePickerStory")
                     ? (0, t.jsxs)(b.B, {
                           direction: "vertical",
@@ -1983,7 +1983,7 @@ let e4 = {
                                   disabled: n,
                                   required: s,
                                   errorMessage: "" !== a ? a : void 0,
-                                  minValue: h,
+                                  minValue: y,
                                   maxValue: v,
                                   helperText: (() => {
                                       if (null == d) return "";
@@ -2441,7 +2441,7 @@ let lb = [
                             successMessage: m,
                             showCharacterCount: x,
                         } = e,
-                        y = {
+                        h = {
                             label: l,
                             hideLabel: a,
                             description: o,
@@ -2461,21 +2461,21 @@ let lb = [
                             (0, t.jsxs)(e3.n, {
                                 label: "Text Input",
                                 children: [
-                                    (0, t.jsx)(et.k, { ...y }),
-                                    (0, t.jsx)(et.k, { ...y, clearable: !0 }),
+                                    (0, t.jsx)(et.k, { ...h }),
+                                    (0, t.jsx)(et.k, { ...h, clearable: !0 }),
                                     (0, t.jsx)(et.k, {
-                                        ...y,
+                                        ...h,
                                         leading: { icon: ls.X, onClick: r.tE, "aria-label": "At" },
                                     }),
-                                    (0, t.jsx)(et.k, { ...y, leading: ls.X }),
-                                    (0, t.jsx)(et.k, { ...y, leading: "https://discord.gg/" }),
+                                    (0, t.jsx)(et.k, { ...h, leading: ls.X }),
+                                    (0, t.jsx)(et.k, { ...h, leading: "https://discord.gg/" }),
                                     (0, t.jsx)(et.k, {
-                                        ...y,
+                                        ...h,
                                         trailing: { icon: ls.X, onClick: r.tE, "aria-label": "At" },
                                     }),
-                                    (0, t.jsx)(et.k, { ...y, trailing: ls.X }),
+                                    (0, t.jsx)(et.k, { ...h, trailing: ls.X }),
                                     (0, t.jsx)(et.k, {
-                                        ...y,
+                                        ...h,
                                         leading: { type: "tags", label: "Tags", items: lb.slice(0, 3) },
                                     }),
                                 ],
@@ -2495,7 +2495,7 @@ let lb = [
                                 ],
                             }),
                             (0, t.jsx)(ln.c, {}),
-                            (0, t.jsx)(e3.n, { label: "Text Area", children: (0, t.jsx)(lc.f, { ...y }) }),
+                            (0, t.jsx)(e3.n, { label: "Text Area", children: (0, t.jsx)(lc.f, { ...h }) }),
                         ],
                     });
                 },
@@ -2519,8 +2519,8 @@ let lb = [
 a(321073);
 var lm = a(102079),
     lx = a(224640),
-    ly = a(430993),
-    lh = a(276293),
+    lh = a(430993),
+    ly = a(276293),
     lv = a(189213),
     lg = a(772707),
     lf = a(347704),
@@ -2576,8 +2576,8 @@ function lE(e) {
         } = e,
         [c, b] = o.useState("intro"),
         [p, m] = o.useState(!1),
-        [x, y] = o.useState(!1),
-        [h, v] = o.useState(!1),
+        [x, h] = o.useState(!1),
+        [y, v] = o.useState(!1),
         [g, f] = o.useState(null),
         V = o.useCallback(async () => {
             if (
@@ -2623,7 +2623,7 @@ function lE(e) {
                     notice:
                         null != g
                             ? { message: g.message, type: g.type }
-                            : h
+                            : y
                               ? {
                                     message: "Great job, helmets are important for protecting your brain!",
                                     type: "warning",
@@ -2641,7 +2641,7 @@ function lE(e) {
                     subtitle: "Enter your passcode to complete the radness verification process.",
                     notice: null != g ? { message: g.message, type: g.type } : void 0,
                 },
-                body: (0, t.jsx)(lD, { setIsPasscodeValid: y }),
+                body: (0, t.jsx)(lD, { setIsPasscodeValid: h }),
                 nextButtonProps: { text: "Verify passcode" },
                 nextEnabled: x,
             },
@@ -2658,7 +2658,7 @@ let lL = {
             docs: "https://design.discord.tools/components/web/modals/modal",
             component: function (e) {
                 let { showPreview: l, showInput: a, subtitleIcon: o, ...i } = e,
-                    n = o ? { text: i.subtitle ?? "Default subtitle", leadingIcon: lh.N } : i.subtitle;
+                    n = o ? { text: i.subtitle ?? "Default subtitle", leadingIcon: ly.N } : i.subtitle;
                 return (0, t.jsxs)(b.B, {
                     gap: 16,
                     align: "center",
@@ -2847,37 +2847,38 @@ let lL = {
             docs: "https://design.discord.tools/components/web/modals/expressive-modal",
             component: function (e) {
                 let { graphic: l, subtitleIcon: i, ...n } = e,
-                    s = i ? { text: n.subtitle ?? "Default subtitle", leadingIcon: lh.N } : n.subtitle,
-                    r = o.useMemo(
-                        () =>
-                            0 === l
-                                ? { type: "image", src: lw }
-                                : 1 === l
-                                  ? {
-                                        type: "lottie",
-                                        lottie: () => a.e("95947").then(a.t.bind(a, 604902, 19)),
-                                        aspectRatio: "6/4",
-                                    }
-                                  : 2 === l
-                                    ? { type: "rive", rive: lm.Q }
-                                    : 3 === l
-                                      ? {
-                                            type: "video",
-                                            src: "https://cdn.discordapp.com/assets/content/06fafa729efafb6235e0ee9df9482566fa9e74b96a792a9265dca70113c71ab7.webm",
-                                            fallbackImageSrc: lw,
-                                            loop: !0,
-                                            loopAt: 2.5,
-                                        }
-                                      : 4 === l
-                                        ? {
-                                              type: "dynamic",
-                                              component: lV.DynamicGraphicComponent.DEMO,
-                                              aspectRatio: "6/4",
-                                              props: { text: "Dynamic Content" },
-                                          }
-                                        : void 0,
-                        [l],
-                    );
+                    s = i ? { text: n.subtitle ?? "Default subtitle", leadingIcon: ly.N } : n.subtitle,
+                    r = o.useMemo(() => {
+                        switch (l) {
+                            case 0:
+                                return { type: "image", src: lw };
+                            case 1:
+                                return {
+                                    type: "lottie",
+                                    lottie: () => a.e("95947").then(a.t.bind(a, 604902, 19)),
+                                    aspectRatio: "6/4",
+                                };
+                            case 2:
+                                return { type: "rive", rive: lm.Q };
+                            case 3:
+                                return {
+                                    type: "video",
+                                    src: "https://cdn.discordapp.com/assets/content/06fafa729efafb6235e0ee9df9482566fa9e74b96a792a9265dca70113c71ab7.webm",
+                                    fallbackImageSrc: lw,
+                                    loop: !0,
+                                    loopAt: 2.5,
+                                };
+                            case 4:
+                                return {
+                                    type: "dynamic",
+                                    component: lV.DynamicGraphicComponent.DEMO,
+                                    aspectRatio: "6/4",
+                                    props: { text: "Dynamic Content" },
+                                };
+                            default:
+                                return;
+                        }
+                    }, [l]);
                 return (0, t.jsxs)(b.B, {
                     gap: 16,
                     align: "center",
@@ -3162,7 +3163,7 @@ let lL = {
                                             ...e,
                                             ...o,
                                             "aria-label": "Base Modal Example",
-                                            children: (0, t.jsx)(ly.c, {
+                                            children: (0, t.jsx)(lh.c, {
                                                 children: (0, t.jsxs)(b.B, {
                                                     gap: 16,
                                                     children: [
@@ -3287,23 +3288,23 @@ function lH(e) {
         o.useEffect(() => {
             n?.(b);
         }, [b, n]);
-    let y = l[b],
+    let h = l[b],
         v = b + 1 === l.length,
         g = o.useCallback(() => {
-            y?.onCta?.(), v ? s?.() : x((e) => e + 1);
-        }, [y, v, s]),
+            h?.onCta?.(), v ? s?.() : x((e) => e + 1);
+        }, [h, v, s]),
         f = o.useCallback(() => {
             s?.();
         }, [s]),
         V = o.useCallback(() => {
             s?.();
         }, [s]);
-    if (!d || null == y) return null;
+    if (!d || null == h) return null;
     let C = {
-            text: y.action?.text ?? (v ? l$.intl.string(l$.t.i4jeWR) : l$.intl.string(l$.t.PDTjLN)),
-            variant: y.action?.variant ?? "primary",
+            text: h.action?.text ?? (v ? l$.intl.string(l$.t.i4jeWR) : l$.intl.string(l$.t.PDTjLN)),
+            variant: h.action?.variant ?? "primary",
             onClick: g,
-            ...y.action,
+            ...h.action,
         },
         j = {
             targetElementRef: c.targetElementRef,
@@ -3312,7 +3313,7 @@ function lH(e) {
             position: u,
             shouldShow: d,
             onRequestClose: f,
-            gradientColor: y.gradientColor,
+            gradientColor: h.gradientColor,
             caretConfig: a,
             ...("edge" === c.alignmentStrategy
                 ? { alignmentStrategy: "edge", align: c.align }
@@ -3323,16 +3324,16 @@ function lH(e) {
         children: (0, t.jsxs)("div", {
             ref: r,
             children: [
-                (0, t.jsx)(lz.q, { onClick: V, variant: null != y.gradientColor ? "color-mix" : void 0 }),
-                null != y.graphic &&
+                (0, t.jsx)(lz.q, { onClick: V, variant: null != h.gradientColor ? "color-mix" : void 0 }),
+                null != h.graphic &&
                     (0, t.jsx)("div", {
-                        className: h()(lG.graphic, { [lG[`graphic--${i}`]]: null != i }),
+                        className: y()(lG.graphic, { [lG[`graphic--${i}`]]: null != i }),
                         children: (0, t.jsx)(lO.v, {
-                            ...y.graphic,
-                            aspectRatio: y.graphic.aspectRatio ?? ("sm" === i ? "2/1" : "16/9"),
+                            ...h.graphic,
+                            aspectRatio: h.graphic.aspectRatio ?? ("sm" === i ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, t.jsx)(lF.D, { title: y.title, body: y.body, badge: y.badge, textLink: y.textLink }),
+                (0, t.jsx)(lF.D, { title: h.title, body: h.body, badge: h.badge, textLink: h.textLink }),
                 (0, t.jsx)("div", {
                     className: lG.actionBar,
                     children: (0, t.jsxs)("div", {
@@ -3719,10 +3720,10 @@ let lZ = {
                                 ].slice(0, Math.max(1, Math.min(5, a))),
                             [a, n, s, r, d],
                         ),
-                        y = o.useCallback((e) => {
+                        h = o.useCallback((e) => {
                             c(e);
                         }, []),
-                        h = o.useCallback(() => {
+                        y = o.useCallback(() => {
                             x.length > 0 && c(x[0].value);
                         }, [x]),
                         v = o.useCallback(() => {
@@ -3735,7 +3736,7 @@ let lZ = {
                         direction: "vertical",
                         gap: "md",
                         children: [
-                            (0, t.jsx)(lW.z, { value: u, label: i, onChange: y, options: x, disabled: l }),
+                            (0, t.jsx)(lW.z, { value: u, label: i, onChange: h, options: x, disabled: l }),
                             (0, t.jsxs)(p.E, {
                                 variant: "text-sm/normal",
                                 children: ["Current selection: ", "string" == typeof u && "" !== u ? u : "None"],
@@ -3748,7 +3749,7 @@ let lZ = {
                                         variant: "secondary",
                                         size: "sm",
                                         text: "Select First",
-                                        onClick: h,
+                                        onClick: y,
                                         disabled: l || 0 === x.length,
                                     }),
                                     (0, t.jsx)(m.$, {
@@ -3916,15 +3917,15 @@ let l3 = [
             label: "Aardvark",
             value: "aardvark",
             id: "aardvark",
-            leading: lh.N,
+            leading: ly.N,
             trailing: { type: "badge", badgeType: "new" },
             description: "This is an aardvark",
         },
-        { label: "Cat", value: "cat", id: "cat", leading: lh.N, trailing: "20m", description: "This is a cat" },
-        { label: "Dog", value: "dog", id: "dog", leading: lh.N },
+        { label: "Cat", value: "cat", id: "cat", leading: ly.N, trailing: "20m", description: "This is a cat" },
+        { label: "Dog", value: "dog", id: "dog", leading: ly.N },
         { label: "Kangaroo", value: "kangaroo", id: "kangaroo", leading: { type: "image", src: l4 } },
         { label: "Panda", value: "panda", id: "panda", leading: { type: "avatar", src: l4 } },
-        { label: "Snake", value: "snake", id: "snake", leading: lh.N, disabled: !0 },
+        { label: "Snake", value: "snake", id: "snake", leading: ly.N, disabled: !0 },
     ],
     l7 = {
         title: "Select",
@@ -4051,13 +4052,13 @@ let l3 = [
                             ...p
                         } = e,
                         { required: m, disabled: x } = p,
-                        y = l5(c, p.asyncOptions),
-                        [h, v] = o.useState(null);
+                        h = l5(c, p.asyncOptions),
+                        [y, v] = o.useState(null);
                     return (0, t.jsxs)(l2.iS, {
                         selectionMode: l,
                         onSelectionChange: v,
-                        options: y,
-                        value: h,
+                        options: h,
+                        value: y,
                         ...p,
                         children: [
                             (0, t.jsx)(l2.a3, {
@@ -4230,20 +4231,20 @@ let al = {
                         x = o.useCallback(() => {
                             c(d);
                         }, [d]),
-                        y = (0, t.jsx)(l9.C, {
+                        h = (0, t.jsx)(l9.C, {
                             label: "Categories",
                             selectionMode: l,
                             layout: s,
                             items: u,
                             onRemove: a ? p : void 0,
                         }),
-                        h = a && (0, t.jsx)(m.$, { disabled: u.length === d.length, text: "Reset", onClick: x });
+                        y = a && (0, t.jsx)(m.$, { disabled: u.length === d.length, text: "Reset", onClick: x });
                     return "inline" === s
                         ? (0, t.jsxs)(b.B, {
                               gap: 24,
-                              children: [(0, t.jsx)("div", { style: { display: "flex", gap: 4 }, children: y }), h],
+                              children: [(0, t.jsx)("div", { style: { display: "flex", gap: 4 }, children: h }), y],
                           })
-                        : (0, t.jsxs)(b.B, { gap: 24, children: [y, h] });
+                        : (0, t.jsxs)(b.B, { gap: 24, children: [h, y] });
                 },
                 controls: {
                     selectionMode: {
@@ -4471,9 +4472,9 @@ let ad = {
                         delay: b,
                         spacing: p,
                         forceOpen: x,
-                        ...y
+                        ...h
                     } = e,
-                    h = o.useMemo(() => {
+                    y = o.useMemo(() => {
                         if ("center" !== u && null != u)
                             return "custom" === u ? { align: u, customOffset: c } : { align: u };
                     }, [u, c]),
@@ -4486,11 +4487,11 @@ let ad = {
                     padding: s,
                     delay: b,
                     spacing: p,
-                    caretConfig: h,
+                    caretConfig: y,
                     asset: v,
                     assetSize: n,
                     forceOpen: x,
-                    ...y,
+                    ...h,
                     children: (0, t.jsx)(m.$, { variant: "primary", text: "Hover me (rich)" }),
                 });
             },
@@ -4601,7 +4602,7 @@ let ab = {
                     },
                 ],
             },
-            eh,
+            ey,
             eC,
             eE,
             eI,

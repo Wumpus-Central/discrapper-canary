@@ -5,7 +5,7 @@ var a = l(627968),
     r = l(194498),
     s = l(77729),
     o = l(372684),
-    u = l(116671),
+    u = l(315240),
     c = l(956050),
     d = l(696016);
 let m = (e, t, l, a) => (a([]), () => {}),
@@ -135,20 +135,27 @@ function h(e) {
                     }),
                         (a.onmessage = (e) => {
                             let t = e.data;
-                            if ("ready" === t.type) ed({ width: t.width, height: t.height });
-                            else if ("thumbnails" === t.type) {
-                                let e = n.get(t.requestId);
-                                if ((n.delete(t.requestId), null == e)) {
-                                    for (let e of t.bitmaps) e.close();
-                                    return;
+                            switch (t.type) {
+                                case "ready":
+                                    ed({ width: t.width, height: t.height });
+                                    break;
+                                case "thumbnails": {
+                                    let e = n.get(t.requestId);
+                                    if ((n.delete(t.requestId), null == e)) {
+                                        for (let e of t.bitmaps) e.close();
+                                        return;
+                                    }
+                                    e(t.bitmaps);
+                                    break;
                                 }
-                                e(t.bitmaps);
-                            } else if (
-                                "error" === t.type &&
-                                (d.nx.warn(`Timeline thumbnail extraction error: ${t.message}`), null != t.requestId)
-                            ) {
-                                let e = n.get(t.requestId);
-                                n.delete(t.requestId), e?.([]);
+                                case "error":
+                                    if (
+                                        (d.nx.warn(`Timeline thumbnail extraction error: ${t.message}`),
+                                        null != t.requestId)
+                                    ) {
+                                        let e = n.get(t.requestId);
+                                        n.delete(t.requestId), e?.([]);
+                                    }
                             }
                         }),
                         e.postMessage({ videoBuffer: l.data.buffer }, [l.data.buffer]);

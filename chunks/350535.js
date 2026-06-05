@@ -201,13 +201,17 @@ function b(e) {
             .map((e) => {
                 let [t, n, i] = e,
                     r = "number" == typeof i ? i : I();
-                return t === d.zY.KEYBOARD_KEY || t === d.zY.KEYBOARD_MODIFIER_KEY
-                    ? (T(null != r ? [t, n, r] : [t, n]) ?? `UNK${n}`)
-                    : t === d.zY.MOUSE_BUTTON
-                      ? `mouse${n}`
-                      : t === d.zY.GAMEPAD_BUTTON
-                        ? `gamepad${n}`
-                        : `dev${t},${n}`;
+                switch (t) {
+                    case d.zY.KEYBOARD_KEY:
+                    case d.zY.KEYBOARD_MODIFIER_KEY:
+                        return T(null != r ? [t, n, r] : [t, n]) ?? `UNK${n}`;
+                    case d.zY.MOUSE_BUTTON:
+                        return `mouse${n}`;
+                    case d.zY.GAMEPAD_BUTTON:
+                        return `gamepad${n}`;
+                    default:
+                        return `dev${t},${n}`;
+                }
             })
             .filter(l.Vq);
     return t

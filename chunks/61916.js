@@ -24,15 +24,15 @@ var t = i(627968),
     _ = i(287809),
     v = i(58703),
     I = i(403362),
-    z = i(427262),
-    f = i(513480),
+    f = i(427262),
+    z = i(513480),
     y = i(359378),
     C = i(790782),
     T = i(745812);
 function k(e) {
     let { user: s, subLabel: i, ...a } = e,
-        n = z.Ay.useName(s),
-        l = z.Ay.useUserTag(s, { decoration: "never" }),
+        n = f.Ay.useName(s),
+        l = f.Ay.useUserTag(s, { decoration: "never" }),
         o = (0, r.bG)([L.A], () => L.A.getNickname(s.id)),
         u = (0, r.bG)([P.A], () => P.A.getStatus(s.id));
     return (0, t.jsx)(y.A, {
@@ -135,7 +135,7 @@ function H(e) {
                 if (b === A.rD.HEADER) return;
                 let x = b === A.rD.USER ? { type: "user", id: m.id } : { type: "channel", id: m.id },
                     h = (0, E.I)(x),
-                    p = (0, f.pE)(i, n, m, u),
+                    p = (0, z.pE)(i, n, m, u),
                     N = c.includes(h),
                     j = {
                         key: h,
@@ -149,13 +149,17 @@ function H(e) {
                         "aria-setsize": s.length,
                         className: o,
                     };
-                return b === A.rD.USER
-                    ? (0, t.jsx)(k, { user: m, ...j })
-                    : b === A.rD.GROUP_DM
-                      ? (0, t.jsx)(G, { channel: m, ...j })
-                      : b === A.rD.TEXT_CHANNEL || b === A.rD.VOICE_CHANNEL
-                        ? (0, t.jsx)(S, { channel: m, ...j })
-                        : void (0, I.xb)(b);
+                switch (b) {
+                    case A.rD.USER:
+                        return (0, t.jsx)(k, { user: m, ...j });
+                    case A.rD.GROUP_DM:
+                        return (0, t.jsx)(G, { channel: m, ...j });
+                    case A.rD.TEXT_CHANNEL:
+                    case A.rD.VOICE_CHANNEL:
+                        return (0, t.jsx)(S, { channel: m, ...j });
+                    default:
+                        return (0, I.xb)(b);
+                }
             },
             [d, r, i, n, s, c, o, u],
         );

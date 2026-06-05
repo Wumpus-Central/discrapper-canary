@@ -30,18 +30,26 @@ async function g(e, t) {
             for (let i of e) {
                 let e = await (0, f.VO)(i),
                     r = (0, p.A)(i, i.type === _.nQ.SCREENSHOT ? "jpeg" : "mp4");
-                i.type === _.nQ.CLIP || i.type === _.nQ.VOICE_CLIP
-                    ? (t.push(new File([e], r, { type: "video/mp4" })), n.push({ clip: i }))
-                    : i.type === _.nQ.SCREENSHOT && (t.push(new File([e], r, { type: "image/jpeg" })), n.push({})),
-                    c.default.track(m.HAw.CLIP_SHARED, {
-                        location_stack: A,
-                        guild_id: T.guild_id,
-                        channel_id: T.id,
-                        channel_type: T.type,
-                        application_id: i.applicationId,
-                        clip_uuid: i.id,
-                        clip_runtime: (0, h.GN)(),
-                    });
+                switch (i.type) {
+                    case _.nQ.CLIP:
+                    case _.nQ.VOICE_CLIP:
+                        t.push(new File([e], r, { type: "video/mp4" })), n.push({ clip: i });
+                        break;
+                    case _.nQ.SCREENSHOT:
+                        t.push(new File([e], r, { type: "image/jpeg" })), n.push({});
+                        break;
+                    default:
+                        i.type;
+                }
+                c.default.track(m.HAw.CLIP_SHARED, {
+                    location_stack: A,
+                    guild_id: T.guild_id,
+                    channel_id: T.id,
+                    channel_type: T.type,
+                    application_id: i.applicationId,
+                    clip_uuid: i.id,
+                    clip_runtime: (0, h.GN)(),
+                });
             }
             (0, d.R)(t, T, l.C.ChannelMessage, { filesMetadata: n, origin: "unknown:clip_share" }), r.closeAllModals();
         } catch (e) {

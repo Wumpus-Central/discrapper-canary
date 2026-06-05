@@ -70,24 +70,28 @@ var i = n(575593),
     r = n(898461),
     s = n(837015),
     a = n(203632),
-    o = n(166886),
+    o = n(892118),
     l = n(166590),
     u = n(652215);
 let c = (e) =>
     null == e
         ? []
-        : e.reduce(
-              (e, t) => (
-                  t.type === i.R.AVATAR_DECORATION
-                      ? e.push(r.A.fromServer(t))
-                      : t.type === i.R.NAMEPLATE
-                        ? e.push(s.A.fromServer(t))
-                        : t.type === i.R.PROFILE_EFFECT
-                          ? e.push(a.Ay.fromServer(t))
-                          : t.type === i.R.PROFILE_FRAME
-                            ? e.push(o.A.fromServer(t))
-                            : e.push(l.A.fromServer(t)),
-                  e
-              ),
-              [],
-          );
+        : e.reduce((e, t) => {
+              switch (t.type) {
+                  case i.R.AVATAR_DECORATION:
+                      e.push(r.A.fromServer(t));
+                      break;
+                  case i.R.NAMEPLATE:
+                      e.push(s.A.fromServer(t));
+                      break;
+                  case i.R.PROFILE_EFFECT:
+                      e.push(a.Ay.fromServer(t));
+                      break;
+                  case i.R.PROFILE_FRAME:
+                      e.push(o.A.fromServer(t));
+                      break;
+                  default:
+                      e.push(l.A.fromServer(t));
+              }
+              return e;
+          }, []);

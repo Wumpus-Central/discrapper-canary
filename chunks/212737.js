@@ -317,13 +317,15 @@ let Y = (e) => {
             let t = await (0, T.xm)(Object.values(e).map((e) => e.id));
             d(e.map((e) => ({ recipient: e, status: t.get(e.id) }))), l(2);
         };
-    return null === a
-        ? (0, r.jsx)(_.y, {})
-        : 2 === o
-          ? (0, r.jsx)(F, { transitionState: t, isReminderConfirmation: 3 === i, results: c, onClose: n })
-          : 1 === o
-            ? (0, r.jsx)(B, { transitionState: t, onClose: n, onShare: f })
-            : 3 === o
-              ? (0, r.jsx)(H, { transitionState: t, onClose: n, onShare: f })
-              : void 0;
+    if (null === a) return (0, r.jsx)(_.y, {});
+    switch (o) {
+        case 2:
+            return (0, r.jsx)(F, { transitionState: t, isReminderConfirmation: 3 === i, results: c, onClose: n });
+        case 1:
+            return (0, r.jsx)(B, { transitionState: t, onClose: n, onShare: f });
+        case 3:
+            return (0, r.jsx)(H, { transitionState: t, onClose: n, onShare: f });
+        default:
+            return;
+    }
 };

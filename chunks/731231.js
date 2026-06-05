@@ -469,11 +469,15 @@ let e0 = (0, K.xI)(M.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_B
             s = r.useMemo(() => {
                 let { rowIndex: e, columnIndex: i } = n,
                     r = t[e]?.[i];
-                return r?.type === ee.op.CREATE_STICKER
-                    ? { guild_id: r.guild_id, name: r.name }
-                    : r?.type !== ee.op.STICKER
-                      ? null
-                      : r.sticker;
+                if (null == r) return null;
+                switch (r.type) {
+                    case ee.op.CREATE_STICKER:
+                        return { guild_id: r.guild_id, name: r.name };
+                    case ee.op.STICKER:
+                        return r.sticker;
+                    default:
+                        return null;
+                }
             }, [t, n]);
         if (null == s) return null;
         let { graphic: a, title: o } = ((e) => {
@@ -587,9 +591,9 @@ let te = r.memo(function (e) {
                                         }),
                                         (0, h.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
-                                                n.e("20315"),
-                                                n.e("71254"),
-                                                n.e("95788"),
+                                                n.e("53575"),
+                                                n.e("59811"),
+                                                n.e("26243"),
                                                 n.e("16688"),
                                                 n.e("8891"),
                                                 n.e("83952"),
@@ -1392,9 +1396,9 @@ let tk = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 W.default.track(e_.HAw.OPEN_MODAL, { type: e_.JJy.CREATE_STICKER_MODAL, location: c }),
                                     (0, h.openModalLazy)(async () => {
                                         let { default: t } = await Promise.all([
-                                            n.e("20315"),
-                                            n.e("71254"),
-                                            n.e("95788"),
+                                            n.e("53575"),
+                                            n.e("59811"),
+                                            n.e("26243"),
                                             n.e("16688"),
                                             n.e("8891"),
                                             n.e("83952"),

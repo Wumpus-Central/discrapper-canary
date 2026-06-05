@@ -256,9 +256,12 @@ let T = (e) => {
                     ]),
                     d(2);
             };
-        return 1 === u
-            ? (0, i.jsx)(T, { ...l, onInvite: c, subscriptionId: t.id })
-            : 2 === u
-              ? (0, i.jsx)(z, { ...l, inviteUsersResult: r })
-              : void 0;
+        switch (u) {
+            case 1:
+                return (0, i.jsx)(T, { ...l, onInvite: c, subscriptionId: t.id });
+            case 2:
+                return (0, i.jsx)(z, { ...l, inviteUsersResult: r });
+            default:
+                return;
+        }
     };

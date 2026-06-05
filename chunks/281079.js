@@ -2878,7 +2878,7 @@ function iM(e) {
                                               n.e("80913"),
                                               n.e("27196"),
                                               n.e("59811"),
-                                              n.e("16404"),
+                                              n.e("21086"),
                                               n.e("76602"),
                                               n.e("28229"),
                                               n.e("39970"),
@@ -3745,11 +3745,12 @@ function su(e) {
             className: so.pK,
             style: p,
             "aria-hidden": m,
-            children:
-                h === i1.HIDDEN
-                    ? (0, s.jsx)("div", { className: ef()(so.M0, so.Te) })
-                    : h === i1.UNREAD
-                      ? (0, s.jsxs)(ee.D, {
+            children: (() => {
+                switch (h) {
+                    case i1.HIDDEN:
+                        return (0, s.jsx)("div", { className: ef()(so.M0, so.Te) });
+                    case i1.UNREAD:
+                        return (0, s.jsxs)(ee.D, {
                             className: so.M0,
                             onClick: f,
                             children: [
@@ -3775,21 +3776,24 @@ function su(e) {
                                     children: z.intl.string(z.t.FCRiT3),
                                 }),
                             ],
-                        })
-                      : h === i1.MENTIONS
-                        ? (0, s.jsx)(ee.D, {
-                              className: ef()(so.M0, so.vU),
-                              onClick: f,
-                              children: (0, s.jsx)(N.E, {
-                                  variant: "text-xs/semibold",
-                                  color: "badge-text-brand",
-                                  className: so.pM,
-                                  children: z.intl.format(z.t.EQcLyp, { count: A }),
-                              }),
-                          })
-                        : h === i1.VOICE_CHANNELS
-                          ? (0, s.jsx)(sc, { jumpToVoiceChannels: i, guildChannels: n, guildChannelsVersion: l })
-                          : void 0,
+                        });
+                    case i1.MENTIONS:
+                        return (0, s.jsx)(ee.D, {
+                            className: ef()(so.M0, so.vU),
+                            onClick: f,
+                            children: (0, s.jsx)(N.E, {
+                                variant: "text-xs/semibold",
+                                color: "badge-text-brand",
+                                className: so.pM,
+                                children: z.intl.format(z.t.EQcLyp, { count: A }),
+                            }),
+                        });
+                    case i1.VOICE_CHANNELS:
+                        return (0, s.jsx)(sc, { jumpToVoiceChannels: i, guildChannels: n, guildChannelsVersion: l });
+                    default:
+                        return;
+                }
+            })(),
         }),
     });
 }

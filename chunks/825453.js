@@ -1,23 +1,23 @@
-n.d(t, { A: () => j }), n(321073);
+n.d(t, { A: () => N }), n(321073);
 var i = n(64700),
     l = n(284009),
     s = n.n(l),
     a = n(735438),
     r = n.n(a),
     o = n(17928),
-    d = n(282956),
-    c = n(392054),
+    c = n(282956),
+    d = n(392054),
     u = n(168186),
     m = n(734057),
     g = n(317525),
     h = n(71393),
     x = n(576705),
-    p = n(287809),
-    A = n(403362),
+    A = n(287809),
+    p = n(403362),
     b = n(803378),
     f = n(200662),
-    _ = n(652215);
-function j(e, t, n) {
+    j = n(652215);
+function N(e, t, n) {
     let l = (0, o.bG)([b.A], () => b.A.getApplicationPermissions()),
         a = i.useMemo(() => {
             var t;
@@ -26,39 +26,39 @@ function j(e, t, n) {
                 (t = e),
                 (n = { ...(l ?? {}) }),
                 (i = (0, u.Ap)(t)),
-                (s = (0, f.Eu)(i, c.RA.CHANNEL)),
-                (a = (0, f.Eu)(t, c.RA.ROLE)) in n || (n[a] = { id: t, permission: !0, type: c.RA.ROLE }),
-                s in n || (n[s] = { id: i, permission: !0, type: c.RA.CHANNEL }),
+                (s = (0, f.Eu)(i, d.RA.CHANNEL)),
+                (a = (0, f.Eu)(t, d.RA.ROLE)) in n || (n[a] = { id: t, permission: !0, type: d.RA.ROLE }),
+                s in n || (n[s] = { id: i, permission: !0, type: d.RA.CHANNEL }),
                 n
             );
         }, [l, e]),
-        j = (0, o.bG)([b.A], () => {
+        N = (0, o.bG)([b.A], () => {
             if (null == n) return;
             let e = b.A.getCommand(n);
             return e?.permissions ?? {};
         }, [n]),
-        N = (0, o.bG)([b.A], () => (null == n ? b.A.getEditedApplication() : b.A.getEditedCommand()?.permissions), [n]),
-        v = n ?? t,
-        E = null != n ? j : a,
-        C = i.useMemo(() => N ?? { ...(E ?? {}) }, [N, E]),
-        I = i.useMemo(() => Object.keys(C).length, [C]),
-        T = i.useMemo(() => (null == E || null == C ? null : !r().isEqual(E, C)), [E, C]);
+        E = (0, o.bG)([b.A], () => (null == n ? b.A.getEditedApplication() : b.A.getEditedCommand()?.permissions), [n]),
+        C = n ?? t,
+        v = null != n ? N : a,
+        T = i.useMemo(() => E ?? { ...(v ?? {}) }, [E, v]),
+        I = i.useMemo(() => Object.keys(T).length, [T]),
+        S = i.useMemo(() => (null == v || null == T ? null : !r().isEqual(v, T)), [v, T]);
     return (
         i.useEffect(() => {
-            v === t && (T ? d.A.startEditingCommandPermissions(v) : d.A.stopEditingCommandPermissions(v));
-        }, [t, T, v]),
+            C === t && (S ? c.A.startEditingCommandPermissions(C) : c.A.stopEditingCommandPermissions(C));
+        }, [t, S, C]),
         {
             originalApplicationPermissions: a,
-            originalCommandPermissions: j,
+            originalCommandPermissions: N,
             editedTargetPermissions: (function (e, t) {
                 let n = (0, o.bG)([h.A], () => h.A.getGuild(e), [e]);
                 s()(null != n, "guild must be present to be editing its integration settings");
                 let l = (0, o.bG)([x.A], () => x.A.getHighestRole(n), [n]),
-                    a = (0, o.bG)([p.default], () => p.default.getCurrentUser()?.id);
+                    a = (0, o.bG)([A.default], () => A.default.getCurrentUser()?.id);
                 s()(null != a, "useComputePermissions: currentUserId must not be null");
                 let r = a === n.ownerId,
                     {
-                        channelIds: d,
+                        channelIds: c,
                         roleIds: b,
                         userIds: f,
                     } = i.useMemo(() => {
@@ -66,42 +66,50 @@ function j(e, t, n) {
                             n = [],
                             i = [];
                         for (let l of Object.values(t))
-                            l.type === c.RA.CHANNEL
-                                ? e.push(l.id)
-                                : l.type === c.RA.ROLE
-                                  ? n.push(l.id)
-                                  : l.type === c.RA.USER && i.push(l.id);
+                            switch (l.type) {
+                                case d.RA.CHANNEL:
+                                    e.push(l.id);
+                                    break;
+                                case d.RA.ROLE:
+                                    n.push(l.id);
+                                    break;
+                                case d.RA.USER:
+                                    i.push(l.id);
+                                    break;
+                                default:
+                                    l.type;
+                            }
                         return { channelIds: e, roleIds: n, userIds: i };
                     }, [t]),
-                    j = (0, o.cf)(
+                    N = (0, o.cf)(
                         [m.A],
                         () =>
                             Object.fromEntries(
-                                d
+                                c
                                     .map(m.A.getChannel)
-                                    .filter(A.Vq)
+                                    .filter(p.Vq)
                                     .map((e) => [e.id, e]),
                             ),
-                        [d],
+                        [c],
                     ),
-                    N = (0, o.cf)(
+                    E = (0, o.cf)(
                         [g.A],
                         () =>
                             Object.fromEntries(
                                 b
                                     .map((t) => g.A.getRole(e, t))
-                                    .filter(A.Vq)
+                                    .filter(p.Vq)
                                     .map((e) => [e.id, e]),
                             ),
                         [b, e],
                     ),
-                    v = (0, o.cf)(
-                        [p.default],
+                    C = (0, o.cf)(
+                        [A.default],
                         () =>
                             Object.fromEntries(
                                 f
-                                    .map(p.default.getUser)
-                                    .filter(A.Vq)
+                                    .map(A.default.getUser)
+                                    .filter(p.Vq)
                                     .map((e) => [e.id, e]),
                             ),
                         [f],
@@ -112,26 +120,35 @@ function j(e, t, n) {
                         s = {};
                     for (let [a, o] of Object.entries(t)) {
                         let t = !1,
-                            d = !1;
-                        if (o.type === c.RA.CHANNEL) {
-                            let e = o.id === i,
-                                n = j[o.id];
-                            (t = e || x.A.can(_.xBc.VIEW_CHANNEL, n)), (d = !0);
-                        } else if (o.type === c.RA.ROLE) {
-                            let i = o.id === e,
-                                s = N[o.id];
-                            (t = i || null != s), (d = r || i || x.A.isRoleHigher(n, l, s));
-                        } else if (o.type === c.RA.USER) {
-                            let e = v[o.id];
-                            (t = null != e),
-                                (d = null != e && (r || x.A.canManageUser(_.xBc.USE_APPLICATION_COMMANDS, e, n)));
+                            c = !1;
+                        switch (o.type) {
+                            case d.RA.CHANNEL: {
+                                let e = o.id === i,
+                                    n = N[o.id];
+                                (t = e || x.A.can(j.xBc.VIEW_CHANNEL, n)), (c = !0);
+                                break;
+                            }
+                            case d.RA.ROLE: {
+                                let i = o.id === e,
+                                    s = E[o.id];
+                                (t = i || null != s), (c = r || i || x.A.isRoleHigher(n, l, s));
+                                break;
+                            }
+                            case d.RA.USER: {
+                                let e = C[o.id];
+                                (t = null != e),
+                                    (c = null != e && (r || x.A.canManageUser(j.xBc.USE_APPLICATION_COMMANDS, e, n)));
+                                break;
+                            }
+                            default:
+                                o.type;
                         }
-                        s[a] = { ...o, canRead: t, canWrite: d };
+                        s[a] = { ...o, canRead: t, canWrite: c };
                     }
                     return s;
-                }, [j, n, l, r, t, N, v]);
-            })(e, C),
-            hasChanges: T,
+                }, [N, n, l, r, t, E, C]);
+            })(e, T),
+            hasChanges: S,
             selectedPermissionCount: I,
         }
     );
