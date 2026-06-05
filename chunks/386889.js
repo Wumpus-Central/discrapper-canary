@@ -5083,7 +5083,8 @@ class rq extends s.PureComponent {
                 d.push((0, i.jsx)(sS, { channel: e }, "browser")),
                     t || d.push((0, i.jsx)(lN.A, { channel: e }, "notifications")),
                     d.push((0, i.jsx)(lS, { channel: e }, "pins")),
-                    (0, ni.fw)("channel_header") && d.push((0, i.jsx)(lE, { channelId: e.id }, "conversations")),
+                    (0, ni.PD)(e.guild_id, "channel_header") &&
+                        d.push((0, i.jsx)(lE, { channelId: e.id }, "conversations")),
                     d.push((0, i.jsx)(lv, { channelId: e.id }, "members")),
                     (0, ef.pk)(e) && d.push((0, i.jsx)(lD, { channel: e }, "summaries"));
                 break;

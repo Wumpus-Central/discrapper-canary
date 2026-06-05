@@ -72,7 +72,7 @@ function P(e) {
             null != B &&
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        t.e("82860"),
+                        t.e("91456"),
                         t.e("59957"),
                         t.e("28136"),
                         t.e("16084"),
@@ -147,6 +147,7 @@ function P(e) {
                       children: (0, n.jsx)(g.D, {
                           innerRef: P,
                           className: a()({ [G.vk]: !q }, k.q7, k.L9, k.vk),
+                          focusProps: { offset: { right: 4 } },
                           "aria-disabled": q,
                           "aria-label": O.intl.string(O.t.F3qiJr),
                           onClick: ei,
