@@ -1,15 +1,21 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(439372),
     r = n(952818),
     s = n(287809),
     a = n(977997),
     o = n(572164),
-    l = n(877575),
+    l = n(315240),
     u = n(974293),
-    c = n(458977),
-    d = n(876474);
-class _ extends i.A {
+    c = n(458977);
+let d = (0, n(945810).mj)({
+    kind: "user",
+    name: "2026-06-magic-scoring",
+    defaultConfig: { enableSteamTimeline: !1 },
+    variations: { 1: { enableSteamTimeline: !0 } },
+});
+var _ = n(876474);
+class h extends i.A {
     registrations = new Map();
     activeHandlers = new Map();
     initialized = !1;
@@ -40,13 +46,13 @@ class _ extends i.A {
                 {
                     type: "application",
                     name: "steam-timeline",
-                    isEnabled: () => !1,
+                    isEnabled: () => d.getConfig({ location: "Clip signal handler registration" }).enableSteamTimeline,
                     importHandler: () => n.e("33196").then(n.bind(n, 551367)),
                 },
                 {
                     type: "application",
                     name: "league-of-legends",
-                    applicationId: d.m,
+                    applicationId: _.m,
                     isEnabled: () => !1,
                     importHandler: () => n.e("18549").then(n.bind(n, 877588)),
                 },
@@ -114,4 +120,4 @@ class _ extends i.A {
         this.terminatedCount++, this.stopAllHandlers();
     }
 }
-let h = new _();
+let f = new h();
