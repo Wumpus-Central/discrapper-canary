@@ -390,8 +390,14 @@ let V = m(
         "notifyFriendsOnComeOnline",
         (e) => e?.value ?? !0,
         (e) => o._t.create({ value: e }),
-    ),
-    J = "0",
+    );
+m(
+    "notifications",
+    "notifyFriendsOnProfileUpdate",
+    (e) => e?.value ?? !0,
+    (e) => o._t.create({ value: e }),
+);
+let J = "0",
     ee = m(
         "notifications",
         "notificationCenterAckedBeforeId",
