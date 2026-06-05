@@ -1,3 +1,3 @@
-e.exports = JSON.parse(
-    '{"QwW8zd":["Creeaz\u0103 o postare"],"DxwBMf":["Creeaz\u0103 un spa\u021Biu \u0219i cheam\u0103 lumea."],"F5YBmi":["Selecteaz\u0103 tot"],"h/GwWL":["Invita\u021Bii la joc"],"/mEbGf":["Descriere"],"EBSaL4":["Asociaz\u0103-\u021Bi contul"]}',
+a.exports = JSON.parse(
+    '{"QwW8zd":["Creeaz\u0103 o postare"],"DxwBMf":["Creeaz\u0103 un spa\u021Biu \u0219i cheam\u0103 lumea."],"F5YBmi":["Selecteaz\u0103 tot"],"h/GwWL":["Invita\u021Bii la joc"],"LFHDVw":["Posteaz\u0103 chat vocal"],"/mEbGf":["Descriere"],"SU/IAE":["Adaug\u0103 mai multe detalii despre sesiunea de joc"],"EBSaL4":["Asociaz\u0103-\u021Bi contul"],"yoIAe/":["Adaug\u0103 taguri despre vibe \u0219i preferin\u021Be"],"tOsHsu":["Creeaz\u0103 o postare"],"G91SYQ":["Po\u021Bi \xeencepe un apel la care s\u0103 se al\u0103ture al\u021Bii"],"0s2ICk":["Adaug\u0103-i canalului un tag \u201E",[1,"noMicTagName"],"\\" pentru a activa acest comutator"],"Xd2NFi":["Chat vocal"]}',
 );

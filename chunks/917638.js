@@ -1,3 +1,3 @@
-i.exports = JSON.parse(
-    '{"QwW8zd":["Kreiraj post"],"DxwBMf":["Napravi prostor u koji \u0107e\u0161 pozvati druge."],"F5YBmi":["Odaberi sve"],"h/GwWL":["Pozivnice u igre"],"/mEbGf":["Opis"],"EBSaL4":["Pove\u017Ei ra\u010Dun"]}',
+a.exports = JSON.parse(
+    '{"QwW8zd":["Kreiraj post"],"DxwBMf":["Napravi prostor u koji \u0107e\u0161 pozvati druge."],"F5YBmi":["Odaberi sve"],"h/GwWL":["Pozivnice u igre"],"LFHDVw":["Objavi glasovni chat"],"/mEbGf":["Opis"],"SU/IAE":["Dodaj vi\u0161e pojedinosti o svojoj sesiji igranja"],"EBSaL4":["Pove\u017Ei ra\u010Dun"],"yoIAe/":["Dodaj tagove za vajbolo\u017Eenje i \u0161to ve\u0107 ho\u0107e\u0161"],"tOsHsu":["Izradi post"],"G91SYQ":["Mo\u017Ee\u0161 zapo\u010Deti poziv kojem se drugi mogu pridru\u017Eiti"],"0s2ICk":["Dodaj tag \u201E",[1,"noMicTagName"],"\u201D na ovaj kanal da omogu\u0107i\u0161 ovaj prekida\u010D"],"Xd2NFi":["Glasovni chat"]}',
 );

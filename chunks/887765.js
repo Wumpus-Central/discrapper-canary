@@ -1,3 +1,3 @@
 i.exports = JSON.parse(
-    '{"QwW8zd":["Luo viesti"],"DxwBMf":["Luo tila, johon voit kutsua muita."],"F5YBmi":["Valitse kaikki"],"h/GwWL":["Pelikutsut"],"/mEbGf":["Kuvaus"],"EBSaL4":["Yhdist\xe4 tili"]}',
+    '{"QwW8zd":["Luo viesti"],"DxwBMf":["Luo tila, johon voit kutsua muita."],"F5YBmi":["Valitse kaikki"],"h/GwWL":["Pelikutsut"],"LFHDVw":["Julkaise puhekeskustelu"],"/mEbGf":["Kuvaus"],"SU/IAE":["Lis\xe4\xe4 tarkempia tietoja pelisessiostasi"],"EBSaL4":["Yhdist\xe4 tili"],"yoIAe/":["Lis\xe4\xe4 tunnelmistasi ja odotuksistasi kertovia tunnisteita"],"tOsHsu":["Luo viesti"],"G91SYQ":["Voit aloittaa puhelun, johon muut voivat liitty\xe4"],"0s2ICk":["Ota t\xe4m\xe4 tilanvaihdin k\xe4ytt\xf6\xf6n lis\xe4\xe4m\xe4ll\xe4 t\xe4lle kanavalle tunniste ",[1,"noMicTagName"]],"Xd2NFi":["Puhekeskustelu"]}',
 );
