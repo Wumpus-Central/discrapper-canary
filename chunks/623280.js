@@ -16,8 +16,8 @@ n(456647);
 var x = n(633075),
     f = n(451395),
     E = n(716804),
-    y = n(688807),
-    T = n(990078),
+    T = n(688807),
+    y = n(990078),
     j = n(939249),
     v = n(772838),
     I = n(140735),
@@ -62,8 +62,8 @@ function G(e) {
 let X = (e) => {
         let { children: t } = e,
             n = (0, o.bG)([P.A], () => P.A.keyboardModeEnabled),
-            { isDragging: l } = (0, y.V)((e) => ({ isDragging: e.isDragging() }));
-        return (0, i.jsx)(T.m, {
+            { isDragging: l } = (0, T.V)((e) => ({ isDragging: e.isDragging() }));
+        return (0, i.jsx)(y.m, {
             __unsupportedReactNodeAsText: (0, i.jsxs)("div", {
                 className: O.HE,
                 children: [
@@ -102,18 +102,17 @@ let X = (e) => {
                 (0, _.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("31473"),
-                            n.e("32061"),
-                            n.e("59811"),
+                            n.e("27088"),
                             n.e("22535"),
-                            n.e("22274"),
-                            n.e("70686"),
-                            n.e("60417"),
+                            n.e("20442"),
+                            n.e("14819"),
+                            n.e("45324"),
+                            n.e("87211"),
                             n.e("73553"),
                             n.e("72963"),
                             n.e("37977"),
                             n.e("36877"),
-                            n.e("27323"),
+                            n.e("49704"),
                             n.e("38501"),
                             n.e("21930"),
                             n.e("22067"),
@@ -300,12 +299,12 @@ function Z(e) {
             onReorder: m.R_,
             onEnd: () => h(n.type),
         }),
-        y = null != E,
-        T = y && t < E,
-        j = y && t > E;
+        T = null != E,
+        y = T && t < E,
+        j = T && t > E;
     return (0, i.jsxs)("div", {
         ref: u,
-        className: r()(q.wX, { [q.A]: T, [q.Ze]: j, [q.Id]: x }),
+        className: r()(q.wX, { [q.A]: y, [q.Ze]: j, [q.Id]: x }),
         "aria-label": S.intl.formatToPlainString(S.t.YLczh4, { positionNumber: t + 1 }),
         children: [(0, i.jsx)(G, { buttonRef: d, widget: n, className: q.vn, additionalMenuItems: a }), s],
     });
@@ -317,8 +316,8 @@ function J(e) {
             children: a,
             disableInteraction: m,
             className: f,
-            index: y,
-            trailingContent: T,
+            index: T,
+            trailingContent: y,
             headerTitle: j,
             headerSubtitle: v,
             headerActionButtons: I,
@@ -345,7 +344,7 @@ function J(e) {
         })({ widget: n, onAction: C }),
         L = b === n.type;
     (0, p.A)(P, L);
-    let w = N && null != y && !m,
+    let w = N && null != T && !m,
         S = () =>
             (0, i.jsxs)("div", {
                 ref: D,
@@ -361,7 +360,7 @@ function J(e) {
                         disableInteraction: m,
                         className: A,
                     }),
-                    (0, i.jsxs)(s.F, { children: [a, T] }),
+                    (0, i.jsxs)(s.F, { children: [a, y] }),
                 ],
             });
     return (0, i.jsx)("section", {
@@ -369,7 +368,7 @@ function J(e) {
         "aria-labelledby": R,
         children: w
             ? (0, i.jsx)(Z, {
-                  index: y ?? 0,
+                  index: T ?? 0,
                   widget: n,
                   getWidth: () => D.current?.offsetWidth,
                   additionalManageWidgetMenuItems: _,

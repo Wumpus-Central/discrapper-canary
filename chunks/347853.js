@@ -27,8 +27,7 @@ function l() {
             let { default: e } = await Promise.all([
                 n.e("81714"),
                 n.e("26243"),
-                n.e("78938"),
-                n.e("44951"),
+                n.e("89843"),
                 n.e("25291"),
                 n.e("95429"),
                 n.e("88905"),

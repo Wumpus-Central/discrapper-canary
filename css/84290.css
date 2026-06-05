@@ -1,0 +1,137 @@
+.body_c6f1a4 {
+    background-color: var(--modal-background);
+    border-radius: var(--radius-md);
+    height: 100%;
+    padding: 0 var(--space-16)
+}
+
+.sliderBody_c6f1a4 {
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-grow: 0;
+    padding-bottom: var(--space-8);
+    width: 100%
+}
+
+@media (max-width:485px) {
+    .sliderBody_c6f1a4 {
+        flex-direction: column;
+        flex-grow: 1
+    }
+}
+
+.sliderBodyUnifiedReviewStep_c6f1a4 {
+    padding-bottom: 0
+}
+
+.body_c6f1a4.reviewStep_c6f1a4 {
+    padding: 0 var(--modal-horizontal-padding)
+}
+
+@media (max-width:485px) {
+    .body_c6f1a4.reviewStep_c6f1a4 {
+        width: 100%
+    }
+}
+
+.body_c6f1a4.addPaymentStepForPremium_c6f1a4 {
+    max-width: 440px;
+    padding-inline: var(--space-16)
+}
+
+@media screen and (max-height:550px),
+screen and (max-width:485px) {
+    .body_c6f1a4.addPaymentStepForPremium_c6f1a4 {
+        max-width: 100%
+    }
+}
+
+.sliderBodyLarge_c6f1a4 {
+    width: 804px
+}
+
+.paymentModalLockIcon__9a648 {
+    color: var(--primary-500);
+    padding: 0 var(--space-16)
+}
+
+.theme-dark .paymentModalLockIcon__9a648 {
+    color: var(--primary-300)
+}
+
+.lockIcon__9a648 {
+    margin-inline-end: 2px
+}
+
+.lockIconText__9a648 {
+    white-space: nowrap
+}
+
+.primaryIcon__962c6 {
+    height: 16px;
+    margin-inline-end: 4px;
+    width: 16px
+}
+
+.button__962c6 {
+    display: flex
+}
+
+.footerContentContainer__962c6 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.noBackButton__962c6 {
+    justify-content: flex-end
+}
+
+.link__6a22b {
+    color: var(--interactive-text-active);
+    font-size: 14px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 18px
+}
+
+.container__949a0 {
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.body__949a0,
+.container__949a0 {
+    align-items: center;
+    display: flex
+}
+
+.body__949a0 {
+    flex-direction: column
+}
+
+.description__949a0 {
+    margin-top: 8px;
+    text-align: center
+}
+
+.icon__9f2f4 {
+    align-self: center;
+    background-color: var(--background-surface-high);
+    border-radius: 50%
+}
+
+.icon__9f2f4.small__9f2f4 {
+    height: 40px;
+    width: 40px
+}
+
+.icon__9f2f4.medium__9f2f4 {
+    height: 66px;
+    width: 66px
+}
+
+.icon__9f2f4.large__9f2f4 {
+    height: 128px;
+    width: 128px
+}

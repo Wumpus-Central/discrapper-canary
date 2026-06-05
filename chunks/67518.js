@@ -13,9 +13,7 @@ function c(e, t) {
             (t?.(l.Ws.Feedback),
             (0, s.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([
-                    n.e("45143"),
-                    n.e("66641"),
-                    n.e("70686"),
+                    n.e("14819"),
                     n.e("56600"),
                     n.e("34530"),
                     n.e("8891"),

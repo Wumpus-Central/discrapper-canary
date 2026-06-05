@@ -107,7 +107,8 @@ function N(e) {
                                 (t = null == F ? "created" : "updated"),
                                 (0, f.openModalLazy)(async () => {
                                     let { default: a } = await Promise.all([
-                                        n.e("53678"),
+                                        n.e("27323"),
+                                        n.e("96892"),
                                         n.e("64827"),
                                         n.e("84569"),
                                         n.e("22455"),
