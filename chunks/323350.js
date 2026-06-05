@@ -138,12 +138,8 @@ function g(e, t) {
             return `</${e.commandName}:${e.commandId}>`;
         case "timestamp":
             return (0, a.tf)(e.parsed.timestamp, e.parsed.format);
-        case "gameMention": {
-            let t = (0, p.K)(e.gameId);
-            if ("raw" === n) return t;
-            if (null != e.gameName) return `@${e.gameName}`;
-            return t;
-        }
+        case "gameMention":
+            return (0, p.K)(e.gameId);
         case "timestampMentionInput": {
             let n = m(e.children, t);
             if (null == i) return `<@time:${n}>`;
