@@ -57,8 +57,8 @@ var u = n(723702),
     c = n(474090),
     d = n(570221),
     _ = n(652215),
-    f = n(601107),
-    h = n(788868);
+    h = n(601107),
+    f = n(788868);
 function p(e) {
     return { id: e.id, planId: e.plan_id, quantity: e.quantity };
 }
@@ -159,7 +159,7 @@ class E extends s.A {
         let n = e.items[0].planId,
             i = null;
         if (e.type === _.rzx.PREMIUM) {
-            const r = h.hd[e.items[0].planId],
+            const r = f.hd[e.items[0].planId],
                 s = r.interval,
                 a = r.intervalCount;
             (n = (0, o.a9)(e.items, s, a)), null != t && (i = (0, o.a9)(t.items, s, a));
@@ -188,10 +188,10 @@ class E extends s.A {
         );
     }
     get planIdFromItems() {
-        return this.getCurrentSubscriptionPlanIdForGroup(Object.values(h.gD));
+        return this.getCurrentSubscriptionPlanIdForGroup(Object.values(f.gD));
     }
     get premiumPlanIdFromItems() {
-        return this.getCurrentSubscriptionPlanIdForGroup([...h.JM]);
+        return this.getCurrentSubscriptionPlanIdForGroup([...f.JM]);
     }
     get isPurchasedViaDesktop() {
         return null == this.paymentGateway;
@@ -219,10 +219,10 @@ class E extends s.A {
         );
     }
     get hasPremiumNitroMonthly() {
-        return null != this.items.find((e) => e.planId === h.gD.PREMIUM_MONTH_TIER_2);
+        return null != this.items.find((e) => e.planId === f.gD.PREMIUM_MONTH_TIER_2);
     }
     get isBoostOnly() {
-        return this.items.every((e) => [h.gD.PREMIUM_MONTH_GUILD, h.gD.PREMIUM_YEAR_GUILD].includes(e.planId));
+        return this.items.every((e) => [f.gD.PREMIUM_MONTH_GUILD, f.gD.PREMIUM_YEAR_GUILD].includes(e.planId));
     }
     get isPausedOrPausePending() {
         return _.Uyk.ALL_PAUSE.has(this.status);
@@ -231,15 +231,15 @@ class E extends s.A {
         return this.status === _.Dmq.PAUSED;
     }
     get isPausedForFractionalPremium() {
-        return this.status === _.Dmq.PAUSED && this.pauseReason === f.qf.FRACTIONAL_PREMIUM;
+        return this.status === _.Dmq.PAUSED && this.pauseReason === h.qf.FRACTIONAL_PREMIUM;
     }
     get isPausedAllowsUpdatesButNotResume() {
-        return this.status === _.Dmq.PAUSED && f.FZ.CAN_MAKE_SUBSCRIPTION_UPDATES.has(this.pauseReason);
+        return this.status === _.Dmq.PAUSED && h.FZ.CAN_MAKE_SUBSCRIPTION_UPDATES.has(this.pauseReason);
     }
     get isPausedAllowsResumeButNotUpdates() {
         return (
             this.status === _.Dmq.PAUSED &&
-            (null === this.pauseReason || !f.FZ.CAN_MAKE_SUBSCRIPTION_UPDATES.has(this.pauseReason))
+            (null === this.pauseReason || !h.FZ.CAN_MAKE_SUBSCRIPTION_UPDATES.has(this.pauseReason))
         );
     }
     get isEnded() {
@@ -261,20 +261,26 @@ class E extends s.A {
     get hasActiveTrial() {
         return null != this.trialId && null != this.trialEndsAt && new Date() < this.trialEndsAt;
     }
+    get hasActiveDiscount() {
+        if (null == this.metadata) return !1;
+        let e = this.metadata.active_discount_id,
+            t = this.metadata.active_discount_expires_at;
+        return null != e && null != t && new Date() <= new Date(t);
+    }
     get premiumSince() {
         return this.streakStartedAt ?? this.createdAt;
     }
     get hasAnyPremiumNitro() {
-        return this.items.some((e) => h.JM.has(e.planId));
+        return this.items.some((e) => f.JM.has(e.planId));
     }
     get hasAnyPremiumGroup() {
-        return this.items.some((e) => e.planId === h.gD.PREMIUM_GROUP_MONTH);
+        return this.items.some((e) => e.planId === f.gD.PREMIUM_GROUP_MONTH);
     }
     hasPremiumAtLeast(e) {
         return (
             !!this.isPremium &&
             this.items.some((t) => {
-                let n = h.hd[t.planId];
+                let n = f.hd[t.planId];
                 return (0, c.CC)(n.premiumType, e);
             })
         );
