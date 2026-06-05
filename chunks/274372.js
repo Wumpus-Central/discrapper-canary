@@ -47,6 +47,7 @@ let m = "default",
         clipSignals: { enableDistributedSignals: !0, enablePhraseSignals: !0, enableGameSignals: !0 },
         debugTooltipsEnabled: !1,
         enableAutoclipping: void 0,
+        showPovClipsInGallery: !1,
     },
     G = {
         clipsSettings: U,
@@ -152,6 +153,13 @@ class B extends r.Ay.DeviceSettingsStore {
             clipsSettings: {
                 ...e.clipsSettings,
                 enableAutoclipping: e.clipsSettings.enableAutoclipping ?? U.enableAutoclipping,
+            },
+        }),
+        (e) => ({
+            ...e,
+            clipsSettings: {
+                ...e.clipsSettings,
+                showPovClipsInGallery: e.clipsSettings.showPovClipsInGallery ?? U.showPovClipsInGallery,
             },
         }),
     ];

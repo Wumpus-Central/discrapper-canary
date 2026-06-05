@@ -8,18 +8,18 @@ var r = n(192308),
 let o = function () {
     let { initialEditingClipId: e, selectedGameId: t } =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { resetAll: o, setGameFacet: l } = s.Pu.getState();
+        { resetAll: o, setGameFacet: l } = s.P.getState();
     o(),
         null != t && l(t),
         (0, r.openModalLazy)(
             async () => {
                 let { default: t } = await Promise.all([
                     n.e("99794"),
-                    n.e("28468"),
-                    n.e("94258"),
-                    n.e("88623"),
-                    n.e("13408"),
-                    n.e("11085"),
+                    n.e("12641"),
+                    n.e("20315"),
+                    n.e("35477"),
+                    n.e("29244"),
+                    n.e("31983"),
                     n.e("30204"),
                     n.e("75842"),
                     n.e("83952"),
@@ -28,12 +28,13 @@ let o = function () {
                     n.e("83518"),
                     n.e("74049"),
                     n.e("69201"),
+                    n.e("52566"),
                     n.e("73954"),
                     n.e("89160"),
                     n.e("31782"),
                     n.e("20342"),
-                    n.e("11774"),
-                ]).then(n.bind(n, 285901));
+                    n.e("84020"),
+                ]).then(n.bind(n, 957503));
                 return (n) => (0, i.jsx)(t, { initialEditingClipId: e, ...n });
             },
             { modalKey: a.nm },

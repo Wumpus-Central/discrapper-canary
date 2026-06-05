@@ -9,4 +9,5 @@ e.exports = {
     BX: "headerRightContent__59668",
     jG: "scrollContainer__59668",
     cW: "cardWrapper__59668",
+    v2: "cardSlot__59668",
 };

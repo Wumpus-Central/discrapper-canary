@@ -1765,7 +1765,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 557690, Version Hash: 3d0ce10d01fbca08bb001050b67d33d76d2a734b`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 557701, Version Hash: 42585f1e3e2ca341189bf40b631802977ceae106`,
 ),
     ev.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -3871,7 +3871,7 @@ let s3 = (0, rs.Fe)({
                 n.e("78920"),
                 n.e("62144"),
                 n.e("87103"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("85529"),
                 n.e("48616"),
                 n.e("35477"),
@@ -4151,7 +4151,7 @@ let s3 = (0, rs.Fe)({
                 n.e("78920"),
                 n.e("62144"),
                 n.e("87103"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("85529"),
                 n.e("48616"),
                 n.e("52519"),
@@ -4169,7 +4169,7 @@ let s3 = (0, rs.Fe)({
                 n.e("3633"),
                 n.e("13114"),
                 n.e("9546"),
-                n.e("13993"),
+                n.e("31983"),
                 n.e("38559"),
                 n.e("80287"),
                 n.e("49937"),
@@ -4569,7 +4569,7 @@ let s3 = (0, rs.Fe)({
                 n.e("93720"),
                 n.e("54658"),
                 n.e("31828"),
-                n.e("37193"),
+                n.e("85613"),
                 n.e("80026"),
                 n.e("27870"),
                 n.e("4787"),
@@ -4602,7 +4602,7 @@ let s3 = (0, rs.Fe)({
     s5 = () =>
         Promise.all([
             n.e("35477"),
-            n.e("13993"),
+            n.e("31983"),
             n.e("95788"),
             n.e("38559"),
             n.e("63635"),
@@ -6864,7 +6864,7 @@ let uE = 15 * n5.A.Millis.MINUTE,
                             n.e("72899"),
                             n.e("89156"),
                             n.e("39713"),
-                            n.e("58097"),
+                            n.e("29244"),
                             n.e("95788"),
                             n.e("9546"),
                             n.e("45143"),
@@ -7200,7 +7200,7 @@ let uE = 15 * n5.A.Millis.MINUTE,
                             n.e("21300"),
                             n.e("17699"),
                             n.e("57032"),
-                            n.e("22941"),
+                            n.e("45322"),
                             n.e("94832"),
                             n.e("26386"),
                             n.e("65338"),
@@ -18309,7 +18309,7 @@ let ST = "isHideDevBanner",
                     className: t2()(SI.Wz, SI.mr),
                     children: [
                         (0, U.jsx)(SA, { className: SI.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "557690" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "557701" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })
@@ -18319,69 +18319,74 @@ var Sy = n(765671),
     SN = n(890856),
     Sv = n(905552),
     SC = n(157257),
-    SR = n(609174),
-    SO = n(226870),
-    Sb = n(111994),
-    SD = n(409067),
-    SL = n(227628),
-    Sw = n(468550),
-    SM = n(700491);
-function SP() {
+    SR = n(334686),
+    SO = n(609174),
+    Sb = n(226870),
+    SD = n(111994),
+    SL = n(409067),
+    Sw = n(227628),
+    SM = n(468550),
+    SP = n(700491);
+function Sx() {
     let { enableQuickBar: e } = rF.h.useConfig({ location: "ClipsQuickBar" }),
-        t = (0, SL.MZ)((e) => e.isOpen),
-        n = (0, Sw.sY)((e) => e.isOpen),
+        t = (0, Sw.MZ)((e) => e.isOpen),
+        n = (0, SM.sY)((e) => e.isOpen),
         i = (0, e6.bG)([rV.Ay], () => rV.Ay.canShowReminders()),
         r = (0, e6.bG)([ia.Ay, SC.A], () => (0, Sv.A)(ia.Ay, SC.A)),
-        s = (0, e6.yK)([rV.Ay], () => rV.Ay.getLastClipsSession()?.newClipIds ?? []),
-        a = e8.useMemo(
+        { enabled: s } = SR.O.useConfig({ location: "ClipsQuickBar" }),
+        a = (0, e6.bG)([rV.Ay], () => rV.Ay.getSettings().showPovClipsInGallery),
+        o = s && !a,
+        l = (0, e6.yK)([rV.Ay], () => rV.Ay.getLastClipsSession()?.newClipIds ?? []),
+        u = e8.useMemo(
             () =>
-                (0, SD.u)(
-                    s
+                (0, SL.uu)(
+                    l
                         .map((e) => rV.Ay.getClipById(e))
                         .filter((e) => null != e)
-                        .filter((e) => e.applicationId === r?.id),
-                    Sb.mu.MOST_RECENT,
+                        .filter((e) => e.applicationId === r?.id)
+                        .filter((e) => !o || !(0, SL.kD)(e)),
+                    SD.mu.MOST_RECENT,
                 ),
-            [s, r],
+            [l, r, o],
         ),
-        o = a.length > 0;
+        c = u.length > 0;
     e8.useEffect(() => {
-        !t || (i && o) || (0, SL.yj)();
-    }, [t, i, o]);
-    let l = e8.useCallback((e) => {
+        !t || (i && c) || (0, Sw.yj)();
+    }, [t, i, c]);
+    let d = e8.useCallback((e) => {
             (0, rZ.p)({ initialEditingClipId: e.id });
         }, []),
-        u = e8.useCallback(() => {
+        _ = e8.useCallback(() => {
             (0, rZ.p)({ selectedGameId: r?.id });
         }, [r?.id]);
-    if (!e || n || !t || !i || 0 === a.length || null == r) return null;
-    let c = 4 - a.length;
+    if (!e || n || !t || !i || 0 === u.length || null == r) return null;
+    let h = 4 - u.length;
     return (0, U.jsx)("div", {
-        className: SM.$j,
+        className: SP.$j,
         children: (0, U.jsx)("div", {
-            className: SM.e1,
-            children: a
+            className: SP.e1,
+            children: u
                 .slice(0, 4)
-                .concat(...Array(c > 0 ? c : 0).fill(null))
+                .concat(...Array(h > 0 ? h : 0).fill(null))
                 .map((e, t) =>
                     ((e, t, n) => {
-                        if (null == e) return (0, U.jsx)("div", { className: SM.WK }, `no-clip-${n}`);
+                        if (null == e) return (0, U.jsx)("div", { className: SP.WK }, `no-clip-${n}`);
                         let i = "auto" === e.clipMethod,
-                            r = t && a.length > 4,
-                            s = a.length - 3;
+                            r = t && u.length > 4,
+                            s = u.length - 3;
                         return (0, U.jsx)(
                             SN.s,
                             {
-                                className: SM.WK,
+                                className: SP.WK,
                                 "aria-label": na.intl.string(na.t.bt75uw),
-                                onClick: r ? u : l.bind(null, e),
-                                children: (0, U.jsx)(SR.Cl, {
+                                onClick: r ? _ : d.bind(null, e),
+                                children: (0, U.jsx)(SO.Cl, {
                                     clip: e,
-                                    children: (0, U.jsx)(SO.d, {
+                                    children: (0, U.jsx)(Sb.d, {
                                         isStatic: !0,
                                         children: r
                                             ? (0, U.jsx)("div", {
-                                                  className: SM.N7,
+                                                  className: SP.N7,
                                                   children: (0, U.jsxs)(sw.E, {
                                                       variant: "text-sm/medium",
                                                       color: "text-strong",
@@ -18390,7 +18395,7 @@ function SP() {
                                               })
                                             : i &&
                                               (0, U.jsx)(mF.B, {
-                                                  className: SM.$v,
+                                                  className: SP.$v,
                                                   size: "xs",
                                                   color: r9.A.colors.TEXT_STRONG.css,
                                                   "aria-label": na.intl.string(na.t["3Y2DJ8"]),
@@ -18405,8 +18410,7 @@ function SP() {
         }),
     });
 }
-var Sx = n(371912),
-    Sk = n(334686),
+var Sk = n(371912),
     SU = n(584099);
 let SG = [0, -1];
 function SF(e, t, n, i) {
@@ -18484,9 +18488,9 @@ function SB(e) {
                 {
                     className: t2()(SU.xn, c && SU.$u),
                     style: E,
-                    children: (0, U.jsx)(SR.Cl, {
+                    children: (0, U.jsx)(SO.Cl, {
                         clip: e,
-                        children: (0, U.jsx)(SO.d, {
+                        children: (0, U.jsx)(Sb.d, {
                             isStatic: !m,
                             isPlaying: m && f,
                             children: _?.({ index: r, clip: e }),
@@ -18503,14 +18507,14 @@ let Sj = [],
     SY = [];
 function SW() {
     let { enableQuickBar: e } = rF.h.useConfig({ location: "ClipsReminder" }),
-        { enabled: t } = Sk.O.useConfig({ location: "ClipsReminder" }),
-        { isOpen: n, openedAt: i, applicationId: r } = (0, Sw.sY)(),
-        { isQuestBarEmpty: s } = (0, Sx.c9)(),
+        { enabled: t } = SR.O.useConfig({ location: "ClipsReminder" }),
+        { isOpen: n, openedAt: i, applicationId: r } = (0, SM.sY)(),
+        { isQuestBarEmpty: s } = (0, Sk.c9)(),
         a = (0, e6.yK)([rV.Ay], () => rV.Ay.getLastClipsSession()?.newClipIds ?? Sj),
         o = e8.useMemo(() => {
             if (null == r || 0 === a.length) return SY;
             let e = a.map((e) => rV.Ay.getClipById(e)).filter((e) => null != e && e.applicationId === r);
-            return (0, SD.u)(e, Sb.mu.MOST_RECENT);
+            return (0, SL.uu)(e, SD.mu.MOST_RECENT);
         }, [r, a]),
         { data: l } = (0, lo.I)(r),
         u = (0, la.A)({ applicationId: r ?? void 0, location: "ClipsReminder", source: ls.Ob.ClipsReminder }),
@@ -18520,13 +18524,13 @@ function SW() {
     e8.useEffect(() => {
         if (!n || null == i) return;
         let e = Math.max(0, 6e4 - (Date.now() - i)),
-            t = window.setTimeout(() => (0, Sw.kF)(), e);
+            t = window.setTimeout(() => (0, SM.kF)(), e);
         return () => window.clearTimeout(t);
     }, [n, i]);
     let h = e8.useCallback(() => {
-            t ? (0, rZ.p)() : null != r && (0, rZ.p)({ selectedGameId: r }), (0, Sw.kF)();
+            t ? (0, rZ.p)() : null != r && (0, rZ.p)({ selectedGameId: r }), (0, SM.kF)();
         }, [r, t]),
-        f = e8.useCallback(() => (0, Sw.kF)(), []),
+        f = e8.useCallback(() => (0, SM.kF)(), []),
         p = e && s && n && null != r && c > 0,
         E = l?.name ?? "",
         m = _[0]?.thumbnail,
@@ -18657,7 +18661,7 @@ let Sq = (0, eM.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var SX = n(527699),
+var SX = n(537127),
     SZ = n(950373),
     SQ = n(504337),
     SJ = n(629016),
@@ -21368,7 +21372,7 @@ let vu = e8.memo(function () {
         [],
     );
     let { enableQuickBar: t } = rF.h.useConfig({ location: "ClipsQuickBar" }),
-        n = (0, SL.MZ)((e) => e.isOpen) && t,
+        n = (0, Sw.MZ)((e) => e.isOpen) && t,
         { isSorting: i } = (0, Sz.A)(),
         { enabled: r } = Sq.useConfig({ location: "AppPanels" });
     return (0, U.jsx)("section", {
@@ -21386,7 +21390,7 @@ let vu = e8.memo(function () {
                     children: (0, U.jsx)(vl, { className: t2()(vo.iz, { [vo.$j]: n }) }),
                 }),
                 (0, U.jsx)(SW, {}),
-                (0, U.jsx)(SP, {}),
+                (0, U.jsx)(Sx, {}),
                 (0, U.jsx)(of.A, { section: eL.JJy.RTC_CONNECTION_PANEL, children: (0, U.jsx)(r ? vs : NQ, {}) }),
                 (0, U.jsx)(of.A, { section: eL.JJy.ACCOUNT_PANEL, children: (0, U.jsx)(SX.A, {}) }),
             ],
@@ -21481,7 +21485,7 @@ let vf = () => (0, U.jsx)("div", { className: vo.wG, children: (0, U.jsx)(rn.y, 
                 n.e("78920"),
                 n.e("62144"),
                 n.e("87103"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("85529"),
                 n.e("48616"),
                 n.e("35477"),
@@ -21893,7 +21897,7 @@ let vf = () => (0, U.jsx)("div", { className: vo.wG, children: (0, U.jsx)(rn.y, 
                 n.e("78920"),
                 n.e("62144"),
                 n.e("87103"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("85529"),
                 n.e("48616"),
                 n.e("35477"),
@@ -22168,7 +22172,7 @@ let vf = () => (0, U.jsx)("div", { className: vo.wG, children: (0, U.jsx)(rn.y, 
                 n.e("31299"),
                 n.e("56574"),
                 n.e("44143"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("20315"),
                 n.e("16404"),
                 n.e("3402"),
@@ -22446,7 +22450,7 @@ let vf = () => (0, U.jsx)("div", { className: vo.wG, children: (0, U.jsx)(rn.y, 
                 n.e("78920"),
                 n.e("62144"),
                 n.e("87103"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("85529"),
                 n.e("48616"),
                 n.e("35477"),
@@ -22926,7 +22930,7 @@ let vf = () => (0, U.jsx)("div", { className: vo.wG, children: (0, U.jsx)(rn.y, 
                 n.e("25031"),
                 n.e("76825"),
                 n.e("61908"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("23924"),
                 n.e("42205"),
                 n.e("71091"),
@@ -23067,7 +23071,7 @@ let vf = () => (0, U.jsx)("div", { className: vo.wG, children: (0, U.jsx)(rn.y, 
                 n.e("25031"),
                 n.e("76825"),
                 n.e("61908"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("28367"),
                 n.e("34303"),
                 n.e("42724"),
@@ -23129,7 +23133,7 @@ let vf = () => (0, U.jsx)("div", { className: vo.wG, children: (0, U.jsx)(rn.y, 
                 n.e("78920"),
                 n.e("62144"),
                 n.e("87103"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("85529"),
                 n.e("48616"),
                 n.e("35477"),
@@ -23337,7 +23341,7 @@ let vf = () => (0, U.jsx)("div", { className: vo.wG, children: (0, U.jsx)(rn.y, 
                 n.e("78920"),
                 n.e("62144"),
                 n.e("87103"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("85529"),
                 n.e("48616"),
                 n.e("35477"),
@@ -23622,7 +23626,7 @@ let vf = () => (0, U.jsx)("div", { className: vo.wG, children: (0, U.jsx)(rn.y, 
                 n.e("78920"),
                 n.e("62144"),
                 n.e("87103"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("85529"),
                 n.e("48616"),
                 n.e("35477"),
@@ -23927,6 +23931,7 @@ let vf = () => (0, U.jsx)("div", { className: vo.wG, children: (0, U.jsx)(rn.y, 
                 n.e("8032"),
                 n.e("77970"),
                 n.e("88563"),
+                n.e("52566"),
                 n.e("92313"),
                 n.e("7521"),
                 n.e("80782"),
@@ -23935,8 +23940,8 @@ let vf = () => (0, U.jsx)("div", { className: vo.wG, children: (0, U.jsx)(rn.y, 
                 n.e("87791"),
                 n.e("97934"),
                 n.e("92461"),
-            ]).then(n.bind(n, 11014)),
-        webpackId: 11014,
+            ]).then(n.bind(n, 386889)),
+        webpackId: 386889,
         name: "Channel",
         renderLoader: ra.l3,
     }),
@@ -24018,7 +24023,7 @@ let vf = () => (0, U.jsx)("div", { className: vo.wG, children: (0, U.jsx)(rn.y, 
                 n.e("78920"),
                 n.e("62144"),
                 n.e("87103"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("85529"),
                 n.e("48616"),
                 n.e("35477"),
@@ -25277,7 +25282,7 @@ let CG = (0, rs.Fe)({
                 n.e("89156"),
                 n.e("44143"),
                 n.e("95788"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("73839"),
                 n.e("45143"),
                 n.e("35598"),
@@ -25463,7 +25468,7 @@ let CG = (0, rs.Fe)({
                 n.e("72899"),
                 n.e("89156"),
                 n.e("39713"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("95788"),
                 n.e("9546"),
                 n.e("45143"),
@@ -27371,7 +27376,7 @@ let bn = (0, rs.Fe)({
                 n.e("78920"),
                 n.e("62144"),
                 n.e("87103"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("85529"),
                 n.e("48616"),
                 n.e("52519"),
@@ -27808,7 +27813,7 @@ let bn = (0, rs.Fe)({
                 n.e("78920"),
                 n.e("62144"),
                 n.e("87103"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("85529"),
                 n.e("48616"),
                 n.e("35477"),
@@ -28139,7 +28144,7 @@ let bn = (0, rs.Fe)({
                 n.e("78920"),
                 n.e("62144"),
                 n.e("87103"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("85529"),
                 n.e("48616"),
                 n.e("52519"),
@@ -36624,7 +36629,7 @@ let xj = (0, nN.Fe)({
             n.e("78920"),
             n.e("62144"),
             n.e("87103"),
-            n.e("58097"),
+            n.e("29244"),
             n.e("85529"),
             n.e("52519"),
             n.e("39111"),
@@ -36645,7 +36650,7 @@ let xj = (0, nN.Fe)({
             n.e("3633"),
             n.e("13114"),
             n.e("9546"),
-            n.e("13993"),
+            n.e("31983"),
             n.e("38559"),
             n.e("80287"),
             n.e("49937"),
@@ -37396,7 +37401,7 @@ let xj = (0, nN.Fe)({
             n.e("80559"),
             n.e("71790"),
             n.e("81754"),
-            n.e("37193"),
+            n.e("85613"),
             n.e("83889"),
             n.e("70424"),
             n.e("80026"),
@@ -37438,7 +37443,7 @@ let xj = (0, nN.Fe)({
             n.e("54588"),
             n.e("81863"),
             n.e("84861"),
-            n.e("45322"),
+            n.e("94897"),
             n.e("69077"),
             n.e("84970"),
             n.e("29867"),
@@ -37469,7 +37474,7 @@ let xj = (0, nN.Fe)({
             n.e("10385"),
             n.e("93368"),
             n.e("56750"),
-            n.e("12382"),
+            n.e("73034"),
             n.e("94704"),
             n.e("27774"),
             n.e("31599"),
@@ -38690,7 +38695,7 @@ let k$ = (0, rs.Fe)({
                 n.e("78920"),
                 n.e("62144"),
                 n.e("87103"),
-                n.e("58097"),
+                n.e("29244"),
                 n.e("85529"),
                 n.e("48616"),
                 n.e("35477"),
@@ -39011,6 +39016,7 @@ let k$ = (0, rs.Fe)({
                 n.e("8032"),
                 n.e("77970"),
                 n.e("88563"),
+                n.e("52566"),
                 n.e("54588"),
                 n.e("92313"),
                 n.e("57807"),

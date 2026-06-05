@@ -19,7 +19,7 @@ let d = r.forwardRef((e, t) => {
         r.useImperativeHandle(t, () => ({ releaseSource() {} }), []),
         (0, i.jsxs)("div", {
             className: u.Q,
-            children: [(0, i.jsx)("img", { alt: "", src: s.thumbnail, className: u.f }), n],
+            children: [(0, i.jsx)("img", { alt: "", src: s.thumbnail, className: u.f, loading: "lazy" }), n],
         })
     );
 });
@@ -58,13 +58,32 @@ let _ = r.forwardRef((e, t) => {
                 A(((e.clientX - t.left) / t.width) * 100);
             },
             [p, c, A],
-        );
+        ),
+        T = r.useRef(null),
+        S = r.useRef(n);
     return (
         r.useEffect(() => {
-            if (g) return;
+            if (((S.current = n), g)) return;
             let e = p.current;
-            null == e || ((!n || e.paused) && ((e.currentTime = E.current), n ? e.play() : e.pause()));
+            if (null != e)
+                if (n) {
+                    if (!e.paused) return;
+                    e.currentTime = E.current;
+                    let t = e.play();
+                    (T.current = t), t.catch(() => {});
+                } else {
+                    let t = T.current;
+                    (T.current = null), null != t ? t.then(() => S.current || e.pause()).catch(() => {}) : e.pause();
+                }
         }, [n, p, g, E]),
+        r.useEffect(() => {
+            if (g || null == m) return;
+            let e = p.current;
+            if (null != e)
+                return () => {
+                    e.pause(), (e.src = "");
+                };
+        }, [m, p, g]),
         r.useEffect(() => {
             let e = p?.current;
             if (null == e || g || null == _) return;
@@ -103,7 +122,7 @@ let _ = r.forwardRef((e, t) => {
             onMouseMove: I,
             children: [
                 g
-                    ? (0, i.jsx)("img", { alt: "", src: f.thumbnail, className: u.f })
+                    ? (0, i.jsx)("img", { alt: "", src: f.thumbnail, className: u.f, loading: "lazy" })
                     : null != m
                       ? (0, i.jsx)(a.A, {
                             preload: d,

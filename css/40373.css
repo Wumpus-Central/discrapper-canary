@@ -40,8 +40,9 @@
     border-radius: var(--radius-sm);
     box-sizing: border-box;
     cursor: pointer;
-    flex: 1;
+    flex: 1 1 0;
     height: 47px;
+    min-width: 0;
     opacity: .9
 }
 
