@@ -1,27 +1,28 @@
-t.d(s, { Eq: () => i }), t(627968);
-var a = t(64700),
-    c = t(735438),
-    r = t.n(c);
-t(52133);
-var u = t(361610),
-    h = t(38405);
-let n = !1;
-function i(e, s) {
-    a.useEffect(
+"use strict";
+n.d(t, { Eq: () => u }), n(627968);
+var i = n(64700),
+    r = n(735438),
+    s = n.n(r);
+n(52133);
+var a = n(361610),
+    o = n(38405);
+let l = !1;
+function u(e, t) {
+    i.useEffect(
         () => (
-            r().forEach(e, (e, t) => {
-                !n &&
+            s().forEach(e, (e, n) => {
+                !l &&
                     e.length > 50 &&
-                    ((n = !0),
-                    h.A.captureMessage("SubscribeGuildMembers called with more than 50 userIds.", {
-                        extra: { count: e.length, guildId: t, reason: s },
+                    ((l = !0),
+                    o.A.captureMessage("SubscribeGuildMembers called with more than 50 userIds.", {
+                        extra: { count: e.length, guildId: n, reason: t },
                     })),
-                    (0, u.un)(t, e);
+                    (0, a.un)(n, e);
             }),
             () => {
-                r().forEach(e, (e, s) => (0, u.NE)(s, e));
+                s().forEach(e, (e, t) => (0, a.NE)(t, e));
             }
         ),
-        [e, s],
+        [e, t],
     );
 }

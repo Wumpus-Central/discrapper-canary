@@ -556,7 +556,9 @@ function eK(e) {
                   ? eR.intl.string(eR.t.SmVbHc)
                   : eR.intl.string(eR.t.FKYNC6);
         case y.gD.PREMIUM_GROUP_MONTH:
-            return n ? eR.intl.string(eR.t.SmVbHc) : eR.intl.string(eR.t.FKYNC6);
+            return n
+                ? eR.intl.string(eR.t.SmVbHc)
+                : eR.intl.formatToPlainString(eO.default["8bPDtb"], { premiumGroupProductName: (0, ev.DP)() });
         case y.gD.PREMIUM_YEAR_TIER_2:
             return t
                 ? eR.intl.format(eR.t["1wBcPi"], { duration: i })

@@ -4007,6 +4007,7 @@ function aU(e) {
                 (0, i.jsx)(s1.A.Overlay, { children: (0, i.jsx)(aP.A, { username: sH.Ay.getName(null, s.id, n) }) }),
             n.isProvisional &&
                 (0, i.jsx)(s1.A.Overlay, {
+                    className: at.Lw,
                     children: (0, i.jsx)(s0.A, {
                         heading: Y.intl.string(Y.t.Iyka0U),
                         headingIcon: (0, i.jsx)(av.E, { size: "xxs", color: aN.A.colors.TEXT_STRONG }),
