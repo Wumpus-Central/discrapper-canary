@@ -1,124 +1,131 @@
-r.d(t, { A: () => R });
-var n = r(627968);
-r(64700);
-var i = r(503698),
-    a = r.n(i),
-    s = r(989349),
-    l = r.n(s),
-    o = r(17928),
-    c = r(534514),
-    d = r(287809),
-    u = r(166403),
-    m = r(428262),
-    g = r(526292),
-    x = r(422936),
-    T = r(234419),
-    p = r(410516),
-    h = r(156601),
-    I = r(788868),
-    f = r(375708),
-    j = r(196936);
-function R(e) {
+n.d(t, { A: () => A });
+var r = n(627968);
+n(64700);
+var i = n(503698),
+    l = n.n(i),
+    a = n(989349),
+    s = n.n(a),
+    o = n(17928),
+    c = n(534514),
+    u = n(531260),
+    m = n(287809),
+    d = n(166403),
+    g = n(428262),
+    T = n(526292),
+    x = n(422936),
+    I = n(234419),
+    p = n(410516),
+    h = n(156601),
+    f = n(788868),
+    _ = n(375708),
+    E = n(196936);
+function A(e) {
     let {
             isGift: t,
-            premiumTier: r,
+            premiumTier: n,
             offerTierMatchesCard: i,
-            offerType: s,
-            showYearlyPrice: R,
-            priceOptions: _,
-            textVariant: E,
-            className: A,
+            offerType: a,
+            showYearlyPrice: A,
+            priceOptions: P,
+            textVariant: R,
+            className: j,
             isApplicationHome: v,
-            enablePremiumBrandRefresh: P,
+            enablePremiumBrandRefresh: M,
             headerClassName: N,
-            headingVariant: M = "heading-md/normal",
-            headingColor: y,
+            headingVariant: y = "heading-md/normal",
+            headingColor: C,
         } = e,
-        C = (0, o.bG)([u.A], () => u.A.getPremiumTypeSubscription()),
-        b = (0, o.bG)([d.default], () => d.default.getCurrentUser()),
-        U = (0, g.k5)(),
-        S = (0, g.nf)(),
-        w = r === I.PremiumTypes.TIER_0 ? I.pe.TIER_0 : I.pe.TIER_2,
-        L = C?.hasActiveTrial ? b?.premiumType : U ? I.PremiumTypes.TIER_2 : null,
-        O = (0, T.V)(),
-        G = (0, x.O)(),
-        D = r === I.PremiumTypes.TIER_0 ? I.gD.PREMIUM_MONTH_TIER_0 : I.gD.PREMIUM_MONTH_TIER_2,
-        H = (0, p.N1)(D),
-        F = null != G && (0, p.YJ)(G) === D,
-        k = O?.subscription_trial;
-    if (!v && !t && null != L && r === L && null != C && null != C.planIdFromItems) {
-        let e = null != C.trialEndsAt ? l()(C?.trialEndsAt).diff(l()(), "d") : 0,
-            t = I.hd[C.planIdFromItems],
-            r = m.Ay.formatPriceString(m.Ay.getDefaultPrice(t.id), t.interval);
-        return (0, n.jsx)(c.D, {
-            variant: M,
-            color: y,
-            className: a()(j.K, N),
-            children:
-                s === I.Vk.PREMIUM_TRIAL
-                    ? f.intl.format(f.t["2CGBri"], { remainingTime: e, price: r })
-                    : C.planIdFromItems === I.gD.PREMIUM_YEAR_TIER_2
-                      ? f.intl.format(f.t["+qqh6g"], { percent: S?.percentage ?? I.Cq, regularPrice: r })
-                      : f.intl.formatToPlainString(f.t["3ZiutU"], {
-                            percent: S?.percentage ?? I._$,
-                            regularPrice: r,
-                            numMonths: S?.duration ?? I.OJ,
-                        }),
+        U = (0, o.bG)([d.A], () => d.A.getPremiumTypeSubscription()),
+        S = (0, o.bG)([m.default], () => m.default.getCurrentUser()),
+        b = (0, u.A)(),
+        L = (0, T.k5)(),
+        w = (0, T.nf)(),
+        O = n === f.PremiumTypes.TIER_0 ? f.pe.TIER_0 : f.pe.TIER_2,
+        F = U?.hasActiveTrial ? S?.premiumType : L ? f.PremiumTypes.TIER_2 : null,
+        G = (0, I.V)(),
+        D = (0, x.O)(),
+        k = n === f.PremiumTypes.TIER_0 ? f.gD.PREMIUM_MONTH_TIER_0 : f.gD.PREMIUM_MONTH_TIER_2,
+        H = (0, p.N1)(k),
+        Z = null != D && (0, p.YJ)(D) === k,
+        V = G?.subscription_trial;
+    if (!v && !t && null != F && n === F && null != U && null != U.planIdFromItems) {
+        let e = null != U.trialEndsAt ? s()(U?.trialEndsAt).diff(s()(), "d") : 0,
+            t = f.hd[U.planIdFromItems],
+            n = g.Ay.formatPriceString(g.Ay.getDefaultPrice(t.id), t.interval),
+            i = a === f.Vk.PREMIUM_TRIAL,
+            o = U.planIdFromItems === f.gD.PREMIUM_YEAR_TIER_2;
+        return (0, r.jsx)(c.D, {
+            variant: y,
+            color: C,
+            className: l()((i || !o) && E.K, N),
+            children: i
+                ? _.intl.format(_.t["2CGBri"], { remainingTime: e, price: n })
+                : o
+                  ? _.intl.format(_.t.z2oQtA, {
+                        percent: w?.percentage ?? f.Cq,
+                        regularPrice: n,
+                        renewalDate: g.Ay.getExpectedRenewalDate(U, b),
+                    })
+                  : _.intl.formatToPlainString(_.t["3ZiutU"], {
+                        percent: w?.percentage ?? f._$,
+                        regularPrice: n,
+                        numMonths: w?.duration ?? f.OJ,
+                    }),
         });
     }
     if (!v && !t && i) {
-        let e = m.Ay.formatPriceString(
-            m.Ay.getDefaultPrice(r === I.PremiumTypes.TIER_0 ? I.gD.PREMIUM_MONTH_TIER_0 : I.gD.PREMIUM_MONTH_TIER_2),
-            I.WT.MONTH,
+        let e = g.Ay.formatPriceString(
+            g.Ay.getDefaultPrice(n === f.PremiumTypes.TIER_0 ? f.gD.PREMIUM_MONTH_TIER_0 : f.gD.PREMIUM_MONTH_TIER_2),
+            f.WT.MONTH,
         );
-        if (s === I.Vk.PREMIUM_TRIAL)
-            return (0, n.jsx)(c.D, {
-                variant: M,
-                color: y,
-                className: a()(j.K, N),
-                children: f.intl.format(f.t["9vyovu"], {
-                    planName: (0, m.RH)(I.En[k?.sku_id ?? I.pe.NONE] ?? I.gD.PREMIUM_MONTH_TIER_2),
-                    duration: (0, m.re)({
-                        intervalType: k?.interval ?? I.WT.DAY,
-                        intervalCount: k?.interval_count ?? 30,
+        if (a === f.Vk.PREMIUM_TRIAL)
+            return (0, r.jsx)(c.D, {
+                variant: y,
+                color: C,
+                className: l()(E.K, N),
+                children: _.intl.format(_.t["9vyovu"], {
+                    planName: (0, g.RH)(f.En[V?.sku_id ?? f.pe.NONE] ?? f.gD.PREMIUM_MONTH_TIER_2),
+                    duration: (0, g.re)({
+                        intervalType: V?.interval ?? f.WT.DAY,
+                        intervalCount: V?.interval_count ?? 30,
                         capitalize: !1,
                     }),
                     price: e,
                 }),
             });
-        if (null != G && null != H && F)
-            return (0, n.jsx)(c.D, {
-                variant: M,
-                color: y,
-                className: a()(j.K, N),
-                children: f.intl.format(f.t.sJTwHQ, {
-                    numMonths: G.discount.userUsageLimit ?? I.OJ,
+        if (null != D && null != H && Z)
+            return (0, r.jsx)(c.D, {
+                variant: y,
+                color: C,
+                className: l()(E.K, N),
+                children: _.intl.format(_.t.sJTwHQ, {
+                    numMonths: D.discount.userUsageLimit ?? f.OJ,
                     discountedPrice: H,
                     regularPrice: e,
                 }),
             });
     }
-    return (0, n.jsxs)(n.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, n.jsx)(h.A, {
-                subscriptionTier: w,
+            (0, r.jsx)(h.A, {
+                subscriptionTier: O,
                 isGift: t,
-                className: null != A ? A : j.q,
-                priceOptions: _,
-                variant: E,
+                className: null != j ? j : E.q,
+                priceOptions: P,
+                variant: R,
                 isApplicationHome: v,
-                enablePremiumBrandRefresh: P,
+                enablePremiumBrandRefresh: M,
             }),
-            R &&
-                (0, n.jsx)(h.A, {
-                    subscriptionTier: w,
-                    interval: I.WT.YEAR,
-                    className: null != A ? A : j.q,
+            A &&
+                (0, r.jsx)(h.A, {
+                    subscriptionTier: O,
+                    interval: f.WT.YEAR,
+                    className: null != j ? j : E.q,
                     isGift: t,
-                    priceOptions: _,
-                    variant: E,
+                    priceOptions: P,
+                    variant: R,
                     isApplicationHome: v,
-                    enablePremiumBrandRefresh: P,
+                    enablePremiumBrandRefresh: M,
                 }),
         ],
     });

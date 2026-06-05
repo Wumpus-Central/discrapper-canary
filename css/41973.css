@@ -373,8 +373,19 @@
     white-space: nowrap
 }
 
+.planCardWrapper__9e160 {
+    cursor: pointer
+}
+
+.narrowLayoutPlanCardWrapper__9e160 {
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
 .narrowLayout__9e160 {
-    height: 308px;
+    flex: 1;
+    min-height: 308px;
     width: 246px
 }
 

@@ -210,6 +210,9 @@ class B extends r.Ay.DeviceSettingsStore {
     getCurrentClipsSessionId() {
         return D;
     }
+    devSetLastClipsSession(e) {
+        (b = e), this.emitChange();
+    }
     getClipsWarningShown(e) {
         return O === e;
     }

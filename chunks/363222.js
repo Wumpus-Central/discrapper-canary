@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => et });
+n.d(t, { A: () => ei });
 var i,
     r = n(691540),
     s = n(97483),
@@ -12,7 +12,7 @@ var i,
     _ = n(652896),
     h = n(616356),
     f = n(495544),
-    p = n(728555),
+    p = n(555975),
     E = n(741394),
     m = n(19575),
     g = n(459838),
@@ -308,45 +308,47 @@ class B {
     }
 }
 let H = new B();
-var j = n(116671);
+var j = n(334686),
+    Y = n(315240);
 n(871421);
-var Y = n(227628),
-    W = n(468550),
-    K = n(375708);
-let $ = !1,
-    z = null,
-    q = null,
+var W = n(409067),
+    K = n(227628),
+    $ = n(468550),
+    z = n(375708);
+let q = !1,
     X = null,
-    Z = null;
-function Q() {
+    Z = null,
+    Q = null,
+    J = null;
+function ee() {
     let e = (0, b.qi)(),
         t = (0, b.$i)(),
-        n = q !== e,
-        i = X !== t;
+        n = Z !== e,
+        i = Q !== t;
     if (!n && !i) return;
     let r = p.Ay.getMediaEngine();
     n && r.setClipsV3Enabled(e),
-        w.nx.info(`clips v3 runtime flags pushed: v3=${e} (was ${q}), ml=${t} (was ${X})`),
-        (q = e),
-        (X = t),
+        w.nx.info(`clips v3 runtime flags pushed: v3=${e} (was ${Z}), ml=${t} (was ${Q})`),
+        (Z = e),
+        (Q = t),
         e &&
             (t
-                ? (null === Z &&
+                ? (null === J &&
                       (w.nx.info("clips v3 ml flag set ml=false until download complete"),
                       r.setClipsV3MLEnabled(!1),
-                      (Z = !1)),
+                      (J = !1)),
                   (async () => {
                       let { allAssetsDownloaded: e } = await H.start(),
-                          t = e && X;
-                      Z !== t &&
-                          (w.nx.info(`clips v3 ml flag set ml=${t} (was ${Z}). allAssetsDownloaded=${e}`),
+                          t = e && Q;
+                      J !== t &&
+                          (w.nx.info(`clips v3 ml flag set ml=${t} (was ${J}). allAssetsDownloaded=${e}`),
                           r.setClipsV3MLEnabled(t),
-                          (Z = t));
+                          (J = t));
                   })())
-                : !1 !== Z &&
-                  (w.nx.info(`clips v3 ml flag set ml=false (was ${Z})`), r.setClipsV3MLEnabled(!1), (Z = !1)));
+                : !1 !== J &&
+                  (w.nx.info(`clips v3 ml flag set ml=false (was ${J})`), r.setClipsV3MLEnabled(!1), (J = !1)));
 }
-class J extends x {
+class et extends x {
     constructor() {
         super(),
             Object.assign(this.actions, {
@@ -366,7 +368,7 @@ class J extends x {
             (R.Ay.getLastClipsSession()
                 ?.newClipIds.map(R.Ay.getClipById)
                 .some((e) => e?.applicationId === t.id) &&
-                (Y.MZ.getState().isOpen || (0, Y.w9)()));
+                (K.MZ.getState().isOpen || (0, K.w9)()));
     }
     handleClipsReminder(e) {
         if (null == e) return;
@@ -374,13 +376,17 @@ class J extends x {
         if (!t || !R.Ay.canShowReminders()) return;
         let n = R.Ay.getLastClipsSession();
         if (null == n || 0 === n.newClipIds.length) return;
-        let i = R.Ay.getClipById(n.newClipIds[0]);
-        i?.applicationId === e && (0, W.M8)(e);
+        let { enabled: i } = j.O.getConfig({ location: "ClipsManager" }),
+            r = i && !R.Ay.getSettings().showPovClipsInGallery;
+        n.newClipIds.some((t) => {
+            let n = R.Ay.getClipById(t);
+            return null != n && n.applicationId === e && (!r || !(0, W.kD)(n));
+        }) && (0, $.M8)(e);
     }
     showClipsToast() {
         (0, r.P0)({
             id: "CLIPS_IN_CALL_WARNING",
-            message: K.intl.string(K.t["d+41qJ"]),
+            message: z.intl.string(z.t["d+41qJ"]),
             type: s.Ck.CLIP,
             options: { duration: w.Vi },
         });
@@ -402,25 +408,25 @@ class J extends x {
                         this.fireClipsInitEvent();
                 }
             };
-        Q(),
-            !(0, b.qi)() || $
+        ee(),
+            !(0, b.qi)() || q
                 ? n()
-                : ($
+                : (q
                       ? Promise.resolve()
-                      : null != z
-                        ? z
-                        : (z = (async () => {
+                      : null != X
+                        ? X
+                        : (X = (async () => {
                               try {
-                                  Q(), await m.Ay.ensureModule("discord_clips");
+                                  ee(), await m.Ay.ensureModule("discord_clips");
                                   let e = m.Ay.requireModule("discord_clips").getModulePath(),
                                       t = p.Ay.getMediaEngine(),
                                       n = m.Ay.getClipsDataDirSync();
                                   t.setClipsDataPath(n),
                                       t.setClipsModulePath(e),
-                                      ($ = !0),
+                                      (q = !0),
                                       w.nx.info("discord_clips module loaded, path: " + e);
                               } catch (e) {
-                                  (z = null), w.nx.error("Failed to load discord_clips module", e);
+                                  (X = null), w.nx.error("Failed to load discord_clips module", e);
                               }
                           })())
                   ).then(n);
@@ -431,10 +437,10 @@ class J extends x {
     }
     handleClipsInitOnGamesChange(e) {
         let t = c.Ay.getVisibleGame();
-        (0, Y.yj)(),
+        (0, K.yj)(),
             e.removed.length > 0 && null == t && this.handleClipsReminder(e.removed[0]?.id),
             null == t ||
-                ((0, W.kF)(),
+                ((0, $.kF)(),
                 this.prefetchRichPresenceData(t.id),
                 e.added.find((e) => e.pid === t.pid)
                     ? setTimeout(() => this.fireClipsInitEvent(), w.dV)
@@ -465,23 +471,22 @@ class J extends x {
         let { storageLocation: e } = R.Ay.getSettings();
         "" !== e &&
             e !== R.he &&
-            j
-                .Fb(e)
-                .then(() => ee())
+            Y.Fb(e)
+                .then(() => en())
                 .catch((e) => {
                     w.nx.error("Failed to load clips directory on connection open", e);
                 });
     }
 }
-async function ee() {
+async function en() {
     if (R.Ay.hasClips() || null == o.A || null == o.A.app) return;
     let e = await o.A.app.getPath("documents");
     if (R.Ay.getSettings().storageLocation === e)
         try {
             let e = await o.A.app.getPath("videos");
-            j.HU((0, E.CN)(e, R._c));
+            Y.HU((0, E.CN)(e, R._c));
         } catch (e) {
             w.nx.error("Failed to resolve videos path for old default storage migration", e);
         }
 }
-let et = new J();
+let ei = new et();
