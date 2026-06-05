@@ -901,7 +901,10 @@ function nO(e) {
                 a = r.useMemo(() => s.filter(nI.Vq), [s]),
                 o = (0, c.cf)([nR.A], () => {
                     let t = {};
-                    for (let n of e) t[n] = nR.A.getLastPlayedDateTime(n);
+                    for (let n of e) {
+                        let e = a.find((e) => e.id === n)?.getCanonicalGameId();
+                        null != e && (t[n] = nR.A.getLastPlayedDateTime(e));
+                    }
                     return t;
                 }),
                 l = r.useMemo(() => {
