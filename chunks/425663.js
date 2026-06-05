@@ -10,8 +10,8 @@ var n = a(627968),
     u = a(976860),
     p = a(495544),
     C = a(619921),
-    A = a(832163),
-    L = a(81341),
+    L = a(832163),
+    A = a(81341),
     S = a(44724),
     E = a(555109),
     f = a(696292),
@@ -87,10 +87,10 @@ function K(e) {
         i,
         { selectedApplicationId: s, className: c } = e,
         d = l.useRef(null),
-        { isHovered: u, setIsHovered: p, onMouseEnter: C, onMouseLeave: L, cancelTimers: S } = (0, z.A)(100, 100),
+        { isHovered: u, setIsHovered: p, onMouseEnter: C, onMouseLeave: A, cancelTimers: S } = (0, z.A)(100, 100),
         E =
-            ((t = (0, r.yK)([A.A], () =>
-                (A.A.getConfig()?.storefronts ?? []).filter((e) => e.collectiblesShopNavigationEnabled),
+            ((t = (0, r.yK)([L.A], () =>
+                (L.A.getConfig()?.storefronts ?? []).filter((e) => e.collectiblesShopNavigationEnabled),
             )),
             (a = l.useMemo(() => t.map((e) => e.applicationId), [t])),
             (i = (0, Y.A)(a)),
@@ -132,7 +132,7 @@ function K(e) {
         onRequestClose: () => g(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, n.jsx)(J, { shops: E, currentApplicationId: s, onClose: t, onMouseEnter: C, onMouseLeave: L });
+            return (0, n.jsx)(J, { shops: E, currentApplicationId: s, onClose: t, onMouseEnter: C, onMouseLeave: A });
         },
         children: (e) => {
             let t = u ? V.t : U.a;
@@ -140,7 +140,7 @@ function K(e) {
                 ...e,
                 innerRef: d,
                 onClick: I,
-                onMouseLeave: L,
+                onMouseLeave: A,
                 className: o()(Q.hZ, c),
                 "aria-label": f.name,
                 "aria-haspopup": "menu",
@@ -266,14 +266,14 @@ var er = a(901123),
     ec = a(253004);
 function ed(e) {
     let { applicationId: t, pageIndex: a, skuId: i, slug: f } = e,
-        { guildId: x, configFetchState: g } = (0, r.cf)([A.A], () => ({
-            guildId: A.A.getGuildIdFromApplicationId(t),
-            configFetchState: A.A.getConfigFetchState(),
+        { guildId: x, configFetchState: g } = (0, r.cf)([L.A], () => ({
+            guildId: L.A.getGuildIdFromApplicationId(t),
+            configFetchState: L.A.getConfigFetchState(),
         })),
-        I = (0, r.bG)([A.A], () => A.A.getStorefrontDataForApplicationId(t)),
+        I = (0, r.bG)([L.A], () => L.A.getStorefrontDataForApplicationId(t)),
         m = (0, r.bG)([p.default], () => p.default.getId()),
         _ = (0, r.bG)([d.A], () => d.A.hasLoaded(m)),
-        h = (0, L.I)({ location: "SocialLayerStorefrontApplicationWrapper" }),
+        h = (0, A.I)({ location: "SocialLayerStorefrontApplicationWrapper" }),
         j = null != a ? parseInt(a, 10) : 0;
     l.useEffect(() => {
         (C.A.getHomeLink()?.startsWith(er.BV.COLLECTIBLES_SHOP_GAME_SHOP("")) || h) &&
@@ -302,5 +302,5 @@ function ed(e) {
               renderHeader: O,
               getSocialLayerStorefrontLink: b,
           })
-        : (0, n.jsx)("div", { className: o()(ec.u, ec.k), children: (0, n.jsx)(s.y, {}) });
+        : (0, n.jsx)("div", { className: o()(ec.u1, ec.kL), children: (0, n.jsx)(s.y, {}) });
 }

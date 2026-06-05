@@ -87,9 +87,24 @@
     z-index: 2
 }
 
+.emptyState_b40158,
 .spinner_b40158 {
     align-items: center;
     display: flex;
     flex: 1 1 auto;
     justify-content: center
+}
+
+.emptyState_b40158 {
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+    padding: 16px;
+    text-align: center
+}
+
+.emptyStateImage_b40158 {
+    height: 131px;
+    margin-bottom: 16px;
+    width: 140px
 }
