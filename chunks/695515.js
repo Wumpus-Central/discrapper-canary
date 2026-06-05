@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => ei }), n(321073);
+n.d(t, { A: () => es }), n(321073);
 var i = n(423764),
     r = n(536802),
     s = n(287809),
@@ -13,11 +13,11 @@ let _ = null,
     h = null,
     f = {},
     p = !1,
-    E = x(),
-    m = k(),
+    E = k(),
+    m = U(),
     g = null,
     A = null,
-    I = P(),
+    I = x(),
     T = !1,
     S = !1,
     y = null,
@@ -29,16 +29,17 @@ let _ = null,
     b = null,
     D = null,
     L = {},
-    w = null,
-    M = {};
-function P() {
+    w = {},
+    M = null,
+    P = {};
+function x() {
     return window?.location?.pathname === d.he.FAMILY_CENTER_MY_FAMILY
         ? d.u9.REQUESTS
         : window?.location?.pathname === d.he.FAMILY_CENTER_SETTINGS
           ? d.u9.SETTINGS
           : d.u9.ACTIVITY;
 }
-function x() {
+function k() {
     let e = new Map();
     return (
         e.set(d.NV.USER_ADD, new Map()),
@@ -48,10 +49,11 @@ function x() {
         e.set(d.NV.USER_CALLED, new Map()),
         e.set(d.NV.TOTAL_VOICE_MINUTES, new Map()),
         e.set(d.NV.PURCHASES, new Map()),
+        e.set(d.NV.GIFTS, new Map()),
         e
     );
 }
-function k() {
+function U() {
     return {
         [d.NV.USER_ADD]: 0,
         [d.NV.GUILD_ADD]: 0,
@@ -60,9 +62,10 @@ function k() {
         [d.NV.USER_CALLED]: 0,
         [d.NV.TOTAL_VOICE_MINUTES]: 0,
         [d.NV.PURCHASES]: 0,
+        [d.NV.GIFTS]: 0,
     };
 }
-function U() {
+function G() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
     return (
         arguments.length > 1 && arguments[1],
@@ -71,11 +74,11 @@ function U() {
         f
     );
 }
-function G(e) {
+function F(e) {
     void 0 !== e && (m = e);
 }
-function F(e, t) {
-    let n = t ? E : x();
+function V(e, t) {
+    let n = t ? E : k();
     return (
         e.forEach((e) => {
             let t = e.display_type,
@@ -85,8 +88,8 @@ function F(e, t) {
         (E = n)
     );
 }
-function V(e) {
-    M = e.reduce(
+function B(e) {
+    P = e.reduce(
         (e, t) => ({
             ...e,
             [t.id]: {
@@ -94,10 +97,10 @@ function V(e) {
                 approximateMemberCount: t.approximate_member_count ?? 0,
             },
         }),
-        M,
+        P,
     );
 }
-function B(e) {
+function H(e) {
     L = e.reduce((e, t) => {
         if (null != t.invoice_items && t.invoice_items.length > 0) {
             let n = t.invoice_items[0],
@@ -109,10 +112,13 @@ function B(e) {
         return e;
     }, {});
 }
-function H() {
+function j(e) {
+    w = e.reduce((e, t) => ((e[t.entitlement_id] = t), e), {});
+}
+function Y() {
     S = !0;
 }
-function j(e) {
+function W(e) {
     let { linkedUsers: t, familyCenterTeenActivity: n, ageGroup: i } = e,
         {
             actions: r,
@@ -127,34 +133,36 @@ function j(e) {
             spendingLimit: E,
             monthlyPurchases: m,
             invoices: g,
+            gifts: A,
         } = n;
     (_ = l),
         (h = u),
-        F(r),
-        G(a),
-        V(s),
-        U(t),
-        null != g && B(g),
+        V(r),
+        F(a),
+        B(s),
+        G(t),
+        null != g && H(g),
+        null != A && j(A),
         (v = c),
         (C = d),
         (R = f),
         (O = p),
         (b = E ?? null),
         (D = m ?? null),
-        (w = i ?? null),
+        (M = i ?? null),
         (S = !1),
         (y = o.default.fromTimestamp(Date.now())),
         (T = !0);
 }
-function Y(e) {
-    let { linkedUsers: t } = e;
-    U(t);
-}
-function W(e) {
-    let { linkedUsers: t } = e;
-    U(t);
-}
 function K(e) {
+    let { linkedUsers: t } = e;
+    G(t);
+}
+function $(e) {
+    let { linkedUsers: t } = e;
+    G(t);
+}
+function z(e) {
     let { familyCenterTeenActivity: t } = e;
     if (void 0 === t) return !1;
     let {
@@ -168,46 +176,48 @@ function K(e) {
         totalSpendAmount: c,
         totalSpendCurrency: d,
         invoices: f,
-        spendingLimit: p,
-        monthlyPurchases: E,
+        gifts: p,
+        spendingLimit: E,
+        monthlyPurchases: m,
     } = t;
     (_ = s),
         (h = a),
-        F(n),
-        G(i),
-        V(r),
-        null != f && B(f),
+        V(n),
+        F(i),
+        B(r),
+        null != f && H(f),
+        null != p && j(p),
         (v = l),
         (C = u),
         (S = !1),
         (y = o.default.fromTimestamp(Date.now())),
         (R = c),
         (O = d),
-        (b = p ?? null),
-        (D = E ?? null);
-}
-function $(e) {
-    let { familyCenterTeenActivity: t } = e,
-        { actions: n, guilds: i } = t;
-    F(n, !0), V(i);
-}
-function z(e) {
-    let { linkedUsers: t } = e;
-    U(t);
+        (b = E ?? null),
+        (D = m ?? null);
 }
 function q(e) {
-    let { linkedUsers: t } = e;
-    U(t, !0);
+    let { familyCenterTeenActivity: t } = e,
+        { actions: n, guilds: i } = t;
+    V(n, !0), B(i);
 }
 function X(e) {
+    let { linkedUsers: t } = e;
+    G(t);
+}
+function Z(e) {
+    let { linkedUsers: t } = e;
+    G(t, !0);
+}
+function Q(e) {
     let { linkCode: t, expiresAt: n } = e;
     (g = t), (A = n);
 }
-function Z(e) {
+function J(e) {
     let { tab: t } = e;
     I = t;
 }
-function Q(e) {
+function ee(e) {
     let { user: t } = e;
     if (void 0 === t.linked_users) return !1;
     let n = s.default.getUsers();
@@ -216,27 +226,27 @@ function Q(e) {
         return void 0 === n[t];
     }) && t.linked_users.length > Object.keys(f).length
         ? l.Ay.fetchLinkedUsers()
-        : U(t.linked_users);
+        : G(t.linked_users);
 }
-function J(e) {
+function et(e) {
     let { linkedUsers: t } = e;
     if (null == t) return !1;
-    U(t);
+    G(t);
 }
-function ee(e) {
+function en(e) {
     let { countryCode: t } = e;
     null != t && (N = (0, i.XF)(t) ?? null);
 }
-function et() {
+function ei() {
     (_ = null),
         (h = null),
         (f = {}),
-        (E = x()),
-        (m = k()),
-        (M = {}),
+        (E = k()),
+        (m = U()),
+        (P = {}),
         (S = !1),
         (y = null),
-        (I = P()),
+        (I = x()),
         (p = !1),
         (v = []),
         (C = []),
@@ -245,50 +255,51 @@ function et() {
         (b = null),
         (D = null),
         (L = {}),
-        (w = null),
+        (w = {}),
+        (M = null),
         (T = !1);
 }
-class en extends r.A {
+class er extends r.A {
     static displayName = "FamilyCenterStore";
     static LATEST_SNAPSHOT_VERSION = 3;
     constructor() {
         super({
-            CONNECTION_OPEN: J,
-            CURRENT_USER_UPDATE: Q,
+            CONNECTION_OPEN: et,
+            CURRENT_USER_UPDATE: ee,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            FAMILY_CENTER_INITIAL_LOAD: j,
-            FAMILY_CENTER_FETCH_START: H,
-            FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: Y,
-            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: K,
-            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: $,
-            FAMILY_CENTER_REQUEST_LINK_SUCCESS: W,
-            FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: z,
-            FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: q,
-            FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: X,
-            FAMILY_CENTER_HANDLE_TAB_SELECT: Z,
-            SET_LOCATION_METADATA: ee,
-            LOGOUT: et,
+            FAMILY_CENTER_INITIAL_LOAD: W,
+            FAMILY_CENTER_FETCH_START: Y,
+            FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: K,
+            FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: z,
+            FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS: q,
+            FAMILY_CENTER_REQUEST_LINK_SUCCESS: $,
+            FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: X,
+            FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: Z,
+            FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: Q,
+            FAMILY_CENTER_HANDLE_TAB_SELECT: J,
+            SET_LOCATION_METADATA: en,
+            LOGOUT: ei,
         });
     }
     initialize() {
         this.waitFor(s.default);
     }
     loadCache() {
-        let e = this.readSnapshot(en.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(er.LATEST_SNAPSHOT_VERSION);
         null != e &&
-            (U(e.linkedUsers),
-            V(e.guilds),
-            F(e.teenActivity),
+            (G(e.linkedUsers),
+            B(e.guilds),
+            V(e.teenActivity),
             (m = e.teenActivityTotals.reduce((e, t) => {
                 let [n, i] = t.split(":"),
                     r = (0, u.k5)(n);
                 return void 0 === r ? e : { ...e, [r]: parseInt(i, 10) };
-            }, k())));
+            }, U())));
     }
     takeSnapshot() {
         let e;
         return {
-            version: en.LATEST_SNAPSHOT_VERSION,
+            version: er.LATEST_SNAPSHOT_VERSION,
             data: {
                 linkedUsers: Object.values(f),
                 teenActivityTotals: Object.entries(m).map((e) => {
@@ -301,7 +312,7 @@ class en extends r.A {
                         e.push(...Array.from(t.values()));
                     }),
                     e),
-                guilds: Object.values(M),
+                guilds: Object.values(P),
             },
         };
     }
@@ -332,7 +343,7 @@ class en extends r.A {
         return A;
     }
     getGuild(e) {
-        return M[e];
+        return P[e];
     }
     getSelectedTab() {
         return I;
@@ -373,8 +384,11 @@ class en extends r.A {
     getPurchaseInfo(e) {
         return L[e];
     }
+    getGiftInfo(e) {
+        return w[e];
+    }
     getAgeGroup() {
-        return w;
+        return M;
     }
     canRefetch() {
         return null === y || o.default.age(y) > d.fD;
@@ -385,4 +399,4 @@ class en extends r.A {
         return e?.restrictedSchedule?.isInRestrictedHours() ?? !1;
     }
 }
-let ei = new en();
+let es = new er();

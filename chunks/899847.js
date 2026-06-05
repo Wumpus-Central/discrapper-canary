@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => g, HB: () => E, Xz: () => m, e$: () => p, nt: () => f });
+n.d(t, { Ay: () => A, HB: () => m, Xz: () => g, e$: () => E, nt: () => p });
 var i = n(636537),
     r = n(873298),
     s = n(228366),
@@ -20,7 +20,14 @@ async function h(e) {
     }),
         await Promise.all(Array.from(t).map((e) => (0, a.RE)(e)));
 }
-async function f(e, t) {
+async function f(e) {
+    let t = new Set();
+    e.forEach((e) => {
+        null != e.sku_id && t.add(e.sku_id);
+    }),
+        await Promise.all(Array.from(t).map((e) => (0, a.RE)(e)));
+}
+async function p(e, t) {
     await i.Bo.patch({
         url: _.Rsh.FAMILY_CENTER_LINKED_USERS,
         body: { linked_user_id: e, link_status: t },
@@ -30,7 +37,7 @@ async function f(e, t) {
         return s.h.dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS", linkedUsers: t }), t;
     });
 }
-async function p(e) {
+async function E(e) {
     await i.Bo.del({ url: _.Rsh.FAMILY_CENTER_LINKED_USERS, body: { linked_user_id: e }, rejectWithError: !1 }).then(
         (t) => {
             let { body: n } = t;
@@ -40,7 +47,7 @@ async function p(e) {
         },
     );
 }
-async function E() {
+async function m() {
     await i.Bo.get({ url: _.Rsh.FAMILY_CENTER_LINK_CODE, rejectWithError: !1 }).then((e) => {
         let { body: t } = e,
             n = t.link_code,
@@ -48,10 +55,10 @@ async function E() {
         return s.h.dispatch({ type: "FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS", linkCode: n, expiresAt: i }), n;
     });
 }
-async function m() {
+async function g() {
     await i.Bo.post({ url: _.Rsh.FAMILY_CENTER_SHARE_IAR_WITH_PARENTS, rejectWithError: !0 });
 }
-let g = {
+let A = {
     async initialPageLoad() {
         s.h.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
         let { body: e } = await i.Bo.get({ url: _.Rsh.FAMILY_CENTER_TEEN_ACTIVITY_ME, rejectWithError: !1 }),
@@ -70,9 +77,11 @@ let g = {
                 spendingLimit: e.spending_limit ?? null,
                 monthlyPurchases: e.monthly_purchases ?? null,
                 invoices: t?.invoices ?? [],
+                gifts: t?.gifts ?? [],
             };
         return (
             null != o.invoices && o.invoices.length > 0 && (await h(o.invoices)),
+            null != o.gifts && o.gifts.length > 0 && (await f(o.gifts)),
             s.h.dispatch({
                 type: "FAMILY_CENTER_INITIAL_LOAD",
                 familyCenterTeenActivity: o,
@@ -123,9 +132,11 @@ let g = {
                 spendingLimit: n.spending_limit ?? null,
                 monthlyPurchases: n.monthly_purchases ?? null,
                 invoices: r?.invoices ?? [],
+                gifts: r?.gifts ?? [],
             };
         return (
             a.invoices && a.invoices.length > 0 && (await h(a.invoices)),
+            a.gifts && a.gifts.length > 0 && (await f(a.gifts)),
             s.h.dispatch({ type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS", familyCenterTeenActivity: a }),
             null != n.restricted_schedule &&
                 s.h.dispatch({
@@ -153,6 +164,7 @@ let g = {
                 totalSpendAmount: o?.total_spend?.amount ?? null,
                 totalSpendCurrency: o?.total_spend?.currency ?? null,
                 invoices: o?.invoices ?? [],
+                gifts: o?.gifts ?? [],
             };
         return (
             u.default.track(_.HAw.FAMILY_CENTER_ACTION, {

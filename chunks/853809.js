@@ -1,31 +1,32 @@
-i.d(e, { default: () => E });
-var r = i(627968);
-i(64700);
-var o = i(406810),
-    s = i(360669),
-    l = i(331322),
-    n = i(189213),
-    c = i(978940),
-    h = i(214947),
-    d = i(704333),
-    a = i(276293),
-    C = i(834730),
-    u = i(923531),
-    x = i(294433),
-    p = i(438732),
-    j = i(953727),
-    N = i(191627),
-    g = i(602339),
-    m = i(985018),
-    w = i(974150);
-let _ = {
-        [N.NV.USER_INTERACTION]: (0, r.jsx)(
+e.d(i, { default: () => f });
+var r = e(627968);
+e(64700);
+var o = e(406810),
+    s = e(360669),
+    l = e(331322),
+    c = e(189213),
+    h = e(978940),
+    n = e(214947),
+    d = e(704333),
+    a = e(276293),
+    C = e(597770),
+    u = e(834730),
+    x = e(923531),
+    j = e(294433),
+    p = e(438732),
+    N = e(953727),
+    g = e(191627),
+    m = e(602339),
+    w = e(375708),
+    E = e(974150);
+let I = {
+        [g.NV.USER_INTERACTION]: (0, r.jsx)(
             function (t) {
-                let { width: e = 24, height: i = 24, color: o = "currentColor", ...s } = t;
+                let { width: i = 24, height: e = 24, color: o = "currentColor", ...s } = t;
                 return (0, r.jsxs)("svg", {
-                    ...(0, j.A)(s),
-                    width: e,
-                    height: i,
+                    ...(0, N.A)(s),
+                    width: i,
+                    height: e,
                     viewBox: "0 0 20 20",
                     fill: "none",
                     children: [
@@ -42,53 +43,54 @@ let _ = {
             },
             { width: 18, height: 18 },
         ),
-        [N.NV.USER_CALLED]: (0, r.jsx)(c._, { size: "custom", color: "currentColor", width: 22, height: 22 }),
-        [N.NV.USER_ADD]: (0, r.jsx)(h.$, { size: "custom", color: "currentColor", width: 22, height: 22 }),
-        [N.NV.GUILD_ADD]: (0, r.jsx)(d.B, { size: "custom", color: "currentColor", width: 22, height: 22 }),
-        [N.NV.GUILD_INTERACTION]: (0, r.jsx)(a.N, { size: "custom", color: "currentColor", width: 22, height: 22 }),
-        [N.NV.TOTAL_VOICE_MINUTES]: (0, r.jsx)(o.O, { size: "custom", color: "currentColor", width: 22, height: 22 }),
-        [N.NV.PURCHASES]: (0, r.jsx)(s.B, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+        [g.NV.USER_CALLED]: (0, r.jsx)(h._, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+        [g.NV.USER_ADD]: (0, r.jsx)(n.$, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+        [g.NV.GUILD_ADD]: (0, r.jsx)(d.B, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+        [g.NV.GUILD_INTERACTION]: (0, r.jsx)(a.N, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+        [g.NV.TOTAL_VOICE_MINUTES]: (0, r.jsx)(o.O, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+        [g.NV.PURCHASES]: (0, r.jsx)(s.B, { size: "custom", color: "currentColor", width: 22, height: 22 }),
+        [g.NV.GIFTS]: (0, r.jsx)(C.o, { size: "custom", color: "currentColor", width: 22, height: 22 }),
     },
-    f = (t) => {
-        let { header: e, description: i, icon: o } = t;
+    _ = (t) => {
+        let { header: i, description: e, icon: o } = t;
         return (0, r.jsxs)(l.B, {
             direction: "horizontal",
-            className: w.nM,
+            className: E.nM,
             padding: 16,
             align: "center",
             gap: 16,
             fullWidth: !1,
             children: [
-                (0, r.jsx)("div", { className: w.zc, children: o }),
+                (0, r.jsx)("div", { className: E.zc, children: o }),
                 (0, r.jsxs)("div", {
-                    className: w.u4,
+                    className: E.u4,
                     children: [
-                        (0, r.jsx)(C.E, { variant: "text-sm/bold", children: e }),
-                        (0, r.jsx)(C.E, { variant: "text-xs/medium", children: i }),
+                        (0, r.jsx)(u.E, { variant: "text-sm/bold", children: i }),
+                        (0, r.jsx)(u.E, { variant: "text-xs/medium", children: e }),
                     ],
                 }),
             ],
         });
     },
-    E = (t) => {
-        let { transitionState: e, onClose: i } = t,
-            o = (0, x.y)(m.intl.string(g.default.q3IRal), m.intl.string(g.default.JNLpDZ)),
+    f = (t) => {
+        let { transitionState: i, onClose: e } = t,
+            o = (0, j.y)(w.intl.string(m.default.q3IRal), w.intl.string(m.default.JNLpDZ)),
             s = (0, p.A)(),
-            c = (0, u.Mo)();
-        return (0, r.jsx)(n.Modal, {
-            transitionState: e,
-            onClose: i,
+            h = (0, x.Mo)();
+        return (0, r.jsx)(c.Modal, {
+            transitionState: i,
+            onClose: e,
             actions: [],
             title: o,
             children: (0, r.jsx)(l.B, {
                 gap: 8,
                 fullWidth: !1,
-                children: c.map((t) => {
-                    let [e, i] = t;
+                children: h.map((t) => {
+                    let [i, e] = t;
                     return (0, r.jsx)(
-                        f,
-                        { icon: _[e], header: i.tooltipHeader(), description: i.tooltipDescription(s ?? void 0) },
-                        e,
+                        _,
+                        { icon: I[i], header: e.tooltipHeader(), description: e.tooltipDescription(s ?? void 0) },
+                        i,
                     );
                 }),
             }),

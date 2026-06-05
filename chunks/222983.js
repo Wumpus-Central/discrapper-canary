@@ -23,15 +23,15 @@ var l = n(627968),
     j = n(734057),
     v = n(808728),
     T = n(498642),
-    y = n(71393),
-    N = n(186111),
+    N = n(71393),
+    y = n(186111),
     b = n(232835),
     M = n(576705),
     R = n(935208),
     D = n(652215),
     L = n(468689),
-    O = n(794967),
-    k = n(595818),
+    k = n(794967),
+    O = n(595818),
     P = n(287809),
     G = n(147925),
     U = n(625494),
@@ -82,7 +82,7 @@ function W(e) {
         Z,
         Y,
         { channel: X } = e,
-        Q = (0, o.bG)([y.A], () => (null != X ? y.A.getGuild(X.getGuildId()) : null), [X]),
+        Q = (0, o.bG)([N.A], () => (null != X ? N.A.getGuild(X.getGuildId()) : null), [X]),
         ee = null != Q && R.default.extractTimestamp(Q.id) < Date.now() - D.NOr,
         et = (0, o.bG)([I.default], () => Q?.ownerId === I.default.getId(), [Q]),
         {
@@ -127,8 +127,8 @@ function W(e) {
                     }),
                 )),
             guildPersonalized:
-                ((x = (0, o.bG)([N.A], () => N.A.hasLayers())),
-                (G = (0, o.bG)([y.A], () => y.A.getGuild(Q?.id))),
+                ((x = (0, o.bG)([y.A], () => y.A.hasLayers())),
+                (G = (0, o.bG)([N.A], () => N.A.getGuild(Q?.id))),
                 G?.icon != null && !x),
             guildChannelCreated: (0, o.bG)([v.Ay], () => {
                 let e = v.Ay.getChannels(Q?.id),
@@ -155,8 +155,7 @@ function W(e) {
                 null != Q &&
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("81927"),
-                            n.e("42527"),
+                            n.e("32490"),
                             n.e("59957"),
                             n.e("28136"),
                             n.e("16084"),
@@ -184,7 +183,7 @@ function W(e) {
                 setup_type: B.XT.CHANNEL_WELCOME,
                 action: B.AG.PERSONALIZE_SERVER,
             }),
-                null != Q && L.A.open(Q.id, (0, k.x)(), { section: D.JJy.CHANNEL_WELCOME_CTA });
+                null != Q && L.A.open(Q.id, (0, O.x)(), { section: D.JJy.CHANNEL_WELCOME_CTA });
         }, [Q])),
         {
             handleInvite: W,
@@ -255,7 +254,7 @@ function W(e) {
         (i.useEffect(() => {
             (async () => {
                 try {
-                    let e = await (0, O.c)(Q?.id ?? D.dJq);
+                    let e = await (0, k.c)(Q?.id ?? D.dJq);
                     eC(e.map((e) => e.id));
                 } catch {}
             })();
