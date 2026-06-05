@@ -147,7 +147,6 @@ function P(e) {
                       children: (0, n.jsx)(g.D, {
                           innerRef: P,
                           className: a()({ [G.vk]: !q }, k.q7, k.L9, k.vk),
-                          focusProps: { offset: { right: 4 } },
                           "aria-disabled": q,
                           "aria-label": O.intl.string(O.t.F3qiJr),
                           onClick: ei,
