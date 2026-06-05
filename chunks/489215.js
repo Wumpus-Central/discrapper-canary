@@ -1,6 +1,8 @@
-_.r(
+r.r(
     (e.exports = {
         chip: "chip__3854f",
+        "with-icon": "with-icon__3854f",
+        icon: "icon__3854f",
         "blurple-light": "blurple-light__3854f",
         "blurple-medium": "blurple-medium__3854f",
         "blurple-dark": "blurple-dark__3854f",

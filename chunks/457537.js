@@ -182,9 +182,17 @@ let g = {
     grayDark: "gray-dark",
 };
 function f(e) {
-    let { text: l, variant: a = "grayLight" } = e,
-        o = g[a];
-    return (0, t.jsx)(p.E, { variant: "eyebrow", className: y()(v.chip, v[o]), children: l });
+    let { text: l, variant: a = "grayLight", icon: o, iconColor: i } = e,
+        n = g[a],
+        s =
+            null != o
+                ? (0, t.jsx)(o, { color: i ?? "currentColor", size: "xxs", "aria-hidden": !0, className: v.icon })
+                : null;
+    return (0, t.jsxs)(p.E, {
+        variant: "eyebrow",
+        className: y()(v.chip, v[n], { [v["with-icon"]]: null != o }),
+        children: [s, l],
+    });
 }
 var V = a(759146);
 let C = ["blurple", "purple", "green", "orange", "yellow", "pink", "red", "gray"],

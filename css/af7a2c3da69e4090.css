@@ -8,6 +8,16 @@
     text-transform: uppercase
 }
 
+.with-icon__3854f {
+    align-items: center;
+    display: inline-flex;
+    gap: var(--space-4)
+}
+
+.icon__3854f {
+    flex: 0 0 auto
+}
+
 .blurple-light__3854f {
     background-color: var(--chip-blurple-light-background);
     color: var(--chip-blurple-light-text)
