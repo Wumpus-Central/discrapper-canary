@@ -880,11 +880,13 @@ let tb = (e) => {
                 className: u()(tR.kL, tR.Eg, t),
                 ref: r,
                 children: (0, a.jsxs)("div", {
-                    className: tR.W2,
+                    className: u()(tR.W2, tR.m8),
                     ref: l,
                     children: [
-                        (0, a.jsxs)("div", {
-                            className: tR.WG,
+                        (0, a.jsxs)(ev.B, {
+                            align: "start",
+                            gap: 32,
+                            className: tR.Y0,
                             children: [
                                 i && n,
                                 (0, a.jsx)("div", {
@@ -900,7 +902,7 @@ let tb = (e) => {
                             ],
                         }),
                         (0, a.jsx)("div", {
-                            className: tR.nf,
+                            className: tR.BF,
                             children: (0, a.jsx)(tb, { containerVisibilityPercentage: c }),
                         }),
                     ],
