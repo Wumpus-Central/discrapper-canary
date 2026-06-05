@@ -632,10 +632,7 @@ function er(e) {
                         }),
                 ],
             }),
-            (0, r.jsx)("div", {
-                className: b.iconContainer,
-                children: (0, r.jsx)(ei.T, { checked: a, disabled: _, radioItemIconClassName: b.radioIcon }),
-            }),
+            (0, r.jsx)("div", { className: b.iconContainer, children: (0, r.jsx)(ei.T, { checked: a, disabled: _ }) }),
         ],
     });
 }

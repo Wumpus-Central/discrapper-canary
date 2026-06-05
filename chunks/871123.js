@@ -77,12 +77,11 @@ function C() {
     return null != e && e.features.has(m.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ? e.id : E.Kf;
 }
 function R(e) {
-    return (
-        !!p.A.getStorefrontGuildIds().has(e.id) ||
-        (!("type" in e) &&
-            (null != B(e, p.A.getApplicationIdFromGuildId(e.id)) ||
-                (e.features?.has(m.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1)))
-    );
+    if (p.A.getStorefrontGuildIds().has(e.id)) return !0;
+    if ("type" in e) return !1;
+    let t = B(e, p.A.getApplicationIdFromGuildId(e.id)),
+        n = p.A.getStorefrontApplicationIds();
+    return !!(null != t && n.has(t)) || (e.features?.has(m.GuildFeatures.SOCIAL_LAYER_STOREFRONT) ?? !1);
 }
 function O(e) {
     return { logoAssetId: e.logo_asset_id ?? null, lightThemeLogoAssetId: e.light_theme_logo_asset_id ?? null };
