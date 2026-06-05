@@ -81,14 +81,6 @@
     background-color: var(--background-mod-normal)
 }
 
-.applicationIcon_c4891f {
-    margin-inline-end: 8px
-}
-
-.seasonalIcon_c4891f {
-    height: 120px
-}
-
 .externalProductWrapper__320c6 {
     align-items: center;
     display: flex;
@@ -935,9 +927,9 @@
 
 .message__9a9f9 {
     color: var(--text-default);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: var(--font-weight-medium);
-    line-height: 20px;
+    line-height: 1.25rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
@@ -1992,6 +1984,12 @@
     flex-direction: column;
     gap: var(--space-4);
     min-width: 0
+}
+
+.confettiCanvas__78e61 {
+    height: 100%;
+    position: absolute;
+    width: 100%
 }
 
 .message__51673 {
