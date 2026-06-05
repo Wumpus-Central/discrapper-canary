@@ -120,8 +120,8 @@ let H = {
     CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, r.jsx)(R, { ...e }) },
 };
 var G = n(20742),
-    K = n(688810),
-    B = n(197510),
+    B = n(688810),
+    K = n(197510),
     W = n(848149),
     V = n(937008),
     Y = n(106778),
@@ -399,8 +399,8 @@ function eG(e) {
         ],
     });
 }
-var eK = n(783878),
-    eB = n(966327),
+var eB = n(783878),
+    eK = n(966327),
     eW = n(427262);
 let eV = (e) => {
     let { selectedSkuId: t, validateSelectedGift: n, className: l, recipients: i } = e,
@@ -409,7 +409,7 @@ let eV = (e) => {
         ? null
         : (0, r.jsx)("div", {
               className: l,
-              children: (0, r.jsx)(eK.Z, {
+              children: (0, r.jsx)(eB.Z, {
                   selectionMode: "single",
                   label: eE.intl.string(eE.t.xFn72s),
                   placeholder: eE.intl.string(eE.t.R0vK0N),
@@ -422,7 +422,7 @@ let eV = (e) => {
                       id: e.id,
                       value: e.id,
                       label: `${eW.Ay.getUserTag(e)}`,
-                      leading: (0, r.jsx)(eB.A, { user: e, size: eP._3.SIZE_20 }),
+                      leading: (0, r.jsx)(eK.A, { user: e, size: eP._3.SIZE_20 }),
                   })),
               }),
           });
@@ -465,7 +465,7 @@ var eJ = n(871181),
     e7 = n(353791);
 function e8(e) {
     let { handleClose: t, selectedSkuId: n } = e,
-        { analyticsLocations: l } = (0, K.Ay)(m.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
+        { analyticsLocations: l } = (0, B.Ay)(m.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
     return (0, r.jsx)(eI.Q, {
         text: eE.intl.string(eE.t.J82mpK),
         onClick: function () {
@@ -501,7 +501,7 @@ function e5(e) {
 }
 let e9 = (e) => {
         let { hideConfirmStepConfetti: t, confettiCanvas: n } = (0, h.useContext)(e3),
-            { analyticsLocations: l } = (0, K.Ay)();
+            { analyticsLocations: l } = (0, B.Ay)();
         return (0, r.jsx)(eT, { analyticsLocations: l, hideConfetti: t, confettiCanvas: n, ...e });
     },
     e4 = {
@@ -720,7 +720,7 @@ let e9 = (e) => {
                             customConfettiDisplayOptions: C,
                             customConfettiVisible: c,
                         }),
-                        (0, r.jsx)(B.CheckoutRootProvider, {
+                        (0, r.jsx)(K.CheckoutRootProvider, {
                             ...s,
                             skuIDs: _,
                             stepConfigs: s.stepConfigs,
@@ -821,7 +821,7 @@ var ta = n(429913),
     tE = n(208733);
 function tm(e) {
     let { handleClose: t } = e,
-        { analyticsLocations: n } = (0, K.Ay)(),
+        { analyticsLocations: n } = (0, B.Ay)(),
         { selectedSkuId: l, entitlementsGranted: i } = (0, er.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             entitlementsGranted: e.entitlementsGranted,
@@ -1144,7 +1144,7 @@ let ty = {
                     d();
                 }, [d]),
                 p = h.useMemo(() => ({ onClose: C, analyticsObject: u }), [C, u]);
-            return (0, r.jsx)(B.CheckoutRootProvider, {
+            return (0, r.jsx)(K.CheckoutRootProvider, {
                 loadId: l,
                 discoverySessionId: n,
                 applicationId: i,
@@ -1176,9 +1176,9 @@ var tk = n(717925),
     tb = n(211287),
     tH = n(623373),
     tG = n(739508),
-    tK = n(715054);
+    tB = n(715054);
 (0, s.A)();
-var tB = n(136857),
+var tK = n(136857),
     tW = n(158317),
     tV = n(566980),
     tY = n(855104),
@@ -1198,6 +1198,7 @@ var tq =
         (l[(l.SLAYER_STOREFRONT_ORB_REDEMPTION_DISABLED = 1008)] = "SLAYER_STOREFRONT_ORB_REDEMPTION_DISABLED"),
         (l[(l.FRACTIONAL_PREMIUM_SUBSCRIPTION_GROUP_MEMBER = 1009)] = "FRACTIONAL_PREMIUM_SUBSCRIPTION_GROUP_MEMBER"),
         (l[(l.BUNDLE_PARTIALLY_OWNED = 1010)] = "BUNDLE_PARTIALLY_OWNED"),
+        (l[(l.SOCIAL_LAYER_NOT_PURCHASABLE = 1011)] = "SOCIAL_LAYER_NOT_PURCHASABLE"),
         l),
     tQ = n(289873),
     tJ = n(241989),
@@ -1300,7 +1301,7 @@ let ne = (0, h.createContext)({
                                         analyticsSourceLocation: r,
                                         handleStepChange: s,
                                     } = e,
-                                    { analyticsLocations: a } = (0, K.Ay)(),
+                                    { analyticsLocations: a } = (0, B.Ay)(),
                                     {
                                         selectedSkuId: u,
                                         setPurchaseState: c,
@@ -1449,9 +1450,9 @@ let ne = (0, h.createContext)({
                                                     }
                                                 return e instanceof tW.j2
                                                     ? eE.intl.string(eE.t["2BmwgV"])
-                                                    : e.code === tB.tG.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE
+                                                    : e.code === tK.tG.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE
                                                       ? eE.intl.string(eE.t.keFvXM)
-                                                      : e.code === tB.tG.ALREADY_PURCHASED
+                                                      : e.code === tK.tG.ALREADY_PURCHASED
                                                         ? eE.intl.string(eE.t.m371Mx)
                                                         : eE.intl.string(eE.t.fqJZ11);
                                             })(l, d),
@@ -1574,7 +1575,7 @@ let ne = (0, h.createContext)({
                                 redeemVirtualCurrency: d,
                                 isSubmitting: C,
                                 error: p,
-                            } = (0, tK.Q)({ skuId: t, loadId: n, order: r, onSignFailure: i }),
+                            } = (0, tB.Q)({ skuId: t, loadId: n, order: r, onSignFailure: i }),
                             _ = (0, h.useCallback)(
                                 (e) => {
                                     d(t, n, (n) => {
