@@ -17163,7 +17163,7 @@ let pH = (0, a.Tf)(u.X.ACCOUNT_INFO_PHONE_SETTING, {
             ? (0, W.openModalLazy)(
                   async () => {
                       let { default: e } = await Promise.all([
-                          i.e("95788"),
+                          i.e("26243"),
                           i.e("4782"),
                           i.e("89545"),
                           i.e("11493"),
@@ -17814,7 +17814,7 @@ function fP() {
                 (0, W.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            i.e("95788"),
+                            i.e("26243"),
                             i.e("4782"),
                             i.e("89545"),
                             i.e("11493"),
@@ -17967,7 +17967,7 @@ let fZ = (0, a.E2)(u.X.ACCOUNT_STANDING_SETTING, {
     });
 var f0 = i(834981),
     f1 = i(840387),
-    f2 = i(286668),
+    f2 = i(718697),
     f3 = i(602339);
 let f6 = (0, a.E2)(u.X.FAMILY_CENTER_SETTING, {
         Component: f2.p,
@@ -18446,7 +18446,7 @@ function N0(e, t) {
             e ? Sy.default.getNewestTokensForNonChildrenApplications() : Sy.default.getNewestTokens(),
         ),
         s = S.useMemo(
-            () => (null == n ? [] : n.filter((e) => (0, N$.A)(e.application)).map((e) => e.application)),
+            () => (null == n ? [] : n.filter((e) => (0, N$.O)(e.application, e.scopes)).map((e) => e.application)),
             [n],
         );
     return (
