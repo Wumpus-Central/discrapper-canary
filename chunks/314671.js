@@ -311,57 +311,62 @@ function eI(e) {
                 purchaseState: s,
                 paymentSourceId: o,
                 purchaseType: u,
+                premiumDiscountPercent: c,
+                isPremiumDiscountAppliedToCheckoutInvoice: d,
             } = (0, g.t4)((e) => ({
                 selectedSkuId: e.selectedSkuId,
                 purchaseState: e.purchaseState,
                 paymentSourceId: e.paymentSourceId,
                 purchaseType: e.purchaseType,
+                premiumDiscountPercent: e.get("premiumDiscountPercent"),
+                isPremiumDiscountAppliedToCheckoutInvoice: e.get("isPremiumDiscountAppliedToCheckoutInvoice"),
             })),
-            c = (0, ee.bG)([es.A], () => es.A.isDisplayingWowMomentConfirmation),
-            { isPremium: d, isPremiumGroupPurchase: p, isEligibleForTrial: m, isEligibleForDiscount: h } = (0, er.i)(),
-            A = (0, f.A)(),
-            E = (0, N.S3)(),
-            C = (0, Z.bB)(),
-            { checkoutPaymentSources: P, storeCountry: S } = (0, el.t)(),
-            _ = r.useMemo(() => {
+            p = (0, ee.bG)([es.A], () => es.A.isDisplayingWowMomentConfirmation),
+            { isPremium: m, isPremiumGroupPurchase: h, isEligibleForTrial: A, isEligibleForDiscount: E } = (0, er.i)(),
+            C = (0, f.A)(),
+            P = (0, N.S3)(),
+            S = (0, Z.bB)(),
+            { checkoutPaymentSources: _, storeCountry: I } = (0, el.t)(),
+            T = r.useMemo(() => {
                 if (null == o) return null;
-                let e = P.find((e) => e.id === o);
+                let e = _.find((e) => e.id === o);
                 return e?.relocationCountry ?? null;
-            }, [P, o]),
-            { isGift: I, selectedGiftStyle: T, giftRecipient: x } = (0, V.Pv)(),
-            R = (0, en.vg)("PaymentModalHeader"),
-            M = E?.productLine === ep.EZt.COLLECTIBLES,
-            b = E?.productLine === ep.EZt.SOCIAL_LAYER_GAME_ITEM,
-            L = I && (0, W.Ik)(x) && C === U.pn.CONFIRM && null != T && !M && !b,
-            j = null != t && null != C,
-            O = [U.pn.SKU_SELECT, U.pn.SELECT_FREE_SKU],
-            w = null != C && !O.includes(C) && null != a,
-            D = (0, y.D7)({ location: "PaymentModalHeader" }),
-            k = (0, ed.G)(A?.id ?? "") && !m;
+            }, [_, o]),
+            { isGift: x, selectedGiftStyle: R, giftRecipient: M } = (0, V.Pv)(),
+            b = (0, en.vg)("PaymentModalHeader"),
+            L = P?.productLine === ep.EZt.COLLECTIBLES,
+            j = P?.productLine === ep.EZt.SOCIAL_LAYER_GAME_ITEM,
+            O = x && (0, W.Ik)(M) && S === U.pn.CONFIRM && null != R && !L && !j,
+            w = null != t && null != S,
+            D = [U.pn.SKU_SELECT, U.pn.SELECT_FREE_SKU],
+            k = null != S && !D.includes(S) && null != a,
+            G = (0, y.D7)({ location: "PaymentModalHeader" }),
+            F = (0, ed.G)(C?.id ?? "") && !A;
         return r.useMemo(() => {
-            if (null == C) return;
+            if (null == S) return;
             if (
                 (function (e) {
                     let { step: t, isUnifiedCheckoutUIEnabled: n, skipUnifiedHeaderForSteps: l } = e,
                         r = null != l && l.includes(t);
                     return n && ei.M.includes(t) && !r;
-                })({ step: C, isUnifiedCheckoutUIEnabled: D, skipUnifiedHeaderForSteps: i })
+                })({ step: S, isUnifiedCheckoutUIEnabled: G, skipUnifiedHeaderForSteps: i })
             ) {
                 let e = (0, ei.u)({
-                    step: C,
-                    skuId: a ?? (null != E ? E.id : null),
-                    showBetaBadge: p,
-                    showTrialBadge: m,
-                    showPromoBadge: h || k,
-                    storeCountryFromCheckoutContext: S,
-                    isStoreCountryEnabled: R,
-                    relocationCountry: _,
+                    step: S,
+                    skuId: a ?? (null != P ? P.id : null),
+                    showBetaBadge: h,
+                    showTrialBadge: A,
+                    showPromoBadge: E || F,
+                    premiumDiscountPercent: d ? c : null,
+                    storeCountryFromCheckoutContext: I,
+                    isStoreCountryEnabled: b,
+                    relocationCountry: T,
                 });
                 return (0, l.jsx)(v.s3, { ...e });
             }
             let e = null;
             return (
-                L
+                O
                     ? (e = (0, l.jsxs)("div", {
                           className: eA.kL,
                           children: [
@@ -370,36 +375,36 @@ function eI(e) {
                                   style: { display: "contents" },
                                   children: (0, l.jsx)(eo.A, {
                                       defaultAnimationState: ea.oA.LOOP,
-                                      giftStyle: T,
+                                      giftStyle: R,
                                       className: eA.qq,
                                   }),
                               }),
                               (0, l.jsx)(et.s_, { onClick: n, className: eA.b, "data-migration-pending": !0 }),
                           ],
                       }))
-                    : j
-                      ? (e = t(A ?? null, n, C))
+                    : w
+                      ? (e = t(C ?? null, n, S))
                       : u === eh.VV.ONE_TIME
-                        ? (e = (0, l.jsx)(ec.fs, { step: C, onClose: n }))
-                        : w &&
+                        ? (e = (0, l.jsx)(ec.fs, { step: S, onClose: n }))
+                        : k &&
                           (Q()(a in em.WN, `invalid sku id: ${a}`),
                           (e = (0, l.jsx)(eu.A, {
-                              currentStep: C ?? void 0,
+                              currentStep: S ?? void 0,
                               purchaseState: s,
                               premiumType: em.WN[a],
                               onClose: n,
-                              showTrialBadge: m,
-                              showDiscountBadge: h,
-                              isGift: I,
-                              giftRecipient: x,
-                              isEligibleForTrial: m,
-                              enablePremiumBrandRefresh: d,
-                              isDisplayingWowMomentConfirmation: c,
-                              isPremiumGroupPurchase: p,
+                              showTrialBadge: A,
+                              showDiscountBadge: E,
+                              isGift: x,
+                              giftRecipient: M,
+                              isEligibleForTrial: A,
+                              enablePremiumBrandRefresh: m,
+                              isDisplayingWowMomentConfirmation: p,
+                              isPremiumGroupPurchase: h,
                           }))),
                 e
             );
-        }, [D, i, R, S, _, T, n, s, t, A, E, a, C, m, h, k, L, w, j, u, I, x, d, c, p]);
+        }, [G, i, b, I, T, R, n, s, t, C, P, a, S, A, E, c, d, F, O, k, w, u, x, M, m, p, h]);
     })({ renderHeader: ex, handleClose: tI, skipUnifiedHeaderForSteps: eR });
     return (0, l.jsx)(C.e0, {
         children: (0, l.jsx)(s.b, {

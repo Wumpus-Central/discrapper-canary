@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { y$: () => A, t4: () => g, Ni: () => E });
+n.d(t, { y$: () => I, t4: () => A, Ni: () => m });
 var i = n(942381),
     r = n(265690),
     s = n(315069),
@@ -69,36 +69,47 @@ class l extends s.A {
 }
 var u = n(566980),
     c = n(410516),
-    d = n(786300),
-    _ = n(428262),
-    h = n(788868);
-let f = (e) =>
+    d = n(815545),
+    _ = n(786300),
+    h = n(428262),
+    f = n(788868);
+let p = (e) =>
     null == e
         ? { isPremiumPurchase: !0, isPremiumGroupPurchase: !1 }
-        : { isPremiumPurchase: (0, _.ys)(e), isPremiumGroupPurchase: e === h.gD.PREMIUM_GROUP_MONTH };
-var p = n(504275);
-let [E, m] = (0, d.A)();
-function g(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return m()(e, t);
-}
+        : { isPremiumPurchase: (0, h.ys)(e), isPremiumGroupPurchase: e === f.gD.PREMIUM_GROUP_MONTH };
+var E = n(504275);
+let [m, g] = (0, _.A)();
 function A(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
+    return g()(e, t);
+}
+function I(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
         contextMetadata: s,
         order: a,
         initialPaymentSourceId: o,
-        initialCurrency: d,
+        initialCurrency: _,
     } = e;
     return (0, r.h)((e, i) => {
         let r = {
-            isPremiumPurchase: () => f(i().selectedPlanId).isPremiumPurchase,
-            isPremiumGroupPurchase: () => f(i().selectedPlanId).isPremiumGroupPurchase,
-            selectedPlanAttributes: () => f(i().selectedPlanId),
+            isPremiumPurchase: () => p(i().selectedPlanId).isPremiumPurchase,
+            isPremiumGroupPurchase: () => p(i().selectedPlanId).isPremiumGroupPurchase,
+            selectedPlanAttributes: () => p(i().selectedPlanId),
+            premiumDiscountOffer: () => i().premiumDiscountInfo.discountOffer ?? null,
+            premiumDiscountPercent: () => {
+                let e = i().premiumDiscountInfo.discountOffer;
+                return null != e ? e.discount.amount : null;
+            },
+            isPremiumDiscountAppliedToCheckoutInvoice: () => {
+                let { discountOffer: e } = i().premiumDiscountInfo,
+                    t = i().checkoutInvoicePreview;
+                return null != e && null != e.discount && null != t && (0, d.Ro)(t, e.discount.id);
+            },
         };
         return {
-            ...(0, p.p)(e, i, t),
+            ...(0, E.p)(e, i, t),
             ...{
                 startedPaymentFlowWithPaymentSources: n.startedPaymentFlowWithPaymentSources,
                 startingPremiumSubscriptionPlanId: n.startingPremiumSubscriptionPlanId,
@@ -138,7 +149,7 @@ function A(e) {
             setHasAcceptedTerms: (t) => e({ hasAcceptedTerms: t }),
             paymentSourceId: o,
             setPaymentSourceId: (t) => e({ paymentSourceId: t ?? null }),
-            checkoutPriceOptions: { paymentSourceId: o ?? void 0, currency: d, loaded: !1 },
+            checkoutPriceOptions: { paymentSourceId: o ?? void 0, currency: _, loaded: !1 },
             setCheckoutPriceOptions: (t) => e((e) => ({ checkoutPriceOptions: { ...e.checkoutPriceOptions, ...t } })),
             setCheckoutCurrency: (t) =>
                 e((e) => ({ checkoutPriceOptions: { ...e.checkoutPriceOptions, currency: t } })),

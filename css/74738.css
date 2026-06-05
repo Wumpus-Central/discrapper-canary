@@ -415,9 +415,17 @@
     text-decoration: line-through
 }
 
+.inlineStrikethroughPrice_da8ac7 {
+    text-decoration: line-through
+}
+
+.inlineStrikethroughPrice_da8ac7,
 .originalPrice_da8ac7 {
     -webkit-text-decoration-skip-ink: none;
-    text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none
+}
+
+.originalPrice_da8ac7 {
     white-space: nowrap
 }
 

@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     kL: "container_da8ac7",
     Qs: "content_da8ac7",
     dx: "bottomSubText_da8ac7",
@@ -10,6 +10,7 @@ e.exports = {
     p6: "priceContainer_da8ac7",
     nw: "currentPrice_da8ac7",
     Nc: "strikethroughPrice_da8ac7",
+    EF: "inlineStrikethroughPrice_da8ac7",
     Jb: "originalPrice_da8ac7",
     H9: "iconDefaultBackground_da8ac7",
     Kk: "icon_da8ac7",
