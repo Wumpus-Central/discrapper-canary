@@ -1,53 +1,55 @@
-n.d(t, { X: () => f, s: () => d });
+n.d(t, { X: () => m, s: () => d });
 var l = n(64700),
     r = n(17928),
-    u = n(157559),
-    i = n(97352),
-    a = n(469778),
-    o = n(927578),
-    s = n(818348),
-    c = n(985018);
+    i = n(157559),
+    a = n(97352),
+    s = n(469778),
+    o = n(428262),
+    u = n(818348),
+    c = n(375708);
 function d(e, t, n) {
-    let r = { closeModal: t, isGift: n },
-        i = l.useRef(r);
+    let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
+        a = { closeModal: t, isGift: n },
+        s = l.useRef(a);
     l.useEffect(() => {
-        i.current = r;
+        s.current = a;
     }),
         l.useEffect(() => {
-            let { closeModal: t, isGift: n } = i.current;
+            if (!r) return;
+            let { closeModal: t, isGift: n } = s.current;
             null != e &&
                 e.isPurchasedExternally &&
                 null != e.paymentGateway &&
                 !n &&
-                (u.A.show({
-                    title: c.intl.formatToPlainString(c.t["6mIX6s"], { paymentGatewayName: s.qm[e.paymentGateway] }),
+                (i.A.show({
+                    title: c.intl.formatToPlainString(c.t["6mIX6s"], { paymentGatewayName: u.qm[e.paymentGateway] }),
                     body: c.intl.format(c.t.EOa8ei, {
-                        paymentGatewayName: s.qm[e.paymentGateway],
+                        paymentGatewayName: u.qm[e.paymentGateway],
                         subscriptionManagementLink: (0, o.tW)(e.paymentGateway, "SUBSCRIPTION_MANAGEMENT"),
                     }),
                     confirmText: c.intl.string(c.t.BddRzS),
                 }),
                 t());
-        }, [e]);
+        }, [e, r]);
 }
-let A = [];
-function f(e, t) {
-    let n = (0, r.bG)([i.A], () => (null != e ? i.A.get(e) : null)),
-        u = (0, r.yK)([a.A], () => {
-            let e = null != n ? a.A.getForSku(n.skuId) : null;
-            return null != e ? Array.from(e) : A;
+let p = [];
+function m(e, t) {
+    let n = (0, r.bG)([a.A], () => (null != e ? a.A.get(e) : null)),
+        i = (0, r.yK)([s.A], () => {
+            let e = null != n ? s.A.getForSku(n.skuId) : null;
+            return null != e ? Array.from(e) : p;
         }),
-        s = l.useMemo(
+        u = l.useMemo(
             () =>
-                u.filter((e) => {
+                i.filter((e) => {
                     let { parentId: t, consumed: n } = e;
                     return null != t && !n;
                 }),
-            [u],
+            [i],
         );
     return {
         hasEntitlements:
-            !t && null != n && null != s && s.length >= o.Ay.getIntervalMonths(n.interval, n.intervalCount),
-        entitlements: s,
+            !t && null != n && null != u && u.length >= o.Ay.getIntervalMonths(n.interval, n.intervalCount),
+        entitlements: u,
     };
 }

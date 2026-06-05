@@ -719,8 +719,8 @@ let e1 =
         "https://cdn.discordapp.com/assets/content/ad2a252a6866e1ecb3bab521e2baaabbf13ab2d1ecaa8af67862c53c91f76761.png",
     e2 = { [eM.qH.THUMBNAIL]: null, [eM.qH.STATIC]: null, [eM.qH.REDUCED_MOTION]: null },
     e8 = "debug",
-    e6 = "reduced-motion-preview-modal",
-    e3 = (e) => {
+    e3 = "reduced-motion-preview-modal",
+    e6 = (e) => {
         let { transitionState: t, onClose: a, frameSrc: l, theme: n } = e;
         return (0, r.jsx)(eU.d, {
             transitionState: t,
@@ -786,14 +786,14 @@ let e1 =
                     ? (0, r.jsx)(F.D, {
                           className: G()(eZ.zd, eZ.eB),
                           onClick: () => {
-                              (0, e$.hasModalOpen)(e6)
-                                  ? (0, e$.closeModal)(e6)
+                              (0, e$.hasModalOpen)(e3)
+                                  ? (0, e$.closeModal)(e3)
                                   : (0, e$.openModalLazy)(
                                         () =>
                                             Promise.resolve((e) =>
-                                                (0, r.jsx)(e3, { ...e, frameSrc: a?.src ?? null, theme: l }),
+                                                (0, r.jsx)(e6, { ...e, frameSrc: a?.src ?? null, theme: l }),
                                             ),
-                                        { modalKey: e6, onCloseRequest: () => (0, e$.closeModal)(e6) },
+                                        { modalKey: e3, onCloseRequest: () => (0, e$.closeModal)(e3) },
                                     );
                           },
                           children: o,
@@ -2137,8 +2137,8 @@ function t2() {
     });
 }
 var t8 = a(576470),
-    t6 = a(693879);
-function t3() {
+    t3 = a(693879);
+function t6() {
     let e = (0, z.bG)([tY.A], () => tY.A.getFeed(tZ.X1.GLOBAL_FEED)?.refresh_stale_inbox_after_ms != null),
         { loading: t, nextFetchDate: a } = (0, z.cf)(
             [tY.A],
@@ -2161,7 +2161,7 @@ function t3() {
                 children: [
                     "Last fetch:",
                     " ",
-                    null != l ? (0, r.jsx)(t6.z, { inline: !0, entry: { start: l.getTime() } }) : "(never)",
+                    null != l ? (0, r.jsx)(t3.z, { inline: !0, entry: { start: l.getTime() } }) : "(never)",
                 ],
             }),
         ],
@@ -2247,7 +2247,7 @@ function t7() {
                     children: [
                         (0, r.jsx)(h.E, { variant: "text-md/semibold", children: "Inventory" }),
                         s.length > 0 && (0, r.jsx)(t$, { columns: t9, data: s }),
-                        (0, r.jsx)(t3, {}),
+                        (0, r.jsx)(t6, {}),
                         (0, r.jsx)(m.$, {
                             variant: "primary",
                             text: "Refresh Now",
@@ -3071,8 +3071,8 @@ var aQ = a(824552),
     a1 = a(487431),
     a2 = a(546183),
     a8 = a(134861),
-    a6 = a(71393),
-    a3 = a(967198),
+    a3 = a(71393),
+    a6 = a(967198),
     a5 = a(942370),
     a9 = a(375708),
     a4 = a(311350),
@@ -3084,8 +3084,8 @@ function le() {
         l = o.useRef(null),
         { analyticsLocations: n } = (0, aX.Ay)(t_.A.DEV_TOOLS),
         [s, i] = o.useState(""),
-        d = (0, z.bG)([a3.A], () => a3.A.getGuildId()),
-        c = (0, z.bG)([a6.A], () => a6.A.getGuild(d)),
+        d = (0, z.bG)([a6.A], () => a6.A.getGuildId()),
+        c = (0, z.bG)([a3.A], () => a3.A.getGuild(d)),
         u = c?.gameApplicationIds ?? [],
         x = (0, tG.A)(u).filter((e) => null != e),
         p = (0, z.bG)([f.Ay, E.A], () => (0, y.A)(f.Ay, E.A)),
@@ -4056,13 +4056,13 @@ function l0() {
 var l1 = a(636537),
     l2 = a(153488),
     l8 = a(927813);
-let l6 = 12 * l8.A.Millis.HOUR,
-    l3 = new Map(),
+let l3 = 12 * l8.A.Millis.HOUR,
+    l6 = new Map(),
     l5 = !1,
     l9 = Object.freeze({ channelAffinities: [], lastFetched: 0 }),
     l4 = { ...l9 };
 function l7() {
-    l3 = new Map(l4.channelAffinities.map((e) => [e.channelId, e]));
+    l6 = new Map(l4.channelAffinities.map((e) => [e.channelId, e]));
 }
 class ne extends z.Ay.PersistedStore {
     static displayName = "ChannelAffinitiesV2Store";
@@ -4071,7 +4071,7 @@ class ne extends z.Ay.PersistedStore {
         null != e && ((l4.channelAffinities = e.channelAffinities), (l4.lastFetched = e.lastFetched), l7());
     }
     shouldFetch() {
-        if (!l5) return Date.now() - l4.lastFetched > l6;
+        if (!l5) return Date.now() - l4.lastFetched > l3;
     }
     isFetching() {
         return l5;
@@ -4080,13 +4080,13 @@ class ne extends z.Ay.PersistedStore {
         return l4.channelAffinities;
     }
     getChannelAffinitiesMap() {
-        return l3;
+        return l6;
     }
     getChannelAffinity(e) {
-        return l3.get(e);
+        return l6.get(e);
     }
     compare(e, t) {
-        return (l3.get(t)?.score ?? 0) - (l3.get(e)?.score ?? 0);
+        return (l6.get(t)?.score ?? 0) - (l6.get(e)?.score ?? 0);
     }
     getState() {
         return l4;
@@ -4104,7 +4104,7 @@ let nt = new ne(tP.h, {
         l5 = !1;
     },
     LOGOUT: function () {
-        (l4 = { ...l9 }), (l3 = new Map()), (l5 = !1);
+        (l4 = { ...l9 }), (l6 = new Map()), (l5 = !1);
     },
 });
 var na = a(907360);
@@ -4796,12 +4796,12 @@ let n8 = [
         },
     },
 ];
-function n6(e) {
+function n3(e) {
     let { actionLog: t } = e,
         a = o.useMemo(() => t.traces.map((e) => ({ key: e.name, trace: e })), [t]);
     return (0, r.jsx)(x.Ip, { children: (0, r.jsx)(t$, { columns: n8, data: a }) });
 }
-let n3 = [
+let n6 = [
     {
         id: "action",
         name: "Action",
@@ -4836,7 +4836,7 @@ let n3 = [
         group: aJ.fu.NONE,
         render(e) {
             let { actionLog: t } = e;
-            return (0, r.jsx)(n6, { actionLog: t });
+            return (0, r.jsx)(n3, { actionLog: t });
         },
     },
 ];
@@ -4846,7 +4846,7 @@ function n5(e) {
             () =>
                 t.error
                     ? [
-                          ...n3,
+                          ...n6,
                           {
                               id: "error",
                               name: (0, r.jsxs)(r.Fragment, {
@@ -4878,7 +4878,7 @@ function n5(e) {
                               },
                           },
                       ]
-                    : n3,
+                    : n6,
             [t],
         ),
         { TabBar: n, renderSelectedTab: s } = (0, aJ.Ay)({ tabs: l }, [l]);
@@ -5501,8 +5501,8 @@ var sN = a(390544),
     sk = a(522055),
     sI = a(661202);
 function sD() {
-    let e = (0, z.bG)([a3.A], () => a3.A.getGuildId()),
-        t = (0, z.bG)([a6.A], () => a6.A.getGuild(e)?.name),
+    let e = (0, z.bG)([a6.A], () => a6.A.getGuildId()),
+        t = (0, z.bG)([a3.A], () => a3.A.getGuild(e)?.name),
         a = (0, z.bG)([sk.A], () => sk.A.getStateForGuild(e)?.instances),
         l = o.useMemo(() => Object.values(a ?? {})[0], [a]),
         n = o.useCallback(
@@ -5624,8 +5624,8 @@ var sw = a(950305),
     s1 = a(562708),
     s2 = a(830215),
     s8 = a(381689),
-    s6 = a(889227),
-    s3 = a(499785),
+    s3 = a(889227),
+    s6 = a(499785),
     s5 = a(315069);
 class s9 extends s5.A {
     id;
@@ -5644,7 +5644,7 @@ class s9 extends s5.A {
 }
 let s4 = { pools: null, users: null };
 function s7(e) {
-    null == s4.users && (s4.users = new Map()), s4.users.set(e.id, new s6.A(e));
+    null == s4.users && (s4.users = new Map()), s4.users.set(e.id, new s3.A(e));
 }
 class ie extends z.Ay.PersistedStore {
     static displayName = "GeneratedTestUsersStore";
@@ -5691,7 +5691,7 @@ let it = new ie(tP.h, {
 });
 var ia = a(835002);
 async function il(e, t) {
-    return await s3.A.get({
+    return await s6.A.get({
         url: ei.Rsh.GENERATED_POOL_BY_ID(e),
         trackedActionData: { event: s1.NetworkActionNames.USER_LOGIN },
         rejectWithError: !1,
@@ -5703,7 +5703,7 @@ async function il(e, t) {
             tP.h.dispatch({
                 type: "GENERATED_POOL_BY_ID_FETCH_SUCCESS",
                 pool: s9.fromServer(n).setPassword(t),
-                users: s.map((e) => new s6.A(e)),
+                users: s.map((e) => new s3.A(e)),
             });
         })
         .catch(() => (s8.A.showFailedToast(ia.OB.GENERIC_ERROR), null));
@@ -7056,8 +7056,8 @@ var i0 = a(820739),
     i1 = a(230135),
     i2 = a(45780),
     i8 = a(868652),
-    i6 = a(859241);
-let i3 = [
+    i3 = a(859241);
+let i6 = [
         ad.M.GUILD_POWERUP_PERKS_COACHMARK,
         ad.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK,
         ad.M.GUILD_POWERUP_NOTIFICATION,
@@ -7109,10 +7109,10 @@ async function ra(e) {
     await l1.Bo.post({ url: ei.Rsh.SEND_POWERUPS_SYSTEM_MESSAGE(e), rejectWithError: !0 });
 }
 function rl() {
-    let e = (0, z.bG)([a3.A], () => a3.A.getGuildId()),
-        t = (0, z.bG)([a6.A], () => a6.A.getGuild(e)?.name),
+    let e = (0, z.bG)([a6.A], () => a6.A.getGuildId()),
+        t = (0, z.bG)([a3.A], () => a3.A.getGuild(e)?.name),
         a = (0, z.yK)([au.A], () => [...i5, ...i9].filter((t) => null != e && (0, i2.zs)(t, e))),
-        l = (0, z.yK)([i6.A], () => (null != e ? (i6.A.getAppliedGuildBoostsForGuild(e) ?? []) : []));
+        l = (0, z.yK)([i3.A], () => (null != e ? (i3.A.getAppliedGuildBoostsForGuild(e) ?? []) : []));
     if (null != e)
         return (0, r.jsxs)(x.Ip, {
             className: re.kL,
@@ -7175,7 +7175,7 @@ function rl() {
                         (0, r.jsx)(h.E, { variant: "eyebrow", className: re.wx, children: "Reset User Level DCs" }),
                         (0, r.jsx)($.B, {
                             gap: 16,
-                            children: i3.map((e) => (0, r.jsx)(n_, { className: re.z6, content: ad.M[e] }, ad.M[e])),
+                            children: i6.map((e) => (0, r.jsx)(n_, { className: re.z6, content: ad.M[e] }, ad.M[e])),
                         }),
                     ],
                 }),
@@ -7835,30 +7835,29 @@ let rk = {
             let { default: e } = await Promise.all([a.e("9004"), a.e("19690"), a.e("22941"), a.e("10758")]).then(
                     a.bind(a, 455557),
                 ),
-                t = Object.values(a6.A.getGuilds())[0];
+                t = Object.values(a3.A.getGuilds())[0];
             return null == t ? () => null : (a) => (0, r.jsx)(e, { ...a, guild: t });
         },
         GuildContextMenu: async () => {
             let { default: e } = await Promise.all([
                     a.e("72899"),
                     a.e("66641"),
-                    a.e("71254"),
-                    a.e("98495"),
-                    a.e("16086"),
-                    a.e("19185"),
+                    a.e("8886"),
+                    a.e("28306"),
+                    a.e("30140"),
+                    a.e("53575"),
+                    a.e("10889"),
+                    a.e("2537"),
                     a.e("56961"),
-                    a.e("50862"),
-                    a.e("83671"),
-                    a.e("63980"),
-                    a.e("9546"),
-                    a.e("47199"),
-                    a.e("29169"),
+                    a.e("71906"),
+                    a.e("16081"),
                     a.e("45970"),
                     a.e("25870"),
-                    a.e("32490"),
                     a.e("56574"),
+                    a.e("59811"),
                     a.e("16404"),
                     a.e("4974"),
+                    a.e("74539"),
                     a.e("80186"),
                     a.e("91402"),
                     a.e("49681"),
@@ -7952,7 +7951,7 @@ let rk = {
                     a.e("32607"),
                     a.e("65011"),
                 ]).then(a.bind(a, 860417)),
-                t = Object.values(a6.A.getGuilds())[0];
+                t = Object.values(a3.A.getGuilds())[0];
             return null == t ? () => null : (a) => (0, r.jsx)(e, { ...a, guild: t });
         },
         GuildFolderContextMenu: async () => {
@@ -7964,7 +7963,7 @@ let rk = {
             return (t) => (0, r.jsx)(e, { ...t, id: "123456789", label: "Copy Test ID" });
         },
         UserSettingsMenu: async () => {
-            let { default: e } = await Promise.all([a.e("29169"), a.e("26132"), a.e("44491")]).then(a.bind(a, 907206));
+            let { default: e } = await Promise.all([a.e("16081"), a.e("26132"), a.e("44491")]).then(a.bind(a, 907206));
             return (t) => (0, r.jsx)(e, { ...t, onClose: rN.Z_ });
         },
         ExpressionPickerContextMenu: async () => {
@@ -8005,12 +8004,12 @@ let rk = {
         },
         AddQuestionsContextMenu: async () => {
             let { AddQuestionsContextMenu: e } = await Promise.all([
-                    a.e("32490"),
-                    a.e("98495"),
+                    a.e("74539"),
+                    a.e("28306"),
                     a.e("11810"),
                     a.e("14656"),
                 ]).then(a.bind(a, 892921)),
-                t = Object.values(a6.A.getGuilds())[0];
+                t = Object.values(a3.A.getGuilds())[0];
             return null == t
                 ? () => null
                 : (a) =>
@@ -8037,7 +8036,7 @@ let rk = {
                     a.e("51212"),
                     a.e("84615"),
                 ]).then(a.bind(a, 612826)),
-                t = a6.A.getGuilds(),
+                t = a3.A.getGuilds(),
                 l = null;
             for (let e of Object.values(t)) {
                 for (let t of Object.values(ay.A.getMutableGuildChannelsForGuild(e.id))) {
@@ -8055,14 +8054,14 @@ let rk = {
         },
         MembersTableSortContextMenu: async () => {
             let { default: e } = await a.e("73091").then(a.bind(a, 779662)),
-                t = Object.values(a6.A.getGuilds())[0];
+                t = Object.values(a3.A.getGuilds())[0];
             return null == t ? () => null : () => (0, r.jsx)(e, { guildId: t.id, onClose: rN.Z_ });
         },
         MembersTableJoinTypeContextMenu: async () => {
             let { default: e } = await Promise.all([a.e("4974"), a.e("71719"), a.e("14878"), a.e("66016")]).then(
                     a.bind(a, 316173),
                 ),
-                t = Object.values(a6.A.getGuilds())[0];
+                t = Object.values(a3.A.getGuilds())[0];
             return null == t ? () => null : () => (0, r.jsx)(e, { guildId: t.id, onClose: rN.Z_ });
         },
     },
@@ -8381,7 +8380,7 @@ let r8 = {
             a.e("70686"),
             a.e("25226"),
             a.e("59405"),
-            a.e("19580"),
+            a.e("97199"),
             a.e("97804"),
             a.e("56856"),
             a.e("82758"),
@@ -8445,7 +8444,7 @@ let r8 = {
         return (a) => (0, r.jsx)(e, { ...a, clientSettingType: t.LEGACY_GAME, gameId: "123456789" });
     },
     PremiumSubscriptionPauseModal: async () => {
-        let { PremiumSubscriptionPauseModalSelect: e } = await Promise.all([a.e("62325"), a.e("80347")]).then(
+        let { PremiumSubscriptionPauseModalSelect: e } = await Promise.all([a.e("32061"), a.e("80347")]).then(
                 a.bind(a, 318998),
             ),
             { CancellationContext: t } = await Promise.resolve().then(a.bind(a, 916974)),
@@ -8938,11 +8937,11 @@ let r8 = {
         return (t) => (0, r.jsx)(e, { ...t, guildId: "123456789012345678", startingChannelId: "987654321098765432" });
     },
     CameraPreviewModal: async () => {
-        let { default: e } = await Promise.all([a.e("66759"), a.e("10534")]).then(a.bind(a, 308229));
+        let { default: e } = await Promise.all([a.e("28306"), a.e("10534")]).then(a.bind(a, 308229));
         return (t) => (0, r.jsx)(e, { ...t, videoEnabled: !1, onEnable: () => console.log("Camera enabled") });
     },
     CameraPreviewModalWithVideo: async () => {
-        let { default: e } = await Promise.all([a.e("66759"), a.e("10534")]).then(a.bind(a, 308229));
+        let { default: e } = await Promise.all([a.e("28306"), a.e("10534")]).then(a.bind(a, 308229));
         return (t) => (0, r.jsx)(e, { ...t, videoEnabled: !0, onEnable: () => console.log("Camera enabled") });
     },
     ModeratorReportResolveConfirmModal: async () => {
@@ -8981,7 +8980,7 @@ let r8 = {
     },
     AddFavoriteChannelModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("46776"),
+            a.e("27196"),
             a.e("94494"),
             a.e("36946"),
             a.e("92639"),
@@ -8993,8 +8992,7 @@ let r8 = {
     },
     ActivityShareMomentModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("46776"),
-            a.e("2871"),
+            a.e("27196"),
             a.e("22230"),
             a.e("36946"),
             a.e("92639"),
@@ -9100,7 +9098,7 @@ let r8 = {
         return (s.displayName = "ConsentCheckBoxModalContent"), (e) => (0, r.jsx)(s, { ...e });
     },
     GuildRaidLockdownFeedbackModal: async () => {
-        let { default: e } = await Promise.all([a.e("32490"), a.e("46313")]).then(a.bind(a, 336496));
+        let { default: e } = await Promise.all([a.e("59811"), a.e("46313")]).then(a.bind(a, 336496));
         return (t) =>
             (0, r.jsx)(e, {
                 ...t,
@@ -9221,9 +9219,7 @@ let r8 = {
     },
     VoiceCallFeedback: async () => {
         let { default: e } = await Promise.all([
-                a.e("29169"),
-                a.e("24627"),
-                a.e("67829"),
+                a.e("33111"),
                 a.e("22255"),
                 a.e("55925"),
                 a.e("37381"),
@@ -9247,9 +9243,7 @@ let r8 = {
     },
     StreamFeedback: async () => {
         let { default: e } = await Promise.all([
-                a.e("29169"),
-                a.e("24627"),
-                a.e("67829"),
+                a.e("33111"),
                 a.e("22255"),
                 a.e("55925"),
                 a.e("37381"),
@@ -9356,7 +9350,7 @@ let r8 = {
     },
     DmSettingsUpsellModal: async () => {
         let { default: e } = await Promise.all([a.e("26065"), a.e("62684")]).then(a.bind(a, 228855)),
-            t = Object.keys(a6.A.getGuilds())[0];
+            t = Object.keys(a3.A.getGuilds())[0];
         return (a) => (0, r.jsx)(e, { ...a, guildId: t });
     },
     UrgentMessageModal: async () => {
@@ -9369,19 +9363,19 @@ let r8 = {
     },
     DisableRiskyPermsModal: async () => {
         let { default: e } = await Promise.all([a.e("59066"), a.e("52823"), a.e("71905")]).then(a.bind(a, 868952)),
-            t = Object.values(a6.A.getGuilds())[0];
+            t = Object.values(a3.A.getGuilds())[0];
         return null == t ? () => null : (a) => (0, r.jsx)(e, { ...a, guild: t });
     },
     OtherFriendRequestsModal: async () => {
-        let { default: e } = await Promise.all([a.e("48757"), a.e("27917"), a.e("73152"), a.e("25281")]).then(
+        let { default: e } = await Promise.all([a.e("44951"), a.e("27917"), a.e("73152"), a.e("25281")]).then(
             a.bind(a, 516259),
         );
         return (t) => (0, r.jsx)(e, { ...t });
     },
     AcceptInviteModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("78496"),
-            a.e("48745"),
+            a.e("44951"),
+            a.e("74275"),
             a.e("91643"),
             a.e("74337"),
             a.e("7265"),
@@ -9404,7 +9398,7 @@ let r8 = {
             a.e("25226"),
             a.e("7850"),
             a.e("16138"),
-            a.e("19580"),
+            a.e("97199"),
             a.e("97804"),
             a.e("56856"),
             a.e("82721"),
@@ -9416,7 +9410,7 @@ let r8 = {
         return (t) => (0, r.jsx)(e, { ...t });
     },
 };
-function r6() {
+function r3() {
     let e = o.useMemo(
             () =>
                 Object.keys(r8)
@@ -9474,7 +9468,7 @@ function r6() {
         }),
     });
 }
-var r3 = a(933832),
+var r6 = a(933832),
     r5 = a(472229),
     r9 = a(945960),
     r4 = a(669316),
@@ -9603,7 +9597,7 @@ function or(e) {
                     children: [
                         (0, r.jsxs)(h.E, { variant: "eyebrow", color: "always-white", children: ["Offer: ", p] }),
                         n
-                            ? (0, r.jsx)(r3.A, { size: "md", color: "currentColor", className: sy.Kk })
+                            ? (0, r.jsx)(r6.A, { size: "md", color: "currentColor", className: sy.Kk })
                             : (0, r.jsx)(lm.T, { size: "xs", color: "currentColor", className: sy.Kk }),
                     ],
                 }),
@@ -9615,7 +9609,7 @@ function or(e) {
                     children: [
                         (0, r.jsxs)(h.E, { variant: "eyebrow", color: "always-white", children: ["Trial: ", j] }),
                         i
-                            ? (0, r.jsx)(r3.A, { size: "md", color: "currentColor", className: sy.Kk })
+                            ? (0, r.jsx)(r6.A, { size: "md", color: "currentColor", className: sy.Kk })
                             : (0, r.jsx)(lm.T, { size: "xs", color: "currentColor", className: sy.Kk }),
                     ],
                 }),
@@ -9774,7 +9768,7 @@ function oo(e) {
                     children: [
                         (0, r.jsxs)(h.E, { variant: "eyebrow", color: "text-default", children: ["Offer: ", p] }),
                         n
-                            ? (0, r.jsx)(r3.A, { size: "md", color: "currentColor", className: G()(sy.Kk, sy.mK) })
+                            ? (0, r.jsx)(r6.A, { size: "md", color: "currentColor", className: G()(sy.Kk, sy.mK) })
                             : (0, r.jsx)(lm.T, { size: "xs", color: "currentColor", className: sy.Kk }),
                     ],
                 }),
@@ -9786,7 +9780,7 @@ function oo(e) {
                     children: [
                         (0, r.jsxs)(h.E, { variant: "eyebrow", color: "text-default", children: ["Discount: ", v] }),
                         i
-                            ? (0, r.jsx)(r3.A, { size: "md", color: "currentColor", className: G()(sy.Kk, sy.mK) })
+                            ? (0, r.jsx)(r6.A, { size: "md", color: "currentColor", className: G()(sy.Kk, sy.mK) })
                             : (0, r.jsx)(lm.T, { size: "xs", color: "currentColor", className: sy.Kk }),
                     ],
                 }),
@@ -10842,7 +10836,7 @@ let o1 = o.memo(function (e) {
             ],
         });
     }),
-    o6 = [
+    o3 = [
         {
             mode: oI.x7.ClickZones,
             label: "Click Zone Debug Mode",
@@ -10880,7 +10874,7 @@ let o1 = o.memo(function (e) {
             tooltip: "Enables legacy overlay logging, which will forward all legacy logging to the main apps console.",
         },
     ],
-    o3 = o.memo(function () {
+    o6 = o.memo(function () {
         let [e, t] = oQ(ei.uss.CLICK_ZONE_DEBUG),
             [a, l] = oQ(ei.uss.PERFORMANCE_DEBUG),
             n = (0, z.bG)([oM.A], () => oM.A.getRenderDebugModes()),
@@ -10894,7 +10888,7 @@ let o1 = o.memo(function (e) {
             }, []),
             (0, r.jsx)("div", {
                 className: oz.st,
-                children: o6.map((s) => {
+                children: o3.map((s) => {
                     let i =
                             s.mode === oI.x7.OverlayRafManagerForceEnabled
                                 ? `${s.label} (${oL.A.getLastRAFCallbackReason()})`
@@ -11408,7 +11402,7 @@ function dd() {
                                         children: T ? "Copied" : "Copy All",
                                     }),
                                     T
-                                        ? (0, r.jsx)(r3.A, { size: "sm", color: eV.A.unsafe_rawColors.GREEN_330.css })
+                                        ? (0, r.jsx)(r6.A, { size: "sm", color: eV.A.unsafe_rawColors.GREEN_330.css })
                                         : (0, r.jsx)(lm.T, { color: "currentColor", size: "sm" }),
                                 ],
                             }),
@@ -11533,7 +11527,7 @@ function dm() {
         children: (0, r.jsxs)("div", {
             className: G()(tB.nd, oz.rf),
             children: [
-                (0, r.jsx)(o3, {}),
+                (0, r.jsx)(o6, {}),
                 (0, r.jsx)(o9, {}),
                 (0, r.jsx)(o5, {}),
                 (0, r.jsx)(o8, {}),
@@ -11701,7 +11695,7 @@ function dw(e) {
 let dM = function () {
     let [e, t] = o.useState(sx.pe.TIER_2),
         [a, l] = o.useState(null),
-        n = (0, z.yK)([a6.A], () => a6.A.getGuildsArray()),
+        n = (0, z.yK)([a3.A], () => a3.A.getGuildsArray()),
         [s] = (0, z.yK)([rZ.A], () => [rZ.A.getPremiumSubscription()]),
         i = n.map((e) => ({ id: e.id, value: e, label: e.name })),
         [c, u] = o.useState(i.length > 0 ? i[0].value : null),
@@ -13038,7 +13032,7 @@ function dX() {
                         variant: "text-lg/bold",
                         children: "Experiment Overrides",
                     }),
-                    (0, r.jsx)(d3, {}),
+                    (0, r.jsx)(d6, {}),
                     (0, r.jsx)(h.E, {
                         style: { marginTop: "24px", marginBottom: "16px" },
                         variant: "text-lg/bold",
@@ -13075,7 +13069,7 @@ let dZ = [
         { id: "0", value: "0", label: "Control (0) \u2014 Orb redemption via legacy" },
         { id: "1", value: "1", label: "Treatment (1) \u2014 Orb redemption via orders" },
     ];
-function d6(e) {
+function d3(e) {
     let { experimentName: t, options: a = dZ } = e,
         l = (0, ty.bG)([d$.A, lE.default], () => {
             let e = lE.default.getId(),
@@ -13090,16 +13084,16 @@ function d6(e) {
         );
     return (0, r.jsx)(g.l, { selectionMode: "single", label: t, value: l, options: [...a], onSelectionChange: n });
 }
-function d3() {
+function d6() {
     return (0, r.jsxs)($.B, {
         direction: "vertical",
         gap: 8,
         children: [
-            (0, r.jsx)(d6, { experimentName: dG.W2.definition.name, options: d0 }),
-            (0, r.jsx)(d6, { experimentName: dG._$.definition.name, options: d0 }),
-            (0, r.jsx)(d6, { experimentName: dP.A.definition.name, options: d1 }),
-            (0, r.jsx)(d6, { experimentName: dU._.definition.name, options: d2 }),
-            (0, r.jsx)(d6, { experimentName: dV.A.definition.name, options: d8 }),
+            (0, r.jsx)(d3, { experimentName: dG.W2.definition.name, options: d0 }),
+            (0, r.jsx)(d3, { experimentName: dG._$.definition.name, options: d0 }),
+            (0, r.jsx)(d3, { experimentName: dP.A.definition.name, options: d1 }),
+            (0, r.jsx)(d3, { experimentName: dU._.definition.name, options: d2 }),
+            (0, r.jsx)(d3, { experimentName: dV.A.definition.name, options: d8 }),
         ],
     });
 }
@@ -13245,7 +13239,7 @@ var cs = a(136722),
     cd = a(842681);
 function cc(e) {
     let { title: t, can: a } = e,
-        l = a ? r3.A : J.P,
+        l = a ? r6.A : J.P,
         n = (0, r.jsx)("div", {
             className: G()(cd.v_, a ? cd.uU : cd.Ss),
             children: (0, r.jsx)(l, { className: cd.Kk }),
@@ -13263,9 +13257,9 @@ function cc(e) {
 }
 function cu() {
     let e = (0, z.bG)([rF.A], () => rF.A.getChannelId()),
-        t = (0, z.bG)([a3.A], () => a3.A.getGuildId()),
+        t = (0, z.bG)([a6.A], () => a6.A.getGuildId()),
         a = (0, z.bG)([ay.A], () => ay.A.getChannel(e)),
-        l = (0, z.bG)([a6.A], () => a6.A.getGuild(t)),
+        l = (0, z.bG)([a3.A], () => a3.A.getGuild(t)),
         n = (0, z.bG)([ci.A], () => ci.A.computePermissions(a)),
         s = (0, z.bG)([ci.A], () => ci.A.computePermissions(l)),
         i = (0, af.Ay)(a, !0),
@@ -13988,7 +13982,7 @@ function c8() {
                     children:
                         "Upload a .riv file to view the animation and interact with its data binding configuration.",
                 }),
-                (0, r.jsx)(c6, {}),
+                (0, r.jsx)(c3, {}),
                 (0, r.jsx)(W.D, { variant: "heading-lg/medium", children: "Rive Overrides" }),
                 (0, r.jsx)(h.E, {
                     variant: "text-md/normal",
@@ -14000,7 +13994,7 @@ function c8() {
         }),
     });
 }
-function c6() {
+function c3() {
     let [e, t] = o.useState(null),
         [a, l] = o.useState(null),
         [n, s] = o.useState(null),
@@ -14059,7 +14053,7 @@ function c6() {
                                 (0, r.jsx)(W.D, { variant: "heading-lg/medium", children: "Data Binding" }),
                                 Object.keys(n ?? {}).map((e) =>
                                     (0, r.jsx)(
-                                        c3,
+                                        c6,
                                         {
                                             property: e,
                                             type: n?.[e]?.type,
@@ -14077,7 +14071,7 @@ function c6() {
         ],
     });
 }
-function c3(e) {
+function c6(e) {
     let { property: t, type: a, value: l, onChange: n, artboards: s } = e;
     return "string" === a
         ? (0, r.jsx)(v.k, { label: t, value: l, onChange: (e) => n(e) })
@@ -15218,18 +15212,18 @@ let u8 = () => {
         ],
     });
 };
-var u6 =
+var u3 =
         (((l = {}).DEFAULT = "default"),
         (l.ORB_TAB = "orb_tab"),
         (l.FRAMES = "frames"),
         (l.FRAMES_PINNED = "frames_pinned"),
         l),
-    u3 = a(295811);
+    u6 = a(295811);
 let u5 = () => {
-    let e = (0, z.bG)([u3.A], () => u3.A.getShopHomeConfigOverride()),
+    let e = (0, z.bG)([u6.A], () => u6.A.getShopHomeConfigOverride()),
         t = [
             { id: "none", label: "DISABLED (no override)", value: void 0 },
-            ...Object.values(u6).map((e) => ({ id: e, label: e, value: e })),
+            ...Object.values(u3).map((e) => ({ id: e, label: e, value: e })),
         ];
     return (0, r.jsx)(g.l, {
         label: "Shop Home Override",
@@ -16376,7 +16370,7 @@ let m2 = {
         [m1.qf.DEFERRED_START]: "Deferred Start",
         [m1.qf.USER_TEMPORARY_BAN]: "User Temp Ban",
     },
-    m6 = [
+    m3 = [
         { id: "unpaid", label: "Unpaid", value: ei.Dmq.UNPAID },
         { id: "active", label: "Active", value: ei.Dmq.ACTIVE },
         { id: "pastDue", label: "Past Due", value: ei.Dmq.PAST_DUE },
@@ -16387,7 +16381,7 @@ let m2 = {
         { id: "paused", label: "Paused", value: ei.Dmq.PAUSED },
         { id: "pausePending", label: "Pause Pending", value: ei.Dmq.PAUSE_PENDING },
     ];
-function m3(e) {
+function m6(e) {
     let { subscription: t, onClose: a, onUpdated: l, transitionState: n } = e,
         [s, i] = o.useState(lc()()),
         [c, u] = o.useState(lc()().format("HH:mm")),
@@ -16711,7 +16705,7 @@ function m5(e) {
                                         (0, r.jsx)(g.l, {
                                             label: "Status",
                                             value: l.status,
-                                            options: m6,
+                                            options: m3,
                                             onSelectionChange: (e) => {
                                                 _({ status: e });
                                             },
@@ -16736,7 +16730,7 @@ function m5(e) {
                                                             onClick: () => {
                                                                 (0, e$.openModalLazy)(() =>
                                                                     Promise.resolve((e) =>
-                                                                        (0, r.jsx)(m3, {
+                                                                        (0, r.jsx)(m6, {
                                                                             subscription: l,
                                                                             onUpdated: n,
                                                                             ...e,
@@ -17823,12 +17817,12 @@ function hK() {
                                         let e = performance.now();
                                         (0, e$.openModalLazy)(async () => {
                                             let { default: l } = await Promise.all([
-                                                a.e("98476"),
-                                                a.e("78496"),
+                                                a.e("22448"),
+                                                a.e("80913"),
                                                 a.e("92868"),
                                                 a.e("63408"),
                                                 a.e("77375"),
-                                                a.e("97199"),
+                                                a.e("19580"),
                                             ]).then(a.bind(a, 834135));
                                             return (a) =>
                                                 (0, r.jsx)(l, {
@@ -17889,8 +17883,8 @@ var hq = a(913122),
     h1 = a(205761),
     h2 = a(860071),
     h8 = a(696451),
-    h6 = a(860689),
-    h3 = a(926140);
+    h3 = a(860689),
+    h6 = a(926140);
 let h5 = new hZ.A("SearchDebugUtils");
 function h9() {
     h5.info("--------------------------");
@@ -17901,16 +17895,16 @@ function h4() {
         h5.info(`Query: ${e.query}`),
         e.results.forEach((e) => {
             switch ((h5.info(`Result Type: ${e.type}`), e.type)) {
-                case h3.rD.GUILD:
+                case h6.rD.GUILD:
                     h5.info(`guild id: ${e.record.id}`);
                     break;
-                case h3.rD.TEXT_CHANNEL:
-                case h3.rD.VOICE_CHANNEL:
+                case h6.rD.TEXT_CHANNEL:
+                case h6.rD.VOICE_CHANNEL:
                     h5.info(`channel type: ${e.record.type}`),
                         h5.info(`channel id: ${e.record.id}`),
                         h5.info(`name: ${e.record.name}`);
                     break;
-                case h3.rD.DM:
+                case h6.rD.DM:
                     h5.info(`channel type: ${e.record.type}`),
                         h5.info(`channel id: ${e.record.id}`),
                         e.record.isDM() &&
@@ -17923,7 +17917,7 @@ function h4() {
                                     h5.info(`recipient nickname: ${a_.A.getNickname(t.id)}`));
                             }));
                     break;
-                case h3.rD.GROUP_DM:
+                case h6.rD.GROUP_DM:
                     h5.info(`channel type: ${e.record.type}`),
                         h5.info(`channel id: ${e.record.id}`),
                         h5.info(`name: ${(0, af.m1)(e.record, ea.default, a_.A)}`),
@@ -17938,7 +17932,7 @@ function h4() {
                                     h5.info(`recipient nickname: ${a_.A.getNickname(t.id)}`));
                             }));
                     break;
-                case h3.rD.USER:
+                case h6.rD.USER:
                     h5.info(`user id: ${e.record.id}`),
                         h5.info(`username: ${e.record.username}`),
                         h5.info(`global name: ${eo.Ay.getGlobalName(e.record)}`),
@@ -17986,7 +17980,7 @@ async function xe() {
 async function xt(e) {
     let t = await hX.A.requestDebugState(),
         a = null != t ? JSON.parse(t.users)[e] : null,
-        l = a6.A.getGuildIds(),
+        l = a3.A.getGuildIds(),
         n = [];
     l.forEach((t) => {
         let a = h8.Ay.getMember(t, e);
@@ -18175,7 +18169,7 @@ function xs() {
                             (g = []),
                             (v = []),
                             h.forEach((e) => {
-                                (0, h6.fh)(e)
+                                (0, h3.fh)(e)
                                     ? x.push(e)
                                     : e.isDM()
                                       ? g.push(e)
@@ -18425,7 +18419,7 @@ function xm(e) {
                             children: (0, r.jsx)(h.E, { variant: "text-sm/normal", children: "None" }),
                         }),
                     a.map((e) => {
-                        let t = a6.A.getGuild(e);
+                        let t = a3.A.getGuild(e);
                         return null == t
                             ? null
                             : (0, r.jsxs)(
@@ -18520,7 +18514,7 @@ function xh(e) {
                                     }),
                                 Object.entries(l.nicknames).map((e) => {
                                     let [t, a] = e,
-                                        l = a6.A.getGuild(t),
+                                        l = a3.A.getGuild(t),
                                         n = ay.A.getChannel(t);
                                     return (0, r.jsxs)(
                                         "div",
@@ -18563,7 +18557,7 @@ function xh(e) {
                 (0, r.jsx)("div", {
                     className: xa.uk,
                     children: n.map((e) => {
-                        let t = a6.A.getGuild(e.guildId);
+                        let t = a3.A.getGuild(e.guildId);
                         if (null == t) return null;
                         let a = e.nick ?? "";
                         return (0, r.jsxs)(
@@ -19109,7 +19103,7 @@ function xH() {
                 name: "Modals",
                 group: aJ.fu.UI,
                 tags: ["dialogs", "popups"],
-                render: () => (0, r.jsx)(r6, {}),
+                render: () => (0, r.jsx)(r3, {}),
             }),
             e.push({
                 id: "menus",

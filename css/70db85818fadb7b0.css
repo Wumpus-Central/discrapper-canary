@@ -1,0 +1,84 @@
+.contentContainer_e1347e {
+    display: flex;
+    flex-direction: column;
+    height: 100%
+}
+
+.orbsContainer_e1347e {
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    position: relative
+}
+
+.centerOrb_e1347e {
+    height: auto;
+    inset-inline-start: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    z-index: 1
+}
+
+.idleOrb_e1347e {
+    z-index: 2
+}
+
+.hidden_e1347e {
+    display: none
+}
+
+.smallOrbContainer_e1347e {
+    inset-inline-start: 50%;
+    position: absolute;
+    top: 50%
+}
+
+.smallOrb_e1347e {
+    height: auto;
+    opacity: .1;
+    position: absolute
+}
+
+.smallOrb_e1347e:first-child {
+    bottom: 0;
+    inset-inline-end: 64px;
+    width: 61px
+}
+
+.smallOrb_e1347e:nth-child(2) {
+    bottom: 56px;
+    inset-inline-end: 28px;
+    width: 29px
+}
+
+.smallOrb_e1347e:nth-child(3) {
+    bottom: 60px;
+    inset-inline-start: 21px;
+    width: 29px
+}
+
+.smallOrb_e1347e:nth-child(4) {
+    bottom: 0;
+    inset-inline-start: 60px;
+    width: 61px
+}
+
+.copyContainer_e1347e {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px
+}
+
+.heading_e1347e {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    margin-bottom: 4px
+}
+
+.orbsIcon_e1347e {
+    height: auto;
+    width: 22px
+}

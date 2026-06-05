@@ -1,0 +1,38 @@
+.notice_d37fb3 {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: 4px;
+    display: flex
+}
+
+.noticeWithoutRightPadding_d37fb3 {
+    padding-block: 8px;
+    padding-inline: 8px 0
+}
+
+.noticeWithRightPadding_d37fb3 {
+    padding: 8px
+}
+
+.noticeLeft_d37fb3 {
+    align-items: center;
+    display: flex;
+    flex-grow: 1
+}
+
+.icon_d37fb3 {
+    flex-shrink: 0;
+    height: 24px;
+    margin-inline-end: 8px;
+    width: 24px
+}
+
+.text_d37fb3 {
+    flex: 1;
+    margin-inline-end: 16px
+}
+
+.nitroPreviewUpsell_c8eb34 {
+    border-radius: 5px 5px 0 0;
+    padding-inline: 12px 0
+}

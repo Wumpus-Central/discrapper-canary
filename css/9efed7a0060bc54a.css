@@ -1,0 +1,299 @@
+.numberTimeline__0d645 {
+    align-items: flex-end;
+    display: flex;
+    margin-bottom: var(--space-24);
+    position: relative;
+    width: 100%
+}
+
+.numberTimelineTrack__0d645 {
+    height: 24px;
+    position: relative;
+    width: 100%
+}
+
+.numberTimelineTrack__0d645:before {
+    background: linear-gradient(to right, var(--brand-500) var(--custom-video-progress), var(--background-mod-strong) var(--custom-video-progress));
+    content: "";
+    height: 4px;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    inset-inline-end: 0
+}
+
+.timeNotch__0d645 {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    position: absolute
+}
+
+.timeNotchTick__0d645 {
+    background-color: var(--border-subtle);
+    flex-shrink: 0;
+    height: 24px;
+    width: 1px
+}
+
+.timeNotchLabel__0d645 {
+    margin-inline-start: 4px;
+    padding-bottom: 1px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    white-space: nowrap
+}
+
+.timeSubNotch__0d645 {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    position: absolute
+}
+
+.timeSubNotchTick__0d645 {
+    background-color: var(--border-subtle);
+    flex-shrink: 0;
+    height: 8px;
+    width: 1px
+}
+
+.centeringWrapper_f18995 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: auto;
+    width: 100%
+}
+
+.timelineWrapper_f18995 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 90%
+}
+
+.timelineHeader_f18995 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--space-24);
+    position: relative;
+    width: 100%
+}
+
+.timelineContainer_f18995 {
+    display: flex;
+    height: 80px;
+    width: 100%
+}
+
+.playPauseButtonWrapper_f18995 {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    justify-content: center
+}
+
+.playPauseIcon_f18995 {
+    color: var(--text-default);
+    height: 24px;
+    width: 24px
+}
+
+.timeline_f18995 {
+    border-radius: 8px;
+    position: relative;
+    width: 100%
+}
+
+.timeline_f18995:hover {
+    cursor: pointer
+}
+
+.timelineCropOverlay_f18995 {
+    border-radius: 8px;
+    bottom: 0;
+    inset-inline-end: 0;
+    inset-inline-start: 0;
+    opacity: .7;
+    position: absolute;
+    top: 0
+}
+
+.waveform_f18995 {
+    height: 48px;
+    width: 100%
+}
+
+.timelineDragging_f18995:hover {
+    cursor: grabbing
+}
+
+.timelineBackground_f18995 {
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    box-sizing: border-box;
+    height: 80px;
+    width: 100%
+}
+
+.dragHandle_f18995 {
+    align-items: center;
+    background-color: var(--brand-500);
+    bottom: -4px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px 8px;
+    position: absolute;
+    top: -4px;
+    width: 16px
+}
+
+.dragHandleLeft_f18995 {
+    border-end-start-radius: 8px;
+    border-start-start-radius: 8px;
+    inset-inline-start: 0;
+    transform: translateX(-100%)
+}
+
+.dragHandleLeft_f18995:after {
+    background: radial-gradient(circle at top right, transparent 8px, var(--brand-500) 8px);
+    bottom: 4px;
+    content: "";
+    height: 8px;
+    inset-inline-end: -8px;
+    position: absolute;
+    width: 8px
+}
+
+.dragHandleRight_f18995 {
+    border-end-end-radius: 8px;
+    border-start-end-radius: 8px;
+    inset-inline-end: 0;
+    transform: translateX(100%)
+}
+
+.dragHandleRight_f18995:before {
+    background: radial-gradient(circle at top left, transparent 8px, var(--brand-500) 8px);
+    bottom: 4px;
+    content: "";
+    height: 8px;
+    inset-inline-start: -8px;
+    position: absolute;
+    width: 8px
+}
+
+.dragBox_f18995 {
+    border-bottom: 4px solid var(--brand-500);
+    border-top: 4px solid var(--brand-500);
+    bottom: -4px;
+    position: absolute;
+    top: -4px
+}
+
+.dragBox_f18995:after,
+.dragBox_f18995:before {
+    content: "";
+    height: 8px;
+    position: absolute;
+    width: 8px
+}
+
+.dragBox_f18995:before {
+    background: radial-gradient(circle at bottom right, transparent 8px, var(--brand-500) 8px);
+    inset-inline-start: 0;
+    top: 0
+}
+
+.dragBox_f18995:after {
+    background: radial-gradient(circle at bottom left, transparent 8px, var(--brand-500) 8px);
+    inset-inline-end: 0;
+    top: 0
+}
+
+.dragging_f18995 {
+    opacity: .3
+}
+
+.playhead_f18995 {
+    background-color: var(--red-430);
+    bottom: 0;
+    left: var(--custom-video-progress);
+    position: absolute;
+    top: -48px;
+    transform: translateX(-50%);
+    width: 2px;
+    z-index: 1000
+}
+
+.playhead_f18995:after {
+    background-color: var(--red-430);
+    border-radius: 50%;
+    content: "";
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: -6px;
+    transform: translate(-7px);
+    width: 16px
+}
+
+.timePillBackground_f18995 {
+    align-items: center;
+    border-radius: 50px;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    min-width: 120px;
+    padding: 2px 12px
+}
+
+.timePillText_f18995 {
+    display: flex;
+    font-variant: tabular-nums;
+    justify-content: space-between;
+    white-space: nowrap
+}
+
+.cropArrow_f18995 {
+    background-color: hsl(var(--white-500-hsl)/.7);
+    border-radius: 100px;
+    height: 40px;
+    width: 2px
+}
+
+.cropLeftArrow_f18995,
+.cropRightArrow_f18995 {}
+
+.timePillContainer_f18995 {
+    align-items: center;
+    display: flex;
+    inset-inline-start: 0;
+    position: absolute
+}
+
+.playPauseButton_f18995:hover {
+    cursor: pointer
+}
+
+.char_f18995 {
+    display: inline-block;
+    text-align: center
+}
+
+.fixedWidthCharacter_f18995 {
+    width: 8px
+}
+
+.narrowCharacter_f18995 {
+    width: 4px
+}
+
+.slashCharacter_f18995 {
+    width: 12px
+}

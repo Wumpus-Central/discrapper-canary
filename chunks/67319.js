@@ -454,7 +454,7 @@ function e3(e) {
         ],
     });
 }
-function e7(e) {
+function e6(e) {
     let { className: t, numRequestToSpeak: n } = e,
         l = n > 0;
     return (0, i.jsxs)("div", {
@@ -465,7 +465,7 @@ function e7(e) {
         ],
     });
 }
-function e6(e) {
+function e7(e) {
     let {
             toggleRequestToSpeakSidebar: t,
             showRequestToSpeakSidebar: n,
@@ -481,7 +481,7 @@ function e6(e) {
         onClick: c,
         label: n ? ex.intl.string(ex.t.gKGz7A) : ex.intl.string(ex.t.ImQ4dW),
         className: s,
-        iconComponent: () => (0, i.jsx)(e7, { numRequestToSpeak: a, className: s }),
+        iconComponent: () => (0, i.jsx)(e6, { numRequestToSpeak: a, className: s }),
         ...o,
     });
 }
@@ -512,7 +512,7 @@ function tn(e) {
             !l && d
                 ? (0, i.jsx)("div", {
                       className: a()(tt.x6, { [tt.vc]: c }),
-                      children: (0, i.jsx)(e6, {
+                      children: (0, i.jsx)(e7, {
                           toggleRequestToSpeakSidebar: () => {
                               c && eY.A.updateChatOpen(t.id, !1), (0, j.X)(r, j.O.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n();
                           },
@@ -1276,7 +1276,7 @@ function t3(e) {
             }),
     });
 }
-function t7(e) {
+function t6(e) {
     let { speakers: t, channel: n } = e;
     return (0, i.jsx)(t1.A, {
         className: t5.z,
@@ -1287,7 +1287,7 @@ function t7(e) {
         renderMoreUsers: (e, t, n) => (0, i.jsx)("div", { className: a()(t5.$U, t), children: e }, n),
     });
 }
-var t6 = n(947790);
+var t7 = n(947790);
 let t4 = l.memo(function (e) {
     let {
         label: t,
@@ -1301,15 +1301,15 @@ let t4 = l.memo(function (e) {
     } = e;
     return (0, i.jsxs)(Q.D, {
         onClick: l,
-        className: a()(t6.kL, s),
+        className: a()(t7.kL, s),
         children: [
             null == o
-                ? (0, i.jsx)(eF.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: t6.Vo })
-                : (0, i.jsx)(eH.c, { size: "custom", color: "currentColor", width: 20, height: 20, className: t6.Vo }),
+                ? (0, i.jsx)(eF.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: t7.Vo })
+                : (0, i.jsx)(eH.c, { size: "custom", color: "currentColor", width: 20, height: 20, className: t7.Vo }),
             (0, i.jsxs)($.E, {
                 color: "text-strong",
                 variant: "text-md/semibold",
-                className: t6.Qq,
+                className: t7.Qq,
                 children: [t, " \u2014 ", n],
             }),
             r &&
@@ -1317,14 +1317,14 @@ let t4 = l.memo(function (e) {
                 null != o &&
                 o.length > 0 &&
                 (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(t7, { channel: c, speakers: o }), d && (0, i.jsx)(tJ.Ay, {})],
+                    children: [(0, i.jsx)(t6, { channel: c, speakers: o }), d && (0, i.jsx)(tJ.Ay, {})],
                 }),
             (0, i.jsx)(t$.a, {
                 size: "custom",
                 color: "currentColor",
                 width: 20,
                 height: 20,
-                className: a()(t6.mw, { [t6.VU]: r }),
+                className: a()(t7.mw, { [t7.VU]: r }),
             }),
         ],
     });
@@ -2001,10 +2001,10 @@ function n2(e) {
 }
 var n5 = n(104171),
     n3 = n(81466),
-    n7 = n(823508);
-function n6(e) {
+    n6 = n(823508);
+function n7(e) {
     let { className: t, guildId: l } = e,
-        s = (0, n7.A)();
+        s = (0, n6.A)();
     return (0, i.jsx)(nS.A, {
         className: t,
         icon: (0, i.jsx)(n3.C, { size: "custom", color: "currentColor", height: 20, width: 20 }),
@@ -2014,11 +2014,10 @@ function n6(e) {
         onClick: function () {
             (0, d.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("98495"),
-                    n.e("71254"),
-                    n.e("19675"),
-                    n.e("32490"),
-                    n.e("78704"),
+                    n.e("28306"),
+                    n.e("53575"),
+                    n.e("8886"),
+                    n.e("74539"),
                     n.e("59957"),
                     n.e("28136"),
                     n.e("16084"),
@@ -2133,7 +2132,7 @@ function it(e) {
                     }),
                     d ? null : (0, i.jsx)(nf.A, { channelId: t.id, showDismiss: !1 }),
                     s ? (0, i.jsx)(nT, { className: n4.fN, channel: t }) : null,
-                    c ? (0, i.jsx)(n6, { className: n4.fN, guildId: r }) : null,
+                    c ? (0, i.jsx)(n7, { className: n4.fN, guildId: r }) : null,
                     s ? (0, i.jsx)(n8, { className: a()({ [n4.fN]: !0 }), onClick: n }) : null,
                     (0, i.jsx)(ie, { channel: t }),
                 ],

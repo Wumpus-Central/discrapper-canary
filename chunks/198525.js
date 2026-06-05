@@ -1,279 +1,284 @@
 "use strict";
-n.d(t, { A: () => W });
-var l = n(627968),
-    i = n(64700),
-    s = n(123924),
+n.d(t, { A: () => Y });
+var i = n(627968),
+    r = n(64700),
+    s = n(922139),
     a = n(837381),
-    r = n(17928),
-    o = n(821609),
-    c = n(462887),
-    u = n(717421),
+    o = n(17928),
+    l = n(821609),
+    u = n(462887),
+    c = n(717421),
     d = n(866323),
-    h = n(192308),
-    m = n(534514),
-    p = n(939249),
-    f = n(834730),
-    g = n(290136),
-    _ = n(661531),
-    x = n(956793),
-    C = n(401843),
-    A = n(765671),
-    E = n(775602),
-    I = n(267102),
-    v = n(363195),
-    y = n(734057),
-    b = n(507107),
-    S = n(838077),
-    N = n(859387),
-    j = n(561844),
-    T = n(590202),
-    w = n(792620),
-    R = n(814793),
-    L = n(73473),
-    k = n(201805),
-    O = n(646764),
-    M = n(398025),
-    P = n(545986),
-    D = n(654487),
-    U = n(652215),
-    V = n(818348),
-    G = n(985018),
-    F = n(185952);
-let B = "11px";
-function H(e) {
+    _ = n(192308),
+    h = n(534514),
+    f = n(939249),
+    p = n(834730),
+    E = n(290136),
+    m = n(661531),
+    g = n(730852),
+    A = n(401843),
+    I = n(765671),
+    T = n(775602),
+    S = n(267102),
+    y = n(363195),
+    N = n(734057),
+    v = n(507107),
+    C = n(629455),
+    R = n(551875),
+    O = n(561844),
+    b = n(590202),
+    D = n(792620),
+    L = n(814793),
+    w = n(73473),
+    M = n(646764),
+    P = n(398025),
+    x = n(617986),
+    k = n(795965),
+    U = n(190107),
+    G = n(652215),
+    F = n(818348),
+    V = n(375708),
+    B = n(185952);
+let H = "11px";
+function j(e) {
     let {
             quest: t,
-            memberListItemRef: L,
-            applicationStream: H,
-            position: W,
-            closePopout: K,
-            updatePosition: z,
-            impressionRef: Z,
-            name: q,
+            memberListItemRef: w,
+            applicationStream: j,
+            position: Y,
+            closePopout: W,
+            updatePosition: K,
+            impressionRef: $,
+            name: z,
         } = e,
-        J = (0, r.bG)([y.A], () => y.A.getChannel(H?.channelId) ?? null),
-        Y = (0, k.ix)({ quest: t, questContent: b.uF.MEMBERS_LIST, sourceQuestContent: b.uF.MEMBERS_LIST }),
-        $ = t?.userStatus?.claimedAt != null,
-        X = t?.userStatus?.enrolledAt != null,
-        Q = t?.userStatus?.completedAt != null,
-        ee = (0, r.bG)([v.A], () => v.A.getState().theme),
-        et = (0, c.M)(ee) ? V.NJ.DARK : V.NJ.LIGHT,
-        en = (0, r.bG)([E.A], () => E.A.useReducedMotion),
-        { ref: el, height: ei } = (0, A.Ay)(),
-        [es, ea] = i.useState(en),
-        er = (0, I.aL)(),
-        eo = (0, a.KF)();
-    i.useEffect(() => {
-        let e = eo.current;
+        q = (0, o.bG)([N.A], () => N.A.getChannel(j?.channelId) ?? null),
+        X = (0, k.D)({
+            quest: t,
+            questContent: v.uF.MEMBERS_LIST,
+            sourceQuestContent: v.uF.MEMBERS_LIST,
+            experimentLocation: U.rE.MEMBERS_LIST,
+        }),
+        Z = t?.userStatus?.claimedAt != null,
+        Q = t?.userStatus?.enrolledAt != null,
+        J = t?.userStatus?.completedAt != null,
+        ee = (0, o.bG)([y.A], () => y.A.getState().theme),
+        et = (0, u.M)(ee) ? F.NJ.DARK : F.NJ.LIGHT,
+        en = (0, o.bG)([T.A], () => T.A.useReducedMotion),
+        { ref: ei, height: er } = (0, I.Ay)(),
+        [es, ea] = r.useState(en),
+        eo = (0, S.aL)(),
+        el = (0, a.KF)();
+    r.useEffect(() => {
+        let e = el.current;
         return (
-            e?.addEventListener("scroll", K),
+            e?.addEventListener("scroll", W),
             () => {
-                e?.removeEventListener("scroll", K);
+                e?.removeEventListener("scroll", W);
             }
         );
-    }, [K, eo]),
-        i.useEffect(() => {
-            let e = eo.current,
-                t = L.current;
+    }, [W, el]),
+        r.useEffect(() => {
+            let e = el.current,
+                t = w.current;
             if (null == e || null == t) return;
-            let n = new MutationObserver(() => z());
+            let n = new MutationObserver(() => K());
             return (
                 n.observe(e, { childList: !0, subtree: !0 }),
                 () => {
                     n.disconnect();
                 }
             );
-        }, [L, eo, z]);
-    let ec = (0, u.z)({
+        }, [w, el, K]);
+    let eu = (0, c.z)({
             from: { height: 0 },
-            height: ei ?? 0,
+            height: er ?? 0,
             config: { tension: 450, friction: 45 },
             onRest: () => ea(!0),
         }),
-        eu = (0, d.p)(es, { from: { opacity: 0, scale: 0 }, enter: { opacity: 1, scale: 1 } }),
+        ec = (0, d.p)(es, { from: { opacity: 0, scale: 0 }, enter: { opacity: 1, scale: 1 } }),
         ed = () => {
-            er.dispatch(U.jej.POPOUT_CLOSE);
+            eo.dispatch(G.jej.POPOUT_CLOSE);
         },
-        eh = "top" === W ? "8px 8px 0 0" : "0 0 8px 8px",
-        em = () => {
-            (0, j.Y5)({
+        e_ = "top" === Y ? "8px 8px 0 0" : "0 0 8px 8px",
+        eh = () => {
+            (0, O.Y5)({
                 questId: t.id,
-                questContent: b.uF.MEMBERS_LIST,
-                questContentCTA: T.Cy.LEARN_MORE,
+                questContent: v.uF.MEMBERS_LIST,
+                questContentCTA: b.Cy.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0,
-                sourceQuestContent: b.uF.MEMBERS_LIST,
+                sourceQuestContent: v.uF.MEMBERS_LIST,
             }),
-                (0, P.navigateToQuestHome)({ fromContent: b.uF.MEMBERS_LIST, questId: t.id });
+                (0, x.navigateToQuestHome)({ fromContent: v.uF.MEMBERS_LIST, questId: t.id });
         },
-        ep = () => {
-            (0, R.Ll)(H, J) && null != J
-                ? ((0, j.Y5)({
+        ef = () => {
+            (0, L.Ll)(j, q) && null != q
+                ? ((0, O.Y5)({
                       questId: t.id,
-                      questContent: b.uF.MEMBERS_LIST,
-                      questContentCTA: T.Cy.WATCH_STREAM,
+                      questContent: v.uF.MEMBERS_LIST,
+                      questContentCTA: b.Cy.WATCH_STREAM,
                       trackGuildAndChannelMetadata: !0,
-                      sourceQuestContent: b.uF.MEMBERS_LIST,
+                      sourceQuestContent: v.uF.MEMBERS_LIST,
                   }),
-                  (0, h.openModalLazy)(async () => {
+                  (0, _.openModalLazy)(async () => {
                       let { default: e } = await n.e("72879").then(n.bind(n, 48274));
                       return (n) =>
-                          (0, l.jsx)(e, {
-                              username: q ?? "",
+                          (0, i.jsx)(e, {
+                              username: z ?? "",
                               onConfirm: () => (
-                                  (0, j.Y5)({
+                                  (0, O.Y5)({
                                       questId: t.id,
-                                      questContent: b.uF.MEMBERS_LIST,
-                                      questContentCTA: T.Cy.WATCH_STREAM_CONFIRM,
+                                      questContent: v.uF.MEMBERS_LIST,
+                                      questContentCTA: b.Cy.WATCH_STREAM_CONFIRM,
                                       trackGuildAndChannelMetadata: !0,
-                                      sourceQuestContent: b.uF.MEMBERS_LIST,
+                                      sourceQuestContent: v.uF.MEMBERS_LIST,
                                   }),
-                                  x.default.selectVoiceChannel(J.id),
-                                  (0, C.Nl)(H)
+                                  g.default.selectVoiceChannel(q.id),
+                                  (0, A.Nl)(j)
                               ),
                               ...n,
                           });
                   }))
-                : em();
+                : eh();
         },
-        ef = (0, S.NA)({ quest: t }),
-        eg = (() => {
-            if (Q && !$)
+        ep = (0, C.NA)({ quest: t }),
+        eE = (() => {
+            if (J && !Z)
                 return {
-                    headerText: G.intl.string(G.t.gHerLS),
-                    ctaText: G.intl.string(G.t.cfY4PE),
-                    handleClickCta: Y,
+                    headerText: V.intl.string(V.t.gHerLS),
+                    ctaText: V.intl.string(V.t.cfY4PE),
+                    handleClickCta: X,
                     tileAssetType: "reward",
                 };
-            if (X && !$)
+            if (Q && !Z)
                 return {
-                    headerText: G.intl.string(G.t.uH2sf2),
-                    ctaText: G.intl.string(G.t.VN1Ajl),
-                    handleClickCta: em,
+                    headerText: V.intl.string(V.t.uH2sf2),
+                    ctaText: V.intl.string(V.t.VN1Ajl),
+                    handleClickCta: eh,
                     tileAssetType: "reward",
                 };
-            if ((0, R.Ll)(H, J))
+            if ((0, L.Ll)(j, q))
                 return {
-                    headerText: G.intl.string(G.t.Bz6SkH),
-                    ctaText: G.intl.string(G.t.BXFP30),
-                    handleClickCta: ep,
+                    headerText: V.intl.string(V.t.Bz6SkH),
+                    ctaText: V.intl.string(V.t.BXFP30),
+                    handleClickCta: ef,
                     tileAssetType: "game",
                 };
-            let e = (0, R.vA)(t) ? ef : G.intl.string(G.t["BSXPZ+"]);
+            let e = (0, L.vA)(t) ? ep : V.intl.string(V.t["BSXPZ+"]);
             return {
                 headerText:
-                    (0, R.vA)(t) && (0, w.vl)(t) && !t.config.features.includes(D.Li.CLOUD_GAMING_ACTIVITY)
+                    (0, L.vA)(t) && (0, D.vl)(t) && !t.config.features.includes(U.Li.CLOUD_GAMING_ACTIVITY)
                         ? e
-                        : G.intl.string(G.t.Bz6SkH),
+                        : V.intl.string(V.t.Bz6SkH),
                 ctaText: e,
-                handleClickCta: em,
+                handleClickCta: eh,
                 tileAssetType: "game",
             };
         })();
-    return (0, l.jsx)(s.animated.div, {
+    return (0, i.jsx)(s.animated.div, {
         ref: (e) => {
-            Z.current = e;
+            $.current = e;
         },
         "aria-expanded": es,
-        className: F.iE,
+        className: B.iE,
         style: {
-            width: L.current?.clientWidth ?? 222,
-            height: ec.height,
+            width: w.current?.clientWidth ?? 222,
+            height: eu.height,
             overflow: es ? "visible" : "hidden",
-            borderRadius: eh,
+            borderRadius: e_,
         },
-        children: (0, l.jsxs)("div", {
+        children: (0, i.jsxs)("div", {
             ref: (e) => {
-                el.current = e;
+                ei.current = e;
             },
-            className: F.kL,
-            style: { borderRadius: eh },
+            className: B.kL,
+            style: { borderRadius: e_ },
             children: [
-                (0, l.jsxs)("div", {
-                    className: F.Mn,
+                (0, i.jsxs)("div", {
+                    className: B.Mn,
                     children: [
-                        (0, l.jsxs)("div", {
-                            className: F.kb,
+                        (0, i.jsxs)("div", {
+                            className: B.kb,
                             children: [
-                                (0, l.jsx)(m.D, { variant: "heading-sm/semibold", children: eg.headerText }),
-                                (0, l.jsxs)(p.D, {
-                                    className: F.yj,
+                                (0, i.jsx)(h.D, { variant: "heading-sm/semibold", children: eE.headerText }),
+                                (0, i.jsxs)(f.D, {
+                                    className: B.yj,
                                     onClick: (e) => {
                                         ed(),
                                             e.stopPropagation(),
-                                            (0, j.Y5)({
+                                            (0, O.Y5)({
                                                 questId: t.id,
-                                                questContent: b.uF.MEMBERS_LIST,
-                                                questContentCTA: T.Cy.OPEN_DISCLOSURE,
+                                                questContent: v.uF.MEMBERS_LIST,
+                                                questContentCTA: b.Cy.OPEN_DISCLOSURE,
                                                 trackGuildAndChannelMetadata: !0,
-                                                sourceQuestContent: b.uF.MEMBERS_LIST,
+                                                sourceQuestContent: v.uF.MEMBERS_LIST,
                                             }),
-                                            (0, P.Zc)(t, {
-                                                content: b.uF.MEMBERS_LIST,
-                                                ctaContent: T.Cy.OPEN_DISCLOSURE,
-                                                sourceQuestContent: b.uF.MEMBERS_LIST,
+                                            (0, x.Zc)(t, {
+                                                content: v.uF.MEMBERS_LIST,
+                                                ctaContent: b.Cy.OPEN_DISCLOSURE,
+                                                sourceQuestContent: v.uF.MEMBERS_LIST,
                                             });
                                     },
                                     children: [
-                                        (0, l.jsx)(f.E, {
+                                        (0, i.jsx)(p.E, {
                                             variant: "text-xs/medium",
                                             color: "text-muted",
-                                            className: F.BK,
-                                            children: G.intl.format(G.t["Lm8/mH"], {
+                                            className: B.BK,
+                                            children: V.intl.format(V.t["Lm8/mH"], {
                                                 gamePublisher: t.config.messages.gamePublisher,
                                             }),
                                         }),
-                                        (0, l.jsx)(g.c, {
+                                        (0, i.jsx)(E.c, {
                                             size: "custom",
-                                            className: F.$y,
-                                            width: B,
-                                            height: B,
-                                            color: _.A.colors.INTERACTIVE_TEXT_DEFAULT,
+                                            className: B.$y,
+                                            width: H,
+                                            height: H,
+                                            color: m.A.colors.INTERACTIVE_TEXT_DEFAULT,
                                         }),
                                     ],
                                 }),
                             ],
                         }),
-                        (0, l.jsx)("div", {
-                            className: F.pG,
-                            children: (0, l.jsxs)("div", {
-                                className: F.zc,
+                        (0, i.jsx)("div", {
+                            className: B.pG,
+                            children: (0, i.jsxs)("div", {
+                                className: B.zc,
                                 children: [
-                                    eu(
+                                    ec(
                                         (e, t) =>
                                             t &&
-                                            (0, l.jsx)(s.animated.div, {
-                                                style: { opacity: (0, M.a)(e.opacity), scale: (0, M.a)(e.scale) },
-                                                className: F.ae,
+                                            (0, i.jsx)(s.animated.div, {
+                                                style: { opacity: (0, P.a)(e.opacity), scale: (0, P.a)(e.scale) },
+                                                className: B.ae,
                                             }),
                                     ),
-                                    "game" === eg.tileAssetType &&
-                                        (0, l.jsx)("img", {
-                                            alt: G.intl.formatToPlainString(G.t.IskzPg, {
+                                    "game" === eE.tileAssetType &&
+                                        (0, i.jsx)("img", {
+                                            alt: V.intl.formatToPlainString(V.t.IskzPg, {
                                                 gameTitle: t.config.messages.gameTitle,
                                                 gamePublisher: t.config.messages.gamePublisher,
                                             }),
-                                            className: F.TW,
-                                            src: (0, N.tW)(t, N.fY.GAME_TILE, et).url,
+                                            className: B.TW,
+                                            src: (0, R.tW)(t, R.fY.GAME_TILE, et).url,
                                         }),
-                                    "reward" === eg.tileAssetType &&
-                                        (0, l.jsx)(O.A, {
-                                            className: F.TW,
+                                    "reward" === eE.tileAssetType &&
+                                        (0, i.jsx)(M.A, {
+                                            className: B.TW,
                                             quest: t,
-                                            questContent: b.uF.MEMBERS_LIST,
+                                            questContent: v.uF.MEMBERS_LIST,
                                             learnMoreStyle: "icon",
                                             onClick: ed,
-                                            sourceQuestContent: b.uF.MEMBERS_LIST,
+                                            sourceQuestContent: v.uF.MEMBERS_LIST,
                                         }),
                                 ],
                             }),
                         }),
                     ],
                 }),
-                (0, l.jsx)(o.$, {
+                (0, i.jsx)(l.$, {
                     variant: "secondary",
-                    text: eg.ctaText,
+                    text: eE.ctaText,
                     onClick: () => {
-                        ed(), eg.handleClickCta();
+                        ed(), eE.handleClickCta();
                     },
                     fullWidth: !0,
                 }),
@@ -281,12 +286,12 @@ function H(e) {
         }),
     });
 }
-function W(e) {
-    return (0, l.jsx)(L.R, {
+function Y(e) {
+    return (0, i.jsx)(w.R, {
         questOrQuests: e.quest,
-        questContent: b.uF.MEMBERS_LIST,
+        questContent: v.uF.MEMBERS_LIST,
         trackGuildAndChannelMetadata: !0,
-        sourceQuestContent: b.uF.MEMBERS_LIST,
-        children: (t) => (0, l.jsx)(H, { impressionRef: t, ...e }),
+        sourceQuestContent: v.uF.MEMBERS_LIST,
+        children: (t) => (0, i.jsx)(j, { impressionRef: t, ...e }),
     });
 }

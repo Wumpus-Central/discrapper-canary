@@ -116,7 +116,7 @@ function U(e) {
         ],
     });
 }
-var G = n(713081),
+var G = n(262254),
     F = n(73473),
     V = n(190107),
     B = n(49999),
@@ -231,6 +231,7 @@ function Y(e) {
                                       quest: t,
                                       questContent: g.uF.QUEST_ACTIVITY_HEADER,
                                       sourceQuestContent: g.uF.RUNNING_ACTIVITY,
+                                      experimentLocation: V.rE.QUEST_ACTIVITY_HEADER,
                                       size: "sm",
                                   })
                                 : (0, i.jsx)(a.$, {
