@@ -188,7 +188,7 @@ function t$(t) {
 var tX = i(119191),
     tW = i(499214);
 let tq = (t) => {
-    t && (0, tU.Ak)(R.cH, R.pD);
+    t && (0, tU.Ak)(R.cH, R.pD, void 0, void 0, { trackNotificationFailure: !0 });
 };
 var tQ = i(554146),
     tZ = i(298990),

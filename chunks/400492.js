@@ -15,18 +15,19 @@ function c(e, t) {
 }
 function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-        r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.a.DEFAULT;
-    return new i(e, t, n, r);
+        r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.a.DEFAULT,
+        s = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+    return new i(e, t, n, r, s);
 }
 function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = arguments.length > 2 ? arguments[2] : void 0,
         i = arguments.length > 3 ? arguments[3] : void 0,
-        r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : l.a.DEFAULT;
+        r = arguments.length > 4 ? arguments[4] : void 0;
     if (o.A.disableSounds) return;
     let c = (0, a.A)(i ?? s.A.getSoundpack());
     null == c && u.log(`Unable to find sound for pack name: ${i}`);
-    let _ = d(c[e] ?? e, e, t, r);
+    let _ = d(c[e] ?? e, e, t, r?.outputChannel ?? l.a.DEFAULT, r?.trackNotificationFailure ?? !1);
     return (
         null != n
             ? _.playWithListener().then((e) => {

@@ -1157,7 +1157,7 @@ let t9 = new t6(
                                       : null,
                               maxBodyLines: 2,
                               onNotificationShow: () => {
-                                  i && (0, tD.Ak)(tR.cH, tR.pD), r();
+                                  i && (0, tD.Ak)(tR.cH, tR.pD, void 0, void 0, { trackNotificationFailure: !0 }), r();
                               },
                               onNotificationClick: () => {
                                   if (tE.default.isOverlayOOPEnabledForPid((0, Q.getPID)())) {
