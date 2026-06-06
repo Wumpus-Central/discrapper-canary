@@ -10,6 +10,7 @@ let i = {
     bounty_immediate_dismissal: 5,
     bounty_abandoned: 25,
     hangout_window_set: 100,
+    populated_clip_gallery_closed: 100,
 };
 var r = n(636537),
     s = n(228366),
