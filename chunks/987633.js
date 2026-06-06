@@ -52,20 +52,22 @@ var E = n(959129),
         (a.SEASONAL_GIFTING_2025_MIRAGE_SKU_ID = "1343751617328975954"),
         (a.VALENTINES_GIFTING_2026_FULL_HEARTS_SKU_ID = "1464017397081047081"),
         (a.VALENTINES_GIFTING_2026_FULL_HP_SKU_ID = "1464006538304684063"),
+        (a.WORLD_CUP_GIFTING_2026_AROUND_THE_WORLD_SKU_ID = "1509955522797768794"),
+        (a.WORLD_CUP_GIFTING_2026_GOAL_SKU_ID = "1509962431290675280"),
         a),
     U = n(67948),
     G = n(228366),
     R = n(793574),
     x = n(688810),
     L = n(532794),
-    k = n(852218),
-    O = n(788868);
+    O = n(852218),
+    k = n(788868);
 let v = "playground-gift-customization-banner",
     B = "playground-gift-customization-banner-promotion",
     M = S.VALENTINES_GIFTING_2026_FULL_HEARTS_SKU_ID;
 var P = n(336618),
-    V = n(95701);
-function D(e) {
+    D = n(95701);
+function V(e) {
     let { id: t, component_type: n, promotion_id: a, properties: r } = e;
     o.useEffect(() => {
         (0, l.Ak)(),
@@ -77,12 +79,12 @@ function D(e) {
 }
 var F = n(652215);
 let K = "playground-gift-icon",
-    j = (0, V.createChannelRecord)({ id: "1", guild_id: "1", type: F.rbe.GUILD_TEXT, name: "playground" });
+    j = (0, D.createChannelRecord)({ id: "1", guild_id: "1", type: F.rbe.GUILD_TEXT, name: "playground" });
 var w = n(720119),
     H = n(743477),
     W = n(40493);
 let z = () => {},
-    Y = (0, V.createChannelRecord)({ id: "1", guild_id: "1", type: F.rbe.GUILD_TEXT, name: "playground" }),
+    Y = (0, D.createChannelRecord)({ id: "1", guild_id: "1", type: F.rbe.GUILD_TEXT, name: "playground" }),
     $ = "playground-gift-plan-selection-card-banner",
     Z = "playground-gift-plan-selection-card-banner-promotion",
     X = S.VALENTINES_GIFTING_2026_FULL_HEARTS_SKU_ID;
@@ -227,7 +229,7 @@ let eR = {
                                                 n.e("56405"),
                                                 n.e("94307"),
                                                 n.e("67368"),
-                                                n.e("48971"),
+                                                n.e("95203"),
                                                 n.e("30419"),
                                                 n.e("58579"),
                                                 n.e("20442"),
@@ -466,7 +468,7 @@ let eR = {
                             p = b(d.C.NAGBAR),
                             u = p?.properties.oneofKind === "nagbar" ? p.properties.nagbar : null;
                         return (
-                            D(
+                            V(
                                 ((n = {
                                     body: (t = { body: o, ctaLabel: r, helpArticleId: l }).body,
                                     ctaLabel: t.ctaLabel,
@@ -514,7 +516,7 @@ let eR = {
                     component: function (e) {
                         let { body: t, assetUrl: n } = e,
                             a = b(d.C.PAYMENT_MODAL_BANNER);
-                        D(
+                        V(
                             (function (e, t) {
                                 let { body: n, assetUrl: a } = e,
                                     o = { assetUrl: a, body: n },
@@ -537,7 +539,7 @@ let eR = {
                                 variant: "expressive",
                                 size: "md",
                                 text: "Open Payment Modal",
-                                onClick: () => (0, L.A)({ subscriptionTier: O.pe.TIER_2, analyticsLocations: o }),
+                                onClick: () => (0, L.A)({ subscriptionTier: k.pe.TIER_2, analyticsLocations: o }),
                             }),
                         });
                     },
@@ -600,7 +602,7 @@ let eR = {
                             { header: r, body: l, buttonCopy: p, assetUrl: u } = e,
                             c = b(d.C.PREMIUM_TAB_POPOVER),
                             m = c?.properties.oneofKind === "premiumTabPopover" ? c.properties.premiumTabPopover : null;
-                        D(
+                        V(
                             ((n = {
                                 header: (t = { header: r, body: l, buttonCopy: p, assetUrl: u }).header,
                                 body: t.body,
@@ -665,7 +667,7 @@ let eR = {
                             s = b(d.C.PREMIUM_TAB_TOOLTIP),
                             p = s?.properties.oneofKind === "premiumTabTooltip" ? s.properties.premiumTabTooltip : null;
                         return (
-                            D(
+                            V(
                                 ((n = {
                                     header: (t = { header: o, body: r, assetUrl: l }).header,
                                     body: t.body,
@@ -771,7 +773,7 @@ let eR = {
                             label: "Background Asset URL",
                             type: "text",
                             defaultValue:
-                                "https://cdn.discordapp.com/assets/content/e1211660bfdc7f22e21f411490eda65161c0b3bfe85204920fcff660aa78ab08.png",
+                                "https://cdn.discordapp.com/assets/content/c0da396fa3e5373677f66f634ee2e5fb32f4d8b85063a908be7f975239145b12.png",
                         },
                         gradientStartColor: { label: "Gradient Start", type: "color", defaultValue: "#7873F5" },
                         gradientEndColor: { label: "Gradient End", type: "color", defaultValue: "#FF6AC2" },
@@ -840,7 +842,7 @@ let eR = {
                                             id: B,
                                             start_date: new Date(0).toISOString(),
                                             end_date: new Date("2099-01-01").toISOString(),
-                                            promotion_type: k.pt.GIFT_PROMOTION,
+                                            promotion_type: O.pt.GIFT_PROMOTION,
                                             flags: 0,
                                             partner_id: null,
                                             marketing_components: [l],
@@ -852,7 +854,7 @@ let eR = {
                                             consumedInboundPromotionId: null,
                                         }),
                                         G.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: [] }),
-                                        (0, L.A)({ isGift: !0, subscriptionTier: O.pe.TIER_2, analyticsLocations: t });
+                                        (0, L.A)({ isGift: !0, subscriptionTier: k.pe.TIER_2, analyticsLocations: t });
                                 },
                             }),
                         });
@@ -884,7 +886,7 @@ let eR = {
                             label: "Background Asset URL",
                             type: "text",
                             defaultValue:
-                                "https://cdn.discordapp.com/assets/content/aea39461d76e04fccff7ceb6176cea55cbbb80164731f836c3711b8b98ecf360.png",
+                                "https://cdn.discordapp.com/assets/content/3b0b1714d586a0d28a37b5f0a23f2f516a25971b57127af11027adb8e3e01a53.png",
                         },
                         gradientStartColor: { label: "Gradient Start", type: "color", defaultValue: "#7873F5" },
                         gradientEndColor: { label: "Gradient End", type: "color", defaultValue: "#FF6AC2" },
@@ -906,7 +908,7 @@ let eR = {
                             a = b(d.C.GIFT_ICON),
                             o = a?.properties.oneofKind === "giftIcon" ? a.properties.giftIcon : null;
                         return (
-                            D(
+                            V(
                                 ((t = {
                                     boxAnimationUrl: e.boxAnimationUrl,
                                     trinketAnimationUrl: e.trinketAnimationUrl,
@@ -1056,7 +1058,7 @@ let eR = {
                                             id: Z,
                                             start_date: new Date(0).toISOString(),
                                             end_date: new Date("2099-01-01").toISOString(),
-                                            promotion_type: k.pt.GIFT_PROMOTION,
+                                            promotion_type: O.pt.GIFT_PROMOTION,
                                             flags: 0,
                                             partner_id: null,
                                             marketing_components: [l],
@@ -1126,7 +1128,7 @@ let eR = {
                                     ? o.properties.giftReminderNagbar
                                     : null;
                         return (
-                            D(
+                            V(
                                 ((t = { body: { body: a }.body }),
                                 (n = A(Q, {
                                     oneofKind: "giftReminderNagbar",
