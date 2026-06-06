@@ -1,129 +1,130 @@
-t.d(n, { default: () => w });
-var a = t(627968),
-    o = t(64700),
-    r = t(834730),
-    s = t(173936),
-    i = t(691540),
-    l = t(857250),
-    c = t(97483),
-    _ = t(843472),
-    d = t(9578),
-    u = t(688810),
-    A = t(429913),
-    C = t(911269),
-    E = t(451909),
-    m = t(223863),
-    N = t(734057),
-    p = t(954571),
-    I = t(957565),
-    O = t(403362),
-    f = t(871123),
-    T = t(366523),
-    R = t(995393),
-    h = t(652215),
-    g = t(381941),
-    S = t(985018),
-    P = t(860738);
-function b(e) {
-    let { sku: n, guildId: t } = e,
-        i = (0, A.h)(n.applicationId),
-        l = o.useMemo(() => (0, f.OY)(t, n), [t, n]);
-    return (0, a.jsxs)("div", {
-        className: P.sq,
+a.d(t, { default: () => j });
+var i = a(627968),
+    s = a(64700),
+    n = a(834730),
+    l = a(173936),
+    o = a(691540),
+    r = a(857250),
+    c = a(97483),
+    d = a(720149),
+    u = a(9578),
+    m = a(688810),
+    C = a(429913),
+    p = a(953832),
+    k = a(451909),
+    _ = a(223863),
+    x = a(734057),
+    h = a(174459),
+    f = a(957565),
+    g = a(403362),
+    N = a(871123),
+    E = a(366523),
+    A = a(995393),
+    S = a(652215),
+    w = a(381941),
+    I = a(375708),
+    O = a(860738);
+function P(e) {
+    let { sku: t, guildId: a } = e,
+        o = (0, C.h)(t.applicationId),
+        r = s.useMemo(() => (0, N.OY)(a, t), [a, t]);
+    return (0, i.jsxs)("div", {
+        className: O.sq,
         children: [
-            (0, a.jsxs)("div", {
-                className: P.kx,
+            (0, i.jsxs)("div", {
+                className: O.kx,
                 children: [
-                    (0, a.jsx)(d.A, {
-                        title: n.name,
-                        href: l,
-                        children: (0, a.jsx)(r.E, {
+                    (0, i.jsx)(u.A, {
+                        title: t.name,
+                        href: r,
+                        children: (0, i.jsx)(n.E, {
                             variant: "text-md/medium",
                             color: "text-link",
                             lineClamp: 1,
-                            children: n.name,
+                            children: t.name,
                         }),
                     }),
-                    (0, a.jsxs)("div", {
-                        className: P.Bo,
+                    (0, i.jsxs)("div", {
+                        className: O.Bo,
                         children: [
-                            (0, a.jsx)(s.q, { size: "xs", color: "currentColor", className: P.ds }),
-                            (0, a.jsx)(r.E, {
+                            (0, i.jsx)(l.q, { size: "xs", color: "currentColor", className: O.ds }),
+                            (0, i.jsx)(n.E, {
                                 variant: "text-sm/medium",
                                 color: "text-muted",
-                                children: S.intl.formatToPlainString(S.t["CqpEC+"], { applicationName: i?.name }),
+                                children: I.intl.formatToPlainString(I.t["CqpEC+"], { applicationName: o?.name }),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, a.jsx)(T.e, {
-                containerClassName: P.wP,
-                foregroundImageClassName: P.wP,
-                backgroundImageClassName: P.wP,
-                sku: n,
+            (0, i.jsx)(E.e, {
+                containerClassName: O.wP,
+                foregroundImageClassName: O.wP,
+                backgroundImageClassName: O.wP,
+                sku: t,
                 shape: "square",
             }),
         ],
     });
 }
-function w(e) {
-    let { sku: n, guildId: t, source: r, onClose: d, analyticsLocations: A, analyticsContext: T, ...P } = e,
-        { analyticsLocations: w } = (0, u.Ay)(A ?? []),
-        y = o.useCallback(
-            async (e, a, o) => {
-                let { withMessage: r, closeAfterSend: s } = a;
-                o(!0);
+function j(e) {
+    let { sku: t, guildId: a, source: n, onClose: u, analyticsLocations: C, analyticsContext: E, ...O } = e,
+        { analyticsLocations: j } = (0, m.Ay)(C ?? []),
+        v = s.useCallback(
+            async (e, i, s) => {
+                let { withMessage: n, closeAfterSend: l } = i;
+                s(!0);
                 try {
-                    let a = (await Promise.all(e.map(m.pk))).filter(O.Vq);
-                    if (0 === a.length) return void o(!1);
-                    s && d();
-                    let u = (0, f.Q6)(t, n);
-                    for (let e of a) {
-                        let n = N.A.getChannel(e);
-                        null != n &&
-                            (await _.A.sendMessage(n.id, E.Ay.parse(n, u + (r ?? "")), !1, {
-                                location: g.Hx.SOCIAL_LAYER_STOREFRONT,
+                    let i = (await Promise.all(e.map(_.pk))).filter(g.Vq);
+                    if (0 === i.length) return void s(!1);
+                    l && u();
+                    let m = (0, N.Q6)(a, t);
+                    for (let e of i) {
+                        let t = x.A.getChannel(e);
+                        null != t &&
+                            (await d.A.sendMessage(t.id, k.Ay.parse(t, m + (n ?? "")), !1, {
+                                location: w.Hx.SOCIAL_LAYER_STOREFRONT,
                             }));
                     }
-                    (0, i.P0)((0, l.o)(S.intl.string(S.t.kwmYkt), c.Ck.SUCCESS));
+                    (0, o.P0)((0, r.o)(I.intl.string(I.t.kwmYkt), c.Ck.SUCCESS));
                 } catch (e) {
-                    (0, i.P0)((0, l.o)(S.intl.string(S.t.iufib1), c.Ck.FAILURE));
+                    (0, o.P0)((0, r.o)(I.intl.string(I.t.iufib1), c.Ck.FAILURE));
                 } finally {
-                    o(!1);
+                    s(!1);
                 }
             },
-            [d, t, n],
+            [u, a, t],
         ),
-        D = o.useMemo(
+        y = s.useMemo(
             () => [
                 {
                     variant: "secondary",
                     text: void 0,
                     onClick: () => {
-                        p.default.track(h.HAw.SLAYER_STOREFRONT_FORWARD_MODAL_ELEMENT_CLICKED, {
-                            slayer_storefront_session_id: T?.sessionId,
-                            guild_id: t,
-                            sku_id: n.id,
-                            cta_type: R.Ng.COPY_LINK_BUTTON,
-                            location_stack: w,
+                        h.default.track(S.HAw.SLAYER_STOREFRONT_FORWARD_MODAL_ELEMENT_CLICKED, {
+                            slayer_storefront_session_id: E?.sessionId,
+                            guild_id: a,
+                            application_id: t.applicationId,
+                            sku_id: t.id,
+                            cta_type: A.Ng.COPY_LINK_BUTTON,
+                            location_stack: j,
                         }),
-                            (0, I.C)((0, f.OY)(t, n), () =>
-                                (0, i.P0)((0, l.o)(S.intl.string(S.t["L/PwZf"]), c.Ck.SUCCESS)),
+                            (0, f.C)((0, N.OY)(a, t), () =>
+                                (0, o.P0)((0, r.o)(I.intl.string(I.t["L/PwZf"]), c.Ck.SUCCESS)),
                             );
                     },
-                    icon: s.q,
+                    icon: l.q,
                 },
             ],
-            [t, n, T?.sessionId, w],
+            [a, t, E?.sessionId, j],
         );
-    return (0, a.jsx)(C.ForwardModal, {
-        ...P,
-        onClose: d,
-        source: r,
-        customPreview: (0, a.jsx)(b, { sku: n, guildId: t }),
-        customSubtitle: S.intl.string(S.t.yiaXeN),
-        customSendHandler: y,
-        additionalActions: D,
+    return (0, i.jsx)(p.ForwardModal, {
+        ...O,
+        onClose: u,
+        source: n,
+        customPreview: (0, i.jsx)(P, { sku: t, guildId: a }),
+        customSubtitle: I.intl.string(I.t.yiaXeN),
+        customSendHandler: v,
+        additionalActions: y,
     });
 }
