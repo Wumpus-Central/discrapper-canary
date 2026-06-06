@@ -5263,8 +5263,7 @@ class rq extends s.PureComponent {
             needSubscriptionToAccess: t,
             channelIsContentGated: l,
             spoilerGatingChannelId: s,
-            inCall: a,
-            showCall: r,
+            showCall: a,
         } = this.props;
         if ((o()(null != e, "Missing channel in Channel.renderChat"), t))
             return (o()(null != n, "premium channels must exist within a guild"),
@@ -5273,7 +5272,7 @@ class rq extends s.PureComponent {
                 : (0, i.jsx)(ls.H, { guildId: n.id, children: (0, i.jsx)(lf, { channelId: e.id, guildId: n.id }) });
         if (l) return (0, i.jsx)(rI.A, { guild: n, channelId: e.id });
         if (null != s) return (0, i.jsx)(iW.A, { guild: n, channelId: s });
-        if (e.isGuildVocal() || (a && e.isVocalThread() && r)) return null;
+        if (e.isGuildVocal() || (e.isVocalThread() && a)) return null;
         if (e.isDirectory())
             return (
                 o()(null != n, "directory channels must exist within a guild"), (0, i.jsx)(td, { channel: e, guild: n })
