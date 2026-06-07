@@ -1,19 +1,19 @@
-r.d(t, { CheckoutRootProvider: () => g });
+r.d(t, { CheckoutRootProvider: () => P });
 var n = r(627968),
-    l = r(64700),
-    a = r(688810),
-    i = r(795791),
-    u = r(615310),
+    u = r(64700),
+    l = r(688810),
+    a = r(795791),
+    i = r(615310),
     s = r(192308),
     o = r(139033),
     c = r(626584),
     d = r(174459),
-    h = r(38405),
-    p = r(71804),
-    f = r(652215),
+    p = r(38405),
+    f = r(71804),
+    h = r(652215),
     m = r(375708);
 let y = new c.A("CheckoutErrorBoundary.tsx");
-class I extends l.PureComponent {
+class I extends u.PureComponent {
     state = { error: null, info: null };
     closeCheckoutAndShowAlert() {
         (0, s.closeAllModals)(),
@@ -24,7 +24,7 @@ class I extends l.PureComponent {
             });
     }
     getCrashedFlag(e) {
-        return e instanceof p.v
+        return e instanceof f.v
             ? "rethrow" === e.errorHandlingBehavior
             : "rethrow" === this.props.errorHandlingBehavior;
     }
@@ -32,10 +32,10 @@ class I extends l.PureComponent {
         let {
                 loadId: r,
                 selectedSkuId: n,
-                selectedPlanId: l,
-                skuIds: a,
-                isGift: i,
-                purchaseType: u,
+                selectedPlanId: u,
+                skuIds: l,
+                isGift: a,
+                purchaseType: i,
                 locationStack: s,
                 additionalAnalyticsData: o,
             } = this.props,
@@ -43,14 +43,14 @@ class I extends l.PureComponent {
             d = {
                 loadId: r,
                 selectedSkuId: n,
-                selectedPlanId: l,
-                isGift: i,
-                purchaseType: u,
-                skuIds: a,
+                selectedPlanId: u,
+                isGift: a,
+                purchaseType: i,
+                skuIds: l,
                 locationStack: s,
-                ...(e instanceof p.v ? { checkoutErrorExtraInformation: e.extraSentryInformation } : {}),
+                ...(e instanceof f.v ? { checkoutErrorExtraInformation: e.extraSentryInformation } : {}),
             },
-            f = {
+            h = {
                 tags: {
                     app_context: "billing",
                     checkout_error: "true",
@@ -60,21 +60,21 @@ class I extends l.PureComponent {
                 extra: { ...d, ...(o ?? {}), ...(null != t ? { reactErrorInfo: t } : {}) },
             };
         return (
-            h.A.captureException(e, f),
+            p.A.captureException(e, h),
             y.error("Checkout error occurred:", { error: e, additionalErrorContext: d }),
-            { sentryErrorOptions: f }
+            { sentryErrorOptions: h }
         );
     }
     emitPaymentFlowErrorAnalytics(e) {
         let t = this.getCrashedFlag(e),
-            { loadId: r, locationStack: n, additionalAnalyticsData: l } = this.props,
-            a = "string" == typeof e ? e : e.message;
-        d.default.track(f.HAw.PAYMENT_FLOW_ERROR, {
+            { loadId: r, locationStack: n, additionalAnalyticsData: u } = this.props,
+            l = "string" == typeof e ? e : e.message;
+        d.default.track(h.HAw.PAYMENT_FLOW_ERROR, {
             load_id: r,
             crashed: t,
-            error_message: a,
+            error_message: l,
             location_stack: n ?? [],
-            ...l,
+            ...u,
         });
     }
     componentDidCatch(e, t) {
@@ -83,14 +83,14 @@ class I extends l.PureComponent {
             (this.emitPaymentFlowErrorAnalytics(e),
             this.setState({ error: e, info: t }),
             null != this.props.onUnhandledError && this.props.onUnhandledError(e, t, r),
-            e instanceof p.v)
+            e instanceof f.v)
         ) {
             if ("close-and-alert" === e.errorHandlingBehavior) this.closeCheckoutAndShowAlert();
             else throw e;
             return;
         }
         if ("close-and-alert" === this.props.errorHandlingBehavior) this.closeCheckoutAndShowAlert();
-        else if ("rethrow" === this.props.errorHandlingBehavior) throw e;
+        else throw (this.props.errorHandlingBehavior, e);
     }
     render() {
         return null != this.state.error
@@ -100,28 +100,28 @@ class I extends l.PureComponent {
             : this.props.children;
     }
 }
-var v = r(426398),
-    x = r(738909),
-    S = r(571878),
-    E = r(611333),
-    C = r(783327),
-    k = r(788868);
-function g(e) {
+var S = r(426398),
+    v = r(738909),
+    E = r(571878),
+    w = r(611333),
+    _ = r(783327),
+    C = r(788868);
+function P(e) {
     let {
             stepConfigs: t,
             breadcrumbs: r,
-            loadId: a,
+            loadId: l,
             discoverySessionId: s,
-            purchaseType: o = f.VVm.SUBSCRIPTION,
+            purchaseType: o = h.VVm.SUBSCRIPTION,
             overrideCustomCheckoutFlow: c,
             ...d
         } = e,
-        h = JSON.stringify(d.skuIDs),
-        p = l.useMemo(() => d.skuIDs, [h]),
-        m = (0, i.$w)(),
-        y = l.useMemo(
+        p = JSON.stringify(d.skuIDs),
+        f = u.useMemo(() => d.skuIDs, [p]),
+        m = (0, a.$w)(),
+        y = u.useMemo(
             () => ({
-                skuIds: p,
+                skuIds: f,
                 isGift: d.isGift ?? !1,
                 referralTrialOfferId: d.referralTrialOfferId ?? null,
                 activeSubscription: d.activeSubscription ?? null,
@@ -132,10 +132,10 @@ function g(e) {
                 customCheckoutFlow: c ?? m,
                 unifiedCheckoutFlow: d.unifiedCheckoutFlow,
                 paymentGateway: d.paymentGateway,
-                applicationId: d.applicationId ?? k.tv,
+                applicationId: d.applicationId ?? C.tv,
             }),
             [
-                p,
+                f,
                 o,
                 d.isGift,
                 d.referralTrialOfferId,
@@ -150,30 +150,30 @@ function g(e) {
                 d.paymentGateway,
             ],
         );
-    return (0, n.jsx)(u.mz, {
+    return (0, n.jsx)(i.mz, {
         stepConfigs: t,
         breadcrumbs: r,
-        children: (0, n.jsx)(E.P, {
-            loadId: a,
+        children: (0, n.jsx)(w.P, {
+            loadId: l,
             discoverySessionId: s,
             checkoutInitParameters: y,
-            children: (0, n.jsx)(w, { ...d, skuIDs: p, purchaseType: o }),
+            children: (0, n.jsx)(k, { ...d, skuIDs: f, purchaseType: o }),
         }),
     });
 }
-function w(e) {
-    let { errorHandlingBehavior: t = "rethrow", onUnhandledError: r, skuIDs: i, children: u } = e,
-        { paymentSources: s } = (0, v.jm)(),
+function k(e) {
+    let { errorHandlingBehavior: t = "rethrow", onUnhandledError: r, skuIDs: a, children: i } = e,
+        { paymentSources: s } = (0, S.jm)(),
         {
             contextMetadata: o,
             unifiedCheckoutFlow: c,
             purchaseType: d,
-            isGift: h,
-            selectedSkuId: p,
-            selectedPlanId: f,
+            isGift: p,
+            selectedSkuId: f,
+            selectedPlanId: h,
             paymentSourceId: m,
             paymentGateway: y,
-        } = (0, S.t4)((e) => ({
+        } = (0, E.t4)((e) => ({
             contextMetadata: e.contextMetadata,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
             purchaseType: e.purchaseType,
@@ -183,26 +183,26 @@ function w(e) {
             paymentSourceId: e.paymentSourceId,
             paymentGateway: e.paymentGateway,
         })),
-        E = null != m && null != s[m] ? s[m]?.type : null,
-        k = l.useMemo(
-            () => ({ payment_source_id: m, payment_gateway: y, payment_source_type: E, checkout_flow: c }),
-            [m, y, E, c],
+        w = null != m && null != s[m] ? s[m]?.type : null,
+        C = u.useMemo(
+            () => ({ payment_source_id: m, payment_gateway: y, payment_source_type: w, checkout_flow: c }),
+            [m, y, w, c],
         ),
-        g = (0, a.Db)();
-    return (0, n.jsx)(x.yv, {
-        children: (0, n.jsx)(C.R, {
+        P = (0, l.Db)();
+    return (0, n.jsx)(v.yv, {
+        children: (0, n.jsx)(_.R, {
             children: (0, n.jsx)(I, {
                 errorHandlingBehavior: t,
-                locationStack: g,
+                locationStack: P,
                 onUnhandledError: r,
                 loadId: o.loadId,
-                selectedSkuId: p ?? null,
-                selectedPlanId: f ?? null,
-                isGift: h,
-                skuIds: i,
+                selectedSkuId: f ?? null,
+                selectedPlanId: h ?? null,
+                isGift: p,
+                skuIds: a,
                 purchaseType: d,
-                additionalAnalyticsData: k,
-                children: u,
+                additionalAnalyticsData: C,
+                children: i,
             }),
         }),
     });

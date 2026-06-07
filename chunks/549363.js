@@ -13,37 +13,37 @@ var n = i(627968),
     A = i(834730),
     h = i(228366),
     E = i(661439),
-    T = i(73825),
-    x = i(928039),
-    S = i(753390),
+    S = i(73825),
+    T = i(928039),
+    x = i(753390),
     p = i(235986),
     f = i(408278),
     N = i(921853),
     _ = i(320448),
-    C = i(375708),
-    I = i(632787);
+    I = i(375708),
+    C = i(632787);
 let b = s.forwardRef(function (e, t) {
     let { currentPageIndex: i, numPages: s, onChangePage: l, children: r, showPageCount: a = !0, ...o } = e,
         u = i >= s - 1,
         d = a
-            ? C.intl.format(C.t.MtpIwg, { currentPage: i + 1, numPages: s })
-            : C.intl.format(C.t.bKI77c, { currentPage: i + 1 });
+            ? I.intl.format(I.t.MtpIwg, { currentPage: i + 1, numPages: s })
+            : I.intl.format(I.t.bKI77c, { currentPage: i + 1 });
     return (0, n.jsxs)("div", {
         ref: t,
         ...o,
         children: [
             r,
             (0, n.jsx)("div", {
-                className: I.v,
+                className: C.v,
                 children: (0, n.jsxs)("div", {
-                    className: I.U,
+                    className: C.U,
                     children: [
                         (0, n.jsx)(f.K, {
                             variant: "icon-only",
                             icon: N.n,
                             disabled: i <= 0,
                             onClick: () => l(i - 1),
-                            "aria-label": C.intl.string(C.t.vgfxaA),
+                            "aria-label": I.intl.string(I.t.vgfxaA),
                         }),
                         (0, n.jsx)(A.E, { variant: "text-sm/medium", children: d }),
                         (0, n.jsx)(f.K, {
@@ -51,7 +51,7 @@ let b = s.forwardRef(function (e, t) {
                             icon: _._,
                             disabled: u,
                             onClick: () => l(i + 1),
-                            "aria-label": C.intl.string(C.t.XiOHRX),
+                            "aria-label": I.intl.string(I.t.XiOHRX),
                         }),
                     ],
                 }),
@@ -61,15 +61,15 @@ let b = s.forwardRef(function (e, t) {
 });
 i(321073), i(938796);
 var v = i(122817),
-    j = i(665260),
-    y = i(315069),
+    y = i(665260),
+    j = i(315069),
     O = i(32731),
     R = i(557009),
     L = i(202613),
     D = i(243217),
     P = i(652215),
     G = i(788868);
-class U extends y.A {
+class M extends j.A {
     id;
     createdAt;
     currency;
@@ -96,7 +96,7 @@ class U extends y.A {
         let t = null != e.payment_source ? L.Ay.createFromServer(e.payment_source) : null,
             i = null != e.sku ? O.A.createFromServer(e.sku) : null,
             n = null != e.subscription ? D.A.createFromServer(e.subscription) : null;
-        return new U({
+        return new M({
             id: e.id,
             createdAt: new Date(e.created_at),
             currency: e.currency,
@@ -173,7 +173,7 @@ class U extends y.A {
         );
     }
     get isGift() {
-        return j.Lt(this.flags, 1);
+        return y.Lt(this.flags, 1);
     }
     get isPremiumGift() {
         return this.isGift && Object.values(G.pe).includes(this.skuId);
@@ -181,7 +181,7 @@ class U extends y.A {
     get isGuildProductPurchase() {
         return (
             null != this.sku &&
-            (this.sku.productLine === P.EZt.GUILD_PRODUCT || j.Lt(this.sku.flags, v.d.GUILD_PRODUCT))
+            (this.sku.productLine === P.EZt.GUILD_PRODUCT || y.Lt(this.sku.flags, v.d.GUILD_PRODUCT))
         );
     }
     get isSoftDeletedProduct() {
@@ -191,21 +191,21 @@ class U extends y.A {
         return null != this.sku && this.sku.productLine === P.EZt.COLLECTIBLES;
     }
 }
-let M = [],
+let U = [],
     V = !1;
 function k(e) {
     let { payment: t } = e,
-        i = U.createFromServer(t),
-        n = M.findIndex((e) => e.id === t.id);
-    -1 === n ? (M.push(i), M.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (M[n] = i), (M = [...M]);
+        i = M.createFromServer(t),
+        n = U.findIndex((e) => e.id === t.id);
+    -1 === n ? (U.push(i), U.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (U[n] = i), (U = [...U]);
 }
 class w extends d.Ay.Store {
     static displayName = "PaymentStore";
     getPayment(e) {
-        return M.find((t) => t.id === e);
+        return U.find((t) => t.id === e);
     }
     getPayments() {
-        return M;
+        return U;
     }
     get hasFetchedPayments() {
         return V;
@@ -215,11 +215,11 @@ let F = new w(h.h, {
     BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
         let { payments: t } = e;
         for (let e of ((V = !0), t)) {
-            let t = U.createFromServer(e),
-                i = M.findIndex((t) => t.id === e.id);
-            -1 !== i ? (M[i] = t) : M.push(t);
+            let t = M.createFromServer(e),
+                i = U.findIndex((t) => t.id === e.id);
+            -1 !== i ? (U[i] = t) : U.push(t);
         }
-        M.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime()), (M = [...M]);
+        U.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime()), (U = [...U]);
     },
     BILLING_PAYMENTS_FETCH_FAIL: function () {
         V = !0;
@@ -227,7 +227,7 @@ let F = new w(h.h, {
     PAYMENT_UPDATE: k,
     BILLING_PAYMENT_FETCH_SUCCESS: k,
     LOGOUT: function () {
-        (M = []), (V = !1);
+        (U = []), (V = !1);
     },
 });
 var B = i(97352),
@@ -297,12 +297,12 @@ function eE(e) {
         ? (0, n.jsxs)("div", {
               className: eA.It,
               children: [
-                  (0, n.jsx)($.Anchor, { onClick: () => o(!1), children: C.intl.formatToPlainString(C.t.R0xzCN, {}) }),
+                  (0, n.jsx)($.Anchor, { onClick: () => o(!1), children: I.intl.formatToPlainString(I.t.R0xzCN, {}) }),
                   t.hasRefundInvoiceURLs
                       ? (0, n.jsx)($.Anchor, {
                             className: eA.oe,
                             onClick: () => o(!0),
-                            children: C.intl.formatToPlainString(C.t["3x6NGw"], {}),
+                            children: I.intl.formatToPlainString(I.t["3x6NGw"], {}),
                         })
                       : null,
                   null != r && "" !== r && (0, n.jsx)(ed.w, { type: "critical", children: r }),
@@ -312,7 +312,7 @@ function eE(e) {
           ? (0, n.jsxs)("div", {
                 className: eA.It,
                 children: [
-                    (0, n.jsx)($.Anchor, { href: d, children: C.intl.formatToPlainString(C.t.R0xzCN, {}) }),
+                    (0, n.jsx)($.Anchor, { href: d, children: I.intl.formatToPlainString(I.t.R0xzCN, {}) }),
                     null != c
                         ? c.map((e, t) =>
                               (0, n.jsx)(
@@ -320,7 +320,7 @@ function eE(e) {
                                   {
                                       className: eA.oe,
                                       href: e,
-                                      children: C.intl.formatToPlainString(C.t["3x6NGw"], {}),
+                                      children: I.intl.formatToPlainString(I.t["3x6NGw"], {}),
                                   },
                                   t,
                               ),
@@ -337,32 +337,32 @@ function eE(e) {
                           var e;
                           (e = t.paymentSource), eg(t, e);
                       },
-                      children: C.intl.formatToPlainString(C.t.onRIxS, {}),
+                      children: I.intl.formatToPlainString(I.t.onRIxS, {}),
                   }),
               })
             : null;
 }
-var eT = i(137177),
-    ex = i(250627),
-    eS = i(871109),
+var eS = i(137177),
+    eT = i(250627),
+    ex = i(871109),
     ep = i(571654),
     ef = i(411342),
     eN = i(179499),
     e_ = i(741231),
-    eC = i(95035),
-    eI = i(337095),
+    eI = i(95035),
+    eC = i(337095),
     eb = i(871123),
     ev = i(510022),
-    ej = i(68935),
-    ey = i(148355),
+    ey = i(68935),
+    ej = i(148355),
     eO = i(780964),
     eR = i(830543),
     eL = i(766075),
     eD = i(317525),
     eP = i(71393),
     eG = i(287809),
-    eU = i(295405),
-    eM = i(90165),
+    eM = i(295405),
+    eU = i(90165),
     eV = i(147925),
     ek = i(174459),
     ew = i(957565),
@@ -419,10 +419,10 @@ let eQ = (e) => {
 };
 function eJ(e) {
     let { guildId: t, guildProductListingId: i } = e,
-        l = (0, ex.Qi)(t, i, { requireCurrentGuild: !1 }),
+        l = (0, eT.Qi)(t, i, { requireCurrentGuild: !1 }),
         r = (0, ep.z)(l),
         a = (0, d.bG)([eP.A], () => eP.A.getGuild(t)),
-        o = l?.role_id != null && l?.attachments_count === 0 ? C.intl.string(C.t.H11qcT) : r,
+        o = l?.role_id != null && l?.attachments_count === 0 ? I.intl.string(I.t.H11qcT) : r,
         u = s.useCallback(async () => {
             a?.features.has(P.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)
                 ? await (0, e_.A)(P.BVt.GUILD_PRODUCT(t, i))
@@ -431,19 +431,19 @@ function eJ(e) {
         }, [a, t, i]);
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            null != o && (0, n.jsx)(eQ, { description: C.intl.string(C.t.lXPbJb), detail: o }),
+            null != o && (0, n.jsx)(eQ, { description: I.intl.string(I.t.lXPbJb), detail: o }),
             null != a &&
                 (0, n.jsx)(eQ, {
-                    description: C.intl.string(C.t.Wpn8z8),
-                    detail: (0, n.jsx)(eC.A, { onClick: u, children: a.name }),
+                    description: I.intl.string(I.t.Wpn8z8),
+                    detail: (0, n.jsx)(eI.A, { onClick: u, children: a.name }),
                 }),
         ],
     });
 }
 function e$(e) {
     let { guildId: t, guildProductListingId: i } = e,
-        s = (0, ex.Qi)(t, i, { requireCurrentGuild: !1 }),
-        l = (0, d.bG)([eS.A], () => eS.A.getGuildProductFetchState(i) === eS.e.FETCHING),
+        s = (0, eT.Qi)(t, i, { requireCurrentGuild: !1 }),
+        l = (0, d.bG)([ex.A], () => ex.A.getGuildProductFetchState(i) === ex.e.FETCHING),
         r = s?.role_id,
         a = (0, d.bG)([eD.A], () => (null != r ? eD.A.getRole(t, r) : void 0), [t, r]),
         o = (0, eN.A)({ guildId: t, productId: i }),
@@ -462,7 +462,7 @@ function e$(e) {
                                     variant: "text-xs/semibold",
                                     color: "text-default",
                                     className: eA.yE,
-                                    children: C.intl.string(C.t.hxawoy),
+                                    children: I.intl.string(I.t.hxawoy),
                                 }),
                                 (0, n.jsx)(W.$, { ...o }),
                             ],
@@ -475,7 +475,7 @@ function e$(e) {
                                     variant: "text-xs/semibold",
                                     color: "text-default",
                                     className: eA.yE,
-                                    children: C.intl.string(C.t.gWBNet),
+                                    children: I.intl.string(I.t.gWBNet),
                                 }),
                                 (0, n.jsx)(ef.A, { role: a }),
                             ],
@@ -528,7 +528,7 @@ class e0 extends s.PureComponent {
             rule: "SKU_STICKER_PACK",
             canRefund: () => {
                 let { payment: e } = this.props;
-                return null == e.sku || !(0, j.Lt)(e.sku.flags, P.d68.STICKER);
+                return null == e.sku || !(0, y.Lt)(e.sku.flags, P.d68.STICKER);
             },
         },
         {
@@ -542,7 +542,7 @@ class e0 extends s.PureComponent {
             rule: "GUILD_PRODUCT",
             canRefund: () => {
                 let { payment: e } = this.props;
-                return null == e.sku || !(0, j.Lt)(e.sku.flags, v.d.GUILD_PRODUCT);
+                return null == e.sku || !(0, y.Lt)(e.sku.flags, v.d.GUILD_PRODUCT);
             },
         },
         {
@@ -581,17 +581,17 @@ class e0 extends s.PureComponent {
         let { payment: e } = this.props;
         switch (e.status) {
             case P.__0.PENDING:
-                return (0, n.jsx)("span", { className: eA.Xg, children: C.intl.string(C.t.y7F0Re) });
+                return (0, n.jsx)("span", { className: eA.Xg, children: I.intl.string(I.t.y7F0Re) });
             case P.__0.FAILED:
-                return (0, n.jsx)("span", { className: eA.ob, children: C.intl.string(C.t.Yo4ru6) });
+                return (0, n.jsx)("span", { className: eA.ob, children: I.intl.string(I.t.Yo4ru6) });
             case P.__0.REFUNDED:
                 if (e.amountRefunded !== e.amount)
-                    return (0, n.jsx)("span", { className: eA.gD, children: C.intl.string(C.t.lYbZzz) });
-                return (0, n.jsx)("span", { className: eA.gD, children: C.intl.string(C.t.ZBb6NK) });
+                    return (0, n.jsx)("span", { className: eA.gD, children: I.intl.string(I.t.lYbZzz) });
+                return (0, n.jsx)("span", { className: eA.gD, children: I.intl.string(I.t.ZBb6NK) });
             case P.__0.REVERSED:
-                return (0, n.jsx)("span", { className: eA.ob, children: C.intl.string(C.t.YQv9Li) });
+                return (0, n.jsx)("span", { className: eA.ob, children: I.intl.string(I.t.YQv9Li) });
             case P.__0.CANCELED:
-                return (0, n.jsx)("span", { className: eA.ob, children: C.intl.string(C.t.ttkBhy) });
+                return (0, n.jsx)("span", { className: eA.ob, children: I.intl.string(I.t.ttkBhy) });
             default:
                 return null;
         }
@@ -600,14 +600,14 @@ class e0 extends s.PureComponent {
         let { payment: e, hasLinkedToApplication: t } = this.props;
         return (0, eb.bF)(e.sku) && e.status === P.__0.COMPLETED
             ? null != e.entitlements && e.entitlements.some((e) => e.isFulfilled())
-                ? (0, n.jsx)("span", { className: eA.gD, children: C.intl.string(C.t.Osji1u) })
+                ? (0, n.jsx)("span", { className: eA.gD, children: I.intl.string(I.t.Osji1u) })
                 : e.isGift
                   ? null != e.entitlements && e.entitlements.some((e) => null != e.gifterId)
-                      ? (0, n.jsx)("span", { className: eA.gD, children: C.intl.string(C.t.lIsIFo) })
-                      : (0, n.jsx)("span", { className: eA.Tf, children: C.intl.string(C.t["+tqSi3"]) })
+                      ? (0, n.jsx)("span", { className: eA.gD, children: I.intl.string(I.t.lIsIFo) })
+                      : (0, n.jsx)("span", { className: eA.Tf, children: I.intl.string(I.t["+tqSi3"]) })
                   : t
-                    ? (0, n.jsx)("span", { className: eA.Tf, children: C.intl.string(C.t.y7F0Re) })
-                    : (0, n.jsx)("span", { className: eA.Tf, children: C.intl.string(C.t.HHC5Z4) })
+                    ? (0, n.jsx)("span", { className: eA.Tf, children: I.intl.string(I.t.y7F0Re) })
+                    : (0, n.jsx)("span", { className: eA.Tf, children: I.intl.string(I.t.HHC5Z4) })
             : null;
     }
     renderStatus() {
@@ -625,11 +625,11 @@ class e0 extends s.PureComponent {
             children: (0, n.jsxs)("div", {
                 className: eA.bx,
                 children: [
-                    (0, n.jsx)("div", { children: C.intl.string(C.t["UQim+r"]) }),
+                    (0, n.jsx)("div", { children: I.intl.string(I.t["UQim+r"]) }),
                     (0, n.jsx)(eq, {
                         value: e.id,
-                        copyText: C.intl.string(C.t["Mdk9+A"]),
-                        copyFeedbackText: C.intl.string(C.t["7eIrA2"]),
+                        copyText: I.intl.string(I.t["Mdk9+A"]),
+                        copyFeedbackText: I.intl.string(I.t["7eIrA2"]),
                     }),
                 ],
             }),
@@ -667,13 +667,13 @@ class e0 extends s.PureComponent {
                                   children: [
                                       (0, n.jsx)(eZ, { description: e.description, cost: (0, eB.$g)(o - a, d) }),
                                       (0, n.jsx)(eZ, {
-                                          description: C.intl.string(C.t.QgWXht),
+                                          description: I.intl.string(I.t.QgWXht),
                                           cost: (0, eB.$g)(a, d),
                                       }),
                                   ],
                               })
                             : null,
-                        (0, n.jsx)(eZ, { description: C.intl.string(C.t.txajQG), cost: (0, eB.$g)(o, d) }),
+                        (0, n.jsx)(eZ, { description: I.intl.string(I.t.txajQG), cost: (0, eB.$g)(o, d) }),
                         e.isGuildProductPurchase &&
                             null != c &&
                             null != e.sku &&
@@ -682,11 +682,11 @@ class e0 extends s.PureComponent {
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
                                     (0, n.jsx)(eZ, {
-                                        description: C.intl.string(C.t["A+I0AP"]),
+                                        description: I.intl.string(I.t["A+I0AP"]),
                                         cost: (0, eB.$g)(u, d),
                                     }),
                                     (0, n.jsx)(eZ, {
-                                        description: C.intl.string(C.t.xER6Wi),
+                                        description: I.intl.string(I.t.xER6Wi),
                                         cost: (0, eB.$g)(o - u, d),
                                     }),
                                 ],
@@ -713,33 +713,33 @@ class e0 extends s.PureComponent {
         return t.status === P.__0.REFUNDED
             ? (0, n.jsxs)(s.Fragment, {
                   children: [
-                      (0, n.jsx)(q.H, { className: eA.mW, children: C.intl.string(C.t["gIGB/A"]) }),
+                      (0, n.jsx)(q.H, { className: eA.mW, children: I.intl.string(I.t["gIGB/A"]) }),
                       (0, n.jsx)("div", {
                           className: eA.iL,
                           children:
                               null != e
-                                  ? C.intl.format(C.t.Q1K9eg, { username: ez.Ay.getName(e) })
-                                  : C.intl.format(C.t.IBtGwC, { applicationName: l?.name }),
+                                  ? I.intl.format(I.t.Q1K9eg, { username: ez.Ay.getName(e) })
+                                  : I.intl.format(I.t.IBtGwC, { applicationName: l?.name }),
                       }),
                   ],
               })
             : t.isGift
               ? (0, n.jsxs)(s.Fragment, {
                     children: [
-                        (0, n.jsx)(q.H, { className: eA.mW, children: C.intl.string(C.t["gIGB/A"]) }),
+                        (0, n.jsx)(q.H, { className: eA.mW, children: I.intl.string(I.t["gIGB/A"]) }),
                         (0, n.jsx)("div", {
                             className: eA.iL,
                             children:
                                 null != e
-                                    ? C.intl.format(C.t.vfUW65, { username: ez.Ay.getName(e) })
-                                    : C.intl.string(C.t["18wIqp"]),
+                                    ? I.intl.format(I.t.vfUW65, { username: ez.Ay.getName(e) })
+                                    : I.intl.string(I.t["18wIqp"]),
                         }),
                         null == e &&
                             (0, n.jsx)("div", {
                                 className: eA.TP,
                                 children: (0, n.jsx)(W.$, {
                                     variant: "primary",
-                                    text: C.intl.string(C.t["jcSP+g"]),
+                                    text: I.intl.string(I.t["jcSP+g"]),
                                     onClick: () => (0, eL.openUserSettings)(eO.X.GIFT_PANEL),
                                 }),
                             }),
@@ -749,24 +749,24 @@ class e0 extends s.PureComponent {
                 ? null
                 : (0, n.jsxs)(s.Fragment, {
                       children: [
-                          (0, n.jsx)(q.H, { className: eA.mW, children: C.intl.string(C.t["gIGB/A"]) }),
+                          (0, n.jsx)(q.H, { className: eA.mW, children: I.intl.string(I.t["gIGB/A"]) }),
                           (0, n.jsx)("div", {
                               className: eA.iL,
                               children: i
-                                  ? C.intl.format(C.t.DQQCAw, { applicationName: l?.name, skuName: t.sku?.name })
-                                  : C.intl.format(C.t.ED2BqF, { applicationName: l?.name, skuName: t.sku?.name }),
+                                  ? I.intl.format(I.t.DQQCAw, { applicationName: l?.name, skuName: t.sku?.name })
+                                  : I.intl.format(I.t.ED2BqF, { applicationName: l?.name, skuName: t.sku?.name }),
                           }),
                           (0, n.jsx)("div", {
                               className: eA.TP,
                               children: i
                                   ? (0, n.jsx)(W.$, {
                                         variant: "primary",
-                                        text: C.intl.string(C.t.zoztQA),
+                                        text: I.intl.string(I.t.zoztQA),
                                         onClick: () => (0, es.A)(eX(r)),
                                     })
                                   : (0, n.jsx)(W.$, {
                                         variant: "primary",
-                                        text: C.intl.string(C.t["jCqvk/"]),
+                                        text: I.intl.string(I.t["jCqvk/"]),
                                         onClick: () => {
                                             null != t.sku &&
                                                 null != l &&
@@ -803,23 +803,23 @@ class e0 extends s.PureComponent {
             o = this.isPremium ? 5 : 14;
         return (
             (e = l.includes("SKU_TYPE")
-                ? C.intl.format(C.t["5lvoVS"], { supportURL: a })
+                ? I.intl.format(I.t["5lvoVS"], { supportURL: a })
                 : r
                   ? i.isPremiumSubscription || i.isPremiumGuildSubscription
-                      ? C.intl.format(C.t.EPYteX, { dateLimit: o, supportURL: a })
+                      ? I.intl.format(I.t.EPYteX, { dateLimit: o, supportURL: a })
                       : i.isGift
-                        ? C.intl.format(C.t["16eP/L"], { dateLimit: o, supportURL: a })
-                        : C.intl.format(C.t["1LDI4J"], { dateLimit: o, playtimeLimit: 2, supportURL: a })
+                        ? I.intl.format(I.t["16eP/L"], { dateLimit: o, supportURL: a })
+                        : I.intl.format(I.t["1LDI4J"], { dateLimit: o, playtimeLimit: 2, supportURL: a })
                   : i.isCollectible
-                    ? C.intl.string(C.t.s9TZM1)
+                    ? I.intl.string(I.t.s9TZM1)
                     : i.isGift
-                      ? C.intl.formatToPlainString(C.t.owlOWc, { dateLimit: o })
+                      ? I.intl.formatToPlainString(I.t.owlOWc, { dateLimit: o })
                       : i.isPremiumSubscription || i.isPremiumGuildSubscription
-                        ? C.intl.formatToPlainString(C.t.dk7vyL, { dateLimit: o })
-                        : C.intl.formatToPlainString(C.t.s4Kk0C, { dateLimit: o, playtimeLimit: 2 })),
+                        ? I.intl.formatToPlainString(I.t.dk7vyL, { dateLimit: o })
+                        : I.intl.formatToPlainString(I.t.s4Kk0C, { dateLimit: o, playtimeLimit: 2 })),
             (0, n.jsxs)(s.Fragment, {
                 children: [
-                    (0, n.jsx)(q.H, { className: eA.mW, children: C.intl.string(C.t["n/27pr"]) }),
+                    (0, n.jsx)(q.H, { className: eA.mW, children: I.intl.string(I.t["n/27pr"]) }),
                     (0, n.jsxs)("div", {
                         className: eA.iL,
                         children: [(0, n.jsx)("div", { children: e }), this.renderRefundActions(l)],
@@ -859,12 +859,12 @@ class e0 extends s.PureComponent {
                     children:
                         !i.isCollectible &&
                         this.renderRefundCriteria(
-                            C.intl.string(C.t.H0RNz4),
+                            I.intl.string(I.t.H0RNz4),
                             s,
-                            C.intl.formatToPlainString(C.t["7dtXa/"], { daysSincePurchase: this.daysSincePurchase }),
+                            I.intl.formatToPlainString(I.t["7dtXa/"], { daysSincePurchase: this.daysSincePurchase }),
                         ),
                 }),
-                (0, n.jsx)($.Anchor, { href: eX(t), children: C.intl.string(C.t.re5nOB) }),
+                (0, n.jsx)($.Anchor, { href: eX(t), children: I.intl.string(I.t.re5nOB) }),
             ],
         });
     }
@@ -889,31 +889,31 @@ class e0 extends s.PureComponent {
                 });
             else if (g.type === P.rzx.GUILD) {
                 if (null != u) {
-                    let e = u.interval === G.WT.YEAR ? C.t.V6UFQM : C.t["6oq128"];
-                    i.push(C.intl.format(e, { planName: u.name })), (s = u.skuId);
+                    let e = u.interval === G.WT.YEAR ? I.t.V6UFQM : I.t["6oq128"];
+                    i.push(I.intl.format(e, { planName: u.name })), (s = u.skuId);
                 }
             } else
-                g.type === P.rzx.APPLICATION &&
-                    (null != u && (s = u.skuId),
+                g.type,
+                    null != u && (s = u.skuId),
                     null != r
-                        ? i.push(C.intl.formatToPlainString(C.t["0wL/VI"], { tier: c?.name }))
-                        : i.push(C.intl.string(C.t["9czSYu"])));
+                        ? i.push(I.intl.formatToPlainString(I.t["0wL/VI"], { tier: c?.name }))
+                        : i.push(I.intl.string(I.t["9czSYu"]));
             (t = 0 !== i.length ? i.join(", ") : l.description),
-                (e = (0, n.jsx)(eT.A, {
+                (e = (0, n.jsx)(eS.A, {
                     className: eA.Sy,
                     guildClassName: eA.zA,
                     game: r,
                     guild: a,
-                    size: eT.M.XSMALL,
+                    size: eS.M.XSMALL,
                     skuId: s ?? c?.id,
                 }));
         } else if (null != c)
             if (
-                ((t = l.isGuildProductPurchase && l.isSoftDeletedProduct ? C.intl.string(C.t.O7uLmw) : c.name),
+                ((t = l.isGuildProductPurchase && l.isSoftDeletedProduct ? I.intl.string(I.t.O7uLmw) : c.name),
                 null != o)
             ) {
-                let t = (0, ej.Id)(o);
-                e = (0, n.jsx)(ey.A, {
+                let t = (0, ey.Id)(o);
+                e = (0, n.jsx)(ej.A, {
                     disableAnimation: !d,
                     isInteracting: d,
                     sticker: t,
@@ -930,12 +930,12 @@ class e0 extends s.PureComponent {
                               color: "currentColor",
                               className: eA.sV,
                           })
-                        : (0, n.jsx)(eT.A, {
+                        : (0, n.jsx)(eS.A, {
                               className: eA.Sy,
                               guildClassName: eA.zA,
                               game: r,
                               guild: a,
-                              size: eT.M.XSMALL,
+                              size: eS.M.XSMALL,
                               skuId: c.id,
                           });
         else (e = (0, n.jsx)(et.t, { size: "md", color: "currentColor", className: eA.Sy })), (t = l.description);
@@ -946,7 +946,7 @@ class e0 extends s.PureComponent {
             }),
             E = l.isGift
                 ? (0, n.jsx)(K.m, {
-                      text: C.intl.string(C.t.QddTpm),
+                      text: I.intl.string(I.t.QddTpm),
                       children: (0, n.jsx)(ei.o, { size: "md", color: "currentColor", className: eA.ez }),
                   })
                 : null;
@@ -971,10 +971,10 @@ class e0 extends s.PureComponent {
                                 messageType: en.Y.WARNING,
                                 action: (0, n.jsx)(W.$, {
                                     variant: "overlay-secondary",
-                                    text: C.intl.string(C.t.zoztQA),
+                                    text: I.intl.string(I.t.zoztQA),
                                     onClick: () => (0, es.A)(eX(i)),
                                 }),
-                                children: C.intl.string(C.t["3AvulN"]),
+                                children: I.intl.string(I.t["3AvulN"]),
                             })
                           : null != s &&
                             null != e.sku &&
@@ -989,7 +989,7 @@ class e0 extends s.PureComponent {
             children: (0, n.jsxs)("div", {
                 className: eA.WI,
                 children: [
-                    (0, n.jsx)(q.H, { className: eA.mW, children: C.intl.string(C.t.nyzoFb) }),
+                    (0, n.jsx)(q.H, { className: eA.mW, children: I.intl.string(I.t.nyzoFb) }),
                     this.renderPaymentBreakdown(),
                     this.renderGuildProductBenefits(),
                     this.renderInvoiceDownload(),
@@ -1044,20 +1044,20 @@ function e1(e) {
             applicationStatistics: g,
             gameApplication: m,
             paymentSources: A,
-        } = (0, d.cf)([eU.A, eM.A, eo.A], () => ({
-            applicationStatistics: null != o ? eM.A.getCurrentUserStatisticsForApplication(o) : null,
+        } = (0, d.cf)([eM.A, eU.A, eo.A], () => ({
+            applicationStatistics: null != o ? eU.A.getCurrentUserStatisticsForApplication(o) : null,
             gameApplication: eo.A.getApplication(o ?? "") ?? t.sku?.application,
-            paymentSources: eU.A.paymentSources,
+            paymentSources: eM.A.paymentSources,
         })),
         { hasAlreadyLinked: h } = (0, ea.RD)((0, eb.bF)(t.sku) ? m : void 0),
         E = (0, d.bG)([eo.A], () => (null != u ? eo.A.getApplication(u) : null));
     s.useEffect(() => {
-        c && null != u && (0, eI.TA)(u);
+        c && null != u && (0, eC.TA)(u);
     }, [u, c]);
-    let T = (0, d.bG)([eP.A], () => eP.A.getGuild(m?.guildId)),
-        x = a ? m : void 0,
-        S = t.subscription,
-        p = (0, d.bG)([B.A], () => (null != S && S.type !== P.rzx.PREMIUM ? B.A.get(S.items[0].planId) : null)),
+    let S = (0, d.bG)([eP.A], () => eP.A.getGuild(m?.guildId)),
+        T = a ? m : void 0,
+        x = t.subscription,
+        p = (0, d.bG)([B.A], () => (null != x && x.type !== P.rzx.PREMIUM ? B.A.get(x.items[0].planId) : null)),
         f = (0, d.bG)([eG.default], () => {
             let e = t.isGift ? t.entitlements?.find((e) => e.user?.id != null && null != e.gifterId) : null;
             return null == e ? null : (eG.default.getUser(e.user?.id ?? null) ?? e?.user);
@@ -1065,9 +1065,9 @@ function e1(e) {
         { analyticsLocations: N } = (0, er.Ay)(el.A.BILLING_SETTINGS_BILLING);
     return (0, n.jsx)(e0, {
         applicationStatistics: g,
-        application: c ? E : x,
+        application: c ? E : T,
         analyticsLocations: N,
-        guild: T,
+        guild: S,
         stickerPack: null,
         paymentSources: A,
         locale: i,
@@ -1093,13 +1093,13 @@ function e3(e) {
             (e) => {
                 g(e);
                 let i = t[t.length - 1].id;
-                e >= a - 2 && m !== i && ((0, S.CK)(10, i), A(i));
+                e >= a - 2 && m !== i && ((0, x.CK)(10, i), A(i));
             },
             [t, a, m],
         ),
-        T = (0, x.A)("billing-history", o);
+        S = (0, T.A)("billing-history", o);
     return (0, n.jsx)(u.hD, {
-        navigator: T,
+        navigator: S,
         children: (0, n.jsx)(u.PR, {
             children: (e) => {
                 let { ref: t, ...s } = e;
@@ -1132,7 +1132,7 @@ class e6 extends s.PureComponent {
     }
     componentDidMount() {
         h.h.wait(() => {
-            (0, E.X)(), (0, S.CK)(30);
+            (0, E.X)(), (0, x.CK)(30);
         });
     }
     renderPremiumExternalSubscription(e) {
@@ -1143,11 +1143,11 @@ class e6 extends s.PureComponent {
                 children: [
                     (0, n.jsx)("div", {
                         className: e2.BF,
-                        children: C.intl.format(C.t["6mIX6s"], { paymentGatewayName: em.qm[e.paymentGateway] }),
+                        children: I.intl.format(I.t["6mIX6s"], { paymentGatewayName: em.qm[e.paymentGateway] }),
                     }),
                     (0, n.jsx)("div", {
                         className: e2.Q2,
-                        children: C.intl.format(C.t.eG0uZB, {
+                        children: I.intl.format(I.t.eG0uZB, {
                             paymentGatewayName: em.qm[e.paymentGateway],
                             billingHistoryLink: (0, Y.tW)(e.paymentGateway, "BILLING_HISTORY"),
                         }),
@@ -1177,15 +1177,15 @@ class e6 extends s.PureComponent {
                                                   children: [
                                                       (0, n.jsx)("div", {
                                                           className: eA.p6,
-                                                          children: C.intl.string(C.t["5t11BV"]),
+                                                          children: I.intl.string(I.t["5t11BV"]),
                                                       }),
                                                       (0, n.jsx)("div", {
                                                           className: e2.Ir,
-                                                          children: C.intl.string(C.t.yAAPb2),
+                                                          children: I.intl.string(I.t.yAAPb2),
                                                       }),
                                                       (0, n.jsx)("div", {
                                                           className: eA.vj,
-                                                          children: C.intl.string(C.t["6MqHXV"]),
+                                                          children: I.intl.string(I.t["6MqHXV"]),
                                                       }),
                                                   ],
                                               }),
@@ -1198,7 +1198,7 @@ class e6 extends s.PureComponent {
                             : (0, n.jsx)(A.E, {
                                   variant: "text-sm/normal",
                                   color: "text-subtle",
-                                  children: C.intl.string(C.t.GqvDkk),
+                                  children: I.intl.string(I.t.GqvDkk),
                               }),
                   ],
               })
@@ -1239,7 +1239,7 @@ function e7(e) {
     s.useEffect(() => {
         o() ||
             h.h.wait(() => {
-                r.forEach((e) => (0, T.ur)(e, void 0, void 0, !0, void 0));
+                r.forEach((e) => (0, S.ur)(e, void 0, void 0, !0, void 0));
             });
     }, [o, r]);
     let c = (0, d.bG)([F], () => F.hasFetchedPayments);

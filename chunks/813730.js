@@ -122,8 +122,8 @@ let H = {
 var G = n(20742),
     B = n(688810),
     K = n(197510),
-    W = n(848149),
-    V = n(937008),
+    V = n(848149),
+    W = n(937008),
     Y = n(106778),
     Z = n(228366),
     z = n(213530),
@@ -209,7 +209,7 @@ function em(e) {
             giftMessageError: a,
             isSendingMessage: o,
             giftingOrigin: u,
-        } = (0, V.Pv)(),
+        } = (0, W.Pv)(),
         c = (0, ee.bG)([et.A], () => et.A.useReducedMotion),
         d = h.useRef(null),
         C = (0, ei.t4)((e) => e.selectedSkuId),
@@ -281,7 +281,7 @@ function eG(e) {
             previewHeaderClassName: s,
             hideProfilePreview: a,
         } = e,
-        { giftRecipient: o, giftRecipientError: u } = (0, V.Pv)(),
+        { giftRecipient: o, giftRecipientError: u } = (0, W.Pv)(),
         c = (0, P.bG)([eU.default], () => eU.default.getCurrentUser()),
         d = ev.Ay.canUseShopDiscounts(c),
         C = (0, eR.Ay)(o?.id),
@@ -401,10 +401,10 @@ function eG(e) {
 }
 var eB = n(783878),
     eK = n(966327),
-    eW = n(427262);
-let eV = (e) => {
+    eV = n(427262);
+let eW = (e) => {
     let { selectedSkuId: t, validateSelectedGift: n, className: l, recipients: r } = e,
-        { giftRecipient: s, setGiftRecipient: a } = (0, V.Pv)();
+        { giftRecipient: s, setGiftRecipient: a } = (0, W.Pv)();
     return null == t
         ? null
         : (0, i.jsx)("div", {
@@ -421,7 +421,7 @@ let eV = (e) => {
                   options: r.map((e) => ({
                       id: e.id,
                       value: e.id,
-                      label: `${eW.Ay.getUserTag(e)}`,
+                      label: `${eV.Ay.getUserTag(e)}`,
                       leading: (0, i.jsx)(eK.A, { user: e, size: eg._3.SIZE_20 }),
                   })),
               }),
@@ -487,7 +487,7 @@ let e3 = (0, h.createContext)({
 });
 function e5(e) {
     let { paymentModalProps: t, isGift: n, children: l } = e,
-        r = (0, W.J)(),
+        r = (0, V.J)(),
         s = (0, h.useMemo)(
             () => ({
                 ...t,
@@ -535,7 +535,7 @@ let e9 = (e) => {
                                 giftRecipient: u,
                                 giftingOrigin: c,
                                 setValidatingGiftRecipient: d,
-                            } = (0, V.Pv)(),
+                            } = (0, W.Pv)(),
                             { selectedSkuId: C, checkoutInvoicePreview: _ } = (0, ei.t4)((e) => ({
                                 selectedSkuId: e.selectedSkuId,
                                 checkoutInvoicePreview: e.checkoutInvoicePreview,
@@ -593,7 +593,7 @@ let e9 = (e) => {
                                       })
                                     : (0, i.jsxs)("div", {
                                           children: [
-                                              (0, i.jsx)(eV, {
+                                              (0, i.jsx)(eW, {
                                                   selectedSkuId: C,
                                                   recipients: m,
                                                   className: e7.uh,
@@ -739,7 +739,7 @@ let e9 = (e) => {
         },
         CustomHeaderComponent: (e) => {
             let { step: t } = e,
-                { isGift: n } = (0, V.Pv)();
+                { isGift: n } = (0, W.Pv)();
             return n ? (0, i.jsx)(te, { step: t }) : null;
         },
         CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, i.jsx)(e9, { ...e }), options: J },
@@ -753,7 +753,7 @@ let ts = {
     CHECKOUT_FLOW: r.C.PREMIUM_APPS_OTP_CHECKOUT,
     CHECKOUT_STEPS: {
         [o.pn.GIFT_CUSTOMIZATION]: (e) => {
-            let { customGiftMessage: t = "", setCustomGiftMessage: n, giftRecipient: l } = (0, V.Pv)(),
+            let { customGiftMessage: t = "", setCustomGiftMessage: n, giftRecipient: l } = (0, W.Pv)(),
                 s = (0, ei.t4)((e) => e.selectedSkuId),
                 a = (0, P.bG)([eU.default], () => eU.default.getCurrentUser()),
                 o = (0, P.bG)([tn.A], () => (null != s ? tn.A.get(s) : null), [s]),
@@ -787,7 +787,7 @@ let ts = {
                     (0, i.jsxs)("div", {
                         className: ti.P6,
                         children: [
-                            (0, i.jsx)(eV, { recipients: u, selectedSkuId: s, validateSelectedGift: C }),
+                            (0, i.jsx)(eW, { recipients: u, selectedSkuId: s, validateSelectedGift: C }),
                             (0, i.jsx)(eJ.A, {
                                 onTextChange: (e) => n?.(e),
                                 pendingText: t,
@@ -828,7 +828,7 @@ function tT(e) {
         })),
         { application: s } = (0, en.V)(),
         a = (0, er.gU)(),
-        { isGift: o, giftRecipient: u } = (0, V.Pv)();
+        { isGift: o, giftRecipient: u } = (0, W.Pv)();
     O()(null != l, "Expected selectedSkuId"), O()(null != s, "Expected application");
     let c = a[l];
     O()(null != c, "Expected sku");
@@ -945,7 +945,7 @@ let ty = {
                             setSoundEffect: p,
                             giftingOrigin: E,
                             additionalUserIds: T,
-                        } = (0, V.Pv)(),
+                        } = (0, W.Pv)(),
                         m = (0, ei.t4)((e) => e.selectedSkuId),
                         { application: I } = (0, en.V)(),
                         O = (0, P.bG)([eU.default], () => eU.default.getCurrentUser()),
@@ -1025,7 +1025,7 @@ let ty = {
                                 children: [
                                     null != c && (E === ep.vQ.USER_PROFILE_WISHLIST || E === ep.vQ.DM_CHANNEL_WISHLIST)
                                         ? (0, i.jsx)(e0.Z, { giftRecipient: c })
-                                        : (0, i.jsx)(eV, { selectedSkuId: m, validateSelectedGift: x, recipients: A }),
+                                        : (0, i.jsx)(eW, { selectedSkuId: m, validateSelectedGift: x, recipients: A }),
                                     (0, i.jsx)(eJ.A, {
                                         onTextChange: (e) => u?.(e),
                                         pendingText: o,
@@ -1171,8 +1171,8 @@ var tk = n(717925),
     tB = n(715054);
 (0, s.A)();
 var tK = n(136857),
-    tW = n(158317),
-    tV = n(566980),
+    tV = n(158317),
+    tW = n(566980),
     tY = n(855104),
     tZ = n(120700),
     tz = n(742810),
@@ -1388,8 +1388,7 @@ let ne = (0, h.createContext)({
                                                                       ...d,
                                                                       duration_ms: n,
                                                                   })
-                                                                : e === e2.HAw.PAYMENT_FLOW_FAILED &&
-                                                                  E.default.track(e2.HAw.PAYMENT_FLOW_FAILED, {
+                                                                : E.default.track(e2.HAw.PAYMENT_FLOW_FAILED, {
                                                                       ...d,
                                                                       duration_ms: n,
                                                                       ...(null != t
@@ -1418,7 +1417,7 @@ let ne = (0, h.createContext)({
                                         (_.current = C),
                                             T(e2.HAw.PAYMENT_FLOW_COMPLETED),
                                             n((e) => {
-                                                c(tV.h.COMPLETED),
+                                                c(tW.h.COMPLETED),
                                                     s(o.pn.CONFIRM, { fulfillment: { entitlements: e } });
                                             });
                                     }, [n, c, C, T, s]),
@@ -1431,7 +1430,7 @@ let ne = (0, h.createContext)({
                                         () =>
                                             (function (e, t) {
                                                 if (null == e) return null;
-                                                if (e instanceof tW.FY && null != t)
+                                                if (e instanceof tV.FY && null != t)
                                                     switch (t) {
                                                         case tq.INSUFFICIENT_ORB_BALANCE:
                                                             return eE.intl.string(eE.t.keFvXM);
@@ -1442,7 +1441,7 @@ let ne = (0, h.createContext)({
                                                         default:
                                                             return eE.intl.string(eE.t.fqJZ11);
                                                     }
-                                                return e instanceof tW.j2
+                                                return e instanceof tV.j2
                                                     ? eE.intl.string(eE.t["2BmwgV"])
                                                     : e.code === tK.tG.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE
                                                       ? eE.intl.string(eE.t.keFvXM)
@@ -1919,12 +1918,7 @@ let n_ = (e) => {
         C = d ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS,
         _ = h.useCallback(() => t(C), [t, C]),
         p = h.useMemo(
-            () =>
-                n === r.X.CUSTOM_STEP_BODY
-                    ? l()
-                    : n === r.X.TWO_COLUMN
-                      ? (0, i.jsxs)("div", { className: nC.D, children: [s(), a()] })
-                      : null,
+            () => (n === r.X.CUSTOM_STEP_BODY ? l() : (0, i.jsxs)("div", { className: nC.D, children: [s(), a()] })),
             [n, l, s, a],
         ),
         E = h.useMemo(() => ({ ...u, onClick: _, text: eE.intl.string(eE.t.XiOHRX) }), [u, _]);

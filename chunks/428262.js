@@ -1662,7 +1662,7 @@ let tY = Object.freeze({
         return e_(K, e);
     },
     canStreamQuality: function (e, t) {
-        return "high" === e ? e_(X, t) : "mid" === e && e_(q, t);
+        return "high" === e ? e_(X, t) : e_(q, t);
     },
     canUseQuestOrbMultiplier: tD,
     hasFreeBoosts: function (e) {
