@@ -2063,6 +2063,12 @@
     border-radius: 2px
 }
 
+.newBadgeContainer__4a011 {
+    inset-block-start: 12px;
+    inset-inline-end: 12px;
+    position: absolute
+}
+
 .empty__7ff05 {
     align-items: center;
     gap: 24px;

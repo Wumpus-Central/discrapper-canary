@@ -7,8 +7,8 @@ var n = i(627968),
     c = i(173936),
     o = i(245604),
     u = i(939249),
-    d = i(834730),
-    m = i(508770),
+    d = i(508770),
+    m = i(834730),
     g = i(793574),
     f = i(688810),
     x = i(46225);
@@ -96,19 +96,19 @@ function M(e) {
         { trackUserProfileAction: s } = (0, R.NJ)(),
         a = (0, A.h)(t),
         { hasAlreadyLinked: r, canStartAuthorization: c, startAuthorization: o, fetched: u } = (0, x.RD)(a),
-        { analyticsLocations: m } = (0, f.Ay)(g.A.USER_PROFILE_APPLICATION_WIDGET),
+        { analyticsLocations: d } = (0, f.Ay)(g.A.USER_PROFILE_APPLICATION_WIDGET),
         p = l.useCallback(() => {
             c &&
                 (s({ action: "PRESS_APPLICATION_WIDGET_PLACEHOLDER_CONNECT", applicationId: t }),
-                o({ analyticsLocations: m }));
-        }, [c, s, t, o, m]);
+                o({ analyticsLocations: d }));
+        }, [c, s, t, o, d]);
     return "default" !== i || null == a
         ? null
         : (0, n.jsxs)("div", {
               className: G.qr,
               children: [
                   (0, n.jsx)(_.A, { size: "xs" }),
-                  (0, n.jsx)(d.E, {
+                  (0, n.jsx)(m.E, {
                       variant: "text-sm/medium",
                       color: "text-subtle",
                       children: u
@@ -128,7 +128,7 @@ function U(e) {
         { hasAlreadyLinked: l, fetched: s } = (0, x.RD)(i);
     return null == i
         ? null
-        : (0, n.jsx)(d.E, {
+        : (0, n.jsx)(m.E, {
               variant: "text-sm/medium",
               color: "text-subtle",
               children: s
@@ -232,6 +232,12 @@ function B(e) {
                                 return (0, E.xb)(e);
                         }
                     })(),
+                    b &&
+                        S &&
+                        (0, n.jsx)("div", {
+                            className: W.X4,
+                            children: (0, n.jsx)(d.E, { type: "new", variant: "brand" }),
+                        }),
                     (0, n.jsxs)("div", {
                         className: W.Lw,
                         children: [
@@ -242,12 +248,12 @@ function B(e) {
                                     null != K
                                         ? (0, n.jsx)("img", { src: K, alt: "", width: 16, height: 16, className: W.Kk })
                                         : null,
-                                    (0, n.jsx)(d.E, {
+                                    (0, n.jsx)(m.E, {
                                         variant: "text-md/medium",
                                         color: "text-strong",
                                         children: (0, j.L)(i),
                                     }),
-                                    S && (0, n.jsx)(m.E, { type: "new", variant: "brand" }),
+                                    !b && S && (0, n.jsx)(d.E, { type: "new", variant: "brand" }),
                                 ],
                             }),
                             b &&

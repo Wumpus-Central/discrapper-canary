@@ -9,4 +9,5 @@ e.exports = {
     Lq: "loading__4a011",
     DD: "title__4a011",
     Kk: "icon__4a011",
+    X4: "newBadgeContainer__4a011",
 };
