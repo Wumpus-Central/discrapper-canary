@@ -2288,6 +2288,13 @@ html .tabBadge_e6b769 {
     content: ""
 }
 
+@media (min-width:486px) {
+    .splashBackground__742a4 {
+        min-height: 100vh;
+        width: 100vw
+    }
+}
+
 .downloadAppTitle__742a4 {
     margin-bottom: 8px
 }
