@@ -53,7 +53,7 @@ var v = n(982240),
     L = n(975858);
 function w(e) {
     let { children: t, legacyBadgeId: n, userId: r, fallbackTitle: s, fallbackIconSrc: a } = e,
-        o = (0, L.P3)(n),
+        o = (0, L.w0)(n),
         {
             badgeData: l,
             currentTier: u,
@@ -384,7 +384,7 @@ function eS(e) {
                     onClick: (i) => {
                         b({ action: "PRESS_BADGE" }),
                             (0, ef.vP)({
-                                badgeId: (0, L.P3)(e.id),
+                                badgeId: (0, L.w0)(e.id),
                                 badgeAction: "PRESS_BADGE",
                                 position: t,
                                 analyticsLocations: R,
@@ -395,7 +395,7 @@ function eS(e) {
                         if (G && !r && s?.bot !== !0) {
                             i.preventDefault(),
                                 (0, P._)({
-                                    initialBadgeId: (0, L.P3)(e.id),
+                                    initialBadgeId: (0, L.w0)(e.id),
                                     targetUserId: a?.userId,
                                     targetUsername: s?.globalName ?? s?.username,
                                 });
@@ -444,7 +444,7 @@ function eS(e) {
                             }),
                             b({ action: "HOVER_BADGE" }),
                             (0, ef.vP)({
-                                badgeId: (0, L.P3)(e.id),
+                                badgeId: (0, L.w0)(e.id),
                                 badgeAction: "HOVER_BADGE",
                                 position: t,
                                 analyticsLocations: R,
@@ -462,7 +462,7 @@ function eS(e) {
                         legacyBadgeId: e.id,
                         userId: a?.userId,
                         fallbackTitle: e.description,
-                        fallbackIconSrc: e.iconSrc ?? (0, W.L7)(e.icon),
+                        fallbackIconSrc: e.iconSrc ?? e.simple_icon_url ?? (0, W.L7)(e.icon),
                         children: (0, i.jsx)(g.Anchor, { ...B, children: v }),
                     },
                     `${e.id}-${t}`,
