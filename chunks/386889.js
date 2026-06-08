@@ -4328,6 +4328,8 @@ function rh(e) {
             switch (n?.tenantMetadata?.collectibles?.type) {
                 case a2.R.PROFILE_EFFECT:
                 case a2.R.NAMEPLATE:
+                case a2.R.BUNDLE:
+                case a2.R.PROFILE_FRAME:
                     return;
                 case a2.R.AVATAR_DECORATION:
                     return r()(rr.ML, rr._P);

@@ -113,6 +113,8 @@ function U(e) {
             switch (t?.tenantMetadata?.collectibles?.type) {
                 case f.R.PROFILE_EFFECT:
                 case f.R.NAMEPLATE:
+                case f.R.BUNDLE:
+                case f.R.PROFILE_FRAME:
                     return;
                 case f.R.AVATAR_DECORATION:
                     return L.ML;
