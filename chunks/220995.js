@@ -35,8 +35,8 @@ function P(e) {
     let { channel: i, onClose: s } = e,
         P = l.useRef(null),
         R = l.useRef(null),
-        [w, U] = l.useState(!1),
-        D = l.useRef(null),
+        [w, D] = l.useState(!1),
+        U = l.useRef(null),
         M = l.useRef(null),
         [F, L] = l.useState(0),
         { analyticsLocations: z } = (0, _.Ay)(S.A.VOICE_INVITE_SUGGESTIONS);
@@ -63,7 +63,7 @@ function P(e) {
                     guild_id: i.guild_id,
                     location_stack: z,
                 }),
-                    U(!1),
+                    D(!1),
                     s?.();
             },
             [i, s, z],
@@ -72,7 +72,8 @@ function P(e) {
             null != B &&
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        t.e("91456"),
+                        t.e("87932"),
+                        t.e("42527"),
                         t.e("59957"),
                         t.e("28136"),
                         t.e("16084"),
@@ -93,17 +94,17 @@ function P(e) {
             [en, ee],
         ),
         es = l.useCallback(() => {
-            null != D.current && clearTimeout(D.current);
+            null != U.current && clearTimeout(U.current);
             let e = () => {
-                null != D.current && clearTimeout(D.current);
+                null != U.current && clearTimeout(U.current);
             };
-            return Y || ((D.current = setTimeout(() => el("timeout"), 1e4)), L((e) => e + 1)), e;
+            return Y || ((U.current = setTimeout(() => el("timeout"), 1e4)), L((e) => e + 1)), e;
         }, [el, Y]),
         ea = l.useCallback(
             () => (
                 null != M.current && clearTimeout(M.current),
                 (M.current = setTimeout(() => {
-                    U(!1);
+                    D(!1);
                 }, 150)),
                 () => {
                     null != M.current && clearTimeout(M.current);
@@ -120,13 +121,13 @@ function P(e) {
                     e?.(), i?.();
                 };
             }
-            null != D.current && clearTimeout(D.current), null != M.current && clearTimeout(M.current), U(!0);
+            null != U.current && clearTimeout(U.current), null != M.current && clearTimeout(M.current), D(!0);
         }, [Q, es, ea]);
     let er = l.useCallback(() => {
-            U(!0);
+            D(!0);
         }, []),
         ed = l.useCallback(() => {
-            U(!1), J(!1);
+            D(!1), J(!1);
         }, []);
     return K
         ? (0, n.jsx)(A.Y, {

@@ -7599,7 +7599,7 @@ let rE = {
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_BlastOff_v1.lottiejson": () =>
         a.e("19842").then(a.t.bind(a, 341529, 19)),
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_Crystal_v1.lottiejson": () =>
-        a.e("7910").then(a.t.bind(a, 762464, 19)),
+        a.e("85529").then(a.t.bind(a, 762464, 19)),
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_Fireworks_v1.lottiejson": () =>
         a.e("97197").then(a.t.bind(a, 47036, 19)),
     "discord_app/images/burst_reactions/mobile/SuperReactions_Mobile_Fusion_v1.lottiejson": () =>
@@ -7841,23 +7841,27 @@ let rk = {
         GuildContextMenu: async () => {
             let { default: e } = await Promise.all([
                     a.e("28951"),
-                    a.e("73189"),
+                    a.e("77176"),
                     a.e("45333"),
-                    a.e("14819"),
-                    a.e("42653"),
-                    a.e("87211"),
-                    a.e("17116"),
-                    a.e("86727"),
-                    a.e("27619"),
+                    a.e("8886"),
+                    a.e("77372"),
+                    a.e("10889"),
+                    a.e("76963"),
                     a.e("87845"),
-                    a.e("32129"),
-                    a.e("63602"),
-                    a.e("29490"),
-                    a.e("91456"),
+                    a.e("35636"),
+                    a.e("60816"),
+                    a.e("47199"),
+                    a.e("75805"),
                     a.e("78230"),
-                    a.e("27323"),
+                    a.e("3414"),
                     a.e("61175"),
+                    a.e("37351"),
                     a.e("4974"),
+                    a.e("36464"),
+                    a.e("87932"),
+                    a.e("42527"),
+                    a.e("82327"),
+                    a.e("59831"),
                     a.e("49681"),
                     a.e("96382"),
                     a.e("22687"),
@@ -7961,7 +7965,7 @@ let rk = {
             return (t) => (0, r.jsx)(e, { ...t, id: "123456789", label: "Copy Test ID" });
         },
         UserSettingsMenu: async () => {
-            let { default: e } = await Promise.all([a.e("91456"), a.e("26132"), a.e("44491")]).then(a.bind(a, 907206));
+            let { default: e } = await Promise.all([a.e("75805"), a.e("26132"), a.e("44491")]).then(a.bind(a, 907206));
             return (t) => (0, r.jsx)(e, { ...t, onClose: rN.Z_ });
         },
         ExpressionPickerContextMenu: async () => {
@@ -8002,8 +8006,8 @@ let rk = {
         },
         AddQuestionsContextMenu: async () => {
             let { AddQuestionsContextMenu: e } = await Promise.all([
-                    a.e("91456"),
-                    a.e("27619"),
+                    a.e("42527"),
+                    a.e("76963"),
                     a.e("11810"),
                     a.e("14656"),
                 ]).then(a.bind(a, 892921)),
@@ -8354,7 +8358,7 @@ let r8 = {
         return (t) => (0, r.jsx)(e, { ...t, entryPoint: ni.q1.DEV_TOOLS_AGE_VERIFICATION_RETRY_MODAL });
     },
     ExistingUserAgeGatePrompt: async () => {
-        let { default: e } = await Promise.all([a.e("80774"), a.e("82758"), a.e("80022"), a.e("10136")]).then(
+        let { default: e } = await Promise.all([a.e("25226"), a.e("82758"), a.e("80022"), a.e("10136")]).then(
             a.bind(a, 776971),
         );
         return (t) => (0, r.jsx)(e, { ...t, source: r1.w_.NSFW_SERVER });
@@ -8365,7 +8369,7 @@ let r8 = {
     },
     NewUserAgeGate: async () => {
         let { default: e } = await Promise.all([
-            a.e("80774"),
+            a.e("25226"),
             a.e("82758"),
             a.e("19623"),
             a.e("80022"),
@@ -8375,8 +8379,8 @@ let r8 = {
     },
     NUFModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("14819"),
-            a.e("80774"),
+            a.e("90950"),
+            a.e("25226"),
             a.e("59405"),
             a.e("97199"),
             a.e("97804"),
@@ -8407,7 +8411,7 @@ let r8 = {
         return (t) => (0, r.jsx)(e, { ...t, guildId: "123" });
     },
     PhoneVerificationModal: async () => {
-        let { default: e } = await Promise.all([a.e("26243"), a.e("4782"), a.e("89545"), a.e("11493")]).then(
+        let { default: e } = await Promise.all([a.e("87932"), a.e("4782"), a.e("89545"), a.e("11493")]).then(
             a.bind(a, 914724),
         );
         return (t) => (0, r.jsx)(e, { error: null, working: !1, validPhone: !1, ...t });
@@ -9097,7 +9101,7 @@ let r8 = {
         return (s.displayName = "ConsentCheckBoxModalContent"), (e) => (0, r.jsx)(s, { ...e });
     },
     GuildRaidLockdownFeedbackModal: async () => {
-        let { default: e } = await Promise.all([a.e("91456"), a.e("46313")]).then(a.bind(a, 336496));
+        let { default: e } = await Promise.all([a.e("75805"), a.e("46313")]).then(a.bind(a, 336496));
         return (t) =>
             (0, r.jsx)(e, {
                 ...t,
@@ -9296,7 +9300,7 @@ let r8 = {
     },
     FamilyCenterQRCodeModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("26243"),
+            a.e("87932"),
             a.e("30244"),
             a.e("88905"),
             a.e("48370"),
@@ -9357,7 +9361,7 @@ let r8 = {
         return (t) => (0, r.jsx)(e, { ...t });
     },
     UserAgreementsModal: async () => {
-        let { default: e } = await Promise.all([a.e("87211"), a.e("82911"), a.e("22220")]).then(a.bind(a, 639719));
+        let { default: e } = await Promise.all([a.e("37777"), a.e("82911"), a.e("22220")]).then(a.bind(a, 639719));
         return (t) => (0, r.jsx)(e, { ...t });
     },
     DisableRiskyPermsModal: async () => {
@@ -9366,15 +9370,16 @@ let r8 = {
         return null == t ? () => null : (a) => (0, r.jsx)(e, { ...a, guild: t });
     },
     OtherFriendRequestsModal: async () => {
-        let { default: e } = await Promise.all([a.e("27323"), a.e("27917"), a.e("73152"), a.e("25281")]).then(
+        let { default: e } = await Promise.all([a.e("84189"), a.e("27917"), a.e("73152"), a.e("25281")]).then(
             a.bind(a, 516259),
         );
         return (t) => (0, r.jsx)(e, { ...t });
     },
     AcceptInviteModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("27323"),
-            a.e("6445"),
+            a.e("3414"),
+            a.e("24292"),
+            a.e("74275"),
             a.e("91643"),
             a.e("74337"),
             a.e("7265"),
@@ -9393,8 +9398,8 @@ let r8 = {
     },
     NewUserOnboarding: async () => {
         let { default: e } = await Promise.all([
-            a.e("14819"),
-            a.e("80774"),
+            a.e("90950"),
+            a.e("25226"),
             a.e("7850"),
             a.e("16138"),
             a.e("97199"),
@@ -18070,8 +18075,8 @@ function h7() {
                                         let e = performance.now();
                                         (0, e$.openModalLazy)(async () => {
                                             let { default: n } = await Promise.all([
-                                                a.e("30419"),
-                                                a.e("58579"),
+                                                a.e("22448"),
+                                                a.e("36532"),
                                                 a.e("92868"),
                                                 a.e("63408"),
                                                 a.e("77375"),

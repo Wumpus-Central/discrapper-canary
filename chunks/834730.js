@@ -1,35 +1,36 @@
 "use strict";
 n.d(t, { E: () => f });
-var r = n(627968),
-    i = n(64700),
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(322925),
     l = n.n(o),
-    u = n(827734),
+    u = n(661531),
+    c = n(124336),
     d = n(990089),
-    c = n(198964);
-let _ = Object.fromEntries(Object.keys(u.A.colors).map((e) => [l()(e), e])),
-    f = i.forwardRef(function (e, t) {
+    _ = n(198964);
+let h = Object.fromEntries(Object.keys(u.A.colors).map((e) => [l()(e), e])),
+    f = r.forwardRef(function (e, t) {
         let n,
             {
-                variant: i,
+                variant: r,
                 tag: s = "div",
                 selectable: o = !1,
                 className: l,
                 lineClamp: f,
-                color: E,
-                tabularNumbers: h = !1,
-                scaleFontToUserSetting: p = !1,
-                ...m
+                color: p,
+                tabularNumbers: E = !1,
+                scaleFontToUserSetting: m = !1,
+                ...g
             } = e,
-            g = "",
-            A = {};
+            A = "",
+            I = {};
         if (
-            (null != f && (1 === f ? (g = d.DN) : ((g = d.ED), (A = { lineClamp: f, WebkitLineClamp: f }))),
-            void 0 !== E)
+            (null != f && (1 === f ? (A = d.DN) : ((A = d.ED), (I = { lineClamp: f, WebkitLineClamp: f }))),
+            void 0 !== p)
         )
-            switch (E) {
+            switch (p) {
                 case "currentColor":
                     n = "currentColor";
                     break;
@@ -40,14 +41,15 @@ let _ = Object.fromEntries(Object.keys(u.A.colors).map((e) => [l()(e), e])),
                     n = "white";
                     break;
                 default:
-                    n = u.A.colors[_[E]]?.css;
+                    n = u.A.colors[h[p]]?.css;
             }
-        let I = { color: n, ...A, ...m.style };
-        return (0, r.jsx)(s, {
+        let T = { color: n, ...I, ...g.style },
+            S = (0, c.p)(r, !1);
+        return (0, i.jsx)(s, {
             ref: t,
-            className: a()({ [d.fT]: void 0 === E, [d.rb]: o, [d.w9]: h, [c.fontScaling]: p }, g, c[i], l),
-            ...m,
-            style: Object.values(I).filter(Boolean).length > 0 ? I : void 0,
-            "data-text-variant": i,
+            className: a()({ [d.fT]: void 0 === p, [d.rb]: o, [d.w9]: E, [_.fontScaling]: m }, A, _[S], l),
+            ...g,
+            style: Object.values(T).filter(Boolean).length > 0 ? T : void 0,
+            "data-text-variant": r,
         });
     });

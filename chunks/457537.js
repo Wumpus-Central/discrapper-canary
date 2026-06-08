@@ -1,7 +1,7 @@
 a.r(l), a.d(l, { manaCollection: () => ab, playgroundConfig: () => ap });
 var t = a(627968),
-    o = a(64700),
-    i = a(17928),
+    i = a(64700),
+    o = a(17928),
     n = a(287809),
     s = a(97808),
     r = a(818348),
@@ -10,15 +10,15 @@ let u = {
     id: "avatar",
     name: "Avatar",
     component: function (e) {
-        let { size: l = d._3.SIZE_48, status: a, isVR: o = !1, isMobile: r = !1 } = e,
-            { user: u } = (0, i.cf)([n.default], () => ({ user: n.default.getCurrentUser() })),
+        let { size: l = d._3.SIZE_48, status: a, isVR: i = !1, isMobile: r = !1 } = e,
+            { user: u } = (0, o.cf)([n.default], () => ({ user: n.default.getCurrentUser() })),
             c = Number(l.split("_")[1]);
         return (0, t.jsx)(s.eu, {
             src: u?.getAvatarURL(void 0, c),
             size: l,
             "aria-label": "Sample User",
             status: a,
-            isVR: o,
+            isVR: i,
             isMobile: r,
         });
     },
@@ -49,18 +49,18 @@ let x = {
     id: "void-checkbox",
     name: "Checkbox",
     component: function (e) {
-        let { disabled: l, readOnly: a, displayOnly: i, type: n, size: s, align: r, shape: d, label: u } = e,
-            [x, h] = o.useState(!1),
-            y = o.useCallback((e, l) => {
+        let { disabled: l, readOnly: a, displayOnly: o, type: n, size: s, align: r, shape: d, label: u } = e,
+            [x, h] = i.useState(!1),
+            y = i.useCallback((e, l) => {
                 h(l);
             }, []),
-            v = o.useCallback(() => {
+            v = i.useCallback(() => {
                 h(!0);
             }, []),
-            g = o.useCallback(() => {
+            g = i.useCallback(() => {
                 h(!1);
             }, []),
-            f = o.useCallback(() => {
+            f = i.useCallback(() => {
                 h((e) => !e);
             }, []);
         return (0, t.jsxs)(b.B, {
@@ -73,7 +73,7 @@ let x = {
                     onChange: y,
                     disabled: l,
                     readOnly: a,
-                    displayOnly: i,
+                    displayOnly: o,
                     type: n,
                     size: s,
                     align: r,
@@ -182,15 +182,15 @@ let g = {
     grayDark: "gray-dark",
 };
 function f(e) {
-    let { text: l, variant: a = "grayLight", icon: o, iconColor: i } = e,
+    let { text: l, variant: a = "grayLight", icon: i, iconColor: o } = e,
         n = g[a],
         s =
-            null != o
-                ? (0, t.jsx)(o, { color: i ?? "currentColor", size: "xxs", "aria-hidden": !0, className: v.icon })
+            null != i
+                ? (0, t.jsx)(i, { color: o ?? "currentColor", size: "xxs", "aria-hidden": !0, className: v.icon })
                 : null;
     return (0, t.jsxs)(p.E, {
         variant: "eyebrow",
-        className: y()(v.chip, v[n], { [v["with-icon"]]: null != o }),
+        className: y()(v.chip, v[n], { [v["with-icon"]]: null != i }),
         children: [s, l],
     });
 }
@@ -279,8 +279,8 @@ function E(e) {
     let l,
         a,
         {
-            type: o = k.Z.Types.DANGER,
-            imageData: i,
+            type: i = k.Z.Types.DANGER,
+            imageData: o,
             button: n,
             className: s,
             iconClassName: r,
@@ -290,8 +290,8 @@ function E(e) {
             align: b = w.A.Align.START,
         } = e,
         p = w.A.Direction.HORIZONTAL;
-    if (null != i) {
-        let { position: e, ...a } = i;
+    if (null != o) {
+        let { position: e, ...a } = o;
         (l = (0, t.jsx)(w.A.Child, {
             grow: 0,
             shrink: 0,
@@ -301,10 +301,10 @@ function E(e) {
     } else null != n && (a = n);
     let m = !0;
     return (
-        o === k.Z.Types.PRIMARY && (m = !1),
+        i === k.Z.Types.PRIMARY && (m = !1),
         (0, t.jsx)(k.Z, {
             className: y()(D.RJ, s),
-            type: o,
+            type: i,
             style: c,
             children: (0, t.jsxs)(w.A, {
                 direction: p,
@@ -341,9 +341,9 @@ let L = {
             id: "formnotice",
             name: "FormNotice",
             component: function (e) {
-                let { type: l, title: a, body: o, hasButton: i } = e,
-                    n = i ? (0, t.jsx)(m.$, { text: "Action" }) : void 0;
-                return (0, t.jsx)(E, { "data-migration-pending": !0, type: l, title: a, body: o, button: n });
+                let { type: l, title: a, body: i, hasButton: o } = e,
+                    n = o ? (0, t.jsx)(m.$, { text: "Action" }) : void 0;
+                return (0, t.jsx)(E, { "data-migration-pending": !0, type: l, title: a, body: i, button: n });
             },
             controls: {
                 type: {
@@ -372,8 +372,8 @@ let L = {
             id: "formtitle",
             name: "FormTitle",
             component: function (e) {
-                let { children: l, disabled: a, required: o, errorMessage: i } = e,
-                    n = i?.trim() === "" ? void 0 : i;
+                let { children: l, disabled: a, required: i, errorMessage: o } = e,
+                    n = o?.trim() === "" ? void 0 : o;
                 return (0, t.jsx)("div", {
                     style: { display: "flex", flexDirection: "column", gap: "16px" },
                     children: ["h1", "h2", "h3", "h4", "h5", "legend"].map((e) =>
@@ -390,7 +390,7 @@ let L = {
                                         "data-migration-pending": !0,
                                         tag: e,
                                         disabled: a,
-                                        required: o,
+                                        required: i,
                                         error: n,
                                         errorId: null != n ? `error-id-${e}` : void 0,
                                         children: l,
@@ -433,7 +433,7 @@ let q = {
                 let {
                         variant: l,
                         hideScroller: a,
-                        showGroups: i,
+                        showGroups: o,
                         showCheckboxItems: n,
                         showRadioItems: s,
                         showSwitchItems: r,
@@ -447,26 +447,26 @@ let q = {
                         showTrailingIndicator: y,
                         dangerItemColor: v,
                     } = e,
-                    [g, f] = o.useState(!0),
-                    [V, C] = o.useState(!1),
-                    [j, S] = o.useState("text"),
-                    [k, w] = o.useState("cozy"),
-                    [M, T] = o.useState(!0),
-                    D = o.useRef(null);
+                    [g, f] = i.useState(!0),
+                    [V, C] = i.useState(!1),
+                    [j, S] = i.useState("text"),
+                    [k, w] = i.useState("cozy"),
+                    [M, T] = i.useState(!0),
+                    D = i.useRef(null);
                 return (0, t.jsxs)("div", {
                     className: H.k,
                     children: [
                         !M && (0, t.jsx)(m.$, { text: "Open Menu", onClick: () => T(!0) }),
                         (0, t.jsx)(G.Y, {
                             renderPopout: (e) => {
-                                let { closePopout: o } = e;
+                                let { closePopout: i } = e;
                                 return (0, t.jsxs)(A.W, {
                                     "data-menu-migrated": !0,
                                     navId: "menu-story",
                                     "aria-label": "Story Menu",
                                     variant: l,
                                     hideScroller: a,
-                                    onClose: o,
+                                    onClose: i,
                                     onSelect: () => {},
                                     children: [
                                         (0, t.jsx)(N.Dr, {
@@ -636,7 +636,7 @@ let q = {
                                                     }),
                                                 ],
                                             }),
-                                        i &&
+                                        o &&
                                             (0, t.jsxs)(t.Fragment, {
                                                 children: [
                                                     (0, t.jsx)(N.bX, {}),
@@ -736,7 +736,7 @@ let _ = {
             name: "Notice",
             component: function (e) {
                 let { color: l, message: a } = e,
-                    o = {
+                    i = {
                         BRAND: U.Hv.BRAND,
                         INFO: U.Hv.INFO,
                         WARNING: U.Hv.WARNING,
@@ -744,7 +744,7 @@ let _ = {
                         DEFAULT: U.Hv.DEFAULT,
                         NEUTRAL: U.Hv.NEUTRAL,
                     };
-                return (0, t.jsx)(U.$T, { color: o[l], children: a });
+                return (0, t.jsx)(U.$T, { color: i[l], children: a });
             },
             controls: {
                 color: {
@@ -780,15 +780,15 @@ let W = {
                 let {
                         minValue: l,
                         maxValue: a,
-                        initialValue: o,
-                        markerCount: i,
+                        initialValue: i,
+                        markerCount: o,
                         stickToMarkers: n,
                         disabled: s,
                         equidistant: r,
                         label: d,
                         description: u,
                     } = e,
-                    c = i > 0 ? Array.from({ length: i }, (e, t) => Math.floor(l + (t / (i - 1)) * (a - l))) : void 0;
+                    c = o > 0 ? Array.from({ length: o }, (e, t) => Math.floor(l + (t / (o - 1)) * (a - l))) : void 0;
                 return (0, t.jsx)(
                     X.A,
                     {
@@ -797,13 +797,13 @@ let W = {
                         layout: "horizontal-responsive",
                         minValue: l,
                         maxValue: a,
-                        initialValue: o,
+                        initialValue: i,
                         markers: c,
                         stickToMarkers: n,
                         disabled: s,
                         equidistant: r,
                     },
-                    i,
+                    o,
                 );
             },
             controls: {
@@ -832,9 +832,9 @@ let Y = {
             id: "tabbar",
             name: "TabBar",
             component: function (e) {
-                let { look: l, type: a, tabCount: i } = e,
-                    [n, s] = o.useState("tab1"),
-                    r = Array.from({ length: i }, (e, l) => ({ id: `tab${l + 1}`, name: `Tab ${l + 1}` }));
+                let { look: l, type: a, tabCount: o } = e,
+                    [n, s] = i.useState("tab1"),
+                    r = Array.from({ length: o }, (e, l) => ({ id: `tab${l + 1}`, name: `Tab ${l + 1}` }));
                 return (0, t.jsx)(Z.V, {
                     type: a,
                     look: l,
@@ -888,7 +888,7 @@ let J = [
             let {
                     label: l,
                     description: a,
-                    isDisabled: i,
+                    isDisabled: o,
                     isProcessing: n,
                     placeholder: s,
                     maxVisibleItems: r,
@@ -897,7 +897,7 @@ let J = [
                     popoutPosition: c,
                     variant: b,
                 } = e,
-                [p, m] = o.useState("blue");
+                [p, m] = i.useState("blue");
             return (0, t.jsx)(Q.Te, {
                 variant: b,
                 label: l,
@@ -906,7 +906,7 @@ let J = [
                 onChange: m,
                 options: J,
                 placeholder: s,
-                isDisabled: i,
+                isDisabled: o,
                 isProcessing: n,
                 maxVisibleItems: r,
                 clearable: d,
@@ -954,15 +954,15 @@ let J = [
             let {
                     placeholder: l,
                     isDisabled: a,
-                    isProcessing: i,
+                    isProcessing: o,
                     clearable: n,
                     closeOnSelect: s,
                     clearQueryOnSelect: r,
                     filter: d,
                     ...u
                 } = e,
-                [c, p] = o.useState("blue"),
-                [m, x] = o.useState(["blue"]);
+                [c, p] = i.useState("blue"),
+                [m, x] = i.useState(["blue"]);
             return (0, t.jsxs)(b.B, {
                 gap: 24,
                 children: [
@@ -973,7 +973,7 @@ let J = [
                         options: J,
                         placeholder: l,
                         isDisabled: a,
-                        isProcessing: i,
+                        isProcessing: o,
                         clearable: n,
                         clearQueryOnSelect: r,
                         filter: d,
@@ -986,7 +986,7 @@ let J = [
                         options: J,
                         placeholder: l,
                         isDisabled: a,
-                        isProcessing: i,
+                        isProcessing: o,
                         clearable: n,
                         closeOnSelect: s,
                         clearQueryOnSelect: r,
@@ -1008,8 +1008,8 @@ let J = [
     };
 var ea = a(582306),
     et = a(292666),
-    eo = a(666944);
-let ei = [
+    ei = a(666944);
+let eo = [
         { value: "red", label: "Red" },
         { value: "green", label: "Green" },
         { value: "blue", label: "Blue" },
@@ -1062,29 +1062,29 @@ let ei = [
                         id: "void-inputs",
                         component: function (e) {
                             let { disabled: l, placeholder: a } = e,
-                                [i, n] = o.useState(void 0),
-                                [s, r] = o.useState(void 0),
-                                [d, u] = o.useState(void 0);
+                                [o, n] = i.useState(void 0),
+                                [s, r] = i.useState(void 0),
+                                [d, u] = i.useState(void 0);
                             return (0, t.jsxs)(b.B, {
                                 gap: 8,
                                 children: [
                                     (0, t.jsx)(Q.Te, {
-                                        value: i,
+                                        value: o,
                                         onChange: n,
-                                        options: ei,
+                                        options: eo,
                                         placeholder: a,
                                         isDisabled: l,
                                     }),
                                     (0, t.jsx)(et.k, { placeholder: a, disabled: l }),
                                     (0, t.jsx)(K.p, {
-                                        value: i,
+                                        value: o,
                                         onChange: n,
-                                        options: ei,
+                                        options: eo,
                                         placeholder: a,
                                         isDisabled: l,
                                     }),
                                     (0, t.jsx)(ea.J, { onSelect: r, value: s, disabled: l }),
-                                    (0, t.jsx)(eo.c, { onChange: u, value: d, disabled: l }),
+                                    (0, t.jsx)(ei.c, { onChange: u, value: d, disabled: l }),
                                 ],
                             });
                         },
@@ -1126,11 +1126,11 @@ let eh = {
                 name: "Badge",
                 id: "badge",
                 component: function (e) {
-                    let { type: l, customText: a, variant: o, iconName: i } = e,
-                        n = null != i && "" !== i && "none" !== i ? eh[i] : void 0;
+                    let { type: l, customText: a, variant: i, iconName: o } = e,
+                        n = null != o && "" !== o && "none" !== o ? eh[o] : void 0;
                     return (0, t.jsx)(ex.E, {
                         type: "custom" === l && null != a && "" !== a ? { text: a } : l,
-                        variant: o,
+                        variant: i,
                         icon: n,
                     });
                 },
@@ -1342,18 +1342,18 @@ let eE = {
             id: "calendar",
             name: "Calendar",
             component: function (e) {
-                let { disabled: l, readOnly: a, showMinMax: i } = e,
-                    [n, s] = o.useState((0, ej.Ec)((0, ej.Xj)())),
-                    r = o.useCallback((e) => {
+                let { disabled: l, readOnly: a, showMinMax: o } = e,
+                    [n, s] = i.useState((0, ej.Ec)((0, ej.Xj)())),
+                    r = i.useCallback((e) => {
                         s(e);
                     }, []),
-                    d = o.useCallback(() => {
+                    d = i.useCallback(() => {
                         s(null);
                     }, []),
-                    u = o.useCallback(() => {
+                    u = i.useCallback(() => {
                         s((0, ej.Ec)((0, ej.Xj)()));
                     }, []),
-                    c = o.useCallback(() => {
+                    c = i.useCallback(() => {
                         s((0, eS._U)("2024-12-25"));
                     }, []);
                 return eD("CalendarStory")
@@ -1366,8 +1366,8 @@ let eE = {
                                   onChange: r,
                                   disabled: l,
                                   readOnly: a,
-                                  minValue: i ? (0, eS._U)("2024-01-01") : void 0,
-                                  maxValue: i ? (0, eS._U)("2024-12-31") : void 0,
+                                  minValue: o ? (0, eS._U)("2024-01-01") : void 0,
+                                  maxValue: o ? (0, eS._U)("2024-12-31") : void 0,
                                   "aria-label": "Select a date",
                               }),
                               (0, t.jsxs)(p.E, {
@@ -1433,15 +1433,15 @@ let eI = {
             id: "checkbox",
             name: "Checkbox",
             component: function (e) {
-                let { label: l, description: a, disabled: i, labelType: n, showIcons: s } = e,
-                    [r, d] = o.useState(!1),
-                    u = o.useCallback(() => {
+                let { label: l, description: a, disabled: o, labelType: n, showIcons: s } = e,
+                    [r, d] = i.useState(!1),
+                    u = i.useCallback(() => {
                         d(!0);
                     }, []),
-                    c = o.useCallback(() => {
+                    c = i.useCallback(() => {
                         d(!1);
                     }, []),
-                    x = o.useCallback(() => {
+                    x = i.useCallback(() => {
                         d((e) => !e);
                     }, []);
                 return (0, t.jsxs)(b.B, {
@@ -1451,7 +1451,7 @@ let eI = {
                         (0, t.jsx)(eR.S, {
                             checked: r,
                             onChange: (e) => d(e),
-                            disabled: i,
+                            disabled: o,
                             label: l,
                             description: null != a || "" === a ? a : void 0,
                             value: "checkbox-value",
@@ -1471,21 +1471,21 @@ let eI = {
                                     size: "sm",
                                     text: "Check",
                                     onClick: u,
-                                    disabled: i,
+                                    disabled: o,
                                 }),
                                 (0, t.jsx)(m.$, {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Uncheck",
                                     onClick: c,
-                                    disabled: i,
+                                    disabled: o,
                                 }),
                                 (0, t.jsx)(m.$, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Toggle",
                                     onClick: x,
-                                    disabled: i,
+                                    disabled: o,
                                 }),
                             ],
                         }),
@@ -1521,14 +1521,14 @@ let eN = {
                 let {
                         disabled: l,
                         optionCount: a,
-                        label: i,
+                        label: o,
                         optionLabel: n,
                         description: s,
                         showIcons: r,
                         withMixedDisabledOptions: d,
                     } = e,
-                    [u, c] = o.useState(["option1"]),
-                    x = o.useMemo(
+                    [u, c] = i.useState(["option1"]),
+                    x = i.useMemo(
                         () =>
                             [
                                 {
@@ -1569,23 +1569,23 @@ let eN = {
                             ].slice(0, Math.max(1, Math.min(5, a))),
                         [a, n, s, r, d],
                     ),
-                    h = o.useCallback((e) => {
+                    h = i.useCallback((e) => {
                         c(e);
                     }, []),
-                    y = o.useCallback(() => {
+                    y = i.useCallback(() => {
                         c(x.map((e) => e.value));
                     }, [x]),
-                    v = o.useCallback(() => {
+                    v = i.useCallback(() => {
                         c([]);
                     }, []),
-                    g = o.useCallback(() => {
+                    g = i.useCallback(() => {
                         x.length > 0 && c([x[0].value]);
                     }, [x]);
                 return (0, t.jsxs)(b.B, {
                     direction: "vertical",
                     gap: "md",
                     children: [
-                        (0, t.jsx)(eA.$, { selectedValues: u, label: i, onChange: h, options: x, disabled: l }),
+                        (0, t.jsx)(eA.$, { selectedValues: u, label: o, onChange: h, options: x, disabled: l }),
                         (0, t.jsxs)(p.E, {
                             variant: "text-sm/normal",
                             children: ["Current selection: ", u.length > 0 ? u.join(", ") : "None"],
@@ -1651,18 +1651,18 @@ let eP = {
             id: "date-picker",
             name: "DatePicker",
             component: function (e) {
-                let { label: l, description: a, errorMessage: i, disabled: n, required: s, showMinMax: r } = e,
-                    [d, u] = o.useState((0, ej.Ec)((0, ej.Xj)())),
-                    c = o.useCallback((e) => {
+                let { label: l, description: a, errorMessage: o, disabled: n, required: s, showMinMax: r } = e,
+                    [d, u] = i.useState((0, ej.Ec)((0, ej.Xj)())),
+                    c = i.useCallback((e) => {
                         u(e);
                     }, []),
-                    p = o.useCallback(() => {
+                    p = i.useCallback(() => {
                         u(null);
                     }, []),
-                    x = o.useCallback(() => {
+                    x = i.useCallback(() => {
                         u((0, ej.Ec)((0, ej.Xj)()));
                     }, []),
-                    h = o.useCallback(() => {
+                    h = i.useCallback(() => {
                         u((0, eS._U)("2024-12-25"));
                     }, []);
                 return eD("CalendarStory")
@@ -1679,7 +1679,7 @@ let eP = {
                                   required: s,
                                   minValue: r ? (0, eS._U)("2024-01-01") : void 0,
                                   maxValue: r ? (0, eS._U)("2024-12-31") : void 0,
-                                  errorMessage: "" !== i ? i : void 0,
+                                  errorMessage: "" !== o ? o : void 0,
                                   helperText: null != d ? (0, ek.default)(d.toDate((0, ej.Xj)()), "MMMM d, yyyy") : "",
                               }),
                               (0, t.jsxs)(b.B, {
@@ -1752,7 +1752,7 @@ function e0(e) {
     let {
             value: l,
             onChange: a,
-            minValue: i,
+            minValue: o,
             maxValue: n,
             isDisabled: s = !1,
             isReadOnly: r = !1,
@@ -1762,9 +1762,9 @@ function e0(e) {
         } = e,
         { i18n: b, locale: m } = (0, eW.G9)(),
         x = l?.start ?? null,
-        [h, v] = o.useState(x);
+        [h, v] = i.useState(x);
     return (
-        o.useEffect(() => {
+        i.useEffect(() => {
             v(x);
         }, [x]),
         (0, t.jsx)(eZ._e, {
@@ -1772,7 +1772,7 @@ function e0(e) {
             focusedValue: h,
             onFocusChange: v,
             onChange: a,
-            minValue: i,
+            minValue: o,
             maxValue: n,
             isDisabled: s,
             isReadOnly: r,
@@ -1798,13 +1798,13 @@ function e0(e) {
                                     className: eJ.Wb,
                                     "aria-live": "polite",
                                     children: Array.from({ length: d }, (l, a) => {
-                                        let o = e.state.visibleRange.start
+                                        let i = e.state.visibleRange.start
                                             .add({ months: a })
                                             .toDate(e.state.timeZone)
                                             .toLocaleDateString(m, { month: "long", year: "numeric" });
                                         return (0, t.jsx)(
                                             p.E,
-                                            { variant: "text-md/medium", color: "text-strong", children: o },
+                                            { variant: "text-md/medium", color: "text-strong", children: i },
                                             a,
                                         );
                                     }),
@@ -1835,8 +1835,8 @@ function e2(e) {
     let {
             value: l,
             onChange: a,
-            minValue: o,
-            maxValue: i,
+            minValue: i,
+            maxValue: o,
             placeholderValue: n,
             startName: s,
             endName: r,
@@ -1886,8 +1886,8 @@ function e2(e) {
                     onChange: T,
                     isDisabled: m,
                     isRequired: h,
-                    minValue: o,
-                    maxValue: i,
+                    minValue: i,
+                    maxValue: o,
                     placeholderValue: n,
                     granularity: u,
                     startName: s,
@@ -1940,8 +1940,8 @@ function e2(e) {
                                         children: (0, t.jsx)(e0, {
                                             value: l,
                                             onChange: T,
-                                            minValue: o,
-                                            maxValue: i,
+                                            minValue: i,
+                                            maxValue: o,
                                             isDisabled: m,
                                             visibleMonths: 2,
                                         }),
@@ -1960,18 +1960,18 @@ let e4 = {
             id: "date-range-picker",
             name: "DateRangePicker",
             component: function (e) {
-                let { label: l, errorMessage: a, description: i, disabled: n, required: s, showMinMax: r } = e,
-                    [d, u] = o.useState({
+                let { label: l, errorMessage: a, description: o, disabled: n, required: s, showMinMax: r } = e,
+                    [d, u] = i.useState({
                         start: (0, ej.Ec)((0, ej.Xj)()),
                         end: (0, ej.Ec)((0, ej.Xj)()).add({ days: 7 }),
                     }),
-                    c = o.useCallback((e) => {
+                    c = i.useCallback((e) => {
                         u(e);
                     }, []),
-                    p = o.useCallback(() => {
+                    p = i.useCallback(() => {
                         u(null);
                     }, []),
-                    x = o.useCallback(() => {
+                    x = i.useCallback(() => {
                         let e = (0, ej.Ec)((0, ej.Xj)());
                         u({ start: e, end: e.add({ days: 7 }) });
                     }, []),
@@ -1985,7 +1985,7 @@ let e4 = {
                           children: [
                               (0, t.jsx)(e2, {
                                   label: l,
-                                  description: "" !== i ? i : void 0,
+                                  description: "" !== o ? o : void 0,
                                   value: d,
                                   onChange: c,
                                   disabled: n,
@@ -2057,18 +2057,18 @@ let ll = [
     ],
     la = [1752220, 3066993, 3447003, 0x9b59b6, 0xe91e63, 0xf1c40f, 0xe67e22, 0xe74c3c];
 function lt(e) {
-    let { title: l, children: a, auxiliaryContentPosition: o } = e;
+    let { title: l, children: a, auxiliaryContentPosition: i } = e;
     return (0, t.jsx)(R.D, {
         disabled: !0,
         label: l,
         description: "This row is disabled at the Field level and at the control level.",
         helperText:
             "Every leaf (label, description, helper text, control) should render at a single 0.5 opacity layer.",
-        auxiliaryContentPosition: o,
+        auxiliaryContentPosition: i,
         children: a,
     });
 }
-function lo(e) {
+function li(e) {
     let { auxiliaryContentPosition: l } = e;
     return (0, t.jsxs)(b.B, {
         direction: "vertical",
@@ -2171,7 +2171,7 @@ function lo(e) {
         ],
     });
 }
-let li = {
+let lo = {
     title: "Forms",
     stories: [
         {
@@ -2251,7 +2251,7 @@ let li = {
         {
             name: "Field (Disabled, under-control)",
             id: "field-disabled-under-control",
-            component: lo,
+            component: li,
             controls: {
                 auxiliaryContentPosition: {
                     type: "select",
@@ -2268,7 +2268,7 @@ let li = {
             name: "Field (Disabled, under-label)",
             id: "field-disabled-under-label",
             component: function () {
-                return (0, t.jsx)(lo, { auxiliaryContentPosition: "under-label" });
+                return (0, t.jsx)(li, { auxiliaryContentPosition: "under-label" });
             },
         },
     ],
@@ -2293,10 +2293,10 @@ let lb = [
             {
                 name: "TextInput",
                 component: function (e) {
-                    let { leading: l, trailing: a, ...i } = e,
-                        [n, s] = o.useState(""),
-                        [d, u] = o.useState(lb),
-                        c = o.useCallback(
+                    let { leading: l, trailing: a, ...o } = e,
+                        [n, s] = i.useState(""),
+                        [d, u] = i.useState(lb),
+                        c = i.useCallback(
                             (e) => {
                                 u(d.filter((l) => !e.has(l.id)));
                             },
@@ -2306,7 +2306,7 @@ let lb = [
                         gap: 16,
                         children: [
                             (0, t.jsx)(et.k, {
-                                ...i,
+                                ...o,
                                 value: n,
                                 onChange: s,
                                 leading: (function (e) {
@@ -2385,7 +2385,7 @@ let lb = [
             {
                 name: "SearchBar",
                 component: function (e) {
-                    let [l, a] = o.useState("");
+                    let [l, a] = i.useState("");
                     return (0, t.jsx)(lu.I, {
                         ...e,
                         query: l,
@@ -2413,7 +2413,7 @@ let lb = [
                 name: "TextArea",
                 id: "text-area",
                 component: function (e) {
-                    let [l, a] = o.useState("");
+                    let [l, a] = i.useState("");
                     return (0, t.jsx)(lc.f, { ...e, value: l, onChange: a });
                 },
                 controls: {
@@ -2438,8 +2438,8 @@ let lb = [
                     let {
                             label: l,
                             hideLabel: a,
-                            description: o,
-                            required: i,
+                            description: i,
+                            required: o,
                             error: n,
                             disabled: s,
                             placeholder: d,
@@ -2452,8 +2452,8 @@ let lb = [
                         h = {
                             label: l,
                             hideLabel: a,
-                            description: o,
-                            required: i,
+                            description: i,
+                            required: o,
                             value: u,
                             error: n,
                             disabled: s,
@@ -2547,27 +2547,27 @@ function lM() {
 }
 function lT(e) {
     let { setIsSafetyAccepted: l, setIsHelmetSelected: a } = e,
-        [i, n] = o.useState([]),
+        [o, n] = i.useState([]),
         s = [
             { label: "I am wearing a helmet", value: "helmet" },
             { label: "I know where to find my personal flotation device", value: "pfd" },
             { label: "I completed the safety training", value: "training" },
         ];
     return (
-        o.useEffect(() => {
-            l(i.length === s.length), a(i.includes("helmet"));
-        }, [i, s.length, l, a]),
-        (0, t.jsx)(eA.$, { label: "Safety checklist", options: s, selectedValues: i, onChange: n })
+        i.useEffect(() => {
+            l(o.length === s.length), a(o.includes("helmet"));
+        }, [o, s.length, l, a]),
+        (0, t.jsx)(eA.$, { label: "Safety checklist", options: s, selectedValues: o, onChange: n })
     );
 }
 function lD(e) {
     let { setIsPasscodeValid: l } = e,
-        [a, i] = o.useState("");
+        [a, o] = i.useState("");
     return (0, t.jsx)(et.k, {
         placeholder: "Enter your passcode...",
         value: a,
         onChange: (e) => {
-            i(e), l(e.length > 0);
+            o(e), l(e.length > 0);
         },
     });
 }
@@ -2575,19 +2575,19 @@ function lE(e) {
     let {
             callbackDelay: l,
             failOnNext: a,
-            failOnComplete: i,
+            failOnComplete: o,
             onCompleteAlert: n,
             onNextAlert: s,
             customErrorNotice: r,
             errorNoticeType: d,
             ...u
         } = e,
-        [c, b] = o.useState("intro"),
-        [p, m] = o.useState(!1),
-        [x, h] = o.useState(!1),
-        [y, v] = o.useState(!1),
-        [g, f] = o.useState(null),
-        V = o.useCallback(async () => {
+        [c, b] = i.useState("intro"),
+        [p, m] = i.useState(!1),
+        [x, h] = i.useState(!1),
+        [y, v] = i.useState(!1),
+        [g, f] = i.useState(null),
+        V = i.useCallback(async () => {
             if (
                 (f(null),
                 l > 0 && (await new Promise((e) => setTimeout(e, 1e3 * l))),
@@ -2599,17 +2599,17 @@ function lE(e) {
             }
             return !0;
         }, [l, a, s, r, d]),
-        C = o.useCallback(async () => {
+        C = i.useCallback(async () => {
             if (
                 (f(null),
                 l > 0 && (await new Promise((e) => setTimeout(e, 1e3 * l))),
                 n && alert("onComplete callback fired"),
-                i)
+                o)
             ) {
                 if ("" !== r.trim()) throw (f({ message: r, type: d }), Error("Custom error"));
                 throw Error("onComplete failed");
             }
-        }, [l, i, n, r, d]),
+        }, [l, o, n, r, d]),
         j = [
             {
                 stepKey: "intro",
@@ -2665,8 +2665,8 @@ let lL = {
             id: "modal",
             docs: "https://design.discord.tools/components/web/modals/modal",
             component: function (e) {
-                let { showPreview: l, showInput: a, subtitleIcon: o, ...i } = e,
-                    n = o ? { text: i.subtitle ?? "Default subtitle", leadingIcon: ly.N } : i.subtitle;
+                let { showPreview: l, showInput: a, subtitleIcon: i, ...o } = e,
+                    n = i ? { text: o.subtitle ?? "Default subtitle", leadingIcon: ly.N } : o.subtitle;
                 return (0, t.jsxs)(b.B, {
                     gap: 16,
                     align: "center",
@@ -2683,8 +2683,8 @@ let lL = {
                                     (e) =>
                                         (0, t.jsx)(lv.Modal, {
                                             ...e,
-                                            ...i,
-                                            title: i.title,
+                                            ...o,
+                                            title: o.title,
                                             subtitle: n,
                                             input: a
                                                 ? (0, t.jsx)(lu.I, {
@@ -2745,7 +2745,7 @@ let lL = {
                                                 ],
                                             }),
                                         }),
-                                    { dismissable: i.dismissable },
+                                    { dismissable: o.dismissable },
                                 ),
                         }),
                     ],
@@ -2773,21 +2773,21 @@ let lL = {
             name: "ConfirmModal [Alpha]",
             id: "confirm-modal",
             component: function (e) {
-                let { cancelText: l, confirmDelay: a, confirmError: i, subtitle: n, formatSubtitle: s, ...r } = e,
-                    d = o.useMemo(
+                let { cancelText: l, confirmDelay: a, confirmError: o, subtitle: n, formatSubtitle: s, ...r } = e,
+                    d = i.useMemo(
                         () =>
                             s
                                 ? (function (e) {
                                       let l,
                                           a = [],
-                                          o = 0,
-                                          i = /\*\*(.+?)\*\*/g,
+                                          i = 0,
+                                          o = /\*\*(.+?)\*\*/g,
                                           n = 0;
-                                      for (; null !== (l = i.exec(e)); )
-                                          l.index > o && a.push(e.substring(o, l.index)),
+                                      for (; null !== (l = o.exec(e)); )
+                                          l.index > i && a.push(e.substring(i, l.index)),
                                               a.push((0, t.jsx)("strong", { children: l[1] }, n++)),
-                                              (o = i.lastIndex);
-                                      return o < e.length && a.push(e.substring(o)), a.length > 0 ? a : e;
+                                              (i = o.lastIndex);
+                                      return i < e.length && a.push(e.substring(i)), a.length > 0 ? a : e;
                                   })(n)
                                 : n,
                         [n, s],
@@ -2810,7 +2810,7 @@ let lL = {
                                     cancelText: "" === l ? void 0 : l,
                                     onConfirm: async (e) => {
                                         try {
-                                            if ((await new Promise((e) => setTimeout(e, 1e3 * a)), i))
+                                            if ((await new Promise((e) => setTimeout(e, 1e3 * a)), o))
                                                 throw Error("Confirm error");
                                         } catch (l) {
                                             throw (
@@ -2854,9 +2854,9 @@ let lL = {
             id: "expressive-modal",
             docs: "https://design.discord.tools/components/web/modals/expressive-modal",
             component: function (e) {
-                let { graphic: l, subtitleIcon: i, ...n } = e,
-                    s = i ? { text: n.subtitle ?? "Default subtitle", leadingIcon: ly.N } : n.subtitle,
-                    r = o.useMemo(() => {
+                let { graphic: l, subtitleIcon: o, ...n } = e,
+                    s = o ? { text: n.subtitle ?? "Default subtitle", leadingIcon: ly.N } : n.subtitle,
+                    r = i.useMemo(() => {
                         switch (l) {
                             case 0:
                                 return { type: "image", src: lw };
@@ -2970,8 +2970,8 @@ let lL = {
             name: "Dynamic Graphic Modal",
             id: "dynamic-graphic-modal",
             component: function (e) {
-                let { dynamicText: l, ...o } = e,
-                    i = {
+                let { dynamicText: l, ...i } = e,
+                    o = {
                         type: "dynamic",
                         component: lV.DynamicGraphicComponent.DEMO,
                         aspectRatio: "6/4",
@@ -2996,10 +2996,10 @@ let lL = {
                                         return (l) =>
                                             (0, t.jsx)(e, {
                                                 ...l,
-                                                ...o,
-                                                title: o.title,
-                                                subtitle: o.subtitle,
-                                                graphic: i,
+                                                ...i,
+                                                title: i.title,
+                                                subtitle: i.subtitle,
+                                                graphic: o,
                                                 actions: [
                                                     { variant: "secondary", text: "Cancel", onClick: l.onClose },
                                                     { variant: "primary", text: "Submit", onClick: l.onClose },
@@ -3014,7 +3014,7 @@ let lL = {
                                                 }),
                                             });
                                     },
-                                    { dismissable: o.dismissable },
+                                    { dismissable: i.dismissable },
                                 ),
                         }),
                     ],
@@ -3094,8 +3094,8 @@ let lL = {
                 let {
                     callbackDelay: l,
                     failOnNext: a,
-                    failOnComplete: o,
-                    onCompleteAlert: i,
+                    failOnComplete: i,
+                    onCompleteAlert: o,
                     onNextAlert: n,
                     customErrorNotice: s,
                     errorNoticeType: r,
@@ -3117,8 +3117,8 @@ let lL = {
                                         ...e,
                                         callbackDelay: l,
                                         failOnNext: a,
-                                        failOnComplete: o,
-                                        onCompleteAlert: i,
+                                        failOnComplete: i,
+                                        onCompleteAlert: o,
                                         onNextAlert: n,
                                         customErrorNotice: s,
                                         errorNoticeType: r,
@@ -3152,7 +3152,7 @@ let lL = {
             name: "BaseModal",
             id: "base-modal",
             component: function (e) {
-                let { dismissable: l, tallContent: a, ...o } = e;
+                let { dismissable: l, tallContent: a, ...i } = e;
                 return (0, t.jsxs)(b.B, {
                     gap: 16,
                     align: "center",
@@ -3169,7 +3169,7 @@ let lL = {
                                     (e) =>
                                         (0, t.jsx)(lx.d, {
                                             ...e,
-                                            ...o,
+                                            ...i,
                                             "aria-label": "Base Modal Example",
                                             children: (0, t.jsx)(lh.c, {
                                                 children: (0, t.jsxs)(b.B, {
@@ -3281,7 +3281,7 @@ function lH(e) {
     let {
             steps: l,
             caretConfig: a = { align: "center" },
-            size: i = "md",
+            size: o = "md",
             onStepChange: n,
             onRequestClose: s,
             popoverRef: r,
@@ -3289,22 +3289,22 @@ function lH(e) {
             position: u,
             ...c
         } = e,
-        [b, x] = o.useState(0);
-    o.useEffect(() => {
+        [b, x] = i.useState(0);
+    i.useEffect(() => {
         d && x(0);
     }, [d]),
-        o.useEffect(() => {
+        i.useEffect(() => {
             n?.(b);
         }, [b, n]);
     let h = l[b],
         v = b + 1 === l.length,
-        g = o.useCallback(() => {
+        g = i.useCallback(() => {
             h?.onCta?.(), v ? s?.() : x((e) => e + 1);
         }, [h, v, s]),
-        f = o.useCallback(() => {
+        f = i.useCallback(() => {
             s?.();
         }, [s]),
-        V = o.useCallback(() => {
+        V = i.useCallback(() => {
             s?.();
         }, [s]);
     if (!d || null == h) return null;
@@ -3335,10 +3335,10 @@ function lH(e) {
                 (0, t.jsx)(lz.q, { onClick: V, variant: null != h.gradientColor ? "color-mix" : void 0 }),
                 null != h.graphic &&
                     (0, t.jsx)("div", {
-                        className: y()(lG.graphic, { [lG[`graphic--${i}`]]: null != i }),
+                        className: y()(lG.graphic, { [lG[`graphic--${o}`]]: null != o }),
                         children: (0, t.jsx)(lO.v, {
                             ...h.graphic,
-                            aspectRatio: h.graphic.aspectRatio ?? ("sm" === i ? "2/1" : "16/9"),
+                            aspectRatio: h.graphic.aspectRatio ?? ("sm" === o ? "2/1" : "16/9"),
                         }),
                     }),
                 (0, t.jsx)(lF.D, { title: h.title, body: h.body, badge: h.badge, textLink: h.textLink }),
@@ -3377,7 +3377,7 @@ let lq =
                     let {
                             showAsset: l,
                             showActions: a,
-                            showTextLink: i,
+                            showTextLink: o,
                             caretAlign: n,
                             alignmentStrategy: s,
                             align: r,
@@ -3385,8 +3385,8 @@ let lq =
                             position: u,
                             ...c
                         } = e,
-                        [b, p] = o.useState(!1),
-                        x = o.useRef(null);
+                        [b, p] = i.useState(!1),
+                        x = i.useRef(null);
                     return (0, t.jsxs)("div", {
                         style: { display: "flex", justifyContent: "center", alignItems: "center", minHeight: "400px" },
                         children: [
@@ -3412,7 +3412,7 @@ let lq =
                                         : void 0,
                                     caretConfig: { align: n },
                                     actions: a ? [{ text: "Close", onClick: () => p(!1) }] : void 0,
-                                    textLink: i
+                                    textLink: o
                                         ? { text: "Learn More", link: "https://discord.com", external: !0 }
                                         : void 0,
                                 },
@@ -3518,9 +3518,9 @@ let lq =
                 id: "video-popover",
                 docs: "https://design.discord.tools/components/web/popover",
                 component: function (e) {
-                    let { showActions: l, previewUrl: a, assetUrl: i, ...n } = e,
-                        [s, r] = o.useState(!1),
-                        d = o.useRef(null);
+                    let { showActions: l, previewUrl: a, assetUrl: o, ...n } = e,
+                        [s, r] = i.useState(!1),
+                        d = i.useRef(null);
                     return (0, t.jsxs)("div", {
                         children: [
                             (0, t.jsx)(
@@ -3532,7 +3532,7 @@ let lq =
                                     onRequestClose: () => r(!1),
                                     title: "Video Popover Demo",
                                     body: "Click the video to view it in the media viewer!",
-                                    assetUrl: i,
+                                    assetUrl: o,
                                     previewUrl: lI()(a) ? void 0 : a,
                                     badge: "new",
                                     action: l ? { text: "Learn More", onClick: () => r(!1) } : void 0,
@@ -3564,8 +3564,8 @@ let lq =
                 docs: "https://design.discord.tools/components/web/popover",
                 component: function (e) {
                     let { showExpressive: l, ...a } = e,
-                        [i, n] = o.useState(!1),
-                        s = o.useRef(null),
+                        [o, n] = i.useState(!1),
+                        s = i.useRef(null),
                         r = [
                             {
                                 title: "Welcome to the Feature!",
@@ -3601,7 +3601,7 @@ let lq =
                                 {
                                     ...a,
                                     targetElementRef: s,
-                                    shouldShow: i,
+                                    shouldShow: o,
                                     onRequestClose: () => n(!1),
                                     steps: r,
                                     caretConfig: { align: "center" },
@@ -3613,7 +3613,7 @@ let lq =
                                 variant: "primary",
                                 text: "Show Multi-Step",
                                 buttonRef: s,
-                                onClick: () => n(!i),
+                                onClick: () => n(!o),
                             }),
                         ],
                     });
@@ -3641,12 +3641,12 @@ let lX = {
             name: "ProgressBar",
             id: "progress-bar",
             component: function (e) {
-                let { value: l, isIndeterminate: a, size: o, animate: i, valueLabel: n, ariaLabel: s } = e,
+                let { value: l, isIndeterminate: a, size: i, animate: o, valueLabel: n, ariaLabel: s } = e,
                     r = "" !== n ? n : void 0,
                     d = "" !== s ? s : "Progress";
                 return a
-                    ? (0, t.jsx)(l_.z, { isIndeterminate: !0, size: o, animate: i, valueLabel: r, "aria-label": d })
-                    : (0, t.jsx)(l_.z, { value: l, size: o, animate: i, valueLabel: r, "aria-label": d });
+                    ? (0, t.jsx)(l_.z, { isIndeterminate: !0, size: i, animate: o, valueLabel: r, "aria-label": d })
+                    : (0, t.jsx)(l_.z, { value: l, size: i, animate: o, valueLabel: r, "aria-label": d });
             },
             controls: {
                 value: { label: "Value", type: "slider", defaultValue: 50, minValue: 0, maxValue: 100 },
@@ -3680,14 +3680,14 @@ let lZ = {
                     let {
                             disabled: l,
                             optionCount: a,
-                            label: i,
+                            label: o,
                             optionLabel: n,
                             description: s,
                             showIcons: r,
                             withMixedDisabledOptions: d,
                         } = e,
-                        [u, c] = o.useState("option1"),
-                        x = o.useMemo(
+                        [u, c] = i.useState("option1"),
+                        x = i.useMemo(
                             () =>
                                 [
                                     {
@@ -3728,23 +3728,23 @@ let lZ = {
                                 ].slice(0, Math.max(1, Math.min(5, a))),
                             [a, n, s, r, d],
                         ),
-                        h = o.useCallback((e) => {
+                        h = i.useCallback((e) => {
                             c(e);
                         }, []),
-                        y = o.useCallback(() => {
+                        y = i.useCallback(() => {
                             x.length > 0 && c(x[0].value);
                         }, [x]),
-                        v = o.useCallback(() => {
+                        v = i.useCallback(() => {
                             x.length > 0 && c(x[x.length - 1].value);
                         }, [x]),
-                        g = o.useCallback(() => {
+                        g = i.useCallback(() => {
                             c(void 0);
                         }, []);
                     return (0, t.jsxs)(b.B, {
                         direction: "vertical",
                         gap: "md",
                         children: [
-                            (0, t.jsx)(lW.z, { value: u, label: i, onChange: h, options: x, disabled: l }),
+                            (0, t.jsx)(lW.z, { value: u, label: o, onChange: h, options: x, disabled: l }),
                             (0, t.jsxs)(p.E, {
                                 variant: "text-sm/normal",
                                 children: ["Current selection: ", "string" == typeof u && "" !== u ? u : "None"],
@@ -3809,22 +3809,22 @@ let lZ = {
                 id: "range-calendar",
                 name: "RangeCalendar",
                 component: function (e) {
-                    let { disabled: l, readOnly: a, showMinMax: i } = e,
-                        [n, s] = o.useState({
+                    let { disabled: l, readOnly: a, showMinMax: o } = e,
+                        [n, s] = i.useState({
                             start: (0, ej.Ec)((0, ej.Xj)()),
                             end: (0, ej.Ec)((0, ej.Xj)()).add({ days: 7 }),
                         }),
-                        r = o.useCallback((e) => {
+                        r = i.useCallback((e) => {
                             s(e);
                         }, []),
-                        d = o.useCallback(() => {
+                        d = i.useCallback(() => {
                             s(null);
                         }, []),
-                        u = o.useCallback(() => {
+                        u = i.useCallback(() => {
                             let e = (0, ej.Ec)((0, ej.Xj)());
                             s({ start: e, end: e.add({ days: 7 }) });
                         }, []),
-                        c = o.useCallback(() => {
+                        c = i.useCallback(() => {
                             s({ start: (0, eS._U)("2024-12-01"), end: (0, eS._U)("2024-12-31") });
                         }, []);
                     if (!eD("RangeCalendarStory"))
@@ -3847,8 +3847,8 @@ let lZ = {
                                 onChange: r,
                                 isDisabled: l,
                                 isReadOnly: a,
-                                minValue: i ? (0, eS._U)("2024-01-01") : void 0,
-                                maxValue: i ? (0, eS._U)("2024-12-31") : void 0,
+                                minValue: o ? (0, eS._U)("2024-01-01") : void 0,
+                                maxValue: o ? (0, eS._U)("2024-12-31") : void 0,
                                 "aria-label": "Select a date range",
                             }),
                             (0, t.jsxs)(p.E, {
@@ -3942,13 +3942,13 @@ let l3 = [
                 id: "select",
                 name: "Select",
                 component: function (e) {
-                    let { selectionMode: l, withLeadingAndTrailing: a, ...i } = e,
-                        [n, s] = o.useState(void 0),
-                        [r, d] = o.useState([]),
-                        u = l5(a, i.asyncOptions);
+                    let { selectionMode: l, withLeadingAndTrailing: a, ...o } = e,
+                        [n, s] = i.useState(void 0),
+                        [r, d] = i.useState([]),
+                        u = l5(a, o.asyncOptions);
                     return "single" === l
-                        ? (0, t.jsx)(e5.l, { ...i, selectionMode: l, options: u, onSelectionChange: s, value: n })
-                        : (0, t.jsx)(e5.l, { ...i, selectionMode: l, options: u, onSelectionChange: d, value: r });
+                        ? (0, t.jsx)(e5.l, { ...o, selectionMode: l, options: u, onSelectionChange: s, value: n })
+                        : (0, t.jsx)(e5.l, { ...o, selectionMode: l, options: u, onSelectionChange: d, value: r });
                 },
                 controls: {
                     selectionMode: {
@@ -3997,10 +3997,10 @@ let l3 = [
                 id: "searchable-select",
                 name: "SearchableSelect",
                 component: function (e) {
-                    let { selectionMode: l, withLeadingAndTrailing: a, asyncOptions: i, ...n } = e,
-                        [s, r] = o.useState(void 0),
-                        [d, u] = o.useState([]),
-                        c = l5(a, i);
+                    let { selectionMode: l, withLeadingAndTrailing: a, asyncOptions: o, ...n } = e,
+                        [s, r] = i.useState(void 0),
+                        [d, u] = i.useState([]),
+                        c = l5(a, o);
                     return "single" === l
                         ? (0, t.jsx)(lS.Z, { ...n, selectionMode: l, onSelectionChange: r, value: s, options: c })
                         : (0, t.jsx)(lS.Z, { ...n, selectionMode: l, onSelectionChange: u, value: d, options: c });
@@ -4049,7 +4049,7 @@ let l3 = [
                     let {
                             selectionMode: l,
                             label: a,
-                            hideLabel: i,
+                            hideLabel: o,
                             description: n,
                             helperText: s,
                             errorMessage: r,
@@ -4061,7 +4061,7 @@ let l3 = [
                         } = e,
                         { required: m, disabled: x } = p,
                         h = l5(c, p.asyncOptions),
-                        [y, v] = o.useState(null);
+                        [y, v] = i.useState(null);
                     return (0, t.jsxs)(l2.iS, {
                         selectionMode: l,
                         onSelectionChange: v,
@@ -4071,7 +4071,7 @@ let l3 = [
                         children: [
                             (0, t.jsx)(l2.a3, {
                                 label: a,
-                                hideLabel: i,
+                                hideLabel: o,
                                 placeholder: b,
                                 required: m,
                                 disabled: x,
@@ -4125,12 +4125,12 @@ let l3 = [
                 id: "listbox",
                 name: "ListBox",
                 component: function (e) {
-                    let { selectionMode: l, required: a, shouldFocusWrap: i, withLeadingAndTrailing: n } = e,
-                        [s, r] = o.useState(null);
+                    let { selectionMode: l, required: a, shouldFocusWrap: o, withLeadingAndTrailing: n } = e,
+                        [s, r] = i.useState(null);
                     return (0, t.jsx)(l1.q, {
                         selectionMode: l,
                         required: a,
-                        shouldFocusWrap: i,
+                        shouldFocusWrap: o,
                         items: n ? l6 : l3,
                         onSelectionChange: r,
                         selectedItems: s,
@@ -4158,8 +4158,8 @@ let l3 = [
         ],
     };
 function l5(e, l) {
-    let a = o.useRef(null);
-    return o.useMemo(() => {
+    let a = i.useRef(null);
+    return i.useMemo(() => {
         let t = e ? l6 : l3;
         return l
             ? (e) =>
@@ -4176,10 +4176,10 @@ let l8 = {
             id: "switch",
             name: "Switch",
             component: function (e) {
-                let { disabled: l, hasIcon: a, label: i, description: n, required: s, errorMessage: r } = e,
-                    [d, u] = o.useState(!1);
+                let { disabled: l, hasIcon: a, label: o, description: n, required: s, errorMessage: r } = e,
+                    [d, u] = i.useState(!1);
                 return (0, t.jsx)(e7.d, {
-                    label: i,
+                    label: o,
                     description: n,
                     required: s,
                     errorMessage: r,
@@ -4215,8 +4215,8 @@ let al = {
                 id: "tag-group",
                 component: function (e) {
                     let { selectionMode: l, removeable: a, layout: s } = e,
-                        r = (0, i.bG)([n.default], () => n.default.getCurrentUser()),
-                        d = o.useMemo(
+                        r = (0, o.bG)([n.default], () => n.default.getCurrentUser()),
+                        d = i.useMemo(
                             () => [
                                 { id: "strength", label: "Strength", icon: ae.r },
                                 { id: "dexterity", label: "Dexterity", icon: { type: "role", color: "#ff44aa" } },
@@ -4229,14 +4229,14 @@ let al = {
                             ],
                             [r],
                         ),
-                        [u, c] = o.useState(d),
-                        p = o.useCallback(
+                        [u, c] = i.useState(d),
+                        p = i.useCallback(
                             (e) => {
                                 c(u.filter((l) => !e.has(l.id)));
                             },
                             [u],
                         ),
-                        x = o.useCallback(() => {
+                        x = i.useCallback(() => {
                             c(d);
                         }, [d]),
                         h = (0, t.jsx)(l9.C, {
@@ -4305,6 +4305,18 @@ let al = {
         "heading-xxl/semibold",
         "heading-xxl/bold",
         "heading-xxl/extrabold",
+        "experimental/heading-xs/semibold",
+        "experimental/heading-xs/bold",
+        "experimental/heading-sm/semibold",
+        "experimental/heading-sm/bold",
+        "experimental/heading-md/semibold",
+        "experimental/heading-md/bold",
+        "experimental/heading-lg/semibold",
+        "experimental/heading-lg/bold",
+        "experimental/heading-xl/semibold",
+        "experimental/heading-xl/bold",
+        "experimental/heading-xxl/semibold",
+        "experimental/heading-xxl/bold",
         "eyebrow",
         "heading-deprecated-12/normal",
         "heading-deprecated-12/medium",
@@ -4342,14 +4354,40 @@ let al = {
         "redesign/channel-title/medium",
         "redesign/channel-title/semibold",
         "redesign/channel-title/bold",
+        "experimental/body-xs/normal",
+        "experimental/body-xs/medium",
+        "experimental/body-sm/normal",
+        "experimental/body-sm/medium",
+        "experimental/body-md/normal",
+        "experimental/body-md/medium",
+        "experimental/body-lg/normal",
+        "experimental/body-lg/medium",
+        "experimental/meta/normal",
+        "experimental/meta/medium",
         "display-sm",
         "display-md",
         "display-lg",
+        "experimental/display-xs",
+        "experimental/display-sm",
+        "experimental/display-md",
+        "experimental/display-lg",
+        "experimental/label-xs/medium",
+        "experimental/label-xs/semibold",
+        "experimental/label-sm/medium",
+        "experimental/label-sm/semibold",
+        "experimental/label-md/medium",
+        "experimental/label-md/semibold",
+        "experimental/label-lg/medium",
+        "experimental/label-lg/semibold",
         "code",
+        "experimental/mono-md/normal",
+        "experimental/mono-md/bold",
+        "experimental/mono-sm/normal",
+        "experimental/mono-sm/bold",
     ];
 var at = a(364522),
-    ao = a(653197);
-let ai = {
+    ai = a(653197);
+let ao = {
     name: "Text",
     id: "text",
     component: p.E,
@@ -4395,7 +4433,7 @@ let ad = {
                 let {
                         text: l,
                         position: a,
-                        align: i,
+                        align: o,
                         caretAlign: n,
                         customOffset: s,
                         delay: r,
@@ -4403,14 +4441,14 @@ let ad = {
                         ariaHidden: u,
                         ...c
                     } = e,
-                    b = o.useMemo(() => {
+                    b = i.useMemo(() => {
                         if ("center" !== n && null != n)
                             return "custom" === n ? { align: n, customOffset: s } : { align: n };
                     }, [n, s]);
                 return (0, t.jsx)(as.m, {
                     text: l,
                     position: a,
-                    align: i,
+                    align: o,
                     delay: r,
                     spacing: d,
                     caretConfig: b,
@@ -4470,7 +4508,7 @@ let ad = {
                 let {
                         title: l,
                         body: a,
-                        showAsset: i,
+                        showAsset: o,
                         assetSize: n,
                         padding: s,
                         position: r,
@@ -4482,11 +4520,11 @@ let ad = {
                         forceOpen: x,
                         ...h
                     } = e,
-                    y = o.useMemo(() => {
+                    y = i.useMemo(() => {
                         if ("center" !== u && null != u)
                             return "custom" === u ? { align: u, customOffset: c } : { align: u };
                     }, [u, c]),
-                    v = o.useMemo(() => (i ? { type: "image", src: ar.A, aspectRatio: "1/1" } : void 0), [i]);
+                    v = i.useMemo(() => (o ? { type: "image", src: ar.A, aspectRatio: "1/1" } : void 0), [o]);
                 return (0, t.jsx)(an.u, {
                     title: l,
                     body: a,
@@ -4580,18 +4618,18 @@ let ab = {
             {
                 title: "Text",
                 stories: [
-                    ai,
+                    ao,
                     {
                         name: "Typography Scales",
                         id: "text-scales",
                         component: function (e) {
                             return (0, t.jsx)(at.Ar, {
-                                className: ao.H,
+                                className: ai.H,
                                 children: Object.values(aa).map((l) =>
                                     (0, t.jsxs)(
                                         k.Z,
                                         {
-                                            className: ao.N,
+                                            className: ai.N,
                                             children: [
                                                 (0, t.jsx)(p.E, { ...e, variant: l, children: e.children }),
                                                 (0, t.jsx)(p.E, {
@@ -4627,7 +4665,7 @@ let ab = {
             lX,
             ad,
             al,
-            li,
+            lo,
             {
                 title: "FloatingLayer",
                 stories: [
@@ -4638,19 +4676,19 @@ let ab = {
                             let {
                                     placement: l,
                                     spacing: a,
-                                    autoFlip: i,
+                                    autoFlip: o,
                                     autoShift: n,
                                     strategy: s,
                                     portal: r,
                                     blockPointerEvents: d,
                                 } = e,
-                                [u, c] = o.useState(!1);
+                                [u, c] = i.useState(!1);
                             return (0, t.jsx)(au.Ow, {
                                 open: u,
                                 onOpenChange: c,
                                 placement: l,
                                 spacing: a,
-                                autoFlip: i,
+                                autoFlip: o,
                                 autoShift: n,
                                 strategy: s,
                                 portal: r,
@@ -4720,9 +4758,9 @@ let ab = {
                         name: "All Animations",
                         id: "rive-all-animations",
                         component: function () {
-                            let [e, l] = o.useState(!0),
-                                a = o.useContext(lQ.C),
-                                [i, n] = o.useState(0);
+                            let [e, l] = i.useState(!0),
+                                a = i.useContext(lQ.C),
+                                [o, n] = i.useState(0);
                             return (0, t.jsxs)(lQ.C.Provider, {
                                 value: { ...a, reducedMotion: { ...a.reducedMotion, enabled: e } },
                                 children: [
@@ -4772,7 +4810,7 @@ let ab = {
                                                 );
                                             }),
                                         },
-                                        i,
+                                        o,
                                     ),
                                 ],
                             });

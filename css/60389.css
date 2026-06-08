@@ -1,0 +1,160 @@
+.base_e42a84 {
+    background-position: 0;
+    display: block;
+    position: absolute
+}
+
+.sparkle_e42a84 {
+    animation: sparkle_e42a84 1.5s steps(17, start) infinite forwards;
+    background-position: -731px;
+    background-size: 774px 43px;
+    height: 43px;
+    width: 43px
+}
+
+.pop_e42a84 {
+    animation: pop_e42a84 2.91666666667s steps(34, start) infinite forwards;
+    background-position: -816px;
+    background-size: 840px 24px;
+    height: 24px;
+    width: 24px
+}
+
+.light_e42a84 {
+    animation: light_e42a84 2.58333333333s steps(30, start) infinite forwards;
+    background-size: 620px 20px;
+    height: 20px;
+    width: 20px
+}
+
+.cross_e42a84,
+.light_e42a84 {
+    background-position: -600px
+}
+
+.cross_e42a84 {
+    animation: cross_e42a84 2.083325s steps(23, start) infinite forwards;
+    background-size: 625px 25px;
+    height: 25px;
+    width: 25px
+}
+
+.sparkleBlurple_e42a84,
+.sparkleGrey_e42a84,
+.sparkleWhite_e42a84 {}
+
+.sparkleWhite_e42a84 {
+    background-image: url(/assets/fe36493b90ca212f.png)
+}
+
+.sparkleGrey_e42a84 {
+    background-image: url(/assets/d4d24bae3c0559b3.png)
+}
+
+.sparkleBlurple_e42a84 {
+    background-image: url(/assets/bf6de7bed70dd6d3.png)
+}
+
+.popBlurple_e42a84,
+.popGrey_e42a84,
+.popWhite_e42a84 {}
+
+.popWhite_e42a84 {
+    background-image: url(/assets/9e77accd9b306314.png)
+}
+
+.popGrey_e42a84 {
+    background-image: url(/assets/ec347b8de4777f9a.png)
+}
+
+.popBlurple_e42a84 {
+    background-image: url(/assets/889a2aa66cb786d7.png)
+}
+
+.lightBlurple_e42a84,
+.lightGrey_e42a84,
+.lightWhite_e42a84 {}
+
+.lightWhite_e42a84 {
+    background-image: url(/assets/d06f48f14653e6c8.png)
+}
+
+.lightGrey_e42a84 {
+    background-image: url(/assets/b70ad231203bf921.png)
+}
+
+.lightBlurple_e42a84 {
+    background-image: url(/assets/d2cc0071b8c9ceef.png)
+}
+
+.crossBlurple_e42a84,
+.crossGrey_e42a84,
+.crossWhite_e42a84 {}
+
+.crossWhite_e42a84 {
+    background-image: url(/assets/dd2ccc47416b2b19.png)
+}
+
+.crossGrey_e42a84 {
+    background-image: url(/assets/d085fdd3215d0dc0.png)
+}
+
+.crossBlurple_e42a84 {
+    background-image: url(/assets/18fc01aa48e3eedf.png)
+}
+
+@keyframes sparkle_e42a84 {
+    0% {
+        background-position: 0
+    }
+
+    40% {
+        background-position: -731px
+    }
+
+    to {
+        background-position: -731px
+    }
+}
+
+@keyframes pop_e42a84 {
+    0% {
+        background-position: 0
+    }
+
+    40% {
+        background-position: -816px
+    }
+
+    to {
+        background-position: -816px
+    }
+}
+
+@keyframes light_e42a84 {
+    0% {
+        background-position: 0
+    }
+
+    40% {
+        background-position: -600px
+    }
+
+    to {
+        background-position: -600px
+    }
+}
+
+@keyframes cross_e42a84 {
+    0% {
+        background-position: 0
+    }
+
+    40% {
+        background-position: -600px
+    }
+
+    to {
+        background-position: -600px
+    }
+}

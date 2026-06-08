@@ -15,10 +15,11 @@ function h(e, t, h) {
     if (d.isPlatformEmbedded)
         (0, r.openModalLazy)(async () => {
             let { default: e } = await Promise.all([
-                n.e("45143"),
-                n.e("39713"),
+                n.e("77372"),
+                n.e("84106"),
                 n.e("17918"),
-                n.e("66641"),
+                n.e("13988"),
+                n.e("90950"),
                 n.e("207"),
                 n.e("76171"),
                 n.e("34530"),

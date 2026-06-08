@@ -33,8 +33,8 @@ var n = t(627968),
     P = t(10862),
     R = t(164891),
     w = t(135635),
-    U = t(696451),
-    D = t(71393),
+    D = t(696451),
+    U = t(71393),
     M = t(958590),
     F = t(576705),
     L = t(290863),
@@ -63,11 +63,12 @@ function $(e) {
             s?.(p.isHoveringOrFocusing);
         }, [s, p]);
     let S = l.useCallback(() => {
-        let e = D.A.getGuild(i.guild_id);
+        let e = U.A.getGuild(i.guild_id);
         d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, m.openModalLazy)(async () => {
                 let { default: l } = await Promise.all([
-                    t.e("82860"),
+                    t.e("87932"),
+                    t.e("42527"),
                     t.e("59957"),
                     t.e("28136"),
                     t.e("16084"),
@@ -122,14 +123,14 @@ function W(e) {
     let { channel: i, user: t, ringingEnabled: s } = e,
         r = i.guild_id,
         d = l.useRef(null),
-        u = (0, c.bG)([U.Ay], () => U.Ay.getMember(r, t.id), [r, t.id]),
+        u = (0, c.bG)([D.Ay], () => D.Ay.getMember(r, t.id), [r, t.id]),
         { isHoveringOrFocusing: m } = (0, k.A)(d),
         [h, j] = l.useState(null),
         {
             icon: T,
             iconColor: O,
             tooltipText: R,
-            disabled: D,
+            disabled: U,
             shouldHideButton: K,
             onClick: $,
         } = (0, w.A)({ user: t, channel: i, location: H }),
@@ -156,9 +157,9 @@ function W(e) {
         en = "success" === h || "sending" === h,
         el = l.useCallback(
             (e) => {
-                e.stopPropagation(), D || $();
+                e.stopPropagation(), U || $();
             },
-            [$, D],
+            [$, U],
         ),
         es = l.useCallback(async () => {
             if (en) return;
@@ -265,9 +266,9 @@ function W(e) {
                 (0, n.jsx)(o.m, {
                     text: R,
                     children: (0, n.jsx)(g.D, {
-                        className: a()(Y.D9, q.button, q.secondary, { [Y.r9]: D }),
+                        className: a()(Y.D9, q.button, q.secondary, { [Y.r9]: U }),
                         onClick: el,
-                        "aria-disabled": D,
+                        "aria-disabled": U,
                         children: (0, n.jsx)(T, { size: "xxs", color: O, className: Y.Kk }),
                     }),
                 }),

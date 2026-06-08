@@ -1,0 +1,26 @@
+.contentContainer__665be {
+    display: flex;
+    flex-direction: column;
+    height: 100%
+}
+
+.rewardTileContainer__665be {
+    align-content: center;
+    flex: 1;
+    justify-items: center
+}
+
+.rewardTile__665be {
+    height: auto;
+    width: 148px
+}
+
+.copyContainer__665be {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px
+}
+
+.heading__665be {
+    margin-bottom: 4px
+}

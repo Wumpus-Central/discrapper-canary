@@ -1,22 +1,24 @@
 "use strict";
-n.d(t, { D: () => c });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { D: () => d });
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(834730),
-    l = n(707554),
-    u = n(883941);
-let c = i.forwardRef(function (e, t) {
-    let { variant: n, className: i, ...s } = e,
-        c = (0, l.$)(),
-        d = `h${Math.min(c, 6)}`;
-    return (0, r.jsx)(o.E, {
+    l = n(124336),
+    u = n(707554),
+    c = n(893941);
+let d = r.forwardRef(function (e, t) {
+    let { variant: n, className: r, ...s } = e,
+        d = (0, u.$)(),
+        _ = `h${Math.min(d, 6)}`,
+        h = (0, l.p)(n, !0);
+    return (0, i.jsx)(o.E, {
         ref: t,
-        variant: n,
-        tag: d,
-        className: a()(u.f, i),
-        ...(c > 6 ? { "data-excessive-heading-level": c } : {}),
+        variant: h,
+        tag: _,
+        className: a()(c.f, r),
+        ...(d > 6 ? { "data-excessive-heading-level": d } : {}),
         ...s,
     });
 });

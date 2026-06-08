@@ -1,0 +1,64 @@
+.container_d03433 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    position: relative
+}
+
+.heroDisplay_d03433 {
+    -webkit-mask-image: linear-gradient(180deg, #000 0, transparent);
+    mask-image: linear-gradient(180deg, #000 0, transparent);
+    max-height: 190px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    pointer-events: none;
+    position: relative;
+    width: 100%
+}
+
+.partnerLogotypeContainer_d03433 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    pointer-events: none
+}
+
+.partnerLogotype_d03433 {
+    height: 69px;
+    max-width: 50%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: auto
+}
+
+.partnerContentContainer_d03433 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-16);
+    padding-inline: 24px
+}
+
+.partnerGameTile_d03433 {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    height: 42px;
+    pointer-events: none;
+    width: auto
+}
+
+.partnerCopyContainer_d03433 {
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.partnerTitle_d03433 {
+    padding-bottom: 4px
+}
+
+.rightCtaSlot_d03433 {
+    padding: 24px
+}
