@@ -1,15 +1,15 @@
 "use strict";
 let i;
 n.d(t, {
-    My: () => k.My,
+    My: () => U.My,
     mk: () => p,
     UT: () => W,
     V5: () => G,
     Ay: () => K,
-    il: () => C,
-    yK: () => k.yK,
-    bG: () => k.bG,
-    cf: () => k.cf,
+    il: () => v,
+    yK: () => U.yK,
+    bG: () => U.bG,
+    cf: () => U.cf,
     ru: () => r.r,
 });
 var r = n(968441);
@@ -23,7 +23,7 @@ var u = n(941426),
     c = n(390225),
     d = n(39304),
     _ = n(294997);
-let f = new Set([
+let h = new Set([
         "APP_STATE_UPDATE",
         "CLEAR_CACHES",
         "CONNECTION_CLOSED",
@@ -39,7 +39,7 @@ let f = new Set([
         "UPLOAD_FAIL",
         "WRITE_CACHES",
     ]),
-    h = new u.Vy("Flux");
+    f = new u.Vy("Flux");
 class p {
     _defaultBand;
     _interceptors = [];
@@ -95,7 +95,7 @@ class p {
                     if (++e > 100) {
                         let e = d.lK();
                         throw (
-                            (h.error("LastFewActions", e),
+                            (f.error("LastFewActions", e),
                             this._sentryUtils?.addBreadcrumb({
                                 message: "Dispatcher: Dispatch loop detected",
                                 data: { lastFewActions: e },
@@ -119,7 +119,7 @@ class p {
             `Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: ${e.type} Already dispatching: ${this._currentDispatchActionType}`,
         ),
             o()(e.type, "Dispatch.dispatch(...) called without an action type"),
-            f.has(e.type) && h.log(`Dispatching ${e.type}`),
+            h.has(e.type) && f.log(`Dispatching ${e.type}`),
             e.type,
             d.WQ(e.type);
         let t = this.actionLogger.log(e, (t) => {
@@ -129,7 +129,7 @@ class p {
                 this._currentDispatchActionType = null;
             }
         });
-        t.totalTime > 100 && h.verbose(`Slow dispatch on ${e.type}: ${t.totalTime}ms`);
+        t.totalTime > 100 && f.verbose(`Slow dispatch on ${e.type}: ${t.totalTime}ms`);
         try {
             e.type, e.type;
         } catch (e) {}
@@ -283,13 +283,13 @@ class T {
     }
 }
 let S = [],
-    N = !1,
-    y = new Promise((e) => {
+    y = !1,
+    N = new Promise((e) => {
         i = () => {
             e(), (i = null);
         };
     });
-class C {
+class v {
     _changeCallbacks = new T();
     _reactChangeCallbacks = new T();
     _syncWiths = [];
@@ -299,9 +299,9 @@ class C {
     _isInitialized = !1;
     static displayName;
     static initialize() {
-        (N = !0), S.forEach((e) => e.initializeIfNeeded()), null != i && i();
+        (y = !0), S.forEach((e) => e.initializeIfNeeded()), null != i && i();
     }
-    static initialized = y;
+    static initialized = N;
     static destroy() {
         (S.length = 0), c.A.destroy();
     }
@@ -318,7 +318,7 @@ class C {
             (this._dispatchToken = this._dispatcher.createToken()),
             this.registerActionHandlers(t ?? {}, n),
             S.push(this),
-            N && this.initializeIfNeeded();
+            y && this.initializeIfNeeded();
     }
     doEmitChanges = (e) => {
         (this._changeCallbacks.hasAny() || this._reactChangeCallbacks.hasAny() || this._syncWiths.length > 0) &&
@@ -403,9 +403,9 @@ class C {
         this._mustEmitChanges = e;
     }
 }
-let v = { _state: void 0, _version: void 0 },
-    O = null;
-class R extends C {
+let C = { _state: void 0, _version: void 0 },
+    R = null;
+class O extends v {
     static allPersistKeys = new Set();
     static userAgnosticPersistKeys = new Set();
     static _writePromises = new Map();
@@ -422,58 +422,58 @@ class R extends C {
     _version = null == this.getClass().migrations ? 0 : this.getClass().migrations.length;
     static clearAll(e) {
         return (
-            (O = e),
-            null == R._clearAllPromise &&
-                (R._clearAllPromise = new Promise((t) => {
+            (R = e),
+            null == O._clearAllPromise &&
+                (O._clearAllPromise = new Promise((t) => {
                     requestIdleCallback(
                         () => {
-                            R.clearPersistQueue(e),
-                                R.allPersistKeys.forEach((t) => {
-                                    R.shouldClear(e, t) && I.w.remove(t);
+                            O.clearPersistQueue(e),
+                                O.allPersistKeys.forEach((t) => {
+                                    O.shouldClear(e, t) && I.w.remove(t);
                                 }),
-                                C.getAll().forEach((t) => {
-                                    t instanceof R &&
-                                        R.shouldClear(e, t.getClass().persistKey) &&
+                                v.getAll().forEach((t) => {
+                                    t instanceof O &&
+                                        O.shouldClear(e, t.getClass().persistKey) &&
                                         ((t._isInitialized = !1), t.initializeIfNeeded());
                                 }),
-                                (R._clearAllPromise = null),
+                                (O._clearAllPromise = null),
                                 t();
                         },
                         { timeout: 500 },
                     );
                 })),
-            R._clearAllPromise
+            O._clearAllPromise
         );
     }
     static shouldClear(e, t) {
         return (
             !e.omit?.includes(t) &&
-            ("all" === e.type || ("user-data-only" === e.type && !R.userAgnosticPersistKeys.has(t)))
+            ("all" === e.type || ("user-data-only" === e.type && !O.userAgnosticPersistKeys.has(t)))
         );
     }
     static clearPersistQueue(e) {
-        R._writeResolvers.forEach((t, n) => {
+        O._writeResolvers.forEach((t, n) => {
             let [i, r] = t;
-            R.shouldClear(e, n) &&
-                (R._writePromises.delete(n), R._writeResolvers.delete(n), cancelIdleCallback(r), i(!1));
+            O.shouldClear(e, n) &&
+                (O._writePromises.delete(n), O._writeResolvers.delete(n), cancelIdleCallback(r), i(!1));
         }),
-            R._writePromises.clear(),
-            R._writeResolvers.clear();
+            O._writePromises.clear(),
+            O._writeResolvers.clear();
     }
     static getAllStates() {
-        return Promise.all(Array.from(R._writePromises.values())).then(() => {
+        return Promise.all(Array.from(O._writePromises.values())).then(() => {
             let e = {};
             return (
-                R.allPersistKeys.forEach((t) => {
-                    e[t] = (I.w.get(t) ?? v)._state;
+                O.allPersistKeys.forEach((t) => {
+                    e[t] = (I.w.get(t) ?? C)._state;
                 }),
                 e
             );
         });
     }
     static initializeAll(e) {
-        C.getAll().forEach((t) => {
-            if (t instanceof R) {
+        v.getAll().forEach((t) => {
+            if (t instanceof O) {
                 let n = t.getClass().persistKey;
                 e.hasOwnProperty(n) && t.initializeFromState(e[n]);
             }
@@ -483,14 +483,14 @@ class R extends C {
         this.initialize(e) && this.asyncPersist(),
             this._isInitialized
                 ? this.emitChange()
-                : (R.allPersistKeys.add(this.getClass().persistKey), (this._isInitialized = !0));
+                : (O.allPersistKeys.add(this.getClass().persistKey), (this._isInitialized = !0));
     }
     static destroy() {
-        (O = null),
-            C.destroy(),
-            R.clearPersistQueue({ type: "all" }),
-            R.allPersistKeys.clear(),
-            R.userAgnosticPersistKeys.clear();
+        (R = null),
+            v.destroy(),
+            O.clearPersistQueue({ type: "all" }),
+            O.allPersistKeys.clear(),
+            O.userAgnosticPersistKeys.clear();
     }
     constructor(e, t, n) {
         if ((super(e, t, n), "string" != typeof this.getClass().persistKey))
@@ -510,8 +510,8 @@ class R extends C {
     initializeIfNeeded() {
         if (!this._isInitialized) {
             let e = Date.now();
-            R.allPersistKeys.add(this.getClass().persistKey);
-            let { state: t, requiresPersist: n } = R.migrateAndReadStoreState(
+            O.allPersistKeys.add(this.getClass().persistKey);
+            let { state: t, requiresPersist: n } = O.migrateAndReadStoreState(
                 this.getClass().persistKey,
                 this.getClass().migrations,
             );
@@ -521,8 +521,8 @@ class R extends C {
         }
     }
     static migrateAndReadStoreState(e, t) {
-        if (null != O && R.shouldClear(O, e)) return I.w.remove(e), { state: void 0, requiresPersist: !1 };
-        let { _state: n, _version: i, ...r } = (null != R._clearAllPromise ? null : I.w.get(e)) ?? v,
+        if (null != R && O.shouldClear(R, e)) return I.w.remove(e), { state: void 0, requiresPersist: !1 };
+        let { _state: n, _version: i, ...r } = (null != O._clearAllPromise ? null : I.w.get(e)) ?? C,
             s = null == t ? 0 : t.length;
         if (0 !== s && i !== s && null != t) {
             let e = i ?? 0,
@@ -534,20 +534,20 @@ class R extends C {
     }
     callback = (e) => {
         let { persistKey: t } = this.getClass();
-        this.persist(), R._writePromises.delete(t), R._writeResolvers.delete(t), e();
+        this.persist(), O._writePromises.delete(t), O._writeResolvers.delete(t), e();
     };
     throttledCallback = A()((e) => this.callback(e), this.getClass().throttleDelay, { leading: !1 });
     asyncPersist() {
         let { persistKey: e, disableWrite: t, throttleDelay: n } = this.getClass();
-        if (R.disableWrites || t) return Promise.resolve(!1);
-        let i = R._writePromises.get(e);
+        if (O.disableWrites || t) return Promise.resolve(!1);
+        let i = O._writePromises.get(e);
         return (
             null != i ||
                 ((i = new Promise((t) => {
                     let i = n > 0 ? () => this.throttledCallback(t) : () => this.callback(t);
-                    R._writeResolvers.set(e, [t, requestIdleCallback(i, { timeout: 500 })]);
+                    O._writeResolvers.set(e, [t, requestIdleCallback(i, { timeout: 500 })]);
                 })),
-                R._writePromises.set(e, i)),
+                O._writePromises.set(e, i)),
             i
         );
     }
@@ -562,12 +562,12 @@ class R extends C {
         I.w.remove(e);
     }
 }
-class b extends R {
+class b extends O {
     initializeFromState(e) {
-        return R.userAgnosticPersistKeys.add(this.getClass().persistKey), super.initializeFromState(e);
+        return O.userAgnosticPersistKeys.add(this.getClass().persistKey), super.initializeFromState(e);
     }
     initializeIfNeeded() {
-        return R.userAgnosticPersistKeys.add(this.getClass().persistKey), super.initializeIfNeeded();
+        return O.userAgnosticPersistKeys.add(this.getClass().persistKey), super.initializeIfNeeded();
     }
     getState() {
         return this.getUserAgnosticState();
@@ -601,8 +601,8 @@ function P(e) {
     );
 }
 var x = n(353640),
-    U = n(158390),
-    k = n(702841);
+    k = n(158390),
+    U = n(702841);
 let G = Symbol("NO_DATA");
 class F extends Error {
     name = "HTTPResponseError";
@@ -625,9 +625,15 @@ function H(e) {
     return e instanceof F && (e.status >= 500 || 429 === e.status);
 }
 function j() {
-    return new U.A();
+    return new k.A();
 }
-let Y = (0, x.v)(() => ({ isLoading: !1, error: null, backoff: new U.A(), lastSuccessAt: null }));
+let Y = (0, x.v)(() => ({
+    isLoading: !1,
+    error: null,
+    backoff: new k.A(),
+    lastSuccessAt: null,
+    failureLockedUntil: null,
+}));
 function W(e, t) {
     let {
             getQueryId: n,
@@ -637,23 +643,30 @@ function W(e, t) {
             getError: a,
             retryConfig: { maxRetries: o = 5, backoff: l = j, retryableErrors: u = H } = {},
             staleAfter: c,
+            failureStaleAfter: d,
         } = t,
-        d = new Map();
-    function _(e) {
+        _ = new Map();
+    function h(e) {
         if (null == e) return Y;
-        let t = d.get(e);
+        let t = _.get(e);
         return (
             null == t &&
-                ((t = (0, x.v)(() => ({ isLoading: !1, error: null, backoff: l(), lastSuccessAt: null }))),
-                d.set(e, t)),
+                ((t = (0, x.v)(() => ({
+                    isLoading: !1,
+                    error: null,
+                    backoff: l(),
+                    lastSuccessAt: null,
+                    failureLockedUntil: null,
+                }))),
+                _.set(e, t)),
             t
         );
     }
     async function f(e) {
-        let { queryId: t, args: n, refetch: a = !1, useStoreState: l = _(t) } = e,
-            d = l.getState().backoff,
-            h = s?.(...n) ?? l.getState().isLoading;
-        if (null != t && !h) {
+        let { queryId: t, args: n, refetch: a = !1, useStoreState: l = h(t) } = e,
+            _ = l.getState().backoff,
+            p = s?.(...n) ?? l.getState().isLoading;
+        if (null != t && !p) {
             if (!a) {
                 let e = i(...n);
                 if (
@@ -666,12 +679,14 @@ function W(e, t) {
                         })(l, c))
                 )
                     return;
+                let { failureLockedUntil: t } = l.getState();
+                if (null != t && Date.now() < t) return;
             }
             try {
                 l.setState({ isLoading: !0 }),
                     await r(...n),
-                    d.succeed(),
-                    l.setState({ error: null, isLoading: !1, lastSuccessAt: Date.now() });
+                    _.succeed(),
+                    l.setState({ error: null, isLoading: !1, lastSuccessAt: Date.now(), failureLockedUntil: null });
             } catch (i) {
                 let e = (function (e) {
                     if (e instanceof Error) return e;
@@ -694,21 +709,21 @@ function W(e, t) {
                     return Error(String(e));
                 })(i);
                 l.setState({ error: e, isLoading: !1 }),
-                    u(e) &&
-                        o > d.fails &&
-                        (await new Promise((i, r) => {
-                            let s;
-                            d.fail(
-                                () => {
-                                    f({ queryId: t, args: n, useStoreState: l, refetch: a }).then(i, r);
-                                },
-                                null == (s = V(e.retryAfter)) ? 0 : 1e3 * s,
-                            );
-                        }));
+                    u(e) && o > _.fails
+                        ? await new Promise((i, r) => {
+                              let s;
+                              _.fail(
+                                  () => {
+                                      f({ queryId: t, args: n, useStoreState: l, refetch: a }).then(i, r);
+                                  },
+                                  null == (s = V(e.retryAfter)) ? 0 : 1e3 * s,
+                              );
+                          })
+                        : null != d && l.setState({ failureLockedUntil: Date.now() + 1e3 * d });
             }
         }
     }
-    function h() {
+    function p() {
         for (var t = arguments.length, r = Array(t), o = 0; o < t; o++) r[o] = arguments[o];
         let l = (function (e) {
                 let [t, n] = (0, L.useState)(e);
@@ -716,12 +731,12 @@ function W(e, t) {
             })(r),
             u = Array.isArray(e) ? e : [e],
             c = n(...l),
-            d = _(c),
-            h = (0, k.bG)(u, () => s?.(...l), [l]),
+            d = h(c),
+            _ = (0, U.bG)(u, () => s?.(...l), [l]),
             p = d((e) => null == s && e.isLoading),
-            E = (0, k.bG)(u, () => a?.(...l), [l]),
+            E = (0, U.bG)(u, () => a?.(...l), [l]),
             m = d((e) => (null == a ? e.error : null)),
-            g = (0, k.bG)(u, () => i(...l), [l], B);
+            g = (0, U.bG)(u, () => i(...l), [l], B);
         return (
             (0, L.useEffect)(() => {
                 f({ queryId: c, args: l, useStoreState: d });
@@ -729,7 +744,7 @@ function W(e, t) {
             {
                 data: g === G ? null : g,
                 error: E ?? m,
-                isLoading: h ?? p,
+                isLoading: _ ?? p,
                 refetch: (0, L.useCallback)(() => {
                     f({ queryId: c, args: l, useStoreState: d, refetch: !0 });
                 }, [c, l, d]),
@@ -737,38 +752,44 @@ function W(e, t) {
         );
     }
     return (
-        (h.refetch = async function () {
+        (p.refetch = async function () {
             for (var e = arguments.length, t = Array(e), i = 0; i < e; i++) t[i] = arguments[i];
             let r = n(...t),
-                s = _(r);
-            s.getState().backoff.succeed(), await f({ queryId: r, args: t, useStoreState: s, refetch: !0 });
+                s = h(r);
+            s.getState().backoff.succeed(),
+                s.setState({ failureLockedUntil: null }),
+                await f({ queryId: r, args: t, useStoreState: s, refetch: !0 });
         }),
-        (h.fetchMany = async function () {
+        (p.fetchMany = async function () {
             for (var e = arguments.length, t = Array(e), i = 0; i < e; i++) t[i] = arguments[i];
             await Promise.all(
                 t.map((e) => {
                     let t = n(...e);
-                    return f({ queryId: t, args: e, useStoreState: _(t) });
+                    return f({ queryId: t, args: e, useStoreState: h(t) });
                 }),
             );
         }),
-        (h.refetchMany = async function () {
+        (p.refetchMany = async function () {
             for (var e = arguments.length, t = Array(e), i = 0; i < e; i++) t[i] = arguments[i];
             await Promise.all(
                 t.map((e) => {
                     let t = n(...e),
-                        i = _(t);
-                    return i.getState().backoff.succeed(), f({ queryId: t, args: e, useStoreState: i, refetch: !0 });
+                        i = h(t);
+                    return (
+                        i.getState().backoff.succeed(),
+                        i.setState({ failureLockedUntil: null }),
+                        f({ queryId: t, args: e, useStoreState: i, refetch: !0 })
+                    );
                 }),
             );
         }),
-        h
+        p
     );
 }
 let K = {
     Emitter: c.A,
-    Store: C,
-    PersistedStore: R,
+    Store: v,
+    PersistedStore: O,
     DeviceSettingsStore: class extends b {},
     OfflineCacheStore: class extends b {},
     connectStores: function (e, t, n) {
@@ -831,9 +852,9 @@ let K = {
               })(e, t);
     },
     initialize: function () {
-        C.initialize();
+        v.initialize();
     },
     get initialized() {
-        return C.initialized;
+        return v.initialized;
     },
 };
