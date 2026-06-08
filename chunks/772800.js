@@ -33,8 +33,8 @@ var n = t(627968),
     P = t(927813),
     R = t(427262),
     w = t(329554),
-    U = t(402313),
-    D = t(699976),
+    D = t(402313),
+    U = t(699976),
     M = t(415679);
 let F = (0, I.Fe)({
     createPromise: () =>
@@ -59,7 +59,7 @@ let F = (0, I.Fe)({
             t.e("26243"),
             t.e("37144"),
             t.e("55882"),
-            t.e("60532"),
+            t.e("914"),
             t.e("45324"),
             t.e("55990"),
             t.e("99314"),
@@ -202,7 +202,7 @@ function L(e) {
                       guildId: t.guild_id,
                       channelId: t.id,
                       numWishlistItems: 2,
-                      cardSpec: D.Z.SIZE_110,
+                      cardSpec: U.Z.SIZE_110,
                   }),
               ],
           })
@@ -253,13 +253,13 @@ function K(e) {
         { channel: a, user: r, onAction: u, excludeActivity: g, onWatchStream: p } = e,
         I = l.useMemo(() => ({ [a.guild_id]: [r.id] }), [a.guild_id, r.id]);
     (0, o.Eq)(I, "VoiceUserActivities");
-    let { enabled: y } = U.A.useExperiment({ guildId: a.guild_id, location: "VoiceUserPopout" }),
+    let { enabled: y } = D.A.useExperiment({ guildId: a.guild_id, location: "VoiceUserPopout" }),
         [j, P] = (0, s.yK)(
             [C.A],
             () => [C.A.getStreamForUser(r.id, a.getGuildId()), C.A.getActiveStreamForUser(r.id, a.getGuildId())],
             [a, r.id],
         ),
-        [R, D] = (0, s.yK)([k.A, T.A, O.A, v.default], () => (0, f.eo)(a, k.A, T.A, O.A, v.default)),
+        [R, U] = (0, s.yK)([k.A, T.A, O.A, v.default], () => (0, f.eo)(a, k.A, T.A, O.A, v.default)),
         F = (0, s.bG)([b.default], () => b.default.getId()),
         K = (0, s.bG)([G.A], () => (0, x.nr)(j, G.A), [j]),
         B = (0, h.r9)() && (0, h.UK)(a.id),
@@ -297,7 +297,7 @@ function K(e) {
                     user: r,
                     currentUserId: F,
                     canWatch: R,
-                    unavailableReason: D,
+                    unavailableReason: U,
                     onWatchStream: p,
                     onAction: u,
                     showHeader: !0,

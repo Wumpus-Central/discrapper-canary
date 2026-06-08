@@ -1,4 +1,4 @@
-a.r(
+r.r(
     (e.exports = {
         premiumCards: "premiumCards_a2332b",
         premiumCardHover: "premiumCardHover_a2332b",
@@ -29,7 +29,8 @@ a.r(
         promotionalBackgroundImage: "promotionalBackgroundImage_a2332b",
         priceHeader: "priceHeader_a2332b",
         pill: "pill_a2332b",
-        CTAButton: "CTAButton_a2332b",
+        tierCardStack: "tierCardStack_a2332b",
+        tierCardStackContent: "tierCardStackContent_a2332b",
         premiumCardsContainer: "premiumCardsContainer_a2332b",
         premiumCardsHeader: "premiumCardsHeader_a2332b",
         tier0CardOrder: "tier0CardOrder_a2332b",

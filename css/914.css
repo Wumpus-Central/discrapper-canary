@@ -4333,20 +4333,6 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     width: inherit
 }
 
-.child__8d0ee {
-    align-items: center;
-    background: pink;
-    border-radius: 8px;
-    color: #000;
-    cursor: pointer;
-    display: flex;
-    font-size: 24px;
-    height: 100px;
-    justify-content: center;
-    padding: 12px;
-    width: 100px
-}
-
 .container__72cd3 {
     align-items: center;
     border-radius: 0 0 var(--radius-sm) var(--radius-sm);
@@ -4926,19 +4912,6 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     color: transparent
 }
 
-.nitroWheelLockup_ff9a65 {
-    display: grid;
-    place-items: center
-}
-
-.nitroWheelLockupLayer_ff9a65 {
-    grid-area: 1/1
-}
-
-.nitroWheelLockupLayer_ff9a65 img {
-    display: block
-}
-
 .pricePerInterval_fd0764 {
     font-weight: 200;
     margin-bottom: 18px
@@ -5308,6 +5281,7 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 }
 
 .premiumCards_a2332b {
+    align-items: stretch;
     display: flex;
     gap: var(--space-32);
     width: 100%
@@ -5330,8 +5304,10 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 .applicationHomeCard_a2332b {
     border-radius: var(--radius-lg) !important;
     box-sizing: border-box;
-    height: 470px;
+    flex: 1;
+    height: 100%;
     margin: 0 auto;
+    min-height: 470px;
     width: 390px
 }
 
@@ -5548,11 +5524,20 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     transform: translate(-50%, -50%)
 }
 
-.CTAButton_a2332b {
-    display: flex;
-    margin-top: auto;
-    padding-top: 0;
-    width: 100%
+.tierCardStack_a2332b {
+    align-self: stretch;
+    flex: 1;
+    height: 100%;
+    min-height: 0;
+    min-width: 0
+}
+
+.tierCardStack_a2332b[role=button] {
+    cursor: pointer
+}
+
+.tierCardStackContent_a2332b {
+    margin-bottom: var(--space-24)
 }
 
 .premiumCardsContainer_a2332b {
@@ -5584,6 +5569,15 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 @container premium-marketing-page-container (max-width: 960px) {
     .premiumCards_a2332b {
         flex-direction: column
+    }
+
+    .tierCardStack_a2332b {
+        flex: initial
+    }
+
+    .applicationHomeCard_a2332b {
+        flex: initial;
+        height: auto
     }
 
     .tier0CardOrder_a2332b {
@@ -7194,4 +7188,9 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 
 .offerSplashWrapper__11fc5 .wishlistButton__11fc5 {
     top: calc(var(--space-16)*-1)
+}
+
+.container_e03deb {
+    cursor: pointer;
+    padding: 2px
 }

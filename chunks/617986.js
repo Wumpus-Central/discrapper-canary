@@ -96,8 +96,8 @@ function K(e) {
     let { quest: t, sourceQuestContent: r } = e;
     (0, o.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            n.e("60532"),
-            n.e("44648"),
+            n.e("914"),
+            n.e("63602"),
             n.e("73189"),
             n.e("61604"),
             n.e("81714"),
@@ -108,7 +108,7 @@ function K(e) {
             n.e("56405"),
             n.e("22513"),
             n.e("94307"),
-            n.e("95203"),
+            n.e("48971"),
             n.e("30419"),
             n.e("58579"),
             n.e("14819"),
@@ -260,7 +260,7 @@ function $(e) {
     let { quest: t, sourceQuestContent: r } = e;
     (0, o.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            n.e("95203"),
+            n.e("48971"),
             n.e("30419"),
             n.e("58579"),
             n.e("26243"),
@@ -466,7 +466,7 @@ function et() {
         n.e("61604"),
         n.e("30419"),
         n.e("58579"),
-        n.e("95203"),
+        n.e("48971"),
         n.e("57174"),
         n.e("92868"),
         n.e("54048"),
