@@ -1684,6 +1684,7 @@ function j(e, t) {
                 containerId: d,
                 effects: _,
                 macosTransportType: h,
+                windowsEndpointFormFactor: f,
             } = t;
             return (
                 /^default/.test(a)
@@ -1702,6 +1703,7 @@ function j(e, t) {
                     containerId: d,
                     effects: _,
                     macosTransportType: h,
+                    windowsEndpointFormFactor: f,
                 }
             );
         });
