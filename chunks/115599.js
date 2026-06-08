@@ -18,6 +18,7 @@ r.r(
         outerCorner: "outerCorner_a2332b",
         insideCorner: "insideCorner_a2332b",
         giftSelectionModal: "giftSelectionModal_a2332b",
+        withAnnualDiscountBanner: "withAnnualDiscountBanner_a2332b",
         bigCloud: "bigCloud_a2332b",
         smallCloud: "smallCloud_a2332b",
         divider: "divider_a2332b",
