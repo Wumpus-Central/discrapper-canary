@@ -1,0 +1,198 @@
+.container__16eb0 {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-high);
+    box-sizing: border-box;
+    max-height: calc(100vh - var(--custom-app-top-bar-height) - var(--custom-channel-textarea-text-area-height) - var(--custom-channel-header-height));
+    overflow: hidden;
+    padding: var(--space-12) var(--space-8);
+    width: 356px
+}
+
+.datePickerContainer__16eb0 {
+    padding: 0
+}
+
+.calendar__16eb0 {
+    display: flex;
+    justify-content: center;
+    width: 314px
+}
+
+.searchResultDMChannelIcon__16eb0 {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px
+}
+
+.searchResultDMChannelIcon__16eb0,
+.searchResultGDMChannelIcon__16eb0 {
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-inline-end: 4px;
+    vertical-align: top
+}
+
+.searchResultGDMChannelIcon__16eb0 {
+    line-height: 0
+}
+
+.searchResultDMChannelName__16eb0 {
+    color: var(--search-popout-option-user-nickname);
+    font-weight: 500
+}
+
+.searchResultDMUserName__16eb0 {
+    color: var(--search-popout-option-user-username);
+    font-weight: 500;
+    margin: 0 5px
+}
+
+.searchResultChannelCategory__16eb0 {
+    flex-shrink: 1;
+    font-size: 10px;
+    font-weight: var(--font-weight-semibold);
+    margin-inline-start: 4px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    top: 2px;
+    white-space: nowrap
+}
+
+.resultChannel__16eb0 {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap
+}
+
+.itemContainer__971b5 {
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    overflow: hidden
+}
+
+.itemContainer__971b5:active,
+.itemContainer__971b5:hover,
+.itemContainer__971b5[aria-selected=true] {
+    background-color: var(--background-mod-subtle);
+    color: var(--text-strong)
+}
+
+.enable-forced-colors .itemContainer__971b5[aria-selected=true] {
+    outline: 2px solid Highlight;
+    outline-offset: -2px
+}
+
+.item__971b5 {
+    align-items: center;
+    display: flex;
+    -webkit-mask-image: linear-gradient(to right, var(--background-surface-high) 90%, transparent 100%);
+    mask-image: linear-gradient(to right, var(--background-surface-high) 90%, transparent 100%);
+    padding: var(--space-4) var(--space-8)
+}
+
+.itemIcon__971b5 {
+    color: var(--text-muted);
+    flex-shrink: 0;
+    height: 20px;
+    margin-inline-end: 8px;
+    width: 20px
+}
+
+.filterSublabelTextContainer__971b5,
+.labelWithElements__971b5 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    gap: 4px
+}
+
+.channelNameContainer__971b5 {
+    align-items: center;
+    display: flex
+}
+
+.channelName__971b5 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.channelNameIcon__971b5 {
+    color: var(--text-default);
+    height: 14px;
+    margin-inline-end: 4px;
+    width: 14px
+}
+
+.divider__971b5 {
+    background-color: var(--border-subtle);
+    height: 1px;
+    margin: var(--space-8) calc(var(--space-8)*-1)
+}
+
+.groupWrapper__971b5 {
+    display: grid;
+    gap: var(--space-4)
+}
+
+.groupHeader__971b5 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-4) var(--space-8)
+}
+
+.clearSearchHistory__971b5:hover .clearSearchHistoryIcon__971b5 {
+    color: var(--text-strong)
+}
+
+.clearSearchHistoryIcon__971b5 {
+    color: var(--text-subtle);
+    cursor: pointer
+}
+
+.autocompletePillContainer__971b5 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0
+}
+
+.nonText__971b5 {
+    margin-inline-end: 8px
+}
+
+.filterPill__971b5 {
+    border-radius: var(--radius-xs) 0 0 var(--radius-xs);
+    padding: 3px 6px;
+    padding-inline-end: 2px
+}
+
+.answerPill__971b5,
+.filterPill__971b5 {
+    background-color: var(--background-mod-strong)
+}
+
+.answerPill__971b5 {
+    align-items: center;
+    border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+    display: flex;
+    gap: 4px;
+    margin-inline-end: 8px;
+    padding: 3px 6px;
+    padding-inline-start: 2px;
+    white-space: nowrap
+}
+
+.channelAnswerPill__971b5 {
+    gap: 0
+}
+
+.channelPillIcon__971b5 {
+    color: var(--text-default);
+    margin-inline-end: 2px
+}
