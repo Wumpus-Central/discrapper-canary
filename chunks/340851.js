@@ -1,4 +1,4 @@
-t.d(i, { Ay: () => D, LR: () => w, aI: () => U });
+t.d(i, { Ay: () => U, LR: () => w, aI: () => D });
 var n = t(627968),
     l = t(64700),
     s = t(503698),
@@ -40,7 +40,7 @@ function w(e) {
         children: (0, n.jsxs)(d.E, { color: "text-muted", variant: "text-sm/medium", children: ["+", i] }),
     });
 }
-function U(e) {
+function D(e) {
     let { numAudience: i, collapsed: t } = e,
         l = t ? i : P.intl.formatToPlainString(P.t["+v2pN2"], { count: i });
     return (0, n.jsxs)("div", {
@@ -54,7 +54,7 @@ function U(e) {
         ],
     });
 }
-let D = (0, h.J)(function (e) {
+let U = (0, h.J)(function (e) {
     let {
             collapsed: i,
             user: s,
@@ -62,8 +62,8 @@ let D = (0, h.J)(function (e) {
             mute: u,
             localMute: h,
             localVideoDisabled: w,
-            deaf: U,
-            video: D,
+            deaf: D,
+            video: U,
             embeddedApplication: M,
             serverMute: F,
             serverDeaf: L,
@@ -100,21 +100,29 @@ let D = (0, h.J)(function (e) {
         },
         eh = () => {
             clearTimeout(em.current), Q?.(s.id);
-        };
+        },
+        ep = H
+            ? null
+            : {
+                  draggable: !0,
+                  onDragStart: (e) => {
+                      e.preventDefault(), e.stopPropagation();
+                  },
+              };
     l.useEffect(
         () => () => {
             clearTimeout(em.current);
         },
         [],
     );
-    let ep = () => {
+    let eI = () => {
             if (!$ || !(0, _.eo)(d, O.A, b.A, j.A, f.default)[0]) return;
             let e = { streamType: V.U4.GUILD, ownerId: s.id, channelId: d.id, guildId: d.guild_id };
             C.default.getId() !== s.id && A.default.selectVoiceChannel(d.id),
                 W ? ((0, E.A)(e), o.A.selectParticipant(e.channelId, (0, S._z)(e))) : (0, g.Nl)(e),
                 Q?.(s.id);
         },
-        eI = (e) => {
+        ev = (e) => {
             (0, m.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     t.e("81714"),
@@ -174,9 +182,10 @@ let D = (0, h.J)(function (e) {
                     });
             });
         },
-        ev = (0, n.jsx)("div", {
+        ef = (0, n.jsx)("div", {
             className: R.kZ,
             "data-dnd-name": ed,
+            ...ep,
             onMouseEnter: en
                 ? void 0
                 : () => {
@@ -205,10 +214,10 @@ let D = (0, h.J)(function (e) {
                             localVideoDisabled: w,
                             isStreaming: $,
                             isGuest: Z,
-                            video: D,
+                            video: U,
                             priority: J,
                             ringing: K,
-                            deaf: U,
+                            deaf: D,
                             nick: z,
                             collapsed: i,
                             overlap: i,
@@ -222,8 +231,8 @@ let D = (0, h.J)(function (e) {
                             disabled: en && !t,
                             selected: ec,
                             onClick: t ? void 0 : eA,
-                            onDoubleClick: ep,
-                            onContextMenu: eI,
+                            onDoubleClick: eI,
+                            onContextMenu: ev,
                             guildId: d.guild_id,
                             isSelf: es,
                             application: ea,
@@ -243,7 +252,7 @@ let D = (0, h.J)(function (e) {
                                           channel: d,
                                           user: s,
                                           onAction: eh,
-                                          onWatchStream: $ ? ep : void 0,
+                                          onWatchStream: $ ? eI : void 0,
                                       }),
                                   shouldShow: ee && !ec,
                                   onRequestClose: eg,
@@ -260,5 +269,5 @@ let D = (0, h.J)(function (e) {
                 },
             }),
         });
-    return H ? q(ev) : ev;
+    return H ? q(ef) : ef;
 });
