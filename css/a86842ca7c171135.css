@@ -1,0 +1,164 @@
+.questionContainer__0a749 {
+    margin-top: var(--space-40);
+    padding: 1px
+}
+
+.disabledQuestionContainer__0a749:not(:last-child) {
+    margin-bottom: 24px
+}
+
+.questionTitle__0a749 {
+    margin-bottom: 12px;
+    overflow: hidden;
+    overflow-wrap: break-word
+}
+
+.requirementContainer__0a749 {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    display: flex;
+    margin-bottom: 24px;
+    padding: 12px
+}
+
+.requirementIcon__0a749 {
+    color: var(--interactive-text-default);
+    margin-inline-end: 8px
+}
+
+.requirementText__0a749 {
+    flex: 1
+}
+
+.requirementSuccess__0a749 {
+    color: var(--green-360)
+}
+
+.requirementFailure__0a749 {
+    color: var(--text-feedback-critical)
+}
+
+.container__0a749 {
+    padding: 0 16px 40px
+}
+
+.footnote__0a749 {
+    margin-top: 8px;
+    text-align: start
+}
+
+.formItem_d48a51 {
+    margin-bottom: 24px;
+    padding: 0;
+    width: 100%
+}
+
+.formItem_d48a51:last-child {
+    margin-bottom: 0
+}
+
+.wrapperBase_d48a51 {
+    border-radius: 4px;
+    padding: 8px 12px
+}
+
+.formFieldWrapper_d48a51 {
+    background-color: var(--background-base-lower);
+    border: 1px solid var(--background-base-lowest)
+}
+
+.verificationFieldWrapper_d48a51 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between
+}
+
+.verificationIcon_d48a51 {
+    color: var(--interactive-text-default);
+    margin-inline-end: 8px
+}
+
+.verificationLabel_d48a51 {
+    align-items: center;
+    display: flex
+}
+
+.verificationCheckmark_d48a51 {
+    color: var(--text-feedback-positive);
+    height: 16px;
+    margin-inline-end: 8px;
+    width: 16px
+}
+
+.verificationConfirmation_d48a51 {
+    align-items: center;
+    display: flex;
+    flex-grow: 0
+}
+
+.termsRow_d48a51 {
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    padding: 16px 4px
+}
+
+.termsRow_d48a51:first-child {
+    padding-top: 8px
+}
+
+.termsRow_d48a51:last-child {
+    border-bottom: none;
+    padding-bottom: 8px
+}
+
+.termsRowContent_d48a51 {
+    overflow-wrap: break-word;
+    padding-inline-start: 12px;
+    white-space: pre-wrap;
+    width: calc(100% - 12px)
+}
+
+.checkbox_d48a51 {
+    margin-top: 16px
+}
+
+.formItemDescription_d48a51 {
+    margin-bottom: 8px
+}
+
+.verifyConfirmText_d48a51 {
+    box-sizing: border-box;
+    height: 32px;
+    padding: 8px
+}
+
+.settingsLink_d48a51 {
+    margin-top: 8px
+}
+
+.disabledFieldBackground_d48a51 {
+    background-color: var(--background-mod-subtle)
+}
+
+.termsFieldBody_d48a51 {
+    border-radius: 8px;
+    padding: 10px 17px
+}
+
+.paragraphFieldBody_d48a51 {
+    opacity: 1
+}
+
+.paragraphFieldBody_d48a51>textarea {
+    background: none;
+    border: none;
+    opacity: 1
+}
+
+.editableRequirementContainer_d48a51 {
+    margin-bottom: 12px;
+    margin-top: 40px
+}

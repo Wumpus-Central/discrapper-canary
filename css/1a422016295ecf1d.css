@@ -1,0 +1,137 @@
+@value headerBarHeight 60px;
+@value imageHeight 288px;
+
+.container_e9ef78 {
+    display: grid;
+    grid-template-areas: "layer";
+    grid-template-columns: 100%;
+    grid-template-rows: 348px;
+    justify-items: center
+}
+
+.content_e9ef78 {
+    align-items: center;
+    display: flex;
+    grid-area: layer;
+    margin-top: 60px;
+    max-width: 1300px;
+    width: 100%;
+    z-index: 1
+}
+
+.textContainer_e9ef78 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline-start: 32px
+}
+
+.buttonContainer_e9ef78 {
+    display: flex;
+    margin-top: 16px;
+    max-height: 44px;
+    min-height: 44px
+}
+
+.title_e9ef78 {
+    max-width: 740px
+}
+
+.title_e9ef78 p {
+    margin: 0
+}
+
+.uppercase_e9ef78 {
+    text-transform: uppercase
+}
+
+.description_e9ef78 {
+    margin-top: 16px;
+    max-width: 600px
+}
+
+.description_e9ef78 p {
+    margin: 0
+}
+
+.betaTag_e9ef78 {
+    display: inline-block;
+    margin-inline-start: 8px;
+    vertical-align: middle
+}
+
+.theme-dark .gradient_e9ef78 {
+    background: radial-gradient(130.66% 324.98% at -3.95% 0, #2f72c1 0, rgba(37, 34, 154, .8) 35.73%, rgba(25, 23, 92, 0) 100%), #000
+}
+
+.theme-dark .gradient_e9ef78.clientThemes_e9ef78 {
+    background: none
+}
+
+.theme-dark .gradient_e9ef78.clientThemes_e9ef78:after {
+    background-color: var(--border-strong);
+    bottom: 0;
+    content: "";
+    height: 1px;
+    position: absolute;
+    width: 100%
+}
+
+.theme-dark .gradientBackground_e9ef78 {
+    opacity: .7
+}
+
+.theme-dark .gradientBackground_e9ef78.clientThemes_e9ef78 {
+    opacity: 1
+}
+
+.theme-light .gradient_e9ef78 {
+    background: radial-gradient(122.23% 351.84% at -4.04% 0, #eff8ff 0, #d7dcff 30.28%, #fdfdff 100%), #fff
+}
+
+.theme-light .gradient_e9ef78.clientThemes_e9ef78 {
+    background: none
+}
+
+.theme-light .gradient_e9ef78.clientThemes_e9ef78:after {
+    background-color: var(--border-strong);
+    bottom: 0;
+    content: "";
+    height: 1px;
+    position: absolute;
+    width: 100%
+}
+
+.theme-light .gradientBackground_e9ef78 {
+    opacity: .8
+}
+
+.theme-light .gradientBackground_e9ef78.clientThemes_e9ef78 {
+    opacity: 1
+}
+
+.gradient_e9ef78,
+.gradientBackground_e9ef78 {
+    height: 100%;
+    width: 100%
+}
+
+.gradientBackground_e9ef78 {
+    grid-area: layer
+}
+
+.contentSection_b6bcee {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    z-index: 1
+}
+
+.content_b6bcee {
+    height: 100%;
+    max-width: 1300px;
+    width: 100%
+}
