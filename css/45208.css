@@ -2350,9 +2350,22 @@
 }
 
 .guildOfficialMessage__5126c {
-    background: linear-gradient(to right, hsl(var(--custom-guild-official-message-hsl)/var(--custom-guild-official-message-alpha)), hsl(var(--custom-guild-official-message-hsl)/0));
+    background: linear-gradient(to right, hsl(var(--custom-guild-official-message-hsl)/var(--custom-guild-official-message-alpha)) 0, transparent 100%);
+    isolation: isolate;
     position: relative;
     --custom-message-content-color: var(--custom-guild-official-message-text)
+}
+
+.guildOfficialMessage__5126c:after {
+    background-image: url(/assets/6276d67b536a480b.svg);
+    content: "";
+    inset: 0;
+    -webkit-mask-image: linear-gradient(90deg, #000 80%, transparent);
+    mask-image: linear-gradient(90deg, #000 80%, transparent);
+    opacity: .07;
+    pointer-events: none;
+    position: absolute;
+    z-index: -1
 }
 
 .message__5126c.guildOfficialMessage__5126c .guildOfficialMessageContent__5126c,
@@ -5393,18 +5406,6 @@
     z-index: 1
 }
 
-.hamBanner__6a41e {
-    align-items: center;
-    background-color: var(--background-mod-normal);
-    display: flex;
-    padding: 10px 16px
-}
-
-.hamBannerButton__6a41e {
-    flex-shrink: 0;
-    margin-inline-start: 12px
-}
-
 .obscuredIcon__43090 {
     height: 32px;
     width: 32px
@@ -5659,16 +5660,6 @@
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical
-}
-
-.emptyStateContainer__65428 {
-    align-items: center;
-    bottom: 0;
-    display: flex;
-    position: absolute;
-    top: 0;
-    inset-inline: 0;
-    justify-content: center
 }
 
 .container__3f751 {

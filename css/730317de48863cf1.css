@@ -1,3 +1,25 @@
+.hamBanner__6a41e {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    display: flex;
+    padding: 10px 16px
+}
+
+.hamBannerButton__6a41e {
+    flex-shrink: 0;
+    margin-inline-start: 12px
+}
+
+.emptyStateContainer__65428 {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    justify-content: center
+}
+
 .messageRequestItem_abb9ad {
     box-sizing: border-box;
     cursor: pointer;

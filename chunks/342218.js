@@ -125,9 +125,10 @@ let eg = t.memo(function (e) {
                           (0, u.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([
                                   n.e("2871"),
-                                  n.e("41864"),
+                                  n.e("45208"),
                                   n.e("77176"),
                                   n.e("79146"),
+                                  n.e("93924"),
                                   n.e("76602"),
                                   n.e("28229"),
                                   n.e("39970"),

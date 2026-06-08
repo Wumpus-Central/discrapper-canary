@@ -54,11 +54,11 @@
 
 .guildOfficialMessage__8e988 {
     --custom-message-content-color: var(--custom-guild-official-message-text);
-    background-image: linear-gradient(to right, hsl(var(--custom-guild-official-message-hsl)/var(--custom-guild-official-message-alpha)), hsl(var(--custom-guild-official-message-hsl)/0))
+    background-image: linear-gradient(color-mix(in srgb, var(--custom-guild-official-message) calc(var(--custom-guild-official-message-alpha)*100%), transparent), color-mix(in srgb, var(--custom-guild-official-message) calc(var(--custom-guild-official-message-alpha)*100%), transparent))
 }
 
 .guildOfficialMessage__8e988:hover {
-    background-image: linear-gradient(to right, hsl(var(--custom-guild-official-message-hsl)/var(--custom-guild-official-message-selected-alpha)), hsl(var(--custom-guild-official-message-hsl)/0))
+    background-image: linear-gradient(color-mix(in srgb, var(--custom-guild-official-message) calc(var(--custom-guild-official-message-selected-alpha)*100%), transparent), color-mix(in srgb, var(--custom-guild-official-message) calc(var(--custom-guild-official-message-selected-alpha)*100%), transparent))
 }
 
 .cardBody__8e988 {
