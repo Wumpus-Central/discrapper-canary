@@ -18,6 +18,11 @@ class _ extends u.Ay.Store {
     isBountyCompleted(e) {
         return s.has(e);
     }
+    getCompletedBountyCount(e) {
+        let t = 0;
+        for (let n of e) s.has(n.id) && t++;
+        return t;
+    }
     isClaimingBountyReward(e) {
         return a.has(e);
     }
