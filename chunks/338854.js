@@ -20,7 +20,7 @@ var i = n(627968),
     I = n(96867);
 function T(e) {
     let { onClick: t, "aria-label": n = A.intl.string(A.t.cpT0Cq) } = e,
-        { firstFocusableItemProps: s } = r.useContext(m.MV);
+        { firstFocusableItemProps: s } = r.useContext(m.M);
     return (0, i.jsx)("div", {
         className: I.b,
         children: (0, i.jsx)(g.J, { size: "xs", "aria-label": n, onClick: t, variant: "overlay-secondary", ...s }),

@@ -399,7 +399,7 @@ function e$(e) {
             ],
             [u, r, c],
         );
-    return (0, n.jsx)(ed.lG, {
+    return (0, n.jsx)(ed.l, {
         className: eW.Nd,
         children: (0, n.jsxs)(eh.iS, {
             selectionMode: "single",
