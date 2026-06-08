@@ -335,7 +335,7 @@ function eb(e) {
     return (0, l.jsx)("div", {
         onClick: (e) => e.stopPropagation(),
         children: (0, l.jsx)(D.A, {
-            children: (0, l.jsx)(u.l, {
+            children: (0, l.jsx)(u.lG, {
                 "aria-labelledby": n,
                 modal: !1,
                 children: (0, l.jsx)("div", {

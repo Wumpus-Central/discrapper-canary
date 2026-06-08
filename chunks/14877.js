@@ -8,6 +8,6 @@ function s(e) {
     i.useEffect(() => {
         if (null == n) return;
         let e = t >= n;
-        e && !a.current ? ((a.current = !0), r.O.announce(s, "polite")) : e || (a.current = !1);
+        e && !a.current ? ((a.current = !0), r.O.announce(s, "assertive")) : e || (a.current = !1);
     }, [t, n, s]);
 }

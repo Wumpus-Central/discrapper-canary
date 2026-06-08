@@ -423,10 +423,10 @@ n.r(k),
         PuzzlePiecePlusIcon: () => EX,
         PuzzlePieceRetryIcon: () => EZ,
         QrCodeIcon: () => EQ.y,
-        QuestsArenaIcon: () => EJ,
+        QuestsArenaIcon: () => EJ.q,
         QuestsBountiesIcon: () => E0,
         QuestsIcon: () => sL.r,
-        QuestsMissionsIcon: () => E1,
+        QuestsMissionsIcon: () => E1.q,
         QuoteIcon: () => cy.c,
         ReactionIcon: () => E2.n,
         ReactionMinusIcon: () => E3.t,
@@ -1770,7 +1770,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 559180, Version Hash: 9bbad6ca4297ae6356e3a171944508199341d772`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 559260, Version Hash: 726973955d683ef31239443d213857cc005f56a6`,
 ),
     ev.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -14447,118 +14447,50 @@ let E$ = (e) => {
             ],
         });
     };
-var EQ = n(141006);
-let EJ = (e) => {
-        let {
-                size: t = "md",
-                width: n,
-                height: i,
-                color: r = r9.A.colors.INTERACTIVE_ICON_DEFAULT,
-                colorClass: s = "",
-                ...a
-            } = e,
-            o = (0, dc.J)(t),
-            l = o?.width ?? n,
-            u = o?.height ?? i;
-        return (0, U.jsxs)("svg", {
-            ...(0, du.A)(a),
-            xmlns: "http://www.w3.org/2000/svg",
-            width: l,
-            height: u,
-            fill: "none",
-            viewBox: "0 0 24 24",
-            children: [
-                (0, U.jsx)("path", {
-                    fill: "string" == typeof r ? r : r.css,
-                    fillRule: "evenodd",
-                    d: "M12 11c6.07 0 11 1.38 11 3.08V19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-4.92C1 12.38 5.93 11 12 11Zm-7 4a2 2 0 0 0-2 2v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2Zm7-1a2 2 0 0 0-2 2v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a2 2 0 0 0-2-2Zm7 1a2 2 0 0 0-2 2v1a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2Z",
-                    clipRule: "evenodd",
-                    className: s,
-                }),
-                (0, U.jsx)("path", {
-                    fill: "string" == typeof r ? r : r.css,
-                    d: "M12 3c5.25 0 9.5 1.77 9.5 3.96v2.68c0 .35-.35.59-.68.48l-.43-.13a.5.5 0 0 1-.38-.48V8.4a1.6 1.6 0 0 0-3.2 0v.32a.5.5 0 0 1-.56.5c-.7-.07-1.42-.13-2.17-.17a.5.5 0 0 1-.48-.5V7.6a1.6 1.6 0 0 0-3.2 0v.95a.5.5 0 0 1-.48.5c-.75.04-1.47.1-2.17.18a.5.5 0 0 1-.56-.5V8.4a1.6 1.6 0 0 0-3.2 0v1.1a.5.5 0 0 1-.38.5l-.43.12a.52.52 0 0 1-.68-.48V6.96C2.5 4.77 6.75 3 12 3Z",
-                    className: s,
-                }),
-            ],
-        });
-    },
-    E0 = (e) => {
-        let {
-                size: t = "md",
-                width: n,
-                height: i,
-                color: r = r9.A.colors.INTERACTIVE_ICON_DEFAULT,
-                colorClass: s = "",
-                ...a
-            } = e,
-            o = (0, dc.J)(t),
-            l = o?.width ?? n,
-            u = o?.height ?? i;
-        return (0, U.jsxs)("svg", {
-            ...(0, du.A)(a),
-            xmlns: "http://www.w3.org/2000/svg",
-            width: l,
-            height: u,
-            fill: "none",
-            viewBox: "0 0 24 24",
-            children: [
-                (0, U.jsx)("path", {
-                    fill: "string" == typeof r ? r : r.css,
-                    d: "M12 6.4a.28.28 0 0 1 .27.22 3.36 3.36 0 0 0 2.55 2.54.28.28 0 0 1 .15.44.28.28 0 0 1-.15.1 3.38 3.38 0 0 0-2.55 2.56.28.28 0 0 1-.27.2.28.28 0 0 1-.27-.21A3.4 3.4 0 0 0 9.2 9.7a.28.28 0 0 1-.22-.27.28.28 0 0 1 .22-.27 3.38 3.38 0 0 0 2.54-2.54.28.28 0 0 1 .27-.21Z",
-                    className: s,
-                }),
-                (0, U.jsx)("path", {
-                    fill: "string" == typeof r ? r : r.css,
-                    fillRule: "evenodd",
-                    d: "M18 1a3 3 0 0 1 3 3v16a3 3 0 0 1-3 3h-7.02a.5.5 0 0 1-.5-.5v-2.18a4 4 0 0 0-4-4H3.5a.5.5 0 0 1-.5-.5V4a3 3 0 0 1 3-3h12Zm-5.75 2.14a.64.64 0 0 0-.5 0L7.73 4.81a.64.64 0 0 0-.34.35L5.7 9.19a.64.64 0 0 0 0 .5l1.67 4.02c.07.16.2.29.35.35l4.04 1.67c.15.07.33.07.49 0l4.03-1.67a.64.64 0 0 0 .35-.35l1.67-4.03a.64.64 0 0 0 0-.49l-1.67-4.03a.64.64 0 0 0-.35-.35l-4.03-1.67Z",
-                    clipRule: "evenodd",
-                    className: s,
-                }),
-                (0, U.jsx)("path", {
-                    fill: "string" == typeof r ? r : r.css,
-                    d: "M6.48 18.32a2 2 0 0 1 2 2v2.58c0 .03-.02.06-.05.05a2.03 2.03 0 0 1-.72-.35c-.36-.28-3.94-3.33-4.24-3.6-.23-.19-.37-.48-.43-.62a.05.05 0 0 1 .04-.06h3.4Z",
-                    className: s,
-                }),
-            ],
-        });
-    },
-    E1 = (e) => {
-        let {
-                size: t = "md",
-                width: n,
-                height: i,
-                color: r = r9.A.colors.INTERACTIVE_ICON_DEFAULT,
-                colorClass: s = "",
-                ...a
-            } = e,
-            o = (0, dc.J)(t),
-            l = o?.width ?? n,
-            u = o?.height ?? i;
-        return (0, U.jsxs)("svg", {
-            ...(0, du.A)(a),
-            xmlns: "http://www.w3.org/2000/svg",
-            width: l,
-            height: u,
-            fill: "none",
-            viewBox: "0 0 24 24",
-            children: [
-                (0, U.jsx)("path", {
-                    fill: "string" == typeof r ? r : r.css,
-                    d: "M20.91 16.77c.62 0 1.1.56.93 1.16-.52 1.79-1.68 3.98-4.3 3.98H9.5c-.16 0-.26-.2-.17-.34.25-.4.47-.86.65-1.23.39-.79.71-1.9.92-2.78.12-.46.52-.79 1-.79h9.01Z",
-                    className: s,
-                }),
-                (0, U.jsx)("path", {
-                    fill: "string" == typeof r ? r : r.css,
-                    fillRule: "evenodd",
-                    d: "M17.22 1.9c2.05 0 4 1.23 4.46 3.21.4 1.77.42 4.32.14 5.71-.2.99-.49 1.9-.85 2.82-.3.71-1 1.15-1.77 1.15h-7.93c-1.13 0-2.05.96-2.24 2.07l-.01.06c-.16.75-.42 1.7-.84 2.55a4.14 4.14 0 0 1-1.62 1.9 2.7 2.7 0 0 1-1.9.2c-1.02-.4-1.65-1.61-1.4-3.31.38-2.49 3.14-4.97 4.47-7.4C9.27 8.03 9.5 4.84 6.8 3.97a4.48 4.48 0 0 0-.72-.08c-1.2 0-1.8.69-2 1.33-.1.34-.1.74.01 1.06a.87.87 0 0 0 .94.61.62.62 0 0 0 .24-.11.7.7 0 0 0 .13-.12 1 1 0 0 1 1.96.01c.06.31-.03.58-.07.67a2.65 2.65 0 0 1-3.23 1.4 2.86 2.86 0 0 1-1.86-1.8 3.72 3.72 0 0 1-.04-2.28A3.92 3.92 0 0 1 5.9 1.9h-.01 11.33Zm-4.67 7.61a1 1 0 0 0 0 2h3.58a1 1 0 0 0 0-2h-3.58Zm.31-4.42a1 1 0 0 0 0 2h5.67a1 1 0 0 0 0-2h-5.67Z",
-                    clipRule: "evenodd",
-                    className: s,
-                }),
-            ],
-        });
-    };
-var E2 = n(460905),
+var EQ = n(141006),
+    EJ = n(793934);
+let E0 = (e) => {
+    let {
+            size: t = "md",
+            width: n,
+            height: i,
+            color: r = r9.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: s = "",
+            ...a
+        } = e,
+        o = (0, dc.J)(t),
+        l = o?.width ?? n,
+        u = o?.height ?? i;
+    return (0, U.jsxs)("svg", {
+        ...(0, du.A)(a),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: l,
+        height: u,
+        fill: "none",
+        viewBox: "0 0 24 24",
+        children: [
+            (0, U.jsx)("path", {
+                fill: "string" == typeof r ? r : r.css,
+                d: "M12 6.4a.28.28 0 0 1 .27.22 3.36 3.36 0 0 0 2.55 2.54.28.28 0 0 1 .15.44.28.28 0 0 1-.15.1 3.38 3.38 0 0 0-2.55 2.56.28.28 0 0 1-.27.2.28.28 0 0 1-.27-.21A3.4 3.4 0 0 0 9.2 9.7a.28.28 0 0 1-.22-.27.28.28 0 0 1 .22-.27 3.38 3.38 0 0 0 2.54-2.54.28.28 0 0 1 .27-.21Z",
+                className: s,
+            }),
+            (0, U.jsx)("path", {
+                fill: "string" == typeof r ? r : r.css,
+                fillRule: "evenodd",
+                d: "M18 1a3 3 0 0 1 3 3v16a3 3 0 0 1-3 3h-7.02a.5.5 0 0 1-.5-.5v-2.18a4 4 0 0 0-4-4H3.5a.5.5 0 0 1-.5-.5V4a3 3 0 0 1 3-3h12Zm-5.75 2.14a.64.64 0 0 0-.5 0L7.73 4.81a.64.64 0 0 0-.34.35L5.7 9.19a.64.64 0 0 0 0 .5l1.67 4.02c.07.16.2.29.35.35l4.04 1.67c.15.07.33.07.49 0l4.03-1.67a.64.64 0 0 0 .35-.35l1.67-4.03a.64.64 0 0 0 0-.49l-1.67-4.03a.64.64 0 0 0-.35-.35l-4.03-1.67Z",
+                clipRule: "evenodd",
+                className: s,
+            }),
+            (0, U.jsx)("path", {
+                fill: "string" == typeof r ? r : r.css,
+                d: "M6.48 18.32a2 2 0 0 1 2 2v2.58c0 .03-.02.06-.05.05a2.03 2.03 0 0 1-.72-.35c-.36-.28-3.94-3.33-4.24-3.6-.23-.19-.37-.48-.43-.62a.05.05 0 0 1 .04-.06h3.4Z",
+                className: s,
+            }),
+        ],
+    });
+};
+var E1 = n(271536),
+    E2 = n(460905),
     E3 = n(997571);
 let E6 = (e) => {
     let {
@@ -18519,7 +18451,7 @@ let SR = "isHideDevBanner",
                     className: t2()(SC.Wz, SC.mr),
                     children: [
                         (0, U.jsx)(Sv, { className: SC.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "559180" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "559260" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })

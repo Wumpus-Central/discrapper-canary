@@ -1385,6 +1385,20 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     border: none
 }
 
+.hiddenVisually_b18fe2,
+.showOnFocus_b18fe2:not(:focus-within) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: 1px
+}
+
 .flex__7c0ba,
 .horizontal__7c0ba {
     display: flex
@@ -4804,20 +4818,6 @@ screen and (max-width:485px) {
 
 .enable-forced-colors .status_a423bd {
     forced-color-adjust: none !important
-}
-
-.hiddenVisually_b18fe2,
-.showOnFocus_b18fe2:not(:focus-within) {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    white-space: nowrap;
-    width: 1px
 }
 
 .combo__61c93 {

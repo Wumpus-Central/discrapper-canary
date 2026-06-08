@@ -173,7 +173,7 @@ function y(e) {
                 s !== H.current && ((H.current = s), L?.(s)),
                 Z((e, r) => {
                     if (!r) return null;
-                    let d = (0, i.jsx)(l.l, {
+                    let d = (0, i.jsx)(l.lG, {
                         ...c,
                         setDialogRef: n,
                         modal: M,
