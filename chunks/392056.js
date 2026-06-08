@@ -641,6 +641,10 @@ class er extends r.PureComponent {
                           srcIsAnimated: t.srcIsAnimated,
                           placeholder: t.placeholder,
                           placeholderVersion: t.placeholderVersion,
+                          alt:
+                              null == t.description || "" === t.description ? R.intl.string(R.t.X4IxWL) : t.description,
+                          disableAltTextDisplay: null == t.description || "" === t.description,
+                          mosaicStyleAlt: !0,
                           sourceMetadata: o,
                           analyticsSource: "Embed",
                       });
