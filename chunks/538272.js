@@ -126,7 +126,7 @@ let k = (0, a.zD)(u.X.ACTIVITY_PRIVACY_NOTIFY_FRIENDS_ONLINE_SETTING, {
         buildLayout: () => [P, k, R],
     });
 var F = i(945810),
-    B = i(21973);
+    B = i(106531);
 let z = (0, F.mj)({
         name: "2026-02-activity-privacy-matching",
         kind: "user",
