@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, { $: () => s });
-var r = n(64700),
-    i = n(765178);
+var i = n(64700),
+    r = n(765178);
 function s(e) {
     let { currentLength: t, maxLength: n, message: s } = e,
-        a = r.useRef(!1);
-    r.useEffect(() => {
+        a = i.useRef(!1);
+    i.useEffect(() => {
         if (null == n) return;
         let e = t >= n;
-        e && !a.current ? ((a.current = !0), i.O.announce(s, "polite")) : e || (a.current = !1);
+        e && !a.current ? ((a.current = !0), r.O.announce(s, "assertive")) : e || (a.current = !1);
     }, [t, n, s]);
 }

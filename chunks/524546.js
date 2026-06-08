@@ -1,20 +1,31 @@
-"use strict";
-n.d(t, { iP: () => i, pA: () => s });
-let r = null;
-function i(e, t = "assertive", n = 7e3) {
-    r
-        ? r.announce(e, t, n)
-        : ((r = new a()),
+function t(e, t, n, i) {
+    Object.defineProperty(e, t, { get: n, set: i, enumerable: !0, configurable: !0 });
+}
+t(e.exports, "announce", () => r),
+    t(e.exports, "createAnnouncer", () => i),
+    t(e.exports, "clearAnnouncer", () => s),
+    t(e.exports, "destroyAnnouncer", () => a);
+let n = null;
+function i(e = null) {
+    n || (n = new o(e));
+}
+function r(e, t = "assertive", i = 7e3) {
+    n
+        ? n.announce(e, t, i)
+        : ((n = new o()),
           ("boolean" == typeof IS_REACT_ACT_ENVIRONMENT ? IS_REACT_ACT_ENVIRONMENT : "u" > typeof jest)
-              ? r.announce(e, t, n)
+              ? n.announce(e, t, i)
               : setTimeout(() => {
-                    (null == r ? void 0 : r.isAttached()) && (null == r || r.announce(e, t, n));
+                    (null == n ? void 0 : n.isAttached()) && (null == n || n.announce(e, t, i));
                 }, 100));
 }
 function s(e) {
-    r && r.clear(e);
+    n && n.clear(e);
 }
-class a {
+function a() {
+    n && (n.destroy(), (n = null));
+}
+class o {
     isAttached() {
         var e;
         return null == (e = this.node) ? void 0 : e.isConnected;
@@ -29,18 +40,18 @@ class a {
         );
     }
     destroy() {
-        this.node && (document.body.removeChild(this.node), (this.node = null));
+        this.node && this.parentNode && (this.parentNode.removeChild(this.node), (this.node = null));
     }
     announce(e, t = "assertive", n = 7e3) {
-        var r, i;
+        var i, r;
         if (!this.node) return;
         let s = document.createElement("div");
         "object" == typeof e
             ? (s.setAttribute("role", "img"), s.setAttribute("aria-labelledby", e["aria-labelledby"]))
             : (s.textContent = e),
             "assertive" === t
-                ? null == (r = this.assertiveLog) || r.appendChild(s)
-                : null == (i = this.politeLog) || i.appendChild(s),
+                ? null == (i = this.assertiveLog) || i.appendChild(s)
+                : null == (r = this.politeLog) || r.appendChild(s),
             "" !== e &&
                 setTimeout(() => {
                     s.remove();
@@ -51,12 +62,14 @@ class a {
             ((!e || "assertive" === e) && this.assertiveLog && (this.assertiveLog.innerHTML = ""),
             (!e || "polite" === e) && this.politeLog && (this.politeLog.innerHTML = ""));
     }
-    constructor() {
+    constructor(e = null) {
         (this.node = null),
+            (this.parentNode = null),
             (this.assertiveLog = null),
             (this.politeLog = null),
             "u" > typeof document &&
                 ((this.node = document.createElement("div")),
+                (this.parentNode = null != e ? e : document.body),
                 (this.node.dataset.liveAnnouncer = "true"),
                 Object.assign(this.node.style, {
                     border: 0,
@@ -74,6 +87,6 @@ class a {
                 this.node.appendChild(this.assertiveLog),
                 (this.politeLog = this.createLog("polite")),
                 this.node.appendChild(this.politeLog),
-                document.body.prepend(this.node));
+                this.parentNode.prepend(this.node));
     }
 }

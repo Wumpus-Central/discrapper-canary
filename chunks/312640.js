@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(873174),
+    o = n(922139),
     l = n(113325),
     u = n(315629),
     c = n(17928),
@@ -173,7 +173,7 @@ function y(e) {
                 s !== H.current && ((H.current = s), L?.(s)),
                 Z((e, r) => {
                     if (!r) return null;
-                    let d = (0, i.jsx)(l.l, {
+                    let d = (0, i.jsx)(l.lG, {
                         ...c,
                         setDialogRef: n,
                         modal: M,

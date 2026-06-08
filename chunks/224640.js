@@ -34,7 +34,7 @@ function f(e) {
         O = r.useRef(null);
     return (0, i.jsx)(d.V.Provider, {
         value: C,
-        children: (0, i.jsx)(l.l, {
+        children: (0, i.jsx)(l.lG, {
             id: v,
             role: m,
             "aria-label": g,

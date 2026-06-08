@@ -1,65 +1,91 @@
 "use strict";
-n.d(t, { M: () => c, l: () => h });
+n.d(t, { MV: () => h, lG: () => E, zR: () => _ });
 var i = n(627968),
     r = n(64700),
-    s = n(312138),
-    a = n(315710),
-    o = n(187322),
-    l = n(707554),
-    u = n(460890);
-let c = r.createContext({ firstFocusableItemProps: void 0 });
-function d(e) {
+    s = n(765178),
+    a = n(312138),
+    o = n(315710),
+    l = n(187322),
+    u = n(707554),
+    c = n(140735),
+    d = n(460890);
+function _() {
+    let e = r.useId(),
+        t = r.useRef(null);
+    return (
+        r.useEffect(
+            () => (
+                s.O.moveTo?.(e, t.current),
+                () => {
+                    s.O.remove?.(e);
+                }
+            ),
+            [e],
+        ),
+        (0, i.jsx)(c.A, { ref: t, id: e })
+    );
+}
+let h = r.createContext({ firstFocusableItemProps: void 0 });
+function f(e) {
     let { children: t, ref: n, role: r = "dialog", ...s } = e;
-    return (0, i.jsx)(c.Provider, {
+    return (0, i.jsx)(h.Provider, {
         value: { firstFocusableItemProps: void 0 },
-        children: (0, i.jsx)("div", {
+        children: (0, i.jsxs)("div", {
             ...s,
             ref: n,
             "data-dialog": "modal",
             role: r,
             "aria-modal": !0,
             tabIndex: -1,
-            children: (0, i.jsx)(l.F, { forceLevel: 1, children: (0, i.jsx)(o.xp, { containerRef: n, children: t }) }),
+            children: [
+                (0, i.jsx)(_, {}),
+                (0, i.jsx)(u.F, { forceLevel: 1, children: (0, i.jsx)(l.xp, { containerRef: n, children: t }) }),
+            ],
         }),
     });
 }
-function _(e) {
+function p(e) {
     let { children: t, role: n = "dialog", ...r } = e;
-    return (0, i.jsx)(s.sk, {
+    return (0, i.jsx)(a.sk, {
         children: (e) =>
-            (0, i.jsx)(c.Provider, {
+            (0, i.jsx)(h.Provider, {
                 value: { firstFocusableItemProps: e },
-                children: (0, i.jsx)("div", { ...r, "data-dialog": "non-modal", role: n, children: t }),
+                children: (0, i.jsxs)("div", {
+                    ...r,
+                    "data-dialog": "non-modal",
+                    role: n,
+                    children: [(0, i.jsx)(_, {}), t],
+                }),
             }),
     });
 }
-function h(e) {
+function E(e) {
     let {
             ref: t,
             returnRef: n,
             modal: s = !0,
-            setDialogRef: o,
+            setDialogRef: a,
             trackingProps: l,
-            trackingComponentName: c = "Dialog",
-            ...h
+            trackingComponentName: u = "Dialog",
+            ...c
         } = e,
-        f = r.useRef(null);
-    r.useImperativeHandle(t, () => f.current),
+        _ = r.useRef(null);
+    r.useImperativeHandle(t, () => _.current),
         r.useEffect(
             () => (
-                o?.(f.current),
+                a?.(_.current),
                 () => {
-                    o?.(null);
+                    a?.(null);
                 }
             ),
             [],
         );
-    let { trackImpression: p } = (0, u.G9)();
+    let { trackImpression: h } = (0, d.G9)();
     return (
         r.useEffect(() => {
-            null != p && null != l && p({ componentName: c, payload: l });
-        }, [p, c, l]),
-        (0, a.t)(f, { returnRef: n, disable: !s }),
-        (0, i.jsx)(s ? d : _, { ...h, ref: f })
+            null != h && null != l && h({ componentName: u, payload: l });
+        }, [h, u, l]),
+        (0, o.t)(_, { returnRef: n, disable: !s }),
+        (0, i.jsx)(s ? f : p, { ...c, ref: _ })
     );
 }
