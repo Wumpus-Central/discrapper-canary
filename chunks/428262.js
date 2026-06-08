@@ -998,42 +998,47 @@ function tr(e) {
 }
 function ts(e) {
     let { subscription: t, user: n, price: i, renewalInvoicePreview: r, fractionalPremiumInfo: s } = e,
-        { planId: a, additionalPlans: o } = t,
-        u = eg.A.get(a);
-    l()(null != u, "Missing plan");
-    let c = e1(o),
-        d = tc(t.planId, t.paymentSourceId, t.currency, n).amount * c;
+        { planId: a, additionalPlans: o, renewalMutations: u } = t,
+        c = eg.A.get(a);
+    l()(null != c, "Missing plan");
+    let d = e1(o),
+        _ = u?.additionalPlans != null ? e1(u.additionalPlans) : d,
+        f = Math.max(0, d - _),
+        p = _ > 0 && f > 0,
+        E = tc(t.planId, t.paymentSourceId, t.currency, n),
+        m = p ? _ : d,
+        g = E.amount * m;
     if (null != r) {
         let e = r.invoiceItems.find((e) => y.pW.has(e.subscriptionPlanId));
-        null != e && (d = e.amount);
+        null != e && (g = e.amount);
     }
-    i = i ?? (0, eN.$g)(d, t.currency);
-    let _ = r?.taxInclusive ?? t.latestInvoice?.taxInclusive ?? !0;
+    i = i ?? (0, eN.$g)(g, t.currency);
+    let A = r?.taxInclusive ?? t.latestInvoice?.taxInclusive ?? !0;
     if (tr(t))
         return t.isPurchasedViaGoogle
-            ? eR.intl.format(eR.t["3/WTrI"], { quantity: c })
-            : _
-              ? eR.intl.format(eR.t["0ozBSB"], { quantity: c, rate: (0, eN.CE)(i, u.interval, u.intervalCount) })
-              : eR.intl.format(eR.t["yjsv/s"], { quantity: c, rate: (0, eN.CE)(i, u.interval, u.intervalCount) });
+            ? eR.intl.format(eR.t["3/WTrI"], { quantity: d })
+            : A
+              ? eR.intl.format(eR.t["0ozBSB"], { quantity: d, rate: (0, eN.CE)(i, c.interval, c.intervalCount) })
+              : eR.intl.format(eR.t["yjsv/s"], { quantity: d, rate: (0, eN.CE)(i, c.interval, c.intervalCount) });
     switch (t.status) {
         case S.Dmq.ACCOUNT_HOLD:
             return t.isPurchasedViaGoogle
-                ? eR.intl.format(eR.t.Nlf3nc, { quantity: c, boostQuantity: c })
-                : _
+                ? eR.intl.format(eR.t.Nlf3nc, { quantity: d, boostQuantity: d })
+                : A
                   ? eR.intl.format(eR.t.oiRy7v, {
-                        quantity: c,
-                        boostQuantity: c,
-                        rate: (0, eN.CE)(i, u.interval, u.intervalCount),
+                        quantity: d,
+                        boostQuantity: d,
+                        rate: (0, eN.CE)(i, c.interval, c.intervalCount),
                     })
                   : eR.intl.format(eR.t["0QxOAi"], {
-                        quantity: c,
-                        boostQuantity: c,
-                        rate: (0, eN.CE)(i, u.interval, u.intervalCount),
+                        quantity: d,
+                        boostQuantity: d,
+                        rate: (0, eN.CE)(i, c.interval, c.intervalCount),
                     });
         case S.Dmq.PAUSE_PENDING:
         case S.Dmq.PAUSED:
             if (null != s && !s.isFractionalPremiumActive) return eR.intl.string(eR.t.CduWAm);
-            return eR.intl.format(eR.t["5iud9s"], { quantity: c });
+            return eR.intl.format(eR.t["5iud9s"], { quantity: d });
         case S.Dmq.PAST_DUE:
             if (t.isBoostOnly)
                 return eR.intl.format(eR.t["d+0vwo"], {
@@ -1043,11 +1048,21 @@ function ts(e) {
                     },
                 });
         default:
+            if (p) {
+                if (t.isPurchasedViaGoogle)
+                    return eR.intl.format(eR.t["krRy+d"], { activeQuantity: _, pendingQuantity: f });
+                let e = A ? eR.t["4nc7+E"] : eR.t.BmaudS;
+                return eR.intl.format(e, {
+                    activeQuantity: _,
+                    pendingQuantity: f,
+                    rate: (0, eN.CE)(i, c.interval, c.intervalCount),
+                });
+            }
             return t.isPurchasedViaGoogle
-                ? eR.intl.format(eR.t["5iud9s"], { quantity: c })
-                : _
-                  ? eR.intl.format(eR.t.eDwrLA, { quantity: c, rate: (0, eN.CE)(i, u.interval, u.intervalCount) })
-                  : eR.intl.format(eR.t.ijSDcI, { quantity: c, rate: (0, eN.CE)(i, u.interval, u.intervalCount) });
+                ? eR.intl.format(eR.t["5iud9s"], { quantity: d })
+                : A
+                  ? eR.intl.format(eR.t.eDwrLA, { quantity: d, rate: (0, eN.CE)(i, c.interval, c.intervalCount) })
+                  : eR.intl.format(eR.t.ijSDcI, { quantity: d, rate: (0, eN.CE)(i, c.interval, c.intervalCount) });
     }
 }
 function ta(e, t, n) {
