@@ -399,6 +399,7 @@
 
 .addConnectionButton__9bfb9 {
     align-items: center;
+    align-self: flex-start;
     color: var(--text-muted);
     cursor: pointer;
     display: flex;
@@ -2176,32 +2177,6 @@
 
 .body_b30db3 {
     margin-top: 8px
-}
-
-.action__19ea7 {
-    display: flex;
-    flex-direction: column;
-    gap: 16px
-}
-
-.options__19ea7,
-.previewAndJoin__19ea7 {
-    display: flex;
-    gap: 40px
-}
-
-.previewAndJoin__19ea7 {
-    align-items: center;
-    align-self: flex-end
-}
-
-.voicePreview__19ea7 {
-    display: flex;
-    gap: 4px
-}
-
-.joinButton__19ea7 {
-    align-self: flex-start
 }
 
 .guildInviteContainer__083ae {
@@ -4117,6 +4092,18 @@
     inset-inline: 0;
     inset-inline-end: 0;
     position: absolute
+}
+
+.tile__90dc5 {
+    background-color: var(--primary-700);
+    border-radius: var(--custom-base-tile-border-radius);
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative
+}
+
+.tile__90dc5.noBorder__90dc5 {
+    border-radius: 0
 }
 
 .container__00de6 {
