@@ -9505,6 +9505,7 @@
     --mobile-messages-item-channel-name-text-style: redesign/channel-title/semibold;
     --mobile-messages-item-happening-now-padding-bottom: 8px;
     --mobile-promo-sheet-graphic-max-width: 288px;
+    --mobile-quest-dock-border-radius: 24px;
     --mobile-segmented-control-border-radius: 16px;
     --mobile-settings-padding-top: 16px;
     --mobile-sheet-handle-height: 4px;
@@ -9635,6 +9636,7 @@
     --mobile-messages-item-channel-avatar-margin-end: 12px;
     --mobile-messages-item-channel-name-text-style: text-md/medium;
     --mobile-messages-item-happening-now-padding-bottom: 16px;
+    --mobile-quest-dock-border-radius: 16px;
     --mobile-segmented-control-border-radius: 8px;
     --mobile-settings-padding-top: 24px;
     --mobile-sheet-handle-margin-bottom: 24px;

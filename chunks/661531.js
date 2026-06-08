@@ -8421,6 +8421,14 @@ let { Themes: c } = u.zv,
                     },
                 },
                 PROMO_SHEET_GRAPHIC_MAX_WIDTH: { resolve: () => 288 },
+                QUEST_DOCK_BORDER_RADIUS: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 24;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 16;
+                        return 24;
+                    },
+                },
                 SEGMENTED_CONTROL_BORDER_RADIUS: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
