@@ -1481,10 +1481,12 @@ class e0 extends m.A {
                     u = t.targetBitrateHistogram.getReport(a),
                     c = t.outboundBandwidthSurplus.getReport(a),
                     d = this.videoEntropy.getReport(a),
-                    _ = t.aggregationDuration / 1e3;
+                    _ = t.aggregationDuration / 1e3,
+                    h = t.aggregatedProperties.screenshareFramesUnique;
                 e.push({
                     ...this.getStats(t),
                     target_fps: _ > 0 ? Math.round((t.targetFrames ?? 0) / _) : 0,
+                    unique_captured_fps: this.connection?.context === g.x.STREAM && _ > 0 ? h / _ : null,
                     target_bitrate_network: _ > 0 ? Math.round(((t.targetBytesNetwork ?? 0) * 8) / _) : 0,
                     target_bitrate_network_percentile1: u.count > 0 ? u.percentiles[1] : null,
                     target_bitrate_network_percentile5: u.count > 0 ? u.percentiles[5] : null,
@@ -1780,57 +1782,68 @@ class e0 extends m.A {
             c = u?.videoEntropy;
         t.rtp.outbound
             .filter((e) => "video" === e.type)
-            .forEach((t) => {
-                if (null != t) {
-                    let o = t.ssrc,
-                        u = this.outboundStats[o];
-                    null == u &&
-                        (console.warn(`Unknown outbound video stream with SSRC: ${o}`),
-                        (u = new eZ.ET(this.timestampProducer)),
-                        (this.outboundStats[o] = u)),
-                        null == u.timeToFirstFrame &&
-                            (t.framesEncoded > 0 || (t.frameRateInput ?? 0) > 0) &&
-                            (u.timeToFirstFrame = Math.max(0, e - u.startTime)),
+            .forEach((r) => {
+                if (null != r) {
+                    let u = r.ssrc,
+                        d = this.outboundStats[u];
+                    null == d &&
+                        (console.warn(`Unknown outbound video stream with SSRC: ${u}`),
+                        (d = new eZ.ET(this.timestampProducer)),
+                        (this.outboundStats[u] = d)),
+                        null == d.timeToFirstFrame &&
+                            (r.framesEncoded > 0 || (r.frameRateInput ?? 0) > 0) &&
+                            (d.timeToFirstFrame = Math.max(0, e - d.startTime)),
                         null != c && c >= 0 && this.videoEntropy.addSample(c);
-                    let d = n.find((e) => e.ssrc === o);
-                    var r = !0;
+                    let _ = n.find((e) => e.ssrc === u);
+                    var a = !0;
                     if (this.connection.context === g.x.STREAM) {
-                        var a = this.connection.getRemoteVideoSinkWants(o);
-                        (null == a || 0 === a) &&
-                            d?.quality === l &&
-                            (a = this.connection.getRemoteVideoSinkWants("any")),
-                            (r = (a ?? 0) > 0);
+                        var o = this.connection.getRemoteVideoSinkWants(u);
+                        (null == o || 0 === o) &&
+                            _?.quality === l &&
+                            (o = this.connection.getRemoteVideoSinkWants("any")),
+                            (a = (o ?? 0) > 0);
                     }
-                    let _ = this.videoStopped.value || !r;
-                    if ((_ !== u.isVideoStopped && u.setVideoStopped(_, eZ.iF.SenderStopped), !_)) {
-                        u.appendAndIncrementStats(eZ.tH.parseOutboundStats(t, e)),
-                            null != t.minResolutionWidth &&
-                                t.minResolutionWidth > 0 &&
-                                (null == u.minWidth || t.minResolutionWidth < u.minWidth) &&
-                                (u.minWidth = t.minResolutionWidth),
-                            null != t.minResolutionHeight &&
-                                t.minResolutionHeight > 0 &&
-                                (null == u.minHeight || t.minResolutionHeight < u.minHeight) &&
-                                (u.minHeight = t.minResolutionHeight),
-                            u.encoderCodec !== eZ.Wn.UNKNOWN && s.add(u.encoderCodec);
-                        let n = d?.maxBitrate;
-                        u.appendTargetRates(
-                            d?.maxFrameRate,
-                            t.bitrateTarget ?? Math.min(i.availableOutgoingBitrate ?? 0, n ?? 0),
-                            n,
+                    let h = this.videoStopped.value || !a;
+                    if ((h !== d.isVideoStopped && d.setVideoStopped(h, eZ.iF.SenderStopped), !h)) {
+                        let n = eZ.tH.parseOutboundStats(r, e),
+                            a = t.screenshare;
+                        if (null != a) {
+                            let e =
+                                (a.hybridDxgiFramesUnique ?? 0) +
+                                (a.hybridGdiBitBltFramesUnique ?? 0) +
+                                (a.hybridGdiPrintWindowFramesUnique ?? 0) +
+                                (a.hybridVideohookFramesUnique ?? 0) +
+                                (a.hybridGraphicsCaptureFramesUnique ?? 0);
+                            0 === e && (e = a.screenshareFrames ?? 0), (n.screenshareFramesUnique = e);
+                        }
+                        d.appendAndIncrementStats(n),
+                            null != r.minResolutionWidth &&
+                                r.minResolutionWidth > 0 &&
+                                (null == d.minWidth || r.minResolutionWidth < d.minWidth) &&
+                                (d.minWidth = r.minResolutionWidth),
+                            null != r.minResolutionHeight &&
+                                r.minResolutionHeight > 0 &&
+                                (null == d.minHeight || r.minResolutionHeight < d.minHeight) &&
+                                (d.minHeight = r.minResolutionHeight),
+                            d.encoderCodec !== eZ.Wn.UNKNOWN && s.add(d.encoderCodec);
+                        let o = _?.maxBitrate;
+                        d.appendTargetRates(
+                            _?.maxFrameRate,
+                            r.bitrateTarget ?? Math.min(i.availableOutgoingBitrate ?? 0, o ?? 0),
+                            o,
                             i.availableOutgoingBitrate,
                         ),
-                            (u.averageEncodeTime = t.averageEncodeTime ?? 0),
-                            (u.framesDroppedRateLimiter = t.framesDroppedRateLimiter ?? null),
-                            (u.framesDroppedEncoderQueue = t.framesDroppedEncoderQueue ?? null),
-                            (u.framesDroppedCongestionWindow = t.framesDroppedCongestionWindow ?? null),
-                            (u.framesDroppedEncoder = t.framesDroppedEncoder ?? null),
-                            (this.hqSimulcastStreamEncoded.value = t.hqSimulcastStreamEncoded ?? !1),
-                            (this.lqSimulcastStreamEncoded.value = t.lqSimulcastStreamEncoded ?? !1),
+                            (d.averageEncodeTime = r.averageEncodeTime ?? 0),
+                            (d.framesDroppedRateLimiter = r.framesDroppedRateLimiter ?? null),
+                            (d.framesDroppedEncoderQueue = r.framesDroppedEncoderQueue ?? null),
+                            (d.framesDroppedCongestionWindow = r.framesDroppedCongestionWindow ?? null),
+                            (d.framesDroppedEncoder = r.framesDroppedEncoder ?? null),
+                            (this.hqSimulcastStreamEncoded.value = r.hqSimulcastStreamEncoded ?? !1),
+                            (this.lqSimulcastStreamEncoded.value = r.lqSimulcastStreamEncoded ?? !1),
                             (this.bothSimulcastStreamsEncoded.value =
                                 this.hqSimulcastStreamEncoded.value && this.lqSimulcastStreamEncoded.value),
-                            (this.bandwidthLimitedResolution.value = t.bandwidthLimitedResolution ?? !1),
-                            (this.bandwidthLimitedFramerate.value = t.bandwidthLimitedFrameRate ?? !1);
+                            (this.bandwidthLimitedResolution.value = r.bandwidthLimitedResolution ?? !1),
+                            (this.bandwidthLimitedFramerate.value = r.bandwidthLimitedFrameRate ?? !1);
                     }
                 }
             }),

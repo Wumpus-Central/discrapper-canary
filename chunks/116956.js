@@ -11,7 +11,7 @@ var r = n(284009),
     d = n(952818),
     _ = n(499979),
     h = n(451988),
-    f = n(492737),
+    f = n(930187),
     p = n(507821);
 class E {
     _report;
@@ -81,7 +81,7 @@ var m = n(274372),
     y = n(495544),
     N = n(734057),
     v = n(877717),
-    C = n(761853),
+    C = n(555975),
     R = n(544180),
     O = n(763827),
     b = n(873985),
@@ -350,7 +350,8 @@ class H extends f.A {
                             this.screenshareFinishedCount++;
                             let { gameName: b, gameId: w, exe: P, distributor: x } = (0, I.wH)(O),
                                 k = this.getMediaSessionId(),
-                                U = this.getRTCConnectionId();
+                                U = this.getRTCConnectionId(),
+                                G = (u ?? 0) + (c ?? 0) + (d ?? 0) + (_ ?? 0) + (h ?? 0);
                             (0, T.w)().then((I) => {
                                 let T =
                                         null != I
@@ -373,8 +374,7 @@ class H extends f.A {
                                         (A ?? 0) +
                                         (g ?? 0) +
                                         (C ?? 0) +
-                                        (v ?? 0),
-                                    G = (u ?? 0) + (c ?? 0) + (d ?? 0) + (_ ?? 0) + (h ?? 0);
+                                        (v ?? 0);
                                 D.default.track(M.HAw.SCREENSHARE_FINISHED, {
                                     screenshare_frames: e,
                                     videohook_frames: t,

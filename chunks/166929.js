@@ -51,6 +51,7 @@ let c = [0, 5e5, 1e6, 15e5, 2e6, 3e6, 4e6, 5e6, 6e6, 7e6, 8e6],
         "qualityScoreErrors",
         "qualityFrameDrops",
         "qualitySizeMismatches",
+        "screenshareFramesUnique",
     ];
 var f =
         (((i = {}).H264 = "H264"),
@@ -210,6 +211,7 @@ class y {
     qualitySizeMismatches = 0;
     localWant = 0;
     consecutiveStaticColorFrames = 0;
+    screenshareFramesUnique = 0;
     static parseInboundStats(e, t) {
         let n = new y();
         return (
@@ -297,6 +299,7 @@ class y {
                   cryptorInvalidNonceCount: 0,
                   localWant: 0,
                   consecutiveStaticColorFrames: e.consecutiveStaticColorFrames ?? 0,
+                  screenshareFramesUnique: 0,
               };
     }
 }
@@ -342,6 +345,7 @@ class N {
         qualityScoreErrors: 0,
         qualityFrameDrops: 0,
         qualitySizeMismatches: 0,
+        screenshareFramesUnique: 0,
     };
     aggregationDuration = 0;
     bitrateBuckets = {};
