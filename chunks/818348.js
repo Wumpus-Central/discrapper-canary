@@ -676,6 +676,7 @@ var ex =
         (T.MKTG_APPLICATION_STEP = "mktg_application_step"),
         (T.MKTG_WARFRAME_CTA_CLICKED = "mktg_warframe_cta_clicked"),
         (T.MKTG_PAGE_CTA_CLICKED = "mktg_page_cta_clicked"),
+        (T.MKTG_PAGE_SCROLLED = "mktg_page_scrolled"),
         (T.MKTG_VIDEO_PLAYED = "mktg_video_played"),
         (T.DEEP_LINK_CLICKED = "deep_link_clicked"),
         (T.SEO_PAGE_VIEWED = "seo_server_landing_page_viewed"),
