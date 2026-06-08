@@ -125,8 +125,14 @@ let S = (0, o.mj)({
     y = (0, o.mj)({
         name: "2026-05-quest-home-tile-redesign",
         kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+        defaultConfig: { useNewLayoutWithSearch: !1, useNewTile: !1, useLargeFeaturedTiles: !1, ctaOnHover: !1 },
+        variations: {
+            0: { useNewLayoutWithSearch: !1, useNewTile: !1, useLargeFeaturedTiles: !1, ctaOnHover: !1 },
+            1: { useNewLayoutWithSearch: !0, useNewTile: !1, useLargeFeaturedTiles: !1, ctaOnHover: !1 },
+            2: { useNewLayoutWithSearch: !0, useNewTile: !0, useLargeFeaturedTiles: !0, ctaOnHover: !0 },
+            3: { useNewLayoutWithSearch: !0, useNewTile: !0, useLargeFeaturedTiles: !1, ctaOnHover: !0 },
+            4: { useNewLayoutWithSearch: !0, useNewTile: !0, useLargeFeaturedTiles: !0, ctaOnHover: !1 },
+        },
     }),
     N = (0, o.mj)({
         name: "2026-05-quest-home-remove-expired-quests",
