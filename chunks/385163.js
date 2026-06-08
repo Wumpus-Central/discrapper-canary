@@ -8,18 +8,18 @@ var i = n(627968),
     l = n(503698),
     u = n.n(l),
     c = n(17928),
-    d = n(417098),
-    _ = n(318254),
-    h = n(661531),
-    f = n(736653),
-    p = n(573648),
-    E = n(793574),
-    m = n(688810),
-    g = n(429913),
-    A = n(826673),
-    I = n(780964),
-    T = n(766075),
-    S = n(30370),
+    d = n(192308),
+    _ = n(417098),
+    h = n(318254),
+    f = n(661531),
+    p = n(736653),
+    E = n(573648),
+    m = n(793574),
+    g = n(688810),
+    A = n(429913),
+    I = n(826673),
+    T = n(30370),
+    S = n(228366),
     y = n(46225),
     N = n(652215),
     v = n(49999),
@@ -27,61 +27,78 @@ var i = n(627968),
     R = n(375708),
     O = n(448759);
 let b = (e) => {
-    let { markAsDismissed: t, applicationName: n } = e,
-        s = [N.fg2.LEAGUE_OF_LEGENDS, N.fg2.RIOT_GAMES],
-        a = (0, c.bG)([S.A], () => S.A.getAccounts().find((e) => s.includes(e.type))?.type),
-        l = (0, f.Ay)(),
-        b = null != a ? p.A.get(a) : null,
-        D = b?.replacedBy,
-        L = (0, g.h)(D);
-    n = n ?? L?.name;
-    let { startAuthorization: w, canStartAuthorization: M, hasAlreadyLinked: P, fetched: x } = (0, y.RD)(L),
-        { analyticsLocations: k } = (0, m.Ay)(E.A.NOTICE);
+    let { markAsDismissed: t, applicationName: s } = e,
+        a = [N.fg2.LEAGUE_OF_LEGENDS, N.fg2.RIOT_GAMES],
+        l = (0, c.bG)([T.A], () => T.A.getAccounts().find((e) => a.includes(e.type))?.type),
+        b = (0, p.Ay)(),
+        D = null != l ? E.A.get(l) : null,
+        L = D?.replacedBy,
+        w = (0, A.h)(L);
+    s = s ?? w?.name;
+    let { startAuthorization: M, canStartAuthorization: P, hasAlreadyLinked: x, fetched: k } = (0, y.RD)(w),
+        { analyticsLocations: U } = (0, g.Ay)(m.A.NOTICE);
     if (
         (r.useEffect(() => {
-            P && x && ((0, A.Dr)(o.M.RIOT_CONNECTION_DEPRECATION_DISABLE), t(v.i.INDIRECT_ACTION));
-        }, [P, x, t]),
-        null == L || !M || !x || P)
+            x &&
+                k &&
+                (null != L && S.h.dispatch({ type: "ACCOUNT_LINK_AUTHORIZATION_COMPLETED", applicationId: L }),
+                (0, I.Dr)(o.M.RIOT_CONNECTION_DEPRECATION_DISABLE),
+                t(v.i.INDIRECT_ACTION));
+        }, [x, k, t, L]),
+        null == w || !P || !k || x)
     )
         return null;
-    let U = p.A.get(N.fg2.RIOT_GAMES);
-    return (0, i.jsxs)(d.$T, {
-        color: d.Hv.WARNING,
+    let G = E.A.get(N.fg2.RIOT_GAMES);
+    return (0, i.jsxs)(_.$T, {
+        color: _.Hv.WARNING,
         children: [
-            (0, i.jsx)(d.PM, {
+            (0, i.jsx)(_.PM, {
                 noticeType: N.kqX.RIOT_MIGRATION,
                 onClick: () => {
-                    (0, A.Dr)(o.M.RIOT_CONNECTION_DEPRECATION_DISABLE), t(v.i.USER_DISMISS);
+                    (0, I.Dr)(o.M.RIOT_CONNECTION_DEPRECATION_DISABLE), t(v.i.USER_DISMISS);
                 },
             }),
             (0, i.jsx)("img", {
-                src: "light" === l ? U?.icon.blackSVG : U?.icon.whiteSVG,
+                src: "light" === b ? G?.icon.blackSVG : G?.icon.whiteSVG,
                 alt: R.intl.string(C.default["1S6oAo"]),
                 className: u()(O.tV, O._R),
             }),
             R.intl.format(C.default.DfSSdL, {
-                connectionName: b?.name,
-                applicationName: n,
+                connectionName: D?.name,
+                applicationName: s,
                 orbsIconHook: () =>
-                    (0, i.jsx)(_.C, {
+                    (0, i.jsx)(h.C, {
                         size: "xs",
                         style: { verticalAlign: "-0.22em" },
-                        color: h.A.colors.NOTICE_TEXT_WARNING,
+                        color: f.A.colors.NOTICE_TEXT_WARNING,
                     }),
                 orbCount: 200,
             }),
-            (0, i.jsx)(d.Z_, {
+            (0, i.jsx)(_.Z_, {
                 onClick: () => {
-                    (0, A.Dr)(o.M.RIOT_CONNECTION_DEPRECATION_DISABLE),
-                        t(v.i.TAKE_ACTION),
-                        (0, T.openUserSettings)(I.X.CONNECTIONS_PANEL),
-                        setTimeout(() => w({ analyticsLocations: k }), 0);
+                    var e;
+                    M({ analyticsLocations: U }),
+                        (e = w.id),
+                        S.h.dispatch({
+                            type: "ACCOUNT_LINK_AUTHORIZATION_STARTED",
+                            applicationId: e,
+                            accountLinkCallbacks: {},
+                            claimIncentivizedAccountLinkingRewardCallbacks: {
+                                onSuccess: () =>
+                                    (0, d.openModalLazy)(async () => {
+                                        let { default: e } = await Promise.all([n.e("50163"), n.e("89387")]).then(
+                                            n.bind(n, 494886),
+                                        );
+                                        return (t) => (0, i.jsx)(e, { ...t });
+                                    }),
+                            },
+                        });
                 },
                 className: O.HE,
                 noticeType: N.kqX.RIOT_MIGRATION,
                 children: R.intl.string(C.default.ZeOhh9),
             }),
-            (0, i.jsx)(d.zr, {
+            (0, i.jsx)(_.zr, {
                 onClick: () => {
                     t(v.i.USER_DISMISS);
                 },
@@ -103,7 +120,7 @@ var D = n(380786),
     F = n(788868);
 let V = function (e) {
     let { dismissCurrentNotice: t, subscriptionTier: n } = e,
-        { analyticsLocations: r } = (0, m.Ay)(E.A.PREMIUM_TIER_2_DISCOUNT_ENDING_NOTICE),
+        { analyticsLocations: r } = (0, g.Ay)(m.A.PREMIUM_TIER_2_DISCOUNT_ENDING_NOTICE),
         s = (0, x.O)(),
         a = (0, w.A)(null != s && null != s.expiresAt ? s.expiresAt.getTime() : 0);
     return null == s ||

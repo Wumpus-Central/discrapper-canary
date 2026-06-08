@@ -582,9 +582,9 @@ let r = {
     },
     ClipsSignalManager: {
         actions: ["RUNNING_GAMES_CHANGE", "CLIPS_SETTINGS_UPDATE", "VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATES"],
-        inlineRequire: () => n(966532).A,
+        inlineRequire: () => n(146623).A,
     },
-    DistributedClipsManager: { actions: ["CLIPS_REMOTE_TRIGGER"], inlineRequire: () => n(429195).A },
+    DistributedClipsManager: { actions: ["CLIPS_REMOTE_TRIGGER"], inlineRequire: () => n(109624).A },
     CustomCallSoundsManager: {
         actions: ["RTC_CONNECTION_STATE", "SOUNDBOARD_MUTE_JOIN_SOUND", "VOICE_STATE_UPDATES"],
         inlineRequire: () => n(572044).A,
@@ -807,7 +807,7 @@ let r = {
     },
     RequestToStreamManager: {
         actions: ["VOICE_STATE_UPDATES"],
-        inlineRequire: () => n(488626).A,
+        inlineRequire: () => n(553366).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     UserApplicationIdentityManager: {
@@ -865,6 +865,15 @@ let r = {
         ],
         inlineRequire: () => n(185522).A,
         neverLoadBeforeConnectionOpen: !0,
+    },
+    AccountLinkManager: {
+        actions: [
+            "OAUTH2_TOKEN_CREATE",
+            "USER_AUTHORIZED_APPS_UPDATE",
+            "APP_STATE_UPDATE",
+            "ACCOUNT_LINK_AUTHORIZATION_COMPLETED",
+        ],
+        inlineRequire: () => n(151073).Ay,
     },
 };
 (0, i.n)(r);
