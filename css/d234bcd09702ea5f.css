@@ -1,3 +1,32 @@
+.messageRequestItem_abb9ad {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    line-height: 20px;
+    overflow: hidden;
+    padding: 16px 10px
+}
+
+.messageRequestItem_abb9ad:not(.firstItem_abb9ad) {
+    border-top: 1px solid var(--border-subtle)
+}
+
+.messageRequestItem_abb9ad.active_abb9ad+.messageRequestItem_abb9ad,
+.messageRequestItem_abb9ad:hover+.messageRequestItem_abb9ad {
+    border-color: transparent
+}
+
+.messageRequestItem_abb9ad.active_abb9ad,
+.messageRequestItem_abb9ad:hover {
+    background: var(--interactive-background-hover);
+    border-color: transparent;
+    border-radius: 8px;
+    box-shadow: none
+}
+
 .messageContent_dbf24f {
     color: unset;
     font-size: 16px !important;
