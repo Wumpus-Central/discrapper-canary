@@ -444,8 +444,8 @@ var eK = s(19809),
     e2 = s(371912),
     e7 = s(79545),
     e8 = s(321503),
-    e3 = s(720875),
-    e5 = s(687966),
+    e5 = s(720875),
+    e3 = s(687966),
     e4 = s(782134),
     e6 = s(138134),
     e9 = s(768622),
@@ -518,7 +518,7 @@ function ta(e) {
                                     let t = { size: "xxs", className: tr.rF, color: "currentColor" };
                                     switch ((0, tt.pv)(e)) {
                                         case tt.UK.PLAY:
-                                            return (0, r.jsx)(e5._, { ...t });
+                                            return (0, r.jsx)(e3._, { ...t });
                                         case tt.UK.WATCH:
                                             return (0, r.jsx)(e4.u, { ...t });
                                         case tt.UK.ACTIVITY:
@@ -925,7 +925,7 @@ function tq(e) {
             b(e) || (f.onBlur(), O());
         },
         children: [
-            (0, r.jsx)(e3.A, {
+            (0, r.jsx)(e5.A, {
                 showPlaceholder: !A,
                 width: 600,
                 height: 450,
@@ -1261,20 +1261,20 @@ var tX = s(203879),
     t2 = s(783977),
     t7 = s(651892),
     t8 = s(305866),
-    t3 = s(915089),
-    t5 = s(332733);
+    t5 = s(915089),
+    t3 = s(332733);
 function t4(e) {
     let { children: t, id: s } = e;
-    return (0, r.jsx)(S.E, { className: t5.g, color: "text-subtle", id: s, variant: "text-sm/semibold", children: t });
+    return (0, r.jsx)(S.E, { className: t3.g, color: "text-subtle", id: s, variant: "text-sm/semibold", children: t });
 }
 let t6 = function (e) {
     let { children: t, renderPopout: s } = e,
-        n = (0, t3.GV)(),
+        n = (0, t5.GV)(),
         l = a.useRef(null);
     return (0, r.jsx)(ec.Y, {
         align: "right",
         position: "bottom",
-        renderPopout: (e) => (0, r.jsx)(t8.l, { className: t5.S, "aria-labelledby": n, children: s(e, n) }),
+        renderPopout: (e) => (0, r.jsx)(t8.l, { className: t3.S, "aria-labelledby": n, children: s(e, n) }),
         scrollBehavior: "close",
         targetElementRef: l,
         children: (e) => t(e, l),
@@ -2099,7 +2099,7 @@ let s2 = a.memo(function (e) {
     }),
     s7 = a.createContext({ targetQuestId: null, highlightCount: null, highlightAnimationProgress: null });
 var s8 = s(76060);
-function s3(e) {
+function s5(e) {
     let { children: t, questId: s, featuredSection: n } = e,
         { targetQuestId: l, highlightCount: i, highlightAnimationProgress: o } = a.useContext(s7),
         c = l === s,
@@ -2114,7 +2114,7 @@ function s3(e) {
         children: [c && (0, r.jsx)("div", { className: s8.E }, i), t],
     });
 }
-var s5 = s(474646);
+var s3 = s(474646);
 function s4(e) {
     let { containerWidth: t, questIds: s, setMaxRowIndex: n } = e,
         { enabled: l } = ee.aD.useConfig({ location: ty.rE.QUEST_HOME_DESKTOP }),
@@ -2124,7 +2124,7 @@ function s4(e) {
             null !== i && n(Math.ceil(s.length / i) - 1);
         }, [s.length, i, n]),
         (0, r.jsx)("div", {
-            className: s5.k,
+            className: s3.k,
             style: {
                 "--custom-min-quest-tile-width": "345px",
                 "--custom-quest-grid-gap": "20px",
@@ -2134,7 +2134,7 @@ function s4(e) {
                 null != i &&
                 s.map((e, t) =>
                     (0, r.jsx)(
-                        s3,
+                        s5,
                         {
                             featuredSection: !0,
                             questId: e,
@@ -2214,7 +2214,7 @@ function nt(e) {
             children: [
                 s.map((e, s) =>
                     (0, r.jsx)(
-                        s3,
+                        s5,
                         {
                             questId: e,
                             children: o
@@ -2301,7 +2301,10 @@ let na = new nr(en.h, {
         },
     };
 function nu(e, t) {
-    return e === t || (e.length === t.length && 0 === new Set(e).symmetricDifference(new Set(t)).size);
+    if (e === t) return !0;
+    let s = new Set(e),
+        n = new Set(t);
+    return s.size === n.size && [...s].every((e) => n.has(e));
 }
 function nd(e, t) {
     let s = no.get(e)?.maxItems,
@@ -2855,7 +2858,7 @@ function nk(e) {
                                     children: [
                                         (0, eZ.pv)(s.config) === nR.Z.VIDEO
                                             ? (0, r.jsx)(nQ.S, { size: "xs", color: eg.A.colors.ICON_MUTED.css })
-                                            : (0, r.jsx)(e5._, { size: "xs", color: eg.A.colors.ICON_MUTED.css }),
+                                            : (0, r.jsx)(e3._, { size: "xs", color: eg.A.colors.ICON_MUTED.css }),
                                         (0, r.jsx)(S.E, {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
@@ -3119,7 +3122,7 @@ function n0(e) {
     let { alt: t, ariaLabel: s, ariaHidden: n, role: l, width: a = 288, height: i = 192 } = e;
     return (0, r.jsx)("img", {
         style: { width: a, height: i },
-        src: "https://cdn.discordapp.com/assets/content/f7e308880e4b4db999ae2e2c43f12f7882f717158ce2520aa36a9d60fb68c367.svg",
+        src: "https://cdn.discordapp.com/assets/content/bcf3b3d09bc5184860051e378d0e0d815edeaffb108593db1d2bb64ae405927f.svg",
         alt: t,
         "aria-label": s,
         "aria-hidden": n,
@@ -3211,18 +3214,18 @@ let n2 = function (e) {
 };
 var n7 = s(111956),
     n8 = s.n(n7),
-    n3 = s(379078),
-    n5 = s(704554),
+    n5 = s(379078),
+    n3 = s(704554),
     n4 = s(823784);
 let n6 = {
-    searchType: n3.n.FUZZY,
+    searchType: n5.n.FUZZY,
     searchStringGenerator: (e) =>
         [
             e.messages.questName.toLowerCase(),
             e.messages.gameTitle.toLowerCase(),
             e.messages.gamePublisher.toLowerCase(),
         ].filter(t0.Vq),
-    sortType: n3.r.JARO_WINKLER,
+    sortType: n5.r.JARO_WINKLER,
     throttleMs: 200,
 };
 var n9 = s(758836),
@@ -3484,7 +3487,7 @@ let lu = function (e) {
                 },
                 [i, r, o, u],
             );
-            return (0, n5.RT)(r, l, d, n6), { matchingQuestIds: s, query: e, setQuery: t, onSearchClose: u };
+            return (0, n3.RT)(r, l, d, n6), { matchingQuestIds: s, query: e, setQuery: t, onSearchClose: u };
         })();
     a.useLayoutEffect(() => {
         l && j === et.NC.CLAIMED && Z.A.setState({ tab: et.NC.ALL });
