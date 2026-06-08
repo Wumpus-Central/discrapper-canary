@@ -1,75 +1,74 @@
-s.d(a, { R: () => n, j: () => o });
-var t = s(627968),
-    l = s(192308);
-let i = "social-layer-storefront-product-details-modal",
-    n = (e) => {
+i.d(t, { R: () => a, j: () => r });
+var n = i(627968),
+    l = i(192308);
+let s = "social-layer-storefront-product-details-modal",
+    a = (e) => {
         let {
-            customNavigateToSocialLayerStorefront: a,
-            skuId: n,
-            applicationId: o,
-            isStorefront: c,
-            giftRecipient: r,
-            giftingOrigin: d,
-            analyticsLocations: p,
-            analyticsContext: u,
-            onClose: m,
+            customNavigateToSocialLayerStorefront: t,
+            skuId: a,
+            applicationId: r,
+            isStorefront: u,
+            giftRecipient: o,
+            giftingOrigin: c,
+            analyticsLocations: d,
+            analyticsContext: f,
+            onClose: A,
         } = e;
         (0, l.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    s.e("46438"),
-                    s.e("1702"),
-                    s.e("94925"),
-                    s.e("52408"),
-                    s.e("61872"),
-                    s.e("43535"),
-                    s.e("9233"),
-                    s.e("72963"),
-                    s.e("86814"),
-                    s.e("37021"),
-                    s.e("18997"),
-                    s.e("18024"),
-                    s.e("3131"),
-                    s.e("47177"),
-                    s.e("69747"),
-                    s.e("27272"),
-                    s.e("36149"),
-                    s.e("51778"),
-                    s.e("24914"),
-                    s.e("97563"),
-                    s.e("21930"),
-                    s.e("20382"),
-                    s.e("52511"),
-                    s.e("63333"),
-                    s.e("93766"),
-                    s.e("73165"),
-                    s.e("66017"),
-                    s.e("90711"),
-                    s.e("9935"),
-                    s.e("39305"),
-                ]).then(s.bind(s, 659696));
-                return (s) =>
-                    (0, t.jsx)(e, {
-                        ...s,
-                        skuId: n,
-                        applicationId: o,
-                        isStorefront: c,
-                        analyticsLocations: p,
-                        analyticsContext: u,
-                        giftRecipient: r,
-                        giftingOrigin: d,
-                        customNavigateToSocialLayerStorefront: a,
+                    i.e("46438"),
+                    i.e("81954"),
+                    i.e("38148"),
+                    i.e("87085"),
+                    i.e("43535"),
+                    i.e("9233"),
+                    i.e("72963"),
+                    i.e("86814"),
+                    i.e("37021"),
+                    i.e("18997"),
+                    i.e("18024"),
+                    i.e("3131"),
+                    i.e("47177"),
+                    i.e("69747"),
+                    i.e("27272"),
+                    i.e("36149"),
+                    i.e("51778"),
+                    i.e("24914"),
+                    i.e("97563"),
+                    i.e("21930"),
+                    i.e("20382"),
+                    i.e("52511"),
+                    i.e("63333"),
+                    i.e("93766"),
+                    i.e("73165"),
+                    i.e("66017"),
+                    i.e("90711"),
+                    i.e("9935"),
+                    i.e("39305"),
+                ]).then(i.bind(i, 659696));
+                return (i) =>
+                    (0, n.jsx)(e, {
+                        ...i,
+                        skuId: a,
+                        applicationId: r,
+                        isStorefront: u,
+                        analyticsLocations: d,
+                        analyticsContext: f,
+                        giftRecipient: o,
+                        giftingOrigin: c,
+                        customNavigateToSocialLayerStorefront: t,
                     });
             },
             {
-                modalKey: i,
-                allowsNavigation: c,
+                modalKey: s,
+                allowsNavigation: u,
                 onCloseCallback: () => {
-                    m?.();
+                    A?.();
                 },
             },
         );
     };
-function o() {
-    (0, l.hasModalOpen)(i) && (0, l.closeModal)(i);
+function r() {
+    (0, l.hasModalOpen)(s) && (0, l.closeModal)(s);
 }

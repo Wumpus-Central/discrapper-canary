@@ -34,8 +34,8 @@ var i = n(627968),
     x = n(580745),
     f = n(232835),
     E = n(287809),
-    C = n(174459),
-    I = n(625494),
+    I = n(174459),
+    C = n(625494),
     v = n(723702),
     _ = n(427262),
     j = n(841549),
@@ -54,7 +54,7 @@ function S(e, t, n) {
             if ((i.preventDefault(), i.stopPropagation(), !i.shiftKey)) return void n();
             let s = `@${_.Ay.getUserTag(l, { decoration: "never" })}`,
                 r = `<@${e}>`;
-            I._.dispatchToLastSubscribed(g.jej.INSERT_TEXT, { plainText: s, rawText: r }), d.A.startTyping(t);
+            C._.dispatchToLastSubscribed(g.jej.INSERT_TEXT, { plainText: s, rawText: r }), d.A.startTyping(t);
         },
         [e, t, n],
     );
@@ -112,7 +112,7 @@ function O(e, t, s, o) {
             null == l ||
                 null == r ||
                 c ||
-                (C.default.track(g.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+                (I.default.track(g.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: u,
                     channel: d,
                     location: "right_click",
@@ -124,14 +124,15 @@ function O(e, t, s, o) {
                         let { default: e } = await Promise.all([
                             n.e("90950"),
                             n.e("84106"),
-                            n.e("77372"),
+                            n.e("17539"),
                             n.e("87932"),
-                            n.e("68320"),
+                            n.e("45147"),
                             n.e("97499"),
-                            n.e("37501"),
+                            n.e("93900"),
+                            n.e("6581"),
                             n.e("54531"),
                             n.e("14399"),
-                            n.e("20320"),
+                            n.e("87085"),
                             n.e("28951"),
                             n.e("90324"),
                             n.e("34552"),
@@ -178,7 +179,6 @@ function O(e, t, s, o) {
                             n.e("6809"),
                             n.e("96268"),
                             n.e("77333"),
-                            n.e("2329"),
                             n.e("44801"),
                             n.e("10014"),
                             n.e("49333"),
@@ -197,7 +197,6 @@ function O(e, t, s, o) {
                             n.e("18792"),
                             n.e("11802"),
                             n.e("90854"),
-                            n.e("91139"),
                             n.e("39735"),
                             n.e("59617"),
                             n.e("95841"),
@@ -273,10 +272,10 @@ function H(e) {
         [o, d] = l.useState(i);
     a.current = o || a.current;
     let c = l.useCallback(() => {
-            (0, p.cE)(), o || (I._.dispatchKeyed(g.zOV.ANIMATE_CHAT_AVATAR, r, !0), d(!0));
+            (0, p.cE)(), o || (C._.dispatchKeyed(g.zOV.ANIMATE_CHAT_AVATAR, r, !0), d(!0));
         }, [o, r]),
         u = l.useCallback(() => {
-            I._.dispatchKeyed(g.zOV.ANIMATE_CHAT_AVATAR, r, !1), d(!1);
+            C._.dispatchKeyed(g.zOV.ANIMATE_CHAT_AVATAR, r, !1), d(!1);
         }, [r]);
     return { hasHovered: a.current, isHovered: o, handleMouseEnter: c, handleMouseLeave: u };
 }

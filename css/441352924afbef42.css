@@ -1,0 +1,40 @@
+.productCardBadge_b8a6bd {
+    min-width: 0
+}
+
+.earlyAccessBadge_b8a6bd,
+.productCardBadge_b8a6bd {
+    flex: 1;
+    max-width: -moz-fit-content;
+    max-width: fit-content
+}
+
+.earlyAccessBadge_b8a6bd {
+    align-items: center;
+    border-radius: var(--radius-round);
+    box-sizing: border-box;
+    display: inline-flex;
+    height: 20px;
+    justify-content: center;
+    padding: 2px 8px
+}
+
+.theme-dark .productCardBadge_b8a6bd {
+    background-color: #fff;
+    color: #000
+}
+
+.theme-dark .earlyAccessBadge_b8a6bd {
+    background-color: var(--white);
+    color: var(--black)
+}
+
+.theme-light .productCardBadge_b8a6bd {
+    background-color: #000;
+    color: #fff
+}
+
+.theme-light .earlyAccessBadge_b8a6bd {
+    background-color: var(--badge-background-brand);
+    color: var(--badge-text-brand)
+}

@@ -544,12 +544,7 @@ let eJ = (e) => {
                     c = !1;
                 (0, d.openModalLazy)(
                     async () => {
-                        let { default: i } = await Promise.all([
-                            n.e("90950"),
-                            n.e("65243"),
-                            n.e("25279"),
-                            n.e("99910"),
-                        ]).then(n.bind(n, 826181));
+                        let { default: i } = await Promise.all([n.e("65243"), n.e("99910")]).then(n.bind(n, 826181));
                         return (n) =>
                             (0, l.jsx)(i, {
                                 ...n,

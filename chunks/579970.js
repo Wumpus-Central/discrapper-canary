@@ -7,12 +7,10 @@ function r(e, t) {
     (0, l.openModalLazy)(
         async () => {
             let { default: l } = await Promise.all([
-                n.e("1702"),
-                n.e("25377"),
-                n.e("13988"),
-                n.e("60389"),
-                n.e("32543"),
-                n.e("61791"),
+                n.e("12762"),
+                n.e("88652"),
+                n.e("82031"),
+                n.e("87085"),
                 n.e("16752"),
                 n.e("29666"),
                 n.e("3930"),
