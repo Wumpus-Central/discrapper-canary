@@ -1024,10 +1024,11 @@ class Y extends a.G {
             { no: 16, name: "premium_tab_popover", kind: "message", oneof: "properties", T: () => E },
             { no: 17, name: "nagbar", kind: "message", oneof: "properties", T: () => d },
             { no: 3, name: "content_identifier", kind: "scalar", T: 9 },
+            { no: 18, name: "is_default_base", kind: "scalar", T: 8 },
         ]);
     }
     create(e) {
-        let t = { properties: { oneofKind: void 0 }, contentIdentifier: "" };
+        let t = { properties: { oneofKind: void 0 }, contentIdentifier: "", isDefaultBase: !1 };
         return (
             globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, r.x)(this, t, e),
@@ -1161,6 +1162,9 @@ class Y extends a.G {
                 case 3:
                     s.contentIdentifier = e.string();
                     break;
+                case 18:
+                    s.isDefaultBase = e.bool();
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -1237,7 +1241,8 @@ class Y extends a.G {
                 E.internalBinaryWrite(e.properties.premiumTabPopover, t.tag(16, i.O0.LengthDelimited).fork(), n).join(),
             "nagbar" === e.properties.oneofKind &&
                 d.internalBinaryWrite(e.properties.nagbar, t.tag(17, i.O0.LengthDelimited).fork(), n).join(),
-            "" !== e.contentIdentifier && t.tag(3, i.O0.LengthDelimited).string(e.contentIdentifier);
+            "" !== e.contentIdentifier && t.tag(3, i.O0.LengthDelimited).string(e.contentIdentifier),
+            !1 !== e.isDefaultBase && t.tag(18, i.O0.Varint).bool(e.isDefaultBase);
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
