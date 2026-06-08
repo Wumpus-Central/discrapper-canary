@@ -2375,6 +2375,37 @@
     background: linear-gradient(color-mix(in oklab, var(--profile-gradient-primary-color) 20%, var(--profile-gradient-modal-background-color)), color-mix(in oklab, var(--profile-gradient-secondary-color) 60%, var(--profile-gradient-modal-background-color)) 100%)
 }
 
+.button_fbcaba {
+    line-height: 0
+}
+
+.badgeUpgrade_fbcaba {
+    bottom: 2px;
+    color: var(--brand-500);
+    inset-inline-end: 2px;
+    position: absolute
+}
+
+.mirror__948a4 {
+    transform: scaleX(-1)
+}
+
+.video__948a4 {
+    background-color: var(--black);
+    position: relative
+}
+
+.media__948a4,
+.video__948a4 {
+    height: 100%;
+    width: 100%
+}
+
+.media__948a4 {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
 .outer__146e2 {
     align-items: center;
     box-sizing: border-box;
@@ -5044,6 +5075,12 @@
     text-align: start
 }
 
+.container__98113 {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
 .giftButton__82222 {
     --button-outline-brand-text: var(--brand-500)
 }
@@ -5425,31 +5462,6 @@
     display: flex;
     flex-direction: column;
     gap: 16px
-}
-
-.previewContainer__597b5 {
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    position: relative
-}
-
-.previewContainer__597b5:after {
-    bottom: 0;
-    content: "";
-    cursor: default;
-    position: absolute;
-    top: 0;
-    inset-inline: 0
-}
-
-.messageWrapper__597b5 {
-    background-color: var(--background-base-low)
-}
-
-.messageContainer__597b5 {
-    padding-bottom: 16px;
-    padding-top: 16px
 }
 
 .buttonWrapper_bf1984 {

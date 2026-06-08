@@ -14,7 +14,7 @@ function u(e) {
         ? ((t = [h ?? "unknown"]),
           (0, r.openModalLazy)(async () => {
               let { default: e } = await Promise.all([
-                  n.e("26243"),
+                  n.e("87932"),
                   n.e("29484"),
                   n.e("61935"),
                   n.e("36335"),
@@ -28,7 +28,7 @@ function u(e) {
           ? ((u = [h ?? "unknown"]),
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("26243"),
+                    n.e("87932"),
                     n.e("70164"),
                     n.e("95429"),
                     n.e("88905"),
@@ -48,7 +48,7 @@ function u(e) {
               (d = _),
               (0, r.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([
-                      n.e("26243"),
+                      n.e("87932"),
                       n.e("98965"),
                       n.e("36335"),
                       n.e("64610"),
@@ -61,8 +61,8 @@ function u(e) {
             : _ === l.fg2.DOMAIN
               ? (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("914"),
-                        n.e("81714"),
+                        n.e("68320"),
+                        n.e("84106"),
                         n.e("97893"),
                         n.e("88941"),
                         n.e("37687"),
