@@ -1114,16 +1114,18 @@ function nA(e) {
         h = c && null != f,
         A = (0, en.lw)({ pendingValue: p, userValue: f, guildValue: m, guildId: n ?? void 0 }),
         b = (0, N.A)(A?.skuId, "EditableTileProfileFrameButton"),
-        { profileFrameStyle: j, profileFrameClassName: C } = (0, P.A)(b?.skuId),
-        y =
-            null != A && (x ? null != p : null != m)
+        { product: j } = (0, ns.q)(A?.skuId),
+        { profileFrameStyle: C, profileFrameClassName: y } = (0, P.A)(b?.skuId),
+        k = x ? null != p : null != m,
+        R =
+            null != A && k
                 ? {
                       onClick: () => (0, eK.p)({ guildId: n ?? void 0, profileFrame: null }),
                       type: h ? "reset" : "remove",
                       accessibleLabel: eU.intl.string(h ? eU.t.j6hZyM : eU.t.nQBruk),
                   }
                 : void 0,
-        k = i.useCallback(() => {
+        S = i.useCallback(() => {
             (0, nx.w)({
                 analyticsLocations: o,
                 guild: g ?? void 0,
@@ -1132,10 +1134,18 @@ function nA(e) {
             });
         }, [o, g, b]);
     return (0, t.jsx)(l$.V, {
-        affordance: v && !h ? "add" : y,
+        affordance: v && !h ? "add" : R,
         variant: "square",
-        onClick: k,
-        accessibleLabel: eU.intl.string(eU.t["9/hmle"]),
+        onClick: S,
+        accessibleLabel: eU.intl.string(eU.t.GWrZOd),
+        accessibleValue: (function (e) {
+            let { profileFramePreview: l, productName: n, hasPendingSelection: t } = e;
+            return null == l
+                ? eU.intl.string(eU.t["3Xph0/"])
+                : null != n && "" !== n
+                  ? n
+                  : eU.intl.string(t ? eU.t.yFeGB5 : eU.t["2kAxKM"]);
+        })({ profileFramePreview: A, productName: (0, nu.VG)(j), hasPendingSelection: null != p }),
         "aria-haspopup": "dialog",
         disabled: r,
         renderPreview: () =>
@@ -1145,8 +1155,8 @@ function nA(e) {
                     (0, t.jsx)("img", { src: u, alt: "", className: nv.QQ, draggable: !1 }),
                     null != b &&
                         (0, t.jsx)("div", {
-                            className: a()(nv.hm, C),
-                            style: j,
+                            className: a()(nv.hm, y),
+                            style: C,
                             children: (0, t.jsx)(E.A, { frame: b, filterLayer: nh }),
                         }),
                 ],
