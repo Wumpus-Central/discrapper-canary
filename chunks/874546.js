@@ -9,7 +9,7 @@ function o(e) {
 }
 function l(e) {
     if (!o(e)) return !1;
-    let t = (0, i.un)() ? a.yTV.IOS : (0, r.I)() ? a.yTV.META_QUEST : (0, i.m0)() ? a.yTV.ANDROID : a.yTV.DESKTOP;
+    let t = (0, i.un)() ? a.yTV.IOS : (0, r.IA)() ? a.yTV.META_QUEST : (0, i.m0)() ? a.yTV.ANDROID : a.yTV.DESKTOP;
     if ((e?.platform != null ? e.platform : a.yTV.DESKTOP) === t) return !0;
     let n = e?.supported_platforms;
     return null != n && 0 !== n.length && n.includes(t);
