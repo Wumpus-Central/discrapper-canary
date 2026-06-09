@@ -431,7 +431,7 @@ function eJ(e) {
     if (!a) return null;
     let A = () => {
         (0, eC.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("54939"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
+            let { default: e } = await Promise.all([n.e("39852"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
                 n.bind(n, 719847),
             );
             return (t) =>
@@ -490,7 +490,7 @@ function eq(e) {
         f = !!x && (0, ek.bg)(o.flags),
         E = () => {
             (0, eC.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("54939"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
+                let { default: e } = await Promise.all([n.e("39852"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
                     n.bind(n, 719847),
                 );
                 return (n) =>
@@ -1489,7 +1489,7 @@ function nV(e) {
               onClick: () => {
                   (0, eC.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
-                          n.e("54939"),
+                          n.e("39852"),
                           n.e("90950"),
                           n.e("87932"),
                           n.e("99430"),
@@ -6700,7 +6700,7 @@ function oV(e) {
     (0, oG.C)(t.id);
     let l = r.useCallback(() => {
         (0, eC.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("54939"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
+            let { default: e } = await Promise.all([n.e("39852"), n.e("68031"), n.e("85384"), n.e("20428")]).then(
                 n.bind(n, 719847),
             );
             return (n) => (0, s.jsx)(e, { appId: t.id, guildId: i, ...n });
@@ -6954,7 +6954,7 @@ class o$ extends r.Component {
                     renderVideoComponent: ok.I1,
                     renderPlaintextFilePreview: ok.R6,
                     renderGenericFileComponent: ok.UB,
-                    onPlay: (e, n, i) => {
+                    onPlay: (n, i, l) => {
                         eU.default.track(K.HAw.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
                             guild_id: t.guild_id,
                             channel_id: t.id,
@@ -6962,7 +6962,9 @@ class o$ extends r.Component {
                             type: s.content_type,
                             flags: s.flags,
                             size: s.size,
-                            duration: i,
+                            attachment_id: s.id,
+                            message_id: e.id,
+                            duration: l,
                         });
                     },
                     gifFavoriteButton: oQ(a),

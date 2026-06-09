@@ -597,14 +597,13 @@ class R extends s.A {
         let e = _.Ay.getClipCandidates(),
             t = y(e, this.decisionSignals, c.default.getId(), _.Ay.getCurrentClipsSession()?.gameId ?? void 0);
         for (let n of (C.nx.info("ranked clips:", t), e))
-            null != t.selected.find((e) => e.clip.id === n.id) ? (0, v.K7)(n) : (0, v.oH)(n.filepath, n.id);
+            null != t.selected.find((e) => e.clip.id === n.id) ? (0, v.K7)(n) : (0, v.oH)(n, !1);
         for (let e of _.Ay.getPendingClipCandidates()) this.pendingCandidateDiscards.add(e.id);
         this.decisionSignals = g();
     }
     handleLateCandidateSave(e) {
         let { clip: t } = e;
-        this.pendingCandidateDiscards.has(t.id) &&
-            (this.pendingCandidateDiscards.delete(t.id), (0, v.oH)(t.filepath, t.id));
+        this.pendingCandidateDiscards.has(t.id) && (this.pendingCandidateDiscards.delete(t.id), (0, v.oH)(t));
     }
     handleSettingsUpdate() {
         this.timeline.updateLength(_.Ay.getSettings().clipsLength);

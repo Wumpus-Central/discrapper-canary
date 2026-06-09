@@ -1,11 +1,11 @@
 l.d(t, { A: () => r });
 var a = l(627968),
     n = l(192308),
-    i = l(116671);
+    i = l(315240);
 function r(e, t) {
     let { clips: r, onBeforeDelete: s, onAfterDelete: o } = t;
     if (e?.shiftKey) {
-        s?.(), r.forEach((e) => (0, i.oH)(e.filepath, e.id)), o?.();
+        s?.(), r.forEach((e) => (0, i.oH)(e)), o?.();
         return;
     }
     (0, n.openModalLazy)(

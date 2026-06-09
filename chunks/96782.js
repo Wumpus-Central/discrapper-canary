@@ -1,4 +1,4 @@
-i.d(t, { Ay: () => T, rC: () => E, zB: () => O }), i(938796), i(321073);
+i.d(t, { Ay: () => T, rC: () => E, zB: () => P }), i(938796), i(321073);
 var s = i(627968),
     n = i(64700),
     l = i(503698),
@@ -39,7 +39,7 @@ function E(e, t) {
         srcIsAnimated: (0, r.Lt)(e.flags ?? 0, w.sbO.IS_ANIMATED),
     };
 }
-let O = (e) => {
+let P = (e) => {
     let {
             mimeType: t,
             downloadURL: i,
@@ -101,7 +101,7 @@ let O = (e) => {
         ],
     });
 };
-function P(e) {
+function O(e) {
     let {
             message: t,
             item: i,
@@ -119,7 +119,7 @@ function P(e) {
             renderGenericFileComponent: v,
             renderVisualPlaceholderComponent: L,
             className: E,
-            imgContainerClassName: P,
+            imgContainerClassName: O,
             imgClassName: T,
             focusable: k,
             hiddenSpoilers: H,
@@ -162,7 +162,7 @@ function P(e) {
                 return es
                     ? null
                     : !Q &&
-                          (0, s.jsx)(O, {
+                          (0, s.jsx)(P, {
                               mimeType: ei,
                               downloadURL: i.downloadUrl,
                               showDownload: e,
@@ -212,7 +212,7 @@ function P(e) {
                         renderAccessory: e,
                         renderAdjacentContent: ea,
                         containerClassName: E,
-                        className: P,
+                        className: O,
                         imageClassName: T,
                         shouldLink: k,
                         hiddenSpoilers: H,
@@ -251,13 +251,14 @@ function P(e) {
                 downloadable: !et,
                 isSingleMosaicItem: q,
                 allowFullScreen: X,
+                onPlay: x,
             });
         case "VISUAL_PLACEHOLDER":
             if (null == L) return null;
             return (0, s.jsx)(L, {
                 item: i,
                 message: t,
-                className: P,
+                className: O,
                 imageClassName: T,
                 maxWidth: F,
                 maxHeight: G,
@@ -317,7 +318,7 @@ let T = function (e) {
         W = d === M.dG.MOSAIC,
         L = !W && ((null != c && c < 200) || (null != x && x < 50)),
         E = "IMAGE" === C || "VIDEO" === C || "CLIP" === C,
-        O = (0, v.Xg)(C),
+        P = (0, v.Xg)(C),
         T = u && null != y && (0, g.j8)(c, x),
         [k, H] = n.useState(!1),
         b = () => {
@@ -328,7 +329,7 @@ let T = function (e) {
         },
         G = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            return (0, s.jsx)(P, {
+            return (0, s.jsx)(O, {
                 ...h,
                 item: i,
                 message: l,
@@ -345,7 +346,7 @@ let T = function (e) {
                 focusable: !e,
                 mediaLayoutType: d,
                 useFullWidth: (!!T && !!e) || o,
-                isVisualMediaType: O,
+                isVisualMediaType: P,
                 onVideoControlsShow: b,
                 onVideoControlsHide: F,
                 forcePlaceholder: w && f,
@@ -353,7 +354,7 @@ let T = function (e) {
         };
     return (0, s.jsx)("div", {
         style: m ? { minWidth: 0, width: `${h.maxWidth}px` } : void 0,
-        className: a()(S.wO, { [S.xV]: E, [S.D$]: o, [S.UI]: W, [S.JP]: W && O }),
+        className: a()(S.wO, { [S.xV]: E, [S.D$]: o, [S.UI]: W, [S.JP]: W && P }),
         children:
             null != y
                 ? (0, s.jsx)(I.Ay, {

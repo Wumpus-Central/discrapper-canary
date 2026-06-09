@@ -137,6 +137,7 @@ let v = r.memo(function (e) {
                 autoMute: "function" == typeof g.autoMute ? g.autoMute() : (g.autoMute ?? (0, h.uj)()),
                 volume: (0, h.GD)(),
                 onContextMenu: C,
+                onPlay: g.onPlay ?? void 0,
                 onVolumeChange: h.oc,
                 onMutedChange: h.y5,
             });

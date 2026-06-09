@@ -191,7 +191,7 @@ function h(e) {
                 let e = {},
                     t = j.current;
                 w || null == I || (e = { thumbnail: await (0, c.m)(I, t.editMetadata.start) }),
-                    (0, u.Yy)(h, { ...t, ...e });
+                    (0, u.Yy)(h, { ...t, ...e }, !0);
             }
             return () => {
                 N || e();

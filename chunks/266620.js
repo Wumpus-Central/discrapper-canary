@@ -1,14 +1,14 @@
-i.d(t, { Cr: () => f, I1: () => I, Nj: () => _, R6: () => S, SX: () => A, UB: () => C }), i(938796);
+i.d(t, { Cr: () => f, I1: () => I, Nj: () => _, R6: () => S, SX: () => A, UB: () => y }), i(938796);
 var a = i(627968),
     n = i(64700),
     l = i(665260),
-    r = i(311232),
+    r = i(141092),
     o = i(713021),
     s = i(121489),
     c = i(644447),
     u = i(587481),
-    m = i(998218),
-    d = i(465856),
+    d = i(998218),
+    m = i(465856),
     p = i(34337),
     g = i(838541),
     h = i(652215);
@@ -34,7 +34,7 @@ function f(e) {
 function I(e) {
     let t = e.item.originalItem,
         i = (0, l.Lt)(t.flags ?? 0, h.sbO.IS_CLIP),
-        n = m.A.toURLSafe(t.proxy_url);
+        n = d.A.toURLSafe(t.proxy_url);
     return null == n
         ? null
         : (n.searchParams.append("format", "webp"), i)
@@ -57,6 +57,7 @@ function I(e) {
                         maxHeight: e.maxHeight ?? g.Rk,
                         showParticipants: e.isSingleMosaicItem,
                         allowFullScreen: e.allowFullScreen,
+                        onPlay: e.onPlay ?? void 0,
                         onVolumeChange: u.oc,
                         onMutedChange: u.y5,
                     }),
@@ -68,7 +69,7 @@ function I(e) {
                 alt: t.description,
                 poster: n.toString(),
                 fileSize: t.size,
-                fileName: (0, d.A)(t),
+                fileName: (0, m.A)(t),
                 src: t.url,
                 placeholder: t.placeholder,
                 placeholderVersion: t.placeholder_version,
@@ -81,7 +82,7 @@ function I(e) {
 }
 function _(e) {
     let t = e.item.originalItem;
-    return (0, p.gL)({ ...e, fileSize: t.size, fileName: (0, d.A)(t), src: t.url });
+    return (0, p.gL)({ ...e, fileSize: t.size, fileName: (0, m.A)(t), src: t.url });
 }
 function A(e) {
     let { message: t, item: i } = e,
@@ -108,7 +109,7 @@ function A(e) {
     return (0, p.P$)({
         ...e,
         fileSize: a.size,
-        fileName: (0, d.A)(a),
+        fileName: (0, m.A)(a),
         src: a.url,
         durationSecs: a.duration_secs,
         waveform: a.waveform,
@@ -120,9 +121,9 @@ function A(e) {
 }
 function S(e) {
     let t = e.item.originalItem;
-    return (0, p._d)({ ...e, url: t.url, fileName: (0, d.A)(t), fileSize: t.size, contentType: t.content_type });
+    return (0, p._d)({ ...e, url: t.url, fileName: (0, m.A)(t), fileSize: t.size, contentType: t.content_type });
 }
-function C(e) {
+function y(e) {
     let t = e.item.originalItem;
-    return (0, p.Dk)({ ...e, url: t.url, fileName: (0, d.A)(t), fileSize: t.size });
+    return (0, p.Dk)({ ...e, url: t.url, fileName: (0, m.A)(t), fileSize: t.size });
 }
