@@ -47,6 +47,7 @@ let c = Object.freeze({
     IS_MODERATOR_REPORT_CHANNEL: 524288,
     IS_SPOILER_CHANNEL: 2097152,
     IS_GAME_INVITES_CHANNEL: 4194304,
+    HAS_ONLY_SYSTEM_MESSAGES: 8388608,
 });
 var d =
     (((r = {}).GUILD_HOME = "home"),
