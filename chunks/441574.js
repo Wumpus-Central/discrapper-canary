@@ -1150,6 +1150,8 @@ var V =
         (l[(l.TOON = 4)] = "TOON"),
         (l[(l.POP = 5)] = "POP"),
         (l[(l.GLOW = 6)] = "GLOW"),
+        (l[(l.PRISM = 7)] = "PRISM"),
+        (l[(l.GUMMY = 8)] = "GUMMY"),
         (l[(l.TEST_1 = 1001)] = "TEST_1"),
         (l[(l.TEST_2 = 1002)] = "TEST_2"),
         (l[(l.TEST_3 = 1003)] = "TEST_3"),
