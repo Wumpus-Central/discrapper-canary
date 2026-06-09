@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => L }), n(321073);
+n.d(t, { A: () => R }), n(321073);
 var i = n(635377),
     r = n.n(i),
     s = n(17928),
@@ -14,22 +14,20 @@ var i = n(635377),
     f = n(935208),
     p = n(256331),
     E = n(575279);
-let m = new Map(),
-    g = new Set(),
-    A = new Map(),
-    I = new Map(),
-    T = null,
-    S = new Map(),
-    y = new Map(),
-    N = 0,
-    v = new Map();
-function C(e, t) {
-    let n = v.get(e);
-    null != n && (n.delete(t), 0 === n.size && v.delete(e));
+let m = new (r())({ max: 10, dispose: N }),
+    g = new Map();
+function A(e, t) {
+    let n = g.get(e);
+    return null != n && !!n.has(t) && (n.delete(t), 0 === n.size && g.delete(e), !0);
 }
-function R(e) {
+let I = new Map();
+function T(e, t) {
+    let n = I.get(e);
+    null != n && (n.delete(t), 0 === n.size && I.delete(e));
+}
+function S(e) {
     let { type: t, channelId: n, messageId: i, userId: r, emoji: s, reactionType: a } = e,
-        o = m.get(n);
+        o = m.peek(n);
     if (null == o) return !1;
     let c = o.messageMetadataByMessageId.get(i);
     if (c?.message == null || !(0, l.vp)(e)) return !1;
@@ -43,8 +41,8 @@ function R(e) {
     }
     return !0;
 }
-function O(e, t) {
-    let n = m.get(e);
+function y(e, t) {
+    let n = m.peek(e);
     if (null == n) return !1;
     let i = n.messageMetadataByMessageId.get(t);
     if (null != i) {
@@ -53,19 +51,16 @@ function O(e, t) {
     }
     return n.messageMetadataByMessageId.delete(t);
 }
-function b(e) {
-    let t = m.delete(e);
-    return (
-        g.delete(e) && (t = !0),
-        A.delete(e) && (t = !0),
-        I.delete(e) && (t = !0),
-        S.delete(e) && (t = !0),
-        y.delete(e) && (t = !0),
-        T?.channelId === e && ((T = null), (t = !0)),
-        t
-    );
+function N(e) {
+    return g.delete(e);
 }
-class D extends s.Ay.Store {
+function v(e) {
+    let t = m.has(e);
+    m.del(e);
+    let n = N(e);
+    return t || n;
+}
+class C extends s.Ay.Store {
     static displayName = "ConversationsStore";
     initialize() {
         this.waitFor(u.default, c.A, p.A, d.A, _.A, h.default);
@@ -74,74 +69,74 @@ class D extends s.Ay.Store {
         return m.has(e);
     }
     getChannelConversations(e) {
-        let t = m.get(e);
+        let t = m.peek(e);
         return null == t
-            ? []
+            ? null
             : t.conversations.map((e) => {
                   let n = t.conversationMetadataById.get(e.id);
                   return { conversation: e, color: n?.color ?? E.J["0"] };
               });
     }
     getConversationForMessage(e, t) {
-        return m.get(e)?.messageMetadataByMessageId.get(t)?.conversationId ?? null;
+        return m.peek(e)?.messageMetadataByMessageId.get(t)?.conversationId ?? null;
     }
     getMessageMetadata(e, t) {
-        return m.get(e)?.messageMetadataByMessageId.get(t) ?? null;
+        return m.peek(e)?.messageMetadataByMessageId.get(t) ?? null;
     }
     getMessage(e, t) {
         return this.getMessageMetadata(e, t)?.message ?? null;
     }
     getConversationMetadata(e, t) {
-        return m.get(e)?.conversationMetadataById.get(t) ?? null;
-    }
-    getScrollToConversation(e) {
-        return T?.channelId === e ? { conversationId: T.conversationId, seq: T.seq } : null;
+        return m.peek(e)?.conversationMetadataById.get(t) ?? null;
     }
     hasMoreConversations(e, t) {
-        return !!m.has(e) && ("before" === t ? !A.get(e) : !I.get(e));
+        let n = m.peek(e);
+        return null != n && ("before" === t ? !n.reachedOldest : !n.reachedNewest);
     }
     isPendingFetch(e) {
         return g.has(e);
     }
+    isListFetchPending(e, t) {
+        return g.get(e)?.has(t) ?? !1;
+    }
     getSelectedConversationId(e) {
-        return S.get(e) ?? null;
+        return m.peek(e)?.selectedConversationId ?? null;
     }
     getSelectedConversation(e) {
-        let t = S.get(e);
-        return null == t ? null : (m.get(e)?.conversationMetadataById.get(t)?.conversation ?? null);
+        let t = m.peek(e),
+            n = t?.selectedConversationId;
+        return null == n ? null : (t?.conversationMetadataById.get(n)?.conversation ?? null);
     }
     getSelectedConversationColor(e) {
-        let t = S.get(e);
-        return null == t ? null : (m.get(e)?.conversationMetadataById.get(t)?.color ?? null);
+        let t = m.peek(e),
+            n = t?.selectedConversationId;
+        return null == n ? null : (t?.conversationMetadataById.get(n)?.color ?? null);
     }
     getHydratedMessages(e, t) {
-        return m.get(e)?.conversationMetadataById.get(t)?.hydratedMessages ?? null;
+        return m.peek(e)?.conversationMetadataById.get(t)?.hydratedMessages ?? null;
     }
     getHydratedMessageById(e, t) {
-        return m.get(e)?.messageMetadataByMessageId.get(t)?.message ?? null;
+        return m.peek(e)?.messageMetadataByMessageId.get(t)?.message ?? null;
     }
     isConversationFetchPending(e, t) {
-        let n = v.get(e);
+        let n = I.get(e);
         return null != n && 0 !== n.size && (!0 !== t || n.has("full"));
     }
-    getSelectionSeq(e) {
-        return y.get(e) ?? 0;
-    }
     getConversationFeedbackRating(e, t) {
-        return m.get(e)?.recentFeedbackRatingsByConversationId.get(t) ?? null;
+        return m.peek(e)?.recentFeedbackRatingsByConversationId.get(t) ?? null;
     }
 }
-let L = new D(a.h, {
+let R = new C(a.h, {
     CONVERSATION_FETCH_START: function (e) {
         var t;
         let n,
             { conversationId: i, full: r } = e;
-        (t = r ? "full" : "preview"), null != (n = v.get(i)) ? n.add(t) : v.set(i, new Set([t]));
+        (t = r ? "full" : "preview"), null != (n = I.get(i)) ? n.add(t) : I.set(i, new Set([t]));
     },
     CONVERSATION_FETCH_SUCCESS: function (e) {
         let { channelId: t, conversationId: n, messages: i, fullyHydrated: r } = e;
-        C(n, r ? "full" : "preview");
-        let s = m.get(t);
+        T(n, r ? "full" : "preview");
+        let s = m.peek(t);
         if (null == s) return;
         let a = s.conversationMetadataById.get(n);
         if (null == a || (!r && a.fullyHydrated)) return;
@@ -156,131 +151,143 @@ let L = new D(a.h, {
     },
     CONVERSATION_FETCH_FAILURE: function (e) {
         let { conversationId: t, full: n } = e;
-        C(t, n ? "full" : "preview");
+        T(t, n ? "full" : "preview");
     },
     CONVERSATIONS_FETCH_START: function (e) {
-        let { channelId: t } = e;
-        g.add(t);
+        let t,
+            { channelId: n, requestKey: i, isJump: r } = e;
+        r && g.delete(n), null == (t = g.get(n)) && ((t = new Set()), g.set(n, t)), t.add(i);
     },
     CONVERSATIONS_FETCH_SUCCESS: function (e) {
-        let {
-            channelId: t,
-            conversations: n,
-            direction: i,
-            beforeShortCircuited: s,
-            afterShortCircuited: a,
-            isStaleRefresh: o,
-        } = e;
-        g.delete(t);
-        let l = m.get(t)?.conversations ?? [];
-        o &&
-            (l = (function (e, t) {
-                if (0 === t.length) return e;
-                let n = new Set(t.map((e) => e.id)),
-                    i = Math.min(...t.map((e) => f.default.extractTimestamp(e.startMessageId))),
-                    r = Math.max(...t.map((e) => f.default.extractTimestamp(e.startMessageId)));
-                return e.filter((e) => {
-                    let t = f.default.extractTimestamp(e.startMessageId);
-                    return t < i || t > r || n.has(e.id);
-                });
-            })(l, n)),
-            s && ("before" === i || "around" === i) && A.set(t, !0),
-            a && ("after" === i || "around" === i) && I.set(t, !0);
-        let u = (function (e, t) {
-            let n = new Map();
-            for (let t of e) n.set(t.id, t);
-            for (let e of t) n.set(e.id, e);
-            let i = Array.from(n.values());
-            return i.sort((e, t) => f.default.compare(e.startMessageId, t.startMessageId)), i;
-        })(l, n);
-        m.set(
-            t,
-            (function (e, t, n) {
-                let i = n?.guildId ?? t[0]?.guildId ?? c.A.getChannel(e)?.guild_id ?? null,
-                    s = new Map(),
-                    a = new Map();
-                for (let e of t) {
-                    let t = n?.conversationMetadataById.get(e.id),
-                        i = t?.color ?? E.J[N++ % E.J.length],
-                        r = t?.hydratedMessages ?? null,
-                        o = null != r && !!t?.fullyHydrated;
-                    s.set(e.id, { conversation: e, color: i, hydratedMessages: r, fullyHydrated: o });
-                    let l = null;
-                    if (null != e.moderation)
-                        for (let t of ((l = new Map()), e.moderation.flaggedMessageDetails)) {
-                            let e = l.get(t.messageId);
-                            null != e ? e.push(t) : l.set(t.messageId, [t]);
-                        }
-                    for (let t of e.messageIds) {
-                        let i = null;
-                        null != e.moderation &&
-                            e.moderation.flaggedMessageIds.includes(t) &&
-                            null != l &&
-                            (i = (function (e) {
-                                let t = e[0],
-                                    n = e.map((e) => e.category ?? e.reason).filter((e) => null != e),
-                                    i = t?.severity ?? null,
-                                    r = t?.confidence ?? null,
-                                    s = [null != i ? `${i} severity` : null, null != r ? `${r} confidence` : null]
-                                        .filter(Boolean)
-                                        .join(", "),
-                                    a = [n.length > 0 ? n.join(", ") : null, s.length > 0 ? s : null]
-                                        .filter(Boolean)
-                                        .join(" \xb7 ");
-                                return a.length > 0 ? a : "Moderation Failed";
-                            })(l.get(t) ?? []));
-                        let r = n?.messageMetadataByMessageId.get(t)?.message ?? null;
-                        a.set(t, { conversationId: e.id, moderationLabel: i, message: r });
+        let t,
+            { channelId: n, conversations: i, direction: s, anchor: a, isJump: o, requestKey: l } = e;
+        if (!A(n, l)) return !1;
+        let u = m.peek(n);
+        if (o) {
+            let e = u?.selectedConversationId,
+                n = null != e ? u?.conversationMetadataById.get(e)?.conversation : null;
+            t = null != n ? [n] : [];
+        } else t = u?.conversations ?? [];
+        let d = !o && (u?.reachedOldest ?? !1),
+            _ = !o && (u?.reachedNewest ?? !1),
+            h = new Set(t.map((e) => e.id));
+        if (
+            (i.some((e) => !h.has(e.id)) || null == a || ("before" === s ? (d = !0) : "after" === s && (_ = !0)),
+            (i = (function (e, t) {
+                let n = new Map();
+                for (let t of e) n.set(t.id, t);
+                for (let e of t) n.set(e.id, e);
+                let i = Array.from(n.values());
+                return i.sort((e, t) => f.default.compare(e.startMessageId, t.startMessageId)), i;
+            })(t, i)).length > 50)
+        )
+            if ("after" === s) (i = i.slice(i.length - 50)), (d = !1);
+            else if ("before" === s) (i = i.slice(0, 50)), (_ = !1);
+            else {
+                let e = (function (e, t) {
+                    if (null == t) return 0;
+                    let n = e.findIndex((e) => f.default.compare(e.startMessageId, t) >= 0);
+                    return -1 === n && (n = e.length), Math.max(0, Math.min(n - Math.floor(25), e.length - 50));
+                })(i, a);
+                e > 0 && (d = !1), e + 50 < i.length && (_ = !1), (i = i.slice(e, e + 50));
+            }
+        let p = (function (e, t, n) {
+            let i = n?.guildId ?? t[0]?.guildId ?? c.A.getChannel(e)?.guild_id ?? null,
+                s = new Map(),
+                a = new Map(),
+                o = n?.colorIndex ?? 0;
+            for (let e of t) {
+                let t = n?.conversationMetadataById.get(e.id),
+                    i = t?.color ?? E.J[o++ % E.J.length],
+                    r = t?.hydratedMessages ?? null,
+                    l = null != r && !!t?.fullyHydrated;
+                s.set(e.id, { conversation: e, color: i, hydratedMessages: r, fullyHydrated: l });
+                let u = null;
+                if (null != e.moderation)
+                    for (let t of ((u = new Map()), e.moderation.flaggedMessageDetails)) {
+                        let e = u.get(t.messageId);
+                        null != e ? e.push(t) : u.set(t.messageId, [t]);
                     }
+                for (let t of e.messageIds) {
+                    let i = null;
+                    null != e.moderation &&
+                        e.moderation.flaggedMessageIds.includes(t) &&
+                        null != u &&
+                        (i = (function (e) {
+                            let t = e[0],
+                                n = e.map((e) => e.category ?? e.reason).filter((e) => null != e),
+                                i = t?.severity ?? null,
+                                r = t?.confidence ?? null,
+                                s = [null != i ? `${i} severity` : null, null != r ? `${r} confidence` : null]
+                                    .filter(Boolean)
+                                    .join(", "),
+                                a = [n.length > 0 ? n.join(", ") : null, s.length > 0 ? s : null]
+                                    .filter(Boolean)
+                                    .join(" \xb7 ");
+                            return a.length > 0 ? a : "Moderation Failed";
+                        })(u.get(t) ?? []));
+                    let r = n?.messageMetadataByMessageId.get(t)?.message ?? null;
+                    a.set(t, { conversationId: e.id, moderationLabel: i, message: r });
                 }
-                return {
-                    guildId: i,
-                    conversations: t,
-                    conversationMetadataById: s,
-                    messageMetadataByMessageId: a,
-                    recentFeedbackRatingsByConversationId:
-                        n?.recentFeedbackRatingsByConversationId ?? new (r())({ max: 10 }),
-                };
-            })(t, u, m.get(t)),
-        );
+            }
+            let l = n?.recentFeedbackRatingsByConversationId ?? new (r())({ max: 10 }),
+                u = n?.selectedConversationId ?? null,
+                d = null != u && t.some((e) => e.id === u) ? u : null;
+            return {
+                guildId: i,
+                conversations: t,
+                conversationMetadataById: s,
+                messageMetadataByMessageId: a,
+                recentFeedbackRatingsByConversationId: l,
+                reachedOldest: n?.reachedOldest ?? !1,
+                reachedNewest: n?.reachedNewest ?? !1,
+                selectedConversationId: d,
+                colorIndex: o,
+            };
+        })(n, i, u);
+        return (p.reachedOldest = d), (p.reachedNewest = _), null != u ? Object.assign(u, p) : m.set(n, p), !0;
     },
     CONVERSATIONS_FETCH_FAILURE: function (e) {
+        let { channelId: t, requestKey: n } = e;
+        return A(t, n);
+    },
+    CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        g.delete(t);
+        return null != t && m.has(t) && m.get(t), !1;
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        return b(t.id);
+        return v(t.id);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
         if ("unavailable" in t && !0 === t.unavailable) return !1;
         let n = !1;
-        for (let [e, i] of m) i.guildId === t.id && b(e) && (n = !0);
+        for (let e of m.keys()) m.peek(e)?.guildId === t.id && v(e) && (n = !0);
         return n;
     },
     LOAD_MESSAGES_SUCCESS: function (e) {
         let { channelId: t, jump: n } = e;
-        return null != n && _.A.getChannelId() === t && (A.delete(t), I.delete(t), !0);
+        if (null == n || _.A.getChannelId() !== t) return !1;
+        let i = m.peek(t);
+        return null != i && ((i.reachedOldest = !1), (i.reachedNewest = !1), !0);
     },
     SET_SELECTED_CONVERSATION: function (e) {
         let { channelId: t, conversationId: n } = e;
-        return (
-            null != t &&
-            (S.set(t, n),
-            y.set(t, (y.get(t) ?? 0) + 1),
-            null != n && (T = { channelId: t, conversationId: n, seq: (T?.seq ?? 0) + 1 }),
-            !0)
-        );
+        if (null == t) return !1;
+        let i = m.peek(t);
+        return null != i && ((i.selectedConversationId = n), !0);
     },
     CLEAR_CONVERSATION_SELECTION: function (e) {
         let { channelId: t, conversationId: n } = e,
-            i = S.get(t);
-        return null != i && (null == n || i === n) && (S.set(t, null), y.set(t, (y.get(t) ?? 0) + 1), !0);
+            i = m.peek(t);
+        if (null == i) return !1;
+        let r = i.selectedConversationId;
+        return null != r && (null == n || r === n) && ((i.selectedConversationId = null), !0);
     },
     SET_CONVERSATION_FEEDBACK_RATING: function (e) {
         let { channelId: t, conversationId: n, rating: i } = e,
-            r = m.get(t);
+            r = m.peek(t);
         return null != r && (r.recentFeedbackRatingsByConversationId.set(n, i), !0);
     },
     MESSAGE_UPDATE: function (e) {
@@ -288,7 +295,7 @@ let L = new D(a.h, {
             n = t.channel_id,
             i = t.id;
         if (null == n || null == i) return !1;
-        let r = m.get(n),
+        let r = m.peek(n),
             s = r?.messageMetadataByMessageId.get(i);
         if (s?.message == null) return !1;
         let a = (0, o.IU)(s.message, t);
@@ -300,11 +307,11 @@ let L = new D(a.h, {
         }
         return !0;
     },
-    MESSAGE_REACTION_ADD: R,
-    MESSAGE_REACTION_REMOVE: R,
+    MESSAGE_REACTION_ADD: S,
+    MESSAGE_REACTION_REMOVE: S,
     MESSAGE_REACTION_ADD_MANY: function (e) {
         let { channelId: t, messageId: n, reactions: i } = e,
-            r = m.get(t);
+            r = m.peek(t);
         if (null == r) return !1;
         let s = r.messageMetadataByMessageId.get(n);
         if (s?.message == null) return !1;
@@ -319,7 +326,7 @@ let L = new D(a.h, {
     },
     MESSAGE_REACTION_REMOVE_ALL: function (e) {
         let { channelId: t, messageId: n } = e,
-            i = m.get(t);
+            i = m.peek(t);
         if (null == i) return !1;
         let r = i.messageMetadataByMessageId.get(n);
         if (r?.message == null) return !1;
@@ -334,7 +341,7 @@ let L = new D(a.h, {
     },
     MESSAGE_REACTION_REMOVE_EMOJI: function (e) {
         let { channelId: t, messageId: n, emoji: i } = e,
-            r = m.get(t);
+            r = m.peek(t);
         if (null == r) return !1;
         let s = r.messageMetadataByMessageId.get(n);
         if (s?.message == null) return !1;
@@ -349,15 +356,15 @@ let L = new D(a.h, {
     },
     MESSAGE_DELETE: function (e) {
         let { channelId: t, id: n } = e;
-        return O(t, n);
+        return y(t, n);
     },
     MESSAGE_DELETE_BULK: function (e) {
         let { channelId: t, ids: n } = e,
             i = !1;
-        for (let e of n) O(t, e) && (i = !0);
+        for (let e of n) y(t, e) && (i = !0);
         return i;
     },
     LOGOUT: function () {
-        m.clear(), g.clear(), A.clear(), I.clear(), v.clear(), S.clear(), y.clear(), (T = null), (N = 0);
+        m.reset(), g.clear(), I.clear();
     },
 });

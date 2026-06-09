@@ -12,4 +12,5 @@ var i,
         (i.BOUNTY_ABANDONED = "bounty_abandoned"),
         (i.HANGOUT_WINDOW_SET = "hangout_window_set"),
         (i.POPULATED_CLIP_GALLERY_CLOSED = "populated_clip_gallery_closed"),
+        (i.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS = "topical_navigation_multiple_impressions"),
         i);

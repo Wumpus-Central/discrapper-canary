@@ -15,6 +15,4 @@ e.exports = {
     so: "scores_b18605",
     a7: "scoreItem_b18605",
     FR: "conversationMeta_b18605",
-    f: "loadMoreFooter_b18605",
-    Qf: "loadMoreButton_b18605",
 };

@@ -1,12 +1,15 @@
 "use strict";
-n.d(t, { oq: () => p, qC: () => E, xI: () => h, WF: () => d, Eg: () => _, P7: () => f });
-var i = n(636537),
-    r = n(228366),
-    s = n(720149),
-    a = n(403362),
-    o = n(828488),
-    l = n(958720);
-function u(e) {
+n.d(t, { oq: () => S, qC: () => y, xI: () => I, WF: () => g, Eg: () => A, p7: () => N, P7: () => T });
+var i = n(517846),
+    r = n(636537),
+    s = n(228366),
+    a = n(720149),
+    o = n(27620),
+    l = n(403362),
+    u = n(828488),
+    c = n(727011),
+    d = n(958720);
+function _(e) {
     var t;
     let n = e.summary_map?.entries.find((e) => "TOPIC_EXTRACTION_SUMMARY" === e.summary_type),
         i =
@@ -81,72 +84,103 @@ function u(e) {
                       : null,
           };
 }
+var h = n(17928);
+let f = 0;
+class p extends h.Ay.DeviceSettingsStore {
+    static displayName = "TopicalNavigationSurveyStore";
+    static persistKey = "TopicalNavigationSurveyStore";
+    initialize(e) {
+        f = e?.channelsExposedCount ?? 0;
+    }
+    shouldTriggerOnNextExposure() {
+        return 2 === f;
+    }
+    getState() {
+        return { channelsExposedCount: f };
+    }
+    getUserAgnosticState() {
+        return { channelsExposedCount: f };
+    }
+}
+let E = new p(s.h, {
+    TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION: function () {
+        f++;
+    },
+});
 n(575279);
-var c = n(652215);
-function d(e) {
-    let { channelId: t, guildId: n, limit: s = 25, before: l, after: d, around: _, isStaleRefresh: h } = e;
-    if (!(0, o.uJ)(n, "fetch_channel_conversations")) return;
-    let f = null != _ ? "around" : null != d ? "after" : "before";
-    r.h.dispatch({ type: "CONVERSATIONS_FETCH_START", channelId: t, direction: f });
-    let p = { limit: s };
-    null != l && (p.before = l),
-        null != d && (p.after = d),
-        null != _ && (p.around = _),
-        i.Bo.get({ url: c.Rsh.CHANNEL_CONVERSATIONS(t), query: p, oldFormErrors: !0, rejectWithError: !0 }).then(
+var m = n(652215);
+function g(e) {
+    let { channelId: t, guildId: n, direction: i, anchor: a, limit: o = 25, isJump: c } = e;
+    if (!(0, u.Lc)(n, "fetch_channel_conversations")) return;
+    let h = `${i}:${a}:${o}:${!0 === c}`;
+    if (d.A.isListFetchPending(t, h)) return;
+    s.h.dispatch({ type: "CONVERSATIONS_FETCH_START", channelId: t, direction: i, requestKey: h, isJump: c ?? !1 });
+    let f = { limit: o };
+    null != a && ("before" === i ? (f.before = a) : "after" === i ? (f.after = a) : (f.around = a)),
+        r.Bo.get({ url: m.Rsh.CHANNEL_CONVERSATIONS(t), query: f, oldFormErrors: !0, rejectWithError: !0 }).then(
             (e) => {
-                r.h.dispatch({
+                s.h.dispatch({
                     type: "CONVERSATIONS_FETCH_SUCCESS",
                     channelId: t,
-                    conversations: e.body.conversations.map(u).filter(a.Vq),
-                    direction: f,
-                    beforeShortCircuited: e.body.before_short_circuited,
-                    afterShortCircuited: e.body.after_short_circuited,
-                    anchor: _ ?? l ?? d,
-                    isStaleRefresh: h ?? !1,
+                    conversations: e.body.conversations.map(_).filter(l.Vq),
+                    direction: i,
+                    requestKey: h,
+                    anchor: a,
+                    isJump: c ?? !1,
                 });
             },
             () => {
-                r.h.dispatch({ type: "CONVERSATIONS_FETCH_FAILURE", channelId: t });
+                s.h.dispatch({ type: "CONVERSATIONS_FETCH_FAILURE", channelId: t, requestKey: h });
             },
         );
 }
-function _() {
-    r.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
+function A() {
+    s.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 }
-function h(e, t, n) {
-    r.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: n }), E(e, t, n, { full: !0 });
-    let i = l.A.getConversationMetadata(e, n);
+function I(e, t, n) {
+    s.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: n }), y(e, t, n, { full: !0 });
+    let i = d.A.getConversationMetadata(e, n);
     i?.conversation.startMessageId != null &&
-        s.A.jumpToMessage({ channelId: e, messageId: i.conversation.startMessageId, flash: !1 });
+        a.A.jumpToMessage({ channelId: e, messageId: i.conversation.startMessageId, flash: !1 });
 }
-function f(e, t) {
-    r.h.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId: e, conversationId: t });
+function T(e, t) {
+    s.h.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId: e, conversationId: t });
 }
-function p(e, t, n) {
-    r.h.dispatch({ type: "SET_CONVERSATION_FEEDBACK_RATING", channelId: e, conversationId: t, rating: n });
+function S(e, t, n) {
+    s.h.dispatch({ type: "SET_CONVERSATION_FEEDBACK_RATING", channelId: e, conversationId: t, rating: n });
 }
-async function E(e, t, n) {
-    let { full: s = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-    if (!(0, o.uJ)(t, "fetch_conversation")) return;
-    let a = l.A.getConversationMetadata(e, n);
-    if ((s ? a?.fullyHydrated !== !0 : a?.hydratedMessages == null) && !l.A.isConversationFetchPending(n, s)) {
-        r.h.dispatch({ type: "CONVERSATION_FETCH_START", channelId: e, conversationId: n, full: s });
+async function y(e, t, n) {
+    let { full: i = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    if (!(0, u.Lc)(t, "fetch_conversation")) return;
+    let a = d.A.getConversationMetadata(e, n);
+    if ((i ? a?.fullyHydrated !== !0 : a?.hydratedMessages == null) && !d.A.isConversationFetchPending(n, i)) {
+        s.h.dispatch({ type: "CONVERSATION_FETCH_START", channelId: e, conversationId: n, full: i });
         try {
-            let t = await i.Bo.get({
-                url: c.Rsh.CHANNEL_CONVERSATION_MESSAGES(e, n),
-                query: s ? {} : { limit: 4 },
+            let t = await r.Bo.get({
+                url: m.Rsh.CHANNEL_CONVERSATION_MESSAGES(e, n),
+                query: i ? {} : { limit: 4 },
                 oldFormErrors: !0,
                 rejectWithError: !0,
             });
-            r.h.dispatch({
+            s.h.dispatch({
                 type: "CONVERSATION_FETCH_SUCCESS",
                 channelId: e,
                 conversationId: n,
                 messages: t.body.messages,
-                fullyHydrated: s,
+                fullyHydrated: i,
             });
         } catch {
-            r.h.dispatch({ type: "CONVERSATION_FETCH_FAILURE", channelId: e, conversationId: n, full: s });
+            s.h.dispatch({ type: "CONVERSATION_FETCH_FAILURE", channelId: e, conversationId: n, full: i });
         }
     }
+}
+function N(e, t, n) {
+    c.X.trackEntrypointImpression({ channel: e, conversationCount: n }),
+        E.shouldTriggerOnNextExposure() && o.Ay.fireSurveyAction(i.w.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS),
+        s.h.dispatch({
+            type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION",
+            channel: e,
+            guildId: t,
+            conversationCount: n,
+        });
 }

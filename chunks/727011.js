@@ -1,0 +1,66 @@
+"use strict";
+n.d(t, { X: () => a });
+var i = n(174459),
+    r = n(652215);
+function s(e) {
+    return { channel_id: e.id, channel_type: e.type, guild_id: e.guild_id ?? null };
+}
+let a = {
+    trackEntrypointImpression(e) {
+        i.default.track(r.HAw.TOPICAL_NAV_ENTRYPOINT_IMPRESSION, {
+            ...s(e.channel),
+            conversation_count: e.conversationCount,
+        });
+    },
+    trackTopicsUnitImpression(e) {
+        i.default.track(r.HAw.TOPICAL_NAV_TOPICS_UNIT_IMPRESSION, {
+            ...s(e.channel),
+            conversation_ids: e.conversationIds,
+            is_focus_mode: e.isFocusMode,
+        });
+    },
+    trackPreviewImpression(e) {
+        i.default.track(r.HAw.TOPICAL_NAV_PREVIEW_IMPRESSION, {
+            ...s(e.channel),
+            conversation_id: e.conversationId,
+            is_focus_mode: e.isFocusMode,
+        });
+    },
+    trackTopicsUnitClicked(e) {
+        i.default.track(r.HAw.TOPICAL_NAV_TOPICS_UNIT_CLICKED, {
+            ...s(e.channel),
+            conversation_id: e.conversationId,
+            is_focus_mode: e.isFocusMode,
+        });
+    },
+    trackFocusModeImpression(e) {
+        i.default.track(r.HAw.TOPICAL_NAV_FOCUS_MODE_IMPRESSION, {
+            ...s(e.channel),
+            conversation_id: e.conversationId,
+        });
+    },
+    trackFocusModeDismissed(e) {
+        i.default.track(r.HAw.TOPICAL_NAV_FOCUS_MODE_DISMISSED, {
+            ...s(e.channel),
+            conversation_id: e.conversationId,
+            dismiss_reason: e.dismissReason,
+        });
+    },
+    trackThumbsClicked(e) {
+        i.default.track(r.HAw.TOPICAL_NAV_THUMBS_CLICKED, {
+            ...s(e.channel),
+            conversation_id: e.conversationId,
+            is_thumbs_up: e.isThumbsUp,
+            is_focus_mode: e.isFocusMode,
+        });
+    },
+    trackThumbsDownReasonSelected(e) {
+        i.default.track(r.HAw.TOPICAL_NAV_THUMBS_DOWN_REASON_SELECTED, {
+            ...s(e.channel),
+            conversation_id: e.conversationId,
+            is_focus_mode: e.isFocusMode,
+            reasons: e.reasons,
+            other_text: e.otherText,
+        });
+    },
+};

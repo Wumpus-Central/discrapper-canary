@@ -740,7 +740,7 @@ var e5 = t(90804),
     np = t(957565),
     nf = t(935208),
     nj = t(256331),
-    nI = t(761259),
+    nI = t(775632),
     nb = t(958720),
     nC = t(84593);
 function nE(e, n) {
@@ -906,21 +906,16 @@ let ny = ["high", "medium", "low"],
         });
     }),
     nN = s.memo(function (e) {
-        let { conversation: n, color: t, scrollTarget: l, onJump: a } = e,
-            r = s.useRef(null);
-        s.useEffect(() => {
-            null != l && null != r.current && r.current.scrollIntoView({ behavior: "smooth", block: "center" });
-        }, [l]);
-        let d = nf.default.extractTimestamp(n.startMessageId),
-            o = nf.default.extractTimestamp(n.endMessageId),
-            c = (0, nx.e)({ timestamp: d }),
-            u = Math.max(1, Math.round((o - d) / 1e3)),
-            h = (0, nm.WR)({ seconds: u, getFormatter: nm.i });
+        let { conversation: n, color: t, onJump: l } = e,
+            s = nf.default.extractTimestamp(n.startMessageId),
+            a = nf.default.extractTimestamp(n.endMessageId),
+            r = (0, nx.e)({ timestamp: s }),
+            d = Math.max(1, Math.round((a - s) / 1e3)),
+            o = (0, nm.WR)({ seconds: d, getFormatter: nm.i });
         return (0, i.jsxs)(ns.D, {
-            innerRef: r,
             className: nC.Nm,
             style: { backgroundColor: t },
-            onClick: () => a(n),
+            onClick: () => l(n),
             children: [
                 (0, i.jsxs)("div", {
                     className: nC.PY,
@@ -950,9 +945,9 @@ let ny = ["high", "medium", "low"],
                     color: "text-muted",
                     className: nC.FR,
                     children: [
-                        c,
+                        r,
                         " ago \xb7 ",
-                        h,
+                        o,
                         " duration \xb7 ",
                         n.messageCount,
                         " messages \xb7 ",
@@ -1057,19 +1052,16 @@ let ny = ["high", "medium", "low"],
                         }),
                     ],
                 }),
-                (0, i.jsx)(nv, { moderation: n.moderation }),
+                (0, i.jsx)(nv, { moderation: n.moderation ?? null }),
             ],
         });
     });
 function n_(e) {
     let { channel: n } = e,
-        t = (0, A.bG)([nb.A], () => nb.A.getChannelConversations(n.id), [n.id], nE),
-        l = (0, A.bG)([nb.A], () => nb.A.hasMoreConversations(n.id, "before"), [n.id]),
-        a = (0, A.bG)([nb.A], () => nb.A.hasMoreConversations(n.id, "after"), [n.id]),
-        r = (0, A.bG)([nb.A], () => nb.A.isPendingFetch(n.id), [n.id]),
-        d = (0, A.bG)([nj.A], () => nj.A.isHighlightingEnabled(), []),
-        o = (0, A.bG)([nb.A], () => nb.A.getScrollToConversation(n.id), [n.id]),
-        c = s.useCallback(
+        t = (0, A.bG)([nb.A], () => nb.A.getChannelConversations(n.id) ?? [], [n.id], nE),
+        l = (0, A.bG)([nb.A], () => nb.A.isPendingFetch(n.id), [n.id]),
+        a = (0, A.bG)([nj.A], () => nj.A.isHighlightingEnabled(), []),
+        r = s.useCallback(
             (e) => {
                 (0, nI.xI)(n.id, n.guild_id, e.id);
             },
@@ -1085,47 +1077,21 @@ function n_(e) {
                 children: (0, i.jsx)("div", {
                     className: nC.y6,
                     children: (0, i.jsx)(na.K, {
-                        icon: d ? nh.b : nA.G,
-                        "aria-label": d ? "Hide highlights" : "Show highlights",
+                        icon: a ? nh.b : nA.G,
+                        "aria-label": a ? "Hide highlights" : "Show highlights",
                         variant: "secondary",
                         size: "sm",
                         onClick: nI.Eg,
                     }),
                 }),
             }),
-            (0, i.jsxs)("div", {
+            (0, i.jsx)("div", {
                 className: nC.Qs,
-                children: [
-                    l &&
-                        (0, i.jsx)("div", {
-                            className: nC.f,
-                            children: (0, i.jsx)(ns.D, {
-                                className: nC.Qf,
-                                onClick: function () {
-                                    if (0 === t.length || r) return;
-                                    let e = t[0].conversation;
-                                    (0, nI.WF)({ channelId: n.id, guildId: n.guild_id, before: e.startMessageId });
-                                },
-                                children: (0, i.jsx)(y.E, {
-                                    variant: "text-sm/medium",
-                                    color: "text-link",
-                                    children: r ? "Loading..." : "Load previous conversations",
-                                }),
-                            }),
-                        }),
-                    0 !== t.length || r
+                children:
+                    0 !== t.length || l
                         ? t.map((e) => {
                               let { conversation: n, color: t } = e;
-                              return (0, i.jsx)(
-                                  nN,
-                                  {
-                                      conversation: n,
-                                      color: t,
-                                      scrollTarget: o?.conversationId === n.id ? o.seq : null,
-                                      onJump: c,
-                                  },
-                                  n.id,
-                              );
+                              return (0, i.jsx)(nN, { conversation: n, color: t, onJump: r }, n.id);
                           })
                         : (0, i.jsx)(y.E, {
                               variant: "text-sm/normal",
@@ -1133,24 +1099,6 @@ function n_(e) {
                               className: nC.BI,
                               children: "No conversations available.",
                           }),
-                    a &&
-                        (0, i.jsx)("div", {
-                            className: nC.f,
-                            children: (0, i.jsx)(ns.D, {
-                                className: nC.Qf,
-                                onClick: function () {
-                                    if (0 === t.length || r) return;
-                                    let e = t[t.length - 1].conversation;
-                                    (0, nI.WF)({ channelId: n.id, guildId: n.guild_id, after: e.endMessageId });
-                                },
-                                children: (0, i.jsx)(y.E, {
-                                    variant: "text-sm/medium",
-                                    color: "text-link",
-                                    children: r ? "Loading..." : "Load newer conversations",
-                                }),
-                            }),
-                        }),
-                ],
             }),
         ],
     });
@@ -2237,7 +2185,7 @@ var lj = t(41e4),
 function lE(e) {
     let { channelId: n } = e,
         t = (0, A.bG)([lb.Ay], () => lb.Ay.getSection(n), [n]) === er.YvQ.CONVERSATIONS,
-        l = (0, A.bG)([nb.A], () => nb.A.getChannelConversations(n).length > 0, [n]);
+        l = (0, A.bG)([nb.A], () => (nb.A.getChannelConversations(n)?.length ?? 0) > 0, [n]);
     return (0, i.jsx)(tA.In, {
         onClick: lI.A.toggleConversationsSection,
         tooltip: t ? null : "Conversations",

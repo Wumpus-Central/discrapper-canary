@@ -3234,22 +3234,6 @@
     margin: 4px 0 8px
 }
 
-.loadMoreFooter_b18605 {
-    padding: 8px;
-    text-align: center
-}
-
-.loadMoreButton_b18605 {
-    border-radius: 4px;
-    display: block;
-    padding: 4px 8px;
-    width: 100%
-}
-
-.loadMoreButton_b18605:hover {
-    background-color: var(--custom-background-modifier-hover)
-}
-
 .container__0bec3 {
     height: 100%;
     inset-inline-start: 0;
