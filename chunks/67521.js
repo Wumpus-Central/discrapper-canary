@@ -15,7 +15,7 @@ let o = {
                 async () => {
                     s.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
                     let { default: A } = await Promise.all([
-                        t.e("86613"),
+                        t.e("9771"),
                         t.e("62155"),
                         t.e("607"),
                         t.e("12755"),

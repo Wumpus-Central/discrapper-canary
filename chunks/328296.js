@@ -48,48 +48,52 @@ var v = n(982240),
     C = n(70283),
     R = n(17928),
     O = n(775602),
-    b = n(716574),
+    b = n(461536),
     D = n(841595),
     L = n(975858);
 function w(e) {
-    let { children: t, legacyBadgeId: n, userId: r, fallbackTitle: s, fallbackIconSrc: a } = e,
-        o = (0, L.w0)(n),
+    let t,
+        n,
+        r,
+        { children: s, legacyBadgeId: a, userId: o, fallbackTitle: l, fallbackIconSrc: u } = e,
+        d = (0, L.w0)(a),
         {
-            badgeData: l,
-            currentTier: u,
-            obtainedAt: d,
+            badgeData: _,
+            currentTier: h,
+            obtainedAt: f,
         } = (0, R.cf)(
             [v.Ay],
             () =>
-                null == o || null == r
+                null == d || null == o
                     ? { badgeData: void 0, currentTier: void 0, obtainedAt: void 0 }
                     : {
-                          badgeData: v.Ay.getBadgeById(o, r),
-                          currentTier: v.Ay.getCurrentTier(o, r),
-                          obtainedAt: v.Ay.getObtainedAt(o, r),
+                          badgeData: v.Ay.getBadgeById(d, o),
+                          currentTier: v.Ay.getCurrentTier(d, o),
+                          obtainedAt: v.Ay.getObtainedAt(d, o),
                       },
-            [o, r],
+            [d, o],
         ),
-        _ = (0, R.bG)([O.A], () => O.A.useReducedMotion),
-        h = l?.badge_id === C.$.PREMIUM_TENURE,
-        f = o === C.$.LEGACY_USERNAME,
-        p = u?.name,
-        E = h ? c.intl.string(c.t.Ipxkog) : (l?.name ?? s),
-        m = null != p ? `${E} ${p}` : E,
-        g = _ ? void 0 : l?.complex_icon_animated_url,
-        A = g ?? l?.complex_icon_static_url ?? l?.simple_icon_url ?? a,
-        I = null != g && A === g;
-    if (f) return (0, i.jsx)(M, { userId: r, title: m, badgeImage: A, rarity: l?.rarity, children: t });
-    let T = null != d ? c.intl.formatToPlainString(c.t["0aEh2a"], { date: new Date(d) }) : void 0;
+        p = (0, R.bG)([O.A], () => O.A.useReducedMotion),
+        E = _?.badge_id === C.$.PREMIUM_TENURE,
+        m = d === C.$.LEGACY_USERNAME,
+        g = h?.name,
+        A = E ? c.intl.string(c.t.Ipxkog) : (_?.name ?? l);
+    E ? (r = n = null != g ? `${A} ${g}` : A) : null != g ? ((t = A), (n = g), (r = `${A} ${g}`)) : ((n = A), (r = A));
+    let I = p ? void 0 : _?.complex_icon_animated_url,
+        T = I ?? _?.complex_icon_static_url ?? _?.simple_icon_url ?? u,
+        S = null != I && T === I;
+    if (m) return (0, i.jsx)(M, { userId: o, title: n, badgeImage: T, rarity: _?.rarity, children: s });
+    let y = null != f ? c.intl.formatToPlainString(c.t["0aEh2a"], { date: new Date(f) }) : void 0;
     return (0, i.jsx)(b.A, {
-        title: m,
-        body: T,
-        badgeImage: A,
-        badgeName: m,
-        rarity: l?.rarity,
-        variant: h ? "nitro" : "default",
-        isAnimated: I,
-        children: t,
+        title: n,
+        eyebrow: t,
+        body: y,
+        badgeImage: T,
+        badgeName: r,
+        rarity: _?.rarity,
+        variant: E ? "nitro" : "default",
+        isAnimated: S,
+        children: s,
     });
 }
 function M(e) {

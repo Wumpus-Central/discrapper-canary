@@ -107,8 +107,7 @@ function I(e) {
                       e.stopPropagation(),
                           (0, a.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([
-                                  n.e("73527"),
-                                  n.e("40296"),
+                                  n.e("21837"),
                                   n.e("58337"),
                                   n.e("56753"),
                                   n.e("2329"),
@@ -134,7 +133,7 @@ function I(e) {
                     let { default: e } = await Promise.all([
                         n.e("73341"),
                         n.e("7806"),
-                        n.e("78038"),
+                        n.e("79309"),
                         n.e("62155"),
                         n.e("37687"),
                         n.e("78412"),

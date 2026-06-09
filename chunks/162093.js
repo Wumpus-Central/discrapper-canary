@@ -522,8 +522,8 @@ let eD = (e) => {
                                     let { CheckoutRootProvider: e } = await Promise.resolve().then(i.bind(i, 197510)),
                                         { PaymentModal: o } = await Promise.resolve().then(i.bind(i, 314671)),
                                         { STEPS: d } = await Promise.all([
-                                            i.e("78038"),
-                                            i.e("63528"),
+                                            i.e("79309"),
+                                            i.e("1428"),
                                             i.e("99496"),
                                             i.e("7339"),
                                             i.e("73341"),
