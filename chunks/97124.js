@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { MA: () => y, Ag: () => T, fY: () => S });
+n.d(t, { MA: () => N, Ag: () => S, fY: () => y });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -18,11 +18,12 @@ let f = (0, n(945810).mj)({
     variations: { 0: !1, 1: !0 },
 });
 var p = n(234419),
-    E = n(99462),
-    m = n(788868),
-    g = n(375708),
-    A = n(386667);
-function I(e) {
+    E = n(410516),
+    m = n(99462),
+    g = n(788868),
+    A = n(375708),
+    I = n(386667);
+function T(e) {
     let {
             isTabSelected: t,
             expiresAt: n,
@@ -35,28 +36,28 @@ function I(e) {
         E = r.useMemo(() => Date.parse(n), [n]),
         m = (0, d.A)(E, 6e4);
     if (Object.values(m).every((e) => 0 === e)) return null;
-    let I = (0, i.jsxs)("div", {
-        className: a()(A.Fg, A.C8, c, { [A.WO]: t }),
+    let g = (0, i.jsxs)("div", {
+        className: a()(I.Fg, I.C8, c, { [I.WO]: t }),
         children: [
-            (0, i.jsx)(l.O, { size: "custom", width: 16, height: 16, color: "currentColor", className: A._q }),
+            (0, i.jsx)(l.O, { size: "custom", width: 16, height: 16, color: "currentColor", className: I._q }),
             (0, i.jsx)(u.E, { variant: "eyebrow", color: "text-strong", children: s }),
         ],
     });
     return p
-        ? I
+        ? g
         : (0, i.jsx)(o.m, {
-              text: null != h ? h : (0, _.uN)(m, { days: g.t.qVGNkU, hours: g.t.wyg9a9, minutes: g.t.IzmIlV }),
+              text: null != h ? h : (0, _.uN)(m, { days: A.t.qVGNkU, hours: A.t.wyg9a9, minutes: A.t.IzmIlV }),
               position: null != f ? f : "top",
-              children: I,
+              children: g,
           });
 }
-function T(e) {
+function S(e) {
     let { isTabSelected: t, trialOffer: n } = e,
         r = (0, p.V)()?.subscription_trial,
         s = (0, h.tS)({ intervalType: r?.interval, intervalCount: r?.interval_count }),
-        a = n.trial_id === m.Tt,
-        o = (0, E.Fu)(n);
-    return (0, i.jsx)(y, {
+        a = n.trial_id === g.Tt,
+        o = (0, m.Fu)(n);
+    return (0, i.jsx)(N, {
         isTabSelected: t,
         badgeCopy: s,
         offerExpiresAt: n.expires_at,
@@ -65,17 +66,18 @@ function T(e) {
         hideTooltip: a,
     });
 }
-function S(e) {
+function y(e) {
     let { isTabSelected: t, userDiscount: n, includesAmountOff: r } = e,
-        s = (function (e) {
-            let { location: t } = e;
-            return f.useConfig({ location: t });
-        })({ location: "PremiumDiscountOfferTabBadge" }),
-        a = g.intl.formatToPlainString(g.t.iiLbvu, { percent: n.discount.amount }),
-        o = r ? a : g.intl.string(g.t["/DTtr6"]),
+        s =
+            (function (e) {
+                let { location: t } = e;
+                return f.useConfig({ location: t });
+            })({ location: "PremiumDiscountOfferTabBadge" }) && !(0, E.hm)(n),
+        a = A.intl.formatToPlainString(A.t.iiLbvu, { percent: n.discount.amount }),
+        o = r ? a : A.intl.string(A.t["/DTtr6"]),
         l = n.expiresAt?.toISOString() ?? null,
-        u = (0, E.__)(n);
-    return (0, i.jsx)(y, {
+        u = (0, m.__)(n);
+    return (0, i.jsx)(N, {
         isTabSelected: t,
         badgeCopy: o,
         offerExpiresAt: l,
@@ -84,7 +86,7 @@ function S(e) {
         useExpressiveUnackedBadge: s,
     });
 }
-function y(e) {
+function N(e) {
     let {
         isTabSelected: t,
         badgeCopy: n,
@@ -95,7 +97,7 @@ function y(e) {
         useExpressiveUnackedBadge: d = !1,
     } = e;
     return null != r
-        ? (0, i.jsx)(I, {
+        ? (0, i.jsx)(T, {
               expiresAt: r,
               isTabSelected: t,
               badgeCopy: n,
@@ -106,7 +108,7 @@ function y(e) {
         : d
           ? (0, i.jsx)(c.E, { type: { text: n }, variant: "expressive" })
           : (0, i.jsx)("div", {
-                className: a()(A.Fg, A.AT),
-                children: (0, i.jsx)(u.E, { variant: "eyebrow", className: A.md, children: n }),
+                className: a()(I.Fg, I.AT),
+                children: (0, i.jsx)(u.E, { variant: "eyebrow", className: I.md, children: n }),
             });
 }
