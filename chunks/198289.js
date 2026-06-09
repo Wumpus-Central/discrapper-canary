@@ -134,7 +134,7 @@ function K(e) {
 var V = s(834730),
     X = s(885574),
     Q = s(990078),
-    W = s(252545),
+    W = s(73392),
     $ = s(699006);
 function q(e) {
     let { selectedFontId: a, setSelectedFontId: s, displayName: t, className: i } = e,
