@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { EG: () => l, Gu: () => c, JI: () => f, Lp: () => _, SC: () => p, fk: () => h, hV: () => d, o6: () => u });
+n.d(t, { EG: () => l, Gu: () => c, JI: () => h, Lp: () => _, SC: () => p, fk: () => f, hV: () => d, o6: () => u });
 var i = n(627968);
 n(64700);
 var r = n(503698),
     s = n.n(r),
     a = n(661531),
-    o = n(95361);
+    o = n(235520);
 let l = { ROUND: o.rS, ROUND_LEFT: o.Q2, ROUND_RIGHT: o.Hg, SQUARE: "" };
 function u(e) {
     return e < 10 ? 16 : e < 100 ? 22 : 30;
@@ -20,15 +20,15 @@ let d = (e) => {
             disableColor: r = !1,
             shape: d = l.ROUND,
             className: _,
-            style: f,
-            renderBadgeCount: h = c,
+            style: h,
+            renderBadgeCount: f = c,
             ...p
         } = e;
         return (0, i.jsx)("div", {
             className: s()(_, o.Do, d),
-            style: { backgroundColor: r ? void 0 : n, width: u(t), ...f },
+            style: { backgroundColor: r ? void 0 : n, width: u(t), ...h },
             ...p,
-            children: h(t),
+            children: f(t),
         });
     },
     _ = (e) => {
@@ -48,11 +48,11 @@ let d = (e) => {
             children: t,
         });
     },
-    f = (e) => {
+    h = (e) => {
         let { text: t, className: n, ...r } = e;
         return (0, i.jsx)(_, { className: s()(o.BE, n), text: t, ...r });
     },
-    h = (e) => {
+    f = (e) => {
         let {
             icon: t,
             className: n,
