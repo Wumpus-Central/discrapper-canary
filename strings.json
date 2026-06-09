@@ -18523,6 +18523,7 @@
   "y8Xf3k": "Check it out and discover more!",
   "wirwN+": "Keep the fun going and check out the game!",
   "loyTil": "Reward $[]({{verticalDivider}}) $[]({{rewardName}})",
+  "WPNjGe": "{count, plural, one { Orb earned} other { Orbs earned} }",
   "g4t9aw": "Your Orbs balance is now $[**{orbsBalance}**]({{orbsBalanceHook}}). Great work, let's get spending.",
   "qyKLdg": "Your Reward is Ready!",
   "04MTGf": "This reward is no longer available.",
