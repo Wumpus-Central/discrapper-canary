@@ -1,0 +1,44 @@
+.popoutContainer_a912c3 {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px
+}
+
+.customColorsHeader_a912c3 {
+    text-transform: uppercase
+}
+
+.colorSwatch_a912c3 {
+    border-radius: 3px;
+    height: 50px;
+    width: 100%
+}
+
+.colorPickersContainer_a912c3 {
+    flex-direction: row;
+    gap: 16px
+}
+
+.colorColumn_a912c3,
+.colorPickersContainer_a912c3 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.colorColumn_a912c3 {
+    flex-direction: column;
+    gap: 8px
+}
+
+.colorPicker_a912c3 {
+    border: unset;
+    box-shadow: unset;
+    flex: 1;
+    padding: 0;
+    width: 150px
+}

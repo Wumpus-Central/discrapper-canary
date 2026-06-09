@@ -19,19 +19,19 @@ var l = n(627968),
     E = n.n(x),
     S = n(855687),
     _ = n(143413),
-    I = n(495544),
-    j = n(734057),
-    v = n(808728),
-    T = n(498642),
-    N = n(71393),
-    y = n(186111),
-    b = n(232835),
+    j = n(495544),
+    I = n(734057),
+    y = n(808728),
+    v = n(498642),
+    b = n(71393),
+    N = n(186111),
+    T = n(232835),
     M = n(576705),
     R = n(935208),
     D = n(652215),
     L = n(468689),
-    O = n(794967),
-    k = n(595818),
+    k = n(794967),
+    O = n(595818),
     P = n(287809),
     G = n(147925),
     U = n(625494),
@@ -82,9 +82,9 @@ function W(e) {
         Z,
         Y,
         { channel: X } = e,
-        Q = (0, o.bG)([N.A], () => (null != X ? N.A.getGuild(X.getGuildId()) : null), [X]),
+        Q = (0, o.bG)([b.A], () => (null != X ? b.A.getGuild(X.getGuildId()) : null), [X]),
         ee = null != Q && R.default.extractTimestamp(Q.id) < Date.now() - D.NOr,
-        et = (0, o.bG)([I.default], () => Q?.ownerId === I.default.getId(), [Q]),
+        et = (0, o.bG)([j.default], () => Q?.ownerId === j.default.getId(), [Q]),
         {
             canInvite: en,
             canManageGuild: el,
@@ -109,36 +109,36 @@ function W(e) {
             guildPersonalized: eo,
         } = {
             guildPopulated:
-                ((s = (0, o.bG)([j.A], () => j.A.getChannel(Q?.systemChannelId))),
-                (d = (0, o.yK)([b.A], () => (null != s ? b.A.getMessages(s.id).toArray() : []))),
-                (0, o.bG)([T.A], () => {
-                    let e = T.A.getMemberCount(Q?.id) ?? 0,
+                ((s = (0, o.bG)([I.A], () => I.A.getChannel(Q?.systemChannelId))),
+                (d = (0, o.yK)([T.A], () => (null != s ? T.A.getMessages(s.id).toArray() : []))),
+                (0, o.bG)([v.A], () => {
+                    let e = v.A.getMemberCount(Q?.id) ?? 0,
                         t = d.some((e) => e.type === D.lAJ.USER_JOIN);
                     return e > 1 || t;
                 }, [Q, d])),
             guildMessaged:
-                ((h = (0, o.bG)([j.A], () => (null != Q ? j.A.getMutableBasicGuildChannelsForGuild(Q.id) : null))),
+                ((h = (0, o.bG)([I.A], () => (null != Q ? I.A.getMutableBasicGuildChannelsForGuild(Q.id) : null))),
                 (t = i.useMemo(() => (null == h ? [] : E().values(h)), [h])),
-                (f = (0, o.bG)([I.default], () => I.default.getId())),
-                (0, o.bG)([b.A], () =>
+                (f = (0, o.bG)([j.default], () => j.default.getId())),
+                (0, o.bG)([T.A], () =>
                     E().some(t, (e) => {
-                        let t = b.A.getMessages(e.id).toArray();
+                        let t = T.A.getMessages(e.id).toArray();
                         return E().some(t, (e) => e.author.id === f && !(0, _.A)(e));
                     }),
                 )),
             guildPersonalized:
-                ((x = (0, o.bG)([y.A], () => y.A.hasLayers())),
-                (G = (0, o.bG)([N.A], () => N.A.getGuild(Q?.id))),
+                ((x = (0, o.bG)([N.A], () => N.A.hasLayers())),
+                (G = (0, o.bG)([b.A], () => b.A.getGuild(Q?.id))),
                 G?.icon != null && !x),
-            guildChannelCreated: (0, o.bG)([v.Ay], () => {
-                let e = v.Ay.getChannels(Q?.id),
-                    t = e[v.vM];
+            guildChannelCreated: (0, o.bG)([y.Ay], () => {
+                let e = y.Ay.getChannels(Q?.id),
+                    t = e[y.vM];
                 function n(e) {
                     return (
                         null != Q && R.default.extractTimestamp(e.channel.id) - R.default.extractTimestamp(Q.id) > 500
                     );
                 }
-                return e[v.I6].some(n) || t.some(n);
+                return e[y.I6].some(n) || t.some(n);
             }, [Q]),
         },
         {
@@ -155,8 +155,7 @@ function W(e) {
                 null != Q &&
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("87932"),
-                            n.e("42527"),
+                            n.e("7806"),
                             n.e("59957"),
                             n.e("28136"),
                             n.e("16084"),
@@ -184,7 +183,7 @@ function W(e) {
                 setup_type: B.XT.CHANNEL_WELCOME,
                 action: B.AG.PERSONALIZE_SERVER,
             }),
-                null != Q && L.A.open(Q.id, (0, k.x)(), { section: D.JJy.CHANNEL_WELCOME_CTA });
+                null != Q && L.A.open(Q.id, (0, O.x)(), { section: D.JJy.CHANNEL_WELCOME_CTA });
         }, [Q])),
         {
             handleInvite: W,
@@ -255,7 +254,7 @@ function W(e) {
         (i.useEffect(() => {
             (async () => {
                 try {
-                    let e = await (0, O.c)(Q?.id ?? D.dJq);
+                    let e = await (0, k.c)(Q?.id ?? D.dJq);
                     eC(e.map((e) => e.id));
                 } catch {}
             })();

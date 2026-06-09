@@ -9,7 +9,6 @@ e.exports = {
     yV: "sectionDescription_e335a7",
     zH: "details_e335a7",
     g4: "detailsBlock_e335a7",
-    sp: "paymentDropdown_e335a7",
     sE: "redBorder_e335a7",
     QL: "detailBlockHeader_e335a7",
     dd: "duplicateHeader_e335a7",

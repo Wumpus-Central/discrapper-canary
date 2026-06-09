@@ -2305,7 +2305,7 @@ let iQ = (0, a.E2)(u.X.REGISTERED_GAMES_CURRENT_GAME_SETTING, {
         buildLayout: () => [eR, i0, iS],
     });
 var i2 = i(550640),
-    i3 = i(247928),
+    i3 = i(346055),
     i6 = i(97808),
     i4 = i(778712),
     i7 = i(775602),
@@ -10893,9 +10893,7 @@ let Av = (e) => {
                 analyticsLocation: e1.A.GUILD_ROLE_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE,
             }),
             s = (0, g.bG)([dH.A], () => dH.A.hasFetchedPaymentSources);
-        return null != n && s
-            ? (0, E.jsx)(Ah.A, { subscription: t, currentInvoicePreview: n, dropdownClassName: Ab.Nw })
-            : (0, E.jsx)(da.y, {});
+        return null != n && s ? (0, E.jsx)(Ah.A, { subscription: t, currentInvoicePreview: n }) : (0, E.jsx)(da.y, {});
     },
     Aj = (e) => {
         let {
@@ -17165,7 +17163,7 @@ let pH = (0, a.Tf)(u.X.ACCOUNT_INFO_PHONE_SETTING, {
             ? (0, K.openModalLazy)(
                   async () => {
                       let { default: e } = await Promise.all([
-                          i.e("87932"),
+                          i.e("99496"),
                           i.e("4782"),
                           i.e("89545"),
                           i.e("11493"),
@@ -17816,7 +17814,7 @@ function fP() {
                 (0, K.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            i.e("87932"),
+                            i.e("99496"),
                             i.e("4782"),
                             i.e("89545"),
                             i.e("11493"),

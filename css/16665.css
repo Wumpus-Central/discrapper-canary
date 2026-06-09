@@ -1,11 +1,3 @@
-.firefoxFixScrollFlex_efbae7 {
-    min-height: 0
-}
-
-.fixClipping_efbae7 {
-    transform: translateZ(0)
-}
-
 .full-motion .spinner_a2f514 {
     transition: all var(--connecting-content-fade-duration, .15s) ease-out;
     transition-property: opacity, transform

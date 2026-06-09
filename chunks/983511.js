@@ -28,7 +28,7 @@ var n = i(627968),
     j = i(43594),
     O = i(735164),
     R = i(683433),
-    L = i(692440),
+    L = i(458785),
     D = i(178368),
     P = i(97352),
     G = i(166403),
@@ -227,11 +227,7 @@ function H(e) {
                                           ? (0, n.jsxs)("div", {
                                                 children: [
                                                     (0, n.jsx)(O.pK, {}),
-                                                    (0, n.jsx)(L.m0, {
-                                                        premiumSubscription: t,
-                                                        renewalInvoice: q,
-                                                        isUpdate: !0,
-                                                    }),
+                                                    (0, n.jsx)(L.m0, { renewalInvoice: q, isUpdate: !0 }),
                                                 ],
                                             })
                                           : null,
@@ -284,11 +280,7 @@ function H(e) {
                                       ? (0, n.jsxs)("div", {
                                             children: [
                                                 (0, n.jsx)(O.pK, {}),
-                                                (0, n.jsx)(L.m0, {
-                                                    premiumSubscription: t,
-                                                    renewalInvoice: q,
-                                                    isUpdate: !0,
-                                                }),
+                                                (0, n.jsx)(L.m0, { renewalInvoice: q, isUpdate: !0 }),
                                             ],
                                         })
                                       : null,

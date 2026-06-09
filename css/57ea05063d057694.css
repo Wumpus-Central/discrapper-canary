@@ -1,0 +1,154 @@
+.previewsContainerInner__4e635 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 346px
+}
+
+.profileEffectPreviewsContainerInner__4e635 {
+    margin-top: 0
+}
+
+.nameplatePreviewContainerInner__4e635,
+.profileEffectPreviewsContainerInner__4e635 {
+    align-items: center
+}
+
+.combinedPreviewContent__4e635 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.profilePreviewContainerWithChat__4e635 .custom-profile-frame-bottom {
+    margin-block-end: 0 !important
+}
+
+.nameplatePreview__4e635 {
+    width: 100%
+}
+
+.nameplateRightPanePreviewContainer__4e635 {
+    background-color: var(--background-surface-high);
+    border-radius: var(--radius-lg);
+    height: auto;
+    margin-inline: 60px 40px;
+    width: 240px
+}
+
+.nameplateRightPanePreviewAvatarContainer__4e635,
+.nameplateRightPanePreviewAvatarInner__4e635 {
+    padding: 0 8px
+}
+
+.userBlue__4e635 {
+    color: var(--role-sky-blue)
+}
+
+.userPink__4e635 {
+    color: var(--role-magenta)
+}
+
+.userGreen__4e635 {
+    color: var(--role-light-green)
+}
+
+.nameplateRightPanePreviewSectionGroup__4e635 {
+    color: var(--channels-default);
+    font-family: var(--font-display);
+    font-size: 12px;
+    letter-spacing: .02em;
+    line-height: 16px;
+    margin-bottom: 4px;
+    margin-top: 24px;
+    padding-inline-start: 16px;
+    text-transform: uppercase
+}
+
+.chatPreview__4e635 {
+    align-items: stretch;
+    background: var(--background-gradient-chat, var(--background-base-low));
+    border-radius: var(--radius-sm);
+    bottom: 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    margin-inline-start: 42px;
+    overflow: hidden;
+    padding: 16px;
+    position: relative;
+    width: 290px;
+    z-index: 3
+}
+
+.mockMessage__4e635 {
+    margin-inline-start: -12px;
+    max-width: 220px;
+    padding-inline-end: 12px !important
+}
+
+.mockMessage__4e635 h2 div {
+    display: inline-block;
+    margin-bottom: -6px;
+    max-width: 112px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.mockInput__4e635 {
+    align-items: center;
+    background: var(--background-gradient-low, var(--channeltextarea-background));
+    border-radius: var(--radius-md);
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    padding: 0 8px
+}
+
+.mockInputButton__4e635 {
+    color: var(--interactive-text-default)
+}
+
+.container__3a77d {
+    background: linear-gradient(180deg, #000 -17.38%, #36266d 109.68%);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    z-index: 1
+}
+
+.headerAsset__3a77d {
+    height: 157px;
+    margin-bottom: 24px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 211px
+}
+
+.benefits__3a77d {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px
+}
+
+.benefitRow__3a77d {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.container_c368fe {
+    pointer-events: none
+}
+
+.externalProductProfilePreview__88259 {
+    position: relative;
+    width: 350px
+}

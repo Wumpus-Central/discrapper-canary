@@ -9,9 +9,6 @@ e.exports = {
     aD: "canceled_fda3e4",
     X6: "rowAmount_fda3e4",
     xZ: "rowLabel_fda3e4",
-    ns: "rowPercentDiscount_fda3e4",
-    gX: "rowDiscountOriginalPrice_fda3e4",
-    Ht: "entitlementDiscountRow_fda3e4 rowBase_fda3e4",
     yF: "divider_fda3e4",
     P_: "negativeMarginTop_fda3e4",
     vy: "negativeMarginBottom_fda3e4",
@@ -20,6 +17,4 @@ e.exports = {
     V$: "totalRow_fda3e4",
     j5: "totalLabel_fda3e4",
     HR: "totalAmount_fda3e4",
-    aO: "finePrint_fda3e4",
-    lk: "trialEndPrice_fda3e4",
 };

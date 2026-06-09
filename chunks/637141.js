@@ -1,108 +1,76 @@
-n.d(t, { Ay: () => B, Sm: () => D });
-var l = n(627968),
-    a = n(64700),
-    r = n(503698),
-    i = n.n(r),
-    s = n(702841),
-    u = n(661531),
-    o = n(843282),
-    c = n(990078),
-    d = n(821609),
-    m = n(289873),
-    p = n(695366),
-    f = n(834730),
-    g = n(109936),
-    v = n(753390),
-    x = n(546605),
-    b = n(176095),
-    h = n(6151),
-    y = n(46054),
-    A = n(826469),
-    I = n(812745),
-    _ = n(202613),
-    j = n(975571),
-    T = n(580630),
-    P = n(935208),
-    E = n(652215),
-    N = n(818348),
-    S = n(375708),
-    R = n(327105),
-    L = n(776409),
-    M = n(714246);
-let C = "***@***.***",
-    k = new _.YS({ id: h.a, brand: I.Ay.Types.UNKNOWN, type: E.hes.CARD });
-function D(e, t, n) {
-    if (e instanceof _.YS)
-        return e.id === h.a
-            ? { brand: null, label: S.intl.string(S.t.eQ2bLp) }
+n.d(t, { Ay: () => L, Sm: () => j });
+var a = n(627968),
+    l = n(64700),
+    r = n(702841),
+    i = n(990078),
+    s = n(821609),
+    u = n(289873),
+    o = n(109936),
+    c = n(753390),
+    d = n(546605),
+    m = n(176095),
+    f = n(6151),
+    p = n(826469),
+    g = n(812745),
+    b = n(202613),
+    v = n(975571),
+    x = n(580630),
+    h = n(935208),
+    A = n(652215),
+    y = n(818348),
+    T = n(375708),
+    _ = n(327105),
+    E = n(776409),
+    I = n(714246);
+let k = "***@***.***",
+    P = new b.YS({ id: f.a, brand: g.Ay.Types.UNKNOWN, type: A.hes.CARD });
+function j(e, t, n) {
+    if (e instanceof b.YS)
+        return e.id === f.a
+            ? { brand: null, label: T.intl.string(T.t.eQ2bLp) }
             : "link" === e.brand && "0000" === e.last4
               ? {
-                    brand: I.Ay.Types.BANK,
-                    label: S.intl.formatToPlainString(S.t.ixNwPL, {
-                        date: t ? "********" : new Date(P.default.extractTimestamp(e.id)).toLocaleDateString(),
+                    brand: g.Ay.Types.BANK,
+                    label: T.intl.formatToPlainString(T.t.ixNwPL, {
+                        date: t ? "********" : new Date(h.default.extractTimestamp(e.id)).toLocaleDateString(),
                     }),
                 }
               : {
-                    brand: t ? I.Ay.Types.UNKNOWN : e.brand,
-                    label: S.intl.formatToPlainString(S.t.QvBAQk, { last4: t ? "****" : e.last4 }),
+                    brand: t ? g.Ay.Types.UNKNOWN : e.brand,
+                    label: T.intl.formatToPlainString(T.t.QvBAQk, { last4: t ? "****" : e.last4 }),
                 };
-    if (e instanceof _.SJ) return { brand: I.Ay.Types.PAYPAL, label: t ? C : e.email };
-    if (e instanceof _.A0) return { brand: I.Ay.Types.SOFORT, label: t ? C : e.email };
-    if (e instanceof _.Qh) return { brand: I.Ay.Types.GIROPAY, label: S.intl.string(S.t["y+0MQZ"]) };
-    if (e instanceof _.Tu) return { brand: I.Ay.Types.PRZELEWY24, label: t ? C : e.email };
-    else if (e instanceof _.Ux) return { brand: I.Ay.Types.PAYSAFECARD, label: S.intl.string(S.t.e3APTT) };
-    else if (e instanceof _.F_) return { brand: I.Ay.Types.GCASH, label: S.intl.string(S.t.PjehcF) };
-    else if (e instanceof _.Xj) return { brand: I.Ay.Types.GRABPAY, label: S.intl.string(S.t.T5davE) };
-    else if (e instanceof _.am) return { brand: I.Ay.Types.MOMO_WALLET, label: S.intl.string(S.t.J0A1Vk) };
-    else if (e instanceof _._1) return { brand: I.Ay.Types.VENMO, label: t ? "***" : "@" + e.username };
-    else if (e instanceof _.i6) return { brand: I.Ay.Types.KAKAOPAY, label: S.intl.string(S.t.CSVexi) };
-    else if (e instanceof _.cg) return { brand: I.Ay.Types.GOPAY_WALLET, label: S.intl.string(S.t["43J8JK"]) };
-    else if (e instanceof _.UG) return { brand: I.Ay.Types.BANCONTACT, label: S.intl.string(S.t["1ITkfq"]) };
-    else if (e instanceof _.rJ)
-        return { brand: I.Ay.Types.EPS, label: S.intl.format(S.t.hSPoZw, { bank: (0, g.j)(e.bank) }) };
-    else if (e instanceof _.EE)
+    if (e instanceof b.SJ) return { brand: g.Ay.Types.PAYPAL, label: t ? k : e.email };
+    if (e instanceof b.A0) return { brand: g.Ay.Types.SOFORT, label: t ? k : e.email };
+    if (e instanceof b.Qh) return { brand: g.Ay.Types.GIROPAY, label: T.intl.string(T.t["y+0MQZ"]) };
+    if (e instanceof b.Tu) return { brand: g.Ay.Types.PRZELEWY24, label: t ? k : e.email };
+    else if (e instanceof b.Ux) return { brand: g.Ay.Types.PAYSAFECARD, label: T.intl.string(T.t.e3APTT) };
+    else if (e instanceof b.F_) return { brand: g.Ay.Types.GCASH, label: T.intl.string(T.t.PjehcF) };
+    else if (e instanceof b.Xj) return { brand: g.Ay.Types.GRABPAY, label: T.intl.string(T.t.T5davE) };
+    else if (e instanceof b.am) return { brand: g.Ay.Types.MOMO_WALLET, label: T.intl.string(T.t.J0A1Vk) };
+    else if (e instanceof b._1) return { brand: g.Ay.Types.VENMO, label: t ? "***" : "@" + e.username };
+    else if (e instanceof b.i6) return { brand: g.Ay.Types.KAKAOPAY, label: T.intl.string(T.t.CSVexi) };
+    else if (e instanceof b.cg) return { brand: g.Ay.Types.GOPAY_WALLET, label: T.intl.string(T.t["43J8JK"]) };
+    else if (e instanceof b.UG) return { brand: g.Ay.Types.BANCONTACT, label: T.intl.string(T.t["1ITkfq"]) };
+    else if (e instanceof b.rJ)
+        return { brand: g.Ay.Types.EPS, label: T.intl.format(T.t.hSPoZw, { bank: (0, o.j)(e.bank) }) };
+    else if (e instanceof b.EE)
         return {
-            brand: I.Ay.Types.IDEAL,
+            brand: g.Ay.Types.IDEAL,
             label:
-                null == e.bank ? S.intl.string(S.t.nSbwqC) : S.intl.format(S.t["9kUlRU"], { bank: (0, g.o)(e.bank) }),
+                null == e.bank ? T.intl.string(T.t.nSbwqC) : T.intl.format(T.t["9kUlRU"], { bank: (0, o.o)(e.bank) }),
         };
-    else if (e instanceof _.FQ) return { brand: I.Ay.Types.CASH_APP, label: t ? "***" : e.username };
-    else if (e instanceof _.LQ)
+    else if (e instanceof b.FQ) return { brand: g.Ay.Types.CASH_APP, label: t ? "***" : e.username };
+    else if (e instanceof b.LQ)
         return {
-            brand: I.Ay.Types.GIFT_CARD,
+            brand: g.Ay.Types.GIFT_CARD,
             label:
                 null != n
-                    ? S.intl.formatToPlainString(L.default["Jz6+Oj"], { amount: n })
-                    : S.intl.string(L.default["/FQWfA"]),
+                    ? T.intl.formatToPlainString(E.default["Jz6+Oj"], { amount: n })
+                    : T.intl.string(E.default["/FQWfA"]),
         };
     throw Error("Invalid Payment Source");
 }
-function U(e) {
-    return e instanceof A.A ? e.source : e;
-}
-function O(e) {
-    let { paymentSource: t, selectOption: n, hidePersonalInformation: a } = e,
-        r = null != t ? U(t) : null,
-        u = r?.type === E.hes.TDS_WALLET,
-        o = (0, s.bG)([b.A], () => {
-            if (!u) return null;
-            let e = b.A.getBalance(r.id);
-            return null != e ? (0, T.$g)(e.amount, e.currency) : null;
-        }, [u, r]);
-    if (n.value === h.a) return (0, l.jsx)("div", { className: M.wC, children: n.label });
-    if (null != r) {
-        let { brand: e, label: t } = D(r, a, o);
-        return (0, l.jsxs)("div", {
-            className: M.IF,
-            children: [
-                null != e ? (0, l.jsx)(I.Ay, { type: I.Ay.getType(e) }) : null,
-                (0, l.jsx)("div", { className: i()(M.wC, { [M.z3]: r.invalid }), children: t }),
-            ],
-        });
-    }
-    return (0, l.jsx)("div", { className: M.wC, children: n.label });
-}
-let w = (e) => {
+let N = (e) => {
         let {
                 onPaymentSourceAdd: t,
                 dropdownLoading: n,
@@ -113,15 +81,15 @@ let w = (e) => {
                 newPaymentMethodOptionLabel: o,
                 noticeMessage: c,
             } = e,
-            d = a.useMemo(
+            d = l.useMemo(
                 () =>
                     s.map((e) => {
-                        let { label: t, brand: n, ...l } = e;
-                        return { id: null != l.key ? `${l.key}` : l.value, label: t ?? "", icon: n ?? void 0, ...l };
+                        let { label: t, brand: n, ...a } = e;
+                        return { id: null != a.key ? `${a.key}` : a.value, label: t ?? "", icon: n ?? void 0, ...a };
                     }),
                 [s],
             ),
-            m = a.useMemo(
+            m = l.useMemo(
                 () => ({
                     value: u ?? null,
                     options: d,
@@ -132,214 +100,163 @@ let w = (e) => {
                 }),
                 [u, d, i, t, r, n, o],
             );
-        return (0, l.jsx)(h.v, { ...m, noticeMessage: c });
+        return (0, a.jsx)(f.v, { ...m, noticeMessage: c });
     },
-    G = (e) => {
+    S = (e) => {
         let { onClick: t } = e;
-        return (0, l.jsx)(d.$, { variant: "primary", fullWidth: !0, onClick: t, text: S.intl.string(S.t.eQ2bLp) });
+        return (0, a.jsx)(s.$, { variant: "primary", fullWidth: !0, onClick: t, text: T.intl.string(T.t.eQ2bLp) });
     };
-function B(e) {
+function L(e) {
     let {
             selectedPaymentSourceId: t,
             paymentSources: n,
-            prependOption: r,
-            hidePersonalInformation: i,
-            onChange: d,
-            onPaymentSourceAdd: g,
-            isTrial: I = !1,
-            disabled: P = !1,
-            className: L,
-            optionClassName: C,
-            dropdownLoading: B,
-            paymentGatewayRestrictions: W,
-            shouldUseUnifiedCheckoutUI: F,
-            newPaymentMethodOptionLabel: Y,
-            defaultPaymentSourceId: H,
-            tooltipText: V,
+            prependOption: s,
+            hidePersonalInformation: o,
+            onChange: g,
+            onPaymentSourceAdd: h,
+            isTrial: E = !1,
+            disabled: k = !1,
+            dropdownLoading: L,
+            paymentGatewayRestrictions: C,
+            newPaymentMethodOptionLabel: R,
+            defaultPaymentSourceId: M,
+            tooltipText: D,
         } = e,
         {
-            hasNoPaymentSources: K,
-            handleChange: z,
-            paymentSource: q,
-            paymentSourceOptions: $,
-            selectedPaymentSourceId: Q,
-            isStoreCountryEnabled: X,
+            hasNoPaymentSources: w,
+            handleChange: G,
+            paymentSource: B,
+            paymentSourceOptions: O,
+            selectedPaymentSourceId: W,
+            isStoreCountryEnabled: U,
         } = ((e) => {
             let {
                     selectedPaymentSourceId: t,
                     paymentSources: n,
-                    prependOption: l,
-                    hidePersonalInformation: r,
-                    onChange: i,
+                    prependOption: a,
+                    hidePersonalInformation: i,
+                    onChange: s,
                     onPaymentSourceAdd: u,
                     paymentGatewayRestrictions: o,
-                    includeNewPaymentSourceOption: c,
+                    includeNewPaymentSourceOption: g,
                 } = e,
-                d = (0, x.vg)("PaymentSourceDropdown"),
-                m = a.useMemo(() => n.find((e) => U(e) instanceof _.LQ)?.id ?? null, [n]);
-            a.useEffect(() => {
-                null != m && (0, v.YP)(m);
-            }, [m]);
-            let p = (0, s.bG)([b.A], () => {
-                    if (null == m) return null;
-                    let e = b.A.getBalance(m);
-                    return null != e ? (0, T.$g)(e.amount, e.currency) : null;
-                }, [m]),
-                f = 0 === n.length,
-                g = null != l ? [l] : [],
-                y = [...g, ...n, ...(c ? [k] : [])].map((e, t) => {
-                    if (e instanceof A.A) {
+                v = (0, d.vg)("PaymentSourceDropdown"),
+                h = l.useMemo(() => n.find((e) => (e instanceof p.A ? e.source : e) instanceof b.LQ)?.id ?? null, [n]);
+            l.useEffect(() => {
+                null != h && (0, c.YP)(h);
+            }, [h]);
+            let A = (0, r.bG)([m.A], () => {
+                    if (null == h) return null;
+                    let e = m.A.getBalance(h);
+                    return null != e ? (0, x.$g)(e.amount, e.currency) : null;
+                }, [h]),
+                y = 0 === n.length,
+                E = null != a ? [a] : [],
+                I = [...E, ...n, ...(g ? [P] : [])].map((e, t) => {
+                    if (e instanceof p.A) {
                         let t,
-                            { brand: n, label: l } = D(e.source, r, p);
+                            { brand: n, label: a } = j(e.source, i, A);
                         return (
-                            d &&
+                            v &&
                                 (e.enabled
-                                    ? null != e.relocationCountry && (t = S.intl.string(R.default.pWSgIu))
-                                    : (t = S.intl.string(R.default["Kv+vV7"]))),
-                            { value: e.id, label: l, brand: n, disabled: !e.enabled, tooltipText: t }
+                                    ? null != e.relocationCountry && (t = T.intl.string(_.default.pWSgIu))
+                                    : (t = T.intl.string(_.default["Kv+vV7"]))),
+                            { value: e.id, label: a, brand: n, disabled: !e.enabled, tooltipText: t }
                         );
                     }
-                    if (e instanceof _.Ay) {
+                    if (e instanceof b.Ay) {
                         let t,
-                            { brand: n, label: l } = D(e, r, p);
+                            { brand: n, label: a } = j(e, i, A);
                         return (
-                            (t = e === k || null == o || !(o.length > 0) || o.includes(e.paymentGateway)),
-                            { value: e.id, label: l, brand: n, disabled: !t }
+                            (t = e === P || null == o || !(o.length > 0) || o.includes(e.paymentGateway)),
+                            { value: e.id, label: a, brand: n, disabled: !t }
                         );
                     }
                     return { key: t, value: e.value, label: e.label };
                 }),
-                I = a.useMemo(() => {
+                k = l.useMemo(() => {
                     let e = t;
                     if (null == e && null != o && o.length > 0) {
                         let t = n.filter((e) => o.includes(e.paymentGateway));
-                        e = 0 === t.length ? h.a : t[0].id;
+                        e = 0 === t.length ? f.a : t[0].id;
                     }
-                    if (d) {
-                        let t = n.filter((e) => e instanceof A.A);
-                        t.length > 0 && t.every((e) => !e.enabled) && (e = h.a);
+                    if (v) {
+                        let t = n.filter((e) => e instanceof p.A);
+                        t.length > 0 && t.every((e) => !e.enabled) && (e = f.a);
                     }
                     return e;
-                }, [t, o, n, d]);
+                }, [t, o, n, v]);
             return {
-                hasNoPaymentSources: f,
+                hasNoPaymentSources: y,
                 handleChange: (e) => {
-                    if (e === h.a) null != u && u();
+                    if (e === f.a) null != u && u();
                     else {
                         let t = n.find((t) => t.id === e),
-                            l = t instanceof A.A ? t.source : t;
-                        null != i && i(l);
+                            a = t instanceof p.A ? t.source : t;
+                        null != s && s(a);
                     }
                 },
-                prependOptions: g,
-                paymentSourceOptions: y,
-                paymentSource: a.useMemo(() => n.find((e) => e.id === I), [n, I]),
-                selectedPaymentSourceId: I,
-                isStoreCountryEnabled: d,
+                prependOptions: E,
+                paymentSourceOptions: I,
+                paymentSource: l.useMemo(() => n.find((e) => e.id === k), [n, k]),
+                selectedPaymentSourceId: k,
+                isStoreCountryEnabled: v,
             };
         })({
             selectedPaymentSourceId: t,
             paymentSources: n,
-            prependOption: r,
-            hidePersonalInformation: i,
-            onChange: d,
-            onPaymentSourceAdd: g,
-            paymentGatewayRestrictions: W,
-            includeNewPaymentSourceOption: !F,
+            prependOption: s,
+            hidePersonalInformation: o,
+            onChange: g,
+            onPaymentSourceAdd: h,
+            paymentGatewayRestrictions: C,
+            includeNewPaymentSourceOption: !1,
         }),
-        Z = a.useMemo(() => new Map(n.map((e) => [e.id, e])), [n]),
-        J = (function (e) {
+        F = (function (e) {
             let {
                     isTrial: t,
                     selectedPaymentSource: n,
-                    paymentSources: l,
-                    defaultPaymentSourceId: a,
+                    paymentSources: a,
+                    defaultPaymentSourceId: l,
                     isStoreCountryEnabled: r,
                 } = e,
-                i = n instanceof A.A ? n.source : n;
+                i = n instanceof p.A ? n.source : n;
             if (null != i) {
-                if (t && !i.canRedeemTrial()) return S.intl.string(S.t.SvheW9);
-                if (t && i.hasFlag(N.rI.NEW))
-                    return S.intl.format(S.t.d7ZLKA, {
-                        helpDeskArticle: j.A.getArticleURL(E.MVz.PAYMENT_AUTHORIZATION_CHARGE),
+                if (t && !i.canRedeemTrial()) return T.intl.string(T.t.SvheW9);
+                if (t && i.hasFlag(y.rI.NEW))
+                    return T.intl.format(T.t.d7ZLKA, {
+                        helpDeskArticle: v.A.getArticleURL(A.MVz.PAYMENT_AUTHORIZATION_CHARGE),
                     });
             }
-            let s = l.filter((e) => e instanceof A.A);
+            let s = a.filter((e) => e instanceof p.A);
             if (s.length > 0) {
                 if (!s.some((e) => e.enabled))
-                    return r ? S.intl.string(R.default["3kMstB"]) : S.intl.string(S.t.OqbMBV);
-                if (null != a) {
-                    let e = s.find((e) => e.id === a),
+                    return r ? T.intl.string(_.default["3kMstB"]) : T.intl.string(T.t.OqbMBV);
+                if (null != l) {
+                    let e = s.find((e) => e.id === l),
                         t = null != e && !e.enabled,
-                        l = null != n && n.id !== a;
-                    if (t && l) return r ? S.intl.string(R.default.Y6lY0I) : S.intl.string(S.t.cB98Am);
+                        a = null != n && n.id !== l;
+                    if (t && a) return r ? T.intl.string(_.default.Y6lY0I) : T.intl.string(T.t.cB98Am);
                 }
             }
             return null;
         })({
-            isTrial: I,
-            selectedPaymentSource: q,
+            isTrial: E,
+            selectedPaymentSource: B,
             paymentSources: n,
-            defaultPaymentSourceId: H,
-            isStoreCountryEnabled: X,
+            defaultPaymentSourceId: M,
+            isStoreCountryEnabled: U,
         });
-    if (B)
-        return (0, l.jsx)("div", {
-            className: M.hN,
-            children: (0, l.jsx)(m.y, { type: F ? m.y.Type.PULSING_ELLIPSIS : m.y.Type.WANDERING_CUBES }),
-        });
-    if (K) return (0, l.jsx)(G, { onClick: g });
-    let ee = F
-            ? (0, l.jsx)(w, {
-                  onPaymentSourceAdd: g,
-                  disabled: P,
-                  handleChange: z,
-                  paymentSourceOptions: $,
-                  selectedPaymentSourceId: Q,
-                  newPaymentMethodOptionLabel: Y,
-                  noticeMessage: J,
-              })
-            : (0, l.jsx)(o.Te, {
-                  options: $,
-                  value: Q,
-                  onChange: z,
-                  isDisabled: P,
-                  className: L,
-                  optionClassName: C,
-                  placeholder: S.intl.string(S.t["8lqkf8"]),
-                  renderOptionValue: (e) => {
-                      let [t] = e,
-                          n = null == t.value ? void 0 : Z.get(t.value);
-                      return (0, l.jsx)(O, { paymentSource: n, selectOption: t, hidePersonalInformation: i });
-                  },
-                  renderOptionLabel: (e) => {
-                      let t = null == e.value ? void 0 : Z.get(e.value);
-                      return (0, l.jsx)(O, { paymentSource: t, selectOption: e, hidePersonalInformation: i });
-                  },
-                  "data-migration-pending": !0,
-              }),
-        et = null != V ? (0, l.jsx)(c.m, { asContainer: !0, text: V, children: ee }) : ee;
-    return (0, l.jsxs)(l.Fragment, {
-        children: [
-            et,
-            null == J || F
-                ? null
-                : (0, l.jsxs)("div", {
-                      className: M.ot,
-                      children: [
-                          (0, l.jsx)(p.E, {
-                              size: "custom",
-                              width: 20,
-                              height: 20,
-                              className: M.fT,
-                              color: u.A.unsafe_rawColors.YELLOW_300.css,
-                          }),
-                          (0, l.jsx)(f.E, {
-                              variant: "text-xs/normal",
-                              children: "string" == typeof J ? y.A.parse(J, !1, { allowLinks: !0 }) : J,
-                          }),
-                      ],
-                  }),
-        ],
+    if (L) return (0, a.jsx)("div", { className: I.h, children: (0, a.jsx)(u.y, { type: u.y.Type.PULSING_ELLIPSIS }) });
+    if (w) return (0, a.jsx)(S, { onClick: h });
+    let Y = (0, a.jsx)(N, {
+        onPaymentSourceAdd: h,
+        disabled: k,
+        handleChange: G,
+        paymentSourceOptions: O,
+        selectedPaymentSourceId: W,
+        newPaymentMethodOptionLabel: R,
+        noticeMessage: F,
     });
+    return null != D ? (0, a.jsx)(i.m, { asContainer: !0, text: D, children: Y }) : Y;
 }

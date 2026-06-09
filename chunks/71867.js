@@ -1,50 +1,38 @@
-n.d(t, { P: () => R });
+n.d(t, { P: () => M });
 var l = n(627968);
 n(64700);
-var i = n(877624),
-    a = n(742810),
-    r = n(234419),
-    s = n(549996),
-    o = n(503698),
-    u = n.n(o),
-    c = n(110259),
-    d = n(144165),
-    p = n(834730),
-    m = n(262427),
-    h = n(139286),
-    C = n(432029);
-let A = (e) => {
-    let { componentId: t, promotionBannerMarketingComponentFields: n, shouldUseOfferNotice: a, className: r } = e;
-    (0, h.A)({
-        type: c.ImpressionTypes.VIEW,
-        name: c.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-        properties: { component_type: i.C.PAYMENT_MODAL_BANNER, component_id: t },
+var r = n(877624),
+    a = n(234419),
+    i = n(549996),
+    s = n(562708),
+    o = n(144165),
+    u = n(262427),
+    c = n(139286),
+    d = n(432029);
+let p = (e) => {
+    let { componentId: t, promotionBannerMarketingComponentFields: n } = e;
+    (0, c.A)({
+        type: s.ImpressionTypes.VIEW,
+        name: s.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+        properties: { component_type: r.C.PAYMENT_MODAL_BANNER, component_id: t },
     });
-    let s = (0, l.jsx)(d._, { src: n.assetUrl, width: 48, height: 48, zoomable: !1 });
-    return a
-        ? (0, l.jsx)(m.J, { className: C.No, customGraphic: s, text: n.body })
-        : (0, l.jsx)("div", {
-              className: u()(C.kL, C.No, r),
-              children: (0, l.jsxs)("div", {
-                  className: C.Qs,
-                  children: [
-                      (0, l.jsx)("div", { children: s }),
-                      (0, l.jsx)(p.E, { variant: "text-sm/medium", color: "text-strong", children: n.body }),
-                  ],
-              }),
-          });
+    let a = (0, l.jsx)(o._, { src: n.assetUrl, width: 48, height: 48, zoomable: !1 });
+    return (0, l.jsx)(u.J, { className: d.No, customGraphic: a, text: n.body });
 };
-var E = n(462887),
-    y = n(97808),
-    P = n(736653),
-    S = n(854627),
-    _ = n(427262),
-    T = n(236834);
-let f = (e) => {
-        let { className: t, width: n = 83, height: i = 45 } = e;
+var m = n(503698),
+    A = n.n(m),
+    h = n(462887),
+    E = n(97808),
+    C = n(834730),
+    y = n(736653),
+    _ = n(854627),
+    P = n(427262),
+    S = n(236834);
+let I = (e) => {
+        let { className: t, width: n = 83, height: r = 45 } = e;
         return (0, l.jsxs)("svg", {
             width: n,
-            height: i,
+            height: r,
             viewBox: "0 0 83 45",
             fill: "none",
             xmlns: "http://www.w3.org/2000/svg",
@@ -310,11 +298,11 @@ let f = (e) => {
             ],
         });
     },
-    N = (e) => {
-        let { className: t, width: n = 83, height: i = 45 } = e;
+    T = (e) => {
+        let { className: t, width: n = 83, height: r = 45 } = e;
         return (0, l.jsxs)("svg", {
             width: n,
-            height: i,
+            height: r,
             viewBox: "0 0 83 45",
             fill: "none",
             xmlns: "http://www.w3.org/2000/svg",
@@ -580,52 +568,49 @@ let f = (e) => {
             ],
         });
     };
-var x = n(778712),
-    I = n(985018),
-    g = n(577454);
-let v = (e) => {
+var f = n(778712),
+    N = n(375708),
+    v = n(577454);
+let g = (e) => {
     let { className: t } = e,
-        n = (0, T.A)(),
-        { avatarSrc: i, eventHandlers: a } = (0, S.A)({ userId: n?.id, size: x._3.SIZE_32, animateOnHover: !0 }),
-        r = (0, P.DP)(),
-        s = (0, E.q)(r),
-        o = _.Ay.getName(n);
+        n = (0, S.A)(),
+        { avatarSrc: r, eventHandlers: a } = (0, _.A)({ userId: n?.id, size: f._3.SIZE_32, animateOnHover: !0 }),
+        i = (0, y.DP)(),
+        s = (0, h.q)(i),
+        o = P.Ay.getName(n);
     return null == n
         ? null
         : (0, l.jsxs)("div", {
-              className: u()(g.$6, t),
+              className: A()(v.$6, t),
               children: [
                   (0, l.jsx)("div", {
-                      className: g.H,
-                      children: (0, l.jsx)(y.eu, { src: i, "aria-label": n.username, size: x._3.SIZE_32, ...a }),
+                      className: v.H,
+                      children: (0, l.jsx)(E.eu, { src: r, "aria-label": n.username, size: f._3.SIZE_32, ...a }),
                   }),
-                  (0, l.jsx)(p.E, {
+                  (0, l.jsx)(C.E, {
                       variant: "text-xs/bold",
-                      className: g.U_,
-                      children: I.intl.format(I.t.oxhCOl, { userName: o }),
+                      className: v.U_,
+                      children: N.intl.format(N.t.oxhCOl, { userName: o }),
                   }),
-                  (0, l.jsx)(s ? f : N, { className: g.q3 }),
+                  (0, l.jsx)(s ? I : T, { className: v.q3 }),
               ],
           });
 };
-var M = n(937008),
-    b = n(788868);
-function R(e) {
-    let { planSkuId: t, referralTrialOfferId: n, className: o } = e,
-        { isGift: u } = (0, M.Pv)(),
-        c = (0, r.V)(n),
-        d = (0, s.c)(i.C.PAYMENT_MODAL_BANNER),
-        p = (0, a.D7)({ location: "PremiumPaymentPromotionBanner" });
-    return u || t !== b.pe.TIER_2
+var x = n(937008),
+    R = n(788868);
+function M(e) {
+    let { planSkuId: t, referralTrialOfferId: n, className: s } = e,
+        { isGift: o } = (0, x.Pv)(),
+        u = (0, a.V)(n),
+        c = (0, i.c)(r.C.PAYMENT_MODAL_BANNER);
+    return o || t !== R.pe.TIER_2
         ? null
-        : null != d && "paymentModalBanner" === d.properties.properties.oneofKind
-          ? (0, l.jsx)(A, {
-                className: o,
-                shouldUseOfferNotice: p,
-                componentId: d.id,
-                promotionBannerMarketingComponentFields: d.properties.properties.paymentModalBanner,
+        : null != c && "paymentModalBanner" === c.properties.properties.oneofKind
+          ? (0, l.jsx)(p, {
+                componentId: c.id,
+                promotionBannerMarketingComponentFields: c.properties.properties.paymentModalBanner,
             })
-          : c?.referrer_id != null
-            ? (0, l.jsx)(v, { className: o })
+          : u?.referrer_id != null
+            ? (0, l.jsx)(g, { className: s })
             : null;
 }
