@@ -1,53 +1,52 @@
-n.d(t, { _: () => J });
+n.d(t, { _: () => $ });
 var l = n(627968),
     r = n(64700),
-    i = n(284009),
-    a = n.n(i),
-    s = n(735438),
-    o = n(877624),
-    u = n(17928),
-    c = n(554146),
-    d = n(192308),
-    p = n(964486),
-    m = n(426398),
-    h = n(558620),
-    A = n(571878),
-    E = n(841702),
-    C = n(367727),
-    y = n(380619),
-    P = n(374200),
-    S = n(771566),
-    _ = n(174459),
-    I = n(625494),
-    T = n(45938),
+    i = n(735438),
+    a = n(877624),
+    s = n(17928),
+    o = n(554146),
+    u = n(192308),
+    c = n(964486),
+    d = n(71804),
+    p = n(426398),
+    m = n(558620),
+    h = n(571878),
+    A = n(841702),
+    E = n(367727),
+    C = n(380619),
+    y = n(374200),
+    P = n(771566),
+    S = n(174459),
+    _ = n(625494),
+    I = n(45938),
     f = n(615396),
-    N = n(937008),
-    v = n(491057),
-    g = n(482132),
-    x = n(364840),
-    R = n(821609),
-    M = n(778712),
-    b = n(97808),
-    L = n(775602),
-    j = n(688810),
-    O = n(912140),
-    w = n(674658),
-    D = n(780898),
-    U = n(344346),
-    k = n(898461),
-    G = n(837015),
-    F = n(61750),
-    Y = n(287809),
-    B = n(758836),
-    W = n(375708),
-    H = n(258915);
-function V(e) {
+    T = n(937008),
+    N = n(491057),
+    v = n(482132),
+    g = n(364840),
+    x = n(821609),
+    R = n(778712),
+    M = n(97808),
+    b = n(775602),
+    L = n(688810),
+    j = n(912140),
+    O = n(674658),
+    w = n(780898),
+    D = n(344346),
+    U = n(898461),
+    k = n(837015),
+    G = n(61750),
+    F = n(287809),
+    Y = n(758836),
+    B = n(375708),
+    W = n(258915);
+function H(e) {
     let { rewardSkuId: t, onClose: n, onRewardModalClose: i } = e,
-        a = (0, u.bG)([Y.default], () => Y.default.getCurrentUser()),
-        s = (0, u.bG)([L.A], () => L.A.useReducedMotion),
-        { analyticsLocations: o } = (0, j.Ay)(),
-        c = M._3.SIZE_32,
-        { product: d, isFetching: p } = (0, w.q)(t),
+        a = (0, s.bG)([F.default], () => F.default.getCurrentUser()),
+        o = (0, s.bG)([b.A], () => b.A.useReducedMotion),
+        { analyticsLocations: u } = (0, L.Ay)(),
+        c = R._3.SIZE_32,
+        { product: d, isFetching: p } = (0, O.q)(t),
         [m, h] = r.useState(!1),
         A = d?.items[0],
         {
@@ -58,42 +57,42 @@ function V(e) {
             () =>
                 null == A
                     ? { isNameplateReward: !1, nameplateData: null, rewardAvatarDecorationSrc: null }
-                    : (0, G.F)(A)
+                    : (0, k.F)(A)
                       ? {
                             isNameplateReward: !0,
                             nameplateData: {
                                 skuId: A.skuId,
                                 src: A.asset,
-                                palette: (0, D.H6)(A.palette ?? "sky"),
+                                palette: (0, w.H6)(A.palette ?? "sky"),
                                 imgAlt: A.label,
                             },
                             rewardAvatarDecorationSrc: null,
                         }
-                      : (0, k.T)(A)
+                      : (0, U.T)(A)
                         ? {
                               isNameplateReward: !1,
                               nameplateData: null,
-                              rewardAvatarDecorationSrc: (0, O.A)({
+                              rewardAvatarDecorationSrc: (0, j.A)({
                                   legacyAssetId: A.asset,
                                   skuId: A.skuId,
                                   size: c,
-                                  canAnimate: !s,
+                                  canAnimate: !o,
                               }),
                           }
                         : { isNameplateReward: !1, nameplateData: null, rewardAvatarDecorationSrc: null },
-            [A, c, s],
+            [A, c, o],
         );
-    return (0, l.jsx)(g.UX, {
-        children: (0, l.jsx)(x.j, {
+    return (0, l.jsx)(v.UX, {
+        children: (0, l.jsx)(g.j, {
             children: (0, l.jsxs)("div", {
-                className: H.W,
+                className: W.W,
                 children: [
                     E && null != C
                         ? (0, l.jsx)("div", {
-                              className: H.D,
+                              className: W.D,
                               onMouseEnter: () => h(!0),
                               onMouseLeave: () => h(!1),
-                              children: (0, l.jsx)(U.a, {
+                              children: (0, l.jsx)(D.a, {
                                   user: a,
                                   nameplate: null,
                                   nameplateData: C,
@@ -102,24 +101,24 @@ function V(e) {
                                   isHighlighted: m,
                               }),
                           })
-                        : (0, l.jsx)(b.Js, {
+                        : (0, l.jsx)(M.Js, {
                               "aria-label": a?.username,
                               size: c,
-                              src: a?.getAvatarURL(void 0, (0, M.FT)(c), !s),
+                              src: a?.getAvatarURL(void 0, (0, R.FT)(c), !o),
                               avatarDecoration: y,
                           }),
-                    (0, l.jsx)(R.$, {
+                    (0, l.jsx)(x.$, {
                         variant: "primary",
-                        text: W.intl.string(W.t.kMYVwv),
+                        text: B.intl.string(B.t.kMYVwv),
                         loading: p,
                         onClick: () => {
                             null != d &&
                                 (n(),
-                                (0, F.A)({
+                                (0, G.A)({
                                     product: d,
                                     shouldShowPromotionalExperience: !0,
-                                    analyticsLocations: o,
-                                    purchaseType: B.gs.PROMOTIONAL,
+                                    analyticsLocations: u,
+                                    purchaseType: Y.gs.PROMOTIONAL,
                                     onCloseCallback: i,
                                 }));
                         },
@@ -129,15 +128,15 @@ function V(e) {
         }),
     });
 }
-var K = n(615310),
-    Z = n(216641),
-    q = n(921925),
-    z = n(652215),
-    $ = n(49999);
-function J(e) {
+var V = n(615310),
+    K = n(216641),
+    Z = n(921925),
+    q = n(652215),
+    z = n(49999);
+function $(e) {
     let t,
         {
-            handleClose: i,
+            handleClose: g,
             planGroup: x,
             onSubscriptionConfirmation: R,
             renderPurchaseConfirmation: M,
@@ -145,7 +144,7 @@ function J(e) {
             followupSKUInfo: L,
             continueSessionToInitialStep: j,
         } = e,
-        { paymentSources: O } = (0, m.jm)(),
+        { paymentSources: O } = (0, p.jm)(),
         {
             activeSubscription: w,
             selectedSkuId: D,
@@ -154,7 +153,7 @@ function J(e) {
             isPremiumGroupPurchase: G,
             startingPremiumSubscriptionPlanId: F,
             startingFractionalPremiumEndsAt: Y,
-        } = (0, A.t4)((e) => ({
+        } = (0, h.t4)((e) => ({
             activeSubscription: e.activeSubscription,
             selectedSkuId: e.selectedSkuId,
             updatedSubscription: e.updatedSubscription,
@@ -163,10 +162,10 @@ function J(e) {
             startingPremiumSubscriptionPlanId: e.startingPremiumSubscriptionPlanId,
             startingFractionalPremiumEndsAt: e.startingFractionalPremiumEndsAt,
         })),
-        B = (0, h.A)(),
-        W = (0, K.bB)(),
+        B = (0, m.A)(),
+        W = (0, V.bB)(),
         {
-            isGift: H,
+            isGift: $,
             giftRecipient: J,
             giftCode: X,
             hasSentMessage: Q,
@@ -175,29 +174,30 @@ function J(e) {
             claimableRewards: en,
             selectedGiftingPromotionReward: el,
             openGiftingBadgePostPurchaseModal: er,
-        } = (0, N.Pv)(),
-        { confirmationFooter: ei } = (0, v.cG)(),
-        ea = (0, y.px)(B, H, en),
-        es = (0, y.Mq)(B),
-        eo = (0, E.Mv)(el, !1),
-        eu = (0, u.bG)([P.A], () => P.A.getGiftPromotion()?.id),
-        ec = (0, u.bG)([P.A], () => {
-            let e = P.A.getMarketingComponentByType(o.C.GIFT_REMINDER_NAGBAR);
+        } = (0, T.Pv)(),
+        { confirmationFooter: ei } = (0, N.cG)(),
+        ea = (0, C.px)(B, $, en),
+        es = (0, C.Mq)(B),
+        eo = (0, A.Mv)(el, !1),
+        eu = (0, s.bG)([y.A], () => y.A.getGiftPromotion()?.id),
+        ec = (0, s.bG)([y.A], () => {
+            let e = y.A.getMarketingComponentByType(a.C.GIFT_REMINDER_NAGBAR);
             return null == e || "giftReminderNagbar" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftReminderNagbar;
         }),
-        ed = (0, Z.g)(O, k),
-        ep = H && null != el && null != eo && es;
-    a()(null != B, "Expected plan to selected"),
-        a()(null != D, "Expected selectedSkuId"),
-        a()(null != W, "Step should be set");
-    let em = r.useCallback(() => {
-        i(), R?.();
-    }, [i, R]);
-    (0, p.Ay)(() => {
+        ed = (0, K.g)(O, k),
+        ep = $ && null != el && null != eo && es,
+        em = { selectedPlan: B, selectedSkuId: D, step: W };
+    if (null == B) throw new d.v({ message: "Expected plan to be selected", extraSentryInformation: em });
+    if (null == D) throw new d.v({ message: "Expected selectedSkuId", extraSentryInformation: em });
+    if (null == W) throw new d.v({ message: "Step should be set", extraSentryInformation: em });
+    let eh = r.useCallback(() => {
+        g(), R?.();
+    }, [g, R]);
+    (0, c.Ay)(() => {
         G &&
-            _.default.track(z.HAw.PREMIUM_GROUP_PURCHASE_CONFIRMATION_VIEWED, {
+            S.default.track(q.HAw.PREMIUM_GROUP_PURCHASE_CONFIRMATION_VIEWED, {
                 has_updated_subscription: null != U,
                 has_any_premium_group: U?.hasAnyPremiumGroup ?? !1,
                 subscription_id: U?.id,
@@ -207,12 +207,12 @@ function J(e) {
             function e() {
                 if (G)
                     if (null != U && U.hasAnyPremiumGroup) {
-                        _.default.track(z.HAw.PREMIUM_GROUP_PURCHASE_FRIEND_SELECTOR_OPENED, { subscription_id: U.id });
-                        let e = (0, s.uniqueId)("premium-group-purchase-flow-modal");
-                        (0, d.openModalLazy)(
+                        S.default.track(q.HAw.PREMIUM_GROUP_PURCHASE_FRIEND_SELECTOR_OPENED, { subscription_id: U.id });
+                        let e = (0, i.uniqueId)("premium-group-purchase-flow-modal");
+                        (0, u.openModalLazy)(
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("45147"),
+                                    n.e("88860"),
                                     n.e("44616"),
                                     n.e("96680"),
                                     n.e("85579"),
@@ -223,44 +223,44 @@ function J(e) {
                                         subscription: U,
                                         isFromPurchaseFlow: !0,
                                         onClose: async () => {
-                                            I._.dispatch(z.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED),
+                                            _._.dispatch(q.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED),
                                                 await t.onClose();
                                         },
                                     });
                             },
                             {
                                 onCloseRequest: () => {
-                                    I._.dispatch(z.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED), (0, d.closeModal)(e);
+                                    _._.dispatch(q.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED), (0, u.closeModal)(e);
                                 },
                                 modalKey: e,
                             },
                         );
                     } else
-                        _.default.track(z.HAw.PREMIUM_GROUP_PURCHASE_FRIEND_SELECTOR_SKIPPED, {
+                        S.default.track(q.HAw.PREMIUM_GROUP_PURCHASE_FRIEND_SELECTOR_SKIPPED, {
                             has_updated_subscription: null != U,
                             has_any_premium_group: U?.hasAnyPremiumGroup ?? !1,
                         }),
-                            I._.dispatch(z.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED);
+                            _._.dispatch(q.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED);
             }
             return (
-                I._.subscribe(z.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
+                _._.subscribe(q.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
                 () => {
-                    I._.unsubscribe(z.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
+                    _._.unsubscribe(q.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
                 }
             );
         }, [G, U]),
         r.useEffect(() => {
-            !H || null == J || null == X || Q || ee || (0, T.Ik)(J) || et({ onSubscriptionConfirmation: R });
-        }, [et, H, J, X, Q, ee, R]),
+            !$ || null == J || null == X || Q || ee || (0, I.Ik)(J) || et({ onSubscriptionConfirmation: R });
+        }, [et, $, J, X, Q, ee, R]),
         r.useEffect(() => {
             ea &&
                 null != ec &&
                 null != eu &&
-                (0, C.qr)(c.M.GIFTING_PROMOTION_REMINDER, eu, { dismissAction: $.i.INDIRECT_ACTION });
+                (0, E.qr)(o.M.GIFTING_PROMOTION_REMINDER, eu, { dismissAction: z.i.INDIRECT_ACTION });
         }, [ec, eu, ea]);
-    let eh = null != j ? S.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
-    if (null != M) t = M(B, em, U);
-    else if (H) t = (0, l.jsx)(S.fw, { planId: B.id, onClose: em });
+    let eA = null != j ? P.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
+    if (null != M) t = M(B, eh, U);
+    else if ($) t = (0, l.jsx)(P.fw, { planId: B.id, onClose: eh });
     else {
         let e =
             F === B.id
@@ -270,21 +270,21 @@ function J(e) {
                       startingPremiumSubscriptionPlanId: F,
                       isDowngrade: null != w && (0, f.vT)(w, B.id, x),
                   };
-        t = (0, l.jsx)(S.Ay, {
+        t = (0, l.jsx)(P.Ay, {
             planId: B.id,
-            onClose: em,
+            onClose: eh,
             paymentSourceType: ed,
             hideClose: null != ei,
             startingFractionalPremiumEndsAt: Y,
-            customCTAType: eh,
+            customCTAType: eA,
             ...e,
         });
     }
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsxs)(g.dZ, { children: [(0, l.jsx)(q.A, {}), t] }),
+            (0, l.jsxs)(v.dZ, { children: [(0, l.jsx)(Z.A, {}), t] }),
             null != ei && ei,
-            ep && null != el && (0, l.jsx)(V, { rewardSkuId: el, onClose: em, onRewardModalClose: er }),
+            ep && null != el && (0, l.jsx)(H, { rewardSkuId: el, onClose: eh, onRewardModalClose: er }),
         ],
     });
 }
