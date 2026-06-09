@@ -1,32 +1,27 @@
-n.d(t, { I: () => p });
+n.d(t, { I: () => d });
 var l = n(627968),
-    a = n(64700),
-    i = n(661531),
-    r = n(885574),
-    s = n(262427),
-    o = n(212739);
+    r = n(64700),
+    i = n(683071),
+    a = n(834730),
+    s = n(212739);
 n(25827);
-var u = n(788868),
-    c = n(594387),
-    d = n(375708);
-function p(e) {
-    let { skuId: t, isGift: n, className: p } = e,
-        m = (0, o.O)();
-    return a.useMemo(
+var o = n(788868),
+    u = n(594387),
+    c = n(375708);
+function d(e) {
+    let { skuId: t, isGift: n } = e,
+        d = (0, s.O)();
+    return r.useMemo(
         () =>
-            n || t !== u.pe.TIER_2 || !1 === m
+            n || t !== o.pe.TIER_2 || !1 === d
                 ? null
-                : (0, l.jsx)(s.J, {
-                      className: p,
-                      gradientColor: "nitro-pink",
-                      customGraphic: (0, l.jsx)(r.m, {
-                          size: "custom",
-                          width: 16,
-                          height: 16,
-                          color: i.A.colors.ICON_DEFAULT,
+                : (0, l.jsx)(i.w, {
+                      type: "info",
+                      children: (0, l.jsx)(a.E, {
+                          variant: "text-sm/medium",
+                          children: c.intl.format(u.default.Urtyu9, { days: 7 }),
                       }),
-                      text: d.intl.format(c.default.Urtyu9, { days: 7 }),
                   }),
-        [n, t, m, p],
+        [n, t, d],
     );
 }

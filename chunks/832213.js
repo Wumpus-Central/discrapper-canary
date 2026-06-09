@@ -8,6 +8,7 @@ var i,
         (i.GPU = "gpu"),
         (i.Utility = "utility"),
         (i.Crashpad = "crashpad"),
+        (i.Clips = "clips"),
         i);
 class s {
     cpuCoreCount;

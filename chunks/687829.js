@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => f }), n(321073);
+n.d(t, { A: () => E }), n(321073);
 var i = n(439372),
     r = n(967347),
-    s = n(954571),
+    s = n(174459),
     a = n(927813),
     o = n(723702),
     l = n(321034),
-    d = n(19575),
-    _ = n(652215);
-let u = 5 * a.A.Millis.MINUTE;
-function c() {
+    u = n(19575),
+    c = n(652215);
+let d = 5 * a.A.Millis.MINUTE;
+function _() {
     return o.isPlatformEmbedded;
 }
-async function E() {
+async function h() {
     let e = l.A.getMemoryUsageElectronProcessTypeDetails();
     if (null == e) return null;
     let t = {
@@ -23,6 +23,7 @@ async function E() {
                 e.gpu?.wss_priv_kb ?? -1,
                 e.crashpad?.wss_priv_kb ?? -1,
                 e.utility?.wss_priv_kb ?? -1,
+                e.clips?.wss_priv_kb ?? -1,
             ],
             electron_process_memory_private_and_shared: [
                 e.unknown?.wss_kb ?? -1,
@@ -31,6 +32,7 @@ async function E() {
                 e.gpu?.wss_kb ?? -1,
                 e.crashpad?.wss_kb ?? -1,
                 e.utility?.wss_kb ?? -1,
+                e.clips?.wss_kb ?? -1,
             ],
             electron_process_type_count: [
                 e.unknown?.proc_count ?? 0,
@@ -39,6 +41,7 @@ async function E() {
                 e.gpu?.proc_count ?? 0,
                 e.crashpad?.proc_count ?? 0,
                 e.utility?.proc_count ?? 0,
+                e.clips?.proc_count ?? 0,
             ],
         },
         n = await (0, r.w)();
@@ -49,14 +52,14 @@ async function E() {
         t
     );
 }
-async function h() {
+async function f() {
     let e,
         t = { gpu_dedicated_memory: [], gpu_renderer_used_memory: [] };
     if (!o.isPlatformEmbedded || !(0, o.isWindows)()) return t;
     try {
         if (
-            (await d.Ay.ensureModule("discord_media"),
-            (e = d.Ay.requireModule("discord_media")),
+            (await u.Ay.ensureModule("discord_media"),
+            (e = u.Ay.requireModule("discord_media")),
             e?.getMemoryUsageBlob == null)
         )
             return t;
@@ -76,26 +79,26 @@ async function h() {
             } else i.push(-1);
     return { gpu_dedicated_memory: n, gpu_renderer_used_memory: i };
 }
-class m extends i.A {
+class p extends i.A {
     _heartbeatAnalyticsInterval = null;
     actions = { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() };
     _initialize() {}
     _terminate() {
-        c() && (clearInterval(this._heartbeatAnalyticsInterval), (this._heartbeatAnalyticsInterval = null));
+        _() && (clearInterval(this._heartbeatAnalyticsInterval), (this._heartbeatAnalyticsInterval = null));
     }
     handlePostConnectionOpen() {
-        c() &&
+        _() &&
             (clearInterval(this._heartbeatAnalyticsInterval),
             (this._heartbeatAnalyticsInterval = setInterval(async () => {
                 await this.trackPerfAnalytics();
-            }, u)));
+            }, d)));
     }
     async trackPerfAnalytics() {
         let e,
             t,
             n,
             i,
-            r = await E();
+            r = await h();
         if (null == r) return;
         let a =
                 ((e = l.A.getMemoryHeapStats()),
@@ -115,9 +118,9 @@ class m extends i.A {
                 (i = null),
                 null != t && (i = [t.allocated, t.total]),
                 { v8_heap_stats: n, blink_memory_stats: i }),
-            o = await h(),
-            d = { ...r, ...a, ...o };
-        s.default.track(_.HAw.DESKTOP_PERF_HEARTBEAT, d);
+            o = await f(),
+            u = { ...r, ...a, ...o };
+        s.default.track(c.HAw.DESKTOP_PERF_HEARTBEAT, u);
     }
 }
-let f = new m();
+let E = new p();
