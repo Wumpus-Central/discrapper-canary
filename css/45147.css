@@ -1296,22 +1296,19 @@
 }
 
 .treatmentCContent__101ad {
-    flex-wrap: wrap;
     width: 100%
 }
 
 .treatmentCContentColumn__101ad {
-    max-width: 514px;
+    flex-grow: 1;
+    flex-shrink: 0;
     min-width: 300px;
-    text-align: start;
-    width: 100%
+    text-align: start
 }
 
 .treatmentCReferralBanner__101ad {
     align-self: flex-start;
-    margin-inline-start: auto;
     max-width: 594px;
-    min-width: 400px;
     width: 100%
 }
 
@@ -1320,25 +1317,8 @@
         flex-direction: column
     }
 
-    .treatmentCContent__101ad {
-        flex-direction: row
-    }
-
     .treatmentAArtContainer__101ad {
         align-self: flex-start
-    }
-}
-
-@container premium-marketing-page-container (max-width: 1140px) {
-    .treatmentCReferralBanner__101ad {
-        margin-inline-start: 0;
-        max-width: 562px
-    }
-}
-
-@container premium-marketing-page-container (max-width: 720px) {
-    .treatmentCReferralBanner__101ad {
-        max-width: none
     }
 }
 
@@ -4360,6 +4340,20 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     gap: var(--space-8)
 }
 
+.child__8d0ee {
+    align-items: center;
+    background: pink;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    font-size: 24px;
+    height: 100px;
+    justify-content: center;
+    padding: 12px;
+    width: 100px
+}
+
 .container__72cd3 {
     align-items: center;
     border-radius: 0 0 var(--radius-sm) var(--radius-sm);
@@ -4937,6 +4931,19 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent
+}
+
+.nitroWheelLockup_ff9a65 {
+    display: grid;
+    place-items: center
+}
+
+.nitroWheelLockupLayer_ff9a65 {
+    grid-area: 1/1
+}
+
+.nitroWheelLockupLayer_ff9a65 img {
+    display: block
 }
 
 .pricePerInterval_fd0764 {

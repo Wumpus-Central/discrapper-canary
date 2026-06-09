@@ -1,16 +1,3 @@
-.nitroWheelLockup_ff9a65 {
-    display: grid;
-    place-items: center
-}
-
-.nitroWheelLockupLayer_ff9a65 {
-    grid-area: 1/1
-}
-
-.nitroWheelLockupLayer_ff9a65 img {
-    display: block
-}
-
 .wrapper__553bf {
     isolation: isolate;
     position: relative
