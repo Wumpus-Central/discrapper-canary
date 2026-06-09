@@ -754,16 +754,21 @@
 }
 
 .container_a4e9ae {
-    align-items: center;
-    display: flex;
+    --custom-avatar-size: 56px;
     flex-direction: row;
     gap: var(--space-16)
 }
 
+.avatar_a4e9ae,
+.container_a4e9ae {
+    align-items: center;
+    display: flex
+}
+
 .avatar_a4e9ae {
     flex-shrink: 0;
-    height: 67.2px;
-    width: 67.2px
+    height: calc(var(--custom-avatar-size)*1.2);
+    width: calc(var(--custom-avatar-size)*1.2)
 }
 
 .displayName_a4e9ae {
@@ -7215,9 +7220,4 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 
 .offerSplashWrapper__11fc5 .wishlistButton__11fc5 {
     top: calc(var(--space-16)*-1)
-}
-
-.container_e03deb {
-    cursor: pointer;
-    padding: 2px
 }
