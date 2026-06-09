@@ -18,8 +18,8 @@ var n = i(627968),
     h = i(606758),
     E = i(287809),
     j = i(474090),
-    N = i(661492),
-    v = i(228366);
+    v = i(661492),
+    N = i(228366);
 let T = { sentGifts: {} };
 function S(e, t) {
     return `${e}:${t}`;
@@ -48,7 +48,7 @@ class _ extends o.Ay.PersistedStore {
         for (let [t, i] of Object.entries(T.sentGifts)) new Date(i.expiresAt) < e && delete T.sentGifts[t];
     }
 }
-let C = new _(v.h, {
+let C = new _(N.h, {
     WISHLIST_GIFT_SENT: function (e) {
         let t = S(e.skuId, e.recipientId),
             i = new Date(),
@@ -138,7 +138,7 @@ function H(e) {
             specificProductOrVariant: g,
             isPurchased: f,
         } = (0, k.z)({ userId: r, product: i, location: l, onError: s }),
-        x = (0, N.qq)(g),
+        x = (0, v.qq)(g),
         p = f && !c,
         I = !x || p,
         A = X(x && p ? y.intl.string(y.t.nKA6v8) : void 0);
@@ -216,13 +216,13 @@ function et(e) {
             isItemOwned: E,
             cardBackdrop: j,
         } = e,
-        v = l.useRef(null),
+        N = l.useRef(null),
         T = l.useRef(f);
     l.useEffect(() => {
         T.current = f;
     }, [f]),
         l.useEffect(() => {
-            let e = v.current;
+            let e = N.current;
             if (null == e) return;
             let t = () => {
                 T.current(!1);
@@ -258,7 +258,7 @@ function et(e) {
         b = l.useCallback(() => {
             (0, h.XA)(Q.jM.SOMETHING_WENT_WRONG), c.O.announce(y.intl.string(y.t.F8FvUy));
         }, []),
-        R = null != u ? (0, n.jsx)("div", { ref: v, className: Z.BU, children: u }) : null,
+        R = null != u ? (0, n.jsx)("div", { ref: N, className: Z.BU, children: u }) : null,
         { label: k, icon: D, isPromptingPurchase: G } = (0, K.h)({ wishlistOwner: i, isOwned: E });
     return (0, n.jsxs)("div", {
         className: Z.kL,
@@ -273,7 +273,7 @@ function et(e) {
                 disableHoverOrFocus: o,
                 onHoverOrFocusChange: f,
                 onClick: _,
-                "aria-label": y.intl.formatToPlainString(y.t.ZBB4Ty, { productName: (0, N.TC)(t.sku) }),
+                "aria-label": y.intl.formatToPlainString(y.t.ZBB4Ty, { productName: (0, v.TC)(t.sku) }),
                 children: [
                     j,
                     (0, n.jsx)(K.A, { spec: ee, onClick: G ? C : _, isHoveringOrFocusing: g, label: k, icon: D }),
@@ -379,16 +379,16 @@ function el(e) {
             ...o
         } = e,
         u = l.useCallback(() => {
-            i
-                ? (0, f.x)(A.closeUserProfileModal)
-                : (0, g.A)({
-                      isGift: !0,
-                      giftRecipient: s,
-                      giftingOrigin: J.vQ.USER_PROFILE_WISHLIST,
-                      subscriptionTier: t.skuId,
-                      analyticsLocations: r,
-                  });
-        }, [i, t.skuId, s, r]);
+            if (i) return void (0, f.x)(A.closeUserProfileModal);
+            let e = s.id === a.id;
+            (0, g.A)({
+                isGift: !e,
+                giftRecipient: s,
+                giftingOrigin: J.vQ.USER_PROFILE_WISHLIST,
+                subscriptionTier: t.skuId,
+                analyticsLocations: r,
+            });
+        }, [i, t.skuId, s, a.id, r]);
     return (0, n.jsx)(et, {
         item: t,
         wishlistOwner: s,
