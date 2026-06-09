@@ -2903,35 +2903,37 @@ function is(e) {
                 d = (0, en.N2)({ user: l, guildId: n ?? void 0 }),
                 u = (0, en.Xf)({ user: l, guildId: n ?? void 0 }),
                 c = (0, en.Xf)({ user: l, guildId: void 0 }),
-                g = eW.Ay.canUsePremiumProfileCustomization(l),
-                f = g || null == n,
-                m = (0, lF.sk)("UserProfileModalV2EditableBanner"),
-                p = null != n,
+                g = (0, lF.sk)("UserProfileModalV2EditableBanner"),
+                f = eW.Ay.canUsePremiumProfileCustomization(l),
+                m = null == n,
+                p = m || f,
+                x = g && (m || f),
+                v = null != n,
                 {
-                    pendingBanner: x,
-                    pendingProfileEffect: v,
-                    pendingProfileFrame: h,
+                    pendingBanner: h,
+                    pendingProfileEffect: A,
+                    pendingProfileFrame: b,
                 } = (0, s.bG)([ea.A], () => ea.A.getPendingChanges(n ?? void 0)),
-                A = (0, s.bG)([B.A], () =>
+                j = (0, s.bG)([B.A], () =>
                     null != n ? B.A.getGuildMemberProfile(l.id, n)?.banner : B.A.getUserProfile(l.id)?.banner,
                 ),
-                b = (0, s.bG)([er.default], () => er.default.getCurrentUser()?.banner != null),
-                j = (0, s.bG)([B.A], () => B.A.getUserProfile(l.id)?.profileEffect != null),
-                C = (0, s.bG)([B.A], () => B.A.getUserProfile(l.id)?.profileFrame != null),
-                y = (0, en.Ac)(x, A),
-                E = p && b,
-                P = p && j,
-                k = p && C,
-                R = void 0 === v ? null != d : null != v,
-                S = void 0 === h ? null != u : null != h,
-                D = (0, en.lw)({
-                    pendingValue: h,
+                C = (0, s.bG)([er.default], () => er.default.getCurrentUser()?.banner != null),
+                y = (0, s.bG)([B.A], () => B.A.getUserProfile(l.id)?.profileEffect != null),
+                E = (0, s.bG)([B.A], () => B.A.getUserProfile(l.id)?.profileFrame != null),
+                P = (0, en.Ac)(h, j),
+                k = v && C,
+                R = v && y,
+                S = v && E,
+                D = void 0 === A ? null != d : null != A,
+                T = void 0 === b ? null != u : null != b,
+                O = (0, en.lw)({
+                    pendingValue: b,
                     userValue: c,
                     guildValue: null != n ? u : void 0,
                     guildId: n ?? void 0,
                 }),
-                T = (0, N.A)(D?.skuId, "UserProfileModalV2EditableBanner"),
-                O = i.useCallback(() => {
+                L = (0, N.A)(O?.skuId, "UserProfileModalV2EditableBanner"),
+                M = i.useCallback(() => {
                     r(),
                         (0, l0.XD)({
                             uploadType: l1.HL.BANNER,
@@ -2940,7 +2942,7 @@ function is(e) {
                             stackingBehavior: "stack",
                         });
                 }, [r, a, n]),
-                L = i.useCallback(() => {
+                G = i.useCallback(() => {
                     r(),
                         (0, nc.W)({
                             analyticsLocations: o,
@@ -2949,62 +2951,62 @@ function is(e) {
                             stackingBehavior: "stack",
                         });
                 }, [r, o, n, d]),
-                M = i.useCallback(() => {
-                    r(), (0, l0.rM)(null, A, (e) => (0, eK.p)({ guildId: n ?? void 0, banner: e }));
-                }, [r, n, A]),
-                G = i.useCallback(() => {
+                _ = i.useCallback(() => {
+                    r(), (0, l0.rM)(null, j, (e) => (0, eK.p)({ guildId: n ?? void 0, banner: e }));
+                }, [r, n, j]),
+                V = i.useCallback(() => {
                     r(), (0, eK.p)({ guildId: n ?? void 0, profileEffect: null });
                 }, [r, n]),
-                _ = i.useCallback(() => {
+                U = i.useCallback(() => {
                     r(),
                         (0, nA.w)({
                             analyticsLocations: o,
                             guild: null != n ? (w.A.getGuild(n) ?? void 0) : void 0,
-                            initialSelectedProfileFrame: T,
+                            initialSelectedProfileFrame: L,
                             stackingBehavior: "stack",
                         });
-                }, [r, o, n, T]),
-                V = i.useCallback(() => {
+                }, [r, o, n, L]),
+                F = i.useCallback(() => {
                     r(), (0, eK.p)({ guildId: n ?? void 0, profileFrame: null });
                 }, [r, n]);
             return i.useMemo(() => {
                 let e = [];
                 return (
-                    g &&
-                        e.push(
-                            (0, t.jsx)(
-                                t7.Dr,
-                                { id: "change-banner", label: eV.intl.string(eV.t.N0bC3P), action: O },
-                                "change-banner",
-                            ),
-                        ),
                     f &&
                         e.push(
                             (0, t.jsx)(
                                 t7.Dr,
-                                { id: "change-effect", label: eV.intl.string(eV.t["/6nv6N"]), action: L },
-                                "change-effect",
+                                { id: "change-banner", label: eV.intl.string(eV.t.N0bC3P), action: M },
+                                "change-banner",
                             ),
                         ),
-                    m &&
+                    p &&
                         e.push(
                             (0, t.jsx)(
                                 t7.Dr,
-                                { id: "change-frame", label: eV.intl.string(eV.t["oTSa/q"]), action: _ },
+                                { id: "change-effect", label: eV.intl.string(eV.t["/6nv6N"]), action: G },
+                                "change-effect",
+                            ),
+                        ),
+                    x &&
+                        e.push(
+                            (0, t.jsx)(
+                                t7.Dr,
+                                { id: "change-frame", label: eV.intl.string(eV.t["oTSa/q"]), action: U },
                                 "change-frame",
                             ),
                         ),
-                    g &&
-                        y &&
+                    f &&
+                        P &&
                         e.push(
-                            E
+                            k
                                 ? (0, t.jsx)(
                                       t7.Dr,
                                       {
                                           id: "reset-banner",
                                           color: "danger",
                                           label: eV.intl.string(eV.t.jHlJNS),
-                                          action: M,
+                                          action: _,
                                       },
                                       "reset-banner",
                                   )
@@ -3014,22 +3016,22 @@ function is(e) {
                                           id: "remove-banner",
                                           color: "danger",
                                           label: eV.intl.string(eV.t.tT9n7D),
-                                          action: M,
+                                          action: _,
                                       },
                                       "remove-banner",
                                   ),
                         ),
-                    f &&
-                        R &&
+                    p &&
+                        D &&
                         e.push(
-                            P
+                            R
                                 ? (0, t.jsx)(
                                       t7.Dr,
                                       {
                                           id: "reset-effect",
                                           color: "danger",
                                           label: eV.intl.string(eV.t.Lb7lu9),
-                                          action: G,
+                                          action: V,
                                       },
                                       "reset-effect",
                                   )
@@ -3039,22 +3041,22 @@ function is(e) {
                                           id: "remove-effect",
                                           color: "danger",
                                           label: eV.intl.string(eV.t.zUOlT6),
-                                          action: G,
+                                          action: V,
                                       },
                                       "remove-effect",
                                   ),
                         ),
-                    m &&
-                        S &&
+                    x &&
+                        T &&
                         e.push(
-                            k
+                            S
                                 ? (0, t.jsx)(
                                       t7.Dr,
                                       {
                                           id: "reset-frame",
                                           color: "danger",
                                           label: eV.intl.string(eV.t.A0pzWn),
-                                          action: V,
+                                          action: F,
                                       },
                                       "reset-frame",
                                   )
@@ -3064,14 +3066,14 @@ function is(e) {
                                           id: "remove-frame",
                                           color: "danger",
                                           label: eV.intl.string(eV.t["8DfADq"]),
-                                          action: V,
+                                          action: F,
                                       },
                                       "remove-frame",
                                   ),
                         ),
                     e
                 );
-            }, [E, g, f, m, P, k, y, R, S, O, L, _, M, G, V]);
+            }, [k, f, p, x, R, S, P, D, T, M, G, U, _, V, F]);
         })({ user: l, guildId: n, onClose: u });
     return 0 === c.length
         ? (0, t.jsx)(ex.A, { ...e })
