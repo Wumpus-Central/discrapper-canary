@@ -9341,6 +9341,7 @@
   "cjE7wH": "Existing Groups",
   "iRntUl": "Couldn't send invites, please try again.",
   "wWp/+6": "{inviteCount, plural, =1 {Couldn't send an invite to !!{username1}!!} =2 {Couldn't send invites to !!{username1}!! and !!{username2}!!} other {Couldn't send invites to !!{username1}!!, !!{username2}!!, and {remaining, plural, one { other} other { others} }} }",
+  "Ur/4dI": "Invite server members to Group DMs",
   "FIHggl": "Add friends or server members to group DMs.",
   "xHuK72": "Non-friends in mutual servers will need to accept your invite before joining.",
   "kHyiXs": "To:",
