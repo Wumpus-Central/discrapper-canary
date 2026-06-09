@@ -501,13 +501,13 @@ let e5 = (e) => {
         });
     },
     te = (e) => {
-        let { nReferralsSent: t, imageSize: n = 93 } = e;
+        let { nReferralsSent: t, imageSize: n = 93, backgroundClassName: i, ringClassName: r } = e;
         return (0, a.jsx)(eX.a, {
             percent: 33.3 * t,
             colorOverride: "#53ac66",
-            background: e4.cq,
+            background: i ?? e4.cq,
             strokeSize: 0.8,
-            ringColorOverrideClassName: e4.e0,
+            ringColorOverrideClassName: r ?? e4.e0,
             overlayClassName: t === e2.Z ? e4.ys : void 0,
             children: (0, a.jsx)(eZ._, {
                 src: "https://cdn.discordapp.com/assets/content/f55a25cc26b81c0d72e110bb7fd978e6aff78e847f53b34011ba4600be592975.svg",
@@ -692,7 +692,15 @@ function tm(e) {
     return (0, a.jsxs)("div", {
         className: u()(tE.kL, t),
         children: [
-            (0, a.jsx)("div", { className: tE.G3, children: (0, a.jsx)(te, { nReferralsSent: i, imageSize: 65 }) }),
+            (0, a.jsx)("div", {
+                className: tE.G3,
+                children: (0, a.jsx)(te, {
+                    nReferralsSent: i,
+                    imageSize: 65,
+                    backgroundClassName: tE.HP,
+                    ringClassName: tE.pZ,
+                }),
+            }),
             (0, a.jsxs)("div", {
                 className: tE.IH,
                 children: [

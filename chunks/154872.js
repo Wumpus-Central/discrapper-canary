@@ -3,7 +3,7 @@ n.d(t, { VZ: () => N, Ay: () => v, FX: () => y }), n(938796);
 var i = n(627968),
     r = n(64700),
     s = n(665260),
-    a = n(479574),
+    a = n(141092),
     o = n(731068),
     l = n(619517),
     u = n(248643),
@@ -13,7 +13,7 @@ var i = n(627968),
     h = n(587481),
     f = n(998218),
     p = n(454290),
-    E = n(873174),
+    E = n(922139),
     m = n(765671),
     g = n(700331);
 function A(e) {
@@ -132,13 +132,12 @@ let v = r.memo(function (e) {
                 channelId: g.sourceMetadata?.message?.channel_id,
                 maxWidth: y,
                 maxHeight: v,
-                active: !0,
                 messageId: g.sourceMetadata?.message?.id,
                 autoPlay: g.autoPlay ?? !A,
                 autoMute: "function" == typeof g.autoMute ? g.autoMute() : (g.autoMute ?? (0, h.uj)()),
-                volume: (0, h.v1)(),
+                volume: (0, h.GD)(),
                 onContextMenu: C,
-                onVolumeChange: h.ls,
+                onVolumeChange: h.oc,
                 onMutedChange: h.y5,
             });
         let t = g.renderLinkComponent ?? d.bU;

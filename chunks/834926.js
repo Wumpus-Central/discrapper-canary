@@ -64,7 +64,6 @@ e.exports = {
     Cw: "transcriptBodySpinner_b824c5",
     zG: "videoOverlayMessage_b824c5",
     z6: "closeModalBtnWrapper_b824c5",
-    zH: "inactivePoster_b824c5",
     mF: "inactivePlayButton_b824c5",
     z_: "inactivePlayButtonIcon_b824c5",
     R4: "floatingShareButtonContainer_b824c5",

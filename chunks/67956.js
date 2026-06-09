@@ -1033,7 +1033,7 @@ let eZ = {
                     style: { width: m, height: "landscape" === l ? 360 : 640 },
                     children: (0, s.jsx)(eY.default, {
                         src: t,
-                        active: n,
+                        initialActive: !1,
                         autoplay: n,
                         orientation: l,
                         renderOverlay: p,

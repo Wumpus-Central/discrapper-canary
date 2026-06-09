@@ -8,21 +8,21 @@ var i = n(627968),
     l = n(875699);
 let u = /#xywh=(\d+),(\d+),(\d+),(\d+)/i,
     c = [];
-function d(e, t, n) {
-    let [i, s] = r.useState(null),
-        [a, l] = r.useState(null);
+function d(e, t, n, i) {
+    let [s, a] = r.useState(null),
+        [l, d] = r.useState(null);
     return (
         r.useEffect(() => {
-            if (null == t || 0 === t.length) return;
-            let n = e.current;
-            if (null == n) return;
-            n.track.mode = "hidden";
-            let i = () => {
-                let e = n.track.cues ?? [],
-                    i = [];
-                for (let t = 0; t < e.length; t++) {
-                    let n = e[t];
-                    if (!(0, o.C)(n)) continue;
+            if (null == n || 0 === n.length || !e) return;
+            let i = t.current;
+            if (null == i) return;
+            i.track.mode = "hidden";
+            let r = () => {
+                let e = i.track.cues ?? [],
+                    t = [];
+                for (let n = 0; n < e.length; n++) {
+                    let i = e[n];
+                    if (!(0, o.C)(i)) continue;
                     let r = (function (e) {
                         let t = e.match(u);
                         if (null == t) return null;
@@ -36,29 +36,29 @@ function d(e, t, n) {
                                   w: parseInt(t[3], 10),
                                   h: parseInt(t[4], 10),
                               };
-                    })(n.text);
-                    null != r && i.push({ startSec: n.startTime, endSec: n.endTime, ...r });
+                    })(i.text);
+                    null != r && t.push({ startSec: i.startTime, endSec: i.endTime, ...r });
                 }
-                i.sort((e, t) => e.startSec - t.startSec), s({ url: t, cues: i });
+                t.sort((e, t) => e.startSec - t.startSec), a({ url: n, cues: t });
             };
             return (
-                n.addEventListener("load", i),
-                n.readyState === HTMLTrackElement.LOADED && i(),
-                () => n.removeEventListener("load", i)
+                i.addEventListener("load", r),
+                i.readyState === HTMLTrackElement.LOADED && r(),
+                () => i.removeEventListener("load", r)
             );
-        }, [t, e]),
+        }, [n, t, e]),
         r.useEffect(() => {
-            if (null == n || 0 === n.length) return;
-            let e = new Image();
+            if (null == i || 0 === i.length || !e) return;
+            let t = new Image();
             return (
-                (e.onload = () => l(n)),
-                (e.src = n),
+                (t.onload = () => d(i)),
+                (t.src = i),
                 () => {
-                    e.onload = null;
+                    t.onload = null;
                 }
             );
-        }, [n]),
-        null != i && i?.url === t && a === n ? i.cues : c
+        }, [i, e]),
+        null != s && s?.url === n && l === i ? s.cues : c
     );
 }
 function _(e, t) {

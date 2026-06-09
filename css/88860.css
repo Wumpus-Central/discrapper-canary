@@ -859,6 +859,17 @@
     text-align: start
 }
 
+.progressWheelBackground__72346 {
+    fill: transparent
+}
+
+.progressWheelRing__72346 {
+    fill: transparent;
+    stroke: var(--background-mod-strong);
+    stroke-width: .8px;
+    r: 9.6
+}
+
 .progressIndicatorTopSpacing__72346 {
     margin-top: var(--space-12)
 }
@@ -4921,19 +4932,6 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent
-}
-
-.nitroWheelLockup_ff9a65 {
-    display: grid;
-    place-items: center
-}
-
-.nitroWheelLockupLayer_ff9a65 {
-    grid-area: 1/1
-}
-
-.nitroWheelLockupLayer_ff9a65 img {
-    display: block
 }
 
 .pricePerInterval_fd0764 {
