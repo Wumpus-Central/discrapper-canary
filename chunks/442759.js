@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Ym: () => a, f5: () => o, yW: () => l }), n(321073);
+n.d(t, { Ym: () => s, f5: () => a }), n(321073);
 var i = n(64700),
-    r = n(575593),
-    s = n(375708);
-class a {
+    r = n(575593);
+n(375708);
+class s {
     itemsByTypes;
     constructor(e) {
         this.itemsByTypes = this.sortByTypes(e);
@@ -31,25 +31,13 @@ class a {
         }, new Map());
     }
 }
-let o = (e) =>
-        i.useMemo(() => {
-            let t = new a(e.items);
-            return {
-                firstProfileEffect: t.firstProfileEffect,
-                firstAvatarDecoration: t.firstAvatarDecoration,
-                firstNameplate: t.firstNameplate,
-                firstProfileFrame: t.firstProfileFrame,
-            };
-        }, [e]),
-    l = (e) => {
-        let t = s.intl.string(s.t["7v0T9P"]),
-            n = s.intl.string(s.t.wR5wOo),
-            i = s.intl.string(s.t.x5CoXR);
-        return (
-            null != e.bundledProducts &&
-                (e.bundledProducts.length > 0 && (t = e.bundledProducts[0]?.name),
-                e.bundledProducts.length > 1 && (n = e.bundledProducts[1]?.name),
-                e.bundledProducts.length > 2 && (i = e.bundledProducts[2]?.name)),
-            { itemOneName: t, itemTwoName: n, itemThreeName: i }
-        );
-    };
+let a = (e) =>
+    i.useMemo(() => {
+        let t = new s(e.items);
+        return {
+            firstProfileEffect: t.firstProfileEffect,
+            firstAvatarDecoration: t.firstAvatarDecoration,
+            firstNameplate: t.firstNameplate,
+            firstProfileFrame: t.firstProfileFrame,
+        };
+    }, [e]);
