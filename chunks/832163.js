@@ -211,9 +211,12 @@ let D = new b(s.h, {
         let { config: t } = e;
         (m = { state: "success", config: t, fetchedAt: Date.now() }),
             (g = new Set(t.storefronts.map((e) => e.applicationId))),
-            (y = new Set(t.storefronts.map((e) => e.guildId))),
-            (A = t.storefronts.reduce((e, t) => ((e[t.guildId] = t.applicationId), e), {})),
-            (I = t.storefronts.reduce((e, t) => ((e[t.applicationId] = t.guildId), (e[t.gameId] = t.guildId), e), {})),
+            (y = new Set(t.storefronts.filter((e) => null != e.guildId).map((e) => e.guildId))),
+            (A = t.storefronts.reduce((e, t) => (null != t.guildId && (e[t.guildId] = t.applicationId), e), {})),
+            (I = t.storefronts.reduce(
+                (e, t) => (null != t.guildId && ((e[t.applicationId] = t.guildId), (e[t.gameId] = t.guildId)), e),
+                {},
+            )),
             (T = t.storefronts.reduce(
                 (e, t) => ((e[t.gameId] = t.applicationId), (e[t.applicationId] = t.applicationId), e),
                 {},
