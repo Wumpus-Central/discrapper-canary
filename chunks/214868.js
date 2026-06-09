@@ -8,6 +8,7 @@ e.exports = {
     fC: "badgeContainer__9b718",
     qS: "badge__9b718",
     vk: "clickable__9b718",
+    vu: "active__9b718",
     R1: "acked__9b718",
     _7: "expired__9b718",
     k3: "redeemed__9b718",

@@ -582,7 +582,6 @@
 }
 
 .badge__9b718 {
-    background-color: var(--status-positive-background);
     border-radius: var(--radius-round);
     margin-bottom: 2px;
     padding: 2px var(--space-8)
@@ -590,6 +589,10 @@
 
 .clickable__9b718 {
     cursor: pointer
+}
+
+.active__9b718 {
+    background-color: var(--status-positive-background)
 }
 
 .acked__9b718 {
