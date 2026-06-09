@@ -57,11 +57,11 @@ function E(e) {
             return t;
         }).join("\0"),
         y = r.useMemo(() => T, [I, S]),
-        { layerData: N } = (0, d.A)({ skuId: t.skuId, layers: null != E ? void 0 : y }),
-        v = E?.layerData ?? N;
-    return 0 === y.length
-        ? null
-        : (0, i.jsx)(o.N, {
+        { layerData: N, loaded: v } = (0, d.A)({ skuId: t.skuId, layers: null != E ? void 0 : y }),
+        C = E?.layerData ?? N,
+        R = null != E || v;
+    return 0 !== y.length && R
+        ? (0, i.jsx)(o.N, {
               theme: c,
               children: (e) =>
                   (0, i.jsx)("div", {
@@ -71,8 +71,9 @@ function E(e) {
                       role: "img",
                       children: (0, i.jsx)("div", {
                           className: f.hH,
-                          children: y.map((e) => (0, i.jsx)(p, { skuId: t.skuId, layer: e, data: v[e.id] }, e.id)),
+                          children: y.map((e) => (0, i.jsx)(p, { skuId: t.skuId, layer: e, data: C[e.id] }, e.id)),
                       }),
                   }),
-          });
+          })
+        : null;
 }

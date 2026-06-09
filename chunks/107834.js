@@ -1,65 +1,64 @@
-s.d(t, { A: () => E });
-var i = s(627968),
-    l = s(64700),
-    n = s(17928),
-    a = s(43990),
-    r = s(403581),
-    c = s(820284),
-    o = s(490415),
-    d = s(736653),
-    u = s(793574),
-    m = s(742589),
-    x = s(876587),
-    p = s(65470),
-    h = s(400669),
-    g = s(909536),
-    j = s(287809),
-    f = s(428262),
-    N = s(652215),
-    A = s(788868),
-    _ = s(375708),
-    C = s(50596);
-let E = n.Ay.connectStores([j.default], () => ({ user: j.default.getCurrentUser() }))(
-    (0, o.A)((e) => {
-        let { isAuthenticated: t, user: s } = e,
-            n = (0, f.TW)(s, A.PremiumTypes.TIER_2),
-            o = (0, d.Ay)(),
-            j = (0, g.Gh)("nitro_home_header"),
-            E = l.useRef(null);
-        return (0, i.jsx)(c.A, {
-            section: N.JJy.NAVIGATION,
-            children: (0, i.jsx)(a.N, {
-                theme: o,
-                children: (e) =>
-                    (0, i.jsxs)(i.Fragment, {
-                        children: [
-                            (0, i.jsxs)(m.A, {
-                                isAuthenticated: t,
-                                className: e,
-                                toolbar: j
-                                    ? (0, i.jsxs)("div", {
-                                          className: C.fI,
-                                          children: [
-                                              (0, i.jsx)(h.l, {
-                                                  ref: E,
-                                                  size: "sm",
-                                                  variant: "secondary",
-                                                  location: u.A.PREMIUM_WISHLIST_NITRO_MEMBER_HUB,
-                                              }),
-                                              (0, i.jsx)(p.A, { variant: "secondary", size: "sm" }),
-                                          ],
-                                      })
-                                    : void 0,
-                                role: "navigation",
-                                children: [
-                                    (0, i.jsx)(m.A.Icon, { icon: r.t, "aria-hidden": !0 }),
-                                    (0, i.jsx)(m.A.Title, { children: _.intl.string(_.t.Ipxkog) }),
-                                ],
-                            }),
-                            j && n && (0, i.jsx)(x.O, { targetElementRef: E, body: _.intl.string(_.t.EqUw7K) }),
-                        ],
-                    }),
-            }),
-        });
-    }),
-);
+t.d(s, { A: () => I });
+var i = t(627968),
+    a = t(64700),
+    l = t(17928),
+    n = t(43990),
+    r = t(403581),
+    c = t(820284),
+    o = t(736653),
+    d = t(793574),
+    m = t(742589),
+    u = t(876587),
+    x = t(65470),
+    g = t(400669),
+    h = t(909536),
+    N = t(495544),
+    j = t(287809),
+    p = t(428262),
+    f = t(652215),
+    A = t(788868),
+    v = t(375708),
+    b = t(50596);
+let I = l.Ay.connectStores([j.default], () => ({ user: j.default.getCurrentUser() }))((e) => {
+    let { user: s } = e,
+        t = (0, l.bG)([N.default], () => N.default.isAuthenticated()),
+        j = (0, p.TW)(s, A.PremiumTypes.TIER_2),
+        I = (0, o.Ay)(),
+        C = (0, h.Gh)("nitro_home_header"),
+        E = a.useRef(null);
+    return (0, i.jsx)(c.A, {
+        section: f.JJy.NAVIGATION,
+        children: (0, i.jsx)(n.N, {
+            theme: I,
+            children: (e) =>
+                (0, i.jsxs)(i.Fragment, {
+                    children: [
+                        (0, i.jsxs)(m.A, {
+                            isAuthenticated: t,
+                            className: e,
+                            toolbar: C
+                                ? (0, i.jsxs)("div", {
+                                      className: b.fI,
+                                      children: [
+                                          (0, i.jsx)(g.l, {
+                                              ref: E,
+                                              size: "sm",
+                                              variant: "secondary",
+                                              location: d.A.PREMIUM_WISHLIST_NITRO_MEMBER_HUB,
+                                          }),
+                                          (0, i.jsx)(x.A, { variant: "secondary", size: "sm" }),
+                                      ],
+                                  })
+                                : void 0,
+                            role: "navigation",
+                            children: [
+                                (0, i.jsx)(m.A.Icon, { icon: r.t, "aria-hidden": !0 }),
+                                (0, i.jsx)(m.A.Title, { children: v.intl.string(v.t.Ipxkog) }),
+                            ],
+                        }),
+                        C && j && (0, i.jsx)(u.O, { targetElementRef: E, body: v.intl.string(v.t.EqUw7K) }),
+                    ],
+                }),
+        }),
+    });
+});
