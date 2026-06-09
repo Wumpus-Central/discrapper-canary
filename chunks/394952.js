@@ -5,6 +5,5 @@ e.exports = {
     ew: "statsRow_effb26",
     zS: "statsText_effb26",
     pw: "devButtons_effb26",
-    n2: "copyButtonWrapper_effb26",
     CU: "learnMoreLink_effb26",
 };
