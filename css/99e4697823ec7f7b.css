@@ -37,7 +37,6 @@
     box-sizing: border-box;
     cursor: pointer;
     flex-direction: row;
-    gap: var(--space-16);
     height: 180px;
     overflow: hidden;
     padding: var(--space-16);
@@ -155,6 +154,7 @@
     border-radius: var(--radius-sm);
     flex-shrink: 0;
     height: 100%;
+    margin-inline-start: var(--space-16);
     max-width: 280px;
     overflow: hidden
 }
@@ -186,16 +186,34 @@
     white-space: nowrap
 }
 
-.pollOption__8e988 {
-    align-items: center;
-    background-color: var(--background-mod-muted);
-    border-radius: var(--radius-sm);
+.guildOfficialMessage__8e988 .pollQuestion__8e988 {
+    color: var(--custom-message-content-color, var(--text-default))
+}
+
+.pollOptions__8e988 {
     display: flex;
-    gap: var(--space-4);
-    min-width: 0;
-    outline: 1px solid transparent;
+    flex-direction: column;
+    gap: 2px
+}
+
+.pollOption__8e988 {
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
     overflow: hidden;
-    padding: var(--space-4) var(--space-8)
+    padding: 2px var(--space-8);
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.pollOptionEmoji__8e988 {
+    height: 18px;
+    margin-inline-end: var(--space-4);
+    vertical-align: text-bottom;
+    width: 18px
+}
+
+.pollOptionOverflow__8e988 {
+    padding: 2px 0
 }
 
 .description__8e988 {
