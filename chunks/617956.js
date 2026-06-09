@@ -15,8 +15,6 @@ a.exports = {
     H9: "iconDefaultBackground_da8ac7",
     Kk: "icon_da8ac7",
     nC: "expressiveGradient_da8ac7",
-    vc: "nitroGradient_da8ac7",
-    Ad: "nitroGradientLayer_da8ac7",
     CX: "nitroCredit_da8ac7",
     Ty: "nitroBasic_da8ac7",
     C0: "bundleMiniStaticPreview_da8ac7",

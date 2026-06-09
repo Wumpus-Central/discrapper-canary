@@ -309,6 +309,30 @@
     width: 100%
 }
 
+.value__96f95 {
+    width: 48px
+}
+
+.actions__96f95 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center
+}
+
+.lockup_f14041 {
+    display: grid;
+    place-items: center
+}
+
+.layer_f14041 {
+    grid-area: 1/1
+}
+
+.layer_f14041 img {
+    display: block
+}
+
 .customConfetti__69c6c {
     inset-inline-end: -75px;
     pointer-events: none;
@@ -629,6 +653,208 @@
     width: 16px
 }
 
+.container_d28fa1 {
+    background-color: var(--background-mod-normal);
+    border-radius: 8px;
+    overflow: hidden
+}
+
+.divider_d28fa1 {
+    background-color: var(--border-subtle);
+    height: 1px;
+    margin-inline-start: 56px
+}
+
+.card_d28fa1 {
+    align-items: flex-start;
+    background: var(--background-mod-normal);
+    display: flex;
+    padding: 16px;
+    position: relative
+}
+
+.cardDragging_d28fa1 {
+    opacity: .5
+}
+
+.emojiWrapper_d28fa1 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    height: var(--custom-editable-benefits-list-emoji-size);
+    justify-content: center;
+    margin-inline-end: 16px;
+    position: relative;
+    width: var(--custom-editable-benefits-list-emoji-size)
+}
+
+.dragIconWrapper_d28fa1 {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    cursor: pointer;
+    opacity: 0
+}
+
+.dragIcon_d28fa1 {
+    color: var(--interactive-text-default);
+    height: 100%;
+    width: 100%
+}
+
+.dragIcon_d28fa1:active {
+    color: var(--interactive-text-active)
+}
+
+.dragIcon_d28fa1:hover {
+    color: var(--interactive-text-hover)
+}
+
+.cardText_d28fa1 {
+    align-self: center;
+    flex: 1 1 auto
+}
+
+.channelIcon_d28fa1 {
+    color: var(--interactive-text-default);
+    display: inline-block;
+    height: 16px;
+    margin-inline-end: 4px;
+    width: 16px
+}
+
+.cardActions_d28fa1 {
+    display: flex;
+    flex: 0 0 auto;
+    line-height: 0;
+    margin-inline-start: 8px;
+    opacity: 0
+}
+
+.cardActionButton_d28fa1 {
+    color: var(--interactive-text-default);
+    cursor: pointer
+}
+
+.cardActionButton_d28fa1:hover {
+    color: var(--interactive-text-hover)
+}
+
+.cardActionButtonIcon_d28fa1 {
+    height: 24px;
+    width: 24px
+}
+
+.card_d28fa1:focus-within:not(.disabled_d28fa1),
+.card_d28fa1:hover:not(.disabled_d28fa1) {
+    background-color: var(--background-base-lowest)
+}
+
+.container_d28fa1:not(.isDragging_d28fa1) .card_d28fa1:focus-within:not(.disabled_d28fa1) .emoji_d28fa1,
+.container_d28fa1:not(.isDragging_d28fa1) .card_d28fa1:hover:not(.disabled_d28fa1) .emoji_d28fa1 {
+    opacity: 0
+}
+
+.container_d28fa1:not(.isDragging_d28fa1) .card_d28fa1:focus-within:not(.disabled_d28fa1) .dragIconWrapper_d28fa1,
+.container_d28fa1:not(.isDragging_d28fa1) .card_d28fa1:hover:not(.disabled_d28fa1) .dragIconWrapper_d28fa1 {
+    opacity: 1
+}
+
+.container_d28fa1:not(.isDragging_d28fa1) .card_d28fa1:focus-within:not(.disabled_d28fa1) .cardActions_d28fa1,
+.container_d28fa1:not(.isDragging_d28fa1) .card_d28fa1:hover:not(.disabled_d28fa1) .cardActions_d28fa1 {
+    opacity: 1
+}
+
+.addBenefit_d28fa1 {
+    align-items: center;
+    cursor: pointer
+}
+
+.addBenefitIcon_d28fa1 {
+    color: var(--brand-500);
+    height: 100%;
+    width: 100%
+}
+
+.disabled_d28fa1 {
+    opacity: .5
+}
+
+.disabled_d28fa1,
+.disabled_d28fa1 .cardActionButton_d28fa1 {
+    cursor: not-allowed
+}
+
+.container_f53c21 {
+    background-color: var(--background-mod-normal);
+    border-radius: 8px;
+    overflow: hidden
+}
+
+.emojiRow_f53c21 {
+    align-items: center;
+    background: var(--background-mod-normal);
+    display: flex;
+    padding: 16px;
+    position: relative
+}
+
+.emojiRow_f53c21+.emojiRow_f53c21:before {
+    background-color: var(--border-subtle);
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: -.5px;
+    inset-inline: 0;
+    margin-inline-start: 56px
+}
+
+.emojiImage_f53c21 {
+    height: 24px;
+    margin-inline-end: 16px;
+    width: 24px
+}
+
+.emojiAlias_f53c21:after,
+.emojiAlias_f53c21:before {
+    content: ":";
+    opacity: .3
+}
+
+.deleteButton_f53c21 {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    margin-block: 0;
+    margin-inline: auto 0;
+    opacity: 0
+}
+
+.emojiRow_f53c21:not(.disabled_f53c21) .deleteButton_f53c21:hover {
+    color: var(--interactive-text-hover)
+}
+
+.trashIcon_f53c21 {
+    height: 24px;
+    width: 24px
+}
+
+.emojiRow_f53c21:focus-within:not(.disabled_f53c21),
+.emojiRow_f53c21:hover:not(.disabled_f53c21) {
+    background-color: var(--background-base-lowest)
+}
+
+.emojiRow_f53c21:focus-within:not(.disabled_f53c21) .deleteButton_f53c21,
+.emojiRow_f53c21:hover:not(.disabled_f53c21) .deleteButton_f53c21 {
+    opacity: 1
+}
+
+.disabled_f53c21 {
+    cursor: not-allowed;
+    opacity: .5
+}
+
 .container__24a95 {
     background-color: var(--background-base-lower);
     border-radius: 8px;
@@ -841,17 +1067,6 @@
     align-items: center;
     display: flex;
     gap: 6px
-}
-
-.value__96f95 {
-    width: 48px
-}
-
-.actions__96f95 {
-    align-items: center;
-    display: flex;
-    gap: var(--space-4);
-    justify-content: center
 }
 
 .container_ac8a82 {
@@ -3937,208 +4152,6 @@ html .invoiceCancelRow__968a4 {
     max-height: 380px
 }
 
-.container_d28fa1 {
-    background-color: var(--background-mod-normal);
-    border-radius: 8px;
-    overflow: hidden
-}
-
-.divider_d28fa1 {
-    background-color: var(--border-subtle);
-    height: 1px;
-    margin-inline-start: 56px
-}
-
-.card_d28fa1 {
-    align-items: flex-start;
-    background: var(--background-mod-normal);
-    display: flex;
-    padding: 16px;
-    position: relative
-}
-
-.cardDragging_d28fa1 {
-    opacity: .5
-}
-
-.emojiWrapper_d28fa1 {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 auto;
-    height: var(--custom-editable-benefits-list-emoji-size);
-    justify-content: center;
-    margin-inline-end: 16px;
-    position: relative;
-    width: var(--custom-editable-benefits-list-emoji-size)
-}
-
-.dragIconWrapper_d28fa1 {
-    position: absolute;
-    top: 0;
-    inset-inline: 0;
-    bottom: 0;
-    cursor: pointer;
-    opacity: 0
-}
-
-.dragIcon_d28fa1 {
-    color: var(--interactive-text-default);
-    height: 100%;
-    width: 100%
-}
-
-.dragIcon_d28fa1:active {
-    color: var(--interactive-text-active)
-}
-
-.dragIcon_d28fa1:hover {
-    color: var(--interactive-text-hover)
-}
-
-.cardText_d28fa1 {
-    align-self: center;
-    flex: 1 1 auto
-}
-
-.channelIcon_d28fa1 {
-    color: var(--interactive-text-default);
-    display: inline-block;
-    height: 16px;
-    margin-inline-end: 4px;
-    width: 16px
-}
-
-.cardActions_d28fa1 {
-    display: flex;
-    flex: 0 0 auto;
-    line-height: 0;
-    margin-inline-start: 8px;
-    opacity: 0
-}
-
-.cardActionButton_d28fa1 {
-    color: var(--interactive-text-default);
-    cursor: pointer
-}
-
-.cardActionButton_d28fa1:hover {
-    color: var(--interactive-text-hover)
-}
-
-.cardActionButtonIcon_d28fa1 {
-    height: 24px;
-    width: 24px
-}
-
-.card_d28fa1:focus-within:not(.disabled_d28fa1),
-.card_d28fa1:hover:not(.disabled_d28fa1) {
-    background-color: var(--background-base-lowest)
-}
-
-.container_d28fa1:not(.isDragging_d28fa1) .card_d28fa1:focus-within:not(.disabled_d28fa1) .emoji_d28fa1,
-.container_d28fa1:not(.isDragging_d28fa1) .card_d28fa1:hover:not(.disabled_d28fa1) .emoji_d28fa1 {
-    opacity: 0
-}
-
-.container_d28fa1:not(.isDragging_d28fa1) .card_d28fa1:focus-within:not(.disabled_d28fa1) .dragIconWrapper_d28fa1,
-.container_d28fa1:not(.isDragging_d28fa1) .card_d28fa1:hover:not(.disabled_d28fa1) .dragIconWrapper_d28fa1 {
-    opacity: 1
-}
-
-.container_d28fa1:not(.isDragging_d28fa1) .card_d28fa1:focus-within:not(.disabled_d28fa1) .cardActions_d28fa1,
-.container_d28fa1:not(.isDragging_d28fa1) .card_d28fa1:hover:not(.disabled_d28fa1) .cardActions_d28fa1 {
-    opacity: 1
-}
-
-.addBenefit_d28fa1 {
-    align-items: center;
-    cursor: pointer
-}
-
-.addBenefitIcon_d28fa1 {
-    color: var(--brand-500);
-    height: 100%;
-    width: 100%
-}
-
-.disabled_d28fa1 {
-    opacity: .5
-}
-
-.disabled_d28fa1,
-.disabled_d28fa1 .cardActionButton_d28fa1 {
-    cursor: not-allowed
-}
-
-.container_f53c21 {
-    background-color: var(--background-mod-normal);
-    border-radius: 8px;
-    overflow: hidden
-}
-
-.emojiRow_f53c21 {
-    align-items: center;
-    background: var(--background-mod-normal);
-    display: flex;
-    padding: 16px;
-    position: relative
-}
-
-.emojiRow_f53c21+.emojiRow_f53c21:before {
-    background-color: var(--border-subtle);
-    content: "";
-    height: 1px;
-    position: absolute;
-    top: -.5px;
-    inset-inline: 0;
-    margin-inline-start: 56px
-}
-
-.emojiImage_f53c21 {
-    height: 24px;
-    margin-inline-end: 16px;
-    width: 24px
-}
-
-.emojiAlias_f53c21:after,
-.emojiAlias_f53c21:before {
-    content: ":";
-    opacity: .3
-}
-
-.deleteButton_f53c21 {
-    color: var(--interactive-text-default);
-    cursor: pointer;
-    margin-block: 0;
-    margin-inline: auto 0;
-    opacity: 0
-}
-
-.emojiRow_f53c21:not(.disabled_f53c21) .deleteButton_f53c21:hover {
-    color: var(--interactive-text-hover)
-}
-
-.trashIcon_f53c21 {
-    height: 24px;
-    width: 24px
-}
-
-.emojiRow_f53c21:focus-within:not(.disabled_f53c21),
-.emojiRow_f53c21:hover:not(.disabled_f53c21) {
-    background-color: var(--background-base-lowest)
-}
-
-.emojiRow_f53c21:focus-within:not(.disabled_f53c21) .deleteButton_f53c21,
-.emojiRow_f53c21:hover:not(.disabled_f53c21) .deleteButton_f53c21 {
-    opacity: 1
-}
-
-.disabled_f53c21 {
-    cursor: not-allowed;
-    opacity: .5
-}
-
 .card_b846e5 {
     position: relative
 }
@@ -4273,6 +4286,12 @@ button.inner__02fc8:disabled {
 .enable-forced-colors .inner__02fc8:disabled {
     opacity: .3;
     pointer-events: none
+}
+
+.confettiCanvas__78e61 {
+    height: 100%;
+    position: absolute;
+    width: 100%
 }
 
 .inset_bf1984,
@@ -7209,19 +7228,6 @@ button.inner__02fc8:disabled {
     height: 14px;
     margin-inline-end: 4px;
     width: 14px
-}
-
-.nitroWheelLockup__1f2d0 {
-    display: grid;
-    place-items: center
-}
-
-.nitroWheelLockupLayer__1f2d0 {
-    grid-area: 1/1
-}
-
-.nitroWheelLockupLayer__1f2d0 img {
-    display: block
 }
 
 .imageUnverified_d450d1,

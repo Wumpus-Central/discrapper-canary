@@ -1,24 +1,24 @@
-l.d(t, { DH: () => G, JW: () => P, WH: () => H, a6: () => R, f7: () => M, jw: () => O, oo: () => Z });
+l.d(t, { DH: () => G, JW: () => k, WH: () => H, a6: () => R, f7: () => M, jw: () => O, oo: () => Z });
 var s = l(627968),
-    i = l(64700),
-    n = l(503698),
-    r = l.n(n),
+    n = l(64700),
+    i = l(503698),
+    r = l.n(i),
     a = l(575593),
-    d = l(17928),
-    c = l(661531),
-    u = l(851974),
-    o = l(990078),
-    m = l(834730),
-    x = l(778712),
-    h = l(315629),
-    C = l(403581),
-    p = l(104510),
-    v = l(323384),
-    j = l(966327),
-    g = l(14702),
+    c = l(17928),
+    d = l(661531),
+    u = l(990078),
+    o = l(834730),
+    m = l(778712),
+    x = l(315629),
+    h = l(403581),
+    C = l(104510),
+    p = l(323384),
+    v = l(966327),
+    j = l(14702),
     f = l(575926),
-    L = l(548118),
-    E = l(319820),
+    g = l(548118),
+    L = l(319820),
+    E = l(576243),
     N = l(328968),
     b = l(403362),
     T = l(371794),
@@ -32,31 +32,31 @@ function M(e) {
     let {
             header: t,
             headerIconSrc: l,
-            headerIconComponent: n,
+            headerIconComponent: i,
             bottomSubText: a,
-            label: d,
-            description: c,
-            graphic: u,
+            label: c,
+            description: d,
+            graphic: m,
             price: x,
             priceStrikethroughText: h,
             PriceIcon: C,
             priceTooltip: p,
             priceSubText: v,
             priceSubTextHasStrikethrough: j = !0,
-            omitDefaultIconBackground: g,
-            target: f,
+            omitDefaultIconBackground: f,
+            target: g,
             className: L,
         } = e,
-        E = (0, s.jsx)(k, { target: f }),
-        N = i.useMemo(() => {
-            let e = (0, s.jsxs)(m.E, {
+        E = (0, s.jsx)(D, { target: g }),
+        N = n.useMemo(() => {
+            let e = (0, s.jsxs)(o.E, {
                 variant: "text-md/medium",
                 color: "text-default",
                 className: y.nw,
                 children: [
                     null != C && (0, s.jsx)(C, { size: "xs" }),
                     null != h &&
-                        (0, s.jsx)(m.E, {
+                        (0, s.jsx)(o.E, {
                             tag: "span",
                             variant: "text-md/medium",
                             color: "text-subtle",
@@ -67,29 +67,29 @@ function M(e) {
                 ],
             });
             return null != p
-                ? (0, s.jsx)(o.m, { text: p, asContainer: !0, position: "top", align: "center", children: e })
+                ? (0, s.jsx)(u.m, { text: p, asContainer: !0, position: "top", align: "center", children: e })
                 : e;
         }, [C, x, h, p]),
-        b = i.useMemo(
+        b = n.useMemo(
             () =>
-                null != n
-                    ? (0, s.jsx)("span", { className: y.nr, children: n })
+                null != i
+                    ? (0, s.jsx)("span", { className: y.nr, children: i })
                     : null != l
                       ? (0, s.jsx)("img", { alt: "", src: l, className: y.nr })
                       : null,
-            [l, n],
+            [l, i],
         );
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsxs)("div", {
                 className: r()(y.kL, L),
                 children: [
-                    null != u && (0, s.jsx)("div", { className: r()(y.Kk, { [y.H9]: !g }), children: u }),
+                    null != m && (0, s.jsx)("div", { className: r()(y.Kk, { [y.H9]: !f }), children: m }),
                     (0, s.jsxs)("div", {
                         className: y.Qs,
                         children: [
                             null != t &&
-                                (0, s.jsxs)(m.E, {
+                                (0, s.jsxs)(o.E, {
                                     variant: "text-sm/semibold",
                                     color: "text-muted",
                                     lineClamp: 2,
@@ -102,21 +102,21 @@ function M(e) {
                                     (0, s.jsxs)("div", {
                                         className: y.Qq,
                                         children: [
-                                            (0, s.jsx)(m.E, {
+                                            (0, s.jsx)(o.E, {
                                                 variant: "text-md/normal",
                                                 color: "text-default",
                                                 lineClamp: 2,
-                                                children: d,
+                                                children: c,
                                             }),
-                                            null != c &&
-                                                (0, s.jsx)(m.E, {
+                                            null != d &&
+                                                (0, s.jsx)(o.E, {
                                                     variant: "text-sm/normal",
                                                     color: "text-muted",
                                                     lineClamp: 2,
-                                                    children: c,
+                                                    children: d,
                                                 }),
                                             null != E &&
-                                                (0, s.jsx)(m.E, {
+                                                (0, s.jsx)(o.E, {
                                                     variant: "text-sm/normal",
                                                     color: "text-muted",
                                                     lineClamp: 1,
@@ -129,7 +129,7 @@ function M(e) {
                                         children: [
                                             N,
                                             null != v &&
-                                                (0, s.jsx)(m.E, {
+                                                (0, s.jsx)(o.E, {
                                                     variant: j ? "text-xs/medium" : "text-sm/normal",
                                                     color: "text-muted",
                                                     className: r()(y.Jb, { [y.Nc]: j }),
@@ -144,29 +144,29 @@ function M(e) {
                 ],
             }),
             null != a &&
-                (0, s.jsx)(m.E, { variant: "text-sm/medium", color: "text-muted", className: y.dx, children: a }),
+                (0, s.jsx)(o.E, { variant: "text-sm/medium", color: "text-muted", className: y.dx, children: a }),
         ],
     });
 }
-function k(e) {
+function D(e) {
     let { target: t } = e;
     switch (t?.type) {
         case "gift":
             return I.intl.format(w.default["2PiTTi"], {
                 username: A.Ay.getUserTag(t.user),
                 nickname: A.Ay.getName(t.user),
-                avatar: (0, s.jsx)(j.A, { user: t.user, size: x._3.SIZE_16, className: y.RG }),
+                avatar: (0, s.jsx)(v.A, { user: t.user, size: m._3.SIZE_16, className: y.RG }),
             });
         case "guildSubscription":
             return I.intl.format(w.default.mXvZt2, {
                 guildName: t.guild.name,
-                icon: (0, s.jsx)(L.Ay, { guild: t.guild, size: L.Ay.Sizes.SMOL, className: y.RG }),
+                icon: (0, s.jsx)(g.Ay, { guild: t.guild, size: g.Ay.Sizes.SMOL, className: y.RG }),
             });
         case "boost":
             return I.intl.format(w.default["8imbq5"], {
                 guildName: t.guild.name,
                 guildIcon: () =>
-                    (0, s.jsx)(L.Ay, { guild: t.guild, size: L.Ay.Sizes.SMOL, className: y.RG, active: !0 }),
+                    (0, s.jsx)(g.Ay, { guild: t.guild, size: g.Ay.Sizes.SMOL, className: y.RG, active: !0 }),
             });
         case void 0:
             return null;
@@ -174,40 +174,31 @@ function k(e) {
             (0, b.xb)(t);
     }
 }
-function D(e) {
+function P(e) {
     let { color: t, Icon: l } = e;
-    return (0, s.jsx)(h.h, {
+    return (0, s.jsx)(x.h, {
         color: t,
         className: y.nC,
         children: (0, s.jsx)(l, { size: "lg", color: "var(--icon-strong)" }),
     });
 }
-function P() {
-    return (0, s.jsxs)("div", {
-        className: y.vc,
-        children: [
-            (0, s.jsx)("div", {
-                className: y.Ad,
-                children: (0, s.jsx)(u.d, { alt: "Nitro Icon background", ariaHidden: !0, width: 64, height: 64 }),
-            }),
-            (0, s.jsx)(C.t, { size: "lg", color: c.A.unsafe_rawColors.NEUTRAL_1, className: y.Ad }),
-        ],
-    });
+function k() {
+    return (0, s.jsx)(E.A, { size: 64, iconSize: 32, color: d.A.unsafe_rawColors.NEUTRAL_1 });
 }
 function G() {
     return (0, s.jsx)("div", {
         className: y.Ty,
-        children: (0, s.jsx)(C.t, { size: "lg", color: c.A.colors.ICON_DEFAULT }),
+        children: (0, s.jsx)(h.t, { size: "lg", color: d.A.colors.ICON_DEFAULT }),
     });
 }
 function R() {
-    return (0, s.jsx)(D, { color: "pink", Icon: p._ });
+    return (0, s.jsx)(P, { color: "pink", Icon: C._ });
 }
 function O() {
-    return (0, s.jsx)(v.k, { size: "lg", color: "var(--icon-muted)" });
+    return (0, s.jsx)(p.k, { size: "lg", color: "var(--icon-muted)" });
 }
 function Z() {
-    return (0, s.jsx)("div", { className: y.CX, children: (0, s.jsx)(C.t, { size: "lg", color: "var(--neutral-1)" }) });
+    return (0, s.jsx)("div", { className: y.CX, children: (0, s.jsx)(h.t, { size: "lg", color: "var(--neutral-1)" }) });
 }
 let U = {
     [_.EZt.APPLICATION]: { preferredAssetType: "headerBackground" },
@@ -215,20 +206,20 @@ let U = {
     [_.EZt.GUILD_PRODUCT]: { preferredAssetType: "thumbnail" },
 };
 function V(e) {
-    let { skuId: t, productLine: l, applicationId: n, storeListing: r } = e,
-        a = (0, d.bG)([N.A], () => r ?? N.A.getForSKU(t), [r, t]),
-        c = U[l].preferredAssetType,
-        u = i.useMemo(
+    let { skuId: t, productLine: l, applicationId: i, storeListing: r } = e,
+        a = (0, c.bG)([N.A], () => r ?? N.A.getForSKU(t), [r, t]),
+        d = U[l].preferredAssetType,
+        u = n.useMemo(
             () =>
                 null == a
                     ? null
-                    : "headerBackground" === c
+                    : "headerBackground" === d
                       ? (a.headerBackground ?? a.thumbnail)
                       : (a.thumbnail ?? a.headerBackground),
-            [c, a],
+            [d, a],
         );
     return null != u
-        ? (0, s.jsx)("img", { src: (0, T.YE)(n, u, 64), alt: "", className: y.gw })
+        ? (0, s.jsx)("img", { src: (0, T.YE)(i, u, 64), alt: "", className: y.gw })
         : l === _.EZt.APPLICATION
           ? (0, s.jsx)(O, {})
           : l === _.EZt.GUILD_ROLE
@@ -236,13 +227,13 @@ function V(e) {
             : null;
 }
 function H(e) {
-    let { sku: t, premiumType: l, product: i, storeListing: n } = e;
+    let { sku: t, premiumType: l, product: n, storeListing: i } = e;
     return l === S.PremiumTypes.TIER_0
         ? (0, s.jsx)(G, {})
         : l === S.PremiumTypes.TIER_2
-          ? (0, s.jsx)(P, {})
-          : i?.type === a.R.BUNDLE
-            ? (0, s.jsx)(g.a, { product: i, staticPreviewClassName: y.C0 })
+          ? (0, s.jsx)(k, {})
+          : n?.type === a.R.BUNDLE
+            ? (0, s.jsx)(j.a, { product: n, staticPreviewClassName: y.C0 })
             : null == t
               ? null
               : t.productLine in U
@@ -250,7 +241,7 @@ function H(e) {
                       skuId: t.id,
                       productLine: t.productLine,
                       applicationId: t.applicationId,
-                      storeListing: n,
+                      storeListing: i,
                   })
-                : (0, s.jsx)(E.r$, { sku: t, slayerProductPreviewClassName: y.gw });
+                : (0, s.jsx)(L.r$, { sku: t, slayerProductPreviewClassName: y.gw });
 }

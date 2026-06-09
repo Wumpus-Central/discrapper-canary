@@ -1,0 +1,33 @@
+"use strict";
+n.d(t, { A: () => u });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r);
+function a(e) {
+    let { alt: t, ariaLabel: n, ariaHidden: r, role: s, width: a = 64, height: o = 64 } = e;
+    return (0, i.jsx)("img", {
+        style: { width: a, height: o },
+        src: "https://cdn.discordapp.com/assets/content/b4c92c606882186980d1bfda32ba55d54eae27a6ab3b25bc4e1d57b6df3b1f2b.svg",
+        alt: t,
+        "aria-label": n,
+        "aria-hidden": r,
+        role: s ?? "img",
+    });
+}
+var o = n(403581),
+    l = n(927073);
+function u(e) {
+    let { size: t, iconSize: n, color: r, className: u } = e;
+    return (0, i.jsxs)("div", {
+        className: s()(l.j, u),
+        "aria-hidden": !0,
+        children: [
+            (0, i.jsx)("div", {
+                className: l.q,
+                children: (0, i.jsx)(a, { alt: "", ariaHidden: !0, width: t, height: t }),
+            }),
+            (0, i.jsx)(o.t, { size: "custom", width: n, height: n, color: r, className: l.q }),
+        ],
+    });
+}

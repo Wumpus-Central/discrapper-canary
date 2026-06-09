@@ -4933,19 +4933,6 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
     color: transparent
 }
 
-.nitroWheelLockup_ff9a65 {
-    display: grid;
-    place-items: center
-}
-
-.nitroWheelLockupLayer_ff9a65 {
-    grid-area: 1/1
-}
-
-.nitroWheelLockupLayer_ff9a65 img {
-    display: block
-}
-
 .pricePerInterval_fd0764 {
     font-weight: 200;
     margin-bottom: 18px
@@ -7227,4 +7214,9 @@ span.button__67645.enabled__67645.redGlow__67645:hover {
 
 .offerSplashWrapper__11fc5 .wishlistButton__11fc5 {
     top: calc(var(--space-16)*-1)
+}
+
+.container_e03deb {
+    cursor: pointer;
+    padding: 2px
 }
