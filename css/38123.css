@@ -94,8 +94,8 @@
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    padding-block: 16px;
-    padding-inline: 24px
+    padding-block: var(--custom-profile-frame-preview-padding-block, 16px);
+    padding-inline: var(--custom-profile-frame-preview-padding-inline, 24px)
 }
 
 .bundleStaticPreview__517e1,

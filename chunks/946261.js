@@ -109,7 +109,7 @@ let T = class {
     destroyAudio() {
         null != this._audio &&
             (this._audio.then((e) => {
-                e.pause(), (e.src = "");
+                (e.onerror = null), e.pause(), (e.src = "");
             }),
             (this._audio = null));
     }

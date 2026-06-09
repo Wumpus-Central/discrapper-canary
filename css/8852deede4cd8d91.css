@@ -33,7 +33,9 @@
 .cardPreview__73abe {
     align-items: center;
     display: flex;
-    justify-content: center
+    justify-content: center;
+    --custom-profile-frame-preview-padding-block: 8px;
+    --custom-profile-frame-preview-padding-inline: 16px
 }
 
 .scaledSkuPreview__73abe {

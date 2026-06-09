@@ -72,4 +72,4 @@ function f(e) {
         }),
     });
 }
-let p = full;
+let p = f;
