@@ -12,15 +12,15 @@ var l = n(627968),
     m = n(241989),
     h = n(993408),
     A = n(287809),
-    C = n(486020),
-    E = n(428262),
+    E = n(486020),
+    C = n(428262),
     y = n(580630),
     P = n(284009),
     S = n.n(P),
     _ = n(997101),
-    f = n(17928),
-    I = n(318254),
-    T = n(821891),
+    I = n(17928),
+    T = n(318254),
+    f = n(821891),
     N = n(953689),
     v = n(10716),
     g = n(46225),
@@ -29,22 +29,22 @@ var l = n(627968),
     M = n(31823),
     b = n(426398),
     L = n(427675),
-    j = n(722847),
+    j = n(571878),
     O = n(977445),
     w = n(778307),
     D = n(218075),
     U = n(578942),
     k = n(615405),
     G = n(45938),
-    Y = n(259160),
-    F = n(566980),
+    F = n(937008),
+    Y = n(566980),
     B = n(944355),
     W = n(367921),
     H = n(908419),
     V = n(652215);
 function K(e) {
     let { paymentSourceType: t } = e,
-        { isGift: n } = (0, Y.Pv)(),
+        { isGift: n } = (0, F.Pv)(),
         { immediateDelivery: r } = (0, H.U)(),
         i = (0, W.Ro)({
             purchaseType: V.VVm.ONE_TIME,
@@ -88,8 +88,8 @@ let X = (e) => e.name,
                 legalContent: P,
                 isGift: S,
                 giftRecipient: _,
-                upperInlineNoticeProps: f,
-                footerInlineNoticeProps: T,
+                upperInlineNoticeProps: I,
+                footerInlineNoticeProps: f,
             } = e,
             { product: N, isSocialLayerGameItem: v } = (0, z.AO)({ sku: n }),
             { unifiedInvoiceSummaryProps: g, priceText: x } = r.useMemo(
@@ -137,7 +137,7 @@ let X = (e) => e.name,
                         let c = i
                                 ? {
                                       header: r.name,
-                                      headerIconSrc: C.Ay.getApplicationIconURL({ id: r.id, icon: r.icon, size: 16 }),
+                                      headerIconSrc: E.Ay.getApplicationIconURL({ id: r.id, icon: r.icon, size: 16 }),
                                   }
                                 : {},
                             d = (0, l.jsx)(m.WH, { sku: t, product: n }),
@@ -146,7 +146,7 @@ let X = (e) => e.name,
                             null != n &&
                                 (p = ((e) => {
                                     let t = A.default.getCurrentUser(),
-                                        n = E.Ay.canUseShopDiscounts(t),
+                                        n = C.Ay.canUseShopDiscounts(t),
                                         l = (0, h.xM)(t),
                                         r = (0, h.WD)(e, { hasShopDiscount: n, discount: (0, h.fT)(e, n) });
                                     if (null != r && !r.showDefaultPriceOnly && r.showDiscountPrice) {
@@ -180,7 +180,7 @@ let X = (e) => e.name,
                     let l = e.orbsReward;
                     if (null != l && l > 0) {
                         let e = n ? Z.t["ZV+aS9"] : Z.t["0StwHe"];
-                        return { Icon: I.C, text: Z.intl.format(e, { orbCount: l }) };
+                        return { Icon: T.C, text: Z.intl.format(e, { orbCount: l }) };
                     }
                 })(i, { isGift: S });
                 return null != e ? (0, l.jsx)(o.J, { ...e }) : null;
@@ -203,8 +203,8 @@ let X = (e) => e.name,
                 paymentMethodContent: u,
                 legalContent: P,
                 promotionalNoticeContent: j,
-                upperInlineNoticeProps: f,
-                footerInlineNoticeProps: T,
+                upperInlineNoticeProps: I,
+                footerInlineNoticeProps: f,
                 invoiceTotalDueLabel: b,
                 invoiceTotalDueValue: L,
             })
@@ -221,8 +221,8 @@ function en(e) {
             purchaseTermsAndLegalContent: m,
             isStepLoading: h,
             giftRecipient: A,
-            warningAndErrorMessages: C,
-            disabled: E,
+            warningAndErrorMessages: E,
+            disabled: C,
         } = ((e) => {
             let { hasLegalTermsFlash: t, legalTermsNodeRef: n } = e,
                 {
@@ -244,20 +244,20 @@ function en(e) {
                 })),
                 { hasPaymentSources: p } = (0, b.jm)(),
                 { application: m, isEmbeddedIAP: h } = (0, M.V)(),
-                A = (0, f.bG)([v.A], () => v.A.getFetchState()),
-                { checkoutPaymentSources: C, hasInvoiceOrderContextLoaded: E } = (0, R.t)(),
+                A = (0, I.bG)([v.A], () => v.A.getFetchState()),
+                { checkoutPaymentSources: E, hasInvoiceOrderContextLoaded: C } = (0, R.t)(),
                 y = (0, L.gU)(),
-                { isGift: P, giftRecipient: I } = (0, Y.Pv)(),
-                B = P && (0, G.Ik)(I),
+                { isGift: P, giftRecipient: T } = (0, F.Pv)(),
+                B = P && (0, G.Ik)(T),
                 { fetched: W, hasAlreadyLinked: H } = (0, g.RD)(m);
             S()(null != i, "Expected selectedSkuId");
             let z = y[i],
                 $ = z?.eligiblePaymentGateways;
             S()(null != z, "SKU must exist and be fetched."), S()(null != m, "Application must exist.");
-            let J = (0, O.u)(m.id),
+            let J = (0, O.uS)(m.id),
                 X = _.M.EEA_COUNTRIES.has(k.A.ipCountryCodeWithFallback),
-                Q = s === F.h.PURCHASING || s === F.h.COMPLETED,
-                ee = C.find((e) => e.id === u) ?? null,
+                Q = s === Y.h.PURCHASING || s === Y.h.COMPLETED,
+                ee = E.find((e) => e.id === u) ?? null,
                 et = null != ee ? ee.type : null,
                 en = null != $ && $.length > 0 && (null == u || null === et) && p ? D.fU.SELECT_PAYMENT_METHOD : void 0,
                 el = z.productLine === V.EZt.SOCIAL_LAYER_GAME_ITEM,
@@ -287,7 +287,7 @@ function en(e) {
                                       finePrintClassname: q.i,
                                       purchaseType: d,
                                       isGift: P,
-                                      finePrint: (0, l.jsx)(T.A, {
+                                      finePrint: (0, l.jsx)(f.A, {
                                           paymentSourceType: et,
                                           isEmbeddedIAP: h,
                                           purchaseType: d,
@@ -304,14 +304,14 @@ function en(e) {
             return {
                 sku: z,
                 application: m,
-                giftRecipient: I,
+                giftRecipient: T,
                 isGift: P,
                 invoicePreview: o,
                 isEmbeddedIAP: h,
                 shouldShowPurchaseReviewImage: er,
                 paymentRestrictionBannerType: en,
                 devShelfFetchState: A,
-                isStepLoading: !E && null == c,
+                isStepLoading: !C && null == c,
                 purchasePreviewError: c,
                 warningAndErrorMessages: ei,
                 purchaseTermsAndLegalContent: ea,
@@ -325,30 +325,30 @@ function en(e) {
             location: "OneTimeUnifiedCheckoutPurchaseReview",
             onPaymentSourceAdd: i,
             additionalPaymentSourceDropdownProps: y,
-            disabled: E,
+            disabled: C,
         }),
-        I = r.useMemo(() => {
+        T = r.useMemo(() => {
             let e = [];
             return (
-                null != C.testModeWarning &&
-                    e.push({ type: "warning", message: C.testModeWarning, key: "test-mode-warning-notice" }),
-                null != C.devShelfError &&
-                    e.push({ type: "critical", message: C.devShelfError, key: "dev-shelf-error-notice" }),
+                null != E.testModeWarning &&
+                    e.push({ type: "warning", message: E.testModeWarning, key: "test-mode-warning-notice" }),
+                null != E.devShelfError &&
+                    e.push({ type: "critical", message: E.devShelfError, key: "dev-shelf-error-notice" }),
                 e.length > 0 ? e : null
             );
-        }, [C.testModeWarning, C.devShelfError]),
+        }, [E.testModeWarning, E.devShelfError]),
         B = r.useMemo(() => {
             let e = [];
             return (
-                null != C.socialLayerGameItemDisclaimer &&
+                null != E.socialLayerGameItemDisclaimer &&
                     e.push({
                         type: "info",
-                        message: C.socialLayerGameItemDisclaimer,
+                        message: E.socialLayerGameItemDisclaimer,
                         key: "social-layer-game-item-disclaimer-notice",
                     }),
                 e.length > 0 ? e : null
             );
-        }, [C.socialLayerGameItemDisclaimer]);
+        }, [E.socialLayerGameItemDisclaimer]);
     return h
         ? (0, l.jsx)(c.E, {})
         : (0, l.jsx)(et, {
@@ -359,7 +359,7 @@ function en(e) {
               invoicePreview: o,
               paymentMethodContent: P,
               legalContent: m,
-              upperInlineNoticeProps: I,
+              upperInlineNoticeProps: T,
               footerInlineNoticeProps: B,
           });
 }
