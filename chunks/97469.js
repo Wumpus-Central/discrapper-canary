@@ -1,32 +1,56 @@
 "use strict";
-n.d(t, { $i: () => d, NC: () => h, qo: () => _ });
+n.d(t, { $i: () => _, NC: () => f, qo: () => h });
 var i = n(17928),
     r = n(462887),
     s = n(467135),
     a = n(47671),
-    o = n(363195),
-    l = n(885386),
-    u = n(652215);
-function c() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o.A,
-        t = arguments.length > 1 ? arguments[1] : void 0,
-        { gradientPreset: n } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.A,
-        i = arguments.length > 3 ? arguments[3] : void 0,
-        s = arguments.length > 4 ? arguments[4] : void 0,
-        l = null != i.customUserThemeSettings;
-    return (0, r.q)(e.theme) && t && null == n && !(l || s);
-}
-function d() {
-    let e = l.eh.getSetting(),
-        t = s.ko.getState().isEditorActive();
-    return c(o.A, l.l$.getSetting(), a.A, e, t);
+    o = n(875317),
+    l = n(363195),
+    u = n(885386),
+    c = n(652215);
+function d(e) {
+    let {
+            theme: t,
+            darkSidebar: n,
+            gradientPreset: i,
+            clientThemeSettings: s,
+            isCustomThemeEditorActive: a,
+            hasActiveGuildTheme: o,
+            isGuildThemePreviewActive: l,
+        } = e,
+        u = null != s.customUserThemeSettings;
+    return (0, r.q)(t) && n && null == i && !(u || a || o || l);
 }
 function _() {
-    let e = l.eh.useSetting(),
-        t = l.l$.useSetting(),
-        n = (0, s.ko)((e) => e.isEditorActive());
-    return (0, i.bG)([o.A, a.A], () => c(o.A, t, a.A, e, n));
+    let e = (0, o.fX)();
+    return d({
+        theme: l.A.theme,
+        darkSidebar: u.l$.getSetting(),
+        gradientPreset: a.A.gradientPreset,
+        clientThemeSettings: u.eh.getSetting(),
+        isCustomThemeEditorActive: s.ko.getState().isEditorActive(),
+        hasActiveGuildTheme: null != e,
+        isGuildThemePreviewActive: !1,
+    });
 }
 function h() {
-    return _() ? u.NJ8.DARK : void 0;
+    let e = u.eh.useSetting(),
+        t = u.l$.useSetting(),
+        n = (0, s.ko)((e) => e.isEditorActive()),
+        r = null != (0, o.Q)(),
+        c = (0, o.gM)();
+    return (0, i.bG)([l.A, a.A], () =>
+        d({
+            theme: l.A.theme,
+            darkSidebar: t,
+            gradientPreset: a.A.gradientPreset,
+            clientThemeSettings: e,
+            isCustomThemeEditorActive: n,
+            hasActiveGuildTheme: r,
+            isGuildThemePreviewActive: c,
+        }),
+    );
+}
+function f() {
+    return h() ? c.NJ8.DARK : void 0;
 }

@@ -1,4 +1,4 @@
-i.d(t, { k: () => k });
+i.d(t, { k: () => w });
 var n = i(419954),
     s = i(780964),
     l = i(665267),
@@ -66,65 +66,67 @@ var b = i(366010),
     v = i(17928),
     y = i(775602),
     j = i(47671),
-    O = i(97469),
-    R = i(363195),
-    L = i(885386),
-    D = i(818348);
-let P = (0, n.zD)(s.X.APPEARANCE_DARK_SIDEBAR, {
+    O = i(875317),
+    R = i(97469),
+    L = i(363195),
+    D = i(885386),
+    P = i(818348);
+let G = (0, n.zD)(s.X.APPEARANCE_DARK_SIDEBAR, {
     useTitle: () => r.intl.string(r.t.EpSHAQ),
     useSearchTerms: () => [r.intl.string(r.t.Ksh3ik)],
     useValue: function () {
-        let e = (0, O.qo)();
-        return (0, v.bG)([R.A, y.A], () => {
-            let t = R.A.theme,
+        let e = (0, R.qo)();
+        return (0, v.bG)([L.A, y.A], () => {
+            let t = L.A.theme,
                 i = y.A.useForcedColors;
             return e && (0, b.q)(t) && !i;
         });
     },
     usePredicate: function () {
-        let e = null != L.eh.useSetting().customUserThemeSettings;
-        return (0, v.bG)([R.A, j.A], () => {
-            let t = R.A.theme,
-                i = j.A.gradientPreset;
-            return (0, b.q)(t) && null == i && !e;
+        let e = null != D.eh.useSetting().customUserThemeSettings,
+            t = null != (0, O.Q)();
+        return (0, v.bG)([L.A, j.A], () => {
+            let i = L.A.theme,
+                n = j.A.gradientPreset;
+            return (0, b.q)(i) && null == n && !e && !t;
         });
     },
     useDisabled: function () {
-        return (0, v.bG)([R.A, y.A], () => {
-            let e = R.A.theme,
+        return (0, v.bG)([L.A, y.A], () => {
+            let e = L.A.theme,
                 t = y.A.useForcedColors;
-            return e !== D.NJ.LIGHT || t;
+            return e !== P.NJ.LIGHT || t;
         });
     },
-    setValue: (e) => L.l$.updateSetting(e),
+    setValue: (e) => D.l$.updateSetting(e),
 });
-var G = i(331322),
-    M = i(487245),
-    U = i(385803);
-let V = (0, n.E2)(s.X.APPEARANCE_DEFAULT_THEMES, {
+var M = i(331322),
+    U = i(487245),
+    V = i(385803);
+let k = (0, n.E2)(s.X.APPEARANCE_DEFAULT_THEMES, {
         useSearchTerms: () => [r.intl.string(r.t.Ksh3ik)],
         Component: function () {
-            return (0, o.jsxs)(M.Ay, {
-                type: M.v0.SETTINGS,
+            return (0, o.jsxs)(U.Ay, {
+                type: U.v0.SETTINGS,
                 children: [
                     (0, o.jsx)(m.D, {
                         variant: "heading-md/semibold",
                         color: "text-default",
                         children: r.intl.string(r.t["0EzVst"]),
                     }),
-                    (0, o.jsx)(G.B, {
+                    (0, o.jsx)(M.B, {
                         direction: "horizontal",
                         wrap: !0,
                         gap: 8,
                         padding: { top: 24 },
-                        children: (0, o.jsx)(M.t6, { size: U.ni.SIZE_48 }),
+                        children: (0, o.jsx)(U.t6, { size: V.ni.SIZE_48 }),
                     }),
                 ],
             });
         },
     }),
-    k = (0, n.FW)(s.X.APPEARANCE_THEME_FIELDSET, {
+    w = (0, n.FW)(s.X.APPEARANCE_THEME_FIELDSET, {
         useTitle: () => r.intl.string(r.t.Ksh3ik),
         isTitleHiddenVisually: !0,
-        buildLayout: () => [V, P, C, a],
+        buildLayout: () => [k, G, C, a],
     });
