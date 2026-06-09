@@ -24894,6 +24894,7 @@
   "IAsfR5": "Enjoy **Nitro for {daysCount, plural, one { Day} other { Days} }** before getting charged!",
   "U2CmMW": "!!{priceAmount}!! now",
   "JsSin7": "!!{priceRate}!! after **{intervalCount, plural, one {one month} =2 {two months} =3 {three months} other { months} }**",
+  "QXQ/Sm": "!!{priceRate}!! after **{intervalCount, plural, one { month} other { months} }**",
   "Fjpyfj": "Promo",
   "BPzQj4": "Purchase",
   "MR4VnX": "Renews {renewalDate, date, short}",
