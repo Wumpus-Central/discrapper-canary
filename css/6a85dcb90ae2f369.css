@@ -1,0 +1,30 @@
+.highlight-mana-components [data-mana-component] {
+    box-shadow: 0 0 6px 2px var(--pink-51), 0 0 8px 4px var(--opacity-blurple-80)
+}
+
+.highlight-mana-components [data-mana-component=text-area],
+.highlight-mana-components [data-mana-component=text-input] {
+    box-shadow: 0 0 6px 2px var(--pink-51), 0 0 8px 4px var(--opacity-blurple-80)
+}
+
+@scope (.highlight-mana-text) {
+    [data-text-variant] {
+        box-shadow: inset 0 0 0 1px var(--green-360)
+    }
+
+    [data-text-variant] :not(:has(*)):not(:empty) {
+        box-shadow: inset 0 0 0 1px var(--green-360)
+    }
+
+    :not([data-text-variant]):not([data-text-variant] *):not(:has(*)):not(:empty):not(script):not(style):not(title):not(noscript) {
+        box-shadow: inset 0 0 0 1px var(--red-400)
+    }
+
+    time:not([data-text-variant]):not([data-text-variant] *):not(:empty) {
+        box-shadow: inset 0 0 0 1px var(--red-400)
+    }
+}
+
+.highlight-mana-buttons [data-mana-component=button] {
+    box-shadow: 0 0 6px 2px var(--pink-51), 0 0 8px 4px var(--opacity-blurple-80)
+}

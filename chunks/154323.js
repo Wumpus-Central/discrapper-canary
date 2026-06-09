@@ -5,6 +5,7 @@ var i = n(17928),
 let s = {
         highlight_mana_buttons: "Highlight mana buttons",
         highlight_mana_components: "Highlight mana components",
+        highlight_mana_text: "Mana Text Migration Highlighter",
         highlight_void_toggleables: "Highlight toggleable components (Checkbox, VoidRadioGroup, Switch)",
         highlight_void_buttons: "Highlight void buttons",
         use_topic_dividers_in_chat: "Use summary topics as divider content in chat instead of string formatted dates.",
