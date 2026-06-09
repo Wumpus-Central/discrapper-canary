@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => ei });
+n.d(t, { A: () => er });
 var i,
     r = n(691540),
     s = n(97483),
@@ -319,36 +319,44 @@ let q = !1,
     X = null,
     Z = null,
     Q = null,
-    J = null;
-function ee() {
+    J = null,
+    ee = null;
+function et() {
     let e = (0, b.qi)(),
         t = (0, b.$i)(),
-        n = Z !== e,
-        i = Q !== t;
-    if (!n && !i) return;
-    let r = p.Ay.getMediaEngine();
-    n && r.setClipsV3Enabled(e),
-        w.nx.info(`clips v3 runtime flags pushed: v3=${e} (was ${Z}), ml=${t} (was ${Q})`),
+        n = R.Ay.getEnableAutoclipping(),
+        i = Z !== e,
+        r = Q !== t,
+        s = J !== n;
+    if (!i && !r && !s) return;
+    let a = p.Ay.getMediaEngine();
+    i && a.setClipsV3Enabled(e),
+        w.nx.info(
+            `clips v3 runtime flags pushed: v3=${e} (was ${Z}), ml=${t} (was ${Q}), autoclipping=${n} (was ${J})`,
+        ),
         (Z = e),
         (Q = t),
+        (J = n),
         e &&
             (t
-                ? (null === J &&
+                ? (null === ee &&
                       (w.nx.info("clips v3 ml flag set ml=false until download complete"),
-                      r.setClipsV3MLEnabled(!1),
-                      (J = !1)),
+                      a.setClipsV3MLEnabled(!1),
+                      (ee = !1)),
                   (async () => {
                       let { allAssetsDownloaded: e } = await H.start(),
-                          t = e && Q;
-                      J !== t &&
-                          (w.nx.info(`clips v3 ml flag set ml=${t} (was ${J}). allAssetsDownloaded=${e}`),
-                          r.setClipsV3MLEnabled(t),
-                          (J = t));
+                          t = e && !0 === Q && !0 === J;
+                      ee !== t &&
+                          (w.nx.info(
+                              `clips v3 ml flag set ml=${t} (was ${ee}). allAssetsDownloaded=${e}, autoclipping=${J}`,
+                          ),
+                          a.setClipsV3MLEnabled(t),
+                          (ee = t));
                   })())
-                : !1 !== J &&
-                  (w.nx.info(`clips v3 ml flag set ml=false (was ${J})`), r.setClipsV3MLEnabled(!1), (J = !1)));
+                : !1 !== ee &&
+                  (w.nx.info(`clips v3 ml flag set ml=false (was ${ee})`), a.setClipsV3MLEnabled(!1), (ee = !1)));
 }
-class et extends x {
+class en extends x {
     constructor() {
         super(),
             Object.assign(this.actions, {
@@ -408,7 +416,7 @@ class et extends x {
                         this.fireClipsInitEvent();
                 }
             };
-        ee(),
+        et(),
             !(0, b.qi)() || q
                 ? n()
                 : (q
@@ -417,7 +425,7 @@ class et extends x {
                         ? X
                         : (X = (async () => {
                               try {
-                                  ee(), await m.Ay.ensureModule("discord_clips");
+                                  et(), await m.Ay.ensureModule("discord_clips");
                                   let e = m.Ay.requireModule("discord_clips").getModulePath(),
                                       t = p.Ay.getMediaEngine(),
                                       n = m.Ay.getClipsDataDirSync();
@@ -474,13 +482,13 @@ class et extends x {
         "" !== e &&
             e !== R.he &&
             Y.Fb(e)
-                .then(() => en())
+                .then(() => ei())
                 .catch((e) => {
                     w.nx.error("Failed to load clips directory on connection open", e);
                 });
     }
 }
-async function en() {
+async function ei() {
     if (R.Ay.hasClips() || null == o.A || null == o.A.app) return;
     let e = await o.A.app.getPath("documents");
     if (R.Ay.getSettings().storageLocation === e)
@@ -491,4 +499,4 @@ async function en() {
             w.nx.error("Failed to resolve videos path for old default storage migration", e);
         }
 }
-let ei = new et();
+let er = new en();

@@ -1,21 +1,22 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => p });
 var i = n(439372),
     r = n(952818),
     s = n(287809),
     a = n(977997),
     o = n(572164),
     l = n(315240),
-    u = n(974293),
-    c = n(458977);
-let d = (0, n(945810).mj)({
+    u = n(274372),
+    c = n(974293),
+    d = n(458977);
+let _ = (0, n(945810).mj)({
     kind: "user",
     name: "2026-06-magic-scoring",
     defaultConfig: { enableSteamTimeline: !1 },
     variations: { 1: { enableSteamTimeline: !0 } },
 });
-var _ = n(876474);
-class h extends i.A {
+var h = n(876474);
+class f extends i.A {
     registrations = new Map();
     activeHandlers = new Map();
     initialized = !1;
@@ -33,27 +34,30 @@ class h extends i.A {
                 {
                     type: "voiceChannel",
                     name: "ml-audio-classification",
-                    isEnabled: () => (0, u.$i)(),
+                    isEnabled: () => (0, c.$i)() && u.Ay.getEnableAutoclipping(),
                     importHandler: () => n.e("53725").then(n.bind(n, 691148)),
                 },
                 {
                     type: "voiceChannel",
                     name: "distributed-clipping",
                     isEnabled: () =>
-                        c.A.getConfig({ location: "Clip signal handler registration" }).enableDistributedClips,
+                        u.Ay.getEnableAutoclipping() &&
+                        d.A.getConfig({ location: "Clip signal handler registration" }).enableDistributedClips,
                     importHandler: () => n.e("78045").then(n.bind(n, 359788)),
                 },
                 {
                     type: "application",
                     name: "steam-timeline",
-                    isEnabled: () => d.getConfig({ location: "Clip signal handler registration" }).enableSteamTimeline,
-                    importHandler: () => n.e("33196").then(n.bind(n, 551367)),
+                    isEnabled: () =>
+                        u.Ay.getEnableAutoclipping() &&
+                        _.getConfig({ location: "Clip signal handler registration" }).enableSteamTimeline,
+                    importHandler: () => n.e("97097").then(n.bind(n, 891920)),
                 },
                 {
                     type: "application",
                     name: "league-of-legends",
-                    applicationId: _.m,
-                    isEnabled: () => !1,
+                    applicationId: h.m,
+                    isEnabled: () => u.Ay.getEnableAutoclipping() && !1,
                     importHandler: () => n.e("18549").then(n.bind(n, 877588)),
                 },
             ]))
@@ -123,4 +127,4 @@ class h extends i.A {
         this.terminatedCount++, this.stopAllHandlers();
     }
 }
-let f = new h();
+let p = new f();
