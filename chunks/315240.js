@@ -5,6 +5,7 @@ n.d(t, {
     h$: () => er,
     YP: () => J,
     Uh: () => et,
+    p8: () => ep,
     MI: () => ed,
     Fb: () => eg,
     VO: () => eT,
@@ -21,7 +22,6 @@ n.d(t, {
     $N: () => eO,
     YK: () => em,
     eQ: () => X,
-    qu: () => ep,
     PW: () => eC,
     w7: () => eD,
     K7: () => eA,
@@ -701,7 +701,7 @@ function ef() {
     a.h.dispatch({ type: "CLIPS_CLEAR_LAST_CLIPS_SESSION" });
 }
 function ep(e) {
-    a.h.dispatch({ type: "CLIPS_SESSION_UPDATE", sessionId: e });
+    a.h.dispatch({ type: "CLIPS_SESSION_UPDATE", session: e });
 }
 function eE() {
     a.h.dispatch({ type: "CLIPS_CLEAR_NEW_CLIP_IDS" });

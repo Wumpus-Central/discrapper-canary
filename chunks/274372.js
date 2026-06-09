@@ -207,8 +207,11 @@ class B extends r.Ay.DeviceSettingsStore {
     getLastClipsSession() {
         return b;
     }
-    getCurrentClipsSessionId() {
+    getCurrentClipsSession() {
         return D;
+    }
+    getCurrentClipsSessionId() {
+        return D?.id ?? null;
     }
     devSetLastClipsSession(e) {
         (b = e), this.emitChange();
@@ -374,7 +377,7 @@ let H = new B(s.h, {
             b = null;
         },
         CLIPS_SESSION_UPDATE: function (e) {
-            let { sessionId: t } = e;
+            let { session: t } = e;
             D = t;
         },
         CLIPS_CLEAR_NEW_CLIP_IDS: function () {
