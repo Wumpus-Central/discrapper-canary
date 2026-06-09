@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => S });
 var i = n(636537),
     r = n(228366),
     s = n(439372),
@@ -31,23 +31,22 @@ let p = new f(r.h, {
         return (h.lastReportedAtMs = t), !0;
     },
 });
-var E = n(802185),
-    m = n(652215),
-    g = n(818348);
-let A = 5 * l.A.Millis.MINUTE;
-async function I() {
+var E = n(652215),
+    m = n(818348);
+let g = 5 * l.A.Millis.MINUTE;
+async function A() {
     try {
-        await i.Bo.post({ url: m.Rsh.USER_MEANINGFULLY_ONLINE, rejectWithError: !0 });
+        await i.Bo.post({ url: E.Rsh.USER_MEANINGFULLY_ONLINE, rejectWithError: !0 });
     } catch (e) {
         if (!(e instanceof i.oh) || 429 !== e.status)
             return void u.A.captureException(e, { tags: { app_context: "session_timer" } });
     }
     r.h.dispatch({ type: "FRIEND_ONLINE_TIMER_REPORTED", timestampMs: Date.now() });
 }
-function T(e) {
-    return [g.cl.ONLINE, g.cl.STREAMING].includes(e);
+function I(e) {
+    return [m.cl.ONLINE, m.cl.STREAMING].includes(e);
 }
-class S extends s.A {
+class T extends s.A {
     timerId = null;
     actions = {
         POST_CONNECTION_OPEN: () => this.start(),
@@ -61,16 +60,16 @@ class S extends s.A {
         this.clear();
     }
     start = () => {
-        (E.A.getConfig({ location: "FriendOnlineTimerManager" }).enabled && !a.hV.getSetting()) ||
-            !p.isCooldownElapsed() ||
-            null != this.timerId ||
-            (T(o.A.getStatus()) &&
-                (this.timerId = setTimeout(() => {
-                    (this.timerId = null), !T(o.A.getStatus()) || (p.isCooldownElapsed() && I());
-                }, A)));
+        a.hV.getSetting() &&
+            p.isCooldownElapsed() &&
+            null == this.timerId &&
+            I(o.A.getStatus()) &&
+            (this.timerId = setTimeout(() => {
+                (this.timerId = null), !I(o.A.getStatus()) || (p.isCooldownElapsed() && A());
+            }, g));
     };
     clear = () => {
         null != this.timerId && (clearTimeout(this.timerId), (this.timerId = null));
     };
 }
-let y = new S();
+let S = new T();
