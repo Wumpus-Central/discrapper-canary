@@ -4586,6 +4586,7 @@ var rD =
         (ex.CLIP_DELETED = "clip_deleted"),
         (ex.CLIP_GALLERY_CARD_CLICKED = "clip_gallery_card_clicked"),
         (ex.CLIP_GALLERY_CARD_BUTTON_CLICKED = "clip_gallery_card_button_clicked"),
+        (ex.CLIPS_FILTER_CHANGED = "clips_filter_changed"),
         (ex.CLIP_EDITED = "clip_edited"),
         (ex.CLIP_SHARED = "clip_shared"),
         (ex.CLIPS_HARDWARE_CLASSIFICATION = "clips_hardware_classification"),

@@ -1,4 +1,4 @@
-a.r(
+n.r(
     (e.exports = {
         layoutContainer: "layoutContainer__9c3be",
         editingPanelEnabled: "editingPanelEnabled__9c3be",
@@ -23,6 +23,7 @@ a.r(
         "compact-xs": "compact-xs__9c3be",
         "compact-sm": "compact-sm__9c3be",
         profileHeader: "profileHeader__9c3be",
+        profileHeaderBannerContainer: "profileHeaderBannerContainer__9c3be",
         profileBody: "profileBody__9c3be",
         profileOverlay: "profileOverlay__9c3be",
         profileBanner: "profileBanner__9c3be",
