@@ -11,7 +11,7 @@ let i = {
     bounty_abandoned: 25,
     hangout_window_set: 100,
     populated_clip_gallery_closed: 100,
-    topical_navigation_multiple_impressions: 100,
+    topical_navigation_multiple_impressions: 10,
 };
 var r = n(636537),
     s = n(228366),
