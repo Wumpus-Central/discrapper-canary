@@ -1081,13 +1081,8 @@ function nb(e) {
                   }
                 : void 0,
         j = i.useCallback(() => {
-            (0, nf.W)({
-                analyticsLocations: o,
-                guild: u ?? void 0,
-                initialSelectedEffect: v ?? void 0,
-                stackingBehavior: "stack",
-            });
-        }, [o, u, v]);
+            (0, nf.W)({ analyticsLocations: o, guild: u ?? void 0, stackingBehavior: "stack" });
+        }, [o, u]);
     return (0, t.jsx)(lQ.V, {
         affordance: p && !x ? "add" : b,
         variant: a,
@@ -1139,13 +1134,8 @@ function ny(e) {
                   }
                 : void 0,
         S = i.useCallback(() => {
-            (0, nj.w)({
-                analyticsLocations: o,
-                guild: g ?? void 0,
-                initialSelectedProfileFrame: b,
-                stackingBehavior: "stack",
-            });
-        }, [o, g, b]);
+            (0, nj.w)({ analyticsLocations: o, guild: g ?? void 0, stackingBehavior: "stack" });
+        }, [o, g]);
     return (0, t.jsx)(lQ.V, {
         affordance: v && !h ? "add" : R,
         variant: "square",
