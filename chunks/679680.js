@@ -1,0 +1,8 @@
+e.exports = {
+    kL: "container__0acd6",
+    DD: "title__0acd6",
+    Zu: "featureList__0acd6",
+    N4: "feature__0acd6",
+    xH: "featureIconContainer__0acd6",
+    oo: "featureText__0acd6",
+};
