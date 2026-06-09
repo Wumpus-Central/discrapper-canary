@@ -92,41 +92,6 @@
     }
 }
 
-.tryItOutButtons__965a6 {
-    display: flex;
-    gap: 12px
-}
-
-.previewThemeButton__965a6 {
-    margin-bottom: 26px;
-    margin-top: 16px
-}
-
-.premiumTier2Divider__965a6 {
-    background-image: linear-gradient(90deg, var(--premium-tier-2-pink-for-gradients) 0, var(--premium-tier-2-purple-for-gradients) 50%, var(--premium-tier-2-pink-for-gradients) 100%);
-    height: 2px;
-    margin-inline: -24px
-}
-
-.displayClientThemesTitle__965a6 {
-    color: var(--text-default)
-}
-
-.displayClientThemesHeading__965a6 {
-    gap: 0
-}
-
-.displayPremiumIcon__965a6 {
-    color: var(--text-default)
-}
-
-.colorThemesBackground__965a6 {
-    background: var(--background-base-lower);
-    border: 1px solid var(--border-normal);
-    border-radius: var(--radius-md);
-    padding: 24px
-}
-
 .avatar_d28e10 {
     align-items: center;
     display: flex;
@@ -172,6 +137,41 @@
     margin-top: 30px
 }
 
+.tryItOutButtons__965a6 {
+    display: flex;
+    gap: 12px
+}
+
+.previewThemeButton__965a6 {
+    margin-bottom: 26px;
+    margin-top: 16px
+}
+
+.premiumTier2Divider__965a6 {
+    background-image: linear-gradient(90deg, var(--premium-tier-2-pink-for-gradients) 0, var(--premium-tier-2-purple-for-gradients) 50%, var(--premium-tier-2-pink-for-gradients) 100%);
+    height: 2px;
+    margin-inline: -24px
+}
+
+.displayClientThemesTitle__965a6 {
+    color: var(--text-default)
+}
+
+.displayClientThemesHeading__965a6 {
+    gap: 0
+}
+
+.displayPremiumIcon__965a6 {
+    color: var(--text-default)
+}
+
+.colorThemesBackground__965a6 {
+    background: var(--background-base-lower);
+    border: 1px solid var(--border-normal);
+    border-radius: var(--radius-md);
+    padding: 24px
+}
+
 .container_a1d343 {
     align-items: center;
     background-color: var(--background-base-lowest);
@@ -207,56 +207,6 @@
     flex-shrink: 0
 }
 
-.interactive_bf202d {
-    border-radius: inherit;
-    color: var(--interactive-text-default);
-    cursor: pointer
-}
-
-.interactive_bf202d:focus-within,
-.interactive_bf202d:hover {
-    background: var(--interactive-background-hover);
-    color: var(--interactive-text-hover)
-}
-
-.interactive_bf202d:active {
-    background: var(--interactive-background-active);
-    color: var(--interactive-text-active)
-}
-
-.muted_bf202d {
-    color: var(--text-muted)
-}
-
-@media (min-width:486px) {
-    .selected_bf202d {
-        background: var(--interactive-background-selected);
-        color: var(--interactive-text-active)
-    }
-}
-
-.enable-forced-colors .interactive_bf202d {
-    background-color: ButtonFace;
-    border: 1px solid ButtonFace;
-    color: ButtonText;
-    forced-color-adjust: none
-}
-
-.enable-forced-colors .interactive_bf202d:focus-within,
-.enable-forced-colors .interactive_bf202d:hover {
-    background-color: ButtonFace;
-    border-color: ButtonText;
-    color: ButtonText
-}
-
-.enable-forced-colors .interactive_bf202d.selected_bf202d,
-.enable-forced-colors .interactive_bf202d.selected_bf202d:focus-within,
-.enable-forced-colors .interactive_bf202d.selected_bf202d:hover {
-    background-color: Highlight;
-    border-color: HighlightText;
-    color: HighlightText
-}
-
 .container_d79086 {
     box-sizing: border-box;
     contain: paint;
@@ -288,6 +238,56 @@
     display: flex;
     flex-wrap: wrap;
     gap: 16px
+}
+
+.interactive_f88cfd {
+    border-radius: inherit;
+    color: var(--interactive-text-default);
+    cursor: pointer
+}
+
+.interactive_f88cfd:focus-within,
+.interactive_f88cfd:hover {
+    background: var(--interactive-background-hover);
+    color: var(--interactive-text-hover)
+}
+
+.interactive_f88cfd:active {
+    background: var(--interactive-background-active);
+    color: var(--interactive-text-active)
+}
+
+.muted_f88cfd {
+    color: var(--text-muted)
+}
+
+@media (min-width:486px) {
+    .selected_f88cfd {
+        background: var(--interactive-background-selected);
+        color: var(--interactive-text-active)
+    }
+}
+
+.enable-forced-colors .interactive_f88cfd {
+    background-color: ButtonFace;
+    border: 1px solid ButtonFace;
+    color: ButtonText;
+    forced-color-adjust: none
+}
+
+.enable-forced-colors .interactive_f88cfd:focus-within,
+.enable-forced-colors .interactive_f88cfd:hover {
+    background-color: ButtonFace;
+    border-color: ButtonText;
+    color: ButtonText
+}
+
+.enable-forced-colors .interactive_f88cfd.selected_f88cfd,
+.enable-forced-colors .interactive_f88cfd.selected_f88cfd:focus-within,
+.enable-forced-colors .interactive_f88cfd.selected_f88cfd:hover {
+    background-color: Highlight;
+    border-color: HighlightText;
+    color: HighlightText
 }
 
 .container_e45859 {
