@@ -587,24 +587,6 @@
     width: 1em !important
 }
 
-.container__93db4 {
-    align-items: center;
-    background-color: var(--background-base-low);
-    border-radius: var(--radius-md);
-    box-sizing: border-box;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin-top: 16px;
-    padding: 16px;
-    text-align: center
-}
-
-.header__93db4 {
-    margin-bottom: 4px;
-    margin-top: 8px
-}
-
 .container_a68543 {
     background-color: var(--background-base-low);
     border: 1px solid var(--border-subtle);
