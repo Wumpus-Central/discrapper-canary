@@ -9,7 +9,7 @@ let s = (e) => {
             let { default: e } = await Promise.all([
                 t.e("83979"),
                 t.e("90950"),
-                t.e("25898"),
+                t.e("8042"),
                 t.e("17427"),
                 t.e("699"),
                 t.e("10004"),

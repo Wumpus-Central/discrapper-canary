@@ -1,0 +1,39 @@
+.root_d529e9 {
+    background-color: var(--background-surface-high);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    max-height: 260px;
+    width: 240px
+}
+
+.root_d529e9 .voiceUsers_d529e9 {
+    padding: 0
+}
+
+.header_d529e9 {
+    color: var(--interactive-text-default);
+    padding: var(--custom-channel-call-participants-popout-padding-value);
+    padding-bottom: 9px;
+    text-transform: uppercase
+}
+
+.scroller_d529e9 {
+    padding: var(--custom-channel-call-participants-popout-padding-value);
+    padding-inline-start: 8px;
+    padding-top: 0
+}
+
+.button__9db96 {
+    margin-inline-start: 0
+}
+
+.divider__9db96 {
+    background: var(--border-strong);
+    margin-inline-end: 16px
+}
+
+.speakers__9db96 {
+    display: flex;
+    flex-direction: row
+}
