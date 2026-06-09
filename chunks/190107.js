@@ -115,6 +115,7 @@ var I =
     (r.NITRO_HOME_MARKETING = "nitro_home_marketing"),
     (r.NITRO_HOME_TAB = "nitro_home_tab"),
     (r.QUEST_ORB_MULTIPLIER_TAB_TOOLTIP = "quest_orb_multiplier_tab_tooltip"),
+    (r.PLAY_QUEST_CONNECTION_MODAL = "play_quest_connection_modal"),
     r);
 let T = new Set([f.L.NITRO_2_POINT_0_CTA, f.L.ORBS_MULTIPLIER_QUEST, f.L.XBOX_GAME_PASS_QUEST]),
     S = m.A.Millis.MINUTE * p.ConsecutiveHeartbeatPeriodMinutes,

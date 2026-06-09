@@ -49,15 +49,15 @@ class p extends r.PureComponent {
                 e,
                 async () => {
                     let { default: e } = await Promise.all([
-                            n.e("64684"),
+                            n.e("3767"),
                             n.e("94881"),
                             n.e("26132"),
                             n.e("46652"),
                             n.e("93190"),
                             n.e("34552"),
                             n.e("8757"),
-                            n.e("89673"),
                             n.e("85968"),
+                            n.e("89673"),
                             n.e("68403"),
                             n.e("29787"),
                             n.e("82073"),

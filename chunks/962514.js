@@ -16,8 +16,8 @@ var i = n(284009),
     x = n(567231),
     f = n(505527),
     E = n(9842),
-    C = n(495544),
-    I = n(734057),
+    I = n(495544),
+    C = n(734057),
     v = n(31717),
     _ = n(834942),
     j = n(232835),
@@ -70,7 +70,7 @@ function w(e) {
 }
 function O(e) {
     let { channelId: t, messageId: i, answerId: l } = e,
-        s = I.A.getChannel(t);
+        s = C.A.getChannel(t);
     if (null == s) return;
     if (A.A.isLurking(s.guild_id))
         return void w({ guildId: s.guild_id, title: P.intl.string(P.t["7LpysO"]), body: P.intl.string(P.t["5sHHoy"]) });
@@ -80,7 +80,7 @@ function O(e) {
     !(function (e) {
         let { message: t, initialAnswerId: i } = e;
         (0, y.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("24789"), n.e("40183"), n.e("78195"), n.e("19794")]).then(
+            let { default: e } = await Promise.all([n.e("3767"), n.e("40183"), n.e("78195"), n.e("19794")]).then(
                 n.bind(n, 716936),
             );
             return (n) => (0, T.jsx)(e, { ...n, message: t, initialAnswerId: i });
@@ -102,12 +102,12 @@ function G(e) {
         i = j.A.getMessage(t, n);
     return null == i ? [] : i.reactions.flatMap((e) => (!0 === e.me_vote ? e.emoji.name : []));
 }
-async function V(e) {
+async function B(e) {
     let { channelId: t, messageId: n, answerIds: i } = e,
         l = G({ channelId: t, messageId: n }),
         s = r().difference(l, i),
         a = r().difference(i, l),
-        d = C.default.getId(),
+        d = I.default.getId(),
         u = [
             ...s.map((e) => ({ type: "MESSAGE_REACTION_REMOVE", id: e })),
             ...a.map((e) => ({ type: "MESSAGE_REACTION_ADD", id: e })),
@@ -128,9 +128,9 @@ async function V(e) {
         });
     null != m && (await m);
 }
-async function B(e) {
+async function V(e) {
     let { channelId: t, messageId: n } = e,
-        i = I.A.getChannel(t);
+        i = C.A.getChannel(t);
     if (null == i) return;
     if (A.A.isLurking(i.guild_id))
         return void w({ guildId: i.guild_id, title: P.intl.string(P.t.Qic1FD), body: P.intl.string(P.t["5sHHoy"]) });
@@ -149,7 +149,7 @@ async function B(e) {
                 { ...e, submitting: !0, editing: !1 }
             ),
         ),
-            await V({ channelId: t, messageId: n, answerIds: e }),
+            await B({ channelId: t, messageId: n, answerIds: e }),
             await L({ channelId: t, messageId: n, answerIds: e }),
             (0, k.A2)(t, n, () => void 0),
             d.O.announce(0 === e.length ? P.intl.string(P.t["xcvy+3"]) : P.intl.string(P.t.o20GSo));
@@ -158,7 +158,7 @@ async function B(e) {
             title: P.intl.string(P.t.iufib1),
             body: e.getAnyErrorMessage?.() ?? e.message ?? P.intl.string(P.t.eAn6z2),
         }),
-            await V({ channelId: t, messageId: n, answerIds: r }),
+            await B({ channelId: t, messageId: n, answerIds: r }),
             (0, k.A2)(t, n, (e) => {
                 if (null != e) return { ...e, submitting: !1, editing: !1 };
             });
@@ -166,7 +166,7 @@ async function B(e) {
 }
 async function H(e) {
     let { channelId: t, messageId: n } = e,
-        i = I.A.getChannel(t);
+        i = C.A.getChannel(t);
     if (null != i)
         return A.A.isLurking(i.guild_id)
             ? void w({ guildId: i.guild_id, title: P.intl.string(P.t.B9QnBp), body: P.intl.string(P.t.BVZCTn) })
@@ -177,13 +177,13 @@ async function H(e) {
                   editing: !1,
                   showResults: e?.showResults ?? !1,
               })),
-              await B({ channelId: t, messageId: n }));
+              await V({ channelId: t, messageId: n }));
 }
 async function F(e) {
     let { channelId: t, messageId: n, type: i } = e;
     switch (i) {
         case "submit":
-            await B({ channelId: t, messageId: n });
+            await V({ channelId: t, messageId: n });
             break;
         case "remove":
             await H({ channelId: t, messageId: n });
@@ -284,7 +284,7 @@ let Y = {
             );
         });
     },
-    handlePollSubmitVote: B,
+    handlePollSubmitVote: V,
     handleUpdateVoteEditingState: U,
     handlePollActionTapped: F,
     createPoll: async function (e) {

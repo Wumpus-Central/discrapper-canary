@@ -1,0 +1,44 @@
+.overlaySettingsNux__91f99 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    padding: 12px;
+    position: relative;
+    width: 100%
+}
+
+.closeCircleButton__91f99 {
+    cursor: pointer;
+    inset-inline-end: 12px;
+    position: absolute;
+    top: 24px;
+    z-index: 1
+}
+
+.nuxFirstImage__91f99 {
+    height: 371px;
+    width: 660px
+}
+
+.nuxUserSettingsImage__91f99 {
+    height: 188px;
+    width: 660px
+}
+
+.mainTitleContainer__91f99 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    text-align: center;
+    width: 360px
+}
+
+.divider__91f99 {
+    --custom-divider-margin: calc(var(--space-xxl) + var(--space-xs));
+    margin-bottom: var(--custom-divider-margin);
+    margin-top: var(--custom-divider-margin)
+}

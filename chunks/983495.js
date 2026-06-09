@@ -351,7 +351,8 @@ function el(e) {
                                         let { default: e } = await Promise.all([
                                             n.e("99496"),
                                             n.e("25377"),
-                                            n.e("79309"),
+                                            n.e("88345"),
+                                            n.e("88167"),
                                             n.e("67251"),
                                             n.e("28367"),
                                             n.e("80230"),
@@ -437,7 +438,8 @@ let ed = r.forwardRef(function (e, t) {
                                         let { default: e } = await Promise.all([
                                             n.e("99496"),
                                             n.e("25377"),
-                                            n.e("79309"),
+                                            n.e("88345"),
+                                            n.e("88167"),
                                             n.e("67251"),
                                             n.e("28367"),
                                             n.e("80230"),

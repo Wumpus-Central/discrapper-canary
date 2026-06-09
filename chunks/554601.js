@@ -541,33 +541,29 @@ function eJ(e) {
                                             action: () => {
                                                 (0, eO.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        n.e("21837"),
-                                                        n.e("73341"),
-                                                        n.e("81804"),
+                                                        n.e("54680"),
+                                                        n.e("3767"),
+                                                        n.e("30463"),
                                                         n.e("19393"),
                                                         n.e("4355"),
                                                         n.e("46461"),
-                                                        n.e("19148"),
-                                                        n.e("62155"),
+                                                        n.e("88167"),
+                                                        n.e("52051"),
                                                         n.e("72451"),
                                                         n.e("11819"),
-                                                        n.e("82593"),
-                                                        n.e("46334"),
-                                                        n.e("64716"),
-                                                        n.e("67362"),
-                                                        n.e("79309"),
-                                                        n.e("26963"),
-                                                        n.e("38805"),
-                                                        n.e("50573"),
-                                                        n.e("91667"),
+                                                        n.e("15931"),
+                                                        n.e("32322"),
+                                                        n.e("88345"),
+                                                        n.e("27660"),
                                                         n.e("9336"),
                                                         n.e("55882"),
-                                                        n.e("62186"),
+                                                        n.e("39501"),
                                                         n.e("96130"),
-                                                        n.e("25336"),
-                                                        n.e("31326"),
+                                                        n.e("333"),
+                                                        n.e("31522"),
+                                                        n.e("77403"),
                                                         n.e("6324"),
-                                                        n.e("62024"),
+                                                        n.e("10981"),
                                                         n.e("23924"),
                                                         n.e("42205"),
                                                         n.e("71091"),
@@ -860,8 +856,8 @@ var e8 = n(34188),
     e2 = n(700623),
     e4 = n(177953),
     e7 = n(825484),
-    e6 = n(512950),
-    e5 = n(900797),
+    e5 = n(512950),
+    e6 = n(900797),
     e9 = n(847374),
     te = n(10716),
     tt = n(702841),
@@ -1243,9 +1239,9 @@ function tO(e) {
                   ],
               })
             : s && !i && (0, I.Ag)(n)
-              ? (0, r.jsx)(e6.p, {
+              ? (0, r.jsx)(e5.p, {
                     className: tv.ai,
-                    messageType: e6.Y.WARNING,
+                    messageType: e5.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1308,7 +1304,7 @@ function tM(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e5.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              ? (0, r.jsx)(e6.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
                               : (0, r.jsx)(e9.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
@@ -1421,10 +1417,10 @@ var tZ = n(111042),
     t2 = n(594061),
     t4 = n(935208),
     t7 = n(630248),
-    t6 = n(355097);
-function t5(e, t) {
+    t5 = n(355097);
+function t6(e, t) {
     o.useEffect(() => {
-        t2.bW.loadIfUncached(t6.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t2.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
     let n = (0, A.bG)([t7.A], () => t7.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
@@ -2134,12 +2130,12 @@ function n7(e, t) {
     let n = t7.A.getScoreWithoutLoadingLatest(e.id);
     return t7.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function n6(e, t) {
+function n5(e, t) {
     let n = (0, I.lq)(e),
         l = (0, I.lq)(t);
     return (0, g.RF)(n, l);
 }
-function n5(e, t) {
+function n6(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
@@ -2473,7 +2469,7 @@ function lm(e) {
                                 let n = $.Ay.getScoreWithoutLoadingLatest(u, e);
                                 return $.Ay.getScoreWithoutLoadingLatest(u, t) - n;
                             }),
-                            n5,
+                            n6,
                         ],
                     });
                 }, [s, c, l, t, n]),
@@ -2562,7 +2558,7 @@ function lm(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n7, n6],
+                        sortComparers: [n7, n5],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -3066,7 +3062,7 @@ function lv(e) {
                             let e = [];
                             return c && e.push(ns.gq), e;
                         }, [c]),
-                        u = t5(r, a),
+                        u = t6(r, a),
                         m = (0, A.bG)([eF.default], () => eF.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         let e = (e) => !(!1 === m && (0, t9.A)(e.id));
@@ -3243,7 +3239,7 @@ function lS(e) {
                         }, new Set()),
                     [s],
                 ),
-                c = t5(
+                c = t6(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})

@@ -330,7 +330,7 @@ var J = a(789645),
     el = a(641886),
     es = a(780898),
     ei = a(652215),
-    er = a(537127),
+    er = a(920196),
     eo = a(427262);
 function ed(e) {
     let { nameplate: t } = e,
@@ -386,7 +386,7 @@ function eh(e) {
         ],
     });
 }
-var ex = a(746885),
+var ex = a(286149),
     ep = a(95701),
     eg = a(331884);
 function ev(e) {
@@ -7832,7 +7832,7 @@ let rk = {
             return () => (0, r.jsx)(e, { application: t, channelId: "987654321", onClose: rN.Z_ });
         },
         GuildChannelListContextMenu: async () => {
-            let { default: e } = await Promise.all([a.e("9004"), a.e("19690"), a.e("22941"), a.e("10758")]).then(
+            let { default: e } = await Promise.all([a.e("9004"), a.e("19690"), a.e("45322"), a.e("10758")]).then(
                     a.bind(a, 455557),
                 ),
                 t = Object.values(a3.A.getGuilds())[0];
@@ -7841,23 +7841,22 @@ let rk = {
         GuildContextMenu: async () => {
             let { default: e } = await Promise.all([
                     a.e("45652"),
-                    a.e("7806"),
+                    a.e("90003"),
                     a.e("46774"),
-                    a.e("21837"),
-                    a.e("42453"),
-                    a.e("62024"),
-                    a.e("65313"),
-                    a.e("82593"),
-                    a.e("17893"),
+                    a.e("54680"),
+                    a.e("48618"),
+                    a.e("10981"),
+                    a.e("3767"),
+                    a.e("10889"),
+                    a.e("9092"),
                     a.e("87845"),
-                    a.e("45317"),
-                    a.e("50573"),
+                    a.e("35636"),
+                    a.e("65312"),
+                    a.e("65489"),
+                    a.e("36769"),
                     a.e("45970"),
                     a.e("56574"),
                     a.e("4974"),
-                    a.e("89694"),
-                    a.e("33168"),
-                    a.e("91402"),
                     a.e("49681"),
                     a.e("96382"),
                     a.e("22687"),
@@ -7938,7 +7937,7 @@ let rk = {
                     a.e("17699"),
                     a.e("57032"),
                     a.e("72238"),
-                    a.e("22941"),
+                    a.e("45322"),
                     a.e("94832"),
                     a.e("37038"),
                     a.e("26386"),
@@ -7962,7 +7961,7 @@ let rk = {
             return (t) => (0, r.jsx)(e, { ...t, id: "123456789", label: "Copy Test ID" });
         },
         UserSettingsMenu: async () => {
-            let { default: e } = await Promise.all([a.e("30006"), a.e("26132"), a.e("44491")]).then(a.bind(a, 907206));
+            let { default: e } = await Promise.all([a.e("90003"), a.e("26132"), a.e("44491")]).then(a.bind(a, 907206));
             return (t) => (0, r.jsx)(e, { ...t, onClose: rN.Z_ });
         },
         ExpressionPickerContextMenu: async () => {
@@ -8003,8 +8002,8 @@ let rk = {
         },
         AddQuestionsContextMenu: async () => {
             let { AddQuestionsContextMenu: e } = await Promise.all([
-                    a.e("7806"),
-                    a.e("21837"),
+                    a.e("90003"),
+                    a.e("9092"),
                     a.e("11810"),
                     a.e("14656"),
                 ]).then(a.bind(a, 892921)),
@@ -8443,7 +8442,7 @@ let r8 = {
         return (a) => (0, r.jsx)(e, { ...a, clientSettingType: t.LEGACY_GAME, gameId: "123456789" });
     },
     PremiumSubscriptionPauseModal: async () => {
-        let { PremiumSubscriptionPauseModalSelect: e } = await Promise.all([a.e("34218"), a.e("80347")]).then(
+        let { PremiumSubscriptionPauseModalSelect: e } = await Promise.all([a.e("88167"), a.e("80347")]).then(
                 a.bind(a, 318998),
             ),
             { CancellationContext: t } = await Promise.resolve().then(a.bind(a, 916974)),
@@ -9098,7 +9097,7 @@ let r8 = {
         return (s.displayName = "ConsentCheckBoxModalContent"), (e) => (0, r.jsx)(s, { ...e });
     },
     GuildRaidLockdownFeedbackModal: async () => {
-        let { default: e } = await Promise.all([a.e("7806"), a.e("46313")]).then(a.bind(a, 336496));
+        let { default: e } = await Promise.all([a.e("90003"), a.e("46313")]).then(a.bind(a, 336496));
         return (t) =>
             (0, r.jsx)(e, {
                 ...t,
@@ -9367,14 +9366,16 @@ let r8 = {
         return null == t ? () => null : (a) => (0, r.jsx)(e, { ...a, guild: t });
     },
     OtherFriendRequestsModal: async () => {
-        let { default: e } = await Promise.all([a.e("67094"), a.e("27917"), a.e("73152"), a.e("25281")]).then(
+        let { default: e } = await Promise.all([a.e("24617"), a.e("27917"), a.e("73152"), a.e("25281")]).then(
             a.bind(a, 516259),
         );
         return (t) => (0, r.jsx)(e, { ...t });
     },
     AcceptInviteModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("67094"),
+            a.e("78935"),
+            a.e("48618"),
+            a.e("74275"),
             a.e("91643"),
             a.e("74337"),
             a.e("7265"),
@@ -18076,8 +18077,8 @@ function h4() {
                                         let e = performance.now();
                                         (0, e$.openModalLazy)(async () => {
                                             let { default: n } = await Promise.all([
-                                                a.e("22448"),
-                                                a.e("67094"),
+                                                a.e("85409"),
+                                                a.e("78935"),
                                                 a.e("92868"),
                                                 a.e("63408"),
                                                 a.e("77375"),

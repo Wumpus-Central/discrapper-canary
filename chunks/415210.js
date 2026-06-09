@@ -1,4 +1,4 @@
-n.d(t, { A: () => eL });
+n.d(t, { A: () => eD });
 var l,
     i = n(627968),
     s = n(64700),
@@ -15,17 +15,16 @@ var l,
     A = n(138082),
     f = n(274372),
     C = n(572164),
-    x = n(710315),
-    E = n(534514),
-    S = n(834730),
-    _ = n(825484),
-    j = n(821609),
-    I = n(315240),
-    y = n(403362),
-    v = n(372684),
-    b = n(226421),
-    N = n(732774);
-function T() {
+    x = n(534514),
+    E = n(834730),
+    S = n(825484),
+    _ = n(821609),
+    j = n(315240),
+    I = n(403362),
+    y = n(372684),
+    v = n(226421),
+    b = n(732774);
+function N() {
     let e = (0, o.yK)([f.Ay], () => {
         let e = f.Ay.getLastClipsSession()?.newClipIds;
         return null == e
@@ -34,121 +33,121 @@ function T() {
                   .slice(0, 4)
                   .filter((t) => e.includes(t))
                   .map((e) => f.Ay.getClipById(e))
-                  .filter(y.Vq);
+                  .filter(I.Vq);
     });
     return (0, i.jsx)("div", {
-        className: r()(N.vH, {
-            [N.gb]: 1 === e.length,
-            [N.$d]: 2 === e.length,
-            [N.gS]: 3 === e.length,
-            [N.hA]: e.length >= 4,
+        className: r()(b.vH, {
+            [b.gb]: 1 === e.length,
+            [b.$d]: 2 === e.length,
+            [b.gS]: 3 === e.length,
+            [b.hA]: e.length >= 4,
         }),
         children: Array.from({ ...e, length: 4 })
             .map((e, t) =>
                 null != e
-                    ? e.type === v.nQ.VOICE_CLIP
-                        ? (0, i.jsx)(b.A, { className: N.xn }, e.id)
-                        : (0, i.jsx)("img", { alt: "", className: N.xn, src: e.thumbnail }, e.id)
+                    ? e.type === y.nQ.VOICE_CLIP
+                        ? (0, i.jsx)(v.A, { className: b.xn }, e.id)
+                        : (0, i.jsx)("img", { alt: "", className: b.xn, src: e.thumbnail }, e.id)
                     : (0, i.jsx)("div", {}, `placeholder-${t}`),
             )
             .reverse(),
     });
 }
-var M = n(375708),
-    R = n(280508);
-function D(e) {
+var T = n(375708),
+    M = n(280508);
+function R(e) {
     let { onOpenClips: t, lastClipsSession: n, closePopout: l } = e;
     return (s.useEffect(
         () => () => {
-            (0, I.TE)();
+            (0, j.TE)();
         },
         [],
     ),
     null == n)
         ? null
         : (0, i.jsxs)("div", {
-              className: R.WG,
+              className: M.WG,
               children: [
-                  (0, i.jsx)("div", { className: R.Yt, children: (0, i.jsx)(T, {}) }),
-                  (0, i.jsx)(E.D, {
-                      className: R.wx,
+                  (0, i.jsx)("div", { className: M.Yt, children: (0, i.jsx)(N, {}) }),
+                  (0, i.jsx)(x.D, {
+                      className: M.wx,
                       color: "text-strong",
                       variant: "heading-md/extrabold",
-                      children: M.intl.format(M.t["+qxkzC"], { count: n.newClipIds.length }),
+                      children: T.intl.format(T.t["+qxkzC"], { count: n.newClipIds.length }),
                   }),
-                  (0, i.jsx)(S.E, {
+                  (0, i.jsx)(E.E, {
                       color: "text-default",
-                      className: R.__invalid_content,
+                      className: M.__invalid_content,
                       variant: "text-sm/medium",
-                      children: M.intl.format(M.t["7XX0/X"], { applicationName: n.applicationName }),
+                      children: T.intl.format(T.t["7XX0/X"], { applicationName: n.applicationName }),
                   }),
                   (0, i.jsx)("div", {
-                      className: R.NC,
-                      children: (0, i.jsxs)(_.e, {
+                      className: M.NC,
+                      children: (0, i.jsxs)(S.e, {
                           children: [
-                              (0, i.jsx)(j.$, {
+                              (0, i.jsx)(_.$, {
                                   variant: "secondary",
-                                  text: M.intl.string(M.t["7r5Z19"]),
+                                  text: T.intl.string(T.t["7r5Z19"]),
                                   onClick: function () {
-                                      (0, I.Mt)(!1), l();
+                                      (0, j.Mt)(!1), l();
                                   },
                               }),
-                              (0, i.jsx)(j.$, { variant: "primary", text: M.intl.string(M.t.md4qKz), onClick: t }),
+                              (0, i.jsx)(_.$, { variant: "primary", text: T.intl.string(T.t.md4qKz), onClick: t }),
                           ],
                       }),
                   }),
               ],
           });
 }
-var L = n(111994),
-    k = n(352527),
-    O = n(267102),
-    P = n(969632),
-    G = n(910425),
-    U = n(406704),
-    w = n(885386),
-    F = n(761640),
-    H = n(629016),
-    B = n(186111),
-    V = n(576705),
-    K = n(461213),
-    z = n(625494),
-    W = n(723702),
-    q = n(518960),
-    $ = n(767089),
-    J = n(554146),
-    Z = n(477782),
-    Y = n(177953),
-    X = n(950305),
-    Q = n(980707),
-    ee = n(308368),
-    et = n(688810),
-    en = n(826673),
-    el = n(970244),
-    ei = n(867455),
-    es = n(780057),
-    ea = n(747926),
-    er = n(174459),
-    eo = n(453771),
-    ec = n(408018);
+var D = n(111994),
+    L = n(352527),
+    k = n(267102),
+    O = n(969632),
+    P = n(910425),
+    G = n(406704),
+    U = n(885386),
+    w = n(761640),
+    F = n(629016),
+    H = n(186111),
+    B = n(576705),
+    V = n(461213),
+    K = n(625494),
+    z = n(723702),
+    W = n(518960),
+    q = n(767089),
+    $ = n(554146),
+    J = n(477782),
+    Z = n(177953),
+    Y = n(950305),
+    X = n(980707),
+    Q = n(308368),
+    ee = n(688810),
+    et = n(826673),
+    en = n(970244),
+    el = n(867455),
+    ei = n(780057),
+    es = n(747926),
+    ea = n(174459),
+    er = n(453771),
+    eo = n(408018);
 n(321073);
-var ed = n(661531),
-    eu = n(81369),
-    eh = n(176781),
-    em = n(523056),
-    eg = n(642846),
-    ep = n(323384),
-    eA = n(111219),
-    ef = n(835723),
-    eC = n(39623),
-    ex = n(406810),
-    eE = n(152367),
-    eS = n(55730),
-    e_ = n(47167),
-    ej = n(994500),
-    eI = n(287809),
-    ey = n(652215),
-    ev =
+var ec = n(661531),
+    ed = n(81369),
+    eu = n(176781),
+    eh = n(523056),
+    em = n(642846),
+    eg = n(323384),
+    ep = n(111219),
+    eA = n(835723),
+    ef = n(39623),
+    eC = n(406810),
+    ex = n(152367),
+    eE = n(55730),
+    eS = n(47167),
+    e_ = n(994500),
+    ej = n(287809),
+    eI = n(652215),
+    ey =
         (((l = {}).UPLOAD_A_FILE = "UPLOAD_A_FILE"),
         (l.UPLOAD_TEXT_AS_FILE = "UPLOAD_TEXT_AS_FILE"),
         (l.INVITE_TO_PLAY_GAME = "INVITE_TO_GAME"),
@@ -162,10 +161,10 @@ var ed = n(661531),
         (l.SCHEDULED_MESSAGE = "SCHEDULED_MESSAGE"),
         (l.SUMMARIZE_THREAD = "SUMMARIZE_THREAD"),
         l),
-    eb = n(49999),
-    eN = n(412136);
-let eT = /(.*)```(\w+)\n(.*)```(.*)/s;
-function eM(e) {
+    ev = n(49999),
+    eb = n(412136);
+let eN = /(.*)```(\w+)\n(.*)```(.*)/s;
+function eT(e) {
     let {
             channel: t,
             options: l,
@@ -177,53 +176,53 @@ function eM(e) {
             setValue: m,
             openClips: g,
         } = e,
-        { analyticsLocations: p } = (0, et.Ay)(),
-        A = (0, el.s)({ channel: t }),
-        f = (0, o.bG)([es.A], () => es.A.isInProgress());
+        { analyticsLocations: p } = (0, ee.Ay)(),
+        A = (0, en.s)({ channel: t }),
+        f = (0, o.bG)([ei.A], () => ei.A.isInProgress());
     function C() {
-        (0, ea.Tv)(t, void 0, "Plus Button");
+        (0, es.Tv)(t, void 0, "Plus Button");
     }
     function x() {
-        er.default.track(ey.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), m("/", (0, ec.x7)("/"));
+        ea.default.track(eI.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), m("/", (0, eo.x7)("/"));
     }
     function E() {
         g();
     }
     function S() {
-        (0, en.Dr)(J.M.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: eb.i.TAKE_ACTION }),
+        (0, et.Dr)($.M.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: ev.i.TAKE_ACTION }),
             (0, c.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e("83644"), n.e("42322")]).then(n.bind(n, 143657));
                     return (n) => (0, i.jsx)(e, { ...n, channel: t });
                 },
-                { modalKey: eN.sm },
+                { modalKey: eb.sm },
             );
     }
     function _() {
         let e = h,
             n = "txt",
             l = "",
-            i = h.match(eT);
+            i = h.match(eN);
         null != i && ((l = i[1]), (n = i[2]), (e = i[3]), (l += i[4])),
-            (0, q.R)([(0, eo.VE)(new Blob([e], { type: "text/plain" }), `message.${n}`, "text/plain")], t, u),
-            z._.dispatchToLastSubscribed(ey.jej.CLEAR_TEXT),
-            "" !== l && z._.dispatchToLastSubscribed(ey.jej.INSERT_TEXT, { plainText: l });
+            (0, W.R)([(0, er.VE)(new Blob([e], { type: "text/plain" }), `message.${n}`, "text/plain")], t, u),
+            K._.dispatchToLastSubscribed(eI.jej.CLEAR_TEXT),
+            "" !== l && K._.dispatchToLastSubscribed(eI.jej.INSERT_TEXT, { plainText: l });
     }
     return (
         s.useEffect(() => {
-            er.default.track(ey.HAw.OPEN_POPOUT, { type: "Send Attachment", channel_id: t.id, guild_id: t.guild_id });
+            ea.default.track(eI.HAw.OPEN_POPOUT, { type: "Send Attachment", channel_id: t.id, guild_id: t.guild_id });
         }, [t.guild_id, t.id]),
-        (0, i.jsx)(Q.W, {
+        (0, i.jsx)(X.W, {
             "data-menu-migrated": !0,
             onSelect: d,
             navId: "channel-attach",
             onClose: r,
-            "aria-label": M.intl.string(M.t.Xm41aV),
+            "aria-label": T.intl.string(T.t.Xm41aV),
             children: l.map(function (e) {
                 switch (e.type) {
-                    case ev.UPLOAD_A_FILE:
+                    case ey.UPLOAD_A_FILE:
                         return (0, i.jsx)(
-                            Z.Dr,
+                            J.Dr,
                             {
                                 id: "upload-file",
                                 label: e.display,
@@ -233,10 +232,10 @@ function eM(e) {
                             },
                             "upload-file",
                         );
-                    case ev.UPLOAD_TEXT_AS_FILE:
+                    case ey.UPLOAD_TEXT_AS_FILE:
                         if ("" === h) return null;
                         return (0, i.jsx)(
-                            Z.Dr,
+                            J.Dr,
                             {
                                 id: "upload-text-as-file",
                                 label: e.display,
@@ -246,9 +245,9 @@ function eM(e) {
                             },
                             "upload-text-as-file",
                         );
-                    case ev.CLIPS:
+                    case ey.CLIPS:
                         return (0, i.jsx)(
-                            Z.Dr,
+                            J.Dr,
                             {
                                 id: "clips",
                                 label: e.display,
@@ -259,9 +258,9 @@ function eM(e) {
                             },
                             "clips",
                         );
-                    case ev.POLL:
+                    case ey.POLL:
                         return (0, i.jsx)(
-                            Z.Dr,
+                            J.Dr,
                             {
                                 id: "poll",
                                 label: e.display,
@@ -271,9 +270,9 @@ function eM(e) {
                             },
                             "poll",
                         );
-                    case ev.INVITE_TO_PLAY_GAME:
+                    case ey.INVITE_TO_PLAY_GAME:
                         return (0, i.jsx)(
-                            Z.Dr,
+                            J.Dr,
                             {
                                 id: "play",
                                 label: e.display,
@@ -283,9 +282,9 @@ function eM(e) {
                                     var n;
                                     return (
                                         (n = e.activity),
-                                        void ee.A.sendActivityInvite({
+                                        void Q.A.sendActivityInvite({
                                             channelId: t.id,
-                                            type: ey.xL.JOIN,
+                                            type: eI.xL.JOIN,
                                             activity: n,
                                             location: p[p.length - 1],
                                         })
@@ -294,9 +293,9 @@ function eM(e) {
                             },
                             "play",
                         );
-                    case ev.INVITE_TO_LISTEN:
+                    case ey.INVITE_TO_LISTEN:
                         return (0, i.jsx)(
-                            Z.Dr,
+                            J.Dr,
                             {
                                 id: "listen",
                                 label: e.display,
@@ -306,9 +305,9 @@ function eM(e) {
                                     var n;
                                     return (
                                         (n = e.activity),
-                                        void ee.A.sendActivityInvite({
+                                        void Q.A.sendActivityInvite({
                                             channelId: t.id,
-                                            type: ey.xL.LISTEN,
+                                            type: eI.xL.LISTEN,
                                             activity: n,
                                             location: p[p.length - 1],
                                         })
@@ -317,9 +316,9 @@ function eM(e) {
                             },
                             "listen",
                         );
-                    case ev.INVITE_TO_WATCH:
+                    case ey.INVITE_TO_WATCH:
                         return (0, i.jsx)(
-                            Z.Dr,
+                            J.Dr,
                             {
                                 id: "watch",
                                 label: e.display,
@@ -329,9 +328,9 @@ function eM(e) {
                                     var n;
                                     return (
                                         (n = e.activity),
-                                        void ee.A.sendActivityInvite({
+                                        void Q.A.sendActivityInvite({
                                             channelId: t.id,
-                                            type: ey.xL.WATCH,
+                                            type: eI.xL.WATCH,
                                             activity: n,
                                             location: p[p.length - 1],
                                         })
@@ -340,9 +339,9 @@ function eM(e) {
                             },
                             "watch",
                         );
-                    case ev.CREATE_THREAD:
+                    case ey.CREATE_THREAD:
                         return (0, i.jsx)(
-                            Z.Dr,
+                            J.Dr,
                             {
                                 id: "THREAD",
                                 label: e.display,
@@ -352,9 +351,9 @@ function eM(e) {
                             },
                             "THREAD",
                         );
-                    case ev.SLASH_COMMAND:
+                    case ey.SLASH_COMMAND:
                         return (0, i.jsx)(
-                            Z.Dr,
+                            J.Dr,
                             {
                                 id: "SLASH_COMMAND",
                                 label: e.display,
@@ -364,28 +363,28 @@ function eM(e) {
                             },
                             "SLASH_COMMAND",
                         );
-                    case ev.SCHEDULED_MESSAGE:
+                    case ey.SCHEDULED_MESSAGE:
                         return (0, i.jsx)(
-                            Z.Dr,
+                            J.Dr,
                             {
                                 id: "scheduled_message",
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: () => (0, el.e0)({ channel: t }),
+                                action: () => (0, en.e0)({ channel: t }),
                                 children: A,
                             },
                             "scheduled_message",
                         );
-                    case ev.SUMMARIZE_THREAD:
+                    case ey.SUMMARIZE_THREAD:
                         return (0, i.jsx)(
-                            Z.Dr,
+                            J.Dr,
                             {
                                 id: "summarize_thread",
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: () => ei.A.summarizeThread(t),
+                                action: () => el.A.summarizeThread(t),
                                 loading: f,
                                 disabled: f,
                                 children: f
@@ -393,24 +392,24 @@ function eM(e) {
                                     : (0, i.jsxs)(i.Fragment, {
                                           children: [
                                               (0, i.jsx)(
-                                                  Z.Dr,
+                                                  J.Dr,
                                                   {
                                                       id: "summarize_thread_for_everyone",
-                                                      label: M.intl.string(M.t.eCzSdd),
-                                                      iconLeft: Y.n,
-                                                      leadingAccessory: { type: "icon", icon: Y.n },
-                                                      action: () => ei.A.summarizeThread(t, !1),
+                                                      label: T.intl.string(T.t.eCzSdd),
+                                                      iconLeft: Z.n,
+                                                      leadingAccessory: { type: "icon", icon: Z.n },
+                                                      action: () => el.A.summarizeThread(t, !1),
                                                   },
                                                   "summarize_thread_for_everyone",
                                               ),
                                               (0, i.jsx)(
-                                                  Z.Dr,
+                                                  J.Dr,
                                                   {
                                                       id: "summarize_thread_for_me",
-                                                      label: M.intl.string(M.t["HOe+Hq"]),
-                                                      iconLeft: X.n,
-                                                      leadingAccessory: { type: "icon", icon: X.n },
-                                                      action: () => ei.A.summarizeThread(t),
+                                                      label: T.intl.string(T.t["HOe+Hq"]),
+                                                      iconLeft: Y.n,
+                                                      leadingAccessory: { type: "icon", icon: Y.n },
+                                                      action: () => el.A.summarizeThread(t),
                                                   },
                                                   "summarize_thread_for_me",
                                               ),
@@ -426,46 +425,45 @@ function eM(e) {
         })
     );
 }
-var eR = n(696016),
-    eD = n(644268);
-let eL = s.memo(function (e) {
-    let { className: t, channel: l, draftType: a, editorTextContent: E, setValue: S, canOnlyUseTextCommands: _ } = e,
-        j = (0, O.Us)(),
+var eM = n(696016),
+    eR = n(644268);
+let eD = s.memo(function (e) {
+    let { className: t, channel: l, draftType: a, editorTextContent: x, setValue: E, canOnlyUseTextCommands: S } = e,
+        _ = (0, k.Us)(),
+        j = s.useRef(null),
         I = s.useRef(null),
-        y = s.useRef(null),
-        v = (0, o.bG)([K.A], () => K.A.getActivities()),
-        b = (0, C.Et)(),
-        N = (0, o.bG)([f.Ay], () => f.Ay.getLastClipsSession()),
-        T = (0, o.yK)([f.Ay], () => f.Ay.getNewClipIds()),
-        R = (0, o.bG)([F.Ay], () => null == F.Ay.getCurrentSidebarChannelId(l.id)),
-        J = (0, o.yK)(
-            [H.A],
-            () => (l.type === ey.rbe.DM ? v.filter((e) => !H.A.getParty(e.party?.id)?.has(l.getRecipientId())) : v),
-            [v, l],
+        y = (0, o.bG)([V.A], () => V.A.getActivities()),
+        v = (0, C.Et)(),
+        b = (0, o.bG)([f.Ay], () => f.Ay.getLastClipsSession()),
+        N = (0, o.yK)([f.Ay], () => f.Ay.getNewClipIds()),
+        M = (0, o.bG)([w.Ay], () => null == w.Ay.getCurrentSidebarChannelId(l.id)),
+        $ = (0, o.yK)(
+            [F.A],
+            () => (l.type === eI.rbe.DM ? y.filter((e) => !F.A.getParty(e.party?.id)?.has(l.getRecipientId())) : y),
+            [y, l],
         ),
-        { topBarButton: Z } = x.$.useConfig({ location: "ChannelAttachButton" }),
-        { enableQuickBar: Y } = A.h.useConfig({ location: "ChannelAttachButton" }),
-        X = !Z && !Y && j !== ey.BRT.OVERLAY && j !== ey.BRT.POPOUT,
-        { onShareClick: Q } = (0, k.A)(l.id),
-        ee = (0, o.bG)([f.Ay], () => f.Ay.getSettings().remindersEnabled),
-        et = (0, c.useModalsStore)((e) => (0, c.hasModalOpenSelector)(e, eR.nm)),
-        en = (0, o.bG)([B.A], () => B.A.hasLayers()),
-        el = (0, o.bG)([f.Ay], () => f.Ay.hasClips()),
-        [ei, es] = s.useState(null),
-        ea = (0, p.sw)() && (b || el),
-        er = l.isPrivate(),
-        eo = (0, o.bG)([V.A], () => er || (V.A.can(ey.xBc.ATTACH_FILES, l) && V.A.can(ey.xBc.SEND_MESSAGES, l))),
-        ec = (0, m.A)(N);
-    function ev() {
+        { enableQuickBar: J } = A.h.useConfig({ location: "ChannelAttachButton" }),
+        Z = !J && _ !== eI.BRT.OVERLAY && _ !== eI.BRT.POPOUT,
+        { onShareClick: Y } = (0, L.A)(l.id),
+        X = (0, o.bG)([f.Ay], () => f.Ay.getSettings().remindersEnabled),
+        Q = (0, c.useModalsStore)((e) => (0, c.hasModalOpenSelector)(e, eM.nm)),
+        ee = (0, o.bG)([H.A], () => H.A.hasLayers()),
+        et = (0, o.bG)([f.Ay], () => f.Ay.hasClips()),
+        [en, el] = s.useState(null),
+        ei = (0, p.sw)() && (v || et),
+        es = l.isPrivate(),
+        ea = (0, o.bG)([B.A], () => es || (B.A.can(eI.xBc.ATTACH_FILES, l) && B.A.can(eI.xBc.SEND_MESSAGES, l))),
+        er = (0, m.A)(b);
+    function eo() {
         (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("7806"),
-                    n.e("63026"),
-                    n.e("221"),
-                    n.e("50573"),
-                    n.e("47365"),
-                    n.e("2718"),
+                    n.e("90003"),
+                    n.e("22367"),
+                    n.e("54680"),
+                    n.e("88623"),
+                    n.e("13713"),
+                    n.e("18189"),
                     n.e("30204"),
                     n.e("83952"),
                     n.e("1962"),
@@ -489,42 +487,42 @@ let eL = s.memo(function (e) {
                     (0, i.jsx)(e, {
                         ...t,
                         channelId: l.id,
-                        initialMainLink: L.oH.ALL_CLIPS,
-                        onClipClick: (e) => Q({ clips: [e] }),
+                        initialMainLink: D.oH.ALL_CLIPS,
+                        onClipClick: (e) => Y({ clips: [e] }),
                     });
             },
-            { modalKey: eR.nm },
+            { modalKey: eM.nm },
         ),
-            es(null);
+            el(null);
     }
-    ec?.newClipIds.length !== N?.newClipIds.length &&
-        (N?.newClipIds.length ?? 0) > 0 &&
-        null == ei &&
-        ee &&
-        R &&
-        !et &&
+    er?.newClipIds.length !== b?.newClipIds.length &&
+        (b?.newClipIds.length ?? 0) > 0 &&
+        null == en &&
         X &&
-        !en &&
-        es("recentClips"),
+        M &&
+        !Q &&
+        Z &&
+        !ee &&
+        el("recentClips"),
         s.useEffect(() => {
             let e = (e) => {
                 let { channelId: t } = e;
-                t === l.id && I.current?.activateUploadDialogue();
+                t === l.id && j.current?.activateUploadDialogue();
             };
             return (
-                z._.subscribe(ey.jej.UPLOAD_FILE, e),
+                K._.subscribe(eI.jej.UPLOAD_FILE, e),
                 () => {
-                    z._.unsubscribe(ey.jej.UPLOAD_FILE, e);
+                    K._.unsubscribe(eI.jej.UPLOAD_FILE, e);
                 }
             );
         });
-    let eb = (0, U.n)(l),
-        eN = (0, U.Tb)(l),
-        eT = !w.D_.useSetting() && !(0, W.isAndroidWeb)() && null != window.ResizeObserver,
-        eL = (0, P.I7)(l ?? void 0),
-        ek = (0, G.Sc)(),
-        eO = (0, g.b)(),
-        eP = (function (e) {
+    let ey = (0, G.n)(l),
+        ev = (0, G.Tb)(l),
+        eb = !U.D_.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver,
+        eN = (0, O.I7)(l ?? void 0),
+        eD = (0, P.Sc)(),
+        eL = (0, g.b)(),
+        ek = (function (e) {
             let {
                     canAttachFiles: t,
                     canStartThreads: n,
@@ -542,139 +540,139 @@ let eL = s.memo(function (e) {
                 m = [];
             return (
                 t &&
-                    (m.push({ type: "UPLOAD_A_FILE", icon: eu.H, display: M.intl.string(M.t["d3+iYs"]) }),
-                    m.push({ type: "UPLOAD_TEXT_AS_FILE", icon: eu.H, display: M.intl.string(M.t["G9s+EM"]) })),
+                    (m.push({ type: "UPLOAD_A_FILE", icon: ed.H, display: T.intl.string(T.t["d3+iYs"]) }),
+                    m.push({ type: "UPLOAD_TEXT_AS_FILE", icon: ed.H, display: T.intl.string(T.t["G9s+EM"]) })),
                 s &&
                     t &&
-                    d !== ey.BRT.POPOUT &&
-                    d !== ey.BRT.OVERLAY &&
+                    d !== eI.BRT.POPOUT &&
+                    d !== eI.BRT.OVERLAY &&
                     m.push({
                         type: "CLIPS",
-                        icon: eh.x,
-                        display: M.intl.string(M.t.o034cv),
+                        icon: eu.x,
+                        display: T.intl.string(T.t.o034cv),
                         badgeVal: o,
-                        badgeColor: ed.A.colors.BACKGROUND_BRAND.css,
+                        badgeColor: ec.A.colors.BACKGROUND_BRAND.css,
                     }),
-                n && m.push({ type: "CREATE_THREAD", icon: em.G, display: M.intl.string(M.t.rBIGBL) }),
-                c && m.push({ type: "POLL", icon: eg.Y, display: M.intl.string(M.t.Flr51u) }),
-                l && i && m.push({ type: "SLASH_COMMAND", icon: ep.k, display: M.intl.string(M.t.Bbvp6G) }),
+                n && m.push({ type: "CREATE_THREAD", icon: eh.G, display: T.intl.string(T.t.rBIGBL) }),
+                c && m.push({ type: "POLL", icon: em.Y, display: T.intl.string(T.t.Flr51u) }),
+                l && i && m.push({ type: "SLASH_COMMAND", icon: eg.k, display: T.intl.string(T.t.Bbvp6G) }),
                 r.forEach((e) => {
-                    !(0, eS.A)(e, ey.jUm.EMBEDDED) &&
-                        (e.type === ey.$pd.PLAYING &&
-                            (0, eS.A)(e, ey.jUm.JOIN) &&
+                    !(0, eE.A)(e, eI.jUm.EMBEDDED) &&
+                        (e.type === eI.$pd.PLAYING &&
+                            (0, eE.A)(e, eI.jUm.JOIN) &&
                             m.push({
                                 type: "INVITE_TO_GAME",
-                                icon: eA.L,
-                                display: M.intl.formatToPlainString(M.t["KHLo+F"], {
-                                    channel: (0, e_.m1)(a, eI.default, ej.A, !0),
+                                icon: ep.L,
+                                display: T.intl.formatToPlainString(T.t["KHLo+F"], {
+                                    channel: (0, eS.m1)(a, ej.default, e_.A, !0),
                                     game: null != e ? e.name : "",
                                 }),
                                 activity: e,
                             }),
-                        e.type === ey.$pd.LISTENING &&
-                            (0, eS.A)(e, ey.jUm.SYNC) &&
+                        e.type === eI.$pd.LISTENING &&
+                            (0, eE.A)(e, eI.jUm.SYNC) &&
                             m.push({
                                 type: "INVITE_TO_LISTEN",
-                                icon: ef.J,
-                                display: M.intl.formatToPlainString(M.t.I479px, {
-                                    channel: (0, e_.m1)(a, eI.default, ej.A, !0),
+                                icon: eA.J,
+                                display: T.intl.formatToPlainString(T.t.I479px, {
+                                    channel: (0, eS.m1)(a, ej.default, e_.A, !0),
                                     name: null != e ? e.name : "",
                                 }),
                                 activity: e,
                             }),
-                        e.type === ey.$pd.WATCHING &&
-                            (0, eS.A)(e, ey.jUm.SYNC) &&
+                        e.type === eI.$pd.WATCHING &&
+                            (0, eE.A)(e, eI.jUm.SYNC) &&
                             m.push({
                                 type: "INVITE_TO_WATCH",
-                                icon: eC.b,
-                                display: M.intl.formatToPlainString(M.t["EvCP/g"], {
-                                    channel: (0, e_.m1)(a, eI.default, ej.A, !0),
+                                icon: ef.b,
+                                display: T.intl.formatToPlainString(T.t["EvCP/g"], {
+                                    channel: (0, eS.m1)(a, ej.default, e_.A, !0),
                                     name: null != e ? e.name : "",
                                 }),
                                 activity: e,
                             }));
                 }),
-                u && m.push({ type: "SCHEDULED_MESSAGE", icon: ex.O, display: M.intl.string(M.t["3+ii4F"]) }),
+                u && m.push({ type: "SCHEDULED_MESSAGE", icon: eC.O, display: T.intl.string(T.t["3+ii4F"]) }),
                 a.isThread() &&
                     h &&
-                    m.push({ type: "SUMMARIZE_THREAD", icon: eE.D, display: M.intl.string(M.t.EXfguE) }),
+                    m.push({ type: "SUMMARIZE_THREAD", icon: ex.D, display: T.intl.string(T.t.EXfguE) }),
                 m
             );
         })({
-            canAttachFiles: eo,
-            canStartThreads: eb || eN,
-            useSlate: eT,
-            hasClips: ea,
-            canUseApplicationCommands: !_,
+            canAttachFiles: ea,
+            canStartThreads: ey || ev,
+            useSlate: eb,
+            hasClips: ei,
+            canUseApplicationCommands: !S,
             channel: l,
-            activities: J,
-            newClipsCount: T?.length ?? 0,
-            canPostPolls: eL,
-            appContext: j,
-            canSendScheduledMessages: ek,
-            canSummarizeThreads: eO,
+            activities: $,
+            newClipsCount: N?.length ?? 0,
+            canPostPolls: eN,
+            appContext: _,
+            canSendScheduledMessages: eD,
+            canSummarizeThreads: eL,
         });
-    if (0 === eP.length) return null;
-    let eG = (0, i.jsx)(d.p, { size: "refresh_sm", color: "currentColor", colorClass: eD.dW }),
-        eU = (0, i.jsx)(u.Y, {
-            targetElementRef: y,
-            shouldShow: null != ei,
+    if (0 === ek.length) return null;
+    let eO = (0, i.jsx)(d.p, { size: "refresh_sm", color: "currentColor", colorClass: eR.dW }),
+        eP = (0, i.jsx)(u.Y, {
+            targetElementRef: I,
+            shouldShow: null != en,
             animation: u.Y.Animation.NONE,
-            align: "recentClips" === ei ? "center" : "left",
+            align: "recentClips" === en ? "center" : "left",
             position: "top",
-            positionKey: ei ?? "null",
+            positionKey: en ?? "null",
             onRequestOpen: () => {
-                es("attachMenu");
+                el("attachMenu");
             },
             onRequestClose: () => {
-                (0, c.hasAnyModalOpen)() || es(null);
+                (0, c.hasAnyModalOpen)() || el(null);
             },
             renderPopout: (e) => {
-                switch (ei) {
+                switch (en) {
                     case "recentClips":
-                        return (0, i.jsx)(D, { ...e, onOpenClips: ev, lastClipsSession: N });
+                        return (0, i.jsx)(R, { ...e, onOpenClips: eo, lastClipsSession: b });
                     case "attachMenu":
-                        return (0, i.jsx)(eM, {
+                        return (0, i.jsx)(eT, {
                             ...e,
-                            onClose: () => es(null),
-                            options: eP,
+                            onClose: () => el(null),
+                            options: ek,
                             channel: l,
-                            onFileUpload: () => I.current?.activateUploadDialogue(),
+                            onFileUpload: () => j.current?.activateUploadDialogue(),
                             draftType: a,
-                            editorTextContent: E,
-                            setValue: S,
-                            openClips: ev,
+                            editorTextContent: x,
+                            setValue: E,
+                            openClips: eo,
                         });
                     default:
                         throw Error("Invalid popout type provided");
                 }
             },
             children: (e) =>
-                (0, i.jsx)($.A, {
-                    ref: y,
-                    className: r()(eD.g$, t),
-                    childClassName: eD.wh,
+                (0, i.jsx)(q.A, {
+                    ref: I,
+                    className: r()(eR.g$, t),
+                    childClassName: eR.wh,
                     isActive: !1,
-                    "aria-label": M.intl.string(M.t.d56gCa),
-                    onDoubleClick: eo ? () => I.current?.activateUploadDialogue() : void 0,
+                    "aria-label": T.intl.string(T.t.d56gCa),
+                    onDoubleClick: ea ? () => j.current?.activateUploadDialogue() : void 0,
                     "aria-haspopup": "menu",
                     ...e,
-                    children: eG,
+                    children: eO,
                 }),
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", {
-                className: eD.EJ,
+                className: eR.EJ,
                 children: (0, i.jsx)(h.A, {
-                    ref: I,
+                    ref: j,
                     onChange: (e) => {
                         var t, n;
                         (t = e.currentTarget.files),
                             null != (n = e.currentTarget.err) && "ETOOLARGE" === n.code
-                                ? (0, q.V)(l, [])
-                                : (0, q.R)(t, l, a, { requireConfirm: !0, origin: "file_picker" }),
-                            z._.dispatchToLastSubscribed(ey.jej.TEXTAREA_FOCUS),
+                                ? (0, W.V)(l, [])
+                                : (0, W.R)(t, l, a, { requireConfirm: !0, origin: "file_picker" }),
+                            K._.dispatchToLastSubscribed(eI.jej.TEXTAREA_FOCUS),
                             (e.currentTarget.value = "");
                     },
                     multiple: l.rateLimitPerUser <= 0,
@@ -682,7 +680,7 @@ let eL = s.memo(function (e) {
                     "aria-hidden": !0,
                 }),
             }),
-            (0, i.jsx)("div", { className: eD.Jd, children: eU }),
+            (0, i.jsx)("div", { className: eR.Jd, children: eP }),
         ],
     });
 });

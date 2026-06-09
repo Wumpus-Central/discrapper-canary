@@ -1,0 +1,26 @@
+.container__27beb {
+    border-top: 1px solid var(--border-subtle);
+    flex-direction: column
+}
+
+.container__27beb,
+.header__27beb {
+    display: flex;
+    margin-top: 16px
+}
+
+.header__27beb {
+    align-items: center;
+    flex-direction: row;
+    gap: 4px;
+    height: 16px;
+    justify-content: flex-start
+}
+
+.body__27beb {
+    margin-top: 8px
+}
+
+.taskChecklist__28714 {
+    margin-top: 0
+}

@@ -22,13 +22,12 @@ let a = (e) => {
         async () => {
             if ((0, s.EZ)(t.skuId) || t.skuId === s.Dp.ORB_PROFILE_BADGE) {
                 let { default: e } = await Promise.all([
-                    n.e("78038"),
-                    n.e("4430"),
+                    n.e("88345"),
                     n.e("64827"),
                     n.e("7167"),
                     n.e("92789"),
-                    n.e("84569"),
                     n.e("54048"),
+                    n.e("84569"),
                     n.e("18573"),
                     n.e("93159"),
                     n.e("62680"),
@@ -61,11 +60,10 @@ let a = (e) => {
                     });
             }
             let { default: e } = await Promise.all([
-                n.e("78038"),
-                n.e("4430"),
+                n.e("88345"),
                 n.e("64827"),
-                n.e("84569"),
                 n.e("54048"),
+                n.e("84569"),
                 n.e("18573"),
                 n.e("93159"),
                 n.e("62931"),

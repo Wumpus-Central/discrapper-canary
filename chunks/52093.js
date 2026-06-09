@@ -40,10 +40,10 @@ function f(e) {
     return (0, i.jsx)(u.E, { color: n ? "text-default" : "text-muted", variant: "text-xs/medium", children: t });
 }
 let p = function (e) {
-    let { children: t, heading: n, steps: r } = e,
-        s = r.findIndex((e) => !e.isComplete);
+    let { children: t, heading: n, steps: r, className: s } = e,
+        o = r.findIndex((e) => !e.isComplete);
     return (0, i.jsxs)("div", {
-        className: d.iE,
+        className: a()(d.iE, s),
         children: [
             (0, i.jsx)("div", {
                 className: d.Mj,
@@ -62,9 +62,9 @@ let p = function (e) {
                             h,
                             {
                                 isComplete: e.isComplete,
-                                isCurrent: t === s,
+                                isCurrent: t === o,
                                 hasNextStep: t < r.length - 1,
-                                children: e.renderContent(),
+                                children: e.renderContent(e.isComplete),
                             },
                             t,
                         ),
