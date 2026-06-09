@@ -310,7 +310,7 @@ class B {
 let H = new B();
 var j = n(334686),
     Y = n(315240);
-n(871421);
+n(257290);
 var W = n(409067),
     K = n(227628),
     $ = n(468550),
@@ -437,15 +437,17 @@ class et extends x {
     }
     handleClipsInitOnGamesChange(e) {
         let t = c.Ay.getVisibleGame();
-        (0, K.yj)(),
-            e.removed.length > 0 && null == t && this.handleClipsReminder(e.removed[0]?.id),
-            null == t ||
-                ((0, $.kF)(),
-                this.prefetchRichPresenceData(t.id),
-                e.added.find((e) => e.pid === t.pid)
-                    ? setTimeout(() => this.fireClipsInitEvent(), w.dV)
-                    : this.fireClipsInitEvent(),
-                this.maybeOpenQuickBar());
+        if (((0, K.yj)(), e.removed.length > 0 && null == t)) {
+            let t = e.removed[0]?.id;
+            queueMicrotask(() => this.handleClipsReminder(t));
+        }
+        null == t ||
+            ((0, $.kF)(),
+            this.prefetchRichPresenceData(t.id),
+            e.added.find((e) => e.pid === t.pid)
+                ? setTimeout(() => this.fireClipsInitEvent(), w.dV)
+                : this.fireClipsInitEvent(),
+            this.maybeOpenQuickBar());
     }
     prefetchRichPresenceData(e) {
         d.I.fetchMany([e]), l.YY.fetchMany([e]);
