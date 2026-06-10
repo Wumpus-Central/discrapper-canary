@@ -64,7 +64,7 @@ let I = function (e) {
                   })(t, I);
         return null == T
             ? (0, i.jsx)(r.$, { size: u, variant: "secondary", disabled: !0, text: N, fullWidth: !0 })
-            : (0, i.jsx)(r.$, { size: u, variant: "primary", onClick: T, text: N, icon: y, fullWidth: !0 });
+            : (0, i.jsx)(r.$, { size: u, variant: (0, l.wX)(d), onClick: T, text: N, icon: y, fullWidth: !0 });
     },
     T = function (e) {
         let {
@@ -88,7 +88,7 @@ let I = function (e) {
             }),
             T = (0, a.vj)(t),
             S = A(t, u, c, g(n, t));
-        return (0, i.jsx)(r.$, { variant: "primary", fullWidth: !0, size: h, onClick: p ? S : I, text: p ? T : E });
+        return (0, i.jsx)(r.$, { variant: (0, l.wX)(f), fullWidth: !0, size: h, onClick: p ? S : I, text: p ? T : E });
     };
 var S = n(17928),
     y = n(859703),
@@ -119,7 +119,7 @@ let v = function (e) {
             experimentLocation: h,
         });
     return (0, i.jsx)(r.$, {
-        variant: "primary",
+        variant: (0, l.wX)(c),
         fullWidth: !0,
         size: u,
         loading: _,
@@ -261,7 +261,7 @@ function B(e) {
             : (0, i.jsx)(r.$, {
                   size: c,
                   fullWidth: !0,
-                  variant: "primary",
+                  variant: (0, l.wX)(n),
                   text: m.intl.string(m.t.SHZo2x),
                   onClick: () => (0, p._x)({ quest: t, sourceQuestContent: a }),
               });
@@ -269,7 +269,7 @@ function B(e) {
     return (0, i.jsx)(r.$, {
         size: c,
         fullWidth: !0,
-        variant: "primary",
+        variant: (0, l.wX)(n),
         icon: E ? void 0 : R.A,
         text: E ? m.intl.string(m.t.SHZo2x) : m.intl.string(m.t.sbdnpw),
         onClick: () => {
@@ -298,13 +298,13 @@ function H(e) {
     });
 }
 function j(e) {
-    let { quest: t, analyticsCtxSourceQuestContent: n, size: s } = e;
+    let { quest: t, surface: n, analyticsCtxSourceQuestContent: s, size: a } = e;
     return (0, i.jsx)(r.$, {
-        size: s,
+        size: a,
         fullWidth: !0,
-        variant: "primary",
+        variant: (0, l.wX)(n, "primary"),
         text: m.intl.string(m.t.SHZo2x),
-        onClick: () => (0, p.ii)({ quest: t, sourceQuestContent: n }),
+        onClick: () => (0, p.ii)({ quest: t, sourceQuestContent: s }),
     });
 }
 let Y = function (e) {
@@ -349,7 +349,7 @@ let Y = function (e) {
                       }),
                   })
                 : n === l.V3.QUEST_HOME_TILE_V2_FOOTER
-                  ? (0, i.jsx)(j, { quest: t, analyticsCtxSourceQuestContent: a, size: c })
+                  ? (0, i.jsx)(j, { quest: t, surface: n, analyticsCtxSourceQuestContent: a, size: c })
                   : (0, i.jsx)(r.$, {
                         size: c,
                         variant: "secondary",
@@ -563,7 +563,7 @@ function X(e) {
     });
 }
 let Z = function (e) {
-    return (0, i.jsx)(X, { ...e, variant: "primary" });
+    return (0, i.jsx)(X, { ...e, variant: (0, l.wX)(e.surface, "primary") });
 };
 var Q = n(19238);
 let J = function (e) {

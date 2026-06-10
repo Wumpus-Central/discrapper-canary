@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Pd: () => u, UA: () => l, Ut: () => d, V3: () => c });
+n.d(t, { Pd: () => u, UA: () => l, Ut: () => _, V3: () => c, wX: () => d });
 var i,
     r,
     s = n(31587),
@@ -30,6 +30,10 @@ var c =
     (r[(r.QUEST_HOME_TILE_V2_FOOTER = 6)] = "QUEST_HOME_TILE_V2_FOOTER"),
     r);
 function d(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "primary";
+    return 6 === e ? "overlay-primary" : t;
+}
+function _(e) {
     if (2 === e || 6 === e) return null;
     switch (e) {
         case 1:
