@@ -5850,10 +5850,10 @@ screen and (max-width:485px) {
 
 .faqTitle__5465d {
     font-family: var(--font-headline);
-    font-size: 2.5rem;
+    font-size: 40px;
     font-style: italic;
     font-weight: 900;
-    letter-spacing: -.0625rem;
+    letter-spacing: -1px;
     line-height: 1.1;
     margin: 0 0 12px;
     text-transform: uppercase
@@ -5866,7 +5866,7 @@ screen and (max-width:485px) {
 }
 
 .faqDescription__5465d {
-    font-size: 1.125rem;
+    font-size: 18px;
     margin: 0 0 24px
 }
 
@@ -5883,7 +5883,7 @@ screen and (max-width:485px) {
     color: var(--white);
     cursor: pointer;
     display: flex;
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 500;
     justify-content: space-between;
     list-style: none;
@@ -5898,7 +5898,7 @@ screen and (max-width:485px) {
     color: var(--white);
     content: "+";
     flex-shrink: 0;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 300;
     margin-inline-start: 16px
 }
@@ -5909,14 +5909,14 @@ screen and (max-width:485px) {
 
 .faqAnswer__5465d {
     color: var(--text-muted);
-    font-size: 1rem;
+    font-size: 16px;
     margin: 0;
     padding: 0 0 20px
 }
 
 .faqFooter__5465d {
     color: var(--white);
-    font-size: 1rem;
+    font-size: 16px;
     margin-top: 44px;
     text-align: center
 }
@@ -5931,7 +5931,7 @@ screen and (max-width:485px) {
     }
 
     .faqTitle__5465d {
-        font-size: 2rem
+        font-size: 32px
     }
 }
 
@@ -5941,7 +5941,7 @@ screen and (max-width:485px) {
     }
 
     .faqTitle__5465d {
-        font-size: 1.75rem
+        font-size: 28px
     }
 }
 
@@ -6000,7 +6000,7 @@ screen and (max-width:485px) {
 
 .columnTitle__48f9d {
     color: var(--white);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: .05em;
     margin: 0 0 20px
@@ -6017,7 +6017,7 @@ screen and (max-width:485px) {
 
 .columnLink__48f9d {
     color: var(--white);
-    font-size: 1rem;
+    font-size: 16px;
     text-decoration: none;
     transition: color .15s ease
 }
@@ -6036,7 +6036,7 @@ screen and (max-width:485px) {
     color: var(--white);
     cursor: pointer;
     display: flex;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     justify-content: space-between;
     letter-spacing: .05em;
@@ -6073,7 +6073,7 @@ screen and (max-width:485px) {
 .localeLabel__48f9d,
 .menuLabel__48f9d {
     color: var(--white);
-    font-size: 1rem
+    font-size: 16px
 }
 
 .localeLabel__48f9d {
@@ -6095,7 +6095,7 @@ screen and (max-width:485px) {
     color: var(--white);
     cursor: pointer;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: 16px;
     padding-inline-end: 40px;
     padding-bottom: 12px;
     padding-top: 12px;
@@ -6358,10 +6358,10 @@ screen and (max-width:485px) {
 
 .successTitle_f49658 {
     font-family: var(--font-headline);
-    font-size: 3.5rem;
+    font-size: 56px;
     font-style: italic;
     font-weight: 900;
-    letter-spacing: -.0625rem;
+    letter-spacing: -1px;
     line-height: 1.1;
     margin: 0 0 12px;
     text-transform: uppercase
@@ -6374,7 +6374,7 @@ screen and (max-width:485px) {
 }
 
 .successDescription_f49658 {
-    font-size: 1.125rem;
+    font-size: 18px;
     margin: 0 0 32px
 }
 
@@ -6391,13 +6391,13 @@ screen and (max-width:485px) {
     }
 
     .successTitle_f49658 {
-        font-size: 2.5rem
+        font-size: 40px
     }
 }
 
 @media (max-width:480px) {
     .successTitle_f49658 {
-        font-size: 2rem
+        font-size: 32px
     }
 }
 
@@ -6413,10 +6413,10 @@ screen and (max-width:485px) {
 .upsellTitle__3278c {
     color: var(--white);
     font-family: var(--font-headline);
-    font-size: 2.5rem;
+    font-size: 40px;
     font-style: italic;
     font-weight: 900;
-    letter-spacing: -.0625rem;
+    letter-spacing: -1px;
     line-height: 1.1;
     margin: 0 0 48px;
     text-align: center;
@@ -6448,7 +6448,7 @@ screen and (max-width:485px) {
 
 @media (max-width:1024px) {
     .upsellTitle__3278c {
-        font-size: 2rem
+        font-size: 32px
     }
 
     .layoutDesktop__3278c {
@@ -6462,7 +6462,7 @@ screen and (max-width:485px) {
 
 @media (max-width:480px) {
     .upsellTitle__3278c {
-        font-size: 1.75rem
+        font-size: 28px
     }
 
     .layoutTablet__3278c {
@@ -6536,7 +6536,7 @@ screen and (max-width:485px) {
 .upsellCardTitle__3278c {
     color: var(--white);
     font-family: var(--font-headline);
-    font-size: 2.25rem;
+    font-size: 36px;
     font-style: italic;
     font-weight: 900;
     line-height: 1.2;
@@ -6546,7 +6546,7 @@ screen and (max-width:485px) {
 
 .upsellCardDescription__3278c {
     color: var(--white);
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.5;
     margin: 0 0 20px
 }
@@ -6561,14 +6561,14 @@ screen and (max-width:485px) {
 .upsellCardPriceAmount__3278c {
     color: var(--white);
     font-family: var(--font-headline);
-    font-size: 2rem;
+    font-size: 32px;
     font-style: italic;
     font-weight: 900
 }
 
 .upsellCardPricePeriod__3278c {
     color: var(--white);
-    font-size: 1rem;
+    font-size: 16px;
     font-style: italic;
     font-weight: 700;
     text-transform: uppercase
@@ -6583,7 +6583,7 @@ screen and (max-width:485px) {
 
 .upsellCardSubheader__3278c {
     color: var(--white);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.5;
     margin: 8px 0 20px
@@ -6602,7 +6602,7 @@ screen and (max-width:485px) {
     align-items: center;
     color: var(--text-default);
     display: flex;
-    font-size: 1rem;
+    font-size: 16px;
     gap: 10px;
     line-height: 1.5
 }
@@ -6638,7 +6638,7 @@ screen and (max-width:485px) {
     border-top: 1px solid hsla(0, 0%, 100%, .1);
     color: var(--text-link);
     display: block;
-    font-size: 1rem;
+    font-size: 16px;
     margin-top: 24px;
     padding-top: 24px;
     text-align: center;
@@ -6674,10 +6674,10 @@ screen and (max-width:485px) {
 .desktopBannerTitle__3278c {
     color: var(--white);
     font-family: var(--font-headline);
-    font-size: 2rem;
+    font-size: 32px;
     font-style: italic;
     font-weight: 900;
-    letter-spacing: -.0625rem;
+    letter-spacing: -1px;
     line-height: 1.1;
     margin: 0;
     text-transform: uppercase
@@ -6694,7 +6694,7 @@ screen and (max-width:485px) {
 
 .desktopBannerDescription__3278c {
     color: var(--white);
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.5;
     margin: 0;
     opacity: .9
@@ -6792,13 +6792,13 @@ screen and (max-width:485px) {
 
 .headerProfileName__9564d {
     color: var(--white);
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600
 }
 
 .headerProfileBalance__9564d {
     color: var(--white);
-    font-size: .8125rem
+    font-size: 13px
 }
 
 .headerProfileAvatar__9564d {
@@ -6836,10 +6836,10 @@ screen and (max-width:485px) {
 
 .redeemTitle__9564d {
     font-family: var(--font-headline);
-    font-size: 3.5rem;
+    font-size: 56px;
     font-style: italic;
     font-weight: 900;
-    letter-spacing: -.0625rem;
+    letter-spacing: -1px;
     line-height: 1.1;
     margin: 0 0 12px;
     text-transform: uppercase
@@ -6852,7 +6852,7 @@ screen and (max-width:485px) {
 }
 
 .redeemDescription__9564d {
-    font-size: 1.125rem;
+    font-size: 18px;
     margin: 0 0 32px
 }
 
@@ -6875,7 +6875,7 @@ screen and (max-width:485px) {
 
 .redeemLegalText__9564d {
     color: var(--text-muted);
-    font-size: .75rem;
+    font-size: 12px;
     margin: 0 0 12px;
     text-align: center
 }
@@ -6930,7 +6930,7 @@ screen and (max-width:485px) {
 
     .redeemSectionHero__9564d .redeemTitle__9564d,
     .redeemTitle__9564d {
-        font-size: 2.5rem
+        font-size: 40px
     }
 
     .redeemDescription__9564d {
@@ -6953,7 +6953,7 @@ screen and (max-width:485px) {
 
     .redeemSectionHero__9564d .redeemTitle__9564d,
     .redeemTitle__9564d {
-        font-size: 2rem
+        font-size: 32px
     }
 
     .redeemForm__9564d {
