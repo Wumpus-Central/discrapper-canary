@@ -1,0 +1,76 @@
+.giftRewardShopCardsGrid_d64c23 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-24) var(--space-8);
+    justify-content: center;
+    margin: var(--space-24) 0
+}
+
+.giftRewardShopCardsGrid_d64c23>* {
+    flex: 0 0 200px
+}
+
+@media (min-width:900px) {
+    .giftRewardShopCardsGrid_d64c23 {
+        gap: var(--space-8)
+    }
+
+    .giftRewardShopCardsGrid_d64c23>* {
+        flex-basis: 178px
+    }
+}
+
+.shopCardSelect_d64c23 {
+    background-color: var(--background-base-lowest);
+    overflow: scroll;
+    padding: 16px 0
+}
+
+.header_d64c23 {
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 32px;
+    padding-top: 48px
+}
+
+.title_d64c23 {
+    padding: 16px 0
+}
+
+.subtitle_d64c23,
+.title_d64c23 {
+    text-align: center
+}
+
+.subtitle_d64c23 {
+    padding-top: 8px
+}
+
+.giftSelectItem_d64c23 {
+    cursor: pointer;
+    margin-bottom: unset
+}
+
+.modalFooter_d64c23 {
+    align-items: center;
+    background-color: var(--background-base-low);
+    display: flex;
+    justify-content: space-between
+}
+
+.modalHeader_d64c23 {
+    padding-bottom: var(--space-24);
+    padding-top: var(--space-24)
+}
+
+.headerSubtitle_d64c23 {
+    margin-top: var(--space-8);
+    max-width: calc(100% - 56px)
+}
+
+.closeButton_d64c23 {
+    inset-inline-end: var(--modal-horizontal-padding);
+    position: absolute;
+    top: var(--space-24)
+}

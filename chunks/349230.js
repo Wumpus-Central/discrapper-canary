@@ -1122,9 +1122,9 @@ var e0 = n(417098),
     e3 = n(377802),
     e5 = n(348858),
     e6 = n(523875),
-    e4 = n(416696),
-    e8 = n(621956),
-    e9 = n(446080),
+    e9 = n(416696),
+    e4 = n(621956),
+    e8 = n(446080),
     e7 = n(922016),
     te = n(615675),
     tt = n(978940),
@@ -1363,7 +1363,7 @@ function tz(e) {
             Component: g,
             play: p,
             events: { onMouseEnter: x, onMouseLeave: f },
-        } = (0, e9.K)(s ? "disable" : "enable"),
+        } = (0, e8.K)(s ? "disable" : "enable"),
         A = null != t ? (0, tI.Q)({ enabled: s, cameraUnavailable: a, hasPermission: d, channel: t }) : void 0;
     c.useEffect(() => () => p(), [s, p]);
     let E = tO(n),
@@ -1442,7 +1442,7 @@ function tP(e) {
             Component: f,
             events: { onMouseEnter: A, onMouseLeave: E },
             play: S,
-        } = (0, e4.c)(g ? "disable" : "enable");
+        } = (0, e9.c)(g ? "disable" : "enable");
     c.useEffect(() => () => S(), [g, S]);
     let I = tO(i);
     return (0, r.jsx)(e7.Y, {
@@ -1505,7 +1505,7 @@ function tL(e) {
     let {
             Component: p,
             events: { onClick: x, onMouseEnter: f, onMouseLeave: A },
-        } = (0, e8.E)(),
+        } = (0, e4.E)(),
         E = tO(i),
         S = (0, y.bG)([tx.A, k.default], () => tx.A.isUserPlayingSounds(k.default.getId()), []) ? "green" : void 0;
     return (0, r.jsx)(e7.Y, {
@@ -1780,9 +1780,9 @@ var tQ = n(459192),
     t3 = n(320448),
     t5 = n(661531),
     t6 = n(446576),
-    t4 = n(789645),
-    t8 = n(387755),
-    t9 = n(945830),
+    t9 = n(789645),
+    t4 = n(387755),
+    t8 = n(945830),
     t7 = n(461678),
     ne = n(277370),
     nt = n(95701),
@@ -1872,7 +1872,7 @@ function nS(e) {
               ignoreModalClicks: !0,
               onRequestClose: s,
               renderPopout: (e) =>
-                  (0, r.jsx)(t9.A, {
+                  (0, r.jsx)(t8.A, {
                       ...e,
                       channel: t,
                       onJump: () => {
@@ -2081,7 +2081,7 @@ function nj(e) {
                         value: F.IP.ENABLED,
                         secondaryValue: e ? "video" : "voice",
                     }),
-                    t8.A.call(n.id, e, !0, n.isDM() ? n.getRecipientId() : null));
+                    t4.A.call(n.id, e, !0, n.isDM() ? n.getRecipientId() : null));
             },
             [n],
         ),
@@ -2231,7 +2231,7 @@ function nj(e) {
                                   title: eg.intl.string(nf.default.ERApc4),
                                   body: eg.intl.string(nf.default.PBVXVW),
                                   children: (0, r.jsx)(tJ.K, {
-                                      icon: t4.P,
+                                      icon: t9.P,
                                       "aria-label": eg.intl.string(nf.default.ERApc4),
                                       size: "sm",
                                       variant: "icon-only",
@@ -2379,7 +2379,7 @@ let nz = c.memo(function (e) {
                         if (t.isDM() && null != s)
                             return void (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("3767"),
+                                    n.e("79839"),
                                     n.e("94881"),
                                     n.e("26132"),
                                     n.e("46652"),
@@ -2433,7 +2433,7 @@ let nz = c.memo(function (e) {
                             if (null == i) return;
                             (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("88167"),
+                                    n.e("16367"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("38730"),
@@ -2922,10 +2922,10 @@ function n6(e) {
         })
     );
 }
-var n4 = n(450740),
-    n8 = n(968898);
+var n9 = n(450740),
+    n4 = n(968898);
 n(321073);
-var n9 = n(518009),
+var n8 = n(518009),
     n7 = n(592598),
     ie = n(28528),
     it = n(57019),
@@ -2967,7 +2967,7 @@ let iu = c.memo(function (e) {
         0 !== s.length || t)
             ? (0, r.jsx)(it.Gt.Provider, {
                   value: l,
-                  children: (0, r.jsx)(n9.F, { items: s, renderItem: io, getItemKey: ia, wrapChildren: id }),
+                  children: (0, r.jsx)(n8.F, { items: s, renderItem: io, getItemKey: ia, wrapChildren: id }),
               })
             : i
               ? t
@@ -2993,11 +2993,11 @@ let iu = c.memo(function (e) {
                       })
                     : null;
             },
-            renderTitle: () => (0, r.jsx)(n8.Pl, { children: eg.intl.string(eg.t.UPvOia) }),
+            renderTitle: () => (0, r.jsx)(n4.Pl, { children: eg.intl.string(eg.t.UPvOia) }),
             renderButtons: (e) =>
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(n8.CS, {
+                        (0, r.jsx)(n4.CS, {
                             onClick: (t) => {
                                 (0, e_.cv)(e) &&
                                     (0, l.L3)(t, async () => {
@@ -3011,7 +3011,7 @@ let iu = c.memo(function (e) {
                                     });
                             },
                         }),
-                        (0, r.jsx)(n8.O0, { id: e.id, pinned: e.pinned }),
+                        (0, r.jsx)(n4.O0, { id: e.id, pinned: e.pinned }),
                     ],
                 }),
             resizeValidation: n5,
@@ -3021,7 +3021,7 @@ let iu = c.memo(function (e) {
             renderWidget(e) {
                 let { widget: t, anchorLeft: n, locked: i, showEmpty: s } = e;
                 return (0, e_.ZO)(t)
-                    ? (0, r.jsx)(n4.Ay, {
+                    ? (0, r.jsx)(n9.Ay, {
                           anchorLeft: n,
                           id: t.id,
                           locked: i,
@@ -3033,11 +3033,11 @@ let iu = c.memo(function (e) {
                       })
                     : null;
             },
-            renderTitle: () => (0, r.jsx)(n8.Pl, { children: eg.intl.string(eg.t.nFv3Gb) }),
+            renderTitle: () => (0, r.jsx)(n4.Pl, { children: eg.intl.string(eg.t.nFv3Gb) }),
             renderButtons: (e) =>
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(n8.CS, {
+                        (0, r.jsx)(n4.CS, {
                             onClick: (e) => {
                                 (0, l.L3)(e, async () => {
                                     let { default: e } = await n.e("34901").then(n.bind(n, 51444));
@@ -3045,7 +3045,7 @@ let iu = c.memo(function (e) {
                                 });
                             },
                         }),
-                        (0, r.jsx)(n8.O0, { id: e.id, pinned: e.pinned }),
+                        (0, r.jsx)(n4.O0, { id: e.id, pinned: e.pinned }),
                     ],
                 }),
         },
@@ -3054,11 +3054,11 @@ let iu = c.memo(function (e) {
                 let { widget: t, locked: n } = e;
                 return (0, r.jsx)(j, { id: t.id, locked: n, pinned: t.pinned });
             },
-            renderTitle: () => (0, r.jsx)(n8.Pl, { children: "Click Zone Tester" }),
+            renderTitle: () => (0, r.jsx)(n4.Pl, { children: "Click Zone Tester" }),
             renderButtons: (e) =>
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(n8.CS, {
+                        (0, r.jsx)(n4.CS, {
                             onClick: (e) => {
                                 (0, l.L3)(e, async () => {
                                     let { default: e } = await n.e("49170").then(n.bind(n, 508457));
@@ -3066,7 +3066,7 @@ let iu = c.memo(function (e) {
                                 });
                             },
                         }),
-                        (0, r.jsx)(n8.O0, { id: e.id, pinned: e.pinned }),
+                        (0, r.jsx)(n4.O0, { id: e.id, pinned: e.pinned }),
                     ],
                 }),
         },
@@ -3075,8 +3075,8 @@ let iu = c.memo(function (e) {
                 let { widget: t, locked: n, anchorLeft: i } = e;
                 return (0, r.jsx)(e$, { id: t.id, anchorLeft: i, locked: n, pinned: t.pinned });
             },
-            renderTitle: () => (0, r.jsx)(n8.Pl, { children: "Overlay Performance" }),
-            renderButtons: (e) => (0, r.jsx)(n8.O0, { id: e.id, pinned: e.pinned }),
+            renderTitle: () => (0, r.jsx)(n4.Pl, { children: "Overlay Performance" }),
+            renderButtons: (e) => (0, r.jsx)(n4.O0, { id: e.id, pinned: e.pinned }),
         },
         [em.uss.GO_LIVE]: {
             streamerModeLabel: () => eg.intl.string(eg.t["386XRo"]),
@@ -3111,12 +3111,12 @@ let iu = c.memo(function (e) {
                       })
                     : null;
             },
-            renderTitle: (e) => (0, r.jsx)(n8.we, { widgetId: e.id, children: eg.intl.string(eg.t["386XRo"]) }),
+            renderTitle: (e) => (0, r.jsx)(n4.we, { widgetId: e.id, children: eg.intl.string(eg.t["386XRo"]) }),
             renderButtons: (e) =>
                 (0, e_.dO)(e)
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(n8.CS, {
+                              (0, r.jsx)(n4.CS, {
                                   onClick: (t) => {
                                       (0, e_.dO)(e) &&
                                           (0, l.L3)(t, async () => {
@@ -3127,8 +3127,8 @@ let iu = c.memo(function (e) {
                                           });
                                   },
                               }),
-                              (0, r.jsx)(n8.GQ, { widgetId: e.id, showAllStreams: e.meta.showAllStreams ?? !0 }),
-                              (0, r.jsx)(n8.O0, { id: e.id, pinned: e.pinned }),
+                              (0, r.jsx)(n4.GQ, { widgetId: e.id, showAllStreams: e.meta.showAllStreams ?? !0 }),
+                              (0, r.jsx)(n4.O0, { id: e.id, pinned: e.pinned }),
                           ],
                       })
                     : null,
@@ -3145,11 +3145,11 @@ let iu = c.memo(function (e) {
                 let { locked: t, showEmpty: n, widget: i } = e;
                 return (0, r.jsx)(iu, { pinned: i.pinned, locked: t, showEmpty: n });
             },
-            renderTitle: () => (0, r.jsx)(n8.Pl, { children: eg.intl.string(eg.t.gnKWdS) }),
+            renderTitle: () => (0, r.jsx)(n4.Pl, { children: eg.intl.string(eg.t.gnKWdS) }),
             renderButtons: (e) =>
                 (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(n8.CS, {
+                        (0, r.jsx)(n4.CS, {
                             onClick: (e) => {
                                 (0, l.L3)(e, async () => {
                                     let { default: e } = await n.e("51607").then(n.bind(n, 98109));
@@ -3157,7 +3157,7 @@ let iu = c.memo(function (e) {
                                 });
                             },
                         }),
-                        (0, r.jsx)(n8.O0, { id: e.id, pinned: e.pinned }),
+                        (0, r.jsx)(n4.O0, { id: e.id, pinned: e.pinned }),
                     ],
                 }),
         },
@@ -3166,7 +3166,7 @@ let iu = c.memo(function (e) {
                 let { locked: t } = e;
                 return (0, r.jsx)(u.Ay, { locked: t });
             },
-            renderTitle: () => (0, r.jsx)(n8.Pl, { children: eg.intl.string(eg.t["6gwSFY"]) }),
+            renderTitle: () => (0, r.jsx)(n4.Pl, { children: eg.intl.string(eg.t["6gwSFY"]) }),
             renderButtons: () => null,
             predicate: () => !(0, d.NI)("WidgetRenderConfig").hasFriendList,
         },
@@ -3176,7 +3176,7 @@ let iu = c.memo(function (e) {
                 let { locked: t } = e;
                 return (0, r.jsx)(C.A, { locked: t });
             },
-            renderTitle: () => (0, r.jsx)(n8.Pl, { children: eg.intl.string(eg.t.TdEu5X) }),
+            renderTitle: () => (0, r.jsx)(n4.Pl, { children: eg.intl.string(eg.t.TdEu5X) }),
             renderButtons: () => null,
             predicate: () => (0, d.NI)("WidgetRenderConfig").hasFriendList,
         },
@@ -3186,7 +3186,7 @@ let iu = c.memo(function (e) {
                 let { locked: t, dragStart: n, dragging: i } = e;
                 return (0, r.jsx)(nW, { locked: t, dragStart: n, dragging: i });
             },
-            renderTitle: () => (0, r.jsx)(n8.Pl, { children: eg.intl.string(eg.t["/VQax8"]) }),
+            renderTitle: () => (0, r.jsx)(n4.Pl, { children: eg.intl.string(eg.t["/VQax8"]) }),
             renderButtons: () => null,
             predicate: () => (0, d.NI)("WidgetRenderConfig").hasChat,
             containerRenderGate: {

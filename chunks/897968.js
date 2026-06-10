@@ -1,0 +1,15 @@
+e.exports = {
+    nM: "row__6fddf",
+    u4: "rowContent__6fddf",
+    rf: "body__6fddf",
+    PI: "messagePreviewContainer__6fddf",
+    Bp: "messagePreviewText__6fddf",
+    CD: "calloutContainer__6fddf",
+    gy: "unread__6fddf",
+    Ze: "friendRequestContainer__6fddf",
+    x6: "button__6fddf",
+    AE: "lifecycleContainer__6fddf",
+    mc: "lifecycleText__6fddf",
+    kv: "checkbox__6fddf",
+    Zg: "emoji__6fddf",
+};

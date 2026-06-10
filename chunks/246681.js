@@ -1,113 +1,127 @@
-a.d(n, { UnifiedCheckoutInstance: () => m });
+a.d(n, { UnifiedCheckoutInstance: () => P });
 var t = a(627968),
     l = a(64700),
     o = a(688810),
     r = a(937008),
-    i = a(314671),
-    s = a(197510),
-    d = a(679374),
-    c = a(818348);
-let u = (e) => (0, t.jsx)(i.PaymentModal, { ...e }),
-    y = (e) => {
-        let { modalOnClose: n, paymentModalVersion: a = "v2", TenantPaymentModalRenderer: r, ...s } = e,
-            d = l.useCallback(() => {
-                n();
-            }, [n]),
-            { analyticsLocations: c } = (0, o.Ay)(),
-            y = l.useMemo(
-                () => ({ analyticsLocations: c, initialPlanId: null, paymentModalVersion: a, onClose: d, ...s }),
-                [c, a, d, s],
-            );
-        return null != r
-            ? (0, t.jsx)(r, { originalPaymentModalProps: y, renderPaymentModal: u })
-            : (0, t.jsx)(i.PaymentModal, { ...y });
-    },
+    s = a(314671),
+    i = a(197510),
+    d = a(815379),
+    u = a(818348);
+let c = (e) => (0, t.jsx)(s.PaymentModal, { ...e }),
     p = (e) => {
-        let { skuId: n } = e;
-        return (0, t.jsx)(s.CheckoutRootProvider, { ...e, skuIDs: null != n ? [n] : [], children: e.children });
+        let {
+                renderModalProps: n,
+                paymentModalVersion: a = "v2",
+                paymentModalOnClose: r,
+                TenantPaymentModalRenderer: i,
+                ...d
+            } = e,
+            u = n.onClose,
+            p = l.useCallback(() => {
+                u();
+            }, [u]),
+            { analyticsLocations: y } = (0, o.Ay)(),
+            P = l.useMemo(
+                () => ({
+                    analyticsLocations: y,
+                    initialPlanId: null,
+                    onClose: null != r ? r : p,
+                    ...d,
+                    paymentModalVersion: a,
+                }),
+                [y, a, p, d, r],
+            );
+        return null != i
+            ? (0, t.jsx)(i, { originalPaymentModalProps: P, renderPaymentModal: c, renderModalProps: n })
+            : (0, t.jsx)(s.PaymentModal, { ...P });
     },
-    m = (e) => {
+    y = (e) => {
+        let { skuId: n } = e;
+        return (0, t.jsx)(i.CheckoutRootProvider, { ...e, skuIDs: null != n ? [n] : [], children: e.children });
+    },
+    P = (e) => {
         let {
                 skuId: n,
                 applicationId: a,
-                tenantParams: i,
-                loadId: s,
-                discoverySessionId: u,
-                onOrderCreated: m,
-                checkoutFlow: h,
-                checkoutFlowConfiguration: P,
+                tenantParams: s,
+                loadId: i,
+                discoverySessionId: c,
+                onOrderCreated: P,
+                checkoutFlow: m,
+                checkoutFlowConfiguration: h,
                 tenantCheckoutFlowConfig: C,
-                renderHeader: k,
-                stepConfigs: x,
-                activeSubscription: M,
-                analyticsLocations: j,
-                giftContextProps: I,
-                onComplete: v,
-                onClose: w,
-                renderModalProps: S,
-                additionalOptions: _,
-                analyticsSourceLocation: f,
-                ...O
+                renderHeader: M,
+                stepConfigs: k,
+                activeSubscription: x,
+                analyticsLocations: I,
+                giftContextProps: j,
+                onComplete: f,
+                onClose: v,
+                renderModalProps: w,
+                additionalOptions: S,
+                analyticsSourceLocation: _,
+                ...R
             } = e,
-            { purchaseType: R } = P,
+            { purchaseType: L } = h,
             {
-                CustomTenantProvider: L,
+                CustomTenantProvider: O,
                 TenantPaymentModalRenderer: T,
                 tenantProvidesCheckoutRoot: b,
-                overrideAnalyticParams: E,
-                tenantAnalyticsLocation: G,
+                overrideAnalyticParams: g,
+                tenantAnalyticsLocation: E,
             } = C.TENANT_PROVIDER_CONFIGS,
-            N = l.useMemo(() => (null != G ? [...j, G] : j), [j, G]),
-            V = null != I ? r.dX : r.Mq,
-            g = null != I && I.isGift,
+            G = l.useMemo(() => (null != E ? [...I, E] : I), [I, E]),
+            N = null != j ? r.dX : r.Mq,
+            V = null != j && j.isGift,
             A = {
-                unifiedCheckoutFlow: h,
-                loadId: s,
-                discoverySessionId: u,
-                stepConfigs: x,
+                unifiedCheckoutFlow: m,
+                skuId: n ?? null,
+                loadId: i,
                 applicationId: a,
-                skuId: n,
-                activeSubscription: M,
-                purchaseType: R,
-                analyticsLocations: N,
-                paymentGateway: null != E ? E.payment_gateway : void 0,
-                isGift: g,
-                excludeSubscriptionPlansBySKU: R === c.VV.ONE_TIME,
+                discoverySessionId: c,
+                stepConfigs: k,
+                activeSubscription: x,
+                purchaseType: L,
+                analyticsLocations: G,
+                paymentGateway: null != g ? g.payment_gateway : void 0,
+                isGift: V,
+                excludeSubscriptionPlansBySKU: L === u.VV.ONE_TIME,
             },
-            D = (0, t.jsx)(L, {
+            D = (0, t.jsx)(O, {
                 ...A,
-                tenantParams: i,
-                analyticsSourceLocation: f,
-                additionalOptions: _,
-                overrideAnalyticParams: E,
-                renderModalProps: S,
-                onComplete: v,
-                onClose: w,
-                children: (0, t.jsx)(V, {
-                    ...I,
-                    children: (0, t.jsx)(y, {
-                        ...O,
+                tenantParams: s,
+                giftContextProps: j,
+                analyticsSourceLocation: _,
+                additionalOptions: S,
+                overrideAnalyticParams: g,
+                renderModalProps: w,
+                onComplete: f,
+                onClose: v,
+                children: (0, t.jsx)(N, {
+                    ...j,
+                    children: (0, t.jsx)(p, {
+                        ...R,
+                        renderModalProps: w,
                         TenantPaymentModalRenderer: T,
-                        modalOnClose: S.onClose,
-                        transitionState: S.transitionState,
-                        returnRef: S.returnRef,
+                        transitionState: w.transitionState,
+                        returnRef: w.returnRef,
                         applicationId: a,
-                        analyticsSourceLocation: f,
+                        analyticsSourceLocation: _,
                         skuId: n,
-                        onComplete: v,
-                        renderHeader: k,
+                        onComplete: f,
+                        renderHeader: M,
                     }),
                 }),
             });
         return (0, t.jsx)(o.f5, {
-            value: N,
+            value: G,
             children: (0, t.jsx)(d.rV, {
                 skuIDs: null != n ? [n] : [],
-                paymentGateway: E?.payment_gateway,
-                loadId: s,
-                onOrderCreated: m,
-                renderModalProps: S,
-                children: b ? D : (0, t.jsx)(p, { ...A, children: D }),
+                paymentGateway: g?.payment_gateway,
+                loadId: i,
+                onOrderCreated: P,
+                renderModalProps: w,
+                children: b ? D : (0, t.jsx)(y, { ...A, children: D }),
             }),
         });
     };

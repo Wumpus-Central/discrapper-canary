@@ -1,0 +1,35 @@
+r.d(t, { _5: () => f, rV: () => m });
+var n = r(627968),
+    u = r(64700),
+    l = r(430993),
+    i = r(834730),
+    s = r(20742),
+    a = r(534479),
+    c = r(353743),
+    o = r(480642),
+    d = r(375708);
+let p = u.createContext(null),
+    f = () => u.useContext(p);
+function h(e) {
+    let { renderModalProps: t, children: r } = e,
+        u = (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)(s.rQ, {}), (0, n.jsx)(l.c, { children: r })] });
+    return null != t ? (0, n.jsx)(o.Jg, { ...t, children: u }) : u;
+}
+function m(e) {
+    let { loadId: t, skuIDs: r, paymentGateway: u, onOrderCreated: l, renderModalProps: s, children: o } = e,
+        {
+            order: f,
+            isCreateOrderLoading: m,
+            createOrderError: I,
+            shouldBlockOnOrderCreation: y,
+        } = (0, c.i)({ skuIDs: r, paymentGateway: u, loadId: t, onOrderCreated: l });
+    if (y) {
+        if (m) return (0, n.jsx)(h, { renderModalProps: s, children: (0, n.jsx)(a.A, {}) });
+        else if (null != I)
+            return (0, n.jsx)(h, {
+                renderModalProps: s,
+                children: (0, n.jsx)(i.E, { variant: "text-md/normal", children: d.intl.string(d.t.F8FvUy) }),
+            });
+    }
+    return (0, n.jsx)(p.Provider, { value: f, children: o });
+}

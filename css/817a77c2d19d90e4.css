@@ -1,0 +1,69 @@
+.wrapper_a6f654 {
+    margin-top: 60px
+}
+
+.installationPath_a6f654 {
+    padding: var(--custom-game-install-locations-item-padding) 0
+}
+
+.installationPathEditing_a6f654 {
+    margin-inline: calc(var(--custom-game-install-locations-item-padding)*-1);
+    padding: calc(var(--custom-game-install-locations-item-padding) - 1px)
+}
+
+.separator_a6f654 {
+    margin-bottom: 20px;
+    margin-top: 20px
+}
+
+.defaultIndicator_a6f654 {
+    align-items: center;
+    background-color: var(--primary-500);
+    border-radius: 3px;
+    color: var(--white);
+    display: flex;
+    font-size: 11px;
+    font-weight: var(--font-weight-bold);
+    height: 14px;
+    letter-spacing: .4px;
+    margin-inline-start: 8px;
+    padding: 0 4px;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.rowBody_a6f654 {
+    font-size: 14px;
+    height: 16px;
+    margin-top: 4px
+}
+
+.buttonRowWrapper_a6f654 {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px
+}
+
+.defaultLocationCheckbox_a6f654 {
+    margin-top: var(--space-12)
+}
+
+.theme-dark .installationPath_a6f654 {
+    box-shadow: 0 1px 0 0 var(--primary-500)
+}
+
+.theme-dark .rowBody_a6f654 {
+    color: var(--primary-400)
+}
+
+.theme-light .installationPath_a6f654 {
+    box-shadow: 0 1px 0 0 var(--primary-200)
+}
+
+.theme-light .rowBody_a6f654 {
+    color: hsl(var(--primary-400-hsl)/.6)
+}
+
+.rowTitle_a6f654 {
+    color: var(--text-default)
+}

@@ -19,8 +19,8 @@ function o(e) {
             async () => {
                 let { ForwardModal: e } = await Promise.all([
                     n.e("2871"),
-                    n.e("3767"),
-                    n.e("88345"),
+                    n.e("79839"),
+                    n.e("15414"),
                     n.e("21530"),
                     n.e("81318"),
                     n.e("46776"),

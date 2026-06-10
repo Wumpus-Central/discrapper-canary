@@ -43,7 +43,7 @@ let w = function (e, t) {
             if (e && l.isGuildStageVoice() && (0, m.xn)(l.id))
                 return void (0, h.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("44687"),
+                        n.e("6173"),
                         n.e("24199"),
                         n.e("54048"),
                         n.e("43039"),

@@ -8,7 +8,7 @@ var i = n(284009),
     d = n(391048),
     c = n(636099),
     u = n(120700),
-    m = n(95250),
+    m = n(407001),
     h = n(179499),
     g = n(375708);
 function p(e) {
@@ -29,18 +29,20 @@ function p(e) {
                     (function (e) {
                         let { guildProductListing: t, guildId: n, sourceAnalyticsLocations: i } = e,
                             l = t.id;
-                        return m.oE[u.C.GUILD_PRODUCT_CHECKOUT].get().openCheckoutModal({
-                            skuId: l,
-                            applicationId: t.application_id,
-                            tenantParams: { guildId: n },
-                            analyticsLocations: Array.isArray(i) ? i : [i],
-                            modalAPIOptions: {
-                                modalKey: "guild-product-purchase-modal",
-                                onCloseCallback() {
-                                    (0, d.ET)(), (0, c.z)();
+                        return m.UnifiedCheckoutFlowManagerSingletons[u.C.GUILD_PRODUCT_CHECKOUT]
+                            .get()
+                            .openCheckoutModal({
+                                skuId: l,
+                                applicationId: t.application_id,
+                                tenantParams: { guildId: n },
+                                analyticsLocations: Array.isArray(i) ? i : [i],
+                                modalAPIOptions: {
+                                    modalKey: "guild-product-purchase-modal",
+                                    onCloseCallback() {
+                                        (0, d.ET)(), (0, c.z)();
+                                    },
                                 },
-                            },
-                        });
+                            });
                     })({ guildProductListing: p, guildId: A.id, sourceAnalyticsLocations: i }),
             };
 }

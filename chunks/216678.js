@@ -1,11 +1,11 @@
-a.d(t, { q: () => o });
-var e = a(391048),
-    n = a(636099),
-    l = a(95250);
+t.d(e, { q: () => o });
+var a = t(391048),
+    n = t(636099),
+    l = t(407001);
 function o(i) {
-    let t = l.oE[l.CL.PREMIUM_APPS_OTP_CHECKOUT].get(),
+    let e = l.UnifiedCheckoutFlowManagerSingletons[l.CL.PREMIUM_APPS_OTP_CHECKOUT].get(),
         {
-            applicationId: a,
+            applicationId: t,
             skuId: o,
             onClose: s,
             onComplete: c,
@@ -14,15 +14,15 @@ function o(i) {
             contextKey: u,
             isGift: p = !1,
         } = i;
-    return t.openCheckoutModal({
+    return e.openCheckoutModal({
         modalAPIOptions: {
             modalKey: "premium-apps-otp-checkout-modal",
             contextKey: u,
             onCloseCallback() {
-                (0, e.ET)(), (0, n.z)();
+                (0, a.ET)(), (0, n.z)();
             },
         },
-        applicationId: a,
+        applicationId: t,
         skuId: o,
         analyticsLocations: d,
         analyticsObject: r,
