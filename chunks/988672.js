@@ -382,7 +382,7 @@ function ek(e) {
                       let e = { source: ew.Eo.NAGBAR, alertType: (0, eM.$5)(d) },
                           { default: t } = await Promise.all([
                               n.e("99795"),
-                              n.e("7429"),
+                              n.e("70738"),
                               n.e("40258"),
                               n.e("73669"),
                               n.e("46313"),
@@ -1262,7 +1262,7 @@ let t4 = r.memo(function () {
                                     n.e("64509"),
                                     n.e("51462"),
                                     n.e("89003"),
-                                    n.e("52051"),
+                                    n.e("40942"),
                                     n.e("72451"),
                                     n.e("11819"),
                                     n.e("82593"),

@@ -188,11 +188,10 @@ function Q(e) {
                     (0, C.openModalLazy)(
                         async () => {
                             let { default: t } = await Promise.all([
-                                a.e("52051"),
-                                a.e("6173"),
+                                a.e("40942"),
+                                a.e("72147"),
                                 a.e("79839"),
                                 a.e("11328"),
-                                a.e("7429"),
                                 a.e("8308"),
                                 a.e("12380"),
                                 a.e("24199"),
@@ -555,11 +554,10 @@ function eC(e) {
                 (0, C.openModalLazy)(
                     async () => {
                         let { default: n } = await Promise.all([
-                            a.e("52051"),
-                            a.e("6173"),
+                            a.e("40942"),
+                            a.e("72147"),
                             a.e("79839"),
                             a.e("11328"),
-                            a.e("7429"),
                             a.e("8308"),
                             a.e("12380"),
                             a.e("24199"),
@@ -620,11 +618,10 @@ function eC(e) {
                     let { default: e } = await Promise.all([
                         a.e("2677"),
                         a.e("71934"),
-                        a.e("52051"),
-                        a.e("6173"),
+                        a.e("40942"),
+                        a.e("72147"),
                         a.e("79839"),
                         a.e("11328"),
-                        a.e("7429"),
                         a.e("8308"),
                         a.e("4067"),
                         a.e("24199"),

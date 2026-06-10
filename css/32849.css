@@ -304,6 +304,64 @@
     margin-top: 4px
 }
 
+.collapseable__2d143 {
+    background-color: var(--background-base-low);
+    border-radius: var(--radius-sm);
+    position: relative;
+    transition: background-color .1s ease
+}
+
+.collapseable__2d143:active {
+    background-color: var(--background-mod-subtle)
+}
+
+.collapseable__2d143:before {
+    border-radius: 8px;
+    box-shadow: var(--elevation-stroke), var(--elevation-low);
+    content: "";
+    display: none;
+    inset: 0;
+    opacity: 0;
+    overflow: visible;
+    position: absolute;
+    transition: opacity .2s ease-in-out;
+    z-index: 0
+}
+
+.collapseable__2d143.toggled__2d143 {
+    cursor: default
+}
+
+.collapseable__2d143.toggled__2d143:active {
+    background-color: var(--background-base-lower)
+}
+
+.collapseable__2d143.toggled__2d143:before {
+    opacity: 1
+}
+
+.collapseable__2d143:not(:last-child) {
+    margin-bottom: 16px
+}
+
+.header__2d143 {
+    cursor: pointer;
+    position: relative
+}
+
+.header__2d143.toggled__2d143 {
+    cursor: default
+}
+
+.contentExpandContainer__2d143 {
+    flex: 1;
+    overflow: hidden
+}
+
+.showOverflow__2d143 {
+    overflow: visible
+}
+
 .container_f89b2c {
     background-color: var(--input-background-default);
     border: 1px solid;
@@ -461,4 +519,44 @@
     display: flex;
     gap: var(--space-4);
     padding-inline-end: 6px
+}
+
+.root_aea291 {
+    align-items: center;
+    border-radius: var(--radius-xs);
+    display: flex;
+    padding: 8px
+}
+
+.icon_aea291 {
+    flex-shrink: 0;
+    height: 24px;
+    margin-inline-end: 10px;
+    width: 24px
+}
+
+.text_aea291 {
+    flex: 1;
+    text-align: start
+}
+
+.info_aea291 {
+    background-color: var(--background-feedback-info);
+    border: 1px solid var(--icon-feedback-info)
+}
+
+.info_aea291 .icon_aea291 {
+    color: var(--icon-feedback-info)
+}
+
+.warning_aea291 {
+    background-color: var(--background-feedback-warning);
+    border: 1px solid var(--icon-feedback-warning)
+}
+
+.warning_aea291 .icon_aea291 {
+    box-sizing: border-box;
+    color: var(--icon-feedback-warning);
+    height: 20px;
+    width: 20px
 }

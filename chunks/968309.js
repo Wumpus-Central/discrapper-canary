@@ -61,8 +61,8 @@ function u(e) {
             : _ === l.fg2.DOMAIN
               ? (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("7429"),
-                        n.e("52051"),
+                        n.e("70738"),
+                        n.e("40942"),
                         n.e("97893"),
                         n.e("88941"),
                         n.e("37687"),
