@@ -83,7 +83,7 @@ function w(e) {
         T = I ?? _?.complex_icon_static_url ?? _?.simple_icon_url ?? u,
         S = null != I && T === I;
     if (m) return (0, i.jsx)(M, { userId: o, title: n, badgeImage: T, rarity: _?.rarity, children: s });
-    let y = null != f ? c.intl.formatToPlainString(c.t["0aEh2a"], { date: new Date(f) }) : void 0;
+    let y = _?.info_label ?? (null != f ? c.intl.formatToPlainString(c.t["0aEh2a"], { date: new Date(f) }) : void 0);
     return (0, i.jsx)(b.A, {
         title: n,
         eyebrow: t,
