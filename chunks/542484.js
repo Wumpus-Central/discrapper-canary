@@ -1162,16 +1162,18 @@ function nN(e) {
         "aria-haspopup": "dialog",
         disabled: r,
         renderPreview: () =>
-            (0, t.jsxs)("div", {
-                className: a()(nI.ti, { [nI.yT]: null == b }),
+            (0, t.jsxs)(t.Fragment, {
                 children: [
-                    (0, t.jsx)("img", { src: u, alt: "", className: nI.QQ, draggable: !1 }),
                     null != b &&
                         (0, t.jsx)("div", {
                             className: a()(nI.hm, N),
                             style: C,
                             children: (0, t.jsx)(E.A, { frame: b, filterLayer: nC }),
                         }),
+                    (0, t.jsx)("div", {
+                        className: a()(nI.ti, { [nI.yT]: null == b }),
+                        children: (0, t.jsx)("img", { src: u, alt: "", className: nI.QQ, draggable: !1 }),
+                    }),
                 ],
             }),
     });

@@ -134,6 +134,48 @@
     position: absolute
 }
 
+.container_a419e0 {
+    width: 340px
+}
+
+.headerContainer_a419e0 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    justify-content: center
+}
+
+.preview_a419e0 {
+    filter: blur(5px);
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: top;
+    object-position: top;
+    opacity: .3;
+    width: 100%
+}
+
+.container_a419e0,
+.preview_a419e0 {
+    height: 100%;
+    position: relative
+}
+
+.body_a419e0 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    inset-inline-start: 50%;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%
+}
+
 .themeContainer_fdf9c0 {
     --custom-modal-v2-min-height: 400px;
     height: var(--custom-modal-v2-height);
@@ -203,48 +245,6 @@
 
 .theme-light .safetyTable_fdf9c0 {
     background-color: var(--opacity-white-24)
-}
-
-.container_a419e0 {
-    width: 340px
-}
-
-.headerContainer_a419e0 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-8);
-    justify-content: center
-}
-
-.preview_a419e0 {
-    filter: blur(5px);
-    -o-object-fit: contain;
-    object-fit: contain;
-    -o-object-position: top;
-    object-position: top;
-    opacity: .3;
-    width: 100%
-}
-
-.container_a419e0,
-.preview_a419e0 {
-    height: 100%;
-    position: relative
-}
-
-.body_a419e0 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-16);
-    inset-inline-start: 50%;
-    justify-content: center;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%
 }
 
 .toastContainer_a35754 {
@@ -341,4 +341,24 @@
     flex-direction: row;
     gap: var(--space-8);
     padding: var(--space-16)
+}
+
+.button__0f074 {
+    color: var(--icon-subtle);
+    cursor: pointer;
+    height: 16px;
+    opacity: 0;
+    transition: color 50ms ease-in;
+    width: 16px
+}
+
+.button__0f074:focus-visible,
+.button__0f074:hover {
+    color: var(--icon-strong);
+    transition: color .15s ease-out
+}
+
+.button__0f074.visible__0f074,
+.button__0f074:focus-visible {
+    opacity: 1
 }

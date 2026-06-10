@@ -1342,8 +1342,7 @@ class nk extends r.PureComponent {
         let { guild: e } = this.props;
         (0, _.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
-                n.e("72253"),
-                n.e("42527"),
+                n.e("40362"),
                 n.e("59957"),
                 n.e("28136"),
                 n.e("16084"),
@@ -1640,17 +1639,17 @@ class io extends r.PureComponent {
             if ((0, el.ai)(t.id)) return void this.props.onFavoriteGuildContextMenu(e);
             (0, N.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    n.e("72253"),
+                    n.e("40362"),
                     n.e("11141"),
                     n.e("29439"),
                     n.e("60361"),
-                    n.e("81030"),
+                    n.e("79521"),
                     n.e("734"),
                     n.e("44051"),
                     n.e("39629"),
                     n.e("4746"),
                     n.e("22018"),
-                    n.e("33799"),
+                    n.e("84738"),
                     n.e("34906"),
                     n.e("370"),
                     n.e("53785"),
@@ -1678,6 +1677,7 @@ class io extends r.PureComponent {
                     n.e("86065"),
                     n.e("72347"),
                     n.e("60389"),
+                    n.e("10889"),
                     n.e("46507"),
                     n.e("59923"),
                     n.e("16357"),
@@ -1687,8 +1687,7 @@ class io extends r.PureComponent {
                     n.e("61175"),
                     n.e("22410"),
                     n.e("4974"),
-                    n.e("42527"),
-                    n.e("14511"),
+                    n.e("59831"),
                     n.e("23924"),
                     n.e("42205"),
                     n.e("71091"),

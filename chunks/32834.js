@@ -87,7 +87,7 @@ let ec = es.Ay.getEnableHardwareAcceleration(),
                     null != h &&
                         (0, I.L3)(e, async () => {
                             let { default: e } = await Promise.all([
-                                t.e("94881"),
+                                t.e("12697"),
                                 t.e("26132"),
                                 t.e("46652"),
                                 t.e("93190"),
@@ -1118,8 +1118,7 @@ let nw = (e) => {
         a = s.useCallback(() => {
             (0, m.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    t.e("72253"),
-                    t.e("42527"),
+                    t.e("40362"),
                     t.e("59957"),
                     t.e("28136"),
                     t.e("16084"),
@@ -2717,7 +2716,8 @@ function iM(e) {
         m = (e) => {
             (0, I.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    t.e("94881"),
+                    t.e("12697"),
+                    t.e("84738"),
                     t.e("26132"),
                     t.e("46652"),
                     t.e("93190"),
@@ -4681,7 +4681,7 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
             t.e("53785"),
             t.e("4981"),
             t.e("88761"),
-            t.e("7363"),
+            t.e("81127"),
             t.e("56374"),
             t.e("11141"),
             t.e("734"),
@@ -4729,7 +4729,7 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
             t.e("53785"),
             t.e("4981"),
             t.e("88761"),
-            t.e("7363"),
+            t.e("81127"),
             t.e("11141"),
             t.e("59499"),
             t.e("52257"),
@@ -4770,12 +4770,12 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
     rK = (0, nT.Fe)({
         createPromise: () =>
             Promise.all([
-                t.e("81030"),
+                t.e("79521"),
                 t.e("7538"),
                 t.e("11394"),
                 t.e("4974"),
                 t.e("4746"),
-                t.e("72253"),
+                t.e("40362"),
                 t.e("49681"),
                 t.e("38939"),
                 t.e("61058"),
@@ -4794,7 +4794,7 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
     rq = (0, nT.Fe)({
         createPromise: () =>
             Promise.all([
-                t.e("72253"),
+                t.e("40362"),
                 t.e("56374"),
                 t.e("4746"),
                 t.e("16357"),
@@ -4909,7 +4909,8 @@ class rX extends s.PureComponent {
         o()(null != l, "Missing user in Channel.openDMContextMenu"),
             (0, I.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    t.e("94881"),
+                    t.e("12697"),
+                    t.e("84738"),
                     t.e("26132"),
                     t.e("46652"),
                     t.e("93190"),

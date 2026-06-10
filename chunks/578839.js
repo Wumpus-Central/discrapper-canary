@@ -110,8 +110,7 @@ let U = i.memo(function (e) {
                                             onClick: () =>
                                                 (0, p.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        n.e("71632"),
-                                                        n.e("70573"),
+                                                        n.e("40362"),
                                                         n.e("59957"),
                                                         n.e("28136"),
                                                         n.e("16084"),

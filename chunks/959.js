@@ -1,33 +1,32 @@
 "use strict";
-n.d(t, { A: () => f });
-var l = n(627968),
-    i = n(17928),
+n.d(t, { A: () => p });
+var i = n(627968),
+    r = n(17928),
     s = n(364522),
-    r = n(86182),
-    a = n(922016),
-    o = n(442433),
-    c = n(538451),
-    u = n(342296),
+    a = n(86182),
+    o = n(922016),
+    l = n(442433),
+    u = n(538451),
+    c = n(342296),
     d = n(363195),
-    h = n(562153),
-    m = n(450422);
-function p(e) {
-    let { participants: t, channel: i } = e;
-    return (0, l.jsx)(s.Ip, {
-        className: m.S,
+    _ = n(562153),
+    h = n(450422);
+function f(e) {
+    let { participants: t, channel: r } = e;
+    return (0, i.jsx)(s.Ip, {
+        className: h.S,
         children: t.map((e) =>
-            (0, l.jsx)(
-                c.A,
+            (0, i.jsx)(
+                u.A,
                 {
                     user: e,
-                    guildId: i?.guild_id,
-                    channelId: i?.id,
-                    nick: h.Ay.getNickname(i?.guild_id, i?.id, e),
+                    guildId: r?.guild_id,
+                    channelId: r?.id,
+                    nick: _.Ay.getNickname(r?.guild_id, r?.id, e),
                     onContextMenu: (t) => {
-                        (0, o.L3)(t, async () => {
+                        (0, l.L3)(t, async () => {
                             let { default: t } = await Promise.all([
-                                n.e("79839"),
-                                n.e("94881"),
+                                n.e("84738"),
                                 n.e("26132"),
                                 n.e("46652"),
                                 n.e("93190"),
@@ -53,7 +52,7 @@ function p(e) {
                                 n.e("42191"),
                                 n.e("32418"),
                             ]).then(n.bind(n, 668569));
-                            return (n) => (0, l.jsx)(t, { ...n, user: e });
+                            return (n) => (0, i.jsx)(t, { ...n, user: e });
                         });
                     },
                 },
@@ -62,28 +61,28 @@ function p(e) {
         ),
     });
 }
-function f(e) {
-    let { children: t, participants: n, channel: s, onPopoutClosed: o, targetElementRef: c } = e,
-        h = (0, i.bG)([d.A], () => d.A.theme),
-        m = 1 === n.length ? n[0] : null;
-    return null != m
-        ? (0, l.jsx)(r.w, {
-              theme: h,
-              children: (0, l.jsx)(u.A, {
-                  targetElementRef: c,
-                  user: m,
+function p(e) {
+    let { children: t, participants: n, channel: s, onPopoutClosed: l, targetElementRef: u } = e,
+        _ = (0, r.bG)([d.A], () => d.A.theme),
+        h = 1 === n.length ? n[0] : null;
+    return null != h
+        ? (0, i.jsx)(a.w, {
+              theme: _,
+              children: (0, i.jsx)(c.A, {
+                  targetElementRef: u,
+                  user: h,
                   guildId: s?.guild_id,
                   channelId: s?.id,
-                  onClosePopout: o,
+                  onClosePopout: l,
                   children: t,
               }),
           })
-        : (0, l.jsx)(r.w, {
-              theme: h,
-              children: (0, l.jsx)(a.Y, {
-                  targetElementRef: c,
+        : (0, i.jsx)(a.w, {
+              theme: _,
+              children: (0, i.jsx)(o.Y, {
+                  targetElementRef: u,
                   renderPopout: () => {
-                      if (null != n) return (0, l.jsx)(p, { participants: n, channel: s });
+                      if (null != n) return (0, i.jsx)(f, { participants: n, channel: s });
                       throw Error("One of participant or participants is required");
                   },
                   children: t,
