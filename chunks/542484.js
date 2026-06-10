@@ -907,42 +907,50 @@ function l5(e) {
     return null != o ? (0, t.jsx)(l8, { src: o }) : (0, t.jsx)(l9, { backgroundColor: s });
 }
 function l6(e) {
-    let { userId: l, guildId: n, disabled: i } = e,
-        { newestAnalyticsLocation: r } = (0, I.Ay)(),
-        a = null != n,
-        o = (0, z.Ay)(l, n),
-        d = (0, s.bG)([ea.A], () => ea.A.getPendingChanges(n ?? void 0).pendingBanner),
-        u = (0, s.bG)([er.default], () => er.default.getCurrentUser()?.banner),
-        c = (0, s.bG)([B.A], () =>
-            null != n ? B.A.getGuildMemberProfile(l, n)?.banner : B.A.getUserProfile(l)?.banner,
+    let l,
+        { userId: n, guildId: i, disabled: r } = e,
+        { newestAnalyticsLocation: a } = (0, I.Ay)(),
+        o = null != i,
+        d = (0, z.Ay)(n, i),
+        u = (0, s.bG)([ea.A], () => ea.A.getPendingChanges(i ?? void 0).pendingBanner),
+        c = (0, s.bG)([er.default], () => er.default.getCurrentUser()?.banner),
+        g = (0, s.bG)([B.A], () =>
+            null != i ? B.A.getGuildMemberProfile(n, i)?.banner : B.A.getUserProfile(n)?.banner,
         ),
-        g = null === d,
-        f = a && (o?.isUsingGuildMemberBanner() ?? !1),
-        m = g && a && !f ? void 0 : d,
-        p = (0, en.Ac)(d, c),
-        x = a && null != u,
-        v = p
+        f = null === u,
+        m = o && (d?.isUsingGuildMemberBanner() ?? !1),
+        p = f && o && !m ? void 0 : u,
+        x = (0, en.Ac)(u, g),
+        v = o && null != c,
+        h = x
             ? {
-                  onClick: () => (0, l2.rM)(null, c, (e) => (0, eK.p)({ guildId: n ?? void 0, banner: e })),
-                  type: x ? "reset" : "remove",
-                  accessibleLabel: eV.intl.string(x ? eV.t.jHlJNS : eV.t.tT9n7D),
+                  onClick: () => (0, l2.rM)(null, g, (e) => (0, eK.p)({ guildId: i ?? void 0, banner: e })),
+                  type: v ? "reset" : "remove",
+                  accessibleLabel: eV.intl.string(v ? eV.t.jHlJNS : eV.t.tT9n7D),
               }
             : void 0;
     return (0, t.jsx)(lQ.V, {
-        affordance: v,
+        affordance: h,
         variant: "square",
         onClick: () =>
             (0, l2.XD)({
                 uploadType: l3.HL.BANNER,
-                analyticsSource: r,
-                guildId: n ?? void 0,
+                analyticsSource: a,
+                guildId: i ?? void 0,
                 stackingBehavior: "stack",
             }),
-        accessibleLabel: eV.intl.string(eV.t.N0bC3P),
+        accessibleLabel: eV.intl.string(eV.t.yiRnNO),
+        accessibleValue:
+            ((l = void 0 === u),
+            null === u || (l && null == g)
+                ? eV.intl.string(eV.t["3Xph0/"])
+                : l
+                  ? eV.intl.string(eV.t.keN7ib)
+                  : eV.intl.string(eV.t["l/iJSJ"])),
         "aria-haspopup": "dialog",
-        disabled: i,
+        disabled: r,
         showOverlayOnHover: !0,
-        renderPreview: (e) => (0, t.jsx)(l5, { displayProfile: o, pendingBanner: m, shouldAnimate: e }),
+        renderPreview: (e) => (0, t.jsx)(l5, { displayProfile: d, pendingBanner: p, shouldAnimate: e }),
     });
 }
 var l4 = n(913563),
