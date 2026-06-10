@@ -43,9 +43,6 @@ let l = {
             dismissed: t,
         });
     },
-    updateForceTextView(e, t) {
-        i.h.dispatch({ type: "CHANNEL_RTC_UPDATE_FORCE_TEXT_VIEW", channelId: e, forceTextView: t });
-    },
     updateChatOpen(e, t) {
         i.h.dispatch({ type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: e, chatOpen: t }),
             t

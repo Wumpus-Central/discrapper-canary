@@ -1773,7 +1773,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 560894, Version Hash: d0a0021b5a6b2b903f22b44cecd78cfcec5ad2aa`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 560896, Version Hash: 582d479192c6735e352f577b230f820b94c41fac`,
 ),
     ev.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -18349,7 +18349,7 @@ let Sh = "isHideDevBanner",
                     className: t2()(S_.Wz, S_.mr),
                     children: [
                         (0, U.jsx)(Sd, { className: S_.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "560894" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "560896" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })
@@ -23331,8 +23331,8 @@ let N9 = () => (0, U.jsx)("div", { className: N2.wG, children: (0, U.jsx)(rn.y, 
                 n.e("10172"),
                 n.e("97934"),
                 n.e("92461"),
-            ]).then(n.bind(n, 618500)),
-        webpackId: 618500,
+            ]).then(n.bind(n, 32834)),
+        webpackId: 32834,
         name: "Channel",
         renderLoader: ra.l3,
     }),
