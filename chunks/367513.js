@@ -1,13 +1,11 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => l });
 var i = n(228366),
     r = n(95561),
-    s = n(134047),
-    a = n(734057),
-    o = n(174459),
-    l = n(625494),
-    u = n(652215);
-let c = {
+    s = n(174459),
+    a = n(625494),
+    o = n(652215);
+let l = {
     rebuildRTCActiveChannels() {
         i.h.dispatch({ type: "CHANNEL_RTC_ACTIVE_CHANNELS" });
     },
@@ -21,8 +19,8 @@ let c = {
         i.h.dispatch({ type: "CHANNEL_RTC_RETURN_PARTICIPANT", channelId: e, participantId: t });
     },
     updateLayout(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.BRT.APP;
-        o.default.track(u.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: t, ...(0, r.QS)(e) }),
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.BRT.APP;
+        s.default.track(o.HAw.VIDEO_LAYOUT_TOGGLED, { video_layout: t, ...(0, r.QS)(e) }),
             i.h.dispatch({ type: "CHANNEL_RTC_UPDATE_LAYOUT", channelId: e, layout: t, appContext: n });
     },
     toggleParticipants(e, t) {
@@ -48,19 +46,13 @@ let c = {
     updateForceTextView(e, t) {
         i.h.dispatch({ type: "CHANNEL_RTC_UPDATE_FORCE_TEXT_VIEW", channelId: e, forceTextView: t });
     },
-    updateChatOpen(e, t, n) {
+    updateChatOpen(e, t) {
         i.h.dispatch({ type: "CHANNEL_RTC_UPDATE_CHAT_OPEN", channelId: e, chatOpen: t }),
             t
                 ? setTimeout(() => {
-                      l._.dispatch(u.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+                      a._.dispatch(o.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
                   }, 0)
-                : (l._.dispatch(u.jej.FOCUS_CHAT_BUTTON),
-                  s.M.getConfig({ location: "ChannelCall" }).collectAnalytics &&
-                      o.default.track(u.HAw.TEXT_IN_VOICE_CLOSED, {
-                          reason: n,
-                          channel_id: e,
-                          guild_id: a.A.getChannel(e)?.getGuildId(),
-                      }));
+                : a._.dispatch(o.jej.FOCUS_CHAT_BUTTON);
     },
     jumpToVoiceChannelMessage(e, t, n, r) {
         i.h.dispatch({

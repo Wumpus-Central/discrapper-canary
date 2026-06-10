@@ -171,7 +171,7 @@ let ed = {
                 n = _.A.getChannel(t),
                 i = null != t && n?.isVocalThread() === !0 && J.A.getUserParticipantCount(t) > 0;
             if (null != t && null != n && (n.type === X.r.GUILD_VOICE || i))
-                return Z.A.updateChatOpen(t, !J.A.getChatOpen(t), "toggle users keybind"), !1;
+                return Z.A.updateChatOpen(t, !J.A.getChatOpen(t)), !1;
             if (null != t && null != n && n.type === X.r.DM) {
                 let e = en.Ay.getSection(t, n?.isDM()),
                     i = (0, et.AP)(n.getRecipientId()),

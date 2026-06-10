@@ -70,7 +70,7 @@ function _(e) {
             );
         })(t),
         L = i.useCallback(() => {
-            (0, A.X)(j, A.O.CHAT, !S), h?.(), !S && C && g?.(), c.A.updateChatOpen(t, !S, "toggle chat button");
+            (0, A.X)(j, A.O.CHAT, !S), h?.(), !S && C && g?.(), c.A.updateChatOpen(t, !S);
         }, [t, S, h, C, g, j]),
         M = i.useCallback(
             (e) => {
