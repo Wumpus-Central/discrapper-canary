@@ -968,8 +968,8 @@ function et(e) {
             let e = !1,
                 l = (t ?? "") + "\n";
             return (
-                Promise.resolve()
-                    .then(a.bind(a, 149938))
+                Promise.all([a.e("57036"), a.e("75134")])
+                    .then(a.bind(a, 981776))
                     .then((a) => {
                         if (e) return;
                         let n = a.default;

@@ -200,8 +200,8 @@ let eI = function (e) {
                     e,
                     async () => {
                         let { default: e } = await Promise.all([
-                            l.e("53957"),
-                            l.e("6619"),
+                            l.e("19810"),
+                            l.e("71664"),
                             l.e("95429"),
                             l.e("91211"),
                             l.e("38601"),
@@ -669,8 +669,8 @@ function tt(e) {
                     e,
                     async () => {
                         let { default: e } = await Promise.all([
-                            l.e("53957"),
-                            l.e("6619"),
+                            l.e("19810"),
+                            l.e("71664"),
                             l.e("95429"),
                             l.e("91211"),
                             l.e("38601"),

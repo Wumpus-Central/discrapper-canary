@@ -349,9 +349,9 @@ function el(e) {
                                 return (0, c.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([
-                                            n.e("734"),
+                                            n.e("2677"),
                                             n.e("25377"),
-                                            n.e("5288"),
+                                            n.e("56533"),
                                             n.e("67251"),
                                             n.e("28367"),
                                             n.e("75361"),
@@ -435,9 +435,9 @@ let ed = r.forwardRef(function (e, t) {
                                 (0, c.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([
-                                            n.e("734"),
+                                            n.e("2677"),
                                             n.e("25377"),
-                                            n.e("5288"),
+                                            n.e("56533"),
                                             n.e("67251"),
                                             n.e("28367"),
                                             n.e("75361"),

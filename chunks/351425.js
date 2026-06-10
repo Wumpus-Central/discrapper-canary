@@ -797,11 +797,11 @@ var eQ = l(97808),
     eZ = l(778712),
     eq = l(463930),
     eY = l(730134),
-    e0 = l(85829),
+    e0 = l(509536),
     e1 = l(319756),
     e5 = l(854627),
-    e8 = l(696451),
-    e6 = l(317525),
+    e6 = l(696451),
+    e8 = l(317525),
     e9 = l(287809),
     e3 = l(562153),
     e7 = l(19575),
@@ -810,10 +810,10 @@ let e2 = e7.Ay.getEnableHardwareAcceleration() ? eQ.Js : eY.A;
 function te(e) {
     let { guildId: t } = e,
         l = (0, i.bG)([c.A], () => c.A.getGuild(t)),
-        n = (0, i.bG)([e6.A], () => e6.A.getSortedRoles(t).find((e) => e.tags?.premium_subscriber === null)),
+        n = (0, i.bG)([e8.A], () => e8.A.getSortedRoles(t).find((e) => e.tags?.premium_subscriber === null)),
         r = (0, i.bG)([e9.default], () => e9.default.getCurrentUser()),
         a = r?.id,
-        o = (0, i.bG)([e8.Ay], () => (null != a ? e8.Ay.getMember(t, a) : void 0), [a, t]),
+        o = (0, i.bG)([e6.Ay], () => (null != a ? e6.Ay.getMember(t, a) : void 0), [a, t]),
         u = o?.premiumSince != null,
         d = (0, i.bG)([eI.A], () => eI.A.useReducedMotion),
         {
@@ -912,11 +912,11 @@ function tc(e) {
                     username: l,
                     roleColor: s,
                     roleColorStrings: n,
-                } = (0, i.cf)([e8.Ay], () => {
-                    let t = e8.Ay.getMember(e.guildId, e.userId);
+                } = (0, i.cf)([e6.Ay], () => {
+                    let t = e6.Ay.getMember(e.guildId, e.userId);
                     return {
                         username:
-                            e8.Ay.getNick(e.guildId, e.userId) ?? e.user?.username ?? T.intl.string(T.t["30mdIx"]),
+                            e6.Ay.getNick(e.guildId, e.userId) ?? e.user?.username ?? T.intl.string(T.t["30mdIx"]),
                         roleColor: t?.colorString ?? null,
                         roleColorStrings: t?.colorStrings ?? null,
                     };
@@ -1030,12 +1030,12 @@ function tm(e) {
                             .slice(0, void 0),
                     [l, void 0, s, t],
                 ),
-                a = (0, i.yK)([e8.Ay], () => {
+                a = (0, i.yK)([e6.Ay], () => {
                     let t = new Set();
                     return (
                         r.forEach((l) => {
                             let { boost: s } = l;
-                            null == e8.Ay.getMember(e, s.userId) && t.add(s.userId);
+                            null == e6.Ay.getMember(e, s.userId) && t.add(s.userId);
                         }),
                         Array.from(t)
                     );

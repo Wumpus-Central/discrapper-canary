@@ -315,8 +315,7 @@ function _(e, n, l) {
         case s.rX.TERMS:
             return (0, a.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    t.e("87671"),
-                    t.e("5288"),
+                    t.e("25935"),
                     t.e("83013"),
                     t.e("90152"),
                     t.e("78618"),
@@ -352,8 +351,7 @@ function z(e, n, l) {
         case s.rX.TERMS:
             return (0, a.openModalLazy)(async () => {
                 let { default: r } = await Promise.all([
-                    t.e("87671"),
-                    t.e("5288"),
+                    t.e("25935"),
                     t.e("83013"),
                     t.e("90152"),
                     t.e("78618"),

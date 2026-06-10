@@ -16,7 +16,7 @@ async function u(e, t, u) {
         await (0, a.G8)().catch(
             (e) => (
                 (0, r.openModalLazy)(async () => {
-                    let { default: e } = await n.e("3371").then(n.bind(n, 990726));
+                    let { default: e } = await Promise.all([n.e("73547"), n.e("3371")]).then(n.bind(n, 990726));
                     return (t) => (0, i.jsx)(e, { ...t });
                 }),
                 Promise.reject(e)

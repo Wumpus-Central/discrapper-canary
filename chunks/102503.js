@@ -212,7 +212,7 @@ var et = n(558845),
     es = n(313281),
     el = n(5180),
     er = n(250719),
-    ea = n(780645),
+    ea = n(3026),
     eo = n(72152),
     ed = n(15073),
     eu = n(174459),
@@ -279,7 +279,7 @@ var eL = n(875317),
     eY = n(763827),
     ez = n(428262),
     eZ = n(885631),
-    eq = n(156867),
+    eq = n(124009),
     eQ = n(83297),
     e$ = n(562708),
     eJ = n(702841),
@@ -354,8 +354,8 @@ function e4(e) {
         actions: [{ text: e6.intl.string(e6.t.RzWDqY), variant: "primary", onClick: n }],
     });
 }
-var e7 = n(834730),
-    e9 = n(821609),
+var e9 = n(834730),
+    e7 = n(821609),
     te = n(383470);
 function tt(e) {
     let { markAsDismissed: t } = e;
@@ -363,8 +363,8 @@ function tt(e) {
         className: te.kL,
         children: [
             (0, l.jsx)("div", { className: te.Wn }),
-            (0, l.jsx)(e7.E, { variant: "text-sm/normal", className: te.Qs, children: e6.intl.string(e6.t.rdzeVP) }),
-            (0, l.jsx)(e9.$, {
+            (0, l.jsx)(e9.E, { variant: "text-sm/normal", className: te.Qs, children: e6.intl.string(e6.t.rdzeVP) }),
+            (0, l.jsx)(e7.$, {
                 variant: "overlay-primary",
                 text: e6.intl.string(e6.t["NX+WJN"]),
                 fullWidth: !0,
@@ -588,7 +588,7 @@ let th = ta().debounce(tA.Ay.trackWithMetadata, 500),
                         null != n
                             ? (0, l.jsx)(tc.D, { variant: "heading-md/semibold", className: tE.DD, children: n })
                             : null,
-                        (0, l.jsx)(e7.E, { variant: "text-sm/normal", children: i }),
+                        (0, l.jsx)(e9.E, { variant: "text-sm/normal", children: i }),
                         _,
                     ],
                 }),
@@ -741,7 +741,7 @@ function tX(e) {
         imageMarginX: 22,
     });
 }
-var tV = n(85829);
+var tV = n(509536);
 class tF extends r.PureComponent {
     handleButtonClick = () => {
         let { guild: e } = this.props;
@@ -782,8 +782,8 @@ var tW = n(503698),
     t8 = n(110618),
     t5 = n(495544),
     t4 = n(309010),
-    t7 = n(312006),
-    t9 = n(403362),
+    t9 = n(312006),
+    t7 = n(403362),
     ne = n(707592),
     nt = n(698441),
     nn = n(935159),
@@ -812,7 +812,7 @@ let nu = r.memo(function (e) {
                 className: tY()(nd.fI, nd.pF),
                 children: [
                     (0, l.jsx)("div", { className: nd.Ok }),
-                    (0, l.jsx)(e7.E, {
+                    (0, l.jsx)(e9.E, {
                         color: "text-feedback-positive",
                         variant: "text-xs/semibold",
                         className: nd.U4,
@@ -832,19 +832,19 @@ let nu = r.memo(function (e) {
                 className: tY()(nd.fI, nd.pF),
                 children: [
                     i,
-                    (0, l.jsx)(e7.E, { color: "none", variant: "text-xs/normal", className: nd.HA, children: n }),
+                    (0, l.jsx)(e9.E, { color: "none", variant: "text-xs/normal", className: nd.HA, children: n }),
                     null != s &&
                         null != r &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)(e7.E, {
+                                (0, l.jsx)(e9.E, {
                                     className: nd.hY,
                                     color: "none",
                                     variant: "text-xs/normal",
                                     children: "\u2022",
                                 }),
                                 r,
-                                (0, l.jsx)(e7.E, {
+                                (0, l.jsx)(e9.E, {
                                     color: "none",
                                     variant: "text-xs/normal",
                                     className: nd.zH,
@@ -887,7 +887,7 @@ function nA(e) {
         r = (0, d.bG)([ni.A], () => ni.A.getUpcomingNoticeSeenTime(t.id), [t.id]);
     return (
         s || null != r || (0, nn.pE)(t.id),
-        (0, l.jsx)(e9.$, {
+        (0, l.jsx)(e7.$, {
             onClick: function () {
                 (0, no.A)(t.id, null, t.guild_id, () => setTimeout(() => (0, nn.Lx)(t.id), 1e3)),
                     eu.default.track(H.HAw.CHANNEL_NOTICE_CTA_CLICKED, { guild_id: t.guild_id, notice_type: n });
@@ -927,7 +927,7 @@ function nE(e) {
                         (0, l.jsx)(td.D, {
                             onClick: () => (0, ne.uR)({ eventId: t.id }),
                             className: nd.oP,
-                            children: (0, l.jsx)(e7.E, {
+                            children: (0, l.jsx)(e9.E, {
                                 color: "text-strong",
                                 variant: "text-md/semibold",
                                 className: nd.eq,
@@ -955,7 +955,7 @@ function nE(e) {
                             width: 16,
                             height: 16,
                         }),
-                        (0, l.jsx)(e7.E, {
+                        (0, l.jsx)(e9.E, {
                             color: "text-default",
                             variant: "text-xs/normal",
                             className: nd.Sv,
@@ -975,7 +975,7 @@ function nE(e) {
                                   height: 16,
                                   className: nd.uE,
                               }),
-                        (0, l.jsx)(e7.E, {
+                        (0, l.jsx)(e9.E, {
                             color: "none",
                             variant: "text-xs/normal",
                             className: nd.HA,
@@ -1016,7 +1016,7 @@ function ng(e) {
     return (0, l.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
         className: nd.PD,
-        children: (0, l.jsx)(e9.$, {
+        children: (0, l.jsx)(e7.$, {
             variant: "active",
             size: "sm",
             text: e6.intl.string(e6.t.z4FcDs),
@@ -1030,7 +1030,7 @@ function n_(e) {
     return (0, l.jsx)("div", {
         "data-button-hoisted-classname-wrapper": !0,
         className: nd.PD,
-        children: (0, l.jsx)(e9.$, {
+        children: (0, l.jsx)(e7.$, {
             variant: "active",
             size: "sm",
             text: n,
@@ -1081,9 +1081,9 @@ function nm(e) {
         u = (0, d.bG)([R.A], () => R.A.can(H.xBc.CONNECT, n)),
         c =
             ((t = n.id),
-            (0, d.bG)([t5.default, t4.A, t7.Ay], () => {
+            (0, d.bG)([t5.default, t4.A, t9.Ay], () => {
                 let e = t5.default.getId();
-                return t4.A.getVoiceChannelId() === t ? t7.Ay.getPermissionsForUser(e, t) : null;
+                return t4.A.getVoiceChannelId() === t ? t9.Ay.getPermissionsForUser(e, t) : null;
             }, [t])),
         A = e6.intl.string(e6.t.VJlc0S);
     switch (s) {
@@ -1098,7 +1098,7 @@ function nm(e) {
             A = e6.intl.string(e6.t.wBoE6L);
             break;
         default:
-            (0, t9.xb)(s);
+            (0, t7.xb)(s);
     }
     return null == a
         ? null
@@ -1109,7 +1109,7 @@ function nm(e) {
                             className: tY()(nd.fI, nd.pF),
                             children: [
                                 (0, l.jsx)(t0.Ay, { guildId: a, users: o, showUserPopout: !0, size: t0.DN.SIZE_16 }),
-                                (0, l.jsx)(e7.E, {
+                                (0, l.jsx)(e9.E, {
                                     color: "none",
                                     variant: "text-xs/normal",
                                     className: nd.c8,
@@ -1164,7 +1164,7 @@ function nS(e) {
         onClick: function () {
             (0, _.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("7206"),
+                    n.e("87220"),
                     n.e("97804"),
                     n.e("7265"),
                     n.e("97641"),
@@ -1342,7 +1342,7 @@ class nk extends r.PureComponent {
         let { guild: e } = this.props;
         (0, _.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
-                n.e("87671"),
+                n.e("25935"),
                 n.e("59957"),
                 n.e("28136"),
                 n.e("16084"),
@@ -1457,13 +1457,13 @@ let n1 = new n0(I.h),
         { type: H.n5X.LINKED_ROLES_ADMIN, dismissibleContentType: u.M.LINKED_ROLE_ADMIN_GUILD },
         { type: H.n5X.GAME_CLAIM, dismissibleContentType: u.M.GAME_CLAIM_COACHMARK },
     ],
-    n2 = n3.map((e) => e.store).filter(t9.Vq),
+    n2 = n3.map((e) => e.store).filter(t7.Vq),
     n8 = new Set([u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, u.M.CHANNEL_NOTICE_GUILD_BANNER]);
 function n5(e) {
     e.stopPropagation();
 }
 let n4 = [];
-function n7(e) {
+function n9(e) {
     var t, n;
     let i,
         s,
@@ -1532,7 +1532,7 @@ function n7(e) {
         })();
     return null == O ? null : (0, l.jsx)("div", { onContextMenu: n5, children: O });
 }
-let n9 = (e) => {
+let n7 = (e) => {
     let { guild: t } = e;
     switch (ee(t)) {
         case J.ENABLE_PUBLIC_GUILD:
@@ -1550,7 +1550,7 @@ let n9 = (e) => {
         case J.HUB_STUDY_ROOM:
             return (0, l.jsx)(nU, { guild: t });
     }
-    return nH.P.isDisallowPopupsSet() ? null : (0, l.jsx)(n7, { guild: e.guild });
+    return nH.P.isDisallowPopupsSet() ? null : (0, l.jsx)(n9, { guild: e.guild });
 };
 var ie = n(532233);
 function it(e) {
@@ -1561,7 +1561,7 @@ function it(e) {
             let e = i.current;
             null != e && n(e.childNodes.length > 0);
         }),
-        (0, l.jsx)("div", { className: ie.k, ref: i, children: (0, l.jsx)(n9, { guild: t }) })
+        (0, l.jsx)("div", { className: ie.k, ref: i, children: (0, l.jsx)(n7, { guild: t }) })
     );
 }
 var ii = n(66933),
@@ -1639,55 +1639,74 @@ class io extends r.PureComponent {
             if ((0, el.ai)(t.id)) return void this.props.onFavoriteGuildContextMenu(e);
             (0, N.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    n.e("23054"),
-                    n.e("11141"),
-                    n.e("8625"),
-                    n.e("60361"),
-                    n.e("61074"),
-                    n.e("79521"),
-                    n.e("734"),
-                    n.e("16037"),
-                    n.e("37378"),
-                    n.e("87671"),
+                    n.e("56533"),
+                    n.e("58026"),
+                    n.e("33343"),
+                    n.e("61554"),
+                    n.e("76568"),
+                    n.e("20998"),
+                    n.e("98901"),
+                    n.e("47141"),
+                    n.e("2677"),
+                    n.e("25935"),
+                    n.e("19810"),
+                    n.e("51692"),
                     n.e("22018"),
-                    n.e("5288"),
-                    n.e("34906"),
-                    n.e("7000"),
-                    n.e("53785"),
-                    n.e("83665"),
-                    n.e("55666"),
-                    n.e("42639"),
+                    n.e("99961"),
+                    n.e("85363"),
+                    n.e("1142"),
+                    n.e("30463"),
+                    n.e("19393"),
+                    n.e("26105"),
                     n.e("46461"),
+                    n.e("4488"),
                     n.e("64509"),
+                    n.e("71664"),
+                    n.e("89003"),
+                    n.e("87220"),
+                    n.e("18053"),
+                    n.e("15931"),
+                    n.e("46334"),
                     n.e("26963"),
                     n.e("38805"),
-                    n.e("46912"),
+                    n.e("27660"),
                     n.e("9336"),
-                    n.e("55882"),
-                    n.e("73679"),
+                    n.e("27359"),
+                    n.e("2261"),
+                    n.e("22600"),
+                    n.e("54662"),
                     n.e("6324"),
                     n.e("93342"),
                     n.e("30240"),
-                    n.e("49011"),
-                    n.e("27682"),
+                    n.e("91397"),
+                    n.e("44667"),
+                    n.e("83928"),
+                    n.e("92702"),
+                    n.e("53727"),
+                    n.e("78528"),
+                    n.e("62144"),
+                    n.e("87103"),
                     n.e("69344"),
-                    n.e("46735"),
+                    n.e("52519"),
+                    n.e("52623"),
+                    n.e("95031"),
+                    n.e("6410"),
+                    n.e("83566"),
                     n.e("58376"),
-                    n.e("86065"),
-                    n.e("72347"),
+                    n.e("43108"),
+                    n.e("93864"),
                     n.e("60389"),
-                    n.e("10889"),
-                    n.e("25005"),
+                    n.e("72295"),
                     n.e("87845"),
                     n.e("35636"),
-                    n.e("73571"),
-                    n.e("47199"),
-                    n.e("5132"),
-                    n.e("61175"),
-                    n.e("22410"),
+                    n.e("49089"),
+                    n.e("90282"),
+                    n.e("45970"),
+                    n.e("15182"),
+                    n.e("30928"),
                     n.e("56574"),
                     n.e("4974"),
-                    n.e("59831"),
+                    n.e("80186"),
                     n.e("23924"),
                     n.e("42205"),
                     n.e("71091"),
@@ -1699,13 +1718,13 @@ class io extends r.PureComponent {
                     n.e("63202"),
                     n.e("82596"),
                     n.e("10471"),
+                    n.e("63232"),
                     n.e("11301"),
                     n.e("61737"),
                     n.e("60235"),
                     n.e("68261"),
                     n.e("64827"),
                     n.e("7167"),
-                    n.e("63232"),
                     n.e("96643"),
                     n.e("92789"),
                     n.e("2368"),
@@ -1748,15 +1767,15 @@ class io extends r.PureComponent {
                     n.e("28367"),
                     n.e("93924"),
                     n.e("76602"),
-                    n.e("21921"),
                     n.e("91763"),
-                    n.e("40402"),
+                    n.e("21921"),
                     n.e("9233"),
+                    n.e("40402"),
+                    n.e("42724"),
                     n.e("39970"),
                     n.e("76418"),
                     n.e("40258"),
                     n.e("86127"),
-                    n.e("42724"),
                     n.e("66495"),
                     n.e("71210"),
                     n.e("8555"),
@@ -1766,28 +1785,28 @@ class io extends r.PureComponent {
                     n.e("36863"),
                     n.e("72789"),
                     n.e("88342"),
+                    n.e("86814"),
                     n.e("17249"),
                     n.e("71273"),
                     n.e("53917"),
+                    n.e("79049"),
                     n.e("9640"),
                     n.e("62422"),
+                    n.e("50117"),
                     n.e("90365"),
                     n.e("98765"),
                     n.e("52548"),
-                    n.e("86814"),
                     n.e("89421"),
                     n.e("67861"),
                     n.e("1518"),
                     n.e("15186"),
-                    n.e("79049"),
-                    n.e("50117"),
+                    n.e("37977"),
                     n.e("47626"),
                     n.e("23354"),
                     n.e("28083"),
                     n.e("82644"),
                     n.e("3589"),
                     n.e("53984"),
-                    n.e("37977"),
                     n.e("43780"),
                     n.e("20590"),
                     n.e("65437"),
@@ -1796,6 +1815,7 @@ class io extends r.PureComponent {
                     n.e("79745"),
                     n.e("80854"),
                     n.e("35395"),
+                    n.e("96325"),
                     n.e("46844"),
                     n.e("63235"),
                     n.e("45413"),
@@ -1803,7 +1823,6 @@ class io extends r.PureComponent {
                     n.e("90664"),
                     n.e("64850"),
                     n.e("70104"),
-                    n.e("96325"),
                     n.e("2564"),
                     n.e("47417"),
                     n.e("19558"),
@@ -1842,33 +1861,33 @@ class io extends r.PureComponent {
                     n.e("92295"),
                     n.e("49145"),
                     n.e("68763"),
+                    n.e("59957"),
                     n.e("99549"),
+                    n.e("29666"),
                     n.e("58273"),
                     n.e("20930"),
                     n.e("74610"),
-                    n.e("59957"),
                     n.e("26001"),
                     n.e("30997"),
-                    n.e("29666"),
                     n.e("14591"),
                     n.e("52111"),
                     n.e("57458"),
                     n.e("38601"),
                     n.e("93336"),
                     n.e("1243"),
+                    n.e("28136"),
                     n.e("69793"),
                     n.e("15920"),
                     n.e("3930"),
-                    n.e("28136"),
                     n.e("3663"),
                     n.e("27659"),
                     n.e("68530"),
+                    n.e("16084"),
                     n.e("43116"),
                     n.e("66580"),
                     n.e("78046"),
                     n.e("83230"),
                     n.e("82486"),
-                    n.e("16084"),
                     n.e("73669"),
                     n.e("10943"),
                     n.e("7775"),
@@ -1877,6 +1896,7 @@ class io extends r.PureComponent {
                     n.e("33097"),
                     n.e("3710"),
                     n.e("45830"),
+                    n.e("22547"),
                     n.e("77602"),
                     n.e("10262"),
                     n.e("95602"),
@@ -1884,7 +1904,6 @@ class io extends r.PureComponent {
                     n.e("5896"),
                     n.e("34409"),
                     n.e("41786"),
-                    n.e("22547"),
                     n.e("29569"),
                     n.e("36002"),
                     n.e("43233"),
@@ -1904,6 +1923,7 @@ class io extends r.PureComponent {
                     n.e("74337"),
                     n.e("52823"),
                     n.e("56967"),
+                    n.e("47011"),
                     n.e("31203"),
                     n.e("66913"),
                     n.e("71719"),
@@ -1914,7 +1934,6 @@ class io extends r.PureComponent {
                     n.e("88307"),
                     n.e("14878"),
                     n.e("26508"),
-                    n.e("47011"),
                     n.e("42935"),
                     n.e("73091"),
                     n.e("69178"),
@@ -1945,7 +1964,7 @@ class io extends r.PureComponent {
                     n.e("94832"),
                     n.e("26386"),
                     n.e("65338"),
-                    n.e("71790"),
+                    n.e("94171"),
                     n.e("74572"),
                 ]).then(n.bind(n, 860417));
                 return (n) => (0, l.jsx)(e, { ...n, guild: t });
@@ -2351,12 +2370,12 @@ function id(e) {
         e8 = e3 && !e2 && !1 === e6,
         e5 = (0, eG.J)("GuildSidebar"),
         e4 = (0, eD.S)(L, "GuildSidebar"),
-        e7 = e3 && !e2 && e4 && !1 === e6,
-        e9 = (0, ej.A)(),
+        e9 = e3 && !e2 && e4 && !1 === e6,
+        e7 = (0, ej.A)(),
         te = (0, eP.A)(L),
-        tt = !1 === e6 && e9 && null != te,
+        tt = !1 === e6 && e7 && null != te,
         tn = (0, eH.A)(L),
-        ti = !1 === e6 && e9 && null != tn,
+        ti = !1 === e6 && e7 && null != tn,
         ts = [];
     eJ && ts.push(u.M.GUILD_THEME_NUX_FOLLOWUP),
         eT && ts.push(u.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
@@ -2364,7 +2383,7 @@ function id(e) {
         eM && ts.push(u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
         !1 === e6 && ts.push(u.M.GUILD_POWERUP_PERKS_COACHMARK),
         e8 && ts.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
-        e7 && ts.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
+        e9 && ts.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
         e$ && ts.push(u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
     let [tl, tr] = (0, ei.kn)(ts, eE.m.GUILD_HEADER_TOOLTIPS),
         [ta, to] = (0, ey.vB)(e5 && e3 && !1 === e6 && !(0, el.ai)(L), eE.m.GUILD_HEADER_TOOLTIPS),

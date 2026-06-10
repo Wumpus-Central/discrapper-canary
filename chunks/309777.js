@@ -18,8 +18,8 @@ var a = l(627968),
     g = l(331322),
     j = l(834730),
     y = l(821609),
-    C = l(292666),
-    E = l(553270),
+    E = l(292666),
+    C = l(553270),
     k = l(452027),
     A = l(663341),
     N = l(405433),
@@ -77,10 +77,10 @@ function Y(e) {
             await (0, G.w7)(em.id), ed(!1);
         }, [em.id, ed]),
         ey = (0, i.yK)([S.default], () => em.users.map(S.default.getUser).filter(U.Vq)),
-        eC = (0, i.bG)([_.A], () => (null != em.guildId ? _.A.getGuild(em.guildId) : null)),
-        eE = (0, i.bG)([D.A], () => (null != em.channelId ? D.A.getChannel(em.channelId) : null)),
-        ek = (0, T.Ay)(eE),
-        eA = null != eE ? (0, L.gU)(eE, eC) : null;
+        eE = (0, i.bG)([_.A], () => (null != em.guildId ? _.A.getGuild(em.guildId) : null)),
+        eC = (0, i.bG)([D.A], () => (null != em.channelId ? D.A.getChannel(em.channelId) : null)),
+        ek = (0, T.Ay)(eC),
+        eA = null != eC ? (0, L.gU)(eC, eE) : null;
     async function eN() {
         await (0, F.n)(ee(), t);
     }
@@ -116,8 +116,8 @@ function Y(e) {
                                 es(),
                                     (0, w.L3)(e, async () => {
                                         let { default: e } = await Promise.all([
-                                            l.e("53957"),
-                                            l.e("6619"),
+                                            l.e("19810"),
+                                            l.e("71664"),
                                             l.e("95429"),
                                             l.e("91211"),
                                             l.e("38601"),
@@ -189,7 +189,7 @@ function Y(e) {
                                     ],
                                 }),
                             }),
-                        (0, a.jsx)(C.k, {
+                        (0, a.jsx)(E.k, {
                             label: q.intl.string(q.t.SJKc5n),
                             onChange: (e) => {
                                 "" === e ? eu(void 0) : eu(e);
@@ -202,9 +202,9 @@ function Y(e) {
                         !eh &&
                             (0, a.jsxs)(a.Fragment, {
                                 children: [
-                                    (0, a.jsx)(E.A, { label: q.intl.string(q.t.GnQui9), checked: ea, onChange: en }),
-                                    (0, a.jsx)(E.A, { label: q.intl.string(q.t["5mVOCb"]), checked: et, onChange: el }),
-                                    (0, a.jsx)(E.A, { label: q.intl.string(q.t["8K7Ges"]), checked: ei, onChange: er }),
+                                    (0, a.jsx)(C.A, { label: q.intl.string(q.t.GnQui9), checked: ea, onChange: en }),
+                                    (0, a.jsx)(C.A, { label: q.intl.string(q.t["5mVOCb"]), checked: et, onChange: el }),
+                                    (0, a.jsx)(C.A, { label: q.intl.string(q.t["8K7Ges"]), checked: ei, onChange: er }),
                                 ],
                             }),
                         (0, a.jsx)(k.D, {
@@ -238,24 +238,24 @@ function Y(e) {
                                     ],
                                 }),
                             }),
-                        null != eC &&
+                        null != eE &&
                             (0, a.jsx)(k.D, {
                                 label: q.intl.string(q.t.vVKqVh),
                                 layout: "horizontal",
                                 children: (0, a.jsxs)("div", {
                                     className: J._c,
                                     children: [
-                                        (0, a.jsx)(M.Ay, { guild: eC, iconSize: 16, className: J.Z9 }),
+                                        (0, a.jsx)(M.Ay, { guild: eE, iconSize: 16, className: J.Z9 }),
                                         (0, a.jsx)(j.E, {
                                             variant: "text-sm/normal",
                                             color: "text-subtle",
                                             className: J.lR,
-                                            children: eC.name,
+                                            children: eE.name,
                                         }),
                                     ],
                                 }),
                             }),
-                        null != eE &&
+                        null != eC &&
                             null != eA &&
                             (0, a.jsx)(k.D, {
                                 label: q.intl.string(q.t.GPxI1G),

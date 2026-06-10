@@ -241,8 +241,9 @@ let eb = {
                                 lang: e.lang,
                                 className: a()(eN.kw, "hljs"),
                                 children: (0, i.jsx)(f.c2, {
-                                    createPromise: () => Promise.resolve().then(n.bind(n, 149938)),
-                                    webpackId: 149938,
+                                    createPromise: () =>
+                                        Promise.all([n.e("57036"), n.e("75134")]).then(n.bind(n, 981776)),
+                                    webpackId: 981776,
                                     renderFallback: s,
                                     render: (t) => {
                                         if (!(e.lang && t.hasLanguage(e.lang))) return s();

@@ -1,0 +1,115 @@
+.container_c8f358 {
+    --custom-activity-popout-header-height: 48px;
+    --custom-activity-popout-header-background-color: var(--black);
+    background-color: var(--custom-activity-popout-header-background-color);
+    justify-content: space-between;
+    max-height: var(--custom-activity-popout-header-height);
+    min-height: var(--custom-activity-popout-header-height);
+    padding: 0 var(--space-32)
+}
+
+.container_c8f358,
+.headerSection_c8f358 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.headerSectionLeft_c8f358 {
+    flex: 0 1 auto;
+    min-width: 0;
+    overflow: hidden
+}
+
+.headerSectionRight_c8f358 {
+    flex: 0;
+    height: var(--custom-activity-popout-header-height);
+    position: relative
+}
+
+.appIcon_c8f358 {
+    border-radius: var(--radius-sm);
+    margin-inline-end: var(--space-8)
+}
+
+.appIcon_c8f358,
+.avatar_c8f358 {
+    height: 24px;
+    width: 24px
+}
+
+.avatar_c8f358 {
+    border-radius: 50%
+}
+
+.dotSpacer_c8f358 {
+    padding: 0 var(--space-8) var(--space-8)
+}
+
+.iconButton_c8f358 {
+    padding: 0 var(--space-8)
+}
+
+.actionButtonsContainer_c8f358 {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-16);
+    margin-inline-start: var(--space-16)
+}
+
+.applicationName_c8f358 {
+    flex: 0 1 auto;
+    min-width: 24px
+}
+
+.fade_c8f358 {
+    --custom-activity-popout-header-fade-width: var(--space-16);
+    background: linear-gradient(to right, transparent, var(--custom-activity-popout-header-background-color));
+    height: var(--custom-activity-popout-header-height);
+    inset-inline-start: calc(var(--custom-activity-popout-header-fade-width)*-1);
+    pointer-events: none;
+    position: absolute;
+    width: var(--custom-activity-popout-header-fade-width)
+}
+
+.inviteButtonIcon_c8f358 {
+    height: 16px;
+    width: 16px
+}
+
+.container__0b406 {
+    background-color: var(--background-base-low);
+    height: 100%;
+    width: 100%
+}
+
+.loadedContentContainer__0b406 {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%
+}
+
+.iframeAndHeaderContainer__0b406 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.headerContainer__0b406 {
+    flex: 0;
+    height: 64px
+}
+
+.iframeContainer__0b406 {
+    flex: 1
+}
+
+.iframe__0b406 {
+    height: 100%;
+    min-height: 2px;
+    min-width: 2px;
+    width: 100%
+}

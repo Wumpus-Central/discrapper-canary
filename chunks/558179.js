@@ -71,8 +71,8 @@ let x = {
                             code: e.content,
                             className: s()(k.kw, "hljs"),
                             children: (0, r.jsx)(d.c2, {
-                                createPromise: () => Promise.resolve().then(t.bind(t, 149938)),
-                                webpackId: 149938,
+                                createPromise: () => Promise.all([t.e("57036"), t.e("75134")]).then(t.bind(t, 981776)),
+                                webpackId: 981776,
                                 renderFallback: a,
                                 render: (l) => {
                                     if (!(e.lang && l.hasLanguage(e.lang)) || "string" != typeof e.content) return a();

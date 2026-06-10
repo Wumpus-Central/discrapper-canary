@@ -1,0 +1,36 @@
+.buttonContainer__3e6b4 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    margin-top: var(--space-32)
+}
+
+.buttonInner__3e6b4 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.body__3e6b4 {
+    padding-block: var(--space-16) var(--space-32);
+    padding-inline: var(--space-32) var(--space-32)
+}
+
+.textContainer__3e6b4 {
+    margin-bottom: var(--space-16);
+    text-align: center
+}
+
+.description__3e6b4 {
+    margin: var(--space-4) auto 0;
+    max-width: 80%
+}
+
+.heroImage__3e6b4 {
+    height: 140px;
+    margin: 44px auto 24px
+}
+
+.safetyTips__3e6b4 {
+    margin-top: var(--space-16)
+}

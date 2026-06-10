@@ -19,8 +19,8 @@ var l = a(627968),
     w = a(730134),
     I = a(80682),
     S = a(713654),
-    p = a(465364),
-    M = a(763754),
+    M = a(465364),
+    p = a(763754),
     y = a(805964),
     E = a(967144),
     N = a(696451),
@@ -29,9 +29,9 @@ var l = a(627968),
     F = a(935208),
     R = a(427262),
     C = a(456874),
-    k = a(707539),
-    G = a(838541),
-    T = a(375708),
+    T = a(707539),
+    k = a(838541),
+    G = a(375708),
     K = a(992092);
 function B(e) {
     let { channel: t } = e,
@@ -40,19 +40,19 @@ function B(e) {
 }
 function L(e) {
     let { channel: t } = e,
-        a = (0, k.JO)(t);
+        a = (0, T.JO)(t);
     return (0, l.jsxs)(f.E, {
         className: K.W$,
         variant: "text-sm/normal",
         color: "text-default",
-        children: [T.intl.string(T.t.Jmh6n9), "\xa0 \u2022 \xa0", (0, k.aK)(a)],
+        children: [G.intl.string(G.t.Jmh6n9), "\xa0 \u2022 \xa0", (0, T.aK)(a)],
     });
 }
 function W(e) {
     let { channel: t, message: a } = e;
     (0, I.Eq)({ [t.guild_id]: [a.author.id] }, "ThreadBrowserRowSubtext");
     let r = (0, n.bG)([A.default], () => A.default.getUser(a.author.id) ?? a.author),
-        { nick: i, colorString: d, colorStrings: o } = (0, M.Ay)(a),
+        { nick: i, colorString: d, colorStrings: o } = (0, p.Ay)(a),
         u = (0, E.gn)(t.guild_id, r.id, o),
         { isBlocked: c, isIgnored: g } = (0, n.cf)(
             [b.A],
@@ -62,14 +62,14 @@ function W(e) {
         h = s.useMemo(() => {
             let e =
                     null != a.content && "" !== a.content
-                        ? (0, p.Ay)(a, { formatInline: !0, allowLinks: !0 }).content
+                        ? (0, M.Ay)(a, { formatInline: !0, allowLinks: !0 }).content
                         : null,
                 {
                     contentPlaceholder: t,
                     renderedContent: s,
                     trailingIcon: n,
                     leadingIcon: r,
-                } = (0, y.o)(a, e, c, g, K.BK, { trailingIconClass: K.sl, leadingIconClass: K.aG, iconSize: G.eJ });
+                } = (0, y.o)(a, e, c, g, K.BK, { trailingIconClass: K.sl, leadingIconClass: K.aG, iconSize: k.eJ });
             return (0, l.jsxs)(l.Fragment, { children: [r, s ?? (0, l.jsx)("span", { children: t }), n] });
         }, [a, c, g]);
     return (0, l.jsxs)(f.E, {
@@ -82,7 +82,7 @@ function W(e) {
             ":\xa0",
             h,
             "\xa0 \u2022 \xa0",
-            (0, k.aK)(F.default.extractTimestamp(a.id)),
+            (0, T.aK)(F.default.extractTimestamp(a.id)),
         ],
     });
 }
@@ -110,13 +110,13 @@ function D(e) {
                               className: K.A2,
                               children: (0, l.jsx)(o, { width: 10, height: 10, size: "custom", color: "currentColor" }),
                           }),
-                          T.intl.format(T.t["5Wk9+o"], { time: (0, k.aK)(s) }),
+                          G.intl.format(G.t["5Wk9+o"], { time: (0, T.aK)(s) }),
                       ],
                   })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(w.A, { className: K.my, user: r, size: x._3.SIZE_16 }),
-                          T.intl.format(T.t["GFDmd/"], {
+                          G.intl.format(G.t["GFDmd/"], {
                               authorHook: (e, t) =>
                                   (0, l.jsx)(
                                       v.g,
@@ -130,7 +130,7 @@ function D(e) {
                                   ),
                           }),
                           (0, l.jsx)("span", { className: K.xE, children: "\u2022" }),
-                          T.intl.format(T.t["5Wk9+o"], { time: (0, k.aK)(s) }),
+                          G.intl.format(G.t["5Wk9+o"], { time: (0, T.aK)(s) }),
                       ],
                   }),
     });
@@ -163,6 +163,7 @@ let H = s.memo(function (e) {
                     a.e("40175"),
                     a.e("43746"),
                     a.e("90554"),
+                    a.e("99011"),
                     a.e("85802"),
                     a.e("65200"),
                     a.e("26250"),

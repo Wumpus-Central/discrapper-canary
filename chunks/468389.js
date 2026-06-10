@@ -1,66 +1,66 @@
-e.d(t, { A: () => w }), e(321073);
-var n = e(627968);
-e(64700);
-var l = e(17928),
-    a = e(192308),
-    d = e(477782),
-    o = e(308368),
-    s = e(780907),
-    A = e(212245),
-    p = e(688810),
-    c = e(429913),
-    r = e(655116),
-    I = e(160768),
-    u = e(341335),
-    N = e(286617),
-    y = e(533207),
-    E = e(881335),
-    _ = e(495544),
-    b = e(734057),
-    C = e(629016),
-    S = e(498642),
-    h = e(71393),
-    T = e(480595),
-    m = e(576705),
-    f = e(290863),
-    g = e(994500),
-    v = e(309010),
-    O = e(461213),
-    D = e(287809),
-    L = e(977997),
-    j = e(689168),
-    x = e(562153),
-    U = e(795816),
-    G = e(933958),
-    P = e(62583),
-    V = e(170148),
-    Y = e(969151),
-    J = e(776677),
-    $ = e(550151),
-    M = e(55730),
-    R = e(765379),
-    K = e(946255),
-    k = e(360469),
-    Q = e(652215),
-    X = e(272984),
-    q = e(375708);
-function w(i, t) {
+t.d(e, { A: () => w }), t(321073);
+var n = t(627968);
+t(64700);
+var l = t(17928),
+    a = t(192308),
+    d = t(477782),
+    o = t(308368),
+    s = t(780907),
+    A = t(212245),
+    p = t(688810),
+    c = t(429913),
+    r = t(655116),
+    I = t(160768),
+    u = t(341335),
+    N = t(286617),
+    y = t(533207),
+    E = t(881335),
+    _ = t(495544),
+    b = t(734057),
+    C = t(629016),
+    S = t(498642),
+    h = t(71393),
+    T = t(480595),
+    m = t(576705),
+    f = t(290863),
+    g = t(994500),
+    v = t(309010),
+    O = t(461213),
+    D = t(287809),
+    L = t(977997),
+    j = t(689168),
+    x = t(562153),
+    U = t(795816),
+    G = t(933958),
+    P = t(62583),
+    V = t(170148),
+    Y = t(969151),
+    J = t(776677),
+    $ = t(550151),
+    M = t(55730),
+    R = t(765379),
+    K = t(946255),
+    k = t(360469),
+    Q = t(652215),
+    X = t(272984),
+    q = t(375708);
+function w(i, e) {
     let { analyticsLocations: w } = (0, p.Ay)(),
         B = (0, l.bG)([D.default], () => D.default.getCurrentUser()),
         H = (0, l.bG)([G.Ay], () => G.Ay.getSelfEmbeddedActivities()),
         F = (0, l.yK)([O.A], () =>
             O.A.getActivities().filter((i) => null == i.application_id || !H?.has(i.application_id)),
         ),
-        Z = (0, l.yK)([f.A], () => (null != t ? f.A.getActivities(t.id, i?.getGuildId()) : []), [t, i]),
+        Z = (0, l.yK)([f.A], () => (null != e ? f.A.getActivities(e.id, i?.getGuildId()) : []), [e, i]),
         z = (0, l.yK)([G.Ay], () => {
-            let e = i?.id != null ? G.Ay.getEmbeddedActivitiesForChannel(i.id) : G.Am;
-            return null != t
-                ? e.filter((i) => {
-                      let { userIds: e } = i;
-                      return e.has(t.id);
+            let t = i?.id != null ? G.Ay.getEmbeddedActivitiesForChannel(i.id) : G.Am;
+            return null != e
+                ? t.filter((i) => {
+                      let { userIds: t } = i;
+                      return t.has(e.id);
                   })
-                : e;
-        }, [t, i]),
+                : t;
+        }, [e, i]),
         W = (0, l.bG)([m.A], () => null == i || i.isPrivate() || m.A.can(Q.xBc.SEND_MESSAGES, i), [i]),
         ii = (0, l.yK)(
             [j.A],
@@ -72,20 +72,20 @@ function w(i, t) {
             ],
             [Z, z],
         ),
-        it = (0, c.A)([
+        ie = (0, c.A)([
             ...Z.filter((i) => i?.application_id != null).map((i) => i.application_id),
             ...z.map((i) => i.applicationId),
         ]),
-        ie = i?.id,
+        it = i?.id,
         il = (0, l.yK)(
             [b.A, h.A, S.A, g.A, v.A, L.A, m.A, T.A, O.A, G.Ay],
             () => [
                 ...Z.map((i) =>
                     (0, J.A)({
-                        user: t ?? B,
+                        user: e ?? B,
                         activity: i,
-                        application: it.find((t) => t?.id === i.application_id),
-                        channelId: ie,
+                        application: ie.find((e) => e?.id === i.application_id),
+                        channelId: it,
                         currentUser: B,
                         isEmbedded: (0, R.A)(i),
                         ChannelStore: b.A,
@@ -101,13 +101,13 @@ function w(i, t) {
                     }),
                 ),
                 ...z.map((i) => {
-                    let e = t ?? B;
-                    return null == e
+                    let t = e ?? B;
+                    return null == t
                         ? J.o.CANNOT_JOIN
                         : (0, $.Ay)({
-                                userId: e.id,
-                                application: it.find((t) => t?.id === i.applicationId),
-                                channelId: ie,
+                                userId: t.id,
+                                application: ie.find((e) => e?.id === i.applicationId),
+                                channelId: it,
                                 currentUser: B,
                                 isActivitiesEnabledForCurrentPlatform: (0, V.A)(),
                                 ChannelStore: b.A,
@@ -119,41 +119,41 @@ function w(i, t) {
                           : J.o.CANNOT_JOIN;
                 }),
             ],
-            [Z, it, ie, B, z, t],
+            [Z, ie, it, B, z, e],
         ),
-        ia = (0, l.yK)([C.A], () => F.map((i) => !C.A.getParty(i.party?.id)?.has(t?.id ?? Q.dJq)), [F, t]),
+        ia = (0, l.yK)([C.A], () => F.map((i) => !C.A.getParty(i.party?.id)?.has(e?.id ?? Q.dJq)), [F, e]),
         id = (0, l.yK)(
             [r.A, _.default],
-            () => Z.map((i) => (i.type === Q.$pd.LISTENING && null != t ? (0, N.A)(r.A, _.default, t, i) : void 0)),
-            [t, Z],
+            () => Z.map((i) => (i.type === Q.$pd.LISTENING && null != e ? (0, N.A)(r.A, _.default, e, i) : void 0)),
+            [e, Z],
         ),
         io = (0, A.p)();
     if (!W && i?.type !== Q.rbe.GUILD_VOICE) return null;
-    let is = (e, n) => {
+    let is = (t, n) => {
             null != i
-                ? o.A.sendActivityInvite({ type: e, channelId: i.id, activity: n, location: Q.ThZ.CONTEXT_MENU })
-                : null != t &&
-                  o.A.sendActivityInviteUser({ type: e, userId: t.id, activity: n, location: Q.ThZ.CONTEXT_MENU });
+                ? o.A.sendActivityInvite({ type: t, channelId: i.id, activity: n, location: Q.ThZ.CONTEXT_MENU })
+                : null != e &&
+                  o.A.sendActivityInviteUser({ type: t, userId: e.id, activity: n, location: Q.ThZ.CONTEXT_MENU });
         },
         iA = async (i) => {
-            let e = (0, M.A)(i, Q.jUm.EMBEDDED),
+            let t = (0, M.A)(i, Q.jUm.EMBEDDED),
                 n = v.A.getVoiceChannelId(),
                 l = b.A.getChannel(n);
             await s.Ay.join({
-                userId: t.id,
+                userId: e.id,
                 sessionId: i.session_id,
                 applicationId: i.application_id,
                 channelId: n,
                 messageId: null,
                 intent: k.W9.PLAY,
-                embedded: e,
+                embedded: t,
                 locationObject: io.location,
                 analyticsLocations: w,
             }),
-                e ||
+                t ||
                     (0, K.A)({
                         type: Q.UqL.JOIN,
-                        userId: t.id,
+                        userId: e.id,
                         guildId: l?.guild_id,
                         channelId: n,
                         channelType: l?.type,
@@ -163,9 +163,9 @@ function w(i, t) {
                         analyticsLocations: w,
                     });
         },
-        ip = async (t) => {
+        ip = async (e) => {
             await (0, P.A)({
-                applicationId: t.applicationId,
+                applicationId: e.applicationId,
                 activityChannelId: i?.id,
                 locationObject: io.location,
                 analyticsLocations: w,
@@ -173,11 +173,11 @@ function w(i, t) {
         },
         ic = [];
     return (
-        (null != t && null != B && t?.id === B.id) ||
+        (null != e && null != B && e?.id === B.id) ||
             (H?.forEach((l) => {
-                let o = t?.id != null && l.userIds.has(t?.id),
+                let o = e?.id != null && l.userIds.has(e?.id),
                     s = m.A.can(Q.xBc.CREATE_INSTANT_INVITE, i),
-                    A = it.find((i) => i?.id === l.applicationId);
+                    A = ie.find((i) => i?.id === l.applicationId);
                 null != l.launchId &&
                     !o &&
                     s &&
@@ -194,36 +194,52 @@ function w(i, t) {
                                         let o = b.A.getChannel(l),
                                             s = null == o ? void 0 : h.A.getGuild(o.guild_id);
                                         if (null != o && null != s) {
-                                            if (null != t)
+                                            if (null != e)
                                                 return U.Ue({
                                                     channelId: o.id,
                                                     applicationId: d,
-                                                    userId: t.id,
+                                                    userId: e.id,
                                                     location: Q.PE1.CONTEXT_MENU,
                                                     inviteAnalyticsMetadata: { source: Q.PE1.ACTIVITY_INVITE },
                                                 });
                                             if (null != i && i.type === Q.rbe.GUILD_VOICE)
                                                 return (0, a.openModalLazy)(
                                                     async () => {
-                                                        let { default: t } = await Promise.all([
-                                                            e.e("5288"),
-                                                            e.e("87671"),
-                                                            e.e("53785"),
-                                                            e.e("37687"),
-                                                            e.e("78412"),
-                                                            e.e("59957"),
-                                                            e.e("28136"),
-                                                            e.e("97073"),
-                                                            e.e("16084"),
-                                                            e.e("78195"),
-                                                            e.e("36624"),
-                                                            e.e("58216"),
-                                                            e.e("22547"),
-                                                            e.e("51162"),
-                                                        ]).then(e.bind(e, 1310));
-                                                        return (e) =>
-                                                            (0, n.jsx)(t, {
-                                                                ...e,
+                                                        let { default: e } = await Promise.all([
+                                                            t.e("1142"),
+                                                            t.e("25935"),
+                                                            t.e("58026"),
+                                                            t.e("37472"),
+                                                            t.e("87220"),
+                                                            t.e("25568"),
+                                                            t.e("43039"),
+                                                            t.e("48804"),
+                                                            t.e("41043"),
+                                                            t.e("18441"),
+                                                            t.e("31390"),
+                                                            t.e("17225"),
+                                                            t.e("35344"),
+                                                            t.e("23216"),
+                                                            t.e("18401"),
+                                                            t.e("21435"),
+                                                            t.e("61935"),
+                                                            t.e("58157"),
+                                                            t.e("32823"),
+                                                            t.e("37687"),
+                                                            t.e("78412"),
+                                                            t.e("59957"),
+                                                            t.e("28136"),
+                                                            t.e("97073"),
+                                                            t.e("16084"),
+                                                            t.e("78195"),
+                                                            t.e("36624"),
+                                                            t.e("58216"),
+                                                            t.e("22547"),
+                                                            t.e("51162"),
+                                                        ]).then(t.bind(t, 1310));
+                                                        return (t) =>
+                                                            (0, n.jsx)(e, {
+                                                                ...t,
                                                                 guild: s,
                                                                 channel: o,
                                                                 applicationId: d,
@@ -252,8 +268,8 @@ function w(i, t) {
                         ),
                     );
             }),
-            F.forEach((i, t) => {
-                ia[t] &&
+            F.forEach((i, e) => {
+                ia[e] &&
                     (i.type === Q.$pd.PLAYING && (0, M.A)(i, Q.jUm.JOIN)
                         ? ic.push(
                               (0, n.jsx)(
@@ -264,7 +280,7 @@ function w(i, t) {
                                       subtext: i.name,
                                       action: () => is(Q.xL.JOIN, i),
                                   },
-                                  `self${t}`,
+                                  `self${e}`,
                               ),
                           )
                         : i.type === Q.$pd.LISTENING &&
@@ -278,37 +294,37 @@ function w(i, t) {
                                       subtext: i.name,
                                       action: () => is(Q.xL.LISTEN, i),
                                   },
-                                  `self${t}`,
+                                  `self${e}`,
                               ),
                           ));
             }),
             ic.length > 0 && ic.push((0, n.jsx)(d.bX, {}, "menu-separator")),
-            Z.forEach((e, l) => {
-                let a = (0, M.A)(e, Q.jUm.EMBEDDED),
-                    o = (0, M.A)(e, Q.jUm.CONTEXTLESS);
+            Z.forEach((t, l) => {
+                let a = (0, M.A)(t, Q.jUm.EMBEDDED),
+                    o = (0, M.A)(t, Q.jUm.CONTEXTLESS);
                 if (
-                    e.type === Q.$pd.PLAYING &&
-                    (0, M.A)(e, Q.jUm.JOIN) &&
+                    t.type === Q.$pd.PLAYING &&
+                    (0, M.A)(t, Q.jUm.JOIN) &&
                     (!a || o) &&
-                    null != e.session_id &&
-                    null != e.application_id
+                    null != t.session_id &&
+                    null != t.application_id
                 )
                     if (il[l] !== J.o.CANNOT_JOIN) {
                         let i = q.intl.string(q.t.VJlc0S),
-                            t = !1;
+                            e = !1;
                         ii[l]
-                            ? ((i = q.intl.string(q.t.bf6Ci7)), (t = !0))
-                            : il[l] === J.o.JOINED && ((i = q.intl.string(q.t.DPfdsq)), (t = !0)),
+                            ? ((i = q.intl.string(q.t.bf6Ci7)), (e = !0))
+                            : il[l] === J.o.JOINED && ((i = q.intl.string(q.t.DPfdsq)), (e = !0)),
                             ic.push(
                                 (0, n.jsx)(
                                     d.Dr,
                                     {
                                         id: "join",
                                         label: i,
-                                        disabled: t,
+                                        disabled: e,
                                         loading: ii[l],
-                                        subtext: e.name,
-                                        action: () => iA(e),
+                                        subtext: t.name,
+                                        action: () => iA(t),
                                     },
                                     l,
                                 ),
@@ -320,65 +336,65 @@ function w(i, t) {
                                 {
                                     id: "ask-to-join",
                                     label: q.intl.string(q.t.OKsSCR),
-                                    subtext: e.name,
-                                    action: () => is(Q.xL.JOIN_REQUEST, e),
+                                    subtext: t.name,
+                                    action: () => is(Q.xL.JOIN_REQUEST, t),
                                 },
                                 l,
                             ),
                         );
-                else if (e.type === Q.$pd.LISTENING && (0, M.A)(e, Q.jUm.SYNC) && null != id[l]) {
+                else if (t.type === Q.$pd.LISTENING && (0, M.A)(t, Q.jUm.SYNC) && null != id[l]) {
                     let a = id[l],
                         { playDisabled: o, syncDisabled: s } = a;
                     ic.push(
                         (0, n.jsx)(
                             d.Dr,
                             {
-                                id: `spotify-play-${e.session_id}`,
+                                id: `spotify-play-${t.session_id}`,
                                 action: () => (0, E.A)(a, X.Qp.USER_ACTIVITY_PLAY),
                                 label: (0, I.A)(a, X.Qp.USER_ACTIVITY_PLAY),
                                 subtext: o
                                     ? (0, u.A)(
                                           a,
                                           X.Qp.USER_ACTIVITY_PLAY,
-                                          null != i ? x.Ay.getNickname(i.guild_id, i.id, t) : void 0,
+                                          null != i ? x.Ay.getNickname(i.guild_id, i.id, e) : void 0,
                                       )
                                     : void 0,
                                 disabled: o,
                             },
-                            `spotify-play-${e.session_id}`,
+                            `spotify-play-${t.session_id}`,
                         ),
                         (0, n.jsx)(
                             d.Dr,
                             {
-                                id: `spotify-sync-${e.session_id}`,
+                                id: `spotify-sync-${t.session_id}`,
                                 action: () => (0, y.A)(a, X.Qp.USER_ACTIVITY_SYNC),
                                 label: q.intl.string(q.t.gXYoq2),
                                 subtext: s
                                     ? (0, u.A)(
                                           a,
                                           X.Qp.USER_ACTIVITY_SYNC,
-                                          null != i ? x.Ay.getNickname(i.guild_id, i.id, t) : void 0,
+                                          null != i ? x.Ay.getNickname(i.guild_id, i.id, e) : void 0,
                                       )
                                     : void 0,
                                 disabled: s,
                             },
-                            `spotify-sync-${e.session_id}`,
+                            `spotify-sync-${t.session_id}`,
                         ),
                     );
                 }
             }),
-            z.forEach((i, t) => {
-                let e = t + Z.length,
-                    l = it.find((t) => t?.id === i.applicationId);
-                if (il[e] !== J.o.CANNOT_JOIN && null != l) {
-                    let t = i.userIds.has(B?.id ?? Q.dJq),
+            z.forEach((i, e) => {
+                let t = e + Z.length,
+                    l = ie.find((e) => e?.id === i.applicationId);
+                if (il[t] !== J.o.CANNOT_JOIN && null != l) {
+                    let e = i.userIds.has(B?.id ?? Q.dJq),
                         a = q.intl.string(q.t["4i2vj+"]),
                         o = !1;
-                    il[e] === J.o.JOINED
+                    il[t] === J.o.JOINED
                         ? ((a = q.intl.string(q.t.DPfdsq)), (o = !0))
-                        : t
+                        : e
                           ? ((a = q.intl.string(q.t["0OiwfH"])), (o = !0))
-                          : ii[e] && ((a = q.intl.string(q.t.bf6Ci7)), (o = !0)),
+                          : ii[t] && ((a = q.intl.string(q.t.bf6Ci7)), (o = !0)),
                         ic.push(
                             (0, n.jsx)(
                                 d.Dr,
@@ -386,7 +402,7 @@ function w(i, t) {
                                     id: `embedded-activity-join-${i.applicationId}`,
                                     label: a,
                                     disabled: o,
-                                    loading: ii[e],
+                                    loading: ii[t],
                                     subtext: l.name,
                                     action: () => ip(i),
                                 },

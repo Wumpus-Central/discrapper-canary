@@ -75,9 +75,27 @@ function D(e) {
                             (o = { ...b, object: v.ZSU.RADIO_ITEM, objectType: a }),
                                 (0, m.openModalLazy)(
                                     async () => {
-                                        let { default: e } = await Promise.all([n.e("93475"), n.e("18630")]).then(
-                                            n.bind(n, 826789),
-                                        );
+                                        let { default: e } = await Promise.all([
+                                            n.e("56533"),
+                                            n.e("37472"),
+                                            n.e("54048"),
+                                            n.e("699"),
+                                            n.e("62680"),
+                                            n.e("87306"),
+                                            n.e("99666"),
+                                            n.e("41043"),
+                                            n.e("18441"),
+                                            n.e("98125"),
+                                            n.e("21825"),
+                                            n.e("8892"),
+                                            n.e("99657"),
+                                            n.e("32079"),
+                                            n.e("84456"),
+                                            n.e("86949"),
+                                            n.e("52073"),
+                                            n.e("93475"),
+                                            n.e("18630"),
+                                        ]).then(n.bind(n, 826789));
                                         return (t) => (0, i.jsx)(e, { ...t, analyticsSource: o });
                                     },
                                     { contextKey: t === v.BRT.POPOUT ? g.KX : g.SY },

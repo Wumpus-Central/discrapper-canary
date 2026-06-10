@@ -1,39 +1,38 @@
-"use strict";
-n.d(t, { x: () => o });
-var i = n(627968);
-n(64700);
-var r = n(661531),
-    s = n(996682),
-    a = n(27989);
-let o = (e) => {
+t.d(e, { x: () => n });
+var s = t(627968);
+t(64700);
+var a = t(661531),
+    i = t(996682),
+    r = t(27989);
+let n = (l) => {
     let {
-            size: t = "md",
-            width: n,
-            height: o,
-            color: l = r.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: u = "",
-            ...c
-        } = e,
-        d = (0, a.J)(t),
-        _ = d?.width ?? n,
-        h = d?.height ?? o;
-    return (0, i.jsxs)("svg", {
-        ...(0, s.A)(c),
+            size: e = "md",
+            width: t,
+            height: n,
+            color: c = a.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: h = "",
+            ...d
+        } = l,
+        o = (0, r.J)(e),
+        v = o?.width ?? t,
+        f = o?.height ?? n;
+    return (0, s.jsxs)("svg", {
+        ...(0, i.A)(d),
         xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: h,
+        width: v,
+        height: f,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
-            (0, i.jsx)("path", {
-                fill: "string" == typeof l ? l : l.css,
+            (0, s.jsx)("path", {
+                fill: "string" == typeof c ? c : c.css,
                 d: "M24 5.7c0-1.54-.2-2.66-.34-3.23C23.35 1.17 22.3.92 21.2.68a.68.68 0 0 0-.62.18c-.16.16-.35.33-.58.32a19.27 19.27 0 0 0-2 0c-.23 0-.42-.16-.58-.32a.68.68 0 0 0-.62-.18c-1.1.24-2.15.5-2.46 1.8-.13.56-.34 1.68-.34 3.22v2.23a1.4 1.4 0 0 0 2.66.63l.8-1.6c.1-.2.34-.3.56-.25.26.06.62.12.98.12s.72-.06.98-.12a.5.5 0 0 1 .56.25l.8 1.6A1.4 1.4 0 0 0 24 7.93V5.7Z",
-                className: u,
+                className: h,
             }),
-            (0, i.jsx)("path", {
-                fill: "string" == typeof l ? l : l.css,
+            (0, s.jsx)("path", {
+                fill: "string" == typeof c ? c : c.css,
                 d: "M10.18 8h1.33c.27 0 .5.22.54.49.03.21.09.43.16.63.15.38-.1.88-.52.88H9.85l-.67 4h4.97l.37-2.23c.05-.29.33-.47.62-.45l.26.01h.63c.31 0 .55.28.5.59L16.18 14H20a1 1 0 1 1 0 2h-4.15l-.86 5.16a1 1 0 1 1-1.98-.32l.8-4.84H8.86l-.86 5.16A1 1 0 1 1 6 20.84L6.82 16H3a1 1 0 1 1 0-2h4.15l.67-4H4a1 1 0 0 1 0-2h4.15l.86-5.16a1 1 0 1 1 1.98.32L10.19 8Z",
-                className: u,
+                className: h,
             }),
         ],
     });

@@ -40,7 +40,7 @@ class p extends a.A {
 let E = new p(() =>
     (0, r.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("89913"), n.e("36724")]).then(n.bind(n, 531519));
+            let { default: e } = await Promise.all([n.e("54048"), n.e("89913"), n.e("36724")]).then(n.bind(n, 531519));
             return (t) => (0, i.jsx)(e, { ...t });
         },
         { modalKey: c.r, onCloseRequest: d.FXj },

@@ -1,0 +1,14 @@
+.overrideSubtextContainer__5824a {
+    height: 1lh;
+    position: relative;
+    width: 100%
+}
+
+.overrideSubtext__5824a {
+    inset: 0;
+    min-width: 0;
+    overflow: hidden;
+    position: absolute;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}

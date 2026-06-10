@@ -65,7 +65,7 @@ function I(e) {
                     null != l &&
                     (u?.(),
                     (0, a.openModalLazy)(async () => {
-                        let { default: e } = await n.e("64581").then(n.bind(n, 38884));
+                        let { default: e } = await Promise.all([n.e("54048"), n.e("64581")]).then(n.bind(n, 38884));
                         return (t) => (0, i.jsx)(e, { ...t, graphic: l });
                     }),
                     y(g.i.USER_DISMISS)),

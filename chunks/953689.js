@@ -70,8 +70,10 @@ class S extends i.Component {
                                     onClick: (t) => {
                                         (0, u.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
-                                                s.e("29989"),
+                                                s.e("37472"),
+                                                s.e("94307"),
                                                 s.e("71568"),
+                                                s.e("64615"),
                                                 s.e("92064"),
                                                 s.e("87297"),
                                             ]).then(s.bind(s, 294264));

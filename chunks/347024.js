@@ -77,8 +77,8 @@ function C(e) {
                             !r &&
                             ((r = !0),
                             (null == v &&
-                                (v = Promise.resolve()
-                                    .then(n.bind(n, 149938))
+                                (v = Promise.all([n.e("57036"), n.e("75134")])
+                                    .then(n.bind(n, 981776))
                                     .then((e) => {
                                         N = e.default;
                                     })

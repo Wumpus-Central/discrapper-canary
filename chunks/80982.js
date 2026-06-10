@@ -278,7 +278,7 @@ function U(n) {
                               (0, p.openModalLazy)(
                                   async () => {
                                       let { default: n } = await Promise.all([
-                                          e.e("734"),
+                                          e.e("2677"),
                                           e.e("8891"),
                                           e.e("58966"),
                                       ]).then(e.bind(e, 885168));
