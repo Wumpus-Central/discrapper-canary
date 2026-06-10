@@ -1773,7 +1773,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 560570, Version Hash: 670b66a6009932a87b9e3797e2705dbf1d43b94e`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 560617, Version Hash: c9b844e3cce0a1f5ded32f849c449d792acbdd82`,
 ),
     ev.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -17036,7 +17036,7 @@ function I4(e) {
     let t,
         { children: n } = e,
         i = (0, Ib.p)(),
-        r = i?.expiresAt != null,
+        r = i?.hasAcknowledged() === !0,
         s = u2.pe.TIER_2,
         { plan: a, isFetching: o } = (0, e6.cf)([I1.A], () => ({
             plan: I1.A.get(u2.gD.PREMIUM_GROUP_MONTH),
@@ -17624,7 +17624,7 @@ let Tv = new Set([a6.M.PREMIUM_WISHLIST_COACHMARK]),
                 "premiumTabTooltip" === eo.properties.properties.oneofKind &&
                 eu === a6.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE,
             eE = b && er === a6.M.STEELSERIES_LOGITECH_REHEAT,
-            em = null != E && u2.U4.includes(E.discountId) && null == E.expiresAt;
+            em = null != E && u2.U4.includes(E.discountId) && !E.hasAcknowledged();
         if (
             (e8.useEffect(() => {
                 !0 === r &&
@@ -18446,7 +18446,7 @@ let Sh = "isHideDevBanner",
                     className: t2()(S_.Wz, S_.mr),
                     children: [
                         (0, U.jsx)(Sd, { className: S_.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "560570" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "560617" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })

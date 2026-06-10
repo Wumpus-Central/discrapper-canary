@@ -3,7 +3,7 @@ n.d(t, { A: () => N }), n(205816);
 var i = n(17928),
     r = n(228366),
     s = n(851746),
-    a = n(694080);
+    a = n(945960);
 let o = (0, n(945810).mj)({
     name: "2026-02-premium-offer-reminder-xp",
     kind: "user",
@@ -190,7 +190,7 @@ class y extends i.Ay.PersistedStore {
         return (0, _.TW)(e) && !this.canFractionalPremiumUserUseOffer()
             ? []
             : Object.values(E.userDiscountOffers ?? {}).filter(
-                  (e) => null == e.expiresAt && !f.ly.includes(e.discountId),
+                  (e) => !e.hasAcknowledged() && !f.ly.includes(e.discountId),
               );
     }
     getUnacknowledgedOffers(e) {

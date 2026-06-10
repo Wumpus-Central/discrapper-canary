@@ -125,7 +125,7 @@ let V = function (e) {
         a = (0, w.A)(null != s && null != s.expiresAt ? s.expiresAt.getTime() : 0);
     return null == s ||
         s.discount?.planIds.some((e) => F.hd[e].skuId !== n) ||
-        null == s.expiresAt ||
+        !s.hasAcknowledged() ||
         Object.values(a).every((e) => 0 === e)
         ? null
         : (0, i.jsxs)(U.T0, {

@@ -48,6 +48,9 @@ class a extends i.A {
     isDeleted() {
         return null != this.deletedAt;
     }
+    hasAcknowledged() {
+        return null != this.expiresAt;
+    }
     getFullIntervalCount() {
         return null == this.discount ? 0 : this.discount.userUsageLimit;
     }
