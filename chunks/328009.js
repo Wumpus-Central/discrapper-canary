@@ -14,8 +14,8 @@ var e,
     E = i(915089),
     g = i(46054),
     S = i(780964),
-    u = i(466034),
-    v = i(766075),
+    v = i(466034),
+    u = i(766075),
     C = i(723702),
     p = i(38405),
     N = i(19575),
@@ -152,7 +152,7 @@ function U(t) {
                                     k
                                         .AF(L, U, P)
                                         .then(async () => {
-                                            M ? O(T.SUCCESS) : (await (0, u.sy)(!1), e());
+                                            M ? O(T.SUCCESS) : (await (0, v.sy)(!1), e());
                                         })
                                         .catch((t) => {
                                             t instanceof r.oh &&
@@ -185,7 +185,6 @@ function U(t) {
                                                         q(t), z(0 === t.length);
                                                     },
                                                     autoFocus: !0,
-                                                    required: !0,
                                                     minLength: 1,
                                                 }),
                                             ],
@@ -243,7 +242,7 @@ function U(t) {
                                             variant: "primary",
                                             text: y.intl.string(y.t.MubYG8),
                                             onClick: () => {
-                                                e(), (0, v.openUserSettings)(S.X.ACCOUNT_PANEL);
+                                                e(), (0, u.openUserSettings)(S.X.ACCOUNT_PANEL);
                                             },
                                         }),
                                         (0, n.jsx)(h.$, {
