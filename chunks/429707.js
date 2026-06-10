@@ -33,7 +33,9 @@ function h() {
         if (null != l && l !== a) {
             let e = { expected_user_id: a, actual_user_id: l };
             _.log("Found per-user token authentication mismatch", e),
-                u.default.track(d.HAw.MULTI_ACCOUNT_VALIDATE_TOKEN_USER_MISMATCH, e);
+                u.default.track(d.HAw.MULTI_ACCOUNT_VALIDATE_TOKEN_USER_MISMATCH, e),
+                s.h.dispatch({ type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE", userId: a });
+            return;
         }
         e !== a && s.h.dispatch({ type: "USER_UPDATE", user: n.body }),
             s.h.dispatch({ type: "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS", userId: a });
