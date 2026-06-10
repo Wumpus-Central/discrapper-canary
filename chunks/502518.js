@@ -194,7 +194,7 @@ let Z = (0, a.Qx)(u.X.ACTIVITY_PRIVACY_PER_GUILD_DEFAULT_SETTING, {
         if (null == s) return;
         let l = (0, W.Xc)(e);
         (0, K.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([i.e("92164"), i.e("36281"), i.e("62041"), i.e("41996")]).then(
+            let { default: e } = await Promise.all([i.e("40942"), i.e("35114"), i.e("62041"), i.e("41996")]).then(
                 i.bind(i, 32167),
             );
             return (t) =>
@@ -791,7 +791,7 @@ function tC(e) {
 var tb = i(760751),
     tv = i(189081),
     ty = i(9302),
-    tj = i(311678),
+    tj = i(656513),
     tO = i(320448);
 let tR = new Set([
     th.AR.INITIALIZING,
@@ -2760,8 +2760,8 @@ let se = (0, a.sN)(u.X.APPEARANCE_ZOOM, {
                     ),
                     n = (0, g.bG)([i7.A], () => i7.A.messageGroupSpacing);
                 return (0, E.jsx)(i3.M, {
-                    "aria-hidden": !0,
                     children: (0, E.jsxs)("section", {
+                        "aria-label": j.intl.string(j.t.RC22qg),
                         children: [
                             (0, E.jsx)(eP.D, {
                                 variant: "text-md/medium",
@@ -20037,8 +20037,8 @@ let Ct = {
             null != n &&
                 (0, K.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        i.e("92164"),
-                        i.e("36281"),
+                        i.e("40942"),
+                        i.e("35114"),
                         i.e("62041"),
                         i.e("63786"),
                     ]).then(i.bind(i, 413201));
