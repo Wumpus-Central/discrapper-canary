@@ -1,8 +1,10 @@
 c.exports = {
     CR: "modalRoot__38ccf",
     jE: "modalContent__38ccf",
-    pP: "offerBanner__38ccf",
-    Wi: "offerBannerContent__38ccf",
+    UB: "promotionBanner__38ccf",
+    nR: "promotionBannerContent__38ccf",
+    Ow: "promotionBannerIconContainer__38ccf",
+    PI: "promotionBannerTimeRemaining__38ccf",
     nr: "panelsContainer__38ccf",
     op: "infoContainer__38ccf",
     uk: "infoContainerExclusive__38ccf",

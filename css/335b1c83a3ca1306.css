@@ -138,23 +138,39 @@
     width: 0
 }
 
-.offerBanner__38ccf {
-    background-color: var(--background-mod-normal);
-    color: var(--text-default);
+.promotionBanner__38ccf {
+    background-color: var(--background-feedback-positive);
+    border-radius: var(--radius-sm);
+    color: var(--text-feedback-positive);
     flex-shrink: 0;
-    justify-content: space-between;
-    padding: var(--space-12) var(--space-24)
+    gap: var(--space-8);
+    padding-block: var(--space-4);
+    padding-inline-end: var(--space-8);
+    padding-inline-start: var(--space-4)
 }
 
-.offerBanner__38ccf,
-.offerBannerContent__38ccf {
+.promotionBanner__38ccf,
+.promotionBannerContent__38ccf {
     align-items: center;
     display: flex;
     flex-direction: row
 }
 
-.offerBannerContent__38ccf {
-    gap: var(--space-8)
+.promotionBannerContent__38ccf {
+    flex-grow: 1;
+    gap: var(--space-6)
+}
+
+.promotionBannerIconContainer__38ccf {
+    border-radius: var(--radius-xs);
+    height: var(--size-32);
+    overflow: hidden;
+    width: var(--size-32)
+}
+
+.promotionBannerTimeRemaining__38ccf {
+    flex-shrink: 0;
+    text-align: end
 }
 
 .panelsContainer__38ccf {
