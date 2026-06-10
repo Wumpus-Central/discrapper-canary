@@ -15,8 +15,8 @@ var n = i(627968),
     _ = i(982240),
     b = i(503698),
     v = i.n(b),
-    y = i(70283),
-    j = i(97808),
+    j = i(70283),
+    y = i(97808),
     p = i(123292),
     f = i(364522),
     N = i(508770),
@@ -30,11 +30,11 @@ var I = i(837381),
     B = i(741918),
     U = i(939249),
     R = i(707554),
-    k = i(260762),
-    S = i(486020);
+    S = i(260762),
+    k = i(486020);
 function O(e, t, i) {
     let n = (0, r.bG)([x.default], () => (null != e ? x.default.getUser(e) : void 0), [e]);
-    if (null != n && t) return (0, S.ku)({ id: n.id, avatar: n.avatar, discriminator: n.discriminator }, !1, i);
+    if (null != n && t) return (0, k.ku)({ id: n.id, avatar: n.avatar, discriminator: n.discriminator }, !1, i);
 }
 var D = i(975858),
     F = i(778712),
@@ -58,7 +58,7 @@ function z(e) {
                       return t === s;
                   })
                 : void 0,
-        c = t.badge_id === y.$.PREMIUM_TENURE ? (d?.name ?? d?.key) : d?.name,
+        c = t.badge_id === j.$.PREMIUM_TENURE ? (d?.name ?? d?.key) : d?.name,
         o = null != c ? `${t.name}, ${c}` : t.name;
     return (0, n.jsx)(U.D, {
         ...r,
@@ -77,7 +77,7 @@ function z(e) {
 }
 function V(e) {
     let { label: t, navId: i, badges: l, selectedBadgeId: a, onSelectBadge: r } = e,
-        s = (0, k.A)(i, B.Gl.HORIZONTAL);
+        s = (0, S.A)(i, B.Gl.HORIZONTAL);
     return (0, n.jsxs)("div", {
         className: G.zE,
         children: [
@@ -131,12 +131,12 @@ function H(e) {
         { earnable: x, owned: h } = l.useMemo(() => L(m), [m]),
         b = O(a, s, 48),
         v = null != d ? M(d) : null,
-        y = null != d && v !== d,
+        j = null != d && v !== d,
         p =
-            null != v && y && null != b
+            null != v && j && null != b
                 ? (0, n.jsxs)("span", {
                       className: G._p,
-                      children: [(0, n.jsx)(j.eu, { src: b, size: F._3.SIZE_24, "aria-hidden": !0 }), v],
+                      children: [(0, n.jsx)(y.eu, { src: b, size: F._3.SIZE_24, "aria-hidden": !0 }), v],
                   })
                 : v,
         f = s && null != p ? P.intl.format(P.t.EIcwoe, { username: p }) : P.intl.string(P.t.UqnlQF),
@@ -151,7 +151,7 @@ function H(e) {
                     (0, n.jsxs)("div", {
                         className: G.kc,
                         children: [
-                            !y && null != b && (0, n.jsx)(j.eu, { src: b, size: F._3.SIZE_24, "aria-hidden": !0 }),
+                            !j && null != b && (0, n.jsx)(y.eu, { src: b, size: F._3.SIZE_24, "aria-hidden": !0 }),
                             (0, n.jsx)(o.D, { variant: "heading-lg/semibold", color: "text-strong", children: f }),
                         ],
                     }),
@@ -216,10 +216,10 @@ function Q(e) {
         s = K(J(t.obtained_at)) ?? P.intl.string(P.t.sTFApF),
         d = l.useId(),
         c = i && null != a,
-        o = t.badge_id === y.$.PREMIUM_TENURE ? P.intl.string(r ? P.t["5WS9pL"] : P.t.crwYbF) : null,
+        o = t.badge_id === j.$.PREMIUM_TENURE ? P.intl.string(r ? P.t["5WS9pL"] : P.t.crwYbF) : null,
         g = c ? P.intl.formatToPlainString(P.t.KyTwIh, { username: a }) : o,
         m = null != g && "" !== g,
-        x = t.badge_id === y.$.PREMIUM_TENURE;
+        x = t.badge_id === j.$.PREMIUM_TENURE;
     return (0, n.jsxs)(n.Fragment, {
         children: [
             m &&
@@ -239,7 +239,7 @@ function Q(e) {
                 children: t.tiers.map((e) => {
                     let l = e.owned,
                         a = e.complex_icon_static_url ?? e.simple_icon_url,
-                        d = e.name ?? e.key,
+                        d = e.name,
                         c = t.tier_obtained_at?.[e.key],
                         o = (function (e) {
                             let {
@@ -291,7 +291,7 @@ function Q(e) {
                                     color: l ? "text-default" : "text-muted",
                                     className: Z.hI,
                                     children: [
-                                        (0, n.jsx)("span", { className: Z.nU, children: d }),
+                                        null != d && (0, n.jsx)("span", { className: Z.nU, children: d }),
                                         (0, n.jsx)("span", { className: Z.nU, children: o }),
                                     ],
                                 }),
@@ -363,7 +363,7 @@ function es(e) {
     return (0, n.jsxs)("div", {
         className: G.bn,
         children: [
-            null != s && (0, n.jsx)(j.eu, { src: s, size: F._3.SIZE_16, "aria-hidden": !0 }),
+            null != s && (0, n.jsx)(y.eu, { src: s, size: F._3.SIZE_16, "aria-hidden": !0 }),
             (0, n.jsx)(u.E, { variant: "text-xs/medium", color: "text-subtle", className: G.CT, children: t }),
             (x || h) &&
                 (0, n.jsxs)(n.Fragment, {
@@ -401,7 +401,7 @@ function ed(e) {
             isViewingOtherUser: h,
             targetUsername: _,
             displayedUserId: b,
-            targetOwnsBadge: j,
+            targetOwnsBadge: y,
             viewerOwnsBadge: p,
             onToggleViewedUser: I,
             onViewOwnCatalog: B,
@@ -413,12 +413,12 @@ function ed(e) {
             let i = e.owned ? e.current_tier : e.next_tier;
             return (null != i ? t.find((e) => e.key === i) : void 0) ?? t[0];
         })(s),
-        k = (0, r.bG)([C.A], () => C.A.useReducedMotion)
+        S = (0, r.bG)([C.A], () => C.A.useReducedMotion)
             ? void 0
             : (R?.complex_icon_animated_url ?? s.complex_icon_animated_url),
-        S = R?.complex_icon_static_url ?? s.complex_icon_static_url,
+        k = R?.complex_icon_static_url ?? s.complex_icon_static_url,
         F = R?.simple_icon_url ?? s.simple_icon_url,
-        M = k ?? S ?? F,
+        M = S ?? k ?? F,
         z = (function (e) {
             if (null == e) return null;
             switch (e) {
@@ -436,7 +436,7 @@ function ed(e) {
             }
         })(R?.rarity ?? s.rarity),
         V = (0, D.Om)(s.badge_id),
-        L = s.badge_id === y.$.PREMIUM_TENURE,
+        L = s.badge_id === j.$.PREMIUM_TENURE,
         H = L ? (R?.name ?? R?.key) : R?.name,
         Y = L ? P.intl.string(P.t.Ipxkog) : s.name;
     L ? (i = null != H ? `${Y} ${H}` : Y) : null != H ? ((t = Y), (i = H)) : (i = Y);
@@ -468,7 +468,7 @@ function ed(e) {
             children: [
                 null != M &&
                     (0, n.jsx)("img", {
-                        className: v()(G.y2, null != k && M === k && G.hu),
+                        className: v()(G.y2, null != S && M === S && G.hu),
                         src: M,
                         alt: "",
                         "aria-hidden": !0,
@@ -503,7 +503,7 @@ function ed(e) {
                                     isViewingOtherUser: h,
                                     targetUsername: _,
                                     viewedAvatarSrc: U,
-                                    targetOwnsBadge: j,
+                                    targetOwnsBadge: y,
                                     viewerOwnsBadge: p,
                                     onToggleViewedUser: I,
                                 }),
@@ -602,12 +602,12 @@ function eo(e) {
             onClose: i,
             initialBadgeId: b,
             targetUserId: v,
-            targetUsername: y,
-            viewingCurrentUserBadges: j,
+            targetUsername: j,
+            viewingCurrentUserBadges: y,
         } = e,
         p = (0, r.bG)([x.default], () => x.default.getCurrentUser()?.id),
         f = null == v || v === p,
-        N = !f && null != v && !0 !== j,
+        N = !f && null != v && !0 !== y,
         w = N ? v : p,
         E = null != w ? `viewed_user:${N ? "other" : "self"}` : void 0,
         [A, C] = l.useState(b ?? null),
@@ -627,15 +627,15 @@ function eo(e) {
             return N ? (t[0]?.badge_id ?? null) : (t[0]?.badge_id ?? e[0]?.badge_id ?? null);
         }, [T, N]),
         R = null != A && null != w ? _.Ay.getBadgeById(A, w) : void 0,
-        k = null != U && null != w ? _.Ay.getBadgeById(U, w) : void 0,
-        S = R ?? k,
+        S = null != U && null != w ? _.Ay.getBadgeById(U, w) : void 0,
+        k = R ?? S,
         O = !I && !B,
         D = !I && B;
     l.useEffect(() => {
         D && null != E && m.A.increment({ name: a.K.BADGE_DIRECTORY_ERROR_STATE_VIEWED, tags: [E] });
     }, [D, E]);
-    let F = (0, r.bG)([_.Ay], () => null != v && null != S && (_.Ay.getBadgeById(S.badge_id, v)?.owned ?? !1), [S, v]),
-        $ = (0, r.bG)([_.Ay], () => (null != p && null != S ? _.Ay.getBadgeById(S.badge_id, p) : void 0), [S, p]),
+    let F = (0, r.bG)([_.Ay], () => null != v && null != k && (_.Ay.getBadgeById(k.badge_id, v)?.owned ?? !1), [k, v]),
+        $ = (0, r.bG)([_.Ay], () => (null != p && null != k ? _.Ay.getBadgeById(k.badge_id, p) : void 0), [k, p]),
         M = $?.owned ?? !1,
         z = l.useCallback(
             function () {
@@ -648,33 +648,33 @@ function eo(e) {
         ),
         V = l.useCallback(() => {
             null != v &&
-                null != S &&
+                null != k &&
                 (N
                     ? z({
-                          initialBadgeId: S.badge_id,
+                          initialBadgeId: k.badge_id,
                           targetUserId: v,
-                          targetUsername: y,
+                          targetUsername: j,
                           viewingCurrentUserBadges: !0,
                       })
-                    : z({ initialBadgeId: S.badge_id, targetUserId: v, targetUsername: y }));
-        }, [N, S, z, v, y]),
+                    : z({ initialBadgeId: k.badge_id, targetUserId: v, targetUsername: j }));
+        }, [N, k, z, v, j]),
         Y = l.useCallback(() => {
             null != p &&
                 null != v &&
-                (ea({ actionName: "view_your_badges_pressed", badge: S, displayedUserId: w, isSociallyNavigated: N }),
-                z({ targetUserId: v, targetUsername: y, viewingCurrentUserBadges: !0 }));
-        }, [p, w, N, S, z, v, y]),
+                (ea({ actionName: "view_your_badges_pressed", badge: k, displayedUserId: w, isSociallyNavigated: N }),
+                z({ targetUserId: v, targetUsername: j, viewingCurrentUserBadges: !0 }));
+        }, [p, w, N, k, z, v, j]),
         q = l.useCallback(() => {
             null != w && (0, h.R)(w, { isRetry: !0 });
         }, [w]),
         Z = l.useCallback(() => {
-            ea({ actionName: "badge_directory_closed", badge: S, displayedUserId: w, isSociallyNavigated: N }), i();
-        }, [w, N, i, S]),
-        J = S?.badge_id;
+            ea({ actionName: "badge_directory_closed", badge: k, displayedUserId: w, isSociallyNavigated: N }), i();
+        }, [w, N, i, k]),
+        J = k?.badge_id;
     return (
         l.useEffect(() => {
-            null != S &&
-                ea({ actionName: "badge_detail_viewed", badge: S, displayedUserId: w, isSociallyNavigated: N });
+            null != k &&
+                ea({ actionName: "badge_detail_viewed", badge: k, displayedUserId: w, isSociallyNavigated: N });
         }, [J, w, N]),
         (0, n.jsx)(s.EO, {
             "data-migration-pending": !0,
@@ -718,21 +718,21 @@ function eo(e) {
                           : (0, n.jsxs)(n.Fragment, {
                                 children: [
                                     (0, n.jsx)(H, {
-                                        selectedBadgeId: S?.badge_id ?? null,
+                                        selectedBadgeId: k?.badge_id ?? null,
                                         onSelectBadge: C,
                                         displayedUserId: w,
                                         isViewingOtherUser: N,
-                                        targetUsername: y,
+                                        targetUsername: j,
                                         onViewOwnCatalog: Y,
                                     }),
-                                    null != S &&
+                                    null != k &&
                                         (0, n.jsx)(ed, {
-                                            badge: S,
+                                            badge: k,
                                             viewerBadge: $,
                                             onClose: Z,
                                             isOwnProfile: f,
                                             isViewingOtherUser: N,
-                                            targetUsername: y,
+                                            targetUsername: j,
                                             displayedUserId: w,
                                             targetOwnsBadge: F,
                                             viewerOwnsBadge: M,

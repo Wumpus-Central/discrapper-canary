@@ -392,7 +392,10 @@ let ta = r.memo(function (e) {
                             }),
                             (0, i.jsxs)("div", {
                                 className: ts.E_,
-                                children: [(0, i.jsx)(te, { onBeforeEdit: s }), (0, i.jsx)(tn.E, {})],
+                                children: [
+                                    (0, i.jsx)(te, { onBeforeEdit: s, variant: "overlay-secondary" }),
+                                    (0, i.jsx)(tn.E, {}),
+                                ],
                             }),
                         ],
                     }),
