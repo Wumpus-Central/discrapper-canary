@@ -288,36 +288,24 @@
 }
 
 .tierTimelineGrid_bf9073 {
-    align-items: center;
-    box-sizing: border-box;
-    flex-direction: column;
-    gap: var(--space-4)
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-inline: auto;
+    max-width: 300px
 }
 
 .tierTimelineGrid_bf9073,
-.tierTimelineRow_bf9073 {
+.tierTimelineItem_bf9073 {
+    box-sizing: border-box;
     display: flex;
-    min-width: 0;
-    width: 100%
-}
-
-.tierTimelineRow_bf9073 {
-    gap: var(--space-8);
-    justify-content: center
+    gap: var(--space-4)
 }
 
 .tierTimelineItem_bf9073 {
     align-items: center;
-    box-sizing: border-box;
-    display: flex;
+    flex: 0 0 72px;
     flex-direction: column;
-    gap: var(--space-4);
-    min-width: 0;
     padding: var(--space-8)
-}
-
-.tierTimelineGridCompact_bf9073 .tierTimelineItem_bf9073 {
-    padding-inline: var(--space-4)
 }
 
 .tierTimelineItemLocked_bf9073 .tierTimelineIcon_bf9073 {
@@ -336,4 +324,8 @@
     overflow-wrap: anywhere;
     text-align: center;
     width: 100%
+}
+
+.tierTimelineTextLine_bf9073 {
+    display: block
 }
