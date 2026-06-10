@@ -3773,6 +3773,7 @@ var rD =
         (ex.DEVICE_ENUMERATION_TIMEOUT = "device_enumeration_timeout"),
         (ex.VOICE_PROCESSING = "voice_processing"),
         (ex.CALL_REPORT_PROBLEM = "call_report_problem"),
+        (ex.LIVE_ACTIVITY_INTERACTED = "live_activity_interacted"),
         (ex.NOISE_CANCELLATION_LINK_CLICKED = "noise_cancellation_link_clicked"),
         (ex.MEDIA_SESSION_JOINED = "media_session_joined"),
         (ex.VOICE_CHANNEL_TOPIC_SET = "voice_channel_topic_set"),
