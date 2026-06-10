@@ -1,6 +1,6 @@
 "use strict";
 let i, r;
-n.d(t, { A: () => O });
+n.d(t, { A: () => b });
 var s = n(691540),
     a = n(857250),
     o = n(97483),
@@ -11,26 +11,33 @@ var c = n(247775),
     d = n(228366),
     _ = n(439372),
     h = n(626584),
-    f = n(287809),
-    p = n(174459),
-    E = n(274303),
-    m = n(652215);
-let g = new h.A("MultiAccountManager"),
-    A = !1,
-    I = null,
+    f = n(364711),
+    p = n(287809),
+    E = n(174459),
+    m = n(274303),
+    g = n(652215);
+let A = new h.A("MultiAccountManager"),
+    I = !1,
     T = null,
-    S = !1,
-    y = !1;
-function N() {
-    return S && !1;
+    S = null,
+    y = !1,
+    N = !1;
+function v() {
+    return y && !1;
 }
-class v extends _.A {
+class C extends _.A {
     onSwitchStart;
     onSwitchSuccess;
     onSwitchError;
     onTokenSet;
-    constructor({ onSwitchStart: e, onSwitchSuccess: t, onSwitchError: n, onTokenSet: i }) {
-        super(), (this.onSwitchStart = e), (this.onSwitchSuccess = t), (this.onSwitchError = n), (this.onTokenSet = i);
+    onLogout;
+    constructor({ onSwitchStart: e, onSwitchSuccess: t, onSwitchError: n, onTokenSet: i, onLogout: r }) {
+        super(),
+            (this.onSwitchStart = e),
+            (this.onSwitchSuccess = t),
+            (this.onSwitchError = n),
+            (this.onTokenSet = i),
+            (this.onLogout = r);
     }
     actions = {
         LOGOUT: (e) => this.handleLogout(e),
@@ -43,37 +50,37 @@ class v extends _.A {
         d.h.unsubscribe("CONNECTION_OPEN", () => this.handleConnectionOpen());
     }
     handleMultiAccountSwitchStart = (e) => {
-        (I = e.targetUserId), (T = e.location);
+        (T = e.targetUserId), (S = e.location), (0, f.m)(e.targetUserId);
     };
     handleConnectionOpen = () => {
-        let e = f.default.getCurrentUser();
+        let e = p.default.getCurrentUser();
         if (null == e) return;
         if (
             (!(function (e) {
-                if (!N()) return;
+                if (!v()) return;
                 let t = c.getToken(e),
                     n = c.getToken(),
-                    i = null != I && e !== I,
+                    i = null != T && e !== T,
                     s = null != t && null != n && t !== n;
                 if (!(s || i)) return;
                 let a = {
                     from_user_id: r,
-                    to_user_id: I,
+                    to_user_id: T,
                     actual_user_id: e,
                     fast_connect_user_id: null,
-                    linked_user_ids: E.A.getUsers().map((e) => {
+                    linked_user_ids: m.A.getUsers().map((e) => {
                         let { id: t } = e;
                         return t;
                     }),
-                    has_ever_connected: y,
+                    has_ever_connected: N,
                     user_token_exists: null != t,
                     main_token_exists: null != n,
                     is_token_mismatch: s,
                     is_user_mismatch: i,
-                    switch_origin: T,
+                    switch_origin: S,
                 };
-                g.log("Token mismatch on account switch connection open", a),
-                    p.default.track(m.HAw.MULTI_ACCOUNT_SWITCH_READY_MISMATCH, a);
+                A.log("Token mismatch on account switch connection open", a),
+                    E.default.track(g.HAw.MULTI_ACCOUNT_SWITCH_READY_MISMATCH, a);
             })(e.id),
             null != r)
         ) {
@@ -81,35 +88,35 @@ class v extends _.A {
                 let t;
                 (t = {
                     from_user_id: r,
-                    to_user_id: I,
+                    to_user_id: T,
                     actual_user_id: e.id,
                     fast_connect_user_id: null,
-                    linked_user_ids: E.A.getUsers().map((e) => {
+                    linked_user_ids: m.A.getUsers().map((e) => {
                         let { id: t } = e;
                         return t;
                     }),
-                    has_ever_connected: y,
-                    switch_origin: T,
+                    has_ever_connected: N,
+                    switch_origin: S,
                 }),
-                    p.default.track(m.HAw.MULTI_ACCOUNT_SWITCH_SUCCESS, t),
-                    N() && g.log("Account switch success", t),
-                    this.onSwitchSuccess?.(e, A);
+                    E.default.track(g.HAw.MULTI_ACCOUNT_SWITCH_SUCCESS, t),
+                    v() && A.log("Account switch success", t),
+                    this.onSwitchSuccess?.(e, I);
             } else {
                 let t;
                 (t = {
                     from_user_id: r,
-                    to_user_id: I,
+                    to_user_id: T,
                     actual_user_id: e.id,
                     fast_connect_user_id: null,
-                    linked_user_ids: E.A.getUsers().map((e) => {
+                    linked_user_ids: m.A.getUsers().map((e) => {
                         let { id: t } = e;
                         return t;
                     }),
-                    has_ever_connected: y,
-                    switch_origin: T,
+                    has_ever_connected: N,
+                    switch_origin: S,
                 }),
-                    p.default.track(m.HAw.MULTI_ACCOUNT_SWITCH_FAILURE, t),
-                    N() && g.log("Account switch failure", t),
+                    E.default.track(g.HAw.MULTI_ACCOUNT_SWITCH_FAILURE, t),
+                    v() && A.log("Account switch failure", t),
                     this.onSwitchError?.(e);
             }
             r = null;
@@ -119,11 +126,11 @@ class v extends _.A {
         null != t &&
             "" !== t &&
             (!(function (e, t) {
-                if (!N()) return;
+                if (!v()) return;
                 let n = new Set(),
                     i = [],
                     s = [],
-                    a = E.A.getUsers(),
+                    a = m.A.getUsers(),
                     o = !1;
                 if (
                     (a.forEach((r) => {
@@ -137,24 +144,24 @@ class v extends _.A {
                     return;
                 let l = {
                     from_user_id: r,
-                    to_user_id: I,
+                    to_user_id: T,
                     actual_user_id: e,
                     fast_connect_user_id: null,
                     linked_user_ids: s,
                     colliding_user_ids: i,
-                    has_ever_connected: y,
+                    has_ever_connected: N,
                     is_already_corrupted: o,
-                    switch_origin: T,
+                    switch_origin: S,
                 };
-                g.log("setToken about to introduce per-user token collision", l),
-                    p.default.track(m.HAw.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, l);
+                A.log("setToken about to introduce per-user token collision", l),
+                    E.default.track(g.HAw.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, l);
             })(e.id, t),
             c.setToken(t, e.id)),
             (function (e) {
-                if (!N()) return;
+                if (!v()) return;
                 let t = [],
                     n = new Map();
-                E.A.getUsers().forEach((e) => {
+                m.A.getUsers().forEach((e) => {
                     let { id: i } = e;
                     t.push(i);
                     let r = c.getToken(i);
@@ -166,53 +173,55 @@ class v extends _.A {
                         if (n.length < 2) return;
                         let i = {
                             from_user_id: r,
-                            to_user_id: I,
+                            to_user_id: T,
                             actual_user_id: e,
                             fast_connect_user_id: null,
                             linked_user_ids: t,
                             colliding_user_ids: n,
-                            has_ever_connected: y,
-                            switch_origin: T,
+                            has_ever_connected: N,
+                            switch_origin: S,
                         };
-                        g.log("Per-user token collision detected", i),
-                            p.default.track(m.HAw.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION, i);
+                        A.log("Per-user token collision detected", i),
+                            E.default.track(g.HAw.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION, i);
                     });
             })(e.id),
             this.onTokenSet?.(e),
-            (I = null),
             (T = null),
-            (S = !1),
-            (y = !0);
+            (S = null),
+            (y = !1),
+            (N = !0),
+            (0, f.m)(null);
     };
     handleLogout = (e) => {
-        e.isSwitchingAccount
-            ? (g.log("logout from account switch", {
-                  current_user_id: i,
-                  expected_user_id: I,
-                  fast_connect_user_id: null,
-                  switch_origin: T,
-              }),
-              (S = !0),
-              (r = i),
-              this.onSwitchStart?.(),
-              (A = !!e.goHomeAfterSwitching))
-            : ((A = !1), c.removeToken(i)),
+        this.onLogout?.(e),
+            e.isSwitchingAccount
+                ? (A.log("logout from account switch", {
+                      current_user_id: i,
+                      expected_user_id: T,
+                      fast_connect_user_id: null,
+                      switch_origin: S,
+                  }),
+                  (y = !0),
+                  (r = i),
+                  this.onSwitchStart?.(),
+                  (I = !!e.goHomeAfterSwitching))
+                : ((I = !1), c.removeToken(i)),
             (i = null);
     };
 }
-var C = n(573879),
-    R = n(375708);
-let O = new v({
+var R = n(573879),
+    O = n(375708);
+let b = new C({
     onSwitchSuccess(e, t) {
         setTimeout(() => {
-            t && (0, u.pX)(m.BVt.ME),
-                (0, s.P0)((0, a.o)(R.intl.formatToPlainString(R.t.wx7O3L, { username: e.username }), o.Ck.SUCCESS));
+            t && (0, u.pX)(g.BVt.ME),
+                (0, s.P0)((0, a.o)(O.intl.formatToPlainString(O.t.wx7O3L, { username: e.username }), o.Ck.SUCCESS));
         }, 100);
     },
     onSwitchError() {
-        (0, s.P0)((0, a.o)(R.intl.string(R.t.pqvKWA), o.Ck.FAILURE));
+        (0, s.P0)((0, a.o)(O.intl.string(O.t.pqvKWA), o.Ck.FAILURE));
     },
     onTokenSet() {
-        (0, l.closeModal)(C.ov), (0, l.closeModal)(C.Gl);
+        (0, l.closeModal)(R.ov), (0, l.closeModal)(R.Gl);
     },
 });

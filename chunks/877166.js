@@ -1,0 +1,27 @@
+"use strict";
+n.d(t, { A: () => r }), n(321073);
+var i = n(228366);
+class r {
+    socket;
+    static batchers = [];
+    static flush(e, t) {
+        for (let n of r.batchers) null != n.action && (null == e || n.shouldFlush(e, t)) && n.flush();
+    }
+    action = null;
+    add;
+    shouldFlush;
+    constructor(e, t, n) {
+        (this.socket = e),
+            (this.shouldFlush = n),
+            (this.add = (e) => {
+                this.action = t(this.action, e);
+            }),
+            r.batchers.push(this);
+    }
+    flush() {
+        let { action: e } = this;
+        (this.action = null),
+            null != e &&
+                i.h.dispatch(e).catch((t) => this.socket.resetSocketAndClearCacheOnError({ error: t, action: e.type }));
+    }
+}
