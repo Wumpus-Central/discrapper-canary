@@ -9,7 +9,7 @@ var i = n(627968),
     u = n(775602),
     c = n(218394),
     d = n(203632),
-    _ = n(219220),
+    _ = n(855915),
     h = n(940622),
     f = n(881106),
     p = n(284009),
@@ -91,23 +91,26 @@ let v = (e) => {
             } = e,
             p = !0,
             E = 0,
-            m = (0, S.gm)() && null != t.loopDelay && t.loopDelay > 0 && h?.src != null,
-            [g, A] = r.useState("reset"),
-            I = r.useRef(h?.src ?? t.src),
-            [T, v] = r.useState(h?.src ?? t.src);
+            [m, g] = r.useState("reset"),
+            A = r.useRef(h?.src ?? t.src),
+            [I, T] = r.useState(h?.src ?? t.src),
+            v = r.useRef(null),
+            C = (0, S.gm)() && null != t.loopDelay && t.loopDelay > 0 && h?.src != null;
         r.useEffect(() => {
-            if (!m || "layer" === g) return;
+            if (!C || "layer" === m) return;
             let e = new AbortController();
             return (
                 (async () => {
                     try {
-                        let t = I.current,
-                            n = await fetch(t, { signal: e.signal }),
-                            i = await n.blob();
-                        if (e.signal.aborted) return;
-                        t !== h?.src && URL.revokeObjectURL(t),
-                            (I.current = URL.createObjectURL(i)),
-                            v(() => I.current);
+                        if (null == v.current) {
+                            let t = await fetch(h.src, { signal: e.signal }),
+                                n = await t.blob();
+                            if (e.signal.aborted) return;
+                            v.current = n;
+                        }
+                        A.current !== h?.src && URL.revokeObjectURL(A.current),
+                            (A.current = URL.createObjectURL(v.current)),
+                            T(() => A.current);
                     } catch (e) {
                         if ("AbortError" === e.name) return null;
                         y.A.captureException(e);
@@ -117,15 +120,15 @@ let v = (e) => {
                     e.abort();
                 }
             );
-        }, [g, m, v, h?.src]),
+        }, [m, C, T, h?.src]),
             r.useEffect(
                 () => () => {
-                    I.current !== h?.src && URL.revokeObjectURL(I.current);
+                    A.current !== h?.src && URL.revokeObjectURL(A.current);
                 },
                 [],
             );
-        let C = (e) => {
-            (0, S.gm)() && e !== g && A(e);
+        let R = (e) => {
+            (0, S.gm)() && e !== m && g(e);
         };
         if (
             (s || (p = !1),
@@ -140,15 +143,15 @@ let v = (e) => {
                     (n === o.l.ANIMATION_TYPE_INTERMITTENT && !l && null != c && E >= c && u(!0), (p = !1));
         }
         return p
-            ? (C("layer"),
+            ? (R("layer"),
               (0, i.jsx)("img", {
-                  src: T,
+                  src: I,
                   className: N.QZ,
                   style: { top: (t.position?.y ?? 0) - _, left: t.position?.x ?? 0 },
                   alt: "",
                   "aria-hidden": !0,
               }))
-            : (C("reset"), (0, i.jsx)("img", { src: f.Ut, alt: "", "aria-hidden": !0 }));
+            : (R("reset"), (0, i.jsx)("img", { src: f.Ut, alt: "", "aria-hidden": !0 }));
     },
     C = (e) => {
         let {
@@ -318,7 +321,7 @@ let v = (e) => {
                 n ||
                 (!1 === p && !1 === E)
             ),
-            { loaded: g, layerData: A } = (0, _.A)({ skuId: s?.skuId, layers: s?.effects, playing: !1 === m });
+            { loaded: g, layerData: A } = (0, _.A)({ skuId: s?.skuId, layers: m ? void 0 : s?.effects });
         return null != s && null != f && (t || e.shopPreview || s.animationType !== o.l.ANIMATION_TYPE_INTERMITTENT)
             ? m
                 ? (0, i.jsx)(R, {

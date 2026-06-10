@@ -681,7 +681,7 @@ var ek = a(835245),
     eK = a(542484),
     eY = a(735438),
     eq = a.n(eY),
-    eJ = a(219220),
+    eJ = a(855915),
     eQ = a(480335);
 let eX = (e) => {
     let { profileEffect: t } = e,
@@ -710,8 +710,9 @@ let eX = (e) => {
             }
             return a;
         }, [t.effects, a, n]),
-        { layerData: s } = (0, eJ.A)({ skuId: "debug", layers: l.effects });
-    return (0, r.jsx)(eQ.p, { profileEffect: l, layerData: s, skuId: "debug" });
+        s = "debug",
+        { layerData: i } = (0, eJ.A)({ skuId: s, layers: l.effects });
+    return (0, r.jsx)(eQ.p, { profileEffect: l, skuId: s, layerData: i });
 };
 var eZ = a(314485),
     e0 = a(778765);
