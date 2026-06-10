@@ -56,7 +56,7 @@ let c = (e) => {
                 ? (h.pendingProfileFrame = void 0)
                 : (h.pendingProfileFrame = n.profileFrame)),
         "banner" in n &&
-            ((n.banner ?? null) === (null != t ? (_?.banner ?? null) : (i.banner ?? null))
+            ((n.banner ?? null) === (null != t ? (d?.banner ?? null) : (i.banner ?? null))
                 ? ((h.pendingBanner = void 0), (h.pendingBannerOriginalMd5 = void 0))
                 : ((h.pendingBanner = n.banner), (h.pendingBannerOriginalMd5 = n.bannerOriginalMd5 ?? null))),
         "accentColor" in n)
@@ -65,9 +65,12 @@ let c = (e) => {
         e === (d?.accentColor ?? null) ? (h.pendingAccentColor = void 0) : (h.pendingAccentColor = e);
     }
     if ("themeColors" in n) {
-        let e = n.themeColors,
-            i = null != t ? (d?.themeColors ?? c?.themeColors) : d?.themeColors;
-        r()(e ?? null, i ?? null) ? (h.pendingThemeColors = void 0) : (h.pendingThemeColors = e);
+        let e =
+                null != t && null != n.themeColors && null == n.themeColors[0] && null == n.themeColors[1]
+                    ? null
+                    : (n.themeColors ?? null),
+            i = d?.themeColors ?? null;
+        r()(e, i) ? (h.pendingThemeColors = void 0) : (h.pendingThemeColors = n.themeColors);
     }
     if (("bio" in n && (n.bio === d?.bio ? (h.pendingBio = void 0) : (h.pendingBio = n.bio)), "primaryGuildId" in n)) {
         let e = (0, a.Zo)(i.primaryGuild).guildId ?? null;

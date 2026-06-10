@@ -1236,56 +1236,58 @@ function nS(e) {
     let { user: l, guildId: n, disabled: r = !1 } = e,
         a = (0, z.Ay)(l.id, n),
         {
-            pendingThemeColors: o,
-            pendingAvatar: d,
-            savedThemeColors: u,
+            currentProfileThemeColors: o,
+            pendingThemeColors: d,
+            pendingAvatar: u,
         } = (0, s.cf)([ea.A, B.A], () => {
-            let e = ea.A.getPendingChanges(n ?? void 0);
+            let e = ea.A.getPendingChanges(n ?? void 0),
+                t = B.A.getUserProfile(l.id)?.themeColors ?? null;
             return {
+                currentProfileThemeColors: null != n ? (B.A.getGuildMemberProfile(l.id, n)?.themeColors ?? null) : t,
                 pendingThemeColors: e.pendingThemeColors,
                 pendingAvatar: e.pendingAvatar,
-                savedThemeColors: null != n ? B.A.getGuildMemberProfile(l.id, n)?.themeColors : void 0,
             };
         }),
-        c = (0, et.V7)({ userId: l.id, image: d }),
-        { primaryColor: g, secondaryColor: f } = (0, H.A)({
+        c = void 0 !== d ? d : o,
+        g = (0, et.V7)({ userId: l.id, image: u }),
+        { primaryColor: f, secondaryColor: m } = (0, H.A)({
             user: l,
             displayProfile: a,
-            pendingThemeColors: o,
-            pendingAvatarSrc: c ?? void 0,
+            pendingThemeColors: d,
+            pendingAvatarSrc: g ?? void 0,
             isPreview: !0,
         }),
-        m = (0, lY.r)(x.A.unsafe_rawColors.PRIMARY_530).hex(),
-        p = null != c ? c : l.getAvatarURL(n ?? void 0, 80),
-        v = (0, lJ.rh)(p, m, !1),
-        h = i.useCallback(
+        p = (0, lY.r)(x.A.unsafe_rawColors.PRIMARY_530).hex(),
+        v = null != g ? g : l.getAvatarURL(n ?? void 0, 80),
+        h = (0, lJ.rh)(v, p, !1),
+        A = i.useCallback(
             (e) => {
                 (0, eK.p)({ guildId: n ?? void 0, themeColors: e });
             },
             [n],
         ),
-        A =
-            null != n && (0, nN.l)(o, u)
+        b =
+            null != n && (0, nN.l)(d, o)
                 ? {
                       onClick: () => (0, eK.p)({ guildId: n, themeColors: [null, null] }),
                       type: "reset",
                       accessibleLabel: eV.intl.string(eV.t["L+GmoR"]),
                   }
                 : void 0;
-    return null == g || null == f
+    return null == f || null == m
         ? null
         : (0, t.jsx)(nR, {
-              primaryColor: g,
-              secondaryColor: f,
+              primaryColor: f,
+              secondaryColor: m,
               onSelectPrimaryColor: (e) => {
-                  e !== g && h([e, f]);
+                  (c?.[0] == null || e !== c[0]) && A([e, m]);
               },
               onSelectSecondaryColor: (e) => {
-                  e !== f && h([g, e]);
+                  (c?.[1] == null || e !== c[1]) && A([f, e]);
               },
-              suggestedColors: v,
+              suggestedColors: h,
               disabled: r,
-              deleteButton: A,
+              deleteButton: b,
           });
 }
 var nT = n(315629),
