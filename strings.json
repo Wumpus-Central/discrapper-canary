@@ -45,6 +45,8 @@
   "eRrt7X": "{count, plural, one { autoclip} other { autoclips} }",
   "+YIqQM": "{count, plural, one { clip} other { clips} }",
   "pqk9U0": "View More",
+  "GNDqtf": "Off",
+  "lTwKmt": "On",
   "mjfghy": "Clips from your gaming session will show up here.",
   "y4zC7j": "$[PROTIP:]({{protipHook}}) Press !!{keybind}!! to capture a clip while gaming.",
   "eFDg0b": "Fresh updates just landed in clips. Still in Nitro Early Access, with more changes on the way!",
