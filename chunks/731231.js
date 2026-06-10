@@ -303,12 +303,9 @@ function ew(e) {
                     location: e,
                 }),
                 (0, h.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([
-                        n.e("16966"),
-                        n.e("62691"),
-                        n.e("71202"),
-                        n.e("53274"),
-                    ]).then(n.bind(n, 397313));
+                    let { default: e } = await Promise.all([n.e("72253"), n.e("71202"), n.e("53274")]).then(
+                        n.bind(n, 397313),
+                    );
                     return (t) => (0, i.jsx)(e, { ...t });
                 }))
             );
@@ -591,7 +588,7 @@ let te = r.memo(function (e) {
                                         }),
                                         (0, h.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
-                                                n.e("98227"),
+                                                n.e("4746"),
                                                 n.e("734"),
                                                 n.e("60909"),
                                                 n.e("31232"),
@@ -1396,7 +1393,7 @@ let tk = (0, K.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                 W.default.track(e_.HAw.OPEN_MODAL, { type: e_.JJy.CREATE_STICKER_MODAL, location: c }),
                                     (0, h.openModalLazy)(async () => {
                                         let { default: t } = await Promise.all([
-                                            n.e("98227"),
+                                            n.e("4746"),
                                             n.e("734"),
                                             n.e("60909"),
                                             n.e("31232"),

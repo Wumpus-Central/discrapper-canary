@@ -8,11 +8,9 @@ function r(e, t) {
         async () => {
             let { default: l } = await Promise.all([
                 n.e("11141"),
-                n.e("53957"),
-                n.e("25377"),
+                n.e("72253"),
                 n.e("60389"),
                 n.e("32543"),
-                n.e("16752"),
                 n.e("29666"),
                 n.e("3930"),
                 n.e("3663"),
