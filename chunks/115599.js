@@ -32,6 +32,7 @@ a.r(
         pill: "pill_a2332b",
         tierCardStack: "tierCardStack_a2332b",
         tierCardStackContent: "tierCardStackContent_a2332b",
+        footer: "footer_a2332b",
         premiumCardsContainer: "premiumCardsContainer_a2332b",
         premiumCardsHeader: "premiumCardsHeader_a2332b",
         tier0CardOrder: "tier0CardOrder_a2332b",

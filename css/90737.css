@@ -676,6 +676,10 @@
     margin-bottom: var(--space-24)
 }
 
+.footer_a2332b {
+    flex: 0 0 auto
+}
+
 .premiumCardsContainer_a2332b {
     align-items: center;
     display: flex;
