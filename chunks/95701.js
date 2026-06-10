@@ -8,39 +8,39 @@ n.d(t, {
     JT: () => K,
     LE: () => X,
     Le: () => V,
-    Lt: () => eN,
+    Lt: () => ey,
     MK: () => M,
-    OU: () => v,
-    OY: () => ev,
-    QE: () => R,
+    OU: () => C,
+    OY: () => eC,
+    QE: () => O,
     TA: () => el,
-    UE: () => eC,
-    YB: () => ef,
+    UE: () => ev,
+    YB: () => eh,
     ZE: () => Z,
     Z_: () => W,
-    ay: () => O,
-    bk: () => z,
+    ay: () => R,
+    bk: () => $,
     cq: () => eS,
     createChannelRecord: () => eb,
     fT: () => j,
-    gV: () => k,
+    gV: () => U,
     ig: () => F,
-    jb: () => eh,
+    jb: () => ef,
     k: () => J,
     k3: () => P,
     ke: () => S,
     nA: () => em,
     nb: () => Q,
-    oH: () => N,
-    oh: () => eR,
+    oH: () => y,
+    oh: () => eO,
     p6: () => ee,
     pQ: () => x,
     pd: () => eu,
     tr: () => A,
-    uL: () => y,
+    uL: () => N,
     wE: () => H,
-    xR: () => $,
-    zy: () => C,
+    xR: () => z,
+    zy: () => v,
 }),
     n(938796);
 var i = n(735438),
@@ -53,8 +53,8 @@ var i = n(735438),
     c = n(136722),
     d = n(665260),
     _ = n(933681),
-    f = n(233993),
-    h = n(446600),
+    h = n(233993),
+    f = n(446600),
     p = n(935208),
     E = n(652215),
     m = n(746080);
@@ -89,6 +89,7 @@ let I = new Set([
         E.rbe.GUILD_DIRECTORY,
         E.rbe.GUILD_FORUM,
         E.rbe.GUILD_MEDIA,
+        E.rbe.MEDIA_THREAD,
     ]),
     T = new Set([
         E.rbe.GUILD_TEXT,
@@ -100,7 +101,7 @@ let I = new Set([
 function S(e) {
     return T.has(e);
 }
-let N = new Set([
+let y = new Set([
         E.rbe.GUILD_TEXT,
         E.rbe.GUILD_ANNOUNCEMENT,
         E.rbe.GUILD_FORUM,
@@ -108,7 +109,7 @@ let N = new Set([
         E.rbe.GUILD_VOICE,
         E.rbe.GUILD_STAGE_VOICE,
     ]),
-    y = new Set([
+    N = new Set([
         E.rbe.GUILD_TEXT,
         E.rbe.GUILD_VOICE,
         E.rbe.GUILD_STAGE_VOICE,
@@ -122,17 +123,17 @@ let N = new Set([
         E.rbe.GUILD_FORUM,
         E.rbe.GUILD_MEDIA,
     ]);
-function C(e) {
-    return y.has(e);
+function v(e) {
+    return N.has(e);
 }
 E.rbe.GUILD_TEXT, E.rbe.GUILD_ANNOUNCEMENT, E.rbe.GUILD_FORUM, E.rbe.GUILD_MEDIA;
-let v = new Set([E.rbe.GUILD_VOICE, E.rbe.GUILD_STAGE_VOICE]);
-function O(e) {
-    return "SELECTABLE" !== e && v.has(e);
-}
+let C = new Set([E.rbe.GUILD_VOICE, E.rbe.GUILD_STAGE_VOICE]);
 function R(e) {
+    return "SELECTABLE" !== e && C.has(e);
+}
+function O(e) {
     var t;
-    return O(e) || ((t = e), B.has(t));
+    return R(e) || ((t = e), B.has(t));
 }
 let b = new Set([E.rbe.GUILD_STAGE_VOICE]),
     D = new Set([E.rbe.DM, E.rbe.GROUP_DM]);
@@ -155,7 +156,7 @@ let P = new Set([
 function x(e) {
     return P.has(e);
 }
-let U = new Set([
+let k = new Set([
     E.rbe.DM,
     E.rbe.GROUP_DM,
     E.rbe.GUILD_VOICE,
@@ -163,8 +164,8 @@ let U = new Set([
     E.rbe.PUBLIC_THREAD,
     E.rbe.PRIVATE_THREAD,
 ]);
-function k(e) {
-    return U.has(e);
+function U(e) {
+    return k.has(e);
 }
 let G = new Set([
     E.rbe.GUILD_TEXT,
@@ -181,7 +182,7 @@ let G = new Set([
 function F(e) {
     return G.has(e);
 }
-let V = new Set([E.rbe.ANNOUNCEMENT_THREAD, E.rbe.PUBLIC_THREAD, E.rbe.PRIVATE_THREAD]),
+let V = new Set([E.rbe.ANNOUNCEMENT_THREAD, E.rbe.PUBLIC_THREAD, E.rbe.PRIVATE_THREAD, E.rbe.MEDIA_THREAD]),
     B = new Set([E.rbe.PUBLIC_THREAD, E.rbe.PRIVATE_THREAD]),
     H = new Set([E.rbe.GUILD_TEXT, E.rbe.GUILD_ANNOUNCEMENT, E.rbe.GUILD_FORUM, E.rbe.GUILD_MEDIA]);
 function j(e) {
@@ -217,7 +218,7 @@ let K = new Set([
         E.rbe.GUILD_FORUM,
         E.rbe.GUILD_MEDIA,
     ]),
-    z = new Set([
+    $ = new Set([
         E.rbe.GUILD_ANNOUNCEMENT,
         E.rbe.GUILD_CATEGORY,
         E.rbe.GUILD_STORE,
@@ -228,7 +229,7 @@ let K = new Set([
         E.rbe.GUILD_FORUM,
         E.rbe.GUILD_MEDIA,
     ]),
-    $ = new Set([E.rbe.GUILD_TEXT, E.rbe.GUILD_ANNOUNCEMENT]),
+    z = new Set([E.rbe.GUILD_TEXT, E.rbe.GUILD_ANNOUNCEMENT]),
     q = new Set([E.rbe.GUILD_TEXT, E.rbe.GUILD_ANNOUNCEMENT, E.rbe.GUILD_FORUM, E.rbe.GUILD_MEDIA]),
     X = new Set([
         E.rbe.GUILD_TEXT,
@@ -289,10 +290,10 @@ E.rbe.GUILD_TEXT, E.rbe.GUILD_ANNOUNCEMENT, E.rbe.GUILD_FORUM, E.rbe.GUILD_VOICE
 let ea = c.kg(E.xBc.CONNECT, E.xBc.VIEW_CHANNEL),
     eo = E.hVb.CONNECT | E.hVb.VIEW_CHANNEL;
 function el(e) {
-    return O(e) ? ea : E.xBc.VIEW_CHANNEL;
+    return R(e) ? ea : E.xBc.VIEW_CHANNEL;
 }
 function eu(e) {
-    return O(e) ? eo : E.hVb.VIEW_CHANNEL;
+    return R(e) ? eo : E.hVb.VIEW_CHANNEL;
 }
 class ec {
     id;
@@ -371,7 +372,7 @@ function ed(e) {
     );
 }
 let e_ = Object.freeze({});
-class ef extends ec {
+class eh extends ec {
     get permissionOverwrites() {
         return this.permissionOverwrites_ ?? e_;
     }
@@ -409,7 +410,7 @@ class ef extends ec {
         return null != t ? new this.constructor(t) : this;
     }
     computeLurkerPermissionsAllowList() {
-        if (this.isGuildStageVoice() && h.A.isPublic(this.id)) return f.Uu;
+        if (this.isGuildStageVoice() && f.A.isPublic(this.id)) return h.Uu;
     }
     isNSFW() {
         return this.nsfw;
@@ -451,6 +452,9 @@ class ef extends ec {
             E.kvI.GUILD_THREADS_ONLY.has(this.parentChannelThreadType)
         );
     }
+    isMediaThread() {
+        return this.type === E.rbe.MEDIA_THREAD;
+    }
     isRingable() {
         return E.kvI.CALLABLE.has(this.type) || this.type === E.rbe.GUILD_VOICE;
     }
@@ -458,10 +462,10 @@ class ef extends ec {
         return this.type === E.rbe.GUILD_CATEGORY;
     }
     isVocal() {
-        return k(this.type);
+        return U(this.type);
     }
     isGuildVocal() {
-        return O(this.type);
+        return R(this.type);
     }
     isGuildVocalOrThread() {
         return this.isGuildVocal() || this.isVocalThread();
@@ -552,7 +556,7 @@ class ef extends ec {
         return null != this.hdStreamingUntil && new Date(this.hdStreamingUntil) > new Date();
     }
 }
-class eh extends ef {
+class ef extends eh {
     constructor(e) {
         super(e),
             (this.application_id = e.application_id),
@@ -686,10 +690,10 @@ class eh extends ef {
             hdStreamingBuyerId: e.hd_streaming_buyer_id,
             voiceHangout: e.voice_hangout,
         };
-        return (0, _.pp)(n, eh);
+        return (0, _.pp)(n, ef);
     }
 }
-class ep extends ef {
+class ep extends eh {
     constructor(e) {
         super(e),
             (this.application_id = e.application_id),
@@ -716,7 +720,7 @@ class ep extends ef {
             (this.voiceHangout = e.voiceHangout);
     }
     static fromServer(e, t) {
-        return eR({
+        return eO({
             application_id: e.application_id,
             bitrate_: e.bitrate,
             flags_: e.flags,
@@ -746,7 +750,7 @@ class ep extends ef {
         });
     }
 }
-class eE extends ef {
+class eE extends eh {
     constructor(e) {
         super(e),
             (this.application_id = e.application_id),
@@ -770,7 +774,7 @@ class eE extends ef {
             (this.hdStreamingUntil = e.hdStreamingUntil);
     }
     static fromServer(e, t) {
-        return eR({
+        return eO({
             application_id: e.application_id,
             defaultAutoArchiveDuration: e.default_auto_archive_duration,
             defaultThreadRateLimitPerUser: e.default_thread_rate_limit_per_user,
@@ -798,7 +802,7 @@ class eE extends ef {
     }
 }
 class em extends eE {}
-class eg extends ef {
+class eg extends eh {
     constructor(e) {
         super(e),
             (this.availableTags = e.availableTags ?? []),
@@ -876,7 +880,7 @@ class eA {
 }
 let eI = new eA(),
     eT = new eA();
-class eS extends ef {
+class eS extends eh {
     static sortRecipients(e, t) {
         let n = eI.getOrCompute(t);
         return [...(e ?? [])].sort((e, t) => (eT.getOrCompute(e.id) ^ n) - (eT.getOrCompute(t.id) ^ n));
@@ -947,7 +951,7 @@ class eS extends ef {
         return this.set("recipients", r().without(this.recipients, e));
     }
 }
-class eN extends ef {
+class ey extends eh {
     constructor(e) {
         super(e),
             (this.appliedTags = e.appliedTags ?? []),
@@ -1013,10 +1017,10 @@ class eN extends ef {
             userLimit_: e.user_limit,
             videoQualityMode: e.video_quality_mode,
         };
-        return (0, _.pp)(n, eN);
+        return (0, _.pp)(n, ey);
     }
 }
-let ey = {
+let eN = {
     [E.rbe.DM]: eS.fromServer,
     [E.rbe.GROUP_DM]: eS.fromServer,
     [E.rbe.GUILD_TEXT]: eE.fromServer,
@@ -1025,20 +1029,21 @@ let ey = {
     [E.rbe.GUILD_CATEGORY]: eE.fromServer,
     [E.rbe.GUILD_ANNOUNCEMENT]: eE.fromServer,
     [E.rbe.GUILD_STORE]: eE.fromServer,
-    [E.rbe.ANNOUNCEMENT_THREAD]: eN.fromServer,
-    [E.rbe.PUBLIC_THREAD]: eN.fromServer,
-    [E.rbe.PRIVATE_THREAD]: eN.fromServer,
+    [E.rbe.ANNOUNCEMENT_THREAD]: ey.fromServer,
+    [E.rbe.PUBLIC_THREAD]: ey.fromServer,
+    [E.rbe.PRIVATE_THREAD]: ey.fromServer,
+    [E.rbe.MEDIA_THREAD]: ey.fromServer,
     [E.rbe.GUILD_DIRECTORY]: eE.fromServer,
     [E.rbe.GUILD_FORUM]: eg.fromServer,
     [E.rbe.GUILD_MEDIA]: eg.fromServer,
 };
-function eC(e, t) {
-    return (ey[e.type ?? E.rbe.GUILD_TEXT] ?? eh.fromServer)(e, t);
+function ev(e, t) {
+    return (eN[e.type ?? E.rbe.GUILD_TEXT] ?? ef.fromServer)(e, t);
 }
-function ev(e) {
+function eC(e) {
     return eb(e);
 }
-let eO = {
+let eR = {
     [E.rbe.DM]: class extends eS {},
     [E.rbe.GROUP_DM]: class extends eS {},
     [E.rbe.GUILD_TEXT]: em,
@@ -1047,17 +1052,18 @@ let eO = {
     [E.rbe.GUILD_CATEGORY]: class extends eE {},
     [E.rbe.GUILD_ANNOUNCEMENT]: class extends eE {},
     [E.rbe.GUILD_STORE]: class extends eE {},
-    [E.rbe.ANNOUNCEMENT_THREAD]: eN,
-    [E.rbe.PUBLIC_THREAD]: eN,
-    [E.rbe.PRIVATE_THREAD]: eN,
+    [E.rbe.ANNOUNCEMENT_THREAD]: ey,
+    [E.rbe.PUBLIC_THREAD]: ey,
+    [E.rbe.PRIVATE_THREAD]: ey,
+    [E.rbe.MEDIA_THREAD]: ey,
     [E.rbe.GUILD_DIRECTORY]: class extends eE {},
     [E.rbe.GUILD_FORUM]: eg,
     [E.rbe.GUILD_MEDIA]: eg,
 };
-function eR(e) {
-    let t = eO[e.type ?? E.rbe.GUILD_TEXT] ?? eh;
+function eO(e) {
+    let t = eR[e.type ?? E.rbe.GUILD_TEXT] ?? ef;
     return (0, _.pp)(e, t);
 }
 function eb(e) {
-    return new (eO[e.type ?? E.rbe.GUILD_TEXT] ?? eh)(ed(e));
+    return new (eR[e.type ?? E.rbe.GUILD_TEXT] ?? ef)(ed(e));
 }

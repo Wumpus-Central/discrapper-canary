@@ -1202,6 +1202,11 @@
     width: 1px
 }
 
+.messageCount_a750ac {
+    cursor: pointer;
+    padding-inline: var(--space-4)
+}
+
 .timeline__76ea6 {
     bottom: 72px;
     height: 24px;
@@ -1222,6 +1227,7 @@
 .marker__76ea6 {
     align-items: center;
     bottom: 0;
+    cursor: pointer;
     display: flex;
     height: 24px;
     justify-content: center;
@@ -2465,23 +2471,6 @@
     align-items: center;
     display: flex;
     padding: var(--space-4) var(--space-8)
-}
-
-.list__75b62 {
-    list-style: decimal outside;
-    padding-inline-start: 1em
-}
-
-.list__75b62>li::marker {
-    color: var(--text-muted)
-}
-
-.list__75b62>li:first-child {
-    margin-bottom: var(--space-8)
-}
-
-.recordContainer__75b62 {
-    margin-top: var(--space-8)
 }
 
 .singleItemWrapper_ed6d69 {

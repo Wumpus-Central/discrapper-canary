@@ -53,22 +53,22 @@ function _(e) {
     return (function (e, t, n) {
         let {
                 toAST: r = !1,
-                hideSimpleEmbedContent: o = !0,
-                formatInline: d = !1,
-                postProcessor: _,
-                contentMessage: h,
+                hideSimpleEmbedContent: d = !0,
+                formatInline: _ = !1,
+                postProcessor: h,
+                contentMessage: f,
             } = n,
-            f = !1,
             E = !1,
-            g = (h ?? t).content,
-            A = e(g, !0, c(t, n), (e, n, r) => {
-                var c, A, I;
-                let T;
+            g = !1,
+            A = (f ?? t).content,
+            I = e(A, !0, c(t, n), (e, n, r) => {
+                var c, I, T;
+                let S;
                 return (
-                    (E = r ?? !1),
+                    (g = r ?? !1),
                     Array.isArray(e) || (e = [e]),
-                    E && (e = [{ type: "text", content: g, originalMatch: { index: 0, 0: g } }]),
-                    o &&
+                    g && (e = [{ type: "text", content: A, originalMatch: { index: 0, 0: A } }]),
+                    d &&
                         (e = (function (e, t) {
                             if (1 !== e.length || 1 !== t.length) return e;
                             let n = e[0],
@@ -76,8 +76,9 @@ function _(e) {
                             return ("link" === n.type || "attachmentLink" === n.type) && l.has(i.type) && (0, s.NV)(i)
                                 ? []
                                 : e;
-                        })(e, (h ?? t).embeds)),
-                    d ||
+                        })(e, (f ?? t).embeds)),
+                    _ ||
+                        t.type === o.lAJ.MEDIA_MENTION_MESSAGE ||
                         ((c = e),
                         (e = n
                             ? p(c)
@@ -85,16 +86,16 @@ function _(e) {
                                   c[0].content instanceof Array &&
                                   (c[0].content = p(c[0].content)),
                               c))),
-                    (T = (A = e).some((e) => "link" !== e.type)),
-                    (e = A.filter((e) => {
+                    (S = (I = e).some((e) => "link" !== e.type)),
+                    (e = I.filter((e) => {
                         let t = "link" === e.type,
                             n = null != e.target ? (0, i.ts)(e.target) : null;
-                        return !(t && null != n && !T);
+                        return !(t && null != n && !S);
                     })),
-                    (h ?? t).embeds.length > 0 &&
-                        ((I = e),
-                        (f = n ? m(I) : "paragraph" === I[0].type && I[0].content instanceof Array && m(I[0].content))),
-                    d &&
+                    (f ?? t).embeds.length > 0 &&
+                        ((T = e),
+                        (E = n ? m(T) : "paragraph" === T[0].type && T[0].content instanceof Array && m(T[0].content))),
+                    _ &&
                         (e = (function e(t) {
                             return (
                                 t.forEach((t) => {
@@ -111,11 +112,11 @@ function _(e) {
                                 t
                             );
                         })(e)),
-                    null != _ && (e = _(e, n)),
+                    null != h && (e = h(e, n)),
                     e
                 );
             });
-        return { hasSpoilerEmbeds: f, hasBailedAst: E, content: A };
+        return { hasSpoilerEmbeds: E, hasBailedAst: g, content: I };
     })(t.formatInline ? r.A.parseInlineReply : r.A.parse, e, t);
 }
 function h(e, t) {

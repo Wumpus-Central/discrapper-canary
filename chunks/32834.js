@@ -87,7 +87,7 @@ let ec = es.Ay.getEnableHardwareAcceleration(),
                     null != h &&
                         (0, I.L3)(e, async () => {
                             let { default: e } = await Promise.all([
-                                t.e("12697"),
+                                t.e("94881"),
                                 t.e("26132"),
                                 t.e("46652"),
                                 t.e("93190"),
@@ -1118,7 +1118,7 @@ let nw = (e) => {
         a = s.useCallback(() => {
             (0, m.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    t.e("71836"),
+                    t.e("87671"),
                     t.e("59957"),
                     t.e("28136"),
                     t.e("16084"),
@@ -1976,19 +1976,22 @@ function t2(e) {
     });
 }
 function t3(e) {
-    let { channel: n, baseChannelId: t } = e;
-    return (0, i.jsxs)(i.Fragment, {
-        children: [
-            n.isForumPost() ? null : (0, i.jsx)(tJ, { channel: n }),
-            n.isModeratorReportChannel() ? (0, i.jsx)(tz, { channel: n }) : null,
-            (0, i.jsx)(t1, { channel: n }),
-            (0, i.jsx)(tA.Ay.Icon, {
-                icon: tC.P,
-                tooltip: Y.intl.string(Y.t.cpT0Cq),
-                onClick: () => (0, t0.xu)((0, tG.j)(n), t ?? n.parent_id),
-            }),
-        ],
-    });
+    let { channel: n, baseChannelId: t } = e,
+        l = (0, i.jsx)(tA.Ay.Icon, {
+            icon: tC.P,
+            tooltip: Y.intl.string(Y.t.cpT0Cq),
+            onClick: () => (0, t0.xu)((0, tG.j)(n), t ?? n.parent_id),
+        });
+    return n.isMediaThread()
+        ? l
+        : (0, i.jsxs)(i.Fragment, {
+              children: [
+                  n.isForumPost() ? null : (0, i.jsx)(tJ, { channel: n }),
+                  n.isModeratorReportChannel() ? (0, i.jsx)(tz, { channel: n }) : null,
+                  (0, i.jsx)(t1, { channel: n }),
+                  l,
+              ],
+          });
 }
 var t7 = t(31717),
     t9 = t(853742),
@@ -2716,8 +2719,7 @@ function iM(e) {
         m = (e) => {
             (0, I.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    t.e("12697"),
-                    t.e("84738"),
+                    t.e("94881"),
                     t.e("26132"),
                     t.e("46652"),
                     t.e("93190"),
@@ -4804,7 +4806,7 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
                 t.e("27682"),
                 t.e("25005"),
                 t.e("5132"),
-                t.e("71836"),
+                t.e("87671"),
                 t.e("56574"),
                 t.e("49681"),
                 t.e("28136"),
@@ -4917,8 +4919,7 @@ class rX extends s.PureComponent {
         o()(null != l, "Missing user in Channel.openDMContextMenu"),
             (0, I.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    t.e("12697"),
-                    t.e("84738"),
+                    t.e("94881"),
                     t.e("26132"),
                     t.e("46652"),
                     t.e("93190"),

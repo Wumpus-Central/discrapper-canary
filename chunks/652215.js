@@ -1007,6 +1007,7 @@ var nc =
         (D[(D.IS_ANIMATED = 32)] = "IS_ANIMATED"),
         (D[(D.CONTAINS_GORE_CONTENT = 64)] = "CONTAINS_GORE_CONTENT"),
         (D[(D.CONTAINS_SELF_HARM_CONTENT = 128)] = "CONTAINS_SELF_HARM_CONTENT"),
+        (D[(D.HAS_TIMELINE_COMMENTS = 256)] = "HAS_TIMELINE_COMMENTS"),
         D),
     n_ = (((L = {})[(L.IS_ANIMATED = 32)] = "IS_ANIMATED"), L),
     nh =

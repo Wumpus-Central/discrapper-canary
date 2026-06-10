@@ -1,4 +1,4 @@
-a.d(t, { Fr: () => p, Kk: () => w, Mu: () => S, jO: () => I });
+a.d(t, { Fr: () => M, Kk: () => w, Mu: () => S, jO: () => I });
 var l = a(64700),
     s = a(735438),
     n = a.n(s),
@@ -77,7 +77,7 @@ function S(e) {
         [t],
     );
 }
-function p(e, t, a, s) {
+function M(e, t, a, s) {
     let c = e.isModeratorReportChannel(),
         { showResolvedFlags: g } = (0, d.T)(e.id),
         {
@@ -120,7 +120,7 @@ function p(e, t, a, s) {
                     .filter((e) => {
                         if (c && !g) return !1;
                         let t = o.A.getChannel(e);
-                        return null != t && u.A.can(j.xB.VIEW_CHANNEL, t);
+                        return null != t && u.A.can(j.xB.VIEW_CHANNEL, t) && !t.isMediaThread();
                     })
                     .value(),
             ),

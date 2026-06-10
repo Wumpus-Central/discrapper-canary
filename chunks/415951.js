@@ -21,9 +21,9 @@ let c = () => {
             (0, r.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([
-                        n.e("12296"),
-                        n.e("33799"),
-                        n.e("52077"),
+                        n.e("55666"),
+                        n.e("5288"),
+                        n.e("53785"),
                         n.e("11328"),
                         n.e("31299"),
                         n.e("734"),
@@ -84,9 +84,9 @@ let c = () => {
         openMemberVerificationPreviewModal(e) {
             (0, r.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([
-                    n.e("12296"),
-                    n.e("33799"),
-                    n.e("52077"),
+                    n.e("55666"),
+                    n.e("5288"),
+                    n.e("53785"),
                     n.e("11328"),
                     n.e("31299"),
                     n.e("734"),

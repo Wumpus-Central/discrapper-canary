@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => z }), n(938796), n(321073), n(142703);
+n.d(t, { A: () => q }), n(938796), n(321073), n(142703);
 var i = n(735438),
     r = n.n(i),
     s = n(665260),
@@ -67,15 +67,24 @@ async function B(e, t, n) {
         } catch {}
     U.log("Push notification message not in cache, adding directly", t.id, t.channel_id);
     let s = u.A.getOrCreate(e);
-    u.A.commit(s.receivePushNotification(t, n)), $.emitChange();
+    u.A.commit(s.receivePushNotification(t, n)), z.emitChange();
 }
-function H() {
+function H(e) {
+    if (null == e) return;
+    let t = e.mediaMention?.attachment_id;
+    if (null == t) return;
+    let n = u.A.get(t);
+    if (null == n) return;
+    let i = n.findNewest((t) => t.messageReference?.message_id === e.id);
+    null != i && ((n = n.remove(i.id)), u.A.commit(n));
+}
+function j() {
     u.A.forEach((e) => {
         let { channelId: t } = e;
         null == v.A.getChannel(t) && u.A.clear(t);
     });
 }
-function j() {
+function Y() {
     let e = !1;
     return (
         u.A.forEach((t) => {
@@ -96,7 +105,7 @@ function j() {
         e
     );
 }
-function Y(e) {
+function W(e) {
     let { type: t, channelId: n, messageId: i, userId: r, emoji: s, reactionType: a } = e,
         o = u.A.get(n);
     if (null == o || !(0, T.vp)(e)) return !1;
@@ -106,7 +115,7 @@ function Y(e) {
     )),
         u.A.commit(o);
 }
-function W(e) {
+function K(e) {
     let { type: t, messageData: n } = e,
         { message: i } = n,
         r = (0, c.cR)(n),
@@ -123,7 +132,7 @@ function W(e) {
     )),
         u.A.commit(o);
 }
-class K extends a.Ay.Store {
+class $ extends a.Ay.Store {
     static displayName = "MessageStore";
     initialize() {
         this.waitFor(N.default, v.A, C.A, m.A, R.Ay, O.Ay, b.A, E.A, S.default, D.A, L.A, w.A, M.A, P.default),
@@ -205,7 +214,7 @@ class K extends a.Ay.Store {
         return G;
     }
 }
-let $ = new K(o.h, {
+let z = new $(o.h, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: function (e) {
             let { changesByChannelId: t } = e;
             for (let e in t) {
@@ -310,7 +319,7 @@ let $ = new K(o.h, {
         MESSAGE_CREATE: function (e) {
             let { channelId: t, message: i, optimistic: r, isPushNotification: s } = e,
                 a = u.A.getOrCreate(t),
-                o = n(587626).A.isConnected();
+                o = n(617710).A.isConnected();
             return s
                 ? (0, I.K)()
                     ? (B(t, i, o), !1)
@@ -322,7 +331,21 @@ let $ = new K(o.h, {
                           k.has(i.nonce) &&
                           ((a = a.remove(i.nonce)), k.delete(i.nonce)),
                       (a = a.receiveMessage(i, !0 === C.A.isAtBottom(t))),
-                      u.A.commit(a));
+                      u.A.commit(a),
+                      (function (e) {
+                          if (null != e.media_mention && null != e.media_mention.message_id) {
+                              let t = e.media_mention.attachment_id,
+                                  n = u.A.getOrCreate(t),
+                                  i = {
+                                      ...e,
+                                      channel_id: t,
+                                      type: x.lAJ.MEDIA_MENTION_MESSAGE,
+                                      id: e.media_mention.message_id,
+                                      message_reference: void 0,
+                                  };
+                              (n = n.receiveMessage(i, !1)), u.A.commit(n);
+                          }
+                      })(i));
         },
         MESSAGE_SEND_FAILED: function (e) {
             let { channelId: t, messageId: n, reason: i } = e,
@@ -346,8 +369,8 @@ let $ = new K(o.h, {
                       )),
                 u.A.commit(r);
         },
-        MESSAGE_SEND_FAILED_AUTOMOD: W,
-        MESSAGE_EDIT_FAILED_AUTOMOD: W,
+        MESSAGE_SEND_FAILED_AUTOMOD: K,
+        MESSAGE_EDIT_FAILED_AUTOMOD: K,
         MESSAGE_UPDATE: function (e) {
             let t = e.message.id,
                 n = e.message.channel_id,
@@ -372,12 +395,15 @@ let $ = new K(o.h, {
                         ? i.mutate({ revealedMessageId: e.id })
                         : i.mutate({ revealedMessageId: null });
             }
-            (i = i.remove(t)), u.A.commit(i), k.delete(t);
+            H(i.get(t)), (i = i.remove(t)), u.A.commit(i), k.delete(t);
         },
         MESSAGE_DELETE_BULK: function (e) {
             let { ids: t, channelId: n } = e,
                 i = u.A.getOrCreate(n);
             if (null == i) return !1;
+            t.forEach((e) => {
+                H(i.get(e));
+            });
             let s = i.removeMany(t);
             if (i === s) return !1;
             if (null != s.revealedMessageId && r().some(t, (e) => s.revealedMessageId === e)) {
@@ -402,22 +428,22 @@ let $ = new K(o.h, {
                 n = u.A.getOrCreate(t);
             (n = n.loadComplete({ newMessages: [], hasMoreAfter: !1, hasMoreBefore: !1 })), u.A.commit(n);
         },
-        CHANNEL_DELETE: H,
-        THREAD_DELETE: H,
-        GUILD_DELETE: H,
-        RELATIONSHIP_ADD: j,
-        RELATIONSHIP_UPDATE: j,
-        RELATIONSHIP_REMOVE: j,
+        CHANNEL_DELETE: j,
+        THREAD_DELETE: j,
+        GUILD_DELETE: j,
+        RELATIONSHIP_ADD: Y,
+        RELATIONSHIP_UPDATE: Y,
+        RELATIONSHIP_REMOVE: Y,
         GUILD_MEMBERS_CHUNK_BATCH: function (e) {},
         THREAD_MEMBER_LIST_UPDATE: function (e) {},
-        MESSAGE_REACTION_ADD: Y,
+        MESSAGE_REACTION_ADD: W,
         MESSAGE_REACTION_ADD_MANY: function (e) {
             let { channelId: t, messageId: n, reactions: i } = e,
                 r = u.A.get(t);
             if (null == r) return !1;
             (r = r.update(n, (e) => e.addReactionBatch(i, P.default.getCurrentUser()?.id))), u.A.commit(r);
         },
-        MESSAGE_REACTION_REMOVE: Y,
+        MESSAGE_REACTION_REMOVE: W,
         MESSAGE_REACTION_REMOVE_ALL: function (e) {
             let { channelId: t, messageId: n } = e,
                 i = u.A.get(t);
@@ -454,4 +480,4 @@ let $ = new K(o.h, {
             null != t && null != t.author && null != n && t.author.id === n.id && (G = !0);
         },
     }),
-    z = $;
+    q = z;

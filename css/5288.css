@@ -3054,6 +3054,10 @@
     padding: 0 12px
 }
 
+.timestamp_eece5a {
+    margin-inline-end: var(--space-4)
+}
+
 .guildIconImage_d28ae0 {
     height: 100%;
     -o-object-fit: cover;
@@ -5485,6 +5489,12 @@
     transition: background-color .2s ease
 }
 
+.confettiCanvas__78e61 {
+    height: 100%;
+    position: absolute;
+    width: 100%
+}
+
 .banner_ec75b3 {
     align-items: center;
     background: linear-gradient(90deg, var(--guild-boosting-blue-for-gradients) 0, var(--guild-boosting-purple-for-gradients) 100%);
@@ -6675,14 +6685,4 @@
 div.nagbar_d74ef8 {
     border-radius: 0 0 10px 10px;
     margin-top: -24px
-}
-
-.videoPaused_afb275 {
-    align-items: center;
-    display: flex;
-    justify-content: start
-}
-
-.warningCircle_afb275 {
-    margin-inline-end: 4px
 }

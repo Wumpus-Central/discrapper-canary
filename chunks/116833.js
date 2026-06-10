@@ -19,7 +19,7 @@ let a = {
         0: () => Promise.all([n.e("18990"), n.e("48565")]).then(n.bind(n, 732852)),
         1: () =>
             Promise.all([
-                n.e("84738"),
+                n.e("5288"),
                 n.e("61074"),
                 n.e("15856"),
                 n.e("53025"),
@@ -43,12 +43,12 @@ let a = {
             ]).then(n.bind(n, 510273)),
         2: () => Promise.all([n.e("76740"), n.e("58831")]).then(n.bind(n, 677074)),
         3: () =>
-            Promise.all([n.e("84738"), n.e("16153"), n.e("34530"), n.e("21041"), n.e("38672")]).then(n.bind(n, 289363)),
+            Promise.all([n.e("5288"), n.e("16153"), n.e("34530"), n.e("21041"), n.e("38672")]).then(n.bind(n, 289363)),
         4: () => Promise.all([n.e("44651"), n.e("68708"), n.e("49111")]).then(n.bind(n, 297930)),
         5: () => Promise.all([n.e("61074"), n.e("58038"), n.e("62507")]).then(n.bind(n, 839238)),
         6: () => Promise.all([n.e("38805"), n.e("47256"), n.e("59880"), n.e("58529")]).then(n.bind(n, 275256)),
         7: () => Promise.all([n.e("27682"), n.e("58407")]).then(n.bind(n, 939034)),
-        8: () => Promise.all([n.e("84738"), n.e("54282")]).then(n.bind(n, 140049)),
+        8: () => Promise.all([n.e("5288"), n.e("54282")]).then(n.bind(n, 140049)),
         9: () => Promise.all([n.e("99818"), n.e("71695")]).then(n.bind(n, 392498)),
         10: () => Promise.all([n.e("5132"), n.e("46570"), n.e("44262")]).then(n.bind(n, 276837)),
     },

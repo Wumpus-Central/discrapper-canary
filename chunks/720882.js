@@ -56,8 +56,8 @@ var D = n(646911),
     q = n(365863);
 let z = H.uh.KEYWORD;
 var K = n(880457),
-    V = n(503698),
-    J = n.n(V),
+    J = n(503698),
+    V = n.n(J),
     W = n(844222),
     Z = n(460905),
     $ = n(217306),
@@ -75,7 +75,7 @@ var K = n(880457),
 function ed(e) {
     let { emoji: t, reducedMotionEnabled: n, className: i = "", isFocused: a = !1 } = e;
     return (0, l.jsx)("img", {
-        className: J()(i, eo.Z),
+        className: V()(i, eo.Z),
         src:
             null != t.id
                 ? el.Ay.getEmojiURL({ id: t.id, animated: t.animated && (!n || a), size: 18 })
@@ -127,10 +127,10 @@ function eP(e) {
             forceOpen: n,
             children: (0, l.jsx)("div", {
                 "aria-label": I.intl.formatToPlainString(I.t["/iYSo6"], { emojiName: t.name }),
-                className: J()(eU.x6, { [eU.in]: n }),
+                className: V()(eU.x6, { [eU.in]: n }),
                 children:
                     null == a || "" === a.trim()
-                        ? (0, l.jsx)("span", { className: J()("emoji", "emoji-text", eU.Kk), children: s })
+                        ? (0, l.jsx)("span", { className: V()("emoji", "emoji-text", eU.Kk), children: s })
                         : (0, l.jsx)("img", { className: eU.Kk, src: a, alt: "" }),
             }),
         })
@@ -153,8 +153,8 @@ function ez(e) {
     });
 }
 var eK = n(110384),
-    eV = n(517997),
-    eJ = n(554146),
+    eJ = n(517997),
+    eV = n(554146),
     eW = n(111159),
     eZ = n(138134),
     e$ = n(964486),
@@ -186,7 +186,7 @@ let tg = new Map();
 var tA = n(534890),
     tm = n(604681),
     tf = n(828488),
-    tp = n(761259),
+    tp = n(775632),
     ty = n(958720),
     th = n(485845),
     tE = n(778712),
@@ -274,8 +274,8 @@ function tk(e) {
         E,
         _,
         b,
-        V,
         J,
+        V,
         el,
         eo,
         ew,
@@ -289,8 +289,8 @@ function tk(e) {
         tq,
         tz,
         tK,
-        tV,
         tJ,
+        tV,
         tW,
         {
             message: tZ,
@@ -352,7 +352,8 @@ function tk(e) {
             (s = en.jW.useSetting()),
             (u = (0, et.Id)(t$)),
             (0, S.bG)([ei.A], () => s && u && (t$.isPrivate() || ei.A.can(F.xBc.ADD_REACTIONS, t$)), [t$, u, s]) &&
-            i.length > 0
+            i.length > 0 &&
+            tZ.type !== F.lAJ.MEDIA_MENTION_MESSAGE
                 ? (0, l.jsx)(r.rX, {
                       className: eU.iE,
                       children: i.map((e, t) =>
@@ -379,7 +380,11 @@ function tk(e) {
         nc = (function (e, t) {
             let { reducedMotion: n } = a.useContext(W.C),
                 i = (0, et.Id)(t),
-                s = (0, S.bG)([ei.A], () => (t.isPrivate() || ei.A.can(F.xBc.ADD_REACTIONS, t)) && i, [t, i]),
+                s = (0, S.bG)(
+                    [ei.A],
+                    () => (t.isPrivate() || ei.A.can(F.xBc.ADD_REACTIONS, t)) && i && !t.isMediaThread(),
+                    [t, i],
+                ),
                 o = (0, Y.D6)(t.getGuildId());
             if (!en.jW.getSetting() || !s) return null;
             let d = o
@@ -449,7 +454,7 @@ function tk(e) {
                       icon: ej.R,
                   })
                 : null),
-        ng = (0, eV.u)(t$, tZ)
+        ng = (0, eJ.u)(t$, tZ)
             ? (0, l.jsx)(r.Dr, {
                   id: "reply",
                   label: I.intl.string(I.t["5IEsGx"]),
@@ -608,10 +613,10 @@ function tk(e) {
         })(tZ),
         ny = (0, eR.A)(tZ, t$),
         nh =
-            ((V = (0, eO.Vc)(t$.guild_id, t$, "MessageContextMenu")),
-            (J = (0, ev.Lt)(tZ.flags, F.pr7.IS_GUILD_OFFICIAL)),
-            V
-                ? J
+            ((J = (0, eO.Vc)(t$.guild_id, t$, "MessageContextMenu")),
+            (V = (0, ev.Lt)(tZ.flags, F.pr7.IS_GUILD_OFFICIAL)),
+            J
+                ? V
                     ? (0, l.jsx)(r.Dr, {
                           id: "guild-official-unset",
                           action: () => {
@@ -895,7 +900,7 @@ function tk(e) {
         nR = (function (e) {
             let t = (0, S.bG)([e7.A], () => e7.A.hasReportedMessage(e.channel_id, e.id)),
                 n = (0, e8.KB)(e),
-                i = n ? [eJ.M.REPORT_TO_MOD_NEW_TAG] : [],
+                i = n ? [eV.M.REPORT_TO_MOD_NEW_TAG] : [],
                 [a, s] = (0, eQ.kn)(i);
             return ((0, e$.l0)(() => {
                 n && s(e5.i.AUTO_DISMISS);
@@ -910,7 +915,7 @@ function tk(e) {
                       icon: eZ.i,
                       disabled: t,
                       leadingAccessory: { type: "icon", icon: eZ.i },
-                      badge: a === eJ.M.REPORT_TO_MOD_NEW_TAG ? "new" : void 0,
+                      badge: a === eV.M.REPORT_TO_MOD_NEW_TAG ? "new" : void 0,
                       color: "danger",
                   })
                 : null;
@@ -1069,17 +1074,17 @@ function tk(e) {
             : null,
         nX =
             ((t = { shouldHideMediaOptions: ni }),
-            (tV = tY?.url ?? ""),
-            (tJ = (0, S.bG)([tR.Ay], () => tR.Ay.isVideoStatsEnabled(tV))),
+            (tJ = tY?.url ?? ""),
+            (tV = (0, S.bG)([tR.Ay], () => tR.Ay.isVideoStatsEnabled(tJ))),
             (tW = a.useCallback(() => {
-                "" !== tV && (0, tR.FM)(tV);
-            }, [tV])),
+                "" !== tJ && (0, tR.FM)(tJ);
+            }, [tJ])),
             null != tY && (0, tw.XB)(tY.contentType) && t?.shouldHideMediaOptions !== !0
                 ? (0, l.jsx)(r.sL, {
                       id: "video-stats-for-nerds",
                       label: "Stats for Nerds",
                       leadingAccessory: { type: "icon", icon: eh.m },
-                      checked: tJ,
+                      checked: tV,
                       action: tW,
                   })
                 : null),

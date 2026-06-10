@@ -1,19 +1,21 @@
 "use strict";
 n.d(t, { A: () => o });
-var r = n(427930),
-    i = n(141468),
-    a = n(143413),
-    s = n(652215);
+var i = n(427930),
+    r = n(320095),
+    s = n(143413),
+    a = n(652215);
 function o(e, t) {
-    return !(
-        null == t ||
-        e.author.id !== t ||
-        e.state !== s.cmJ.SENT ||
-        (0, a.A)(e) ||
-        !(0, i.ei)(e) ||
-        e.hasFlag(s.pr7.IS_VOICE_MESSAGE) ||
-        null != e.referralTrialOfferId ||
-        e.isPoll() ||
-        (0, r.A)(e)
+    return (
+        !(
+            null == t ||
+            e.author.id !== t ||
+            e.state !== a.cmJ.SENT ||
+            (0, s.A)(e) ||
+            !(0, r.ei)(e) ||
+            e.hasFlag(a.pr7.IS_VOICE_MESSAGE) ||
+            null != e.referralTrialOfferId ||
+            e.isPoll() ||
+            (0, i.A)(e)
+        ) && e.type !== a.lAJ.MEDIA_MENTION_MESSAGE
     );
 }

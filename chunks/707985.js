@@ -1,9 +1,9 @@
-i.d(t, { A: () => n });
-function n(e) {
+n.d(t, { A: () => i });
+function i(e) {
     let {
             channel: t,
-            canChat: i,
-            renderReactions: n,
+            canChat: n,
+            renderReactions: i,
             canAddNewReactions: l,
             isLurking: a,
             communicationDisabled: r,
@@ -11,11 +11,13 @@ function n(e) {
             isAutomodQuarantined: s,
         } = e,
         u = t.isPrivate(),
-        d = t.isSystemDM(),
-        c = (i || u) && o;
+        c = t.isSystemDM(),
+        d = t.isMediaThread(),
+        m = (!0 === l || u) && !c && o && !d,
+        h = (n || u) && o && !d;
     return {
-        disableReactionReads: !n,
-        disableReactionCreates: a || !c || !((!0 === l || u) && !d && o),
-        disableReactionUpdates: a || !c || !0 === r || !0 === s,
+        disableReactionReads: !i,
+        disableReactionCreates: a || !h || !m,
+        disableReactionUpdates: a || !h || !0 === r || !0 === s,
     };
 }
