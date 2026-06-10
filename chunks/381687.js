@@ -1142,7 +1142,10 @@ class eJ extends s.PureComponent {
     };
     onFocus = () => {
         let { searchContext: e } = this.props;
-        this.setState({ focused: !0 }), j.A.setFocused(e, !0), d.O.announce(eo.intl.string(eo.t["5h0QOP"]));
+        this._editorRef?.editor?.removeAttribute("aria-activedescendant"),
+            this.setState({ focused: !0 }),
+            j.A.setFocused(e, !0),
+            d.O.announce(eo.intl.string(eo.t["5h0QOP"]));
     };
     handleBlur = () => {
         let { searchContext: e } = this.props;
