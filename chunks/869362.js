@@ -762,7 +762,7 @@ class e2 extends a.PureComponent {
         });
     }
 }
-class e4 extends a.PureComponent {
+class e5 extends a.PureComponent {
     handlePrevClick = (e) => {
         e.stopPropagation(), e.preventDefault();
         let { onClick: t } = this.props;
@@ -777,7 +777,7 @@ class e4 extends a.PureComponent {
         });
     }
 }
-class e5 extends a.PureComponent {
+class e4 extends a.PureComponent {
     handleNextClick = (e) => {
         e.stopPropagation(), e.preventDefault();
         let { onClick: t } = this.props;
@@ -985,8 +985,8 @@ class th extends a.PureComponent {
                   className: tl.HY,
                   children: [
                       n,
-                      (0, i.jsx)(e4, { onClick: this.manualPrevious, className: r()(tl.UE, { [tl.h_]: s }) }),
-                      (0, i.jsx)(e5, { onClick: this.manualNext, className: r()(tl.UE, { [tl.h_]: a }) }),
+                      (0, i.jsx)(e5, { onClick: this.manualPrevious, className: r()(tl.UE, { [tl.h_]: s }) }),
+                      (0, i.jsx)(e4, { onClick: this.manualNext, className: r()(tl.UE, { [tl.h_]: a }) }),
                   ],
               });
     }
@@ -1606,14 +1606,14 @@ function t6(e) {
                       children: [
                           a.map((e, t) => (0, i.jsx)(t2, { url: e.url, children: e.name }, t)),
                           null != t.terms_of_service_url
-                              ? (0, i.jsx)(t4, {
+                              ? (0, i.jsx)(t5, {
                                     icon: tJ.o,
                                     url: t.terms_of_service_url,
                                     children: w.intl.string(w.t.s7STcY),
                                 })
                               : null,
                           null != t.privacy_policy_url
-                              ? (0, i.jsx)(t4, {
+                              ? (0, i.jsx)(t5, {
                                     icon: t0.X,
                                     url: t.privacy_policy_url,
                                     children: w.intl.string(w.t.kH3JR5),
@@ -1630,9 +1630,9 @@ function t2(e) {
         s = (0, t3.Ay)(),
         a = t9.A.getByUrl(t),
         n = (0, tQ.M)(s) ? a?.icon?.darkSVG : a?.icon?.lightSVG;
-    return (0, i.jsx)(t4, { icon: void 0 === n ? t1.q : void 0, imageSrc: n, url: t, children: l });
+    return (0, i.jsx)(t5, { icon: void 0 === n ? t1.q : void 0, imageSrc: n, url: t, children: l });
 }
-function t4(e) {
+function t5(e) {
     let { icon: t, imageSrc: l, iconColor: s, url: a, children: n } = e,
         o = G(),
         c = null;
@@ -1650,7 +1650,7 @@ function t4(e) {
         children: d,
     });
 }
-var t5 = l(385648),
+var t4 = l(385648),
     le = l(781696),
     lt = l(950305),
     ll = l(548118),
@@ -1758,7 +1758,7 @@ function lu(e) {
                     if (null != e) {
                         k(O.HAw.APP_DIRECTORY_SUPPORT_SERVER_JOINED, { application_id: t.id, support_guild_id: e });
                         let l = { page: O.liQ.APPLICATION_DIRECTORY };
-                        await (0, t5.Z2)(e, l);
+                        await (0, t4.Z2)(e, l);
                     }
                 } catch {}
             }, [t])),
@@ -2097,8 +2097,8 @@ var lH = l(607399),
     l8 = l(50268),
     l6 = l(207371),
     l2 = l(928658),
-    l4 = l(395671),
-    l5 = l(957565),
+    l5 = l(395671),
+    l4 = l(957565),
     se = l(692848),
     st = l(440970);
 let sl = "start_application_install",
@@ -2226,13 +2226,13 @@ let sr = a.forwardRef(function (e, t) {
         o = a.useCallback(() => {
             let e;
             k(O.HAw.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: l.id }),
-                (0, l5.C)(
+                (0, l4.C)(
                     ((e = l.id), `${location.protocol}//${location.host}${O.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(e)}`),
                     () => (0, lY.P0)((0, lz.o)(w.intl.string(w.t["L/PwZf"]), lX.Ck.SUCCESS)),
                 );
         }, [l.id]),
         c = a.useCallback(() => {
-            let e = l4.Ay.createFromServer(l);
+            let e = l5.Ay.createFromServer(l);
             (0, l2.r3)({ application: e, entrypoint: "app_directory" });
         }, [l]),
         u = (0, l8.A)({
@@ -2317,7 +2317,7 @@ let sr = a.forwardRef(function (e, t) {
                 children: [
                     g && (0, i.jsx)(sn, { size: s, contentWidth: "normal", onClick: m, isSubmitting: p }),
                     (0, i.jsx)(sa, { application: l, size: s, contentWidth: "normal", variant: x }),
-                    l5.p5
+                    l4.p5
                         ? (0, i.jsx)(ew.K, {
                               variant: "secondary",
                               size: s,
@@ -2334,7 +2334,7 @@ let sr = a.forwardRef(function (e, t) {
                 children: [
                     g && (0, i.jsx)(sn, { size: s, contentWidth: "small", onClick: m, isSubmitting: p }),
                     (0, i.jsx)(sa, { application: l, size: s, contentWidth: "small", variant: x }),
-                    (0, i.jsx)(si, { renderDropdown: (e) => h(l5.p5, e), size: s }),
+                    (0, i.jsx)(si, { renderDropdown: (e) => h(l4.p5, e), size: s }),
                 ],
             }),
             (0, i.jsxs)("div", {
@@ -2342,7 +2342,7 @@ let sr = a.forwardRef(function (e, t) {
                 children: [
                     g && (0, i.jsx)(sn, { size: s, contentWidth: "icon", onClick: m, isSubmitting: p }),
                     (0, i.jsx)(sa, { application: l, size: s, contentWidth: "icon", variant: x }),
-                    (0, i.jsx)(si, { renderDropdown: (e) => h(l5.p5, e), size: s }),
+                    (0, i.jsx)(si, { renderDropdown: (e) => h(l4.p5, e), size: s }),
                 ],
             }),
         ],
@@ -2646,7 +2646,8 @@ function sf(e) {
                     return void (0, sg.openModalLazy)(
                         async () => {
                             let { ItemDetailsModal: e } = await Promise.all([
-                                l.e("44810"),
+                                l.e("18712"),
+                                l.e("37996"),
                                 l.e("53917"),
                                 l.e("15186"),
                                 l.e("80830"),
@@ -2674,7 +2675,8 @@ function sf(e) {
                         void (0, sg.openModalLazy)(
                             async () => {
                                 let { SubscriptionDetailsModal: a } = await Promise.all([
-                                    l.e("44810"),
+                                    l.e("18712"),
+                                    l.e("37996"),
                                     l.e("53917"),
                                     l.e("15186"),
                                     l.e("80830"),

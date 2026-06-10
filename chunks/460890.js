@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { G9: () => l, GE: () => c, VO: () => o, y6: () => u });
+n.d(t, { G9: () => l, GE: () => u, VO: () => o });
 var i = n(627968),
     r = n(64700),
     s = n(402112);
@@ -67,10 +67,6 @@ function l() {
     return e === a && console.warn("useManaContext must be used within a ManaContext.Provider"), e;
 }
 function u(e) {
-    let t = l();
-    return (t.experiments?.enabledExperiments ?? []).includes("mana-toggle-inputs");
-}
-function c(e) {
     let { children: t, value: n } = e;
     return (0, i.jsx)(o.Provider, { value: n, children: (0, i.jsx)(s.C, { locale: n.locale, children: t }) });
 }

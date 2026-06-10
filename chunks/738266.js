@@ -679,43 +679,43 @@ function e5() {
     });
 }
 var e1 = l(243721),
-    e7 = l(235986),
-    e3 = l(60727);
+    e3 = l(235986),
+    e7 = l(60727);
 function e4(e) {
     let { description: t, icon: l, id: i, label: s, onChange: r, value: o } = e;
     return (0, n.jsxs)("div", {
-        className: e3.U,
+        className: e7.U,
         children: [
-            (0, n.jsxs)(e7.A, {
-                justify: e7.A.Justify.BETWEEN,
-                align: e7.A.Align.CENTER,
+            (0, n.jsxs)(e3.A, {
+                justify: e3.A.Justify.BETWEEN,
+                align: e3.A.Align.CENTER,
                 children: [
                     l,
-                    (0, n.jsx)(e7.A.Child, {
+                    (0, n.jsx)(e3.A.Child, {
                         grow: 1,
                         children: (0, n.jsx)(a.E, { variant: "text-md/semibold", children: s }),
                     }),
                     null != r && null != o && (0, n.jsx)(e1.d, { id: i, checked: o, onChange: r }),
                 ],
             }),
-            (0, n.jsx)(a.E, { variant: "text-xs/normal", color: "text-default", className: e3.L, children: t }),
+            (0, n.jsx)(a.E, { variant: "text-xs/normal", color: "text-default", className: e7.L, children: t }),
         ],
     });
 }
 var e6 = l(661531),
-    e8 = l(359778),
-    e9 = l(400725);
+    e9 = l(993077),
+    e8 = l(400725);
 let te = (e) => {
     let { className: t, icon: l, noticeText: i, buttonText: s, onClick: r, canSync: o } = e;
-    return (0, n.jsx)(e8.Z, {
-        className: A()(t, e9.N),
-        children: (0, n.jsxs)(e7.A, {
-            justify: e7.A.Justify.BETWEEN,
-            align: e7.A.Align.CENTER,
+    return (0, n.jsx)(e9.Z, {
+        className: A()(t, e8.N),
+        children: (0, n.jsxs)(e3.A, {
+            justify: e3.A.Justify.BETWEEN,
+            align: e3.A.Align.CENTER,
             children: [
                 (0, n.jsx)(l, { width: 20, height: 20, size: "custom", color: e6.A.unsafe_rawColors.YELLOW_300.css }),
                 (0, n.jsx)("div", {
-                    className: e9.P,
+                    className: e8.P,
                     children: (0, n.jsx)(a.E, { variant: "text-md/normal", children: i }),
                 }),
                 o && (0, n.jsx)(T.$, { size: "sm", variant: "secondary", onClick: r, text: s ?? void 0 }),
@@ -894,8 +894,10 @@ function ts(e) {
                                     onClick: function () {
                                         (0, y.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                l.e("87932"),
+                                                l.e("41104"),
+                                                l.e("54353"),
                                                 l.e("11585"),
+                                                l.e("92513"),
                                                 l.e("89916"),
                                                 l.e("20379"),
                                                 l.e("19193"),
@@ -1013,7 +1015,9 @@ function ta(e) {
                                                 onClick: function () {
                                                     (0, y.openModalLazy)(async () => {
                                                         let { default: e } = await Promise.all([
-                                                            l.e("87932"),
+                                                            l.e("41104"),
+                                                            l.e("54353"),
+                                                            l.e("92513"),
                                                             l.e("89916"),
                                                             l.e("20379"),
                                                             l.e("19193"),
@@ -1239,8 +1243,8 @@ var tS = l(371444),
     t5 = l(807632),
     t1 = l(376310);
 l(253913);
-var t7 = l(231935);
-function t3(e) {
+var t3 = l(231935);
+function t7(e) {
     let { channel: t } = e,
         a = (0, s.bG)([X.A], () => X.A.can(eB.xBc.MANAGE_CHANNELS, t), [t]),
         r = t.availableTags.length >= 20,
@@ -1274,7 +1278,7 @@ function t3(e) {
             (0, d.fy)({ availableTags: e });
         });
     return (0, n.jsxs)("div", {
-        className: t7._A,
+        className: t3._A,
         children: [
             o
                 ? t.availableTags.map((e) =>
@@ -1297,7 +1301,7 @@ function t3(e) {
             o
                 ? (0, n.jsx)(N.D, {
                       onClick: c,
-                      className: A()(t7.JE, { [t7.r9]: !a || r }),
+                      className: A()(t3.JE, { [t3.r9]: !a || r }),
                       children: (0, n.jsx)(tK.j, {
                           size: "custom",
                           "aria-label": eH.intl.string(eH.t["/jubeD"]),
@@ -1341,7 +1345,7 @@ function t4(e) {
             onDragReset: o,
         });
     return (0, n.jsx)("div", {
-        className: A()(t7.kL, { [t7.A]: null != h && c < h, [t7.Ze]: null != h && c > h }),
+        className: A()(t3.kL, { [t3.A]: null != h && c < h, [t3.Ze]: null != h && c > h }),
         ref: (e) => {
             u(g(e));
         },
@@ -1361,13 +1365,13 @@ function t4(e) {
     });
 }
 var t6 = l(235640),
-    t8 = l(268761),
-    t9 = l(474078),
+    t9 = l(268761),
+    t8 = l(474078),
     le = l(783878),
     lt = l(980296);
 let ll = (e) => {
     let { autoArchiveDuration: t, onChange: l, isDisabled: i, helperText: s } = e,
-        a = (0, t8.Gk)();
+        a = (0, t9.Gk)();
     return (0, n.jsx)("div", {
         className: lt.gy,
         children: (0, n.jsx)(le.Z, {
@@ -1740,7 +1744,7 @@ let lf = {
                     defaultForumLayout: j,
                     defaultTagSetting: b,
                 } = e;
-                e.isThread() && 0 === (t = (0, t9.A)(t, !0)).length
+                e.isThread() && 0 === (t = (0, t8.A)(t, !0)).length
                     ? o.h.dispatch({
                           type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
                           errors: { name: eH.intl.string(eH.t.uXA573) },
@@ -1926,7 +1930,7 @@ class lE extends i.PureComponent {
                               label: eH.intl.string(eH.t["P/y+sj"]),
                               description: eH.intl.string(eH.t["/oQQ3y"]),
                               errorMessage: this.getError("available_tags"),
-                              children: (0, n.jsx)(t3, { channel: e }),
+                              children: (0, n.jsx)(t7, { channel: e }),
                           }),
                           (0, n.jsx)(tw.S, {
                               disabled: !s || x,
@@ -2175,7 +2179,7 @@ class lE extends i.PureComponent {
                       page: eB.liQ.CHANNEL_SETTINGS,
                       children: (0, n.jsx)(ll, {
                           isDisabled: !s,
-                          autoArchiveDuration: (0, t8.Gl)(e, null),
+                          autoArchiveDuration: (0, t9.Gl)(e, null),
                           onChange: this.handleChangeDefaultAutoArchiveDuration,
                           helperText: e.isForumLikeChannel()
                               ? eH.intl.string(eH.t.fyXclY)
@@ -2365,8 +2369,8 @@ class lE extends i.PureComponent {
                     : (0, eu.M)(i)
                       ? l(241306)
                       : l(16474)),
-            (0, n.jsx)(e7.A, {
-                justify: e7.A.Justify.CENTER,
+            (0, n.jsx)(e3.A, {
+                justify: e3.A.Justify.CENTER,
                 className: ld.o9,
                 children: (0, n.jsx)("img", { alt: "", width: 280, height: 165, src: t }),
             })
@@ -2414,7 +2418,7 @@ class lE extends i.PureComponent {
     handleChangeName = (e) => {
         let { channel: t } = this.props;
         if (null == t) return;
-        t.isThread() ? (e = (0, t9.A)(e, !1)) : eB.kvI.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, ls.an)(e));
+        t.isThread() ? (e = (0, t8.A)(e, !1)) : eB.kvI.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, ls.an)(e));
         let l = this.nameInputRef.current?.selectionStart ?? 0;
         (0, d.fy)({ name: e }),
             setTimeout(() => {
@@ -2427,7 +2431,7 @@ class lE extends i.PureComponent {
             n = t?.length ?? 0,
             i = l?.selectionStart === 0 && l?.selectionEnd === n;
         if (((this.cursorPosition = i ? n : (l?.selectionStart ?? n)), e?.isThread() && null != t)) {
-            let e = (0, t9.A)(t, !0);
+            let e = (0, t8.A)(t, !0);
             e !== t && (0, d.fy)({ name: e });
         }
     };

@@ -567,10 +567,7 @@ function en(e) {
                         }),
                 ],
             }),
-            (0, r.jsx)("div", {
-                className: b.iconContainer,
-                children: (0, r.jsx)(et.P, { checked: a, disabled: _, size: 20 }),
-            }),
+            (0, r.jsx)("div", { className: b.iconContainer, children: (0, r.jsx)(et.P, { checked: a, disabled: _ }) }),
         ],
     });
 }

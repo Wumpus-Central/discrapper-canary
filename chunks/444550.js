@@ -184,7 +184,7 @@ let M = r.forwardRef(function (e, l) {
                 }),
             [],
         ),
-        ez = r.useCallback(
+        eH = r.useCallback(
             () =>
                 new Promise((e) => {
                     let l = eE.current;
@@ -193,18 +193,18 @@ let M = r.forwardRef(function (e, l) {
                 }),
             [],
         ),
-        eH = (0, u.Ay)({
+        ez = (0, u.Ay)({
             id: eV,
             defaultFocused: null != eL ? String(eL.value) : void 0,
             scrollToStart: e$,
-            scrollToEnd: ez,
+            scrollToEnd: eH,
             isEnabled: eC,
             wrap: !0,
             useVirtualFocus: !0,
             setFocus: eQ,
             disableClickOnSpace: !0,
         }),
-        eW = (0, f.A)(eH),
+        eW = (0, f.A)(ez),
         eX = (0, f.A)(eA);
     r.useEffect(() => {
         let e = eX.current,
@@ -284,13 +284,13 @@ let M = r.forwardRef(function (e, l) {
             e?.scrollToTop();
         }, [ek]),
         r.useEffect(() => {
-            !eF && eS && null !== ek && requestAnimationFrame(() => eH.focusFirstVisibleItem());
-        }, [eF, eS, ek, eH]);
-    let e0 = b ? H : z,
+            !eF && eS && null !== ek && requestAnimationFrame(() => ez.focusFirstVisibleItem());
+        }, [eF, eS, ek, ez]);
+    let e0 = b ? z : H,
         e1 = r.useRef(null),
         { focusPreviousItem: e4, focusNextItem: e8 } = _(e1, ew, eR);
     return (0, t.jsxs)(c.hD, {
-        navigator: eH,
+        navigator: ez,
         children: [
             (0, t.jsx)(C.Y, {
                 targetElementRef: eO,
@@ -326,7 +326,7 @@ let M = r.forwardRef(function (e, l) {
                     let { "aria-expanded": n, "aria-controls": r } = e,
                         { isShown: i } = l,
                         s = i ? k.t : D.a,
-                        { ref: o, onKeyDown: u } = eH.containerProps,
+                        { ref: o, onKeyDown: u } = ez.containerProps,
                         c = (e) => {
                             ep.onKeyDown?.(e), u(e), eJ(e);
                         };
@@ -759,7 +759,7 @@ function Q(e) {
 function $(e) {
     let { isSelected: l, multi: n } = e;
     return n
-        ? (0, t.jsx)(y.P, { checked: l, size: 20 })
+        ? (0, t.jsx)(y.P, { checked: l })
         : l
           ? (0, t.jsx)(O.y, {
                 size: "custom",
@@ -772,7 +772,7 @@ function $(e) {
             })
           : null;
 }
-function z(e) {
+function H(e) {
     let { selectedOptions: l, renderOptionPrefix: n, renderOptionSuffix: r, ...i } = e,
         a = l[0],
         s = n?.(a ?? null, { inPill: !1, inDropdown: !1 }),
@@ -785,7 +785,7 @@ function z(e) {
         ],
     });
 }
-function H(e) {
+function z(e) {
     let {
             query: l,
             placeholder: n,

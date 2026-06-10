@@ -73,7 +73,8 @@ function h(e) {
                                               let { default: s } = await Promise.all([
                                                   i.e("40942"),
                                                   i.e("8308"),
-                                                  i.e("72147"),
+                                                  i.e("71664"),
+                                                  i.e("30571"),
                                                   i.e("12380"),
                                                   i.e("63232"),
                                                   i.e("54048"),

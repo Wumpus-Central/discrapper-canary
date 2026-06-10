@@ -31,7 +31,7 @@ var n = e(627968),
     W = e(504345),
     P = e(140735),
     Q = e(408018),
-    z = e(201349),
+    z = e(138617),
     Z = e(95701),
     L = e(31717),
     S = e(652215),
@@ -1061,9 +1061,12 @@ function tc(A) {
                         break;
                     case S.t02.MONETIZATION_TERMS_NOT_ACCEPTED:
                         (0, U.openModalLazy)(async () => {
-                            let { default: A } = await Promise.all([e.e("12390"), e.e("91826")]).then(
-                                e.bind(e, 431913),
-                            );
+                            let { default: A } = await Promise.all([
+                                e.e("41104"),
+                                e.e("92513"),
+                                e.e("12390"),
+                                e.e("91826"),
+                            ]).then(e.bind(e, 431913));
                             return (e) => (0, n.jsx)(A, { guildId: t, ...e });
                         });
                         break;

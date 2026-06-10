@@ -39,11 +39,11 @@ function P(e) {
     let t = [e.username];
     return e?.nick != null && t.push(e.nick), { id: e.id, names: t };
 }
-function G(e) {
+function W(e) {
     return { id: e.id, names: [e.name] };
 }
 n(172879);
-var W = n(43105),
+var G = n(43105),
     D = n(990078),
     U = n(834730),
     B = n(939249),
@@ -57,8 +57,8 @@ var W = n(43105),
     Z = n(562153),
     Q = n(935208),
     J = n(53656),
-    $ = n(200662),
-    X = n(739174),
+    X = n(200662),
+    $ = n(739174),
     ee = n(503698),
     et = n.n(ee),
     en = n(785007),
@@ -147,13 +147,13 @@ function ed(e) {
         }, [i, r, u]),
         p = s.useCallback(
             (e, t) => {
-                n({}, [(0, $.Eu)(e, t)]);
+                n({}, [(0, X.Eu)(e, t)]);
             },
             [n],
         ),
         b = s.useCallback(
             (e, t, i) => {
-                let l = (0, $.Eu)(e, t);
+                let l = (0, X.Eu)(e, t);
                 null != r[l] && n({ [l]: { id: e, permission: i, type: t } }, []);
             },
             [n, r],
@@ -240,7 +240,7 @@ function eu(e) {
                 }),
             }),
         }),
-        N = (0, l.jsx)(W.A, {
+        N = (0, l.jsx)(G.A, {
             targetElementRef: f,
             title: k.intl.string(k.t.ufFDiC),
             body: k.intl.format(k.t.pW4Crz, {
@@ -260,7 +260,7 @@ function eu(e) {
             children: [
                 (0, l.jsx)("div", {
                     className: ec.MB,
-                    children: (0, l.jsx)(X.A, { guild: n, id: o.id, type: o.type, isLocked: h, lockTooltipText: t }),
+                    children: (0, l.jsx)($.A, { guild: n, id: o.id, type: o.type, isLocked: h, lockTooltipText: t }),
                 }),
                 (0, l.jsxs)("div", {
                     className: ec.ev,
@@ -333,7 +333,7 @@ function ef(e) {
             for (let [n, i] of Object.entries(T)) i.type === x.RA.CHANNEL ? (e[n] = i) : (t[n] = i);
             return [e, t];
         }, [T]),
-        G = s.useCallback(
+        W = s.useCallback(
             (e) => {
                 let t = j.A.getGuild(a),
                     n = b.Ay.getSelfMember(a);
@@ -354,7 +354,7 @@ function ef(e) {
             },
             [a, L, i, I],
         ),
-        W = s.useCallback(
+        G = s.useCallback(
             (e, t) => {
                 let n,
                     i,
@@ -404,14 +404,16 @@ function ef(e) {
             (e, n) => {
                 let i = {};
                 for (let [e, t] of Object.entries(T)) i[e] = { id: t.id, permission: t.permission, type: t.type };
-                ((i = Object.assign(i, e)), n.length > 0 && (i = r().omit(i, n)), G(i)) ? E.T0(t, M, i) : W(e, n);
+                ((i = Object.assign(i, e)), n.length > 0 && (i = r().omit(i, n)), W(i)) ? E.T0(t, M, i) : G(e, n);
             },
-            [t, T, M, G, W],
+            [t, T, M, W, G],
         ),
         U = s.useCallback(() => {
             let e = Object.keys(_);
             return (0, d.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([n.e("15149"), n.e("52532")]).then(n.bind(n, 192991));
+                let { default: t } = await Promise.all([n.e("41104"), n.e("15149"), n.e("92513"), n.e("52532")]).then(
+                    n.bind(n, 192991),
+                );
                 return (n) =>
                     (0, l.jsx)(t, {
                         editPermissions: D,
@@ -429,7 +431,9 @@ function ef(e) {
         B = s.useCallback(() => {
             let e = Object.keys(P);
             return (0, d.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([n.e("15149"), n.e("52532")]).then(n.bind(n, 192991));
+                let { default: t } = await Promise.all([n.e("41104"), n.e("15149"), n.e("92513"), n.e("52532")]).then(
+                    n.bind(n, 192991),
+                );
                 return (n) =>
                     (0, l.jsx)(t, {
                         editPermissions: D,
@@ -601,7 +605,7 @@ function eN(e) {
                 var t;
                 let n = (t = u).startsWith("@") ? t.substr(1) : t,
                     i = u.startsWith("@") ? d.filter((t) => t.id === e) : d;
-                return { members: (0, y.I)(r, P, n), roles: (0, y.I)(i, G, n) };
+                return { members: (0, y.I)(r, P, n), roles: (0, y.I)(i, W, n) };
             }, [e, r, u, d]);
         return { query: u, results: g, setQuery: m, unfilteredCount: g.members.length + g.roles.length };
     })(e);

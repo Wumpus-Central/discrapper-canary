@@ -66,6 +66,8 @@ class v extends _.A {
                         return t;
                     }),
                     has_ever_connected: y,
+                    user_token_exists: null != t,
+                    main_token_exists: null != n,
                     is_token_mismatch: s,
                     is_user_mismatch: i,
                     switch_origin: T,
@@ -87,7 +89,7 @@ class v extends _.A {
                         return t;
                     }),
                     has_ever_connected: y,
-                    switch_origin: "switchLocation",
+                    switch_origin: T,
                 }),
                     p.default.track(m.HAw.MULTI_ACCOUNT_SWITCH_SUCCESS, t),
                     N() && g.log("Account switch success", t),
@@ -118,28 +120,34 @@ class v extends _.A {
             "" !== t &&
             (!(function (e, t) {
                 if (!N()) return;
-                let n = [],
-                    i = [];
+                let n = new Set(),
+                    i = [],
+                    s = [],
+                    a = E.A.getUsers(),
+                    o = !1;
                 if (
-                    (E.A.getUsers().forEach((r) => {
-                        let { id: s } = r;
-                        i.push(s), s !== e && c.getToken(s) === t && n.push(s);
+                    (a.forEach((r) => {
+                        let { id: a } = r;
+                        s.push(a);
+                        let l = c.getToken(a);
+                        a !== e && l === t && i.push(a), null != l && (n.has(l) ? (o = !0) : n.add(l));
                     }),
-                    0 === n.length)
+                    0 === i.length)
                 )
                     return;
-                let s = {
+                let l = {
                     from_user_id: r,
                     to_user_id: I,
                     actual_user_id: e,
                     fast_connect_user_id: null,
-                    linked_user_ids: i,
-                    colliding_user_ids: n,
+                    linked_user_ids: s,
+                    colliding_user_ids: i,
                     has_ever_connected: y,
+                    is_already_corrupted: o,
                     switch_origin: T,
                 };
-                g.log("setToken about to introduce per-user token collision", s),
-                    p.default.track(m.HAw.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, s);
+                g.log("setToken about to introduce per-user token collision", l),
+                    p.default.track(m.HAw.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, l);
             })(e.id, t),
             c.setToken(t, e.id)),
             (function (e) {
