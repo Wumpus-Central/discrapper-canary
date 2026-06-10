@@ -3,8 +3,8 @@ var t = e(627968);
 e(64700);
 var l = e(980707),
     r = e(477782),
-    o = e(442433),
-    a = e(253799),
+    a = e(442433),
+    o = e(253799),
     c = e(663341),
     s = e(315240),
     d = e(375708),
@@ -13,8 +13,8 @@ var l = e(980707),
     f = e(138134),
     y = e(540999),
     g = e(691540),
-    A = e(857250),
-    h = e(97483),
+    h = e(857250),
+    A = e(97483),
     b = e(624479),
     _ = e(77729),
     x = e(16590),
@@ -27,17 +27,17 @@ var l = e(980707),
     w = e(589553),
     I = e(696016),
     Z = e(264572).Buffer,
-    R = e(7807),
-    v = e(931991),
+    v = e(7807),
+    R = e(931991),
     S = e(71393),
     T = e(576705),
     F = e(711014),
     H = e(287809),
     P = e(105009),
-    B = e(505930),
-    G = e(807072),
-    N = e(346411),
-    k = e(781710),
+    k = e(505930),
+    B = e(807072),
+    G = e(346411),
+    N = e(781710),
     L = e(405433),
     X = e(688810),
     M = e(274372),
@@ -53,7 +53,7 @@ function U(n) {
             onBeforeDelete: q,
             onAfterDelete: z,
             actionsDisabled: J = !1,
-            displayConfiguration: $ = a.I,
+            displayConfiguration: $ = o.I,
         } = n,
         nn = (function (n) {
             let { clips: i, actionsDisabled: e = !1 } = n;
@@ -64,17 +64,17 @@ function U(n) {
                       leadingAccessory: { type: "icon", icon: c.p },
                       disabled: e,
                       action: function () {
-                          (0, o.Z_)(), i.forEach((n) => (0, s.w7)(n.id));
+                          (0, a.Z_)(), i.forEach((n) => (0, s.w7)(n.id));
                       },
                   })
                 : null;
         })({ clips: i, actionsDisabled: J }),
         ni = (function (n) {
-            let { clips: i, channelId: e, onShare: l, actionsDisabled: a = !1 } = n,
+            let { clips: i, channelId: e, onShare: l, actionsDisabled: o = !1 } = n,
                 { analyticsLocations: c } = (0, X.Ay)(),
                 p = (0, u.bG)([M.Ay], () => i.some((n) => M.Ay.isClipExporting(n.id)));
             async function f() {
-                (0, o.Z_)();
+                (0, a.Z_)();
                 let n = (0, W.t)(e);
                 (0, s.H1)(i.map((n) => n.id));
                 try {
@@ -89,7 +89,7 @@ function U(n) {
                 id: "share",
                 label: d.intl.string(d.t.RDE0Sc),
                 leadingAccessory: { type: "icon", icon: L.l },
-                disabled: a && !p,
+                disabled: o && !p,
                 action: f,
             });
         })({ clips: i, channelId: U, onShare: Y, actionsDisabled: J }),
@@ -103,7 +103,7 @@ function U(n) {
                       leadingAccessory: { type: "icon", icon: E.A },
                       disabled: l,
                       action: function () {
-                          (0, o.Z_)(), e?.();
+                          (0, a.Z_)(), e?.();
                       },
                   });
         })({ clips: i, onEdit: Q, actionsDisabled: J }),
@@ -114,10 +114,10 @@ function U(n) {
                 : (0, t.jsx)(r.Dr, {
                       id: "favorite",
                       label: d.intl.string(d.t.nPywqO),
-                      leadingAccessory: { type: "icon", icon: B.y },
+                      leadingAccessory: { type: "icon", icon: k.y },
                       disabled: e,
                       action: function () {
-                          (0, o.Z_)(), i.forEach((n) => (0, s.XK)(n));
+                          (0, a.Z_)(), i.forEach((n) => (0, s.XK)(n));
                       },
                   });
         })({ clips: i, actionsDisabled: J }),
@@ -126,18 +126,18 @@ function U(n) {
                 l = (0, u.bG)([F.Ay, T.A, H.default, S.A], () =>
                     F.Ay.getFlattenedGuildIds().some((n) => {
                         let i = S.A.getGuild(n);
-                        return null != i && (0, v.ie)(i, T.A, H.default).canCreateExpressions;
+                        return null != i && (0, R.ie)(i, T.A, H.default).canCreateExpressions;
                     }),
                 ),
-                a = i[0];
-            if (i.length > 1 || !l || a.type === m.nQ.SCREENSHOT) return null;
+                o = i[0];
+            if (i.length > 1 || !l || o.type === m.nQ.SCREENSHOT) return null;
             async function c() {
-                (0, o.Z_)(), await (0, P.n)(a, e);
+                (0, a.Z_)(), await (0, P.n)(o, e);
             }
             return (0, t.jsx)(r.Dr, {
                 id: "clips-export-soundboard",
                 label: d.intl.string(x.default.HH4Tjj),
-                leadingAccessory: { type: "icon", icon: R.J },
+                leadingAccessory: { type: "icon", icon: v.J },
                 action: c,
             });
         })({ clips: i, channelId: U }),
@@ -151,19 +151,19 @@ function U(n) {
                       label: d.intl.string(x.default.tv7emB),
                       leadingAccessory: { type: "icon", icon: b.T },
                       action: function () {
-                          (0, o.Z_)(),
+                          (0, a.Z_)(),
                               _.A.clipboard.copyFile(e.filepath),
-                              (0, g.P0)((0, A.o)(d.intl.string(d.t.mGZ66D), h.Ck.SUCCESS));
+                              (0, g.P0)((0, h.o)(d.intl.string(d.t.mGZ66D), A.Ck.SUCCESS));
                       },
                   });
         })({ clips: i }),
-        no = (function (n) {
+        na = (function (n) {
             let { clips: i } = n,
                 e = i[0];
             if (i.length > 1) return null;
             let l = e.type === m.nQ.SCREENSHOT;
-            async function a() {
-                (0, o.Z_)(), (0, s.H1)([e.id]);
+            async function o() {
+                (0, a.Z_)(), (0, s.H1)([e.id]);
                 try {
                     let n = await (0, s.VO)(e),
                         i = await n.arrayBuffer(),
@@ -176,7 +176,7 @@ function U(n) {
                 }
             }
             async function c() {
-                (0, o.Z_)(), (0, s.H1)([e.id]);
+                (0, a.Z_)(), (0, s.H1)([e.id]);
                 try {
                     let n = await (0, s.VO)(e),
                         i = await (0, O.R_)(n),
@@ -198,7 +198,7 @@ function U(n) {
                         id: "clips-export-file",
                         label: l ? d.intl.string(d.t.y5FgMk) : d.intl.string(d.t.sFgmNy),
                         leadingAccessory: { type: "icon", icon: j.s },
-                        action: a,
+                        action: o,
                     }),
                     !l &&
                         (0, t.jsx)(r.Dr, {
@@ -210,31 +210,31 @@ function U(n) {
                 ],
             });
         })({ clips: i }),
-        na = (function (n) {
+        no = (function (n) {
             let { clips: i, actionsDisabled: e = !1 } = n;
             return !0 !== i[0].isFavorite
                 ? null
                 : (0, t.jsx)(r.Dr, {
                       id: "unfavorite",
                       label: d.intl.string(x.default.IZsalP),
-                      leadingAccessory: { type: "icon", icon: G.U },
+                      leadingAccessory: { type: "icon", icon: B.U },
                       color: "danger",
                       disabled: e,
                       action: function () {
-                          (0, o.Z_)(), i.forEach((n) => (0, s.XK)(n));
+                          (0, a.Z_)(), i.forEach((n) => (0, s.XK)(n));
                       },
                   });
         })({ clips: i, actionsDisabled: J }),
         nc = (function (n) {
-            let { clips: i, onBeforeDelete: e, onAfterDelete: l, actionsDisabled: a = !1 } = n;
+            let { clips: i, onBeforeDelete: e, onAfterDelete: l, actionsDisabled: o = !1 } = n;
             return (0, t.jsx)(r.Dr, {
                 id: "clips-delete",
                 label: d.intl.string(d.t.oyYWHE),
                 leadingAccessory: { type: "icon", icon: D.u },
                 color: "danger",
-                disabled: a,
+                disabled: o,
                 action: function (n) {
-                    (0, o.Z_)(), (0, C.A)(n, { clips: i, onBeforeDelete: e, onAfterDelete: l });
+                    (0, a.Z_)(), (0, C.A)(n, { clips: i, onBeforeDelete: e, onAfterDelete: l });
                 },
             });
         })({ clips: i, onBeforeDelete: q, onAfterDelete: z, actionsDisabled: J }),
@@ -246,7 +246,7 @@ function U(n) {
                       id: "show-in-folder",
                       label: "Show in Folder",
                       action: function () {
-                          (0, o.Z_)(), _.A.fileManager.showItemInFolder(i[0].filepath);
+                          (0, a.Z_)(), _.A.fileManager.showItemInFolder(i[0].filepath);
                       },
                   })
                 : null;
@@ -255,11 +255,11 @@ function U(n) {
             let { clips: i } = n;
             return (0, u.bG)([y.A], () => y.A.isDeveloper)
                 ? (0, t.jsx)(r.Dr, {
-                      leadingAccessory: { type: "icon", icon: N.P },
+                      leadingAccessory: { type: "icon", icon: G.P },
                       id: "open-in-inspector",
                       label: "Open in Inspector",
                       action: function () {
-                          (0, o.Z_)(), (0, p.closeAllModals)(), (0, k.h)(i[0].filepath);
+                          (0, a.Z_)(), (0, p.closeAllModals)(), (0, N.h)(i[0].filepath);
                       },
                   })
                 : null;
@@ -274,38 +274,43 @@ function U(n) {
                       label: "Submit Clip Feedback",
                       leadingAccessory: { type: "icon", icon: f.i },
                       action: function () {
-                          (0, o.Z_)(),
-                              (0, p.openModalLazy)(async () => {
-                                  let { default: n } = await Promise.all([e.e("734"), e.e("8891"), e.e("58966")]).then(
-                                      e.bind(e, 885168),
-                                  );
-                                  return (e) => (0, t.jsx)(n, { ...e, clip: i[0] });
-                              });
+                          (0, a.Z_)(),
+                              (0, p.openModalLazy)(
+                                  async () => {
+                                      let { default: n } = await Promise.all([
+                                          e.e("734"),
+                                          e.e("8891"),
+                                          e.e("58966"),
+                                      ]).then(e.bind(e, 885168));
+                                      return (e) => (0, t.jsx)(n, { ...e, clip: i[0] });
+                                  },
+                                  { stackingBehavior: "stack" },
+                              );
                       },
                   });
         })({ clips: i }),
-        np = $.has(a.C.ADD_TO_LIBRARY),
-        nf = $.has(a.C.SHARE),
-        ny = $.has(a.C.EDIT),
-        ng = $.has(a.C.FAVORITE),
-        nA = $.has(a.C.EXPORT_TO_SOUNDBOARD),
-        nh = $.has(a.C.COPY_TO_CLIPBOARD),
-        nb = $.has(a.C.EXPORT_TO_FILE),
-        n_ = $.has(a.C.DELETE),
-        nx = $.has(a.C.SHOW_IN_FOLDER),
-        nD = $.has(a.C.OPEN_IN_INSPECTOR),
-        nC = $.has(a.C.CLIP_FEEDBACK);
+        np = $.has(o.C.ADD_TO_LIBRARY),
+        nf = $.has(o.C.SHARE),
+        ny = $.has(o.C.EDIT),
+        ng = $.has(o.C.FAVORITE),
+        nh = $.has(o.C.EXPORT_TO_SOUNDBOARD),
+        nA = $.has(o.C.COPY_TO_CLIPBOARD),
+        nb = $.has(o.C.EXPORT_TO_FILE),
+        n_ = $.has(o.C.DELETE),
+        nx = $.has(o.C.SHOW_IN_FOLDER),
+        nD = $.has(o.C.OPEN_IN_INSPECTOR),
+        nC = $.has(o.C.CLIP_FEEDBACK);
     return (0, t.jsxs)(l.W, {
         "data-menu-migrated-auto": !0,
         navId: "clips-more-options",
         "aria-label": d.intl.string(d.t.PdRCRg),
-        onClose: o.Z_,
-        onSelect: o.Z_,
+        onClose: a.Z_,
+        onSelect: a.Z_,
         children: [
             (0, t.jsxs)(r.rX, { children: [np && nn, nf && ni, ny && ne] }),
-            (0, t.jsxs)(r.rX, { children: [ng && nt, nA && nl, nh && nr, nb && no] }),
+            (0, t.jsxs)(r.rX, { children: [ng && nt, nh && nl, nA && nr, nb && na] }),
             (0, t.jsxs)(r.rX, { children: [nx && ns, nD && nd, nC && nu] }),
-            (0, t.jsxs)(r.rX, { children: [ng && na, n_ && nc] }),
+            (0, t.jsxs)(r.rX, { children: [ng && no, n_ && nc] }),
         ],
     });
 }
