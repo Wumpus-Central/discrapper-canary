@@ -71,8 +71,7 @@ function h(e) {
                                       null != n &&
                                           (0, a.openModalLazy)(async () => {
                                               let { default: s } = await Promise.all([
-                                                  i.e("4746"),
-                                                  i.e("12380"),
+                                                  i.e("61280"),
                                                   i.e("63232"),
                                                   i.e("50342"),
                                                   i.e("63726"),

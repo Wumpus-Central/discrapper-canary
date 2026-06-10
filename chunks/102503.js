@@ -321,7 +321,7 @@ function e2(e) {
     );
 }
 var e8 = n(338854);
-function e4(e) {
+function e5(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e;
     return (0, l.jsx)(e8.H, {
         targetElementRef: i,
@@ -340,7 +340,7 @@ function e4(e) {
         caretConfig: { align: "center" },
     });
 }
-function e5(e) {
+function e4(e) {
     let { targetElementRef: t, onCheckItOut: n, onDismiss: i } = e;
     return (0, l.jsx)(A.A, {
         targetElementRef: t,
@@ -490,13 +490,13 @@ let tl = r.memo(function (e) {
                     });
                 case u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
                     return (0, l.jsx)(ts, {
-                        renderPopout: (e) => (0, l.jsx)(e4, { guildId: n.id, markAsDismissed: a, targetElementRef: e }),
+                        renderPopout: (e) => (0, l.jsx)(e5, { guildId: n.id, markAsDismissed: a, targetElementRef: e }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GUILD_THEME_NUX_FOLLOWUP:
                     return (0, l.jsx)(ts, {
                         renderPopout: (e) =>
-                            (0, l.jsx)(e5, {
+                            (0, l.jsx)(e4, {
                                 targetElementRef: e,
                                 onDismiss: () => {
                                     a(eE.i.USER_DISMISS);
@@ -780,8 +780,8 @@ var tW = n(503698),
     t3 = n(976860),
     t2 = n(790535),
     t8 = n(110618),
-    t4 = n(495544),
-    t5 = n(309010),
+    t5 = n(495544),
+    t4 = n(309010),
     t9 = n(312006),
     t7 = n(403362),
     ne = n(707592),
@@ -1081,9 +1081,9 @@ function nm(e) {
         u = (0, d.bG)([R.A], () => R.A.can(H.xBc.CONNECT, n)),
         c =
             ((t = n.id),
-            (0, d.bG)([t4.default, t5.A, t9.Ay], () => {
-                let e = t4.default.getId();
-                return t5.A.getVoiceChannelId() === t ? t9.Ay.getPermissionsForUser(e, t) : null;
+            (0, d.bG)([t5.default, t4.A, t9.Ay], () => {
+                let e = t5.default.getId();
+                return t4.A.getVoiceChannelId() === t ? t9.Ay.getPermissionsForUser(e, t) : null;
             }, [t])),
         A = e6.intl.string(e6.t.VJlc0S);
     switch (s) {
@@ -1342,7 +1342,7 @@ class nk extends r.PureComponent {
         let { guild: e } = this.props;
         (0, _.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
-                n.e("40362"),
+                n.e("33633"),
                 n.e("59957"),
                 n.e("28136"),
                 n.e("16084"),
@@ -1352,7 +1352,7 @@ class nk extends r.PureComponent {
         });
     };
     handleClose = () => {
-        let e = t5.A.getChannelId(),
+        let e = t4.A.getChannelId(),
             t = e6.intl.formatToPlainString(e6.t.DEn7nu, { invitePeople: e6.intl.string(e6.t.Sd8Ixw) });
         this.props.markAsDismissed(eE.i.UNKNOWN), null != e && nw.A.sendBotMessage(e, t);
     };
@@ -1459,10 +1459,10 @@ let n1 = new n0(I.h),
     ],
     n2 = n3.map((e) => e.store).filter(t7.Vq),
     n8 = new Set([u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, u.M.CHANNEL_NOTICE_GUILD_BANNER]);
-function n4(e) {
+function n5(e) {
     e.stopPropagation();
 }
-let n5 = [];
+let n4 = [];
 function n9(e) {
     var t, n;
     let i,
@@ -1486,7 +1486,7 @@ function n9(e) {
             (c = a && o),
             r.useMemo(() => {
                 let e = [];
-                return c && e.push(u.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n5;
+                return c && e.push(u.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n4;
             }, [c])),
         [_, I] = (0, ei.ww)(g, A.id, eE.m.CHANNEL_NOTICES, !0),
         N = null != _,
@@ -1530,7 +1530,7 @@ function n9(e) {
                     return null;
             }
         })();
-    return null == O ? null : (0, l.jsx)("div", { onContextMenu: n4, children: O });
+    return null == O ? null : (0, l.jsx)("div", { onContextMenu: n5, children: O });
 }
 let n7 = (e) => {
     let { guild: t } = e;
@@ -1639,28 +1639,29 @@ class io extends r.PureComponent {
             if ((0, el.ai)(t.id)) return void this.props.onFavoriteGuildContextMenu(e);
             (0, N.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    n.e("40362"),
+                    n.e("33633"),
                     n.e("11141"),
                     n.e("29439"),
                     n.e("60361"),
                     n.e("79521"),
                     n.e("734"),
-                    n.e("44051"),
-                    n.e("39629"),
-                    n.e("4746"),
+                    n.e("29989"),
+                    n.e("8241"),
+                    n.e("57261"),
                     n.e("22018"),
                     n.e("84738"),
                     n.e("34906"),
                     n.e("370"),
                     n.e("53785"),
                     n.e("83665"),
-                    n.e("28160"),
+                    n.e("65286"),
                     n.e("10069"),
                     n.e("46461"),
-                    n.e("75953"),
                     n.e("45214"),
+                    n.e("11970"),
                     n.e("26963"),
                     n.e("38805"),
+                    n.e("46912"),
                     n.e("9336"),
                     n.e("2261"),
                     n.e("6324"),
@@ -1670,8 +1671,7 @@ class io extends r.PureComponent {
                     n.e("2871"),
                     n.e("56374"),
                     n.e("69344"),
-                    n.e("88761"),
-                    n.e("8641"),
+                    n.e("97896"),
                     n.e("58376"),
                     n.e("11268"),
                     n.e("86065"),
@@ -1680,12 +1680,14 @@ class io extends r.PureComponent {
                     n.e("10889"),
                     n.e("46507"),
                     n.e("59923"),
-                    n.e("16357"),
+                    n.e("56509"),
                     n.e("87845"),
                     n.e("35636"),
                     n.e("54210"),
+                    n.e("61280"),
                     n.e("61175"),
                     n.e("22410"),
+                    n.e("56574"),
                     n.e("4974"),
                     n.e("59831"),
                     n.e("23924"),
@@ -2349,9 +2351,9 @@ function id(e) {
     let e3 = (0, ex.C$)(L, "GuildSidebar"),
         e2 = (0, d.bG)([V.A], () => V.A.getGuild(L)?.features.has(H.GuildFeatures.GAME_SERVERS) ?? !1, [L]),
         e8 = e3 && !e2 && !1 === e6,
-        e4 = (0, eG.J)("GuildSidebar"),
-        e5 = (0, eD.S)(L, "GuildSidebar"),
-        e9 = e3 && !e2 && e5 && !1 === e6,
+        e5 = (0, eG.J)("GuildSidebar"),
+        e4 = (0, eD.S)(L, "GuildSidebar"),
+        e9 = e3 && !e2 && e4 && !1 === e6,
         e7 = (0, ej.A)(),
         te = (0, eP.A)(L),
         tt = !1 === e6 && e7 && null != te,
@@ -2367,7 +2369,7 @@ function id(e) {
         e9 && ts.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
         e$ && ts.push(u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
     let [tl, tr] = (0, ei.kn)(ts, eE.m.GUILD_HEADER_TOOLTIPS),
-        [ta, to] = (0, ey.vB)(e4 && e3 && !1 === e6 && !(0, el.ai)(L), eE.m.GUILD_HEADER_TOOLTIPS),
+        [ta, to] = (0, ey.vB)(e5 && e3 && !1 === e6 && !(0, el.ai)(L), eE.m.GUILD_HEADER_TOOLTIPS),
         [td, tu] = (0, ei.D8)(
             tt ? u.M.BOOST_TO_UNLOCK_COACHMARK : null,
             L,

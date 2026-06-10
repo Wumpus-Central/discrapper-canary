@@ -1,0 +1,17 @@
+e.exports = {
+    kL: "container__6764b",
+    kb: "left__6764b",
+    fh: "authorName__6764b",
+    BK: "messageContent__6764b",
+    Ot: "parentName__6764b",
+    eS: "startedByName__6764b",
+    W$: "subtext__6764b",
+    CB: "threadName__6764b",
+    OG: "threadNameLine__6764b",
+    WM: "facepile__6764b",
+    my: "avatar__6764b",
+    A2: "noAvatarIcon__6764b",
+    sl: "messageContentTrailingIcon__6764b",
+    aG: "messageContentLeadingIcon__6764b",
+    xE: "bullet__6764b",
+};

@@ -16,6 +16,7 @@ e.exports = {
     Xg: "statusTagGrey_e9cb00 statusTag_e9cb00",
     Tf: "statusTagYellow_e9cb00 statusTag_e9cb00",
     q9: "price_e9cb00",
+    db: "orbPrice_e9cb00",
     h_: "description_e9cb00",
     Sy: "descriptionIcon_e9cb00",
     zA: "guildDescriptionIcon_e9cb00",

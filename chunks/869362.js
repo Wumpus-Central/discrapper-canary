@@ -719,11 +719,11 @@ var eq = l(619517),
     e7 = l(133296),
     e3 = l(689175),
     e9 = l(532197),
-    e6 = l(937751);
-let e8 = { CENTER: e6.Hu, LEFT: e6.Vl };
+    e8 = l(937751);
+let e6 = { CENTER: e8.Hu, LEFT: e8.Vl };
 class e2 extends a.PureComponent {
-    static Align = e8;
-    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e8.CENTER };
+    static Align = e6;
+    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e6.CENTER };
     _scrollerRef = null;
     _paginationItemRefs = [];
     componentDidUpdate(e) {
@@ -745,7 +745,7 @@ class e2 extends a.PureComponent {
     };
     render() {
         let { renderItem: e, items: t, vertical: l, paginationContainerClass: s, align: n } = this.props,
-            o = l ? e6.XA : e6.BU;
+            o = l ? e8.XA : e8.BU;
         return (0, i.jsx)(e3.Gt, {
             orientation: l ? "vertical" : "horizontal",
             className: r()(o, s, n),
@@ -762,7 +762,7 @@ class e2 extends a.PureComponent {
         });
     }
 }
-class e5 extends a.PureComponent {
+class e4 extends a.PureComponent {
     handlePrevClick = (e) => {
         e.stopPropagation(), e.preventDefault();
         let { onClick: t } = this.props;
@@ -771,13 +771,13 @@ class e5 extends a.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, i.jsx)(ek.D, {
-            className: r()(e6.t1, e),
+            className: r()(e8.t1, e),
             onClick: this.handlePrevClick,
-            children: (0, i.jsx)(e9.A, { className: e6.UE, direction: e9.A.Directions.LEFT }),
+            children: (0, i.jsx)(e9.A, { className: e8.UE, direction: e9.A.Directions.LEFT }),
         });
     }
 }
-class e4 extends a.PureComponent {
+class e5 extends a.PureComponent {
     handleNextClick = (e) => {
         e.stopPropagation(), e.preventDefault();
         let { onClick: t } = this.props;
@@ -786,9 +786,9 @@ class e4 extends a.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, i.jsx)(ek.D, {
-            className: r()(e6.XS, e),
+            className: r()(e8.XS, e),
             onClick: this.handleNextClick,
-            children: (0, i.jsx)(e9.A, { className: e6.UE, direction: e9.A.Directions.RIGHT }),
+            children: (0, i.jsx)(e9.A, { className: e8.UE, direction: e9.A.Directions.RIGHT }),
         });
     }
 }
@@ -985,8 +985,8 @@ class th extends a.PureComponent {
                   className: tl.HY,
                   children: [
                       n,
-                      (0, i.jsx)(e5, { onClick: this.manualPrevious, className: r()(tl.UE, { [tl.h_]: s }) }),
-                      (0, i.jsx)(e4, { onClick: this.manualNext, className: r()(tl.UE, { [tl.h_]: a }) }),
+                      (0, i.jsx)(e4, { onClick: this.manualPrevious, className: r()(tl.UE, { [tl.h_]: s }) }),
+                      (0, i.jsx)(e5, { onClick: this.manualNext, className: r()(tl.UE, { [tl.h_]: a }) }),
                   ],
               });
     }
@@ -1588,13 +1588,13 @@ var tQ = l(462887),
     t7 = l(9578),
     t3 = l(736653),
     t9 = l(573648),
-    t6 = l(355584);
-function t8(e) {
+    t8 = l(355584);
+function t6(e) {
     let { application: t, className: l, innerClassName: s } = e,
         a = t.directory_entry?.external_urls ?? [];
     return null != t.terms_of_service_url || null != t.privacy_policy_url || a.length > 0
         ? (0, i.jsxs)("div", {
-              className: r()(t6.kL, l),
+              className: r()(t8.kL, l),
               children: [
                   (0, i.jsx)(m.D, {
                       variant: "heading-sm/semibold",
@@ -1602,18 +1602,18 @@ function t8(e) {
                       children: w.intl.string(w.t.l6DP2n),
                   }),
                   (0, i.jsxs)("div", {
-                      className: r()(t6.p_, s),
+                      className: r()(t8.p_, s),
                       children: [
                           a.map((e, t) => (0, i.jsx)(t2, { url: e.url, children: e.name }, t)),
                           null != t.terms_of_service_url
-                              ? (0, i.jsx)(t5, {
+                              ? (0, i.jsx)(t4, {
                                     icon: tJ.o,
                                     url: t.terms_of_service_url,
                                     children: w.intl.string(w.t.s7STcY),
                                 })
                               : null,
                           null != t.privacy_policy_url
-                              ? (0, i.jsx)(t5, {
+                              ? (0, i.jsx)(t4, {
                                     icon: t0.X,
                                     url: t.privacy_policy_url,
                                     children: w.intl.string(w.t.kH3JR5),
@@ -1630,27 +1630,27 @@ function t2(e) {
         s = (0, t3.Ay)(),
         a = t9.A.getByUrl(t),
         n = (0, tQ.M)(s) ? a?.icon?.darkSVG : a?.icon?.lightSVG;
-    return (0, i.jsx)(t5, { icon: void 0 === n ? t1.q : void 0, imageSrc: n, url: t, children: l });
+    return (0, i.jsx)(t4, { icon: void 0 === n ? t1.q : void 0, imageSrc: n, url: t, children: l });
 }
-function t5(e) {
+function t4(e) {
     let { icon: t, imageSrc: l, iconColor: s, url: a, children: n } = e,
         o = G(),
         c = null;
     null != t
-        ? (c = (0, i.jsx)(t, { className: t6.GU, color: s ?? "currentColor", width: 20, height: 20, size: "custom" }))
-        : null != l && (c = (0, i.jsx)("img", { className: t6.GR, src: l, alt: "" }));
+        ? (c = (0, i.jsx)(t, { className: t8.GU, color: s ?? "currentColor", width: 20, height: 20, size: "custom" }))
+        : null != l && (c = (0, i.jsx)("img", { className: t8.GR, src: l, alt: "" }));
     let d = (0, i.jsxs)(i.Fragment, {
-        children: [c, (0, i.jsx)(x.E, { className: t6.so, variant: "text-sm/medium", selectable: !0, children: n })],
+        children: [c, (0, i.jsx)(x.E, { className: t8.so, variant: "text-sm/medium", selectable: !0, children: n })],
     });
     return (0, i.jsx)(t7.A, {
         href: a,
-        className: r()(t6.Aw, t6.SF),
+        className: r()(t8.Aw, t8.SF),
         trusted: !o,
         useDefaultUnderlineStyles: !1,
         children: d,
     });
 }
-var t4 = l(385648),
+var t5 = l(385648),
     le = l(781696),
     lt = l(950305),
     ll = l(548118),
@@ -1758,7 +1758,7 @@ function lu(e) {
                     if (null != e) {
                         k(O.HAw.APP_DIRECTORY_SUPPORT_SERVER_JOINED, { application_id: t.id, support_guild_id: e });
                         let l = { page: O.liQ.APPLICATION_DIRECTORY };
-                        await (0, t4.Z2)(e, l);
+                        await (0, t5.Z2)(e, l);
                     }
                 } catch {}
             }, [t])),
@@ -1869,7 +1869,7 @@ function lx(e) {
             (0, i.jsxs)("div", {
                 className: r()(lg.hd, { [lg.d5]: a }),
                 children: [
-                    (0, i.jsx)(t8, { application: s, className: lg.iY, innerClassName: a ? lg.RU : void 0 }),
+                    (0, i.jsx)(t6, { application: s, className: lg.iY, innerClassName: a ? lg.RU : void 0 }),
                     (0, i.jsx)(lu, { application: s, className: lg.iY }),
                 ],
             }),
@@ -2094,11 +2094,11 @@ var lH = l(607399),
     l7 = l(688810),
     l3 = l(361926),
     l9 = l(204776),
-    l6 = l(50268),
-    l8 = l(207371),
+    l8 = l(50268),
+    l6 = l(207371),
     l2 = l(928658),
-    l5 = l(395671),
-    l4 = l(957565),
+    l4 = l(395671),
+    l5 = l(957565),
     se = l(692848),
     st = l(440970);
 let sl = "start_application_install",
@@ -2226,16 +2226,16 @@ let sr = a.forwardRef(function (e, t) {
         o = a.useCallback(() => {
             let e;
             k(O.HAw.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: l.id }),
-                (0, l4.C)(
+                (0, l5.C)(
                     ((e = l.id), `${location.protocol}//${location.host}${O.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(e)}`),
                     () => (0, lY.P0)((0, lz.o)(w.intl.string(w.t["L/PwZf"]), lX.Ck.SUCCESS)),
                 );
         }, [l.id]),
         c = a.useCallback(() => {
-            let e = l5.Ay.createFromServer(l);
+            let e = l4.Ay.createFromServer(l);
             (0, l2.r3)({ application: e, entrypoint: "app_directory" });
         }, [l]),
-        u = (0, l6.A)({
+        u = (0, l8.A)({
             id: l.id,
             label: w.intl.string(w.t["FfCL+6"]),
             onSuccess: () => (0, lY.P0)((0, lz.o)(w.intl.string(w.t.eNjAah), lX.Ck.SUCCESS)),
@@ -2277,7 +2277,7 @@ let sr = a.forwardRef(function (e, t) {
         { onClickLaunchActivity: m, isSubmitting: p } = (function (e, t) {
             let l = e.id,
                 s = e?.bot?.id,
-                i = (0, l8.x)(e),
+                i = (0, l6.x)(e),
                 n = (0, l3.Vr)({ context: { type: "contextless" }, applicationId: l, botUserId: s }),
                 r = null != s && (0, en.$B)(e) && (0, en.Ag)(e) && (i || n),
                 [o, c] = a.useState(!1),
@@ -2317,7 +2317,7 @@ let sr = a.forwardRef(function (e, t) {
                 children: [
                     g && (0, i.jsx)(sn, { size: s, contentWidth: "normal", onClick: m, isSubmitting: p }),
                     (0, i.jsx)(sa, { application: l, size: s, contentWidth: "normal", variant: x }),
-                    l4.p5
+                    l5.p5
                         ? (0, i.jsx)(ew.K, {
                               variant: "secondary",
                               size: s,
@@ -2334,7 +2334,7 @@ let sr = a.forwardRef(function (e, t) {
                 children: [
                     g && (0, i.jsx)(sn, { size: s, contentWidth: "small", onClick: m, isSubmitting: p }),
                     (0, i.jsx)(sa, { application: l, size: s, contentWidth: "small", variant: x }),
-                    (0, i.jsx)(si, { renderDropdown: (e) => h(l4.p5, e), size: s }),
+                    (0, i.jsx)(si, { renderDropdown: (e) => h(l5.p5, e), size: s }),
                 ],
             }),
             (0, i.jsxs)("div", {
@@ -2342,7 +2342,7 @@ let sr = a.forwardRef(function (e, t) {
                 children: [
                     g && (0, i.jsx)(sn, { size: s, contentWidth: "icon", onClick: m, isSubmitting: p }),
                     (0, i.jsx)(sa, { application: l, size: s, contentWidth: "icon", variant: x }),
-                    (0, i.jsx)(si, { renderDropdown: (e) => h(l4.p5, e), size: s }),
+                    (0, i.jsx)(si, { renderDropdown: (e) => h(l5.p5, e), size: s }),
                 ],
             }),
         ],
@@ -2646,7 +2646,7 @@ function sf(e) {
                     return void (0, sg.openModalLazy)(
                         async () => {
                             let { ItemDetailsModal: e } = await Promise.all([
-                                l.e("66731"),
+                                l.e("8241"),
                                 l.e("53917"),
                                 l.e("15186"),
                                 l.e("80830"),
@@ -2674,7 +2674,7 @@ function sf(e) {
                         void (0, sg.openModalLazy)(
                             async () => {
                                 let { SubscriptionDetailsModal: a } = await Promise.all([
-                                    l.e("66731"),
+                                    l.e("8241"),
                                     l.e("53917"),
                                     l.e("15186"),
                                     l.e("80830"),

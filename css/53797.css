@@ -139,6 +139,12 @@
     white-space: nowrap
 }
 
+.orbPrice_e9cb00 {
+    align-items: center;
+    display: inline-flex;
+    gap: 4px
+}
+
 .description_e9cb00 {
     align-items: center;
     display: flex;

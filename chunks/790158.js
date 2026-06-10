@@ -1,0 +1,17 @@
+e.exports = {
+    kL: "container_fb64c9",
+    TE: "chat_fb64c9",
+    Og: "messagesWrapper_fb64c9",
+    XG: "scroller_fb64c9",
+    bv: "scrollerInner_fb64c9",
+    Zd: "form_fb64c9",
+    gM: "channelTextArea_fb64c9",
+    SL: "channelTextAreaInner_fb64c9",
+    Yy: "channelTextAreaWithTypingIndicator_fb64c9",
+    RL: "typingIndicator_fb64c9",
+    cr: "channelTextAreaInnerError_fb64c9",
+    xN: "starterMessageError_fb64c9",
+    Eh: "submitContainer_fb64c9",
+    IL: "messagePreview_fb64c9",
+    P0: "iconWrapper_fb64c9",
+};

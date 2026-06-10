@@ -1,0 +1,15 @@
+e.exports = {
+    iE: "wrapper__83b1d",
+    o1: "actions__83b1d",
+    Qs: "content__83b1d",
+    d4: "contentRemoving__83b1d",
+    yI: "sticker__83b1d",
+    Zl: "stickerName__83b1d",
+    Ce: "wrapperDisabled__83b1d",
+    kQ: "user__83b1d",
+    dj: "userAvatar__83b1d",
+    XI: "action__83b1d",
+    v_: "actionRemove__83b1d",
+    Kk: "icon__83b1d",
+    u1: "spinner__83b1d",
+};

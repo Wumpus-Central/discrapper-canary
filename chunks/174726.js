@@ -1,0 +1,18 @@
+e.exports = {
+    pz: "sidebar__75f8c",
+    aN: "sidebarHeader__75f8c",
+    wp: "sidebarContent__75f8c",
+    om: "sidebarSection__75f8c",
+    a9: "sectionLabel__75f8c",
+    Ep: "sidebarItemList__75f8c",
+    MV: "gameItem__75f8c",
+    tk: "gameItemContent__75f8c",
+    wH: "selected__75f8c",
+    $s: "headerActions__75f8c",
+    Nr: "profileHeader__75f8c",
+    Pe: "titleWithKeybind__75f8c",
+    P: "keybind__75f8c",
+    MT: "searchContainer__75f8c",
+    mO: "gameName__75f8c",
+    z2: "countBadge__75f8c",
+};
