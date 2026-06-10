@@ -4086,13 +4086,13 @@ screen and (max-width:485px) {
 
 .headerProfileName__9564d {
     color: var(--white);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600
 }
 
 .headerProfileBalance__9564d {
     color: var(--white);
-    font-size: 13px
+    font-size: .8125rem
 }
 
 .headerProfileAvatar__9564d {
@@ -4130,10 +4130,10 @@ screen and (max-width:485px) {
 
 .redeemTitle__9564d {
     font-family: var(--font-headline);
-    font-size: 56px;
+    font-size: 3.5rem;
     font-style: italic;
     font-weight: 900;
-    letter-spacing: -1px;
+    letter-spacing: -.0625rem;
     line-height: 1.1;
     margin: 0 0 12px;
     text-transform: uppercase
@@ -4146,7 +4146,7 @@ screen and (max-width:485px) {
 }
 
 .redeemDescription__9564d {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin: 0 0 32px
 }
 
@@ -4169,7 +4169,7 @@ screen and (max-width:485px) {
 
 .redeemLegalText__9564d {
     color: var(--text-muted);
-    font-size: 12px;
+    font-size: .75rem;
     margin: 0 0 12px;
     text-align: center
 }
@@ -4224,7 +4224,7 @@ screen and (max-width:485px) {
 
     .redeemSectionHero__9564d .redeemTitle__9564d,
     .redeemTitle__9564d {
-        font-size: 40px
+        font-size: 2.5rem
     }
 
     .redeemDescription__9564d {
@@ -4247,7 +4247,7 @@ screen and (max-width:485px) {
 
     .redeemSectionHero__9564d .redeemTitle__9564d,
     .redeemTitle__9564d {
-        font-size: 32px
+        font-size: 2rem
     }
 
     .redeemForm__9564d {
