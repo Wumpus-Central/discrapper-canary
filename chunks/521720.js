@@ -117,50 +117,51 @@ let G = (e) => {
         } = (0, D.mO)(M, O),
         Z = (0, g.VG)(M);
     (0, D.$V)(M, V);
-    let { handleUseNow: z, isApplying: J } = (0, f.p)({ product: M, onSuccess: a, onError: a }),
-        X = (0, D.$k)({
+    let { handleUseNow: z, isApplying: J, canUseNow: X } = (0, f.p)({ product: M, onSuccess: a, onError: a }),
+        Y = (0, D.$k)({
             product: M,
             overrideTitle: j,
             isVariantsGroupEnabled: !0,
             shouldShowPromotionalExperience: k,
             productName: Z,
         }),
-        Y = (0, D.v8)({
+        ee = (0, D.v8)({
             product: M,
             overrideDescription: T,
             productName: Z,
             shouldShowPromotionalExperience: k,
             promotionalRewardCollectedText: $,
         }),
-        ee = (0, D.aG)({
+        et = (0, D.aG)({
             product: M,
             onClose: a,
             analyticsLocations: V,
             hasRequiredProductItems: B,
             handleUseNow: z,
             isApplying: J,
+            canUseNow: X,
             openProfileSettings: K,
         }),
-        et = (0, h.nK)(),
-        es = (0, p.O)(),
-        en = E.useConfig({ location: "CollectiblesCollectedModal" }).enabled && O === S.gs.ORB && !et && !es,
-        ea = "6/4";
+        es = (0, h.nK)(),
+        en = (0, p.O)(),
+        ea = E.useConfig({ location: "CollectiblesCollectedModal" }).enabled && O === S.gs.ORB && !es && !en,
+        er = "6/4";
     switch (M.type) {
         case l.R.NAMEPLATE:
         case l.R.AVATAR_DECORATION:
         case l.R.BUNDLE:
-            ea = "16/9";
+            er = "16/9";
             break;
         case l.R.PROFILE_EFFECT:
         case l.R.PROFILE_FRAME:
         default:
-            ea = "6/4";
+            er = "6/4";
     }
-    let { confettiColors: er } = (0, v.A)(M.styles),
-        el = y ?? {
+    let { confettiColors: el } = (0, v.A)(M.styles),
+        ei = y ?? {
             type: "dynamic",
             component: o.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
-            aspectRatio: ea,
+            aspectRatio: er,
             props: { product: M, forCollectedModal: !0 },
         };
     return (0, n.jsx)(d.f5, {
@@ -170,14 +171,14 @@ let G = (e) => {
             children: [
                 (0, n.jsx)(r.Fk, { ref: U, className: w.L, environment: q }),
                 (0, n.jsx)(i.k, {
-                    graphic: el,
-                    title: X,
-                    subtitle: Y ?? void 0,
+                    graphic: ei,
+                    title: Y,
+                    subtitle: ee ?? void 0,
                     onClose: a,
                     transitionState: t,
-                    actions: ee,
+                    actions: et,
                     gradientColor: _ ?? void 0,
-                    children: en && (0, n.jsx)(N, {}),
+                    children: ea && (0, n.jsx)(N, {}),
                 }),
                 null != W
                     ? (0, n.jsx)(P.K, { options: W })
@@ -185,7 +186,7 @@ let G = (e) => {
                           confettiTarget: Q.current,
                           confettiCanvas: H,
                           sprites: (0, F.rA)(M.categorySkuId),
-                          colors: er?.map((e) => e.toHexString()),
+                          colors: el?.map((e) => e.toHexString()),
                       }),
             ],
         }),

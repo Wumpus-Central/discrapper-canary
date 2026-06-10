@@ -1,19 +1,30 @@
-n.d(t, { A: () => o });
-var r = n(627968),
-    i = n(821609),
-    l = n(450481),
-    a = n(758836),
-    s = n(375708);
-let o = (e) => {
-    let { product: t, onSuccess: n, onTrackClick: o } = e,
-        { handleUseNow: c, isApplying: u } = (0, l.p)({ product: t, onSuccess: n });
-    return (0, r.jsx)(i.$, {
-        variant: "primary",
-        onClick: () => {
-            o?.(a.sH.USE_NOW), c();
-        },
-        loading: u,
-        text: s.intl.string(s.t.MAS7uK),
-        fullWidth: !0,
-    });
+r.d(t, { A: () => c });
+var n = r(627968),
+    i = r(821609),
+    l = r(206835),
+    a = r(450481),
+    s = r(758836),
+    o = r(375708);
+let c = (e) => {
+    let { product: t, onSuccess: r, onTrackClick: c } = e,
+        { handleUseNow: u, isApplying: d, canUseNow: m } = (0, a.p)({ product: t, onSuccess: r }),
+        R = (0, l.A)();
+    return m
+        ? (0, n.jsx)(i.$, {
+              variant: "primary",
+              onClick: () => {
+                  c?.(s.sH.USE_NOW), u();
+              },
+              loading: d,
+              text: o.intl.string(o.t.MAS7uK),
+              fullWidth: !0,
+          })
+        : (0, n.jsx)(i.$, {
+              variant: "primary",
+              onClick: () => {
+                  c?.(s.sH.EDIT_PROFILE), R(), r?.();
+              },
+              text: o.intl.string(o.t["2p2aYz"]),
+              fullWidth: !0,
+          });
 };

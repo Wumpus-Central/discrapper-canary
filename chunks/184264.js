@@ -1,4 +1,4 @@
-i.d(e, { $V: () => F, $k: () => M, aG: () => D, mO: () => N, v8: () => B }), i(321073);
+i.d(e, { $V: () => N, $k: () => B, aG: () => M, mO: () => F, v8: () => D }), i(321073);
 var n = i(64700),
     r = i(106778),
     a = i(284009),
@@ -26,7 +26,7 @@ var n = i(64700),
     P = i(625265),
     S = i(375708);
 let h = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null),
-    M = (t) => {
+    B = (t) => {
         let {
             product: e,
             overrideTitle: i,
@@ -43,7 +43,7 @@ let h = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
         if (n && !r) return S.intl.string(S.t.IMffmm);
         return S.intl.formatToPlainString(S.t.YNaxMp, { itemName: a });
     },
-    B = (t) => {
+    D = (t) => {
         let {
             product: e,
             overrideDescription: i,
@@ -75,7 +75,7 @@ let h = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
                     });
         }
     },
-    D = (t) => {
+    M = (t) => {
         let {
                 product: e,
                 onClose: i,
@@ -83,12 +83,14 @@ let h = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
                 hasRequiredProductItems: r,
                 handleUseNow: a,
                 isApplying: c,
-                openProfileSettings: _,
-                itemConsumed: f,
+                canUseNow: _ = !0,
+                openProfileSettings: f,
+                itemConsumed: C,
             } = t,
-            C = [];
+            g = (r ?? !1) && _,
+            h = [];
         if (T.Dp.ORB_PROFILE_BADGE === e.skuId)
-            C.push(
+            h.push(
                 {
                     text: S.intl.string(P.default.yfwZuy),
                     variant: "primary",
@@ -111,8 +113,8 @@ let h = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
                 },
             );
         else if ((0, T.EZ)(e.skuId))
-            f
-                ? C.push(
+            C
+                ? h.push(
                       { text: S.intl.string(S.t.cpT0Cq), variant: "secondary", onClick: i },
                       {
                           text: S.intl.string(S.t.ERKK6v),
@@ -122,7 +124,7 @@ let h = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
                           },
                       },
                   )
-                : C.push(
+                : h.push(
                       { text: S.intl.string(S.t.cpT0Cq), variant: "secondary", onClick: i },
                       {
                           text: S.intl.string(S.t["Jr6N+s"]),
@@ -134,36 +136,38 @@ let h = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
                   );
         else {
             let [t] = e.items;
-            C.push({
+            h.push({
                 text: S.intl.string(S.t["2p2aYz"]),
-                variant: r ? "secondary" : "primary",
+                variant: g ? "secondary" : "primary",
                 onClick: () => {
-                    if ((i(), (0, s.jH)(), _?.(), e.type === u.R.AVATAR_DECORATION)) {
-                        l()(t.type === u.R.AVATAR_DECORATION, "product type and item type are the same"),
-                            (0, y.L)({ initialSelectedDecoration: t, analyticsLocations: n });
-                        return;
-                    }
-                    if (e.type === u.R.PROFILE_EFFECT) {
-                        l()(t.type === u.R.PROFILE_EFFECT, "product type and item type are the same"),
-                            (0, k.W)({ initialSelectedEffect: t, analyticsLocations: n });
-                        return;
-                    }
-                    if (e.type === u.R.NAMEPLATE) {
-                        l()(t.type === u.R.NAMEPLATE, "product type and item type are the same"),
-                            (0, m.p)({ initialSelectedNameplate: t, analyticsLocations: n });
-                        return;
-                    }
-                    if (e.type === u.R.PROFILE_FRAME) {
-                        l()(t.type === u.R.PROFILE_FRAME, "product type and item type are the same"),
-                            (0, I.w)({ initialSelectedProfileFrame: t, analyticsLocations: n });
-                        return;
+                    if ((i(), (0, s.jH)(), f?.(), e.type !== u.R.BUNDLE)) {
+                        if (e.type === u.R.AVATAR_DECORATION) {
+                            l()(t.type === u.R.AVATAR_DECORATION, "product type and item type are the same"),
+                                (0, y.L)({ initialSelectedDecoration: t, analyticsLocations: n });
+                            return;
+                        }
+                        if (e.type === u.R.PROFILE_EFFECT) {
+                            l()(t.type === u.R.PROFILE_EFFECT, "product type and item type are the same"),
+                                (0, k.W)({ initialSelectedEffect: t, analyticsLocations: n });
+                            return;
+                        }
+                        if (e.type === u.R.NAMEPLATE) {
+                            l()(t.type === u.R.NAMEPLATE, "product type and item type are the same"),
+                                (0, m.p)({ initialSelectedNameplate: t, analyticsLocations: n });
+                            return;
+                        }
+                        if (e.type === u.R.PROFILE_FRAME) {
+                            l()(t.type === u.R.PROFILE_FRAME, "product type and item type are the same"),
+                                (0, I.w)({ initialSelectedProfileFrame: t, analyticsLocations: n });
+                            return;
+                        }
                     }
                 },
             });
         }
-        return r && C.push({ text: S.intl.string(S.t.MAS7uK), variant: "primary", onClick: a, loading: c }), C;
+        return g && h.push({ text: S.intl.string(S.t.MAS7uK), variant: "primary", onClick: a, loading: c }), h;
     },
-    F = (t, e) => {
+    N = (t, e) => {
         let i = n.useMemo(() => (0, f.V6)(t.type, t.skuId), [t.type, t.skuId]);
         return (
             n.useEffect(() => {
@@ -177,7 +181,7 @@ let h = (t) => (null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null
             { productType: i }
         );
     },
-    N = (t, e) => {
+    F = (t, e) => {
         let i = n.useRef(new r.OH()),
             a = (0, n.useRef)(null),
             [l, u] = n.useState(null),

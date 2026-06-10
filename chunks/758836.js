@@ -443,6 +443,7 @@ var B =
     (o.CLOSE_DETAIL = "close_detail"),
     (o.COPY_LINK = "copy_link"),
     (o.USE_NOW = "use_now"),
+    (o.EDIT_PROFILE = "edit_profile"),
     (o.UNLOCK_WITH_NITRO = "unlock_with_nitro"),
     (o.ADD_TO_COLLECTION = "add_to_collection"),
     (o.BUNDLE_VIEW_AVATAR_DECORATION = "bundle_view_avatar_decoration"),
