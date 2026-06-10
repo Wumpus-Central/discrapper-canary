@@ -446,10 +446,15 @@ class O extends v {
         );
     }
     static shouldClear(e, t) {
-        return (
-            !e.omit?.includes(t) &&
-            ("all" === e.type || ("user-data-only" === e.type && !O.userAgnosticPersistKeys.has(t)))
-        );
+        if (e.omit?.includes(t)) return !1;
+        switch (e.type) {
+            case "all":
+                return !0;
+            case "user-data-only":
+                return !O.userAgnosticPersistKeys.has(t);
+            default:
+                return e.type, !1;
+        }
     }
     static clearPersistQueue(e) {
         O._writeResolvers.forEach((t, n) => {
