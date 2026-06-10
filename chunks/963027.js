@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { Ay: () => _, r2: () => h }), n(321073);
-var i = n(832384),
+var i = n(751765),
     r = n(95701),
     s = n(994500),
     a = n(287809),
@@ -18,14 +18,15 @@ function _(e) {
             mentionCount: f = 0,
             voiceStates: p,
             embeddedActivitiesCount: E,
-            isSubscriptionGated: m,
-            needSubscriptionToAccess: g,
-            isIncomingCall: A = !1,
-            isOngoingCall: I = !1,
-            voiceChannelStartTime: T,
+            activityNames: m,
+            isSubscriptionGated: g,
+            needSubscriptionToAccess: A,
+            isIncomingCall: I = !1,
+            isOngoingCall: T = !1,
+            voiceChannelStartTime: S,
         } = e,
-        S = (0, u.m1)(_, a.default, s.A),
-        y = (function (e) {
+        y = (0, u.m1)(_, a.default, s.A),
+        N = (function (e) {
             if (e) return d.intl.string(d.t["4qvAtn"]);
         })((0, l.A)(_));
     switch (_.type) {
@@ -36,7 +37,7 @@ function _(e) {
             let e;
             (e = f > 0 ? d.t.Lo0dCa : h ? d.t["fxxUo/"] : d.t.lts3Ld),
                 (n = [
-                    d.intl.formatToPlainString(e, { channelName: S, mentionCount: f }),
+                    d.intl.formatToPlainString(e, { channelName: y, mentionCount: f }),
                     d.intl.formatToPlainString(d.t.CxSA5N, { members: _.recipients.length + 1 }),
                 ].join(", "));
             break;
@@ -51,11 +52,11 @@ function _(e) {
             t = f > 0 ? d.t.sDKIpm : h ? d.t.VM7z8f : d.t.WJ3MPt;
             break;
         case c.rbe.GUILD_VOICE:
-            let N = [d.intl.formatToPlainString(d.t.bkpadO, { channelName: S })];
-            f > 0 && N.push(d.intl.formatToPlainString(d.t["3l1GOx"], { mentionCount: f })),
-                h && N.push(d.intl.string(d.t.x5zAGZ));
-            let v = _.userLimit,
-                C = null != v && v > 0;
+            let v = [d.intl.formatToPlainString(d.t.bkpadO, { channelName: y })];
+            f > 0 && v.push(d.intl.formatToPlainString(d.t["3l1GOx"], { mentionCount: f })),
+                h && v.push(d.intl.string(d.t.x5zAGZ));
+            let C = _.userLimit,
+                R = null != C && C > 0;
             if (null != p && p.length > 0) {
                 let e = p.length - 3,
                     t = p
@@ -65,13 +66,16 @@ function _(e) {
                             return t ?? (0, o.mG)(n);
                         })
                         .join(", ");
-                N.push(t),
-                    e > 0 && N.push(d.intl.formatToPlainString(d.t.sfgpgr, { overflow: e })),
-                    C && N.push(d.intl.formatToPlainString(d.t["6qgTOF"], { userCount: p.length, limit: v }));
+                v.push(t),
+                    e > 0 && v.push(d.intl.formatToPlainString(d.t.sfgpgr, { overflow: e })),
+                    R && v.push(d.intl.formatToPlainString(d.t["6qgTOF"], { userCount: p.length, limit: C }));
             }
-            null != T &&
-                N.push(d.intl.formatToPlainString(d.t.JQtsGh, { duration: (0, i.U3)({ start: T }, Date.now()) })),
-                (n = N.join(", "));
+            null != S &&
+                v.push(d.intl.formatToPlainString(d.t.JQtsGh, { duration: (0, i.U3)({ start: S }, Date.now()) })),
+                null != m &&
+                    m.length > 0 &&
+                    v.push(d.intl.formatToPlainString(d.t.LmYuHT, { activeActivities: m.join(", ") })),
+                (n = v.join(", "));
             break;
         case c.rbe.GUILD_STAGE_VOICE:
             t = d.t.TPPk2T;
@@ -89,16 +93,16 @@ function _(e) {
                     ? d.t.smf1CZ
                     : d.t.s0JADj;
     }
-    let R = null != n ? [n] : null != t ? [d.intl.formatToPlainString(t, { channelName: S, mentionCount: f })] : [];
-    A ? R.push(d.intl.string(d.t["fk1/bX"])) : I && R.push(d.intl.string(d.t["NGg/fm"])),
-        null != E && E > 0 && R.push(d.intl.formatToPlainString(d.t.O6PLYd, { activitiesCount: E }));
-    let O = (function (e) {
+    let O = null != n ? [n] : null != t ? [d.intl.formatToPlainString(t, { channelName: y, mentionCount: f })] : [];
+    I ? O.push(d.intl.string(d.t["fk1/bX"])) : T && O.push(d.intl.string(d.t["NGg/fm"])),
+        null != E && E > 0 && O.push(d.intl.formatToPlainString(d.t.O6PLYd, { activitiesCount: E }));
+    let b = (function (e) {
         let { isSubscriptionGated: t, needSubscriptionToAccess: n } = e;
         if (t)
             if (n) return d.intl.string(d.t["oj+HOs"]);
             else return d.intl.string(d.t.xI3TQQ);
-    })({ isSubscriptionGated: m, needSubscriptionToAccess: g });
-    return null != O && R.push(O), null != y && R.push(y), R.join(", ");
+    })({ isSubscriptionGated: g, needSubscriptionToAccess: A });
+    return null != b && O.push(b), null != N && O.push(N), O.join(", ");
 }
 function h(e) {
     let { channel: t, muted: n, userStatus: i, isFavorite: r } = e,

@@ -1,4 +1,4 @@
-t.d(i, { m: () => o });
+t.d(i, { N: () => u, m: () => c });
 var n = t(17928),
     l = t(495544),
     s = t(290863),
@@ -9,7 +9,7 @@ let u = (e) =>
     ([d.$pd.PLAYING, d.$pd.WATCHING].includes(e.type) &&
         [e.name, e.application_id, e.assets, e.state, e.details, e.party].some((e) => null != e)) ||
     e.type === d.$pd.LISTENING;
-function o(e, i) {
+function c(e, i) {
     return (0, n.yK)([a.A, s.A, l.default], () => {
         let t = e.id === l.default.getId() ? a.A.getActivities() : s.A.getActivities(e.id),
             n = new Map();
