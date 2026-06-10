@@ -14361,7 +14361,8 @@ let mY = function (e) {
                         ? et.A.saveGuild(t.id, { homeHeader: null })
                         : (0, C.openModalLazy)(async () => {
                               let { default: l } = await Promise.all([
-                                  n.e("8308"),
+                                  n.e("32690"),
+                                  n.e("25056"),
                                   n.e("30571"),
                                   n.e("12380"),
                                   n.e("93513"),
@@ -26459,7 +26460,8 @@ function Ia(e) {
                 let l = Ec.A.fromBlob(Eu.f.GUILD_ICON, t);
                 (0, C.openModalLazy)(async () => {
                     let { default: s } = await Promise.all([
-                        n.e("8308"),
+                        n.e("32690"),
+                        n.e("25056"),
                         n.e("30571"),
                         n.e("12380"),
                         n.e("93513"),

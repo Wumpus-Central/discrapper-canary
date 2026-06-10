@@ -4,4 +4,6 @@ e.exports = {
     kL: "container_e1e351",
     Tc: "rewardContent_e1e351",
     L8: "rewardImage_e1e351",
+    Mc: "pickerGroup_e1e351",
+    J3: "readout_e1e351",
 };

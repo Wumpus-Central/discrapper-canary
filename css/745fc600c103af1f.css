@@ -1,0 +1,44 @@
+.card_c3d27e {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: var(--space-12);
+    padding: var(--space-16)
+}
+
+.cardInfo_c3d27e {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 0
+}
+
+.statusRow_c3d27e {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.statusLabel_c3d27e {
+    flex-shrink: 0
+}
+
+.guildSummary_c3d27e {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.clickable_c3d27e {
+    cursor: pointer
+}
+
+.trailingIcons_c3d27e {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--space-4)
+}

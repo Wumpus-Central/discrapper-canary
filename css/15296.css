@@ -4792,6 +4792,17 @@
     gap: 8px
 }
 
+.outer_ac6414 {
+    position: relative
+}
+
+.inner_ac6414 {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
 .dimensionlessImage_a22bfd {
     height: 100%;
     -o-object-fit: scale-down;
@@ -5203,6 +5214,15 @@
     opacity: 1
 }
 
+.statusText__19b6d,
+.text__19b6d {
+    font-size: 14px
+}
+
+.statusText__19b6d {
+    color: var(--text-muted)
+}
+
 .facepile_aaa08b {
     display: flex
 }
@@ -5240,6 +5260,28 @@
 
 .guildIconItemText_aaa08b {
     padding-top: 2px
+}
+
+.chevronButton__5ae61 {
+    cursor: pointer;
+    padding: 0;
+    width: 100%
+}
+
+.chevronButton__5ae61,
+.chevronButtonContent__5ae61 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between
+}
+
+.chevronButtonContent__5ae61 {
+    flex: 1;
+    height: 20px
+}
+
+.customizeLink__5ae61 {
+    cursor: pointer
 }
 
 .connectedAccountVanityMetadata_fffe42 {
@@ -5324,14 +5366,10 @@
     padding: var(--space-8)
 }
 
-.messageInput__8ff3e {
-    max-height: 88px
-}
-
 .panel_e1e351 {
     display: flex;
     flex-direction: column;
-    gap: var(--space-32);
+    gap: var(--space-24);
     overflow-y: auto;
     padding: 12px
 }
@@ -5363,6 +5401,20 @@
     -o-object-fit: contain;
     object-fit: contain;
     width: 64px
+}
+
+.pickerGroup_e1e351 {
+    gap: var(--space-8)
+}
+
+.pickerGroup_e1e351,
+.readout_e1e351 {
+    display: flex;
+    flex-direction: column
+}
+
+.readout_e1e351 {
+    gap: var(--space-4)
 }
 
 .row_e4169f {
@@ -6777,51 +6829,15 @@
     }
 }
 
-.header__6e6ad {
-    align-items: center;
+.serverNickname__7bf69 {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    gap: var(--space-8)
 }
 
-.subtitleText__6e6ad {
-    margin-bottom: 16px;
-    text-align: center
-}
-
-.guildBanner__6e6ad {
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 4px;
-    height: 180px;
-    margin-bottom: 24px;
-    width: 320px
-}
-
-.guildHeader__6e6ad {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    filter: drop-shadow(0 1px 1px hsla(0, 0%, 0%, .8));
-    height: 48px;
-    padding: 0 16px;
-    transition: background-color .1s linear
-}
-
-.guildName__6e6ad {
-    flex: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
-}
-
-.dropdown__6e6ad,
-.guildName__6e6ad {
-    color: var(--white)
-}
-
-.upsell_b8890f {
-    cursor: pointer
+.separator__7bf69 {
+    background-color: var(--border-subtle);
+    height: 1px
 }
 
 .spinner__1d6c7 {
