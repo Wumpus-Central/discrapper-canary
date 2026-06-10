@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Gb: () => h, TX: () => f, Zy: () => d, kY: () => p, lc: () => _ }), n(321073);
+n.d(t, { Gb: () => f, NM: () => d, TX: () => p, Zy: () => _, kY: () => E, lc: () => h }), n(321073);
 var i = n(166929),
     r = n(652896),
     s = n(929921),
@@ -9,28 +9,29 @@ var i = n(166929),
     u = n(372684),
     c = n(974293);
 function d(e) {
+    switch (e.decision?.signal?.type) {
+        case u.Gy.MANUAL:
+            return "manual";
+        case u.Gy.DISTRIBUTED:
+            return "distributed";
+        case u.Gy.LAUGHTER:
+            return "auto_ml";
+        default:
+            return "unknown";
+    }
+}
+function _(e) {
     return {
-        clip_type: (function (e) {
-            switch (e.decision?.signal?.type) {
-                case u.Gy.MANUAL:
-                    return "manual";
-                case u.Gy.DISTRIBUTED:
-                    return "distributed";
-                case u.Gy.LAUGHTER:
-                    return "autoclip";
-                default:
-                    return;
-            }
-        })(e),
+        clip_type: d(e),
         num_clip_participants: e.users.length,
         clip_session_id: e.gameSessionId,
         is_candidate: e.isCandidate,
     };
 }
-function _() {
+function h() {
     return { clip_runtime: (0, c.GN)(), current_clip_session_id: l.Ay.getCurrentClipsSessionId() };
 }
-function h(e) {
+function f(e) {
     let t = [];
     for (let n of e.timeline)
         switch (n.signal.type) {
@@ -48,12 +49,12 @@ function h(e) {
         }
     return t;
 }
-function f(e) {
+function p(e) {
     let t = a.A.getCurrentUserActiveStream(),
         n = null != t ? o.A.getRTCConnection((0, r._z)(t)) : null;
     return {
-        ...d(e),
-        ..._(),
+        ..._(e),
+        ...h(),
         rtc_connection_id: n?.getRTCConnectionId(),
         media_session_id: n?.getMediaSessionId(),
         parent_media_session_id: n?.parentMediaSessionId,
@@ -65,7 +66,7 @@ function f(e) {
         clip_event_timeline_size: e.timeline.length,
     };
 }
-function p(e, t) {
+function E(e, t) {
     let n = new Map();
     for (let e in t.framesEncodedByEncoder) {
         let r = t.framesEncodedByEncoder[e],

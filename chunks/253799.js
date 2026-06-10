@@ -11,6 +11,7 @@ var a,
         (a.DELETE = "delete"),
         (a.SHOW_IN_FOLDER = "show_in_folder"),
         (a.OPEN_IN_INSPECTOR = "open_in_inspector"),
+        (a.CLIP_FEEDBACK = "clip_feedback"),
         a);
 let i = new Set([
     "add_to_library",
@@ -23,4 +24,5 @@ let i = new Set([
     "delete",
     "show_in_folder",
     "open_in_inspector",
+    "clip_feedback",
 ]);

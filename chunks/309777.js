@@ -14,8 +14,8 @@ var a = l(627968),
     p = l(972213),
     v = l(364522),
     x = l(270003),
-    g = l(683071),
-    b = l(331322),
+    b = l(683071),
+    g = l(331322),
     j = l(834730),
     y = l(821609),
     C = l(292666),
@@ -27,12 +27,12 @@ var a = l(627968),
     R = l(429913),
     T = l(47167),
     L = l(713654),
-    M = l(137177),
-    I = l(145497),
-    O = l(734057),
-    D = l(540999),
-    S = l(71393),
-    _ = l(287809),
+    I = l(137177),
+    M = l(145497),
+    D = l(734057),
+    O = l(540999),
+    _ = l(71393),
+    S = l(287809),
     P = l(58703),
     U = l(403362),
     B = l(274372),
@@ -71,14 +71,14 @@ function Y(e) {
         ep = (0, R.h)(em.applicationId),
         ev = (0, i.bG)([B.Ay], () => B.Ay.isClipExporting(em.id)),
         { onShareClick: ex } = (0, V.A)(t),
-        eg = (0, i.bG)([D.A], () => D.A.isDeveloper),
-        eb = (0, K.h)(em),
+        eb = (0, i.bG)([O.A], () => O.A.isDeveloper),
+        eg = (0, K.h)(em),
         ej = n.useCallback(async () => {
             await (0, G.w7)(em.id), ed(!1);
         }, [em.id, ed]),
-        ey = (0, i.yK)([_.default], () => em.users.map(_.default.getUser).filter(U.Vq)),
-        eC = (0, i.bG)([S.A], () => (null != em.guildId ? S.A.getGuild(em.guildId) : null)),
-        eE = (0, i.bG)([O.A], () => (null != em.channelId ? O.A.getChannel(em.channelId) : null)),
+        ey = (0, i.yK)([S.default], () => em.users.map(S.default.getUser).filter(U.Vq)),
+        eC = (0, i.bG)([_.A], () => (null != em.guildId ? _.A.getGuild(em.guildId) : null)),
+        eE = (0, i.bG)([D.A], () => (null != em.channelId ? D.A.getChannel(em.channelId) : null)),
         ek = (0, T.Ay)(eE),
         eA = null != eE ? (0, L.gU)(eE, eC) : null;
     async function eN() {
@@ -126,8 +126,8 @@ function Y(e) {
                                             l.e("18307"),
                                             l.e("86456"),
                                             l.e("20342"),
-                                            l.e("24043"),
-                                        ]).then(l.bind(l, 197126));
+                                            l.e("80955"),
+                                        ]).then(l.bind(l, 80982));
                                         return (l) =>
                                             (0, a.jsx)(e, {
                                                 ...l,
@@ -142,7 +142,7 @@ function Y(e) {
                             "aria-label": q.intl.string(q.t.PdRCRg),
                             icon: f.j,
                         }),
-                        eg &&
+                        eb &&
                             (0, a.jsx)(u.K, {
                                 onClick: function () {
                                     (0, s.openModalLazy)(
@@ -171,9 +171,9 @@ function Y(e) {
                 children: (0, a.jsxs)(x.n, {
                     children: [
                         ec &&
-                            (0, a.jsx)(g.w, {
+                            (0, a.jsx)(b.w, {
                                 type: "info",
-                                children: (0, a.jsxs)(b.B, {
+                                children: (0, a.jsxs)(g.B, {
                                     gap: 8,
                                     children: [
                                         (0, a.jsx)(j.E, {
@@ -197,7 +197,7 @@ function Y(e) {
                             value: eo,
                             minLength: W.U_,
                             maxLength: W.mk,
-                            placeholder: eb,
+                            placeholder: eg,
                         }),
                         !eh &&
                             (0, a.jsxs)(a.Fragment, {
@@ -228,7 +228,7 @@ function Y(e) {
                                 children: (0, a.jsxs)("div", {
                                     className: J._c,
                                     children: [
-                                        (0, a.jsx)(M.A, { game: ep, size: M.M.XXSMALL, className: J.Z9 }),
+                                        (0, a.jsx)(I.A, { game: ep, size: I.M.XXSMALL, className: J.Z9 }),
                                         (0, a.jsx)(j.E, {
                                             variant: "text-sm/normal",
                                             color: "text-subtle",
@@ -245,7 +245,7 @@ function Y(e) {
                                 children: (0, a.jsxs)("div", {
                                     className: J._c,
                                     children: [
-                                        (0, a.jsx)(I.Ay, { guild: eC, iconSize: 16, className: J.Z9 }),
+                                        (0, a.jsx)(M.Ay, { guild: eC, iconSize: 16, className: J.Z9 }),
                                         (0, a.jsx)(j.E, {
                                             variant: "text-sm/normal",
                                             color: "text-subtle",
