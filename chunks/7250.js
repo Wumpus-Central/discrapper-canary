@@ -1,0 +1,10 @@
+e.d(s, { j: () => o });
+var t = e(317097);
+function o(r) {
+    let { backgroundColor: s, colors: e } = r,
+        [o, a] = e,
+        n = "string" == typeof s ? (0, t.LX)(s) : s,
+        i = "string" == typeof o ? (0, t.LX)(o) : o,
+        l = "string" == typeof a ? (0, t.LX)(a) : a;
+    return (0, t.bJ)(n, i) > (0, t.bJ)(n, l) ? o : a;
+}
