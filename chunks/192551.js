@@ -485,8 +485,9 @@ function X(e) {
         { isEnrolling: R } = (0, S.cf)([y.A], () => ({ isEnrolling: y.A.isEnrolling(C) }), [C]),
         O = d === l.V3.QUEST_HOME_TILE_V2_FOOTER,
         b = O ? (0, p.Q_)(n) : (0, p.Oz)(n),
-        D = (function (e, t, n) {
-            let { launchInGameActivity: i } = (0, c.zW)(t);
+        D = (function (e, t, n, i) {
+            let { launchInGameActivity: r } = (0, c.zW)(t),
+                s = i === l.V3.QUEST_HOME_TILE_V2_FOOTER;
             if ((0, _.K$)(t))
                 return () => {
                     (0, p.Fy)(t);
@@ -495,22 +496,26 @@ function X(e) {
                 case u.n.ACHIEVEMENT_IN_ACTIVITY:
                 case u.n.PLAY_ACTIVITY:
                     return () => {
-                        i();
+                        r();
                     };
                 case u.n.ACHIEVEMENT_IN_GAME:
-                    return () => {
-                        (0, p._x)({ quest: t, sourceQuestContent: n });
-                    };
+                    return s
+                        ? () => {
+                              (0, p._x)({ quest: t, sourceQuestContent: n });
+                          }
+                        : null;
                 case u.n.PLAY_ON_XBOX:
                 case u.n.PLAY_ON_PLAYSTATION:
                 case u.n.PLAY_ON_DESKTOP:
-                    return () => {
-                        (0, p.ii)({ quest: t, sourceQuestContent: n });
-                    };
+                    return s
+                        ? () => {
+                              (0, p.ii)({ quest: t, sourceQuestContent: n });
+                          }
+                        : null;
                 default:
                     return null;
             }
-        })(s, n, I),
+        })(s, n, I, d),
         L = O
             ? (0, a.C0)(n)
             : (function (e, t) {
