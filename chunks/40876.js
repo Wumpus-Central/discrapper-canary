@@ -81,7 +81,7 @@ let r = {
     },
     DesktopSettingExperimentBridgeManager: {
         actions: ["POST_CONNECTION_OPEN", "LOGOUT"],
-        inlineRequire: () => n(595064).A,
+        inlineRequire: () => n(225567).A,
         hasStoreChangeListeners: !0,
     },
     DesktopTTIEarlyUpdateCheckExperimentManager: {
@@ -578,7 +578,7 @@ let r = {
             "RUNNING_GAMES_CHANGE",
             "CLIPS_SAVE_CLIP",
         ],
-        inlineRequire: () => n(871421).A,
+        inlineRequire: () => n(257290).A,
     },
     ClipsSignalManager: {
         actions: ["RUNNING_GAMES_CHANGE", "CLIPS_SETTINGS_UPDATE", "VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATES"],
@@ -619,6 +619,7 @@ let r = {
             "VOICE_STATE_UPDATES",
             "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS",
             "FRAME_LAUNCH",
+            "FRAME_STOP",
             "EMBEDDED_ACTIVITY_UPDATE_V2",
             "QUESTS_PREVIEW_UPDATE_SUCCESS",
             "QUEST_APPLICATION_START_TIMER",
