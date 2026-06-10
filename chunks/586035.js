@@ -26,15 +26,15 @@ var s = i(627968),
     M = i(651892),
     _ = i(901406),
     T = i(814793),
-    I = i(241124),
-    W = i(918338),
-    b = i(371912),
-    w = i(491145),
+    w = i(241124),
+    I = i(918338),
+    W = i(371912),
+    b = i(491145),
     D = i(190107),
     P = i(818348),
     R = i(375708),
     S = i(970197);
-function O(t) {
+function q(t) {
     let { quest: e, sourceQuestContent: i, onLoadComplete: a, preCtaClick: l } = t,
         c = (0, y.Ay)(),
         o = (0, h.M)(c) ? P.NJ.DARK : P.NJ.LIGHT,
@@ -49,7 +49,7 @@ function O(t) {
                     sourceQuestContent: i,
                 });
         },
-        O = n.useMemo(() => {
+        q = n.useMemo(() => {
             let t = e.config.ctaConfig?.subtitle;
             return null != t
                 ? t
@@ -59,19 +59,19 @@ function O(t) {
                   ? R.intl.string(R.t.y8Xf3k)
                   : R.intl.string(R.t["wirwN+"]);
         }, [e]),
-        q = (0, w.A)(e, { impressionId: d, sourceQuestContent: i }, l) ?? {
+        O = (0, b.A)(e, { impressionId: d, sourceQuestContent: i }, l) ?? {
             ctaText: (0, M.wr)(e),
             ctaVariant: "primary",
             onClickCta: x,
             title: R.intl.format(R.t.EAYZAr, { questName: e.config.messages.questName }),
-            subtitle: O,
+            subtitle: q,
             ctaIconPosition: "end",
         },
-        { isLoading: G } = (0, I.Gk)();
+        { isLoading: G } = (0, w.Gk)();
     n.useEffect(() => {
         G || a();
     }, [G, a]);
-    let Y = (0, b.Lk)({
+    let Y = (0, W.Lk)({
         isShareable: u,
         questId: e.id,
         trackingCtx: n.useMemo(
@@ -87,10 +87,10 @@ function O(t) {
     return (0, s.jsxs)("div", {
         className: S.kL,
         children: [
-            (0, s.jsx)(I.Sn, {
+            (0, s.jsx)(w.Sn, {
                 id: "hero-display",
                 children: (t) =>
-                    (0, s.jsx)(W.A, {
+                    (0, s.jsx)(I.A, {
                         quest: e,
                         imageSize: { width: D.i$ * D.K, height: D.ls * D.K },
                         containerClassName: S.WQ,
@@ -100,7 +100,7 @@ function O(t) {
             }),
             (0, s.jsx)("div", {
                 className: S.Lt,
-                children: (0, s.jsx)(I.Sn, {
+                children: (0, s.jsx)(w.Sn, {
                     id: "partner-logotype",
                     children: (t) =>
                         (0, s.jsx)("img", {
@@ -121,12 +121,12 @@ function O(t) {
                                 variant: "heading-md/semibold",
                                 color: "text-strong",
                                 className: S.fx,
-                                children: q.title,
+                                children: O.title,
                             }),
-                            (0, s.jsx)(r.E, { variant: "text-sm/medium", color: "text-subtle", children: q.subtitle }),
+                            (0, s.jsx)(r.E, { variant: "text-sm/medium", color: "text-subtle", children: O.subtitle }),
                         ],
                     }),
-                    (0, s.jsx)(I.Sn, {
+                    (0, s.jsx)(w.Sn, {
                         id: "partner-game-tile",
                         children: (t) =>
                             (0, s.jsx)("img", {
@@ -157,12 +157,12 @@ function O(t) {
                                 }),
                             }),
                         (0, s.jsx)(C.$, {
-                            variant: q.ctaVariant,
-                            text: q.ctaText,
-                            onClick: q.onClickCta,
+                            variant: O.ctaVariant,
+                            text: O.ctaText,
+                            onClick: O.onClickCta,
                             fullWidth: !0,
                             icon: A.W,
-                            iconPosition: q.ctaIconPosition,
+                            iconPosition: O.ctaIconPosition,
                         }),
                     ],
                 }),
@@ -170,9 +170,9 @@ function O(t) {
         ],
     });
 }
-function q(t) {
+function O(t) {
     let { quest: e, location: i } = t;
-    return (0, s.jsx)(I.jY, { source: i, questId: e.id, isPreview: e.preview, children: (0, s.jsx)(O, { ...t }) });
+    return (0, s.jsx)(w.jY, { source: i, questId: e.id, isPreview: e.preview, children: (0, s.jsx)(q, { ...t }) });
 }
 var G = i(63639);
 function Y(t) {
@@ -237,11 +237,12 @@ function z(t) {
                         style: { visibility: y ? "hidden" : "visible" },
                         children: (0, s.jsxs)("div", {
                             className: G.jE,
+                            "data-testid": "quest-reward-modal",
                             children: [
                                 (0, s.jsx)("div", { className: G._H, children: f }),
                                 (0, s.jsx)("div", {
                                     className: G.xK,
-                                    children: (0, s.jsx)(q, {
+                                    children: (0, s.jsx)(O, {
                                         quest: e,
                                         sourceQuestContent: i,
                                         onLoadComplete: () => C(!1),

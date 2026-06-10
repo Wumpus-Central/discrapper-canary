@@ -542,6 +542,7 @@ let ep = (e) => {
             fullWidth: !0,
             onClick: o,
             text: n ?? Z.intl.string(Z.t.cfY4PE),
+            "data-testid": "quest-bar-claim-reward-button",
             variant: "primary",
             size: "sm",
         });
@@ -1304,6 +1305,7 @@ function tg(e) {
                         }),
                         (0, i.jsx)("div", {
                             className: tf.lO,
+                            "data-testid": "quest-bar-enroll-cta",
                             children: (0, i.jsx)(eU.e, {
                                 direction: "horizontal",
                                 fullWidth: !0,
@@ -1952,6 +1954,7 @@ function tj(e) {
                     (0, i.jsx)(tx, {
                         isUnenrolled: !O,
                         children: (0, i.jsx)(o.animated.div, {
+                            "data-testid": "quest-bar-container",
                             "aria-hidden": !P,
                             onMouseLeave: et,
                             onMouseEnter: ee,
