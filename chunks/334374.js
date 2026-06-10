@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { xs: () => V, n0: () => F });
+n.d(t, { xs: () => H, n0: () => B });
 var i,
     r,
     s = n(627968),
@@ -12,23 +12,88 @@ var i,
     _ = n(859703),
     h = n(561844),
     f = n(590202),
-    p = n(710969),
-    E = (((i = {}).END_CONTENT_LOAD = "end_content_load"), i),
-    m = n(652215),
-    g = n(345353),
-    A = n(69114),
-    I = n(807393),
-    T = n(723702),
-    S = n(340124),
-    y = n(945810),
-    N =
+    p = n(823784),
+    E = n(710969),
+    m = n(174459),
+    g = (((i = {}).END_CONTENT_LOAD = "end_content_load"), (i.CLICK_INTERNAL = "click_internal"), i);
+f.Cy.OPEN_GAME_LINK, f.Cy.CONTEXT_MENU_OPEN_GAME_LINK, f.Cy.GAME_STORE_OPEN_GAME_LINK;
+var A = n(652215);
+async function I(e) {
+    let {
+        adCreativeType: t,
+        questContentCTA: n,
+        surfaceId: i,
+        sourceQuestContent: r,
+        impressionId: s,
+        clickId: a,
+        questContentPosition: u,
+        questContentRowIndex: c,
+        trackGuildAndChannelMetadata: d,
+    } = e;
+    if (null == t) {
+        let t = (0, f.fF)(i, u, c);
+        m.default.track(A.HAw.QUEST_CONTENT_CLICKED, {
+            cta_name: n,
+            click_id: a ?? (0, o.A)(),
+            is_targeted: e.isTargeted ?? !1,
+            content_id: t.content_id,
+            content_name: t.content_name,
+            content_position: t.content_position,
+            row_index: t.row_index,
+            ad_content_id: e.adContentId,
+        });
+        return;
+    }
+    let _ = await (0, h.LW)({
+        questContent: i,
+        questContentPosition: u,
+        questContentRowIndex: c,
+        questContentCTA: n,
+        impressionId: s,
+        clickId: a,
+    });
+    if (t === l.p.QUEST) {
+        let t = e.adCreativeId;
+        (0, h.av)({
+            questId: t,
+            event: A.HAw.QUEST_CONTENT_CLICKED,
+            properties: {
+                ..._,
+                metadata_sealed: (0, E.L4)(r, t) ?? null,
+                traffic_metadata_sealed: (0, E.Gp)(r, t) ?? null,
+                search_session_id: (0, p.tv)()?.uuid ?? null,
+            },
+            trackGuildAndChannelMetadata: d,
+            shouldExtendSession: (0, E.xn)(i),
+            sourceQuestContent: r,
+        });
+        return;
+    }
+    (0, h.Qg)({
+        adContentId: e.adCreativeId,
+        relatedQuestId: e.relatedQuestId,
+        adCreativeType: t,
+        event: A.HAw.QUEST_CONTENT_CLICKED,
+        properties: { ..._, search_session_id: (0, p.tv)()?.uuid ?? null },
+        trackGuildAndChannelMetadata: d,
+        shouldExtendSession: (0, E.xn)(i),
+        sourceQuestContent: r,
+    });
+}
+var T = n(345353),
+    S = n(69114),
+    y = n(807393),
+    N = n(723702),
+    v = n(340124),
+    C = n(945810),
+    R =
         (((r = {})[(r.STEP_1_LOADED = 0)] = "STEP_1_LOADED"),
         (r[(r.STEP_2_CLICKED_INTERNAL = 1)] = "STEP_2_CLICKED_INTERNAL"),
         (r[(r.STEP_3_CLICKED_EXTERNAL = 2)] = "STEP_3_CLICKED_EXTERNAL"),
         (r[(r.STEP_4_VIEWED_NON_IMPRESSION = 3)] = "STEP_4_VIEWED_NON_IMPRESSION"),
         (r[(r.STEP_5_VIEWED_IMPRESSION = 4)] = "STEP_5_VIEWED_IMPRESSION"),
         r);
-let v = (0, y.mj)({
+let O = (0, C.mj)({
     name: "2026-05-use-ad-analytics-interface",
     kind: "user",
     defaultConfig: { enabled: !1, maxStep: -1 },
@@ -41,20 +106,19 @@ let v = (0, y.mj)({
         5: { enabled: !0, maxStep: 4 },
     },
 });
-var C = n(851936),
-    R = n(47167),
-    O = n(633965),
-    b = n(734057),
-    D = n(71393),
-    L = n(994500),
-    w = n(967198),
-    M = n(287809),
-    P = n(486020);
+var b = n(851936),
+    D = n(47167),
+    L = n(633965),
+    w = n(734057),
+    M = n(71393),
+    P = n(994500),
+    x = n(967198),
+    k = n(287809),
+    U = n(486020);
 n(23766);
-var x = n(971649),
-    k = n(823784);
-let U = new Set();
-class G {
+var G = n(971649);
+let F = new Set();
+class V {
     id;
     entity;
     questContent;
@@ -98,9 +162,9 @@ class G {
             (this.onImpressionCallback = _),
             (this.sourceQuestContent = h),
             (this.migrateQuestContentLoadedToCaptureAdUserAction = (function (e, t) {
-                let n = v.getConfig({ location: t });
+                let n = O.getConfig({ location: t });
                 return n.enabled && e <= n.maxStep;
-            })(N.STEP_1_LOADED, "quest_content_impression")),
+            })(R.STEP_1_LOADED, "quest_content_impression")),
             l.p.QUEST,
             (this.entity = { adContentIds: t, adCreativeType: n });
     }
@@ -111,15 +175,15 @@ class G {
         return this.questContentPosition;
     }
     trackViewedPlacement = (e) => {
-        let t = (0, p.HN)(this.questContent);
-        null != t && (0, p.xn)(this.questContent) && U.add(`${e}_${t}`);
+        let t = (0, E.HN)(this.questContent);
+        null != t && (0, E.xn)(this.questContent) && F.add(`${e}_${t}`);
     };
     shouldExtendSession = (e) => {
-        let t = (0, p.HN)(this.questContent);
-        return null != t && !U.has(`${e}_${t}`) && (0, p.xn)(this.questContent);
+        let t = (0, E.HN)(this.questContent);
+        return null != t && !F.has(`${e}_${t}`) && (0, E.xn)(this.questContent);
     };
     onMinViewTimeReached = async () => {
-        let e = await (0, g.N)((0, f.jO)(this.questContent)),
+        let e = await (0, T.N)((0, f.jO)(this.questContent)),
             t = {
                 trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
                 sourceQuestContent: this.sourceQuestContent,
@@ -128,23 +192,23 @@ class G {
                 min_view_time_seconds: this.minViewTimeSeconds,
                 min_viewport_percentage: this.minViewportPercentage,
                 triggered_by_status_change: this.triggeredByStatusChange,
-                apple_advertising_id: null != e && (0, T.isIOS)() ? e.advertisingId : null,
-                android_advertising_id: null != e && (0, T.isAndroid)() ? e.advertisingId : null,
-                ...(0, A.A)(),
+                apple_advertising_id: null != e && (0, N.isIOS)() ? e.advertisingId : null,
+                android_advertising_id: null != e && (0, N.isAndroid)() ? e.advertisingId : null,
+                ...(0, S.A)(),
                 ...(function (e) {
                     let t,
                         n,
-                        i = (0, p.xn)(e),
-                        r = (0, p.vZ)(e),
-                        s = (0, O.pc)(),
-                        a = (0, O.Ld)();
+                        i = (0, E.xn)(e),
+                        r = (0, E.vZ)(e),
+                        s = (0, L.pc)(),
+                        a = (0, L.Ld)();
                     if (!r?.is_campaign_ias_enabled || !i || void 0 === s || void 0 === a) return null;
-                    let o = w.A.getGuildId(),
-                        l = null != o ? D.A.getGuild(o) : null,
+                    let o = x.A.getGuildId(),
+                        l = null != o ? M.A.getGuild(o) : null,
                         u = {
                             guilds:
                                 ((t = s()),
-                                (n = D.A.getGuilds()),
+                                (n = M.A.getGuilds()),
                                 t
                                     .map((e) => {
                                         let t = n[e];
@@ -153,7 +217,7 @@ class G {
                                         null !== t.description && (i.description = t.description);
                                         let r =
                                             null !== t.icon
-                                                ? (P.Ay.getGuildIconURL({
+                                                ? (U.Ay.getGuildIconURL({
                                                       id: t.id,
                                                       icon: t.icon,
                                                       size: 44,
@@ -168,9 +232,9 @@ class G {
                                     ? []
                                     : a()
                                           .map((e) => {
-                                              let t = b.A.getChannel(e);
+                                              let t = w.A.getChannel(e);
                                               if (void 0 === t) return null;
-                                              let n = { id: t.id, name: (0, R.m1)(t, M.default, L.A) };
+                                              let n = { id: t.id, name: (0, D.m1)(t, k.default, P.A) };
                                               return t.topic.length > 0 && (n.channel_topic = t.topic), n;
                                           })
                                           .filter((e) => null !== e),
@@ -178,7 +242,7 @@ class G {
                     null != o && (u.selected_guild_id = o);
                     let c =
                         l?.banner !== null && l?.banner !== void 0
-                            ? (P.Ay.getGuildBannerURL({ id: l.id, banner: l.banner }, !0) ?? null)
+                            ? (U.Ay.getGuildBannerURL({ id: l.id, banner: l.banner }, !0) ?? null)
                             : null;
                     return (
                         null !== c && (u.selected_guild_banner_url = c),
@@ -189,13 +253,13 @@ class G {
                 })(this.questContent),
             };
         this.entity.adContentIds.forEach((e, i) => {
-            let r = (0, p.L4)(this.sourceQuestContent, e),
+            let r = (0, E.L4)(this.sourceQuestContent, e),
                 s = this.shouldExtendSession(e);
             if ((this.trackViewedPlacement(e), this.entity.adCreativeType === l.p.QUEST)) {
                 let e = this.entity.adContentIds[i],
                     a = _.A.getQuest(e);
-                null == a || (0, p.Ic)(a) || (0, S.zh)(l.p.QUEST, [e]),
-                    (0, C.L)().info(
+                null == a || (0, E.Ic)(a) || (0, v.zh)(l.p.QUEST, [e]),
+                    (0, b.L)().info(
                         `${a?.config.messages.questName ?? e} Quest viewed for at least ${this.minViewTimeSeconds}s at ${(0, f.jO)(this.questContent)}`,
                         { impressionId: this.id },
                     ),
@@ -203,18 +267,18 @@ class G {
                         ...t,
                         shouldExtendSession: s,
                         questId: e,
-                        event: m.HAw.QUEST_CONTENT_VIEWED,
+                        event: A.HAw.QUEST_CONTENT_VIEWED,
                         properties: {
                             ...n,
                             ...this.commonProperties(),
                             metadata_sealed: r ?? null,
-                            search_session_id: (0, k.tv)()?.uuid ?? null,
-                            traffic_metadata_sealed: (0, p.Gp)(this.sourceQuestContent, a?.id) ?? null,
+                            search_session_id: (0, p.tv)()?.uuid ?? null,
+                            traffic_metadata_sealed: (0, E.Gp)(this.sourceQuestContent, a?.id) ?? null,
                         },
                     });
             } else {
                 let e = this.entity.adContentIds[i];
-                (0, C.L)().info(
+                (0, b.L)().info(
                     `${e} ad content viewed for at least ${this.minViewTimeSeconds}s at ${(0, f.jO)(this.questContent)}`,
                     { impressionId: this.id },
                 ),
@@ -223,7 +287,7 @@ class G {
                         shouldExtendSession: s,
                         adContentId: e,
                         adCreativeType: this.entity.adCreativeType,
-                        event: m.HAw.QUEST_CONTENT_VIEWED,
+                        event: A.HAw.QUEST_CONTENT_VIEWED,
                         properties: { ...n, ...this.commonProperties() },
                     });
             }
@@ -249,19 +313,19 @@ class G {
                     if (e.entity.adCreativeType === l.p.QUEST) {
                         let s = e.entity.adContentIds[a],
                             o = _.A.getQuest(s);
-                        (0, C.L)().info(
+                        (0, b.L)().info(
                             `${o?.config.messages.questName ?? s} Quest impression ${t ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
                             { impressionId: e.id },
                         ),
                             (0, h.av)({
                                 ...i,
                                 questId: s,
-                                event: m.HAw.QUEST_CONTENT_VIEW_TIME,
+                                event: A.HAw.QUEST_CONTENT_VIEW_TIME,
                                 properties: { ...r, ...e.commonProperties() },
                             });
                     } else {
                         let s = e.entity.adContentIds[a];
-                        (0, C.L)().info(
+                        (0, b.L)().info(
                             `${s} ad content impression ${t ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
                             { impressionId: e.id },
                         ),
@@ -269,7 +333,7 @@ class G {
                                 ...i,
                                 adContentId: s,
                                 adCreativeType: e.entity.adCreativeType,
-                                event: m.HAw.QUEST_CONTENT_VIEW_TIME,
+                                event: A.HAw.QUEST_CONTENT_VIEW_TIME,
                                 properties: { ...r, ...e.commonProperties() },
                             });
                     }
@@ -287,7 +351,7 @@ class G {
         let { triggeredByStatusChange: t } = e;
         return (
             this.stop(),
-            new G({
+            new V({
                 questContent: this.questContent,
                 questContentRowIndex: this.questContentRowIndex,
                 questContentPosition: this.questContentPosition,
@@ -314,54 +378,13 @@ class G {
             },
             t = { triggered_by_status_change: this.triggeredByStatusChange };
         this.entity.adContentIds.forEach((n, i) => {
-            let r = (0, p.L4)(this.sourceQuestContent, n);
+            let r = (0, E.L4)(this.sourceQuestContent, n);
             if (this.migrateQuestContentLoadedToCaptureAdUserAction) {
                 let e =
                     (this.entity.adCreativeType === l.p.QUEST,
                     { adCreativeType: this.entity.adCreativeType, adCreativeId: this.entity.adContentIds[i] });
-                !(function (e) {
-                    if (e.type === E.END_CONTENT_LOAD) {
-                        let t = (0, p.L4)(e.sourceQuestContent, e.adCreativeId),
-                            n = null != _.A.questEnrollmentBlockedUntil;
-                        if (e.adCreativeType === l.p.QUEST) {
-                            let i = e.adCreativeId;
-                            (0, h.av)({
-                                event: m.HAw.QUEST_CONTENT_LOADED,
-                                questId: i,
-                                trackGuildAndChannelMetadata: e.trackGuildAndChannelMetadata,
-                                sourceQuestContent: e.sourceQuestContent,
-                                properties: {
-                                    triggered_by_status_change: e.triggeredByStatusChange,
-                                    metadata_sealed: t ?? null,
-                                    traffic_metadata_sealed: (0, p.Gp)(e.sourceQuestContent, i) ?? null,
-                                    impression_id: e.impressionId,
-                                    is_quest_enrollment_blocked: n,
-                                    content_id: e.surfaceId,
-                                    content_name: (0, f.jO)(e.surfaceId),
-                                    content_position: e.questContentPosition,
-                                    row_index: e.questContentRowIndex,
-                                },
-                            });
-                        } else
-                            (0, h.Qg)({
-                                event: m.HAw.QUEST_CONTENT_LOADED,
-                                adContentId: e.adCreativeId,
-                                adCreativeType: e.adCreativeType,
-                                trackGuildAndChannelMetadata: e.trackGuildAndChannelMetadata,
-                                sourceQuestContent: e.sourceQuestContent,
-                                properties: {
-                                    triggered_by_status_change: e.triggeredByStatusChange,
-                                    impression_id: e.impressionId,
-                                    is_quest_enrollment_blocked: n,
-                                    content_id: e.surfaceId,
-                                    content_name: (0, f.jO)(e.surfaceId),
-                                    content_position: e.questContentPosition,
-                                    row_index: e.questContentRowIndex,
-                                },
-                            });
-                    }
-                })({
-                    type: E.END_CONTENT_LOAD,
+                var s = {
+                    type: g.END_CONTENT_LOAD,
                     surfaceId: this.questContent,
                     sourceQuestContent: this.sourceQuestContent,
                     impressionId: this.id,
@@ -370,42 +393,85 @@ class G {
                     questContentPosition: this.questContentPosition,
                     questContentRowIndex: this.questContentRowIndex,
                     ...e,
-                });
+                };
+                switch (s.type) {
+                    case g.END_CONTENT_LOAD:
+                        let t = null != _.A.questEnrollmentBlockedUntil;
+                        if (s.adCreativeType === l.p.QUEST) {
+                            let e = s.adCreativeId;
+                            (0, h.av)({
+                                event: A.HAw.QUEST_CONTENT_LOADED,
+                                questId: e,
+                                trackGuildAndChannelMetadata: s.trackGuildAndChannelMetadata,
+                                sourceQuestContent: s.sourceQuestContent,
+                                properties: {
+                                    triggered_by_status_change: s.triggeredByStatusChange,
+                                    metadata_sealed: (0, E.L4)(s.sourceQuestContent, e) ?? null,
+                                    traffic_metadata_sealed: (0, E.Gp)(s.sourceQuestContent, e) ?? null,
+                                    impression_id: s.impressionId,
+                                    is_quest_enrollment_blocked: t,
+                                    content_id: s.surfaceId,
+                                    content_name: (0, f.jO)(s.surfaceId),
+                                    content_position: s.questContentPosition,
+                                    row_index: s.questContentRowIndex,
+                                },
+                            });
+                        } else
+                            (0, h.Qg)({
+                                event: A.HAw.QUEST_CONTENT_LOADED,
+                                adContentId: s.adCreativeId,
+                                adCreativeType: s.adCreativeType,
+                                trackGuildAndChannelMetadata: s.trackGuildAndChannelMetadata,
+                                sourceQuestContent: s.sourceQuestContent,
+                                properties: {
+                                    triggered_by_status_change: s.triggeredByStatusChange,
+                                    impression_id: s.impressionId,
+                                    is_quest_enrollment_blocked: t,
+                                    content_id: s.surfaceId,
+                                    content_name: (0, f.jO)(s.surfaceId),
+                                    content_position: s.questContentPosition,
+                                    row_index: s.questContentRowIndex,
+                                },
+                            });
+                        break;
+                    case g.CLICK_INTERNAL:
+                        I(s);
+                }
                 return;
             }
             if (this.entity.adCreativeType === l.p.QUEST) {
                 let n = this.entity.adContentIds[i],
                     s = _.A.getQuest(n);
-                (0, C.L)().info(
+                (0, b.L)().info(
                     `${s?.config.messages.questName ?? n} Quest became visible at ${(0, f.jO)(this.questContent)}`,
                     { impressionId: this.id },
                 ),
                     (0, h.av)({
                         ...e,
                         questId: n,
-                        event: m.HAw.QUEST_CONTENT_LOADED,
+                        event: A.HAw.QUEST_CONTENT_LOADED,
                         properties: {
                             ...t,
                             metadata_sealed: r ?? null,
                             ...this.commonProperties(),
-                            traffic_metadata_sealed: (0, p.Gp)(this.sourceQuestContent, s?.id) ?? null,
+                            traffic_metadata_sealed: (0, E.Gp)(this.sourceQuestContent, s?.id) ?? null,
                         },
                     });
             } else {
                 let n = this.entity.adContentIds[i];
-                (0, C.L)().info(`${n} ad content became visible at ${(0, f.jO)(this.questContent)}`, {
+                (0, b.L)().info(`${n} ad content became visible at ${(0, f.jO)(this.questContent)}`, {
                     impressionId: this.id,
                 }),
                     (0, h.Qg)({
                         ...e,
                         adContentId: n,
                         adCreativeType: this.entity.adCreativeType,
-                        event: m.HAw.QUEST_CONTENT_LOADED,
+                        event: A.HAw.QUEST_CONTENT_LOADED,
                         properties: { ...t, ...this.commonProperties() },
                     });
             }
         }),
-            I.A.increment({
+            y.A.increment({
                 name: u.K.QUEST_CONTENT_IMPRESSION,
                 tags: [`quest_content:${(0, f.jO)(this.questContent)}`],
             }),
@@ -423,10 +489,10 @@ class G {
         };
     })();
 }
-let F = a.createContext(void 0);
-function V(e) {
+let B = a.createContext(void 0);
+function H(e) {
     let { visible: t, visibleChanged: n, focused: i, reference: r, focusedChanged: o, sourceQuestContent: u } = e,
-        h = (0, x.iY)(e),
+        h = (0, G.iY)(e),
         f = a.useRef(null),
         p = (0, c.bG)([_.A], () => null != _.A.questEnrollmentBlockedUntil, []);
     return (
@@ -451,7 +517,7 @@ function V(e) {
                 };
                 e.adCreativeType,
                     l.p.QUEST,
-                    (f.current = new G({ ...t, adContentIds: e.adContentIds, adCreativeType: e.adCreativeType })),
+                    (f.current = new V({ ...t, adContentIds: e.adContentIds, adCreativeType: e.adCreativeType })),
                     f.current.start();
             }
         }, [
@@ -471,6 +537,6 @@ function V(e) {
             u,
             e.adCreativeType,
         ]),
-        (0, s.jsx)(F.Provider, { value: f, children: e.children(r, f) })
+        (0, s.jsx)(B.Provider, { value: f, children: e.children(r, f) })
     );
 }

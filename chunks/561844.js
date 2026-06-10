@@ -1,6 +1,7 @@
 "use strict";
 n.d(t, {
     DZ: () => x,
+    LW: () => R,
     Mm: () => P,
     OQ: () => L,
     Qg: () => C,
@@ -150,7 +151,7 @@ async function O(e) {
             trackGuildAndChannelMetadata: l,
             sourceQuestContent: u,
         } = e,
-        c = (0, p.Gp)(n, t);
+        c = (0, p.Gp)(u, t);
     v({
         questId: t,
         event: I.HAw.QUEST_CONTENT_CLICKED,
