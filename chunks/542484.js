@@ -879,6 +879,7 @@ function l0(e) {
                 buttonRef: r,
                 disabled: n,
                 accessibleLabel: eV.intl.string(eV.t["/X3fkf"]),
+                accessibleValue: (0, lq.Hl)(c),
                 showOverlayOnHover: !0,
                 renderPreview: () =>
                     (0, t.jsx)("div", { style: { width: "100%", height: "100%", backgroundColor: (0, lq.Hl)(c) } }),
