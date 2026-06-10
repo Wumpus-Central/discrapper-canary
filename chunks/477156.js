@@ -1621,27 +1621,7 @@ var td = s(192308);
 let tu = (e) => {
     let { analyticsLocation: t, onClose: l } = e;
     (0, td.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([
-            s.e("87755"),
-            s.e("11954"),
-            s.e("54048"),
-            s.e("699"),
-            s.e("62680"),
-            s.e("87306"),
-            s.e("99666"),
-            s.e("41043"),
-            s.e("18441"),
-            s.e("98125"),
-            s.e("21825"),
-            s.e("8892"),
-            s.e("99657"),
-            s.e("32079"),
-            s.e("84456"),
-            s.e("86949"),
-            s.e("52073"),
-            s.e("93475"),
-            s.e("18630"),
-        ]).then(s.bind(s, 826789));
+        let { default: e } = await Promise.all([s.e("93475"), s.e("18630")]).then(s.bind(s, 826789));
         return (s) => (0, i.jsx)(e, { ...s, analyticsSource: t, onClose: () => (l?.(), s.onClose?.()) });
     });
 };

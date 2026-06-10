@@ -1,4 +1,4 @@
-n.d(t, { i: () => C });
+n.d(t, { i: () => I });
 var i = n(627968);
 n(64700);
 var l = n(702841),
@@ -17,11 +17,11 @@ var l = n(702841),
     x = n(825596),
     f = n(703543),
     E = n(652215);
-function C(e) {
+function I(e) {
     let {
             guildProductListing: t,
-            guildId: C,
-            location: I,
+            guildId: I,
+            location: C,
             shouldShowFullDescriptionButton: v = !0,
             hideRoleTag: _ = !1,
             lineClamp: j = 1,
@@ -31,22 +31,23 @@ function C(e) {
             descriptionTextVariant: S = "text-sm/normal",
             showOpaqueBackground: b = !1,
         } = e,
-        L = (0, l.bG)([c.A], () => c.A.getGuild(C), [C]),
-        R = (0, l.bG)([d.A], () => d.A.getRole(C, t?.role_id ?? E.dJq)),
+        L = (0, l.bG)([c.A], () => c.A.getGuild(I), [I]),
+        R = (0, l.bG)([d.A], () => d.A.getRole(I, t?.role_id ?? E.dJq)),
         k = (0, r.R)(t, 600),
         M = (0, A.z)(t),
         P = (0, m.BB)(L),
-        { shouldHideGuildPurchaseEntryPoints: D } = (0, o.MH)(C),
+        { shouldHideGuildPurchaseEntryPoints: D } = (0, o.MH)(I),
         w = (0, A.X)(t),
-        O = (0, f.A)({ guildId: C, guildProductListingId: t.id, sourceAnalyticsLocations: I });
+        O = (0, f.A)({ guildId: I, guildProductListingId: t.id, sourceAnalyticsLocations: C });
     if (null == L || D) return null;
     let U = () => {
             var e;
             return (
-                (e = { guildId: C, guildProductListingId: t.id, analyticsLocation: I }),
+                (e = { guildId: I, guildProductListingId: t.id, analyticsLocation: C }),
                 void (0, a.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
-                        n.e("36115"),
+                        n.e("66731"),
+                        n.e("60462"),
                         n.e("35778"),
                         n.e("47812"),
                         n.e("13583"),
@@ -58,7 +59,7 @@ function C(e) {
         },
         G = (0, i.jsx)(x.i, {
             product: t,
-            guildId: C,
+            guildId: I,
             showEditProduct: P,
             showUnpublishProduct: !1,
             showCopyLink: !0,
@@ -82,7 +83,7 @@ function C(e) {
                 })({ listing: t });
             },
             onCopyProductLink: () => {
-                (0, u.C)((0, h.KW)(C, t.id));
+                (0, u.C)((0, h.KW)(I, t.id));
             },
             onTestDownload: () => {},
         });

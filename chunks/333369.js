@@ -7,23 +7,23 @@ var i = n(627968),
     o = n.n(a),
     h = n(735438),
     d = n.n(h),
-    u = n(189213),
-    c = n(773812),
-    p = n(17928),
-    g = n(661531),
-    m = n(770880),
-    C = n(276293),
-    E = n(146151),
-    I = n(983851),
-    A = n(597050),
-    b = n(56059),
-    N = n(24825),
+    u = n(434831),
+    c = n(189213),
+    p = n(773812),
+    g = n(17928),
+    m = n(661531),
+    C = n(770880),
+    E = n(276293),
+    I = n(146151),
+    A = n(983851),
+    b = n(597050),
+    N = n(56059),
     O = n(532590),
     _ = n(191023),
     S = n(778492),
     f = n(278416),
     T = n(451394),
-    G = n(777666),
+    G = n(812993),
     v = n(834730),
     U = n(922016),
     L = n(231723),
@@ -40,7 +40,7 @@ var i = n(627968),
     B = n(712963),
     V = n(228366);
 let F = {};
-class Y extends p.Ay.Store {
+class Y extends g.Ay.Store {
     static displayName = "ApplicationBranchStore";
     getBranches(e) {
         return F[e] ?? [];
@@ -85,7 +85,7 @@ class Z extends l.Component {
         });
     }
 }
-let K = p.Ay.connectStores([X], (e) => {
+let K = g.Ay.connectStores([X], (e) => {
     let { applicationId: t } = e;
     return { branches: X.getBranches(t) };
 })(Z);
@@ -117,7 +117,7 @@ class J extends l.Component {
         });
     }
 }
-let Q = p.Ay.connectStores([z.A], (e) => {
+let Q = g.Ay.connectStores([z.A], (e) => {
     let { applicationId: t } = e;
     return { skus: z.A.getForApplication(t) };
 })(J);
@@ -203,7 +203,7 @@ function eB(e) {
             ? (l = (0, i.jsx)(G.Lp, {
                   text: W.intl.string(W.t.psHMa6),
                   className: ew.Ad,
-                  color: g.A.colors.BUTTON_OUTLINE_BRAND_BACKGROUND_HOVER.css,
+                  color: m.A.colors.BUTTON_OUTLINE_BRAND_BACKGROUND_HOVER.css,
               }))
             : !0 === n && (l = (0, i.jsx)(eh.A, { className: ew.Ad })),
         l
@@ -219,15 +219,15 @@ function eV(e) {
             error: o,
             name: h,
             guildId: d,
-            onBack: c,
-            canSubmit: g,
+            onBack: u,
+            canSubmit: p,
             onMembersChange: m,
             pendingPermissionOverwrites: C,
         } = e,
         [E, I] = l.useState(""),
         [A, b] = l.useState({}),
         N = l.useRef(null),
-        O = (0, p.bG)([eb.A], () => eb.A.getGuild(d)),
+        O = (0, g.bG)([eb.A], () => eb.A.getGuild(d)),
         _ = r === ex.rbe.GUILD_STAGE_VOICE,
         { roles: S, members: f, getRichTag: T } = (0, el.K)(O, null, _ ? eg.QY : (0, eE.TA)(r), E, _),
         G = ei.A.useSections({ roles: S, members: f });
@@ -251,7 +251,7 @@ function eV(e) {
               roles: S,
               members: f,
               getRichTag: T,
-              children: (0, i.jsx)(u.Modal, {
+              children: (0, i.jsx)(c.Modal, {
                   transitionState: n,
                   onClose: s,
                   title: _ ? W.intl.string(W.t["S/6zHM"]) : W.intl.string(W.t.dMJ3Y6),
@@ -285,8 +285,8 @@ function eV(e) {
                       innerRole: "listbox",
                   },
                   actions: [
-                      { variant: "secondary", text: W.intl.string(W.t["13/7kX"]), onClick: c },
-                      { variant: "primary", text: t, type: "submit", disabled: !g },
+                      { variant: "secondary", text: W.intl.string(W.t["13/7kX"]), onClick: u },
+                      { variant: "primary", text: t, type: "submit", disabled: !p },
                   ],
               }),
           }));
@@ -521,13 +521,13 @@ class eY extends l.PureComponent {
         let { isPrivate: e, channelTypeOption: t } = this.state;
         switch (t) {
             case ex.rbe.GUILD_TEXT:
-                return e ? m.I : C.N;
+                return e ? C.I : E.N;
             case ex.rbe.GUILD_FORUM:
-                return b.b;
+                return N.b;
             case ex.rbe.GUILD_MEDIA:
                 return _.x;
             case ex.rbe.GUILD_VOICE:
-                return e ? E.t : I.H;
+                return e ? I.t : A.H;
             case ex.rbe.GUILD_STORE:
                 return f.g;
             case ex.rbe.GUILD_ANNOUNCEMENT:
@@ -535,10 +535,10 @@ class eY extends l.PureComponent {
             case ex.rbe.GUILD_STAGE_VOICE:
                 return T.q;
             case eH:
-                return N.x;
+                return u.t;
             default:
                 let n = ek(t);
-                return (0, eE.ke)(n) ? C.N : ej.FX;
+                return (0, eE.ke)(n) ? E.N : ej.FX;
         }
     }
     getHelperText() {
@@ -618,7 +618,7 @@ class eY extends l.PureComponent {
             { channelTypeOption: o, isPrivate: h } = this.state;
         if (null != e || o === ex.rbe.GUILD_CATEGORY) return;
         let d = null != t && t.length > 0;
-        return (0, i.jsx)(c.z, {
+        return (0, i.jsx)(p.z, {
             label: W.intl.string(W.t["7ZcXG2"]),
             options: (function (e) {
                 let {
@@ -631,19 +631,19 @@ class eY extends l.PureComponent {
                     } = e,
                     a = [
                         {
-                            leadingIcon: t ? m.I : C.N,
+                            leadingIcon: t ? C.I : E.N,
                             name: W.intl.string(W.t.pnuRXC),
                             value: ex.rbe.GUILD_TEXT,
                             desc: W.intl.string(W.t["Hf5Lb+"]),
                         },
                         {
-                            leadingIcon: t ? E.t : I.H,
+                            leadingIcon: t ? I.t : A.H,
                             name: W.intl.string(W.t.Sx55Oh),
                             value: ex.rbe.GUILD_VOICE,
                             desc: W.intl.string(W.t.pqfkoF),
                         },
                         {
-                            leadingIcon: t ? A.Q : b.b,
+                            leadingIcon: t ? b.Q : N.b,
                             name: W.intl.string(W.t.eAVID5),
                             value: ex.rbe.GUILD_FORUM,
                             desc: W.intl.string(W.t.iZ5pgg),
@@ -652,7 +652,7 @@ class eY extends l.PureComponent {
                 return (
                     r &&
                         a.push({
-                            leadingIcon: N.x,
+                            leadingIcon: u.t,
                             name: W.intl.string(eP.default["h/GwWL"]),
                             value: eH,
                             desc: W.intl.string(eP.default.DxwBMf),
@@ -793,7 +793,7 @@ class eY extends l.PureComponent {
             t,
             { channelTypeOption: n, isPrivate: l } = this.state,
             s = ek(n),
-            { guildId: r, transitionState: a, cloneChannel: o, categoryId: h, onClose: d, channelType: c } = this.props,
+            { guildId: r, transitionState: a, cloneChannel: o, categoryId: h, onClose: d, channelType: u } = this.props,
             p =
                 null != o
                     ? W.intl.string(W.t.dEaPc4)
@@ -804,11 +804,11 @@ class eY extends l.PureComponent {
             let t = eI.A.getChannel(h);
             e = W.intl.format(W.t.L1zJgb, { categoryName: t?.name ?? "" });
         }
-        t = c === ex.rbe.GUILD_CATEGORY ? W.intl.string(W.t["ISN+NM"]) : W.intl.string(W.t["fUYU+j"]);
+        t = u === ex.rbe.GUILD_CATEGORY ? W.intl.string(W.t["ISN+NM"]) : W.intl.string(W.t["fUYU+j"]);
         let g = l || s === ex.rbe.GUILD_STAGE_VOICE;
         return (0, i.jsx)("form", {
             onSubmit: this.handleSubmit,
-            children: (0, i.jsx)(u.Modal, {
+            children: (0, i.jsx)(c.Modal, {
                 transitionState: a,
                 onClose: d,
                 title: p,
@@ -833,7 +833,7 @@ class eY extends l.PureComponent {
                     children: [
                         this.renderType(),
                         this.renderName(),
-                        c === ex.rbe.GUILD_STORE ? this.renderStoreOptions() : null,
+                        u === ex.rbe.GUILD_STORE ? this.renderStoreOptions() : null,
                         (0, i.jsx)(eM, { guildId: r, channelType: s, className: ew.wI }),
                         s === ex.rbe.GUILD_STAGE_VOICE ? null : this.renderPrivacyOptions(),
                     ],
@@ -872,7 +872,7 @@ class eY extends l.PureComponent {
 }
 let eX = l.forwardRef(function (e, t) {
     let { channelType: n, guildId: l, cloneChannelId: s } = e,
-        r = (0, p.cf)([eb.A, e_.default, eN.A, eI.A, eA.Ay], () => {
+        r = (0, g.cf)([eb.A, e_.default, eN.A, eI.A, eA.Ay], () => {
             let e = eb.A.getGuild(l),
                 t = e_.default.getCurrentUser();
             o()(null != t, "CreateChannel: user cannot be undefined");
@@ -895,7 +895,7 @@ let eX = l.forwardRef(function (e, t) {
                 canManageChannels: eN.A.can(ex.xBc.MANAGE_CHANNELS, e),
             };
         }),
-        a = (0, p.yK)([et.A], () =>
+        a = (0, g.yK)([et.A], () =>
             et.A.getGuildApplicationIds(l)
                 .map((e) => et.A.getApplication(e))
                 .filter(ef.Vq),
@@ -903,7 +903,7 @@ let eX = l.forwardRef(function (e, t) {
         h = new Set(r.memberRoles),
         { canManageRoles: d, canManageChannels: u } = r,
         c = (0, em.R)(l) && d && u,
-        g = (0, ec.V)(r?.guild),
+        p = (0, ec.V)(r?.guild),
         m = ed.useExperiment({ guildId: l, location: "CreateChannel" }, { autoTrackExposure: !0 }).enabled;
     return (0, i.jsx)(eY, {
         ...e,
@@ -911,7 +911,7 @@ let eX = l.forwardRef(function (e, t) {
         memberRoleIds: h,
         applications: a,
         canCreateStageChannel: c,
-        canCreateMediaChannel: g,
+        canCreateMediaChannel: p,
         canCreateGameInvitesChannel: m,
         ref: t,
         width: 496,

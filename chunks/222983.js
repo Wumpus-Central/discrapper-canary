@@ -30,8 +30,8 @@ var l = n(627968),
     R = n(935208),
     D = n(652215),
     L = n(468689),
-    k = n(794967),
-    O = n(595818),
+    O = n(794967),
+    k = n(595818),
     P = n(287809),
     G = n(147925),
     U = n(625494),
@@ -155,8 +155,8 @@ function W(e) {
                 null != Q &&
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("71632"),
-                            n.e("70573"),
+                            n.e("53957"),
+                            n.e("42527"),
                             n.e("59957"),
                             n.e("28136"),
                             n.e("16084"),
@@ -184,7 +184,7 @@ function W(e) {
                 setup_type: B.XT.CHANNEL_WELCOME,
                 action: B.AG.PERSONALIZE_SERVER,
             }),
-                null != Q && L.A.open(Q.id, (0, O.x)(), { section: D.JJy.CHANNEL_WELCOME_CTA });
+                null != Q && L.A.open(Q.id, (0, k.x)(), { section: D.JJy.CHANNEL_WELCOME_CTA });
         }, [Q])),
         {
             handleInvite: W,
@@ -196,7 +196,7 @@ function W(e) {
                     action: B.AG.DOWNLOAD,
                 }),
                     (0, m.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("60559"), n.e("44602"), n.e("25280")]).then(
+                        let { default: e } = await Promise.all([n.e("7363"), n.e("44602"), n.e("25280")]).then(
                             n.bind(n, 987482),
                         );
                         return (t) => (0, l.jsx)(e, { source: D.JJy.CHANNEL_WELCOME_CTA, ...t });
@@ -255,7 +255,7 @@ function W(e) {
         (i.useEffect(() => {
             (async () => {
                 try {
-                    let e = await (0, k.c)(Q?.id ?? D.dJq);
+                    let e = await (0, O.c)(Q?.id ?? D.dJq);
                     eC(e.map((e) => e.id));
                 } catch {}
             })();

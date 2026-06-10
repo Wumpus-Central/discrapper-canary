@@ -104,7 +104,7 @@ function M(e) {
             (0, C.xs)(t.id),
                 await o.A.openPrivateChannel({ recipientIds: [t.id] }),
                 (0, c.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("2677"), n.e("22638"), n.e("8891"), n.e("95501")]).then(
+                    let { default: e } = await Promise.all([n.e("734"), n.e("22638"), n.e("8891"), n.e("95501")]).then(
                         n.bind(n, 367516),
                     );
                     return (t) =>

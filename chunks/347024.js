@@ -4,7 +4,7 @@ n.d(t, { W: () => x, Ay: () => C, Q9: () => k }), n(321073);
 var r = n(635377),
     s = n.n(r),
     a = n(941426),
-    o = n(730296);
+    o = n(534979);
 let l = new Map(),
     u = new Map(),
     c = new Set();
@@ -77,8 +77,8 @@ function C(e) {
                             !r &&
                             ((r = !0),
                             (null == v &&
-                                (v = Promise.all([n.e("57036"), n.e("75134")])
-                                    .then(n.bind(n, 981776))
+                                (v = Promise.resolve()
+                                    .then(n.bind(n, 149938))
                                     .then((e) => {
                                         N = e.default;
                                     })

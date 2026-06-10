@@ -86,11 +86,10 @@ function S(e) {
             (0, c.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        a.e("12380"),
-                        a.e("48804"),
+                        a.e("21866"),
                         a.e("50342"),
-                        a.e("7406"),
                         a.e("55524"),
+                        a.e("7406"),
                         a.e("89908"),
                         a.e("74571"),
                     ]).then(a.bind(a, 142630));

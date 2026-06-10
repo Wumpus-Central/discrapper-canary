@@ -432,8 +432,7 @@ function M(t) {
             onClick: () => {
                 (0, d.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
-                        e.e("41104"),
-                        e.e("54353"),
+                        e.e("11141"),
                         e.e("11585"),
                         e.e("3589"),
                         e.e("92513"),

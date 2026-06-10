@@ -276,7 +276,7 @@ function U(n) {
                       action: function () {
                           (0, o.Z_)(),
                               (0, p.openModalLazy)(async () => {
-                                  let { default: n } = await Promise.all([e.e("2677"), e.e("8891"), e.e("58966")]).then(
+                                  let { default: n } = await Promise.all([e.e("734"), e.e("8891"), e.e("58966")]).then(
                                       e.bind(e, 885168),
                                   );
                                   return (e) => (0, t.jsx)(n, { ...e, clip: i[0] });

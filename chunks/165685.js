@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(627968);
 n(64700);
 var r = n(192308),
@@ -11,7 +11,7 @@ var r = n(192308),
     c = n(715314),
     d = n(652215),
     _ = n(818348);
-class f extends a.A {
+class h extends a.A {
     actions = { POST_CONNECTION_OPEN: this.handleConnectionOpen };
     handleConnectionOpen() {
         let e = o.default.getCurrentUser();
@@ -20,14 +20,9 @@ class f extends a.A {
         c.A.wasLoginAttemptedInSession(e.id) && t
             ? (0, r.openModalLazy)(
                   async () => {
-                      let { default: e } = await Promise.all([
-                          n.e("62680"),
-                          n.e("41043"),
-                          n.e("18441"),
-                          n.e("27323"),
-                          n.e("47999"),
-                          n.e("80890"),
-                      ]).then(n.bind(n, 398177));
+                      let { default: e } = await Promise.all([n.e("27323"), n.e("47999"), n.e("80890")]).then(
+                          n.bind(n, 398177),
+                      );
                       return function (t) {
                           let n = async () => {
                               await t.onClose(), s.A.logout("login_required_account_manager", d.BVt.LOGIN);
@@ -47,4 +42,4 @@ class f extends a.A {
             : t && s.A.logout("login_required_account_manager", d.BVt.LOGIN);
     }
 }
-let h = new f();
+let f = new h();

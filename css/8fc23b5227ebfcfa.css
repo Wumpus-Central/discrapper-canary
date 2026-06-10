@@ -1,0 +1,27 @@
+.flex__48a9c {
+    box-sizing: border-box;
+    display: flex
+}
+
+.flex__48a9c .flexChild__48a9c {
+    box-sizing: border-box;
+    flex-grow: 1
+}
+
+.flex__48a9c.flexGutterSmall__48a9c {
+    margin-left: -10px;
+    margin-right: -10px
+}
+
+.flex__48a9c.flexGutterSmall__48a9c .flexChild__48a9c {
+    padding: 0 10px
+}
+
+.flex__48a9c.flexGutterLarge__48a9c {
+    margin-left: -30px;
+    margin-right: -30px
+}
+
+.flex__48a9c.flexGutterLarge__48a9c .flexChild__48a9c {
+    padding: 0 30px
+}

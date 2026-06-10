@@ -30,10 +30,8 @@ class A extends E.A {
         this.possiblyShowFeedbackModal(m.MW.VOICE, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("2677"),
-                    n.e("16367"),
+                    n.e("734"),
                     n.e("33111"),
-                    n.e("61379"),
                     n.e("8891"),
                     n.e("22255"),
                     n.e("55925"),
@@ -63,10 +61,8 @@ class A extends E.A {
             this.possiblyShowFeedbackModal(m.MW.STREAM, () => {
                 (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("2677"),
-                        n.e("16367"),
+                        n.e("734"),
                         n.e("33111"),
-                        n.e("61379"),
                         n.e("8891"),
                         n.e("22255"),
                         n.e("55925"),
@@ -92,10 +88,8 @@ class A extends E.A {
         this.possiblyShowFeedbackModal(m.MW.VIDEO_BACKGROUND, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("2677"),
-                    n.e("16367"),
+                    n.e("734"),
                     n.e("33111"),
-                    n.e("61379"),
                     n.e("8891"),
                     n.e("22255"),
                     n.e("55925"),
@@ -121,10 +115,8 @@ class A extends E.A {
                 (0, r.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("2677"),
-                            n.e("16367"),
+                            n.e("734"),
                             n.e("33111"),
-                            n.e("61379"),
                             n.e("8891"),
                             n.e("22255"),
                             n.e("55925"),
@@ -151,17 +143,15 @@ class A extends E.A {
         this.possiblyShowFeedbackModal(m.MW.IN_APP_REPORTS, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("2677"),
-                    n.e("16367"),
+                    n.e("734"),
                     n.e("33111"),
-                    n.e("61379"),
                     n.e("8891"),
                     n.e("22255"),
                     n.e("55925"),
                     n.e("18413"),
                     n.e("37381"),
                     n.e("26484"),
-                    n.e("89278"),
+                    n.e("66897"),
                 ]).then(n.bind(n, 707688));
                 return (n) => (0, i.jsx)(e, { ...n, reportId: t, reportType: s });
             });

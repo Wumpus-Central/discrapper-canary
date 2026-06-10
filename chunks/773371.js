@@ -564,7 +564,8 @@ function eS(e) {
                 Promise.all([
                     (function (e, t) {
                         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new v.A();
-                        return Promise.all([n.e("90889"), n.e("67946")])
+                        return n
+                            .e("67946")
                             .then(n.bind(n, 33164))
                             .then((n) => {
                                 let { default: r } = n;
@@ -753,7 +754,7 @@ let eO = new eR(
                       let { port: t } = e;
                       X = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      n.append("build_id", "c00ca770d17d20e454a1275d2019416824f30b34"),
+                      n.append("build_id", "d0a0021b5a6b2b903f22b44cecd78cfcec5ad2aa"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", X),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`);

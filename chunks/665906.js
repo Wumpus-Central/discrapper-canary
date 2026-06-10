@@ -32,7 +32,7 @@ function p(t) {
                         onClick: function () {
                             (0, l.openModalLazy)(async () => {
                                 let { default: t } = await Promise.all([
-                                    i.e("2677"),
+                                    i.e("734"),
                                     i.e("93480"),
                                     i.e("8891"),
                                     i.e("91373"),
@@ -86,7 +86,7 @@ function T(t) {
                 onClick: function () {
                     (0, l.openModalLazy)(async () => {
                         let { default: t } = await Promise.all([
-                            i.e("2677"),
+                            i.e("734"),
                             i.e("93480"),
                             i.e("8891"),
                             i.e("91373"),

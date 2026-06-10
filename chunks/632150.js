@@ -17,7 +17,7 @@ function _(e) {
         className: d.kL,
         onClick: function () {
             (0, a.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("33902"), n.e("99709"), n.e("3370"), n.e("69595")]).then(
+                let { default: e } = await Promise.all([n.e("99709"), n.e("3370"), n.e("69595")]).then(
                     n.bind(n, 526710),
                 );
                 return (t) => (0, i.jsx)(e, { ...t });

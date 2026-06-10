@@ -1,50 +1,50 @@
-t.d(n, { A: () => L });
-var l = t(627968),
-    i = t(64700),
-    s = t(735438),
-    r = t.n(s),
-    a = t(17928),
-    c = t(780645),
-    o = t(990078),
-    d = t(939249),
-    u = t(245604),
-    h = t(777666),
-    x = t(104171),
-    m = t(793574),
-    A = t(688810),
-    g = t(919395),
-    N = t(975732),
-    j = t(696451),
-    I = t(71393),
-    E = t(287809),
-    p = t(583613),
-    C = t(403362),
-    b = t(58736),
-    T = t(518477),
-    _ = t(375708),
-    f = t(850603);
-class D {
+n.d(t, { A: () => D });
+var l = n(627968),
+    i = n(64700),
+    s = n(735438),
+    a = n.n(s),
+    r = n(17928),
+    c = n(3026),
+    o = n(990078),
+    d = n(939249),
+    u = n(245604),
+    h = n(812993),
+    m = n(104171),
+    x = n(793574),
+    A = n(688810),
+    g = n(919395),
+    j = n(975732),
+    N = n(696451),
+    p = n(71393),
+    C = n(287809),
+    f = n(583613),
+    E = n(403362),
+    b = n(58736),
+    I = n(518477),
+    T = n(375708),
+    v = n(850603);
+class _ {
     userId;
     user;
     channelId;
     analyticsLocations;
-    constructor({ userId: e, user: n, channelId: t, analyticsLocations: l }) {
-        (this.userId = e), (this.user = n), (this.channelId = t), (this.analyticsLocations = l);
+    constructor({ userId: e, user: t, channelId: n, analyticsLocations: l }) {
+        (this.userId = e), (this.user = t), (this.channelId = n), (this.analyticsLocations = l);
     }
     updateData(e) {
-        let { userId: n, user: t, channelId: l, analyticsLocations: i } = e;
-        (this.userId = n), (this.user = t), (this.channelId = l), (this.analyticsLocations = i);
+        let { userId: t, user: n, channelId: l, analyticsLocations: i } = e;
+        (this.userId = t), (this.user = n), (this.channelId = l), (this.analyticsLocations = i);
     }
-    generateNicknameGuildPairs = (0, p.L_)((e) =>
-        r()(j.Ay.getNicknameGuildsMapping(e?.id ?? this.userId))
+    generateNicknameGuildPairs = (0, f.L_)((e) =>
+        a()(N.Ay.getNicknameGuildsMapping(e?.id ?? this.userId))
             .toPairs()
             .map((e) => {
-                let [n, t] = e;
-                return [n, t.map((e) => I.A.getGuild(e)?.name).filter(C.Vq)];
+                let [t, n] = e;
+                return [t, n.map((e) => p.A.getGuild(e)?.name).filter(E.Vq)];
             })
-            .filter((n) => {
-                let [t] = n;
-                return t !== e?.globalName;
+            .filter((t) => {
+                let [n] = t;
+                return n !== e?.globalName;
             })
             .value(),
     );
@@ -57,111 +57,111 @@ class D {
             {
                 asContainer: !0,
                 tag: "span",
-                text: _.intl.string(_.t["UTjRE/"]),
+                text: T.intl.string(T.t["UTjRE/"]),
                 position: "bottom",
                 children: (0, l.jsx)(d.D, {
-                    className: f.OZ,
+                    className: v.OZ,
                     onClick: this.handleClick,
-                    children: (0, l.jsx)(u.U, { size: "xs", color: "currentColor", className: f.WW }),
+                    children: (0, l.jsx)(u.U, { size: "xs", color: "currentColor", className: v.WW }),
                 }),
             },
             "more-avatars",
         );
     renderNicknamePairs(e) {
-        return this.getNicknameGuildPairs().map((n, t) => {
-            let [s, r] = n,
-                a = (0, l.jsx)(d.D, { tag: "span", onClick: this.handleClick, children: s });
+        return this.getNicknameGuildPairs().map((t, n) => {
+            let [s, a] = t,
+                r = (0, l.jsx)(d.D, { tag: "span", onClick: this.handleClick, children: s });
             return (
-                r.length > 0 &&
-                    (a = (0, l.jsx)(o.m, {
+                a.length > 0 &&
+                    (r = (0, l.jsx)(o.m, {
                         asContainer: !0,
                         tag: "span",
-                        text: r.join(", "),
+                        text: a.join(", "),
                         position: "bottom",
                         shouldShow: e,
                         delay: 50,
-                        children: a,
+                        children: r,
                     })),
-                (0, l.jsxs)(i.Fragment, { children: [0 !== t ? ", " : null, a] }, t)
+                (0, l.jsxs)(i.Fragment, { children: [0 !== n ? ", " : null, r] }, n)
             );
         });
     }
     handleClick = () => {
-        (0, N.openUserProfileModal)({
+        (0, j.openUserProfileModal)({
             userId: this.userId,
             channelId: this.channelId,
             sourceAnalyticsLocations: this.analyticsLocations,
-            tabSection: T.RP.MUTUAL_GUILDS,
+            tabSection: I.RP.MUTUAL_GUILDS,
         });
     };
 }
-function L(e) {
-    let { channel: n } = e,
-        t = n.getRecipientId(),
-        s = (0, g.EI)(t),
-        r = Array(s.length).fill(null),
-        { analyticsLocations: d } = (0, A.Ay)(m.A.AKA),
+function D(e) {
+    let { channel: t } = e,
+        n = t.getRecipientId(),
+        s = (0, g.EI)(n),
+        a = Array(s.length).fill(null),
+        { analyticsLocations: d } = (0, A.Ay)(x.A.AKA),
         u = (function (e) {
-            let { userId: n, channelId: t, analyticsLocations: l } = e,
-                s = (0, a.bG)([E.default], () => E.default.getUser(n), [n]),
-                [r] = i.useState(() => new D({ user: s, userId: n, channelId: t, analyticsLocations: l }));
-            return r.updateData({ userId: n, user: s, channelId: t, analyticsLocations: l }), r;
-        })({ userId: t, analyticsLocations: d, channelId: n.id }),
-        [N, j] = i.useState(!1),
-        p = i.useCallback(() => {
-            j(!0);
-        }, [j]),
-        C = i.useCallback(() => {
-            j(!1);
-        }, [j]);
+            let { userId: t, channelId: n, analyticsLocations: l } = e,
+                s = (0, r.bG)([C.default], () => C.default.getUser(t), [t]),
+                [a] = i.useState(() => new _({ user: s, userId: t, channelId: n, analyticsLocations: l }));
+            return a.updateData({ userId: t, user: s, channelId: n, analyticsLocations: l }), a;
+        })({ userId: n, analyticsLocations: d, channelId: t.id }),
+        [j, N] = i.useState(!1),
+        f = i.useCallback(() => {
+            N(!0);
+        }, [N]),
+        E = i.useCallback(() => {
+            N(!1);
+        }, [N]);
     return 0 === u.getNicknameGuildPairs().length && 0 === s.length
-        ? (0, l.jsx)("div", { className: f.jH })
+        ? (0, l.jsx)("div", { className: v.jH })
         : (0, l.jsxs)(A.f5, {
               value: d,
               children: [
-                  (0, l.jsx)(b.cG, { className: f.yF }),
-                  (0, l.jsx)(h.Lp, { text: _.intl.string(_.t.l1QVfj), disableColor: !0, className: f.RV }),
+                  (0, l.jsx)(b.cG, { className: v.yF }),
+                  (0, l.jsx)(h.Lp, { text: T.intl.string(T.t.l1QVfj), disableColor: !0, className: v.RV }),
                   s.length > 0
-                      ? (0, l.jsx)(x.Ay, {
+                      ? (0, l.jsx)(m.Ay, {
                             size: 16,
-                            users: r,
+                            users: a,
                             showUserPopout: !1,
-                            renderUser: (e, n, t) => {
+                            renderUser: (e, t, n) => {
                                 let i = u.user,
-                                    r = s[t];
-                                return null == r || null == i
+                                    a = s[n];
+                                return null == a || null == i
                                     ? null
                                     : (0, l.jsx)(
                                           o.m,
                                           {
                                               asContainer: !0,
-                                              text: I.A.getGuild(r)?.name,
+                                              text: p.A.getGuild(a)?.name,
                                               position: "bottom",
                                               children: (0, l.jsx)("img", {
                                                   alt: "",
-                                                  className: f.my,
+                                                  className: v.my,
                                                   onClick: u.handleClick,
-                                                  src: i.getAvatarURL(r, 16),
+                                                  src: i.getAvatarURL(a, 16),
                                                   "aria-hidden": !0,
                                               }),
                                           },
-                                          r[1],
+                                          a[1],
                                       );
                             },
                             renderMoreUsers: u.renderMoreAvatars,
                             guildId: void 0,
                             max: 3,
-                            className: f.HD,
+                            className: v.HD,
                         })
                       : null,
                   u.getNicknameGuildPairs().length > 0
                       ? (0, l.jsx)(c.A, {
                             position: "bottom",
-                            className: f.wm,
+                            className: v.wm,
                             delay: 0,
-                            onTooltipShow: p,
-                            onTooltipHide: C,
-                            children: u.renderNicknamePairs(!N),
+                            onTooltipShow: f,
+                            onTooltipHide: E,
+                            children: u.renderNicknamePairs(!j),
                         })
                       : null,
               ],

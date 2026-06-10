@@ -1,0 +1,21 @@
+.contentContainer__6f766 {
+    display: flex;
+    flex-direction: column;
+    height: 100%
+}
+
+.previewContainer__6f766 {
+    align-content: center;
+    flex: 1;
+    justify-items: center
+}
+
+.copyContainer__6f766 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px
+}
+
+.heading__6f766 {
+    margin-bottom: 4px
+}

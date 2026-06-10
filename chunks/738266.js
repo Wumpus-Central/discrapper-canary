@@ -679,26 +679,26 @@ function e5() {
     });
 }
 var e1 = l(243721),
-    e3 = l(235986),
-    e7 = l(60727);
+    e7 = l(235986),
+    e3 = l(60727);
 function e4(e) {
     let { description: t, icon: l, id: i, label: s, onChange: r, value: o } = e;
     return (0, n.jsxs)("div", {
-        className: e7.U,
+        className: e3.U,
         children: [
-            (0, n.jsxs)(e3.A, {
-                justify: e3.A.Justify.BETWEEN,
-                align: e3.A.Align.CENTER,
+            (0, n.jsxs)(e7.A, {
+                justify: e7.A.Justify.BETWEEN,
+                align: e7.A.Align.CENTER,
                 children: [
                     l,
-                    (0, n.jsx)(e3.A.Child, {
+                    (0, n.jsx)(e7.A.Child, {
                         grow: 1,
                         children: (0, n.jsx)(a.E, { variant: "text-md/semibold", children: s }),
                     }),
                     null != r && null != o && (0, n.jsx)(e1.d, { id: i, checked: o, onChange: r }),
                 ],
             }),
-            (0, n.jsx)(a.E, { variant: "text-xs/normal", color: "text-default", className: e7.L, children: t }),
+            (0, n.jsx)(a.E, { variant: "text-xs/normal", color: "text-default", className: e3.L, children: t }),
         ],
     });
 }
@@ -709,9 +709,9 @@ let te = (e) => {
     let { className: t, icon: l, noticeText: i, buttonText: s, onClick: r, canSync: o } = e;
     return (0, n.jsx)(e9.Z, {
         className: A()(t, e8.N),
-        children: (0, n.jsxs)(e3.A, {
-            justify: e3.A.Justify.BETWEEN,
-            align: e3.A.Align.CENTER,
+        children: (0, n.jsxs)(e7.A, {
+            justify: e7.A.Justify.BETWEEN,
+            align: e7.A.Align.CENTER,
             children: [
                 (0, n.jsx)(l, { width: 20, height: 20, size: "custom", color: e6.A.unsafe_rawColors.YELLOW_300.css }),
                 (0, n.jsx)("div", {
@@ -894,8 +894,7 @@ function ts(e) {
                                     onClick: function () {
                                         (0, y.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                l.e("41104"),
-                                                l.e("54353"),
+                                                l.e("11141"),
                                                 l.e("11585"),
                                                 l.e("92513"),
                                                 l.e("89916"),
@@ -1015,8 +1014,7 @@ function ta(e) {
                                                 onClick: function () {
                                                     (0, y.openModalLazy)(async () => {
                                                         let { default: e } = await Promise.all([
-                                                            l.e("41104"),
-                                                            l.e("54353"),
+                                                            l.e("11141"),
                                                             l.e("92513"),
                                                             l.e("89916"),
                                                             l.e("20379"),
@@ -1243,8 +1241,8 @@ var tS = l(371444),
     t5 = l(807632),
     t1 = l(376310);
 l(253913);
-var t3 = l(231935);
-function t7(e) {
+var t7 = l(231935);
+function t3(e) {
     let { channel: t } = e,
         a = (0, s.bG)([X.A], () => X.A.can(eB.xBc.MANAGE_CHANNELS, t), [t]),
         r = t.availableTags.length >= 20,
@@ -1278,7 +1276,7 @@ function t7(e) {
             (0, d.fy)({ availableTags: e });
         });
     return (0, n.jsxs)("div", {
-        className: t3._A,
+        className: t7._A,
         children: [
             o
                 ? t.availableTags.map((e) =>
@@ -1301,7 +1299,7 @@ function t7(e) {
             o
                 ? (0, n.jsx)(N.D, {
                       onClick: c,
-                      className: A()(t3.JE, { [t3.r9]: !a || r }),
+                      className: A()(t7.JE, { [t7.r9]: !a || r }),
                       children: (0, n.jsx)(tK.j, {
                           size: "custom",
                           "aria-label": eH.intl.string(eH.t["/jubeD"]),
@@ -1345,7 +1343,7 @@ function t4(e) {
             onDragReset: o,
         });
     return (0, n.jsx)("div", {
-        className: A()(t3.kL, { [t3.A]: null != h && c < h, [t3.Ze]: null != h && c > h }),
+        className: A()(t7.kL, { [t7.A]: null != h && c < h, [t7.Ze]: null != h && c > h }),
         ref: (e) => {
             u(g(e));
         },
@@ -1930,7 +1928,7 @@ class lE extends i.PureComponent {
                               label: eH.intl.string(eH.t["P/y+sj"]),
                               description: eH.intl.string(eH.t["/oQQ3y"]),
                               errorMessage: this.getError("available_tags"),
-                              children: (0, n.jsx)(t7, { channel: e }),
+                              children: (0, n.jsx)(t3, { channel: e }),
                           }),
                           (0, n.jsx)(tw.S, {
                               disabled: !s || x,
@@ -2369,8 +2367,8 @@ class lE extends i.PureComponent {
                     : (0, eu.M)(i)
                       ? l(241306)
                       : l(16474)),
-            (0, n.jsx)(e3.A, {
-                justify: e3.A.Justify.CENTER,
+            (0, n.jsx)(e7.A, {
+                justify: e7.A.Justify.CENTER,
                 className: ld.o9,
                 children: (0, n.jsx)("img", { alt: "", width: 280, height: 165, src: t }),
             })

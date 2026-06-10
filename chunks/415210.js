@@ -101,8 +101,8 @@ function R(e) {
 }
 var D = n(111994),
     L = n(352527),
-    k = n(267102),
-    O = n(969632),
+    O = n(267102),
+    k = n(969632),
     P = n(910425),
     G = n(406704),
     U = n(885386),
@@ -429,7 +429,7 @@ var eM = n(696016),
     eR = n(644268);
 let eD = s.memo(function (e) {
     let { className: t, channel: l, draftType: a, editorTextContent: x, setValue: E, canOnlyUseTextCommands: S } = e,
-        _ = (0, k.Us)(),
+        _ = (0, O.Us)(),
         j = s.useRef(null),
         I = s.useRef(null),
         y = (0, o.bG)([V.A], () => V.A.getActivities()),
@@ -458,15 +458,13 @@ let eD = s.memo(function (e) {
         (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("51462"),
-                    n.e("91688"),
-                    n.e("82750"),
-                    n.e("16367"),
+                    n.e("50884"),
+                    n.e("98227"),
                     n.e("30204"),
                     n.e("83952"),
-                    n.e("1962"),
                     n.e("1922"),
                     n.e("83518"),
+                    n.e("1962"),
                     n.e("81202"),
                     n.e("37715"),
                     n.e("74049"),
@@ -517,10 +515,10 @@ let eD = s.memo(function (e) {
     let ey = (0, G.n)(l),
         ev = (0, G.Tb)(l),
         eb = !U.D_.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver,
-        eN = (0, O.I7)(l ?? void 0),
+        eN = (0, k.I7)(l ?? void 0),
         eD = (0, P.Sc)(),
         eL = (0, g.b)(),
-        ek = (function (e) {
+        eO = (function (e) {
             let {
                     canAttachFiles: t,
                     canStartThreads: n,
@@ -610,8 +608,8 @@ let eD = s.memo(function (e) {
             canSendScheduledMessages: eD,
             canSummarizeThreads: eL,
         });
-    if (0 === ek.length) return null;
-    let eO = (0, i.jsx)(d.p, { size: "refresh_sm", color: "currentColor", colorClass: eR.dW }),
+    if (0 === eO.length) return null;
+    let ek = (0, i.jsx)(d.p, { size: "refresh_sm", color: "currentColor", colorClass: eR.dW }),
         eP = (0, i.jsx)(u.Y, {
             targetElementRef: I,
             shouldShow: null != en,
@@ -633,7 +631,7 @@ let eD = s.memo(function (e) {
                         return (0, i.jsx)(eT, {
                             ...e,
                             onClose: () => el(null),
-                            options: ek,
+                            options: eO,
                             channel: l,
                             onFileUpload: () => j.current?.activateUploadDialogue(),
                             draftType: a,
@@ -655,7 +653,7 @@ let eD = s.memo(function (e) {
                     onDoubleClick: ea ? () => j.current?.activateUploadDialogue() : void 0,
                     "aria-haspopup": "menu",
                     ...e,
-                    children: eO,
+                    children: ek,
                 }),
         });
     return (0, i.jsxs)(i.Fragment, {

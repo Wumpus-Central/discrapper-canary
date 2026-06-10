@@ -3,8 +3,8 @@ var l = t(627968),
     r = t(64700),
     a = t(503698),
     s = t.n(a),
-    c = t(939249),
-    i = t(933832),
+    i = t(939249),
+    c = t(933832),
     d = t(624479),
     u = t(268218),
     o = t(157941),
@@ -14,7 +14,7 @@ var l = t(627968),
 function j(e) {
     let { text: n } = e,
         [t, a] = r.useState(!1);
-    return (0, l.jsx)(c.D, {
+    return (0, l.jsx)(i.D, {
         onClick: () => {
             (0, h.C)(
                 n,
@@ -23,7 +23,7 @@ function j(e) {
             );
         },
         children: t
-            ? (0, l.jsx)(i.A, { size: "xs", color: "currentColor" })
+            ? (0, l.jsx)(c.A, { size: "xs", color: "currentColor" })
             : (0, l.jsx)(d.T, { size: "xs", color: "currentColor" }),
     });
 }
@@ -41,8 +41,8 @@ function g(e) {
                     lang: n,
                     className: s()(x.kw, "hljs"),
                     children: (0, l.jsx)(u.c2, {
-                        createPromise: () => Promise.all([t.e("57036"), t.e("75134")]).then(t.bind(t, 981776)),
-                        webpackId: 981776,
+                        createPromise: () => Promise.resolve().then(t.bind(t, 149938)),
+                        webpackId: 149938,
                         renderFallback: a,
                         render: (e) => {
                             if (!(null != n && e.hasLanguage(n))) return a();

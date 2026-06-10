@@ -15,7 +15,7 @@ var s = l(627968),
     A = (l(749638), l(876622)),
     C = l(521974),
     x = l(282026),
-    S = l(449054);
+    S = l(385648);
 class y {
     guildIds = new Set();
     categoryId;
@@ -478,7 +478,7 @@ let e_ = (e) => {
                 onClick: () =>
                     (0, ew.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            l.e("72811"),
+                            l.e("7206"),
                             l.e("97804"),
                             l.e("7265"),
                             l.e("97641"),

@@ -416,32 +416,32 @@ let e8 = (e) => {
               }),
           });
 };
-var e7 = l(833802);
-let e4 = () => {
+var e4 = l(833802);
+let e5 = () => {
     let e = (0, d.bG)([I.A], () => I.A.getTopUserActivities()),
         t = (0, d.bG)([I.A], () => I.A.getTopGuildActivities());
     return 0 === e.length && 0 === t.length
         ? null
         : (0, n.jsxs)("div", {
-              className: e7.kL,
+              className: e4.kL,
               children: [
                   e.length > 0 &&
                       (0, n.jsxs)("div", {
-                          className: e7.A2,
+                          className: e4.A2,
                           children: [
                               (0, n.jsx)(w.D, {
                                   variant: "text-md/medium",
-                                  className: e7.bV,
+                                  className: e4.bV,
                                   children: el.intl.string(et.default.BxbvS7),
                               }),
                               (0, n.jsx)("div", {
-                                  className: e7.Ce,
+                                  className: e4.Ce,
                                   children:
                                       1 === e.length
                                           ? (0, n.jsx)(eJ, {
                                                 userId: e[0].user_id,
                                                 subText: (0, ei.fq)(e[0].dms_sent, e[0].call_count),
-                                                className: e7.q3,
+                                                className: e4.q3,
                                             })
                                           : e.map((e) =>
                                                 (0, n.jsx)(
@@ -455,21 +455,21 @@ let e4 = () => {
                       }),
                   t.length > 0 &&
                       (0, n.jsxs)("div", {
-                          className: e7.A2,
+                          className: e4.A2,
                           children: [
                               (0, n.jsx)(w.D, {
                                   variant: "text-md/medium",
-                                  className: e7.bV,
+                                  className: e4.bV,
                                   children: el.intl.string(et.default.Lq9Set),
                               }),
                               1 === t.length
                                   ? (0, n.jsx)(eq, {
                                         guildId: t[0].guild_id,
                                         customSubtext: (0, ei.fq)(t[0].messages_sent, t[0].call_count),
-                                        className: e7._S,
+                                        className: e4._S,
                                     })
                                   : (0, n.jsx)("div", {
-                                        className: e7.Ce,
+                                        className: e4.Ce,
                                         children: t.map((e) => {
                                             let t = I.A.getGuild(e.guild_id),
                                                 l = t?.name ?? "Unknown Server";
@@ -490,7 +490,7 @@ let e4 = () => {
               ],
           });
 };
-var e5 = l(990021),
+var e7 = l(990021),
     e6 = l(453287);
 function te() {
     let e = i.useCallback(() => {
@@ -500,9 +500,9 @@ function te() {
         });
     }, []);
     return (0, n.jsx)(M.D, {
-        className: e5.YL,
+        className: e7.YL,
         onClick: e,
-        children: (0, n.jsx)(q.m, { size: "custom", color: "currentColor", className: e5.Kk, width: 15, height: 15 }),
+        children: (0, n.jsx)(q.m, { size: "custom", color: "currentColor", className: e7.Kk, width: 15, height: 15 }),
     });
 }
 function tt(e) {
@@ -589,10 +589,10 @@ function tt(e) {
             () =>
                 (0, n.jsxs)(n.Fragment, {
                     children: [
-                        (0, n.jsx)(F.E, { className: e5.bV, variant: "text-md/semibold", children: v }),
+                        (0, n.jsx)(F.E, { className: e7.bV, variant: "text-md/semibold", children: v }),
                         void 0 !== h.sectionDescription
                             ? (0, n.jsx)(F.E, {
-                                  className: e5.yV,
+                                  className: e7.yV,
                                   variant: "text-md/medium",
                                   color: "text-muted",
                                   children: h.sectionDescription(s ?? !1),
@@ -605,24 +605,24 @@ function tt(e) {
     if (0 === r.length) return null;
     let N = r.slice(0, j);
     return (0, n.jsxs)("div", {
-        className: e5.A2,
+        className: e7.A2,
         children: [
             E(),
             (0, n.jsx)("div", {
-                className: e5.o1,
+                className: e7.o1,
                 style: { maxHeight: 65 * N.length },
                 children: N.map((e, t) => A({ row: t })),
             }),
             N.length < c
                 ? (0, n.jsx)(M.D, {
-                      className: a()(e5.FQ, { [e5.r9]: m }),
+                      className: a()(e7.FQ, { [e7.r9]: m }),
                       onClick: f,
                       role: "button",
                       "aria-disabled": m,
                       children: m
-                          ? (0, n.jsx)(u.y, { type: u.y.Type.PULSING_ELLIPSIS, className: e5.u1 })
+                          ? (0, n.jsx)(u.y, { type: u.y.Type.PULSING_ELLIPSIS, className: e7.u1 })
                           : (0, n.jsx)(F.E, {
-                                className: e5.UX,
+                                className: e7.UX,
                                 variant: "text-sm/bold",
                                 children: el.intl.format(et.default["7dMmJY"], {
                                     pageSize: Math.max(1, Math.min(c - N.length, C.PH)),
@@ -646,7 +646,7 @@ let tl = () => {
             ? (0, n.jsx)(F.E, { variant: "eyebrow", children: s })
             : (0, n.jsxs)(n.Fragment, {
                   children: [
-                      e ? null : (0, n.jsx)(W.b, { size: "xs", color: "currentColor", className: e5.Kk }),
+                      e ? null : (0, n.jsx)(W.b, { size: "xs", color: "currentColor", className: e7.Kk }),
                       (0, n.jsx)(F.E, { variant: "eyebrow", children: l }),
                   ],
               });
@@ -657,11 +657,11 @@ let tl = () => {
         return void 0 === a
             ? null
             : (0, n.jsxs)("div", {
-                  className: e5.iO,
+                  className: e7.iO,
                   children: [
                       (0, n.jsx)(eW.H, { user: a, avatarSize: i }),
                       (0, n.jsxs)("div", {
-                          className: e5.TK,
+                          className: e7.TK,
                           children: [
                               (0, n.jsx)(e$.A, { user: a, hideUserTag: s }),
                               void 0 !== l
@@ -680,7 +680,7 @@ let ti = () => {
             s = e.map((e) => ({ label: e.id, value: e.id })),
             a = i.useCallback((e) => (0, n.jsx)(tn, { userId: e.value, avatarSize: P._3.SIZE_24 }), []);
         return (0, n.jsx)(U.Pw, {
-            className: e5.Lt,
+            className: e7.Lt,
             renderOptionLabel: a,
             renderOptionValue: (e) => {
                 let [t] = e;
@@ -709,20 +709,20 @@ let ti = () => {
             l = (0, ei.jp)(),
             i = (0, D.v4)(l);
         return (0, n.jsxs)("div", {
-            className: e5.kL,
+            className: e7.kL,
             children: [
-                (0, n.jsxs)("div", { className: e5.vF, children: [(0, n.jsx)(tl, {}), (0, n.jsx)(te, {})] }),
+                (0, n.jsxs)("div", { className: e7.vF, children: [(0, n.jsx)(tl, {}), (0, n.jsx)(te, {})] }),
                 (0, n.jsxs)("div", {
                     className: e6.a,
                     children: [
-                        (0, n.jsx)("div", { className: e5.wx, children: (0, n.jsx)(ts, {}) }),
+                        (0, n.jsx)("div", { className: e7.wx, children: (0, n.jsx)(ts, {}) }),
                         (0, n.jsxs)(c.B, {
                             gap: 32,
                             padding: 32,
                             fullWidth: !1,
                             children: [
                                 (0, n.jsx)("div", {
-                                    className: e5.O2,
+                                    className: e7.O2,
                                     children: e
                                         .filter((e) => {
                                             let [t] = e;
@@ -738,15 +738,15 @@ let ti = () => {
                                         }),
                                 }),
                                 (0, n.jsxs)("div", {
-                                    className: e5.RJ,
+                                    className: e7.RJ,
                                     children: [
-                                        (0, n.jsx)(e4, {}),
+                                        (0, n.jsx)(e5, {}),
                                         t
                                             ? e.map((e) => {
                                                   let [t] = e;
                                                   return (0, n.jsx)(tt, { displayType: t }, `${t}-list`);
                                               })
-                                            : (0, n.jsx)(e1, { className: e5.RL, text: i ?? "" }),
+                                            : (0, n.jsx)(e1, { className: e7.RL, text: i ?? "" }),
                                     ],
                                 }),
                             ],
@@ -1143,7 +1143,7 @@ function tZ() {
         onClick: () => {
             (0, Y.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    l.e("2677"),
+                    l.e("734"),
                     l.e("30244"),
                     l.e("95429"),
                     l.e("88905"),
@@ -1269,9 +1269,9 @@ var t1 = l(847374),
     t2 = l(349288),
     t9 = l(308528),
     t8 = l(922529),
-    t7 = l(780964),
-    t4 = l(830543),
-    t5 = l(766075),
+    t4 = l(780964),
+    t5 = l(830543),
+    t7 = l(766075),
     t6 = l(219893),
     le = l(936926),
     lt = l(465323),
@@ -1590,7 +1590,7 @@ let lN = (e) => {
             t = (0, z.y3)(),
             l = (0, le.Vh)({ location: "TimeControlsRow" }),
             i = () => {
-                (0, t5.openUserSettings)(t7.X.CONTENT_AND_SOCIAL_PANEL);
+                (0, t7.openUserSettings)(t4.X.CONTENT_AND_SOCIAL_PANEL);
             };
         return (0, n.jsxs)(c.B, {
             direction: "vertical",
@@ -1624,7 +1624,7 @@ let lN = (e) => {
                         (0, n.jsx)(tq.$, {
                             text: el.intl.formatToPlainString(et.default.ggcjPR, { count: e.length }),
                             onClick: () => {
-                                (0, t4.default)(), t9.A.openPrivateChannel({ recipientIds: e });
+                                (0, t5.default)(), t9.A.openPrivateChannel({ recipientIds: e });
                             },
                             variant: "secondary",
                             size: "sm",
@@ -2088,7 +2088,7 @@ function l8(e) {
         }),
     });
 }
-let l7 = () => {
+let l4 = () => {
         let e = (0, b.A)(),
             t = (0, D.GR)(),
             l = e ? C.Y7 : C.kp,
@@ -2110,7 +2110,7 @@ let l7 = () => {
                   ],
               });
     },
-    l4 = () => {
+    l5 = () => {
         let e = (0, D.xr)(),
             t = (0, b.A)() ? C.Y7 : C.kp,
             l = (0, es.y)(
@@ -2124,7 +2124,7 @@ let l7 = () => {
               })
             : null;
     },
-    l5 = () => {
+    l7 = () => {
         let e = (0, lU.N)(),
             t = (0, lU.z)(),
             l = (0, lC.YW)({ helpline: e, throughline: t })
@@ -2163,10 +2163,10 @@ let l7 = () => {
             className: l0.kL,
             children: [
                 e ? (0, n.jsx)(l2, {}) : (0, n.jsx)(l9, {}),
-                (0, n.jsx)(l7, {}),
-                (0, n.jsx)(l6, {}),
                 (0, n.jsx)(l4, {}),
+                (0, n.jsx)(l6, {}),
                 (0, n.jsx)(l5, {}),
+                (0, n.jsx)(l7, {}),
             ],
         });
     };
@@ -2214,7 +2214,7 @@ let nu = () => {
                                       }),
                                       (0, n.jsx)(M.D, {
                                           children: (0, n.jsx)(nt.N_, {
-                                              onClick: t4.default,
+                                              onClick: t5.default,
                                               to: { pathname: L.BVt.FAMILY_CENTER, state: { scrollRestoration: !1 } },
                                               children: el.intl.string(et.default.cUIXFY),
                                           }),

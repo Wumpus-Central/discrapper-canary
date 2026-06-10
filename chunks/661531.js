@@ -660,7 +660,7 @@ let { Themes: c } = u.zv,
             gradient: { light: { color: "WHITE_500", opacity: 0.75 }, dark: { color: "WHITE_500", opacity: 0.05 } },
         },
         CHANNEL_BACKGROUND_DEFAULT: {
-            category: "generic",
+            category: "background",
             [c.DARK]: { raw: "NEUTRAL_69", opacity: 1 },
             [c.LIGHT]: { raw: "NEUTRAL_2", opacity: 1 },
             [c.MIDNIGHT]: { raw: "NEUTRAL_97", opacity: 1 },

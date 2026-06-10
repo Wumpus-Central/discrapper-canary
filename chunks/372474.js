@@ -968,8 +968,8 @@ function et(e) {
             let e = !1,
                 l = (t ?? "") + "\n";
             return (
-                Promise.all([a.e("57036"), a.e("75134")])
-                    .then(a.bind(a, 981776))
+                Promise.resolve()
+                    .then(a.bind(a, 149938))
                     .then((a) => {
                         if (e) return;
                         let n = a.default;
@@ -1086,7 +1086,7 @@ let es = {
     };
 var eo = a(3830),
     ei = a(338124),
-    ec = a(359778),
+    ec = a(993077),
     eh = a(824388);
 let eu = (e) => {
     let { color: t, children: a } = e;

@@ -11,16 +11,16 @@ var r = n(192308),
     c = n(716371),
     d = n(652215);
 let _ = !1;
-function f(e) {
+function h(e) {
     if (__OVERLAY__) return;
     let t = u.default.getCurrentUser();
     if (null == t) return;
     let n = l.A.getChannelId(),
         i = o.A.getDMFromUserId(c.K);
-    if (!t.hasUrgentMessages() || i === n) return h({ channelId: n });
+    if (!t.hasUrgentMessages() || i === n) return f({ channelId: n });
     _ || ((_ = !0), e());
 }
-function h(e) {
+function f(e) {
     let { channelId: t } = e,
         n = u.default.getCurrentUser(),
         i = t === o.A.getDMFromUserId(c.K);
@@ -29,9 +29,9 @@ function h(e) {
 class p extends a.A {
     handleShowUrgentMessageAlert;
     actions = {
-        POST_CONNECTION_OPEN: () => f(this.handleShowUrgentMessageAlert),
-        MESSAGE_CREATE: () => f(this.handleShowUrgentMessageAlert),
-        CHANNEL_SELECT: h,
+        POST_CONNECTION_OPEN: () => h(this.handleShowUrgentMessageAlert),
+        MESSAGE_CREATE: () => h(this.handleShowUrgentMessageAlert),
+        CHANNEL_SELECT: f,
     };
     constructor(e) {
         super(), (this.handleShowUrgentMessageAlert = e);
@@ -40,7 +40,7 @@ class p extends a.A {
 let E = new p(() =>
     (0, r.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("54048"), n.e("89913"), n.e("36724")]).then(n.bind(n, 531519));
+            let { default: e } = await Promise.all([n.e("89913"), n.e("36724")]).then(n.bind(n, 531519));
             return (t) => (0, i.jsx)(e, { ...t });
         },
         { modalKey: c.r, onCloseRequest: d.FXj },

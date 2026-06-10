@@ -1,76 +1,73 @@
-n.d(t, { R: () => s, j: () => a });
-var l = n(627968),
-    i = n(192308);
-let r = "social-layer-storefront-product-details-modal",
-    s = (e) => {
+i.d(t, { R: () => a, j: () => r });
+var n = i(627968),
+    l = i(192308);
+let s = "social-layer-storefront-product-details-modal",
+    a = (e) => {
         let {
             customNavigateToSocialLayerStorefront: t,
-            skuId: s,
-            applicationId: a,
+            skuId: a,
+            applicationId: r,
             isStorefront: u,
             giftRecipient: o,
             giftingOrigin: c,
             analyticsLocations: d,
-            analyticsContext: S,
-            onClose: E,
+            analyticsContext: f,
+            onClose: A,
         } = e;
-        (0, i.openModalLazy)(
+        (0, l.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("46438"),
-                    n.e("71664"),
-                    n.e("94925"),
-                    n.e("2677"),
-                    n.e("40942"),
-                    n.e("43535"),
-                    n.e("9233"),
-                    n.e("72963"),
-                    n.e("86814"),
-                    n.e("37021"),
-                    n.e("20287"),
-                    n.e("18997"),
-                    n.e("18024"),
-                    n.e("3131"),
-                    n.e("69747"),
-                    n.e("47177"),
-                    n.e("27272"),
-                    n.e("36149"),
-                    n.e("51778"),
-                    n.e("21930"),
-                    n.e("24914"),
-                    n.e("70789"),
-                    n.e("20382"),
-                    n.e("52511"),
-                    n.e("63333"),
-                    n.e("93766"),
-                    n.e("73165"),
-                    n.e("66017"),
-                    n.e("90711"),
-                    n.e("9935"),
-                    n.e("39305"),
-                ]).then(n.bind(n, 659696));
-                return (n) =>
-                    (0, l.jsx)(e, {
-                        ...n,
-                        skuId: s,
-                        applicationId: a,
+                    i.e("97073"),
+                    i.e("66731"),
+                    i.e("61872"),
+                    i.e("43535"),
+                    i.e("9233"),
+                    i.e("72963"),
+                    i.e("86814"),
+                    i.e("37021"),
+                    i.e("20287"),
+                    i.e("18024"),
+                    i.e("47177"),
+                    i.e("3131"),
+                    i.e("69747"),
+                    i.e("27272"),
+                    i.e("36149"),
+                    i.e("51778"),
+                    i.e("24914"),
+                    i.e("70789"),
+                    i.e("21930"),
+                    i.e("20382"),
+                    i.e("52511"),
+                    i.e("63333"),
+                    i.e("73165"),
+                    i.e("66017"),
+                    i.e("93766"),
+                    i.e("90711"),
+                    i.e("9935"),
+                    i.e("39305"),
+                ]).then(i.bind(i, 659696));
+                return (i) =>
+                    (0, n.jsx)(e, {
+                        ...i,
+                        skuId: a,
+                        applicationId: r,
                         isStorefront: u,
                         analyticsLocations: d,
-                        analyticsContext: S,
+                        analyticsContext: f,
                         giftRecipient: o,
                         giftingOrigin: c,
                         customNavigateToSocialLayerStorefront: t,
                     });
             },
             {
-                modalKey: r,
+                modalKey: s,
                 allowsNavigation: u,
                 onCloseCallback: () => {
-                    E?.();
+                    A?.();
                 },
             },
         );
     };
-function a() {
-    (0, i.hasModalOpen)(r) && (0, i.closeModal)(r);
+function r() {
+    (0, l.hasModalOpen)(s) && (0, l.closeModal)(s);
 }

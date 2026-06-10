@@ -17,14 +17,14 @@ var l = a(627968),
     v = a(463930),
     j = a(163328),
     w = a(730134),
-    S = a(80682),
-    I = a(713654),
+    I = a(80682),
+    S = a(713654),
     p = a(465364),
     M = a(763754),
     y = a(805964),
     E = a(967144),
-    _ = a(696451),
-    N = a(222823),
+    N = a(696451),
+    _ = a(222823),
     b = a(994500),
     F = a(935208),
     R = a(427262),
@@ -50,7 +50,7 @@ function L(e) {
 }
 function W(e) {
     let { channel: t, message: a } = e;
-    (0, S.Eq)({ [t.guild_id]: [a.author.id] }, "ThreadBrowserRowSubtext");
+    (0, I.Eq)({ [t.guild_id]: [a.author.id] }, "ThreadBrowserRowSubtext");
     let r = (0, n.bG)([A.default], () => A.default.getUser(a.author.id) ?? a.author),
         { nick: i, colorString: d, colorStrings: o } = (0, M.Ay)(a),
         u = (0, E.gn)(t.guild_id, r.id, o),
@@ -88,16 +88,16 @@ function W(e) {
 }
 function D(e) {
     let { channel: t } = e,
-        a = (0, n.bG)([N.Ay], () => N.Ay.lastMessageId(t.id)),
+        a = (0, n.bG)([_.Ay], () => _.Ay.lastMessageId(t.id)),
         s =
             null == a
                 ? new Date(t.threadMetadata?.archiveTimestamp ?? Date.now()).getTime()
                 : F.default.extractTimestamp(a);
-    (0, S.Eq)({ [t.guild_id]: [t.ownerId] }, "ThreadBrowserRowSubtext");
+    (0, I.Eq)({ [t.guild_id]: [t.ownerId] }, "ThreadBrowserRowSubtext");
     let r = (0, n.bG)([A.default], () => A.default.getUser(t.ownerId)),
-        i = (0, n.bG)([_.Ay], () => _.Ay.getMember(t.guild_id, t.ownerId)),
+        i = (0, n.bG)([N.Ay], () => N.Ay.getMember(t.guild_id, t.ownerId)),
         d = (0, E.gn)(t.guild_id, r?.id, i?.colorStrings ?? null),
-        o = (0, I.gU)(t) ?? j.y;
+        o = (0, S.gU)(t) ?? j.y;
     return (0, l.jsx)(f.E, {
         className: K.W$,
         variant: "text-sm/normal",
@@ -163,7 +163,6 @@ let H = s.memo(function (e) {
                     a.e("40175"),
                     a.e("43746"),
                     a.e("90554"),
-                    a.e("99011"),
                     a.e("85802"),
                     a.e("65200"),
                     a.e("26250"),
