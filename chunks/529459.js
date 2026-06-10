@@ -1,6 +1,6 @@
 e.exports = {
     hs: "text-sm/normal_e1364f",
-    Nr: "card_e1364f " + a(334488).H,
+    Nr: "card_e1364f " + t(334488).H,
     vS: "removeGameButton_e1364f",
     BU: "dragHandle_e1364f",
     Id: "isDragging_e1364f",
@@ -8,7 +8,6 @@ e.exports = {
     zH: "details_e1364f",
     Ls: "commentIcon_e1364f",
     _A: "tags_e1364f",
-    Ez: "socialProof_e1364f",
     kS: "textAreaContainer_e1364f text-sm/normal_e1364f",
     Vg: "editableCommentContainer_e1364f",
     qC: "editableCommentText_e1364f",

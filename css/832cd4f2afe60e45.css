@@ -14,29 +14,6 @@
     transform: scale(.875)
 }
 
-.container__12191 {
-    align-items: center;
-    display: flex;
-    gap: 4px
-}
-
-.overflow__12191 {
-    background-color: var(--background-mod-subtle);
-    border: 1px solid var(--border-muted)
-}
-
-.custom-user-profile-theme.theme-light .overflow__12191 {
-    background: var(--opacity-white-16)
-}
-
-.gameCoverOverflowCount_fc1255 {
-    background: var(--background-mod-strong)
-}
-
-.custom-user-profile-theme.theme-light .gameCoverOverflowCount_fc1255 {
-    background: var(--opacity-white-56)
-}
-
 .heading-sm\/normal_e1364f {
     font-family: var(--font-display);
     font-size: 14px;
@@ -1250,10 +1227,6 @@
     margin-top: 4px
 }
 
-.socialProof_e1364f {
-    margin-top: 12px
-}
-
 .removeGameButton_e1364f {
     inset-inline-end: 8px;
     opacity: 0;
@@ -1505,24 +1478,6 @@
 .dragHandle_a62a28:focus-visible {
     opacity: 1;
     pointer-events: auto
-}
-
-.socialProof_a62a28 {
-    bottom: 8px;
-    inset-inline-start: 8px;
-    position: absolute
-}
-
-.socialProofBackdrop_a62a28:after {
-    background: linear-gradient(180deg, transparent 0, #000);
-    bottom: 0;
-    content: "";
-    inset-inline-start: 0;
-    pointer-events: none;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    z-index: 1
 }
 
 .removeGameButton_a62a28 {
