@@ -1773,7 +1773,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 560438, Version Hash: efad4746e9598bbb0bb063474337804bf357a4a5`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 560570, Version Hash: 670b66a6009932a87b9e3797e2705dbf1d43b94e`,
 ),
     ev.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -18446,7 +18446,7 @@ let Sh = "isHideDevBanner",
                     className: t2()(S_.Wz, S_.mr),
                     children: [
                         (0, U.jsx)(Sd, { className: S_.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "560438" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "560570" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })
@@ -19872,16 +19872,15 @@ function Nv() {
         t = (0, yA.A)(),
         { parentAnalyticsLocation: n } = (0, a7.Ay)(),
         i = e8.useRef(null);
-    if (null != t) return null;
-    let r = tI.Ay.getMediaEngine().supports(il.O5.SPATIAL_AUDIO),
-        s = r && e.enabled,
-        a = () => {
-            let t = !s;
+    if (null != t || !tI.Ay.getMediaEngine().supports(il.O5.SPATIAL_AUDIO)) return null;
+    let r = e.enabled,
+        s = () => {
+            let t = !r;
             (0, ym.X)(n, ym.O.SPATIAL_AUDIO, t), is.A.setAudioMixerSettings({ ...e, enabled: t }, Nn.x.DEFAULT);
         },
-        o = r ? na.intl.string(Nu.default.EWQJcc) : na.intl.string(Nu.default["9qCMXb"]),
-        l = r ? na.intl.string(s ? Nu.default.RX3dTX : Nu.default.nqknZL) : na.intl.string(Nu.default["9qCMXb"]),
-        u = na.intl.string(Nu.default.HUDkvK);
+        a = na.intl.string(Nu.default.EWQJcc),
+        o = na.intl.string(r ? Nu.default.RX3dTX : Nu.default.nqknZL),
+        l = na.intl.string(Nu.default.HUDkvK);
     return (0, U.jsx)(rZ.Y, {
         targetElementRef: i,
         renderPopout: (e) => {
@@ -19894,29 +19893,27 @@ function Nv() {
         spacing: 4,
         children: (e, t) => {
             let { onClick: n } = e,
-                { isShown: c } = t,
-                d = c ? uL.t : uw.a;
+                { isShown: u } = t,
+                c = u ? uL.t : uw.a;
             return (0, U.jsxs)("div", {
                 ref: i,
-                className: t2()(NS.Lh, { [NS.q6]: c }),
+                className: t2()(NS.Lh, { [NS.q6]: u }),
                 children: [
                     (0, U.jsx)(SJ.A, {
                         role: "switch",
-                        "aria-checked": s,
-                        "aria-label": l,
-                        tooltipText: o,
-                        icon: r ? mU.q : mF.D,
-                        iconForeground: s ? Ny.s : void 0,
-                        className: t2()(NS.eT, { [Ny.v]: s }),
-                        disabled: !r,
-                        onClick: a,
-                        onContextMenu: r ? n : void 0,
+                        "aria-checked": r,
+                        "aria-label": o,
+                        tooltipText: a,
+                        icon: mU.q,
+                        iconForeground: r ? Ny.s : void 0,
+                        className: t2()(NS.eT, { [Ny.v]: r }),
+                        onClick: s,
+                        onContextMenu: n,
                     }),
                     (0, U.jsx)(SJ.A, {
-                        "aria-label": u,
-                        className: t2()(NS.UT, { [NS.q6]: c, [Ny.v]: s }),
-                        disabled: !r,
-                        icon: (0, U.jsx)(d, {
+                        "aria-label": l,
+                        className: t2()(NS.UT, { [NS.q6]: u, [Ny.v]: r }),
+                        icon: (0, U.jsx)(c, {
                             className: NS.$$,
                             size: "custom",
                             width: 12,
@@ -19925,8 +19922,8 @@ function Nv() {
                         }),
                         onClick: n,
                         onContextMenu: n,
-                        tooltipShouldShow: !c,
-                        tooltipText: u,
+                        tooltipShouldShow: !u,
+                        tooltipText: l,
                     }),
                 ],
             });
@@ -23564,8 +23561,8 @@ let N9 = () => (0, U.jsx)("div", { className: N2.wG, children: (0, U.jsx)(rn.y, 
                 n.e("10172"),
                 n.e("97934"),
                 n.e("92461"),
-            ]).then(n.bind(n, 386889)),
-        webpackId: 386889,
+            ]).then(n.bind(n, 618500)),
+        webpackId: 618500,
         name: "Channel",
         renderLoader: ra.l3,
     }),
