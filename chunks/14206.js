@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { S: () => r });
-let r = {
+n.d(t, { S: () => i });
+let i = {
     bg: () => n.e("29556").then(n.t.bind(n, 204543, 19)),
     cs: () => n.e("25371").then(n.t.bind(n, 881750, 19)),
     da: () => n.e("5912").then(n.t.bind(n, 633483, 19)),
     de: () => n.e("86780").then(n.t.bind(n, 160535, 19)),
     el: () => n.e("178").then(n.t.bind(n, 76361, 19)),
     "en-US": () => n.e("86775").then(n.t.bind(n, 686986, 19)),
-    "es-ES": () => n.e("5132").then(n.t.bind(n, 469543, 19)),
+    "es-ES": () => n.e("82751").then(n.t.bind(n, 469543, 19)),
     "es-419": () => n.e("82200").then(n.t.bind(n, 108427, 19)),
     fi: () => n.e("45146").then(n.t.bind(n, 95649, 19)),
     fr: () => n.e("29789").then(n.t.bind(n, 745004, 19)),
@@ -22,7 +22,7 @@ let r = {
     pl: () => n.e("34593").then(n.t.bind(n, 251256, 19)),
     "pt-BR": () => n.e("37284").then(n.t.bind(n, 694479, 19)),
     ro: () => n.e("87692").then(n.t.bind(n, 976327, 19)),
-    ru: () => n.e("26082").then(n.t.bind(n, 744025, 19)),
+    ru: () => n.e("26082").then(n.t.bind(n, 966406, 19)),
     "sv-SE": () => n.e("19281").then(n.t.bind(n, 508168, 19)),
     th: () => n.e("86329").then(n.t.bind(n, 500864, 19)),
     tr: () => n.e("5127").then(n.t.bind(n, 271962, 19)),

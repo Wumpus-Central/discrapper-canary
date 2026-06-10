@@ -10,13 +10,9 @@ function l(e) {
     let { eventId: t, recurrenceId: s } = e;
     (0, r.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            n.e("8241"),
-            n.e("94240"),
-            n.e("29989"),
+            n.e("37378"),
             n.e("84738"),
-            n.e("56374"),
-            n.e("64804"),
-            n.e("33633"),
+            n.e("27682"),
             n.e("34530"),
             n.e("47626"),
             n.e("32756"),

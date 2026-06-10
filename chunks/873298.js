@@ -994,6 +994,7 @@ class eS extends D.G {
                 K: 5,
                 V: { kind: "message", T: () => eT },
             },
+            { no: 8, name: "last_gift_intent_dismissed_at_ms", kind: "scalar", T: 6 },
         ]);
     }
     create(e) {
@@ -1001,6 +1002,7 @@ class eS extends D.G {
             dismissedContents: new Uint8Array(0),
             lastReceivedChangelogId: "0",
             recurringDismissibleContentStates: {},
+            lastGiftIntentDismissedAtMs: "0",
         };
         return (
             globalThis.Object.defineProperty(t, b.$, { enumerable: !1, value: this }),
@@ -1054,6 +1056,9 @@ class eS extends D.G {
                     break;
                 case 7:
                     this.binaryReadMap7(r.recurringDismissibleContentStates, e, n);
+                    break;
+                case 8:
+                    r.lastGiftIntentDismissedAtMs = e.fixed64().toString();
                     break;
                 default:
                     let s = n.readUnknownField;
@@ -1117,6 +1122,7 @@ class eS extends D.G {
                 t.tag(2, R.O0.LengthDelimited).fork(),
                 eT.internalBinaryWrite(e.recurringDismissibleContentStates[i], t, n),
                 t.join().join();
+        "0" !== e.lastGiftIntentDismissedAtMs && t.tag(8, R.O0.Bit64).fixed64(e.lastGiftIntentDismissedAtMs);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? R.f$.onWrite : i)(this.typeName, e, t), t;
     }

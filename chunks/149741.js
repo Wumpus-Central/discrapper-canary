@@ -360,7 +360,7 @@ function e4(e) {
 }
 let e6 = F._3.SIZE_32,
     e5 = [ee.iq, ee.tR, ee.K7, ee.sp, ee.MK];
-function e9(e) {
+function e7(e) {
     let t,
         { channel: n, textVariant: l, activities: u, applicationStream: o } = e,
         d = (0, s.bG)([a.default], () => a.default.getCurrentUser()),
@@ -440,7 +440,7 @@ function e9(e) {
         ],
     });
 }
-function e7(e) {
+function e9(e) {
     let {
             user: t,
             activities: n,
@@ -515,7 +515,7 @@ function e7(e) {
                     let { type: t } = e;
                     return t === ez.$pd.PLAYING;
                 }) == null && null != S
-                    ? (0, i.jsx)(e9, {
+                    ? (0, i.jsx)(e7, {
                           channel: S,
                           textVariant: "text-xs/medium",
                           activities: n ?? [],
@@ -587,7 +587,7 @@ let te = r.memo((e) => {
             currentUserPlayingActivities: C,
             renderSubtext: R,
             renderUserContextMenu: D,
-        } = e7({
+        } = e9({
             user: t,
             activities: n,
             relationshipType: E,
@@ -722,7 +722,7 @@ let tt = r.memo((e) => {
             status: x,
             renderSubtext: T,
             renderUserContextMenu: _,
-        } = e7({
+        } = e9({
             user: t,
             activities: n,
             relationshipType: l,
@@ -1999,15 +1999,15 @@ function t6(e) {
 }
 t3.displayName = "OverlayVoiceCallElapsedTime";
 var t5 = n(141157),
-    t9 = n(567761),
-    t7 = n(812993),
+    t7 = n(567761),
+    t9 = n(812993),
     t8 = n(602853),
     ne = n(713654),
     nt = n(636537),
     nn = n(439372),
     nl = n(723176),
     ni = n(626584),
-    nr = n(587626);
+    nr = n(617710);
 n(95701);
 var ns = n(495544),
     na = n(973153);
@@ -2608,7 +2608,7 @@ function nK(e) {
     }, [e]);
 }
 function nz(e) {
-    return (0, i.jsx)(t7.hV, { count: e });
+    return (0, i.jsx)(t9.hV, { count: e });
 }
 function nX(e) {
     let { channelId: t, listItemId: n, mentionCount: l, unread: r } = e,
@@ -2888,9 +2888,9 @@ function n0() {
         d = l.trim().toLowerCase(),
         c =
             ((e = (0, t5.Dz)()),
-            (0, s.yK)([t9.default, em.A], () => {
+            (0, s.yK)([t7.default, em.A], () => {
                 let t = [];
-                for (let e of t9.default.getPrivateChannelIds()) {
+                for (let e of t7.default.getPrivateChannelIds()) {
                     let n = em.A.getChannel(e);
                     null != n && t.push({ channel: n, voiceStates: [] });
                 }
@@ -3172,8 +3172,8 @@ var n1 = n(776096),
     n4 = n(342952),
     n6 = n(676923),
     n5 = n(342296),
-    n9 = n(481947),
-    n7 = n(567346);
+    n7 = n(481947),
+    n9 = n(567346);
 let n8 = r.memo(function (e) {
     let { channelId: t, guildId: n, userId: l, onDoubleClick: u, onContextMenu: o } = e,
         d = r.useRef(null),
@@ -3213,14 +3213,14 @@ let n8 = r.memo(function (e) {
                   (0, i.jsx)(A.D, {
                       ...e,
                       innerRef: d,
-                      className: n7.gD,
+                      className: n9.gD,
                       onDoubleClick: u,
                       onContextMenu: x,
                       onClick: (e) => {
                           e.preventDefault(), e.stopPropagation(), h(!0);
                       },
                       children: (0, i.jsxs)("div", {
-                          className: n7.h6,
+                          className: n9.h6,
                           children: [
                               (0, i.jsx)(G.eu, {
                                   src: g.getAvatarURL(n ?? void 0, 24),
@@ -3228,7 +3228,7 @@ let n8 = r.memo(function (e) {
                                   "aria-label": N,
                               }),
                               (0, i.jsxs)(p.E, {
-                                  className: n7.rg,
+                                  className: n9.rg,
                                   variant: "text-sm/medium",
                                   color: "text-subtle",
                                   children: [
@@ -3236,21 +3236,21 @@ let n8 = r.memo(function (e) {
                                           userName: N,
                                           displayNameStyles: I,
                                           effectDisplayType: ei.G.STATIC,
-                                          textClassName: n7.m2,
+                                          textClassName: n9.m2,
                                       }),
                                       (0, i.jsx)(eo.Ay, { userId: l, disableGuildProfile: !0 }),
                                   ],
                               }),
                               (0, i.jsx)("div", {
-                                  className: n7.ZA,
+                                  className: n9.ZA,
                                   onDoubleClick: u,
-                                  children: (0, i.jsx)(n9.Kc, {
+                                  children: (0, i.jsx)(n7.Kc, {
                                       guildId: n ?? void 0,
                                       user: g,
                                       video: m.selfVideo,
                                       isStreaming: E,
-                                      className: n7.ZA,
-                                      iconClassName: n7.Ow,
+                                      className: n9.ZA,
+                                      iconClassName: n9.Ow,
                                       isWatching: !1,
                                       localMute: !1,
                                       localVideoDisabled: !1,
@@ -3261,7 +3261,7 @@ let n8 = r.memo(function (e) {
                                       disabled: !1,
                                   }),
                               }),
-                              null != S ? (0, i.jsx)(es.A, { game: S, size: es.M.XSMALL, className: n7.IV }) : null,
+                              null != S ? (0, i.jsx)(es.A, { game: S, size: es.M.XSMALL, className: n9.IV }) : null,
                           ],
                       }),
                   }),
@@ -3299,7 +3299,7 @@ function ln(e) {
     return 0 === l.length
         ? null
         : (0, i.jsx)("div", {
-              className: n7.X0,
+              className: n9.X0,
               children: (0, i.jsx)(n4.A, {
                   users: l,
                   guildId: n ?? void 0,
@@ -3451,9 +3451,9 @@ function ll(e) {
                 secondaryText:
                     null != T
                         ? (0, i.jsxs)("div", {
-                              className: n7.z2,
+                              className: n9.z2,
                               children: [
-                                  (0, i.jsx)(tP._, { size: "xxs", color: "currentColor", className: n7.AE }),
+                                  (0, i.jsx)(tP._, { size: "xxs", color: "currentColor", className: n9.AE }),
                                   (0, i.jsx)(p.E, { variant: "text-xs/normal", color: "text-muted", children: T }),
                               ],
                           })
@@ -3465,7 +3465,7 @@ function ll(e) {
                         case !x:
                             return e
                                 ? (0, i.jsxs)("div", {
-                                      className: n7.YT,
+                                      className: n9.YT,
                                       onDoubleClick: lt,
                                       children: [z(), (0, i.jsx)(e_.j, { tab: o.x.VOICE, targetId: n })],
                                   })
@@ -3475,7 +3475,7 @@ function ll(e) {
                                 children: [
                                     d
                                         ? (0, i.jsxs)("div", {
-                                              className: n7.YT,
+                                              className: n9.YT,
                                               onDoubleClick: lt,
                                               children: [z(), (0, i.jsx)(e_.j, { tab: o.x.VOICE, targetId: n })],
                                           })
@@ -3490,7 +3490,7 @@ function ll(e) {
             }),
             d && N.length > 0
                 ? (0, i.jsx)("div", {
-                      className: n7.Nz,
+                      className: n9.Nz,
                       children: N.slice(0, 25).map((e) =>
                           (0, i.jsx)(
                               n8,
@@ -4228,7 +4228,7 @@ let l_ = r.memo(function (e) {
                             (0, lc.L3)(e.event, async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("84738"),
-                                    n.e("29439"),
+                                    n.e("8625"),
                                     n.e("79521"),
                                     n.e("12697"),
                                     n.e("26132"),

@@ -6,7 +6,8 @@ function a(e, t) {
     return i.useCallback(() => {
         (0, r.openModalLazy)(async () => {
             let { default: i } = await Promise.all([
-                n.e("72253"),
+                n.e("27682"),
+                n.e("36723"),
                 n.e("31203"),
                 n.e("69149"),
                 n.e("34598"),

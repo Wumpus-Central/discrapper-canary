@@ -97,7 +97,8 @@ function K(e) {
     let { quest: t, sourceQuestContent: r } = e;
     (0, o.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            n.e("72253"),
+            n.e("71836"),
+            n.e("37378"),
             n.e("53785"),
             n.e("71576"),
             n.e("43234"),
@@ -163,7 +164,7 @@ function z(e) {
 function q(e, t, r) {
     (0, o.openModalLazy)(async () => {
         let { default: s } = await Promise.all([
-            n.e("72253"),
+            n.e("37378"),
             n.e("53785"),
             n.e("71576"),
             n.e("27050"),
@@ -180,8 +181,7 @@ function q(e, t, r) {
 function X(e, t, r) {
     (0, o.openModalLazy)(async () => {
         let { default: s } = await Promise.all([
-            n.e("8641"),
-            n.e("72253"),
+            n.e("37378"),
             n.e("53785"),
             n.e("71576"),
             n.e("89693"),
@@ -207,7 +207,7 @@ function X(e, t, r) {
 function Z(e, t, r, s) {
     (0, o.openModalLazy)(async () => {
         let { default: a } = await Promise.all([
-            n.e("72253"),
+            n.e("37378"),
             n.e("53785"),
             n.e("71576"),
             n.e("63549"),
@@ -308,7 +308,7 @@ function et(e) {
 }
 function en() {
     return Promise.all([
-        n.e("11268"),
+        n.e("44842"),
         n.e("53785"),
         n.e("92868"),
         n.e("24914"),
@@ -443,7 +443,7 @@ function eo(e, t) {
     (0, o.openModalLazy)(async () => {
         let { default: r } = await Promise.all([
             n.e("53785"),
-            n.e("81030"),
+            n.e("79521"),
             n.e("8304"),
             n.e("47018"),
             n.e("83774"),
