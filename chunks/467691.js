@@ -94,7 +94,7 @@ let v = (e, t) => {
         let n = T.A.getChannel(t);
         return (
             null != n &&
-            ((0, I.Gw)(n.type) || p.kvI.GUILD_VOCAL.has(n.type)
+            ((0, I.Gw)(n.type) || p.kvI.GUILD_VOCAL_PRIMARY.has(n.type)
                 ? S.Ay.getMentionCount(t) > 0 || y.A.getVoiceChannelId() === t
                 : (!N.Ay.isChannelMuted(e, t) || S.Ay.getMentionCount(t) > 0) && (0, A.Y)(n))
         );
