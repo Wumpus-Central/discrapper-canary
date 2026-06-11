@@ -818,7 +818,8 @@
     position: relative
 }
 
-.giftNitro__80907 {
+.giftNitro__80907,
+.treatmentContainer__80907 .heroHeading__80907 {
     width: var(--custom-content-width-with-padding)
 }
 
