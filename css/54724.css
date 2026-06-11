@@ -1,0 +1,31 @@
+.streamInfoContainer__0f85c {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 8px;
+    color: var(--text-default);
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 16px;
+    padding: 8px;
+    pointer-events: none;
+    position: absolute;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+    z-index: 100
+}
+
+.streamInfoContainer__0f85c strong {
+    font-weight: var(--font-weight-bold)
+}
+
+.infoRow__0f85c {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px
+}
+
+.infoRow__0f85c span {
+    margin-inline-end: 8px
+}

@@ -16,8 +16,8 @@ var i = n(627968),
     x = n(616356),
     f = n(760751),
     E = n(763827),
-    C = n(486020),
-    I = n(723702),
+    I = n(486020),
+    C = n(723702),
     v = n(935208),
     _ = n(820672),
     j = n(768349),
@@ -26,7 +26,7 @@ var i = n(627968),
 function y(e) {
     let { currentUserId: t, message: l, application: r, channel: a, analyticsLocations: y, onView: S } = e,
         { staticBannerSrc: b, videoBannerSrc: L, bannerAspectRatio: R } = (0, g.f)(r),
-        k = C.Ay.getApplicationIconURL({ id: r.id, icon: r.icon }),
+        k = I.Ay.getApplicationIconURL({ id: r.id, icon: r.icon }),
         M = (0, s.bG)([p.Ay, f.A], () =>
             p.Ay.getVisibleRunningGames().find((e) => {
                 let { id: t } = e;
@@ -68,12 +68,11 @@ function y(e) {
                               disabled: B,
                               onClick: () => {
                                   null != M &&
-                                      ((0, I.isWindows)()
+                                      ((0, C.isWindows)()
                                           ? (0, A.A)(M.pid)
                                           : (0, o.openModalLazy)(async () => {
                                                 let { default: e } = await Promise.all([
-                                                    n.e("97549"),
-                                                    n.e("17918"),
+                                                    n.e("71189"),
                                                     n.e("76171"),
                                                     n.e("38601"),
                                                     n.e("36946"),
@@ -178,36 +177,36 @@ var eA = n(939249),
     ex = n(141628),
     ef = n(780907),
     eE = n(140651),
-    eC = n(878831),
-    eI = n(193018);
+    eI = n(878831),
+    eC = n(193018);
 function ev(e) {
     let { applicationName: t, iconSrc: n, viewAction: l } = e,
         { primaryColor: s, secondaryColor: a } = (0, eE.A)(n),
         o = `linear-gradient(45deg, ${s}, ${a})`,
         d = (0, i.jsx)(r.E, { variant: "text-sm/semibold", color: "none", children: t }),
-        c = null == l ? d : (0, i.jsx)(eA.D, { onClick: l, className: eI.Qi, children: d });
+        c = null == l ? d : (0, i.jsx)(eA.D, { onClick: l, className: eC.Qi, children: d });
     return (0, i.jsxs)("div", {
-        className: eI.Xy,
+        className: eC.Xy,
         style: { background: o },
         children: [
             (0, i.jsx)(r.E, {
                 variant: "text-xs/semibold",
                 color: "none",
-                className: eI.xn,
+                className: eC.xn,
                 children: T.intl.string(T.t.pkq6Vq),
             }),
             (0, i.jsxs)("div", {
-                className: eI.fi,
+                className: eC.fi,
                 children: [
-                    null != n ? (0, i.jsx)("img", { className: eI.V$, src: n, alt: "" }) : null,
+                    null != n ? (0, i.jsx)("img", { className: eC.V$, src: n, alt: "" }) : null,
                     (0, i.jsxs)("div", {
-                        className: eI.Cr,
+                        className: eC.Cr,
                         children: [
                             c,
                             (0, i.jsx)(r.E, {
                                 variant: "text-xs/normal",
                                 color: "none",
-                                className: eI.Jl,
+                                className: eC.Jl,
                                 children: T.intl.string(T.t["Sq/E1I"]),
                             }),
                         ],
@@ -231,8 +230,8 @@ function e_(e) {
             staticBannerSrc: x,
             hideBanner: f = !1,
             onClickContent: E,
-            iconSrc: C,
-            onView: I,
+            iconSrc: I,
+            onView: C,
             presenceActivity: v,
             analyticsLocations: _,
             showAuthButton: N,
@@ -304,13 +303,13 @@ function e_(e) {
             return { actions: e, hasAccountLinkButton: l };
         }, [y, p, g, A, R, v, n.id, t.id, N, S, _, b]),
         P = k.some((e) => e.trackingArea === h.kY.CLOUD_PLAY);
-    (0, eC.A)(P, _);
+    (0, eI.A)(P, _);
     let D = k.length > 0,
         w = l.useMemo(
             () =>
                 (0, i.jsx)(r.E, {
                     variant: "text-xs/medium",
-                    className: eI.h_,
+                    className: eC.h_,
                     color: "none",
                     lineClamp: 3,
                     children: (0, d.BE)(t, a, o, u, D),
@@ -318,7 +317,7 @@ function e_(e) {
             [t, a, o, u, D],
         );
     return 0 === k.length
-        ? (0, i.jsx)(ev, { applicationName: a, iconSrc: C, viewAction: E })
+        ? (0, i.jsx)(ev, { applicationName: a, iconSrc: I, viewAction: E })
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(m.h, {
@@ -328,7 +327,7 @@ function e_(e) {
                       hideBanner: f,
                       onClickBanner: E,
                       bannerAspectRatio: m.u.ACTIVITY,
-                      iconSrc: C ?? void 0,
+                      iconSrc: I ?? void 0,
                       info: w,
                       actions: k,
                       primaryActionFirst: !0,
@@ -336,7 +335,7 @@ function e_(e) {
                       trackingConfig: {
                           id: n.id,
                           linkType: j.J.RICH_PRESENCE_INVITE,
-                          onView: I,
+                          onView: C,
                           referrerId: t.author.id,
                           guildId: o.guild_id,
                           channelId: t.channel_id,
@@ -373,7 +372,7 @@ function eT(e) {
             return {
                 iconSrc:
                     (e.activity?.icon_override != null ? (0, ei.uD)(t.id, e.activity?.icon_override) : null) ??
-                    C.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, bot: n }),
+                    I.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, bot: n }),
                 name: e.activity?.name_override ?? t.name,
             };
         })(x, c),
@@ -445,18 +444,18 @@ function eT(e) {
         em = (0, J.z)(Y, U),
         eh = (0, s.bG)([el.A, es.A], () => !!el.A.isConnected(c.id) || null != (0, er.l)(_), [c, _]),
         eg = W.has(c.id) || (null != c.parentId && W.has(c.parentId)),
-        eA = I.isPlatformEmbedded && !eg && w.requireAccountLink && O && !U,
-        ex = I.isPlatformEmbedded && !eg && w.requireGameLaunch && !eh,
+        eA = C.isPlatformEmbedded && !eg && w.requireAccountLink && O && !U,
+        ex = C.isPlatformEmbedded && !eg && w.requireGameLaunch && !eh,
         ef = !(0, ea.A)(_, x, c.id),
         eE = (0, d.n$)(y, x.activity?.type, ef),
-        eC = l.useRef(null),
-        eI = (0, s.bG)([en.A], () => en.A.getMessages(u.id)),
+        eI = l.useRef(null),
+        eC = (0, s.bG)([en.A], () => en.A.getMessages(u.id)),
         ev = () => {
             var e;
             let t = [];
             return (
                 (e = x.id),
-                !eI.hasAnyAfter(e, (e) => null != e.activity && e.activity.type === eo.xL.JOIN, 25) &&
+                !eC.hasAnyAfter(e, (e) => null != e.activity && e.activity.type === eo.xL.JOIN, 25) &&
                     O &&
                     !U &&
                     D.enabled &&
@@ -474,7 +473,7 @@ function eT(e) {
                                 },
                                 title: T.intl.formatToPlainString(T.t["lo6H6+"], { gameName: c.name }),
                                 body: T.intl.string(T.t.qYAzOp),
-                                targetElementRef: eC,
+                                targetElementRef: eI,
                                 caretConfig: { align: "start" },
                                 shouldShow: !0,
                                 gradientColor: "purple",
@@ -505,7 +504,7 @@ function eT(e) {
               showAuthButton: O && !U && D.enabled,
               requireAccountLink: eA,
               startAuthorization: em,
-              accountLinkButtonRef: eC,
+              accountLinkButtonRef: eI,
               renderAccountLinkUpsell: ev,
           })
         : (0, i.jsx)(ej.A, {
@@ -533,7 +532,7 @@ function eT(e) {
               requireGameLaunch: ex,
               canPromptAuth: O && !U,
               startAuthorization: em,
-              accountLinkButtonRef: eC,
+              accountLinkButtonRef: eI,
               renderAccountLinkUpsell: ev,
           });
 }
@@ -544,7 +543,7 @@ function eS(e) {
             () =>
                 (0, i.jsx)(r.E, {
                     variant: "text-xs/medium",
-                    className: eI.h_,
+                    className: eC.h_,
                     color: "none",
                     lineClamp: 1,
                     children: T.intl.string(T.t["84qx9r"]),
@@ -606,36 +605,36 @@ function eP(e) {
                 e
             );
         }, [x, f]),
-        C =
+        I =
             null != o && null != o.details && null != o.state
                 ? T.intl.formatToPlainString(T.t.JCvHtx, { track: o.details, artist: o.state })
                 : n.name,
-        I = o?.timestamps?.start ?? o?.created_at,
+        C = o?.timestamps?.start ?? o?.created_at,
         v = l.useMemo(
             () =>
-                null != I
+                null != C
                     ? (0, i.jsxs)("div", {
-                          className: eI.Ym,
+                          className: eC.Ym,
                           children: [
                               (0, i.jsx)(eb.T, { size: "xxs", color: "currentColor" }),
                               (0, i.jsx)(eL.z, {
-                                  entry: { start: I, end: o?.timestamps?.end },
+                                  entry: { start: C, end: o?.timestamps?.end },
                                   textColor: "currentColor",
                                   textTabularNumbers: !1,
                               }),
                           ],
                       })
                     : null,
-            [I, o?.timestamps?.end],
+            [C, o?.timestamps?.end],
         ),
         _ = l.useMemo(
             () =>
                 (0, i.jsxs)("div", {
-                    className: eI.pq,
+                    className: eC.pq,
                     children: [
                         (0, i.jsx)(r.E, {
                             variant: "text-xs/normal",
-                            className: eI.dS,
+                            className: eC.dS,
                             color: "none",
                             lineClamp: 1,
                             children: v,
@@ -647,7 +646,7 @@ function eP(e) {
         );
     return (0, i.jsx)(m.h, {
         header: a,
-        title: C,
+        title: I,
         iconSrc:
             ((t = n.id),
             (null == o || null == o.assets || null == o.assets.large_image
@@ -707,7 +706,7 @@ function eO(e) {
     for (; u.length < n && u.length < 8; ) u.push(U.mt);
     for (; u.length < l && u.length < 8; ) u.push(null);
     return (0, i.jsxs)("div", {
-        className: eI.UF,
+        className: eC.UF,
         children: [
             u.length > 0 &&
                 (0, i.jsx)(U.Ay, {

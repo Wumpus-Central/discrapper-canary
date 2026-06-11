@@ -1,6 +1,7 @@
-_.exports = {
+e.exports = {
     kL: "container__80907",
     Gd: "responsiveContainer__80907",
+    Eg: "treatmentContainer__80907",
     Zy: "giftNitro__80907",
     hz: "footerSpacing__80907",
     Kw: "bottomIllustration__80907",
@@ -8,4 +9,6 @@ _.exports = {
     _Z: "bottomOfPageVisibilitySensor__80907",
     xW: "mainPageScroller__80907",
     Lq: "loading__80907",
+    TN: "treatmentLoading__80907",
+    S: "loadingSpinner__80907",
 };

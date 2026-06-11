@@ -1,0 +1,148 @@
+.crossfade__04d60 {
+    position: relative
+}
+
+.icon__04d60 {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%
+}
+
+.grid_d87d30 {
+    display: block;
+    padding-block: 0 var(--space-16);
+    padding-inline: var(--space-16) var(--space-16)
+}
+
+.uploadCard_d87d30 {
+    cursor: pointer
+}
+
+.placeholderCard_d87d30 {
+    align-content: center;
+    background-color: var(--background-mod-muted);
+    border: 1px dashed var(--border-subtle);
+    border-radius: 8px;
+    display: flex;
+    height: 96px;
+    justify-content: center;
+    margin-bottom: 10px
+}
+
+.placeholderImg_d87d30 {
+    width: 70px
+}
+
+.iconWrapper_d87d30 {
+    align-items: center;
+    background-image: linear-gradient(90deg, var(--guild-boosting-blue), var(--guild-boosting-purple));
+    border-radius: 48px;
+    color: var(--white);
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 48px
+}
+
+.icon_d87d30 {
+    height: 24px;
+    width: 24px
+}
+
+.emptyTierWrapper_d87d30 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 0
+}
+
+.unusedTierWrapper_d87d30 {
+    padding: 4px 0
+}
+
+.emptyTierImage_d87d30 {
+    height: 60px;
+    width: 88px
+}
+
+.emptyTierImage_d87d30,
+.unlockTierCtaHeading_d87d30 {
+    margin-bottom: 16px
+}
+
+.tooltip_d87d30 {
+    text-align: center
+}
+
+@media (min-width:1010px) {
+    .grid_d87d30 {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(5, 116px);
+        grid-template-rows: 140px
+    }
+
+    .placeholderCard_d87d30 {
+        height: 140px;
+        margin-bottom: 0
+    }
+}
+
+.enable-forced-colors .uploadCard_d87d30 {
+    background-color: ButtonFace;
+    border: 1px solid ButtonFace;
+    color: ButtonText
+}
+
+.enable-forced-colors .uploadCard_d87d30:focus,
+.enable-forced-colors .uploadCard_d87d30:hover {
+    border-color: ButtonText
+}
+
+.upsellContainer__17daa {
+    align-items: center;
+    background: url(/assets/e392b6b2f35db628.svg), linear-gradient(90deg, var(--guild-boosting-blue-for-gradients), var(--guild-boosting-purple-for-gradients));
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0
+}
+
+.upsellHeader__17daa {
+    color: var(--white);
+    margin-bottom: 4px
+}
+
+.upsellDescription__17daa {
+    color: var(--white);
+    margin-bottom: 24px;
+    max-width: 400px;
+    text-align: center
+}
+
+.upsellButtons__17daa {
+    display: flex
+}
+
+.upsellButtonPrimary__17daa {
+    margin-inline-end: 16px
+}
+
+.upsellButton__17daa {
+    color: var(--brand-500)
+}
+
+.uploadRequirementsList__17daa {
+    list-style: disc;
+    padding-block: 8px;
+    padding-inline: 24px 0
+}
+
+.divider__17daa {
+    margin: 24px 0
+}

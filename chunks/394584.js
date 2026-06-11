@@ -10,17 +10,17 @@ var l = n(627968),
     d = n(71804),
     p = n(426398),
     m = n(558620),
-    h = n(571878),
+    h = n(211159),
     A = n(841702),
     E = n(367727),
     C = n(380619),
     y = n(374200),
-    P = n(771566),
+    _ = n(771566),
     S = n(174459),
-    _ = n(625494),
+    P = n(625494),
     I = n(45938),
-    f = n(615396),
-    T = n(937008),
+    T = n(615396),
+    f = n(937008),
     N = n(491057),
     v = n(482132),
     g = n(364840),
@@ -29,8 +29,8 @@ var l = n(627968),
     M = n(97808),
     b = n(775602),
     L = n(688810),
-    j = n(912140),
-    O = n(674658),
+    O = n(912140),
+    j = n(674658),
     w = n(780898),
     D = n(344346),
     U = n(898461),
@@ -46,7 +46,7 @@ function H(e) {
         o = (0, s.bG)([b.A], () => b.A.useReducedMotion),
         { analyticsLocations: u } = (0, L.Ay)(),
         c = R._3.SIZE_32,
-        { product: d, isFetching: p } = (0, O.q)(t),
+        { product: d, isFetching: p } = (0, j.q)(t),
         [m, h] = r.useState(!1),
         A = d?.items[0],
         {
@@ -72,7 +72,7 @@ function H(e) {
                         ? {
                               isNameplateReward: !1,
                               nameplateData: null,
-                              rewardAvatarDecorationSrc: (0, j.A)({
+                              rewardAvatarDecorationSrc: (0, O.A)({
                                   legacyAssetId: A.asset,
                                   skuId: A.skuId,
                                   size: c,
@@ -142,9 +142,9 @@ function $(e) {
             renderPurchaseConfirmation: M,
             postSuccessGuild: b,
             followupSKUInfo: L,
-            continueSessionToInitialStep: j,
+            continueSessionToInitialStep: O,
         } = e,
-        { paymentSources: O } = (0, p.jm)(),
+        { paymentSources: j } = (0, p.jm)(),
         {
             activeSubscription: w,
             selectedSkuId: D,
@@ -166,15 +166,15 @@ function $(e) {
         W = (0, V.bB)(),
         {
             isGift: $,
-            giftRecipient: J,
-            giftCode: X,
+            giftRecipient: X,
+            giftCode: J,
             hasSentMessage: Q,
             isSendingMessage: ee,
             sendGiftMessage: et,
             claimableRewards: en,
             selectedGiftingPromotionReward: el,
             openGiftingBadgePostPurchaseModal: er,
-        } = (0, T.Pv)(),
+        } = (0, f.Pv)(),
         { confirmationFooter: ei } = (0, N.cG)(),
         ea = (0, C.px)(B, $, en),
         es = (0, C.Mq)(B),
@@ -186,7 +186,7 @@ function $(e) {
                 ? null
                 : e.properties.properties.giftReminderNagbar;
         }),
-        ed = (0, K.g)(O, k),
+        ed = (0, K.g)(j, k),
         ep = $ && null != el && null != eo && es,
         em = { selectedPlan: B, selectedSkuId: D, step: W };
     if (null == B) throw new d.v({ message: "Expected plan to be selected", extraSentryInformation: em });
@@ -212,7 +212,7 @@ function $(e) {
                         (0, u.openModalLazy)(
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("88860"),
+                                    n.e("3020"),
                                     n.e("44616"),
                                     n.e("96680"),
                                     n.e("85579"),
@@ -223,14 +223,14 @@ function $(e) {
                                         subscription: U,
                                         isFromPurchaseFlow: !0,
                                         onClose: async () => {
-                                            _._.dispatch(q.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED),
+                                            P._.dispatch(q.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED),
                                                 await t.onClose();
                                         },
                                     });
                             },
                             {
                                 onCloseRequest: () => {
-                                    _._.dispatch(q.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED), (0, u.closeModal)(e);
+                                    P._.dispatch(q.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED), (0, u.closeModal)(e);
                                 },
                                 modalKey: e,
                             },
@@ -240,27 +240,27 @@ function $(e) {
                             has_updated_subscription: null != U,
                             has_any_premium_group: U?.hasAnyPremiumGroup ?? !1,
                         }),
-                            _._.dispatch(q.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED);
+                            P._.dispatch(q.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED);
             }
             return (
-                _._.subscribe(q.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
+                P._.subscribe(q.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
                 () => {
-                    _._.unsubscribe(q.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
+                    P._.unsubscribe(q.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
                 }
             );
         }, [G, U]),
         r.useEffect(() => {
-            !$ || null == J || null == X || Q || ee || (0, I.Ik)(J) || et({ onSubscriptionConfirmation: R });
-        }, [et, $, J, X, Q, ee, R]),
+            !$ || null == X || null == J || Q || ee || (0, I.Ik)(X) || et({ onSubscriptionConfirmation: R });
+        }, [et, $, X, J, Q, ee, R]),
         r.useEffect(() => {
             ea &&
                 null != ec &&
                 null != eu &&
                 (0, E.qr)(o.M.GIFTING_PROMOTION_REMINDER, eu, { dismissAction: z.i.INDIRECT_ACTION });
         }, [ec, eu, ea]);
-    let eA = null != j ? P.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
+    let eA = null != O ? _.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
     if (null != M) t = M(B, eh, U);
-    else if ($) t = (0, l.jsx)(P.fw, { planId: B.id, onClose: eh });
+    else if ($) t = (0, l.jsx)(_.fw, { planId: B.id, onClose: eh });
     else {
         let e =
             F === B.id
@@ -268,9 +268,9 @@ function $(e) {
                 : {
                       followupSKUInfo: L,
                       startingPremiumSubscriptionPlanId: F,
-                      isDowngrade: null != w && (0, f.vT)(w, B.id, x),
+                      isDowngrade: null != w && (0, T.vT)(w, B.id, x),
                   };
-        t = (0, l.jsx)(P.Ay, {
+        t = (0, l.jsx)(_.Ay, {
             planId: B.id,
             onClose: eh,
             paymentSourceType: ed,

@@ -1,28 +1,29 @@
-s.d(t, { O: () => g });
-var i = s(627968);
-s(64700);
-var l = s(554146),
-    n = s(43105),
-    a = s(691540),
-    r = s(857250),
-    c = s(97483),
-    o = s(765178),
-    d = s(131607),
-    u = s(808247),
-    m = s(788868),
-    x = s(49999),
-    p = s(375708),
-    h = s(201682);
-let g = (e) => {
-    let { targetElementRef: t, body: s = p.intl.string(p.t.IqPvOn) } = e,
-        [g, j] = (0, d.kn)([l.M.PREMIUM_WISHLIST_COACHMARK]);
-    return g !== l.M.PREMIUM_WISHLIST_COACHMARK
+"use strict";
+n.d(t, { O: () => E });
+var i = n(627968);
+n(64700);
+var r = n(554146),
+    s = n(43105),
+    a = n(691540),
+    o = n(857250),
+    l = n(97483),
+    u = n(765178),
+    c = n(131607),
+    d = n(808247),
+    _ = n(788868),
+    h = n(49999),
+    f = n(375708),
+    p = n(201682);
+let E = (e) => {
+    let { targetElementRef: t, body: n = f.intl.string(f.t.IqPvOn) } = e,
+        [E, m] = (0, c.kn)([r.M.PREMIUM_WISHLIST_COACHMARK]);
+    return E !== r.M.PREMIUM_WISHLIST_COACHMARK
         ? null
-        : (0, i.jsx)(n.A, {
+        : (0, i.jsx)(s.A, {
               targetElementRef: t,
-              title: p.intl.string(p.t["1YLUuN"]),
-              body: s,
-              graphic: { type: "image", src: h.A },
+              title: f.intl.string(f.t["1YLUuN"]),
+              body: n,
+              graphic: { type: "image", src: p.A },
               size: "video",
               alignmentStrategy: "edge",
               align: "right",
@@ -30,17 +31,17 @@ let g = (e) => {
               caretConfig: { align: "end" },
               actions: [
                   {
-                      text: p.intl.string(p.t["8DkMEQ"]),
+                      text: f.intl.string(f.t["8DkMEQ"]),
                       onClick: async () => {
                           try {
-                              await u.A.addSkuToWishlist(m.pe.TIER_2), j(x.i.TAKE_ACTION);
+                              await d.A.addSkuToWishlist(_.pe.TIER_2), m(h.i.TAKE_ACTION);
                           } catch {
-                              (0, a.P0)((0, r.o)(p.intl.string(p.t.F8FvUy), c.Ck.FAILURE)),
-                                  o.O.announce(p.intl.string(p.t.F8FvUy));
+                              (0, a.P0)((0, o.o)(f.intl.string(f.t.F8FvUy), l.Ck.FAILURE)),
+                                  u.O.announce(f.intl.string(f.t.F8FvUy));
                           }
                       },
                   },
               ],
-              onRequestClose: () => j(x.i.USER_DISMISS),
+              onRequestClose: () => m(h.i.USER_DISMISS),
           });
 };

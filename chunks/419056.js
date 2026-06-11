@@ -4,7 +4,7 @@ n(64700);
 var l = n(192308);
 function s(e, t) {
     (0, l.openModalLazy)(async () => {
-        let { default: l } = await Promise.all([n.e("45456"), n.e("4727"), n.e("32463")]).then(n.bind(n, 978994));
+        let { default: l } = await Promise.all([n.e("3020"), n.e("4727"), n.e("32463")]).then(n.bind(n, 978994));
         return (n) => (0, i.jsx)(l, { channelId: e, messageId: t, ...n });
     });
 }

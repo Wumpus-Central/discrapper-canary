@@ -1,0 +1,22 @@
+.container__82a4b {
+    background: var(--interactive-background-active);
+    border: 2px solid transparent;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0 var(--custom-user-profile-theme-padding);
+    width: 100%
+}
+
+.container__82a4b.gradient__82a4b {
+    background: linear-gradient(var(--background-base-low), var(--background-base-low)) padding-box, var(--custom-premium-colors-premium-gradient-tier-2-diagonal) border-box
+}
+
+.innerContainer__82a4b {
+    background: var(--background-base-lower) padding-box;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: var(--space-12);
+    position: relative
+}

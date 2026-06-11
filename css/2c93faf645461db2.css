@@ -1,0 +1,12 @@
+.slideContainer__01ce3 {
+    display: flex;
+    flex-direction: column;
+    max-height: clamp(200px, calc(100vh - 80px), 660px)
+}
+
+@media screen and (max-height:550px),
+screen and (max-width:485px) {
+    .slideContainer__01ce3 {
+        max-height: none
+    }
+}

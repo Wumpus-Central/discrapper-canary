@@ -45,11 +45,11 @@ function k(e) {
                         onContextMenu: (e) => {
                             (0, a.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    r.e("61554"),
-                                    r.e("33343"),
+                                    r.e("28323"),
+                                    r.e("22766"),
                                     r.e("2677"),
                                     r.e("47141"),
-                                    r.e("1142"),
+                                    r.e("51143"),
                                     r.e("94881"),
                                     r.e("26132"),
                                     r.e("46652"),

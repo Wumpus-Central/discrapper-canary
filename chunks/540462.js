@@ -17,8 +17,8 @@ var i = n(627968),
     C = n(97483),
     f = n(38021),
     E = n(228366),
-    y = n(367513),
-    N = n(442433),
+    N = n(367513),
+    y = n(442433),
     j = n(730852),
     v = n(401843),
     I = n(817281),
@@ -71,8 +71,8 @@ var i = n(627968),
     eC = n(576705),
     ef = n(309010),
     eE = n(287809),
-    ey = n(977997),
-    eN = n(174459),
+    eN = n(977997),
+    ey = n(174459),
     ej = n(871237),
     ev = n(625494),
     eI = n(723702),
@@ -159,7 +159,7 @@ class eW extends l.PureComponent {
     componentDidMount() {
         let { channel: e, layout: t } = this.props;
         this.currentDocument.addEventListener(e_.Wb, this.handleFullScreenChange),
-            eN.default.track(eV.HAw.VIDEO_LAYOUT_TOGGLED, {
+            ey.default.track(eV.HAw.VIDEO_LAYOUT_TOGGLED, {
                 video_layout: this.inPopout ? "popout" : t,
                 ...(0, D.QS)(e.id),
             });
@@ -261,7 +261,7 @@ class eW extends l.PureComponent {
     handleChangeLayout = (e) => {
         let { channel: t, appContext: n, layout: i } = this.props;
         i !== e &&
-            (y.A.updateLayout(t.id, e, n),
+            (N.A.updateLayout(t.id, e, n),
             e === eV.DUB.FULL_SCREEN && t.isPrivate() && ev._.dispatch(eV.jej.TEXTAREA_BLUR));
     };
     handleDisconnect = () => {
@@ -293,7 +293,7 @@ class eW extends l.PureComponent {
             case ew.lp.HIDDEN_STREAM:
             case ew.lp.STREAM:
                 this.trackCallTileContextMenuImpression(e, ew.qs.STREAM),
-                    (0, N.L3)(
+                    (0, y.L3)(
                         t,
                         async () => {
                             let { default: t } = await Promise.all([
@@ -338,11 +338,11 @@ class eW extends l.PureComponent {
                         );
                     switch (s.type) {
                         case eV.rbe.DM:
-                            return (0, N.L3)(
+                            return (0, y.L3)(
                                 t,
                                 async () => {
                                     let { default: t } = await Promise.all([
-                                        n.e("1142"),
+                                        n.e("51143"),
                                         n.e("94881"),
                                         n.e("26132"),
                                         n.e("46652"),
@@ -392,11 +392,11 @@ class eW extends l.PureComponent {
                                 d,
                             );
                         case eV.rbe.GROUP_DM:
-                            return (0, N.L3)(
+                            return (0, y.L3)(
                                 t,
                                 async () => {
                                     let { default: t } = await Promise.all([
-                                        n.e("1142"),
+                                        n.e("51143"),
                                         n.e("94881"),
                                         n.e("26132"),
                                         n.e("46652"),
@@ -442,7 +442,7 @@ class eW extends l.PureComponent {
                             let a = s.getGuildId();
                             return (
                                 o()(null != a, "GuildID null for guild voice channel"),
-                                (0, N.L3)(
+                                (0, y.L3)(
                                     t,
                                     async () => {
                                         let { default: t } = await Promise.all([
@@ -502,13 +502,13 @@ class eW extends l.PureComponent {
     handleSelectParticipant = (e, t) => {
         let { channel: n, selectedParticipant: i, allActiveStreams: l, inCall: a, mode: s } = this.props;
         (0, ew.Ay)(e) &&
-            (0, z.eo)(n, ey.A, eg.A, eC.A, H.default)[0] &&
+            (0, z.eo)(n, eN.A, eg.A, eC.A, H.default)[0] &&
             (j.default.selectVoiceChannel(n.id),
             0 === l.filter((t) => (0, G._z)(t) === e.id && t.state !== eV.XYD.ENDED).length &&
                 (0, v.A9)((0, G.Iy)(e.id), { forceMultiple: t.shiftKey })),
             a &&
                 s === eV._Of.VIDEO &&
-                (i?.id === e.id ? y.A.selectParticipant(n.id, null) : y.A.selectParticipant(n.id, e.id));
+                (i?.id === e.id ? N.A.selectParticipant(n.id, null) : N.A.selectParticipant(n.id, e.id));
     };
     handleOpenPopout = () => {
         let { channel: e, connectedEmbeddedActivity: t } = this.props,
@@ -685,7 +685,7 @@ class eW extends l.PureComponent {
             C = p === eV.DUB.MINIMUM,
             f = C || p === eV.DUB.NORMAL,
             E = l && s === eV._Of.VIDEO,
-            y = (x?.length ?? 0) > 0 && u.isPrivate();
+            N = (x?.length ?? 0) > 0 && u.isPrivate();
         return (
             (this._lastIdleProps = e),
             (0, i.jsx)(ea.A, {
@@ -717,7 +717,7 @@ class eW extends l.PureComponent {
                               mode: s,
                               onSelectParticipant: this.handleSelectParticipant,
                               onContextMenuParticipant: this.handleContextMenu,
-                              showParticipants: r && (!f || y),
+                              showParticipants: r && (!f || N),
                               popoutType: t,
                               awaitingRemoteSessionInfo: A,
                               callContainerDimensions: g,
@@ -791,8 +791,8 @@ let eY = function (e) {
         { width: h = 0, height: p = 0, ref: m } = (0, _.Ay)(),
         { ref: A } = (0, _.Ay)(),
         E = (0, K.Us)(),
-        y = (0, F.A)(),
-        N = (0, d.bG)([ef.A], () => (y?.channelId ?? ef.A.getVoiceChannelId()) === t.id),
+        N = (0, F.A)(),
+        y = (0, d.bG)([ef.A], () => (N?.channelId ?? ef.A.getVoiceChannelId()) === t.id),
         {
             participants: j,
             filteredParticipants: v,
@@ -853,7 +853,7 @@ let eY = function (e) {
             t = null;
         return (
             (async () => {
-                N &&
+                y &&
                     O === eV._Of.VIDEO &&
                     ((t = await eT.Ay.blockDisplaySleep()), e && null != t && eT.Ay.unblockDisplaySleep(t));
             })(),
@@ -861,7 +861,7 @@ let eY = function (e) {
                 null != t ? eT.Ay.unblockDisplaySleep(t) : (e = !0);
             }
         );
-    }, [N, O]);
+    }, [y, O]);
     let es = (0, k.mB)(u.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
         { analyticsLocations: er } = (0, U.Ay)(M.A.CHANNEL_CALL),
         eo = b.Ay.getEmbeddedActivitiesForChannel(t.id),
@@ -885,7 +885,7 @@ let eY = function (e) {
                             popoutWindowAlwaysOnTop: q,
                             selectedStream: G,
                             mode: O,
-                            inCall: N,
+                            inCall: y,
                             participants: j,
                             filteredParticipants: v,
                             participantsVersion: S,

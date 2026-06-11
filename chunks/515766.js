@@ -204,7 +204,7 @@ let eG = function (e) {
                                 e,
                                 async () => {
                                     let { default: e } = await Promise.all([
-                                        n.e("5288"),
+                                        n.e("51143"),
                                         n.e("94881"),
                                         n.e("26132"),
                                         n.e("46652"),
@@ -270,8 +270,8 @@ var eD = n(707539),
     e8 = n(652215),
     e2 = n(838541),
     e4 = n(571882),
-    e9 = n(992595);
-let e3 = s.memo(function (e) {
+    e3 = n(992595);
+let e9 = s.memo(function (e) {
     let { channel: t } = e,
         { loaded: n, error: a, message: r } = (0, eq.I)(t),
         { isBlocked: c, isIgnored: u } = (0, o.cf)(
@@ -315,7 +315,7 @@ let e3 = s.memo(function (e) {
                 children: q.intl.string(q.t.uxrh1O),
             });
         else if (null != r) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, e$.o)(r, A, c, u, i()(e4.BK, e9.tZ), {
+            let { contentPlaceholder: e, renderedContent: t } = (0, e$.o)(r, A, c, u, i()(e4.BK, e3.tZ), {
                 leadingIconClass: e4.AF,
                 trailingIconClass: e4.AF,
                 iconSize: e2.eJ,
@@ -436,7 +436,7 @@ function tt(e) {
                         ],
                     }),
                     (0, l.jsx)(eQ.A, {
-                        hoverText: (0, l.jsx)(e3, { channel: s }),
+                        hoverText: (0, l.jsx)(e9, { channel: s }),
                         forceHover: i,
                         children: (0, l.jsx)(e5, { userId: a.id }),
                     }),

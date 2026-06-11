@@ -14,9 +14,13 @@ let o = {
             (0, a.openModalLazy)(
                 async () => {
                     s.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
-                    let { default: A } = await Promise.all([t.e("5288"), t.e("607"), t.e("12755"), t.e("9018")]).then(
-                        t.bind(t, 244321),
-                    );
+                    let { default: A } = await Promise.all([
+                        t.e("3020"),
+                        t.e("66879"),
+                        t.e("607"),
+                        t.e("12755"),
+                        t.e("9018"),
+                    ]).then(t.bind(t, 244321));
                     return (t) => (0, _.jsx)(A, { classificationId: e, ...t });
                 },
                 { onCloseCallback: A },
@@ -26,7 +30,7 @@ let o = {
             (0, a.openModalLazy)(
                 async () => {
                     s.h.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
-                    let { default: A } = await Promise.all([t.e("5288"), t.e("607"), t.e("84794"), t.e("99487")]).then(
+                    let { default: A } = await Promise.all([t.e("66879"), t.e("607"), t.e("84794"), t.e("99487")]).then(
                         t.bind(t, 595746),
                     );
                     return (t) =>
