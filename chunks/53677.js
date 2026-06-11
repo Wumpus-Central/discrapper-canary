@@ -15,6 +15,7 @@ function d(e) {
         case u.Gy.DISTRIBUTED:
             return "distributed";
         case u.Gy.LAUGHTER:
+        case u.Gy.GAME_EVENT:
             return "auto_ml";
         default:
             return "unknown";
