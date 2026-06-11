@@ -1407,7 +1407,8 @@ class H extends T.A {
                         (o.params["fixed-rate-presentation-timestamps"] = "1"),
                     this.experimentFlags.has(y.fd.LOW_LATENCY_RATE_CONTROL) &&
                         (o.params["low-latency-rate-control"] = "1"),
-                    this.experimentFlags.has(y.fd.WMF_GPU_ENCODE) && (o.params["wmf-gpu"] = "1"));
+                    this.experimentFlags.has(y.fd.WMF_GPU_ENCODE) && (o.params["wmf-gpu"] = "1"),
+                    this.experimentFlags.has(y.fd.INTEL_GPU) && (o.params["intel-gpu"] = "0"));
         }
         return { videoEncoder: o, videoDecoders: a, audioEncoder: r, audioDecoders: s };
     }
