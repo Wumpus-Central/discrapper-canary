@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { A: () => y, _: () => f });
+n.d(t, { A: () => N, _: () => h });
 var r = n(17928),
     s = n(228366),
     a = n(652215),
@@ -10,8 +10,8 @@ var r = n(17928),
 let c = {},
     d = {},
     _ = {},
-    f = new Set([...u.Cr, o.Vc, l.Hy]),
-    h = {},
+    h = new Set([...u.Cr, o.Vc, l.Hy]),
+    f = {},
     p = d,
     E = a.XlH.CLOSED,
     m = {};
@@ -25,12 +25,12 @@ function I() {
     p = d;
 }
 function T() {
-    (h = {}), (m = {});
+    (f = {}), (m = {});
 }
 function S() {
     T(), I(), A();
 }
-class N extends r.Ay.Store {
+class y extends r.Ay.Store {
     static displayName = "UserProfileSettingsStore";
     get selectedGuildId() {
         return i;
@@ -42,13 +42,13 @@ class N extends r.Ay.Store {
         return m[e ?? a.ME] ?? _;
     }
     getPendingChanges(e) {
-        return h[e ?? a.ME] ?? c;
+        return f[e ?? a.ME] ?? c;
     }
     getTryItOutChanges() {
         return p;
     }
     hasUnsavedChanges() {
-        return Object.values(h).some((e) => Object.values(e).some((e) => void 0 !== e));
+        return Object.values(f).some((e) => Object.values(e).some((e) => void 0 !== e));
     }
     showNotice() {
         return !!(
@@ -64,7 +64,7 @@ class N extends r.Ay.Store {
         return !0;
     }
 }
-let y = new N(s.h, {
+let N = new y(s.h, {
     USER_SETTINGS_MODAL_INIT: g,
     USER_SETTINGS_MODAL_OPEN: g,
     USER_SETTINGS_MODAL_SET_SECTION: function (e) {
@@ -74,11 +74,11 @@ let y = new N(s.h, {
     },
     USER_PROFILE_SETTINGS_INIT: function (e) {
         let { guildId: t } = e;
-        (i = null == t || f.has(t) ? void 0 : t), (E = a.XlH.OPEN), (m = {});
+        (i = null == t || h.has(t) ? void 0 : t), (E = a.XlH.OPEN), (m = {});
     },
     USER_PROFILE_SETTINGS_SET_GUILD: function (e) {
         let { guildId: t } = e;
-        (i = null == t || f.has(t) ? void 0 : t), (m = {});
+        (i = null == t || h.has(t) ? void 0 : t), (m = {});
     },
     USER_PROFILE_SETTINGS_CLOSE: A,
     USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: S,
@@ -97,7 +97,7 @@ let y = new N(s.h, {
     },
     USER_PROFILE_SETTINGS_SET_PENDING_CHANGES: function (e) {
         let { type: t, guildId: n, ...i } = e;
-        h[n ?? a.ME] = { ...h[n ?? a.ME], ...i };
+        f[n ?? a.ME] = { ...f[n ?? a.ME], ...i };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR: function (e) {
         let { avatar: t } = e;
@@ -137,8 +137,8 @@ let y = new N(s.h, {
         m = {};
     },
     USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: function () {
-        h = Object.fromEntries(
-            Object.entries(h).map((e) => {
+        f = Object.fromEntries(
+            Object.entries(f).map((e) => {
                 let [t, n] = e;
                 return [
                     t,
@@ -156,8 +156,8 @@ let y = new N(s.h, {
         );
     },
     USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES: function () {
-        h = Object.fromEntries(
-            Object.entries(h).map((e) => {
+        f = Object.fromEntries(
+            Object.entries(f).map((e) => {
                 let [t, n] = e;
                 return [
                     t,
@@ -179,23 +179,16 @@ let y = new N(s.h, {
     USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: T,
     USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: I,
     USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED: function () {
-        if ((h[a.ME] ?? {})?.pendingLegacyUsernameDisabled === void 0) return !1;
-        h[a.ME] = { ...h[a.ME], pendingLegacyUsernameDisabled: void 0 };
+        if ((f[a.ME] ?? {})?.pendingLegacyUsernameDisabled === void 0) return !1;
+        f[a.ME] = { ...f[a.ME], pendingLegacyUsernameDisabled: void 0 };
     },
     USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: function () {
-        if ((h[a.ME] ?? {})?.pendingPrimaryGuildId === void 0) return !1;
-        h[a.ME] = { ...h[a.ME], pendingPrimaryGuildId: void 0 };
+        if ((f[a.ME] ?? {})?.pendingPrimaryGuildId === void 0) return !1;
+        f[a.ME] = { ...f[a.ME], pendingPrimaryGuildId: void 0 };
     },
     USER_PROFILE_UPDATE_FAILURE: function (e) {
         let { guildId: t, errors: n } = e;
-        (E = a.XlH.OPEN),
-            (m[t ?? a.ME] =
-                Object.fromEntries(
-                    Object.entries(n).map((e) => {
-                        let [t, n] = e;
-                        return [t, [n]];
-                    }),
-                ) ?? _);
+        (E = a.XlH.OPEN), (m[t ?? a.ME] = n ?? _);
     },
     LOGOUT: S,
 });

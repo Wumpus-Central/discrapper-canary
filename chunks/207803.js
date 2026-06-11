@@ -45,20 +45,22 @@ async function S(e, t, n) {
     null != e.bio && s && (e.bio = c.Ay.parse(void 0, e.bio).content);
     try {
         a.h.dispatch({ type: "USER_PROFILE_UPDATE_START", userId: i, guildId: t });
-        let { url: s, bannerSurface: c } =
+        let { url: s, bannerSurface: o } =
                 null != t
                     ? { url: m.Rsh.USER_GUILD_PROFILE(t, m.ME), bannerSurface: u.f.USER_GUILD_PROFILE_BANNER }
                     : { url: m.Rsh.USER_PROFILE(m.ME), bannerSurface: u.f.USER_DEFAULT_PROFILE_BANNER },
-            d = await r.Bo.patch({ url: s, body: e, headers: l.A.buildHeadersForMd5({ [c]: n }), rejectWithError: !1 });
-        if (d.ok) a.h.dispatch({ type: "USER_PROFILE_UPDATE_SUCCESS", userId: i, guildId: t, ...d.body });
-        else {
-            let e = new o.LG(d);
-            a.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: t, errors: d.body, apiError: e });
-        }
-        return d;
-    } catch (n) {
-        let e = new o.LG(n);
-        return a.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: t, errors: {}, apiError: e }), n;
+            c = await r.Bo.patch({
+                url: s,
+                body: e,
+                headers: l.A.buildHeadersForMd5({ [o]: n }),
+                oldFormErrors: !0,
+                rejectWithError: !1,
+            });
+        return a.h.dispatch({ type: "USER_PROFILE_UPDATE_SUCCESS", userId: i, guildId: t, ...c.body }), c;
+    } catch (i) {
+        let e = new o.LG(i),
+            n = i?.body ?? {};
+        return a.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: t, errors: n, apiError: e }), i;
     }
 }
 function y(e, t) {

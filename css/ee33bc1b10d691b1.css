@@ -1,3 +1,37 @@
+.container_a154bf {
+    flex-direction: column
+}
+
+.container_a154bf,
+.content_a154bf {
+    display: flex;
+    width: 100%
+}
+
+.content_a154bf {
+    align-items: center;
+    background-color: var(--background-base-low);
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: center
+}
+
+.splashImage_a154bf {
+    margin-bottom: 24px;
+    width: 400px
+}
+
+.splashHeader_a154bf {
+    color: var(--text-strong);
+    margin-bottom: 8px
+}
+
+.splashHeader_a154bf,
+.splashText_a154bf {
+    text-align: center;
+    width: 580px
+}
+
 .favoritesEmptyStateTitle__3651c {
     color: var(--text-default);
     font-size: 24px;
