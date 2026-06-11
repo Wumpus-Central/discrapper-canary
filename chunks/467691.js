@@ -57,9 +57,7 @@ let g = s().throttle(function (e, t) {
                         (0, a.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
                                 n.e("6922"),
-                                n.e("74912"),
-                                n.e("2655"),
-                                n.e("43513"),
+                                n.e("44588"),
                                 n.e("47626"),
                                 n.e("32756"),
                                 n.e("56373"),
