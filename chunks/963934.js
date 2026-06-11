@@ -1,100 +1,100 @@
-i.d(s, { default: () => j });
+i.d(s, { default: () => N });
 var e = i(627968),
-    n = i(64700),
+    c = i(64700),
     a = i(554146),
-    r = i(815021),
-    c = i(534514),
-    l = i(834730),
-    d = i(821609),
+    n = i(815021),
+    r = i(534514),
+    d = i(834730),
+    l = i(821609),
     o = i(224640),
     m = i(793574),
     g = i(826673),
     h = i(859040),
-    x = i(892035),
-    N = i(49999),
-    u = i(375708),
+    b = i(892035),
+    x = i(49999),
+    p = i(375708),
     E = i(321513);
-function j(t) {
+function N(t) {
     let { onClose: s, ...i } = t,
-        j = (0, x.z$)("CollectiblesAnnouncementModal"),
+        N = (0, b.z$)("CollectiblesAnnouncementModal"),
         {
-            leftTitle: b,
+            leftTitle: u,
             leftBody: f,
-            rightTitle: p,
+            rightTitle: j,
             rightBody: v,
         } = (function (t) {
             let { showGiftingMarketing: s, showEaPremiumMarketing: i, showEaNonPremiumMarketing: e } = t,
-                n = u.intl.string(u.t.zOtryQ),
-                a = u.intl.string(u.t.azn85l);
+                c = p.intl.string(p.t.zOtryQ),
+                a = p.intl.string(p.t.azn85l);
             return i
                 ? {
-                      leftTitle: n,
+                      leftTitle: c,
                       leftBody: a,
-                      rightTitle: u.intl.string(u.t.oSP2mU),
-                      rightBody: u.intl.string(u.t["wEIT/w"]),
+                      rightTitle: p.intl.string(p.t.oSP2mU),
+                      rightBody: p.intl.string(p.t["wEIT/w"]),
                   }
                 : e
                   ? {
-                        leftTitle: n,
+                        leftTitle: c,
                         leftBody: a,
-                        rightTitle: u.intl.string(u.t["y/uSeV"]),
-                        rightBody: u.intl.string(u.t.in6xhQ),
+                        rightTitle: p.intl.string(p.t["y/uSeV"]),
+                        rightBody: p.intl.string(p.t.in6xhQ),
                     }
                   : s
                     ? {
-                          leftTitle: n,
+                          leftTitle: c,
                           leftBody: a,
-                          rightTitle: u.intl.string(u.t.Ky01Mq),
-                          rightBody: u.intl.string(u.t.VgVDbe),
+                          rightTitle: p.intl.string(p.t.Ky01Mq),
+                          rightBody: p.intl.string(p.t.VgVDbe),
                       }
                     : {
-                          leftTitle: n,
+                          leftTitle: c,
                           leftBody: a,
-                          rightTitle: u.intl.string(u.t["47kRjL"]),
-                          rightBody: u.intl.string(u.t.GcXi4M),
+                          rightTitle: p.intl.string(p.t["47kRjL"]),
+                          rightBody: p.intl.string(p.t.GcXi4M),
                       };
-        })(j),
-        C = u.intl.string(u.t.W3MtdV),
-        M = j.showEaPremiumMarketing
-            ? u.intl.string(u.t.RlBdFl)
-            : j.showEaNonPremiumMarketing
-              ? u.intl.string(u.t.NZe65e)
-              : u.intl.string(u.t["v72/pr"]),
-        S = n.useRef(!1);
-    n.useEffect(
+        })(N),
+        C = p.intl.string(p.t.W3MtdV),
+        y = N.showEaPremiumMarketing
+            ? p.intl.string(p.t.RlBdFl)
+            : N.showEaNonPremiumMarketing
+              ? p.intl.string(p.t.NZe65e)
+              : p.intl.string(p.t["v72/pr"]),
+        M = N.isEarlyAccess
+            ? "https://cdn.discordapp.com/assets/content/2b8d1bb8d5327e224dfc61673a13dd19c15d10b259957967f99e218b2fa327dc.jpg"
+            : "https://cdn.discordapp.com/assets/content/11291cccd863aec5bdb14c12e39a1a819efd0f35e936df7a7f378e5ae7163ba1.jpg",
+        S = N.isEarlyAccess
+            ? "https://cdn.discordapp.com/assets/content/9686f15252ecb5680ebf6ec2bbadb6b0bfc0930ce66ac6c32806a5b03b06239c.png"
+            : "https://cdn.discordapp.com/assets/content/2bb166dbf77210787f33f8dc4edae14c3b9662a615c8e7f7b694e96e6875702f.png",
+        L = c.useRef(!1);
+    c.useEffect(
         () => () => {
-            S.current || (0, g.Dr)(a.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, { dismissAction: N.i.AUTO_DISMISS });
+            L.current || (0, g.Dr)(a.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, { dismissAction: x.i.AUTO_DISMISS });
         },
         [],
     );
-    let y = n.useCallback(async () => {
-            (S.current = !0),
-                (0, g.Dr)(a.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, { dismissAction: N.i.USER_DISMISS }),
+    let A = c.useCallback(async () => {
+            (L.current = !0),
+                (0, g.Dr)(a.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, { dismissAction: x.i.USER_DISMISS }),
                 await s();
         }, [s]),
-        L = n.useCallback(async () => {
-            (S.current = !0),
-                (0, g.Dr)(a.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, { dismissAction: N.i.TAKE_ACTION }),
+        T = c.useCallback(async () => {
+            (L.current = !0),
+                (0, g.Dr)(a.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, { dismissAction: x.i.TAKE_ACTION }),
                 (0, h.Cz)({ analyticsLocations: [], analyticsSource: m.A.COLLECTIBLES_SHOP }),
                 await s();
         }, [s]);
     return (0, e.jsx)(o.d, {
         ...i,
-        onClose: y,
+        onClose: A,
         size: "lg",
         children: (0, e.jsxs)("div", {
             className: E.Qs,
             children: [
-                (0, e.jsx)("div", {
-                    className: E.Tp,
-                    style: {
-                        backgroundImage:
-                            "url(https://cdn.discordapp.com/assets/content/11291cccd863aec5bdb14c12e39a1a819efd0f35e936df7a7f378e5ae7163ba1.jpg)",
-                    },
-                }),
+                (0, e.jsx)("div", { className: E.Tp, style: { backgroundImage: `url(${M})` } }),
                 (0, e.jsx)("div", {
                     className: E.b,
-                    children: (0, e.jsx)(r.J, { onClick: y, variant: "overlay-secondary" }),
+                    children: (0, e.jsx)(n.J, { onClick: A, variant: "overlay-secondary" }),
                 }),
                 (0, e.jsxs)("div", {
                     className: E.rf,
@@ -102,13 +102,13 @@ function j(t) {
                         (0, e.jsxs)("div", {
                             className: E.gn,
                             children: [
-                                (0, e.jsx)(c.D, {
+                                (0, e.jsx)(r.D, {
                                     variant: "display-md",
                                     color: "text-strong",
                                     className: E.DD,
                                     children: C,
                                 }),
-                                (0, e.jsx)(l.E, { variant: "text-sm/medium", color: "text-muted", children: M }),
+                                (0, e.jsx)(d.E, { variant: "text-sm/medium", color: "text-muted", children: y }),
                             ],
                         }),
                         (0, e.jsxs)("div", {
@@ -117,20 +117,16 @@ function j(t) {
                                 (0, e.jsxs)("div", {
                                     className: E.Nr,
                                     children: [
-                                        (0, e.jsx)("img", {
-                                            src: "https://cdn.discordapp.com/assets/content/2bb166dbf77210787f33f8dc4edae14c3b9662a615c8e7f7b694e96e6875702f.png",
-                                            alt: "",
-                                            className: E.wP,
-                                        }),
+                                        (0, e.jsx)("img", { src: S, alt: "", className: E.wP }),
                                         (0, e.jsxs)("div", {
                                             className: E.Mo,
                                             children: [
-                                                (0, e.jsx)(c.D, {
+                                                (0, e.jsx)(r.D, {
                                                     variant: "heading-md/bold",
                                                     color: "text-strong",
-                                                    children: b,
+                                                    children: u,
                                                 }),
-                                                (0, e.jsx)(l.E, {
+                                                (0, e.jsx)(d.E, {
                                                     variant: "text-sm/medium",
                                                     color: "text-muted",
                                                     children: f,
@@ -150,12 +146,12 @@ function j(t) {
                                         (0, e.jsxs)("div", {
                                             className: E.Mo,
                                             children: [
-                                                (0, e.jsx)(c.D, {
+                                                (0, e.jsx)(r.D, {
                                                     variant: "heading-md/bold",
                                                     color: "text-strong",
-                                                    children: p,
+                                                    children: j,
                                                 }),
-                                                (0, e.jsx)(l.E, {
+                                                (0, e.jsx)(d.E, {
                                                     variant: "text-sm/medium",
                                                     color: "text-muted",
                                                     children: v,
@@ -168,10 +164,10 @@ function j(t) {
                         }),
                         (0, e.jsx)("div", {
                             className: E.UD,
-                            children: (0, e.jsx)(d.$, {
+                            children: (0, e.jsx)(l.$, {
                                 variant: "primary",
-                                text: u.intl.string(u.t.c7U9yf),
-                                onClick: L,
+                                text: p.intl.string(p.t.c7U9yf),
+                                onClick: T,
                                 fullWidth: !0,
                             }),
                         }),
