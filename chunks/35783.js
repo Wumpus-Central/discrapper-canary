@@ -1,1 +1,1 @@
-e.exports = { d: "displayNameContent_b51b39" };
+e.exports = { d: "displayNameContent_b51b39", C: "permissionLockIcon_b51b39" };

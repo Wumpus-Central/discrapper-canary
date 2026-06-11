@@ -31,7 +31,7 @@ function S(e) {
             size: a = "sm",
             pendingDisplayNameStyles: l,
             shouldUnderlineOnHover: u = !1,
-            botTag: c,
+            displayNameTrailing: c,
             className: d,
         } = e,
         _ = (0, f.A)({ userId: t.id, guildId: n, pendingDisplayNameStyles: l }),
@@ -73,7 +73,7 @@ function y(e) {
             size: o,
             pendingDisplayNameStyles: u,
             shouldUnderlineOnHover: null != c,
-            botTag: f,
+            displayNameTrailing: f,
         });
     return (0, i.jsxs)("div", {
         className: s()(I.K$, "lg" === o && I.lg),

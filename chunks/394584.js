@@ -212,7 +212,7 @@ function $(e) {
                         (0, u.openModalLazy)(
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("3020"),
+                                    n.e("74252"),
                                     n.e("44616"),
                                     n.e("96680"),
                                     n.e("85579"),
