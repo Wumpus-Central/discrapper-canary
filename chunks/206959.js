@@ -442,6 +442,7 @@ var G =
         (r.FIRST_FRAME_CALLBACK = "first_frame_callback"),
         (r.REMOTE_USER_MULTI_STREAM = "remote_user_multi_stream"),
         (r.CLIPS = "clips"),
+        (r.CLIPS_THUMBNAIL = "clips_thumbnail"),
         (r.GO_LIVE_HARDWARE = "go_live_hardware"),
         (r.IMAGE_QUALITY_MEASUREMENT = "image_quality_measurement"),
         (r.SCREEN_CAPTURE_KIT = "screen_capture_kit"),
@@ -2235,61 +2236,56 @@ class er extends l.A {
     setClipBufferLength(e) {
         (0, b.lE)().setClipBufferLength?.(e);
     }
-    saveClip(e, t) {
-        let n = (0, b.lE)();
-        return null == n.setClipBufferLength || null == n.saveClip
-            ? Promise.reject("unsupported")
-            : new Promise((i, r) => {
-                  n.saveClip(
-                      e,
-                      t,
-                      (e, t, n) => {
-                          let r;
-                          try {
-                              r = JSON.parse("" !== n ? n : "{}");
-                          } catch {
-                              r = {};
-                          }
-                          return i({ duration: e, clipStats: r });
-                      },
-                      (e) => {
-                          try {
-                              let t = JSON.parse("" !== e ? e : "{}");
-                              return r(t);
-                          } catch {
-                              return r({ errorMessage: "clip save failed", errorAt: "unknown" });
-                          }
-                      },
-                  );
-              });
-    }
-    saveClipForUser(e, t, n) {
+    saveClip(e, t, n) {
         let i = (0, b.lE)();
-        return null == i.saveClipForUser
+        return null == i.setClipBufferLength || null == i.saveClip
             ? Promise.reject("unsupported")
             : new Promise((r, s) => {
-                  i.saveClipForUser(
-                      e,
-                      t,
-                      n,
-                      (e, t, n) => {
+                  let a = (e, t, n) => {
                           let i;
                           try {
                               i = JSON.parse("" !== n ? n : "{}");
                           } catch {
                               i = {};
                           }
-                          return r({ duration: e, clipStats: i });
+                          let s = { duration: e, clipStats: i };
+                          return void 0 !== t && t.length > 0 && (s.thumbnail = t), r(s);
                       },
-                      (e) => {
+                      o = (e) => {
                           try {
                               let t = JSON.parse("" !== e ? e : "{}");
                               return s(t);
                           } catch {
                               return s({ errorMessage: "clip save failed", errorAt: "unknown" });
                           }
+                      };
+                  (0, b.$b)(G.CLIPS_THUMBNAIL) ? i.saveClip(e, t, a, o, n) : i.saveClip(e, t, a, o);
+              });
+    }
+    saveClipForUser(e, t, n, i) {
+        let r = (0, b.lE)();
+        return null == r.saveClipForUser
+            ? Promise.reject("unsupported")
+            : new Promise((s, a) => {
+                  let o = (e, t, n) => {
+                          let i;
+                          try {
+                              i = JSON.parse("" !== n ? n : "{}");
+                          } catch {
+                              i = {};
+                          }
+                          let r = { duration: e, clipStats: i };
+                          return void 0 !== t && t.length > 0 && (r.thumbnail = t), s(r);
                       },
-                  );
+                      l = (e) => {
+                          try {
+                              let t = JSON.parse("" !== e ? e : "{}");
+                              return a(t);
+                          } catch {
+                              return a({ errorMessage: "clip save failed", errorAt: "unknown" });
+                          }
+                      };
+                  (0, b.$b)(G.CLIPS_THUMBNAIL) ? r.saveClipForUser(e, t, n, o, l, i) : r.saveClipForUser(e, t, n, o, l);
               });
     }
     updateClipMetadata(e, t) {

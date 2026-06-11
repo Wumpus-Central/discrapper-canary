@@ -3128,10 +3128,10 @@ class tr extends g.A {
     setClipsV3MLEnabled(e) {}
     setClipsUIActive(e) {}
     setClipBufferLength(e) {}
-    saveClip(e, t) {
+    saveClip(e, t, n) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
-    saveClipForUser(e, t, n) {
+    saveClipForUser(e, t, n, i) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
     updateClipMetadata(e, t) {

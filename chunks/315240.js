@@ -43,7 +43,7 @@ var i = n(636537),
     _ = n(616356),
     h = n(495544),
     f = n(734057),
-    p = n(555975),
+    p = n(890063),
     E = n(763827),
     m = n(174459),
     g = n(723702),
@@ -426,31 +426,41 @@ async function et() {
         E = JSON.stringify(l),
         g = A.TX(l);
     i && r.h.dispatch({ type: "CLIPS_SAVE_CLIP_CANDIDATE", clip: { ...l, pending: !0, filepath: d } });
+    let I = Date.now() - T.Ay.getSettings().clipsLength;
     try {
-        let { duration: e, clipStats: t } = await (null != _.A.getCurrentUserActiveStream()
-                ? f.saveClipForUser(h.default.getId(), d, E)
-                : f.saveClip(d, E)),
-            n = A.kY(g, t);
-        (n.clip_save_time_ms = t.clipSaveTimeMs),
-            (n.clip_size_bytes = t.clipSizeBytes),
+        let {
+                duration: e,
+                clipStats: t,
+                thumbnail: n,
+            } = await (null != _.A.getCurrentUserActiveStream()
+                ? f.saveClipForUser(h.default.getId(), d, E, I)
+                : f.saveClip(d, E, I)),
+            i = A.kY(g, t);
+        if (
+            ((i.clip_save_time_ms = t.clipSaveTimeMs),
+            (i.clip_size_bytes = t.clipSizeBytes),
             null != t.viewerDecodeFps &&
-                ((n.decode_fps_during_clip = t.viewerDecodeFps),
-                (n.encode_fps_during_clip = t.viewerEncodeFps),
-                (n.target_fps = null),
-                (n.remote_clip_id = l.remoteClipId)),
-            (n.clip_signal_types = A.Gb(l));
-        let i = "";
-        try {
-            i = await (0, k.m)(s.A.clips.getClipProtocolURLFromPath(d), 0);
-        } catch (e) {
-            b.nx.warn("Failed to generate clip thumbnail:", e);
+                ((i.decode_fps_during_clip = t.viewerDecodeFps),
+                (i.encode_fps_during_clip = t.viewerEncodeFps),
+                (i.target_fps = null),
+                (i.remote_clip_id = l.remoteClipId)),
+            (i.clip_signal_types = A.Gb(l)),
+            (l.length = e),
+            void 0 !== n)
+        )
+            l.thumbnail = n;
+        else {
+            let e = "";
+            try {
+                e = await (0, k.m)(s.A.clips.getClipProtocolURLFromPath(d), 0);
+            } catch (e) {
+                b.nx.warn("Failed to generate clip thumbnail:", e);
+            }
+            (l.thumbnail = e), await f.updateClipMetadata(d, JSON.stringify(l));
         }
         return (
-            (l.thumbnail = i),
-            (l.length = e),
-            m.default.track(u.HAw.CLIP_SAVED, n),
-            b.nx.info(`Clip save succeeded with ${e}ms and thumbnail ${i.length} bytes thumbnail.`),
-            await f.updateClipMetadata(d, JSON.stringify(l)),
+            m.default.track(u.HAw.CLIP_SAVED, i),
+            b.nx.info(`Clip save succeeded with ${e}ms and thumbnail ${l.thumbnail.length} bytes thumbnail.`),
             { ...l, filepath: d }
         );
     } catch (t) {
