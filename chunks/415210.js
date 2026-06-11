@@ -19,12 +19,12 @@ var l,
     E = n(834730),
     S = n(825484),
     _ = n(821609),
-    j = n(315240),
-    I = n(403362),
+    I = n(315240),
+    j = n(403362),
     y = n(372684),
     v = n(226421),
-    b = n(732774);
-function N() {
+    N = n(732774);
+function b() {
     let e = (0, o.yK)([f.Ay], () => {
         let e = f.Ay.getLastClipsSession()?.newClipIds;
         return null == e
@@ -33,21 +33,21 @@ function N() {
                   .slice(0, 4)
                   .filter((t) => e.includes(t))
                   .map((e) => f.Ay.getClipById(e))
-                  .filter(I.Vq);
+                  .filter(j.Vq);
     });
     return (0, i.jsx)("div", {
-        className: r()(b.vH, {
-            [b.gb]: 1 === e.length,
-            [b.$d]: 2 === e.length,
-            [b.gS]: 3 === e.length,
-            [b.hA]: e.length >= 4,
+        className: r()(N.vH, {
+            [N.gb]: 1 === e.length,
+            [N.$d]: 2 === e.length,
+            [N.gS]: 3 === e.length,
+            [N.hA]: e.length >= 4,
         }),
         children: Array.from({ ...e, length: 4 })
             .map((e, t) =>
                 null != e
                     ? e.type === y.nQ.VOICE_CLIP
-                        ? (0, i.jsx)(v.A, { className: b.xn }, e.id)
-                        : (0, i.jsx)("img", { alt: "", className: b.xn, src: e.thumbnail }, e.id)
+                        ? (0, i.jsx)(v.A, { className: N.xn }, e.id)
+                        : (0, i.jsx)("img", { alt: "", className: N.xn, src: e.thumbnail }, e.id)
                     : (0, i.jsx)("div", {}, `placeholder-${t}`),
             )
             .reverse(),
@@ -59,7 +59,7 @@ function R(e) {
     let { onOpenClips: t, lastClipsSession: n, closePopout: l } = e;
     return (s.useEffect(
         () => () => {
-            (0, j.TE)();
+            (0, I.TE)();
         },
         [],
     ),
@@ -68,7 +68,7 @@ function R(e) {
         : (0, i.jsxs)("div", {
               className: M.WG,
               children: [
-                  (0, i.jsx)("div", { className: M.Yt, children: (0, i.jsx)(N, {}) }),
+                  (0, i.jsx)("div", { className: M.Yt, children: (0, i.jsx)(b, {}) }),
                   (0, i.jsx)(x.D, {
                       className: M.wx,
                       color: "text-strong",
@@ -89,7 +89,7 @@ function R(e) {
                                   variant: "secondary",
                                   text: T.intl.string(T.t["7r5Z19"]),
                                   onClick: function () {
-                                      (0, j.Mt)(!1), l();
+                                      (0, I.Mt)(!1), l();
                                   },
                               }),
                               (0, i.jsx)(_.$, { variant: "primary", text: T.intl.string(T.t.md4qKz), onClick: t }),
@@ -101,8 +101,8 @@ function R(e) {
 }
 var D = n(111994),
     L = n(352527),
-    k = n(267102),
-    O = n(969632),
+    O = n(267102),
+    k = n(969632),
     P = n(910425),
     G = n(406704),
     U = n(885386),
@@ -145,8 +145,8 @@ var ec = n(661531),
     eE = n(55730),
     eS = n(47167),
     e_ = n(994500),
-    ej = n(287809),
-    eI = n(652215),
+    eI = n(287809),
+    ej = n(652215),
     ey =
         (((l = {}).UPLOAD_A_FILE = "UPLOAD_A_FILE"),
         (l.UPLOAD_TEXT_AS_FILE = "UPLOAD_TEXT_AS_FILE"),
@@ -162,8 +162,8 @@ var ec = n(661531),
         (l.SUMMARIZE_THREAD = "SUMMARIZE_THREAD"),
         l),
     ev = n(49999),
-    eb = n(412136);
-let eN = /(.*)```(\w+)\n(.*)```(.*)/s;
+    eN = n(412136);
+let eb = /(.*)```(\w+)\n(.*)```(.*)/s;
 function eT(e) {
     let {
             channel: t,
@@ -183,7 +183,7 @@ function eT(e) {
         (0, es.Tv)(t, void 0, "Plus Button");
     }
     function x() {
-        ea.default.track(eI.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), m("/", (0, eo.x7)("/"));
+        ea.default.track(ej.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), m("/", (0, eo.x7)("/"));
     }
     function E() {
         g();
@@ -195,22 +195,22 @@ function eT(e) {
                     let { default: e } = await Promise.all([n.e("83644"), n.e("42322")]).then(n.bind(n, 143657));
                     return (n) => (0, i.jsx)(e, { ...n, channel: t });
                 },
-                { modalKey: eb.sm },
+                { modalKey: eN.sm },
             );
     }
     function _() {
         let e = h,
             n = "txt",
             l = "",
-            i = h.match(eN);
+            i = h.match(eb);
         null != i && ((l = i[1]), (n = i[2]), (e = i[3]), (l += i[4])),
             (0, W.R)([(0, er.VE)(new Blob([e], { type: "text/plain" }), `message.${n}`, "text/plain")], t, u),
-            K._.dispatchToLastSubscribed(eI.jej.CLEAR_TEXT),
-            "" !== l && K._.dispatchToLastSubscribed(eI.jej.INSERT_TEXT, { plainText: l });
+            K._.dispatchToLastSubscribed(ej.jej.CLEAR_TEXT),
+            "" !== l && K._.dispatchToLastSubscribed(ej.jej.INSERT_TEXT, { plainText: l });
     }
     return (
         s.useEffect(() => {
-            ea.default.track(eI.HAw.OPEN_POPOUT, { type: "Send Attachment", channel_id: t.id, guild_id: t.guild_id });
+            ea.default.track(ej.HAw.OPEN_POPOUT, { type: "Send Attachment", channel_id: t.id, guild_id: t.guild_id });
         }, [t.guild_id, t.id]),
         (0, i.jsx)(X.W, {
             "data-menu-migrated": !0,
@@ -284,7 +284,7 @@ function eT(e) {
                                         (n = e.activity),
                                         void Q.A.sendActivityInvite({
                                             channelId: t.id,
-                                            type: eI.xL.JOIN,
+                                            type: ej.xL.JOIN,
                                             activity: n,
                                             location: p[p.length - 1],
                                         })
@@ -307,7 +307,7 @@ function eT(e) {
                                         (n = e.activity),
                                         void Q.A.sendActivityInvite({
                                             channelId: t.id,
-                                            type: eI.xL.LISTEN,
+                                            type: ej.xL.LISTEN,
                                             activity: n,
                                             location: p[p.length - 1],
                                         })
@@ -330,7 +330,7 @@ function eT(e) {
                                         (n = e.activity),
                                         void Q.A.sendActivityInvite({
                                             channelId: t.id,
-                                            type: eI.xL.WATCH,
+                                            type: ej.xL.WATCH,
                                             activity: n,
                                             location: p[p.length - 1],
                                         })
@@ -429,21 +429,21 @@ var eM = n(696016),
     eR = n(644268);
 let eD = s.memo(function (e) {
     let { className: t, channel: l, draftType: a, editorTextContent: x, setValue: E, canOnlyUseTextCommands: S } = e,
-        _ = (0, k.Us)(),
-        j = s.useRef(null),
+        _ = (0, O.Us)(),
         I = s.useRef(null),
+        j = s.useRef(null),
         y = (0, o.bG)([V.A], () => V.A.getActivities()),
         v = (0, C.Et)(),
-        b = (0, o.bG)([f.Ay], () => f.Ay.getLastClipsSession()),
-        N = (0, o.yK)([f.Ay], () => f.Ay.getNewClipIds()),
+        N = (0, o.bG)([f.Ay], () => f.Ay.getLastClipsSession()),
+        b = (0, o.yK)([f.Ay], () => f.Ay.getNewClipIds()),
         M = (0, o.bG)([w.Ay], () => null == w.Ay.getCurrentSidebarChannelId(l.id)),
         $ = (0, o.yK)(
             [F.A],
-            () => (l.type === eI.rbe.DM ? y.filter((e) => !F.A.getParty(e.party?.id)?.has(l.getRecipientId())) : y),
+            () => (l.type === ej.rbe.DM ? y.filter((e) => !F.A.getParty(e.party?.id)?.has(l.getRecipientId())) : y),
             [y, l],
         ),
         { enableQuickBar: J } = A.h.useConfig({ location: "ChannelAttachButton" }),
-        Z = !J && _ !== eI.BRT.OVERLAY && _ !== eI.BRT.POPOUT,
+        Z = !J && _ !== ej.BRT.OVERLAY && _ !== ej.BRT.POPOUT,
         { onShareClick: Y } = (0, L.A)(l.id),
         X = (0, o.bG)([f.Ay], () => f.Ay.getSettings().remindersEnabled),
         Q = (0, c.useModalsStore)((e) => (0, c.hasModalOpenSelector)(e, eM.nm)),
@@ -452,17 +452,17 @@ let eD = s.memo(function (e) {
         [en, el] = s.useState(null),
         ei = (0, p.sw)() && (v || et),
         es = l.isPrivate(),
-        ea = (0, o.bG)([B.A], () => es || (B.A.can(eI.xBc.ATTACH_FILES, l) && B.A.can(eI.xBc.SEND_MESSAGES, l))),
-        er = (0, m.A)(b);
+        ea = (0, o.bG)([B.A], () => es || (B.A.can(ej.xBc.ATTACH_FILES, l) && B.A.can(ej.xBc.SEND_MESSAGES, l))),
+        er = (0, m.A)(N);
     function eo() {
         (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("69201"),
+                    n.e("96084"),
                     n.e("91688"),
                     n.e("31573"),
                     n.e("2626"),
-                    n.e("30204"),
+                    n.e("7823"),
                     n.e("83952"),
                     n.e("1962"),
                     n.e("1922"),
@@ -471,7 +471,7 @@ let eD = s.memo(function (e) {
                     n.e("37715"),
                     n.e("74049"),
                     n.e("80559"),
-                    n.e("91582"),
+                    n.e("69201"),
                     n.e("95008"),
                     n.e("52566"),
                     n.e("73954"),
@@ -493,8 +493,8 @@ let eD = s.memo(function (e) {
         ),
             el(null);
     }
-    er?.newClipIds.length !== b?.newClipIds.length &&
-        (b?.newClipIds.length ?? 0) > 0 &&
+    er?.newClipIds.length !== N?.newClipIds.length &&
+        (N?.newClipIds.length ?? 0) > 0 &&
         null == en &&
         X &&
         M &&
@@ -505,22 +505,22 @@ let eD = s.memo(function (e) {
         s.useEffect(() => {
             let e = (e) => {
                 let { channelId: t } = e;
-                t === l.id && j.current?.activateUploadDialogue();
+                t === l.id && I.current?.activateUploadDialogue();
             };
             return (
-                K._.subscribe(eI.jej.UPLOAD_FILE, e),
+                K._.subscribe(ej.jej.UPLOAD_FILE, e),
                 () => {
-                    K._.unsubscribe(eI.jej.UPLOAD_FILE, e);
+                    K._.unsubscribe(ej.jej.UPLOAD_FILE, e);
                 }
             );
         });
     let ey = (0, G.n)(l),
         ev = (0, G.Tb)(l),
-        eb = !U.D_.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver,
-        eN = (0, O.I7)(l ?? void 0),
+        eN = !U.D_.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver,
+        eb = (0, k.I7)(l ?? void 0),
         eD = (0, P.Sc)(),
         eL = (0, g.b)(),
-        ek = (function (e) {
+        eO = (function (e) {
             let {
                     canAttachFiles: t,
                     canStartThreads: n,
@@ -542,8 +542,8 @@ let eD = s.memo(function (e) {
                     m.push({ type: "UPLOAD_TEXT_AS_FILE", icon: ed.H, display: T.intl.string(T.t["G9s+EM"]) })),
                 s &&
                     t &&
-                    d !== eI.BRT.POPOUT &&
-                    d !== eI.BRT.OVERLAY &&
+                    d !== ej.BRT.POPOUT &&
+                    d !== ej.BRT.OVERLAY &&
                     m.push({
                         type: "CLIPS",
                         icon: eu.x,
@@ -555,36 +555,36 @@ let eD = s.memo(function (e) {
                 c && m.push({ type: "POLL", icon: em.Y, display: T.intl.string(T.t.Flr51u) }),
                 l && i && m.push({ type: "SLASH_COMMAND", icon: eg.k, display: T.intl.string(T.t.Bbvp6G) }),
                 r.forEach((e) => {
-                    !(0, eE.A)(e, eI.jUm.EMBEDDED) &&
-                        (e.type === eI.$pd.PLAYING &&
-                            (0, eE.A)(e, eI.jUm.JOIN) &&
+                    !(0, eE.A)(e, ej.jUm.EMBEDDED) &&
+                        (e.type === ej.$pd.PLAYING &&
+                            (0, eE.A)(e, ej.jUm.JOIN) &&
                             m.push({
                                 type: "INVITE_TO_GAME",
                                 icon: ep.L,
                                 display: T.intl.formatToPlainString(T.t["KHLo+F"], {
-                                    channel: (0, eS.m1)(a, ej.default, e_.A, !0),
+                                    channel: (0, eS.m1)(a, eI.default, e_.A, !0),
                                     game: null != e ? e.name : "",
                                 }),
                                 activity: e,
                             }),
-                        e.type === eI.$pd.LISTENING &&
-                            (0, eE.A)(e, eI.jUm.SYNC) &&
+                        e.type === ej.$pd.LISTENING &&
+                            (0, eE.A)(e, ej.jUm.SYNC) &&
                             m.push({
                                 type: "INVITE_TO_LISTEN",
                                 icon: eA.J,
                                 display: T.intl.formatToPlainString(T.t.I479px, {
-                                    channel: (0, eS.m1)(a, ej.default, e_.A, !0),
+                                    channel: (0, eS.m1)(a, eI.default, e_.A, !0),
                                     name: null != e ? e.name : "",
                                 }),
                                 activity: e,
                             }),
-                        e.type === eI.$pd.WATCHING &&
-                            (0, eE.A)(e, eI.jUm.SYNC) &&
+                        e.type === ej.$pd.WATCHING &&
+                            (0, eE.A)(e, ej.jUm.SYNC) &&
                             m.push({
                                 type: "INVITE_TO_WATCH",
                                 icon: ef.b,
                                 display: T.intl.formatToPlainString(T.t["EvCP/g"], {
-                                    channel: (0, eS.m1)(a, ej.default, e_.A, !0),
+                                    channel: (0, eS.m1)(a, eI.default, e_.A, !0),
                                     name: null != e ? e.name : "",
                                 }),
                                 activity: e,
@@ -599,21 +599,21 @@ let eD = s.memo(function (e) {
         })({
             canAttachFiles: ea,
             canStartThreads: ey || ev,
-            useSlate: eb,
+            useSlate: eN,
             hasClips: ei,
             canUseApplicationCommands: !S,
             channel: l,
             activities: $,
-            newClipsCount: N?.length ?? 0,
-            canPostPolls: eN,
+            newClipsCount: b?.length ?? 0,
+            canPostPolls: eb,
             appContext: _,
             canSendScheduledMessages: eD,
             canSummarizeThreads: eL,
         });
-    if (0 === ek.length) return null;
-    let eO = (0, i.jsx)(d.p, { size: "refresh_sm", color: "currentColor", colorClass: eR.dW }),
+    if (0 === eO.length) return null;
+    let ek = (0, i.jsx)(d.p, { size: "refresh_sm", color: "currentColor", colorClass: eR.dW }),
         eP = (0, i.jsx)(u.Y, {
-            targetElementRef: I,
+            targetElementRef: j,
             shouldShow: null != en,
             animation: u.Y.Animation.NONE,
             align: "recentClips" === en ? "center" : "left",
@@ -628,14 +628,14 @@ let eD = s.memo(function (e) {
             renderPopout: (e) => {
                 switch (en) {
                     case "recentClips":
-                        return (0, i.jsx)(R, { ...e, onOpenClips: eo, lastClipsSession: b });
+                        return (0, i.jsx)(R, { ...e, onOpenClips: eo, lastClipsSession: N });
                     case "attachMenu":
                         return (0, i.jsx)(eT, {
                             ...e,
                             onClose: () => el(null),
-                            options: ek,
+                            options: eO,
                             channel: l,
-                            onFileUpload: () => j.current?.activateUploadDialogue(),
+                            onFileUpload: () => I.current?.activateUploadDialogue(),
                             draftType: a,
                             editorTextContent: x,
                             setValue: E,
@@ -647,15 +647,15 @@ let eD = s.memo(function (e) {
             },
             children: (e) =>
                 (0, i.jsx)(q.A, {
-                    ref: I,
+                    ref: j,
                     className: r()(eR.g$, t),
                     childClassName: eR.wh,
                     isActive: !1,
                     "aria-label": T.intl.string(T.t.d56gCa),
-                    onDoubleClick: ea ? () => j.current?.activateUploadDialogue() : void 0,
+                    onDoubleClick: ea ? () => I.current?.activateUploadDialogue() : void 0,
                     "aria-haspopup": "menu",
                     ...e,
-                    children: eO,
+                    children: ek,
                 }),
         });
     return (0, i.jsxs)(i.Fragment, {
@@ -663,14 +663,14 @@ let eD = s.memo(function (e) {
             (0, i.jsx)("div", {
                 className: eR.EJ,
                 children: (0, i.jsx)(h.A, {
-                    ref: j,
+                    ref: I,
                     onChange: (e) => {
                         var t, n;
                         (t = e.currentTarget.files),
                             null != (n = e.currentTarget.err) && "ETOOLARGE" === n.code
                                 ? (0, W.V)(l, [])
                                 : (0, W.R)(t, l, a, { requireConfirm: !0, origin: "file_picker" }),
-                            K._.dispatchToLastSubscribed(eI.jej.TEXTAREA_FOCUS),
+                            K._.dispatchToLastSubscribed(ej.jej.TEXTAREA_FOCUS),
                             (e.currentTarget.value = "");
                     },
                     multiple: l.rateLimitPerUser <= 0,

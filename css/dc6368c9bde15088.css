@@ -252,54 +252,6 @@
     display: none
 }
 
-.container_db0ccb {
-    background: var(--background-base-low);
-    color: var(--text-default);
-    position: relative
-}
-
-.resizeHandle_db0ccb {
-    cursor: ew-resize;
-    height: 100%;
-    inset-inline-start: 0;
-    position: absolute;
-    width: 8px;
-    z-index: 1
-}
-
-.sidebarContent_db0ccb {
-    border-inline-start: 1px solid var(--background-base-lowest);
-    display: flex;
-    flex-direction: column;
-    height: 100%
-}
-
-.mobileHeaderCollapsed_db0ccb {
-    cursor: pointer
-}
-
-.mobileContainerExpanded_db0ccb {
-    position: absolute;
-    top: 0;
-    inset-inline: 0;
-    bottom: 0;
-    z-index: 9999999999999
-}
-
-.layerContainer_db0ccb {
-    inset-inline-end: 0
-}
-
-.popoutContainer_db0ccb {
-    background: var(--background-base-low);
-    color: var(--text-default);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: relative;
-    width: 100%
-}
-
 .root_b2c7eb {
     display: flex;
     flex: 1 1 auto;
