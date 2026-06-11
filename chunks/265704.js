@@ -45,7 +45,7 @@ let h = new _(c.h, {
     },
     BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_SUCCESS: function (e) {
         let { bounties: t, placement: n, adDecisionsByAdCreativeId: a } = e;
-        (i = !1), (r = t), (s = new Set()), (o = new Map(o)).set(n, a);
+        (i = !1), (r = t), (s = new Set()), (l = new Map()), (o = new Map(o)).set(n, a);
     },
     BOUNTIES_FETCH_QUEST_HOME_BOUNTIES_FAILURE: function (e) {
         let { placement: t } = e;
