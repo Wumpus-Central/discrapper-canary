@@ -2984,31 +2984,6 @@ button.inner__02fc8:disabled {
     text-decoration: line-through
 }
 
-.priceTagsContainer_f73e93 {
-    align-items: flex-end;
-    display: inline-flex
-}
-
-.price_f73e93 {
-    margin-inline-end: 8px
-}
-
-.premiumIcon_f73e93 {
-    height: 16px;
-    margin-inline-end: 4px;
-    width: 16px
-}
-
-.premiumIcon_f73e93.fullPrice_f73e93 {
-    margin-inline-end: 2px
-}
-
-.subscribeNow_f5ae75 {
-    cursor: pointer;
-    display: inline;
-    text-decoration: underline
-}
-
 .loadingContainer__08415 {
     align-items: stretch;
     box-sizing: border-box;
@@ -6670,6 +6645,19 @@ div.profileThemedContainer__656be {
     margin-bottom: 16px
 }
 
+.paginationDock_a98f3b {
+    background: none;
+    border-top: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-medium);
+    flex: 0 0 auto;
+    padding: 0 var(--space-16);
+    z-index: 2
+}
+
+.paginationDock_a98f3b>div {
+    margin-top: 0
+}
+
 .gatedContent__7184c {
     height: 100%
 }
@@ -7564,6 +7552,10 @@ div.profileThemedContainer__656be {
 .searchBox_d9c882 {
     background-color: var(--background-base-lower);
     margin-inline-end: 16px
+}
+
+.browser__9a792 {
+    overflow: hidden
 }
 
 .icon_d98031 {

@@ -1,3 +1,28 @@
+.priceTagsContainer_f73e93 {
+    align-items: flex-end;
+    display: inline-flex
+}
+
+.price_f73e93 {
+    margin-inline-end: 8px
+}
+
+.premiumIcon_f73e93 {
+    height: 16px;
+    margin-inline-end: 4px;
+    width: 16px
+}
+
+.premiumIcon_f73e93.fullPrice_f73e93 {
+    margin-inline-end: 2px
+}
+
+.subscribeNow_f5ae75 {
+    cursor: pointer;
+    display: inline;
+    text-decoration: underline
+}
+
 .container_f284f6 {
     align-items: center;
     color: var(--text-default);

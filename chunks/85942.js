@@ -12,4 +12,5 @@ e.exports = {
     CC: "alt_a98f3b",
     QR: "helpMessageContainer_a98f3b",
     VC: "paginationLimitHeader_a98f3b",
+    cu: "paginationDock_a98f3b",
 };
