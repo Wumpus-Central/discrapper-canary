@@ -3039,7 +3039,7 @@ let lc = () =>
                         }),
                         (0, c.jsx)("img", {
                             className: li.Qw,
-                            src: "https://cdn.discordapp.com/assets/content/3010f1d3fc68696c4cf48f5f3df7c627c0921cd9bbe6d7e3ee2c6681af4dbcb3.svg",
+                            src: "https://cdn.discordapp.com/assets/content/4e92db23a6c4113fa36c7ba1e428e4b7d02080d268319db978a1411d2f34232d.png",
                             alt: "",
                             "aria-hidden": !0,
                         }),
