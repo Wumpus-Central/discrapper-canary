@@ -240,7 +240,7 @@ let W = "2026-03-surface-direct-renderer",
     });
 var $ = n(53857),
     z = n(734057),
-    q = n(555975),
+    q = n(890063),
     X = n(763827),
     Z = n(412780),
     Q = n(873985),
@@ -2643,7 +2643,7 @@ class ti extends m.A {
     _rtcConnectionId;
     _connectCount;
     _connectionSerial;
-    _connected;
+    _hasEverConnected;
     _connecting;
     _voiceConnectionSuccessTracked;
     _mediaEngineConnectDuration;
@@ -2732,7 +2732,7 @@ class ti extends m.A {
             (this._connectCompletedTime = 0),
             (this._rtcConnectionId = (0, f.A)()),
             (this._connectCount = 0),
-            (this._connected = !1),
+            (this._hasEverConnected = !1),
             (this._connecting = !1),
             (this._voiceConnectionSuccessTracked = !1),
             (this._hasCodecs = !1),
@@ -2887,12 +2887,12 @@ class ti extends m.A {
         this.recordEvent({ c: 7 });
         let e = this._socket;
         null != e &&
-            (this._connected && (this._connectStartTime = (0, A.tB)()),
+            (this._hasEverConnected && (this._connectStartTime = (0, A.tB)()),
             this._connecting ||
                 (this._trackVoiceConnectionConnecting(),
                 (this._connecting = !0),
-                (this._encountered_socket_failure = !1)),
-            (this._voiceConnectionSuccessTracked = !1),
+                (this._encountered_socket_failure = !1),
+                (this._voiceConnectionSuccessTracked = !1)),
             this._connectCount++,
             (this.reconnecting = !0),
             e.close(),
@@ -3565,7 +3565,7 @@ class ti extends m.A {
                         ? (this._localMediaSinkWantsManager?.setConnection(h),
                           this._goLiveQualityManager?.update(),
                           (this._connectCompletedTime = (0, A.tB)()),
-                          (this._connected = !0),
+                          (this._hasEverConnected = !0),
                           (this._connecting = !1),
                           (this._encountered_socket_failure = !1),
                           this._trackVoiceConnectionSuccess(h))
@@ -3793,7 +3793,7 @@ class ti extends m.A {
             : this.logger.warn("Cannot set codecs on connection with protocol:", this.protocol);
     }
     _trackVoiceConnectionSuccess(e) {
-        if (this._voiceConnectionSuccessTracked || !this._connected || !this._hasCodecs) return;
+        if (this._voiceConnectionSuccessTracked || this.state !== e_.S7L.RTC_CONNECTED || !this._hasCodecs) return;
         this._voiceConnectionSuccessTracked = !0;
         let t = Q.A.shouldIncludePreferredRegion() ? Q.A.getPreferredRegion() : null,
             n = 1 === this._connectCount,
