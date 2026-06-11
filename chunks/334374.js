@@ -15,9 +15,8 @@ var i,
     p = n(823784),
     E = n(710969),
     m = n(174459),
-    g = (((i = {}).END_CONTENT_LOAD = "end_content_load"), (i.CLICK_INTERNAL = "click_internal"), i);
-f.Cy.OPEN_GAME_LINK, f.Cy.CONTEXT_MENU_OPEN_GAME_LINK, f.Cy.GAME_STORE_OPEN_GAME_LINK;
-var A = n(652215);
+    g = (((i = {}).END_CONTENT_LOAD = "end_content_load"), (i.CLICK_INTERNAL = "click_internal"), i),
+    A = n(652215);
 async function I(e) {
     let {
         adCreativeType: t,
