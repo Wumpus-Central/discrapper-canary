@@ -24,12 +24,22 @@ function g() {
         r = i.useMemo(() => {
             if (null == n) return null;
             if ("custom" === n.type) {
-                let e = n.customUserThemeSettings;
-                return (0, p.Kl)(e.colors, e.gradientAngle ?? 0, e.baseMix ?? u.BC, t);
+                let e = n.customUserThemeSettings,
+                    i = e.colors[0];
+                return null == i ? null : (0, p.dY)([...(0, u.kI)(i, t)], e.gradientAngle ?? 0, e.baseMix ?? u.BC, t);
             }
-            return (0, p.PV)(n.preset, t);
+            let e = (0, u.oE)(n.preset, t);
+            return (0, p.dY)(
+                e.colors.map((e) => {
+                    let { hex: t } = e;
+                    return t;
+                }),
+                e.angle,
+                e.baseMix,
+                t,
+            );
         }, [n, t]),
-        E = i.useMemo(() => (null == n ? "" : "custom" === n.type ? s()(p.Gc, p.hK) : p.Gc), [n]),
+        E = i.useMemo(() => (null == n ? "" : s()(p.Gc, p.hK)), [n]),
         g =
             ((e = (0, o.bG)([f.A], () => f.A.gradientPreset)),
             i.useMemo(() => {

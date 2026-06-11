@@ -1,4 +1,4 @@
-l.r(t), l.d(t, { default: () => ea });
+l.r(t), l.d(t, { default: () => en });
 var a,
     n = l(627968),
     r = l(64700),
@@ -22,10 +22,10 @@ var a,
     C = l(793943),
     A = l(987144),
     k = l(378292),
-    G = l(868652),
-    I = l(645619),
+    w = l(868652),
+    G = l(645619),
     j = l(864310),
-    w = l(973654),
+    I = l(973654),
     P = l(363195),
     R = l(71393),
     T = l(967198),
@@ -76,8 +76,8 @@ function q(e) {
     return e.body?.message ?? e.message ?? D.intl.string(D.t.fEptJP);
 }
 async function Y(e) {
-    await Promise.all([(0, G.AK)(e), (0, G.Xd)(e)]);
-    let t = I.A.getStateForGuild(e);
+    await Promise.all([(0, w.AK)(e), (0, w.Xd)(e)]);
+    let t = G.A.getStateForGuild(e);
     return {
         hasGuildThemeFeature: B(e),
         hasActiveGuildThemePowerup: t?.unlockedPowerups?.[u.d0] != null,
@@ -90,9 +90,12 @@ function z(e) {
     return Number.isNaN(t) ? 0 : Math.round(t);
 }
 function Q(e) {
-    return _.wS + _.iq - Math.round(100 * s()(e).get("hsl.l"));
+    return Math.round(100 * s()(e).get("hsl.l"));
 }
 function Z(e) {
+    return _.wS + _.iq - Q(e);
+}
+function ee(e) {
     let [t, l] = r.useState(0),
         a = r.useRef(null),
         n = r.useRef(e);
@@ -103,7 +106,7 @@ function Z(e) {
         { key: t, handleInternalChange: r.useCallback((e) => ((a.current = e), e), []) }
     );
 }
-function ee(e) {
+function et(e) {
     let {
             background: t,
             color: l,
@@ -149,7 +152,7 @@ function ee(e) {
         ],
     });
 }
-function et(e) {
+function el(e) {
     let { preset: t, selected: l, disabled: a, onSelect: r, theme: i } = e,
         s = (0, k.A)(t);
     return (0, n.jsx)(J.IK, {
@@ -164,7 +167,7 @@ function et(e) {
         selectedIndicatorClassName: $.$R,
     });
 }
-function el() {
+function ea() {
     let e = (0, c.bG)([P.A], () => P.A.theme) === M.NJ.LIGHT ? M.NJ.LIGHT : M.NJ.DARK,
         t = [
             {
@@ -191,12 +194,12 @@ function el() {
         value: e,
         onChange: (e) => {
             let { value: t } = e;
-            return (0, w.GQ)(t);
+            return (0, I.GQ)(t);
         },
         look: "pill",
     });
 }
-function ea() {
+function en() {
     let e = r.useRef(!1),
         t = r.useRef(!1),
         l = r.useRef(!1),
@@ -207,7 +210,7 @@ function ea() {
         g = (0, c.bG)([P.A], () => P.A.theme),
         {
             draft: k,
-            isSaving: I,
+            isSaving: G,
             hasChanges: j,
             saveError: J,
             previewGuildId: M,
@@ -218,26 +221,27 @@ function ea() {
             saveError: S.Ay.saveError,
             previewGuildId: S.Ay.guildId,
         })),
-        ea = (0, c.bG)([R.A], () => (null == M ? null : R.A.getGuild(M)), [M]),
-        en = (function (e) {
+        en = (0, c.bG)([R.A], () => (null == M ? null : R.A.getGuild(M)), [M]),
+        er = (function (e) {
             let t = e?.customUserThemeSettings?.colors?.[0];
             if (null != t) return t;
-            let l = (0, _.Yt)(e?.presetId);
-            return null != l ? (0, _.oE)(l).color : _.a0;
+            let l = (0, _.Yt)(e?.presetId),
+                a = null != l ? (0, _.oE)(l).color : _.a0;
+            return (0, _.w3)((0, _._k)(a, Q(a)));
         })(k),
-        er = (function (e) {
+        ei = (function (e) {
             let t = e?.customUserThemeSettings?.baseMix;
             if (null != t) return t;
             let l = (0, _.Yt)(e?.presetId);
             return null != l ? (0, _.oE)(l).baseMix : _.BC;
         })(k),
-        ei = z(en),
-        es = Q(en),
-        eu = r.useMemo(() => {
+        es = z(er),
+        eu = Z(er),
+        ed = r.useMemo(() => {
             let e, t, l, a, n, r, i;
             return (
-                (e = s()(en)),
-                (t = z(en)),
+                (e = s()(er)),
+                (t = z(er)),
                 (a = Number.isNaN((l = e.get("hsl.s"))) ? 0.82 : l),
                 (n = s()
                     .hsl(t, a, _.wS / 100)
@@ -248,33 +252,33 @@ function ea() {
                     .hex()),
                 `linear-gradient(90deg, ${i} 0%, ${r} 50%, ${n} 100%)`
             );
-        }, [en]),
-        { key: ed, handleInternalChange: eo } = Z(ei),
-        { key: ec, handleInternalChange: ef } = Z(es),
-        { key: em, handleInternalChange: eg } = Z(er),
-        eh = r.useCallback((e, t) => {
+        }, [er]),
+        { key: eo, handleInternalChange: ec } = ee(es),
+        { key: ef, handleInternalChange: em } = ee(eu),
+        { key: eg, handleInternalChange: eh } = ee(ei),
+        eb = r.useCallback((e, t) => {
             (0, L.t$)({ colors: [e], gradientAngle: 0, baseMix: t });
         }, []),
-        eb = r.useCallback((e) => {
+        ex = r.useCallback((e) => {
             (0, L.GC)(e.id);
         }, []),
-        ex = r.useCallback(() => {
-            let e = (0, _.XY)();
-            eh(e.color, e.baseMix);
-        }, [eh]),
         ep = r.useCallback(() => {
+            let e = (0, _.XY)();
+            eb(e.color, e.baseMix);
+        }, [eb]),
+        ev = r.useCallback(() => {
             let { guildId: e, original: t, originalEnabled: l, origin: a } = S.Ay;
             null != e &&
                 null != a &&
                 (0, L.tA)({ guildId: e, draft: t, original: t, draftEnabled: l, originalEnabled: l, origin: a });
         }, []),
-        ev = r.useCallback(() => {
-            (e.current = !0), (0, L.WV)(), (0, w.XG)(), (0, C.Jp)();
+        eE = r.useCallback(() => {
+            (e.current = !0), (0, L.WV)(), (0, I.XG)(), (0, C.Jp)();
         }, []),
-        eE = r.useCallback(async () => {
-            await (0, L.HN)(), (e.current = !0), (0, w.XG)(), (0, C.Jp)();
+        eN = r.useCallback(async () => {
+            await (0, L.HN)(), (e.current = !0), (0, I.XG)(), (0, C.Jp)();
         }, []),
-        eN = r.useCallback(() => {
+        ey = r.useCallback(() => {
             (0, m.A)({
                 title: D.intl.string(H.default.H8idcP),
                 subtitle: D.intl.string(H.default["0LL6FX"]),
@@ -283,22 +287,22 @@ function ea() {
                 variant: "primary",
                 onConfirm: async (e) => {
                     try {
-                        await eE();
+                        await eN();
                     } catch (t) {
                         throw (e(q(t)), t);
                     }
                 },
             });
-        }, [eE]),
-        ey = r.useCallback(
+        }, [eN]),
+        eC = r.useCallback(
             async (e) => {
                 if (!t.current && !l.current) {
                     if (null == M) return void f(D.intl.string(D.t.fEptJP));
                     if (K(M)) {
                         (l.current = !0), (t.current = !0), d(!0), f(null);
                         try {
-                            if ((await (0, G.Qh)(M, e.skuId), await X(M), !K(M))) return;
-                            eN();
+                            if ((await (0, w.Qh)(M, e.skuId), await X(M), !K(M))) return;
+                            ey();
                         } catch (e) {
                             (l.current = !1), f(q(e));
                         } finally {
@@ -307,36 +311,36 @@ function ea() {
                     }
                 }
             },
-            [eN, M],
+            [ey, M],
         ),
-        eC = r.useCallback(
+        eA = r.useCallback(
             async (e, t) => {
-                if (null == ea) return void f(D.intl.string(D.t.fEptJP));
+                if (null == en) return void f(D.intl.string(D.t.fEptJP));
                 let l = e.cost - t;
                 l <= 0
-                    ? await ey(e)
+                    ? await eC(e)
                     : await (0, A.g)({
                           analyticsLocation: {
                               page: V.liQ.GUILD_POWERUPS_OVERVIEW,
                               section: V.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
                           },
                           analyticsLocations: i,
-                          guild: ea,
+                          guild: en,
                           numberOfBoostsToAdd: l,
                           intent: U.Pn.PERK,
                           onLoading: d,
                           handleSubscribeModalClose: (t) => {
-                              if (t) return ey(e);
+                              if (t) return eC(e);
                           },
                       });
             },
-            [i, ea, ey],
+            [i, en, eC],
         ),
-        eA = r.useCallback(async () => {
+        ek = r.useCallback(async () => {
             if ((f(null), null == M)) return void f(D.intl.string(D.t.fEptJP));
             if (B(M)) {
                 if (!K(M)) return;
-                eN();
+                ey();
                 return;
             }
             d(!0);
@@ -360,19 +364,19 @@ function ea() {
                               ? "enable_powerup"
                               : "boost";
                 })(e);
-                if (t === O.CONFIRM) return void eN();
+                if (t === O.CONFIRM) return void ey();
                 if (t === O.WAIT_FOR_FEATURE) {
                     if ((await X(M), !K(M))) return;
-                    eN();
+                    ey();
                     return;
                 }
                 if (null == e.guildThemePowerup) return void f(D.intl.string(D.t.fEptJP));
                 if (t === O.ENABLE_POWERUP) {
-                    d(!1), await ey(e.guildThemePowerup);
+                    d(!1), await eC(e.guildThemePowerup);
                     return;
                 }
                 if (t === O.BOOST) {
-                    d(!1), await eC(e.guildThemePowerup, e.availableBoostCount);
+                    d(!1), await eA(e.guildThemePowerup, e.availableBoostCount);
                     return;
                 }
                 f(D.intl.string(D.t.fEptJP));
@@ -381,29 +385,29 @@ function ea() {
             } finally {
                 d(!1);
             }
-        }, [ey, eC, eN, M]),
-        ek = (0, c.bG)([T.A], () => T.A.getGuildId()),
-        eG = null != M && ek !== M;
+        }, [eC, eA, ey, M]),
+        ew = (0, c.bG)([T.A], () => T.A.getGuildId()),
+        eG = null != M && ew !== M;
     r.useEffect(() => {
-        eG && ((e.current = !0), (0, L.WV)(), (0, w.XG)(), (0, C.Jp)());
+        eG && ((e.current = !0), (0, L.WV)(), (0, I.XG)(), (0, C.Jp)());
     }, [eG]),
         r.useEffect(() => {
             if (null == M) return;
-            let { draft: e, draftEnabled: t, origin: l } = S.Ay;
-            (t && e?.presetId != null) || (l === S.v5.GUILD_SETTINGS && (0, W.Om)(e)) || (0, L.GC)(_.Zq["0"].id);
+            let { draft: e, draftEnabled: t } = S.Ay;
+            (t && (0, W.Om)(e)) || (0, L.GC)(_.Zq["0"].id);
         }, [M]),
         r.useEffect(() => {
-            null == M && ((0, w.XG)(), (0, C.Jp)());
+            null == M && ((0, I.XG)(), (0, C.Jp)());
         }, [M]),
         r.useEffect(
             () => () => {
-                (0, w.XG)(), e.current || S.Ay.isAwaitingGuildUpdate || (0, L.WV)();
+                (0, I.XG)(), e.current || S.Ay.isAwaitingGuildUpdate || (0, L.WV)();
             },
             [],
         );
-    let eI = I || u,
-        ej = eI || !j || null == k || null == M,
-        ew = o ?? J;
+    let ej = G || u,
+        eI = ej || !j || null == k || null == M,
+        eP = o ?? J;
     return (0, n.jsxs)("div", {
         className: $.kL,
         "data-app-right-panel": !0,
@@ -433,7 +437,7 @@ function ea() {
                                     className: $.yV,
                                     children: D.intl.string(H.default.HkvkHP),
                                 }),
-                                (0, n.jsx)(el, {}),
+                                (0, n.jsx)(ea, {}),
                             ],
                         }),
                         (0, n.jsxs)("div", {
@@ -445,33 +449,33 @@ function ea() {
                                     className: $.a9,
                                     children: D.intl.string(F.default.uSL2Gy),
                                 }),
-                                (0, n.jsx)(ee, {
+                                (0, n.jsx)(et, {
                                     background:
                                         "linear-gradient(90deg, rgb(255 0 0) 0%, rgb(255 255 0) 16.66%, rgb(0 255 0) 33.33%, rgb(0 255 255) 50%, rgb(0 0 255) 66.66%, rgb(255 0 255) 83.33%, rgb(255 0 0) 100%)",
-                                    color: en,
-                                    controlKey: ed,
+                                    color: er,
+                                    controlKey: eo,
                                     min: 0,
                                     max: 359,
-                                    defaultValue: ei,
-                                    ariaLabel: D.intl.string(F.default.uSL2Gy),
-                                    onValuePreview: eo,
-                                    onValueCommit: (e) => {
-                                        let t = (0, _.sR)(en, e);
-                                        eo(z(t)), eh(t, er);
-                                    },
-                                }),
-                                (0, n.jsx)(ee, {
-                                    background: eu,
-                                    color: en,
-                                    controlKey: ec,
-                                    min: _.wS,
-                                    max: _.iq,
                                     defaultValue: es,
                                     ariaLabel: D.intl.string(F.default.uSL2Gy),
-                                    onValuePreview: ef,
+                                    onValuePreview: ec,
                                     onValueCommit: (e) => {
-                                        let t = (0, _._k)(en, _.wS + _.iq - e);
-                                        ef(Q(t)), eh(t, er);
+                                        let t = (0, _.w3)((0, _.sR)(er, e));
+                                        ec(z(t)), eb(t, ei);
+                                    },
+                                }),
+                                (0, n.jsx)(et, {
+                                    background: ed,
+                                    color: er,
+                                    controlKey: ef,
+                                    min: _.wS,
+                                    max: _.iq,
+                                    defaultValue: eu,
+                                    ariaLabel: D.intl.string(F.default.uSL2Gy),
+                                    onValuePreview: em,
+                                    onValueCommit: (e) => {
+                                        let t = (0, _.w3)((0, _._k)(er, _.wS + _.iq - e));
+                                        em(Z(t)), eb(t, ei);
                                     },
                                 }),
                             ],
@@ -495,7 +499,7 @@ function ea() {
                                                 variant: "text-sm/medium",
                                                 color: "text-default",
                                                 className: $.rv,
-                                                children: `${Math.round(er)}%`,
+                                                children: `${Math.round(ei)}%`,
                                             }),
                                         ],
                                     }),
@@ -506,15 +510,15 @@ function ea() {
                                             minValue: 0,
                                             maxValue: 100,
                                             keyboardStep: 1,
-                                            initialValue: er,
-                                            defaultValue: er,
+                                            initialValue: ei,
+                                            defaultValue: ei,
                                             onValueRender: (e) => `${Math.round(e)}%`,
                                             onValueChange: (e) => {
                                                 let t = Math.round(e);
-                                                eg(t), eh(en, t);
+                                                (t !== ei || k?.customUserThemeSettings != null) && (eh(t), eb(er, t));
                                             },
                                         },
-                                        em,
+                                        eg,
                                     ),
                                 ],
                             }),
@@ -532,12 +536,12 @@ function ea() {
                                     className: $.$k,
                                     children: _.Zq.map((e) =>
                                         (0, n.jsx)(
-                                            et,
+                                            el,
                                             {
                                                 preset: e,
                                                 selected: k?.presetId === e.id,
-                                                disabled: eI,
-                                                onSelect: () => eb(e),
+                                                disabled: ej,
+                                                onSelect: () => ex(e),
                                                 theme: g,
                                             },
                                             e.id,
@@ -553,8 +557,8 @@ function ea() {
                                     variant: "secondary",
                                     size: "md",
                                     fullWidth: !0,
-                                    disabled: eI,
-                                    onClick: ex,
+                                    disabled: ej,
+                                    onClick: ep,
                                     text: D.intl.string(F.default.c9MBEH),
                                     icon: E.D,
                                 }),
@@ -562,18 +566,18 @@ function ea() {
                                     variant: "secondary",
                                     size: "md",
                                     fullWidth: !0,
-                                    disabled: eI || !j,
-                                    onClick: ep,
+                                    disabled: ej || !j,
+                                    onClick: ev,
                                     text: D.intl.string(D.t.yBZMsQ),
                                 }),
                             ],
                         }),
-                        null != ew &&
+                        null != eP &&
                             (0, n.jsx)(x.E, {
                                 variant: "text-xs/semibold",
                                 color: "text-feedback-critical",
                                 className: $.z3,
-                                children: ew,
+                                children: eP,
                             }),
                     ],
                 }),
@@ -587,8 +591,8 @@ function ea() {
                             variant: "secondary",
                             size: "md",
                             fullWidth: !0,
-                            disabled: eI,
-                            onClick: ev,
+                            disabled: ej,
+                            onClick: eE,
                             text: D.intl.string(D.t["13/7kX"]),
                         }),
                         (0, n.jsx)("span", {
@@ -597,9 +601,9 @@ function ea() {
                                 variant: "primary",
                                 size: "md",
                                 fullWidth: !0,
-                                loading: eI,
-                                disabled: ej,
-                                onClick: eA,
+                                loading: ej,
+                                disabled: eI,
+                                onClick: ek,
                                 text: D.intl.string(D.t["1Qm822"]),
                             }),
                         }),
