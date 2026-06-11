@@ -1254,15 +1254,15 @@ let t4 = r.memo(function () {
                         onClick: async () => {
                             try {
                                 let { openIAPPurchaseModal: e } = await Promise.all([
-                                    n.e("18043"),
+                                    n.e("65058"),
                                     n.e("68338"),
                                     n.e("19393"),
                                     n.e("26105"),
                                     n.e("84764"),
                                     n.e("11973"),
-                                    n.e("9634"),
+                                    n.e("596"),
                                     n.e("66879"),
-                                    n.e("30204"),
+                                    n.e("56178"),
                                     n.e("46334"),
                                     n.e("30849"),
                                     n.e("26963"),
@@ -1550,7 +1550,7 @@ let t4 = r.memo(function () {
                                     let { default: e } = await Promise.all([
                                         n.e("68338"),
                                         n.e("19393"),
-                                        n.e("9634"),
+                                        n.e("596"),
                                         n.e("26105"),
                                         n.e("84764"),
                                         n.e("11973"),

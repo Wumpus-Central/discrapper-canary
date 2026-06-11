@@ -29,7 +29,7 @@ async function O() {
     try {
         return (
             await Promise.all([
-                n.e("8462"),
+                n.e("59913"),
                 n.e("11973"),
                 n.e("51143"),
                 n.e("2677"),
@@ -37,7 +37,7 @@ async function O() {
                 n.e("32285"),
                 n.e("3020"),
                 n.e("66879"),
-                n.e("9634"),
+                n.e("596"),
                 n.e("33177"),
                 n.e("80870"),
                 n.e("22274"),
