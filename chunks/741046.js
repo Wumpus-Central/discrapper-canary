@@ -501,7 +501,9 @@ let sn = (e) => {
     let { containerVisibilityPercentage: s } = e,
         t = (0, eu.bG)([F.Ay], () => F.Ay.useReducedMotion),
         i = (0, es.TM)();
-    return (0, a.jsxs)(a.Fragment, {
+    return (0, a.jsxs)("div", {
+        "aria-hidden": !0,
+        className: sl.YU,
         children: [
             (0, a.jsx)(sa.A, {
                 supportHEVCAlpha: i,

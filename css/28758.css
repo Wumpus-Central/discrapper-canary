@@ -6449,64 +6449,61 @@
     gap: 4px
 }
 
-.container__05e8e {
-    margin-top: 16px
+.changelog_eae0ef {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: var(--radius-sm);
+    display: flex;
+    margin-top: 32px;
+    padding: 24px
 }
 
-.formTitle__05e8e {
-    display: flex;
+.changelogImage_eae0ef {
+    margin-inline-end: 16px;
+    width: 100px
+}
+
+.header_eae0ef {
+    margin-bottom: 20px
+}
+
+.updatesDescription_eae0ef,
+.updatesHeader_eae0ef {
     margin-bottom: 8px
 }
 
-.availabilityIndicator__05e8e {
-    background-color: var(--background-mod-normal);
-    border-radius: var(--radius-lg);
-    margin-inline-start: 4px;
-    padding: 1px 2px
-}
-
-.description__05e8e {
-    margin-bottom: 16px
-}
-
-.button__05e8e {
-    color: var(--interactive-text-active);
-    margin-inline-start: 16px
-}
-
-.previewContainer__05e8e {
-    align-items: center;
-    background: var(--background-base-lower);
+.safetyChecklist_eae0ef {
+    background-color: var(--background-base-lower);
+    border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
-    display: flex;
-    height: 80px;
-    justify-content: center;
-    min-width: 80px
+    margin-top: 32px
 }
 
-.preview__05e8e {
-    color: var(--interactive-text-default)
+.safetyStepRow_eae0ef {
+    justify-content: space-between;
+    padding: 16px
 }
 
-.previewDisabled__05e8e {
-    color: var(--icon-muted)
-}
-
-.uploadContainer__05e8e {
-    display: flex
-}
-
-.rolePreviewArea__05e8e {
+.safetyStepContent_eae0ef,
+.safetyStepRow_eae0ef {
     align-items: center;
     display: flex;
+    flex-direction: row
+}
+
+.safetyStepContent_eae0ef {
     gap: 16px
 }
 
-.roleIconPreview__05e8e {
-    height: var(--custom-custom-role-icon-form-item-role-icon-preview-size);
-    -o-object-fit: contain;
-    object-fit: contain;
-    width: var(--custom-custom-role-icon-form-item-role-icon-preview-size)
+.divider_eae0ef {
+    background-color: var(--border-subtle);
+    height: 1px;
+    margin: 0 16px
+}
+
+.changelog_eae0ef,
+.safetyChecklist_eae0ef {
+    background-color: var(--card-background-default)
 }
 
 .wrapper__17be2 {
@@ -7121,6 +7118,10 @@
 
 .iconContainerApplicationHome_e6e64d {
     display: flex
+}
+
+.decorativeWrapper_ba731a {
+    display: contents
 }
 
 .flyingWumpusContainer_ba731a {

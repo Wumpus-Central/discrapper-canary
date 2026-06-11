@@ -174,10 +174,9 @@ function en(e) {
                       action: () =>
                           (0, a.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([
-                                  t.e("31573"),
-                                  t.e("71189"),
+                                  t.e("93855"),
                                   t.e("35321"),
-                                  t.e("65246"),
+                                  t.e("42865"),
                                   t.e("56814"),
                                   t.e("30282"),
                               ]).then(t.bind(t, 893605));
@@ -303,10 +302,9 @@ function en(e) {
                 action: () => {
                     (0, a.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            t.e("31573"),
-                            t.e("71189"),
+                            t.e("93855"),
                             t.e("35321"),
-                            t.e("65246"),
+                            t.e("42865"),
                             t.e("56814"),
                             t.e("30282"),
                         ]).then(t.bind(t, 893605));

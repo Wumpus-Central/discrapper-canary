@@ -1,4 +1,5 @@
 e.exports = {
+    YU: "decorativeWrapper_ba731a",
     wG: "flyingWumpusContainer_ba731a",
     lu: "flyingWumpusAsset_ba731a",
     nJ: "boltContainer_ba731a",
