@@ -621,9 +621,6 @@ class eC extends m.A {
             n.send(i.buffer);
         } catch (e) {}
     }
-    ping() {
-        this.sendHeartbeat();
-    }
     doResumeOrClose() {
         let e = (0, A.tB)();
         null !== this.serverId &&

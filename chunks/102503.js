@@ -1164,7 +1164,7 @@ function nS(e) {
         onClick: function () {
             (0, _.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("66879"),
+                    n.e("1168"),
                     n.e("97804"),
                     n.e("7265"),
                     n.e("97641"),
@@ -1660,7 +1660,7 @@ class io extends r.PureComponent {
                     n.e("19393"),
                     n.e("26105"),
                     n.e("84764"),
-                    n.e("66879"),
+                    n.e("1168"),
                     n.e("56178"),
                     n.e("46334"),
                     n.e("26963"),

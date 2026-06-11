@@ -3325,51 +3325,106 @@ function nt() {
 }
 var na = a(427358),
     nn = a(465153);
-let nl = [
-    {
-        key: "user",
-        cellClassName: nn.iL,
-        render(e) {
-            let { user: t, key: a } = e;
-            return t?.username ?? a;
-        },
-    },
-    {
-        key: "affinity",
-        renderHeader: () => (0, r.jsx)(h.E, { variant: "text-sm/semibold", children: "COMMUNICATION AFFINITY" }),
-        cellClassName: nn.nz,
-        render(e) {
-            let { affinity: t } = e;
-            return t.toFixed(5);
-        },
-    },
-    {
-        key: "vcProbability",
-        renderHeader: () => (0, r.jsx)(h.E, { variant: "text-sm/semibold", children: "VOICE AFFINITY" }),
-        cellClassName: nn.nz,
-        render(e) {
-            let { vcProbability: t } = e;
-            return t.toFixed(5);
-        },
-    },
-    {
-        key: "isFriend",
-        renderHeader: () => (0, r.jsx)(h.E, { variant: "text-sm/semibold", children: "IS FRIEND" }),
-        cellClassName: nn.nz,
-        render(e) {
-            let { isFriend: t } = e;
-            return t.toString();
-        },
-    },
-];
+function nl(e) {
+    let { title: t, sortKey: a, activeSortKey: n, sortDir: l, onClick: s } = e,
+        i = n === a ? ("desc" === l ? " \u25BC" : " \u25B2") : "";
+    return (0, r.jsx)(B.D, {
+        className: nn.K8,
+        onClick: () => s(a),
+        children: (0, r.jsx)(h.E, { variant: "text-sm/semibold", children: t + i }),
+    });
+}
 function ns() {
-    let e = (0, z.yK)([na.A, ea.default], () =>
-        na.A.getUserAffinities().map((e) => {
-            let { otherUserId: t, communicationProbability: a, vcProbability: n, isFriend: l } = e;
-            return { user: ea.default.getUser(t), affinity: a, vcProbability: n, isFriend: l, key: t };
-        }),
-    );
-    return 0 === e.length ? null : (0, r.jsx)(t$, { className: tF.nd, columns: nl, rowClassName: nn.nM, data: e });
+    let [e, t] = o.useState("affinity"),
+        [a, n] = o.useState("desc"),
+        l = o.useCallback(
+            (a) => {
+                e === a ? n((e) => ("asc" === e ? "desc" : "asc")) : (t(a), n("username" === a ? "asc" : "desc"));
+            },
+            [e],
+        ),
+        s = (0, z.yK)([na.A, ea.default], () =>
+            na.A.getUserAffinities().map((e) => {
+                let { otherUserId: t, communicationProbability: a, vcProbability: n, isFriend: l } = e;
+                return { user: ea.default.getUser(t), affinity: a, vcProbability: n, isFriend: l, key: t };
+            }),
+        ),
+        i = o.useMemo(
+            () =>
+                [...s].sort((t, n) => {
+                    let l;
+                    if ("username" === e) {
+                        let e = t.user?.username ?? t.key,
+                            a = n.user?.username ?? n.key;
+                        l = e.localeCompare(a);
+                    } else l = t[e] - n[e];
+                    return "desc" === a ? -l : l;
+                }),
+            [s, e, a],
+        ),
+        d = o.useMemo(
+            () => [
+                {
+                    key: "user",
+                    cellClassName: nn.iL,
+                    renderHeader: () =>
+                        (0, r.jsx)(nl, {
+                            title: "USER",
+                            sortKey: "username",
+                            activeSortKey: e,
+                            sortDir: a,
+                            onClick: l,
+                        }),
+                    render(e) {
+                        let { user: t, key: a } = e;
+                        return t?.username ?? a;
+                    },
+                },
+                {
+                    key: "affinity",
+                    renderHeader: () =>
+                        (0, r.jsx)(nl, {
+                            title: "COMMUNICATION AFFINITY",
+                            sortKey: "affinity",
+                            activeSortKey: e,
+                            sortDir: a,
+                            onClick: l,
+                        }),
+                    cellClassName: nn.nz,
+                    render(e) {
+                        let { affinity: t } = e;
+                        return t.toFixed(5);
+                    },
+                },
+                {
+                    key: "vcProbability",
+                    renderHeader: () =>
+                        (0, r.jsx)(nl, {
+                            title: "VOICE AFFINITY",
+                            sortKey: "vcProbability",
+                            activeSortKey: e,
+                            sortDir: a,
+                            onClick: l,
+                        }),
+                    cellClassName: nn.nz,
+                    render(e) {
+                        let { vcProbability: t } = e;
+                        return t.toFixed(5);
+                    },
+                },
+                {
+                    key: "isFriend",
+                    renderHeader: () => (0, r.jsx)(h.E, { variant: "text-sm/semibold", children: "IS FRIEND" }),
+                    cellClassName: nn.nz,
+                    render(e) {
+                        let { isFriend: t } = e;
+                        return t.toString();
+                    },
+                },
+            ],
+            [e, a, l],
+        );
+    return 0 === s.length ? null : (0, r.jsx)(t$, { className: tF.nd, columns: d, rowClassName: nn.nM, data: i });
 }
 var ni = a(139716),
     nr = a(847599),

@@ -32,8 +32,8 @@ var i = n(627968),
 function w(e, t) {
     (0, c.openModalLazy)(async () => {
         let { default: r } = await Promise.all([
-            n.e("12296"),
-            n.e("56843"),
+            n.e("1168"),
+            n.e("42478"),
             n.e("73435"),
             n.e("79816"),
             n.e("60235"),

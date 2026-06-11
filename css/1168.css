@@ -4109,6 +4109,14 @@
     text-align: end
 }
 
+.sortableHeader_e4169f {
+    cursor: pointer
+}
+
+.sortableHeader_e4169f:hover {
+    opacity: .8
+}
+
 .contentContainer__8820a {
     gap: 8px
 }
@@ -5456,17 +5464,6 @@
 
 .noResults_cba592 {
     gap: 8px
-}
-
-.outer_ac6414 {
-    position: relative
-}
-
-.inner_ac6414 {
-    position: absolute;
-    top: 0;
-    inset-inline: 0;
-    bottom: 0
 }
 
 @keyframes outgoing-call-pulse_f910d0 {
