@@ -1,10 +1,18 @@
-i.d(t, { ApplicationCheckoutContextProvider: () => n, l: () => c });
-var r = i(627968),
-    u = i(64700);
-let [s, c] = (0, i(786300).A)();
-function n(e) {
-    let { children: t } = e,
-        [i, c] = u.useState(null),
-        n = u.useMemo(() => ({ subscriptionMetadataRequest: i, setSubscriptionMetadataRequest: c }), [i]);
-    return (0, r.jsx)(s.Provider, { value: n, children: t });
+n.d(t, { ApplicationCheckoutContextProvider: () => s, l: () => a });
+var l = n(627968),
+    r = n(64700);
+let [i, a] = (0, n(786300).A)();
+function s(e) {
+    let { guildId: t, showBenefitsFirst: n, children: a } = e,
+        [s, o] = r.useState(null),
+        u = r.useMemo(
+            () => ({
+                guildId: t,
+                showBenefitsFirst: n,
+                subscriptionMetadataRequest: s,
+                setSubscriptionMetadataRequest: o,
+            }),
+            [t, n, s],
+        );
+    return (0, l.jsx)(i.Provider, { value: u, children: a });
 }
