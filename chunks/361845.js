@@ -470,10 +470,10 @@ let tx = o.Ay.connectStores([ts.A, tn.A, x.A, ti.A, tl.A, f.Ay, y.A], (t) => {
                             let { default: t } = await Promise.all([
                                 i.e("26963"),
                                 i.e("90860"),
-                                i.e("5636"),
                                 i.e("60658"),
                                 i.e("2419"),
                                 i.e("72963"),
+                                i.e("5636"),
                                 i.e("20310"),
                                 i.e("94544"),
                             ]).then(i.bind(i, 173971));

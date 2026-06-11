@@ -50,7 +50,7 @@ let U = (0, d.A)(
                                       let { default: t } = await Promise.all([
                                           n.e("20998"),
                                           n.e("2677"),
-                                          n.e("25935"),
+                                          n.e("2655"),
                                           n.e("40258"),
                                           n.e("8891"),
                                           n.e("73669"),

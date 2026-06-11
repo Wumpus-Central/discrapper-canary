@@ -1,0 +1,35 @@
+n.d(t, { p: () => c });
+var l = n(627968),
+    r = n(64700),
+    i = n(465657),
+    a = n(211159),
+    s = n(166532),
+    o = n(194256);
+let u = (e, t) => {
+    let { handlePaymentSourceAdd: n } = e;
+    return (0, l.jsx)(o.Ay, { handlePaymentSourceAdd: n, ...t });
+};
+function c(e) {
+    let { isGift: t } = (0, a.t4)((e) => ({ isGift: e.isGift })),
+        n = e.handleStepChange,
+        o = r.useCallback(() => {
+            if (t) return void n(s.pn.GIFT_CUSTOMIZATION);
+        }, [n, t]),
+        c = r.useCallback((e, t) => {
+            let {
+                    paymentSourceId: n,
+                    isSelectedPaymentSourceDisabled: l,
+                    purchasePreviewError: r,
+                    invoicePreview: i,
+                } = t,
+                a = e.disablePurchase || null == n || l || null == i || null != r;
+            return { ...e, disablePurchase: a };
+        }, []);
+    return (0, l.jsx)(i.Y, {
+        ...e,
+        isBackButtonEligible: t,
+        onFooterBackClick: o,
+        renderStepBody: u,
+        resolveInternalState: c,
+    });
+}

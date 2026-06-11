@@ -1,0 +1,113 @@
+.notice__5a95d {
+    margin-bottom: var(--space-16)
+}
+
+.warningContainer__98bed {
+    align-items: center;
+    background-color: var(--background-feedback-warning);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-10);
+    padding: var(--space-8)
+}
+
+.stepBodyV1_bb5449 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding-top: var(--space-16)
+}
+
+.unifiedReviewStepBodyBottomPadding_bb5449 {
+    padding-bottom: var(--space-4)
+}
+
+.topInBetweenSpacer_bb5449 {
+    height: var(--space-8)
+}
+
+.subscriptionDetailsContainer_bb5449 {
+    margin-top: var(--space-12)
+}
+
+.invoiceSummaryContainer_bb5449,
+.paymentMethodContainer_bb5449 {
+    margin-top: var(--space-24)
+}
+
+.checkoutInlineNoticeContainer_bb5449 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--space-24);
+    row-gap: var(--space-12)
+}
+
+.loadingContainer_bb5449 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px
+}
+
+.spinnerColor_bb5449 {
+    background-color: var(--interactive-text-default) !important
+}
+
+.totalDueReviewStep_bb5449 {
+    margin-top: 0
+}
+
+.promotionalNoticeContainer_bb5449,
+.totalDueReviewStep_bb5449 {
+    margin-bottom: var(--space-12)
+}
+
+.footerInlineNoticeContainer_bb5449 {
+    margin-top: var(--space-12)
+}
+
+.legalFinePrint__1048e {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.formTitle__553e7 {
+    margin-bottom: 8px;
+    margin-top: 8px
+}
+
+.checkbox__553e7 {
+    margin-bottom: 10px
+}
+
+.checkbox__553e7:last-child {
+    margin-bottom: 0
+}
+
+.checkboxLabel__553e7 {
+    color: var(--interactive-text-default)
+}
+
+.finePrint__553e7 {
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 16px;
+    margin-top: 8px
+}
+
+.wrapper_c0e5ec {
+    border-radius: 4px;
+    transition: background-color .2s ease
+}
+
+.wrapperActive_c0e5ec {
+    background-color: var(--background-mod-subtle)
+}
+
+.fineprint_b44961 {
+    margin-bottom: 0;
+    margin-top: 16px
+}

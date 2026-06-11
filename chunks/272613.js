@@ -4,7 +4,7 @@ let i = {
     openCreateGuildModal: (e) => {
         Promise.all([
             n.e("84570"),
-            n.e("1168"),
+            n.e("91279"),
             n.e("25226"),
             n.e("7850"),
             n.e("88941"),
@@ -30,7 +30,7 @@ let i = {
     updateCreateGuildModal: (e) => {
         Promise.all([
             n.e("84570"),
-            n.e("1168"),
+            n.e("91279"),
             n.e("25226"),
             n.e("7850"),
             n.e("88941"),
