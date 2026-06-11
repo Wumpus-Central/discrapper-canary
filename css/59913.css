@@ -5024,6 +5024,10 @@
     position: relative
 }
 
+.custom-user-profile-theme .container__9c314 {
+    --text-feedback-warning: var(--text-default)
+}
+
 .container__9c314.compact__9c314 {
     --custom-preview-inline-padding: var(--space-4);
     --custom-preview-block-padding: var(--space-4)
@@ -5110,8 +5114,33 @@
     border-color: transparent
 }
 
+.editable__9c314.hasWarning__9c314 {
+    background-color: var(--background-feedback-warning);
+    border-color: var(--border-feedback-warning)
+}
+
+.container__9c314:not(.compact__9c314) .editable__9c314.hasWarning__9c314 {
+    flex-grow: 1
+}
+
+.editable__9c314.hasWarning__9c314:has(:focus),
+.editable__9c314.hasWarning__9c314:hover {
+    background-color: var(--background-feedback-warning);
+    border-color: var(--border-feedback-warning);
+    outline: 2px solid var(--border-feedback-warning);
+    outline-offset: -2px
+}
+
 .placeholder__9c314 {
     font-style: italic
+}
+
+.errorIcon__9c314 {
+    color: var(--icon-feedback-critical)
+}
+
+.warningIcon__9c314 {
+    color: var(--icon-feedback-warning)
 }
 
 .previewError__9c314 {
@@ -5135,6 +5164,11 @@
 .keyboard-mode .editable__9c314:has(:focus) .previewTrailingAccessory__9c314 {
     opacity: 1;
     transition: opacity .15s ease-out
+}
+
+.hasError__9c314 .previewTrailingAccessory__9c314,
+.hasWarning__9c314 .previewTrailingAccessory__9c314 {
+    margin-inline-start: auto
 }
 
 .trailingAccessoryButton__9c314 {
@@ -5722,28 +5756,6 @@
     background-color: transparent
 }
 
-.app__160d8 {
-    background-color: var(--background-base-lowest);
-    display: flex;
-    flex-direction: column;
-    inset: 0;
-    position: absolute
-}
-
-.app__160d8 button {
-    cursor: pointer
-}
-
-.layers__160d8 {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    min-height: 0;
-    min-width: 0;
-    overflow: hidden;
-    --devtools-sidebar-width: 0
-}
-
 .verifiedRole_e59759 {
     align-items: center;
     border: 2px solid var(--border-subtle);
@@ -5862,40 +5874,6 @@
 .enable-forced-colors .resizeHandle__01ae2 {
     background-color: ButtonText;
     width: 4px
-}
-
-.container_a154bf {
-    flex-direction: column
-}
-
-.container_a154bf,
-.content_a154bf {
-    display: flex;
-    width: 100%
-}
-
-.content_a154bf {
-    align-items: center;
-    background-color: var(--background-base-low);
-    flex: 1 0 auto;
-    flex-direction: column;
-    justify-content: center
-}
-
-.splashImage_a154bf {
-    margin-bottom: 24px;
-    width: 400px
-}
-
-.splashHeader_a154bf {
-    color: var(--text-strong);
-    margin-bottom: 8px
-}
-
-.splashHeader_a154bf,
-.splashText_a154bf {
-    text-align: center;
-    width: 580px
 }
 
 .obscuredIcon__43090 {
