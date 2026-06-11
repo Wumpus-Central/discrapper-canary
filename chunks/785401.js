@@ -1922,7 +1922,10 @@ class eF extends A.G {
                 { no: 1, name: "experiment_id", kind: "scalar", T: 6 },
                 { no: 2, name: "variation_ids", kind: "scalar", repeat: 1, T: 5 },
             ],
-            { "discord_protos.discord_experimentation.v1.filter_category": "FILTER_CATEGORY_UTILITY" },
+            {
+                "discord_protos.discord_experimentation.v1.filter_category": "FILTER_CATEGORY_UTILITY",
+                "discord_protos.discord_experimentation.v1.filter_evaluation_mode": "FILTER_EVALUATION_MODE_LAZY",
+            },
         );
     }
     create(e) {
