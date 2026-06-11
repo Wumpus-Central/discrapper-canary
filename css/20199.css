@@ -2122,18 +2122,11 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 @media (min-height:481px) {
     .themeContainer_ce8328.custom-profile-frame {
+        margin-block-end: calc(var(--custom-profile-frame-scaled-overflow-bottom)*1px);
         margin-inline-start: calc(var(--custom-profile-frame-overflow-horizontal)*var(--custom-profile-frame-layer-scale)*1px)
     }
 
     .themeContainer_ce8328.custom-profile-frame>div {
-        max-height: calc(100vh - 124px - var(--custom-profile-frame-scaled-overflow-top)*1px)
-    }
-
-    .themeContainer_ce8328.custom-profile-frame-bottom {
-        margin-block-end: calc(var(--custom-profile-frame-scaled-overflow-bottom)*1px)
-    }
-
-    .themeContainer_ce8328.custom-profile-frame-bottom>div {
         max-height: calc(100vh - 124px - var(--custom-profile-frame-scaled-overflow-top)*1px - var(--custom-profile-frame-scaled-overflow-bottom)*1px)
     }
 }
@@ -4789,6 +4782,11 @@ html:not(.chat-input) .inputInner_b1f01d {
 
 .current__5b927 {
     color: var(--text-default)
+}
+
+.rootPopout_b5970a {
+    height: 100%;
+    width: 100%
 }
 
 .title_feb59c {

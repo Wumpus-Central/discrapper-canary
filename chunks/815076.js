@@ -121,7 +121,7 @@ let Q = (e) => {
     let { selectedProduct: s, previewingProduct: t } = e;
     return (0, l.jsx)(J.B, { product: t ?? s });
 };
-var ee = t(247928),
+var ee = t(346055),
     es = t(975571),
     et = t(495565),
     ei = t(740076),
@@ -199,7 +199,7 @@ var eo =
         i),
     eu = t(97808),
     em = t(778712),
-    ex = t(359778),
+    ex = t(993077),
     eh = t(245604),
     ep = t(460905),
     eE = t(262295),
@@ -346,7 +346,7 @@ let eL = (e) => {
                         hideBioSection: x,
                         hideExampleButton: !0,
                         interactive: !1,
-                        containerClassName: x ? e_.Bb : void 0,
+                        className: x ? e_.oB : void 0,
                     }),
                     x && (0, l.jsx)(eO, { user: t }),
                 ],
@@ -494,13 +494,13 @@ var eV = t(990078),
     eQ = t(757036),
     e0 = t(761705),
     e1 = t(580630),
-    e8 = t(4227),
-    e2 = t(640634),
-    e4 = t(940980),
-    e5 = t(466459),
+    e5 = t(4227),
+    e4 = t(640634),
+    e8 = t(940980),
+    e2 = t(466459),
     e6 = t(395068),
-    e7 = t(49620),
-    e9 = t(878112),
+    e9 = t(49620),
+    e7 = t(878112),
     e3 = t(452255),
     se = t(641405),
     ss = t(839863),
@@ -533,11 +533,11 @@ let su = (e) => {
         f = (0, N.xM)(s),
         C = (0, eF.Do)("CollectiblesShopProductDetailsModal") && i.type === b.R.PROFILE_FRAME,
         k = eC.Ay.canUseShopDiscounts(s) || C,
-        _ = (0, e5.h)(t),
-        { isPurchased: L, isPartiallyOwnedBundle: T } = (0, e5.h)(i),
+        _ = (0, e2.h)(t),
+        { isPurchased: L, isPartiallyOwnedBundle: T } = (0, e2.h)(i),
         { isDisabled: O } = (0, ei.I)(i.skuId),
         y = (0, N.Zu)({ product: i, isPartiallyOwnedBundle: T, isPurchased: L }),
-        P = (0, o.bG)([e8.A], () => e8.A.isClaiming === i?.skuId),
+        P = (0, o.bG)([e5.A], () => e5.A.isClaiming === i?.skuId),
         S = (0, eq.Ay)(),
         w = (0, eX.M)(S),
         M = (0, N.G0)(i),
@@ -547,9 +547,9 @@ let su = (e) => {
         z = (0, sr.X)(i),
         V = (0, sl.V_)(t),
         X = null != V,
-        W = (0, e4.W)("CollectiblesShopProductDetailsModal"),
+        W = (0, e8.W)("CollectiblesShopProductDetailsModal"),
         Z = c === er.G2.ORBS && n ? st.Hi.ORBS : W ? st.Hi.FIAT : void 0,
-        K = (0, e2.l)("collectibles_shop_product_details_modal"),
+        K = (0, e4.l)("collectibles_shop_product_details_modal"),
         { checkoutEligiblePrices: Y, hasSufficientOrbs: q } = (0, sa.F)({
             product: i,
             hasShopDiscount: k,
@@ -594,7 +594,7 @@ let su = (e) => {
         className: so.iw,
         children: [
             _.isPurchased || _.isPartiallyOwnedBundle
-                ? (0, l.jsx)(e7.c, { className: so.On, isPartiallyPurchased: T })
+                ? (0, l.jsx)(e9.c, { className: so.On, isPartiallyPurchased: T })
                 : M
                   ? (0, l.jsxs)("div", {
                         className: so.pq,
@@ -632,7 +632,7 @@ let su = (e) => {
                                           fullWidth: !0,
                                           children: [
                                               (0, l.jsx)(se.A, { product: i, onSuccess: h, onTrackClick: p }),
-                                              (0, l.jsx)(e9.A, {
+                                              (0, l.jsx)(e7.A, {
                                                   primary: !0,
                                                   product: i,
                                                   onSuccess: h,
@@ -739,7 +739,7 @@ let su = (e) => {
                                                                         fullWidth: !0,
                                                                     }),
                                                                     z &&
-                                                                        (0, l.jsx)(e9.A, {
+                                                                        (0, l.jsx)(e7.A, {
                                                                             primary: x,
                                                                             product: i,
                                                                             onSuccess: h,
@@ -753,7 +753,7 @@ let su = (e) => {
                                           }),
                                       })
                             : z
-                              ? (0, l.jsx)(e9.A, {
+                              ? (0, l.jsx)(e7.A, {
                                     primary: !0,
                                     product: i,
                                     onSuccess: h,

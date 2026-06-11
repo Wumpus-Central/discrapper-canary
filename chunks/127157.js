@@ -9,7 +9,7 @@ e.exports = {
     Ak: "profileEffectPreviewsContainerInner_c50f62 previewsContainerInner_c50f62",
     Zj: "nameplatePreviewContainerInner_c50f62 previewsContainerInner_c50f62",
     i1: "previewContainer_c50f62",
-    Bb: "profilePreviewContainerWithChat_c50f62",
+    oB: "profilePreviewWithChat_c50f62",
     eF: "collectiblePreviewsContainerNoChat_c50f62 collectiblePreviewsContainer_c50f62",
     Jq: "collectiblePreviewsContainerWithChat_c50f62 collectiblePreviewsContainer_c50f62",
     bF: "fractionalNitroPreviewContainer_c50f62 collectiblePreviewsContainer_c50f62",

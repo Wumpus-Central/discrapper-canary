@@ -2,7 +2,7 @@ e.exports = {
     RA: "previewsContainerInner__4e635",
     hZ: "profileEffectPreviewsContainerInner__4e635 previewsContainerInner__4e635",
     Zj: "nameplatePreviewContainerInner__4e635 previewsContainerInner__4e635",
-    Bb: "profilePreviewContainerWithChat__4e635",
+    oB: "profilePreviewWithChat__4e635",
     M4: "nameplatePreview__4e635",
     nJ: "nameplateRightPanePreviewContainer__4e635",
     mV: "nameplateRightPanePreviewAvatarContainer__4e635",
