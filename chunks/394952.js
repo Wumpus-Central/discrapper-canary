@@ -4,6 +4,5 @@ e.exports = {
     VU: "userSelectText_effb26",
     ew: "statsRow_effb26",
     zS: "statsText_effb26",
-    pw: "devButtons_effb26",
-    CU: "learnMoreLink_effb26",
+    Uo: "buttons_effb26",
 };

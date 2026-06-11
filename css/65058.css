@@ -3734,7 +3734,12 @@
 .container_effb26 {
     display: flex;
     flex-direction: column;
-    gap: var(--space-8)
+    gap: var(--space-8);
+    height: 100%
+}
+
+.container_effb26>:last-child {
+    margin-top: auto
 }
 
 .graphContainer_effb26 {
@@ -3759,21 +3764,17 @@
     flex-direction: column
 }
 
-.devButtons_effb26 {
+.buttons_effb26 {
     display: flex;
     gap: var(--space-8)
 }
 
-.devButtons_effb26>:first-child {
+.buttons_effb26>:first-child {
     flex: 1
 }
 
 .copyButtonWrapper_effb26 {
     flex: 1
-}
-
-.learnMoreLink_effb26 {
-    cursor: pointer
 }
 
 .securedBanner__66f0f {
