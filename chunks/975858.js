@@ -1,13 +1,15 @@
 "use strict";
-n.d(t, { ie: () => h, w0: () => d, Om: () => p, hJ: () => E });
+n.d(t, { ie: () => p, w0: () => h, Om: () => m, hJ: () => g });
 var i = n(70283),
-    r = n(976860),
-    s = n(780964),
-    a = n(766075),
-    o = n(652215),
-    l = n(758836),
-    u = n(375708);
-let c = {
+    r = n(696292),
+    s = n(617986),
+    a = n(976860),
+    o = n(780964),
+    l = n(766075),
+    u = n(652215),
+    c = n(758836),
+    d = n(375708);
+let _ = {
     premium: 1,
     premium_tenure_1_month_v2: 1,
     premium_tenure_3_month_v2: 1,
@@ -41,41 +43,41 @@ let c = {
     april_fools_2026: 15,
     orb_profile_badge: 16,
 };
-function d(e) {
-    let t = c[e];
+function h(e) {
+    let t = _[e];
     if (null != t) return t;
     let n = i.$[e.toUpperCase()];
     return "number" == typeof n ? n : void 0;
 }
-let _ = new Set(Object.values(c));
-function h(e) {
-    return _.has(e);
+let f = new Set(Object.values(_));
+function p(e) {
+    return f.has(e);
 }
-let f = {
+let E = {
     [i.$.PREMIUM_TENURE]: {
         ctaLabel: (e) => {
             let { owned: t, isViewerOnUpgradeableNitro: n } = e;
-            return !0 === n ? u.intl.string(u.t.uKFeS1) : t ? u.intl.string(u.t.xGjjkd) : u.intl.string(u.t.BTxm69);
+            return !0 === n ? d.intl.string(d.t.uKFeS1) : t ? d.intl.string(d.t.xGjjkd) : d.intl.string(d.t.BTxm69);
         },
-        ctaAction: () => (0, r.pX)(o.BVt.NITRO_HOME),
+        ctaAction: () => (0, a.pX)(u.BVt.NITRO_HOME),
     },
     [i.$.GUILD_BOOSTER]: {
         ctaLabel: (e) => {
             let { owned: t } = e;
-            return t ? u.intl.string(u.t.VMvz3m) : u.intl.string(u.t.xFVZeU);
+            return t ? d.intl.string(d.t.VMvz3m) : d.intl.string(d.t.xFVZeU);
         },
-        ctaAction: () => (0, a.openUserSettings)(s.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
+        ctaAction: () => (0, l.openUserSettings)(o.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
     },
     [i.$.ORB_PROFILE]: {
-        ctaLabel: () => u.intl.string(u.t.EBYkzk),
-        ctaAction: () => (0, r.pX)(o.BVt.COLLECTIBLES_SHOP_WITH_TAB(l.G2.ORBS)),
+        ctaLabel: () => d.intl.string(d.t.EBYkzk),
+        ctaAction: () => (0, a.pX)(u.BVt.COLLECTIBLES_SHOP_WITH_TAB(c.G2.ORBS)),
     },
     [i.$.QUEST_COMPLETED]: {
-        ctaLabel: () => u.intl.string(u.t["0cTvRG"]),
-        ctaAction: () => (0, r.pX)(o.BVt.QUEST_HOME),
+        ctaLabel: () => d.intl.string(d.t["0cTvRG"]),
+        ctaAction: () => (0, s.navigateToQuestHome)({ fromContent: r.u.QUEST_BADGE }),
     },
 };
-function p(e) {
-    return f[e];
+function m(e) {
+    return E[e];
 }
-let E = "badge-details";
+let g = "badge-details";
