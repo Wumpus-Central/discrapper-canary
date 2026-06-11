@@ -1219,6 +1219,7 @@ let nw = "",
         GUILD_DISCOVERY_SPLASH: (e, t) => `/guilds/${e}/discovery-splashes/${t}.jpg`,
         GUILD_BANNER: (e, t, n) => `/guilds/${e}/banners/${t}.${n}`,
         GUILD_HOME_SETTINGS: (e) => `/guilds/${e}/new-member-welcome`,
+        GUILD_CONFIG_GATES: (e) => `/guilds/${e}/config-gates`,
         RESOURCE_CHANNEL: (e, t) => `/guilds/${e}/resource-channels/${t}`,
         NEW_MEMBER_ACTION: (e, t) => `/guilds/${e}/new-member-actions/${t}`,
         GUILD_RESOURCE_CHANNELS_ICON: function (e, t) {
