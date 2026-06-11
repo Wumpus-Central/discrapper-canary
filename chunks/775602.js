@@ -1,18 +1,20 @@
 "use strict";
-n.d(t, { A: () => m, _: () => _ });
+n.d(t, { Ay: () => A, IG: () => f, _1: () => h });
 var i,
-    r = n(17928),
-    s = n(506774),
-    a = n(228366),
-    o = n(885386),
-    l = n(617617),
-    u = n(353835),
-    c = n(652215),
-    d = n(381941),
-    _ = (((i = {}).DEFAULT = "default"), (i.HIGH = "high"), i);
-let h = {
-        fontSize: c.hH7.FONT_SIZE_DEFAULT,
-        zoom: c.hH7.ZOOM_DEFAULT,
+    r,
+    s = n(17928),
+    a = n(506774),
+    o = n(228366),
+    l = n(885386),
+    u = n(617617),
+    c = n(353835),
+    d = n(652215),
+    _ = n(381941),
+    h = (((i = {}).DEFAULT = "default"), (i.HIGH = "high"), i),
+    f = (((r = {}).FLEXIBLE = "flexible"), (r.CONDENSED = "condensed"), (r.HIDDEN = "hidden"), r);
+let p = {
+        fontSize: d.hH7.FONT_SIZE_DEFAULT,
+        zoom: d.hH7.ZOOM_DEFAULT,
         keyboardModeEnabled: !1,
         contrastMode: "default",
         colorblindMode: !1,
@@ -36,9 +38,15 @@ let h = {
         syncProfileThemeWithUserTheme: !1,
         enableCustomCursor: !0,
         switchIconsEnabled: !1,
+        appsButtonEnabled: !0,
+        expressionPickerFormat: "flexible",
+        condensePickerWhenNarrow: !0,
+        emojiButtonEnabled: !0,
+        gifButtonEnabled: !0,
+        stickerButtonEnabled: !0,
     },
-    f = h,
-    p = {
+    E = p,
+    m = {
         12: "font-size-12",
         14: "font-size-14",
         15: "font-size-15",
@@ -47,7 +55,7 @@ let h = {
         20: "font-size-20",
         24: "font-size-24",
     };
-class E extends r.Ay.DeviceSettingsStore {
+class g extends s.Ay.DeviceSettingsStore {
     static displayName = "AccessibilityStore";
     static persistKey = "AccessibilityStore";
     static migrations = [
@@ -55,14 +63,14 @@ class E extends r.Ay.DeviceSettingsStore {
             let e = "a11yFontScale",
                 t = "a11yZoom",
                 n = "a11yColorblindMode",
-                i = s.w.get(e) || 100,
-                r = s.w.get(t) || c.hH7.ZOOM_DEFAULT,
-                a = s.w.get(n) || !1;
+                i = a.w.get(e) || 100,
+                r = a.w.get(t) || d.hH7.ZOOM_DEFAULT,
+                s = a.w.get(n) || !1;
             return (
-                s.w.remove(e),
-                s.w.remove(t),
-                s.w.remove(n),
-                { fontScale: i, zoom: r, colorblindMode: a, keyboardModeEnabled: !1 }
+                a.w.remove(e),
+                a.w.remove(t),
+                a.w.remove(n),
+                { fontScale: i, zoom: r, colorblindMode: s, keyboardModeEnabled: !1 }
             );
         },
         (e) => {
@@ -107,27 +115,36 @@ class E extends r.Ay.DeviceSettingsStore {
             return e;
         },
         (e) => ({ ...e, enableCustomCursor: !0 }),
+        (e) => ({
+            ...e,
+            appsButtonEnabled: !0,
+            expressionPickerFormat: "flexible",
+            condensePickerWhenNarrow: !0,
+            emojiButtonEnabled: !0,
+            gifButtonEnabled: !0,
+            stickerButtonEnabled: !0,
+        }),
     ];
     initialize(e) {
-        this.waitFor(l.A),
-            isNaN((f = { ...h, ...(e ?? null) }).fontSize) && (f.fontSize = c.hH7.FONT_SIZE_DEFAULT),
-            0 > d.qh.indexOf(null != f.messageGroupSpacing ? f.messageGroupSpacing : -1) &&
-                (f.messageGroupSpacing = null);
+        this.waitFor(u.A),
+            isNaN((E = { ...p, ...(e ?? null) }).fontSize) && (E.fontSize = d.hH7.FONT_SIZE_DEFAULT),
+            0 > _.qh.indexOf(null != E.messageGroupSpacing ? E.messageGroupSpacing : -1) &&
+                (E.messageGroupSpacing = null);
     }
     get fontScale() {
-        return (f.fontSize / c.hH7.FONT_SIZE_DEFAULT) * 100;
+        return (E.fontSize / d.hH7.FONT_SIZE_DEFAULT) * 100;
     }
     get fontSize() {
-        return f.fontSize;
+        return E.fontSize;
     }
     get isFontScaledUp() {
-        return f.fontSize > c.hH7.FONT_SIZE_DEFAULT;
+        return E.fontSize > d.hH7.FONT_SIZE_DEFAULT;
     }
     get isFontScaledDown() {
-        return f.fontSize < c.hH7.FONT_SIZE_DEFAULT;
+        return E.fontSize < d.hH7.FONT_SIZE_DEFAULT;
     }
     get fontScaleClass() {
-        let e = p[this.fontSize] ?? "";
+        let e = m[this.fontSize] ?? "";
         return this.isFontScaledUp
             ? `a11y-font-scaled-up ${e}`
             : this.isFontScaledDown
@@ -135,205 +152,234 @@ class E extends r.Ay.DeviceSettingsStore {
               : `${e}`;
     }
     get zoom() {
-        return f.zoom;
+        return E.zoom;
     }
     get isZoomedIn() {
-        return f.zoom > c.hH7.ZOOM_DEFAULT;
+        return E.zoom > d.hH7.ZOOM_DEFAULT;
     }
     get isZoomedOut() {
-        return f.zoom < c.hH7.ZOOM_DEFAULT;
+        return E.zoom < d.hH7.ZOOM_DEFAULT;
     }
     get keyboardModeEnabled() {
-        return f.keyboardModeEnabled;
+        return E.keyboardModeEnabled;
     }
     get colorblindMode() {
-        return f.colorblindMode;
+        return E.colorblindMode;
     }
     get lowContrastMode() {
-        return f.lowContrastMode;
+        return E.lowContrastMode;
     }
     get saturation() {
-        return f.saturation;
+        return E.saturation;
     }
     get contrast() {
-        return f.contrast;
+        return E.contrast;
     }
     get desaturateUserColors() {
-        return f.desaturateUserColors;
+        return E.desaturateUserColors;
     }
     get forcedColorsModalSeen() {
-        return f.forcedColorsModalSeen;
+        return E.forcedColorsModalSeen;
     }
     get keyboardNavigationExplainerModalSeen() {
-        return f.keyboardNavigationExplainerModalSeen;
+        return E.keyboardNavigationExplainerModalSeen;
     }
     get messageGroupSpacing() {
-        return null != f.messageGroupSpacing ? f.messageGroupSpacing : o.hH.getSetting() ? d.y5 : d.ES;
+        return null != E.messageGroupSpacing ? E.messageGroupSpacing : l.hH.getSetting() ? _.y5 : _.ES;
     }
     get isMessageGroupSpacingIncreased() {
-        let e = o.hH.getSetting() ? d.y5 : d.ES;
+        let e = l.hH.getSetting() ? _.y5 : _.ES;
         return this.messageGroupSpacing > e;
     }
     get isMessageGroupSpacingDecreased() {
-        let e = o.hH.getSetting() ? d.y5 : d.ES;
+        let e = l.hH.getSetting() ? _.y5 : _.ES;
         return this.messageGroupSpacing < e;
     }
     get isSubmitButtonEnabled() {
-        return f.submitButtonEnabled;
+        return E.submitButtonEnabled;
     }
     get syncProfileThemeWithUserTheme() {
-        return f.syncProfileThemeWithUserTheme;
+        return E.syncProfileThemeWithUserTheme;
     }
     get systemPrefersReducedMotion() {
-        return f.systemPrefersReducedMotion;
+        return E.systemPrefersReducedMotion;
     }
     get rawPrefersReducedMotion() {
-        return f.prefersReducedMotion;
+        return E.prefersReducedMotion;
     }
     get useReducedMotion() {
-        switch (f.prefersReducedMotion) {
+        switch (E.prefersReducedMotion) {
             case "no-preference":
                 return !1;
             case "reduce":
                 return !0;
             default:
-                return "reduce" === f.systemPrefersReducedMotion;
+                return "reduce" === E.systemPrefersReducedMotion;
         }
     }
     get systemForcedColors() {
-        return f.systemForcedColors;
+        return E.systemForcedColors;
     }
     get syncForcedColors() {
-        return f.syncForcedColors;
+        return E.syncForcedColors;
     }
     get useForcedColors() {
-        return !!f.syncForcedColors && "active" === f.systemForcedColors;
+        return !!E.syncForcedColors && "active" === E.systemForcedColors;
     }
     get systemPrefersContrast() {
-        return f.systemPrefersContrast;
+        return E.systemPrefersContrast;
     }
     get systemPrefersCrossfades() {
-        return f.systemPrefersCrossfades;
+        return E.systemPrefersCrossfades;
     }
     get alwaysShowLinkDecorations() {
-        return f.alwaysShowLinkDecorations;
+        return E.alwaysShowLinkDecorations;
     }
     get enableCustomCursor() {
-        return f.enableCustomCursor;
+        return E.enableCustomCursor;
     }
     get roleStyle() {
-        return f.roleStyle;
+        return E.roleStyle;
     }
     get displayNameStylesEnabled() {
-        return f.displayNameStylesEnabled;
+        return E.displayNameStylesEnabled;
     }
     get isHighContrastModeEnabled() {
-        return "high" === f.contrastMode;
+        return "high" === E.contrastMode;
     }
     get isSwitchIconsEnabled() {
-        return f.switchIconsEnabled;
+        return E.switchIconsEnabled;
+    }
+    get isAppsButtonEnabled() {
+        return E.appsButtonEnabled;
+    }
+    get expressionPickerFormat() {
+        return E.expressionPickerFormat;
+    }
+    get condensePickerWhenNarrow() {
+        return E.condensePickerWhenNarrow;
+    }
+    get isEmojiButtonEnabled() {
+        return E.emojiButtonEnabled;
+    }
+    get isGifButtonEnabled() {
+        return E.gifButtonEnabled;
+    }
+    get isStickerButtonEnabled() {
+        return E.stickerButtonEnabled;
     }
     getUserAgnosticState() {
-        return f;
+        return E;
     }
 }
-let m = new E(a.h, {
+let A = new g(o.h, {
     ACCESSIBILITY_SET_FONT_SIZE: function (e) {
         var t;
-        let n = ((t = e.fontSize), c.hH7.FONT_SIZES.indexOf(t) >= 0 ? t : c.hH7.FONT_SIZE_DEFAULT);
-        if (n > c.hH7.FONT_SIZE_MAX || n < c.hH7.FONT_SIZE_MIN || f.fontSize === n) return !1;
-        (f = { ...f }).fontSize = n;
+        let n = ((t = e.fontSize), d.hH7.FONT_SIZES.indexOf(t) >= 0 ? t : d.hH7.FONT_SIZE_DEFAULT);
+        if (n > d.hH7.FONT_SIZE_MAX || n < d.hH7.FONT_SIZE_MIN || E.fontSize === n) return !1;
+        (E = { ...E }).fontSize = n;
     },
     ACCESSIBILITY_SET_ZOOM: function (e) {
-        if (e.zoom < c.hH7.ZOOM_MIN || e.zoom > c.hH7.ZOOM_MAX || f.zoom === e.zoom) return !1;
-        ((f = { ...f }).zoom = e.zoom), u.A.setZoomFactor(f.zoom);
+        if (e.zoom < d.hH7.ZOOM_MIN || e.zoom > d.hH7.ZOOM_MAX || E.zoom === e.zoom) return !1;
+        ((E = { ...E }).zoom = e.zoom), c.A.setZoomFactor(E.zoom);
     },
     ACCESSIBILITY_RESET_TO_DEFAULT: function () {
-        let e = f.fontSize !== c.hH7.FONT_SIZE_DEFAULT,
-            t = f.zoom !== c.hH7.ZOOM_DEFAULT;
+        let e = E.fontSize !== d.hH7.FONT_SIZE_DEFAULT,
+            t = E.zoom !== d.hH7.ZOOM_DEFAULT;
         if (!e && !t) return !1;
-        (f = { ...f }).fontSize !== c.hH7.FONT_SIZE_DEFAULT && (f.fontSize = c.hH7.FONT_SIZE_DEFAULT),
-            f.zoom !== c.hH7.ZOOM_DEFAULT && ((f.zoom = c.hH7.ZOOM_DEFAULT), u.A.setZoomFactor(f.zoom));
+        (E = { ...E }).fontSize !== d.hH7.FONT_SIZE_DEFAULT && (E.fontSize = d.hH7.FONT_SIZE_DEFAULT),
+            E.zoom !== d.hH7.ZOOM_DEFAULT && ((E.zoom = d.hH7.ZOOM_DEFAULT), c.A.setZoomFactor(E.zoom));
     },
     ACCESSIBILITY_KEYBOARD_MODE_ENABLE: function () {
-        if (f.keyboardModeEnabled) return !1;
-        (f = { ...f }).keyboardModeEnabled = !0;
+        if (E.keyboardModeEnabled) return !1;
+        (E = { ...E }).keyboardModeEnabled = !0;
     },
     ACCESSIBILITY_KEYBOARD_MODE_DISABLE: function () {
-        if (!f.keyboardModeEnabled) return !1;
-        (f = { ...f }).keyboardModeEnabled = !1;
+        if (!E.keyboardModeEnabled) return !1;
+        (E = { ...E }).keyboardModeEnabled = !1;
     },
     ACCESSIBILITY_COLORBLIND_TOGGLE: function () {
-        (f = { ...f }).colorblindMode = !f.colorblindMode;
+        (E = { ...E }).colorblindMode = !E.colorblindMode;
     },
     ACCESSIBILITY_LOW_CONTRAST_TOGGLE: function () {
-        (f = { ...f }).lowContrastMode = !f.lowContrastMode;
+        (E = { ...E }).lowContrastMode = !E.lowContrastMode;
     },
     ACCESSIBILITY_SET_SATURATION: function (e) {
-        (f = { ...f }).saturation = e.saturation;
+        (E = { ...E }).saturation = e.saturation;
     },
     ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: function () {
-        (f = { ...f }).desaturateUserColors = !f.desaturateUserColors;
+        (E = { ...E }).desaturateUserColors = !E.desaturateUserColors;
     },
     ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: function (e) {
-        f = { ...f, systemForcedColors: e.systemForcedColors ?? "none" };
+        E = { ...E, systemForcedColors: e.systemForcedColors ?? "none" };
     },
     ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: function (e) {
-        if (f.systemPrefersContrast === e.systemPrefersContrast) return !1;
-        f = { ...f, systemPrefersContrast: e.systemPrefersContrast };
+        if (E.systemPrefersContrast === e.systemPrefersContrast) return !1;
+        E = { ...E, systemPrefersContrast: e.systemPrefersContrast };
     },
     ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: function (e) {
-        if (f.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
-        f = { ...f, systemPrefersReducedMotion: e.systemPrefersReducedMotion };
+        if (E.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
+        E = { ...E, systemPrefersReducedMotion: e.systemPrefersReducedMotion };
     },
     ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: function (e) {
-        if (f.systemPrefersCrossfades === e.systemPrefersCrossfades) return !1;
-        f = { ...f, systemPrefersCrossfades: e.systemPrefersCrossfades };
+        if (E.systemPrefersCrossfades === e.systemPrefersCrossfades) return !1;
+        E = { ...E, systemPrefersCrossfades: e.systemPrefersCrossfades };
     },
     ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: function (e) {
-        if (f.prefersReducedMotion === e.prefersReducedMotion) return !1;
-        f = { ...f, prefersReducedMotion: e.prefersReducedMotion };
+        if (E.prefersReducedMotion === e.prefersReducedMotion) return !1;
+        E = { ...E, prefersReducedMotion: e.prefersReducedMotion };
     },
     ACCESSIBILITY_SET_SYNC_FORCED_COLORS: function (e) {
-        f.syncForcedColors = e.syncForcedColors;
+        E.syncForcedColors = e.syncForcedColors;
     },
     ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: function (e) {
-        f = { ...f, alwaysShowLinkDecorations: e.alwaysShowLinkDecorations };
+        E = { ...E, alwaysShowLinkDecorations: e.alwaysShowLinkDecorations };
     },
     ACCESSIBILITY_SET_ENABLE_CUSTOM_CURSOR: function (e) {
-        f = { ...f, enableCustomCursor: e.enableCustomCursor };
+        E = { ...E, enableCustomCursor: e.enableCustomCursor };
     },
     ACCESSIBILITY_SET_ROLE_STYLE: function (e) {
-        f.roleStyle = e.roleStyle;
+        E.roleStyle = e.roleStyle;
     },
     ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED: function (e) {
-        f.displayNameStylesEnabled = e.enabled;
+        E.displayNameStylesEnabled = e.enabled;
     },
     ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: function () {
-        f.forcedColorsModalSeen = !0;
+        E.forcedColorsModalSeen = !0;
     },
     KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: function () {
-        f = { ...f, keyboardNavigationExplainerModalSeen: !0 };
+        E = { ...E, keyboardNavigationExplainerModalSeen: !0 };
     },
     ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: function (e) {
         let { messageGroupSpacing: t } = e;
-        f = { ...f, messageGroupSpacing: t };
+        E = { ...E, messageGroupSpacing: t };
     },
     ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: function () {
-        (f = { ...f }).submitButtonEnabled = !f.submitButtonEnabled;
+        (E = { ...E }).submitButtonEnabled = !E.submitButtonEnabled;
     },
     ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: function () {
-        (f = { ...f }).syncProfileThemeWithUserTheme = !f.syncProfileThemeWithUserTheme;
+        (E = { ...E }).syncProfileThemeWithUserTheme = !E.syncProfileThemeWithUserTheme;
     },
     ACCESSIBILITY_SET_CONTRAST: function (e) {
         let { contrast: t } = e;
-        f = { ...f, contrast: t };
+        E = { ...E, contrast: t };
     },
     ACCESSIBILITY_SET_CONTRAST_MODE: function (e) {
         let { contrastMode: t } = e;
-        f = { ...f, contrastMode: t };
+        E = { ...E, contrastMode: t };
     },
     ACCESSIBILITY_SET_SWITCH_ICONS_ENABLED: function (e) {
-        f = { ...f, switchIconsEnabled: e.switchIconsEnabled };
+        E = { ...E, switchIconsEnabled: e.switchIconsEnabled };
+    },
+    ACCESSIBILITY_SET_CHAT_BAR_SETTINGS: function (e) {
+        E = {
+            ...E,
+            ...(null != e.appsButtonEnabled && { appsButtonEnabled: e.appsButtonEnabled }),
+            ...(null != e.expressionPickerFormat && { expressionPickerFormat: e.expressionPickerFormat }),
+            ...(null != e.condensePickerWhenNarrow && { condensePickerWhenNarrow: e.condensePickerWhenNarrow }),
+            ...(null != e.emojiButtonEnabled && { emojiButtonEnabled: e.emojiButtonEnabled }),
+            ...(null != e.gifButtonEnabled && { gifButtonEnabled: e.gifButtonEnabled }),
+            ...(null != e.stickerButtonEnabled && { stickerButtonEnabled: e.stickerButtonEnabled }),
+        };
     },
 });

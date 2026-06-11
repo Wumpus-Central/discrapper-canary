@@ -20,7 +20,7 @@ let u = (r, o) => {
     c =
         ((l = { dark: a()(s.A.unsafe_rawColors.BLACK.resolve({ saturation: 1 }).hex()), light: g }),
         (r) => {
-            let o = (0, n.bG)([i.A], () => i.A.saturation);
+            let o = (0, n.bG)([i.Ay], () => i.Ay.saturation);
             if (null == r) return {};
             let t = {
                 backgroundColors: ((r, o) => {

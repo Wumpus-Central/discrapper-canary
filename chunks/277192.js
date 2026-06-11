@@ -565,7 +565,7 @@ function eQ(e) {
         s = (0, d.RQ)((e) => e.searchQuery),
         a = (0, _.bG)([p.A], () => null != t && p.A.isFavoriteSound(t.soundId)),
         o = (0, _.bG)([eh.A], () => eh.A.getGuild(t?.guildId)),
-        l = (0, _.bG)([eY.A], () => eY.A.useReducedMotion, []),
+        l = (0, _.bG)([eY.Ay], () => eY.Ay.useReducedMotion, []),
         u = (0, _.bG)([ez.A], () => ez.A.isFocused()),
         c = (0, _.bG)([e$.Ay], () => e$.Ay.getKeybindForAction(eR.hCu.SOUNDBOARD_HOLD));
     if (null != t && s.length > 0)
@@ -583,7 +583,7 @@ function eQ(e) {
             r(),
                 (0, eG.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("61554"),
+                        n.e("28323"),
                         n.e("72425"),
                         n.e("46327"),
                         n.e("12618"),
@@ -622,10 +622,10 @@ function e3(e) {
     e2.A.open(e, eR.BEX.SOUNDBOARD),
         (0, eG.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
-                n.e("58026"),
+                n.e("31573"),
                 n.e("2677"),
                 n.e("60909"),
-                n.e("25935"),
+                n.e("59945"),
                 n.e("25652"),
                 n.e("8555"),
                 n.e("83952"),

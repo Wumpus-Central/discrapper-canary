@@ -1278,7 +1278,7 @@ let tg = s.memo(function (e) {
                   playing: O && !w,
                   children: (0, i.jsx)("source", { src: n }),
               });
-    let eo = (0, d.bG)([eX.A], () => eX.A.useReducedMotion);
+    let eo = (0, d.bG)([eX.Ay], () => eX.Ay.useReducedMotion);
     return (0, i.jsxs)("div", {
         className: a()(tm.kL, { [tm.he]: O }),
         onMouseEnter: B,

@@ -1,4 +1,4 @@
-s.d(t, { default: () => L, i: () => R });
+s.d(e, { default: () => b, i: () => k });
 var n = s(627968),
     i = s(64700),
     a = s(503698),
@@ -19,42 +19,42 @@ var n = s(627968),
     N = s(363195),
     g = s(507107),
     O = s(31587),
-    p = s(859387),
-    A = s(18437),
+    A = s(551875),
+    p = s(18437),
     y = s(590202),
-    S = s(971649),
-    T = s(901406),
+    T = s(971649),
+    S = s(901406),
     I = s(792620),
     _ = s(73473),
     w = s(371912),
     Q = s(818348),
     q = s(375708),
-    b = s(212885);
-function L(e) {
-    let { quest: t, errorHints: s, transitionState: a, onClose: C, sourceQuestContent: j } = e,
+    L = s(212885);
+function b(t) {
+    let { quest: e, errorHints: s, transitionState: a, onClose: C, sourceQuestContent: j } = t,
         [E, f] = (0, i.useState)(s),
         _ = (0, O.UX)(),
-        L = (0, A.Ut)(),
-        R = (0, S.vU)()?.getId(),
-        D = (0, o.bG)([v.A], () => v.A.useReducedMotion),
-        M = (0, w.Xf)({ useReducedMotion: D, className: b.Zf }),
-        z = E.filter((e) => ["xbox", "playstation"].includes(e.connected_account_type)),
-        P = (0, I.YL)(t),
-        U = (0, o.bG)([N.A], () => N.A.getState().theme),
-        H = (0, u.M)(U) ? Q.NJ.DARK : Q.NJ.LIGHT,
-        { startConsoleQuest: F, startingConsoleQuest: W } = (0, O.Wj)({
-            questId: t.id,
+        b = (0, p.Ut)(),
+        k = (0, T.vU)()?.getId(),
+        D = (0, o.bG)([v.Ay], () => v.Ay.useReducedMotion),
+        M = (0, w.Xf)({ useReducedMotion: D, className: L.Zf }),
+        P = E.filter((t) => ["xbox", "playstation"].includes(t.connected_account_type)),
+        U = (0, I.YL)(e),
+        z = (0, o.bG)([N.A], () => N.A.getState().theme),
+        H = (0, u.M)(z) ? Q.NJ.DARK : Q.NJ.LIGHT,
+        { startConsoleQuest: W, startingConsoleQuest: F } = (0, O.Wj)({
+            questId: e.id,
             beforeRequest: () => {
                 M.startAnimation(),
-                    L({
-                        questId: t.id,
+                    b({
+                        questId: e.id,
                         questContent: g.uF.CONNECTIONS_MODAL,
                         questContentCTA: y.Cy.DEFIBRILLATOR,
                         sourceQuestContent: j,
                     });
             },
-            afterRequest: (e) => {
-                M.stopAnimation(), f(e);
+            afterRequest: (t) => {
+                M.stopAnimation(), f(t);
             },
         });
     return (0, n.jsx)(r.Modal, {
@@ -67,12 +67,12 @@ function L(e) {
                 variant: "secondary",
                 onClick: () =>
                     void (C(),
-                    (0, T.b6)(
-                        { quest: t },
+                    (0, S.b6)(
+                        { quest: e },
                         {
                             content: g.uF.CONNECTIONS_MODAL,
                             ctaContent: y.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
-                            impressionId: R,
+                            impressionId: k,
                             sourceQuestContent: j,
                         },
                     )),
@@ -83,7 +83,7 @@ function L(e) {
         children: (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsxs)("div", {
-                    className: b.$Q,
+                    className: L.$Q,
                     children: [
                         (0, n.jsx)(d.E, {
                             variant: "eyebrow",
@@ -91,14 +91,14 @@ function L(e) {
                             children: q.intl.string(q.t["+/hZM/"]),
                         }),
                         (0, n.jsxs)(x.D, {
-                            className: l()(b.Tm, { [b.r9]: W }),
-                            onClick: F,
+                            className: l()(L.Tm, { [L.r9]: F }),
+                            onClick: W,
                             children: [
                                 M.render(),
                                 (0, n.jsx)(d.E, {
                                     variant: "text-sm/medium",
                                     color: "currentColor",
-                                    className: b.Zf,
+                                    className: L.Zf,
                                     children: q.intl.string(q.t.wzzjk9),
                                 }),
                             ],
@@ -106,22 +106,22 @@ function L(e) {
                     ],
                 }),
                 (0, n.jsxs)("div", {
-                    className: b.ei,
+                    className: L.ei,
                     children: [
-                        (0, n.jsx)(k, { icon: (0, n.jsx)(m.k, { size: "sm" }), text: q.intl.string(q.t.br3uIi) }),
-                        (0, n.jsx)(k, {
+                        (0, n.jsx)(R, { icon: (0, n.jsx)(m.k, { size: "sm" }), text: q.intl.string(q.t.br3uIi) }),
+                        (0, n.jsx)(R, {
                             icon: (0, n.jsx)(h._, { size: "sm" }),
                             text: q.intl.string(q.t.XF4wuA),
-                            errors: P ? void 0 : z.map((e) => e.message),
-                            gameTile: P
+                            errors: U ? void 0 : P.map((t) => t.message),
+                            gameTile: U
                                 ? (0, n.jsx)(c.m, {
-                                      "aria-label": t.config.messages.gameTitle,
+                                      "aria-label": e.config.messages.gameTitle,
                                       __unsupportedReactNodeAsText: (0, n.jsxs)("div", {
-                                          className: b.YL,
+                                          className: L.YL,
                                           children: [
                                               (0, n.jsx)(d.E, {
                                                   variant: "text-sm/medium",
-                                                  children: t.config.messages.gameTitle,
+                                                  children: e.config.messages.gameTitle,
                                               }),
                                               (0, n.jsx)(d.E, {
                                                   variant: "text-xs/normal",
@@ -131,9 +131,9 @@ function L(e) {
                                           ],
                                       }),
                                       children: (0, n.jsx)("img", {
-                                          className: b.rC,
-                                          alt: t.config.messages.gameTitle,
-                                          src: (0, p.tW)(t, p.fY.GAME_TILE, H).url,
+                                          className: L.rC,
+                                          alt: e.config.messages.gameTitle,
+                                          src: (0, A.tW)(e, A.fY.GAME_TILE, H).url,
                                       }),
                                   })
                                 : null,
@@ -144,65 +144,65 @@ function L(e) {
         }),
     });
 }
-function k(e) {
-    let { icon: t, text: s, errors: i = [], gameTile: a } = e,
+function R(t) {
+    let { icon: e, text: s, errors: i = [], gameTile: a } = t,
         r = i.length > 0,
         o = r ? C.e : j.Q;
     return (0, n.jsxs)("div", {
-        className: b.dJ,
+        className: L.dJ,
         children: [
             (0, n.jsxs)("div", {
-                className: l()(b.w_, { [b.qu]: r }),
+                className: l()(L.w_, { [L.qu]: r }),
                 children: [
                     (0, n.jsxs)("div", {
-                        className: b.d3,
+                        className: L.d3,
                         children: [
-                            t,
+                            e,
                             (0, n.jsx)(d.E, { variant: "text-sm/medium", color: "text-default", children: s }),
                         ],
                     }),
                     (0, n.jsxs)("div", {
-                        className: b.d3,
+                        className: L.d3,
                         children: [
                             a,
                             (0, n.jsx)(o, {
                                 color: "currentColor",
                                 size: "sm",
-                                className: l()({ [b.kX]: !r, [b.z3]: r }),
+                                className: l()({ [L.kX]: !r, [L.z3]: r }),
                             }),
                         ],
                     }),
                 ],
             }),
             (0, n.jsx)("div", {
-                className: b.Tt,
-                children: i.map((e) =>
+                className: L.Tt,
+                children: i.map((t) =>
                     (0, n.jsxs)(
                         "div",
                         {
-                            className: b.Ff,
+                            className: L.Ff,
                             children: [
-                                (0, n.jsx)(E.i, { size: "sm", color: "currentColor", className: b.z3 }),
-                                (0, n.jsx)(d.E, { variant: "text-xs/medium", color: "text-muted", children: e }),
+                                (0, n.jsx)(E.i, { size: "sm", color: "currentColor", className: L.z3 }),
+                                (0, n.jsx)(d.E, { variant: "text-xs/medium", color: "text-muted", children: t }),
                             ],
                         },
-                        e,
+                        t,
                     ),
                 ),
             }),
         ],
     });
 }
-function R(e) {
+function k(t) {
     (0, f.openModalLazy)(async () => {
-        let { default: t } = await Promise.resolve().then(s.bind(s, 988436));
+        let { default: e } = await Promise.resolve().then(s.bind(s, 988436));
         return function (s) {
             return (0, n.jsx)(_.R, {
                 overrideVisibility: !0,
-                questOrQuests: e.quest,
+                questOrQuests: t.quest,
                 questContent: g.uF.CONNECTIONS_MODAL,
-                sourceQuestContent: e.sourceQuestContent,
-                children: () => (0, n.jsx)(t, { ...s, ...e }),
+                sourceQuestContent: t.sourceQuestContent,
+                children: () => (0, n.jsx)(e, { ...s, ...t }),
             });
         };
     });

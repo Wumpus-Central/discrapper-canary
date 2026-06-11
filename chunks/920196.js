@@ -75,7 +75,7 @@ var L = n(29160),
 let ec = { mass: 10, tension: 550, friction: 140 };
 function ed(e) {
     let { className: t, pageMultiplier: n } = e,
-        s = (0, c.bG)([el.A], () => el.A.useReducedMotion),
+        s = (0, c.bG)([el.Ay], () => el.Ay.useReducedMotion),
         [o, u] = r.useState({ x: 0, y: 0 }),
         d = r.useMemo(
             () =>
@@ -677,7 +677,7 @@ let tb = {
 var tL = n(682165);
 let tw = r.lazy(() => Promise.all([n.e("15323"), n.e("24832")]).then(n.bind(n, 748579)));
 function tM() {
-    let e = (0, c.bG)([el.A], () => el.A.useReducedMotion),
+    let e = (0, c.bG)([el.Ay], () => el.Ay.useReducedMotion),
         t = (0, tT.A)((e) => e.shouldRenderTenureLevelUp),
         n = (function () {
             let e = tO(),
@@ -2101,7 +2101,7 @@ var iK = n(843010),
 function iq(e) {
     let { groupName: t, targetElementRef: n } = e,
         r = tO(),
-        s = (0, c.bG)([el.A], () => el.A.useReducedMotion),
+        s = (0, c.bG)([el.Ay], () => el.Ay.useReducedMotion),
         a = (0, tT.A)((e) => e.isOpen),
         o = (0, iK.G)();
     return s || null == r || a || o
@@ -3241,7 +3241,7 @@ class rO extends r.PureComponent {
                     n.e("54658"),
                     n.e("49409"),
                     n.e("81754"),
-                    n.e("79760"),
+                    n.e("42561"),
                     n.e("33049"),
                     n.e("21403"),
                     n.e("43456"),

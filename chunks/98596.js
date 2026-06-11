@@ -63,42 +63,42 @@ let C = (0, n.E2)(s.X.APPEARANCE_CUSTOM_THEMES_UPSELL, {
     },
 });
 var b = i(366010),
-    v = i(17928),
-    y = i(775602),
+    y = i(17928),
+    v = i(775602),
     j = i(47671),
     O = i(875317),
     R = i(97469),
-    L = i(363195),
-    D = i(885386),
+    D = i(363195),
+    L = i(885386),
     P = i(818348);
 let G = (0, n.zD)(s.X.APPEARANCE_DARK_SIDEBAR, {
     useTitle: () => r.intl.string(r.t.EpSHAQ),
     useSearchTerms: () => [r.intl.string(r.t.Ksh3ik)],
     useValue: function () {
         let e = (0, R.qo)();
-        return (0, v.bG)([L.A, y.A], () => {
-            let t = L.A.theme,
-                i = y.A.useForcedColors;
+        return (0, y.bG)([D.A, v.Ay], () => {
+            let t = D.A.theme,
+                i = v.Ay.useForcedColors;
             return e && (0, b.q)(t) && !i;
         });
     },
     usePredicate: function () {
-        let e = null != D.eh.useSetting().customUserThemeSettings,
+        let e = null != L.eh.useSetting().customUserThemeSettings,
             t = null != (0, O.Q)();
-        return (0, v.bG)([L.A, j.A], () => {
-            let i = L.A.theme,
+        return (0, y.bG)([D.A, j.A], () => {
+            let i = D.A.theme,
                 n = j.A.gradientPreset;
             return (0, b.q)(i) && null == n && !e && !t;
         });
     },
     useDisabled: function () {
-        return (0, v.bG)([L.A, y.A], () => {
-            let e = L.A.theme,
-                t = y.A.useForcedColors;
+        return (0, y.bG)([D.A, v.Ay], () => {
+            let e = D.A.theme,
+                t = v.Ay.useForcedColors;
             return e !== P.NJ.LIGHT || t;
         });
     },
-    setValue: (e) => D.l$.updateSetting(e),
+    setValue: (e) => L.l$.updateSetting(e),
 });
 var M = i(331322),
     U = i(487245),

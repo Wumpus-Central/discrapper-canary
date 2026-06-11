@@ -81,7 +81,7 @@ function w(e) {
 }
 function M(e) {
     let { eventTargetRef: t, assetClassName: n, disableHover: s } = e,
-        o = (0, c.bG)([A.A], () => A.A.useReducedMotion),
+        o = (0, c.bG)([A.Ay], () => A.Ay.useReducedMotion),
         { theme: l, saturation: u } = (0, p.wR)(),
         { highContrastModeEnabled: d } = r.useContext(E.C),
         [_, h, f, I] = g.A.colors.TEXT_DEFAULT.resolve({ theme: l, saturation: u, highContrastModeEnabled: d }).rgba();

@@ -40,7 +40,7 @@ let O = function (e) {
             orbTier: x,
         } = e,
         k = (0, m.Ut)(),
-        U = (0, l.bG)([h.A], () => h.A.useReducedMotion),
+        U = (0, l.bG)([h.Ay], () => h.Ay.useReducedMotion),
         G = (0, l.bG)([p.default], () => p.default.getCurrentUser()),
         F = r.useMemo(
             () =>

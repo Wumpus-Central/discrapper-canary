@@ -343,7 +343,7 @@ let b = (e, t) => {
 };
 function c(e) {
     let { giftStyle: t, className: n, shouldAnimate: d = !0, defaultAnimationState: c, idleAnimationState: i } = e,
-        f = (0, u.bG)([h.A], () => h.A.useReducedMotion),
+        f = (0, u.bG)([h.Ay], () => h.Ay.useReducedMotion),
         [o, A] = a.useState(c),
         k = a.useRef(b(t, o)),
         [E, O] = a.useState(null == i),

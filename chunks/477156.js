@@ -449,7 +449,7 @@ let eB = l.memo(function (e) {
     function c(e) {
         return `url(#${a(e)})`;
     }
-    let o = (0, u.bG)([eZ.A], () => eZ.A.useReducedMotion);
+    let o = (0, u.bG)([eZ.Ay], () => eZ.Ay.useReducedMotion);
     return (0, i.jsx)("svg", {
         className: n()(eH.gx, t),
         width: "392",

@@ -11,6 +11,6 @@ function o(e) {
     null != t && t.focus();
 }
 function l(e, t) {
-    let n = (0, r.bG)([s.A], () => s.A.keyboardModeEnabled);
+    let n = (0, r.bG)([s.Ay], () => s.Ay.keyboardModeEnabled);
     return (0, i.Ay)({ id: e, isEnabled: n, orientation: t, setFocus: o, scrollToStart: a, scrollToEnd: a });
 }

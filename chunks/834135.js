@@ -25,14 +25,14 @@ var n = s(627968),
     _ = s(441512),
     M = s(55759),
     D = s(795068),
-    T = s(781121),
-    y = s(821609),
+    y = s(781121),
+    T = s(821609),
     L = s(590202),
     P = s(651892);
 function b(e) {
     let { handlePrimaryCtaClick: t } = e,
         { quest: s } = l.useContext(D.a);
-    return (0, n.jsx)(y.$, {
+    return (0, n.jsx)(T.$, {
         fullWidth: !0,
         variant: "primary",
         onClick: () => t(A.uF.VIDEO_MODAL_PRIMARY_CTA, L.Cy.OPEN_GAME_LINK),
@@ -66,7 +66,7 @@ function K() {
         r = (0, j.LS)(e),
         u = l.useRef(null),
         { isHoveringOrFocusing: c } = (0, G.A)(u),
-        d = (0, T.H)({ quest: e, onClose: i, sourceQuestContent: t, impressionId: a }),
+        d = (0, y.H)({ quest: e, onClose: i, sourceQuestContent: t, impressionId: a }),
         m = e.config.ctaConfig.subtitle,
         x = void 0 !== m && !(0, F.uJ)(m);
     return (0, n.jsx)(I.m, {
@@ -143,7 +143,7 @@ let en = async () => await s.e("40119").then(s.t.bind(s, 718698, 19));
 function el() {
     let { quest: e, sourceQuestContent: t, onClose: s, maxProgressSec: i, targetSec: o } = l.useContext(D.a),
         [a, r] = l.useState(!1),
-        u = (0, c.bG)([z.A], () => z.A.useReducedMotion),
+        u = (0, c.bG)([z.Ay], () => z.Ay.useReducedMotion),
         d = (0, c.bG)([B.default], () => B.default.locale),
         m = (0, c.bG)([$.default], () => $.default.getCurrentUser()),
         x = l.useRef(e.userStatus?.completedAt),
@@ -215,7 +215,7 @@ function ei(e) {
             sourceQuestContent: A,
         } = e,
         E = (0, N.Yh)(i),
-        y = (0, j.LS)(i),
+        T = (0, j.LS)(i),
         L = (0, v.go)(),
         { maxProgressSec: P, trackProgress: q } = (function (e) {
             let { initialProgressSec: t, targetSec: s, completedAt: n } = e,
@@ -245,7 +245,7 @@ function ei(e) {
         { enabled: X } = S.jS.useConfig({ location: k.rE.VIDEO_MODAL }),
         { enabled: J } = S.n6.useConfig({ location: k.rE.VIDEO_MODAL }),
         Z = X || $,
-        ee = (0, T.H)({ quest: i, onClose: s, sourceQuestContent: A, impressionId: L }),
+        ee = (0, y.H)({ quest: i, onClose: s, sourceQuestContent: A, impressionId: L }),
         et = l.useMemo(
             () => ({
                 quest: i,
@@ -319,7 +319,7 @@ function ei(e) {
                                               children: [
                                                   (0, n.jsxs)("div", {
                                                       className: H.Df,
-                                                      children: [y ? null : (0, n.jsx)(el, {}), (0, n.jsx)(K, {})],
+                                                      children: [T ? null : (0, n.jsx)(el, {}), (0, n.jsx)(K, {})],
                                                   }),
                                                   (0, n.jsxs)("div", {
                                                       className: H.eX,
@@ -341,7 +341,7 @@ function ei(e) {
                                               children: [
                                                   (0, n.jsxs)("div", {
                                                       className: H.uu,
-                                                      children: [y ? null : (0, n.jsx)(el, {}), (0, n.jsx)(K, {})],
+                                                      children: [T ? null : (0, n.jsx)(el, {}), (0, n.jsx)(K, {})],
                                                   }),
                                                   (0, n.jsxs)("div", {
                                                       className: H.NY,

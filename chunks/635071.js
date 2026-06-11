@@ -14,10 +14,10 @@ var r,
     h = n(793574),
     S = n(688810),
     f = n(922301),
-    I = n(368919),
-    v = n(73392),
-    R = n(386467),
-    y = n(534400),
+    y = n(368919),
+    I = n(73392),
+    v = n(386467),
+    R = n(534400),
     T = n(176201),
     _ = n(676608),
     g = n(342296),
@@ -49,14 +49,14 @@ function j(e) {
             subscribeToGroupId: B,
         } = e,
         U = t.useRef(null),
-        W = t.useContext(R.A),
+        W = t.useContext(v.A),
         $ = r?.guild_id ?? W,
         { analyticsLocations: Z } = (0, S.Ay)(h.A.USERNAME),
         K = j ? "@" : "",
         { nick: Y, colorString: q, colorStrings: J, colorRoleName: Q, displayNameStyles: X } = l,
-        ee = (0, o.bG)([p.A], () => p.A.roleStyle),
+        ee = (0, o.bG)([p.Ay], () => p.Ay.roleStyle),
         el = "username" === ee,
-        en = (0, v.a)({ displayNameStyles: X }),
+        en = (0, I.a)({ displayNameStyles: X }),
         er = (0, o.bG)([N.A], () =>
             null == l.guildId || null == l.colorRoleId ? null : N.A.getRole(l.guildId, l.colorRoleId),
         ),
@@ -88,7 +88,7 @@ function j(e) {
             onClick: k,
             onContextMenu: V,
             children: ed
-                ? (0, u.jsx)(I.A, {
+                ? (0, u.jsx)(y.A, {
                       userName: em,
                       displayNameStyles: X,
                       effectDisplayType: ea ? f.G.ANIMATED : f.G.PLAIN,
@@ -104,7 +104,7 @@ function j(e) {
             () =>
                 D
                     ? null
-                    : (0, u.jsx)(y.Cw, {
+                    : (0, u.jsx)(R.Cw, {
                           primaryGuild: l.primaryGuild,
                           userId: n.author.id,
                           contextGuildId: $,
@@ -150,18 +150,18 @@ function j(e) {
                 : (0, u.jsxs)(u.Fragment, {
                       children: [(0, u.jsx)(A.D, { ...ep, className: a()(ep.className, F) }), eh],
                   }),
-        eI = null != H ? H[0] : null,
-        ev = null != H ? H[1] : null;
+        ey = null != H ? H[0] : null,
+        eI = null != H ? H[1] : null;
     return (0, u.jsxs)(S.f5, {
         value: Z,
         children: [
-            null != eI && !w && b ? (0, u.jsxs)(u.Fragment, { children: [" ", eI, " "] }) : null,
+            null != ey && !w && b ? (0, u.jsxs)(u.Fragment, { children: [" ", ey, " "] }) : null,
             "dot" === ee
                 ? (0, u.jsx)(m.W, { color: q, colors: ei ? J : null, name: Q, className: M.m4, hoverOverride: ea })
                 : null,
             ef,
-            null != ev ? ev : null,
-            null == eI || w || b ? null : eI,
+            null != eI ? eI : null,
+            null == ey || w || b ? null : ey,
         ],
     });
 }

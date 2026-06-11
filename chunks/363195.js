@@ -17,7 +17,7 @@ var i = n(17928),
 function m(e) {
     if (!__OVERLAY__ && E.isPlatformEmbedded)
         try {
-            let t = f.A.colors.BACKGROUND_BASE_LOWEST.resolve({ theme: e, saturation: a.A.saturation }).hex();
+            let t = f.A.colors.BACKGROUND_BASE_LOWEST.resolve({ theme: e, saturation: a.Ay.saturation }).hex();
             p.A.setApplicationBackgroundColor(t);
         } catch {}
 }
@@ -35,7 +35,7 @@ function v() {
             t = T;
         if (__OVERLAY__) return _.NJ8.DARK;
         let n = h.dP;
-        if (a.A.syncForcedColors && "active" === a.A.systemForcedColors && e !== h.Fc.NO_PREFERENCE) return e;
+        if (a.Ay.syncForcedColors && "active" === a.Ay.systemForcedColors && e !== h.Fc.NO_PREFERENCE) return e;
         if (c.Ay.useSystemTheme === h.Q_.ON && e !== h.Fc.NO_PREFERENCE) return t[e];
         let i = u.A.getAppearanceSettings()?.theme;
         return null != i ? i : n[d.A.settings.appearance?.theme ?? l.Sx.UNSET];
@@ -58,7 +58,7 @@ class C extends i.Ay.PersistedStore {
             m((y = e.theme)),
             null != e.preferences && (T = e.preferences),
             (0, r.M)(y) && (T[h.Fc.DARK] = y)),
-            this.waitFor(c.Ay, u.A, d.A, a.A);
+            this.waitFor(c.Ay, u.A, d.A, a.Ay);
     }
     getState() {
         return { theme: this.theme, preferences: T, status: I };

@@ -252,7 +252,7 @@ class O extends s.Component {
         ((c.Fr || c.v1) && !0 === this.props.clickableOnMobile) || this.hide();
     };
     handleFocus = () => {
-        E.A.keyboardModeEnabled && this.show();
+        E.Ay.keyboardModeEnabled && this.show();
     };
     handleBlur = () => {
         this.hide();

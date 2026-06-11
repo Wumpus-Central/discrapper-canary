@@ -867,8 +867,8 @@ function e8() {
         : null;
 }
 var e5 = n(815021),
-    e6 = n(935063),
-    e4 = n(378939),
+    e4 = n(935063),
+    e6 = n(378939),
     e9 = n(964486),
     te = n(475743),
     tt = n(323073),
@@ -896,7 +896,7 @@ function tu(e) {
 }
 var th = n(187322),
     tm = n(534514),
-    tA = n(777666),
+    tA = n(812993),
     tg = n(397244),
     tE = n(714114),
     t_ = n(394871),
@@ -1118,7 +1118,7 @@ function tH(e, t, n) {
         a = t ? R.Ay.everyoneFilter : null,
         i = null;
     null != e && null != s && (i = s === M.KE7.ALL_SERVERS ? null : e.getGuildId()),
-        e4.A.fetchRecentMentions({ before: n, limit: M.Ue3, guildId: i, roles: l, everyone: a });
+        e6.A.fetchRecentMentions({ before: n, limit: M.Ue3, guildId: i, roles: l, everyone: a });
 }
 function tB(e) {
     let { onJump: t } = e,
@@ -1148,11 +1148,11 @@ function tB(e) {
             : tH(n, !0);
     }, [m, o, A, d, E, u, n, !0]),
         (0, e9.Ay)(() => {
-            s?.some(tn.$r) && (e4.A.clearMentions(), tH(n, !0));
+            s?.some(tn.$r) && (e6.A.clearMentions(), tH(n, !0));
         }),
         r.useEffect(
             () => () => {
-                e4.A.truncateMentions(M.Ue3);
+                e6.A.truncateMentions(M.Ue3);
             },
             [],
         );
@@ -1163,7 +1163,7 @@ function tB(e) {
         onFetch: () => null,
         onJump: t,
         onCloseMessage: function (e) {
-            e4.A.deleteRecentMention(e.id);
+            e6.A.deleteRecentMention(e.id);
         },
         channel: n,
         messages: s,
@@ -1198,7 +1198,7 @@ function tJ(e) {
                 channel: l,
                 gotoChannel: n,
                 children:
-                    null != s ? (0, i.jsx)(e5.J, { size: "sm", onClick: () => e4.A.deleteRecentMention(t.id) }) : null,
+                    null != s ? (0, i.jsx)(e5.J, { size: "sm", onClick: () => e6.A.deleteRecentMention(t.id) }) : null,
             }),
             (0, i.jsxs)("div", {
                 className: tP.zC,
@@ -1224,7 +1224,7 @@ function tJ(e) {
     });
 }
 function tY() {
-    return (0, i.jsx)(tw, { Icon: e6.X, header: $.intl.string($.t.bgDz74), tip: $.intl.string($.t.NS15vk) });
+    return (0, i.jsx)(tw, { Icon: e4.X, header: $.intl.string($.t.bgDz74), tip: $.intl.string($.t.NS15vk) });
 }
 var tX = n(702841),
     tQ = n(912592),
@@ -1279,7 +1279,7 @@ function t7(e) {
                 id: "Everyone",
                 label: $.intl.string($.t.cdyUsV),
                 action: function () {
-                    e4.A.setGuildFilter({ everyoneFilter: !l });
+                    e6.A.setGuildFilter({ everyoneFilter: !l });
                 },
                 checked: l,
             }),
@@ -1287,7 +1287,7 @@ function t7(e) {
                 id: "Roles",
                 label: $.intl.string($.t.lZejCq),
                 action: function () {
-                    e4.A.setGuildFilter({ roleFilter: !a });
+                    e6.A.setGuildFilter({ roleFilter: !a });
                 },
                 checked: a,
             }),
@@ -1297,7 +1297,7 @@ function t7(e) {
                       id: "All Servers",
                       label: $.intl.string($.t.GWMA6s),
                       action: function () {
-                          e4.A.setGuildFilter({
+                          e6.A.setGuildFilter({
                               guildFilter: r === M.KE7.THIS_SERVER ? M.KE7.ALL_SERVERS : M.KE7.THIS_SERVER,
                           });
                       },
@@ -1334,8 +1334,8 @@ function t8() {
     });
 }
 var t5 = n(481613),
-    t6 = n.n(t5),
-    t4 = n(621466),
+    t4 = n.n(t5),
+    t6 = n(621466),
     t9 = n(775602),
     ne = n(625494),
     nt = n(723702),
@@ -1648,8 +1648,8 @@ function n3(e) {
 var n7 = n(495544),
     n8 = n(58703),
     n5 = n(143236),
-    n6 = n(720149),
-    n4 = n(181079),
+    n4 = n(720149),
+    n6 = n(181079),
     n9 = n(567035),
     se = n(455234),
     st = n(695633),
@@ -1710,7 +1710,7 @@ class sA extends n5.EventEmitter {
         switch (e.type) {
             case "messages": {
                 let t = sg(e, !1);
-                if (t.messages.some(tn.$r)) return n6.A.clearChannel(e.channelId), { ...e, messages: [] };
+                if (t.messages.some(tn.$r)) return n4.A.clearChannel(e.channelId), { ...e, messages: [] };
                 return t;
             }
             case "nsfw":
@@ -1750,7 +1750,7 @@ class sA extends n5.EventEmitter {
         (null != s && this.undoStack.push(s), 1 === this.state.channels.length)
             ? this.deleteChannel(t)
             : (this.setState({ channels: this.updateChannel(t, (e) => ({ ...e, deleted: !0 })) }),
-              t9.A.useReducedMotion && this.deleteChannel(t),
+              t9.Ay.useReducedMotion && this.deleteChannel(t),
               this.maybeLoadMore());
     };
     undoMarkChannelRead = () => {
@@ -1830,8 +1830,8 @@ class sA extends n5.EventEmitter {
         this.setState({ channels: e });
     };
     loadChannelMessages(e) {
-        n6.A.clearChannel(e.channelId);
-        let t = n6.A.fetchMessages({
+        n4.A.clearChannel(e.channelId);
+        let t = n4.A.fetchMessages({
             channelId: e.channelId,
             limit: M.EMb,
             jump: { messageId: e.oldestReadMessageId, flash: !0 },
@@ -1980,7 +1980,7 @@ function s_(e, t, n, s) {
         mentionCount: o,
         sortOrder: (function (e, t, n) {
             let s = ti.A.getChannel(t);
-            if (n4.A.isFavorite(t)) return 0;
+            if (n6.A.isFavorite(t)) return 0;
             if (s.isPrivate()) return 1;
             if (tT.Ay.getMentionCount(t) > 0) return tT.Ay.getIsMentionLowImportance(t) ? 3 : 2;
             if (null != n) {
@@ -2286,7 +2286,7 @@ function sM(e) {
         })(A),
         { loadState: N, channels: f } = E,
         { maybeLoadMore: I } = _,
-        C = (0, g.bG)([t9.A], () => t9.A.messageGroupSpacing);
+        C = (0, g.bG)([t9.Ay], () => t9.Ay.messageGroupSpacing);
     (t = A),
         (n = E),
         (s = _),
@@ -2320,8 +2320,8 @@ function sM(e) {
         r.useEffect(() => {
             let e = (e) => {
                 if ((0, en.hasAnyModalOpen)()) return;
-                let t = (0, t4.BF)(e)?.activeElement;
-                (0, t4.Cw)(t) ||
+                let t = (0, t6.BF)(e)?.activeElement;
+                (0, t6.Cw)(t) ||
                     (((0, nt.isMac)() || (0, nt.isMacWeb)() ? e.metaKey : e.ctrlKey) &&
                         !e.shiftKey &&
                         !e.altKey &&
@@ -2360,7 +2360,7 @@ function sM(e) {
         ? (0, i.jsx)(tw, {
               Icon: tQ.K,
               header: $.intl.string($.t["6XMM+D"]),
-              tip: t6().os?.family === "OS X" ? $.intl.string($.t.w9uDOW) : $.intl.string($.t.BiUJC6),
+              tip: t4().os?.family === "OS X" ? $.intl.string($.t.w9uDOW) : $.intl.string($.t.BiUJC6),
           })
         : (0, i.jsx)(Y.hD, {
               navigator: S,

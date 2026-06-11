@@ -5,11 +5,11 @@ var i = a(64700),
     o = a(602853),
     l = a(661531),
     c = a(775602),
-    r = a(780574),
+    r = a(521427),
     d = a(381941);
 function f(e) {
     let s = (0, o.r)(l.A.colors.BACKGROUND_BASE_LOWER).hex(),
-        a = (0, u.bG)([c.A], () => (c.A.desaturateUserColors ? c.A.saturation : 1));
+        a = (0, u.bG)([c.Ay], () => (c.Ay.desaturateUserColors ? c.Ay.saturation : 1));
     return i.useMemo(() => {
         if (null == e) return;
         let i = (0, r.Fy)(e, s, a, d.oe).hex();

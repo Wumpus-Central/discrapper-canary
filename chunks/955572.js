@@ -5,7 +5,7 @@ n.d(t, {
     D3: () => I,
     Dm: () => C,
     Er: () => E,
-    FU: () => L,
+    FU: () => w,
     Gm: () => D,
     HU: () => g,
     IX: () => v,
@@ -18,6 +18,7 @@ n.d(t, {
     Xt: () => R,
     YV: () => p,
     kI: () => y,
+    n8: () => L,
     qz: () => A,
     ts: () => N,
     uS: () => h,
@@ -61,9 +62,9 @@ function g(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_SATURATION", saturation: e });
 }
 function A(e) {
-    let t = a.A.useReducedMotion;
+    let t = a.Ay.useReducedMotion;
     i.h.dispatch({ type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION", prefersReducedMotion: e });
-    let n = a.A.useReducedMotion;
+    let n = a.Ay.useReducedMotion;
     !t && n
         ? r.Ay.applySettingsOverride({
               gifAutoPlay: { value: !1, reasonKey: u._A.REDUCED_MOTION },
@@ -107,5 +108,8 @@ function D(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_SWITCH_ICONS_ENABLED", switchIconsEnabled: e });
 }
 function L(e) {
+    i.h.dispatch({ type: "ACCESSIBILITY_SET_CHAT_BAR_SETTINGS", ...e });
+}
+function w(e) {
     i.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { hdrDynamicRange: e } });
 }

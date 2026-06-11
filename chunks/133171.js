@@ -39,7 +39,7 @@ function g(e, t) {
             .hex();
     return (
         (n = t ?? s),
-        (i = (0, _.bG)([h.A], () => h.A.saturation)),
+        (i = (0, _.bG)([h.Ay], () => h.Ay.saturation)),
         r.useMemo(() => {
             if (null == n) return null;
             if ("currentColor" === n || n.startsWith("var(")) return n;

@@ -7,7 +7,7 @@ function a(e, t, n, a) {
     !(function (e, t, n) {
         let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "start",
             o = arguments.length > 4 ? arguments[4] : void 0,
-            l = (0, r.bG)([s.A], () => s.A.useReducedMotion),
+            l = (0, r.bG)([s.Ay], () => s.Ay.useReducedMotion),
             u = i.useRef(!1);
         i.useEffect(() => {
             if (!t || u.current) return;

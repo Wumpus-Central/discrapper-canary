@@ -24,9 +24,9 @@ var a = i(627968),
     h = i(946261),
     R = i(209932),
     T = i(287809),
-    N = i(174459),
-    j = i(690521),
-    y = i(738533),
+    y = i(174459),
+    N = i(690521),
+    j = i(738533),
     O = i(45938),
     b = i(403362),
     D = i(427262),
@@ -72,7 +72,7 @@ function B(t) {
     });
     (0, C.Ay)(() => {
         let { analyticsLocations: t, skuId: e } = T.current;
-        N.default.track(P.HAw.OPEN_MODAL, { location_stack: t, type: G.Nu, sku_id: e, application_id: L?.id });
+        y.default.track(P.HAw.OPEN_MODAL, { location_stack: t, type: G.Nu, sku_id: e, application_id: L?.id });
     }),
         n.useEffect(() => {
             let {
@@ -84,7 +84,7 @@ function B(t) {
                 soundId: s,
                 skuProductLine: l,
             } = T.current;
-            N.default.track(P.HAw.GIFT_ACCEPT_STEP, {
+            y.default.track(P.HAw.GIFT_ACCEPT_STEP, {
                 to_step: _.state,
                 location_stack: t,
                 has_custom_message: e,
@@ -96,7 +96,7 @@ function B(t) {
                 product_line: l,
             });
         }, [_.state]);
-    let j = n.useCallback(async () => {
+    let N = n.useCallback(async () => {
         let {
             analyticsLocations: t,
             skuId: e,
@@ -105,7 +105,7 @@ function B(t) {
             emojiName: n,
             soundId: s,
         } = T.current;
-        N.default.track(P.HAw.SLAYER_STOREFRONT_GIFT_CODE_CLAIM_CLICKED, {
+        y.default.track(P.HAw.SLAYER_STOREFRONT_GIFT_CODE_CLAIM_CLICKED, {
             location_stack: t,
             sku_id: e,
             application_id: L?.id,
@@ -133,7 +133,7 @@ function B(t) {
                 transitionState: e,
                 onClose: s,
                 successStateButtonText: F.intl.string(F.t.go1e4x),
-                onSuccessButtonClick: j,
+                onSuccessButtonClick: N,
                 isSuccessButtonLoading: x,
                 analyticsLocations: R,
                 startAuthorizeResult: h,
@@ -211,7 +211,7 @@ function W(t) {
         n.useEffect(() => {
             if (!g) return;
             let { analyticsLocations: t, skuId: e, applicationId: i, canStartAuthorization: a } = k.current;
-            N.default.track(P.HAw.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, {
+            y.default.track(P.HAw.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, {
                 location_stack: t,
                 sku_id: e,
                 application_id: i,
@@ -222,7 +222,7 @@ function W(t) {
         }, [g, A]);
     let S = n.useCallback(() => {
             let { analyticsLocations: t, skuId: e, applicationId: i } = k.current;
-            N.default.track(P.HAw.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
+            y.default.track(P.HAw.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
                 location_stack: t,
                 sku_id: e,
                 application_id: i,
@@ -270,7 +270,7 @@ function z(t) {
         E = (0, M.J)(u),
         [I, h] = n.useState(null),
         R = (0, p.bG)([T.default], () => T.default.getUser(f.userId)),
-        j = D.Ay.getName(R),
+        N = D.Ay.getName(R),
         O = n.useRef({
             analyticsLocations: C,
             skuId: l.id,
@@ -295,13 +295,13 @@ function z(t) {
                   variant: "primary",
                   text: F.intl.string(F.t["s+J8Dl"]),
                   onClick: () => {
-                      N.default.track(P.HAw.SLAYER_STOREFRONT_GAME_LAUNCH_CLICKED, {
+                      y.default.track(P.HAw.SLAYER_STOREFRONT_GAME_LAUNCH_CLICKED, {
                           location_stack: C,
                           sku_id: l.id,
                           application_id: u.id,
                           is_gift: !0,
                       }),
-                          y.A.launchGame(u.id);
+                          j.A.launchGame(u.id);
                   },
                   icon: d.t,
               }
@@ -309,7 +309,7 @@ function z(t) {
                   variant: "primary",
                   text: F.intl.string(F.t.cpT0Cq),
                   onClick: () => {
-                      N.default.track(P.HAw.SLAYER_STOREFRONT_CLAIM_MODAL_CLOSE_BUTTON_CLICKED, {
+                      y.default.track(P.HAw.SLAYER_STOREFRONT_CLAIM_MODAL_CLOSE_BUTTON_CLICKED, {
                           location_stack: C,
                           sku_id: l.id,
                           application_id: u.id,
@@ -332,7 +332,7 @@ function z(t) {
                         variant: "text-md/normal",
                         color: "text-subtle",
                         className: H.j7,
-                        children: F.intl.formatToPlainString(F.t["6yrIzU"], { sender: j }),
+                        children: F.intl.formatToPlainString(F.t["6yrIzU"], { sender: N }),
                     }),
                     null != A &&
                         "" !== A &&
@@ -373,14 +373,14 @@ let V = (t) => {
     Y = { xMin: -120, xMax: 120, yMin: -80, yMax: -200 },
     J = (t) => {
         let { confettiTarget: e, emojiName: i } = t,
-            s = (0, p.bG)([x.A], () => x.A.useReducedMotion),
+            s = (0, p.bG)([x.Ay], () => x.Ay.useReducedMotion),
             l = n.useRef(e),
             [r, o] = n.useState(!0),
             c = n.useCallback(() => {
                 o(!1);
             }, []);
         if (s || !r) return null;
-        let u = null != i ? j.Ay.getURL(i) : void 0;
+        let u = null != i ? N.Ay.getURL(i) : void 0;
         return (0, a.jsx)(I.A, {
             confettiTarget: l.current,
             emojiURL: u,

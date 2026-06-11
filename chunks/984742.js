@@ -1,4 +1,4 @@
-n.d(t, { A: () => x }), n(938796);
+n.d(t, { A: () => f }), n(938796);
 var l = n(627968),
     r = n(64700),
     i = n(241524),
@@ -19,10 +19,10 @@ var l = n(627968),
     h = n(975965),
     A = n(376747),
     O = n(375708);
-function x(e) {
+function f(e) {
     let t,
         n,
-        { handleClose: x, onSubscriptionConfirmation: f } = e,
+        { handleClose: f, onSubscriptionConfirmation: x } = e,
         P = (0, o.K)(),
         { application: g } = (0, s.V)(),
         { readySlideId: N, updatedSubscription: R } = (0, c.t4)((e) => ({
@@ -30,11 +30,11 @@ function x(e) {
             updatedSubscription: e.updatedSubscription,
         })),
         v = (0, u.S3)(),
-        U = (0, i.A)(A.Y),
-        { createMultipleConfettiAt: y } = r.useContext(d.x),
+        y = (0, i.A)(A.Y),
+        { createMultipleConfettiAt: U } = r.useContext(d.x),
         j = v?.name ?? "",
         M = () => {
-            x(), f?.();
+            f(), x?.();
         },
         L = N === _.pn.CONFIRM,
         k = (0, C.bg)(v?.flags ?? 0),
@@ -45,10 +45,10 @@ function x(e) {
         { showBenefitsFirst: b } = (0, h.l)();
     return (
         b
-            ? (t = U
+            ? (t = y
                   ? (0, l.jsx)(m.v, { tierName: j, onConfirm: M, subscription: R })
                   : (0, l.jsx)(p.XG, { tierName: j, onConfirm: M, subscription: R }))
-            : U
+            : y
               ? (t = (0, l.jsx)(m.E, {
                     title: O.intl.format(O.t.ea6tZr, { tierName: j }),
                     subtitle:
@@ -77,8 +77,8 @@ function x(e) {
                     primaryText: O.intl.string(O.t["JtWl+a"]),
                 }))),
         r.useEffect(() => {
-            a.A.useReducedMotion && L && y(window.innerWidth / 2, window.innerHeight / 2);
-        }, [y, L]),
+            a.Ay.useReducedMotion && L && U(window.innerWidth / 2, window.innerHeight / 2);
+        }, [U, L]),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsxs)(I.dZ, { children: [(0, l.jsx)(S.A, {}), t] }),

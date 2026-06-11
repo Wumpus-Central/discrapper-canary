@@ -1,59 +1,59 @@
-a.d(t, { A: () => _ });
-var n = a(627968),
-    r = a(64700),
-    i = a(106778),
-    s = a(17928),
-    o = a(935462),
-    l = a(534514),
-    d = a(834730),
-    c = a(775602),
-    u = a(524246),
-    p = a(14368),
-    m = a(372165);
-function _(e) {
-    let { title: t, description: a, image: _, button: f, ...x } = e,
-        v = (0, s.bG)([c.A], () => c.A.useReducedMotion),
-        g = r.useRef(null),
-        h = r.useRef(new i.OH()),
-        [k, b] = r.useState(null);
-    return (0, n.jsxs)(n.Fragment, {
+n.d(s, { A: () => h });
+var a = n(627968),
+    i = n(64700),
+    r = n(106778),
+    t = n(17928),
+    l = n(935462),
+    c = n(534514),
+    d = n(834730),
+    o = n(775602),
+    u = n(524246),
+    m = n(14368),
+    p = n(372165);
+function h(e) {
+    let { title: s, description: n, image: h, button: x, ...g } = e,
+        j = (0, t.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        N = i.useRef(null),
+        v = i.useRef(new r.OH()),
+        [f, k] = i.useState(null);
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, n.jsx)(i.Fk, { ref: b, className: m.Lb, environment: h.current }),
-            (0, n.jsxs)(o.EO, {
+            (0, a.jsx)(r.Fk, { ref: k, className: p.Lb, environment: v.current }),
+            (0, a.jsxs)(l.EO, {
                 "data-migration-pending": !0,
-                className: m.yl,
-                size: o.rI.DYNAMIC,
-                ...x,
+                className: p.yl,
+                size: l.rI.DYNAMIC,
+                ...g,
                 parentComponent: "GuildPowerupActivateModal",
                 children: [
-                    (0, n.jsx)(o.$m, {
+                    (0, a.jsx)(l.$m, {
                         "data-migration-pending": !0,
-                        className: m._F,
+                        className: p._F,
                         scrollbarType: "none",
-                        children: (0, n.jsxs)("div", {
-                            className: m.kL,
-                            ref: g,
+                        children: (0, a.jsxs)("div", {
+                            className: p.kL,
+                            ref: N,
                             children: [
-                                _,
-                                (0, n.jsxs)("div", {
-                                    className: m.hQ,
+                                h,
+                                (0, a.jsxs)("div", {
+                                    className: p.hQ,
                                     children: [
-                                        (0, n.jsx)(l.D, { variant: "heading-xl/extrabold", children: t }),
-                                        null != a &&
-                                            (0, n.jsx)(d.E, {
+                                        (0, a.jsx)(c.D, { variant: "heading-xl/extrabold", children: s }),
+                                        null != n &&
+                                            (0, a.jsx)(d.E, {
                                                 tag: "span",
-                                                className: m.h_,
+                                                className: p.h_,
                                                 variant: "text-sm/normal",
-                                                children: a,
+                                                children: n,
                                             }),
-                                        f,
+                                        x,
                                     ],
                                 }),
                             ],
                         }),
                     }),
-                    (0, n.jsx)(o.s_, { "data-migration-pending": !0, className: m.VN, onClick: x.onClose }),
-                    !v && (0, n.jsx)(u.A, { confettiTarget: g.current, confettiCanvas: k, sprites: (0, p.rA)() }),
+                    (0, a.jsx)(l.s_, { "data-migration-pending": !0, className: p.VN, onClick: g.onClose }),
+                    !j && (0, a.jsx)(u.A, { confettiTarget: N.current, confettiCanvas: f, sprites: (0, m.rA)() }),
                 ],
             }),
         ],

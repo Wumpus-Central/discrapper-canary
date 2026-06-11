@@ -24,38 +24,38 @@ function d(e) {
             spriteCanvas: l,
             baseConfig: d,
             addClickListener: _,
-            removeClickListener: f,
+            removeClickListener: h,
         } = e,
-        h = (0, s.f9)(n, l),
-        p = (0, a.bG)([o.A], () => o.A.useReducedMotion),
+        f = (0, s.f9)(n, l),
+        p = (0, a.bG)([o.Ay], () => o.Ay.useReducedMotion),
         E = r.useMemo(
             () =>
                 p
                     ? u
                     : {
                           confettiCanvas: n,
-                          cannon: h,
-                          createConfetti: (e, t) => h.createConfetti({ ...d, ...e }, t),
+                          cannon: f,
+                          createConfetti: (e, t) => f.createConfetti({ ...d, ...e }, t),
                           createConfettiAt: (e, t, n, i) =>
-                              h.createConfetti({ ...d, position: { type: "static", value: { x: e, y: t } }, ...n }, i),
+                              f.createConfetti({ ...d, position: { type: "static", value: { x: e, y: t } }, ...n }, i),
                           createMultipleConfetti: function (e) {
                               let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 20,
                                   n = arguments.length > 2 ? arguments[2] : void 0;
-                              return h.createMultipleConfetti({ ...d, ...e }, t, n);
+                              return f.createMultipleConfetti({ ...d, ...e }, t, n);
                           },
                           createMultipleConfettiAt: function (e, t, n) {
                               let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 20,
                                   r = arguments.length > 4 ? arguments[4] : void 0;
-                              return h.createMultipleConfetti(
+                              return f.createMultipleConfetti(
                                   { ...d, position: { type: "static", value: { x: e, y: t } }, ...n },
                                   i,
                                   r,
                               );
                           },
                           addClickListener: _,
-                          removeClickListener: f,
+                          removeClickListener: h,
                       },
-            [_, d, h, n, p, f],
+            [_, d, f, n, p, h],
         );
     return (0, i.jsx)(c.Provider, { value: E, children: t });
 }

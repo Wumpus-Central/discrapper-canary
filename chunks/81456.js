@@ -6,7 +6,7 @@ var r = n(775602),
     s = n(676279),
     a = n(788868);
 function o(e) {
-    return (0, i.bG)([r.A], () => r.A.useReducedMotion)
+    return (0, i.bG)([r.Ay], () => r.Ay.useReducedMotion)
         ? (function (e) {
               switch (e) {
                   case a.e.ANIMATED_AVATAR_MODAL_UPSELL:

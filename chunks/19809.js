@@ -420,7 +420,7 @@ function tR(t) {
             rowIndex: h,
             sourceQuestContent: C,
         } = t,
-        j = (0, r.bG)([Y.A], () => Y.A.useReducedMotion),
+        j = (0, r.bG)([Y.Ay], () => Y.Ay.useReducedMotion),
         E = (0, tp.Xf)({ useReducedMotion: j }),
         f = (0, tv.Ut)(),
         v = (0, u.RR)({ quest: l }),
@@ -985,7 +985,7 @@ function tM(t) {
                     children: $,
                 });
         }, [$]),
-        tu = (0, r.bG)([Y.A], () => Y.A.useReducedMotion);
+        tu = (0, r.bG)([Y.Ay], () => Y.Ay.useReducedMotion);
     return (0, n.jsxs)("div", {
         className: tk.kL,
         ref: E,

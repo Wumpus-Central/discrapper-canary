@@ -172,7 +172,7 @@ let ew = eD.Ay.getEnableHardwareAcceleration(),
                 (e) => {
                     (0, g.L3)(e, async () => {
                         let { default: e } = await Promise.all([
-                                n.e("51143"),
+                                n.e("16955"),
                                 n.e("28323"),
                                 n.e("65058"),
                                 n.e("22766"),
@@ -649,7 +649,7 @@ class eG extends r.Component {
 function eF(e) {
     let { channel: t, className: n } = e,
         { analyticsLocations: s } = (0, v.Ay)(y.A.MEMBER_LIST),
-        o = (0, _.bG)([S.A], () => S.A.keyboardModeEnabled),
+        o = (0, _.bG)([S.Ay], () => S.Ay.keyboardModeEnabled),
         l = (0, _.cf)([W.Ay], () => W.Ay.getProps(t.guild_id, t.id)),
         {
             rows: d,

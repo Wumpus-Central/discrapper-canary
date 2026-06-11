@@ -1,36 +1,36 @@
-a.d(t, { A: () => f });
-var i = a(627968),
-    n = a(64700),
-    s = a(503698),
-    l = a.n(s),
-    r = a(735438),
-    o = a(132500),
-    c = a(17928),
-    d = a(228366),
-    _ = a(565645),
-    u = a(775602),
-    m = a(885131);
-let p = [m.u8, m.n$, m.uN, m.no],
-    h = n.memo(function (e) {
-        let { emoji: t, onAnimationEnd: a } = e,
-            s = (0, r.sample)(p),
-            o = n.useCallback(() => {
-                a(t.key);
-            }, [t.key, a]);
+n.d(t, { A: () => x });
+var i = n(627968),
+    l = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    r = n(735438),
+    o = n(835245),
+    c = n(17928),
+    d = n(228366),
+    u = n(565645),
+    h = n(775602),
+    p = n(885131);
+let m = [p.u8, p.n$, p.uN, p.no],
+    A = l.memo(function (e) {
+        let { emoji: t, onAnimationEnd: n } = e,
+            a = (0, r.sample)(m),
+            o = l.useCallback(() => {
+                n(t.key);
+            }, [t.key, n]);
         return (0, i.jsx)("div", {
-            className: l()(m.Zg, s),
+            className: s()(p.Zg, a),
             onAnimationEnd: o,
-            children: (0, i.jsx)(_.A, { emojiId: t.id, emojiName: t.name, animated: t.animated ?? !1 }),
+            children: (0, i.jsx)(u.A, { emojiId: t.id, emojiName: t.name, animated: t.animated ?? !1 }),
         });
     });
-function f(e) {
-    let { channelId: t, callHeight: a } = e,
-        s = (0, c.bG)([u.A], () => u.A.useReducedMotion),
-        [l, r] = n.useState([]);
-    n.useEffect(() => {
+function x(e) {
+    let { channelId: t, callHeight: n } = e,
+        a = (0, c.bG)([h.Ay], () => h.Ay.useReducedMotion),
+        [s, r] = l.useState([]);
+    l.useEffect(() => {
         function e(e) {
-            let { channelId: a, emoji: i } = e;
-            a !== t || s || null == i || r((e) => [...e, { key: (0, o.A)(), ...i }]);
+            let { channelId: n, emoji: i } = e;
+            n !== t || a || null == i || r((e) => [...e, { key: (0, o.A)(), ...i }]);
         }
         return (
             d.h.subscribe("VOICE_CHANNEL_EFFECT_SEND", e),
@@ -38,16 +38,16 @@ function f(e) {
                 d.h.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e);
             }
         );
-    }, [t, s]);
-    let _ = n.useCallback((e) => {
+    }, [t, a]);
+    let u = l.useCallback((e) => {
         r((t) => t.filter((t) => t.key !== e));
     }, []);
-    return s
+    return a
         ? null
         : (0, i.jsx)("div", {
-              className: m.kL,
-              style: { top: a - 50, left: "52%" },
+              className: p.kL,
+              style: { top: n - 50, left: "52%" },
               "aria-hidden": !0,
-              children: l.map((e) => (0, i.jsx)(h, { emoji: e, onAnimationEnd: _ }, e.key)),
+              children: s.map((e) => (0, i.jsx)(A, { emoji: e, onAnimationEnd: u }, e.key)),
           });
 }

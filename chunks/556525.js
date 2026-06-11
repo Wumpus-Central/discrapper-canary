@@ -18,15 +18,15 @@ function c(e) {
             maxInnerSpreadRadius: d = 1,
             hideIfVolumeMissing: _ = !1,
         } = e,
-        f = n(773371).default,
+        h = n(773371).default,
         {
-            shouldReduceMotion: h,
+            shouldReduceMotion: f,
             useForcedColors: p,
             isAppFocusedOrOverlayVisible: E,
-        } = (0, s.cf)([a.A, o.A, f], () => ({
-            shouldReduceMotion: a.A.useReducedMotion,
-            useForcedColors: a.A.useForcedColors,
-            isAppFocusedOrOverlayVisible: o.A.isAppFocused() || null != f.getFocusedPID(),
+        } = (0, s.cf)([a.Ay, o.A, h], () => ({
+            shouldReduceMotion: a.Ay.useReducedMotion,
+            useForcedColors: a.Ay.useForcedColors,
+            isAppFocusedOrOverlayVisible: o.A.isAppFocused() || null != h.getFocusedPID(),
         }));
     return r.useMemo(() => {
         let e = {};
@@ -36,7 +36,7 @@ function c(e) {
                 n = 2,
                 r = 3;
             i !== -1 / 0 &&
-                !h &&
+                !f &&
                 E &&
                 ((t = "INSET_ONLY" === u ? 0 : l(i, c)),
                 (n = "OUTSET_ONLY" === u ? 0 : l(i, d)),
@@ -45,5 +45,5 @@ function c(e) {
             e.boxShadow = `0 0 0 ${t}px ${s}, inset 0 0 0 ${n}px ${s}, inset 0 0 0 ${r}px var(--background-base-lower)`;
         }
         return E && (e.transition = "box-shadow 50ms ease-out"), e;
-    }, [t, E, h, p, i, u, c, d, _]);
+    }, [t, E, f, p, i, u, c, d, _]);
 }

@@ -1,60 +1,60 @@
 "use strict";
-n.d(t, { o: () => O }), n(323874), n(14289), n(35956);
+n.d(t, { o: () => C }), n(323874), n(14289), n(35956);
 var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(337126),
-    l = n(132500),
-    d = n(440454),
-    _ = n(363195),
-    u = n(625494),
-    c = n(851907),
-    E = n(735438),
-    h = n(17928),
-    m = n(192308),
-    f = n(267102),
-    g = n(186111),
-    p = n(712687),
+    l = n(835245),
+    u = n(440454),
+    c = n(363195),
+    d = n(625494),
+    _ = n(851907),
+    h = n(735438),
+    f = n(17928),
+    p = n(192308),
+    E = n(267102),
+    m = n(186111),
+    g = n(712687),
     A = n(652215),
     I = n(775602);
-let T = (0, E.debounce)((e) => {
+let T = (0, h.debounce)((e) => {
         setTimeout(() => {
             e.current?.focus();
         }, 0);
     }, 50),
     S = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
-var N = n(360469),
-    C = n(457771);
-function R(e) {
+var y = n(360469),
+    N = n(457771);
+function v(e) {
     let {
             url: t,
             className: n,
             style: s,
             onLoad: a,
-            shouldRefocus: E,
-            queryParams: C,
-            allowPopups: R = !1,
-            referrerPolicy: O = "origin",
+            shouldRefocus: h,
+            queryParams: N,
+            allowPopups: v = !1,
+            referrerPolicy: C = "origin",
         } = e,
-        y = (0, c.xi)({}),
-        v = (0, o.useMemoOne)(() => (0, l.A)(), [t]),
-        D = r.useRef(null),
-        L = (function (e, t) {
+        R = (0, _.xi)({}),
+        O = (0, o.useMemoOne)(() => (0, l.A)(), [t]),
+        b = r.useRef(null),
+        D = (function (e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
-                i = (0, h.bG)([I.A], () => I.A.keyboardModeEnabled),
+                i = (0, f.bG)([I.Ay], () => I.Ay.keyboardModeEnabled),
                 s = (function () {
-                    let e = (0, m.useModalsStore)(
+                    let e = (0, p.useModalsStore)(
                             (e) =>
                                 !Object.entries(e).every((e) => {
                                     let [t, n] = e;
                                     return 0 === n.length;
                                 }),
                         ),
-                        t = (0, h.bG)([p.A], () => p.A.isOpen()),
-                        n = (0, h.bG)([g.A], () => g.A.hasLayers()),
+                        t = (0, f.bG)([g.A], () => g.A.isOpen()),
+                        n = (0, f.bG)([m.A], () => m.A.hasLayers()),
                         [i, s] = r.useState(!1),
-                        a = (0, f.aL)();
+                        a = (0, E.aL)();
                     return (
                         r.useEffect(() => {
                             function e() {
@@ -75,12 +75,12 @@ function R(e) {
                     );
                 })(),
                 [a, o] = r.useState(!1),
-                l = (0, f.aL)();
+                l = (0, E.aL)();
             return (
                 r.useEffect(() => {
                     if (t) return n.addEventListener("blur", e), () => n.removeEventListener("blur", e);
                     function e() {
-                        s && (l.dispatch(A.jej.POPOUT_CLOSE), u._.dispatch(A.jej.CONTEXT_MENU_CLOSE));
+                        s && (l.dispatch(A.jej.POPOUT_CLOSE), d._.dispatch(A.jej.CONTEXT_MENU_CLOSE));
                     }
                 }, [n, s, t, l]),
                 r.useEffect(() => {
@@ -103,58 +103,58 @@ function R(e) {
                 }, [t, a, i, e, n, s]),
                 o
             );
-        })(D, E, null == y ? window : y),
-        b = { ...C, frame_id: v, platform: N.vu.DESKTOP },
-        [w, P] = r.useState(!1),
-        k = _.A.theme,
-        M = { ...s };
+        })(b, h, null == R ? window : R),
+        L = { ...N, frame_id: O, platform: y.vu.DESKTOP },
+        [w, M] = r.useState(!1),
+        P = c.A.theme,
+        x = { ...s };
     return (
-        k === A.NJ8.LIGHT ? (M.colorScheme = "light") : (M.colorScheme = "dark"),
+        P === A.NJ8.LIGHT ? (x.colorScheme = "light") : (x.colorScheme = "dark"),
         r.useEffect(
             () => (
-                u._.dispatch(A.jej.IFRAME_MOUNT, { id: v }),
+                d._.dispatch(A.jej.IFRAME_MOUNT, { id: O }),
                 () => {
-                    u._.dispatch(A.jej.IFRAME_UNMOUNT, { id: v });
+                    d._.dispatch(A.jej.IFRAME_UNMOUNT, { id: O });
                 }
             ),
-            [v],
+            [O],
         ),
         r.useEffect(() => {
             let e = (e) => {
                 let { resizing: t } = e;
-                P(t);
+                M(t);
             };
             return (
-                u._.subscribe(A.jej.MANUAL_IFRAME_RESIZING, e),
+                d._.subscribe(A.jej.MANUAL_IFRAME_RESIZING, e),
                 () => {
-                    u._.unsubscribe(A.jej.MANUAL_IFRAME_RESIZING, e);
+                    d._.unsubscribe(A.jej.MANUAL_IFRAME_RESIZING, e);
                 }
             );
         }, []),
-        w && (M.pointerEvents = "none"),
+        w && (x.pointerEvents = "none"),
         null != t
             ? (0, i.jsx)("iframe", {
-                  style: M,
+                  style: x,
                   allow: "autoplay; encrypted-media",
-                  referrerPolicy: O,
+                  referrerPolicy: C,
                   onLoad: function (e) {
                       a?.(e.target),
-                          (D.current = e.target),
-                          L(!0),
-                          e.target.contentWindow?.postMessage([d.A.HELLO, b], t ?? "");
+                          (b.current = e.target),
+                          D(!0),
+                          e.target.contentWindow?.postMessage([u.A.HELLO, L], t ?? "");
                   },
                   sandbox: (function (e) {
                       let { allowPopups: t } = e,
                           n = S;
                       return t && (n = [...S, "allow-popups", "allow-popups-to-escape-sandbox"]), n.join(" ");
-                  })({ allowPopups: R }),
+                  })({ allowPopups: v }),
                   className: n,
-                  src: `${t}?${new URLSearchParams(b)}`,
+                  src: `${t}?${new URLSearchParams(L)}`,
               })
             : null
     );
 }
-function O(e) {
+function C(e) {
     let { onLoad: t } = e,
         [n, s] = r.useState(!1),
         o = r.useCallback(
@@ -164,12 +164,12 @@ function O(e) {
             [t],
         );
     return (0, i.jsxs)("div", {
-        className: C.Qf,
+        className: N.Qf,
         children: [
-            !n && (0, i.jsx)("div", { className: a()(C.Qf, C.SL) }),
+            !n && (0, i.jsx)("div", { className: a()(N.Qf, N.SL) }),
             (0, i.jsx)("div", {
-                className: a()(C.Qf, n ? void 0 : C.Ar),
-                children: (0, i.jsx)(R, { ...e, onLoad: o }),
+                className: a()(N.Qf, n ? void 0 : N.Ar),
+                children: (0, i.jsx)(v, { ...e, onLoad: o }),
             }),
         ],
     });

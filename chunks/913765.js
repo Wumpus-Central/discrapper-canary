@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => $ });
+n.d(t, { A: () => z });
 var i = n(627968),
     r = n(64700),
     s = n(192308),
@@ -11,8 +11,8 @@ var l = n(503698),
     c = n(284009),
     d = n.n(c),
     _ = n(735438),
-    f = n.n(_),
-    h = n(615300),
+    h = n.n(_),
+    f = n(615300),
     p = n(17928),
     E = n(868285),
     m = n(534514),
@@ -21,12 +21,12 @@ var l = n(503698),
     I = n(707554),
     T = n(689175),
     S = n(939249),
-    N = n(935462),
-    y = n(337371),
-    C = n(116305),
-    v = n(775121),
-    O = n(775602),
-    R = n(400492),
+    y = n(935462),
+    N = n(337371),
+    v = n(116305),
+    C = n(775121),
+    R = n(775602),
+    O = n(400492),
     b = n(625494),
     D = n(652215),
     L = n(868347);
@@ -45,9 +45,9 @@ class M extends r.PureComponent {
     state = {
         animating: !1,
         renderSecondary: !1,
-        scale: f().random(0.6, 1, !0),
-        offsetX: f().random(0, 140, !1) - 70,
-        offsetY: f().random(0, 140, !1) - 70,
+        scale: h().random(0.6, 1, !0),
+        offsetX: h().random(0, 140, !1) - 70,
+        offsetY: h().random(0, 140, !1) - 70,
     };
     componentDidMount() {
         this.setState({ animating: !0 }),
@@ -136,7 +136,7 @@ class P extends r.PureComponent {
             this.setTimeout(this.createExplosion, 1800);
     }
     componentWillUnmount() {
-        for (let e of (v.A.enable(), (this.children.length = 0), this._timeouts)) clearTimeout(e);
+        for (let e of (C.A.enable(), (this.children.length = 0), this._timeouts)) clearTimeout(e);
     }
     setTimeout = (e, t) => {
         let n = setTimeout(e, t);
@@ -162,8 +162,8 @@ class P extends r.PureComponent {
                     M,
                     {
                         componentId: r,
-                        top: f().random(n - 100, n + 100, !1),
-                        left: f().random(t - 200, t + 200, !1),
+                        top: h().random(n - 100, n + 100, !1),
+                        left: h().random(t - 200, t + 200, !1),
                         onAnimationComplete: this.removeExplosion,
                     },
                     r,
@@ -184,13 +184,13 @@ class P extends r.PureComponent {
     }
 }
 var x = n(650583),
-    U = n(375708),
-    k = n(393509);
+    k = n(375708),
+    U = n(393509);
 let G = {
-    UP: f().throttle(() => (0, R.Ak)("ddr-up"), 100),
-    DOWN: f().throttle(() => (0, R.Ak)("ddr-down"), 100),
-    LEFT: f().throttle(() => (0, R.Ak)("ddr-left"), 100),
-    RIGHT: f().throttle(() => (0, R.Ak)("ddr-right"), 100),
+    UP: h().throttle(() => (0, O.Ak)("ddr-up"), 100),
+    DOWN: h().throttle(() => (0, O.Ak)("ddr-down"), 100),
+    LEFT: h().throttle(() => (0, O.Ak)("ddr-left"), 100),
+    RIGHT: h().throttle(() => (0, O.Ak)("ddr-right"), 100),
 };
 function F(e) {
     switch (e.key) {
@@ -206,48 +206,48 @@ function F(e) {
             return null;
     }
 }
-let V = [y.Q_.MESSAGE, y.Q_.NAVIGATION, y.Q_.VOICE_AND_VIDEO, y.Q_.CHAT, y.Q_.MISCELLANEOUS];
+let V = [N.Q_.MESSAGE, N.Q_.NAVIGATION, N.Q_.VOICE_AND_VIDEO, N.Q_.CHAT, N.Q_.MISCELLANEOUS];
 function B(e) {
     let { showBackdrop: t } = e;
-    return (0, i.jsx)("div", { className: u()(k.tB, { [k.WU]: t }) });
+    return (0, i.jsx)("div", { className: u()(U.tB, { [U.WU]: t }) });
 }
 function H() {
     let e = r.useMemo(
         () =>
-            f()((0, y.Bx)())
+            h()((0, N.Bx)())
                 .groupBy((e) => e.group)
                 .value(),
         [],
     );
     return (0, i.jsx)("div", {
-        className: k.Io,
+        className: U.Io,
         children: V.map((t) => {
             let n = e[t],
-                r = (0, y.Gm)(t),
-                s = (0, y.zF)(t);
+                r = (0, N.Gm)(t),
+                s = (0, N.zF)(t);
             return (0, i.jsxs)(
                 "div",
                 {
-                    className: k.ZK,
+                    className: U.ZK,
                     children: [
                         (0, i.jsxs)("div", {
                             children: [
                                 (0, i.jsx)(m.D, { variant: "heading-lg/semibold", children: r }),
                                 null != s &&
-                                    (0, i.jsx)(g.E, { className: k.UX, variant: "text-sm/normal", children: s }),
+                                    (0, i.jsx)(g.E, { className: U.UX, variant: "text-sm/normal", children: s }),
                             ],
                         }),
                         (0, i.jsx)(
                             "div",
                             {
-                                className: k.tI,
+                                className: U.tI,
                                 children: n.map((e, t) =>
                                     e.predicate?.() === !1
                                         ? null
                                         : (0, i.jsxs)(
                                               "div",
                                               {
-                                                  className: k.YI,
+                                                  className: U.YI,
                                                   children: [
                                                       (0, i.jsx)(g.E, {
                                                           variant: "text-sm/normal",
@@ -256,7 +256,7 @@ function H() {
                                                       (0, i.jsx)("div", {
                                                           className: "keybind-shortcuts",
                                                           children: e.binds.map((e) =>
-                                                              (0, i.jsx)(A.e, { className: k.Me, shortcut: e }, e),
+                                                              (0, i.jsx)(A.e, { className: U.Me, shortcut: e }, e),
                                                           ),
                                                       }),
                                                   ],
@@ -280,9 +280,9 @@ class j extends r.PureComponent {
         DOWN: !1,
         LEFT: !1,
         RIGHT: !1,
-        opacity: new h.A.Value(1),
-        scaleX: new h.A.Value(1),
-        scaleY: new h.A.Value(0),
+        opacity: new f.A.Value(1),
+        scaleX: new f.A.Value(1),
+        scaleY: new f.A.Value(0),
         animating: !1,
     };
     scrollerRef = r.createRef();
@@ -321,8 +321,8 @@ class j extends r.PureComponent {
             this.state.opacity.setValue(1),
             this.state.scaleX.setValue(0.5),
             this.state.scaleY.setValue(1),
-            h.A.sequence([
-                h.A.timing(this.state.opacity, { toValue: 0, duration: 800, easing: h.A.Easing.cubic }),
+            f.A.sequence([
+                f.A.timing(this.state.opacity, { toValue: 0, duration: 800, easing: f.A.Easing.cubic }),
             ]).start(e);
     };
     toggleOpacity = () => {
@@ -361,25 +361,25 @@ class j extends r.PureComponent {
     };
     render() {
         let { UP: e, DOWN: t, LEFT: n, RIGHT: r } = this.state;
-        return (0, i.jsxs)(h.A.div, {
-            className: k.UV,
+        return (0, i.jsxs)(f.A.div, {
+            className: U.UV,
             style: this.getStyles(),
             children: [
                 (0, i.jsxs)(I.H, {
-                    className: k.GK,
+                    className: U.GK,
                     children: [
-                        (0, i.jsx)("div", { className: k.Qs, children: U.intl.string(U.t["1BdUtx"]) }),
+                        (0, i.jsx)("div", { className: U.Qs, children: k.intl.string(k.t["1BdUtx"]) }),
                         (0, i.jsx)(A.e, { shortcut: "mod+/" }),
                     ],
                 }),
-                (0, i.jsx)("div", { className: k.KV, children: U.intl.string(U.t["2t19lU"]) }),
+                (0, i.jsx)("div", { className: U.KV, children: k.intl.string(k.t["2t19lU"]) }),
                 (0, i.jsxs)("div", {
-                    className: k.Pg,
+                    className: U.Pg,
                     children: [
-                        (0, i.jsx)(Y, { arrow: "LEFT", isActive: n, className: k.kb, children: "left" }),
-                        (0, i.jsx)(Y, { arrow: "DOWN", isActive: t, className: k.TR, children: "down" }),
-                        (0, i.jsx)(Y, { arrow: "UP", isActive: e, className: k.up, children: "up" }),
-                        (0, i.jsx)(Y, { arrow: "RIGHT", isActive: r, className: k.pG, children: "right" }),
+                        (0, i.jsx)(Y, { arrow: "LEFT", isActive: n, className: U.kb, children: "left" }),
+                        (0, i.jsx)(Y, { arrow: "DOWN", isActive: t, className: U.TR, children: "down" }),
+                        (0, i.jsx)(Y, { arrow: "UP", isActive: e, className: U.up, children: "up" }),
+                        (0, i.jsx)(Y, { arrow: "RIGHT", isActive: r, className: U.pG, children: "right" }),
                     ],
                 }),
                 (0, i.jsx)(T.Gt, {
@@ -404,25 +404,25 @@ function Y(e) {
                 return () => clearTimeout(e);
             }
         }, [o]),
-        (0, i.jsx)(S.D, { onClick: c, className: u()(k.UE, s, { [k.vu]: t || o }), children: a })
+        (0, i.jsx)(S.D, { onClick: c, className: u()(U.UE, s, { [U.vu]: t || o }), children: a })
     );
 }
 function W(e) {
     let { transitionState: t, onClose: n } = e,
         [s, a] = r.useState(!1),
         [o, l] = r.useState(!1),
-        c = r.useMemo(() => (__OVERLAY__ ? (0, C.y8)() : (0, y.Bx)()), []),
-        { keyboardModeEnabled: d, useReducedMotion: _ } = (0, p.cf)([O.A], () => ({
-            keyboardModeEnabled: O.A.keyboardModeEnabled,
-            useReducedMotion: O.A.useReducedMotion,
+        c = r.useMemo(() => (__OVERLAY__ ? (0, v.y8)() : (0, N.Bx)()), []),
+        { keyboardModeEnabled: d, useReducedMotion: _ } = (0, p.cf)([R.Ay], () => ({
+            keyboardModeEnabled: R.Ay.keyboardModeEnabled,
+            useReducedMotion: R.Ay.useReducedMotion,
         }));
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(B, { showBackdrop: o }),
-            (0, i.jsx)(N.EO, {
-                className: u()(k._$, { [k.O9]: s }),
-                size: N.rI.DYNAMIC,
-                "aria-label": U.intl.string(U.t.T9DA2K),
+            (0, i.jsx)(y.EO, {
+                className: u()(U._$, { [U.O9]: s }),
+                size: y.rI.DYNAMIC,
+                "aria-label": k.intl.string(k.t.T9DA2K),
                 transitionState: t,
                 parentComponent: "KeyboardShortcutsModal",
                 children: (0, i.jsx)(E.F, {
@@ -443,7 +443,7 @@ function W(e) {
                                   content: c,
                                   keyboardModeEnabled: d,
                                   activateRagingDemon: function () {
-                                      _ || (v.A.disable(), a(!0), l(!0));
+                                      _ || (C.A.disable(), a(!0), l(!0));
                                   },
                               },
                               "modal",
@@ -454,7 +454,7 @@ function W(e) {
     });
 }
 var K = n(946974);
-class z extends o.A {
+class $ extends o.A {
     _initialize() {
         a.h.subscribe("SHOW_KEYBOARD_SHORTCUTS", this.showKeyboardShortcuts),
             a.h.subscribe("HIDE_KEYBOARD_SHORTCUTS", this.hideKeyboardShortcuts);
@@ -470,4 +470,4 @@ class z extends o.A {
         (0, s.closeModal)(K.P);
     }
 }
-let $ = new z();
+let z = new $();

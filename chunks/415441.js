@@ -18,7 +18,7 @@ function d(e) {
             onLoadComplete: f,
             assetRef: p,
         } = e,
-        E = (0, s.bG)([a.A], () => a.A.useReducedMotion),
+        E = (0, s.bG)([a.Ay], () => a.Ay.useReducedMotion),
         m = null == d || d.asset.isAnimated ? null : d.asset.url,
         g = null != _ && _.asset.isAnimated ? _.asset.url : null,
         A = h?.width,

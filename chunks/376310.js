@@ -1,4 +1,4 @@
-s.d(l, { A: () => N, q: () => f });
+s.d(l, { A: () => L, q: () => N });
 var t,
     n = s(627968),
     i = s(64700),
@@ -14,28 +14,28 @@ var t,
     j = s(565645),
     p = s(775602),
     h = s(159273),
-    g = s(253932),
+    g = s(885386),
     M = s(957565),
-    A = s(985018),
-    C = s(422017),
-    L = (((t = L || {})[(t.SMALL = 0)] = "SMALL"), (t[(t.MEDIUM = 1)] = "MEDIUM"), t);
-function N(e) {
-    let { tag: l, size: t = 1, disabled: a, className: d, onClick: L, onRemove: N, selected: f, ariaLabel: k } = e,
-        { name: v, emojiId: y, emojiName: S } = l,
-        E = null != N,
+    y = s(375708),
+    A = s(422017),
+    C = (((t = C || {})[(t.SMALL = 0)] = "SMALL"), (t[(t.MEDIUM = 1)] = "MEDIUM"), t);
+function L(e) {
+    let { tag: l, size: t = 1, disabled: a, className: d, onClick: C, onRemove: L, selected: N, ariaLabel: f } = e,
+        { name: k, emojiId: v, emojiName: S } = l,
+        E = null != L,
         [z, P] = i.useState(!1),
-        _ = (0, c.bG)([h.Ay], () => (null != y ? h.Ay.getUsableCustomEmojiById(y) : null)),
-        I = E || null != L,
-        R = (!E || !z) && (null != y || null != S),
+        _ = (0, c.bG)([h.Ay], () => (null != v ? h.Ay.getUsableCustomEmojiById(v) : null)),
+        I = E || null != C,
+        R = (!E || !z) && (null != v || null != S),
         T = 0 === t,
         w = i.useRef(null),
-        D = (0, c.bG)([p.A], () => p.A.keyboardModeEnabled),
+        D = (0, c.bG)([p.Ay], () => p.Ay.keyboardModeEnabled),
         U = (0, n.jsxs)(n.Fragment, {
             children: [
                 R
                     ? (0, n.jsx)(j.A, {
-                          className: r()(C.emoji, { [C.small]: T }),
-                          emojiId: y,
+                          className: r()(A.emoji, { [A.small]: T }),
+                          emojiId: v,
                           emojiName: S,
                           animated: !!_?.animated,
                           size: "reaction",
@@ -44,32 +44,32 @@ function N(e) {
                 z &&
                     E &&
                     (0, n.jsx)("div", {
-                        className: C.closeCircle,
-                        children: (0, n.jsx)(u.P, { size: "md", color: "currentColor", className: C.close }),
+                        className: A.closeCircle,
+                        children: (0, n.jsx)(u.P, { size: "md", color: "currentColor", className: A.close }),
                     }),
                 (0, n.jsx)(m.E, {
                     variant: T ? "text-xs/semibold" : "text-sm/semibold",
                     lineClamp: 1,
                     color: "currentColor",
-                    children: v,
+                    children: k,
                 }),
             ],
         }),
         F = {
             key: l.id,
             className: r()(
-                C.pill,
+                A.pill,
                 {
-                    [C.disabled]: a,
-                    [C.clickable]: I,
-                    [C.small]: T,
-                    [C.selected]: f,
-                    [C[l.color]]: null != l.color && !I,
+                    [A.disabled]: a,
+                    [A.clickable]: I,
+                    [A.small]: T,
+                    [A.selected]: N,
+                    [A[l.color]]: null != l.color && !I,
                 },
                 d,
             ),
             onClick: (e) => {
-                L?.(e), N?.(l), D || null == w.current || w.current.blur();
+                C?.(e), L?.(l), D || null == w.current || w.current.blur();
             },
             onContextMenu: (e) => {
                 let t;
@@ -94,26 +94,26 @@ function N(e) {
               ...G,
               innerRef: w,
               focusProps: { ringTarget: w },
-              "aria-label": null != k ? k : A.intl.formatToPlainString(A.t.iyRTLm, { tagName: v }),
+              "aria-label": null != f ? f : y.intl.formatToPlainString(y.t.iyRTLm, { tagName: k }),
               role: "button",
-              "aria-pressed": f,
+              "aria-pressed": N,
               ...F,
               children: U,
           })
         : (0, n.jsx)("div", { ...F, children: U });
 }
-function f(e) {
+function N(e) {
     let { tags: l, count: s, size: t = 1 } = e,
         i = 0 === t;
     return (0, n.jsx)(d.m, {
-        "aria-label": A.intl.string(A.t["P/y+sj"]),
+        "aria-label": y.intl.string(y.t["P/y+sj"]),
         __unsupportedReactNodeAsText: (0, n.jsx)(n.Fragment, {
-            children: l.map((e) => (0, n.jsx)(N, { tag: e, className: C.tooltipPill, size: N.Sizes.SMALL }, e.id)),
+            children: l.map((e) => (0, n.jsx)(L, { tag: e, className: A.tooltipPill, size: L.Sizes.SMALL }, e.id)),
         }),
         children: (0, n.jsx)("div", {
-            className: r()(C.pill, { [C.small]: i }),
+            className: r()(A.pill, { [A.small]: i }),
             children: (0, n.jsxs)(m.E, { variant: i ? "text-xs/semibold" : "text-sm/semibold", children: ["+", s] }),
         }),
     });
 }
-N.Sizes = L;
+L.Sizes = C;

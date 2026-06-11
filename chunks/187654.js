@@ -561,7 +561,7 @@ let ee = s.memo(function (e) {
             focusedIndex: 0,
             setFocus: s.useCallback(
                 (e, t) => {
-                    if (!N.A.keyboardModeEnabled) return;
+                    if (!N.Ay.keyboardModeEnabled) return;
                     let n = L.current,
                         l = null != t ? n[t] : void 0;
                     if (null == l || null == l.hitRef.current) return;

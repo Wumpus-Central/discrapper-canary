@@ -19,8 +19,8 @@ var s = n(627968),
     j = n(688810),
     I = n(83297),
     E = n(85109),
-    S = n(734057),
-    y = n(71393),
+    y = n(734057),
+    S = n(71393),
     O = n(232835),
     T = n(222823),
     b = n(935208),
@@ -43,7 +43,7 @@ var D = n(331322),
     B = n(826733);
 function G(e) {
     let { withHeader: t = !0, size: n = 15 } = e,
-        i = (0, o.bG)([w.A], () => w.A.useReducedMotion);
+        i = (0, o.bG)([w.Ay], () => w.Ay.useReducedMotion);
     return (0, s.jsxs)(D.B, {
         gap: 4,
         children: [
@@ -62,7 +62,7 @@ function K(e) {
     return (0, s.jsx)("div", { className: l()(B.n8, t) });
 }
 function z() {
-    let e = (0, o.bG)([w.A], () => w.A.useReducedMotion);
+    let e = (0, o.bG)([w.Ay], () => w.Ay.useReducedMotion);
     return (0, s.jsxs)("div", {
         style: { display: "flex", flexDirection: "row", gap: 12, padding: 4 },
         className: l()(B.iE, { [B.cb]: e }),
@@ -131,8 +131,8 @@ var eN = n(922016),
     ej = n(933832),
     eI = n(606096),
     eE = n(997146),
-    eS = n(980707),
-    ey = n(477782),
+    ey = n(980707),
+    eS = n(477782),
     eO = n(782603),
     eT = n(461678),
     eb = n(880457),
@@ -245,7 +245,7 @@ let ew = {
             let { message: t, renderPopoutProps: n } = e,
                 i = (0, o.bG)([E.A], () => E.A.getSavedMessage(t.channel_id, t.id)),
                 a = (0, eb.P)({ message: t, savedMessage: i });
-            return (0, s.jsxs)(eS.W, {
+            return (0, s.jsxs)(ey.W, {
                 "data-menu-migrated-auto": !0,
                 ...n,
                 navId: "message-reminder-create",
@@ -254,7 +254,7 @@ let ew = {
                 onSelect: () => null,
                 children: [
                     null != i
-                        ? (0, s.jsx)(ey.Dr, {
+                        ? (0, s.jsx)(eS.Dr, {
                               id: "remove-from-for-later",
                               label: eR.intl.string(eR.t.SvXS1Z),
                               icon: eI.c,
@@ -267,14 +267,14 @@ let ew = {
                                       displayToast: !0,
                                   }),
                           })
-                        : (0, s.jsx)(ey.Dr, {
+                        : (0, s.jsx)(eS.Dr, {
                               id: "create-bookmark",
                               label: eR.intl.string(eR.t["9p3D9p"]),
                               icon: eE.c,
                               leadingAccessory: { type: "icon", icon: eE.c },
                               action: () => (0, eU.Y)({ channelId: t.channel_id, messageId: t.id, displayToast: !0 }),
                           }),
-                    (0, s.jsx)(ey.bX, {}),
+                    (0, s.jsx)(eS.bX, {}),
                     a,
                 ],
             });
@@ -351,20 +351,20 @@ function eY(e) {
         } = e,
         I = { width: (0, $.FT)(n), height: (0, $.FT)(n) },
         E = (0, i.useId)(),
-        S = p.size * ez.Xq,
-        y =
+        y = p.size * ez.Xq,
+        S =
             null != x &&
             (0, s.jsxs)("svg", {
-                width: S,
-                height: S,
-                viewBox: `0 0 ${S} ${S}`,
+                width: y,
+                height: y,
+                viewBox: `0 0 ${y} ${y}`,
                 className: eX.DX,
                 "aria-hidden": !0,
                 children: [
                     (0, s.jsxs)("mask", {
                         id: E,
                         children: [
-                            (0, s.jsx)("rect", { x: 0, y: 0, width: S, height: S, fill: "white" }),
+                            (0, s.jsx)("rect", { x: 0, y: 0, width: y, height: y, fill: "white" }),
                             null != A &&
                                 (function (e, t) {
                                     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
@@ -388,14 +388,14 @@ function eY(e) {
                                         rx: e.stroke,
                                         fill: "black",
                                     });
-                                })(p, S, N, f),
+                                })(p, y, N, f),
                         ],
                     }),
                     (0, s.jsx)("foreignObject", {
                         x: 0,
                         y: 0,
-                        width: S,
-                        height: S,
+                        width: y,
+                        height: y,
                         mask: `url(#${E})`,
                         children: (0, s.jsx)("img", { className: eX.M, src: x, alt: " ", "aria-hidden": !0 }),
                     }),
@@ -413,7 +413,7 @@ function eY(e) {
               onMouseLeave: u ?? void 0,
               "aria-label": j ?? void 0,
               "aria-hidden": g,
-              children: [t, y],
+              children: [t, S],
           })
         : (0, s.jsxs)("div", {
               className: l()(eX.iE, h),
@@ -424,7 +424,7 @@ function eY(e) {
               role: "img",
               "aria-label": j ?? void 0,
               "aria-hidden": g,
-              children: [t, y],
+              children: [t, S],
           });
 }
 function eP(e) {
@@ -589,7 +589,7 @@ function eF(e) {
     let { message: t, channel: n, focusProps: a, isSelected: r, isUnread: c, messageCount: d } = e,
         u = n.type === eC.rbe.UNKNOWN ? H.N : (0, es.gU)(n, null),
         g = (0, en.Ay)(n, !1),
-        m = (0, o.bG)([y.A], () => y.A.getGuild(n.getGuildId())),
+        m = (0, o.bG)([S.A], () => S.A.getGuild(n.getGuildId())),
         { nick: x, colorString: p } = (0, el.Ay)(t),
         { avatarSrc: A, eventHandlers: N } = (0, eg.A)({
             userId: t.author.id,
@@ -601,7 +601,7 @@ function eF(e) {
         j = n.isPrivate() ? d : +!!t.mentioned,
         I = c && j > 0,
         E = (0, ec.y)({ channel: n, message: t, user: t.author, compact: !0, isRepliedMessage: !0 }),
-        S = (0, s.jsx)("div", {
+        y = (0, s.jsx)("div", {
             className: eL.Ys,
             inert: !0,
             children: (0, s.jsx)(ed.A, {
@@ -661,7 +661,7 @@ function eF(e) {
                                                   (0, s.jsx)("div", {
                                                       className: eL.Xh,
                                                       style: { color: p ?? void 0 },
-                                                      children: (0, s.jsx)(Y.A, { children: S }),
+                                                      children: (0, s.jsx)(Y.A, { children: y }),
                                                   }),
                                                   E,
                                               ],
@@ -815,9 +815,9 @@ let eJ = (0, i.memo)(
             c = t.message,
             d = (0, M.op)(),
             { params: u } = (0, X.W5)(),
-            h = (0, o.bG)([S.A], () => {
+            h = (0, o.bG)([y.A], () => {
                 if (null == c) return null;
-                let e = S.A.getChannel(t.channelId);
+                let e = y.A.getChannel(t.channelId);
                 return null != e
                     ? e
                     : new em.jb({
@@ -985,13 +985,13 @@ function tl(e) {
         {
             isLoading: I,
             isLoadingComplete: E,
-            hasLoadedEver: S,
+            hasLoadedEver: y,
         } = (0, o.cf)([R.A], () => ({
             isLoading: R.A.isLoading,
             isLoadingComplete: R.A.isLoadingComplete,
             hasLoadedEver: R.A.hasLoadedEver,
         })),
-        { messageCategoryOpenStates: y, toggleOpenState: O } = e5(),
+        { messageCategoryOpenStates: S, toggleOpenState: O } = e5(),
         v =
             ((t = (0, o.yK)([R.A], () => R.A.getNotifyingChannelIds() ?? [])),
             (0, o.bG)([R.A, T.Ay], () => {
@@ -1053,7 +1053,7 @@ function tl(e) {
             );
         }, [n, a]),
         w = 0 === n.length && 0 === a.length && E,
-        B = !S,
+        B = !y,
         G = i.useMemo(() => ti.filter((e) => D[e].length > 0), [D]),
         K = i.useMemo(() => {
             if (m)
@@ -1063,10 +1063,10 @@ function tl(e) {
                 ];
             let e = [];
             for (let t of G)
-                if ((e.push({ type: "section-header", category: t }), y[t]))
+                if ((e.push({ type: "section-header", category: t }), S[t]))
                     for (let n of D[t]) e.push({ type: "message", messageGroup: n, isUnread: t === eM.Ur.UNREAD });
             return e;
-        }, [m, a, n, G, y, D]),
+        }, [m, a, n, G, S, D]),
         z = i.useMemo(() => [K.length], [K.length]),
         X = i.useCallback((e, t) => (K[t]?.type === "section-header" ? 32 : 64), [K]),
         Y = i.useCallback(
@@ -1078,9 +1078,9 @@ function tl(e) {
                           ts,
                           {
                               group: n.category,
-                              isOpen: y[n.category],
+                              isOpen: S[n.category],
                               toggleOpenedState: () => {
-                                  let e = y[n.category];
+                                  let e = S[n.category];
                                   O(n.category), (0, M.Ut)({ section: n.category, enabled: !e, viewId: x });
                               },
                           },
@@ -1088,7 +1088,7 @@ function tl(e) {
                       )
                     : d(n.messageGroup, n.isUnread);
             },
-            [K, y, O, x, d],
+            [K, S, O, x, d],
         ),
         P = K[K.length - 1],
         H = P?.type === "section-header",
@@ -1111,10 +1111,10 @@ function tl(e) {
             A.current = 0;
         }, [W]);
     let F = i.useCallback(() => {
-        let e = ti.filter((e) => y[e]).reduce((e, t) => e + D[t].length, 0),
+        let e = ti.filter((e) => S[e]).reduce((e, t) => e + D[t].length, 0),
             t = p.current?.getScrollerState();
         return null == t ? 0 : Math.max(0, Math.ceil(t.offsetHeight / 64) - e);
-    }, [y, D]);
+    }, [S, D]);
     return (
         i.useEffect(() => {
             B || I || A.current >= 2 || 0 >= F() || ((!H || v) && (A.current++, r?.(eM.VA.FILL_SCROLLER)));
@@ -1176,7 +1176,7 @@ function td(e) {
     let { includePanelSpacing: t } = e,
         n = (0, M.op)(),
         { selectedFilter: a } = (0, C.A)(),
-        { readMessages: r, unreadMessages: c } = (0, o.cf)([R.A, T.Ay, y.A], () => {
+        { readMessages: r, unreadMessages: c } = (0, o.cf)([R.A, T.Ay, S.A], () => {
             let e = R.A.getInboxMessages(),
                 t = R.A.oldestDisplayedMessageId,
                 n = [],
@@ -1187,7 +1187,7 @@ function td(e) {
                     channelId: i.channelId,
                     guildId: i.guildId,
                     ReadStateStore_: T.Ay,
-                    GuildStore_: y.A,
+                    GuildStore_: S.A,
                 }) || (0, L.zo)(i, R.A.selectedItemInfo)
                     ? s.push(i)
                     : (b.default.compare(i.id, t) >= 0 || i.kind === eM.yL.MENTION) && n.push(i);
@@ -1242,7 +1242,7 @@ function td(e) {
                               {
                                   id: t.id,
                                   channelId: t.channel_id,
-                                  guildId: S.A.getBasicChannel(t.channel_id)?.guild_id,
+                                  guildId: y.A.getBasicChannel(t.channel_id)?.guild_id,
                                   kind: eM.yL.BOOKMARK,
                                   message: t,
                               },

@@ -5,7 +5,7 @@ var i = n(955572),
     s = n(652215);
 function a(e) {
     return s.hH7.ZOOM_SCALES[
-        Math.max(0, Math.min(s.hH7.ZOOM_SCALES.indexOf(r.A.zoom) + e, s.hH7.ZOOM_SCALES.length - 1))
+        Math.max(0, Math.min(s.hH7.ZOOM_SCALES.indexOf(r.Ay.zoom) + e, s.hH7.ZOOM_SCALES.length - 1))
     ];
 }
 let o = { binds: ["mod+plus"], comboKeysBindGlobal: !0, action: () => ((0, i.Qp)(a(1)), !1) },

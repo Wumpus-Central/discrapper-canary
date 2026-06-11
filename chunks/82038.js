@@ -4,7 +4,7 @@ var i = n(621466),
     r = n(825437),
     s = n(775602),
     a = n(186111),
-    o = n(761853),
+    o = n(890063),
     l = n(763827),
     u = n(625494),
     c = n(350535),
@@ -92,7 +92,7 @@ let _ = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
             if ((0, i.Cw)(n) || r.rx.isActive() || h.has(t) || f.has(t) || p.has(t)) return !1;
             let E = null != n && "BODY" === n.tagName;
             if (
-                (s.A.keyboardModeEnabled && !E && !/^[a-zA-Z0-9]$/.test(t)) ||
+                (s.Ay.keyboardModeEnabled && !E && !/^[a-zA-Z0-9]$/.test(t)) ||
                 u._.hasSubscribers(d.jej.MODAL_CLOSE) ||
                 a.A.hasLayers()
             )

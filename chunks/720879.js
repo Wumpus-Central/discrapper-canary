@@ -65,7 +65,7 @@ function c(e) {
             N && w(!1);
         }, [w, N]),
         x = r.useCallback(() => {
-            if (y.current || !a.A.keyboardModeEnabled || ("closed" !== I && "closing" !== I)) {
+            if (y.current || !a.Ay.keyboardModeEnabled || ("closed" !== I && "closing" !== I)) {
                 y.current = !1;
                 return;
             }

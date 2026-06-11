@@ -15,9 +15,9 @@ var a = t(627968),
     f = t(859040),
     x = t(607470),
     j = t(318346),
-    S = t(761705),
-    C = t(106799),
-    y = t(287809),
+    y = t(761705),
+    S = t(106799),
+    C = t(287809),
     g = t(340124),
     A = t(507107),
     R = t(31587),
@@ -44,18 +44,18 @@ function P(e) {
 }
 function D(e) {
     let { onVideoLoaded: s, isLoading: t } = e,
-        l = (0, c.bG)([h.A], () => h.A.useReducedMotion),
+        l = (0, c.bG)([h.Ay], () => h.Ay.useReducedMotion),
         [r, i] = n.useState(!l),
         u = (0, m.Ay)(),
         b = (0, d.q)(u),
         p = n.useRef(null),
         f = n.useRef(null),
-        [j, S] = n.useState(!1),
-        [C, y] = n.useState(!1),
+        [j, y] = n.useState(!1),
+        [S, C] = n.useState(!1),
         [g, A] = n.useState(!1);
     n.useEffect(() => {
-        j && C && g && s();
-    }, [j, C, g, s]),
+        j && S && g && s();
+    }, [j, S, g, s]),
         n.useEffect(() => {
             t ||
                 l ||
@@ -77,7 +77,7 @@ function D(e) {
                 playsInline: !0,
                 className: o()(k.nH, k.EZ, { [k.R]: r }),
                 controls: !1,
-                onCanPlayThrough: n.useCallback(() => y(!0), []),
+                onCanPlayThrough: n.useCallback(() => C(!0), []),
                 children: (0, a.jsx)("source", {
                     src: b
                         ? "https://cdn.discordapp.com/assets/content/4c65c8edcb240ab88372cd7e405619919a35d2d6e2255bb24d335e1829ce4089.webm"
@@ -92,7 +92,7 @@ function D(e) {
                 playsInline: !0,
                 className: k.nH,
                 controls: !1,
-                onCanPlayThrough: n.useCallback(() => S(!0), []),
+                onCanPlayThrough: n.useCallback(() => y(!0), []),
                 onEnded: R,
                 children: (0, a.jsx)("source", {
                     src: b
@@ -125,7 +125,7 @@ function B(e) {
                     (0, a.jsxs)("div", {
                         className: k.R_,
                         children: [
-                            (0, a.jsx)(C.B, { shouldUseThemeColor: !0, className: k.Uu }),
+                            (0, a.jsx)(S.B, { shouldUseThemeColor: !0, className: k.Uu }),
                             (0, a.jsx)(i.D, {
                                 variant: "heading-xl/semibold",
                                 color: "text-strong",
@@ -173,12 +173,12 @@ function M(e) {
     let { initialQuest: s, onClose: t, transitionState: l, sourceQuestContent: o, location: d } = e,
         r = (0, R.C5)(s.id) ?? s,
         i = r.userStatus?.claimedAt != null,
-        { balance: u, error: b } = (0, S.W)(),
-        m = (0, c.bG)([y.default], () => y.default.getCurrentUser()),
+        { balance: u, error: b } = (0, y.W)(),
+        m = (0, c.bG)([C.default], () => C.default.getCurrentUser()),
         h = r.userStatus?.orbQuantityClaimed ?? (0, E.wo)(r.config, m),
         [p, f] = n.useState(i ? "success" : "loading"),
         [x, j] = n.useState(!1),
-        C = n.useCallback(() => {
+        S = n.useCallback(() => {
             j(!0);
         }, []);
     n.useEffect(() => {
@@ -202,7 +202,7 @@ function M(e) {
             ? null
             : (0, a.jsx)(w.A, {
                   rewardName: T.intl.string(T.t.Lmysvd),
-                  children: (0, a.jsx)(B, { orbsEarned: h, orbsBalance: u, isLoading: v, onVideoLoaded: C }),
+                  children: (0, a.jsx)(B, { orbsEarned: h, orbsBalance: u, isLoading: v, onVideoLoaded: S }),
               }),
     });
 }

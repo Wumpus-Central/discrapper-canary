@@ -11,11 +11,11 @@ if (21552 == i.j) var o = i(289873);
 if (21552 == i.j) var f = i(534514);
 var m = i(964486),
     v = i(775602),
-    h = i(58149),
+    h = i(95561),
     p = i(260509),
-    N = i(954571),
-    x = i(486020),
-    y = i(515718),
+    y = i(174459),
+    N = i(486020),
+    x = i(515718),
     j = i(591552),
     _ = i(713125),
     A = i(739408),
@@ -23,10 +23,10 @@ var m = i(964486),
     D = i(694268),
     E = i(896018),
     O = i(652215),
-    b = i(985018),
+    b = i(375708),
     w = i(974669);
 function I(e) {
-    let a = (0, d.bG)([v.A], () => v.A.useReducedMotion),
+    let a = (0, d.bG)([v.Ay], () => v.Ay.useReducedMotion),
         i = t.useRef(null);
     return (
         t.useEffect(() => {
@@ -58,16 +58,16 @@ function R() {
 }
 function k(e) {
     let { guild: a, mainIslandClassName: i, balloonDogClassName: n } = e,
-        l = (0, d.bG)([v.A], () => v.A.useReducedMotion),
+        l = (0, d.bG)([v.Ay], () => v.Ay.useReducedMotion),
         u = t.useRef(null),
         o = I(A),
-        f = x.Ay.getGuildIconURL({ id: a.id, icon: a.icon, size: 96 });
+        f = N.Ay.getGuildIconURL({ id: a.id, icon: a.icon, size: 96 });
     return (
         t.useEffect(() => {
             let e;
             return (
                 null != u.current && null != f
-                    ? (0, y.S4)(f).then((a) => {
+                    ? (0, x.S4)(f).then((a) => {
                           var i, s;
                           let t,
                               n =
@@ -118,9 +118,9 @@ function G(e) {
     t.useEffect(() => {
         if (!l)
             return (
-                N.default.track(O.HAw.GUILD_ONBOARDING_STEP_VIEWED, { ...(0, h.H$)(a.id), step: -1, required: !0 }),
+                y.default.track(O.HAw.GUILD_ONBOARDING_STEP_VIEWED, { ...(0, h.H$)(a.id), step: -1, required: !0 }),
                 () => {
-                    N.default.track(O.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
+                    y.default.track(O.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
                         ...(0, h.H$)(a.id),
                         step: -1,
                         skipped: !v.current,
@@ -130,7 +130,7 @@ function G(e) {
                 }
             );
     }, [a.id, v, l]);
-    let x = t.useMemo(() => (0, p.Iv)(a, 135, !1, !0), [a]);
+    let N = t.useMemo(() => (0, p.Iv)(a, 135, !1, !0), [a]);
     return (
         (0, m.Ay)(() => {
             setTimeout(() => {
@@ -142,7 +142,7 @@ function G(e) {
             children: (0, s.jsxs)("div", {
                 className: w.Fo,
                 children: [
-                    (0, s.jsx)("div", { children: (0, s.jsx)("img", { className: w.D3, src: x, alt: "" }) }),
+                    (0, s.jsx)("div", { children: (0, s.jsx)("img", { className: w.D3, src: N, alt: "" }) }),
                     (0, s.jsxs)("div", {
                         className: w.rD,
                         children: [

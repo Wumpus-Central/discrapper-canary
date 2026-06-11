@@ -19,7 +19,7 @@ var i = n(627968),
 let A = r.memo(function (e) {
     let { product: t, isHighlighted: n, user: r, forCollectedModal: s, staticPreviewClassName: A } = e,
         { firstProfileEffect: I, firstAvatarDecoration: T, firstNameplate: S } = (0, _.f5)(t),
-        y = (0, o.bG)([d.A], () => d.A.useReducedMotion),
+        y = (0, o.bG)([d.Ay], () => d.Ay.useReducedMotion),
         N = (0, c.Ay)(),
         v = (0, l.q)(N),
         C = null != S && null != T && null != I,

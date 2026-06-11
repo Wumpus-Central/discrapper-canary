@@ -356,7 +356,7 @@ function eI(e) {
         { analyticsLocations: E } = (0, c.Ay)(),
         m = n !== em.b_.INACTIVE,
         N = (0, ec.A)(t),
-        v = (0, s.bG)([eo.A], () => eo.A.useReducedMotion),
+        v = (0, s.bG)([eo.Ay], () => eo.Ay.useReducedMotion),
         C = r.useRef(null),
         [R, O] = r.useState(!1),
         [b, D] = r.useState(!1),

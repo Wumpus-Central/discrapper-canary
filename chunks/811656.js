@@ -10,9 +10,9 @@ var i = n(627968),
     c = n(775602),
     d = n(607470),
     _ = n(174459),
-    f = n(625494);
+    h = n(625494);
 n(323874), n(14289), n(35956);
-var h = n(671325),
+var f = n(671325),
     p = n(636537),
     E = n(105596),
     m = n(676279),
@@ -21,17 +21,17 @@ var h = n(671325),
 let I = 1e3,
     T = (e) => {
         let { children: t, isConfirmationStep: n, isEligibleForWowMoment: s, shouldPrefetchWowMoment: I } = e,
-            T = (0, o.bG)([c.A], () => c.A.useReducedMotion),
-            [S, N] = (0, r.useState)("entry"),
-            y = (0, r.useRef)(null),
-            C = (0, r.useRef)(null),
-            v = (0, r.useCallback)(() => {
-                "entry" === S && (N("idle"), null != y.current && y.current?.play());
+            T = (0, o.bG)([c.Ay], () => c.Ay.useReducedMotion),
+            [S, y] = (0, r.useState)("entry"),
+            N = (0, r.useRef)(null),
+            v = (0, r.useRef)(null),
+            C = (0, r.useCallback)(() => {
+                "entry" === S && (y("idle"), null != N.current && N.current?.play());
             }, [S]),
-            O = (0, r.useCallback)(() => {
-                "exit" !== S && (N("exit"), null != C.current && C.current?.play());
+            R = (0, r.useCallback)(() => {
+                "exit" !== S && (y("exit"), null != v.current && v.current?.play());
             }, [S]),
-            [R, b] = (0, r.useState)(!1);
+            [O, b] = (0, r.useState)(!1);
         (0, r.useEffect)(() => {
             I && b(!0);
         }, [I]);
@@ -63,12 +63,12 @@ let I = 1e3,
                             ),
                             [],
                         );
-                        let f = (0, r.useCallback)(
+                        let h = (0, r.useCallback)(
                                 () => null != n.modalGlowEntry && null != n.modalGlowIdle && null != n.modalGlowExit,
                                 [n.modalGlowEntry, n.modalGlowIdle, n.modalGlowExit],
                             ),
-                            h = (0, r.useCallback)(async () => {
-                                if (!f() && !u) {
+                            f = (0, r.useCallback)(async () => {
+                                if (!h() && !u) {
                                     c(!0), l(!1), a(!1);
                                     try {
                                         let e = Date.now(),
@@ -112,11 +112,11 @@ let I = 1e3,
                                         d.current && c(!1);
                                     }
                                 }
-                            }, [f, u, t]);
+                            }, [h, u, t]);
                         return (
                             (0, r.useEffect)(() => {
-                                e && h();
-                            }, [e, h]),
+                                e && f();
+                            }, [e, f]),
                             (0, r.useEffect)(
                                 () => () => {
                                     null != n.modalGlowEntry && window.URL.revokeObjectURL(n.modalGlowEntry),
@@ -128,27 +128,27 @@ let I = 1e3,
                             { mediaUrls: n, isSuccess: s, isFailure: o, isLoading: u }
                         );
                     })(e),
-                    { status: s } = (0, E.CE)(e ? h.A : null);
+                    { status: s } = (0, E.CE)(e ? f.A : null);
                 return { mediaUrls: t, isSuccess: n && s === E.BW.Loaded, isLoading: i || s === E.BW.Loading };
-            })(!T && s && R),
+            })(!T && s && O),
             w = (0, r.useRef)(null),
             [M, P] = (0, r.useState)(!1),
-            [x, U] = (0, r.useState)(!1),
-            [k, G] = (0, r.useState)("none"),
+            [x, k] = (0, r.useState)(!1),
+            [U, G] = (0, r.useState)("none"),
             [F, V] = (0, r.useState)(!1);
         return ((0, r.useEffect)(() => {
             let e;
             s &&
                 n &&
                 !F &&
-                "none" === k &&
+                "none" === U &&
                 (T || !L
                     ? (G("static"),
                       T ||
                           (V(!0),
                           _.default.track(g.HAw.PREMIUM_BRAND_REFRESH_WOW_MOMENT_ASSETS_NOT_LOADED_ON_CONFIRMATION)),
                       (e = !1))
-                    : (G("animated"), U(!0), (e = !0)),
+                    : (G("animated"), k(!0), (e = !0)),
                 u.h.dispatch({
                     type: "WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION",
                     value: !0,
@@ -157,18 +157,18 @@ let I = 1e3,
                 _.default.track(g.HAw.PREMIUM_BRAND_REFRESH_WOW_MOMENT_VIEWED, {
                     wow_moment_type: e ? "animated" : "static",
                 }));
-        }, [T, s, n, L, F, k]),
+        }, [T, s, n, L, F, U]),
         (0, r.useEffect)(() => {
             function e() {
-                P(!0), O();
+                P(!0), R();
             }
             return (
-                f._.subscribe(g.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
+                h._.subscribe(g.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
                 () => {
-                    f._.unsubscribe(g.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
+                    h._.unsubscribe(g.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
                 }
             );
-        }, [O]),
+        }, [R]),
         (0, r.useEffect)(
             () => () => {
                 u.h.dispatch({
@@ -179,7 +179,7 @@ let I = 1e3,
             },
             [],
         ),
-        "animated" === k)
+        "animated" === U)
             ? (0, i.jsxs)("div", {
                   children: [
                       (0, i.jsxs)("div", {
@@ -191,13 +191,13 @@ let I = 1e3,
                                       playsInline: !0,
                                       muted: !0,
                                       autoPlay: !0,
-                                      onEnded: v,
+                                      onEnded: C,
                                       className: a()(A.Ki, "entry" === S ? A.RK : A.R),
                                       children: (0, i.jsx)("source", { src: D.modalGlowEntry }),
                                   }),
                               }),
                               (0, i.jsx)(d.A, {
-                                  ref: y,
+                                  ref: N,
                                   playsInline: !0,
                                   muted: !0,
                                   loop: !0,
@@ -205,7 +205,7 @@ let I = 1e3,
                                   children: (0, i.jsx)("source", { src: D.modalGlowIdle }),
                               }),
                               (0, i.jsx)(d.A, {
-                                  ref: C,
+                                  ref: v,
                                   playsInline: !0,
                                   muted: !0,
                                   className: a()(A.Ki, "exit" === S ? A.RK : A.R),
@@ -225,7 +225,7 @@ let I = 1e3,
                       (0, i.jsx)("div", { className: "exit" === S ? A.aO : A.ws, children: t }),
                   ],
               })
-            : "static" === k
+            : "static" === U
               ? (0, i.jsxs)(i.Fragment, {
                     children: [
                         !M &&

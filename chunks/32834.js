@@ -254,7 +254,7 @@ function eg(e) {
         p = x.filter((e) => e.userIds.length > 0).reverse()[0],
         { navigator: f, listRef: j } =
             ((n = g),
-            (t = (0, A.bG)([L.A], () => L.A.keyboardModeEnabled)),
+            (t = (0, A.bG)([L.Ay], () => L.Ay.keyboardModeEnabled)),
             (l = s.useRef(null)),
             (a = s.useCallback(
                 (e, n) => {
@@ -553,7 +553,7 @@ function e3(e) {
                 let e = setTimeout(() => r(!1), 50);
                 return () => clearTimeout(e);
             }, [e]);
-            let d = !L.A.useReducedMotion && (i || a);
+            let d = !L.Ay.useReducedMotion && (i || a);
             return s.useMemo(() => {
                 let l = d
                     ? {
@@ -2466,7 +2466,7 @@ function l8(e) {
         t = (0, lQ.A)(),
         l = (0, A.bG)([ne.A], () => ne.A.getMode(n.id)),
         s = (0, A.bG)([l9.A], () => l9.A.isInChannel(n.id)),
-        a = (0, A.bG)([L.A], () => L.A.useReducedMotion),
+        a = (0, A.bG)([L.Ay], () => L.Ay.useReducedMotion),
         { callActive: r, callUnavailable: d } = (0, A.cf)([lJ.A], () => ({
             callActive: lJ.A.isCallActive(n.id),
             callUnavailable: lJ.A.isCallUnavailable(n.id),
@@ -3024,7 +3024,7 @@ function sf(e) {
 function sj(e) {
     let n,
         { parentChannel: t, parentMessageId: l, location: a } = e,
-        d = (0, A.bG)([L.A], () => L.A.messageGroupSpacing),
+        d = (0, A.bG)([L.Ay], () => L.Ay.messageGroupSpacing),
         o =
             ((n = s.useContext(e$.EH)),
             s.useCallback(() => {
@@ -4672,9 +4672,9 @@ let rH = () => (0, i.jsx)("div", { className: rF.wG, children: (0, i.jsx)(x.y, {
                 t.e("23685"),
                 t.e("42516"),
                 t.e("89160"),
-                t.e("41580"),
-            ]).then(t.bind(t, 979301)),
-        webpackId: 979301,
+                t.e("58769"),
+            ]).then(t.bind(t, 627669)),
+        webpackId: 627669,
         renderLoader: rH,
         name: "ForumChannel",
     }),

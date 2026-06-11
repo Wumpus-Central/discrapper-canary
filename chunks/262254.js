@@ -20,7 +20,7 @@ var i = n(627968),
 function I(e) {
     let { quest: t, onClaimRewardClick: n, size: r = "md" } = e,
         f = (0, d.LS)(t),
-        p = (0, s.bG)([c.A], () => c.A.useReducedMotion),
+        p = (0, s.bG)([c.Ay], () => c.Ay.useReducedMotion),
         E = null != (0, _._Z)(t.config),
         m = (0, h.vv)(t),
         g =

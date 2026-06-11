@@ -44,7 +44,7 @@ function A(e) {
             children: P,
         } = e,
         x = window.CSS.supports("selector(::-webkit-scrollbar)"),
-        k = (0, l.bG)([d.A], () => d.A.zoom),
+        k = (0, l.bG)([d.Ay], () => d.Ay.zoom),
         U = M ? "" : `--custom-zoom: ${k};`,
         G = (0, f.A)("highlight_mana_buttons"),
         F = (0, f.A)("highlight_mana_components"),

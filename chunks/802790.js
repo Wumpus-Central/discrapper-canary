@@ -18,7 +18,7 @@ function o(e) {
             errorScene: u.V1.Scenes.ERROR,
             successScene: u.V1.Scenes.SUCCESS,
         }),
-        m = (0, s.bG)([l.A], () => l.A.useReducedMotion);
+        m = (0, s.bG)([l.Ay], () => l.Ay.useReducedMotion);
     return (0, i.jsxs)(t.rQ, {
         "data-migration-pending": !0,
         align: r.A.Align.START,

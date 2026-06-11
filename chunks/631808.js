@@ -18,7 +18,7 @@ var s = e(627968),
     S = e(793574),
     j = e(688810),
     x = e(197510),
-    C = e(571878),
+    C = e(211159),
     L = e(937008),
     E = e(532794),
     N = e(871123),
@@ -263,7 +263,7 @@ function ii(i) {
         [f, p] = n.useState("Nitro"),
         S = n.useRef(null),
         j = n.useRef(null),
-        x = (0, m.bG)([_.A], () => _.A.useReducedMotion),
+        x = (0, m.bG)([_.Ay], () => _.Ay.useReducedMotion),
         C = n.useRef(!1),
         L = n.useCallback(
             (i) => {

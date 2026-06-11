@@ -14,8 +14,8 @@ var a = n(627968),
     f = n(174459),
     p = n(723702),
     S = n(19575),
-    T = n(820066),
-    y = n(636537),
+    y = n(820066),
+    T = n(636537),
     x = n(691540),
     C = n(857250),
     h = n(97483),
@@ -35,7 +35,7 @@ function O(t) {
             (t) => {
                 i.rL.focus(O),
                     setTimeout(() => {
-                        t?.(), T.VW.focus(O);
+                        t?.(), y.VW.focus(O);
                     }, 0);
             },
             [O],
@@ -57,7 +57,7 @@ function O(t) {
                 { selection: c } = t,
                 u =
                     null != c
-                        ? (0, M.WO)(T.VW.richValue(t), { mode: "plain", range: c, preventEmojiSurrogates: !1 })
+                        ? (0, M.WO)(y.VW.richValue(t), { mode: "plain", range: c, preventEmojiSurrogates: !1 })
                         : "",
                 d = r.useCallback(
                     (e) => {
@@ -74,7 +74,7 @@ function O(t) {
                             if (!n) {
                                 l(!0), (0, x.P0)((0, C.o)(P.intl.string(P.t.p54KYY), h.Ck.AI));
                                 try {
-                                    let n = await y.Bo.post({
+                                    let n = await T.Bo.post({
                                         url: N.Rsh.AI_FIX_GRAMMAR,
                                         body: { content: t },
                                         rejectWithError: !1,
@@ -109,7 +109,7 @@ function O(t) {
                                     (0, C.o)(P.intl.formatToPlainString(P.t.Znl8Z8, { targetLanguage: s }), h.Ck.AI),
                                 );
                                 try {
-                                    let n = await y.Bo.post({
+                                    let n = await T.Bo.post({
                                         url: N.Rsh.AI_TRANSLATE,
                                         body: { content: t, locale: r },
                                         rejectWithError: !1,
@@ -170,7 +170,7 @@ function O(t) {
                                             ),
                                         );
                                     try {
-                                        let a = await y.Bo.post({
+                                        let a = await T.Bo.post({
                                             url: N.Rsh.AI_TEXT_TRANSFORM,
                                             body: { content: e, prompt: t.prompt },
                                             rejectWithError: !1,
@@ -236,7 +236,7 @@ function O(t) {
                   })
                 : null;
         })(O),
-        V = (0, s.bG)([m.A], () => m.A.isSubmitButtonEnabled),
+        V = (0, s.bG)([m.Ay], () => m.Ay.isSubmitButtonEnabled),
         W = b._3.useSetting();
     if (!p.isPlatformEmbedded) return null;
     let Y = O.chatInputType?.commands?.enabled ?? !1,

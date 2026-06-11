@@ -1773,13 +1773,13 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 561770, Version Hash: 315a71d2b63cc7b8249d71c910fb8de8dd79d964`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 561804, Version Hash: 139b8ca9e9e073d8b6937bf83c17116527c45d09`,
 ),
     ev.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
     {
         init() {
-            e7.A.addChangeListener(this.handleAccessibilityStoreChanged),
+            e7.Ay.addChangeListener(this.handleAccessibilityStoreChanged),
                 to.A.addChangeListener(this.handleAccessibilityStoreChanged),
                 tu.A.addChangeListener(this.handleUiDensityChanged),
                 t_.addListener(this.handlePrefersColorSchemeDarkChanged),
@@ -1815,26 +1815,26 @@ new tb.A().log(
             tm(tc.O.UI_DENSITY_COMPACT, e === ts.NS.COMPACT), tm(tc.O.UI_DENSITY_SPACIOUS, e === ts.NS.COZY);
         },
         handleAccessibilityStoreChanged() {
-            tm(tc.O.REDUCED_MOTION, e7.A.useReducedMotion),
-                tm(tc.O.REDUCED_MOTION_FROM_USER_SETTINGS, "auto" !== e7.A.rawPrefersReducedMotion),
-                tm(tc.O.FORCED_COLORS_FROM_USER_SETTINGS, e7.A.syncForcedColors),
-                tm(tc.O.CHAT_FONT_SCALE_DECREASED, e7.A.isFontScaledDown),
-                tm(tc.O.CHAT_FONT_SCALE_INCREASED, e7.A.isFontScaledUp),
-                tm(tc.O.ZOOM_LEVEL_DECREASED, e7.A.isZoomedOut),
-                tm(tc.O.ZOOM_LEVEL_INCREASED, e7.A.isZoomedIn),
-                tm(tc.O.MESSAGE_GROUP_SPACING_DECREASED, e7.A.isMessageGroupSpacingDecreased),
-                tm(tc.O.MESSAGE_GROUP_SPACING_INCREASED, e7.A.isMessageGroupSpacingIncreased),
+            tm(tc.O.REDUCED_MOTION, e7.Ay.useReducedMotion),
+                tm(tc.O.REDUCED_MOTION_FROM_USER_SETTINGS, "auto" !== e7.Ay.rawPrefersReducedMotion),
+                tm(tc.O.FORCED_COLORS_FROM_USER_SETTINGS, e7.Ay.syncForcedColors),
+                tm(tc.O.CHAT_FONT_SCALE_DECREASED, e7.Ay.isFontScaledDown),
+                tm(tc.O.CHAT_FONT_SCALE_INCREASED, e7.Ay.isFontScaledUp),
+                tm(tc.O.ZOOM_LEVEL_DECREASED, e7.Ay.isZoomedOut),
+                tm(tc.O.ZOOM_LEVEL_INCREASED, e7.Ay.isZoomedIn),
+                tm(tc.O.MESSAGE_GROUP_SPACING_DECREASED, e7.Ay.isMessageGroupSpacingDecreased),
+                tm(tc.O.MESSAGE_GROUP_SPACING_INCREASED, e7.Ay.isMessageGroupSpacingIncreased),
                 tm(tc.O.DARK_SIDEBAR, (0, ta.$i)()),
-                tm(tc.O.SATURATION_LEVEL_DECREASED, e7.A.saturation < 1),
-                tm(tc.O.ROLE_STYLE_ADJUSTED, "username" !== e7.A.roleStyle),
-                tm(tc.O.SYNC_PROFILE_THEME_WITH_USER_THEME, e7.A.syncProfileThemeWithUserTheme),
-                tm(tc.O.CONTRAST_LEVEL_INCREASED, e7.A.isHighContrastModeEnabled);
+                tm(tc.O.SATURATION_LEVEL_DECREASED, e7.Ay.saturation < 1),
+                tm(tc.O.ROLE_STYLE_ADJUSTED, "username" !== e7.Ay.roleStyle),
+                tm(tc.O.SYNC_PROFILE_THEME_WITH_USER_THEME, e7.Ay.syncProfileThemeWithUserTheme),
+                tm(tc.O.CONTRAST_LEVEL_INCREASED, e7.Ay.isHighContrastModeEnabled);
         },
     }.init(),
     {
         init() {
-            e7.A.addChangeListener(() => {
-                e7.A.keyboardModeEnabled
+            e7.Ay.addChangeListener(() => {
+                e7.Ay.keyboardModeEnabled
                     ? (e5.oP.setRingsEnabled(!0), e5.oP.enableAnimationTracking())
                     : (e5.oP.setRingsEnabled(!1), e5.oP.disableAnimationTracking());
             });
@@ -4474,7 +4474,7 @@ let sU = (0, rs.Fe)({
                 n.e("7755"),
                 n.e("93720"),
                 n.e("54658"),
-                n.e("79760"),
+                n.e("42561"),
                 n.e("92405"),
                 n.e("80026"),
                 n.e("4787"),
@@ -8271,7 +8271,7 @@ let cI = function (e) {
         ),
         c = e8.useCallback((e) => (null == a ? null : a(e.section)), [a]),
         d = e8.useCallback((e) => (null == a ? 0 : 48 * (null != a(e))), [a]),
-        _ = (0, e6.bG)([e7.A], () => e7.A.keyboardModeEnabled),
+        _ = (0, e6.bG)([e7.Ay], () => e7.Ay.keyboardModeEnabled),
         h = e8.useRef(null),
         f = e8.useCallback(
             () =>
@@ -8337,8 +8337,8 @@ let cS = function (e) {
             footer: a,
             renderSectionFooter: o,
         } = e,
-        l = (0, e6.bG)([e7.A], () => e7.A.keyboardModeEnabled),
-        u = (0, e6.bG)([e7.A], () => e7.A.useReducedMotion),
+        l = (0, e6.bG)([e7.Ay], () => e7.Ay.keyboardModeEnabled),
+        u = (0, e6.bG)([e7.Ay], () => e7.Ay.useReducedMotion),
         c = (0, cE.Ay)({ id: "people", isEnabled: l, async scrollToStart() {}, async scrollToEnd() {} }),
         d = s !== eL.m3P.ONLINE && s !== eL.m3P.ALL,
         _ = u || r || d,
@@ -18391,7 +18391,7 @@ let Sh = "isHideDevBanner",
                     className: t2()(S_.Wz, S_.mr),
                     children: [
                         (0, U.jsx)(Sd, { className: S_.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "561770" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "561804" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })
@@ -18648,7 +18648,7 @@ function Sj() {
         f = e8.useCallback(() => _(!1), []),
         [p, E] = e8.useState(!1),
         m = e8.useCallback(() => {
-            e7.A.useReducedMotion ? (0, SO.kF)() : E(!0);
+            e7.Ay.useReducedMotion ? (0, SO.kF)() : E(!0);
         }, []),
         [g, A] = e8.useState(s);
     s !== g && (A(s), p && E(!1)),
@@ -25522,7 +25522,7 @@ let Cx = e8.memo(function () {
         i = e8.useRef(null),
         r = e8.useCallback((e) => {
             let { duration: t, intensity: n } = e;
-            if (e7.A.useReducedMotion || !nd.A.isFocused()) return;
+            if (e7.Ay.useReducedMotion || !nd.A.isFocused()) return;
             let { current: r } = i;
             tK()(null != r, "Shakeable is shaken when not mounted"), r.shake(t, n);
         }, []);
@@ -26086,12 +26086,12 @@ class Rf extends e8.PureComponent {
         }
     }
 }
-let Rp = e6.Ay.connectStores([v5.A, Rd.A, Ru.A, e7.A], () => ({
+let Rp = e6.Ay.connectStores([v5.A, Rd.A, Ru.A, e7.Ay], () => ({
     isTryingToConnect: v5.A.isTryingToConnect(),
     connected: v5.A.isConnected(),
     incident: Rd.A.getIncident(),
     soundpack: Ru.A.getSoundpack(),
-    reducedMotion: e7.A.useReducedMotion,
+    reducedMotion: e7.Ay.useReducedMotion,
 }))((e) => {
     let { isTryingToConnect: t, connected: n, incident: i, soundpack: r, reducedMotion: s } = e;
     return t ? (0, U.jsx)(Rf, { reducedMotion: s, soundpack: r, connected: n, incident: i }) : null;
@@ -35787,7 +35787,7 @@ class xn extends e8.PureComponent {
     historyUnlisten = () => {};
     rewriterUnlisten = () => {};
     componentDidMount() {
-        tS.Ay.setZoomFactor(e7.A.zoom),
+        tS.Ay.setZoomFactor(e7.Ay.zoom),
             L8.init(),
             ip.initialize(),
             O9.initialize(),
@@ -37025,7 +37025,7 @@ let xL = (0, nN.Fe)({
             n.e("80559"),
             n.e("49409"),
             n.e("81754"),
-            n.e("79760"),
+            n.e("42561"),
             n.e("92405"),
             n.e("70424"),
             n.e("80026"),
@@ -37524,9 +37524,9 @@ function kl(e) {
     let { isCoachmark: t, markAsDismissed: n, iconSize: i = ki.N8.SIZE_60 } = e,
         { analyticsLocations: r } = (0, a7.Ay)(ii.A.APP_ICON_EDITOR),
         s = (0, e6.bG)([tT.default], () => tT.default.getCurrentUser()),
-        { isUpsellPreview: a, shouldEditorAnimate: o } = (0, e6.cf)([kt.A, e7.A], () => ({
+        { isUpsellPreview: a, shouldEditorAnimate: o } = (0, e6.cf)([kt.A, e7.Ay], () => ({
             isUpsellPreview: kt.A.isUpsellPreview,
-            shouldEditorAnimate: t && !e7.A.useReducedMotion,
+            shouldEditorAnimate: t && !e7.Ay.useReducedMotion,
         })),
         l = rR.fy.getState().activePanel === rR.HP.APP_ICON;
     e8.useEffect(() => {
@@ -37748,7 +37748,7 @@ let kT = (0, rs.Fe)({
             { children: i, skipsSettingDefaultPageTitle: r } = e,
             s = (0, eU.getPlatform)(),
             a = e0.Fr || e0.v1,
-            o = (0, e6.bG)([e7.A], () => (e7.A.useForcedColors ? "yes" : "no")),
+            o = (0, e6.bG)([e7.Ay], () => (e7.Ay.useForcedColors ? "yes" : "no")),
             l = e8.useRef(document.body),
             u = `${o}`;
         (t = "AppSkeleton"),

@@ -116,7 +116,7 @@ function G(e) {
             let e = document.getElementById(k(n));
             null != u.current &&
                 null != e &&
-                u.current.scrollIntoViewNode({ node: e, animate: !b.A.useReducedMotion, padding: 20 });
+                u.current.scrollIntoViewNode({ node: e, animate: !b.Ay.useReducedMotion, padding: 20 });
         }, [n]),
         (0, i.jsx)("div", {
             className: a()(x.IL, o),

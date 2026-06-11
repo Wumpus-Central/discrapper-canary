@@ -1,84 +1,84 @@
-n.d(t, { A: () => m });
-var i,
-    l = n(627968),
-    s = n(64700),
-    a = n(17928),
-    r = n(661531),
-    o = n(602853),
-    c = n(475743),
-    d = n(775602),
-    u = n(21161),
-    h = n(430363),
-    _ =
-        (((i = {})[(i.OFFERED = 0)] = "OFFERED"),
-        (i[(i.ACCEPTED = 1)] = "ACCEPTED"),
-        (i[(i.RUNNING = 2)] = "RUNNING"),
-        (i[(i.COMPLETED = 3)] = "COMPLETED"),
-        (i[(i.FAILED = 4)] = "FAILED"),
-        (i[(i.CANCELLED = 5)] = "CANCELLED"),
-        i),
-    g = n(823854),
-    f = n(692593);
-function A(e) {
-    let { userId: t, wrapperClassName: n, children: i } = e,
-        h = (0, a.bG)([g.A], () => g.A.getProgressForUserId(t), [t]),
-        A = (0, a.bG)([g.A], () => {
-            let e = g.A.getTrackingEntryForUserId(t);
-            return e?.presence?.phase === _.COMPLETED;
-        }, [t]),
-        m = (0, a.bG)([d.A], () => d.A.useReducedMotion),
-        v = (0, c.A)(h),
-        p = (0, c.A)(A),
-        { createMultipleConfettiAt: x } = s.useContext(u.x),
-        b = (0, o.r)(r.A.colors.INTERACTIVE_BACKGROUND_HOVER).hex(),
-        I = (0, o.r)(r.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
-        E = (0, o.r)(r.A.colors.CONTROL_BRAND_FOREGROUND).hex(),
-        C = s.useRef(0),
-        D = s.useRef(null),
-        y = Math.max(0, Math.min(1, h ?? 0)),
-        N = y >= 1 ? E : I,
-        j = s.useMemo(
-            () => ({ backgroundImage: `conic-gradient(${N} ${Math.round(360 * y)}deg, ${b} 0deg)` }),
-            [y, N, b],
+s.d(r, { A: () => R });
+var t,
+    a = s(627968),
+    n = s(64700),
+    c = s(17928),
+    u = s(661531),
+    i = s(602853),
+    l = s(475743),
+    o = s(775602),
+    E = s(21161),
+    d = s(430363),
+    A =
+        (((t = {})[(t.OFFERED = 0)] = "OFFERED"),
+        (t[(t.ACCEPTED = 1)] = "ACCEPTED"),
+        (t[(t.RUNNING = 2)] = "RUNNING"),
+        (t[(t.COMPLETED = 3)] = "COMPLETED"),
+        (t[(t.FAILED = 4)] = "FAILED"),
+        (t[(t.CANCELLED = 5)] = "CANCELLED"),
+        t),
+    C = s(823854),
+    h = s(692593);
+function N(e) {
+    let { userId: r, wrapperClassName: s, children: t } = e,
+        d = (0, c.bG)([C.A], () => C.A.getProgressForUserId(r), [r]),
+        N = (0, c.bG)([C.A], () => {
+            let e = C.A.getTrackingEntryForUserId(r);
+            return e?.presence?.phase === A.COMPLETED;
+        }, [r]),
+        R = (0, c.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        D = (0, l.A)(d),
+        m = (0, l.A)(N),
+        { createMultipleConfettiAt: x } = n.useContext(E.x),
+        p = (0, i.r)(u.A.colors.INTERACTIVE_BACKGROUND_HOVER).hex(),
+        I = (0, i.r)(u.A.colors.INTERACTIVE_TEXT_ACTIVE).hex(),
+        T = (0, i.r)(u.A.colors.CONTROL_BRAND_FOREGROUND).hex(),
+        g = n.useRef(0),
+        f = n.useRef(null),
+        O = Math.max(0, Math.min(1, d ?? 0)),
+        F = O >= 1 ? T : I,
+        L = n.useMemo(
+            () => ({ backgroundImage: `conic-gradient(${F} ${Math.round(360 * O)}deg, ${p} 0deg)` }),
+            [O, F, p],
         ),
-        O = s.useMemo(
+        M = n.useMemo(
             () => ({
                 size: { type: "static-random", minValue: 2, maxValue: 6 },
                 velocity: { type: "static-random", minValue: { x: -120, y: -140 }, maxValue: { x: 120, y: -260 } },
             }),
             [],
         ),
-        T = s.useCallback(() => {
-            if (m) return;
-            let e = D.current?.getBoundingClientRect();
-            null != e && x(e.left + e.width / 2, e.top + e.height / 2, O, 250);
-        }, [O, x, m]);
-    s.useEffect(() => {
-        m || ((v ?? 0) < 1 && y >= 1 && T());
-    }, [y, T, v, m]),
-        s.useEffect(() => {
-            m || !0 !== A || (!0 !== p && T());
-        }, [T, A, p, m]);
-    let L = s.useCallback(() => {
-        if (m || y < 1) return;
+        V = n.useCallback(() => {
+            if (R) return;
+            let e = f.current?.getBoundingClientRect();
+            null != e && x(e.left + e.width / 2, e.top + e.height / 2, M, 250);
+        }, [M, x, R]);
+    n.useEffect(() => {
+        R || ((D ?? 0) < 1 && O >= 1 && V());
+    }, [O, V, D, R]),
+        n.useEffect(() => {
+            R || !0 !== N || (!0 !== m && V());
+        }, [V, N, m, R]);
+    let b = n.useCallback(() => {
+        if (R || O < 1) return;
         let e = Date.now();
-        e - C.current < 4e3 || ((C.current = e), T());
-    }, [y, T, m]);
-    return (0, l.jsx)("div", {
-        className: n,
-        onMouseEnter: L,
-        children: (0, l.jsxs)("div", {
-            ref: D,
-            className: f.R,
-            children: [(0, l.jsx)("div", { className: f.h, style: j }), i],
+        e - g.current < 4e3 || ((g.current = e), V());
+    }, [O, V, R]);
+    return (0, a.jsx)("div", {
+        className: s,
+        onMouseEnter: b,
+        children: (0, a.jsxs)("div", {
+            ref: f,
+            className: h.R,
+            children: [(0, a.jsx)("div", { className: h.h, style: L }), t],
         }),
     });
 }
-function m(e) {
-    let { userId: t, wrapperClassName: n, children: i } = e,
-        s = (0, h.Uk)("VoiceDareAvatarRing"),
-        r = (0, a.bG)([g.A], () => g.A.hasVoiceDareForUserId(t), [t]);
-    return s && r
-        ? (0, l.jsx)(A, { userId: t, wrapperClassName: n, children: i })
-        : (0, l.jsx)("div", { className: n, children: i });
+function R(e) {
+    let { userId: r, wrapperClassName: s, children: t } = e,
+        n = (0, d.Uk)("VoiceDareAvatarRing"),
+        u = (0, c.bG)([C.A], () => C.A.hasVoiceDareForUserId(r), [r]);
+    return n && u
+        ? (0, a.jsx)(N, { userId: r, wrapperClassName: s, children: t })
+        : (0, a.jsx)("div", { className: s, children: t });
 }

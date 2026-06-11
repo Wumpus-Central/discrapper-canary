@@ -15,8 +15,8 @@ var s = l(627968),
     A = (l(749638), l(876622)),
     C = l(521974),
     x = l(282026),
-    S = l(385648);
-class y {
+    y = l(385648);
+class S {
     guildIds = new Set();
     categoryId;
     constructor(e) {
@@ -26,7 +26,7 @@ class y {
         this.categoryId !== e && ((this.categoryId = e), this.flushSeenGuilds(l)), this.guildIds.add(t);
     }
     flushSeenGuilds(e) {
-        this.guildIds.size > 0 && (S.PU(e, Array.from(this.guildIds)), this.guildIds.clear());
+        this.guildIds.size > 0 && (y.PU(e, Array.from(this.guildIds)), this.guildIds.clear());
     }
 }
 var I = l(965660),
@@ -78,7 +78,7 @@ async function L(e, t) {
         });
     } catch (a) {
         let t = new k.LG(a);
-        S.jb({ categoryId: l, error: t, willRequestRetry: !1, isRequestRetry: !1 }),
+        y.jb({ categoryId: l, error: t, willRequestRetry: !1, isRequestRetry: !1 }),
             i && G.h.dispatch({ type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS", query: e, categoryCounts: [] }),
             G.h.dispatch({
                 type: "GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE",
@@ -103,7 +103,7 @@ let q = new (class extends U {
         let { query: t, categoryId: l, languageCode: s, offset: a } = e;
         D.A.getIsFetching({ query: t, categoryId: l, languageCode: s }) ||
             (D.A.getIsInitialFetchComplete({ query: t, categoryId: l, languageCode: s }) &&
-                (S.br({ withCounts: !1, offset: a }),
+                (y.br({ withCounts: !1, offset: a }),
                 await L(t, { categoryId: l, languageCode: s, offset: a, limit: 12, withCounts: !1 })));
     };
     loadCategoryResults = async (e) => {
@@ -112,7 +112,7 @@ let q = new (class extends U {
             r = D.A.getIsInitialFetchComplete({ query: t, categoryId: l, languageCode: s });
         a ||
             r ||
-            (S.br({ withCounts: !1, offset: 0 }),
+            (y.br({ withCounts: !1, offset: 0 }),
             await L(t, { categoryId: l, languageCode: s, offset: 0, limit: 12, withCounts: !1 }));
     };
     loadCategoryResultsAndCounts = async (e) => {
@@ -123,8 +123,8 @@ let q = new (class extends U {
         r ||
             i ||
             (x.A.setState({ fetchedQuery: t, resultsQuery: "" }),
-            S.fd(l, s),
-            S.br({ withCounts: !0, offset: 0 }),
+            y.fd(l, s),
+            y.br({ withCounts: !0, offset: 0 }),
             await L(t, { categoryId: s, languageCode: a, offset: 0, limit: 12, withCounts: !0 }),
             x.A.setState({ resultsQuery: t }));
     };
@@ -159,7 +159,7 @@ var ei = l(922139),
 let eo = { mass: 1, tension: 600, friction: 60, clamp: !0 },
     ed = function (e) {
         let { animate: t, state: l, cleanUp: r, children: n } = e,
-            c = (0, i.bG)([ec.A], () => ec.A.useReducedMotion),
+            c = (0, i.bG)([ec.Ay], () => ec.Ay.useReducedMotion),
             o = a.useMemo(
                 () =>
                     !1 === t || c
@@ -209,8 +209,8 @@ let ex = function (e) {
             }),
     });
 };
-var eS = l(302524),
-    ey = l(937495),
+var ey = l(302524),
+    eS = l(937495),
     eI = l(517061);
 function ej(e) {
     let { guild: t, onClick: r, onView: i } = e,
@@ -242,26 +242,26 @@ function ej(e) {
             [t],
         ),
         x = (0, et.Ay)(),
-        S = t.features.has(R.GuildFeatures.HUB),
-        y = a.useMemo(() => {
+        y = t.features.has(R.GuildFeatures.HUB),
+        S = a.useMemo(() => {
             let e = eh.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discoverySplash, size: 300 * (0, eg.mZ)() });
             if (null != e) return e;
-            if (S) return "/assets/c47298d5d6eac3b2.svg";
+            if (y) return "/assets/c47298d5d6eac3b2.svg";
             switch (x) {
                 case R.NJ8.DARK:
-                    return ey;
+                    return eS;
                 case R.NJ8.LIGHT:
                     return eI;
             }
-        }, [t.discoverySplash, t.id, S, x]),
+        }, [t.discoverySplash, t.id, y, x]),
         I = a.useMemo(() => eh.Ay.getGuildIconURL({ id: t.id, icon: t.icon, size: 48 }), [t.icon, t.id]);
     return (0, s.jsxs)("div", {
-        className: eS.kL,
+        className: ey.kL,
         children: [
             o &&
                 (0, s.jsx)("div", {
-                    className: eS.dc,
-                    children: (0, s.jsx)(W.y, { type: W.y.Type.PULSING_ELLIPSIS, className: eS.u1 }),
+                    className: ey.dc,
+                    children: (0, s.jsx)(W.y, { type: W.y.Type.PULSING_ELLIPSIS, className: ey.u1 }),
                 }),
             (0, s.jsx)(Z.L, {
                 innerRef: m,
@@ -270,38 +270,38 @@ function ej(e) {
                 threshold: 0.55,
                 children: (0, s.jsxs)(es.A, {
                     ref: m,
-                    className: eS.Nr,
+                    className: ey.Nr,
                     onClick: f,
                     disabled: o,
                     onContextMenu: C,
                     "aria-label": N.intl.string(N.t["M9wQ+f"]),
                     children: [
                         (0, s.jsxs)("div", {
-                            className: eS.wx,
+                            className: ey.wx,
                             children: [
                                 (0, s.jsx)("div", {
-                                    className: K()(eS.vK, { [eS.Kc]: u }),
+                                    className: K()(ey.vK, { [ey.Kc]: u }),
                                     children: (0, s.jsx)("img", {
-                                        src: y,
+                                        src: S,
                                         alt: "",
-                                        className: eS._e,
+                                        className: ey._e,
                                         onLoad: () => h(!0),
                                     }),
                                 }),
-                                (0, s.jsx)(ex, { className: eS.gw, guildId: t.id }),
+                                (0, s.jsx)(ex, { className: ey.gw, guildId: t.id }),
                                 (0, s.jsx)("div", {
-                                    className: eS.Kk,
+                                    className: ey.Kk,
                                     children: (0, s.jsx)(el.Ay, {
                                         mask: el.Ay.Masks.SQUIRCLE,
                                         width: 56,
                                         height: 56,
                                         children: (0, s.jsx)("div", {
-                                            className: eS.SA,
+                                            className: ey.SA,
                                             children: (0, s.jsx)(el.Ay, {
                                                 mask: el.Ay.Masks.SQUIRCLE,
                                                 width: 48,
                                                 height: 48,
-                                                children: (0, s.jsx)("img", { src: I, alt: "", className: eS.my }),
+                                                children: (0, s.jsx)("img", { src: I, alt: "", className: ey.my }),
                                             }),
                                         }),
                                     }),
@@ -309,39 +309,39 @@ function ej(e) {
                             ],
                         }),
                         (0, s.jsxs)("div", {
-                            className: eS.gI,
+                            className: ey.gI,
                             children: [
                                 (0, s.jsxs)("div", {
-                                    className: eS.DD,
+                                    className: ey.DD,
                                     children: [
                                         (0, s.jsx)(eu.A, {
-                                            className: eS.n2,
+                                            className: ey.n2,
                                             guild: t,
                                             tooltipColor: X.ST.Colors.PRIMARY,
                                         }),
                                         (0, s.jsx)(g.D, {
                                             variant: "heading-md/semibold",
-                                            className: eS.J5,
+                                            className: ey.J5,
                                             children: t.name,
                                         }),
                                     ],
                                 }),
                                 (0, s.jsx)(J.E, {
-                                    className: eS.h_,
+                                    className: ey.h_,
                                     variant: "text-sm/normal",
                                     color: "text-default",
                                     children: t.description,
                                 }),
                                 (0, s.jsxs)("div", {
-                                    className: eS.bu,
+                                    className: ey.bu,
                                     children: [
                                         null != t.presenceCount &&
                                             (0, s.jsxs)("div", {
-                                                className: eS.CV,
+                                                className: ey.CV,
                                                 children: [
-                                                    (0, s.jsx)("div", { className: eS.SP }),
+                                                    (0, s.jsx)("div", { className: ey.SP }),
                                                     (0, s.jsx)(J.E, {
-                                                        className: eS.ac,
+                                                        className: ey.ac,
                                                         variant: "text-xs/normal",
                                                         color: "text-default",
                                                         children: N.intl.format(N.t["LC+S+m"], {
@@ -352,11 +352,11 @@ function ej(e) {
                                             }),
                                         null != t.memberCount &&
                                             (0, s.jsxs)("div", {
-                                                className: eS.CV,
+                                                className: ey.CV,
                                                 children: [
-                                                    (0, s.jsx)("div", { className: eS.PB }),
+                                                    (0, s.jsx)("div", { className: ey.PB }),
                                                     (0, s.jsx)(J.E, {
-                                                        className: eS.ac,
+                                                        className: ey.ac,
                                                         variant: "text-xs/normal",
                                                         color: "text-default",
                                                         children: N.intl.format(N.t.zRl6XR, { count: t.memberCount }),
@@ -384,7 +384,7 @@ function eE(e) {
         c = a.useCallback(
             (e, t, l, a) =>
                 null == t.guildId
-                    ? (0, s.jsx)(ed, { state: l, cleanUp: a, children: (0, s.jsx)(er, { className: eS.qf }) }, e)
+                    ? (0, s.jsx)(ed, { state: l, cleanUp: a, children: (0, s.jsx)(er, { className: ey.qf }) }, e)
                     : (0, s.jsx)(
                           ed,
                           {
@@ -400,7 +400,7 @@ function eE(e) {
         o = a.useCallback((e) => e.guildId ?? `${e.index}`, []),
         d = a.useMemo(() => [{ guildId: t, index: l }], [t, l]);
     return (0, s.jsx)("div", {
-        className: eS.NK,
+        className: ey.NK,
         children: (0, s.jsx)($.F, { items: d, renderItem: c, getItemKey: o }),
     });
 }
@@ -827,7 +827,7 @@ var tl = l(284402);
 let ts = Object.freeze({ top: 0, bottom: 0, left: 32, right: 202 }),
     ta = Object.freeze({ top: 0, bottom: 0, left: 32, right: 32 }),
     tr = { page: R.liQ.GUILD_DISCOVERY, object: R.ZSU.CARD, section: R.JJy.DISCOVER_SEARCH },
-    ti = eH().throttle(S.Cf, 1e3, { leading: !1, trailing: !0 });
+    ti = eH().throttle(y.Cf, 1e3, { leading: !1, trailing: !0 });
 function tn(e) {
     let { loadId: t, onGuildCardSeen: l, onGuildCardClick: r } = e,
         {
@@ -872,22 +872,22 @@ function tn(e) {
         h = a.useContext(ez.AnalyticsContext),
         [m, f] = a.useState((0, I.YP)()),
         [A, C] = a.useState(!0),
-        S = a.useRef(A),
-        [y, j] = a.useState(3),
-        b = a.useRef(y),
+        y = a.useRef(A),
+        [S, j] = a.useState(3),
+        b = a.useRef(S),
         E = a.useRef(null),
         v = a.useCallback(
             (e) => {
-                null == e || g || c || (336 * (n.length / y) <= e.height && d());
+                null == e || g || c || (336 * (n.length / S) <= e.height && d());
             },
-            [g, c, n.length, y, d],
+            [g, c, n.length, S, d],
         ),
         R = a.useCallback(
             (e) => {
                 let t = e.contentRect;
                 if (null == t) return;
                 let l = t.width;
-                l < 1024 && S.current ? ((S.current = !1), C(!1)) : l > 1024 && !S.current && ((S.current = !0), C(!0));
+                l < 1024 && y.current ? ((y.current = !1), C(!1)) : l > 1024 && !y.current && ((y.current = !0), C(!0));
                 let s = 1;
                 for (l -= 450 * !!A, l -= 280; l > 0; ) (l -= 264), (s += 1);
                 s !== b.current && ((b.current = s), j(s)), v(t);
@@ -1044,7 +1044,7 @@ function tn(e) {
             ref: E,
             className: tl.kf,
             sections: k,
-            columns: y,
+            columns: S,
             itemGutter: 16,
             padding: M,
             renderItem: U,
@@ -1120,7 +1120,7 @@ function td() {
                 searchQuery: s,
                 onSearchTextChange: r,
                 onClearSearch: a.useCallback(() => {
-                    S.gp(t),
+                    y.gp(t),
                         w(),
                         T(),
                         x.A.setState({
@@ -1176,7 +1176,7 @@ function td() {
                     : o,
             [o, O],
         ),
-        W = a.useRef(new y(G)),
+        W = a.useRef(new S(G)),
         { onGuildCardSeen: X, onGuildCardClick: J } = (function (e) {
             let { guildDiscoveryCardSeenManager: t, loadId: l } = e,
                 s = a.useCallback(

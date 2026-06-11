@@ -211,7 +211,7 @@ function eQ(e) {
         [r, a] = i.useState("idle"),
         [o, d] = i.useState(l),
         u = "editing" === r && !t,
-        c = (0, s.bG)([e$.A], () => e$.A.useReducedMotion),
+        c = (0, s.bG)([e$.Ay], () => e$.Ay.useReducedMotion),
         g = i.useRef(null),
         f = i.useRef(null),
         m = i.useRef(null),
@@ -2332,7 +2332,7 @@ let tM = {
     tG = (e) => {
         let { className: l } = e,
             n = (0, tw.fu)(),
-            r = (0, s.bG)([e$.A], () => e$.A.useReducedMotion),
+            r = (0, s.bG)([e$.Ay], () => e$.Ay.useReducedMotion),
             [a, o] = i.useState(!1),
             [u, c] = i.useState(null);
         i.useEffect(() => {

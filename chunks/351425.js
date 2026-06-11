@@ -22,8 +22,8 @@ var m = l(503698),
     j = l(131607),
     _ = l(742589),
     S = l(488803),
-    w = l(289704),
-    y = l(821609),
+    y = l(289704),
+    w = l(821609),
     b = l(146793),
     R = l(661531);
 function L(e) {
@@ -80,7 +80,7 @@ function F(e) {
               children: [
                   (0, s.jsx)("div", {
                       className: g()(W.ZS, M.Sl),
-                      children: (0, s.jsx)(w.E, {
+                      children: (0, s.jsx)(y.E, {
                           withReducedMotion: "halt",
                           eventTargetRef: a,
                           className: W.Sl,
@@ -100,7 +100,7 @@ function F(e) {
                       }),
                   }),
                   (0, s.jsx)(b.kd, {
-                      children: (0, s.jsx)(y.$, {
+                      children: (0, s.jsx)(w.$, {
                           variant: "primary",
                           fullWidth: !0,
                           text:
@@ -418,10 +418,10 @@ function e_(e, t) {
     }, [e, t, r, a, o]);
 }
 var eS = l(401996);
-function ew(e) {
+function ey(e) {
     let { guildId: t, group: l, powerups: r } = e,
         [a, o] = n.useState(!1),
-        u = (0, i.bG)([eI.A], () => eI.A.useReducedMotion),
+        u = (0, i.bG)([eI.Ay], () => eI.Ay.useReducedMotion),
         d = e_([l], t)[l],
         c = !u && a ? d?.image?.animatedUrl : d?.image?.staticUrl,
         p = (function (e) {
@@ -496,14 +496,14 @@ function ew(e) {
                               asContainer: !0,
                               text: d.viewCtaTooltip,
                               delay: 100,
-                              children: (0, s.jsx)(y.$, { text: d.viewCta, fullWidth: !0 }),
+                              children: (0, s.jsx)(w.$, { text: d.viewCta, fullWidth: !0 }),
                           })
-                        : (0, s.jsx)(y.$, { text: d.viewCta, fullWidth: !0 }),
+                        : (0, s.jsx)(w.$, { text: d.viewCta, fullWidth: !0 }),
             }),
         ],
     });
 }
-var ey = l(490557);
+var ew = l(490557);
 function eb(e) {
     let { guildId: t, powerup: l, badge: r } = e,
         [i, a] = n.useState(void 0);
@@ -516,7 +516,7 @@ function eb(e) {
         powerup: l,
         badge: r,
         children: [
-            (0, s.jsx)(ey.l, { className: M.Sl, powerup: l, isHovering: o }),
+            (0, s.jsx)(ew.l, { className: M.Sl, powerup: l, isHovering: o }),
             (0, s.jsx)(b.Ft, {
                 title: l.title,
                 textColor: d,
@@ -815,7 +815,7 @@ function te(e) {
         a = r?.id,
         o = (0, i.bG)([e6.Ay], () => (null != a ? e6.Ay.getMember(t, a) : void 0), [a, t]),
         u = o?.premiumSince != null,
-        d = (0, i.bG)([eI.A], () => eI.A.useReducedMotion),
+        d = (0, i.bG)([eI.Ay], () => eI.Ay.useReducedMotion),
         {
             avatarDecorationSrc: p,
             avatarSrc: m,
@@ -1087,11 +1087,11 @@ function tx(e) {
     (0, K.Pq)(a);
     let c = (0, i.bG)([B.A], () => B.A.getStateForGuild(a)),
         m = (0, p.A)(a),
-        w = n.useRef(!1),
-        { shouldShow: y, modalConfig: b } = { shouldShow: !1, modalConfig: null },
+        y = n.useRef(!1),
+        { shouldShow: w, modalConfig: b } = { shouldShow: !1, modalConfig: null },
         R = null == o && null != b,
         L = [];
-    y && R && L.push(x.M.VANITY_URL_POWERUP_ROLLBACK_MODAL);
+    w && R && L.push(x.M.VANITY_URL_POWERUP_ROLLBACK_MODAL);
     let [C, N] = (0, j.kn)(L),
         P =
             ((r = (0, i.bG)([B.A], () => B.A.getStateForGuild(a))),
@@ -1153,15 +1153,15 @@ function tx(e) {
             a,
         );
     return (n.useEffect(() => {
-        if (null != o && !w.current)
+        if (null != o && !y.current)
             for (let e of P)
                 for (let t of e.listings) {
                     if (("singleLevel" === t.type || "singlePerk" === t.type) && t.powerup.skuId === o) {
-                        (0, ej.A)(a, t.powerup), (w.current = !0);
+                        (0, ej.A)(a, t.powerup), (y.current = !0);
                         return;
                     }
                     if ("multiPerk" === t.type && (t.group === o || t.powerups.some((e) => e.skuId === o))) {
-                        w.current = !0;
+                        y.current = !0;
                         let e = G[t.group];
                         if (null == e) return;
                         e.openModal(t.powerups, {
@@ -1169,13 +1169,13 @@ function tx(e) {
                                 let e = new URL(window.location.href);
                                 e.searchParams.delete(k.G0);
                                 let t = e.pathname + e.search + e.hash;
-                                (0, d.bG)(t), (w.current = !1);
+                                (0, d.bG)(t), (y.current = !1);
                             },
                         });
                         return;
                     }
                     if ("gameServer" === t.type && o === V.W5) {
-                        (0, D.A)({ guildId: a, analyticsLocation: v.A.GUILD_POWERUPS_OVERVIEW }), (w.current = !0);
+                        (0, D.A)({ guildId: a, analyticsLocation: v.A.GUILD_POWERUPS_OVERVIEW }), (y.current = !0);
                         return;
                     }
                 }
@@ -1275,7 +1275,7 @@ function tx(e) {
                                                               );
                                                           case "multiPerk":
                                                               return (0, s.jsx)(
-                                                                  ew,
+                                                                  ey,
                                                                   { guildId: a, group: e.group, powerups: e.powerups },
                                                                   `powerup-group-${e.group}`,
                                                               );

@@ -16,8 +16,8 @@ n(456647);
 var x = n(633075),
     f = n(451395),
     E = n(716804),
-    T = n(688807),
-    y = n(990078),
+    y = n(688807),
+    T = n(990078),
     j = n(939249),
     v = n(772838),
     I = n(140735),
@@ -61,9 +61,9 @@ function G(e) {
 }
 let X = (e) => {
         let { children: t } = e,
-            n = (0, o.bG)([P.A], () => P.A.keyboardModeEnabled),
-            { isDragging: l } = (0, T.V)((e) => ({ isDragging: e.isDragging() }));
-        return (0, i.jsx)(y.m, {
+            n = (0, o.bG)([P.Ay], () => P.Ay.keyboardModeEnabled),
+            { isDragging: l } = (0, y.V)((e) => ({ isDragging: e.isDragging() }));
+        return (0, i.jsx)(T.m, {
             __unsupportedReactNodeAsText: (0, i.jsxs)("div", {
                 className: O.HE,
                 children: [
@@ -107,8 +107,8 @@ let X = (e) => {
                             n.e("38804"),
                             n.e("22274"),
                             n.e("22766"),
-                            n.e("51143"),
-                            n.e("72688"),
+                            n.e("16955"),
+                            n.e("84570"),
                             n.e("73553"),
                             n.e("72963"),
                             n.e("36877"),
@@ -301,12 +301,12 @@ function Z(e) {
             onReorder: m.R_,
             onEnd: () => h(n.type),
         }),
-        T = null != E,
-        y = T && t < E,
-        j = T && t > E;
+        y = null != E,
+        T = y && t < E,
+        j = y && t > E;
     return (0, i.jsxs)("div", {
         ref: u,
-        className: r()(q.wX, { [q.A]: y, [q.Ze]: j, [q.Id]: x }),
+        className: r()(q.wX, { [q.A]: T, [q.Ze]: j, [q.Id]: x }),
         "aria-label": S.intl.formatToPlainString(S.t.YLczh4, { positionNumber: t + 1 }),
         children: [(0, i.jsx)(G, { buttonRef: d, widget: n, className: q.vn, additionalMenuItems: a }), s],
     });
@@ -318,8 +318,8 @@ function J(e) {
             children: a,
             disableInteraction: m,
             className: f,
-            index: T,
-            trailingContent: y,
+            index: y,
+            trailingContent: T,
             headerTitle: j,
             headerSubtitle: v,
             headerActionButtons: I,
@@ -346,7 +346,7 @@ function J(e) {
         })({ widget: n, onAction: C }),
         L = b === n.type;
     (0, p.A)(P, L);
-    let w = N && null != T && !m,
+    let w = N && null != y && !m,
         S = () =>
             (0, i.jsxs)("div", {
                 ref: D,
@@ -362,7 +362,7 @@ function J(e) {
                         disableInteraction: m,
                         className: A,
                     }),
-                    (0, i.jsxs)(s.F, { children: [a, y] }),
+                    (0, i.jsxs)(s.F, { children: [a, T] }),
                 ],
             });
     return (0, i.jsx)("section", {
@@ -370,7 +370,7 @@ function J(e) {
         "aria-labelledby": R,
         children: w
             ? (0, i.jsx)(Z, {
-                  index: T ?? 0,
+                  index: y ?? 0,
                   widget: n,
                   getWidth: () => D.current?.offsetWidth,
                   additionalManageWidgetMenuItems: _,

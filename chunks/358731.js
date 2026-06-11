@@ -12,6 +12,6 @@ var i,
 let _ = r.memo(function (e) {
     let { children: t, mode: n = "DEFAULT" } = e,
         { zoomed: i } = (0, u.Q)(),
-        r = (0, o.bG)([l.A], () => l.A.keyboardModeEnabled);
+        r = (0, o.bG)([l.Ay], () => l.Ay.keyboardModeEnabled);
     return t(a()(c.E3, { [c.R]: i && !r && "PINNED" !== n, [c.rB]: "FOCUS_SENSITIVE" === n }));
 });

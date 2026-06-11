@@ -11,8 +11,8 @@ var r = n(17928),
     c = n(614738),
     d = n(174459),
     _ = n(742023),
-    f = n(873298),
-    h = n(885386),
+    h = n(873298),
+    f = n(885386),
     p = n(375708),
     E = n(652215),
     m = n(864386);
@@ -20,8 +20,8 @@ function g() {
     let e,
         t,
         n =
-            ((e = h.hH.useSetting()),
-            (t = h.Xi.useSetting()),
+            ((e = f.hH.useSetting()),
+            (t = f.Xi.useSetting()),
             [
                 (0, i.jsxs)(
                     s.rX,
@@ -32,27 +32,27 @@ function g() {
                                 id: "compact-ui",
                                 group: "list-density",
                                 label: p.intl.string(p.t["7iegX4"]),
-                                checked: t === f.NS.COMPACT,
+                                checked: t === h.NS.COMPACT,
                                 action: () => {
-                                    h.Xi.updateSetting(f.NS.COMPACT);
+                                    f.Xi.updateSetting(h.NS.COMPACT);
                                 },
                             }),
                             (0, i.jsx)(s.iD, {
                                 id: "default-ui",
                                 group: "list-density",
                                 label: p.intl.string(p.t.bBvAEH),
-                                checked: t === f.NS.DEFAULT,
+                                checked: t === h.NS.DEFAULT,
                                 action: () => {
-                                    h.Xi.updateSetting(f.NS.DEFAULT);
+                                    f.Xi.updateSetting(h.NS.DEFAULT);
                                 },
                             }),
                             (0, i.jsx)(s.iD, {
                                 id: "cozy-ui",
                                 group: "list-density",
                                 label: p.intl.string(p.t["4cuYHx"]),
-                                checked: t === f.NS.COZY,
+                                checked: t === h.NS.COZY,
                                 action: () => {
-                                    h.Xi.updateSetting(f.NS.COZY);
+                                    f.Xi.updateSetting(h.NS.COZY);
                                 },
                             }),
                         ],
@@ -70,7 +70,7 @@ function g() {
                                 label: p.intl.string(p.t.Jqj4cZ),
                                 checked: !e,
                                 action: () => {
-                                    h.hH.updateSetting(!1), (0, o.AC)();
+                                    f.hH.updateSetting(!1), (0, o.AC)();
                                 },
                             }),
                             (0, i.jsx)(s.iD, {
@@ -79,7 +79,7 @@ function g() {
                                 label: p.intl.string(p.t["1JNcPS"]),
                                 checked: e,
                                 action: () => {
-                                    h.hH.updateSetting(!0), (0, o.AC)();
+                                    f.hH.updateSetting(!0), (0, o.AC)();
                                 },
                             }),
                         ],
@@ -93,22 +93,22 @@ function g() {
             roleStyle: I,
             highContrastMode: T,
             switchIconsEnabled: S,
-        } = (0, r.cf)([l.A], () => ({
-            saturation: l.A.saturation,
-            useReducedMotion: l.A.useReducedMotion,
-            roleStyle: l.A.roleStyle,
-            highContrastMode: l.A.isHighContrastModeEnabled,
-            switchIconsEnabled: l.A.isSwitchIconsEnabled,
+        } = (0, r.cf)([l.Ay], () => ({
+            saturation: l.Ay.saturation,
+            useReducedMotion: l.Ay.useReducedMotion,
+            roleStyle: l.Ay.roleStyle,
+            highContrastMode: l.Ay.isHighContrastModeEnabled,
+            switchIconsEnabled: l.Ay.isSwitchIconsEnabled,
         })),
-        N = (0, r.bG)([l.A], () => l.A.displayNameStylesEnabled),
-        y = (0, c.y)("useAccessibilityItems"),
-        C = (0, r.bG)([_.Ay], () => _.Ay.hdrDynamicRange),
-        v = (0, u.i)("useAccessibilityItems"),
-        O = [
+        y = (0, r.bG)([l.Ay], () => l.Ay.displayNameStylesEnabled),
+        N = (0, c.y)("useAccessibilityItems"),
+        v = (0, r.bG)([_.Ay], () => _.Ay.hdrDynamicRange),
+        C = (0, u.i)("useAccessibilityItems"),
+        R = [
             { name: p.intl.string(p.t.D5Fma9), value: "no-limit" },
             { name: p.intl.string(p.t.ldcGIH), value: "standard" },
         ],
-        R = [
+        O = [
             { name: p.intl.string(p.t.YEOEi6), value: "username" },
             { name: p.intl.string(p.t.mQaro3), value: "dot" },
             { name: p.intl.string(p.t.Ji2EVJ), value: "hidden" },
@@ -133,7 +133,7 @@ function g() {
                         id: "high-contrast",
                         label: p.intl.string(p.t.aZlePv),
                         checked: T,
-                        action: () => (0, o.uh)(T ? l._.DEFAULT : l._.HIGH),
+                        action: () => (0, o.uh)(T ? l._1.DEFAULT : l._1.HIGH),
                     }),
                 },
                 "high-contrast",
@@ -159,7 +159,7 @@ function g() {
         ];
     return (
         b.push(...n),
-        v &&
+        C &&
             b.push(
                 (0, i.jsx)(
                     s.rX,
@@ -167,14 +167,14 @@ function g() {
                         children: (0, i.jsx)(s.Dr, {
                             id: "hdr-dynamic-range",
                             label: p.intl.string(p.t.nemtgW),
-                            children: O.map((e) => {
+                            children: R.map((e) => {
                                 let { name: t, value: n } = e;
                                 return (0, i.jsx)(
                                     s.iD,
                                     {
                                         id: n,
                                         group: "hdr-dynamic-range",
-                                        checked: n === C,
+                                        checked: n === v,
                                         label: t,
                                         action: () => (0, o.FU)(n),
                                     },
@@ -193,7 +193,7 @@ function g() {
                     children: (0, i.jsx)(s.Dr, {
                         id: "role-colors",
                         label: p.intl.string(p.t.uSOPWm),
-                        children: R.map((e) => {
+                        children: O.map((e) => {
                             let { name: t, value: n } = e;
                             return (0, i.jsx)(
                                 s.iD,
@@ -211,17 +211,17 @@ function g() {
                     children: (0, i.jsx)(s.sL, {
                         id: "display-name-styles",
                         label: p.intl.string(m.default["2gFUEw"]),
-                        checked: N,
+                        checked: y,
                         action: function () {
-                            d.default.track(E.HAw.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !N }),
-                                (0, o.Dm)(!N);
+                            d.default.track(E.HAw.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !y }),
+                                (0, o.Dm)(!y);
                         },
                     }),
                 },
                 "display-name-styles",
             ),
         ),
-        y &&
+        N &&
             b.push(
                 (0, i.jsx)(
                     s.rX,

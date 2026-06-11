@@ -1136,7 +1136,7 @@ class er extends r.PureComponent {
                 l = i;
             }
         }
-        let u = 150 / (c.A.fontScale / 100),
+        let u = 150 / (c.Ay.fontScale / 100),
             d =
                 null != s
                     ? (function (e) {

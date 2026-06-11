@@ -14,7 +14,7 @@ function h(e) {
     let { user: t, displayProfile: n, pendingThemeColors: h, pendingAvatarSrc: f, isPreview: p, forceUserTheme: E } = e,
         m = (0, o.Ay)(),
         g = (0, d.Wd)(),
-        A = (0, r.bG)([l.A], () => l.A.syncProfileThemeWithUserTheme),
+        A = (0, r.bG)([l.Ay], () => l.Ay.syncProfileThemeWithUserTheme),
         I = f ?? t?.getAvatarURL(n?.guildId, 80),
         T = (0, s.nt)("PRIMARY_530", { saturation: 1 }),
         [S, y] = (0, u.rh)(I, T, !1);

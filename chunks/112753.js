@@ -377,7 +377,7 @@ function em(e) {
             );
         })(s, null != j ? { emoji: j.emoji, reactionType: j.burst_count > 0 ? w.v.BURST : w.v.NORMAL } : null, m),
         f = l.useMemo(() => (null == A ? null : (u.find((e) => (0, et.i6)(e.emoji, A.emoji)) ?? null)), [u, A]),
-        S = (0, c.bG)([R.A], () => R.A.saturation),
+        S = (0, c.bG)([R.Ay], () => R.Ay.saturation),
         b = (0, c.bG)([z.A], () => (0, p.M)(z.A.theme));
     if (
         (l.useEffect(() => {

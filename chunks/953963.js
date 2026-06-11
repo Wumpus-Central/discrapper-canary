@@ -13,8 +13,8 @@ var n = i(627968),
     h = i(775602),
     x = i(159001),
     p = i(933725),
-    f = i(625494),
-    j = i(56348),
+    j = i(625494),
+    f = i(56348),
     A = i(207803),
     I = i(183555),
     S = i(289173),
@@ -32,7 +32,7 @@ let O = "user-profile-save-reset-toolbar-label";
 function L(e) {
     let { className: t, guildId: i } = e,
         { trackUserProfileEditSaved: s } = (0, I.NJ)(),
-        L = (0, d.bG)([h.A], () => h.A.useReducedMotion),
+        L = (0, d.bG)([h.Ay], () => h.Ay.useReducedMotion),
         [P, G] = l.useState(!1),
         [M, _] = l.useState(!1),
         {
@@ -75,8 +75,8 @@ function L(e) {
                 try {
                     if (null == i) {
                         let t = v.A.getPendingChanges(),
-                            i = (0, j.Sk)(t),
-                            n = (0, j.yX)(t);
+                            i = (0, f.Sk)(t),
+                            n = (0, f.yX)(t);
                         if (Object.keys(i).length > 0) {
                             let n = await (0, m._L)(i);
                             (e = n?.ok ?? !1),
@@ -96,8 +96,8 @@ function L(e) {
                         }
                     } else {
                         let t = v.A.getPendingChanges(i),
-                            n = (0, j.C5)(t),
-                            l = (0, j.yX)(t, i);
+                            n = (0, f.C5)(t),
+                            l = (0, f.yX)(t, i);
                         if (Object.keys(n).length > 0) {
                             let l = await (0, x.GL)(i, n);
                             (e = l?.ok ?? !1),
@@ -117,7 +117,7 @@ function L(e) {
                             (e = e && (s?.ok ?? !1)), s?.ok && (0, A.RE)();
                         }
                     }
-                    let t = (0, j.yg)(v.A.getPendingChanges());
+                    let t = (0, f.yg)(v.A.getPendingChanges());
                     if (Object.keys(t).length > 0) {
                         let { primaryGuildId: i } = t;
                         if (void 0 !== i) {
@@ -151,9 +151,9 @@ function L(e) {
                 G(!0), (e = setTimeout(() => G(!1), 500));
             }
             return (
-                f._.subscribe(T.jej.EMPHASIZE_NOTICE, t),
+                j._.subscribe(T.jej.EMPHASIZE_NOTICE, t),
                 () => {
-                    f._.unsubscribe(T.jej.EMPHASIZE_NOTICE, t), null !== e && clearTimeout(e);
+                    j._.unsubscribe(T.jej.EMPHASIZE_NOTICE, t), null !== e && clearTimeout(e);
                 }
             );
         }, []),

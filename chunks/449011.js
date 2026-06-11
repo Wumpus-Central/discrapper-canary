@@ -25,8 +25,8 @@ var p = n(925847),
     h = n(862241),
     A = n(284009),
     O = n.n(A),
-    x = n(964486),
-    f = n(666646),
+    f = n(964486),
+    x = n(666646),
     P = n(64700),
     g = n(17928),
     N = n(871109);
@@ -35,7 +35,7 @@ function v() {
     let e = P.useContext(R);
     return O()(null != e, "GuildProductPurchaseContext not found"), e;
 }
-function U(e) {
+function y(e) {
     let { children: t, skuId: n, ...l } = e,
         i = (0, g.bG)([N.A], () => N.A.getGuildProduct(n));
     return (
@@ -43,18 +43,18 @@ function U(e) {
         (0, r.jsx)(R.Provider, { value: { guildProductListing: i, ...l }, children: t })
     );
 }
-function y(e) {
+function U(e) {
     let { handleClose: t } = e,
         { guildProductListing: l, guildId: i } = v(),
-        s = (0, f.sw)();
+        s = (0, x.sw)();
     return (
-        (0, x.Ay)(() => {
+        (0, f.Ay)(() => {
             var e;
             O()(null != s, "invoicePreview cannot be null"),
                 (e = { guildId: i, guildProductListingId: l.id, invoicePreview: s }),
                 (0, a.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
-                        n.e("31344"),
+                        n.e("59945"),
                         n.e("47539"),
                         n.e("67837"),
                         n.e("35778"),
@@ -108,7 +108,7 @@ let B = {
                 skuId: n,
                 children: l,
             } = e;
-            return (0, r.jsx)(U, { guildId: t, skuId: n, children: l });
+            return (0, r.jsx)(y, { guildId: t, skuId: n, children: l });
         },
         tenantProvidesCheckoutRoot: !1,
         tenantAnalyticsLocation: I.A.GUILD_PRODUCT_PAYMENT_MODAL,
@@ -120,7 +120,7 @@ let B = {
             ? null
             : (0, r.jsx)(G, { guildProductListing: l, className: K.w, onClose: () => t(!1) });
     },
-    CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, r.jsx)(y, { ...e }) },
+    CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, r.jsx)(U, { ...e }) },
 };
 var V = n(20742),
     W = n(688810),
@@ -213,7 +213,7 @@ function eh(e) {
             isSendingMessage: o,
             giftingOrigin: u,
         } = (0, Z.Pv)(),
-        c = (0, el.bG)([er.A], () => er.A.useReducedMotion),
+        c = (0, el.bG)([er.Ay], () => er.Ay.useReducedMotion),
         d = P.useRef(null),
         C = (0, eo.t4)((e) => e.selectedSkuId),
         p = (0, el.bG)([eu.A], () => eu.A.getProduct(C)),
@@ -254,15 +254,15 @@ function eh(e) {
 }
 var eA = n(123292),
     eO = n(859040),
-    ex = n(993408),
-    ef = n(575593),
+    ef = n(993408),
+    ex = n(575593),
     eP = n(452027),
     eg = n(922016),
     eN = n(778712),
     eR = n(834730),
     ev = n(534514),
-    eU = n(986687),
-    ey = n(999291),
+    ey = n(986687),
+    eU = n(999291),
     ej = n(903209),
     eM = n(287809),
     eL = n(428262),
@@ -287,16 +287,16 @@ function eV(e) {
         { giftRecipient: o, giftRecipientError: u } = (0, Z.Pv)(),
         c = (0, g.bG)([eM.default], () => eM.default.getCurrentUser()),
         d = eL.Ay.canUseShopDiscounts(c),
-        C = (0, ey.Ay)(o?.id),
+        C = (0, eU.Ay)(o?.id),
         p = P.useRef(null),
         [m, _] = P.useState(!1),
         { product: E } = (0, ek.q)(t, !0),
-        T = P.useMemo(() => (0, ex.fT)(E, d), [E, d]),
+        T = P.useMemo(() => (0, ef.fT)(E, d), [E, d]),
         I = (0, eK.V_)(E);
     if (null == E || 0 === E.items.length) return null;
     let [S] = E.items,
         h = (0, eD.VG)(E),
-        A = null != o && o.id !== c?.id && E.type !== ef.R.BUNDLE && S.type !== ef.R.NAMEPLATE && !s;
+        A = null != o && o.id !== c?.id && E.type !== ex.R.BUNDLE && S.type !== ex.R.NAMEPLATE && !s;
     return (0, r.jsxs)("div", {
         className: i,
         children: [
@@ -315,7 +315,7 @@ function eV(e) {
                                 onRequestClose: () => _(!1),
                                 preload: () => (0, ej.A)(o.id, o.getAvatarURL(null, 80)),
                                 renderPopout: (e) =>
-                                    (0, r.jsx)(eU.A, {
+                                    (0, r.jsx)(ey.A, {
                                         ...e,
                                         user: o,
                                         pendingAvatar: o.getAvatarURL(null, (0, eN.FT)(eN._3.SIZE_80)),
@@ -365,15 +365,15 @@ function eV(e) {
                                         variant: "heading-sm/medium",
                                         color: "text-default",
                                         children:
-                                            E?.type === ef.R.BUNDLE
+                                            E?.type === ex.R.BUNDLE
                                                 ? null
-                                                : S.type === ef.R.AVATAR_DECORATION
+                                                : S.type === ex.R.AVATAR_DECORATION
                                                   ? eI.intl.string(eI.t["7v0T9P"])
-                                                  : S.type === ef.R.NAMEPLATE
+                                                  : S.type === ex.R.NAMEPLATE
                                                     ? eI.intl.string(eI.t.x5CoXR)
-                                                    : S.type === ef.R.PROFILE_EFFECT
+                                                    : S.type === ex.R.PROFILE_EFFECT
                                                       ? eI.intl.string(eI.t.wR5wOo)
-                                                      : S.type === ef.R.PROFILE_FRAME
+                                                      : S.type === ex.R.PROFILE_FRAME
                                                         ? eI.intl.string(eI.t.GWrZOd)
                                                         : null,
                                     }),
@@ -465,8 +465,8 @@ var e1 = n(871181),
     e6 = n(285719),
     e2 = n(976860),
     e5 = n(652215),
-    e3 = n(353791);
-function e8(e) {
+    e8 = n(353791);
+function e3(e) {
     let { handleClose: t, selectedSkuId: n } = e,
         { analyticsLocations: l } = (0, W.Ay)(I.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
     return (0, r.jsx)(eA.Q, {
@@ -540,7 +540,7 @@ let e9 = (0, P.createContext)({
                                     (await (0, eO.JJ)(e.id, t)) || s(eI.intl.string(eI.t["4kgVqQ"])),
                                     d(!1);
                             };
-                        (0, x.Ay)(() => {
+                        (0, f.Ay)(() => {
                             null != C &&
                                 null != u &&
                                 (c !== eT.vQ.DM_CHANNEL_WISHLIST &&
@@ -553,14 +553,14 @@ let e9 = (0, P.createContext)({
                                 pendingText: l,
                                 currentText: l,
                                 disableThemedBackground: !0,
-                                className: e3.iX,
-                                innerClassName: e3.pt,
+                                className: e8.iX,
+                                innerClassName: e8.pt,
                             });
                         return {
                             renderLeftColumn: () =>
-                                (0, r.jsx)("div", { className: e3.qL, children: (0, r.jsx)(e7.t, { isShopGift: !0 }) }),
+                                (0, r.jsx)("div", { className: e8.qL, children: (0, r.jsx)(e7.t, { isShopGift: !0 }) }),
                             renderRightColumn: () => {
-                                let e = (0, ex.pA)({ invoicePreview: p, selectedSkuId: C, skusById: m });
+                                let e = (0, ef.pA)({ invoicePreview: p, selectedSkuId: C, skusById: m });
                                 return c === eT.vQ.USER_PROFILE_WISHLIST || c === eT.vQ.DM_CHANNEL_WISHLIST
                                     ? (0, r.jsxs)("div", {
                                           children: [
@@ -572,13 +572,13 @@ let e9 = (0, P.createContext)({
                                                       skuId: C,
                                                       priceAmount: e.amount,
                                                       priceCurrency: e.currency,
-                                                      className: e3.uW,
-                                                      previewHeaderClassName: e3.vX,
+                                                      className: e8.uW,
+                                                      previewHeaderClassName: e8.vX,
                                                       hideProfilePreview: !0,
                                                   }),
                                               (0, r.jsx)("div", {
-                                                  className: e3.fi,
-                                                  children: (0, r.jsx)(e8, { handleClose: n, selectedSkuId: C }),
+                                                  className: e8.fi,
+                                                  children: (0, r.jsx)(e3, { handleClose: n, selectedSkuId: C }),
                                               }),
                                           ],
                                       })
@@ -587,7 +587,7 @@ let e9 = (0, P.createContext)({
                                               (0, r.jsx)(eZ, {
                                                   selectedSkuId: C,
                                                   recipients: T,
-                                                  className: e3.uh,
+                                                  className: e8.uh,
                                                   validateSelectedGift: I,
                                               }),
                                               S(),
@@ -597,7 +597,7 @@ let e9 = (0, P.createContext)({
                                                       skuId: C,
                                                       priceAmount: e.amount,
                                                       priceCurrency: e.currency,
-                                                      className: e3.Ng,
+                                                      className: e8.Ng,
                                                   }),
                                           ],
                                       });
@@ -765,8 +765,8 @@ var tC = n(73825),
     th = n(566980),
     tA = n(615310),
     tO = n(811656),
-    tx = n(363373),
-    tf = n(800471),
+    tf = n(363373),
+    tx = n(800471),
     tP = n(941796),
     tg = n(957489),
     tN = n(822426);
@@ -793,7 +793,7 @@ let tR = [
             renderStep: (e) => (0, r.jsx)(tP.Z, { ...e }),
             options: {
                 renderHeader: !0,
-                useBreadcrumbLabel: (e) => ((0, tf.lp)(e) ? null : eI.intl.string(eI.t["r+SebU"])),
+                useBreadcrumbLabel: (e) => ((0, tx.lp)(e) ? null : eI.intl.string(eI.t["r+SebU"])),
                 sectionHeaderText: () => eI.intl.string(eI.t.UKbp1N),
                 modalSizeGetter: (e) => {
                     let { isGift: t } = e;
@@ -803,7 +803,7 @@ let tR = [
         },
         {
             key: o.pn.SELECT_FREE_SKU,
-            renderStep: (e) => (0, r.jsx)(tx.j, { ...e }),
+            renderStep: (e) => (0, r.jsx)(tf.j, { ...e }),
             options: { modalSizeGetter: () => "lg", hideDefaultModalBody: !0 },
         },
     ],
@@ -909,8 +909,8 @@ let tR = [
             options: { modalSizeGetter: () => "md" },
         },
     };
-var tU = n(753390),
-    ty = n(143582),
+var ty = n(753390),
+    tU = n(143582),
     tj = n(897904),
     tM = n(967198),
     tL = n(975965),
@@ -974,8 +974,8 @@ let tD = {
                         i(e),
                             e &&
                                 null != r &&
-                                (tU.hP(),
-                                (0, ty.f5)(r),
+                                (ty.hP(),
+                                (0, tU.f5)(r),
                                 null != a && a(),
                                 null != r && (l || tM.A.getGuildId() !== r) && (0, e2.pX)(e5.BVt.CHANNEL(r)));
                     },
@@ -1127,8 +1127,8 @@ var t1 = n(889137),
     t6 = n(683071),
     t2 = n(313961),
     t5 = n(238017),
-    t3 = n(650588),
-    t8 = n(723090),
+    t8 = n(650588),
+    t3 = n(723090),
     t4 = n(763827),
     t9 = n(403362),
     ne = n(871123),
@@ -1230,9 +1230,9 @@ let ns = {
                                 [c, i, l, n],
                             )),
                         A = (0, g.bG)([tH.A], () => (null != T ? tH.A.get(T) : null), [T]),
-                        { userPrice: O } = (0, t8.CD)({ sku: A, priceSetAssignmentPurchaseType: e5.lid.GIFT }),
-                        x = (0, ne.fq)(A),
-                        f = (0, ne.xf)(A),
+                        { userPrice: O } = (0, t3.CD)({ sku: A, priceSetAssignmentPurchaseType: e5.lid.GIFT }),
+                        f = (0, ne.fq)(A),
+                        x = (0, ne.xf)(A),
                         N = async (e, t) => {},
                         R = (e) => {
                             null != m && m(null == e ? void 0 : e);
@@ -1241,18 +1241,18 @@ let ns = {
                             (0, r.jsxs)("div", {
                                 className: ni.mT,
                                 children: [
-                                    null != x &&
+                                    null != f &&
                                         (0, r.jsx)(tJ.A, {
                                             containerClassName: ni.T3,
-                                            cardImage: x,
-                                            cardBackgroundImage: f,
+                                            cardImage: f,
+                                            cardBackgroundImage: x,
                                             altText: A?.name ?? "",
                                             shape: "square",
                                         }),
                                     (0, r.jsxs)("div", {
                                         className: ni._T,
                                         children: [
-                                            (0, r.jsx)(t3.A, { sound: C, onSelect: R }),
+                                            (0, r.jsx)(t8.A, { sound: C, onSelect: R }),
                                             (0, r.jsx)(t5.A, {
                                                 setEmojiConfetti: p,
                                                 emojiConfetti: null == d ? void 0 : d,
@@ -1261,7 +1261,7 @@ let ns = {
                                     }),
                                 ],
                             }),
-                        U = () => {
+                        y = () => {
                             let e = A?.orbsReward;
                             return (0, r.jsxs)("div", {
                                 className: ni.Tc,
@@ -1293,11 +1293,11 @@ let ns = {
                                                               className: ni.Xb,
                                                               children:
                                                                   null != A &&
-                                                                  null != x &&
+                                                                  null != f &&
                                                                   (0, r.jsx)(tJ.A, {
                                                                       containerClassName: ni.Iy,
-                                                                      cardImage: x,
-                                                                      cardBackgroundImage: f,
+                                                                      cardImage: f,
+                                                                      cardBackgroundImage: x,
                                                                       altText: A.name,
                                                                       shape: "square",
                                                                   }),
@@ -1334,9 +1334,9 @@ let ns = {
                             });
                         };
                     return {
-                        renderStepBody: () => (0, r.jsxs)("div", { className: ni.Du, children: [v(), U()] }),
+                        renderStepBody: () => (0, r.jsxs)("div", { className: ni.Du, children: [v(), y()] }),
                         getLeftColumnComponent: v,
-                        getRightColumnComponent: U,
+                        getRightColumnComponent: y,
                         onStepChange: a,
                         onBackClick: s,
                         disabled: null == c || c.id === S?.id || o.length > eT.Jo,
@@ -1430,21 +1430,21 @@ var nA =
         (l[(l.FIRST_PARTY_NO_ORBS = 1013)] = "FIRST_PARTY_NO_ORBS"),
         l),
     nO = n(289873),
-    nx = n(241989),
-    nf = n(576052),
+    nf = n(241989),
+    nx = n(576052),
     nP = n(120992),
     ng = n(194256),
     nN = n(319820),
     nR = n(327105),
     nv = n(200766);
-let nU = (e) => {
+let ny = (e) => {
         let { sku: t, orbPriceAmount: n } = e,
             { product: l, isSocialLayerGameItem: i } = (0, nN.AO)({ sku: t }),
             a = (0, ng.oO)(l);
         i ? (a = eI.intl.string(nR.default.qwSlCO)) : (0, nm.Ab)(l) && (a = eI.intl.string(eI.t["0TmQRG"]));
         let s = (0, ng.dL)(t),
-            o = (0, $.EZ)(t.id) ? nf.m[t.id].render({ className: nv.$ }) : (0, r.jsx)(nx.WH, { sku: t, product: l });
-        return (0, r.jsx)(nx.f7, {
+            o = (0, $.EZ)(t.id) ? nx.m[t.id].render({ className: nv.$ }) : (0, r.jsx)(nf.WH, { sku: t, product: l });
+        return (0, r.jsx)(nf.f7, {
             label: s,
             description: a,
             graphic: o,
@@ -1452,13 +1452,13 @@ let nU = (e) => {
             PriceIcon: tZ.C,
         });
     },
-    ny = (e) => {
+    nU = (e) => {
         let { skuId: t, orbPriceAmount: n } = e;
         (0, nP.c)({ applicationId: (0, m.P)(t), skuIDs: [t] });
         let l = (0, el.bG)([tH.A], () => tH.A.get(t), [t]);
         return null == l
             ? (0, r.jsx)(nO.y, { type: nO.y.Type.PULSING_ELLIPSIS })
-            : (0, r.jsx)(nU, { sku: l, orbPriceAmount: n });
+            : (0, r.jsx)(ny, { sku: l, orbPriceAmount: n });
     },
     nj = (e) => {
         let { orbBalance: t } = e;
@@ -1698,9 +1698,9 @@ let nk = (0, P.createContext)({
                                 handleStepChange: u,
                             }),
                             O = (0, g.bG)([tH.A], () => tH.A.get(t), [t]),
-                            x = (0, nd.uS)(O?.applicationId),
+                            f = (0, nd.uS)(O?.applicationId),
                             {
-                                disabled: f,
+                                disabled: x,
                                 tooltipText: N,
                                 text: R,
                             } = ((e) => {
@@ -1715,31 +1715,31 @@ let nk = (0, P.createContext)({
                                         [n, t, l],
                                     );
                                 return { disabled: r, tooltipText: i, text: nM() };
-                            })({ orbBalance: I, orbPriceAmount: c ? d : E, isInTestMode: x }),
+                            })({ orbBalance: I, orbPriceAmount: c ? d : E, isInTestMode: f }),
                             v = (0, P.useMemo)(
-                                () => ({ onClick: S, loading: i, text: R, disabled: f, tooltipText: N }),
-                                [S, i, R, f, N],
+                                () => ({ onClick: S, loading: i, text: R, disabled: x, tooltipText: N }),
+                                [S, i, R, x, N],
                             ),
-                            U = h ? eI.intl.format(eI.t.fsOXXO, {}) : null,
-                            y = x ? eI.intl.string(eI.t.OvMyMd) : null;
+                            y = h ? eI.intl.format(eI.t.fsOXXO, {}) : null,
+                            U = f ? eI.intl.string(eI.t.OvMyMd) : null;
                         return {
                             isStepLoading: p,
                             upperInlineNoticeProps: (0, P.useMemo)(() => {
-                                if (null != y || null != U || null != A) {
+                                if (null != U || null != y || null != A) {
                                     let e = [];
                                     return (
-                                        null != y &&
-                                            e.push({ type: "warning", message: y, key: "test-mode-warning-notice" }),
                                         null != U &&
-                                            e.push({ type: "warning", message: U, key: "orb-checkout-warning-notice" }),
+                                            e.push({ type: "warning", message: U, key: "test-mode-warning-notice" }),
+                                        null != y &&
+                                            e.push({ type: "warning", message: y, key: "orb-checkout-warning-notice" }),
                                         null != A &&
                                             e.push({ type: "critical", message: A, key: "orb-checkout-error-notice" }),
                                         e
                                     );
                                 }
                                 return null;
-                            }, [y, U, A]),
-                            purchaseItemContent: (0, r.jsx)(ny, { skuId: t, orbPriceAmount: c ? C : E }),
+                            }, [U, y, A]),
+                            purchaseItemContent: (0, r.jsx)(nU, { skuId: t, orbPriceAmount: c ? C : E }),
                             paymentMethodContent: (0, r.jsx)(nj, { orbBalance: I }),
                             legalContent: (0, r.jsx)(nL, {}),
                             primaryButtonProps: v,
@@ -1778,7 +1778,7 @@ let nk = (0, P.createContext)({
                         let { skuId: t, loadId: n, onCheckoutSuccess: l, onSignFailure: r, order: i } = e,
                             a = (0, g.bG)([eM.default], () => eL.Ay.canUseShopDiscounts(eM.default.getCurrentUser())),
                             s = (0, g.bG)([tH.A], () => tH.A.get(t), [t]),
-                            o = (0, t8.JL)({ sku: s }),
+                            o = (0, t3.JL)({ sku: s }),
                             { product: u } = (0, ek.q)(t),
                             c = (0, P.useMemo)(() => {
                                 if (null != o) return { orbPriceAmount: o.amount };
@@ -1933,7 +1933,7 @@ let nW = (e) => {
             i = (0, nV.A)(),
             { isGift: a, claimableRewards: s } = (0, Z.Pv)(),
             u = (0, nG.A)({ isGift: a, skuId: l, referralTrialOfferId: n }),
-            c = (0, tf.lp)(u),
+            c = (0, tx.lp)(u),
             d = (0, nK.px)(i, a, s),
             C = P.useMemo(() => {
                 let e = null == t ? o.pn.PLAN_SELECT : o.pn.REVIEW;
@@ -2125,23 +2125,23 @@ class n$ {
                 activeSubscription: A = null,
                 ...O
             } = e,
-            x = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
-            f = arguments.length > 2 ? arguments[2] : void 0,
+            f = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
+            x = arguments.length > 2 ? arguments[2] : void 0,
             P = { current: (this.checkoutFlow === E.C.PREMIUM_CHECKOUT ? (0, p.A)() : null) ?? (0, i.A)() },
             g = { current: null },
-            { modalKey: N } = f,
+            { modalKey: N } = x,
             R = this.generateRenderHeader(),
             v = _ ?? this.getApplicationId(c),
-            U = !!(null != l && l.isGift),
-            y = !1,
+            y = !!(null != l && l.isGift),
+            U = !1,
             j = {
                 ...O,
                 checkoutFlow: this.checkoutFlow,
                 checkoutFlowConfiguration: this.checkoutFlowConfiguration,
                 tenantCheckoutFlowConfig: this.tenantCheckoutFlowConfig,
-                stepConfigs: this.generateCheckoutStepConfigs({ isGift: U }),
+                stepConfigs: this.generateCheckoutStepConfigs({ isGift: y }),
                 onComplete: (e) => {
-                    null != o && o(e), (y = !0);
+                    null != o && o(e), (U = !0);
                 },
                 onClose: u,
                 renderHeader: R,
@@ -2160,21 +2160,21 @@ class n$ {
                 giftContextProps: l,
                 additionalOptions: t,
             };
-        if ("modal" === x)
+        if ("modal" === f)
             return (0, a.openModalLazy)(
                 async () => {
                     let { UnifiedCheckoutInstance: e } = await Promise.resolve().then(n.bind(n, 246681));
                     return (t) => (0, r.jsx)(e, { ...j, renderModalProps: t });
                 },
                 {
-                    ...f,
+                    ...x,
                     onCloseRequest: () => {
-                        null != f.onCloseRequest && f.onCloseRequest(y, P.current),
-                            f.skipCloseModalOnCloseRequest || (0, a.closeModal)(N);
+                        null != x.onCloseRequest && x.onCloseRequest(U, P.current),
+                            x.skipCloseModalOnCloseRequest || (0, a.closeModal)(N);
                     },
                     onCloseCallback: () => {
-                        y ||
-                            (C({ checkoutSucceeded: y, order: g.current }),
+                        U ||
+                            (C({ checkoutSucceeded: U, order: g.current }),
                             this.trackPaymentFlowCanceled({
                                 loadId: P.current,
                                 skuId: c,
@@ -2185,11 +2185,11 @@ class n$ {
                                 analyticsLocations: I,
                                 analyticsObject: S,
                                 analyticsSourceLocation: T,
-                                isGift: U,
+                                isGift: y,
                                 eligibleForTrial: null != O.trialId,
                             })),
-                            null != f.onCloseCallback && f.onCloseCallback(y),
-                            null != u && u(y, c);
+                            null != x.onCloseCallback && x.onCloseCallback(U),
+                            null != u && u(U, c);
                     },
                     modalKey: N,
                 },

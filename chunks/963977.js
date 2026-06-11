@@ -14,7 +14,7 @@ let h = (e) => {
     let { user: t, guildId: n, size: h, avatarDecorationOverride: f, onlyAnimateOnHoverOrFocus: p = !1 } = e,
         [E, m] = i.useState(!1),
         { canAnimate: g } = ((e, t) => {
-            let n = (0, r.bG)([l.A], () => l.A.useReducedMotion),
+            let n = (0, r.bG)([l.Ay], () => l.Ay.useReducedMotion),
                 s = (0, r.bG)([u.A], () => u.A.isFocused()),
                 [a, o] = i.useState(!1),
                 c = i.useRef(null);

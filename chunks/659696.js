@@ -271,7 +271,7 @@ function eA(e) {
                 return `radial-gradient(circle, ${e.alpha(0.2).hex()} 0%, transparent 100%)`;
             }, [l, t]);
         })(l),
-        c = (0, a.bG)([ep.A], () => ep.A.useReducedMotion),
+        c = (0, a.bG)([ep.Ay], () => ep.Ay.useReducedMotion),
         [u, d] = s.useState(null),
         [m, x] = s.useState(l);
     m !== l && (x(l), m?.type === "image" && l?.type === "image" && m.src !== l.src ? d(m.src) : d(null));

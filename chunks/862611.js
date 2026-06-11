@@ -93,7 +93,7 @@ let k = (e) => {
     U = (e) => {
         let { quest: t, game: i, sourceQuestContent: o, onGameProfileModalOpen: u, onGameProfileModalClose: c } = e,
             _ = (0, O.Ut)(),
-            f = (0, a.bG)([p.A], () => p.A.useReducedMotion),
+            f = (0, a.bG)([p.Ay], () => p.Ay.useReducedMotion),
             E = s.useRef(null),
             g = null != i.gameRecord,
             I = () => {

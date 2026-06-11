@@ -275,7 +275,7 @@ function U(e) {
 }
 function G(e) {
     let { channelId: t, messageId: n, emojiName: r, disable: o, emojiRef: u } = e,
-        c = (0, s.bG)([a.A], () => a.A.useReducedMotion),
+        c = (0, s.bG)([a.Ay], () => a.Ay.useReducedMotion),
         _ = d.A.useIsEligible(),
         h = (0, l.Us)();
     return o || h === E.BRT.OVERLAY || !_ || null == n || null == t || c || null == u || !M(r)

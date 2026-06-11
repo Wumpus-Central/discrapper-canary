@@ -8,7 +8,7 @@ var i = n(64700),
     l = n(901139);
 function u(e) {
     let { getImgCache: t } = (0, l.TW)(),
-        n = (0, r.bG)([s.A], () => s.A.useReducedMotion);
+        n = (0, r.bG)([s.Ay], () => s.Ay.useReducedMotion);
     return i.useMemo(() => {
         if (null != e.previewToolKey && "" !== e.previewToolKey) {
             let n = t(e.previewToolKey);

@@ -1940,7 +1940,7 @@ function t4(e) {
             };
         }, []),
         E = r.useMemo(() => ({ [o.x.FRIENDS]: c, [o.x.MESSAGES]: h, [o.x.VOICE]: g }), [c, h, g]),
-        A = (0, s.bG)([tY.A], () => tY.A.useReducedMotion),
+        A = (0, s.bG)([tY.Ay], () => tY.Ay.useReducedMotion),
         f = r.useMemo(() => ({ [o.x.FRIENDS]: !A && m, [o.x.MESSAGES]: !A && I, [o.x.VOICE]: !1 }), [A, m, I]);
     return (0, i.jsxs)("div", {
         className: t0.kL,
@@ -4164,7 +4164,7 @@ let l_ = r.memo(function (e) {
                             e.event,
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("51143"),
+                                    n.e("16955"),
                                     n.e("94881"),
                                     n.e("26132"),
                                     n.e("46652"),
@@ -4228,7 +4228,7 @@ let l_ = r.memo(function (e) {
                         }),
                             (0, lc.L3)(e.event, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("51143"),
+                                    n.e("16955"),
                                     n.e("28323"),
                                     n.e("22766"),
                                     n.e("2677"),
@@ -4368,7 +4368,7 @@ let l_ = r.memo(function (e) {
                         }),
                             (0, lc.L3)(e.event, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("51143"),
+                                    n.e("16955"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93103"),

@@ -241,7 +241,7 @@ var eI = n(403581),
     eO = n(151867);
 function eb(e) {
     let { onDismiss: t } = e,
-        n = (0, _.bG)([eT.A], () => eT.A.useReducedMotion),
+        n = (0, _.bG)([eT.Ay], () => eT.Ay.useReducedMotion),
         i = et.intl.string(et.t.eikz43),
         r = (0, eN.V)(),
         a = (0, ey.O)(),
@@ -478,7 +478,7 @@ let tc = (e) => {
         m = a.useMemo(() => (d ? (0, ed.CQ)() : E), [E, d]),
         A = a.useRef(null),
         I = (0, _.bG)([ek.A], () => ek.A.isFocused()),
-        T = (0, _.bG)([eT.A], () => eT.A.useReducedMotion, []),
+        T = (0, _.bG)([eT.Ay], () => eT.Ay.useReducedMotion, []),
         S = a.useMemo(
             () =>
                 eL().memoize((e, t) => {
@@ -627,7 +627,7 @@ let th = (e) => {
         ],
     });
 };
-var tf = n(873174),
+var tf = n(922139),
     tp = n(459192),
     tE = n(717421),
     tm = n(343032),
@@ -637,7 +637,7 @@ var tf = n(873174),
 let tT = { tension: 750, mass: 2.5, friction: 70 };
 function tS(e) {
     let { checked: t, onClick: n } = e,
-        i = (0, _.bG)([eT.A], () => eT.A.useReducedMotion),
+        i = (0, _.bG)([eT.Ay], () => eT.Ay.useReducedMotion),
         r = eo.default.getCurrentUser(),
         o = null != r && !(0, tA.TW)(r),
         u = o ? [] : [h.M.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP],
@@ -974,7 +974,7 @@ let tJ = a.memo(function (e) {
     }
     let p = (0, _.bG)([X.A], () => (null !== t && t.type === eQ.i.GUILD ? X.A.getGuild(t.guildId) : null), [t]),
         E = (0, _.bG)([ek.A], () => ek.A.isFocused()),
-        m = (0, _.bG)([eT.A], () => eT.A.useReducedMotion, []),
+        m = (0, _.bG)([eT.Ay], () => eT.Ay.useReducedMotion, []),
         g = es.Sf.useSetting(),
         A = (0, ed.O7)(u, tQ(t) ? t : null),
         I = (0, _.bG)([N.Ay], () => N.Ay.expandedSectionsByGuildIds),
@@ -1287,7 +1287,7 @@ function nO(e) {
             inNitroLockedSection: R,
         } = e,
         [O, b] = a.useState(""),
-        D = (0, _.bG)([eT.A], () => eT.A.useReducedMotion),
+        D = (0, _.bG)([eT.Ay], () => eT.Ay.useReducedMotion),
         L = (0, _.bG)([N.Ay], () => N.Ay.getDisambiguatedEmojiContext(l), [l]),
         w = a.useRef(null),
         { emoji: M, size: P, isDisabled: x, columnIndex: k } = t,

@@ -284,7 +284,7 @@ let v = (e) => {
     },
     O = (e) => {
         let t = (0, c.j)(),
-            n = (0, l.bG)([u.A], () => u.A.useReducedMotion),
+            n = (0, l.bG)([u.Ay], () => u.Ay.useReducedMotion),
             s = (0, I.A)(e.skuId),
             a = (0, h.C)(s),
             d = r.useMemo(() => {

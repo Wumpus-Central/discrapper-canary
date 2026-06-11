@@ -30,12 +30,12 @@ var v = n(503698),
     R = n(963935),
     w = n(894858),
     T = n(272053),
-    K = n(740572),
+    K = n(377980),
     _ = n(939249),
     O = n(508770),
     B = n(738188),
     L = n(661531),
-    P = n(777666),
+    P = n(812993),
     D = n(933297);
 function F(e) {
     let { badge: t } = e;
@@ -201,7 +201,7 @@ let es = function (e) {
 };
 var ei = n(284009),
     ea = n.n(ei),
-    eu = n(873174),
+    eu = n(922139),
     eo = n(935399),
     ec = n(319354),
     ed = n(717421),
@@ -386,7 +386,7 @@ function ey(e) {
                                 m = d.width / 2,
                                 g = (h.y - d.y) / m,
                                 x = h.height / m;
-                            i.current || l || y.A.useReducedMotion || -1 === u.current
+                            i.current || l || y.Ay.useReducedMotion || -1 === u.current
                                 ? (o.y.set(g), o.height.set(x))
                                 : c({ y: g, height: x }),
                                 (i.current = !1),
@@ -865,7 +865,7 @@ function eT(e) {
         [p, v] = l.useState(!1),
         [A, b] = l.useState(1.4),
         S = l.useRef(null),
-        N = (0, m.bG)([y.A], () => y.A.useReducedMotion),
+        N = (0, m.bG)([y.Ay], () => y.Ay.useReducedMotion),
         C = (0, m.bG)([f.A], () => f.A.isFocused());
     return (
         l.useEffect(() => {
@@ -907,7 +907,7 @@ var eK = n(495544),
     e_ = n(287809),
     eO = n(152056),
     eB = n(780964),
-    eL = n(949901),
+    eL = n(157035),
     eP = n(980707),
     eD = n(477782),
     eF = n(349288),
@@ -927,8 +927,8 @@ var eK = n(495544),
 function e0() {
     let e = (0, eQ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "550838",
-        l = "c30a1a7a27b9e89e2328da87ade991555f28e6c0".substring(0, 7),
+        n = "561804",
+        l = "139b8ca9e9e073d8b6937bf83c17116527c45d09".substring(0, 7),
         s = e$.A?.app.getVersion(),
         i = e$.A?.app.getBuildNumber(),
         u = e$.A?.app.getAppArch(),
@@ -1014,7 +1014,7 @@ function e0() {
     );
 }
 var e1 = n(779801);
-function e7(e) {
+function e9(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(eP.W, {
         "data-menu-migrated-auto": !0,
@@ -1039,7 +1039,7 @@ function e7(e) {
         }),
     });
 }
-function e9() {
+function e7() {
     let e = l.useRef(null);
     return (0, r.jsxs)("div", {
         children: [
@@ -1075,7 +1075,7 @@ function e9() {
                         animation: eG.Y.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, r.jsx)(e7, { onClose: t });
+                            return (0, r.jsx)(e9, { onClose: t });
                         },
                         children: (t, n) =>
                             (0, r.jsx)(eF.Anchor, {
@@ -1098,8 +1098,8 @@ function e9() {
 }
 var e2 = n(402651),
     e5 = n(669067),
-    e8 = n(830543),
-    e3 = n(466745);
+    e3 = n(830543),
+    e8 = n(466745);
 let e6 = new Set([eB.X.PROFILE_PANEL, eB.X.SUBSCRIPTIONS_PANEL, eB.X.FAMILY_CENTER_PANEL, eB.X.POGGERMODE_PANEL]),
     e4 = new Map([
         [eB.X.CONNECTIONS_PANEL, s.ImpressionNames.USER_SETTINGS_CONNECTIONS],
@@ -1114,7 +1114,7 @@ function te(e) {
         [m, g] = l.useState(!1);
     return (l.useLayoutEffect(() => {
         let e = () => {
-            null == e_.default.getCurrentUser() && (g(!0), (0, e8.default)());
+            null == e_.default.getCurrentUser() && (g(!0), (0, e3.default)());
         };
         return (
             eK.default.addChangeListener(e),
@@ -1129,7 +1129,7 @@ function te(e) {
               partialRoot: eL.D,
               searchBar: tt,
               emptyState: tn,
-              sidebarFooter: e9,
+              sidebarFooter: e7,
               onViewChange: (e) => {
                   e6.has(e) || (0, e5._)(e);
                   let t = e4.get(e);
@@ -1170,14 +1170,14 @@ function tt() {
             [],
         ),
         (0, r.jsx)("div", {
-            className: e3.P,
+            className: e8.P,
             children: (0, r.jsx)(i.I, { size: "md", query: e, onFocus: n, onBlur: s, onChange: t, onClear: a }),
         })
     );
 }
 function tn() {
     return (0, r.jsxs)("div", {
-        className: e3.t,
+        className: e8.t,
         children: [
             (0, r.jsx)(a.E, { variant: "text-sm/semibold", color: "text-strong", children: z.intl.string(z.t.zihbmv) }),
             (0, r.jsx)(a.E, { variant: "text-sm/normal", color: "text-subtle", children: z.intl.string(z.t.XclvsB) }),

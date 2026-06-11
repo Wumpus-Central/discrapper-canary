@@ -14,12 +14,12 @@ let p = { [m.IWg.MODAL_CAROUSEL_NEXT]: u.$0, [m.IWg.MODAL_CAROUSEL_PREV]: u.$4, 
 var f = n(775121),
     g = n(775602),
     C = n(625494),
-    A = n(700331),
-    y = n(454290),
+    y = n(700331),
+    A = n(454290),
     x = n(836781),
     h = n(17928),
     S = n(778712),
-    b = n(247928),
+    b = n(346055),
     I = n(789645),
     T = n(966327),
     M = n(386467),
@@ -71,10 +71,10 @@ function ec(e) {
     });
 }
 function ed() {
-    let { zoomed: e, setZoomed: t } = (0, y.Q)();
+    let { zoomed: e, setZoomed: t } = (0, A.Q)();
     return (0, i.jsx)(ec, {
         onClick: () => {
-            A.l.markActionPerformed(e ? A.N.ZOOM_OUT_BUTTON_PRESSED : A.N.ZOOM_IN_BUTTON_PRESSED), t(!e);
+            y.l.markActionPerformed(e ? y.N.ZOOM_OUT_BUTTON_PRESSED : y.N.ZOOM_IN_BUTTON_PRESSED), t(!e);
         },
         tooltipText: e ? er.intl.string(er.t.vOFof8) : er.intl.string(er.t.Kt4gZ6),
         icon: e ? D.V : P.r,
@@ -86,7 +86,7 @@ function eu(e) {
         a = t.sourceMetadata?.identifier,
         r = l.useCallback(() => {
             if (null != n && null != a) {
-                if ((A.l.markActionPerformed(A.N.FORWARD_PRESSED), "embed" === a.type))
+                if ((y.l.markActionPerformed(y.N.FORWARD_PRESSED), "embed" === a.type))
                     return void (0, Y.fO)({
                         message: n,
                         source: "media-viewer",
@@ -116,7 +116,7 @@ function em(e) {
     let d = (0, Z.XW)((0, Z.bc)(t.original, t.url), t.contentType, t.originalContentType, Z.N7);
     async function u() {
         if (
-            (A.l.markActionPerformed(A.N.SAVE_MEDIA_PRESSED),
+            (y.l.markActionPerformed(y.N.SAVE_MEDIA_PRESSED),
             "VIDEO" === t.type && (0, et.h)({ href: d }),
             "IMAGE" === t.type)
         ) {
@@ -125,10 +125,10 @@ function em(e) {
                 let e = await ei.Ay.saveImage(d, t.contentType, Z.N7);
                 if (e === ei._0.ERRORED) throw Error(`DesktopNativeUtils.saveImage errored for ${d}`);
                 e === ei._0.SAVED &&
-                    (A.l.trackMediaViewerImageSaved({ url: d, success: !0 }),
+                    (y.l.trackMediaViewerImageSaved({ url: d, success: !0 }),
                     (0, L.P0)((0, w.o)(er.intl.string(er.t.cqpdJW), V.Ck.SUCCESS)));
             } catch (e) {
-                A.l.trackMediaViewerImageSaved({ url: d, success: !1 }),
+                y.l.trackMediaViewerImageSaved({ url: d, success: !1 }),
                     (0, L.P0)((0, w.o)(er.intl.string(er.t["8Ve/S0"]), V.Ck.FAILURE));
             } finally {
                 a(!1);
@@ -148,8 +148,8 @@ function ep(e) {
     let n = (0, Z.XW)((0, Z.bc)(t.original, t.url), t.contentType, t.originalContentType);
     return (0, i.jsx)(ec, {
         onClick: () => {
-            A.l.markActionPerformed(A.N.OPEN_LINK_PRESSED),
-                A.l.trackMediaViewerLinkOpened({ href: n }),
+            y.l.markActionPerformed(y.N.OPEN_LINK_PRESSED),
+                y.l.trackMediaViewerLinkOpened({ href: n }),
                 (0, et.h)({ href: n });
         },
         tooltipText: er.intl.string(er.t.q5jLJB),
@@ -183,14 +183,14 @@ function eE(e) {
             );
         })(t);
     async function d() {
-        A.l.markActionPerformed(A.N.COPY_IMAGE_PRESSED);
+        y.l.markActionPerformed(y.N.COPY_IMAGE_PRESSED);
         let e = (0, Z.XW)((0, Z.bc)(t.original, t.url), t.contentType, t.originalContentType, Z.N7);
         try {
             await ei.Ay.copyImage(e, t.originalContentType ?? t.contentType),
-                A.l.trackMediaViewerImageCopied({ url: e, success: !0 }),
+                y.l.trackMediaViewerImageCopied({ url: e, success: !0 }),
                 (0, L.P0)((0, w.o)(er.intl.string(er.t.bhUpvC), V.Ck.SUCCESS));
         } catch (t) {
-            A.l.trackMediaViewerImageCopied({ url: e, success: !1 }),
+            y.l.trackMediaViewerImageCopied({ url: e, success: !1 }),
                 (0, L.P0)((0, w.o)(er.intl.string(er.t.PTPbjx), V.Ck.FAILURE));
         }
     }
@@ -224,7 +224,7 @@ function eE(e) {
                                 icon: B.q,
                                 leadingAccessory: { type: "icon", icon: B.q },
                                 action: function () {
-                                    A.l.markActionPerformed(A.N.COPY_LINK_PRESSED);
+                                    y.l.markActionPerformed(y.N.COPY_LINK_PRESSED);
                                     let e = (0, Z.XW)(
                                         (0, Z.bc)(t.original, t.url),
                                         t.contentType,
@@ -233,11 +233,11 @@ function eE(e) {
                                     (0, $.C)(
                                         e,
                                         () => {
-                                            A.l.trackMediaViewerLinkCopied({ href: e, success: !0 }),
+                                            y.l.trackMediaViewerLinkCopied({ href: e, success: !0 }),
                                                 (0, L.P0)((0, w.o)(er.intl.string(er.t["L/PwZf"]), V.Ck.SUCCESS));
                                         },
                                         () => {
-                                            A.l.trackMediaViewerLinkCopied({ href: e, success: !1 }),
+                                            y.l.trackMediaViewerLinkCopied({ href: e, success: !1 }),
                                                 (0, L.P0)((0, w.o)(er.intl.string(er.t.uVV00B), V.Ck.FAILURE));
                                         },
                                     );
@@ -287,7 +287,7 @@ function eg(e) {
                       buttonRef: n,
                       tooltipText: er.intl.string(er.t["UKOtz+"]),
                       onClick: () => {
-                          A.l.markActionPerformed(A.N.MORE_BUTTON_PRESSED), r(!a);
+                          y.l.markActionPerformed(y.N.MORE_BUTTON_PRESSED), r(!a);
                       },
                       icon: z.j,
                   });
@@ -297,7 +297,7 @@ function eg(e) {
 }
 let eC = l.memo(function (e) {
     let { item: t, hideMediaOptions: n } = e,
-        a = (0, h.bG)([g.A], () => g.A.keyboardModeEnabled),
+        a = (0, h.bG)([g.Ay], () => g.Ay.keyboardModeEnabled),
         s = l.useRef(null),
         o = l.useCallback(() => {
             !a && s.current?.contains(document.activeElement) && document.activeElement.blur();
@@ -328,8 +328,8 @@ let eC = l.memo(function (e) {
         })
     );
 });
-var eA = n(597351),
-    ey = n(897003);
+var ey = n(597351),
+    eA = n(897003);
 let ex = l.memo(function (e) {
     let { message: t } = e,
         n = (0, h.bG)([k.A], () => k.A.getChannel(t.channel_id));
@@ -340,19 +340,19 @@ let ex = l.memo(function (e) {
                   (0, i.jsxs)(M.A.Provider, {
                       value: n.guild_id,
                       children: [
-                          (0, i.jsx)(T.A, { user: t.author, size: S._3.SIZE_40, className: r()(ey.Du, e) }),
+                          (0, i.jsx)(T.A, { user: t.author, size: S._3.SIZE_40, className: r()(eA.Du, e) }),
                           (0, i.jsxs)("div", {
-                              className: r()(ey.cy, e),
+                              className: r()(eA.cy, e),
                               children: [
                                   (0, i.jsx)(b.M, {
                                       children: (0, i.jsx)("div", {
-                                          className: ey.mG,
-                                          children: (0, i.jsx)(N.A, { className: ey.fh, message: t, channel: n }),
+                                          className: eA.mG,
+                                          children: (0, i.jsx)(N.A, { className: eA.fh, message: t, channel: n }),
                                       }),
                                   }),
                                   (0, i.jsx)(j.A, {
                                       timestamp: t.timestamp,
-                                      className: ey.vE,
+                                      className: eA.vE,
                                       tooltipPosition: "bottom",
                                   }),
                               ],
@@ -365,18 +365,18 @@ function eh(e) {
     let { item: t, hideMediaOptions: n, onClose: l } = e,
         a = t.sourceMetadata?.message;
     return (0, i.jsxs)("div", {
-        className: ey.XV,
+        className: eA.XV,
         children: [
             null != a && (0, i.jsx)(ex, { message: a }),
             (0, i.jsx)(eC, { item: t, hideMediaOptions: n }),
             (0, i.jsx)(el.Ay, {
                 mode: el.nY.PINNED,
                 children: (e) =>
-                    (0, i.jsx)(eA.A, {
+                    (0, i.jsx)(ey.A, {
                         onClick: l,
                         icon: I.P,
                         tooltip: er.intl.string(er.t.cpT0Cq),
-                        className: r()(ey.b, e),
+                        className: r()(eA.b, e),
                     }),
             }),
         ],
@@ -385,7 +385,7 @@ function eh(e) {
 var eS = n(264482);
 function eb(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    !0 === n || g.A.useReducedMotion ? e.set(t) : e.start(t);
+    !0 === n || g.Ay.useReducedMotion ? e.set(t) : e.start(t);
 }
 function eI(e) {
     let {
@@ -401,7 +401,7 @@ function eI(e) {
         [T, M] = l.useState(u ?? 0),
         [j, N] = l.useState(!1),
         [k, O] = (0, o.z)(() => ({
-            scale: g.A.useReducedMotion ? 1 : 0.9,
+            scale: g.Ay.useReducedMotion ? 1 : 0.9,
             x: 0,
             y: 0,
             config: { friction: 30, tension: 300 },
@@ -424,7 +424,7 @@ function eI(e) {
                     eb(k.scale, 1);
                     break;
                 case c.ip.EXITING:
-                    g.A.useReducedMotion || (eb(k.x, 0), eb(k.y, 0), eb(k.scale, 0.9));
+                    g.Ay.useReducedMotion || (eb(k.x, 0), eb(k.y, 0), eb(k.scale, 0.9));
             }
     }, [b, k]),
         b === c.ip.HIDDEN && j && (N(!1), k.x.set(0), k.y.set(0), k.scale.set(1)),
@@ -448,7 +448,7 @@ function eI(e) {
         }, [b]);
     let D = l.useCallback(
             (e) => {
-                M(e), n?.(e), A.l.markActionPerformed(A.N.SELECTED_ITEM_CHANGE);
+                M(e), n?.(e), y.l.markActionPerformed(y.N.SELECTED_ITEM_CHANGE);
             },
             [n],
         ),
@@ -485,7 +485,7 @@ function eI(e) {
                 onClick: t,
                 "aria-label": er.intl.string(er.t.AMTX3j),
                 parentComponent: "MediaViewerModal",
-                children: (0, i.jsxs)(y.f.Provider, {
+                children: (0, i.jsxs)(A.f.Provider, {
                     value: P,
                     children: [
                         (0, i.jsx)(eh, { item: a[T], hideMediaOptions: S, onClose: t }),

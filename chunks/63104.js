@@ -17,7 +17,7 @@ let f = l.A.unsafe_rawColors.PRIMARY_300,
     E = l.A.unsafe_rawColors.PRIMARY_630;
 function m(e) {
     let { color: t, size: n, forcedIconColor: r, className: l, iconClassName: m } = e,
-        [g, A] = (0, o.yK)([d.A], () => [d.A.desaturateUserColors, d.A.saturation]),
+        [g, A] = (0, o.yK)([d.Ay], () => [d.Ay.desaturateUserColors, d.Ay.saturation]),
         I = (0, u.r)(f).hex(),
         T = t ?? I,
         S = (0, a.$k)((0, a.LX)(T), !1, g ? A : null),

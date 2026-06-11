@@ -427,11 +427,11 @@ class tA extends l.Component {
         });
     }
 }
-let tx = o.Ay.connectStores([ts.A, tn.A, x.A, ti.A, tl.A, f.A, y.A], (t) => {
+let tx = o.Ay.connectStores([ts.A, tn.A, x.A, ti.A, tl.A, f.Ay, y.A], (t) => {
         let { giftCode: e } = t,
             i = tn.A.get(e.skuId),
             s = null != i ? x.A.getApplication(i.applicationId) : null,
-            l = f.A.useReducedMotion;
+            l = f.Ay.useReducedMotion;
         return {
             sku: i,
             libraryApplication:

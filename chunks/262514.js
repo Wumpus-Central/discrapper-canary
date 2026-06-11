@@ -22,8 +22,8 @@ var n = s(627968),
     S = s(192444),
     q = s(112142),
     _ = s(629455),
-    b = s(31587),
-    y = s(646917),
+    y = s(31587),
+    b = s(646917),
     p = s(561844),
     I = s(590202),
     w = s(651892),
@@ -56,11 +56,11 @@ function V(e) {
             expansionSpring: +!!a,
             config: { tension: 250, friction: 20, clamp: !0 },
         }),
-        et = (0, y.z)(),
-        es = (0, b.SD)(t, et),
+        et = (0, b.z)(),
+        es = (0, y.SD)(t, et),
         en = et === T.MA.NITRO && es,
         ei = (0, D.Ic)(t),
-        ea = (0, b.In)(t),
+        ea = (0, y.In)(t),
         el = (0, g.bG)([N.default], () => N.default.getCurrentUser()),
         er = (0, M.mq)(t.config, el),
         eo = (0, M.mH)(t.config, el),
@@ -70,7 +70,7 @@ function V(e) {
         em = (0, M.ks)(t.config),
         ex = t.userStatus?.orbQuantityClaimed ?? (0, M._Z)(t.config),
         eh = (0, M.wo)(t.config, el),
-        { completedRatio: eE, completedRatioDisplay: ej } = (0, b.O9)(t),
+        { completedRatio: eE, completedRatioDisplay: ej } = (0, y.O9)(t),
         eg = (0, _.A9)(t, o, F.rE.EMBED_DESKTOP, C.Ob.QuestEmbed, U),
         ef = (0, P.Pd)(t),
         eC = i.useMemo(
@@ -122,9 +122,9 @@ function V(e) {
                     children: eg,
                 });
         }, [eg]),
-        eN = (0, g.bG)([f.A], () => f.A.useReducedMotion),
+        eN = (0, g.bG)([f.Ay], () => f.Ay.useReducedMotion),
         eA = i.useMemo(() => Q && (0, D.Ic)(t) && !(0, D.GR)(t.userStatus), [Q, t]),
-        eS = (0, b.do)({ quest: t, content: s, ctaContent: I.Cy.OPEN_GAME_LINK, sourceQuestContent: o }),
+        eS = (0, y.do)({ quest: t, content: s, ctaContent: I.Cy.OPEN_GAME_LINK, sourceQuestContent: o }),
         eq = (0, w.wr)(t),
         e_ = i.useCallback(() => {
             eA
@@ -138,8 +138,8 @@ function V(e) {
                       sourceQuestContent: o,
                   }));
         }, [eA, eS, t.id, s, r, o]),
-        eb = (0, g.bG)([A.A], () => null != A.A.questEnrollmentBlockedUntil, []),
-        ey = q.t.useConfig({ location: F.rE.EMBED_DESKTOP });
+        ey = (0, g.bG)([A.A], () => null != A.A.questEnrollmentBlockedUntil, []),
+        eb = q.t.useConfig({ location: F.rE.EMBED_DESKTOP });
     return (0, n.jsxs)("div", {
         className: $.kL,
         ref: U,
@@ -231,7 +231,7 @@ function V(e) {
             }),
             (0, n.jsx)("div", {
                 className: H.kL,
-                children: eb
+                children: ey
                     ? (0, n.jsxs)(E.e, {
                           direction: "horizontal",
                           fullWidth: !0,
@@ -256,7 +256,7 @@ function V(e) {
                                   fullWidth: !0,
                                   onClick: e_,
                               }),
-                              ey.enabled && ey.enabledQuestStates.has(ef)
+                              eb.enabled && eb.enabledQuestStates.has(ef)
                                   ? (0, n.jsx)(B.A, {
                                         quest: t,
                                         surface: P.V3.QUEST_EMBED,
@@ -286,7 +286,7 @@ let X = i.memo(function (e) {
     );
 });
 function Z(e) {
-    return (0, D.Ic)(e.quest) || e.progressState !== b.F3.COMPLETED
+    return (0, D.Ic)(e.quest) || e.progressState !== y.F3.COMPLETED
         ? (0, n.jsx)(ee, { ...e })
         : (0, n.jsx)(J, { ...e });
 }
@@ -324,7 +324,7 @@ function ee(e) {
             inGameQuest: c,
             sourceQuestContent: l,
         }),
-        m = (0, b.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" });
+        m = (0, y.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" });
     return u
         ? (0, n.jsx)(j.$, {
               variant: "secondary",
@@ -357,7 +357,7 @@ function ex(e) {
     let { quest: t, isInteracting: s, location: i, sourceQuestContent: a } = e,
         l = (0, D.Ic)(t),
         r = t.userStatus?.claimedAt != null,
-        o = (0, b.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" }),
+        o = (0, y.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" }),
         c = (0, er.Ay)(),
         u = (0, et.M)(c) ? "text-muted" : "always-white";
     return (0, n.jsxs)("div", {

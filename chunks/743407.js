@@ -280,7 +280,7 @@ let J = (e) => {
                 );
             })(),
         }.label,
-        u = (0, l.bG)([$.A], () => $.A.useReducedMotion),
+        u = (0, l.bG)([$.Ay], () => $.Ay.useReducedMotion),
         { quest: c } = r.useContext(j),
         { expansionSpring: d } = r.useContext(F),
         _ = s ? -4 : 6;
@@ -613,7 +613,7 @@ let ev = (e) => {
         })(),
         E = c.userStatus?.completedAt != null,
         m = r.useRef(!1),
-        g = (0, l.bG)([$.A], () => $.A.useReducedMotion),
+        g = (0, l.bG)([$.Ay], () => $.Ay.useReducedMotion),
         A = r.useRef(null),
         I = (0, l.bG)([h.A], () => h.A.hasLayers()),
         T = (0, u.A)(I),
@@ -1027,7 +1027,7 @@ function tn(e) {
 }
 let ti = function (e) {
         let { quest: t, taskDetails: n } = e,
-            s = (0, l.bG)([$.A], () => $.A.useReducedMotion),
+            s = (0, l.bG)([$.Ay], () => $.Ay.useReducedMotion),
             a = (0, E.Du)(),
             o = r.useMemo(
                 () => (0, L.bg)(t).filter((e) => a.xboxAndPlaystationAccounts.find((t) => t.type === e)),
@@ -1089,7 +1089,7 @@ function ts(e) {
 function ta(e) {
     let { children: t } = e,
         { springConfig: n, isExpanded: s } = r.useContext(tr),
-        a = (0, l.bG)([$.A], () => $.A.useReducedMotion),
+        a = (0, l.bG)([$.Ay], () => $.Ay.useReducedMotion),
         { ref: c, height: d = null } = (0, k.Ay)(),
         _ = (0, u.A)(d) ?? null,
         [{ height: h }, f] = (0, q.z)(() => ({ from: { height: 0 }, config: n }));
@@ -1170,7 +1170,7 @@ var tf = n(495707);
 let tp = r.forwardRef(function (e, t) {
     let { isHovered: n, asset: s, poster: a, className: o, autoPlay: u = !1 } = e,
         { isExpanded: c } = r.useContext(j),
-        d = (0, l.bG)([$.A], () => $.A.useReducedMotion),
+        d = (0, l.bG)([$.Ay], () => $.Ay.useReducedMotion),
         _ = r.useRef(null);
     return (
         r.useEffect(() => {
@@ -1195,7 +1195,7 @@ let tp = r.forwardRef(function (e, t) {
 function tE(e) {
     let { onClick: t } = e,
         { quest: n } = r.useContext(j),
-        s = (0, l.bG)([$.A], () => $.A.useReducedMotion),
+        s = (0, l.bG)([$.Ay], () => $.Ay.useReducedMotion),
         [o, u] = r.useState(!1),
         c = (0, e$.tW)(n, e$.fY.QUEST_BAR_HERO_VIDEO, void 0, !1),
         d = (0, e$.tW)(n, e$.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1),
@@ -1661,7 +1661,7 @@ function tj(e) {
             springConfig: j,
         } = (function (e) {
             let { isQuestAccepted: t, isQuestCompleted: n, isQuestBarVisible: i } = e,
-                s = (0, l.bG)([$.A], () => $.A.useReducedMotion),
+                s = (0, l.bG)([$.Ay], () => $.Ay.useReducedMotion),
                 [a, o] = r.useState(!1),
                 [u, c] = r.useState(!0),
                 [d, _] = r.useState(!0),

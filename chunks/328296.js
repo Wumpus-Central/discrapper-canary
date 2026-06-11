@@ -73,7 +73,7 @@ function w(e) {
                       },
             [d, o],
         ),
-        p = (0, R.bG)([O.A], () => O.A.useReducedMotion),
+        p = (0, R.bG)([O.Ay], () => O.Ay.useReducedMotion),
         E = _?.badge_id === C.$.PREMIUM_TENURE,
         m = d === C.$.LEGACY_USERNAME,
         g = h?.name,

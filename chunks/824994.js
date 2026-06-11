@@ -5,7 +5,7 @@ var i = n(64700),
     s = n(775602),
     a = n(871162);
 function o(e) {
-    let t = (0, r.bG)([s.A], () => s.A.displayNameStylesEnabled),
+    let t = (0, r.bG)([s.Ay], () => s.Ay.displayNameStylesEnabled),
         n = (0, i.useContext)(a.l);
     return t || n.overrideSettings;
 }

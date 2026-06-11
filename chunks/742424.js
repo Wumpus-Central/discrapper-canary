@@ -537,7 +537,7 @@ let tG = () =>
         }),
     tF = (e) => {
         let { shown: t, sent: n, className: r } = e,
-            s = (0, u.bG)([h.A], () => h.A.useReducedMotion),
+            s = (0, u.bG)([h.Ay], () => h.Ay.useReducedMotion),
             a = (0, tw.p)(
                 t,
                 {
@@ -1137,7 +1137,7 @@ let tX = (e) => {
     r.useEffect(() => {
         a(!0);
     }, []);
-    let o = !!h.A.keyboardModeEnabled && !s,
+    let o = !!h.Ay.keyboardModeEnabled && !s,
         l = (0, e0.Fj)(t?.guild_id)
             .slice(0, 5)
             .map((e) =>
@@ -2609,7 +2609,7 @@ let n3 = (e) => {
             R = r.useRef(!1),
             [O, b] = r.useState(!1),
             [D, L] = r.useState(!1),
-            w = (0, u.bG)([h.A], () => h.A.keyboardModeEnabled);
+            w = (0, u.bG)([h.Ay], () => h.Ay.keyboardModeEnabled);
         r.useEffect(() => {
             O && w && L(!0);
         }, [O, w]),

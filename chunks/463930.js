@@ -98,7 +98,7 @@ function E(e) {
             ref: h,
             ...f
         } = e,
-        E = (0, l.bG)([d.A], () => d.A.roleStyle),
+        E = (0, l.bG)([d.Ay], () => d.Ay.roleStyle),
         m = "username" === E,
         g = (0, i.jsx)(p, {
             roleStyle: E,
@@ -115,6 +115,6 @@ function E(e) {
     return (0, i.jsx)(u.Anchor, { ...f, children: g, style: A, ref: h });
 }
 function m(e) {
-    let t = (0, l.bG)([d.A], () => d.A.roleStyle);
+    let t = (0, l.bG)([d.Ay], () => d.Ay.roleStyle);
     return (0, i.jsx)(p, { ...e, roleStyle: t });
 }

@@ -19,7 +19,7 @@ function p(e) {
         g = (0, _._)(p, s, o, d, m),
         A =
             ((t = (0, l.bG)([c.A], () => c.A.isFocused())),
-            (n = (0, l.bG)([u.A], () => u.A.useReducedMotion)),
+            (n = (0, l.bG)([u.Ay], () => u.Ay.useReducedMotion)),
             !!t && !n && ((o || d) ?? !1)),
         I = r.useRef(null == s);
     return (r.useEffect(() => {

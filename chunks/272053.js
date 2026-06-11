@@ -91,9 +91,9 @@ class o {
             c = l.get(o),
             d = s.A.getField("scrollPositionSnapshots"),
             _ = n.node.type === r.Z6.PANEL ? d.get(o) : void 0,
-            f = _?.categoryKey ?? this.getNextCategoryKey({ targetEntry: n }),
-            h = null != u ? this.accessibleDirectory.entry(u) : void 0,
-            p = h?.parentSidebarItemKey === n.parentSidebarItemKey,
+            h = _?.categoryKey ?? this.getNextCategoryKey({ targetEntry: n }),
+            f = null != u ? this.accessibleDirectory.entry(u) : void 0,
+            p = f?.parentSidebarItemKey === n.parentSidebarItemKey,
             E = n.parentPanelKey === u,
             m = null == n.parentTabKey || n.parentTabKey === c,
             g = E && m,
@@ -106,7 +106,7 @@ class o {
                     s.A.setState({
                         currentPanelKey: o,
                         currentTabKeys: null != n.parentTabKey ? new Map(l).set(o, n.parentTabKey) : l,
-                        currentCategoryKey: f,
+                        currentCategoryKey: h,
                         requestAccordionOpenKey: n.parentAccordionKey,
                         showNavigationMobile:
                             null != t.showNavigationMobile
@@ -125,10 +125,10 @@ class o {
                           animatePanelScroll: c,
                           animateSidebarScroll: d,
                       });
-                let h = document.querySelector(`[data-nav-anchor-key="${e}"]`);
+                let f = document.querySelector(`[data-nav-anchor-key="${e}"]`);
                 if (
-                    (null != h
-                        ? h.focus({ preventScroll: !0 })
+                    (null != f
+                        ? f.focus({ preventScroll: !0 })
                         : document.querySelector("[data-nav-anchor-key]")?.focus({ preventScroll: !0 }),
                     !g)
                 ) {
@@ -137,7 +137,7 @@ class o {
                         i = n.parentTabKey ?? t ?? o;
                     this.onViewChange?.(i);
                 }
-                (!c || i.A.useReducedMotion) && n.node.type !== r.Z6.CATEGORY && s.A.setState({ requestFlashKey: e });
+                (!c || i.Ay.useReducedMotion) && n.node.type !== r.Z6.CATEGORY && s.A.setState({ requestFlashKey: e });
             };
         E ? A() : this.navigateWithValidation?.(e, A);
     }

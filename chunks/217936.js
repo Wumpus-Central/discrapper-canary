@@ -731,7 +731,7 @@ let tA = (e) => {
             starAssetClassName: f,
             animationSpeedScale: p = 1,
         } = e,
-        E = (0, tp.bG)([eR.A], () => eR.A.useReducedMotion),
+        E = (0, tp.bG)([eR.Ay], () => eR.Ay.useReducedMotion),
         m = (0, tE.TM)();
     return (0, s.jsxs)(s.Fragment, {
         children: [
@@ -815,7 +815,7 @@ let tC = (e) => {
                     buttonVisibilityRef: r,
                     shouldShowReferralProgressBar: a,
                 } = e,
-                o = (0, c.bG)([eR.A], () => eR.A.useReducedMotion),
+                o = (0, c.bG)([eR.Ay], () => eR.Ay.useReducedMotion),
                 { visibilityPercentageRef: u, visibilityPercentage: d } = (0, eV.U)(!o),
                 _ = ty();
             return (0, s.jsx)("div", {
@@ -863,7 +863,7 @@ let tC = (e) => {
                     buttonVisibilityRef: r,
                     shouldShowReferralProgressBar: a,
                 } = e,
-                o = (0, c.bG)([eR.A], () => eR.A.useReducedMotion),
+                o = (0, c.bG)([eR.Ay], () => eR.Ay.useReducedMotion),
                 { visibilityPercentageRef: u, visibilityPercentage: d } = (0, eV.U)(!o),
                 _ = q.intl.string(q.t.ifwQZb);
             return (0, s.jsx)("div", {
@@ -952,7 +952,7 @@ var tb = n(652533),
     tL = n(180894);
 let tw = (e) => {
     let { containerVisibilityPercentage: t } = e,
-        n = (0, tp.bG)([eR.A], () => eR.A.useReducedMotion);
+        n = (0, tp.bG)([eR.Ay], () => eR.Ay.useReducedMotion);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)("div", {
@@ -1021,7 +1021,7 @@ let tk = () => {
 };
 var tU = n(18671);
 let tG = () => {
-        let e = (0, tp.bG)([eR.A], () => eR.A.useReducedMotion);
+        let e = (0, tp.bG)([eR.Ay], () => eR.Ay.useReducedMotion);
         return (0, s.jsx)(tm.A, {
             isMotionReduced: e,
             blurScale: 0.4,
@@ -1125,7 +1125,7 @@ let tG = () => {
             L = null != h && h.status !== K.Dmq.ACCOUNT_HOLD && h.hasAnyPremiumNitro,
             w = (0, eb.A)(),
             x = w.isFractionalPremiumActive && !L && null == v && !_,
-            U = (0, c.bG)([eR.A], () => eR.A.useReducedMotion),
+            U = (0, c.bG)([eR.Ay], () => eR.Ay.useReducedMotion),
             { visibilityPercentageRef: G, visibilityPercentage: F } = (0, eV.U)(!U);
         return r
             ? (0, s.jsx)(tF, { fpEndsAt: w.currentEntitlementEndsAt, className: t, buttonVisibilityRef: g })
@@ -2019,7 +2019,7 @@ function nX() {
                         l = r.clone().add(a, "months").diff(o);
                     return Math.max(0, Math.min(1, (i.diff(o) - 864e5) / l));
                 })(),
-                d = (0, c.bG)([eR.A], () => eR.A.useReducedMotion) && !s,
+                d = (0, c.bG)([eR.Ay], () => eR.Ay.useReducedMotion) && !s,
                 _ = (0, nU.t)(),
                 h = (0, nx.P)();
             return (0, a.useMemo)(() => {

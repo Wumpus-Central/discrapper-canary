@@ -38,8 +38,8 @@ var l = n(627968),
     R = n(828162),
     v = n(490557),
     j = n(565553),
-    M = n(168900),
-    y = n(285828);
+    y = n(168900),
+    M = n(285828);
 function L(e) {
     let { powerup: t, eventTargetRef: n, className: i } = e,
         s = { eventTargetRef: n, fit: "contain", className: i };
@@ -47,9 +47,9 @@ function L(e) {
         case a.ec:
             return (0, l.jsx)(j.t, { ...s });
         case a.RV:
-            return (0, l.jsx)(M.J, { ...s });
+            return (0, l.jsx)(y.J, { ...s });
         case a.YG:
-            return (0, l.jsx)(y.z, { ...s });
+            return (0, l.jsx)(M.z, { ...s });
         default:
             return null;
     }
@@ -260,7 +260,7 @@ function q(e) {
     let { guildId: t, type: n, markAsDismissed: i, channelRowRef: s } = e,
         { available: r } = (0, b.A)(t),
         { gameName: a, gameName2: c } = (0, x.A)(),
-        u = (0, d.bG)([A.A], () => A.A.useReducedMotion);
+        u = (0, d.bG)([A.Ay], () => A.Ay.useReducedMotion);
     return (0, l.jsx)(et, {
         size: "video",
         targetElementRef: s,
@@ -287,7 +287,7 @@ function q(e) {
 }
 function X(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i } = e,
-        s = (0, d.bG)([A.A], () => A.A.useReducedMotion);
+        s = (0, d.bG)([A.Ay], () => A.Ay.useReducedMotion);
     return (0, l.jsx)(et, {
         size: "video",
         targetElementRef: i,
@@ -314,7 +314,7 @@ function X(e) {
 function Z(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i } = e,
         { gameName: s, gameName2: r } = (0, x.A)(),
-        a = (0, d.bG)([A.A], () => A.A.useReducedMotion);
+        a = (0, d.bG)([A.Ay], () => A.Ay.useReducedMotion);
     return (0, l.jsx)(et, {
         size: "video",
         targetElementRef: i,
@@ -383,7 +383,7 @@ function J(e) {
 function $(e) {
     let { guildId: t, markAsDismissed: n, channelRowRef: i, ...s } = e,
         r = (0, G.A)(t),
-        a = (0, d.bG)([A.A], () => A.A.useReducedMotion);
+        a = (0, d.bG)([A.Ay], () => A.Ay.useReducedMotion);
     return (0, l.jsx)(et, {
         size: "video",
         targetElementRef: i,
@@ -464,7 +464,7 @@ function ee(e) {
         h = c?.allPowerups[n.skuId],
         p = (0, I.A)(h, !0),
         C = i.useRef(null),
-        x = (0, d.bG)([A.A], () => A.A.useReducedMotion);
+        x = (0, d.bG)([A.Ay], () => A.Ay.useReducedMotion);
     if (null == h && !n.isGameServer) return null;
     let N = n.isGameServer
             ? k.intl.string(B.default["9L0pAN"])

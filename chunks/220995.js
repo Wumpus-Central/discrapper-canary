@@ -47,7 +47,7 @@ function P(e) {
     });
     let K = (0, u.bG)([C.A], () => C.A.can(T.xBc.CREATE_INSTANT_INVITE, i), [i]),
         B = (0, u.bG)([y.A], () => y.A.getGuild(i.guild_id)),
-        Y = (0, u.bG)([x.A], () => x.A.useReducedMotion),
+        Y = (0, u.bG)([x.Ay], () => x.Ay.useReducedMotion),
         [q, H] = l.useState(!1),
         $ = l.useRef(null),
         { isHoveringOrFocusing: W } = (0, N.A)(K ? P : $),
@@ -72,7 +72,7 @@ function P(e) {
             null != B &&
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        t.e("40362"),
+                        t.e("59945"),
                         t.e("59957"),
                         t.e("28136"),
                         t.e("16084"),

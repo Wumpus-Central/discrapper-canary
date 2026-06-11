@@ -19,8 +19,8 @@ var t = n(627968),
     C = n(922016),
     v = n(307301),
     A = n(921853),
-    p = n(442433),
-    y = n(66834),
+    y = n(442433),
+    p = n(66834),
     N = n(775602),
     M = n(915089),
     S = n(201275),
@@ -41,7 +41,7 @@ let J = c.A.unsafe_rawColors.PRIMARY_300;
 function W(e) {
     let { role: l, guildId: n, trailing: i, itemRef: r, labelId: o, className: a, style: d } = e,
         c = (0, S.$7)({ roleId: l.id, size: 12, guildId: n }),
-        j = (0, u.bG)([N.A], () => N.A.roleStyle),
+        j = (0, u.bG)([N.Ay], () => N.Ay.roleStyle),
         b = (0, k.X_)(n, l, l.colorStrings),
         R = l.tags?.guild_connections === null,
         C = (0, x.r)(J).hex(),
@@ -128,7 +128,7 @@ function $(e) {
         c = null != d ? T.HJ(n, d.id) : null,
         x = (0, u.bG)([L.Ay], () => L.Ay.getMember(n.id, l)),
         h = x?.roles ?? [],
-        m = (0, u.bG)([N.A], () => N.A.roleStyle),
+        m = (0, u.bG)([N.Ay], () => N.Ay.roleStyle),
         b = i.useRef(null),
         R = a ?? b,
         A = i.useCallback(
@@ -140,14 +140,14 @@ function $(e) {
             },
             [n.id, l, o],
         ),
-        p = (e) => !(0, P.Oy)(e) && !e.managed && _.A.isRoleHigher(n, c, e) && -1 === h.indexOf(e.id);
+        y = (e) => !(0, P.Oy)(e) && !e.managed && _.A.isRoleHigher(n, c, e) && -1 === h.indexOf(e.id);
     return (0, t.jsx)(C.Y, {
         targetElementRef: R,
         position: "bottom",
         align: "center",
         renderPopout: (e) => {
             let { closePopout: l } = e;
-            return (0, t.jsx)(z.A, { guild: n, roleStyle: m, roleFilter: p, onSelect: A, onClose: l });
+            return (0, t.jsx)(z.A, { guild: n, roleStyle: m, roleFilter: y, onSelect: A, onClose: l });
         },
         children: (e) =>
             (0, t.jsx)(g.m, {
@@ -206,7 +206,7 @@ function Q(e, l, n) {
             let i = L.Ay.getMember(l, e),
                 r = (i?.roles ?? []).filter((e) => e !== t.id);
             t.tags?.guild_connections === null
-                ? y.A.unassignGuildRoleConnection(l, t.id)
+                ? p.A.unassignGuildRoleConnection(l, t.id)
                 : w.A.updateMemberRoles(l, e, r, [], [t.id]);
         },
         [n, l, e],
@@ -214,7 +214,7 @@ function Q(e, l, n) {
 }
 function U() {
     return i.useCallback((e, l) => {
-        (0, p.L3)(e, async () => {
+        (0, y.L3)(e, async () => {
             let { default: e } = await n.e("15687").then(n.bind(n, 646938));
             return (n) => (0, t.jsx)(e, { ...n, id: l, label: H.intl.string(H.t.sMsaLg) });
         });
@@ -324,8 +324,8 @@ function V(e) {
         v = (e, l) => {
             null != l ? (C.current[e] = l) : delete C.current[e];
         },
-        [A, p] = i.useState(r),
-        [y, N] = i.useState(268),
+        [A, y] = i.useState(r),
+        [p, N] = i.useState(268),
         [M, S] = i.useState(!1),
         w = i.useRef(null),
         k = i.useRef(null),
@@ -353,7 +353,7 @@ function V(e) {
                     (e += o + 4), n.push(i);
                 }
             }
-            p(n.length !== A.length || n.some((e, l) => e.id !== A[l]?.id) ? n : A), N(t), E.current++;
+            y(n.length !== A.length || n.some((e, l) => e.id !== A[l]?.id) ? n : A), N(t), E.current++;
         }, [r, A, M]);
     let I = M ? r : A,
         P = () => {
@@ -385,7 +385,7 @@ function V(e) {
                                             onRemoveRole: m ? b : void 0,
                                             itemRef: (l) => v(e.id, l),
                                             onContextMenu: f ? (l) => R(l, e.id) : void 0,
-                                            style: { maxWidth: M || l !== A.length - 1 ? 268 : y },
+                                            style: { maxWidth: M || l !== A.length - 1 ? 268 : p },
                                         },
                                         e.id,
                                     ),
@@ -407,7 +407,7 @@ function V(e) {
                                                     itemRef: (l) => v(e.id, l),
                                                     role: e,
                                                     guildId: n.id,
-                                                    style: { maxWidth: M || l !== A.length - 1 ? 268 : y },
+                                                    style: { maxWidth: M || l !== A.length - 1 ? 268 : p },
                                                 }),
                                             },
                                             e.id,

@@ -1,9 +1,9 @@
-r.d(t, { jP: () => i, gB: () => d, yB: () => u });
-var n = r(64700),
-    s = r(17928),
-    o = r(775602),
-    l = r(652525);
-let a = "custom-cursors-styles",
+r.d(t, { jP: () => i, gB: () => u, yB: () => d });
+var l = r(64700),
+    n = r(17928),
+    s = r(775602),
+    a = r(652525);
+let o = "custom-cursors-styles",
     i = "custom-cursors",
     c = `
   :root {
@@ -62,13 +62,13 @@ let a = "custom-cursors-styles",
     cursor: var(--custom-cursor-pointer) !important;
   }
 `;
-function d() {
-    let e = u("useCustomCursorsCSS");
-    n.useLayoutEffect(() => {
+function u() {
+    let e = d("useCustomCursorsCSS");
+    l.useLayoutEffect(() => {
         if (!e) return;
-        let t = document.getElementById(a);
+        let t = document.getElementById(o);
         return (
-            null == t && (((t = document.createElement("style")).id = a), document.head.appendChild(t)),
+            null == t && (((t = document.createElement("style")).id = o), document.head.appendChild(t)),
             (t.textContent = c),
             () => {
                 t.textContent = "";
@@ -76,8 +76,8 @@ function d() {
         );
     }, [e]);
 }
-function u(e) {
-    let t = (0, l.t)(e),
-        r = (0, s.bG)([o.A], () => o.A.enableCustomCursor ?? !0);
+function d(e) {
+    let t = (0, a.t)(e),
+        r = (0, n.bG)([s.Ay], () => s.Ay.enableCustomCursor ?? !0);
     return t && r;
 }

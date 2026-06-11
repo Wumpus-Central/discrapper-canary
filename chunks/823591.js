@@ -569,7 +569,7 @@ let ev = (e) => {
                         return !1;
                 }
             }, [p, eR, eA, eI, y?.verificationLevel, eM, eF]),
-            eO = (0, f.bG)([L.A], () => L.A.useReducedMotion),
+            eO = (0, f.bG)([L.Ay], () => L.Ay.useReducedMotion),
             e_ = s.useRef(null),
             eT = (function (e) {
                 let t = null != e ? X.Ay.getGuildIconURL({ id: e?.id, icon: e?.icon, size: 40 }) : void 0,

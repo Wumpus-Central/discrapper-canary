@@ -29,7 +29,7 @@ function v(e) {
     let { user: t, analyticsLocations: n, confettiEnabled: i = !0, onClose: r } = e,
         { giftButtonRef: u, handleMouseEnter: c } = (function (e) {
             let { enabled: t } = e,
-                n = (0, I.bG)([k.A], () => k.A.useReducedMotion),
+                n = (0, I.bG)([k.Ay], () => k.Ay.useReducedMotion),
                 a = l.useRef(null),
                 i = l.useRef(0),
                 { createMultipleConfettiAt: r } = l.useContext(A.x),

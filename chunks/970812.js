@@ -21,9 +21,9 @@ let f = "ease-in-out",
     D = [4, 6, 12, 9, 6],
     b = [6, 10, 9, 16, 8],
     T = 6.67 / 8,
-    j =
+    y =
         "M16.5 18H16a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-.5v-.5a2.5 2.5 0 0 0-5 0v.5Zm3.5 0v-.5a1 1 0 1 0-2 0v.5h2Z",
-    y = `translate(${12.33 - 15 * T}, ${1 - 15.5 * T}) scale(${T})`;
+    j = `translate(${12.33 - 15 * T}, ${1 - 15.5 * T}) scale(${T})`;
 function M(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : m,
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2,
@@ -188,8 +188,8 @@ function w(e) {
             }),
             [M.transitionConfig.timingFunction, _],
         ),
-        U = a.useMemo(() => ({ ...L, width: 2, height: 16, backgroundColor: o }), [L, o]),
-        G = a.useMemo(() => ({ left: w, top: (m - 16) / 2, width: 18, height: 16, columnGap: 2 }), [m, w, 18]),
+        G = a.useMemo(() => ({ ...L, width: 2, height: 16, backgroundColor: o }), [L, o]),
+        U = a.useMemo(() => ({ left: w, top: (m - 16) / 2, width: 18, height: 16, columnGap: 2 }), [m, w, 18]),
         k = a.useCallback(
             (e) => {
                 let t = I.current;
@@ -292,13 +292,13 @@ function w(e) {
                             children: (0, i.jsx)("div", {
                                 ref: I,
                                 className: h.Gb,
-                                style: G,
-                                children: A.map((e) => (0, i.jsx)("div", { className: h.M0, style: U }, e)),
+                                style: U,
+                                children: A.map((e) => (0, i.jsx)("div", { className: h.M0, style: G }, e)),
                             }),
                         }),
                     }),
                 }),
-                N && (0, i.jsx)("path", { d: j, transform: y, fill: o, fillRule: "evenodd", clipRule: "evenodd" }),
+                N && (0, i.jsx)("path", { d: y, transform: j, fill: o, fillRule: "evenodd", clipRule: "evenodd" }),
             ],
         }),
     });
@@ -325,7 +325,7 @@ function _(e) {
                         return (0, i.jsx)("rect", { x: u + 4 * n, y: a, width: 2, height: e, rx: 1, fill: t }, n);
                     }),
                 }),
-                r && (0, i.jsx)("path", { d: j, transform: y, fill: t, fillRule: "evenodd", clipRule: "evenodd" }),
+                r && (0, i.jsx)("path", { d: y, transform: j, fill: t, fillRule: "evenodd", clipRule: "evenodd" }),
             ],
         }),
     });
@@ -338,7 +338,7 @@ function I(e) {
             animationStyle: r = g.s.GENTLE_AMBIENT,
             locked: s = !1,
         } = e,
-        d = (0, u.bG)([o.A], () => o.A.useReducedMotion),
+        d = (0, u.bG)([o.Ay], () => o.Ay.useReducedMotion),
         h = (0, u.bG)([c.A], () => c.A.isConnected()),
         [f, m] = a.useState(h);
     return (a.useEffect(() => {

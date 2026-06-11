@@ -19,11 +19,11 @@ var l = n(627968),
     S = n(174459),
     P = n(625494),
     I = n(45938),
-    T = n(615396),
-    f = n(937008),
+    f = n(615396),
+    T = n(937008),
     N = n(491057),
-    v = n(482132),
-    g = n(364840),
+    g = n(482132),
+    v = n(364840),
     x = n(821609),
     R = n(778712),
     M = n(97808),
@@ -37,13 +37,13 @@ var l = n(627968),
     k = n(837015),
     G = n(61750),
     F = n(287809),
-    Y = n(758836),
-    B = n(375708),
+    B = n(758836),
+    Y = n(375708),
     W = n(258915);
 function H(e) {
     let { rewardSkuId: t, onClose: n, onRewardModalClose: i } = e,
         a = (0, s.bG)([F.default], () => F.default.getCurrentUser()),
-        o = (0, s.bG)([b.A], () => b.A.useReducedMotion),
+        o = (0, s.bG)([b.Ay], () => b.Ay.useReducedMotion),
         { analyticsLocations: u } = (0, L.Ay)(),
         c = R._3.SIZE_32,
         { product: d, isFetching: p } = (0, j.q)(t),
@@ -82,8 +82,8 @@ function H(e) {
                         : { isNameplateReward: !1, nameplateData: null, rewardAvatarDecorationSrc: null },
             [A, c, o],
         );
-    return (0, l.jsx)(v.UX, {
-        children: (0, l.jsx)(g.j, {
+    return (0, l.jsx)(g.UX, {
+        children: (0, l.jsx)(v.j, {
             children: (0, l.jsxs)("div", {
                 className: W.W,
                 children: [
@@ -109,7 +109,7 @@ function H(e) {
                           }),
                     (0, l.jsx)(x.$, {
                         variant: "primary",
-                        text: B.intl.string(B.t.kMYVwv),
+                        text: Y.intl.string(Y.t.kMYVwv),
                         loading: p,
                         onClick: () => {
                             null != d &&
@@ -118,7 +118,7 @@ function H(e) {
                                     product: d,
                                     shouldShowPromotionalExperience: !0,
                                     analyticsLocations: u,
-                                    purchaseType: Y.gs.PROMOTIONAL,
+                                    purchaseType: B.gs.PROMOTIONAL,
                                     onCloseCallback: i,
                                 }));
                         },
@@ -136,7 +136,7 @@ var V = n(615310),
 function $(e) {
     let t,
         {
-            handleClose: g,
+            handleClose: v,
             planGroup: x,
             onSubscriptionConfirmation: R,
             renderPurchaseConfirmation: M,
@@ -152,7 +152,7 @@ function $(e) {
             paymentSourceId: k,
             isPremiumGroupPurchase: G,
             startingPremiumSubscriptionPlanId: F,
-            startingFractionalPremiumEndsAt: Y,
+            startingFractionalPremiumEndsAt: B,
         } = (0, h.t4)((e) => ({
             activeSubscription: e.activeSubscription,
             selectedSkuId: e.selectedSkuId,
@@ -162,7 +162,7 @@ function $(e) {
             startingPremiumSubscriptionPlanId: e.startingPremiumSubscriptionPlanId,
             startingFractionalPremiumEndsAt: e.startingFractionalPremiumEndsAt,
         })),
-        B = (0, m.A)(),
+        Y = (0, m.A)(),
         W = (0, V.bB)(),
         {
             isGift: $,
@@ -174,10 +174,10 @@ function $(e) {
             claimableRewards: en,
             selectedGiftingPromotionReward: el,
             openGiftingBadgePostPurchaseModal: er,
-        } = (0, f.Pv)(),
+        } = (0, T.Pv)(),
         { confirmationFooter: ei } = (0, N.cG)(),
-        ea = (0, C.px)(B, $, en),
-        es = (0, C.Mq)(B),
+        ea = (0, C.px)(Y, $, en),
+        es = (0, C.Mq)(Y),
         eo = (0, A.Mv)(el, !1),
         eu = (0, s.bG)([y.A], () => y.A.getGiftPromotion()?.id),
         ec = (0, s.bG)([y.A], () => {
@@ -188,13 +188,13 @@ function $(e) {
         }),
         ed = (0, K.g)(j, k),
         ep = $ && null != el && null != eo && es,
-        em = { selectedPlan: B, selectedSkuId: D, step: W };
-    if (null == B) throw new d.v({ message: "Expected plan to be selected", extraSentryInformation: em });
+        em = { selectedPlan: Y, selectedSkuId: D, step: W };
+    if (null == Y) throw new d.v({ message: "Expected plan to be selected", extraSentryInformation: em });
     if (null == D) throw new d.v({ message: "Expected selectedSkuId", extraSentryInformation: em });
     if (null == W) throw new d.v({ message: "Step should be set", extraSentryInformation: em });
     let eh = r.useCallback(() => {
-        g(), R?.();
-    }, [g, R]);
+        v(), R?.();
+    }, [v, R]);
     (0, c.Ay)(() => {
         G &&
             S.default.track(q.HAw.PREMIUM_GROUP_PURCHASE_CONFIRMATION_VIEWED, {
@@ -259,30 +259,30 @@ function $(e) {
                 (0, E.qr)(o.M.GIFTING_PROMOTION_REMINDER, eu, { dismissAction: z.i.INDIRECT_ACTION });
         }, [ec, eu, ea]);
     let eA = null != O ? _.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
-    if (null != M) t = M(B, eh, U);
-    else if ($) t = (0, l.jsx)(_.fw, { planId: B.id, onClose: eh });
+    if (null != M) t = M(Y, eh, U);
+    else if ($) t = (0, l.jsx)(_.fw, { planId: Y.id, onClose: eh });
     else {
         let e =
-            F === B.id
+            F === Y.id
                 ? { postSuccessGuild: b }
                 : {
                       followupSKUInfo: L,
                       startingPremiumSubscriptionPlanId: F,
-                      isDowngrade: null != w && (0, T.vT)(w, B.id, x),
+                      isDowngrade: null != w && (0, f.vT)(w, Y.id, x),
                   };
         t = (0, l.jsx)(_.Ay, {
-            planId: B.id,
+            planId: Y.id,
             onClose: eh,
             paymentSourceType: ed,
             hideClose: null != ei,
-            startingFractionalPremiumEndsAt: Y,
+            startingFractionalPremiumEndsAt: B,
             customCTAType: eA,
             ...e,
         });
     }
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsxs)(v.dZ, { children: [(0, l.jsx)(Z.A, {}), t] }),
+            (0, l.jsxs)(g.dZ, { children: [(0, l.jsx)(Z.A, {}), t] }),
             null != ei && ei,
             ep && null != el && (0, l.jsx)(H, { rewardSkuId: el, onClose: eh, onRewardModalClose: er }),
         ],

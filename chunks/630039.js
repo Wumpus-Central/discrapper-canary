@@ -1683,7 +1683,7 @@ function nE(e) {
         [m, g] = R.useState(!1),
         { ref: x, width: h = 0 } = (0, e1.Ay)(m),
         { ref: E, width: j = 0 } = (0, e1.Ay)(m),
-        N = (0, L.bG)([nc.A], () => nc.A.useReducedMotion),
+        N = (0, L.bG)([nc.Ay], () => nc.Ay.useReducedMotion),
         [p, f] = R.useState(d),
         I = R.useRef(null),
         S = h > j ? h : j;
@@ -11017,7 +11017,7 @@ let cw = "WELCOME_CHANNEL",
     cB = (e) => {
         let { guild: t } = e,
             { welcomeSettings: i, originalWelcomeSettings: l } = (0, L.bG)([dj], () => dj.getSettingsProps()),
-            s = (0, L.bG)([nc.A], () => nc.A.useReducedMotion),
+            s = (0, L.bG)([nc.Ay], () => nc.Ay.useReducedMotion),
             [r, a] = R.useState(null),
             [o, d] = R.useState(!1),
             [c, u] = R.useState(!1),
@@ -12792,7 +12792,7 @@ function u3(e) {
                           n.e("90554"),
                           n.e("12520"),
                           n.e("99011"),
-                          n.e("65246"),
+                          n.e("42865"),
                           n.e("72239"),
                           n.e("88990"),
                           n.e("18733"),
@@ -12895,7 +12895,7 @@ let u5 = R.memo(function () {
                             c.isGuildVocal()
                                 ? (0, nW.L3)(e, async () => {
                                       let { default: e } = await Promise.all([
-                                          n.e("51143"),
+                                          n.e("16955"),
                                           n.e("26132"),
                                           n.e("46652"),
                                           n.e("93190"),
@@ -12930,7 +12930,7 @@ let u5 = R.memo(function () {
                                           n.e("58262"),
                                           n.e("19690"),
                                           n.e("26792"),
-                                          n.e("65246"),
+                                          n.e("42865"),
                                           n.e("72239"),
                                           n.e("12052"),
                                           n.e("43267"),
@@ -12971,7 +12971,7 @@ let u5 = R.memo(function () {
                                           n.e("99011"),
                                           n.e("66540"),
                                           n.e("29542"),
-                                          n.e("65246"),
+                                          n.e("42865"),
                                           n.e("72239"),
                                           n.e("12052"),
                                           n.e("25173"),
@@ -17892,7 +17892,7 @@ function x4(e) {
     });
 }
 function x9() {
-    let e = (0, L.bG)([nc.A], () => nc.A.useReducedMotion),
+    let e = (0, L.bG)([nc.Ay], () => nc.Ay.useReducedMotion),
         { gradientStyle: t, gradientClassname: n } = (0, xT.Wq)({
             colorStrings: (0, xL.K3)(xZ.jl),
             useReducedMotion: e,
@@ -18181,7 +18181,7 @@ function hc(e) {
                 let { default: e } = await Promise.all([
                     n.e("2677"),
                     n.e("47141"),
-                    n.e("51143"),
+                    n.e("16955"),
                     n.e("94881"),
                     n.e("26132"),
                     n.e("46652"),
@@ -18649,7 +18649,7 @@ function hO(e) {
     let { guild: t, currentRoleId: n, setCurrentRoleId: i, setSelectedSection: l } = e,
         s = (0, L.bG)([gJ.A], () => gJ.A.roles),
         r = (0, L.bG)([J.A], () => J.A.getHighestRole(t)),
-        a = (0, L.bG)([nc.A], () => nc.A.roleStyle),
+        a = (0, L.bG)([nc.Ay], () => nc.Ay.roleStyle),
         [o, d] = R.useState(s.length),
         { scrolledToTop: c, handleScroll: u } = xA(),
         { handleDragStart: m, handleDragReset: g, handleDragComplete: x } = (0, mc.A)(s, hR),
@@ -18966,7 +18966,7 @@ function hH() {
             l.current = e;
         }),
         R.useEffect(() => {
-            if (nc.A.useReducedMotion) return;
+            if (nc.Ay.useReducedMotion) return;
             let e = setTimeout(() => i((t + 1) % l.current.length), 6332);
             return () => clearTimeout(e);
         }, [t]),
@@ -20203,7 +20203,7 @@ function Ek(e) {
 function EU(e, t) {
     let [n, i] = R.useState(!1),
         l = (0, L.bG)([O.A], () => O.A.getProps().subsection),
-        s = (0, L.bG)([nc.A], () => nc.A.useReducedMotion);
+        s = (0, L.bG)([nc.Ay], () => nc.Ay.useReducedMotion);
     R.useEffect(() => {
         n || (null !== e.current && l === t && (i(!0), e.current.scrollIntoView({ behavior: s ? "auto" : "smooth" })));
     }, [n, l, t, s, e]);
@@ -21026,7 +21026,7 @@ function jB(e) {
                   (0, C.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
                           n.e("60909"),
-                          n.e("71106"),
+                          n.e("59945"),
                           n.e("25652"),
                           n.e("8979"),
                           n.e("20643"),
@@ -21173,7 +21173,7 @@ function jH(e) {
                                       (0, C.openModalLazy)(async () => {
                                           let { default: e } = await Promise.all([
                                               n.e("60909"),
-                                              n.e("71106"),
+                                              n.e("59945"),
                                               n.e("25652"),
                                               n.e("8979"),
                                               n.e("20643"),
@@ -21279,7 +21279,7 @@ let j3 = (e) => {
                                               (0, C.openModalLazy)(async () => {
                                                   let { default: e } = await Promise.all([
                                                       n.e("60909"),
-                                                      n.e("71106"),
+                                                      n.e("59945"),
                                                       n.e("31232"),
                                                       n.e("20643"),
                                                       n.e("98913"),
@@ -22208,7 +22208,7 @@ let NB = (e) => {
                         (0, C.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
                                 n.e("60909"),
-                                n.e("71106"),
+                                n.e("59945"),
                                 n.e("31232"),
                                 n.e("20643"),
                                 n.e("98913"),
@@ -23816,7 +23816,7 @@ function At(e) {
             onClick: () =>
                 (0, C.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("72688"),
+                        n.e("84570"),
                         n.e("2677"),
                         n.e("99430"),
                         n.e("72465"),

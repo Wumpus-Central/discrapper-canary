@@ -3597,7 +3597,7 @@ let ro = r.memo((e) => {
     let { start: t } = e,
         [n, i] = r.useState(0),
         l = (0, it.j)(),
-        s = (0, u.bG)([s7.A], () => s7.A.useReducedMotion),
+        s = (0, u.bG)([s7.Ay], () => s7.Ay.useReducedMotion),
         a = !1 === l || s;
     return (
         r.useEffect(() => {
@@ -5571,7 +5571,7 @@ function a3(e) {
         [c, m] = r.useState(!0),
         [h, g] = r.useState(!1),
         p = t.state === K.elq.ACCEPTING,
-        A = (0, u.bG)([s7.A], () => s7.A.useReducedMotion),
+        A = (0, u.bG)([s7.Ay], () => s7.Ay.useReducedMotion),
         { analyticsLocations: E } = (0, f.Ay)(x.A.INVITE_EMBED);
     (0, e5.A)({
         name: e4.ImpressionNames.INVITE_EMBED,
@@ -6380,7 +6380,7 @@ function oL(e) {
             location_stack: j,
         },
     });
-    let R = (0, u.bG)([s7.A], () => s7.A.useReducedMotion),
+    let R = (0, u.bG)([s7.Ay], () => s7.Ay.useReducedMotion),
         k = r.useRef(null),
         [M, w] = r.useState({ percentX: 0, percentY: 0, proximity: 0 }),
         O = (0, u.bG)([og.A], () => {

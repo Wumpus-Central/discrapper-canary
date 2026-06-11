@@ -1,54 +1,54 @@
-i.d(e, { V: () => p });
+i.d(e, { V: () => h });
 var n = i(627968),
     r = i(64700),
     l = i(772707),
-    s = i(17928),
-    a = i(775602),
-    c = i(524246),
+    a = i(17928),
+    s = i(775602),
+    o = i(524246),
     u = i(816252),
-    o = i(916974),
+    c = i(916974),
     d = i(788868),
-    m = i(985018),
+    m = i(375708),
     f = i(476791),
     g = i(303930),
-    x = i(977544);
-let p = () => {
+    p = i(977544);
+let h = () => {
     let {
             transitionState: t,
             onClose: e,
             premiumType: i,
-            confettiCanvas: p,
-            churnUserDiscountOffer: h,
-            discountedPrice: C,
-        } = (0, o.X)(),
-        v = (0, r.useRef)(null),
-        [P, j] = (0, r.useState)(!1),
-        y = (0, s.bG)([a.A], () => a.A.useReducedMotion);
+            confettiCanvas: h,
+            churnUserDiscountOffer: x,
+            discountedPrice: P,
+        } = (0, c.X)(),
+        C = (0, r.useRef)(null),
+        [y, E] = (0, r.useState)(!1),
+        v = (0, a.bG)([s.Ay], () => s.Ay.useReducedMotion);
     if (
         ((0, r.useEffect)(() => {
-            null !== v.current && null !== C && j(!0);
-        }, [v, C]),
-        null === h)
+            null !== C.current && null !== P && E(!0);
+        }, [C, P]),
+        null === x)
     )
         return null;
-    let N = i === d.PremiumTypes.TIER_2;
+    let D = i === d.PremiumTypes.TIER_2;
     return (0, n.jsxs)("div", {
-        ref: v,
+        ref: C,
         children: [
             (0, n.jsx)(l.k, {
-                graphic: { type: "image", src: N ? x.A : g },
-                gradientColor: N ? "nitro-pink" : "nitro-green",
+                graphic: { type: "image", src: D ? p.A : g },
+                gradientColor: D ? "nitro-pink" : "nitro-green",
                 transitionState: t,
                 title: m.intl.string(m.t.PZSyRk),
                 onClose: async () => e(),
                 children: (0, n.jsx)("div", {
                     className: f.TA,
-                    children: (0, n.jsx)(u._, { offerState: u.b.APPLIED, userDiscountOffer: h }),
+                    children: (0, n.jsx)(u._, { offerState: u.b.APPLIED, userDiscountOffer: x }),
                 }),
             }),
-            !y &&
-                P &&
-                (0, n.jsx)(c.A, { confettiTarget: v.current, confettiCanvas: p, confettiVelocityMultiplier: 0.75 }),
+            !v &&
+                y &&
+                (0, n.jsx)(o.A, { confettiTarget: C.current, confettiCanvas: h, confettiVelocityMultiplier: 0.75 }),
         ],
     });
 };

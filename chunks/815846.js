@@ -542,7 +542,7 @@ let eg = (e) => {
                 circleColor: g,
                 circleStroke: f,
             } = e,
-            E = (0, x.bG)([eo.A], () => eo.A.useReducedMotion),
+            E = (0, x.bG)([eo.Ay], () => eo.Ay.useReducedMotion),
             C = t && !E;
         return (0, i.jsx)("div", {
             className: a()(eh.G3, s),
@@ -761,7 +761,7 @@ function ek(e) {
                         if (n) return eE.intl.format(eE.t["2CGBri"], { remainingTime: u, price: p });
                         if (o && null != l && t.metadata?.active_discount_expires_at != null) {
                             let e = (0, V.$g)(m.amount, m.currency);
-                            return eE.intl.format(eS.default.t3TzwQ, {
+                            return eE.intl.format(eS.default.FwjZzr, {
                                 percent: l?.percentage ?? 0,
                                 discountEndDate: new Date(t.metadata.active_discount_expires_at),
                                 regularPrice: e,

@@ -1,11 +1,11 @@
 let c;
-a.r(t), a.d(t, { WowMomentTypes: () => S, default: () => W }), a(323874), a(14289), a(35956);
+a.r(t), a.d(t, { WowMomentTypes: () => A, default: () => W }), a(323874), a(14289), a(35956);
 var i,
     s = a(627968),
     n = a(64700),
     d = a(503698),
     o = a.n(d),
-    m = a(873174),
+    m = a(922139),
     h = a(17928),
     l = a(636537),
     u = a(717421),
@@ -19,9 +19,9 @@ var i,
     b = a(598653),
     T = a(639735),
     I = a(652215),
-    A = a(208352),
-    S = (((i = {}).WUMPUS_FLIGHT = "wumpus_flight"), (i.GRADIENT_HIGHLIGHT = "gradient_highlight"), i);
-async function y(e, t) {
+    y = a(208352),
+    A = (((i = {}).WUMPUS_FLIGHT = "wumpus_flight"), (i.GRADIENT_HIGHLIGHT = "gradient_highlight"), i);
+async function S(e, t) {
     try {
         p.h.dispatch({ type: "PURCHASED_ITEMS_FESTIVITY_IS_FETCHING_WOW_MOMENT_MEDIA" });
         let a = e
@@ -44,7 +44,7 @@ async function y(e, t) {
     }
 }
 function x() {
-    let e = (0, h.bG)([r.A], () => r.A.useReducedMotion),
+    let e = (0, h.bG)([r.Ay], () => r.Ay.useReducedMotion),
         [t, a] = n.useState(null),
         { isFetchingMedia: i, canPlayWowMoment: d } = (0, h.cf)([T.A], () => ({
             isFetchingMedia: T.A.isFetchingWowMomentMedia,
@@ -52,13 +52,13 @@ function x() {
         })),
         [l, p] = n.useState(!1),
         M = (0, _.Z5)(),
-        S = (0, _.TM)(),
-        x = M > 52 || -1 === M || S,
-        W = S ? "video/mp4" : "video/webm",
+        A = (0, _.TM)(),
+        x = M > 52 || -1 === M || A,
+        W = A ? "video/mp4" : "video/webm",
         g = x && !e && d && null === t && !1 === i;
     n.useEffect(() => {
-        g && y(S, a);
-    }, [g, S, a]),
+        g && S(A, a);
+    }, [g, A, a]),
         n.useEffect(() => {
             function t() {
                 !e &&
@@ -112,12 +112,12 @@ function x() {
     let C = l && null !== t,
         O = C || R;
     return (0, s.jsxs)("div", {
-        className: o()({ [A.iE]: !O, [A.iV]: O }),
+        className: o()({ [y.iE]: !O, [y.iV]: O }),
         children: [
             C &&
                 (0, s.jsx)(w.A, {
                     autoPlay: !0,
-                    className: A.tN,
+                    className: y.tN,
                     onPlay: () => {
                         clearTimeout(c),
                             f.default.track(I.HAw.PREMIUM_WOW_MOMENT_VIEWED, { wow_moment_type: "wumpus_flight" });
@@ -127,12 +127,12 @@ function x() {
                     },
                     children: (0, s.jsx)("source", { src: t, type: W }),
                 }),
-            (0, s.jsx)(m.animated.div, { className: A.$D, style: P }),
+            (0, s.jsx)(m.animated.div, { className: y.$D, style: P }),
             (0, s.jsx)(m.animated.div, {
-                className: A.AX,
+                className: y.AX,
                 style: N,
                 children: (0, s.jsxs)("svg", {
-                    className: A.By,
+                    className: y.By,
                     viewBox: "0 0 848 1024",
                     fill: "none",
                     children: [

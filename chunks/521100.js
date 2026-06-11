@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { v5: () => h, RM: () => p, Wq: () => f, CR: () => E }), n(321073);
+n.d(t, { v5: () => f, RM: () => p, Wq: () => h, CR: () => E }), n(321073);
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -10,7 +10,7 @@ var u = n(17928),
     c = n(775602),
     d = n(652215),
     _ = n(979282);
-function f(e) {
+function h(e) {
     let { colorStrings: t, useReducedMotion: n, roleStyle: i, includeConvenienceGlow: r, animateGradient: s } = e,
         o = "username" === i,
         l = o && r,
@@ -20,18 +20,18 @@ function f(e) {
             "--custom-gradient-color-2": t?.secondaryColor ?? u,
             "--custom-gradient-color-3": t?.tertiaryColor ?? u,
         },
-        f = t?.tertiaryColor != null ? _.a7 : _.oD;
+        h = t?.tertiaryColor != null ? _.a7 : _.oD;
     return {
         gradientStyle: c,
-        gradientClassname: a()(f, { [_.lC]: o, [_.FQ]: l, [_.Xy]: l && s, [_.yJ]: !n && "dot" === i, [_.q]: s && o }),
-        gradientGlowClassname: a()(f, _.uk, { [_.lC]: o, [_.q]: s && o, [_.yb]: o && s }),
+        gradientClassname: a()(h, { [_.lC]: o, [_.FQ]: l, [_.Xy]: l && s, [_.yJ]: !n && "dot" === i, [_.q]: s && o }),
+        gradientGlowClassname: a()(h, _.uk, { [_.lC]: o, [_.q]: s && o, [_.yb]: o && s }),
     };
 }
-function h(e) {
+function f(e) {
     let { colorStrings: t, roleStyle: n, includeConvenienceGlow: i, animateGradient: s } = e,
-        a = (0, u.bG)([c.A], () => c.A.useReducedMotion);
+        a = (0, u.bG)([c.Ay], () => c.Ay.useReducedMotion);
     return r.useMemo(
-        () => f({ colorStrings: t, useReducedMotion: a, roleStyle: n, includeConvenienceGlow: i, animateGradient: s }),
+        () => h({ colorStrings: t, useReducedMotion: a, roleStyle: n, includeConvenienceGlow: i, animateGradient: s }),
         [t, n, i, a, s],
     );
 }

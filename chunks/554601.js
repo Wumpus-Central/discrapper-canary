@@ -175,7 +175,7 @@ function eu(e) {
     });
 }
 function em() {
-    let e = (0, A.bG)([M.A], () => M.A.useReducedMotion),
+    let e = (0, A.bG)([M.Ay], () => M.Ay.useReducedMotion),
         { styleLarge: t, styleSmall: n } = o.useMemo(
             () => ({
                 styleLarge: { width: `${10 + 20 * Math.random()}%`, height: "auto" },
@@ -1840,7 +1840,7 @@ function nD(e) {
 }
 function nw(e) {
     let { bot: t, fallbackColor: n, disableFadeIn: l } = e,
-        i = (0, A.bG)([M.A], () => M.A.useReducedMotion),
+        i = (0, A.bG)([M.Ay], () => M.Ay.useReducedMotion),
         s = (0, ny.z)({ id: t.id, banner: t.banner, canAnimate: !i, size: 600 });
     return null == s
         ? (0, r.jsx)(nW, { fallbackColor: n, disableFadeIn: l })
@@ -1980,7 +1980,7 @@ function nF(e) {
 }
 function nG(e) {
     let { look: t = nb.LARGE_BANNER } = e,
-        n = (0, A.bG)([M.A], () => M.A.useReducedMotion),
+        n = (0, A.bG)([M.Ay], () => M.Ay.useReducedMotion),
         { styleLarge: l, styleSmall: i } = o.useMemo(
             () => ({
                 styleLarge: { width: `${10 + 50 * Math.random()}%` },
@@ -2234,7 +2234,7 @@ function li(e) {
 }
 var ls = n(68614);
 function la() {
-    let e = (0, A.bG)([M.A], () => M.A.useReducedMotion),
+    let e = (0, A.bG)([M.Ay], () => M.Ay.useReducedMotion),
         { styleLarge: t, styleSmall: n } = o.useMemo(
             () => ({
                 styleLarge: { width: `${10 + 50 * Math.random()}%` },

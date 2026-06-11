@@ -203,7 +203,7 @@ function eC(e) {
 }
 let eI = function (e) {
     let { application: t, bannerType: l, iconURL: s } = e,
-        n = (0, d.bG)([ec.A], () => ec.A.useReducedMotion),
+        n = (0, d.bG)([ec.Ay], () => ec.Ay.useReducedMotion),
         [r, o] = a.useState(!1),
         c = a.useCallback(() => {
             o(!0);

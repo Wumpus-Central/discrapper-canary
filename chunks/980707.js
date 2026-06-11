@@ -154,7 +154,7 @@ function U(e, t) {
     return "function" == typeof e ? e(t) : e;
 }
 function G(e) {
-    N.A.keyboardModeEnabled && e.current?.scrollIntoView({ block: "nearest" });
+    N.Ay.keyboardModeEnabled && e.current?.scrollIntoView({ block: "nearest" });
 }
 var F = n(745396);
 function V(e) {
@@ -1099,12 +1099,12 @@ function e_(e) {
         })({
             navId: t,
             items: S.current,
-            initialFocusPath: N.A.keyboardModeEnabled && null != L ? [L] : [],
+            initialFocusPath: N.Ay.keyboardModeEnabled && null != L ? [L] : [],
             closeMenu: _,
-            defaultIsUsingKeyboardNavigation: N.A.keyboardModeEnabled,
+            defaultIsUsingKeyboardNavigation: N.Ay.keyboardModeEnabled,
         });
     s.useEffect(() => {
-        M.isUsingKeyboardNavigation ? N.A.keyboardModeEnabled || (0, y.uS)() : N.A.keyboardModeEnabled && (0, y.Bm)();
+        M.isUsingKeyboardNavigation ? N.Ay.keyboardModeEnabled || (0, y.uS)() : N.Ay.keyboardModeEnabled && (0, y.Bm)();
     }, [M.isUsingKeyboardNavigation]);
     let P = s.useRef(null),
         x = s.useContext(A.jQ),
@@ -1360,7 +1360,7 @@ function ef() {
         [t, n] = s.useState(e);
     return (
         s.useEffect(() => {
-            if (N.A.useReducedMotion) return;
+            if (N.Ay.useReducedMotion) return;
             let t = setInterval(() => {
                 n((t) => (t === e ? "\u266B \u2282(\uFF61\u25D5\u203F\u203F\u25D5\uFF61\u2282) \u266A" : e));
             }, 700);

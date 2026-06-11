@@ -11,18 +11,18 @@ var r = n(17928),
     c = n(363195),
     d = n(742023),
     _ = n(185928),
-    f = n(652215),
-    h = n(375708);
+    h = n(652215),
+    f = n(375708);
 function p() {
     let { analyticsLocations: e } = (0, l.Ay)(),
         {
             theme: t,
             useSystemTheme: n,
             useForcedColors: p,
-        } = (0, r.cf)([c.A, d.Ay, o.A], () => ({
+        } = (0, r.cf)([c.A, d.Ay, o.Ay], () => ({
             theme: c.A.theme,
             useSystemTheme: d.Ay.useSystemTheme,
-            useForcedColors: o.A.useForcedColors,
+            useForcedColors: o.Ay.useForcedColors,
         })),
         E = (r, o) =>
             (0, i.jsx)(s.iD, {
@@ -41,11 +41,11 @@ function p() {
             s.rX,
             {
                 children: [
-                    E(f.NJ8.LIGHT, h.intl.string(h.t.K2sFfo)),
-                    E(f.NJ8.DARK, h.intl.string(h.t.SMPT1k)),
-                    E(f.NJ8.DARKER, h.intl.string(h.t.b8Cei3)),
-                    E(f.NJ8.MIDNIGHT, h.intl.string(h.t.Do4ZJx)),
-                    E("system", h.intl.string(h.t["7rOU6j"])),
+                    E(h.NJ8.LIGHT, f.intl.string(f.t.K2sFfo)),
+                    E(h.NJ8.DARK, f.intl.string(f.t.SMPT1k)),
+                    E(h.NJ8.DARKER, f.intl.string(f.t.b8Cei3)),
+                    E(h.NJ8.MIDNIGHT, f.intl.string(f.t.Do4ZJx)),
+                    E("system", f.intl.string(f.t["7rOU6j"])),
                 ],
             },
             "theme-items",

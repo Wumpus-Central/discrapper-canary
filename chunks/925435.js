@@ -166,7 +166,7 @@ function V(n) {
             let n = (0, U.z)({ id: u.id, banner: u.banner, size: 1024, canAnimate: !0 });
             return null != n ? (G.A.toURLSafe(n) ?? void 0) : void 0;
         }, [u]),
-        m = (0, g.bG)([I.A], () => I.A.useReducedMotion),
+        m = (0, g.bG)([I.Ay], () => I.Ay.useReducedMotion),
         p = l.useMemo(() => [...s.map((n) => n.skuId), ...r.map((n) => n.skuId)], [s, r]),
         { analyticsLocations: h } = (0, k.Ay)(j.A.APP_STOREFRONT);
     return (

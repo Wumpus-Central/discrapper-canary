@@ -619,7 +619,7 @@ let e6 = (e) => {
     },
     ss = (e) => {
         let { product: s, user: t, activeBundleSlide: a, isTransitioning: n } = e,
-            l = (0, m.bG)([P.A], () => P.A.useReducedMotion),
+            l = (0, m.bG)([P.Ay], () => P.Ay.useReducedMotion),
             d = et.Ay.canUsePremiumProfileCustomization(t),
             { pendingAvatar: c, ...u } = (0, m.cf)([Q.A], () => Q.A.getPendingChanges()),
             x = (0, Z.V7)({ userId: t.id, image: c }),

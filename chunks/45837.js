@@ -8,7 +8,7 @@ var i = n(64700),
 function l() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         [t, n] = i.useState(!1),
-        l = (0, r.bG)([s.A], () => s.A.useReducedMotion),
+        l = (0, r.bG)([s.Ay], () => s.Ay.useReducedMotion),
         u = (0, r.bG)([o.A], () => o.A.isFocused()),
         c = a.kt.useSetting();
     return {

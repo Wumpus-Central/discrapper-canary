@@ -98,7 +98,7 @@ function Q(e) {
 function J(e) {
     let { id: t, guildId: n, channelId: s } = e,
         a = (0, g.bG)([V.A], () => (null != n ? V.A.getRole(n, t) : void 0)),
-        o = (0, g.bG)([C.A], () => C.A.roleStyle),
+        o = (0, g.bG)([C.Ay], () => C.Ay.roleStyle),
         l = (0, G.X_)(n, a, a?.colorStrings),
         u = r.useRef(null);
     if (null == a) return (0, i.jsxs)("span", { children: ["@", $.intl.string($.t["YV4F/n"])] });

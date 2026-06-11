@@ -1,7 +1,7 @@
-n.d(t, { A: () => s });
-var i = n(17928),
-    l = n(775602);
-function s(e, t, n) {
-    let s = (0, i.bG)([l.A], () => l.A.useReducedMotion);
-    return null != e ? (s || !1 === t || n ? e.staticImageUrl : (e.animatedImageUrl ?? e.staticImageUrl)) : void 0;
+s.d(t, { A: () => c });
+var a = s(17928),
+    r = s(775602);
+function c(e, t, s) {
+    let c = (0, a.bG)([r.Ay], () => r.Ay.useReducedMotion);
+    return null != e ? (c || !1 === t || s ? e.staticImageUrl : (e.animatedImageUrl ?? e.staticImageUrl)) : void 0;
 }

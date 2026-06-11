@@ -117,7 +117,7 @@ var P = n(652215),
     G = n(310145);
 function H(e) {
     let { guildId: t, user: n, username: i } = e,
-        s = (0, L.bG)([D.A], () => !D.A.useReducedMotion),
+        s = (0, L.bG)([D.Ay], () => !D.Ay.useReducedMotion),
         a = n.getAvatarURL(t, 56, s),
         r = (0, l.jsx)("img", { src: a, className: G.dj, alt: "" });
     return (0, l.jsxs)("div", {
@@ -273,7 +273,7 @@ function es(e) {
 var el = n(690362);
 function ea(e) {
     let { guildId: t, user: n, className: i } = e,
-        s = (0, c.bG)([D.A], () => !D.A.useReducedMotion),
+        s = (0, c.bG)([D.Ay], () => !D.Ay.useReducedMotion),
         a = n.getAvatarURL(t, 56, s),
         r = (0, l.jsx)("foreignObject", {
             x: "30",
@@ -1475,7 +1475,7 @@ let ny = nM.Ay.getEnableHardwareAcceleration() ? nO.Js : nO.eu;
 function nD() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         [t, n] = a.useState(!1),
-        i = (0, c.bG)([D.A], () => D.A.useReducedMotion),
+        i = (0, c.bG)([D.Ay], () => D.Ay.useReducedMotion),
         s = a.useMemo(() => {
             let n = t || (!i && !e);
             return (0, nR.q)(n);
@@ -1621,7 +1621,7 @@ function nZ(e) {
         } = nD(!0),
         { onFocus: u, ...m } = (0, nt.rm)(t ?? ""),
         { isFocused: x, handleFocus: h, handleBlur: _ } = (0, nv.G8)(u),
-        A = (0, c.bG)([D.A], () => D.A.keyboardModeEnabled),
+        A = (0, c.bG)([D.Ay], () => D.Ay.keyboardModeEnabled),
         f = (0, c.bG)([X.A], () => X.A.can(P.xBc.MANAGE_MESSAGES, s), [s]),
         {
             ruleName: E,
@@ -2582,7 +2582,7 @@ let iU =
         "https://cdn.discordapp.com/assets/content/424bcefb880eff14d647b0467cf446e83c27321af508a2e0a5f707d80c42e58b.png";
 function ib(e) {
     let { title: t, body: n, guild: i, analyticsLocations: s } = e,
-        a = (0, c.bG)([D.A], () => D.A.useReducedMotion);
+        a = (0, c.bG)([D.Ay], () => D.Ay.useReducedMotion);
     return (0, l.jsxs)("div", {
         className: iD.kL,
         children: [
@@ -3063,7 +3063,7 @@ function sT(e) {
     let t,
         n,
         { message: i, guild: s, usernameHook: a, showCta: o } = e,
-        d = ((t = (0, c.bG)([D.A], () => D.A.useReducedMotion)), (n = r.useContext(sf.C)?.animate ?? !1), !t && n),
+        d = ((t = (0, c.bG)([D.Ay], () => D.Ay.useReducedMotion)), (n = r.useContext(sf.C)?.animate ?? !1), !t && n),
         u = (0, U.Ay)(i),
         m = a(u),
         x = i.hasFlag(P.pr7.IS_FIRST_BOOSTER),

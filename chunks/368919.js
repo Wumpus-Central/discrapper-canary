@@ -37,7 +37,7 @@ let v = [l.x.CHERRY_BOMB, l.x.CHICLE],
                 appendedInlineContent: D,
             } = e,
             L = (0, y.a)({ displayNameStyles: n }),
-            { useReducedMotion: w } = (0, u.cf)([f.A], () => ({ useReducedMotion: f.A.useReducedMotion })),
+            { useReducedMotion: w } = (0, u.cf)([f.Ay], () => ({ useReducedMotion: f.Ay.useReducedMotion })),
             M = (0, A.W)({ location: "UserNameWithEffects" }),
             P = (0, d.r)(_.A.colors.BACKGROUND_BASE_LOW).hex(),
             x = n?.effectId ?? o.z.SOLID,
@@ -45,7 +45,7 @@ let v = [l.x.CHERRY_BOMB, l.x.CHICLE],
             U = (0, c.CR)(k, x === o.z.TOON ? N.Zg : void 0),
             G = (function (e) {
                 let { displayNameStyles: t, backgroundColor: n } = e,
-                    i = (0, u.bG)([f.A], () => (f.A.desaturateUserColors ? f.A.saturation : 1)),
+                    i = (0, u.bG)([f.Ay], () => (f.Ay.desaturateUserColors ? f.Ay.saturation : 1)),
                     s = t?.effectId ?? o.z.SOLID,
                     a = (0, g._)(s);
                 return r.useMemo(

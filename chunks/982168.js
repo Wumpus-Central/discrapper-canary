@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => u }), n(321073);
+n.d(t, { A: () => d }), n(321073);
 var i = n(296489),
     r = n.n(i),
     s = n(228366),
@@ -14,13 +14,13 @@ let l = new (class {
         for (; this.queue.length > 0; ) this.queue.shift()?.();
     }
 })();
-var d = n(775602),
-    _ = n(652215);
-let u = {
+var u = n(775602),
+    c = n(652215);
+let d = {
     push(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r()("modal"),
             i = arguments.length > 3 ? arguments[3] : void 0,
-            a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : _.BRT.APP;
+            a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : c.BRT.APP;
         return (
             (0, o.GR)({
                 key: n,
@@ -29,7 +29,7 @@ let u = {
                     return {
                         key: t.key ?? i ?? "modal",
                         modal: e,
-                        animation: t.animation ?? (d.A.useReducedMotion ? _.WMy.FADE : _.WMy.SLIDE_UP),
+                        animation: t.animation ?? (u.Ay.useReducedMotion ? c.WMy.FADE : c.WMy.SLIDE_UP),
                         shouldPersistUnderModals: t.shouldPersistUnderModals ?? !1,
                         props: n,
                         backdropStyle: t.backdropStyle ?? null,

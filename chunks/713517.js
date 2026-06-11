@@ -6,7 +6,7 @@ var i = n(64700),
 function a(e) {
     let [t, n] = i.useState(!1),
         [a, o] = i.useState(!1),
-        l = (0, r.bG)([s.A], () => s.A.keyboardModeEnabled);
+        l = (0, r.bG)([s.Ay], () => s.Ay.keyboardModeEnabled);
     i.useEffect(() => {
         let t = e.current;
         if (null == t) return;

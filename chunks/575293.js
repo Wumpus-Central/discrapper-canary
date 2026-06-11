@@ -1,151 +1,151 @@
 "use strict";
-n.d(t, { A: () => M });
-var l = n(627968),
-    i = n(64700),
+n.d(t, { A: () => x });
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(615300),
-    o = n(702841),
-    c = n(834730),
-    u = n(276293),
+    o = n(615300),
+    l = n(702841),
+    u = n(834730),
+    c = n(276293),
     d = n(602853),
-    h = n(661531),
-    m = n(939249),
-    p = n(935286),
-    f = n(628284),
-    g = n(775602),
-    _ = n(47167),
-    x = n(713654),
-    C = n(418842),
-    A = n(734057),
-    E = n(696451),
-    I = n(71393),
-    v = n(225142),
-    y = n(374084),
-    b = n(101611),
-    S = n(473529),
-    N = n(111487),
-    j = n(652215),
-    T = n(985018),
-    w = n(235054);
-let R = { compact: 58, cozy: 74, default: 64 };
-function L(e) {
+    _ = n(661531),
+    h = n(939249),
+    f = n(935286),
+    p = n(628284),
+    E = n(775602),
+    m = n(47167),
+    g = n(713654),
+    A = n(418842),
+    I = n(734057),
+    T = n(696451),
+    S = n(71393),
+    y = n(225142),
+    N = n(374084),
+    v = n(101611),
+    C = n(473529),
+    R = n(111487),
+    O = n(652215),
+    b = n(375708),
+    D = n(235054);
+let L = { compact: 58, cozy: 74, default: 64 };
+function w(e) {
     let { action: t } = e,
-        n = (0, o.bG)([A.A], () => A.A.getChannel(t.channelId)),
-        i = (0, _.Ay)(n, !0);
+        n = (0, l.bG)([I.A], () => I.A.getChannel(t.channelId)),
+        r = (0, m.Ay)(n, !0);
     return null == n
-        ? (0, l.jsx)(c.E, {
+        ? (0, i.jsx)(u.E, {
               variant: "text-xxs/normal",
               color: "text-default",
-              children: T.intl.format(T.t.MkzlDL, { channelName: T.intl.string(T.t.J90oLW) }),
+              children: b.intl.format(b.t.MkzlDL, { channelName: b.intl.string(b.t.J90oLW) }),
           })
-        : (0, l.jsx)(c.E, {
+        : (0, i.jsx)(u.E, {
               variant: "text-xxs/normal",
               color: "text-default",
-              children: T.intl.format(T.t.MkzlDL, { channelName: i }),
+              children: b.intl.format(b.t.MkzlDL, { channelName: r }),
           });
 }
-function k(e) {
-    let { channelId: t, emojiId: n, emojiName: i } = e,
-        s = (0, o.bG)([A.A], () => A.A.getChannel(t));
+function M(e) {
+    let { channelId: t, emojiId: n, emojiName: r } = e,
+        s = (0, l.bG)([I.A], () => I.A.getChannel(t));
     if (null == s) return null;
-    let a = (0, x.gU)(s) ?? u.N;
-    return (0, l.jsx)(N.A, {
+    let a = (0, g.gU)(s) ?? c.N;
+    return (0, i.jsx)(R.A, {
         emojiId: n,
-        emojiName: i,
-        size: N.g.MEDIUM,
-        defaultComponent: (0, l.jsx)(a, { className: w.p }),
+        emojiName: r,
+        size: R.g.MEDIUM,
+        defaultComponent: (0, i.jsx)(a, { className: D.p }),
     });
 }
-function O(e) {
+function P(e) {
     let { guildId: t, channel: n, className: s } = e,
-        { channelAction: u, completed: _ } = (0, b.j4)(t, n),
-        x = (0, b.Lr)(t, u?.channelId),
-        A = (0, o.bG)([g.A], () => g.A.useReducedMotion),
-        E = u?.actionType === y.NewMemberActionTypes.VIEW,
-        I = (0, d.r)(h.A.colors.WHITE),
-        S = R[(0, C.C)()],
-        [N, j] = i.useState(!1),
-        [O] = i.useState(new r.A.Value(0)),
-        [M] = i.useState(new r.A.Value(0));
-    i.useEffect(() => {
-        _
-            ? r.A.timing(O, { toValue: 0, duration: A ? 1 : 350, easing: r.A.Easing.quad, delay: 500 * !E }).start(() =>
-                  j(!0),
+        { channelAction: c, completed: m } = (0, v.j4)(t, n),
+        g = (0, v.Lr)(t, c?.channelId),
+        I = (0, l.bG)([E.Ay], () => E.Ay.useReducedMotion),
+        T = c?.actionType === N.NewMemberActionTypes.VIEW,
+        S = (0, d.r)(_.A.colors.WHITE),
+        C = L[(0, A.C)()],
+        [R, O] = r.useState(!1),
+        [P] = r.useState(new o.A.Value(0)),
+        [x] = r.useState(new o.A.Value(0));
+    r.useEffect(() => {
+        m
+            ? o.A.timing(P, { toValue: 0, duration: I ? 1 : 350, easing: o.A.Easing.quad, delay: 500 * !T }).start(() =>
+                  O(!0),
               )
-            : r.A.timing(O, { toValue: 1, duration: A ? 1 : 350, easing: r.A.Easing.quad, delay: 400 }).start();
-    }, [_, O, E, A]),
-        i.useEffect(() => {
-            _ && N && r.A.timing(M, { toValue: 1, duration: 350 * !A, easing: r.A.Easing.quad, delay: 400 }).start();
-        }, [_, M, N, A]);
-    let P = i.useCallback(() => {
-        null != x && (0, v.qo)(t, x.channelId);
-    }, [t, x]);
-    return null == u || (E && !N)
+            : o.A.timing(P, { toValue: 1, duration: I ? 1 : 350, easing: o.A.Easing.quad, delay: 400 }).start();
+    }, [m, P, T, I]),
+        r.useEffect(() => {
+            m && R && o.A.timing(x, { toValue: 1, duration: 350 * !I, easing: o.A.Easing.quad, delay: 400 }).start();
+        }, [m, x, R, I]);
+    let k = r.useCallback(() => {
+        null != g && (0, y.qo)(t, g.channelId);
+    }, [t, g]);
+    return null == c || (T && !R)
         ? null
-        : (0, l.jsx)("div", {
-              className: a()(w.kL, s),
+        : (0, i.jsx)("div", {
+              className: a()(D.kL, s),
               children:
-                  N && null != x
-                      ? (0, l.jsx)(r.A.div, {
-                            style: { marginBottom: M.interpolate({ inputRange: [0, 1], outputRange: [-S, 0] }) },
-                            children: (0, l.jsxs)(m.D, {
-                                className: a()(w.vK, w.vk, { [w.pJ]: n.isForumChannel() }),
-                                onClick: P,
+                  R && null != g
+                      ? (0, i.jsx)(o.A.div, {
+                            style: { marginBottom: x.interpolate({ inputRange: [0, 1], outputRange: [-C, 0] }) },
+                            children: (0, i.jsxs)(h.D, {
+                                className: a()(D.vK, D.vk, { [D.pJ]: n.isForumChannel() }),
+                                onClick: k,
                                 children: [
-                                    (0, l.jsx)(k, {
-                                        channelId: x.channelId,
-                                        emojiId: x.emoji?.id,
-                                        emojiName: x?.emoji?.name,
+                                    (0, i.jsx)(M, {
+                                        channelId: g.channelId,
+                                        emojiId: g.emoji?.id,
+                                        emojiName: g?.emoji?.name,
                                     }),
-                                    (0, l.jsxs)("div", {
-                                        className: w.Qq,
+                                    (0, i.jsxs)("div", {
+                                        className: D.Qq,
                                         children: [
-                                            (0, l.jsx)(c.E, {
+                                            (0, i.jsx)(u.E, {
                                                 variant: "text-md/semibold",
                                                 color: "text-strong",
-                                                children: T.intl.format(T.t["/beONw"], { step: x.title }),
+                                                children: b.intl.format(b.t["/beONw"], { step: g.title }),
                                             }),
-                                            (0, l.jsx)(L, { action: x }),
+                                            (0, i.jsx)(w, { action: g }),
                                         ],
                                     }),
-                                    (0, l.jsx)("div", {
-                                        className: w.kJ,
-                                        children: (0, l.jsx)(p.E, { size: "xs", color: I.hex(), className: w.fz }),
+                                    (0, i.jsx)("div", {
+                                        className: D.kJ,
+                                        children: (0, i.jsx)(f.E, { size: "xs", color: S.hex(), className: D.fz }),
                                     }),
                                 ],
                             }),
                         })
-                      : (0, l.jsxs)(r.A.div, {
-                            className: a()(w.vK, { [w.pJ]: n.isForumChannel() }),
-                            style: { marginBottom: O.interpolate({ inputRange: [0, 1], outputRange: [-S, 0] }) },
+                      : (0, i.jsxs)(o.A.div, {
+                            className: a()(D.vK, { [D.pJ]: n.isForumChannel() }),
+                            style: { marginBottom: P.interpolate({ inputRange: [0, 1], outputRange: [-C, 0] }) },
                             children: [
-                                (0, l.jsx)(k, {
-                                    channelId: u.channelId,
-                                    emojiId: u.emoji?.id,
-                                    emojiName: u?.emoji?.name,
+                                (0, i.jsx)(M, {
+                                    channelId: c.channelId,
+                                    emojiId: c.emoji?.id,
+                                    emojiName: c?.emoji?.name,
                                 }),
-                                (0, l.jsxs)("div", {
-                                    className: w.Qq,
+                                (0, i.jsxs)("div", {
+                                    className: D.Qq,
                                     children: [
-                                        (0, l.jsx)(c.E, {
+                                        (0, i.jsx)(u.E, {
                                             variant: "text-md/semibold",
                                             color: "text-strong",
-                                            children: u.title,
+                                            children: c.title,
                                         }),
-                                        (0, l.jsx)(c.E, {
+                                        (0, i.jsx)(u.E, {
                                             variant: "text-xxs/normal",
                                             color: "text-muted",
-                                            children: T.intl.string(T.t["ElGg8+"]),
+                                            children: b.intl.string(b.t["ElGg8+"]),
                                         }),
                                     ],
                                 }),
-                                _
-                                    ? (0, l.jsx)(f.y, {
+                                m
+                                    ? (0, i.jsx)(p.y, {
                                           size: "custom",
                                           color: "currentColor",
-                                          className: w.so,
-                                          secondaryColor: I.hex(),
+                                          className: D.so,
+                                          secondaryColor: S.hex(),
                                           width: 20,
                                           height: 20,
                                       })
@@ -154,11 +154,11 @@ function O(e) {
                         }),
           });
 }
-function M(e) {
-    let { guildId: t, channel: n, className: i } = e,
-        s = (0, S.d)(t),
-        a = (0, o.bG)([E.Ay], () => E.Ay.getSelfMember(t)?.isPending === !0),
-        r = (0, b.jY)(t),
-        c = (0, o.bG)([I.A], () => I.A.getGuild(t)?.features.has(j.GuildFeatures.GUILD_SERVER_GUIDE));
-    return r || a || !s || !c ? null : (0, l.jsx)(O, { guildId: t, channel: n, className: i });
+function x(e) {
+    let { guildId: t, channel: n, className: r } = e,
+        s = (0, C.d)(t),
+        a = (0, l.bG)([T.Ay], () => T.Ay.getSelfMember(t)?.isPending === !0),
+        o = (0, v.jY)(t),
+        u = (0, l.bG)([S.A], () => S.A.getGuild(t)?.features.has(O.GuildFeatures.GUILD_SERVER_GUIDE));
+    return o || a || !s || !u ? null : (0, i.jsx)(P, { guildId: t, channel: n, className: r });
 }

@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(775602);
-let i = new (class {
+n.d(t, { A: () => r });
+var i = n(775602);
+let r = new (class {
     isSidebarCategoryAutoSelectEnabled = !0;
     panelScrollerRef = null;
     sidebarScrollerRef = null;
@@ -36,12 +36,12 @@ let i = new (class {
             t.addEventListener("scroll", this.scrollListener, { once: !0 }));
     }
     scrollIntoView(e) {
-        let { scrollerRef: t, target: n, options: i, padding: s } = e;
+        let { scrollerRef: t, target: n, options: r, padding: s } = e;
         return new Promise((e) => {
             t.scrollIntoViewNode({
                 node: n,
-                animate: !!i.animate && !r.A.useReducedMotion,
-                shouldScrollToStart: "start" === i.block,
+                animate: !!r.animate && !i.Ay.useReducedMotion,
+                shouldScrollToStart: "start" === r.block,
                 padding: s,
                 callback: () => {
                     requestAnimationFrame(() => e(!0));
@@ -75,9 +75,9 @@ let i = new (class {
         let n = this.panelScrollerRef.getScrollerNode();
         if (null == n) return;
         this.clearPanelInitialScrollListener(), (this.isSidebarCategoryAutoSelectEnabled = !1);
-        let r = n.querySelector("[data-settings-panel-sticky-decoration]"),
-            i = Math.max(0, (r?.getBoundingClientRect().bottom ?? 0) - n.getBoundingClientRect().top);
-        await this.scrollIntoView({ scrollerRef: this.panelScrollerRef, target: e, options: t, padding: 16 + i }),
+        let i = n.querySelector("[data-settings-panel-sticky-decoration]"),
+            r = Math.max(0, (i?.getBoundingClientRect().bottom ?? 0) - n.getBoundingClientRect().top);
+        await this.scrollIntoView({ scrollerRef: this.panelScrollerRef, target: e, options: t, padding: 16 + r }),
             this.setPanelInitialScrollListener(() => {
                 this.isSidebarCategoryAutoSelectEnabled = !0;
             });

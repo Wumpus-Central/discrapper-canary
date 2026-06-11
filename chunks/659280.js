@@ -393,13 +393,13 @@ class eg extends e_ {
     renderContent() {
         let { role: e, hideDescription: t, guildId: n } = this.props,
             { colorString: r, colorStrings: s } = e,
-            o = "dot" === g.A.roleStyle,
-            l = "username" === g.A.roleStyle && (null != r || null != s),
+            o = "dot" === g.Ay.roleStyle,
+            l = "username" === g.Ay.roleStyle && (null != r || null != s),
             u = (0, J.hH)(n, e, s),
             c = null != u && l,
             { gradientStyle: d, gradientClassname: _ } = (0, f.Wq)({
                 colorStrings: s,
-                useReducedMotion: g.A.useReducedMotion,
+                useReducedMotion: g.Ay.useReducedMotion,
                 roleStyle: "username",
                 includeConvenienceGlow: !0,
             }),

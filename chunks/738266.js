@@ -487,7 +487,7 @@ function eK() {
             );
         })(c, o),
         m = (0, eI.Ay)(),
-        x = (0, s.bG)([eM.A], () => eM.A.roleStyle),
+        x = (0, s.bG)([eM.Ay], () => eM.Ay.roleStyle),
         p = i.useCallback(
             (e, t) => {
                 if (null == r) return null;

@@ -506,7 +506,7 @@ function eu(e) {
     let { innerRef: r, className: i } = e,
         { analyticsLocations: t } = (0, T.Ay)(N.A.PREMIUM_MARKETING_TIER_CARD),
         s = (0, $.pw)(r),
-        l = (0, d.bG)([f.A], () => f.A.useReducedMotion),
+        l = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
         o = (0, D.PA)();
     return (0, a.jsx)(T.f5, {
         value: t,

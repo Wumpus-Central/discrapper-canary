@@ -13,7 +13,7 @@ var l = n(503698),
     p = n(944785);
 function m(e) {
     let { height: t } = e,
-        l = (0, s.bG)([d.A], () => d.A.useReducedMotion);
+        l = (0, s.bG)([d.Ay], () => d.Ay.useReducedMotion);
     return (0, i.jsxs)("div", {
         className: p.zr,
         children: [

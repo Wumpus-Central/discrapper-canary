@@ -34,8 +34,8 @@ let g = (e) => {
         O = r.useRef(!1),
         b = r.useRef(null),
         D = r.useRef(null),
-        L = (0, o.bG)([f.A], () => f.A.keyboardModeEnabled),
-        w = (0, o.bG)([f.A], () => f.A.useReducedMotion),
+        L = (0, o.bG)([f.Ay], () => f.Ay.keyboardModeEnabled),
+        w = (0, o.bG)([f.Ay], () => f.Ay.useReducedMotion),
         M = r.useMemo(
             () =>
                 r.Children.map(t, (e) =>

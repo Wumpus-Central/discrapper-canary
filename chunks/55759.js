@@ -4,7 +4,7 @@ var r = n(627968),
     s = n(503698),
     a = n.n(s),
     i = n(771253),
-    u = n(873174),
+    u = n(922139),
     o = n(942381),
     c = n(17928),
     d = n(876230),
@@ -204,11 +204,11 @@ function er(e) {
         e1 = (0, b.Kr)((e) => e.setMuted),
         e7 = (0, b.Kr)((e) => e.volume),
         e6 = (0, b.Kr)((e) => e.setVolume),
-        e5 = (0, c.bG)([I.A], () => I.A.useReducedMotion),
+        e5 = (0, c.bG)([I.Ay], () => I.Ay.useReducedMotion),
         e4 = (0, l.useRef)(null),
         e8 = (0, l.useRef)(null),
-        e3 = (0, l.useRef)(null),
-        e2 = l.useRef(!0),
+        e2 = (0, l.useRef)(null),
+        e3 = l.useRef(!0),
         e9 = el.userStatus?.completedAt != null,
         te = l.useMemo(() => el.config.features.includes(Z.Li.FULL_EPISODE_VIDEO_QUEST), [el.config.features]),
         tt = l.useRef(!1),
@@ -222,8 +222,8 @@ function er(e) {
         [tE, t_] = l.useState(B.oA.MD),
         tf = { [B.oA.MD]: eo ? 56 : 50, [B.oA.LG]: eo ? 64 : 58 };
     (0, h.u5)(() => {
-        e2.current &&
-            ((e2.current = !1),
+        e3.current &&
+            ((e3.current = !1),
             ew(R.A.getEffectiveConnectionSpeed()),
             e9 && eZ.timestampSec >= eZ.duration && eJ(el.id, 0, eZ.duration));
     });
@@ -391,7 +391,7 @@ function er(e) {
         };
     }, [tz]),
         l.useEffect(() => {
-            let e = (e) => e3.current?.(e);
+            let e = (e) => e2.current?.(e);
             return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
         }, []);
     let tJ = l.useCallback(
@@ -491,7 +491,7 @@ function er(e) {
             }
         );
     }, [e8, t8]);
-    let t3 = l.useCallback(
+    let t2 = l.useCallback(
             (e) => {
                 tc.info(
                     `[QV] | logVideoError: errorType: ${e}, videoProgress: ${e4.current?.currentTime}, videoAssetId: ${tp}, connectionSpeed: ${eQ}`,
@@ -500,10 +500,10 @@ function er(e) {
             },
             [eQ, tb, e4, tp, tc],
         ),
-        t2 = l.useRef(!1);
+        t3 = l.useRef(!1);
     l.useEffect(() => {
-        null != tm || t2.current || ((t2.current = !0), tb(B.SB.NO_VALID_SOURCE));
-    }, [tm, tb, t2]);
+        null != tm || t3.current || ((t3.current = !0), tb(B.SB.NO_VALID_SOURCE));
+    }, [tm, tb, t3]);
     let t9 = (e) => {
         tc.info(`[QV] | handleCanPlay: playerState: ${ev}`),
             null != e4.current &&
@@ -664,10 +664,10 @@ function er(e) {
                     onSeeked: () => {
                         tc.info("[QV] | handleSeeked"), t7.current || ((t7.current = !0), tw(0));
                     },
-                    onAbort: () => t3(B.SB.ABORT),
-                    onError: () => t3(B.SB.ERROR),
-                    onEmptied: () => t3(B.SB.EMPTIED),
-                    onStalled: () => t3(B.SB.STALLED),
+                    onAbort: () => t2(B.SB.ABORT),
+                    onError: () => t2(B.SB.ERROR),
+                    onEmptied: () => t2(B.SB.EMPTIED),
+                    onStalled: () => t2(B.SB.STALLED),
                     onClick: () => {
                         tc.info("[QV] | handleVideoClick"), t6();
                     },
@@ -686,7 +686,7 @@ function er(e) {
                             tp !== k.fY.VIDEO_PLAYER_VIDEO_HLS &&
                             null != tm.mimetype &&
                             (0, r.jsx)("source", {
-                                onError: () => t3(B.SB.SOURCE_ERROR),
+                                onError: () => t2(B.SB.SOURCE_ERROR),
                                 src: tm.url,
                                 type: tm.mimetype,
                             }),
@@ -829,7 +829,7 @@ function er(e) {
                             },
                             children: (0, r.jsx)(G, {
                                 percent: null != e$ ? e$ : eR,
-                                animate: !0 !== e2.current && !eL,
+                                animate: !0 !== e3.current && !eL,
                                 interactionEnabled: nE,
                                 playerState: ev,
                                 preloadedBuffers: tW ? eV : void 0,
@@ -876,7 +876,7 @@ function er(e) {
                                 hidePlaybackSpeedBtn: !0,
                                 size: tE,
                                 autoFocus: H,
-                                keyDownHandlerRef: e3,
+                                keyDownHandlerRef: e2,
                                 volume: e7,
                                 muted: e0,
                                 transcriptEnabled: ec,

@@ -16,8 +16,8 @@ var i,
     x = n(140651),
     f = n(495544),
     E = n(354287),
-    C = n(768349),
-    I = n(838541),
+    I = n(768349),
+    C = n(838541),
     v = n(351280),
     _ = (((i = {})[(i.BOT = 0)] = "BOT"), (i[(i.ACTIVITY = 1)] = "ACTIVITY"), i);
 function j(e) {
@@ -47,7 +47,7 @@ function N(e) {
     (t = R),
         (R = {
             id: t?.id ?? "0",
-            linkType: t?.linkType ?? C.J.UNKNOWN,
+            linkType: t?.linkType ?? I.J.UNKNOWN,
             referrerId: t?.referrerId ?? f.default.getId(),
             activityCustomId: t?.activityCustomId,
             onView: t?.onView,
@@ -59,7 +59,7 @@ function N(e) {
         });
     let { primaryColor: P, secondaryColor: D } = (0, x.A)(S ?? _),
         w = `linear-gradient(45deg, ${P}, ${D})`,
-        O = (0, g.bG)([A.A], () => A.A.useReducedMotion),
+        O = (0, g.bG)([A.Ay], () => A.Ay.useReducedMotion),
         U = s.useRef(!1),
         G = (0, d.K)(
             (e) => {
@@ -133,7 +133,7 @@ function N(e) {
                                 : (0, l.jsx)(o.A, {
                                       ref: Y,
                                       src: N,
-                                      mediaLayoutType: I.dG.MOSAIC,
+                                      mediaLayoutType: C.dG.MOSAIC,
                                       loop: !0,
                                       muted: !0,
                                       className: v.O9,

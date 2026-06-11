@@ -149,7 +149,7 @@ function F(e) {
             analyticsCtxQuestContentRowIndex: a,
         } = e,
         l = (0, w.Ut)(),
-        u = (0, S.bG)([b.A], () => b.A.useReducedMotion),
+        u = (0, S.bG)([b.Ay], () => b.Ay.useReducedMotion),
         _ = (0, o.Xf)({ useReducedMotion: u }),
         h = (0, D.O)((e) => e.setErrorHints),
         { startingConsoleQuest: f, startConsoleQuest: p } = (0, c.Wj)({

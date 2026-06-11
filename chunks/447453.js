@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(873174),
+    o = n(922139),
     l = n(17928),
     u = n(866323),
     c = n(834730),
@@ -20,7 +20,7 @@ function E(e) {
             { keybinds: ["up", "down"], name: f.intl.string(f.t.dmMqay) },
             { keybinds: ["ESC"], name: f.intl.string(f.t["1ioMJQ"]) },
         ],
-        s = (0, l.bG)([_.A], () => _.A.useReducedMotion),
+        s = (0, l.bG)([_.Ay], () => _.Ay.useReducedMotion),
         E = (0, h.VU)();
     return (0, u.p)(
         E,

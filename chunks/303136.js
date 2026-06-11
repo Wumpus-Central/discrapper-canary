@@ -7,7 +7,7 @@ var r = n(17928),
     a = n(607470);
 let o = (e) => {
     let { src: t, children: n, fallbackImage: o, className: l, preload: u, forceReducedMotion: c } = e,
-        d = (0, r.bG)([s.A], () => s.A.useReducedMotion) || c;
+        d = (0, r.bG)([s.Ay], () => s.Ay.useReducedMotion) || c;
     return d && null != o
         ? (0, i.jsx)("img", { src: o, alt: "", className: l })
         : (0, i.jsx)(a.A, {

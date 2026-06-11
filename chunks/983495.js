@@ -325,7 +325,7 @@ function el(e) {
         { trackUserProfileAction: d } = (0, v.NJ)(),
         _ = r.useRef(null),
         h = r.useRef(null),
-        [f, p] = (0, l.yK)([m.A], () => [m.A.useReducedMotion, m.A.keyboardModeEnabled]),
+        [f, p] = (0, l.yK)([m.Ay], () => [m.Ay.useReducedMotion, m.Ay.keyboardModeEnabled]),
         E = !s || f || p ? 0 : 300,
         { themeType: g } = (0, k.E)();
     return (0, i.jsxs)(es.Ay, {
@@ -500,7 +500,7 @@ let ed = r.forwardRef(function (e, t) {
             [k, G] = r.useState(!0),
             [F, V] = r.useState(!M && I),
             H = I && P,
-            j = (0, l.bG)([m.A], () => m.A.useReducedMotion),
+            j = (0, l.bG)([m.Ay], () => m.Ay.useReducedMotion),
             [Y] = r.useState(() => new u.Ep());
         r.useEffect(() => () => Y.stop(), [Y]),
             r.useEffect(() => {

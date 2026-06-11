@@ -34,7 +34,7 @@ class l extends r.Component {
         if (this.shouldRenderFrame && null != n) {
             let t = a().random(-e, e, !0),
                 i = a().random(-e, e, !0);
-            n.style.transform = o.A.useReducedMotion ? "" : `translate3d(${t}px,${i}px,0px)`;
+            n.style.transform = o.Ay.useReducedMotion ? "" : `translate3d(${t}px,${i}px,0px)`;
         }
         (this.shouldRenderFrame = !this.shouldRenderFrame), (this.animationFrame = requestAnimationFrame(this.animate));
     };

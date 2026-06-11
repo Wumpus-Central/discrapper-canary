@@ -63,7 +63,7 @@ function j(e) {
         J = t?.userStatus?.completedAt != null,
         ee = (0, o.bG)([y.A], () => y.A.getState().theme),
         et = (0, u.M)(ee) ? F.NJ.DARK : F.NJ.LIGHT,
-        en = (0, o.bG)([T.A], () => T.A.useReducedMotion),
+        en = (0, o.bG)([T.Ay], () => T.Ay.useReducedMotion),
         { ref: ei, height: er } = (0, I.Ay)(),
         [es, ea] = r.useState(en),
         eo = (0, S.aL)(),

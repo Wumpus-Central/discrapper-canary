@@ -70,7 +70,7 @@ function U(e) {
                               onContextMenu: (e) => {
                                   (0, h.L3)(e, async () => {
                                       let { default: e } = await Promise.all([
-                                          n.e("51143"),
+                                          n.e("16955"),
                                           n.e("28323"),
                                           n.e("65058"),
                                           n.e("22766"),
@@ -215,7 +215,7 @@ function G(e) {
 function F(e) {
     let { roleId: t, channelId: n, roleName: s, guildId: a, children: u, inlinePreview: c = !1 } = e,
         { analyticsLocations: h } = (0, g.Ay)(m.A.ROLE_MENTION),
-        f = (0, l.bG)([E.A], () => E.A.roleStyle),
+        f = (0, l.bG)([E.Ay], () => E.Ay.roleStyle),
         p = (0, l.bG)([D.A], () => (null == a || null == t ? null : D.A.getRole(a, t))),
         A = (0, v.jV)(a, p),
         I = !c && null != p && !(0, N.Qv)(p),

@@ -21,8 +21,8 @@ var l,
     x = r(761640),
     L = r(734057),
     _ = r(71393),
-    T = r(309010),
-    y = r(625494),
+    y = r(309010),
+    T = r(625494),
     b = r(504531),
     N = r(77277),
     F = r(256796),
@@ -200,15 +200,15 @@ function eL(e) {
 }
 function e_(e) {
     let { user: t } = e,
-        { selectedGuildId: r, selectedChannelId: l } = (0, h.cf)([el.A, T.A], () => {
+        { selectedGuildId: r, selectedChannelId: l } = (0, h.cf)([el.A, y.A], () => {
             let e = el.A.getGuildId(),
-                t = T.A.getChannelId(e);
+                t = y.A.getChannelId(e);
             return { selectedGuildId: e, selectedChannelId: t };
         }),
         s = es.Ay.useName(r, l, t);
     return (0, n.jsx)(G.E, { variant: "text-sm/semibold", color: "text-default", children: s });
 }
-function eT(e) {
+function ey(e) {
     let { value: t, avatarSize: r, iconSize: l } = e,
         s = "",
         a = (0, C._o)(t)
@@ -228,13 +228,13 @@ function eT(e) {
                         case eu.LWr.ANSWER_IN:
                             return (0, n.jsx)(eN, { token: e, avatarSize: r, iconSize: l }, o);
                         default:
-                            return (0, n.jsx)(ey, { text: a, className: ep.Mj }, o);
+                            return (0, n.jsx)(eT, { text: a, className: ep.Mj }, o);
                     }
-                return (0, n.jsx)(ey, { text: a, className: i ? ep._y : ep.Lc }, o);
+                return (0, n.jsx)(eT, { text: a, className: i ? ep._y : ep.Lc }, o);
             });
     return { label: (0, n.jsx)("div", { className: ep.fH, children: a }), ariaLabel: s };
 }
-function ey(e) {
+function eT(e) {
     let { text: t, className: r } = e;
     return (0, n.jsx)(G.E, { variant: "text-sm/semibold", color: "text-strong", className: r, children: t });
 }
@@ -244,7 +244,7 @@ function eb(e) {
         s = t.getData("userId"),
         a = (0, h.bG)([en.default], () => en.default.getUser(s));
     return null == a
-        ? (0, n.jsx)(ey, { text: l, className: ep.Mj })
+        ? (0, n.jsx)(eT, { text: l, className: ep.Mj })
         : (0, n.jsxs)("div", {
               className: ep.Mj,
               children: [
@@ -258,7 +258,7 @@ function eN(e) {
         s = t.getFullMatch(),
         a = t.getData("channelIds") ?? [],
         u = (0, h.bG)([L.A], () => L.A.getChannel(a[0]));
-    if (null == u) return (0, n.jsx)(ey, { text: s, className: ep.Mj });
+    if (null == u) return (0, n.jsx)(eT, { text: s, className: ep.Mj });
     let o = (0, C.E3)(u);
     return (0, n.jsxs)("div", {
         className: i()(ep.Mj, ep.JG),
@@ -487,9 +487,9 @@ let eG = s.forwardRef(function (e, t) {
                                 });
                         }, [a, r, l, t]);
                     })({ setSearchQuery: a, searchContext: r, mode: u }),
-                    d = (0, h.yK)([Y.A, T.A, eD], () => {
+                    d = (0, h.yK)([Y.A, y.A, eD], () => {
                         if (Y.A.hidePersonalInformation) return ew;
-                        let e = (0, C.Jl)(r, T.A);
+                        let e = (0, C.Jl)(r, y.A);
                         if (null == e) return ew;
                         let t = eD.getHistory(e);
                         if (null == t) return ew;
@@ -517,7 +517,7 @@ let eG = s.forwardRef(function (e, t) {
                             d = null != h && (0, O.If)(h) ? h : null,
                             f = c ?? o ?? d,
                             p = s.channel,
-                            E = f === eu.LWr.FILTER_IN && null != p && p.id === T.A.getChannelId(),
+                            E = f === eu.LWr.FILTER_IN && null != p && p.id === y.A.getChannelId(),
                             g = (0, C.bS)(r);
                         (0, D.kc)({
                             searchContext: r,
@@ -593,7 +593,7 @@ let eG = s.forwardRef(function (e, t) {
                             let t = [...c, p({ hasOtherSearchFiltersVisible: !0 })];
                             if ((e.push(ec(eC.GROUP, { rows: t, title: eo.intl.string(eo.t.UdhTtk) })), d.length > 0)) {
                                 let t = d.map((e, t) => {
-                                        let { label: l, ariaLabel: s } = eT({
+                                        let { label: l, ariaLabel: s } = ey({
                                             value: e,
                                             avatarSize: Q._3.SIZE_16,
                                             iconSize: "xs",
@@ -629,7 +629,7 @@ let eG = s.forwardRef(function (e, t) {
                         [eu.o$q.FILTER_ALL]: () => {
                             let e = [];
                             if ("" !== t.query.trim()) {
-                                let { label: r } = eT({ value: t.query, avatarSize: Q._3.SIZE_16, iconSize: "xs" }),
+                                let { label: r } = ey({ value: t.query, avatarSize: Q._3.SIZE_16, iconSize: "xs" }),
                                     l = ec(eC.ROW, {
                                         icon: (0, n.jsx)(B.$, { size: "sm", color: "currentColor", className: ep.Fx }),
                                         label: (0, n.jsx)(eg, {
@@ -640,7 +640,7 @@ let eG = s.forwardRef(function (e, t) {
                                         onSelect: () =>
                                             ((e) => {
                                                 let { searchEverywhere: t } = e;
-                                                y._.dispatch(eu.jej.PERFORM_SEARCH, {
+                                                T._.dispatch(eu.jej.PERFORM_SEARCH, {
                                                     searchEverywhere: t,
                                                     searchQuerySource: ef.Q_.SEARCH_POPOUT,
                                                 });
@@ -971,9 +971,9 @@ let eG = s.forwardRef(function (e, t) {
     }),
     eQ = s.forwardRef(function (e, t) {
         let { searchContext: r, navId: l, onSelectedIndexChanged: s } = e,
-            [a, i] = (0, h.yK)([U.A, T.A, L.A], () => {
+            [a, i] = (0, h.yK)([U.A, y.A, L.A], () => {
                 let e = U.A.getState(r),
-                    t = T.A.getChannelId();
+                    t = y.A.getChannelId();
                 return [e, L.A.getChannel(t)];
             });
         return (0, C.av)(a.mode.filter)
@@ -1002,9 +1002,9 @@ class eJ extends s.PureComponent {
         super(e), (0, C.Pe)();
     }
     componentDidMount() {
-        y._.subscribe(eu.jej.PERFORM_SEARCH, this.search),
-            y._.subscribe(eu.jej.SET_SEARCH_QUERY, this.handleSetSearchQuery),
-            y._.subscribe(eu.jej.FOCUS_SEARCH, this.handleFocusSearch);
+        T._.subscribe(eu.jej.PERFORM_SEARCH, this.search),
+            T._.subscribe(eu.jej.SET_SEARCH_QUERY, this.handleSetSearchQuery),
+            T._.subscribe(eu.jej.FOCUS_SEARCH, this.handleFocusSearch);
     }
     handleCutEvent = (e) => {
         if ((e.preventDefault(), null == e.clipboardData)) return;
@@ -1030,9 +1030,9 @@ class eJ extends s.PureComponent {
         }
     }
     componentWillUnmount() {
-        y._.unsubscribe(eu.jej.PERFORM_SEARCH, this.search),
-            y._.unsubscribe(eu.jej.SET_SEARCH_QUERY, this.handleSetSearchQuery),
-            y._.unsubscribe(eu.jej.FOCUS_SEARCH, this.handleFocusSearch),
+        T._.unsubscribe(eu.jej.PERFORM_SEARCH, this.search),
+            T._.unsubscribe(eu.jej.SET_SEARCH_QUERY, this.handleSetSearchQuery),
+            T._.unsubscribe(eu.jej.FOCUS_SEARCH, this.handleFocusSearch),
             this._editorRef?.editor?.removeEventListener?.("cut", this.handleCutEvent);
     }
     handleSetSearchQuery = (e) => {
@@ -1107,7 +1107,7 @@ class eJ extends s.PureComponent {
     handleFocusSearch = (e) => {
         let { prefillCurrentChannel: t } = e;
         if (!t) return void this.focusEditor();
-        let r = T.A.getChannelId(),
+        let r = y.A.getChannelId(),
             l = L.A.getChannel(r);
         if (null == l) return void this.focusEditor();
         let { searchContext: n } = this.props;
@@ -1361,7 +1361,7 @@ class eJ extends s.PureComponent {
 function e0(e) {
     let { searchContext: t, className: r } = e,
         l = (0, C.bS)(t),
-        a = (0, h.bG)([R.A], () => R.A.keyboardModeEnabled),
+        a = (0, h.bG)([R.Ay], () => R.Ay.keyboardModeEnabled),
         i = (0, h.bG)([P.A], () => P.A.getEditorState(l)),
         u = s.useMemo(() => (null != i ? i : b.e_(N.ys(O.Ay))), [i]);
     s.useEffect(() => {
@@ -1385,8 +1385,8 @@ function e0(e) {
             let e = v.A.getTotalCount(l);
             return { hasResults: null != e && e > 0, isSearching: v.A.getIsFetching(l) };
         }),
-        p = (0, h.bG)([x.Ay, T.A, L.A], () => {
-            let e = T.A.getCurrentlySelectedChannelId(),
+        p = (0, h.bG)([x.Ay, y.A, L.A], () => {
+            let e = y.A.getCurrentlySelectedChannelId(),
                 t = L.A.getChannel(e);
             return x.Ay.getSection(e, t?.isDM()) === eu.YvQ.SEARCH;
         });
