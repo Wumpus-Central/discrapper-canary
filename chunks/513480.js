@@ -1,102 +1,121 @@
 "use strict";
-n.d(t, { M6: () => R, QK: () => T, lP: () => C, pE: () => N });
+n.d(t, { M6: () => R, QK: () => S, l2: () => C, lP: () => v, pE: () => N });
 var i = n(64700),
     r = n(478437),
     s = n(17928),
     a = n(155718),
     o = n(323073),
     l = n(47167),
-    d = n(223863),
-    _ = n(750385),
-    u = n(68935),
-    c = n(95701),
-    E = n(734057),
-    h = n(576705),
-    m = n(994500),
-    f = n(287809),
-    g = n(659674),
-    p = n(403362),
-    A = n(652215),
-    I = n(985018);
-function T(e) {
-    let t = e.map(d._g).find(p.Vq),
-        n = (0, s.bG)([E.A], () => E.A.getChannel(t), [t]);
-    return i.useMemo(() => n ?? (0, c.createChannelRecord)({ id: "1", type: r.r.DM }), [n]);
-}
+    u = n(223863),
+    c = n(750385),
+    d = n(68935),
+    _ = n(95701),
+    h = n(734057),
+    f = n(576705),
+    p = n(994500),
+    E = n(287809),
+    m = n(659674),
+    g = n(403362),
+    A = n(427262),
+    I = n(652215),
+    T = n(375708);
 function S(e) {
+    let t = e.map(u._g).find(g.Vq),
+        n = (0, s.bG)([h.A], () => h.A.getChannel(t), [t]);
+    return i.useMemo(() => n ?? (0, _.createChannelRecord)({ id: "1", type: r.r.DM }), [n]);
+}
+function y(e) {
     return e.components.length > 0 && e.components[0].type === a.I5.CHECKPOINT_CARD;
 }
 function N(e, t, n, i) {
-    let r = n instanceof c.YB;
+    let r = n instanceof _.YB;
     if (null != i) {
         let e = i(n);
         if (null != e) return e;
     }
     if (null == e) return;
-    let s = S(e),
-        a = e.messageSnapshots.length > 0 && S(e.messageSnapshots[0].message);
+    let s = y(e),
+        a = e.messageSnapshots.length > 0 && y(e.messageSnapshots[0].message);
     if (null != t || s) {
-        if ((0, o.Gc)(t) && !(r && (0, o.Gc)(n))) return { label: I.intl.string(I.t.KgPx1D) };
-        if (r && (0, c.zy)(n.type)) {
+        if ((0, o.Gc)(t) && !(r && (0, o.Gc)(n))) return { label: T.intl.string(T.t.KgPx1D) };
+        if (r && (0, _.zy)(n.type)) {
             if (
                 (e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) &&
-                !h.A.can(A.xBc.ATTACH_FILES, n)
+                !f.A.can(I.xBc.ATTACH_FILES, n)
             )
-                return { label: I.intl.string(I.t.P7yvbm) };
+                return { label: T.intl.string(T.t.P7yvbm) };
             if (
                 ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) &&
-                    !(0, g.fS)(n, h.A) &&
-                    !(0, g.ax)(e)) ||
-                ((s || a) && !(0, g.fS)(n, h.A))
+                    !(0, m.fS)(n, f.A) &&
+                    !(0, m.ax)(e)) ||
+                ((s || a) && !(0, m.fS)(n, f.A))
             )
-                return { label: I.intl.string(I.t.Wr4RIX) };
+                return { label: T.intl.string(T.t.Wr4RIX) };
             let t = [
-                ...(0, u.o6)(e),
+                ...(0, d.o6)(e),
                 ...e.messageSnapshots.flatMap((e) => {
                     let { message: t } = e;
-                    return (0, u.o6)(t);
+                    return (0, d.o6)(t);
                 }),
             ];
             if (
                 t.length > 0 &&
-                !h.A.can(A.xBc.USE_EXTERNAL_STICKERS, n) &&
+                !f.A.can(I.xBc.USE_EXTERNAL_STICKERS, n) &&
                 t.some((e) => {
                     let t;
                     return (
-                        null != (t = _.A.getStickerById(e.id)) &&
-                        !!(0, u.Xw)(t) &&
+                        null != (t = c.A.getStickerById(e.id)) &&
+                        !!(0, d.Xw)(t) &&
                         (t.guild_id !== n.guild_id || void 0)
                     );
                 })
             )
-                return { label: I.intl.string(I.t["0Yyrua"]) };
+                return { label: T.intl.string(T.t["0Yyrua"]) };
             if (
-                (e.hasFlag(A.pr7.IS_VOICE_MESSAGE) ||
-                    e.messageSnapshots.some((e) => e.message.hasFlag(A.pr7.IS_VOICE_MESSAGE))) &&
-                !h.A.can(A.xBc.SEND_VOICE_MESSAGES, n)
+                (e.hasFlag(I.pr7.IS_VOICE_MESSAGE) ||
+                    e.messageSnapshots.some((e) => e.message.hasFlag(I.pr7.IS_VOICE_MESSAGE))) &&
+                !f.A.can(I.xBc.SEND_VOICE_MESSAGES, n)
             )
-                return { label: I.intl.string(I.t.quj4DY) };
+                return { label: T.intl.string(T.t.quj4DY) };
         }
     }
 }
-function C(e, t) {
+function v(e, t) {
     return (
         !!(null != e.rateLimitPerUser && e.rateLimitPerUser > 0) &&
-        !(t.can(A.xBc.MANAGE_CHANNELS, e) || t.can(A.xBc.MANAGE_MESSAGES, e))
+        !(t.can(I.xBc.MANAGE_CHANNELS, e) || t.can(I.xBc.MANAGE_MESSAGES, e))
     );
 }
-function R(e) {
-    let t = (0, s.yK)(
-        [E.A, h.A],
+function C(e) {
+    return (0, s.yK)(
+        [E.default, h.A, p.A],
         () =>
             e
                 .map((e) => {
                     let { type: t, id: n } = e;
-                    return "channel" === t ? E.A.getChannel(n) : null;
+                    if ("user" === t) {
+                        let e = E.default.getUser(n);
+                        return null != e ? (p.A.getNickname(e.id) ?? A.Ay.getName(e)) : null;
+                    }
+                    let i = h.A.getChannel(n);
+                    return null != i ? (0, l.m1)(i, E.default, p.A, !0) : null;
                 })
-                .filter(p.Vq)
-                .filter((e) => C(e, h.A)),
+                .filter(g.Vq),
         [e],
     );
-    return (0, s.yK)([f.default, m.A], () => t.map((e) => (0, l.m1)(e, f.default, m.A, !0)), [t]);
+}
+function R(e) {
+    let t = (0, s.yK)(
+        [h.A, f.A],
+        () =>
+            e
+                .map((e) => {
+                    let { type: t, id: n } = e;
+                    return "channel" === t ? h.A.getChannel(n) : null;
+                })
+                .filter(g.Vq)
+                .filter((e) => v(e, f.A)),
+        [e],
+    );
+    return (0, s.yK)([E.default, p.A], () => t.map((e) => (0, l.m1)(e, E.default, p.A, !0)), [t]);
 }

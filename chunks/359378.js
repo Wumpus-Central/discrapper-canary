@@ -1,61 +1,65 @@
-i.d(e, { A: () => x });
-var a = i(627968);
-i(64700);
-var r = i(503698),
-    t = i.n(r),
-    d = i(837381),
-    l = i(187322),
-    c = i(939249),
-    n = i(834730),
-    o = i(658675),
-    h = i(680507);
-function x(s) {
+e.d(s, { A: () => x });
+var i = e(627968);
+e(64700);
+var t = e(503698),
+    l = e.n(t),
+    r = e(837381),
+    d = e(187322),
+    n = e(939249),
+    c = e(834730),
+    o = e(658675),
+    h = e(375708),
+    m = e(680507);
+function x(a) {
     let {
-            listItemId: e,
-            icon: i,
-            label: r,
+            listItemId: s,
+            icon: e,
+            label: t,
             subLabel: x,
-            selected: m,
-            disabled: v,
+            selected: v,
+            disabled: u,
             onPress: p,
-            "aria-setsize": u,
-            "aria-posinset": j,
-            className: k,
-        } = s,
-        b = (0, d.rm)(e);
-    return (0, a.jsx)(l.vN, {
+            "aria-label": j,
+            "aria-setsize": b,
+            "aria-posinset": k,
+            className: N,
+        } = a,
+        f = (0, r.rm)(s),
+        g = !0 === v && null != j ? h.intl.formatToPlainString(h.t.QymItZ, { text: j }) : j;
+    return (0, i.jsx)(d.vN, {
         offset: { right: 4, bottom: 4 },
-        children: (0, a.jsxs)(c.D, {
-            className: t()(h.HP, k, { [h.r9]: v }),
-            onClick: v ? void 0 : p,
-            "aria-selected": m,
-            "aria-disabled": v,
-            "aria-setsize": u,
-            "aria-posinset": j,
-            ...b,
+        children: (0, i.jsxs)(n.D, {
+            className: l()(m.HP, N, { [m.r9]: u }),
+            onClick: u ? void 0 : p,
+            "aria-label": g,
+            "aria-selected": v,
+            "aria-disabled": u,
+            "aria-setsize": b,
+            "aria-posinset": k,
+            ...f,
             children: [
-                (0, a.jsxs)("div", {
-                    className: h.D_,
+                (0, i.jsxs)("div", {
+                    className: m.D_,
                     children: [
-                        (0, a.jsx)("div", { className: h.P0, children: i }),
-                        (0, a.jsxs)("div", {
-                            className: h.WD,
+                        (0, i.jsx)("div", { className: m.P0, children: e }),
+                        (0, i.jsxs)("div", {
+                            className: m.WD,
                             children: [
-                                (0, a.jsx)(n.E, {
+                                (0, i.jsx)(c.E, {
                                     tag: "strong",
-                                    color: v ? "text-muted" : void 0,
+                                    color: u ? "text-muted" : void 0,
                                     variant: "text-md/semibold",
                                     lineClamp: 1,
-                                    children: r,
+                                    children: t,
                                 }),
                                 null != x
-                                    ? (0, a.jsx)(n.E, { variant: "text-xs/normal", color: "text-muted", children: x })
+                                    ? (0, i.jsx)(c.E, { variant: "text-xs/normal", color: "text-muted", children: x })
                                     : null,
                             ],
                         }),
                     ],
                 }),
-                (0, a.jsx)("div", { className: h.kv, children: (0, a.jsx)(o.P, { checked: !!m, disabled: v }) }),
+                (0, i.jsx)("div", { className: m.kv, children: (0, i.jsx)(o.P, { checked: !!v, disabled: u }) }),
             ],
         }),
     });
