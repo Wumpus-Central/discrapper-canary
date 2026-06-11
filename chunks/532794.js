@@ -67,7 +67,7 @@ function O(e) {
             let n = async () => {
                 if (
                     (null != t && t(),
-                    !ei && (O?.(e), e && D?.()),
+                    !ei && (null != O && O(e), e && null != D && D()),
                     l.h.dispatch({ type: "PREMIUM_PAYMENT_MODAL_CLOSE", didSucceed: e }),
                     e && null != et && ee.endDate >= new Date())
                 ) {
@@ -118,8 +118,8 @@ function O(e) {
                 (0, c.ET)(),
                 (0, u.ET)(),
                 (0, d.z)(),
-                ei || O?.(e),
-                e && D?.();
+                ei || null == O || O(e),
+                e && null != D && D();
         };
     if (ei) {
         let e = () => (0, o.closeModal)(Q);
@@ -711,7 +711,7 @@ function O(e) {
                     giftRecipient: K,
                     onClose: (e) => er(e, s),
                     onComplete: () => {
-                        (X = !0), b?.();
+                        (X = !0), null != b && b();
                     },
                     analyticsLocations: L,
                     analyticsObject: w,

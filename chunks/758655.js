@@ -19,45 +19,37 @@ var l = n(627968),
     h = n(953761),
     A = n(975965);
 function O(e) {
-    let { handleStepChange: t, planGroup: n, openInvoiceId: O, analyticsData: x, analyticsLocation: f } = e,
+    let { handleStepChange: t, planGroup: n, openInvoiceId: O, analyticsData: f, analyticsLocation: x } = e,
         {
             purchaseState: P,
             contextMetadata: g,
             purchaseError: N,
-            setUpdatedSubscription: R,
-            setCurrency: v,
-            activeSubscription: U,
+            setCurrency: R,
+            activeSubscription: v,
         } = (0, C.t4)((e) => ({
             purchaseState: e.purchaseState,
             contextMetadata: e.contextMetadata,
             purchaseError: e.purchaseError,
-            setUpdatedSubscription: e.setUpdatedSubscription,
             setCurrency: e.setCheckoutCurrency,
             activeSubscription: e.activeSubscription,
         })),
         { paymentSources: y } = (0, s.jm)(),
-        { dropdownCurrencies: j } = (0, o.Jn)(),
-        { subscriptionMetadataRequest: M, showBenefitsFirst: L } = (0, A.l)(),
-        k = L ? _.pn.BENEFITS : void 0,
-        F = (0, c.A)(),
-        b = (0, d.S3)();
-    if (null == F)
-        throw new a.v({ message: "Expected plan to be selected", extraSentryInformation: { selectedPlan: F } });
-    let w = r.useRef(null),
-        [D, H] = (0, i.A)(!1, 500),
-        G = (0, u.mx)(),
-        K = (0, m.bg)(b?.flags ?? 0);
+        { dropdownCurrencies: U } = (0, o.Jn)(),
+        { subscriptionMetadataRequest: j, showBenefitsFirst: M } = (0, A.l)(),
+        L = M ? _.pn.BENEFITS : void 0,
+        k = (0, c.A)(),
+        F = (0, d.S3)();
+    if (null == k)
+        throw new a.v({ message: "Expected plan to be selected", extraSentryInformation: { selectedPlan: k } });
+    let b = r.useRef(null),
+        [w, D] = (0, i.A)(!1, 500),
+        H = (0, u.mx)(),
+        G = (0, m.bg)(F?.flags ?? 0);
     r.useEffect(() => {
-        null != N && null != w.current && w.current.scrollIntoView({ behavior: "smooth" });
+        null != N && null != b.current && b.current.scrollIntoView({ behavior: "smooth" });
     }, [N]);
-    let B = r.useCallback(
-            (e) => {
-                R(e ?? null), t(_.pn.CONFIRM);
-            },
-            [t, R],
-        ),
-        V = r.useRef(null),
-        W = r.useCallback(() => {
+    let K = r.useRef(null),
+        B = r.useCallback(() => {
             t(_.pn.ADD_PAYMENT_STEPS);
         }, [t]);
     return P === E.h.PURCHASING
@@ -66,43 +58,44 @@ function O(e) {
               children: [
                   (0, l.jsx)(S.dZ, {
                       children:
-                          null == U
+                          null == v
                               ? (0, l.jsx)(h._, {
-                                    selectedPlanId: F.id,
+                                    selectedPlanId: k.id,
                                     planGroup: n,
                                     paymentSources: y,
-                                    handlePaymentSourceAdd: W,
-                                    metadata: K ? void 0 : M,
+                                    handlePaymentSourceAdd: B,
+                                    metadata: G ? void 0 : j,
                                 })
                               : (0, l.jsx)(p.A, {
-                                    premiumSubscription: U,
+                                    premiumSubscription: v,
                                     paymentSources: y,
-                                    handlePaymentSourceAdd: W,
-                                    planId: F.id,
+                                    handlePaymentSourceAdd: B,
+                                    planId: k.id,
                                     planGroup: n,
-                                    currencies: j,
-                                    onCurrencyChange: (e) => v(e),
+                                    currencies: U,
+                                    onCurrencyChange: (e) => R(e),
                                     hasOpenInvoice: null != O,
                                     purchaseState: P,
                                 }),
                   }),
                   (0, l.jsx)(S.UX, {
                       children: (0, l.jsx)(T.A, {
-                          premiumSubscription: U ?? null,
-                          onBack: () => null != k && t(k),
-                          onNext: B,
-                          legalTermsNodeRef: V,
-                          flashLegalTerms: () => H(!0),
-                          analyticsLocation: f,
-                          baseAnalyticsData: x,
+                          premiumSubscription: v ?? null,
+                          onBack: () => null != L && t(L),
+                          handleStepChange: t,
+                          postPurchaseStep: _.pn.CONFIRM,
+                          legalTermsNodeRef: K,
+                          flashLegalTerms: () => D(!0),
+                          analyticsLocation: x,
+                          baseAnalyticsData: f,
                           flowStartTime: g.startTime,
                           planGroup: n,
                           openInvoiceId: O,
-                          metadata: K ? void 0 : M,
-                          backButtonEligible: !!L || void 0,
-                          invoiceError: G,
-                          disablePurchase: M?.guild_id == null && !K,
-                          onPaymentSourceAdd: W,
+                          metadata: G ? void 0 : j,
+                          backButtonEligible: !!M || void 0,
+                          invoiceError: H,
+                          disablePurchase: j?.guild_id == null && !G,
+                          onPaymentSourceAdd: B,
                       }),
                   }),
               ],
