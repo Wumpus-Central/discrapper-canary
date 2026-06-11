@@ -1128,29 +1128,30 @@ let tB = () => {
             },
             { analyticsLocations: S } = (0, g.Ay)(m.A.PREMIUM_MARKETING_HERO_CTA),
             y = (0, eH.c)(eT.C.MARKETING_PAGE_BANNER),
-            N = T && !h,
-            v = null;
+            N = null != f && f.status === $.Dmq.CANCELED,
+            v = T && !N,
+            C = null;
         null != y && "marketingPageBanner" === y.properties.properties.oneofKind
-            ? (v = (0, a.jsx)(eW.x, {
+            ? (C = (0, a.jsx)(eW.x, {
                   componentId: y.id,
                   promotionBannerMarketingComponentFields: y.properties.properties.marketingPageBanner,
               }))
             : r
-              ? (v = (0, a.jsx)(eK.A, { variant: eK.c.SUBSCRIBER_HOME }))
+              ? (C = (0, a.jsx)(eK.A, { variant: eK.c.SUBSCRIBER_HOME }))
               : s
-                ? (v = (0, a.jsx)(tF, {}))
-                : o && !N && (v = (0, a.jsx)(tt, {}));
-        let C = (0, eB.V)(),
-            R = (0, eV.O)(),
-            O = (0, D.U9)(R, z.pe.TIER_2) ? z.pe.TIER_2 : void 0,
-            b = null != f && f.status !== $.Dmq.ACCOUNT_HOLD && f.hasAnyPremiumNitro,
-            L = (0, eb.A)(),
-            w = L.isFractionalPremiumActive && !b && null == v && !h,
-            M = (0, d.bG)([eR.A], () => eR.A.useReducedMotion),
-            { visibilityPercentageRef: k, visibilityPercentage: G } = (0, ej.U)(!M);
+                ? (C = (0, a.jsx)(tF, {}))
+                : o && !v && (C = (0, a.jsx)(tt, {}));
+        let R = (0, eB.V)(),
+            O = (0, eV.O)(),
+            b = (0, D.U9)(O, z.pe.TIER_2) ? z.pe.TIER_2 : void 0,
+            L = null != f && f.status !== $.Dmq.ACCOUNT_HOLD && f.hasAnyPremiumNitro,
+            w = (0, eb.A)(),
+            M = w.isFractionalPremiumActive && !L && null == C && !h,
+            k = (0, d.bG)([eR.A], () => eR.A.useReducedMotion),
+            { visibilityPercentageRef: G, visibilityPercentage: F } = (0, ej.U)(!k);
         return s
-            ? (0, a.jsx)(tH, { fpEndsAt: L.currentEntitlementEndsAt, className: i, buttonVisibilityRef: A })
-            : N
+            ? (0, a.jsx)(tH, { fpEndsAt: w.currentEntitlementEndsAt, className: i, buttonVisibilityRef: A })
+            : v
               ? (0, a.jsx)(tL, {
                     treatment: I,
                     className: i,
@@ -1165,13 +1166,13 @@ let tB = () => {
                     ref: A,
                     children: (0, a.jsxs)("div", {
                         className: tR.Qs,
-                        ref: k,
+                        ref: G,
                         children: [
                             _ && c,
                             (0, a.jsxs)("div", {
                                 className: tR.N1,
                                 children: [
-                                    (0, a.jsx)(tx, { containerVisibilityPercentage: G }),
+                                    (0, a.jsx)(tx, { containerVisibilityPercentage: F }),
                                     h &&
                                         p?.expiresAt != null &&
                                         (0, a.jsx)(ta, { expiresAt: p.expiresAt.toISOString(), className: tR.IZ }),
@@ -1197,13 +1198,13 @@ let tB = () => {
                                 ],
                             }),
                             (0, a.jsxs)("div", {
-                                className: w || h ? tR.UJ : void 0,
+                                className: M || h ? tR.UJ : void 0,
                                 children: [
-                                    w &&
+                                    M &&
                                         (0, a.jsx)(j.A, {
                                             size: "md",
                                             hasActivePromotion: !!r,
-                                            subscriptionTier: C?.subscription_trial?.sku_id ?? O,
+                                            subscriptionTier: R?.subscription_trial?.sku_id ?? b,
                                         }),
                                     h &&
                                         null != f &&
@@ -1391,13 +1392,13 @@ let tB = () => {
                                             },
                                         }),
                                     (0, a.jsx)(eg.A, {
-                                        variant: w || h ? "secondary" : "expressive",
+                                        variant: M || h ? "secondary" : "expressive",
                                         size: "md",
                                         buttonTextOverride: X.intl.string(X.t["3KomGa"]),
                                     }),
                                 ],
                             }),
-                            v,
+                            C,
                         ],
                     }),
                 });
