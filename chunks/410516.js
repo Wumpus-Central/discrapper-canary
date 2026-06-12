@@ -105,11 +105,12 @@ let v = (e, t, n, r) => {
     C = (e) => {
         let t = (0, p.O)(),
             n = (0, p.p)(),
-            { priceOptions: i, discountAmountOff: r } = v(e, t ?? n);
+            { priceOptions: r, discountAmountOff: s } = v(e, t ?? n),
+            a = (0, i.bG)([u.A], () => null != e && u.A.isLoadedForSKU((0, c.mH)(E.hd[e].skuId)), [e]);
         if (null == e || (null == t && null == n)) return null;
         try {
-            let t = (0, c.y8)(e, !1, !1, i);
-            return (0, d.$g)(t.amount - (r ?? 0), t.currency);
+            let t = (0, c.y8)(e, !1, !1, r, a);
+            return (0, d.$g)(t.amount - (s ?? 0), t.currency);
         } catch {
             return null;
         }
