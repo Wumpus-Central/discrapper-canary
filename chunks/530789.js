@@ -359,8 +359,8 @@ new eA(
               GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
                   let { guildScheduledEvent: t } = e;
                   if (eE() || null == t.notification_type) return !1;
-                  t.notification_type === ei.b8.EVENT_START &&
-                      (t.entity_type === ei.Ps.STAGE_INSTANCE || t.entity_type === ei.Ps.VOICE
+                  t.notification_type === ei.b8.EVENT_START
+                      ? t.entity_type === ei.Ps.STAGE_INSTANCE || t.entity_type === ei.Ps.VOICE
                           ? (function (e) {
                                 if (eE()) return;
                                 let t = e.channel_id;
@@ -414,7 +414,8 @@ new eA(
                                             isUserAvatar: !1,
                                         },
                                     );
-                            })(t));
+                            })(t)
+                      : t.notification_type;
               },
               THREAD_CREATE: function (e) {
                   let { channel: t, isNewlyCreated: n } = e;

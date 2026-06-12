@@ -9,7 +9,7 @@ var i = n(812729),
     u = n(775121),
     c = n(626584),
     d = n(549205),
-    _ = n(890063),
+    _ = n(136491),
     h = n(174459),
     f = n(723702),
     p = n(19575),
@@ -224,23 +224,22 @@ function Y(e) {
 }
 function W(e) {
     let { keybind: t } = e;
-    (D = { ...D, [t.id]: t }),
-        __OVERLAY__ ||
+    if (((D = { ...D, [t.id]: t }), !__OVERLAY__))
+        switch (
             (h.default.track(A.HAw.USER_SETTINGS_KEYBIND_UPDATED, {
                 keybind_action: t.action,
                 keybind_is_bound: !0,
                 keybind_has_shortcut: t.shortcut.length > 0,
             }),
-            t.action === A.hCu.TOGGLE_OVERLAY_INPUT_LOCK
-                ? h.default.track(A.HAw.OVERLAY_SETTINGS_UPDATED, {
-                      hotkey: t.action === A.hCu.TOGGLE_OVERLAY_INPUT_LOCK ? (0, m.dI)(t.shortcut) : null,
-                  })
-                : t.action === A.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET &&
-                  h.default.track(A.HAw.OVERLAY_SETTINGS_UPDATED, {
-                      text_activation_hotkey:
-                          t.action === A.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET ? (0, m.dI)(t.shortcut) : null,
-                  })),
-        H(t);
+            t.action)
+        ) {
+            case A.hCu.TOGGLE_OVERLAY_INPUT_LOCK:
+                h.default.track(A.HAw.OVERLAY_SETTINGS_UPDATED, { hotkey: (0, m.dI)(t.shortcut) });
+                break;
+            case A.hCu.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET:
+                h.default.track(A.HAw.OVERLAY_SETTINGS_UPDATED, { text_activation_hotkey: (0, m.dI)(t.shortcut) });
+        }
+    H(t);
 }
 function K(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];

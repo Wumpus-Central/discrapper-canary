@@ -1136,48 +1136,59 @@ ${s}`),
                                                                 { application_id: n },
                                                             );
                                                 }
-                                            } else if (t === I.I.INVITE)
-                                                eW({
-                                                    inviteKey: u,
-                                                    channelId: n,
-                                                    messageId: i,
-                                                    location: s,
-                                                    inviteAnalyticsMetadata: a,
-                                                    overrideProperties: o,
-                                                });
-                                            else if (t === I.I.TEMPLATE) {
-                                                let e = k.A.getGuildTemplate(u);
-                                                if (null == e || e.state === eG.QB.RESOLVING) return;
-                                                _.Ay.trackWithMetadata(D.HAw.GUILD_TEMPLATE_LINK_SENT, {
-                                                    guild_template_code: u,
-                                                    guild_template_name: e.name,
-                                                    guild_template_description: e.description,
-                                                    guild_template_guild_id: e.sourceGuildId,
-                                                });
-                                            } else if (t === I.I.BUILD_OVERRIDE);
-                                            else if (t === I.I.EXPERIMENT);
-                                            else if (t === I.I.MANUAL_BUILD_OVERRIDE);
-                                            else if (t === I.I.EVENT);
-                                            else if (t === I.I.CHANNEL_LINK);
-                                            else if (t === I.I.EMBEDDED_ACTIVITY_INVITE)
-                                                (0, E.KL)(u, eU.J.ACTIVITY_INVITE, l);
-                                            else if (t === I.I.GUILD_PRODUCT);
-                                            else if (t === I.I.SERVER_SHOP);
-                                            else if (
-                                                t === I.I.SOCIAL_LAYER_STOREFRONT ||
-                                                t === I.I.SOCIAL_LAYER_STOREFRONT_APP
-                                            );
-                                            else if (t === I.I.QUESTS_EMBED) {
-                                                let e = (0, ef.L4)(r.u.QUESTS_EMBED);
-                                                (0, eh.av)({
-                                                    questId: u,
-                                                    event: D.HAw.QUEST_LINK_SHARED,
-                                                    properties: { metadata_sealed: null != e ? e : null },
-                                                    trackGuildAndChannelMetadata: !0,
-                                                    sourceQuestContent: r.u.QUESTS_EMBED,
-                                                });
-                                            } else if (t === I.I.COLLECTIBLES_SHOP);
-                                            else throw Error(`Unknown coded link type: ${t}`);
+                                            } else
+                                                switch (t) {
+                                                    case I.I.INVITE:
+                                                        eW({
+                                                            inviteKey: u,
+                                                            channelId: n,
+                                                            messageId: i,
+                                                            location: s,
+                                                            inviteAnalyticsMetadata: a,
+                                                            overrideProperties: o,
+                                                        });
+                                                        break;
+                                                    case I.I.TEMPLATE: {
+                                                        let e = k.A.getGuildTemplate(u);
+                                                        if (null == e || e.state === eG.QB.RESOLVING) return;
+                                                        _.Ay.trackWithMetadata(D.HAw.GUILD_TEMPLATE_LINK_SENT, {
+                                                            guild_template_code: u,
+                                                            guild_template_name: e.name,
+                                                            guild_template_description: e.description,
+                                                            guild_template_guild_id: e.sourceGuildId,
+                                                        });
+                                                        break;
+                                                    }
+                                                    case I.I.BUILD_OVERRIDE:
+                                                    case I.I.EXPERIMENT:
+                                                    case I.I.MANUAL_BUILD_OVERRIDE:
+                                                    case I.I.EVENT:
+                                                    case I.I.CHANNEL_LINK:
+                                                        break;
+                                                    case I.I.EMBEDDED_ACTIVITY_INVITE:
+                                                        (0, E.KL)(u, eU.J.ACTIVITY_INVITE, l);
+                                                        break;
+                                                    case I.I.GUILD_PRODUCT:
+                                                    case I.I.SERVER_SHOP:
+                                                    case I.I.SOCIAL_LAYER_STOREFRONT:
+                                                    case I.I.SOCIAL_LAYER_STOREFRONT_APP:
+                                                        break;
+                                                    case I.I.QUESTS_EMBED: {
+                                                        let e = (0, ef.L4)(r.u.QUESTS_EMBED);
+                                                        (0, eh.av)({
+                                                            questId: u,
+                                                            event: D.HAw.QUEST_LINK_SHARED,
+                                                            properties: { metadata_sealed: null != e ? e : null },
+                                                            trackGuildAndChannelMetadata: !0,
+                                                            sourceQuestContent: r.u.QUESTS_EMBED,
+                                                        });
+                                                        break;
+                                                    }
+                                                    case I.I.COLLECTIBLES_SHOP:
+                                                        break;
+                                                    default:
+                                                        throw Error(`Unknown coded link type: ${t}`);
+                                                }
                                         });
                                     })({
                                         content: o,

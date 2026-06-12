@@ -71,8 +71,7 @@ function O(e) {
                 (e) => e.status === h.clD.OFFLINE && (null == e.hiddenActivities || 0 === e.hiddenActivities.length),
             )
           ? delete p[e]
-          : n.status === h.clD.OFFLINE &&
-            t.some((e) => null != e.hiddenActivities && e.hiddenActivities.length > 0) &&
+          : t.some((e) => null != e.hiddenActivities && e.hiddenActivities.length > 0) &&
             (A[e] = b(Object.values(t).flatMap((e) => e.hiddenActivities ?? [])));
 }
 function b(e) {
