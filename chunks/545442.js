@@ -5,7 +5,7 @@ var i = n(627968),
     s = n(503698),
     a = n.n(s),
     o = n(990078),
-    l = n(521100),
+    l = n(36075),
     u = n(746413);
 function c(e) {
     let { color: t, colors: n, className: s, background: o = !0, hoverOverride: c } = e,

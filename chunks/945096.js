@@ -1,10 +1,19 @@
 "use strict";
-n.d(t, { $0: () => o, Xr: () => c, gN: () => u, mT: () => l });
+n.d(t, { $0: () => l, Xr: () => d, as: () => o, gN: () => c, mT: () => u });
 var i = n(310784),
     r = n.n(i),
     s = n(508425),
     a = n(750656);
 function o(e) {
+    switch (e) {
+        case s.z.GRADIENT:
+        case s.z.GUMMY:
+            return 2;
+        default:
+            return 1;
+    }
+}
+function l(e) {
     let t = r()(e).alpha(1),
         n = t.get("hsl.l"),
         i = Math.min(1, 1.2 * t.get("hsl.s")),
@@ -19,10 +28,10 @@ function o(e) {
         neonStroke: t.set("hsl.s", i).set("hsl.l", s).hex(),
     };
 }
-function l(e) {
+function u(e) {
     return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors };
 }
-function u() {
+function c() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         n = a.re[Math.floor(Math.random() * a.re.length)],
@@ -33,13 +42,13 @@ function u() {
                   return a.rA[a.rA.length - 1];
               })()
             : a.rA[Math.floor(Math.random() * a.rA.length)];
-    if (n === s.z.GRADIENT) {
+    if (o(n) > 1) {
         let t = a.Wf[Math.floor(Math.random() * a.Wf.length)];
         e = [t.start, t.end];
     } else e = [a.Jl[Math.floor(Math.random() * a.Jl.length)]];
     return { fontId: i, effectId: n, colors: e };
 }
-function c(e) {
+function d(e) {
     if (null == e) return !1;
     let t = e.replace(/[^\p{L}]/gu, "");
     return /\P{Script=Latin}/u.test(t);

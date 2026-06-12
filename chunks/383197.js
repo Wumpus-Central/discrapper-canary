@@ -13,6 +13,7 @@ let c = {
         [r.z.NEON]: l.default.x68b1F,
         [r.z.TOON]: l.default.otpeeM,
         [r.z.POP]: l.default.cjQOKb,
+        [r.z.GUMMY]: l.default.x9Gtie,
     },
     d = { [r.z.SOLID]: 3, [r.z.GRADIENT]: 2.5, [r.z.GLOW]: 2.5, [r.z.NEON]: 3, [r.z.TOON]: 3, [r.z.POP]: 3 };
 function _(e) {
@@ -23,6 +24,7 @@ function _(e) {
                 switch (e) {
                     case r.z.GRADIENT:
                     case r.z.GLOW:
+                    case r.z.GUMMY:
                         return [7183099, 6082490];
                     case r.z.TOON:
                         return [0xf42098];
