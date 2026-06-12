@@ -148,7 +148,7 @@ let ed = {
         binds: ["mod+i"],
         comboKeysBindGlobal: !0,
         action: () =>
-            !(C.A.getLayers().length > 0) &&
+            !(C.A.getLayers().length > 0 || (0, S.hasAnyModalOpen)()) &&
             ((() => {
                 let { notificationCenterVariant: e } = (0, z.GE)({ location: "TOGGLE_INBOX" });
                 if ("sidebar" !== e) return;
