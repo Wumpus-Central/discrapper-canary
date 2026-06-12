@@ -12,8 +12,8 @@ var i = n(636537),
 (0, n(945810).mj)({
     name: "2026-06-android-two-week-trials",
     kind: "user",
-    defaultConfig: { enabled: !1, discountCTAEnabled: !1 },
-    variations: { 1: { enabled: !1, discountCTAEnabled: !0 }, 2: { enabled: !0, discountCTAEnabled: !0 } },
+    defaultConfig: { enabled: !1, trialCTAEnabled: !1 },
+    variations: { 1: { enabled: !0, trialCTAEnabled: !0 }, 2: { enabled: !0, trialCTAEnabled: !1 } },
 }),
     n(788868);
 var _ = n(652215);
