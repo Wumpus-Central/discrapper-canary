@@ -175,16 +175,20 @@ let J = (e) => e.name,
             ),
             O = r.useMemo(() => {
                 let e = ((e, t) => {
-                    let { isGift: n } = t;
+                    let { productLine: n, isGift: l } = t;
                     if (null == e) return null;
-                    let l = e.orbsReward;
-                    if (null != l && l > 0) {
-                        let e = n ? Z.t["ZV+aS9"] : Z.t["0StwHe"];
-                        return { Icon: f.C, text: Z.intl.format(e, { orbCount: l }) };
+                    let r = e.orbsReward;
+                    if (null != r && r > 0) {
+                        let e = l ? Z.t["ZV+aS9"] : Z.t["0StwHe"];
+                        return {
+                            Icon: f.C,
+                            text: Z.intl.format(e, { orbCount: r }),
+                            gradientColor: n === V.EZt.SOCIAL_LAYER_GAME_ITEM ? "green" : "default",
+                        };
                     }
-                })(i, { isGift: S });
+                })(i, { productLine: n.productLine, isGift: S });
                 return null != e ? (0, l.jsx)(o.J, { ...e }) : null;
-            }, [i, S]),
+            }, [i, S, n.productLine]),
             { setHeaderBadgeText: j, unsetHeaderBadgeText: w } = (0, d.v)();
         return (
             r.useEffect(
