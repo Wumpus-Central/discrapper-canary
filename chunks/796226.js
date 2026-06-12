@@ -1,7 +1,6 @@
 e.exports = {
     jt: "offerNoticeContainerShared__3e43f",
     p3: "nitroPinkGradient__3e43f",
-    U1: "greenGradient__3e43f",
     B4: "customGraphicContainer__3e43f",
     qw: "offerNoticeContainer__3e43f",
     Cu: "offerNoticeOneLineContainer__3e43f",

@@ -9,28 +9,28 @@ var n = a(627968),
     _ = a(696208),
     d = a(289873),
     u = a(834730),
-    p = a(964486),
-    A = a(793574),
-    C = a(688810),
-    k = a(46225),
-    f = a(928550),
-    E = a(174459),
-    L = a(738533),
-    S = a(690493),
-    h = a(578942),
-    m = a(383089),
-    T = a(41032),
-    x = a(910200),
+    p = a(262427),
+    A = a(964486),
+    C = a(793574),
+    k = a(688810),
+    f = a(46225),
+    E = a(928550),
+    L = a(174459),
+    S = a(738533),
+    h = a(690493),
+    m = a(578942),
+    T = a(383089),
+    x = a(41032),
     O = a(188275),
     I = a(652215),
     R = a(375708),
     N = a(520951);
 function y(t) {
     let { transitionState: i, onClose: a, sku: y, application: j, analyticsLocations: g, orbsReward: D } = t,
-        [b, H] = (0, f.L)(j?.id),
-        { fetched: M, hasAlreadyLinked: v, canStartAuthorization: w, startAuthorization: P } = (0, k.RD)(j),
-        z = (0, S.J)(j),
-        { analyticsLocations: F } = (0, C.Ay)(g ?? [], A.A.SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL),
+        [b, H] = (0, E.L)(j?.id),
+        { fetched: M, hasAlreadyLinked: v, canStartAuthorization: w, startAuthorization: P } = (0, f.RD)(j),
+        z = (0, h.J)(j),
+        { analyticsLocations: F } = (0, k.Ay)(g ?? [], C.A.SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL),
         K = !M || H,
         U = e.useRef({
             analyticsLocations: F,
@@ -43,13 +43,13 @@ function y(t) {
     e.useEffect(() => {
         (U.current.isLaunchable = b), (U.current.isApplicationConnected = z), (U.current.canStartAuthorization = w);
     }, [b, z, w]),
-        (0, p.Ay)(() => {
-            E.default.track(I.HAw.OPEN_MODAL, { location_stack: F, type: O.e2, sku_id: y.id, application_id: j.id });
+        (0, A.Ay)(() => {
+            L.default.track(I.HAw.OPEN_MODAL, { location_stack: F, type: O.e2, sku_id: y.id, application_id: j.id });
         }),
         e.useEffect(() => {
             if (K) return;
             let { analyticsLocations: t, skuId: i, applicationId: a, canStartAuthorization: n } = U.current;
-            E.default.track(I.HAw.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, {
+            L.default.track(I.HAw.SLAYER_STOREFRONT_LINK_ACCOUNT_STEP_VIEWED, {
                 location_stack: t,
                 sku_id: i,
                 application_id: a,
@@ -60,7 +60,7 @@ function y(t) {
         }, [K, v]);
     let Y = e.useCallback(() => {
             let { analyticsLocations: t, skuId: i, applicationId: a } = U.current;
-            E.default.track(I.HAw.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
+            L.default.track(I.HAw.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
                 location_stack: t,
                 sku_id: i,
                 application_id: a,
@@ -70,13 +70,13 @@ function y(t) {
         }, [P]),
         W = e.useCallback(() => {
             let { analyticsLocations: t, skuId: i } = U.current;
-            E.default.track(I.HAw.SLAYER_STOREFRONT_GAME_LAUNCH_CLICKED, {
+            L.default.track(I.HAw.SLAYER_STOREFRONT_GAME_LAUNCH_CLICKED, {
                 location_stack: t,
                 sku_id: i,
                 application_id: j.id,
                 is_gift: !1,
             }),
-                L.A.launchGame(j.id);
+                S.A.launchGame(j.id);
         }, [j.id]),
         G = e.useCallback(() => {
             let {
@@ -86,7 +86,7 @@ function y(t) {
                 isLaunchable: e,
                 isApplicationConnected: c,
             } = U.current;
-            E.default.track(I.HAw.SLAYER_STOREFRONT_CLAIM_MODAL_CLOSE_BUTTON_CLICKED, {
+            L.default.track(I.HAw.SLAYER_STOREFRONT_CLAIM_MODAL_CLOSE_BUTTON_CLICKED, {
                 location_stack: t,
                 sku_id: i,
                 application_id: n,
@@ -96,7 +96,7 @@ function y(t) {
             }),
                 a();
         }, [a]),
-        B = e.useMemo(() => (0, h.dI)(j), [j]);
+        J = e.useMemo(() => (0, m.dI)(j), [j]);
     if (K)
         return (0, n.jsx)(c.d, {
             transitionState: i,
@@ -112,7 +112,7 @@ function y(t) {
             transitionState: i,
             onClose: a,
             children: [
-                (0, n.jsx)(T.z, { sku: y, title: R.intl.string(R.t["5glWta"]) }),
+                (0, n.jsx)(x.z, { sku: y, title: R.intl.string(R.t["5glWta"]) }),
                 (0, n.jsxs)(l.c, {
                     children: [
                         (0, n.jsx)(u.E, {
@@ -127,7 +127,7 @@ function y(t) {
                             D > 0 &&
                             (0, n.jsx)("div", {
                                 className: N.I,
-                                children: (0, n.jsx)(x.A, {
+                                children: (0, n.jsx)(p.J, {
                                     Icon: o.C,
                                     text: R.intl.format(R.t["0StwHe"], { orbCount: D }),
                                 }),
@@ -140,7 +140,7 @@ function y(t) {
     }
     {
         let t = { variant: "primary", text: R.intl.string(R.t["VDAhr+"]), onClick: Y, icon: s.A, disabled: !w };
-        return (0, n.jsx)(m.m, {
+        return (0, n.jsx)(T.m, {
             sku: y,
             application: j,
             transitionState: i,
@@ -148,7 +148,7 @@ function y(t) {
             hasAlreadyLinked: v,
             canStartAuthorization: w,
             primaryCTAButtonProps: t,
-            bodyText: B,
+            bodyText: J,
             title: R.intl.string(R.t.GPAtvf),
         });
     }

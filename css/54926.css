@@ -3976,11 +3976,6 @@
     background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
 }
 
-.greenGradient__3e43f {
-    background: var(--background-feedback-positive);
-    color: var(--text-feedback-positive)
-}
-
 .customGraphicContainer__3e43f {
     flex-shrink: 0
 }
@@ -5475,6 +5470,17 @@
     gap: 8px
 }
 
+.outer_ac6414 {
+    position: relative
+}
+
+.inner_ac6414 {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
 @keyframes outgoing-call-pulse_f910d0 {
     0% {
         opacity: 0;
@@ -6539,6 +6545,10 @@
     position: sticky;
     top: 0;
     z-index: 1
+}
+
+.messageInput__8ff3e {
+    max-height: 88px
 }
 
 .banner_ea1e6c {
