@@ -82,3 +82,8 @@
     height: 100%;
     width: 100%
 }
+
+.badgeVectorSrc__8061a {
+    -o-object-fit: contain;
+    object-fit: contain
+}
