@@ -10243,7 +10243,12 @@ let cp = [
                     className: cj.$f,
                     children: (0, A.jsx)("img", { alt: "", src: t, width: 24, height: 24 }),
                 }),
-                (0, A.jsx)(D.D, { variant: "heading-deprecated-12/semibold", children: n }),
+                (0, A.jsx)(G.E, {
+                    tag: "div",
+                    variant: "heading-deprecated-12/semibold",
+                    color: "text-strong",
+                    children: n,
+                }),
             ],
         });
     },
@@ -10269,7 +10274,11 @@ let cp = [
                         className: cj.vK,
                         ref: (e) => a(e),
                         children: [
-                            cp.map((e) => (0, A.jsx)(cf, { ...e, imageCoordinates: [n, l] }, e.name)),
+                            (0, A.jsx)("div", {
+                                role: "group",
+                                "aria-label": el.intl.string(el.t.JsBPb8),
+                                children: cp.map((e) => (0, A.jsx)(cf, { ...e, imageCoordinates: [n, l] }, e.name)),
+                            }),
                             (0, A.jsx)("img", { alt: "", src: cN, className: cj.Sl, width: 256 }),
                             (0, A.jsx)("img", { alt: "", src: "/assets/2990c2614b7e7388.svg", className: cj._7 }),
                         ],

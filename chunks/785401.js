@@ -2777,10 +2777,11 @@ class ta extends A.G {
                 T: () => ["discord_protos.discord_experimentation.v1.Variation.Type", te],
             },
             { no: 6, name: "configuration", kind: "message", T: () => I.hU },
+            { no: 7, name: "owning_experiment_id", kind: "scalar", T: 6 },
         ]);
     }
     create(e) {
-        let t = { id: 0, label: "", targetAllocation: 0, buckets: [], type: 0 };
+        let t = { id: 0, label: "", targetAllocation: 0, buckets: [], type: 0, owningExperimentId: "0" };
         return (
             globalThis.Object.defineProperty(t, g.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, m.x)(this, t, e),
@@ -2811,6 +2812,9 @@ class ta extends A.G {
                 case 6:
                     r.configuration = I.hU.internalBinaryRead(e, e.uint32(), n, r.configuration);
                     break;
+                case 7:
+                    r.owningExperimentId = e.fixed64().toString();
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -2829,7 +2833,8 @@ class ta extends A.G {
             tu.internalBinaryWrite(e.buckets[i], t.tag(4, E.O0.LengthDelimited).fork(), n).join();
         0 !== e.type && t.tag(5, E.O0.Varint).int32(e.type),
             e.configuration &&
-                I.hU.internalBinaryWrite(e.configuration, t.tag(6, E.O0.LengthDelimited).fork(), n).join();
+                I.hU.internalBinaryWrite(e.configuration, t.tag(6, E.O0.LengthDelimited).fork(), n).join(),
+            "0" !== e.owningExperimentId && t.tag(7, E.O0.Bit64).fixed64(e.owningExperimentId);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? E.f$.onWrite : i)(this.typeName, e, t), t;
     }
@@ -2846,11 +2851,10 @@ class tl extends A.G {
                 kind: "enum",
                 T: () => ["discord_protos.discord_experimentation.v1.Bucket.Type", tt],
             },
-            { no: 4, name: "owning_experiment_id", kind: "scalar", T: 6 },
         ]);
     }
     create(e) {
-        let t = { start: 0, stop: 0, type: 0, owningExperimentId: "0" };
+        let t = { start: 0, stop: 0, type: 0 };
         return (
             globalThis.Object.defineProperty(t, g.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, m.x)(this, t, e),
@@ -2872,9 +2876,6 @@ class tl extends A.G {
                 case 3:
                     r.type = e.int32();
                     break;
-                case 4:
-                    r.owningExperimentId = e.fixed64().toString();
-                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -2888,8 +2889,7 @@ class tl extends A.G {
     internalBinaryWrite(e, t, n) {
         0 !== e.start && t.tag(1, E.O0.Varint).int32(e.start),
             0 !== e.stop && t.tag(2, E.O0.Varint).int32(e.stop),
-            0 !== e.type && t.tag(3, E.O0.Varint).int32(e.type),
-            "0" !== e.owningExperimentId && t.tag(4, E.O0.Bit64).fixed64(e.owningExperimentId);
+            0 !== e.type && t.tag(3, E.O0.Varint).int32(e.type);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? E.f$.onWrite : i)(this.typeName, e, t), t;
     }
