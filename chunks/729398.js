@@ -83,8 +83,8 @@ var P = l(794782),
     V = l(647090),
     U = l(70456),
     z = l(989349),
-    F = l.n(z),
-    O = l(983851),
+    O = l.n(z),
+    F = l(983851),
     w = l(146151),
     B = l(451394),
     H = l(808107),
@@ -301,7 +301,7 @@ let eG = (e) => {
                     if (null == l) return null;
                     let n = l.type === eu.rbe.GUILD_STAGE_VOICE,
                         r = (0, eA.D)(l, t),
-                        s = r ? O.H : w.t,
+                        s = r ? F.H : w.t,
                         a = r ? B.q : H.D;
                     return (0, i.jsx)(n ? a : s, { color: "currentColor", size: "md", className: eT.sr });
                 })(e.id, a),
@@ -315,7 +315,7 @@ let eG = (e) => {
     e_ = (e, t) => (l) => {
         let n = { entityType: l, scheduledEndTime: void 0 };
         l === eS.Ps.EXTERNAL &&
-            (n.scheduledEndTime = (F()(t.scheduledStartTime) ?? F()()).add(2, "hour").toISOString()),
+            (n.scheduledEndTime = (O()(t.scheduledStartTime) ?? O()()).add(2, "hour").toISOString()),
             e(n);
     };
 function eL(e) {
@@ -378,7 +378,7 @@ function eR(e) {
                         name: ec.intl.string(ec.t.BVZqJl),
                         value: eS.Ps.VOICE,
                         desc: e ? t : ec.intl.string(ec.t["EV//4f"]),
-                        leadingIcon: O.H,
+                        leadingIcon: F.H,
                         disabled: e,
                     },
                     {
@@ -569,8 +569,8 @@ function ez(e) {
         ],
     });
 }
-var eF = l(260598),
-    eO = l(452027),
+var eO = l(260598),
+    eF = l(452027),
     ew = l(664007),
     eB = l(405810),
     eH = l(366098),
@@ -603,9 +603,9 @@ function eW(e) {
         p = null != t && (0, T.Fd)(t),
         C = r.useMemo(() => {
             let e = (0, V.N5)(t);
-            return null != e ? e : { startDate: F()(f) };
+            return null != e ? e : { startDate: O()(f) };
         }, [t, f]),
-        [b, I] = r.useState(() => (0, V.z7)(F()(f), A)),
+        [b, I] = r.useState(() => (0, V.z7)(O()(f), A)),
         S = r.useRef(null);
     r.useEffect(() => {
         c && S.current?.focus();
@@ -704,7 +704,7 @@ function eW(e) {
                             guildId: s,
                         }),
                         (0, i.jsx)(eK, { error: d }),
-                        (0, i.jsx)(eF.f, {
+                        (0, i.jsx)(eO.f, {
                             label: ec.intl.string(ec.t["+gRCC7"]),
                             error: R,
                             placeholder: ec.intl.string(ec.t["kWO/E8"]),
@@ -715,7 +715,7 @@ function eW(e) {
                             maxLength: eS.IJ,
                             autosize: !0,
                         }),
-                        (0, i.jsx)(eO.D, {
+                        (0, i.jsx)(eF.D, {
                             label: ec.intl.string(ec.t.Ly121e),
                             description: ec.intl.string(ec.t.B9C9be),
                             children:
@@ -839,7 +839,6 @@ function tt(e) {
                         height: 30,
                         width: 30,
                         className: e5.Kk,
-                        "aria-label": ec.intl.string(ec.t.uxFcqu),
                     }),
                 }),
             }),
@@ -979,8 +978,8 @@ function ta(e) {
         V = R >= S.length ? 3 : S[L(R)].slideId,
         z = 3 === V;
     (0, U.N)((e) => e.onUpdateCanCloseModal)(z);
-    let F = (0, a.bG)([m.Ay], () => m.Ay.useReducedMotion),
-        O = r.useRef(null),
+    let O = (0, a.bG)([m.Ay], () => m.Ay.useReducedMotion),
+        F = r.useRef(null),
         w = (e) => {
             P(!1), k(L(e));
         },
@@ -1007,10 +1006,10 @@ function ta(e) {
             parentComponent: "ScheduleEventModal",
             "data-migration-pending": !0,
             children: [
-                !F && z ? (0, i.jsx)(ts, { modal: O.current }) : null,
+                !O && z ? (0, i.jsx)(ts, { modal: F.current }) : null,
                 (0, i.jsxs)(d.$m, {
                     className: tl.Qs,
-                    scrollerRef: O,
+                    scrollerRef: F,
                     "data-migration-pending": !0,
                     children: [
                         !z &&
@@ -1149,11 +1148,11 @@ function td(e) {
                     let { startDate: i, endDate: r } = l;
                     return n === eS.Ps.EXTERNAL && null == r
                         ? ec.intl.string(ec.t["H16p/w"])
-                        : !t && i.isBefore(F()())
+                        : !t && i.isBefore(O()())
                           ? ec.intl.string(ec.t.AXR5Ss)
                           : null != r && null != i && r.isBefore(i)
                             ? ec.intl.string(ec.t.LpjF4K)
-                            : null != r && r.isBefore(F()())
+                            : null != r && r.isBefore(O()())
                               ? ec.intl.string(ec.t.ViDcm2)
                               : void 0;
                 })(m, E),
