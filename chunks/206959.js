@@ -2164,14 +2164,14 @@ class er extends l.A {
                 hdrCaptureMode: h,
                 videoHookAllowDx12: f,
             } = e.desktopDescription;
-        t.setOnClipsRecordingEvent((t) => {
+        t.setOnClipsRecordingEvent((t, n) => {
             this.logger.info(`Clips recording event: ${F[t]} received for stream ${r} and sound ${s}.`),
                 t === F.GoLiveEnded
                     ? this.emit(c.bg.ClipsRecordingRestartNeeded)
                     : t === F.Error
                       ? this.emit(
                             c.bg.ClipsInitFailure,
-                            "Failed to set clips source in media engine",
+                            null != n && "" !== n ? n : "Failed to set clips source in media engine",
                             e.applicationName,
                         )
                       : (t === F.Ended || t === F.StoppedByGoLive) && this.emit(c.bg.ClipsRecordingEnded, r, s);
