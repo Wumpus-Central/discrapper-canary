@@ -4137,6 +4137,7 @@ var rD =
         (ex.ATT_PROMPT_RESULT = "att_prompt_result"),
         (ex.AD_VIDEO_MODAL_CLOSED = "ad_video_modal_closed"),
         (ex.AD_VIDEO_PROGRESSED = "ad_video_progressed"),
+        (ex.AD_VIDEO_LOOPED = "ad_video_looped"),
         (ex.BOUNTY_CAROUSEL_SCROLL = "bounty_carousel_scroll"),
         (ex.BOUNTY_CAROUSEL_EMPTY_STATE_VIEWED = "bounty_carousel_empty_state_viewed"),
         (ex.USER_SETTINGS_KEYBIND_UPDATED = "user_settings_keybind_updated"),
