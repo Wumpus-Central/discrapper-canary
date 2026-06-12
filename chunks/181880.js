@@ -1,9 +1,9 @@
-n.d(t, { default: () => M, u: () => p });
+n.d(t, { default: () => M, u: () => T });
 var i = n(627968),
     s = n(64700),
     l = n(17928),
-    r = n(116833),
-    a = n(772707),
+    a = n(116833),
+    r = n(772707),
     o = n(331322),
     d = n(691885),
     u = n(683071),
@@ -12,10 +12,10 @@ var i = n(627968),
     E = n(967198),
     h = n(594061),
     g = n(617617);
-function _() {
+function I() {
     return g.A.getDefaultGuildThemePreference() === c.tI.PERSONAL ? c.tI.PERSONAL : c.tI.GUILD;
 }
-async function I(e, t) {
+async function _(e, t) {
     let n = t ? c.tI.PERSONAL : c.tI.GUILD;
     await (0, h.JM)(n), await (0, h.Sh)(e);
 }
@@ -23,71 +23,70 @@ var N = n(244696),
     m = n(49999),
     C = n(375708),
     S = n(958961);
-let p = "GUILD_THEME_NUX_MODAL",
-    T = new A.A("GuildThemeNuxModal");
+let T = "GUILD_THEME_NUX_MODAL",
+    p = new A.A("GuildThemeNuxModal");
 function M(e) {
-    let { guildId: t, markAsDismissed: n, onComplete: A, transitionState: h, onClose: g } = e,
-        [p, M] = s.useState(_),
-        [O, L] = s.useState(null),
-        [f, R] = s.useState("init"),
-        U = p === c.tI.PERSONAL,
+    let { guildId: t, markAsDismissed: n, transitionState: A, onClose: h } = e,
+        [g, T] = s.useState(I),
+        [M, O] = s.useState(null),
+        [L, f] = s.useState("init"),
+        R = g === c.tI.PERSONAL,
         x = (0, l.bG)([E.A], () => E.A.getGuildId()),
-        D = (0, l.bG)([N.A], () => {
+        G = (0, l.bG)([N.A], () => {
             let e = N.A.getGuildThemeSnapshot(t);
             return null != e && e.enabled ? (e.themeSettings ?? null) : null;
         }, [t]),
-        G = U ? null : D;
+        U = R ? null : G;
     s.useEffect(() => {
-        x !== t && g();
-    }, [t, g, x]);
-    let b = s.useCallback((e) => {
-            L(null), M(e);
+        x !== t && h();
+    }, [t, h, x]);
+    let D = s.useCallback((e) => {
+            O(null), T(e);
         }, []),
-        y = s.useCallback(async () => {
-            if ("init" === f) {
-                if (x !== t) return void (await g());
-                R("submitting"), L(null);
+        b = s.useCallback(async () => {
+            if ("init" === L) {
+                if (x !== t) return void (await h());
+                f("submitting"), O(null);
                 try {
-                    await I(t, U);
+                    await _(t, R);
                 } catch (e) {
-                    T.error("Failed to save guild theme NUX preference", e), L(C.intl.string(C.t.fEptJP)), R("init");
+                    p.error("Failed to save guild theme NUX preference", e), O(C.intl.string(C.t.fEptJP)), f("init");
                     return;
                 }
-                R("submitted"), n(m.i.TAKE_ACTION), await g(), A();
+                f("submitted"), n(m.i.TAKE_ACTION), await h();
             }
-        }, [t, U, n, g, A, x, f]),
-        P = s.useCallback(async () => {
-            let e = "submitted" !== f;
-            e && n(m.i.USER_DISMISS), await g(), e && A();
-        }, [n, g, A, f]),
-        H = s.useMemo(
+        }, [t, R, n, h, x, L]),
+        y = s.useCallback(async () => {
+            "submitted" !== L && n(m.i.USER_DISMISS), await h();
+        }, [n, h, L]),
+        P = s.useMemo(
             () => [
                 { value: c.tI.GUILD, id: "guild", label: C.intl.string(C.t.aN3RNQ) },
                 { value: c.tI.PERSONAL, id: "personal", label: C.intl.string(C.t.js8y7t) },
             ],
             [],
         ),
-        v = U ? C.intl.string(C.t.cvoikF) : C.intl.string(C.t.RzWDqY);
-    return (0, i.jsx)(a.k, {
+        v = R ? C.intl.string(C.t.cvoikF) : C.intl.string(C.t["cY+Oob"]);
+    return (0, i.jsx)(r.k, {
         size: "md",
-        transitionState: h,
-        onClose: P,
+        transitionState: A,
+        onClose: y,
         gradientColor: "blue",
         graphic: {
             type: "dynamic",
-            component: r.DynamicGraphicComponent.GUILD_THEME_NUX_PREVIEW,
+            component: a.DynamicGraphicComponent.GUILD_THEME_NUX_PREVIEW,
             aspectRatio: "16/9",
-            props: { themeSettings: G },
+            props: { themeSettings: U },
         },
-        title: C.intl.string(C.t.r7wPUa),
-        subtitle: C.intl.string(C.t.pGMmJy),
+        title: C.intl.string(C.t.Q9zFy9),
+        subtitle: C.intl.string(C.t.XLpBLj),
         actions: [
             {
                 text: v,
-                variant: U ? "secondary" : "primary",
-                loading: "submitting" === f,
-                disabled: "submitting" === f,
-                onClick: y,
+                variant: R ? "secondary" : "primary",
+                loading: "submitting" === L,
+                disabled: "submitting" === L,
+                onClick: b,
             },
         ],
         children: (0, i.jsxs)(o.B, {
@@ -97,15 +96,15 @@ function M(e) {
             children: [
                 (0, i.jsx)(d.l, {
                     selectionMode: "single",
-                    options: H,
-                    value: p,
-                    onSelectionChange: b,
+                    options: P,
+                    value: g,
+                    onSelectionChange: D,
                     fullWidth: !0,
                     label: C.intl.string(C.t.Q7mm4g),
                     hideLabel: !0,
                 }),
-                U && (0, i.jsx)(u.w, { type: "warning", children: C.intl.string(C.t.tTHQAy) }),
-                null != O && (0, i.jsx)(u.w, { type: "critical", children: O }),
+                R && (0, i.jsx)(u.w, { type: "warning", children: C.intl.string(C.t.tTHQAy) }),
+                null != M && (0, i.jsx)(u.w, { type: "critical", children: M }),
             ],
         }),
     });
