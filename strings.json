@@ -9907,6 +9907,7 @@
   "IBdqSu": "{number, plural, one { Event} other { Events} }",
   "vKCGYb": "Upload Cover Image",
   "B9C9be": "We recommend an image that’s at least 800px wide and 320px tall.",
+  "uxFcqu": "Calendar icon",
   "nHjY9C": "Missing permission to connect.",
   "G44Xml": "Change Image",
   "Ze005A": "There {count, plural, one {is **** Event} other {are **** Events} } associated with this channel. Deleting this channel will also delete the {count, plural, one {Event} other {Events} }.",
