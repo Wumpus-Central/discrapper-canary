@@ -97,6 +97,7 @@ var C = (((i = {})[(i.PARENT = 1)] = "PARENT"), (i[(i.CHILD = 2)] = "CHILD"), i)
         (c[(c.LoadMore = 5)] = "LoadMore"),
         (c[(c.SelectTeen = 6)] = "SelectTeen"),
         (c[(c.HideQRCode = 7)] = "HideQRCode"),
+        (c[(c.NufConsentGateLinkCodeError = 8)] = "NufConsentGateLinkCodeError"),
         c);
 let P = new Map([
         [

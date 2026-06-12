@@ -241,6 +241,8 @@ function ei() {
     (_ = null),
         (h = null),
         (f = {}),
+        (g = null),
+        (A = null),
         (E = k()),
         (m = U()),
         (P = {}),
