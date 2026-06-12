@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => m, Eq: () => p, Jo: () => d, LG: () => E, e5: () => h, ks: () => _, m1: () => f });
+n.d(t, { Ay: () => g, Bi: () => f, Eq: () => E, Jo: () => d, LG: () => m, e5: () => h, ks: () => _, m1: () => p });
 var i = n(17928),
     r = n(736056),
     s = n(994500),
@@ -23,7 +23,12 @@ function _(e, t, n) {
 function h(e) {
     return (0, i.bG)([a.default, s.A], () => (null != e && e.isMultiUserDM() ? _(e, a.default, s.A) : null));
 }
-function f(e, t, n) {
+function f(e) {
+    if (e.isObfuscated() || !e.isMultiUserDM()) return;
+    let t = e.name;
+    if ("" !== t) return t;
+}
+function p(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         s = e.name,
@@ -51,20 +56,20 @@ function f(e, t, n) {
         case u.rbe.GUILD_VOICE:
         case u.rbe.GUILD_STAGE_VOICE:
         case u.rbe.GUILD_CATEGORY:
-            if (r) return `#"${p(s)}"`;
+            if (r) return `#"${E(s)}"`;
             if (i && e.isThread()) return `"${s}"`;
             return s;
         default:
             return s;
     }
 }
-function p(e) {
+function E(e) {
     return e.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
 }
-function E(e) {
+function m(e) {
     return e.replace(/\\"/g, '"').replace(/\\\\/g, "\\");
 }
-function m(e) {
+function g(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return (0, i.bG)([a.default, r.A, s.A], () => (null == e ? null : f(e, a.default, s.A, t)));
+    return (0, i.bG)([a.default, r.A, s.A], () => (null == e ? null : p(e, a.default, s.A, t)));
 }

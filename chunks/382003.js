@@ -224,7 +224,7 @@ function X(e) {
                 async () => {
                     let { default: e } = await Promise.all([
                         s.e("72365"),
-                        s.e("6922"),
+                        s.e("11171"),
                         s.e("45558"),
                         s.e("63232"),
                         s.e("54048"),
@@ -416,7 +416,7 @@ function es(e) {
                           (0, a.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([
                                   s.e("75430"),
-                                  s.e("74252"),
+                                  s.e("31545"),
                                   s.e("51762"),
                                   s.e("54048"),
                                   s.e("32817"),

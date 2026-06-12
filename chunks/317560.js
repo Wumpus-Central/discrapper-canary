@@ -1,24 +1,24 @@
-n.d(t, { R: () => a, j: () => s });
-var l = n(627968),
-    i = n(192308);
-let r = "social-layer-storefront-product-details-modal",
-    a = (e) => {
+n.d(t, { R: () => i, j: () => s });
+var r = n(627968),
+    l = n(192308);
+let a = "social-layer-storefront-product-details-modal",
+    i = (e) => {
         let {
             customNavigateToSocialLayerStorefront: t,
-            skuId: a,
+            skuId: i,
             applicationId: s,
-            isStorefront: u,
-            giftRecipient: o,
-            giftingOrigin: c,
-            analyticsLocations: d,
+            isStorefront: o,
+            giftRecipient: c,
+            giftingOrigin: d,
+            analyticsLocations: u,
             analyticsContext: E,
-            onClose: f,
+            onClose: m,
         } = e;
-        (0, i.openModalLazy)(
+        (0, l.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("7089"),
-                    n.e("6922"),
+                    n.e("11171"),
                     n.e("2677"),
                     n.e("54926"),
                     n.e("43535"),
@@ -43,33 +43,33 @@ let r = "social-layer-storefront-product-details-modal",
                     n.e("63333"),
                     n.e("93766"),
                     n.e("73165"),
-                    n.e("66017"),
+                    n.e("34268"),
                     n.e("90711"),
                     n.e("9935"),
                     n.e("39305"),
                 ]).then(n.bind(n, 659696));
                 return (n) =>
-                    (0, l.jsx)(e, {
+                    (0, r.jsx)(e, {
                         ...n,
-                        skuId: a,
+                        skuId: i,
                         applicationId: s,
-                        isStorefront: u,
-                        analyticsLocations: d,
+                        isStorefront: o,
+                        analyticsLocations: u,
                         analyticsContext: E,
-                        giftRecipient: o,
-                        giftingOrigin: c,
+                        giftRecipient: c,
+                        giftingOrigin: d,
                         customNavigateToSocialLayerStorefront: t,
                     });
             },
             {
-                modalKey: r,
-                allowsNavigation: u,
+                modalKey: a,
+                allowsNavigation: o,
                 onCloseCallback: () => {
-                    f?.();
+                    m?.();
                 },
             },
         );
     };
 function s() {
-    (0, i.hasModalOpen)(r) && (0, i.closeModal)(r);
+    (0, l.hasModalOpen)(a) && (0, l.closeModal)(a);
 }

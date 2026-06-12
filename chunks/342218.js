@@ -124,7 +124,7 @@ let eu = t.memo(function (e) {
                               let { default: e } = await Promise.all([
                                   n.e("44667"),
                                   n.e("59913"),
-                                  n.e("6922"),
+                                  n.e("11171"),
                                   n.e("74107"),
                                   n.e("93924"),
                                   n.e("76602"),

@@ -542,13 +542,13 @@ function eJ(e) {
                                                 (0, eO.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
                                                         n.e("45553"),
-                                                        n.e("13551"),
-                                                        n.e("65058"),
+                                                        n.e("62619"),
+                                                        n.e("65989"),
                                                         n.e("81804"),
                                                         n.e("19393"),
                                                         n.e("4355"),
                                                         n.e("84764"),
-                                                        n.e("6922"),
+                                                        n.e("11171"),
                                                         n.e("54926"),
                                                         n.e("57459"),
                                                         n.e("46334"),
@@ -570,6 +570,8 @@ function eJ(e) {
                                                         n.e("5517"),
                                                         n.e("59867"),
                                                         n.e("13627"),
+                                                        n.e("92424"),
+                                                        n.e("24007"),
                                                         n.e("23924"),
                                                         n.e("42205"),
                                                         n.e("71091"),
@@ -868,9 +870,9 @@ function e4(e) {
 }
 var e8 = n(34188),
     e2 = n(700623),
-    e3 = n(177953),
-    e5 = n(825484),
-    e7 = n(512950),
+    e7 = n(177953),
+    e3 = n(825484),
+    e5 = n(512950),
     e6 = n(900797),
     e9 = n(847374),
     te = n(10716),
@@ -1208,7 +1210,7 @@ function tR(e) {
         className: tv.I8,
         "aria-label": n > 0 ? et.intl.formatToPlainString(et.t["p/YmkR"], { count: n }) : et.intl.string(et.t.s1vQIL),
         children: [
-            (0, r.jsx)(e3.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, r.jsx)(e7.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             (0, r.jsx)(T.E, {
                 variant: "text-sm/semibold",
                 color: "interactive-text-default",
@@ -1244,7 +1246,7 @@ function tO(e) {
     }, [n, a, d, u]),
     (0, I.$B)(n) && (0, I.Ag)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e5.e, {
+            ? (0, r.jsxs)(e3.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tI, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1254,9 +1256,9 @@ function tO(e) {
                   ],
               })
             : s && !i && (0, I.Ag)(n)
-              ? (0, r.jsx)(e7.p, {
+              ? (0, r.jsx)(e5.p, {
                     className: tv.ai,
-                    messageType: e7.Y.WARNING,
+                    messageType: e5.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1430,14 +1432,14 @@ var tQ = n(111042),
     t4 = n(824552),
     t8 = n(168186),
     t2 = n(594061),
-    t3 = n(935208),
-    t5 = n(630248),
-    t7 = n(355097);
+    t7 = n(935208),
+    t3 = n(630248),
+    t5 = n(355097);
 function t6(e, t) {
     o.useEffect(() => {
-        t2.bW.loadIfUncached(t7.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t2.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let n = (0, A.bG)([t5.A], () => t5.A.getApplicationFrecencyWithoutLoadingLatest()),
+    let n = (0, A.bG)([t3.A], () => t3.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
             () =>
                 null == t || 0 === t.length
@@ -1448,7 +1450,7 @@ function t6(e, t) {
         i = o.useMemo(() => t?.filter((t) => !e.some((e) => e.id === t.application.id)), [e, t]),
         s = o.useMemo(() => {
             i?.forEach((e) => {
-                let t = t3.default.extractTimestamp(e.id);
+                let t = t7.default.extractTimestamp(e.id);
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute();
@@ -1466,7 +1468,7 @@ function t6(e, t) {
     return o.useMemo(() => {
         let e, i;
         t?.forEach((t) => {
-            let n = t3.default.extractTimestamp(t.id);
+            let n = t7.default.extractTimestamp(t.id);
             (null == i || n > i) && ((e = t), (i = n));
         }),
             l.forEach((t) => {
@@ -1869,7 +1871,7 @@ function nV(e) {
                 o.useEffect(() => {
                     let e = eE().sortBy(Object.entries(n), (e) => {
                         let [t, n] = e;
-                        return -t3.default.extractTimestamp(n);
+                        return -t7.default.extractTimestamp(n);
                     });
                     i(
                         eE()
@@ -2091,7 +2093,7 @@ var nZ = n(984516),
     n4 = n(994369),
     n8 = n(240591),
     n2 = n(46477);
-function n3(e, t) {
+function n7(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
         s = ((n = e), (l = t.filterPredicates ?? []), n.filter((e) => l.every((t) => t(e))));
@@ -2141,11 +2143,11 @@ function n3(e, t) {
         i,
     ).slice(0, i);
 }
-function n5(e, t) {
-    let n = t5.A.getScoreWithoutLoadingLatest(e.id);
-    return t5.A.getScoreWithoutLoadingLatest(t.id) - n;
+function n3(e, t) {
+    let n = t3.A.getScoreWithoutLoadingLatest(e.id);
+    return t3.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function n7(e, t) {
+function n5(e, t) {
     let n = (0, I.lq)(e),
         l = (0, I.lq)(t);
     return (0, g.RF)(n, l);
@@ -2389,7 +2391,7 @@ function lm(e) {
                     var e, i, a, r, o, d, u;
                     let m, p, h, A, f;
                     if (!s) return [];
-                    return n3(c, {
+                    return n7(c, {
                         limit: l,
                         filterPredicates: [
                             ((m = (0, n8.Bh)("channel" === t.type ? t.channel : void 0, [k.kc.CHAT])),
@@ -2526,7 +2528,7 @@ function lm(e) {
                                     }),
                             );
                     } else a && (u = m);
-                    return n3(u, {
+                    return n7(u, {
                         limit: i,
                         filterPredicates: [
                             ((d = (0, n8.Bh)("channel" === t.type ? t.channel : void 0, [
@@ -2573,7 +2575,7 @@ function lm(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n5, n7],
+                        sortComparers: [n3, n5],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,

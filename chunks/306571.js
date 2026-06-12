@@ -1,4 +1,4 @@
-i.r(
+n.r(
     (d.exports = {
         wrapper: "wrapper_d5f3cd",
         header: "header_d5f3cd",
@@ -9,6 +9,7 @@ i.r(
         guildIconImage: "guildIconImage_d5f3cd guildIcon_d5f3cd",
         guildIconImageJoined: "guildIconImageJoined_d5f3cd guildIconImage_d5f3cd guildIcon_d5f3cd",
         inviteDestination: "inviteDestination_d5f3cd",
+        inviteDestinationMedium: "inviteDestinationMedium_d5f3cd",
         inviteDestinationJoined: "inviteDestinationJoined_d5f3cd inviteDestination_d5f3cd",
         channel: "channel_d5f3cd",
         channelName: "channelName_d5f3cd",

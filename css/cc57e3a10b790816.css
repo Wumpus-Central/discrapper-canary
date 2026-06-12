@@ -1,0 +1,44 @@
+.wrapper__29f4e {
+    padding: 16px 0
+}
+
+.productsContainer__29f4e,
+.wrapper__29f4e {
+    display: flex;
+    flex-direction: column;
+    gap: 40px
+}
+
+@value gridSize: 287px;
+
+.productSection__29f4e {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 287px;
+    justify-items: center;
+    padding-top: 16px
+}
+
+@media (min-width:760px) {
+    .productSection__29f4e {
+        grid-template-columns: 287px 287px
+    }
+}
+
+@media (min-width:1220px) {
+    .productSection__29f4e {
+        grid-template-columns: 287px 287px 287px
+    }
+}
+
+@media (min-width:1600px) {
+    .productSection__29f4e {
+        grid-template-columns: 287px 287px 287px 287px
+    }
+}
+
+.subscriptionCardSubtext__29f4e {
+    align-items: center;
+    display: flex;
+    gap: 5px
+}
