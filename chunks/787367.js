@@ -1,9 +1,9 @@
-i.d(t, { default: () => q });
+i.d(t, { default: () => z });
 var r = i(627968),
     s = i(64700),
     a = i(43594),
-    n = i(503698),
-    l = i.n(n),
+    l = i(503698),
+    n = i.n(l),
     o = i(935462),
     c = i(534514),
     d = i(834730),
@@ -12,35 +12,35 @@ var r = i(627968),
     x = i(363487),
     m = i(998418),
     v = i(193157),
-    E = i(439156),
-    I = i(568065),
-    g = i(375708),
-    j = i(764872),
-    h = i(107836);
+    j = i(439156),
+    h = i(568065),
+    E = i(375708),
+    I = i(764872),
+    g = i(107836);
 function A(e) {
-    let { guildId: t, powerup: i, onClose: a, ...n } = e,
+    let { guildId: t, powerup: i, onClose: a, ...l } = e,
         [A, _] = s.useState(void 0),
         T = (0, m.Ay)(t, i),
-        k = T.type === I.b_.TIER_OVERRIDE_ACTIVATED,
+        k = T.type === h.b_.TIER_OVERRIDE_ACTIVATED,
         f = (0, x.A)(t),
         N = null == T.sourceEntitlement || !f;
     return (
         (0, u.Z)(t, i, u.q.DETAIL),
         (0, r.jsxs)(o.EO, {
             "data-migration-pending": !0,
-            className: j.yl,
+            className: I.yl,
             size: o.rI.DYNAMIC,
-            ...n,
+            ...l,
             parentComponent: "GuildPowerupLevelModal",
             children: [
                 (0, r.jsxs)(o.$m, {
                     "data-migration-pending": !0,
-                    className: j._F,
+                    className: I._F,
                     scrollbarType: "none",
                     children: [
-                        (0, r.jsx)("img", { alt: "", src: h, className: j.v5 }),
+                        (0, r.jsx)("img", { alt: "", src: g, className: I.v5 }),
                         (0, r.jsxs)("div", {
-                            className: j.hQ,
+                            className: I.hQ,
                             children: [
                                 (0, r.jsx)(c.D, { variant: "heading-xl/extrabold", children: i.title }),
                                 (0, r.jsx)(v.A, { powerup: i }),
@@ -51,11 +51,11 @@ function A(e) {
                                         children: A,
                                     }),
                                 (0, r.jsxs)("div", {
-                                    className: l()(j.qr, { [j.r9]: N }),
+                                    className: n()(I.qr, { [I.r9]: N }),
                                     children: [
                                         !k &&
                                             f &&
-                                            (0, r.jsx)(E.A, {
+                                            (0, r.jsx)(j.A, {
                                                 guildId: t,
                                                 powerup: i,
                                                 onError: _,
@@ -65,7 +65,7 @@ function A(e) {
                                         (0, r.jsx)(p.$, {
                                             variant: N ? "secondary" : "primary",
                                             onClick: a,
-                                            text: g.intl.string(g.t.cpT0Cq),
+                                            text: E.intl.string(E.t.cpT0Cq),
                                         }),
                                     ],
                                 }),
@@ -73,7 +73,7 @@ function A(e) {
                         }),
                     ],
                 }),
-                (0, r.jsx)(o.s_, { "data-migration-pending": !0, className: j.VN, onClick: a }),
+                (0, r.jsx)(o.s_, { "data-migration-pending": !0, className: I.VN, onClick: a }),
             ],
         })
     );
@@ -82,28 +82,29 @@ var _ = i(990078),
     T = i(104510),
     k = i(661531),
     f = i(772707),
-    N = i(470934),
-    b = i(249286),
-    C = i(933337),
-    y = i(743569),
+    N = i(683071),
+    b = i(470934),
+    C = i(249286),
+    y = i(933337),
+    w = i(743569),
     D = i(309326),
-    w = i(337322),
-    R = i(144580);
-function L(e) {
+    R = i(337322),
+    L = i(144580);
+function P(e) {
     let { powerup: t } = e,
-        i = (0, w.A)(t);
+        i = (0, R.A)(t);
     return (0, r.jsx)("div", {
-        className: R.kL,
+        className: L.kL,
         children: i.map((e) => {
             let { Icon: t } = (0, D.a)(e.perkIcon, !1);
             return (0, r.jsxs)(
                 "div",
                 {
-                    className: R.d_,
+                    className: L.d_,
                     children: [
-                        (0, r.jsx)(t, { color: k.A.colors.TEXT_MUTED, className: R.Kk }),
+                        (0, r.jsx)(t, { color: k.A.colors.TEXT_MUTED, className: L.Kk }),
                         (0, r.jsx)(d.E, {
-                            className: R.Qq,
+                            className: L.Qq,
                             color: "text-muted",
                             variant: "text-sm/medium",
                             children: e.description,
@@ -116,87 +117,92 @@ function L(e) {
     });
 }
 var O = i(652215),
-    P = i(853513);
-let V = (e) => (0, r.jsx)(T._, { ...e, color: k.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH });
-function S(e) {
+    V = i(853513),
+    S = i(554672);
+let q = (e) => (0, r.jsx)(T._, { ...e, color: k.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH });
+function M(e) {
     var t;
     let i,
         a,
-        { guildId: n, powerup: l, expressiveCta: o, onClose: c, ...v } = e,
-        [E, j] = s.useState(void 0),
-        h = (0, m.Ay)(n, l),
-        A = h.type !== I.b_.INACTIVE,
-        k = h.type === I.b_.TIER_OVERRIDE_ACTIVATED,
-        D = (0, x.A)(n),
-        { disabled: w } = (0, N.A)(n, l, A),
-        { onActivate: R, isLoading: S, error: q } = (0, b.A)(n, l),
-        M = (0, C.A)(n, l);
+        { guildId: l, powerup: n, expressiveCta: o, onClose: c, ...v } = e,
+        [j, I] = s.useState(void 0),
+        g = (0, m.Ay)(l, n),
+        A = g.type !== h.b_.INACTIVE,
+        k = g.type === h.b_.TIER_OVERRIDE_ACTIVATED,
+        D = (0, x.A)(l),
+        { disabled: R, reason: L } = (0, b.A)(l, n, A),
+        { onActivate: M, isLoading: z, error: G } = (0, C.A)(l, n),
+        Q = (0, y.A)(l, n);
     s.useEffect(() => {
-        j(q);
-    }, [q]),
-        (0, u.Z)(n, l, u.q.DETAIL);
-    let z = { type: "rive", rive: y.T[l.skuId], aspectRatio: "16/9" },
-        G = !k && D,
-        Q =
-            G && !A
+        I(G);
+    }, [G]),
+        (0, u.Z)(l, n, u.q.DETAIL);
+    let $ = { type: "rive", rive: w.T[n.skuId], aspectRatio: "16/9" },
+        U = !k && D,
+        B =
+            U && !A
                 ? [
                       {
-                          text: g.intl.string(P.default.AOQgki),
+                          text: E.intl.string(V.default.AOQgki),
                           icon: T._,
                           variant: o ? "expressive" : "primary",
                           size: "md",
-                          disabled: w,
-                          loading: S,
+                          disabled: R,
+                          loading: z,
                           onClick: () => {
-                              R();
+                              M();
                           },
                       },
                   ]
                 : void 0,
-        $ = g.intl.formatToPlainString(P.default["5HQUzD"], { boostCount: l.cost }),
-        U =
-            G && A
+        F = E.intl.formatToPlainString(V.default["5HQUzD"], { boostCount: n.cost }),
+        H =
+            U && A
                 ? (0, r.jsx)(_.m, {
-                      text: $,
+                      text: F,
                       delay: 100,
                       children: (0, r.jsx)(p.$, {
                           variant: "secondary",
                           size: "md",
                           fullWidth: !0,
-                          disabled: w,
-                          loading: S,
-                          text: g.intl.string(P.default.PYPdl4),
+                          disabled: R,
+                          loading: z,
+                          text: E.intl.string(V.default.PYPdl4),
                           onClick: () => {
-                              M();
+                              Q();
                           },
                       }),
                   })
                 : void 0;
     return (0, r.jsxs)(f.k, {
-        graphic: z,
-        title: l.title,
+        graphic: $,
+        title: n.title,
         subtitle: {
             text:
-                ((t = l.skuId),
-                (i = I.y7[t] ?? O.TVA.NONE),
+                ((t = n.skuId),
+                (i = h.y7[t] ?? O.TVA.NONE),
                 (a = O.M2T[i]),
-                g.intl.formatToPlainString(g.t["pob/cL"], { subscriptions: a })),
-            leadingIcon: V,
+                E.intl.formatToPlainString(E.t["pob/cL"], { subscriptions: a })),
+            leadingIcon: q,
         },
-        actions: Q,
-        actionBarInput: U,
+        actions: B,
+        actionBarInput: H,
         onClose: c,
         ...v,
         children: [
-            (0, r.jsx)(L, { powerup: l }),
-            null != E && (0, r.jsx)(d.E, { color: "text-feedback-critical", variant: "text-sm/semibold", children: E }),
+            (0, r.jsx)(P, { powerup: n }),
+            U &&
+                !A &&
+                null != L &&
+                (0, r.jsx)("div", { className: S.P, children: (0, r.jsx)(N.w, { type: "info", children: L }) }),
+            null != j && (0, r.jsx)(d.E, { color: "text-feedback-critical", variant: "text-sm/semibold", children: j }),
         ],
     });
 }
-function q(e) {
+function z(e) {
     let { guildId: t, powerup: i, ...s } = e,
-        n = (0, a.D)("GuildPowerupLevelModalExperimentWrapper");
-    return "control" === n
+        l = (0, a.D)("GuildPowerupLevelModalExperimentWrapper");
+    return "control" === l
         ? (0, r.jsx)(A, { guildId: t, powerup: i, ...s })
-        : (0, r.jsx)(S, { guildId: t, powerup: i, expressiveCta: "refresh_expressive_cta" === n, ...s });
+        : (0, r.jsx)(M, { guildId: t, powerup: i, expressiveCta: "refresh_expressive_cta" === l, ...s });
 }
