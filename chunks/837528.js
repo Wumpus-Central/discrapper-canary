@@ -10,9 +10,9 @@ n.d(t, {
     Yq: () => w,
     r4: () => U,
     Ck: () => Y,
-    Am: () => B,
+    Am: () => V,
     Jo: () => P,
-    ri: () => V,
+    ri: () => B,
     m: () => b,
     Ge: () => D,
 }),
@@ -106,6 +106,7 @@ function O(e, t, s, o) {
                 let n = window.getSelection();
                 if (null != n && !n.isCollapsed && (n.focusNode === e.target || t.contains(n.focusNode))) return;
             }
+            if (null != e.currentTarget.contains && !e.currentTarget.contains(e.target)) return;
             let l = A.A.getChannel(d),
                 r = f.A.getMessage(d, u),
                 c = x.A.isEditing(d, u);
@@ -129,11 +130,11 @@ function O(e, t, s, o) {
                             n.e("47141"),
                             n.e("3210"),
                             n.e("15182"),
-                            n.e("74252"),
+                            n.e("33950"),
                             n.e("81788"),
                             n.e("93700"),
                             n.e("42478"),
-                            n.e("65058"),
+                            n.e("65989"),
                             n.e("10448"),
                             n.e("54531"),
                             n.e("57422"),
@@ -247,7 +248,7 @@ function G(e, t, n) {
         [e, t, n],
     );
 }
-function B(e, t) {
+function V(e, t) {
     return l.useCallback(
         (n) => {
             let i = E.default.getUser(e),
@@ -257,7 +258,7 @@ function B(e, t) {
         [e, t],
     );
 }
-function V(e, t) {
+function B(e, t) {
     let { id: n } = e,
         { id: i } = t;
     return l.useCallback(
