@@ -20759,6 +20759,8 @@ let bj = {
         buildLayout: () => [bU],
     }),
     bk = (0, a.WI)(u.X.USER_SECTION, {
+        useTitle: () => j.intl.string(j.t.ShSTDe),
+        hideTitle: !0,
         buildLayout: () => {
             let e = (0, o.Bv)("UserSection");
             return [Nx, ...(e ? [] : [IZ]), CP, ...(e ? [CX] : []), ...(e ? [] : [N_]), ...(e ? [] : [_a]), bV, _n];
@@ -20809,7 +20811,11 @@ let bQ = (0, a.i4)(u.X.LOGOUT_SIDEBAR_ITEM, {
         },
         buildLayout: () => [],
     }),
-    bJ = (0, a.WI)(u.X.UTILITY_SECTION, { buildLayout: () => [bW, bQ] }),
+    bJ = (0, a.WI)(u.X.UTILITY_SECTION, {
+        useTitle: () => j.intl.string(j.t["2kOEFe"]),
+        hideTitle: !0,
+        buildLayout: () => [bW, bQ],
+    }),
     b$ = (0, a.Hr)({
         buildLayout: function () {
             return [pL, bk, h1, dA, (0, o.Bv)("UserSettingsRoot_buildLayout") ? Ts : i1, Su, bJ];

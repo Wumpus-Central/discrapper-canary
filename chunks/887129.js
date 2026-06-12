@@ -48,8 +48,11 @@ function c(e) {
         } = e,
         S = i.useRef(n ? (0, a.t$)(t, n) : null),
         y = i.useRef(!1),
-        N = i.useRef(null),
-        v = i.useRef(c);
+        N = i.useRef(null);
+    i.useEffect(() => {
+        null == S.current && null != n && (S.current = (0, a.t$)(t, n));
+    }, [n, t]);
+    let v = i.useRef(c);
     function C(e) {
         return (N.current ?? document).querySelector(e);
     }
