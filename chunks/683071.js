@@ -4,7 +4,7 @@ var i = n(627968);
 n(64700);
 var r = n(512950);
 function s(e) {
-    let { type: t, hidden: n, children: s } = e;
+    let { type: t, hidden: n, iconAlign: s, children: a } = e;
     return (0, i.jsx)(r.p, {
         messageType: (function (e) {
             switch (e) {
@@ -19,6 +19,7 @@ function s(e) {
             }
         })(t),
         hidden: n,
-        children: s,
+        iconAlign: s,
+        children: a,
     });
 }

@@ -44,12 +44,13 @@ function m(e) {
             messageType: n,
             action: i,
             className: s,
-            textColor: a = "text-default",
-            textVariant: l = "text-sm/medium",
-            icon: u,
-            hidden: c = !1,
+            iconAlign: a,
+            textColor: l = "text-default",
+            textVariant: u = "text-sm/medium",
+            icon: c,
+            hidden: d = !1,
         } = e,
-        d = (function (e) {
+        _ = (function (e) {
             switch (e) {
                 case "warn":
                     return f.$e;
@@ -63,12 +64,15 @@ function m(e) {
             }
         })(n);
     return (0, r.jsx)("div", {
-        className: o()(f.kL, d, s, { [f.R]: c }),
+        className: o()(f.kL, _, s, { [f.R]: d }),
         children: (0, r.jsxs)("div", {
             className: f.WH,
             children: [
-                (0, r.jsx)("div", { className: f.XG, children: (0, r.jsx)(E, { messageType: n, icon: u }) }),
-                (0, r.jsx)(h.E, { className: f.Qq, color: a, variant: l, children: t }),
+                (0, r.jsx)("div", {
+                    className: o()(f.XG, { [f.AW]: "center" === a }),
+                    children: (0, r.jsx)(E, { messageType: n, icon: c }),
+                }),
+                (0, r.jsx)(h.E, { className: f.Qq, color: l, variant: u, children: t }),
                 null != i ? (0, r.jsx)("div", { className: f.Ik, children: i }) : null,
             ],
         }),

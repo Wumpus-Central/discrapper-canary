@@ -6400,6 +6400,11 @@
     width: 280px
 }
 
+.container_e03deb {
+    cursor: pointer;
+    padding: 2px
+}
+
 .imageWrapper__198b6 {
     align-items: center;
     background-color: var(--white);
@@ -6793,10 +6798,6 @@
 
 .error__6aefd {
     margin-top: 8px
-}
-
-.keyRecorder__4d8f3 {
-    min-width: 240px
 }
 
 .chip__3854f {

@@ -3569,7 +3569,7 @@ var lK = i(410767),
     l$ = i(28647),
     l0 = i(337371),
     l1 = i(695366),
-    l2 = i(890063),
+    l2 = i(136491),
     l3 = i(364094);
 function l6(e) {
     let { game: t, application: i } = e;
@@ -18203,8 +18203,11 @@ let ND = (0, a.zD)(u.X.CLIPS_ENABLE_AUTOCLIPPING, {
                 : {
                       type: h.lT.INLINE_NOTICE,
                       noticeType: "info",
+                      iconAlign: "center",
                       useText: () => j.intl.string(NR.default.wUpqua),
                       button: {
+                          variant: "primary",
+                          size: "sm",
                           useText: () => j.intl.string(NR.default.qGgW4M),
                           onClick: () => Nj.yO({ clipsEnabled: !0, trackAnalytics: !0 }),
                       },

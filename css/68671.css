@@ -4426,8 +4426,12 @@ screen and (max-width:485px) {
     display: flex
 }
 
+.iconDivCenter__35859,
 .text__35859 {
-    align-self: center;
+    align-self: center
+}
+
+.text__35859 {
     flex: 1;
     margin-left: var(--space-8)
 }

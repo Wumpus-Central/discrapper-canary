@@ -224,7 +224,7 @@ function K(e) {
 var M = t(773812);
 t(321073);
 var G = t(558845);
-function V(e) {
+function z(e) {
     let { persistentBadge: n, dismissibleBadges: t } = e;
     return (function (e) {
         let { persistentBadgeType: n, dismissibleBadgeType: t } = e;
@@ -246,7 +246,7 @@ function V(e) {
         })(t),
     });
 }
-function z(e) {
+function V(e) {
     let { node: n } = e,
         {
             useValue: t,
@@ -263,7 +263,7 @@ function z(e) {
         j = i?.(),
         h = t(),
         f = o(),
-        p = V({ persistentBadge: c?.(), dismissibleBadges: u?.() }),
+        p = z({ persistentBadge: c?.(), dismissibleBadges: u?.() }),
         g = a?.(),
         y = E(n),
         v = d?.();
@@ -304,7 +304,7 @@ function q(e) {
         y = i(),
         v = o(),
         b = c?.(),
-        T = V({ persistentBadge: h?.(), dismissibleBadges: f?.() }),
+        T = z({ persistentBadge: h?.(), dismissibleBadges: f?.() }),
         k = E(n),
         N = l.useMemo(() => {
             var e, n;
@@ -364,7 +364,7 @@ function W(e) {
         C = u?.(),
         A = d?.(),
         I = o?.(),
-        O = V({ persistentBadge: v?.(), dismissibleBadges: b?.() }),
+        O = z({ persistentBadge: v?.(), dismissibleBadges: b?.() }),
         R = T?.(),
         B = E(n);
     return (0, r.jsx)(m, {
@@ -419,7 +419,7 @@ function J(e) {
         h = t(),
         f = a?.() ?? !1,
         p = o?.(),
-        g = V({ persistentBadge: c?.(), dismissibleBadges: d?.() }),
+        g = z({ persistentBadge: c?.(), dismissibleBadges: d?.() }),
         y = E(n);
     return (0, r.jsxs)(m, {
         children: [
@@ -741,32 +741,40 @@ function eS(e) {
                 s(!1);
             }
         };
-    return (0, r.jsx)(p.$, { variant: "secondary", text: i, onClick: a, loading: t, disabled: t });
+    return (0, r.jsx)(p.$, {
+        variant: n.variant ?? "secondary",
+        size: n.size,
+        text: i,
+        onClick: a,
+        loading: t,
+        disabled: t,
+    });
 }
 function eC(e) {
     let { notice: n } = e,
-        { noticeType: t, useTitle: l, useText: s, button: i } = n,
-        a = l?.(),
-        o = s();
+        { noticeType: t, useTitle: l, useText: s, button: i, iconAlign: a } = n,
+        o = l?.(),
+        c = s();
     (0, ek.Ay)(() => {
         n.trackView?.();
     });
-    let c = (0, r.jsxs)(x.B, {
+    let u = (0, r.jsxs)(x.B, {
         direction: "vertical",
         gap: "xs",
         children: [
-            null != a && (0, r.jsx)(B.D, { variant: "heading-md/medium", children: a }),
-            (0, r.jsx)("span", { children: o }),
+            null != o && (0, r.jsx)(B.D, { variant: "heading-md/medium", children: o }),
+            (0, r.jsx)("span", { children: c }),
         ],
     });
     return (0, r.jsx)(eT.w, {
         type: t,
+        iconAlign: a,
         children: (0, r.jsxs)(x.B, {
             direction: "horizontal",
             align: "center",
             justify: "space-between",
             gap: "xs",
-            children: [c, null != i && (0, r.jsx)(eS, { button: i })],
+            children: [u, null != i && (0, r.jsx)(eS, { button: i })],
         }),
     });
 }
@@ -940,7 +948,7 @@ function eG(e) {
     let { decoration: n } = e;
     if (n.type === g.xn.TEXT) return (0, r.jsx)(eM, { decoration: n });
 }
-function eV(e) {
+function ez(e) {
     let { node: n } = e,
         { useTitle: t, useSubtitle: l, useLeadingDecoration: s, useTrailingDecoration: i } = n,
         a = t?.(),
@@ -969,7 +977,7 @@ function eV(e) {
               onClick: () => A.A.navigate(d),
           });
 }
-var ez = t(17928),
+var eV = t(17928),
     eU = t(868285),
     eq = t(871682),
     eX = t(689175),
@@ -984,7 +992,7 @@ function eQ(e) {
         a = n?.stores;
     l.useEffect(() => {
         if (null != a) {
-            let e = new ez.ru(a, () => {
+            let e = new eV.ru(a, () => {
                 i(a);
             });
             return (
@@ -1199,13 +1207,13 @@ function ne(e) {
         case s.Z6.SELECT:
             return (0, r.jsx)(q, { node: t });
         case s.Z6.RADIO:
-            return (0, r.jsx)(z, { node: t });
+            return (0, r.jsx)(V, { node: t });
         case s.Z6.SLIDER:
             return (0, r.jsx)(W, { node: t });
         case s.Z6.NAVIGATOR:
             return (0, r.jsx)(K, { node: t });
         case s.Z6.NESTED_PANEL_NAVIGATOR:
-            return (0, r.jsx)(eV, { node: t });
+            return (0, r.jsx)(ez, { node: t });
         case s.Z6.CUSTOM:
             return (0, r.jsx)(m, { children: (0, r.jsx)(t.Component, {}) });
     }

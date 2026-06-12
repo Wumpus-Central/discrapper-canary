@@ -1,3 +1,13 @@
+[data-nav-anchor-key=clips_frame_rate] [data-has-description][data-layout=horizontal-responsive],
+[data-nav-anchor-key=clips_length] [data-has-description][data-layout=horizontal-responsive],
+[data-nav-anchor-key=clips_resolution] [data-has-description][data-layout=horizontal-responsive] {
+    grid-template-columns: auto 206px
+}
+
+.keyRecorder__4d8f3 {
+    min-width: 240px
+}
+
 .header__88a04 {
     background-color: var(--background-surface-higher);
     border-radius: var(--radius-sm)

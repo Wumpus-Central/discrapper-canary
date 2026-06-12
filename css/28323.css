@@ -442,9 +442,9 @@
     transition: border .15s ease
 }
 
-.recorderContainer__2636e:not(.containerDisabled__2636e):focus-within,
-.recorderContainer__2636e:not(.containerDisabled__2636e):hover {
-    border-color: hsl(var(--red-400-hsl)/.3)
+.recorderContainer__2636e:not(.containerDisabled__2636e):not(.recording__2636e):focus-within,
+.recorderContainer__2636e:not(.containerDisabled__2636e):not(.recording__2636e):hover {
+    border-color: var(--border-strong)
 }
 
 .containerDisabled__2636e {
