@@ -9,7 +9,7 @@ var r = n(503698),
 function u(e) {
     let { className: t, gradientColor: n = "default", children: r, Icon: s = a.g, customGraphic: u } = e;
     return (0, l.jsxs)("div", {
-        className: i()(o.jt, o.qw, { [o.p3]: "nitro-pink" === n }, t),
+        className: i()(o.jt, o.qw, { [o.p3]: "nitro-pink" === n, [o.U1]: "green" === n }, t),
         children: [
             null != u
                 ? (0, l.jsx)("div", { className: o.B4, children: u })
