@@ -20,8 +20,8 @@
     background-repeat: no-repeat;
     background-size: 100% auto;
     inset: 0;
-    -webkit-mask-image: linear-gradient(180deg, #000 0, #000 25%, transparent 55%);
-    mask-image: linear-gradient(180deg, #000 0, #000 25%, transparent 55%);
+    -webkit-mask-image: linear-gradient(180deg, #000, transparent 50%);
+    mask-image: linear-gradient(180deg, #000, transparent 50%);
     pointer-events: none;
     position: absolute;
     z-index: 0
