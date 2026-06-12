@@ -139,6 +139,14 @@ class j extends o.Ay.Store {
 let Y = new j(u.h, {
     CONNECTION_OPEN: k,
     OVERLAY_INITIALIZE: k,
+    VOICE_CHANNEL_SELECT: function (e) {
+        let { currentVoiceChannelId: t } = e;
+        if (null == t) return !1;
+        let n = h.A.getChannel(t);
+        if (!n?.isGuildStageVoice() || !C.has(n.guild_id)) return !1;
+        let i = _.default.getId();
+        return null != i && P(i, [t]);
+    },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e,
             n = new Set();
