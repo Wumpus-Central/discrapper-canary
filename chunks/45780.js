@@ -38,3 +38,8 @@ function f(e, t, n, i) {
 function g(e, t) {
     p(!1, e, t);
 }
+t;
+)
+{
+    f(!1, e, t);
+}
