@@ -30,8 +30,8 @@ var m = s(922139),
     w = s(814925),
     Q = s(178540),
     q = s(590202),
-    L = s(710969),
-    b = s(792620),
+    b = s(710969),
+    L = s(792620),
     R = s(988436),
     k = s(918338),
     D = s(270045),
@@ -108,7 +108,7 @@ function B(t) {
         } = t,
         E = (0, Q.O)((t) => t.getErrorHints(e.id)),
         f = E.length > 0 ? E : a,
-        g = (0, b.IO)(e),
+        g = (0, L.IO)(e),
         I = (0, _.Ay)(),
         R = ((0, C.M)(I) ? F.NJ8.DARK : F.NJ8.LIGHT) === F.NJ8.DARK,
         P = (0, u.LS)(e),
@@ -162,7 +162,7 @@ function B(t) {
                                             gap: 8,
                                             children: [
                                                 te &&
-                                                    !(0, L.Ic)(e) &&
+                                                    !(0, b.Ic)(e) &&
                                                     (0, n.jsx)(A.E, {
                                                         type: { text: K.intl.string(K.t.Jt6u7B) },
                                                         variant: "expressive",
@@ -180,7 +180,7 @@ function B(t) {
                                                 ? K.intl.string(K.t.YsCuyF)
                                                 : G
                                                   ? K.intl.string(K.t["74KqrR"])
-                                                  : (0, L.Ic)(e)
+                                                  : (0, b.Ic)(e)
                                                     ? K.intl.string(K.t.I6JG46)
                                                     : K.intl.string(K.t.umdNin),
                                             asContainer: !0,
@@ -247,6 +247,7 @@ function B(t) {
                                                 className: V.w$,
                                                 size: 16,
                                                 color: v.A.unsafe_rawColors.GREEN_360.css,
+                                                "aria-label": K.intl.string(K.t.OfMjx9),
                                                 allowFullSizedIcon: !0,
                                                 children: (0, n.jsx)(S.B, {
                                                     color: v.A.unsafe_rawColors.WHITE.css,
@@ -381,7 +382,7 @@ function tq(t) {
         }, [e, s, n]),
     };
 }
-function tL(t) {
+function tb(t) {
     let { quest: e, sourceQuestContent: s, onClick: i, text: a, primaryCtaButton: l } = t,
         { externalLinkCta: r, handleOpenExternalLink: o } = tq({ quest: e, sourceQuestContent: s });
     return (0, n.jsxs)(tu.e, {
@@ -394,7 +395,7 @@ function tL(t) {
         ],
     });
 }
-function tb(t) {
+function tL(t) {
     let { quest: e, sourceQuestContent: s, formattedExpirationDate: i, primaryCtaButton: a } = t,
         { externalLinkCta: l, handleOpenExternalLink: r } = tq({ quest: e, sourceQuestContent: s }),
         o = K.intl.format(K.t["6p8BZx"], { expiryDate: i });
@@ -438,12 +439,12 @@ function tR(t) {
         y = l.userStatus?.enrolledAt != null,
         T = l.userStatus?.completedAt != null,
         S = T && l.userStatus?.claimedAt == null,
-        I = (0, L.if)(l),
-        _ = !(0, L.Ic)(l),
+        I = (0, b.if)(l),
+        _ = !(0, b.Ic)(l),
         w = (0, u.In)(l),
-        R = (0, b.IO)(l),
-        k = (0, b.K$)(l),
-        D = (0, b.Cr)(l),
+        R = (0, L.IO)(l),
+        k = (0, L.K$)(l),
+        D = (0, L.Cr)(l),
         M = (0, u.fc)(l),
         [P, z, H] = (0, u.Qo)(l, M),
         W = _ && w === u.F3.ACCEPTED,
@@ -496,9 +497,9 @@ function tR(t) {
             ((e = tS.rE.QUEST_HOME_DESKTOP),
             (s = tE.useConfig({ location: e }).enabled),
             (a = null != l.config.ctaConfig),
-            s && a && !(0, b.g5)(l)),
+            s && a && !(0, L.g5)(l)),
         tN = tm ? to : tl,
-        tO = (0, b.I6)(l),
+        tO = (0, L.I6)(l),
         tR = (0, n.jsx)(td.$, { variant: "secondary", text: tr, onClick: tN }),
         tk = (0, n.jsx)(td.$, { variant: "secondary", text: tr, onClick: tN, fullWidth: !0 }),
         tD = (0, n.jsx)(td.$, { variant: "secondary", text: tr, onClick: tl }),
@@ -528,7 +529,7 @@ function tR(t) {
             }))
           : $.enabled && (B === tT.UA.COMPLETED || B === tT.UA.CLAIMED) && $.enabledQuestStates.has(B)
             ? (tM = R
-                  ? (0, n.jsx)(tL, {
+                  ? (0, n.jsx)(tb, {
                         quest: l,
                         sourceQuestContent: C,
                         onClick: Z,
@@ -579,7 +580,7 @@ function tR(t) {
                       }))
             : T
               ? (tM = R
-                    ? (0, n.jsx)(tL, { quest: l, sourceQuestContent: C, onClick: Z, text: J })
+                    ? (0, n.jsx)(tb, { quest: l, sourceQuestContent: C, onClick: Z, text: J })
                     : (0, tA.vA)(l)
                       ? (0, n.jsxs)(tu.e, {
                             direction: "horizontal",
@@ -688,7 +689,7 @@ function tR(t) {
                               : $.enabled &&
                                   (B === tT.UA.ENROLLED || B === tT.UA.INCOMPLETE) &&
                                   $.enabledQuestStates.has(B)
-                                ? tm && (0, b.t)({ quest: l }) && !(0, b.g5)(l)
+                                ? tm && (0, L.t)({ quest: l }) && !(0, L.g5)(l)
                                     ? (0, n.jsx)("div", { className: tI.x6, children: tk })
                                     : (0, n.jsx)("div", {
                                           className: tI.x6,
@@ -708,7 +709,7 @@ function tR(t) {
                                               ],
                                           }),
                                       })
-                                : (0, b.g5)(l) && !N && P !== c.X0.DESKTOP
+                                : (0, L.g5)(l) && !N && P !== c.X0.DESKTOP
                                   ? v
                                       ? (0, n.jsx)("div", {
                                             className: tI.x6,
@@ -847,7 +848,7 @@ function tR(t) {
                               }))
                 : (tM =
                       $.enabled && B === tT.UA.EXPIRED && $.enabledQuestStates.has(B)
-                          ? (0, n.jsx)(tb, {
+                          ? (0, n.jsx)(tL, {
                                 quest: l,
                                 sourceQuestContent: C,
                                 formattedExpirationDate: g,
@@ -860,7 +861,7 @@ function tR(t) {
                                     analyticsCtxQuestContentRowIndex: h,
                                 }),
                             })
-                          : (0, n.jsx)(tb, { quest: l, sourceQuestContent: C, formattedExpirationDate: g })),
+                          : (0, n.jsx)(tL, { quest: l, sourceQuestContent: C, formattedExpirationDate: g })),
     null == tM)
         ? null
         : (0, n.jsxs)("div", {
@@ -933,7 +934,7 @@ function tM(t) {
         k = (0, ti.ks)(e.config),
         D = e.userStatus?.orbQuantityClaimed ?? (0, ti._Z)(e.config),
         M = (0, ti.wo)(e.config, O),
-        U = (0, b.I6)(e),
+        U = (0, L.I6)(e),
         { completedRatio: F, completedRatioDisplay: V } = (0, u.O9)(e, U),
         $ = (0, te.A9)(e, h, tS.rE.QUEST_HOME_DESKTOP, J.Ob.QuestHome, E),
         B = i.useMemo(
@@ -1018,7 +1019,7 @@ function tM(t) {
                                               (0, n.jsx)(tl.A, {
                                                   size: 76,
                                                   percentComplete: F,
-                                                  overlayText: a && !(0, L.Ic)(e) ? V : void 0,
+                                                  overlayText: a && !(0, b.Ic)(e) ? V : void 0,
                                                   children: (0, n.jsx)(to.A, {
                                                       quest: e,
                                                       questContent: s,
