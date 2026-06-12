@@ -1,161 +1,178 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => M });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(621466),
-    l = n(17928),
-    u = n(939249),
-    c = n(834730),
-    d = n(885574),
-    _ = n(661531),
-    h = n(775602),
-    f = n(607470),
-    p = n(287809),
-    E = n(551875),
-    m = n(18437),
-    g = n(590202),
-    A = n(801365),
-    I = n(241124),
-    T = n(415441),
-    S = n(734736),
-    y = n(617986),
-    N = n(139384),
-    v = n(190107),
-    C = n(375708),
-    R = n(369453);
-let O = function (e) {
+    o = n(323889),
+    l = n(621466),
+    u = n(17928),
+    c = n(939249),
+    d = n(834730),
+    _ = n(885574),
+    h = n(661531),
+    f = n(775602),
+    p = n(274670),
+    E = n(144779),
+    m = n(607470),
+    g = n(287809),
+    A = n(104886),
+    I = n(551875),
+    T = n(18437),
+    S = n(590202),
+    y = n(971649),
+    N = n(801365),
+    v = n(241124),
+    C = n(415441),
+    R = n(734736),
+    O = n(617986),
+    b = n(139384),
+    D = n(190107),
+    L = n(375708),
+    w = n(369453);
+let M = function (e) {
     let t,
         {
             className: n,
             quest: s,
-            autoplay: O = !0,
-            learnMoreStyle: b = null,
-            learnMoreFontSize: D,
-            sourceQuestContent: L,
-            lazyLoad: w = !1,
-            fullWidth: M = !1,
-            style: P,
-            orbTier: x,
+            autoplay: M = !0,
+            learnMoreStyle: P = null,
+            learnMoreFontSize: x,
+            sourceQuestContent: k,
+            lazyLoad: U = !1,
+            fullWidth: G = !1,
+            style: F,
+            orbTier: V,
         } = e,
-        k = (0, m.Ut)(),
-        U = (0, l.bG)([h.Ay], () => h.Ay.useReducedMotion),
-        G = (0, l.bG)([p.default], () => p.default.getCurrentUser()),
-        F = r.useMemo(
+        B = (0, T.Ut)(),
+        H = (0, y.go)(),
+        j = (0, u.bG)([f.Ay], () => f.Ay.useReducedMotion),
+        Y = (0, u.bG)([g.default], () => g.default.getCurrentUser()),
+        W = r.useMemo(
             () =>
-                (0, A.ks)(s.config) && s.userStatus?.claimedAt != null
-                    ? C.intl.formatToPlainString(C.t["nLXlh+"], {
-                          orbAmount: s.userStatus?.orbQuantityClaimed ?? (0, A._Z)(s.config) ?? 0,
+                (0, N.ks)(s.config) && s.userStatus?.claimedAt != null
+                    ? L.intl.formatToPlainString(L.t["nLXlh+"], {
+                          orbAmount: s.userStatus?.orbQuantityClaimed ?? (0, N._Z)(s.config) ?? 0,
                       })
-                    : (0, A.mq)(s.config, G),
-            [s.config, s.userStatus?.claimedAt, s.userStatus?.orbQuantityClaimed, G],
+                    : (0, N.mq)(s.config, Y),
+            [s.config, s.userStatus?.claimedAt, s.userStatus?.orbQuantityClaimed, Y],
         ),
-        V = r.useMemo(() => (0, E.tW)(s, E.fY.REWARD, void 0, void 0, x), [s, x]),
-        B = r.useMemo(() => (0, E.tW)(s, E.fY.REWARD_IMAGE), [s]),
-        H = r.useCallback(
+        K = r.useMemo(() => (0, I.tW)(s, I.fY.REWARD, void 0, void 0, V), [s, V]),
+        $ = r.useMemo(() => (0, I.tW)(s, I.fY.REWARD_IMAGE), [s]),
+        z = r.useCallback(
             (t) => {
-                (0, o.vq)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
-                    k({
-                        questId: s.id,
-                        questContent: e.questContent,
-                        questContentPosition: e.questContentPosition,
-                        questContentCTA: g.Cy.REWARD_LEARN_MORE,
-                        sourceQuestContent: L,
-                    }),
-                    (0, y.navigateToQuestHome)({ fromContent: e.questContent, questId: s.id }),
+                (0, l.vq)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
+                    (0, A.E5)(A.kI.STEP_2_CLICKED_INTERNAL, "quest_reward_tile")
+                        ? (0, p.r)({
+                              type: E.F.CLICK_INTERNAL,
+                              adCreativeType: o.p.QUEST,
+                              adCreativeId: s.id,
+                              questContentCTA: S.Cy.REWARD_LEARN_MORE,
+                              surfaceId: e.questContent,
+                              sourceQuestContent: k,
+                              impressionId: H,
+                              questContentPosition: e.questContentPosition,
+                          })
+                        : B({
+                              questId: s.id,
+                              questContent: e.questContent,
+                              questContentPosition: e.questContentPosition,
+                              questContentCTA: S.Cy.REWARD_LEARN_MORE,
+                              sourceQuestContent: k,
+                          }),
+                    (0, O.navigateToQuestHome)({ fromContent: e.questContent, questId: s.id }),
                     e.onClick?.(t);
             },
-            [k, s.id, e, L],
+            [B, s.id, e, k, H],
         ),
-        j = r.useRef(null),
-        Y = r.useRef(O),
-        W = (0, A.K9)(s.config);
+        q = r.useRef(null),
+        X = r.useRef(M),
+        Z = (0, N.K9)(s.config);
     if (
         (r.useEffect(() => {
-            if (null != j.current) {
-                if (!V.isAnimated || U) {
-                    (j.current.currentTime = 0), j.current.pause();
+            if (null != q.current) {
+                if (!K.isAnimated || j) {
+                    (q.current.currentTime = 0), q.current.pause();
                     return;
                 }
-                O && !Y.current
-                    ? j.current.play()
-                    : !O && Y.current && ((j.current.currentTime = 0), j.current.pause()),
-                    (Y.current = O);
+                M && !X.current
+                    ? q.current.play()
+                    : !M && X.current && ((q.current.currentTime = 0), q.current.pause()),
+                    (X.current = M);
             }
-        }, [O, V, U]),
-        (0, N.A)(j, v.rE.QUEST_HOME_DESKTOP),
-        W)
+        }, [M, K, j]),
+        (0, b.A)(q, D.rE.QUEST_HOME_DESKTOP),
+        Z)
     )
-        t = (0, i.jsx)(I.Sn, {
+        t = (0, i.jsx)(v.Sn, {
             id: "QuestRewardTile_rewardTileNitro",
-            children: (e) => (0, i.jsx)(S.A, { ref: e, className: R.eB }),
+            children: (e) => (0, i.jsx)(R.A, { ref: e, className: w.eB }),
         });
-    else if (w)
-        t = (0, i.jsx)(T.N, {
-            showVideo: O,
+    else if (U)
+        t = (0, i.jsx)(C.N, {
+            showVideo: M,
             imageAsset:
-                null != B
+                null != $
                     ? {
-                          asset: B,
+                          asset: $,
                           assetId: "QuestRewardTile_rewardTileStatic",
-                          className: R.XM,
-                          alt: C.intl.string(C.t.UMclVN),
+                          className: w.XM,
+                          alt: L.intl.string(L.t.UMclVN),
                       }
                     : void 0,
-            videoAsset: { asset: V, assetId: "QuestRewardTile_rewardTileAnimated", className: a()(R.eB, R.WY) },
+            videoAsset: { asset: K, assetId: "QuestRewardTile_rewardTileAnimated", className: a()(w.eB, w.WY) },
             onLoadComplete: e.onLoadComplete,
         });
-    else if (V.isAnimated) {
-        let n = (0, E.WV)(V.url);
-        t = (0, i.jsx)(I.Sn, {
+    else if (K.isAnimated) {
+        let n = (0, I.WV)(K.url);
+        t = (0, i.jsx)(v.Sn, {
             id: "QuestRewardTile_rewardTileAnimated",
             children: (t) =>
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        null != n && (0, i.jsx)("img", { alt: C.intl.string(C.t.UMclVN), className: R.XM, src: n }),
-                        (0, i.jsx)(f.A, {
+                        null != n && (0, i.jsx)("img", { alt: L.intl.string(L.t.UMclVN), className: w.XM, src: n }),
+                        (0, i.jsx)(m.A, {
                             ref: (e) => {
-                                (t.current = e), (j.current = e);
+                                (t.current = e), (q.current = e);
                             },
-                            autoPlay: !U && O,
+                            autoPlay: !j && M,
                             loop: !0,
                             muted: !0,
                             playsInline: !0,
-                            className: a()(R.eB, R.WY),
+                            className: a()(w.eB, w.WY),
                             controls: !1,
                             onProgress: e.onLoadComplete,
-                            children: (0, i.jsx)("source", { src: V.url, type: V.mimetype ?? void 0 }),
+                            children: (0, i.jsx)("source", { src: K.url, type: K.mimetype ?? void 0 }),
                         }),
                     ],
                 }),
         });
     } else
-        t = (0, i.jsx)(I.Sn, {
+        t = (0, i.jsx)(v.Sn, {
             id: "QuestRewardTile_rewardTileStatic",
             children: (t) =>
-                (0, i.jsx)("img", { ref: t, alt: F, className: a()(R.eB, R.Qz), src: V.url, onLoad: e.onLoadComplete }),
+                (0, i.jsx)("img", { ref: t, alt: W, className: a()(w.eB, w.Qz), src: K.url, onLoad: e.onLoadComplete }),
         });
-    return null == b
-        ? (0, i.jsx)("div", { className: a()(R.al, n, { [R.Ij]: M }), style: P, children: t })
-        : (0, i.jsxs)(u.D, {
-              className: a()(R.a$, R.al, R.Yi, n, { [R.Ij]: M }),
-              onClick: H,
-              style: P,
+    return null == P
+        ? (0, i.jsx)("div", { className: a()(w.al, n, { [w.Ij]: G }), style: F, children: t })
+        : (0, i.jsxs)(c.D, {
+              className: a()(w.a$, w.al, w.Yi, n, { [w.Ij]: G }),
+              onClick: z,
+              style: F,
               children: [
                   t,
-                  "text" === b &&
-                      (0, i.jsx)(c.E, {
+                  "text" === P &&
+                      (0, i.jsx)(d.E, {
                           color: "always-white",
                           variant: "text-xs/normal",
-                          className: R.n_,
-                          style: { fontSize: D },
-                          children: C.intl.format(C.t.DYAleT, {}),
+                          className: w.n_,
+                          style: { fontSize: x },
+                          children: L.intl.format(L.t.DYAleT, {}),
                       }),
-                  "icon" === b &&
+                  "icon" === P &&
                       (0, i.jsx)("div", {
-                          className: R.n_,
-                          children: (0, i.jsx)(d.m, { size: "xxs", color: _.A.colors.WHITE.css }),
+                          className: w.n_,
+                          children: (0, i.jsx)(_.m, { size: "xxs", color: h.A.colors.WHITE.css }),
                       }),
               ],
           });
