@@ -10,11 +10,11 @@ var i,
     d = n(166532),
     m = n(811656),
     p = n(245172),
-    C = n(428262),
-    S = n(772707),
+    S = n(428262),
+    C = n(772707),
     g = n(683071),
-    h = n(17928),
-    y = n(834730),
+    y = n(17928),
+    h = n(834730),
     x = n(158032),
     b = n(925847),
     I = n(773669),
@@ -23,8 +23,8 @@ var i,
     f = n(580630),
     A = n(501957),
     T = (((i = {})[(i.CONFIRM = 1)] = "CONFIRM"), (i[(i.SUCCESS = 2)] = "SUCCESS"), i),
-    v = n(788868),
-    M = n(652215),
+    M = n(788868),
+    v = n(652215),
     R = n(375708),
     P = n(977544);
 let k = (t) => {
@@ -38,17 +38,17 @@ let k = (t) => {
             fractionalPremiumInfo: c,
             setStep: u,
         } = t,
-        d = (0, h.bG)([I.default], () => I.default.locale),
+        d = (0, y.bG)([I.default], () => I.default.locale),
         m = new Date(o.subscriptionPeriodStart);
-    a.isBoostOnly || (m = C.Ay.extendDateWithUnconsumedFractionalPremium(m, c.unactivatedUnits));
-    let p = (0, h.bG)([E.A], () => E.A.getForApplication(v.tv)),
+    a.isBoostOnly || (m = S.Ay.extendDateWithUnconsumedFractionalPremium(m, c.unactivatedUnits));
+    let p = (0, y.bG)([E.A], () => E.A.getForApplication(M.tv)),
         k = (0, f.$g)(l.total, l.currency),
         [F, O] = (0, s.useState)(!1),
         [U, _] = (0, s.useState)(!1),
         w = m.toLocaleDateString(d, { month: "long", day: "numeric", year: "numeric" }),
         N = s.useMemo(() => (0, b.A)(), []);
     s.useEffect(() => {
-        j.default.track(M.HAw.PREMIUM_RESUBSCRIBE_FLOW_STARTED, { location_stack: e, load_id: N, ...(0, A.j)(a) });
+        j.default.track(v.HAw.PREMIUM_RESUBSCRIBE_FLOW_STARTED, { location_stack: e, load_id: N, ...(0, A.j)(a) });
     }, [e, a, N]);
     let D = async () => {
             O(!0), _(!1);
@@ -61,18 +61,18 @@ let k = (t) => {
         G = [{ text: R.intl.string(R.t["cY+Oob"]), onClick: () => D(), variant: "primary", loading: F, disabled: F }],
         W = R.intl.format(R.t.dbGGui, { price: k, date: w }),
         L = a.premiumPlanIdFromItems;
-    if (C.Ay.hasUnconsumedGiftForSubscriptionPlan(p, L)) {
+    if (S.Ay.hasUnconsumedGiftForSubscriptionPlan(p, L)) {
         let t = (0, f.$g)(o.total, o.currency),
-            e = C.Ay.getIntervalForInvoice(o),
+            e = S.Ay.getIntervalForInvoice(o),
             n = {
                 discountedPrice: t,
                 regularPrice: k,
                 date: w,
-                billingPeriod: C.Ay.getIntervalStringAsNoun(e.intervalType),
+                billingPeriod: S.Ay.getIntervalStringAsNoun(e.intervalType),
             };
         W = o.taxInclusive ? R.intl.format(R.t.G8IxyE, n) : R.intl.format(R.t.kXtIIn, n);
     }
-    return (0, r.jsxs)(S.k, {
+    return (0, r.jsxs)(C.k, {
         graphic: { type: "image", src: P.A },
         gradientColor: "nitro-pink",
         transitionState: i,
@@ -80,7 +80,7 @@ let k = (t) => {
         actions: G,
         onClose: async () => n(),
         children: [
-            (0, r.jsxs)(y.E, {
+            (0, r.jsxs)(h.E, {
                 variant: "text-md/normal",
                 style: { textAlign: "center" },
                 children: [(0, r.jsx)("p", { children: W }), (0, r.jsx)("p", { children: R.intl.string(R.t.UQolSy) })],
@@ -97,7 +97,7 @@ var F = n(935462),
     N = n(20374);
 function D(t) {
     let { onClose: e } = t,
-        n = (0, r.jsx)(y.E, { className: N.h, variant: "text-md/normal", children: R.intl.string(R.t.FCsTCk) });
+        n = (0, r.jsx)(h.E, { className: N.h, variant: "text-md/normal", children: R.intl.string(R.t.FCsTCk) });
     return (0, r.jsx)(_.A, {
         type: U.Ay.Types.PREMIUM_ACTIVATED,
         text: n,
@@ -108,11 +108,11 @@ function D(t) {
 }
 function G(t) {
     let { onClose: e } = t;
-    return (0, r.jsx)(w.Ay, { planId: v.gD.PREMIUM_MONTH_TIER_0, onClose: e });
+    return (0, r.jsx)(w.Ay, { planId: M.gD.PREMIUM_MONTH_TIER_0, onClose: e });
 }
 let W = (t) => {
         let { transitionState: e, onClose: n, premiumType: i } = t,
-            s = i === v.PremiumTypes.TIER_0;
+            s = i === M.PremiumTypes.TIER_0;
         return (0, r.jsxs)(F.EO, {
             "data-migration-pending": !0,
             className: N.z,
@@ -127,28 +127,28 @@ let W = (t) => {
     L = (function t(e) {
         for (let n of Object.values(e)) Object.isFrozen(n) || t(n);
         return Object.freeze(e);
-    })((0, p.E)()),
+    })((0, p.E5)()),
     z = [d.pn.CONFIRM],
     B = (t) => {
         let { analyticsLocations: e, premiumSubscription: n } = t,
-            i = (0, C.EL)(n)?.planId,
-            a = null != i ? (0, C.m6)(i) : null;
+            i = (0, S.EL)(n)?.planId,
+            a = null != i ? (0, S.m6)(i) : null;
         l()(null != a, "Should not be resubscribing Nitro without premiumType");
-        let d = a === v.PremiumTypes.TIER_0,
-            [p, S] = s.useState(T.CONFIRM),
+        let d = a === M.PremiumTypes.TIER_0,
+            [p, C] = s.useState(T.CONFIRM),
             g = s.useCallback(() => {
                 switch (p) {
                     case T.CONFIRM:
-                        return (0, r.jsx)(k, { ...t, setStep: S });
+                        return (0, r.jsx)(k, { ...t, setStep: C });
                     case T.SUCCESS:
                         return (0, r.jsx)(W, { ...t, premiumType: a });
                     default:
-                        return (0, r.jsx)(k, { ...t, setStep: S });
+                        return (0, r.jsx)(k, { ...t, setStep: C });
                 }
             }, [p, t, a]);
         return (0, r.jsx)(o.f5, {
             value: e,
-            children: (0, r.jsx)(c.CheckoutRootProvider, {
+            children: (0, r.jsx)(c.M, {
                 activeSubscription: n,
                 stepConfigs: L,
                 skuIDs: [],

@@ -23,12 +23,12 @@ var a,
     x = l(702841),
     y = l(834730),
     f = l(349288),
-    v = l(231723),
-    g = l(228366),
+    g = l(231723),
+    v = l(228366),
     E = l(830382),
     S = l(73825),
-    C = l(197510),
-    j = l(937008),
+    j = l(197510),
+    C = l(937008),
     T = l(491057),
     P = l(314671),
     I = l(97352),
@@ -92,7 +92,7 @@ let R = (e) => {
             } = e,
             h = `${a}-${n}-${c}`;
         return (0, s.jsx)(
-            C.CheckoutRootProvider,
+            j.M,
             {
                 stepConfigs: d,
                 applicationId: l,
@@ -103,12 +103,12 @@ let R = (e) => {
                 excludeSubscriptionPlansBySKU: p,
                 overrideCustomCheckoutFlow: b ? _.uH.DEV_STORYBOOK_CHECKOUT : void 0,
                 children: (0, s.jsx)(T.Qt, {
-                    children: (0, s.jsx)(j.dX, {
+                    children: (0, s.jsx)(C.dX, {
                         isGift: n,
                         children: (0, s.jsx)(
-                            P.PaymentModal,
+                            P.q,
                             {
-                                transitionState: v.ip.ENTERED,
+                                transitionState: g.ip.ENTERED,
                                 onClose: i,
                                 onComplete: r,
                                 applicationId: l,
@@ -269,12 +269,12 @@ var Y = l(488428),
     ex = l(532794),
     ey = l(216678),
     ef = l(194509),
-    ev = l(410516),
-    eg = l(761705),
+    eg = l(410516),
+    ev = l(761705),
     eE = l(71393),
     eS = l(166403),
-    eC = l(788868),
-    ej = l(705018);
+    ej = l(788868),
+    eC = l(705018);
 function eT(e) {
     let { selectedGuildForGuildSub: t } = e,
         l = (0, ec.uk)(t?.id)[0];
@@ -316,7 +316,7 @@ function eA(e) {
             throw Error("Simulated error thrown inside a payment step");
         case "translation-key-error":
             return (0, s.jsx)("div", {
-                children: w.intl.format(ej.default.cRB332, {
+                children: w.intl.format(eC.default.cRB332, {
                     avatar: (0, s.jsx)("div", { children: "Sample Avatar" }),
                     nickname: (0, s.jsx)("div", { children: "Sample Nickname" }),
                     username: (0, s.jsx)("div", { children: "Sample Username" }),
@@ -333,26 +333,26 @@ let e_ = {
             name: "Checkout Test Panel",
             id: "checkout-test-panel",
             component: () => {
-                let [e, t] = u.useState(eC.pe.TIER_2),
+                let [e, t] = u.useState(ej.pe.TIER_2),
                     [l, a] = u.useState(null),
                     n = (0, q.yK)([eE.A], () => eE.A.getGuildsArray()),
                     [i] = (0, q.yK)([eS.A], () => [eS.A.getPremiumSubscription()]),
                     r = n.map((e) => ({ id: e.id, value: e, label: e.name })),
                     [o, m] = u.useState(r.length > 0 ? r[0].value : null),
                     [b, h] = u.useState(""),
-                    [x, v] = u.useState({ plan_id: eC.gD.PREMIUM_MONTH_TIER_2, gift: "true" }),
-                    g = "true" !== x.gift && null != i,
-                    [E, C] = u.useState(r.length > 0 ? r[0].value : null),
-                    { analyticsLocations: j } = (0, p.Ay)(c.A.PAYMENT_FLOW_TEST_PAGE),
+                    [x, g] = u.useState({ plan_id: ej.gD.PREMIUM_MONTH_TIER_2, gift: "true" }),
+                    v = "true" !== x.gift && null != i,
+                    [E, j] = u.useState(r.length > 0 ? r[0].value : null),
+                    { analyticsLocations: C } = (0, p.Ay)(c.A.PAYMENT_FLOW_TEST_PAGE),
                     [T, P] = u.useState(""),
                     [I, A] = u.useState(N.dJq),
-                    { balance: _, isFetching: R, error: k } = (0, eg.W)(),
-                    { isSubmitting: M, responseMessage: D, redeemVirtualCurrency: V } = (0, eg.Q)(),
+                    { balance: _, isFetching: R, error: k } = (0, ev.W)(),
+                    { isSubmitting: M, responseMessage: D, redeemVirtualCurrency: V } = (0, ev.Q)(),
                     [L, O] = u.useState(N.dJq),
                     [w, B] = u.useState(""),
                     [$, W] = u.useState(N.dJq);
                 return (0, s.jsx)(p.f5, {
-                    value: j,
+                    value: C,
                     children: (0, s.jsx)(X.Ip, {
                         className: U.XG,
                         children: (0, s.jsxs)(Q.B, {
@@ -368,9 +368,9 @@ let e_ = {
                                             label: "Gift",
                                             value: e,
                                             options: [
-                                                { id: "tier_2", value: eC.pe.TIER_2, label: "Nitro" },
-                                                { id: "tier_1", value: eC.pe.TIER_1, label: "Nitro Classic" },
-                                                { id: "tier_0", value: eC.pe.TIER_0, label: "Nitro Basic" },
+                                                { id: "tier_2", value: ej.pe.TIER_2, label: "Nitro" },
+                                                { id: "tier_1", value: ej.pe.TIER_1, label: "Nitro Classic" },
+                                                { id: "tier_0", value: ej.pe.TIER_0, label: "Nitro Basic" },
                                                 { id: "none", value: null, label: "None" },
                                             ],
                                             onSelectionChange: (e) => t(e),
@@ -395,9 +395,9 @@ let e_ = {
                                             label: "Premium Select Plan",
                                             value: l,
                                             options: [
-                                                { id: "tier_2", value: eC.pe.TIER_2, label: "Nitro" },
-                                                { id: "tier_1", value: eC.pe.TIER_1, label: "Nitro Classic" },
-                                                { id: "tier_0", value: eC.pe.TIER_0, label: "Nitro Basic" },
+                                                { id: "tier_2", value: ej.pe.TIER_2, label: "Nitro" },
+                                                { id: "tier_1", value: ej.pe.TIER_1, label: "Nitro Classic" },
+                                                { id: "tier_0", value: ej.pe.TIER_0, label: "Nitro Basic" },
                                                 { id: "none", value: null, label: "None" },
                                             ],
                                             onSelectionChange: (e) => a(e),
@@ -407,7 +407,7 @@ let e_ = {
                                         (0, s.jsx)(G.$, {
                                             variant: "primary",
                                             text: "Select Plan",
-                                            onClick: () => (0, ex.A)({ subscriptionTier: l, analyticsLocations: j }),
+                                            onClick: () => (0, ex.A)({ subscriptionTier: l, analyticsLocations: C }),
                                         }),
                                     ],
                                 }),
@@ -473,20 +473,20 @@ let e_ = {
                                             label: "Plan",
                                             value: x.plan_id,
                                             options: [
-                                                { id: "tier_2", value: eC.gD.PREMIUM_MONTH_TIER_2, label: "Nitro" },
+                                                { id: "tier_2", value: ej.gD.PREMIUM_MONTH_TIER_2, label: "Nitro" },
                                                 {
                                                     id: "tier_1",
-                                                    value: eC.gD.PREMIUM_MONTH_TIER_1,
+                                                    value: ej.gD.PREMIUM_MONTH_TIER_1,
                                                     label: "Nitro Classic",
                                                 },
                                                 {
                                                     id: "tier_0",
-                                                    value: eC.gD.PREMIUM_MONTH_TIER_0,
+                                                    value: ej.gD.PREMIUM_MONTH_TIER_0,
                                                     label: "Nitro Basic",
                                                 },
                                             ],
                                             onSelectionChange: (e) => {
-                                                v((t) => ({ ...t, plan_id: e }));
+                                                g((t) => ({ ...t, plan_id: e }));
                                             },
                                             selectionMode: "single",
                                             fullWidth: !0,
@@ -499,7 +499,7 @@ let e_ = {
                                                 { id: "not_gift", value: "false", label: "Not Gift" },
                                             ],
                                             onSelectionChange: (e) => {
-                                                v((t) => ({ ...t, gift: e }));
+                                                g((t) => ({ ...t, gift: e }));
                                             },
                                             selectionMode: "single",
                                             fullWidth: !0,
@@ -508,11 +508,11 @@ let e_ = {
                                 }),
                                 (0, s.jsx)(K.m, {
                                     text: "Already subscribed",
-                                    shouldShow: g,
+                                    shouldShow: v,
                                     children: (0, s.jsx)(G.$, {
                                         variant: "primary",
                                         text: "Open Link",
-                                        disabled: g,
+                                        disabled: v,
                                         onClick: () => {
                                             window.open(N.BVt.BILLING_PREMIUM_SUBSCRIBE + "?" + Y.stringify({ ...x }));
                                         },
@@ -578,7 +578,7 @@ let e_ = {
                                             label: "Premium Server Subscription For",
                                             value: E,
                                             options: r,
-                                            onSelectionChange: C,
+                                            onSelectionChange: j,
                                             selectionMode: "single",
                                             fullWidth: !0,
                                         }),
@@ -661,7 +661,7 @@ let e_ = {
                                                         (0, ey.q)({
                                                             applicationId: w,
                                                             skuId: $,
-                                                            analyticsLocations: j,
+                                                            analyticsLocations: C,
                                                             checkoutFlow: eo.CL.PREMIUM_APPS_OTP_CHECKOUT,
                                                         }),
                                                 }),
@@ -766,15 +766,15 @@ let e_ = {
                                                     };
                                                     return await Promise.resolve((a) => {
                                                         let { onClose: i, transitionState: r } = a;
-                                                        return (0, s.jsx)(C.CheckoutRootProvider, {
+                                                        return (0, s.jsx)(j.M, {
                                                             activeSubscription: null,
                                                             stepConfigs: n,
                                                             skuIDs: [],
                                                             errorHandlingBehavior: l,
                                                             onUnhandledError: t,
-                                                            children: (0, s.jsx)(j.dX, {
+                                                            children: (0, s.jsx)(C.dX, {
                                                                 isGift: !1,
-                                                                children: (0, s.jsx)(P.PaymentModal, {
+                                                                children: (0, s.jsx)(P.q, {
                                                                     transitionState: r,
                                                                     onClose: i,
                                                                     initialPlanId: null,
@@ -805,7 +805,7 @@ let e_ = {
                                     text: "Simulate Error",
                                     onClick: () =>
                                         void (console.log("Simulating error in discountOfferHasTier()"),
-                                        (0, ev.U9)({ discount: null }, eC.pe.TIER_2)),
+                                        (0, eg.U9)({ discount: null }, ej.pe.TIER_2)),
                                 }),
                             ],
                         }),
@@ -937,9 +937,9 @@ let eV = () => ({
                     handleComplete: r,
                     isFetching: o,
                     sku: d,
-                } = R({ skuId: t, isGift: l, applicationId: eC.tv }),
+                } = R({ skuId: t, isGift: l, applicationId: ej.tv }),
                 c = eM.Ay.isPremiumSku(t),
-                p = c ? eC.zE[t] : void 0,
+                p = c ? ej.zE[t] : void 0,
                 [m, b] = u.useState(p),
                 h = u.useRef(!1);
             u.useEffect(() => {
@@ -948,7 +948,7 @@ let eV = () => ({
             let { isLoadedForPremiumSKUs: y, selectedPlan: f } = ((e) => {
                 let { subscriptionPlanId: t } = e;
                 u.useEffect(() => {
-                    I.A.isLoadedForPremiumSKUs() || g.h.wait(() => (0, S.zS)());
+                    I.A.isLoadedForPremiumSKUs() || v.h.wait(() => (0, S.zS)());
                 }, []);
                 let l = (0, x.bG)([I.A], () => (null != t ? I.A.get(t) : null));
                 return {
@@ -963,7 +963,7 @@ let eV = () => ({
                           (0, s.jsx)(M, {
                               stepConfigs: ew,
                               analyticsLocations: a,
-                              applicationId: eC.tv,
+                              applicationId: ej.tv,
                               initialPlanId: p,
                               skuId: t,
                               isGift: l,
@@ -983,10 +983,10 @@ let eV = () => ({
                 label: "SKU ID",
                 type: "select",
                 options: [
-                    { value: eC.pe.TIER_0, label: `${eC.pe.TIER_0} (Nitro Basic)` },
-                    { value: eC.pe.TIER_2, label: `${eC.pe.TIER_2} (Nitro Standard)` },
+                    { value: ej.pe.TIER_0, label: `${ej.pe.TIER_0} (Nitro Basic)` },
+                    { value: ej.pe.TIER_2, label: `${ej.pe.TIER_2} (Nitro Standard)` },
                 ],
-                defaultValue: eC.pe.TIER_0,
+                defaultValue: ej.pe.TIER_0,
             },
             ...eB,
         },
@@ -1035,7 +1035,7 @@ let e2 = {
                         autoplay: n,
                         orientation: l,
                         renderOverlay: p,
-                        parentTransitionState: v.ip.ENTERED,
+                        parentTransitionState: g.ip.ENTERED,
                     }),
                 }),
                 (0, s.jsxs)(eW.Z, {
@@ -1279,14 +1279,14 @@ var ta = l(99696),
     to = l(425713),
     ts = l(367266);
 let tu = {
-    bronze: eC.Ac.PREMIUM_TENURE_1_MONTH,
-    silver: eC.Ac.PREMIUM_TENURE_3_MONTH,
-    gold: eC.Ac.PREMIUM_TENURE_6_MONTH,
-    platinum: eC.Ac.PREMIUM_TENURE_12_MONTH,
-    diamond: eC.Ac.PREMIUM_TENURE_24_MONTH,
-    emerald: eC.Ac.PREMIUM_TENURE_36_MONTH,
-    ruby: eC.Ac.PREMIUM_TENURE_60_MONTH,
-    opal: eC.Ac.PREMIUM_TENURE_72_MONTH,
+    bronze: ej.Ac.PREMIUM_TENURE_1_MONTH,
+    silver: ej.Ac.PREMIUM_TENURE_3_MONTH,
+    gold: ej.Ac.PREMIUM_TENURE_6_MONTH,
+    platinum: ej.Ac.PREMIUM_TENURE_12_MONTH,
+    diamond: ej.Ac.PREMIUM_TENURE_24_MONTH,
+    emerald: ej.Ac.PREMIUM_TENURE_36_MONTH,
+    ruby: ej.Ac.PREMIUM_TENURE_60_MONTH,
+    opal: ej.Ac.PREMIUM_TENURE_72_MONTH,
 };
 var td = l(661531),
     tc = l(116833),
@@ -1439,11 +1439,11 @@ let tx = { name: "Expressive Progress", component: ti.A, id: "expressive-progres
                         i = u.useRef(null),
                         r = tu[t],
                         o = (0, to.I)(r).standard,
-                        d = eC.VD[r].rarity,
+                        d = ej.VD[r].rarity,
                         c = (
                             w.intl.string(w.t.lG6a5x) +
                             " " +
-                            w.intl.string(eC.VD[r].nameUnformatted)
+                            w.intl.string(ej.VD[r].nameUnformatted)
                         ).toLocaleUpperCase();
                     return (0, s.jsxs)("div", {
                         children: [
@@ -1556,32 +1556,32 @@ let tx = { name: "Expressive Progress", component: ti.A, id: "expressive-progres
                         } = e,
                         x = u.useRef(null),
                         f = u.useRef(null),
-                        v = u.useMemo(
+                        g = u.useMemo(
                             () =>
                                 ({
-                                    bronze: eC.Ac.PREMIUM_TENURE_1_MONTH,
-                                    silver: eC.Ac.PREMIUM_TENURE_3_MONTH,
-                                    gold: eC.Ac.PREMIUM_TENURE_6_MONTH,
-                                    platinum: eC.Ac.PREMIUM_TENURE_12_MONTH,
-                                    diamond: eC.Ac.PREMIUM_TENURE_24_MONTH,
-                                    emerald: eC.Ac.PREMIUM_TENURE_36_MONTH,
-                                    ruby: eC.Ac.PREMIUM_TENURE_60_MONTH,
-                                    opal: eC.Ac.PREMIUM_TENURE_72_MONTH,
+                                    bronze: ej.Ac.PREMIUM_TENURE_1_MONTH,
+                                    silver: ej.Ac.PREMIUM_TENURE_3_MONTH,
+                                    gold: ej.Ac.PREMIUM_TENURE_6_MONTH,
+                                    platinum: ej.Ac.PREMIUM_TENURE_12_MONTH,
+                                    diamond: ej.Ac.PREMIUM_TENURE_24_MONTH,
+                                    emerald: ej.Ac.PREMIUM_TENURE_36_MONTH,
+                                    ruby: ej.Ac.PREMIUM_TENURE_60_MONTH,
+                                    opal: ej.Ac.PREMIUM_TENURE_72_MONTH,
                                 })[i],
                             [i],
                         ),
-                        g = null != v ? (0, to.I)(v).standard : null,
+                        v = null != g ? (0, to.I)(g).standard : null,
                         E = u.useMemo(() => {
-                            if (null == v) return "";
-                            let e = eC.VD[v];
+                            if (null == g) return "";
+                            let e = ej.VD[g];
                             return (
                                 w.intl.string(w.t.lG6a5x) +
                                 " " +
                                 w.intl.string(e.nameUnformatted)
                             ).toLocaleUpperCase();
-                        }, [v]),
+                        }, [g]),
                         S = u.useMemo(() => {
-                            if (!a || null == g) return;
+                            if (!a || null == v) return;
                             let e = r
                                 ? { progressCircleText: o, progressCirclePercent: d, progressCircleUrgency: c }
                                 : {};
@@ -1589,10 +1589,10 @@ let tx = { name: "Expressive Progress", component: ti.A, id: "expressive-progres
                                 type: "dynamic",
                                 component: tc.DynamicGraphicComponent.BADGE_IMAGE_WITH_PROGRESS_CIRCLE,
                                 aspectRatio: "6/4",
-                                props: { src: g, alt: E, ...e },
+                                props: { src: v, alt: E, ...e },
                             };
-                        }, [a, g, E, r, o, d, c]),
-                        C = {
+                        }, [a, v, E, r, o, d, c]),
+                        j = {
                             title: t,
                             body: l,
                             graphic: S,
@@ -1623,12 +1623,12 @@ let tx = { name: "Expressive Progress", component: ti.A, id: "expressive-progres
                                 children: [
                                     (0, s.jsx)(tp.L, {
                                         targetElementRef: x,
-                                        ...C,
+                                        ...j,
                                         children: (0, s.jsx)(G.$, { buttonRef: x, variant: "primary", text: "Left" }),
                                     }),
                                     (0, s.jsx)(tp.L, {
                                         targetElementRef: f,
-                                        ...C,
+                                        ...j,
                                         children: (0, s.jsx)(G.$, { buttonRef: f, variant: "primary", text: "Right" }),
                                     }),
                                 ],
@@ -1714,12 +1714,12 @@ let tx = { name: "Expressive Progress", component: ti.A, id: "expressive-progres
             ty,
         ],
     };
-var tv = l(691540),
-    tg = l(857250),
+var tg = l(691540),
+    tv = l(857250),
     tE = l(97483),
     tS = l(750338),
-    tC = l(280041),
-    tj = l(576765),
+    tj = l(280041),
+    tC = l(576765),
     tT = l(88433);
 let tP = { none: void 0, nitroWheel: r.t },
     tI = {
@@ -1743,9 +1743,9 @@ let tP = { none: void 0, nitroWheel: r.t },
                     isReducedMotion: x,
                     previewImageStyle: y,
                 } = e,
-                f = () => (0, tv.P0)((0, tg.o)("CTA clicked!", tE.Ck.SUCCESS)),
-                v = tP[d],
-                g =
+                f = () => (0, tg.P0)((0, tv.o)("CTA clicked!", tE.Ck.SUCCESS)),
+                g = tP[d],
+                v =
                     "descriptionCta" === a
                         ? { descriptionCta: n, onClick: f }
                         : "actions" === a
@@ -1755,7 +1755,7 @@ let tP = { none: void 0, nitroWheel: r.t },
                                         text: i,
                                         variant: r,
                                         onClick: f,
-                                        ...(null != v ? { icon: v, iconPosition: c } : {}),
+                                        ...(null != g ? { icon: g, iconPosition: c } : {}),
                                     },
                                     ...(o.length > 0 ? [{ text: o, variant: u, onClick: f }] : []),
                                 ],
@@ -1763,10 +1763,10 @@ let tP = { none: void 0, nitroWheel: r.t },
                           : {};
             return (0, s.jsx)("div", {
                 children: (0, s.jsx)(tS.A, {
-                    name: tC.NI.EMOJIS,
+                    name: tj.NI.EMOJIS,
                     title: t,
                     description: l,
-                    previewImage: tj.A,
+                    previewImage: tC.A,
                     videoUrl: tT.A,
                     shouldLoadVideo: !0,
                     index: p,
@@ -1775,7 +1775,7 @@ let tP = { none: void 0, nitroWheel: r.t },
                     badgeVariant: h,
                     isReducedMotion: x,
                     previewImageStyle: y,
-                    ...g,
+                    ...v,
                 }),
             });
         },
@@ -1844,11 +1844,11 @@ let tP = { none: void 0, nitroWheel: r.t },
             size: {
                 label: "Size",
                 type: "select",
-                defaultValue: tC.A0.LARGE,
+                defaultValue: tj.A0.LARGE,
                 options: [
-                    { label: "Small", value: tC.A0.SMALL },
-                    { label: "Medium", value: tC.A0.MEDIUM },
-                    { label: "Large", value: tC.A0.LARGE },
+                    { label: "Small", value: tj.A0.SMALL },
+                    { label: "Medium", value: tj.A0.MEDIUM },
+                    { label: "Large", value: tj.A0.LARGE },
                 ],
             },
             badgeText: { label: "Badge Text", type: "text", defaultValue: "" },
@@ -1865,10 +1865,10 @@ let tP = { none: void 0, nitroWheel: r.t },
             previewImageStyle: {
                 label: "Preview Image Style",
                 type: "select",
-                defaultValue: tC.Tb.CONTAINED,
+                defaultValue: tj.Tb.CONTAINED,
                 options: [
-                    { label: "Contained", value: tC.Tb.CONTAINED },
-                    { label: "Overlay", value: tC.Tb.OVERLAY },
+                    { label: "Contained", value: tj.Tb.CONTAINED },
+                    { label: "Overlay", value: tj.Tb.OVERLAY },
                 ],
             },
         },
@@ -1891,7 +1891,7 @@ let tM = {
                             ...t,
                             id: "test-id",
                             progress: null != t.progress && t.progress > 0 ? t.progress : void 0,
-                            onCtaClick: () => (0, tv.P0)((0, tg.o)("CTA Clicked!", tE.Ck.SUCCESS)),
+                            onCtaClick: () => (0, tg.P0)((0, tv.o)("CTA Clicked!", tE.Ck.SUCCESS)),
                         }),
                         (0, s.jsx)(tN, {}),
                     ],
@@ -1951,20 +1951,20 @@ function tN() {
 var tD = l(52822),
     tV = l(339984);
 let tL = [
-        { id: "avatar_decoration", label: "Avatar Decoration", value: eC.e.AVATAR_DECORATION_MODAL_UPSELL },
-        { id: "profile_effect", label: "Profile Effect", value: eC.e.PROFILE_EFFECT_MODAL_UPSELL },
-        { id: "nameplate", label: "Nameplate", value: eC.e.NAMEPLATE_MODAL_UPSELL },
+        { id: "avatar_decoration", label: "Avatar Decoration", value: ej.e.AVATAR_DECORATION_MODAL_UPSELL },
+        { id: "profile_effect", label: "Profile Effect", value: ej.e.PROFILE_EFFECT_MODAL_UPSELL },
+        { id: "nameplate", label: "Nameplate", value: ej.e.NAMEPLATE_MODAL_UPSELL },
     ],
     tO = {
-        [eC.e.AVATAR_DECORATION_MODAL_UPSELL]: {
+        [ej.e.AVATAR_DECORATION_MODAL_UPSELL]: {
             title: "Express Yourself with Avatar Decorations",
             body: "Stand out with unique avatar decorations exclusive to Nitro subscribers.",
         },
-        [eC.e.PROFILE_EFFECT_MODAL_UPSELL]: {
+        [ej.e.PROFILE_EFFECT_MODAL_UPSELL]: {
             title: "Animate Your Profile with Profile Effects",
             body: "Add dynamic effects to your profile with Nitro.",
         },
-        [eC.e.NAMEPLATE_MODAL_UPSELL]: {
+        [ej.e.NAMEPLATE_MODAL_UPSELL]: {
             title: "Personalize with a Nameplate",
             body: "Show off your style with a custom nameplate, available with Nitro.",
         },
@@ -2033,7 +2033,7 @@ let tq = {
     id: "deep-link-test",
     component: function (e) {
         let { deepLinkUrl: t } = e;
-        return (0, s.jsx)(C.CheckoutRootProvider, {
+        return (0, s.jsx)(j.M, {
             stepConfigs: [],
             skuIDs: [],
             activeSubscription: null,
@@ -2125,7 +2125,7 @@ Payment source changed.`);
                 (f.current = p);
         }
     }, [r, p]);
-    let v = u.useMemo(
+    let g = u.useMemo(
             () =>
                 Object.values(b).map((e) => {
                     var t;
@@ -2140,7 +2140,7 @@ Payment source changed.`);
                 }),
             [b],
         ),
-        g = async () => {
+        v = async () => {
             if (null == p || "" === p) return void i("Please select a payment source first.");
             if (null == d || "" === d || d === N.dJq) return void i("Please select a SKU ID.");
             t(!0), i(null), o(null);
@@ -2335,7 +2335,7 @@ Error: ${t}`);
                                         selectionMode: "single",
                                         value: p,
                                         onSelectionChange: m,
-                                        options: v,
+                                        options: g,
                                         placeholder: "Select a payment source...",
                                         disabled: !h,
                                         label: "Payment Source",
@@ -2359,7 +2359,7 @@ Error: ${t}`);
                                 variant: "primary",
                                 size: "sm",
                                 text: e ? "Creating Order..." : "Create Order",
-                                onClick: g,
+                                onClick: v,
                                 disabled: e || null == p || "" === p || null == d || "" === d || d === N.dJq,
                             }),
                             (0, s.jsx)(G.$, {
@@ -2440,9 +2440,9 @@ function t9(e) {
 var t5 = l(150934),
     le = l(36167);
 let lt = [
-        { id: "tier_2", value: eC.gD.PREMIUM_MONTH_TIER_2, label: "Nitro (Monthly)" },
-        { id: "tier_1", value: eC.gD.PREMIUM_MONTH_TIER_1, label: "Nitro Classic (Monthly)" },
-        { id: "tier_0", value: eC.gD.PREMIUM_MONTH_TIER_0, label: "Nitro Basic (Monthly)" },
+        { id: "tier_2", value: ej.gD.PREMIUM_MONTH_TIER_2, label: "Nitro (Monthly)" },
+        { id: "tier_1", value: ej.gD.PREMIUM_MONTH_TIER_1, label: "Nitro Classic (Monthly)" },
+        { id: "tier_0", value: ej.gD.PREMIUM_MONTH_TIER_0, label: "Nitro Basic (Monthly)" },
     ],
     ll = [
         { id: "meta_quest", value: _.uH.META_QUEST_WEB_REDIRECT_CHECKOUT, label: "Meta Quest Web Redirect Checkout" },
@@ -2463,7 +2463,7 @@ function la() {
 }
 function ln(e) {
     let { flowType: t } = e,
-        [l, a] = u.useState(eC.gD.PREMIUM_MONTH_TIER_2),
+        [l, a] = u.useState(ej.gD.PREMIUM_MONTH_TIER_2),
         [n, i] = u.useState(!1),
         { error: r, handleSuccess: o, handleFailure: c } = la(),
         p = u.useCallback(() => {
@@ -2765,7 +2765,7 @@ let lx = {
         {
             name: "Order SKU",
             component: function () {
-                return (0, s.jsx)(C.CheckoutRootProvider, {
+                return (0, s.jsx)(j.M, {
                     stepConfigs: [],
                     skuIDs: [],
                     activeSubscription: null,
@@ -2779,7 +2779,7 @@ let lx = {
             name: "Payment Request",
             component: function (e) {
                 let { paymentRequestWallet: t } = e;
-                return (0, s.jsx)(C.CheckoutRootProvider, {
+                return (0, s.jsx)(j.M, {
                     stepConfigs: [],
                     skuIDs: [],
                     activeSubscription: null,
@@ -2829,7 +2829,7 @@ let lx = {
                         paymentRequestWallets: a ? ["googlePay", "applePay"] : [],
                         paymentSourceTypeRestrictions: l ? [tF.he.CARD.valueOf()] : null,
                     };
-                return (0, s.jsx)(C.CheckoutRootProvider, {
+                return (0, s.jsx)(j.M, {
                     stepConfigs: [],
                     skuIDs: [],
                     activeSubscription: null,
@@ -2861,7 +2861,7 @@ let lx = {
             name: "Stripe Components",
             id: "stripe-components",
             component: function () {
-                return (0, s.jsx)(C.CheckoutRootProvider, {
+                return (0, s.jsx)(j.M, {
                     stepConfigs: [],
                     skuIDs: [],
                     activeSubscription: null,
@@ -2930,12 +2930,12 @@ let lx = {
 };
 var ly = l(503698),
     lf = l.n(ly),
-    lv = l(683071),
-    lg = l(942340),
+    lg = l(683071),
+    lv = l(942340),
     lE = l(211528),
     lS = l(626584),
-    lC = l(87952),
-    lj = l(624479),
+    lj = l(87952),
+    lC = l(624479),
     lT = l(408278),
     lP = l(957565),
     lI = l(534472);
@@ -2950,7 +2950,7 @@ let lA = (e) => {
                     size: "sm",
                     "aria-label": "Copy Link",
                     variant: "icon-only",
-                    icon: lj.T,
+                    icon: lC.T,
                     onClick: () => (0, lP.C)(l),
                 }),
             ],
@@ -2958,7 +2958,7 @@ let lA = (e) => {
     },
     l_ = (e) => {
         let { children: t, stepConfigs: l, bodyClassName: a } = e;
-        return (0, s.jsx)(C.CheckoutRootProvider, {
+        return (0, s.jsx)(j.M, {
             stepConfigs: l,
             skuIDs: [],
             activeSubscription: null,
@@ -2973,7 +2973,7 @@ let lk = new lS.A("PaymentElement.web.stories"),
         options: { renderHeader: !1, hideDefaultModalBody: !0 },
     },
     lN = () => {
-        let { elementsAppearanceOptions: e } = (0, lg.E)();
+        let { elementsAppearanceOptions: e } = (0, lv.E)();
         return (0, s.jsxs)("div", {
             children: [
                 (0, s.jsx)(ei.D, {
@@ -3000,7 +3000,7 @@ let lk = new lS.A("PaymentElement.web.stories"),
                 tabSelectedBackgroundColor: r,
                 storyType: o,
             } = e,
-            u = (0, lC.A)(),
+            u = (0, lj.A)(),
             { stripePaymentElementProps: d, stripeAddressElementProps: c } = (0, lE.wD)({
                 step: m.pn.PAYMENT_ELEMENT,
                 handleStepChange: N.tEg,
@@ -3015,7 +3015,7 @@ let lk = new lS.A("PaymentElement.web.stories"),
                 isLoading: b,
                 setupError: h,
                 customPaymentMethodIdsToSourceTypes: x,
-            } = (0, lg.p)({
+            } = (0, lv.p)({
                 onSetupError: (e) => {
                     lk.info("Stripe Payment Element options setup error: ", e);
                 },
@@ -3034,7 +3034,7 @@ let lk = new lS.A("PaymentElement.web.stories"),
                   children: [
                       (0, s.jsx)("div", {
                           style: { marginBottom: 16 },
-                          children: (0, s.jsx)(lv.w, {
+                          children: (0, s.jsx)(lg.w, {
                               type: "info",
                               children:
                                   "If you don't see the Payment Element components, that means you must be added to the correct experiment to see this story. Reach out to a Payments Engineer to get access.",
@@ -3250,10 +3250,10 @@ let lQ = {
             variant: {
                 label: "Nitro Variant",
                 type: "select",
-                defaultValue: eC.PremiumTypes.TIER_2,
+                defaultValue: ej.PremiumTypes.TIER_2,
                 options: [
-                    { label: "Nitro", value: eC.PremiumTypes.TIER_2 },
-                    { label: "Nitro Basic", value: eC.PremiumTypes.TIER_0 },
+                    { label: "Nitro", value: ej.PremiumTypes.TIER_2 },
+                    { label: "Nitro Basic", value: ej.PremiumTypes.TIER_0 },
                 ],
             },
             leftTitleDescriber: { label: "Left Card - Title Describer", type: "text", defaultValue: "yearly" },
@@ -3293,12 +3293,12 @@ let lQ = {
                     item1LabelSubText: x,
                     item1SubText: y,
                     item1SubTextHasStrikethrough: f,
-                    item2Label: v,
-                    item2Amount: g,
+                    item2Label: g,
+                    item2Amount: v,
                     item2FormatWithoutRate: E,
                     hasDiscount: S,
-                    discountLabel: C,
-                    discountAmount: j,
+                    discountLabel: j,
+                    discountAmount: C,
                 } = e,
                 T = p
                     ? [
@@ -3311,18 +3311,18 @@ let lQ = {
                               subText: "" !== y ? y : void 0,
                               subTextHasStrikethrough: f,
                           },
-                          ...("" !== v
+                          ...("" !== g
                               ? [
                                     {
                                         id: 2,
-                                        label: v,
-                                        amount: g,
+                                        label: g,
+                                        amount: v,
                                         icon: (0, s.jsx)(r.t, { size: "xs" }),
                                         formatWithoutRate: E,
                                     },
                                 ]
                               : []),
-                          ...(S ? [{ id: 3, label: C, amount: j }] : []),
+                          ...(S ? [{ id: 3, label: j, amount: C }] : []),
                       ]
                     : [];
             return (0, s.jsx)("div", {
@@ -3351,11 +3351,11 @@ let lQ = {
             intervalType: {
                 label: "Interval Type",
                 type: "select",
-                defaultValue: eC.WT.MONTH,
+                defaultValue: ej.WT.MONTH,
                 options: [
-                    { label: "Month", value: eC.WT.MONTH },
-                    { label: "Year", value: eC.WT.YEAR },
-                    { label: "Day", value: eC.WT.DAY },
+                    { label: "Month", value: ej.WT.MONTH },
+                    { label: "Year", value: ej.WT.YEAR },
+                    { label: "Day", value: ej.WT.DAY },
                 ],
             },
             intervalCount: { label: "Interval Count", type: "number", defaultValue: 1 },
@@ -3515,7 +3515,7 @@ let l1 = { "nitro-wheel": r.t, gift: lW.o, orbs: i.C },
         totalDue: 999,
         renewalPrice: 1099,
         currency: N.Yri.USD,
-        interval: eC.WT.MONTH,
+        interval: ej.WT.MONTH,
         intervalCount: 1,
         startDate: new Date(),
     },
@@ -3741,7 +3741,7 @@ let l1 = { "nitro-wheel": r.t, gift: lW.o, orbs: i.C },
                             headingComponent: (0, s.jsx)(lq.ec, {
                                 size: "sm",
                                 color: "text-strong",
-                                premiumType: eC.PremiumTypes.TIER_2,
+                                premiumType: ej.PremiumTypes.TIER_2,
                             }),
                             planRadioOptions: [
                                 { primaryText: "Yearly", subText: "$99.99", badgeText: "SAVE 16%", value: "yearly" },
@@ -4091,7 +4091,7 @@ let l9 = ["Revenue Storybook", "Revenue Playground"],
                     {
                         name: "Premium Profile Decoration Upsell",
                         component: function () {
-                            let [e, t] = u.useState(eC.e.AVATAR_DECORATION_MODAL_UPSELL),
+                            let [e, t] = u.useState(ej.e.AVATAR_DECORATION_MODAL_UPSELL),
                                 a = u.useCallback(() => {
                                     let { title: t, body: a } = tO[e];
                                     (0, en.openModalLazy)(async () => {

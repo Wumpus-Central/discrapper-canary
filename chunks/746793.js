@@ -25,13 +25,13 @@ var n = t(627968),
     O = t(444927),
     T = t(793574),
     v = t(688810),
-    k = t(871123),
-    w = t(84511),
-    b = t(999291),
+    w = t(871123),
+    b = t(84511),
+    k = t(999291),
     y = t(101928),
-    R = t(920601),
-    E = t(975732),
-    M = t(299679),
+    M = t(920601),
+    R = t(975732),
+    E = t(299679),
     W = t(561794),
     P = t(862772),
     H = t(310209),
@@ -106,7 +106,7 @@ function J(i) {
                       "li",
                       {
                           className: X.XI,
-                          children: (0, n.jsx)(M.dB, {
+                          children: (0, n.jsx)(E.dB, {
                               newValue: {
                                   positionInSection: e,
                                   skuId: s.id,
@@ -146,14 +146,14 @@ function K(i) {
         { analyticsLocations: u } = (0, v.Ay)(T.A.WISHLIST_BANNER),
         h = (0, O.A)(() => (0, f.A)()),
         { theme: m, primaryColor: g, secondaryColor: I } = (0, y.A)({ user: e, displayProfile: l }),
-        { profileThemeStyle: j, profileThemeClassName: S } = (0, R.A)({
+        { profileThemeStyle: j, profileThemeClassName: S } = (0, M.A)({
             theme: m,
             themeType: null,
             primaryColor: g,
             secondaryColor: I,
         }),
         N = s.useCallback(() => {
-            (0, E.openUserProfileModal)({ userId: e.id, tabSection: z.RP.WISHLIST });
+            (0, R.openUserProfileModal)({ userId: e.id, tabSection: z.RP.WISHLIST });
         }, [e.id]),
         A = s.useMemo(() => "loading" === c, [c]),
         _ = U.Ay.getName(e),
@@ -170,7 +170,7 @@ function K(i) {
                                   : n.length > 0 &&
                                       n.every((i) => {
                                           let { sku: e, source: t } = i;
-                                          return t === W.uS.POPULAR && (0, k.bF)(e);
+                                          return t === W.uS.POPULAR && (0, w.bF)(e);
                                       })
                                     ? "SOCIAL_LAYER_STOREFRONT_RECOMMENDATIONS_ONLY"
                                     : "SHOP_ONLY";
@@ -188,9 +188,9 @@ function K(i) {
                 }
             }, [a, l]);
         })({ totalUnownedWishlistItemCount: a, wishlistInDmLength: W.pl, displayItems: r, recipientName: _ }),
-        w = l?.getBannerURL({ canAnimate: !1, size: 713 }),
-        b = a > W.pl,
-        P = s.useMemo(() => (b ? r.slice(0, W.pl) : r), [r, b]),
+        b = l?.getBannerURL({ canAnimate: !1, size: 713 }),
+        k = a > W.pl,
+        P = s.useMemo(() => (k ? r.slice(0, W.pl) : r), [r, k]),
         [H, D] = s.useState(!1),
         G = s.useCallback(
             (i) => {
@@ -237,7 +237,7 @@ function K(i) {
                   className: p()(X.A1, S),
                   style: j,
                   children: [
-                      null != w && (0, n.jsx)("div", { className: X.iL, style: { backgroundImage: `url(${w})` } }),
+                      null != b && (0, n.jsx)("div", { className: X.iL, style: { backgroundImage: `url(${b})` } }),
                       (0, n.jsx)(C.N, {
                           disableAdaptiveTheme: !0,
                           children: (i) =>
@@ -255,7 +255,7 @@ function K(i) {
                                           children:
                                               A || 0 === r.length
                                                   ? (0, n.jsx)($, { wishlistInDmLength: W.pl })
-                                                  : (0, n.jsx)(M.dB, {
+                                                  : (0, n.jsx)(E.dB, {
                                                         newValue: {
                                                             impressionSessionId: h,
                                                             surface: "dm_gifting_banner",
@@ -286,7 +286,7 @@ function K(i) {
 }
 function Z(i) {
     let { giftRecipient: e, onWishlistItemClick: t } = i,
-        l = (0, b.Ay)(e?.id),
+        l = (0, k.Ay)(e?.id),
         {
             wishlistAndRecommendations: a,
             totalUnownedWishlistItemCount: r,
@@ -308,7 +308,7 @@ function Z(i) {
             () =>
                 u.some((i) => {
                     let { sku: e } = i;
-                    return (0, k.bF)(e);
+                    return (0, w.bF)(e);
                 }),
             [u],
         );
@@ -321,7 +321,7 @@ function Z(i) {
         displayItems: u,
         defaultWishlistId: d,
         footerNotice: h
-            ? (0, n.jsx)(w.A, { location: "dm_gift_modal_wishlist_new_recommendations", className: X.jG })
+            ? (0, n.jsx)(b.A, { location: "dm_gift_modal_wishlist_new_recommendations", className: X.jG })
             : null,
     });
 }
@@ -421,7 +421,7 @@ function il(i) {
         analyticsObject: r,
         giftMessage: o,
     } = i;
-    return (0, n.jsx)(c.CheckoutRootProvider, {
+    return (0, n.jsx)(c.M, {
         activeSubscription: null,
         stepConfigs: [],
         skuIDs: q.T7,

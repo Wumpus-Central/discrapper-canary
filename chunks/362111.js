@@ -56,7 +56,7 @@ function A(e) {
     });
 }
 function h(e) {
-    return (0, n.jsx)(u.CheckoutRootProvider, {
+    return (0, n.jsx)(u.M, {
         activeSubscription: null,
         stepConfigs: [],
         skuIDs: [],
