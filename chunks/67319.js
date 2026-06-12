@@ -894,7 +894,7 @@ var tv = n(844222),
     tw = n(616356),
     tM = n(977997),
     tk = n(312006),
-    tG = n(890063),
+    tG = n(136491),
     tD = n(636359);
 function tV(e) {
     let { aspectRatio: t, className: n, children: l, width: s, ...a } = e,
@@ -2016,7 +2016,7 @@ function n7(e) {
                 let { default: e } = await Promise.all([
                     n.e("44588"),
                     n.e("6212"),
-                    n.e("72365"),
+                    n.e("5978"),
                     n.e("2677"),
                     n.e("74539"),
                     n.e("59957"),

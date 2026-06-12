@@ -1504,8 +1504,8 @@ function nB(e) {
               onClick: () => {
                   (0, eC.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
-                          n.e("72365"),
-                          n.e("84570"),
+                          n.e("5978"),
+                          n.e("33063"),
                           n.e("2677"),
                           n.e("99430"),
                           n.e("72465"),

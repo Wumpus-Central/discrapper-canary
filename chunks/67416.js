@@ -41,15 +41,15 @@ function y(e) {
         O = (0, i.jsx)(i.Fragment, { children: (0, d.Wf)(l, a, t) }),
         { analyticsLocations: U } = (0, u.Ay)(y, c.A.REQUEST_TO_STREAM_INVITE_EMBED),
         G = T.intl.string(N.default["5+172e"]),
-        B = !1;
+        V = !1;
     return (
         w
-            ? ((G = T.intl.string(N.default.u4QmWl)), (B = !0))
+            ? ((G = T.intl.string(N.default.u4QmWl)), (V = !0))
             : null != P
-              ? ((G = T.intl.string(N.default.P0wwmM)), (B = !0))
+              ? ((G = T.intl.string(N.default.P0wwmM)), (V = !0))
               : D !== a.id
-                ? ((G = T.intl.string(N.default.qRXats)), (B = !0))
-                : null == M && ((G = T.intl.string(N.default["43zohO"])), (B = !0)),
+                ? ((G = T.intl.string(N.default.qRXats)), (V = !0))
+                : null == M && ((G = T.intl.string(N.default["43zohO"])), (V = !0)),
         (0, i.jsx)(m.h, {
             header: T.intl.string(N.default.nAyuPp),
             title: r.name,
@@ -65,14 +65,14 @@ function y(e) {
                           {
                               label: G,
                               trackingArea: h.kY.STREAM,
-                              disabled: B,
+                              disabled: V,
                               onClick: () => {
                                   null != M &&
                                       ((0, C.isWindows)()
                                           ? (0, A.A)(M.pid)
                                           : (0, o.openModalLazy)(async () => {
                                                 let { default: e } = await Promise.all([
-                                                    n.e("72365"),
+                                                    n.e("5978"),
                                                     n.e("49115"),
                                                     n.e("76171"),
                                                     n.e("38601"),
@@ -117,8 +117,8 @@ var S = n(666176),
     O = n(125017),
     U = n(104171),
     G = n(554146),
-    B = n(43105),
-    V = n(414499),
+    V = n(43105),
+    B = n(414499),
     H = n(116833),
     F = n(735991),
     Y = n(945810);
@@ -435,7 +435,7 @@ function eT(e) {
         R = (0, ed.A)({ application: c, analyticsLocations: o }),
         k = l.useMemo(() => {
             if (null != R)
-                return { label: T.intl.string(T.t["jaYS/h"]), icon: V.h, trackingArea: h.kY.CLOUD_PLAY, onClick: R };
+                return { label: T.intl.string(T.t["jaYS/h"]), icon: B.h, trackingArea: h.kY.CLOUD_PLAY, onClick: R };
         }, [R]),
         M = (0, X.F)(c),
         P = l.useMemo(() => (null != b ? b : null != M && j ? M : void 0), [j, b, M]),
@@ -466,7 +466,7 @@ function eT(e) {
                     children: (e) => {
                         let { visibleContent: t, markAsDismissed: n } = e;
                         if (t === G.M.GAME_INVITE_ACCOUNT_LINK_UPSELL)
-                            return (0, i.jsx)(B.A, {
+                            return (0, i.jsx)(V.A, {
                                 graphic: {
                                     type: "dynamic",
                                     component: H.DynamicGraphicComponent.ACCOUNT_LINK_DISPLAY,

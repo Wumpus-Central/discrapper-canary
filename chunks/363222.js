@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => er });
+n.d(t, { A: () => ei });
 var i,
     r = n(691540),
     s = n(97483),
@@ -12,7 +12,7 @@ var i,
     _ = n(652896),
     h = n(616356),
     f = n(495544),
-    p = n(890063),
+    p = n(136491),
     E = n(741394),
     m = n(19575),
     g = n(459838),
@@ -181,11 +181,10 @@ class x extends A.A {
         }
     }
 }
-var k = n(138082);
 n(321073);
-var U = n(626584),
-    G = (((i = {}).MISSING = "missing"), (i.DOWNLOADED = "downloaded"), (i.DOWNLOADING = "downloading"), i);
-let F = [
+var k = n(626584),
+    U = (((i = {}).MISSING = "missing"), (i.DOWNLOADED = "downloaded"), (i.DOWNLOADING = "downloading"), i);
+let G = [
         ["laughter_screaming_exp58", "onnx", "f5a655cb76a57561ae84c9a9eb1829433db9ad8f4fd192a40f3277a5a5cfa6ad"],
         [
             "laughter_screaming_krispy_21_may",
@@ -200,20 +199,20 @@ let F = [
         ["laughter_screaming_krispy", "onnx", "8835cfe08b2517162462b710c44bda60c116611c997fbce4d14679a26d6d75ed"],
         ["ggml-base", "bin", "60ed5bc3dd14eea856493d334349b405782ddcaf0028d4b5df4088345fba2efe"],
     ],
-    V = new U.A("ClipsAssetManager");
-class B {
+    F = new k.A("ClipsAssetManager");
+class V {
     state = { assets: {}, assetState: {}, catalogLastFetchTime: void 0, catalogFetchFailed: !1 };
     activeDownloads = new Map();
     catalogRefreshing = !1;
     downloadRunning = !1;
     downloadPromise = null;
     async start() {
-        if ((V.info("Clips asset manager started"), !(0, L.TD)() || !(0, v.isWindows)() || __OVERLAY__))
+        if ((F.info("Clips asset manager started"), !(0, L.TD)() || !(0, v.isWindows)() || __OVERLAY__))
             return { allAssetsDownloaded: !1 };
         if (null != this.downloadPromise && (this.downloadRunning || this.areAllAssetsDownloaded()))
             await this.downloadPromise;
         else {
-            V.info("Clips enabled on startup, prefetching assets"), (this.downloadRunning = !0);
+            F.info("Clips enabled on startup, prefetching assets"), (this.downloadRunning = !0);
             try {
                 (this.downloadPromise = this.maybePrefetchAssets()), await this.downloadPromise;
             } finally {
@@ -224,13 +223,13 @@ class B {
     }
     areAllAssetsDownloaded() {
         let e = Object.values(this.state.assetState);
-        return e.length > 0 && e.every((e) => e.status === G.DOWNLOADED);
+        return e.length > 0 && e.every((e) => e.status === U.DOWNLOADED);
     }
     async maybePrefetchAssets() {
         try {
             await this.refreshCatalog(), await this.prefetchAssets();
         } catch (e) {
-            V.warn(`Failed to prefetch clips assets: ${e.message}`);
+            F.warn(`Failed to prefetch clips assets: ${e.message}`);
         }
     }
     async refreshCatalog() {
@@ -243,18 +242,18 @@ class B {
                     (this.state.catalogLastFetchTime = new Date()),
                     (this.state.catalogFetchFailed = !1);
                 let t = Object.values(e.assets).map((e) => e.fileName);
-                await m.Ay.cleanupUnusedClipsFiles(t), V.info("Clips asset catalog refreshed");
+                await m.Ay.cleanupUnusedClipsFiles(t), F.info("Clips asset catalog refreshed");
             } catch (e) {
-                V.warn(`Failed to refresh clips asset catalog: ${e.message}`), (this.state.catalogFetchFailed = !0);
+                F.warn(`Failed to refresh clips asset catalog: ${e.message}`), (this.state.catalogFetchFailed = !0);
             } finally {
                 this.catalogRefreshing = !1;
             }
     }
     loadCatalog() {
         let e = { assets: {} };
-        for (let [t, n, i] of F)
+        for (let [t, n, i] of G)
             e.assets[t] = { url: `https://cdn.discordapp.com/assets/content/${i}.${n}`, fileName: `${t}.${n}` };
-        return V.info("Loaded clips asset catalog with assets:", Object.keys(e.assets)), e;
+        return F.info("Loaded clips asset catalog with assets:", Object.keys(e.assets)), e;
     }
     async scanAssetState(e) {
         if (!m.Ay.canCheckClipsFilesExist()) return;
@@ -263,43 +262,43 @@ class B {
             return { id: t, fileName: n.fileName };
         });
         for (let { id: e, exists: n } of await m.Ay.checkClipsFilesExist(t))
-            this.state.assetState[e] = { status: n ? G.DOWNLOADED : G.MISSING };
+            this.state.assetState[e] = { status: n ? U.DOWNLOADED : U.MISSING };
     }
     async prefetchAssets() {
         let e = this.state.assets,
             t = [];
         for (let [n, i] of Object.entries(e)) {
             let e = this.state.assetState[n];
-            e?.status !== G.DOWNLOADED &&
-                e?.status !== G.DOWNLOADING &&
+            e?.status !== U.DOWNLOADED &&
+                e?.status !== U.DOWNLOADING &&
                 t.push(this.downloadAsset({ assetId: n, url: i.url, fileName: i.fileName }));
         }
-        V.info(`Waiting for ${t.length} clips asset downloads`),
+        F.info(`Waiting for ${t.length} clips asset downloads`),
             await Promise.all(t),
-            V.info("Finished downloading all clips assets");
+            F.info("Finished downloading all clips assets");
     }
     downloadAsset(e) {
         let { url: t, assetId: n, fileName: i } = e,
             r = this.state.assetState[n],
             s = this.activeDownloads.get(n);
         if (null != s) return s;
-        if (r?.status === G.DOWNLOADED) return Promise.resolve();
-        if (r?.status === G.DOWNLOADING)
+        if (r?.status === U.DOWNLOADED) return Promise.resolve();
+        if (r?.status === U.DOWNLOADING)
             return Promise.reject(Error("Clips asset is downloading but not in active downloads map"));
-        this.state.assetState[n] = { status: G.DOWNLOADING, downloadedBytes: 0 };
+        this.state.assetState[n] = { status: U.DOWNLOADING, downloadedBytes: 0 };
         let a = m.Ay.downloadClipsFile(t, i, (e) => {
             let { downloadedBytes: t, totalBytes: i } = e;
             this.state.assetState[n] = { ...this.state.assetState[n], downloadedBytes: t, totalBytes: i };
         })
             .then((e) => {
-                e.fetchedFromNetwork && V.info("Downloaded clips asset from network:", n),
-                    (this.state.assetState[n] = { status: G.DOWNLOADED, downloadedBytes: void 0 });
+                e.fetchedFromNetwork && F.info("Downloaded clips asset from network:", n),
+                    (this.state.assetState[n] = { status: U.DOWNLOADED, downloadedBytes: void 0 });
             })
             .catch((t) => {
                 t?.USER_CANCELED_DOWNLOAD
-                    ? V.info("User canceled the download for clips asset", e)
-                    : V.error("Failed to download clips asset", { reason: t, ...e }),
-                    (this.state.assetState[n] = { status: G.MISSING });
+                    ? F.info("User canceled the download for clips asset", e)
+                    : F.error("Failed to download clips asset", { reason: t, ...e }),
+                    (this.state.assetState[n] = { status: U.MISSING });
             })
             .finally(() => {
                 this.activeDownloads.delete(n);
@@ -307,56 +306,56 @@ class B {
         return this.activeDownloads.set(n, a), a;
     }
 }
-let H = new B();
-var j = n(334686),
-    Y = n(315240);
+let B = new V();
+var H = n(334686),
+    j = n(315240);
 n(257290);
-var W = n(409067),
-    K = n(227628),
-    $ = n(468550),
-    z = n(375708);
-let q = !1,
+var Y = n(409067),
+    W = n(227628),
+    K = n(468550),
+    $ = n(375708);
+let z = !1,
+    q = null,
     X = null,
     Z = null,
     Q = null,
-    J = null,
-    ee = null;
-function et() {
+    J = null;
+function ee() {
     let e = (0, b.qi)(),
         t = (0, b.$i)(),
         n = R.Ay.getEnableAutoclipping(),
-        i = Z !== e,
-        r = Q !== t,
-        s = J !== n;
+        i = X !== e,
+        r = Z !== t,
+        s = Q !== n;
     if (!i && !r && !s) return;
     let a = p.Ay.getMediaEngine();
     i && a.setClipsV3Enabled(e),
         w.nx.info(
-            `clips v3 runtime flags pushed: v3=${e} (was ${Z}), ml=${t} (was ${Q}), autoclipping=${n} (was ${J})`,
+            `clips v3 runtime flags pushed: v3=${e} (was ${X}), ml=${t} (was ${Z}), autoclipping=${n} (was ${Q})`,
         ),
-        (Z = e),
-        (Q = t),
-        (J = n),
+        (X = e),
+        (Z = t),
+        (Q = n),
         e &&
             (t
-                ? (null === ee &&
+                ? (null === J &&
                       (w.nx.info("clips v3 ml flag set ml=false until download complete"),
                       a.setClipsV3MLEnabled(!1),
-                      (ee = !1)),
+                      (J = !1)),
                   (async () => {
-                      let { allAssetsDownloaded: e } = await H.start(),
-                          t = e && !0 === Q && !0 === J;
-                      ee !== t &&
+                      let { allAssetsDownloaded: e } = await B.start(),
+                          t = e && !0 === Z && !0 === Q;
+                      J !== t &&
                           (w.nx.info(
-                              `clips v3 ml flag set ml=${t} (was ${ee}). allAssetsDownloaded=${e}, autoclipping=${J}`,
+                              `clips v3 ml flag set ml=${t} (was ${J}). allAssetsDownloaded=${e}, autoclipping=${Q}`,
                           ),
                           a.setClipsV3MLEnabled(t),
-                          (ee = t));
+                          (J = t));
                   })())
-                : !1 !== ee &&
-                  (w.nx.info(`clips v3 ml flag set ml=false (was ${ee})`), a.setClipsV3MLEnabled(!1), (ee = !1)));
+                : !1 !== J &&
+                  (w.nx.info(`clips v3 ml flag set ml=false (was ${J})`), a.setClipsV3MLEnabled(!1), (J = !1)));
 }
-class en extends x {
+class et extends x {
     constructor() {
         super(),
             Object.assign(this.actions, {
@@ -369,32 +368,29 @@ class en extends x {
     }
     stores = new Map().set(u.A, () => this.applyNativeClipsSettings());
     maybeOpenQuickBar() {
-        let { enableQuickBar: e } = k.h.getConfig({ location: "ClipsManager" });
-        if (!e || !R.Ay.canShowReminders()) return;
-        let t = c.Ay.getVisibleGame();
-        null == t ||
+        if (!R.Ay.canShowReminders()) return;
+        let e = c.Ay.getVisibleGame();
+        null == e ||
             (R.Ay.getLastClipsSession()
                 ?.newClipIds.map(R.Ay.getClipById)
-                .some((e) => e?.applicationId === t.id) &&
-                (K.MZ.getState().isOpen || (0, K.w9)()));
+                .some((t) => t?.applicationId === e.id) &&
+                (W.MZ.getState().isOpen || (0, W.w9)()));
     }
     handleClipsReminder(e) {
-        if (null == e) return;
-        let { enableQuickBar: t } = k.h.getConfig({ location: "ClipsManager" });
-        if (!t || !R.Ay.canShowReminders()) return;
-        let n = R.Ay.getLastClipsSession();
-        if (null == n || 0 === n.newClipIds.length) return;
-        let { enabled: i } = j.O.getConfig({ location: "ClipsManager" }),
-            r = i && !R.Ay.getSettings().showPovClipsInGallery;
-        n.newClipIds.some((t) => {
+        if (null == e || !R.Ay.canShowReminders()) return;
+        let t = R.Ay.getLastClipsSession();
+        if (null == t || 0 === t.newClipIds.length) return;
+        let { enabled: n } = H.O.getConfig({ location: "ClipsManager" }),
+            i = n && !R.Ay.getSettings().showPovClipsInGallery;
+        t.newClipIds.some((t) => {
             let n = R.Ay.getClipById(t);
-            return null != n && n.applicationId === e && (!r || !(0, W.kD)(n));
-        }) && (0, $.M8)(e);
+            return null != n && n.applicationId === e && (!i || !(0, Y.kD)(n));
+        }) && (0, K.M8)(e);
     }
     showClipsToast() {
         (0, r.P0)({
             id: "CLIPS_IN_CALL_WARNING",
-            message: z.intl.string(z.t["d+41qJ"]),
+            message: $.intl.string($.t["d+41qJ"]),
             type: s.Ck.CLIP,
             options: { duration: w.Vi },
         });
@@ -416,25 +412,25 @@ class en extends x {
                         this.fireClipsInitEvent();
                 }
             };
-        et(),
-            !(0, b.qi)() || q
+        ee(),
+            !(0, b.qi)() || z
                 ? n()
-                : (q
+                : (z
                       ? Promise.resolve()
-                      : null != X
-                        ? X
-                        : (X = (async () => {
+                      : null != q
+                        ? q
+                        : (q = (async () => {
                               try {
-                                  et(), await m.Ay.ensureModule("discord_clips");
+                                  ee(), await m.Ay.ensureModule("discord_clips");
                                   let e = m.Ay.requireModule("discord_clips").getModulePath(),
                                       t = p.Ay.getMediaEngine(),
                                       n = m.Ay.getClipsDataDirSync();
                                   t.setClipsDataPath(n),
                                       t.setClipsModulePath(e),
-                                      (q = !0),
+                                      (z = !0),
                                       w.nx.info("discord_clips module loaded, path: " + e);
                               } catch (e) {
-                                  (X = null), w.nx.error("Failed to load discord_clips module", e);
+                                  (q = null), w.nx.error("Failed to load discord_clips module", e);
                               }
                           })())
                   ).then(n);
@@ -445,12 +441,12 @@ class en extends x {
     }
     handleClipsInitOnGamesChange(e) {
         let t = c.Ay.getVisibleGame();
-        if (((0, K.yj)(), e.removed.length > 0 && null == t)) {
+        if (((0, W.yj)(), e.removed.length > 0 && null == t)) {
             let t = e.removed[0]?.id;
             queueMicrotask(() => this.handleClipsReminder(t));
         }
         null == t ||
-            ((0, $.kF)(),
+            ((0, K.kF)(),
             this.prefetchRichPresenceData(t.id),
             e.added.find((e) => e.pid === t.pid)
                 ? setTimeout(() => this.fireClipsInitEvent(), w.dV)
@@ -481,22 +477,23 @@ class en extends x {
         let { storageLocation: e } = R.Ay.getSettings();
         "" !== e &&
             e !== R.he &&
-            Y.Fb(e)
-                .then(() => ei())
+            j
+                .Fb(e)
+                .then(() => en())
                 .catch((e) => {
                     w.nx.error("Failed to load clips directory on connection open", e);
                 });
     }
 }
-async function ei() {
+async function en() {
     if (R.Ay.hasClips() || null == o.A || null == o.A.app) return;
     let e = await o.A.app.getPath("documents");
     if (R.Ay.getSettings().storageLocation === e)
         try {
             let e = await o.A.app.getPath("videos");
-            Y.HU((0, E.CN)(e, R._c));
+            j.HU((0, E.CN)(e, R._c));
         } catch (e) {
             w.nx.error("Failed to resolve videos path for old default storage migration", e);
         }
 }
-let er = new en();
+let ei = new et();

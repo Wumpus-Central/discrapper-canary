@@ -14,8 +14,8 @@ var a = l(627968),
     p = l(972213),
     v = l(364522),
     x = l(270003),
-    b = l(683071),
-    g = l(331322),
+    g = l(683071),
+    b = l(331322),
     j = l(834730),
     y = l(821609),
     E = l(292666),
@@ -71,8 +71,8 @@ function Y(e) {
         ep = (0, R.h)(em.applicationId),
         ev = (0, i.bG)([B.Ay], () => B.Ay.isClipExporting(em.id)),
         { onShareClick: ex } = (0, V.A)(t),
-        eb = (0, i.bG)([O.A], () => O.A.isDeveloper),
-        eg = (0, K.h)(em),
+        eg = (0, i.bG)([O.A], () => O.A.isDeveloper),
+        eb = (0, K.h)(em),
         ej = n.useCallback(async () => {
             await (0, G.w7)(em.id), ed(!1);
         }, [em.id, ed]),
@@ -116,7 +116,7 @@ function Y(e) {
                                 es(),
                                     (0, w.L3)(e, async () => {
                                         let { default: e } = await Promise.all([
-                                            l.e("72365"),
+                                            l.e("5978"),
                                             l.e("6619"),
                                             l.e("95429"),
                                             l.e("91211"),
@@ -142,7 +142,7 @@ function Y(e) {
                             "aria-label": q.intl.string(q.t.PdRCRg),
                             icon: f.j,
                         }),
-                        eb &&
+                        eg &&
                             (0, a.jsx)(u.K, {
                                 onClick: function () {
                                     (0, s.openModalLazy)(
@@ -171,9 +171,9 @@ function Y(e) {
                 children: (0, a.jsxs)(x.n, {
                     children: [
                         ec &&
-                            (0, a.jsx)(b.w, {
+                            (0, a.jsx)(g.w, {
                                 type: "info",
-                                children: (0, a.jsxs)(g.B, {
+                                children: (0, a.jsxs)(b.B, {
                                     gap: 8,
                                     children: [
                                         (0, a.jsx)(j.E, {
@@ -197,7 +197,7 @@ function Y(e) {
                             value: eo,
                             minLength: W.U_,
                             maxLength: W.mk,
-                            placeholder: eg,
+                            placeholder: eb,
                         }),
                         !eh &&
                             (0, a.jsxs)(a.Fragment, {
